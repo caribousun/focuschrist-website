@@ -242,7 +242,7 @@
     </nav>
     
     <main class="main">
-        <div class="input-area" style="margin-bottom: 30px;">
+        <div class="input-area" style="margin-bottom: 20px;">
             <input type="text" id="userInput" placeholder="Ask your question here..." onkeypress="handleKeyPress(event)">
             <button onclick="sendMessage()" id="sendBtn">Ask</button>
         </div>
@@ -379,11 +379,12 @@
     };
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
+    function clearChat(){const c=document.getElementById('chatBox');c.innerHTML='<div class="welcome"><h3>Welcome to focusChrist</h3><p>Ask any question about scripture, doctrine, or faith.<br>Click a topic below or type your own question above.</p></div>';c.scrollTop=0}
     function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;sendMessage()}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
     function findAnswer(q){q=q.toLowerCase();for(let k in qaDatabase){if(q.includes(k))return qaDatabase[k]}return{answer:"That's a great question! We invite you to learn more by visiting the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]}}
     function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h='<p>'+t+'</p>';if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=c.scrollHeight}
-    function sendMessage(){const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();if(!q)return;if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p style="color:#8a7a60;">🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);setTimeout(()=>{l.remove();b.disabled=false;const r=findAnswer(q);addMessage(r.answer,false,r.sources)},1500)}
+    function sendMessage(){const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();if(!q)return;const c=document.getElementById('chatBox');if(c.querySelector('.welcome')||c.children.length>0){c.innerHTML='';addMessage(q,true)}else{addMessage(q,true)}i.value='';if(containsInappropriate(q)){addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}b.disabled=true;const l=document.createElement('div');l.className='loading';l.innerHTML='<p style="color:#8a7a60;">🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);setTimeout(()=>{l.remove();b.disabled=false;const r=findAnswer(q);addMessage(r.answer,false,r.sources)},1500)}
     </script>
 </body>
 </html>
