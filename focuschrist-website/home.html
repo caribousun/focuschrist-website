@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focusChrist - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+        }
+        
+        /* Hero Section - The Prayer Image */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Girl praying - we use a placeholder since we can't embed directly */
+            background: linear-gradient(180deg, 
+                rgba(200,180,140,0.3) 0%, 
+                rgba(100,100,120,0.4) 30%,
+                rgba(20,20,30,0.7) 60%,
+                rgba(0,0,0,0.95) 100%
+            ), url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            filter: brightness(0.9) contrast(1.1);
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, 
+                rgba(0,0,0,0.3) 0%, 
+                rgba(0,0,0,0.5) 50%,
+                rgba(0,0,0,0.95) 100%
+            );
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 20px;
+            max-width: 900px;
+        }
+        
+        .logo {
+            font-size: 4em;
+            font-family: 'Times New Roman', serif;
+            letter-spacing: 15px;
+            margin-bottom: 40px;
+            color: #fff;
+            text-shadow: 0 0 30px rgba(0,0,0,0.8);
+        }
+        
+        .hero-circle {
+            width: 350px;
+            height: 350px;
+            background: rgba(101, 95, 72, 0.85);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto;
+            position: relative;
+        }
+        
+        .hero-circle-text {
+            color: #fff;
+            font-size: 1.8em;
+            letter-spacing: 8px;
+            font-family: 'Times New Roman', serif;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 25px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+        }
+        
+        .nav-logo {
+            font-size: 1.5em;
+            letter-spacing: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-family: 'Times New Roman', serif;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .nav-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.9em;
+            letter-spacing: 3px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #c9a961;
+        }
+        
+        /* Purpose Section */
+        .purpose {
+            background: #0a0a0a;
+            padding: 80px 20px;
+        }
+        
+        .purpose-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .purpose h2 {
+            font-size: 2.5em;
+            letter-spacing: 8px;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+        
+        .purpose-block {
+            margin: 40px 0;
+            padding: 30px;
+        }
+        
+        .purpose-block h3 {
+            font-size: 1.2em;
+            letter-spacing: 5px;
+            color: #c9a961;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .purpose-block p {
+            font-size: 1.1em;
+            color: #ccc;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* CTA */
+        .cta {
+            background: #0a0a0a;
+            padding: 60px 20px 100px;
+            text-align: center;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 18px 50px;
+            background: linear-gradient(135deg, #c9a961 0%, #8b7355 100%);
+            color: #0a0a0a;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: transform 0.3s;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Footer */
+        footer {
+            padding: 40px 20px;
+            text-align: center;
+            color: #555;
+            font-size: 0.85em;
+            background: #050505;
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .hero-circle {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .hero-circle-text {
+                font-size: 1.3em;
+                letter-spacing: 5px;
+            }
+            
+            .logo {
+                font-size: 2.5em;
+                letter-spacing: 8px;
+            }
+            
+            .nav {
+                padding: 20px;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="home.html" class="nav-logo">focusChrist</a>
+        <div class="nav-links">
+            <a href="home.html">HOME</a>
+            <a href="ask.html">ASK</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+    </nav>
+    
+    <section class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="logo">focusChrist</h1>
+            
+            <div class="hero-circle">
+                <div class="hero-circle-text">OUR SPIRITUAL<br>PATH BEGINS</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="purpose">
+        <div class="purpose-content">
+            <h2>OUR PURPOSE</h2>
+            
+            <div class="purpose-block">
+                <h3>My Path</h3>
+                <p>Empowering lives through Christ-centered focus; fostering spiritual growth, purposeful living, and community connection.</p>
+            </div>
+            
+            <div class="purpose-block">
+                <h3>I Believe</h3>
+                <p>I believe in the transformative power of Christ's love, guiding us to focus on faith, purpose, and unity for a meaningful life.</p>
+            </div>
+            
+            <div class="purpose-block">
+                <h3>My Community</h3>
+                <p>Join our Christ-centered community, where faith thrives, connections deepen, and together, we journey towards purposeful living.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta">
+        <a href="ask.html" class="cta-button">Ask a Question</a>
+    </section>
+    
+    <footer>
+        <p>© 2026 focusChrist. All are welcome here.</p>
+    </footer>
+</body>
+</html>

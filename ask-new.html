@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Ask - focusChrist</title>
+ <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <nav class="nav">
+ <a href="index.html" class="nav-logo">focusChrist</a>
+ <div class="nav-links">
+ <a href="index.html">HOME</a>
+ <a href="ask.html" class="active">ASK A QUESTION</a>
+ <a href="about.html">ABOUT</a>
+ </div>
+ </nav>
+ 
+ <section class="hero">
+ <div class="hero-bg"></div>
+ </section>
+ 
+ <section class="qa-section">
+ <div class="qa-container">
+ <div class="qa-title">
+ <h2>ASK A QUESTION</h2>
+ <p>Type your question below or click a topic</p>
+ </div>
+ <div class="chat-box" id="chatBox">
+ <div class="welcome">
+ <h3>🕍 Welcome to focusChrist</h3>
+ <p>Ask any question about scripture, doctrine, or faith.</p>
+ </div>
+ </div>
+ <div class="input-area">
+ <input type="text" id="userInput" placeholder="Ask your question here..." onkeypress="handleKeyPress(event)">
+ <button onclick="sendMessage()" id="sendBtn">Ask</button>
+ </div>
+ <div class="category-row">
+ <a href="#" class="category-btn" onclick="askTopic('Jesus Christ')">✝️ Jesus Christ</a>
+ <a href="#" class="category-btn" onclick="askTopic('Book of Mormon')">📜 Book of Mormon</a>
+ <a href="#" class="category-btn" onclick="askTopic('First Vision')">🌅 First Vision</a>
+ <a href="#" class="category-btn" onclick="askTopic('Restoration')">🕍 Restoration</a>
+ <a href="#" class="category-btn" onclick="askTopic('Prayer')">🙏 Prayer</a>
+ <a href="#" class="category-btn" onclick="askTopic('Plan of Salvation')">🌅 Plan of Salvation</a>
+ </div>
+ </div>
+ </section>
+ 
+ <footer><p>© 2026 focusChrist — All are welcome here.</p></footer>
+ 
+ <script>
+ const qaDatabase = {
+ 'jesus christ': { answer: "We believe that Jesus Christ is the Son of God, our Savior and Redeemer.", sources: [{text:'John 3:16',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3.16'}] },
+ 'book of mormon': { answer: "The Book of Mormon is another testament of Jesus Christ. It was written by ancient prophets in the Americas and translated by Joseph Smith.", sources: [{text:'BOM',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm'}] },
+ 'first vision': { answer: "In Spring 1820, Joseph Smith prayed in a grove and God the Father and Jesus Christ appeared to him. This was the First Vision.", sources: [{text:'JS-History 1:15-17',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1.15'}] },
+ 'restoration': { answer: "The Restoration began when God the Father and Jesus Christ appeared to Joseph Smith in 1820.", sources: [{text:'D&C 1',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1'}] },
+ 'prayer': { answer: "Prayer is communication with God. We can pray anytime, anywhere.", sources: [{text:'Matthew 6:9-13',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6.9'}] },
+ 'plan of salvation': { answer: "The Plan of Salvation explains why we are here. We lived with God before this life.", sources: [{text:'Alma 42',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42'}] },
+ 'jesus birth': { answer: "Jesus Christ was born in Bethlehem around 4-6 BC.", sources: [{text:'Luke 2',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2'}] },
+ 'atonement': { answer: "The Atonement of Jesus Christ is the most important event in history.", sources: [{text:'Alma 7:11-13',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7.11'}] },
+ 'tithing': { answer: "Tithing is returning one-tenth of our increase to the Lord.", sources: [{text:'Malachi 3:10',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/mal/3.10'}] },
+ 'word of wisdom': { answer: "The Word of Wisdom is a health law given by God.", sources: [{text:'D&C 89',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89'}] }
+ };
+ function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
+ function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;sendMessage()}
+ function findAnswer(q){q=q.toLowerCase();for(let k in qaDatabase){if(q.includes(k))return qaDatabase[k]}return{answer:"Great question! We're constantly adding answers.",sources:[{text:'Church',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]}}
+ function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h='<p>'+t+'</p>';if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=c.scrollHeight}
+ function sendMessage(){const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();if(!q)return;b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);setTimeout(()=>{l.remove();b.disabled=false;const r=findAnswer(q);addMessage(r.answer,false,r.sources)},1500)}
+ </script>
+</body>
+</html>

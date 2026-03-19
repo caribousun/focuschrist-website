@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>focusChrist - Home</title>
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0a0a0a; color: #fff; }
+ 
+ .hero {
+ position: relative;
+ height: 25vh;
+ min-height: 150px;
+ }
+ 
+ .hero-bg {
+ width: 100%;
+ height: 100%;
+ background: url('https://raw.githubusercontent.com/caribousun/focuschrist-website/main/jesus.jpg?v=1');
+ background-size: 110% auto;
+ background-position: center 35%;
+ background-repeat: no-repeat;
+ -webkit-image-rendering: crisp-edges;
+ -moz-image-rendering: crisp-edges;
+ image-rendering: crisp-edges;
+ }
+ 
+ .nav {
+ position: fixed;
+ top: 0;
+ width: 100%;
+ padding: 25px 40px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ z-index: 100;
+ background: linear-gradient(180deg, rgba(0,0,0,0.9) 0%, transparent 100%);
+ }
+ 
+ .nav-logo {
+ font-size: 1.5em;
+ letter-spacing: 5px;
+ color: #fff;
+ text-decoration: none;
+ font-family: 'Times New Roman', serif;
+ }
+ 
+ .nav-links { display: flex; gap: 40px; }
+ .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9em; letter-spacing: 3px; }
+ .nav-links a:hover { color: #c9a961; }
+ 
+ .qa-section { background: #0a0a0a; padding: 60px 20px; }
+ .qa-container { max-width: 800px; margin: 0 auto; }
+ .qa-title { text-align: center; margin-bottom: 30px; }
+ .qa-title h2 { font-size: 2em; color: #c9a961; letter-spacing: 5px; margin-bottom: 10px; }
+ .qa-title p { color: #888; font-size: 0.9em; }
+ .chat-box { background: rgba(255,255,255,0.03); border-radius: 15px; padding: 25px; min-height: 200px; max-height: 300px; overflow-y: auto; border: 1px solid rgba(201,169,97,0.3); margin-bottom: 20px; }
+ .message { margin: 15px 0; padding: 15px; border-radius: 12px; }
+ .user-message { background: rgba(201,169,97,0.15); margin-left: 20px; border: 1px solid rgba(201,169,97,0.4); }
+ .bot-message { background: rgba(255,255,255,0.05); margin-right: 20px; }
+ .bot-message p { line-height: 1.6; color: #ddd; margin-bottom: 10px; }
+ .sources { margin-top: 10px; padding-top: 10px; border-top: 1px solid rgba(201,169,97,0.3); }
+ .sources-title { color: #c9a961; margin-bottom: 8px; font-size: 0.85em; font-weight: bold; }
+ .source-link { display: inline-block; color: #888; text-decoration: none; padding: 5px 12px; margin: 3px; font-size: 0.8em; border: 1px solid #444; border-radius: 4px; }
+ .source-link:hover { color: #c9a961; border-color: #c9a961; }
+ .input-area { display: flex; gap: 15px; margin-bottom: 40px; }
+ input[type="text"] { flex: 1; padding: 15px 20px; border: 1px solid #c9a961; border-radius: 30px; background: rgba(255,255,255,0.05); color: #fff; font-size: 1em; }
+ input[type="text"]::placeholder { color: #666; }
+ button { padding: 15px 30px; border: none; border-radius: 30px; background: #c9a961; color: #0a0a0a; font-weight: bold; cursor: pointer; }
+ button:hover { background: #b89951; }
+ .welcome { text-align: center; padding: 20px; }
+ .welcome h3 { color: #c9a961; margin-bottom: 10px; font-size: 1.3em; }
+ .welcome p { color: #aaa; font-size: 0.9em; line-height: 1.6; }
+ 
+ .purpose { background: #0a0a0a; padding: 80px 20px; }
+ .purpose-content { max-width: 800px; margin: 0 auto; text-align: center; }
+ .purpose h2 { font-size: 2.5em; letter-spacing: 8px; margin-bottom: 50px; color: #fff; }
+ .purpose-block { margin: 40px 0; padding: 30px; }
+ .purpose-block h3 { font-size: 1.2em; letter-spacing: 5px; color: #c9a961; margin-bottom: 15px; text-transform: uppercase; }
+ .purpose-block p { font-size: 1.1em; color: #ccc; line-height: 1.8; max-width: 600px; margin: 0 auto; }
+ 
+ .cta { background: #0a0a0a; padding: 60px 20px 100px; text-align: center; }
+ .cta-button {display: inline-block;
+ padding: 18px 50px;
+ background: linear-gradient(135deg, #c9a961 0%, #8b7355 100%);
+ color: #0a0a0a;
+ text-decoration: none;
+ border-radius: 50px;
+ font-size: 1.1em;
+ font-weight: bold;
+ letter-spacing: 2px;
+ transition: transform 0.3s;
+ }
+ .cta-button:hover { transform: scale(1.05); }
+ 
+ footer { padding: 40px 20px; text-align: center; color: #555; font-size: 0.85em; background: #050505; }
+ 
+ @media (max-width: 768px) {
+ .hero-title { font-size: 1.8em; letter-spacing: 5px; margin-top: 15vh; }
+ .nav { padding: 15px; flex-wrap: wrap; }
+ .nav-links { gap: 15px; }
+ .nav-links a { font-size: 0.7em; letter-spacing: 1px; }
+ .input-area { flex-direction: column; }
+ button { width: 100%; }
+ }
+ </style>
+</head>
+<body>
+ <nav class="nav">
+ <a href="index.html" class="nav-logo">focusChrist</a>
+ <div class="nav-links">
+ <a href="index.html">HOME</a>
+ <a href="ask.html">ASK A QUESTION</a>
+ <a href="about.html">ABOUT</a>
+ </div>
+ </nav>
+ 
+ <section class="hero" onclick="window.open('https://raw.githubusercontent.com/caribousun/focuschrist-website/main/jesus-focusChrist.jpg')" style="cursor: pointer;">
+ <div class="hero-bg"></div>
+ </section>
+ 
+ <section class="qa-section">
+ <div class="qa-container">
+ <div class="qa-title">
+ <h2>ASK A QUESTION</h2>
+ <p>Type your question below or click a topic</p>
+ </div>
+ <div class="chat-box" id="chatBox">
+ <div class="welcome">
+ <h3>🕍 Welcome to focusChrist</h3>
+ <p>Ask any question about scripture, doctrine, or faith.</p>
+ </div>
+ </div>
+ <div class="input-area">
+ <input type="text" id="userInput" placeholder="Ask your question here..." onkeypress="handleKeyPress(event)">
+ <button onclick="sendMessage()" id="sendBtn">Ask</button>
+ </div>
+ </div>
+ </section>
+ 
+ <section class="purpose">
+ <div class="purpose-content">
+ <h2>OUR PURPOSE</h2>
+ 
+ <div class="purpose-block">
+ <h3>My Path</h3>
+ <p>Empowering lives through Christ-centered focus; fostering spiritual growth, purposeful living, and community connection.</p>
+ </div>
+ 
+ <div class="purpose-block">
+ <h3>I Believe</h3>
+ <p>I believe in the transformative power of Christ's love, guiding us to focus on faith, purpose, and unity for a meaningful life.</p>
+ </div>
+ 
+ <div class="purpose-block">
+ <h3>My Community</h3>
+ <p>Join our Christ-centered community, where faith thrives, connections deepen, and together, we journey towards purposeful living.</p>
+ </div>
+ </div>
+ </section>
+ 
+ <footer>
+ <p>© 2026 focusChrist. All are welcome here.</p>
+ </footer>
+ 
+ <script>
+ const qaDatabase = {
+ 'old testament': { answer: "The Old Testament is the first division of the Christian Bible, containing books written before the birth of Jesus Christ.", sources: [{text:'📜 Bible',url:'https://www.churchofjesuschrist.org/study/scriptures/ot'}] },
+ 'genesis': { answer: "Genesis is the first book of the Old Testament, written by Moses.", sources: [{text:'📜 Genesis',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/gen'}] },
+ 'exodus': { answer: "Exodus tells the story of Israel's deliverance from Egyptian bondage.", sources: [{text:'📜 Exodus',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ex'}] },
+ 'psalms': { answer: "Psalms is a collection of sacred poems and hymns.", sources: [{text:'📜 Psalms',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ps'}] },
+ 'isaiah': { answer: "Isaiah is a major prophet whose writings contain testimonies of the Messiah.", sources: [{text:'📜 Isaiah',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/isa'}] },
+ 'new testament': { answer: "The New Testament tells of the life, teachings, Atonement, and Resurrection of Jesus Christ.", sources: [{text:'📜 New Testament',url:'https://www.churchofjesuschrist.org/study/scriptures/nt'}] },
+ 'matthew': { answer: "The Gospel of Matthew was written to show Jesus as the promised Messiah.", sources: [{text:'📜 Matthew',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/matt'}] },
+ 'mark': { answer: "Mark's Gospel emphasizes Jesus as the Servant.", sources: [{text:'📜 Mark',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/mark'}] },
+ 'luke': { answer: "Luke wrote the longest gospel with detailed accounts of Jesus' birth and ministry.", sources: [{text:'📜 Luke',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/luke'}] },
+ 'john': { answer: "John's Gospel testifies that Jesus is the Christ, the Son of God.", sources: [{text:'📜 John',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john'}] },
+ 'romans': { answer: "Romans explains justification by faith and the plan of salvation.", sources: [{text:'📜 Romans',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/rom'}] },
+ 'book of mormon': { answer: "The Book of Mormon is another testament of Jesus Christ.", sources: [{text:'📜 Book of Mormon',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm'}] },
+ '1 nephi': { answer: "1 Nephi begins the Book of Mormon. Lehi's family leaves Jerusalem.", sources: [{text:'📜 1 Nephi',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne'}] },
+ '2 nephi': { answer: "2 Nephi contains Jacob's teachings and the poetry of Isaiah.", sources: [{text:'📜 2 Nephi',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne'}] },
+ 'alma': { answer: "Alma the Younger's teachings are among the most doctrinal in the Book of Mormon.", sources: [{text:'📜 Alma',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma'}] },
+ 'helaman': { answer: "Helaman records the period of inequality and secret combinations.", sources: [{text:'📜 Helaman',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/hel'}] },
+ 'moroni': { answer: "Moroni was the final prophet in the Book of Mormon.", sources: [{text:'📜 Moroni',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/morm'}] },
+ 'doctrine and covenants': { answer: "The Doctrine and Covenants is a collection of revelations given through Joseph Smith.", sources: [{text:'📜 D&C',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament'}] },
+ 'pearl of great price': { answer: "The Pearl of Great Price contains the Book of Moses, Abraham, and Joseph Smith-History.", sources: [{text:'📜 Pearl of Great Price',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp'}] },
+ 'joseph smith': { answer: "Joseph Smith (1805-1844) was the Prophet who restored the Church of Jesus Christ in 1830.", sources: [{text:'📜 JS-History',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1'}] },
+ 'first vision': { answer: "In spring 1820, Joseph Smith prayed and God the Father and Jesus Christ appeared to him.", sources: [{text:'📜 JS-History 1:15-17',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1.15'}] },
+ 'restoration': { answer: "The Restoration began when God the Father and Jesus Christ appeared to Joseph Smith.", sources: [{text:'📜 D&C 1:30',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1.30'}] },
+ 'prophet': { answer: "We believe in continuing revelation through living prophets.", sources: [{text:'📜 Amos 3:7',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/amos/3.7'}] },
+ 'prophets': { answer: "We believe in continuing revelation through living prophets.", sources: [{text:'📜 Amos 3:7',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/amos/3.7'}] },
+ 'priesthood': { answer: "The priesthood is the power and authority of God.", sources: [{text:'📜 D&C 84',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84'}] },
+ 'temple': { answer: "Temples are houses of the Lord where we perform holy ordinances.", sources: [{text:'📜 D&C 109:13-15',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109.13'}] },
+ 'temples': { answer: "Temples are houses of the Lord where we perform holy ordinances.", sources: [{text:'📜 D&C 109:13-15',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109.13'}] },
+ 'prayer': { answer: "Prayer is communication with God. We can pray anytime, anywhere.", sources: [{text:'📜 Matthew 6:9-13',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6.9'}] },
+ 'baptism': { answer: "Baptism is the first ordinance of salvation.", sources: [{text:'📜 3 Nephi 11',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11'}] },
+ 'holy ghost': { answer: "The Holy Ghost is the third member of the Godhead.", sources: [{text:'📜 D&C 121',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121'}] },
+ 'plan of salvation': { answer: "The Plan of Salvation explains why we are here.", sources: [{text:'📜 Alma 42',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42'}] },
+ 'family': { answer: "We believe the family is eternal.", sources: [{text:'🕍 Family Proclamation',url:'https://www.churchofjesuschrist.org/study/manual/the-family-a-proclamation-to-the-world'}] },
+ 'resurrection': { answer: "Because of Jesus Christ's Atonement, everyone will be resurrected.", sources: [{text:'📜 Alma 11',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/11'}] },
+ 'jesus christ': { answer: "We believe that Jesus Christ is the Son of God, our Savior and Redeemer.", sources: [{text:'📜 John 3:16',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3.16'}] },
+ 'atonement': { answer: "The Atonement of Jesus Christ is the most important event in history.", sources: [{text:'📜 Alma 7:11-13',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7.11'}] },
+ 'joseph smith timeline': { answer: "Joseph Smith (1805-1844): Born December 23, 1805 in Sharon, Vermont. In 1820, at age 14, had the First Vision. 1823 - angel Moroni appeared. 1827 - married Emma Hale, received plates. 1827-1829 - translated Book of Mormon. April 6, 1830 - Church organized. Led Church through persecution, built Kirtland Temple (1836), fled to Nauvoo, martyred June 27, 1844.", sources: [{text:'📜 JS-History',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h'}] },
+ 'restoration timeline': { answer: "Restoration: 1805 - Joseph born. 1820 - First Vision. 1823 - Moroni appears. 1827 - receives plates. 1829 - priesthood restored. April 6, 1830 - Church organized. 1830 - Book of Mormon published. 1836 - Kirtland Temple. 1844 - Joseph martyred.", sources: [{text:'📜 D&C 1',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1'}] },
+ 'first vision 1820': { answer: "In Spring 1820, 14-year-old Joseph Smith prayed in a grove near his home. God the Father and Jesus Christ appeared to him. This was the First Vision - the beginning of the Restoration.", sources: [{text:'📜 JS-History 1:15-17',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1.15'}] },
+ 'book of mormon translation': { answer: "From 1827-1829, Joseph translated the Book of Mormon using the Urim and Thummim. Emma was scribe. Published March 1830, weeks before the Church was organized.", sources: [{text:'📜 BOM',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm'}] },
+ 'priesthood restoration': { answer: "In 1829, Peter, James, and John appeared to Joseph Smith and restored the Melchizedek Priesthood, giving authority to perform ordinances.", sources: [{text:'📜 D&C 27',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27'}] },
+ 'church organized 1830': { answer: "April 6, 1830, the Church was organized in Fayette, New York with 6 members. Joseph was ordained as the first elder. This marked the Restoration of Christ's original church.", sources: [{text:'📜 D&C 20',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20'}] }
+ };
+ function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
+ function findAnswer(q){q=q.toLowerCase();for(let k in qaDatabase){if(q.includes(k))return qaDatabase[k]}return{answer:"That's a great question! We invite you to learn more at the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]}}
+ function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h='<p>'+t+'</p>';if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=c.scrollHeight}
+ function sendMessage(){const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();if(!q)return;b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);setTimeout(()=>{l.remove();b.disabled=false;const r=findAnswer(q);addMessage(r.answer,false,r.sources)},1500)}
+ </script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask - focusChrist</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #0a0a0a; color: #fff; }
+        .hero { position: relative; height: 25vh; min-height: 150px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(200,180,140,0.25) 0%, rgba(100,100,120,0.35) 30%, rgba(20,20,30,0.7) 60%, rgba(0,0,0,0.98) 100%), url('https://raw.githubusercontent.com/caribousun/focuschrist-website/main/jesus.jpg?v=1'); background-size: cover; background-position: center 30%; }
+        .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%); }
+        .hero-content { position: relative; z-index: 10; text-align: center; padding: 20px; }
+        .hero-circle { width: 300px; height: 300px; background: rgba(101, 95, 72, 0.9); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; }
+        .hero-circle-text { color: #fff; font-size: 1.5em; letter-spacing: 5px; font-family: 'Times New Roman', serif; text-transform: uppercase; text-align: center; padding: 20px; }
+        .nav { position: fixed; top: 0; width: 100%; padding: 25px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 100; background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%); }
+        .nav-logo { font-size: 1.5em; letter-spacing: 5px; color: #fff; text-decoration: none; font-family: 'Times New Roman', serif; }
+        .nav-links { display: flex; gap: 40px; }
+        .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9em; letter-spacing: 3px; }
+        .nav-links a:hover { color: #c9a961; }
+        .nav-links a.active { color: #c9a961; }
+        .qa-section { background: #0a0a0a; padding: 50px 20px; }
+        .qa-container { max-width: 900px; margin: 0 auto; }
+        .chat-box { background: rgba(255,255,255,0.03); border-radius: 15px; padding: 25px; min-height: 280px; max-height: 400px; overflow-y: auto; border: 1px solid rgba(201,169,97,0.3); margin-bottom: 20px; }
+        .message { margin: 15px 0; padding: 18px; border-radius: 12px; }
+        .user-message { background: rgba(201,169,97,0.15); margin-left: 20px; border: 1px solid rgba(201,169,97,0.4); }
+        .bot-message { background: rgba(255,255,255,0.05); margin-right: 20px; }
+        .bot-message p { line-height: 1.7; color: #ddd; margin-bottom: 12px; }
+        .sources { margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(201,169,97,0.3); }
+        .sources-title { color: #c9a961; margin-bottom: 8px; font-size: 0.85em; font-weight: bold; }
+        .source-link { display: inline-block; color: #888; text-decoration: none; padding: 5px 12px; margin: 3px; font-size: 0.8em; border: 1px solid #444; border-radius: 4px; }
+        .source-link:hover { color: #c9a961; border-color: #c9a961; }
+        .input-area { display: flex; gap: 15px; margin-bottom: 40px; }
+        input[type="text"] { flex: 1; padding: 15px 20px; border: 1px solid #c9a961; border-radius: 30px; background: rgba(255,255,255,0.05); color: #fff; font-size: 1em; }
+        input[type="text"]::placeholder { color: #666; }
+        button { padding: 15px 30px; border: none; border-radius: 30px; background: #c9a961; color: #0a0a0a; font-weight: bold; cursor: pointer; }
+        button:hover { background: #b89951; }
+        .welcome { text-align: center; padding: 20px; }
+        .welcome h3 { color: #c9a961; margin-bottom: 10px; font-size: 1.5em; }
+        .welcome p { color: #aaa; font-size: 0.95em; line-height: 1.6; }
+        .welcome-sub { color: #666; font-size: 0.85em; margin-top: 15px; }
+        .scripture-categories { margin-top: 40px; }
+        .category-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 20px; }
+        .category-title { width: 100%; text-align: center; color: #888; font-size: 0.8em; letter-spacing: 3px; margin: 15px 0 10px; text-transform: uppercase; }
+        .category-btn { padding: 12px 25px; border: 1px solid #c9a961; border-radius: 8px; background: rgba(201,169,97,0.1); color: #c9a961; cursor: pointer; font-size: 0.9em; letter-spacing: 1px; transition: all 0.3s; text-decoration: none; display: inline-block; }
+        .category-btn:hover { background: #c9a961; color: #0a0a0a; transform: translateY(-2px); }
+        footer { padding: 40px 20px; text-align: center; color: #555; font-size: 0.85em; background: #050505; }
+        @media (max-width: 768px) {
+            .hero-circle { width: 250px; height: 250px; }
+            .hero-circle-text { font-size: 1.2em; }
+            .nav { padding: 20px; }
+            .nav-links { display: none; }
+            .input-area { flex-direction: column; }
+            button { width: 100%; }
+            .category-btn { padding: 10px 15px; font-size: 0.8em; }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">focusChrist</a>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="ask.html" class="active">ASK A QUESTION</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-circle"><div class="hero-circle-text">ASK<br>YOUR<br>QUESTION</div></div>
+        </div>
+    </section>
+    <section class="qa-section">
+        <div class="qa-container">
+            <div class="chat-box" id="chatBox">
+                <div class="welcome">
+                    <h3>🕍 Welcome to focusChrist</h3>
+                    <p>Ask any question about scripture, doctrine, or faith.<br>Type your question below or click a topic.</p>
+                    <p class="welcome-sub">We answer with love — drawing from the Bible, Book of Mormon, D&C, and modern prophets.</p>
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Ask your question here..." onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()" id="sendBtn">Ask</button>
+            </div>
+            <div class="scripture-categories">
+                <div class="category-row">
+                    <a href="#" class="category-btn" onclick="askTopic('Jesus Christ')">✝️ Jesus Christ</a>
+                    <a href="#" class="category-btn" onclick="askTopic('Book of Mormon')">📜 Book of Mormon</a>
+                    <a href="#" class="category-btn" onclick="askTopic('First Vision')">🌅 First Vision</a>
+                    <a href="#" class="category-btn" onclick="askTopic('Restoration')">🕍 Restoration</a>
+                    <a href="#" class="category-btn" onclick="askTopic('Prayer')">🙏 Prayer</a>
+                    <a href="#" class="category-btn" onclick="askTopic('Plan of Salvation')">🌅 Plan of Salvation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer><p>© 2026 focusChrist — All are welcome here.</p></footer>
+    <script>
+    const qaDatabase = {
+        'old testament': { answer: "The Old Testament is the first division of the Christian Bible, containing books written before the birth of Jesus Christ.", sources: [{text:'📜 Bible',url:'https://www.churchofjesuschrist.org/study/scriptures/ot'}] },
+        'genesis': { answer: "Genesis is the first book of the Old Testament, written by Moses.", sources: [{text:'📜 Genesis',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/gen'}] },
+        'exodus': { answer: "Exodus tells the story of Israel's deliverance from Egyptian bondage.", sources: [{text:'📜 Exodus',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ex'}] },
+        'psalms': { answer: "Psalms is a collection of sacred poems and hymns.", sources: [{text:'📜 Psalms',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ps'}] },
+        'isaiah': { answer: "Isaiah is a major prophet whose writings contain testimonies of the Messiah.", sources: [{text:'📜 Isaiah',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/isa'}] },
+        'new testament': { answer: "The New Testament tells of the life, teachings, Atonement, and Resurrection of Jesus Christ.", sources: [{text:'📜 New Testament',url:'https://www.churchofjesuschrist.org/study/scriptures/nt'}] },
+        'matthew': { answer: "The Gospel of Matthew was written to show Jesus as the promised Messiah.", sources: [{text:'📜 Matthew',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/matt'}] },
+        'mark': { answer: "Mark's Gospel emphasizes Jesus as the Servant.", sources: [{text:'📜 Mark',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/mark'}] },
+        'luke': { answer: "Luke wrote the longest gospel with detailed accounts of Jesus' birth and ministry.", sources: [{text:'📜 Luke',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/luke'}] },
+        'john': { answer: "John's Gospel testifies that Jesus is the Christ, the Son of God.", sources: [{text:'📜 John',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john'}] },
+        'romans': { answer: "Romans explains justification by faith and the plan of salvation.", sources: [{text:'📜 Romans',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/rom'}] },
+        'book of mormon': { answer: "The Book of Mormon is another testament of Jesus Christ.", sources: [{text:'📜 Book of Mormon',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm'}] },
+        '1 nephi': { answer: "1 Nephi begins the Book of Mormon. Lehi's family leaves Jerusalem.", sources: [{text:'📜 1 Nephi',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne'}] },
+        '2 nephi': { answer: "2 Nephi contains Jacob's teachings and the poetry of Isaiah.", sources: [{text:'📜 2 Nephi',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne'}] },
+        'alma': { answer: "Alma the Younger's teachings are among the most doctrinal in the Book of Mormon.", sources: [{text:'📜 Alma',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma'}] },
+        'helaman': { answer: "Helaman records the period of inequality and secret combinations.", sources: [{text:'📜 Helaman',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/hel'}] },
+        'moroni': { answer: "Moroni was the final prophet in the Book of Mormon.", sources: [{text:'📜 Moroni',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/morm'}] },
+        'doctrine and covenants': { answer: "The Doctrine and Covenants is a collection of revelations given through Joseph Smith.", sources: [{text:'📜 D&C',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament'}] },
+        'pearl of great price': { answer: "The Pearl of Great Price contains the Book of Moses, Abraham, and Joseph Smith-History.", sources: [{text:'📜 Pearl of Great Price',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp'}] },
+        'joseph smith': { answer: "Joseph Smith (1805-1844) was the Prophet who restored the Church of Jesus Christ in 1830.", sources: [{text:'📜 JS-History',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1'}] },
+        'first vision': { answer: "In spring 1820, Joseph Smith prayed and God the Father and Jesus Christ appeared to him.", sources: [{text:'📜 JS-History 1:15-17',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1.15'}] },
+        'restoration': { answer: "The Restoration began when God the Father and Jesus Christ appeared to Joseph Smith.", sources: [{text:'📜 D&C 1:30',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1.30'}] },
+        'prophet': { answer: "We believe in continuing revelation through living prophets.", sources: [{text:'📜 Amos 3:7',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/amos/3.7'}] },
+        'prophets': { answer: "We believe in continuing revelation through living prophets.", sources: [{text:'📜 Amos 3:7',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/amos/3.7'}] },
+        'priesthood': { answer: "The priesthood is the power and authority of God.", sources: [{text:'📜 D&C 84',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84'}] },
+        'temple': { answer: "Temples are houses of the Lord where we perform holy ordinances.", sources: [{text:'📜 D&C 109:13-15',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109.13'}] },
+        'temples': { answer: "Temples are houses of the Lord where we perform holy ordinances.", sources: [{text:'📜 D&C 109:13-15',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109.13'}] },
+        'prayer': { answer: "Prayer is communication with God. We can pray anytime, anywhere.", sources: [{text:'📜 Matthew 6:9-13',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6.9'}] },
+        'baptism': { answer: "Baptism is the first ordinance of salvation.", sources: [{text:'📜 3 Nephi 11',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11'}] },
+        'holy ghost': { answer: "The Holy Ghost is the third member of the Godhead.", sources: [{text:'📜 D&C 121',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121'}] },
+        'plan of salvation': { answer: "The Plan of Salvation explains why we are here.", sources: [{text:'📜 Alma 42',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42'}] },
+        'family': { answer: "We believe the family is eternal.", sources: [{text:'🕍 Family Proclamation',url:'https://www.churchofjesuschrist.org/study/manual/the-family-a-proclamation-to-the-world'}] },
+        'resurrection': { answer: "Because of Jesus Christ's Atonement, everyone will be resurrected.", sources: [{text:'📜 Alma 11',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/11'}] },
+        'jesus christ': { answer: "We believe that Jesus Christ is the Son of God, our Savior and Redeemer.", sources: [{text:'📜 John 3:16',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3.16'}] },
+        'atonement': { answer: "The Atonement of Jesus Christ is the most important event in history.", sources: [{text:'📜 Alma 7:11-13',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7.11'}] },
+        'joseph smith timeline': { answer: "Joseph Smith (1805-1844): Born December 23, 1805 in Sharon, Vermont. Moved to Palmyra, New York. In 1820, at age 14, had the First Vision in a grove near his home. In 1823, angel Moroni appeared and told him about the golden plates. He married Emma Hale in 1827. From 1827-1829, translated the Book of Mormon. On April 6, 1830, organized The Church of Jesus Christ of Latter-day Saints in Fayette, New York. Led the Church through persecution, built the Kirtland Temple (1836), fled to Nauvoo, Illinois, and was martyred June 27, 1844 in Carthage Jail.", sources: [{text:'📜 JS-History',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h'},{text:'🕍 Joseph Smith',url:'https://www.churchofjesuschrist.org/study/topics/joseph-smith'}] },
+        'restoration timeline': { answer: "The Restoration of Jesus Christ's Church: 1805 - Joseph Smith born. 1820 - The First Vision: God the Father and Jesus Christ appeared to Joseph Smith. 1823 - Angel Moroni appeared, told of golden plates. 1827 - Joseph received plates from Moroni. 1829 - Priesthood restored (Peter, James, John appeared to Joseph). April 6, 1830 - Church organized with 6 members in Fayette, NY. 1830 - Book of Mormon published. 1836 - Kirtland Temple dedicated. 1844 - Joseph Smith martyred.", sources: [{text:'📜 D&C 1',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1'},{text:'🕍 Restoration',url:'https://www.churchofjesuschrist.org/study/topics/restoration-of-the-church'}] },
+        'first vision 1820': { answer: "In Spring 1820, young Joseph Smith went into a grove near his home in Palmyra, New York, to pray about which church to join. God the Father and Jesus Christ appeared to him in a pillar of light. This event, called the First Vision, was the beginning of the Restoration. It is one of the most important events in history.", sources: [{text:'📜 JS-History 1:15-17',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1.15'},{text:'🕍 First Vision',url:'https://www.churchofjesuschrist.org/study/topics/first-vision'}] },
+        'book of mormon translation': { answer: "From 1827-1829, Joseph Smith translated the Book of Mormon from ancient golden plates. He used the Urim and Thummim (seer stones given by God) to translate. Emma Smith served as scribe. The translation was completed in June 1829, and the Book was published in March 1830, just weeks before the Church was organized.", sources: [{text:'📜 Book of Mormon',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm'},{text:'🕍 Translation',url:'https://www.churchofjesuschrist.org/study/topics/translation-of-the-book-of-mormon'}] },
+        'priesthood restoration': { answer: "In 1829, before the Church was organized, the priesthood was restored. Peter, James, and John (the original apostles) appeared to Joseph Smith and Oliver Cowdery and restored the Melchizedek Priesthood. This gave them authority to act in God's name and perform ordinances like baptism.", sources: [{text:'📜 D&C 27',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27'},{text:'🕍 Priesthood',url:'https://www.churchofjesuschrist.org/study/topics/priesthood-restoration'}] },
+        'church organized 1830': { answer: "The Church of Jesus Christ of Latter-day Saints was organized April 6, 1830, in Fayette, New York. There were six original members. Joseph Smith was ordained as the first elder.", sources: [{text:'D&C 20',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20'}] },
+        'tithing': { answer: "Tithing is returning one-tenth of our increase to the Lord. It is a sacred law and blessing. The Lord promises us great blessings in return (Malachi 3:10).", sources: [{text:'Malachi 3:10',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/mal/3.10'}] },
+        'word of wisdom': { answer: "The Word of Wisdom is a health law given by God. It teaches us to avoid tobacco, alcohol, coffee, tea, and illegal drugs. It encourages eating fruits, vegetables, and exercising.", sources: [{text:'D&C 89',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89'}] },
+        'temple work': { answer: "Temple work includes proxy baptisms, confirmations, endowments, and sealings for the dead. Families can be sealed together forever through temple ordinances.", sources: [{text:'Temple Work',url:'https://www.churchofjesuschrist.org/study/topics/temple-work'}] },
+        'priesthood keys': { answer: "Priesthood keys are the authority to direct the work of the priesthood. The President holds all keys, followed by the Quorum of the Twelve.", sources: [{text:'D&C 81',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/81'}] },
+        'apostle': { answer: "An apostle is a special witness of Jesus Christ. The Quorum of the Twelve Apostles is led by the President of the Church.", sources: [{text:'Apostles',url:'https://www.churchofjesuschrist.org/study/topics/apostle'}] },
+        'premortal life': { answer: "Before we were born, we lived with God as His spirit children. This life is a test to see if we will follow Jesus Christ.", sources: [{text:'Jeremiah 1:5',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/jer/1.5'}] },
+        'celestial kingdom': { answer: "The Celestial Kingdom is the highest kingdom of glory. To enter, we must be baptized, receive the Holy Ghost, keep the commandments, and be sealed in the temple.", sources: [{text:'D&C 76',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76'}] },
+        'faith': { answer: "Faith is believing in things not yet seen. True faith leads to action - we show our faith by following Jesus Christ.", sources: [{text:'Hebrews 11:1',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/heb/11.1'}] },
+        'repentance': { answer: "Repentance is turning away from sin and changing our lives. It includes sorrow, confession, restitution, and forsaking sin.", sources: [{text:'Repentance',url:'https://www.churchofjesuschrist.org/study/topics/repentance'}] },
+        'sabbath day': { answer: "The Sabbath is the Lords day. We keep it holy by attending meetings, resting from work, and doing things that bring us closer to God.", sources: [{text:'Exodus 20:8',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ex/20.8'}] },
+        'revelation': { answer: "Revelation is communication from God to His children. Through prayer and the Holy Ghost, we can receive personal revelation.", sources: [{text:'D&C 121',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121'}] },
+        'relief society': { answer: "The Relief Society is the Churchs womens organization. It provides service, education, and support to members.", sources: [{text:'Relief Society',url:'https://www.churchofjesuschrist.org/study/topics/relief-society'}] },
+        'brigham young': { answer: "Brigham Young (1801-1877) was the second President of the Church. He led the pioneers to Utah and established many of the Churchs practices.", sources: [{text:'Brigham Young',url:'https://www.churchofjesuschrist.org/study/topics/brigham-young'}] },
+        'nauvoo': { answer: "Nauvoo, Illinois was the headquarters of the Church from 1839-1846. Members built a beautiful city and temple there before being forced out.", sources: [{text:'Nauvoo',url:'https://www.churchofjesuschrist.org/study/topics/nauvoo-illinois'}] },
+        'zion': { answer: "Zion is a place of righteousness. Early members built cities called Zion. Today, Zion is wherever the pure in heart gather.", sources: [{text:'Moses 7:18',url:'https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7.18'}] },
+        'suffering': { answer: "Good people suffer for many reasons: to grow, to help others, and to follow Gods plan. Jesus Christ suffered for all our pains.", sources: [{text:'Alma 7:11-13',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7.11'}] },
+        'coffee': { answer: "Coffee is prohibited by the Word of Wisdom as a habit-forming drink.", sources: [{text:'D&C 89',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89'}] },
+        'alcohol': { answer: "Alcohol is prohibited by the Word of Wisdom. It is harmful to the body and spirit.", sources: [{text:'D&C 89',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89'}] },
+        'scriptures': { answer: "We believe in the standard works: The Bible (King James Version), Book of Mormon, Doctrine and Covenants, Pearl of Great Price. These are the word of God.", sources: [{text:'Articles of Faith',url:'https://www.churchofjesuschrist.org/study/manual/articles-of-faith'}] },
+        'bible': { answer: "The Bible is scripture containing the word of God. We use the King James Version. It testifies of Jesus Christ.", sources: [{text:'Bible',url:'https://www.churchofjesuschrist.org/study/scriptures/nt'}] },
+        'grace': { answer: "Grace is the enabling power of Jesus Christ. Through His Atonement, we can be saved. We are saved by grace through faith.", sources: [{text:'Ether 12',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12'}] },
+        'eternal life': { answer: "Eternal life is to live in Gods presence forever. It is the greatest gift God can give through Jesus Christ.", sources: [{text:'John 17:3',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/17.3'}] },
+        'spirit world': { answer: "After we die, our spirits go to the spirit world. Those who accepted the gospel will progress in paradise.", sources: [{text:'D&C 138',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138'}] },
+        'mission': { answer: "We believe all members should serve missions to share the gospel. Missionaries teach about Jesus Christ.", sources: [{text:'Missionary Work',url:'https://www.churchofjesuschrist.org/study/topics/missionary-work'}] },
+        'sealing': { answer: "Temple sealing binds families together for eternity. Husband and wife can be sealed together forever.", sources: [{text:'Sealing',url:'https://www.churchofjesuschrist.org/study/topics/sealing'}] },
+        'general conference': { answer: "General Conference is held twice a year. The Prophet and Apostles speak to the world about Jesus Christ.", sources: [{text:'Conference',url:'https://www.churchofjesuschrist.org/study/topics/general-conference'}] },
+        'jesus birth': { answer: "Jesus Christ was born in Bethlehem around 4-6 BC (or 4-6 CE depending on the calendar). The exact year is not certain, but scholars estimate it was between 6-4 BC.", sources: [{text:'Bible',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2'}] },
+        'christmas': { answer: "Christmas celebrates the birth of Jesus Christ. We celebrate His birth on December 25, though the exact date is unknown.", sources: [{text:'Luke 2',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2'}] },
+        'when was jesus born': { answer: "Jesus Christ was born in Bethlehem around 4-6 BC. The exact year is not certain, but it was during the reign of King Herod.", sources: [{text:'Luke 2',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2'}] },
+        'baptism of fire': { answer: "The Baptism of Fire is when the Holy Ghost is received after baptism. It is a gift from God that testifies of truth.", sources: [{text:'3 Nephi 19',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19'}] },
+        'gift of holy ghost': { answer: "The Gift of the Holy Ghost is promised to all who are baptized. It is the right to have the Holy Ghost as a constant companion.", sources: [{text:'Acts 2:38',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/acts/2.38'}] },
+        'born of god': { answer: "To be born of God means to become His child through faith in Jesus Christ, repentance, and baptism. We become His sons and daughters.", sources: [{text:'John 1:12-13',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/1.12'}] },
+        'born again': { answer: "Being born again means being spiritually reborn through faith in Jesus Christ, repentance, and baptism. It is a change of heart.", sources: [{text:'John 3:3',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3.3'}] },
+        'sanctification': { answer: "Sanctification is becoming more like Jesus Christ through the Holy Ghost. It is a gradual process of being set apart for Gods purposes.", sources: [{text:'Mosiah 27',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/27'}] },
+        'endowment': { answer: "The endowment is a temple ordinance where we make covenants with God and receive instruction about His plan. It prepares us to return to Him.", sources: [{text:'Temple',url:'https://www.churchofjesuschrist.org/study/topics/endowment'}] },
+        'baptism requirements': { answer: "To be baptized, one must be 8 years old or older, repent of all sins, and desire to follow Jesus Christ. Baptism shows our commitment.", sources: [{text:'D&C 20',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20'}] },
+        'who can baptize': { answer: "Baptism must be performed by someone holding the priesthood authority. In the Church, bishops authorize worthy male members to baptize.", sources: [{text:'John 3:5',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3.5'}] },
+        'godhead': { answer: "The Godhead consists of three separate beings: God the Father, His Son Jesus Christ, and the Holy Ghost. They are one in purpose but separate beings.", sources: [{text:'Articles of Faith',url:'https://www.churchofjesuschrist.org/study/manual/articles-of-faith'}] },
+        'trinity': { answer: "We believe in the Godhead - God the Father, His Son Jesus Christ, and the Holy Ghost. They are three separate beings, not one person.", sources: [{text:'Articles of Faith',url:'https://www.churchofjesuschrist.org/study/manual/articles-of-faith'}] }
+    };
+    function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
+    function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;sendMessage()}
+    function findAnswer(q){q=q.toLowerCase();for(let k in qaDatabase){if(q.includes(k))return qaDatabase[k]}return{answer:"Great question! We're constantly adding answers. For now, we invite you to learn more at the official Church website.",sources:[{text:'🕍 Church of Jesus Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'},{text:'🔍 Gospel Topics',url:'https://www.churchofjesuschrist.org/study/topics'}]}}
+    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h='<p>'+t+'</p>';if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=c.scrollHeight}
+    function sendMessage(){const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();if(!q)return;b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);setTimeout(()=>{l.remove();b.disabled=false;const r=findAnswer(q);addMessage(r.answer,false,r.sources)},1500)}
+    </script>
+</body>
+</html>
