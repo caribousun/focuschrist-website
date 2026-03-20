@@ -147,7 +147,7 @@
 - **March 19:** Tatum + Meredith wedding — COMPLETED ✅
 
 ### UPCOMING
-- **March 23:** Follow-up with Mike (Moat) — TBD after wedding
+- **March 23:** Mike interview (Moat) — 11am-2pm, won't Spark until after 3pm
 - **Ongoing:** WGU application (Dave Ward referral)
 
 ---
