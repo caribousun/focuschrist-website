@@ -27,6 +27,24 @@ You wake up fresh each session. These files are your continuity:
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
+### 🧠 MANDATORY MEMORY RECALL
+
+**ALWAYS run `memory_search` BEFORE answering questions about:**
+- Past work, decisions, or projects
+- Dates, people, or preferences
+- Finances, income, or goals
+- Family or personal matters
+- Anything you might have learned or discussed before
+
+**How:**
+1. Run `memory_search` with a relevant query
+2. Use `memory_get` to pull specific lines from relevant files
+3. Only THEN formulate your answer
+
+**Why:** You wake up fresh each session. Memory files are your only continuity. "Mental notes" don't survive restarts — files do.
+
+**Rule:** If a question could be answered by something in your memory files, you MUST check first. No guessing. No "I think I remember..." — always verify.
+
 ### 🧠 MEMORY.md - Your Long-Term Memory
 
 - **ONLY load in main session** (direct chats with your human)

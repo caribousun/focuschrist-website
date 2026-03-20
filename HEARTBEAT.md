@@ -57,6 +57,21 @@
 - Compare to previous week
 - Prepare update for Wyatt
 
+### 5. Weekly Learning Maintenance (Monday Morning)
+- Run: powershell -File brain/scripts/rules-maintenance.ps1 -SendDigest
+- Remove duplicates from rules-hot and rules-context
+- Archive stale entries from corrections-log
+- Review open corrections (flag any with 3+ repeats)
+- Send Wyatt a short "What Changed" digest
+- Save report to brain/cortex/maintenance-report.md
+
+### 6. Daily Correction Check (Every Heartbeat)
+- When Wyatt corrects me (says "No", "Do it this way", "I prefer", "Always do"):
+  - Log to brain/cortex/corrections-log.md with timestamp, context, count
+  - If same correction appears 3x → ask Wyatt: "Should this become a permanent rule?"
+  - If confirmed → move to rules-hot.md (global) or rules-context.md (project)
+  - If denied → move to rules-archive.md
+
 ---
 
 ## Daily Maintenance

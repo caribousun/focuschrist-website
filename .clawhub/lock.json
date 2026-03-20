@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "skills": {
+    "agentlens": {
+      "version": "1.0.0",
+      "installedAt": 1773979687332
+    },
+    "tavily": {
+      "version": "1.0.0",
+      "installedAt": 1773980348308
+    },
+    "super-websearch-realtime": {
+      "version": "1.0.0",
+      "installedAt": 1773986176644
+    },
+    "nano-pdf": {
+      "version": "1.0.0",
+      "installedAt": 1773986185109
+    },
+    "deepresearchwork": {
+      "version": "1.0.0",
+      "installedAt": 1773986280811
+    },
+    "taskr": {
+      "version": "1.0.2",
+      "installedAt": 1773986352568
+    }
+  }
+}
