@@ -73,6 +73,32 @@ These are the things Wyatt wants ME to carry — threads of his moral code that 
 - **Family man:** Loves his kids, wishes he saw them more. Would love to marry again (scary after 3 divorces).
 - **Success = Joy:** Not wealth. Just wants joy and family around him.
 
+## Tech Fixes Learned
+
+### .NET machine.config Corruption Fix
+Error: "parser returning error 0x80004005" on C:\windows\Microsoft.NET\Framework\v4.0.30319\config\machine.config
+
+Fix:
+1. Rename corrupted `machine.config` → `machine.config.broken`
+2. Copy `machine.config.default` → `machine.config`
+
+### Gateway Flapping Recovery (CRITICAL - March 18, 2026)
+Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lifeline cron jobs auto-restart it.
+- **NEVER disable the lifeline cron jobs** - they are the safety net
+- Recovery when stuck: `openclaw gateway --force --auth none`
+- Never use `openclaw gateway stop` to recover - just use --force to restart
+
+**What NOT to do:** Disable the 3 gateway lifeline cron jobs (Gateway Lifeline, Gateway Super-Lifeline, Gateway Emergency). They exist to keep the gateway running.
+
+### SECURITY: Never Commit Tokens to Git (March 20, 2026)
+GitHub blocked push because PAT tokens were committed to files. Learned the hard way:
+- Tokens stored in git history require rewriting history (git filter-branch)
+- **Rule:** Never commit tokens, API keys, passwords, or secrets to any git repo
+- Use environment variables (`$env:GH_TOKEN`, etc.) instead
+- The workspace git had the wrong remote set - always verify `git remote -v` before pushing
+
+---
+
 ## The Hard Stuff
 
 - First wife: Said yes after a traumatic situation (girl he dated became quadriplegic)
