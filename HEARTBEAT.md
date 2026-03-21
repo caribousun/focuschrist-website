@@ -8,7 +8,7 @@
 
 ## Config Notes
 - `compaction.memoryFlush.enabled: true` ✅ (already enabled)
-- `experimental.sessionMemory.enabled: true` with sources: [memory, sessions] ✅ (just added)
+- `experimental.sessionMemory.enabled: true` with sources: [memory, sessions] ✅ (added evening March 20 — confirmed in openclaw.json)
 
 ## CORE REFERENCE
 - Brain: C:\Users\carib\.openclaw\brain\
@@ -43,6 +43,15 @@
 - Compare to known errors in brain/knowledge/tools/error-tracker.md
 - Alert Wyatt ONLY if: NEW error, same error 3+ times, CRITICAL
 - Silent for: expected errors (web_fetch 404s, known issues)
+
+### 2b. Resource Monitor (Every Heartbeat)
+- Run: brain/scripts/resource-monitor.ps1
+- Auto-clean stale npm/npx/node processes (<150MB, older than 5 min)
+- Alert if RAM >85% (CRITICAL) or >80% (WARN)
+- Alert if disk free <10% (CRITICAL)
+- Alert if Mission Control not running
+- Log summary to brain/cortex/resource-log.json
+- Keep Captain running lean — Wyatt's PC is his livelihood
 
 ### 3. Daily Brief Prep (7am Utah Time) - CRITICAL ⭐
 - **Format:** "Yesterday's Wins + Today's Focus" (see daily-briefing-enhanced.md)
@@ -97,10 +106,8 @@
 ## Research Tasks (Rotate Through)
 
 ### Helping Hands App
-- Research no-code platforms (Glide, Bubble, FlutterFlow, Adalo)
-- Study similar apps (TaskRabbit, Neighborly)
-- Document features, cost, development time
-- Save to memory/app-research.md
+- **ON HOLD** — Wyatt paused this on March 20. Do not research.
+- When reactivated: research no-code platforms (Glide, Bubble, FlutterFlow, Adalo)
 
 ### FocusChrist Q&A Optimizer (2x/week)
 - Check brain/knowledge/projects/focuschrist-unanswered.md
@@ -160,4 +167,4 @@
 
 ---
 
-*Last updated: 2026-03-20 06:00 AM by Kal 🕊️*
+*Last updated: 2026-03-20 08:10 PM by Kal 🕊️*
