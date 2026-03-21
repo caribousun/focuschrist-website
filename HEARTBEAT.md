@@ -53,6 +53,13 @@
 - Log summary to brain/cortex/resource-log.json
 - Keep Captain running lean — Wyatt's PC is his livelihood
 
+### 2c. Skills Audit (Every Heartbeat — Quick Check)
+- Verify skills in workspace/.agents/skills are also in node_modules/openclaw/skills
+- If any skill found in wrong location (workspace) but NOT in correct location → MOVE IT
+- Log discrepancies to brain/cortex/skill-audit.md
+- Skills MUST live at: C:\Users\carib\AppData\Roaming\npm\node_modules\openclaw\skills
+- NEVER install skills to workspace folders — always use the validator script
+
 ### 2c. OpenClaw Auto-Update (Daily 4am)
 - Run: brain/scripts/auto-update.ps1
 - Runs `openclaw update` to keep OpenClaw current
@@ -174,4 +181,4 @@
 
 ---
 
-*Last updated: 2026-03-20 08:10 PM by Kal 🕊️*
+*Last updated: 2026-03-20 08:59 PM by Kal 🕊️*
