@@ -60,6 +60,13 @@
 - Skills MUST live at: C:\Users\carib\AppData\Roaming\npm\node_modules\openclaw\skills
 - NEVER install skills to workspace folders — always use the validator script
 
+### 2d. Full System Backup (Weekly — Sunday 3am)
+- Run: brain/scripts/full-backup.ps1
+- Backs up: brain, workspace, openclaw config, cron jobs, skills, scripts
+- Saves to: C:\Users\carib\.openclaw\backup-staging
+- Run manually: powershell -File brain/scripts/full-backup.ps1
+- Restore: powershell -File brain/scripts/restore-backup.ps1 -ListOnly
+
 ### 2c. OpenClaw Auto-Update (Daily 4am)
 - Run: brain/scripts/auto-update.ps1
 - Runs `openclaw update` to keep OpenClaw current
