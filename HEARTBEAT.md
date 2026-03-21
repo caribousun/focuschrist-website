@@ -53,6 +53,13 @@
 - Log summary to brain/cortex/resource-log.json
 - Keep Captain running lean — Wyatt's PC is his livelihood
 
+### 2c. OpenClaw Auto-Update (Daily 4am)
+- Run: brain/scripts/auto-update.ps1
+- Runs `openclaw update` to keep OpenClaw current
+- Restarts gateway after update
+- Checks Mission Control for npm updates
+- Logs to brain/cortex/update-log.json
+
 ### 3. Daily Brief Prep (7am Utah Time) - CRITICAL ⭐
 - **Format:** "Yesterday's Wins + Today's Focus" (see daily-briefing-enhanced.md)
 - **Script:** brain/scripts/daily-brief-prep.ps1
