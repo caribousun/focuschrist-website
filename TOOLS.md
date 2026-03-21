@@ -48,6 +48,13 @@ Things like:
 - Default speaker: Kitchen HomePod
 ```
 
+## Automation & Workflows
+
+### Apify (Web Scraping)
+- **URL:** https://www.apify.com
+- **Purpose:** Web scraping & automation
+- **Use for:** FocusChrist research, competitor analysis
+
 ## Why Separate?
 
 Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
