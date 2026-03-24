@@ -3,7 +3,7 @@
 *Updated March 20, 2026 - Added daily self-improvement + config updated*
 
 ## CRITICAL: Current Date & Time
-**TODAY: Friday, March 20th, 2026 (America/Denver)**
+**TODAY: Monday, March 23rd, 2026 (America/Denver)**
 **Use session_status to verify actual time before every brief**
 
 ## Config Notes
@@ -34,8 +34,10 @@
 ## Active Automations
 
 ### 1. Gateway Monitor (Every Minute)
-- Check if OpenClaw gateway is running on port 18789
-- If down, attempt restart: `openclaw gateway --force --auth none`
+- Check if OpenClaw gateway is running on port 18789 (via netstat TCP check)
+- If down: alert Wyatt and attempt restart: `openclaw gateway --force --auth none`
+- PRIMARY recovery: gateway-watchdog.ps1 (runs independently, restarts within 30 sec)
+- SECONDARY recovery: Gateway Lifeline cron (fires every 5 min)
 - DO NOT disable lifeline cron jobs — they are the safety net
 
 ### 2. Error Tracker (Every Heartbeat)
@@ -60,14 +62,14 @@
 - Skills MUST live at: C:\Users\carib\AppData\Roaming\npm\node_modules\openclaw\skills
 - NEVER install skills to workspace folders — always use the validator script
 
-### 2d. Full System Backup (Weekly — Sunday 3am)
+### 2e. Full System Backup (Weekly — Sunday 3am)
 - Run: brain/scripts/full-backup.ps1
 - Backs up: brain, workspace, openclaw config, cron jobs, skills, scripts
 - Saves to: C:\Users\carib\.openclaw\backup-staging
 - Run manually: powershell -File brain/scripts/full-backup.ps1
 - Restore: powershell -File brain/scripts/restore-backup.ps1 -ListOnly
 
-### 2c. OpenClaw Auto-Update (Daily 4am)
+### 2e. OpenClaw Auto-Update (Daily 4am)
 - Run: brain/scripts/auto-update.ps1
 - Runs `openclaw update` to keep OpenClaw current
 - Restarts gateway after update
@@ -89,6 +91,7 @@
 
 ### 5. Weekly Learning Maintenance (Monday Morning)
 - Run: powershell -File brain/scripts/rules-maintenance.ps1 -SendDigest
+- **NOTE:** rules-maintenance.ps1 not yet created — this task is PENDING setup
 - Remove duplicates from rules-hot and rules-context
 - Archive stale entries from corrections-log
 - Review open corrections (flag any with 3+ repeats)
@@ -118,9 +121,18 @@
   - Is there a skill I haven't used that could help?
   - Is there a script that could be faster?
   - Is there a brain file that's out of date?
-  - Is there something in memory that contradicts what I know?
+  - Check if any recently added files have broken references
+  - Check if any temp/workspace files should be cleaned up
 - Small improvements compound. Make one thing 1% better every time.
 - Save improvements to brain/cortex/improvements.md with date + what changed
+
+---
+
+### 7. Jesus Art Folder Monitor (Every 60 Minutes)
+- Check folder: C:\Users\carib\OneDrive\Desktop\Jesus\Jesus Art
+- Compare file list to what's on focuschrist-website
+- If new images found: add to art.html, rename by scriptural event, push to GitHub
+- Track last check time in brain/cortex/jesus-art-monitor.json
 
 ---
 
@@ -130,13 +142,56 @@
 - **ON HOLD** — Wyatt paused this on March 20. Do not research.
 - When reactivated: research no-code platforms (Glide, Bubble, FlutterFlow, Adalo)
 
-### FocusChrist Q&A Optimizer (2x/week)
-- Check brain/knowledge/projects/focuschrist-unanswered.md
-- Research new questions
-- Add answers to ask.html
-- Verify all external links work
-- Check for trending faith topics
-- Backup ask.html to brain/knowledge/projects/
+### FocusChrist Q&A Expansion (HEARTBEAT - CRITICAL)
+**Target: 1,000+ entries by end of April 2026**
+
+### Resource Agent (NEW)
+When questions can't be answered:
+1. Log to brain/knowledge/projects/unanswered-questions.md
+2. During heartbeat: Research each unanswered question
+3. Add answer to Q&A database
+4. Mark as resolved
+
+### Q&A Response Style (NEW PRIORITY)
+Build ability to answer comparison/unification questions like:
+- "What is the unifying theme in teachings of [leader]?"
+- "How do [topic A] and [topic B] connect?"
+
+Use this format:
+1. Give simple theme first
+2. Break down each leader/topic
+3. Show connection
+4. Offer shortened version
+
+**Research Sources:**
+- churchofjesuschrist.org/prophets-and-apostoles
+- General conference talks
+- Topic pages on churchofjesuschrist.org
+
+**Every Heartbeat (rotate tasks):**
+1. Research 20 new pioneer topics from pioneer-research-queue.md
+2. Run with 600s timeout (10 min) for thorough research
+3. Add entries to pioneers.html
+4. Push to GitHub weekly
+
+**Approach:**
+- Smaller batches (20 topics) = less timeout issues
+- More frequent runs = steady growth
+- Research during heartbeats when Wyatt is away
+
+**Current Count (March 22):**
+- Pioneer topics: ~284
+- Target: 1,000+
+
+### IMPORTANT: Website Changes Protocol
+**BEFORE any website visual changes:**
+1. Backup current files: `git add -A && git commit -m "Backup before [change]"`
+2. Test changes locally first
+3. Get Wyatt approval before pushing to live
+4. Document changes in website-backups.md
+
+**Banner Image Options:**
+- `jesus.jpg` - Jesus with olive skin, beard, warm smile (LOCKED - do not change without Wyatt's approval)
 
 ### Passive Income Research
 - Find ideas for monthly income streams
@@ -177,6 +232,18 @@
 ### UPCOMING
 - **March 23:** Mike interview (Moat) — 11am-2pm, won't Spark until after 3pm
 - **Ongoing:** WGU application (Dave Ward referral)
+
+---
+
+## MANDATORY VERIFICATION RULE (Never Skip)
+
+**Wyatt's Directive:** No change - NO MATTER HOW SMALL - gets committed without two-agent verification first.
+
+- Always spawn TWO agents to verify changes before pushing
+- Wait for BOTH agents to confirm OK
+- Only commit after both agents verify
+- No exceptions - this includes image changes, CSS fixes, text edits, everything
+- If agents can't complete in time, increase timeout (already set to 300s)
 
 ---
 

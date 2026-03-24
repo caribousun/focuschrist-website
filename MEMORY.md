@@ -1,5 +1,16 @@
 # MEMORY.md - Long-Term Memory
 
+## CRITICAL WORKING RULE - NEVER FORGET
+
+**Wyatt's Mandatory Verification Rule:**
+- NO change gets committed without TWO agents verifying first
+- Always spawn 2 agents to review changes before pushing
+- Wait for BOTH agents to confirm OK
+- This applies to EVERYTHING - images, CSS, text, everything
+- Never skip this, no matter how small the change seems
+
+---
+
 ## Frank's Memory System
 
 This is Frank's long-term memory. Wyatt and Frank are building a "Helping Hands" app together — matching helpers with people who need assistance (groceries, rides, errands, etc.).

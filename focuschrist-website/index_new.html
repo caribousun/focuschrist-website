@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>focusChrist - Home</title>
+    <title>About - focusChrist</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -71,8 +71,6 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }
         
-        
-        
         /* Navigation */
         .nav {
             position: fixed;
@@ -104,7 +102,7 @@
         }
         .nav-links a:hover, .nav-links a.active { color: #c9a961; }
         .hamburger-wrap { position: relative; }
-        .hamburger { cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; padding: 10px; margin: -10px; }
+        .hamburger { cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; }
         .hamburger::before { content: ""; display: block; width: 20px; height: 2px; background: #c9a961; margin: 5px 0; box-shadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961; }
         .hamburger-menu { 
             display: none; 
@@ -122,7 +120,7 @@
         .hamburger-menu a { 
             display: block;
             color: #c9a961; 
-            padding: 4px 15px; 
+            padding: 10px 15px; 
             text-decoration: none;
             border-bottom: 1px solid rgba(201,169,97,0.2);
         }
@@ -131,79 +129,47 @@
         
         /* Main Content */
         .main {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 60px 20px;
         }
         
         .section {
             margin-bottom: 50px;
-            text-align: center;
+            padding: 30px;
+            background: rgba(201,169,97,0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(201,169,97,0.2);
         }
         
         .section h2 {
-            font-size: 1.8em;
-            letter-spacing: 5px;
+            font-size: 1.3em;
+            letter-spacing: 4px;
             color: #c9a961;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-transform: uppercase;
+            font-family: 'Times New Roman', serif;
         }
         
         .section p {
-            font-size: 1.1em;
-            line-height: 1.8;
             color: #d4c4b0;
-            margin-bottom: 20px;
-        }
-        
-        .values {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
-        }
-        
-        .value {
-            padding: 30px 20px;
-            background: rgba(201,169,97,0.08);
-            border: 1px solid rgba(201,169,97,0.2);
-            border-radius: 8px;
-        }
-        
-        .value h3 {
-            color: #c9a961;
-            font-size: 1em;
-            letter-spacing: 3px;
+            line-height: 1.8;
+            font-size: 1.05em;
             margin-bottom: 15px;
-            text-transform: uppercase;
         }
         
-        .value p {
-            font-size: 0.95em;
+        .section p:last-child {
             margin-bottom: 0;
         }
         
-        /* CTA Button */
-        .cta-section {
-            text-align: center;
-            padding: 40px 0;
+        .scripture-quote {
+            font-style: italic;
+            color: #a09080;
+            border-left: 3px solid #c9a961;
+            padding-left: 20px;
+            margin: 20px 0;
         }
         
-        .cta-button {
-            display: inline-block;
-            padding: 16px 40px;
-            background: linear-gradient(135deg, #c9a961 0%, #a08040 100%);
-            color: #1a1510;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1em;
-            font-weight: bold;
-            letter-spacing: 2px;
-            transition: transform 0.3s;
-        }
-        .cta-button:hover { transform: scale(1.05); }
-        
-        /* Footer */
         footer { 
             padding: 40px 20px; 
             text-align: center; 
@@ -217,9 +183,9 @@
             .banner { height: 200px; }
             .banner-title { font-size: 1.8em; }
             .nav { padding: 15px 20px; justify-content: space-between; position: relative; }
-            .nav-links { display: none; }
             .hamburger-wrap { display: block; position: relative; }
             .hamburger { display: block; }
+            .nav-links { display: none; }
             .hamburger-menu {
                 display: none;
                 position: absolute;
@@ -233,17 +199,16 @@
                 z-index: 1000;
             }
             .hamburger-menu.show { display: flex; }
-            .hamburger-menu a { font-size: 0.9em; padding: 6px 15px; color: #c9a961; border-bottom: 1px solid rgba(201,169,97,0.2); }
-            .values { grid-template-columns: 1fr; }
+            .hamburger-menu a { font-size: 0.9em; padding: 12px 20px; color: #c9a961; border-bottom: 1px solid rgba(201,169,97,0.2); }
+            .section { padding: 20px; }
         }
         @media (min-width: 769px) {
-            .nav-links { display: flex; }
             .hamburger { display: block; }
             .hamburger-menu { 
                 display: none; 
                 position: absolute;
                 top: 50px;
-                right: 0;
+                right: 20px;
                 background: rgba(0,0,0,0.95);
                 padding: 15px;
                 border-radius: 8px;
@@ -258,11 +223,11 @@
     <nav class="nav">
         <a href="index.html" class="nav-logo">focusChrist</a>
         <div class="nav-links">
-            <a href="index.html" class="active">HOME</a>
+            <a href="index.html">HOME</a>
             <a href="ask.html">ASK</a>
             <a href="pioneers.html">PIONEERS</a>
             <a href="art.html">ART</a>
-            <a href="about.html">ABOUT</a>
+            <a href="about.html" class="active">ABOUT</a>
         </div>
         <div class="hamburger-wrap">
             <span class="hamburger" onclick="toggleMenu()"></span>
@@ -270,8 +235,8 @@
                 <a href="index.html">HOME</a>
                 <a href="ask.html">ASK</a>
                 <a href="pioneers.html">PIONEERS</a>
-                <a href="art.html">ART</a>
                 <a href="about.html">ABOUT</a>
+                <a href="art.html">ART</a>
                 <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
                 <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank">Church Website</a>
                 <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank">Gospel Library</a>
@@ -280,13 +245,10 @@
                 <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank">Church History</a>
                 <a href="https://scriptures.byu.edu/" target="_blank">Citation Index</a>
                 <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank">All Resources</a>
-                <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
-                <div style="color: #c9a961; font-size: 0.8em; padding: 8px 15px 4px;">YouTube</div>
-                <a href="https://www.youtube.com/@theRisen636" target="_blank">@theRisen636</a>
-
             </div>
         </div>
     </nav>
+    
     <div class="banner">
         <div class="banner-bg"></div>
         <div class="banner-overlay"></div>
@@ -299,13 +261,7 @@
         var menu = document.getElementById('hamburgerMenu');
         menu.classList.toggle('show');
     }
-    document.addEventListener('click', function(e) {
-        var menu = document.getElementById('hamburgerMenu');
-        var hamburger = document.querySelector('.hamburger');
-        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
-            menu.classList.remove('show');
-        }
-    });
+    </script>
     </script>
     
     <main class="main">
@@ -315,29 +271,27 @@
         </div>
         
         <div class="section">
-            <div class="values">
-                <div class="value">
-                    <h3>My Path</h3>
-                    <p>Empowering lives through Christ-centered focus; fostering spiritual growth, purposeful living, and community connection.</p>
-                </div>
-                <div class="value">
-                    <h3>I Believe</h3>
-                    <p>I believe in the transformative power of Christ's love, guiding us to focus on faith, purpose, and unity for a meaningful life.</p>
-                </div>
-                <div class="value">
-                    <h3>My Community</h3>
-                    <p>Join our Christ-centered community, where faith thrives, connections deepen, and together, we journey towards purposeful living.</p>
-                </div>
-            </div>
+            <h2>What We Believe</h2>
+            <p>We believe in Jesus Christ as our Savior and Redeemer. We believe the Church of Jesus Christ has been restored through Joseph Smith. We believe in continuing revelation through living prophets and the power of the Atonement to transform lives.</p>
+            <p class="scripture-quote">"For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life." — John 3:16</p>
         </div>
         
-        <div class="cta-section">
-            <a href="ask.html" class="cta-button">Ask a Question</a>
+        <div class="section">
+            <h2>How It Works</h2>
+            <p>Our Q&A system draws from the full LDS library of scriptures, general conference talks, church history, and prophet teachings to provide thoughtful, faithful answers to your questions about faith, doctrine, and church history.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Our Source</h2>
+            <p>All answers come from official Church sources including churchofjesuschrist.org, the Book of Mormon, Bible, Doctrine & Covenants, Pearl of Great Price, and general conference addresses. We strive to provide accurate, love-filled responses.</p>
         </div>
     </main>
     
     <footer>
-        <p>Ac 2026 focusChrist. All are welcome here.</p>
+        <p>© 2026 focusChrist. All are welcome here.</p>
     </footer>
 </body>
 </html>
+
+
+

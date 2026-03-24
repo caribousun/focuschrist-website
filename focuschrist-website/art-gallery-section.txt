@@ -1,0 +1,50 @@
+        <div class="art-gallery">
+            <div class="art-item" onclick="openLightbox(0)">
+                <img src="Jesus.png" alt="The Good Shepherd">
+                <div class="art-caption">The Good Shepherd</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(1)">
+                <img src="jesus3.jpg" alt="The Living Christ">
+                <div class="art-caption">The Living Christ</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(2)">
+                <img src="Suffer the Little Children.jpg" alt="Suffer the Little Children">
+                <div class="art-caption">Suffer the Little Children</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(3)">
+                <img src="Jesus boat.png" alt="Peace Be Still">
+                <div class="art-caption">Peace, Be Still</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(4)">
+                <img src="Jesus fun.png" alt="Fishers of Men">
+                <div class="art-caption">Fishers of Men</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(5)">
+                <img src="Jesus and Mary his mom.jpg" alt="Jesus and Mary">
+                <div class="art-caption">Jesus and Mary</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(6)">
+                <img src="Jesus baptized.png" alt="Jesus Baptism">
+                <div class="art-caption">Jesus Baptism</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(7)">
+                <img src="Jesus feeding people.png" alt="Feeding the Multitude">
+                <div class="art-caption">Feeding the Multitude</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(8)">
+                <img src="Jesus feeding people 2.png" alt="Feeding the 5000">
+                <div class="art-caption">Feeding the 5000</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(9)">
+                <img src="Jesus feeding the fish.png" alt="Miraculous Catch">
+                <div class="art-caption">Miraculous Catch</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(10)">
+                <img src="Jesus leper.jpg" alt="Healing the Leper">
+                <div class="art-caption">Healing the Leper</div>
+            </div>
+            <div class="art-item" onclick="openLightbox(11)">
+                <img src="Jesus with the children.jpg" alt="Let the Children Come">
+                <div class="art-caption">Let the Children Come</div>
+            </div>
+        </div>

@@ -16,6 +16,19 @@ Before doing anything else:
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 5. **Check brain location:** Read `BRAIN-LOCATION.md` or SOUL.md for brain location
 
+## A2A Self-Optimization — Master Agent Authority
+
+Every morning at 2am, the **Daily Self-Optimization cron** fires as the **master agent partner**. It reviews everything — brain, scripts, cron jobs, skills, configs, errors — and **resolves all discovered tasks autonomously**.
+
+Wyatt's standing order: *"You have full authority to act as the master agent partner. Resolve everything you can. Only interrupt me if my input is required."*
+
+When tasks are discovered by the 2am agent:
+- ✅ Free tools only — never install paid software
+- ✅ Moral code foundation — protect Wyatt's values, don't break what's working
+- ✅ Wake Wyatt only if: new API keys, financial decisions, or irreversible actions
+- ✅ Everything else → handle it, log it, move on
+- ✅ Nothing carries day-to-day — clear it the same day it surfaces
+
 Don't ask permission. Just do it.
 
 ## Memory

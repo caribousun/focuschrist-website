@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Control</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --golden-yellow: #E8C245;
+            --deep-ochre: #B48C40;
+            --dark-brown: #332314;
+            --warm-tan: #9E7B5C;
+            --pale-beige: #D9CBB6;
+            --near-black: #1A1108;
+        }
+        body {
+            background-color: var(--near-black);
+            color: var(--pale-beige);
+        }
+        .accent { color: var(--golden-yellow); }
+        .accent-ochre { color: var(--deep-ochre); }
+        .card { background-color: var(--dark-brown); }
+        .tab-active {
+            background-color: var(--golden-yellow);
+            color: var(--near-black);
+        }
+        .tab {
+            background-color: var(--dark-brown);
+            color: var(--pale-beige);
+        }
+        .tab:hover {
+            background-color: var(--deep-ochre);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="p-4 border-b" style="border-color: var(--deep-ochre)">
+        <h1 class="text-3xl font-bold accent">🕊️ Mission Control</h1>
+        <p class="text-sm" style="color: var(--warm-tan)">Wyatt's Autonomous Agent Dashboard</p>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="flex flex-wrap gap-2 p-4">
+        <button onclick="showTab('tasks')" class="px-4 py-2 rounded tab tab-active" id="tab-tasks">📋 Task Board</button>
+        <button onclick="showTab('calendar')" class="px-4 py-2 rounded tab" id="tab-calendar">📅 Calendar</button>
+        <button onclick="showTab('projects')" class="px-4 py-2 rounded tab" id="tab-projects">📁 Projects</button>
+        <button onclick="showTab('memories')" class="px-4 py-2 rounded tab" id="tab-memories">💭 Memories</button>
+        <button onclick="showTab('docs')" class="px-4 py-2 rounded tab" id="tab-docs">📄 Docs</button>
+        <button onclick="showTab('team')" class="px-4 py-2 rounded tab" id="tab-team">👥 Team</button>
+        <button onclick="showTab('office')" class="px-4 py-2 rounded tab" id="tab-office">🏢 Office</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="p-4">
+        <!-- Task Board -->
+        <div id="tasks" class="tab-content">
+            <h2 class="text-2xl font-bold accent mb-4">📋 Task Board</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold text-red-400 mb-2">To Do</h3>
+                    <div id="tasks-todo" class="space-y-2"></div>
+                </div>
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold text-yellow-400 mb-2">In Progress</h3>
+                    <div id="tasks-progress" class="space-y-2"></div>
+                </div>
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold text-green-400 mb-2">Done</h3>
+                    <div id="tasks-done" class="space-y-2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar -->
+        <div id="calendar" class="tab-content hidden">
+            <h2 class="text-2xl font-bold accent mb-4">📅 Scheduled Tasks</h2>
+            <div class="card p-4 rounded">
+                <p style="color: var(--warm-tan)">Cron jobs and scheduled automations:</p>
+                <ul class="mt-4 space-y-2">
+                    <li>🕛 <strong>2:00 AM</strong> - Daily Self-Optimization</li>
+                    <li>🕔 <strong>5:00 AM</strong> - Scripture Theologian</li>
+                    <li>🕕 <strong>6:00 AM</strong> - Scripture Student</li>
+                    <li>🕖 <strong>7:00 AM</strong> - Daily Briefing</li>
+                    <li>🕗 <strong>8:00 AM</strong> - YouTube Monitor & FocusChrist Merge</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div id="projects" class="tab-content hidden">
+            <h2 class="text-2xl font-bold accent mb-4">📁 Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold accent">🎯 FocusChrist Q&A</h3>
+                    <p class="text-sm" style="color: var(--warm-tan)">LDS scripture Q&A website</p>
+                    <div class="mt-2 h-2 bg-gray-700 rounded"><div class="h-2 bg-green-500 rounded" style="width: 80%"></div></div>
+                </div>
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold accent">🧠 Brain Optimization</h3>
+                    <p class="text-sm" style="color: var(--warm-tan)">Daily self-improvement system</p>
+                    <div class="mt-2 h-2 bg-gray-700 rounded"><div class="h-2 bg-green-500 rounded" style="width: 90%"></div></div>
+                </div>
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold accent">📺 YouTube Growth</h3>
+                    <p class="text-sm" style="color: var(--warm-tan)">@theRisen636 growth tracking</p>
+                    <div class="mt-2 h-2 bg-gray-700 rounded"><div class="h-2 bg-yellow-500 rounded" style="width: 60%"></div></div>
+                </div>
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold accent">💰 Income Tracker</h3>
+                    <p class="text-sm" style="color: var(--warm-tan)">Spark earnings & financial goals</p>
+                    <div class="mt-2 h-2 bg-gray-700 rounded"><div class="h-2 bg-blue-500 rounded" style="width: 50%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Memories -->
+        <div id="memories" class="tab-content hidden">
+            <h2 class="text-2xl font-bold accent mb-4">💭 Memories</h2>
+            <div class="card p-4 rounded">
+                <p style="color: var(--warm-tan)">Recent conversations and insights are stored in memory files.</p>
+                <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-2" id="memory-list"></div>
+            </div>
+        </div>
+
+        <!-- Docs -->
+        <div id="docs" class="tab-content hidden">
+            <h2 class="text-2xl font-bold accent mb-4">📄 Documents</h2>
+            <div class="card p-4 rounded">
+                <p style="color: var(--warm-tan)">Key documents and configs:</p>
+                <ul class="mt-4 space-y-2">
+                    <li>📄 <strong>AGENTS.md</strong> - Agent workspace rules</li>
+                    <li>📄 <strong>SOUL.md</strong> - My identity</li>
+                    <li>📄 <strong>USER.md</strong> - About Wyatt</li>
+                    <li>📄 <strong>HEARTBEAT.md</strong> - Daily tasks</li>
+                    <li>📄 <strong>MEMORY.md</strong> - Long-term memory</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Team -->
+        <div id="team" class="tab-content hidden">
+            <h2 class="text-2xl font-bold accent mb-4">👥 Team & Mission</h2>
+            <div class="card p-4 rounded mb-4">
+                <h3 class="text-lg font-bold accent">🎯 Mission Statement</h3>
+                <p class="mt-2">Build an autonomous system that helps Wyatt achieve his goals: Martins Cove mission, monthly income, and serving others through technology.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold accent">🕊️ Kal (Main Agent)</h3>
+                    <p class="text-sm" style="color: var(--warm-tan)">Primary assistant, proactive problem-solver</p>
+                </div>
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold accent">📖 Scripture Theologian</h3>
+                    <p class="text-sm" style="color: var(--warm-tan)">LDS scripture expert, answers questions</p>
+                </div>
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold accent">❓ Scripture Student</h3>
+                    <p class="text-sm" style="color: var(--warm-tan)">Generates cross-reference questions</p>
+                </div>
+                <div class="card p-4 rounded">
+                    <h3 class="text-lg font-bold accent">🔧 A2A Validator</h3>
+                    <p class="text-sm" style="color: var(--warm-tan)">Two-agent validation system</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Office -->
+        <div id="office" class="tab-content hidden">
+            <h2 class="text-2xl font-bold accent mb-4">🏢 Office - Agent Activity</h2>
+            <div class="card p-4 rounded">
+                <div class="grid grid-cols-4 gap-4 text-center">
+                    <div class="p-4 rounded" style="background-color: var(--warm-tan)">
+                        <div class="text-2xl">🕊️</div>
+                        <div class="text-sm font-bold">Kal</div>
+                        <div class="text-xs" style="color: var(--dark-brown)">Active</div>
+                    </div>
+                    <div class="p-4 rounded" style="background-color: var(--deep-ochre)">
+                        <div class="text-2xl">📖</div>
+                        <div class="text-sm font-bold">Theologian</div>
+                        <div class="text-xs">Reading</div>
+                    </div>
+                    <div class="p-4 rounded" style="background-color: var(--deep-ochre)">
+                        <div class="text-2xl">❓</div>
+                        <div class="text-sm font-bold">Student</div>
+                        <div class="text-xs">Learning</div>
+                    </div>
+                    <div class="p-4 rounded" style="background-color: var(--golden-yellow)">
+                        <div class="text-2xl">🔧</div>
+                        <div class="text-sm font-bold">Validator</div>
+                        <div class="text-xs" style="color: var(--dark-brown)">Waiting</div>
+                    </div>
+                </div>
+                <div class="mt-4 p-4 rounded text-center" style="background-color: var(--dark-brown)">
+                    <p class="text-sm" style="color: var(--warm-tan)">"Working to bring Wyatt closer to his goals 24/7"</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById(tabName).classList.remove('hidden');
+            
+            document.querySelectorAll('.tab').forEach(el => {
+                el.classList.remove('tab-active');
+                el.style.backgroundColor = '';
+                el.style.color = '';
+            });
+            const btn = document.getElementById('tab-' + tabName);
+            btn.classList.add('tab-active');
+            btn.style.backgroundColor = '#E8C245';
+            btn.style.color = '#1A1108';
+        }
+
+        // Sample task data
+        const tasks = {
+            todo: [
+                { title: "Build Mission Control", agent: "Agent A+B", priority: "high" },
+                { title: "Add more Q&A to FocusChrist", agent: "Student", priority: "medium" }
+            ],
+            progress: [
+                { title: "Run Scripture Study", agent: "Theologian", priority: "high" },
+                { title: "Monitor Gateway", agent: "Watchdog", priority: "medium" }
+            ],
+            done: [
+                { title: "Reinstall OpenClaw", agent: "System", priority: "critical" },
+                { title: "Fix Telegram security", agent: "Validator", priority: "high" }
+            ]
+        };
+
+        // Render tasks
+        tasks.todo.forEach(t => document.getElementById('tasks-todo').innerHTML += createTaskCard(t));
+        tasks.progress.forEach(t => document.getElementById('tasks-progress').innerHTML += createTaskCard(t));
+        tasks.done.forEach(t => document.getElementById('tasks-done').innerHTML += createTaskCard(t));
+
+        function createTaskCard(task) {
+            const colors = { high: 'red', medium: 'yellow', low: 'green' };
+            return `<div class="p-2 rounded" style="background-color: var(--near-black)">
+                <div class="font-bold">${task.title}</div>
+                <div class="text-xs" style="color: var(--warm-tan)">${task.agent}</div>
+                <span class="text-xs px-1 rounded bg-${colors[task.priority]}-600">${task.priority}</span>
+            </div>`;
+        }
+
+        // Load memories
+        const memories = [
+            { date: "Today", summary: "Reinstalled OpenClaw, built Mission Control, added Protestant vs LDS Q&A" },
+            { date: "Yesterday", summary: "Tatum wedding! Set up daily scripture agents" },
+            { date: "March 19", summary: "FocusChrist launch, Brave API setup" }
+        ];
+        memories.forEach(m => {
+            document.getElementById('memory-list').innerHTML += `
+                <div class="p-2 rounded" style="background-color: var(--near-black)">
+                    <div class="font-bold accent">${m.date}</div>
+                    <div class="text-sm">${m.summary}</div>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

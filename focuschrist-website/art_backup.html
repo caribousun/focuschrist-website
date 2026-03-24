@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>focusChrist - Home</title>
+    <title>focusChrist - Jesus Art</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
@@ -26,7 +26,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://caribousun.github.io/focuschrist-website/Jesus.png');
+            background: url('Jesus.png');
             background-size: cover;
             background-position: center 35%;
         }
@@ -44,16 +44,6 @@
             );
         }
         
-        .banner-link {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10;
-            cursor: pointer;
-        }
-        
         .banner-content {
             position: absolute;
             bottom: 20px;
@@ -69,6 +59,17 @@
             letter-spacing: 8px;
             color: #c9a961;
             text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            margin: 0;
+        }
+        
+        .banner-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            cursor: pointer;
         }
         
         
@@ -80,7 +81,7 @@
             width: 100%;
             padding: 25px 40px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             z-index: 100;
             background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
@@ -92,20 +93,33 @@
             color: #c9a961;
             text-decoration: none;
             font-family: 'Times New Roman', serif;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
         }
         
-        .nav-links { display: flex; gap: 40px; }
-        .nav-links a { 
-            color: #f5e6d3; 
-            text-decoration: none; 
-            font-size: 0.9em; 
-            letter-spacing: 2px;
-            transition: color 0.3s;
+        /* Hamburger - always visible on right */
+        .hamburger-wrap { 
+            position: absolute; 
+            right: 40px;
+            display: block;
         }
-        .nav-links a:hover, .nav-links a.active { color: #c9a961; }
-        .hamburger-wrap { position: relative; }
-        .hamburger { cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; padding: 10px; margin: -10px; }
-        .hamburger::before { content: ""; display: block; width: 20px; height: 2px; background: #c9a961; margin: 5px 0; box-shadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961; }
+        .hamburger { 
+            cursor: pointer; 
+            font-size: 1.5em; 
+            color: #c9a961; 
+            padding: 5px 10px;
+            line-height: 1;
+        }
+        .hamburger::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #c9a961;
+            margin: 5px 0;
+            box-shadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961;
+        }
         .hamburger-menu { 
             display: none; 
             position: absolute;
@@ -122,16 +136,15 @@
         .hamburger-menu a { 
             display: block;
             color: #c9a961; 
-            padding: 4px 15px; 
+            padding: 10px 15px; 
             text-decoration: none;
             border-bottom: 1px solid rgba(201,169,97,0.2);
         }
         .hamburger-menu a:hover { background: rgba(201,169,97,0.1); }
-        .hamburger { display: none; cursor: pointer; font-size: 1.5em; color: #c9a961; }
         
         /* Main Content */
         .main {
-            max-width: 900px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 60px 20px;
         }
@@ -145,7 +158,7 @@
             font-size: 1.8em;
             letter-spacing: 5px;
             color: #c9a961;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-transform: uppercase;
         }
         
@@ -156,52 +169,39 @@
             margin-bottom: 20px;
         }
         
-        .values {
+        /* Art Gallery Grid */
+        .art-gallery {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
         
-        .value {
-            padding: 30px 20px;
+        .art-item {
             background: rgba(201,169,97,0.08);
             border: 1px solid rgba(201,169,97,0.2);
             border-radius: 8px;
-        }
-        
-        .value h3 {
-            color: #c9a961;
-            font-size: 1em;
-            letter-spacing: 3px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        
-        .value p {
-            font-size: 0.95em;
-            margin-bottom: 0;
-        }
-        
-        /* CTA Button */
-        .cta-section {
-            text-align: center;
-            padding: 40px 0;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 16px 40px;
-            background: linear-gradient(135deg, #c9a961 0%, #a08040 100%);
-            color: #1a1510;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1em;
-            font-weight: bold;
-            letter-spacing: 2px;
+            overflow: hidden;
             transition: transform 0.3s;
         }
-        .cta-button:hover { transform: scale(1.05); }
+        
+        .art-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .art-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .art-caption {
+            padding: 15px;
+            text-align: center;
+            color: #d4c4b0;
+            font-size: 0.95em;
+        }
         
         /* Footer */
         footer { 
@@ -216,14 +216,13 @@
         @media (max-width: 768px) {
             .banner { height: 200px; }
             .banner-title { font-size: 1.8em; }
-            .nav { padding: 15px 20px; justify-content: space-between; position: relative; }
-            .nav-links { display: none; }
-            .hamburger-wrap { display: block; position: relative; }
-            .hamburger { display: block; }
+            .nav { padding: 15px 20px; }
+            .nav-logo { position: static; transform: none; left: auto; }
+            .hamburger-wrap { right: 0; }
             .hamburger-menu {
                 display: none;
                 position: absolute;
-                top: 40px;
+                top: 50px;
                 right: 0;
                 width: 200px;
                 background: rgba(0,0,0,0.98);
@@ -233,11 +232,10 @@
                 z-index: 1000;
             }
             .hamburger-menu.show { display: flex; }
-            .hamburger-menu a { font-size: 0.9em; padding: 6px 15px; color: #c9a961; border-bottom: 1px solid rgba(201,169,97,0.2); }
-            .values { grid-template-columns: 1fr; }
+            .hamburger-menu a { font-size: 0.9em; padding: 12px 20px; color: #c9a961; border-bottom: 1px solid rgba(201,169,97,0.2); }
+            .art-gallery { grid-template-columns: 1fr; }
         }
         @media (min-width: 769px) {
-            .nav-links { display: flex; }
             .hamburger { display: block; }
             .hamburger-menu { 
                 display: none; 
@@ -257,13 +255,6 @@
 <body>
     <nav class="nav">
         <a href="index.html" class="nav-logo">focusChrist</a>
-        <div class="nav-links">
-            <a href="index.html" class="active">HOME</a>
-            <a href="ask.html">ASK</a>
-            <a href="pioneers.html">PIONEERS</a>
-            <a href="art.html">ART</a>
-            <a href="about.html">ABOUT</a>
-        </div>
         <div class="hamburger-wrap">
             <span class="hamburger" onclick="toggleMenu()"></span>
             <div class="hamburger-menu" id="hamburgerMenu">
@@ -280,10 +271,6 @@
                 <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank">Church History</a>
                 <a href="https://scriptures.byu.edu/" target="_blank">Citation Index</a>
                 <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank">All Resources</a>
-                <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
-                <div style="color: #c9a961; font-size: 0.8em; padding: 8px 15px 4px;">YouTube</div>
-                <a href="https://www.youtube.com/@theRisen636" target="_blank">@theRisen636</a>
-
             </div>
         </div>
     </nav>
@@ -310,29 +297,45 @@
     
     <main class="main">
         <div class="section">
-            <h2>Our Purpose</h2>
-            <p>focusChrist exists to help seekers find faithful answers about The Church of Jesus Christ of Latter-day Saints. We believe in providing accurate, Christ-centered responses grounded in scripture and the teachings of modern prophets.</p>
+            <h2>Jesus Art Gallery</h2>
+            <p>Beautiful images depicting our Savior, Jesus Christ. Click any image to view larger.</p>
         </div>
         
-        <div class="section">
-            <div class="values">
-                <div class="value">
-                    <h3>My Path</h3>
-                    <p>Empowering lives through Christ-centered focus; fostering spiritual growth, purposeful living, and community connection.</p>
-                </div>
-                <div class="value">
-                    <h3>I Believe</h3>
-                    <p>I believe in the transformative power of Christ's love, guiding us to focus on faith, purpose, and unity for a meaningful life.</p>
-                </div>
-                <div class="value">
-                    <h3>My Community</h3>
-                    <p>Join our Christ-centered community, where faith thrives, connections deepen, and together, we journey towards purposeful living.</p>
-                </div>
+        <div class="art-gallery">
+            <div class="art-item">
+                <a href="https://caribousun.github.io/focuschrist-website/Jesus.png" target="_blank">
+                    <img src="https://caribousun.github.io/focuschrist-website/Jesus.png" alt="Jesus">
+                </a>
+                <div class="art-caption">The Good Shepherd</div>
             </div>
-        </div>
-        
-        <div class="cta-section">
-            <a href="ask.html" class="cta-button">Ask a Question</a>
+            
+            <div class="art-item">
+                <a href="https://caribousun.github.io/focuschrist-website/jesus3.jpg" target="_blank">
+                    <img src="https://caribousun.github.io/focuschrist-website/jesus3.jpg" alt="Jesus">
+                </a>
+                <div class="art-caption">The Living Christ</div>
+            </div>
+            
+            <div class="art-item">
+                <a href="https://caribousun.github.io/focuschrist-website/nCDvM.jpg" target="_blank">
+                    <img src="https://caribousun.github.io/focuschrist-website/nCDvM.jpg" alt="Jesus">
+                </a>
+                <div class="art-caption">Suffer Little Children</div>
+            </div>
+            
+            <div class="art-item">
+                <a href="https://caribousun.github.io/focuschrist-website/Jesus-boat.png" target="_blank">
+                    <img src="https://caribousun.github.io/focuschrist-website/Jesus-boat.png" alt="Jesus">
+                </a>
+                <div class="art-caption">Peace, Be Still</div>
+            </div>
+            
+            <div class="art-item">
+                <a href="https://caribousun.github.io/focuschrist-website/Jesus-fun.png" target="_blank">
+                    <img src="https://caribousun.github.io/focuschrist-website/Jesus-fun.png" alt="Jesus">
+                </a>
+                <div class="art-caption">Fishers of Men</div>
+            </div>
         </div>
     </main>
     
