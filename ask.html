@@ -505,6 +505,8 @@ RULES:
         }
     }
     
+    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h='<p>'+t+'</p>';if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=c.scrollHeight}
+    
     async function findAnswer(q) {
         q = q.toLowerCase();
         // First try database
