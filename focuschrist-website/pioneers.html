@@ -1566,13 +1566,45 @@
  return bestMatch;
  }
  
- // Enhanced askPioneer with fuzzy matching + cross-reference
- function askPioneer() {
+ // AI Fallback for pioneers - async version
+ async function getPioneerAIAnswer(query) {
+ try {
+ const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+ method: 'POST',
+ headers: {
+ 'Authorization': 'Bearer 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',
+ 'Content-Type': 'application/json'
+ },
+ body: JSON.stringify({
+ model: 'llama-3.1-8b-instant',
+ messages: [
+ { role: 'system', content: 'You are a helpful assistant for the FocusChrist PIONEERS page about Mormon pioneer history. Give direct answers in 1-2 sentences, then optionally connect briefly to faith. Keep it short.' },
+ { role: 'user', content: query }
+ ],
+ temperature: 0.7,
+ max_tokens: 150
+ })
+ });
+ const data = await response.json();
+ if (data.choices && data.choices[0]) {
+ return data.choices[0].message.content;
+ }
+ return "That's a great question about pioneer history!";
+ } catch (e) {
+ return "That's a great question about pioneer history!";
+ }
+ }
+
+ // Enhanced askPioneer with fuzzy matching + cross-reference + AI fallback
+ async function askPioneer() {
  const input = document.getElementById('pioneerQuestion');
  const query = input.value.trim();
  const results = document.getElementById('qaResults');
  
  if (!query) return;
+ 
+ // Show loading
+ results.innerHTML = '<div class="qa-result"><div class="qa-answer">🤔 Thinking...</div></div>';
  
  // Use fuzzy matching to find best answer
  const match = findBestMatch(query, 'pioneer');
@@ -1585,37 +1617,16 @@
  <div class="qa-result">
  <div class="qa-question">${match.question}</div>
  <div class="qa-answer">${match.answer}${crossRef}</div>
- <div class="qa-answer">${match.answer}</div>
  </div>
  `;
  } else {
  // Use AI fallback for unmatched questions
- results.innerHTML = '<div class="qa-result"><div class="qa-answer">🤔 Thinking...</div></div>';
- 
- fetch('https://api.groq.com/openai/v1/chat/completions', {
- method: 'POST',
- headers: {
- 'Authorization': 'Bearer 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',
- 'Content-Type': 'application/json'
- },
- body: JSON.stringify({
- model: 'llama-3.1-8b-instant',
- messages: [
- { role: 'system', content: 'You are a helpful assistant for the FocusChrist PIONEERS page. Answer questions about Mormon pioneer history - daily life, trails, challenges, faith, handcart companies, Brigham Young, Winter Quarters, food, clothing, shelters, and related topics. Keep answers brief and respectful.' },
- { role: 'user', content: query }
- ],
- temperature: 0.7,
- max_tokens: 200
- })
- }).then(res => res.json()).then(data => {
- if (data.choices && data.choices[0]) {
- results.innerHTML = '<div class="qa-result"><div class="qa-question">' + query + '</div><div class="qa-answer">' + data.choices[0].message.content + '</div></div>';
- } else {
- results.innerHTML = '<div class="qa-no-result"><p>No answer found. Try: "Handcart companies" or "Winter Quarters"</p></div>';
+ const aiAnswer = await getPioneerAIAnswer(query);
+ results.innerHTML = '<div class="qa-result"><div class="qa-question">' + query + '</div><div class="qa-answer">' + aiAnswer + '</div></div>';
  }
- }).catch(e => {
- results.innerHTML = '<div class="qa-no-result"><p>No answer found. Try: "Handcart companies" or "Winter Quarters"</p></div>';
- });
+ 
+ results.classList.add('show');
+ input.value = '';
  }
  
  results.classList.add('show');
@@ -1807,64 +1818,7 @@
  }
  ];
  
- function handleKeyPress(e) {
- if (e.key === 'Enter') askPioneer();
- }
- 
- function askPioneer() {
- const input = document.getElementById('pioneerQuestion');
- const query = input.value.toLowerCase().trim();
- const results = document.getElementById('qaResults');
- 
- if (!query) return;
- 
- // Simple search
- const matches = pioneerQA.filter(qa => 
- qa.question.toLowerCase().includes(query) || 
- qa.answer.toLowerCase().includes(query)
- );
- 
- if (matches.length > 0) {
- results.innerHTML = matches.map(qa => `
- <div class="qa-result">
- <div class="qa-question">${qa.question}</div>
- <div class="qa-answer">${qa.answer}</div>
- </div>
- `).join('');
- } else {
- // Use AI fallback for unmatched questions
- results.innerHTML = '<div class="qa-result"><div class="qa-answer">🤔 Thinking...</div></div>';
- 
- fetch('https://api.groq.com/openai/v1/chat/completions', {
- method: 'POST',
- headers: {
- 'Authorization': 'Bearer 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',
- 'Content-Type': 'application/json'
- },
- body: JSON.stringify({
- model: 'llama-3.1-8b-instant',
- messages: [
- { role: 'system', content: 'You are a helpful assistant for the FocusChrist PIONEERS page. Answer questions about Mormon pioneer history - daily life, trails, challenges, faith, handcart companies, Brigham Young, Winter Quarters, food, clothing, shelters, and related topics. Keep answers brief and respectful.' },
- { role: 'user', content: query }
- ],
- temperature: 0.7,
- max_tokens: 200
- })
- }).then(res => res.json()).then(data => {
- if (data.choices && data.choices[0]) {
- results.innerHTML = '<div class="qa-result"><div class="qa-question">' + query + '</div><div class="qa-answer">' + data.choices[0].message.content + '</div></div>';
- } else {
- results.innerHTML = '<div class="qa-no-result"><p>No answer found. Try: "Handcart companies" or "Winter Quarters"</p></div>';
- }
- }).catch(e => {
- results.innerHTML = '<div class="qa-no-result"><p>No answer found. Try: "Handcart companies" or "Winter Quarters"</p></div>';
- });
- }
- 
- results.classList.add('show');
- input.value = '';
- }
- 
+ // Filter by topic - show all initially
  function filterTopic(topic) {
  // Update active state
  document.querySelectorAll('.qa-topic').forEach(t => t.classList.remove('active'));

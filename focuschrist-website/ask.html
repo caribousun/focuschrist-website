@@ -458,8 +458,18 @@
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
     function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;sendMessage()}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
+    
+    // Conversation history for follow-up support
+    let conversationHistory = [];
+    const followUpTriggers = ['yes', 'sure', 'tell me more', 'more', 'explain', 'go on', 'continue', 'that', 'what do you mean', 'interesting'];
+    
+    function isFollowUp(msg) {
+        const lower = msg.toLowerCase();
+        return followUpTriggers.some(trigger => lower === trigger || lower.startsWith(trigger + ' ') || lower.endsWith(' ' + trigger));
+    }
+    
     // AI Fallback - uses Groq API when question not in database
-    async function getAIAnswer(query) {
+    async function getAIAnswer(query, context = '') {
         const systemPrompt = `You are a helpful assistant for the FocusChrist website. Answer simply and briefly.
 RULES:
 - Give a direct, simple answer in 1-2 sentences maximum
@@ -502,13 +512,38 @@ RULES:
             if (q.includes(k)) return qaDatabase[k];
         }
         // Not found - use AI
-        const aiAnswer = await getAIAnswer(q);
+        const aiAnswer = await getAIAnswer(q, '');
         return { answer: aiAnswer, sources: [] };
     }
     
     async function sendMessage() {
         const i = document.getElementById('userInput'), b = document.getElementById('sendBtn'), q = i.value.trim();
         if (!q) return;
+        
+        // Check if this is a follow-up
+        if (conversationHistory.length > 0 && isFollowUp(q)) {
+            b.disabled = true;
+            addMessage(q, true);
+            i.value = '';
+            const l = document.createElement('div');
+            l.className = 'loading';
+            l.innerHTML = '<p>🙏 Thinking...</p>';
+            document.getElementById('chatBox').appendChild(l);
+            
+            // Build conversation context
+            const context = conversationHistory.slice(-4).map(h => `${h.role}: ${h.content}`).join('\n');
+            const followUpAnswer = await getAIAnswer(q, context);
+            l.remove();
+            b.disabled = false;
+            addMessage(followUpAnswer, false, []);
+            conversationHistory.push({ role: 'user', content: q });
+            conversationHistory.push({ role: 'assistant', content: followUpAnswer });
+            return;
+        }
+        
+        // Clear history for new topic
+        conversationHistory = [];
+        
         if (containsInappropriate(q)) { addMessage(q, true); i.value = ''; addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?", false, [{ text: '🕍 Come Unto Christ', url: 'https://www.churchofjesuschrist.org/comeuntochrist' }]); return; }
         b.disabled = true;
         addMessage(q, true);
@@ -521,6 +556,22 @@ RULES:
         l.remove();
         b.disabled = false;
         addMessage(r.answer, false, r.sources);
+        
+        // Save to conversation history
+        conversationHistory.push({ role: 'user', content: q });
+        conversationHistory.push({ role: 'assistant', content: r.answer });
+        
+        // Add follow-up option if there were sources (indicating it's a faith question from DB)
+        if (r.sources && r.sources.length > 0) {
+            setTimeout(() => {
+                const chatBox = document.getElementById('chatBox');
+                const followUpDiv = document.createElement('div');
+                followUpDiv.style.cssText = 'text-align:center;margin:15px 0;';
+                followUpDiv.innerHTML = '<button onclick="document.getElementById(\'userInput\').value=\'Tell me more about this\';sendMessage()" style="background:#c9a961;color:#0a0a0a;padding:10px 20px;border:none;border-radius:20px;cursor:pointer;font-size:0.9em;">💬 Want to know more?</button>';
+                chatBox.appendChild(followUpDiv);
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }, 500);
+        }
     }
     </script>
 </body>
