@@ -2992,7 +2992,7 @@
 
  const query = input.value.trim();
 
- const results = document.getElementById('qaResults');
+ const results = document.getElementById('qaResultsTop');
 
  
 
@@ -3446,11 +3446,11 @@
 
  document.querySelectorAll('.qa-topic').forEach(t => t.classList.remove('active'));
 
- event.target.classList.add('active');
+ (event.target || event.srcElement).classList.add('active');
 
  
 
- const results = document.getElementById('qaResults');
+ const results = document.getElementById('qaResultsTop');
 
  
 
