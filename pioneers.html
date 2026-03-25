@@ -1244,7 +1244,14 @@ window.openPioneerLink = openPioneerLink;
 
  </section>
 
- 
+ <!-- Quick Ask - Moved to top -->
+ <section class="section" style="background: linear-gradient(135deg, #1a1510 0%, #2d2418 100%); padding: 25px 20px; text-align: center;">
+ <div class="qa-input-group" style="max-width: 600px; margin: 0 auto; display: flex; gap: 15px;">
+ <input type="text" class="qa-input" id="pioneerQuestion" placeholder="Ask a question about Mormon pioneers..." onkeypress="handleKeyPress(event)" style="flex: 1; padding: 14px 18px; border-radius: 8px; border: 1px solid rgba(201,169,97,0.3); background: rgba(255,255,255,0.05); color: #fff; font-size: 1em; outline: none;">
+ <button class="qa-button" onclick="askPioneer()" style="padding: 14px 28px; background: #c9a961; color: #1a1510; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; font-weight: bold;">Ask</button>
+ </div>
+ <p style="color: #aaa; margin-top: 12px; font-size: 0.9em;">Ask about the trek, handcart companies, daily life, or spiritual experiences</p>
+ </section>
 
  <!-- Journey Overview -->
 
