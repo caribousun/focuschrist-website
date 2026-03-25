@@ -3235,10 +3235,11 @@ window.openPioneerLink = openPioneerLink;
 
  
 
- // Show loading
+        // Show user question first - You asked format
+        results.innerHTML = '<div class="qa-result" style="background: rgba(201,169,97,0.15); border: 1px solid rgba(201,169,97,0.4); margin-bottom: 15px;"><p><strong>You asked:</strong> ' + query + '</p></div>';
+        results.classList.add('show');
 
- results.innerHTML = '<div class="qa-result"><div class="qa-answer">🤔 Thinking...</div></div>';
-
+        // Use fuzzy matching to find best answer
  
 
  // Use fuzzy matching to find best answer
