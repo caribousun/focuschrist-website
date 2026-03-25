@@ -57,7 +57,7 @@
         .category-title { width: 100%; text-align: center; color: #888; font-size: 0.8em; letter-spacing: 3px; margin: 15px 0 10px; text-transform: uppercase; }
         .category-btn { padding: 12px 25px; border: 1px solid #c9a961; border-radius: 8px; background: rgba(201,169,97,0.1); color: #c9a961; cursor: pointer; font-size: 0.9em; letter-spacing: 1px; transition: all 0.3s; text-decoration: none; display: inline-block; }
         .category-btn:hover { background: #c9a961; color: #0a0a0a; transform: translateY(-2px); }
-        .chat-box { background: rgba(255,255,255,0.03); border-radius: 15px; padding: 25px; min-height: 280px; max-height: none; overflow-y: auto; border: 1px solid rgba(201,169,97,0.3); margin-bottom: 20px; }
+        .chat-box { background: rgba(255,255,255,0.03); border-radius: 15px; padding: 25px; min-height: 280px; max-height: 400px; overflow-y: auto; border: 1px solid rgba(201,169,97,0.3); margin-bottom: 20px; }
         .message { margin: 15px 0; padding: 18px; border-radius: 12px; }
         .user-message { background: rgba(201,169,97,0.15); margin-left: 20px; border: 1px solid rgba(201,169,97,0.4); }
         .bot-message { background: rgba(255,255,255,0.05); margin-right: 20px; }
@@ -67,8 +67,9 @@
         .source-link { display: inline-block; color: #888; text-decoration: none; padding: 5px 12px; margin: 3px; font-size: 0.8em; border: 1px solid #444; border-radius: 4px; }
         .source-link:hover { color: #c9a961; border-color: #c9a961; }
         .input-area { display: flex; gap: 15px; }
-        input[type="text"] { flex: 1; padding: 15px 20px; border: 1px solid #c9a961; border-radius: 30px; background: rgba(255,255,255,0.05); color: #fff; font-size: 1em; }
+        input[type="text"] { flex: 1; padding: 15px 20px; border: 1px solid #c9a961; border-radius: 30px; background: rgba(255,255,255,0.05); color: #fff; font-size: 1em; pointer-events: auto; }
         input[type="text"]::placeholder { color: #666; }
+        input[type="text"]:focus { outline: none; border-color: #e0c070; background: rgba(255,255,255,0.1); }
         button { padding: 15px 30px; border: none; border-radius: 30px; background: #c9a961; color: #0a0a0a; font-weight: bold; cursor: pointer; }
         button:hover { background: #b89951; }
         .welcome { text-align: center; padding: 20px; }
@@ -255,6 +256,7 @@
     });
     
     const qaDatabase = {
+        'is it true': { answer: "That's a great question — one that many people ask. The answer comes through personal prayer and feeling the Holy Ghost. Moroni 10:4-5 invites you to ask God with sincere intent if this is true. Look for evidence in the Restoration, the Book of Mormon, and the teachings that resonate with your heart.", sources: [{text:'📜 Moroni 10:4-5',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/10.4'},{text:'🕍 How do I know its true?',url:'https://www.churchofjesuschrist.org/study/topics/knowing-the-church-is-true'}] },
         'old testament': { answer: "The Old Testament is the first division of the Christian Bible, containing books written before the birth of Jesus Christ. It includes the Torah (Genesis-Deuteronomy), historical books, poetry, wisdom literature, and major and minor prophets. Latter-day Saints believe the Old Testament contains God's word and testifies of Jesus Christ.", sources: [{text:'📜 Old Testament',url:'https://www.churchofjesuschrist.org/study/scriptures/ot'}] },
         'genesis': { answer: "Genesis is the first book of the Old Testament, written by Moses. It describes the Creation, the Fall of Man, the Flood, and the lives of the patriarchs Abraham, Isaac, Jacob, and Joseph. It establishes the plan of salvation and God's covenant with His children.", sources: [{text:'📜 Genesis',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/gen'}] },
         'exodus': { answer: "Exodus tells the story of Israel's deliverance from Egyptian bondage, the giving of the Law at Mount Sinai, and the building of the Tabernacle. Moses led the people out of Egypt and received the Ten Commandments.", sources: [{text:'📜 Exodus',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ex'}] },
@@ -452,167 +454,43 @@
         'total mormon pioneers': { answer: "Approximately 80,000 Latter-day Saints made the journey from Nauvoo, Illinois to Salt Lake City between 1847 and 1869. This number includes those who traveled by wagon, handcart, and later by rail. The peak years were 1847-1854, when most pioneers came overland. After the transcontinental railroad was completed in 1869, the overland journey largely ended. The pioneers came from across the world — the majority from Britain, Scandinavia, and other European countries, as well as converts from the United States. They represented the largest organized migration in American history and created a permanent settlement in the Utah Territory.", sources: [{text:'📜 Church History — Mormon Pioneers',url:'https://www.churchofjesuschrist.org/study/history/topics/mormon-pioneers'},{text:'📜 Wikipedia — Mormon Pioneer',url:'https://en.wikipedia.org/wiki/Mormon_pioneers'}] },
         'pottawattamie move': { answer: "The Pottawattamie move refers to the migration of Latter-day Saints from Iowa to Utah in the early 1850s. After the Church abandoned Winter Quarters (Nebraska) in 1848, many Saints settled in the Pottawattamie area of southwestern Iowa (near present-day Council Bluffs). Between 1852-1856, approximately 10,000 members moved west from this area to Utah, joining the growing community in Salt Lake Valley. This migration was organized in companies similar to earlier pioneer treks, with families loading their possessions into wagons and making the months-long journey across the plains. Many of these pioneers came from European convert backgrounds and brought valuable skills to Utah.", sources: [{text:'📜 Church History — Iowa',url:'https://www.churchofjesuschrist.org/study/history/topics/iowa'},{text:'📜 Iowa History — Mormon Settlement',url:'https://history.iowa.gov/history/people/mormon-settlement-iowa'}] },
         'pioneer clothing': { answer: "Pioneer clothing was practical and functional for the challenging journey. Women typically wore long dresses with aprons, sun bonnets, and sturdy shoes. Men wore loose shirts, sturdy trousers, and broad-brimmed hats for sun protection. Children wore simpler versions of adult clothing. Everyone needed warm coats for cold mountain crossings. Key items included: (1) Wool clothing — preferred for its warmth and durability. (2) Leather shoes and boots — for walking the entire route. (3) Sun bonnets and hats — crucial for desert sun. (4) Gloves and mittens — for cold weather. (5) Extra clothing for layering. Pioneers had to pack carefully, as wagon space was limited. Many made their clothes before departure or repaired them along the way. The Church provided some clothing assistance to poorer emigrants.", sources: [{text:'📜 Church History — Pioneer Life',url:'https://www.churchofjesuschrist.org/study/history/topics/pioneer-life'},{text:'📜 National Park Service — Clothing',url:'https://www.nps.gov/mopi/learn/history/pioneer-clothing.htm'}] },
-        'pioneer children': { answer: "Children made up a significant portion of Mormon pioneers — estimates suggest 20-30% of all pioneers were children. Their journey was challenging but also educational. Responsibilities included: driving cattle, fetching water, helping with cooking, and watching younger siblings. Children learned to be resourceful and resilient. They played simple games and kept busy during the long journey. Unfortunately, many children became ill and died on the trail — infant and child mortality was high. Babies were sometimes born on the journey, with recorded births occurring in nearly every company. The experience shaped a generation who later built Utah's communities, schools, and institutions.", sources: [{text:'📜 Church History — Pioneer Children',url:'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/manual-chapter-21'},{text:'📜 BYU — Children on the Trail',url:'https://rsc.byu.edu/archived/pioneer-life-and-culture/children-pioneer-trail'}] }
+        'pioneer children': { answer: "Children made up a significant portion of Mormon pioneers — estimates suggest 20-30% of all pioneers were children. Their journey was challenging but also educational. Responsibilities included: driving cattle, fetching water, helping with cooking, and watching younger siblings. Children learned to be resourceful and resilient. They played simple games and kept busy during the long journey. Unfortunately, many children became ill and died on the trail — infant and child mortality was high. Babies were sometimes born on the journey, with recorded births occurring in nearly every company. The experience shaped a generation who later built Utah's communities, schools, and institutions.", sources: [{text:'📜 Church History — Pioneer Children',url:'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/manual-chapter-21'},{text:'📜 BYU — Children on the Trail',url:'https://rsc.byu.edu/archived/pioneer-life-and-culture/children-pioneer-trail'}] },
+        'lds doctrine different': { answer: "LDS doctrine differs from mainstream Christianity in several key ways: (1) The Godhead - we believe in three separate beings (God the Father, Jesus Christ, and the Holy Ghost), not the traditional Trinity. (2) Continuing Revelation - we believe God still speaks through living prophets, not just ancient scripture. (3) Temple Work - we perform ordinances for the dead, including proxy baptisms and sealings. (4) Priesthood Authority - we believe the priesthood was restored through Joseph Smith. (5) Exaltation - we believe humans can become like God through faithful obedience. These differences come from modern revelation, not from rejecting the Bible.", sources: [{text:'📜 2 Nephi 2:25',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2.25'},{text:'📜 D&C 130:22',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130.22'}] },
+        'original sin': { answer: "Latter-day Saints reject the traditional concept of 'original sin' inherited from Adam. We believe that through the Atonement of Jesus Christ, all people will be resurrected regardless of their sins (Alma 11:40-44). However, we do teach that the consequences of Adam's transgression affect us - mortality and physical death came through Adam, but the Son has overcome these. Children are innocent and do not need baptism until age 8 (Moroni 8:8-12). Each person is responsible for their own choices, not for Adam's decision. The Book of Mormon teaches that Adam's fall opened the door for mortality and progression - 'men are that they might have joy' (2 Nephi 2:22-25).", sources: [{text:'📜 Alma 11:40-44',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/11.40'},{text:'📜 Moroni 8:8-12',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8.8'},{text:'📜 2 Nephi 2:22-25',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2.22'}] },
+        'infant baptism': { answer: "Latter-day Saints do not baptize infants or young children. We teach that children are innocent and are saved through the Atonement of Christ (Moroni 8:22). Baptism is for those who can understand the covenant and choose to repent - typically age 8 and older (Doctrine and Covenants 68:27). The Church explicitly states: 'We believe that children are innocent and are saved through the Atonement of Jesus Christ. They do not need baptism until they reach the age of accountability (age 8).' This differs from many Christian denominations that practice infant baptism.", sources: [{text:'📜 Moroni 8:8-12',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8.8'},{text:'📜 D&C 68:27',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/68.27'}] },
+        'unpardonable sin': { answer: "The 'unpardonable sin' in LDS theology is specifically the sin of 'denying the Holy Ghost' - not merely doubting or sinning, but purposefully, maliciously rejecting the testimony of the Holy Ghost after knowing it to be true (Matthew 12:31-32, Hebrews 6:4-6). President Brigham Young taught this is the only sin that cannot be forgiven. However, God is more merciful than any person can comprehend, and only God knows who has truly committed this sin. Most members need not worry about having committed it - the very fact that you are concerned about it suggests you have not.", sources: [{text:'📜 Matthew 12:31-32',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12.31'},{text:'📜 Hebrews 6:4-6',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/heb/6.4'}] },
+        'second comforter': { answer: "The 'Second Comforter' is a distinctive Latter-day Saint teaching found in the Book of Mormon (2 Nephi 1:28, 3 Nephi 28:4) and Doctrines & Covenants (Section 88). The 'First Comforter' is the Holy Ghost, who testifies of truth. The 'Second Comforter' refers to the Lord Jesus Christ Himself, who promised to come to those who keep His commandments and are worthy. President Brigham Young taught that worthy Saints will see the Savior face to face and know Him personally. Unlike the Holy Ghost who is 'a still small voice,' the Savior will appear in a tangible, recognizable way to those who qualify through obedience.", sources: [{text:'📜 2 Nephi 1:28',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/1.28'},{text:'📜 D&C 88:3-5',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88.3'},{text:'📜 Teachings of Brigham Young',url:'https://www.churchofjesuschrist.org/study/manual/teachings-of-brigham-young'}] },
+        'eternal progression': { answer: "One of the most distinctive LDS doctrines is that human beings can become like God - this is called 'eternal progression.' We believe that God was once a man like us, and through faithfulness, we can become as He is (Joseph Smith taught this in King Follett discourse). This does NOT mean we will become God the Father - we will become like Him in character and power. The plan of salvation is for God's children to become like their Heavenly Parents, receiving a fullness of joy and continuing to progress eternally. This doctrine sets Latter-day Saints apart from traditional Christianity, which typically teaches that only God is God.", sources: [{text:'📜 John 17:20-23',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/17.20'},{text:'📜 D&C 84:38',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84.38'},{text:'📜 Joseph Smith — King Follett Discourse',url:'https://www.churchofjesuschrist.org/study/manual/teachings-of-the-prophet-joseph-smith/chapter-25'}] },
+        'war in heaven': { answer: "The 'war in heaven' is described in Revelation 12:7-9 and D&C 76:25-29. In premortality, Lucifer (then a spirit son of God) rebelled against God's plan and wanted to force salvation upon all souls. He gathered a 'third part' of the host of heaven who chose to follow him. They were cast out to earth, where Satan 'deceiveth the whole world' (Revelation 12:9). This war was not about territory - it was about agency. God will never force us to return to Him; we must choose. The victory over Satan was won through the Atonement - Jesus Christ 'destroyed the works of the devil' (1 John 3:8).", sources: [{text:'📜 Revelation 12:7-9',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/rev/12.7'},{text:'📜 D&C 76:25-29',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76.25'},{text:'📜 1 John 3:8',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/3.8'}] },
+        'dispensations': { answer: "A 'dispensation' in LDS theology is a period of time when God reveals His gospel to humanity through a chosen prophet. The Church teaches there have been many dispensations: (1) Adam to Enoch; (2) Enoch to Noah; (3) Noah to Abraham; (4) Abraham to Moses; (5) Moses to Christ; (6) The dispensation of the fulness of times - beginning with Joseph Smith, when the Church was restored with all keys, powers, and ordinances. Each dispensation saw the loss of truth over time, requiring restoration. Joseph Smith began the 'dispensation of the fulness of times' in 1830.", sources: [{text:'📜 D&C 110',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110'},{text:'📜 Bible Dictionary — Dispensation',url:'https://www.churchofjesuschrist.org/study/bible-dictionary/d'}] },
+        'chastity': { answer: "Chastity is a core Latter-day Saint virtue meaning sexual purity before marriage and complete fidelity within marriage. We believe the body is sacred, and sexual relations are reserved for a husband and wife. The law of chastity includes: no sexual relations before marriage, no adultery, no pornography, and no homosexual relations. President Spencer W. Kimball taught: 'Sexual sins are more serious than any other sins except murder.' Through the Atonement, all can be forgiven through sincere repentance. Chastity is not about shame - it is about honoring the body as a temple of God.", sources: [{text:'📜 For the Strength of Youth — Chastity',url:'https://www.churchofjesuschrist.org/study/manual/for-the-strength-of-youth/chastity'},{text:'📜 President Kimball — The Law of Chastity',url:'https://www.churchofjesuschrist.org/study/general-conference/1978/10/follow-the-prophet'}] },
+        'word of wisdom': { answer: "The Word of Wisdom is a health law given in D&C 89. It instructs Latter-day Saints to: (1) Not drink alcohol, tobacco, coffee, or tea; (2) Not use illegal drugs; (3) Eat meat sparingly; (4) Eat grains, fruits, and vegetables. The 'very hot' drinks mentioned were coffee and tea. The Word of Wisdom was given 'not by command' but by revelation with promise - health, wisdom, and protection. It is now a requirement for temple attendance and missionary service, though Church leaders emphasize it is about personal revelation and spiritual health, not legalism.", sources: [{text:'📜 D&C 89',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89'},{text:'📜 For the Strength of Youth — Physical Health',url:'https://www.churchofjesuschrist.org/study/manual/for-the-strength-of-youth/physical-health'}] },
+        'tithing': { answer: "Tithing is one of the oldest biblical laws - giving one-tenth of your increase to the Lord. In modern revelation, members give 10% of their 'interest income.' The Lord promised: 'Bring ye all the tithes into the storehouse... that there may be meat in mine house' (Malachi 3:10, quoted in D&C 119). Tithing is a freewill offering - the Church cannot compel payment. However, it is a requirement for a temple recommend. The funds are used to build temples, meetinghouses, run programs, support missionaries, and aid the poor worldwide. President Henry D. Taylor taught: 'I promise that as you pay your tithing, you will receive more blessings than you can understand.'", sources: [{text:'📜 D&C 119',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119'},{text:'📜 Malachi 3:10',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/mal/3.10'}] }
     };
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
     function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;sendMessage()}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
-    
-    // Store last question for displaying above answer
-    let lastUserQuestion = '';
-    
-    // addMessage function - displays user's question above the answer
-    function addMessage(content, isUser, sources = []) {
-        const chatBox = document.getElementById('chatBox');
-        const msgDiv = document.createElement('div');
-        msgDiv.className = 'message ' + (isUser ? 'user-message' : 'bot-message');
-        
-        if (isUser) {
-            // User message - just show the question
-            msgDiv.innerHTML = '<p><strong>❓ You asked:</strong> ' + content + '</p>';
-        } else {
-            // Bot message - show the question above the answer if available
-            let html = '';
-            if (lastUserQuestion) {
-                html += '<p><strong>❓ Your question:</strong> ' + lastUserQuestion + '</p>';
-                html += '<hr style="border:0;border-top:1px solid rgba(201,169,97,0.2);margin:10px 0;">';
+    function findAnswer(q){
+        q=q.toLowerCase();
+        let bestMatch = null;
+        let bestLength = 0;
+        for(let k in qaDatabase){
+            if(q.indexOf(k) !== -1 && k.length > bestLength){
+                bestLength = k.length;
+                bestMatch = qaDatabase[k];
             }
-            html += '<p>' + content + '</p>';
-            
-            if (sources && sources.length > 0) {
-                html += '<div class="sources"><div class="sources-title">📖 Sources</div>';
-                for (let s of sources) {
-                    html += '<a href="' + s.url + '" target="_blank" class="source-link">' + s.text + '</a>';
-                }
-                html += '</div>';
-            }
-            msgDiv.innerHTML = html;
-            lastUserQuestion = ''; // Clear after showing
         }
-        
-        chatBox.appendChild(msgDiv);
-        chatBox.scrollTop = chatBox.scrollHeight;
-    }
-    
-    // Conversation history for follow-up support
-    let conversationHistory = [];
-    const followUpTriggers = ['yes', 'sure', 'tell me more', 'more', 'explain', 'go on', 'continue', 'that', 'what do you mean', 'interesting'];
-    
-    function isFollowUp(msg) {
-        const lower = msg.toLowerCase();
-        return followUpTriggers.some(trigger => lower === trigger || lower.startsWith(trigger + ' ') || lower.endsWith(' ' + trigger));
-    }
-    
-    // AI Fallback - uses Groq API when question not in database
-    async function getAIAnswer(query, context = '') {
-        const systemPrompt = `You are a helpful assistant for the FocusChrist website, grounded in the teachings of Jesus Christ.
-RULES:
-- Always keep Jesus Christ and His gospel as the foundation - even for non-faith questions, find a way to connect to His teachings
-- Give a direct, simple answer in 1-2 sentences maximum
-- Never preach, convert, or lecture
-- If appropriate, add ONE short sentence about faith/creation/Christian values
-- Keep total to 3 sentences max
-- Never be derogatory to any faith
-- When answering any question, consider how the answer relates to Christian principles and the example of Jesus Christ`;
-        
-        try {
-            const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                method: 'POST',
-                headers: {
-                    'Authorization': 'Bearer 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',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    model: 'llama-3.1-8b-instant',
-                    messages: [
-                        { role: 'system', content: systemPrompt },
-                        { role: 'user', content: query }
-                    ],
-                    temperature: 0.7,
-                    max_tokens: 150
-                })
-            });
-            const data = await response.json();
-            if (data.choices && data.choices[0]) {
-                return data.choices[0].message.content;
-            }
-            return "That's a great question! I invite you to explore more at the official Church website.";
-        } catch (e) {
-            return "That's a great question! I invite you to explore more at the official Church website.";
-        }
-    }
-    
-    async function findAnswer(q) {
-        q = q.toLowerCase();
-        // First try database
-        for (let k in qaDatabase) {
-            if (q.includes(k)) return qaDatabase[k];
-        }
-        // Not found - use AI
-        const aiAnswer = await getAIAnswer(q, '');
-        return { answer: aiAnswer, sources: [] };
-    }
-    
-    async function sendMessage() {
-        const i = document.getElementById('userInput'), b = document.getElementById('sendBtn'), q = i.value.trim();
-        if (!q) return;
-        
-        // Check if this is a follow-up
-        if (conversationHistory.length > 0 && isFollowUp(q)) {
-            b.disabled = true;
-            addMessage(q, true);
-            i.value = '';
-            lastUserQuestion = q; // Store for displaying above answer
-            const l = document.createElement('div');
-            l.className = 'loading';
-            l.innerHTML = '<p>🙏 Thinking...</p>';
-            document.getElementById('chatBox').appendChild(l);
-            
-            // Build conversation context
-            const context = conversationHistory.slice(-4).map(h => `${h.role}: ${h.content}`).join('\n');
-            const followUpAnswer = await getAIAnswer(q, context);
-            l.remove();
-            b.disabled = false;
-            addMessage(followUpAnswer, false, []);
-            conversationHistory.push({ role: 'user', content: q });
-            conversationHistory.push({ role: 'assistant', content: followUpAnswer });
-            return;
-        }
-        
-        // Clear history for new topic
-        conversationHistory = [];
-        
-        if (containsInappropriate(q)) { addMessage(q, true); i.value = ''; lastUserQuestion = q; addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?", false, [{ text: '🕍 Come Unto Christ', url: 'https://www.churchofjesuschrist.org/comeuntochrist' }]); return; }
-        b.disabled = true;
-        addMessage(q, true);
-        i.value = '';
-        lastUserQuestion = q; // Store for displaying above answer
-        const l = document.createElement('div');
-        l.className = 'loading';
-        l.innerHTML = '<p>🙏 Seeking divine guidance...</p>';
-        document.getElementById('chatBox').appendChild(l);
-        const r = await findAnswer(q);
-        l.remove();
-        b.disabled = false;
-        addMessage(r.answer, false, r.sources);
-        
-        // Save to conversation history
-        conversationHistory.push({ role: 'user', content: q });
-        conversationHistory.push({ role: 'assistant', content: r.answer });
-        
-        // Add follow-up option if there were sources (indicating it's a faith question from DB)
-        if (r.sources && r.sources.length > 0) {
-            setTimeout(() => {
-                const chatBox = document.getElementById('chatBox');
-                const followUpDiv = document.createElement('div');
-                followUpDiv.style.cssText = 'text-align:center;margin:15px 0;';
-                followUpDiv.innerHTML = '<button onclick="document.getElementById(\'userInput\').value=\'Tell me more about this\';sendMessage()" style="background:#c9a961;color:#0a0a0a;padding:10px 20px;border:none;border-radius:20px;cursor:pointer;font-size:0.9em;">💬 Want to know more?</button>';
-                chatBox.appendChild(followUpDiv);
-                chatBox.scrollTop = chatBox.scrollHeight;
-            }, 500);
-        }
-    }
+        if(bestMatch) return bestMatch;
+        return {answer:"That's a great question! We invite you to learn more by visiting the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'},{text:'🕍 Gospel Topics',url:'https://www.churchofjesuschrist.org/study/topics'}]}}
+    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h='<p>'+t+'</p>';if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=c.scrollHeight}
+    function sendMessage(){
+        const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
+        if(!q)return;
+        // Clear chat for fresh start
+        document.getElementById('chatBox').innerHTML='';
+        if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
+        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);setTimeout(()=>{l.remove();b.disabled=false;const r=findAnswer(q);addMessage(r.answer,false,r.sources)},1500)}
     </script>
 </body>
 </html>
