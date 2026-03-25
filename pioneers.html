@@ -806,7 +806,7 @@ window.askPioneer = askPioneer;
  <!-- User Q&A Interface -->
  <div class="qa-input-group">
  <input type="text" class="qa-input" id="pioneerQuestion" placeholder="Ask a question about Mormon pioneers..." onkeypress="handleKeyPress(event)">
- <button class="qa-button" onclick="askPioneer()">Ask</button>
+ <button class="qa-button" onclick="var i=document.getElementById('pioneerQuestion');var q=i.value.trim();if(q){var r=document.getElementById('qaResults');r.innerHTML='<div class="qa-result"><div class="qa-answer">Thinking...</div></div>';var m=findBestMatch(q,'pioneer');if(m){r.innerHTML='<div class="qa-result"><div class="qa-question">'+m.question+'</div><div class="qa-answer">'+m.answer+'</div></div>'}r.classList.add('show');i.value='';}">Ask</button>
  </div>
  
  <div class="qa-topics">
