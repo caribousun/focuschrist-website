@@ -3274,7 +3274,11 @@ window.openPioneerLink = openPioneerLink;
 
  const aiAnswer = await getPioneerAIAnswer(query);
 
- results.innerHTML = '<div class="qa-result"><div class="qa-question">' + query + '</div><div class="qa-answer">' + aiAnswer + '</div></div>';
+ const answerDiv = document.createElement("div");
+  answerDiv.className = "qa-result";
+  answerDiv.style.background = "rgba(255,255,255,0.05)";
+  answerDiv.innerHTML = "<p>" + aiAnswer + "</p>";
+  results.appendChild(answerDiv);
 
  }
 
