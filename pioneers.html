@@ -1595,6 +1595,11 @@
  }
  }
 
+ // Handle Enter key press
+ function handleKeyPress(e) {
+ if (e.key === 'Enter') askPioneer();
+ }
+
  // Enhanced askPioneer with fuzzy matching + cross-reference + AI fallback
  async function askPioneer() {
  const input = document.getElementById('pioneerQuestion');
