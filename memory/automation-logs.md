@@ -1,1 +1,0 @@
-2026-03-18 12:15:00 MDT | Gateway Monitor | UP | Port 18789 listening (TCP 127.0.0.1 and ::1)
