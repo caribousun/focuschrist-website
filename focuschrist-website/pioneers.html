@@ -787,8 +787,8 @@
  <!-- Agent-to-Agent Conversation Display -->
  <div class="agent-conversation" id="agentConvo" style="display:none;">
  <div class="agent-header">
- <span class="agent-badge agent-1">=ï¿½ï¿½ï¿½ Pioneer Historian</span>
- <span class="agent-badge agent-2">=ï¿½ï¿½ï¿½ Restoration Scholar</span>
+ <span class="agent-badge agent-1">⚛ Pioneer Historian</span>
+ <span class="agent-badge agent-2">⚛ Restoration Scholar</span>
  </div>
  <div class="convo-history" id="convoHistory"></div>
  <div class="convo-controls">
@@ -821,7 +821,7 @@
  </section>
  
  <footer>
- <p>-ï¿½ 2026 focusChrist. All are welcome here.</p>
+ <p>© 2026 focusChrist. All are welcome here.</p>
  </footer>
  
  <script>
@@ -1531,9 +1531,9 @@
  
  function getCrossReferenceMessage(query, source) {
  if (source === 'pioneer') {
- return `<p style="margin-top:15px;color:#6496c8;">=ï¿½ï¿½ï¿½ <strong>Related:</strong> For more about faith in Christ, visit <a href="ask.html" style="color:#c9a961;">Ask a Question</a></p>`;
+ return `<p style="margin-top:15px;color:#6496c8;">⚛ <strong>Related:</strong> For more about faith in Christ, visit <a href="ask.html" style="color:#c9a961;">Ask a Question</a></p>`;
  }
- return `<p style="margin-top:15px;color:#c9a961;">=ï¿½ï¿½ï¿½ <strong>Related:</strong> For more about pioneers, visit <a href="pioneers.html" style="color:#6496c8;">Pioneers</a></p>`;
+ return `<p style="margin-top:15px;color:#c9a961;">⚛ <strong>Related:</strong> For more about pioneers, visit <a href="pioneers.html" style="color:#6496c8;">Pioneers</a></p>`;
  }
  
  // Find best matching Q&A for user question
@@ -1589,13 +1589,33 @@
  </div>
  `;
  } else {
- results.innerHTML = `
- <div class="qa-no-result">
- <p>No exact match found for "${query}"</p>
- <p style="margin-top:10px;color:#c9a961;">Try asking about:</p>
- <p style="margin-top:5px;">"Handcart companies" -- "Winter Quarters" -- "Brigham Young" -- "Daily life" -- "Pioneer Day"</p>
- </div>
- `;
+ // Use AI fallback for unmatched questions
+ results.innerHTML = '<div class="qa-result"><div class="qa-answer">🤔 Thinking...</div></div>';
+ 
+ fetch('https://api.groq.com/openai/v1/chat/completions', {
+ method: 'POST',
+ headers: {
+ 'Authorization': 'Bearer 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',
+ 'Content-Type': 'application/json'
+ },
+ body: JSON.stringify({
+ model: 'llama-3.1-8b-instant',
+ messages: [
+ { role: 'system', content: 'You are a helpful assistant for the FocusChrist PIONEERS page. Answer questions about Mormon pioneer history - daily life, trails, challenges, faith, handcart companies, Brigham Young, Winter Quarters, food, clothing, shelters, and related topics. Keep answers brief and respectful.' },
+ { role: 'user', content: query }
+ ],
+ temperature: 0.7,
+ max_tokens: 200
+ })
+ }).then(res => res.json()).then(data => {
+ if (data.choices && data.choices[0]) {
+ results.innerHTML = '<div class="qa-result"><div class="qa-question">' + query + '</div><div class="qa-answer">' + data.choices[0].message.content + '</div></div>';
+ } else {
+ results.innerHTML = '<div class="qa-no-result"><p>No answer found. Try: "Handcart companies" or "Winter Quarters"</p></div>';
+ }
+ }).catch(e => {
+ results.innerHTML = '<div class="qa-no-result"><p>No answer found. Try: "Handcart companies" or "Winter Quarters"</p></div>';
+ });
  }
  
  results.classList.add('show');
@@ -1607,7 +1627,7 @@
  const msgDiv = document.createElement('div');
  msgDiv.className = `convo-message agent-${agent}`;
  msgDiv.innerHTML = `
- <div class="convo-question">${agent === 1 ? '=ï¿½ï¿½ï¿½ Pioneer Historian asks:' : '=ï¿½ï¿½ï¿½ Restoration Scholar asks:'}</div>
+ <div class="convo-question">${agent === 1 ? '⚛ Pioneer Historian asks:' : '⚛ Restoration Scholar asks:'}</div>
  <div class="convo-answer">${answer || '...'}</div>
  `;
  convoHistory.appendChild(msgDiv);
@@ -1622,7 +1642,7 @@
  
  // Add opening
  const convoHistory = document.getElementById('convoHistory');
- convoHistory.innerHTML = '<div style="text-align:center;color:#666;padding:20px;">=ï¿½ï¿½ï¿½n+ï¿½ <em>Pioneer Historian and Restoration Scholar begin their discussion...</em></div>';
+ convoHistory.innerHTML = '<div style="text-align:center;color:#666;padding:20px;">⚛ <em>Pioneer Historian and Restoration Scholar begin their discussion...</em></div>';
  
  // Start the conversation loop
  runConversationTurn();
@@ -1673,7 +1693,7 @@
  const convoHistory = document.getElementById('convoHistory');
  const summary = document.createElement('div');
  summary.style.cssText = 'text-align:center;padding:20px;color:#c9a961;border-top:1px solid #333;margin-top:20px;';
- summary.innerHTML = `<strong>=ï¿½ï¿½ï¿½ Session Complete!</strong><br>${totalQuestionsAsked} topics explored in this session.<br>Database now has ${pioneerQA.length} searchable Q&A entries.<br><br><em>Run again to continue building knowledge!</em>`;
+ summary.innerHTML = `<strong>⚛ Session Complete!</strong><br>${totalQuestionsAsked} topics explored in this session.<br>Database now has ${pioneerQA.length} searchable Q&A entries.<br><br><em>Run again to continue building knowledge!</em>`;
  convoHistory.appendChild(summary);
  totalQuestionsAsked = 0;
  }
@@ -1812,12 +1832,33 @@
  </div>
  `).join('');
  } else {
- results.innerHTML = `
- <div class="qa-no-result">
- <p>No exact match found. Try asking about:</p>
- <p style="margin-top:10px;color:#c9a961;">"How long did it take?" -- "What did they eat?" -- "Handcart companies" -- "Pioneer Day"</p>
- </div>
- `;
+ // Use AI fallback for unmatched questions
+ results.innerHTML = '<div class="qa-result"><div class="qa-answer">🤔 Thinking...</div></div>';
+ 
+ fetch('https://api.groq.com/openai/v1/chat/completions', {
+ method: 'POST',
+ headers: {
+ 'Authorization': 'Bearer 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',
+ 'Content-Type': 'application/json'
+ },
+ body: JSON.stringify({
+ model: 'llama-3.1-8b-instant',
+ messages: [
+ { role: 'system', content: 'You are a helpful assistant for the FocusChrist PIONEERS page. Answer questions about Mormon pioneer history - daily life, trails, challenges, faith, handcart companies, Brigham Young, Winter Quarters, food, clothing, shelters, and related topics. Keep answers brief and respectful.' },
+ { role: 'user', content: query }
+ ],
+ temperature: 0.7,
+ max_tokens: 200
+ })
+ }).then(res => res.json()).then(data => {
+ if (data.choices && data.choices[0]) {
+ results.innerHTML = '<div class="qa-result"><div class="qa-question">' + query + '</div><div class="qa-answer">' + data.choices[0].message.content + '</div></div>';
+ } else {
+ results.innerHTML = '<div class="qa-no-result"><p>No answer found. Try: "Handcart companies" or "Winter Quarters"</p></div>';
+ }
+ }).catch(e => {
+ results.innerHTML = '<div class="qa-no-result"><p>No answer found. Try: "Handcart companies" or "Winter Quarters"</p></div>';
+ });
  }
  
  results.classList.add('show');
