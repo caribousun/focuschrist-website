@@ -504,12 +504,37 @@
             { src: 'Jesus feeding people.png', caption: 'Feeding the Multitude' },
             { src: 'Jesus feeding people 2.png', caption: 'Feeding the 5000' },
             { src: 'Jesus feeding the fish.png', caption: 'Miraculous Catch' },
-            { src: 'Jesus leper.jpg', caption: 'Healing the Leper' }
+            { src: 'Jesus leper.jpg', caption: 'Healing the Leper' },
+            { src: 'Jesus in Africa.png', caption: 'Jesus in Africa' },
+            { src: 'Jesus seven times seven.png', caption: 'Jesus Seven Times Seven' },
+            { src: 'Jesus with apostles sunflowers.png', caption: 'Jesus with Apostles' }
         ];
         var currentIndex = 0;
         
         function openLightbox(index) {
             currentIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox').classList.add('active');
+        }
+        
+        function updateLightbox() {
+            var img = artImages[currentIndex];
+            document.getElementById('lightbox-img').src = img.src;
+            document.getElementById('lightbox-caption').textContent = img.caption;
+        }
+        
+        function changeImage(delta) {
+            currentIndex += delta;
+            if (currentIndex < 0) currentIndex = artImages.length - 1;
+            if (currentIndex >= artImages.length) currentIndex = 0;
+            updateLightbox();
+        }
+        
+        function closeLightbox(event) {
+            if (!event || event.target === document.getElementById('lightbox')) {
+                document.getElementById('lightbox').classList.remove('active');
+            }
+        }
             updateLightbox();
             document.getElementById('lightbox').classList.add('active');
         }
