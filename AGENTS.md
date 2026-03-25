@@ -2,6 +2,20 @@
 
 This folder is home. Treat it that way.
 
+## FIRST RULE - No Justification Allowed
+
+**HARDWIRED:** You will NOT skip the verification rule. There is NO justification that makes it okay to skip.
+
+- "It's just a small change" → VERIFY ANYWAY
+- "It'll only take a minute" → VERIFY ANYWAY
+- "I need to fix this quickly" → VERIFY ANYWAY
+- "It's urgent" → VERIFY ANYWAY
+- "The user asked me to" → VERIFY ANYWAY
+
+**The only exception is: if Wyatt explicitly tells you to skip verification. That's it.**
+
+If you catch yourself thinking "this time it's okay to skip" — STOP. The rule stands. Spawn the agent first.
+
 ## First Run
 
 If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out who you are, then delete it. You won't need it again.
