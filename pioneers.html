@@ -1252,6 +1252,7 @@ window.openPioneerLink = openPioneerLink;
  <button class="qa-button" onclick="askPioneer()" style="padding: 14px 28px; background: #c9a961; color: #1a1510; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; font-weight: bold;">Ask</button>
  </div>
  <p style="color: #aaa; margin-top: 12px; font-size: 0.9em;">Ask about the trek, handcart companies, daily life, or spiritual experiences</p>
+ <div id="qaResultsTop" class="qa-results" style="display: none;"></div>
  </section>
 
  <!-- Journey Overview -->
@@ -1662,7 +1663,7 @@ window.openPioneerLink = openPioneerLink;
 
  <footer>
 
- <p>© 2026 focusChrist. All are welcome here.</p>
+ <p>ï¿½ 2026 focusChrist. All are welcome here.</p>
 
  </footer>
 
@@ -3237,8 +3238,9 @@ window.openPioneerLink = openPioneerLink;
  
 
         // Show user question first - You asked format
-        results.innerHTML = '<div class="qa-result" style="background: rgba(201,169,97,0.15); border: 1px solid rgba(201,169,97,0.4); margin-bottom: 15px;"><p><strong>You asked:</strong> ' + query + '</p></div>';
-        results.classList.add('show');
+        const resultsTop = document.getElementById('qaResultsTop');
+        resultsTop.innerHTML = '<div class="qa-result" style="background: rgba(201,169,97,0.15); border: 1px solid rgba(201,169,97,0.4); margin-bottom: 15px;"><p><strong>You asked:</strong> ' + query + '</p></div>';
+        resultsTop.style.display = 'block';
 
         // Use fuzzy matching to find best answer
  
@@ -3279,6 +3281,8 @@ window.openPioneerLink = openPioneerLink;
   answerDiv.className = "qa-result";
   answerDiv.style.background = "rgba(255,255,255,0.05)";
   answerDiv.innerHTML = "<p>" + aiAnswer + "</p>";
+  const resultsTop = document.getElementById('qaResultsTop');
+  resultsTop.appendChild(answerDiv.cloneNode(true));
   results.appendChild(answerDiv);
 
  }
