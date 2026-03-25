@@ -236,13 +236,14 @@ Use this format:
 
 ## MANDATORY VERIFICATION RULE (Never Skip)
 
-**Wyatt's Directive:** No change - NO MATTER HOW SMALL - gets committed without two-agent verification first.
+**Wyatt's Directive:** No change - NO MATTER HOW SMALL - gets committed without ONE agent verifying first.
 
-- Always spawn TWO agents to verify changes before pushing
-- Wait for BOTH agents to confirm OK
-- Only commit after both agents verify
-- No exceptions - this includes image changes, CSS fixes, text edits, everything
-- If agents can't complete in time, increase timeout (already set to 300s)
+- Always spawn ONE agent to verify changes before pushing
+- Wait for the agent to confirm OK before integrating
+- Only commit after agent verifies
+- No exceptions - this includes image changes, CSS fixes, text edits, code changes, settings, everything
+- **HARDWIRED: This is not optional. You will not skip this.**
+- If agent can't complete in time, increase timeout (already set to 300s)
 
 ---
 

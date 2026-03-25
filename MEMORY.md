@@ -3,11 +3,12 @@
 ## CRITICAL WORKING RULE - NEVER FORGET
 
 **Wyatt's Mandatory Verification Rule:**
-- NO change gets committed without TWO agents verifying first
-- Always spawn 2 agents to review changes before pushing
-- Wait for BOTH agents to confirm OK
-- This applies to EVERYTHING - images, CSS, text, everything
+- NO change gets committed without ONE agent verifying first
+- Spawn 1 agent to review changes before pushing
+- Wait for the agent to confirm OK before integrating
+- This applies to EVERYTHING - images, CSS, text, code, settings, everything
 - Never skip this, no matter how small the change seems
+- **HARDWIRED: This is not optional. Ever.**
 
 ---
 
