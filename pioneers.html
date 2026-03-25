@@ -1260,7 +1260,7 @@ window.openPioneerLink = openPioneerLink;
  <span class="qa-topic" onclick="filterTopic('tragedy')">Tragedies</span>
  <span class="qa-topic" onclick="filterTopic('legacy')">Legacy</span>
  </div>
- <div id="qaResultsTop" class="qa-results" style="display: none;"></div>
+ <div id="qaResultsTop" class="qa-results" style="display: none; margin-top: 20px;"></div>
  </section>
 
  <!-- Journey Overview -->
@@ -3170,7 +3170,7 @@ window.openPioneerLink = openPioneerLink;
         // Show user question first - You asked format
         const resultsTop = document.getElementById('qaResultsTop');
         resultsTop.innerHTML = '<div class="qa-result" style="background: rgba(201,169,97,0.15); border: 1px solid rgba(201,169,97,0.4); margin-bottom: 15px;"><p><strong>You asked:</strong> ' + query + '</p></div>';
-        resultsTop.style.display = 'block';
+        resultsTop.classList.add('show');
 
         // Use fuzzy matching to find best answer
  
