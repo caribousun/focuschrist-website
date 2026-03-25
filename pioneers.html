@@ -1431,7 +1431,8 @@
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
         b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const r=findAnswer(q);l.remove();b.disabled=false;if(r.found){addMessage(r.answer,false,r.sources)}else{const ai=await askAI(q);addMessage(ai.answer,false,ai.sources)}
      }
-</script><script>
+</script>
+<script>
 
  // ========================================
 
@@ -3537,4 +3538,10 @@ window.filterTopic = filterTopic;
 window.openPioneerLink = openPioneerLink;
 </script>
 </body>
+
 </html>
+
+
+
+
+
