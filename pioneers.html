@@ -1245,13 +1245,21 @@ window.openPioneerLink = openPioneerLink;
 
  </section>
 
- <!-- Quick Ask - Moved to top -->
- <section class="section" style="background: linear-gradient(135deg, #1a1510 0%, #2d2418 100%); padding: 25px 20px; text-align: center;">
+ <!-- Q&A Section - Top -->
+ <section class="section" style="background: linear-gradient(135deg, #1a1510 0%, #2d2418 100%); padding: 25px 20px;">
+ <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">ASK ABOUT PIONEERS</h2>
  <div class="qa-input-group" style="max-width: 600px; margin: 0 auto; display: flex; gap: 15px;">
  <input type="text" class="qa-input" id="pioneerQuestion" placeholder="Ask a question about Mormon pioneers..." onkeypress="handleKeyPress(event)" style="flex: 1; padding: 14px 18px; border-radius: 8px; border: 1px solid rgba(201,169,97,0.3); background: rgba(255,255,255,0.05); color: #fff; font-size: 1em; outline: none;">
  <button class="qa-button" onclick="askPioneer()" style="padding: 14px 28px; background: #c9a961; color: #1a1510; border: none; border-radius: 8px; cursor: pointer; font-size: 1em; font-weight: bold;">Ask</button>
  </div>
- <p style="color: #aaa; margin-top: 12px; font-size: 0.9em;">Ask about the trek, handcart companies, daily life, or spiritual experiences</p>
+ <div class="qa-topics" style="justify-content: center; margin-top: 15px;">
+ <span class="qa-topic active" onclick="filterTopic('all')">All</span>
+ <span class="qa-topic" onclick="filterTopic('history')">History</span>
+ <span class="qa-topic" onclick="filterTopic('dailylife')">Daily Life</span>
+ <span class="qa-topic" onclick="filterTopic('spiritual')">Spiritual</span>
+ <span class="qa-topic" onclick="filterTopic('tragedy')">Tragedies</span>
+ <span class="qa-topic" onclick="filterTopic('legacy')">Legacy</span>
+ </div>
  <div id="qaResultsTop" class="qa-results" style="display: none;"></div>
  </section>
 
