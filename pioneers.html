@@ -1,10 +1,16 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pioneers - focusChrist</title>
-    <style>
+
+ <meta charset="UTF-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <title>Pioneers - focusChrist</title>
+
+ <style>
 
  * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -102,7 +108,7 @@
 
  text-decoration: none;
 
- 
+ border-bottom: 1px solid rgba(201,169,97,0.2);
 
  }
 
@@ -148,7 +154,7 @@
 
  linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%),
 
- 
+ repeating-linear-gradient(90deg, #2a2520 0px, #2a2520 1px, transparent 1px, transparent 50px),
 
  repeating-linear-gradient(0deg, #2a2520 0px, #2a2520 1px, transparent 1px, transparent 50px);
 
@@ -190,7 +196,7 @@
 
  height: 60%;
 
- 
+ border: 2px dashed rgba(201, 169, 97, 0.4);
 
  border-radius: 5px;
 
@@ -198,17 +204,17 @@
 
  }
 
- .hero-content { position: relative; z-index: 10; text-align: center; padding: 10px; }
+ .hero-content { position: relative; z-index: 10; text-align: center; padding: 20px; }
 
  .hero h1 {
 
- font-size: 2em;
+ font-size: 2.8em;
 
- letter-spacing: 5px;
+ letter-spacing: 10px;
 
  font-family: 'Times New Roman', serif;
 
- margin-bottom: 5px;
+ margin-bottom: 15px;
 
  color: #fff;
 
@@ -436,7 +442,7 @@
 
  border-left: 3px solid #c9a961;
 
- padding: 10px;
+ padding: 20px;
 
  margin-top: 15px;
 
@@ -482,7 +488,7 @@
 
  transition: transform 0.3s ease;
 
- margin-top: 0;
+ margin-top: -30px;
 
  }
 
@@ -568,7 +574,7 @@
 
  border-radius: 10px;
 
- padding: 10px;
+ padding: 20px;
 
  border: 1px solid #333;
 
@@ -582,7 +588,7 @@
 
  letter-spacing: 2px;
 
- margin-bottom: 5px;
+ margin-bottom: 15px;
 
  font-weight: bold;
 
@@ -598,7 +604,7 @@
 
  font-size: 0.95em;
 
- margin-bottom: 5px;
+ margin-bottom: 15px;
 
  }
 
@@ -685,7 +691,7 @@
 
  @media (max-width: 768px) {
 
- .hero { height: 25vh; min-height: 50px; }
+ .hero { height: 25vh; min-height: 180px; }
 
  .hero h1 { font-size: 1.8em; letter-spacing: 5px; }
 
@@ -752,7 +758,7 @@
 
  .hamburger-menu.show { display: flex; flex-direction: column; }
 
- .hamburger-menu a { color: #c9a961; font-size: 0.9em; padding: 6px 15px;  }
+ .hamburger-menu a { color: #c9a961; font-size: 0.9em; padding: 6px 15px; border-bottom: 1px solid rgba(201,169,97,0.2); }
 
 
  .map-point { flex-direction: column; }
@@ -795,7 +801,7 @@
 
     /* Banner */
 
-    .banner { position: relative; width: 100%; height: 140px; overflow: hidden; }
+    .banner { position: relative; width: 100%; height: 280px; overflow: hidden; }
 
     .banner-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('pioneer art.png'); background-size: cover; background-position: center 35%; }
 
@@ -805,41 +811,13 @@
 
     .banner-link { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
- 
-    /* Q&A Section Styles */
-    .qa-section { background: #111; padding: 10px 20px; }
-    .qa-container { max-width: 900px; margin: 0 auto; margin-top: 0; }
-    
-/* Desktop: show full pioneer art picture */
-@media (min-width: 769px) {
-    .hero {
-        height: 600px !important;
-        min-height: 600px !important;
-    }
-}
-.chat-box { background: #1a1a1a; border-radius: 15px; padding: 10px; min-height: 100px; max-height: 500px; overflow-y: auto; margin-bottom: 20px; }
-    .welcome h3 { color: #c9a961; font-size: 1.8em; margin-bottom: 10px; }
-    .welcome p { color: #aaa; line-height: 1.6; }
-    .welcome-sub { color: #888; font-size: 0.9em; margin-top: 10px; font-style: italic; }
-    .input-area { display: flex; gap: 10px; margin-bottom: 30px; }
-    .input-area input { flex: 1; padding: 15px; background: #1a1a1a; border: 2px solid #333; border-radius: 50px; color: #fff; font-size: 1em; }
-    .input-area input:focus { border-color: #c9a961; outline: none; }
-    .input-area button { padding: 15px 30px; background: linear-gradient(135deg, #c9a961, #8b7355); border: none; border-radius: 50px; color: #0a0a0a; font-weight: bold; cursor: pointer; }
-    .category-row { margin-bottom: 5px; }
-    .category-title { color: #c9a961; font-size: 0.9em; letter-spacing: 2px; margin-bottom: 10px; font-weight: bold; }
-    .category-btn { display: inline-block; padding: 8px 15px; background: #1a1a1a; border: 1px solid #333; border-radius: 25px; color: #999; font-size: 0.85em; margin: 3px; text-decoration: none; cursor: pointer; }
-    .category-btn:hover { background: #c9a961; color: #0a0a0a; }
-    .message { margin: 15px 0; padding: 15px; border-radius: 10px; }
-    .user-message { background: rgba(201, 169, 97, 0.1); border-left: 4px solid #c9a961; }
-    .bot-message { background: rgba(100, 150, 200, 0.1); border-left: 4px solid #6496c8; }
-    .loading { text-align: center; padding: 10px; color: #666; }
-    .sources { margin-top: 15px; padding-top: 10px; border-top: 1px solid #333; }
-    .sources-title { color: #888; font-size: 0.8em; margin-bottom: 8px; }
-    .source-link { display: inline-block; margin: 3px 8px 3px 0; color: #c9a961; font-size: 0.85em; }
-</style>
+ </style>
+
 </head>
+
 <body>
-<nav class="nav">
+
+ <nav class="nav">
 
  <a href="index.html" class="nav-logo">focusChrist</a>
 
@@ -902,11 +880,43 @@
  </div>
 
  </nav>
-<section class="hero">
+
+ <div class="banner">
+
+ <div class="banner-bg"></div>
+
+ <div class="banner-overlay"></div>
+
+ <a href="pioneer art.png" target="_blank" class="banner-link"></a>
+
+ <div class="banner-content"></div>
+
+ </div>
+
+ <script>
+ function toggleMenu() {
+   var menu = document.getElementById('hamburgerMenu');
+   menu.classList.toggle('show');
+ }
+
+ document.addEventListener('click', function(e) {
+   var menu = document.getElementById('hamburgerMenu');
+   var hamburger = document.querySelector('.hamburger');
+   if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+     menu.classList.remove('show');
+   }
+ });
+</script>
+
+ 
+
+ <!-- Hero -->
+
+ <section class="hero">
 
  <div class="hero-bg"></div>
 
- <div class="hero-content" style="display:none;">
+ <div class="hero-content">
 
  <h1>MORMON PIONEERS</h1>
 
@@ -914,42 +924,355 @@
 
  </div>
 
- </section
-    <!-- Q&A Section -->
-    <section class="qa-section">
-        <div class="qa-container">
-            <div class="chat-box" id="chatBox">
-                <div class="welcome">
-                    <h3>Ask About Pioneers</h3>
-                    <p>Ask any question about Mormon pioneers.<br>Type your question below or click a topic.</p>
-                </div>
-            </div>
-            <div class="input-area">
-                <input type="text" id="userInput" placeholder="Ask your question here..." onkeypress="handleKeyPress(event)">
-                <button onclick="sendMessage()" id="sendBtn">Ask</button>
-            </div>
-            <div class="scripture-categories">
-                <div class="category-row">
-                    <div class="category-title">PIONEER TOPICS</div>
-                </div>
-                <div class="category-row">
-                    <a href="#" class="category-btn" onclick="askTopic('Exodus from Nauvoo')">🏃 Exodus from Nauvoo</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Winter Quarters')">❄️ Winter Quarters</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Handcart Companies')">🛒 Handcart Companies</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Brigham Young')">👤 Brigham Young</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Salt Lake Valley')">🏔️ Salt Lake Valley</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Pioneer Life')">👨‍👩‍👧 Pioneer Life</a>
-                </div>
-                <div class="category-row">
-                    <a href="#" class="category-btn" onclick="askTopic('Women Pioneers')">👩 Women Pioneers</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Pioneer Faith')">✝️ Pioneer Faith</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Pioneer Miracles')">✨ Pioneer Miracles</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Pioneer Legacy')">🏛️ Pioneer Legacy</a>
-                    <a href="#" class="category-btn" onclick="askTopic('Willie and Martin Handcart Companies')">🎒 Willie & Martin</a>
-                </div>
-            </div>
-        </div>
-    </section>
+ </section>
+
+ 
+
+ <!-- Journey Overview -->
+
+ <section class="section" style="display:none;">
+
+ <h2 class="section-title">THE JOURNEY</h2>
+
+ <div class="timeline">
+
+ <div class="timeline-item" onclick="openPioneerLink('exodus')">
+
+ <div class="timeline-date">FEBRUARY 1846</div>
+
+ <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/videos/pioneer-exodus-from-nauvoo?lang=eng" target="_blank">The Exodus Begins</a></h3>
+
+ <p class="timeline-desc">The first wagons leave Nauvoo, Illinois, as Latter-day Saints flee persecution. Over 70,000 pioneers will make the journey over the next 23 years.</p>
+
+ <span class="timeline-link-icon">?</span>
+
+ </div>
+
+ <div class="timeline-item" onclick="openPioneerLink('winterquarters')">
+
+ <div class="timeline-date">1846-1847</div>
+
+ <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng" target="_blank">Winter Quarters</a></h3>
+
+ <p class="timeline-desc">Thousands winter at Council Bluffs, Iowa (then called Winter Quarters). Some stay for years. Many die from illness and exposure.</p>
+
+ <span class="timeline-link-icon">?</span>
+
+ </div>
+
+ <div class="timeline-item" onclick="openPioneerLink('valley')">
+
+ <div class="timeline-date">JULY 21, 1847</div>
+
+ <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/videos/arrival-in-great-basin?lang=eng" target="_blank">Entering the Valley</a></h3>
+
+ <p class="timeline-desc">Brigham Young and the first company arrive in Salt Lake Valley. Young declares, "This is the right place."</p>
+
+ <span class="timeline-link-icon">?</span>
+
+ </div>
+
+ <div class="timeline-item" onclick="openPioneerLink('pioneerday')">
+
+ <div class="timeline-date">JULY 24, 1847</div>
+
+ <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/topics/pioneer-day?lang=eng" target="_blank">Pioneer Day</a></h3>
+
+ <p class="timeline-desc">The arrival is celebrated. Today, Pioneer Day is a Utah state holiday commemorating this historic journey.</p>
+
+ <span class="timeline-link-icon">?</span>
+
+ </div>
+
+ <div class="timeline-item" onclick="openPioneerLink('handcart')">
+
+ <div class="timeline-date">1856-1860</div>
+
+ <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng" target="_blank">Handcart Companies</a></h3>
+
+ <p class="timeline-desc">Over 3,000 pioneers pull handcarts across the plains. The Martin and Willie handcart companies face tragic rescues in 1856.</p>
+
+ <span class="timeline-link-icon">?</span>
+
+ </div>
+
+ </div>
+
+ </section>
+
+ 
+
+ <!-- Interactive Map -->
+
+ <section class="section" style="display:none;">
+
+ <h2 class="section-title">THE TRAIL</h2>
+
+ <div class="map-container">
+
+ <div class="map-point">
+
+ <div class="map-date">1846</div>
+
+ <div class="map-content">
+
+ <h4>Nauvoo, Illinois</h4>
+
+ <p>Starting point. The temple is completed and dedicated. Saints are forced to leave after intense persecution and an "Extermination Order" from Missouri still stands.</p>
+
+ </div>
+
+ </div>
+
+ <div class="map-point">
+
+ <div class="map-date">1846</div>
+
+ <div class="map-content">
+
+ <h4>Garden Grove, Iowa</h4>
+
+ <p>First major camp. Pioneers plant crops and build cabins to help later companies. About 500 people winter here.</p>
+
+ </div>
+
+ </div>
+
+ <div class="map-point">
+
+ <div class="map-date">Winter 1846</div>
+
+ <div class="map-content">
+
+ <h4>Council Bluffs, Iowa (Winter Quarters)</h4>
+
+ <p>Main outfitting point. Up to 4,000 Saints winter here. Many die from malaria, typhoid, and exposure. The first handcart companies depart from here.</p>
+
+ </div>
+
+ </div>
+
+ <div class="map-point">
+
+ <div class="map-date">Summer 1847</div>
+
+ <div class="map-content">
+
+ <h4>Fort Laramie, Wyoming</h4>
+
+ <p>Trading post and resupply point. Pioneers trade with fur traders and Native Americans. About 1/3 of the journey complete.</p>
+
+ </div>
+
+ </div>
+
+ <div class="map-point">
+
+ <div class="map-date">July 1847</div>
+
+ <div class="map-content">
+
+ <h4>Independence Rock, Wyoming</h4>
+
+ <p>Natural landmark. Pioneers carved names and dates on the rock. "Last chance" watering point before the mountains.</p>
+
+ </div>
+
+ </div>
+
+ <div class="map-point">
+
+ <div class="map-date">July 1847</div>
+
+ <div class="map-content">
+
+ <h4>Sweetwater River, Wyoming</h4>
+
+ <p>Dangerous river crossings. Several pioneers drown. The Devil's Gate nearby is a narrow canyon pass.</p>
+
+ </div>
+
+ </div>
+
+ <div class="map-point">
+
+ <div class="map-date">July 1847</div>
+
+ <div class="map-content">
+
+ <h4>Echo Canyon, Utah</h4>
+
+ <p>Final mountain approach to the valley. Steep walls. Engineers blow up cliffs to widen the trail.</p>
+
+ </div>
+
+ </div>
+
+ <div class="map-point">
+
+ <div class="map-date">July 21, 1847</div>
+
+ <div class="map-content">
+
+ <h4>Salt Lake Valley, Utah</h4>
+
+ <p>Destination! Desolate desert that would become a thriving settlement. Pioneers immediately start irrigation and building.</p>
+
+ </div>
+
+ </div>
+
+ </div>
+
+ </section>
+
+ 
+
+ <!-- Journal Entries -->
+
+ <section class="section" style="display:none;">
+
+ <h2 class="section-title">JOURNAL ENTRIES</h2>
+
+ <div class="journal-grid">
+
+ <div class="journal-card">
+
+ <div class="journal-date">April 14, 1847</div>
+
+ <p class="journal-text">"We have had a very cold time of it since we left Winter Quarters. The snow is quite deep and the wind blows terribly. We are now on the Sweetwater, the water is very cold. We have to cross it several times."</p>
+
+ <p class="journal-source">-- William Clayton, Pioneer Journal</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">July 21, 1847</div>
+
+ <p class="journal-text">"This morning we started very early... We traveled about 2 miles and then came in sight of the valley... The valley looks green and the mountains are covered with snow. It is a beautiful place."</p>
+
+ <p class="journal-source">-- Orson Pratt, Pioneer Journal</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">June 28, 1856</div>
+
+ <p class="journal-text">"Last night was the coldest we have had... Several of our company gave out today. Their feet are badly frozen... I feel to thank God in my soul for his mercies to us."</p>
+
+ <p class="journal-source">-- John Chislett, Martin Handcart Company</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">October 1856</div>
+
+ <p class="journal-text">"We have been obliged to lay by two days on account of the snow... There are about fifty of us that are not able to walk... I feel confident that if we had a little help we could get through."</p>
+
+ <p class="journal-source">-- Willie Handcart Company survivor</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">May 1849</div>
+
+ <p class="journal-text">"We are now on the Missouri River, about 600 miles from Winter Quarters. The weather is very pleasant... We have plenty of buffalo meat and are in good health."</p>
+
+ <p class="journal-source">-- Parley P. Pratt, Autobiography</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">July 24, 1847</div>
+
+ <p class="journal-text">"This morning we arrived in the Great Salt Lake Valley... We pitched our tents and gave thanks to God for his guiding hand. We are now in the promised land."</p>
+
+ <p class="journal-source">-- Heber C. Kimball, Pioneer Journal</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">September 1848</div>
+
+ <p class="journal-text">"The crickets have come upon our fields like locusts... but the gulls came to our rescue! It was a miracle - the gulls ate the crickets and saved our crops."</p>
+
+ <p class="journal-source"> Pioneer accounts of the 1848 cricket miracle</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">May 1852</div>
+
+ <p class="journal-text">"We have crossed the plains with our own handcart. My wife and children are weary but strong in faith. The Great Salt Lake Valley awaits us."</p>
+
+ <p class="journal-source"> British convert journal entry</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">October 1856</div>
+
+ <p class="journal-text">"The snow is deep and the cold is bitter. Many have given out. I pray we will be found by those sent to rescue us. God is with his people."</p>
+
+ <p class="journal-source"> Martin Handcart Company survivor</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">April 1847</div>
+
+ <p class="journal-text">"This day we crossed the Missouri River on the ice. The oxen broke through in places but we got all the wagons across. A hard day but we are one stage nearer to the valley."</p>
+
+ <p class="journal-source"> William A. Anderson, Pioneer Journal</p>
+
+ </div>
+
+ <div class="journal-card">
+
+ <div class="journal-date">June 1856</div>
+
+ <p class="journal-text">"Our company of 500 souls has left Florence, Nebraska. We have hand carts and are prepared to walk most of the way. The Church has provided well."</p>
+
+ <p class="journal-source"> John D. Lee, Handcart Company</p>
+
+ </div>
+
+ </div>
+
+ </section>
+
+
+
+ >
+
+ 
+
+ <footer>
+
+ <p> 2026 focusChrist. All are welcome here.</p>
+
+ </footer>
+
+ 
+
+ 
 
 </body>
+
 </html>
+
+ 
+
+ 
+
+ 
+
