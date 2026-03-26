@@ -844,7 +844,7 @@
 
 /* Desktop - move Q&A down */
 @media (min-width: 769px) {
-.qa-container { margin-top: 15px !important; }
+.qa-container { margin-top: 5px !important; }
 }
 </style>
 
@@ -1191,7 +1191,7 @@
         } catch (e) { console.error('AI error:', e); }
         return { answer: "That's a great question! We invite you to learn more by visiting the official Church website.", sources: [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}] };
     }
-    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h=(i?'<p><strong>You asked:</strong> '+t.replace(/\n/g,'<br>')+'</p>':'<p>'+t.replace(/\n/g,'<br>')+'</p>');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=c.scrollHeight}
+    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h=(i?'<p><strong>You asked:</strong> '+t.replace(/\n/g,'<br>')+'</p>':'<p>'+t.replace(/\n/g,'<br>')+'</p>');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
         if(!q)return;
