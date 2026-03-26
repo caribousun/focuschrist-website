@@ -475,7 +475,7 @@
 
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
-    function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;sendMessage()}
+    async function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;const q='Tell me about '+t;document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();addMessage(ai.answer,false,ai.sources)}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
     function findAnswer(q){
         q=q.toLowerCase();
@@ -541,7 +541,7 @@
         document.getElementById('chatBox').innerHTML='';
         conversationHistory = [];
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
-        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const r=findAnswer(q);l.remove();b.disabled=false;if(r.found){addMessage(r.answer,false,r.sources)}else{const ai=await askAI(q);addMessage(ai.answer,false,ai.sources)}
+        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();b.disabled=false;addMessage(ai.answer,false,ai.sources)
      }
     function clearChat() {
         document.getElementById('chatBox').innerHTML = '<div class="welcome"><h3>🕍 Welcome to focusChrist</h3><p>Ask any question about scripture, doctrine, or faith.<br>Type your question below or click a topic.</p><p class="welcome-sub">We answer with love - drawing from the Bible, Book of Mormon, D&C, and modern prophets.</p></div>';
