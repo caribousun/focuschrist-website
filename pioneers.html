@@ -526,6 +526,24 @@
 
  border-left: 4px solid #c9a961;
 
+ cursor: pointer;
+
+ transition: all 0.3s ease;
+
+ }
+
+ .map-point:hover {
+
+ background: #222;
+
+ }
+
+ .map-point.expanded {
+
+ background: #222;
+
+ border-left-color: #fff;
+
  }
 
  .map-point:last-child { margin-bottom: 0; }
@@ -1152,6 +1170,54 @@
         'templesquare': 'Temple Square Development'
     };
 
+    // Trail location topic map
+    const trailTopicMap = {
+        'nauvoo': 'Nauvoo Illinois',
+        'garden-grove': 'Garden Grove Iowa',
+        'council-bluffs': 'Council Bluffs Winter Quarters',
+        'fort-laramie': 'Fort Laramie',
+        'independence-rock': 'Independence Rock',
+        'devils-gate': 'Devils Gate Wyoming',
+        'sweetwater': 'Sweetwater River',
+        'echo-canyon': 'Echo Canyon Utah',
+        'salt-lake-valley': 'Salt Lake Valley'
+    };
+
+    // Expand trail point with AI response
+    async function expandTrailPoint(element, locationKey) {
+        const isExpanding = !element.classList.contains('expanded');
+        element.classList.toggle('expanded');
+        
+        const aiResponse = element.querySelector('.ai-response');
+        
+        if (isExpanding) {
+            // Expanding - show AI response
+            if (aiResponse && aiResponse.innerHTML.trim() === '') {
+                // Show loading state
+                aiResponse.style.display = 'block';
+                aiResponse.innerHTML = '<p style="color:#888;">🙏 Seeking divine guidance about ' + trailTopicMap[locationKey] + '...</p>';
+                
+                try {
+                    const answer = await askAI('Give a brief, concise answer about ' + trailTopicMap[locationKey] + ' on the Mormon pioneer trail. Keep it to 2-3 sentences.');
+                    aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + answer.answer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p><div style="text-align:center; margin-top:15px; cursor:pointer; color:#c9a961;" onclick="collapseTrailResponse(this.parentNode)">▲ Collapse</div>';
+                } catch (e) {
+                    aiResponse.innerHTML = '<p style="color:#c9a961;">Unable to load information at this time. Please try again later.</p>';
+                }
+            } else if (aiResponse) {
+                aiResponse.style.display = 'block';
+            }
+        } else {
+            // Collapsing - hide AI response
+            if (aiResponse) {
+                aiResponse.style.display = 'none';
+            }
+        }
+    }
+    
+    function collapseTrailResponse(aiResponse) {
+        aiResponse.style.display = 'none';
+    }
+
     // Expand timeline item with AI response
     async function expandTimelineItem(element, topic) {
         const isExpanding = !element.classList.contains('expanded');
@@ -1484,7 +1550,7 @@
 
  <div class="map-container">
 
- <div class="map-point">
+ <div class="map-point" onclick="expandTrailPoint(this, 'nauvoo')">
 
  <div class="map-date">1846</div>
 
@@ -1494,11 +1560,13 @@
 
  <p>Starting point. The temple is completed and dedicated. Saints are forced to leave after intense persecution and an "Extermination Order" from Missouri still stands.</p>
 
- </div>
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
 
  </div>
 
- <div class="map-point">
+ </div>
+
+ <div class="map-point" onclick="expandTrailPoint(this, 'garden-grove')">
 
  <div class="map-date">1846</div>
 
@@ -1508,11 +1576,13 @@
 
  <p>First major camp. Pioneers plant crops and build cabins to help later companies. About 500 people winter here.</p>
 
- </div>
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
 
  </div>
 
- <div class="map-point">
+ </div>
+
+ <div class="map-point" onclick="expandTrailPoint(this, 'council-bluffs')">
 
  <div class="map-date">Winter 1846</div>
 
@@ -1522,11 +1592,13 @@
 
  <p>Main outfitting point. Up to 4,000 Saints winter here. Many die from malaria, typhoid, and exposure. The first handcart companies depart from here.</p>
 
- </div>
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
 
  </div>
 
- <div class="map-point">
+ </div>
+
+ <div class="map-point" onclick="expandTrailPoint(this, 'fort-laramie')">
 
  <div class="map-date">Summer 1847</div>
 
@@ -1536,11 +1608,13 @@
 
  <p>Trading post and resupply point. Pioneers trade with fur traders and Native Americans. About 1/3 of the journey complete.</p>
 
- </div>
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
 
  </div>
 
- <div class="map-point">
+ </div>
+
+ <div class="map-point" onclick="expandTrailPoint(this, 'independence-rock')">
 
  <div class="map-date">July 1847</div>
 
@@ -1550,11 +1624,13 @@
 
  <p>Natural landmark. Pioneers carved names and dates on the rock. "Last chance" watering point before the mountains.</p>
 
- </div>
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
 
  </div>
 
- <div class="map-point">
+ </div>
+
+ <div class="map-point" onclick="expandTrailPoint(this, 'sweetwater')">
 
  <div class="map-date">July 1847</div>
 
@@ -1564,11 +1640,13 @@
 
  <p>Dangerous river crossings. Several pioneers drown. The Devil's Gate nearby is a narrow canyon pass.</p>
 
- </div>
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
 
  </div>
 
- <div class="map-point">
+ </div>
+
+ <div class="map-point" onclick="expandTrailPoint(this, 'echo-canyon')">
 
  <div class="map-date">July 1847</div>
 
@@ -1578,11 +1656,13 @@
 
  <p>Final mountain approach to the valley. Steep walls. Engineers blow up cliffs to widen the trail.</p>
 
- </div>
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
 
  </div>
 
- <div class="map-point">
+ </div>
+
+ <div class="map-point" onclick="expandTrailPoint(this, 'salt-lake-valley')">
 
  <div class="map-date">July 21, 1847</div>
 
@@ -1591,6 +1671,8 @@
  <h4>Salt Lake Valley, Utah</h4>
 
  <p>Destination! Desolate desert that would become a thriving settlement. Pioneers immediately start irrigation and building.</p>
+
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
 
  </div>
 
