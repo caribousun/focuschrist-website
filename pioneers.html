@@ -1199,6 +1199,15 @@
 
     // Expand trail point with AI response
     async function expandTrailPoint(element, locationKey) {
+        // Collapse all other expanded items first
+        document.querySelectorAll('.map-point.expanded').forEach(item => {
+            if (item !== element) {
+                item.classList.remove('expanded');
+                const resp = item.querySelector('.ai-response');
+                if (resp) resp.style.display = 'none';
+            }
+        });
+        
         const isExpanding = !element.classList.contains('expanded');
         element.classList.toggle('expanded');
         
@@ -1234,6 +1243,15 @@
 
     // Expand timeline item with AI response
     async function expandTimelineItem(element, topic) {
+        // Collapse all other expanded items first
+        document.querySelectorAll('.timeline-item.expanded').forEach(item => {
+            if (item !== element) {
+                item.classList.remove('expanded');
+                const resp = item.querySelector('.ai-response');
+                if (resp) resp.style.display = 'none';
+            }
+        });
+        
         const isExpanding = !element.classList.contains('expanded');
         element.classList.toggle('expanded');
         
