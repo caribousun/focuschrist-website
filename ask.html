@@ -475,7 +475,7 @@
 
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
-    async function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;const q='Tell me about '+t;document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();addMessage(ai.answer,false,ai.sources)}
+    async function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;const q='Tell me about '+t;document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();addMessage(ai.answer,false,ai.sources);document.getElementById('userInput').value=''}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
     function findAnswer(q){
         q=q.toLowerCase();
