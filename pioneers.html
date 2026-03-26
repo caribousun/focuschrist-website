@@ -21,16 +21,26 @@
  /* Navigation */
 
  .nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 25px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
-        }
+
+ position: fixed;
+
+ top: 0;
+
+ width: 100%;
+
+ padding: 25px 40px;
+
+ display: flex;
+
+ justify-content: space-between;
+
+ align-items: center;
+
+ z-index: 100;
+
+ background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+
+ }
 
  .nav-logo {
 
@@ -58,8 +68,9 @@
 
  .hamburger-wrap { position: relative; }
 
- .hamburger { cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; padding: 10px; margin: -10px; }
-        .hamburger::before { content: ""; display: block; width: 20px; height: 2px; backshadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961; }
+ .hamburger { cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; }
+
+ .hamburger::before { content: ""; display: block; width: 20px; height: 2px; background: #c9a961; margin: 5px 0; box-shadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961; }
 
  .hamburger-menu { 
 
@@ -119,7 +130,7 @@
 
  align-items: center;
 
- justify-content: flex-start; gap: 10px; width: 100%;
+ justify-content: space-between;
 
  overflow: hidden;
 
@@ -195,10 +206,7 @@
 
  .hero-content { position: relative; z-index: 10; text-align: center; padding: 10px; }
 
- .hero h1 { }
-@media (max-width: 768px) {
-.hero h1 { text-align: center; }
-} text-align: center; 
+ .hero h1 {
 
  font-size: 2em;
 
@@ -685,10 +693,7 @@
 
  .hero { height: 25vh; min-height: 50px; }
 
- .hero h1 { }
-@media (max-width: 768px) {
-.hero h1 { text-align: center; }
-} text-align: center;  font-size: 1.8em; letter-spacing: 5px; }
+ .hero h1 { font-size: 1.8em; letter-spacing: 5px; }
 
  .hero-subtitle { font-size: 0.9em; letter-spacing: 4px; }
 
@@ -721,7 +726,7 @@
 
  footer { padding: 20px 15px; }
 
- .nav { padding: 15px 20px; justify-content: flex-start; gap: 10px; width: 100%; position: relative; }
+ .nav { padding: 15px 20px; justify-content: space-between; position: relative; }
 
  .nav-links { display: none; }
 
@@ -818,23 +823,17 @@
     .input-area input { flex: 1; padding: 15px; background: #1a1a1a; border: 2px solid #333; border-radius: 50px; color: #fff; font-size: 1em; }
     .input-area input:focus { border-color: #c9a961; outline: none; }
     .input-area button { padding: 15px 30px; background: linear-gradient(135deg, #c9a961, #8b7355); border: none; border-radius: 50px; color: #0a0a0a; font-weight: bold; cursor: pointer; }
-    .category-row { margin-bottom: 5px; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; width: 100%; } .category-btn { width: 45%; }
-
+    .category-row { margin-bottom: 5px; }
     .category-title { color: #c9a961; font-size: 0.9em; letter-spacing: 2px; margin-bottom: 10px; font-weight: bold; }
-    .category-btn { flex: 0 0 auto; display: inline-block; padding: 8px 15px; background: #1a1a1a; border: 1px solid #333; border-radius: 25px; color: #999; font-size: 0.85em; margin: 3px; text-decoration: none; cursor: pointer; }
+    .category-btn { display: inline-block; padding: 8px 15px; background: #1a1a1a; border: 1px solid #333; border-radius: 25px; color: #999; font-size: 0.85em; margin: 3px; text-decoration: none; cursor: pointer; }
     .category-btn:hover { background: #c9a961; color: #0a0a0a; }
     .message { margin: 15px 0; padding: 15px; border-radius: 10px; }
     .user-message { background: rgba(201, 169, 97, 0.1); border-left: 4px solid #c9a961; }
-    .bot-message { background: rgba(100, 150, 200, 0.1); border-left: 4px solid #6496c8; padding: 15px; line-height: 1.6; }
+    .bot-message { background: rgba(100, 150, 200, 0.1); border-left: 4px solid #6496c8; }
     .loading { text-align: center; padding: 10px; color: #666; }
     .sources { margin-top: 15px; padding-top: 10px; border-top: 1px solid #333; }
     .sources-title { color: #888; font-size: 0.8em; margin-bottom: 8px; }
     .source-link { display: inline-block; margin: 3px 8px 3px 0; color: #c9a961; font-size: 0.85em; }
-
-/* Desktop - move Q&A down */
-@media (min-width: 769px) {
-.qa-container { margin-top: 5px !important; }
-}
 </style>
 
 </head>
@@ -842,37 +841,68 @@
 <body>
 
  <nav class="nav">
-        <a href="index.html" class="nav-logo">focusChrist</a>
-        <div class="nav-links">
-            <a href="index.html" class="active">HOME</a>
-            <a href="ask.html">ASK</a>
-            <a href="pioneers.html">PIONEERS</a>
-            <a href="art.html">ART</a>
-            <a href="about.html">ABOUT</a>
-        </div>
-        <div class="hamburger-wrap">
-            <span class="hamburger" onclick="toggleMenu()"></span>
-            <div class="hamburger-menu" id="hamburgerMenu">
-                <a href="index.html">HOME</a>
-                <a href="ask.html">ASK</a>
-                <a href="pioneers.html">PIONEERS</a>
-                <a href="art.html">ART</a>
-                <a href="about.html">ABOUT</a>
+
+ <a href="index.html" class="nav-logo">focusChrist</a>
+
+ <div class="nav-links">
+
+ <a href="index.html">HOME</a>
+
+ <a href="ask.html">ASK</a>
+
+ <a href="pioneers.html" class="active">PIONEERS</a>
+
+ <a href="art.html">ART</a>
+
+ <a href="about.html">ABOUT</a>
+
+ </div>
+
+ <div class="hamburger-wrap">
+
+ <span class="hamburger" onclick="toggleMenu()"></span>
+
+ <div class="hamburger-menu" id="hamburgerMenu">
+
+ <a href="index.html">HOME</a>
+
+ <a href="ask.html">ASK</a>
+
+ <a href="pioneers.html">PIONEERS</a>
+
+ <a href="about.html">ABOUT</a>
+
+ <a href="art.html">ART</a>
+
+ <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
+
+ <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank">Church Website</a>
+
+ <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank">Gospel Library</a>
+
+ <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank">Come Follow Me</a>
+
+ <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank">Temples</a>
+
+ <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank">Church History</a>
+
+ <a href="https://scriptures.byu.edu/" target="_blank">Citation Index</a>
+
+ <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank">All Resources</a>
+
                 <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
-                <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank">Church Website</a>
-                <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank">Gospel Library</a>
-                <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank">Come Follow Me</a>
-                <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank">Temples</a>
-                <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank">Church History</a>
-                <a href="https://scriptures.byu.edu/" target="_blank">Citation Index</a>
-                <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank">All Resources</a>
-                <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
+
                 <div style="color: #c9a961; font-size: 0.8em; padding: 8px 15px 4px;">YouTube</div>
+
                 <a href="https://www.youtube.com/@theRisen636" target="_blank">@theRisen636</a>
 
-            </div>
-        </div>
-    </nav>
+
+
+ </div>
+
+ </div>
+
+ </nav>
 
  <div class="banner">
 
@@ -1149,7 +1179,7 @@
         } catch (e) { console.error('AI error:', e); }
         return { answer: "That's a great question! We invite you to learn more by visiting the official Church website.", sources: [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}] };
     }
-    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h=(i?'<p><strong>You asked:</strong> '+t.replace(/\n/g,'<br>')+'</p>':'<p>'+t.replace(/\n/g,'<br>')+'</p>');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
+    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h=(i?'<p><strong>You asked:</strong> '+t+'</p>':'<p>'+t+'</p>');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=c.scrollHeight}
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
         if(!q)return;
