@@ -1157,8 +1157,10 @@
         const isExpanding = !element.classList.contains('expanded');
         element.classList.toggle('expanded');
         
+        const aiResponse = element.querySelector('.ai-response');
+        
         if (isExpanding) {
-            const aiResponse = element.querySelector('.ai-response');
+            // Expanding - show AI response
             if (aiResponse && aiResponse.innerHTML.trim() === '') {
                 // Show loading state
                 aiResponse.style.display = 'block';
@@ -1166,14 +1168,23 @@
                 
                 try {
                     const answer = await askAI('Tell me about ' + topicMap[topic] + ' in the Mormon pioneer history');
-                    aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + answer.answer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p>';
+                    aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + answer.answer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p><div style="text-align:center; margin-top:15px; cursor:pointer; color:#c9a961;" onclick="collapseAIResponse(this.parentNode)">▲ Collapse AI Response</div>';
                 } catch (e) {
                     aiResponse.innerHTML = '<p style="color:#c9a961;">Unable to load information at this time. Please try again later.</p>';
                 }
             } else if (aiResponse) {
                 aiResponse.style.display = 'block';
             }
+        } else {
+            // Collapsing - hide AI response
+            if (aiResponse) {
+                aiResponse.style.display = 'none';
+            }
         }
+    }
+    
+    function collapseAIResponse(aiResponse) {
+        aiResponse.style.display = 'none';
     }
 
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
