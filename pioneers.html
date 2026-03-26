@@ -832,7 +832,7 @@
     .input-area { display: flex; gap: 10px; margin-bottom: 30px; }
     .input-area input { flex: 1; padding: 15px; background: #1a1a1a; border: 2px solid #333; border-radius: 50px; color: #fff; font-size: 1em; }
     .input-area input:focus { border-color: #c9a961; outline: none; }
-    .input-area button { padding: 15px 30px; background: linear-gradient(135deg, #c9a961, #8b7355); border: none; border-radius: 50px; color: #0a0a0a; font-weight: bold; cursor: pointer; }
+    .input-area button { padding: 15px 30px; background: #c9a961; border: none; border-radius: 30px; color: #0a0a0a; font-weight: bold; cursor: pointer; }
     .category-row { margin-bottom: 5px; }
     .category-title { color: #c9a961; font-size: 0.9em; letter-spacing: 2px; margin-bottom: 10px; font-weight: bold; }
     .category-btn { display: inline-block; padding: 8px 15px; background: #1a1a1a; border: 1px solid #333; border-radius: 25px; color: #999; font-size: 0.85em; margin: 3px; text-decoration: none; cursor: pointer; }
@@ -1369,8 +1369,8 @@
             </div>
             <div class="input-area">
                 <input type="text" id="userInput" placeholder="Ask your question here..." onkeypress="handleKeyPress(event)">
-                <button onclick="sendMessage()" id="sendBtn" style="padding: 10px 20px; font-size: 0.9em;">Ask</button>
-                <button onclick="clearChat()" id="clearBtn" style="padding: 10px 15px; background: #333; border: none; border-radius: 50px; color: #c9a961; font-weight: bold; cursor: pointer; font-size: 0.9em;">🗑️ Clear</button>
+                <button onclick="sendMessage()" id="sendBtn" style="border: none; border-radius: 30px; background: #c9a961; color: #0a0a0a; font-weight: bold; cursor: pointer;">Ask</button>
+                <button onclick="clearChat()" id="clearBtn" style="border: none; border-radius: 30px; background: #c9a961; color: #0a0a0a; font-weight: bold; cursor: pointer;">🗑️ Clear</button>
             </div>
             <div class="scripture-categories">
                 <div class="category-row">
