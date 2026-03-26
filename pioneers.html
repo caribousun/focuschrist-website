@@ -773,10 +773,6 @@
 
  .map-point { flex-direction: column; }
 
- .input-area { flex-direction: column; }
-
- .input-area button { width: 100%; }
-
  }
 
  @media (min-width: 769px) {
@@ -833,10 +829,10 @@
     .welcome h3 { color: #c9a961; font-size: 1.8em; margin-bottom: 10px; }
     .welcome p { color: #aaa; line-height: 1.6; }
     .welcome-sub { color: #888; font-size: 0.9em; margin-top: 10px; font-style: italic; }
-    .input-area { display: flex; gap: 10px; margin-bottom: 30px; }
+    .input-area { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }
     .input-area input { flex: 1; padding: 15px; background: #1a1a1a; border: 2px solid #333; border-radius: 50px; color: #fff; font-size: 1em; }
     .input-area input:focus { border-color: #c9a961; outline: none; }
-    .input-area button { padding: 15px 30px; background: #c9a961; border: none; border-radius: 30px; color: #0a0a0a; font-weight: bold; cursor: pointer; }
+    .input-area button { padding: 15px 30px; background: #c9a961; border: none; border-radius: 30px; color: #0a0a0a; font-weight: bold; cursor: pointer; width: 100%; }
     .category-row { margin-bottom: 5px; }
     .category-title { color: #c9a961; font-size: 0.9em; letter-spacing: 2px; margin-bottom: 10px; font-weight: bold; }
     .category-btn { display: inline-block; padding: 8px 15px; background: #1a1a1a; border: 1px solid #333; border-radius: 25px; color: #999; font-size: 0.85em; margin: 3px; text-decoration: none; cursor: pointer; }
