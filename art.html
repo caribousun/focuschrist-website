@@ -46,19 +46,22 @@
         
         .banner-content {
             position: absolute;
-            bottom: 20px;
-            left: 0;
-            width: 100%;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
             text-align: center;
+            width: 100%;
             z-index: 5;
         }
         
         .banner-title {
-            font-size: 2.5em;
-            font-family: 'Times New Roman', serif;
-            letter-spacing: 8px;
             color: #c9a961;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            font-size: 1.8em;
+            letter-spacing: 5px;
+            font-family: 'Times New Roman', serif;
+            text-transform: uppercase;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
         }
         
         .banner-link {
@@ -265,7 +268,7 @@
         
         @media (max-width: 768px) {
             .banner { height: 200px; }
-            .banner-title { font-size: 1.8em; }
+            .banner-title { font-size: 1.4em; letter-spacing: 4px; }
             .nav { padding: 15px 20px; justify-content: space-between; position: relative; }
             .nav-links { display: none; }
             .hamburger-wrap { display: block; position: relative; }
@@ -342,6 +345,7 @@
         <div class="banner-overlay"></div>
         <a href="Jesus.png" target="_blank" class="banner-link"></a>
         <div class="banner-content">
+            <h1 class="banner-title">ENJOY THE ART</h1>
         </div>
     </div>
     <script>
