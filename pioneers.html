@@ -1141,6 +1141,11 @@
         'word of wisdom': { answer: "The Word of Wisdom is a health law given in D&C 89. It instructs Latter-day Saints to: (1) Not drink alcohol, tobacco, coffee, or tea; (2) Not use illegal drugs; (3) Eat meat sparingly; (4) Eat grains, fruits, and vegetables. The 'very hot' drinks mentioned were coffee and tea. The Word of Wisdom was given 'not by command' but by revelation with promise - health, wisdom, and protection. It is now a requirement for temple attendance and missionary service, though Church leaders emphasize it is about personal revelation and spiritual health, not legalism.", sources: [{text:'📜 D&C 89',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89'},{text:'📜 For the Strength of Youth — Physical Health',url:'https://www.churchofjesuschrist.org/study/manual/for-the-strength-of-youth/physical-health'}] },
         'tithing': { answer: "Tithing is one of the oldest biblical laws - giving one-tenth of your increase to the Lord. In modern revelation, members give 10% of their 'interest income.' The Lord promised: 'Bring ye all the tithes into the storehouse... that there may be meat in mine house' (Malachi 3:10, quoted in D&C 119). Tithing is a freewill offering - the Church cannot compel payment. However, it is a requirement for a temple recommend. The funds are used to build temples, meetinghouses, run programs, support missionaries, and aid the poor worldwide. President Henry D. Taylor taught: 'I promise that as you pay your tithing, you will receive more blessings than you can understand.'", sources: [{text:'📜 D&C 119',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119'},{text:'📜 Malachi 3:10',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/mal/3.10'}] }
     };
+
+    // Conversation history for contextual AI responses
+    let conversationHistory = [];
+    const MAX_CONVERSATION_LENGTH = 8;
+
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
     function askTopic(t){const q=t;const i=document.getElementById('userInput');i.value='';document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);askAI(q).then(r=>{l.remove();addMessage(r.answer,false,r.sources)})}
@@ -1158,23 +1163,43 @@
         if(bestMatch) return {answer:bestMatch.answer,sources:bestMatch.sources,found:true};
         return {answer:"That's a great question! We invite you to learn more by visiting the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'},{text:'🕍 Gospel Topics',url:'https://www.churchofjesuschrist.org/study/topics'}],found:false}}
     async function askAI(query) {
+        // Build messages array with system prompt + conversation history + new query
+        const systemPrompt = { role: 'system', content: 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and general religious topics. Be respectful to all faiths. Do not answer inappropriate, offensive, or derogatory questions. Keep answers focused on our faith with love and respect for others. Always keep Jesus Christ and His gospel as the foundation. Never be rude about other religions.' };
+        
+        // Build messages: system + history + new query
+        const messages = [systemPrompt];
+        
+        // Add up to MAX_CONVERSATION_LENGTH pairs from conversationHistory
+        const historyLimit = Math.min(conversationHistory.length, MAX_CONVERSATION_LENGTH);
+        for (let i = 0; i < historyLimit; i++) {
+            messages.push(conversationHistory[i].question);
+            messages.push(conversationHistory[i].answer);
+        }
+        
+        // Add the new user query
+        messages.push({ role: 'user', content: query });
+        
         try {
             const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer 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' },
                 body: JSON.stringify({
                     model: 'llama-3.1-8b-instant',
-                    messages: [
-                        { role: 'system', content: 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and general religious topics. Be respectful to all faiths. Do not answer inappropriate, offensive, or derogatory questions. Keep answers focused on our faith with love and respect for others. Always keep Jesus Christ and His gospel as the foundation. Never be rude about other religions.' },
-                        { role: 'user', content: query }
-                    ],
+                    messages: messages,
                     temperature: 0.7,
                     max_tokens: 500
                 })
             });
             const data = await response.json();
             if (data.choices && data.choices[0]) {
-                return { answer: data.choices[0].message.content, sources: [] };
+                const answer = data.choices[0].message.content;
+                // Add Q&A to conversation history
+                conversationHistory.push({ question: { role: 'user', content: query }, answer: { role: 'assistant', content: answer } });
+                // Trim history if needed
+                while (conversationHistory.length > MAX_CONVERSATION_LENGTH * 2) {
+                    conversationHistory.shift();
+                }
+                return { answer: answer, sources: [] };
             }
         } catch (e) { console.error('AI error:', e); }
         return { answer: "That's a great question! We invite you to learn more by visiting the official Church website.", sources: [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}] };
@@ -1188,6 +1213,11 @@
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
         b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);l.remove();b.disabled=false;const ai = await askAI(q);addMessage(ai.answer,false,ai.sources)
      }
+    function clearChat() {
+        conversationHistory = [];
+        document.getElementById('chatBox').innerHTML = '<div class="welcome"><h3>Ask About Pioneers</h3><p>Ask any question about Mormon pioneers.<br>Type your question below or click a topic.</p></div>';
+        document.getElementById('userInput').value = '';
+    }
 </script></script>
 
  
@@ -1219,6 +1249,7 @@
             <div class="input-area">
                 <input type="text" id="userInput" placeholder="Ask your question here..." onkeypress="handleKeyPress(event)">
                 <button onclick="sendMessage()" id="sendBtn">Ask</button>
+                <button onclick="clearChat()" id="clearBtn" style="padding: 15px 20px; background: #333; border: none; border-radius: 50px; color: #c9a961; font-weight: bold; cursor: pointer;">🗑️ Clear</button>
             </div>
             <div class="scripture-categories">
                 <div class="category-row">
