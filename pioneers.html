@@ -206,7 +206,10 @@
 
  .hero-content { position: relative; z-index: 10; text-align: center; padding: 10px; }
 
- .hero h1 {
+ .hero h1 { }
+@media (max-width: 768px) {
+.hero h1 { text-align: center; }
+} text-align: center; 
 
  font-size: 2em;
 
@@ -693,7 +696,10 @@
 
  .hero { height: 25vh; min-height: 50px; }
 
- .hero h1 { font-size: 1.8em; letter-spacing: 5px; }
+ .hero h1 { }
+@media (max-width: 768px) {
+.hero h1 { text-align: center; }
+} text-align: center;  font-size: 1.8em; letter-spacing: 5px; }
 
  .hero-subtitle { font-size: 0.9em; letter-spacing: 4px; }
 
@@ -823,11 +829,8 @@
     .input-area input { flex: 1; padding: 15px; background: #1a1a1a; border: 2px solid #333; border-radius: 50px; color: #fff; font-size: 1em; }
     .input-area input:focus { border-color: #c9a961; outline: none; }
     .input-area button { padding: 15px 30px; background: linear-gradient(135deg, #c9a961, #8b7355); border: none; border-radius: 50px; color: #0a0a0a; font-weight: bold; cursor: pointer; }
-    .category-row { margin-bottom: 5px; }
-@media (max-width: 768px) {
-.category-row { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; width: 100%; }
-.category-btn { width: 45%; }
-}
+    .category-row { margin-bottom: 5px; display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 10px; width: 100%; } .category-btn { width: 45%; }
+
     .category-title { color: #c9a961; font-size: 0.9em; letter-spacing: 2px; margin-bottom: 10px; font-weight: bold; }
     .category-btn { flex: 0 0 auto; display: inline-block; padding: 8px 15px; background: #1a1a1a; border: 1px solid #333; border-radius: 25px; color: #999; font-size: 0.85em; margin: 3px; text-decoration: none; cursor: pointer; }
     .category-btn:hover { background: #c9a961; color: #0a0a0a; }
