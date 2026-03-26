@@ -815,7 +815,19 @@
     /* Q&A Section Styles */
     .qa-section { background: #111; padding: 10px 20px; }
     .qa-container { max-width: 900px; margin: 0 auto; margin-top: -60px; }
-    .chat-box { background: #1a1a1a; border-radius: 15px; padding: 10px; min-height: 100px; max-height: 500px; overflow-y: auto; margin-bottom: 20px; }
+    
+/* Desktop only - show full pioneer art */
+@media (min-width: 769px) {
+    .hero {
+        height: 500px !important;
+        min-height: 500px !important;
+    }
+    .hero-content {
+        top: 35% !important;
+    }
+}
+
+.chat-box { background: #1a1a1a; border-radius: 15px; padding: 10px; min-height: 100px; max-height: 500px; overflow-y: auto; margin-bottom: 20px; }
     .welcome h3 { color: #c9a961; font-size: 1.8em; margin-bottom: 10px; }
     .welcome p { color: #aaa; line-height: 1.6; }
     .welcome-sub { color: #888; font-size: 0.9em; margin-top: 10px; font-style: italic; }
