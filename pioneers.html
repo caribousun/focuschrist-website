@@ -1146,6 +1146,39 @@
     let conversationHistory = [];
     const MAX_CONVERSATION_LENGTH = 8;
 
+    // Topic mapping for timeline items
+    const topicMap = {
+        'exodus': 'The Exodus from Nauvoo 1846',
+        'winterquarters': 'Winter Quarters 1846-1847',
+        'valley': 'Brigham Young entering Salt Lake Valley 1847',
+        'pioneerday': 'Pioneer Day July 24 1847',
+        'handcart': 'Mormon handcart companies 1856-1860'
+    };
+
+    // Expand timeline item with AI response
+    async function expandTimelineItem(element, topic) {
+        const isExpanding = !element.classList.contains('expanded');
+        element.classList.toggle('expanded');
+        
+        if (isExpanding) {
+            const aiResponse = element.querySelector('.ai-response');
+            if (aiResponse && aiResponse.innerHTML.trim() === '') {
+                // Show loading state
+                aiResponse.style.display = 'block';
+                aiResponse.innerHTML = '<p style="color:#888;">🙏 Seeking divine guidance about ' + topicMap[topic] + '...</p>';
+                
+                try {
+                    const answer = await askAI('Tell me about ' + topicMap[topic] + ' in the Mormon pioneer history');
+                    aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + answer.answer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p>';
+                } catch (e) {
+                    aiResponse.innerHTML = '<p style="color:#c9a961;">Unable to load information at this time. Please try again later.</p>';
+                }
+            } else if (aiResponse) {
+                aiResponse.style.display = 'block';
+            }
+        }
+    }
+
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
     function askTopic(t){const q=t;const i=document.getElementById('userInput');i.value='';document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);askAI(q).then(r=>{l.remove();addMessage(r.answer,false,r.sources)})}
@@ -1289,61 +1322,91 @@
 
  <div class="timeline">
 
- <div class="timeline-item" onclick="openPioneerLink('exodus')">
+ <div class="timeline-item" onclick="expandTimelineItem(this, 'exodus')">
 
  <div class="timeline-date">FEBRUARY 1846</div>
+
+ <div class="timeline-details">
 
  <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/videos/pioneer-exodus-from-nauvoo?lang=eng" target="_blank">The Exodus Begins</a></h3>
 
  <p class="timeline-desc">The first wagons leave Nauvoo, Illinois, as Latter-day Saints flee persecution. Over 70,000 pioneers will make the journey over the next 23 years.</p>
 
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
+
+ </div>
+
  <span class="timeline-link-icon">?</span>
 
  </div>
 
- <div class="timeline-item" onclick="openPioneerLink('winterquarters')">
+ <div class="timeline-item" onclick="expandTimelineItem(this, 'winterquarters')">
 
  <div class="timeline-date">1846-1847</div>
+
+ <div class="timeline-details">
 
  <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng" target="_blank">Winter Quarters</a></h3>
 
  <p class="timeline-desc">Thousands winter at Council Bluffs, Iowa (then called Winter Quarters). Some stay for years. Many die from illness and exposure.</p>
 
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
+
+ </div>
+
  <span class="timeline-link-icon">?</span>
 
  </div>
 
- <div class="timeline-item" onclick="openPioneerLink('valley')">
+ <div class="timeline-item" onclick="expandTimelineItem(this, 'valley')">
 
  <div class="timeline-date">JULY 21, 1847</div>
+
+ <div class="timeline-details">
 
  <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/videos/arrival-in-great-basin?lang=eng" target="_blank">Entering the Valley</a></h3>
 
  <p class="timeline-desc">Brigham Young and the first company arrive in Salt Lake Valley. Young declares, "This is the right place."</p>
 
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
+
+ </div>
+
  <span class="timeline-link-icon">?</span>
 
  </div>
 
- <div class="timeline-item" onclick="openPioneerLink('pioneerday')">
+ <div class="timeline-item" onclick="expandTimelineItem(this, 'pioneerday')">
 
  <div class="timeline-date">JULY 24, 1847</div>
+
+ <div class="timeline-details">
 
  <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/topics/pioneer-day?lang=eng" target="_blank">Pioneer Day</a></h3>
 
  <p class="timeline-desc">The arrival is celebrated. Today, Pioneer Day is a Utah state holiday commemorating this historic journey.</p>
 
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
+
+ </div>
+
  <span class="timeline-link-icon">?</span>
 
  </div>
 
- <div class="timeline-item" onclick="openPioneerLink('handcart')">
+ <div class="timeline-item" onclick="expandTimelineItem(this, 'handcart')">
 
  <div class="timeline-date">1856-1860</div>
+
+ <div class="timeline-details">
 
  <h3 class="timeline-title"><a href="https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng" target="_blank">Handcart Companies</a></h3>
 
  <p class="timeline-desc">Over 3,000 pioneers pull handcarts across the plains. The Martin and Willie handcart companies face tragic rescues in 1856.</p>
+
+ <div class="ai-response" style="display:none; margin-top:15px; padding:15px; background:#1a1a1a; border-left:3px solid #c9a961; border-radius:8px;"></div>
+
+ </div>
 
  <span class="timeline-link-icon">?</span>
 
