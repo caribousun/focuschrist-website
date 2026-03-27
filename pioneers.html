@@ -428,15 +428,6 @@
     /* opacity: 1; */
  }
 
- /* Also handle timeline-content for Willie & Martin section */
- .timeline-content {
-    display: none;
- }
- 
- .timeline-item.expanded .timeline-content {
-    display: block;
- }
-
  .timeline-story {
 
  background: #151515;
@@ -500,33 +491,6 @@
  }
 
  
-
- /* Expanded Content (AI Response) */
-.ai-response {
-    display: none !important;
-    margin-top: 15px;
-    padding: 15px;
-    background: #1a1a1a;
-    border-left: 3px solid #c9a961;
-    border-radius: 8px;
-}
-
-.timeline-item.expanded .ai-response,
-.map-point.expanded .ai-response {
-    display: block !important;
-}
-
-.ai-response p {
-    color: #ccc;
-    line-height: 1.8;
-}
-
-.ai-response .collapse-btn {
-    text-align: center;
-    margin-top: 15px;
-    cursor: pointer;
-    color: #c9a961;
-}
 
  /* Map Points */
 
@@ -808,39 +772,6 @@
 
 
  .map-point { flex-direction: column; }
-
- /* Mobile: Consistent expanded content styling */
- .timeline-item.expanded .timeline-details,
- .timeline-item.expanded .timeline-content,
- .map-point.expanded .ai-response {
-     background: #1a1a1a;
-     border-left: 3px solid #c9a961;
-     border-radius: 0 8px 8px 0;
-     padding: 12px;
-     margin-top: 12px;
- }
-
- .timeline-item.expanded .timeline-title,
- .map-point.expanded h4 {
-     color: #c9a961;
- }
-
- .timeline-item.expanded .timeline-desc,
- .timeline-item.expanded p,
- .map-point.expanded p {
-     color: #ccc;
-     line-height: 1.7;
-     font-size: 0.9em;
- }
-
- .timeline-item.expanded .ai-response {
-     padding: 12px;
-     background: #151515;
- }
-
- .timeline-item.expanded .ai-response p {
-     color: #ccc;
- }
 
  }
 
