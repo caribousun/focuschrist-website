@@ -805,6 +805,14 @@
 
  .hamburger-menu a { color: #c9a961; font-size: 0.9em; }
 
+ /* Desktop input area - side by side like ask page */
+ .input-area { display: flex; flex-direction: row; gap: 15px; margin-bottom: 30px; }
+ .input-area input { flex: 1; padding: 15px 20px; border: 1px solid #c9a961; border-radius: 30px; background: rgba(255,255,255,0.05); color: #fff; font-size: 1em; }
+ .input-area input::placeholder { color: #666; }
+ .input-area input:focus { border-color: #e0c070; outline: none; background: rgba(255,255,255,0.1); }
+ .input-area button { padding: 15px 30px; background: #c9a961; border: none; border-radius: 30px; color: #0a0a0a; font-weight: bold; cursor: pointer; width: auto; }
+ .input-area button:hover { background: #b89951; }
+
  }
 
 
