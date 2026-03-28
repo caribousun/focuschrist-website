@@ -545,9 +545,9 @@
             // Add the current user question
             messages.push({ role: 'user', content: query });
             
-            const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+            const response = await fetch('https://focuschrist-groq-proxy.caribousun.workers.dev', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer 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' },
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     model: 'llama-3.1-8b-instant',
                     messages: messages,
