@@ -390,6 +390,7 @@
         currentIndex = index;
         updateLightbox();
         document.getElementById('lightbox').classList.add('active');
+        history.pushState({lightbox: true}, '', '#lightbox');
     }
     
     function closeLightbox(event) {
@@ -397,7 +398,17 @@
             event.stopPropagation();
         }
         document.getElementById('lightbox').classList.remove('active');
+        if (history.state && history.state.lightbox) {
+            history.back();
+        }
     }
+    
+    window.addEventListener('popstate', function(event) {
+        var lightbox = document.getElementById('lightbox');
+        if (lightbox.classList.contains('active')) {
+            lightbox.classList.remove('active');
+        }
+    });
     
     function changeImage(direction) {
         currentIndex += direction;
@@ -555,6 +566,7 @@
             currentIndex = index;
             updateLightbox();
             document.getElementById('lightbox').classList.add('active');
+            history.pushState({lightbox: true}, '', '#lightbox');
         }
         
         function updateLightbox() {
@@ -595,7 +607,17 @@
         function closeLightbox(event) {
             if (event && event.target !== event.currentTarget && event.target.tagName !== 'SPAN') return;
             document.getElementById('lightbox').classList.remove('active');
+            if (history.state && history.state.lightbox) {
+                history.back();
+            }
         }
+        
+        window.addEventListener('popstate', function(event) {
+            var lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+            }
+        });
         
         // Keyboard navigation
         document.addEventListener('keydown', function(e) {
