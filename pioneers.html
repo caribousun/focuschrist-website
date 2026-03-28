@@ -282,19 +282,32 @@
 
  .timeline-item {
 
- position: relative;
-
- margin-bottom: 20px;
-
- padding-left: 40px;
-
+ display: flex;
+ align-items: flex-start;
+ gap: 20px;
+ padding: 15px;
+ margin-bottom: 10px;
+ background: #1a1a1a;
+ border-radius: 8px;
+ border-left: 4px solid #c9a961;
  cursor: pointer;
-
  transition: all 0.3s ease;
-
  }
 
- .timeline-item:hover .timeline-title a {
+ .timeline-item:hover {
+
+ background: #222;
+ transform: translateX(5px);
+ }
+
+ .timeline-item.expanded {
+
+ background: #222;
+ border-left-color: #d4b876;
+ transform: translateX(5px);
+ }
+
+ .timeline-item:hover .timeline-title {
 
  color: #c9a961;
 
@@ -338,19 +351,9 @@
 
  .timeline-item::before {
 
- content: '';
+ display: none;
 
- position: absolute;
-
- left: -34px;
-
- top: 5px;
-
- width: 16px;
-
- height: 16px;
-
- background: #c9a961;
+ }
 
  border-radius: 50%;
 
@@ -1423,9 +1426,11 @@
 
  <div class="timeline-item" onclick="expandTimelineItem(this, 'exodus')">
 
- <div class="timeline-details">
+ <div class="map-date">February 1846</div>
 
- <h3 class="timeline-title">The Exodus Begins - February 1846</h3>
+ <div class="map-content">
+
+ <h3 class="timeline-title">The Exodus Begins</h3>
 
  <p class="timeline-desc">The first wagons leave Nauvoo, Illinois, as Latter-day Saints flee persecution. Over 70,000 pioneers will make the journey over the next 23 years.</p>
 
@@ -1437,9 +1442,11 @@
 
  <div class="timeline-item" onclick="expandTimelineItem(this, 'winterquarters')">
 
- <div class="timeline-details">
+ <div class="map-date">1846-1847</div>
 
- <h3 class="timeline-title">Winter Quarters - 1846-1847</h3>
+ <div class="map-content">
+
+ <h3 class="timeline-title">Winter Quarters</h3>
 
  <p class="timeline-desc">Thousands winter at Council Bluffs, Iowa (then called Winter Quarters). Some stay for years. Many die from illness and exposure.</p>
 
