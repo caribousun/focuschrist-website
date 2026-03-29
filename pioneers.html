@@ -1315,8 +1315,7 @@
         // Add up to MAX_CONVERSATION_LENGTH pairs from conversationHistory
         const historyLimit = Math.min(conversationHistory.length, MAX_CONVERSATION_LENGTH);
         for (let i = 0; i < historyLimit; i++) {
-            messages.push(conversationHistory[i].question);
-            messages.push(conversationHistory[i].answer);
+            messages.push(conversationHistory[i]);
         }
         
         // Add the new user query
