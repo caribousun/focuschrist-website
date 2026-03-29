@@ -1238,7 +1238,7 @@
                 aiResponse.innerHTML = '<p style="color:#888;">🙏 Seeking divine guidance about ' + trailTopicMap[locationKey] + '...</p>';
                 
                 try {
-                    const answer = await askAI('The Trail: ' + trailTopicMap[locationKey] + '. Keep it to 2-3 sentences.');
+                    const answer = await askAI('The Trail: ' + trailTopicMap[locationKey]);
                     aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + answer.answer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p><div style="text-align:center; margin-top:15px; cursor:pointer; color:#c9a961;" onclick="collapseTrailResponse(this.parentNode)">▲ Collapse</div>';
                 } catch (e) {
                     aiResponse.innerHTML = '<p style="color:#c9a961;">Unable to load information at this time. Please try again later.</p>';
@@ -1282,7 +1282,7 @@
                 aiResponse.innerHTML = '<p style="color:#888;">🙏 Seeking divine guidance about ' + topicMap[topic] + '...</p>';
                 
                 try {
-                    const answer = await askAI('The Journey: ' + topicMap[topic] + '. Keep it to 2-3 sentences.');
+                    const answer = await askAI('The Journey: ' + topicMap[topic]);
                     aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + answer.answer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p><div style="text-align:center; margin-top:15px; cursor:pointer; color:#c9a961;" onclick="collapseAIResponse(this.parentNode)">▲ Collapse</div>';
                 } catch (e) {
                     aiResponse.innerHTML = '<p style="color:#c9a961;">Unable to load information at this time. Please try again later.</p>';
