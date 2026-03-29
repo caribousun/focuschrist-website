@@ -6,190 +6,56 @@
     <title>Pioneer Test - focusChrist</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background: #1a1510; color: #f5e6d3; font-family: 'Segoe UI', Tahoma, sans-serif; min-height: 100vh; }
+        body { background: #0a0a0a; color: #fff; font-family: Georgia, serif; min-height: 100vh; }
         
-        /* Navigation - Same as about page */
-        .nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            padding: 25px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-            background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
-        }
+        /* NAVIGATION - Same as about page */
+        nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(10,10,10,0.95); border-bottom: 1px solid rgba(201,169,97,0.3); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+        .nav-links { display: flex; gap: 20px; }
+        .nav-links a { color: #c9a961; text-decoration: none; font-size: 0.9em; }
+        .nav-links a:hover { color: #fff; }
         
-        .nav-logo {
-            font-size: 1.5em;
-            letter-spacing: 5px;
-            color: #c9a961;
-            text-decoration: none;
-            font-family: 'Times New Roman', serif;
-        }
-        
-        .nav-links { display: flex; gap: 40px; }
-        .nav-links a { 
-            color: #f5e6d3; 
-            text-decoration: none; 
-            font-size: 0.9em; 
-            letter-spacing: 2px;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover, .nav-links a.active { color: #c9a961; }
+        /* Hamburger Menu - Same as about page */
         .hamburger-wrap { position: relative; }
         .hamburger { cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; }
         .hamburger::before { content: ""; display: block; width: 20px; height: 2px; background: #c9a961; margin: 5px 0; box-shadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961; }
-        .hamburger-menu { 
-            display: none; 
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: rgba(0,0,0,0.95);
-            padding: 15px;
-            border-radius: 8px;
-            z-index: 1000;
-            min-width: 180px;
-            margin-top: 10px;
-        }
+        .hamburger-menu { display: none; position: absolute; top: 100%; right: 0; background: #111; border: 1px solid #c9a961; border-radius: 5px; padding: 10px; min-width: 150px; }
         .hamburger-menu.show { display: block; }
-        .hamburger-menu a { 
-            display: block;
-            color: #c9a961; 
-            padding: 4px 15px; 
-            text-decoration: none;
-            border-bottom: 1px solid rgba(201,169,97,0.2);
-        }
+        .hamburger-menu a { display: block; color: #c9a961; padding: 8px 15px; text-decoration: none; border-bottom: 1px solid rgba(201,169,97,0.2); }
         .hamburger-menu a:hover { background: rgba(201,169,97,0.1); }
-        .hamburger { display: none; cursor: pointer; font-size: 1.5em; color: #c9a961; padding: 10px; margin: -10px; }
+        .hamburger { display: none; }
         
-        /* Full-Screen Banner Background */
-        .hero {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('working banner.png');
-            background-size: cover;
-            background-position: center;
-            z-index: 1;
-        }
-        
-        /* Overlay for readability */
-        .hero-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(180deg, 
-                rgba(26,21,16,0.4) 0%, 
-                rgba(26,21,16,0.2) 50%,
-                rgba(26,21,16,0.5) 100%
-            );
-            z-index: 2;
-        }
-        
-        /* Content container - sits above the banner */
-        .content {
-            position: relative;
-            z-index: 10;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .content img {
-            max-width: 100%;
-            height: auto;
-            border: 2px solid #c9a961;
-            border-radius: 10px;
-            max-height: 80vh;
-        }
+        /* Hero/Pioneer Art Image */
+        .hero { display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 80px 20px 20px; }
+        .hero img { max-width: 100%; height: auto; border: 2px solid #c9a961; border-radius: 10px; }
         
         /* Responsive */
         @media (max-width: 768px) {
-            .nav { padding: 15px 20px; justify-content: space-between; position: relative; }
-            .hamburger-wrap { display: block; position: relative; }
+            .hamburger-wrap { display: block; }
             .hamburger { display: block; }
             .nav-links { display: none; }
-            .hamburger-menu {
-                display: none;
-                position: absolute;
-                top: 40px;
-                right: 0;
-                width: 200px;
-                background: rgba(0,0,0,0.98);
-                flex-direction: column;
-                padding: 10px;
-                gap: 8px;
-                z-index: 1000;
-            }
-            .hamburger-menu.show { display: flex; }
-            .hamburger-menu a { font-size: 0.9em; padding: 6px 15px; color: #c9a961; border-bottom: 1px solid rgba(201,169,97,0.2); }
-        }
-        @media (min-width: 769px) {
-            .nav-links { display: flex; }
-            .hamburger { display: block; }
-            .hamburger-menu { 
-                display: none; 
-                position: absolute;
-                top: 50px;
-                right: 20px;
-                background: rgba(0,0,0,0.95);
-                padding: 15px;
-                border-radius: 8px;
-                z-index: 1000;
-            }
-            .hamburger-menu.show { display: flex; flex-direction: column; gap: 10px; }
-            .hamburger-menu a { color: #c9a961; font-size: 0.9em; }
         }
     </style>
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="nav">
-        <a href="index.html" class="nav-logo">focusChrist</a>
+    <nav>
         <div class="nav-links">
             <a href="index.html">HOME</a>
             <a href="ask.html">ASK</a>
             <a href="art.html">ART</a>
-            <a href="pioneers.html">PIONEERS</a>
-            <a href="about.html">ABOUT</a>
         </div>
-            <div class="hamburger-wrap">
+        <div class="hamburger-wrap">
             <span class="hamburger" onclick="toggleMenu()"></span>
             <div class="hamburger-menu" id="hamburgerMenu">
                 <a href="index.html">HOME</a>
                 <a href="ask.html">ASK</a>
-                <a href="pioneers.html">PIONEERS</a>
-                <a href="about.html">ABOUT</a>
                 <a href="art.html">ART</a>
-                <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
-                <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank">Church Website</a>
-                <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank">Gospel Library</a>
-                <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank">Come Follow Me</a>
-                <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank">Temples</a>
-                <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank">Church History</a>
-                <a href="https://scriptures.byu.edu/" target="_blank">Citation Index</a>
-                <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank">All Resources</a>
-                <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
-                <div style="color: #c9a961; font-size: 0.8em; padding: 8px 15px 4px;">YouTube</div>
-                <a href="https://www.youtube.com/@theRisen636" target="_blank">@theRisen636</a>
-
             </div>
         </div>
     </nav>
 
-    <!-- Banner Background -->
-    <div class="hero"></div>
-    <div class="hero-overlay"></div>
-    
-    <!-- Content - sits on top of banner -->
-    <div class="content">
+    <!-- Pioneer Art Image -->
+    <div class="hero">
         <img src="pioneer art.png" alt="Pioneer Art">
     </div>
 
@@ -198,13 +64,6 @@
             var menu = document.getElementById('hamburgerMenu');
             menu.classList.toggle('show');
         }
-        document.addEventListener("click", function(event) {
-            var menu = document.getElementById("hamburgerMenu");
-            var hamburger = document.querySelector(".hamburger");
-            if (menu.classList.contains("show") && !menu.contains(event.target) && !hamburger.contains(event.target)) {
-                menu.classList.remove("show");
-            }
-        });
     </script>
 </body>
 </html>
