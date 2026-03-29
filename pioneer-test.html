@@ -331,6 +331,19 @@
             border-top: 1px solid rgba(201,169,97,0.2);
         }
 
+        .pioneer-title-section {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 40px;
+        }
+
+        .loading {
+            padding: 15px;
+            text-align: center;
+            font-style: italic;
+            color: #c9a961;
+        }
+
         @media (max-width: 768px) {
             .banner-title { font-size: 1.8em; }
             .nav { padding: 15px 20px; justify-content: space-between; position: relative; }
@@ -467,82 +480,114 @@
         }
     });
     
-    // Pioneer Q&A Functions
-    var chatHistory = [];
+    // Pioneer Q&A Functions - Local database + AI fallback
+    const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     
-    function sendMessage() {
-        var input = document.getElementById('userInput');
-        var message = input.value.trim();
-        if (!message) return;
-        
-        var chatBox = document.getElementById('chatBox');
-        
-        // Remove welcome if still there
-        var welcome = chatBox.querySelector('.welcome');
-        if (welcome) welcome.remove();
-        
-        // Add user message
-        var userMsg = document.createElement('div');
-        userMsg.className = 'user-message';
-        userMsg.textContent = message;
-        chatBox.appendChild(userMsg);
-        
-        chatHistory.push({ role: 'user', content: message });
-        input.value = '';
-        
-        // Show typing indicator
-        var typing = document.createElement('div');
-        typing.className = 'ai-message';
-        typing.id = 'typingIndicator';
-        typing.innerHTML = '<em>Pioneer Spirit is thinking...</em>';
-        chatBox.appendChild(typing);
-        chatBox.scrollTop = chatBox.scrollHeight;
-        
-        // Send to AI
-        setTimeout(function() {
-            fetch('/api/ask', {
+    function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
+    
+    // Local Q&A Database
+    const qaDatabase = {
+        'nauvoo': { answer: "Nauvoo, Illinois was the headquarters of the Church from 1839 to 1846. Under Joseph Smith's leadership, it grew from a swampy wilderness to a thriving city of 20,000. After Joseph's martyrdom in 1844, tensions with locals led to the Exodus in 1846.", sources: [{text:'📜 Church History — Nauvoo',url:'https://www.churchofjesuschrist.org/study/history/topics/nauvoo'}] },
+        'exodus from nauvoo': { answer: "The exodus from Nauvoo began in February 1846 as thousands of Latter-day Saints fled persecution. They crossed the Mississippi River on ice and began the journey west. Brigham Young led the way, declaring 'this is the right place' when they reached Salt Lake Valley in July 1847.", sources: [{text:'📜 Church History — Exiting Nauvoo',url:'https://www.churchofjesuschrist.org/study/history/topics/exodus-from-nauvoo'}] },
+        'winter quarters': { answer: "Winter Quarters (now Florence, Nebraska) was the temporary headquarters from 1846-1848. About 2,000 Church members wintered there with many dying from disease. It was a place of great hardship but also preparation for the journey west.", sources: [{text:'📜 Church History — Winter Quarters',url:'https://www.churchofjesuschrist.org/study/history/topics/winter-quarters'}] },
+        'handcart companies': { answer: "Handcart companies were a method of westward migration used from 1856-1860. Pioneers pulled handcarts loaded with supplies across the plains. The Martin and Willie companies faced tragic conditions in 1856 with many deaths.", sources: [{text:'📜 Church History — Handcart Companies',url:'https://www.churchofjesuschrist.org/study/history/topics/handcart-companies'}] },
+        'willie handcart company': { answer: "The Willie Handcart Company left in July 1856 with about 404 pioneers. They faced early snowstorms in Wyoming and about 68 members died. Brigham Young called for rescue parties when he learned of their plight.", sources: [{text:'📜 Wikipedia — Willie and Martin Handcart Companies',url:'https://en.wikipedia.org/wiki/Willie_and_Martin_handcart_companies'}] },
+        'martin handcart company': { answer: "The Martin Handcart Company left late in July 1856. About 210 people died from exposure and starvation before rescue parties arrived. They reached Salt Lake Valley on November 30, 1856.", sources: [{text:'📜 Wikipedia — Martin Handcart Company',url:'https://en.wikipedia.org/wiki/Willie_and_Martin_handcart_companies'}] },
+        'brigham young': { answer: "Brigham Young (1801-1877) was the second president of the Church. He led the Mormon exodus from Nauvoo to the Great Basin and established Salt Lake City. He is known as 'the American Moses' for leading the pioneer journey west.", sources: [{text:'📜 Church History — Brigham Young',url:'https://www.churchofjesuschrist.org/study/history/topics/brigham-young'}] },
+        'salt lake valley': { answer: "On July 24, 1847, Brigham Young and the first pioneer company entered the Salt Lake Valley. Despite initial concerns about the barren land, Young declared 'This is the right place.' It became the headquarters of the Church.", sources: [{text:'📜 Church History — Salt Lake City',url:'https://www.churchofjesuschrist.org/study/history/topics/salt-lake-city'}] },
+        'pioneer life': { answer: "Pioneer life was challenging. Typical diet included flour, dried meat, hardtack, and beans. They traveled 10-15 miles per day, facing harsh weather, disease, and difficult terrain. Women and children helped drive cattle, cook, and care for families.", sources: [{text:'📜 Church History — Pioneer Life',url:'https://www.churchofjesuschrist.org/study/history/topics/pioneer-life'}] },
+        'women pioneers': { answer: "Women pioneers played essential roles. They cooked, cared for children, made clothing, and kept families together. Many women kept journals recording the journey. Their faith and resilience were crucial to the success of the pioneer trek.", sources: [{text:'📜 Church History — Women Pioneers',url:'https://www.churchofjesuschrist.org/study/history/topics/women-pioneers'}] },
+        'pioneer faith': { answer: "Pioneer faith was remarkable. Despite hardships, pioneers trusted in God's promise to lead them to a new land. They sang hymns, prayed together, and sustained each other through the challenges of the journey.", sources: [{text:'📜 Pioneers — Church History',url:'https://www.churchofjesuschrist.org/study/history/topics/pioneers'}] },
+        'pioneer miracles': { answer: "Pioneers witnessed many miracles: quail flying into camp for food, wells appearing in the desert, and guidance through storms. These experiences strengthened their faith that God was watching over them.", sources: [{text:'📜 Pioneer Provisions',url:'https://history.churchofjesuschrist.org/landing/fleeing-illinois/pioneer-provisions'}] },
+        'pioneer legacy': { answer: "The pioneer legacy lives on in Utah and the LDS Church. Their sacrifice built communities, temples, and institutions. Pioneer Day (July 24) celebrates their arrival in Salt Lake Valley.", sources: [{text:'📜 Pioneer Day',url:'https://www.churchofjesuschrist.org/study/history/topics/pioneer-day'}] },
+        'willie and martin handcart companies': { answer: "The Willie and Martin companies were the most tragic handcart companies. In 1856, over 210 people died from winter storms in Wyoming. Their story teaches about faith, sacrifice, and the importance of preparation.", sources: [{text:'📜 Church History — Handcart Companies',url:'https://www.churchofjesuschrist.org/study/history/topics/handcart-companies'}] },
+        'joseph smith': { answer: "Joseph Smith (1805-1844) was the founding prophet of the Church. He translated the Book of Mormon, received the First Vision, and organized the Church in 1830. He was martyred in Carthage Jail.", sources: [{text:'📜 Church History — Joseph Smith',url:'https://www.churchofjesuschrist.org/study/history/topics/joseph-smith'}] },
+        'mormon trail': { answer: "The Mormon Trail was the 1,300-mile route from Nauvoo, Illinois to Salt Lake City, Utah (1846-1869). About 80,000 pioneers traveled this route, facing harsh conditions but holding to their faith.", sources: [{text:'📜 Church History — Mormon Trail',url:'https://www.churchofjesuschrist.org/study/history/topics/mormon-trail'}] }
+    };
+    
+    function findAnswer(q){
+        q=q.toLowerCase();
+        let bestMatch = null;
+        let bestLength = 0;
+        for(let k in qaDatabase){
+            if(q.indexOf(k) !== -1 && k.length > bestLength){
+                bestLength = k.length;
+                bestMatch = qaDatabase[k];
+            }
+        }
+        if(bestMatch) return {answer:bestMatch.answer,sources:bestMatch.sources,found:true};
+        return {answer:null,found:false};
+    }
+    
+    // AI using Groq proxy
+    async function askAI(query) {
+        try {
+            const response = await fetch('https://focuschrist-groq-proxy.caribousun.workers.dev/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ 
-                    message: message,
-                    topic: 'pioneers',
-                    history: chatHistory
+                body: JSON.stringify({
+                    model: 'llama-3.1-8b-instant',
+                    messages: [
+                        { role: 'system', content: 'You are a helpful assistant for the focusChrist pioneer history page. Answer questions about Mormon pioneers, the exodus from Nauvoo, handcart companies, Brigham Young, the Mormon Trail, and pioneer life. Be respectful and keep answers focused on factual historical information with a faithful perspective.' },
+                        { role: 'user', content: query }
+                    ],
+                    temperature: 0.7,
+                    max_tokens: 500
                 })
-            })
-            .then(function(response) { return response.json(); })
-            .then(function(data) {
-                var typing = document.getElementById('typingIndicator');
-                if (typing) typing.remove();
-                
-                var aiMsg = document.createElement('div');
-                aiMsg.className = 'ai-message';
-                aiMsg.textContent = data.response || 'I have no response. Please try again.';
-                chatBox.appendChild(aiMsg);
-                
-                chatHistory.push({ role: 'assistant', content: data.response });
-                chatBox.scrollTop = chatBox.scrollHeight;
-            })
-            .catch(function() {
-                var typing = document.getElementById('typingIndicator');
-                if (typing) typing.remove();
-                
-                var aiMsg = document.createElement('div');
-                aiMsg.className = 'ai-message';
-                aiMsg.textContent = 'I apologize, but I cannot respond at this time. Please try again later.';
-                chatBox.appendChild(aiMsg);
-                chatBox.scrollTop = chatBox.scrollHeight;
             });
-        }, 500);
+            const data = await response.json();
+            if (data.choices && data.choices[0]) {
+                return { answer: data.choices[0].message.content, sources: [] };
+            }
+        } catch (e) { console.error('AI error:', e); }
+        return { answer: "I'm sorry, I couldn't process that request. Please try again or ask about a specific pioneer topic.", sources: [] };
     }
     
-    function askTopic(topic) {
-        document.getElementById('userInput').value = topic;
-        sendMessage();
+    function addMessage(t,i,s=[]){
+        const c=document.getElementById('chatBox'),
+              d=document.createElement('div');
+        d.className=i?'user-message':'ai-message';
+        d.textContent=t;
+        c.appendChild(d);
+        c.scrollTop=c.scrollHeight;
     }
     
-    function handleKeyPress(event) {
-        if (event.key === 'Enter') {
-            sendMessage();
+    async function sendMessage(){
+        const i=document.getElementById('userInput'),
+              b=document.getElementById('sendBtn'),
+              q=i.value.trim();
+        if(!q)return;
+        
+        // Remove welcome if still there
+        var welcome = document.querySelector('.welcome');
+        if (welcome) welcome.remove();
+        
+        if(containsInappropriate(q)){
+            addMessage(q,true);
+            i.value='';
+            addMessage("We welcome all who seek truth with respect. How can I help you learn about the pioneers?",false);
+            return;
+        }
+        
+        b.disabled=true;
+        addMessage(q,true);
+        i.value='';
+        
+        const l=document.createElement('div');
+        l.className='loading';
+        l.innerHTML='<em>🙏 Seeking wisdom from the trail...</em>';
+        document.getElementById('chatBox').appendChild(l);
+        document.getElementById('chatBox').scrollTop=document.getElementById('chatBox').scrollHeight;
+        
+        const r=findAnswer(q);
+        l.remove();
+        b.disabled=false;
+        
+        if(r.found){
+            addMessage(r.answer,false);
+        }else{
+            const ai=await askAI(q);
+            addMessage(ai.answer,false);
         }
     }
     
@@ -554,7 +599,6 @@
                 <p>Ask any question about Mormon pioneers.<br>Type your question below or click a topic.</p>
             </div>
         `;
-        chatHistory = [];
     }
     </script>
 
