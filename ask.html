@@ -530,6 +530,30 @@
         'temple symbols': { answer: "LDS temple worship connects to Old Testament types and symbols: (1) WASHINGS - Exodus 30:17-21, performed before entering God's presence; (2) ANOINTINGS - Exodus 40:9-15, consecrates for sacred service; (3) GARMENTS - Exodus 28:4, 'holy garments' representing righteousness; (4) COVENANTS - Made at the veil, promising obedience; (5) VEIL - Separates the holy from the most holy, represents Christ's Atonement; (6) ALTAR OF SACRIFICE - Recalls Abraham's near-sacrifice of Isaac. Modern temples include these same elements with added symbolism: the veil represents transitioning from mortality to eternity, the garment symbolizes protection and reminder of covenants. The temple is the 'house of the Lord' where highest ordinances are performed.", sources: [{text:'📜 Exodus 30:17-21',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ex/30.17'},{text:'📜 Exodus 28:4',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ex/28.4'},{text:'📜 D&C 109',url:'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109'}] }
     };
 
+    // Helper to truncate at complete sentence if looks cut off
+    function truncateToCompleteSentence(text) {
+        // Check if text ends near max token limit (800 tokens ≈ 2000 chars)
+        // If it ends mid-word or looks incomplete, find last sentence boundary
+        const lastFewChars = text.slice(-50);
+        
+        // If it ends with an incomplete word (no space after last word)
+        if (text.length > 1800 && !text.match(/[.!?]\s*$/)) {
+            // Find the last sentence-ending punctuation
+            const lastPeriod = text.lastIndexOf('. ');
+            const lastQuestion = text.lastIndexOf('? ');
+            const lastExclaim = text.lastIndexOf('! ');
+            
+            // Get the latest of the three
+            const lastEnd = Math.max(lastPeriod, lastQuestion, lastExclaim);
+            
+            // If found and it's not too close to the beginning, truncate there
+            if (lastEnd > 100) {
+                return text.substring(0, lastEnd + 1);
+            }
+        }
+        return text;
+    }
+    
     // Conversation history for contextual AI responses
     let conversationHistory = [];
     const MAX_CONVERSATION_LENGTH = 8;
@@ -578,7 +602,10 @@
             });
             const data = await response.json();
             if (data.choices && data.choices[0]) {
-                const answer = data.choices[0].message.content;
+                let answer = data.choices[0].message.content;
+                
+                // Truncate to complete sentence if looks cut off
+                answer = truncateToCompleteSentence(answer);
                 
                 // Add to conversation history
                 conversationHistory.push({ role: 'user', content: query });
