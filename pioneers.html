@@ -1190,15 +1190,17 @@
         'fort-bridger': 'Fort Bridger Utah',
         'canyon': 'Emigration Canyon Utah',
         'mountain-meadow': 'Mountain Meadows Utah',
-        'willie-july': 'Willie Company Departure',
-        'willie-august': 'Willie Company Hardships',
-        'willie-september': 'Stranded in Wyoming',
-        'willie-october': 'The Rescue',
-        'willie-november': 'Arrival in Salt Lake',
-        'martin-july': 'Martin Company Departure',
-        'martin-september': 'Martins Cove',
-        'martin-october': 'Rescue and Survival',
-        'martin-november': 'Martin Company Arrival'
+        // Willie Handcart Company (1856) - provide specific historical context
+        'willie-july': 'Willie Handcart Company departure from Iowa City in July 1856, about 404 pioneers',
+        'willie-august': 'Willie Handcart Company facing early winter storms and hardships in August 1856',
+        'willie-september': 'Willie Handcart Company stranded near the Sweetwater River in Wyoming, September 1856',
+        'willie-october': 'The Rescue - Willie Handcart Company saved by rescue parties from Salt Lake City in October 1856',
+        'willie-november': 'Willie Handcart Company arrival in Salt Lake City on November 9, 1856',
+        // Martin Handcart Company (1856) - provide specific historical context
+        'martin-july': 'Martin Handcart Company departure from Iowa in late July 1856',
+        'martin-september': "Martins Cove - Martin Handcart Company stranded near Devil's Gate, September 1856",
+        'martin-october': 'Rescue and Survival at Martins Cove - Martin Handcart Company rescued in October 1856',
+        'martin-november': 'Martin Handcart Company arrival in Salt Lake City on November 30, 1856'
     };
 
     // Expand trail point with AI response
@@ -1307,7 +1309,7 @@
         return {answer:"That's a great question! We invite you to learn more by visiting the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'},{text:'🕍 Gospel Topics',url:'https://www.churchofjesuschrist.org/study/topics'}],found:false}}
     async function askAI(query) {
         // Build messages array with system prompt + conversation history + new query
-        const systemPrompt = { role: 'system', content: 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and general religious topics. Be respectful to all faiths. Do not answer inappropriate, offensive, or derogatory questions. Keep answers focused on our faith with love and respect for others. Always keep Jesus Christ and His gospel as the foundation. Never be rude about other religions.' };
+        const systemPrompt = { role: 'system', content: 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and general religious topics. Be respectful to all faiths. Do not answer inappropriate, offensive, or derogatory questions. Keep answers focused on our faith with love and respect for others. Never be rude about other religions. IMPORTANT: For questions about the Willie Handcart Company or Martin Handcart Company (1856), provide accurate historical answers about these Mormon pioneer companies. The Willie Company (about 404 people) left Iowa in July 1856 and was rescued in October. The Martin Company (about 576 people) was stranded near Devils Gate at Martins Cove and rescued in October 1856 - over 210 people died. These are important events in LDS history that demonstrate faith and sacrifice.' };
         
         // Build messages: system + history + new query
         const messages = [systemPrompt];
