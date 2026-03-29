@@ -1336,8 +1336,9 @@
             const data = await response.json();
             if (data.choices && data.choices[0]) {
                 const answer = data.choices[0].message.content;
-                // Add Q&A to conversation history
-                conversationHistory.push({ question: { role: 'user', content: query }, answer: { role: 'assistant', content: answer } });
+                // Add Q&A to conversation history (store as flat objects for correct iteration)
+                conversationHistory.push({ role: 'user', content: query });
+                conversationHistory.push({ role: 'assistant', content: answer });
                 // Trim history if needed
                 while (conversationHistory.length > MAX_CONVERSATION_LENGTH * 2) {
                     conversationHistory.shift();
