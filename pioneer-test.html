@@ -12,11 +12,11 @@
         nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(10,10,10,0.95); border-bottom: 1px solid rgba(201,169,97,0.3); padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { color: #c9a961; text-decoration: none; font-size: 0.9em; }
-        .nav-links a:hover { color: #fff; }
+        .nav-links a:hover { color: #c9a961; }
         
         /* Hamburger Menu - Same as about page */
         .hamburger-wrap { position: relative; }
-        .hamburger { cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; }
+        .hamburger { cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; padding: 10px; margin: -10px; }
         .hamburger::before { content: ""; display: block; width: 20px; height: 2px; background: #c9a961; margin: 5px 0; box-shadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961; }
         .hamburger-menu { display: none; position: absolute; top: 100%; right: 0; background: #111; border: 1px solid #c9a961; border-radius: 5px; padding: 10px; min-width: 150px; }
         .hamburger-menu.show { display: block; }
@@ -43,15 +43,17 @@
             <a href="index.html">HOME</a>
             <a href="ask.html">ASK</a>
             <a href="art.html">ART</a>
-            <a href="pioneer-test.html">PIONEER TEST</a>
+            <a href="pioneers.html">PIONEERS</a>
+            <a href="about.html">ABOUT</a>
         </div>
         <div class="hamburger-wrap">
             <span class="hamburger" onclick="toggleMenu()"></span>
             <div class="hamburger-menu" id="hamburgerMenu">
                 <a href="index.html">HOME</a>
                 <a href="ask.html">ASK</a>
+                <a href="pioneers.html">PIONEERS</a>
+                <a href="about.html">ABOUT</a>
                 <a href="art.html">ART</a>
-                <a href="pioneer-test.html">PIONEER TEST</a>
             </div>
         </div>
     </nav>
