@@ -1403,6 +1403,7 @@
     // TELL MY STORY TOO FUNCTIONALITY
     // ========================================
     let tellMyStoryCache = null;
+    let lastMatchedStory = null;  // Store the last matched story for "Tell Me More"
 
     async function loadTellMyStory() {
         if (tellMyStoryCache) return tellMyStoryCache;
@@ -1463,6 +1464,7 @@
                 let fullStory = lines.slice(story.index, storyEnd).join('\n').trim();
                 if (fullStory.length > 3000) fullStory = fullStory.substring(0, 3000) + '\n\n[Story continues...]';
                 exactMatches.push({ name: story.name, story: fullStory });
+                lastMatchedStory = { name: story.name, story: fullStory };
             }
         }
 
@@ -1499,7 +1501,15 @@
     }
 
     async function askTellMyStory() {
-        // Get a random full story from the file
+        // If we have a last matched story, show that
+        if (lastMatchedStory) {
+            document.getElementById('chatBox').innerHTML = '';
+            addMessage(lastMatchedStory.name.toUpperCase(), true);
+            addMessage(lastMatchedStory.story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
+            return;
+        }
+        
+        // Otherwise get a random story from the file
         const text = await loadTellMyStory();
         if (!text) {
             addMessage("Sorry, couldn't load stories at this time.", false);
