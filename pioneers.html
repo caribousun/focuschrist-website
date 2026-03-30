@@ -1561,9 +1561,9 @@
         // Get the full story
         let story = lines.slice(randomIndex, storyEnd).join('\n').trim();
 
-        // Clean up and limit length
+        // Clean up - use same logic as search (5000 chars)
         story = story.replace(/Copyright.*?this time\./gi, '').trim();
-        if (story.length > 3000) story = story.substring(0, 3000) + '\n\n[Story continues...]';
+        if (story.length > 5000) story = story.substring(0, 5000) + '\n\n[Story continues in original document...]';
 
         document.getElementById('chatBox').innerHTML = '';
         addMessage("Tell My Story", true);
