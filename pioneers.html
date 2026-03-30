@@ -1391,19 +1391,26 @@
     let h = i ? '<p><strong>You asked:</strong> ' + paragraphs[0] + '</p>' : paragraphs.map(p => '<p style="margin-bottom:12px">' + p + '</p>').join('');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
+        console.log('sendMessage called, query:', q);
         if(!q)return;
         // Clear chat for fresh start
         document.getElementById('chatBox').innerHTML='';
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
-        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);l.remove();b.disabled=false;// Check local database first
+        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);console.log('loading shown');l.remove();b.disabled=false;// Check local database first
+        console.log('calling findAnswer...');
         const localAnswer = findAnswer(q);
+        console.log('localAnswer:', localAnswer);
         let response;
         if (localAnswer && localAnswer.found) {
+            console.log('using local database answer');
             response = localAnswer;
         } else {
+            console.log('calling askAI...');
             response = await askAI(q);
+            console.log('askAI response:', response);
         }
         
+        console.log('final response:', response);
         addMessage(response.answer,false,response.sources)
      }
     function clearChat() {
