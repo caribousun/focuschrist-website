@@ -1320,9 +1320,22 @@
         }
         if(bestMatch) return {answer:bestMatch.answer,sources:bestMatch.sources,found:true};
         return {answer:"That's a great question! We invite you to learn more by visiting the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'},{text:'🕍 Gospel Topics',url:'https://www.churchofjesuschrist.org/study/topics'}],found:false}}
+    function truncateToCompleteSentence(text) {
+        if (!text) return text;
+        // Find the last complete sentence (ends with . ! or ?)
+        const lastPunctuation = Math.max(
+            text.lastIndexOf('.'),
+            text.lastIndexOf('!'),
+            text.lastIndexOf('?')
+        );
+        // If no punctuation found or very short, return as-is
+        if (lastPunctuation === -1 || lastPunctuation < 50) return text;
+        // Return text up to and including the last punctuation
+        return text.substring(0, lastPunctuation + 1).trim();
+    }
     async function askAI(query) {
         // Build messages array with system prompt + conversation history + new query
-        const systemPrompt = { role: 'system', content: 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and general religious topics. Be respectful to all faiths. Do not answer inappropriate, offensive, or derogatory questions. Keep answers focused on our faith with love and respect for others. Never be rude about other religions. IMPORTANT: For questions about the Willie Handcart Company or Martin Handcart Company (1856), provide accurate historical answers about these Mormon pioneer companies. The Willie Company (about 404 people) left Iowa in July 1856 and was rescued in October. The Martin Company (about 576 people) was stranded near Devils Gate at Martins Cove and rescued in October 1856 - over 210 people died. These are important events in LDS history that demonstrate faith and sacrifice.' };
+        const systemPrompt = { role: 'system', content: 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and general religious topics. Be respectful to all faiths. Do not answer inappropriate, offensive, or derogatory questions. Keep answers focused on our faith with love and respect for others. Never be rude about other religions. IMPORTANT: Always end your response with a complete sentence ending in a period. IMPORTANT: For questions about the Willie Handcart Company or Martin Handcart Company (1856), provide accurate historical answers about these Mormon pioneer companies. The Willie Company (about 404 people) left Iowa in July 1856 and was rescued in October. The Martin Company (about 576 people) was stranded near Devils Gate at Martins Cove and rescued in October 1856 - over 210 people died. These are important events in LDS history that demonstrate faith and sacrifice.' };
         
         // Build messages: system + history + new query
         const messages = [systemPrompt];
@@ -1349,7 +1362,7 @@
             });
             const data = await response.json();
             if (data.choices && data.choices[0]) {
-                const answer = data.choices[0].message.content;
+                const answer = truncateToCompleteSentence(data.choices[0].message.content);
                 // Add Q&A to conversation history (store as flat objects for correct iteration)
                 conversationHistory.push({ role: 'user', content: query });
                 conversationHistory.push({ role: 'assistant', content: answer });
