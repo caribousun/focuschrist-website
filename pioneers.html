@@ -975,6 +975,7 @@
  <a href="#" class="category-btn" onclick="askTopic('Pioneer Food')">Pioneer Food</a>
  <a href="#" class="category-btn" onclick="askTopic('Pioneer Clothing')">Pioneer Clothing</a>
  <a href="#" class="category-btn" onclick="askTopic('Pioneer Trails')">Pioneer Trails</a>
+ <a href="#" class="category-btn" onclick="askTellMyStory()">Tell My Story</a>
  </div>
  </div>
  </div>
@@ -1381,9 +1382,86 @@
         // Return text up to and including the last punctuation
         return text.substring(0, lastPunctuation + 1).trim();
     }
+    // ========================================
+    // TELL MY STORY TOO FUNCTIONALITY
+    // ========================================
+    let tellMyStoryCache = null;
+
+    async function loadTellMyStory() {
+        if (tellMyStoryCache) return tellMyStoryCache;
+        try {
+            const response = await fetch('tell-my-story-too.txt');
+            const text = await response.text();
+            tellMyStoryCache = text;
+            return text;
+        } catch(e) {
+            console.error('Failed to load Tell My Story:', e);
+            return null;
+        }
+    }
+
+    async function searchTellMyStory(query) {
+        const text = await loadTellMyStory();
+        if (!text) return null;
+        
+        const queryLower = query.toLowerCase();
+        const lines = text.split('\n');
+        
+        // Search for matching names/stories
+        const matches = [];
+        const searchTerms = queryLower.split(' ').filter(t => t.length > 2);
+        
+        for (let i = 0; i < lines.length; i++) {
+            const lineLower = lines[i].toLowerCase();
+            if (searchTerms.some(term => lineLower.includes(term))) {
+                // Get context around the match
+                const start = Math.max(0, i - 2);
+                const end = Math.min(lines.length, i + 10);
+                let context = lines.slice(start, end).join(' ').trim();
+                if (context.length > 500) context = context.substring(0, 500) + '...';
+                if (context.length > 50) {
+                    matches.push(context);
+                }
+            }
+            if (matches.length >= 3) break;
+        }
+        return matches.length > 0 ? matches : null;
+    }
+
+    async function askTellMyStory() {
+        // Get a random story from the file
+        const text = await loadTellMyStory();
+        if (!text) {
+            addMessage("Sorry, couldn't load stories at this time.", false);
+            return;
+        }
+        
+        const lines = text.split('\n').filter(l => l.trim().length > 20 && !l.includes('Copyright'));
+        const randomLine = lines[Math.floor(Math.random() * lines.length)];
+        
+        const displayText = randomLine.length > 400 ? randomLine.substring(0, 400) + '...' : randomLine;
+        
+        document.getElementById('chatBox').innerHTML = '';
+        addMessage("Tell My Story", true);
+        addMessage(displayText, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
+    }
+
+    // ========================================
+    // ENHANCED ASKAI - CHECKS TELL MY STORY FIRST
+    // ========================================
     async function askAI(query) {
+        // First, check Tell My Story for relevant content
+        const storyMatch = await searchTellMyStory(query);
+        
         // Build messages array with system prompt + conversation history + new query
-        const systemPrompt = { role: 'system', content: 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and general religious topics. Be respectful to all faiths. Do not answer inappropriate, offensive, or derogatory questions. Keep answers focused on our faith with love and respect for others. Never be rude about other religions. IMPORTANT: Always end your response with a complete sentence ending in a period. IMPORTANT: For questions about the Willie Handcart Company or Martin Handcart Company (1856), provide accurate historical answers about these Mormon pioneer companies. The Willie Company (about 404 people) left Iowa in July 1856 and was rescued in October. The Martin Company (about 576 people) was stranded near Devils Gate at Martins Cove and rescued in October 1856 - over 210 people died. These are important events in LDS history that demonstrate faith and sacrifice.' };
+        let systemContent = 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and Mormon pioneers. Be respectful to all faiths. Keep answers focused on our faith with love and respect for others. Never be rude about other religions. IMPORTANT: Always end your response with a complete sentence ending in a period.';
+        
+        // Add Tell My Story context if found
+        if (storyMatch && storyMatch.length > 0) {
+            systemContent += '\n\nRELEVANT CONTENT FROM "TELL MY STORY TOO" (use this if relevant):\n' + storyMatch.join('\n\n');
+        }
+        
+        const systemPrompt = { role: 'system', content: systemContent };
 
         // Build messages: system + history + new query
         const messages = [systemPrompt];
