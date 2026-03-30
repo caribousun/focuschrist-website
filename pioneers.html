@@ -1467,8 +1467,8 @@
         }
         
         if (exactMatches.length === 1) {
-            // Single exact match - return the full story
-            return [{ name: exactMatches[0].name, story: exactMatches[0].story, full: true }];
+            // Single exact match - return the full story with button
+            return [{ name: exactMatches[0].name, story: exactMatches[0].story, full: true, showBtn: true }];
         } else if (exactMatches.length > 1) {
             // Multiple matches - create selection menu
             const options = exactMatches.map((m, idx) => `${idx + 1}. ${m.name.toUpperCase()}`).join('\n');
@@ -1581,7 +1581,14 @@
                 return { answer: storyMatch[0].story, sources: [] };
             } else if (storyMatch[0].full === true) {
                 // Single exact match - show full story
-                systemContent += '\n\nEXACT MATCH FROM "TELL MY STORY TOO":\n' + storyMatch[0].story;
+                if (storyMatch[0].showBtn) {
+                    document.getElementById('chatBox').innerHTML = '';
+                    addMessage(query, true);
+                    addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
+                    return { answer: storyMatch[0].story, sources: [] };
+                } else {
+                    systemContent += '\n\nEXACT MATCH FROM "TELL MY STORY TOO":\n' + storyMatch[0].story;
+                }
             } else {
                 // Keyword matches (old format)
                 systemContent += '\n\nRELEVANT CONTENT FROM "TELL MY STORY TOO" (use this if relevant):\n' + storyMatch.join('\n\n');
@@ -1628,8 +1635,8 @@
         } catch (e) { console.error('AI error:', e); }
         return { answer: "That's a great question! We invite you to learn more by visiting the official Church website.", sources: [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}] };
     }
-    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let paragraphs = t.split('\n').filter(p => p.trim());
-    let h = i ? '<p><strong>You asked:</strong> ' + paragraphs[0] + '</p>' : paragraphs.map(p => '<p style="margin-bottom:12px">' + p + '</p>').join('');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
+    function addMessage(t,i,s=[],extraBtn=null){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let paragraphs = t.split('\n').filter(p => p.trim());
+    let h = i ? '<p><strong>You asked:</strong> ' + paragraphs[0] + '</p>' : paragraphs.map(p => '<p style="margin-bottom:12px">' + p + '</p>').join('');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}if(extraBtn){h+='<button onclick="'+extraBtn.action+'" style="margin-top:15px;padding:10px 20px;background:#c9a961;border:none;border-radius:25px;color:#0a0a0a;font-weight:bold;cursor:pointer;">'+extraBtn.text+'</button>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
         if(!q)return;
