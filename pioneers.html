@@ -1435,7 +1435,7 @@
             if (/^[A-Z\s]{10,}$/.test(line) && line.length > 8 && !line.startsWith('---') && !line.includes('PAGE')) {
                 const nextLines = lines.slice(i, i+5).join(' ').toLowerCase();
                 if (nextLines.includes('company') || nextLines.includes('handcart') || nextLines.includes('wagon') || nextLines.includes('born')) {
-                    storyStarts.push({ index: i, name: line.toLowerCase() });
+                    storyStarts.push({ index: i, name: line.trim() });
                 }
             }
         }
@@ -1443,8 +1443,8 @@
         // Check for exact or close name matches
         const exactMatches = [];
         for (const story of storyStarts) {
-            const nameLower = story.name;
-            // Check if all query words are in the name
+            const nameLower = story.name.toLowerCase();
+            // Check if all query words are in the name (case insensitive)
             const allWordsMatch = queryWords.every(w => nameLower.includes(w));
             if (allWordsMatch) {
                 // Get the full story
