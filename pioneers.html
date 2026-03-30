@@ -1462,15 +1462,17 @@
                     storyEnd = i;
                 }
                 let fullStory = lines.slice(story.index, storyEnd).join('\n').trim();
-                if (fullStory.length > 3000) fullStory = fullStory.substring(0, 3000) + '\n\n[Story continues...]';
-                exactMatches.push({ name: story.name, story: fullStory });
-                lastMatchedStory = { name: story.name, story: fullStory };
+                // Store full story without truncation (will truncate in display if needed)
+                let displayStory = fullStory;
+                if (displayStory.length > 5000) displayStory = displayStory.substring(0, 5000) + '\n\n[Story continues in original document...]';
+                exactMatches.push({ name: story.name, story: displayStory, fullStory: fullStory });
+                lastMatchedStory = { name: story.name, story: displayStory, fullStory: fullStory };
             }
         }
 
         if (exactMatches.length === 1) {
             // Single exact match - return the full story with button
-            return [{ name: exactMatches[0].name, story: exactMatches[0].story, full: true, showBtn: true }];
+            return [{ name: exactMatches[0].name, story: exactMatches[0].story, full: true, showBtn: true, fullStory: exactMatches[0].fullStory }];
         } else if (exactMatches.length > 1) {
             // Multiple matches - create selection menu
             const options = exactMatches.map((m, idx) => `${idx + 1}. ${m.name.toUpperCase()}`).join('\n');
@@ -1501,11 +1503,11 @@
     }
 
     async function askTellMyStory() {
-        // If we have a last matched story, show that
-        if (lastMatchedStory) {
+        // If we have a last matched story, show that full version
+        if (lastMatchedStory && lastMatchedStory.fullStory) {
             document.getElementById('chatBox').innerHTML = '';
             addMessage(lastMatchedStory.name.toUpperCase(), true);
-            addMessage(lastMatchedStory.story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
+            addMessage(lastMatchedStory.fullStory, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
             return;
         }
         
@@ -1594,8 +1596,10 @@
                 if (storyMatch[0].showBtn) {
                     document.getElementById('chatBox').innerHTML = '';
                     addMessage(query, true);
-                    addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
-                    return { answer: storyMatch[0].story, sources: [], alreadyDisplayed: true };
+                    // Use fullStory if available, otherwise truncated version
+                    const storyContent = storyMatch[0].fullStory || storyMatch[0].story;
+                    addMessage(storyContent, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
+                    return { answer: storyContent, sources: [], alreadyDisplayed: true };
                 } else {
                     systemContent += '\n\nEXACT MATCH FROM "TELL MY STORY TOO":\n' + storyMatch[0].story;
                 }
