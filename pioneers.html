@@ -1507,7 +1507,7 @@
         if (lastMatchedStory && lastMatchedStory.fullStory) {
             document.getElementById('chatBox').innerHTML = '';
             addMessage(lastMatchedStory.name.toUpperCase(), true);
-            addMessage(lastMatchedStory.fullStory, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
+            addMessage(lastMatchedStory.fullStory, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
             return;
         }
         
@@ -1567,7 +1567,7 @@
 
         document.getElementById('chatBox').innerHTML = '';
         addMessage("Tell My Story", true);
-        addMessage(story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
+        addMessage(story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
     }
 
     // ========================================
