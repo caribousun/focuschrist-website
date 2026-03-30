@@ -1658,13 +1658,20 @@
         // Clear chat for fresh start
         document.getElementById('chatBox').innerHTML='';
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
-        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);l.remove();b.disabled=false;// Check local database first
-        const localAnswer = findAnswer(q);
+        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);l.remove();b.disabled=false;// Check Tell My Story FIRST for pioneer names
+        const storyMatch = await searchTellMyStory(q);
         let response;
-        if (localAnswer && localAnswer.found) {
-            response = localAnswer;
-        } else {
+        if (storyMatch && storyMatch[0] && (storyMatch[0].full || storyMatch[0].choices)) {
+            // It's a Tell My Story match - handle it in askAI
             response = await askAI(q);
+        } else {
+            // Check local database
+            const localAnswer = findAnswer(q);
+            if (localAnswer && localAnswer.found) {
+                response = localAnswer;
+            } else {
+                response = await askAI(q);
+            }
         }
 
         // Skip if the answer was already displayed (Tell My Story match)
