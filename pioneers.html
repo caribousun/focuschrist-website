@@ -1429,21 +1429,59 @@
     }
 
     async function askTellMyStory() {
-        // Get a random story from the file
+        // Get a random full story from the file
         const text = await loadTellMyStory();
         if (!text) {
             addMessage("Sorry, couldn't load stories at this time.", false);
             return;
         }
         
-        const lines = text.split('\n').filter(l => l.trim().length > 20 && !l.includes('Copyright'));
-        const randomLine = lines[Math.floor(Math.random() * lines.length)];
+        const lines = text.split('\n');
         
-        const displayText = randomLine.length > 400 ? randomLine.substring(0, 400) + '...' : randomLine;
+        // Find biographical entry markers (names followed by Company info)
+        const storyStarts = [];
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i].trim();
+            // Match names that are biographical entries
+            if (/^[A-Z][A-Z\s]{2,},$/.test(line) || /^[A-Z][A-Z\s]+ [A-Z][a-z]+,$/.test(line)) {
+                // Check if next lines contain Company info
+                const nextLines = lines.slice(i, i+5).join(' ').toLowerCase();
+                if (nextLines.includes('company') || nextLines.includes('handcart') || nextLines.includes('wagon')) {
+                    storyStarts.push(i);
+                }
+            }
+        }
+        
+        if (storyStarts.length === 0) {
+            addMessage("No stories found.", false);
+            return;
+        }
+        
+        // Pick a random story
+        const randomIndex = storyStarts[Math.floor(Math.random() * storyStarts.length)];
+        
+        // Extract the story (find where next story starts)
+        let storyEnd = randomIndex + 1;
+        for (let i = randomIndex + 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            // Stop at next name entry or section marker
+            if (/^[A-Z][A-Z\s]{2,},$/.test(line) || line.startsWith('--- PAGE') || line.startsWith('WILLIE') || line.startsWith('MARTIN')) {
+                storyEnd = i;
+                break;
+            }
+            storyEnd = i;
+        }
+        
+        // Get the full story
+        let story = lines.slice(randomIndex, storyEnd).join('\n').trim();
+        
+        // Clean up and limit length
+        story = story.replace(/Copyright.*?this time\./gi, '').trim();
+        if (story.length > 3000) story = story.substring(0, 3000) + '\n\n[Story continues...]';
         
         document.getElementById('chatBox').innerHTML = '';
         addMessage("Tell My Story", true);
-        addMessage(displayText, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
+        addMessage(story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
     }
 
     // ========================================
