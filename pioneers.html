@@ -1420,13 +1420,13 @@
     async function searchTellMyStory(query) {
         const text = await loadTellMyStory();
         if (!text) return null;
-        
+
         const queryLower = query.toLowerCase();
         const lines = text.split('\n');
-        
+
         // First, try to find exact name matches (full name in uppercase in the file)
         const queryWords = queryLower.split(' ').filter(t => t.length > 1);
-        
+
         // Find story starts (uppercase names)
         const storyStarts = [];
         for (let i = 0; i < lines.length; i++) {
@@ -1438,7 +1438,7 @@
                 }
             }
         }
-        
+
         // Check for exact or close name matches
         const exactMatches = [];
         for (const story of storyStarts) {
@@ -1465,21 +1465,21 @@
                 exactMatches.push({ name: story.name, story: fullStory });
             }
         }
-        
+
         if (exactMatches.length === 1) {
             // Single exact match - return the full story with button
             return [{ name: exactMatches[0].name, story: exactMatches[0].story, full: true, showBtn: true }];
         } else if (exactMatches.length > 1) {
             // Multiple matches - create selection menu
             const options = exactMatches.map((m, idx) => `${idx + 1}. ${m.name.toUpperCase()}`).join('\n');
-            return [{ 
-                name: 'Multiple matches found', 
+            return [{
+                name: 'Multiple matches found',
                 story: `I found ${exactMatches.length} people matching "${query}". Which one would you like to hear about?\n\n${options}\n\nPlease type the number (1-${exactMatches.length}) to select.`,
                 full: false,
                 choices: exactMatches
             }];
         }
-        
+
         // No exact match - fall back to keyword search
         const keywordMatches = [];
         for (let i = 0; i < lines.length; i++) {
@@ -1505,9 +1505,9 @@
             addMessage("Sorry, couldn't load stories at this time.", false);
             return;
         }
-        
+
         const lines = text.split('\n');
-        
+
         // Find biographical entry markers - uppercase names followed by Company info
         const storyStarts = [];
         for (let i = 0; i < lines.length; i++) {
@@ -1521,15 +1521,15 @@
                 }
             }
         }
-        
+
         if (storyStarts.length === 0) {
             addMessage("No stories found.", false);
             return;
         }
-        
+
         // Pick a random story
         const randomIndex = storyStarts[Math.floor(Math.random() * storyStarts.length)];
-        
+
         // Extract the story (find where next story starts)
         let storyEnd = randomIndex + 1;
         for (let i = randomIndex + 1; i < lines.length; i++) {
@@ -1545,14 +1545,14 @@
             }
             storyEnd = i;
         }
-        
+
         // Get the full story
         let story = lines.slice(randomIndex, storyEnd).join('\n').trim();
-        
+
         // Clean up and limit length
         story = story.replace(/Copyright.*?this time\./gi, '').trim();
         if (story.length > 3000) story = story.substring(0, 3000) + '\n\n[Story continues...]';
-        
+
         document.getElementById('chatBox').innerHTML = '';
         addMessage("Tell My Story", true);
         addMessage(story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
@@ -1564,10 +1564,10 @@
     async function askAI(query) {
         // First, check Tell My Story for relevant content
         const storyMatch = await searchTellMyStory(query);
-        
+
         // Build messages array with system prompt + conversation history + new query
         let systemContent = 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and Mormon pioneers. Be respectful to all faiths. Keep answers focused on our faith with love and respect for others. Never be rude about other religions. IMPORTANT: Always end your response with a complete sentence ending in a period.';
-        
+
         // Add Tell My Story context if found
         if (storyMatch && storyMatch.length > 0) {
             // Check if it's a selection menu (multiple matches)
@@ -1595,6 +1595,7 @@
             }
         }
         
+        // Only continue to API call if we didn't already return
         const systemPrompt = { role: 'system', content: systemContent };
 
         // Build messages: system + history + new query
