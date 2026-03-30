@@ -1438,15 +1438,15 @@
         
         const lines = text.split('\n');
         
-        // Find biographical entry markers (names followed by Company info)
+        // Find biographical entry markers - uppercase names followed by Company info
         const storyStarts = [];
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
-            // Match names that are biographical entries
-            if (/^[A-Z][A-Z\s]{2,},$/.test(line) || /^[A-Z][A-Z\s]+ [A-Z][a-z]+,$/.test(line)) {
-                // Check if next lines contain Company info
+            // Match uppercase names like "JOHAN AUGUST AHMANSON"
+            if (/^[A-Z\s]{10,}$/.test(line) && line.length > 8 && !line.startsWith('---') && !line.includes('PAGE')) {
+                // Check if next few lines have Company info
                 const nextLines = lines.slice(i, i+5).join(' ').toLowerCase();
-                if (nextLines.includes('company') || nextLines.includes('handcart') || nextLines.includes('wagon')) {
+                if (nextLines.includes('company') || nextLines.includes('handcart') || nextLines.includes('wagon') || nextLines.includes('born')) {
                     storyStarts.push(i);
                 }
             }
@@ -1465,7 +1465,11 @@
         for (let i = randomIndex + 1; i < lines.length; i++) {
             const line = lines[i].trim();
             // Stop at next name entry or section marker
-            if (/^[A-Z][A-Z\s]{2,},$/.test(line) || line.startsWith('--- PAGE') || line.startsWith('WILLIE') || line.startsWith('MARTIN')) {
+            if (/^[A-Z\s]{10,}$/.test(line) && line.length > 8 && !line.startsWith('---') && !line.includes('PAGE')) {
+                storyEnd = i;
+                break;
+            }
+            if (line.startsWith('--- PAGE')) {
                 storyEnd = i;
                 break;
             }
