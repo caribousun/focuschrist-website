@@ -1585,7 +1585,7 @@
                     document.getElementById('chatBox').innerHTML = '';
                     addMessage(query, true);
                     addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
-                    return { answer: storyMatch[0].story, sources: [] };
+                    return { answer: storyMatch[0].story, sources: [], alreadyDisplayed: true };
                 } else {
                     systemContent += '\n\nEXACT MATCH FROM "TELL MY STORY TOO":\n' + storyMatch[0].story;
                 }
@@ -1652,6 +1652,9 @@
         } else {
             response = await askAI(q);
         }
+
+        // Skip if the answer was already displayed (Tell My Story match)
+        if (response.alreadyDisplayed) return;
 
         addMessage(response.answer,false,response.sources)
      }
