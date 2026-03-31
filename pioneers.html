@@ -1526,12 +1526,12 @@
         if (partialMatches.length === 1) {
             return [{ name: partialMatches[0].name, story: partialMatches[0].story, full: true, showBtn: true, fullStory: partialMatches[0].fullStory }];
         } else if (partialMatches.length > 1) {
-            // Limit to top 5 partial matches
-            const topMatches = partialMatches.slice(0, 5);
+            // Show up to 20 partial matches
+            const topMatches = partialMatches.slice(0, 20);
             const options = topMatches.map((m, idx) => `${idx + 1}. ${m.name.toUpperCase()}`).join('\n');
             return [{
                 name: 'Multiple matches found',
-                story: `I found ${partialMatches.length} people matching "${query}". Here are the first few:\n\n${options}\n\nPlease type the number (1-${topMatches.length}) to select.`,
+                story: `I found ${partialMatches.length} people matching "${query}". Here are the first ${topMatches.length}:\n\n${options}\n\nPlease type the number (1-${topMatches.length}) to select.`,
                 full: false,
                 choices: topMatches
             }];
