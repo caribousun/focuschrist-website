@@ -531,17 +531,19 @@
  }
 
  .map-point:hover {
-
  background: #222;
-
+ transform: translateX(5px);
  }
 
  .map-point.expanded {
-
  background: #222;
-
  border-left-color: #fff;
-
+ }
+ .map-point.expanded p {
+ font-size: 0.9em;
+ line-height: 1.7;
+ color: #ccc;
+ margin-bottom: 12px;
  }
 
  .map-point:last-child { margin-bottom: 0; }
@@ -558,7 +560,9 @@
 
  }
 
- .map-content h4 { color: #fff; margin-bottom: 8px; }
+ .map-content h4 {
+ color: #fff;
+ font-size: 1em; margin-bottom: 8px; }
 
  .map-content p { color: #aaa; font-size: 0.95em; line-height: 1.7; }
 
@@ -1510,7 +1514,7 @@
             addMessage(lastMatchedStory.fullStory, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
             return;
         }
-        
+
         // Otherwise get a random story from the file
         const text = await loadTellMyStory();
         if (!text) {
@@ -1608,7 +1612,7 @@
                 systemContent += '\n\nRELEVANT CONTENT FROM "TELL MY STORY TOO" (use this if relevant):\n' + storyMatch.join('\n\n');
             }
         }
-        
+
         // Only continue to API call if we didn't already return
         const systemPrompt = { role: 'system', content: systemContent };
 
