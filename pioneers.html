@@ -1442,6 +1442,41 @@
 
         // Check for exact or close name matches
         const exactMatches = [];
+        
+        // Also search for keyword/phrase matches in the story content
+        const keywordMatches = [];
+        const searchPhrases = [
+            "meat in the cave",
+            "cave",
+            "dried buffalo meat",
+            "grandmother cranney",
+            "meat",
+            "cave"
+        ].filter(phrase => queryLower.includes(phrase));
+        
+        for (let i = 0; i < lines.length; i++) {
+            const lineLower = lines[i].toLowerCase();
+            // Search for keyword phrases in content
+            for (const phrase of searchPhrases) {
+                if (lineLower.includes(phrase)) {
+                    // Get surrounding context
+                    const start = Math.max(0, i - 3);
+                    const end = Math.min(lines.length, i + 30);
+                    let context = lines.slice(start, end).join('\n').trim();
+                    // Find the name this story belongs to
+                    let nameStart = Math.max(0, start - 50);
+                    let nameSection = lines.slice(Math.max(0, start-20), start).join('\n');
+                    let storyName = 'Unknown';
+                    const nameMatch = nameSection.match(/^([A-Z\s]{10,})$/m);
+                    if (nameMatch) storyName = nameMatch[1].trim();
+                    
+                    keywordMatches.push({ name: storyName, story: context });
+                    break;
+                }
+            }
+            if (keywordMatches.length >= 2) break;
+        }
+        
         for (const story of storyStarts) {
             const nameLower = story.name.toLowerCase();
             const nameWords = nameLower.split(/\s+/).filter(w => w.length > 1);
@@ -1485,6 +1520,12 @@
                 full: false,
                 choices: exactMatches
             }];
+        }
+        
+        // Check for keyword matches in story content (like "meat in the cave")
+        if (keywordMatches.length > 0) {
+            // Return keyword match with story content
+            return [{ name: keywordMatches[0].name, story: keywordMatches[0].story, full: true, showBtn: true }];
         }
 
         // No exact match - fall back to keyword search
