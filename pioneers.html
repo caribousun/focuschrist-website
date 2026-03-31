@@ -1444,9 +1444,12 @@
         const exactMatches = [];
         for (const story of storyStarts) {
             const nameLower = story.name.toLowerCase();
-            // Check if all query words are in the name (case insensitive)
-            const allWordsMatch = queryWords.every(w => nameLower.includes(w));
-            if (allWordsMatch) {
+            const nameWords = nameLower.split(/\s+/).filter(w => w.length > 1);
+            
+            // Check if ALL name words are in the query (query contains the full name)
+            const allNameWordsInQuery = nameWords.every(w => queryLower.includes(w));
+            
+            if (allNameWordsInQuery) {
                 // Get the full story
                 let storyEnd = story.index + 1;
                 for (let i = story.index + 1; i < lines.length; i++) {
