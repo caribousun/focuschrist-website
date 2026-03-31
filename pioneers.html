@@ -1507,15 +1507,10 @@
     }
 
     async function askTellMyStory() {
-        // If we have a last matched story, show that full version
-        if (lastMatchedStory && lastMatchedStory.fullStory) {
-            document.getElementById('chatBox').innerHTML = '';
-            addMessage(lastMatchedStory.name.toUpperCase(), true);
-            addMessage(lastMatchedStory.fullStory, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
-            return;
-        }
-
-        // Otherwise get a random story from the file
+        // Always get a random story - clear any previous match
+        lastMatchedStory = null;
+        
+        // Get a random story from the file
         const text = await loadTellMyStory();
         if (!text) {
             addMessage("Sorry, couldn't load stories at this time.", false);
