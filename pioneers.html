@@ -1566,8 +1566,8 @@
             return [{ name: keywordMatches[0].name, story: keywordMatches[0].story, full: true, showBtn: true }];
         }
 
-        // No exact match - fall back to keyword search
-        const keywordMatches = [];
+        // No exact match - fall back to keyword search (reusing keywordMatches from earlier or creating new)
+        const fallbackKeywordMatches = [];
         for (let i = 0; i < lines.length; i++) {
             const lineLower = lines[i].toLowerCase();
             if (queryWords.some(term => lineLower.includes(term))) {
@@ -1576,12 +1576,12 @@
                 let context = lines.slice(start, end).join(' ').trim();
                 if (context.length > 500) context = context.substring(0, 500) + '...';
                 if (context.length > 50) {
-                    keywordMatches.push(context);
+                    fallbackKeywordMatches.push(context);
                 }
             }
-            if (keywordMatches.length >= 3) break;
+            if (fallbackKeywordMatches.length >= 3) break;
         }
-        return keywordMatches.length > 0 ? keywordMatches : null;
+        return fallbackKeywordMatches.length > 0 ? fallbackKeywordMatches : null;
     }
 
     async function askTellMyStory() {
@@ -1740,26 +1740,34 @@
         // Clear chat for fresh start
         document.getElementById('chatBox').innerHTML='';
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
-        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);l.remove();b.disabled=false;// Check Tell My Story FIRST for pioneer names
-        const storyMatch = await searchTellMyStory(q);
-        let response;
-        if (storyMatch && storyMatch[0] && (storyMatch[0].full || storyMatch[0].choices)) {
-            // It's a Tell My Story match - handle it in askAI
-            response = await askAI(q);
-        } else {
-            // Check local database
-            const localAnswer = findAnswer(q);
-            if (localAnswer && localAnswer.found) {
-                response = localAnswer;
-            } else {
+        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);
+        // Check Tell My Story FIRST for pioneer names
+        try {
+            const storyMatch = await searchTellMyStory(q);
+            let response;
+            if (storyMatch && storyMatch[0] && (storyMatch[0].full || storyMatch[0].choices)) {
+                // It's a Tell My Story match - handle it in askAI
                 response = await askAI(q);
+            } else {
+                // Check local database
+                const localAnswer = findAnswer(q);
+                if (localAnswer && localAnswer.found) {
+                    response = localAnswer;
+                } else {
+                    response = await askAI(q);
+                }
             }
+
+            // Remove loading indicator
+            l.remove();
+
+            // Skip if the answer was already displayed (Tell My Story match)
+            if (response.alreadyDisplayed) return;
+
+            addMessage(response.answer,false,response.sources)
+        } finally {
+            b.disabled=false;
         }
-
-        // Skip if the answer was already displayed (Tell My Story match)
-        if (response.alreadyDisplayed) return;
-
-        addMessage(response.answer,false,response.sources)
      }
     function clearChat() {
         conversationHistory = [];
