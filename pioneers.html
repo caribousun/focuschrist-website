@@ -1358,32 +1358,24 @@
     }
 
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
-    function handleKeyPress(e){
-        if(e.key==='Enter') {
+    function handleKeyPress(e){if(e.key==='Enter') {
         // Check if user is selecting a story choice
         if (window.storyChoices) {
             const input = document.getElementById('userInput').value.trim();
             const num = parseInt(input);
             if (num >= 1 && num <= window.storyChoices.length) {
-                selectStoryByIndex(num - 1);
+                const selected = window.storyChoices[num - 1];
+                document.getElementById('chatBox').innerHTML = '';
+                addMessage(selected.name.toUpperCase(), true);
+                addMessage(selected.story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
+                window.storyChoices = null;
+                document.getElementById('userInput').value = '';
                 return;
             }
             window.storyChoices = null;
         }
         sendMessage();
-    }
-    
-    function selectStoryByIndex(index) {
-        if (window.storyChoices && window.storyChoices[index]) {
-            const selected = window.storyChoices[index];
-            document.getElementById('chatBox').innerHTML = '';
-            addMessage(selected.name.toUpperCase(), true);
-            addMessage(selected.fullStory || selected.story, false, [{text:'📖 Tell My Story Too by Jolene Spendlove Allphin', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
-            window.storyChoices = null;
-            document.getElementById('userInput').value = '';
-        }
-    }
-    
+    }}
     function askTopic(t){const q=t;const i=document.getElementById('userInput');i.value='';document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);askAI(q).then(r=>{l.remove();addMessage(r.answer,false,r.sources)})}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
     function findAnswer(q){
@@ -1454,16 +1446,11 @@
 
         // Check for exact or close name matches
         const exactMatches = [];
-        const partialMatches = [];
-        
         for (const story of storyStarts) {
             const nameLower = story.name.toLowerCase();
-            const nameWords = nameLower.split(/\s+/).filter(w => w.length > 1);
-            
-            // Check if ALL name words are in the query (full name match)
-            const allNameWordsInQuery = nameWords.every(w => queryLower.includes(w));
-            
-            if (allNameWordsInQuery) {
+            // Check if all query words are in the name (case insensitive)
+            const allWordsMatch = queryWords.every(w => nameLower.includes(w));
+            if (allWordsMatch) {
                 // Get the full story
                 let storyEnd = story.index + 1;
                 for (let i = story.index + 1; i < lines.length; i++) {
@@ -1498,54 +1485,6 @@
                 story: `I found ${exactMatches.length} people matching "${query}". Which one would you like to hear about?\n\n${options}\n\nPlease type the number (1-${exactMatches.length}) to select.`,
                 full: false,
                 choices: exactMatches
-            }];
-        }
-        
-        // Check for partial name matches (first name OR last name)
-        for (const story of storyStarts) {
-            const nameLower = story.name.toLowerCase();
-            const nameWords = nameLower.split(/\s+/).filter(w => w.length > 1);
-            
-            // Check if ANY name word matches (partial match)
-            const someWordsMatch = nameWords.some(w => queryLower.includes(w));
-            
-            if (someWordsMatch && nameWords.length >= 1) {
-                let storyEnd = story.index + 1;
-                for (let i = story.index + 1; i < lines.length; i++) {
-                    const line = lines[i].trim();
-                    if (/^[A-Z\s]{10,}$/.test(line) && line.length > 8 && !line.startsWith('---') && !line.includes('PAGE')) {
-                        storyEnd = i;
-                        break;
-                    }
-                    if (line.startsWith('--- PAGE')) {
-                        storyEnd = i;
-                        break;
-                    }
-                    storyEnd = i;
-                }
-                let fullStory = lines.slice(story.index, storyEnd).join('\n').trim();
-                let displayStory = fullStory;
-                if (displayStory.length > 5000) displayStory = displayStory.substring(0, 5000) + '\n\n[Story continues in original document...]';
-                partialMatches.push({ name: story.name, story: displayStory, fullStory: fullStory });
-            }
-        }
-        
-        // Return partial matches if found
-        if (partialMatches.length === 1) {
-            return [{ name: partialMatches[0].name, story: partialMatches[0].story, full: true, showBtn: true, fullStory: partialMatches[0].fullStory }];
-        } else if (partialMatches.length > 1) {
-            // Show ALL partial matches - make them clickable
-            let optionsHtml = '';
-            for (let idx = 0; idx < partialMatches.length; idx++) {
-                optionsHtml += `<span onclick="selectStoryByIndex(${idx})" style="cursor:pointer;color:#c9a961;text-decoration:underline;margin-right:15px;">${idx + 1}. ${partialMatches[idx].name.toUpperCase()}</span>`;
-                if ((idx + 1) % 4 === 0) optionsHtml += '<br>'; // Line break every 4
-            }
-            return [{
-                name: 'Multiple matches found',
-                story: `I found ${partialMatches.length} people matching "${query}". Click a name to select:`,
-                storyHtml: optionsHtml,
-                full: false,
-                choices: partialMatches
             }];
         }
 
@@ -1647,10 +1586,10 @@
                 // Show selection menu to user
                 document.getElementById('chatBox').innerHTML = '';
                 addMessage(query, true);
-                addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], null, storyMatch[0].storyHtml);
+                addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
                 // Store choices for selection
                 window.storyChoices = storyMatch[0].choices;
-                return { answer: storyMatch[0].story, sources: [], alreadyDisplayed: true };
+                return { answer: storyMatch[0].story, sources: [] };
             } else if (storyMatch[0].full === true) {
                 // Single exact match - show full story
                 if (storyMatch[0].showBtn) {
@@ -1710,8 +1649,8 @@
         } catch (e) { console.error('AI error:', e); }
         return { answer: "That's a great question! We invite you to learn more by visiting the official Church website.", sources: [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}] };
     }
-    function addMessage(t,i,s=[],extraBtn=null,htmlContent=null){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let paragraphs = t.split('\n').filter(p => p.trim());
-    let h = i ? '<p><strong>You asked:</strong> ' + paragraphs[0] + '</p>' : (htmlContent ? htmlContent : paragraphs.map(p => '<p style="margin-bottom:12px">' + p + '</p>').join(''));if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}if(extraBtn){h+='<button onclick="'+extraBtn.action+'" style="margin-top:15px;padding:10px 20px;background:#c9a961;border:none;border-radius:25px;color:#0a0a0a;font-weight:bold;cursor:pointer;">'+extraBtn.text+'</button>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
+    function addMessage(t,i,s=[],extraBtn=null){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let paragraphs = t.split('\n').filter(p => p.trim());
+    let h = i ? '<p><strong>You asked:</strong> ' + paragraphs[0] + '</p>' : paragraphs.map(p => '<p style="margin-bottom:12px">' + p + '</p>').join('');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}if(extraBtn){h+='<button onclick="'+extraBtn.action+'" style="margin-top:15px;padding:10px 20px;background:#c9a961;border:none;border-radius:25px;color:#0a0a0a;font-weight:bold;cursor:pointer;">'+extraBtn.text+'</button>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
         if(!q)return;
