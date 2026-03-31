@@ -1290,8 +1290,7 @@
 
                 try {
                     const answer = await askAI('The Trail: ' + trailTopicMap[locationKey]);
-                    const truncatedAnswer = truncateToCompleteSentence(answer.answer);
-                    aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + truncatedAnswer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p><div style="text-align:center; margin-top:15px; cursor:pointer; color:#c9a961;" onclick="collapseTrailResponse(this.parentNode)">▲ Collapse</div>';
+                    aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + answer.answer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p><div style="text-align:center; margin-top:15px; cursor:pointer; color:#c9a961;" onclick="collapseTrailResponse(this.parentNode)">▲ Collapse</div>';
                 } catch (e) {
                     aiResponse.innerHTML = '<p style="color:#c9a961;">Unable to load information at this time. Please try again later.</p>';
                 }
@@ -1335,8 +1334,7 @@
 
                 try {
                     const answer = await askAI('The Journey: ' + topicMap[topic]);
-                    const truncatedAnswer = truncateToCompleteSentence(answer.answer);
-                    aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + truncatedAnswer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p><div style="text-align:center; margin-top:15px; cursor:pointer; color:#c9a961;" onclick="collapseAIResponse(this.parentNode)">▲ Collapse</div>';
+                    aiResponse.innerHTML = '<p style="color:#ccc; line-height:1.8;">' + answer.answer.replace(/\n/g, '</p><p style="color:#ccc; line-height:1.8;">') + '</p><div style="text-align:center; margin-top:15px; cursor:pointer; color:#c9a961;" onclick="collapseAIResponse(this.parentNode)">▲ Collapse</div>';
                 } catch (e) {
                     aiResponse.innerHTML = '<p style="color:#c9a961;">Unable to load information at this time. Please try again later.</p>';
                 }
@@ -1365,7 +1363,7 @@
                 const selected = window.storyChoices[num - 1];
                 document.getElementById('chatBox').innerHTML = '';
                 addMessage(selected.name.toUpperCase(), true);
-                addMessage(selected.story, false, [{text:'📖 Tell My Story Too by Jolene Spendlove Allphin', url:'tell-my-story-too.txt'}]);
+                addMessage(selected.story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
                 window.storyChoices = null;
                 document.getElementById('userInput').value = '';
                 return;
@@ -1396,10 +1394,8 @@
             text.lastIndexOf('!'),
             text.lastIndexOf('?')
         );
-        // If no punctuation found, return as-is
-        if (lastPunctuation === -1) return text;
-        // If very short or last punctuation is near end, return as-is
-        if (lastPunctuation < 30 || text.length - lastPunctuation < 10) return text;
+        // If no punctuation found or very short, return as-is
+        if (lastPunctuation === -1 || lastPunctuation < 50) return text;
         // Return text up to and including the last punctuation
         return text.substring(0, lastPunctuation + 1).trim();
     }
@@ -1446,50 +1442,11 @@
 
         // Check for exact or close name matches
         const exactMatches = [];
-        const partialMatches = [];
-        
-        // Also search for keyword/phrase matches in the story content
-        const keywordMatches = [];
-        const searchPhrases = [
-            "meat in the cave",
-            "cave",
-            "dried buffalo meat",
-            "grandmother cranney",
-            "meat",
-            "cave"
-        ].filter(phrase => queryLower.includes(phrase));
-        
-        for (let i = 0; i < lines.length; i++) {
-            const lineLower = lines[i].toLowerCase();
-            // Search for keyword phrases in content
-            for (const phrase of searchPhrases) {
-                if (lineLower.includes(phrase)) {
-                    // Get surrounding context
-                    const start = Math.max(0, i - 3);
-                    const end = Math.min(lines.length, i + 30);
-                    let context = lines.slice(start, end).join('\n').trim();
-                    // Find the name this story belongs to
-                    let nameStart = Math.max(0, start - 50);
-                    let nameSection = lines.slice(Math.max(0, start-20), start).join('\n');
-                    let storyName = 'Unknown';
-                    const nameMatch = nameSection.match(/^([A-Z\s]{10,})$/m);
-                    if (nameMatch) storyName = nameMatch[1].trim();
-                    
-                    keywordMatches.push({ name: storyName, story: context });
-                    break;
-                }
-            }
-            if (keywordMatches.length >= 2) break;
-        }
-        
         for (const story of storyStarts) {
             const nameLower = story.name.toLowerCase();
-            const nameWords = nameLower.split(/\s+/).filter(w => w.length > 1);
-            
-            // Check if ALL name words are in the query (full name match)
-            const allNameWordsInQuery = nameWords.every(w => queryLower.includes(w));
-            
-            if (allNameWordsInQuery) {
+            // Check if all query words are in the name (case insensitive)
+            const allWordsMatch = queryWords.every(w => nameLower.includes(w));
+            if (allWordsMatch) {
                 // Get the full story
                 let storyEnd = story.index + 1;
                 for (let i = story.index + 1; i < lines.length; i++) {
@@ -1510,29 +1467,6 @@
                 if (displayStory.length > 5000) displayStory = displayStory.substring(0, 5000) + '\n\n[Story continues in original document...]';
                 exactMatches.push({ name: story.name, story: displayStory, fullStory: fullStory });
                 lastMatchedStory = { name: story.name, story: displayStory, fullStory: fullStory };
-            } else {
-                // Partial match - query has SOME words that match this name
-                const someWordsMatch = nameWords.some(w => queryLower.includes(w));
-                if (someWordsMatch && nameWords.length >= 2) {
-                    // Get the story
-                    let storyEnd = story.index + 1;
-                    for (let i = story.index + 1; i < lines.length; i++) {
-                        const line = lines[i].trim();
-                        if (/^[A-Z\s]{10,}$/.test(line) && line.length > 8 && !line.startsWith('---') && !line.includes('PAGE')) {
-                            storyEnd = i;
-                            break;
-                        }
-                        if (line.startsWith('--- PAGE')) {
-                            storyEnd = i;
-                            break;
-                        }
-                        storyEnd = i;
-                    }
-                    let fullStory = lines.slice(story.index, storyEnd).join('\n').trim();
-                    let displayStory = fullStory;
-                    if (displayStory.length > 5000) displayStory = displayStory.substring(0, 5000) + '\n\n[Story continues in original document...]';
-                    partialMatches.push({ name: story.name, story: displayStory, fullStory: fullStory });
-                }
             }
         }
 
@@ -1540,7 +1474,7 @@
             // Single exact match - return the full story with button
             return [{ name: exactMatches[0].name, story: exactMatches[0].story, full: true, showBtn: true, fullStory: exactMatches[0].fullStory }];
         } else if (exactMatches.length > 1) {
-            // Multiple exact matches - create selection menu
+            // Multiple matches - create selection menu
             const options = exactMatches.map((m, idx) => `${idx + 1}. ${m.name.toUpperCase()}`).join('\n');
             return [{
                 name: 'Multiple matches found',
@@ -1549,29 +1483,9 @@
                 choices: exactMatches
             }];
         }
-        
-        // Check for partial matches (if query has some name words)
-        if (partialMatches.length === 1) {
-            return [{ name: partialMatches[0].name, story: partialMatches[0].story, full: true, showBtn: true, fullStory: partialMatches[0].fullStory }];
-        } else if (partialMatches.length > 1) {
-            // Multiple partial matches - create selection menu
-            const options = partialMatches.map((m, idx) => `${idx + 1}. ${m.name.toUpperCase()}`).join('\n');
-            return [{
-                name: 'Multiple matches found',
-                story: `I found ${partialMatches.length} people matching "${query}". Which one would you like to hear about?\n\n${options}\n\nPlease type the number (1-${partialMatches.length}) to select.`,
-                full: false,
-                choices: partialMatches
-            }];
-        }
-        
-        // Check for keyword matches in story content (like "meat in the cave")
-        if (keywordMatches.length > 0) {
-            // Return keyword match with story content
-            return [{ name: keywordMatches[0].name, story: keywordMatches[0].story, full: true, showBtn: true }];
-        }
 
-        // No exact match - fall back to keyword search (reusing keywordMatches from earlier or creating new)
-        const fallbackKeywordMatches = [];
+        // No exact match - fall back to keyword search
+        const keywordMatches = [];
         for (let i = 0; i < lines.length; i++) {
             const lineLower = lines[i].toLowerCase();
             if (queryWords.some(term => lineLower.includes(term))) {
@@ -1580,20 +1494,24 @@
                 let context = lines.slice(start, end).join(' ').trim();
                 if (context.length > 500) context = context.substring(0, 500) + '...';
                 if (context.length > 50) {
-                    fallbackKeywordMatches.push(context);
+                    keywordMatches.push(context);
                 }
             }
-            if (fallbackKeywordMatches.length >= 3) break;
+            if (keywordMatches.length >= 3) break;
         }
-        return fallbackKeywordMatches.length > 0 ? fallbackKeywordMatches : null;
+        return keywordMatches.length > 0 ? keywordMatches : null;
     }
 
     async function askTellMyStory() {
-        // Always get a random story when clicking the topic button
-        // Clear any previous match so we get fresh random story
-        lastMatchedStory = null;
+        // If we have a last matched story, show that full version
+        if (lastMatchedStory && lastMatchedStory.fullStory) {
+            document.getElementById('chatBox').innerHTML = '';
+            addMessage(lastMatchedStory.name.toUpperCase(), true);
+            addMessage(lastMatchedStory.fullStory, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
+            return;
+        }
         
-        // Get a random story from the file
+        // Otherwise get a random story from the file
         const text = await loadTellMyStory();
         if (!text) {
             addMessage("Sorry, couldn't load stories at this time.", false);
@@ -1643,13 +1561,13 @@
         // Get the full story
         let story = lines.slice(randomIndex, storyEnd).join('\n').trim();
 
-        // Clean up - use same logic as search (5000 chars)
+        // Clean up and limit length
         story = story.replace(/Copyright.*?this time\./gi, '').trim();
-        if (story.length > 5000) story = story.substring(0, 5000) + '\n\n[Story continues in original document...]';
+        if (story.length > 3000) story = story.substring(0, 3000) + '\n\n[Story continues...]';
 
         document.getElementById('chatBox').innerHTML = '';
         addMessage("Tell My Story", true);
-        addMessage(story, false, [{text:'📖 Tell My Story Too by Jolene Spendlove Allphin', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
+        addMessage(story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
     }
 
     // ========================================
@@ -1669,7 +1587,7 @@
                 // Show selection menu to user
                 document.getElementById('chatBox').innerHTML = '';
                 addMessage(query, true);
-                addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too by Jolene Spendlove Allphin', url:'tell-my-story-too.txt'}]);
+                addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
                 // Store choices for selection
                 window.storyChoices = storyMatch[0].choices;
                 return { answer: storyMatch[0].story, sources: [] };
@@ -1680,7 +1598,7 @@
                     addMessage(query, true);
                     // Use fullStory if available, otherwise truncated version
                     const storyContent = storyMatch[0].fullStory || storyMatch[0].story;
-                    addMessage(storyContent, false, [{text:'📖 Tell My Story Too by Jolene Spendlove Allphin', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
+                    addMessage(storyContent, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
                     return { answer: storyContent, sources: [], alreadyDisplayed: true };
                 } else {
                     systemContent += '\n\nEXACT MATCH FROM "TELL MY STORY TOO":\n' + storyMatch[0].story;
@@ -1740,34 +1658,26 @@
         // Clear chat for fresh start
         document.getElementById('chatBox').innerHTML='';
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
-        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);
-        // Check Tell My Story FIRST for pioneer names
-        try {
-            const storyMatch = await searchTellMyStory(q);
-            let response;
-            if (storyMatch && storyMatch[0] && (storyMatch[0].full || storyMatch[0].choices)) {
-                // It's a Tell My Story match - handle it in askAI
-                response = await askAI(q);
+        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);l.remove();b.disabled=false;// Check Tell My Story FIRST for pioneer names
+        const storyMatch = await searchTellMyStory(q);
+        let response;
+        if (storyMatch && storyMatch[0] && (storyMatch[0].full || storyMatch[0].choices)) {
+            // It's a Tell My Story match - handle it in askAI
+            response = await askAI(q);
+        } else {
+            // Check local database
+            const localAnswer = findAnswer(q);
+            if (localAnswer && localAnswer.found) {
+                response = localAnswer;
             } else {
-                // Check local database
-                const localAnswer = findAnswer(q);
-                if (localAnswer && localAnswer.found) {
-                    response = localAnswer;
-                } else {
-                    response = await askAI(q);
-                }
+                response = await askAI(q);
             }
-
-            // Remove loading indicator
-            l.remove();
-
-            // Skip if the answer was already displayed (Tell My Story match)
-            if (response.alreadyDisplayed) return;
-
-            addMessage(response.answer,false,response.sources)
-        } finally {
-            b.disabled=false;
         }
+
+        // Skip if the answer was already displayed (Tell My Story match)
+        if (response.alreadyDisplayed) return;
+
+        addMessage(response.answer,false,response.sources)
      }
     function clearChat() {
         conversationHistory = [];
