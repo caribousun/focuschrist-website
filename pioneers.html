@@ -1426,36 +1426,61 @@
         const text = await loadTellMyStory();
         if (!text) return null;
 
-        const queryLower = query.toLowerCase();
+        const queryLower = query.toLowerCase().trim();
+        // Keep original query words for matching, filter out common question words
+        const stopWords = ['what', 'who', 'where', 'when', 'why', 'how', 'tell', 'me', 'about', 'the', 'a', 'an', 'is', 'are', 'was', 'were', 'did', 'do', 'does', 'can', 'could', 'would', 'should', 'pioneer', 'handcart', 'company'];
+        const queryWords = queryLower.split(/\s+/).filter(t => t.length > 1 && !stopWords.includes(t));
         const lines = text.split('\n');
 
-        // First, try to find exact name matches (full name in uppercase in the file)
-        const queryWords = queryLower.split(' ').filter(t => t.length > 1);
-
-        // Find story starts (uppercase names)
+        // Find story starts (uppercase names) - be more inclusive
         const storyStarts = [];
         for (let i = 0; i < lines.length; i++) {
             const line = lines[i].trim();
-            if (/^[A-Z\s]{10,}$/.test(line) && line.length > 8 && !line.startsWith('---') && !line.includes('PAGE')) {
+            // Match uppercase names - be more flexible (at least 4 chars, allowing shorter names)
+            if (/^[A-Z][A-Z\s]{3,}$/.test(line) && line.length >= 5 && !line.startsWith('---') && !line.includes('PAGE') && !line.includes('TELL MY')) {
+                // Check if next few lines have Company info or biographical content
                 const nextLines = lines.slice(i, i+5).join(' ').toLowerCase();
-                if (nextLines.includes('company') || nextLines.includes('handcart') || nextLines.includes('wagon') || nextLines.includes('born')) {
+                if (nextLines.includes('company') || nextLines.includes('handcart') || nextLines.includes('wagon') || nextLines.includes('born') || nextLines.includes('died') || nextLines.includes('married')) {
                     storyStarts.push({ index: i, name: line.trim() });
                 }
             }
         }
 
-        // Check for exact or close name matches
+        // Check for name matches - be more flexible
         const exactMatches = [];
         for (const story of storyStarts) {
             const nameLower = story.name.toLowerCase();
-            // Check if all query words are in the name (case insensitive)
-            const allWordsMatch = queryWords.every(w => nameLower.includes(w));
-            if (allWordsMatch) {
+            
+            // Check for matches: 
+            // 1. All query words match (original behavior)
+            // 2. OR main query word matches significant part of name
+            // 3. OR name contains main query word
+            let isMatch = false;
+            if (queryWords.length > 0) {
+                const mainWord = queryWords[0]; // Use first significant word as main
+                // Check if query contains a name-like word that matches
+                const nameWords = nameLower.split(/\s+/).filter(w => w.length > 2);
+                
+                // Exact all-words match
+                if (queryWords.every(w => nameLower.includes(w))) {
+                    isMatch = true;
+                }
+                // Partial first name match - "John" matches "John Smith"
+                else if (nameWords.some(nw => nw.startsWith(mainWord) && mainWord.length >= 3)) {
+                    isMatch = true;
+                }
+                // Single word query matches any significant part of name
+                else if (queryWords.length === 1 && nameWords.some(nw => nw.includes(mainWord) || mainWord.includes(nw))) {
+                    isMatch = true;
+                }
+            }
+            
+            if (isMatch) {
                 // Get the full story
                 let storyEnd = story.index + 1;
                 for (let i = story.index + 1; i < lines.length; i++) {
                     const line = lines[i].trim();
-                    if (/^[A-Z\s]{10,}$/.test(line) && line.length > 8 && !line.startsWith('---') && !line.includes('PAGE')) {
+                    if (/^[A-Z][A-Z\s]{3,}$/.test(line) && line.length >= 5 && !line.startsWith('---') && !line.includes('PAGE') && !line.includes('TELL MY')) {
                         storyEnd = i;
                         break;
                     }
@@ -1488,20 +1513,30 @@
             }];
         }
 
-        // No exact match - fall back to keyword search
+        // No exact match - fall back to keyword search with better context
         const keywordMatches = [];
+        // Use more specific search terms - look for company names, trail terms, etc.
+        const searchTerms = queryWords.length > 0 ? queryWords : [queryLower];
+        
         for (let i = 0; i < lines.length; i++) {
             const lineLower = lines[i].toLowerCase();
-            if (queryWords.some(term => lineLower.includes(term))) {
-                const start = Math.max(0, i - 2);
-                const end = Math.min(lines.length, i + 10);
+            // Look for multiple term matches in same vicinity for better context
+            const matchedTerms = searchTerms.filter(term => lineLower.includes(term) && term.length > 2);
+            
+            if (matchedTerms.length > 0) {
+                // Get more context around the match
+                const start = Math.max(0, i - 3);
+                const end = Math.min(lines.length, i + 12);
                 let context = lines.slice(start, end).join(' ').trim();
-                if (context.length > 500) context = context.substring(0, 500) + '...';
-                if (context.length > 50) {
-                    keywordMatches.push(context);
+                if (context.length > 600) context = context.substring(0, 600) + '...';
+                if (context.length > 80) {
+                    // Avoid duplicates
+                    if (!keywordMatches.some(m => m.includes(context.substring(0, 100)))) {
+                        keywordMatches.push(context);
+                    }
                 }
             }
-            if (keywordMatches.length >= 3) break;
+            if (keywordMatches.length >= 4) break;
         }
         return keywordMatches.length > 0 ? keywordMatches : null;
     }
