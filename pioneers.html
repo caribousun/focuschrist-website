@@ -537,11 +537,13 @@
  }
 
  .map-point.expanded {
-
  background: #222;
-
  border-left-color: #fff;
-
+ }
+ .map-point.expanded p {
+ font-size: 0.9em;
+ line-height: 1.8;
+ color: #bbb;
  }
 
  .map-point:last-child { margin-bottom: 0; }
@@ -1510,7 +1512,7 @@
             addMessage(lastMatchedStory.fullStory, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
             return;
         }
-        
+
         // Otherwise get a random story from the file
         const text = await loadTellMyStory();
         if (!text) {
@@ -1608,7 +1610,7 @@
                 systemContent += '\n\nRELEVANT CONTENT FROM "TELL MY STORY TOO" (use this if relevant):\n' + storyMatch.join('\n\n');
             }
         }
-        
+
         // Only continue to API call if we didn't already return
         const systemPrompt = { role: 'system', content: systemContent };
 
@@ -1627,7 +1629,7 @@
         try {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), 45000);
-            
+
             const response = await fetch('https://focuschrist-groq-proxy.caribousun.workers.dev', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -1668,7 +1670,7 @@
         l.className='loading';
         l.innerHTML='<p>🙏 Seeking divine guidance... (may take up to 30 seconds)</p>';
         document.getElementById('chatBox').appendChild(l);
-        
+
         // Check Tell My Story FIRST for pioneer names
         const storyMatch = await searchTellMyStory(q);
         let response;
@@ -1705,7 +1707,7 @@
         // Remove loading and enable button
         l.remove();
         b.disabled=false;
-        
+
         // Skip if the answer was already displayed
         if (response && response.alreadyDisplayed) return;
 
