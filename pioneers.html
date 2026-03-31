@@ -1442,6 +1442,7 @@
 
         // Check for exact or close name matches
         const exactMatches = [];
+        const partialMatches = [];
         
         // Also search for keyword/phrase matches in the story content
         const keywordMatches = [];
@@ -1481,7 +1482,7 @@
             const nameLower = story.name.toLowerCase();
             const nameWords = nameLower.split(/\s+/).filter(w => w.length > 1);
             
-            // Check if ALL name words are in the query (query contains the full name)
+            // Check if ALL name words are in the query (full name match)
             const allNameWordsInQuery = nameWords.every(w => queryLower.includes(w));
             
             if (allNameWordsInQuery) {
@@ -1505,6 +1506,29 @@
                 if (displayStory.length > 5000) displayStory = displayStory.substring(0, 5000) + '\n\n[Story continues in original document...]';
                 exactMatches.push({ name: story.name, story: displayStory, fullStory: fullStory });
                 lastMatchedStory = { name: story.name, story: displayStory, fullStory: fullStory };
+            } else {
+                // Partial match - query has SOME words that match this name
+                const someWordsMatch = nameWords.some(w => queryLower.includes(w));
+                if (someWordsMatch && nameWords.length >= 2) {
+                    // Get the story
+                    let storyEnd = story.index + 1;
+                    for (let i = story.index + 1; i < lines.length; i++) {
+                        const line = lines[i].trim();
+                        if (/^[A-Z\s]{10,}$/.test(line) && line.length > 8 && !line.startsWith('---') && !line.includes('PAGE')) {
+                            storyEnd = i;
+                            break;
+                        }
+                        if (line.startsWith('--- PAGE')) {
+                            storyEnd = i;
+                            break;
+                        }
+                        storyEnd = i;
+                    }
+                    let fullStory = lines.slice(story.index, storyEnd).join('\n').trim();
+                    let displayStory = fullStory;
+                    if (displayStory.length > 5000) displayStory = displayStory.substring(0, 5000) + '\n\n[Story continues in original document...]';
+                    partialMatches.push({ name: story.name, story: displayStory, fullStory: fullStory });
+                }
             }
         }
 
@@ -1512,13 +1536,27 @@
             // Single exact match - return the full story with button
             return [{ name: exactMatches[0].name, story: exactMatches[0].story, full: true, showBtn: true, fullStory: exactMatches[0].fullStory }];
         } else if (exactMatches.length > 1) {
-            // Multiple matches - create selection menu
+            // Multiple exact matches - create selection menu
             const options = exactMatches.map((m, idx) => `${idx + 1}. ${m.name.toUpperCase()}`).join('\n');
             return [{
                 name: 'Multiple matches found',
                 story: `I found ${exactMatches.length} people matching "${query}". Which one would you like to hear about?\n\n${options}\n\nPlease type the number (1-${exactMatches.length}) to select.`,
                 full: false,
                 choices: exactMatches
+            }];
+        }
+        
+        // Check for partial matches (if query has some name words)
+        if (partialMatches.length === 1) {
+            return [{ name: partialMatches[0].name, story: partialMatches[0].story, full: true, showBtn: true, fullStory: partialMatches[0].fullStory }];
+        } else if (partialMatches.length > 1) {
+            // Multiple partial matches - create selection menu
+            const options = partialMatches.map((m, idx) => `${idx + 1}. ${m.name.toUpperCase()}`).join('\n');
+            return [{
+                name: 'Multiple matches found',
+                story: `I found ${partialMatches.length} people matching "${query}". Which one would you like to hear about?\n\n${options}\n\nPlease type the number (1-${partialMatches.length}) to select.`,
+                full: false,
+                choices: partialMatches
             }];
         }
         
