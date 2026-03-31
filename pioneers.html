@@ -1638,7 +1638,7 @@
                 addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
                 // Store choices for selection
                 window.storyChoices = storyMatch[0].choices;
-                return { answer: storyMatch[0].story, sources: [] };
+                return { answer: storyMatch[0].story, sources: [], alreadyDisplayed: true };
             } else if (storyMatch[0].full === true) {
                 // Single exact match - show full story
                 if (storyMatch[0].showBtn) {
