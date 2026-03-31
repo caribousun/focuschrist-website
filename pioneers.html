@@ -1632,8 +1632,10 @@
                     model: 'llama-3.1-8b-instant',
                     messages: messages,
                     temperature: 0.7,
-                    max_tokens: 800
+                    max_tokens: 1500
                 })
+            }, {
+                signal: AbortSignal.timeout(45000) // 45 second timeout
             });
             const data = await response.json();
             if (data.choices && data.choices[0]) {
@@ -1658,7 +1660,13 @@
         // Clear chat for fresh start
         document.getElementById('chatBox').innerHTML='';
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
-        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);l.remove();b.disabled=false;// Check Tell My Story FIRST for pioneer names
+        b.disabled=true;
+        const l=document.createElement('div');
+        l.className='loading';
+        l.innerHTML='<p>🙏 Seeking divine guidance... (may take up to 30 seconds)</p>';
+        document.getElementById('chatBox').appendChild(l);
+        
+        // Check Tell My Story FIRST for pioneer names
         const storyMatch = await searchTellMyStory(q);
         let response;
         if (storyMatch && storyMatch[0] && (storyMatch[0].full || storyMatch[0].choices)) {
@@ -1667,6 +1675,39 @@
         } else {
             // Check local database
             const localAnswer = findAnswer(q);
+            if (localAnswer && localAnswer.found) {
+                response = localAnswer;
+            } else {
+                // Try AI with retry logic
+                let retries = 2;
+                while (retries >= 0) {
+                    try {
+                        response = await askAI(q);
+                        // Check if we got a valid response (not the default)
+                        if (response && response.answer && !response.answer.includes("That's a great question!")) {
+                            break; // Got a good response
+                        }
+                    } catch (e) {
+                        console.error('AI error:', e);
+                    }
+                    retries--;
+                    if (retries >= 0) {
+                        // Wait a bit before retrying
+                        await new Promise(resolve => setTimeout(resolve, 1000));
+                    }
+                }
+            }
+        }
+
+        // Remove loading and enable button
+        l.remove();
+        b.disabled=false;
+        
+        // Skip if the answer was already displayed
+        if (response && response.alreadyDisplayed) return;
+
+        addMessage(response && response.answer ? response.answer : "That's a great question! We invite you to learn more by visiting the official Church website.",false,response && response.sources ? response.sources : [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);
+     }
             if (localAnswer && localAnswer.found) {
                 response = localAnswer;
             } else {
