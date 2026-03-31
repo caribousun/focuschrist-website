@@ -1585,15 +1585,11 @@
     }
 
     async function askTellMyStory() {
-        // If we have a last matched story, show that full version
-        if (lastMatchedStory && lastMatchedStory.fullStory) {
-            document.getElementById('chatBox').innerHTML = '';
-            addMessage(lastMatchedStory.name.toUpperCase(), true);
-            addMessage(lastMatchedStory.fullStory, false, [{text:'📖 Tell My Story Too by Jolene Spendlove Allphin', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
-            return;
-        }
+        // Always get a random story when clicking the topic button
+        // Clear any previous match so we get fresh random story
+        lastMatchedStory = null;
         
-        // Otherwise get a random story from the file
+        // Get a random story from the file
         const text = await loadTellMyStory();
         if (!text) {
             addMessage("Sorry, couldn't load stories at this time.", false);
