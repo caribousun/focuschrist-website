@@ -107,12 +107,20 @@
             .category-btn { padding: 4px 15px; font-size: 0.8em; }
         }
         @media (min-width: 769px) {
-            .hamburger { display: block; cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; }
-            .hamburger-menu { display: none; position: absolute; top: 50px; right: 20px; background: rgba(0,0,0,0.95); padding: 15px; border-radius: 8px; z-index: 1000; min-width: 180px; }
-            .hamburger-menu.show { display: block; }
-            .hamburger-menu a { color: #c9a961; padding: 4px 15px; text-decoration: none; display: block; }
-            .hamburger-menu a:hover { background: rgba(201,169,97,0.1); }
             .nav-links { display: flex; }
+            .hamburger { display: block; cursor: pointer; font-size: 1.5em; color: #c9a961; line-height: 1; padding: 10px; margin: -10px; }
+            .hamburger-menu {
+                display: none;
+                position: absolute;
+                top: 50px;
+                right: 20px;
+                background: rgba(0,0,0,0.95);
+                padding: 15px;
+                border-radius: 8px;
+                z-index: 1000;
+            }
+            .hamburger-menu.show { display: flex; flex-direction: column; gap: 10px; }
+            .hamburger-menu a { color: #c9a961; font-size: 0.9em; }
         }
     </style>
 </head>
@@ -127,7 +135,7 @@
             <a href="about.html">ABOUT</a>
         </div>
         <div class="hamburger-wrap">
-            <span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle menu"></span>
+            <span class="hamburger" onclick="toggleMenu()"></span>
             <div class="hamburger-menu" id="hamburgerMenu">
                 <a href="index.html">HOME</a>
                 <a href="ask.html">ASK</a>
@@ -640,7 +648,7 @@
 
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
-    async function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;const q='Tell me about '+t;document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();addMessage(ai.answer,false,ai.sources);document.getElementById('userInput').value=''}
+    async function askTopic(t){const q='Tell me about '+t;document.getElementById('userInput').value='';document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();addMessage(ai.answer,false,ai.sources)}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
     function findAnswer(q){
         q=q.toLowerCase();
@@ -726,9 +734,6 @@
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
         if(!q)return;
-        // Clear chat for fresh start AND clear conversation history
-        document.getElementById('chatBox').innerHTML='';
-        conversationHistory = [];
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
         b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();b.disabled=false;addMessage(ai.answer,false,ai.sources)
      }
