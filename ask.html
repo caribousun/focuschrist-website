@@ -265,7 +265,7 @@
     document.addEventListener('click', function(e) {
         var menu = document.getElementById('hamburgerMenu');
         var hamburger = document.querySelector('.hamburger');
-        if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+        if (menu.classList.contains('show') && !menu.contains(e.target) && !hamburger.contains(e.target)) {
             menu.classList.remove('show');
         }
     });
