@@ -45,7 +45,7 @@
             margin: 5px 0;
             box-shadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961;
         }
-        .hamburger-menu { display: none; position: absolute; top: 100%; right: 0; background: rgba(0,0,0,0.95); padding: 15px; border-radius: 8px; z-index: 1000; min-width: 180px; margin-top: 10px; }
+        .hamburger-menu { display: none; position: fixed; top: 60px; right: 20px; background: rgba(0,0,0,0.98); padding: 15px; border-radius: 8px; z-index: 9999; min-width: 180px; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
         .hamburger-menu.show { display: block; }
         .hamburger-menu a { display: block; color: #c9a961; padding: 4px 15px; text-decoration: none; border-bottom: 1px solid rgba(201,169,97,0.2); }
         .hamburger-menu a:hover { background: rgba(201,169,97,0.1); }
@@ -88,15 +88,16 @@
             .hamburger { display: block; cursor: pointer; font-size: 1.5em; color: #c9a961; z-index: 201; position: relative; }
             .hamburger-menu {
                 display: none;
-                position: absolute;
-                top: 40px;
+                position: fixed;
+                top: 60px;
                 right: 0;
                 width: 200px;
                 background: rgba(0,0,0,0.98);
                 flex-direction: column;
                 padding: 10px;
                 gap: 8px;
-                z-index: 1000;
+                z-index: 9999;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             }
             .hamburger-menu.show { display: flex; }
             .hamburger-menu a { font-size: 0.9em; padding: 6px 15px; color: #c9a961; border-bottom: 1px solid rgba(201,169,97,0.2); }
@@ -108,13 +109,14 @@
             .hamburger { display: block; }
             .hamburger-menu {
                 display: none;
-                position: absolute;
-                top: 50px;
+                position: fixed;
+                top: 60px;
                 right: 20px;
-                background: rgba(0,0,0,0.95);
+                background: rgba(0,0,0,0.98);
                 padding: 15px;
                 border-radius: 8px;
-                z-index: 1000;
+                z-index: 9999;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             }
             .hamburger-menu.show { display: flex; flex-direction: column; gap: 10px; }
             .hamburger-menu a { color: #c9a961; font-size: 0.9em; }
