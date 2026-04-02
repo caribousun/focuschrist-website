@@ -129,9 +129,12 @@
 ---
 
 ### 7. Jesus Art Folder Monitor (Every 60 Minutes)
-- Check folder: C:\Users\carib\OneDrive\Desktop\Jesus\Jesus Art
-- Compare file list to art.html in focuschrist-website
-- If new images found: add to art.html, rename by scriptural event, push to GitHub
+- Check folder: C:\Users\carib\OneDrive\Desktop\Jesus\Jesus Art (the source of truth)
+- Compare to art.html in focuschrist-website
+- **SYNC RULE:** Website must MATCH folder exactly
+- **If new image in folder but NOT on website:** Add to art.html artImages arrays (BOTH), copy file to website, push to GitHub
+- **If image on website but NOT in folder:** Remove from art.html artImages arrays, delete from website, push to GitHub
+- Rename files to match site format (spaces to hyphens, etc.) 
 - Track last check time in brain/cortex/jesus-art-monitor.json
 
 ---
