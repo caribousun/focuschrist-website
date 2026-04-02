@@ -130,7 +130,7 @@
 
 ### 7. Jesus Art Folder Monitor (Every 60 Minutes)
 - Check folder: C:\Users\carib\OneDrive\Desktop\Jesus\Jesus Art
-- Compare file list to what's on focuschrist-website
+- Compare file list to art.html in focuschrist-website
 - If new images found: add to art.html, rename by scriptural event, push to GitHub
 - Track last check time in brain/cortex/jesus-art-monitor.json
 

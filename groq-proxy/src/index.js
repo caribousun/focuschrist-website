@@ -9,7 +9,7 @@ export default {
     }
 
     // Your Groq API key - stored in worker secrets, never exposed
-    const GROQ_API_KEY = env.GROQ_API_KEY;
+    const GROQ_API_KEY = env.GROQ_KEY_NEW; // Using new secret
     
     if (!GROQ_API_KEY) {
       return new Response('API key not configured', { status: 500 });
