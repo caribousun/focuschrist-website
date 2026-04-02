@@ -1612,7 +1612,7 @@
         const storyMatch = await searchTellMyStory(query);
 
         // Build messages array with system prompt + conversation history + new query
-        let systemContent = 'You are a helpful assistant for the FocusChrist website. Answer questions about Jesus Christ, the Bible, Book of Mormon, Latter-day Saint doctrine, and Mormon pioneers. Be respectful to all faiths. Keep answers focused on our faith with love and respect for others. Never be rude about other religions. IMPORTANT: Always end your response with a complete sentence ending in a period.';
+        let systemContent = 'You are a helpful assistant for the FocusChrist website about Mormon pioneers. Answer ANY question the user asks. After your answer, ALWAYS add 1-2 sentences connecting it to Jesus Christ and the pioneer experience. Be brief and natural. IMPORTANT: Always end your response with a complete sentence ending in a period.';
 
         // Add Tell My Story context if found
         if (storyMatch && storyMatch.length > 0) {
