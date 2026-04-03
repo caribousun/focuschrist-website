@@ -1684,12 +1684,7 @@
         } catch (e) { console.error('AI error:', e); }
         return { answer: "That's a great question! We invite you to learn more by visiting the official Church website.", sources: [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}] };
     }
-    function addMessage(t,i,s=[],extraBtn=null){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');// Auto-format into paragraphs if no newlines exist
-        let rawText = t;
-        if (!t.includes('\n') && t.length > 100) {
-            rawText = t.replace(/([.!?])\s+/g, '$1\n').replace(/,\s+/g, ', ');
-        }
-        let paragraphs = rawText.split('\n').filter(p => p.trim());
+    function addMessage(t,i,s=[],extraBtn=null){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let paragraphs = t.split('\n').filter(p => p.trim());
     let h = i ? '<p style="color:#fff;font-family:Segoe UI,Tahoma,sans-serif;line-height:1.8;margin-bottom:12px;"><strong>You asked:</strong> ' + paragraphs[0] + '</p>' : paragraphs.map(p => '<p style="color:#ccc;font-family:Segoe UI,Tahoma,sans-serif;line-height:1.8;margin-bottom:15px;">' + p + '</p>').join('');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}if(extraBtn){h+='<button onclick="'+extraBtn.action+'" style="margin-top:15px;padding:10px 20px;background:#c9a961;border:none;border-radius:25px;color:#0a0a0a;font-weight:bold;cursor:pointer;">'+extraBtn.text+'</button>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
