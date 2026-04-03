@@ -1,0 +1,22 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # deploy when main is updated
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false  # disable submodules to avoid exit code 128
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload to GitHub Pages
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./  # deploy everything in repo root
+      - name: Deploy
+        uses: actions/deploy-pages@v1
