@@ -2,6 +2,6 @@
 
 April 3, 2026
 
-- Paragraph formatting on ask page
-- Paragraph formatting on pioneers page
-- Journey/Trail/Willie/Martin sections formatted into paragraphs
+- Added concurrency control to deploy-pages.yml
+- Prevents deployment in progress errors
+- Site verified working at focuschrist.com
