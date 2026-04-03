@@ -1,9 +1,7 @@
 # RESTORE POINT
 
-April 2, 2026
+April 3, 2026
 
-Updates:
-- Full answers first, then wrap to Christ
-- Living Christ foundation as base
-- Auto-paragraph formatting on both pages
-- Pioneers: wrap to Christ AND pioneers
+- Paragraph formatting on ask page
+- Paragraph formatting on pioneers page
+- Journey/Trail/Willie/Martin sections formatted into paragraphs
