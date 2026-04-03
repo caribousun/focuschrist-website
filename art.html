@@ -213,6 +213,34 @@
             color: #c9a961;
             font-size: 40px;
             cursor: pointer;
+            z-index: 1001;
+        }
+        
+        .modal .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #c9a961;
+            font-size: 50px;
+            cursor: pointer;
+            padding: 20px;
+            user-select: none;
+            transition: color 0.3s;
+            z-index: 1001;
+        }
+        
+        .modal .nav-arrow:hover { color: #fff; }
+        .modal .nav-arrow.left { left: 20px; }
+        .modal .nav-arrow.right { right: 20px; }
+        
+        .modal .image-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #c9a961;
+            font-size: 1em;
+            z-index: 1001;
         }
         
         /* Footer */
@@ -412,9 +440,12 @@
     </div>
     
     <!-- Fullscreen Modal -->
-    <div class="modal" id="imageModal" onclick="closeModal()">
-        <span class="close">&times;</span>
+    <div class="modal" id="imageModal" onclick="handleModalClick(event)">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <span class="nav-arrow left" onclick="navigate(-1)">&#10094;</span>
         <img id="modalImage" src="" alt="Full screen">
+        <span class="nav-arrow right" onclick="navigate(1)">&#10095;</span>
+        <div class="image-counter" id="imageCounter"></div>
     </div>
     
     <!-- Footer -->
@@ -424,6 +455,9 @@
     </footer>
     
     <script>
+        var galleryImages = [];
+        var currentIndex = 0;
+        
         function toggleMenu() {
             var menu = document.getElementById('hamburgerMenu');
             menu.classList.toggle('show');
@@ -437,22 +471,40 @@
         });
         
         function openModal(element) {
-            const img = element.querySelector('img');
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            modalImg.src = img.src;
-            modal.classList.add('active');
+            galleryImages = Array.from(document.querySelectorAll('.gallery-item img')).map(img => img.src);
+            currentIndex = galleryImages.indexOf(element.querySelector('img').src);
+            showImage(currentIndex);
+            document.getElementById('imageModal').classList.add('active');
             document.body.style.overflow = 'hidden';
         }
         
+        function showImage(index) {
+            currentIndex = ((index % galleryImages.length) + galleryImages.length) % galleryImages.length;
+            document.getElementById('modalImage').src = galleryImages[currentIndex];
+            document.getElementById('imageCounter').textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+        }
+        
+        function navigate(direction) {
+            showImage(currentIndex + direction);
+        }
+        
+        function handleModalClick(event) {
+            if (event.target.id === 'imageModal' || event.target.classList.contains('close')) {
+                closeModal();
+            }
+        }
+        
         function closeModal() {
-            const modal = document.getElementById('imageModal');
-            modal.classList.remove('active');
+            document.getElementById('imageModal').classList.remove('active');
             document.body.style.overflow = 'auto';
         }
         
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeModal();
+            if (document.getElementById('imageModal').classList.contains('active')) {
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') navigate(-1);
+                if (e.key === 'ArrowRight') navigate(1);
+            }
         });
     </script>
 </body>
