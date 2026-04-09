@@ -1005,6 +1005,12 @@
             menu.classList.remove('show');
         }
     });
+    // Close menu when clicking any link inside hamburger-menu
+    document.querySelectorAll('.hamburger-menu a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            document.getElementById('hamburgerMenu').classList.remove('show');
+        });
+    });
 
     const qaDatabase = {
         'is it true': { answer: "That's a great question - one that many people ask. The answer comes through personal prayer and feeling the Holy Ghost. Moroni 10:4-5 invites you to ask God with sincere intent if this is true. Look for evidence in the Restoration, the Book of Mormon, and the teachings that resonate with your heart.", sources: [{text:'📜 Moroni 10:4-5',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/10.4'},{text:'🕍 How do I know its true?',url:'https://www.churchofjesuschrist.org/study/topics/knowing-the-church-is-true'}] },
