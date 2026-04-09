@@ -642,8 +642,18 @@
                     temperature: 0.7,
                     max_tokens: 800
                 })
+            }).catch(err => {
+                console.error('Fetch error:', err);
+                throw err;
             });
-            const data = await response.json();
+            if (!response.ok) {
+                console.error('API error:', response.status, response.statusText);
+                throw new Error(`API error: ${response.status}`);
+            }
+            const data = await response.json().catch(err => {
+                console.error('JSON parse error:', err);
+                throw err;
+            });
             if (data.choices && data.choices[0]) {
                 let answer = data.choices[0].message.content;
                 
@@ -693,7 +703,7 @@
         document.getElementById('chatBox').innerHTML='';
         conversationHistory = [];
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
-        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();b.disabled=false;addMessage(ai.answer,false,ai.sources)
+        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);console.log('Calling askAI with:', q);const ai=await askAI(q);console.log('askAI returned:', ai);l.remove();b.disabled=false;addMessage(ai.answer,false,ai.sources);console.log('Response displayed')
      }
     function clearChat() {
         document.getElementById('chatBox').innerHTML = '<div class="welcome"><h3>🕍 Welcome to focusChrist</h3><p>Ask any question about scripture, doctrine, or faith.<br>Type your question below or click a topic.</p><p class="welcome-sub">We answer with love - drawing from the Bible, Book of Mormon, D&C, and modern prophets.</p></div>';
