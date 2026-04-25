@@ -13,7 +13,11 @@
 ## ADDING IMAGES TO ART PAGE
 
 1. ✅ Copy image to `art/` folder first
-2. ✅ Edit ONLY art.html — do NOT touch ask.html
+2. ✅ **REMOVE SPACES from filenames** — rename to use hyphens or underscores:
+   - `Let it go.png` → `Let-It-Go.png`
+   - `Jesus image.jpg` → `Jesus-Image.jpg`
+3. ✅ Update art.html to use the new filename (no spaces)
+4. ✅ Edit ONLY art.html — do NOT touch ask.html
 3. ✅ Stage ONLY the files you need:
    ```bash
    git add art.html "art/filename.png"
