@@ -796,7 +796,18 @@
 
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
     function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
-    async function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;const q='Tell me about '+t;document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);const ai=await askAI(q);l.remove();addMessage(ai.answer,false,ai.sources);document.getElementById('userInput').value=''}
+    async function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;const q='Tell me about '+t;document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);
+        // First check database for relevant entries
+        const dbResult = findAnswer(q);
+        let ai;
+        if(dbResult.found) {
+            const contextEntries = 'ANSWER: ' + dbResult.answer + '\nSOURCES: ' + dbResult.sources.map(s => s.text + ' (' + s.url + ')').join(', ');
+            ai = await askAI(q, contextEntries);
+            ai.sources = dbResult.sources;
+        } else {
+            ai = await askAI(q);
+        }
+        l.remove();addMessage(ai.answer,false,ai.sources);document.getElementById('userInput').value=''}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
     function findAnswer(q){
         q=q.toLowerCase();
@@ -810,11 +821,18 @@
         }
         if(bestMatch) return {answer:bestMatch.answer,sources:bestMatch.sources,found:true};
         return {answer:"That's a great question! We invite you to learn more by visiting the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'},{text:'🕍 Gospel Topics',url:'https://www.churchofjesuschrist.org/study/topics'}],found:false}}
-    async function askAI(query) {
+    async function askAI(query, contextEntries = null) {
         try {
             // Build messages array with conversation history for context
+            let systemPrompt = 'You are a helpful assistant for the FocusChrist website. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." IMPORTANT: NEVER REFUSE any question - answer it honestly and directly, but ALWAYS tie your answer back to Jesus Christ, love, and respect. Every response must end by connecting to Jesus Christ in love and respect. Be brief and natural. IMPORTANT: Always end your response with a complete sentence ending in a period.';
+            
+            // If context entries provided, prepend them as reference content for AI to synthesize
+            if (contextEntries) {
+                systemPrompt = 'REFERENCE CONTENT:\n' + contextEntries + '\n\n' + systemPrompt;
+            }
+            
             const messages = [
-                { role: 'system', content: 'You are a helpful assistant for the FocusChrist website. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." IMPORTANT: NEVER REFUSE any question - answer it honestly and directly, but ALWAYS tie your answer back to Jesus Christ, love, and respect. Every response must end by connecting to Jesus Christ in love and respect. Be brief and natural. IMPORTANT: Always end your response with a complete sentence ending in a period.' }
+                { role: 'system', content: systemPrompt }
             ];
             
             // Add conversation history (last 6-8 messages for context)
@@ -896,7 +914,22 @@
         document.getElementById('chatBox').innerHTML='';
         conversationHistory = [];
         if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
-        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);console.log('Calling askAI with:', q);const ai=await askAI(q);console.log('askAI returned:', ai);l.remove();b.disabled=false;addMessage(ai.answer,false,ai.sources);console.log('Response displayed')
+        b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);console.log('Calling askAI with:', q);
+        
+        // First check database for relevant entries
+        const dbResult = findAnswer(q);
+        let ai;
+        if(dbResult.found) {
+            // Format matched entries as reference content for AI
+            const contextEntries = 'ANSWER: ' + dbResult.answer + '\nSOURCES: ' + dbResult.sources.map(s => s.text + ' (' + s.url + ')').join(', ');
+            ai = await askAI(q, contextEntries);
+            // Include database sources
+            ai.sources = dbResult.sources;
+        } else {
+            ai = await askAI(q);
+        }
+        
+        console.log('askAI returned:', ai);l.remove();b.disabled=false;addMessage(ai.answer,false,ai.sources);console.log('Response displayed')
      }
     function clearChat() {
         document.getElementById('chatBox').innerHTML = '<div class="welcome"><h3>🕍 Welcome to focusChrist</h3><p>Ask any question about scripture, doctrine, or faith.<br>Type your question below or click a topic.</p><p class="welcome-sub">We answer with love - drawing from the Bible, Book of Mormon, D&C, and modern prophets.</p></div>';
