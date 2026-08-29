@@ -50,7 +50,7 @@ jobs:
           for path in Path('.').rglob('*'):
               if not path.is_file() or '.git' in path.parts or path.suffix.lower() not in text_exts:
                   continue
-              rel = path.as_posix().lstrip('./')
+              rel = path.as_posix()
               if rel in ignore:
                   continue
               texts[rel] = path.read_text(encoding='utf-8', errors='ignore')
