@@ -23,7 +23,7 @@ jobs:
         run: python tools/apply-seo-metadata.py
 
       - name: Validate diff
-        run: git diff --check
+        run: git -c core.whitespace=cr-at-eol diff --check
 
       - name: Commit static HTML updates
         run: |
@@ -37,4 +37,4 @@ jobs:
           git commit -m "Add search and social metadata to core pages"
           git push origin main
 
-# Retry after preserving existing source line endings.
+# CRLF-aware one-time metadata application.
