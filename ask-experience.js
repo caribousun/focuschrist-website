@@ -46,6 +46,15 @@
         }
     }
 
+    function focusLatestAnswer() {
+        const chatBox = document.getElementById('chatBox');
+        if (!chatBox) return;
+        const answers = chatBox.querySelectorAll('.bot-message');
+        if (!answers.length) return;
+        const answer = answers[answers.length - 1];
+        answer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
     function submitQuestion(question) {
         const input = document.getElementById('userInput');
         if (!input || !question) return;
@@ -97,6 +106,25 @@
         });
     }
 
+    function initAutomaticConversationFollow() {
+        const sendButton = document.getElementById('sendBtn');
+        const input = document.getElementById('userInput');
+
+        if (sendButton) {
+            sendButton.addEventListener('click', function () {
+                window.setTimeout(focusConversation, 80);
+            });
+        }
+
+        if (input) {
+            input.addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    window.setTimeout(focusConversation, 80);
+                }
+            });
+        }
+    }
+
     function findRelatedStudy(questionText) {
         const normalized = (questionText || '').toLowerCase();
         return relatedStudyRules.find(function (rule) {
@@ -141,7 +169,10 @@
                 });
             });
             if (addedAnswer) {
-                window.setTimeout(addRelatedStudyToLatestAnswer, 0);
+                window.setTimeout(function () {
+                    addRelatedStudyToLatestAnswer();
+                    focusLatestAnswer();
+                }, 60);
             }
         });
         observer.observe(chatBox, { childList: true, subtree: true });
@@ -175,6 +206,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         initStarterQuestions();
         initTopicCards();
+        initAutomaticConversationFollow();
         initRelatedStudyObserver();
         initNewQuestionButton();
         initInputLabeling();
