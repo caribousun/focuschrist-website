@@ -49,28 +49,29 @@
         style.id = 'ask-followup-styles';
         style.textContent = `
             .ask-followup-dock {
-                position: fixed;
-                left: 50%;
-                bottom: max(18px, env(safe-area-inset-bottom));
-                width: min(900px, calc(100% - 32px));
-                z-index: 950;
+                position: relative;
+                width: 100%;
+                margin: 0;
+                max-height: 0;
+                overflow: hidden;
                 opacity: 0;
                 pointer-events: none;
-                transform: translate(-50%, calc(100% + 36px));
-                transition: opacity .22s ease, transform .22s ease;
+                transform: translateY(10px);
+                transition: opacity .22s ease, transform .22s ease, max-height .22s ease, margin .22s ease;
             }
             .ask-followup-dock.visible {
+                margin-top: 14px;
+                max-height: 190px;
                 opacity: 1;
                 pointer-events: auto;
-                transform: translate(-50%, 0);
+                transform: translateY(0);
             }
             .ask-followup-shell {
                 padding: 12px 14px 11px;
-                border: 1px solid rgba(201,169,97,.48);
+                border: 1px solid rgba(201,169,97,.42);
                 border-radius: 16px;
-                background: rgba(18,14,10,.97);
-                box-shadow: 0 14px 42px rgba(0,0,0,.55);
-                backdrop-filter: blur(12px);
+                background: linear-gradient(145deg, rgba(31,24,17,.98), rgba(18,14,10,.99));
+                box-shadow: 0 10px 28px rgba(0,0,0,.34);
             }
             .ask-followup-label {
                 margin: 0 0 7px 4px;
@@ -126,21 +127,14 @@
                 font-size: .72rem;
                 line-height: 1.35;
             }
-            body.ask-followup-active .ask-chat-box { padding-bottom: 112px; }
-            body.ask-followup-active { padding-bottom: 104px; }
             @media (max-width: 640px) {
-                .ask-followup-dock {
-                    bottom: max(8px, env(safe-area-inset-bottom));
-                    width: calc(100% - 16px);
-                }
+                .ask-followup-dock.visible { margin-top: 10px; }
                 .ask-followup-shell { padding: 10px; border-radius: 13px; }
                 .ask-followup-label { font-size: .68rem; }
                 .ask-followup-form { grid-template-columns: minmax(0, 1fr) auto; gap: 7px; }
                 .ask-followup-input { padding: 12px 14px; font-size: .9rem; }
                 .ask-followup-button { min-height: 42px; padding: 0 14px; font-size: .82rem; }
                 .ask-followup-note { display: none; }
-                body.ask-followup-active .ask-chat-box { padding-bottom: 96px; }
-                body.ask-followup-active { padding-bottom: 88px; }
             }
         `;
         document.head.appendChild(style);
@@ -151,7 +145,6 @@
         if (!dock) return;
         dock.classList.toggle('visible', Boolean(visible));
         dock.setAttribute('aria-hidden', visible ? 'false' : 'true');
-        document.body.classList.toggle('ask-followup-active', Boolean(visible));
     }
 
     function setFollowupBusy(busy) {
@@ -230,9 +223,14 @@
         shell.appendChild(note);
 
         dock.appendChild(shell);
-        document.body.appendChild(dock);
 
         const chatBox = document.getElementById('chatBox');
+        if (chatBox) {
+            chatBox.insertAdjacentElement('afterend', dock);
+        } else {
+            document.body.appendChild(dock);
+        }
+
         if (chatBox && chatBox.querySelector('.bot-message')) setFollowupVisible(true);
     }
 
