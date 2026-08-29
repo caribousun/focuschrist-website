@@ -39,11 +39,30 @@
         chatBox.replaceChildren(createWelcome());
     }
 
+    function preferredScrollBehavior() {
+        return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    }
+
+    function fixedHeaderOffset() {
+        const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+        if (!header) return 20;
+        const style = window.getComputedStyle(header);
+        if (style.position !== 'fixed') return 20;
+        return Math.ceil(header.getBoundingClientRect().height) + 24;
+    }
+
+    function scrollPageToElement(element) {
+        if (!element) return;
+        const top = element.getBoundingClientRect().top + window.scrollY - fixedHeaderOffset();
+        window.scrollTo({
+            top: Math.max(0, top),
+            behavior: preferredScrollBehavior()
+        });
+    }
+
     function focusConversation() {
         const conversation = document.getElementById('conversation-heading');
-        if (conversation) {
-            conversation.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        if (conversation) scrollPageToElement(conversation);
     }
 
     function focusLatestAnswer() {
@@ -51,8 +70,17 @@
         if (!chatBox) return;
         const answers = chatBox.querySelectorAll('.bot-message');
         if (!answers.length) return;
+
         const answer = answers[answers.length - 1];
-        answer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const answerTopInsideChat = answer.getBoundingClientRect().top - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
+        chatBox.scrollTo({
+            top: Math.max(0, answerTopInsideChat - 18),
+            behavior: preferredScrollBehavior()
+        });
+
+        // Position the conversation container below the fixed site header rather than
+        // aligning the answer itself with the top edge of the browser viewport.
+        scrollPageToElement(chatBox);
     }
 
     function submitQuestion(question) {
