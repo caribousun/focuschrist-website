@@ -144,6 +144,7 @@
             .hamburger-menu a { color: #c9a961; font-size: 0.9em; }
         }
     </style>
+    <script src="site-common.js" defer></script>
 </head>
 <body>
     <nav class="nav">
@@ -1032,24 +1033,6 @@
         conversationHistory = [];
         try { sessionStorage.removeItem('focuschrist_history'); } catch(e) {}
     }
-</script>
-<script data-focuschrist-nav-accessibility="true">
-(function () {
-    const trigger = document.querySelector('.hamburger');
-    const menu = document.getElementById('hamburgerMenu');
-    if (!trigger || !menu) return;
-    trigger.addEventListener('keydown', function (event) {
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            toggleMenu();
-        }
-    });
-    function syncExpanded() {
-        trigger.setAttribute('aria-expanded', menu.classList.contains('show') ? 'true' : 'false');
-    }
-    new MutationObserver(syncExpanded).observe(menu, { attributes: true, attributeFilter: ['class'] });
-    syncExpanded();
-})();
 </script>
 </body>
 </html>

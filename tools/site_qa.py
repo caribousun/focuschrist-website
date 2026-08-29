@@ -84,8 +84,8 @@ def main() -> int:
             fail(errors, f"{filename}: canonical URL missing or incorrect")
         if text.count('data-focuschrist-independence="footer"') != 1:
             fail(errors, f"{filename}: independence footer disclosure missing/duplicated")
-        if text.count('data-focuschrist-nav-accessibility="true"') != 1:
-            fail(errors, f"{filename}: navigation accessibility helper missing/duplicated")
+        if text.count('<script src="site-common.js" defer></script>') != 1:
+            fail(errors, f"{filename}: shared interaction controller missing/duplicated")
         if 'aria-controls="hamburgerMenu"' not in text:
             fail(errors, f"{filename}: hamburger ARIA controls missing")
 
@@ -113,10 +113,29 @@ def main() -> int:
             if "noopener" not in rel:
                 fail(errors, f"{filename}: target=_blank link missing rel=noopener: {attrs.get('href')}")
 
+    common = ROOT / "site-common.js"
+    if not common.exists() or common.stat().st_size == 0:
+        fail(errors, "site-common.js missing or empty")
+        common_text = ""
+    else:
+        common_text = common.read_text(encoding="utf-8")
+        for marker in ("initNavigation", "initPioneerDisclosures", "aria-expanded", "aria-live"):
+            if marker not in common_text:
+                fail(errors, f"site-common.js missing required behavior marker: {marker}")
+
     ask = (ROOT / "ask.html").read_text(encoding="utf-8")
     pioneers = (ROOT / "pioneers.html").read_text(encoding="utf-8")
     about = (ROOT / "about.html").read_text(encoding="utf-8")
     art = (ROOT / "art.html").read_text(encoding="utf-8")
+
+    if 'onclick="expandTimelineItem' in pioneers or 'onclick="expandTrailPoint' in pioneers:
+        fail(errors, "Pioneers legacy inline expansion handlers detected")
+    if pioneers.count('data-focus-expand="timeline"') < 8:
+        fail(errors, "Pioneers timeline disclosure metadata unexpectedly missing")
+    if pioneers.count('data-focus-expand="trail"') < 8:
+        fail(errors, "Pioneers trail disclosure metadata unexpectedly missing")
+    if pioneers.count('role="button" tabindex="0" aria-expanded="false"') < 16:
+        fail(errors, "Pioneers disclosure keyboard/ARIA attributes unexpectedly missing")
 
     if OLD_MODEL in ask or OLD_MODEL in pioneers:
         fail(errors, "Retired Groq model reintroduced into Ask/Pioneers")
