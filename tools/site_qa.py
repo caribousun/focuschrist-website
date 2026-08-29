@@ -281,6 +281,34 @@ def main() -> int:
         fail(errors, "Current Groq model missing from Ask/Pioneers")
     if ask.count('data-focuschrist-ai-notice="true"') != 1:
         fail(errors, "Ask AI/privacy transparency notice missing/duplicated")
+    for marker in (
+        'data-focuschrist-ask-experience="true"',
+        'data-focuschrist-starter-questions="true"',
+        'data-focuschrist-topic-explorer="true"',
+        'data-focuschrist-continue-study="true"',
+    ):
+        if ask.count(marker) != 1:
+            fail(errors, f"Ask redesigned experience marker missing/duplicated: {marker}")
+    if '<link rel="stylesheet" href="ask-experience.css">' not in ask:
+        fail(errors, "Ask experience stylesheet missing")
+    if '<script src="ask-experience.js" defer></script>' not in ask:
+        fail(errors, "Ask experience controller missing")
+    if ask.count('data-ask-starter') < 6:
+        fail(errors, "Ask starter question set unexpectedly incomplete")
+    if ask.count('class="ask-topic-card"') != 6:
+        fail(errors, "Ask topic explorer must contain exactly six study groups")
+    if ask.count('data-ask-topic=') < 40:
+        fail(errors, "Ask topic explorer unexpectedly lost topic breadth")
+    for asset in ("ask-experience.css", "ask-experience.js"):
+        asset_path = ROOT / asset
+        if not asset_path.exists() or asset_path.stat().st_size == 0:
+            fail(errors, f"Ask experience asset missing or empty: {asset}")
+    ask_js_path = ROOT / "ask-experience.js"
+    if ask_js_path.exists():
+        ask_js = ask_js_path.read_text(encoding="utf-8")
+        for js_marker in ("MutationObserver", "data-focuschrist-related-study", "initStarterQuestions", "initTopicCards"):
+            if js_marker not in ask_js:
+                fail(errors, f"Ask experience controller missing required behavior: {js_marker}")
     if "d.innerHTML" in ask or "message.innerHTML" in ask:
         fail(errors, "Ask unsafe legacy message renderer detected")
     if "document.createTextNode" not in ask:
