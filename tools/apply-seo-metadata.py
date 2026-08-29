@@ -1,4 +1,5 @@
 from pathlib import Path
+from html import escape
 import json
 import re
 
@@ -36,37 +37,43 @@ END = "    <!-- FocusChrist SEO END -->"
 
 for filename, meta in SITE.items():
     path = Path(filename)
-    text = path.read_text(encoding="utf-8")
+    text = path.read_bytes().decode("utf-8")
+    newline = "\r\n" if "\r\n" in text else "\n"
 
     # Remove a prior managed block if this script is ever rerun.
     text = re.sub(
-        r"\n\s*<!-- FocusChrist SEO START -->.*?<!-- FocusChrist SEO END -->\s*\n",
-        "\n",
+        r"\r?\n\s*<!-- FocusChrist SEO START -->.*?<!-- FocusChrist SEO END -->\s*\r?\n",
+        newline,
         text,
         count=1,
         flags=re.S,
     )
 
-    title_tag = f"<title>{meta['title']}</title>"
+    title_tag = f"<title>{escape(meta['title'])}</title>"
     text, count = re.subn(r"<title>.*?</title>", title_tag, text, count=1, flags=re.S)
     if count != 1:
         raise RuntimeError(f"Expected one <title> in {filename}")
 
+    title_attr = escape(meta["title"], quote=True)
+    desc_attr = escape(meta["description"], quote=True)
+    url_attr = escape(meta["url"], quote=True)
+    image_attr = escape(IMAGE, quote=True)
+
     lines = [
         START,
-        f'    <meta name="description" content="{meta["description"]}">',
+        f'    <meta name="description" content="{desc_attr}">',
         '    <meta name="robots" content="index, follow, max-image-preview:large">',
-        f'    <link rel="canonical" href="{meta["url"]}">',
+        f'    <link rel="canonical" href="{url_attr}">',
         '    <meta property="og:type" content="website">',
         '    <meta property="og:site_name" content="focusChrist">',
-        f'    <meta property="og:title" content="{meta["title"]}">',
-        f'    <meta property="og:description" content="{meta["description"]}">',
-        f'    <meta property="og:url" content="{meta["url"]}">',
-        f'    <meta property="og:image" content="{IMAGE}">',
+        f'    <meta property="og:title" content="{title_attr}">',
+        f'    <meta property="og:description" content="{desc_attr}">',
+        f'    <meta property="og:url" content="{url_attr}">',
+        f'    <meta property="og:image" content="{image_attr}">',
         '    <meta name="twitter:card" content="summary_large_image">',
-        f'    <meta name="twitter:title" content="{meta["title"]}">',
-        f'    <meta name="twitter:description" content="{meta["description"]}">',
-        f'    <meta name="twitter:image" content="{IMAGE}">',
+        f'    <meta name="twitter:title" content="{title_attr}">',
+        f'    <meta name="twitter:description" content="{desc_attr}">',
+        f'    <meta name="twitter:image" content="{image_attr}">',
     ]
 
     if filename == "index.html":
@@ -85,8 +92,8 @@ for filename, meta in SITE.items():
         ])
 
     lines.append(END)
-    block = "\n".join(lines)
-    text = text.replace(title_tag, title_tag + "\n" + block, 1)
-    path.write_text(text, encoding="utf-8")
+    block = newline.join(lines)
+    text = text.replace(title_tag, title_tag + newline + block, 1)
+    path.write_bytes(text.encode("utf-8"))
 
 print("Applied FocusChrist SEO metadata to:", ", ".join(SITE))
