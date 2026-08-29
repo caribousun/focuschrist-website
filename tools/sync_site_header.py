@@ -1,0 +1,147 @@
+from pathlib import Path
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+
+ROOT_PAGES = {
+    "index.html": "HOME",
+    "ask.html": "ASK",
+    "answers.html": "ANSWERS",
+    "art.html": "ART",
+    "pioneers.html": "PIONEERS",
+    "about.html": "ABOUT",
+    "404.html": None,
+}
+
+NESTED_PAGES = {
+    "answers/jesus-christ-latter-day-saint-beliefs.html": "ANSWERS",
+    "answers/are-latter-day-saints-christian.html": "ANSWERS",
+    "answers/what-is-the-book-of-mormon.html": "ANSWERS",
+    "answers/why-latter-day-saints-build-temples.html": "ANSWERS",
+    "answers/what-happens-after-death.html": "ANSWERS",
+    "answers/who-was-joseph-smith.html": "ANSWERS",
+    "answers/prayer-and-personal-revelation.html": "ANSWERS",
+    "answers/why-families-are-important.html": "ANSWERS",
+    "answers/bible-and-book-of-mormon-together.html": "ANSWERS",
+    "answers/faith-in-jesus-christ-during-trials.html": "ANSWERS",
+    "art-study/the-living-christ.html": "ART",
+    "art-study/the-good-shepherd.html": "ART",
+    "art-study/suffer-the-little-children.html": "ART",
+    "art-study/be-still.html": "ART",
+}
+
+NAV_ITEMS = [
+    ("HOME", "index.html"),
+    ("ASK", "ask.html"),
+    ("ANSWERS", "answers.html"),
+    ("ART", "art.html"),
+    ("PIONEERS", "pioneers.html"),
+    ("ABOUT", "about.html"),
+]
+
+
+def nav_html(prefix, active):
+    desktop = []
+    mobile = []
+    for label, target in NAV_ITEMS:
+        attrs = ""
+        if label == active:
+            attrs = ' class="active" aria-current="page"'
+        desktop.append(f'            <a href="{prefix}{target}"{attrs}>{label}</a>')
+        mobile.append(f'                <a href="{prefix}{target}"{attrs}>{label}</a>')
+
+    return f'''    <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation">
+        <a href="{prefix}index.html" class="nav-logo">focusChrist</a>
+        <div class="nav-links">
+{chr(10).join(desktop)}
+        </div>
+        <div class="hamburger-wrap">
+            <span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span>
+            <div class="hamburger-menu" id="hamburgerMenu">
+{chr(10).join(mobile)}
+                <hr>
+                <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a>
+                <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a>
+                <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a>
+                <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a>
+                <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a>
+                <a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a>
+                <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a>
+                <hr>
+                <div class="menu-label">YouTube</div>
+                <a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a>
+            </div>
+        </div>
+    </nav>'''
+
+
+def update_page(filename, active, prefix):
+    path = ROOT / filename
+    text = path.read_text(encoding="utf-8")
+    stylesheet = f'<link rel="stylesheet" href="{prefix}site-header.css">'
+
+    if stylesheet not in text:
+        text = text.replace("</head>", f"    {stylesheet}\n</head>", 1)
+
+    canonical = nav_html(prefix, active)
+    nav_pattern = re.compile(r'\s*<nav class="nav"[^>]*>.*?</nav>', re.S)
+    if nav_pattern.search(text):
+        text = nav_pattern.sub("\n" + canonical, text, count=1)
+    else:
+        text = text.replace("<body>", "<body>\n" + canonical, 1)
+
+    if "site-common.js" not in text:
+        text = text.replace("</body>", f'    <script src="{prefix}site-common.js" defer></script>\n</body>', 1)
+
+    if "function toggleMenu()" not in text and 'onclick="toggleMenu()"' in text:
+        helper = '<script>function toggleMenu(){var m=document.getElementById("hamburgerMenu");if(m)m.classList.toggle("show");}</script>\n'
+        text = text.replace("</body>", helper + "</body>", 1)
+
+    if text.count('data-focuschrist-header="standard"') != 1:
+        raise SystemExit(f"{filename}: canonical header marker count is not 1")
+
+    for label, target in NAV_ITEMS:
+        expected = f'href="{prefix}{target}"'
+        if text.count(expected) < 2:
+            raise SystemExit(f"{filename}: missing synchronized {label} links")
+
+    path.write_text(text, encoding="utf-8")
+
+
+def update_qa():
+    path = ROOT / "tools/site_qa.py"
+    text = path.read_text(encoding="utf-8")
+
+    marker = 'VERIFICATION_FILE = "google3fa84a4b37862f36.html"\n'
+    definitions = marker + '''HEADER_PAGES = {\n    **{name: "site-header.css" for name in CORE},\n    **{name: "../site-header.css" for name in ANSWER_PAGES},\n    **{name: "../site-header.css" for name in ART_STUDY_PAGES},\n    "404.html": "site-header.css",\n}\nHEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")\n'''
+    if "HEADER_PAGES = {" not in text:
+        if marker not in text:
+            raise SystemExit("QA verification marker not found")
+        text = text.replace(marker, definitions, 1)
+
+    anchor = '    common = ROOT / "site-common.js"\n'
+    checks = '''    header_css = ROOT / "site-header.css"\n    if not header_css.exists() or header_css.stat().st_size == 0:\n        fail(errors, "site-header.css missing or empty")\n    else:\n        header_css_text = header_css.read_text(encoding="utf-8")\n        for required in ('data-focuschrist-header="standard"', 'linear-gradient', '.hamburger-menu', '@media (max-width: 900px)'):\n            if required not in header_css_text:\n                fail(errors, f"site-header.css missing canonical marker: {required}")\n\n    for header_page, stylesheet in HEADER_PAGES.items():\n        page = ROOT / header_page\n        if not page.exists() or page.stat().st_size == 0:\n            fail(errors, f"{header_page}: header page missing or empty")\n            continue\n        header_text = page.read_text(encoding="utf-8")\n        if header_text.count('data-focuschrist-header="standard"') != 1:\n            fail(errors, f"{header_page}: canonical header missing/duplicated")\n        if f'href="{stylesheet}"' not in header_text:\n            fail(errors, f"{header_page}: shared header stylesheet missing")\n        if header_text.count('id="hamburgerMenu"') != 1:\n            fail(errors, f"{header_page}: hamburger menu id missing/duplicated")\n        for label in HEADER_LABELS:\n            if header_text.count(f'>{label}</a>') < 2:\n                fail(errors, f"{header_page}: synchronized header link missing: {label}")\n        for resource in ('Church Website', 'Gospel Library', 'Come Follow Me', 'Temples', 'Church History', 'Citation Index', 'All Resources', '@theRisen636'):\n            if resource not in header_text:\n                fail(errors, f"{header_page}: synchronized hamburger resource missing: {resource}")\n\n'''
+    if "for header_page, stylesheet in HEADER_PAGES.items()" not in text:
+        if anchor not in text:
+            raise SystemExit("QA common anchor not found")
+        text = text.replace(anchor, checks + anchor, 1)
+
+    old_summary = 'print("Search Console verification, sitemap, local references, Answer Library sources, Art-study paths, model migration, disclosures, accessibility markers, and Ask rendering verified.")'
+    new_summary = 'print("Search Console verification, sitemap, local references, canonical shared header, Answer Library sources, Art-study paths, model migration, disclosures, accessibility markers, and Ask rendering verified.")'
+    if old_summary in text:
+        text = text.replace(old_summary, new_summary, 1)
+
+    path.write_text(text, encoding="utf-8")
+
+
+def main():
+    for filename, active in ROOT_PAGES.items():
+        update_page(filename, active, "")
+    for filename, active in NESTED_PAGES.items():
+        update_page(filename, active, "../")
+    update_qa()
+    print(f"Synchronized header on {len(ROOT_PAGES) + len(NESTED_PAGES)} public pages.")
+
+
+if __name__ == "__main__":
+    main()
