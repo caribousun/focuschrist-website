@@ -1,0 +1,73 @@
+name: Integrate Featured Art Study
+
+on:
+  push:
+    branches:
+      - focus/art-discovery-phase1
+    paths:
+      - '.github/workflows/integrate-featured-art-study.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add Featured Art Study section
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('art.html')
+          text = path.read_text(encoding='utf-8')
+          marker = '    <!-- Fullscreen Modal -->'
+          section = '''    <section data-focuschrist-featured-art-study="true" aria-labelledby="featured-art-study-title" style="max-width:1200px;margin:15px auto 55px;padding:0 30px;">\n        <h2 id="featured-art-study-title" style="text-align:center;color:#c9a961;font-family:'Times New Roman',serif;letter-spacing:5px;margin-bottom:12px;">FEATURED ART &amp; STUDY</h2>\n        <p style="max-width:820px;margin:0 auto 28px;text-align:center;color:#d4c4b0;line-height:1.7;">Selected gallery works are paired with scripture and related study. The artwork remains unchanged; these pages add a study path without asserting artist or provenance beyond the gallery record.</p>\n        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;">\n            <a href="art-study/the-living-christ.html" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/The-Living-Christ.webp" alt="The Living Christ featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">The Living Christ — Study</span></a>\n            <a href="art-study/the-good-shepherd.html" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/The-Good-Shephard.webp" alt="The Good Shepherd featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">The Good Shepherd — Study</span></a>\n            <a href="art-study/suffer-the-little-children.html" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/Suffer-the-Little-Children.webp" alt="Suffer the Little Children featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">Suffer the Little Children — Study</span></a>\n            <a href="art-study/be-still.html" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/Be-Still.webp" alt="Be Still featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">Be Still — Study</span></a>\n        </div>\n    </section>\n\n'''
+          if 'data-focuschrist-featured-art-study="true"' not in text:
+              if marker not in text:
+                  raise SystemExit('Art modal marker not found')
+              text = text.replace(marker, section + marker, 1)
+          path.write_text(text, encoding='utf-8')
+
+      - name: Extend permanent QA for Art study pages
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('tools/site_qa.py')
+          text = path.read_text(encoding='utf-8')
+          answer_end = '''    "answers/faith-in-jesus-christ-during-trials.html": "https://focuschrist.com/answers/faith-in-jesus-christ-during-trials.html",\n}\n'''
+          art_defs = answer_end + '''ART_STUDY_PAGES = {\n    "art-study/the-living-christ.html": "https://focuschrist.com/art-study/the-living-christ.html",\n    "art-study/the-good-shepherd.html": "https://focuschrist.com/art-study/the-good-shepherd.html",\n    "art-study/suffer-the-little-children.html": "https://focuschrist.com/art-study/suffer-the-little-children.html",\n    "art-study/be-still.html": "https://focuschrist.com/art-study/be-still.html",\n}\n'''
+          if 'ART_STUDY_PAGES = {' not in text:
+              if answer_end not in text:
+                  raise SystemExit('ANSWER_PAGES end marker not found')
+              text = text.replace(answer_end, art_defs, 1)
+
+          common_anchor = '''    common = ROOT / "site-common.js"\n'''
+          art_checks = '''    for study_path, canonical in ART_STUDY_PAGES.items():\n        path = ROOT / study_path\n        text, parser = inspect_html(path, errors)\n        if not text:\n            continue\n        if text.count("<title>") != 1 or text.count("<h1") != 1:\n            fail(errors, f"{study_path}: expected one title and one h1")\n        if f'<link rel="canonical" href="{canonical}">' not in text:\n            fail(errors, f"{study_path}: canonical URL missing or incorrect")\n        if '<meta name="description"' not in text:\n            fail(errors, f"{study_path}: meta description missing")\n        if text.count('data-focuschrist-independence="footer"') != 1:\n            fail(errors, f"{study_path}: independence footer disclosure missing/duplicated")\n        if '<script src="../site-common.js" defer></script>' not in text:\n            fail(errors, f"{study_path}: shared interaction controller missing")\n        if 'href="../art.html"' not in text or 'href="../ask.html"' not in text:\n            fail(errors, f"{study_path}: Art/Ask continuation path missing")\n        if text.count("churchofjesuschrist.org") < 2:\n            fail(errors, f"{study_path}: official scripture/Church study pathway missing")\n        if study_path.replace('art-study/', 'art-study/') not in art:\n            fail(errors, f"art.html missing featured study link for {study_path}")\n        local_images = [img for img in parser.images if img.get("src", "").startswith("../art/")]\n        if not local_images:\n            fail(errors, f"{study_path}: local gallery artwork image missing")\n\n'''
+          if 'for study_path, canonical in ART_STUDY_PAGES.items()' not in text:
+              if common_anchor not in text:
+                  raise SystemExit('Common QA anchor not found')
+              text = text.replace(common_anchor, art_checks + common_anchor, 1)
+
+          text = text.replace('for canonical in list(CORE.values()) + list(ANSWER_PAGES.values()):', 'for canonical in list(CORE.values()) + list(ANSWER_PAGES.values()) + list(ART_STUDY_PAGES.values()):')
+          text = text.replace('if len(locs) < 16:', 'if len(locs) < 20:')
+          text = text.replace('f"sitemap.xml unexpectedly contains only {len(locs)} URLs"', 'f"sitemap.xml unexpectedly contains only {len(locs)} URLs"')
+          text = text.replace('print(f"Permanent answer pages checked: {len(ANSWER_PAGES)}")', 'print(f"Permanent answer pages checked: {len(ANSWER_PAGES)}")\n    print(f"Featured Art study pages checked: {len(ART_STUDY_PAGES)}")')
+          text = text.replace('if art.count(\'data-focuschrist-art-accessibility="true"\') != 1:', 'if art.count(\'data-focuschrist-featured-art-study="true"\') != 1:\n        fail(errors, "Featured Art study section missing/duplicated")\n    if art.count(\'data-focuschrist-art-accessibility="true"\') != 1:')
+          path.write_text(text, encoding='utf-8')
+
+      - name: Run permanent site QA
+        run: python tools/site_qa.py
+
+      - name: Commit featured Art integration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add art.html tools/site_qa.py
+          git commit -m "Integrate featured Art study discovery paths"
+          git push
