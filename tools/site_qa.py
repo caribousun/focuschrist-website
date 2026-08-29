@@ -3,7 +3,6 @@ from __future__ import annotations
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlparse
-import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -11,9 +10,22 @@ ROOT = Path(__file__).resolve().parents[1]
 CORE = {
     "index.html": "https://focuschrist.com/",
     "ask.html": "https://focuschrist.com/ask.html",
+    "answers.html": "https://focuschrist.com/answers.html",
     "art.html": "https://focuschrist.com/art.html",
     "pioneers.html": "https://focuschrist.com/pioneers.html",
     "about.html": "https://focuschrist.com/about.html",
+}
+ANSWER_PAGES = {
+    "answers/jesus-christ-latter-day-saint-beliefs.html": "https://focuschrist.com/answers/jesus-christ-latter-day-saint-beliefs.html",
+    "answers/are-latter-day-saints-christian.html": "https://focuschrist.com/answers/are-latter-day-saints-christian.html",
+    "answers/what-is-the-book-of-mormon.html": "https://focuschrist.com/answers/what-is-the-book-of-mormon.html",
+    "answers/why-latter-day-saints-build-temples.html": "https://focuschrist.com/answers/why-latter-day-saints-build-temples.html",
+    "answers/what-happens-after-death.html": "https://focuschrist.com/answers/what-happens-after-death.html",
+    "answers/who-was-joseph-smith.html": "https://focuschrist.com/answers/who-was-joseph-smith.html",
+    "answers/prayer-and-personal-revelation.html": "https://focuschrist.com/answers/prayer-and-personal-revelation.html",
+    "answers/why-families-are-important.html": "https://focuschrist.com/answers/why-families-are-important.html",
+    "answers/bible-and-book-of-mormon-together.html": "https://focuschrist.com/answers/bible-and-book-of-mormon-together.html",
+    "answers/faith-in-jesus-christ-during-trials.html": "https://focuschrist.com/answers/faith-in-jesus-christ-during-trials.html",
 }
 OLD_MODEL = "llama-3.1-8b-instant"
 NEW_MODEL = "openai/gpt-oss-20b"
@@ -47,7 +59,7 @@ def fail(errors: list[str], message: str):
     errors.append(message)
 
 
-def local_path_for(ref: str) -> Path | None:
+def local_path_for(ref: str, source_path: Path) -> Path | None:
     ref = ref.strip()
     if not ref or ref.startswith(("#", "mailto:", "tel:", "javascript:", "data:")):
         return None
@@ -58,26 +70,61 @@ def local_path_for(ref: str) -> Path | None:
     if not clean:
         return None
     if clean.startswith("/"):
-        clean = clean[1:]
-    return ROOT / clean
+        candidate = ROOT / clean.lstrip("/")
+    else:
+        candidate = source_path.parent / clean
+    try:
+        return candidate.resolve()
+    except OSError:
+        return candidate
+
+
+def inspect_html(path: Path, errors: list[str], require_noopener: bool = True) -> tuple[str, RefParser]:
+    if not path.exists() or path.stat().st_size == 0:
+        fail(errors, f"{path.relative_to(ROOT).as_posix()}: missing or empty")
+        return "", RefParser()
+    text = path.read_text(encoding="utf-8")
+    parser = RefParser()
+    try:
+        parser.feed(text)
+    except Exception as exc:
+        fail(errors, f"{path.relative_to(ROOT).as_posix()}: HTML parser error: {exc}")
+        return text, parser
+
+    for tag, ref, _attrs in parser.refs:
+        local = local_path_for(ref, path)
+        if local is None:
+            continue
+        if ref in ("/", "./"):
+            local = ROOT / "index.html"
+        if not local.exists():
+            fail(errors, f"{path.relative_to(ROOT).as_posix()}: broken local {tag} reference: {ref}")
+        elif local.is_file() and local.stat().st_size == 0:
+            fail(errors, f"{path.relative_to(ROOT).as_posix()}: referenced zero-byte file: {ref}")
+
+    if require_noopener:
+        for attrs in parser.blank_links:
+            rel = set(attrs.get("rel", "").lower().split())
+            if "noopener" not in rel:
+                fail(errors, f"{path.relative_to(ROOT).as_posix()}: target=_blank link missing rel=noopener: {attrs.get('href')}")
+    return text, parser
 
 
 def main() -> int:
     errors: list[str] = []
 
-    # No zero-byte production media is allowed.
     for media_path in ROOT.rglob("*"):
         if media_path.is_file() and media_path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif"}:
             if media_path.stat().st_size == 0:
                 fail(errors, f"Zero-byte media file detected: {media_path.relative_to(ROOT).as_posix()}")
 
+    core_texts: dict[str, str] = {}
     for filename, canonical in CORE.items():
         path = ROOT / filename
-        if not path.exists() or path.stat().st_size == 0:
-            fail(errors, f"{filename}: missing or empty")
+        text, _parser = inspect_html(path, errors)
+        core_texts[filename] = text
+        if not text:
             continue
-        text = path.read_text(encoding="utf-8")
-
         if text.count("<title>") != 1:
             fail(errors, f"{filename}: expected exactly one <title>")
         if f'<link rel="canonical" href="{canonical}">' not in text:
@@ -88,45 +135,49 @@ def main() -> int:
             fail(errors, f"{filename}: shared interaction controller missing/duplicated")
         if 'aria-controls="hamburgerMenu"' not in text:
             fail(errors, f"{filename}: hamburger ARIA controls missing")
+        if text.count('href="answers.html"') < 2:
+            fail(errors, f"{filename}: Answer Library missing from primary/hamburger navigation")
 
-        parser = RefParser()
-        try:
-            parser.feed(text)
-        except Exception as exc:
-            fail(errors, f"{filename}: HTML parser error: {exc}")
+    answers_index = core_texts.get("answers.html", "")
+    for answer_path, canonical in ANSWER_PAGES.items():
+        path = ROOT / answer_path
+        text, _parser = inspect_html(path, errors)
+        if not text:
             continue
-
-        for tag, ref, _attrs in parser.refs:
-            local = local_path_for(ref)
-            if local is None:
-                continue
-            # Directory/root links resolve to index.html.
-            if ref in ("/", "./"):
-                local = ROOT / "index.html"
-            if not local.exists():
-                fail(errors, f"{filename}: broken local {tag} reference: {ref}")
-            elif local.is_file() and local.stat().st_size == 0:
-                fail(errors, f"{filename}: referenced zero-byte file: {ref}")
-
-        for attrs in parser.blank_links:
-            rel = set(attrs.get("rel", "").lower().split())
-            if "noopener" not in rel:
-                fail(errors, f"{filename}: target=_blank link missing rel=noopener: {attrs.get('href')}")
+        if text.count("<title>") != 1 or text.count("<h1") != 1:
+            fail(errors, f"{answer_path}: expected one title and one h1")
+        if f'<link rel="canonical" href="{canonical}">' not in text:
+            fail(errors, f"{answer_path}: canonical URL missing or incorrect")
+        if '<meta name="description"' not in text:
+            fail(errors, f"{answer_path}: meta description missing")
+        if text.count('data-focuschrist-independence="footer"') != 1:
+            fail(errors, f"{answer_path}: independence footer disclosure missing/duplicated")
+        if text.count('<script src="../site-common.js" defer></script>') != 1:
+            fail(errors, f"{answer_path}: shared interaction controller missing/duplicated")
+        if 'href="../ask.html"' not in text:
+            fail(errors, f"{answer_path}: Ask continuation path missing")
+        if 'href="../answers.html"' not in text:
+            fail(errors, f"{answer_path}: Answer Library return path missing")
+        official_count = text.count("churchofjesuschrist.org") + text.count("faq.churchofjesuschrist.org")
+        if official_count < 2:
+            fail(errors, f"{answer_path}: insufficient official Church source pathways")
+        index_href = answer_path
+        if f'href="{index_href}"' not in answers_index:
+            fail(errors, f"answers.html missing card for {answer_path}")
 
     common = ROOT / "site-common.js"
     if not common.exists() or common.stat().st_size == 0:
         fail(errors, "site-common.js missing or empty")
-        common_text = ""
     else:
         common_text = common.read_text(encoding="utf-8")
         for marker in ("initNavigation", "initPioneerDisclosures", "aria-expanded", "aria-live"):
             if marker not in common_text:
                 fail(errors, f"site-common.js missing required behavior marker: {marker}")
 
-    ask = (ROOT / "ask.html").read_text(encoding="utf-8")
-    pioneers = (ROOT / "pioneers.html").read_text(encoding="utf-8")
-    about = (ROOT / "about.html").read_text(encoding="utf-8")
-    art = (ROOT / "art.html").read_text(encoding="utf-8")
+    ask = core_texts.get("ask.html", "")
+    pioneers = core_texts.get("pioneers.html", "")
+    about = core_texts.get("about.html", "")
+    art = core_texts.get("art.html", "")
 
     if 'onclick="expandTimelineItem' in pioneers or 'onclick="expandTrailPoint' in pioneers:
         fail(errors, "Pioneers legacy inline expansion handlers detected")
@@ -189,9 +240,11 @@ def main() -> int:
         try:
             tree = ET.parse(sitemap)
             locs = {node.text.strip() for node in tree.findall('.//{*}loc') if node.text}
-            for canonical in CORE.values():
+            for canonical in list(CORE.values()) + list(ANSWER_PAGES.values()):
                 if canonical not in locs:
                     fail(errors, f"sitemap.xml missing {canonical}")
+            if len(locs) < 16:
+                fail(errors, f"sitemap.xml unexpectedly contains only {len(locs)} URLs")
         except Exception as exc:
             fail(errors, f"sitemap.xml parse failure: {exc}")
 
@@ -208,7 +261,7 @@ def main() -> int:
         fail(errors, "404.html missing or empty")
     else:
         text404 = page404.read_text(encoding="utf-8")
-        for target in ("index.html", "ask.html", "art.html", "pioneers.html", "about.html"):
+        for target in ("index.html", "ask.html", "answers.html", "art.html", "pioneers.html", "about.html"):
             if f'href="{target}"' not in text404:
                 fail(errors, f"404.html missing recovery link to {target}")
 
@@ -220,8 +273,9 @@ def main() -> int:
 
     print("FocusChrist SITE QA PASSED")
     print(f"Core pages checked: {len(CORE)}")
+    print(f"Permanent answer pages checked: {len(ANSWER_PAGES)}")
     print(f"Art gallery images checked: {len(gallery_imgs)}")
-    print("Search Console verification, sitemap, local references, model migration, disclosures, accessibility markers, and Ask rendering verified.")
+    print("Search Console verification, sitemap, local references, Answer Library sources, model migration, disclosures, accessibility markers, and Ask rendering verified.")
     return 0
 
 
