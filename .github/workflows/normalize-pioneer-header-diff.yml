@@ -1,0 +1,55 @@
+name: Normalize Pioneer Header Diff
+
+on:
+  push:
+    branches:
+      - focus/youtube-distribution-phase1
+    paths:
+      - '.github/workflows/normalize-pioneer-header-diff.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore Pioneer bytes and apply only canonical header changes
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          import subprocess
+
+          path = Path('pioneers.html')
+          current = path.read_text(encoding='utf-8')
+          nav_match = re.search(r'<nav class="nav" data-focuschrist-header="standard".*?</nav>', current, re.S)
+          if not nav_match:
+              raise SystemExit('Canonical Pioneer nav not found on branch')
+          canonical_nav = nav_match.group(0)
+
+          original = subprocess.check_output(['git', 'show', 'origin/main:pioneers.html'])
+          newline = b'\r\n' if b'\r\n' in original else b'\n'
+          nav_bytes = canonical_nav.replace('\r\n', '\n').replace('\n', newline.decode()).encode('utf-8')
+
+          stylesheet = b'<link rel="stylesheet" href="site-header.css">'
+          if stylesheet not in original:
+              original = original.replace(b'</head>', b'    ' + stylesheet + newline + b'</head>', 1)
+
+          pattern = re.compile(rb'\s*<nav class="nav"[^>]*>.*?</nav>', re.S)
+          updated, count = pattern.subn(newline + nav_bytes, original, count=1)
+          if count != 1:
+              raise SystemExit(f'Expected one Pioneer nav replacement, got {count}')
+          path.write_bytes(updated)
+      - name: Run permanent site QA
+        run: python tools/site_qa.py
+      - name: Commit normalized Pioneer header diff
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pioneers.html
+          git commit -m "Normalize Pioneer shared-header diff"
+          git push
