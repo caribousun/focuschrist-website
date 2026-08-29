@@ -1,0 +1,32 @@
+name: Integrate FocusChrist Watch Page
+
+on:
+  push:
+    branches:
+      - focus/youtube-measurement-phase
+    paths:
+      - '.github/workflows/integrate-watch-page.yml'
+      - 'tools/integrate_watch_page.py'
+      - 'watch.html'
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Integrate Watch page
+        run: python tools/integrate_watch_page.py
+      - name: Run permanent site QA
+        run: python tools/site_qa.py
+      - name: Commit Watch integration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html answers.html 404.html sitemap.xml tools/site_qa.py
+          git commit -m "Integrate Watch and Continue Study across FocusChrist"
+          git push
