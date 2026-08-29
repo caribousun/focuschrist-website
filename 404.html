@@ -21,8 +21,44 @@
         footer { padding: 28px 20px; text-align: center; background: #0f0c08; color: #8a7a60; font-size: 0.78rem; line-height: 1.6; }
         footer a { color: #c9a961; }
     </style>
+    <link rel="stylesheet" href="site-header.css">
 </head>
 <body>
+    <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation">
+        <a href="index.html" class="nav-logo">focusChrist</a>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="ask.html">ASK</a>
+            <a href="answers.html">ANSWERS</a>
+            <a href="art.html">ART</a>
+            <a href="pioneers.html">PIONEERS</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+        <div class="hamburger-wrap">
+            <span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span>
+            <div class="hamburger-menu" id="hamburgerMenu">
+                <a href="index.html">HOME</a>
+                <a href="ask.html">ASK</a>
+                <a href="answers.html">ANSWERS</a>
+                <a href="art.html">ART</a>
+                <a href="pioneers.html">PIONEERS</a>
+                <a href="about.html">ABOUT</a>
+                <hr>
+                <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a>
+                <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a>
+                <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a>
+                <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a>
+                <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a>
+                <a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a>
+                <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a>
+                <hr>
+                <div class="menu-label">YouTube</div>
+                <a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a>
+            </div>
+        </div>
+    </nav>
     <main><section class="card" aria-labelledby="not-found-title"><div class="brand">focusChrist</div><h1 id="not-found-title">PAGE NOT FOUND</h1><p>The page you were looking for could not be found. You can continue exploring FocusChrist through one of the paths below.</p><nav class="links" aria-label="Page recovery links"><a href="index.html">Home</a><a href="ask.html">Ask a Question</a><a href="answers.html">Answer Library</a><a href="art.html">Inspirational Art</a><a href="pioneers.html">Pioneers</a><a href="about.html">About</a></nav><p class="official">For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer">ChurchofJesusChrist.org</a>.</p></section></main>
     <footer>focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints.</footer>
+    <script src="site-common.js" defer></script>
+<script>function toggleMenu(){var m=document.getElementById("hamburgerMenu");if(m)m.classList.toggle("show");}</script>
 </body></html>

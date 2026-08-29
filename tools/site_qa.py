@@ -36,6 +36,13 @@ ART_STUDY_PAGES = {
 OLD_MODEL = "llama-3.1-8b-instant"
 NEW_MODEL = "openai/gpt-oss-20b"
 VERIFICATION_FILE = "google3fa84a4b37862f36.html"
+HEADER_PAGES = {
+    **{name: "site-header.css" for name in CORE},
+    **{name: "../site-header.css" for name in ANSWER_PAGES},
+    **{name: "../site-header.css" for name in ART_STUDY_PAGES},
+    "404.html": "site-header.css",
+}
+HEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")
 
 
 class RefParser(HTMLParser):
@@ -170,6 +177,34 @@ def main() -> int:
         index_href = answer_path
         if f'href="{index_href}"' not in answers_index:
             fail(errors, f"answers.html missing card for {answer_path}")
+
+    header_css = ROOT / "site-header.css"
+    if not header_css.exists() or header_css.stat().st_size == 0:
+        fail(errors, "site-header.css missing or empty")
+    else:
+        header_css_text = header_css.read_text(encoding="utf-8")
+        for required in ('data-focuschrist-header="standard"', 'linear-gradient', '.hamburger-menu', '@media (max-width: 900px)'):
+            if required not in header_css_text:
+                fail(errors, f"site-header.css missing canonical marker: {required}")
+
+    for header_page, stylesheet in HEADER_PAGES.items():
+        page = ROOT / header_page
+        if not page.exists() or page.stat().st_size == 0:
+            fail(errors, f"{header_page}: header page missing or empty")
+            continue
+        header_text = page.read_text(encoding="utf-8")
+        if header_text.count('data-focuschrist-header="standard"') != 1:
+            fail(errors, f"{header_page}: canonical header missing/duplicated")
+        if f'href="{stylesheet}"' not in header_text:
+            fail(errors, f"{header_page}: shared header stylesheet missing")
+        if header_text.count('id="hamburgerMenu"') != 1:
+            fail(errors, f"{header_page}: hamburger menu id missing/duplicated")
+        for label in HEADER_LABELS:
+            if header_text.count(f'>{label}</a>') < 2:
+                fail(errors, f"{header_page}: synchronized header link missing: {label}")
+        for resource in ('Church Website', 'Gospel Library', 'Come Follow Me', 'Temples', 'Church History', 'Citation Index', 'All Resources', '@theRisen636'):
+            if resource not in header_text:
+                fail(errors, f"{header_page}: synchronized hamburger resource missing: {resource}")
 
     common = ROOT / "site-common.js"
     if not common.exists() or common.stat().st_size == 0:
