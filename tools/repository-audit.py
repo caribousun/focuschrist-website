@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import defaultdict
 from pathlib import Path
 import hashlib
+import re
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "repository-audit-phase2.md"
@@ -56,7 +57,14 @@ def references_for(target: Path, texts):
     for source, text in texts.items():
         if source == target:
             continue
-        if target_rel in text or name in text:
+        if target.parent == ROOT:
+            # A root filename inside art/<name> or another subdirectory is not
+            # a reference to the root copy. Require a true filename boundary.
+            pattern = re.compile(r'(?<![A-Za-z0-9_./-])' + re.escape(name) + r'(?![A-Za-z0-9_.-])')
+            matched = bool(pattern.search(text))
+        else:
+            matched = target_rel in text
+        if matched:
             refs.append(rel(source))
     return sorted(set(refs))
 
@@ -94,7 +102,7 @@ def main():
     lines = [
         "# FocusChrist Repository Audit — Phase 2",
         "",
-        "This is a conservative dependency audit. A candidate is marked safe only when no UTF-8 text file in the repository references its relative path or basename.",
+        "This is a conservative dependency audit. Root filenames are considered referenced only when used as root files, not when the same basename appears under a subdirectory such as `art/`.",
         "",
         f"- Files scanned: {len(files)}",
         f"- Exact duplicate media groups: {len(duplicate_groups)}",
