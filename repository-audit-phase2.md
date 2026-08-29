@@ -4,7 +4,7 @@ This is a conservative dependency audit. A candidate is marked safe only when no
 
 - Files scanned: 118
 - Exact duplicate media groups: 12
-- Zero-byte files: 3
+- Zero-byte files: 2
 - Unreferenced root media duplicates with an identical `art/` canonical copy: 0
 - Unreferenced zero-byte cleanup candidates: 0
 
@@ -61,9 +61,8 @@ This is a conservative dependency audit. A candidate is marked safe only when no
 
 ### Group 12
 - `working banner.png` — 1,024,283 bytes — text references: none
-- `working-banner.png` — 1,024,283 bytes — text references: `pioneers.html`
+- `working-banner.png` — 1,024,283 bytes — text references: `.github/workflows/repair-pioneer-and-strengthen-qa.yml`, `pioneers.html`
 
 ## All zero-byte files
 - `.gitignore` — text references: `tools/repository-audit.py`
 - `.nojekyll` — text references: `tools/repository-audit.py`
-- `pioneer-art.png` — text references: `pioneers.html`
