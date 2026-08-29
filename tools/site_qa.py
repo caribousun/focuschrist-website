@@ -11,6 +11,7 @@ CORE = {
     "index.html": "https://focuschrist.com/",
     "ask.html": "https://focuschrist.com/ask.html",
     "answers.html": "https://focuschrist.com/answers.html",
+    "watch.html": "https://focuschrist.com/watch.html",
     "art.html": "https://focuschrist.com/art.html",
     "pioneers.html": "https://focuschrist.com/pioneers.html",
     "about.html": "https://focuschrist.com/about.html",
@@ -150,6 +151,25 @@ def main() -> int:
             fail(errors, f"{filename}: hamburger ARIA controls missing")
         if text.count('href="answers.html"') < 2:
             fail(errors, f"{filename}: Answer Library missing from primary/hamburger navigation")
+
+    watch = core_texts.get("watch.html", "")
+    if watch:
+        if "https://www.youtube.com/@theRisen636" not in watch:
+            fail(errors, "watch.html missing verified YouTube channel path")
+        if watch.count('href="ask.html"') < 2:
+            fail(errors, "watch.html missing Ask continuation paths")
+        for required_path in (
+            "answers/jesus-christ-latter-day-saint-beliefs.html",
+            "answers/what-is-the-book-of-mormon.html",
+            "answers/prayer-and-personal-revelation.html",
+            "answers/faith-in-jesus-christ-during-trials.html",
+            "art-study/the-living-christ.html",
+            "art-study/the-good-shepherd.html",
+            "art-study/suffer-the-little-children.html",
+            "art-study/be-still.html",
+        ):
+            if required_path not in watch:
+                fail(errors, f"watch.html missing topic continuation path: {required_path}")
 
     answers_index = core_texts.get("answers.html", "")
     for answer_path, canonical in ANSWER_PAGES.items():
@@ -312,7 +332,7 @@ def main() -> int:
             for canonical in list(CORE.values()) + list(ANSWER_PAGES.values()) + list(ART_STUDY_PAGES.values()):
                 if canonical not in locs:
                     fail(errors, f"sitemap.xml missing {canonical}")
-            if len(locs) < 20:
+            if len(locs) < 21:
                 fail(errors, f"sitemap.xml unexpectedly contains only {len(locs)} URLs")
         except Exception as exc:
             fail(errors, f"sitemap.xml parse failure: {exc}")
@@ -330,7 +350,7 @@ def main() -> int:
         fail(errors, "404.html missing or empty")
     else:
         text404 = page404.read_text(encoding="utf-8")
-        for target in ("index.html", "ask.html", "answers.html", "art.html", "pioneers.html", "about.html"):
+        for target in ("index.html", "ask.html", "answers.html", "watch.html", "art.html", "pioneers.html", "about.html"):
             if f'href="{target}"' not in text404:
                 fail(errors, f"404.html missing recovery link to {target}")
 
