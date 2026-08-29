@@ -25,6 +25,9 @@ jobs:
         with:
           submodules: false
 
+      - name: Run FocusChrist site QA
+        run: python tools/site_qa.py
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
