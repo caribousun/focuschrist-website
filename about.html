@@ -246,7 +246,7 @@
             <a href="about.html" class="active">ABOUT</a>
         </div>
         <div class="hamburger-wrap">
-            <span class="hamburger" onclick="toggleMenu()"></span>
+            <span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span>
             <div class="hamburger-menu" id="hamburgerMenu">
                 <a href="index.html">HOME</a>
                 <a href="ask.html">ASK</a>
@@ -254,16 +254,16 @@
                 <a href="pioneers.html">PIONEERS</a>
                 <a href="about.html">ABOUT</a>
                 <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
-                <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank">Church Website</a>
-                <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank">Gospel Library</a>
-                <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank">Come Follow Me</a>
-                <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank">Temples</a>
-                <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank">Church History</a>
-                <a href="https://scriptures.byu.edu/" target="_blank">Citation Index</a>
-                <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank">All Resources</a>
+                <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a>
+                <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a>
+                <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a>
+                <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a>
+                <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a>
+                <a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a>
+                <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a>
                 <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
                 <div style="color: #c9a961; font-size: 0.8em; padding: 8px 15px 4px;">YouTube</div>
-                <a href="https://www.youtube.com/@theRisen636" target="_blank">@theRisen636</a>
+                <a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a>
 
             </div>
         </div>
@@ -272,7 +272,7 @@
     <div class="banner">
         <div class="banner-bg"></div>
         <div class="banner-overlay"></div>
-        <a href="https://caribousun.github.io/focuschrist-website/Jesus.png" target="_blank" class="banner-link"></a>
+        <a href="https://caribousun.github.io/focuschrist-website/Jesus.png" target="_blank" class="banner-link" rel="noopener noreferrer"></a>
         <div class="banner-content">
         </div>
     </div>
@@ -311,12 +311,12 @@
         
         <div class="section">
             <h2>How It Works</h2>
-            <p>Our Q&A system draws from the full LDS library of scriptures, general conference talks, church history, and prophet teachings to provide thoughtful, faithful answers to your questions about faith, doctrine, and church history.</p>
+            <p>Our Q&A system combines a curated local collection of answers with AI-assisted responses when a curated answer is not available. It is designed to help visitors study questions about faith, doctrine, scripture, and Church history from a Latter-day Saint perspective.</p>
         </div>
         
         <div class="section">
             <h2>Our Source</h2>
-            <p>All answers come from official Church sources including churchofjesuschrist.org, the Book of Mormon, Bible, Doctrine & Covenants, Pearl of Great Price, and general conference addresses. We strive to provide accurate, love-filled responses.</p>
+            <p>Curated answers draw from scripture and official Church resources including ChurchofJesusChrist.org, the Bible, Book of Mormon, Doctrine and Covenants, Pearl of Great Price, and general conference. AI-assisted responses are study aids and may contain errors; they are not official Church statements. For authoritative doctrine, policies, and resources, verify information through official Church sources.</p>
         </div>
             <div class="section" data-focuschrist-independence="about">
             <h2>Independent Website</h2>
@@ -329,6 +329,24 @@
         <p>© 2026 focusChrist. All are welcome here.</p>
             <p data-focuschrist-independence="footer" style="max-width: 900px; margin: 14px auto 0; line-height: 1.6; font-size: 0.92em;">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer" style="color: #c9a961;">ChurchofJesusChrist.org</a>.</p>
     </footer>
+<script data-focuschrist-nav-accessibility="true">
+(function () {
+    const trigger = document.querySelector('.hamburger');
+    const menu = document.getElementById('hamburgerMenu');
+    if (!trigger || !menu) return;
+    trigger.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleMenu();
+        }
+    });
+    function syncExpanded() {
+        trigger.setAttribute('aria-expanded', menu.classList.contains('show') ? 'true' : 'false');
+    }
+    new MutationObserver(syncExpanded).observe(menu, { attributes: true, attributeFilter: ['class'] });
+    syncExpanded();
+})();
+</script>
 </body>
 </html>
 

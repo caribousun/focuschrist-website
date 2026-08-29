@@ -91,6 +91,15 @@
         .welcome h3 { color: #c9a961; margin-bottom: 10px; font-size: 1.5em; }
         .welcome p { color: #aaa; font-size: 0.95em; line-height: 1.6; }
         .welcome-sub { color: #666; font-size: 0.85em; margin-top: 15px; }
+        /* FocusChrist AI transparency */
+        .ai-notice {
+            max-width: 820px;
+            margin: 14px auto 26px;
+            color: #999;
+            font-size: 0.82em;
+            line-height: 1.55;
+            text-align: center;
+        }
         footer { padding: 40px 20px; text-align: center; color: #555; font-size: 0.85em; background: #050505; }
         @media (max-width: 768px) {
             .banner { height: 200px; }
@@ -147,7 +156,7 @@
             <a href="about.html">ABOUT</a>
         </div>
         <div class="hamburger-wrap">
-            <span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle menu"></span>
+            <span class="hamburger" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="hamburgerMenu"></span>
             <div class="hamburger-menu" id="hamburgerMenu">
                 <a href="index.html">HOME</a>
                 <a href="ask.html">ASK</a>
@@ -155,16 +164,16 @@
                 <a href="pioneers.html">PIONEERS</a>
                 <a href="about.html">ABOUT</a>
                 <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
-                <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank">Church Website</a>
-                <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank">Gospel Library</a>
-                <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank">Come Follow Me</a>
-                <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank">Temples</a>
-                <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank">Church History</a>
-                <a href="https://scriptures.byu.edu/" target="_blank">Citation Index</a>
-                <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank">All Resources</a>
+                <a href="https://www.churchofjesuschrist.org/?lang=eng" target="_blank" rel="noopener noreferrer">Church Website</a>
+                <a href="https://www.churchofjesuschrist.org/study?lang=eng&platform=web" target="_blank" rel="noopener noreferrer">Gospel Library</a>
+                <a href="https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng" target="_blank" rel="noopener noreferrer">Come Follow Me</a>
+                <a href="https://www.churchofjesuschrist.org/temples?lang=eng" target="_blank" rel="noopener noreferrer">Temples</a>
+                <a href="https://www.churchofjesuschrist.org/welcome/our-history?lang=eng" target="_blank" rel="noopener noreferrer">Church History</a>
+                <a href="https://scriptures.byu.edu/" target="_blank" rel="noopener noreferrer">Citation Index</a>
+                <a href="https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all" target="_blank" rel="noopener noreferrer">All Resources</a>
                 <hr style="border: 0; border-top: 1px solid rgba(201,169,97,0.3); margin: 8px 0;">
                 <div style="color: #c9a961; font-size: 0.8em; padding: 8px 15px 4px;">YouTube</div>
-                <a href="https://www.youtube.com/@theRisen636" target="_blank">@theRisen636</a>
+                <a href="https://www.youtube.com/@theRisen636" target="_blank" rel="noopener noreferrer">@theRisen636</a>
 
             </div>
         </div>
@@ -172,7 +181,7 @@
     <div class="banner">
         <div class="banner-bg"></div>
         <div class="banner-overlay"></div>
-        <a href="https://caribousun.github.io/focuschrist-website/Jesus.png" target="_blank" class="banner-link"></a>
+        <a href="https://caribousun.github.io/focuschrist-website/Jesus.png" target="_blank" class="banner-link" rel="noopener noreferrer"></a>
         <div class="banner-content">
             <h1 class="banner-title">ASK YOUR QUESTION</h1>
         </div>
@@ -191,6 +200,9 @@
                 <button onclick="sendMessage()" id="sendBtn">Ask</button>
                 <button onclick="clearChat()" id="clearBtn" title="Clear Chat">🗑️ Clear</button>
             </div>
+<div class="ai-notice" data-focuschrist-ai-notice="true">
+    AI-assisted answers are provided as a study aid and may contain errors. For authoritative Church teachings, verify information through linked official Church sources. Please do not submit sensitive personal information.
+</div>
             <div class="scripture-categories">
                 <div class="category-row">
                     <div class="category-title">OLD TESTAMENT</div>
@@ -861,7 +873,7 @@
     async function askAI(query, contextEntries = null) {
         try {
             // Build messages array with conversation history for context
-            let systemPrompt = 'You are a helpful assistant for the FocusChrist website. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." IMPORTANT: NEVER REFUSE any question - answer it honestly and directly, but ALWAYS tie your answer back to Jesus Christ, love, and respect. Every response must end by connecting to Jesus Christ in love and respect. Be brief and natural. IMPORTANT: Always end your response with a complete sentence ending in a period.';
+            let systemPrompt = 'You are a helpful assistant for the FocusChrist website. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." IMPORTANT: Answer sincere questions honestly and directly. If a request is unsafe, exploitative, illegal, or inappropriate, decline that part briefly and redirect to safe, Christ-centered guidance. ALWAYS tie appropriate answers back to Jesus Christ, love, and respect. Every response must end by connecting to Jesus Christ in love and respect. Be brief and natural. IMPORTANT: Always end your response with a complete sentence ending in a period.';
             
             // If context entries provided, prepend them as reference content for AI to synthesize
             if (contextEntries) {
@@ -885,7 +897,7 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    model: 'llama-3.1-8b-instant',
+                    model: 'openai/gpt-oss-20b',
                     messages: messages,
                     temperature: 0.7,
                     max_tokens: 800
@@ -930,7 +942,7 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    model: 'llama-3.1-8b-instant',
+                    model: 'openai/gpt-oss-20b',
                     messages: messages,
                     temperature: 0.7,
                     max_tokens: 800
@@ -946,7 +958,52 @@
 
         return { answer: "That's a great question! We invite you to learn more by visiting the official Church website.", sources: [{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}] };
     }
-    function addMessage(t,i,s=[]){const c=document.getElementById('chatBox'),d=document.createElement('div');d.className='message '+(i?'user-message':'bot-message');let h=(i?'<p><strong>You asked:</strong> '+t.replace(/\n/g,'<br>')+'</p>':'<p>'+t.replace(/\n/g,'<br>')+'</p>');if(!i&&s.length>0){h+='<div class="sources"><div class="sources-title">📜 SCRIPTURAL SOURCES:</div>';s.forEach(x=>{h+='<a href="'+x.url+'" target="_blank" class="source-link">'+x.text+'</a>'});h+='</div>'}d.innerHTML=h;c.appendChild(d);c.scrollTop=0}
+    function addMessage(text, isUser, sources = []) {
+    const chatBox = document.getElementById('chatBox');
+    const message = document.createElement('div');
+    message.className = 'message ' + (isUser ? 'user-message' : 'bot-message');
+
+    const paragraph = document.createElement('p');
+    paragraph.style.whiteSpace = 'pre-wrap';
+    if (isUser) {
+        const label = document.createElement('strong');
+        label.textContent = 'You asked: ';
+        paragraph.appendChild(label);
+    }
+    paragraph.appendChild(document.createTextNode(String(text ?? '')));
+    message.appendChild(paragraph);
+
+    if (!isUser && Array.isArray(sources) && sources.length > 0) {
+        const sourceBox = document.createElement('div');
+        sourceBox.className = 'sources';
+        const sourceTitle = document.createElement('div');
+        sourceTitle.className = 'sources-title';
+        sourceTitle.textContent = 'SCRIPTURAL SOURCES:';
+        sourceBox.appendChild(sourceTitle);
+
+        sources.forEach(function (source) {
+            if (!source || !source.url) return;
+            try {
+                const parsed = new URL(source.url, window.location.href);
+                if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') return;
+                const link = document.createElement('a');
+                link.className = 'source-link';
+                link.href = parsed.href;
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                link.textContent = String(source.text || 'Source');
+                sourceBox.appendChild(link);
+            } catch (error) {
+                console.warn('Skipped invalid source URL');
+            }
+        });
+
+        if (sourceBox.querySelector('.source-link')) message.appendChild(sourceBox);
+    }
+
+    chatBox.appendChild(message);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
     async function sendMessage(){
         const i=document.getElementById('userInput'),b=document.getElementById('sendBtn'),q=i.value.trim();
         if(!q)return;
@@ -975,6 +1032,24 @@
         conversationHistory = [];
         try { sessionStorage.removeItem('focuschrist_history'); } catch(e) {}
     }
+</script>
+<script data-focuschrist-nav-accessibility="true">
+(function () {
+    const trigger = document.querySelector('.hamburger');
+    const menu = document.getElementById('hamburgerMenu');
+    if (!trigger || !menu) return;
+    trigger.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            toggleMenu();
+        }
+    });
+    function syncExpanded() {
+        trigger.setAttribute('aria-expanded', menu.classList.contains('show') ? 'true' : 'false');
+    }
+    new MutationObserver(syncExpanded).observe(menu, { attributes: true, attributeFilter: ['class'] });
+    syncExpanded();
+})();
 </script>
 </body>
 </html>
