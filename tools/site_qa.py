@@ -27,6 +27,12 @@ ANSWER_PAGES = {
     "answers/bible-and-book-of-mormon-together.html": "https://focuschrist.com/answers/bible-and-book-of-mormon-together.html",
     "answers/faith-in-jesus-christ-during-trials.html": "https://focuschrist.com/answers/faith-in-jesus-christ-during-trials.html",
 }
+ART_STUDY_PAGES = {
+    "art-study/the-living-christ.html": "https://focuschrist.com/art-study/the-living-christ.html",
+    "art-study/the-good-shepherd.html": "https://focuschrist.com/art-study/the-good-shepherd.html",
+    "art-study/suffer-the-little-children.html": "https://focuschrist.com/art-study/suffer-the-little-children.html",
+    "art-study/be-still.html": "https://focuschrist.com/art-study/be-still.html",
+}
 OLD_MODEL = "llama-3.1-8b-instant"
 NEW_MODEL = "openai/gpt-oss-20b"
 VERIFICATION_FILE = "google3fa84a4b37862f36.html"
@@ -179,6 +185,32 @@ def main() -> int:
     about = core_texts.get("about.html", "")
     art = core_texts.get("art.html", "")
 
+    for study_path, canonical in ART_STUDY_PAGES.items():
+        path = ROOT / study_path
+        text, parser = inspect_html(path, errors)
+        if not text:
+            continue
+        if text.count("<title>") != 1 or text.count("<h1") != 1:
+            fail(errors, f"{study_path}: expected one title and one h1")
+        if f'<link rel="canonical" href="{canonical}">' not in text:
+            fail(errors, f"{study_path}: canonical URL missing or incorrect")
+        if '<meta name="description"' not in text:
+            fail(errors, f"{study_path}: meta description missing")
+        if text.count('data-focuschrist-independence="footer"') != 1:
+            fail(errors, f"{study_path}: independence footer disclosure missing/duplicated")
+        if '<script src="../site-common.js" defer></script>' not in text:
+            fail(errors, f"{study_path}: shared interaction controller missing")
+        if 'href="../art.html"' not in text or 'href="../ask.html"' not in text:
+            fail(errors, f"{study_path}: Art/Ask continuation path missing")
+        if text.count("churchofjesuschrist.org") < 2:
+            fail(errors, f"{study_path}: official scripture/Church study pathway missing")
+        if study_path not in art:
+            fail(errors, f"art.html missing featured study link for {study_path}")
+        local_images = [img for img in parser.images if img.get("src", "").startswith("../art/")]
+        if not local_images:
+            fail(errors, f"{study_path}: local gallery artwork image missing")
+
+
     if 'onclick="expandTimelineItem' in pioneers or 'onclick="expandTrailPoint' in pioneers:
         fail(errors, "Pioneers legacy inline expansion handlers detected")
     if pioneers.count('data-focus-expand="timeline"') < 8:
@@ -215,6 +247,8 @@ def main() -> int:
             fail(errors, f"Art image missing loading=lazy: {img.get('src')}")
         if img.get("decoding") != "async":
             fail(errors, f"Art image missing decoding=async: {img.get('src')}")
+    if art.count('data-focuschrist-featured-art-study="true"') != 1:
+        fail(errors, "Featured Art study section missing/duplicated")
     if art.count('data-focuschrist-art-accessibility="true"') != 1:
         fail(errors, "Art accessibility helper missing/duplicated")
 
@@ -240,10 +274,10 @@ def main() -> int:
         try:
             tree = ET.parse(sitemap)
             locs = {node.text.strip() for node in tree.findall('.//{*}loc') if node.text}
-            for canonical in list(CORE.values()) + list(ANSWER_PAGES.values()):
+            for canonical in list(CORE.values()) + list(ANSWER_PAGES.values()) + list(ART_STUDY_PAGES.values()):
                 if canonical not in locs:
                     fail(errors, f"sitemap.xml missing {canonical}")
-            if len(locs) < 16:
+            if len(locs) < 20:
                 fail(errors, f"sitemap.xml unexpectedly contains only {len(locs)} URLs")
         except Exception as exc:
             fail(errors, f"sitemap.xml parse failure: {exc}")
@@ -274,6 +308,7 @@ def main() -> int:
     print("FocusChrist SITE QA PASSED")
     print(f"Core pages checked: {len(CORE)}")
     print(f"Permanent answer pages checked: {len(ANSWER_PAGES)}")
+    print(f"Featured Art study pages checked: {len(ART_STUDY_PAGES)}")
     print(f"Art gallery images checked: {len(gallery_imgs)}")
     print("Search Console verification, sitemap, local references, Answer Library sources, model migration, disclosures, accessibility markers, and Ask rendering verified.")
     return 0
