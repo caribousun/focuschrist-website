@@ -1,0 +1,119 @@
+name: Apply shared FocusChrist interactions
+
+on:
+  push:
+    branches:
+      - focus/robustness-phase3
+    paths:
+      - '.github/workflows/apply-shared-interactions.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Consolidate navigation accessibility and Pioneer disclosure controls
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          pages = ['index.html', 'ask.html', 'art.html', 'pioneers.html', 'about.html']
+          shared_tag = '<script src="site-common.js" defer></script>'
+
+          for filename in pages:
+              path = Path(filename)
+              raw = path.read_bytes()
+              text = raw.decode('utf-8')
+              nl = '\r\n' if b'\r\n' in raw else '\n'
+
+              # Remove the phase-1 per-page helper now replaced by site-common.js.
+              pattern = re.compile(
+                  r'\s*<script data-focuschrist-nav-accessibility="true">.*?</script>\s*',
+                  re.S
+              )
+              text, removed = pattern.subn(nl, text, count=1)
+              if removed != 1:
+                  raise SystemExit(f'{filename}: expected one embedded nav accessibility helper, removed {removed}')
+
+              if shared_tag not in text:
+                  if '</head>' not in text:
+                      raise SystemExit(f'{filename}: missing </head>')
+                  text = text.replace('</head>', '    ' + shared_tag + nl + '</head>', 1)
+
+              if filename == 'pioneers.html':
+                  timeline_pattern = re.compile(
+                      r'<div class="timeline-item" onclick="expandTimelineItem\(this, \'([^\']+)\'\)">'
+                  )
+                  trail_pattern = re.compile(
+                      r'<div class="map-point" onclick="expandTrailPoint\(this, \'([^\']+)\'\)">'
+                  )
+                  text, timeline_count = timeline_pattern.subn(
+                      lambda m: '<div class="timeline-item" data-focus-expand="timeline" data-topic="' + m.group(1) + '" role="button" tabindex="0" aria-expanded="false">',
+                      text
+                  )
+                  text, trail_count = trail_pattern.subn(
+                      lambda m: '<div class="map-point" data-focus-expand="trail" data-topic="' + m.group(1) + '" role="button" tabindex="0" aria-expanded="false">',
+                      text
+                  )
+                  if timeline_count < 8:
+                      raise SystemExit(f'pioneers.html: unexpectedly low timeline conversion count {timeline_count}')
+                  if trail_count < 8:
+                      raise SystemExit(f'pioneers.html: unexpectedly low trail conversion count {trail_count}')
+                  if 'onclick="expandTimelineItem' in text or 'onclick="expandTrailPoint' in text:
+                      raise SystemExit('pioneers.html: legacy inline expansion handler remains')
+                  print(f'Converted {timeline_count} timeline items and {trail_count} trail items')
+
+              # Preserve the file's original newline convention.
+              if nl == '\r\n':
+                  text = text.replace('\r\n', '\n').replace('\n', '\r\n')
+              else:
+                  text = text.replace('\r\n', '\n')
+              path.write_bytes(text.encode('utf-8'))
+
+      - name: Update permanent QA for shared interactions
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('tools/site_qa.py')
+          text = path.read_text(encoding='utf-8')
+
+          old = '''        if text.count('data-focuschrist-nav-accessibility="true"') != 1:\n            fail(errors, f"{filename}: navigation accessibility helper missing/duplicated")\n        if 'aria-controls="hamburgerMenu"' not in text:\n            fail(errors, f"{filename}: hamburger ARIA controls missing")\n'''
+          new = '''        if text.count('<script src="site-common.js" defer></script>') != 1:\n            fail(errors, f"{filename}: shared interaction controller missing/duplicated")\n        if 'aria-controls="hamburgerMenu"' not in text:\n            fail(errors, f"{filename}: hamburger ARIA controls missing")\n'''
+          if old not in text:
+              raise SystemExit('Expected per-page navigation QA block not found')
+          text = text.replace(old, new, 1)
+
+          anchor = '''    ask = (ROOT / "ask.html").read_text(encoding="utf-8")\n    pioneers = (ROOT / "pioneers.html").read_text(encoding="utf-8")\n'''
+          insert = '''    common = ROOT / "site-common.js"\n    if not common.exists() or common.stat().st_size == 0:\n        fail(errors, "site-common.js missing or empty")\n        common_text = ""\n    else:\n        common_text = common.read_text(encoding="utf-8")\n        for marker in ("initNavigation", "initPioneerDisclosures", "aria-expanded", "aria-live"):\n            if marker not in common_text:\n                fail(errors, f"site-common.js missing required behavior marker: {marker}")\n\n'''
+          if 'common = ROOT / "site-common.js"' not in text:
+              if anchor not in text:
+                  raise SystemExit('Unable to locate QA content anchor')
+              text = text.replace(anchor, insert + anchor, 1)
+
+          pioneer_anchor = '''    if OLD_MODEL in ask or OLD_MODEL in pioneers:\n        fail(errors, "Retired Groq model reintroduced into Ask/Pioneers")\n'''
+          pioneer_checks = '''    if 'onclick="expandTimelineItem' in pioneers or 'onclick="expandTrailPoint' in pioneers:\n        fail(errors, "Pioneers legacy inline expansion handlers detected")\n    if pioneers.count('data-focus-expand="timeline"') < 8:\n        fail(errors, "Pioneers timeline disclosure metadata unexpectedly missing")\n    if pioneers.count('data-focus-expand="trail"') < 8:\n        fail(errors, "Pioneers trail disclosure metadata unexpectedly missing")\n    if pioneers.count('role="button" tabindex="0" aria-expanded="false"') < 16:\n        fail(errors, "Pioneers disclosure keyboard/ARIA attributes unexpectedly missing")\n\n'''
+          if 'Pioneers legacy inline expansion handlers detected' not in text:
+              if pioneer_anchor not in text:
+                  raise SystemExit('Unable to locate Pioneers QA anchor')
+              text = text.replace(pioneer_anchor, pioneer_checks + pioneer_anchor, 1)
+
+          path.write_text(text, encoding='utf-8')
+
+      - name: Run permanent site QA
+        run: python tools/site_qa.py
+
+      - name: Commit shared interaction migration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html ask.html art.html pioneers.html about.html tools/site_qa.py
+          git commit -m "Consolidate shared interactions and Pioneer accessibility"
+          git push
