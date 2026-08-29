@@ -1,0 +1,79 @@
+name: Add FocusChrist independence statement
+
+on:
+  push:
+    paths:
+      - '.github/workflows/add-independence-statement.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add independence statements
+        shell: python
+        run: |
+          from pathlib import Path
+
+          pages = ["index.html", "ask.html", "art.html", "pioneers.html", "about.html"]
+
+          for filename in pages:
+              path = Path(filename)
+              raw = path.read_bytes()
+              text = raw.decode("utf-8")
+              nl = "\r\n" if b"\r\n" in raw else "\n"
+
+              if 'data-focuschrist-independence="footer"' not in text:
+                  if "</footer>" not in text:
+                      raise RuntimeError(f"{filename}: footer closing tag not found")
+
+                  footer_note = (
+                      '        <p data-focuschrist-independence="footer" '
+                      'style="max-width: 900px; margin: 14px auto 0; line-height: 1.6; font-size: 0.92em;">'
+                      'focusChrist is an independent faith-based website and is not an official website of, sponsored by, '
+                      'or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit '
+                      '<a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer" '
+                      'style="color: #c9a961;">ChurchofJesusChrist.org</a>.</p>'
+                  )
+                  text = text.replace("</footer>", footer_note + nl + "    </footer>", 1)
+
+              if filename == "about.html" and 'data-focuschrist-independence="about"' not in text:
+                  if "</main>" not in text:
+                      raise RuntimeError("about.html: main closing tag not found")
+
+                  about_block = nl.join([
+                      '        <div class="section" data-focuschrist-independence="about">',
+                      '            <h2>Independent Website</h2>',
+                      '            <p>focusChrist is an independent faith-based website created to help people learn about Jesus Christ and the beliefs, scriptures, and history of The Church of Jesus Christ of Latter-day Saints. It is not an official website of, sponsored by, or endorsed by the Church.</p>',
+                      '            <p>Material on focusChrist is presented from a Latter-day Saint perspective and links to official Church resources when appropriate. For official Church doctrine, policies, news, and resources, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer" style="color: #c9a961;">ChurchofJesusChrist.org</a>.</p>',
+                      '        </div>',
+                      ''
+                  ])
+                  text = text.replace("</main>", about_block + "    </main>", 1)
+
+              path.write_bytes(text.encode("utf-8"))
+
+          for filename in pages:
+              text = Path(filename).read_text(encoding="utf-8")
+              assert text.count('data-focuschrist-independence="footer"') == 1, filename
+          about = Path("about.html").read_text(encoding="utf-8")
+          assert about.count('data-focuschrist-independence="about"') == 1
+
+      - name: Commit site update
+        run: |
+          if git diff --quiet; then
+            echo "No changes needed"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html ask.html art.html pioneers.html about.html
+          git commit -m "Add independent-site disclosure across FocusChrist"
+          git push
