@@ -1,0 +1,91 @@
+name: Repair Pioneer asset and strengthen QA
+
+on:
+  push:
+    branches:
+      - focus/robustness-phase2
+    paths:
+      - '.github/workflows/repair-pioneer-and-strengthen-qa.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out phase branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Repair Pioneer banner full-image link
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('pioneers.html')
+          raw = path.read_bytes()
+          text = raw.decode('utf-8')
+          nl = '\r\n' if b'\r\n' in raw else '\n'
+
+          old = (
+              ' <div class="banner" style="position:relative;width:100%;height:200px;overflow:hidden;margin-top:60px;cursor:pointer;" onclick="window.open(\'pioneer-art.png\', \'_blank\')">' + nl +
+              ' <img src="working-banner.png" alt="Pioneer Banner" style="width:100%;height:100%;object-fit:cover;">' + nl +
+              ' </div>'
+          )
+          new = (
+              ' <a class="banner" href="pioneer%20art.png" target="_blank" rel="noopener noreferrer" aria-label="Open full pioneer artwork" style="display:block;position:relative;width:100%;height:200px;overflow:hidden;margin-top:60px;cursor:pointer;">' + nl +
+              ' <img src="working-banner.png" alt="Pioneer Banner" style="width:100%;height:100%;object-fit:cover;">' + nl +
+              ' </a>'
+          )
+          if old not in text:
+              raise SystemExit('Expected Pioneer banner block not found')
+          text = text.replace(old, new, 1)
+          path.write_bytes(text.encode('utf-8'))
+
+          good = Path('pioneer art.png')
+          dead = Path('pioneer-art.png')
+          if not good.exists() or good.stat().st_size == 0:
+              raise SystemExit('Nonempty pioneer art.png is missing')
+          if not dead.exists() or dead.stat().st_size != 0:
+              raise SystemExit('Expected zero-byte pioneer-art.png not found')
+          dead.unlink()
+
+      - name: Strengthen permanent media QA
+        shell: python
+        run: |
+          from pathlib import Path
+
+          path = Path('tools/site_qa.py')
+          text = path.read_text(encoding='utf-8')
+
+          anchor = '    errors: list[str] = []\n\n'
+          block = '''    # No zero-byte production media is allowed.\n    for media_path in ROOT.rglob("*"):\n        if media_path.is_file() and media_path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif"}:\n            if media_path.stat().st_size == 0:\n                fail(errors, f"Zero-byte media file detected: {media_path.relative_to(ROOT).as_posix()}")\n\n'''
+          if 'Zero-byte media file detected:' not in text:
+              if anchor not in text:
+                  raise SystemExit('Unable to locate site QA error-list anchor')
+              text = text.replace(anchor, anchor + block, 1)
+
+          art_anchor = '''    if art.count('data-focuschrist-art-accessibility="true"') != 1:\n        fail(errors, "Art accessibility helper missing/duplicated")\n\n'''
+          art_block = '''    local_full_pairs = [img for img in gallery_imgs if img.get("data-full-src", "").startswith("art/")]\n    if len(local_full_pairs) < 27:\n        fail(errors, f"Expected at least 27 local thumbnail/full-resolution Art pairs, found {len(local_full_pairs)}")\n    for img in local_full_pairs:\n        thumb_src = img.get("src", "")\n        full_src = img.get("data-full-src", "")\n        if not thumb_src.startswith("art/thumbs/") or not thumb_src.endswith(".webp"):\n            fail(errors, f"Local Art preview is not a WebP thumbnail: {thumb_src}")\n        thumb_path = ROOT / thumb_src\n        full_path = ROOT / full_src\n        if not thumb_path.exists() or thumb_path.stat().st_size == 0:\n            fail(errors, f"Missing/empty Art thumbnail: {thumb_src}")\n        if not full_path.exists() or full_path.stat().st_size == 0:\n            fail(errors, f"Missing/empty full-resolution Art source: {full_src}")\n\n'''
+          if 'local_full_pairs =' not in text:
+              if art_anchor not in text:
+                  raise SystemExit('Unable to locate Art QA anchor')
+              text = text.replace(art_anchor, art_anchor + art_block, 1)
+
+          path.write_text(text, encoding='utf-8')
+
+      - name: Refresh conservative repository audit
+        run: python tools/repository-audit.py
+
+      - name: Run strengthened FocusChrist site QA
+        run: python tools/site_qa.py
+
+      - name: Commit repair and QA hardening
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Repair Pioneer artwork link and strengthen media QA"
+          git push
