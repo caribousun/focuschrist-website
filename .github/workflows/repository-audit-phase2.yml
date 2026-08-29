@@ -1,0 +1,34 @@
+name: Audit FocusChrist repository phase 2
+
+on:
+  push:
+    branches:
+      - focus/robustness-phase2
+    paths:
+      - '.github/workflows/repository-audit-phase2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out phase branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run repository dependency audit
+        run: python tools/repository-audit.py
+
+      - name: Run FocusChrist site QA
+        run: python tools/site_qa.py
+
+      - name: Commit audit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add repository-audit-phase2.md
+          git commit -m "Record phase 2 repository dependency audit"
+          git push
