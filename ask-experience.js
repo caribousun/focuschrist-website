@@ -14,6 +14,38 @@
         { terms: ['trial', 'trials', 'adversity', 'suffering', 'grief', 'hard time', 'difficult time'], label: 'How Can Faith in Jesus Christ Help During Trials?', url: 'answers/faith-in-jesus-christ-during-trials.html' }
     ];
 
+    function createWelcome() {
+        const welcome = document.createElement('div');
+        welcome.className = 'welcome ask-welcome';
+
+        const heading = document.createElement('h3');
+        heading.textContent = 'Begin with a sincere question.';
+        welcome.appendChild(heading);
+
+        const copy = document.createElement('p');
+        copy.textContent = 'You can type your own question above or choose one of the suggested questions. The purpose is to help you study more deeply and keep Jesus Christ at the center.';
+        welcome.appendChild(copy);
+
+        const sub = document.createElement('p');
+        sub.className = 'welcome-sub';
+        sub.textContent = 'Scripture and official Church resources are linked whenever available.';
+        welcome.appendChild(sub);
+        return welcome;
+    }
+
+    function restoreRefinedWelcome() {
+        const chatBox = document.getElementById('chatBox');
+        if (!chatBox) return;
+        chatBox.replaceChildren(createWelcome());
+    }
+
+    function focusConversation() {
+        const conversation = document.getElementById('conversation-heading');
+        if (conversation) {
+            conversation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
     function submitQuestion(question) {
         const input = document.getElementById('userInput');
         if (!input || !question) return;
@@ -21,6 +53,7 @@
         input.focus();
         if (typeof window.sendMessage === 'function') {
             window.sendMessage();
+            window.setTimeout(focusConversation, 80);
         }
     }
 
@@ -56,6 +89,7 @@
                 if (!topic) return;
                 if (typeof window.askTopic === 'function') {
                     window.askTopic(topic);
+                    window.setTimeout(focusConversation, 80);
                 } else {
                     submitQuestion(topic);
                 }
@@ -101,7 +135,9 @@
         const observer = new MutationObserver(function (mutations) {
             const addedAnswer = mutations.some(function (mutation) {
                 return Array.from(mutation.addedNodes || []).some(function (node) {
-                    return node.nodeType === 1 && (node.classList.contains('bot-message') || node.querySelector?.('.bot-message'));
+                    if (node.nodeType !== 1) return false;
+                    if (node.classList && node.classList.contains('bot-message')) return true;
+                    return typeof node.querySelector === 'function' && Boolean(node.querySelector('.bot-message'));
                 });
             });
             if (addedAnswer) {
@@ -114,6 +150,13 @@
     function initNewQuestionButton() {
         const button = document.getElementById('clearBtn');
         if (!button) return;
+        const originalClear = typeof window.clearChat === 'function' ? window.clearChat : null;
+        if (originalClear) {
+            window.clearChat = function () {
+                originalClear();
+                restoreRefinedWelcome();
+            };
+        }
         button.addEventListener('click', function () {
             window.setTimeout(function () {
                 const input = document.getElementById('userInput');
