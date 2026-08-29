@@ -13,6 +13,7 @@ TEXT_EXTENSIONS = {
     ".yml", ".yaml", ".toml", ".ini", ".cfg", ".csv"
 }
 IGNORED_PARTS = {".git"}
+PROTECTED_ROOT_MEDIA = {"Jesus.png"}
 
 
 def iter_files():
@@ -87,7 +88,7 @@ def main():
         if not art_variants:
             continue
         for path in group:
-            if path.parent != ROOT:
+            if path.parent != ROOT or path.name in PROTECTED_ROOT_MEDIA:
                 continue
             refs = references_for(path, texts)
             if not refs:
@@ -102,11 +103,12 @@ def main():
     lines = [
         "# FocusChrist Repository Audit — Phase 2",
         "",
-        "This is a conservative dependency audit. Root filenames are considered referenced only when used as root files, not when the same basename appears under a subdirectory such as `art/`.",
+        "This is a conservative dependency audit. Root filenames are considered referenced only when used as root files, not when the same basename appears under a subdirectory such as `art/`. Known site-critical root media are protected explicitly.",
         "",
         f"- Files scanned: {len(files)}",
         f"- Exact duplicate media groups: {len(duplicate_groups)}",
         f"- Zero-byte files: {len(zero_byte)}",
+        f"- Protected root media: {', '.join(sorted(PROTECTED_ROOT_MEDIA))}",
         f"- Unreferenced root media duplicates with an identical `art/` canonical copy: {len(safe_root_duplicate_candidates)}",
         f"- Unreferenced zero-byte cleanup candidates: {len(safe_zero_byte_candidates)}",
         "",
@@ -131,7 +133,8 @@ def main():
         for path in sorted(group, key=rel):
             refs = references_for(path, texts)
             ref_text = ", ".join(f"`{r}`" for r in refs) if refs else "none"
-            lines.append(f"- `{rel(path)}` — {path.stat().st_size:,} bytes — text references: {ref_text}")
+            protected = " — PROTECTED" if path.parent == ROOT and path.name in PROTECTED_ROOT_MEDIA else ""
+            lines.append(f"- `{rel(path)}` — {path.stat().st_size:,} bytes — text references: {ref_text}{protected}")
         lines.append("")
 
     lines += ["## All zero-byte files"]
