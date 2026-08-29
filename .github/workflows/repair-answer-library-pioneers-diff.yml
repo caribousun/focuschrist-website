@@ -1,0 +1,44 @@
+name: Normalize Pioneer Answer Library Diff
+
+on:
+  push:
+    branches:
+      - focus/answer-library-phase1
+    paths:
+      - '.github/workflows/repair-answer-library-pioneers-diff.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Restore Pioneer bytes and add only Answers navigation
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          import subprocess
+
+          subprocess.run(['git', 'checkout', 'origin/main', '--', 'pioneers.html'], check=True)
+          path = Path('pioneers.html')
+          data = path.read_bytes()
+          nl = b'\r\n' if b'\r\n' in data else b'\n'
+          pattern = re.compile(rb'(?P<indent>[ \t]*)<a href="ask\.html">ASK</a>')
+          def repl(match):
+              return match.group(0) + nl + match.group('indent') + b'<a href="answers.html">ANSWERS</a>'
+          data, count = pattern.subn(repl, data)
+          if count != 2:
+              raise SystemExit(f'Expected exactly 2 Pioneer ASK nav links, found {count}')
+          path.write_bytes(data)
+      - name: Commit normalized Pioneer diff
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add pioneers.html
+          git commit -m "Normalize Pioneer Answer Library navigation diff"
+          git push
