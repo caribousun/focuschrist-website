@@ -1,0 +1,60 @@
+name: Integrate FocusChrist Answer Library
+
+on:
+  push:
+    branches:
+      - focus/answer-library-phase1
+    paths:
+      - '.github/workflows/integrate-answer-library.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Add Answers to core navigation and homepage
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          pages = ['index.html', 'ask.html', 'art.html', 'pioneers.html', 'about.html']
+          for filename in pages:
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              if text.count('href="answers.html"') < 2:
+                  pattern = re.compile(r'(?P<indent>\s*)<a href="ask\.html"(?P<attrs>[^>]*)>ASK</a>')
+                  def add_answers(match):
+                      original = match.group(0)
+                      indent = match.group('indent')
+                      return original + indent + '<a href="answers.html">ANSWERS</a>'
+                  text, count = pattern.subn(add_answers, text)
+                  if count < 2:
+                      raise SystemExit(f'{filename}: expected at least two ASK navigation links, found {count}')
+              if text.count('href="answers.html"') < 2:
+                  raise SystemExit(f'{filename}: Answers navigation integration failed')
+              path.write_text(text, encoding='utf-8')
+
+          index = Path('index.html')
+          text = index.read_text(encoding='utf-8')
+          marker = '''        <div class="cta-section">\n            <a href="ask.html" class="cta-button">Ask a Question</a>\n        </div>'''
+          replacement = '''        <div class="section">\n            <h2>Explore Answers</h2>\n            <p>Browse a permanent, source-grounded library of sincere questions about Jesus Christ, scripture, temples, families, prayer, life after death, and Latter-day Saint belief.</p>\n            <p><a href="answers.html" style="color:#c9a961;">Visit the Answer Library</a></p>\n        </div>\n\n''' + marker
+          if 'Visit the Answer Library' not in text:
+              if marker not in text:
+                  raise SystemExit('index.html: CTA anchor not found')
+              text = text.replace(marker, replacement, 1)
+          index.write_text(text, encoding='utf-8')
+
+      - name: Commit integration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html ask.html art.html pioneers.html about.html
+          git commit -m "Integrate Answer Library into core navigation"
+          git push
