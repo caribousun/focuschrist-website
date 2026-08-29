@@ -28,6 +28,9 @@ jobs:
       - name: Run FocusChrist site QA
         run: python tools/site_qa.py
 
+      - name: Validate Ask experience JavaScript
+        run: node --check ask-experience.js
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
