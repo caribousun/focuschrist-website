@@ -14,6 +14,10 @@
         { terms: ['trial', 'trials', 'adversity', 'suffering', 'grief', 'hard time', 'difficult time'], label: 'How Can Faith in Jesus Christ Help During Trials?', url: 'answers/faith-in-jesus-christ-during-trials.html' }
     ];
 
+    let followupInput = null;
+    let followupButton = null;
+    let followupBusy = false;
+
     function createWelcome() {
         const welcome = document.createElement('div');
         welcome.className = 'welcome ask-welcome';
@@ -37,6 +41,199 @@
         const chatBox = document.getElementById('chatBox');
         if (!chatBox) return;
         chatBox.replaceChildren(createWelcome());
+    }
+
+    function ensureFollowupStyles() {
+        if (document.getElementById('ask-followup-styles')) return;
+        const style = document.createElement('style');
+        style.id = 'ask-followup-styles';
+        style.textContent = `
+            .ask-followup-dock {
+                position: fixed;
+                left: 50%;
+                bottom: max(18px, env(safe-area-inset-bottom));
+                width: min(900px, calc(100% - 32px));
+                z-index: 950;
+                opacity: 0;
+                pointer-events: none;
+                transform: translate(-50%, calc(100% + 36px));
+                transition: opacity .22s ease, transform .22s ease;
+            }
+            .ask-followup-dock.visible {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translate(-50%, 0);
+            }
+            .ask-followup-shell {
+                padding: 12px 14px 11px;
+                border: 1px solid rgba(201,169,97,.48);
+                border-radius: 16px;
+                background: rgba(18,14,10,.97);
+                box-shadow: 0 14px 42px rgba(0,0,0,.55);
+                backdrop-filter: blur(12px);
+            }
+            .ask-followup-label {
+                margin: 0 0 7px 4px;
+                color: #c9a961;
+                font-size: .72rem;
+                font-weight: 700;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+            }
+            .ask-followup-form {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                gap: 9px;
+                align-items: center;
+            }
+            .ask-followup-input {
+                width: 100%;
+                min-width: 0;
+                padding: 13px 17px;
+                border: 1px solid rgba(201,169,97,.42);
+                border-radius: 999px;
+                background: rgba(255,255,255,.05);
+                color: #fff;
+                font: inherit;
+                font-size: .95rem;
+            }
+            .ask-followup-input::placeholder { color: #8f8477; }
+            .ask-followup-input:focus {
+                outline: none;
+                border-color: #e0c982;
+                box-shadow: 0 0 0 3px rgba(201,169,97,.10);
+            }
+            .ask-followup-button {
+                min-height: 44px;
+                padding: 0 20px;
+                border: 1px solid #c9a961;
+                border-radius: 999px;
+                background: #c9a961;
+                color: #171109;
+                font-weight: 700;
+                white-space: nowrap;
+                cursor: pointer;
+            }
+            .ask-followup-button:hover,
+            .ask-followup-button:focus-visible { background: #e0c982; outline: none; }
+            .ask-followup-button:disabled {
+                opacity: .62;
+                cursor: wait;
+            }
+            .ask-followup-note {
+                margin: 7px 4px 0;
+                color: #8f8477;
+                font-size: .72rem;
+                line-height: 1.35;
+            }
+            body.ask-followup-active .ask-chat-box { padding-bottom: 112px; }
+            body.ask-followup-active { padding-bottom: 104px; }
+            @media (max-width: 640px) {
+                .ask-followup-dock {
+                    bottom: max(8px, env(safe-area-inset-bottom));
+                    width: calc(100% - 16px);
+                }
+                .ask-followup-shell { padding: 10px; border-radius: 13px; }
+                .ask-followup-label { font-size: .68rem; }
+                .ask-followup-form { grid-template-columns: minmax(0, 1fr) auto; gap: 7px; }
+                .ask-followup-input { padding: 12px 14px; font-size: .9rem; }
+                .ask-followup-button { min-height: 42px; padding: 0 14px; font-size: .82rem; }
+                .ask-followup-note { display: none; }
+                body.ask-followup-active .ask-chat-box { padding-bottom: 96px; }
+                body.ask-followup-active { padding-bottom: 88px; }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    function setFollowupVisible(visible) {
+        const dock = document.getElementById('askFollowupDock');
+        if (!dock) return;
+        dock.classList.toggle('visible', Boolean(visible));
+        dock.setAttribute('aria-hidden', visible ? 'false' : 'true');
+        document.body.classList.toggle('ask-followup-active', Boolean(visible));
+    }
+
+    function setFollowupBusy(busy) {
+        followupBusy = Boolean(busy);
+        if (followupInput) followupInput.disabled = followupBusy;
+        if (followupButton) {
+            followupButton.disabled = followupBusy;
+            followupButton.textContent = followupBusy ? 'Thinking…' : 'Ask';
+        }
+    }
+
+    function submitFollowup() {
+        if (!followupInput || followupBusy) return;
+        const question = followupInput.value.trim();
+        if (!question) {
+            followupInput.focus();
+            return;
+        }
+
+        const primaryInput = document.getElementById('userInput');
+        if (!primaryInput || typeof window.sendMessage !== 'function') return;
+
+        primaryInput.value = question;
+        followupInput.value = '';
+        setFollowupBusy(true);
+        window.sendMessage();
+        window.setTimeout(focusConversation, 80);
+    }
+
+    function initFollowupComposer() {
+        if (document.getElementById('askFollowupDock')) return;
+        ensureFollowupStyles();
+
+        const dock = document.createElement('aside');
+        dock.id = 'askFollowupDock';
+        dock.className = 'ask-followup-dock';
+        dock.setAttribute('data-focuschrist-followup-composer', 'true');
+        dock.setAttribute('aria-label', 'Ask a follow-up question');
+        dock.setAttribute('aria-hidden', 'true');
+
+        const shell = document.createElement('div');
+        shell.className = 'ask-followup-shell';
+
+        const label = document.createElement('div');
+        label.className = 'ask-followup-label';
+        label.textContent = 'Continue the conversation';
+        shell.appendChild(label);
+
+        const form = document.createElement('form');
+        form.className = 'ask-followup-form';
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            submitFollowup();
+        });
+
+        followupInput = document.createElement('input');
+        followupInput.id = 'followupInput';
+        followupInput.className = 'ask-followup-input';
+        followupInput.type = 'text';
+        followupInput.placeholder = 'Ask a follow-up question…';
+        followupInput.autocomplete = 'off';
+        followupInput.setAttribute('aria-label', 'Ask a follow-up question in the current conversation');
+        form.appendChild(followupInput);
+
+        followupButton = document.createElement('button');
+        followupButton.className = 'ask-followup-button';
+        followupButton.type = 'submit';
+        followupButton.textContent = 'Ask';
+        form.appendChild(followupButton);
+
+        shell.appendChild(form);
+
+        const note = document.createElement('div');
+        note.className = 'ask-followup-note';
+        note.textContent = 'Your previous questions and answers remain part of this conversation. Use New Question above when you want to start over.';
+        shell.appendChild(note);
+
+        dock.appendChild(shell);
+        document.body.appendChild(dock);
+
+        const chatBox = document.getElementById('chatBox');
+        if (chatBox && chatBox.querySelector('.bot-message')) setFollowupVisible(true);
     }
 
     function preferredScrollBehavior() {
@@ -78,8 +275,6 @@
             behavior: preferredScrollBehavior()
         });
 
-        // Position the conversation container below the fixed site header rather than
-        // aligning the answer itself with the top edge of the browser viewport.
         scrollPageToElement(chatBox);
     }
 
@@ -199,7 +394,12 @@
             if (addedAnswer) {
                 window.setTimeout(function () {
                     addRelatedStudyToLatestAnswer();
+                    setFollowupVisible(true);
+                    setFollowupBusy(false);
                     focusLatestAnswer();
+                    if (followupInput && window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
+                        try { followupInput.focus({ preventScroll: true }); } catch (_error) { followupInput.focus(); }
+                    }
                 }, 60);
             }
         });
@@ -214,6 +414,9 @@
             window.clearChat = function () {
                 originalClear();
                 restoreRefinedWelcome();
+                setFollowupVisible(false);
+                setFollowupBusy(false);
+                if (followupInput) followupInput.value = '';
             };
         }
         button.addEventListener('click', function () {
@@ -232,6 +435,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        initFollowupComposer();
         initStarterQuestions();
         initTopicCards();
         initAutomaticConversationFollow();
