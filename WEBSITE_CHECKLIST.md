@@ -1,46 +1,56 @@
-# FocusChrist Website Update Checklist
+# FocusChrist Website Production Checklist
 
-## BEFORE Making ANY Changes
+Use this checklist for every repository change that can affect `https://focuschrist.com`.
 
-1. ✅ Check git status: `git status`
-2. ✅ Create restore point FIRST (optional but recommended):
-   ```bash
-   git add -A
-   git commit -m "Restore point before [change]"
-   git tag "restore-point-YYYY-MM-DD-HHMM"
-   ```
+## Before changing production
+1. Re-read the current Focus project memory and verify the owner-authorized scope.
+2. Re-fetch the current `main` branch; do not work from a stale copy.
+3. Create an isolated change branch for material edits.
+4. Preserve existing functionality and content unless the owner explicitly authorized changing it.
+5. Never expose Cloudflare/Groq secrets or other credentials in repository files, commits, logs, or documentation.
 
-## ADDING IMAGES TO ART PAGE
+## Protected production controls
+Do not remove or weaken these without a verified replacement and explicit reason:
+- `google3fa84a4b37862f36.html` — Google Search Console ownership verification.
+- `robots.txt` and `sitemap.xml` — search discovery controls.
+- `Jesus.png` — site-wide banner/social image.
+- independence disclosures on all five core pages and the fuller About disclosure.
+- `openai/gpt-oss-20b` direct model request in Ask/Pioneers plus the Cloudflare compatibility fallback.
+- `tools/site_qa.py`, `.github/workflows/site-qa.yml`, and the QA step in `deploy-pages.yml`.
 
-1. ✅ Copy image to `art/` folder first
-2. ✅ **REMOVE SPACES from filenames** — rename to use hyphens or underscores:
-   - `Let it go.png` → `Let-It-Go.png`
-   - `Jesus image.jpg` → `Jesus-Image.jpg`
-3. ✅ Update art.html to use the new filename (no spaces)
-4. ✅ Edit ONLY art.html — do NOT touch ask.html
-3. ✅ Stage ONLY the files you need:
-   ```bash
-   git add art.html "art/filename.png"
-   ```
-4. ✅ Check status shows ONLY art.html and the image
-5. ✅ Commit with clear message
-6. ✅ Push and verify
+## Required verification
+Run:
+```bash
+python tools/site_qa.py
+```
 
-## NEVER DO
+For Art additions, also follow `IMAGE-UPLOAD-GUIDE.md` and build thumbnails before QA.
 
-- ❌ `git add -A` unless you want to commit EVERYTHING
-- ❌ Edit ask.html and art.html in the same session
-- ❌ Continue through git conflicts without checking first
+The site QA must pass before merge. A pull request to `main` runs the same QA automatically. Production deployment also runs QA before GitHub Pages is published.
 
-## IF ASK PAGE BREAKS
+## Review the actual diff
+Confirm that:
+- only intended files changed;
+- no existing artwork/content was unintentionally removed;
+- no retired Groq model was reintroduced;
+- no local asset reference is broken or zero bytes;
+- Search Console verification and sitemap controls remain present;
+- external `target="_blank"` links retain `rel="noopener noreferrer"`;
+- AI/source transparency and independent-site disclosures remain intact.
 
-1. Find last working commit: `git log --all --oneline`
-2. Checkout that version: `git checkout [commit-hash] -- ask.html`
-3. Commit the restore
-4. Push
+## After merge
+1. Confirm the **Deploy GitHub Pages** workflow completes successfully.
+2. Verify the affected production page/function directly.
+3. For Ask/Pioneers changes, test a live AI response/expansion.
+4. For Art changes, test preview + full-resolution modal + keyboard controls.
+5. Record material production changes and verification evidence in Focus Current State and Decision & Change Log.
 
----
+## Recovery
+Git history is the primary restore mechanism. If a production defect is found:
+1. identify the last verified-good commit;
+2. revert only the defective change when possible;
+3. run `python tools/site_qa.py`;
+4. deploy through the normal QA-gated Pages workflow;
+5. verify production again.
 
-**Key commits:**
-- Working ask page: `965598f` (24 atonement entries)
-- Working art page with "Let It Go": `39e8db2`
+Do not bypass QA merely to make a deployment faster.

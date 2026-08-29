@@ -65,6 +65,12 @@ def local_path_for(ref: str) -> Path | None:
 def main() -> int:
     errors: list[str] = []
 
+    # No zero-byte production media is allowed.
+    for media_path in ROOT.rglob("*"):
+        if media_path.is_file() and media_path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif"}:
+            if media_path.stat().st_size == 0:
+                fail(errors, f"Zero-byte media file detected: {media_path.relative_to(ROOT).as_posix()}")
+
     for filename, canonical in CORE.items():
         path = ROOT / filename
         if not path.exists() or path.stat().st_size == 0:
@@ -141,6 +147,21 @@ def main() -> int:
             fail(errors, f"Art image missing decoding=async: {img.get('src')}")
     if art.count('data-focuschrist-art-accessibility="true"') != 1:
         fail(errors, "Art accessibility helper missing/duplicated")
+
+    local_full_pairs = [img for img in gallery_imgs if img.get("data-full-src", "").startswith("art/")]
+    if len(local_full_pairs) < 27:
+        fail(errors, f"Expected at least 27 local thumbnail/full-resolution Art pairs, found {len(local_full_pairs)}")
+    for img in local_full_pairs:
+        thumb_src = img.get("src", "")
+        full_src = img.get("data-full-src", "")
+        if not thumb_src.startswith("art/thumbs/") or not thumb_src.endswith(".webp"):
+            fail(errors, f"Local Art preview is not a WebP thumbnail: {thumb_src}")
+        thumb_path = ROOT / thumb_src
+        full_path = ROOT / full_src
+        if not thumb_path.exists() or thumb_path.stat().st_size == 0:
+            fail(errors, f"Missing/empty Art thumbnail: {thumb_src}")
+        if not full_path.exists() or full_path.stat().st_size == 0:
+            fail(errors, f"Missing/empty full-resolution Art source: {full_src}")
 
     sitemap = ROOT / "sitemap.xml"
     if not sitemap.exists() or sitemap.stat().st_size == 0:
