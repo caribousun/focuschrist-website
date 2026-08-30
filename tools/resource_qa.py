@@ -14,9 +14,8 @@ OFFICIAL_URLS = (
     "https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng",
 )
 
-BYU_URLS = (
+BYU_MENU_URLS = (
     "https://rsc.byu.edu/",
-    "https://rsc.byu.edu/search",
     "https://scriptures.byu.edu/",
 )
 
@@ -45,9 +44,12 @@ def main() -> int:
         if url not in common:
             errors.append(f"site-common.js missing verified official resource: {url}")
 
-    for url in BYU_URLS:
+    for url in BYU_MENU_URLS:
         if url not in common:
-            errors.append(f"site-common.js missing verified BYU educational resource: {url}")
+            errors.append(f"site-common.js missing verified BYU educational menu resource: {url}")
+
+    if "https://rsc.byu.edu/search" in common or "RSC Search" in common:
+        errors.append("site-common.js reintroduces redundant RSC Search hamburger item")
 
     watch = (ROOT / "watch.html").read_text(encoding="utf-8")
     for marker in (
@@ -58,8 +60,6 @@ def main() -> int:
         if marker not in watch:
             errors.append(f"watch.html missing official-media marker: {marker}")
 
-    # Watch currently retains these verified outbound paths. They may be
-    # modernized independently, but must remain official Church destinations.
     for url in (
         "https://www.churchofjesuschrist.org/comeuntochrist/believe/jesus/videos",
         "https://www.churchofjesuschrist.org/comeuntochrist/believe/bible/videos",
@@ -88,7 +88,7 @@ def main() -> int:
         return 1
 
     print("focusChrist RESOURCE QA PASSED")
-    print("Shared hamburger routing, primary Watch path, official Church/BYU resource grouping, responsive header, Watch media paths, and non-embed policy verified.")
+    print("Shared hamburger routing, primary Watch path, official Church/BYU resource grouping, redundant-RSC prevention, responsive header, Watch media paths, and non-embed policy verified.")
     return 0
 
 
