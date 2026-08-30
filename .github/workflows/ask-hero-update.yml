@@ -17,8 +17,58 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install approved Ask hero
+      - name: Bind approved Ask hero
         shell: bash
         run: |
-          cat <<'B64' | base64 --decode > ask-hero.webp
-UklGRsDVAABXRUJQVlA4WLT...TRUNCATED...
+          cat > ask-hero.css <<'CSS'
+          /* focusChrist Ask page approved image-first hero.
+             Shared site hero geometry is preserved; only artwork and responsive crop are page-specific. */
+          .fc-visual-hero--ask::before {
+              background-image: url('https://lh3.googleusercontent.com/d/1lCHOUM9ez9XDX9K2DVWk2f47fXGgAyG7');
+              background-position: center 42%;
+          }
+
+          @media (max-width: 720px) {
+              .fc-visual-hero--ask::before {
+                  background-position: 26% 42%;
+              }
+          }
+          CSS
+
+          python - <<'PY'
+          from pathlib import Path
+          page = Path('ask.html')
+          text = page.read_text(encoding='utf-8')
+          old_hero = '<div class="fc-visual-hero fc-visual-hero--christ" data-focuschrist-ask-experience="true" aria-label="Jesus Christ"></div>'
+          new_hero = '<div class="fc-visual-hero fc-visual-hero--christ fc-visual-hero--ask" data-focuschrist-ask-experience="true" aria-label="Jesus Christ teaching and inviting sincere questions"></div>'
+          if text.count(old_hero) != 1:
+              raise SystemExit(f'Expected one current Ask hero marker, found {text.count(old_hero)}')
+          text = text.replace(old_hero, new_hero, 1)
+          old_link = '    <link rel="stylesheet" href="site-system.css">\n'
+          new_link = old_link + '    <link rel="stylesheet" href="ask-hero.css?v=20260830-1">\n'
+          if text.count(old_link) != 1:
+              raise SystemExit(f'Expected one site-system stylesheet marker, found {text.count(old_link)}')
+          text = text.replace(old_link, new_link, 1)
+          page.write_text(text, encoding='utf-8', newline='')
+          PY
+
+      - name: Verify Ask hero wiring and site QA
+        shell: bash
+        run: |
+          test -s ask-hero.css
+          grep -F 'fc-visual-hero--ask' ask.html
+          grep -F 'ask-hero.css?v=20260830-1' ask.html
+          grep -F '1lCHOUM9ez9XDX9K2DVWk2f47fXGgAyG7' ask-hero.css
+          python tools/site_qa.py
+          python tools/unified_experience_qa.py
+          python tools/hardened_experience_qa.py
+          node --check ask-experience.js
+
+      - name: Commit approved Ask hero
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add ask.html ask-hero.css
+          git commit -m 'Replace Ask hero with approved teaching scene'
+          git push origin HEAD:main
