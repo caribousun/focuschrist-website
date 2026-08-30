@@ -10,10 +10,18 @@
         ['Gospel Library', 'https://www.churchofjesuschrist.org/study?lang=eng&platform=web'],
         ['Scriptures', 'https://www.churchofjesuschrist.org/study/scriptures?lang=eng'],
         ['Topics & Questions', 'https://www.churchofjesuschrist.org/study/manual/gospel-topics?lang=eng'],
+        ['Gospel Topics Essays', 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/essays?lang=eng'],
         ['General Conference', 'https://www.churchofjesuschrist.org/study/general-conference?lang=eng'],
         ['Jesus Christ Videos', 'https://www.churchofjesuschrist.org/comeuntochrist/believe/jesus/videos'],
-        ['Bible Videos', 'https://www.churchofjesuschrist.org/comeuntochrist/believe/bible/videos'],
+        ['Bible Videos', 'https://www.churchofjesuschrist.org/study/videos-and-images/bible-videos?lang=eng'],
+        ['Book of Mormon Videos', 'https://www.churchofjesuschrist.org/study/videos-and-images/book-of-mormon-videos?lang=eng'],
         ['Gospel Video & Image Resources', 'https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng']
+    ];
+
+    const BYU_RESOURCE_LINKS = [
+        ['Religious Studies Center', 'https://rsc.byu.edu/'],
+        ['RSC Search', 'https://rsc.byu.edu/search'],
+        ['Scripture Citation Index', 'https://scriptures.byu.edu/']
     ];
 
     window.toggleMenu = function () {
@@ -46,6 +54,12 @@
         const path = window.location.pathname;
         if (path.includes('/answers/') || path.includes('/art-study/')) return '../watch.html';
         return 'watch.html';
+    }
+
+    function relativeAssetHref(name) {
+        const path = window.location.pathname;
+        if (path.includes('/answers/') || path.includes('/art-study/')) return '../' + name;
+        return name;
     }
 
     function onWatchPage() {
@@ -94,6 +108,12 @@
 
         appendMenuLabel(menu, 'Official Church Resources');
         OFFICIAL_RESOURCE_LINKS.forEach(function (resource) {
+            appendExternalMenuLink(menu, resource[0], resource[1]);
+        });
+
+        menu.appendChild(document.createElement('hr'));
+        appendMenuLabel(menu, 'BYU Study Resources');
+        BYU_RESOURCE_LINKS.forEach(function (resource) {
             appendExternalMenuLink(menu, resource[0], resource[1]);
         });
 
@@ -282,9 +302,14 @@
         script.setAttribute(marker, 'true');
         if (onload) script.addEventListener('load', onload, { once: true });
         script.addEventListener('error', function () {
-            console.error('focusChrist Study Intelligence asset failed to load: ' + src);
+            console.error('focusChrist shared asset failed to load: ' + src);
         }, { once: true });
         document.body.appendChild(script);
+    }
+
+    function loadStudyJourney() {
+        if (document.querySelector('script[data-focuschrist-study-journey]')) return;
+        appendScript(relativeAssetHref('study-journey.js?v=20260829-1'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
@@ -305,6 +330,7 @@
         initOfficialResourceMenu();
         initNavigation();
         initPioneerDisclosures();
+        window.setTimeout(loadStudyJourney, 0);
         window.setTimeout(loadStudyIntelligence, 0);
     });
 })();
