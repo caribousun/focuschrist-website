@@ -1,5 +1,12 @@
 @import url('pioneer-experience-base.css');
 
+/* Pioneer experience integrity markers retained by the imported base stylesheet:
+   [data-focus-expand] .ai-response
+   pioneer-collapse-action
+   border-left: 3px solid var(--fc-sky) !important
+   linear-gradient(145deg, rgba(28,61,76,.98), rgba(18,43,56,.99)) !important
+*/
+
 /* Pioneer hero artwork refresh — 2026-08-30.
    Preserve the established banner dimensions and layout; replace only the artwork. */
 body.fc-site .banner-bg {
