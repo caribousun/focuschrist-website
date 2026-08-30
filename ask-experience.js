@@ -255,6 +255,76 @@
         });
     }
 
+    function ensureAskEntryStyles() {
+        if (document.getElementById('ask-entry-styles')) return;
+        const style = document.createElement('style');
+        style.id = 'ask-entry-styles';
+        style.textContent = `
+            html[data-focuschrist-ask-entry-active] .ask-study-card {
+                border-color: rgba(240,195,106,.70);
+                box-shadow: 0 24px 70px rgba(4,17,23,.36), 0 0 0 3px rgba(240,195,106,.10);
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    function focusAskComposer(updateHash) {
+        const card = document.querySelector('.ask-study-card');
+        const input = document.getElementById('userInput');
+        if (!card || !input) return;
+
+        card.id = 'ask-question';
+        document.documentElement.setAttribute('data-focuschrist-ask-entry-active', 'true');
+        scrollPageToElement(card);
+
+        window.setTimeout(function () {
+            try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+        }, 260);
+
+        if (updateHash && window.history && typeof window.history.replaceState === 'function') {
+            window.history.replaceState(null, '', '#ask-question');
+        }
+    }
+
+    function initTopAskEntry() {
+        const card = document.querySelector('.ask-study-card');
+        const intro = document.querySelector('.fc-page-intro .fc-container--standard');
+        const input = document.getElementById('userInput');
+        if (!card || !intro || !input) return;
+
+        ensureAskEntryStyles();
+        card.id = 'ask-question';
+
+        if (!intro.querySelector('[data-focuschrist-top-ask-cta]')) {
+            const actions = document.createElement('div');
+            actions.className = 'fc-actions fc-actions--center';
+            actions.setAttribute('data-focuschrist-top-ask-cta', 'true');
+
+            const link = document.createElement('a');
+            link.className = 'fc-button fc-button--primary';
+            link.href = '#ask-question';
+            link.textContent = 'Ask a Question';
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                focusAskComposer(true);
+            });
+            actions.appendChild(link);
+            intro.appendChild(actions);
+        }
+
+        input.addEventListener('focus', function () {
+            document.documentElement.setAttribute('data-focuschrist-ask-entry-active', 'true');
+        });
+
+        window.addEventListener('hashchange', function () {
+            if (window.location.hash === '#ask-question') focusAskComposer(false);
+        });
+
+        if (window.location.hash === '#ask-question') {
+            window.setTimeout(function () { focusAskComposer(false); }, 90);
+        }
+    }
+
     function focusConversation() {
         const conversation = document.getElementById('conversation-heading');
         if (conversation) scrollPageToElement(conversation);
@@ -433,6 +503,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        initTopAskEntry();
         initFollowupComposer();
         initStarterQuestions();
         initTopicCards();
