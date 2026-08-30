@@ -15,6 +15,16 @@
         ['Gospel Media', 'https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng']
     ];
 
+    window.toggleMenu = function () {
+        const menu = document.getElementById('hamburgerMenu');
+        const trigger = document.querySelector('.hamburger');
+        if (!menu) return;
+        menu.classList.toggle('show');
+        if (trigger) {
+            trigger.setAttribute('aria-expanded', menu.classList.contains('show') ? 'true' : 'false');
+        }
+    };
+
     function appendMenuLabel(menu, text) {
         const label = document.createElement('div');
         label.className = 'menu-label';
@@ -44,17 +54,14 @@
         const firstDivider = menu.querySelector('hr');
         if (!firstDivider) return;
 
-        while (firstDivider.nextSibling) {
-            firstDivider.nextSibling.remove();
-        }
+        while (firstDivider.nextSibling) firstDivider.nextSibling.remove();
 
         appendMenuLabel(menu, 'Official Church Resources');
         OFFICIAL_RESOURCE_LINKS.forEach(function (resource) {
             appendExternalMenuLink(menu, resource[0], resource[1]);
         });
 
-        const secondDivider = document.createElement('hr');
-        menu.appendChild(secondDivider);
+        menu.appendChild(document.createElement('hr'));
         appendMenuLabel(menu, 'focusChrist Video');
 
         const watchLink = document.createElement('a');
@@ -83,8 +90,7 @@
             if (event.target !== trigger) return;
             if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
-                if (typeof window.toggleMenu === 'function') window.toggleMenu();
-                syncExpanded();
+                window.toggleMenu();
             }
         });
 
@@ -93,6 +99,13 @@
                 menu.classList.remove('show');
                 syncExpanded();
             });
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!menu.classList.contains('show')) return;
+            if (menu.contains(event.target) || trigger.contains(event.target)) return;
+            menu.classList.remove('show');
+            syncExpanded();
         });
 
         document.addEventListener('keydown', function (event) {
