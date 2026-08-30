@@ -23,13 +23,14 @@
 
     const FAITH_TERMS = [
         'jesus','christ','savior','redeemer','god','heavenly father','holy ghost','spirit','gospel','faith','repentance',
-        'baptism','sacrament','atonement','resurrection','prayer','revelation','scripture','bible','book of mormon',
+        'baptism','confirmation','sacrament','atonement','resurrection','prayer','revelation','scripture','bible','book of mormon',
         'doctrine and covenants','pearl of great price','church','latter-day','latter day','lds','mormon','temple','endowment',
-        'sealing','garment','garments','covenant','priesthood','prophet','apostle','general conference','joseph smith','oliver cowdery',
-        'emma smith','brigham young','first vision','restoration','pioneer','tithing','word of wisdom','plan of salvation','spirit world',
-        'celestial','terrestrial','telestial','premortal','premortality','exaltation','eternal family','family history','plural marriage',
-        'polygamy','book of abraham','race and priesthood','dna','commandment','sin','forgiveness','grace','ordinance','missionary',
-        'missionaries','bishop','ward','stake','relief society','quorum','patriarchal blessing','ministering','calling','zion'
+        'sealing','garment','garments','covenant','priesthood','aaronic','melchizedek','prophet','apostle','general conference',
+        'joseph smith','oliver cowdery','emma smith','brigham young','first vision','restoration','pioneer','tithing','word of wisdom',
+        'plan of salvation','spirit world','premortal','premortality','celestial','terrestrial','telestial','exaltation','salvation',
+        'eternal family','family history','familysearch','plural marriage','polygamy','book of abraham','race and priesthood','dna',
+        'commandment','sin','forgiveness','grace','ordinance','missionary','missionaries','bishop','ward','stake','relief society',
+        'quorum','elder','seventy','patriarch','patriarchal blessing','ministering','calling','callings','zion','nauvoo','kirtland'
     ];
 
     const HISTORY_TERMS = [
@@ -87,7 +88,7 @@
             label: 'Search official Church sources for this question',
             url: churchSearchUrl(question),
             tier: 'Official Church search',
-            note: 'Searches Church-owned domains for the wording of your question.'
+            note: 'Searches Church-owned domains using the wording of your question.'
         });
         results.push(source(OFFICIAL.topics, 'Official Church', 'Broad doctrine, practice, history, and question-based study.'));
 
@@ -101,7 +102,7 @@
             results.push(source(BYU.citation, 'BYU educational', 'See where scripture passages are cited in General Conference and other materials.'));
         }
 
-        if (q.includes('book of mormon') || q.includes('nephi') || q.includes('alma') || q.includes('moroni')) {
+        if (q.includes('book of mormon')) {
             results.push(source(OFFICIAL.bomVideos, 'Official Church media', 'Book of Mormon scenes for learning, teaching, and sharing.'));
         }
 
@@ -221,9 +222,16 @@
         sourcesForQuestion: sourcesForQuestion
     };
 
-    document.addEventListener('DOMContentLoaded', function () {
+    function init() {
         ensureStyles();
         initAnswerObserver();
         loadGroundedIntelligence();
-    });
+        document.documentElement.setAttribute('data-focuschrist-source-router-ready', 'true');
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
+    } else {
+        init();
+    }
 })();
