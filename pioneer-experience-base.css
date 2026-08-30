@@ -1,0 +1,590 @@
+/* focusChrist Pioneers — historical personality within the shared Harvest Sky system.
+   Prairie blue, wheat gold, sage, parchment, and limited earth tones preserve history
+   without returning the page to a sepia/brown atmosphere. */
+
+body.fc-site .fc-visual-hero--history {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+body.fc-site .fc-visual-hero--history > img {
+    object-position: center 45%;
+    filter: saturate(.94) sepia(.025) contrast(.99);
+}
+
+body.fc-site .qa-section {
+    padding: clamp(30px, 5vw, 54px) 18px clamp(44px, 6vw, 68px);
+    background:
+        radial-gradient(circle at 10% 12%, rgba(113,128,92,.08), transparent 24rem),
+        linear-gradient(180deg, #17323f, var(--fc-bg));
+}
+
+body.fc-site .qa-container {
+    width: min(var(--fc-standard), 100%);
+    margin: 0 auto;
+    padding: clamp(22px, 3vw, 32px);
+    border: 1px solid var(--fc-line);
+    border-radius: var(--fc-radius-lg);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(240,195,106,.07), transparent 19rem),
+        linear-gradient(145deg, rgba(36,67,74,.97), rgba(24,49,59,.98));
+    box-shadow: var(--fc-shadow);
+}
+
+body.fc-site .qa-container .chat-box {
+    min-height: 210px;
+    max-height: 560px;
+    overflow-y: auto;
+    padding: 22px;
+    border: 1px solid var(--fc-line);
+    border-radius: var(--fc-radius);
+    background:
+        radial-gradient(circle at 0% 100%, rgba(113,128,92,.055), transparent 18rem),
+        linear-gradient(180deg, rgba(31,61,70,.98), rgba(18,40,49,.99));
+    scrollbar-color: rgba(134,175,200,.40) transparent;
+}
+
+body.fc-site .qa-container .welcome {
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 28px 18px;
+    text-align: center;
+}
+
+body.fc-site .qa-container .welcome h3 {
+    margin: 0 0 10px;
+    color: var(--fc-gold-light);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.55rem;
+    font-weight: 400;
+}
+
+body.fc-site .qa-container .welcome p {
+    margin: 0;
+    color: var(--fc-muted);
+    line-height: 1.7;
+}
+
+body.fc-site .pioneer-composer-label {
+    margin: 18px 0 9px;
+    color: var(--fc-sage-light);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+}
+
+body.fc-site .qa-container .input-area {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) auto auto;
+    gap: 10px;
+    align-items: center;
+    margin-top: 0;
+}
+
+body.fc-site .qa-container .input-area input {
+    min-width: 0;
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid rgba(134,175,200,.52);
+    border-radius: 999px;
+    background: rgba(255,255,255,.05);
+    color: var(--fc-cream);
+    font: inherit;
+}
+
+body.fc-site .qa-container .input-area input::placeholder { color: #a0afae; }
+body.fc-site .qa-container .input-area input:focus {
+    outline: none;
+    border-color: var(--fc-gold-light);
+    box-shadow: 0 0 0 3px rgba(240,195,106,.11);
+}
+
+body.fc-site .qa-container .input-area button {
+    min-height: 50px;
+    padding: 0 22px !important;
+    border: 1px solid var(--fc-gold) !important;
+    border-radius: 999px !important;
+    background: var(--fc-gold) !important;
+    color: #1d2a2e !important;
+    font-weight: 700 !important;
+    cursor: pointer;
+}
+
+body.fc-site .qa-container .input-area #clearBtn {
+    border-color: var(--fc-sky) !important;
+    background: transparent !important;
+    color: #dcebf2 !important;
+}
+
+body.fc-site .qa-container .input-area button:hover,
+body.fc-site .qa-container .input-area button:focus-visible {
+    background: var(--fc-gold-light) !important;
+    outline: none;
+}
+
+body.fc-site .qa-container .input-area #clearBtn:hover,
+body.fc-site .qa-container .input-area #clearBtn:focus-visible {
+    background: rgba(134,175,200,.12) !important;
+    color: var(--fc-cream) !important;
+}
+
+body.fc-site .qa-container .scripture-categories {
+    margin-top: 24px;
+    padding-top: 22px;
+    border-top: 1px solid var(--fc-line);
+}
+
+body.fc-site .qa-container .category-title {
+    margin-bottom: 10px;
+    color: var(--fc-sage-light);
+    font-size: .75rem;
+    letter-spacing: 2.4px;
+}
+
+body.fc-site .qa-container .category-row { gap: 8px; }
+
+body.fc-site .qa-container .category-btn {
+    display: inline-flex;
+    margin: 4px 3px;
+    padding: 8px 11px;
+    border: 1px solid rgba(158,170,131,.28);
+    border-radius: 999px;
+    background: rgba(113,128,92,.055);
+    color: #d0d8c5;
+    text-decoration: none;
+    font-size: .8rem;
+    transition: border-color .2s ease, background .2s ease, color .2s ease;
+}
+
+body.fc-site .qa-container .category-btn:hover,
+body.fc-site .qa-container .category-btn:focus-visible {
+    border-color: var(--fc-gold-light);
+    background: rgba(240,195,106,.08);
+    color: var(--fc-cream);
+    outline: none;
+}
+
+body.fc-site .qa-container .message {
+    margin: 14px 0;
+    padding: 18px 20px;
+    border-radius: var(--fc-radius);
+}
+
+body.fc-site .qa-container .user-message {
+    margin-left: clamp(12px,7vw,72px);
+    border: 1px solid rgba(240,195,106,.36);
+    background: linear-gradient(135deg, rgba(224,170,62,.17), rgba(183,104,72,.08));
+    color: var(--fc-cream);
+}
+
+body.fc-site .qa-container .bot-message {
+    margin-right: clamp(12px,7vw,72px);
+    border: 1px solid rgba(134,175,200,.14);
+    background: linear-gradient(135deg, rgba(134,175,200,.09), rgba(255,255,255,.03));
+    color: var(--fc-text);
+}
+
+body.fc-site .qa-container .message p {
+    margin: 0 0 12px;
+    color: inherit !important;
+    line-height: 1.72 !important;
+}
+body.fc-site .qa-container .message p:last-child { margin-bottom: 0; }
+
+body.fc-site .qa-container .sources {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(158,170,131,.24);
+}
+body.fc-site .qa-container .sources-title {
+    margin-bottom: 8px;
+    color: var(--fc-sage-light);
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+body.fc-site .qa-container .source-link {
+    display: inline-flex;
+    margin: 4px 5px 4px 0;
+    padding: 7px 10px;
+    border: 1px solid rgba(158,170,131,.28);
+    border-radius: 999px;
+    color: #d6dfc8;
+    font-size: .78rem;
+    text-decoration: none;
+}
+
+body.fc-site .qa-container .loading {
+    margin: 12px 0;
+    padding: 14px 16px;
+    border-left: 2px solid var(--fc-gold);
+    background: linear-gradient(90deg, rgba(224,170,62,.08), rgba(134,175,200,.04));
+    color: var(--fc-muted);
+}
+
+body.fc-site .section {
+    width: calc(100% - 36px);
+    max-width: var(--fc-standard);
+    margin: 0 auto;
+    padding: var(--fc-section-y) 0;
+}
+
+body.fc-site .section + .section { border-top: 1px solid rgba(134,175,200,.10); }
+
+body.fc-site .section-title {
+    margin: 0 0 28px;
+    color: var(--fc-gold-light);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.75rem,3.6vw,2.4rem);
+    font-weight: 400;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+body.fc-site .timeline { padding-left: 0; }
+
+body.fc-site .timeline-item,
+body.fc-site .map-point,
+body.fc-site .trail-point,
+body.fc-site .martin-point {
+    margin-bottom: 11px;
+    padding: 17px 18px;
+    border: 1px solid rgba(134,175,200,.18);
+    border-radius: var(--fc-radius);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(224,170,62,.04), transparent 12rem),
+        linear-gradient(145deg, rgba(41,70,74,.78), rgba(25,50,58,.84));
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+}
+
+body.fc-site .timeline-item:hover,
+body.fc-site .map-point:hover,
+body.fc-site .trail-point:hover,
+body.fc-site .martin-point:hover {
+    transform: translateX(3px);
+    border-color: rgba(240,195,106,.42);
+    background:
+        linear-gradient(145deg, rgba(48,80,82,.88), rgba(30,58,65,.92));
+}
+
+body.fc-site .timeline-item.expanded,
+body.fc-site .map-point.expanded,
+body.fc-site .trail-point.expanded,
+body.fc-site .martin-point.expanded {
+    border-left: 3px solid var(--fc-sky);
+    background:
+        radial-gradient(circle at 88% 6%, rgba(134,175,200,.10), transparent 15rem),
+        linear-gradient(145deg, rgba(35,67,82,.97), rgba(20,47,60,.98));
+}
+
+body.fc-site .timeline-title,
+body.fc-site .map-content h4,
+body.fc-site .map-content h3 { color: var(--fc-cream); }
+body.fc-site .timeline-desc,
+body.fc-site .map-content p { color: var(--fc-muted); }
+body.fc-site .timeline-date,
+body.fc-site .map-date { color: var(--fc-gold-light); }
+
+/* Pioneer date/title collision hardening.
+   Legacy page CSS reserved only 90px for dates and forced nowrap, so longer Willie/Martin
+   dates could visually run into their titles. Give dates a real column and let them wrap safely. */
+body.fc-site .timeline-item > .map-date,
+body.fc-site .map-point > .map-date,
+body.fc-site .trail-point > .map-date,
+body.fc-site .martin-point > .map-date {
+    flex: 0 0 165px !important;
+    width: 165px !important;
+    min-width: 165px !important;
+    max-width: 165px !important;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    line-height: 1.35;
+}
+
+body.fc-site .timeline-item > .map-content,
+body.fc-site .map-point > .map-content,
+body.fc-site .trail-point > .map-content,
+body.fc-site .martin-point > .map-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+body.fc-site .timeline-item > .map-content > h3,
+body.fc-site .timeline-item > .map-content > h4,
+body.fc-site .map-point > .map-content > h3,
+body.fc-site .map-point > .map-content > h4 {
+    margin-top: 0;
+}
+
+/* Journey layout normalization.
+   Five older Journey entries keep the date inside the title. Present every one of those
+   cards with the same date-left / title-right / description rhythm used by the structured
+   Journey timeline, while preserving the original DOM text and Pioneer AI topic keys. */
+body.fc-site .timeline-item[data-topic="exodus"],
+body.fc-site .timeline-item[data-topic="winterquarters"],
+body.fc-site .timeline-item[data-topic="valley"],
+body.fc-site .timeline-item[data-topic="pioneerday"],
+body.fc-site .timeline-item[data-topic="handcart"] {
+    display: grid !important;
+    grid-template-columns: 165px minmax(0, 1fr);
+    column-gap: 20px;
+    align-items: start;
+}
+
+body.fc-site .timeline-item[data-topic="exodus"] > .map-content,
+body.fc-site .timeline-item[data-topic="winterquarters"] > .map-content,
+body.fc-site .timeline-item[data-topic="valley"] > .map-content,
+body.fc-site .timeline-item[data-topic="pioneerday"] > .map-content,
+body.fc-site .timeline-item[data-topic="handcart"] > .map-content {
+    display: contents;
+}
+
+body.fc-site .timeline-item[data-topic="exodus"]::before,
+body.fc-site .timeline-item[data-topic="winterquarters"]::before,
+body.fc-site .timeline-item[data-topic="valley"]::before,
+body.fc-site .timeline-item[data-topic="pioneerday"]::before,
+body.fc-site .timeline-item[data-topic="handcart"]::before {
+    display: block !important;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    color: var(--fc-gold-light);
+    font-size: .9em;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+body.fc-site .timeline-item[data-topic="exodus"]::before { content: "February 1846"; }
+body.fc-site .timeline-item[data-topic="winterquarters"]::before { content: "1846-1847"; }
+body.fc-site .timeline-item[data-topic="valley"]::before { content: "July 21, 1847"; }
+body.fc-site .timeline-item[data-topic="pioneerday"]::before { content: "July 24, 1847"; }
+body.fc-site .timeline-item[data-topic="handcart"]::before { content: "1856-1860"; }
+
+body.fc-site .timeline-item[data-topic="exodus"] .timeline-title,
+body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-title,
+body.fc-site .timeline-item[data-topic="valley"] .timeline-title,
+body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-title,
+body.fc-site .timeline-item[data-topic="handcart"] .timeline-title {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0 0 8px;
+    font-size: 0;
+}
+
+body.fc-site .timeline-item[data-topic="exodus"] .timeline-title::before,
+body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-title::before,
+body.fc-site .timeline-item[data-topic="valley"] .timeline-title::before,
+body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-title::before,
+body.fc-site .timeline-item[data-topic="handcart"] .timeline-title::before {
+    color: var(--fc-cream);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+body.fc-site .timeline-item[data-topic="exodus"] .timeline-title::before { content: "The Exodus Begins"; }
+body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-title::before { content: "Winter Quarters"; }
+body.fc-site .timeline-item[data-topic="valley"] .timeline-title::before { content: "Entering the Valley"; }
+body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-title::before { content: "Pioneer Day"; }
+body.fc-site .timeline-item[data-topic="handcart"] .timeline-title::before { content: "Handcart Companies"; }
+
+body.fc-site .timeline-item[data-topic="exodus"] .timeline-desc,
+body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-desc,
+body.fc-site .timeline-item[data-topic="valley"] .timeline-desc,
+body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-desc,
+body.fc-site .timeline-item[data-topic="handcart"] .timeline-desc {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+}
+
+body.fc-site .timeline-item[data-topic="exodus"] .ai-response,
+body.fc-site .timeline-item[data-topic="winterquarters"] .ai-response,
+body.fc-site .timeline-item[data-topic="valley"] .ai-response,
+body.fc-site .timeline-item[data-topic="pioneerday"] .ai-response,
+body.fc-site .timeline-item[data-topic="handcart"] .ai-response {
+    grid-column: 1 / -1;
+    grid-row: 3;
+}
+
+body.fc-site .map-container,
+body.fc-site .journal-card,
+body.fc-site .timeline-story {
+    border: 1px solid var(--fc-line);
+    border-radius: var(--fc-radius);
+    background:
+        radial-gradient(circle at 0% 100%, rgba(113,128,92,.06), transparent 15rem),
+        linear-gradient(145deg, rgba(35,65,72,.80), rgba(22,46,55,.88));
+}
+
+body.fc-site .map-container {
+    width: 100%;
+    max-width: none;
+    padding: clamp(18px,3vw,30px);
+}
+
+body.fc-site .journal-card { padding: 20px; }
+body.fc-site .journal-text { color: var(--fc-text); }
+body.fc-site .journal-source { color: var(--fc-faint); }
+
+/* Expanded Pioneer AI responses must stay in the twilight/sky family.
+   These rules intentionally override legacy inline brown/black response styling. */
+body.fc-site [data-focus-expand] .ai-response {
+    margin-top: 16px !important;
+    padding: 18px 19px !important;
+    border: 1px solid rgba(134,175,200,.20) !important;
+    border-left: 3px solid var(--fc-sky) !important;
+    border-radius: var(--fc-radius) !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(134,175,200,.08), transparent 14rem),
+        linear-gradient(145deg, rgba(28,61,76,.98), rgba(18,43,56,.99)) !important;
+    color: var(--fc-text) !important;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.025);
+}
+
+body.fc-site [data-focus-expand] .ai-response p {
+    margin: 0 0 13px !important;
+    color: var(--fc-text) !important;
+    line-height: 1.72 !important;
+}
+body.fc-site [data-focus-expand] .ai-response p:last-of-type { margin-bottom: 0 !important; }
+
+body.fc-site .pioneer-collapse-action {
+    display: block;
+    margin: 16px auto 0;
+    padding: 8px 15px;
+    border: 1px solid rgba(134,175,200,.40);
+    border-radius: 999px;
+    background: rgba(134,175,200,.07);
+    color: #dcebf2;
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+body.fc-site .pioneer-collapse-action:hover,
+body.fc-site .pioneer-collapse-action:focus-visible {
+    border-color: var(--fc-gold-light);
+    background: rgba(240,195,106,.09);
+    color: var(--fc-cream);
+    outline: none;
+}
+
+body.fc-site .cta { padding: 20px 18px var(--fc-section-y); }
+body.fc-site .cta-button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    padding: 11px 22px;
+    border: 1px solid var(--fc-gold);
+    border-radius: 999px;
+    background: var(--fc-gold);
+    color: #1d2a2e;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+@media (max-width: 700px) {
+    body.fc-site .qa-section { padding-inline: 14px; }
+    body.fc-site .qa-container { padding: 17px; }
+    body.fc-site .qa-container .input-area { grid-template-columns: 1fr; }
+    body.fc-site .qa-container .input-area button { width: 100%; }
+    body.fc-site .section { width: calc(100% - 28px); }
+    body.fc-site .timeline-item,
+    body.fc-site .map-point,
+    body.fc-site .trail-point,
+    body.fc-site .martin-point {
+        transform: none !important;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    body.fc-site .timeline-item > .map-date,
+    body.fc-site .map-point > .map-date,
+    body.fc-site .trail-point > .map-date,
+    body.fc-site .martin-point > .map-date {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        margin-bottom: 1px;
+    }
+
+    body.fc-site .timeline-item[data-topic="exodus"],
+    body.fc-site .timeline-item[data-topic="winterquarters"],
+    body.fc-site .timeline-item[data-topic="valley"],
+    body.fc-site .timeline-item[data-topic="pioneerday"],
+    body.fc-site .timeline-item[data-topic="handcart"] {
+        grid-template-columns: 1fr;
+        row-gap: 8px;
+    }
+
+    body.fc-site .timeline-item[data-topic="exodus"]::before,
+    body.fc-site .timeline-item[data-topic="winterquarters"]::before,
+    body.fc-site .timeline-item[data-topic="valley"]::before,
+    body.fc-site .timeline-item[data-topic="pioneerday"]::before,
+    body.fc-site .timeline-item[data-topic="handcart"]::before,
+    body.fc-site .timeline-item[data-topic="exodus"] .timeline-title,
+    body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-title,
+    body.fc-site .timeline-item[data-topic="valley"] .timeline-title,
+    body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-title,
+    body.fc-site .timeline-item[data-topic="handcart"] .timeline-title,
+    body.fc-site .timeline-item[data-topic="exodus"] .timeline-desc,
+    body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-desc,
+    body.fc-site .timeline-item[data-topic="valley"] .timeline-desc,
+    body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-desc,
+    body.fc-site .timeline-item[data-topic="handcart"] .timeline-desc,
+    body.fc-site .timeline-item[data-topic="exodus"] .ai-response,
+    body.fc-site .timeline-item[data-topic="winterquarters"] .ai-response,
+    body.fc-site .timeline-item[data-topic="valley"] .ai-response,
+    body.fc-site .timeline-item[data-topic="pioneerday"] .ai-response,
+    body.fc-site .timeline-item[data-topic="handcart"] .ai-response {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+body.fc-site .pioneer-extra-action {
+    margin-top: 14px;
+    padding: 9px 16px;
+    border: 1px solid var(--fc-sky);
+    border-radius: 999px;
+    background: transparent;
+    color: #dcebf2;
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+body.fc-site .pioneer-extra-action:hover,
+body.fc-site .pioneer-extra-action:focus-visible {
+    border-color: var(--fc-gold-light);
+    background: rgba(240,195,106,.10);
+    color: var(--fc-cream);
+    outline: none;
+}
+
+/* Keep Journey dates stationary and inside their cards in every interaction state.
+   The legacy page stylesheet scales timeline ::before markers on hover/expanded; these
+   Journey dates intentionally reuse ::before for layout, so neutralize that old marker effect. */
+body.fc-site .timeline-item[data-topic="exodus"]::before,
+body.fc-site .timeline-item[data-topic="winterquarters"]::before,
+body.fc-site .timeline-item[data-topic="valley"]::before,
+body.fc-site .timeline-item[data-topic="pioneerday"]::before,
+body.fc-site .timeline-item[data-topic="handcart"]::before {
+    transform: none !important;
+    box-shadow: none !important;
+    max-width: 100%;
+}
+
+/* Expanded cards keep the same internal padding as their collapsed state so the
+   date/title grid does not jump toward or beyond the left border when an answer opens. */
+body.fc-site .timeline-item.expanded,
+body.fc-site .map-point.expanded,
+body.fc-site .trail-point.expanded,
+body.fc-site .martin-point.expanded {
+    padding: 17px 18px !important;
+}
