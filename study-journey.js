@@ -3,6 +3,7 @@
  * - content CTAs to Ask deep-link to the composer
  * - Ask honors #ask-question with header-safe scroll + focus
  * - the active Ask conversation exposes a nearby Start Over control
+ * - faith/history conversations load the verified source router
  */
 (function () {
     'use strict';
@@ -118,11 +119,26 @@
         else section.insertBefore(button, section.firstChild);
     }
 
+    function loadVerifiedSourceRouter() {
+        const path = window.location.pathname.toLowerCase();
+        const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
+        if (!eligible || document.querySelector('script[data-focuschrist-source-router]')) return;
+        const script = document.createElement('script');
+        script.src = 'study-source-router.js?v=20260829-1';
+        script.defer = true;
+        script.setAttribute('data-focuschrist-source-router', 'true');
+        script.addEventListener('error', function () {
+            console.error('focusChrist verified study-source router failed to load.');
+        }, { once: true });
+        document.body.appendChild(script);
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         rewriteContentAskLinks();
         const target = ensureAskTarget();
         honorAskDeepLink(target);
         ensureConversationResetFallback();
         observeFollowupReset();
+        window.setTimeout(loadVerifiedSourceRouter, 0);
     });
 })();
