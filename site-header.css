@@ -1,5 +1,6 @@
 /* focusChrist canonical site header
-   Shared by all public pages. Page-specific hero/banner content remains independent. */
+   Shared by all public pages. Page-specific hero/banner content remains independent.
+   Harvest Sky palette: translucent twilight blue, sunflower highlights, parchment text. */
 
 .nav[data-focuschrist-header="standard"] {
     position: fixed !important;
@@ -12,7 +13,7 @@
     justify-content: space-between !important;
     align-items: center !important;
     z-index: 1000 !important;
-    background: linear-gradient(180deg, rgba(0,0,0,0.84) 0%, rgba(0,0,0,0.48) 52%, rgba(0,0,0,0) 100%) !important;
+    background: linear-gradient(180deg, rgba(10,28,37,0.90) 0%, rgba(15,39,50,0.62) 54%, rgba(15,39,50,0) 100%) !important;
     border: 0 !important;
     border-bottom: 0 !important;
     box-shadow: none !important;
@@ -27,9 +28,10 @@
     font-weight: 400;
     line-height: 1.2;
     letter-spacing: 5px !important;
-    color: #c9a961 !important;
+    color: #f0c36a !important;
     text-decoration: none !important;
     white-space: nowrap;
+    text-shadow: 0 2px 12px rgba(4,16,22,.34);
 }
 
 .nav[data-focuschrist-header="standard"] .nav-links {
@@ -44,13 +46,13 @@
 .nav[data-focuschrist-header="standard"] .nav-links a {
     margin: 0;
     padding: 0;
-    color: #f5e6d3 !important;
+    color: #fff2dc !important;
     text-decoration: none !important;
     font-size: 0.9em !important;
     font-weight: 400;
     line-height: 1.25;
     letter-spacing: 2px !important;
-    transition: color 0.25s ease;
+    transition: color 0.25s ease, text-shadow .25s ease;
     white-space: nowrap;
 }
 
@@ -58,7 +60,8 @@
 .nav[data-focuschrist-header="standard"] .nav-links a:focus,
 .nav[data-focuschrist-header="standard"] .nav-links a.active,
 .nav[data-focuschrist-header="standard"] .nav-links a[aria-current="page"] {
-    color: #c9a961 !important;
+    color: #f0c36a !important;
+    text-shadow: 0 0 18px rgba(240,195,106,.18);
     outline: none;
 }
 
@@ -78,7 +81,7 @@
     padding: 10px !important;
     margin: -10px !important;
     border: 0;
-    color: #c9a961 !important;
+    color: #f0c36a !important;
     cursor: pointer;
     line-height: 1 !important;
 }
@@ -89,12 +92,12 @@
     width: 20px !important;
     height: 2px !important;
     margin: 9px 0 0 !important;
-    background: #c9a961 !important;
-    box-shadow: 0 -6px 0 #c9a961, 0 6px 0 #c9a961 !important;
+    background: #f0c36a !important;
+    box-shadow: 0 -6px 0 #f0c36a, 0 6px 0 #f0c36a !important;
 }
 
 .nav[data-focuschrist-header="standard"] .hamburger:focus-visible {
-    outline: 2px solid #c9a961;
+    outline: 2px solid #86afc8;
     outline-offset: 4px;
     border-radius: 4px;
 }
@@ -110,10 +113,11 @@
     overflow-y: auto;
     margin: 0 !important;
     padding: 12px !important;
-    background: rgba(8,7,5,0.98) !important;
-    border: 1px solid rgba(201,169,97,0.22) !important;
-    border-radius: 8px !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    background: rgba(13,35,45,0.985) !important;
+    border: 1px solid rgba(134,175,200,0.28) !important;
+    border-radius: 10px !important;
+    box-shadow: 0 16px 38px rgba(4,16,22,0.46);
+    backdrop-filter: blur(12px);
     z-index: 1100 !important;
 }
 
@@ -126,21 +130,21 @@
 .nav[data-focuschrist-header="standard"] .hamburger-menu a {
     display: block !important;
     margin: 0;
-    padding: 7px 12px !important;
-    color: #c9a961 !important;
+    padding: 8px 12px !important;
+    color: #dcebf2 !important;
     text-decoration: none !important;
     font-size: 0.88em !important;
     line-height: 1.35;
     letter-spacing: 0.4px;
-    border-bottom: 1px solid rgba(201,169,97,0.16) !important;
+    border-bottom: 1px solid rgba(134,175,200,0.14) !important;
 }
 
 .nav[data-focuschrist-header="standard"] .hamburger-menu a:hover,
 .nav[data-focuschrist-header="standard"] .hamburger-menu a:focus,
 .nav[data-focuschrist-header="standard"] .hamburger-menu a.active,
 .nav[data-focuschrist-header="standard"] .hamburger-menu a[aria-current="page"] {
-    color: #f5e6d3 !important;
-    background: rgba(201,169,97,0.10) !important;
+    color: #fff2dc !important;
+    background: linear-gradient(90deg, rgba(134,175,200,.12), rgba(240,195,106,.06)) !important;
     outline: none;
 }
 
@@ -148,12 +152,12 @@
     width: 100%;
     margin: 8px 0 !important;
     border: 0 !important;
-    border-top: 1px solid rgba(201,169,97,0.30) !important;
+    border-top: 1px solid rgba(240,195,106,0.30) !important;
 }
 
 .nav[data-focuschrist-header="standard"] .menu-label {
     padding: 8px 12px 4px !important;
-    color: #c9a961 !important;
+    color: #f0c36a !important;
     font-size: 0.78em !important;
     line-height: 1.3;
     letter-spacing: 1px;
@@ -186,7 +190,8 @@
         position: relative !important;
         min-height: 62px;
         padding: 16px 20px !important;
-        background: #0f0c08 !important;
+        background: #102b36 !important;
+        border-bottom: 1px solid rgba(134,175,200,.12) !important;
     }
 
     .nav[data-focuschrist-header="standard"] .nav-links {
@@ -218,10 +223,10 @@
     left: 14px;
     z-index: 2200;
     padding: 10px 14px;
-    border: 1px solid #c9a961;
+    border: 1px solid #86afc8;
     border-radius: 6px;
-    background: #0f0c08;
-    color: #f5e6d3;
+    background: #102b36;
+    color: #fff2dc;
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
@@ -232,7 +237,7 @@
 .fc-skip-link:focus,
 .fc-skip-link:focus-visible {
     transform: translateY(0);
-    outline: 2px solid #f5e6d3;
+    outline: 2px solid #f0c36a;
     outline-offset: 2px;
 }
 
