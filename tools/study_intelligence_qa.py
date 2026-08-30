@@ -47,7 +47,7 @@ def main() -> int:
         "Do NOT force religion into the factual answer",
         "optional study bridge",
         "the sky is blue",
-        "do not manufacture a spiritual analogy",
+        "Do not manufacture a spiritual analogy",
         "Never end an ordinary answer with generic phrases",
         "bestLocalReference",
         "removeBoilerplateClosing",
