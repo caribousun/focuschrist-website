@@ -1,5 +1,6 @@
 /* focusChrist Ask page approved image-first hero.
-   Shared site hero geometry is preserved; only artwork and responsive crop are page-specific. */
+   Shared site hero geometry is preserved; only artwork and responsive crop are page-specific.
+   Production cache publication marker: 20260830-3. */
 .fc-visual-hero--ask::before {
     background-image: url('https://lh3.googleusercontent.com/d/1lCHOUM9ez9XDX9K2DVWk2f47fXGgAyG7');
     background-position: center 30%;
