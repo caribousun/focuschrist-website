@@ -19,13 +19,13 @@
     <meta name="twitter:image" content="https://focuschrist.com/pioneer%20art.png">
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="site-system.css">
-    <link rel="stylesheet" href="church-history.css">
+    <link rel="stylesheet" href="church-history.css?v=20260830-2">
     <script src="site-common.js?v=20260830-history" defer></script>
     <script src="study-intelligence.js?v=20260830-2" defer></script>
     <script src="study-intelligence-v2.js?v=20260830-2" defer></script>
     <script src="study-source-router.js?v=20260830-history" defer></script>
     <script src="study-intelligence-v3.js?v=20260830-3" defer></script>
-    <script src="church-history-experience.js?v=20260830-1" defer></script>
+    <script src="church-history-experience.js?v=20260830-2" defer></script>
 </head>
 <body class="fc-site fc-history-page">
     <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation">
@@ -54,8 +54,8 @@
         </div>
     </nav>
 
-    <div class="fc-visual-hero fc-visual-hero--history fc-history-hero" aria-label="Latter-day Saint pioneer history">
-        <img src="pioneer art.png" alt="Latter-day Saint pioneers traveling west in a historical scene">
+    <div class="fc-visual-hero fc-visual-hero--history fc-history-hero" aria-label="Sacred Grove inspired Church history scene">
+        <img src="https://lh3.googleusercontent.com/d/1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk" alt="A peaceful wooded grove at dawn with warm sunlight filtering through the trees" loading="eager" decoding="async" fetchpriority="high" referrerpolicy="no-referrer">
     </div>
 
     <main>
@@ -161,13 +161,13 @@
             </div>
         </section>
 
-        <section class="fc-section" id="ask-history">
+        <section class="fc-section" id="ask-history" aria-labelledby="history-ask-heading">
             <div class="fc-container--standard">
                 <div class="fc-history-ask-heading">
                     <div>
                         <p class="fc-eyebrow">Source-grounded study assistant</p>
-                        <h2 class="fc-section-heading">Ask Church History</h2>
-                        <p class="fc-section-intro">Ask naturally. The assistant predicts the likely historical source family, adds verified official study routes, and is instructed to keep official Church History and <em>Saints</em> above model memory.</p>
+                        <h2 class="fc-section-heading" id="history-ask-heading">Ask Church History</h2>
+                        <p class="fc-section-intro">Ask naturally. The assistant predicts the likely historical source family, adds verified official study routes, remembers the current conversation for follow-up questions, and keeps official Church History and <em>Saints</em> above model memory.</p>
                     </div>
                     <a class="fc-button" href="https://www.churchofjesuschrist.org/study/church-history?lang=eng" target="_blank" rel="noopener noreferrer">Official Source Hub</a>
                 </div>
@@ -185,19 +185,22 @@
                     <button type="button" data-history-question="Where can I study women in Latter-day Saint Church history?">Women's history</button>
                 </div>
 
-                <div class="fc-history-chat-shell">
+                <div class="fc-history-chat-shell" id="historyConversation">
                     <div id="historyChatBox" class="fc-history-chat" aria-live="polite" aria-label="Church history conversation">
                         <div class="fc-history-welcome">
                             <strong>Ask about a person, event, place, practice, date, or historical question.</strong>
-                            <span>Official Church History sources will be shown with the response so you can continue directly to the source material.</span>
+                            <span>Official Church History sources will be shown with the response. Follow-up questions stay in the same conversation until you choose New Question.</span>
                         </div>
                     </div>
                     <form id="historyAskForm" class="fc-history-form">
-                        <label for="historyQuestion" class="fc-history-label">Your Church history question</label>
-                        <textarea id="historyQuestion" rows="3" maxlength="1200" placeholder="For example: What happened after the Saints left Nauvoo?" required></textarea>
+                        <label for="historyQuestion" class="fc-history-label" id="historyQuestionLabel">Your Church history question</label>
+                        <textarea id="historyQuestion" rows="2" maxlength="1200" placeholder="For example: What happened after the Saints left Nauvoo?" required></textarea>
                         <div class="fc-history-form-actions">
                             <span id="historyStatus" role="status" aria-live="polite">Official Church History source routing active.</span>
-                            <button id="historyAskButton" class="fc-button fc-button--primary" type="submit">Ask History</button>
+                            <div class="fc-history-form-buttons">
+                                <button id="historyResetButton" class="fc-button" type="button">New Question</button>
+                                <button id="historyAskButton" class="fc-button fc-button--primary" type="submit">Ask History</button>
+                            </div>
                         </div>
                     </form>
                 </div>
