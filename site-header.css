@@ -210,3 +210,39 @@
    at 1020px above; devices at 900px and below inherit those same rules. */
 @media (max-width: 900px) {
 }
+
+/* Keyboard-first accessibility: hidden until focused. */
+.fc-skip-link {
+    position: fixed;
+    top: 10px;
+    left: 14px;
+    z-index: 2200;
+    padding: 10px 14px;
+    border: 1px solid #c9a961;
+    border-radius: 6px;
+    background: #0f0c08;
+    color: #f5e6d3;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transform: translateY(-180%);
+    transition: transform 0.18s ease;
+}
+
+.fc-skip-link:focus,
+.fc-skip-link:focus-visible {
+    transform: translateY(0);
+    outline: 2px solid #f5e6d3;
+    outline-offset: 2px;
+}
+
+.fc-main-landmark:focus,
+main[tabindex="-1"]:focus {
+    outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fc-skip-link {
+        transition: none;
+    }
+}
