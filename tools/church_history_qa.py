@@ -123,6 +123,7 @@ if not errors:
         if token not in css:
             errors.append(f"church-history.css: Harvest Sky token not used: {token}")
     for needle, label in [
+        ('.fc-history-page .fc-history-hero { min-height: clamp(350px, 27vw, 440px); }', "History hero uses unified site hero height"),
         ('.fc-history-page #ask-history', "History Ask section Harvest Sky surface"),
         ('.fc-history-form-buttons', "Ask-style form actions"),
         ('.fc-history-hero--image-error', "hero failure fallback styling"),
@@ -130,6 +131,8 @@ if not errors:
     ]:
         if needle not in css:
             errors.append(f"church-history.css: missing {label}")
+    if 'clamp(360px, 31vw, 500px)' in css:
+        errors.append("church-history.css: oversized legacy History hero height remains")
 
 if errors:
     print("Church History QA FAILED")
