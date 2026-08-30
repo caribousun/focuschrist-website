@@ -190,6 +190,95 @@
         document.body.classList.toggle('pioneer-conversation-active', !!active);
     }
 
+    function preferredScrollBehavior() {
+        return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    }
+
+    function fixedHeaderOffset() {
+        const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+        if (!header) return 20;
+        const style = window.getComputedStyle(header);
+        if (style.position !== 'fixed') return 20;
+        return Math.ceil(header.getBoundingClientRect().height) + 24;
+    }
+
+    function scrollPageToElement(element) {
+        if (!element) return;
+        const top = element.getBoundingClientRect().top + window.scrollY - fixedHeaderOffset();
+        window.scrollTo({ top: Math.max(0, top), behavior: preferredScrollBehavior() });
+    }
+
+    function ensurePioneerEntryStyles() {
+        if (document.getElementById('pioneer-entry-styles')) return;
+        const style = document.createElement('style');
+        style.id = 'pioneer-entry-styles';
+        style.textContent = `
+            html[data-focuschrist-pioneer-entry-active] body.fc-site .qa-container {
+                border-color: rgba(240,195,106,.68);
+                box-shadow: var(--fc-shadow), 0 0 0 3px rgba(240,195,106,.10);
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    function focusPioneerComposer(updateHash) {
+        const section = document.querySelector('.qa-section');
+        const container = document.querySelector('.qa-container');
+        const input = userInput();
+        if (!section || !container || !input) return;
+
+        section.id = 'ask-pioneers';
+        document.documentElement.setAttribute('data-focuschrist-pioneer-entry-active', 'true');
+        scrollPageToElement(container);
+
+        window.setTimeout(function () {
+            try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+        }, 260);
+
+        if (updateHash && window.history && typeof window.history.replaceState === 'function') {
+            window.history.replaceState(null, '', '#ask-pioneers');
+        }
+    }
+
+    function initTopPioneerAskEntry() {
+        const section = document.querySelector('.qa-section');
+        const intro = document.querySelector('.fc-page-intro .fc-container--standard');
+        const input = userInput();
+        if (!section || !intro || !input) return;
+
+        ensurePioneerEntryStyles();
+        section.id = 'ask-pioneers';
+
+        if (!intro.querySelector('[data-focuschrist-top-pioneer-ask-cta]')) {
+            const actions = document.createElement('div');
+            actions.className = 'fc-actions fc-actions--center';
+            actions.setAttribute('data-focuschrist-top-pioneer-ask-cta', 'true');
+
+            const link = document.createElement('a');
+            link.className = 'fc-button fc-button--primary';
+            link.href = '#ask-pioneers';
+            link.textContent = 'Ask a Pioneer Question';
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                focusPioneerComposer(true);
+            });
+            actions.appendChild(link);
+            intro.appendChild(actions);
+        }
+
+        input.addEventListener('focus', function () {
+            document.documentElement.setAttribute('data-focuschrist-pioneer-entry-active', 'true');
+        });
+
+        window.addEventListener('hashchange', function () {
+            if (window.location.hash === '#ask-pioneers') focusPioneerComposer(false);
+        });
+
+        if (window.location.hash === '#ask-pioneers') {
+            window.setTimeout(function () { focusPioneerComposer(false); }, 90);
+        }
+    }
+
     function removeWelcome() {
         const box = chatBox();
         if (!box) return;
@@ -471,6 +560,7 @@
         document.querySelectorAll('.category-btn').forEach(function (link) {
             link.addEventListener('click', function (event) { event.preventDefault(); });
         });
+        initTopPioneerAskEntry();
         setConversationMode(false);
         document.documentElement.setAttribute('data-focuschrist-pioneer-policy', PIONEER_POLICY_VERSION);
     });
