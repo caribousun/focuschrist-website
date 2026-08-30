@@ -51,6 +51,9 @@ jobs:
       - name: Validate Art study router JavaScript
         run: node --check art-study-router.js
 
+      - name: Validate Watch study enrichment JavaScript
+        run: node --check watch-study-enrichment.js
+
       - name: Validate Ask experience JavaScript
         run: node --check ask-experience.js
 
