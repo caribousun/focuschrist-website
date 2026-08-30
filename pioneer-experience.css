@@ -319,10 +319,13 @@ body.fc-site .map-point > .map-content > h4 {
     margin-top: 0;
 }
 
-/* Legacy Journey card compatibility.
-   Pioneer Day and Handcart Companies store their date in the title instead of a dedicated
-   date element. Visually normalize them to the same date/title/description rhythm as every
-   other Journey card without changing the underlying accessible text or AI topic keys. */
+/* Journey layout normalization.
+   Five older Journey entries keep the date inside the title. Present every one of those
+   cards with the same date-left / title-right / description rhythm used by the structured
+   Journey timeline, while preserving the original DOM text and Pioneer AI topic keys. */
+body.fc-site .timeline-item[data-topic="exodus"],
+body.fc-site .timeline-item[data-topic="winterquarters"],
+body.fc-site .timeline-item[data-topic="valley"],
 body.fc-site .timeline-item[data-topic="pioneerday"],
 body.fc-site .timeline-item[data-topic="handcart"] {
     display: grid !important;
@@ -331,11 +334,17 @@ body.fc-site .timeline-item[data-topic="handcart"] {
     align-items: start;
 }
 
+body.fc-site .timeline-item[data-topic="exodus"] > .map-content,
+body.fc-site .timeline-item[data-topic="winterquarters"] > .map-content,
+body.fc-site .timeline-item[data-topic="valley"] > .map-content,
 body.fc-site .timeline-item[data-topic="pioneerday"] > .map-content,
 body.fc-site .timeline-item[data-topic="handcart"] > .map-content {
     display: contents;
 }
 
+body.fc-site .timeline-item[data-topic="exodus"]::before,
+body.fc-site .timeline-item[data-topic="winterquarters"]::before,
+body.fc-site .timeline-item[data-topic="valley"]::before,
 body.fc-site .timeline-item[data-topic="pioneerday"]::before,
 body.fc-site .timeline-item[data-topic="handcart"]::before {
     display: block !important;
@@ -347,9 +356,15 @@ body.fc-site .timeline-item[data-topic="handcart"]::before {
     line-height: 1.35;
 }
 
+body.fc-site .timeline-item[data-topic="exodus"]::before { content: "February 1846"; }
+body.fc-site .timeline-item[data-topic="winterquarters"]::before { content: "1846-1847"; }
+body.fc-site .timeline-item[data-topic="valley"]::before { content: "July 21, 1847"; }
 body.fc-site .timeline-item[data-topic="pioneerday"]::before { content: "July 24, 1847"; }
 body.fc-site .timeline-item[data-topic="handcart"]::before { content: "1856-1860"; }
 
+body.fc-site .timeline-item[data-topic="exodus"] .timeline-title,
+body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-title,
+body.fc-site .timeline-item[data-topic="valley"] .timeline-title,
 body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-title,
 body.fc-site .timeline-item[data-topic="handcart"] .timeline-title {
     grid-column: 2;
@@ -358,6 +373,9 @@ body.fc-site .timeline-item[data-topic="handcart"] .timeline-title {
     font-size: 0;
 }
 
+body.fc-site .timeline-item[data-topic="exodus"] .timeline-title::before,
+body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-title::before,
+body.fc-site .timeline-item[data-topic="valley"] .timeline-title::before,
 body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-title::before,
 body.fc-site .timeline-item[data-topic="handcart"] .timeline-title::before {
     color: var(--fc-cream);
@@ -365,9 +383,15 @@ body.fc-site .timeline-item[data-topic="handcart"] .timeline-title::before {
     font-weight: 700;
 }
 
+body.fc-site .timeline-item[data-topic="exodus"] .timeline-title::before { content: "The Exodus Begins"; }
+body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-title::before { content: "Winter Quarters"; }
+body.fc-site .timeline-item[data-topic="valley"] .timeline-title::before { content: "Entering the Valley"; }
 body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-title::before { content: "Pioneer Day"; }
 body.fc-site .timeline-item[data-topic="handcart"] .timeline-title::before { content: "Handcart Companies"; }
 
+body.fc-site .timeline-item[data-topic="exodus"] .timeline-desc,
+body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-desc,
+body.fc-site .timeline-item[data-topic="valley"] .timeline-desc,
 body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-desc,
 body.fc-site .timeline-item[data-topic="handcart"] .timeline-desc {
     grid-column: 2;
@@ -375,6 +399,9 @@ body.fc-site .timeline-item[data-topic="handcart"] .timeline-desc {
     margin: 0;
 }
 
+body.fc-site .timeline-item[data-topic="exodus"] .ai-response,
+body.fc-site .timeline-item[data-topic="winterquarters"] .ai-response,
+body.fc-site .timeline-item[data-topic="valley"] .ai-response,
 body.fc-site .timeline-item[data-topic="pioneerday"] .ai-response,
 body.fc-site .timeline-item[data-topic="handcart"] .ai-response {
     grid-column: 1 / -1;
@@ -486,18 +513,33 @@ body.fc-site .cta-button {
         margin-bottom: 1px;
     }
 
+    body.fc-site .timeline-item[data-topic="exodus"],
+    body.fc-site .timeline-item[data-topic="winterquarters"],
+    body.fc-site .timeline-item[data-topic="valley"],
     body.fc-site .timeline-item[data-topic="pioneerday"],
     body.fc-site .timeline-item[data-topic="handcart"] {
         grid-template-columns: 1fr;
         row-gap: 8px;
     }
 
+    body.fc-site .timeline-item[data-topic="exodus"]::before,
+    body.fc-site .timeline-item[data-topic="winterquarters"]::before,
+    body.fc-site .timeline-item[data-topic="valley"]::before,
     body.fc-site .timeline-item[data-topic="pioneerday"]::before,
     body.fc-site .timeline-item[data-topic="handcart"]::before,
+    body.fc-site .timeline-item[data-topic="exodus"] .timeline-title,
+    body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-title,
+    body.fc-site .timeline-item[data-topic="valley"] .timeline-title,
     body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-title,
     body.fc-site .timeline-item[data-topic="handcart"] .timeline-title,
+    body.fc-site .timeline-item[data-topic="exodus"] .timeline-desc,
+    body.fc-site .timeline-item[data-topic="winterquarters"] .timeline-desc,
+    body.fc-site .timeline-item[data-topic="valley"] .timeline-desc,
     body.fc-site .timeline-item[data-topic="pioneerday"] .timeline-desc,
     body.fc-site .timeline-item[data-topic="handcart"] .timeline-desc,
+    body.fc-site .timeline-item[data-topic="exodus"] .ai-response,
+    body.fc-site .timeline-item[data-topic="winterquarters"] .ai-response,
+    body.fc-site .timeline-item[data-topic="valley"] .ai-response,
     body.fc-site .timeline-item[data-topic="pioneerday"] .ai-response,
     body.fc-site .timeline-item[data-topic="handcart"] .ai-response {
         grid-column: 1;
