@@ -5,6 +5,7 @@
  * - the active Ask conversation exposes a nearby Start Over control
  * - faith/history conversations load the verified source router
  * - Art loads study/video connections without altering artwork
+ * - Watch loads theme-based YouTube and official video enrichment
  */
 (function () {
     'use strict';
@@ -145,6 +146,12 @@
         }
     }
 
+    function loadWatchStudyEnrichment() {
+        if (window.location.pathname.toLowerCase().endsWith('/watch.html')) {
+            appendDynamicScript('watch-study-enrichment.js?v=20260829-1', 'data-focuschrist-watch-enrichment');
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         rewriteContentAskLinks();
         const target = ensureAskTarget();
@@ -153,5 +160,6 @@
         observeFollowupReset();
         window.setTimeout(loadVerifiedSourceRouter, 0);
         window.setTimeout(loadArtStudyRouter, 0);
+        window.setTimeout(loadWatchStudyEnrichment, 0);
     });
 })();
