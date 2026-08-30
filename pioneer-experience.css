@@ -319,3 +319,21 @@ body.fc-site .cta-button {
     body.fc-site .trail-point,
     body.fc-site .martin-point { transform: none !important; }
 }
+
+body.fc-site .pioneer-extra-action {
+    margin-top: 14px;
+    padding: 9px 16px;
+    border: 1px solid var(--fc-gold);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--fc-gold-light);
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+body.fc-site .pioneer-extra-action:hover,
+body.fc-site .pioneer-extra-action:focus-visible {
+    background: rgba(201,169,97,.10);
+    outline: none;
+}

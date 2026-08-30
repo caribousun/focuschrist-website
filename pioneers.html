@@ -918,6 +918,7 @@
     <script src="site-common.js" defer></script>
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="site-system.css">
+    <link rel="stylesheet" href="pioneer-experience.css">
 </head>
 
 <body class="fc-site">
@@ -1635,7 +1636,6 @@
         story = story.replace(/Copyright.*?this time\./gi, '').trim();
         if (story.length > 3000) story = story.substring(0, 3000) + '\n\n[Story continues...]';
 
-        document.getElementById('chatBox').innerHTML = '';
         addMessage("Tell My Story", true);
         addMessage(story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
     }
@@ -1648,24 +1648,20 @@
         const storyMatch = await searchTellMyStory(query);
 
         // Build messages array with system prompt + conversation history + new query
-        let systemContent = 'You are a helpful assistant for the focusChrist website about Mormon pioneers. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." IMPORTANT: NEVER REFUSE any question - answer it honestly and directly, but ALWAYS tie your answer back to Jesus Christ, love, respect, and the pioneer experience. Every response must end by connecting to Jesus Christ and pioneers in love and respect. Be brief and natural. IMPORTANT: Always end your response with a complete sentence ending in a period.';
+        let systemContent = 'You are a helpful assistant for the focusChrist website about Latter-day Saint pioneers. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." IMPORTANT: NEVER REFUSE any question - answer it honestly and directly, but ALWAYS tie your answer back to Jesus Christ, love, respect, and the pioneer experience. Every response must end by connecting to Jesus Christ and pioneers in love and respect. Be brief and natural. IMPORTANT: Always end your response with a complete sentence ending in a period.';
 
         // Add Tell My Story context if found
         if (storyMatch && storyMatch.length > 0) {
             // Check if it's a selection menu (multiple matches)
             if (storyMatch[0].full === false && storyMatch[0].choices) {
-                // Show selection menu to user
-                document.getElementById('chatBox').innerHTML = '';
-                addMessage(query, true);
-                addMessage(storyMatch[0].story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
-                // Store choices for selection
+                // Show selection menu without erasing earlier conversation.
+                addMessage(storyMatch[0].story, false, [{text:'Tell My Story Too', url:'tell-my-story-too.txt'}]);
                 window.storyChoices = storyMatch[0].choices;
-                return { answer: storyMatch[0].story, sources: [] };
+                return { answer: storyMatch[0].story, sources: [], alreadyDisplayed: true };
             } else if (storyMatch[0].full === true) {
                 // Single exact match - show full story
                 if (storyMatch[0].showBtn) {
-                    document.getElementById('chatBox').innerHTML = '';
-                    addMessage(query, true);
+                    // Keep prior conversation visible.
                     // Use fullStory if available, otherwise truncated version
                     const storyContent = storyMatch[0].fullStory || storyMatch[0].story;
                     addMessage(storyContent, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}], {action: "askTellMyStory()", text: "Tell Me More"});
@@ -1759,14 +1755,10 @@
         document.getElementById('chatBox').innerHTML = '<div class="welcome"><h3>Ask About Pioneers</h3><p>Ask a sincere question about Latter-day Saint pioneers and their history.<br>Type your question below or click a topic.</p></div>';
         document.getElementById('userInput').value = '';
     }
-</script></script>
+</script>
 
 
 
- <!-- Hero -->
-
- <!-- Hero removed -->
->
 
 
 
@@ -2434,6 +2426,7 @@
 
          <p data-focuschrist-independence="footer" style="max-width: 900px; margin: 14px auto 0; line-height: 1.6; font-size: 0.92em;">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer" style="color: #c9a961;">ChurchofJesusChrist.org</a>.</p>
     </footer>
+    <script src="pioneer-experience.js" defer></script>
 </body>
 
 </html>
