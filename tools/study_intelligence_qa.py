@@ -4,6 +4,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 FOUNDATION = ROOT / "study-intelligence.js"
 POLICY = ROOT / "study-intelligence-v2.js"
+GROUNDED = ROOT / "study-intelligence-v3.js"
 COMMON = ROOT / "site-common.js"
 
 
@@ -18,6 +19,7 @@ def main() -> int:
     errors: list[str] = []
     foundation = read_required(FOUNDATION, errors)
     policy = read_required(POLICY, errors)
+    grounded = read_required(GROUNDED, errors)
     common = read_required(COMMON, errors)
 
     required_foundation_markers = (
@@ -59,6 +61,23 @@ def main() -> int:
         if marker not in policy:
             errors.append(f"study-intelligence-v2.js missing adaptive-policy marker: {marker}")
 
+    required_grounded_markers = (
+        "focusChrist Study Intelligence v3",
+        "VERIFIED CORE RESTORATION FACTS:",
+        "John the Baptist conferred the Aaronic Priesthood",
+        "Peter, James, and John later conferred the Melchizedek Priesthood",
+        "Do not use Markdown tables",
+        "normal spaces and ordinary hyphens",
+        "normalizeDisplayText",
+        "convertMarkdownTables",
+        "focusChristStudyAskV3",
+        "temperature: 0.25",
+        "data-focuschrist-study-intelligence-version', '3'",
+    )
+    for marker in required_grounded_markers:
+        if marker not in grounded:
+            errors.append(f"study-intelligence-v3.js missing grounded-policy marker: {marker}")
+
     forbidden_policy_markers = (
         "Every response must end by connecting to Jesus Christ",
         "ALWAYS tie appropriate answers back to Jesus Christ",
@@ -70,15 +89,17 @@ def main() -> int:
         "innerHTML=text",
     )
     for marker in forbidden_policy_markers:
-        if marker in policy:
-            errors.append(f"study-intelligence-v2.js contains legacy/unsafe marker: {marker}")
+        if marker in policy or marker in grounded:
+            errors.append(f"Study Intelligence contains legacy/unsafe marker: {marker}")
 
     required_common_markers = (
         "loadStudyIntelligence",
         "study-intelligence.js?v=20260830-2",
         "study-intelligence-v2.js?v=20260830-2",
+        "study-intelligence-v3.js?v=20260830-3",
         "data-focuschrist-study-intelligence",
         "data-focuschrist-study-intelligence-v2",
+        "data-focuschrist-study-intelligence-v3",
         "path.endsWith('/ask.html')",
         "path.endsWith('/pioneers.html')",
     )
@@ -94,9 +115,9 @@ def main() -> int:
 
     print("focusChrist STUDY INTELLIGENCE QA PASSED")
     print(
-        "Verified foundation + adaptive policy, broad general-question handling, optional specific faith bridges, "
-        "no forced devotional closings, semantic local matching, retry/timeouts, safe rendering, cache-versioned loading, "
-        "and Ask/Pioneer integration."
+        "Verified foundation + adaptive + grounded policy, broad general-question handling, optional specific faith bridges, "
+        "no forced devotional closings, verified Restoration grounding, display normalization, semantic local matching, "
+        "retry/timeouts, safe rendering, serialized cache-versioned loading, and Ask/Pioneer integration."
     )
     return 0
 
