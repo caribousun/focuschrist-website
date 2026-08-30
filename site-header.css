@@ -251,3 +251,32 @@ main[tabindex="-1"]:focus {
         transition: none;
     }
 }
+
+/* Shared conversation alignment hardening — 2026-08-30.
+   User questions remain visually distinct without appearing detached from the answer column. */
+body.fc-site .ask-chat-box .user-message,
+body.fc-site .qa-container .user-message,
+body.fc-site .fc-history-message--user {
+    margin-left: clamp(8px, 2.4vw, 28px) !important;
+    margin-right: 0 !important;
+    max-width: none !important;
+}
+body.fc-site .ask-chat-box .bot-message,
+body.fc-site .qa-container .bot-message,
+body.fc-site .fc-history-message--assistant {
+    margin-left: 0 !important;
+    margin-right: clamp(8px, 2.4vw, 28px) !important;
+    max-width: none !important;
+}
+@media (max-width: 720px) {
+    body.fc-site .ask-chat-box .user-message,
+    body.fc-site .ask-chat-box .bot-message,
+    body.fc-site .qa-container .user-message,
+    body.fc-site .qa-container .bot-message,
+    body.fc-site .fc-history-message--user,
+    body.fc-site .fc-history-message--assistant {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: none !important;
+    }
+}
