@@ -566,3 +566,25 @@ body.fc-site .pioneer-extra-action:focus-visible {
     color: var(--fc-cream);
     outline: none;
 }
+
+/* Keep Journey dates stationary and inside their cards in every interaction state.
+   The legacy page stylesheet scales timeline ::before markers on hover/expanded; these
+   Journey dates intentionally reuse ::before for layout, so neutralize that old marker effect. */
+body.fc-site .timeline-item[data-topic="exodus"]::before,
+body.fc-site .timeline-item[data-topic="winterquarters"]::before,
+body.fc-site .timeline-item[data-topic="valley"]::before,
+body.fc-site .timeline-item[data-topic="pioneerday"]::before,
+body.fc-site .timeline-item[data-topic="handcart"]::before {
+    transform: none !important;
+    box-shadow: none !important;
+    max-width: 100%;
+}
+
+/* Expanded cards keep the same internal padding as their collapsed state so the
+   date/title grid does not jump toward or beyond the left border when an answer opens. */
+body.fc-site .timeline-item.expanded,
+body.fc-site .map-point.expanded,
+body.fc-site .trail-point.expanded,
+body.fc-site .martin-point.expanded {
+    padding: 17px 18px !important;
+}
