@@ -39,6 +39,85 @@
         window.scrollTo({ top: Math.max(0, top), behavior: preferredScrollBehavior() });
     }
 
+    function scrollComposerIntoView() {
+        const form = byId('historyAskForm');
+        if (!form) return;
+        const top = form.getBoundingClientRect().top + window.scrollY - fixedHeaderOffset() - 14;
+        window.scrollTo({ top: Math.max(0, top), behavior: preferredScrollBehavior() });
+    }
+
+    function ensureAskEntryStyles() {
+        if (byId('focuschrist-history-entry-styles')) return;
+        const style = document.createElement('style');
+        style.id = 'focuschrist-history-entry-styles';
+        style.textContent = `
+            html[data-focuschrist-history-ask-entry-active] #historyConversation {
+                border-color: rgba(240,195,106,.58) !important;
+                box-shadow: 0 0 0 2px rgba(240,195,106,.10), 0 24px 70px rgba(4,17,23,.38) !important;
+            }
+            html[data-focuschrist-history-ask-entry-active] #historyAskForm {
+                background:
+                    radial-gradient(circle at 82% 0%, rgba(240,195,106,.08), transparent 18rem),
+                    linear-gradient(180deg, rgba(18,44,54,.88), rgba(11,29,37,.96)) !important;
+            }
+            html[data-focuschrist-history-ask-entry-active] #historyQuestion {
+                border-color: var(--fc-gold-light) !important;
+                box-shadow: 0 0 0 3px rgba(240,195,106,.12) !important;
+            }
+            html[data-focuschrist-history-ask-entry-active] #historyQuestionLabel {
+                color: var(--fc-gold-light) !important;
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    function setAskEntryActive(active) {
+        document.documentElement.toggleAttribute('data-focuschrist-history-ask-entry-active', Boolean(active));
+    }
+
+    function activateHistoryAskEntry(options) {
+        const settings = options || {};
+        const input = byId('historyQuestion');
+        ensureAskEntryStyles();
+        setAskEntryActive(true);
+
+        if (settings.updateHash !== false && window.location.hash !== '#ask-history') {
+            try {
+                window.history.pushState(null, '', '#ask-history');
+            } catch (_error) {
+                window.location.hash = 'ask-history';
+            }
+        }
+
+        window.setTimeout(function () {
+            scrollComposerIntoView();
+            window.setTimeout(function () {
+                if (!input) return;
+                try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+            }, preferredScrollBehavior() === 'smooth' ? 260 : 20);
+        }, 20);
+    }
+
+    function initAskEntryNavigation() {
+        document.querySelectorAll('a[href="#ask-history"]').forEach(function (link) {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                activateHistoryAskEntry({ updateHash: true });
+            });
+        });
+
+        window.addEventListener('hashchange', function () {
+            if (window.location.hash === '#ask-history') activateHistoryAskEntry({ updateHash: false });
+            else setAskEntryActive(false);
+        });
+
+        if (window.location.hash === '#ask-history') {
+            window.setTimeout(function () {
+                activateHistoryAskEntry({ updateHash: false });
+            }, 80);
+        }
+    }
+
     function focusConversation() {
         scrollPageToElement(byId('historyConversation') || byId('ask-history'));
     }
@@ -276,6 +355,7 @@
         const input = byId('historyQuestion');
         const status = byId('historyStatus');
         setBusy(true);
+        setAskEntryActive(true);
         if (status) status.textContent = historyConversation.length
             ? 'Continuing the conversation with official Church History source routing.'
             : 'Matching the question to official Church History sources.';
@@ -330,11 +410,12 @@
         if (input) input.value = '';
         setConversationMode(false);
         setBusy(false);
+        setAskEntryActive(true);
         if (status) status.textContent = 'Official Church History source routing active.';
         if (input) {
             try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
         }
-        window.setTimeout(function () { scrollPageToElement(byId('ask-history')); }, 30);
+        window.setTimeout(scrollComposerIntoView, 30);
     }
 
     function initSuggestions() {
@@ -343,6 +424,7 @@
                 const question = button.getAttribute('data-history-question') || '';
                 const input = byId('historyQuestion');
                 if (input) input.value = question;
+                setAskEntryActive(true);
                 answerQuestion(question);
             });
         });
@@ -367,11 +449,17 @@
             }
         });
 
+        input.addEventListener('focus', function () {
+            setAskEntryActive(true);
+        });
+
         if (reset) reset.addEventListener('click', resetConversation);
     }
 
     function init() {
         initHero();
+        ensureAskEntryStyles();
+        initAskEntryNavigation();
         initSuggestions();
         initForm();
         setConversationMode(false);
