@@ -113,8 +113,15 @@
         container.appendChild(bridge);
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    function init() {
         ensureOfficialVideoRoutes();
         ensureChannelThemeBridge();
-    });
+        document.documentElement.setAttribute('data-focuschrist-watch-enrichment-ready', 'true');
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
+    } else {
+        init();
+    }
 })();
