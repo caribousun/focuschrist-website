@@ -1,0 +1,15 @@
+/* Answers page hero — owner-approved 2026-08-30.
+   Page-specific only; shared hero geometry remains owned by site-system.css. */
+
+.fc-visual-hero--answers::before {
+    background-image: url('https://lh3.googleusercontent.com/d/1NWPUsngEeD59ld3wA23HT7z2Ge4Wcpca');
+    background-position: center 58%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 900px) {
+    .fc-visual-hero--answers::before {
+        background-position: center 55%;
+    }
+}
