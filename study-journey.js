@@ -4,6 +4,7 @@
  * - Ask honors #ask-question with header-safe scroll + focus
  * - the active Ask conversation exposes a nearby Start Over control
  * - faith/history conversations load the verified source router
+ * - Art loads study/video connections without altering artwork
  */
 (function () {
     'use strict';
@@ -119,18 +120,29 @@
         else section.insertBefore(button, section.firstChild);
     }
 
-    function loadVerifiedSourceRouter() {
-        const path = window.location.pathname.toLowerCase();
-        const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
-        if (!eligible || document.querySelector('script[data-focuschrist-source-router]')) return;
+    function appendDynamicScript(src, marker) {
+        if (document.querySelector('script[' + marker + ']')) return;
         const script = document.createElement('script');
-        script.src = 'study-source-router.js?v=20260829-1';
+        script.src = src;
         script.defer = true;
-        script.setAttribute('data-focuschrist-source-router', 'true');
+        script.setAttribute(marker, 'true');
         script.addEventListener('error', function () {
-            console.error('focusChrist verified study-source router failed to load.');
+            console.error('focusChrist study journey asset failed to load: ' + src);
         }, { once: true });
         document.body.appendChild(script);
+    }
+
+    function loadVerifiedSourceRouter() {
+        const path = window.location.pathname.toLowerCase();
+        if (path.endsWith('/ask.html') || path.endsWith('/pioneers.html')) {
+            appendDynamicScript('study-source-router.js?v=20260829-1', 'data-focuschrist-source-router');
+        }
+    }
+
+    function loadArtStudyRouter() {
+        if (window.location.pathname.toLowerCase().endsWith('/art.html')) {
+            appendDynamicScript('art-study-router.js?v=20260829-1', 'data-focuschrist-art-study-router');
+        }
     }
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -140,5 +152,6 @@
         ensureConversationResetFallback();
         observeFollowupReset();
         window.setTimeout(loadVerifiedSourceRouter, 0);
+        window.setTimeout(loadArtStudyRouter, 0);
     });
 })();
