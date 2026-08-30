@@ -38,8 +38,13 @@ if not errors:
         ('data-focuschrist-primary-history="true"', "active History navigation"),
         ('id="ask-history"', "history question section"),
         ('id="historyAskForm"', "history question form"),
+        ('id="historyConversation"', "history conversation anchor"),
+        ('id="historyResetButton"', "New Question control"),
         ('study-source-router.js', "source router loader"),
-        ('church-history-experience.js', "history experience loader"),
+        ('church-history-experience.js?v=20260830-2', "versioned history experience loader"),
+        ('church-history.css?v=20260830-2', "versioned history stylesheet"),
+        ('https://lh3.googleusercontent.com/d/1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk', "working Sacred Grove hero delivery pattern"),
+        ('referrerpolicy="no-referrer"', "hero no-referrer delivery"),
         ('1815–1846', "Saints Volume 1 era"),
         ('1846–1893', "Saints Volume 2 era"),
         ('1893–1955', "Saints Volume 3 era"),
@@ -52,6 +57,8 @@ if not errors:
     ]:
         if needle not in history:
             errors.append(f"church-history.html: missing {label}")
+    if 'https://drive.google.com/uc?export=view&id=1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk' in history:
+        errors.append("church-history.html: broken Drive uc hero delivery pattern remains")
 
     router = (ROOT / "study-source-router.js").read_text(encoding="utf-8")
     for needle, label in [
@@ -84,9 +91,16 @@ if not errors:
         ("textContent", "safe text renderer"),
         ('Latter-day Saint Church history question:', "history intent forcing"),
         ('HISTORY_HERO_URL', "approved History hero binding"),
-        ('1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk', "approved Sacred Grove hero asset"),
+        ('https://lh3.googleusercontent.com/d/1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk', "working hero source in runtime"),
+        ('fallback-no-broken-bitmap', "broken-image fallback"),
         ("event.key === 'Enter' && !event.shiftKey", "Enter submits while Shift+Enter keeps multiline input"),
         ('form.requestSubmit()', "form-native Enter submission"),
+        ('recentConversationContext', "follow-up conversation context"),
+        ('setConversationMode(true)', "follow-up composer mode"),
+        ('resetConversation', "New Question reset"),
+        ('focusConversation', "submit auto-follow"),
+        ('focusLatestAnswer', "answer auto-follow"),
+        ('fixedHeaderOffset', "header-safe scroll offset"),
         ('initHero();', "History hero initialization"),
     ]:
         if needle not in experience:
@@ -95,6 +109,8 @@ if not errors:
         errors.append("church-history-experience.js: unsafe innerHTML renderer introduced")
     if "(event.ctrlKey || event.metaKey) && event.key === 'Enter'" in experience:
         errors.append("church-history-experience.js: legacy Ctrl/Cmd+Enter-only submission remains")
+    if 'https://drive.google.com/uc?export=view&id=1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk' in experience:
+        errors.append("church-history-experience.js: broken Drive uc hero delivery pattern remains")
 
     require("index.html", 'href="church-history.html"', "Home -> Church History path")
     require("site-common.js", "data-focuschrist-primary-history", "shared History navigation")
@@ -106,6 +122,14 @@ if not errors:
     for token in ["var(--fc-gold-light)", "var(--fc-sage-light)", "var(--fc-sky)", "var(--fc-bg-warm)"]:
         if token not in css:
             errors.append(f"church-history.css: Harvest Sky token not used: {token}")
+    for needle, label in [
+        ('.fc-history-page #ask-history', "History Ask section Harvest Sky surface"),
+        ('.fc-history-form-buttons', "Ask-style form actions"),
+        ('.fc-history-hero--image-error', "hero failure fallback styling"),
+        ('html[data-focuschrist-history-conversation-active]', "active conversation visual state"),
+    ]:
+        if needle not in css:
+            errors.append(f"church-history.css: missing {label}")
 
 if errors:
     print("Church History QA FAILED")
