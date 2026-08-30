@@ -41,7 +41,7 @@ def wire_pioneers():
 def main():
     wire_art()
     wire_pioneers()
-    print('wired Art and Pioneer unified experiences')
+    print('wired Art and Pioneer unified experiences after source-transparency QA correction')
 
 
 if __name__ == '__main__':
