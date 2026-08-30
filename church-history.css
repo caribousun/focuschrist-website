@@ -25,6 +25,12 @@
 }
 .fc-history-source-lock strong { color: var(--fc-cream); }
 
+/* The Saints narrative follows the dark Ask surface. Keep a modest visual buffer
+   even though the shared section primitive is intentionally flush-top. */
+.fc-history-page #ask-history + .fc-section.fc-section--flush-top {
+    padding-top: clamp(24px, 2.5vw, 34px);
+}
+
 .fc-history-era-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
