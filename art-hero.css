@@ -19,3 +19,19 @@
         padding-top: clamp(118px, 8vw, 136px) !important;
     }
 }
+
+/* Desktop gallery scroll cue — owner-approved 2026-08-30.
+   A subtle visual instruction only; hidden on tablet/mobile and nonessential to navigation. */
+@media (min-width: 1100px) and (min-height: 760px) {
+    body.fc-site .fc-page-intro .fc-container--standard::after {
+        content: "Scroll to explore the gallery ↓";
+        display: block;
+        margin-top: 18px;
+        text-align: center;
+        color: var(--fc-gold-light);
+        font-size: 0.9rem;
+        font-weight: 500;
+        letter-spacing: 0.08em;
+        opacity: 0.92;
+    }
+}
