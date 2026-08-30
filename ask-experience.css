@@ -305,7 +305,7 @@ body {
 
 .ask-chat-box .user-message {
     margin-left: clamp(12px, 7vw, 72px);
-    background: linear-gradient(135deg, rgba(224,170,62,0.18), rgba(183,104,72,0.09));
+    background: linear-gradient(135deg, rgba(224,170,62,0.14), rgba(82,123,150,0.12));
     border: 1px solid rgba(240,195,106,0.38);
     color: #fff1dc;
 }
@@ -489,3 +489,43 @@ body {
 
 /* Unified site migration: page introduction now sits below an unobstructed hero image. */
 body.fc-site .ask-main { margin-top: 0; padding-top: 22px; }
+
+/* Harvest Sky hardening: the follow-up composer is injected after page CSS loads,
+   so these important rules intentionally override the legacy brown runtime block. */
+body.fc-site .ask-followup-shell {
+    border-color: rgba(134,175,200,.38) !important;
+    background:
+        radial-gradient(circle at 100% 0%, rgba(134,175,200,.08), transparent 16rem),
+        linear-gradient(145deg, rgba(30,63,75,.98), rgba(17,39,49,.99)) !important;
+    box-shadow: 0 10px 28px rgba(4,17,23,.32) !important;
+}
+body.fc-site .ask-followup-label {
+    color: var(--ask-gold-light) !important;
+}
+body.fc-site .ask-followup-input {
+    border-color: rgba(134,175,200,.58) !important;
+    background: rgba(134,175,200,.055) !important;
+    color: var(--ask-cream) !important;
+}
+body.fc-site .ask-followup-input::placeholder {
+    color: #9fb0b1 !important;
+}
+body.fc-site .ask-followup-input:focus {
+    border-color: var(--ask-gold-light) !important;
+    background: rgba(134,175,200,.08) !important;
+    box-shadow: 0 0 0 3px rgba(240,195,106,.12) !important;
+}
+body.fc-site .ask-followup-button {
+    border-color: var(--ask-gold) !important;
+    background: var(--ask-gold) !important;
+    color: #1d2a2e !important;
+}
+body.fc-site .ask-followup-button:hover,
+body.fc-site .ask-followup-button:focus-visible {
+    border-color: var(--ask-gold-light) !important;
+    background: var(--ask-gold-light) !important;
+    color: #18262b !important;
+}
+body.fc-site .ask-followup-note {
+    color: var(--ask-faint) !important;
+}
