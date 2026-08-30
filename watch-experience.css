@@ -53,6 +53,9 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
+}
+
+.watch-featured-media::after {
     background: linear-gradient(135deg, rgba(255,255,255,0.04), transparent 44%);
 }
 
@@ -132,38 +135,80 @@
 }
 
 .watch-mini-media {
-    min-height: 112px;
+    --watch-thumb: none;
+    min-height: 126px;
     border-radius: 15px;
-    padding: 18px 16px 16px 76px;
-    background:
-        radial-gradient(circle at 12% 18%, rgba(232,185,79,0.18), transparent 32%),
-        linear-gradient(135deg, #315d68, #102f3b);
+    padding: 20px 16px 18px calc(46% + 18px);
+    isolation: isolate;
+    background: linear-gradient(135deg, #244a57, #102f3b);
+}
+
+.watch-mini-media:nth-child(1) {
+    --watch-thumb: url('https://www.churchofjesuschrist.org/imgs/3a960a019d9f6bb9a0abc1d6dba875c8d0aa13bf/full/!768,/0/default');
 }
 
 .watch-mini-media:nth-child(2) {
-    background:
-        radial-gradient(circle at 82% 18%, rgba(144,165,133,0.20), transparent 34%),
-        linear-gradient(135deg, #264d59, #183942);
+    --watch-thumb: url('https://www.churchofjesuschrist.org/imgs/46BE164CBF18B911A146DA4838DC630D7FEBDD47/full/!768,/0/default');
 }
 
 .watch-mini-media:nth-child(3) {
+    --watch-thumb: url('https://www.churchofjesuschrist.org/imgs/37e87b5dbe0cbe5e5543acb4d28eeff59fa069f2/full/!768,/0/default');
+}
+
+.watch-mini-media::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    inset: 0 auto 0 0;
+    width: 48%;
+    background-image: var(--watch-thumb);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.015);
+    transition: transform 220ms ease, filter 220ms ease;
+    filter: saturate(0.94) contrast(1.03) brightness(0.92);
+}
+
+.watch-mini-media:nth-child(1)::before {
+    background-position: center 42%;
+}
+
+.watch-mini-media:nth-child(2)::before {
+    background-position: center 45%;
+}
+
+.watch-mini-media:nth-child(3)::before {
+    background-position: center 43%;
+}
+
+.watch-mini-media::after {
+    z-index: -1;
     background:
-        radial-gradient(circle at 18% 84%, rgba(221,157,82,0.18), transparent 34%),
-        linear-gradient(135deg, #614c3c, #173743);
+        linear-gradient(90deg, rgba(7, 28, 37, 0.02) 0%, rgba(7, 28, 37, 0.16) 28%, rgba(7, 28, 37, 0.82) 47%, rgba(7, 28, 37, 0.97) 69%, rgba(7, 28, 37, 0.99) 100%),
+        linear-gradient(180deg, rgba(255,255,255,0.035), transparent 48%);
+}
+
+.watch-mini-media:hover::before,
+.watch-mini-media:focus-visible::before {
+    transform: scale(1.065);
+    filter: saturate(1.02) contrast(1.05) brightness(0.98);
 }
 
 .watch-mini-play {
     position: absolute;
-    left: 20px;
+    left: 23.5%;
     top: 50%;
-    transform: translateY(-50%);
-    width: 42px;
-    height: 42px;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background: rgba(249,239,217,0.93);
+    background: rgba(249,239,217,0.94);
     color: #173744;
+    border: 1px solid rgba(255,255,255,0.50);
+    box-shadow: 0 8px 24px rgba(4, 22, 30, 0.28);
     font-size: 0.9rem;
     z-index: 2;
 }
@@ -176,6 +221,10 @@
 .watch-mini-copy {
     position: relative;
     z-index: 2;
+    display: flex;
+    min-height: 86px;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .watch-mini-copy strong {
@@ -189,8 +238,8 @@
 
 .watch-mini-copy span {
     display: block;
-    margin-top: 6px;
-    color: rgba(234, 241, 241, 0.72);
+    margin-top: 7px;
+    color: rgba(234, 241, 241, 0.78);
     font-size: 0.72rem;
     letter-spacing: 0.10em;
     text-transform: uppercase;
@@ -343,14 +392,29 @@
     }
 
     .watch-mini-media {
-        min-height: 146px;
-        padding: 70px 15px 15px;
+        min-height: 168px;
+        padding: 92px 15px 16px;
+    }
+
+    .watch-mini-media::before {
+        width: 100%;
+        inset: 0;
+        background-position: center 40%;
+    }
+
+    .watch-mini-media::after {
+        background: linear-gradient(180deg, rgba(7, 28, 37, 0.06) 0%, rgba(7, 28, 37, 0.34) 42%, rgba(7, 28, 37, 0.96) 76%, rgba(7, 28, 37, 0.99) 100%);
     }
 
     .watch-mini-play {
-        left: 16px;
+        left: 18px;
         top: 18px;
         transform: none;
+    }
+
+    .watch-mini-copy {
+        min-height: 58px;
+        justify-content: flex-end;
     }
 
     .watch-path-grid {
@@ -376,14 +440,28 @@
     }
 
     .watch-mini-media {
-        min-height: 104px;
-        padding: 17px 14px 14px 68px;
+        min-height: 126px;
+        padding: 20px 14px 18px calc(44% + 16px);
+    }
+
+    .watch-mini-media::before {
+        inset: 0 auto 0 0;
+        width: 46%;
+    }
+
+    .watch-mini-media::after {
+        background: linear-gradient(90deg, rgba(7, 28, 37, 0.03) 0%, rgba(7, 28, 37, 0.22) 28%, rgba(7, 28, 37, 0.88) 47%, rgba(7, 28, 37, 0.99) 76%, rgba(7, 28, 37, 1) 100%);
     }
 
     .watch-mini-play {
-        left: 17px;
+        left: 22.5%;
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .watch-mini-copy {
+        min-height: 86px;
+        justify-content: center;
     }
 
     .watch-official-grid {
@@ -394,6 +472,7 @@
 @media (prefers-reduced-motion: reduce) {
     .watch-featured-media,
     .watch-mini-media,
+    .watch-mini-media::before,
     .watch-path-card,
     .watch-theme-tab {
         transition: none;
