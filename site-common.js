@@ -20,7 +20,6 @@
 
     const BYU_RESOURCE_LINKS = [
         ['Religious Studies Center', 'https://rsc.byu.edu/'],
-        ['RSC Search', 'https://rsc.byu.edu/search'],
         ['Scripture Citation Index', 'https://scriptures.byu.edu/']
     ];
 
