@@ -91,9 +91,9 @@ body.fc-site img { max-width: 100%; }
 .fc-display {
     margin: 0;
     color: var(--fc-cream);
-    font-size: clamp(2.45rem, 6vw, 4.7rem);
-    letter-spacing: 2px;
-    line-height: 1.04;
+    font-size: clamp(2.35rem, 5.4vw, 4.25rem);
+    letter-spacing: 1.5px;
+    line-height: 1.07;
     text-wrap: balance;
 }
 
@@ -118,66 +118,71 @@ body.fc-site img { max-width: 100%; }
 
 .fc-section-intro--center { margin-inline: auto; }
 
-.fc-hero {
+/* Image-first hero system. Sacred or historical imagery remains unobstructed.
+   Page titles and descriptive copy belong in .fc-page-intro below the hero. */
+.fc-visual-hero {
     position: relative;
-    isolation: isolate;
-    min-height: clamp(330px, 43vw, 500px);
+    min-height: clamp(290px, 31vw, 390px);
     overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 118px 22px 76px;
     background: #090705;
-    text-align: center;
 }
 
-.fc-hero::before,
-.fc-hero::after {
+.fc-visual-hero::before,
+.fc-visual-hero::after {
     content: '';
     position: absolute;
     inset: 0;
     pointer-events: none;
 }
 
-.fc-hero::before {
-    z-index: -2;
-    background-position: center 34%;
+.fc-visual-hero::before {
+    background-position: center 32%;
     background-repeat: no-repeat;
     background-size: cover;
-    transform: scale(1.01);
+    transform: scale(1.005);
 }
 
-.fc-hero::after {
-    z-index: -1;
+.fc-visual-hero::after {
     background:
-        radial-gradient(circle at 50% 38%, rgba(201,169,97,0.08), transparent 43%),
-        linear-gradient(180deg, rgba(7,5,3,0.22) 0%, rgba(7,5,3,0.16) 38%, rgba(10,7,4,0.88) 100%);
+        linear-gradient(180deg, rgba(7,5,3,0.38) 0%, rgba(7,5,3,0.08) 30%, rgba(7,5,3,0.02) 62%, rgba(10,7,4,0.16) 100%);
 }
 
-.fc-hero--christ::before { background-image: url('Jesus.png'); }
-.fc-hero--history::after {
-    background:
-        linear-gradient(180deg, rgba(7,5,3,0.30) 0%, rgba(7,5,3,0.25) 38%, rgba(10,7,4,0.90) 100%);
+.fc-visual-hero--christ::before { background-image: url('Jesus.png'); }
+.fc-visual-hero--history::after {
+    background: linear-gradient(180deg, rgba(7,5,3,0.30) 0%, rgba(7,5,3,0.04) 48%, rgba(10,7,4,0.18) 100%);
 }
 
-.fc-hero-content { width: min(900px, 100%); }
-.fc-hero .fc-display { text-shadow: 0 4px 24px rgba(0,0,0,0.72); }
-.fc-hero-copy {
-    max-width: 720px;
-    margin: 18px auto 0;
-    color: #eadccc;
-    font-size: clamp(1rem, 1.8vw, 1.12rem);
-    line-height: 1.72;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.72);
+.fc-page-intro {
+    padding: clamp(42px, 6vw, 68px) 0 clamp(32px, 5vw, 54px);
+    background: var(--fc-bg-warm);
+    text-align: center;
 }
-.fc-hero-scripture {
-    display: inline-block;
-    margin-top: 18px;
+
+.fc-page-intro .fc-display {
+    max-width: 940px;
+    margin-inline: auto;
     color: var(--fc-gold-light);
+}
+
+.fc-page-intro-copy {
+    max-width: 760px;
+    margin: 16px auto 0;
+    color: var(--fc-text);
+    font-size: clamp(1rem, 1.8vw, 1.1rem);
+    line-height: 1.76;
+}
+
+.fc-page-intro-scripture {
+    display: inline-block;
+    margin-top: 16px;
+    color: var(--fc-gold);
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.94rem;
     font-style: italic;
+    line-height: 1.6;
 }
+
+.fc-page-intro .fc-actions { margin-top: 24px; }
 
 .fc-grid {
     display: grid;
@@ -342,13 +347,10 @@ footer[data-focuschrist-footer="standard"] a { color: var(--fc-gold); }
     .fc-container--wide,
     .fc-container--gallery { width: calc(100% - 28px); }
 
-    .fc-hero {
-        min-height: 310px;
-        padding: 58px 18px 54px;
-    }
-
-    .fc-display { font-size: clamp(2.05rem, 12vw, 3.2rem); }
-    .fc-hero-copy { font-size: 0.98rem; }
+    .fc-visual-hero { min-height: 255px; }
+    .fc-visual-hero::before { background-position: center 28%; }
+    .fc-page-intro { padding: 36px 0 32px; }
+    .fc-display { font-size: clamp(2rem, 11vw, 3.05rem); }
     .fc-grid,
     .fc-grid--2,
     .fc-grid--4 { grid-template-columns: 1fr; }
