@@ -83,11 +83,18 @@ if not errors:
         ('historyPromptContext', "history prompt context"),
         ("textContent", "safe text renderer"),
         ('Latter-day Saint Church history question:', "history intent forcing"),
+        ('HISTORY_HERO_URL', "approved History hero binding"),
+        ('1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk', "approved Sacred Grove hero asset"),
+        ("event.key === 'Enter' && !event.shiftKey", "Enter submits while Shift+Enter keeps multiline input"),
+        ('form.requestSubmit()', "form-native Enter submission"),
+        ('initHero();', "History hero initialization"),
     ]:
         if needle not in experience:
             errors.append(f"church-history-experience.js: missing {label}")
     if '.innerHTML' in experience:
         errors.append("church-history-experience.js: unsafe innerHTML renderer introduced")
+    if "(event.ctrlKey || event.metaKey) && event.key === 'Enter'" in experience:
+        errors.append("church-history-experience.js: legacy Ctrl/Cmd+Enter-only submission remains")
 
     require("index.html", 'href="church-history.html"', "Home -> Church History path")
     require("site-common.js", "data-focuschrist-primary-history", "shared History navigation")
