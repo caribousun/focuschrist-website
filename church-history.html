@@ -79,6 +79,52 @@
             </div>
         </section>
 
+        <section class="fc-section" id="ask-history" aria-labelledby="history-ask-heading">
+            <div class="fc-container--standard">
+                <div class="fc-history-ask-heading">
+                    <div>
+                        <p class="fc-eyebrow">Source-grounded study assistant</p>
+                        <h2 class="fc-section-heading" id="history-ask-heading">Ask Church History</h2>
+                        <p class="fc-section-intro">Ask naturally. The assistant predicts the likely historical source family, adds verified official study routes, remembers the current conversation for follow-up questions, and keeps official Church History and <em>Saints</em> above model memory.</p>
+                    </div>
+                    <a class="fc-button" href="https://www.churchofjesuschrist.org/study/church-history?lang=eng" target="_blank" rel="noopener noreferrer">Official Source Hub</a>
+                </div>
+
+                <div class="fc-history-predictions" aria-label="Suggested Church history questions">
+                    <button type="button" data-history-question="What do the different First Vision accounts say, and how does the Church explain them?">First Vision accounts</button>
+                    <button type="button" data-history-question="How does the Church describe the translation of the Book of Mormon and the use of seer stones?">Book of Mormon translation</button>
+                    <button type="button" data-history-question="What is known about the restoration of the Aaronic and Melchizedek Priesthood?">Priesthood restoration</button>
+                    <button type="button" data-history-question="What happened with the Kirtland Safety Society, and why did it fail?">Kirtland Safety Society</button>
+                    <button type="button" data-history-question="How does the Church explain Joseph Smith and plural marriage?">Plural marriage</button>
+                    <button type="button" data-history-question="What does the Church teach about the Mountain Meadows Massacre?">Mountain Meadows</button>
+                    <button type="button" data-history-question="What happened to the Willie and Martin handcart companies?">Handcart companies</button>
+                    <button type="button" data-history-question="How did observance of the Word of Wisdom develop historically?">Word of Wisdom</button>
+                    <button type="button" data-history-question="How did the Church become a global church during the twentieth century?">Global growth</button>
+                    <button type="button" data-history-question="Where can I study women in Latter-day Saint Church history?">Women's history</button>
+                </div>
+
+                <div class="fc-history-chat-shell" id="historyConversation">
+                    <div id="historyChatBox" class="fc-history-chat" aria-live="polite" aria-label="Church history conversation">
+                        <div class="fc-history-welcome">
+                            <strong>Ask about a person, event, place, practice, date, or historical question.</strong>
+                            <span>Official Church History sources will be shown with the response. Follow-up questions stay in the same conversation until you choose New Question.</span>
+                        </div>
+                    </div>
+                    <form id="historyAskForm" class="fc-history-form">
+                        <label for="historyQuestion" class="fc-history-label" id="historyQuestionLabel">Your Church history question</label>
+                        <textarea id="historyQuestion" rows="2" maxlength="1200" placeholder="For example: What happened after the Saints left Nauvoo?" required></textarea>
+                        <div class="fc-history-form-actions">
+                            <span id="historyStatus" role="status" aria-live="polite">Official Church History source routing active.</span>
+                            <div class="fc-history-form-buttons">
+                                <button id="historyResetButton" class="fc-button" type="button">New Question</button>
+                                <button id="historyAskButton" class="fc-button fc-button--primary" type="submit">Ask History</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <section class="fc-section fc-section--flush-top">
             <div class="fc-container--standard">
                 <p class="fc-eyebrow">The current narrative history</p>
@@ -122,7 +168,7 @@
             <div class="fc-container--standard">
                 <p class="fc-eyebrow">Verified official index</p>
                 <h2 class="fc-section-heading">Go Deeper by Source Type</h2>
-                <p class="fc-section-intro">The official Church History hub brings together narrative history, topic studies, primary-vision resources, women's history, historical podcasts, essays, question-based videos, and global histories. These routes are indexed into the history assistant below.</p>
+                <p class="fc-section-intro">The official Church History hub brings together narrative history, topic studies, primary-vision resources, women's history, historical podcasts, essays, question-based videos, and global histories. These routes are indexed into the history assistant above and remain available here for deeper study.</p>
 
                 <div class="fc-history-source-grid">
                     <a class="fc-card fc-card--interactive" href="https://www.churchofjesuschrist.org/study/history/topics?lang=eng" target="_blank" rel="noopener noreferrer">
@@ -157,52 +203,6 @@
                         <h3 class="fc-card-title">Saints Library</h3>
                         <p>Open all four <em>Saints</em> volumes together with Saints Stories and the Saints podcast from the official history library.</p>
                     </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="fc-section" id="ask-history" aria-labelledby="history-ask-heading">
-            <div class="fc-container--standard">
-                <div class="fc-history-ask-heading">
-                    <div>
-                        <p class="fc-eyebrow">Source-grounded study assistant</p>
-                        <h2 class="fc-section-heading" id="history-ask-heading">Ask Church History</h2>
-                        <p class="fc-section-intro">Ask naturally. The assistant predicts the likely historical source family, adds verified official study routes, remembers the current conversation for follow-up questions, and keeps official Church History and <em>Saints</em> above model memory.</p>
-                    </div>
-                    <a class="fc-button" href="https://www.churchofjesuschrist.org/study/church-history?lang=eng" target="_blank" rel="noopener noreferrer">Official Source Hub</a>
-                </div>
-
-                <div class="fc-history-predictions" aria-label="Suggested Church history questions">
-                    <button type="button" data-history-question="What do the different First Vision accounts say, and how does the Church explain them?">First Vision accounts</button>
-                    <button type="button" data-history-question="How does the Church describe the translation of the Book of Mormon and the use of seer stones?">Book of Mormon translation</button>
-                    <button type="button" data-history-question="What is known about the restoration of the Aaronic and Melchizedek Priesthood?">Priesthood restoration</button>
-                    <button type="button" data-history-question="What happened with the Kirtland Safety Society, and why did it fail?">Kirtland Safety Society</button>
-                    <button type="button" data-history-question="How does the Church explain Joseph Smith and plural marriage?">Plural marriage</button>
-                    <button type="button" data-history-question="What does the Church teach about the Mountain Meadows Massacre?">Mountain Meadows</button>
-                    <button type="button" data-history-question="What happened to the Willie and Martin handcart companies?">Handcart companies</button>
-                    <button type="button" data-history-question="How did observance of the Word of Wisdom develop historically?">Word of Wisdom</button>
-                    <button type="button" data-history-question="How did the Church become a global church during the twentieth century?">Global growth</button>
-                    <button type="button" data-history-question="Where can I study women in Latter-day Saint Church history?">Women's history</button>
-                </div>
-
-                <div class="fc-history-chat-shell" id="historyConversation">
-                    <div id="historyChatBox" class="fc-history-chat" aria-live="polite" aria-label="Church history conversation">
-                        <div class="fc-history-welcome">
-                            <strong>Ask about a person, event, place, practice, date, or historical question.</strong>
-                            <span>Official Church History sources will be shown with the response. Follow-up questions stay in the same conversation until you choose New Question.</span>
-                        </div>
-                    </div>
-                    <form id="historyAskForm" class="fc-history-form">
-                        <label for="historyQuestion" class="fc-history-label" id="historyQuestionLabel">Your Church history question</label>
-                        <textarea id="historyQuestion" rows="2" maxlength="1200" placeholder="For example: What happened after the Saints left Nauvoo?" required></textarea>
-                        <div class="fc-history-form-actions">
-                            <span id="historyStatus" role="status" aria-live="polite">Official Church History source routing active.</span>
-                            <div class="fc-history-form-buttons">
-                                <button id="historyResetButton" class="fc-button" type="button">New Question</button>
-                                <button id="historyAskButton" class="fc-button fc-button--primary" type="submit">Ask History</button>
-                            </div>
-                        </div>
-                    </form>
                 </div>
             </div>
         </section>
