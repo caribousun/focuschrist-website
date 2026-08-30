@@ -20,39 +20,40 @@
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="site-system.css">
     <style>
-        /* About-page closing panel: muted Harvest Sky parchment/sage rather than the
-           brighter cream treatment, preserving a gentle transition into the footer. */
+        /* About-page closing panel: remain inside the Harvest Sky twilight/sage
+           family so the final call-to-action feels continuous with the site rather
+           than becoming a detached cream panel before the footer. */
         .fc-about-close {
             background:
-                radial-gradient(circle at 86% 12%, rgba(224, 170, 62, 0.13), transparent 28rem),
-                radial-gradient(circle at 10% 92%, rgba(113, 128, 92, 0.16), transparent 26rem),
-                linear-gradient(145deg, #ded7c5 0%, #d1d4c2 54%, #d8ceb7 100%);
-            border-block: 1px solid rgba(82, 123, 150, 0.18);
+                radial-gradient(circle at 86% 12%, rgba(224, 170, 62, 0.08), transparent 28rem),
+                radial-gradient(circle at 10% 92%, rgba(113, 128, 92, 0.18), transparent 26rem),
+                linear-gradient(145deg, #28434a 0%, #334a43 54%, #243943 100%);
+            border-block: 1px solid rgba(240, 195, 106, 0.12);
         }
 
         .fc-about-close .fc-notice {
-            border-left-color: #71805c;
+            border-left-color: #9eaa83;
             background:
-                linear-gradient(90deg, rgba(113, 128, 92, 0.16), rgba(134, 175, 200, 0.08));
-            color: #243a3d;
-            box-shadow: inset 0 0 0 1px rgba(113, 128, 92, 0.08);
+                linear-gradient(90deg, rgba(113, 128, 92, 0.20), rgba(134, 175, 200, 0.07));
+            color: #e8e3d8;
+            box-shadow: inset 0 0 0 1px rgba(158, 170, 131, 0.08);
         }
 
         .fc-about-close .fc-notice strong {
-            color: #16313c;
+            color: #fff2dc;
         }
 
         .fc-about-close .fc-button:not(.fc-button--primary) {
-            border-color: #527b96;
-            background: rgba(82, 123, 150, 0.05);
-            color: #173542 !important;
+            border-color: #86afc8;
+            background: rgba(134, 175, 200, 0.05);
+            color: #e8e3d8 !important;
         }
 
         .fc-about-close .fc-button:not(.fc-button--primary):hover,
         .fc-about-close .fc-button:not(.fc-button--primary):focus-visible {
-            border-color: #365f79;
-            background: rgba(82, 123, 150, 0.12);
-            color: #102a34 !important;
+            border-color: #b8d1df;
+            background: rgba(134, 175, 200, 0.14);
+            color: #fff2dc !important;
         }
     </style>
     <script src="site-common.js" defer></script>
