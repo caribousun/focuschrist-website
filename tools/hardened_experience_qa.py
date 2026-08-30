@@ -25,6 +25,7 @@ def main() -> int:
     common = read("site-common.js", errors)
     system = read("site-system.css", errors)
     ask_css = read("ask-experience.css", errors)
+    pioneer_css = read("pioneer-experience.css", errors)
     pioneer = read("pioneer-experience.js", errors)
     journey = read("study-journey.js", errors)
     sources = read("study-source-router.js", errors)
@@ -71,6 +72,15 @@ def main() -> int:
         "linear-gradient(145deg, rgba(30,63,75,.98), rgba(17,39,49,.99)) !important",
         "body.fc-site .ask-followup-input",
         "body.fc-site .ask-followup-button",
+    ), errors)
+
+    require(pioneer_css, "pioneer-experience.css", (
+        "Pioneer date/title collision hardening",
+        "body.fc-site .timeline-item > .map-date",
+        "flex: 0 0 165px !important",
+        "white-space: normal !important",
+        "body.fc-site .timeline-item > .map-content",
+        "flex-direction: column",
     ), errors)
 
     require(pioneer, "pioneer-experience.js", (
@@ -199,7 +209,7 @@ def main() -> int:
         return 1
 
     print("focusChrist HARDENED EXPERIENCE QA PASSED")
-    print("Verified direct Home-to-Ask arrival, complete Harvest Sky Ask follow-up styling, hardened Pioneer disclosure ownership and timeout recovery, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
+    print("Verified direct Home-to-Ask arrival, complete Harvest Sky Ask follow-up styling, Pioneer date/title collision protection, hardened Pioneer disclosure ownership and timeout recovery, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
     return 0
 
 

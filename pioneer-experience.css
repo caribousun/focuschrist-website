@@ -288,6 +288,37 @@ body.fc-site .map-content p { color: var(--fc-muted); }
 body.fc-site .timeline-date,
 body.fc-site .map-date { color: var(--fc-gold-light); }
 
+/* Pioneer date/title collision hardening.
+   Legacy page CSS reserved only 90px for dates and forced nowrap, so longer Willie/Martin
+   dates could visually run into their titles. Give dates a real column and let them wrap safely. */
+body.fc-site .timeline-item > .map-date,
+body.fc-site .map-point > .map-date,
+body.fc-site .trail-point > .map-date,
+body.fc-site .martin-point > .map-date {
+    flex: 0 0 165px !important;
+    width: 165px !important;
+    min-width: 165px !important;
+    max-width: 165px !important;
+    white-space: normal !important;
+    overflow-wrap: break-word;
+    line-height: 1.35;
+}
+
+body.fc-site .timeline-item > .map-content,
+body.fc-site .map-point > .map-content,
+body.fc-site .trail-point > .map-content,
+body.fc-site .martin-point > .map-content {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+body.fc-site .timeline-item > .map-content > h3,
+body.fc-site .timeline-item > .map-content > h4,
+body.fc-site .map-point > .map-content > h3,
+body.fc-site .map-point > .map-content > h4 {
+    margin-top: 0;
+}
+
 body.fc-site .map-container,
 body.fc-site .journal-card,
 body.fc-site .timeline-story {
@@ -376,7 +407,22 @@ body.fc-site .cta-button {
     body.fc-site .timeline-item,
     body.fc-site .map-point,
     body.fc-site .trail-point,
-    body.fc-site .martin-point { transform: none !important; }
+    body.fc-site .martin-point {
+        transform: none !important;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    body.fc-site .timeline-item > .map-date,
+    body.fc-site .map-point > .map-date,
+    body.fc-site .trail-point > .map-date,
+    body.fc-site .martin-point > .map-date {
+        flex: 0 0 auto !important;
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        margin-bottom: 1px;
+    }
 }
 
 body.fc-site .pioneer-extra-action {
