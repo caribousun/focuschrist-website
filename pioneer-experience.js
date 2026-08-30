@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'openai/gpt-oss-20b';
-    const PIONEER_POLICY_VERSION = '2026-08-30.1';
+    const PIONEER_POLICY_VERSION = '2026-08-30.2';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -298,9 +298,43 @@
         }
     }
 
+    function disclosureTopic(control) {
+        const key = control ? String(control.getAttribute('data-topic') || '') : '';
+        const mode = control ? String(control.getAttribute('data-focus-expand') || '') : '';
+        if (mode === 'trail') {
+            const mapped = typeof trailTopicMap !== 'undefined' && trailTopicMap[key] ? trailTopicMap[key] : key;
+            return { mapped: mapped || 'Pioneer trail', kind: 'Trail' };
+        }
+        const mapped = typeof topicMap !== 'undefined' && topicMap[key] ? topicMap[key] : key;
+        const isHandcart = /^(?:willie|martin)-/i.test(key);
+        return { mapped: mapped || 'Pioneer journey', kind: isHandcart ? 'Willie & Martin Companies' : 'Journey' };
+    }
+
+    function ownDisclosureEvent(event) {
+        if (!event || !event.target || typeof event.target.closest !== 'function') return;
+        const control = event.target.closest('[data-focus-expand]');
+        if (!control) return;
+        if (event.target.closest('.ai-response')) return;
+        if (event.type === 'keydown' && event.key !== 'Enter' && event.key !== ' ') return;
+
+        event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
+
+        const topic = disclosureTopic(control);
+        runDisclosure(control, topic.mapped, topic.kind);
+    }
+
+    function installDisclosureOwnership() {
+        document.addEventListener('click', ownDisclosureEvent, true);
+        document.addEventListener('keydown', ownDisclosureEvent, true);
+        document.documentElement.setAttribute('data-focuschrist-pioneer-disclosure-controller', 'hardened');
+    }
+
     window.expandTimelineItem = function (element, topic) {
         const mapped = typeof topicMap !== 'undefined' && topicMap[topic] ? topicMap[topic] : String(topic || 'Pioneer journey');
-        runDisclosure(element, mapped, 'Journey');
+        const kind = /^(?:willie|martin)-/i.test(String(topic || '')) ? 'Willie & Martin Companies' : 'Journey';
+        runDisclosure(element, mapped, kind);
     };
 
     window.expandTrailPoint = function (element, locationKey) {
@@ -417,6 +451,8 @@
             try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
         }
     };
+
+    installDisclosureOwnership();
 
     document.addEventListener('DOMContentLoaded', function () {
         const inputArea = document.querySelector('.qa-container .input-area');
