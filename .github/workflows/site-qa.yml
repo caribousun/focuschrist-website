@@ -24,6 +24,12 @@ jobs:
       - name: Run focusChrist unified experience QA
         run: python tools/unified_experience_qa.py
 
+      - name: Run focusChrist resource QA
+        run: python tools/resource_qa.py
+
+      - name: Validate shared site JavaScript
+        run: node --check site-common.js
+
       - name: Validate Ask experience JavaScript
         run: node --check ask-experience.js
 
