@@ -1,0 +1,75 @@
+name: Art Scroll Cue DOM Fix
+
+on:
+  push:
+    paths:
+      - '.github/workflows/art-scroll-cue-dom-fix.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Verify expected baseline
+        run: test "$(git rev-parse HEAD^)" = "b7da435be4f32441194025561205dac2b053f2a3"
+
+      - name: Make cue explicit and position it close to intro copy
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          page = Path('art.html')
+          html = page.read_text(encoding='utf-8')
+          old = '<p class="fc-page-intro-copy">A visual place to reflect on Jesus Christ, scripture, faith, hope, and the quiet moments that can turn the heart toward Him.</p>'
+          new = old + '\n            <p class="art-scroll-cue" aria-hidden="true">Scroll to explore the gallery ↓</p>'
+          if html.count(old) != 1:
+              raise SystemExit(f'Expected exactly one intro paragraph, found {html.count(old)}')
+          if 'class="art-scroll-cue"' in html:
+              raise SystemExit('Art scroll cue already exists in HTML')
+          html = html.replace(old, new, 1)
+          if html.count('art-hero.css?v=20260830-4') != 1:
+              raise SystemExit('Expected Art hero stylesheet v4 exactly once')
+          html = html.replace('art-hero.css?v=20260830-4', 'art-hero.css?v=20260830-5', 1)
+          page.write_text(html, encoding='utf-8')
+
+          css_path = Path('art-hero.css')
+          css = css_path.read_text(encoding='utf-8')
+          old_block = '''/* Desktop gallery scroll cue — owner-approved 2026-08-30.\n   A subtle visual instruction only; hidden on tablet/mobile and nonessential to navigation. */\n@media (min-width: 1100px) and (min-height: 760px) {\n    body.fc-site .fc-page-intro .fc-container--standard::after {\n        content: "Scroll to explore the gallery ↓";\n        display: block;\n        margin-top: 18px;\n        transform: translateY(-36px);\n        text-align: center;\n        color: var(--fc-gold-light);\n        font-size: 0.9rem;\n        font-weight: 500;\n        letter-spacing: 0.08em;\n        opacity: 0.92;\n    }\n}\n'''
+          if css.count(old_block) != 1:
+              raise SystemExit('Expected existing pseudo scroll-cue block exactly once')
+          new_block = '''/* Desktop gallery scroll cue — owner-approved 2026-08-30.\n   Explicit DOM element for predictable placement; tablet/mobile remain unchanged. */\nbody.fc-site .art-scroll-cue {\n    display: none;\n}\n\n@media (min-width: 1100px) and (min-height: 760px) {\n    body.fc-site .art-scroll-cue {\n        display: block;\n        margin: 8px 0 0;\n        text-align: center;\n        color: var(--fc-gold-light);\n        font-size: 0.9rem;\n        font-weight: 500;\n        letter-spacing: 0.08em;\n        line-height: 1.3;\n        opacity: 0.92;\n    }\n}\n'''
+          css = css.replace(old_block, new_block, 1)
+          css_path.write_text(css, encoding='utf-8')
+          PY
+
+      - name: Verify narrow change and permanent QA
+        shell: bash
+        run: |
+          grep -F 'art-hero.css?v=20260830-5' art.html
+          grep -F '<p class="art-scroll-cue" aria-hidden="true">Scroll to explore the gallery ↓</p>' art.html
+          grep -F 'margin: 8px 0 0;' art-hero.css
+          ! grep -F 'fc-container--standard::after' art-hero.css
+          python tools/site_qa.py
+          python tools/unified_experience_qa.py
+          python tools/resource_qa.py
+          python tools/study_intelligence_qa.py
+          python tools/hardened_experience_qa.py
+          python tools/church_history_qa.py
+          node --check site-common.js
+          node --check art-study-router.js
+
+      - name: Commit corrected cue placement
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add art.html art-hero.css
+          git commit -m 'Place Art gallery scroll cue beneath intro copy'
+          git push origin HEAD:main
