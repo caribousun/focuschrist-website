@@ -27,6 +27,7 @@
         content: "Scroll to explore the gallery ↓";
         display: block;
         margin-top: 18px;
+        transform: translateY(-36px);
         text-align: center;
         color: var(--fc-gold-light);
         font-size: 0.9rem;
