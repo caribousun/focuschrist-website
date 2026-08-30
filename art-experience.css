@@ -1,0 +1,88 @@
+/* focusChrist Art page — preserves gallery function while aligning presentation. */
+
+body.fc-site .gallery {
+    width: calc(100% - 36px);
+    max-width: var(--fc-gallery);
+    margin: 0 auto;
+    padding: clamp(34px, 5vw, 58px) 0 clamp(54px, 7vw, 82px);
+    gap: clamp(14px, 2vw, 22px);
+}
+
+body.fc-site .gallery-item {
+    overflow: hidden;
+    border: 1px solid var(--fc-line);
+    border-radius: var(--fc-radius);
+    background: var(--fc-surface);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.22);
+    transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+body.fc-site .gallery-item:hover,
+body.fc-site .gallery-item:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--fc-line-strong);
+    box-shadow: 0 18px 42px rgba(0,0,0,0.30);
+    outline: none;
+}
+
+body.fc-site .gallery-item img {
+    display: block;
+    width: 100%;
+}
+
+body.fc-site .gallery-item .caption {
+    background: linear-gradient(180deg, rgba(8,6,4,0), rgba(8,6,4,0.92));
+    color: var(--fc-cream);
+    font-size: 0.88rem;
+    letter-spacing: .35px;
+}
+
+body.fc-site [data-focuschrist-featured-art-study="true"] {
+    max-width: var(--fc-wide) !important;
+    margin: 0 auto !important;
+    padding: 0 18px var(--fc-section-y) !important;
+}
+
+body.fc-site [data-focuschrist-featured-art-study="true"] > h2 {
+    margin: 0 0 10px !important;
+    color: var(--fc-gold) !important;
+    font-family: Georgia, 'Times New Roman', serif !important;
+    font-size: clamp(1.8rem, 3.8vw, 2.55rem) !important;
+    font-weight: 400 !important;
+    letter-spacing: 1px !important;
+}
+
+body.fc-site [data-focuschrist-featured-art-study="true"] > p {
+    color: var(--fc-muted) !important;
+}
+
+body.fc-site [data-focuschrist-featured-art-study="true"] > div > a {
+    border: 1px solid var(--fc-line) !important;
+    border-radius: var(--fc-radius) !important;
+    background: linear-gradient(145deg, rgba(35,27,20,0.72), rgba(22,17,13,0.76)) !important;
+    box-shadow: 0 10px 28px rgba(0,0,0,.16);
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+body.fc-site [data-focuschrist-featured-art-study="true"] > div > a:hover,
+body.fc-site [data-focuschrist-featured-art-study="true"] > div > a:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--fc-line-strong) !important;
+    outline: none;
+}
+
+body.fc-site [data-focuschrist-featured-art-study="true"] > div > a span {
+    color: var(--fc-gold-light) !important;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+@media (hover: none), (max-width: 700px) {
+    body.fc-site .gallery-item .caption {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 700px) {
+    body.fc-site .gallery { width: calc(100% - 24px); padding-top: 26px; }
+}
