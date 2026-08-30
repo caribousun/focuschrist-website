@@ -1,9 +1,69 @@
-/* FocusChrist shared interaction controller.
- * Keeps common navigation accessibility and expandable-content behavior
- * consistent across pages without introducing a framework.
+/* focusChrist shared interaction controller.
+ * Keeps common navigation accessibility, verified resource routing, and
+ * expandable-content behavior consistent across pages without a framework.
  */
 (function () {
     'use strict';
+
+    const OFFICIAL_RESOURCE_LINKS = [
+        ['Church Website', 'https://www.churchofjesuschrist.org/?lang=eng'],
+        ['Gospel Library', 'https://www.churchofjesuschrist.org/study?lang=eng&platform=web'],
+        ['Scriptures', 'https://www.churchofjesuschrist.org/study/scriptures?lang=eng'],
+        ['Topics & Questions', 'https://www.churchofjesuschrist.org/study/manual/gospel-topics?lang=eng'],
+        ['General Conference', 'https://www.churchofjesuschrist.org/learn/general-conference?lang=eng'],
+        ['Jesus Christ Videos', 'https://www.churchofjesuschrist.org/comeuntochrist/believe/jesus/videos'],
+        ['Gospel Media', 'https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng']
+    ];
+
+    function appendMenuLabel(menu, text) {
+        const label = document.createElement('div');
+        label.className = 'menu-label';
+        label.textContent = text;
+        menu.appendChild(label);
+    }
+
+    function appendExternalMenuLink(menu, text, href) {
+        const link = document.createElement('a');
+        link.href = href;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = text;
+        menu.appendChild(link);
+    }
+
+    function relativeWatchHref() {
+        const path = window.location.pathname;
+        if (path.includes('/answers/') || path.includes('/art-study/')) return '../watch.html';
+        return 'watch.html';
+    }
+
+    function initOfficialResourceMenu() {
+        const menu = document.getElementById('hamburgerMenu');
+        if (!menu) return;
+
+        const firstDivider = menu.querySelector('hr');
+        if (!firstDivider) return;
+
+        while (firstDivider.nextSibling) {
+            firstDivider.nextSibling.remove();
+        }
+
+        appendMenuLabel(menu, 'Official Church Resources');
+        OFFICIAL_RESOURCE_LINKS.forEach(function (resource) {
+            appendExternalMenuLink(menu, resource[0], resource[1]);
+        });
+
+        const secondDivider = document.createElement('hr');
+        menu.appendChild(secondDivider);
+        appendMenuLabel(menu, 'focusChrist Video');
+
+        const watchLink = document.createElement('a');
+        watchLink.href = relativeWatchHref();
+        watchLink.textContent = 'Watch & Study';
+        menu.appendChild(watchLink);
+
+        appendExternalMenuLink(menu, '@theRisen636', 'https://www.youtube.com/@theRisen636');
+    }
 
     function initNavigation() {
         const trigger = document.querySelector('.hamburger');
@@ -110,6 +170,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        initOfficialResourceMenu();
         initNavigation();
         initPioneerDisclosures();
     });
