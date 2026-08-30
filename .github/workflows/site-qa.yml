@@ -27,8 +27,14 @@ jobs:
       - name: Run focusChrist resource QA
         run: python tools/resource_qa.py
 
+      - name: Run focusChrist Study Intelligence QA
+        run: python tools/study_intelligence_qa.py
+
       - name: Validate shared site JavaScript
         run: node --check site-common.js
+
+      - name: Validate Study Intelligence JavaScript
+        run: node --check study-intelligence.js
 
       - name: Validate Ask experience JavaScript
         run: node --check ask-experience.js
