@@ -1,0 +1,31 @@
+name: Migrate Nested focusChrist Experience
+
+on:
+  push:
+    branches:
+      - focus/unified-experience-phase1
+    paths:
+      - 'tools/migrate_nested_unified.py'
+      - '.github/workflows/migrate-nested-unified.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Migrate nested Answer and Art-study pages
+        run: python tools/migrate_nested_unified.py
+      - name: Run permanent site QA
+        run: python tools/site_qa.py
+      - name: Commit nested migration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add answers art-study
+          git commit -m "Migrate nested pages to unified focusChrist experience"
+          git push
