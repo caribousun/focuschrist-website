@@ -139,6 +139,8 @@ if not errors:
         ('.fc-history-form-buttons', "Ask-style form actions"),
         ('.fc-history-hero--image-error', "hero failure fallback styling"),
         ('html[data-focuschrist-history-conversation-active]', "active conversation visual state"),
+        ('.fc-history-page #ask-history + .fc-section.fc-section--flush-top', "Saints narrative section buffer selector"),
+        ('padding-top: clamp(24px, 2.5vw, 34px);', "Saints narrative section top buffer"),
     ]:
         if needle not in css:
             errors.append(f"church-history.css: missing {label}")
