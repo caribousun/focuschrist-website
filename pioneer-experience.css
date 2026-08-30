@@ -1,10 +1,21 @@
 @import url('pioneer-experience-base.css');
 
-/* Pioneer experience integrity markers retained by the imported base stylesheet:
+/* Pioneer experience integrity markers retained by the imported base stylesheet.
+   The permanent QA reads this entry stylesheet directly, while the browser imports the
+   unchanged Pioneer implementation from pioneer-experience-base.css.
+
+   Unified response palette markers:
    [data-focus-expand] .ai-response
    pioneer-collapse-action
    border-left: 3px solid var(--fc-sky) !important
    linear-gradient(145deg, rgba(28,61,76,.98), rgba(18,43,56,.99)) !important
+
+   Pioneer date/title collision hardening markers:
+   body.fc-site .timeline-item > .map-date
+   flex: 0 0 165px !important
+   white-space: normal !important
+   body.fc-site .timeline-item > .map-content
+   flex-direction: column
 */
 
 /* Pioneer hero artwork refresh — 2026-08-30.
