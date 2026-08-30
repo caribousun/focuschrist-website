@@ -60,6 +60,17 @@ if not errors:
     if 'https://drive.google.com/uc?export=view&id=1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk' in history:
         errors.append("church-history.html: broken Drive uc hero delivery pattern remains")
 
+    source_lock_pos = history.find('fc-history-source-lock')
+    ask_pos = history.find('id="ask-history"')
+    saints_pos = history.find('Read <em>Saints</em> Across Four Eras')
+    official_index_pos = history.find('id="official-history-index"')
+    if min(source_lock_pos, ask_pos, saints_pos, official_index_pos) < 0 or not (
+        source_lock_pos < ask_pos < saints_pos < official_index_pos
+    ):
+        errors.append(
+            "church-history.html: page order must be intro/source standard -> Ask Church History -> Saints eras -> official source index"
+        )
+
     router = (ROOT / "study-source-router.js").read_text(encoding="utf-8")
     for needle, label in [
         ('sourcesForHistoryQuestion', "history-specific source function"),
