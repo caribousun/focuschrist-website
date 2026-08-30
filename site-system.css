@@ -1,24 +1,26 @@
 /* focusChrist unified site design system
    Shared visual primitives beneath site-header.css.
-   Public brand casing: focusChrist (lowercase f, uppercase C). */
+   Public brand casing: focusChrist (lowercase f, uppercase C).
+   Visual direction: warm umber / harvest gold / restrained firelight. */
 
 :root {
-    --fc-bg: #0d0a07;
-    --fc-bg-warm: #15100c;
-    --fc-surface: #1b1510;
-    --fc-surface-2: #241b13;
-    --fc-surface-soft: rgba(201, 169, 97, 0.055);
-    --fc-surface-hover: rgba(201, 169, 97, 0.095);
-    --fc-gold: #c9a961;
-    --fc-gold-light: #e0c982;
-    --fc-gold-deep: #9d7d3f;
-    --fc-cream: #f5e6d3;
-    --fc-text: #ddcfbd;
-    --fc-muted: #aa9b89;
-    --fc-faint: #817568;
-    --fc-line: rgba(201, 169, 97, 0.22);
-    --fc-line-strong: rgba(201, 169, 97, 0.42);
-    --fc-shadow: 0 22px 60px rgba(0, 0, 0, 0.36);
+    --fc-bg: #100a06;
+    --fc-bg-warm: #1a110b;
+    --fc-surface: #21160f;
+    --fc-surface-2: #2b1b10;
+    --fc-surface-soft: rgba(211, 170, 98, 0.065);
+    --fc-surface-hover: rgba(224, 176, 96, 0.105);
+    --fc-gold: #d3aa62;
+    --fc-gold-light: #f0cc82;
+    --fc-gold-deep: #a87539;
+    --fc-ember: #b56533;
+    --fc-cream: #f8ead7;
+    --fc-text: #e3d1bb;
+    --fc-muted: #baa18a;
+    --fc-faint: #8f7b69;
+    --fc-line: rgba(211, 170, 98, 0.24);
+    --fc-line-strong: rgba(224, 176, 96, 0.46);
+    --fc-shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
     --fc-radius-sm: 9px;
     --fc-radius: 14px;
     --fc-radius-lg: 20px;
@@ -36,7 +38,9 @@ body.fc-site {
     margin: 0;
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: var(--fc-bg);
+    background:
+        radial-gradient(circle at 50% 8%, rgba(181, 91, 45, 0.085), transparent 31rem),
+        linear-gradient(180deg, #110b07 0%, var(--fc-bg) 38%, #0d0805 100%);
     color: var(--fc-cream);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -49,6 +53,8 @@ body.fc-site *::after { box-sizing: border-box; }
 body.fc-site a { color: var(--fc-gold-light); }
 body.fc-site a:hover { color: var(--fc-cream); }
 body.fc-site img { max-width: 100%; }
+
+.fc-main-landmark { min-width: 0; }
 
 .fc-container,
 .fc-container--reading,
@@ -68,8 +74,12 @@ body.fc-site img { max-width: 100%; }
 .fc-section { padding-block: var(--fc-section-y); }
 .fc-section--compact { padding-block: clamp(34px, 5vw, 56px); }
 .fc-section--flush-top { padding-top: 0; }
-.fc-section--dark { background: #090705; }
-.fc-section--warm { background: var(--fc-bg-warm); }
+.fc-section--dark { background: #0b0704; }
+.fc-section--warm {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(181,91,45,.075), transparent 28rem),
+        linear-gradient(180deg, #1a110b 0%, #140d08 100%);
+}
 
 .fc-eyebrow {
     margin: 0 0 12px;
@@ -157,26 +167,29 @@ body.fc-site img { max-width: 100%; }
 
 .fc-visual-hero::after {
     background:
+        radial-gradient(circle at 50% 72%, rgba(181,91,45,.05), transparent 35%),
         linear-gradient(
             180deg,
-            rgba(7,5,3,0.34) 0%,
-            rgba(7,5,3,0.07) 28%,
+            rgba(7,5,3,0.32) 0%,
+            rgba(7,5,3,0.06) 28%,
             rgba(7,5,3,0.00) 66%,
-            rgba(21,16,12,0.12) 82%,
-            rgba(21,16,12,0.58) 94%,
+            rgba(26,17,11,0.14) 82%,
+            rgba(26,17,11,0.62) 94%,
             var(--fc-bg-warm) 100%
         );
 }
 
 .fc-visual-hero--christ::before { background-image: url('Jesus.png'); }
 .fc-visual-hero--history::after {
-    background: linear-gradient(180deg, rgba(7,5,3,0.30) 0%, rgba(7,5,3,0.04) 54%, rgba(21,16,12,0.18) 84%, var(--fc-bg-warm) 100%);
+    background: linear-gradient(180deg, rgba(7,5,3,0.28) 0%, rgba(7,5,3,0.04) 54%, rgba(26,17,11,0.20) 84%, var(--fc-bg-warm) 100%);
 }
 
 .fc-page-intro {
     margin-top: -1px;
     padding: clamp(24px, 3.2vw, 38px) 0 clamp(30px, 4vw, 46px);
-    background: var(--fc-bg-warm);
+    background:
+        radial-gradient(circle at 50% 0%, rgba(181,91,45,.055), transparent 24rem),
+        var(--fc-bg-warm);
     text-align: center;
 }
 
@@ -219,9 +232,11 @@ body.fc-site img { max-width: 100%; }
     padding: clamp(22px, 3vw, 30px);
     border: 1px solid var(--fc-line);
     border-radius: var(--fc-radius);
-    background: linear-gradient(145deg, rgba(35,27,20,0.72), rgba(22,17,13,0.76));
+    background:
+        radial-gradient(circle at 18% 0%, rgba(181,91,45,.055), transparent 14rem),
+        linear-gradient(145deg, rgba(40,27,18,0.82), rgba(24,16,11,0.86));
     color: var(--fc-text);
-    box-shadow: 0 10px 32px rgba(0,0,0,0.14);
+    box-shadow: 0 10px 32px rgba(0,0,0,0.16);
 }
 
 .fc-card--interactive {
@@ -233,8 +248,10 @@ body.fc-site img { max-width: 100%; }
 .fc-card--interactive:focus-visible {
     transform: translateY(-3px);
     border-color: var(--fc-line-strong);
-    background: linear-gradient(145deg, rgba(43,33,23,0.88), rgba(26,20,14,0.92));
-    box-shadow: 0 16px 40px rgba(0,0,0,0.24);
+    background:
+        radial-gradient(circle at 18% 0%, rgba(181,91,45,.09), transparent 14rem),
+        linear-gradient(145deg, rgba(49,33,21,0.92), rgba(29,19,12,0.94));
+    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
     outline: none;
 }
 
@@ -249,8 +266,8 @@ body.fc-site img { max-width: 100%; }
 .fc-notice {
     padding: 18px 20px;
     border-left: 3px solid var(--fc-gold);
-    background: rgba(201,169,97,0.07);
-    color: #cdbcaa;
+    background: rgba(211,170,98,0.075);
+    color: #cfbaa2;
     line-height: 1.68;
 }
 
@@ -284,29 +301,29 @@ body.fc-site img { max-width: 100%; }
 .fc-button:hover,
 .fc-button:focus-visible {
     transform: translateY(-1px);
-    background: rgba(201,169,97,0.11);
+    background: rgba(211,170,98,0.12);
     border-color: var(--fc-gold-light);
     color: var(--fc-cream) !important;
     outline: none;
 }
 .fc-button--primary {
     background: var(--fc-gold);
-    color: #171109 !important;
+    color: #1b1008 !important;
 }
 .fc-button--primary:hover,
 .fc-button--primary:focus-visible {
     background: var(--fc-gold-light);
-    color: #171109 !important;
+    color: #1b1008 !important;
 }
 
 .fc-chip {
     display: inline-flex;
     align-items: center;
     padding: 7px 11px;
-    border: 1px solid rgba(201,169,97,0.20);
+    border: 1px solid rgba(211,170,98,0.22);
     border-radius: 999px;
     background: rgba(255,255,255,0.025);
-    color: #bfaf9b;
+    color: #c5b09a;
     font-size: 0.79rem;
     line-height: 1.25;
 }
@@ -314,14 +331,14 @@ body.fc-site img { max-width: 100%; }
 .fc-divider {
     height: 1px;
     margin: clamp(28px, 5vw, 48px) 0;
-    background: linear-gradient(90deg, transparent, rgba(201,169,97,0.30), transparent);
+    background: linear-gradient(90deg, transparent, rgba(211,170,98,0.32), transparent);
 }
 
 .fc-quote {
     margin: 24px 0;
     padding: 4px 0 4px 20px;
     border-left: 3px solid var(--fc-gold);
-    color: #c8b9a6;
+    color: #cdb9a2;
     font-family: Georgia, 'Times New Roman', serif;
     font-style: italic;
     line-height: 1.8;
@@ -330,8 +347,8 @@ body.fc-site img { max-width: 100%; }
 .fc-footer,
 footer[data-focuschrist-footer="standard"] {
     padding: 38px 20px;
-    border-top: 1px solid rgba(201,169,97,0.18);
-    background: #080604;
+    border-top: 1px solid rgba(211,170,98,0.18);
+    background: #0b0704;
     color: var(--fc-faint);
     font-size: 0.82rem;
     line-height: 1.65;
@@ -344,6 +361,39 @@ footer[data-focuschrist-footer="standard"] p {
 }
 .fc-footer a,
 footer[data-focuschrist-footer="standard"] a { color: var(--fc-gold); }
+
+/* Shared study-journey controls. */
+#ask-question { scroll-margin-top: 105px; }
+.ask-conversation-reset {
+    min-height: 40px;
+    padding: 8px 15px;
+    border: 1px solid rgba(211,170,98,.46);
+    border-radius: 999px;
+    background: rgba(211,170,98,.06);
+    color: var(--fc-gold-light);
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+.ask-conversation-reset:hover,
+.ask-conversation-reset:focus-visible {
+    transform: translateY(-1px);
+    border-color: var(--fc-gold-light);
+    background: rgba(181,91,45,.13);
+    color: var(--fc-cream);
+    outline: none;
+}
+.ask-conversation-reset--fallback {
+    display: block;
+    margin: 0 auto 14px;
+}
+.ask-followup-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 9px;
+}
 
 .fc-visually-hidden {
     position: absolute !important;
@@ -378,6 +428,8 @@ footer[data-focuschrist-footer="standard"] a { color: var(--fc-gold); }
     .fc-grid--4 { grid-template-columns: 1fr; }
     .fc-actions { align-items: stretch; }
     .fc-button { width: 100%; }
+    .ask-followup-actions { justify-content: stretch; }
+    .ask-followup-actions .ask-conversation-reset { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {
