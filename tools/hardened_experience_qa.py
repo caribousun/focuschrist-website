@@ -24,6 +24,7 @@ def main() -> int:
     index = read("index.html", errors)
     common = read("site-common.js", errors)
     system = read("site-system.css", errors)
+    ask_css = read("ask-experience.css", errors)
     journey = read("study-journey.js", errors)
     sources = read("study-source-router.js", errors)
     grounded = read("study-intelligence-v3.js", errors)
@@ -60,6 +61,15 @@ def main() -> int:
         "#ask-question",
         ".ask-conversation-reset",
         ".ask-followup-actions",
+    ), errors)
+
+    require(ask_css, "ask-experience.css", (
+        "Harvest Sky hardening",
+        "body.fc-site .ask-followup-shell",
+        "border-color: rgba(134,175,200,.38) !important",
+        "linear-gradient(145deg, rgba(30,63,75,.98), rgba(17,39,49,.99)) !important",
+        "body.fc-site .ask-followup-input",
+        "body.fc-site .ask-followup-button",
     ), errors)
 
     require(journey, "study-journey.js", (
@@ -147,6 +157,7 @@ def main() -> int:
     ), errors)
 
     forbidden = {
+        "ask-experience.css": ("rgba(183,104,72,0.09)",),
         "study-source-router.js": ("innerHTML", "javascript:"),
         "art-study-router.js": ("youtube.com/watch?v=", "youtu.be/"),
         "watch-study-enrichment.js": ("youtube.com/watch?v=", "youtu.be/"),
@@ -154,6 +165,7 @@ def main() -> int:
         "study-intelligence-v3.js": ("May the love of Jesus Christ bring you peace and clarity", "temperature: 0.7"),
     }
     texts = {
+        "ask-experience.css": ask_css,
         "study-source-router.js": sources,
         "art-study-router.js": art_router,
         "watch-study-enrichment.js": watch_enrichment,
@@ -175,7 +187,7 @@ def main() -> int:
         return 1
 
     print("focusChrist HARDENED EXPERIENCE QA PASSED")
-    print("Verified direct Home-to-Ask arrival, dynamic controller initialization, Ask reset controls, Harvest Sky palette, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
+    print("Verified direct Home-to-Ask arrival, dynamic controller initialization, Ask reset controls, complete Harvest Sky Ask follow-up styling, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
     return 0
 
 
