@@ -217,6 +217,64 @@
         });
     }
 
+    function ensureMainLandmark() {
+        let main = document.querySelector('main, [role="main"]');
+        const nav = document.querySelector('.nav[data-focuschrist-header="standard"]');
+        const footer = document.querySelector('.fc-footer[data-focuschrist-footer="standard"]');
+
+        if (!main && nav && footer && nav.parentNode === footer.parentNode) {
+            main = document.createElement('main');
+            main.className = 'fc-main-landmark';
+            main.setAttribute('data-focuschrist-main', 'generated');
+
+            let node = nav.nextSibling;
+            while (node && node !== footer) {
+                const next = node.nextSibling;
+                main.appendChild(node);
+                node = next;
+            }
+            footer.parentNode.insertBefore(main, footer);
+        }
+
+        if (!main) return;
+        if (!main.id) main.id = 'main-content';
+        if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
+
+        if (!document.querySelector('[data-focuschrist-skip-link]')) {
+            const skip = document.createElement('a');
+            skip.href = '#' + main.id;
+            skip.className = 'fc-skip-link';
+            skip.setAttribute('data-focuschrist-skip-link', 'true');
+            skip.textContent = 'Skip to main content';
+            skip.addEventListener('click', function (event) {
+                event.preventDefault();
+                main.focus({ preventScroll: true });
+                main.scrollIntoView({ behavior: 'auto', block: 'start' });
+                if (window.history && window.history.replaceState) {
+                    window.history.replaceState(null, '', '#' + main.id);
+                }
+            });
+            document.body.insertBefore(skip, document.body.firstChild);
+        }
+    }
+
+    function normalizeFooterIdentity() {
+        const footer = document.querySelector('.fc-footer[data-focuschrist-footer="standard"]');
+        if (!footer) return;
+
+        const standardText = '© ' + new Date().getFullYear() + ' focusChrist. All are welcome here.';
+        let identity = Array.from(footer.children).find(function (child) {
+            return child.tagName === 'P' && !child.hasAttribute('data-focuschrist-independence');
+        });
+
+        if (!identity) {
+            identity = document.createElement('p');
+            footer.insertBefore(identity, footer.firstChild);
+        }
+        identity.textContent = standardText;
+        identity.setAttribute('data-focuschrist-footer-identity', 'true');
+    }
+
     function appendScript(src, marker, onload) {
         const script = document.createElement('script');
         script.src = src;
@@ -241,6 +299,8 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        ensureMainLandmark();
+        normalizeFooterIdentity();
         ensurePrimaryStudyNavigation();
         initOfficialResourceMenu();
         initNavigation();
