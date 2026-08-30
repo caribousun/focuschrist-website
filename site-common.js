@@ -1,6 +1,6 @@
 /* focusChrist shared interaction controller.
- * Keeps common navigation accessibility, verified resource routing, and
- * expandable-content behavior consistent across pages without a framework.
+ * Keeps common navigation accessibility, verified resource routing, study paths,
+ * and expandable-content behavior consistent across pages without a framework.
  */
 (function () {
     'use strict';
@@ -46,6 +46,42 @@
         const path = window.location.pathname;
         if (path.includes('/answers/') || path.includes('/art-study/')) return '../watch.html';
         return 'watch.html';
+    }
+
+    function onWatchPage() {
+        return window.location.pathname.toLowerCase().endsWith('/watch.html');
+    }
+
+    function createWatchLink(text) {
+        const link = document.createElement('a');
+        link.href = relativeWatchHref();
+        link.textContent = text;
+        link.setAttribute('data-focuschrist-primary-watch', 'true');
+        if (onWatchPage()) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+        return link;
+    }
+
+    function ensurePrimaryStudyNavigation() {
+        const desktop = document.querySelector('.nav[data-focuschrist-header="standard"] .nav-links');
+        if (desktop && !desktop.querySelector('[data-focuschrist-primary-watch]')) {
+            const watch = createWatchLink('WATCH');
+            const about = Array.from(desktop.querySelectorAll('a')).find(function (link) {
+                return link.textContent.trim().toUpperCase() === 'ABOUT';
+            });
+            if (about) desktop.insertBefore(watch, about);
+            else desktop.appendChild(watch);
+        }
+
+        const menu = document.getElementById('hamburgerMenu');
+        if (menu && !menu.querySelector('[data-focuschrist-primary-watch]')) {
+            const watch = createWatchLink('WATCH & STUDY');
+            const divider = menu.querySelector('hr');
+            if (divider) menu.insertBefore(watch, divider);
+            else menu.appendChild(watch);
+        }
     }
 
     function initOfficialResourceMenu() {
@@ -198,9 +234,6 @@
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence]')) return;
 
-        // Versioned URLs prevent an older cached policy from surviving a
-        // production intelligence update. Load the foundation first, then the
-        // adaptive policy overlay so v2 owns the final Ask/AI functions.
         appendScript('study-intelligence.js?v=20260830-2', 'data-focuschrist-study-intelligence', function () {
             if (document.querySelector('script[data-focuschrist-study-intelligence-v2]')) return;
             appendScript('study-intelligence-v2.js?v=20260830-2', 'data-focuschrist-study-intelligence-v2');
@@ -208,6 +241,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        ensurePrimaryStudyNavigation();
         initOfficialResourceMenu();
         initNavigation();
         initPioneerDisclosures();
