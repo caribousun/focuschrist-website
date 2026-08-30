@@ -21,6 +21,7 @@ def require(text: str, name: str, markers: tuple[str, ...], errors: list[str]) -
 def main() -> int:
     errors: list[str] = []
 
+    index = read("index.html", errors)
     common = read("site-common.js", errors)
     system = read("site-system.css", errors)
     journey = read("study-journey.js", errors)
@@ -28,6 +29,12 @@ def main() -> int:
     grounded = read("study-intelligence-v3.js", errors)
     art_router = read("art-study-router.js", errors)
     watch_enrichment = read("watch-study-enrichment.js", errors)
+
+    require(index, "index.html", (
+        'href="ask.html#ask-question"',
+        'Ask a Question',
+        'Ask. Seek. Study.',
+    ), errors)
 
     require(common, "site-common.js", (
         "BYU_RESOURCE_LINKS",
@@ -37,7 +44,9 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260829-1",
+        "study-journey.js?v=20260830-2",
+        "study-intelligence-v3.js?v=20260830-3",
+        "data-focuschrist-study-intelligence-v3",
         "ensureMainLandmark",
         "Skip to main content",
         "normalizeFooterIdentity",
@@ -60,12 +69,16 @@ def main() -> int:
         "data-focuschrist-conversation-reset",
         "rewriteContentAskLinks",
         "headerOffset",
+        "requestAnimationFrame",
+        "window.addEventListener('load'",
         "loadVerifiedSourceRouter",
-        "study-source-router.js?v=20260829-1",
+        "study-source-router.js?v=20260830-2",
         "loadArtStudyRouter",
-        "art-study-router.js?v=20260829-1",
+        "art-study-router.js?v=20260830-2",
         "loadWatchStudyEnrichment",
-        "watch-study-enrichment.js?v=20260829-1",
+        "watch-study-enrichment.js?v=20260830-2",
+        "document.readyState === 'loading'",
+        "data-focuschrist-study-journey-ready",
     ), errors)
 
     require(sources, "study-source-router.js", (
@@ -81,8 +94,12 @@ def main() -> int:
         "data-focuschrist-source-paths",
         "Official Church search",
         "BYU educational",
-        "loadGroundedIntelligence",
         "study-intelligence-v3.js?v=20260830-3",
+        "document.readyState === 'loading'",
+        "data-focuschrist-source-router-ready",
+        "oliver cowdery",
+        "premortality",
+        "melchizedek",
     ), errors)
 
     require(grounded, "study-intelligence-v3.js", (
@@ -94,7 +111,7 @@ def main() -> int:
         "non-breaking spaces",
         "normalizeDisplayText",
         "convertMarkdownTables",
-        "Clear & Start Over" if False else "focusChristStudyAskV3",
+        "focusChristStudyAskV3",
         "temperature: 0.25",
         "data-focuschrist-study-intelligence-version",
     ), errors)
@@ -110,6 +127,8 @@ def main() -> int:
         "/search?query=",
         "data-focuschrist-art-study-button",
         "data-focuschrist-art-study-drawer",
+        "document.readyState === 'loading'",
+        "data-focuschrist-art-study-router",
     ), errors)
 
     require(watch_enrichment, "watch-study-enrichment.js", (
@@ -122,6 +141,8 @@ def main() -> int:
         "Suffer the Little Children",
         "Be Still",
         "/search?query=",
+        "document.readyState === 'loading'",
+        "data-focuschrist-watch-enrichment-ready",
     ), errors)
 
     forbidden = {
@@ -143,6 +164,9 @@ def main() -> int:
             if marker in texts[name]:
                 errors.append(f"{name} contains forbidden hardened marker: {marker}")
 
+    if index.count('href="ask.html#ask-question"') < 2:
+        errors.append("index.html must deep-link both Home Ask pathways to #ask-question")
+
     if errors:
         print("focusChrist HARDENED EXPERIENCE QA FAILED", file=sys.stderr)
         for error in errors:
@@ -150,7 +174,7 @@ def main() -> int:
         return 1
 
     print("focusChrist HARDENED EXPERIENCE QA PASSED")
-    print("Verified Ask micro-friction controls, warm palette, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch YouTube/media enrichment.")
+    print("Verified direct Home-to-Ask arrival, dynamic controller initialization, Ask reset controls, warm palette, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
     return 0
 
 
