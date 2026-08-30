@@ -1,4 +1,6 @@
-/* focusChrist Pioneers — historical personality within the shared design system. */
+/* focusChrist Pioneers — historical personality within the shared Harvest Sky system.
+   Prairie blue, wheat gold, sage, parchment, and limited earth tones preserve history
+   without returning the page to a sepia/brown atmosphere. */
 
 body.fc-site .fc-visual-hero--history {
     display: block;
@@ -8,12 +10,14 @@ body.fc-site .fc-visual-hero--history {
 
 body.fc-site .fc-visual-hero--history > img {
     object-position: center 45%;
-    filter: saturate(.86) sepia(.06) contrast(.98);
+    filter: saturate(.94) sepia(.025) contrast(.99);
 }
 
 body.fc-site .qa-section {
     padding: clamp(30px, 5vw, 54px) 18px clamp(44px, 6vw, 68px);
-    background: var(--fc-bg);
+    background:
+        radial-gradient(circle at 10% 12%, rgba(113,128,92,.08), transparent 24rem),
+        linear-gradient(180deg, #17323f, var(--fc-bg));
 }
 
 body.fc-site .qa-container {
@@ -22,7 +26,9 @@ body.fc-site .qa-container {
     padding: clamp(22px, 3vw, 32px);
     border: 1px solid var(--fc-line);
     border-radius: var(--fc-radius-lg);
-    background: linear-gradient(145deg, rgba(32,25,18,.96), rgba(18,14,10,.98));
+    background:
+        radial-gradient(circle at 100% 0%, rgba(240,195,106,.07), transparent 19rem),
+        linear-gradient(145deg, rgba(36,67,74,.97), rgba(24,49,59,.98));
     box-shadow: var(--fc-shadow);
 }
 
@@ -33,8 +39,10 @@ body.fc-site .qa-container .chat-box {
     padding: 22px;
     border: 1px solid var(--fc-line);
     border-radius: var(--fc-radius);
-    background: linear-gradient(180deg, rgba(24,19,14,.98), rgba(13,10,8,.99));
-    scrollbar-color: rgba(201,169,97,.35) transparent;
+    background:
+        radial-gradient(circle at 0% 100%, rgba(113,128,92,.055), transparent 18rem),
+        linear-gradient(180deg, rgba(31,61,70,.98), rgba(18,40,49,.99));
+    scrollbar-color: rgba(134,175,200,.40) transparent;
 }
 
 body.fc-site .qa-container .welcome {
@@ -46,7 +54,7 @@ body.fc-site .qa-container .welcome {
 
 body.fc-site .qa-container .welcome h3 {
     margin: 0 0 10px;
-    color: var(--fc-gold);
+    color: var(--fc-gold-light);
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.55rem;
     font-weight: 400;
@@ -60,7 +68,7 @@ body.fc-site .qa-container .welcome p {
 
 body.fc-site .pioneer-composer-label {
     margin: 18px 0 9px;
-    color: var(--fc-gold);
+    color: var(--fc-sage-light);
     font-size: .74rem;
     font-weight: 700;
     letter-spacing: 2.2px;
@@ -79,18 +87,18 @@ body.fc-site .qa-container .input-area input {
     min-width: 0;
     width: 100%;
     padding: 16px 20px;
-    border: 1px solid rgba(201,169,97,.50);
+    border: 1px solid rgba(134,175,200,.52);
     border-radius: 999px;
-    background: rgba(255,255,255,.04);
+    background: rgba(255,255,255,.05);
     color: var(--fc-cream);
     font: inherit;
 }
 
-body.fc-site .qa-container .input-area input::placeholder { color: #8d8174; }
+body.fc-site .qa-container .input-area input::placeholder { color: #a0afae; }
 body.fc-site .qa-container .input-area input:focus {
     outline: none;
     border-color: var(--fc-gold-light);
-    box-shadow: 0 0 0 3px rgba(201,169,97,.10);
+    box-shadow: 0 0 0 3px rgba(240,195,106,.11);
 }
 
 body.fc-site .qa-container .input-area button {
@@ -99,14 +107,15 @@ body.fc-site .qa-container .input-area button {
     border: 1px solid var(--fc-gold) !important;
     border-radius: 999px !important;
     background: var(--fc-gold) !important;
-    color: #171109 !important;
+    color: #1d2a2e !important;
     font-weight: 700 !important;
     cursor: pointer;
 }
 
 body.fc-site .qa-container .input-area #clearBtn {
+    border-color: var(--fc-sky) !important;
     background: transparent !important;
-    color: var(--fc-gold) !important;
+    color: #dcebf2 !important;
 }
 
 body.fc-site .qa-container .input-area button:hover,
@@ -117,8 +126,8 @@ body.fc-site .qa-container .input-area button:focus-visible {
 
 body.fc-site .qa-container .input-area #clearBtn:hover,
 body.fc-site .qa-container .input-area #clearBtn:focus-visible {
-    background: rgba(201,169,97,.10) !important;
-    color: var(--fc-gold-light) !important;
+    background: rgba(134,175,200,.12) !important;
+    color: var(--fc-cream) !important;
 }
 
 body.fc-site .qa-container .scripture-categories {
@@ -129,7 +138,7 @@ body.fc-site .qa-container .scripture-categories {
 
 body.fc-site .qa-container .category-title {
     margin-bottom: 10px;
-    color: var(--fc-gold);
+    color: var(--fc-sage-light);
     font-size: .75rem;
     letter-spacing: 2.4px;
 }
@@ -140,10 +149,10 @@ body.fc-site .qa-container .category-btn {
     display: inline-flex;
     margin: 4px 3px;
     padding: 8px 11px;
-    border: 1px solid rgba(201,169,97,.20);
+    border: 1px solid rgba(158,170,131,.28);
     border-radius: 999px;
-    background: rgba(255,255,255,.025);
-    color: #c1b09b;
+    background: rgba(113,128,92,.055);
+    color: #d0d8c5;
     text-decoration: none;
     font-size: .8rem;
     transition: border-color .2s ease, background .2s ease, color .2s ease;
@@ -151,9 +160,9 @@ body.fc-site .qa-container .category-btn {
 
 body.fc-site .qa-container .category-btn:hover,
 body.fc-site .qa-container .category-btn:focus-visible {
-    border-color: var(--fc-gold);
-    background: rgba(201,169,97,.08);
-    color: var(--fc-gold-light);
+    border-color: var(--fc-gold-light);
+    background: rgba(240,195,106,.08);
+    color: var(--fc-cream);
     outline: none;
 }
 
@@ -165,15 +174,15 @@ body.fc-site .qa-container .message {
 
 body.fc-site .qa-container .user-message {
     margin-left: clamp(12px,7vw,72px);
-    border: 1px solid rgba(201,169,97,.34);
-    background: linear-gradient(135deg, rgba(201,169,97,.16), rgba(201,169,97,.08));
+    border: 1px solid rgba(240,195,106,.36);
+    background: linear-gradient(135deg, rgba(224,170,62,.17), rgba(183,104,72,.08));
     color: var(--fc-cream);
 }
 
 body.fc-site .qa-container .bot-message {
     margin-right: clamp(12px,7vw,72px);
-    border: 1px solid rgba(255,255,255,.07);
-    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(134,175,200,.14);
+    background: linear-gradient(135deg, rgba(134,175,200,.09), rgba(255,255,255,.03));
     color: var(--fc-text);
 }
 
@@ -187,11 +196,11 @@ body.fc-site .qa-container .message p:last-child { margin-bottom: 0; }
 body.fc-site .qa-container .sources {
     margin-top: 16px;
     padding-top: 14px;
-    border-top: 1px solid var(--fc-line);
+    border-top: 1px solid rgba(158,170,131,.24);
 }
 body.fc-site .qa-container .sources-title {
     margin-bottom: 8px;
-    color: var(--fc-gold);
+    color: var(--fc-sage-light);
     font-size: .74rem;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -201,9 +210,9 @@ body.fc-site .qa-container .source-link {
     display: inline-flex;
     margin: 4px 5px 4px 0;
     padding: 7px 10px;
-    border: 1px solid rgba(201,169,97,.22);
+    border: 1px solid rgba(158,170,131,.28);
     border-radius: 999px;
-    color: #c9b588;
+    color: #d6dfc8;
     font-size: .78rem;
     text-decoration: none;
 }
@@ -212,7 +221,7 @@ body.fc-site .qa-container .loading {
     margin: 12px 0;
     padding: 14px 16px;
     border-left: 2px solid var(--fc-gold);
-    background: rgba(201,169,97,.05);
+    background: linear-gradient(90deg, rgba(224,170,62,.08), rgba(134,175,200,.04));
     color: var(--fc-muted);
 }
 
@@ -223,11 +232,11 @@ body.fc-site .section {
     padding: var(--fc-section-y) 0;
 }
 
-body.fc-site .section + .section { border-top: 1px solid rgba(201,169,97,.10); }
+body.fc-site .section + .section { border-top: 1px solid rgba(134,175,200,.10); }
 
 body.fc-site .section-title {
     margin: 0 0 28px;
-    color: var(--fc-gold);
+    color: var(--fc-gold-light);
     font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(1.75rem,3.6vw,2.4rem);
     font-weight: 400;
@@ -243,9 +252,11 @@ body.fc-site .trail-point,
 body.fc-site .martin-point {
     margin-bottom: 11px;
     padding: 17px 18px;
-    border: 1px solid rgba(201,169,97,.14);
+    border: 1px solid rgba(134,175,200,.18);
     border-radius: var(--fc-radius);
-    background: linear-gradient(145deg, rgba(34,27,20,.74), rgba(19,15,11,.80));
+    background:
+        radial-gradient(circle at 100% 0%, rgba(224,170,62,.04), transparent 12rem),
+        linear-gradient(145deg, rgba(41,70,74,.78), rgba(25,50,58,.84));
     transition: transform .2s ease, border-color .2s ease, background .2s ease;
 }
 
@@ -254,8 +265,9 @@ body.fc-site .map-point:hover,
 body.fc-site .trail-point:hover,
 body.fc-site .martin-point:hover {
     transform: translateX(3px);
-    border-color: rgba(201,169,97,.38);
-    background: linear-gradient(145deg, rgba(42,32,23,.82), rgba(23,18,13,.88));
+    border-color: rgba(240,195,106,.42);
+    background:
+        linear-gradient(145deg, rgba(48,80,82,.88), rgba(30,58,65,.92));
 }
 
 body.fc-site .timeline-item.expanded,
@@ -263,7 +275,8 @@ body.fc-site .map-point.expanded,
 body.fc-site .trail-point.expanded,
 body.fc-site .martin-point.expanded {
     border-left: 3px solid var(--fc-gold);
-    background: var(--fc-surface);
+    background:
+        linear-gradient(145deg, rgba(49,74,69,.94), rgba(28,54,61,.96));
 }
 
 body.fc-site .timeline-title,
@@ -272,14 +285,16 @@ body.fc-site .map-content h3 { color: var(--fc-cream); }
 body.fc-site .timeline-desc,
 body.fc-site .map-content p { color: var(--fc-muted); }
 body.fc-site .timeline-date,
-body.fc-site .map-date { color: var(--fc-gold); }
+body.fc-site .map-date { color: var(--fc-gold-light); }
 
 body.fc-site .map-container,
 body.fc-site .journal-card,
 body.fc-site .timeline-story {
     border: 1px solid var(--fc-line);
     border-radius: var(--fc-radius);
-    background: linear-gradient(145deg, rgba(31,24,17,.72), rgba(18,14,10,.80));
+    background:
+        radial-gradient(circle at 0% 100%, rgba(113,128,92,.06), transparent 15rem),
+        linear-gradient(145deg, rgba(35,65,72,.80), rgba(22,46,55,.88));
 }
 
 body.fc-site .map-container {
@@ -301,7 +316,7 @@ body.fc-site .cta-button {
     border: 1px solid var(--fc-gold);
     border-radius: 999px;
     background: var(--fc-gold);
-    color: #171109;
+    color: #1d2a2e;
     text-decoration: none;
     font-size: .9rem;
     font-weight: 700;
@@ -323,10 +338,10 @@ body.fc-site .cta-button {
 body.fc-site .pioneer-extra-action {
     margin-top: 14px;
     padding: 9px 16px;
-    border: 1px solid var(--fc-gold);
+    border: 1px solid var(--fc-sky);
     border-radius: 999px;
     background: transparent;
-    color: var(--fc-gold-light);
+    color: #dcebf2;
     font: inherit;
     font-size: .82rem;
     font-weight: 700;
@@ -334,6 +349,8 @@ body.fc-site .pioneer-extra-action {
 }
 body.fc-site .pioneer-extra-action:hover,
 body.fc-site .pioneer-extra-action:focus-visible {
-    background: rgba(201,169,97,.10);
+    border-color: var(--fc-gold-light);
+    background: rgba(240,195,106,.10);
+    color: var(--fc-cream);
     outline: none;
 }
