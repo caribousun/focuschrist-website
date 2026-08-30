@@ -123,8 +123,12 @@
         }
         if (menu && !menu.querySelector('[data-focuschrist-primary-watch]')) {
             const watch = createWatchLink('WATCH & STUDY');
+            const about = Array.from(menu.querySelectorAll('a')).find(function (link) {
+                return link.textContent.trim().toUpperCase() === 'ABOUT';
+            });
             const divider = menu.querySelector('hr');
-            if (divider) menu.insertBefore(watch, divider);
+            if (about) menu.insertBefore(watch, about);
+            else if (divider) menu.insertBefore(watch, divider);
             else menu.appendChild(watch);
         }
     }
