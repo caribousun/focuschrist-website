@@ -468,3 +468,7 @@ body { background: var(--ask-bg); }
     .ask-main { width: min(100% - 20px, 1050px); }
     .ask-continue-grid { grid-template-columns: 1fr; }
 }
+
+
+/* Unified site migration: page introduction now sits below an unobstructed hero image. */
+body.fc-site .ask-main { margin-top: 0; padding-top: 22px; }
