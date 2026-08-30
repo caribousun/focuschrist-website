@@ -1,0 +1,67 @@
+name: Apply Approved Art Hero
+
+on:
+  push:
+    paths:
+      - '.github/workflows/art-hero-apply.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Verify expected production baseline
+        shell: bash
+        run: |
+          test "$(git rev-parse HEAD^)" = "38e911b238d151d146bf0cb19712cb30d965c632"
+
+      - name: Apply approved Art hero only
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          page = Path('art.html')
+          text = page.read_text(encoding='utf-8')
+
+          old_hero = '<div class="fc-visual-hero fc-visual-hero--christ" aria-label="Jesus Christ"></div>'
+          new_hero = '<div class="fc-visual-hero fc-visual-hero--christ fc-visual-hero--art" aria-label="Inspirational art studio overlooking a temple and mountain valley"></div>'
+          old_css = '<link rel="stylesheet" href="art-experience.css">'
+          new_css = '<link rel="stylesheet" href="art-experience.css">\n    <link rel="stylesheet" href="art-hero.css?v=20260830-1">'
+
+          if text.count(old_hero) != 1:
+              raise SystemExit(f'Expected exactly one active Art hero marker, found {text.count(old_hero)}')
+          if text.count(old_css) != 1:
+              raise SystemExit(f'Expected exactly one art-experience stylesheet link, found {text.count(old_css)}')
+
+          text = text.replace(old_hero, new_hero, 1)
+          text = text.replace(old_css, new_css, 1)
+          page.write_text(text, encoding='utf-8')
+
+          Path('art-hero.css').write_text('''/* Owner-approved Art page hero — 2026-08-30.\n   Page-specific image only; shared focusChrist hero geometry remains authoritative. */\n.fc-visual-hero--art::before {\n    background-image: url('https://lh3.googleusercontent.com/d/1A-QViKaQ80YHgJtaeLZ_6X2yMDgx32JH') !important;\n    background-position: center 50% !important;\n}\n\n@media (max-width: 720px) {\n    .fc-visual-hero--art::before {\n        background-position: 46% 50% !important;\n    }\n}\n''', encoding='utf-8')
+          PY
+
+      - name: Verify narrow Art-only change
+        shell: bash
+        run: |
+          grep -F 'fc-visual-hero--christ fc-visual-hero--art' art.html
+          grep -F 'art-hero.css?v=20260830-1' art.html
+          grep -F '1A-QViKaQ80YHgJtaeLZ_6X2yMDgx32JH' art-hero.css
+          python tools/site_qa.py
+          python tools/unified_experience_qa.py
+
+      - name: Commit Art hero implementation
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add art.html art-hero.css
+          git commit -m 'Apply approved Art hero image'
+          git push origin HEAD:main
