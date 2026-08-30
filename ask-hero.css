@@ -1,13 +1,13 @@
 /* focusChrist Ask page approved image-first hero.
    Shared site hero geometry is preserved; only artwork and responsive crop are page-specific.
-   Production cache publication marker: 20260830-3. */
+   Final approved Ask teaching scene: 2026-08-30. */
 .fc-visual-hero--ask::before {
-    background-image: url('https://lh3.googleusercontent.com/d/1lCHOUM9ez9XDX9K2DVWk2f47fXGgAyG7');
-    background-position: center 30%;
+    background-image: url('https://lh3.googleusercontent.com/d/16irRQ74J1CRO2YEYjOsUpGy1h-3R1D6r?v=20260830-final');
+    background-position: center top;
 }
 
 @media (max-width: 720px) {
     .fc-visual-hero--ask::before {
-        background-position: 26% 30%;
+        background-position: center top;
     }
 }
