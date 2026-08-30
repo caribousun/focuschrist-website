@@ -42,6 +42,9 @@ jobs:
       - name: Validate Study Intelligence JavaScript
         run: node --check study-intelligence.js
 
+      - name: Validate adaptive Study Intelligence JavaScript
+        run: node --check study-intelligence-v2.js
+
       - name: Validate Ask experience JavaScript
         run: node --check ask-experience.js
 
