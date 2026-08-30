@@ -1,0 +1,58 @@
+name: Answers Hero Update
+
+on:
+  push:
+    paths:
+      - '.github/workflows/answers-hero-update.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Bind approved Answers hero
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          page = Path('answers.html')
+          text = page.read_text(encoding='utf-8')
+
+          old_head = '<link rel="stylesheet" href="site-header.css"><link rel="stylesheet" href="site-system.css"><script src="site-common.js" defer></script>'
+          new_head = '<link rel="stylesheet" href="site-header.css"><link rel="stylesheet" href="site-system.css"><link rel="stylesheet" href="answers-hero.css?v=20260830-1"><script src="site-common.js" defer></script>'
+          old_hero = '<div class="fc-visual-hero fc-visual-hero--christ" aria-label="Jesus Christ"></div>'
+          new_hero = '<div class="fc-visual-hero fc-visual-hero--answers" aria-label="Open scriptures and study materials overlooking a peaceful sunset landscape"></div>'
+
+          if text.count(old_head) != 1:
+              raise SystemExit(f'Expected exactly one stylesheet insertion target, found {text.count(old_head)}')
+          if text.count(old_hero) != 1:
+              raise SystemExit(f'Expected exactly one Answers hero target, found {text.count(old_hero)}')
+
+          text = text.replace(old_head, new_head, 1).replace(old_hero, new_hero, 1)
+          page.write_text(text, encoding='utf-8', newline='')
+          PY
+
+      - name: Verify narrow change
+        shell: bash
+        run: |
+          grep -F 'answers-hero.css?v=20260830-1' answers.html
+          grep -F 'fc-visual-hero--answers' answers.html
+          grep -F 'Open scriptures and study materials overlooking a peaceful sunset landscape' answers.html
+          git diff --check
+
+      - name: Commit Answers hero binding
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add answers.html
+          git commit -m 'Use approved Answers hero image'
+          git push origin HEAD:main
