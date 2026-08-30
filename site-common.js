@@ -181,9 +181,24 @@
         });
     }
 
+    function loadStudyIntelligence() {
+        const path = window.location.pathname.toLowerCase();
+        const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
+        if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence]')) return;
+        const script = document.createElement('script');
+        script.src = 'study-intelligence.js';
+        script.defer = true;
+        script.dataset.focuschristStudyIntelligence = 'true';
+        script.addEventListener('error', function () {
+            console.error('focusChrist Study Intelligence failed to load; base conversation remains available.');
+        });
+        document.body.appendChild(script);
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
         initOfficialResourceMenu();
         initNavigation();
         initPioneerDisclosures();
+        window.setTimeout(loadStudyIntelligence, 0);
     });
 })();
