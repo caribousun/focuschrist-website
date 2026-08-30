@@ -123,11 +123,33 @@ def main() -> int:
             "window.sendMessage", "window.clearChat", "Continue the conversation",
             "Ask a follow-up question", "textContent", "positionAnswer",
             "conversationHistory", "pioneerComposerLabel",
+            "PIONEER_PAGE_CONTEXT", "Exodus from Nauvoo", "EXPLICIT_NON_PIONEER_RE",
+            "window.focusChristPioneerAskAI", "window.expandTimelineItem",
+            "window.expandTrailPoint", "window.askTopic", "temperature: 0.2",
         ):
             if marker not in js:
-                fail(errors, f"pioneer-experience.js missing conversation-parity marker: {marker}")
+                fail(errors, f"pioneer-experience.js missing conversation/context hardening marker: {marker}")
         if "message.innerHTML" in js:
             fail(errors, "pioneer-experience.js unsafe message.innerHTML renderer detected")
+        if "findAnswer(question)" in js:
+            fail(errors, "pioneer-experience.js must not give the legacy general Q&A database first priority")
+        if "It does NOT mean the biblical Book of Exodus" not in js:
+            fail(errors, "pioneer-experience.js missing explicit Nauvoo Exodus disambiguation")
+
+    pioneer_css = ROOT / "pioneer-experience.css"
+    if not pioneer_css.exists() or pioneer_css.stat().st_size == 0:
+        fail(errors, "pioneer-experience.css missing or empty")
+    else:
+        css = pioneer_css.read_text(encoding="utf-8")
+        for marker in (
+            "[data-focus-expand] .ai-response", "pioneer-collapse-action",
+            "border-left: 3px solid var(--fc-sky) !important",
+            "linear-gradient(145deg, rgba(28,61,76,.98), rgba(18,43,56,.99)) !important",
+        ):
+            if marker not in css:
+                fail(errors, f"pioneer-experience.css missing Pioneer response palette marker: {marker}")
+        if "linear-gradient(145deg, rgba(49,74,69,.94), rgba(28,54,61,.96))" in css:
+            fail(errors, "pioneer-experience.css contains the superseded olive/brown expanded-response surface")
 
     art = (ROOT / "art.html").read_text(encoding="utf-8")
     if "art-experience.css" not in art:
@@ -148,7 +170,7 @@ def main() -> int:
 
     print("focusChrist UNIFIED EXPERIENCE QA PASSED")
     print(f"Public pages checked: {len(PUBLIC_PAGES)}")
-    print("Brand casing, shared design system, image-first heroes, unified footers, Art wiring, and Pioneer conversation parity verified.")
+    print("Brand casing, shared design system, image-first heroes, unified footers, Art wiring, and hardened Pioneer conversation context/palette verified.")
     return 0
 
 

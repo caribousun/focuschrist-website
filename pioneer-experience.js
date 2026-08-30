@@ -1,8 +1,25 @@
 /* focusChrist Pioneer conversation experience.
-   Uses the existing Pioneer knowledge functions while providing visible
-   contextual follow-up behavior and safe message rendering. */
+ * Page-specific historical context hardening for Journey, Trail, Pioneer Topics,
+ * Tell My Story, and free-form pioneer questions.
+ */
 (function () {
     'use strict';
+
+    const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
+    const MODEL = 'openai/gpt-oss-20b';
+    const PIONEER_POLICY_VERSION = '2026-08-30.1';
+
+    const PIONEER_PAGE_CONTEXT = [
+        'PIONEER PAGE HARD CONTEXT:',
+        '- This page is about 19th-century Latter-day Saint pioneer and related Church history.',
+        '- UI-generated prompts from The Journey, The Trail, Willie & Martin Companies, and Pioneer Topics MUST be interpreted in Latter-day Saint pioneer context.',
+        '- Ambiguous historical words on this page default to pioneer meaning unless the visitor explicitly asks for a different meaning.',
+        '- In particular, "Exodus from Nauvoo" means the 1846 departure and westward migration of Latter-day Saints from Nauvoo, Illinois, across Iowa toward the Missouri River/Winter Quarters. It does NOT mean the biblical Book of Exodus.',
+        '- Official Church history records that the first wagons left Nauvoo on February 4, 1846; thousands departed between February and September 1846; the difficult Iowa crossing led to the establishment of Winter Quarters; and the 1847 pioneer company later continued west toward the Salt Lake Valley.',
+        '- Terms such as Nauvoo, Winter Quarters, Mormon Battalion, Mormon Trail, handcart company, Willie Company, Martin Company, rescue, Sweetwater, Martins Cove, Brigham Young, Salt Lake Valley, and pioneer exodus belong to this historical frame unless the visitor clearly says otherwise.'
+    ].join('\n');
+
+    const EXPLICIT_NON_PIONEER_RE = /\b(?:bible|biblical|old testament|book of exodus|moses|egypt|egyptian|israelites|ancient israel|sinai|pharaoh)\b/i;
 
     function chatBox() { return document.getElementById('chatBox'); }
     function userInput() { return document.getElementById('userInput'); }
@@ -31,9 +48,7 @@
         message.className = 'message ' + (isUser ? 'user-message' : 'bot-message');
 
         let rawText = String(text || '');
-        if (!rawText.includes('\n') && rawText.length > 100) {
-            rawText = rawText.replace(/([.!?])\s+/g, '$1\n');
-        }
+        if (!rawText.includes('\n') && rawText.length > 100) rawText = rawText.replace(/([.!?])\s+/g, '$1\n');
         const paragraphs = rawText.split('\n').map(function (item) { return item.trim(); }).filter(Boolean);
 
         if (isUser) {
@@ -44,9 +59,7 @@
             p.appendChild(document.createTextNode(paragraphs[0] || rawText));
             message.appendChild(p);
         } else {
-            (paragraphs.length ? paragraphs : [rawText]).forEach(function (paragraph) {
-                appendTextParagraph(message, paragraph);
-            });
+            (paragraphs.length ? paragraphs : [rawText]).forEach(function (paragraph) { appendTextParagraph(message, paragraph); });
         }
 
         if (!isUser && Array.isArray(sources) && sources.length) {
@@ -56,7 +69,6 @@
             title.className = 'sources-title';
             title.textContent = 'Sources';
             sourceWrap.appendChild(title);
-
             sources.forEach(function (source) {
                 const link = document.createElement('a');
                 link.className = 'source-link';
@@ -84,17 +96,91 @@
         return message;
     };
 
-    function trimConversationHistory() {
-        if (typeof conversationHistory === 'undefined' || typeof MAX_CONVERSATION_LENGTH === 'undefined') return;
-        while (conversationHistory.length > MAX_CONVERSATION_LENGTH * 2) conversationHistory.shift();
+    function recentHistory() {
+        if (typeof conversationHistory === 'undefined' || !Array.isArray(conversationHistory)) return [];
+        return conversationHistory.slice(-10).filter(function (item) {
+            return item && (item.role === 'user' || item.role === 'assistant') && item.content;
+        });
     }
 
-    function rememberLocalExchange(question, answer) {
-        if (typeof conversationHistory === 'undefined') return;
+    function rememberExchange(question, answer) {
+        if (typeof conversationHistory === 'undefined' || !Array.isArray(conversationHistory)) return;
         conversationHistory.push({ role: 'user', content: question });
         conversationHistory.push({ role: 'assistant', content: String(answer || '') });
-        trimConversationHistory();
+        while (conversationHistory.length > 20) conversationHistory.shift();
+        try { sessionStorage.setItem('focuschrist_history', JSON.stringify(conversationHistory)); } catch (_error) {}
     }
+
+    function normalizeDisplayText(text) {
+        return String(text || '')
+            .replace(/[\u00A0\u2007\u202F]/g, ' ')
+            .replace(/[\u2010\u2011\u2012\u2013\u2014\u2212]/g, '-')
+            .replace(/[\u2018\u2019]/g, "'")
+            .replace(/[\u201C\u201D]/g, '"')
+            .replace(/\u2026/g, '...')
+            .replace(/[ \t]+\n/g, '\n')
+            .replace(/[ \t]{2,}/g, ' ')
+            .replace(/\n{3,}/g, '\n\n')
+            .trim();
+    }
+
+    function buildSystemPrompt(question, pageReference) {
+        const explicitOtherContext = EXPLICIT_NON_PIONEER_RE.test(question);
+        return [
+            'You are the historical study assistant on the focusChrist Pioneers page.',
+            PIONEER_PAGE_CONTEXT,
+            '',
+            explicitOtherContext
+                ? 'The visitor has explicitly signaled a biblical or non-pioneer context. Answer that explicit request directly, while not confusing it with the Pioneer-page default.'
+                : 'No explicit non-pioneer context was requested. Stay inside the Latter-day Saint pioneer/history frame.',
+            '',
+            'HISTORICAL DISCIPLINE:',
+            '- Answer the exact historical topic first.',
+            '- Never switch an ambiguous Pioneer-page label to an unrelated biblical, general-history, or modern topic merely because a keyword overlaps.',
+            '- Distinguish well-established fact from recollection, tradition, inference, disputed interpretation, or devotional retelling.',
+            '- Never invent dates, people, quotations, journal language, miracles, statistics, source titles, URLs, or certainty.',
+            '- If a precise detail is not grounded by the page context supplied here and you are not confident, state that limitation briefly instead of guessing.',
+            '- Do not romanticize suffering. Do not manufacture providential claims or miracles.',
+            '- Do not portray focusChrist as an official Church website.',
+            '- Do not invent source URLs. The page provides verified source-routing separately.',
+            '',
+            'FAITH AND TONE:',
+            '- Explain faith when it is genuinely part of the historical record or the visitor asks about it.',
+            '- Do not append a canned testimony, blessing, or forced devotional closing.',
+            '- Be respectful, concise, readable, and historically focused.',
+            '- Use plain text, short paragraphs, and simple hyphen bullets only when useful.',
+            '- End with a complete sentence.',
+            pageReference ? '\nPAGE-SUPPLIED CONTEXT FOR THIS INTERACTION:\n' + pageReference : ''
+        ].filter(Boolean).join('\n');
+    }
+
+    async function requestPioneerAI(question, pageReference) {
+        const messages = [{ role: 'system', content: buildSystemPrompt(question, pageReference || '') }];
+        recentHistory().forEach(function (item) { messages.push({ role: item.role, content: String(item.content) }); });
+        messages.push({ role: 'user', content: question });
+
+        const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+        const timer = controller ? window.setTimeout(function () { controller.abort(); }, 25000) : null;
+        try {
+            const response = await fetch(PROXY_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ model: MODEL, messages: messages, temperature: 0.2, max_tokens: 1200 }),
+                signal: controller ? controller.signal : undefined
+            });
+            if (!response.ok) throw new Error('Pioneer study service returned ' + response.status);
+            const data = await response.json();
+            const raw = data && data.choices && data.choices[0] && data.choices[0].message ? data.choices[0].message.content : '';
+            const answer = normalizeDisplayText(raw);
+            if (!answer) throw new Error('Empty Pioneer study response');
+            rememberExchange(question, answer);
+            return { answer: answer, sources: [], pioneerContext: true };
+        } finally {
+            if (timer) window.clearTimeout(timer);
+        }
+    }
+
+    window.focusChristPioneerAskAI = requestPioneerAI;
 
     function setConversationMode(active) {
         const label = composerLabel();
@@ -111,15 +197,15 @@
         if (welcome) welcome.remove();
     }
 
-    function showLoading() {
-        const box = chatBox();
+    function showLoading(container) {
+        const box = container || chatBox();
         if (!box) return null;
         const loading = document.createElement('div');
         loading.className = 'loading';
         loading.setAttribute('role', 'status');
-        loading.textContent = 'Searching pioneer history and study sources…';
+        loading.textContent = 'Searching pioneer history and study sources...';
         box.appendChild(loading);
-        box.scrollTop = box.scrollHeight;
+        if (box === chatBox()) box.scrollTop = box.scrollHeight;
         return loading;
     }
 
@@ -128,7 +214,6 @@
         if (!box || !answerElement) return;
         const internalTop = Math.max(0, answerElement.offsetTop - box.offsetTop - 12);
         box.scrollTo({ top: internalTop, behavior: 'smooth' });
-
         const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
         const headerHeight = header && getComputedStyle(header).position === 'fixed' ? header.getBoundingClientRect().height : 0;
         const safeTop = headerHeight + 18;
@@ -137,6 +222,91 @@
             window.scrollTo({ top: window.scrollY + rect.top - safeTop, behavior: 'smooth' });
         }
     }
+
+    function controlPageReference(control, kind, mappedTopic) {
+        if (!control) return kind + ': ' + mappedTopic;
+        const date = control.querySelector('.timeline-date, .map-date');
+        const title = control.querySelector('.timeline-title, .map-content h4, .map-content h3');
+        const desc = control.querySelector('.timeline-desc, .map-content p');
+        return [
+            kind + ': ' + mappedTopic,
+            date && date.textContent.trim() ? 'Displayed date: ' + date.textContent.trim() : '',
+            title && title.textContent.trim() ? 'Displayed title: ' + title.textContent.trim() : '',
+            desc && desc.textContent.trim() ? 'Displayed description: ' + desc.textContent.trim() : ''
+        ].filter(Boolean).join('\n');
+    }
+
+    function renderDisclosureAnswer(container, answer) {
+        container.innerHTML = '';
+        String(answer || '').split('\n').map(function (part) { return part.trim(); }).filter(Boolean).forEach(function (part) {
+            const p = document.createElement('p');
+            p.textContent = part;
+            container.appendChild(p);
+        });
+        const collapse = document.createElement('button');
+        collapse.type = 'button';
+        collapse.className = 'pioneer-collapse-action';
+        collapse.textContent = 'Collapse';
+        collapse.addEventListener('click', function (event) {
+            event.stopPropagation();
+            container.style.display = 'none';
+            const control = container.closest('[data-focus-expand]');
+            if (control) {
+                control.classList.remove('expanded');
+                control.setAttribute('aria-expanded', 'false');
+            }
+        });
+        container.appendChild(collapse);
+    }
+
+    async function runDisclosure(control, mappedTopic, kind) {
+        const aiResponse = control ? control.querySelector('.ai-response') : null;
+        if (!control || !aiResponse) return;
+
+        document.querySelectorAll('[data-focus-expand].expanded').forEach(function (item) {
+            if (item !== control) {
+                item.classList.remove('expanded');
+                item.setAttribute('aria-expanded', 'false');
+                const response = item.querySelector('.ai-response');
+                if (response) response.style.display = 'none';
+            }
+        });
+
+        const isExpanding = !control.classList.contains('expanded');
+        control.classList.toggle('expanded', isExpanding);
+        control.setAttribute('aria-expanded', isExpanding ? 'true' : 'false');
+        if (!isExpanding) {
+            aiResponse.style.display = 'none';
+            return;
+        }
+
+        aiResponse.style.display = 'block';
+        if (aiResponse.dataset.focuschristLoaded === 'true') return;
+        aiResponse.innerHTML = '';
+        const loading = showLoading(aiResponse);
+        try {
+            const pageReference = controlPageReference(control, kind, mappedTopic);
+            const query = 'Latter-day Saint pioneer history - ' + kind + ': ' + mappedTopic;
+            const result = await requestPioneerAI(query, pageReference);
+            if (loading && loading.isConnected) loading.remove();
+            renderDisclosureAnswer(aiResponse, result.answer);
+            aiResponse.dataset.focuschristLoaded = 'true';
+        } catch (error) {
+            console.error('Pioneer disclosure error:', error);
+            if (loading && loading.isConnected) loading.remove();
+            renderDisclosureAnswer(aiResponse, 'I could not complete this pioneer-history answer just now. Please try again or use the verified study resources on this page.');
+        }
+    }
+
+    window.expandTimelineItem = function (element, topic) {
+        const mapped = typeof topicMap !== 'undefined' && topicMap[topic] ? topicMap[topic] : String(topic || 'Pioneer journey');
+        runDisclosure(element, mapped, 'Journey');
+    };
+
+    window.expandTrailPoint = function (element, locationKey) {
+        const mapped = typeof trailTopicMap !== 'undefined' && trailTopicMap[locationKey] ? trailTopicMap[locationKey] : String(locationKey || 'Pioneer trail');
+        runDisclosure(element, mapped, 'Trail');
+    };
 
     window.sendMessage = async function () {
         const input = userInput();
@@ -155,60 +325,78 @@
         try {
             if (typeof containsInappropriate === 'function' && containsInappropriate(question)) {
                 if (loading) loading.remove();
-                const answer = window.addMessage('We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ and pioneer history?', false, [{ text: 'Come Unto Christ', url: 'https://www.churchofjesuschrist.org/comeuntochrist' }]);
+                const answer = window.addMessage('I can help with respectful and safe questions about Latter-day Saint pioneer history. Please rephrase the request.', false);
                 setConversationMode(true);
                 positionAnswer(answer);
                 return;
             }
 
-            let response;
-            let localExchange = false;
-            let storyDriven = false;
-
-            const storyMatch = typeof searchTellMyStory === 'function' ? await searchTellMyStory(question) : null;
-            if (storyMatch && storyMatch[0] && (storyMatch[0].full || storyMatch[0].choices)) {
-                storyDriven = true;
-                response = await askAI(question);
-            } else {
-                const localAnswer = typeof findAnswer === 'function' ? findAnswer(question) : null;
-                if (localAnswer && localAnswer.found) {
-                    response = localAnswer;
-                    localExchange = true;
-                } else {
-                    response = await askAI(question);
+            let pageReference = '';
+            if (typeof searchTellMyStory === 'function') {
+                const storyMatch = await searchTellMyStory(question);
+                if (storyMatch && storyMatch[0] && storyMatch[0].full === false && storyMatch[0].choices) {
+                    if (loading) loading.remove();
+                    const answer = window.addMessage(storyMatch[0].story, false, [{ text: 'Tell My Story Too', url: 'tell-my-story-too.txt' }]);
+                    window.storyChoices = storyMatch[0].choices;
+                    setConversationMode(true);
+                    positionAnswer(answer);
+                    return;
+                }
+                if (storyMatch && storyMatch[0] && storyMatch[0].full === true) {
+                    if (loading) loading.remove();
+                    const storyContent = storyMatch[0].fullStory || storyMatch[0].story;
+                    rememberExchange(question, storyContent);
+                    const answer = window.addMessage(storyContent, false, [{ text: 'Tell My Story Too', url: 'tell-my-story-too.txt' }], { action: 'askTellMyStory()', text: 'Tell Me More' });
+                    setConversationMode(true);
+                    positionAnswer(answer);
+                    return;
+                }
+                if (Array.isArray(storyMatch) && storyMatch.length && typeof storyMatch[0] === 'string') {
+                    pageReference = 'Relevant excerpts located in the page Tell My Story collection:\n' + storyMatch.join('\n\n');
                 }
             }
 
+            const response = await requestPioneerAI(question, pageReference);
             if (loading && loading.isConnected) loading.remove();
-
-            if (response && response.alreadyDisplayed) {
-                if (storyDriven && response.answer) rememberLocalExchange(question, response.answer);
-                const messages = chatBox().querySelectorAll('.bot-message');
-                const latest = messages.length ? messages[messages.length - 1] : null;
-                setConversationMode(true);
-                positionAnswer(latest);
-                return;
-            }
-
-            if (localExchange && response) rememberLocalExchange(question, response.answer);
-            const answer = window.addMessage(response && response.answer ? response.answer : 'I could not complete that answer. Please try again.', false, response && response.sources ? response.sources : []);
+            const answer = window.addMessage(response.answer, false, response.sources || []);
             setConversationMode(true);
             positionAnswer(answer);
         } catch (error) {
             console.error('Pioneer conversation error:', error);
             if (loading && loading.isConnected) loading.remove();
-            const answer = window.addMessage('I could not complete that answer just now. Please try again or continue with the linked Church history resources.', false);
+            const answer = window.addMessage('I could not complete that pioneer-history answer just now. Please try again or continue with the verified Church history resources.', false);
             setConversationMode(true);
             positionAnswer(answer);
         } finally {
             button.disabled = false;
             input.disabled = false;
-            input.focus({ preventScroll: true });
+            try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+        }
+    };
+
+    window.askTopic = async function (topic) {
+        const box = chatBox();
+        if (!box) return;
+        box.innerHTML = '';
+        window.addMessage(topic, true);
+        const loading = showLoading();
+        try {
+            const query = 'Latter-day Saint pioneer history - Pioneer Topic: ' + topic;
+            const response = await requestPioneerAI(query, 'Pioneer Topic button selected: ' + topic);
+            if (loading && loading.isConnected) loading.remove();
+            const answer = window.addMessage(response.answer, false, response.sources || []);
+            setConversationMode(true);
+            positionAnswer(answer);
+        } catch (error) {
+            console.error('Pioneer topic error:', error);
+            if (loading && loading.isConnected) loading.remove();
+            window.addMessage('I could not complete that pioneer-history topic just now. Please try again.', false);
         }
     };
 
     window.clearChat = function () {
-        if (typeof conversationHistory !== 'undefined') conversationHistory = [];
+        if (typeof conversationHistory !== 'undefined' && Array.isArray(conversationHistory)) conversationHistory.length = 0;
+        try { sessionStorage.removeItem('focuschrist_history'); } catch (_error) {}
         const box = chatBox();
         if (box) {
             box.innerHTML = '';
@@ -225,7 +413,9 @@
         const input = userInput();
         if (input) input.value = '';
         setConversationMode(false);
-        if (input) input.focus({ preventScroll: true });
+        if (input) {
+            try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+        }
     };
 
     document.addEventListener('DOMContentLoaded', function () {
@@ -242,6 +432,10 @@
             box.setAttribute('aria-live', 'polite');
             box.setAttribute('aria-label', 'Pioneer study conversation');
         }
+        document.querySelectorAll('.category-btn').forEach(function (link) {
+            link.addEventListener('click', function (event) { event.preventDefault(); });
+        });
         setConversationMode(false);
+        document.documentElement.setAttribute('data-focuschrist-pioneer-policy', PIONEER_POLICY_VERSION);
     });
 })();
