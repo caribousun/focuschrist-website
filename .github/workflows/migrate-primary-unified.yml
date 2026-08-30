@@ -1,0 +1,31 @@
+name: Migrate Primary focusChrist Experience
+
+on:
+  push:
+    branches:
+      - focus/unified-experience-phase1
+    paths:
+      - 'tools/migrate_primary_unified.py'
+      - '.github/workflows/migrate-primary-unified.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Migrate primary public pages
+        run: python tools/migrate_primary_unified.py
+      - name: Run permanent site QA
+        run: python tools/site_qa.py
+      - name: Commit migration
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ask.html answers.html art.html pioneers.html about.html watch.html ask-experience.css site-system.css
+          git commit -m "Migrate primary pages to unified focusChrist experience"
+          git push
