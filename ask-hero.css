@@ -2,11 +2,11 @@
    Shared site hero geometry is preserved; only artwork and responsive crop are page-specific. */
 .fc-visual-hero--ask::before {
     background-image: url('https://lh3.googleusercontent.com/d/1lCHOUM9ez9XDX9K2DVWk2f47fXGgAyG7');
-    background-position: center 42%;
+    background-position: center 30%;
 }
 
 @media (max-width: 720px) {
     .fc-visual-hero--ask::before {
-        background-position: 26% 42%;
+        background-position: 26% 30%;
     }
 }
