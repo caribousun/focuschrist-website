@@ -23,6 +23,10 @@ def main() -> int:
         "initOfficialResourceMenu",
         "Official Church Resources",
         "Watch & Study",
+        "ensurePrimaryStudyNavigation",
+        "data-focuschrist-primary-watch",
+        "createWatchLink('WATCH')",
+        "createWatchLink('WATCH & STUDY')",
     ):
         if marker not in common:
             errors.append(f"site-common.js missing resource/navigation marker: {marker}")
@@ -52,6 +56,15 @@ def main() -> int:
     if "<iframe" in watch.lower():
         errors.append("watch.html unexpectedly embeds third-party video; use verified outbound paths instead")
 
+    header = (ROOT / "site-header.css").read_text(encoding="utf-8")
+    for marker in (
+        "@media (min-width: 1021px) and (max-width: 1260px)",
+        "@media (max-width: 1020px)",
+        "gap: 22px !important",
+    ):
+        if marker not in header:
+            errors.append(f"site-header.css missing expanded-navigation responsive marker: {marker}")
+
     if errors:
         print("focusChrist RESOURCE QA FAILED", file=sys.stderr)
         for error in errors:
@@ -59,7 +72,7 @@ def main() -> int:
         return 1
 
     print("focusChrist RESOURCE QA PASSED")
-    print("Shared hamburger routing, Watch official-media paths, and non-embed policy verified.")
+    print("Shared hamburger routing, primary Watch study path, responsive header, Watch official-media paths, and non-embed policy verified.")
     return 0
 
 
