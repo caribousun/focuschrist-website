@@ -1,9 +1,19 @@
-/* FocusChrist shared interaction controller.
+/* focusChrist shared interaction controller.
  * Keeps common navigation accessibility and expandable-content behavior
  * consistent across pages without introducing a framework.
  */
 (function () {
     'use strict';
+
+    window.toggleMenu = function () {
+        const menu = document.getElementById('hamburgerMenu');
+        const trigger = document.querySelector('.hamburger');
+        if (!menu) return;
+        menu.classList.toggle('show');
+        if (trigger) {
+            trigger.setAttribute('aria-expanded', menu.classList.contains('show') ? 'true' : 'false');
+        }
+    };
 
     function initNavigation() {
         const trigger = document.querySelector('.hamburger');
@@ -23,8 +33,7 @@
             if (event.target !== trigger) return;
             if (event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
-                if (typeof window.toggleMenu === 'function') window.toggleMenu();
-                syncExpanded();
+                window.toggleMenu();
             }
         });
 
@@ -33,6 +42,13 @@
                 menu.classList.remove('show');
                 syncExpanded();
             });
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!menu.classList.contains('show')) return;
+            if (menu.contains(event.target) || trigger.contains(event.target)) return;
+            menu.classList.remove('show');
+            syncExpanded();
         });
 
         document.addEventListener('keydown', function (event) {
