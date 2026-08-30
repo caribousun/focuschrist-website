@@ -25,6 +25,7 @@ def main() -> int:
     common = read("site-common.js", errors)
     system = read("site-system.css", errors)
     ask_css = read("ask-experience.css", errors)
+    pioneer = read("pioneer-experience.js", errors)
     journey = read("study-journey.js", errors)
     sources = read("study-source-router.js", errors)
     grounded = read("study-intelligence-v3.js", errors)
@@ -70,6 +71,17 @@ def main() -> int:
         "linear-gradient(145deg, rgba(30,63,75,.98), rgba(17,39,49,.99)) !important",
         "body.fc-site .ask-followup-input",
         "body.fc-site .ask-followup-button",
+    ), errors)
+
+    require(pioneer, "pioneer-experience.js", (
+        "PIONEER_POLICY_VERSION = '2026-08-30.2'",
+        "function ownDisclosureEvent(event)",
+        "event.stopImmediatePropagation()",
+        "function installDisclosureOwnership()",
+        "data-focuschrist-pioneer-disclosure-controller",
+        "Willie & Martin Companies",
+        "controller.abort()",
+        "25000",
     ), errors)
 
     require(journey, "study-journey.js", (
@@ -187,7 +199,7 @@ def main() -> int:
         return 1
 
     print("focusChrist HARDENED EXPERIENCE QA PASSED")
-    print("Verified direct Home-to-Ask arrival, dynamic controller initialization, Ask reset controls, complete Harvest Sky Ask follow-up styling, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
+    print("Verified direct Home-to-Ask arrival, complete Harvest Sky Ask follow-up styling, hardened Pioneer disclosure ownership and timeout recovery, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
     return 0
 
 
