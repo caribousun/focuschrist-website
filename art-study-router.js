@@ -44,22 +44,10 @@
         if (FEATURED[caption]) return Object.assign({ caption: caption }, FEATURED[caption]);
         const hint = SCENE_HINTS.find(function (entry) { return entry.match.includes(caption); });
         if (hint) {
-            return {
-                caption: caption,
-                focus: '',
-                official: hint.official,
-                officialLabel: hint.label,
-                query: hint.query
-            };
+            return { caption: caption, focus: '', official: hint.official, officialLabel: hint.label, query: hint.query };
         }
         const query = caption || 'Jesus Christ';
-        return {
-            caption: caption || 'This artwork',
-            focus: '',
-            official: CHURCH_SEARCH + encodeURIComponent(query),
-            officialLabel: 'Search official Church study',
-            query: query
-        };
+        return { caption: caption || 'This artwork', focus: '', official: CHURCH_SEARCH + encodeURIComponent(query), officialLabel: 'Search official Church study', query: query };
     }
 
     function channelSearch(query) {
@@ -144,7 +132,6 @@
         channel.rel = 'noopener noreferrer';
         channel.textContent = 'Related @theRisen636 videos';
         links.appendChild(channel);
-
         drawer.appendChild(links);
     }
 
@@ -183,9 +170,8 @@
         modal.appendChild(drawer);
 
         const observer = new MutationObserver(function () {
-            if (modal.classList.contains('active')) {
-                refreshModalRoute(drawer);
-            } else {
+            if (modal.classList.contains('active')) refreshModalRoute(drawer);
+            else {
                 drawer.classList.remove('open');
                 button.setAttribute('aria-expanded', 'false');
             }
@@ -194,9 +180,16 @@
         observer.observe(modal, { attributes: true, attributeFilter: ['class'] });
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    function init() {
         ensureStyles();
         ensureHint();
         initModalStudy();
-    });
+        document.documentElement.setAttribute('data-focuschrist-art-study-router', 'ready');
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
+    } else {
+        init();
+    }
 })();
