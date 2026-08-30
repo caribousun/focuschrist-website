@@ -1,26 +1,35 @@
 /* focusChrist unified site design system
    Shared visual primitives beneath site-header.css.
    Public brand casing: focusChrist (lowercase f, uppercase C).
-   Visual direction: warm umber / harvest gold / restrained firelight. */
+   Visual direction: Harvest Sky — twilight blue, sunflower gold, sage, parchment,
+   and restrained autumn warmth. Brown is a supporting earth tone, not the atmosphere. */
 
 :root {
-    --fc-bg: #100a06;
-    --fc-bg-warm: #1a110b;
-    --fc-surface: #21160f;
-    --fc-surface-2: #2b1b10;
-    --fc-surface-soft: rgba(211, 170, 98, 0.065);
-    --fc-surface-hover: rgba(224, 176, 96, 0.105);
-    --fc-gold: #d3aa62;
-    --fc-gold-light: #f0cc82;
-    --fc-gold-deep: #a87539;
-    --fc-ember: #b56533;
-    --fc-cream: #f8ead7;
-    --fc-text: #e3d1bb;
-    --fc-muted: #baa18a;
-    --fc-faint: #8f7b69;
-    --fc-line: rgba(211, 170, 98, 0.24);
-    --fc-line-strong: rgba(224, 176, 96, 0.46);
-    --fc-shadow: 0 22px 60px rgba(0, 0, 0, 0.38);
+    --fc-bg: #142a35;
+    --fc-bg-deep: #0f2029;
+    --fc-bg-warm: #1c3743;
+    --fc-surface: #203d49;
+    --fc-surface-2: #294a57;
+    --fc-surface-soft: rgba(134, 175, 200, 0.075);
+    --fc-surface-hover: rgba(240, 195, 106, 0.105);
+    --fc-sky: #86afc8;
+    --fc-sky-deep: #527b96;
+    --fc-gold: #e0aa3e;
+    --fc-gold-light: #f0c36a;
+    --fc-gold-deep: #b87d24;
+    --fc-sage: #71805c;
+    --fc-sage-light: #9eaa83;
+    --fc-ember: #b76848;
+    --fc-maple: #82483c;
+    --fc-earth: #38251c;
+    --fc-cream: #fff2dc;
+    --fc-text: #e8e3d8;
+    --fc-muted: #c3c8bd;
+    --fc-faint: #92a6a8;
+    --fc-line: rgba(134, 175, 200, 0.25);
+    --fc-line-warm: rgba(224, 170, 62, 0.28);
+    --fc-line-strong: rgba(240, 195, 106, 0.52);
+    --fc-shadow: 0 22px 60px rgba(5, 17, 23, 0.35);
     --fc-radius-sm: 9px;
     --fc-radius: 14px;
     --fc-radius-lg: 20px;
@@ -39,8 +48,9 @@ body.fc-site {
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     background:
-        radial-gradient(circle at 50% 8%, rgba(181, 91, 45, 0.085), transparent 31rem),
-        linear-gradient(180deg, #110b07 0%, var(--fc-bg) 38%, #0d0805 100%);
+        radial-gradient(circle at 84% 4%, rgba(134,175,200,.14), transparent 30rem),
+        radial-gradient(circle at 14% 34%, rgba(224,170,62,.055), transparent 28rem),
+        linear-gradient(180deg, #17323f 0%, var(--fc-bg) 42%, #11252f 100%);
     color: var(--fc-cream);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -71,21 +81,32 @@ body.fc-site img { max-width: 100%; }
 .fc-container--wide { max-width: var(--fc-wide); }
 .fc-container--gallery { max-width: var(--fc-gallery); }
 
-.fc-section { padding-block: var(--fc-section-y); }
+.fc-section {
+    position: relative;
+    padding-block: var(--fc-section-y);
+    background:
+        radial-gradient(circle at 90% 10%, rgba(134,175,200,.045), transparent 22rem);
+}
 .fc-section--compact { padding-block: clamp(34px, 5vw, 56px); }
 .fc-section--flush-top { padding-top: 0; }
-.fc-section--dark { background: #0b0704; }
+.fc-section--dark {
+    background:
+        radial-gradient(circle at 82% 0%, rgba(82,123,150,.10), transparent 28rem),
+        linear-gradient(180deg, #10232d, #0d1d25);
+}
 .fc-section--warm {
     background:
-        radial-gradient(circle at 50% 0%, rgba(181,91,45,.075), transparent 28rem),
-        linear-gradient(180deg, #1a110b 0%, #140d08 100%);
+        radial-gradient(circle at 78% 0%, rgba(240,195,106,.10), transparent 26rem),
+        radial-gradient(circle at 12% 100%, rgba(113,128,92,.10), transparent 25rem),
+        linear-gradient(145deg, #213f48 0%, #2d453f 52%, #263842 100%);
+    border-block: 1px solid rgba(240,195,106,.08);
 }
 
 .fc-eyebrow {
     margin: 0 0 12px;
-    color: var(--fc-gold);
+    color: var(--fc-gold-light);
     font-size: 0.76rem;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 4px;
     line-height: 1.3;
     text-transform: uppercase;
@@ -109,7 +130,7 @@ body.fc-site img { max-width: 100%; }
 
 .fc-section-heading {
     margin: 0;
-    color: var(--fc-gold);
+    color: var(--fc-gold-light);
     font-size: clamp(1.8rem, 3.8vw, 2.55rem);
     line-height: 1.18;
     text-wrap: balance;
@@ -130,8 +151,8 @@ body.fc-site img { max-width: 100%; }
 
 /* Image-first hero system.
    Sacred imagery stays visually open; major page titles and descriptive copy live
-   below the image in .fc-page-intro. The lower fade intentionally blends the
-   photograph into the warm page surface instead of ending on a hard crop. */
+   below the image in .fc-page-intro. The lower fade blends the photograph into
+   twilight blue rather than a brown/black surface. */
 .fc-visual-hero {
     position: relative;
     isolation: isolate;
@@ -167,36 +188,46 @@ body.fc-site img { max-width: 100%; }
 
 .fc-visual-hero::after {
     background:
-        radial-gradient(circle at 50% 72%, rgba(181,91,45,.05), transparent 35%),
+        radial-gradient(circle at 78% 22%, rgba(134,175,200,.08), transparent 36%),
+        radial-gradient(circle at 45% 76%, rgba(240,195,106,.06), transparent 32%),
         linear-gradient(
             180deg,
-            rgba(7,5,3,0.32) 0%,
-            rgba(7,5,3,0.06) 28%,
-            rgba(7,5,3,0.00) 66%,
-            rgba(26,17,11,0.14) 82%,
-            rgba(26,17,11,0.62) 94%,
+            rgba(10,24,31,0.30) 0%,
+            rgba(10,24,31,0.07) 30%,
+            rgba(10,24,31,0.00) 64%,
+            rgba(20,42,53,0.16) 82%,
+            rgba(28,55,67,0.66) 94%,
             var(--fc-bg-warm) 100%
         );
 }
 
 .fc-visual-hero--christ::before { background-image: url('Jesus.png'); }
 .fc-visual-hero--history::after {
-    background: linear-gradient(180deg, rgba(7,5,3,0.28) 0%, rgba(7,5,3,0.04) 54%, rgba(26,17,11,0.20) 84%, var(--fc-bg-warm) 100%);
+    background:
+        linear-gradient(
+            180deg,
+            rgba(12,29,36,0.28) 0%,
+            rgba(12,29,36,0.04) 52%,
+            rgba(45,56,50,0.22) 82%,
+            var(--fc-bg-warm) 100%
+        );
 }
 
 .fc-page-intro {
     margin-top: -1px;
     padding: clamp(24px, 3.2vw, 38px) 0 clamp(30px, 4vw, 46px);
     background:
-        radial-gradient(circle at 50% 0%, rgba(181,91,45,.055), transparent 24rem),
-        var(--fc-bg-warm);
+        radial-gradient(circle at 50% 0%, rgba(240,195,106,.085), transparent 24rem),
+        radial-gradient(circle at 92% 40%, rgba(134,175,200,.09), transparent 25rem),
+        linear-gradient(180deg, #1c3743 0%, #19323e 100%);
     text-align: center;
+    border-bottom: 1px solid rgba(134,175,200,.10);
 }
 
 .fc-page-intro .fc-display {
     max-width: 940px;
     margin-inline: auto;
-    color: var(--fc-gold-light);
+    color: var(--fc-cream);
 }
 
 .fc-page-intro-copy {
@@ -210,7 +241,7 @@ body.fc-site img { max-width: 100%; }
 .fc-page-intro-scripture {
     display: inline-block;
     margin-top: 14px;
-    color: var(--fc-gold);
+    color: var(--fc-gold-light);
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 0.94rem;
     font-style: italic;
@@ -228,15 +259,26 @@ body.fc-site img { max-width: 100%; }
 .fc-grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 .fc-card {
+    position: relative;
     display: block;
+    overflow: hidden;
     padding: clamp(22px, 3vw, 30px);
     border: 1px solid var(--fc-line);
     border-radius: var(--fc-radius);
     background:
-        radial-gradient(circle at 18% 0%, rgba(181,91,45,.055), transparent 14rem),
-        linear-gradient(145deg, rgba(40,27,18,0.82), rgba(24,16,11,0.86));
+        radial-gradient(circle at 100% 0%, rgba(134,175,200,.085), transparent 15rem),
+        linear-gradient(145deg, rgba(34,66,78,0.90), rgba(24,49,60,0.94));
     color: var(--fc-text);
-    box-shadow: 0 10px 32px rgba(0,0,0,0.16);
+    box-shadow: 0 10px 32px rgba(5,17,23,0.18);
+}
+
+.fc-card::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 3px;
+    background: linear-gradient(180deg, var(--fc-sky), var(--fc-gold));
+    opacity: .72;
 }
 
 .fc-card--interactive {
@@ -249,9 +291,9 @@ body.fc-site img { max-width: 100%; }
     transform: translateY(-3px);
     border-color: var(--fc-line-strong);
     background:
-        radial-gradient(circle at 18% 0%, rgba(181,91,45,.09), transparent 14rem),
-        linear-gradient(145deg, rgba(49,33,21,0.92), rgba(29,19,12,0.94));
-    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+        radial-gradient(circle at 100% 0%, rgba(240,195,106,.11), transparent 15rem),
+        linear-gradient(145deg, rgba(40,75,87,0.96), rgba(27,55,66,0.98));
+    box-shadow: 0 16px 40px rgba(5,17,23,0.28);
     outline: none;
 }
 
@@ -265,9 +307,10 @@ body.fc-site img { max-width: 100%; }
 
 .fc-notice {
     padding: 18px 20px;
-    border-left: 3px solid var(--fc-gold);
-    background: rgba(211,170,98,0.075);
-    color: #cfbaa2;
+    border-left: 3px solid var(--fc-sage-light);
+    background:
+        linear-gradient(90deg, rgba(113,128,92,.14), rgba(134,175,200,.055));
+    color: #d8ddd0;
     line-height: 1.68;
 }
 
@@ -285,10 +328,10 @@ body.fc-site img { max-width: 100%; }
     align-items: center;
     justify-content: center;
     padding: 11px 21px;
-    border: 1px solid var(--fc-gold);
+    border: 1px solid var(--fc-sky);
     border-radius: 999px;
-    background: transparent;
-    color: var(--fc-gold-light) !important;
+    background: rgba(134,175,200,.045);
+    color: #dcebf2 !important;
     font: inherit;
     font-size: 0.9rem;
     font-weight: 700;
@@ -301,29 +344,31 @@ body.fc-site img { max-width: 100%; }
 .fc-button:hover,
 .fc-button:focus-visible {
     transform: translateY(-1px);
-    background: rgba(211,170,98,0.12);
-    border-color: var(--fc-gold-light);
+    background: rgba(134,175,200,.14);
+    border-color: #b8d1df;
     color: var(--fc-cream) !important;
     outline: none;
 }
 .fc-button--primary {
+    border-color: var(--fc-gold);
     background: var(--fc-gold);
-    color: #1b1008 !important;
+    color: #1d2a2e !important;
 }
 .fc-button--primary:hover,
 .fc-button--primary:focus-visible {
+    border-color: var(--fc-gold-light);
     background: var(--fc-gold-light);
-    color: #1b1008 !important;
+    color: #18262b !important;
 }
 
 .fc-chip {
     display: inline-flex;
     align-items: center;
     padding: 7px 11px;
-    border: 1px solid rgba(211,170,98,0.22);
+    border: 1px solid rgba(134,175,200,0.28);
     border-radius: 999px;
-    background: rgba(255,255,255,0.025);
-    color: #c5b09a;
+    background: rgba(134,175,200,.04);
+    color: #c9d6d8;
     font-size: 0.79rem;
     line-height: 1.25;
 }
@@ -331,14 +376,14 @@ body.fc-site img { max-width: 100%; }
 .fc-divider {
     height: 1px;
     margin: clamp(28px, 5vw, 48px) 0;
-    background: linear-gradient(90deg, transparent, rgba(211,170,98,0.32), transparent);
+    background: linear-gradient(90deg, transparent, rgba(240,195,106,.34), rgba(134,175,200,.28), transparent);
 }
 
 .fc-quote {
     margin: 24px 0;
     padding: 4px 0 4px 20px;
     border-left: 3px solid var(--fc-gold);
-    color: #cdb9a2;
+    color: #e5ddcf;
     font-family: Georgia, 'Times New Roman', serif;
     font-style: italic;
     line-height: 1.8;
@@ -347,8 +392,10 @@ body.fc-site img { max-width: 100%; }
 .fc-footer,
 footer[data-focuschrist-footer="standard"] {
     padding: 38px 20px;
-    border-top: 1px solid rgba(211,170,98,0.18);
-    background: #0b0704;
+    border-top: 1px solid rgba(134,175,200,.16);
+    background:
+        radial-gradient(circle at 50% 0%, rgba(82,123,150,.10), transparent 28rem),
+        #0d1d25;
     color: var(--fc-faint);
     font-size: 0.82rem;
     line-height: 1.65;
@@ -360,17 +407,17 @@ footer[data-focuschrist-footer="standard"] p {
     margin: 8px auto;
 }
 .fc-footer a,
-footer[data-focuschrist-footer="standard"] a { color: var(--fc-gold); }
+footer[data-focuschrist-footer="standard"] a { color: var(--fc-gold-light); }
 
 /* Shared study-journey controls. */
 #ask-question { scroll-margin-top: 105px; }
 .ask-conversation-reset {
     min-height: 40px;
     padding: 8px 15px;
-    border: 1px solid rgba(211,170,98,.46);
+    border: 1px solid rgba(134,175,200,.46);
     border-radius: 999px;
-    background: rgba(211,170,98,.06);
-    color: var(--fc-gold-light);
+    background: rgba(134,175,200,.06);
+    color: #d8e9f1;
     font: inherit;
     font-size: .82rem;
     font-weight: 700;
@@ -381,7 +428,7 @@ footer[data-focuschrist-footer="standard"] a { color: var(--fc-gold); }
 .ask-conversation-reset:focus-visible {
     transform: translateY(-1px);
     border-color: var(--fc-gold-light);
-    background: rgba(181,91,45,.13);
+    background: rgba(240,195,106,.12);
     color: var(--fc-cream);
     outline: none;
 }
