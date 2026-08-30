@@ -1,4 +1,4 @@
-name: FocusChrist Site QA
+name: focusChrist Site QA
 
 on:
   pull_request:
@@ -18,8 +18,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Run FocusChrist site QA
+      - name: Run focusChrist structural site QA
         run: python tools/site_qa.py
+
+      - name: Run focusChrist unified experience QA
+        run: python tools/unified_experience_qa.py
 
       - name: Validate Ask experience JavaScript
         run: node --check ask-experience.js
+
+      - name: Validate Pioneer experience JavaScript
+        run: node --check pioneer-experience.js
