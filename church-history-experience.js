@@ -1,11 +1,15 @@
 /* focusChrist Church History study experience.
  * Keeps historical questions bound to verified official Church History routes.
+ * Mirrors the main Ask page's conversation, follow-up, reset, and auto-follow behavior.
  */
 (function () {
     'use strict';
 
     const MAX_HISTORY_MESSAGES = 14;
-    const HISTORY_HERO_URL = 'https://drive.google.com/uc?export=view&id=1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk';
+    const MAX_CONTEXT_TURNS = 6;
+    const HISTORY_HERO_URL = 'https://lh3.googleusercontent.com/d/1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk';
+    const historyConversation = [];
+    let historyBusy = false;
 
     function byId(id) { return document.getElementById(id); }
 
@@ -17,17 +21,77 @@
         return String(value || '').replace(/\s+/g, ' ').trim();
     }
 
+    function preferredScrollBehavior() {
+        return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    }
+
+    function fixedHeaderOffset() {
+        const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+        if (!header) return 20;
+        const style = window.getComputedStyle(header);
+        if (style.position !== 'fixed') return 20;
+        return Math.ceil(header.getBoundingClientRect().height) + 24;
+    }
+
+    function scrollPageToElement(element) {
+        if (!element) return;
+        const top = element.getBoundingClientRect().top + window.scrollY - fixedHeaderOffset();
+        window.scrollTo({ top: Math.max(0, top), behavior: preferredScrollBehavior() });
+    }
+
+    function focusConversation() {
+        scrollPageToElement(byId('historyConversation') || byId('ask-history'));
+    }
+
+    function focusLatestAnswer() {
+        const box = byId('historyChatBox');
+        if (!box) return;
+        const answers = box.querySelectorAll('.bot-message');
+        if (!answers.length) return;
+        const answer = answers[answers.length - 1];
+        const answerTopInsideChat = answer.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop;
+        box.scrollTo({ top: Math.max(0, answerTopInsideChat - 16), behavior: preferredScrollBehavior() });
+        scrollPageToElement(byId('historyConversation') || box);
+    }
+
     function initHero() {
         const hero = document.querySelector('.fc-history-hero');
         const image = hero ? hero.querySelector('img') : null;
         if (!hero || !image) return;
+
         hero.setAttribute('aria-label', 'Sacred Grove inspired Church history scene');
         image.src = HISTORY_HERO_URL;
         image.alt = 'A peaceful wooded grove at dawn with warm sunlight filtering through the trees';
         image.loading = 'eager';
         image.decoding = 'async';
+        image.referrerPolicy = 'no-referrer';
         try { image.fetchPriority = 'high'; } catch (_error) { /* unsupported browser */ }
-        document.documentElement.setAttribute('data-focuschrist-history-hero', 'sacred-grove-restoration');
+
+        image.addEventListener('load', function () {
+            hero.classList.remove('fc-history-hero--image-error');
+            image.hidden = false;
+            document.documentElement.setAttribute('data-focuschrist-history-hero', 'sacred-grove-restoration');
+        }, { once: true });
+
+        image.addEventListener('error', function () {
+            image.hidden = true;
+            hero.classList.add('fc-history-hero--image-error');
+            document.documentElement.setAttribute('data-focuschrist-history-hero', 'fallback-no-broken-bitmap');
+        }, { once: true });
+    }
+
+    function createWelcome() {
+        const welcome = document.createElement('div');
+        welcome.className = 'fc-history-welcome';
+
+        const strong = document.createElement('strong');
+        strong.textContent = 'Ask about a person, event, place, practice, date, or historical question.';
+        welcome.appendChild(strong);
+
+        const span = document.createElement('span');
+        span.textContent = 'Official Church History sources will be shown with the response. Follow-up questions stay in the same conversation until you choose New Question.';
+        welcome.appendChild(span);
+        return welcome;
     }
 
     function createMessage(kind, text) {
@@ -144,20 +208,35 @@
         ];
     }
 
+    function recentConversationContext() {
+        if (!historyConversation.length) return '';
+        return historyConversation.slice(-MAX_CONTEXT_TURNS).map(function (turn, index) {
+            return [
+                'Turn ' + (index + 1) + ' question: ' + turn.question,
+                'Turn ' + (index + 1) + ' answer: ' + turn.answer
+            ].join('\n');
+        }).join('\n\n');
+    }
+
     function promptContextFor(question, sources) {
         const router = historyRouter();
-        if (router && typeof router.historyPromptContext === 'function') return router.historyPromptContext(question);
-        return [
-            'CHURCH HISTORY PAGE SOURCE CONTRACT:',
-            '- Treat official Church History materials at ChurchofJesusChrist.org and the Saints volumes as the governing source family for this answer.',
-            '- Do not invent historical details, quotations, dates, motives, private revelations, or source claims.',
-            '- If the official source family does not clearly establish a detail, state that limitation instead of filling the gap from model memory.',
-            '- Distinguish documented history, recollection, tradition, interpretation, and disputed claims when relevant.',
-            '- The visitor will receive verified official source links after the answer.',
-            '',
-            'VERIFIED SOURCE ROUTES FOR THIS QUESTION:',
-            sources.map(function (item) { return '- ' + item.label + ': ' + item.url; }).join('\n')
-        ].join('\n');
+        const base = router && typeof router.historyPromptContext === 'function'
+            ? router.historyPromptContext(question)
+            : [
+                'CHURCH HISTORY PAGE SOURCE CONTRACT:',
+                '- Treat official Church History materials at ChurchofJesusChrist.org and the Saints volumes as the governing source family for this answer.',
+                '- Do not invent historical details, quotations, dates, motives, private revelations, or source claims.',
+                '- If the official source family does not clearly establish a detail, state that limitation instead of filling the gap from model memory.',
+                '- Distinguish documented history, recollection, tradition, interpretation, and disputed claims when relevant.',
+                '- The visitor will receive verified official source links after the answer.',
+                '',
+                'VERIFIED SOURCE ROUTES FOR THIS QUESTION:',
+                sources.map(function (item) { return '- ' + item.label + ': ' + item.url; }).join('\n')
+            ].join('\n');
+
+        const prior = recentConversationContext();
+        if (!prior) return base;
+        return base + '\n\nCURRENT CHURCH HISTORY CONVERSATION CONTEXT:\nUse this only to understand follow-up references. Current official source rules still govern.\n' + prior;
     }
 
     async function waitForHistoryAI() {
@@ -169,23 +248,43 @@
         throw new Error('History study intelligence did not initialize.');
     }
 
-    async function answerQuestion(rawQuestion) {
-        const question = normalizeQuestion(rawQuestion);
-        if (!question) return;
+    function setConversationMode(active) {
+        const label = byId('historyQuestionLabel');
+        const input = byId('historyQuestion');
+        if (label) label.textContent = active ? 'Continue the conversation' : 'Your Church history question';
+        if (input) input.placeholder = active ? 'Ask a follow-up question...' : 'For example: What happened after the Saints left Nauvoo?';
+        document.documentElement.toggleAttribute('data-focuschrist-history-conversation-active', Boolean(active));
+    }
 
+    function setBusy(busy) {
+        historyBusy = Boolean(busy);
         const input = byId('historyQuestion');
         const button = byId('historyAskButton');
-        const status = byId('historyStatus');
-        if (input) input.disabled = true;
+        const reset = byId('historyResetButton');
+        if (input) input.disabled = historyBusy;
         if (button) {
-            button.disabled = true;
-            button.textContent = 'Reviewing Sources...';
+            button.disabled = historyBusy;
+            button.textContent = historyBusy ? 'Reviewing Sources...' : (historyConversation.length ? 'Ask Follow-up' : 'Ask History');
         }
-        if (status) status.textContent = 'Matching the question to official Church History sources.';
+        if (reset) reset.disabled = historyBusy;
+    }
+
+    async function answerQuestion(rawQuestion) {
+        const question = normalizeQuestion(rawQuestion);
+        if (!question || historyBusy) return;
+
+        const input = byId('historyQuestion');
+        const status = byId('historyStatus');
+        setBusy(true);
+        if (status) status.textContent = historyConversation.length
+            ? 'Continuing the conversation with official Church History source routing.'
+            : 'Matching the question to official Church History sources.';
 
         appendMessage(createMessage('user', question));
+        if (input) input.value = '';
         const loading = loadingMessage();
         appendMessage(loading);
+        window.setTimeout(focusConversation, 40);
 
         const sources = sourcePathsFor(question);
         const promptContext = promptContextFor(question, sources);
@@ -196,30 +295,46 @@
             const result = await ask(groundedQuestion, promptContext);
             if (loading.isConnected) loading.remove();
             const answer = result && typeof result === 'object' && result.answer ? result.answer : String(result || '');
-            const message = createMessage('assistant', answer || 'I could not complete that history answer. Please use the official source paths below.');
+            const finalAnswer = answer || 'I could not complete that history answer. Please use the official source paths below.';
+            const message = createMessage('assistant', finalAnswer);
             appendVerifiedSources(message, sources);
             appendMessage(message);
-            if (status) status.textContent = 'Answer complete. Verify details in the official Church History links shown with the response.';
+            historyConversation.push({ question: question, answer: finalAnswer });
+            if (historyConversation.length > MAX_CONTEXT_TURNS) historyConversation.shift();
+            setConversationMode(true);
+            if (status) status.textContent = 'Answer complete. Ask a follow-up below or choose New Question to start over.';
+            window.setTimeout(focusLatestAnswer, 70);
         } catch (error) {
             console.error('focusChrist Church History question error:', error);
             if (loading.isConnected) loading.remove();
-            const message = createMessage('assistant', 'I could not complete the summary just now. The official Church History source paths below remain available for direct study.');
+            const fallback = 'I could not complete the summary just now. The official Church History source paths below remain available for direct study.';
+            const message = createMessage('assistant', fallback);
             appendVerifiedSources(message, sources);
             appendMessage(message);
             if (status) status.textContent = 'The AI summary was unavailable; official Church History source paths are still provided.';
+            window.setTimeout(focusLatestAnswer, 70);
         } finally {
-            if (input) {
-                input.disabled = false;
-                input.value = '';
-            }
-            if (button) {
-                button.disabled = false;
-                button.textContent = 'Ask History';
-            }
+            setBusy(false);
             if (input) {
                 try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
             }
         }
+    }
+
+    function resetConversation() {
+        historyConversation.length = 0;
+        const box = byId('historyChatBox');
+        const input = byId('historyQuestion');
+        const status = byId('historyStatus');
+        if (box) box.replaceChildren(createWelcome());
+        if (input) input.value = '';
+        setConversationMode(false);
+        setBusy(false);
+        if (status) status.textContent = 'Official Church History source routing active.';
+        if (input) {
+            try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+        }
+        window.setTimeout(function () { scrollPageToElement(byId('ask-history')); }, 30);
     }
 
     function initSuggestions() {
@@ -236,6 +351,7 @@
     function initForm() {
         const form = byId('historyAskForm');
         const input = byId('historyQuestion');
+        const reset = byId('historyResetButton');
         if (!form || !input) return;
 
         form.addEventListener('submit', function (event) {
@@ -250,12 +366,15 @@
                 else byId('historyAskButton').click();
             }
         });
+
+        if (reset) reset.addEventListener('click', resetConversation);
     }
 
     function init() {
         initHero();
         initSuggestions();
         initForm();
+        setConversationMode(false);
         document.documentElement.setAttribute('data-focuschrist-history-experience-ready', 'true');
     }
 
