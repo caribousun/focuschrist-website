@@ -54,8 +54,9 @@ def main() -> int:
 
     require(system, "site-system.css", (
         "--fc-ember:",
-        "warm umber / harvest gold / restrained firelight",
-        "radial-gradient(circle at 50% 8%",
+        "--fc-sky:",
+        "Harvest Sky",
+        "radial-gradient(circle at 84% 4%",
         "#ask-question",
         ".ask-conversation-reset",
         ".ask-followup-actions",
@@ -174,7 +175,7 @@ def main() -> int:
         return 1
 
     print("focusChrist HARDENED EXPERIENCE QA PASSED")
-    print("Verified direct Home-to-Ask arrival, dynamic controller initialization, Ask reset controls, warm palette, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
+    print("Verified direct Home-to-Ask arrival, dynamic controller initialization, Ask reset controls, Harvest Sky palette, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
     return 0
 
 
