@@ -1,0 +1,289 @@
+/* Church History page — focusChrist Harvest Sky extension. */
+.fc-history-page .fc-history-hero { min-height: clamp(360px, 31vw, 500px); }
+.fc-history-page .fc-history-hero > img { object-position: center 46%; filter: saturate(.9) contrast(.98) brightness(.92); }
+.fc-history-page .fc-history-hero::after {
+    background:
+        radial-gradient(circle at 78% 16%, rgba(240,195,106,.12), transparent 28rem),
+        radial-gradient(circle at 18% 58%, rgba(134,175,200,.10), transparent 30rem),
+        linear-gradient(180deg, rgba(9,22,29,.30) 0%, rgba(9,22,29,.04) 52%, rgba(20,42,53,.22) 80%, var(--fc-bg-warm) 100%);
+}
+
+.fc-history-source-lock {
+    padding: 18px 20px;
+    border: 1px solid rgba(158,170,131,.34);
+    border-left: 4px solid var(--fc-sage-light);
+    border-radius: var(--fc-radius-sm);
+    background: linear-gradient(105deg, rgba(113,128,92,.15), rgba(134,175,200,.055));
+    color: var(--fc-text);
+    line-height: 1.7;
+}
+.fc-history-source-lock strong { color: var(--fc-cream); }
+
+.fc-history-era-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+.fc-history-era {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px 16px;
+    min-height: 245px;
+    padding: clamp(23px, 3vw, 31px);
+    overflow: hidden;
+    border: 1px solid var(--fc-line);
+    border-radius: var(--fc-radius);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(224,170,62,.09), transparent 18rem),
+        radial-gradient(circle at 10% 100%, rgba(113,128,92,.11), transparent 20rem),
+        linear-gradient(145deg, rgba(35,69,81,.96), rgba(24,48,59,.97));
+    box-shadow: 0 13px 38px rgba(5,17,23,.22);
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+.fc-history-era::before {
+    content: '';
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 4px;
+    background: linear-gradient(180deg, var(--fc-gold-light), var(--fc-sage-light), var(--fc-sky));
+}
+.fc-history-era:hover,
+.fc-history-era:focus-visible {
+    transform: translateY(-3px);
+    border-color: var(--fc-line-strong);
+    box-shadow: 0 18px 48px rgba(5,17,23,.3);
+    outline: none;
+}
+.fc-history-era-number {
+    align-self: center;
+    color: var(--fc-gold-light);
+    font-size: .73rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.fc-history-era-years {
+    justify-self: end;
+    align-self: center;
+    color: #b9cbd2;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: .94rem;
+}
+.fc-history-era h3 {
+    grid-column: 1 / -1;
+    margin: 9px 0 2px;
+    color: var(--fc-cream);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.35rem, 2.4vw, 1.72rem);
+    font-weight: 400;
+    line-height: 1.25;
+}
+.fc-history-era p {
+    grid-column: 1 / -1;
+    margin: 0;
+    color: var(--fc-muted);
+    line-height: 1.7;
+}
+.fc-history-era-link {
+    grid-column: 1 / -1;
+    align-self: end;
+    margin-top: 14px;
+    color: var(--fc-gold-light);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.fc-history-source-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin-top: 30px;
+}
+.fc-history-source-grid .fc-card { padding: 22px; min-height: 190px; }
+.fc-history-source-grid .fc-card-title { font-size: 1.18rem; }
+.fc-history-source-grid .fc-card p { font-size: .91rem; }
+
+.fc-history-ask-heading {
+    display: flex;
+    gap: 28px;
+    align-items: end;
+    justify-content: space-between;
+}
+.fc-history-ask-heading > div { max-width: 760px; }
+.fc-history-ask-heading .fc-button { flex: 0 0 auto; }
+
+.fc-history-predictions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 26px 0 18px;
+}
+.fc-history-predictions button {
+    min-height: 40px;
+    padding: 8px 13px;
+    border: 1px solid rgba(134,175,200,.33);
+    border-radius: 999px;
+    background: rgba(134,175,200,.055);
+    color: #d8e5e7;
+    font: inherit;
+    font-size: .79rem;
+    cursor: pointer;
+    transition: background .18s ease, border-color .18s ease, transform .18s ease;
+}
+.fc-history-predictions button:hover,
+.fc-history-predictions button:focus-visible {
+    transform: translateY(-1px);
+    border-color: var(--fc-gold-light);
+    background: rgba(224,170,62,.11);
+    color: var(--fc-cream);
+    outline: none;
+}
+
+.fc-history-chat-shell {
+    overflow: hidden;
+    border: 1px solid rgba(134,175,200,.28);
+    border-radius: var(--fc-radius-lg);
+    background:
+        radial-gradient(circle at 88% 0%, rgba(134,175,200,.08), transparent 25rem),
+        linear-gradient(160deg, rgba(27,56,68,.96), rgba(14,31,40,.98));
+    box-shadow: var(--fc-shadow);
+}
+.fc-history-chat {
+    min-height: 270px;
+    max-height: 610px;
+    overflow-y: auto;
+    padding: clamp(20px, 3vw, 30px);
+    scroll-behavior: smooth;
+}
+.fc-history-welcome {
+    display: grid;
+    gap: 7px;
+    max-width: 760px;
+    padding: 18px 20px;
+    border: 1px solid rgba(158,170,131,.28);
+    border-radius: var(--fc-radius-sm);
+    background: rgba(113,128,92,.09);
+    color: var(--fc-muted);
+}
+.fc-history-welcome strong { color: var(--fc-cream); font-family: Georgia, 'Times New Roman', serif; font-size: 1.12rem; font-weight: 400; }
+.fc-history-message { max-width: 88%; margin: 0 0 16px; }
+.fc-history-message--user { margin-left: auto; }
+.fc-history-message-label {
+    margin-bottom: 5px;
+    color: var(--fc-faint);
+    font-size: .69rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+.fc-history-message--user .fc-history-message-label { text-align: right; }
+.fc-history-message-body {
+    padding: 14px 16px;
+    border: 1px solid rgba(134,175,200,.22);
+    border-radius: 13px;
+    background: rgba(255,255,255,.035);
+    color: var(--fc-text);
+    line-height: 1.7;
+}
+.fc-history-message--user .fc-history-message-body {
+    border-color: rgba(224,170,62,.28);
+    background: rgba(224,170,62,.09);
+    color: var(--fc-cream);
+}
+.fc-history-message-body p { margin: 0 0 10px; }
+.fc-history-message-body p:last-child { margin-bottom: 0; }
+.fc-history-message-body ul { margin: 8px 0 0 20px; padding: 0; }
+.fc-history-message-body li { margin: 4px 0; }
+.fc-history-loading { color: var(--fc-muted); font-style: italic; }
+
+.fc-history-verified-sources {
+    display: grid;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 13px;
+    border: 1px solid rgba(224,170,62,.22);
+    border-radius: 11px;
+    background: rgba(224,170,62,.045);
+}
+.fc-history-verified-sources-title {
+    color: var(--fc-gold-light);
+    font-size: .69rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
+.fc-history-verified-sources a {
+    display: block;
+    padding: 9px 10px;
+    border-radius: 9px;
+    background: rgba(134,175,200,.045);
+    color: #dcebf2 !important;
+    text-decoration: none !important;
+}
+.fc-history-verified-sources a:hover,
+.fc-history-verified-sources a:focus-visible { background: rgba(134,175,200,.12); outline: 1px solid rgba(134,175,200,.35); }
+.fc-history-verified-sources strong { display: block; color: var(--fc-cream); font-size: .87rem; }
+.fc-history-verified-sources span { display: block; margin-top: 2px; color: var(--fc-faint); font-size: .72rem; line-height: 1.4; }
+
+.fc-history-form {
+    padding: 18px clamp(20px, 3vw, 30px) 22px;
+    border-top: 1px solid rgba(134,175,200,.15);
+    background: rgba(6,20,27,.35);
+}
+.fc-history-label {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--fc-gold-light);
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+.fc-history-form textarea {
+    width: 100%;
+    min-height: 88px;
+    resize: vertical;
+    padding: 13px 14px;
+    border: 1px solid rgba(134,175,200,.34);
+    border-radius: 12px;
+    background: #102831;
+    color: var(--fc-cream);
+    font: inherit;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+.fc-history-form textarea::placeholder { color: #819b9f; }
+.fc-history-form textarea:focus { border-color: var(--fc-gold-light); outline: 2px solid rgba(224,170,62,.15); outline-offset: 1px; }
+.fc-history-form-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+#historyStatus { color: var(--fc-faint); font-size: .78rem; line-height: 1.4; }
+
+.fc-history-continue-grid { margin-top: 28px; }
+
+@media (max-width: 980px) {
+    .fc-history-source-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+    .fc-history-era-grid,
+    .fc-history-source-grid { grid-template-columns: 1fr; }
+    .fc-history-ask-heading { display: block; }
+    .fc-history-ask-heading .fc-button { margin-top: 18px; }
+    .fc-history-message { max-width: 96%; }
+    .fc-history-form-actions { align-items: stretch; flex-direction: column; }
+    .fc-history-form-actions .fc-button { width: 100%; }
+    .fc-history-page .fc-history-hero { min-height: 330px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .fc-history-era,
+    .fc-history-predictions button { transition: none; }
+    .fc-history-chat { scroll-behavior: auto; }
+}
