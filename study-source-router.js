@@ -25,15 +25,17 @@
         'jesus','christ','savior','redeemer','god','heavenly father','holy ghost','spirit','gospel','faith','repentance',
         'baptism','sacrament','atonement','resurrection','prayer','revelation','scripture','bible','book of mormon',
         'doctrine and covenants','pearl of great price','church','latter-day','latter day','lds','mormon','temple','endowment',
-        'sealing','garment','covenant','priesthood','prophet','apostle','general conference','joseph smith','brigham young',
-        'first vision','restoration','pioneer','tithing','word of wisdom','plan of salvation','spirit world','celestial',
-        'eternal family','family history','plural marriage','polygamy','book of abraham','race and priesthood','dna',
-        'commandment','sin','forgiveness','grace','ordinance','missionary','missionaries','bishop','relief society','zion'
+        'sealing','garment','garments','covenant','priesthood','prophet','apostle','general conference','joseph smith','oliver cowdery',
+        'emma smith','brigham young','first vision','restoration','pioneer','tithing','word of wisdom','plan of salvation','spirit world',
+        'celestial','terrestrial','telestial','premortal','premortality','exaltation','eternal family','family history','plural marriage',
+        'polygamy','book of abraham','race and priesthood','dna','commandment','sin','forgiveness','grace','ordinance','missionary',
+        'missionaries','bishop','ward','stake','relief society','quorum','patriarchal blessing','ministering','calling','zion'
     ];
 
     const HISTORY_TERMS = [
-        'history','historical','joseph smith','brigham young','first vision','restoration','pioneer','plural marriage','polygamy',
-        'race and priesthood','book of abraham','dna','mountain meadows','nauvoo','kirtland','missouri','handcart','martyrdom'
+        'history','historical','joseph smith','oliver cowdery','emma smith','brigham young','first vision','restoration','pioneer',
+        'plural marriage','polygamy','race and priesthood','book of abraham','dna','mountain meadows','nauvoo','kirtland','missouri',
+        'handcart','martyrdom','priesthood restoration'
     ];
 
     const SCRIPTURE_TERMS = [
@@ -99,7 +101,7 @@
             results.push(source(BYU.citation, 'BYU educational', 'See where scripture passages are cited in General Conference and other materials.'));
         }
 
-        if (q.includes('book of mormon')) {
+        if (q.includes('book of mormon') || q.includes('nephi') || q.includes('alma') || q.includes('moroni')) {
             results.push(source(OFFICIAL.bomVideos, 'Official Church media', 'Book of Mormon scenes for learning, teaching, and sharing.'));
         }
 
@@ -201,6 +203,18 @@
         observer.observe(chatBox, { childList: true, subtree: true });
     }
 
+    function loadGroundedIntelligence() {
+        if (document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
+        const script = document.createElement('script');
+        script.src = 'study-intelligence-v3.js?v=20260830-3';
+        script.defer = true;
+        script.setAttribute('data-focuschrist-study-intelligence-v3', 'true');
+        script.addEventListener('error', function () {
+            console.error('focusChrist Study Intelligence v3 failed to load.');
+        }, { once: true });
+        document.body.appendChild(script);
+    }
+
     window.focusChristSourceRouter = {
         isFaithQuestion: isFaithQuestion,
         churchSearchUrl: churchSearchUrl,
@@ -210,5 +224,6 @@
     document.addEventListener('DOMContentLoaded', function () {
         ensureStyles();
         initAnswerObserver();
+        loadGroundedIntelligence();
     });
 })();
