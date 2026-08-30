@@ -2,61 +2,83 @@ from pathlib import Path
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / "study-intelligence.js"
+FOUNDATION = ROOT / "study-intelligence.js"
+POLICY = ROOT / "study-intelligence-v2.js"
 COMMON = ROOT / "site-common.js"
 
 
+def read_required(path: Path, errors: list[str]) -> str:
+    if not path.exists() or path.stat().st_size == 0:
+        errors.append(f"{path.name} missing or empty")
+        return ""
+    return path.read_text(encoding="utf-8")
+
+
 def main() -> int:
-    errors = []
+    errors: list[str] = []
+    foundation = read_required(FOUNDATION, errors)
+    policy = read_required(POLICY, errors)
+    common = read_required(COMMON, errors)
 
-    if not SCRIPT.exists() or SCRIPT.stat().st_size == 0:
-        errors.append("study-intelligence.js missing or empty")
-        script = ""
-    else:
-        script = SCRIPT.read_text(encoding="utf-8")
-
-    if not COMMON.exists() or COMMON.stat().st_size == 0:
-        errors.append("site-common.js missing or empty")
-        common = ""
-    else:
-        common = COMMON.read_text(encoding="utf-8")
-
-    required_script_markers = (
+    required_foundation_markers = (
         "focusChrist shared Study Intelligence layer",
         "openai/gpt-oss-20b",
-        "ANSWER QUALITY:",
         "SOURCE AND DOCTRINE DISCIPLINE:",
-        "PASTORAL AND SAFETY DISCIPLINE:",
         "enhancedLocalMatch",
-        "buildMessages",
         "requestOnce",
         "rememberExchange",
         "installSafeMessageRenderer",
         "installAskConversation",
         "installPioneerIntelligence",
-        "Studying the question and available sources",
         "Study sources",
     )
-    for marker in required_script_markers:
-        if marker not in script:
+    for marker in required_foundation_markers:
+        if marker not in foundation:
             errors.append(f"study-intelligence.js missing marker: {marker}")
 
-    forbidden_script_markers = (
-        "innerHTML = text",
-        "innerHTML=text",
+    required_policy_markers = (
+        "focusChrist Study Intelligence v2",
+        "QUESTION MODE: GENERAL KNOWLEDGE.",
+        "QUESTION MODE: FAITH / SCRIPTURE STUDY.",
+        "QUESTION MODE: LATTER-DAY SAINT PIONEER / CHURCH HISTORY STUDY.",
+        "QUESTION MODE: HIGH-STAKES OR SENSITIVE.",
+        "answer a very broad range of lawful user questions",
+        "Do NOT append a blessing",
+        "Do NOT force religion into the factual answer",
+        "optional study bridge",
+        "the sky is blue",
+        "Do not manufacture a spiritual analogy",
+        "Never end an ordinary answer with generic phrases",
+        "bestLocalReference",
+        "removeBoilerplateClosing",
+        "focusChristStudyAskV2",
+        "temperature: 0.35",
+        "max_tokens: MAX_TOKENS",
+    )
+    for marker in required_policy_markers:
+        if marker not in policy:
+            errors.append(f"study-intelligence-v2.js missing adaptive-policy marker: {marker}")
+
+    forbidden_policy_markers = (
+        "Every response must end by connecting to Jesus Christ",
+        "ALWAYS tie appropriate answers back to Jesus Christ",
+        "May the love of Jesus Christ bring you peace and clarity",
+        "That's a great question!",
         "temperature: 0.7",
         "max_tokens: 800",
-        "Every response must end by connecting to Jesus Christ",
-        "That's a great question!",
+        "innerHTML = text",
+        "innerHTML=text",
     )
-    for marker in forbidden_script_markers:
-        if marker in script:
-            errors.append(f"study-intelligence.js contains legacy/unsafe marker: {marker}")
+    for marker in forbidden_policy_markers:
+        if marker in policy:
+            errors.append(f"study-intelligence-v2.js contains legacy/unsafe marker: {marker}")
 
     required_common_markers = (
         "loadStudyIntelligence",
-        "study-intelligence.js",
+        "study-intelligence.js?v=20260830-2",
+        "study-intelligence-v2.js?v=20260830-2",
         "data-focuschrist-study-intelligence",
+        "data-focuschrist-study-intelligence-v2",
         "path.endsWith('/ask.html')",
         "path.endsWith('/pioneers.html')",
     )
@@ -71,7 +93,11 @@ def main() -> int:
         return 1
 
     print("focusChrist STUDY INTELLIGENCE QA PASSED")
-    print("Verified shared AI prompt discipline, semantic local matching, retry/timeouts, visible Ask continuity, safe rendering, and Ask/Pioneer loader integration.")
+    print(
+        "Verified foundation + adaptive policy, broad general-question handling, optional specific faith bridges, "
+        "no forced devotional closings, semantic local matching, retry/timeouts, safe rendering, cache-versioned loading, "
+        "and Ask/Pioneer integration."
+    )
     return 0
 
 

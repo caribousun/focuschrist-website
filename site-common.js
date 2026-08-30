@@ -181,18 +181,30 @@
         });
     }
 
+    function appendScript(src, marker, onload) {
+        const script = document.createElement('script');
+        script.src = src;
+        script.defer = true;
+        script.setAttribute(marker, 'true');
+        if (onload) script.addEventListener('load', onload, { once: true });
+        script.addEventListener('error', function () {
+            console.error('focusChrist Study Intelligence asset failed to load: ' + src);
+        }, { once: true });
+        document.body.appendChild(script);
+    }
+
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence]')) return;
-        const script = document.createElement('script');
-        script.src = 'study-intelligence.js';
-        script.defer = true;
-        script.dataset.focuschristStudyIntelligence = 'true';
-        script.addEventListener('error', function () {
-            console.error('focusChrist Study Intelligence failed to load; base conversation remains available.');
+
+        // Versioned URLs prevent an older cached policy from surviving a
+        // production intelligence update. Load the foundation first, then the
+        // adaptive policy overlay so v2 owns the final Ask/AI functions.
+        appendScript('study-intelligence.js?v=20260830-2', 'data-focuschrist-study-intelligence', function () {
+            if (document.querySelector('script[data-focuschrist-study-intelligence-v2]')) return;
+            appendScript('study-intelligence-v2.js?v=20260830-2', 'data-focuschrist-study-intelligence-v2');
         });
-        document.body.appendChild(script);
     }
 
     document.addEventListener('DOMContentLoaded', function () {
