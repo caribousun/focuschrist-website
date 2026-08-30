@@ -21,19 +21,19 @@
         return style.position === 'fixed' ? Math.ceil(header.getBoundingClientRect().height) + 22 : 18;
     }
 
-    function scrollToTarget(target, focusInput) {
+    function scrollToTarget(target, focusInput, behaviorOverride) {
         if (!target) return;
         const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
         window.scrollTo({
             top: Math.max(0, top),
-            behavior: reducedMotion() ? 'auto' : 'smooth'
+            behavior: behaviorOverride || (reducedMotion() ? 'auto' : 'smooth')
         });
         if (focusInput) {
             window.setTimeout(function () {
                 const input = document.getElementById('userInput');
                 if (!input) return;
                 try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
-            }, reducedMotion() ? 0 : 260);
+            }, reducedMotion() ? 0 : 180);
         }
     }
 
@@ -47,7 +47,8 @@
     }
 
     function rewriteContentAskLinks() {
-        document.querySelectorAll('main a[href], section a[href]').forEach(function (link) {
+        document.querySelectorAll('a[href]').forEach(function (link) {
+            if (link.closest('.nav, .hamburger-menu')) return;
             const raw = link.getAttribute('href') || '';
             if (raw === 'ask.html' || raw === '../ask.html') link.setAttribute('href', askHref());
         });
@@ -64,7 +65,22 @@
 
     function honorAskDeepLink(target) {
         if (!target || window.location.hash !== '#ask-question') return;
-        window.setTimeout(function () { scrollToTarget(target, true); }, 90);
+
+        function position(focusInput, behavior) {
+            scrollToTarget(target, focusInput, behavior);
+        }
+
+        window.requestAnimationFrame(function () { position(false, 'auto'); });
+        window.setTimeout(function () { position(true); }, 120);
+        window.setTimeout(function () {
+            if (window.location.hash === '#ask-question') position(false, 'auto');
+        }, 520);
+
+        if (document.readyState !== 'complete') {
+            window.addEventListener('load', function () {
+                if (window.location.hash === '#ask-question') position(false, 'auto');
+            }, { once: true });
+        }
     }
 
     function resetConversation() {
@@ -136,23 +152,23 @@
     function loadVerifiedSourceRouter() {
         const path = window.location.pathname.toLowerCase();
         if (path.endsWith('/ask.html') || path.endsWith('/pioneers.html')) {
-            appendDynamicScript('study-source-router.js?v=20260829-1', 'data-focuschrist-source-router');
+            appendDynamicScript('study-source-router.js?v=20260830-2', 'data-focuschrist-source-router');
         }
     }
 
     function loadArtStudyRouter() {
         if (window.location.pathname.toLowerCase().endsWith('/art.html')) {
-            appendDynamicScript('art-study-router.js?v=20260829-1', 'data-focuschrist-art-study-router');
+            appendDynamicScript('art-study-router.js?v=20260830-2', 'data-focuschrist-art-study-router');
         }
     }
 
     function loadWatchStudyEnrichment() {
         if (window.location.pathname.toLowerCase().endsWith('/watch.html')) {
-            appendDynamicScript('watch-study-enrichment.js?v=20260829-1', 'data-focuschrist-watch-enrichment');
+            appendDynamicScript('watch-study-enrichment.js?v=20260830-2', 'data-focuschrist-watch-enrichment');
         }
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    function init() {
         rewriteContentAskLinks();
         const target = ensureAskTarget();
         honorAskDeepLink(target);
@@ -161,5 +177,12 @@
         window.setTimeout(loadVerifiedSourceRouter, 0);
         window.setTimeout(loadArtStudyRouter, 0);
         window.setTimeout(loadWatchStudyEnrichment, 0);
-    });
+        document.documentElement.setAttribute('data-focuschrist-study-journey-ready', 'true');
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init, { once: true });
+    } else {
+        init();
+    }
 })();
