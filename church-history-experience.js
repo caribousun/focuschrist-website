@@ -5,6 +5,7 @@
     'use strict';
 
     const MAX_HISTORY_MESSAGES = 14;
+    const HISTORY_HERO_URL = 'https://drive.google.com/uc?export=view&id=1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk';
 
     function byId(id) { return document.getElementById(id); }
 
@@ -14,6 +15,19 @@
 
     function normalizeQuestion(value) {
         return String(value || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function initHero() {
+        const hero = document.querySelector('.fc-history-hero');
+        const image = hero ? hero.querySelector('img') : null;
+        if (!hero || !image) return;
+        hero.setAttribute('aria-label', 'Sacred Grove inspired Church history scene');
+        image.src = HISTORY_HERO_URL;
+        image.alt = 'A peaceful wooded grove at dawn with warm sunlight filtering through the trees';
+        image.loading = 'eager';
+        image.decoding = 'async';
+        try { image.fetchPriority = 'high'; } catch (_error) { /* unsupported browser */ }
+        document.documentElement.setAttribute('data-focuschrist-history-hero', 'sacred-grove-restoration');
     }
 
     function createMessage(kind, text) {
@@ -223,19 +237,23 @@
         const form = byId('historyAskForm');
         const input = byId('historyQuestion');
         if (!form || !input) return;
+
         form.addEventListener('submit', function (event) {
             event.preventDefault();
             answerQuestion(input.value);
         });
+
         input.addEventListener('keydown', function (event) {
-            if ((event.ctrlKey || event.metaKey) && event.key === 'Enter') {
+            if (event.key === 'Enter' && !event.shiftKey) {
                 event.preventDefault();
-                form.requestSubmit();
+                if (typeof form.requestSubmit === 'function') form.requestSubmit();
+                else byId('historyAskButton').click();
             }
         });
     }
 
     function init() {
+        initHero();
         initSuggestions();
         initForm();
         document.documentElement.setAttribute('data-focuschrist-history-experience-ready', 'true');
