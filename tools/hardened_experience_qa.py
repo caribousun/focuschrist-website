@@ -26,6 +26,7 @@ def main() -> int:
     journey = read("study-journey.js", errors)
     sources = read("study-source-router.js", errors)
     art_router = read("art-study-router.js", errors)
+    watch_enrichment = read("watch-study-enrichment.js", errors)
 
     require(common, "site-common.js", (
         "BYU_RESOURCE_LINKS",
@@ -62,6 +63,8 @@ def main() -> int:
         "study-source-router.js?v=20260829-1",
         "loadArtStudyRouter",
         "art-study-router.js?v=20260829-1",
+        "loadWatchStudyEnrichment",
+        "watch-study-enrichment.js?v=20260829-1",
     ), errors)
 
     require(sources, "study-source-router.js", (
@@ -91,15 +94,33 @@ def main() -> int:
         "data-focuschrist-art-study-router",
     ), errors)
 
+    require(watch_enrichment, "watch-study-enrichment.js", (
+        "Book of Mormon Videos",
+        "data-focuschrist-book-of-mormon-videos",
+        "Find the same themes on @theRisen636",
+        "Exact individual video links are used only when they have been verified",
+        "The Living Christ",
+        "The Good Shepherd",
+        "Suffer the Little Children",
+        "Be Still",
+        "/search?query=",
+    ), errors)
+
     forbidden = {
         "study-source-router.js": ("innerHTML", "javascript:"),
         "art-study-router.js": ("youtube.com/watch?v=", "youtu.be/"),
+        "watch-study-enrichment.js": ("youtube.com/watch?v=", "youtu.be/"),
         "study-journey.js": ("location.reload",),
     }
+    texts = {
+        "study-source-router.js": sources,
+        "art-study-router.js": art_router,
+        "watch-study-enrichment.js": watch_enrichment,
+        "study-journey.js": journey,
+    }
     for name, markers in forbidden.items():
-        text = {"study-source-router.js": sources, "art-study-router.js": art_router, "study-journey.js": journey}[name]
         for marker in markers:
-            if marker in text:
+            if marker in texts[name]:
                 errors.append(f"{name} contains forbidden hardened marker: {marker}")
 
     if errors:
@@ -109,7 +130,7 @@ def main() -> int:
         return 1
 
     print("focusChrist HARDENED EXPERIENCE QA PASSED")
-    print("Verified Ask micro-friction controls, warm palette, accessibility shell, Church/BYU source routing, and Art-to-study/video routing.")
+    print("Verified Ask micro-friction controls, warm palette, accessibility shell, Church/BYU source routing, Art-to-study/video routing, and Watch YouTube/media enrichment.")
     return 0
 
 
