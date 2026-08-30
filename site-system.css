@@ -409,6 +409,50 @@ footer[data-focuschrist-footer="standard"] p {
 .fc-footer a,
 footer[data-focuschrist-footer="standard"] a { color: var(--fc-gold-light); }
 
+/* About-page light interval: warm parchment creates visual breathing room without
+   changing the page structure or independence wording. */
+section[data-focuschrist-independence="about"] {
+    background:
+        radial-gradient(circle at 90% 0%, rgba(224,170,62,.16), transparent 22rem),
+        radial-gradient(circle at 10% 100%, rgba(134,175,200,.12), transparent 24rem),
+        linear-gradient(145deg, #fff2dc 0%, #f5e4c8 100%);
+    color: #19313f;
+    border-block: 1px solid rgba(56,37,28,.10);
+}
+section[data-focuschrist-independence="about"] .fc-container--standard {
+    color: #19313f;
+}
+section[data-focuschrist-independence="about"] .fc-notice {
+    border-left-color: #71805c;
+    background: rgba(113,128,92,.10);
+    color: #2b3b36;
+}
+section[data-focuschrist-independence="about"] .fc-notice strong {
+    color: #19313f;
+}
+section[data-focuschrist-independence="about"] .fc-button {
+    border-color: #527b96;
+    background: rgba(82,123,150,.06);
+    color: #234b61 !important;
+}
+section[data-focuschrist-independence="about"] .fc-button:hover,
+section[data-focuschrist-independence="about"] .fc-button:focus-visible {
+    border-color: #19313f;
+    background: rgba(82,123,150,.13);
+    color: #19313f !important;
+}
+section[data-focuschrist-independence="about"] .fc-button--primary {
+    border-color: #e0aa3e;
+    background: #e0aa3e;
+    color: #1d2a2e !important;
+}
+section[data-focuschrist-independence="about"] .fc-button--primary:hover,
+section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible {
+    border-color: #b87d24;
+    background: #f0c36a;
+    color: #1d2a2e !important;
+}
+
 /* Shared study-journey controls. */
 #ask-question { scroll-margin-top: 105px; }
 .ask-conversation-reset {
