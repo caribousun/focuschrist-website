@@ -1,0 +1,64 @@
+name: Pioneer Hero Repair
+
+on:
+  push:
+    paths:
+      - '.github/workflows/pioneer-hero-repair.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Point the real Pioneer hero to the approved artwork
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          page = Path('pioneers.html')
+          text = page.read_text(encoding='utf-8')
+
+          old_link = 'href="pioneer%20art.png"'
+          new_link = 'href="pioneer-hero.webp"'
+          old_img = '<img src="working-banner.png" alt="Latter-day Saint pioneer journey artwork">'
+          new_img = '<img src="pioneer-hero.webp" alt="Latter-day Saint pioneers traveling westward with handcarts and covered wagons toward distant mountains at sunrise">'
+
+          if text.count(old_link) != 1:
+              raise SystemExit(f'Expected exactly one old hero link, found {text.count(old_link)}')
+          if text.count(old_img) != 1:
+              raise SystemExit(f'Expected exactly one old hero image, found {text.count(old_img)}')
+
+          text = text.replace(old_link, new_link, 1).replace(old_img, new_img, 1)
+          page.write_text(text, encoding='utf-8', newline='')
+          PY
+
+          # Undo the interrupted legacy-banner CSS workaround. The visible image-first
+          # hero is owned by the shared hero markup, so restore the proven Pioneer CSS.
+          git show 1227f84dc97453e709995d8fa5d53af72d1a9db5:pioneer-experience.css > pioneer-experience.css
+          git rm -f pioneer-experience-base.css
+
+      - name: Verify repair markers
+        shell: bash
+        run: |
+          grep -F 'href="pioneer-hero.webp"' pioneers.html
+          grep -F '<img src="pioneer-hero.webp"' pioneers.html
+          test -s pioneer-hero.webp
+          test ! -e pioneer-experience-base.css
+          ! grep -Fq "background-image: url('pioneer-hero.webp')" pioneer-experience.css
+
+      - name: Commit repaired Pioneer hero
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add pioneers.html pioneer-experience.css pioneer-experience-base.css
+          git commit -m 'Repair visible Pioneer hero binding'
+          git push origin HEAD:main
