@@ -25,6 +25,7 @@ def main() -> int:
     system = read("site-system.css", errors)
     journey = read("study-journey.js", errors)
     sources = read("study-source-router.js", errors)
+    grounded = read("study-intelligence-v3.js", errors)
     art_router = read("art-study-router.js", errors)
     watch_enrichment = read("watch-study-enrichment.js", errors)
 
@@ -80,6 +81,22 @@ def main() -> int:
         "data-focuschrist-source-paths",
         "Official Church search",
         "BYU educational",
+        "loadGroundedIntelligence",
+        "study-intelligence-v3.js?v=20260830-3",
+    ), errors)
+
+    require(grounded, "study-intelligence-v3.js", (
+        "focusChrist Study Intelligence v3",
+        "VERIFIED CORE RESTORATION FACTS:",
+        "John the Baptist conferred the Aaronic Priesthood",
+        "Peter, James, and John later conferred the Melchizedek Priesthood",
+        "Do not use Markdown tables or pipe-table syntax",
+        "non-breaking spaces",
+        "normalizeDisplayText",
+        "convertMarkdownTables",
+        "Clear & Start Over" if False else "focusChristStudyAskV3",
+        "temperature: 0.25",
+        "data-focuschrist-study-intelligence-version",
     ), errors)
 
     require(art_router, "art-study-router.js", (
@@ -91,7 +108,8 @@ def main() -> int:
         "Official Bible Videos",
         "Related @theRisen636 videos",
         "/search?query=",
-        "data-focuschrist-art-study-router",
+        "data-focuschrist-art-study-button",
+        "data-focuschrist-art-study-drawer",
     ), errors)
 
     require(watch_enrichment, "watch-study-enrichment.js", (
@@ -111,12 +129,14 @@ def main() -> int:
         "art-study-router.js": ("youtube.com/watch?v=", "youtu.be/"),
         "watch-study-enrichment.js": ("youtube.com/watch?v=", "youtu.be/"),
         "study-journey.js": ("location.reload",),
+        "study-intelligence-v3.js": ("May the love of Jesus Christ bring you peace and clarity", "temperature: 0.7"),
     }
     texts = {
         "study-source-router.js": sources,
         "art-study-router.js": art_router,
         "watch-study-enrichment.js": watch_enrichment,
         "study-journey.js": journey,
+        "study-intelligence-v3.js": grounded,
     }
     for name, markers in forbidden.items():
         for marker in markers:
@@ -130,7 +150,7 @@ def main() -> int:
         return 1
 
     print("focusChrist HARDENED EXPERIENCE QA PASSED")
-    print("Verified Ask micro-friction controls, warm palette, accessibility shell, Church/BYU source routing, Art-to-study/video routing, and Watch YouTube/media enrichment.")
+    print("Verified Ask micro-friction controls, warm palette, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch YouTube/media enrichment.")
     return 0
 
 
