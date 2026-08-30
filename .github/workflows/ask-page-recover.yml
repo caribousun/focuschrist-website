@@ -1,0 +1,54 @@
+name: Ask Page Recover
+
+on:
+  push:
+    paths:
+      - '.github/workflows/ask-page-recover.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  recover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Restore proven Ask page and keep cache-safe crop version
+        shell: bash
+        run: |
+          git checkout 01bc62ca2f7b51906266dbd1dda866fc7cd3408f -- ask.html
+          python - <<'PY'
+          from pathlib import Path
+          page = Path('ask.html')
+          text = page.read_text(encoding='utf-8')
+          old = 'ask-hero.css?v=20260830-2'
+          new = 'ask-hero.css?v=20260830-3'
+          if text.count(old) != 1:
+              raise SystemExit(f'Expected one Ask hero v2 marker, found {text.count(old)}')
+          page.write_text(text.replace(old, new, 1), encoding='utf-8', newline='')
+          PY
+          grep -F 'ask-hero.css?v=20260830-3' ask.html
+          grep -F 'data-focuschrist-starter-questions="true"' ask.html
+          grep -F 'data-focuschrist-topic-explorer="true"' ask.html
+          grep -F 'data-focuschrist-continue-study="true"' ask.html
+          grep -F 'background-position: center 30%' ask-hero.css
+          python tools/site_qa.py
+          python tools/unified_experience_qa.py
+          python tools/resource_qa.py
+          python tools/study_intelligence_qa.py
+          python tools/hardened_experience_qa.py
+          node --check ask-experience.js
+
+      - name: Commit recovered Ask page and remove one-time workflow
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add ask.html
+          git rm .github/workflows/ask-page-recover.yml
+          git commit -m 'Recover Ask page and retain corrected hero crop'
+          git push origin HEAD:main
