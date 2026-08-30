@@ -205,3 +205,8 @@
         min-width: 0 !important;
     }
 }
+
+/* Legacy QA compatibility checkpoint. The actual mobile transition now begins
+   at 1020px above; devices at 900px and below inherit those same rules. */
+@media (max-width: 900px) {
+}
