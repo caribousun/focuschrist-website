@@ -23,6 +23,7 @@ def main() -> int:
 
     index = read("index.html", errors)
     common = read("site-common.js", errors)
+    header = read("site-header.css", errors)
     system = read("site-system.css", errors)
     ask_css = read("ask-experience.css", errors)
     pioneer_css = read("pioneer-experience.css", errors)
@@ -53,6 +54,15 @@ def main() -> int:
         "ensureMainLandmark",
         "Skip to main content",
         "normalizeFooterIdentity",
+    ), errors)
+
+    require(header, "site-header.css", (
+        "Shared conversation alignment hardening",
+        "body.fc-site .ask-chat-box .user-message",
+        "body.fc-site .qa-container .user-message",
+        "body.fc-site .fc-history-message--user",
+        "margin-left: clamp(8px, 2.4vw, 28px) !important",
+        "@media (max-width: 720px)",
     ), errors)
 
     require(system, "site-system.css", (
