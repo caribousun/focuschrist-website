@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "reviewed_on": "2026-08-31",
+  "review_standard": "L-044 exact-claim review against the official Latter-day Saint standard works in Gospel Library",
+  "reviewed_answers": [
+    {
+      "path": "ask.html",
+      "key": "color used in scripture",
+      "entry_sha256": "709f6d3aa4282dc712770fa2e42403de55b15ff97e8fabd8a739eb2660ec407b",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/1.18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19.25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/6.4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/133.46-51?lang=eng"
+      ]
+    },
+    {
+      "path": "ask.html",
+      "key": "color in scripture",
+      "entry_sha256": "709f6d3aa4282dc712770fa2e42403de55b15ff97e8fabd8a739eb2660ec407b",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/1.18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19.25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/6.4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/133.46-51?lang=eng"
+      ]
+    }
+  ],
+  "pioneer_verified_answers": []
+}

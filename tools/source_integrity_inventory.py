@@ -2,6 +2,8 @@
 """Inventory and gate verified/unverified source-dependent answer paths."""
 
 from pathlib import Path
+import hashlib
+import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,14 +16,59 @@ router = (ROOT / "study-source-router.js").read_text(encoding="utf-8")
 journey = (ROOT / "study-journey.js").read_text(encoding="utf-8")
 pioneers_html = (ROOT / "pioneers.html").read_text(encoding="utf-8")
 history_html = (ROOT / "church-history.html").read_text(encoding="utf-8")
+answer_audit = json.loads((ROOT / "answer-audit.json").read_text(encoding="utf-8"))
 
 database = ask.split("const qaDatabase = {", 1)[1].split("\n    };", 1)[0]
+entry_pattern = re.compile(r"^\s*'(?P<key>[^']+)'\s*:\s*(?P<body>\{.*\})\s*,?\s*$", re.M)
+parsed_entries = {match.group("key"): match.group("body") for match in entry_pattern.finditer(database)}
 entries = len(re.findall(r"^\s*'[^']+'\s*:\s*\{", database, re.M))
+verified_keys = {
+    key for key, body in parsed_entries.items()
+    if re.search(r"\bverified\s*:\s*true\b", body)
+}
 verified = len(re.findall(r"\bverified\s*:\s*true\b", database))
 unverified = entries - verified
 errors = []
 if entries < 1 or verified < 1 or unverified < 1:
     errors.append(f"unexpected Q&A inventory: entries={entries}, verified={verified}, unverified={unverified}")
+if verified != len(verified_keys):
+    errors.append("one or more verified Ask entries could not be pinned to a reviewed key and hash")
+
+reviewed_records = answer_audit.get("reviewed_answers", [])
+reviewed_key_list = [record.get("key") for record in reviewed_records if record.get("path") == "ask.html"]
+reviewed_keys = set(reviewed_key_list)
+if len(reviewed_key_list) != len(reviewed_keys):
+    errors.append("duplicate keys in reviewed-answer manifest")
+if verified_keys != reviewed_keys:
+    errors.append(
+        "Ask verified keys differ from the reviewed allowlist: "
+        f"runtime={sorted(verified_keys)} reviewed={sorted(reviewed_keys)}"
+    )
+for record in reviewed_records:
+    if record.get("path") != "ask.html":
+        errors.append(f"unsupported reviewed-answer path: {record.get('path')!r}")
+        continue
+    key = record.get("key")
+    body = parsed_entries.get(key)
+    if body is None:
+        errors.append(f"reviewed Ask answer is missing: {key!r}")
+        continue
+    normalized = re.sub(r"\s+", " ", body).strip()
+    actual_hash = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
+    if record.get("entry_sha256") != actual_hash:
+        errors.append(f"reviewed Ask answer changed after approval: {key!r}")
+    sources = record.get("authoritative_sources")
+    if not isinstance(sources, list) or not sources:
+        errors.append(f"reviewed Ask answer lacks authoritative sources: {key!r}")
+
+pioneer_database = pioneers_html.split("const qaDatabase = {", 1)[1].split("\n    function collapseAIResponse", 1)[0]
+pioneer_verified = len(re.findall(r"\bverified\s*:\s*true\b", pioneer_database))
+reviewed_pioneer = answer_audit.get("pioneer_verified_answers")
+if reviewed_pioneer != [] or pioneer_verified != 0:
+    errors.append(
+        "Pioneer legacy answers must remain fully quarantined until individually reviewed: "
+        f"runtime_verified={pioneer_verified} reviewed={reviewed_pioneer!r}"
+    )
 if "verifiedIntentMatchesBase(q,bestMatch)" not in ask:
     errors.append("Ask legacy accessor can still serve unverified or intent-mismatched entries")
 if "groundedLocalReference" not in v3 or "Unreviewed legacy Q&A entries are quarantined" not in v3:

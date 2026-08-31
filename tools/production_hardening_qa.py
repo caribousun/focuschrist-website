@@ -140,7 +140,7 @@ def main() -> int:
     pioneers = read("pioneers.html", errors)
     assert_order(pioneers, "pioneers.html THE JOURNEY", [
         'data-topic="exodus"', 'data-topic="winterquarters"', 'data-topic="valley"', 'data-topic="pioneerday"',
-        'data-topic="templesquare"', 'data-topic="templestart"', 'data-topic="handcart"', 'data-topic="goldrush"',
+        'data-topic="templesquare"', 'data-topic="templestart"', 'data-topic="handcart"',
         'data-topic="railroad"', 'data-topic="statehood"'
     ], errors)
     assert_order(pioneers, "pioneers.html THE TRAIL", [
@@ -153,12 +153,21 @@ def main() -> int:
         'data-topic="willie-july"', 'data-topic="willie-august"', 'data-topic="willie-september"', 'data-topic="willie-october"',
         'data-topic="martin-september"', 'data-topic="willie-november"', 'data-topic="martin-november"'
     ], errors)
-    assert_order(pioneers, "pioneers.html JOURNAL ENTRIES", [
-        "William A. Anderson, Pioneer Journal", "-- William Clayton, Pioneer Journal", "-- Orson Pratt, Pioneer Journal",
-        "-- Heber C. Kimball, Pioneer Journal", "Pioneer accounts of the 1848 cricket miracle", "-- Parley P. Pratt, Autobiography",
-        "British convert journal entry", "John D. Lee, Handcart Company", "-- John Chislett, Martin Handcart Company",
-        "-- Willie Handcart Company survivor", "Martin Handcart Company survivor"
-    ], errors)
+    require(pioneers, "pioneers.html verified primary-source research", (
+        "PRIMARY-SOURCE JOURNALS",
+        "pioneer-diaries-and-journals",
+        "study/history/topics/pioneer-trek",
+        "nps.gov/articles/000/mormon-pioneer-trail-junior-ranger",
+    ), errors)
+    for unsupported in (
+        "William A. Anderson, Pioneer Journal",
+        "British convert journal entry",
+        "Willie Handcart Company survivor",
+        "Martin Handcart Company survivor",
+        'data-topic="goldrush"',
+    ):
+        if unsupported in pioneers:
+            errors.append(f"pioneers.html retains removed unsupported material: {unsupported}")
 
     art = read("art.html", errors)
     art_router = read("art-study-router.js", errors)

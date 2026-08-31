@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "reviewed_on": "2026-08-31",
+  "scope": "Every published HTML document and its visitor-visible prose, headings, link labels, controls, and search/social description metadata.",
+  "method": "Human semantic review against the cited authoritative sources. Exact quotations require exact-text verification; factual paraphrases require direct support; interpretation must be labeled; unsupported material is corrected or removed. The CI hash invalidates approval whenever published wording changes.",
+  "limitations": "This ledger records semantic review; a hash is only a change detector and is not evidence that a claim is true. Script-embedded answer banks are governed separately by source_integrity_inventory.py and fail-closed runtime policy.",
+  "documents": [
+    {
+      "path": "404.html",
+      "status": "non-source-dependent",
+      "published_text_sha256": "d56d12e92437d744096b70a47b344393c7a219fbceb40c03ac9eac4d98a15a51",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review"
+    },
+    {
+      "path": "about.html",
+      "status": "verified",
+      "published_text_sha256": "52ad57e078a7f4ebd2968e0f6d7871c45d685d7d8dfe690bab5418f244572fbf",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3.16?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng"
+      ]
+    },
+    {
+      "path": "answers.html",
+      "status": "verified",
+      "published_text_sha256": "4b5f5a3fd13aeb9d8688f11d35303e33c14a9620423d275b89361209b73a2ef3",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "answers/what-happens-after-death.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/why-families-are-important.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/faith-in-jesus-christ-during-trials.html"
+      ]
+    },
+    {
+      "path": "answers/are-latter-day-saints-christian.html",
+      "status": "verified",
+      "published_text_sha256": "31bc0c20da67fcc1100d4d43c666dfaf38d01ffd8705801c1705aabcecc314dc",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://faq.churchofjesuschrist.org/are-mormons-christian",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng"
+      ]
+    },
+    {
+      "path": "answers/bible-and-book-of-mormon-together.html",
+      "status": "verified",
+      "published_text_sha256": "d88c55a63f3842df9184102bcc0bd4a561aa9d157253a7db02635672107f5ebf",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/how-the-bible-and-the-book-of-mormon-work-together",
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ"
+      ]
+    },
+    {
+      "path": "answers/faith-in-jesus-christ-during-trials.html",
+      "status": "verified",
+      "published_text_sha256": "a9a22c7c9fd15f09e2920fa6056dda195e8786306899e6101fa2cd9733f460f0",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith-in-jesus-christ-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/adversity?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?id=p11-p13&lang=eng"
+      ]
+    },
+    {
+      "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "status": "verified",
+      "published_text_sha256": "75b44bda6ba7364aad81c8ffd19c2cbab43a55e3b078cc2ca238f8821b4d8ef9",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng"
+      ]
+    },
+    {
+      "path": "answers/prayer-and-personal-revelation.html",
+      "status": "verified",
+      "published_text_sha256": "fceb76412b0d8984646a61ca2aee2a1039ee9c1803f24f13d16880bb9c99954d",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/revelation-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/holy-ghost-study-guide?lang=eng"
+      ]
+    },
+    {
+      "path": "answers/what-happens-after-death.html",
+      "status": "verified",
+      "published_text_sha256": "8403efa495034d629436deba5e87e921c0f3b62aacd56913eed911209e53e359",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/spirit-world-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/salvation-study-guide?lang=eng"
+      ]
+    },
+    {
+      "path": "answers/what-is-the-book-of-mormon.html",
+      "status": "verified",
+      "published_text_sha256": "9f9c905649c5ba7dd37b50fcae24c6f1f3af2e2ecae4d66690b6dcfdd78def2d",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ",
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/how-the-bible-and-the-book-of-mormon-work-together",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng"
+      ]
+    },
+    {
+      "path": "answers/who-was-joseph-smith.html",
+      "status": "verified",
+      "published_text_sha256": "686ea3c86c2355705dbe14649d5f215d7d8d3ebc431df4297324ffce33d9dd4a",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://newsroom.churchofjesuschrist.org/ldsnewsroom/eng/background-information/joseph-smith-and-the-restoration",
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-and-plural-marriage?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng"
+      ]
+    },
+    {
+      "path": "answers/why-families-are-important.html",
+      "status": "verified",
+      "published_text_sha256": "0eab0bfa02d2cf6a8a32c04100d6ce96b886dc08541698c714f8af45bf512dc1",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/family-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/feature/the-family-a-proclamation-to-the-world?lang=eng",
+        "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+      ]
+    },
+    {
+      "path": "answers/why-latter-day-saints-build-temples.html",
+      "status": "verified",
+      "published_text_sha256": "c9646de9f59a61de8fcc53d687bbd698f18f763910618b32f36dd245358e6a6c",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+      ]
+    },
+    {
+      "path": "art-study/be-still.html",
+      "status": "verified",
+      "published_text_sha256": "af2b1e6fd5c60bab2a38532dda2a58fa997e85ba32b32417dbbfd47635e2c1bc",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review; devotional interpretation labeled as interpretation",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10"
+      ]
+    },
+    {
+      "path": "art-study/suffer-the-little-children.html",
+      "status": "verified",
+      "published_text_sha256": "67e2c09b9ae4ac0bad0d7219204020db8b70010346acde9ee99ef2c9d4710d11",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review; devotional interpretation labeled as interpretation",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p11-p25#p11"
+      ]
+    },
+    {
+      "path": "art-study/the-good-shepherd.html",
+      "status": "verified",
+      "published_text_sha256": "20f841cffcc9155e09e92cabc50a2851ec8b7b96ab510825a18655ce7ad93053",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review; devotional interpretation labeled as interpretation",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng"
+      ]
+    },
+    {
+      "path": "art-study/the-living-christ.html",
+      "status": "verified",
+      "published_text_sha256": "2a92c3d759fd4679c7f12ffd2d873801938804bcee408a2f7f77bb356d2faa89",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review; devotional interpretation labeled as interpretation",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng"
+      ]
+    },
+    {
+      "path": "art.html",
+      "status": "non-source-dependent",
+      "published_text_sha256": "32b23c9dfe6a852ee969a61fd12abe9ac7c73f0b6d6b5540a0ac5358e10c7a22",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review"
+    },
+    {
+      "path": "ask.html",
+      "status": "verified",
+      "published_text_sha256": "a24569591cb50c401b3464f4d8fd79df1850cca67781bd4a1f3c10fcf00f4bdf",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review; embedded answers governed by separate fail-closed inventory and runtime checks",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng"
+      ]
+    },
+    {
+      "path": "church-history.html",
+      "status": "verified",
+      "published_text_sha256": "eaf899da42ec54c56b10dc0cae742caa98617b68754acbf9f44d171d3f4a79c0",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/saints-v1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/saints-v2?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/saints-v3?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/saints-v4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics?lang=eng"
+      ]
+    },
+    {
+      "path": "google3fa84a4b37862f36.html",
+      "status": "non-source-dependent",
+      "published_text_sha256": "ffdba67eb6588805c874a230431ebe4f0fd1b890995876e874b1177fc3764d44",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review"
+    },
+    {
+      "path": "index.html",
+      "status": "verified",
+      "published_text_sha256": "6a57c015a8706c02683b92f854927637489be0c4ac30393ef272fb2a5b91a56c",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/church-history?lang=eng"
+      ]
+    },
+    {
+      "path": "pioneers.html",
+      "status": "verified",
+      "published_text_sha256": "f11d8b3a622860d0bba28264bac53dc743b8b8ecdb069d555851b456582cc6cb",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review; unsupported quotation cards removed",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng",
+        "https://history.churchofjesuschrist.org/timeline/us-migration-mormon-emigration-and-the-handcart-experiment",
+        "https://history.churchofjesuschrist.org/landing/church-history-library/pioneer-diaries-and-journals",
+        "https://www.nps.gov/MOPI",
+        "https://www.nps.gov/articles/000/the-1846-trek-mormon-pioneer-trail.htm",
+        "https://www.nps.gov/mopi/learn/historyculture/the-1847-trek.htm",
+        "https://www.nps.gov/articles/000/mormon-pioneer-trail-junior-ranger.htm",
+        "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng",
+        "https://newsroom.churchofjesuschrist.org/additional-resources/background-on-the-salt-lake-temple",
+        "https://www.churchofjesuschrist.org/study/history/topics/mountain-meadows-massacre?lang=eng",
+        "https://archives.utah.gov/2021/01/04/utahs-road-to-statehood-125-years/"
+      ]
+    },
+    {
+      "path": "watch.html",
+      "status": "verified",
+      "published_text_sha256": "ba449576f1d3c51fd39bb7a728d8994e742123e28ac44caa711a3855b9349244",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
+        "https://www.churchofjesuschrist.org/study/video/easter-videos/2020-02-4000-this-easter-hearhim-jesus-christs-words-are-for-you-1080p?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
+        "https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng"
+      ]
+    }
+  ]
+}

@@ -34,7 +34,8 @@ required_by_file = {
     ),
     "groq-proxy/src/index.js": (
         "SERVER SOURCE-INTEGRITY POLICY", "ALLOWED_ORIGINS", "guardGeneratedAnswer",
-        "focuschrist_source_policy = '2026-08-31.5'",
+        "SOURCE_POLICY_VERSION = '2026-08-31.6'",
+        "fail-closed-unreviewed-generation",
     ),
 }
 errors = []
