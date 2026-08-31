@@ -33,15 +33,23 @@ jobs:
       - name: Validate Worker JavaScript
         run: node --check groq-proxy/src/index.js
 
+      - name: Set up Node.js
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: groq-proxy/package-lock.json
+
+      - name: Install pinned Worker deployment dependencies
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        working-directory: groq-proxy
+        run: npm ci --ignore-scripts
+
       - name: Deploy hardened Worker
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
-        uses: cloudflare/wrangler-action@v4
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: groq-proxy
-          command: deploy
-          wranglerVersion: "4.126.0"
+        working-directory: groq-proxy
+        run: npx --no-install wrangler deploy
 
       - name: Report missing deployment authorization
         if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''
