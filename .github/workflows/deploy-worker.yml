@@ -49,7 +49,7 @@ jobs:
       - name: Deploy hardened Worker
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
         working-directory: groq-proxy
-        run: npx --no-install wrangler deploy
+        run: npx --no-install wrangler deploy --config wrangler.toml
 
       - name: Report missing deployment authorization
         if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''
