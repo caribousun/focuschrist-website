@@ -319,7 +319,7 @@
             if (document.querySelector('script[data-focuschrist-study-intelligence-v2]')) return;
             appendScript('study-intelligence-v2.js?v=20260830-2', 'data-focuschrist-study-intelligence-v2', function () {
                 if (document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-                appendScript('study-intelligence-v3.js?v=20260830-3', 'data-focuschrist-study-intelligence-v3');
+                appendScript('study-intelligence-v3.js?v=20260831-4', 'data-focuschrist-study-intelligence-v3');
             });
         });
     }
