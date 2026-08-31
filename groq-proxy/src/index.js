@@ -160,7 +160,9 @@ async function callGroq(apiKey, body) {
     headers: {
       Authorization: `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
-      'Groq-Model-Version': 'latest',
+      // Basic search keeps official-source retrieval within the provider's
+      // request-size limit; the Worker independently verifies its snippets.
+      'Groq-Model-Version': '2025-07-23',
     },
     body: JSON.stringify(body),
   });
