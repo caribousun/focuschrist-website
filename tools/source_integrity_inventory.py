@@ -32,6 +32,10 @@ if "Source-dependent pioneer answers remain blocked" not in pioneer:
     errors.append("Pioneer final owner is not fail-closed")
 if "LINKS ONLY; NOT CLAIM VERIFICATION" not in history or "LINKS ONLY; NOT CLAIM VERIFICATION" not in router:
     errors.append("Church History routes can still be mislabeled as claim verification")
+if router.count("focusChristSourceIntegrity.isScriptureDependent") < 2:
+    errors.append("source router does not reuse the shared scripture detector for faith classification and Scriptures-hub routing")
+if "Verified study paths" in router or "Verified study sources" in router:
+    errors.append("source routes are still mislabeled as claim verification")
 if "unreviewed-source-dependent-generation" not in common:
     errors.append("shared source-integrity contract is not fail-closed")
 

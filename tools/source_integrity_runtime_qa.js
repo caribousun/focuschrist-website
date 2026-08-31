@@ -1,8 +1,8 @@
 const fs = require('fs');
 const vm = require('vm');
 
-global.window = {};
-global.document = { addEventListener() {} };
+global.window = { location: { pathname: '/ask.html' } };
+global.document = { readyState: 'loading', addEventListener() {} };
 vm.runInThisContext(fs.readFileSync('site-common.js', 'utf8'), { filename: 'site-common.js' });
 
 const integrity = window.focusChristSourceIntegrity;
@@ -23,5 +23,12 @@ assert(guard('Rayleigh scattering makes the daytime sky appear blue.', { sourceD
 
 for (const query of ['D&C 18:15', 'Doctrine and Covenants 76:31', 'Isaiah 1:18', 'Matthew 5:3', '2 Corinthians 12:2', 'Alma 32:21', 'Moses 1:1', 'Song of Solomon 1:1', 'Words of Mormon 1:1', 'Joseph Smith—Matthew 1:1', 'what does Genesis say about creation?', 'what does Isaiah teach about color?', 'what does Matthew say about prayer?', 'what does Mark say about baptism?']) {
     assert(integrity.isScriptureDependent(query), 'scripture query not detected: ' + query);
+}
+
+vm.runInThisContext(fs.readFileSync('study-source-router.js', 'utf8'), { filename: 'study-source-router.js' });
+for (const query of ['what does Mark say about baptism?', 'what does Song of Solomon teach?', 'what does Words of Mormon say?', 'what does Joseph Smith—Matthew teach?']) {
+    assert(window.focusChristSourceRouter.isFaithQuestion(query), 'router did not classify scripture query: ' + query);
+    const sources = window.focusChristSourceRouter.sourcesForQuestion(query);
+    assert(sources.some((source) => source.url.includes('/study/scriptures?')), 'router omitted Scriptures hub: ' + query);
 }
 console.log('Source integrity runtime QA PASS');

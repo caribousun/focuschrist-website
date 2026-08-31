@@ -90,7 +90,10 @@
     function isChurchHistoryPage() { return pathEnds('church-history.html'); }
 
     function isFaithQuestion(question) {
-        return isPioneerPage() || isChurchHistoryPage() || containsAny(question, FAITH_TERMS);
+        const sharedScriptureDependency = window.focusChristSourceIntegrity
+            && typeof window.focusChristSourceIntegrity.isScriptureDependent === 'function'
+            && window.focusChristSourceIntegrity.isScriptureDependent(question);
+        return isPioneerPage() || isChurchHistoryPage() || sharedScriptureDependency || containsAny(question, FAITH_TERMS);
     }
 
     function isChurchHistoryQuestion(question) {
@@ -231,7 +234,10 @@
 
     function sourcesForQuestion(question) {
         if (!isFaithQuestion(question)) return [];
-        if (isChurchHistoryQuestion(question)) return sourcesForHistoryQuestion(question);
+        const sharedScriptureDependency = window.focusChristSourceIntegrity
+            && typeof window.focusChristSourceIntegrity.isScriptureDependent === 'function'
+            && window.focusChristSourceIntegrity.isScriptureDependent(question);
+        if (isChurchHistoryQuestion(question) && !sharedScriptureDependency) return sourcesForHistoryQuestion(question);
 
         const q = normalize(question);
         const results = [];
@@ -243,7 +249,7 @@
         });
         results.push(source(OFFICIAL.topics, 'Official Church', 'Broad doctrine, practice, history, and question-based study.'));
 
-        if (containsAny(q, SCRIPTURE_TERMS)) {
+        if (sharedScriptureDependency || containsAny(q, SCRIPTURE_TERMS)) {
             results.push(source(OFFICIAL.scriptures, 'Official Church', 'Read the standard works in Gospel Library.'));
             results.push(source(BYU.citation, 'BYU educational', 'See where scripture passages are cited in General Conference and other materials.'));
         }
@@ -285,11 +291,16 @@
         const panel = document.createElement('aside');
         panel.className = 'fc-source-paths';
         panel.setAttribute('data-focuschrist-source-paths', 'true');
-        panel.setAttribute('aria-label', 'Verified study sources');
+        panel.setAttribute('aria-label', 'Official study routes');
 
         const title = document.createElement('div');
         title.className = 'fc-source-paths-title';
-        title.textContent = isChurchHistoryQuestion(question) ? 'Official Church History paths' : 'Verified study paths';
+        const scriptureQuestion = window.focusChristSourceIntegrity
+            && typeof window.focusChristSourceIntegrity.isScriptureDependent === 'function'
+            && window.focusChristSourceIntegrity.isScriptureDependent(question);
+        title.textContent = isChurchHistoryQuestion(question) && !scriptureQuestion
+            ? 'Official Church History paths'
+            : 'Official study paths';
         panel.appendChild(title);
 
         const list = document.createElement('div');
