@@ -39,6 +39,9 @@ jobs:
       - name: Run Church History source and experience QA
         run: python tools/church_history_qa.py
 
+      - name: Run scripture grounding QA
+        run: python tools/scripture_grounding_qa.py
+
       - name: Validate shared site JavaScript
         run: node --check site-common.js
 
