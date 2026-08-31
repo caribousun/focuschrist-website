@@ -44,12 +44,12 @@ a:hover { color: #fff2dc; }
     padding: 82px 20px 55px;
     background:
         linear-gradient(rgba(14,35,45,0.32), rgba(20,42,53,0.88)),
-        url('Jesus.png') center 35% / cover no-repeat;
+        url('assets/heroes/home.webp') center 35% / cover no-repeat;
 }
 .answer-hero.nested {
     background:
         linear-gradient(rgba(14,35,45,0.32), rgba(20,42,53,0.88)),
-        url('../Jesus.png') center 35% / cover no-repeat;
+        url('assets/heroes/home.webp') center 35% / cover no-repeat;
 }
 .answer-hero h1 {
     margin: 0;

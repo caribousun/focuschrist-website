@@ -54,3 +54,17 @@ Git history is the primary restore mechanism. If a production defect is found:
 5. verify production again.
 
 Do not bypass QA merely to make a deployment faster.
+
+
+## Hardened presentation gates
+Before merging a presentation/release pass, also verify:
+- every core hero resolves to a repository-local approved production asset and meets the recorded resolution floor;
+- no runtime HTML/CSS/JS depends on editable `lh3.googleusercontent.com/d/...` project assets;
+- Watch concrete video cards have corresponding thumbnails and verified destinations;
+- Pioneer Journey, Trail, handcart, and journal items are chronological within their sections;
+- Art “Study this artwork” offers official Church topic study/search and contextual Ask, not a generic YouTube/channel substitute;
+- contextual Art -> Ask -> Art navigation returns to and reopens the exact artwork;
+- core page Open Graph/Twitter images use the matching local high-resolution hero;
+- `python tools/production_hardening_qa.py` passes in addition to all existing QA.
+
+Any newly discovered presentation defect should be converted into a regression check when practical.

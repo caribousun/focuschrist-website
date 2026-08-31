@@ -2,7 +2,7 @@
    Page-specific only. Shared site geometry, typography, header and footer remain authoritative. */
 
 .fc-visual-hero--watch::before {
-    background-image: url('https://lh3.googleusercontent.com/d/1wVOC_A1NeKq0JadLFeYkX49uTfbRacAI') !important;
+    background-image: url('assets/heroes/watch.webp') !important;
     background-position: center 48% !important;
 }
 
@@ -44,7 +44,7 @@
     border-radius: 18px;
     background:
         linear-gradient(180deg, rgba(7, 27, 36, 0.05) 30%, rgba(7, 27, 36, 0.92) 100%),
-        url('https://lh3.googleusercontent.com/d/1wVOC_A1NeKq0JadLFeYkX49uTfbRacAI') center 48% / cover no-repeat;
+        url('assets/heroes/watch.webp') center 48% / cover no-repeat;
 }
 
 .watch-featured-media::after,
@@ -478,3 +478,32 @@
         transition: none;
     }
 }
+
+
+/* Production hardening: every concrete theme Watch route carries a corresponding video thumbnail. */
+.watch-path-card[data-watch-path="watch"] {
+    position: relative;
+    overflow: hidden;
+    padding-top: 142px;
+}
+.watch-path-card[data-watch-path="watch"]::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 118px;
+    background-image: var(--watch-path-thumb);
+    background-size: cover;
+    background-position: center 42%;
+    filter: saturate(.96) contrast(1.03) brightness(.92);
+}
+.watch-path-card[data-watch-path="watch"]::after {
+    content: "";
+    position: absolute;
+    top: 76px;
+    left: 0;
+    right: 0;
+    height: 44px;
+    background: linear-gradient(180deg, transparent, rgba(18,42,53,.98));
+    pointer-events: none;
+}
+.watch-path-card[data-watch-path="watch"] > * { position: relative; z-index: 1; }

@@ -201,7 +201,7 @@ body.fc-site img { max-width: 100%; }
         );
 }
 
-.fc-visual-hero--christ::before { background-image: url('Jesus.png'); }
+.fc-visual-hero--christ::before { background-image: url('assets/heroes/home.webp'); }
 .fc-visual-hero--history::after {
     background:
         linear-gradient(

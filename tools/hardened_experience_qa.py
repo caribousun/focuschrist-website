@@ -48,7 +48,7 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260830-2",
+        "study-journey.js?v=20260830-3",
         "study-intelligence-v3.js?v=20260830-3",
         "data-focuschrist-study-intelligence-v3",
         "ensureMainLandmark",
@@ -117,9 +117,9 @@ def main() -> int:
         "loadVerifiedSourceRouter",
         "study-source-router.js?v=20260830-2",
         "loadArtStudyRouter",
-        "art-study-router.js?v=20260830-2",
+        "art-study-router.js?v=20260830-3",
         "loadWatchStudyEnrichment",
-        "watch-study-enrichment.js?v=20260830-2",
+        "watch-study-enrichment.js?v=20260830-3",
         "document.readyState === 'loading'",
         "data-focuschrist-study-journey-ready",
     ), errors)
@@ -161,13 +161,10 @@ def main() -> int:
 
     require(art_router, "art-study-router.js", (
         "Study this artwork",
-        "The Living Christ",
-        "The Good Shepherd",
-        "Suffer the Little Children",
-        "Be Still",
-        "Official Bible Videos",
-        "Related @theRisen636 videos",
-        "/search?query=",
+        "Ask about this artwork",
+        "Study this topic on ChurchofJesusChrist.org",
+        "returnUrlForCaption",
+        "data-focuschrist-art-return-restored",
         "data-focuschrist-art-study-button",
         "data-focuschrist-art-study-drawer",
         "document.readyState === 'loading'",
@@ -175,15 +172,11 @@ def main() -> int:
     ), errors)
 
     require(watch_enrichment, "watch-study-enrichment.js", (
-        "Book of Mormon Videos",
-        "data-focuschrist-book-of-mormon-videos",
-        "Find the same themes on @theRisen636",
-        "Exact individual video links are used only when they have been verified",
-        "The Living Christ",
-        "The Good Shepherd",
-        "Suffer the Little Children",
-        "Be Still",
-        "/search?query=",
+        "watch-mini-media",
+        "data-watch-thumbnail-ready",
+        "Watch ",
+        "ChurchofJesusChrist.org",
+        "MutationObserver",
         "document.readyState === 'loading'",
         "data-focuschrist-watch-enrichment-ready",
     ), errors)
@@ -191,7 +184,7 @@ def main() -> int:
     forbidden = {
         "ask-experience.css": ("rgba(183,104,72,0.09)",),
         "study-source-router.js": ("innerHTML", "javascript:"),
-        "art-study-router.js": ("youtube.com/watch?v=", "youtu.be/"),
+        "art-study-router.js": ("youtube.com", "youtu.be/", "@theRisen636"),
         "watch-study-enrichment.js": ("youtube.com/watch?v=", "youtu.be/"),
         "study-journey.js": ("location.reload",),
         "study-intelligence-v3.js": ("May the love of Jesus Christ bring you peace and clarity", "temperature: 0.7"),
@@ -219,7 +212,7 @@ def main() -> int:
         return 1
 
     print("focusChrist HARDENED EXPERIENCE QA PASSED")
-    print("Verified direct Home-to-Ask arrival, complete Harvest Sky Ask follow-up styling, Pioneer date/title collision protection, hardened Pioneer disclosure ownership and timeout recovery, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-study/video routing, and Watch enrichment.")
+    print("Verified direct Home-to-Ask arrival, complete Harvest Sky Ask follow-up styling, Pioneer date/title collision protection, hardened Pioneer disclosure ownership and timeout recovery, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-official-study/contextual-Ask routing with exact return continuity, and thumbnail-backed Watch enrichment.")
     return 0
 
 

@@ -259,3 +259,9 @@ Use this format:
 ---
 
 *Last updated: 2026-03-20 08:59 PM by Kal 🕊️*
+
+
+### 2026-08-30 hardened production presentation pass
+- Hardened release standard added for local high-resolution heroes, Watch thumbnails, Pioneer chronology, contextual artwork study, exact Art->Ask->Art return continuity, discoverability, and production deployment verification.
+- `tools/production_hardening_qa.py` is now part of the permanent release gate.
+- Future Focus runs must treat these as production requirements, not optional polish.
