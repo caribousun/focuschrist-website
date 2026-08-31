@@ -197,11 +197,11 @@
     }
 
     function loadArtStudyRouter() {
-        if (window.location.pathname.toLowerCase().endsWith('/art.html')) appendDynamicScript('art-study-router.js?v=20260830-2', 'data-focuschrist-art-study-router');
+        if (window.location.pathname.toLowerCase().endsWith('/art.html')) appendDynamicScript('art-study-router.js?v=20260830-3', 'data-focuschrist-art-study-router');
     }
 
     function loadWatchStudyEnrichment() {
-        if (window.location.pathname.toLowerCase().endsWith('/watch.html')) appendDynamicScript('watch-study-enrichment.js?v=20260830-2', 'data-focuschrist-watch-enrichment');
+        if (window.location.pathname.toLowerCase().endsWith('/watch.html')) appendDynamicScript('watch-study-enrichment.js?v=20260830-3', 'data-focuschrist-watch-enrichment');
     }
 
     function init() {

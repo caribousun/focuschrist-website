@@ -2,7 +2,7 @@
    Page-specific only; shared hero geometry remains owned by site-system.css. */
 
 .fc-visual-hero--answers::before {
-    background-image: url('https://lh3.googleusercontent.com/d/1NWPUsngEeD59ld3wA23HT7z2Ge4Wcpca');
+    background-image: url('assets/heroes/answers.webp');
     background-position: center 58%;
     background-repeat: no-repeat;
     background-size: cover;

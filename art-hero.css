@@ -1,7 +1,7 @@
 /* Owner-approved Art page hero — 2026-08-30.
    Page-specific image only; shared focusChrist hero geometry remains authoritative. */
 .fc-visual-hero--art::before {
-    background-image: url('https://lh3.googleusercontent.com/d/1A-QViKaQ80YHgJtaeLZ_6X2yMDgx32JH') !important;
+    background-image: url('assets/heroes/art.webp') !important;
     background-position: center 50% !important;
 }
 

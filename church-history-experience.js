@@ -7,7 +7,7 @@
 
     const MAX_HISTORY_MESSAGES = 14;
     const MAX_CONTEXT_TURNS = 6;
-    const HISTORY_HERO_URL = 'https://lh3.googleusercontent.com/d/1B1dzLdcOSCEf5ahk-wFAsd7IAJVaVjMk';
+    const HISTORY_HERO_URL = 'assets/heroes/church-history.webp';
     const historyConversation = [];
     let historyBusy = false;
 

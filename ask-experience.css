@@ -39,7 +39,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: url('Jesus.png') center 34% / cover no-repeat;
+    background: url('assets/heroes/home.webp') center 34% / cover no-repeat;
     transform: scale(1.015);
 }
 

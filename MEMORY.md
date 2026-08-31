@@ -177,3 +177,16 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 ---
 
 *Last updated: 2026-03-18*
+
+
+## FocusChrist Production Hardening Standard (August 30, 2026)
+
+- Production releases are presentation-gated, not merely load-gated. Core pages must pass visual, mobile, accessibility, link, SEO/discoverability, local-asset, and deployment checks before being called complete.
+- Primary page heroes use repository-local production assets. Current hero standard: Ask/Answers/Art/Pioneers/Watch/About at 2172x724; Church History at 1916x821; Home retains its approved local hero. Do not reintroduce editable Google Drive image dependencies into runtime pages.
+- Watch is media-first: every concrete video card/path must show a corresponding thumbnail and link to the verified video/source it represents. Collection links are not to masquerade as individual videos.
+- Pioneer historical lists must remain chronological within their own sections. THE JOURNEY, THE TRAIL, Willie & Martin, and Journal Entries are release-gated by production QA.
+- Art modal study is topic-first: the primary paths are official Church study/search and contextual focusChrist Ask. The Art study drawer must not use @theRisen636 as a substitute for subject study.
+- Artwork Ask continuity is mandatory: Art passes the exact artwork + topic + return URL into Ask; Ask shows persistent return controls; returning to Art reopens the exact artwork the visitor left.
+- `tools/production_hardening_qa.py` is a protected release gate and must run in pull-request/main QA and the GitHub Pages deploy workflow.
+- Search/discovery controls (`robots.txt`, `sitemap.xml`, canonical metadata, specific high-resolution social preview images) must be preserved and updated with material page changes.
+- Production learning rule: when a presentation review exposes a defect class, fix the instance and add a regression gate so future sessions cannot silently regress it.
