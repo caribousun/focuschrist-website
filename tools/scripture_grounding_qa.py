@@ -9,9 +9,12 @@ required = {
     "official LDS canon boundary": "the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price",
     "hard accuracy rule": "SCRIPTURE ACCURACY IS A HARD REQUIREMENT",
     "reference-content citation boundary": "ONLY when that passage and its official ChurchofJesusChrist.org source were supplied in REFERENCE CONTENT",
-    "fail-closed runtime check": "if (!contextEntries && scriptureCitationPattern.test(answer))",
+    "citation-to-source comparison": "const hasUngroundedCitation = generatedCitations.some",
+    "fail-closed runtime check": "if (generatedCitations.length && hasUngroundedCitation)",
     "official Gospel Library fallback": "Please confirm this question in the official Gospel Library at ChurchofJesusChrist.org",
     "low-variance generation": "temperature: 0.1",
+    "verified color answer": "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
+    "verified-answer bypass": "if(dbResult.verified)",
 }
 
 missing = [label for label, marker in required.items() if marker not in ask_text]
