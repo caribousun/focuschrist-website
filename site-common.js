@@ -308,6 +308,14 @@
         /red,?\s+white,?\s+and\s+black\s+lights?/i,
         /["']?(?:red|black|golden)\s+light["']?.{0,180}(?:D&C|Doctrine\s+and\s+Covenants)\s+76/i
     ];
+
+    function hasKnownFalseClaim(text) {
+        const value = String(text || '');
+        if (!KNOWN_FALSE_SOURCE_PATTERNS.some(function (pattern) { return pattern.test(value); })) return false;
+        const explicitCorrection = /\b(?:does\s+not|do\s+not|doesn't|don't|is\s+not|are\s+not|never|no\s+such)\b.{0,180}\b(?:red|white|black|golden)\b/i.test(value)
+            || /\b(?:red|white|black|golden)\b.{0,180}\b(?:does\s+not|do\s+not|is\s+not|are\s+not|never)\b/i.test(value);
+        return !explicitCorrection;
+    }
     const SOURCE_INTEGRITY_FALLBACK = 'I cannot verify the specific source claim well enough to present it as authoritative. Please confirm the subject in the official Gospel Library at ChurchofJesusChrist.org. I would rather acknowledge that limit than attach an incorrect passage or quotation to a teaching.';
 
     function normalizeSourceReference(text) {
@@ -338,7 +346,7 @@
         // entry or carry the server-owned retrieval-and-verification receipt.
         // Client-supplied links or prompt excerpts never create that receipt.
         if (settings.sourceDependent === true && !serverVerified) violations.push('unreviewed-source-dependent-generation');
-        if (KNOWN_FALSE_SOURCE_PATTERNS.some(function (pattern) { return pattern.test(text); })) {
+        if (hasKnownFalseClaim(text)) {
             violations.push('known-false-source-claim');
         }
         if (ungroundedCitations.length && !serverVerified) violations.push('ungrounded-scripture-citation');
@@ -360,7 +368,7 @@
     }
 
     window.focusChristSourceIntegrity = Object.freeze({
-        policyVersion: '2026-08-31.7',
+        policyVersion: '2026-08-31.9',
         fallback: SOURCE_INTEGRITY_FALLBACK,
         extractScriptureCitations: extractScriptureCitations,
         isScriptureDependent: function (text) {
@@ -384,14 +392,14 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260831-6'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260831-7'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260831-6', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260831-7', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {

@@ -13,7 +13,7 @@ const ALLOWED_ORIGINS = new Set([
 ]);
 const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
-const SOURCE_POLICY_VERSION = '2026-08-31.8';
+const SOURCE_POLICY_VERSION = '2026-08-31.9';
 const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
@@ -92,7 +92,7 @@ function canonicalSource(rawUrl, title, content) {
       url: url.href,
       host: url.hostname.toLowerCase(),
       title: String(title || url.hostname).replace(/\s+/g, ' ').trim().slice(0, 180),
-      content: String(content || '').replace(/\s+/g, ' ').trim().slice(0, 6000),
+      content: String(content || '').replace(/\s+/g, ' ').trim().slice(0, 1800),
     };
   } catch (_error) {
     return null;
@@ -125,7 +125,7 @@ function collectSourceEvidence(message) {
       unique.push(source);
     }
   });
-  return unique.slice(0, 12);
+  return unique.slice(0, 6);
 }
 
 function isOfficialChurchSource(source) {
@@ -138,7 +138,7 @@ function evidenceForVerifier(evidence) {
     `TITLE: ${source.title}`,
     `URL: ${source.url}`,
     `CONTENT: ${source.content || '(No retrievable source excerpt was returned.)'}`,
-  ].join('\n')).join('\n\n').slice(0, 36000);
+  ].join('\n')).join('\n\n').slice(0, 10000);
 }
 
 function parseVerifierJson(text) {
@@ -150,11 +150,19 @@ function guardVerifiedAnswer(answer, evidence, scope, approved) {
   const text = String(answer || '').trim();
   if (!approved || !text || !Array.isArray(evidence) || !evidence.length) return SOURCE_INTEGRITY_FALLBACK;
   if (scope.faith && !evidence.some(isOfficialChurchSource)) return SOURCE_INTEGRITY_FALLBACK;
-  if (KNOWN_FALSE_SOURCE_PATTERNS.some((pattern) => pattern.test(text))) return SOURCE_INTEGRITY_FALLBACK;
+  if (hasKnownFalseClaim(text)) return SOURCE_INTEGRITY_FALLBACK;
   return text;
 }
 
-async function callGroq(apiKey, body) {
+function hasKnownFalseClaim(text) {
+  const value = String(text || '');
+  if (!KNOWN_FALSE_SOURCE_PATTERNS.some((pattern) => pattern.test(value))) return false;
+  const explicitCorrection = /\b(?:does\s+not|do\s+not|doesn't|don't|is\s+not|are\s+not|never|no\s+such)\b.{0,180}\b(?:red|white|black|golden)\b/i.test(value)
+    || /\b(?:red|white|black|golden)\b.{0,180}\b(?:does\s+not|do\s+not|is\s+not|are\s+not|never)\b/i.test(value);
+  return !explicitCorrection;
+}
+
+async function callGroq(apiKey, body, mayRetry = true) {
   const response = await fetch(GROQ_ENDPOINT, {
     method: 'POST',
     headers: {
@@ -168,6 +176,12 @@ async function callGroq(apiKey, body) {
   });
   let data = null;
   try { data = await response.json(); } catch (_error) {}
+  if (response.status === 429 && mayRetry) {
+    const retrySeconds = Number.parseFloat(response.headers.get('retry-after') || '2');
+    const waitMs = Math.min(8000, Math.max(1000, Number.isFinite(retrySeconds) ? retrySeconds * 1000 : 2000));
+    await new Promise((resolve) => setTimeout(resolve, waitMs));
+    return callGroq(apiKey, body, false);
+  }
   return { response, data };
 }
 
@@ -303,6 +317,7 @@ export {
   classifyResearchScope,
   collectSourceEvidence,
   guardVerifiedAnswer,
+  hasKnownFalseClaim,
   isOfficialChurchSource,
   parseVerifierJson,
   sanitizePayload,

@@ -28,6 +28,11 @@ assert(!guard('D&C 76 says red, white, and black lights represent three kingdoms
     sourceDependent: true,
     serverVerified: true
 }).ok, 'known false claims must remain blocked even with a server receipt');
+assert(guard('Doctrine and Covenants 76 does not teach that red, white, and black lights represent three kingdoms.', {
+    trustedReferenceText: 'Doctrine and Covenants 76 Official Gospel Library',
+    sourceDependent: true,
+    serverVerified: true
+}).ok, 'a verified correction of the known false claim must remain answerable');
 assert(guard('Rayleigh scattering makes the daytime sky appear blue.', { sourceDependent: false }).ok,
     'ordinary non-source-dependent answers should remain available');
 
