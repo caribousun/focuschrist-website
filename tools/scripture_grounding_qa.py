@@ -17,6 +17,7 @@ required = {
     "low-variance generation": "temperature: 0.1",
     "verified color answer": "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
     "verified-answer bypass": "if(dbResult.verified)",
+    "Ask shell cache version": "site-common.js?v=20260831-4",
 }
 
 missing = [label for label, marker in required.items() if marker not in ask_text]
