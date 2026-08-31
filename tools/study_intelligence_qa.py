@@ -96,7 +96,7 @@ def main() -> int:
         "loadStudyIntelligence",
         "study-intelligence.js?v=20260830-2",
         "study-intelligence-v2.js?v=20260830-2",
-        "study-intelligence-v3.js?v=20260830-3",
+        "study-intelligence-v3.js?v=20260831-4",
         "data-focuschrist-study-intelligence",
         "data-focuschrist-study-intelligence-v2",
         "data-focuschrist-study-intelligence-v3",
