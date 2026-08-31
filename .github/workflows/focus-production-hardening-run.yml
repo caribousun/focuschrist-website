@@ -62,11 +62,12 @@ jobs:
           node --check art-ask-context.js
           node --check pioneer-experience.js
 
-      - name: Remove one-time build machinery and commit hardened release candidate
+      - name: Commit hardened site changes
         run: |
           rm -f tools/_production_apply.py tools/.production_hardening_apply.py.gz.b64
-          rm -f .github/workflows/focus-production-asset-localization.yml
-          rm -f .github/workflows/focus-production-hardening-run.yml
+          # GitHub Actions tokens cannot update workflow YAML. Revert workflow-file edits here;
+          # the connected GitHub authority applies those verified gate changes immediately afterward.
+          git checkout HEAD -- .github/workflows/site-qa.yml .github/workflows/deploy-pages.yml
           git config user.name "focusChrist production bot"
           git config user.email "actions@users.noreply.github.com"
           git add -A
