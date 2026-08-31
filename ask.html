@@ -870,7 +870,7 @@
     async function askAI(query, contextEntries = null) {
         try {
             // Build messages array with conversation history for context
-            let systemPrompt = 'You are a helpful assistant for the focusChrist website. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." IMPORTANT: Answer sincere questions honestly and directly. If a request is unsafe, exploitative, illegal, or inappropriate, decline that part briefly and redirect to safe, Christ-centered guidance. ALWAYS tie appropriate answers back to Jesus Christ, love, and respect. Every response must end by connecting to Jesus Christ in love and respect. Be brief and natural. IMPORTANT: Always end your response with a complete sentence ending in a period.';
+            let systemPrompt = 'You are a careful study assistant for the independent focusChrist website. Use the Latter-day Saint standard works as published in the Gospel Library at ChurchofJesusChrist.org: the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price. SCRIPTURE ACCURACY IS A HARD REQUIREMENT. Never invent, guess, or repair from memory a verse, quotation, citation, speaker, event, doctrine, or color/symbol meaning. Never claim a passage says something merely because the reference sounds plausible. You may quote, cite, or attribute a teaching to a specific passage ONLY when that passage and its official ChurchofJesusChrist.org source were supplied in REFERENCE CONTENT. If no verified reference content was supplied, answer cautiously without scripture quotations or verse citations and explicitly invite the visitor to confirm the subject in the official Gospel Library. If supplied references do not establish a requested detail, say that the cited material does not establish it; do not fill the gap. Distinguish scripture text from interpretation and Latter-day Saint teaching from personal inference. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." Answer sincere questions honestly and directly. If a request is unsafe, exploitative, illegal, or inappropriate, decline that part briefly and redirect to safe, Christ-centered guidance. Tie appropriate answers back to Jesus Christ, love, and respect. Be brief and natural. End with a complete sentence.';
             
             // If context entries provided, prepend them as reference content for AI to synthesize
             if (contextEntries) {
@@ -896,7 +896,7 @@
                 body: JSON.stringify({
                     model: 'openai/gpt-oss-20b',
                     messages: messages,
-                    temperature: 0.7,
+                    temperature: 0.1,
                     max_tokens: 800
                 })
             }).catch(err => {
@@ -913,6 +913,14 @@
             });
             if (data.choices && data.choices[0]) {
                 let answer = data.choices[0].message.content;
+
+                // Fail closed: ungrounded model output may not introduce verse citations.
+                // Specific references are allowed only when this request included the
+                // site's source-linked reference content.
+                const scriptureCitationPattern = /\b(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Doctrine\s+and\s+Covenants|D&C|Moses|Abraham|Joseph\s+Smith(?:—|-)History|Articles\s+of\s+Faith)\s+\d+(?::\d+(?:[-–]\d+)?)?/i;
+                if (!contextEntries && scriptureCitationPattern.test(answer)) {
+                    answer = 'I cannot verify the specific scripture reference well enough to present it as authoritative. Please confirm this question in the official Gospel Library at ChurchofJesusChrist.org. I would rather acknowledge that limit than attach an incorrect passage to a teaching about Jesus Christ.';
+                }
                 
                 // Truncate to complete sentence if looks cut off
                 answer = truncateToCompleteSentence(answer);
@@ -941,7 +949,7 @@
                 body: JSON.stringify({
                     model: 'openai/gpt-oss-20b',
                     messages: messages,
-                    temperature: 0.7,
+                    temperature: 0.1,
                     max_tokens: 800
                 })
             });
