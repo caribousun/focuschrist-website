@@ -11,6 +11,9 @@ v3 = (ROOT / "study-intelligence-v3.js").read_text(encoding="utf-8")
 pioneer = (ROOT / "pioneer-experience.js").read_text(encoding="utf-8")
 history = (ROOT / "church-history-experience.js").read_text(encoding="utf-8")
 router = (ROOT / "study-source-router.js").read_text(encoding="utf-8")
+journey = (ROOT / "study-journey.js").read_text(encoding="utf-8")
+pioneers_html = (ROOT / "pioneers.html").read_text(encoding="utf-8")
+history_html = (ROOT / "church-history.html").read_text(encoding="utf-8")
 
 database = ask.split("const qaDatabase = {", 1)[1].split("\n    };", 1)[0]
 entries = len(re.findall(r"^\s*'[^']+'\s*:\s*\{", database, re.M))
@@ -38,6 +41,18 @@ for path in runtime_files:
     versions.update(re.findall(r"study-intelligence-v3\.js\?v=(\d+-\d+)", path.read_text(encoding="utf-8")))
 if versions != {"20260831-5"}:
     errors.append(f"mixed Study Intelligence v3 cache versions: {sorted(versions)}")
+
+cache_markers = {
+    "site-common.js": (common, "study-journey.js?v=20260831-5"),
+    "study-journey.js": (journey, "study-source-router.js?v=20260831-5"),
+    "pioneers.html": (pioneers_html, "pioneer-experience.js?v=20260831-5"),
+    "church-history.html common": (history_html, "site-common.js?v=20260831-5"),
+    "church-history.html router": (history_html, "study-source-router.js?v=20260831-5"),
+    "church-history.html experience": (history_html, "church-history-experience.js?v=20260831-5"),
+}
+for label, (text, marker) in cache_markers.items():
+    if marker not in text:
+        errors.append(f"stale source-integrity cache path: {label} missing {marker}")
 
 if errors:
     raise SystemExit("Source integrity inventory failed:\n - " + "\n - ".join(errors))
