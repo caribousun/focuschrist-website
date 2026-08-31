@@ -3,7 +3,7 @@
 // unreviewed question, verifies the draft against retrieved evidence, and only
 // then returns it to the browser.
 
-const RESEARCH_MODEL = 'groq/compound';
+const RESEARCH_MODEL = 'groq/compound-mini';
 const VERIFIER_MODEL = 'openai/gpt-oss-20b';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 const ALLOWED_ORIGINS = new Set([
@@ -13,11 +13,11 @@ const ALLOWED_ORIGINS = new Set([
 ]);
 const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
-const SOURCE_POLICY_VERSION = '2026-08-31.7';
+const SOURCE_POLICY_VERSION = '2026-08-31.8';
 const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
-  '- You MUST execute web search and visit relevant result pages before answering. Do not rely on memory for factual claims.',
+  '- You MUST execute web search before answering. Do not rely on memory for factual claims.',
   '- For Latter-day Saint scripture, doctrine, Church teaching, or Church history, use only ChurchofJesusChrist.org evidence.',
   '- Never invent or guess scripture wording, citations, quotations, dates, people, statistics, historical sources, or official teachings.',
   '- Distinguish source text, official teaching, historical reporting, interpretation, and practical application.',
@@ -79,7 +79,7 @@ function sanitizePayload(payload) {
     messages: [{ role: 'system', content: SERVER_RESEARCH_POLICY }, ...clientMessages],
     temperature: 0.1,
     max_tokens: Math.min(Number.isFinite(payload.max_tokens) ? payload.max_tokens : 1200, 1500),
-    compound_custom: { tools: { enabled_tools: ['web_search', 'visit_website'] } },
+    compound_custom: { tools: { enabled_tools: ['web_search'] } },
   };
   if (scope.faith) {
     research.search_settings = {

@@ -36,8 +36,8 @@ required_by_file = {
     ),
     "groq-proxy/src/index.js": (
         "SERVER RESEARCH AND SOURCE-INTEGRITY POLICY", "ALLOWED_ORIGINS", "guardVerifiedAnswer",
-        "SOURCE_POLICY_VERSION = '2026-08-31.7'",
-        "retrieval-researched-and-verified", "web_search", "visit_website",
+        "SOURCE_POLICY_VERSION = '2026-08-31.8'",
+        "retrieval-researched-and-verified", "web_search", "compound-mini",
         "churchofjesuschrist.org",
     ),
 }
