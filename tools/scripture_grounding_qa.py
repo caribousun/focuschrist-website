@@ -16,26 +16,29 @@ required_by_file = {
         "the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price",
         "SCRIPTURE ACCURACY IS A HARD REQUIREMENT",
         "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
-        "if(dbResult.verified)", "site-common.js?v=20260831-5", "Legacy fallback path",
+        "if(dbResult.verified)", "site-common.js?v=20260831-6", "Legacy fallback path",
     ),
     "site-common.js": (
         "window.focusChristSourceIntegrity", "isScriptureDependent",
         "unreviewed-source-dependent-generation", "ungrounded-scripture-citation",
-        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260831-5",
+        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260831-6",
     ),
     "study-intelligence-v3.js": (
         "if (localReference.found && localReference.verified)", "groundedLocalReference",
         "Unreviewed legacy Q&A entries are quarantined", "verifiedIntentMatches",
-        "isScriptureDependent(query)", "unreviewed-source-dependent-generation-blocked",
+        "isScriptureDependent(query)", "retrieval-researched-and-verified",
+        "serverVerified: researched.serverVerified",
     ),
     "pioneer-experience.js": (
-        "Source-dependent pioneer answers remain blocked",
-        "unreviewed-source-dependent-generation-blocked",
+        "serverVerified: serverVerified",
+        "retrieval-researched-and-verified",
+        "renderPioneerChoices",
     ),
     "groq-proxy/src/index.js": (
-        "SERVER SOURCE-INTEGRITY POLICY", "ALLOWED_ORIGINS", "guardGeneratedAnswer",
-        "SOURCE_POLICY_VERSION = '2026-08-31.6'",
-        "fail-closed-unreviewed-generation",
+        "SERVER RESEARCH AND SOURCE-INTEGRITY POLICY", "ALLOWED_ORIGINS", "guardVerifiedAnswer",
+        "SOURCE_POLICY_VERSION = '2026-08-31.7'",
+        "retrieval-researched-and-verified", "web_search", "visit_website",
+        "churchofjesuschrist.org",
     ),
 }
 errors = []

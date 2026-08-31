@@ -326,6 +326,7 @@
     function guardGeneratedAnswer(answer, options) {
         const settings = options || {};
         const text = String(answer || '').trim();
+        const serverVerified = settings.serverVerified === true;
         const trustedReferenceText = normalizeSourceReference(settings.trustedReferenceText || '');
         const citations = extractScriptureCitations(text);
         const ungroundedCitations = citations.filter(function (citation) {
@@ -333,16 +334,15 @@
         });
         const violations = [];
 
-        // Source-dependent faith/history answers currently fail closed unless
-        // they are separately reviewed entries served without model generation.
-        // A URL, citation string, or prompt excerpt is not semantic proof that a
-        // generated claim is supported by the source.
-        if (settings.sourceDependent === true) violations.push('unreviewed-source-dependent-generation');
+        // Source-dependent generation must either be a separately reviewed local
+        // entry or carry the server-owned retrieval-and-verification receipt.
+        // Client-supplied links or prompt excerpts never create that receipt.
+        if (settings.sourceDependent === true && !serverVerified) violations.push('unreviewed-source-dependent-generation');
         if (KNOWN_FALSE_SOURCE_PATTERNS.some(function (pattern) { return pattern.test(text); })) {
             violations.push('known-false-source-claim');
         }
-        if (ungroundedCitations.length) violations.push('ungrounded-scripture-citation');
-        if (settings.requireTrustedScripture !== false && (SCRIPTURE_ATTRIBUTION_PATTERN.test(text) || SCRIPTURE_BOOK_ATTRIBUTION_PATTERN.test(text)) && !trustedReferenceText) {
+        if (ungroundedCitations.length && !serverVerified) violations.push('ungrounded-scripture-citation');
+        if (settings.requireTrustedScripture !== false && (SCRIPTURE_ATTRIBUTION_PATTERN.test(text) || SCRIPTURE_BOOK_ATTRIBUTION_PATTERN.test(text)) && !trustedReferenceText && !serverVerified) {
             violations.push('ungrounded-scripture-attribution');
         }
 
@@ -360,7 +360,7 @@
     }
 
     window.focusChristSourceIntegrity = Object.freeze({
-        policyVersion: '2026-08-31.5',
+        policyVersion: '2026-08-31.7',
         fallback: SOURCE_INTEGRITY_FALLBACK,
         extractScriptureCitations: extractScriptureCitations,
         isScriptureDependent: function (text) {
@@ -384,14 +384,14 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260831-5'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260831-6'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260831-5', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260831-6', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {

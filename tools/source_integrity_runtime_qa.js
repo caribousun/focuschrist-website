@@ -18,6 +18,16 @@ assert(!guard('Latter-day Saint scripture assigns red to celestial glory.', { so
     'uncited canon attribution must fail closed');
 assert(!guard('A generated pioneer overview.', { sourceDependent: true }).ok,
     'all unreviewed source-dependent generation must fail closed');
+assert(guard('D&C 18:15 calls all people to repentance.', {
+    trustedReferenceText: 'D&C 18:15 Official Gospel Library',
+    sourceDependent: true,
+    serverVerified: true
+}).ok, 'server-verified retrieval answers must pass the browser guard');
+assert(!guard('D&C 76 says red, white, and black lights represent three kingdoms.', {
+    trustedReferenceText: 'D&C 76 Official Gospel Library',
+    sourceDependent: true,
+    serverVerified: true
+}).ok, 'known false claims must remain blocked even with a server receipt');
 assert(guard('Rayleigh scattering makes the daytime sky appear blue.', { sourceDependent: false }).ok,
     'ordinary non-source-dependent answers should remain available');
 

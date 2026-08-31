@@ -48,8 +48,8 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260831-5",
-        "study-intelligence-v3.js?v=20260831-5",
+        "study-journey.js?v=20260831-6",
+        "study-intelligence-v3.js?v=20260831-6",
         "window.focusChristSourceIntegrity",
         "unreviewed-source-dependent-generation",
         "data-focuschrist-study-intelligence-v3",
@@ -96,7 +96,7 @@ def main() -> int:
     ), errors)
 
     require(pioneer, "pioneer-experience.js", (
-        "PIONEER_POLICY_VERSION = '2026-08-31.5'",
+        "PIONEER_POLICY_VERSION = '2026-08-31.7'",
         "function ownDisclosureEvent(event)",
         "event.stopImmediatePropagation()",
         "function installDisclosureOwnership()",
@@ -104,6 +104,8 @@ def main() -> int:
         "Willie & Martin Companies",
         "controller.abort()",
         "25000",
+        "renderPioneerChoices",
+        "answerSelectedPioneer",
     ), errors)
 
     require(journey, "study-journey.js", (
@@ -117,7 +119,7 @@ def main() -> int:
         "requestAnimationFrame",
         "window.addEventListener('load'",
         "loadVerifiedSourceRouter",
-        "study-source-router.js?v=20260831-5",
+        "study-source-router.js?v=20260831-6",
         "loadArtStudyRouter",
         "art-study-router.js?v=20260830-3",
         "loadWatchStudyEnrichment",
@@ -139,7 +141,7 @@ def main() -> int:
         "data-focuschrist-source-paths",
         "Official Church search",
         "BYU educational",
-        "study-intelligence-v3.js?v=20260831-5",
+        "study-intelligence-v3.js?v=20260831-6",
         "document.readyState === 'loading'",
         "data-focuschrist-source-router-ready",
         "oliver cowdery",

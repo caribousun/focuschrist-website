@@ -6,9 +6,9 @@
     'use strict';
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
-    const MODEL = 'openai/gpt-oss-20b';
+    const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-08-31.5';
+    const POLICY_VERSION = '2026-08-31.7';
 
     const FAITH_TERMS = new Set([
         'jesus','christ','savior','redeemer','god','heavenly','father','holy','ghost','spirit','scripture','scriptures','bible','biblical',
@@ -282,7 +282,13 @@
             const data = await response.json();
             const content = data && data.choices && data.choices[0] && data.choices[0].message ? data.choices[0].message.content : '';
             if (!content) throw new Error('Empty study response');
-            return String(content).trim();
+            return {
+                content: String(content).trim(),
+                sources: Array.isArray(data.focuschrist_sources) ? data.focuschrist_sources : [],
+                serverVerified: data.focuschrist_source_integrity_verified === true,
+                gatewayMode: String(data.focuschrist_gateway_mode || ''),
+                policyVersion: String(data.focuschrist_source_policy || '')
+            };
         } finally {
             if (timer) window.clearTimeout(timer);
         }
@@ -375,40 +381,25 @@
             || profile === 'faith-study'
             || profile === 'pioneer-study'
             || /CHURCH HISTORY PAGE SOURCE CONTRACT|PIONEER PAGE HARD CONTEXT/i.test(String(additionalReference || ''));
-        if (sourceDependent) {
-            const fallback = window.focusChristSourceIntegrity
-                ? window.focusChristSourceIntegrity.fallback
-                : 'I cannot verify the source claim well enough to present it as authoritative.';
-            remember(query, fallback);
-            return {
-                answer: fallback,
-                sources: [],
-                profile: profile,
-                localMatch: null,
-                verifiedGrounding: false,
-                sourceIntegrityPassed: false,
-                sourceIntegrityStatus: 'unreviewed-source-dependent-generation-blocked'
-            };
-        }
-
         // Unreviewed legacy Q&A entries are quarantined: they are not evidence,
         // are not supplied to the model, and their links are not displayed as if
-        // they supported a generated answer.
+        // they supported a generated answer. The server researches authoritative
+        // sources and independently verifies the draft before returning it.
         const messages = buildMessages(query, profile, groundedLocalReference, verifiedContext, additionalReference || '');
         let lastError = null;
 
         for (const timeout of [25000, 18000]) {
             try {
-                let answer = await request(messages, timeout);
+                const researched = await request(messages, timeout);
+                let answer = researched.content;
                 answer = removeBoilerplateClosing(answer, profile);
                 answer = normalizeDisplayText(answer);
                 const integrity = window.focusChristSourceIntegrity && typeof window.focusChristSourceIntegrity.guardGeneratedAnswer === 'function'
                     ? window.focusChristSourceIntegrity.guardGeneratedAnswer(answer, {
-                        trustedReferenceText: groundedLocalReference.found
-                            ? groundedLocalReference.answer + '\n' + groundedLocalReference.sources.map(function (source) { return (source.text || '') + ' ' + (source.url || ''); }).join('\n')
-                            : '',
+                        trustedReferenceText: researched.sources.map(function (source) { return (source.text || '') + ' ' + (source.url || ''); }).join('\n'),
                         requireTrustedScripture: true,
-                        sourceDependent: false
+                        sourceDependent: sourceDependent,
+                        serverVerified: researched.serverVerified
                     })
                     : { ok: false, answer: 'I cannot verify the source claim well enough to present it as authoritative.' };
                 if (!integrity.ok) {
@@ -418,11 +409,13 @@
                 remember(query, answer);
                 return {
                     answer: answer,
-                    sources: groundedLocalReference.found ? groundedLocalReference.sources : [],
+                    sources: integrity.ok ? researched.sources : [],
                     profile: profile,
                     localMatch: groundedLocalReference.found ? groundedLocalReference.key : null,
-                    verifiedGrounding: Boolean(verifiedContext) || groundedLocalReference.found,
-                    sourceIntegrityPassed: integrity.ok
+                    verifiedGrounding: researched.serverVerified,
+                    sourceIntegrityPassed: integrity.ok && researched.serverVerified,
+                    sourceIntegrityStatus: researched.serverVerified ? 'retrieval-researched-and-verified' : (researched.gatewayMode || 'verification-unavailable'),
+                    sourcePolicyVersion: researched.policyVersion
                 };
             } catch (error) {
                 lastError = error;

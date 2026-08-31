@@ -6,8 +6,8 @@
     'use strict';
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
-    const MODEL = 'openai/gpt-oss-20b';
-    const PIONEER_POLICY_VERSION = '2026-08-31.5';
+    const MODEL = 'groq/compound';
+    const PIONEER_POLICY_VERSION = '2026-08-31.7';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -155,22 +155,6 @@
     }
 
     async function requestPioneerAI(question, pageReference) {
-        // Source-dependent pioneer answers remain blocked. Until the runtime can
-        // retrieve and compare actual authoritative source text, fail closed and
-        // let the page's official study routes carry the visitor forward.
-        const fallback = window.focusChristSourceIntegrity
-            ? window.focusChristSourceIntegrity.fallback
-            : 'I cannot verify the source claim well enough to present it as authoritative.';
-        rememberExchange(question, fallback);
-        return {
-            answer: fallback,
-            sources: [],
-            pioneerContext: true,
-            sourceIntegrityPassed: false,
-            sourceIntegrityStatus: 'unreviewed-source-dependent-generation-blocked'
-        };
-
-        /* istanbul ignore next -- retained for a future source-excerpt pipeline */
         const messages = [{ role: 'system', content: buildSystemPrompt(question, pageReference || '') }];
         recentHistory().forEach(function (item) { messages.push({ role: item.role, content: String(item.content) }); });
         messages.push({ role: 'user', content: question });
@@ -187,18 +171,28 @@
             if (!response.ok) throw new Error('Pioneer study service returned ' + response.status);
             const data = await response.json();
             const raw = data && data.choices && data.choices[0] && data.choices[0].message ? data.choices[0].message.content : '';
+            const sources = Array.isArray(data.focuschrist_sources) ? data.focuschrist_sources : [];
+            const serverVerified = data.focuschrist_source_integrity_verified === true;
             let answer = normalizeDisplayText(raw);
             if (!answer) throw new Error('Empty Pioneer study response');
             const integrity = window.focusChristSourceIntegrity && typeof window.focusChristSourceIntegrity.guardGeneratedAnswer === 'function'
                 ? window.focusChristSourceIntegrity.guardGeneratedAnswer(answer, {
-                    trustedReferenceText: '',
+                    trustedReferenceText: sources.map(function (source) { return (source.text || '') + ' ' + (source.url || ''); }).join('\n'),
                     requireTrustedScripture: true,
-                    sourceDependent: true
+                    sourceDependent: true,
+                    serverVerified: serverVerified
                 })
                 : { ok: false, answer: 'I cannot verify the source claim well enough to present it as authoritative.' };
             answer = integrity.answer;
             rememberExchange(question, answer);
-            return { answer: answer, sources: [], pioneerContext: true, sourceIntegrityPassed: integrity.ok };
+            return {
+                answer: answer,
+                sources: integrity.ok ? sources : [],
+                pioneerContext: true,
+                sourceIntegrityPassed: integrity.ok && serverVerified,
+                sourceIntegrityStatus: serverVerified ? 'retrieval-researched-and-verified' : String(data.focuschrist_gateway_mode || 'verification-unavailable'),
+                sourcePolicyVersion: String(data.focuschrist_source_policy || '')
+            };
         } finally {
             if (timer) window.clearTimeout(timer);
         }
@@ -335,6 +329,76 @@
             window.scrollTo({ top: window.scrollY + rect.top - safeTop, behavior: 'smooth' });
         }
     }
+
+    function pioneerRecordContext(choice) {
+        const name = String(choice && choice.name || '').trim();
+        const record = String(choice && (choice.fullStory || choice.story) || '').trim().slice(0, 10000);
+        return [
+            'SELECTED PERSON FROM THE PAGE-SUPPLIED TELL MY STORY, TOO INDEX:',
+            'Selected name: ' + name,
+            'The compilation excerpt below is a research lead, not sufficient proof by itself.',
+            'Use it to identify the person and relevant events, then corroborate the answer through the official Church History Biographical Database and its attached records.',
+            'Do not reproduce the compilation verbatim. Summarize only details supported by the authoritative sources retrieved by the gateway.',
+            '',
+            record
+        ].join('\n');
+    }
+
+    async function answerSelectedPioneer(choice, originalQuestion) {
+        if (!choice || !choice.name) return;
+        window.storyChoices = null;
+        const selectedName = String(choice.name).trim();
+        window.addMessage('Selected: ' + selectedName, true);
+        const loading = showLoading();
+        try {
+            const question = originalQuestion && String(originalQuestion).trim()
+                ? String(originalQuestion).trim() + '\n\nSelected pioneer: ' + selectedName
+                : 'Tell me about the Latter-day Saint pioneer ' + selectedName + '.';
+            const response = await requestPioneerAI(question, pioneerRecordContext(choice));
+            if (loading && loading.isConnected) loading.remove();
+            const answer = window.addMessage(response.answer, false, response.sources || []);
+            setConversationMode(true);
+            positionAnswer(answer);
+        } catch (error) {
+            console.error('Selected pioneer research error:', error);
+            if (loading && loading.isConnected) loading.remove();
+            const answer = window.addMessage('I could not verify that pioneer record just now. Please try again or open the Church History Biographical Database.', false, [{
+                text: 'Church History Biographical Database',
+                url: 'https://history.churchofjesuschrist.org/chd/landing'
+            }]);
+            positionAnswer(answer);
+        }
+    }
+
+    function renderPioneerChoices(match, originalQuestion) {
+        const choices = Array.isArray(match && match.choices) ? match.choices : [];
+        const answer = window.addMessage('I found more than one matching pioneer. Choose a person below so I use the correct record.', false);
+        if (!answer || !choices.length) return answer;
+        const group = document.createElement('div');
+        group.className = 'pioneer-choice-list';
+        group.setAttribute('role', 'group');
+        group.setAttribute('aria-label', 'Choose a pioneer');
+        choices.forEach(function (choice, index) {
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'pioneer-choice';
+            button.textContent = String(choice.name || ('Pioneer ' + (index + 1)));
+            button.addEventListener('click', function () {
+                group.querySelectorAll('button').forEach(function (item) { item.disabled = true; });
+                answerSelectedPioneer(choice, originalQuestion);
+            });
+            group.appendChild(button);
+        });
+        answer.appendChild(group);
+        window.storyChoices = choices;
+        return answer;
+    }
+
+    window.selectPioneerStory = function (index) {
+        const choices = Array.isArray(window.storyChoices) ? window.storyChoices : [];
+        const choice = choices[Number(index)];
+        if (choice) answerSelectedPioneer(choice, '');
+    };
 
     function controlPageReference(control, kind, mappedTopic) {
         if (!control) return kind + ': ' + mappedTopic;
@@ -483,19 +547,14 @@
                 const storyMatch = await searchTellMyStory(question);
                 if (storyMatch && storyMatch[0] && storyMatch[0].full === false && storyMatch[0].choices) {
                     if (loading) loading.remove();
-                    const answer = window.addMessage(storyMatch[0].story, false, [{ text: 'Tell My Story Too', url: 'tell-my-story-too.txt' }]);
-                    window.storyChoices = storyMatch[0].choices;
+                    const answer = renderPioneerChoices(storyMatch[0], question);
                     setConversationMode(true);
                     positionAnswer(answer);
                     return;
                 }
                 if (storyMatch && storyMatch[0] && storyMatch[0].full === true) {
-                    if (loading) loading.remove();
-                    const storyContent = storyMatch[0].fullStory || storyMatch[0].story;
-                    rememberExchange(question, storyContent);
-                    const answer = window.addMessage(storyContent, false, [{ text: 'Tell My Story Too', url: 'tell-my-story-too.txt' }], { action: 'askTellMyStory()', text: 'Tell Me More' });
-                    setConversationMode(true);
-                    positionAnswer(answer);
+                    if (loading && loading.isConnected) loading.remove();
+                    await answerSelectedPioneer(storyMatch[0], question);
                     return;
                 }
                 if (Array.isArray(storyMatch) && storyMatch.length && typeof storyMatch[0] === 'string') {
@@ -519,6 +578,41 @@
             input.disabled = false;
             try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
         }
+    };
+
+    window.askTellMyStory = async function () {
+        const text = typeof loadTellMyStory === 'function' ? await loadTellMyStory() : '';
+        if (!text) {
+            window.addMessage('I could not load the pioneer index just now. Please try again.', false);
+            return;
+        }
+        const lines = String(text).split('\n');
+        const candidates = [];
+        for (let index = 0; index < lines.length; index += 1) {
+            const name = lines[index].trim();
+            if (!/^[A-Z][A-Z\s]{3,}$/.test(name) || name.includes('PAGE') || name.includes('TELL MY')) continue;
+            const nearby = lines.slice(index, index + 5).join(' ').toLowerCase();
+            if (!(nearby.includes('company') || nearby.includes('handcart') || nearby.includes('born'))) continue;
+            let end = Math.min(lines.length, index + 140);
+            for (let next = index + 1; next < end; next += 1) {
+                const candidate = lines[next].trim();
+                if (/^[A-Z][A-Z\s]{3,}$/.test(candidate) && !candidate.includes('PAGE') && !candidate.includes('TELL MY')) {
+                    end = next;
+                    break;
+                }
+                if (candidate.startsWith('--- PAGE')) {
+                    end = next;
+                    break;
+                }
+            }
+            candidates.push({ name: name, fullStory: lines.slice(index, end).join('\n').trim() });
+        }
+        if (!candidates.length) {
+            window.addMessage('I could not identify a pioneer record in the index just now.', false);
+            return;
+        }
+        const selected = candidates[Math.floor(Math.random() * candidates.length)];
+        await answerSelectedPioneer(selected, 'Tell me one verified pioneer story.');
     };
 
     window.askTopic = async function (topic) {

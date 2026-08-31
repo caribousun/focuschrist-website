@@ -915,7 +915,7 @@
     }
 </style>
 
-    <script src="site-common.js?v=20260831-5" defer></script>
+    <script src="site-common.js?v=20260831-6" defer></script>
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="site-system.css">
     <link rel="stylesheet" href="pioneer-experience.css">
@@ -1401,11 +1401,7 @@
             const input = document.getElementById('userInput').value.trim();
             const num = parseInt(input);
             if (num >= 1 && num <= window.storyChoices.length) {
-                const selected = window.storyChoices[num - 1];
-                document.getElementById('chatBox').innerHTML = '';
-                addMessage(selected.name.toUpperCase(), true);
-                addMessage(selected.story, false, [{text:'📖 Tell My Story Too', url:'tell-my-story-too.txt'}]);
-                window.storyChoices = null;
+                if (typeof window.selectPioneerStory === 'function') window.selectPioneerStory(num - 1);
                 document.getElementById('userInput').value = '';
                 return;
             }
@@ -2290,29 +2286,41 @@
 
  <h2 class="section-title">PRIMARY-SOURCE JOURNALS</h2>
 
- <p style="max-width:900px; margin:0 auto 24px; line-height:1.8; text-align:center;">Earlier quotation cards were removed during the site's source-integrity review because their exact wording and attribution could not be verified. Read identified pioneer records and contextual histories in the authoritative collections below.</p>
+ <p style="max-width:900px; margin:0 auto 24px; line-height:1.8; text-align:center;">Hear brief, verified voices from the trail, then open the Church History record to read the transcript in context. The Ask experience above also uses <em>Tell My Story, Too</em> to identify a pioneer before corroborating the selected person through authoritative records.</p>
 
  <div class="journal-grid">
 
- <a class="journal-card" href="https://history.churchofjesuschrist.org/landing/church-history-library/pioneer-diaries-and-journals" target="_blank" rel="noopener noreferrer">
- <div class="journal-date">Church History Library</div>
- <p class="journal-text">Pioneer Diaries and Journals</p>
- <p class="journal-source">Search digitized records by identified author and collection.</p>
- </a>
+ <article class="journal-card">
+ <div class="journal-date">September 12, 1856</div>
+ <h3 class="journal-name">Franklin D. Richards</h3>
+ <blockquote class="journal-text">“They were considerably weakened ... but were in good spirits.”</blockquote>
+ <p class="journal-source">Diary passage describing the Willie handcart company near North Bluff Creek.</p>
+ <a class="journal-action" href="https://history.churchofjesuschrist.org/chd/transcript?lang=eng&amp;name=transcript-for-josiah-rogerson-strong-men-brave-women-and-sturdy-children" target="_blank" rel="noopener noreferrer">Read the transcript <span aria-hidden="true">→</span></a>
+ </article>
 
- <a class="journal-card" href="https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng" target="_blank" rel="noopener noreferrer">
- <div class="journal-date">Church History Topics</div>
- <p class="journal-text">Pioneer Trek</p>
- <p class="journal-source">A documented overview with source notes and related resources.</p>
- </a>
+ <article class="journal-card">
+ <div class="journal-date">Spring 1856</div>
+ <h3 class="journal-name">James G. Willie</h3>
+ <blockquote class="journal-text">“The spirit of the Lord prevailed.”</blockquote>
+ <p class="journal-source">Willie's report of the company aboard the <em>Thornton</em> before the overland journey.</p>
+ <a class="journal-action" href="https://history.churchofjesuschrist.org/chd/transcript?lang=eng&amp;name=transcript-for-josiah-rogerson-strong-men-brave-women-and-sturdy-children" target="_blank" rel="noopener noreferrer">Read the transcript <span aria-hidden="true">→</span></a>
+ </article>
 
- <a class="journal-card" href="https://www.nps.gov/articles/000/mormon-pioneer-trail-junior-ranger.htm" target="_blank" rel="noopener noreferrer">
- <div class="journal-date">National Park Service</div>
- <p class="journal-text">Mormon Pioneer Trail Timeline and Journals</p>
- <p class="journal-source">A federal historical resource connecting trail events with identified journal records.</p>
- </a>
+ <article class="journal-card">
+ <div class="journal-date">Devil's Gate, 1856</div>
+ <h3 class="journal-name">Daniel W. Jones</h3>
+ <blockquote class="journal-text">“There were two of us and hundreds needing help.”</blockquote>
+ <p class="journal-source">Jones's account of encountering the handcart company during the rescue.</p>
+ <a class="journal-action" href="https://history.churchofjesuschrist.org/chd/transcript?lang=eng&amp;name=transcript-for-josiah-rogerson-strong-men-brave-women-and-sturdy-children" target="_blank" rel="noopener noreferrer">Read the transcript <span aria-hidden="true">→</span></a>
+ </article>
 
  </div>
+
+ <nav class="journal-collections" aria-label="Explore pioneer research collections">
+ <a class="journal-collection-link" href="https://history.churchofjesuschrist.org/landing/church-history-library/pioneer-diaries-and-journals" target="_blank" rel="noopener noreferrer">Browse pioneer diaries</a>
+ <a class="journal-collection-link" href="https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng" target="_blank" rel="noopener noreferrer">Pioneer Trek topic</a>
+ <a class="journal-collection-link" href="https://www.nps.gov/articles/000/mormon-pioneer-trail-junior-ranger.htm" target="_blank" rel="noopener noreferrer">National Park Service trail history</a>
+ </nav>
 
  </section>
 
@@ -2324,7 +2332,7 @@
 
          <p data-focuschrist-independence="footer" style="max-width: 900px; margin: 14px auto 0; line-height: 1.6; font-size: 0.92em;">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer" style="color: #c9a961;">ChurchofJesusChrist.org</a>.</p>
     </footer>
-    <script src="pioneer-experience.js?v=20260831-5" defer></script>
+    <script src="pioneer-experience.js?v=20260831-6" defer></script>
 </body>
 
 </html>

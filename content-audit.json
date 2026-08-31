@@ -258,13 +258,15 @@
     {
       "path": "pioneers.html",
       "status": "verified",
-      "published_text_sha256": "f11d8b3a622860d0bba28264bac53dc743b8b8ecdb069d555851b456582cc6cb",
+      "published_text_sha256": "f2d811e25d2fea93bafa4fa5c13920fc271508d8093b86af36203ce6abeb8ffd",
       "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review; unsupported quotation cards removed",
+      "review_standard": "L-044 universal source-integrity review; journal excerpts checked against the linked Church History transcript; Tell My Story, Too used only as a person-indexing research lead pending authoritative corroboration",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng",
         "https://history.churchofjesuschrist.org/timeline/us-migration-mormon-emigration-and-the-handcart-experiment",
         "https://history.churchofjesuschrist.org/landing/church-history-library/pioneer-diaries-and-journals",
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-josiah-rogerson-strong-men-brave-women-and-sturdy-children",
+        "https://history.churchofjesuschrist.org/chd/individual/elizabeth-crook-1827?lang=eng",
         "https://www.nps.gov/MOPI",
         "https://www.nps.gov/articles/000/the-1846-trek-mormon-pioneer-trail.htm",
         "https://www.nps.gov/mopi/learn/historyculture/the-1847-trek.htm",
