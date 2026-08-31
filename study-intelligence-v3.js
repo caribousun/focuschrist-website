@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'openai/gpt-oss-20b';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-08-30.3';
+    const POLICY_VERSION = '2026-08-31.4';
 
     const FAITH_TERMS = new Set([
         'jesus','christ','savior','redeemer','god','heavenly','father','holy','ghost','spirit','scripture','scriptures','bible','biblical',
@@ -140,7 +140,8 @@
             key: bestKey,
             score: bestScore,
             answer: String(item.answer || ''),
-            sources: Array.isArray(item.sources) ? item.sources : []
+            sources: Array.isArray(item.sources) ? item.sources : [],
+            verified: item.verified === true
         };
     }
 
@@ -335,6 +336,21 @@
         const profile = classifyQuestion(query);
         const localReference = bestLocalReference(query);
         const verifiedContext = profile === 'faith-study' || profile === 'pioneer-study' ? verifiedContextFor(query) : '';
+
+        // Curated entries marked verified have been checked against their linked
+        // official sources. Serve them unchanged; model rewriting can reintroduce
+        // citations or claims that the source text does not contain.
+        if (localReference.found && localReference.verified) {
+            remember(query, localReference.answer);
+            return {
+                answer: localReference.answer,
+                sources: localReference.sources,
+                profile: profile,
+                localMatch: localReference.key,
+                verifiedGrounding: true
+            };
+        }
+
         const messages = buildMessages(query, profile, localReference, verifiedContext, additionalReference || '');
         let lastError = null;
 
@@ -343,6 +359,9 @@
                 let answer = await request(messages, timeout);
                 answer = removeBoilerplateClosing(answer, profile);
                 answer = normalizeDisplayText(answer);
+                if (/red,?\s+white,?\s+and\s+black\s+lights?|["']?(?:red|black|golden)\s+light["']?.{0,180}(?:D&C|Doctrine and Covenants)\s+76/i.test(answer)) {
+                    throw new Error('Blocked known false Doctrine and Covenants color claim');
+                }
                 if (!answer) throw new Error('Response removed as empty');
                 remember(query, answer);
                 return {
