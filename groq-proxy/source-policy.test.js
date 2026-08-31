@@ -16,17 +16,13 @@ assert(faith.faith, 'scripture citations must use the faith research scope');
 
 const clean = sanitizePayload({ model: 'other', temperature: 0.9, max_tokens: 9000, messages: faithMessages });
 assert(clean.research.model === 'groq/compound-mini', 'gateway must own the research model');
-assert(clean.research.temperature === 0.1 && clean.research.max_tokens === 1500, 'gateway must clamp research settings');
 assert(clean.research.messages[0].content.includes('SERVER RESEARCH AND SOURCE-INTEGRITY POLICY'),
   'gateway must prepend the server research policy');
-assert(clean.research.compound_custom.tools.enabled_tools.length === 1
-  && clean.research.compound_custom.tools.enabled_tools.includes('web_search'),
-  'gateway must enable official-domain web retrieval without oversized page visits');
-assert(clean.research.search_settings.include_domains.includes('churchofjesuschrist.org'),
-  'faith research must be restricted to the official Church domain');
+assert(clean.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
+  'faith research must be instructed to search the official Church domain');
 
 const general = sanitizePayload({ messages: [{ role: 'user', content: 'Why is the daytime sky blue?' }] });
-assert(!general.scope.faith && !general.research.search_settings,
+assert(!general.scope.faith && !general.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
   'ordinary questions must not be forced into the Church-only domain');
 
 const evidence = collectSourceEvidence({

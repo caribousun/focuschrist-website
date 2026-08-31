@@ -74,18 +74,13 @@ function sanitizePayload(payload) {
         .map((message) => ({ role: message.role, content: message.content.slice(0, 12000) }))
     : [];
   const scope = classifyResearchScope(clientMessages);
+  const scopeInstruction = scope.faith
+    ? 'For this request, search only site:churchofjesuschrist.org and use only ChurchofJesusChrist.org evidence.'
+    : 'Use web search to gather reliable evidence before answering.';
   const research = {
     model: RESEARCH_MODEL,
-    messages: [{ role: 'system', content: SERVER_RESEARCH_POLICY }, ...clientMessages],
-    temperature: 0.1,
-    max_tokens: Math.min(Number.isFinite(payload.max_tokens) ? payload.max_tokens : 1200, 1500),
-    compound_custom: { tools: { enabled_tools: ['web_search'] } },
+    messages: [{ role: 'system', content: SERVER_RESEARCH_POLICY + '\n' + scopeInstruction }, ...clientMessages],
   };
-  if (scope.faith) {
-    research.search_settings = {
-      include_domains: [OFFICIAL_CHURCH_HOST, `*.${OFFICIAL_CHURCH_HOST}`],
-    };
-  }
   return { research, scope };
 }
 
