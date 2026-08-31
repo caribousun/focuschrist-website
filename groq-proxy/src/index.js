@@ -165,6 +165,7 @@ async function callGroq(apiKey, body) {
     headers: {
       Authorization: `Bearer ${apiKey}`,
       'Content-Type': 'application/json',
+      'Groq-Model-Version': 'latest',
     },
     body: JSON.stringify(body),
   });
