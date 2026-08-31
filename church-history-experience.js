@@ -309,7 +309,7 @@
                 '- Distinguish documented history, recollection, tradition, interpretation, and disputed claims when relevant.',
                 '- The visitor will receive verified official source links after the answer.',
                 '',
-                'VERIFIED SOURCE ROUTES FOR THIS QUESTION:',
+                'OFFICIAL STUDY ROUTES (LINKS ONLY; NOT CLAIM VERIFICATION):',
                 sources.map(function (item) { return '- ' + item.label + ': ' + item.url; }).join('\n')
             ].join('\n');
 

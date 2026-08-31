@@ -915,7 +915,7 @@
     }
 </style>
 
-    <script src="site-common.js" defer></script>
+    <script src="site-common.js?v=20260831-5" defer></script>
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="site-system.css">
     <link rel="stylesheet" href="pioneer-experience.css">
@@ -1425,7 +1425,7 @@
                 bestMatch = qaDatabase[k];
             }
         }
-        if(bestMatch) return {answer:bestMatch.answer,sources:bestMatch.sources,found:true};
+        if(bestMatch && bestMatch.verified === true) return {answer:bestMatch.answer,sources:bestMatch.sources,verified:true,found:true};
         return {answer:"That's a great question! We invite you to learn more by visiting the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'},{text:'🕍 Gospel Topics',url:'https://www.churchofjesuschrist.org/study/topics'}],found:false}}
     function truncateToCompleteSentence(text) {
         if (!text) return text;
@@ -1644,6 +1644,14 @@
     // ENHANCED ASKAI - CHECKS TELL MY STORY FIRST
     // ========================================
     async function askAI(query) {
+        // Legacy fallback path. Source-dependent pioneer answers remain blocked
+        // unless a separately reviewed answer is served without generation.
+        const safeFallback = window.focusChristSourceIntegrity
+            ? window.focusChristSourceIntegrity.fallback
+            : 'I cannot verify the source claim well enough to present it as authoritative. Please use the official Church history study routes on this page.';
+        return { answer: safeFallback, sources: [] };
+
+        /* istanbul ignore next -- retained only as non-executing legacy code */
         // First, check Tell My Story for relevant content
         const storyMatch = await searchTellMyStory(query);
 
@@ -2436,5 +2444,3 @@
  
 
  
-
-

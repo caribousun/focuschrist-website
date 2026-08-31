@@ -42,6 +42,18 @@ jobs:
       - name: Run scripture grounding QA
         run: python tools/scripture_grounding_qa.py
 
+      - name: Inventory source-dependent answer paths
+        run: python tools/source_integrity_inventory.py
+
+      - name: Exercise source-integrity runtime guard
+        run: node tools/source_integrity_runtime_qa.js
+
+      - name: Exercise final Study Intelligence owner
+        run: node tools/study_intelligence_v3_runtime_qa.js
+
+      - name: Exercise gateway source policy
+        run: node groq-proxy/source-policy.test.js
+
       - name: Validate shared site JavaScript
         run: node --check site-common.js
 

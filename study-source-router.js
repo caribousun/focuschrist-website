@@ -224,7 +224,7 @@
             '- For sensitive or contested subjects, describe the Church’s historical account accurately without pretending it settles claims the official sources do not establish.',
             '- Keep the answer useful and direct; the visitor will receive the official links after the answer.',
             '',
-            'VERIFIED OFFICIAL ROUTES SELECTED FOR THIS QUESTION:',
+            'OFFICIAL STUDY ROUTES (LINKS ONLY; NOT CLAIM VERIFICATION):',
             sources.map(function (item) { return '- ' + item.label + ': ' + item.url; }).join('\n')
         ].join('\n');
     }
@@ -341,7 +341,7 @@
     function loadGroundedIntelligence() {
         if (document.querySelector('script[data-focuschrist-study-intelligence-v3]') || document.querySelector('script[src*="study-intelligence-v3.js"]')) return;
         const script = document.createElement('script');
-        script.src = 'study-intelligence-v3.js?v=20260831-4';
+        script.src = 'study-intelligence-v3.js?v=20260831-5';
         script.defer = true;
         script.setAttribute('data-focuschrist-study-intelligence-v3', 'true');
         script.addEventListener('error', function () { console.error('focusChrist Study Intelligence v3 failed to load.'); }, { once: true });

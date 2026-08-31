@@ -144,7 +144,7 @@
             .hamburger-menu a { color: #c9a961; font-size: 0.9em; }
         }
     </style>
-    <script src="site-common.js?v=20260831-4" defer></script>
+    <script src="site-common.js?v=20260831-5" defer></script>
     <script src="ask-experience.js" defer></script>
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="ask-experience.css">
@@ -814,6 +814,11 @@
         'christ antitype': { answer: "**Christ is the antitype of every type** — the perfect fulfillment of every shadow in the law of Moses.\n\nThe law of Moses was not random rituals — it was a divine pattern teaching that a Redeemer was coming. Every sacrifice pointed to the ultimate sacrifice. Every feast pointed to the ultimate feast. Every priest pointed to the ultimate Priest.\n\n**The Key Cross-References:**\n\n• **John 1:29** — 'Behold the Lamb of God' — the antitype of the Passover Lamb\n\n• **Exodus 12:21-27** — Type: Blood on doorposts spares firstborn\n\n• **1 Peter 1:18-21** — 'Not redeemed with corruptible things, but with the precious blood of Christ'\n\n• **Leviticus 16:15-22** — Type: Scapegoat carries sin away; Christ takes away sin of the world\n\n• **Mosiah 14:6-12** — The suffering servant — silent before shearers, numbered with transgressors\n\n• **Isaiah 53:4-9** — The prophecy: 'wounded for our transgressions'\n\n• **Alma 34:8-10** — Great Mediator satisfies justice, redeems the penitent\n\n**What This Teaches About Complete Redemption:**\n\nThe word 'complete' is key. The law could NOT complete — it could only typify. The animal sacrifices had to be repeated (Hebrews 10:1-2) because they couldn't actually take away sin. But Christ, as the perfect antitype, needed to be offered only ONCE (Hebrews 9:28). His one sacrifice accomplishes what the types only pointed to.\n\nThis is why Hebrews 10:14 declares: 'By one offering he hath perfected FOREVER them that are sanctified.' The types looked forward; Christ looked back at an accomplished work. That's complete redemption — not partial, not temporary, but eternal.", sources: [{text:'📜 John 1:29',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/1.29'},{text:'📜 Exodus 12:21-27',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/ex/12.21'},{text:'📜 1 Peter 1:18-21',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/1.18'},{text:'📜 Leviticus 16:15-22',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/lev/16.15'},{text:'📜 Mosiah 14:6-12',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/14.6'},{text:'📜 Isaiah 53:4-9',url:'https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53.4'},{text:'📜 Alma 34:8-10',url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34.8'},{text:'📜 Hebrews 10:14',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/heb/10.14'}] }
     };
 
+    // Verified answers require explicit intent groups so fuzzy legacy matching
+    // cannot route an unrelated color/design question into a scripture answer.
+    qaDatabase['color used in scripture'].intent = [['color','colors'],['scripture','scriptures','bible','canon']];
+    qaDatabase['color in scripture'].intent = [['color','colors'],['scripture','scriptures','bible','canon']];
+
     // Helper to truncate at complete sentence if looks cut off
     function truncateToCompleteSentence(text) {
         // Check if text ends near max token limit (800 tokens ≈ 2000 chars)
@@ -859,6 +864,11 @@
         }
         l.remove();addMessage(ai.answer,false,ai.sources);document.getElementById('userInput').value=''}
     function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
+    function verifiedIntentMatchesBase(query,item){
+        if(!item||item.verified!==true||!Array.isArray(item.intent)||!item.intent.length)return false;
+        const tokens=new Set(String(query||'').toLowerCase().replace(/[^a-z0-9\s'-]/g,' ').split(/\s+/).filter(Boolean));
+        return item.intent.every(group=>(Array.isArray(group)?group:[group]).some(term=>tokens.has(String(term).toLowerCase())));
+    }
     function findAnswer(q){
         q=q.toLowerCase();
         let bestMatch = null;
@@ -869,9 +879,18 @@
                 bestMatch = qaDatabase[k];
             }
         }
-        if(bestMatch) return {answer:bestMatch.answer,sources:bestMatch.sources,verified:bestMatch.verified === true,found:true};
+        if(bestMatch && verifiedIntentMatchesBase(q,bestMatch)) return {answer:bestMatch.answer,sources:bestMatch.sources,verified:true,found:true};
         return {answer:"That's a great question! We invite you to learn more by visiting the official Church website.",sources:[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'},{text:'🕍 Gospel Topics',url:'https://www.churchofjesuschrist.org/study/topics'}],found:false}}
     async function askAI(query, contextEntries = null) {
+        // Legacy fallback path. The final v3 owner replaces this function, but a
+        // load delay or asset failure must still fail closed rather than invoke
+        // an unreviewed source-dependent model answer.
+        const safeFallback = window.focusChristSourceIntegrity
+            ? window.focusChristSourceIntegrity.fallback
+            : 'I cannot verify the source claim well enough to present it as authoritative. Please confirm the subject in the official Gospel Library at ChurchofJesusChrist.org.';
+        return { answer: safeFallback, sources: [] };
+
+        /* istanbul ignore next -- retained only as non-executing legacy code */
         try {
             // Build messages array with conversation history for context
             let systemPrompt = 'You are a careful study assistant for the independent focusChrist website. Use the Latter-day Saint standard works as published in the Gospel Library at ChurchofJesusChrist.org: the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price. SCRIPTURE ACCURACY IS A HARD REQUIREMENT. Never invent, guess, or repair from memory a verse, quotation, citation, speaker, event, doctrine, or color/symbol meaning. Never claim a passage says something merely because the reference sounds plausible. You may quote, cite, or attribute a teaching to a specific passage ONLY when that passage and its official ChurchofJesusChrist.org source were supplied in REFERENCE CONTENT. If no verified reference content was supplied, answer cautiously without scripture quotations or verse citations and explicitly invite the visitor to confirm the subject in the official Gospel Library. If supplied references do not establish a requested detail, say that the cited material does not establish it; do not fill the gap. Distinguish scripture text from interpretation and Latter-day Saint teaching from personal inference. OUR FOUNDATION - The Living Christ (The Testimony of the Apostles): "We bear testimony that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son." Answer sincere questions honestly and directly. If a request is unsafe, exploitative, illegal, or inappropriate, decline that part briefly and redirect to safe, Christ-centered guidance. Tie appropriate answers back to Jesus Christ, love, and respect. Be brief and natural. End with a complete sentence.';

@@ -94,14 +94,12 @@ def main() -> int:
 
     required_common_markers = (
         "loadStudyIntelligence",
-        "study-intelligence.js?v=20260830-2",
-        "study-intelligence-v2.js?v=20260830-2",
-        "study-intelligence-v3.js?v=20260831-4",
-        "data-focuschrist-study-intelligence",
-        "data-focuschrist-study-intelligence-v2",
+        "study-intelligence-v3.js?v=20260831-5",
         "data-focuschrist-study-intelligence-v3",
         "path.endsWith('/ask.html')",
         "path.endsWith('/pioneers.html')",
+        "window.focusChristSourceIntegrity",
+        "unreviewed-source-dependent-generation",
     )
     for marker in required_common_markers:
         if marker not in common:

@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'openai/gpt-oss-20b';
-    const PIONEER_POLICY_VERSION = '2026-08-30.2';
+    const PIONEER_POLICY_VERSION = '2026-08-31.5';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -155,6 +155,22 @@
     }
 
     async function requestPioneerAI(question, pageReference) {
+        // Source-dependent pioneer answers remain blocked. Until the runtime can
+        // retrieve and compare actual authoritative source text, fail closed and
+        // let the page's official study routes carry the visitor forward.
+        const fallback = window.focusChristSourceIntegrity
+            ? window.focusChristSourceIntegrity.fallback
+            : 'I cannot verify the source claim well enough to present it as authoritative.';
+        rememberExchange(question, fallback);
+        return {
+            answer: fallback,
+            sources: [],
+            pioneerContext: true,
+            sourceIntegrityPassed: false,
+            sourceIntegrityStatus: 'unreviewed-source-dependent-generation-blocked'
+        };
+
+        /* istanbul ignore next -- retained for a future source-excerpt pipeline */
         const messages = [{ role: 'system', content: buildSystemPrompt(question, pageReference || '') }];
         recentHistory().forEach(function (item) { messages.push({ role: item.role, content: String(item.content) }); });
         messages.push({ role: 'user', content: question });
@@ -171,10 +187,18 @@
             if (!response.ok) throw new Error('Pioneer study service returned ' + response.status);
             const data = await response.json();
             const raw = data && data.choices && data.choices[0] && data.choices[0].message ? data.choices[0].message.content : '';
-            const answer = normalizeDisplayText(raw);
+            let answer = normalizeDisplayText(raw);
             if (!answer) throw new Error('Empty Pioneer study response');
+            const integrity = window.focusChristSourceIntegrity && typeof window.focusChristSourceIntegrity.guardGeneratedAnswer === 'function'
+                ? window.focusChristSourceIntegrity.guardGeneratedAnswer(answer, {
+                    trustedReferenceText: '',
+                    requireTrustedScripture: true,
+                    sourceDependent: true
+                })
+                : { ok: false, answer: 'I cannot verify the source claim well enough to present it as authoritative.' };
+            answer = integrity.answer;
             rememberExchange(question, answer);
-            return { answer: answer, sources: [], pioneerContext: true };
+            return { answer: answer, sources: [], pioneerContext: true, sourceIntegrityPassed: integrity.ok };
         } finally {
             if (timer) window.clearTimeout(timer);
         }

@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'openai/gpt-oss-20b';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-08-31.4';
+    const POLICY_VERSION = '2026-08-31.5';
 
     const FAITH_TERMS = new Set([
         'jesus','christ','savior','redeemer','god','heavenly','father','holy','ghost','spirit','scripture','scriptures','bible','biblical',
@@ -125,16 +125,29 @@
         return (overlap / kWords.length) * 52 + (overlap / Math.max(1, qSet.size)) * 22 + Math.min(12, overlap * 3);
     }
 
+    function verifiedIntentMatches(query, item) {
+        if (!item || item.verified !== true || !Array.isArray(item.intent) || !item.intent.length) return false;
+        const q = new Set(words(query));
+        return item.intent.every(function (group) {
+            const alternatives = Array.isArray(group) ? group : [group];
+            return alternatives.some(function (term) { return q.has(normalize(term)); });
+        });
+    }
+
     function bestLocalReference(query) {
         if (typeof qaDatabase === 'undefined' || !qaDatabase) return { found: false, answer: '', sources: [] };
         let bestKey = null;
         let bestScore = 0;
         Object.keys(qaDatabase).forEach(function (key) {
-            const score = scoreLocalKey(query, key);
+            const item = qaDatabase[key] || {};
+            const score = verifiedIntentMatches(query, item) ? 120 : scoreLocalKey(query, key);
             if (score > bestScore) { bestScore = score; bestKey = key; }
         });
         if (!bestKey || bestScore < 42) return { found: false, answer: '', sources: [], score: bestScore };
         const item = qaDatabase[bestKey] || {};
+        if (item.verified === true && !verifiedIntentMatches(query, item)) {
+            return { found: false, answer: '', sources: [], score: bestScore, rejectedVerifiedIntent: true };
+        }
         return {
             found: true,
             key: bestKey,
@@ -237,7 +250,7 @@
         ].join('\n');
 
         if (verifiedContext) prompt += '\n\nVERIFIED CORE CONTEXT:\n' + verifiedContext;
-        if (localReference && localReference.found) {
+        if (localReference && localReference.found && localReference.verified) {
             const sourceText = (localReference.sources || []).map(function (source) {
                 return (source.text || 'Source') + (source.url ? ' (' + source.url + ')' : '');
             }).join('; ');
@@ -335,6 +348,9 @@
     async function askV3(query, additionalReference) {
         const profile = classifyQuestion(query);
         const localReference = bestLocalReference(query);
+        const groundedLocalReference = localReference.found && localReference.verified
+            ? localReference
+            : { found: false, answer: '', sources: [], verified: false };
         const verifiedContext = profile === 'faith-study' || profile === 'pioneer-study' ? verifiedContextFor(query) : '';
 
         // Curated entries marked verified have been checked against their linked
@@ -351,7 +367,34 @@
             };
         }
 
-        const messages = buildMessages(query, profile, localReference, verifiedContext, additionalReference || '');
+        const explicitScriptureDependency = window.focusChristSourceIntegrity
+            && typeof window.focusChristSourceIntegrity.isScriptureDependent === 'function'
+            ? window.focusChristSourceIntegrity.isScriptureDependent(query)
+            : /(?:D&C|Doctrine\s+and\s+Covenants|Bible|Book\s+of\s+Mormon|scripture|(?:[1-4]\s+)?[A-Za-z]+\s+\d+(?::\d+)?)/i.test(query);
+        const sourceDependent = explicitScriptureDependency
+            || profile === 'faith-study'
+            || profile === 'pioneer-study'
+            || /CHURCH HISTORY PAGE SOURCE CONTRACT|PIONEER PAGE HARD CONTEXT/i.test(String(additionalReference || ''));
+        if (sourceDependent) {
+            const fallback = window.focusChristSourceIntegrity
+                ? window.focusChristSourceIntegrity.fallback
+                : 'I cannot verify the source claim well enough to present it as authoritative.';
+            remember(query, fallback);
+            return {
+                answer: fallback,
+                sources: [],
+                profile: profile,
+                localMatch: null,
+                verifiedGrounding: false,
+                sourceIntegrityPassed: false,
+                sourceIntegrityStatus: 'unreviewed-source-dependent-generation-blocked'
+            };
+        }
+
+        // Unreviewed legacy Q&A entries are quarantined: they are not evidence,
+        // are not supplied to the model, and their links are not displayed as if
+        // they supported a generated answer.
+        const messages = buildMessages(query, profile, groundedLocalReference, verifiedContext, additionalReference || '');
         let lastError = null;
 
         for (const timeout of [25000, 18000]) {
@@ -359,17 +402,27 @@
                 let answer = await request(messages, timeout);
                 answer = removeBoilerplateClosing(answer, profile);
                 answer = normalizeDisplayText(answer);
-                if (/red,?\s+white,?\s+and\s+black\s+lights?|["']?(?:red|black|golden)\s+light["']?.{0,180}(?:D&C|Doctrine and Covenants)\s+76/i.test(answer)) {
-                    throw new Error('Blocked known false Doctrine and Covenants color claim');
+                const integrity = window.focusChristSourceIntegrity && typeof window.focusChristSourceIntegrity.guardGeneratedAnswer === 'function'
+                    ? window.focusChristSourceIntegrity.guardGeneratedAnswer(answer, {
+                        trustedReferenceText: groundedLocalReference.found
+                            ? groundedLocalReference.answer + '\n' + groundedLocalReference.sources.map(function (source) { return (source.text || '') + ' ' + (source.url || ''); }).join('\n')
+                            : '',
+                        requireTrustedScripture: true,
+                        sourceDependent: false
+                    })
+                    : { ok: false, answer: 'I cannot verify the source claim well enough to present it as authoritative.' };
+                if (!integrity.ok) {
+                    answer = integrity.answer;
                 }
                 if (!answer) throw new Error('Response removed as empty');
                 remember(query, answer);
                 return {
                     answer: answer,
-                    sources: localReference.found ? localReference.sources : [],
+                    sources: groundedLocalReference.found ? groundedLocalReference.sources : [],
                     profile: profile,
-                    localMatch: localReference.found ? localReference.key : null,
-                    verifiedGrounding: Boolean(verifiedContext)
+                    localMatch: groundedLocalReference.found ? groundedLocalReference.key : null,
+                    verifiedGrounding: Boolean(verifiedContext) || groundedLocalReference.found,
+                    sourceIntegrityPassed: integrity.ok
                 };
             } catch (error) {
                 lastError = error;
@@ -436,11 +489,7 @@
         };
     }
 
-    function installWhenReady(attempt) {
-        if (typeof window.focusChristStudyAskV2 !== 'function' && attempt < 30) {
-            window.setTimeout(function () { installWhenReady(attempt + 1); }, 100);
-            return;
-        }
+    function installWhenReady() {
         window.focusChristStudyAskV3 = askV3;
         window.askAI = function (query, contextEntries) { return askV3(query, contextEntries || ''); };
         if (currentMode() === 'ask') installAskSendMessage();
@@ -448,5 +497,5 @@
         console.info('focusChrist Study Intelligence policy ' + POLICY_VERSION + ' active.');
     }
 
-    installWhenReady(0);
+    installWhenReady();
 })();

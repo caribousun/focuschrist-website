@@ -295,6 +295,83 @@
         identity.setAttribute('data-focuschrist-footer-identity', 'true');
     }
 
+    /*
+     * Shared source-integrity contract for every AI answer surface.
+     * A list of links is not evidence that the model read those sources. Generated
+     * scripture citations are therefore allowed only when the exact reference is
+     * present in source content that the application has explicitly marked trusted.
+     */
+    const SCRIPTURE_CITATION_PATTERN = /\b(?:[1-4]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Doctrine\s+and\s+Covenants|D&C|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History)|Articles\s+of\s+Faith)\s+\d+(?::\d+(?:[-–]\d+)?)?/gi;
+    const SCRIPTURE_ATTRIBUTION_PATTERN = /\b(?:latter-day\s+saint\s+scripture|scripture|the\s+bible|the\s+book\s+of\s+mormon|the\s+doctrine\s+and\s+covenants|d&c|the\s+pearl\s+of\s+great\s+price)\b.{0,120}\b(?:assigns?|represents?|symbolizes?|means?|says|states|teaches|declares|records|promises|describes)\b/i;
+    const SCRIPTURE_BOOK_ATTRIBUTION_PATTERN = /\b(?:book\s+of\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History))\b.{0,100}\b(?:says?|states?|teaches?|declares?|records?|promises?|describes?|means?|about)\b/i;
+    const KNOWN_FALSE_SOURCE_PATTERNS = [
+        /red,?\s+white,?\s+and\s+black\s+lights?/i,
+        /["']?(?:red|black|golden)\s+light["']?.{0,180}(?:D&C|Doctrine\s+and\s+Covenants)\s+76/i
+    ];
+    const SOURCE_INTEGRITY_FALLBACK = 'I cannot verify the specific source claim well enough to present it as authoritative. Please confirm the subject in the official Gospel Library at ChurchofJesusChrist.org. I would rather acknowledge that limit than attach an incorrect passage or quotation to a teaching.';
+
+    function normalizeSourceReference(text) {
+        return String(text || '')
+            .toLowerCase()
+            .replace(/doctrine\s+and\s+covenants/g, 'd&c')
+            .replace(/[–—]/g, '-')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    function extractScriptureCitations(text) {
+        return String(text || '').match(SCRIPTURE_CITATION_PATTERN) || [];
+    }
+
+    function guardGeneratedAnswer(answer, options) {
+        const settings = options || {};
+        const text = String(answer || '').trim();
+        const trustedReferenceText = normalizeSourceReference(settings.trustedReferenceText || '');
+        const citations = extractScriptureCitations(text);
+        const ungroundedCitations = citations.filter(function (citation) {
+            return !trustedReferenceText.includes(normalizeSourceReference(citation));
+        });
+        const violations = [];
+
+        // Source-dependent faith/history answers currently fail closed unless
+        // they are separately reviewed entries served without model generation.
+        // A URL, citation string, or prompt excerpt is not semantic proof that a
+        // generated claim is supported by the source.
+        if (settings.sourceDependent === true) violations.push('unreviewed-source-dependent-generation');
+        if (KNOWN_FALSE_SOURCE_PATTERNS.some(function (pattern) { return pattern.test(text); })) {
+            violations.push('known-false-source-claim');
+        }
+        if (ungroundedCitations.length) violations.push('ungrounded-scripture-citation');
+        if (settings.requireTrustedScripture !== false && (SCRIPTURE_ATTRIBUTION_PATTERN.test(text) || SCRIPTURE_BOOK_ATTRIBUTION_PATTERN.test(text)) && !trustedReferenceText) {
+            violations.push('ungrounded-scripture-attribution');
+        }
+
+        if (violations.length) {
+            console.warn('focusChrist source-integrity guard blocked generated answer:', violations.join(', '));
+            return {
+                ok: false,
+                answer: SOURCE_INTEGRITY_FALLBACK,
+                citations: citations,
+                ungroundedCitations: ungroundedCitations,
+                violations: violations
+            };
+        }
+        return { ok: true, answer: text, citations: citations, ungroundedCitations: [], violations: [] };
+    }
+
+    window.focusChristSourceIntegrity = Object.freeze({
+        policyVersion: '2026-08-31.5',
+        fallback: SOURCE_INTEGRITY_FALLBACK,
+        extractScriptureCitations: extractScriptureCitations,
+        isScriptureDependent: function (text) {
+            const value = String(text || '');
+            return extractScriptureCitations(value).length > 0
+                || SCRIPTURE_ATTRIBUTION_PATTERN.test(value)
+                || SCRIPTURE_BOOK_ATTRIBUTION_PATTERN.test(value);
+        },
+        guardGeneratedAnswer: guardGeneratedAnswer
+    });
+
     function appendScript(src, marker, onload) {
         const script = document.createElement('script');
         script.src = src;
@@ -313,15 +390,8 @@
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
-        if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence]')) return;
-
-        appendScript('study-intelligence.js?v=20260830-2', 'data-focuschrist-study-intelligence', function () {
-            if (document.querySelector('script[data-focuschrist-study-intelligence-v2]')) return;
-            appendScript('study-intelligence-v2.js?v=20260830-2', 'data-focuschrist-study-intelligence-v2', function () {
-                if (document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-                appendScript('study-intelligence-v3.js?v=20260831-4', 'data-focuschrist-study-intelligence-v3');
-            });
-        });
+        if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
+        appendScript('study-intelligence-v3.js?v=20260831-5', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {

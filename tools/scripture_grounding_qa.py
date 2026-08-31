@@ -1,47 +1,59 @@
 #!/usr/bin/env python3
-"""Release-blocking checks for Ask-page scripture grounding controls."""
+"""Release-blocking checks for final-runtime scripture/source grounding."""
 
 from pathlib import Path
 
-ask_text = (Path(__file__).resolve().parents[1] / "ask.html").read_text(encoding="utf-8")
-v3_text = (Path(__file__).resolve().parents[1] / "study-intelligence-v3.js").read_text(encoding="utf-8")
-common_text = (Path(__file__).resolve().parents[1] / "site-common.js").read_text(encoding="utf-8")
-
-required = {
-    "official LDS canon boundary": "the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price",
-    "hard accuracy rule": "SCRIPTURE ACCURACY IS A HARD REQUIREMENT",
-    "reference-content citation boundary": "ONLY when that passage and its official ChurchofJesusChrist.org source were supplied in REFERENCE CONTENT",
-    "citation-to-source comparison": "const hasUngroundedCitation = generatedCitations.some",
-    "fail-closed runtime check": "if (generatedCitations.length && hasUngroundedCitation)",
-    "official Gospel Library fallback": "Please confirm this question in the official Gospel Library at ChurchofJesusChrist.org",
-    "low-variance generation": "temperature: 0.1",
-    "verified color answer": "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
-    "verified-answer bypass": "if(dbResult.verified)",
-    "Ask shell cache version": "site-common.js?v=20260831-4",
+ROOT = Path(__file__).resolve().parents[1]
+texts = {
+    name: (ROOT / name).read_text(encoding="utf-8")
+    for name in (
+        "ask.html", "site-common.js", "study-intelligence-v3.js",
+        "pioneer-experience.js", "groq-proxy/src/index.js",
+    )
 }
-
-missing = [label for label, marker in required.items() if marker not in ask_text]
-if missing:
-    raise SystemExit("Scripture grounding QA failed: " + ", ".join(missing))
-
-runtime_required = {
-    "final runtime verified-answer bypass": "if (localReference.found && localReference.verified)",
-    "final runtime verified flag": "verified: item.verified === true",
-    "known false-claim blocker": "Blocked known false Doctrine and Covenants color claim",
+required_by_file = {
+    "ask.html": (
+        "the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price",
+        "SCRIPTURE ACCURACY IS A HARD REQUIREMENT",
+        "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
+        "if(dbResult.verified)", "site-common.js?v=20260831-5", "Legacy fallback path",
+    ),
+    "site-common.js": (
+        "window.focusChristSourceIntegrity", "isScriptureDependent",
+        "unreviewed-source-dependent-generation", "ungrounded-scripture-citation",
+        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260831-5",
+    ),
+    "study-intelligence-v3.js": (
+        "if (localReference.found && localReference.verified)", "groundedLocalReference",
+        "Unreviewed legacy Q&A entries are quarantined", "verifiedIntentMatches",
+        "isScriptureDependent(query)", "unreviewed-source-dependent-generation-blocked",
+    ),
+    "pioneer-experience.js": (
+        "Source-dependent pioneer answers remain blocked",
+        "unreviewed-source-dependent-generation-blocked",
+    ),
+    "groq-proxy/src/index.js": (
+        "SERVER SOURCE-INTEGRITY POLICY", "ALLOWED_ORIGINS", "guardGeneratedAnswer",
+        "focuschrist_source_policy = '2026-08-31.5'",
+    ),
 }
-runtime_missing = [label for label, marker in runtime_required.items() if marker not in v3_text]
-if runtime_missing:
-    raise SystemExit("Scripture grounding runtime QA failed: " + ", ".join(runtime_missing))
+errors = []
+for filename, markers in required_by_file.items():
+    for marker in markers:
+        if marker not in texts[filename]:
+            errors.append(f"{filename} missing {marker}")
 
-if "study-intelligence-v3.js?v=20260831-4" not in common_text:
-    raise SystemExit("Scripture grounding runtime QA failed: final runtime cache version is stale")
+common = texts["site-common.js"]
+if "appendScript('study-intelligence.js" in common or "appendScript('study-intelligence-v2.js" in common:
+    errors.append("site-common.js still loads unsafe intermediate Study Intelligence owners")
 
 for false_claim in (
     'red light that "shines upon the righteous"',
-    "Black represents the lowest degree of glory",
-    "Red represents the highest degree",
+    "Black represents the lowest degree of glory", "Red represents the highest degree",
 ):
-    if false_claim in ask_text:
-        raise SystemExit(f"Scripture grounding QA failed: known false claim present: {false_claim}")
+    if false_claim in texts["ask.html"]:
+        errors.append(f"known false claim present: {false_claim}")
 
+if errors:
+    raise SystemExit("Scripture grounding QA failed:\n - " + "\n - ".join(errors))
 print("Scripture grounding QA PASS")
