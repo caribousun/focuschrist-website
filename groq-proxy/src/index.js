@@ -193,6 +193,15 @@ function fallbackPayload(mode, extra) {
   };
 }
 
+function providerDiagnostic(result) {
+  const error = result && result.data && result.data.error ? result.data.error : {};
+  return {
+    focuschrist_provider_status: result && result.response ? result.response.status : 0,
+    focuschrist_provider_code: String(error.code || error.type || '').slice(0, 80),
+    focuschrist_provider_message: String(error.message || '').replace(/[\r\n]+/g, ' ').slice(0, 240),
+  };
+}
+
 export default {
   async fetch(request, env) {
     const origin = request.headers.get('Origin') || '';
@@ -217,7 +226,10 @@ export default {
       const researchResult = await callGroq(env.GROQ_KEY_NEW, sanitized.research);
       if (!researchResult.response.ok) {
         const limited = researchResult.response.status === 429;
-        return jsonResponse(fallbackPayload(limited ? 'research-rate-limited' : 'research-provider-error'), 200, origin);
+        return jsonResponse(fallbackPayload(
+          limited ? 'research-rate-limited' : 'research-provider-error',
+          providerDiagnostic(researchResult),
+        ), 200, origin);
       }
       const researchMessage = researchResult.data && researchResult.data.choices && researchResult.data.choices[0]
         ? researchResult.data.choices[0].message
@@ -251,7 +263,7 @@ export default {
         response_format: { type: 'json_object' },
       });
       if (!verifierResult.response.ok) {
-        return jsonResponse(fallbackPayload('verification-provider-error'), 200, origin);
+        return jsonResponse(fallbackPayload('verification-provider-error', providerDiagnostic(verifierResult)), 200, origin);
       }
       const verifierContent = verifierResult.data && verifierResult.data.choices && verifierResult.data.choices[0]
         ? verifierResult.data.choices[0].message.content
