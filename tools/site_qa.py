@@ -3,6 +3,7 @@ from __future__ import annotations
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlparse
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -145,7 +146,7 @@ def main() -> int:
             fail(errors, f"{filename}: canonical URL missing or incorrect")
         if text.count('data-focuschrist-independence="footer"') != 1:
             fail(errors, f"{filename}: independence footer disclosure missing/duplicated")
-        if text.count('<script src="site-common.js" defer></script>') != 1:
+        if len(re.findall(r'<script src="site-common\.js(?:\?v=[^"]+)?" defer></script>', text)) != 1:
             fail(errors, f"{filename}: shared interaction controller missing/duplicated")
         if 'aria-controls="hamburgerMenu"' not in text:
             fail(errors, f"{filename}: hamburger ARIA controls missing")
