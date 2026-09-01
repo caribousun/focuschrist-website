@@ -14,7 +14,7 @@ const ALLOWED_ORIGINS = new Set([
 const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
-const SOURCE_POLICY_VERSION = '2026-09-01.1';
+const SOURCE_POLICY_VERSION = '2026-09-01.2';
 const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
@@ -340,9 +340,10 @@ export default {
       const researchMessage = researchResult.response.ok && researchResult.data && researchResult.data.choices && researchResult.data.choices[0]
         ? researchResult.data.choices[0].message
         : null;
-      const draft = researchMessage
-        ? String(researchMessage.content || '').trim()
-        : (tellMyStoryEvidence ? `Write a concise, accurate biographical summary of ${sanitized.scope.selectedPioneerName} from the supplied Tell My Story, Too entry.` : '');
+      const researchDraft = researchMessage ? String(researchMessage.content || '').trim() : '';
+      const draft = tellMyStoryEvidence
+        ? `Write a concise, accurate biographical summary of ${sanitized.scope.selectedPioneerName} from the supplied Tell My Story, Too entry. Center the selected book entry, include its principal journey experiences, preserve attribution for recollections, and use official records only as corroboration.`
+        : researchDraft;
       const allEvidence = collectSourceEvidence(researchMessage);
       const evidence = sanitized.scope.selectedPioneer
         ? [tellMyStoryEvidence, ...allEvidence.filter(isOfficialChurchSource)].filter(Boolean)
@@ -354,7 +355,8 @@ export default {
       const selectedPioneerPolicy = sanitized.scope.selectedPioneer ? [
         `The visitor explicitly selected ${sanitized.scope.selectedPioneerName}.`,
         'The Tell My Story, Too entry is an allowed biographical source for details actually contained in that entry. Do not reject those details merely because an official Church page does not duplicate them.',
-        'Use official Church evidence, when supplied, to corroborate identity, company, dates, and journey.',
+        'Center the answer on the selected book entry. Use official Church evidence, when supplied, to corroborate identity, company, dates, and journey.',
+        'If the book and an official record disagree, either state the discrepancy with both source positions or omit the disputed detail. Never silently choose one date or fact and imply the sources agree.',
         'Attribute diary excerpts, descendant recollections, family histories, and miraculous accounts to the people or source traditions named in the entry. Do not present them as official Church declarations.',
         'Produce a concise summary rather than reproducing long passages. The final source_indexes must include the Tell My Story, Too source.',
       ].join('\n') : 'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.';
