@@ -364,6 +364,7 @@
             });
         });
     }
+    window.focusChristInitAskStarters = initStarterQuestions;
 
     function initTopicCards() {
         document.querySelectorAll('.ask-topic-toggle').forEach(function (toggle) {

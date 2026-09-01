@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.9';
+    const PIONEER_POLICY_VERSION = '2026-09-01.10';
     let pioneerRequestSerial = 0;
 
     const PIONEER_PAGE_CONTEXT = [
@@ -30,7 +30,15 @@
     function reviewedPioneerKnowledge(question) {
         const registry = window.focusChristReviewedKnowledge;
         if (!registry || typeof registry.match !== 'function') return null;
-        return registry.match(question, { profile: 'pioneers' });
+        const resolution = typeof registry.resolveFollowup === 'function'
+            ? registry.resolveFollowup(question, { profile: 'pioneers', history: recentHistory() })
+            : { query: question, resolved: false, entryId: null };
+        const reviewed = registry.match(resolution.query, { profile: 'pioneers' });
+        if (!reviewed) return null;
+        return Object.assign({}, reviewed, {
+            contextResolved: resolution.resolved === true,
+            contextEntryId: resolution.entryId || null
+        });
     }
 
     function appendTextParagraph(parent, text) {
@@ -110,9 +118,11 @@
         });
     }
 
-    function rememberExchange(question, answer) {
+    function rememberExchange(question, answer, contextReceipt) {
         if (typeof conversationHistory === 'undefined' || !Array.isArray(conversationHistory)) return;
-        conversationHistory.push({ role: 'user', content: question });
+        const userTurn = { role: 'user', content: question };
+        if (contextReceipt && contextReceipt.contextEntryId) userTurn.contextEntryId = contextReceipt.contextEntryId;
+        conversationHistory.push(userTurn);
         conversationHistory.push({ role: 'assistant', content: String(answer || '') });
         while (conversationHistory.length > 20) conversationHistory.shift();
         try { sessionStorage.setItem('focuschrist_history', JSON.stringify(conversationHistory)); } catch (_error) {}
@@ -154,7 +164,9 @@
             'FAITH AND TONE:',
             '- Explain faith when it is genuinely part of the historical record or the visitor asks about it.',
             '- Do not append a canned testimony, blessing, or forced devotional closing.',
-            '- Be respectful, concise, readable, and historically focused.',
+            '- Give a complete, useful answer unless the visitor explicitly asks for brevity. Never answer a sincere question with only one or two words.',
+            '- For a simple fact, state the answer directly and add the context needed to understand it. For a nuanced topic, normally use two to five short paragraphs.',
+            '- Be respectful, readable, and historically focused.',
             '- Use plain text, short paragraphs, and simple hyphen bullets only when useful.',
             '- End with a complete sentence.',
             pageReference ? '\nPAGE-SUPPLIED CONTEXT FOR THIS INTERACTION:\n' + pageReference : ''
@@ -618,7 +630,7 @@
             const reviewed = reviewedPioneerKnowledge(question);
             if (reviewed) {
                 const answer = window.addMessage(reviewed.answer, false, reviewed.sources || []);
-                rememberExchange(question, reviewed.answer);
+                rememberExchange(question, reviewed.answer, reviewed);
                 setConversationMode(true);
                 positionAnswer(answer);
                 return;
@@ -706,7 +718,7 @@
         const reviewed = reviewedPioneerKnowledge(topic);
         if (reviewed) {
             const answer = window.addMessage(reviewed.answer, false, reviewed.sources || []);
-            rememberExchange(topic, reviewed.answer);
+            rememberExchange(topic, reviewed.answer, reviewed);
             setConversationMode(true);
             positionAnswer(answer);
             return;

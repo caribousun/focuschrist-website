@@ -3,8 +3,8 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-POLICY = "2026-09-01.9"
-CACHE = "20260901-9"
+POLICY = "2026-09-01.10"
+CACHE = "20260901-10"
 
 
 def block(text: str, start: str, end: str) -> str:

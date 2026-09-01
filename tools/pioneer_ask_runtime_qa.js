@@ -58,7 +58,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official Church History', url: 'https://www.churchofjesuschrist.org/study/church-history' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.9'
+                focuschrist_source_policy: '2026-09-01.10'
             };
         }
     };
@@ -96,6 +96,12 @@ function assert(condition, message) {
     assert(messages.length === 2 && messages[1].text.includes('1856'), 'owner handcart question must render the reviewed 1856 answer');
     assert(messages[1].sources.some((source) => source.url.includes('handcart-companies')), 'handcart answer must render its official source');
     assert(input.disabled === false && button.disabled === false, 'Pioneer controls must restore after local answer');
+
+    messages.length = 0;
+    await window.askTopic('Handcart Companies');
+    assert(fetchCalls === 0, 'visible Handcart Companies topic must make zero Worker requests');
+    assert(messages.length === 2 && messages[1].text.includes('1856') && messages[1].text.length >= 400,
+        'visible Handcart Companies topic must render the substantive reviewed answer');
 
     messages.length = 0;
     await window.askTopic('Exodus from Nauvoo');

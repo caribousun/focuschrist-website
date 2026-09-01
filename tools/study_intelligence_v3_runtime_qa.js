@@ -66,7 +66,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official source', url: 'https://www.churchofjesuschrist.org/study/scriptures' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.9',
+                focuschrist_source_policy: '2026-09-01.10',
             };
         },
     };
@@ -107,26 +107,64 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     assert(result.answer.includes('1844') && fetchCalls === 0,
         'bare Joseph death phrasing on the LDS Ask page must use the qualified reviewed answer');
 
+    result = await window.focusChristStudyAskV3('Who is Jesus Christ, and why is He central to Latter-day Saint belief?', '');
+    assert(result.reviewedLocal === true && result.answer.split(/\s+/).length >= 70 && result.sources.length >= 1 && fetchCalls === 0,
+        'visible Jesus Christ Ask card must return a substantive reviewed answer with zero Worker calls');
+
+    conversationHistory.length = 0;
+    renderedMessages.length = 0;
+    const beforeFollowupFlow = fetchCalls;
+    dom.userInput.value = 'What date did Joseph Smith die?';
+    await window.sendMessage();
+    dom.userInput.value = 'Do we know the time he died';
+    await window.sendMessage();
+    const followupAnswer = renderedMessages.at(-1);
+    assert(fetchCalls === beforeFollowupFlow, 'reviewed Joseph Smith conversation and follow-up must make zero Worker calls');
+    assert(followupAnswer && /about or shortly after 5:00 p\.m\./.test(followupAnswer.text),
+        'real Ask follow-up did not render the reviewed qualified time');
+    assert(conversationHistory.some((item) => item.role === 'user' && item.content === 'Do we know the time he died'),
+        'Ask must preserve the visitor\'s original follow-up wording in conversation history');
+
+    const beforeEllipticalFollowup = fetchCalls;
+    result = await window.focusChristStudyAskV3('What time?', '');
+    assert(fetchCalls === beforeEllipticalFollowup && result.reviewedLocal === true
+        && result.contextResolved === true && result.answer.includes('5:00 p.m.'),
+        'a permitted subjectless follow-up must resolve Joseph Smith without a Worker call');
+
+    const beforeCompetingFollowup = fetchCalls;
+    dom.userInput.value = 'What date did Abraham Lincoln die?';
+    await window.sendMessage();
+    dom.userInput.value = 'Do we know the time he died';
+    await window.sendMessage();
+    assert(fetchCalls === beforeCompetingFollowup + 2 && renderedMessages.at(-1).text === 'RESEARCHED VERIFIED ANSWER',
+        'a follow-up after an intervening competing person must not skip backward and inherit Joseph Smith');
+
+    window.focusChristCancelAskRequests();
+    const beforeResetFollowup = fetchCalls;
+    result = await window.focusChristStudyAskV3('Do we know the time he died', '');
+    assert(fetchCalls === beforeResetFollowup + 1 && result.reviewedLocal !== true,
+        'Ask reset must prevent stale Joseph Smith context inheritance');
+
     for (const query of ['what year was Joseph Stalin killed', 'was Joseph of Egypt murdered', 'Joseph Kennedy death']) {
         result = await window.focusChristStudyAskV3(query, '');
         assert(result.answer === 'RESEARCHED VERIFIED ANSWER',
             'a competing Joseph identity must not receive the Joseph Smith answer: ' + query);
     }
-    assert(fetchCalls === 3, 'competing Joseph identities must use the gateway instead of the local Joseph Smith answer');
+    assert(fetchCalls === 6, 'competing Joseph identities must use the gateway instead of the local Joseph Smith answer');
 
     result = await window.focusChristStudyAskV3('how is color used in painting', '');
-    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 4, 'painting query must use verified research');
+    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 7, 'painting query must use verified research');
     result = await window.focusChristStudyAskV3('how is color used in website design', '');
-    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 5, 'design query must use verified research');
+    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 8, 'design query must use verified research');
     result = await window.focusChristStudyAskV3('what makes a family business successful', '');
-    assert(result.profile === 'general-knowledge' && fetchCalls === 6,
+    assert(result.profile === 'general-knowledge' && fetchCalls === 9,
         'generic family language must not inherit the faith or Pioneer source lane');
-    assert(requestBodies[5].focuschrist_profile === 'general-knowledge',
+    assert(requestBodies[8].focuschrist_profile === 'general-knowledge',
         'Ask must send the gateway its narrowed general profile');
     result = await window.focusChristStudyAskV3('who was Joseph Smith', '');
-    assert(result.profile === 'faith-study' && fetchCalls === 7,
+    assert(result.profile === 'faith-study' && fetchCalls === 10,
         'an explicit Joseph Smith question must retain the faith source lane');
-    assert(requestBodies[6].focuschrist_profile === 'faith-study',
+    assert(requestBodies[9].focuschrist_profile === 'faith-study',
         'explicit faith intent must remain available to the server-owned source policy');
     assert(requestBodies.every((body) => body.focuschrist_page === 'ask'),
         'Ask requests must identify the Ask surface explicitly');
@@ -137,12 +175,13 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         assert(result.sourceIntegrityStatus === 'retrieval-researched-and-verified', 'source query lacks verified status: ' + query);
         assert(result.sources.some((source) => source.url.includes('churchofjesuschrist.org')), 'source query omitted official evidence: ' + query);
     }
-    assert(fetchCalls === 14, 'each unreviewed question must call the research gateway once');
+    assert(fetchCalls === 17, 'each unreviewed question must call the research gateway once');
 
     result = await window.askAI('what does D&C 18:15 say?', '');
-    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 15,
+    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 18,
         'window.askAI must preserve verified retrieval');
 
+    renderedMessages.length = 0;
     dom.userInput.value = 'what does Mark say about baptism?';
     await window.sendMessage();
     assert(renderedMessages.length === 2, 'window.sendMessage must render one user message and one verified response');
@@ -152,7 +191,7 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         'window.sendMessage must render the verified answer');
     assert(renderedMessages[1].sources.some((source) => source.url.includes('churchofjesuschrist.org')),
         'window.sendMessage must render verified sources');
-    assert(fetchCalls === 16, 'window.sendMessage must call the research gateway');
+    assert(fetchCalls === 19, 'window.sendMessage must call the research gateway');
     assert(dom.userInput.disabled === false && dom.sendBtn.disabled === false && dom.sendBtn.textContent === 'Ask',
         'window.sendMessage must restore Ask controls');
 
@@ -174,6 +213,30 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         'real main Ask topic-button event must retain the reviewed-local zero-Worker lane');
     assert(renderedMessages.length === messagesBeforeTopic + 2 && renderedMessages.at(-1).text.includes('atmosphere'),
         'real main Ask topic-button event must route through the v3 primary composer');
+    document.querySelectorAll = originalQuerySelectorAll;
+
+    const starterButton = {
+        textContent: 'Who is Jesus Christ?',
+        getAttribute(name) {
+            return name === 'data-question'
+                ? 'Who is Jesus Christ, and why is He central to Latter-day Saint belief?'
+                : '';
+        },
+        addEventListener(name, callback) { if (name === 'click') this.clickHandler = callback; }
+    };
+    document.querySelectorAll = (selector) => selector === '[data-ask-starter]' ? [starterButton] : [];
+    window.focusChristInitAskStarters();
+    const callsBeforeStarter = fetchCalls;
+    const messagesBeforeStarter = renderedMessages.length;
+    starterButton.clickHandler();
+    await Promise.resolve();
+    await Promise.resolve();
+    assert(fetchCalls === callsBeforeStarter,
+        'real main Ask starter-card event must retain the reviewed-local zero-Worker lane');
+    assert(renderedMessages.length === messagesBeforeStarter + 2
+        && renderedMessages.at(-1).text.includes('Savior and Redeemer')
+        && renderedMessages.at(-1).text.split(/\s+/).length >= 70,
+        'real main Ask Jesus Christ starter-card event must render the substantive reviewed answer');
     document.querySelectorAll = originalQuerySelectorAll;
 
     renderedMessages.length = 0;

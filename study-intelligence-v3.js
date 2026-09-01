@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-09-01.9';
+    const POLICY_VERSION = '2026-09-01.10';
     let askRequestSerial = 0;
 
     const FAITH_TERMS = new Set([
@@ -177,6 +177,14 @@
         return registry.match(query, { profile: currentMode() });
     }
 
+    function resolveQuestionContext(query) {
+        const registry = window.focusChristReviewedKnowledge;
+        if (!registry || typeof registry.resolveFollowup !== 'function') {
+            return { query: query, resolved: false, entryId: null, contextLabel: '' };
+        }
+        return registry.resolveFollowup(query, { profile: currentMode(), history: recentHistory() });
+    }
+
     function verifiedContextFor(query) {
         const q = normalize(query);
         const matches = VERIFIED_CONTEXTS.filter(function (entry) {
@@ -192,9 +200,11 @@
         });
     }
 
-    function remember(question, answer) {
+    function remember(question, answer, contextReceipt) {
         if (typeof conversationHistory === 'undefined' || !Array.isArray(conversationHistory)) return;
-        conversationHistory.push({ role: 'user', content: question });
+        const userTurn = { role: 'user', content: question };
+        if (contextReceipt && contextReceipt.contextEntryId) userTurn.contextEntryId = contextReceipt.contextEntryId;
+        conversationHistory.push(userTurn);
         conversationHistory.push({ role: 'assistant', content: answer });
         if (conversationHistory.length > 20) conversationHistory.splice(0, conversationHistory.length - 20);
         try { sessionStorage.setItem('focuschrist_history', JSON.stringify(conversationHistory)); } catch (_error) {}
@@ -246,7 +256,8 @@
             '',
             'CORE INTELLIGENCE RULES:',
             '- Identify what the visitor actually asked and answer that first.',
-            '- Adapt depth to the question. Simple facts can be brief; nuanced questions deserve context.',
+            '- Give a complete, useful answer unless the visitor explicitly asks for brevity. Never answer a sincere question with only one or two words.',
+            '- For a simple fact, state the answer directly and add the context needed to understand it. For a nuanced question, normally use two to five short paragraphs.',
             '- Preserve conversational context for follow-up questions.',
             '- Never begin with filler such as "Great question."',
             '- Never end an ordinary answer with generic phrases such as "May the love of Jesus Christ bring you peace," "God bless you," or equivalent boilerplate.',
@@ -378,13 +389,15 @@
     }
 
     async function askV3(query, additionalReference) {
-        const profile = classifyQuestion(query);
-        const reviewedReference = reviewedKnowledgeReference(query);
-        const localReference = bestLocalReference(query);
+        const contextResolution = resolveQuestionContext(query);
+        const effectiveQuery = contextResolution.query || query;
+        const profile = classifyQuestion(effectiveQuery);
+        const reviewedReference = reviewedKnowledgeReference(effectiveQuery);
+        const localReference = bestLocalReference(effectiveQuery);
         const groundedLocalReference = localReference.found && localReference.verified
             ? localReference
             : { found: false, answer: '', sources: [], verified: false };
-        const verifiedContext = profile === 'faith-study' || profile === 'pioneer-study' ? verifiedContextFor(query) : '';
+        const verifiedContext = profile === 'faith-study' || profile === 'pioneer-study' ? verifiedContextFor(effectiveQuery) : '';
 
         // The shared reviewed registry is the first answer lane for the free-form
         // modes handled by v3. It remains available during provider, retrieval,
@@ -393,7 +406,9 @@
             return Object.assign({}, reviewedReference, {
                 profile: profile,
                 localMatch: reviewedReference.id,
-                reviewedLocal: true
+                reviewedLocal: true,
+                contextResolved: contextResolution.resolved === true,
+                contextEntryId: contextResolution.entryId || null
             });
         }
 
@@ -412,8 +427,8 @@
 
         const explicitScriptureDependency = window.focusChristSourceIntegrity
             && typeof window.focusChristSourceIntegrity.isScriptureDependent === 'function'
-            ? window.focusChristSourceIntegrity.isScriptureDependent(query)
-            : /(?:D&C|Doctrine\s+and\s+Covenants|Bible|Book\s+of\s+Mormon|scripture|(?:[1-4]\s+)?[A-Za-z]+\s+\d+(?::\d+)?)/i.test(query);
+            ? window.focusChristSourceIntegrity.isScriptureDependent(effectiveQuery)
+            : /(?:D&C|Doctrine\s+and\s+Covenants|Bible|Book\s+of\s+Mormon|scripture|(?:[1-4]\s+)?[A-Za-z]+\s+\d+(?::\d+)?)/i.test(effectiveQuery);
         const sourceDependent = explicitScriptureDependency
             || profile === 'faith-study'
             || profile === 'pioneer-study'
@@ -422,7 +437,11 @@
         // are not supplied to the model, and their links are not displayed as if
         // they supported a generated answer. The server researches authoritative
         // sources and independently verifies the draft before returning it.
-        const messages = buildMessages(query, profile, groundedLocalReference, verifiedContext, additionalReference || '');
+        const resolvedReference = contextResolution.resolved
+            ? 'Resolved follow-up subject: ' + contextResolution.contextLabel + '. Answer the visitor\'s original wording in that established context.'
+            : '';
+        const combinedReference = [resolvedReference, additionalReference || ''].filter(Boolean).join('\n\n');
+        const messages = buildMessages(effectiveQuery, profile, groundedLocalReference, verifiedContext, combinedReference);
         let lastError = null;
 
         for (const timeout of [25000, 18000]) {
@@ -506,7 +525,7 @@
                 const result = await askV3(question, '');
                 if (requestId !== askRequestSerial) return;
                 if (loading.isConnected) loading.remove();
-                remember(question, result.answer);
+                remember(question, result.answer, result);
                 window.addMessage(result.answer, false, result.sources);
             } catch (error) {
                 if (requestId !== askRequestSerial) return;

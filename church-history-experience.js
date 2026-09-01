@@ -25,7 +25,15 @@
     function reviewedHistoryKnowledge(question) {
         const registry = window.focusChristReviewedKnowledge;
         if (!registry || typeof registry.match !== 'function') return null;
-        return registry.match(question, { profile: 'church-history' });
+        const resolution = typeof registry.resolveFollowup === 'function'
+            ? registry.resolveFollowup(question, { profile: 'church-history', history: historyConversation })
+            : { query: question, resolved: false, entryId: null };
+        const reviewed = registry.match(resolution.query, { profile: 'church-history' });
+        if (!reviewed) return null;
+        return Object.assign({}, reviewed, {
+            contextResolved: resolution.resolved === true,
+            contextEntryId: resolution.entryId || null
+        });
     }
 
     function preferredScrollBehavior() {
@@ -313,6 +321,8 @@
                 '- Treat official Church History materials at ChurchofJesusChrist.org and the Saints volumes as the governing source family for this answer.',
                 '- Do not invent historical details, quotations, dates, motives, private revelations, or source claims.',
                 '- If the official source family does not clearly establish a detail, state that limitation instead of filling the gap from model memory.',
+                '- Give a direct, developed answer. A simple fact still needs enough context to be useful; a nuanced question normally needs two to five short paragraphs.',
+                '- Never answer a sincere question with only one or two words.',
                 '- Distinguish documented history, recollection, tradition, interpretation, and disputed claims when relevant.',
                 '- The visitor will receive verified official source links after the answer.',
                 '',
@@ -375,7 +385,11 @@
             const message = createMessage('assistant', reviewed.answer);
             appendVerifiedSources(message, reviewed.sources || []);
             appendMessage(message);
-            historyConversation.push({ question: question, answer: reviewed.answer });
+            historyConversation.push({
+                question: question,
+                answer: reviewed.answer,
+                contextEntryId: reviewed.contextEntryId || reviewed.id || null
+            });
             if (historyConversation.length > MAX_CONTEXT_TURNS) historyConversation.shift();
             setConversationMode(true);
             setBusy(false);

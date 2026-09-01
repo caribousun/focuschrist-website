@@ -27,6 +27,9 @@ const clean = sanitizePayload({ model: 'other', temperature: 0.9, max_tokens: 90
 assert(clean.research.model === 'groq/compound-mini', 'gateway must own the research model');
 assert(clean.research.messages[0].content.includes('SERVER RESEARCH AND SOURCE-INTEGRITY POLICY'),
   'gateway must prepend the server research policy');
+assert(clean.research.messages[0].content.includes('never reduce a sincere question to a one- or two-word response')
+  && clean.research.messages[0].content.includes('two to five short paragraphs'),
+  'gateway must preserve the substantive-answer contract');
 assert(clean.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
   'faith research must be instructed to search the official Church domain');
 
