@@ -6,6 +6,37 @@ Overall release state: `VERIFIED PASS`.
 
 The owner-reproduced handcart behavior is `VERIFIED PASS` in the local final-owner runtime and on the fully loaded production Pioneer page: it returns 1856 from reviewed local knowledge with the official Handcart Companies source. Automated runtime proof confirms this reviewed route makes zero Worker calls.
 
+## Supplemental final closure — policy 2026-09-01.15
+
+The earlier policy `2026-09-01.9` receipt remains historical evidence, but it was superseded after the owner found additional main Ask and card/follow-up failures.
+
+Additional verified root causes:
+
+1. A final browser attribution guard interpreted the person name “Abraham Lincoln” as a Book of Abraham source claim and replaced a correct server answer with a Gospel Library limitation.
+2. The stable low-risk lane answered a chained `What time?` follow-up with a fluent but false 10:00 p.m. death time. The initial question and first follow-up passing did not prove the conversation chain.
+3. Competing-person detection depended on Title Case and then on two-word names. Lowercase names, surnames, and acronyms could inherit Joseph Smith context.
+4. Repository-local and provider-response tests did not prove the final postprocessed answer or canonical production cache state.
+5. A cache-busted production probe could see fresh origin bytes while canonical visitor cache keys or transitive scripts remained stale.
+
+Final systemic repair:
+
+- Added the reviewed, integrity-pinned `general-abraham-lincoln-death-1865` entry with Library of Congress and National Park Service sources.
+- Kept Lincoln’s main question, pronoun follow-up, and chained ellipsis on the reviewed zero-Worker lane with the exact 7:22 a.m. time.
+- Made explicit competing-subject detection case-insensitive and grammar-anchored for full names, lowercase names, surnames, and acronyms while preserving valid contextual modifiers.
+- Added adversarial registry and full-controller tests for source-title/person collisions, conjunctions, identity switches, reset isolation, and final rendered output.
+- Added a latest-only post-deploy gate that recursively discovers the Ask dependency graph, requires exact bytes through canonical visitor cache keys and separate origin probes, repeats after a stability interval, and executes the stable canonical registry.
+
+Final evidence:
+
+- PR `#56` CI run `33474211249`: success.
+- Feature merge `f58b232ed9386361285fafd44e5fea8390fe1868`.
+- Post-feature Site QA `33474356949`, Worker `33474356964`, and Pages `33474356962`: success.
+- PR `#57` CI run `33475167356`: success.
+- Current production merge `baaa15a24e5b35101bde8a5046b86295310b50bb`.
+- Post-gate Pages run `33475248240`: success.
+- Post-gate Site QA/live production run `33475248219`: success; output recorded `LIVE PRODUCTION ASK QA PASS`.
+- Independent adversarial verdicts for both releases: `VERIFIED PASS`.
+
 ## Production completion receipt
 
 - Merged pull request: `#47`

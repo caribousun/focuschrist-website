@@ -32,9 +32,9 @@ Repair stale project records in the same run. Never use an older statement of su
 
 ## Current controlling status
 
-The all-page AI Ask issue is **VERIFIED FAIL**.
+The all-page AI Ask repair is **VERIFIED PASS** for production policy `2026-09-01.15` and cache `20260901-15`.
 
-The owner reproduced failures on the main Ask, Pioneer, and Church History pages:
+The owner-reproduced main Ask, Pioneer, and Church History failures are closed by executable contracts for:
 
 > Do we know the time he died
 
@@ -44,15 +44,17 @@ The owner reproduced failures on the main Ask, Pioneer, and Church History pages
 
 > How does the Church explain Joseph Smith and plural marriage?
 
-The system discarded the Joseph Smith subject before local matching, failed to recognize visible topic/card prompts as reviewed inputs, and allowed source-integrity fallback language to replace useful answers. Therefore:
+The final release also covers the chained Lincoln follow-up `What time?`, reset isolation, lowercase and one-token competing identities, source-title/person lexical collisions, and conclusive answer depth.
 
-- the previous implementation was deployed but was not proven working across its promised scope;
-- the prior completion claim was premature;
-- the prior prompt and test set were insufficient;
-- this failure class must be repaired systematically, not with a one-question exception;
-- the reproduced defect remains `VERIFIED FAIL` until that behavior is corrected and directly retested;
-- after the reproduced behavior passes, the overall release remains `INCOMPLETE` while any other required gate is unproven;
-- only full completion-gate convergence may advance the overall status to `VERIFIED PASS`.
+Verified production lineage:
+
+- feature repair PR: `#56`; merge commit: `f58b232ed9386361285fafd44e5fea8390fe1868`;
+- permanent production gate PR: `#57`; current production commit: `baaa15a24e5b35101bde8a5046b86295310b50bb`;
+- independently verified feature head: `b7397c87665e9396d22017aaf7ec4e80a2bd4240`;
+- independently verified live-gate head: `d509ed10b8e934cb2f723a55926fdfdf25c63407`;
+- live production gate: 15 recursively discovered assets and 15 canonical cache keys matched the tested release, remained exact through a stability recheck, and passed the critical conversation suite.
+
+This status is evidence-bound, not permanent by declaration. Any owner-reproduced failure or required gate failure immediately returns the affected scope to `VERIFIED FAIL` until repaired and retested. Future Ask changes must continue to execute this prompt in full.
 
 ## Mission
 
