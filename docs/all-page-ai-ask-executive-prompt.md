@@ -34,11 +34,15 @@ Repair stale project records in the same run. Never use an older statement of su
 
 The all-page AI Ask issue is **VERIFIED FAIL**.
 
-The owner reproduced this failure on the Pioneer page:
+The owner reproduced failures on the main Ask and Pioneer pages:
 
-> What year did the handcarts begin?
+> Do we know the time he died
 
-The page already contains the reviewed fact that handcart travel began in 1856, but the free-form Pioneer Ask route bypassed that knowledge, depended on remote research, and returned a limitation when verification was unavailable. Therefore:
+> Handcart Companies
+
+> Who is Jesus Christ, and why is He central to Latter-day Saint belief?
+
+The system discarded the Joseph Smith subject before local matching, failed to recognize visible topic/card prompts as reviewed inputs, and allowed source-integrity fallback language to replace useful answers. Therefore:
 
 - the previous implementation was deployed but was not proven working across its promised scope;
 - the prior completion claim was premature;
@@ -105,6 +109,8 @@ Additional rules:
 6. No browser code may relabel unverified model output as verified. Source policy and receipts are server-owned.
 7. A valid answer must not be replaced later by a slower failure, stale request, or unrelated response.
 8. Use safe text rendering. Preserve keyboard access, focus, visible loading and error states, screen-reader labels, source visibility, reset behavior, and mobile usability.
+9. Unless a visitor explicitly asks for brevity, give a complete and useful answer. A simple fact must include the direct answer and enough context to understand it; a nuanced question normally requires two to five short paragraphs. Never reduce a sincere question to one or two words.
+10. Every visible starter, topic button, suggestion, and question card is an executable product promise. Its exact submitted text must be inventoried and tested through the final runtime owner.
 
 ## Required architecture audit
 
@@ -218,6 +224,9 @@ When no reviewed local answer exists:
 ### 6. Conversation and request safety
 
 - Preserve bounded context for real follow-up questions.
+- Resolve pronouns and only explicitly permitted short elliptical follow-ups against reviewed conversation context before profile classification, local matching, or source-lane selection. A short question that introduces a named subject must never inherit a different prior identity.
+- A resolved follow-up must retain the visitor's original wording in history and expose an inspectable context-resolution receipt.
+- Persist that receipt with the user turn so chained follow-ups remain bound. Inheritance may consider only the most recent prior user turn; it must never skip backward past an intervening subject.
 - Reset must clear both visible and hidden conversation state.
 - Abort or ignore stale requests after reset, navigation, selection change, or a newer submission.
 - Prevent duplicate requests from repeated clicks or Enter presses.
@@ -252,8 +261,11 @@ At minimum, retain these named specimens.
 ### Main Ask specimens
 
 - `Why is the sky blue?` — direct ordinary general answer; no Gospel Library fallback.
+- every exact `data-ask-starter` question in `ask.html` — substantive reviewed answer, authoritative sources, and zero Worker requests.
+- `Who is Jesus Christ, and why is He central to Latter-day Saint belief?` — complete reviewed answer, not a verification refusal.
 - `What makes a family business successful?` — useful general answer using the general lane.
 - `What year was Joseph Smith killed?` — supported answer identifying June 27, 1844, with official Church history evidence.
+- after the Joseph Smith date question, `Do we know the time he died` — resolve Joseph Smith before routing and answer about or shortly after 5:00 p.m.; after reset, the same wording must not inherit Joseph Smith.
 - `What year was Joseph Stalin killed?` — must not be captured by the Joseph Smith intent.
 - a supported scripture/doctrine question — official Church evidence.
 - a fabricated or miscited scripture claim — blocked or corrected with evidence.
@@ -262,6 +274,7 @@ At minimum, retain these named specimens.
 ### Pioneer specimens
 
 - `What year did the handcarts begin?` — **1856**, reviewed local/official answer, source visible, zero Worker requests.
+- visible topic `Handcart Companies` — substantive reviewed 1856-1860 explanation, source visible, zero Worker requests.
 - paraphrases such as `When did handcart travel start?` and `What year did the handcart companies begin?` — same reviewed intent.
 - negative controls such as `When did handcart racing begin?`, `When did shopping carts begin?`, and a clearly modern handcart question — must not match the Pioneer reviewed fact.
 - `Tell me about the pioneer exodus` — answer from reviewed Pioneer/Church-history context when present; zero Worker requests for the reviewed portion.

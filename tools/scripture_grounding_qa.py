@@ -16,17 +16,17 @@ required_by_file = {
         "the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price",
         "SCRIPTURE ACCURACY IS A HARD REQUIREMENT",
         "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
-        "if(dbResult.verified)", "site-common.js?v=20260901-9", "Legacy fallback path",
+        "if(dbResult.verified)", "site-common.js?v=20260901-10", "Legacy fallback path",
     ),
     "site-common.js": (
         "window.focusChristSourceIntegrity", "isScriptureDependent",
         "unreviewed-source-dependent-generation", "ungrounded-scripture-citation",
-        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260901-9",
+        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260901-10",
     ),
     "study-intelligence-v3.js": (
         "if (localReference.found && localReference.verified)", "groundedLocalReference",
         "Unreviewed legacy Q&A entries are quarantined", "verifiedIntentMatches",
-        "isScriptureDependent(query)", "retrieval-researched-and-verified",
+        "isScriptureDependent(effectiveQuery)", "retrieval-researched-and-verified",
         "serverVerified: researched.serverVerified",
     ),
     "pioneer-experience.js": (
@@ -36,7 +36,7 @@ required_by_file = {
     ),
     "groq-proxy/src/index.js": (
         "SERVER RESEARCH AND SOURCE-INTEGRITY POLICY", "ALLOWED_ORIGINS", "guardVerifiedAnswer",
-        "SOURCE_POLICY_VERSION = '2026-09-01.9'",
+        "SOURCE_POLICY_VERSION = '2026-09-01.10'",
         "retrieval-researched-and-verified", "execute web search", "compound-mini",
         "churchofjesuschrist.org",
     ),

@@ -15,7 +15,7 @@ const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
 const GENERAL_ANSWER_FALLBACK = 'I could not complete that general answer just now. Please try again or rephrase the question.';
-const SOURCE_POLICY_VERSION = '2026-09-01.9';
+const SOURCE_POLICY_VERSION = '2026-09-01.10';
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
 const SERVER_RESEARCH_POLICY = [
@@ -27,7 +27,9 @@ const SERVER_RESEARCH_POLICY = [
   '- Distinguish source text, official teaching, historical reporting, interpretation, and practical application.',
   '- If the available evidence does not support a claim, omit it or state the limitation.',
   '- focusChrist is independent and must never be described as an official or endorsed Church property.',
-  '- Keep the answer readable and concise. Do not expose internal reasoning or tool traces.',
+  '- Give a direct, complete, useful answer. Do not confuse brevity with quality and never reduce a sincere question to a one- or two-word response.',
+  '- A simple fact should include the answer and the context needed to understand it. A nuanced question normally needs two to five short paragraphs.',
+  '- Keep the answer readable. Do not expose internal reasoning or tool traces.',
 ].join('\n');
 
 const FAITH_PATTERN = /\b(?:Jesus|Christ|Savior|God|scripture|scriptures|Bible|biblical|Book\s+of\s+Mormon|Doctrine\s+and\s+Covenants|D&C|Pearl\s+of\s+Great\s+Price|Church\s+of\s+Jesus\s+Christ|Latter[- ]day\s+Saint|LDS|prophet|apostle|temple|priesthood|gospel|atonement|restoration|Joseph\s+Smith|Brigham\s+Young|pioneer|pioneers|Nephi|Alma|Mosiah|Moroni|Ether|Helaman|Mormon|celestial|terrestrial|telestial|Gospel\s+Library)\b/i;
@@ -344,7 +346,7 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
     'You are the final checker for a low-risk, stable general-knowledge answer. Return one JSON object only.',
     'This path is never for current events, weather, prices, schedules, politics, medical, legal, financial, safety, statistics, quotations, citations, or source-specific questions.',
     'Decide whether the question is ordinary, stable, low-risk general knowledge that can be answered accurately without live retrieval.',
-    'If it is, answer directly or correct the draft if one is supplied, then set approved true. Keep the answer concise, direct, nonreligious unless the user asked about religion, and free of invented citations or links.',
+    'If it is, answer directly or correct the draft if one is supplied, then set approved true. Give a complete answer: even a simple fact must include the direct answer and at least one useful context sentence. Keep it direct, nonreligious unless the user asked about religion, and free of invented citations or links.',
     'If it requires current or specialized evidence, set approved false and return an empty answer.',
     'Schema: {"approved":boolean,"answer":string}',
     '',
@@ -484,9 +486,10 @@ export default {
       ].join('\n') : [
         'You are a strict evidence verifier. Return one JSON object only.',
         'Evaluate the draft against the supplied source excerpts. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence.',
-        'Remove unsupported detail and correct contradictions. Do not add facts from memory.',
+        'Repair the draft into a direct, complete answer using the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
+        'For a simple fact, give the answer plus the context needed to understand it. For a nuanced question, normally give two to five short paragraphs. Never return a one- or two-word answer.',
         'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
-        'Set approved true only if the final answer is fully supported. source_indexes must list the 1-based evidence sources that directly support the final answer.',
+        'Set approved true whenever the evidence supports a useful answer, even if unsupported parts of the draft must be removed. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `QUESTION:\n${sanitized.scope.question}`,

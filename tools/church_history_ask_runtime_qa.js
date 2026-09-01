@@ -101,8 +101,28 @@ function assert(condition, message) {
     assert(result && result.answer.includes('1856'), 'Church History handcart question must share the reviewed 1856 answer');
     assert(remoteCalls === 0, 'Church History handcart reviewed answer must make zero Worker requests');
 
+    result = await window.focusChristHistoryAsk('What date did Joseph Smith die?');
+    assert(result && result.answer.includes('June 27, 1844'), 'Church History Joseph Smith date must use the reviewed answer');
+    result = await window.focusChristHistoryAsk('Do we know the time he died');
+    assert(result && result.contextResolved === true && result.answer.includes('5:00 p.m.'),
+        'Church History Joseph Smith follow-up must resolve and answer the qualified time');
+    result = await window.focusChristHistoryAsk('What time?');
+    assert(result && result.contextResolved === true && result.answer.includes('5:00 p.m.'),
+        'Church History chained subjectless follow-up must retain the Joseph Smith context receipt');
+    assert(remoteCalls === 0, 'Church History reviewed follow-up must make zero Worker requests');
+
+    await window.focusChristHistoryAsk('What date did Abraham Lincoln die?');
+    await window.focusChristHistoryAsk('Do we know the time he died');
+    assert(remoteCalls === 2,
+        'Church History follow-up after an intervening person must not skip backward and inherit Joseph Smith');
+
+    window.focusChristResetHistoryAsk();
+    result = await window.focusChristHistoryAsk('Do we know the time he died');
+    assert(remoteCalls === 3 && result === undefined,
+        'Church History reset must prevent stale Joseph Smith context inheritance');
+
     result = await window.focusChristHistoryAsk('When was the First Vision movie released?');
-    assert(remoteCalls === 1, 'First Vision movie negative control must use external research');
+    assert(remoteCalls === 4, 'First Vision movie negative control must use external research');
     assert(result === undefined, 'remote Church History controller should complete without exposing an unreviewed local receipt');
 
     const pending = window.focusChristHistoryAsk('Tell me a delayed history detail');

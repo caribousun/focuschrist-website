@@ -44,16 +44,66 @@
       ]
     },
     {
+      "id": "ask-jesus-christ-central",
+      "entry_sha256": "6f2a6b1091914fc9c71e4153ec3e1192661a188cc560c2f3461a8d128490167a",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng"
+      ]
+    },
+    {
+      "id": "ask-prayer-personal-revelation",
+      "entry_sha256": "08f054c9e2e5786b00cf02340d4ab880a5d39bb3d740c694685efa022f3f391a",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/revelation-study-guide?lang=eng"
+      ]
+    },
+    {
+      "id": "ask-why-build-temples",
+      "entry_sha256": "caf659e51db26fd51bc211bfce4533b42e2220df3145d0110ceccfb0fda0d841",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng"
+      ]
+    },
+    {
+      "id": "ask-after-death",
+      "entry_sha256": "8fa972982747663a3ef598319c6d78787f45fa8d015c2e79809fa319be50a410",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/spirit-world-study-guide?lang=eng"
+      ]
+    },
+    {
+      "id": "ask-bible-book-of-mormon-together",
+      "entry_sha256": "d9305febc60df9c09b8bbfd369e57789d1c878ef332c4ef54c926675cb7fe6df",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/how-the-bible-and-the-book-of-mormon-work-together",
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ"
+      ]
+    },
+    {
+      "id": "ask-faith-during-trials",
+      "entry_sha256": "81ce5a74abe649ae345a970a658f50b596d80f4edadb857e9b163393f308059e",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith-in-jesus-christ-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/adversity?lang=eng"
+      ]
+    },
+    {
       "id": "joseph-smith-death-1844",
-      "entry_sha256": "c850b22ada9b8c7ee6ed008312b6bbdbba28bc081d7b1c9322e0ab48b3a95ac5",
+      "entry_sha256": "2c93b7b5003163e8e4e2cec07e893d6594467de5d65ed70d411957045980ea8e",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng",
-        "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-26?lang=eng"
+        "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-26?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/135?lang=eng",
+        "https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/carthage-jail?lang=eng"
       ]
     },
     {
       "id": "pioneer-handcart-travel-1856",
-      "entry_sha256": "e4a6f7aa7133ee497a547571b5b7a0a44c34152b073a1e5b3cada6c06ff6f7c8",
+      "entry_sha256": "2f574470336ba479dc5074eb9a0f701885f90a0fb4d5fab69d127204f6f95566",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng"
       ]

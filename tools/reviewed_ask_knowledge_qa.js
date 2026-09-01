@@ -25,8 +25,8 @@ function entryHash(entry) {
     return crypto.createHash('sha256').update(JSON.stringify(stable(entry))).digest('hex');
 }
 
-assert(registry && registry.policyVersion === '2026-09-01.9', 'reviewed registry policy version mismatch');
-assert(Array.isArray(registry.entries) && registry.entries.length >= 6, 'reviewed registry is unexpectedly small');
+assert(registry && registry.policyVersion === '2026-09-01.10', 'reviewed registry policy version mismatch');
+assert(Array.isArray(registry.entries) && registry.entries.length >= 12, 'reviewed registry is unexpectedly small');
 
 const ids = new Set();
 registry.entries.forEach((entry) => {
@@ -62,6 +62,73 @@ assert(handcart.mode === 'reviewed-local' && handcart.sourceIntegrityPassed === 
 assert(!registry.match('When did handcart racing begin?', { profile: 'pioneers' }), 'handcart racing false positive');
 assert(!registry.match('When did shopping carts begin?', { profile: 'pioneers' }), 'shopping cart false positive');
 assert(!registry.match('Tell me about the Exodus in the Bible', { profile: 'pioneers' }), 'biblical Exodus false positive');
+const handcartCard = registry.match('Handcart Companies', { profile: 'pioneers' });
+assert(handcartCard && handcartCard.id === 'pioneer-handcart-travel-1856' && handcartCard.answer.length >= 400,
+    'visible Handcart Companies topic must return a substantive reviewed answer');
+
+const starterQuestions = [...fs.readFileSync('ask.html', 'utf8').matchAll(/data-ask-starter\s+data-question="([^"]+)"/g)]
+    .map((match) => match[1]);
+assert(starterQuestions.length === 6, 'Ask starter-card inventory changed without updating the executable contract');
+starterQuestions.forEach((question) => {
+    const result = registry.match(question, { profile: 'ask' });
+    assert(result && result.mode === 'reviewed-local', 'visible Ask starter is not reviewed-local: ' + question);
+    assert(result.answer.split(/\s+/).length >= 70, 'visible Ask starter answer is not substantive: ' + question);
+    assert(result.sources.length >= 1, 'visible Ask starter has no authoritative source: ' + question);
+});
+
+const resolvedFollowup = registry.resolveFollowup('Do we know the time he died', {
+    profile: 'ask',
+    history: [
+        { role: 'user', content: 'What date did Joseph Smith die?' },
+        { role: 'assistant', content: 'Joseph Smith died on June 27, 1844.' }
+    ]
+});
+assert(resolvedFollowup.resolved === true && resolvedFollowup.entryId === 'joseph-smith-death-1844',
+    'Joseph Smith time follow-up did not resolve from conversation history');
+assert(registry.match(resolvedFollowup.query, { profile: 'ask' }).answer.includes('5:00 p.m.'),
+    'resolved Joseph Smith time follow-up did not reach the reviewed time answer');
+for (const ellipticalQuestion of ['What time?', 'And what time?', 'When exactly?']) {
+    const ellipticalResult = registry.resolveFollowup(ellipticalQuestion, {
+        profile: 'ask', history: [{ role: 'user', content: 'When did Joseph Smith die?' }]
+    });
+    assert(ellipticalResult.resolved === true && ellipticalResult.entryId === 'joseph-smith-death-1844',
+        'permitted subjectless Joseph Smith follow-up did not resolve: ' + ellipticalQuestion);
+}
+const chainedFollowup = registry.resolveFollowup('What time?', {
+    profile: 'ask',
+    history: [
+        { role: 'user', content: 'What date did Joseph Smith die?', contextEntryId: 'joseph-smith-death-1844' },
+        { role: 'assistant', content: 'June 27, 1844.' },
+        { role: 'user', content: 'Do we know the time he died', contextEntryId: 'joseph-smith-death-1844' },
+        { role: 'assistant', content: 'About 5:00 p.m.' }
+    ]
+});
+assert(chainedFollowup.resolved === true && chainedFollowup.entryId === 'joseph-smith-death-1844',
+    'context receipt did not preserve a chained subjectless follow-up');
+assert(registry.resolveFollowup('Do we know the time he died', { profile: 'ask', history: [] }).resolved === false,
+    'follow-up context leaked without history');
+assert(registry.resolveFollowup('Do we know the time he died', {
+    profile: 'ask', history: [{ role: 'user', content: 'Why is the sky blue?' }]
+}).resolved === false, 'follow-up inherited an unrelated reviewed subject');
+assert(registry.resolveFollowup('When did Joseph F. Smith die?', {
+    profile: 'ask', history: [{ role: 'user', content: 'When did Joseph Smith die?' }]
+}).resolved === false, 'explicit competing Joseph identity was incorrectly inherited');
+for (const competingQuestion of ['What time did Abraham Lincoln die?', 'When did Stalin die?', 'What year did John F. Kennedy die?']) {
+    assert(registry.resolveFollowup(competingQuestion, {
+        profile: 'ask', history: [{ role: 'user', content: 'When did Joseph Smith die?' }]
+    }).resolved === false, 'explicit competing person was incorrectly inherited: ' + competingQuestion);
+}
+for (const interruption of ['What date did Abraham Lincoln die?', 'Why is the sky blue?']) {
+    assert(registry.resolveFollowup('Do we know the time he died', {
+        profile: 'ask',
+        history: [
+            { role: 'user', content: 'When did Joseph Smith die?' },
+            { role: 'assistant', content: 'June 27, 1844.' },
+            { role: 'user', content: interruption },
+            { role: 'assistant', content: 'An intervening answer.' }
+        ]
+    }).resolved === false, 'resolver skipped a newer user subject: ' + interruption);
+}
 [
     ['When did Joseph F. Smith die?', 'ask'],
     ['When did Joseph Fielding Smith die?', 'ask'],
