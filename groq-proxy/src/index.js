@@ -426,7 +426,13 @@ export default {
         Boolean(verdict && verdict.approved === true && indexes.length),
       );
       if (answer === SOURCE_INTEGRITY_FALLBACK) {
-        return jsonResponse(fallbackPayload('verification-rejected'), 200, origin);
+        return jsonResponse(fallbackPayload('verification-rejected', {
+          focuschrist_verifier_approved: Boolean(verdict && verdict.approved === true),
+          focuschrist_verifier_source_indexes: verdict && Array.isArray(verdict.source_indexes)
+            ? verdict.source_indexes.slice(0, 6)
+            : [],
+          focuschrist_verifier_answer_length: verdict ? String(verdict.answer || '').length : 0,
+        }), 200, origin);
       }
 
       return jsonResponse({
