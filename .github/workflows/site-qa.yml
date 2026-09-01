@@ -11,6 +11,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: focuschrist-site-qa-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   qa:
     runs-on: ubuntu-latest

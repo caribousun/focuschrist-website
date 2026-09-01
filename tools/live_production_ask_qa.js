@@ -4,6 +4,7 @@ const vm = require('vm');
 const ORIGIN = 'https://focuschrist.com';
 const MAX_ATTEMPTS = 24;
 const RETRY_MS = 10000;
+const STABILITY_MS = 5000;
 const ROOT_ASSETS = [
     'ask.html',
     'pioneers.html',
@@ -132,14 +133,42 @@ async function waitForExactDeployment() {
                 .map((result) => 'origin:' + result.path);
             const mismatches = canonicalMismatches.concat(originMismatches);
             if (mismatches.length === 0) {
-                // Execute the bytes downloaded through canonical visitor cache keys.
-                return Object.fromEntries(ASSETS.map((path) => {
-                    const canonical = canonicalResults.find((result) => result.path === path);
-                    return [path, canonical.content];
-                }));
+                await wait(STABILITY_MS);
+                const stableCanonicalResults = await Promise.all(CANONICAL_TARGETS.map(async (target) => ({
+                    path: target.path,
+                    url: target.url,
+                    content: await fetchProductionUrl(target.url)
+                })));
+                const stableOriginResults = await Promise.all(ASSETS.map(async (path) => ({
+                    path: path,
+                    content: await fetchProductionUrl(
+                        path + '?focuschrist_live_gate_stable=' + Date.now() + '-' + attempt,
+                        {
+                            cache: 'no-store',
+                            headers: { 'cache-control': 'no-cache' }
+                        }
+                    )
+                })));
+                const stableMismatches = stableCanonicalResults
+                    .filter((result) => result.content !== local[result.path])
+                    .map((result) => 'stable-canonical:' + result.url)
+                    .concat(stableOriginResults
+                        .filter((result) => result.content !== local[result.path])
+                        .map((result) => 'stable-origin:' + result.path));
+                if (stableMismatches.length === 0) {
+                    // Execute bytes that remained exact through canonical visitor
+                    // cache keys across the stability interval.
+                    return Object.fromEntries(ASSETS.map((path) => {
+                        const canonical = stableCanonicalResults.find((result) => result.path === path);
+                        return [path, canonical.content];
+                    }));
+                }
+                lastMismatches = stableMismatches;
+                console.log('Production changed during stability check: ' + stableMismatches.join(', '));
+            } else {
+                lastMismatches = mismatches;
             }
-            lastMismatches = mismatches;
-            console.log('Production deployment not exact yet (attempt ' + attempt + '): ' + mismatches.join(', '));
+            console.log('Production deployment not exact yet (attempt ' + attempt + '): ' + lastMismatches.join(', '));
         } catch (error) {
             lastMismatches = [String(error && error.message || error)];
             console.log('Production deployment check retry ' + attempt + ': ' + lastMismatches[0]);
