@@ -22,7 +22,7 @@ Final systemic repair:
 
 - Added the reviewed, integrity-pinned `general-abraham-lincoln-death-1865` entry with Library of Congress and National Park Service sources.
 - Kept Lincoln’s main question, pronoun follow-up, and chained ellipsis on the reviewed zero-Worker lane with the exact 7:22 a.m. time.
-- Made explicit competing-subject detection case-insensitive and grammar-anchored for full names, lowercase names, surnames, and acronyms while preserving valid contextual modifiers.
+- Made explicit competing-subject detection case-insensitive and grammar-anchored for full names, lowercase names, surnames, and acronyms while preserving the tested common contextual modifiers (`exactly`, `then`, and equivalent covered forms); uncommon trailing modifiers may conservatively route to research.
 - Added adversarial registry and full-controller tests for source-title/person collisions, conjunctions, identity switches, reset isolation, and final rendered output.
 - Added a latest-only post-deploy gate that recursively discovers the Ask dependency graph, requires exact bytes through canonical visitor cache keys and separate origin probes, repeats after a stability interval, and executes the stable canonical registry.
 
