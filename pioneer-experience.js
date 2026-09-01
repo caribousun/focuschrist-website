@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.6';
+    const PIONEER_POLICY_VERSION = '2026-09-01.7';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',

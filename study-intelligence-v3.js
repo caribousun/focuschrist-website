@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-09-01.6';
+    const POLICY_VERSION = '2026-09-01.7';
 
     const FAITH_TERMS = new Set([
         'jesus','christ','savior','redeemer','god','heavenly','father','holy','ghost','spirit','scripture','scriptures','bible','biblical',

@@ -15,7 +15,7 @@ const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
 const GENERAL_ANSWER_FALLBACK = 'I could not complete that general answer just now. Please try again or rephrase the question.';
-const SOURCE_POLICY_VERSION = '2026-09-01.6';
+const SOURCE_POLICY_VERSION = '2026-09-01.7';
 const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
@@ -309,18 +309,18 @@ function fallbackPayload(mode, extra, scope) {
 }
 
 async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
-  if (!draft || requiresExternalGeneralResearch(scope.question)) return null;
+  if (requiresExternalGeneralResearch(scope.question)) return null;
   const prompt = [
     'You are the final checker for a low-risk, stable general-knowledge answer. Return one JSON object only.',
     'This path is never for current events, weather, prices, schedules, politics, medical, legal, financial, safety, statistics, quotations, citations, or source-specific questions.',
     'Decide whether the question is ordinary, stable, low-risk general knowledge that can be answered accurately without live retrieval.',
-    'If it is, correct the draft if necessary and set approved true. Keep the answer concise, direct, nonreligious unless the user asked about religion, and free of invented citations or links.',
+    'If it is, answer directly or correct the draft if one is supplied, then set approved true. Keep the answer concise, direct, nonreligious unless the user asked about religion, and free of invented citations or links.',
     'If it requires current or specialized evidence, set approved false and return an empty answer.',
     'Schema: {"approved":boolean,"answer":string}',
     '',
     `QUESTION:\n${scope.question}`,
     '',
-    `DRAFT:\n${draft}`,
+    `DRAFT:\n${draft || '(No draft was available. Write the answer directly from stable general knowledge.)'}`,
   ].join('\n');
   const result = await callGroq(apiKey, {
     model: VERIFIER_MODEL,
@@ -337,6 +337,21 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
   const answer = String(verdict && verdict.answer || '').trim();
   if (!verdict || verdict.approved !== true || !answer || hasKnownFalseClaim(answer)) return null;
   return answer;
+}
+
+function generalAnswerPayload(answer, mode) {
+  return {
+    id: 'focuschrist-general-ai-answer',
+    choices: [{
+      index: 0,
+      message: { role: 'assistant', content: answer },
+      finish_reason: 'stop',
+    }],
+    focuschrist_sources: [],
+    focuschrist_source_integrity_verified: false,
+    focuschrist_source_policy: SOURCE_POLICY_VERSION,
+    focuschrist_gateway_mode: mode,
+  };
 }
 
 function providerDiagnostic(result) {
@@ -377,6 +392,12 @@ export default {
         : null;
       const researchResult = await callGroq(env.GROQ_KEY_NEW, sanitized.research);
       if (!researchResult.response.ok && !tellMyStoryEvidence) {
+        if (!sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
+          const directGeneralAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, '');
+          if (directGeneralAnswer) {
+            return jsonResponse(generalAnswerPayload(directGeneralAnswer, 'general-ai-low-risk'), 200, origin);
+          }
+        }
         const limited = researchResult.response.status === 429;
         return jsonResponse(fallbackPayload(
           limited ? 'research-rate-limited' : 'research-provider-error',
@@ -407,18 +428,7 @@ export default {
       if (draft && !evidence.length && !sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
         const generalAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, draft);
         if (generalAnswer) {
-          return jsonResponse({
-            id: 'focuschrist-general-ai-consensus',
-            choices: [{
-              index: 0,
-              message: { role: 'assistant', content: generalAnswer },
-              finish_reason: 'stop',
-            }],
-            focuschrist_sources: [],
-            focuschrist_source_integrity_verified: false,
-            focuschrist_source_policy: SOURCE_POLICY_VERSION,
-            focuschrist_gateway_mode: 'general-ai-consensus',
-          }, 200, origin);
+          return jsonResponse(generalAnswerPayload(generalAnswer, 'general-ai-consensus'), 200, origin);
         }
       }
       if (!draft || !evidence.length) {
