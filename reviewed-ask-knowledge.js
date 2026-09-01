@@ -9,7 +9,7 @@
 (function () {
     'use strict';
 
-    const POLICY_VERSION = '2026-09-01.11';
+    const POLICY_VERSION = '2026-09-01.12';
 
     function officialHistorySource(label, url, note) {
         return {
@@ -358,9 +358,87 @@
             contextLabel: 'Joseph Smith\'s death',
             followup: {
                 anchor: 'Joseph Smith death died',
-                cues: ['time', 'date', 'year', 'when', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom'],
+                cues: [
+                    'time', 'date', 'year', 'when', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom',
+                    'age', 'old', 'why', 'reason', 'cause', 'motive', 'charge', 'arrest', 'held', 'detained', 'imprisoned',
+                    'carthage', 'jail', 'who', 'with', 'together', 'present', 'where', 'live', 'lived',
+                    'reside', 'resided', 'residence', 'home'
+                ],
                 ellipsis: ['What time?', 'And what time?', 'At what time?', 'When exactly?', 'What date?', 'What year?'],
-                block: ['joseph']
+                block: ['joseph'],
+                variants: [
+                    {
+                        id: 'age-at-death',
+                        cues: ['age', 'old'],
+                        intent: {
+                            all: [['age', 'old']]
+                        },
+                        answer: 'Joseph Smith was 38 years old when he died on June 27, 1844. He had not yet reached age 39. He and his brother Hyrum were killed during the mob attack at Carthage Jail in Illinois, which official Church history places at about or shortly after 5:00 p.m. The available official account does not establish a more exact minute. The age, calendar date, location, and approximate time should therefore be stated together without inventing precision that the historical record does not provide.',
+                        sources: [
+                            officialHistorySource('Joseph Smith Jr.', 'https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-jr?lang=eng', 'Official biography identifying Joseph Smith\'s age at death.'),
+                            officialHistorySource('Deaths of Joseph and Hyrum Smith', 'https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng', 'Official account of the deaths at Carthage Jail.')
+                        ]
+                    },
+                    {
+                        id: 'carthage-imprisonment',
+                        cues: ['why', 'carthage', 'jail'],
+                        intent: {
+                            all: [
+                                ['why', 'reason', 'charge', 'arrest', 'held', 'detained', 'imprisoned'],
+                                ['carthage', 'jail', 'charge', 'arrest', 'held', 'detained', 'imprisoned']
+                            ],
+                            none: ['die', 'died', 'death', 'killed', 'murdered', 'martyred', 'mob', 'shot', 'attack']
+                        },
+                        answer: 'Joseph Smith was in Carthage Jail while awaiting legal proceedings after the Nauvoo city council ordered the destruction of the Nauvoo Expositor press, which officials treated as a riot. After Joseph went to Carthage and submitted to arrest, authorities also brought a treason charge that prevented his release on bail. He and several companions were confined in the jail while Illinois governor Thomas Ford traveled to Nauvoo. On June 27, 1844, a mob attacked the jail and killed Joseph and Hyrum Smith. Explaining the charges gives the legal setting; it does not justify the extrajudicial killings.',
+                        sources: [
+                            officialHistorySource('Deaths of Joseph and Hyrum Smith', 'https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng', 'Official account of the arrests, charges, confinement, and attack.'),
+                            officialHistorySource('Carthage Jail', 'https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/carthage-jail?lang=eng', 'Official historic-site account of the confinement and attack.')
+                        ]
+                    },
+                    {
+                        id: 'carthage-attack-context',
+                        cues: ['why', 'reason', 'cause', 'motive', 'killed', 'murdered', 'martyred'],
+                        intent: {
+                            all: [
+                                ['why', 'reason', 'cause', 'motive'],
+                                ['die', 'died', 'death', 'killed', 'murdered', 'martyred', 'martyrdom', 'mob', 'attack']
+                            ]
+                        },
+                        answer: 'Joseph Smith\'s murder cannot responsibly be reduced to a single proven motive for every attacker. Official Church history describes mounting opposition in spring 1844 from both dissident Latter-day Saints and other regional opponents. The Nauvoo Expositor criticized Joseph\'s character and Church teachings; after Nauvoo officials ordered its press destroyed, opponents called for his arrest and for further violence. Joseph and Hyrum submitted to arrest and were awaiting trial in Carthage when an armed mob attacked the jail. The immediate setting was therefore escalating religious, political, and civic conflict—not a lawful execution—and individual participants may not all have acted for exactly the same reason.',
+                        sources: [
+                            officialHistorySource('Deaths of Joseph and Hyrum Smith', 'https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng', 'Official account of the mounting opposition, Nauvoo Expositor controversy, calls for violence, arrest, and mob attack.')
+                        ]
+                    },
+                    {
+                        id: 'carthage-companions',
+                        cues: ['who', 'with'],
+                        intent: {
+                            all: [
+                                ['who'],
+                                ['with', 'together', 'there', 'present', 'room', 'companion', 'companions', 'accompanied']
+                            ],
+                            none: ['killed', 'murdered', 'mob', 'shot', 'attack', 'attacked']
+                        },
+                        answer: 'Joseph Smith was confined at Carthage with his brother Hyrum Smith and several associates. By the time of the attack on June 27, 1844, Joseph, Hyrum, John Taylor, and Willard Richards were together in an upstairs room of the jail. The mob killed Joseph and Hyrum. John Taylor was seriously wounded, while Willard Richards survived with only a minor wound. Other supporters had been present during the imprisonment, but those four were in the room during the final assault. Official Church history distinguishes the people present at the attack from the larger group who had accompanied or visited Joseph earlier.',
+                        sources: [
+                            officialHistorySource('Deaths of Joseph and Hyrum Smith', 'https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng', 'Official account identifying the four men in the room during the attack.'),
+                            officialHistorySource('Carthage Jail', 'https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/carthage-jail?lang=eng', 'Official historic-site account of the men present and the attack.')
+                        ]
+                    },
+                    {
+                        id: 'nauvoo-residence',
+                        cues: ['where', 'live', 'lived'],
+                        intent: {
+                            all: [['live', 'lived', 'reside', 'resided', 'residence', 'home']],
+                            none: ['die', 'died', 'death', 'killed', 'murdered', 'martyred']
+                        },
+                        answer: 'At the end of his life, Joseph Smith lived in Nauvoo, Illinois. Carthage Jail was not his home: he had gone to Carthage to answer legal charges and was being held there when the mob attacked on June 27, 1844. That distinction matters when answering this follow-up. Nauvoo was the community where he lived and served; Carthage was the nearby place of his final confinement and death. The official histories cited here document that immediate Nauvoo-and-Carthage setting without making a broader claim about every residence of his life.',
+                        sources: [
+                            officialHistorySource('Deaths of Joseph and Hyrum Smith', 'https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng', 'Official account of the Nauvoo events, journey to Carthage, confinement, and deaths.'),
+                            officialHistorySource('Carthage Jail', 'https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/carthage-jail?lang=eng', 'Official historic-site account of his final confinement near Nauvoo.')
+                        ]
+                    }
+                ]
             },
             match: {
                 guard: 'joseph-smith',
@@ -952,13 +1030,28 @@
         if (!entryMatches(priorEntry, resolvedQuery, profile)) {
             return genericFollowupResolution(original, normalizedQuery, referential, antecedent);
         }
+        const variant = (priorEntry.followup.variants || []).find(function (candidate) {
+            const intent = candidate.intent || {};
+            const requiredGroups = intent.all || [];
+            const excludedTerms = intent.none || [];
+            return requiredGroups.length > 0
+                && requiredGroups.every(function (group) {
+                    return group.some(function (term) {
+                        return hasTerm(normalizedQuery, tokenSet, term);
+                    });
+                })
+                && !excludedTerms.some(function (term) {
+                    return hasTerm(normalizedQuery, tokenSet, term);
+                });
+        });
         return {
             query: resolvedQuery,
             resolved: true,
             entryId: priorEntry.id,
             contextLabel: priorEntry.contextLabel || priorEntry.id,
             contextQuestion: antecedent,
-            genericContext: false
+            genericContext: false,
+            contextVariant: variant ? variant.id : null
         };
     }
 
@@ -984,12 +1077,19 @@
             .filter(function (entry) { return entryMatches(entry, question, profile); })
             .sort(function (left, right) { return right.priority - left.priority; })[0];
         if (!matched) return null;
+        const variant = options && options.contextVariant && matched.followup
+            ? (matched.followup.variants || []).find(function (candidate) {
+                return candidate.id === options.contextVariant;
+            })
+            : null;
+        const selectedSources = variant && Array.isArray(variant.sources) ? variant.sources : matched.sources;
         return {
             id: matched.id,
-            answer: matched.answer,
-            sources: matched.sources.map(copySource),
+            answer: variant && variant.answer ? variant.answer : matched.answer,
+            sources: selectedSources.map(copySource),
             profile: profile,
             mode: 'reviewed-local',
+            contextVariant: variant ? variant.id : null,
             reviewedOn: matched.reviewedOn,
             integrityKey: matched.integrityKey,
             policyVersion: POLICY_VERSION,

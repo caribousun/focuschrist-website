@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.11';
+    const PIONEER_POLICY_VERSION = '2026-09-01.12';
     let pioneerRequestSerial = 0;
 
     const PIONEER_PAGE_CONTEXT = [
@@ -42,7 +42,10 @@
             ? registry.resolveFollowup(question, { profile: 'pioneers', history: recentHistory() })
             : { query: question, resolved: false, entryId: null });
         if (resolution.genericContext === true) return null;
-        const reviewed = registry.match(resolution.query, { profile: 'pioneers' });
+        const reviewed = registry.match(resolution.query, {
+            profile: 'pioneers',
+            contextVariant: resolution.contextVariant
+        });
         if (!reviewed) return null;
         return Object.assign({}, reviewed, {
             contextResolved: resolution.resolved === true,

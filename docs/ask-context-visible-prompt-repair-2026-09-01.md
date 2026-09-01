@@ -16,6 +16,7 @@ The exact owner-reproduced failures now pass local final-owner runtime tests, bu
 6. The Church History `Plural marriage` card submitted `How does the Church explain Joseph Smith and plural marriage?` and returned the generic source-verification refusal even though the page displayed official study routes.
 7. Independent adversarial review found that `How old was he?` after Joseph Smith could embed the antecedent for research and then accidentally rematch that augmented query to the death entry, replaying the wrong answer.
 8. The first competing-subject heuristic treated any capitalized two-word phrase as a person, so a place such as `Carthage Jail` could incorrectly break valid Joseph Smith context.
+9. Live `.11` acceptance proved the new routing was active but exposed a Worker `429 rate_limit_exceeded` failure: `How old was he?` correctly retained Joseph Smith context, yet the exhausted research provider caused the browser guard to show the generic source-verification refusal.
 
 ## Root causes
 
@@ -29,6 +30,7 @@ The exact owner-reproduced failures now pass local final-owner runtime tests, bu
 - Prior QA used a hand-written sample instead of extracting every exact visible question from the current HTML. Nine of ten Church History card submissions were therefore orphaned from reviewed knowledge and final-owner tests.
 - A generic follow-up query was built by appending the antecedent, then was allowed to re-enter local reviewed and legacy matchers. That conflated contextual research input with a new local-answer candidate.
 - Proper-name detection was capitalization-based rather than syntax- and domain-aware, creating false subject changes for historical places and titles.
+- Reviewed context supported only the prior death/date intent. Other stable, source-supported Joseph Smith follow-ups were sent to remote research even though the site could own them safely; provider exhaustion therefore became an avoidable user-visible failure.
 
 ## Repair
 
@@ -45,6 +47,7 @@ The exact owner-reproduced failures now pass local final-owner runtime tests, bu
 - Added final-owner execution of every discovered Ask topic, Pioneer topic, and Church History card; all exact Church History cards require at least 70 words, official sources, and zero Worker calls.
 - Generic contextual research now bypasses both reviewed and legacy local matching after the original wording has had its direct-match opportunity. Explicit current people override inherited context, while multiword historical places such as `Carthage Jail` do not.
 - Added regression specimens for `How old was he?`, `Why was he in Carthage Jail?`, `Who was with him?`, `Where did he live?`, and explicit Abraham Lincoln appositives.
+- Added integrity-pinned contextual answer variants for Joseph Smith's age at death, Carthage imprisonment, the historical context of the attack, companions during the attack, and his Nauvoo residence at the end of his life. Intent-specific phrase rules prevent overlapping words such as “who,” “why,” “where,” “Carthage,” and “jail” from selecting the wrong answer. Main Ask, Pioneer, and Church History return these variants with official sources and zero Worker calls even under rate limits.
 
 ## Completion gates
 

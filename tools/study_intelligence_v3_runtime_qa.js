@@ -57,6 +57,7 @@ vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { file
 let fetchCalls = 0;
 const requestBodies = [];
 let delayedAskResponse = null;
+let forceWorkerRateLimit = false;
 function verifiedResponse() {
     return {
         ok: true,
@@ -66,7 +67,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official source', url: 'https://www.churchofjesuschrist.org/study/scriptures' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.11',
+                focuschrist_source_policy: '2026-09-01.12',
             };
         },
     };
@@ -75,6 +76,20 @@ global.fetch = async (_url, options) => {
     fetchCalls += 1;
     const body = JSON.parse(options.body);
     requestBodies.push(body);
+    if (forceWorkerRateLimit) {
+        return {
+            ok: true,
+            async json() {
+                return {
+                    choices: [{ message: { content: 'RATE-LIMIT FALLBACK MUST NOT RENDER' } }],
+                    focuschrist_sources: [],
+                    focuschrist_source_integrity_verified: false,
+                    focuschrist_gateway_mode: 'research-rate-limited',
+                    focuschrist_source_policy: '2026-09-01.12'
+                };
+            }
+        };
+    }
     const isDelayed = body.messages.some((message) => String(message.content || '').includes('delayed Ask detail'));
     if (isDelayed) return new Promise((resolve) => { delayedAskResponse = () => resolve(verifiedResponse()); });
     return verifiedResponse();
@@ -259,15 +274,14 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
 
     window.focusChristCancelAskRequests();
     const beforeGenericJoseph = fetchCalls;
+    forceWorkerRateLimit = true;
     dom.userInput.value = 'What date did Joseph Smith die?';
     await window.sendMessage();
     dom.userInput.value = 'How old was he?';
     await window.sendMessage();
-    assert(fetchCalls === beforeGenericJoseph + 1 && renderedMessages.at(-1).text === 'RESEARCHED VERIFIED ANSWER',
-        'generic Joseph follow-up must research instead of replaying the reviewed death answer');
-    assert(requestBodies.at(-1).messages.at(-1).content.includes('How old was he?')
-        && requestBodies.at(-1).messages.at(-1).content.includes('What date did Joseph Smith die?'),
-        'generic Joseph research query must retain the immediate subject and original wording');
+    forceWorkerRateLimit = false;
+    assert(fetchCalls === beforeGenericJoseph && renderedMessages.at(-1).text.includes('38 years old'),
+        'Joseph age follow-up must remain available as a specific reviewed answer during Worker rate limits');
 
     window.focusChristCancelAskRequests();
     const beforeCarthage = fetchCalls;
@@ -275,8 +289,8 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     await window.sendMessage();
     dom.userInput.value = 'Why was he in Carthage Jail?';
     await window.sendMessage();
-    assert(fetchCalls === beforeCarthage + 1 && requestBodies.at(-1).messages.at(-1).content.includes('Joseph Smith'),
-        'Carthage Jail must resolve as a place within Joseph Smith context');
+    assert(fetchCalls === beforeCarthage && renderedMessages.at(-1).text.includes('awaiting legal proceedings'),
+        'Carthage Jail must resolve to its specific reviewed context without a Worker dependency');
 
     window.focusChristCancelAskRequests();
     const beforeExplicitLincoln = fetchCalls;

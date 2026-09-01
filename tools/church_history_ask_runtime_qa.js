@@ -129,22 +129,20 @@ function assert(condition, message) {
         'Church History chained subjectless follow-up must retain the Joseph Smith context receipt');
     assert(remoteCalls === 0, 'Church History reviewed follow-up must make zero Worker requests');
 
-    await window.focusChristHistoryAsk('How old was he?');
-    assert(remoteCalls === 1 && remoteQuestions.at(-1).includes('How old was he?')
-        && remoteQuestions.at(-1).includes('What date did Joseph Smith die?'),
-        'Church History generic follow-up must research the Joseph subject instead of replaying the death answer');
+    result = await window.focusChristHistoryAsk('How old was he?');
+    assert(remoteCalls === 0 && result && result.answer.includes('38 years old'),
+        'Church History Joseph age follow-up must remain reviewed during Worker rate limits');
 
     window.focusChristResetHistoryAsk();
     await window.focusChristHistoryAsk('What date did Joseph Smith die?');
-    await window.focusChristHistoryAsk('Why was he in Carthage Jail?');
-    assert(remoteCalls === 2 && remoteQuestions.at(-1).includes('Carthage Jail')
-        && remoteQuestions.at(-1).includes('Joseph Smith'),
-        'Carthage Jail must remain a place inside Joseph context, not a competing person');
+    result = await window.focusChristHistoryAsk('Why was he in Carthage Jail?');
+    assert(remoteCalls === 0 && result && result.answer.includes('awaiting legal proceedings'),
+        'Carthage Jail must remain a reviewed place inside Joseph context, not a competing person');
 
     window.focusChristResetHistoryAsk();
     await window.focusChristHistoryAsk('What date did Abraham Lincoln die?');
     await window.focusChristHistoryAsk('Do we know the time he died');
-    assert(remoteCalls === 4,
+    assert(remoteCalls === 2,
         'Church History follow-up after an intervening person must not skip backward and inherit Joseph Smith');
     assert(remoteQuestions.at(-1).includes('Do we know the time he died')
         && remoteQuestions.at(-1).includes('What date did Abraham Lincoln die?')
@@ -153,11 +151,11 @@ function assert(condition, message) {
 
     window.focusChristResetHistoryAsk();
     result = await window.focusChristHistoryAsk('Do we know the time he died');
-    assert(remoteCalls === 5 && result === undefined,
+    assert(remoteCalls === 3 && result === undefined,
         'Church History reset must prevent stale Joseph Smith context inheritance');
 
     result = await window.focusChristHistoryAsk('When was the First Vision movie released?');
-    assert(remoteCalls === 6, 'First Vision movie negative control must use external research');
+    assert(remoteCalls === 4, 'First Vision movie negative control must use external research');
     assert(result === undefined, 'remote Church History controller should complete without exposing an unreviewed local receipt');
 
     const pending = window.focusChristHistoryAsk('Tell me a delayed history detail');

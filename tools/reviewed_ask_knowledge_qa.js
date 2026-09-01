@@ -26,7 +26,16 @@ function entryHash(entry) {
     return crypto.createHash('sha256').update(JSON.stringify(stable(entry))).digest('hex');
 }
 
-assert(registry && registry.policyVersion === '2026-09-01.11', 'reviewed registry policy version mismatch');
+function entrySourceUrls(entry) {
+    const sources = []
+        .concat(entry.sources || [])
+        .concat(entry.followup && Array.isArray(entry.followup.variants)
+            ? entry.followup.variants.flatMap((variant) => variant.sources || [])
+            : []);
+    return [...new Set(sources.map((source) => source.url))];
+}
+
+assert(registry && registry.policyVersion === '2026-09-01.12', 'reviewed registry policy version mismatch');
 assert(Array.isArray(registry.entries) && registry.entries.length >= 12, 'reviewed registry is unexpectedly small');
 assert(questionManifest.release === registry.policyVersion, 'question-contract manifest release mismatch');
 
@@ -180,15 +189,70 @@ const genericLincolnChain = registry.resolveFollowup('What time?', {
 assert(genericLincolnChain.resolved === true && genericLincolnChain.query.includes('Abraham Lincoln')
     && !genericLincolnChain.query.includes('Joseph Smith'),
     'generic context receipt did not preserve the Lincoln subject through a chained ellipsis');
-for (const genericQuestion of ['How old was he?', 'Why was he in Carthage?', 'Why was he in Carthage Jail?', 'Who was with him?', 'Where did he live?']) {
-    const genericJosephFollowup = registry.resolveFollowup(genericQuestion, {
+for (const [contextQuestion, expectedVariant, expectedAnswer] of [
+    ['How old was he?', 'age-at-death', '38 years old'],
+    ['Why was he in Carthage?', 'carthage-imprisonment', 'awaiting legal proceedings'],
+    ['Why was he in Carthage Jail?', 'carthage-imprisonment', 'awaiting legal proceedings'],
+    ['Why was he killed at Carthage Jail?', 'carthage-attack-context', 'mounting opposition'],
+    ['Who was with him?', 'carthage-companions', 'John Taylor'],
+    ['Where did he live?', 'nauvoo-residence', 'Nauvoo, Illinois']
+]) {
+    const reviewedJosephFollowup = registry.resolveFollowup(contextQuestion, {
         profile: 'ask',
         history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
     });
-    assert(genericJosephFollowup.resolved === true && genericJosephFollowup.genericContext === true
-        && genericJosephFollowup.entryId === null && genericJosephFollowup.contextQuestion.includes('Joseph Smith'),
-        'reviewed antecedent did not become generic research context: ' + genericQuestion);
+    assert(reviewedJosephFollowup.resolved === true && reviewedJosephFollowup.genericContext === false
+        && reviewedJosephFollowup.entryId === 'joseph-smith-death-1844'
+        && reviewedJosephFollowup.contextVariant === expectedVariant,
+    'reviewed contextual variant did not resolve: ' + contextQuestion);
+    const contextualAnswer = registry.match(reviewedJosephFollowup.query, {
+        profile: 'ask',
+        contextVariant: reviewedJosephFollowup.contextVariant
+    });
+    assert(contextualAnswer && contextualAnswer.answer.includes(expectedAnswer)
+        && contextualAnswer.sources.some((source) => source.url.includes('churchofjesuschrist.org')),
+    'reviewed contextual variant did not return its specific sourced answer: ' + contextQuestion);
 }
+for (const [contextQuestion, expectedAnswer] of [
+    ['Who killed him?', 'killed by a mob'],
+    ['Where did he die?', 'Carthage Jail'],
+    ['Where was he killed?', 'Carthage Jail']
+]) {
+    const reviewedJosephFollowup = registry.resolveFollowup(contextQuestion, {
+        profile: 'ask',
+        history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
+    });
+    assert(reviewedJosephFollowup.resolved === true && reviewedJosephFollowup.genericContext === false
+        && reviewedJosephFollowup.entryId === 'joseph-smith-death-1844'
+        && reviewedJosephFollowup.contextVariant === null,
+    'death-location or assailant follow-up must use the base death answer: ' + contextQuestion);
+    const contextualAnswer = registry.match(reviewedJosephFollowup.query, {
+        profile: 'ask', contextVariant: reviewedJosephFollowup.contextVariant
+    });
+    assert(contextualAnswer && contextualAnswer.answer.includes(expectedAnswer),
+        'base death answer did not answer the death-location or assailant follow-up: ' + contextQuestion);
+}
+const overlappingCompanionFollowup = registry.resolveFollowup('Who was in Carthage Jail with him?', {
+    profile: 'ask', history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
+});
+assert(overlappingCompanionFollowup.contextVariant === 'carthage-companions',
+    'companion intent lost to overlapping Carthage/Jail terms');
+const motiveFollowup = registry.resolveFollowup('Why was he killed at Carthage Jail?', {
+    profile: 'ask', history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
+});
+assert(motiveFollowup.contextVariant === 'carthage-attack-context',
+    'death-motive question did not receive its dedicated sourced context answer');
+const motiveAnswer = registry.match(motiveFollowup.query, {
+    profile: 'ask', contextVariant: motiveFollowup.contextVariant
+});
+assert(motiveAnswer && motiveAnswer.answer.includes('not a lawful execution')
+    && motiveAnswer.answer.split(/\s+/).length >= 70,
+    'death-motive answer was not conclusive and substantive');
+const unsupportedJosephFollowup = registry.resolveFollowup('What was his favorite food?', {
+    profile: 'ask', history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
+});
+assert(unsupportedJosephFollowup.resolved === true && unsupportedJosephFollowup.genericContext === true,
+    'unsupported Joseph follow-up must remain in contextual research instead of forcing a local variant');
 for (const competingQuestion of [
     'When did he die—Abraham Lincoln?',
     'Do we know what time he died, Abraham Lincoln?'
@@ -218,7 +282,7 @@ registry.entries.forEach((entry) => {
     const record = auditById.get(entry.id);
     assert(record, 'reviewed knowledge ledger entry missing: ' + entry.id);
     assert(record.entry_sha256 === entryHash(entry), 'reviewed knowledge changed after approval: ' + entry.id);
-    assert(JSON.stringify(record.authoritative_sources) === JSON.stringify(entry.sources.map((source) => source.url)),
+    assert(JSON.stringify(record.authoritative_sources) === JSON.stringify(entrySourceUrls(entry)),
         'reviewed knowledge source ledger mismatch: ' + entry.id);
 });
 

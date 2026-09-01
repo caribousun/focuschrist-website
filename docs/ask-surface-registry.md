@@ -1,6 +1,6 @@
 # focusChrist Ask Surface Registry
 
-Release candidate: `2026-09-01.11` / cache `20260901-11`
+Release candidate: `2026-09-01.12` / cache `20260901-12`
 
 This registry records the final user-visible owner after all inline, deferred, and dynamically loaded scripts execute. A link to the Ask page is not classified as a separate Ask surface.
 
@@ -24,7 +24,7 @@ This registry records the final user-visible owner after all inline, deferred, a
 
 ## Shared boundaries
 
-- `reviewed-ask-knowledge.js` is the only cross-page reviewed fact registry. It contains positive tests, negative tests, page profiles, exact source metadata, reviewer metadata, and integrity keys.
+- `reviewed-ask-knowledge.js` is the only cross-page reviewed fact registry. It contains positive tests, negative tests, page profiles, exact source metadata, reviewer metadata, integrity keys, and cue-selected contextual variants for stable follow-ups the project can answer without remote research.
 - `answer-audit.json` pins every reviewed registry entry by SHA-256 and exact authoritative source list.
 - `ask-question-contracts.json` is the machine-readable inventory of exact Ask starters, Ask topics, Pioneer topics, and Church History cards. QA reparses the production HTML and fails on any count, value, owner, or lane drift.
 - The 494-entry legacy Ask database remains quarantined except for its three previously reviewed entries. The Pioneer legacy database remains fully quarantined.
