@@ -1,7 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
   "reviewed_on": "2026-09-01",
-  "review_standard": "L-044 exact-claim review against the official Gospel Library and Church History source family",
+  "review_standard": "L-044 exact-claim review against authoritative domain-appropriate primary sources; official Gospel Library and Church History sources govern faith and history claims",
   "reviewed_answers": [
     {
       "path": "ask.html",
@@ -32,6 +32,52 @@
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-26?lang=eng"
+      ]
+    }
+  ],
+  "reviewed_knowledge": [
+    {
+      "id": "general-sky-blue",
+      "entry_sha256": "42ac5e02da5362203f27d68e8c22e0daade20b15f35b013b90047063b90acb5d",
+      "authoritative_sources": [
+        "https://spaceplace.nasa.gov/blue-sky/"
+      ]
+    },
+    {
+      "id": "joseph-smith-death-1844",
+      "entry_sha256": "c850b22ada9b8c7ee6ed008312b6bbdbba28bc081d7b1c9322e0ab48b3a95ac5",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-26?lang=eng"
+      ]
+    },
+    {
+      "id": "pioneer-handcart-travel-1856",
+      "entry_sha256": "e4a6f7aa7133ee497a547571b5b7a0a44c34152b073a1e5b3cada6c06ff6f7c8",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng"
+      ]
+    },
+    {
+      "id": "pioneer-nauvoo-exodus-1846",
+      "entry_sha256": "3de2cfbeded02e962c216c3654ea355f87cb87e950ebd78b84a497f481627228",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/departure-from-nauvoo?lang=eng"
+      ]
+    },
+    {
+      "id": "church-first-vision-1820",
+      "entry_sha256": "6e62b89d115a119e66851f95e64c87aa85219f8c67d5abeeb348f84ce6304049",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-jr?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng"
+      ]
+    },
+    {
+      "id": "church-organization-1830",
+      "entry_sha256": "5e1307014006daa827d4bfe5b7f8a46102fdf139a246bc8128d1b34e34eefa04",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/founding-meeting-of-the-church-of-christ?lang=eng"
       ]
     }
   ],

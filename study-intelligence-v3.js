@@ -8,7 +8,8 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-09-01.8';
+    const POLICY_VERSION = '2026-09-01.9';
+    let askRequestSerial = 0;
 
     const FAITH_TERMS = new Set([
         'jesus','christ','savior','redeemer','god','heavenly','scripture','scriptures','bible','biblical',
@@ -168,6 +169,12 @@
             sources: Array.isArray(item.sources) ? item.sources : [],
             verified: item.verified === true
         };
+    }
+
+    function reviewedKnowledgeReference(query) {
+        const registry = window.focusChristReviewedKnowledge;
+        if (!registry || typeof registry.match !== 'function') return null;
+        return registry.match(query, { profile: currentMode() });
     }
 
     function verifiedContextFor(query) {
@@ -372,17 +379,28 @@
 
     async function askV3(query, additionalReference) {
         const profile = classifyQuestion(query);
+        const reviewedReference = reviewedKnowledgeReference(query);
         const localReference = bestLocalReference(query);
         const groundedLocalReference = localReference.found && localReference.verified
             ? localReference
             : { found: false, answer: '', sources: [], verified: false };
         const verifiedContext = profile === 'faith-study' || profile === 'pioneer-study' ? verifiedContextFor(query) : '';
 
+        // The shared reviewed registry is the first answer lane for the free-form
+        // modes handled by v3. It remains available during provider, retrieval,
+        // verifier, and network failure.
+        if (reviewedReference) {
+            return Object.assign({}, reviewedReference, {
+                profile: profile,
+                localMatch: reviewedReference.id,
+                reviewedLocal: true
+            });
+        }
+
         // Curated entries marked verified have been checked against their linked
         // official sources. Serve them unchanged; model rewriting can reintroduce
         // citations or claims that the source text does not contain.
         if (localReference.found && localReference.verified) {
-            remember(query, localReference.answer);
             return {
                 answer: localReference.answer,
                 sources: localReference.sources,
@@ -425,7 +443,6 @@
                     answer = integrity.answer;
                 }
                 if (!answer) throw new Error('Response removed as empty');
-                remember(query, answer);
                 return {
                     answer: answer,
                     sources: integrity.ok ? researched.sources : [],
@@ -468,6 +485,7 @@
             if (!input || !button || !box || typeof window.addMessage !== 'function') return;
             const question = input.value.trim();
             if (!question) return;
+            const requestId = ++askRequestSerial;
 
             box.querySelectorAll('.welcome, .ask-welcome').forEach(function (node) { node.remove(); });
             window.addMessage(question, true, []);
@@ -486,13 +504,17 @@
                     return;
                 }
                 const result = await askV3(question, '');
+                if (requestId !== askRequestSerial) return;
                 if (loading.isConnected) loading.remove();
+                remember(question, result.answer);
                 window.addMessage(result.answer, false, result.sources);
             } catch (error) {
+                if (requestId !== askRequestSerial) return;
                 console.error('focusChrist Ask v3 error:', error);
                 if (loading.isConnected) loading.remove();
                 window.addMessage('I could not complete that answer just now. Please try again.', false, []);
             } finally {
+                if (requestId !== askRequestSerial) return;
                 input.disabled = false;
                 button.disabled = false;
                 button.textContent = 'Ask';
@@ -504,6 +526,11 @@
     function installWhenReady() {
         window.focusChristStudyAskV3 = askV3;
         window.askAI = function (query, contextEntries) { return askV3(query, contextEntries || ''); };
+        window.focusChristCancelAskRequests = function () {
+            askRequestSerial += 1;
+            if (typeof conversationHistory !== 'undefined' && Array.isArray(conversationHistory)) conversationHistory.length = 0;
+            try { sessionStorage.removeItem('focuschrist_history'); } catch (_error) {}
+        };
         if (currentMode() === 'ask') installAskSendMessage();
         document.documentElement.setAttribute('data-focuschrist-study-intelligence-version', '3');
         console.info('focusChrist Study Intelligence policy ' + POLICY_VERSION + ' active.');

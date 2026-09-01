@@ -7,7 +7,8 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.8';
+    const PIONEER_POLICY_VERSION = '2026-09-01.9';
+    let pioneerRequestSerial = 0;
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -25,6 +26,12 @@
     function userInput() { return document.getElementById('userInput'); }
     function sendButton() { return document.getElementById('sendBtn'); }
     function composerLabel() { return document.getElementById('pioneerComposerLabel'); }
+
+    function reviewedPioneerKnowledge(question) {
+        const registry = window.focusChristReviewedKnowledge;
+        if (!registry || typeof registry.match !== 'function') return null;
+        return registry.match(question, { profile: 'pioneers' });
+    }
 
     function appendTextParagraph(parent, text) {
         const p = document.createElement('p');
@@ -191,7 +198,6 @@
                 })
                 : { ok: false, answer: 'I cannot verify the source claim well enough to present it as authoritative.' };
             answer = integrity.answer;
-            rememberExchange(question, answer);
             return {
                 answer: answer,
                 sources: integrity.ok ? sources : [],
@@ -386,8 +392,9 @@
         return answer;
     }
 
-    async function answerSelectedPioneer(choice, originalQuestion) {
+    async function answerSelectedPioneer(choice, originalQuestion, ownerRequestId) {
         if (!choice || !choice.name) return;
+        const requestId = ownerRequestId || ++pioneerRequestSerial;
         window.storyChoices = null;
         const selectedName = String(choice.name).trim();
         window.addMessage('Selected: ' + selectedName, true);
@@ -399,11 +406,14 @@
                 ? String(originalQuestion).trim() + '\n\nSelected pioneer: ' + selectedName
                 : 'Tell me about the Latter-day Saint pioneer ' + selectedName + '.';
             const response = await requestPioneerAI(question, pioneerRecordContext(choice));
+            if (requestId !== pioneerRequestSerial) return;
             if (loading && loading.isConnected) loading.remove();
+            rememberExchange(question, response.answer);
             const answer = window.addMessage(response.answer, false, response.sources || []);
             setConversationMode(true);
             positionAnswer(answer);
         } catch (error) {
+            if (requestId !== pioneerRequestSerial) return;
             console.error('Selected pioneer research error:', error);
             if (loading && loading.isConnected) loading.remove();
             const answer = window.addMessage('I could not verify that pioneer record just now. Please try again or open the Church History Biographical Database.', false, [{
@@ -443,6 +453,7 @@
         const choice = choices[Number(index)];
         if (choice) answerSelectedPioneer(choice, '');
     };
+    window.focusChristAnswerSelectedPioneer = answerSelectedPioneer;
 
     function controlPageReference(control, kind, mappedTopic) {
         if (!control) return kind + ': ' + mappedTopic;
@@ -534,6 +545,7 @@
             // failure must never replace it with a refusal or empty panel.
         }
     }
+    window.focusChristRunPioneerDisclosure = runDisclosure;
 
     function disclosureTopic(control) {
         const key = control ? String(control.getAttribute('data-topic') || '') : '';
@@ -585,13 +597,14 @@
         if (!input || !button) return;
         const question = input.value.trim();
         if (!question) return;
+        const requestId = ++pioneerRequestSerial;
 
         removeWelcome();
         window.addMessage(question, true);
         input.value = '';
         button.disabled = true;
         input.disabled = true;
-        const loading = showLoading();
+        let loading = null;
 
         try {
             if (typeof containsInappropriate === 'function' && containsInappropriate(question)) {
@@ -602,9 +615,21 @@
                 return;
             }
 
+            const reviewed = reviewedPioneerKnowledge(question);
+            if (reviewed) {
+                const answer = window.addMessage(reviewed.answer, false, reviewed.sources || []);
+                rememberExchange(question, reviewed.answer);
+                setConversationMode(true);
+                positionAnswer(answer);
+                return;
+            }
+
+            loading = showLoading();
+
             let pageReference = '';
             if (typeof searchTellMyStory === 'function') {
                 const storyMatch = await searchTellMyStory(question);
+                if (requestId !== pioneerRequestSerial) return;
                 if (storyMatch && storyMatch[0] && storyMatch[0].full === false && storyMatch[0].choices) {
                     if (loading) loading.remove();
                     const answer = renderPioneerChoices(storyMatch[0], question);
@@ -614,7 +639,7 @@
                 }
                 if (storyMatch && storyMatch[0] && storyMatch[0].full === true) {
                     if (loading && loading.isConnected) loading.remove();
-                    await answerSelectedPioneer(storyMatch[0], question);
+                    await answerSelectedPioneer(storyMatch[0], question, requestId);
                     return;
                 }
                 if (Array.isArray(storyMatch) && storyMatch.length && typeof storyMatch[0] === 'string') {
@@ -623,17 +648,21 @@
             }
 
             const response = await requestPioneerAI(question, pageReference);
+            if (requestId !== pioneerRequestSerial) return;
             if (loading && loading.isConnected) loading.remove();
+            rememberExchange(question, response.answer);
             const answer = window.addMessage(response.answer, false, response.sources || []);
             setConversationMode(true);
             positionAnswer(answer);
         } catch (error) {
+            if (requestId !== pioneerRequestSerial) return;
             console.error('Pioneer conversation error:', error);
             if (loading && loading.isConnected) loading.remove();
             const answer = window.addMessage('I could not complete that pioneer-history answer just now. Please try again or continue with the verified Church history resources.', false);
             setConversationMode(true);
             positionAnswer(answer);
         } finally {
+            if (requestId !== pioneerRequestSerial) return;
             button.disabled = false;
             input.disabled = false;
             try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
@@ -671,17 +700,29 @@
     window.askTopic = async function (topic) {
         const box = chatBox();
         if (!box) return;
+        const requestId = ++pioneerRequestSerial;
         box.innerHTML = '';
         window.addMessage(topic, true);
+        const reviewed = reviewedPioneerKnowledge(topic);
+        if (reviewed) {
+            const answer = window.addMessage(reviewed.answer, false, reviewed.sources || []);
+            rememberExchange(topic, reviewed.answer);
+            setConversationMode(true);
+            positionAnswer(answer);
+            return;
+        }
         const loading = showLoading();
         try {
             const query = 'Latter-day Saint pioneer history - Pioneer Topic: ' + topic;
             const response = await requestPioneerAI(query, 'Pioneer Topic button selected: ' + topic);
+            if (requestId !== pioneerRequestSerial) return;
             if (loading && loading.isConnected) loading.remove();
+            rememberExchange(topic, response.answer);
             const answer = window.addMessage(response.answer, false, response.sources || []);
             setConversationMode(true);
             positionAnswer(answer);
         } catch (error) {
+            if (requestId !== pioneerRequestSerial) return;
             console.error('Pioneer topic error:', error);
             if (loading && loading.isConnected) loading.remove();
             window.addMessage('I could not complete that pioneer-history topic just now. Please try again.', false);
@@ -689,6 +730,7 @@
     };
 
     window.clearChat = function () {
+        pioneerRequestSerial += 1;
         if (typeof conversationHistory !== 'undefined' && Array.isArray(conversationHistory)) conversationHistory.length = 0;
         try { sessionStorage.removeItem('focuschrist_history'); } catch (_error) {}
         const box = chatBox();
@@ -705,7 +747,15 @@
             box.appendChild(welcome);
         }
         const input = userInput();
-        if (input) input.value = '';
+        const button = sendButton();
+        if (input) {
+            input.value = '';
+            input.disabled = false;
+        }
+        if (button) {
+            button.disabled = false;
+            button.textContent = 'Ask';
+        }
         setConversationMode(false);
         if (input) {
             try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }

@@ -10,6 +10,7 @@
     const HISTORY_HERO_URL = 'assets/heroes/church-history.webp';
     const historyConversation = [];
     let historyBusy = false;
+    let historyRequestSerial = 0;
 
     function byId(id) { return document.getElementById(id); }
 
@@ -19,6 +20,12 @@
 
     function normalizeQuestion(value) {
         return String(value || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function reviewedHistoryKnowledge(question) {
+        const registry = window.focusChristReviewedKnowledge;
+        if (!registry || typeof registry.match !== 'function') return null;
+        return registry.match(question, { profile: 'church-history' });
     }
 
     function preferredScrollBehavior() {
@@ -351,6 +358,7 @@
     async function answerQuestion(rawQuestion) {
         const question = normalizeQuestion(rawQuestion);
         if (!question || historyBusy) return;
+        const requestId = ++historyRequestSerial;
 
         const input = byId('historyQuestion');
         const status = byId('historyStatus');
@@ -362,6 +370,22 @@
 
         appendMessage(createMessage('user', question));
         if (input) input.value = '';
+        const reviewed = reviewedHistoryKnowledge(question);
+        if (reviewed) {
+            const message = createMessage('assistant', reviewed.answer);
+            appendVerifiedSources(message, reviewed.sources || []);
+            appendMessage(message);
+            historyConversation.push({ question: question, answer: reviewed.answer });
+            if (historyConversation.length > MAX_CONTEXT_TURNS) historyConversation.shift();
+            setConversationMode(true);
+            setBusy(false);
+            if (status) status.textContent = 'Reviewed local answer complete. Ask a follow-up below or choose New Question to start over.';
+            window.setTimeout(focusLatestAnswer, 70);
+            if (input) {
+                try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+            }
+            return reviewed;
+        }
         const loading = loadingMessage();
         appendMessage(loading);
         window.setTimeout(focusConversation, 40);
@@ -373,6 +397,7 @@
         try {
             const ask = await waitForHistoryAI();
             const result = await ask(groundedQuestion, promptContext);
+            if (requestId !== historyRequestSerial) return;
             if (loading.isConnected) loading.remove();
             const answer = result && typeof result === 'object' && result.answer ? result.answer : String(result || '');
             const finalAnswer = answer || 'I could not complete that history answer. Please use the official source paths below.';
@@ -385,6 +410,7 @@
             if (status) status.textContent = 'Answer complete. Ask a follow-up below or choose New Question to start over.';
             window.setTimeout(focusLatestAnswer, 70);
         } catch (error) {
+            if (requestId !== historyRequestSerial) return;
             console.error('focusChrist Church History question error:', error);
             if (loading.isConnected) loading.remove();
             const fallback = 'I could not complete the summary just now. The official Church History source paths below remain available for direct study.';
@@ -394,6 +420,7 @@
             if (status) status.textContent = 'The AI summary was unavailable; official Church History source paths are still provided.';
             window.setTimeout(focusLatestAnswer, 70);
         } finally {
+            if (requestId !== historyRequestSerial) return;
             setBusy(false);
             if (input) {
                 try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
@@ -402,6 +429,7 @@
     }
 
     function resetConversation() {
+        historyRequestSerial += 1;
         historyConversation.length = 0;
         const box = byId('historyChatBox');
         const input = byId('historyQuestion');
@@ -465,6 +493,9 @@
         setConversationMode(false);
         document.documentElement.setAttribute('data-focuschrist-history-experience-ready', 'true');
     }
+
+    window.focusChristHistoryAsk = answerQuestion;
+    window.focusChristResetHistoryAsk = resetConversation;
 
     if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
     else init();
