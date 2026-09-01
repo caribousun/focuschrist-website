@@ -1,7 +1,7 @@
 {
-  "version": 1,
-  "reviewed_on": "2026-08-31",
-  "review_standard": "L-044 exact-claim review against the official Latter-day Saint standard works in Gospel Library",
+  "version": 2,
+  "reviewed_on": "2026-09-01",
+  "review_standard": "L-044 exact-claim review against the official Gospel Library and Church History source family",
   "reviewed_answers": [
     {
       "path": "ask.html",
@@ -23,6 +23,15 @@
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19.25?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/6.4?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/133.46-51?lang=eng"
+      ]
+    },
+    {
+      "path": "ask.html",
+      "key": "joseph smith death",
+      "entry_sha256": "775577ef39e1b57c659aae7c38d63e582a9281314c2005f9d587684142c55868",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-26?lang=eng"
       ]
     }
   ],
