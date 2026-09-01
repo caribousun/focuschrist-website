@@ -35,7 +35,7 @@ function entrySourceUrls(entry) {
     return [...new Set(sources.map((source) => source.url))];
 }
 
-assert(registry && registry.policyVersion === '2026-09-01.14', 'reviewed registry policy version mismatch');
+assert(registry && registry.policyVersion === '2026-09-01.15', 'reviewed registry policy version mismatch');
 assert(Array.isArray(registry.entries) && registry.entries.length >= 12, 'reviewed registry is unexpectedly small');
 assert(questionManifest.release === registry.policyVersion, 'question-contract manifest release mismatch');
 
@@ -157,7 +157,10 @@ for (const competingQuestion of ['What time did Abraham Lincoln die?', 'When did
         profile: 'ask', history: [{ role: 'user', content: 'When did Joseph Smith die?' }]
     }).resolved === false, 'explicit competing person was incorrectly inherited: ' + competingQuestion);
 }
-for (const interruption of ['What date did Abraham Lincoln die?', 'Why is the sky blue?']) {
+for (const [interruption, expectedEntryId] of [
+    ['What date did Abraham Lincoln die?', 'general-abraham-lincoln-death-1865'],
+    ['Why is the sky blue?', null]
+]) {
     const interruptionResult = registry.resolveFollowup('Do we know the time he died', {
         profile: 'ask',
         history: [
@@ -167,28 +170,40 @@ for (const interruption of ['What date did Abraham Lincoln die?', 'Why is the sk
             { role: 'assistant', content: 'An intervening answer.' }
         ]
     });
-    assert(interruptionResult.resolved === true && interruptionResult.entryId === null
-        && interruptionResult.query.includes(interruption),
+    assert(interruptionResult.resolved === true && interruptionResult.entryId === expectedEntryId
+        && (expectedEntryId
+            ? interruptionResult.contextQuestion.includes(interruption)
+            : interruptionResult.query.includes(interruption)),
         'resolver skipped the newer user subject: ' + interruption);
 }
-const genericLincolnFollowup = registry.resolveFollowup('Do we know the time he died?', {
-    profile: 'ask', history: [{ role: 'user', content: 'What date did Abraham Lincoln die?' }]
+const reviewedLincolnFollowup = registry.resolveFollowup('Do we know the time he died?', {
+    profile: 'ask', history: [{ role: 'user', content: 'What date did Abraham Lincoln die?', contextEntryId: 'general-abraham-lincoln-death-1865' }]
 });
-assert(genericLincolnFollowup.resolved === true && genericLincolnFollowup.genericContext === true
-    && genericLincolnFollowup.entryId === null && genericLincolnFollowup.contextQuestion.includes('Abraham Lincoln'),
-    'general follow-up did not resolve the immediately preceding Lincoln subject');
-const genericLincolnChain = registry.resolveFollowup('What time?', {
+assert(reviewedLincolnFollowup.resolved === true && reviewedLincolnFollowup.genericContext === false
+    && reviewedLincolnFollowup.entryId === 'general-abraham-lincoln-death-1865',
+    'reviewed Lincoln follow-up did not retain the audited subject');
+const reviewedLincolnAnswer = registry.match(reviewedLincolnFollowup.query, {
+    profile: 'ask', contextVariant: reviewedLincolnFollowup.contextVariant
+});
+assert(reviewedLincolnAnswer && reviewedLincolnAnswer.answer.includes('7:22 a.m.')
+    && reviewedLincolnAnswer.sources.some((source) => source.url.includes('loc.gov'))
+    && reviewedLincolnAnswer.sources.some((source) => source.url.includes('nps.gov')),
+    'reviewed Lincoln follow-up did not return its exact, federally sourced answer');
+const reviewedLincolnChain = registry.resolveFollowup('What time?', {
     profile: 'ask',
     history: [
-        { role: 'user', content: 'What date did Abraham Lincoln die?' },
-        { role: 'assistant', content: 'April 15, 1865.' },
-        { role: 'user', content: 'Do we know the time he died?', contextQuestion: genericLincolnFollowup.contextQuestion },
-        { role: 'assistant', content: 'A researched answer.' }
+        { role: 'user', content: 'What date did Abraham Lincoln die?', contextEntryId: 'general-abraham-lincoln-death-1865' },
+        { role: 'assistant', content: 'Abraham Lincoln died at 7:22 a.m. on April 15, 1865.' },
+        { role: 'user', content: 'Do we know the time he died?', contextEntryId: 'general-abraham-lincoln-death-1865' },
+        { role: 'assistant', content: 'Abraham Lincoln died at 7:22 a.m. on April 15, 1865.' }
     ]
 });
-assert(genericLincolnChain.resolved === true && genericLincolnChain.query.includes('Abraham Lincoln')
-    && !genericLincolnChain.query.includes('Joseph Smith'),
-    'generic context receipt did not preserve the Lincoln subject through a chained ellipsis');
+assert(reviewedLincolnChain.resolved === true
+    && reviewedLincolnChain.entryId === 'general-abraham-lincoln-death-1865',
+    'reviewed Lincoln context receipt did not preserve the subject through a chained ellipsis');
+const reviewedLincolnChainAnswer = registry.match(reviewedLincolnChain.query, { profile: 'ask' });
+assert(reviewedLincolnChainAnswer && reviewedLincolnChainAnswer.answer.includes('7:22 a.m.'),
+    'reviewed Lincoln chained ellipsis did not return the pinned answer');
 for (const [contextQuestion, expectedVariant, expectedAnswer] of [
     ['How old was he?', 'age-at-death', '38 years old'],
     ['Why was he in Carthage?', 'carthage-imprisonment', 'awaiting legal proceedings'],
@@ -253,17 +268,30 @@ const unsupportedJosephFollowup = registry.resolveFollowup('What was his favorit
 });
 assert(unsupportedJosephFollowup.resolved === true && unsupportedJosephFollowup.genericContext === true,
     'unsupported Joseph follow-up must remain in contextual research instead of forcing a local variant');
-for (const competingQuestion of [
-    'When did he die—Abraham Lincoln?',
-    'Do we know what time he died, Abraham Lincoln?'
+for (const [competingQuestion, expectedEntryId] of [
+    ['When did he die—Abraham Lincoln?', 'general-abraham-lincoln-death-1865'],
+    ['Do we know what time he died, Abraham Lincoln?', 'general-abraham-lincoln-death-1865'],
+    ['Do we know what time he died, john adams?', null],
+    ['when did he die—george washington?', null],
+    ['did john adams die?', null],
+    ['Do we know what time he died, Lincoln?', null],
+    ['Do we know what time he died, lincoln?', null],
+    ['When did he die—Washington?', null],
+    ['when did he die—washington?', null],
+    ['What time did he die, JFK?', null]
 ]) {
     const explicitSubject = registry.resolveFollowup(competingQuestion, {
         profile: 'ask',
-        history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
+        history: [{ role: 'user', content: 'What date did Joseph Smith die?', contextEntryId: 'joseph-smith-death-1844' }]
     });
-    assert(explicitSubject.resolved === false && explicitSubject.entryId === null,
-        'explicit current person incorrectly inherited Joseph Smith: ' + competingQuestion);
+    assert(explicitSubject.resolved === false && explicitSubject.entryId === expectedEntryId,
+        'explicit current person inherited Joseph Smith context: ' + competingQuestion);
 }
+assert(registry.resolveFollowup('Do we know the time he died, exactly?', {
+    profile: 'ask',
+    history: [{ role: 'user', content: 'What date did Joseph Smith die?', contextEntryId: 'joseph-smith-death-1844' }]
+}).entryId === 'joseph-smith-death-1844',
+    'contextual adverb was incorrectly treated as a competing one-token identity');
 [
     ['When did Joseph F. Smith die?', 'ask'],
     ['When did Joseph Fielding Smith die?', 'ask'],

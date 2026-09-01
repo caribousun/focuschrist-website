@@ -59,7 +59,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official Church History', url: 'https://www.churchofjesuschrist.org/study/church-history' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.14'
+                focuschrist_source_policy: '2026-09-01.15'
             };
         }
     };
