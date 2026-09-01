@@ -4,18 +4,62 @@ const vm = require('vm');
 const ORIGIN = 'https://focuschrist.com';
 const MAX_ATTEMPTS = 24;
 const RETRY_MS = 10000;
-const ASSETS = [
+const ROOT_ASSETS = [
     'ask.html',
+    'pioneers.html',
+    'church-history.html',
+    'ask-question-contracts.json'
+];
+const REQUIRED_CONTROLLERS = [
     'site-common.js',
     'reviewed-ask-knowledge.js',
     'study-intelligence-v3.js',
+    'study-journey.js',
+    'study-source-router.js',
+    'art-ask-context.js',
     'ask-experience.js',
-    'ask-question-contracts.json',
-    'pioneers.html',
     'pioneer-experience.js',
-    'church-history.html',
     'church-history-experience.js'
 ];
+
+function localScriptReferences(text) {
+    const references = new Set();
+    const patterns = [
+        /<script[^>]+src=["']([^"'?#]+\.js)(?:\?[^"']*)?["']/gi,
+        /["']([a-z0-9][a-z0-9./-]*\.js)\?v=[^"']+["']/gi
+    ];
+    patterns.forEach((pattern) => {
+        let match;
+        while ((match = pattern.exec(text)) !== null) {
+            const path = String(match[1] || '').replace(/^\.\//, '');
+            if (!path || path.includes('://') || path.startsWith('/') || path.includes('..')) continue;
+            if (fs.existsSync(path)) references.add(path);
+        }
+    });
+    return [...references];
+}
+
+function discoverCriticalAssets() {
+    const discovered = new Set(ROOT_ASSETS);
+    const queue = ROOT_ASSETS.filter((path) => /\.html$/.test(path));
+
+    while (queue.length > 0) {
+        const path = queue.shift();
+        const text = fs.readFileSync(path, 'utf8');
+        localScriptReferences(text).forEach((reference) => {
+            if (discovered.has(reference)) return;
+            discovered.add(reference);
+            queue.push(reference);
+        });
+    }
+
+    REQUIRED_CONTROLLERS.forEach((path) => {
+        assert(discovered.has(path), 'critical controller is no longer discoverable from production roots: ' + path);
+    });
+    return [...discovered].sort();
+}
+
+const ASSETS = discoverCriticalAssets();
 
 function assert(condition, message) {
     if (!condition) throw new Error(message);
@@ -78,6 +122,7 @@ function requireSubstantive(match, label, expected) {
 
 (async function () {
     const live = await waitForExactDeployment();
+    console.log('Exact production dependency graph verified: ' + ASSETS.length + ' assets');
 
     assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260901-15')
         && live['ask.html'].includes('ask-experience.js?v=20260901-15'),
