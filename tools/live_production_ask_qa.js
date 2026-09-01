@@ -22,44 +22,62 @@ const REQUIRED_CONTROLLERS = [
     'church-history-experience.js'
 ];
 
+function normalizeLocalReference(rawReference) {
+    const url = String(rawReference || '').replace(/^\.\//, '');
+    if (!url || url.includes('://') || url.startsWith('/') || url.includes('..')) return null;
+    const path = url.split('?')[0];
+    if (!path.endsWith('.js') || !fs.existsSync(path)) return null;
+    return { path: path, url: url };
+}
+
 function localScriptReferences(text) {
-    const references = new Set();
+    const references = new Map();
     const patterns = [
-        /<script[^>]+src=["']([^"'?#]+\.js)(?:\?[^"']*)?["']/gi,
-        /["']([a-z0-9][a-z0-9./-]*\.js)\?v=[^"']+["']/gi
+        /<script[^>]+src=["']([^"'#]+\.js(?:\?[^"']*)?)["']/gi,
+        /["']([a-z0-9][a-z0-9./-]*\.js\?v=[^"']+)["']/gi
     ];
     patterns.forEach((pattern) => {
         let match;
         while ((match = pattern.exec(text)) !== null) {
-            const path = String(match[1] || '').replace(/^\.\//, '');
-            if (!path || path.includes('://') || path.startsWith('/') || path.includes('..')) continue;
-            if (fs.existsSync(path)) references.add(path);
+            const reference = normalizeLocalReference(match[1]);
+            if (reference) references.set(reference.url, reference);
         }
     });
-    return [...references];
+    return [...references.values()];
 }
 
 function discoverCriticalAssets() {
-    const discovered = new Set(ROOT_ASSETS);
+    const urlsByPath = new Map();
+    ROOT_ASSETS.forEach((path) => urlsByPath.set(path, new Set([path])));
     const queue = ROOT_ASSETS.filter((path) => /\.html$/.test(path));
+    const visited = new Set();
 
     while (queue.length > 0) {
         const path = queue.shift();
+        if (visited.has(path)) continue;
+        visited.add(path);
         const text = fs.readFileSync(path, 'utf8');
         localScriptReferences(text).forEach((reference) => {
-            if (discovered.has(reference)) return;
-            discovered.add(reference);
-            queue.push(reference);
+            if (!urlsByPath.has(reference.path)) urlsByPath.set(reference.path, new Set());
+            urlsByPath.get(reference.path).add(reference.url);
+            if (!visited.has(reference.path)) queue.push(reference.path);
         });
     }
 
     REQUIRED_CONTROLLERS.forEach((path) => {
-        assert(discovered.has(path), 'critical controller is no longer discoverable from production roots: ' + path);
+        assert(urlsByPath.has(path), 'critical controller is no longer discoverable from production roots: ' + path);
     });
-    return [...discovered].sort();
+
+    const assets = [...urlsByPath.keys()].sort();
+    const canonicalTargets = assets.flatMap((path) => [...urlsByPath.get(path)]
+        .sort()
+        .map((url) => ({ path: path, url: url })));
+    return { assets: assets, canonicalTargets: canonicalTargets };
 }
 
-const ASSETS = discoverCriticalAssets();
+const DEPLOYMENT_GRAPH = discoverCriticalAssets();
+const ASSETS = DEPLOYMENT_GRAPH.assets;
+const CANONICAL_TARGETS = DEPLOYMENT_GRAPH.canonicalTargets;
 
 function assert(condition, message) {
     if (!condition) throw new Error(message);
@@ -69,17 +87,11 @@ function wait(ms) {
     return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function fetchAsset(path, attempt) {
-    const delimiter = path.includes('?') ? '&' : '?';
-    const response = await fetch(
-        ORIGIN + '/' + path + delimiter + 'focuschrist_live_gate=' + Date.now() + '-' + attempt,
-        {
-            cache: 'no-store',
-            headers: { 'cache-control': 'no-cache' },
-            signal: AbortSignal.timeout(15000)
-        }
-    );
-    if (!response.ok) throw new Error(path + ' returned HTTP ' + response.status);
+async function fetchProductionUrl(url, options) {
+    const response = await fetch(ORIGIN + '/' + url, Object.assign({
+        signal: AbortSignal.timeout(15000)
+    }, options || {}));
+    if (!response.ok) throw new Error(url + ' returned HTTP ' + response.status);
     return response.text();
 }
 
@@ -92,13 +104,40 @@ async function waitForExactDeployment() {
 
     for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
         try {
-            const livePairs = await Promise.all(ASSETS.map(async (path) => [
-                path,
-                await fetchAsset(path, attempt)
-            ]));
-            const live = Object.fromEntries(livePairs);
-            const mismatches = ASSETS.filter((path) => live[path] !== local[path]);
-            if (mismatches.length === 0) return live;
+            // Canonical URLs use the exact cache keys real visitors receive:
+            // unversioned HTML and each parent-referenced versioned script URL.
+            const canonicalResults = await Promise.all(CANONICAL_TARGETS.map(async (target) => ({
+                path: target.path,
+                url: target.url,
+                content: await fetchProductionUrl(target.url)
+            })));
+            const originResults = await Promise.all(ASSETS.map(async (path) => {
+                const delimiter = path.includes('?') ? '&' : '?';
+                const probeUrl = path + delimiter + 'focuschrist_live_gate=' + Date.now() + '-' + attempt;
+                return {
+                    path: path,
+                    url: probeUrl,
+                    content: await fetchProductionUrl(probeUrl, {
+                        cache: 'no-store',
+                        headers: { 'cache-control': 'no-cache' }
+                    })
+                };
+            }));
+
+            const canonicalMismatches = canonicalResults
+                .filter((result) => result.content !== local[result.path])
+                .map((result) => 'canonical:' + result.url);
+            const originMismatches = originResults
+                .filter((result) => result.content !== local[result.path])
+                .map((result) => 'origin:' + result.path);
+            const mismatches = canonicalMismatches.concat(originMismatches);
+            if (mismatches.length === 0) {
+                // Execute the bytes downloaded through canonical visitor cache keys.
+                return Object.fromEntries(ASSETS.map((path) => {
+                    const canonical = canonicalResults.find((result) => result.path === path);
+                    return [path, canonical.content];
+                }));
+            }
             lastMismatches = mismatches;
             console.log('Production deployment not exact yet (attempt ' + attempt + '): ' + mismatches.join(', '));
         } catch (error) {
@@ -122,7 +161,7 @@ function requireSubstantive(match, label, expected) {
 
 (async function () {
     const live = await waitForExactDeployment();
-    console.log('Exact production dependency graph verified: ' + ASSETS.length + ' assets');
+    console.log('Exact production dependency graph verified: ' + ASSETS.length + ' assets / ' + CANONICAL_TARGETS.length + ' canonical cache keys');
 
     assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260901-15')
         && live['ask.html'].includes('ask-experience.js?v=20260901-15'),
