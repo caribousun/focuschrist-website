@@ -276,8 +276,9 @@ for (const competingQuestion of [
         profile: 'ask',
         history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
     });
-    assert(explicitSubject.resolved === false && explicitSubject.entryId === null,
-        'explicit current person incorrectly inherited Joseph Smith: ' + competingQuestion);
+    assert(explicitSubject.resolved === false
+        && explicitSubject.entryId === 'general-abraham-lincoln-death-1865',
+        'explicit current person failed to switch from Joseph Smith to the reviewed Lincoln subject: ' + competingQuestion);
 }
 [
     ['When did Joseph F. Smith die?', 'ask'],
