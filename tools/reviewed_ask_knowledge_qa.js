@@ -171,7 +171,9 @@ for (const [interruption, expectedEntryId] of [
         ]
     });
     assert(interruptionResult.resolved === true && interruptionResult.entryId === expectedEntryId
-        && interruptionResult.query.includes(interruption),
+        && (expectedEntryId
+            ? interruptionResult.contextQuestion.includes(interruption)
+            : interruptionResult.query.includes(interruption)),
         'resolver skipped the newer user subject: ' + interruption);
 }
 const reviewedLincolnFollowup = registry.resolveFollowup('Do we know the time he died?', {
