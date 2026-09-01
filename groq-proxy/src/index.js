@@ -400,7 +400,33 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
   const content = result.data && result.data.choices && result.data.choices[0]
     ? result.data.choices[0].message.content
     : '';
-  const verdict = parseVerifierJson(content);
+  let verdict = parseVerifierJson(content);
+  if (verdict && verdict.approved === true
+    && !answerMeetsSubstanceContract(verdict.answer, scope)) {
+    const requirements = answerSubstanceRequirements(scope);
+    const expansionResult = await callGroq(apiKey, {
+      model: VERIFIER_MODEL,
+      messages: [{ role: 'user', content: [
+        prompt,
+        '',
+        'Your previous approved answer was too brief.',
+        `Rewrite it using at least ${requirements.minimumWords} words and ${requirements.minimumSentences} complete sentences.`,
+        'State the direct answer first, then add useful stable context. Do not pad, repeat, invent a citation, or add current, high-stakes, or specialized claims.',
+        `PREVIOUS ANSWER:\n${String(verdict.answer || '').trim()}`,
+        'Return the complete JSON object again with approved and answer.',
+      ].join('\n') }],
+      temperature: 0,
+      max_tokens: 900,
+      response_format: { type: 'json_object' },
+    });
+    if (expansionResult.response.ok) {
+      const expansionContent = expansionResult.data && expansionResult.data.choices && expansionResult.data.choices[0]
+        ? expansionResult.data.choices[0].message.content
+        : '';
+      const expansionVerdict = parseVerifierJson(expansionContent);
+      if (expansionVerdict) verdict = expansionVerdict;
+    }
+  }
   const answer = String(verdict && verdict.answer || '').trim();
   if (!verdict || verdict.approved !== true || !answer || hasKnownFalseClaim(answer)
     || !answerMeetsSubstanceContract(answer, scope)) return null;
@@ -419,6 +445,7 @@ function generalAnswerPayload(answer, mode) {
     focuschrist_source_integrity_verified: false,
     focuschrist_source_policy: SOURCE_POLICY_VERSION,
     focuschrist_gateway_mode: mode,
+    focuschrist_answer_word_count: String(answer || '').split(/\s+/).filter(Boolean).length,
   };
 }
 
