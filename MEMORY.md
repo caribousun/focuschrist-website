@@ -203,3 +203,13 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Permanent regression specimen: `What year did the handcarts begin?` must answer 1856 on Pioneers and Church History from the official Handcart Companies source with zero Worker calls. Handcart racing, shopping carts, and modern handcarts must not match.
 - Required production proof covers real typing, follow-up/reset, sources, negative controls, provider failure, request staleness, exact deployed revision, policy/cache consistency, and all three fully loaded Ask surfaces.
 - The Ask Surface Registry is `docs/ask-surface-registry.md`; the incident/root-cause record is `docs/ask-repair-root-cause-2026-09-01.md`.
+
+
+### Final Ask conversation and production-cache closure — policy 2026-09-01.15
+
+- Verified Ask runtime / production-gate merge commit: `baaa15a24e5b35101bde8a5046b86295310b50bb`; feature repair merge: `f58b232ed9386361285fafd44e5fea8390fe1868`.
+- The final user-visible answer—not only the Worker response—must pass source-integrity guards and runtime-owner tests. Person names that overlap scripture/source titles require explicit lexical-collision regressions.
+- Multi-turn acceptance separately gates the initial question, pronoun follow-up, chained ellipsis, reset isolation, and competing identity. Stable reviewed facts such as Lincoln’s death time remain on an integrity-pinned zero-Worker lane.
+- Competing-subject detection is case-insensitive and grammar-anchored; full names, lowercase names, surnames, and acronyms must not inherit the prior person.
+- `tools/live_production_ask_qa.js` is a protected push-only gate. It recursively discovers critical/transitive scripts, compares canonical visitor cache keys and origin probes with the tested revision, repeats after a stability interval, and executes critical Main Ask, Pioneer, and Church History contracts.
+- A release remains blocked until repository CI, independent adversarial review, exact deployment workflows, the live production gate, Focus memory/recovery updates, and Master Brain learning readback all agree.
