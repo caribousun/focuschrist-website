@@ -8,6 +8,7 @@ import {
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
+  isJsonValidationFailure,
   isTellMyStorySource,
   parseVerifierJson,
   sanitizePayload,
@@ -102,5 +103,11 @@ assert(guardVerifiedAnswer('Elizabeth traveled in the Willie handcart company.',
 const verdict = parseVerifierJson('```json\n{"approved":true,"answer":"Supported","source_indexes":[1]}\n```');
 assert(verdict && verdict.approved === true && verdict.source_indexes[0] === 1,
   'gateway must parse a verifier JSON object');
+assert(isJsonValidationFailure({
+  response: { status: 400 },
+  data: { error: { code: 'json_validate_failed', message: 'failed_generation' } },
+}), 'the gateway must recognize a retryable verifier JSON-format failure');
+assert(!isJsonValidationFailure({ response: { status: 401 }, data: { error: { code: 'invalid_api_key' } } }),
+  'the gateway must not retry unrelated provider errors as JSON failures');
 
 console.log('Gateway source policy QA PASS');

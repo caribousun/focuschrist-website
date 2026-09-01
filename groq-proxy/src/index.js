@@ -214,6 +214,12 @@ function parseVerifierJson(text) {
   try { return JSON.parse(raw); } catch (_error) { return null; }
 }
 
+function isJsonValidationFailure(result) {
+  const error = result && result.data && result.data.error ? result.data.error : {};
+  return Boolean(result && result.response && result.response.status === 400
+    && /json[_ -]?validate|failed_generation/i.test(`${error.code || ''} ${error.type || ''} ${error.message || ''}`));
+}
+
 function guardVerifiedAnswer(answer, evidence, scope, approved) {
   const text = String(answer || '').trim();
   if (!approved || !text || !Array.isArray(evidence) || !evidence.length) return SOURCE_INTEGRITY_FALLBACK;
@@ -374,13 +380,22 @@ export default {
         '',
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
       ].join('\n');
-      const verifierResult = await callGroq(env.GROQ_KEY_NEW, {
+      const verifierBody = {
         model: VERIFIER_MODEL,
         messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
         max_tokens: 1500,
         response_format: { type: 'json_object' },
-      });
+      };
+      let verifierResult = await callGroq(env.GROQ_KEY_NEW, verifierBody);
+      if (!verifierResult.response.ok && isJsonValidationFailure(verifierResult)) {
+        verifierResult = await callGroq(env.GROQ_KEY_NEW, {
+          ...verifierBody,
+          messages: [{ role: 'user', content: `${verifierPrompt}\n\nReturn the JSON object as plain text with no markdown fence.` }],
+          max_tokens: 1800,
+          response_format: undefined,
+        });
+      }
       if (!verifierResult.response.ok) {
         return jsonResponse(fallbackPayload('verification-provider-error', providerDiagnostic(verifierResult)), 200, origin);
       }
@@ -431,6 +446,7 @@ export {
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
+  isJsonValidationFailure,
   isTellMyStorySource,
   parseVerifierJson,
   sanitizePayload,
