@@ -376,7 +376,12 @@ function fallbackPayload(mode, extra, scope) {
 }
 
 async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
-  if (requiresExternalGeneralResearch(scope.question)) return null;
+  const diagnostic = { focuschrist_low_risk_stage: 'started' };
+  scope.lowRiskDiagnostic = diagnostic;
+  if (requiresExternalGeneralResearch(scope.question)) {
+    diagnostic.focuschrist_low_risk_stage = 'ineligible';
+    return null;
+  }
   const prompt = [
     'You are the final checker for a low-risk, stable general-knowledge answer. Return one JSON object only.',
     'This path is never for current events, weather, prices, schedules, politics, medical, legal, financial, safety, statistics, quotations, citations, or source-specific questions.',
@@ -396,11 +401,19 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
     max_tokens: 700,
     response_format: { type: 'json_object' },
   });
-  if (!result.response.ok) return null;
+  if (!result.response.ok) {
+    Object.assign(diagnostic, providerDiagnostic(result));
+    diagnostic.focuschrist_low_risk_stage = 'initial-provider-error';
+    return null;
+  }
   const content = result.data && result.data.choices && result.data.choices[0]
     ? result.data.choices[0].message.content
     : '';
   let verdict = parseVerifierJson(content);
+  diagnostic.focuschrist_low_risk_stage = 'initial-verdict';
+  diagnostic.focuschrist_low_risk_initial_approved = Boolean(verdict && verdict.approved === true);
+  diagnostic.focuschrist_low_risk_initial_words = String(verdict && verdict.answer || '').split(/\s+/).filter(Boolean).length;
+  diagnostic.focuschrist_low_risk_initial_sentences = countCompleteSentences(verdict && verdict.answer);
   if (verdict && verdict.approved === true
     && !answerMeetsSubstanceContract(verdict.answer, scope)) {
     const requirements = answerSubstanceRequirements(scope);
@@ -425,11 +438,22 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
         : '';
       const expansionVerdict = parseVerifierJson(expansionContent);
       if (expansionVerdict) verdict = expansionVerdict;
+      diagnostic.focuschrist_low_risk_stage = 'expanded-verdict';
+      diagnostic.focuschrist_low_risk_expanded_approved = Boolean(expansionVerdict && expansionVerdict.approved === true);
+      diagnostic.focuschrist_low_risk_expanded_words = String(expansionVerdict && expansionVerdict.answer || '').split(/\s+/).filter(Boolean).length;
+      diagnostic.focuschrist_low_risk_expanded_sentences = countCompleteSentences(expansionVerdict && expansionVerdict.answer);
+    } else {
+      Object.assign(diagnostic, providerDiagnostic(expansionResult));
+      diagnostic.focuschrist_low_risk_stage = 'expansion-provider-error';
     }
   }
   const answer = String(verdict && verdict.answer || '').trim();
   if (!verdict || verdict.approved !== true || !answer || hasKnownFalseClaim(answer)
-    || !answerMeetsSubstanceContract(answer, scope)) return null;
+    || !answerMeetsSubstanceContract(answer, scope)) {
+    diagnostic.focuschrist_low_risk_stage = `${diagnostic.focuschrist_low_risk_stage}-rejected`;
+    return null;
+  }
+  diagnostic.focuschrist_low_risk_stage = 'accepted';
   return answer;
 }
 
@@ -451,10 +475,16 @@ function generalAnswerPayload(answer, mode) {
 
 function providerDiagnostic(result) {
   const error = result && result.data && result.data.error ? result.data.error : {};
+  const rawCode = String(error.code || error.type || '');
+  const publicCodes = new Set([
+    'rate_limit_exceeded', 'json_validate_failed', 'failed_generation',
+    'invalid_api_key', 'invalid_request_error', 'context_length_exceeded',
+    'server_error', 'service_unavailable', 'timeout',
+  ]);
+  const safeCode = publicCodes.has(rawCode) ? rawCode : (rawCode ? 'provider_error' : '');
   return {
     focuschrist_provider_status: result && result.response ? result.response.status : 0,
-    focuschrist_provider_code: String(error.code || error.type || '').slice(0, 80),
-    focuschrist_provider_message: String(error.message || '').replace(/[\r\n]+/g, ' ').slice(0, 240),
+    focuschrist_provider_code: safeCode,
   };
 }
 
@@ -502,7 +532,7 @@ export default {
         const limited = researchResult.response.status === 429;
         return jsonResponse(fallbackPayload(
           limited ? 'research-rate-limited' : 'research-provider-error',
-          providerDiagnostic(researchResult),
+          { ...providerDiagnostic(researchResult), ...(sanitized.scope.lowRiskDiagnostic || {}) },
           sanitized.scope,
         ), 200, origin);
       }
@@ -533,7 +563,11 @@ export default {
         }
       }
       if (!draft || !evidence.length) {
-        return jsonResponse(fallbackPayload('research-insufficient-evidence', null, sanitized.scope), 200, origin);
+        return jsonResponse(fallbackPayload(
+          'research-insufficient-evidence',
+          sanitized.scope.lowRiskDiagnostic || null,
+          sanitized.scope,
+        ), 200, origin);
       }
 
       const verifierPrompt = sanitized.scope.selectedPioneer ? [
@@ -678,6 +712,7 @@ export {
   isTellMyStorySource,
   needsIdentityClarification,
   parseVerifierJson,
+  providerDiagnostic,
   requiresExternalGeneralResearch,
   sanitizePayload,
 };
