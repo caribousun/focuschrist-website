@@ -190,3 +190,16 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - `tools/production_hardening_qa.py` is a protected release gate and must run in pull-request/main QA and the GitHub Pages deploy workflow.
 - Search/discovery controls (`robots.txt`, `sitemap.xml`, canonical metadata, specific high-resolution social preview images) must be preserved and updated with material page changes.
 - Production learning rule: when a presentation review exposes a defect class, fix the instance and add a regression gate so future sessions cannot silently regress it.
+
+## FocusChrist All-Page Ask Reliability Standard (September 1, 2026)
+
+- Master Brain governance and `docs/all-page-ai-ask-executive-prompt.md` control every Ask change.
+- Owner-reproduced failures immediately change the feature status to `VERIFIED FAIL`. “Deployed” is never evidence that the feature works.
+- Main Ask, Pioneer Ask, and Church History have different final controllers but share one reviewed local knowledge registry: `reviewed-ask-knowledge.js`.
+- Every controller must consult reviewed local knowledge before a Worker request. Reviewed answers must make zero Worker calls and remain available during provider, retrieval, verifier, or network failure.
+- Every reviewed entry requires page profiles, positive paraphrases, negative controls, exact authoritative sources, review metadata, an integrity key, and a SHA-256 record in `answer-audit.json`.
+- Unreviewed legacy Q&A remains quarantined. Never promote an old answer because it appears plausible or has links.
+- A new defect must strengthen a reusable intent class and final-owner runtime test, not become an isolated regex patch.
+- Permanent regression specimen: `What year did the handcarts begin?` must answer 1856 on Pioneers and Church History from the official Handcart Companies source with zero Worker calls. Handcart racing, shopping carts, and modern handcarts must not match.
+- Required production proof covers real typing, follow-up/reset, sources, negative controls, provider failure, request staleness, exact deployed revision, policy/cache consistency, and all three fully loaded Ask surfaces.
+- The Ask Surface Registry is `docs/ask-surface-registry.md`; the incident/root-cause record is `docs/ask-repair-root-cause-2026-09-01.md`.

@@ -387,15 +387,14 @@
             button.addEventListener('click', function () {
                 const topic = button.getAttribute('data-ask-topic');
                 if (!topic) return;
-                if (typeof window.askTopic === 'function') {
-                    window.askTopic(topic);
-                    window.setTimeout(focusConversation, 80);
-                } else {
-                    submitQuestion(topic);
-                }
+                // Route topics through the same final controller as typed questions.
+                // The legacy inline askTopic path bypasses request ownership and the
+                // shared reviewed-local first lane.
+                submitQuestion('Tell me about ' + topic);
             });
         });
     }
+    window.focusChristInitAskTopicCards = initTopicCards;
 
     function initAutomaticConversationFollow() {
         const sendButton = document.getElementById('sendBtn');
@@ -480,7 +479,15 @@
         const originalClear = typeof window.clearChat === 'function' ? window.clearChat : null;
         if (originalClear) {
             window.clearChat = function () {
+                if (typeof window.focusChristCancelAskRequests === 'function') window.focusChristCancelAskRequests();
                 originalClear();
+                const primaryInput = document.getElementById('userInput');
+                const primaryButton = document.getElementById('sendBtn');
+                if (primaryInput) primaryInput.disabled = false;
+                if (primaryButton) {
+                    primaryButton.disabled = false;
+                    primaryButton.textContent = 'Ask';
+                }
                 restoreRefinedWelcome();
                 setFollowupVisible(false);
                 setFollowupBusy(false);

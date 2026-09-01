@@ -60,6 +60,15 @@ jobs:
       - name: Exercise source-integrity runtime guard
         run: node tools/source_integrity_runtime_qa.js
 
+      - name: Exercise reviewed Ask knowledge registry
+        run: node tools/reviewed_ask_knowledge_qa.js
+
+      - name: Exercise Pioneer Ask final owner
+        run: node tools/pioneer_ask_runtime_qa.js
+
+      - name: Exercise Church History Ask final owner
+        run: node tools/church_history_ask_runtime_qa.js
+
       - name: Exercise final Study Intelligence owner
         run: node tools/study_intelligence_v3_runtime_qa.js
 

@@ -9,6 +9,7 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 ask = (ROOT / "ask.html").read_text(encoding="utf-8")
 common = (ROOT / "site-common.js").read_text(encoding="utf-8")
+reviewed_knowledge = (ROOT / "reviewed-ask-knowledge.js").read_text(encoding="utf-8")
 v3 = (ROOT / "study-intelligence-v3.js").read_text(encoding="utf-8")
 pioneer = (ROOT / "pioneer-experience.js").read_text(encoding="utf-8")
 history = (ROOT / "church-history-experience.js").read_text(encoding="utf-8")
@@ -73,6 +74,10 @@ if "verifiedIntentMatchesBase(q,bestMatch)" not in ask:
     errors.append("Ask legacy accessor can still serve unverified or intent-mismatched entries")
 if "groundedLocalReference" not in v3 or "Unreviewed legacy Q&A entries are quarantined" not in v3:
     errors.append("v3 does not quarantine unverified legacy entries")
+if "reviewedKnowledgeReference" not in v3 or "reviewedPioneerKnowledge" not in pioneer or "reviewedHistoryKnowledge" not in history:
+    errors.append("one or more final Ask controllers bypass the shared reviewed-local registry")
+if "general-sky-blue" not in reviewed_knowledge or "pioneer-handcart-travel-1856" not in reviewed_knowledge:
+    errors.append("shared reviewed-local registry lacks required general or Pioneer regression entries")
 if "verifiedIntentMatches" not in v3:
     errors.append("verified entries lack explicit intent matching")
 if "serverVerified: serverVerified" not in pioneer or "renderPioneerChoices" not in pioneer:
@@ -85,23 +90,27 @@ if "Verified study paths" in router or "Verified study sources" in router:
     errors.append("source routes are still mislabeled as claim verification")
 if "unreviewed-source-dependent-generation" not in common:
     errors.append("shared source-integrity contract is not fail-closed")
-if "serverVerified" not in common or "2026-09-01.8" not in common:
+if "serverVerified" not in common or "2026-09-01.9" not in common:
     errors.append("shared source-integrity contract does not recognize the server verification receipt")
 
 runtime_files = [ROOT / "site-common.js", ROOT / "study-source-router.js", ROOT / "ask.html", ROOT / "pioneers.html", ROOT / "church-history.html"]
 versions = set()
 for path in runtime_files:
     versions.update(re.findall(r"study-intelligence-v3\.js\?v=(\d+-\d+)", path.read_text(encoding="utf-8")))
-if versions != {"20260901-8"}:
+if versions != {"20260901-9"}:
     errors.append(f"mixed Study Intelligence v3 cache versions: {sorted(versions)}")
 
 cache_markers = {
-    "site-common.js": (common, "study-journey.js?v=20260901-8"),
-    "study-journey.js": (journey, "study-source-router.js?v=20260901-8"),
-    "pioneers.html": (pioneers_html, "pioneer-experience.js?v=20260901-8"),
-    "church-history.html common": (history_html, "site-common.js?v=20260901-8"),
-    "church-history.html router": (history_html, "study-source-router.js?v=20260901-8"),
-    "church-history.html experience": (history_html, "church-history-experience.js?v=20260901-8"),
+    "site-common.js": (common, "study-journey.js?v=20260901-9"),
+    "study-journey.js": (journey, "study-source-router.js?v=20260901-9"),
+    "ask.html experience": (ask, "ask-experience.js?v=20260901-9"),
+    "ask.html reviewed knowledge": (ask, "reviewed-ask-knowledge.js?v=20260901-9"),
+    "pioneers.html reviewed knowledge": (pioneers_html, "reviewed-ask-knowledge.js?v=20260901-9"),
+    "pioneers.html": (pioneers_html, "pioneer-experience.js?v=20260901-9"),
+    "church-history.html common": (history_html, "site-common.js?v=20260901-9"),
+    "church-history.html reviewed knowledge": (history_html, "reviewed-ask-knowledge.js?v=20260901-9"),
+    "church-history.html router": (history_html, "study-source-router.js?v=20260901-9"),
+    "church-history.html experience": (history_html, "church-history-experience.js?v=20260901-9"),
 }
 for label, (text, marker) in cache_markers.items():
     if marker not in text:

@@ -26,7 +26,7 @@ global.document = {
     },
     documentElement: { setAttribute() {} },
 };
-global.sessionStorage = { setItem() {}, getItem() { return null; } };
+global.sessionStorage = { setItem() {}, getItem() { return null; }, removeItem() {} };
 global.conversationHistory = [];
 global.qaDatabase = {
     'color used in scripture': {
@@ -53,11 +53,11 @@ global.qaDatabase = {
 };
 
 vm.runInThisContext(fs.readFileSync('site-common.js', 'utf8'), { filename: 'site-common.js' });
+vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { filename: 'reviewed-ask-knowledge.js' });
 let fetchCalls = 0;
 const requestBodies = [];
-global.fetch = async (_url, options) => {
-    fetchCalls += 1;
-    requestBodies.push(JSON.parse(options.body));
+let delayedAskResponse = null;
+function verifiedResponse() {
     return {
         ok: true,
         async json() {
@@ -66,10 +66,18 @@ global.fetch = async (_url, options) => {
                 focuschrist_sources: [{ text: 'Official source', url: 'https://www.churchofjesuschrist.org/study/scriptures' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.8',
+                focuschrist_source_policy: '2026-09-01.9',
             };
         },
     };
+}
+global.fetch = async (_url, options) => {
+    fetchCalls += 1;
+    const body = JSON.parse(options.body);
+    requestBodies.push(body);
+    const isDelayed = body.messages.some((message) => String(message.content || '').includes('delayed Ask detail'));
+    if (isDelayed) return new Promise((resolve) => { delayedAskResponse = () => resolve(verifiedResponse()); });
+    return verifiedResponse();
 };
 vm.runInThisContext(fs.readFileSync('study-intelligence-v3.js', 'utf8'), { filename: 'study-intelligence-v3.js' });
 
@@ -82,18 +90,21 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     assert(typeof window.askAI === 'function', 'v3 must own window.askAI');
     assert(typeof window.sendMessage === 'function', 'v3 must own window.sendMessage on Ask');
 
-    let result = await window.focusChristStudyAskV3('how is color used in scripture', '');
+    let result = await window.focusChristStudyAskV3('Why is the sky blue?', '');
+    assert(result.answer.includes('atmosphere') && result.reviewedLocal === true && fetchCalls === 0,
+        'reviewed general sky answer must bypass the gateway');
+    result = await window.focusChristStudyAskV3('how is color used in scripture', '');
     assert(result.answer === 'VERIFIED COLOR ANSWER' && fetchCalls === 0, 'exact verified intent must bypass generation');
     result = await window.focusChristStudyAskV3('how are colors used in scripture', '');
     assert(result.answer === 'VERIFIED COLOR ANSWER' && fetchCalls === 0, 'plural verified intent must bypass generation');
     result = await window.focusChristStudyAskV3('what year was joseph killed', '');
-    assert(result.answer === 'JOSEPH SMITH DIED IN 1844' && fetchCalls === 0,
+    assert(result.answer.includes('1844') && result.localMatch === 'joseph-smith-death-1844' && fetchCalls === 0,
         'reviewed Joseph Smith death intent must answer during research rate limits');
     result = await window.focusChristStudyAskV3('when did Joseph Smith die', '');
-    assert(result.answer === 'JOSEPH SMITH DIED IN 1844' && fetchCalls === 0,
+    assert(result.answer.includes('1844') && fetchCalls === 0,
         'explicit Joseph Smith death phrasing must match the reviewed answer');
     result = await window.focusChristStudyAskV3('when did Joseph die', '');
-    assert(result.answer === 'JOSEPH SMITH DIED IN 1844' && fetchCalls === 0,
+    assert(result.answer.includes('1844') && fetchCalls === 0,
         'bare Joseph death phrasing on the LDS Ask page must use the qualified reviewed answer');
 
     for (const query of ['what year was Joseph Stalin killed', 'was Joseph of Egypt murdered', 'Joseph Kennedy death']) {
@@ -144,5 +155,40 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     assert(fetchCalls === 16, 'window.sendMessage must call the research gateway');
     assert(dom.userInput.disabled === false && dom.sendBtn.disabled === false && dom.sendBtn.textContent === 'Ask',
         'window.sendMessage must restore Ask controls');
+
+    const topicButton = {
+        textContent: 'Why is the sky blue?',
+        getAttribute(name) { return name === 'data-ask-topic' ? 'Why is the sky blue?' : ''; },
+        addEventListener(name, callback) { if (name === 'click') this.clickHandler = callback; }
+    };
+    const originalQuerySelectorAll = document.querySelectorAll;
+    document.querySelectorAll = (selector) => selector === '[data-ask-topic]' ? [topicButton] : [];
+    vm.runInThisContext(fs.readFileSync('ask-experience.js', 'utf8'), { filename: 'ask-experience.js' });
+    window.focusChristInitAskTopicCards();
+    const callsBeforeTopic = fetchCalls;
+    const messagesBeforeTopic = renderedMessages.length;
+    topicButton.clickHandler();
+    await Promise.resolve();
+    await Promise.resolve();
+    assert(fetchCalls === callsBeforeTopic,
+        'real main Ask topic-button event must retain the reviewed-local zero-Worker lane');
+    assert(renderedMessages.length === messagesBeforeTopic + 2 && renderedMessages.at(-1).text.includes('atmosphere'),
+        'real main Ask topic-button event must route through the v3 primary composer');
+    document.querySelectorAll = originalQuerySelectorAll;
+
+    renderedMessages.length = 0;
+    dom.userInput.value = 'Tell me a delayed Ask detail';
+    const pending = window.sendMessage();
+    assert(typeof delayedAskResponse === 'function', 'delayed Ask request did not start');
+    window.focusChristCancelAskRequests();
+    assert(conversationHistory.length === 0, 'Ask reset must clear committed conversation state immediately');
+    dom.userInput.disabled = false;
+    dom.sendBtn.disabled = false;
+    dom.sendBtn.textContent = 'Ask';
+    delayedAskResponse();
+    await pending;
+    assert(renderedMessages.length === 1 && renderedMessages[0].isUser === true,
+        'a response resolved after Ask reset must not render');
+    assert(conversationHistory.length === 0, 'a stale Ask response must not repopulate reset conversation state');
     console.log('Study Intelligence v3 runtime QA PASS');
 })().catch((error) => { console.error(error); process.exit(1); });

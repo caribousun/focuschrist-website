@@ -41,7 +41,7 @@ if not errors:
         ('id="historyConversation"', "history conversation anchor"),
         ('id="historyResetButton"', "New Question control"),
         ('study-source-router.js', "source router loader"),
-        ('church-history-experience.js?v=20260901-8', "versioned history experience loader"),
+        ('church-history-experience.js?v=20260901-9', "versioned history experience loader"),
         ('church-history.css?v=20260830-2', "versioned history stylesheet"),
         ('assets/heroes/church-history.webp', "repository-local Sacred Grove hero delivery pattern"),
         ('referrerpolicy="no-referrer"', "hero no-referrer delivery"),

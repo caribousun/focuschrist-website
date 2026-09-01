@@ -17,11 +17,17 @@ Do not remove or weaken these without a verified replacement and explicit reason
 - independence disclosures on all five core pages and the fuller About disclosure.
 - `openai/gpt-oss-20b` direct model request in Ask/Pioneers plus the Cloudflare compatibility fallback.
 - `tools/site_qa.py`, `.github/workflows/site-qa.yml`, and the QA step in `deploy-pages.yml`.
+- `reviewed-ask-knowledge.js` and its SHA-256 records in `answer-audit.json` — the shared local-first answer contract.
+- `tools/reviewed_ask_knowledge_qa.js`, `tools/pioneer_ask_runtime_qa.js`, `tools/church_history_ask_runtime_qa.js`, and `tools/study_intelligence_v3_runtime_qa.js` — final-owner and intent-boundary gates.
 
 ## Required verification
 Run:
 ```bash
 python tools/site_qa.py
+node tools/reviewed_ask_knowledge_qa.js
+node tools/pioneer_ask_runtime_qa.js
+node tools/church_history_ask_runtime_qa.js
+node tools/study_intelligence_v3_runtime_qa.js
 ```
 
 For Art additions, also follow `IMAGE-UPLOAD-GUIDE.md` and build thumbnails before QA.
@@ -41,9 +47,10 @@ Confirm that:
 ## After merge
 1. Confirm the **Deploy GitHub Pages** workflow completes successfully.
 2. Verify the affected production page/function directly.
-3. For Ask/Pioneers changes, test a live AI response/expansion.
-4. For Art changes, test preview + full-resolution modal + keyboard controls.
-5. Record material production changes and verification evidence in Focus Current State and Decision & Change Log.
+3. For Ask/Pioneers/Church History changes, test the actual live composer after every script is loaded. At minimum verify the sky, Joseph Smith death, handcart start-year, Pioneer Exodus, First Vision, Church organization, and negative-control families recorded in `docs/all-page-ai-ask-executive-prompt.md`.
+4. Confirm reviewed-local answers make zero Worker requests and still answer when the Worker is unavailable.
+5. For Art changes, test preview + full-resolution modal + keyboard controls.
+6. Record material production changes and verification evidence in Focus Current State and Decision & Change Log.
 
 ## Recovery
 Git history is the primary restore mechanism. If a production defect is found:
