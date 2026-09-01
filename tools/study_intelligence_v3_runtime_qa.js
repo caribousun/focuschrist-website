@@ -302,10 +302,10 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     await window.sendMessage();
     dom.userInput.value = 'Do we know what time he died, Abraham Lincoln?';
     await window.sendMessage();
-    const explicitLincolnQuery = requestBodies.at(-1).messages.at(-1).content;
-    assert(fetchCalls === beforeExplicitLincoln + 1 && explicitLincolnQuery.includes('Abraham Lincoln')
-        && !explicitLincolnQuery.includes('immediately preceding user question'),
-        'explicit Abraham Lincoln subject must override Joseph Smith context');
+    assert(fetchCalls === beforeExplicitLincoln
+        && renderedMessages.at(-1).text.includes('7:22 a.m.')
+        && !renderedMessages.at(-1).text.includes('5:00 p.m.'),
+        'explicit Abraham Lincoln subject must switch from Joseph Smith to the reviewed zero-Worker answer');
 
     for (const topicQuestion of questionContracts.contracts.ask_topics.values) {
         const topicResult = await window.focusChristStudyAskV3(topicQuestion, '');
