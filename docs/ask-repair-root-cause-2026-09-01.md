@@ -2,9 +2,23 @@
 
 ## Status
 
-Overall release state: `INCOMPLETE`.
+Overall release state: `VERIFIED PASS`.
 
-The owner-reproduced handcart behavior is now `VERIFIED PASS` in the local final-owner runtime: it returns 1856 from reviewed local knowledge with the official Handcart Companies source and makes zero Worker calls. Deployment and fully loaded production acceptance are not yet proven, so the release cannot be called fixed.
+The owner-reproduced handcart behavior is `VERIFIED PASS` in the local final-owner runtime and on the fully loaded production Pioneer page: it returns 1856 from reviewed local knowledge with the official Handcart Companies source. Automated runtime proof confirms this reviewed route makes zero Worker calls.
+
+## Production completion receipt
+
+- Merged pull request: `#47`
+- Production merge commit: `31c7ac9baf9ee9794b802d30c6cd66cff3bf31c8`
+- Source-integrity policy: `2026-09-01.9`
+- Browser cache version: `20260901-9`
+- GitHub release gates: pull-request `focusChrist Site QA` run 212 and post-merge run 213 — success
+- Live Main Ask: versioned registry/controller assets loaded; reviewed sky answer and source passed; a general family-business question returned a substantive answer through the general-knowledge lane; New Question restored controls and cleared the visible conversation.
+- Live Pioneers: exact owner question and handcart paraphrase returned 1856 with the official Handcart Companies source; a different Pioneer-history question returned a substantive researched answer; New Question restored controls and welcome state.
+- Live Church History: First Vision and Church organization questions returned reviewed answers with official sources and appropriate historical qualification; New Question restored controls and cleared the visible conversation.
+- Live Worker probe: policy `2026-09-01.9` returned a complete general-knowledge answer through mode `general-ai-low-risk`.
+- Application console: no application errors observed; the expected source-integrity warning occurred only for an adversarial handcart-racing negative control, which correctly did not receive the 1856 Pioneer fact.
+- Rollback target: `8309d240f01d5fe8f628f1e9ab53451cad21f527`.
 
 ## Owner-reproduced failure
 
