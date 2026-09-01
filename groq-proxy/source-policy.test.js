@@ -4,6 +4,7 @@ import {
   collectSourceEvidence,
   guardVerifiedAnswer,
   hasKnownFalseClaim,
+  isReviewedColorRegression,
   isOfficialChurchSource,
   parseVerifierJson,
   sanitizePayload,
@@ -50,6 +51,8 @@ assert(guardVerifiedAnswer('D&C 76 says red, white, and black lights represent t
   'the known false color claim must remain blocked even with a verification receipt');
 assert(!hasKnownFalseClaim('Doctrine and Covenants 76 does not teach that red, white, and black lights represent three kingdoms.'),
   'a truthful refutation of the false color claim must remain answerable');
+assert(isReviewedColorRegression('Does D&C 76 say red, white, and black lights represent the kingdoms?'),
+  'the reviewed color regression must be recognized before generation');
 
 const verdict = parseVerifierJson('```json\n{"approved":true,"answer":"Supported","source_indexes":[1]}\n```');
 assert(verdict && verdict.approved === true && verdict.source_indexes[0] === 1,

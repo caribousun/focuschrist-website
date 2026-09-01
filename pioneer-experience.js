@@ -190,7 +190,7 @@
                 sources: integrity.ok ? sources : [],
                 pioneerContext: true,
                 sourceIntegrityPassed: integrity.ok && serverVerified,
-                sourceIntegrityStatus: serverVerified ? 'retrieval-researched-and-verified' : String(data.focuschrist_gateway_mode || 'verification-unavailable'),
+                sourceIntegrityStatus: serverVerified ? String(data.focuschrist_gateway_mode || 'retrieval-researched-and-verified') : String(data.focuschrist_gateway_mode || 'verification-unavailable'),
                 sourcePolicyVersion: String(data.focuschrist_source_policy || '')
             };
         } finally {

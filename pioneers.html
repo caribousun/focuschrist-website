@@ -1499,7 +1499,7 @@
                     isMatch = true;
                 }
                 // Partial first name match - "John" matches "John Smith"
-                else if (nameWords.some(nw => nw.startsWith(mainWord) && mainWord.length >= 3)) {
+                else if (queryWords.length === 1 && nameWords.some(nw => nw.startsWith(mainWord) && mainWord.length >= 3)) {
                     isMatch = true;
                 }
                 // Single word query matches any significant part of name

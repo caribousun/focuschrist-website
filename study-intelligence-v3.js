@@ -414,7 +414,7 @@
                     localMatch: groundedLocalReference.found ? groundedLocalReference.key : null,
                     verifiedGrounding: researched.serverVerified,
                     sourceIntegrityPassed: integrity.ok && researched.serverVerified,
-                    sourceIntegrityStatus: researched.serverVerified ? 'retrieval-researched-and-verified' : (researched.gatewayMode || 'verification-unavailable'),
+                    sourceIntegrityStatus: researched.serverVerified ? (researched.gatewayMode || 'retrieval-researched-and-verified') : (researched.gatewayMode || 'verification-unavailable'),
                     sourcePolicyVersion: researched.policyVersion
                 };
             } catch (error) {

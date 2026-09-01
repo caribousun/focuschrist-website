@@ -32,6 +32,7 @@ const KNOWN_FALSE_SOURCE_PATTERNS = [
   /red,?\s+white,?\s+and\s+black\s+lights?\s+(?:represent|symbolize|mean)/i,
   /(?:red|black|golden)\s+light.{0,180}(?:D&C|Doctrine\s+and\s+Covenants)\s+76.{0,100}(?:represent|symbolize|mean|celestial|terrestrial|telestial)/i,
 ];
+const REVIEWED_COLOR_CORRECTION = 'No. Doctrine and Covenants 76:31-34 does not mention red, white, black, or golden lights and does not assign colors to degrees of glory. Those verses discuss people who know God\'s power and then deny it. Doctrine and Covenants 18:15 teaches the joy of helping bring one soul to Jesus Christ; it does not describe colors or degrees of glory.';
 
 function corsHeaders(origin) {
   return {
@@ -162,6 +163,26 @@ function hasKnownFalseClaim(text) {
   return !explicitCorrection;
 }
 
+function isReviewedColorRegression(question) {
+  const value = String(question || '');
+  return /(?:D&C|Doctrine\s+and\s+Covenants)\s*(?:18|76)/i.test(value)
+    && /\b(?:red|white|black|golden|color|colors|light|lights|degrees?\s+of\s+glory)\b/i.test(value);
+}
+
+function reviewedColorPayload() {
+  return {
+    id: 'focuschrist-reviewed-color-correction',
+    choices: [{ index: 0, message: { role: 'assistant', content: REVIEWED_COLOR_CORRECTION }, finish_reason: 'stop' }],
+    focuschrist_sources: [
+      { text: 'Doctrine and Covenants 76:31-34', url: 'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?id=p31-p34&lang=eng' },
+      { text: 'Doctrine and Covenants 18:15', url: 'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?id=p15&lang=eng' },
+    ],
+    focuschrist_source_integrity_verified: true,
+    focuschrist_source_policy: SOURCE_POLICY_VERSION,
+    focuschrist_gateway_mode: 'reviewed-local-correction',
+  };
+}
+
 async function callGroq(apiKey, body, mayRetry = true) {
   const response = await fetch(GROQ_ENDPOINT, {
     method: 'POST',
@@ -229,6 +250,9 @@ export default {
     }
     const sanitized = sanitizePayload(payload || {});
     if (!sanitized.scope.question) return jsonResponse({ error: 'A user message is required' }, 400, origin);
+    if (isReviewedColorRegression(sanitized.scope.question)) {
+      return jsonResponse(reviewedColorPayload(), 200, origin);
+    }
     if (!env || !env.GROQ_KEY_NEW) {
       return jsonResponse(fallbackPayload('research-unavailable'), 200, origin);
     }
@@ -318,6 +342,7 @@ export {
   collectSourceEvidence,
   guardVerifiedAnswer,
   hasKnownFalseClaim,
+  isReviewedColorRegression,
   isOfficialChurchSource,
   parseVerifierJson,
   sanitizePayload,
