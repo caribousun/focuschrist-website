@@ -32,7 +32,7 @@ Final evidence:
 - Feature merge `f58b232ed9386361285fafd44e5fea8390fe1868`.
 - Post-feature Site QA `33474356949`, Worker `33474356964`, and Pages `33474356962`: success.
 - PR `#57` CI run `33475167356`: success.
-- Current production merge `baaa15a24e5b35101bde8a5046b86295310b50bb`.
+- Verified Ask runtime / production-gate merge commit `baaa15a24e5b35101bde8a5046b86295310b50bb`.
 - Post-gate Pages run `33475248240`: success.
 - Post-gate Site QA/live production run `33475248219`: success; output recorded `LIVE PRODUCTION ASK QA PASS`.
 - Independent adversarial verdicts for both releases: `VERIFIED PASS`.

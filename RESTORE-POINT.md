@@ -2,7 +2,7 @@
 
 September 1, 2026 — Final all-page Ask conversation and live-cache release
 
-- Current production commit: `baaa15a24e5b35101bde8a5046b86295310b50bb`
+- Verified Ask runtime / production-gate merge commit: `baaa15a24e5b35101bde8a5046b86295310b50bb`
 - Feature repair merge: `f58b232ed9386361285fafd44e5fea8390fe1868`
 - Source policy: `2026-09-01.15`; cache version: `20260901-15`
 - PR #56 feature CI `33474211249` and PR #57 live-gate CI `33475167356`: success

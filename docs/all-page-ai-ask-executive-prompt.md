@@ -49,7 +49,7 @@ The final release also covers the chained Lincoln follow-up `What time?`, reset 
 Verified production lineage:
 
 - feature repair PR: `#56`; merge commit: `f58b232ed9386361285fafd44e5fea8390fe1868`;
-- permanent production gate PR: `#57`; current production commit: `baaa15a24e5b35101bde8a5046b86295310b50bb`;
+- permanent production gate PR: `#57`; verified Ask runtime / production-gate merge commit: `baaa15a24e5b35101bde8a5046b86295310b50bb`;
 - independently verified feature head: `b7397c87665e9396d22017aaf7ec4e80a2bd4240`;
 - independently verified live-gate head: `d509ed10b8e934cb2f723a55926fdfdf25c63407`;
 - live production gate: 15 recursively discovered assets and 15 canonical cache keys matched the tested release, remained exact through a stability recheck, and passed the critical conversation suite.
@@ -421,7 +421,7 @@ The durable invariant from this incident is:
 
 1. Load Master Brain and current Focus controls.
 2. Reconcile project records with current production evidence.
-3. Mark the current issue `VERIFIED FAIL`.
+3. Reconcile and record the current evidence-bound status. Mark the issue `VERIFIED FAIL` only when the owner reproduces a failure or a required gate directly fails; otherwise preserve the proven status while the new change proceeds through its own gates.
 4. Build the Ask Surface Registry and find the final runtime owner for every route.
 5. Produce the root-cause record, including why prior QA failed.
 6. Define the shared routing and reviewed-knowledge contracts.

@@ -4,12 +4,14 @@
 
 Overall status: `VERIFIED PASS`.
 
+Transaction timestamp: `2026-09-01T05:52:20Z` — live production gate completion.
+
 Transaction type: owner-directed critical repair, release, production verification, and learning closure.
 
 ## Authoritative production identity
 
 - Production URL: https://focuschrist.com
-- Current production commit: `baaa15a24e5b35101bde8a5046b86295310b50bb`
+- Verified Ask runtime / production-gate merge commit: `baaa15a24e5b35101bde8a5046b86295310b50bb`
 - Feature repair merge: `f58b232ed9386361285fafd44e5fea8390fe1868`
 - Source policy: `2026-09-01.15`
 - Browser cache: `20260901-15`
@@ -58,8 +60,8 @@ Non-blocking conservative behavior: uncommon trailing modifiers may route to ext
 - Recovery/bootstrap: `RESTORE-POINT.md` updated to the exact production lineage.
 - Governing controls: permanent post-deploy production gate added to main-push Site QA.
 - Dashboard/tracker: not applicable; GitHub workflow runs are the authoritative execution record.
-- Local learning: final-output ownership, multi-turn sequence contracts, lexical-collision boundaries, and canonical-cache verification retained in `MEMORY.md`.
-- Shared learning: `PROMOTED` to the exact Master Brain original and reread successfully.
+- Local-learning classification: `LOCAL ONLY` — Focus-specific questions, reviewed answers, source URLs, commits, workflow IDs, and volatile deployment facts remain in the Focus child project.
+- Shared-learning disposition: `PROMOTED` — only the reusable final-output ownership, multi-turn sequence, lexical-collision, canonical-cache, stability, and adversarial-release methods were added to the exact Master Brain original and reread successfully.
 - Reread consistency: Focus project records, production identity, policy/cache version, workflow evidence, and Master Brain rule agree.
 - Continuation: no open release blocker. Future Ask changes must execute the executive prompt and pass the permanent production gate.
 
