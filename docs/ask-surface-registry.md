@@ -1,6 +1,6 @@
 # focusChrist Ask Surface Registry
 
-Release candidate: `2026-09-01.10` / cache `20260901-10`
+Release candidate: `2026-09-01.11` / cache `20260901-11`
 
 This registry records the final user-visible owner after all inline, deferred, and dynamically loaded scripts execute. A link to the Ask page is not classified as a separate Ask surface.
 
@@ -18,7 +18,7 @@ This registry records the final user-visible owner after all inline, deferred, a
 | Pioneer Journey/Trail/handcart card | Click, Enter, or Space | Capture-phase controller in `pioneer-experience.js` | Reviewed date/title/description already displayed by the card | Optional verified enhancement | Local card remains visible through timeout, verifier rejection, or provider failure | `tools/hardened_experience_qa.py`; `tools/pioneer_local_first_qa.py` |
 | Pioneer reset | New Question | `pioneer-experience.js` `window.clearChat` | Clears DOM and session conversation | No external call | Cancels the active request and restores the local welcome state | Pioneer QA suites |
 | Church History composer | Form submit, button, or Enter | `church-history-experience.js` `answerQuestion` | Shared reviewed registry | v3 plus official Church History Worker profile | Reviewed facts remain available; remote-only question retains official study routes | `tools/church_history_ask_runtime_qa.js` |
-| Church History suggestions | Suggested question button | `church-history-experience.js` delegates to `answerQuestion` | Shared reviewed registry | Same Church History route | Same as composer | `tools/church_history_ask_runtime_qa.js`; `tools/church_history_qa.py` |
+| Church History suggestions | Ten exact `data-history-question` buttons | `church-history-experience.js` delegates to `answerQuestion` | Shared reviewed registry; all ten exact questions are reviewed contracts | No external call for the visible cards | Every card remains substantive and sourced with the Worker unavailable | `tools/reviewed_ask_knowledge_qa.js`; `tools/church_history_ask_runtime_qa.js`; `tools/church_history_qa.py` |
 | Church History follow-up | Same composer after answer | `church-history-experience.js` with bounded page conversation | Shared registry resolves declared reviewed subject context before matching | Same Church History route only when no reviewed contextual match exists | Reset prevents subject leakage and cancels stale ownership; official routes remain | `tools/church_history_ask_runtime_qa.js` |
 | Church History reset | New Question | `church-history-experience.js` `resetConversation` | Clears page conversation | No external call | Invalidates pending response ownership and restores controls | Church History QA |
 
@@ -26,6 +26,7 @@ This registry records the final user-visible owner after all inline, deferred, a
 
 - `reviewed-ask-knowledge.js` is the only cross-page reviewed fact registry. It contains positive tests, negative tests, page profiles, exact source metadata, reviewer metadata, and integrity keys.
 - `answer-audit.json` pins every reviewed registry entry by SHA-256 and exact authoritative source list.
+- `ask-question-contracts.json` is the machine-readable inventory of exact Ask starters, Ask topics, Pioneer topics, and Church History cards. QA reparses the production HTML and fails on any count, value, owner, or lane drift.
 - The 494-entry legacy Ask database remains quarantined except for its three previously reviewed entries. The Pioneer legacy database remains fully quarantined.
 - `site-common.js` owns the browser source-integrity guard and dynamically loads shared study assets on Ask and Pioneers.
 - `study-intelligence-v3.js` owns broad Ask final submission and supplies the research function used by Church History.
@@ -44,3 +45,5 @@ Before each Ask release, repository search must reconcile this registry against:
 - every versioned loader, Worker route, source-policy version, and cache identifier.
 
 An unregistered user-visible question path is a release blocker.
+
+Current executable control counts are six main Ask starters, 56 main Ask topic controls, 17 Pioneer topic controls, and ten Church History question cards. Final-owner QA executes every exact value; reviewed visible cards additionally require a substantive answer, official sources, and zero Worker calls.

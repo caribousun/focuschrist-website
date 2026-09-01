@@ -103,7 +103,7 @@
     },
     {
       "id": "pioneer-handcart-travel-1856",
-      "entry_sha256": "2f574470336ba479dc5074eb9a0f701885f90a0fb4d5fab69d127204f6f95566",
+      "entry_sha256": "b906904f161f7afce40df4021e4a5a1dc8729abf9834ab34876ec00b9ede5857",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng"
       ]
@@ -117,10 +117,71 @@
     },
     {
       "id": "church-first-vision-1820",
-      "entry_sha256": "6e62b89d115a119e66851f95e64c87aa85219f8c67d5abeeb348f84ce6304049",
+      "entry_sha256": "0262054bd1a01cb49b9607991d9f83792daf7e9bfb20c2a01510696e3f5b8c65",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-jr?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng"
+      ]
+    },
+    {
+      "id": "church-book-of-mormon-translation-seer-stones",
+      "entry_sha256": "e0e261d66b36be447e7f13f611389af568db5582f5395a38bbb91a35f29a63ce",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/book-of-mormon-translation?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/seer-stones?lang=eng"
+      ]
+    },
+    {
+      "id": "church-priesthood-restoration",
+      "entry_sha256": "2972fe5d70d3f4ace7e0f46f77e73ff74629bdb0c2763a1f35c0f96639eea0b9",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-aaronic-priesthood?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-melchizedek-priesthood?lang=eng"
+      ]
+    },
+    {
+      "id": "church-kirtland-safety-society",
+      "entry_sha256": "9de3cb6c18389db231d81c8c32d81ddcb64a6d320254aca7a01a9273482d56ab",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng"
+      ]
+    },
+    {
+      "id": "church-joseph-smith-plural-marriage",
+      "entry_sha256": "fae3d47b2241d08de1334833538dcdf8a33ca2cf1a8892721af86ed8d798d8c1",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-and-plural-marriage?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/plural-marriage-in-the-church-of-jesus-christ-of-latter-day-saints?lang=eng"
+      ]
+    },
+    {
+      "id": "church-mountain-meadows-massacre",
+      "entry_sha256": "9cb81e5fb4a027d71e42d8be0e126d3ce50c482100fd17dc44f934e88674c392",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/mountain-meadows-massacre?lang=eng"
+      ]
+    },
+    {
+      "id": "church-word-of-wisdom-development",
+      "entry_sha256": "550ff8cbc24bf880f57eb75802328b238c90b720bdaa28bafbb284596b8341a5",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/word-of-wisdom-dc-89?lang=eng"
+      ]
+    },
+    {
+      "id": "church-global-growth-twentieth-century",
+      "entry_sha256": "31f6fab8996009f69efc60f309fbb9f4fd042b3e3059ec90bf2e8f3a28e9de87",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/saints-v3?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/saints-v4?lang=eng"
+      ]
+    },
+    {
+      "id": "church-womens-history-study",
+      "entry_sha256": "9a868051d372516a0a176f2a14b471d72c57e406cf75eed01f13d22a2e861e6c",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/church-history/womens-history?lang=eng"
       ]
     },
     {

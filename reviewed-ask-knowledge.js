@@ -9,7 +9,36 @@
 (function () {
     'use strict';
 
-    const POLICY_VERSION = '2026-09-01.10';
+    const POLICY_VERSION = '2026-09-01.11';
+
+    function officialHistorySource(label, url, note) {
+        return {
+            text: label,
+            label: label,
+            url: url,
+            tier: 'Official Church History',
+            note: note
+        };
+    }
+
+    function churchHistoryCard(config) {
+        return {
+            id: config.id,
+            profiles: ['church-history'],
+            priority: 175,
+            reviewedOn: '2026-09-01',
+            integrityKey: config.id + '-v1',
+            match: {
+                exact: [config.question],
+                all: config.all,
+                none: config.none || []
+            },
+            positiveTests: [config.question].concat(config.positive || []),
+            negativeTests: config.negative,
+            answer: config.answer,
+            sources: config.sources
+        };
+    }
 
     const ENTRIES = [
         {
@@ -396,7 +425,12 @@
             integrityKey: 'pioneer-handcart-travel-1856-v1',
             match: {
                 guard: 'lds-handcart',
-                exact: ['Handcart Companies', 'Latter-day Saint Handcart Companies', 'Pioneer Handcart Companies'],
+                exact: [
+                    'Handcart Companies',
+                    'Latter-day Saint Handcart Companies',
+                    'Pioneer Handcart Companies',
+                    'What happened to the Willie and Martin handcart companies?'
+                ],
                 all: [
                     ['handcart', 'handcarts', 'hand cart', 'hand carts'],
                     ['when', 'year', 'date', 'begin', 'began', 'start', 'started', 'introduced', 'use', 'used']
@@ -407,7 +441,8 @@
                 'What year did the handcarts begin?',
                 'When did handcart travel start?',
                 'What year did the handcart companies begin?',
-                'When were hand carts first used by the pioneers?'
+                'When were hand carts first used by the pioneers?',
+                'What happened to the Willie and Martin handcart companies?'
             ],
             negativeTests: [
                 'When did handcart racing begin?',
@@ -468,6 +503,7 @@
             reviewedOn: '2026-09-01',
             integrityKey: 'church-first-vision-1820-v1',
             match: {
+                exact: ['What do the different First Vision accounts say, and how does the Church explain them?'],
                 all: [
                     ['first vision'],
                     ['when', 'year', 'date', 'where', 'place', 'location', 'happen', 'happened', 'occur', 'occurred', 'tell', 'about', 'explain']
@@ -477,13 +513,14 @@
             positiveTests: [
                 'When was the First Vision?',
                 'Where did the First Vision happen?',
-                'Tell me about the First Vision'
+                'Tell me about the First Vision',
+                'What do the different First Vision accounts say, and how does the Church explain them?'
             ],
             negativeTests: [
                 'Who painted the First Vision artwork?',
                 'When was the First Vision movie released?'
             ],
-            answer: "Joseph Smith reported that the First Vision occurred in the spring of 1820, when he prayed in a grove near his family's farm and said that God the Father and Jesus Christ appeared to him.",
+            answer: "Joseph Smith left four firsthand accounts of his First Vision, written or dictated in 1832, 1835, 1838, and 1842; two were published during his lifetime. They consistently describe his youthful religious concern, prayer, a heavenly manifestation, and a divine answer, while differing in length, audience, emphasis, and some details. The Church explains those differences as normal features of recollection and retelling for different purposes, not as four identical transcripts. Its official history invites readers to study the accounts together. Joseph's canonized 1838 account says that in spring 1820, near his family's New York farm, he saw God the Father and Jesus Christ and was told not to join the existing churches.",
             sources: [
                 {
                     text: 'Joseph Smith Jr. - Church History Topics',
@@ -501,6 +538,176 @@
                 }
             ]
         },
+        churchHistoryCard({
+            id: 'church-book-of-mormon-translation-seer-stones',
+            question: 'How does the Church describe the translation of the Book of Mormon and the use of seer stones?',
+            all: [
+                ['book of mormon'],
+                ['translation', 'translate', 'translated', 'translating'],
+                ['seer stone', 'seer stones', 'interpreters', 'urim and thummim']
+            ],
+            positive: [
+                'What role did seer stones have in translating the Book of Mormon?',
+                'How were the interpreters used in the Book of Mormon translation?'
+            ],
+            negative: [
+                'How do I translate a modern book into another language?',
+                'What stones were used to build the Salt Lake Temple?'
+            ],
+            answer: 'The Church teaches that Joseph Smith translated the Book of Mormon by the gift and power of God, not through ordinary knowledge of ancient languages. Most of the present text was dictated to Oliver Cowdery between April and June 1829. Historical accounts describe Joseph using both the interpreters found with the plates and a separate seer stone he already possessed. He sometimes placed an instrument in a hat to exclude light while dictating the words he perceived. Early Saints often used the term Urim and Thummim broadly for these sacred instruments. The Church presents the instruments as part of the historical process while emphasizing that revelation from God, rather than the physical object itself, made the translation possible.',
+            sources: [
+                officialHistorySource('Book of Mormon Translation', 'https://www.churchofjesuschrist.org/study/history/topics/book-of-mormon-translation?lang=eng', 'Official history of the translation process and instruments.'),
+                officialHistorySource('Seer Stones', 'https://www.churchofjesuschrist.org/study/history/topics/seer-stones?lang=eng', 'Official historical explanation of Joseph Smith\'s use of seer stones.')
+            ]
+        }),
+        churchHistoryCard({
+            id: 'church-priesthood-restoration',
+            question: 'What is known about the restoration of the Aaronic and Melchizedek Priesthood?',
+            all: [
+                ['priesthood'],
+                ['restore', 'restored', 'restoration'],
+                ['aaronic', 'melchizedek', 'john the baptist', 'peter james and john', 'joseph smith']
+            ],
+            positive: [
+                'How were the Aaronic and Melchizedek Priesthood restored?',
+                'Who restored priesthood authority to Joseph Smith and Oliver Cowdery?'
+            ],
+            negative: [
+                'What did Melchizedek do in the Old Testament?',
+                'How is priesthood discussed in another modern church?'
+            ],
+            answer: 'Joseph Smith and Oliver Cowdery said that John the Baptist appeared to them near Harmony, Pennsylvania, in May 1829, conferred the Aaronic Priesthood, and authorized them to baptize one another. They also testified that Peter, James, and John later conferred greater apostolic authority associated with the Melchizedek Priesthood. The historical record preserves the Aaronic event with a clear date, while the surviving accounts do not establish one equally certain date for the appearance of Peter, James, and John. Official Church history therefore affirms the restoration of both authorities while acknowledging that terminology, offices, and the Saints\' understanding of priesthood organization developed as further revelation was received.',
+            sources: [
+                officialHistorySource('Restoration of the Aaronic Priesthood', 'https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-aaronic-priesthood?lang=eng', 'Official history of the 1829 Aaronic Priesthood restoration.'),
+                officialHistorySource('Restoration of the Melchizedek Priesthood', 'https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-melchizedek-priesthood?lang=eng', 'Official history and dating qualifications for the Melchizedek Priesthood restoration.')
+            ]
+        }),
+        churchHistoryCard({
+            id: 'church-kirtland-safety-society',
+            question: 'What happened with the Kirtland Safety Society, and why did it fail?',
+            all: [
+                ['kirtland safety society'],
+                ['fail', 'failed', 'failure', 'happened', 'collapse', 'closed', 'crisis']
+            ],
+            positive: [
+                'Why did the Kirtland Safety Society fail?',
+                'What caused the Kirtland Safety Society bank crisis?'
+            ],
+            negative: [
+                'How should a modern workplace safety society operate?',
+                'What happened to a Kirtland, Ohio school society?'
+            ],
+            answer: 'Church leaders and other investors organized the Kirtland Safety Society in late 1836 after rapid growth created a need for local credit. Ohio denied its bank charter, so it opened in January 1837 as a joint-stock association. It failed within the year and ceased operating by August. Official Church history describes several contributing causes: undercapitalization, risky lending and speculation, heavy debts and spending, hostile efforts to undermine confidence, and the broader Panic of 1837, which damaged banks across the United States. Many people lost money, lawsuits followed, and the crisis intensified dissent against Joseph Smith. The Church does not reduce the collapse to persecution alone; it acknowledges financial mistakes alongside the national economic downturn and organized opposition.',
+            sources: [
+                officialHistorySource('Kirtland Safety Society', 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng', 'Official history of the institution, its operation, and causes of failure.')
+            ]
+        }),
+        churchHistoryCard({
+            id: 'church-joseph-smith-plural-marriage',
+            question: 'How does the Church explain Joseph Smith and plural marriage?',
+            all: [
+                ['joseph smith', 'joseph'],
+                ['plural marriage', 'polygamy', 'plural wives']
+            ],
+            none: ['fiction', 'fictional', 'novel', 'movie', 'legal status today'],
+            positive: [
+                'What does the Church say about Joseph Smith and plural marriage?',
+                'Did Joseph Smith practice polygamy?'
+            ],
+            negative: [
+                'What is the legal status of plural marriage today?',
+                'How does a fictional Joseph practice plural marriage in a novel?'
+            ],
+            answer: 'The Church teaches that monogamy is God\'s standing law for marriage unless He commands otherwise. It also teaches that, in the early 1840s, Joseph Smith introduced plural marriage to a limited group of Church members because he believed God had commanded the practice as part of the Restoration. Historical evidence indicates that Joseph was sealed to multiple women, including both eternity-only sealings and marriages understood to include mortal relationships. The practice was difficult, controversial, and generally confidential, so the surviving record is incomplete and some later reminiscences conflict. The Church therefore acknowledges important facts without claiming certainty about every relationship or motive. It does not present plural marriage as necessary for exaltation today, and the Church ended authorization of new plural marriages beginning with the 1890 Manifesto.',
+            sources: [
+                officialHistorySource('Joseph Smith and Plural Marriage', 'https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-and-plural-marriage?lang=eng', 'Official Church History topic describing Joseph Smith\'s plural marriages and the limits of the surviving record.'),
+                officialHistorySource('Plural Marriage in The Church of Jesus Christ of Latter-day Saints', 'https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/plural-marriage-in-the-church-of-jesus-christ-of-latter-day-saints?lang=eng', 'Official Gospel Topics essay on the history and discontinuance of plural marriage.')
+            ]
+        }),
+        churchHistoryCard({
+            id: 'church-mountain-meadows-massacre',
+            question: 'What does the Church teach about the Mountain Meadows Massacre?',
+            all: [
+                ['mountain meadows'],
+                ['massacre', 'teach', 'happened', 'history']
+            ],
+            positive: [
+                'What happened in the Mountain Meadows Massacre?',
+                'Was the Mountain Meadows Massacre ordered by Brigham Young?'
+            ],
+            negative: [
+                'What mountain meadows are best for hiking?',
+                'Summarize a fictional massacre in a mountain movie.'
+            ],
+            answer: 'The Mountain Meadows Massacre was the deliberate killing of about 120 emigrants in southern Utah in September 1857 by members of local Latter-day Saint militia units, aided by some Paiute participants they had recruited. Seventeen small children were spared. The Church condemns the massacre as a terrible and unjustifiable crime. Official historical research places responsibility on local leaders and participants amid wartime fear, rumors, prejudice, and escalating conflict; it finds no evidence that Brigham Young ordered the killings. Young sent instructions not to interfere with emigrant companies, but the messenger arrived after the massacre. Acknowledging those facts does not excuse the perpetrators or erase the suffering of the victims and their descendants.',
+            sources: [
+                officialHistorySource('Mountain Meadows Massacre', 'https://www.churchofjesuschrist.org/study/history/topics/mountain-meadows-massacre?lang=eng', 'Official Church History account of the victims, perpetrators, circumstances, and responsibility.')
+            ]
+        }),
+        churchHistoryCard({
+            id: 'church-word-of-wisdom-development',
+            question: 'How did observance of the Word of Wisdom develop historically?',
+            all: [
+                ['word of wisdom'],
+                ['develop', 'developed', 'historical', 'historically', 'observance', 'observe', 'observed', 'required', 'requirement', 'early saints']
+            ],
+            positive: [
+                'When did the Word of Wisdom become a temple requirement?',
+                'How did early Saints observe the Word of Wisdom?'
+            ],
+            negative: [
+                'What does the biblical phrase word of wisdom mean?',
+                'How can I develop wisdom from historical books?'
+            ],
+            answer: 'Joseph Smith received the Word of Wisdom in 1833 in a setting that included concern about tobacco use in Church meetings. Doctrine and Covenants 89 counseled against wine, strong drink, tobacco, and hot drinks while commending wholesome foods. Early Saints did not all treat complete abstinence as an immediate membership requirement, and observance varied for decades. Church leaders increasingly urged stricter adherence during the nineteenth century. In the early twentieth century, abstinence became a clear institutional standard, and in 1921 it became a requirement for a temple recommend. The modern Church applies the revelation by requiring members to avoid alcoholic drinks, tobacco, coffee, tea, illegal drugs, and other harmful or addictive substances while encouraging health, gratitude, and wise care of the body.',
+            sources: [
+                officialHistorySource('Word of Wisdom (Doctrine and Covenants 89)', 'https://www.churchofjesuschrist.org/study/history/topics/word-of-wisdom-dc-89?lang=eng', 'Official history of the revelation and the development of Church observance.')
+            ]
+        }),
+        churchHistoryCard({
+            id: 'church-global-growth-twentieth-century',
+            question: 'How did the Church become a global church during the twentieth century?',
+            all: [
+                ['church', 'latter day saint', 'latter day saints'],
+                ['global', 'international', 'worldwide'],
+                ['twentieth century', '20th century', '1900s', 'history']
+            ],
+            positive: [
+                'How did Latter-day Saint international growth change the Church in the twentieth century?',
+                'Where can I study the Church becoming worldwide in the 1900s?'
+            ],
+            negative: [
+                'How did global churches grow in the first century?',
+                'How can a modern company become a global business?'
+            ],
+            answer: 'During the twentieth century, the Church changed from a community concentrated in the western United States into an international faith. Missionary work expanded, local congregations and stakes were organized in more nations, scripture and Church materials were translated into additional languages, and temples were built closer to members outside North America. Improvements in travel and communication helped, but global growth also depended on local converts and leaders who built enduring congregations in their own cultures. Church administration gradually placed greater responsibility in regional and local leadership rather than expecting members to gather to Utah. Official global histories emphasize that this was not one uniform American expansion: the Church developed through distinct national histories, political conditions, migrations, conflicts, and acts of faith by members around the world.',
+            sources: [
+                officialHistorySource('Global Histories', 'https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng', 'Official collection of country and regional Latter-day Saint histories.'),
+                officialHistorySource('Saints, Volume 3: Boldly, Nobly, and Independent', 'https://www.churchofjesuschrist.org/study/history/saints-v3?lang=eng', 'Official narrative history covering worldwide Church development from 1893 to 1955.'),
+                officialHistorySource('Saints, Volume 4: Sounded in Every Ear', 'https://www.churchofjesuschrist.org/study/history/saints-v4?lang=eng', 'Official narrative history covering worldwide Church development from 1955 to 2020.')
+            ]
+        }),
+        churchHistoryCard({
+            id: 'church-womens-history-study',
+            question: 'Where can I study women in Latter-day Saint Church history?',
+            all: [
+                ['women', 'womens', "women's"],
+                ['church history', 'latter day saint history', "latter day saint women's history"],
+                ['study', 'learn', 'read', 'source', 'sources', 'where']
+            ],
+            positive: [
+                'Where are official sources about women in Church history?',
+                'How can I study Latter-day Saint women\'s history?'
+            ],
+            negative: [
+                'Where can I study women in ancient Roman history?',
+                'What women\'s studies programs are offered by universities?'
+            ],
+            answer: 'The Church History Library provides an official Women\'s History study collection that gathers biographies, documents, articles, videos, and links to primary-source projects. A strong study path is to begin with that collection, then follow the people and organizations it identifies into the Church History Biographical Database, the Relief Society\'s published history, the First Fifty Years of Relief Society documents, and the Saints narrative history. These sources show women as converts, missionaries, healers, emigrants, temple workers, Relief Society leaders, writers, and builders of local congregations. Because women\'s experiences differed by time and place, studying both institutional histories and women\'s own diaries, minutes, letters, and oral histories gives a fuller account than a single summary can provide.',
+            sources: [
+                officialHistorySource('Women\'s History', 'https://www.churchofjesuschrist.org/study/church-history/womens-history?lang=eng', 'Official Church History study collection devoted to women\'s history.')
+            ]
+        }),
         {
             id: 'church-organization-1830',
             profiles: ['church-history'],
@@ -611,6 +818,74 @@
         return item && item.contextEntryId ? String(item.contextEntryId) : '';
     }
 
+    function historyContextQuestion(item) {
+        return item && item.contextQuestion ? String(item.contextQuestion) : '';
+    }
+
+    const GENERIC_ELLIPSIS = new Set([
+        'what time', 'and what time', 'when exactly', 'what date', 'what year',
+        'where exactly', 'why exactly', 'how exactly', 'who exactly'
+    ]);
+
+    function hasExplicitCompetingSubject(original, priorEntry, antecedent) {
+        const priorText = normalize((priorEntry && priorEntry.followup && priorEntry.followup.anchor) || '')
+            + ' ' + normalize(antecedent);
+        const namedPhrases = String(original || '').match(/\b[A-Z][a-z]+(?:\s+(?:[A-Z][a-z]+|[A-Z]\.)){1,3}\b/g) || [];
+        const competingName = namedPhrases.some(function (phrase) {
+            const normalizedPhrase = normalize(phrase);
+            if (!normalizedPhrase || (' ' + priorText + ' ').includes(' ' + normalizedPhrase + ' ')) return false;
+
+            // Capitalization alone cannot establish a competing person: Church-history
+            // questions frequently contain multiword places and titles such as Carthage
+            // Jail or Kirtland Safety Society. Require person-like grammatical placement
+            // and reject common non-person terminal nouns.
+            const words = normalizedPhrase.split(' ');
+            const terminal = words[words.length - 1];
+            if (['jail', 'temple', 'church', 'society', 'company', 'companies', 'valley', 'lake',
+                'river', 'mountain', 'meadows', 'priesthood', 'vision', 'history', 'translation',
+                'massacre', 'university', 'school', 'book', 'testament'].includes(terminal)) return false;
+
+            const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const raw = String(original || '');
+            const appositive = new RegExp('[,\\u2013\\u2014-]\\s*' + escaped + '\\s*[?.!]*$', 'i').test(raw);
+            const grammaticalSubject = new RegExp('\\b(?:did|does|do|was|is|were|are|has|had|can|could|would|will)\\s+'
+                + escaped + '\\s+\\w+', 'i').test(raw);
+            const explicitPersonTopic = new RegExp('\\b(?:about|who is|who was|tell me about)\\s+' + escaped + '\\b', 'i').test(raw);
+            return appositive || grammaticalSubject || explicitPersonTopic;
+        });
+        if (competingName) return true;
+
+        const blockedTerms = []
+            .concat(priorEntry && priorEntry.match && priorEntry.match.none || [])
+            .concat(priorEntry && priorEntry.followup && priorEntry.followup.block || []);
+        const normalizedOriginal = normalize(original);
+        const tokenSet = new Set(normalizedOriginal.split(' ').filter(Boolean));
+        return blockedTerms.some(function (term) {
+            const normalizedTerm = normalize(term);
+            return hasTerm(normalizedOriginal, tokenSet, term)
+                && !(' ' + priorText + ' ').includes(' ' + normalizedTerm + ' ');
+        });
+    }
+
+    function genericFollowupResolution(original, normalizedQuery, referential, antecedent) {
+        const genericEllipsis = GENERIC_ELLIPSIS.has(normalizedQuery);
+        if (!referential && !genericEllipsis) {
+            return { query: original, resolved: false, entryId: null, contextLabel: '' };
+        }
+        return {
+            query: [
+                original,
+                'The immediately preceding user question was: "' + antecedent + '".',
+                'Resolve pronouns and omitted subjects only from that immediately preceding question.'
+            ].join('\n\n'),
+            resolved: true,
+            entryId: null,
+            contextLabel: antecedent,
+            contextQuestion: antecedent,
+            genericContext: true
+        };
+    }
+
     function resolveFollowup(question, options) {
         const profile = String(options && options.profile || 'ask');
         const original = String(question || '').trim();
@@ -630,10 +905,12 @@
         const history = Array.isArray(options && options.history) ? options.history : [];
         let priorQuestion = '';
         let priorContextEntryId = '';
+        let priorContextQuestion = '';
         for (let index = history.length - 1; index >= 0; index -= 1) {
             priorQuestion = historyQuestion(history[index]);
             if (priorQuestion) {
                 priorContextEntryId = historyContextEntryId(history[index]);
+                priorContextQuestion = historyContextQuestion(history[index]);
                 break;
             }
         }
@@ -646,7 +923,14 @@
             : ENTRIES
                 .filter(function (entry) { return entry.followup && entryMatches(entry, priorQuestion, profile); })
                 .sort(function (left, right) { return right.priority - left.priority; })[0];
-        if (!priorEntry) return { query: original, resolved: false, entryId: null, contextLabel: '' };
+        const antecedent = priorContextQuestion || priorQuestion;
+        if (!priorEntry) {
+            return genericFollowupResolution(original, normalizedQuery, referential, antecedent);
+        }
+
+        if (hasExplicitCompetingSubject(original, priorEntry, antecedent)) {
+            return { query: original, resolved: false, entryId: null, contextLabel: '' };
+        }
 
         const permittedEllipsis = elliptical && (priorEntry.followup.ellipsis || []).some(function (candidate) {
             return normalize(candidate) === normalizedQuery;
@@ -660,17 +944,21 @@
         const isBlocked = (priorEntry.followup.block || []).some(function (term) {
             return hasTerm(normalizedQuery, tokenSet, term);
         });
-        if (!hasCue || isBlocked) return { query: original, resolved: false, entryId: null, contextLabel: '' };
+        if (!hasCue || isBlocked) {
+            return genericFollowupResolution(original, normalizedQuery, referential, antecedent);
+        }
 
         const resolvedQuery = (original + ' ' + priorEntry.followup.anchor).trim();
         if (!entryMatches(priorEntry, resolvedQuery, profile)) {
-            return { query: original, resolved: false, entryId: null, contextLabel: '' };
+            return genericFollowupResolution(original, normalizedQuery, referential, antecedent);
         }
         return {
             query: resolvedQuery,
             resolved: true,
             entryId: priorEntry.id,
-            contextLabel: priorEntry.contextLabel || priorEntry.id
+            contextLabel: priorEntry.contextLabel || priorEntry.id,
+            contextQuestion: antecedent,
+            genericContext: false
         };
     }
 

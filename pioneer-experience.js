@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.10';
+    const PIONEER_POLICY_VERSION = '2026-09-01.11';
     let pioneerRequestSerial = 0;
 
     const PIONEER_PAGE_CONTEXT = [
@@ -27,17 +27,27 @@
     function sendButton() { return document.getElementById('sendBtn'); }
     function composerLabel() { return document.getElementById('pioneerComposerLabel'); }
 
-    function reviewedPioneerKnowledge(question) {
+    function resolvePioneerContext(question) {
+        const registry = window.focusChristReviewedKnowledge;
+        if (!registry || typeof registry.resolveFollowup !== 'function') {
+            return { query: question, resolved: false, entryId: null, contextQuestion: null };
+        }
+        return registry.resolveFollowup(question, { profile: 'pioneers', history: recentHistory() });
+    }
+
+    function reviewedPioneerKnowledge(question, suppliedResolution) {
         const registry = window.focusChristReviewedKnowledge;
         if (!registry || typeof registry.match !== 'function') return null;
-        const resolution = typeof registry.resolveFollowup === 'function'
+        const resolution = suppliedResolution || (typeof registry.resolveFollowup === 'function'
             ? registry.resolveFollowup(question, { profile: 'pioneers', history: recentHistory() })
-            : { query: question, resolved: false, entryId: null };
+            : { query: question, resolved: false, entryId: null });
+        if (resolution.genericContext === true) return null;
         const reviewed = registry.match(resolution.query, { profile: 'pioneers' });
         if (!reviewed) return null;
         return Object.assign({}, reviewed, {
             contextResolved: resolution.resolved === true,
-            contextEntryId: resolution.entryId || null
+            contextEntryId: resolution.entryId || null,
+            contextQuestion: resolution.contextQuestion || null
         });
     }
 
@@ -121,7 +131,10 @@
     function rememberExchange(question, answer, contextReceipt) {
         if (typeof conversationHistory === 'undefined' || !Array.isArray(conversationHistory)) return;
         const userTurn = { role: 'user', content: question };
-        if (contextReceipt && contextReceipt.contextEntryId) userTurn.contextEntryId = contextReceipt.contextEntryId;
+        if (contextReceipt && (contextReceipt.contextEntryId || contextReceipt.entryId)) {
+            userTurn.contextEntryId = contextReceipt.contextEntryId || contextReceipt.entryId;
+        }
+        if (contextReceipt && contextReceipt.contextQuestion) userTurn.contextQuestion = contextReceipt.contextQuestion;
         conversationHistory.push(userTurn);
         conversationHistory.push({ role: 'assistant', content: String(answer || '') });
         while (conversationHistory.length > 20) conversationHistory.shift();
@@ -627,7 +640,8 @@
                 return;
             }
 
-            const reviewed = reviewedPioneerKnowledge(question);
+            const contextResolution = resolvePioneerContext(question);
+            const reviewed = reviewedPioneerKnowledge(question, contextResolution);
             if (reviewed) {
                 const answer = window.addMessage(reviewed.answer, false, reviewed.sources || []);
                 rememberExchange(question, reviewed.answer, reviewed);
@@ -659,10 +673,10 @@
                 }
             }
 
-            const response = await requestPioneerAI(question, pageReference);
+            const response = await requestPioneerAI(contextResolution.query || question, pageReference);
             if (requestId !== pioneerRequestSerial) return;
             if (loading && loading.isConnected) loading.remove();
-            rememberExchange(question, response.answer);
+            rememberExchange(question, response.answer, contextResolution);
             const answer = window.addMessage(response.answer, false, response.sources || []);
             setConversationMode(true);
             positionAnswer(answer);

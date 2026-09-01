@@ -34,13 +34,15 @@ Repair stale project records in the same run. Never use an older statement of su
 
 The all-page AI Ask issue is **VERIFIED FAIL**.
 
-The owner reproduced failures on the main Ask and Pioneer pages:
+The owner reproduced failures on the main Ask, Pioneer, and Church History pages:
 
 > Do we know the time he died
 
 > Handcart Companies
 
 > Who is Jesus Christ, and why is He central to Latter-day Saint belief?
+
+> How does the Church explain Joseph Smith and plural marriage?
 
 The system discarded the Joseph Smith subject before local matching, failed to recognize visible topic/card prompts as reviewed inputs, and allowed source-integrity fallback language to replace useful answers. Therefore:
 
@@ -144,6 +146,21 @@ The inventory must include at least:
 
 Search for duplicate handlers, late global overrides, inline legacy databases, multiple versions of the same runtime, page-global function replacement, mismatched cache versions, and code paths that bypass source policy.
 
+### Mandatory executable question discovery
+
+Do not rely on a hand-written sample list. Before implementation and again before release, derive the question contract from the current repository and fail on any unaccounted route.
+
+1. Parse every production HTML page for question-bearing attributes and controls, including `data-question`, `data-ask-starter`, `data-ask-topic`, `data-history-question`, `data-topic`, `data-focus-expand`, form submit values, button text transformed into a question, links that open Ask, and inline click handlers.
+2. Search JavaScript for all submission and rendering owners, including `sendMessage`, `askAI`, `focusChristStudyAskV3`, `focusChristHistoryAsk`, `askTopic`, `requestPioneerAI`, reviewed-knowledge matchers, `addMessage`, deferred script loaders, and assignments that replace page-global functions.
+3. Produce a machine-readable manifest containing the exact submitted text, source file and control, page profile, final runtime owner, expected answer lane, test owner, and minimum acceptance assertion.
+4. Compare the manifest with the reviewed registry and declared external-source routes. A visible prompt with no tested answer contract is an orphan and fails the release.
+5. Assert count equality between discovered controls and tested controls. Adding, renaming, or removing a visible card must cause QA to fail until its contract and test are deliberately updated.
+6. Invoke the final controller for every discovered exact string, then exercise the real DOM control after all production scripts load. A source-file string match, a direct helper call, or a visibly correct label is not sufficient proof.
+7. Run the discovered controls under normal, Worker-disabled, verifier-rejected, timeout, empty-response, and stale-response conditions as appropriate to their declared lane.
+8. Reject blank answers and known generic non-answer patterns, including “I cannot verify the specific source claim,” “Please confirm the subject,” “I could not complete that general answer,” and equivalent language when the question has a supported reviewed or authoritative route.
+9. Enforce answer substance: direct answer first; ordinary fact plus useful context; nuanced questions normally at least 70 words unless the reviewed contract explicitly justifies a shorter response; visible supporting sources for Church/history claims.
+10. Retain the manifest and per-control results as release evidence. Never ask the owner to act as the discovery system.
+
 ## Root-cause requirement
 
 Do not begin with a patch. First produce an evidence-backed root-cause record that answers:
@@ -224,9 +241,12 @@ When no reviewed local answer exists:
 ### 6. Conversation and request safety
 
 - Preserve bounded context for real follow-up questions.
-- Resolve pronouns and only explicitly permitted short elliptical follow-ups against reviewed conversation context before profile classification, local matching, or source-lane selection. A short question that introduces a named subject must never inherit a different prior identity.
+- Resolve pronouns and bounded short elliptical follow-ups before profile classification, local matching, retrieval, or source-lane selection. Reviewed subjects use declared anchors and cues; unreviewed subjects must make the immediately preceding user question explicit to research. A short question that introduces a named subject must never inherit a different prior identity.
 - A resolved follow-up must retain the visitor's original wording in history and expose an inspectable context-resolution receipt.
 - Persist that receipt with the user turn so chained follow-ups remain bound. Inheritance may consider only the most recent prior user turn; it must never skip backward past an intervening subject.
+- A generic context receipt must retain the root subject question through multiple follow-ups; repeating only the latest pronoun-based wording is not sufficient.
+- Resolve a generic follow-up into an explicit research query, but do not rematch the augmented query against the prior reviewed answer. The original wording already had its local-match opportunity; the contextual query is for classification and research, not for accidentally replaying the antecedent answer.
+- A named competing person in the current question overrides inherited context. Do not infer a competing person merely from a multiword place or title such as `Carthage Jail`.
 - Reset must clear both visible and hidden conversation state.
 - Abort or ignore stale requests after reset, navigation, selection change, or a newer submission.
 - Prevent duplicate requests from repeated clicks or Enter presses.
@@ -266,6 +286,9 @@ At minimum, retain these named specimens.
 - `What makes a family business successful?` — useful general answer using the general lane.
 - `What year was Joseph Smith killed?` — supported answer identifying June 27, 1844, with official Church history evidence.
 - after the Joseph Smith date question, `Do we know the time he died` — resolve Joseph Smith before routing and answer about or shortly after 5:00 p.m.; after reset, the same wording must not inherit Joseph Smith.
+- after changing the subject to `What date did Abraham Lincoln die?`, both `Do we know the time he died?` and chained `What time?` — resolve Lincoln for general research, never Joseph Smith and never a generic completion failure.
+- after the Joseph Smith date question, `How old was he?`, `Why was he in Carthage Jail?`, `Who was with him?`, and `Where did he live?` — use Joseph Smith as immediate research context without replaying the reviewed death answer.
+- after Joseph Smith context, `When did he die—Abraham Lincoln?` and `Do we know what time he died, Abraham Lincoln?` — treat Abraham Lincoln as the explicit current subject and never return Joseph Smith's answer.
 - `What year was Joseph Stalin killed?` — must not be captured by the Joseph Smith intent.
 - a supported scripture/doctrine question — official Church evidence.
 - a fabricated or miscited scripture claim — blocked or corrected with evidence.
@@ -289,7 +312,17 @@ At minimum, retain these named specimens.
 
 ### Church History specimens
 
-- at least three obvious facts already reviewed on the page, including a person, event/date, and place — immediate local answer when the page owns the answer.
+- extract and test every exact `data-history-question` value from `church-history.html`; the discovered count and tested count must be equal.
+- `What do the different First Vision accounts say, and how does the Church explain them?` — substantive reviewed answer with official sources and zero Worker requests.
+- `How does the Church describe the translation of the Book of Mormon and the use of seer stones?` — substantive reviewed answer with official sources and zero Worker requests.
+- `What is known about the restoration of the Aaronic and Melchizedek Priesthood?` — substantive reviewed answer with official sources and zero Worker requests.
+- `What happened with the Kirtland Safety Society, and why did it fail?` — substantive reviewed answer with official sources and zero Worker requests.
+- `How does the Church explain Joseph Smith and plural marriage?` — substantive reviewed answer with official sources and zero Worker requests; never the generic verification refusal.
+- `What does the Church teach about the Mountain Meadows Massacre?` — substantive reviewed answer with official sources and zero Worker requests.
+- `What happened to the Willie and Martin handcart companies?` — substantive reviewed answer with official sources and zero Worker requests.
+- `How did observance of the Word of Wisdom develop historically?` — substantive reviewed answer with official sources and zero Worker requests.
+- `How did the Church become a global church during the twentieth century?` — substantive reviewed answer with official sources and zero Worker requests.
+- `Where can I study women in Latter-day Saint Church history?` — substantive reviewed answer and official study routes with zero Worker requests.
 - a question requiring external Church history research — official Church sources.
 - a biblical or general term sharing a historical keyword — correct intent separation.
 - a follow-up, reset, ambiguity case, and provider-unavailable case.

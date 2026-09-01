@@ -3,8 +3,8 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-POLICY = "2026-09-01.10"
-CACHE = "20260901-10"
+POLICY = "2026-09-01.11"
+CACHE = "20260901-11"
 
 
 def block(text: str, start: str, end: str) -> str:
@@ -44,9 +44,12 @@ def main() -> int:
             errors.append("card disclosure still installs a refusal after AI failure")
 
     send_flow = block(experience, "window.sendMessage = async function", "window.askTellMyStory")
-    if send_flow.find("searchTellMyStory(question)") > send_flow.find("requestPioneerAI(question"):
+    contextual_request = "requestPioneerAI(contextResolution.query || question, pageReference)"
+    if send_flow.find("searchTellMyStory(question)") > send_flow.find(contextual_request):
         errors.append("free-form questions call AI before checking the local book")
-    if "const response = await requestPioneerAI(question, pageReference)" not in send_flow:
+    if "const contextResolution = resolvePioneerContext(question)" not in send_flow:
+        errors.append("free-form Pioneer questions do not resolve immediate conversation context")
+    if "const response = await " + contextual_request not in send_flow:
         errors.append("true local no-matches no longer reach the AI queue")
 
     required_markers = (

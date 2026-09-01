@@ -49,6 +49,7 @@ vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { file
 
 let fetchCalls = 0;
 let delayedResponse = null;
+const requestBodies = [];
 function verifiedResponse() {
     return {
         ok: true,
@@ -58,7 +59,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official Church History', url: 'https://www.churchofjesuschrist.org/study/church-history' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.10'
+                focuschrist_source_policy: '2026-09-01.11'
             };
         }
     };
@@ -66,6 +67,7 @@ function verifiedResponse() {
 global.fetch = async (_url, options) => {
     fetchCalls += 1;
     const body = JSON.parse(options.body);
+    requestBodies.push(body);
     if (body.messages.some((message) => String(message.content || '').includes('FAIL DISCLOSURE'))) {
         throw new Error('simulated disclosure provider failure');
     }
@@ -152,6 +154,16 @@ function assert(condition, message) {
     assert(fetchCalls === 3, 'handcart racing negative control must use research rather than the Pioneer local fact');
     assert(messages[1].text === 'VERIFIED REMOTE PIONEER ANSWER', 'negative control must render the researched answer');
 
+    conversationHistory.length = 0;
+    input.value = 'When did the Oregon Trail migration begin?';
+    await window.sendMessage();
+    input.value = 'What year did it begin?';
+    await window.sendMessage();
+    const pioneerFollowupQuery = requestBodies.at(-1).messages.at(-1).content;
+    assert(pioneerFollowupQuery.includes('What year did it begin?')
+        && pioneerFollowupQuery.includes('When did the Oregon Trail migration begin?'),
+        'Pioneer remote follow-up must explicitly resolve the immediately preceding subject');
+
     const beforeDelayed = messages.length;
     input.value = 'Tell me a delayed pioneer detail';
     const pending = window.sendMessage();
@@ -179,6 +191,28 @@ function assert(condition, message) {
         'a selected-person fallback resolved after reset must not render');
     assert(conversationHistory.length === 0,
         'a stale selected-person fallback must not repopulate reset conversation state');
+
+    const beforeGenericJoseph = fetchCalls;
+    input.value = 'What date did Joseph Smith die?';
+    await window.sendMessage();
+    input.value = 'How old was he?';
+    await window.sendMessage();
+    assert(fetchCalls === beforeGenericJoseph + 1 && messages.at(-1).text === 'VERIFIED REMOTE PIONEER ANSWER',
+        'Pioneer generic follow-up must research instead of replaying the reviewed Joseph death answer');
+    assert(requestBodies.at(-1).messages.at(-1).content.includes('How old was he?')
+        && requestBodies.at(-1).messages.at(-1).content.includes('What date did Joseph Smith die?'),
+        'Pioneer generic follow-up must send its immediate Joseph context to research');
+
+    const questionContracts = JSON.parse(fs.readFileSync('ask-question-contracts.json', 'utf8'));
+    for (const topicQuestion of questionContracts.contracts.pioneer_topics.values) {
+        window.clearChat();
+        messages.length = 0;
+        await window.askTopic(topicQuestion);
+        assert(messages.length === 2 && String(messages[1].text || '').trim(),
+            'visible Pioneer topic did not complete through its final runtime owner: ' + topicQuestion);
+        assert(!/cannot verify the specific source claim|please confirm the subject|could not complete/i.test(messages[1].text),
+            'visible Pioneer topic returned a known generic non-answer: ' + topicQuestion);
+    }
 
     console.log('Pioneer Ask final-owner runtime QA PASS: local handcart answer made zero Worker requests; negative and stale-response controls passed');
 })().catch((error) => { console.error(error); process.exit(1); });
