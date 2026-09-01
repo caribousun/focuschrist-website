@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.4';
+    const PIONEER_POLICY_VERSION = '2026-09-01.5';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -473,6 +473,17 @@
         container.appendChild(collapse);
     }
 
+    function reviewedLocalDisclosure(control, kind, mappedTopic) {
+        const date = control.querySelector('.timeline-date, .map-date');
+        const desc = control.querySelector('.timeline-desc, .map-content p');
+        const parts = [
+            'Reviewed ' + String(kind || 'pioneer history').toLowerCase() + ' summary: ' + String(mappedTopic || '').trim(),
+            date && date.textContent.trim() ? date.textContent.trim() : '',
+            desc && desc.textContent.trim() ? desc.textContent.trim() : ''
+        ].filter(Boolean);
+        return parts.join('\n\n');
+    }
+
     async function runDisclosure(control, mappedTopic, kind) {
         const aiResponse = control ? control.querySelector('.ai-response') : null;
         if (!control || !aiResponse) return;
@@ -495,20 +506,25 @@
         }
 
         aiResponse.style.display = 'block';
-        if (aiResponse.dataset.focuschristLoaded === 'true') return;
-        aiResponse.innerHTML = '';
-        const loading = showLoading(aiResponse);
+        const localAnswer = reviewedLocalDisclosure(control, kind, mappedTopic);
+        renderDisclosureAnswer(aiResponse, localAnswer);
+        aiResponse.dataset.focuschristLoaded = 'local-reviewed-card';
+        control.setAttribute('data-focuschrist-disclosure-mode', 'reviewed-local-card');
+        if (aiResponse.dataset.focuschristResearchStarted === 'true') return;
+        aiResponse.dataset.focuschristResearchStarted = 'true';
         try {
             const pageReference = controlPageReference(control, kind, mappedTopic);
             const query = 'Latter-day Saint pioneer history - ' + kind + ': ' + mappedTopic;
             const result = await requestPioneerAI(query, pageReference);
-            if (loading && loading.isConnected) loading.remove();
-            renderDisclosureAnswer(aiResponse, result.answer);
-            aiResponse.dataset.focuschristLoaded = 'true';
+            if (result && result.sourceIntegrityPassed && result.answer) {
+                renderDisclosureAnswer(aiResponse, result.answer);
+                aiResponse.dataset.focuschristLoaded = 'verified-research';
+                control.setAttribute('data-focuschrist-disclosure-mode', 'verified-research');
+            }
         } catch (error) {
             console.error('Pioneer disclosure error:', error);
-            if (loading && loading.isConnected) loading.remove();
-            renderDisclosureAnswer(aiResponse, 'I could not complete this pioneer-history answer just now. Please try again or use the verified study resources on this page.');
+            // The reviewed local card remains visible; a provider or verifier
+            // failure must never replace it with a refusal or empty panel.
         }
     }
 

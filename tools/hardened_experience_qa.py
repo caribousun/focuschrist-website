@@ -50,8 +50,8 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260901-4",
-        "study-intelligence-v3.js?v=20260901-4",
+        "study-journey.js?v=20260901-5",
+        "study-intelligence-v3.js?v=20260901-5",
         "window.focusChristSourceIntegrity",
         "unreviewed-source-dependent-generation",
         "data-focuschrist-study-intelligence-v3",
@@ -98,7 +98,7 @@ def main() -> int:
     ), errors)
 
     require(pioneer, "pioneer-experience.js", (
-        "PIONEER_POLICY_VERSION = '2026-09-01.4'",
+        "PIONEER_POLICY_VERSION = '2026-09-01.5'",
         "function ownDisclosureEvent(event)",
         "event.stopImmediatePropagation()",
         "function installDisclosureOwnership()",
@@ -112,6 +112,9 @@ def main() -> int:
         "reviewed-local-book-entry",
         "if (localAnswer) return",
         "requestIdleCallback",
+        "reviewedLocalDisclosure",
+        "local-reviewed-card",
+        "failure must never replace it with a refusal or empty panel",
     ), errors)
 
     require(pioneer_page, "pioneers.html", (
@@ -126,6 +129,18 @@ def main() -> int:
     ai_position = selected_flow.find("requestPioneerAI")
     if local_position < 0 or ai_position < 0 or local_position > ai_position:
         errors.append("selected pioneer flow must render a local book entry before any AI request")
+
+    disclosure_start = pioneer.find("async function runDisclosure")
+    disclosure_end = pioneer.find("function disclosureTopic", disclosure_start)
+    disclosure_flow = pioneer[disclosure_start:disclosure_end]
+    disclosure_local = disclosure_flow.find("renderDisclosureAnswer(aiResponse, localAnswer)")
+    disclosure_ai = disclosure_flow.find("requestPioneerAI")
+    if disclosure_local < 0 or disclosure_ai < 0 or disclosure_local > disclosure_ai:
+        errors.append("timeline/trail disclosures must render reviewed local card content before optional AI research")
+    if "showLoading(" in disclosure_flow:
+        errors.append("timeline/trail disclosures must not show a provider-dependent spinner")
+    if "result.sourceIntegrityPassed" not in disclosure_flow:
+        errors.append("timeline/trail disclosures must not replace local content with unverified AI output")
 
     smith_start = pioneer_book.find("ELIZABETH SMITH")
     smith_page_two = pioneer_book.find("(Elizabeth Smith - Page 2)", smith_start)
@@ -144,7 +159,7 @@ def main() -> int:
         "requestAnimationFrame",
         "window.addEventListener('load'",
         "loadVerifiedSourceRouter",
-        "study-source-router.js?v=20260901-4",
+        "study-source-router.js?v=20260901-5",
         "loadArtStudyRouter",
         "art-study-router.js?v=20260830-3",
         "loadWatchStudyEnrichment",
@@ -166,7 +181,7 @@ def main() -> int:
         "data-focuschrist-source-paths",
         "Official Church search",
         "BYU educational",
-        "study-intelligence-v3.js?v=20260901-4",
+        "study-intelligence-v3.js?v=20260901-5",
         "document.readyState === 'loading'",
         "data-focuschrist-source-router-ready",
         "oliver cowdery",
