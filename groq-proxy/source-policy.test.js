@@ -15,6 +15,7 @@ import worker, {
   isTellMyStorySource,
   needsIdentityClarification,
   parseVerifierJson,
+  providerDiagnostic,
   requiresExternalGeneralResearch,
   sanitizePayload,
 } from './src/index.js';
@@ -210,6 +211,31 @@ assert(isJsonValidationFailure({
 }), 'the gateway must recognize a retryable verifier JSON-format failure');
 assert(!isJsonValidationFailure({ response: { status: 401 }, data: { error: { code: 'invalid_api_key' } } }),
   'the gateway must not retry unrelated provider errors as JSON failures');
+const privateDiagnostic = providerDiagnostic({
+  response: { status: 400 },
+  data: { error: {
+    code: 'Authorization Bearer sk-live-EXPOSEDKEY',
+    message: 'Prompt echoed DRAFT: PRIVATE_DRAFT; chain reasoning: hidden',
+  } },
+});
+assert(privateDiagnostic.focuschrist_provider_status === 400
+  && privateDiagnostic.focuschrist_provider_code === 'provider_error'
+  && !JSON.stringify(privateDiagnostic).includes('EXPOSEDKEY')
+  && !JSON.stringify(privateDiagnostic).includes('PRIVATE_DRAFT')
+  && !JSON.stringify(privateDiagnostic).includes('reasoning'),
+  'public provider diagnostics must never expose messages, prompts, drafts, credentials, or reasoning');
+for (const sensitiveCode of ['sk-live-EXPOSEDKEY', 'PRIVATE_DRAFT', 'internal_reasoning']) {
+  const sensitiveDiagnostic = providerDiagnostic({
+    response: { status: 400 }, data: { error: { code: sensitiveCode } },
+  });
+  assert(sensitiveDiagnostic.focuschrist_provider_code === 'provider_error'
+    && !JSON.stringify(sensitiveDiagnostic).includes(sensitiveCode),
+    'unknown provider codes must not bypass the finite public-code allowlist: ' + sensitiveCode);
+}
+assert(providerDiagnostic({
+  response: { status: 429 }, data: { error: { code: 'rate_limit_exceeded' } },
+}).focuschrist_provider_code === 'rate_limit_exceeded',
+'the finite allowlist must preserve the known public rate-limit code');
 
 const originalFetch = globalThis.fetch;
 const gatewayBodies = [];
@@ -311,6 +337,34 @@ try {
     && limitedPayload.choices[0].message.content === expandedLowRiskAnswer
     && limitedPayload.focuschrist_answer_word_count >= 45,
     'stable general knowledge must remain substantive when the research model is rate-limited');
+} finally {
+  globalThis.fetch = originalFetch;
+}
+
+let noEvidenceCalls = 0;
+globalThis.fetch = async () => {
+  noEvidenceCalls += 1;
+  const payload = noEvidenceCalls === 1
+    ? { choices: [{ message: { content: 'A draft without returned source evidence.' } }] }
+    : { choices: [{ message: { content: JSON.stringify({ approved: false, answer: '' }) } }] };
+  return new Response(JSON.stringify(payload), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+try {
+  const noEvidenceResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'general-knowledge',
+      messages: [{ role: 'user', content: 'When did an obscure historical event happen?' }],
+    }),
+  }), { GROQ_KEY_NEW: 'test-key' });
+  const noEvidencePayload = await noEvidenceResponse.json();
+  assert(noEvidencePayload.focuschrist_gateway_mode === 'research-insufficient-evidence'
+    && noEvidencePayload.focuschrist_low_risk_stage === 'initial-verdict-rejected'
+    && noEvidencePayload.focuschrist_low_risk_initial_approved === false
+    && noEvidencePayload.focuschrist_low_risk_initial_words === 0,
+    'insufficient-evidence fallbacks must retain the safe low-risk stage and numeric receipt');
 } finally {
   globalThis.fetch = originalFetch;
 }
