@@ -968,9 +968,9 @@
         // A competing person may be written in any case. Only accept lowercase
         // phrases in person-like grammatical positions so ordinary place and topic
         // words do not become identity switches.
-        addAnchoredCandidates(/[,\u2013\u2014-]\s*([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){1,3})\s*[?.!]*$/gi);
-        addAnchoredCandidates(/\b(?:about|who is|who was|tell me about)\s+([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){1,3})\s*[?.!]*$/gi);
-        addAnchoredCandidates(/\b(?:did|does|do|was|is|were|are|has|had|can|could|would|will)\s+([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){1,3})\s+(?:die|died|say|said|teach|taught|write|wrote|live|lived|serve|served|become|became|kill|killed)\b/gi);
+        addAnchoredCandidates(/[,\u2013\u2014-]\s*([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){0,3})\s*[?.!]*$/gi);
+        addAnchoredCandidates(/\b(?:about|who is|who was|tell me about)\s+([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){0,3})\s*[?.!]*$/gi);
+        addAnchoredCandidates(/\b(?:did|does|do|was|is|were|are|has|had|can|could|would|will)\s+([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){0,3})\s+(?:die|died|say|said|teach|taught|write|wrote|live|lived|serve|served|become|became|kill|killed)\b/gi);
 
         const competingName = candidates.some(function (candidate) {
             const phrase = candidate.phrase;
@@ -981,7 +981,8 @@
             const first = words[0];
             const terminal = words[words.length - 1];
             if (['with', 'in', 'at', 'on', 'from', 'to', 'for', 'of', 'by', 'he', 'him', 'his',
-                'she', 'her', 'they', 'them', 'their', 'it', 'its', 'the', 'a', 'an', 'this', 'that'].includes(first)) return false;
+                'she', 'her', 'they', 'them', 'their', 'it', 'its', 'the', 'a', 'an', 'this', 'that',
+                'exactly', 'then', 'there', 'today', 'yesterday', 'now', 'please', 'too', 'also'].includes(first)) return false;
             if (['jail', 'temple', 'church', 'society', 'company', 'companies', 'valley', 'lake',
                 'river', 'mountain', 'meadows', 'priesthood', 'vision', 'history', 'translation',
                 'massacre', 'university', 'school', 'book', 'testament'].includes(terminal)) return false;

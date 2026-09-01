@@ -273,7 +273,12 @@ for (const [competingQuestion, expectedEntryId] of [
     ['Do we know what time he died, Abraham Lincoln?', 'general-abraham-lincoln-death-1865'],
     ['Do we know what time he died, john adams?', null],
     ['when did he die—george washington?', null],
-    ['did john adams die?', null]
+    ['did john adams die?', null],
+    ['Do we know what time he died, Lincoln?', null],
+    ['Do we know what time he died, lincoln?', null],
+    ['When did he die—Washington?', null],
+    ['when did he die—washington?', null],
+    ['What time did he die, JFK?', null]
 ]) {
     const explicitSubject = registry.resolveFollowup(competingQuestion, {
         profile: 'ask',
@@ -282,6 +287,11 @@ for (const [competingQuestion, expectedEntryId] of [
     assert(explicitSubject.resolved === false && explicitSubject.entryId === expectedEntryId,
         'explicit current person inherited Joseph Smith context: ' + competingQuestion);
 }
+assert(registry.resolveFollowup('Do we know the time he died, exactly?', {
+    profile: 'ask',
+    history: [{ role: 'user', content: 'What date did Joseph Smith die?', contextEntryId: 'joseph-smith-death-1844' }]
+}).entryId === 'joseph-smith-death-1844',
+    'contextual adverb was incorrectly treated as a competing one-token identity');
 [
     ['When did Joseph F. Smith die?', 'ask'],
     ['When did Joseph Fielding Smith die?', 'ask'],

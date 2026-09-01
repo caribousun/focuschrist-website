@@ -320,6 +320,19 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         && !renderedMessages.at(-1).text.includes('5:00 p.m.'),
         'lowercase competing person must not inherit Joseph Smith reviewed context');
 
+    window.focusChristCancelAskRequests();
+    const beforeSurnamePerson = fetchCalls;
+    dom.userInput.value = 'What date did Joseph Smith die?';
+    await window.sendMessage();
+    dom.userInput.value = 'What time did he die, JFK?';
+    await window.sendMessage();
+    const surnamePersonQuery = requestBodies.at(-1).messages.at(-1).content;
+    assert(fetchCalls === beforeSurnamePerson + 1
+        && surnamePersonQuery.includes('JFK')
+        && !surnamePersonQuery.includes('Joseph Smith death died')
+        && !renderedMessages.at(-1).text.includes('5:00 p.m.'),
+        'one-token competing identity must not inherit Joseph Smith reviewed context');
+
     for (const topicQuestion of questionContracts.contracts.ask_topics.values) {
         const topicResult = await window.focusChristStudyAskV3(topicQuestion, '');
         assert(topicResult && String(topicResult.answer || '').trim()
