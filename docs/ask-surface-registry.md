@@ -1,6 +1,6 @@
 # focusChrist Ask Surface Registry
 
-Release candidate: `2026-09-01.14` / cache `20260901-14`
+Release candidate: `2026-09-01.15` / cache `20260901-15`
 
 This registry records the final user-visible owner after all inline, deferred, and dynamically loaded scripts execute. A link to the Ask page is not classified as a separate Ask surface.
 

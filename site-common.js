@@ -394,7 +394,7 @@
     }
 
     window.focusChristSourceIntegrity = Object.freeze({
-        policyVersion: '2026-09-01.14',
+        policyVersion: '2026-09-01.15',
         fallback: SOURCE_INTEGRITY_FALLBACK,
         extractScriptureCitations: extractScriptureCitations,
         isScriptureDependent: function (text) {
@@ -422,14 +422,14 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260901-14'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260901-15'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260901-14', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260901-15', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {

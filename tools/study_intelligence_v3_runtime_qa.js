@@ -58,7 +58,6 @@ let fetchCalls = 0;
 const requestBodies = [];
 let delayedAskResponse = null;
 let forceWorkerRateLimit = false;
-let forceLowRiskLincolnTime = false;
 function verifiedResponse() {
     return {
         ok: true,
@@ -68,7 +67,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official source', url: 'https://www.churchofjesuschrist.org/study/scriptures' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.14',
+                focuschrist_source_policy: '2026-09-01.15',
             };
         },
     };
@@ -77,20 +76,6 @@ global.fetch = async (_url, options) => {
     fetchCalls += 1;
     const body = JSON.parse(options.body);
     requestBodies.push(body);
-    if (forceLowRiskLincolnTime) {
-        return {
-            ok: true,
-            async json() {
-                return {
-                    choices: [{ message: { content: 'Yes, we know the exact time of Abraham Lincoln\'s death. He was shot at about 10:15 p.m. on April 14, 1865, and died at 7:22 a.m. on April 15, 1865, after being carried to the Petersen House in Washington, D.C. The precise timing is recorded in contemporary accounts and official reports.' } }],
-                    focuschrist_sources: [],
-                    focuschrist_source_integrity_verified: false,
-                    focuschrist_gateway_mode: 'general-ai-low-risk',
-                    focuschrist_source_policy: '2026-09-01.14'
-                };
-            }
-        };
-    }
     if (forceWorkerRateLimit) {
         return {
             ok: true,
@@ -100,7 +85,7 @@ global.fetch = async (_url, options) => {
                     focuschrist_sources: [],
                     focuschrist_source_integrity_verified: false,
                     focuschrist_gateway_mode: 'research-rate-limited',
-                    focuschrist_source_policy: '2026-09-01.14'
+                    focuschrist_source_policy: '2026-09-01.15'
                 };
             }
         };
@@ -172,24 +157,16 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     const beforeCompetingFollowup = fetchCalls;
     dom.userInput.value = 'What date did Abraham Lincoln die?';
     await window.sendMessage();
-    forceLowRiskLincolnTime = true;
     dom.userInput.value = 'Do we know the time he died';
     await window.sendMessage();
-    forceLowRiskLincolnTime = false;
-    assert(fetchCalls === beforeCompetingFollowup + 2 && renderedMessages.at(-1).text.includes('7:22 a.m.'),
-        'a low-risk follow-up after an intervening competing person must answer Lincoln without a scripture-attribution false positive');
-    const lincolnFollowupBody = requestBodies.at(-1);
-    const lincolnFollowupQuery = lincolnFollowupBody.messages.at(-1).content;
-    assert(lincolnFollowupQuery.includes('Do we know the time he died')
-        && lincolnFollowupQuery.includes('What date did Abraham Lincoln die?')
-        && !lincolnFollowupQuery.includes('Joseph Smith'),
-        'general Ask follow-up must make the immediately preceding Lincoln subject explicit to research');
-    assert(lincolnFollowupBody.focuschrist_profile === 'general-knowledge',
-        'the resolved Lincoln follow-up must retain the general-knowledge source lane');
+    assert(fetchCalls === beforeCompetingFollowup && renderedMessages.at(-1).text.includes('7:22 a.m.'),
+        'the reviewed Lincoln main and follow-up answers must use the zero-Worker lane');
     result = await window.focusChristStudyAskV3('What time?', '');
-    assert(result.contextResolved === true && result.contextQuestion.includes('Abraham Lincoln')
-        && requestBodies.at(-1).messages.at(-1).content.includes('Abraham Lincoln'),
-        'generic Ask context receipt must preserve Lincoln through a chained ellipsis');
+    assert(fetchCalls === beforeCompetingFollowup && result.reviewedLocal === true
+        && result.contextResolved === true
+        && result.contextEntryId === 'general-abraham-lincoln-death-1865'
+        && result.answer.includes('7:22 a.m.') && !result.answer.includes('10:00 p.m.'),
+        'reviewed Ask context must preserve Lincoln through a chained ellipsis without hallucinating a time');
 
     window.focusChristCancelAskRequests();
     const beforeResetFollowup = fetchCalls;
@@ -208,21 +185,21 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
             && requestBodies.at(-1).focuschrist_profile === 'general-knowledge',
         'an ordinary person whose given name matches scripture must remain general knowledge: ' + query);
     }
-    assert(fetchCalls === 13, 'generic chain, competing identities, and scripture-name people must use the correct gateway lane');
+    assert(fetchCalls === 10, 'generic chain, competing identities, and scripture-name people must use the correct gateway lane');
 
     result = await window.focusChristStudyAskV3('how is color used in painting', '');
-    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 14, 'painting query must use verified research');
+    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 11, 'painting query must use verified research');
     result = await window.focusChristStudyAskV3('how is color used in website design', '');
-    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 15, 'design query must use verified research');
+    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 12, 'design query must use verified research');
     result = await window.focusChristStudyAskV3('what makes a family business successful', '');
-    assert(result.profile === 'general-knowledge' && fetchCalls === 16,
+    assert(result.profile === 'general-knowledge' && fetchCalls === 13,
         'generic family language must not inherit the faith or Pioneer source lane');
-    assert(requestBodies[15].focuschrist_profile === 'general-knowledge',
+    assert(requestBodies[12].focuschrist_profile === 'general-knowledge',
         'Ask must send the gateway its narrowed general profile');
     result = await window.focusChristStudyAskV3('who was Joseph Smith', '');
-    assert(result.profile === 'faith-study' && fetchCalls === 17,
+    assert(result.profile === 'faith-study' && fetchCalls === 14,
         'an explicit Joseph Smith question must retain the faith source lane');
-    assert(requestBodies[16].focuschrist_profile === 'faith-study',
+    assert(requestBodies[13].focuschrist_profile === 'faith-study',
         'explicit faith intent must remain available to the server-owned source policy');
     assert(requestBodies.every((body) => body.focuschrist_page === 'ask'),
         'Ask requests must identify the Ask surface explicitly');
@@ -235,10 +212,10 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         assert(result.sourceIntegrityStatus === 'retrieval-researched-and-verified', 'source query lacks verified status: ' + query);
         assert(result.sources.some((source) => source.url.includes('churchofjesuschrist.org')), 'source query omitted official evidence: ' + query);
     }
-    assert(fetchCalls === 31, 'each unreviewed question must call the research gateway once');
+    assert(fetchCalls === 28, 'each unreviewed question must call the research gateway once');
 
     result = await window.askAI('what does D&C 18:15 say?', '');
-    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 32,
+    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === 29,
         'window.askAI must preserve verified retrieval');
 
     renderedMessages.length = 0;
@@ -251,7 +228,7 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         'window.sendMessage must render the verified answer');
     assert(renderedMessages[1].sources.some((source) => source.url.includes('churchofjesuschrist.org')),
         'window.sendMessage must render verified sources');
-    assert(fetchCalls === 33, 'window.sendMessage must call the research gateway');
+    assert(fetchCalls === 30, 'window.sendMessage must call the research gateway');
     assert(dom.userInput.disabled === false && dom.sendBtn.disabled === false && dom.sendBtn.textContent === 'Ask',
         'window.sendMessage must restore Ask controls');
 

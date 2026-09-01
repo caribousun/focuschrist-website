@@ -9,7 +9,7 @@
 (function () {
     'use strict';
 
-    const POLICY_VERSION = '2026-09-01.14';
+    const POLICY_VERSION = '2026-09-01.15';
 
     function officialHistorySource(label, url, note) {
         return {
@@ -75,6 +75,52 @@
                     url: 'https://spaceplace.nasa.gov/blue-sky/',
                     tier: 'Authoritative science source',
                     note: 'NASA explanation of atmospheric scattering.'
+                }
+            ]
+        },
+        {
+            id: 'general-abraham-lincoln-death-1865',
+            profiles: ['ask'],
+            priority: 165,
+            reviewedOn: '2026-09-01',
+            integrityKey: 'general-abraham-lincoln-death-1865-v1',
+            contextLabel: 'Abraham Lincoln\'s death',
+            followup: {
+                anchor: 'Abraham Lincoln death died',
+                cues: ['time', 'date', 'year', 'when', 'die', 'died', 'death', 'shot', 'assassinated', 'where'],
+                ellipsis: ['What time?', 'And what time?', 'At what time?', 'When exactly?', 'What date?', 'What year?']
+            },
+            match: {
+                all: [
+                    ['abraham lincoln'],
+                    ['die', 'died', 'death', 'shot', 'assassinated', 'assassination']
+                ],
+                none: ['lincoln nebraska', 'lincoln car', 'lincoln automobile']
+            },
+            positiveTests: [
+                'What date did Abraham Lincoln die?',
+                'When did Abraham Lincoln die?',
+                'What time did Abraham Lincoln die?'
+            ],
+            negativeTests: [
+                'Where is Lincoln, Nebraska?',
+                'What Lincoln car should I buy?'
+            ],
+            answer: "Abraham Lincoln died at 7:22 a.m. on April 15, 1865, in the Petersen House in Washington, D.C. John Wilkes Booth had shot him at Ford's Theatre the previous evening, April 14. Lincoln was carried across the street to the Petersen House, where he remained unconscious and died roughly nine hours after the shooting. The Library of Congress and the National Park Service both record the date and exact time as April 15 at 7:22 a.m.",
+            sources: [
+                {
+                    text: 'Library of Congress — Assassination of President Abraham Lincoln',
+                    label: 'Library of Congress — Assassination of President Abraham Lincoln',
+                    url: 'https://www.loc.gov/collections/abraham-lincoln-papers/articles-and-essays/assassination-of-president-abraham-lincoln/',
+                    tier: 'Authoritative federal history source',
+                    note: "Library of Congress account records Lincoln's death at 7:22 a.m. on April 15, 1865."
+                },
+                {
+                    text: 'National Park Service — Petersen House',
+                    label: 'National Park Service — Petersen House',
+                    url: 'https://www.nps.gov/places/000/petersen-house.htm',
+                    tier: 'Authoritative federal history source',
+                    note: 'National Park Service records the Petersen House death time as 7:22 a.m. on April 15, 1865.'
                 }
             ]
         },
