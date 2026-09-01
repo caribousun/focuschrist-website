@@ -377,10 +377,18 @@ export default {
         'Attribute diary excerpts, descendant recollections, family histories, and miraculous accounts to the people or source traditions named in the entry. Do not present them as official Church declarations.',
         'Produce a concise summary rather than reproducing long passages. The final source_indexes must include the Tell My Story, Too source.',
       ].join('\n') : 'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.';
-      const verifierPrompt = [
+      const verifierRole = sanitized.scope.selectedPioneer ? [
+        'You are an evidence-grounded biographical writer and verifier. Return one JSON object only.',
+        'Write the final answer directly from the supplied Tell My Story, Too entry. The draft is an optional research lead; replace or ignore any part of it that the evidence does not support.',
+        'Set approved true when you can provide a useful final answer whose every factual claim is supported by the supplied entry. Do not reject merely because the optional draft is absent or contains unsupported material.',
+        'Do not add facts from memory.',
+      ].join('\n') : [
         'You are a strict evidence verifier. Return one JSON object only.',
         'Evaluate the draft against the supplied source excerpts. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence.',
         'Remove unsupported detail and correct contradictions. Do not add facts from memory.',
+      ].join('\n');
+      const verifierPrompt = [
+        verifierRole,
         selectedPioneerPolicy,
         'Set approved true only if the final answer is fully supported. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
