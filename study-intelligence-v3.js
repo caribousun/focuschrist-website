@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-09-01.13';
+    const POLICY_VERSION = '2026-09-01.14';
     let askRequestSerial = 0;
 
     const FAITH_TERMS = new Set([
@@ -28,6 +28,9 @@
         'brigham young','president nelson','russell m nelson','general conference','church history','church teaching','church calling','church mission',
         'church ward','church bishop','quorum of the seventy','temple garment','temple endowment','temple sealing'
     ];
+    const FAITH_PERSON_NAME_QUESTION_CASELESS_PATTERN = /(\bwho\s+(?:is|was)\s+)(?:Nephi|Alma|Moroni|Ether|Helaman|Mormon)\s+(?!the\b|and\b|or\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s*[?.!]*$)/giu;
+    const FAITH_PERSON_NAME_ACTION_CASELESS_PATTERN = /(\b(?:what|when|where|why|how)\s+(?:did|does|is|was)\s+)(?:Nephi|Alma|Moroni|Ether|Helaman|Mormon)\s+(?!the\b|and\b|or\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s+(?:act(?:ed|ing)?|became|become|composed?|did|died?|lived?|made|make|said|say|served?|spoke|talked?|writes?|wrote)\b)/giu;
+    const FAITH_PERSON_NAME_ABOUT_CASELESS_PATTERN = /(\btell\s+me\s+about\s+)(?:Nephi|Alma|Moroni|Ether|Helaman|Mormon)\s+(?!the\b|and\b|or\b|faith\b|sermon\b|story\b|account\b|creation\b|teachings?\b|prophecy\b|vision\b|chapter\b|book\b|gospel\b|loyalty\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s*[?.!]*$)/giu;
 
     const HIGH_STAKES_TERMS = new Set([
         'suicide','suicidal','kill','dying','abuse','abused','violence','violent','emergency','diagnosis','medication','medicine','legal','lawyer',
@@ -117,8 +120,16 @@
         if (tokens.some(function (word) { return HIGH_STAKES_TERMS.has(word); })) return 'high-stakes';
         if (currentMode() === 'pioneers') return 'pioneer-study';
         if (currentMode() === 'church-history') return 'faith-study';
-        if (tokens.some(function (word) { return FAITH_TERMS.has(word); })) return 'faith-study';
-        if (FAITH_PHRASES.some(function (phrase) { return phraseMatch(query, phrase); })) return 'faith-study';
+        if (window.focusChristSourceIntegrity
+            && typeof window.focusChristSourceIntegrity.isScriptureDependent === 'function'
+            && window.focusChristSourceIntegrity.isScriptureDependent(query)) return 'faith-study';
+        const faithQuery = String(query || '')
+            .replace(FAITH_PERSON_NAME_QUESTION_CASELESS_PATTERN, '$1')
+            .replace(FAITH_PERSON_NAME_ACTION_CASELESS_PATTERN, '$1')
+            .replace(FAITH_PERSON_NAME_ABOUT_CASELESS_PATTERN, '$1');
+        const faithTokens = words(faithQuery);
+        if (faithTokens.some(function (word) { return FAITH_TERMS.has(word); })) return 'faith-study';
+        if (FAITH_PHRASES.some(function (phrase) { return phraseMatch(faithQuery, phrase); })) return 'faith-study';
         return 'general-knowledge';
     }
 

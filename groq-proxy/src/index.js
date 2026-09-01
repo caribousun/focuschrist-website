@@ -15,7 +15,7 @@ const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
 const GENERAL_ANSWER_FALLBACK = 'I could not complete that general answer just now. Please try again or rephrase the question.';
-const SOURCE_POLICY_VERSION = '2026-09-01.13';
+const SOURCE_POLICY_VERSION = '2026-09-01.14';
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
 const SERVER_RESEARCH_POLICY = [
@@ -34,6 +34,10 @@ const SERVER_RESEARCH_POLICY = [
 
 const FAITH_PATTERN = /\b(?:Jesus|Christ|Savior|God|scripture|scriptures|Bible|biblical|Book\s+of\s+Mormon|Doctrine\s+and\s+Covenants|D&C|Pearl\s+of\s+Great\s+Price|Church\s+of\s+Jesus\s+Christ|Latter[- ]day\s+Saint|LDS|prophet|apostle|temple|priesthood|gospel|atonement|restoration|Joseph\s+Smith|Brigham\s+Young|pioneer|pioneers|Nephi|Alma|Mosiah|Moroni|Ether|Helaman|Mormon|celestial|terrestrial|telestial|Gospel\s+Library)\b/i;
 const SCRIPTURE_REFERENCE_PATTERN = /\b(?:[1-4]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Doctrine\s+and\s+Covenants|D&C|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History)|Articles\s+of\s+Faith)\s+\d+(?::\d+(?:[-–]\d+)?)?/i;
+const SCRIPTURE_BOOK_TOPIC_PATTERN = /(?:\b(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History))\b.{0,100}\b(?:says?|states?|teach(?:es)?|declares?|records?|promises?|describes?|means?|about)\b|\babout\s+(?:the\s+)?(?:book\s+of\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History))\b)/i;
+const CASELESS_CANON_NAME_PERSON_QUESTION_PATTERN = /(\bwho\s+(?:is|was)\s+)(?:Joshua|Ruth|Samuel|Ezra|Nehemiah|Esther|Job|Isaiah|Jeremiah|Ezekiel|Daniel|Hosea|Joel|Amos|Jonah|Micah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Timothy|Titus|Philemon|James|Peter|Jude|Nephi|Jacob|Enos|Mosiah|Alma|Helaman|Ether|Moroni|Moses|Abraham)\s+(?!the\b|and\b|or\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s*[?.!]*$)/giu;
+const CASELESS_CANON_NAME_PERSON_ACTION_PATTERN = /(\b(?:what|when|where|why|how)\s+(?:did|does|is|was)\s+)(?:Joshua|Ruth|Samuel|Ezra|Nehemiah|Esther|Job|Isaiah|Jeremiah|Ezekiel|Daniel|Hosea|Joel|Amos|Jonah|Micah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Timothy|Titus|Philemon|James|Peter|Jude|Nephi|Jacob|Enos|Mosiah|Alma|Helaman|Ether|Moroni|Moses|Abraham)\s+(?!the\b|and\b|or\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s+(?:act(?:ed|ing)?|became|become|composed?|did|died?|lived?|made|make|said|say|served?|spoke|talked?|writes?|wrote)\b)/giu;
+const CASELESS_CANON_NAME_PERSON_ABOUT_PATTERN = /(\btell\s+me\s+about\s+)(?:Joshua|Ruth|Samuel|Ezra|Nehemiah|Esther|Job|Isaiah|Jeremiah|Ezekiel|Daniel|Hosea|Joel|Amos|Jonah|Micah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Timothy|Titus|Philemon|James|Peter|Jude|Nephi|Jacob|Enos|Mosiah|Alma|Helaman|Ether|Moroni|Moses|Abraham)\s+(?!the\b|and\b|or\b|faith\b|sermon\b|story\b|account\b|creation\b|teachings?\b|prophecy\b|vision\b|chapter\b|book\b|gospel\b|loyalty\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s*[?.!]*$)/giu;
 const KNOWN_FALSE_SOURCE_PATTERNS = [
   /red,?\s+white,?\s+and\s+black\s+lights?\s+(?:represent|symbolize|mean)/i,
   /(?:red|black|golden)\s+light.{0,180}(?:D&C|Doctrine\s+and\s+Covenants)\s+76.{0,100}(?:represent|symbolize|mean|celestial|terrestrial|telestial)/i,
@@ -76,14 +80,19 @@ function extractSelectedPioneerName(messages) {
 
 function classifyResearchScope(messages, requestedPage, requestedProfile) {
   const question = lastUserQuestion(messages);
+  const scriptureTopicQuestion = question
+    .replace(CASELESS_CANON_NAME_PERSON_QUESTION_PATTERN, '$1')
+    .replace(CASELESS_CANON_NAME_PERSON_ACTION_PATTERN, '$1')
+    .replace(CASELESS_CANON_NAME_PERSON_ABOUT_PATTERN, '$1');
   const page = PAGE_CONTEXTS.has(requestedPage) ? requestedPage : 'ask';
   const profile = PROFILE_CONTEXTS.has(requestedProfile) ? requestedProfile : '';
   const faith = page === 'pioneers'
     || page === 'church-history'
     || profile === 'faith-study'
     || profile === 'pioneer-study'
-    || FAITH_PATTERN.test(question)
-    || SCRIPTURE_REFERENCE_PATTERN.test(question);
+    || FAITH_PATTERN.test(scriptureTopicQuestion)
+    || SCRIPTURE_REFERENCE_PATTERN.test(question)
+    || SCRIPTURE_BOOK_TOPIC_PATTERN.test(scriptureTopicQuestion);
   const selectedPioneerName = extractSelectedPioneerName(messages);
   return { faith, question, page, profile, selectedPioneer: Boolean(selectedPioneerName), selectedPioneerName };
 }

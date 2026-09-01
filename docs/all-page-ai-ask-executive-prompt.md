@@ -161,6 +161,7 @@ Do not rely on a hand-written sample list. Before implementation and again befor
 8. Reject blank answers and known generic non-answer patterns, including “I cannot verify the specific source claim,” “Please confirm the subject,” “I could not complete that general answer,” and equivalent language when the question has a supported reviewed or authoritative route.
 9. Enforce answer substance: direct answer first; ordinary fact plus useful context; nuanced questions normally at least 70 words unless the reviewed contract explicitly justifies a shorter response; visible supporting sources for Church/history claims.
 10. Retain the manifest and per-control results as release evidence. Never ask the owner to act as the discovery system.
+11. Execute final output through every browser-side integrity, citation, sanitization, formatting, and fallback guard. Test ordinary names that collide with scripture-book names (`Abraham Lincoln`, `John Adams`, `Mark Twain`) and ordinary connective words such as `about`. A broad lexical regex must never relabel a valid general answer as an unsupported scripture claim.
 
 ## Root-cause requirement
 
@@ -174,6 +175,7 @@ Do not begin with a patch. First produce an evidence-backed root-cause record th
 6. Why did earlier QA permit a “fixed” claim?
 7. Which other Ask surfaces share the same failure class?
 8. What permanent control will detect this class before release?
+9. Could a post-answer browser guard reject a correct server response because a person, place, title, or ordinary word collides with a scripture/source regular expression?
 
 For each causal statement, cite a `VERIFIED PASS` evidence check that proves it or label the statement `HYPOTHESIS`. Turn every evidence-backed systemic cause into a test, invariant, or release gate.
 
@@ -288,6 +290,7 @@ At minimum, retain these named specimens.
 - `What year was Joseph Smith killed?` — supported answer identifying June 27, 1844, with official Church history evidence.
 - after the Joseph Smith date question, `Do we know the time he died` — resolve Joseph Smith before routing and answer about or shortly after 5:00 p.m.; after reset, the same wording must not inherit Joseph Smith.
 - after changing the subject to `What date did Abraham Lincoln die?`, both `Do we know the time he died?` and chained `What time?` — resolve Lincoln for general research, never Joseph Smith and never a generic completion failure.
+- the Lincoln time answer containing `Abraham Lincoln` and `at about 10:15 p.m.` — must survive the final browser source-integrity guard. `Abraham` plus the ordinary preposition `about` is not a Book of Abraham attribution.
 - after the Joseph Smith date question, `How old was he?`, `Why was he in Carthage Jail?`, `Who was with him?`, and `Where did he live?` — use Joseph Smith as immediate context and answer the specific intent from a reviewed contextual variant when one exists; otherwise research it. Never replay a death-only answer or depend on the Worker for a fact the reviewed registry already owns.
 - after Joseph Smith context, `When did he die—Abraham Lincoln?` and `Do we know what time he died, Abraham Lincoln?` — treat Abraham Lincoln as the explicit current subject and never return Joseph Smith's answer.
 - `What year was Joseph Stalin killed?` — must not be captured by the Joseph Smith intent.
