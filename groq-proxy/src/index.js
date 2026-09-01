@@ -14,7 +14,7 @@ const ALLOWED_ORIGINS = new Set([
 const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
-const SOURCE_POLICY_VERSION = '2026-09-01.2';
+const SOURCE_POLICY_VERSION = '2026-09-01.3';
 const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
@@ -369,27 +369,21 @@ export default {
         return jsonResponse(fallbackPayload('research-insufficient-evidence'), 200, origin);
       }
 
-      const selectedPioneerPolicy = sanitized.scope.selectedPioneer ? [
-        `The visitor explicitly selected ${sanitized.scope.selectedPioneerName}.`,
-        'The Tell My Story, Too entry is an allowed biographical source for details actually contained in that entry. Do not reject those details merely because an official Church page does not duplicate them.',
-        'Center the answer on the selected book entry and support every biographical detail from that entry.',
-        'The gateway may display a separate official Church profile as a corroborating record. Do not add facts from that profile unless it is included in the evidence below.',
-        'Attribute diary excerpts, descendant recollections, family histories, and miraculous accounts to the people or source traditions named in the entry. Do not present them as official Church declarations.',
-        'Produce a concise summary rather than reproducing long passages. The final source_indexes must include the Tell My Story, Too source.',
-      ].join('\n') : 'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.';
-      const verifierRole = sanitized.scope.selectedPioneer ? [
-        'You are an evidence-grounded biographical writer and verifier. Return one JSON object only.',
-        'Write the final answer directly from the supplied Tell My Story, Too entry. The draft is an optional research lead; replace or ignore any part of it that the evidence does not support.',
-        'Set approved true when you can provide a useful final answer whose every factual claim is supported by the supplied entry. Do not reject merely because the optional draft is absent or contains unsupported material.',
-        'Do not add facts from memory.',
+      const verifierPrompt = sanitized.scope.selectedPioneer ? [
+        'You are writing a source-grounded biographical summary. Return one JSON object only.',
+        `The visitor selected ${sanitized.scope.selectedPioneerName}. The evidence below is that person's permitted Tell My Story, Too entry.`,
+        'Write a concise two-to-four paragraph answer using only facts in that entry. Do not use the optional research draft or add facts from memory.',
+        'Attribute diary material, descendant recollections, family histories, traditions, and miraculous accounts to the people or source traditions named in the entry. Do not present them as official Church declarations.',
+        'Do not reproduce long passages. Paraphrase the biography and preserve meaningful uncertainty words such as apparently, probably, recalled, reported, or according to the entry.',
+        'If the entry contains usable biographical information for the selected person, set approved true and source_indexes to [1]. Set approved false only if the evidence is empty or belongs to a different person.',
+        'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
+        '',
+        `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
       ].join('\n') : [
         'You are a strict evidence verifier. Return one JSON object only.',
         'Evaluate the draft against the supplied source excerpts. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence.',
         'Remove unsupported detail and correct contradictions. Do not add facts from memory.',
-      ].join('\n');
-      const verifierPrompt = [
-        verifierRole,
-        selectedPioneerPolicy,
+        'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
         'Set approved true only if the final answer is fully supported. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',

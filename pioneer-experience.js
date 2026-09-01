@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.2';
+    const PIONEER_POLICY_VERSION = '2026-09-01.3';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -160,7 +160,7 @@
         messages.push({ role: 'user', content: question });
 
         const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-        const timer = controller ? window.setTimeout(function () { controller.abort(); }, 25000) : null;
+        const timer = controller ? window.setTimeout(function () { controller.abort(); }, 75000) : null;
         try {
             const response = await fetch(PROXY_URL, {
                 method: 'POST',

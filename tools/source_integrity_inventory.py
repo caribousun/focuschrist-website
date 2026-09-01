@@ -85,23 +85,23 @@ if "Verified study paths" in router or "Verified study sources" in router:
     errors.append("source routes are still mislabeled as claim verification")
 if "unreviewed-source-dependent-generation" not in common:
     errors.append("shared source-integrity contract is not fail-closed")
-if "serverVerified" not in common or "2026-09-01.2" not in common:
+if "serverVerified" not in common or "2026-09-01.3" not in common:
     errors.append("shared source-integrity contract does not recognize the server verification receipt")
 
 runtime_files = [ROOT / "site-common.js", ROOT / "study-source-router.js", ROOT / "ask.html", ROOT / "pioneers.html", ROOT / "church-history.html"]
 versions = set()
 for path in runtime_files:
     versions.update(re.findall(r"study-intelligence-v3\.js\?v=(\d+-\d+)", path.read_text(encoding="utf-8")))
-if versions != {"20260901-2"}:
+if versions != {"20260901-3"}:
     errors.append(f"mixed Study Intelligence v3 cache versions: {sorted(versions)}")
 
 cache_markers = {
-    "site-common.js": (common, "study-journey.js?v=20260901-2"),
-    "study-journey.js": (journey, "study-source-router.js?v=20260901-2"),
-    "pioneers.html": (pioneers_html, "pioneer-experience.js?v=20260901-2"),
-    "church-history.html common": (history_html, "site-common.js?v=20260901-2"),
-    "church-history.html router": (history_html, "study-source-router.js?v=20260901-2"),
-    "church-history.html experience": (history_html, "church-history-experience.js?v=20260901-2"),
+    "site-common.js": (common, "study-journey.js?v=20260901-3"),
+    "study-journey.js": (journey, "study-source-router.js?v=20260901-3"),
+    "pioneers.html": (pioneers_html, "pioneer-experience.js?v=20260901-3"),
+    "church-history.html common": (history_html, "site-common.js?v=20260901-3"),
+    "church-history.html router": (history_html, "study-source-router.js?v=20260901-3"),
+    "church-history.html experience": (history_html, "church-history-experience.js?v=20260901-3"),
 }
 for label, (text, marker) in cache_markers.items():
     if marker not in text:
