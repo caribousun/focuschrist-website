@@ -12,8 +12,9 @@ const ALLOWED_ORIGINS = new Set([
   'https://caribousun.github.io',
 ]);
 const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
+const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
-const SOURCE_POLICY_VERSION = '2026-08-31.9';
+const SOURCE_POLICY_VERSION = '2026-09-01.1';
 const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
@@ -55,6 +56,17 @@ function lastUserQuestion(messages) {
   return users.length ? String(users[users.length - 1].content || '') : '';
 }
 
+function extractSelectedPioneerName(messages) {
+  const content = (Array.isArray(messages) ? messages : [])
+    .filter((message) => message && ['system', 'user'].includes(message.role))
+    .map((message) => String(message.content || ''))
+    .join('\n');
+  const match = content.match(/(?:Selected pioneer|Selected name):\s*([^\n\r]{2,120})/i);
+  if (!match) return '';
+  const name = match[1].replace(/[^A-Za-zÀ-ÖØ-öø-ÿ0-9 .,'’()&-]/g, '').replace(/\s+/g, ' ').trim();
+  return name.length >= 2 && name.length <= 120 ? name : '';
+}
+
 function classifyResearchScope(messages) {
   const question = lastUserQuestion(messages);
   const systemContext = (Array.isArray(messages) ? messages : [])
@@ -64,7 +76,8 @@ function classifyResearchScope(messages) {
   const faith = FAITH_PATTERN.test(question)
     || SCRIPTURE_REFERENCE_PATTERN.test(question)
     || /QUESTION MODE:\s*(?:FAITH|LATTER-DAY SAINT|PIONEER)/i.test(systemContext);
-  return { faith, question };
+  const selectedPioneerName = extractSelectedPioneerName(messages);
+  return { faith, question, selectedPioneer: Boolean(selectedPioneerName), selectedPioneerName };
 }
 
 function sanitizePayload(payload) {
@@ -75,7 +88,9 @@ function sanitizePayload(payload) {
         .map((message) => ({ role: message.role, content: message.content.slice(0, 12000) }))
     : [];
   const scope = classifyResearchScope(clientMessages);
-  const scopeInstruction = scope.faith
+  const scopeInstruction = scope.selectedPioneer
+    ? `The visitor selected the pioneer ${scope.selectedPioneerName}. Search only site:churchofjesuschrist.org to corroborate that exact person's identity, company, dates, and journey. The gateway will separately supply the selected Tell My Story, Too biography.`
+    : scope.faith
     ? 'For this request, search only site:churchofjesuschrist.org and use only ChurchofJesusChrist.org evidence.'
     : 'Use web search to gather reliable evidence before answering.';
   const research = {
@@ -133,13 +148,65 @@ function isOfficialChurchSource(source) {
   return source && (source.host === OFFICIAL_CHURCH_HOST || source.host.endsWith(`.${OFFICIAL_CHURCH_HOST}`));
 }
 
+function isTellMyStorySource(source) {
+  return Boolean(source && source.sourceClass === 'tell-my-story-too' && source.url === TELL_MY_STORY_URL);
+}
+
+function extractTellMyStoryEntry(bookText, selectedName) {
+  const name = String(selectedName || '').replace(/\s+/g, ' ').trim();
+  if (!name) return '';
+  const lines = String(bookText || '').replace(/\r/g, '').split('\n');
+  const normalizedName = name.toUpperCase();
+  const start = lines.findIndex((line) => line.replace(/\s+/g, ' ').trim().toUpperCase() === normalizedName);
+  if (start < 0) return '';
+
+  let end = lines.length;
+  for (let index = start + 1; index < lines.length; index += 1) {
+    const candidate = lines[index].replace(/\s+/g, ' ').trim();
+    if (!/^[A-ZÀ-ÖØ-Þ][A-ZÀ-ÖØ-Þ0-9 .,'’()&-]{3,119}$/.test(candidate)) continue;
+    if (candidate.toUpperCase() === normalizedName || candidate.includes(`(${normalizedName} - PAGE`)) continue;
+    const nearby = lines.slice(index + 1, index + 9).join('\n');
+    if (/\bBorn:\s*/i.test(nearby) && /\bAge:\s*/i.test(nearby)) {
+      end = index;
+      break;
+    }
+  }
+
+  return lines.slice(start, end).join('\n')
+    .replace(/--- PAGE \d+ ---/g, '')
+    .replace(/This biographical sketch comes from the 8th edition of the book Tell My Story, Too:[\s\S]*?non-commercial purposes\./g, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim()
+    .slice(0, 14000);
+}
+
+async function fetchTellMyStoryEvidence(selectedName) {
+  if (!selectedName) return null;
+  try {
+    const response = await fetch(TELL_MY_STORY_URL, { headers: { Accept: 'text/plain' } });
+    if (!response.ok) return null;
+    const entry = extractTellMyStoryEntry(await response.text(), selectedName);
+    if (!entry) return null;
+    return {
+      url: TELL_MY_STORY_URL,
+      host: 'focuschrist.com',
+      title: `Tell My Story, Too — ${selectedName}`,
+      content: entry,
+      sourceClass: 'tell-my-story-too',
+    };
+  } catch (_error) {
+    return null;
+  }
+}
+
 function evidenceForVerifier(evidence) {
   return evidence.map((source, index) => [
     `SOURCE ${index + 1}`,
+    `SOURCE CLASS: ${source.sourceClass || (isOfficialChurchSource(source) ? 'official-church' : 'web')}`,
     `TITLE: ${source.title}`,
     `URL: ${source.url}`,
     `CONTENT: ${source.content || '(No retrievable source excerpt was returned.)'}`,
-  ].join('\n')).join('\n\n').slice(0, 10000);
+  ].join('\n')).join('\n\n').slice(0, 18000);
 }
 
 function parseVerifierJson(text) {
@@ -150,7 +217,8 @@ function parseVerifierJson(text) {
 function guardVerifiedAnswer(answer, evidence, scope, approved) {
   const text = String(answer || '').trim();
   if (!approved || !text || !Array.isArray(evidence) || !evidence.length) return SOURCE_INTEGRITY_FALLBACK;
-  if (scope.faith && !evidence.some(isOfficialChurchSource)) return SOURCE_INTEGRITY_FALLBACK;
+  if (scope.selectedPioneer && !evidence.some(isTellMyStorySource)) return SOURCE_INTEGRITY_FALLBACK;
+  if (scope.faith && !scope.selectedPioneer && !evidence.some(isOfficialChurchSource)) return SOURCE_INTEGRITY_FALLBACK;
   if (hasKnownFalseClaim(text)) return SOURCE_INTEGRITY_FALLBACK;
   return text;
 }
@@ -258,29 +326,43 @@ export default {
     }
 
     try {
+      const tellMyStoryEvidence = sanitized.scope.selectedPioneer
+        ? await fetchTellMyStoryEvidence(sanitized.scope.selectedPioneerName)
+        : null;
       const researchResult = await callGroq(env.GROQ_KEY_NEW, sanitized.research);
-      if (!researchResult.response.ok) {
+      if (!researchResult.response.ok && !tellMyStoryEvidence) {
         const limited = researchResult.response.status === 429;
         return jsonResponse(fallbackPayload(
           limited ? 'research-rate-limited' : 'research-provider-error',
           providerDiagnostic(researchResult),
         ), 200, origin);
       }
-      const researchMessage = researchResult.data && researchResult.data.choices && researchResult.data.choices[0]
+      const researchMessage = researchResult.response.ok && researchResult.data && researchResult.data.choices && researchResult.data.choices[0]
         ? researchResult.data.choices[0].message
         : null;
-      const draft = researchMessage ? String(researchMessage.content || '').trim() : '';
+      const draft = researchMessage
+        ? String(researchMessage.content || '').trim()
+        : (tellMyStoryEvidence ? `Write a concise, accurate biographical summary of ${sanitized.scope.selectedPioneerName} from the supplied Tell My Story, Too entry.` : '');
       const allEvidence = collectSourceEvidence(researchMessage);
-      const evidence = sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence;
+      const evidence = sanitized.scope.selectedPioneer
+        ? [tellMyStoryEvidence, ...allEvidence.filter(isOfficialChurchSource)].filter(Boolean)
+        : (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence);
       if (!draft || !evidence.length) {
         return jsonResponse(fallbackPayload('research-insufficient-evidence'), 200, origin);
       }
 
+      const selectedPioneerPolicy = sanitized.scope.selectedPioneer ? [
+        `The visitor explicitly selected ${sanitized.scope.selectedPioneerName}.`,
+        'The Tell My Story, Too entry is an allowed biographical source for details actually contained in that entry. Do not reject those details merely because an official Church page does not duplicate them.',
+        'Use official Church evidence, when supplied, to corroborate identity, company, dates, and journey.',
+        'Attribute diary excerpts, descendant recollections, family histories, and miraculous accounts to the people or source traditions named in the entry. Do not present them as official Church declarations.',
+        'Produce a concise summary rather than reproducing long passages. The final source_indexes must include the Tell My Story, Too source.',
+      ].join('\n') : 'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.';
       const verifierPrompt = [
         'You are a strict evidence verifier. Return one JSON object only.',
         'Evaluate the draft against the supplied source excerpts. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence.',
         'Remove unsupported detail and correct contradictions. Do not add facts from memory.',
-        'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
+        selectedPioneerPolicy,
         'Set approved true only if the final answer is fully supported. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
@@ -340,10 +422,14 @@ export {
   SOURCE_INTEGRITY_FALLBACK,
   classifyResearchScope,
   collectSourceEvidence,
+  extractSelectedPioneerName,
+  extractTellMyStoryEntry,
+  fetchTellMyStoryEvidence,
   guardVerifiedAnswer,
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
+  isTellMyStorySource,
   parseVerifierJson,
   sanitizePayload,
 };

@@ -2,10 +2,13 @@ import {
   SOURCE_INTEGRITY_FALLBACK,
   classifyResearchScope,
   collectSourceEvidence,
+  extractSelectedPioneerName,
+  extractTellMyStoryEntry,
   guardVerifiedAnswer,
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
+  isTellMyStorySource,
   parseVerifierJson,
   sanitizePayload,
 } from './src/index.js';
@@ -53,6 +56,48 @@ assert(!hasKnownFalseClaim('Doctrine and Covenants 76 does not teach that red, w
   'a truthful refutation of the false color claim must remain answerable');
 assert(isReviewedColorRegression('Does D&C 76 say red, white, and black lights represent the kingdoms?'),
   'the reviewed color regression must be recognized before generation');
+
+const selectedMessages = [
+  { role: 'system', content: 'Selected name: ELIZABETH CROOK PANTING' },
+  { role: 'user', content: 'Tell me about her.\n\nSelected pioneer: ELIZABETH CROOK PANTING' },
+];
+const selectedScope = classifyResearchScope(selectedMessages);
+assert(selectedScope.selectedPioneer && selectedScope.selectedPioneerName === 'ELIZABETH CROOK PANTING',
+  'the gateway must preserve the exact selected pioneer name');
+assert(extractSelectedPioneerName(selectedMessages) === 'ELIZABETH CROOK PANTING',
+  'the selected name must be extracted from the routed request');
+
+const sampleBook = [
+  'ELIZABETH CROOK PANTING',
+  'Born: 7 Oct 1827 England',
+  'Age: 28',
+  'Willie Handcart Company',
+  'Elizabeth traveled with her children.',
+  '--- PAGE 115 ---',
+  '(Elizabeth Crook Panting - Page 2)',
+  'A descendant preserved a family recollection.',
+  'JENS O. PETERSEN',
+  'Born: 1820 Denmark',
+  'Age: 36',
+  'Willie Handcart Company',
+].join('\n');
+const selectedEntry = extractTellMyStoryEntry(sampleBook, 'Elizabeth Crook Panting');
+assert(selectedEntry.includes('Page 2') && selectedEntry.includes('family recollection'),
+  'a selected biography must include its continuation page');
+assert(!selectedEntry.includes('JENS O. PETERSEN'),
+  'a selected biography must stop before the next person');
+const bookEvidence = {
+  url: 'https://focuschrist.com/tell-my-story-too.txt',
+  host: 'focuschrist.com',
+  title: 'Tell My Story, Too — Elizabeth Crook Panting',
+  content: selectedEntry,
+  sourceClass: 'tell-my-story-too',
+};
+assert(isTellMyStorySource(bookEvidence), 'the server-owned book entry must have a distinct source class');
+assert(guardVerifiedAnswer('Elizabeth traveled in the Willie handcart company.', [bookEvidence], selectedScope, true)
+  !== SOURCE_INTEGRITY_FALLBACK, 'a selected biography supported by its book entry must be answerable');
+assert(guardVerifiedAnswer('Elizabeth traveled in the Willie handcart company.', [evidence[0]], selectedScope, true)
+  === SOURCE_INTEGRITY_FALLBACK, 'the selected path must not claim to use the book when its entry was absent');
 
 const verdict = parseVerifierJson('```json\n{"approved":true,"answer":"Supported","source_indexes":[1]}\n```');
 assert(verdict && verdict.approved === true && verdict.source_indexes[0] === 1,

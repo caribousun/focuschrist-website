@@ -49,7 +49,7 @@ global.fetch = async () => {
                 focuschrist_sources: [{ text: 'Official source', url: 'https://www.churchofjesuschrist.org/study/scriptures' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-08-31.9',
+                focuschrist_source_policy: '2026-09-01.1',
             };
         },
     };

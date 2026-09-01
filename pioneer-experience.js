@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-08-31.9';
+    const PIONEER_POLICY_VERSION = '2026-09-01.1';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -332,15 +332,12 @@
 
     function pioneerRecordContext(choice) {
         const name = String(choice && choice.name || '').trim();
-        const record = String(choice && (choice.fullStory || choice.story) || '').trim().slice(0, 10000);
         return [
-            'SELECTED PERSON FROM THE PAGE-SUPPLIED TELL MY STORY, TOO INDEX:',
+            'SELECTED PERSON FROM THE TELL MY STORY, TOO INDEX:',
             'Selected name: ' + name,
-            'The compilation excerpt below is a research lead, not sufficient proof by itself.',
-            'Use it to identify the person and relevant events, then corroborate the answer through the official Church History Biographical Database and its attached records.',
-            'Do not reproduce the compilation verbatim. Summarize only details supported by the authoritative sources retrieved by the gateway.',
-            '',
-            record
+            'Retrieve this exact person’s complete entry from the server-owned Tell My Story, Too text, including continuation pages.',
+            'Summarize that entry accurately without inventing details or reproducing long passages.',
+            'Use official Church history records to corroborate identity and core chronology when available, while preserving attribution for family recollections and source traditions in the book.'
         ].join('\n');
     }
 
