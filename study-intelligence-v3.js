@@ -8,19 +8,25 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-09-01.7';
+    const POLICY_VERSION = '2026-09-01.8';
 
     const FAITH_TERMS = new Set([
-        'jesus','christ','savior','redeemer','god','heavenly','father','holy','ghost','spirit','scripture','scriptures','bible','biblical',
-        'book','mormon','nephi','alma','mosiah','moroni','ether','helaman','doctrine','covenants','pearl','great','price','temple','temples',
-        'prophet','prophets','apostle','apostles','church','latter-day','saint','saints','lds','atonement','resurrection','revelation','prayer',
-        'pray','faith','repentance','baptism','ordinance','ordinances','priesthood','gospel','testimony','commandment','commandments','conference',
-        'restoration','joseph','smith','cowdery','oliver','emma','brigham','young','nelson','monson','hinckley','ward','stake','bishop','relief',
-        'society','quorum','elder','elders','seventy','missionary','missionaries','mission','sacrament','tithing','garment','garments','endowment',
-        'sealing','sealings','celestial','terrestrial','telestial','exaltation','salvation','premortal','premortality','preexistence','spirit-world',
-        'patriarch','patriarchal','blessing','anointing','keys','dispensation','zion','conference','modesty','fasting','fast','ministering','calling',
-        'callings','genealogy','familysearch','family','eternal','plural','polygamy','marriage','first','vision','kirtland','nauvoo','pioneer','pioneers'
+        'jesus','christ','savior','redeemer','god','heavenly','scripture','scriptures','bible','biblical',
+        'mormon','nephi','alma','mosiah','moroni','ether','helaman','doctrine','covenants','temple','temples',
+        'prophet','prophets','apostle','apostles','latter-day','lds','atonement','resurrection','revelation','prayer',
+        'pray','faith','repentance','baptism','ordinance','ordinances','priesthood','gospel','testimony','commandment','commandments',
+        'restoration','cowdery','brigham','monson','hinckley','quorum','missionary','missionaries','sacrament','tithing',
+        'celestial','terrestrial','telestial','exaltation','salvation','premortal','premortality','preexistence','spirit-world',
+        'patriarch','patriarchal','blessing','anointing','dispensation','zion','modesty','fasting','ministering','genealogy','familysearch',
+        'eternal','polygamy','kirtland','nauvoo','pioneer','pioneers'
     ]);
+
+    const FAITH_PHRASES = [
+        'church of jesus christ','latter day saints','first vision','plan of salvation','word of wisdom','relief society','book of mormon',
+        'doctrine and covenants','pearl of great price','holy ghost','heavenly father','spirit world','joseph smith','emma smith','oliver cowdery',
+        'brigham young','president nelson','russell m nelson','general conference','church history','church teaching','church calling','church mission',
+        'church ward','church bishop','quorum of the seventy','temple garment','temple endowment','temple sealing'
+    ];
 
     const HIGH_STAKES_TERMS = new Set([
         'suicide','suicidal','kill','dying','abuse','abused','violence','violent','emergency','diagnosis','medication','medicine','legal','lawyer',
@@ -99,15 +105,19 @@
     }
 
     function currentMode() {
-        return window.location.pathname.toLowerCase().endsWith('/pioneers.html') ? 'pioneers' : 'ask';
+        const path = window.location.pathname.toLowerCase();
+        if (path.endsWith('/pioneers.html')) return 'pioneers';
+        if (path.endsWith('/church-history.html')) return 'church-history';
+        return 'ask';
     }
 
     function classifyQuestion(query) {
         const tokens = words(query);
         if (tokens.some(function (word) { return HIGH_STAKES_TERMS.has(word); })) return 'high-stakes';
         if (currentMode() === 'pioneers') return 'pioneer-study';
+        if (currentMode() === 'church-history') return 'faith-study';
         if (tokens.some(function (word) { return FAITH_TERMS.has(word); })) return 'faith-study';
-        if (['church of jesus christ','latter day saints','first vision','plan of salvation','word of wisdom','relief society','book of mormon'].some(function (phrase) { return phraseMatch(query, phrase); })) return 'faith-study';
+        if (FAITH_PHRASES.some(function (phrase) { return phraseMatch(query, phrase); })) return 'faith-study';
         return 'general-knowledge';
     }
 
@@ -126,7 +136,9 @@
     }
 
     function verifiedIntentMatches(query, item) {
-        if (!item || item.verified !== true || !Array.isArray(item.intent) || !item.intent.length) return false;
+        if (!item || item.verified !== true) return false;
+        if (typeof item.intentTest === 'function') return item.intentTest(query) === true;
+        if (!Array.isArray(item.intent) || !item.intent.length) return false;
         const q = new Set(words(query));
         return item.intent.every(function (group) {
             const alternatives = Array.isArray(group) ? group : [group];
@@ -268,14 +280,21 @@
         return messages;
     }
 
-    async function request(messages, timeoutMs) {
+    async function request(messages, timeoutMs, profile) {
         const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
         const timer = controller ? window.setTimeout(function () { controller.abort(); }, timeoutMs) : null;
         try {
             const response = await fetch(PROXY_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ model: MODEL, messages: messages, temperature: 0.25, max_tokens: MAX_TOKENS }),
+                body: JSON.stringify({
+                    model: MODEL,
+                    messages: messages,
+                    focuschrist_page: currentMode(),
+                    focuschrist_profile: profile,
+                    temperature: 0.25,
+                    max_tokens: MAX_TOKENS
+                }),
                 signal: controller ? controller.signal : undefined
             });
             if (!response.ok) throw new Error('Study service returned ' + response.status);
@@ -390,7 +409,7 @@
 
         for (const timeout of [25000, 18000]) {
             try {
-                const researched = await request(messages, timeout);
+                const researched = await request(messages, timeout, profile);
                 let answer = researched.content;
                 answer = removeBoilerplateClosing(answer, profile);
                 answer = normalizeDisplayText(answer);

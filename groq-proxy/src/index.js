@@ -15,7 +15,9 @@ const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
 const GENERAL_ANSWER_FALLBACK = 'I could not complete that general answer just now. Please try again or rephrase the question.';
-const SOURCE_POLICY_VERSION = '2026-09-01.7';
+const SOURCE_POLICY_VERSION = '2026-09-01.8';
+const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
+const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
 const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
@@ -36,6 +38,7 @@ const KNOWN_FALSE_SOURCE_PATTERNS = [
 ];
 const REVIEWED_COLOR_CORRECTION = 'No. Doctrine and Covenants 76:31-34 does not mention red, white, black, or golden lights and does not assign colors to degrees of glory. Those verses discuss people who know God\'s power and then deny it. Doctrine and Covenants 18:15 teaches the joy of helping bring one soul to Jesus Christ; it does not describe colors or degrees of glory.';
 const GENERAL_RESEARCH_REQUIRED_PATTERN = /\b(?:current|currently|today|tonight|tomorrow|yesterday|latest|recent|news|weather|forecast|price|cost|rate|score|schedule|election|president|prime\s+minister|chief\s+executive|ceo|law|legal|court|tax|financial|finance|investment|stock|crypto|medical|medicine|medication|diagnosis|symptom|dose|suicide|self-harm|emergency|abuse|citation|cite|source|quotation|quote|statistics?|percentage)\b/i;
+const EXPLICIT_NON_PIONEER_PATTERN = /\b(?:biblical|bible|old\s+testament|new\s+testament|book\s+of\s+exodus|moses|israelites?|egypt|pharaoh|genesis|oregon\s+trail|american\s+history|secular\s+history|not\s+(?:lds|latter[- ]day\s+saint)|non[- ]pioneer)\b/i;
 
 function corsHeaders(origin) {
   return {
@@ -69,17 +72,18 @@ function extractSelectedPioneerName(messages) {
   return name.length >= 2 && name.length <= 120 ? name : '';
 }
 
-function classifyResearchScope(messages) {
+function classifyResearchScope(messages, requestedPage, requestedProfile) {
   const question = lastUserQuestion(messages);
-  const systemContext = (Array.isArray(messages) ? messages : [])
-    .filter((message) => message && message.role === 'system')
-    .map((message) => String(message.content || ''))
-    .join('\n');
-  const faith = FAITH_PATTERN.test(question)
-    || SCRIPTURE_REFERENCE_PATTERN.test(question)
-    || /QUESTION MODE:\s*(?:FAITH|LATTER-DAY SAINT|PIONEER)/i.test(systemContext);
+  const page = PAGE_CONTEXTS.has(requestedPage) ? requestedPage : 'ask';
+  const profile = PROFILE_CONTEXTS.has(requestedProfile) ? requestedProfile : '';
+  const faith = page === 'pioneers'
+    || page === 'church-history'
+    || profile === 'faith-study'
+    || profile === 'pioneer-study'
+    || FAITH_PATTERN.test(question)
+    || SCRIPTURE_REFERENCE_PATTERN.test(question);
   const selectedPioneerName = extractSelectedPioneerName(messages);
-  return { faith, question, selectedPioneer: Boolean(selectedPioneerName), selectedPioneerName };
+  return { faith, question, page, profile, selectedPioneer: Boolean(selectedPioneerName), selectedPioneerName };
 }
 
 function sanitizePayload(payload) {
@@ -89,15 +93,31 @@ function sanitizePayload(payload) {
         .slice(-16)
         .map((message) => ({ role: message.role, content: message.content.slice(0, 12000) }))
     : [];
-  const scope = classifyResearchScope(clientMessages);
-  const scopeInstruction = scope.selectedPioneer
-    ? `The visitor selected the pioneer ${scope.selectedPioneerName}. Search only site:churchofjesuschrist.org to corroborate that exact person's identity, company, dates, and journey. The gateway will separately supply the selected Tell My Story, Too biography.`
-    : scope.faith
-    ? 'For this request, search only site:churchofjesuschrist.org and use only ChurchofJesusChrist.org evidence.'
-    : 'Use web search to gather reliable evidence before answering.';
+  const scope = classifyResearchScope(clientMessages, payload.focuschrist_page, payload.focuschrist_profile);
+  const conversationMessages = clientMessages
+    .filter((message) => message.role === 'user' || message.role === 'assistant')
+    .slice(-8)
+    .map((message) => ({ role: message.role, content: message.content.slice(0, 3000) }));
+  let scopeInstruction;
+  if (scope.selectedPioneer) {
+    scopeInstruction = `The visitor selected the pioneer ${scope.selectedPioneerName}. Search only site:churchofjesuschrist.org to corroborate that exact person's identity, company, dates, and journey. The gateway will separately supply the selected Tell My Story, Too biography.`;
+  } else if (scope.page === 'pioneers' && EXPLICIT_NON_PIONEER_PATTERN.test(scope.question)) {
+    scopeInstruction = 'This request comes from the Pioneers page, but the visitor explicitly requested a biblical or non-pioneer subject. Answer that explicit subject directly. Use only ChurchofJesusChrist.org evidence for biblical or Latter-day Saint claims.';
+  } else if (scope.page === 'pioneers') {
+    scopeInstruction = 'This request comes from the focusChrist Pioneers page. Interpret ambiguous labels in Latter-day Saint pioneer and Church-history context. In particular, an unqualified Exodus means the 1846 exodus from Nauvoo, not the biblical Exodus. Search only site:churchofjesuschrist.org and distinguish established fact from recollection, tradition, and interpretation.';
+  } else if (scope.page === 'church-history') {
+    scopeInstruction = 'This request comes from the focusChrist Church History page. Interpret ambiguous questions and follow-ups within Latter-day Saint Church history. Search only site:churchofjesuschrist.org and prefer the official Church History and Saints source family.';
+  } else if (scope.faith) {
+    scopeInstruction = 'For this request, search only site:churchofjesuschrist.org and use only ChurchofJesusChrist.org evidence.';
+  } else {
+    scopeInstruction = 'Use web search to gather reliable evidence before answering.';
+  }
   const research = {
     model: RESEARCH_MODEL,
-    messages: [{ role: 'system', content: SERVER_RESEARCH_POLICY + '\n' + scopeInstruction }, ...clientMessages],
+    // Browser prompts are presentation hints, not server-owned source policy.
+    // Keeping them out of the research request prevents an Ask-page keyword
+    // from inheriting Pioneer scope and sharply reduces provider token use.
+    messages: [{ role: 'system', content: SERVER_RESEARCH_POLICY + '\n' + scopeInstruction }, ...conversationMessages],
   };
   return { research, scope };
 }
@@ -263,6 +283,16 @@ function requiresExternalGeneralResearch(question) {
   return GENERAL_RESEARCH_REQUIRED_PATTERN.test(String(question || ''));
 }
 
+function needsIdentityClarification(question) {
+  const value = String(question || '').toLowerCase().replace(/[^a-z0-9\s'-]/g, ' ').replace(/\s+/g, ' ').trim();
+  if (!/\b(?:when|year|die|died|death|killed|martyred|martyrdom|murdered)\b/.test(value)) return false;
+  if (/\bjoseph\s+smith\b/.test(value)) return false;
+  const bare = value.match(/\bjoseph(?:\s+([a-z'-]+))?/);
+  if (!bare) return false;
+  if (!bare[1]) return true;
+  return ['was', 'is', 'did', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom', 'murdered', 'get', 'got', 'be'].includes(bare[1]);
+}
+
 async function callGroq(apiKey, body, mayRetry = true) {
   const response = await fetch(GROQ_ENDPOINT, {
     method: 'POST',
@@ -379,6 +409,12 @@ export default {
     }
     const sanitized = sanitizePayload(payload || {});
     if (!sanitized.scope.question) return jsonResponse({ error: 'A user message is required' }, 400, origin);
+    if (!sanitized.scope.faith && needsIdentityClarification(sanitized.scope.question)) {
+      return jsonResponse(generalAnswerPayload(
+        'Which Joseph do you mean? Please include the last name or a little more context.',
+        'general-identity-clarification',
+      ), 200, origin);
+    }
     if (isReviewedColorRegression(sanitized.scope.question)) {
       return jsonResponse(reviewedColorPayload(), 200, origin);
     }
@@ -541,6 +577,7 @@ export {
   isOfficialChurchSource,
   isJsonValidationFailure,
   isTellMyStorySource,
+  needsIdentityClarification,
   parseVerifierJson,
   requiresExternalGeneralResearch,
   sanitizePayload,

@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.7';
+    const PIONEER_POLICY_VERSION = '2026-09-01.8';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -165,7 +165,14 @@
             const response = await fetch(PROXY_URL, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ model: MODEL, messages: messages, temperature: 0.2, max_tokens: 1200 }),
+                body: JSON.stringify({
+                    model: MODEL,
+                    messages: messages,
+                    focuschrist_page: 'pioneers',
+                    focuschrist_profile: 'pioneer-study',
+                    temperature: 0.2,
+                    max_tokens: 1200
+                }),
                 signal: controller ? controller.signal : undefined
             });
             if (!response.ok) throw new Error('Pioneer study service returned ' + response.status);
