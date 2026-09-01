@@ -363,7 +363,7 @@ export default {
         }
       });
       const evidence = sanitized.scope.selectedPioneer
-        ? [tellMyStoryEvidence, ...officialEvidence].filter(Boolean)
+        ? [tellMyStoryEvidence].filter(Boolean)
         : (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence);
       if (!draft || !evidence.length) {
         return jsonResponse(fallbackPayload('research-insufficient-evidence'), 200, origin);
@@ -372,8 +372,8 @@ export default {
       const selectedPioneerPolicy = sanitized.scope.selectedPioneer ? [
         `The visitor explicitly selected ${sanitized.scope.selectedPioneerName}.`,
         'The Tell My Story, Too entry is an allowed biographical source for details actually contained in that entry. Do not reject those details merely because an official Church page does not duplicate them.',
-        'Center the answer on the selected book entry. Use official Church evidence, when supplied, to corroborate identity, company, dates, and journey.',
-        'If the book and an official record disagree, either state the discrepancy with both source positions or omit the disputed detail. Never silently choose one date or fact and imply the sources agree.',
+        'Center the answer on the selected book entry and support every biographical detail from that entry.',
+        'The gateway may display a separate official Church profile as a corroborating record. Do not add facts from that profile unless it is included in the evidence below.',
         'Attribute diary excerpts, descendant recollections, family histories, and miraculous accounts to the people or source traditions named in the entry. Do not present them as official Church declarations.',
         'Produce a concise summary rather than reproducing long passages. The final source_indexes must include the Tell My Story, Too source.',
       ].join('\n') : 'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.';
@@ -436,7 +436,13 @@ export default {
           message: { role: 'assistant', content: answer },
           finish_reason: 'stop',
         }],
-        focuschrist_sources: selectedEvidence.map((source) => ({ text: source.title || 'Source', url: source.url })),
+        focuschrist_sources: [
+          ...selectedEvidence,
+          ...(sanitized.scope.selectedPioneer ? officialEvidence : []),
+        ].map((source) => ({
+          text: source.title || 'Source',
+          url: source.url,
+        })),
         focuschrist_source_integrity_verified: true,
         focuschrist_source_policy: SOURCE_POLICY_VERSION,
         focuschrist_gateway_mode: 'retrieval-researched-and-verified',
