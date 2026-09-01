@@ -954,23 +954,43 @@
     function hasExplicitCompetingSubject(original, priorEntry, antecedent) {
         const priorText = normalize((priorEntry && priorEntry.followup && priorEntry.followup.anchor) || '')
             + ' ' + normalize(antecedent);
-        const namedPhrases = String(original || '').match(/\b[A-Z][a-z]+(?:\s+(?:[A-Z][a-z]+|[A-Z]\.)){1,3}\b/g) || [];
-        const competingName = namedPhrases.some(function (phrase) {
+        const raw = String(original || '');
+        const candidates = (raw.match(/\b[A-Z][a-z]+(?:\s+(?:[A-Z][a-z]+|[A-Z]\.)){1,3}\b/g) || [])
+            .map(function (phrase) { return { phrase: phrase, anchored: false }; });
+
+        function addAnchoredCandidates(pattern) {
+            let match;
+            while ((match = pattern.exec(raw)) !== null) {
+                candidates.push({ phrase: match[1], anchored: true });
+            }
+        }
+
+        // A competing person may be written in any case. Only accept lowercase
+        // phrases in person-like grammatical positions so ordinary place and topic
+        // words do not become identity switches.
+        addAnchoredCandidates(/[,\u2013\u2014-]\s*([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){1,3})\s*[?.!]*$/gi);
+        addAnchoredCandidates(/\b(?:about|who is|who was|tell me about)\s+([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){1,3})\s*[?.!]*$/gi);
+        addAnchoredCandidates(/\b(?:did|does|do|was|is|were|are|has|had|can|could|would|will)\s+([a-z][a-z'.-]+(?:\s+[a-z][a-z'.-]+){1,3})\s+(?:die|died|say|said|teach|taught|write|wrote|live|lived|serve|served|become|became|kill|killed)\b/gi);
+
+        const competingName = candidates.some(function (candidate) {
+            const phrase = candidate.phrase;
             const normalizedPhrase = normalize(phrase);
             if (!normalizedPhrase || (' ' + priorText + ' ').includes(' ' + normalizedPhrase + ' ')) return false;
 
-            // Capitalization alone cannot establish a competing person: Church-history
-            // questions frequently contain multiword places and titles such as Carthage
-            // Jail or Kirtland Safety Society. Require person-like grammatical placement
-            // and reject common non-person terminal nouns.
             const words = normalizedPhrase.split(' ');
+            const first = words[0];
             const terminal = words[words.length - 1];
+            if (['with', 'in', 'at', 'on', 'from', 'to', 'for', 'of', 'by', 'he', 'him', 'his',
+                'she', 'her', 'they', 'them', 'their', 'it', 'its', 'the', 'a', 'an', 'this', 'that'].includes(first)) return false;
             if (['jail', 'temple', 'church', 'society', 'company', 'companies', 'valley', 'lake',
                 'river', 'mountain', 'meadows', 'priesthood', 'vision', 'history', 'translation',
                 'massacre', 'university', 'school', 'book', 'testament'].includes(terminal)) return false;
 
+            if (candidate.anchored) return true;
+
+            // Title case alone cannot establish a competing person. Require
+            // person-like placement for legacy Title-Case candidates too.
             const escaped = phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-            const raw = String(original || '');
             const appositive = new RegExp('[,\\u2013\\u2014-]\\s*' + escaped + '\\s*[?.!]*$', 'i').test(raw);
             const grammaticalSubject = new RegExp('\\b(?:did|does|do|was|is|were|are|has|had|can|could|would|will)\\s+'
                 + escaped + '\\s+\\w+', 'i').test(raw);

@@ -307,6 +307,19 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         && !renderedMessages.at(-1).text.includes('5:00 p.m.'),
         'explicit Abraham Lincoln subject must switch from Joseph Smith to the reviewed zero-Worker answer');
 
+    window.focusChristCancelAskRequests();
+    const beforeLowercasePerson = fetchCalls;
+    dom.userInput.value = 'What date did Joseph Smith die?';
+    await window.sendMessage();
+    dom.userInput.value = 'Do we know what time he died, john adams?';
+    await window.sendMessage();
+    const lowercasePersonQuery = requestBodies.at(-1).messages.at(-1).content;
+    assert(fetchCalls === beforeLowercasePerson + 1
+        && lowercasePersonQuery.includes('john adams')
+        && !lowercasePersonQuery.includes('Joseph Smith death died')
+        && !renderedMessages.at(-1).text.includes('5:00 p.m.'),
+        'lowercase competing person must not inherit Joseph Smith reviewed context');
+
     for (const topicQuestion of questionContracts.contracts.ask_topics.values) {
         const topicResult = await window.focusChristStudyAskV3(topicQuestion, '');
         assert(topicResult && String(topicResult.answer || '').trim()

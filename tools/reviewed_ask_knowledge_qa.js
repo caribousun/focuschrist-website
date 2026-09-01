@@ -268,17 +268,19 @@ const unsupportedJosephFollowup = registry.resolveFollowup('What was his favorit
 });
 assert(unsupportedJosephFollowup.resolved === true && unsupportedJosephFollowup.genericContext === true,
     'unsupported Joseph follow-up must remain in contextual research instead of forcing a local variant');
-for (const competingQuestion of [
-    'When did he die—Abraham Lincoln?',
-    'Do we know what time he died, Abraham Lincoln?'
+for (const [competingQuestion, expectedEntryId] of [
+    ['When did he die—Abraham Lincoln?', 'general-abraham-lincoln-death-1865'],
+    ['Do we know what time he died, Abraham Lincoln?', 'general-abraham-lincoln-death-1865'],
+    ['Do we know what time he died, john adams?', null],
+    ['when did he die—george washington?', null],
+    ['did john adams die?', null]
 ]) {
     const explicitSubject = registry.resolveFollowup(competingQuestion, {
         profile: 'ask',
-        history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
+        history: [{ role: 'user', content: 'What date did Joseph Smith die?', contextEntryId: 'joseph-smith-death-1844' }]
     });
-    assert(explicitSubject.resolved === false
-        && explicitSubject.entryId === 'general-abraham-lincoln-death-1865',
-        'explicit current person failed to switch from Joseph Smith to the reviewed Lincoln subject: ' + competingQuestion);
+    assert(explicitSubject.resolved === false && explicitSubject.entryId === expectedEntryId,
+        'explicit current person inherited Joseph Smith context: ' + competingQuestion);
 }
 [
     ['When did Joseph F. Smith die?', 'ask'],
