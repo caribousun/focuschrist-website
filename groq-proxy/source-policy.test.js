@@ -1,4 +1,5 @@
 import {
+  GENERAL_ANSWER_FALLBACK,
   SOURCE_INTEGRITY_FALLBACK,
   classifyResearchScope,
   collectSourceEvidence,
@@ -11,6 +12,7 @@ import {
   isJsonValidationFailure,
   isTellMyStorySource,
   parseVerifierJson,
+  requiresExternalGeneralResearch,
   sanitizePayload,
 } from './src/index.js';
 
@@ -30,6 +32,12 @@ assert(clean.research.messages[0].content.includes('search only site:churchofjes
 const general = sanitizePayload({ messages: [{ role: 'user', content: 'Why is the daytime sky blue?' }] });
 assert(!general.scope.faith && !general.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
   'ordinary questions must not be forced into the Church-only domain');
+assert(!requiresExternalGeneralResearch('What color is the daytime sky?'),
+  'stable low-risk general knowledge must remain answerable through AI consensus when retrieval returns no evidence');
+assert(requiresExternalGeneralResearch('What is the weather today?'),
+  'current general questions must still require external research');
+assert(!GENERAL_ANSWER_FALLBACK.includes('Gospel Library'),
+  'a general-question failure must never redirect the visitor to the Gospel Library');
 
 const evidence = collectSourceEvidence({
   executed_tools: [{

@@ -14,7 +14,8 @@ const ALLOWED_ORIGINS = new Set([
 const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
-const SOURCE_POLICY_VERSION = '2026-09-01.5';
+const GENERAL_ANSWER_FALLBACK = 'I could not complete that general answer just now. Please try again or rephrase the question.';
+const SOURCE_POLICY_VERSION = '2026-09-01.6';
 const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
@@ -34,6 +35,7 @@ const KNOWN_FALSE_SOURCE_PATTERNS = [
   /(?:red|black|golden)\s+light.{0,180}(?:D&C|Doctrine\s+and\s+Covenants)\s+76.{0,100}(?:represent|symbolize|mean|celestial|terrestrial|telestial)/i,
 ];
 const REVIEWED_COLOR_CORRECTION = 'No. Doctrine and Covenants 76:31-34 does not mention red, white, black, or golden lights and does not assign colors to degrees of glory. Those verses discuss people who know God\'s power and then deny it. Doctrine and Covenants 18:15 teaches the joy of helping bring one soul to Jesus Christ; it does not describe colors or degrees of glory.';
+const GENERAL_RESEARCH_REQUIRED_PATTERN = /\b(?:current|currently|today|tonight|tomorrow|yesterday|latest|recent|news|weather|forecast|price|cost|rate|score|schedule|election|president|prime\s+minister|chief\s+executive|ceo|law|legal|court|tax|financial|finance|investment|stock|crypto|medical|medicine|medication|diagnosis|symptom|dose|suicide|self-harm|emergency|abuse|citation|cite|source|quotation|quote|statistics?|percentage)\b/i;
 
 function corsHeaders(origin) {
   return {
@@ -257,6 +259,10 @@ function reviewedColorPayload() {
   };
 }
 
+function requiresExternalGeneralResearch(question) {
+  return GENERAL_RESEARCH_REQUIRED_PATTERN.test(String(question || ''));
+}
+
 async function callGroq(apiKey, body, mayRetry = true) {
   const response = await fetch(GROQ_ENDPOINT, {
     method: 'POST',
@@ -282,15 +288,16 @@ async function callGroq(apiKey, body, mayRetry = true) {
   return { response, data };
 }
 
-function fallbackPayload(mode, extra) {
+function fallbackPayload(mode, extra, scope) {
+  const general = scope && !scope.faith && !scope.selectedPioneer;
   return {
     id: 'focuschrist-source-policy',
     choices: [{
       index: 0,
-      message: { role: 'assistant', content: SOURCE_INTEGRITY_FALLBACK },
+      message: { role: 'assistant', content: general ? GENERAL_ANSWER_FALLBACK : SOURCE_INTEGRITY_FALLBACK },
       finish_reason: 'content_filter',
     }],
-    focuschrist_sources: [{
+    focuschrist_sources: general ? [] : [{
       text: 'Official Gospel Library',
       url: 'https://www.churchofjesuschrist.org/study?lang=eng&platform=web',
     }],
@@ -299,6 +306,37 @@ function fallbackPayload(mode, extra) {
     focuschrist_gateway_mode: mode,
     ...(extra || {}),
   };
+}
+
+async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
+  if (!draft || requiresExternalGeneralResearch(scope.question)) return null;
+  const prompt = [
+    'You are the final checker for a low-risk, stable general-knowledge answer. Return one JSON object only.',
+    'This path is never for current events, weather, prices, schedules, politics, medical, legal, financial, safety, statistics, quotations, citations, or source-specific questions.',
+    'Decide whether the question is ordinary, stable, low-risk general knowledge that can be answered accurately without live retrieval.',
+    'If it is, correct the draft if necessary and set approved true. Keep the answer concise, direct, nonreligious unless the user asked about religion, and free of invented citations or links.',
+    'If it requires current or specialized evidence, set approved false and return an empty answer.',
+    'Schema: {"approved":boolean,"answer":string}',
+    '',
+    `QUESTION:\n${scope.question}`,
+    '',
+    `DRAFT:\n${draft}`,
+  ].join('\n');
+  const result = await callGroq(apiKey, {
+    model: VERIFIER_MODEL,
+    messages: [{ role: 'user', content: prompt }],
+    temperature: 0,
+    max_tokens: 700,
+    response_format: { type: 'json_object' },
+  });
+  if (!result.response.ok) return null;
+  const content = result.data && result.data.choices && result.data.choices[0]
+    ? result.data.choices[0].message.content
+    : '';
+  const verdict = parseVerifierJson(content);
+  const answer = String(verdict && verdict.answer || '').trim();
+  if (!verdict || verdict.approved !== true || !answer || hasKnownFalseClaim(answer)) return null;
+  return answer;
 }
 
 function providerDiagnostic(result) {
@@ -330,7 +368,7 @@ export default {
       return jsonResponse(reviewedColorPayload(), 200, origin);
     }
     if (!env || !env.GROQ_KEY_NEW) {
-      return jsonResponse(fallbackPayload('research-unavailable'), 200, origin);
+      return jsonResponse(fallbackPayload('research-unavailable', null, sanitized.scope), 200, origin);
     }
 
     try {
@@ -343,6 +381,7 @@ export default {
         return jsonResponse(fallbackPayload(
           limited ? 'research-rate-limited' : 'research-provider-error',
           providerDiagnostic(researchResult),
+          sanitized.scope,
         ), 200, origin);
       }
       const researchMessage = researchResult.response.ok && researchResult.data && researchResult.data.choices && researchResult.data.choices[0]
@@ -365,8 +404,25 @@ export default {
       const evidence = sanitized.scope.selectedPioneer
         ? [tellMyStoryEvidence].filter(Boolean)
         : (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence);
+      if (draft && !evidence.length && !sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
+        const generalAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, draft);
+        if (generalAnswer) {
+          return jsonResponse({
+            id: 'focuschrist-general-ai-consensus',
+            choices: [{
+              index: 0,
+              message: { role: 'assistant', content: generalAnswer },
+              finish_reason: 'stop',
+            }],
+            focuschrist_sources: [],
+            focuschrist_source_integrity_verified: false,
+            focuschrist_source_policy: SOURCE_POLICY_VERSION,
+            focuschrist_gateway_mode: 'general-ai-consensus',
+          }, 200, origin);
+        }
+      }
       if (!draft || !evidence.length) {
-        return jsonResponse(fallbackPayload('research-insufficient-evidence'), 200, origin);
+        return jsonResponse(fallbackPayload('research-insufficient-evidence', null, sanitized.scope), 200, origin);
       }
 
       const verifierPrompt = sanitized.scope.selectedPioneer ? [
@@ -411,7 +467,7 @@ export default {
         });
       }
       if (!verifierResult.response.ok) {
-        return jsonResponse(fallbackPayload('verification-provider-error', providerDiagnostic(verifierResult)), 200, origin);
+        return jsonResponse(fallbackPayload('verification-provider-error', providerDiagnostic(verifierResult), sanitized.scope), 200, origin);
       }
       const verifierContent = verifierResult.data && verifierResult.data.choices && verifierResult.data.choices[0]
         ? verifierResult.data.choices[0].message.content
@@ -434,7 +490,7 @@ export default {
             ? verdict.source_indexes.slice(0, 6)
             : [],
           focuschrist_verifier_answer_length: verdict ? String(verdict.answer || '').length : 0,
-        }), 200, origin);
+        }, sanitized.scope), 200, origin);
       }
 
       return jsonResponse({
@@ -456,12 +512,13 @@ export default {
         focuschrist_gateway_mode: 'retrieval-researched-and-verified',
       }, 200, origin);
     } catch (_error) {
-      return jsonResponse(fallbackPayload('research-exception'), 200, origin);
+      return jsonResponse(fallbackPayload('research-exception', null, sanitized.scope), 200, origin);
     }
   },
 };
 
 export {
+  GENERAL_ANSWER_FALLBACK,
   SOURCE_INTEGRITY_FALLBACK,
   classifyResearchScope,
   collectSourceEvidence,
@@ -475,5 +532,6 @@ export {
   isJsonValidationFailure,
   isTellMyStorySource,
   parseVerifierJson,
+  requiresExternalGeneralResearch,
   sanitizePayload,
 };

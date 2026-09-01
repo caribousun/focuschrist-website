@@ -33,6 +33,9 @@ jobs:
       - name: Run focusChrist hardened experience QA
         run: python tools/hardened_experience_qa.py
 
+      - name: Run Pioneer local-first and site-wide answer routing QA
+        run: python tools/pioneer_local_first_qa.py
+
       - name: Run focusChrist production hardening QA
         run: python tools/production_hardening_qa.py
 
