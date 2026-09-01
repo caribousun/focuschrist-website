@@ -349,9 +349,9 @@ export default {
         ? researchResult.data.choices[0].message
         : null;
       const researchDraft = researchMessage ? String(researchMessage.content || '').trim() : '';
-      const draft = tellMyStoryEvidence
-        ? `Write a concise, accurate biographical summary of ${sanitized.scope.selectedPioneerName} from the supplied Tell My Story, Too entry. Center the selected book entry, include its principal journey experiences, preserve attribution for recollections, and use official records only as corroboration.`
-        : researchDraft;
+      const draft = researchDraft || (tellMyStoryEvidence
+        ? `Write a concise, accurate biographical summary of ${sanitized.scope.selectedPioneerName} from the supplied Tell My Story, Too entry.`
+        : '');
       const allEvidence = collectSourceEvidence(researchMessage);
       const officialEvidence = [];
       const officialUrls = new Set();
