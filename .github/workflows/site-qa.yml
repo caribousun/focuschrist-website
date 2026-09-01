@@ -108,6 +108,9 @@ jobs:
       - name: Validate Pioneer experience JavaScript
         run: node --check pioneer-experience.js
 
+      - name: Validate live production Ask gate
+        run: node --check tools/live_production_ask_qa.js
+
       - name: Verify deployed production Ask contracts
         if: github.event_name == 'push'
         run: node tools/live_production_ask_qa.js
