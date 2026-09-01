@@ -274,4 +274,45 @@ try {
   globalThis.fetch = originalFetch;
 }
 
+const limitedBodies = [];
+const expandedLowRiskAnswer = repeatedSubstantiveAnswer('historical', 50);
+globalThis.fetch = async (_url, options) => {
+  const body = JSON.parse(options.body);
+  limitedBodies.push(body);
+  if (limitedBodies.length <= 2) {
+    return new Response(JSON.stringify({
+      error: { code: 'rate_limit_exceeded', message: 'Rate limit reached. Please try again in 0s.' },
+    }), { status: 429, headers: { 'Content-Type': 'application/json', 'retry-after': '0' } });
+  }
+  const answer = limitedBodies.length === 3
+    ? 'Abraham Lincoln died on April 15, 1865.'
+    : expandedLowRiskAnswer;
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: JSON.stringify({ approved: true, answer }) } }],
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+try {
+  const limitedResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'general-knowledge',
+      messages: [{ role: 'user', content: 'What date did Abraham Lincoln die?' }],
+    }),
+  }), { GROQ_KEY_NEW: 'test-key' });
+  const limitedPayload = await limitedResponse.json();
+  assert(limitedBodies.length === 4,
+    'a research rate limit plus short low-risk answer must perform one research retry and one depth expansion');
+  assert(limitedBodies[3].messages[0].content.includes('previous approved answer was too brief')
+    && limitedBodies[3].messages[0].content.includes('at least 45 words'),
+    'the low-risk expansion retry must carry the numeric depth contract');
+  assert(limitedPayload.focuschrist_gateway_mode === 'general-ai-low-risk'
+    && limitedPayload.choices[0].message.content === expandedLowRiskAnswer
+    && limitedPayload.focuschrist_answer_word_count >= 45,
+    'stable general knowledge must remain substantive when the research model is rate-limited');
+} finally {
+  globalThis.fetch = originalFetch;
+}
+
 console.log('Gateway source policy QA PASS');
