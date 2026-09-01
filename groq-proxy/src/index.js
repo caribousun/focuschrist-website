@@ -15,7 +15,7 @@ const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
 const GENERAL_ANSWER_FALLBACK = 'I could not complete that general answer just now. Please try again or rephrase the question.';
-const SOURCE_POLICY_VERSION = '2026-09-01.12';
+const SOURCE_POLICY_VERSION = '2026-09-01.13';
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
 const SERVER_RESEARCH_POLICY = [
@@ -250,7 +250,42 @@ function guardVerifiedAnswer(answer, evidence, scope, approved) {
   if (scope.selectedPioneer && !evidence.some(isTellMyStorySource)) return SOURCE_INTEGRITY_FALLBACK;
   if (scope.faith && !scope.selectedPioneer && !evidence.some(isOfficialChurchSource)) return SOURCE_INTEGRITY_FALLBACK;
   if (hasKnownFalseClaim(text)) return SOURCE_INTEGRITY_FALLBACK;
+  if (!answerMeetsSubstanceContract(text, scope)) return SOURCE_INTEGRITY_FALLBACK;
   return text;
+}
+
+function answerSubstanceRequirements(scope) {
+  if (scope && scope.selectedPioneer) return { minimumWords: 90, minimumSentences: 3, minimumParagraphs: 2 };
+  if (scope && scope.faith) return { minimumWords: 70, minimumSentences: 3, minimumParagraphs: 1 };
+  return { minimumWords: 45, minimumSentences: 2, minimumParagraphs: 1 };
+}
+
+function answerMeetsSubstanceContract(answer, scope) {
+  const text = String(answer || '').replace(/\s+/g, ' ').trim();
+  const original = String(answer || '').trim();
+  const requirements = answerSubstanceRequirements(scope);
+  const words = text ? text.split(' ').filter(Boolean).length : 0;
+  const sentences = countCompleteSentences(text);
+  const paragraphs = original ? original.split(/\n\s*\n/).filter((value) => value.trim()).length : 0;
+  return words >= requirements.minimumWords
+    && sentences >= requirements.minimumSentences
+    && paragraphs >= requirements.minimumParagraphs;
+}
+
+function countCompleteSentences(answer) {
+  const text = String(answer || '').replace(/\s+/g, ' ').trim();
+  if (!text) return 0;
+  const segments = typeof Intl !== 'undefined' && typeof Intl.Segmenter === 'function'
+    ? Array.from(new Intl.Segmenter('en', { granularity: 'sentence' }).segment(text), (item) => item.segment)
+    : (text
+        .replace(/\b(?:Mr|Mrs|Ms|Dr|Prof|Rev|Sr|Jr|St|Mt|Gen|Gov|Pres|No|vs|etc)\./gi, (value) => value.slice(0, -1))
+        .replace(/\b[ap]\.m\./gi, (value) => value.replace(/\./g, ''))
+        .match(/[^.!?]+[.!?][”"')\]]?/g) || []);
+  return segments.filter((segment) => {
+    const value = segment.trim();
+    const sentenceWords = value.match(/[\p{L}\p{N}]+(?:['’][-\p{L}\p{N}]+)*/gu) || [];
+    return sentenceWords.length >= 3 && /[.!?][”"')\]]?$/.test(value);
+  }).length;
 }
 
 function hasKnownFalseClaim(text) {
@@ -346,7 +381,7 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
     'You are the final checker for a low-risk, stable general-knowledge answer. Return one JSON object only.',
     'This path is never for current events, weather, prices, schedules, politics, medical, legal, financial, safety, statistics, quotations, citations, or source-specific questions.',
     'Decide whether the question is ordinary, stable, low-risk general knowledge that can be answered accurately without live retrieval.',
-    'If it is, answer directly or correct the draft if one is supplied, then set approved true. Give a complete answer: even a simple fact must include the direct answer and at least one useful context sentence. Keep it direct, nonreligious unless the user asked about religion, and free of invented citations or links.',
+    'If it is, answer directly or correct the draft if one is supplied, then set approved true. Give at least 45 words and two complete sentences: state the direct answer first, then add useful context that explains the fact. Keep it direct, nonreligious unless the user asked about religion, and free of invented citations or links.',
     'If it requires current or specialized evidence, set approved false and return an empty answer.',
     'Schema: {"approved":boolean,"answer":string}',
     '',
@@ -367,7 +402,8 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
     : '';
   const verdict = parseVerifierJson(content);
   const answer = String(verdict && verdict.answer || '').trim();
-  if (!verdict || verdict.approved !== true || !answer || hasKnownFalseClaim(answer)) return null;
+  if (!verdict || verdict.approved !== true || !answer || hasKnownFalseClaim(answer)
+    || !answerMeetsSubstanceContract(answer, scope)) return null;
   return answer;
 }
 
@@ -487,7 +523,7 @@ export default {
         'You are a strict evidence verifier. Return one JSON object only.',
         'Evaluate the draft against the supplied source excerpts. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence.',
         'Repair the draft into a direct, complete answer using the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
-        'For a simple fact, give the answer plus the context needed to understand it. For a nuanced question, normally give two to five short paragraphs. Never return a one- or two-word answer.',
+        'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give at least 70 words and three complete sentences. A nuanced question normally needs two to five short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
         'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
         'Set approved true whenever the evidence supports a useful answer, even if unsupported parts of the draft must be removed. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
@@ -521,10 +557,40 @@ export default {
       const verifierContent = verifierResult.data && verifierResult.data.choices && verifierResult.data.choices[0]
         ? verifierResult.data.choices[0].message.content
         : '';
-      const verdict = parseVerifierJson(verifierContent);
-      const indexes = verdict && Array.isArray(verdict.source_indexes)
+      let verdict = parseVerifierJson(verifierContent);
+      let indexes = verdict && Array.isArray(verdict.source_indexes)
         ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
         : [];
+      if (verdict && verdict.approved === true && indexes.length
+        && !answerMeetsSubstanceContract(verdict.answer, sanitized.scope)) {
+        const requirements = answerSubstanceRequirements(sanitized.scope);
+        const expansionPrompt = [
+          verifierPrompt,
+          '',
+          'Your previous approved answer did not meet the required answer depth.',
+          `Rewrite it using at least ${requirements.minimumWords} words, ${requirements.minimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s).`,
+          'State the direct answer first. Add only useful explanatory context supported by the supplied evidence; do not pad, repeat, speculate, or add facts from memory.',
+          `PREVIOUS ANSWER:\n${String(verdict.answer || '').trim()}`,
+          'Return the complete JSON object again with approved, answer, and source_indexes.',
+        ].join('\n');
+        const expansionResult = await callGroq(env.GROQ_KEY_NEW, {
+          ...verifierBody,
+          messages: [{ role: 'user', content: expansionPrompt }],
+          max_tokens: sanitized.scope.selectedPioneer ? 1400 : 1800,
+        });
+        if (expansionResult.response.ok) {
+          const expansionContent = expansionResult.data && expansionResult.data.choices && expansionResult.data.choices[0]
+            ? expansionResult.data.choices[0].message.content
+            : '';
+          const expansionVerdict = parseVerifierJson(expansionContent);
+          if (expansionVerdict) {
+            verdict = expansionVerdict;
+            indexes = Array.isArray(verdict.source_indexes)
+              ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
+              : [];
+          }
+        }
+      }
       const selectedEvidence = indexes.map((index) => evidence[index - 1]);
       const answer = guardVerifiedAnswer(
         verdict && verdict.answer,
@@ -559,6 +625,7 @@ export default {
         focuschrist_source_integrity_verified: true,
         focuschrist_source_policy: SOURCE_POLICY_VERSION,
         focuschrist_gateway_mode: 'retrieval-researched-and-verified',
+        focuschrist_answer_word_count: answer.split(/\s+/).filter(Boolean).length,
       }, 200, origin);
     } catch (_error) {
       return jsonResponse(fallbackPayload('research-exception', null, sanitized.scope), 200, origin);
@@ -569,6 +636,8 @@ export default {
 export {
   GENERAL_ANSWER_FALLBACK,
   SOURCE_INTEGRITY_FALLBACK,
+  answerMeetsSubstanceContract,
+  answerSubstanceRequirements,
   classifyResearchScope,
   collectSourceEvidence,
   extractSelectedPioneerName,

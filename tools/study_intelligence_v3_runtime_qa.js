@@ -67,7 +67,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official source', url: 'https://www.churchofjesuschrist.org/study/scriptures' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.12',
+                focuschrist_source_policy: '2026-09-01.13',
             };
         },
     };
@@ -85,7 +85,7 @@ global.fetch = async (_url, options) => {
                     focuschrist_sources: [],
                     focuschrist_source_integrity_verified: false,
                     focuschrist_gateway_mode: 'research-rate-limited',
-                    focuschrist_source_policy: '2026-09-01.12'
+                    focuschrist_source_policy: '2026-09-01.13'
                 };
             }
         };
