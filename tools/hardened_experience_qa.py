@@ -28,6 +28,8 @@ def main() -> int:
     ask_css = read("ask-experience.css", errors)
     pioneer_css = read("pioneer-experience.css", errors)
     pioneer = read("pioneer-experience.js", errors)
+    pioneer_page = read("pioneers.html", errors)
+    pioneer_book = read("tell-my-story-too.txt", errors)
     journey = read("study-journey.js", errors)
     sources = read("study-source-router.js", errors)
     grounded = read("study-intelligence-v3.js", errors)
@@ -48,8 +50,8 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260901-3",
-        "study-intelligence-v3.js?v=20260901-3",
+        "study-journey.js?v=20260901-4",
+        "study-intelligence-v3.js?v=20260901-4",
         "window.focusChristSourceIntegrity",
         "unreviewed-source-dependent-generation",
         "data-focuschrist-study-intelligence-v3",
@@ -96,7 +98,7 @@ def main() -> int:
     ), errors)
 
     require(pioneer, "pioneer-experience.js", (
-        "PIONEER_POLICY_VERSION = '2026-09-01.3'",
+        "PIONEER_POLICY_VERSION = '2026-09-01.4'",
         "function ownDisclosureEvent(event)",
         "event.stopImmediatePropagation()",
         "function installDisclosureOwnership()",
@@ -106,7 +108,30 @@ def main() -> int:
         "75000",
         "renderPioneerChoices",
         "answerSelectedPioneer",
+        "cleanLocalPioneerStory",
+        "reviewed-local-book-entry",
+        "if (localAnswer) return",
+        "requestIdleCallback",
     ), errors)
+
+    require(pioneer_page, "pioneers.html", (
+        "const nextStory = storyPosition >= 0 ? storyStarts[storyPosition + 1] : null",
+        "const storyEnd = nextStory ? nextStory.index : lines.length",
+    ), errors)
+
+    selected_start = pioneer.find("async function answerSelectedPioneer")
+    selected_end = pioneer.find("function renderPioneerChoices", selected_start)
+    selected_flow = pioneer[selected_start:selected_end]
+    local_position = selected_flow.find("showLocalPioneerStory")
+    ai_position = selected_flow.find("requestPioneerAI")
+    if local_position < 0 or ai_position < 0 or local_position > ai_position:
+        errors.append("selected pioneer flow must render a local book entry before any AI request")
+
+    smith_start = pioneer_book.find("ELIZABETH SMITH")
+    smith_page_two = pioneer_book.find("(Elizabeth Smith - Page 2)", smith_start)
+    smith_page_three = pioneer_book.find("(Elizabeth Smith - Page 3)", smith_start)
+    if smith_start < 0 or smith_page_two < 0 or smith_page_three < 0:
+        errors.append("Tell My Story, Too must retain all three indexed Elizabeth Smith biography pages")
 
     require(journey, "study-journey.js", (
         "#ask-question",
@@ -119,7 +144,7 @@ def main() -> int:
         "requestAnimationFrame",
         "window.addEventListener('load'",
         "loadVerifiedSourceRouter",
-        "study-source-router.js?v=20260901-3",
+        "study-source-router.js?v=20260901-4",
         "loadArtStudyRouter",
         "art-study-router.js?v=20260830-3",
         "loadWatchStudyEnrichment",
@@ -141,7 +166,7 @@ def main() -> int:
         "data-focuschrist-source-paths",
         "Official Church search",
         "BYU educational",
-        "study-intelligence-v3.js?v=20260901-3",
+        "study-intelligence-v3.js?v=20260901-4",
         "document.readyState === 'loading'",
         "data-focuschrist-source-router-ready",
         "oliver cowdery",

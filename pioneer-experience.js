@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.3';
+    const PIONEER_POLICY_VERSION = '2026-09-01.4';
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -341,11 +341,51 @@
         ].join('\n');
     }
 
+    function cleanLocalPioneerStory(choice) {
+        const name = String(choice && choice.name || '').trim();
+        let story = String(choice && (choice.fullStory || choice.story) || '').trim();
+        if (!name || !story) return '';
+        const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const continuationHeader = new RegExp('^\\s*\\(' + escapedName + '\\s*-\\s*Page\\s+\\d+\\)\\s*$', 'gim');
+        story = story
+            .replace(/--- PAGE \d+ ---/g, '')
+            .replace(/This biographical sketch comes from[\s\S]*?non-commercial purposes\./gi, '')
+            .replace(continuationHeader, '')
+            .replace(/^\s*\d+\s*$/gm, '')
+            .replace(/\n{3,}/g, '\n\n')
+            .trim();
+        return story ? 'From Tell My Story, Too:\n\n' + story : '';
+    }
+
+    function showLocalPioneerStory(choice, originalQuestion) {
+        const localStory = cleanLocalPioneerStory(choice);
+        if (!localStory) return null;
+        const selectedName = String(choice.name || '').trim();
+        const question = originalQuestion && String(originalQuestion).trim()
+            ? String(originalQuestion).trim() + ' — Selected: ' + selectedName
+            : 'Selected: ' + selectedName;
+        window.currentPioneerSelection = {
+            name: selectedName,
+            fullStory: String(choice.fullStory || choice.story || '')
+        };
+        document.documentElement.setAttribute('data-focuschrist-pioneer-answer-mode', 'reviewed-local-book-entry');
+        const answer = window.addMessage(localStory, false, [{
+            text: 'Tell My Story, Too — ' + selectedName,
+            url: 'tell-my-story-too.txt'
+        }]);
+        rememberExchange(question, localStory.slice(0, 6000));
+        setConversationMode(true);
+        positionAnswer(answer);
+        return answer;
+    }
+
     async function answerSelectedPioneer(choice, originalQuestion) {
         if (!choice || !choice.name) return;
         window.storyChoices = null;
         const selectedName = String(choice.name).trim();
         window.addMessage('Selected: ' + selectedName, true);
+        const localAnswer = showLocalPioneerStory(choice, originalQuestion);
+        if (localAnswer) return;
         const loading = showLoading();
         try {
             const question = originalQuestion && String(originalQuestion).trim()
@@ -584,26 +624,19 @@
             return;
         }
         const lines = String(text).split('\n');
-        const candidates = [];
+        const starts = [];
         for (let index = 0; index < lines.length; index += 1) {
             const name = lines[index].trim();
             if (!/^[A-Z][A-Z\s]{3,}$/.test(name) || name.includes('PAGE') || name.includes('TELL MY')) continue;
             const nearby = lines.slice(index, index + 5).join(' ').toLowerCase();
             if (!(nearby.includes('company') || nearby.includes('handcart') || nearby.includes('born'))) continue;
-            let end = Math.min(lines.length, index + 140);
-            for (let next = index + 1; next < end; next += 1) {
-                const candidate = lines[next].trim();
-                if (/^[A-Z][A-Z\s]{3,}$/.test(candidate) && !candidate.includes('PAGE') && !candidate.includes('TELL MY')) {
-                    end = next;
-                    break;
-                }
-                if (candidate.startsWith('--- PAGE')) {
-                    end = next;
-                    break;
-                }
-            }
-            candidates.push({ name: name, fullStory: lines.slice(index, end).join('\n').trim() });
+            starts.push({ name: name, index: index });
         }
+        const candidates = starts.map(function (entry, index) {
+            const nextEntry = starts[index + 1];
+            const end = nextEntry ? nextEntry.index : lines.length;
+            return { name: entry.name, fullStory: lines.slice(entry.index, end).join('\n').trim() };
+        });
         if (!candidates.length) {
             window.addMessage('I could not identify a pioneer record in the index just now.', false);
             return;
@@ -676,6 +709,11 @@
             link.addEventListener('click', function (event) { event.preventDefault(); });
         });
         initTopPioneerAskEntry();
+        const warmTellMyStory = function () {
+            if (typeof loadTellMyStory === 'function') loadTellMyStory();
+        };
+        if (typeof window.requestIdleCallback === 'function') window.requestIdleCallback(warmTellMyStory);
+        else window.setTimeout(warmTellMyStory, 250);
         setConversationMode(false);
         document.documentElement.setAttribute('data-focuschrist-pioneer-policy', PIONEER_POLICY_VERSION);
     });

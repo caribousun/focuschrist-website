@@ -915,7 +915,7 @@
     }
 </style>
 
-    <script src="site-common.js?v=20260901-3" defer></script>
+    <script src="site-common.js?v=20260901-4" defer></script>
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="site-system.css">
     <link rel="stylesheet" href="pioneer-experience.css">
@@ -1509,20 +1509,11 @@
             }
             
             if (isMatch) {
-                // Get the full story
-                let storyEnd = story.index + 1;
-                for (let i = story.index + 1; i < lines.length; i++) {
-                    const line = lines[i].trim();
-                    if (/^[A-Z][A-Z\s]{3,}$/.test(line) && line.length >= 5 && !line.startsWith('---') && !line.includes('PAGE') && !line.includes('TELL MY')) {
-                        storyEnd = i;
-                        break;
-                    }
-                    if (line.startsWith('--- PAGE')) {
-                        storyEnd = i;
-                        break;
-                    }
-                    storyEnd = i;
-                }
+                // A biography can continue across several PDF pages. End it only
+                // when the next indexed biography begins, never at a page marker.
+                const storyPosition = storyStarts.indexOf(story);
+                const nextStory = storyPosition >= 0 ? storyStarts[storyPosition + 1] : null;
+                const storyEnd = nextStory ? nextStory.index : lines.length;
                 let fullStory = lines.slice(story.index, storyEnd).join('\n').trim();
                 // Store full story without truncation (will truncate in display if needed)
                 let displayStory = fullStory;
@@ -2332,7 +2323,7 @@
 
          <p data-focuschrist-independence="footer" style="max-width: 900px; margin: 14px auto 0; line-height: 1.6; font-size: 0.92em;">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer" style="color: #c9a961;">ChurchofJesusChrist.org</a>.</p>
     </footer>
-    <script src="pioneer-experience.js?v=20260901-3" defer></script>
+    <script src="pioneer-experience.js?v=20260901-4" defer></script>
 </body>
 
 </html>
