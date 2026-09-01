@@ -1,6 +1,8 @@
-import {
+import worker, {
   GENERAL_ANSWER_FALLBACK,
   SOURCE_INTEGRITY_FALLBACK,
+  answerMeetsSubstanceContract,
+  answerSubstanceRequirements,
   classifyResearchScope,
   collectSourceEvidence,
   extractSelectedPioneerName,
@@ -30,6 +32,8 @@ assert(clean.research.messages[0].content.includes('SERVER RESEARCH AND SOURCE-I
 assert(clean.research.messages[0].content.includes('never reduce a sincere question to a one- or two-word response')
   && clean.research.messages[0].content.includes('two to five short paragraphs'),
   'gateway must preserve the substantive-answer contract');
+assert(answerSubstanceRequirements(generalScopeForTest()).minimumWords === 45,
+  'general research must enforce a numeric answer-depth floor');
 assert(clean.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
   'faith research must be instructed to search the official Church domain');
 
@@ -112,7 +116,27 @@ assert(evidence.length === 2, 'gateway must collect tool-returned source evidenc
 assert(isOfficialChurchSource(evidence[0]), 'official Church subpages must be recognized');
 assert(!isOfficialChurchSource(evidence[1]), 'non-Church evidence must not be treated as official');
 
-const verifiedAnswer = 'Isaiah 1:18 uses scarlet and snow in an invitation to repent.';
+function generalScopeForTest() { return { faith: false, selectedPioneer: false }; }
+function repeatedSubstantiveAnswer(word, count, paragraphs = 1) {
+  const sentence = (size) => `${word.charAt(0).toUpperCase()}${word.slice(1)} ${Array(Math.max(0, size - 1)).fill(word).join(' ')}.`;
+  const first = sentence(Math.ceil(count / 2));
+  const second = sentence(Math.floor(count / 2));
+  return paragraphs > 1 ? `${first}\n\n${second}\n\n${sentence(3)}` : `${first} ${second}`;
+}
+
+assert(!answerMeetsSubstanceContract('He died at 7:22 a.m. on April 15, 1865.', generalScopeForTest()),
+  'one-line factual fragments must fail the final answer-depth gate');
+const oneLongTimeSentence = 'He died at 7:22 a.m. on April 15, 1865 after a long illness and remained surrounded by friends throughout the morning, according to the documented report, which provides the exact time and date in a single detailed grammatical sentence intended to test punctuation handling without creating a second sentence.';
+const oneLongDoctorSentence = 'Dr. Smith wrote a very long report that continued for many words without stopping and included historical context, specific details, explanatory clauses, documented observations, and a direct conclusion to ensure this single grammatical sentence exceeds the general word floor without being miscounted as two sentences.';
+const oneLongFaithSentence = `${oneLongTimeSentence} Dr. Smith also appears inside this same intentionally unbroken faith-history sentence with enough additional supported words to exceed seventy words.`;
+assert(!answerMeetsSubstanceContract(oneLongTimeSentence, generalScopeForTest())
+  && !answerMeetsSubstanceContract(oneLongDoctorSentence, generalScopeForTest())
+  && !answerMeetsSubstanceContract(oneLongFaithSentence, faith),
+  'a.m. and Dr. punctuation must not inflate the complete-sentence count');
+assert(answerMeetsSubstanceContract(repeatedSubstantiveAnswer('context', 50), generalScopeForTest()),
+  'a two-sentence general answer above the word floor must pass the depth gate');
+
+const verifiedAnswer = repeatedSubstantiveAnswer('supported', 75, 3);
 assert(guardVerifiedAnswer(verifiedAnswer, [evidence[0]], faith, true) === verifiedAnswer,
   'a verified faith answer with official evidence must pass');
 assert(guardVerifiedAnswer(verifiedAnswer, [evidence[1]], faith, true) === SOURCE_INTEGRITY_FALLBACK,
@@ -171,9 +195,10 @@ const bookEvidence = {
   sourceClass: 'tell-my-story-too',
 };
 assert(isTellMyStorySource(bookEvidence), 'the server-owned book entry must have a distinct source class');
-assert(guardVerifiedAnswer('Elizabeth traveled in the Willie handcart company.', [bookEvidence], selectedScope, true)
-  !== SOURCE_INTEGRITY_FALLBACK, 'a selected biography supported by its book entry must be answerable');
-assert(guardVerifiedAnswer('Elizabeth traveled in the Willie handcart company.', [evidence[0]], selectedScope, true)
+const substantialBiography = repeatedSubstantiveAnswer('biography', 95, 3);
+assert(guardVerifiedAnswer(substantialBiography, [bookEvidence], selectedScope, true)
+  !== SOURCE_INTEGRITY_FALLBACK, 'a substantive selected biography supported by its book entry must be answerable');
+assert(guardVerifiedAnswer(substantialBiography, [evidence[0]], selectedScope, true)
   === SOURCE_INTEGRITY_FALLBACK, 'the selected path must not claim to use the book when its entry was absent');
 
 const verdict = parseVerifierJson('```json\n{"approved":true,"answer":"Supported","source_indexes":[1]}\n```');
@@ -185,5 +210,68 @@ assert(isJsonValidationFailure({
 }), 'the gateway must recognize a retryable verifier JSON-format failure');
 assert(!isJsonValidationFailure({ response: { status: 401 }, data: { error: { code: 'invalid_api_key' } } }),
   'the gateway must not retry unrelated provider errors as JSON failures');
+
+const originalFetch = globalThis.fetch;
+const gatewayBodies = [];
+const expandedGeneralAnswer = repeatedSubstantiveAnswer('documented', 50);
+globalThis.fetch = async (_url, options) => {
+  const body = JSON.parse(options.body);
+  gatewayBodies.push(body);
+  if (gatewayBodies.length === 1) {
+    return new Response(JSON.stringify({
+      choices: [{
+        message: {
+          content: 'Ada Lovelace died on November 27, 1852.',
+          executed_tools: [{
+            search_results: [{
+              title: 'Ada Lovelace biography',
+              url: 'https://example.com/ada-lovelace',
+              content: 'Ada Lovelace died on November 27, 1852, after a period of illness.',
+            }],
+          }],
+        },
+      }],
+    }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  }
+  if (gatewayBodies.length === 2) {
+    return new Response(JSON.stringify({
+      choices: [{ message: { content: JSON.stringify({
+        approved: true,
+        answer: 'Ada Lovelace died on November 27, 1852.',
+        source_indexes: [1],
+      }) } }],
+    }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  }
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: JSON.stringify({
+      approved: true,
+      answer: expandedGeneralAnswer,
+      source_indexes: [1],
+    }) } }],
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+try {
+  const gatewayResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'general-knowledge',
+      messages: [{ role: 'user', content: 'When did Ada Lovelace die?' }],
+    }),
+  }), { GROQ_KEY_NEW: 'test-key' });
+  const gatewayPayload = await gatewayResponse.json();
+  assert(gatewayBodies.length === 3,
+    'a short verified answer must trigger exactly one evidence-only expansion pass');
+  assert(gatewayBodies[2].messages[0].content.includes('previous approved answer did not meet')
+    && gatewayBodies[2].messages[0].content.includes('at least 45 words'),
+    'the expansion retry must carry the numeric depth contract');
+  assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
+    && gatewayPayload.focuschrist_answer_word_count >= 45
+    && gatewayPayload.focuschrist_source_policy === '2026-09-01.13',
+    'the gateway must return the expanded verified answer with a depth receipt');
+} finally {
+  globalThis.fetch = originalFetch;
+}
 
 console.log('Gateway source policy QA PASS');
