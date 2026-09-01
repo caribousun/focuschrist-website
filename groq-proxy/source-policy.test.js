@@ -41,6 +41,32 @@ assert(clean.research.messages[0].content.includes('search only site:churchofjes
 const general = sanitizePayload({ messages: [{ role: 'user', content: 'Why is the daytime sky blue?' }] });
 assert(!general.scope.faith && !general.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
   'ordinary questions must not be forced into the Church-only domain');
+for (const scriptureTopic of ['What is Genesis about?', 'Tell me about Genesis.', 'What is the Book of Abraham about?']) {
+  assert(classifyResearchScope([{ role: 'user', content: scriptureTopic }]).faith,
+    'a bare scripture-book topic must use faith research: ' + scriptureTopic);
+}
+for (const ordinaryPerson of [
+  'What did Abraham Lincoln write about government?',
+  'What did Ruth Bader Ginsburg say about equality?',
+  'What does Timothy Snyder write about history?',
+  'What did Titus Welliver say about television?',
+  'What did Alma Mahler compose?',
+  'Who was Moroni Olsen?',
+  'what did abraham lincoln write about government?',
+  'what did ruth bader ginsburg say about equality?',
+  'who was alma mahler?',
+  'Tell me about Abraham Lincoln.',
+  'tell me about abraham lincoln.',
+  'Tell me about Ruth Bader Ginsburg.',
+  'tell me about alma mahler'
+]) {
+  assert(!classifyResearchScope([{ role: 'user', content: ordinaryPerson }]).faith,
+    'a canon-title given name must remain general research: ' + ordinaryPerson);
+}
+for (const explicitScriptureTopic of ['What does Alma teach?', 'Tell me about Alma the Younger.', 'What is Alma 32 about?', 'what does genesis creation account teach?', 'what is genesis creation story about?', 'what does alma faith sermon teach?', 'what does ruth loyalty story teach?', 'what is the book of abraham creation account about?', 'tell me about genesis creation', 'What did Alma and Amulek say?', 'what did alma and amulek say?']) {
+  assert(classifyResearchScope([{ role: 'user', content: explicitScriptureTopic }]).faith,
+    'case-insensitive collision handling must preserve scripture context: ' + explicitScriptureTopic);
+}
 assert(!requiresExternalGeneralResearch('What color is the daytime sky?'),
   'stable low-risk general knowledge must remain answerable through AI consensus when retrieval returns no evidence');
 assert(requiresExternalGeneralResearch('What is the weather today?'),
@@ -294,7 +320,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-01.13',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-01.14',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

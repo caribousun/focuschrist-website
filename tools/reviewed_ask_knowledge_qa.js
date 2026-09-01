@@ -35,7 +35,7 @@ function entrySourceUrls(entry) {
     return [...new Set(sources.map((source) => source.url))];
 }
 
-assert(registry && registry.policyVersion === '2026-09-01.13', 'reviewed registry policy version mismatch');
+assert(registry && registry.policyVersion === '2026-09-01.14', 'reviewed registry policy version mismatch');
 assert(Array.isArray(registry.entries) && registry.entries.length >= 12, 'reviewed registry is unexpectedly small');
 assert(questionManifest.release === registry.policyVersion, 'question-contract manifest release mismatch');
 

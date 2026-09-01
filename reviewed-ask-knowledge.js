@@ -9,7 +9,7 @@
 (function () {
     'use strict';
 
-    const POLICY_VERSION = '2026-09-01.13';
+    const POLICY_VERSION = '2026-09-01.14';
 
     function officialHistorySource(label, url, note) {
         return {

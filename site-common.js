@@ -304,6 +304,13 @@
     const SCRIPTURE_CITATION_PATTERN = /\b(?:[1-4]\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Doctrine\s+and\s+Covenants|D&C|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History)|Articles\s+of\s+Faith)\s+\d+(?::\d+(?:[-–]\d+)?)?/gi;
     const SCRIPTURE_ATTRIBUTION_PATTERN = /\b(?:latter-day\s+saint\s+scripture|scripture|the\s+bible|the\s+book\s+of\s+mormon|the\s+doctrine\s+and\s+covenants|d&c|the\s+pearl\s+of\s+great\s+price)\b.{0,120}\b(?:assigns?|represents?|symbolizes?|means?|says|states|teach(?:es)?|declares|records|promises|describes)\b/i;
     const SCRIPTURE_BOOK_ATTRIBUTION_PATTERN = /\b(?:book\s+of\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History))\b.{0,100}\b(?:says?|states?|teach(?:es)?|declares?|records?|promises?|describes?|means?|about)\b/i;
+    const SCRIPTURE_BOOK_STRONG_ATTRIBUTION_PATTERN = /\b(?:book\s+of\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History))\b.{0,100}\b(?:says?|states?|teach(?:es)?|declares?|records?|promises?|describes?|means?)\b/i;
+    const SCRIPTURE_BOOK_IS_ABOUT_PATTERN = /\b(?:book\s+of\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History))\b.{0,60}\b(?:is|was)\s+(?:mainly\s+)?about\b/i;
+    const ABOUT_SCRIPTURE_BOOK_PATTERN = /\babout\s+(?:the\s+)?(?:book\s+of\s+)?(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Song\s+of\s+Solomon|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Words\s+of\s+Mormon|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Moses|Abraham|Joseph\s+Smith(?:—|-|\s+)(?:Matthew|History))\b/i;
+    const PERSON_NAME_SCRIPTURE_COLLISION_PATTERN = /\b(?:Genesis|Exodus|Leviticus|Numbers|Deuteronomy|Joshua|Judges|Ruth|Samuel|Kings|Chronicles|Ezra|Nehemiah|Esther|Job|Psalms?|Proverbs|Ecclesiastes|Isaiah|Jeremiah|Lamentations|Ezekiel|Daniel|Hosea|Joel|Amos|Obadiah|Jonah|Micah|Nahum|Habakkuk|Zephaniah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Acts|Romans|Corinthians|Galatians|Ephesians|Philippians|Colossians|Thessalonians|Timothy|Titus|Philemon|Hebrews|James|Peter|Jude|Revelation|Nephi|Jacob|Enos|Jarom|Omni|Mosiah|Alma|Helaman|Mormon|Ether|Moroni|Moses|Abraham)\s+[A-Z][\p{L}'’.-]+(?:\s+[A-Z][\p{L}'’.-]+){0,2}\b/gu;
+    const CASELESS_CANON_NAME_PERSON_QUESTION_PATTERN = /(\bwho\s+(?:is|was)\s+)(?:Joshua|Ruth|Samuel|Ezra|Nehemiah|Esther|Job|Isaiah|Jeremiah|Ezekiel|Daniel|Hosea|Joel|Amos|Jonah|Micah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Timothy|Titus|Philemon|James|Peter|Jude|Nephi|Jacob|Enos|Mosiah|Alma|Helaman|Ether|Moroni|Moses|Abraham)\s+(?!the\b|and\b|or\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s*[?.!]*$)/giu;
+    const CASELESS_CANON_NAME_PERSON_ACTION_PATTERN = /(\b(?:what|when|where|why|how)\s+(?:did|does|is|was)\s+)(?:Joshua|Ruth|Samuel|Ezra|Nehemiah|Esther|Job|Isaiah|Jeremiah|Ezekiel|Daniel|Hosea|Joel|Amos|Jonah|Micah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Timothy|Titus|Philemon|James|Peter|Jude|Nephi|Jacob|Enos|Mosiah|Alma|Helaman|Ether|Moroni|Moses|Abraham)\s+(?!the\b|and\b|or\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s+(?:act(?:ed|ing)?|became|become|composed?|did|died?|lived?|made|make|said|say|served?|spoke|talked?|writes?|wrote)\b)/giu;
+    const CASELESS_CANON_NAME_PERSON_ABOUT_PATTERN = /(\btell\s+me\s+about\s+)(?:Joshua|Ruth|Samuel|Ezra|Nehemiah|Esther|Job|Isaiah|Jeremiah|Ezekiel|Daniel|Hosea|Joel|Amos|Jonah|Micah|Haggai|Zechariah|Malachi|Matthew|Mark|Luke|John|Timothy|Titus|Philemon|James|Peter|Jude|Nephi|Jacob|Enos|Mosiah|Alma|Helaman|Ether|Moroni|Moses|Abraham)\s+(?!the\b|and\b|or\b|faith\b|sermon\b|story\b|account\b|creation\b|teachings?\b|prophecy\b|vision\b|chapter\b|book\b|gospel\b|loyalty\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s*[?.!]*$)/giu;
     const KNOWN_FALSE_SOURCE_PATTERNS = [
         /red,?\s+white,?\s+and\s+black\s+lights?/i,
         /["']?(?:red|black|golden)\s+light["']?.{0,180}(?:D&C|Doctrine\s+and\s+Covenants)\s+76/i
@@ -331,6 +338,20 @@
         return String(text || '').match(SCRIPTURE_CITATION_PATTERN) || [];
     }
 
+    function withoutOutputPersonNameScriptureCollisions(text) {
+        // Several canon titles are also ordinary given names. Evaluate book-title
+        // attribution only after removing properly cased full personal names so
+        // "Abraham Lincoln ... at about" cannot become a Book of Abraham claim.
+        return String(text || '').replace(PERSON_NAME_SCRIPTURE_COLLISION_PATTERN, '');
+    }
+
+    function withoutQueryPersonNameScriptureCollisions(text) {
+        return String(text || '')
+            .replace(CASELESS_CANON_NAME_PERSON_QUESTION_PATTERN, '$1')
+            .replace(CASELESS_CANON_NAME_PERSON_ACTION_PATTERN, '$1')
+            .replace(CASELESS_CANON_NAME_PERSON_ABOUT_PATTERN, '$1');
+    }
+
     function guardGeneratedAnswer(answer, options) {
         const settings = options || {};
         const text = String(answer || '').trim();
@@ -350,7 +371,12 @@
             violations.push('known-false-source-claim');
         }
         if (ungroundedCitations.length && !serverVerified) violations.push('ungrounded-scripture-citation');
-        if (settings.requireTrustedScripture !== false && (SCRIPTURE_ATTRIBUTION_PATTERN.test(text) || SCRIPTURE_BOOK_ATTRIBUTION_PATTERN.test(text)) && !trustedReferenceText && !serverVerified) {
+        const attributionText = withoutOutputPersonNameScriptureCollisions(text);
+        if (settings.requireTrustedScripture !== false && (SCRIPTURE_ATTRIBUTION_PATTERN.test(text)
+            || SCRIPTURE_BOOK_STRONG_ATTRIBUTION_PATTERN.test(text)
+            || SCRIPTURE_BOOK_IS_ABOUT_PATTERN.test(text)
+            || SCRIPTURE_BOOK_ATTRIBUTION_PATTERN.test(attributionText)
+            || ABOUT_SCRIPTURE_BOOK_PATTERN.test(attributionText)) && !trustedReferenceText && !serverVerified) {
             violations.push('ungrounded-scripture-attribution');
         }
 
@@ -368,14 +394,18 @@
     }
 
     window.focusChristSourceIntegrity = Object.freeze({
-        policyVersion: '2026-09-01.13',
+        policyVersion: '2026-09-01.14',
         fallback: SOURCE_INTEGRITY_FALLBACK,
         extractScriptureCitations: extractScriptureCitations,
         isScriptureDependent: function (text) {
             const value = String(text || '');
+            const attributionValue = withoutQueryPersonNameScriptureCollisions(value);
             return extractScriptureCitations(value).length > 0
                 || SCRIPTURE_ATTRIBUTION_PATTERN.test(value)
-                || SCRIPTURE_BOOK_ATTRIBUTION_PATTERN.test(value);
+                || SCRIPTURE_BOOK_STRONG_ATTRIBUTION_PATTERN.test(attributionValue)
+                || SCRIPTURE_BOOK_IS_ABOUT_PATTERN.test(attributionValue)
+                || SCRIPTURE_BOOK_ATTRIBUTION_PATTERN.test(attributionValue)
+                || ABOUT_SCRIPTURE_BOOK_PATTERN.test(attributionValue);
         },
         guardGeneratedAnswer: guardGeneratedAnswer
     });
@@ -392,14 +422,14 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260901-13'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260901-14'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260901-13', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260901-14', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {

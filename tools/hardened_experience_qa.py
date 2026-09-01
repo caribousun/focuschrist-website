@@ -50,8 +50,8 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260901-13",
-        "study-intelligence-v3.js?v=20260901-13",
+        "study-journey.js?v=20260901-14",
+        "study-intelligence-v3.js?v=20260901-14",
         "window.focusChristSourceIntegrity",
         "unreviewed-source-dependent-generation",
         "data-focuschrist-study-intelligence-v3",
@@ -98,7 +98,7 @@ def main() -> int:
     ), errors)
 
     require(pioneer, "pioneer-experience.js", (
-        "PIONEER_POLICY_VERSION = '2026-09-01.13'",
+        "PIONEER_POLICY_VERSION = '2026-09-01.14'",
         "function ownDisclosureEvent(event)",
         "event.stopImmediatePropagation()",
         "function installDisclosureOwnership()",
@@ -159,7 +159,7 @@ def main() -> int:
         "requestAnimationFrame",
         "window.addEventListener('load'",
         "loadVerifiedSourceRouter",
-        "study-source-router.js?v=20260901-13",
+        "study-source-router.js?v=20260901-14",
         "loadArtStudyRouter",
         "art-study-router.js?v=20260830-3",
         "loadWatchStudyEnrichment",
@@ -181,7 +181,7 @@ def main() -> int:
         "data-focuschrist-source-paths",
         "Official Church search",
         "BYU educational",
-        "study-intelligence-v3.js?v=20260901-13",
+        "study-intelligence-v3.js?v=20260901-14",
         "document.readyState === 'loading'",
         "data-focuschrist-source-router-ready",
         "oliver cowdery",
