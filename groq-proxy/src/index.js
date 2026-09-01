@@ -272,8 +272,10 @@ async function callGroq(apiKey, body, mayRetry = true) {
   let data = null;
   try { data = await response.json(); } catch (_error) {}
   if (response.status === 429 && mayRetry) {
-    const retrySeconds = Number.parseFloat(response.headers.get('retry-after') || '2');
-    const waitMs = Math.min(8000, Math.max(1000, Number.isFinite(retrySeconds) ? retrySeconds * 1000 : 2000));
+    const message = data && data.error ? String(data.error.message || '') : '';
+    const messageDelay = message.match(/try again in\s+([\d.]+)s/i);
+    const retrySeconds = Number.parseFloat(response.headers.get('retry-after') || (messageDelay ? messageDelay[1] : '2'));
+    const waitMs = Math.min(30000, Math.max(1000, Number.isFinite(retrySeconds) ? (retrySeconds * 1000) + 500 : 2500));
     await new Promise((resolve) => setTimeout(resolve, waitMs));
     return callGroq(apiKey, body, false);
   }
@@ -351,8 +353,17 @@ export default {
         ? `Write a concise, accurate biographical summary of ${sanitized.scope.selectedPioneerName} from the supplied Tell My Story, Too entry. Center the selected book entry, include its principal journey experiences, preserve attribution for recollections, and use official records only as corroboration.`
         : researchDraft;
       const allEvidence = collectSourceEvidence(researchMessage);
+      const officialEvidence = [];
+      const officialUrls = new Set();
+      allEvidence.filter(isOfficialChurchSource).forEach((source) => {
+        const key = source.url.split('?')[0];
+        if (!officialUrls.has(key) && officialEvidence.length < 2) {
+          officialUrls.add(key);
+          officialEvidence.push(source);
+        }
+      });
       const evidence = sanitized.scope.selectedPioneer
-        ? [tellMyStoryEvidence, ...allEvidence.filter(isOfficialChurchSource)].filter(Boolean)
+        ? [tellMyStoryEvidence, ...officialEvidence].filter(Boolean)
         : (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence);
       if (!draft || !evidence.length) {
         return jsonResponse(fallbackPayload('research-insufficient-evidence'), 200, origin);
@@ -384,15 +395,16 @@ export default {
         model: VERIFIER_MODEL,
         messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
-        max_tokens: 1500,
+        max_tokens: sanitized.scope.selectedPioneer ? 1000 : 1500,
         response_format: { type: 'json_object' },
       };
       let verifierResult = await callGroq(env.GROQ_KEY_NEW, verifierBody);
       if (!verifierResult.response.ok && isJsonValidationFailure(verifierResult)) {
+        await new Promise((resolve) => setTimeout(resolve, 12000));
         verifierResult = await callGroq(env.GROQ_KEY_NEW, {
           ...verifierBody,
           messages: [{ role: 'user', content: `${verifierPrompt}\n\nReturn the JSON object as plain text with no markdown fence.` }],
-          max_tokens: 1800,
+          max_tokens: sanitized.scope.selectedPioneer ? 1200 : 1800,
           response_format: undefined,
         });
       }
