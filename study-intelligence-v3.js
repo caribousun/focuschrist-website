@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-09-01.10';
+    const POLICY_VERSION = '2026-09-01.11';
     let askRequestSerial = 0;
 
     const FAITH_TERMS = new Set([
@@ -204,6 +204,7 @@
         if (typeof conversationHistory === 'undefined' || !Array.isArray(conversationHistory)) return;
         const userTurn = { role: 'user', content: question };
         if (contextReceipt && contextReceipt.contextEntryId) userTurn.contextEntryId = contextReceipt.contextEntryId;
+        if (contextReceipt && contextReceipt.contextQuestion) userTurn.contextQuestion = contextReceipt.contextQuestion;
         conversationHistory.push(userTurn);
         conversationHistory.push({ role: 'assistant', content: answer });
         if (conversationHistory.length > 20) conversationHistory.splice(0, conversationHistory.length - 20);
@@ -392,8 +393,16 @@
         const contextResolution = resolveQuestionContext(query);
         const effectiveQuery = contextResolution.query || query;
         const profile = classifyQuestion(effectiveQuery);
-        const reviewedReference = reviewedKnowledgeReference(effectiveQuery);
-        const localReference = bestLocalReference(effectiveQuery);
+        // A generic context query intentionally embeds the antecedent for remote
+        // research. Matching that augmented text locally can replay the antecedent's
+        // answer (for example, returning Joseph Smith's death date to "How old was
+        // he?"). The original wording already received direct reviewed matching in
+        // resolveFollowup, so generic contextual research must bypass both local banks.
+        const allowContextualLocalMatch = contextResolution.genericContext !== true;
+        const reviewedReference = allowContextualLocalMatch ? reviewedKnowledgeReference(effectiveQuery) : null;
+        const localReference = allowContextualLocalMatch
+            ? bestLocalReference(effectiveQuery)
+            : { found: false, answer: '', sources: [], verified: false };
         const groundedLocalReference = localReference.found && localReference.verified
             ? localReference
             : { found: false, answer: '', sources: [], verified: false };
@@ -408,7 +417,8 @@
                 localMatch: reviewedReference.id,
                 reviewedLocal: true,
                 contextResolved: contextResolution.resolved === true,
-                contextEntryId: contextResolution.entryId || null
+                contextEntryId: contextResolution.entryId || null,
+                contextQuestion: contextResolution.contextQuestion || null
             });
         }
 
@@ -421,7 +431,10 @@
                 sources: localReference.sources,
                 profile: profile,
                 localMatch: localReference.key,
-                verifiedGrounding: true
+                verifiedGrounding: true,
+                contextResolved: contextResolution.resolved === true,
+                contextEntryId: contextResolution.entryId || null,
+                contextQuestion: contextResolution.contextQuestion || null
             };
         }
 
@@ -470,7 +483,10 @@
                     verifiedGrounding: researched.serverVerified,
                     sourceIntegrityPassed: integrity.ok && researched.serverVerified,
                     sourceIntegrityStatus: researched.serverVerified ? (researched.gatewayMode || 'retrieval-researched-and-verified') : (researched.gatewayMode || 'verification-unavailable'),
-                    sourcePolicyVersion: researched.policyVersion
+                    sourcePolicyVersion: researched.policyVersion,
+                    contextResolved: contextResolution.resolved === true,
+                    contextEntryId: contextResolution.entryId || null,
+                    contextQuestion: contextResolution.contextQuestion || null
                 };
             } catch (error) {
                 lastError = error;
@@ -484,7 +500,10 @@
             sources: [],
             profile: profile,
             localMatch: null,
-            verifiedGrounding: false
+            verifiedGrounding: false,
+            contextResolved: contextResolution.resolved === true,
+            contextEntryId: contextResolution.entryId || null,
+            contextQuestion: contextResolution.contextQuestion || null
         };
     }
 

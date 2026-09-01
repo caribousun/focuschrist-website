@@ -72,8 +72,10 @@ vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { file
 
 let remoteCalls = 0;
 let delayedHistoryResponse = null;
+const remoteQuestions = [];
 window.focusChristStudyAskV3 = async (question) => {
     remoteCalls += 1;
+    remoteQuestions.push(String(question));
     if (String(question).includes('delayed history detail')) {
         return new Promise((resolve) => {
             delayedHistoryResponse = () => resolve({ answer: 'STALE REMOTE HISTORY ANSWER', sources: [] });
@@ -89,6 +91,22 @@ function assert(condition, message) {
 }
 
 (async () => {
+    const discoveredQuestions = [...fs.readFileSync('church-history.html', 'utf8').matchAll(/data-history-question="([^"]+)"/g)]
+        .map((match) => match[1]);
+    assert(discoveredQuestions.length === 10,
+        'Church History card count changed without a final-owner runtime contract');
+    for (const question of discoveredQuestions) {
+        const cardResult = await window.focusChristHistoryAsk(question);
+        assert(cardResult && cardResult.answer.split(/\s+/).length >= 70,
+            'Church History card did not return a substantive final-owner answer: ' + question);
+        assert(Array.isArray(cardResult.sources) && cardResult.sources.some((source) =>
+            source.url.includes('churchofjesuschrist.org')),
+        'Church History card did not retain an official source: ' + question);
+        assert(!/cannot verify the specific source claim|please confirm the subject|could not complete/i.test(cardResult.answer),
+            'Church History card returned a known generic non-answer: ' + question);
+    }
+    assert(remoteCalls === 0, 'every visible Church History card must answer with zero Worker requests');
+
     let result = await window.focusChristHistoryAsk('When was the First Vision?');
     assert(result && result.answer.includes('1820'), 'First Vision reviewed answer must render 1820');
     assert(remoteCalls === 0, 'First Vision reviewed answer must make zero Worker requests');
@@ -111,18 +129,35 @@ function assert(condition, message) {
         'Church History chained subjectless follow-up must retain the Joseph Smith context receipt');
     assert(remoteCalls === 0, 'Church History reviewed follow-up must make zero Worker requests');
 
+    await window.focusChristHistoryAsk('How old was he?');
+    assert(remoteCalls === 1 && remoteQuestions.at(-1).includes('How old was he?')
+        && remoteQuestions.at(-1).includes('What date did Joseph Smith die?'),
+        'Church History generic follow-up must research the Joseph subject instead of replaying the death answer');
+
+    window.focusChristResetHistoryAsk();
+    await window.focusChristHistoryAsk('What date did Joseph Smith die?');
+    await window.focusChristHistoryAsk('Why was he in Carthage Jail?');
+    assert(remoteCalls === 2 && remoteQuestions.at(-1).includes('Carthage Jail')
+        && remoteQuestions.at(-1).includes('Joseph Smith'),
+        'Carthage Jail must remain a place inside Joseph context, not a competing person');
+
+    window.focusChristResetHistoryAsk();
     await window.focusChristHistoryAsk('What date did Abraham Lincoln die?');
     await window.focusChristHistoryAsk('Do we know the time he died');
-    assert(remoteCalls === 2,
+    assert(remoteCalls === 4,
         'Church History follow-up after an intervening person must not skip backward and inherit Joseph Smith');
+    assert(remoteQuestions.at(-1).includes('Do we know the time he died')
+        && remoteQuestions.at(-1).includes('What date did Abraham Lincoln die?')
+        && !remoteQuestions.at(-1).includes('Joseph Smith'),
+        'Church History remote follow-up must explicitly resolve the immediately preceding Lincoln subject');
 
     window.focusChristResetHistoryAsk();
     result = await window.focusChristHistoryAsk('Do we know the time he died');
-    assert(remoteCalls === 3 && result === undefined,
+    assert(remoteCalls === 5 && result === undefined,
         'Church History reset must prevent stale Joseph Smith context inheritance');
 
     result = await window.focusChristHistoryAsk('When was the First Vision movie released?');
-    assert(remoteCalls === 4, 'First Vision movie negative control must use external research');
+    assert(remoteCalls === 6, 'First Vision movie negative control must use external research');
     assert(result === undefined, 'remote Church History controller should complete without exposing an unreviewed local receipt');
 
     const pending = window.focusChristHistoryAsk('Tell me a delayed history detail');

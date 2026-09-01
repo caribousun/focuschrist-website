@@ -22,17 +22,27 @@
         return String(value || '').replace(/\s+/g, ' ').trim();
     }
 
-    function reviewedHistoryKnowledge(question) {
+    function resolveHistoryContext(question) {
+        const registry = window.focusChristReviewedKnowledge;
+        if (!registry || typeof registry.resolveFollowup !== 'function') {
+            return { query: question, resolved: false, entryId: null, contextQuestion: null };
+        }
+        return registry.resolveFollowup(question, { profile: 'church-history', history: historyConversation });
+    }
+
+    function reviewedHistoryKnowledge(question, suppliedResolution) {
         const registry = window.focusChristReviewedKnowledge;
         if (!registry || typeof registry.match !== 'function') return null;
-        const resolution = typeof registry.resolveFollowup === 'function'
+        const resolution = suppliedResolution || (typeof registry.resolveFollowup === 'function'
             ? registry.resolveFollowup(question, { profile: 'church-history', history: historyConversation })
-            : { query: question, resolved: false, entryId: null };
+            : { query: question, resolved: false, entryId: null });
+        if (resolution.genericContext === true) return null;
         const reviewed = registry.match(resolution.query, { profile: 'church-history' });
         if (!reviewed) return null;
         return Object.assign({}, reviewed, {
             contextResolved: resolution.resolved === true,
-            contextEntryId: resolution.entryId || null
+            contextEntryId: resolution.entryId || null,
+            contextQuestion: resolution.contextQuestion || null
         });
     }
 
@@ -380,7 +390,8 @@
 
         appendMessage(createMessage('user', question));
         if (input) input.value = '';
-        const reviewed = reviewedHistoryKnowledge(question);
+        const contextResolution = resolveHistoryContext(question);
+        const reviewed = reviewedHistoryKnowledge(question, contextResolution);
         if (reviewed) {
             const message = createMessage('assistant', reviewed.answer);
             appendVerifiedSources(message, reviewed.sources || []);
@@ -388,7 +399,8 @@
             historyConversation.push({
                 question: question,
                 answer: reviewed.answer,
-                contextEntryId: reviewed.contextEntryId || reviewed.id || null
+                contextEntryId: reviewed.contextEntryId || reviewed.id || null,
+                contextQuestion: reviewed.contextQuestion || null
             });
             if (historyConversation.length > MAX_CONTEXT_TURNS) historyConversation.shift();
             setConversationMode(true);
@@ -406,7 +418,7 @@
 
         const sources = sourcePathsFor(question);
         const promptContext = promptContextFor(question, sources);
-        const groundedQuestion = 'Latter-day Saint Church history question: ' + question;
+        const groundedQuestion = 'Latter-day Saint Church history question: ' + (contextResolution.query || question);
 
         try {
             const ask = await waitForHistoryAI();
@@ -418,7 +430,12 @@
             const message = createMessage('assistant', finalAnswer);
             appendVerifiedSources(message, sources);
             appendMessage(message);
-            historyConversation.push({ question: question, answer: finalAnswer });
+            historyConversation.push({
+                question: question,
+                answer: finalAnswer,
+                contextEntryId: contextResolution.entryId || null,
+                contextQuestion: contextResolution.contextQuestion || null
+            });
             if (historyConversation.length > MAX_CONTEXT_TURNS) historyConversation.shift();
             setConversationMode(true);
             if (status) status.textContent = 'Answer complete. Ask a follow-up below or choose New Question to start over.';

@@ -7,6 +7,7 @@ vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { file
 
 const registry = window.focusChristReviewedKnowledge;
 const audit = JSON.parse(fs.readFileSync('answer-audit.json', 'utf8'));
+const questionManifest = JSON.parse(fs.readFileSync('ask-question-contracts.json', 'utf8'));
 
 function assert(condition, message) {
     if (!condition) throw new Error(message);
@@ -25,8 +26,23 @@ function entryHash(entry) {
     return crypto.createHash('sha256').update(JSON.stringify(stable(entry))).digest('hex');
 }
 
-assert(registry && registry.policyVersion === '2026-09-01.10', 'reviewed registry policy version mismatch');
+assert(registry && registry.policyVersion === '2026-09-01.11', 'reviewed registry policy version mismatch');
 assert(Array.isArray(registry.entries) && registry.entries.length >= 12, 'reviewed registry is unexpectedly small');
+assert(questionManifest.release === registry.policyVersion, 'question-contract manifest release mismatch');
+
+const extractedContracts = {
+    ask_starters: [...fs.readFileSync('ask.html', 'utf8').matchAll(/data-ask-starter\s+data-question="([^"]+)"/g)].map((match) => match[1]),
+    ask_topics: [...fs.readFileSync('ask.html', 'utf8').matchAll(/data-ask-topic="([^"]+)"/g)].map((match) => match[1]),
+    pioneer_topics: [...fs.readFileSync('pioneers.html', 'utf8').matchAll(/onclick="askTopic\('([^']+)'\)"/g)].map((match) => match[1]),
+    church_history_cards: [...fs.readFileSync('church-history.html', 'utf8').matchAll(/data-history-question="([^"]+)"/g)].map((match) => match[1])
+};
+Object.entries(extractedContracts).forEach(([key, values]) => {
+    const contract = questionManifest.contracts[key];
+    assert(contract && Array.isArray(contract.values), 'question-contract manifest section missing: ' + key);
+    assert(JSON.stringify(contract.values) === JSON.stringify(values),
+        'visible question controls changed without updating the machine-readable contract: ' + key);
+    assert(contract.final_owner && contract.lane, 'question-contract owner or lane missing: ' + key);
+});
 
 const ids = new Set();
 registry.entries.forEach((entry) => {
@@ -76,6 +92,17 @@ starterQuestions.forEach((question) => {
     assert(result.sources.length >= 1, 'visible Ask starter has no authoritative source: ' + question);
 });
 
+const historyQuestions = [...fs.readFileSync('church-history.html', 'utf8').matchAll(/data-history-question="([^"]+)"/g)]
+    .map((match) => match[1]);
+assert(historyQuestions.length === 10,
+    'Church History question-card inventory changed without updating the executable contract');
+historyQuestions.forEach((question) => {
+    const result = registry.match(question, { profile: 'church-history' });
+    assert(result && result.mode === 'reviewed-local', 'visible Church History card is not reviewed-local: ' + question);
+    assert(result.answer.split(/\s+/).length >= 70, 'visible Church History card answer is not substantive: ' + question);
+    assert(result.sources.length >= 1, 'visible Church History card has no authoritative source: ' + question);
+});
+
 const resolvedFollowup = registry.resolveFollowup('Do we know the time he died', {
     profile: 'ask',
     history: [
@@ -107,9 +134,12 @@ assert(chainedFollowup.resolved === true && chainedFollowup.entryId === 'joseph-
     'context receipt did not preserve a chained subjectless follow-up');
 assert(registry.resolveFollowup('Do we know the time he died', { profile: 'ask', history: [] }).resolved === false,
     'follow-up context leaked without history');
-assert(registry.resolveFollowup('Do we know the time he died', {
+const genericSkyFollowup = registry.resolveFollowup('Do we know the time he died', {
     profile: 'ask', history: [{ role: 'user', content: 'Why is the sky blue?' }]
-}).resolved === false, 'follow-up inherited an unrelated reviewed subject');
+});
+assert(genericSkyFollowup.resolved === true && genericSkyFollowup.entryId === null
+    && genericSkyFollowup.query.includes('Why is the sky blue?'),
+    'generic follow-up must use only the immediately preceding subject without inheriting a reviewed identity');
 assert(registry.resolveFollowup('When did Joseph F. Smith die?', {
     profile: 'ask', history: [{ role: 'user', content: 'When did Joseph Smith die?' }]
 }).resolved === false, 'explicit competing Joseph identity was incorrectly inherited');
@@ -119,7 +149,7 @@ for (const competingQuestion of ['What time did Abraham Lincoln die?', 'When did
     }).resolved === false, 'explicit competing person was incorrectly inherited: ' + competingQuestion);
 }
 for (const interruption of ['What date did Abraham Lincoln die?', 'Why is the sky blue?']) {
-    assert(registry.resolveFollowup('Do we know the time he died', {
+    const interruptionResult = registry.resolveFollowup('Do we know the time he died', {
         profile: 'ask',
         history: [
             { role: 'user', content: 'When did Joseph Smith die?' },
@@ -127,7 +157,48 @@ for (const interruption of ['What date did Abraham Lincoln die?', 'Why is the sk
             { role: 'user', content: interruption },
             { role: 'assistant', content: 'An intervening answer.' }
         ]
-    }).resolved === false, 'resolver skipped a newer user subject: ' + interruption);
+    });
+    assert(interruptionResult.resolved === true && interruptionResult.entryId === null
+        && interruptionResult.query.includes(interruption),
+        'resolver skipped the newer user subject: ' + interruption);
+}
+const genericLincolnFollowup = registry.resolveFollowup('Do we know the time he died?', {
+    profile: 'ask', history: [{ role: 'user', content: 'What date did Abraham Lincoln die?' }]
+});
+assert(genericLincolnFollowup.resolved === true && genericLincolnFollowup.genericContext === true
+    && genericLincolnFollowup.entryId === null && genericLincolnFollowup.contextQuestion.includes('Abraham Lincoln'),
+    'general follow-up did not resolve the immediately preceding Lincoln subject');
+const genericLincolnChain = registry.resolveFollowup('What time?', {
+    profile: 'ask',
+    history: [
+        { role: 'user', content: 'What date did Abraham Lincoln die?' },
+        { role: 'assistant', content: 'April 15, 1865.' },
+        { role: 'user', content: 'Do we know the time he died?', contextQuestion: genericLincolnFollowup.contextQuestion },
+        { role: 'assistant', content: 'A researched answer.' }
+    ]
+});
+assert(genericLincolnChain.resolved === true && genericLincolnChain.query.includes('Abraham Lincoln')
+    && !genericLincolnChain.query.includes('Joseph Smith'),
+    'generic context receipt did not preserve the Lincoln subject through a chained ellipsis');
+for (const genericQuestion of ['How old was he?', 'Why was he in Carthage?', 'Why was he in Carthage Jail?', 'Who was with him?', 'Where did he live?']) {
+    const genericJosephFollowup = registry.resolveFollowup(genericQuestion, {
+        profile: 'ask',
+        history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
+    });
+    assert(genericJosephFollowup.resolved === true && genericJosephFollowup.genericContext === true
+        && genericJosephFollowup.entryId === null && genericJosephFollowup.contextQuestion.includes('Joseph Smith'),
+        'reviewed antecedent did not become generic research context: ' + genericQuestion);
+}
+for (const competingQuestion of [
+    'When did he die—Abraham Lincoln?',
+    'Do we know what time he died, Abraham Lincoln?'
+]) {
+    const explicitSubject = registry.resolveFollowup(competingQuestion, {
+        profile: 'ask',
+        history: [{ role: 'user', content: 'What date did Joseph Smith die?' }]
+    });
+    assert(explicitSubject.resolved === false && explicitSubject.entryId === null,
+        'explicit current person incorrectly inherited Joseph Smith: ' + competingQuestion);
 }
 [
     ['When did Joseph F. Smith die?', 'ask'],
