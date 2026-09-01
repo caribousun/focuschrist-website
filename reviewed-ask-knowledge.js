@@ -109,15 +109,15 @@
             answer: "Abraham Lincoln died at 7:22 a.m. on April 15, 1865, in the Petersen House in Washington, D.C. John Wilkes Booth had shot him at Ford's Theatre the previous evening, April 14. Lincoln was carried across the street to the Petersen House, where he remained unconscious and died roughly nine hours after the shooting. The Library of Congress and the National Park Service both record the date and exact time as April 15 at 7:22 a.m.",
             sources: [
                 {
-                    text: 'Library of Congress — Assassination of President Abraham Lincoln',
-                    label: 'Library of Congress — Assassination of President Abraham Lincoln',
+                    text: 'Library of Congress - Assassination of President Abraham Lincoln',
+                    label: 'Library of Congress - Assassination of President Abraham Lincoln',
                     url: 'https://www.loc.gov/collections/abraham-lincoln-papers/articles-and-essays/assassination-of-president-abraham-lincoln/',
                     tier: 'Authoritative federal history source',
                     note: "Library of Congress account records Lincoln's death at 7:22 a.m. on April 15, 1865."
                 },
                 {
-                    text: 'National Park Service — Petersen House',
-                    label: 'National Park Service — Petersen House',
+                    text: 'National Park Service - Petersen House',
+                    label: 'National Park Service - Petersen House',
                     url: 'https://www.nps.gov/places/000/petersen-house.htm',
                     tier: 'Authoritative federal history source',
                     note: 'National Park Service records the Petersen House death time as 7:22 a.m. on April 15, 1865.'
