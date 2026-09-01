@@ -287,7 +287,7 @@ At minimum, retain these named specimens.
 - `What year was Joseph Smith killed?` — supported answer identifying June 27, 1844, with official Church history evidence.
 - after the Joseph Smith date question, `Do we know the time he died` — resolve Joseph Smith before routing and answer about or shortly after 5:00 p.m.; after reset, the same wording must not inherit Joseph Smith.
 - after changing the subject to `What date did Abraham Lincoln die?`, both `Do we know the time he died?` and chained `What time?` — resolve Lincoln for general research, never Joseph Smith and never a generic completion failure.
-- after the Joseph Smith date question, `How old was he?`, `Why was he in Carthage Jail?`, `Who was with him?`, and `Where did he live?` — use Joseph Smith as immediate research context without replaying the reviewed death answer.
+- after the Joseph Smith date question, `How old was he?`, `Why was he in Carthage Jail?`, `Who was with him?`, and `Where did he live?` — use Joseph Smith as immediate context and answer the specific intent from a reviewed contextual variant when one exists; otherwise research it. Never replay a death-only answer or depend on the Worker for a fact the reviewed registry already owns.
 - after Joseph Smith context, `When did he die—Abraham Lincoln?` and `Do we know what time he died, Abraham Lincoln?` — treat Abraham Lincoln as the explicit current subject and never return Joseph Smith's answer.
 - `What year was Joseph Stalin killed?` — must not be captured by the Joseph Smith intent.
 - a supported scripture/doctrine question — official Church evidence.
@@ -371,9 +371,10 @@ On `https://focuschrist.com`, against the exact deployed revision:
 3. Perform every named Pioneer specimen, beginning with the owner's exact handcart question.
 4. Perform the required Church History specimens.
 5. Repeat reviewed-local specimens with the Worker unavailable or safely simulated as unavailable.
-6. Confirm sources support the displayed claims.
-7. Confirm browser behavior after all scripts, caches, and service layers are fully active.
-8. Retain the commit, deployment identity, policy version, timestamps, test output, network-call evidence, and screenshots or equivalent browser evidence.
+6. Simulate a Worker `429 rate_limit_exceeded` condition and prove that every reviewed starter, visible card, and reviewed contextual variant still answers completely without the generic source-verification refusal.
+7. Confirm sources support the displayed claims.
+8. Confirm browser behavior after all scripts, caches, and service layers are fully active.
+9. Retain the commit, deployment identity, policy version, timestamps, test output, network-call evidence, and screenshots or equivalent browser evidence.
 
 A direct API response, source-file inspection, or local unit test is not production acceptance.
 

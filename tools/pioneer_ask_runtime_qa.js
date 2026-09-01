@@ -59,7 +59,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official Church History', url: 'https://www.churchofjesuschrist.org/study/church-history' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.11'
+                focuschrist_source_policy: '2026-09-01.12'
             };
         }
     };
@@ -197,11 +197,8 @@ function assert(condition, message) {
     await window.sendMessage();
     input.value = 'How old was he?';
     await window.sendMessage();
-    assert(fetchCalls === beforeGenericJoseph + 1 && messages.at(-1).text === 'VERIFIED REMOTE PIONEER ANSWER',
-        'Pioneer generic follow-up must research instead of replaying the reviewed Joseph death answer');
-    assert(requestBodies.at(-1).messages.at(-1).content.includes('How old was he?')
-        && requestBodies.at(-1).messages.at(-1).content.includes('What date did Joseph Smith die?'),
-        'Pioneer generic follow-up must send its immediate Joseph context to research');
+    assert(fetchCalls === beforeGenericJoseph && messages.at(-1).text.includes('38 years old'),
+        'Pioneer Joseph age follow-up must remain reviewed and useful during Worker rate limits');
 
     const questionContracts = JSON.parse(fs.readFileSync('ask-question-contracts.json', 'utf8'));
     for (const topicQuestion of questionContracts.contracts.pioneer_topics.values) {

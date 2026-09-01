@@ -193,7 +193,7 @@
 
     function loadVerifiedSourceRouter() {
         const path = window.location.pathname.toLowerCase();
-        if (path.endsWith('/ask.html') || path.endsWith('/pioneers.html')) appendDynamicScript('study-source-router.js?v=20260901-11', 'data-focuschrist-source-router');
+        if (path.endsWith('/ask.html') || path.endsWith('/pioneers.html')) appendDynamicScript('study-source-router.js?v=20260901-12', 'data-focuschrist-source-router');
     }
 
     function loadArtStudyRouter() {

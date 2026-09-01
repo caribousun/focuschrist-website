@@ -37,7 +37,10 @@
             ? registry.resolveFollowup(question, { profile: 'church-history', history: historyConversation })
             : { query: question, resolved: false, entryId: null });
         if (resolution.genericContext === true) return null;
-        const reviewed = registry.match(resolution.query, { profile: 'church-history' });
+        const reviewed = registry.match(resolution.query, {
+            profile: 'church-history',
+            contextVariant: resolution.contextVariant
+        });
         if (!reviewed) return null;
         return Object.assign({}, reviewed, {
             contextResolved: resolution.resolved === true,

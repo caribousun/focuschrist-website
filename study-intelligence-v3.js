@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-09-01.11';
+    const POLICY_VERSION = '2026-09-01.12';
     let askRequestSerial = 0;
 
     const FAITH_TERMS = new Set([
@@ -171,10 +171,13 @@
         };
     }
 
-    function reviewedKnowledgeReference(query) {
+    function reviewedKnowledgeReference(query, contextResolution) {
         const registry = window.focusChristReviewedKnowledge;
         if (!registry || typeof registry.match !== 'function') return null;
-        return registry.match(query, { profile: currentMode() });
+        return registry.match(query, {
+            profile: currentMode(),
+            contextVariant: contextResolution && contextResolution.contextVariant
+        });
     }
 
     function resolveQuestionContext(query) {
@@ -399,7 +402,9 @@
         // he?"). The original wording already received direct reviewed matching in
         // resolveFollowup, so generic contextual research must bypass both local banks.
         const allowContextualLocalMatch = contextResolution.genericContext !== true;
-        const reviewedReference = allowContextualLocalMatch ? reviewedKnowledgeReference(effectiveQuery) : null;
+        const reviewedReference = allowContextualLocalMatch
+            ? reviewedKnowledgeReference(effectiveQuery, contextResolution)
+            : null;
         const localReference = allowContextualLocalMatch
             ? bestLocalReference(effectiveQuery)
             : { found: false, answer: '', sources: [], verified: false };
