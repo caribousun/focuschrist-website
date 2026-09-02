@@ -39,6 +39,8 @@
     --fc-gallery: 1440px;
     --fc-section-y: clamp(48px, 7vw, 82px);
     --fc-gap: clamp(18px, 3vw, 30px);
+    --fc-opening-hero-height: clamp(350px, 27vw, 440px);
+    --fc-opening-flow-header-height: 0px;
 }
 
 html { scroll-behavior: smooth; }
@@ -156,7 +158,7 @@ body.fc-site img { max-width: 100%; }
 .fc-visual-hero {
     position: relative;
     isolation: isolate;
-    min-height: clamp(350px, 27vw, 440px);
+    min-height: var(--fc-opening-hero-height);
     overflow: hidden;
     background: var(--fc-bg-warm);
 }
@@ -222,6 +224,22 @@ body.fc-site img { max-width: 100%; }
         linear-gradient(180deg, #1c3743 0%, #19323e 100%);
     text-align: center;
     border-bottom: 1px solid rgba(134,175,200,.10);
+}
+
+/* The hero and its introduction form one complete opening viewport. The intro
+   may grow for wrapped copy or enlarged text, so no content is clipped. */
+.fc-visual-hero + .fc-page-intro,
+.fc-visual-hero + main > .fc-page-intro:first-child {
+    display: grid;
+    min-height: max(
+        0px,
+        calc(100vh - var(--fc-opening-hero-height) - var(--fc-opening-flow-header-height))
+    );
+    min-height: max(
+        0px,
+        calc(100dvh - var(--fc-opening-hero-height) - var(--fc-opening-flow-header-height))
+    );
+    align-items: center;
 }
 
 .fc-page-intro .fc-display {
@@ -503,14 +521,21 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     .fc-grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+@media (max-width: 1020px) {
+    :root {
+        --fc-opening-flow-header-height: 62px;
+    }
+}
+
 @media (max-width: 700px) {
+    :root { --fc-opening-hero-height: 300px; }
+
     .fc-container,
     .fc-container--reading,
     .fc-container--standard,
     .fc-container--wide,
     .fc-container--gallery { width: calc(100% - 28px); }
 
-    .fc-visual-hero { min-height: 300px; }
     .fc-visual-hero::before { background-position: center 40%; }
     .fc-page-intro { padding: 24px 0 30px; }
     .fc-display { font-size: clamp(2rem, 11vw, 3.05rem); }
