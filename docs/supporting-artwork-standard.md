@@ -44,12 +44,12 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - `assets/page-art/ask-seek-study-800.webp`
 - `assets/page-art/ask-seek-study-1400.webp`
 - Approved daytime image of Jesus Christ studying scripture with a present-day seeker.
-- Placement: right of the Your Study Conversation introduction, with the conversation area remaining full width below.
+- Placement: a large image on the left of the Your Study Conversation introduction, following the established Missionary page split layout. The conversation area remains full width below.
 
 - `assets/page-art/ask-nicodemus-640.webp`
 - `assets/page-art/ask-nicodemus-1122.webp`
 - Approved realistic predawn image of Jesus Christ speaking with Nicodemus.
-- Placement: left of the Continue Your Study links.
+- Placement: right of a clean vertical continuation list inside a unified presentation panel. At tablet and mobile widths, the image stacks above the links.
 
 ## Not selected
 
