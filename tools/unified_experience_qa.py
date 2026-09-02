@@ -64,7 +64,8 @@ def main() -> int:
             ".fc-visual-hero", ".fc-page-intro",
             ".fc-visual-hero + .fc-page-intro", "100dvh",
             "@media (min-width: 2560px)", "A clean Harvest Sky gradient extends",
-            "width: var(--fc-ultrawide-hero-width)", "mask-image: linear-gradient(90deg",
+            "width: var(--fc-ultrawide-hero-width)",
+            "mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 82%, transparent 100%)",
             ".fc-card", ".fc-button", ".fc-footer", "prefers-reduced-motion",
         ):
             if marker not in css:
