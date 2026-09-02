@@ -63,7 +63,7 @@ def main() -> int:
             "--fc-bg", "--fc-standard", "--fc-opening-hero-height", "--fc-ultrawide-hero-width",
             ".fc-visual-hero", ".fc-page-intro",
             ".fc-visual-hero + .fc-page-intro", "100dvh",
-            "@media (min-width: 2560px)", "var(--fc-hero-image)",
+            "@media (min-width: 2560px)", "A clean Harvest Sky gradient extends",
             "width: var(--fc-ultrawide-hero-width)", "mask-image: linear-gradient(90deg",
             ".fc-card", ".fc-button", ".fc-footer", "prefers-reduced-motion",
         ):
