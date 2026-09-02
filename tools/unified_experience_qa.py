@@ -60,8 +60,11 @@ def main() -> int:
     else:
         css = design.read_text(encoding="utf-8")
         for marker in (
-            "--fc-bg", "--fc-standard", "--fc-opening-hero-height", ".fc-visual-hero", ".fc-page-intro",
+            "--fc-bg", "--fc-standard", "--fc-opening-hero-height", "--fc-ultrawide-hero-width",
+            ".fc-visual-hero", ".fc-page-intro",
             ".fc-visual-hero + .fc-page-intro", "100dvh",
+            "@media (min-width: 2560px)", "var(--fc-hero-image)",
+            "width: var(--fc-ultrawide-hero-width)", "mask-image: linear-gradient(90deg",
             ".fc-card", ".fc-button", ".fc-footer", "prefers-reduced-motion",
         ):
             if marker not in css:

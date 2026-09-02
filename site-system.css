@@ -41,6 +41,7 @@
     --fc-gap: clamp(18px, 3vw, 30px);
     --fc-opening-hero-height: clamp(350px, 27vw, 440px);
     --fc-opening-flow-header-height: 0px;
+    --fc-ultrawide-hero-width: 1920px;
 }
 
 html { scroll-behavior: smooth; }
@@ -203,6 +204,46 @@ body.fc-site img { max-width: 100%; }
         );
 }
 
+.fc-visual-hero--christ {
+    --fc-hero-image: url('assets/heroes/home.webp');
+    --fc-hero-position: center 40%;
+}
+
+.fc-visual-hero--ask {
+    --fc-hero-image: url('assets/heroes/ask.webp');
+    --fc-hero-position: center top;
+}
+
+.fc-visual-hero--answers {
+    --fc-hero-image: url('assets/heroes/answers.webp');
+    --fc-hero-position: center 58%;
+}
+
+.fc-visual-hero--art {
+    --fc-hero-image: url('assets/heroes/art.webp');
+    --fc-hero-position: center 50%;
+}
+
+.fc-visual-hero--about {
+    --fc-hero-image: url('assets/heroes/about.webp');
+    --fc-hero-position: center 50%;
+}
+
+.fc-visual-hero--watch {
+    --fc-hero-image: url('assets/heroes/watch.webp');
+    --fc-hero-position: center 48%;
+}
+
+.fc-visual-hero--history {
+    --fc-hero-image: url('assets/heroes/pioneers.webp');
+    --fc-hero-position: center 45%;
+}
+
+.fc-history-hero {
+    --fc-hero-image: url('assets/heroes/church-history.webp');
+    --fc-hero-position: center 46%;
+}
+
 .fc-visual-hero--christ::before { background-image: url('assets/heroes/home.webp'); }
 .fc-visual-hero--history::after {
     background:
@@ -213,6 +254,47 @@ body.fc-site img { max-width: 100%; }
             rgba(45,56,50,0.22) 82%,
             var(--fc-bg-warm) 100%
         );
+}
+
+/* Ultrawide presentation.
+   Keep the owner-approved 1920px composition centered rather than enlarging
+   the artwork to fill a 3440px display. A darkened copy of the same image
+   extends the atmosphere at the sides while the sharp image fades into it.
+   Standard desktop, tablet, and mobile geometry remain unchanged. */
+@media (min-width: 2560px) {
+    .fc-visual-hero {
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(7,22,30,.88) 0%,
+                rgba(14,39,49,.64) 24%,
+                rgba(17,46,57,.52) 50%,
+                rgba(14,39,49,.64) 76%,
+                rgba(7,22,30,.88) 100%
+            ),
+            var(--fc-hero-image);
+        background-position: center, var(--fc-hero-position);
+        background-repeat: no-repeat;
+        background-size: cover, cover;
+    }
+
+    .fc-visual-hero::before,
+    .fc-visual-hero > img {
+        left: 50%;
+        right: auto;
+        width: var(--fc-ultrawide-hero-width);
+        max-width: none;
+        -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+        mask-image: linear-gradient(90deg, transparent 0%, #000 8%, #000 92%, transparent 100%);
+    }
+
+    .fc-visual-hero::before {
+        transform: translateX(-50%) scale(1.004);
+    }
+
+    .fc-visual-hero > img {
+        transform: translateX(-50%);
+    }
 }
 
 .fc-page-intro {
