@@ -33,6 +33,9 @@ def main() -> int:
         "BYU Study Resources",
         "Watch & Study",
         "ensurePrimaryStudyNavigation",
+        "data-focuschrist-primary-missionary",
+        "createMissionaryLink('MISSION')",
+        "createMissionaryLink('MISSIONARY WORK')",
         "data-focuschrist-primary-watch",
         "createWatchLink('WATCH')",
         "createWatchLink('WATCH & STUDY')",
@@ -72,11 +75,21 @@ def main() -> int:
     if "<iframe" in watch.lower():
         errors.append("watch.html unexpectedly embeds third-party video; use verified outbound paths instead")
 
+    missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
+    for marker in (
+        'data-focuschrist-primary-missionary="true"',
+        'data-focuschrist-primary-history="true"',
+    ):
+        if missionary.count(marker) != 2:
+            errors.append(
+                f"missionary.html must mark exactly one desktop and one hamburger destination for {marker}"
+            )
+
     header = (ROOT / "site-header.css").read_text(encoding="utf-8")
     for marker in (
-        "@media (min-width: 1021px) and (max-width: 1260px)",
+        "@media (min-width: 1021px) and (max-width: 1450px)",
         "@media (max-width: 1020px)",
-        "gap: 22px !important",
+        "gap: clamp(14px, 1.6vw, 24px) !important",
     ):
         if marker not in header:
             errors.append(f"site-header.css missing expanded-navigation responsive marker: {marker}")

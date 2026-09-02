@@ -163,19 +163,19 @@
     letter-spacing: 1px;
 }
 
-/* Seven primary destinations fit comfortably on standard desktop widths.
+/* Nine primary destinations fit comfortably on standard desktop widths.
    Tighten spacing before switching fully to the mobile/hamburger layout. */
-@media (min-width: 1021px) and (max-width: 1260px) {
+@media (min-width: 1021px) and (max-width: 1450px) {
     .nav[data-focuschrist-header="standard"] {
         padding: 22px 24px !important;
     }
 
     .nav[data-focuschrist-header="standard"] .nav-links {
-        gap: 22px !important;
+        gap: clamp(14px, 1.6vw, 24px) !important;
     }
 
     .nav[data-focuschrist-header="standard"] .nav-links a {
-        font-size: 0.84em !important;
+        font-size: 0.82em !important;
         letter-spacing: 1.4px !important;
     }
 

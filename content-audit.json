@@ -8,9 +8,9 @@
     {
       "path": "404.html",
       "status": "non-source-dependent",
-      "published_text_sha256": "d56d12e92437d744096b70a47b344393c7a219fbceb40c03ac9eac4d98a15a51",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review"
+      "published_text_sha256": "a9eec1d2ea96680e0c45656983867039c6172d2e41ab6fa8112e99ce48eb6b90",
+      "reviewed_on": "2026-09-02",
+      "review_standard": "L-044 universal source-integrity review; Missionary recovery path added"
     },
     {
       "path": "about.html",
@@ -247,12 +247,33 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "6a57c015a8706c02683b92f854927637489be0c4ac30393ef272fb2a5b91a56c",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "afd90946f5360331ac9fe91f96c145826c21b2be72f54d92b5c9f9531adc7ad8",
+      "reviewed_on": "2026-09-02",
+      "review_standard": "L-044 universal source-integrity review; Missionary discovery path reviewed against the linked page and sources",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng"
+      ]
+    },
+    {
+      "path": "missionary.html",
+      "status": "verified",
+      "published_text_sha256": "2aacc83ec31ad70c04372218d0b09dc487ca44e7438cc6e0fcedd9ca70a7de05",
+      "reviewed_on": "2026-09-02",
+      "review_standard": "L-044 universal source-integrity review; scripture quotations, historical chronology, missionary purpose, service descriptions, and visit expectations checked against direct official Church sources",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/16?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/early-missionaries?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/growth-of-missionary-work?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/globalization?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/03-chapter-1?lang=eng",
+        "https://www.churchofjesuschrist.org/comeuntochrist/love-share-invite",
+        "https://www.churchofjesuschrist.org/comeuntochrist/belong/share-goodness/what-to-expect-from-a-lesson-with-missionaries",
+        "https://www.churchofjesuschrist.org/callings/missionary?lang=eng"
       ]
     },
     {

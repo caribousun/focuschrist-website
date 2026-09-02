@@ -57,6 +57,7 @@
 
     function relativeWatchHref() { return relativeRootHref('watch.html'); }
     function relativeHistoryHref() { return relativeRootHref('church-history.html'); }
+    function relativeMissionaryHref() { return relativeRootHref('missionary.html'); }
     function relativeAssetHref(name) { return relativeRootHref(name); }
 
     function onWatchPage() {
@@ -65,6 +66,10 @@
 
     function onHistoryPage() {
         return window.location.pathname.toLowerCase().endsWith('/church-history.html');
+    }
+
+    function onMissionaryPage() {
+        return window.location.pathname.toLowerCase().endsWith('/missionary.html');
     }
 
     function createWatchLink(text) {
@@ -91,8 +96,32 @@
         return link;
     }
 
+    function createMissionaryLink(text) {
+        const link = document.createElement('a');
+        link.href = relativeMissionaryHref();
+        link.textContent = text;
+        link.setAttribute('data-focuschrist-primary-missionary', 'true');
+        if (onMissionaryPage()) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+        return link;
+    }
+
     function ensurePrimaryStudyNavigation() {
         const desktop = document.querySelector('.nav[data-focuschrist-header="standard"] .nav-links');
+        if (desktop && !desktop.querySelector('[data-focuschrist-primary-missionary]')) {
+            const missionary = createMissionaryLink('MISSION');
+            const history = Array.from(desktop.querySelectorAll('a')).find(function (link) {
+                return link.textContent.trim().toUpperCase() === 'HISTORY';
+            });
+            const pioneers = Array.from(desktop.querySelectorAll('a')).find(function (link) {
+                return link.textContent.trim().toUpperCase() === 'PIONEERS';
+            });
+            if (history) desktop.insertBefore(missionary, history);
+            else if (pioneers) desktop.insertBefore(missionary, pioneers);
+            else desktop.appendChild(missionary);
+        }
         if (desktop && !desktop.querySelector('[data-focuschrist-primary-history]')) {
             const history = createHistoryLink('HISTORY');
             const pioneers = Array.from(desktop.querySelectorAll('a')).find(function (link) {
@@ -111,6 +140,20 @@
         }
 
         const menu = document.getElementById('hamburgerMenu');
+        if (menu && !menu.querySelector('[data-focuschrist-primary-missionary]')) {
+            const missionary = createMissionaryLink('MISSIONARY WORK');
+            const history = Array.from(menu.querySelectorAll('a')).find(function (link) {
+                return link.textContent.trim().toUpperCase() === 'CHURCH HISTORY';
+            });
+            const pioneers = Array.from(menu.querySelectorAll('a')).find(function (link) {
+                return link.textContent.trim().toUpperCase() === 'PIONEERS';
+            });
+            const divider = menu.querySelector('hr');
+            if (history) menu.insertBefore(missionary, history);
+            else if (pioneers) menu.insertBefore(missionary, pioneers);
+            else if (divider) menu.insertBefore(missionary, divider);
+            else menu.appendChild(missionary);
+        }
         if (menu && !menu.querySelector('[data-focuschrist-primary-history]')) {
             const history = createHistoryLink('CHURCH HISTORY');
             const pioneers = Array.from(menu.querySelectorAll('a')).find(function (link) {

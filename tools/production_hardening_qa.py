@@ -72,6 +72,7 @@ def check_hero_assets(errors: list[str]) -> None:
         "assets/heroes/pioneers.webp": (2100, 700),
         "assets/heroes/watch.webp": (2100, 700),
         "assets/heroes/about.webp": (2100, 700),
+        "assets/heroes/missionary.webp": (2100, 700),
     }
     for rel, (min_w, min_h) in floors.items():
         path = ROOT / rel
@@ -116,6 +117,7 @@ def main() -> int:
         "pioneers.html": "assets/heroes/pioneers.webp",
         "watch-experience.css": "assets/heroes/watch.webp",
         "about-hero.css": "assets/heroes/about.webp",
+        "missionary.html": "assets/heroes/missionary.webp",
     }
     for rel, marker in hero_refs.items():
         require(read(rel, errors), rel, (marker,), errors)
@@ -129,6 +131,7 @@ def main() -> int:
         "pioneers.html": "pioneers.webp",
         "watch.html": "watch.webp",
         "about.html": "about.webp",
+        "missionary.html": "missionary.webp",
     }
     for rel, image in social.items():
         text = read(rel, errors)
@@ -136,6 +139,17 @@ def main() -> int:
         if text.count(url) < 2:
             errors.append(f"{rel} must use page-specific production hero for both Open Graph and Twitter image metadata")
         require(text, rel, ('rel="canonical"', 'name="robots" content="index, follow, max-image-preview:large"'), errors)
+
+    missionary = read("missionary.html", errors)
+    require(missionary, "missionary.html", (
+        "assets/heroes/missionary.webp",
+        "assets/missionary/christ-centered-world.webp",
+        "assets/missionary/light-across-world.webp",
+        "data-focuschrist-primary-missionary",
+        "Meet with Missionaries",
+        "Explore Ways to Serve",
+        "data-focuschrist-independence=\"missionary\"",
+    ), errors)
 
     pioneers = read("pioneers.html", errors)
     assert_order(pioneers, "pioneers.html THE JOURNEY", [
@@ -219,7 +233,7 @@ def main() -> int:
     sitemap = read("sitemap.xml", errors)
     robots = read("robots.txt", errors)
     require(robots, "robots.txt", ("User-agent: *", "Allow: /", "Sitemap: https://focuschrist.com/sitemap.xml"), errors)
-    for url in ("ask.html", "answers.html", "watch.html", "art.html", "church-history.html", "pioneers.html", "about.html"):
+    for url in ("ask.html", "answers.html", "watch.html", "art.html", "missionary.html", "church-history.html", "pioneers.html", "about.html"):
         if f"https://focuschrist.com/{url}" not in sitemap:
             errors.append(f"sitemap.xml missing core page {url}")
     if sitemap.count("<lastmod>2026-08-30</lastmod>") < 8:

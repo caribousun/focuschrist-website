@@ -14,6 +14,7 @@ CORE = {
     "answers.html": "https://focuschrist.com/answers.html",
     "watch.html": "https://focuschrist.com/watch.html",
     "art.html": "https://focuschrist.com/art.html",
+    "missionary.html": "https://focuschrist.com/missionary.html",
     "pioneers.html": "https://focuschrist.com/pioneers.html",
     "about.html": "https://focuschrist.com/about.html",
 }
@@ -186,7 +187,7 @@ def main() -> int:
             fail(errors, f"{answer_path}: meta description missing")
         if text.count('data-focuschrist-independence="footer"') != 1:
             fail(errors, f"{answer_path}: independence footer disclosure missing/duplicated")
-        if text.count('<script src="../site-common.js" defer></script>') != 1:
+        if len(re.findall(r'<script src="\.\./site-common\.js(?:\?v=[^"]+)?" defer></script>', text)) != 1:
             fail(errors, f"{answer_path}: shared interaction controller missing/duplicated")
         if 'href="../ask.html"' not in text:
             fail(errors, f"{answer_path}: Ask continuation path missing")
@@ -254,7 +255,7 @@ def main() -> int:
             fail(errors, f"{study_path}: meta description missing")
         if text.count('data-focuschrist-independence="footer"') != 1:
             fail(errors, f"{study_path}: independence footer disclosure missing/duplicated")
-        if '<script src="../site-common.js" defer></script>' not in text:
+        if not re.search(r'<script src="\.\./site-common\.js(?:\?v=[^"]+)?" defer></script>', text):
             fail(errors, f"{study_path}: shared interaction controller missing")
         if 'href="../art.html"' not in text or 'href="../ask.html"' not in text:
             fail(errors, f"{study_path}: Art/Ask continuation path missing")
@@ -379,7 +380,7 @@ def main() -> int:
         fail(errors, "404.html missing or empty")
     else:
         text404 = page404.read_text(encoding="utf-8")
-        for target in ("index.html", "ask.html", "answers.html", "watch.html", "art.html", "pioneers.html", "about.html"):
+        for target in ("index.html", "ask.html", "answers.html", "watch.html", "art.html", "missionary.html", "pioneers.html", "about.html"):
             if f'href="{target}"' not in text404:
                 fail(errors, f"404.html missing recovery link to {target}")
 
