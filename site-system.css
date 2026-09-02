@@ -218,21 +218,74 @@ body.fc-site img { max-width: 100%; }
 
 /* Ultrawide presentation.
    Keep the owner-approved 1920px composition centered rather than enlarging
-   the artwork to fill a 3440px display. A clean Harvest Sky gradient extends
-   the atmosphere at the sides while the sharp image fades into it.
+   the artwork to fill a 3440px display. Each original hero supplies the nearby
+   edge colors, which then dissolve into the shared Harvest Sky atmosphere.
    Standard desktop, tablet, and mobile geometry remain unchanged. */
 @media (min-width: 2560px) {
+    .fc-visual-hero--christ {
+        --fc-hero-edge-left-top: #6f4f1a;
+        --fc-hero-edge-left-bottom: #61491b;
+        --fc-hero-edge-right-top: #71511b;
+        --fc-hero-edge-right-bottom: #735119;
+    }
+
+    .fc-visual-hero--ask {
+        --fc-hero-edge-left-top: #ab8d65;
+        --fc-hero-edge-left-bottom: #584529;
+        --fc-hero-edge-right-top: #fdeead;
+        --fc-hero-edge-right-bottom: #f6c364;
+    }
+
+    .fc-visual-hero--answers {
+        --fc-hero-edge-left-top: #514322;
+        --fc-hero-edge-left-bottom: #3d2c1c;
+        --fc-hero-edge-right-top: #171610;
+        --fc-hero-edge-right-bottom: #171411;
+    }
+
+    .fc-visual-hero--art {
+        --fc-hero-edge-left-top: #6e5422;
+        --fc-hero-edge-left-bottom: #906f45;
+        --fc-hero-edge-right-top: #644f2d;
+        --fc-hero-edge-right-bottom: #36260e;
+    }
+
+    .fc-visual-hero--about {
+        --fc-hero-edge-left-top: #d3b37c;
+        --fc-hero-edge-left-bottom: #8b6b3d;
+        --fc-hero-edge-right-top: #302415;
+        --fc-hero-edge-right-bottom: #382a16;
+    }
+
+    .fc-visual-hero--watch {
+        --fc-hero-edge-left-top: #583e1b;
+        --fc-hero-edge-left-bottom: #59401b;
+        --fc-hero-edge-right-top: #ac9062;
+        --fc-hero-edge-right-bottom: #62482c;
+    }
+
+    .fc-visual-hero--history {
+        --fc-hero-edge-left-top: #fef6d7;
+        --fc-hero-edge-left-bottom: #c69868;
+        --fc-hero-edge-right-top: #bdbab1;
+        --fc-hero-edge-right-bottom: #826348;
+    }
+
+    .fc-history-hero {
+        --fc-hero-edge-left-top: #17374c;
+        --fc-hero-edge-left-bottom: #2c4b60;
+        --fc-hero-edge-right-top: #826a4c;
+        --fc-hero-edge-right-bottom: #262926;
+    }
+
     .fc-visual-hero {
         background-image:
-            radial-gradient(circle at 50% 20%, rgba(240,195,106,.10), transparent 44%),
-            linear-gradient(
-                90deg,
-                #07161e 0%,
-                #0e2731 24%,
-                #112e39 50%,
-                #0e2731 76%,
-                #07161e 100%
-            );
+            linear-gradient(90deg, rgba(7,22,30,.96) 0%, rgba(7,22,30,.42) 12%, transparent 23%, transparent 77%, rgba(7,22,30,.42) 88%, rgba(7,22,30,.96) 100%),
+            radial-gradient(ellipse 34% 88% at 22% 0%, var(--fc-hero-edge-left-top) 0%, transparent 100%),
+            radial-gradient(ellipse 34% 88% at 22% 100%, var(--fc-hero-edge-left-bottom) 0%, transparent 100%),
+            radial-gradient(ellipse 34% 88% at 78% 0%, var(--fc-hero-edge-right-top) 0%, transparent 100%),
+            radial-gradient(ellipse 34% 88% at 78% 100%, var(--fc-hero-edge-right-bottom) 0%, transparent 100%),
+            linear-gradient(90deg, #07161e 0%, #0e2731 24%, #112e39 50%, #0e2731 76%, #07161e 100%);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -244,8 +297,8 @@ body.fc-site img { max-width: 100%; }
         right: auto;
         width: var(--fc-ultrawide-hero-width);
         max-width: none;
-        -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
-        mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 82%, transparent 100%);
+        -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.13) 4%, rgba(0,0,0,.50) 9%, rgba(0,0,0,.87) 14%, #000 18%, #000 82%, rgba(0,0,0,.87) 86%, rgba(0,0,0,.50) 91%, rgba(0,0,0,.13) 96%, transparent 100%);
+        mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.13) 4%, rgba(0,0,0,.50) 9%, rgba(0,0,0,.87) 14%, #000 18%, #000 82%, rgba(0,0,0,.87) 86%, rgba(0,0,0,.50) 91%, rgba(0,0,0,.13) 96%, transparent 100%);
     }
 
     .fc-visual-hero::before {

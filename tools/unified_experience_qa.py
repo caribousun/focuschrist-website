@@ -51,6 +51,24 @@ def expected_system_href(path: str) -> str:
     return "../site-system.css" if "/" in path else "site-system.css"
 
 
+def css_block(css: str, header: str) -> str | None:
+    start = css.find(header)
+    if start < 0:
+        return None
+    opening = css.find("{", start + len(header))
+    if opening < 0:
+        return None
+    depth = 0
+    for index in range(opening, len(css)):
+        if css[index] == "{":
+            depth += 1
+        elif css[index] == "}":
+            depth -= 1
+            if depth == 0:
+                return css[opening + 1:index]
+    return None
+
+
 def main() -> int:
     errors: list[str] = []
 
@@ -63,13 +81,63 @@ def main() -> int:
             "--fc-bg", "--fc-standard", "--fc-opening-hero-height", "--fc-ultrawide-hero-width",
             ".fc-visual-hero", ".fc-page-intro",
             ".fc-visual-hero + .fc-page-intro", "100dvh",
-            "@media (min-width: 2560px)", "A clean Harvest Sky gradient extends",
+            "@media (min-width: 2560px)", "Each original hero supplies the nearby",
             "width: var(--fc-ultrawide-hero-width)",
-            "mask-image: linear-gradient(90deg, transparent 0%, #000 18%, #000 82%, transparent 100%)",
+            "--fc-hero-edge-left-top", "--fc-hero-edge-right-bottom",
+            "rgba(0,0,0,.50) 9%", "rgba(0,0,0,.50) 91%",
             ".fc-card", ".fc-button", ".fc-footer", "prefers-reduced-motion",
         ):
             if marker not in css:
                 fail(errors, f"site-system.css missing design-system marker: {marker}")
+
+        ultrawide = css_block(css, "@media (min-width: 2560px)")
+        if ultrawide is None:
+            fail(errors, "site-system.css missing complete ultrawide block")
+        else:
+            edge_keys = (
+                "--fc-hero-edge-left-top",
+                "--fc-hero-edge-left-bottom",
+                "--fc-hero-edge-right-top",
+                "--fc-hero-edge-right-bottom",
+            )
+            hero_mappings = (
+                ".fc-visual-hero--christ",
+                ".fc-visual-hero--ask",
+                ".fc-visual-hero--answers",
+                ".fc-visual-hero--art",
+                ".fc-visual-hero--about",
+                ".fc-visual-hero--watch",
+                ".fc-visual-hero--history",
+                ".fc-history-hero",
+            )
+            for selector in hero_mappings:
+                mapping = css_block(ultrawide, selector)
+                if mapping is None:
+                    fail(errors, f"site-system.css missing ultrawide edge mapping: {selector}")
+                    continue
+                for key in edge_keys:
+                    if key not in mapping:
+                        fail(errors, f"site-system.css {selector} missing ultrawide edge color: {key}")
+
+            radial_fields = (
+                "radial-gradient(ellipse 34% 88% at 22% 0%, var(--fc-hero-edge-left-top) 0%, transparent 100%)",
+                "radial-gradient(ellipse 34% 88% at 22% 100%, var(--fc-hero-edge-left-bottom) 0%, transparent 100%)",
+                "radial-gradient(ellipse 34% 88% at 78% 0%, var(--fc-hero-edge-right-top) 0%, transparent 100%)",
+                "radial-gradient(ellipse 34% 88% at 78% 100%, var(--fc-hero-edge-right-bottom) 0%, transparent 100%)",
+            )
+            for field in radial_fields:
+                if field not in ultrawide:
+                    fail(errors, f"site-system.css missing hero-matched ultrawide field: {field}")
+
+            curved_mask = (
+                "linear-gradient(90deg, transparent 0%, rgba(0,0,0,.13) 4%, rgba(0,0,0,.50) 9%, "
+                "rgba(0,0,0,.87) 14%, #000 18%, #000 82%, rgba(0,0,0,.87) 86%, "
+                "rgba(0,0,0,.50) 91%, rgba(0,0,0,.13) 96%, transparent 100%)"
+            )
+            if ultrawide.count(curved_mask) != 2:
+                fail(errors, "site-system.css must keep matching standard and WebKit curved ultrawide masks")
+            if "url(" in ultrawide or "image-set(" in ultrawide or "--fc-hero-image" in ultrawide:
+                fail(errors, "site-system.css ultrawide atmosphere must not contain a duplicate image layer")
 
     for relative in PUBLIC_PAGES:
         path = ROOT / relative
