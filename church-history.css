@@ -1,4 +1,5 @@
 /* Church History page — focusChrist Harvest Sky extension. */
+.fc-history-page { --fc-opening-hero-height: clamp(350px, 27vw, 440px); }
 .fc-history-page .fc-history-hero { min-height: clamp(350px, 27vw, 440px); }
 .fc-history-page .fc-history-hero > img { object-position: center 46%; filter: saturate(.9) contrast(.98) brightness(.92); }
 .fc-history-page .fc-history-hero::after {
