@@ -142,9 +142,7 @@
         const menu = document.getElementById('hamburgerMenu');
         if (menu && !menu.querySelector('[data-focuschrist-primary-missionary]')) {
             const missionary = createMissionaryLink('MISSIONARY WORK');
-            const history = Array.from(menu.querySelectorAll('a')).find(function (link) {
-                return link.textContent.trim().toUpperCase() === 'CHURCH HISTORY';
-            });
+            const history = menu.querySelector('[data-focuschrist-primary-history]');
             const pioneers = Array.from(menu.querySelectorAll('a')).find(function (link) {
                 return link.textContent.trim().toUpperCase() === 'PIONEERS';
             });

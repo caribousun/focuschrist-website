@@ -36,6 +36,7 @@ def main() -> int:
         "data-focuschrist-primary-missionary",
         "createMissionaryLink('MISSION')",
         "createMissionaryLink('MISSIONARY WORK')",
+        "menu.querySelector('[data-focuschrist-primary-history]')",
         "data-focuschrist-primary-watch",
         "createWatchLink('WATCH')",
         "createWatchLink('WATCH & STUDY')",
@@ -53,6 +54,12 @@ def main() -> int:
 
     if "https://rsc.byu.edu/search" in common or "RSC Search" in common:
         errors.append("site-common.js reintroduces redundant RSC Search hamburger item")
+
+    if "textContent.trim().toUpperCase() === 'CHURCH HISTORY'" in common:
+        errors.append(
+            "site-common.js may mistake the official Church History resource below the divider "
+            "for the primary mobile History destination and remove Missionary Work during menu cleanup"
+        )
 
     watch = (ROOT / "watch.html").read_text(encoding="utf-8")
     for marker in (
