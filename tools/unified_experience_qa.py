@@ -7,7 +7,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 ROOT_PAGES = [
-    "index.html", "ask.html", "answers.html", "art.html", "pioneers.html",
+    "index.html", "ask.html", "answers.html", "art.html", "church-history.html", "pioneers.html",
     "about.html", "watch.html", "404.html",
 ]
 NESTED_PAGES = sorted(
@@ -60,7 +60,8 @@ def main() -> int:
     else:
         css = design.read_text(encoding="utf-8")
         for marker in (
-            "--fc-bg", "--fc-standard", ".fc-visual-hero", ".fc-page-intro",
+            "--fc-bg", "--fc-standard", "--fc-opening-hero-height", ".fc-visual-hero", ".fc-page-intro",
+            ".fc-visual-hero + .fc-page-intro", "100dvh",
             ".fc-card", ".fc-button", ".fc-footer", "prefers-reduced-motion",
         ):
             if marker not in css:
