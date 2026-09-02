@@ -208,6 +208,16 @@ def main() -> int:
     ):
         if marker not in ask:
             fail(errors, f"ask.html: supporting artwork responsive marker missing: {marker}")
+    ask_css = (ROOT / "ask-experience.css").read_text(encoding="utf-8")
+    for marker in (
+        'grid-template-columns: minmax(0, 1.45fr) minmax(310px, .75fr)',
+        '.ask-conversation-copy .ask-conversation-reset--fallback',
+        'grid-template-areas: "links art"',
+        '@media (max-width: 1050px)',
+        '.ask-continue-card span',
+    ):
+        if marker not in ask_css:
+            fail(errors, f"ask-experience.css: polished artwork-flow marker missing: {marker}")
 
     pioneers = (ROOT / "pioneers.html").read_text(encoding="utf-8")
     if 'fc-visual-hero--history' not in pioneers:
