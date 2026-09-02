@@ -85,7 +85,7 @@ def main() -> int:
             "width: var(--fc-ultrawide-hero-width)",
             "--fc-hero-edge-left-top", "--fc-hero-edge-right-bottom",
             "rgba(0,0,0,.50) 9%", "rgba(0,0,0,.50) 91%",
-            ".fc-card", ".fc-button", ".fc-footer", "prefers-reduced-motion",
+            ".fc-card", ".fc-button", ".fc-content-artwork", ".fc-footer", "prefers-reduced-motion",
         ):
             if marker not in css:
                 fail(errors, f"site-system.css missing design-system marker: {marker}")
@@ -174,6 +174,14 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8")
         if 'fc-visual-hero--christ' not in text:
             fail(errors, f"{relative}: Christ image hero variant missing")
+
+    home = (ROOT / "index.html").read_text(encoding="utf-8")
+    home_art = "assets/page-art/home-seek-study-remember.webp"
+    if f'src="{home_art}"' not in home or 'class="fc-content-artwork"' not in home:
+        fail(errors, "index.html: approved supporting artwork missing or not wired")
+    home_art_path = ROOT / home_art
+    if not home_art_path.exists() or home_art_path.stat().st_size == 0:
+        fail(errors, f"index.html: supporting artwork asset missing or empty: {home_art}")
 
     pioneers = (ROOT / "pioneers.html").read_text(encoding="utf-8")
     if 'fc-visual-hero--history' not in pioneers:
