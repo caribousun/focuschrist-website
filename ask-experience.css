@@ -267,6 +267,51 @@ body {
     line-height: 1.6;
 }
 
+.ask-conversation-feature {
+    display: grid;
+    grid-template-columns: minmax(260px, .78fr) minmax(0, 1.22fr);
+    gap: clamp(22px, 4vw, 42px);
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.ask-conversation-copy .ask-section-heading,
+.ask-conversation-copy .ask-section-copy {
+    text-align: left;
+}
+
+.ask-conversation-copy .ask-section-copy {
+    margin-bottom: 0;
+}
+
+.ask-supporting-art {
+    margin: 0;
+    border-color: rgba(240,195,106,.30);
+    border-radius: 18px;
+    box-shadow: 0 18px 44px rgba(4,17,23,.34);
+}
+
+.ask-supporting-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ask-conversation-art {
+    aspect-ratio: 2 / 1;
+}
+
+.ask-continue-layout {
+    display: grid;
+    grid-template-columns: minmax(270px, .74fr) minmax(0, 1.26fr);
+    gap: clamp(22px, 4vw, 40px);
+    align-items: center;
+}
+
+.ask-continue-art {
+    aspect-ratio: 4 / 5;
+}
+
 .ask-chat-box {
     min-height: 260px;
     max-height: 560px;
@@ -426,7 +471,7 @@ body {
 
 .ask-continue-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
 }
 
@@ -470,6 +515,16 @@ body {
     .ask-continue-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
+@media (max-width: 820px) {
+    .ask-continue-layout {
+        grid-template-columns: 1fr;
+    }
+    .ask-continue-art {
+        width: min(100%, 520px);
+        margin-inline: auto;
+    }
+}
+
 @media (max-width: 720px) {
     .ask-study-card { padding: 24px 18px; border-radius: 16px; }
     .ask-input-area { grid-template-columns: 1fr; }
@@ -478,6 +533,9 @@ body {
     .ask-chat-box { padding: 16px; max-height: 620px; }
     .ask-chat-box .user-message,
     .ask-chat-box .bot-message { margin-left: 0; margin-right: 0; }
+    .ask-conversation-feature { grid-template-columns: 1fr; }
+    .ask-conversation-copy .ask-section-heading,
+    .ask-conversation-copy .ask-section-copy { text-align: center; }
 }
 
 @media (max-width: 520px) {

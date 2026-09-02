@@ -88,6 +88,27 @@ def check_hero_assets(errors: list[str]) -> None:
             errors.append(f"{rel} below production resolution floor: {w}x{h}, expected at least {min_w}x{min_h}")
 
 
+def check_supporting_art_assets(errors: list[str]) -> None:
+    floors = {
+        "assets/page-art/ask-seek-study-800.webp": (800, 400),
+        "assets/page-art/ask-seek-study-1400.webp": (1400, 700),
+        "assets/page-art/ask-nicodemus-640.webp": (640, 800),
+        "assets/page-art/ask-nicodemus-1122.webp": (1122, 1402),
+    }
+    for rel, expected in floors.items():
+        path = ROOT / rel
+        if not path.exists() or path.stat().st_size == 0:
+            errors.append(f"{rel} missing or empty")
+            continue
+        try:
+            actual = webp_dimensions(path)
+        except Exception as exc:
+            errors.append(f"{rel} dimension check failed: {exc}")
+            continue
+        if actual != expected:
+            errors.append(f"{rel} has unexpected dimensions: {actual[0]}x{actual[1]}, expected {expected[0]}x{expected[1]}")
+
+
 def check_no_editable_drive_runtime(errors: list[str]) -> None:
     forbidden = ("lh3.googleusercontent.com/d/", "drive.google.com/file/d/", "caribousun.github.io/focuschrist-website/Jesus.png")
     runtime = []
@@ -106,6 +127,7 @@ def main() -> int:
     errors: list[str] = []
 
     check_hero_assets(errors)
+    check_supporting_art_assets(errors)
     check_no_editable_drive_runtime(errors)
 
     hero_refs = {

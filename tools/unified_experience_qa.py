@@ -183,6 +183,32 @@ def main() -> int:
     if not home_art_path.exists() or home_art_path.stat().st_size == 0:
         fail(errors, f"index.html: supporting artwork asset missing or empty: {home_art}")
 
+    ask = (ROOT / "ask.html").read_text(encoding="utf-8")
+    ask_art_assets = (
+        "assets/page-art/ask-seek-study-800.webp",
+        "assets/page-art/ask-seek-study-1400.webp",
+        "assets/page-art/ask-nicodemus-640.webp",
+        "assets/page-art/ask-nicodemus-1122.webp",
+    )
+    for ask_art in ask_art_assets:
+        ask_art_path = ROOT / ask_art
+        if ask_art not in ask:
+            fail(errors, f"ask.html: approved supporting artwork not wired: {ask_art}")
+        if not ask_art_path.exists() or ask_art_path.stat().st_size == 0:
+            fail(errors, f"ask.html: supporting artwork asset missing or empty: {ask_art}")
+        elif ask_art_path.stat().st_size > 120_000:
+            fail(errors, f"ask.html: supporting artwork exceeds 120 KB performance budget: {ask_art}")
+    for marker in (
+        'class="ask-conversation-feature"',
+        'class="ask-continue-layout"',
+        'loading="lazy"',
+        'decoding="async"',
+        'srcset="assets/page-art/ask-seek-study-800.webp 800w',
+        'srcset="assets/page-art/ask-nicodemus-640.webp 640w',
+    ):
+        if marker not in ask:
+            fail(errors, f"ask.html: supporting artwork responsive marker missing: {marker}")
+
     pioneers = (ROOT / "pioneers.html").read_text(encoding="utf-8")
     if 'fc-visual-hero--history' not in pioneers:
         fail(errors, "pioneers.html: historical hero variant missing")

@@ -215,9 +215,9 @@
     {
       "path": "ask.html",
       "status": "verified",
-      "published_text_sha256": "a24569591cb50c401b3464f4d8fd79df1850cca67781bd4a1f3c10fcf00f4bdf",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review; embedded answers governed by separate fail-closed inventory and runtime checks",
+      "published_text_sha256": "82e0a38eafce74220703b1eebd14c64c2afd0cee6b0057e1035d16d328095d62",
+      "reviewed_on": "2026-09-02",
+      "review_standard": "L-044 universal source-integrity review; approved supporting artwork descriptions reviewed; embedded answers governed by separate fail-closed inventory and runtime checks",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng"
       ]
