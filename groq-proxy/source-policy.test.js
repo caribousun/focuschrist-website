@@ -207,6 +207,15 @@ assert(reviewedDeterministicEvidenceRecovery(
   [{ url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'Kirtland Temple history.' }],
 ) === null, 'reviewed Relief Society recovery must not activate for unrelated Church History topics');
 
+const workerSourceForDeterministicLane = await import('node:fs').then((fs) => fs.readFileSync(new URL('./src/index.js', import.meta.url), 'utf8'));
+const deterministicLanePosition = workerSourceForDeterministicLane.indexOf("const reviewedDeterministic = retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'");
+const verifierPromptPosition = workerSourceForDeterministicLane.indexOf('const verifierPrompt = sanitized.scope.selectedPioneer');
+assert(deterministicLanePosition >= 0 && verifierPromptPosition > deterministicLanePosition
+  && workerSourceForDeterministicLane.includes("focuschrist_verifier_route: 'reviewed-deterministic'")
+  && workerSourceForDeterministicLane.includes('focuschrist_groq_verifier_calls: 0')
+  && workerSourceForDeterministicLane.includes('focuschrist_openai_verifier_calls: 0'),
+  'audited deterministic evidence recoveries must resolve before verifier providers are invoked');
+
 const verifierFetchBeforeTests = globalThis.fetch;
 let primaryVerifierGroqCalls = 0;
 globalThis.fetch = async () => { primaryVerifierGroqCalls += 1; throw new Error('Groq verifier should not run'); };
@@ -801,7 +810,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.48',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.49',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
