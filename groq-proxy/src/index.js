@@ -21,7 +21,7 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.32';
+const SOURCE_POLICY_VERSION = '2026-09-03.33';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -345,12 +345,16 @@ function deterministicScriptureSource(question) {
   };
 }
 
+function isPioneerIrrigationIntent(question, page) {
+  return page === 'pioneers'
+    && /\b(?:irrigat\w*|shared\s+water|water\s+(?:management|distribution|systems?))\b/i.test(String(question || ''));
+}
+
 function rankChurchSourceCandidates(question, page) {
   const queryTokens = normalizeDiscoveryTokens(question);
   if (!queryTokens.length) return [];
   const scripture = deterministicScriptureSource(question);
-  const pioneerIrrigation = page === 'pioneers'
-    && /\b(?:irrigat\w*|shared\s+water|water\s+(?:management|distribution|systems?))\b/i.test(String(question || ''));
+  const pioneerIrrigation = isPioneerIrrigationIntent(question, page);
   const ranked = CHURCH_SOURCE_INDEX.map((entry) => {
     const sourceTokens = new Set(normalizeDiscoveryTokens(entry.tokens));
     const overlaps = queryTokens.filter((token) => sourceTokens.has(token));
@@ -1600,9 +1604,14 @@ export default {
       const needsParaphraseRepair = Boolean(verdict && verdict.approved === true && indexes.length
         && hasExcessiveSourceOverlap(verdict.answer, selectedEvidenceBeforeRepair));
       const indexedEvidenceRelevance = evidenceRelevanceReceipt(sanitized.scope.retrievalQuestion, evidence);
+      const hasPinnedPioneerIrrigationEvidence = isPioneerIrrigationIntent(
+        sanitized.scope.retrievalQuestion,
+        sanitized.scope.page,
+      ) && evidence.some((entry) => /\/study\/manual\/church-history-in-the-fulness-of-times\/chapter-twenty-six/.test(entry.url));
       const needsRelevantEvidenceReconsideration = Boolean(verdict && verdict.approved === false
         && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
-        && indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2));
+        && (indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2)
+          || hasPinnedPioneerIrrigationEvidence));
       if ((needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration)
         && verifierResult.verifierRoute === 'cloudflare-primary'
         && remainingBudget(deadline) >= 4500) {
@@ -1737,6 +1746,7 @@ export {
   isOfficialChurchSource,
   isOfficialChurchIdentityEvidence,
   isJsonValidationFailure,
+  isPioneerIrrigationIntent,
   isVerifierVerdictShape,
   isTellMyStorySource,
   needsIdentityClarification,

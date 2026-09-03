@@ -4,7 +4,9 @@ import worker, {
   extractRelevantParagraphs,
   fetchOfficialSource,
   hasExcessiveSourceOverlap,
+  isPioneerIrrigationIntent,
   rankChurchSourceCandidates,
+  REQUEST_BUDGET_MS,
 } from './src/index.js';
 
 function assert(condition, message) {
@@ -57,6 +59,10 @@ assert(rankChurchSourceCandidates('How did pioneers cooperate to build temples?'
 assert(rankChurchSourceCandidates('What did cooperative irrigation contribute to settlement life?', 'ask')
   .every((candidate) => candidate.topicPinned !== true),
   'the Pioneer irrigation topic pin must not escape onto the general Ask page');
+assert(isPioneerIrrigationIntent('Why did cooperative irrigation contribute to settlement life?', 'pioneers')
+  && !isPioneerIrrigationIntent('How did pioneers cooperate to build temples?', 'pioneers')
+  && !isPioneerIrrigationIntent('Why did cooperative irrigation contribute to settlement life?', 'ask'),
+  'bounded Pioneer irrigation intent must cover the short live paraphrase without escaping to unrelated topics or pages');
 assert(rankChurchSourceCandidates('How do I replace a bicycle chain?', 'ask').length === 0,
   'an unrelated question must not receive a strong Church-source match');
 
@@ -479,6 +485,126 @@ try {
   'a fast negative verdict over strongly relevant indexed official evidence must receive one bounded Cloudflare-only reconsideration');
 } finally {
   globalThis.fetch = originalFetch;
+}
+
+
+
+const cachedPioneerParagraphs = [
+  'Pioneer families planned water channels as the settlement took root in the valley.',
+];
+const cachedPioneerResponse = () => new Response(JSON.stringify({ paragraphs: cachedPioneerParagraphs }), {
+  headers: { 'Content-Type': 'application/json' },
+});
+const chapterTwentySixUrl = 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng';
+const chapterTwentySixDigest = await globalThis.crypto.subtle.digest(
+  'SHA-256',
+  new TextEncoder().encode(chapterTwentySixUrl),
+);
+const chapterTwentySixCacheUrl = `https://focuschrist-groq-proxy.caribousun.workers.dev/__official_excerpt_cache/${Array.from(
+  new Uint8Array(chapterTwentySixDigest),
+  (byte) => byte.toString(16).padStart(2, '0'),
+).join('')}`;
+const pioneerEvidenceAnswer = 'Cooperative irrigation helped early Latter-day Saint settlers make dry land productive and establish a durable community in the Salt Lake Valley. The official history describes families planning channels that distributed scarce water as the settlement took root. Shared planning and labor therefore supported planting and the physical development of the new community. This work mattered because dependable water access made agriculture possible in an arid place and gave arriving Saints a practical foundation for building together. Their coordinated water work was one part of turning the valley into a lasting settlement.';
+const originalCaches = globalThis.caches;
+
+async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false }) {
+  let verifierCalls = 0;
+  let groqCalls = 0;
+  let officialFetchCalls = 0;
+  globalThis.caches = {
+    default: {
+      match: async (request) => (omitPinnedSource && request.url === chapterTwentySixCacheUrl
+        ? null
+        : cachedPioneerResponse()),
+      put: async () => {},
+    },
+  };
+  globalThis.fetch = async (url) => {
+    if (String(url || '').includes('api.groq.com')) {
+      groqCalls += 1;
+      return new Response(JSON.stringify({ error: { message: 'Groq must not be called' } }), {
+        status: 429,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+    officialFetchCalls += 1;
+    return new Response('', { status: 503, headers: { 'Content-Type': 'text/html' } });
+  };
+  const response = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: page,
+      focuschrist_profile: profile,
+      messages: [{ role: 'user', content: question }],
+    }),
+  }), {
+    AI: { run: async () => {
+      verifierCalls += 1;
+      return { response: approveSecond && verifierCalls === 2
+        ? { approved: true, answer: pioneerEvidenceAnswer, source_indexes: [1] }
+        : { approved: false, answer: '', source_indexes: [] } };
+    } },
+  });
+  return { payload: await response.json(), verifierCalls, groqCalls, officialFetchCalls };
+}
+
+try {
+  const positive = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+    approveSecond: true,
+  });
+  assert(positive.verifierCalls === 2
+    && positive.groqCalls === 0
+    && positive.officialFetchCalls === 0
+    && positive.payload.focuschrist_source_integrity_verified === true
+    && positive.payload.focuschrist_cloudflare_verifier_calls === 2
+    && positive.payload.focuschrist_groq_verifier_calls === 0
+    && positive.payload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six'))
+    && positive.payload.focuschrist_evidence_relevance.length > 0
+    && positive.payload.focuschrist_evidence_relevance.every((entry) => entry.overlap_count < 2)
+    && REQUEST_BUDGET_MS === 22000,
+  'cached sub-threshold chapter 26 evidence must alone enable one bounded Cloudflare reconsideration inside the unchanged request budget');
+
+  const askNegative = await runPioneerReconsiderationCase({
+    page: 'ask',
+    profile: 'faith-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+  });
+  assert(askNegative.verifierCalls === 1
+    && askNegative.groqCalls === 0
+    && askNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && askNegative.payload.focuschrist_source_integrity_verified !== true,
+  'the same sub-threshold irrigation wording on general Ask must not receive the Pioneer reconsideration');
+
+  const unrelatedNegative = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'How did pioneers cooperate to build temples?',
+  });
+  assert(unrelatedNegative.verifierCalls === 1
+    && unrelatedNegative.groqCalls === 0
+    && unrelatedNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && unrelatedNegative.payload.focuschrist_source_integrity_verified !== true,
+  'unrelated Pioneer cooperation must not receive the irrigation reconsideration');
+
+  const missingPinnedNegative = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+    omitPinnedSource: true,
+  });
+  assert(missingPinnedNegative.verifierCalls === 1
+    && missingPinnedNegative.groqCalls === 0
+    && missingPinnedNegative.officialFetchCalls >= 1
+    && missingPinnedNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && missingPinnedNegative.payload.focuschrist_source_integrity_verified !== true,
+  'Pioneer irrigation without the exact chapter 26 evidence must not receive the pinned-source reconsideration');
+} finally {
+  globalThis.fetch = originalFetch;
+  globalThis.caches = originalCaches;
 }
 
 console.log('Church source index QA PASS');
