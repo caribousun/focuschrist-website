@@ -270,3 +270,10 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Production .35 proved the provider-route correction worked: Groq verification returned successful source-grounded answers for several doctrine, general, scripture, and Pioneer cases with zero Cloudflare calls. The remaining matrix failures were verifier-format failures and false-negative rejections, not source-index failure.
 - Candidate .36 separates research and verification models again: Compound Mini remains research-only; Groq GPT-OSS 20B is the verification model. The verifier parser now tolerates harmless wrapper text, one bounded JSON-format repair is permitted, faith answers receive a larger completion budget, and the existing evidence-reconsideration/depth-repair path now works on Groq primary as well as Cloudflare primary.
 - Quality gates remain fail-closed. Final source indexes, official-domain rules, substance requirements, overlap controls, and known-false-claim guards remain mandatory.
+
+
+### Ask verifier JSON and reasoning control - candidate 2026-09-03.37
+
+- Production .36 eliminated most prior failures but showed GPT-OSS verifier completions repeatedly exhausting the 700-token cap on some Relief Society and grace questions, while a directly relevant Alma 32 variant was still over-rejected.
+- Candidate .37 uses Groq-supported GPT-OSS controls: low reasoning effort, reasoning excluded from the response, and JSON response mode. Faith verification gets a 1,000-token completion ceiling. The verifier instructions explicitly interpret understandable awkward grammar and prohibit rejecting a named official scripture/history topic merely because the visitor phrased the question imperfectly.
+- Source integrity remains fail-closed. Official-domain restriction, source indexes, evidence relevance, depth, paraphrase, known-false-claim checks, and bounded reconsideration remain mandatory.

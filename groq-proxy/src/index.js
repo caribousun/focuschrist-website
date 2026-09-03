@@ -21,8 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.36';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.36';
+const SOURCE_POLICY_VERSION = '2026-09-03.37';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.37';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1118,8 +1118,13 @@ async function callVerifier(env, body, deadline, options = {}) {
   const started = Date.now();
   const requireSourceIndexes = options.requireSourceIndexes === true;
   const allowGroqFallback = options.allowGroqFallback !== false;
-  const { response_format: _providerEnforcedFormat, ...plainJsonBody } = body;
-  const groqFallbackBody = { ...plainJsonBody, model: VERIFIER_MODEL };
+  const plainJsonBody = { ...body };
+  const groqFallbackBody = {
+    ...body,
+    model: VERIFIER_MODEL,
+    reasoning_effort: 'low',
+    include_reasoning: false,
+  };
   if (String(env && env.VERIFIER_PROVIDER || '').toLowerCase() === 'groq') {
     const primaryRaw = await callGroq(env && env.GROQ_KEY_NEW, groqFallbackBody, deadline, false);
     const primary = validateGroqVerifierResult(primaryRaw, requireSourceIndexes);
@@ -1646,6 +1651,7 @@ export default {
         'Use independently worded paraphrase. Do not copy a long passage or reconstruct the source in ordered fragments. Apart from unavoidable names and short doctrinal phrases, avoid matching source wording for more than eight consecutive words.',
         'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
         'Set approved true whenever the evidence contains material that can responsibly answer the question, including when DRAFT is empty. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
+        'Interpret ordinary awkward grammar by its clear intended meaning. Do not reject a scripture, doctrine, or history question merely because its wording is imperfect. If the named official source directly addresses the named topic or concept, answer from that evidence.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `QUESTION:\n${sanitized.scope.question}`,
@@ -1657,7 +1663,7 @@ export default {
       const verifierBody = {
         messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
-        max_tokens: sanitized.scope.selectedPioneer ? 900 : (sanitized.scope.faith ? 700 : 500),
+        max_tokens: sanitized.scope.selectedPioneer ? 900 : (sanitized.scope.faith ? 1000 : 500),
         response_format: { type: 'json_object' },
       };
       let verifierResult = await callVerifier(env, verifierBody, deadline, {
@@ -1699,7 +1705,7 @@ export default {
           verifierPrompt,
           '',
           needsRelevantEvidenceReconsideration
-            ? 'Your previous rejection may be a false negative because the indexed official evidence has direct lexical relevance. Re-evaluate it once without presuming either approval or rejection.'
+            ? 'Your previous rejection may be a false negative because the indexed official evidence has direct lexical relevance. Re-evaluate it once without presuming either approval or rejection. Interpret awkward but understandable grammar naturally. A named scripture chapter or Church-history topic that directly addresses the requested concept is usable evidence and should not be rejected merely because the visitor phrased the question imperfectly.'
             : needsDepthRepair
             ? 'Your previous approved answer did not meet the required answer depth.'
             : 'Your previous approved answer failed the final publication overlap check.',
@@ -1718,7 +1724,7 @@ export default {
         const expansionResult = await callVerifier(env, {
           ...verifierBody,
           messages: [{ role: 'user', content: expansionPrompt }],
-          max_tokens: sanitized.scope.selectedPioneer ? 900 : (sanitized.scope.faith ? 700 : 500),
+          max_tokens: sanitized.scope.selectedPioneer ? 900 : (sanitized.scope.faith ? 1000 : 500),
         }, deadline, {
           requireSourceIndexes: true,
           allowGroqFallback: false,

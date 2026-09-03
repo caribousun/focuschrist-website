@@ -377,7 +377,7 @@ try {
   assert(officialFetchCalls > 0 && officialFetchCalls <= 2 && groqCalls === 0,
     'the indexed lane must fetch at most two official pages and make zero Groq calls');
   assert(indexedVerifierBody
-    && indexedVerifierBody.max_tokens === 700
+    && indexedVerifierBody.max_tokens === 1000
     && indexedVerifierBody.messages[0].content.includes('If the DRAFT block is empty, write the answer directly from EVIDENCE')
     && indexedVerifierBody.messages[0].content.includes('Use independently worded paraphrase')
     && /DRAFT:\n\n\nEVIDENCE:/.test(indexedVerifierBody.messages[0].content),
@@ -515,7 +515,7 @@ try {
   });
   const quoteRepairPayload = await quoteRepairResponse.json();
   assert(quoteRepairCalls === 2
-    && quoteRepairBody.max_tokens === 700
+    && quoteRepairBody.max_tokens === 1000
     && quoteRepairBody.messages[0].content.includes('Rewrite the answer in genuinely independent language')
     && quoteRepairPayload.focuschrist_source_integrity_verified === true
     && quoteRepairPayload.focuschrist_cloudflare_verifier_calls === 2,
@@ -540,7 +540,7 @@ try {
   });
   const reconsiderationPayload = await reconsiderationResponse.json();
   assert(reconsiderationCalls === 2
-    && reconsiderationBody.max_tokens === 700
+    && reconsiderationBody.max_tokens === 1000
     && reconsiderationBody.messages[0].content.includes('previous rejection may be a false negative')
     && reconsiderationPayload.focuschrist_source_integrity_verified === true
     && reconsiderationPayload.focuschrist_cloudflare_verifier_calls === 2,

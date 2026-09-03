@@ -77,7 +77,11 @@ let directGroqVerifierCalls = 0;
 globalThis.fetch = async (_url, init) => {
   directGroqVerifierCalls += 1;
   const requestBody = JSON.parse(init.body);
-  assert(requestBody.model === 'openai/gpt-oss-20b', 'production Groq verifier must use GPT-OSS 20B');
+  assert(requestBody.model === 'openai/gpt-oss-20b'
+    && requestBody.reasoning_effort === 'low'
+    && requestBody.include_reasoning === false
+    && requestBody.response_format && requestBody.response_format.type === 'json_object',
+    'production Groq verifier must use GPT-OSS 20B with low reasoning and JSON mode');
   return new Response(JSON.stringify({
     choices: [{ message: { content: '{"approved":true,"answer":"Supported answer.","source_indexes":[1]}' } }],
     usage: { prompt_tokens: 200, completion_tokens: 30 },
@@ -690,7 +694,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.36',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.37',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
