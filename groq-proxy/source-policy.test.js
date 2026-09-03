@@ -59,6 +59,18 @@ assert(clean.research.messages[0].content.includes('search only site:churchofjes
 const general = sanitizePayload({ messages: [{ role: 'user', content: 'Why is the daytime sky blue?' }] });
 assert(!general.scope.faith && !general.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
   'ordinary questions must not be forced into the Church-only domain');
+const knownChurchPerson = classifyResearchScope(
+  [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+  'ask',
+  'general-knowledge',
+);
+assert(knownChurchPerson.faith,
+  'the Worker must classify a known Church-history person before research even when the browser hint is general');
+assert(!classifyResearchScope(
+  [{ role: 'user', content: 'Who is Will Smith?' }],
+  'ask',
+  'general-knowledge',
+).faith, 'the Worker known-person list must not capture an unrelated person with the same surname');
 for (const scriptureTopic of ['What is Genesis about?', 'Tell me about Genesis.', 'What is the Book of Abraham about?']) {
   assert(classifyResearchScope([{ role: 'user', content: scriptureTopic }]).faith,
     'a bare scripture-book topic must use faith research: ' + scriptureTopic);
@@ -365,7 +377,7 @@ try {
     body: JSON.stringify({
       focuschrist_page: 'ask',
       focuschrist_profile: 'general-knowledge',
-      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+      messages: [{ role: 'user', content: 'Who is Hirum Smith?' }],
     }),
   }), { GROQ_KEY_NEW: 'test-key' });
   const identityUpgradePayload = await identityUpgradeResponse.json();
@@ -374,7 +386,7 @@ try {
     && identityUpgradePayload.focuschrist_classification_mode === 'official-church-identity-evidence'
     && identityUpgradePayload.focuschrist_sources.length === 1
     && identityUpgradePayload.focuschrist_sources[0].url.includes('churchofjesuschrist.org'),
-  'official identity evidence must upgrade Hyrum Smith to faith-study and remove nonofficial evidence');
+  'official identity evidence must upgrade a misspelled Hyrum Smith question to faith-study and remove nonofficial evidence');
 } finally {
   globalThis.fetch = originalFetch;
 }
@@ -435,7 +447,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.16',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.17',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
