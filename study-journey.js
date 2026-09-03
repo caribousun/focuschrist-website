@@ -76,56 +76,6 @@
         }
     }
 
-    function resetConversation() {
-        if (typeof window.clearChat === 'function') window.clearChat();
-        const target = document.getElementById('ask-question') || document.querySelector('.ask-study-card');
-        window.setTimeout(function () { scrollToTarget(target, true); }, 30);
-    }
-
-    function addResetToFollowup() {
-        const dock = document.getElementById('askFollowupDock');
-        if (!dock || dock.querySelector('[data-focuschrist-conversation-reset]')) return false;
-        const shell = dock.querySelector('.ask-followup-shell') || dock;
-        const row = document.createElement('div');
-        row.className = 'ask-followup-actions';
-        row.setAttribute('data-focuschrist-followup-actions', 'true');
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'ask-conversation-reset';
-        button.setAttribute('data-focuschrist-conversation-reset', 'true');
-        button.textContent = 'Clear & Start Over';
-        button.addEventListener('click', resetConversation);
-        row.appendChild(button);
-        shell.appendChild(row);
-        return true;
-    }
-
-    function observeFollowupReset() {
-        if (!window.location.pathname.toLowerCase().endsWith('/ask.html')) return;
-        if (addResetToFollowup()) return;
-        if (typeof MutationObserver === 'undefined') return;
-        const observer = new MutationObserver(function () {
-            if (addResetToFollowup()) observer.disconnect();
-        });
-        observer.observe(document.body, { childList: true, subtree: true });
-    }
-
-    function ensureConversationResetFallback() {
-        if (!window.location.pathname.toLowerCase().endsWith('/ask.html')) return;
-        const section = document.querySelector('.ask-conversation-section');
-        if (!section || section.querySelector('[data-focuschrist-conversation-reset-fallback]')) return;
-        const button = document.createElement('button');
-        button.type = 'button';
-        button.className = 'ask-conversation-reset ask-conversation-reset--fallback';
-        button.setAttribute('data-focuschrist-conversation-reset', 'true');
-        button.setAttribute('data-focuschrist-conversation-reset-fallback', 'true');
-        button.textContent = 'Clear Conversation';
-        button.addEventListener('click', resetConversation);
-        const heading = section.querySelector('.ask-section-heading');
-        if (heading) heading.insertAdjacentElement('afterend', button);
-        else section.insertBefore(button, section.firstChild);
-    }
-
     function continuationCard(href, titleText, copyText, primary) {
         const link = document.createElement('a');
         link.className = 'fc-card fc-card--interactive';
@@ -208,8 +158,6 @@
         rewriteContentAskLinks();
         const target = ensureAskTarget();
         honorAskDeepLink(target);
-        ensureConversationResetFallback();
-        observeFollowupReset();
         ensureContinuationBridge();
         window.setTimeout(loadVerifiedSourceRouter, 0);
         window.setTimeout(loadArtStudyRouter, 0);

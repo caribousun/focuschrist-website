@@ -37,7 +37,8 @@ Supporting artwork beautifies the content of each page without replacing or chan
 ### Home
 
 - `assets/page-art/home-seek-study-remember.webp`
-- Approved as the supporting image following Our Purpose.
+- Approved for the Our Purpose section.
+- Placement: a large image on the right of the purpose copy in a Missionary-style editorial split. On narrow screens, the purpose copy remains first and the image follows before the study-path cards.
 
 ### Ask
 

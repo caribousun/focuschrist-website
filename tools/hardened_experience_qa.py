@@ -26,6 +26,7 @@ def main() -> int:
     header = read("site-header.css", errors)
     system = read("site-system.css", errors)
     ask_css = read("ask-experience.css", errors)
+    ask_js = read("ask-experience.js", errors)
     pioneer_css = read("pioneer-experience.css", errors)
     pioneer = read("pioneer-experience.js", errors)
     pioneer_page = read("pioneers.html", errors)
@@ -50,7 +51,7 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260901-15",
+        "study-journey.js?v=20260903-1",
         "study-intelligence-v3.js?v=20260901-15",
         "window.focusChristSourceIntegrity",
         "unreviewed-source-dependent-generation",
@@ -75,8 +76,6 @@ def main() -> int:
         "Harvest Sky",
         "radial-gradient(circle at 84% 4%",
         "#ask-question",
-        ".ask-conversation-reset",
-        ".ask-followup-actions",
     ), errors)
 
     require(ask_css, "ask-experience.css", (
@@ -86,6 +85,12 @@ def main() -> int:
         "linear-gradient(145deg, rgba(30,63,75,.98), rgba(17,39,49,.99)) !important",
         "body.fc-site .ask-followup-input",
         "body.fc-site .ask-followup-button",
+    ), errors)
+
+    require(ask_js, "ask-experience.js", (
+        "chatBox.insertAdjacentElement('beforebegin', dock)",
+        "followupDock.classList.contains('visible') ? followupDock : chatBox",
+        "followupInput.focus({ preventScroll: true })",
     ), errors)
 
     require(pioneer_css, "pioneer-experience.css", (
@@ -151,9 +156,6 @@ def main() -> int:
     require(journey, "study-journey.js", (
         "#ask-question",
         "data-focuschrist-ask-target",
-        "Clear & Start Over",
-        "Clear Conversation",
-        "data-focuschrist-conversation-reset",
         "rewriteContentAskLinks",
         "headerOffset",
         "requestAnimationFrame",
@@ -167,6 +169,10 @@ def main() -> int:
         "document.readyState === 'loading'",
         "data-focuschrist-study-journey-ready",
     ), errors)
+
+    for unrequested_control in ("Clear & Start Over", "Clear Conversation", "data-focuschrist-conversation-reset"):
+        if unrequested_control in journey:
+            errors.append(f"study-journey.js must not inject unrequested reset control: {unrequested_control}")
 
     require(sources, "study-source-router.js", (
         "https://www.churchofjesuschrist.org/search?lang=eng&query=",
