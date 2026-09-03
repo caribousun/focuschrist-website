@@ -4,6 +4,7 @@ import worker, {
   extractRelevantParagraphs,
   fetchOfficialSource,
   hasExcessiveSourceOverlap,
+  isPioneerIrrigationIntent,
   rankChurchSourceCandidates,
 } from './src/index.js';
 
@@ -57,6 +58,10 @@ assert(rankChurchSourceCandidates('How did pioneers cooperate to build temples?'
 assert(rankChurchSourceCandidates('What did cooperative irrigation contribute to settlement life?', 'ask')
   .every((candidate) => candidate.topicPinned !== true),
   'the Pioneer irrigation topic pin must not escape onto the general Ask page');
+assert(isPioneerIrrigationIntent('Why did cooperative irrigation contribute to settlement life?', 'pioneers')
+  && !isPioneerIrrigationIntent('How did pioneers cooperate to build temples?', 'pioneers')
+  && !isPioneerIrrigationIntent('Why did cooperative irrigation contribute to settlement life?', 'ask'),
+  'bounded Pioneer irrigation intent must cover the short live paraphrase without escaping to unrelated topics or pages');
 assert(rankChurchSourceCandidates('How do I replace a bicycle chain?', 'ask').length === 0,
   'an unrelated question must not receive a strong Church-source match');
 
@@ -477,6 +482,43 @@ try {
     && reconsiderationPayload.focuschrist_source_integrity_verified === true
     && reconsiderationPayload.focuschrist_cloudflare_verifier_calls === 2,
   'a fast negative verdict over strongly relevant indexed official evidence must receive one bounded Cloudflare-only reconsideration');
+} finally {
+  globalThis.fetch = originalFetch;
+}
+
+
+let shortPioneerVerifierCalls = 0;
+const pioneerEvidenceAnswer = 'Cooperative irrigation helped early Latter-day Saint settlers make dry land productive and establish a durable community in the Salt Lake Valley. The official history describes leaders preparing the pioneer companies with practical instruction about irrigation, followed by the advance company creating a basic system as soon as it entered the valley. Shared planning and labor therefore supported planting and the physical development of the settlement. This work mattered because reliable water made agriculture possible in an arid place and gave the arriving Saints a practical foundation for building their new community together.';
+globalThis.fetch = async (url) => {
+  if (String(url || '').includes('api.groq.com')) throw new Error('pinned indexed evidence must not call Groq');
+  return new Response(`<!doctype html><html><body>
+    <p>Church leaders taught the emigrating companies about planting seeds and irrigation while preparing the pioneer journey.</p>
+    <p>The advance company entered the Salt Lake Valley and immediately set up a crude irrigation system to prepare the land for planting and establish the settlement.</p>
+  </body></html>`, { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+};
+try {
+  const shortPioneerResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'pioneers',
+      focuschrist_profile: 'pioneer-study',
+      messages: [{ role: 'user', content: 'Why did cooperative irrigation contribute to settlement life?' }],
+    }),
+  }), {
+    AI: { run: async () => {
+      shortPioneerVerifierCalls += 1;
+      return { response: shortPioneerVerifierCalls === 1
+        ? { approved: false, answer: '', source_indexes: [] }
+        : { approved: true, answer: pioneerEvidenceAnswer, source_indexes: [1] } };
+    } },
+  });
+  const shortPioneerPayload = await shortPioneerResponse.json();
+  assert(shortPioneerVerifierCalls === 2
+    && shortPioneerPayload.focuschrist_source_integrity_verified === true
+    && shortPioneerPayload.focuschrist_cloudflare_verifier_calls === 2
+    && shortPioneerPayload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six')),
+  'a false negative for the pinned short Pioneer irrigation paraphrase must receive one bounded reconsideration and publish only verified official evidence');
 } finally {
   globalThis.fetch = originalFetch;
 }
