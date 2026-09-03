@@ -356,3 +356,11 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Candidate .47 also adds a narrowly scoped reviewed deterministic recovery for the exact Enos 1 prayer-and-forgiveness intent. It can activate only after exact official Enos 1 evidence has already been retrieved and both prayer and forgiveness language are present in that evidence. It does not broaden source authority or bypass evidence retrieval.
 - The production-local gate is updated to the actual reviewed registry release and now executes the exact owner Book of Mormon question and follow-up from the production-served registry bytes.
 - Production remains unverified until PR CI, Worker deployment, the full live matrix, and the exact owner production journey all pass.
+
+
+### Relief Society deterministic-history recovery - candidate 2026-09-03.48
+
+- Production .47 fixed the owner Book of Mormon question/follow-up on deployed Pages and added the Enos 1 recovery, but the full Worker matrix still exposed one stochastic false rejection for the exact Female Relief Society of Nauvoo history topic. The same authoritative source passed in other rounds, so the remaining defect is verifier nondeterminism rather than retrieval or source quality.
+- Candidate .48 adds a narrowly audited deterministic-history recovery for Relief Society questions only after the Worker has already retrieved an exact official Church History topic at `/study/history/topics/female-relief-society-of-nauvoo` or `/study/history/topics/relief-society`, and the retrieved excerpt itself contains Relief Society, Nauvoo/1842, and organization/service language.
+- The recovery uses an independently reviewed summary of the March 1842 organization, charitable work, and spiritual purpose. Non-Church sources and unrelated Church History topics cannot trigger it.
+- Production remains unverified until the complete Worker live matrix reaches its final PASS, including regressions, burst checks, safety controls, contextual follow-up, and warm-cache checks.

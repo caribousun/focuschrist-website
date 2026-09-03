@@ -184,6 +184,29 @@ assert(reviewedDeterministicEvidenceRecovery(
   [{ url: 'https://example.com/enos/1', content: 'prayer forgiven' }],
 ) === null, 'reviewed Enos recovery must never accept a non-Church source');
 
+const reliefReviewedRecovery = reviewedDeterministicEvidenceRecovery(
+  'Give me the historical setting for the Female Relief Society of Nauvoo when it began and why.',
+  [{
+    url: 'https://www.churchofjesuschrist.org/study/history/topics/female-relief-society-of-nauvoo?lang=eng',
+    content: 'Female Relief Society of Nauvoo. In early March 1842 women sought to organize. On March 17, 1842, twenty women gathered. Relief Society members focused on relieving the poor and spiritual purposes.',
+  }],
+);
+assert(reliefReviewedRecovery
+  && reliefReviewedRecovery.recoveryId === 'reviewed-relief-society-nauvoo'
+  && reliefReviewedRecovery.sourceIndexes[0] === 1
+  && /March 1842/i.test(reliefReviewedRecovery.answer)
+  && /poor/i.test(reliefReviewedRecovery.answer)
+  && /spiritual/i.test(reliefReviewedRecovery.answer),
+  'exact official Relief Society history evidence must support the audited deterministic recovery after verifier false negatives');
+assert(reviewedDeterministicEvidenceRecovery(
+  'Give me the historical setting for the Female Relief Society of Nauvoo when it began and why.',
+  [{ url: 'https://example.com/study/history/topics/female-relief-society-of-nauvoo', content: 'Relief Society Nauvoo 1842 organized women poor' }],
+) === null, 'reviewed Relief Society recovery must never accept a non-Church source');
+assert(reviewedDeterministicEvidenceRecovery(
+  'Tell me about the Kirtland Temple.',
+  [{ url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'Kirtland Temple history.' }],
+) === null, 'reviewed Relief Society recovery must not activate for unrelated Church History topics');
+
 const verifierFetchBeforeTests = globalThis.fetch;
 let primaryVerifierGroqCalls = 0;
 globalThis.fetch = async () => { primaryVerifierGroqCalls += 1; throw new Error('Groq verifier should not run'); };
@@ -778,7 +801,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.47',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.48',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
