@@ -1,4 +1,6 @@
 name: Temporary capacity accounting verification
+permissions:
+  contents: write
 on:
   push:
     branches: [codex/enos-exact-source-recovery-53-clean]
