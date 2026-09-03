@@ -62,7 +62,7 @@ const cloudflareObjectResult = await callCloudflareVerifier({
   },
 }, verifierBodyForTest, Date.now() + 7000);
 assert(cloudflareObjectResult.response.ok
-  && cloudflareModelForTest === '@cf/meta/llama-3.2-11b-vision-instruct'
+  && cloudflareModelForTest === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
   && JSON.parse(cloudflareObjectResult.data.choices[0].message.content).approved === false,
   'the Cloudflare verifier adapter must use the JSON-mode-supported model and normalize a direct structured verdict');
 const cloudflareChoicesResult = await callCloudflareVerifier({
@@ -641,7 +641,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.23',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.24',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
