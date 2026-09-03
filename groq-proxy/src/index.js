@@ -21,7 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.33';
+const SOURCE_POLICY_VERSION = '2026-09-03.34';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.34';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -431,13 +432,17 @@ function extractVisibleParagraphs(htmlText) {
   return paragraphs;
 }
 
-function relevantParagraphText(paragraphs, question) {
+function relevantParagraphText(paragraphs, question, candidate = null) {
   const queryTokens = normalizeDiscoveryTokens(question);
+  const topicPinned = Boolean(candidate && candidate.topicPinned);
   return (Array.isArray(paragraphs) ? paragraphs : []).map((text) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
     const overlap = queryTokens.filter((token) => tokens.has(token)).length;
-    return { text, overlap, score: overlap * 20 + Math.min(10, text.length / 180) };
-  }).filter((item) => item.overlap > 0)
+    const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
+    const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
+    const topicScore = (pinnedIrrigation ? 240 : 0) + (pinnedSettlement ? 40 : 0);
+    return { text, overlap, topicScore, score: topicScore + overlap * 20 + Math.min(10, text.length / 180) };
+  }).filter((item) => item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
     .slice(0, 2).map((item) => item.text).join(' ').slice(0, 700);
 }
@@ -446,13 +451,19 @@ function extractRelevantParagraphs(htmlText, question) {
   return relevantParagraphText(extractVisibleParagraphs(htmlText), question);
 }
 
-function compactParagraphPack(paragraphs, candidate) {
+function compactParagraphPack(paragraphs, candidate, question = '') {
   const discoveryTokens = normalizeDiscoveryTokens(`${candidate.title || ''} ${candidate.tokens || ''}`);
+  const queryTokens = normalizeDiscoveryTokens(question);
+  const topicPinned = Boolean(candidate && candidate.topicPinned);
   let size = 0;
   return (Array.isArray(paragraphs) ? paragraphs : []).map((text, position) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
-    const overlap = discoveryTokens.filter((token) => tokens.has(token)).length;
-    return { text, position, score: overlap * 20 - position / 1000 };
+    const discoveryOverlap = discoveryTokens.filter((token) => tokens.has(token)).length;
+    const queryOverlap = topicPinned ? queryTokens.filter((token) => tokens.has(token)).length : 0;
+    const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
+    const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
+    const topicScore = (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
+    return { text, position, score: topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
   }).sort((left, right) => right.score - left.score)
     .filter((item) => {
       if (size + item.text.length > 4200) return false;
@@ -484,9 +495,17 @@ async function readBoundedText(response, maxBytes) {
   return text + decoder.decode();
 }
 
+function officialExcerptCacheVariant(candidate) {
+  return candidate && candidate.topicPinned === true
+    && /\/study\/manual\/church-history-in-the-fulness-of-times\/chapter-twenty-six/.test(String(candidate.url || ''))
+    ? 'pioneer-irrigation'
+    : 'default';
+}
+
 async function evidenceCacheKey(candidate, question) {
   if (!globalThis.crypto || !globalThis.crypto.subtle) return null;
-  const normalized = candidate.url;
+  const variant = officialExcerptCacheVariant(candidate);
+  const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${candidate.url}`;
   const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(normalized));
   const hex = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
   return new Request(`https://focuschrist-groq-proxy.caribousun.workers.dev/__official_excerpt_cache/${hex}`);
@@ -506,7 +525,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       if (cached) {
         const payload = await cached.json();
         if (payload && Array.isArray(payload.paragraphs)) {
-          const content = relevantParagraphText(payload.paragraphs, question);
+          const content = relevantParagraphText(payload.paragraphs, question, candidate);
           if (content) {
             if (counters) counters.cacheHits += 1;
             const source = canonicalSource(candidate.url, candidate.title, content);
@@ -533,11 +552,11 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
     const contentType = String(response.headers.get('content-type') || '').toLowerCase();
     if (!contentType.includes('text/html')) return null;
     const paragraphs = extractVisibleParagraphs(await readBoundedText(response, OFFICIAL_HTML_BYTE_LIMIT));
-    const content = relevantParagraphText(paragraphs, question);
+    const content = relevantParagraphText(paragraphs, question, candidate);
     if (!content || normalizeDiscoveryTokens(content).filter((token) => normalizeDiscoveryTokens(question).includes(token)).length < 2) return null;
     if (cache && cacheKey) {
       try {
-        await cache.put(cacheKey, new Response(JSON.stringify({ paragraphs: compactParagraphPack(paragraphs, candidate) }), {
+        await cache.put(cacheKey, new Response(JSON.stringify({ paragraphs: compactParagraphPack(paragraphs, candidate, question) }), {
           headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=3600' },
         }));
       } catch (_cacheError) {}
@@ -1723,6 +1742,7 @@ export default {
 
 export {
   GENERAL_ANSWER_FALLBACK,
+  OFFICIAL_EXCERPT_CACHE_VERSION,
   PROVIDER_CALL_LIMIT_MS,
   REQUEST_BUDGET_MS,
   SOURCE_INTEGRITY_FALLBACK,
@@ -1733,6 +1753,7 @@ export {
   callVerifier,
   classifyResearchScope,
   collectSourceEvidence,
+  compactParagraphPack,
   extractSelectedPioneerName,
   extractTellMyStoryEntry,
   evaluateQuestionSafety,
@@ -1753,7 +1774,10 @@ export {
   parseVerifierJson,
   providerDiagnostic,
   rankChurchSourceCandidates,
+  relevantParagraphText,
   deterministicScriptureSource,
+  evidenceCacheKey,
+  officialExcerptCacheVariant,
   retrieveIndexedChurchEvidence,
   remainingBudget,
   requiresExternalGeneralResearch,
