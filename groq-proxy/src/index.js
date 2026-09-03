@@ -23,8 +23,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.45';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.45';
+const SOURCE_POLICY_VERSION = '2026-09-03.46';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.46';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1268,6 +1268,7 @@ async function callVerifier(env, body, deadline, options = {}) {
   const started = Date.now();
   const requireSourceIndexes = options.requireSourceIndexes === true;
   const allowGroqFallback = options.allowGroqFallback !== false;
+  const forceOpenAI = options.forceOpenAI === true;
   const plainJsonBody = { ...body };
   const groqFallbackBody = {
     ...body,
@@ -1275,6 +1276,21 @@ async function callVerifier(env, body, deadline, options = {}) {
     reasoning_effort: 'low',
     include_reasoning: false,
   };
+  if (forceOpenAI) {
+    const forcedRaw = await callOpenAIVerifier(env && env.OPENAI_API_KEY, plainJsonBody, deadline);
+    const forced = validateVerifierResult(forcedRaw, requireSourceIndexes);
+    return {
+      ...forced,
+      verifierRoute: 'openai-repair',
+      fallbackReason: 'bounded-reconsideration',
+      totalCloudflareVerifierCalls: 0,
+      totalCloudflareEstimatedNeurons: 0,
+      totalCloudflareUnmeteredNeurons: 0,
+      totalGroqVerifierCalls: 0,
+      totalOpenAIVerifierCalls: Number(forcedRaw.openaiCallCount || 0),
+      verifierDurationMs: Date.now() - started,
+    };
+  }
   if (String(env && env.VERIFIER_PROVIDER || '').toLowerCase() === 'groq') {
     const primaryRaw = await callGroq(env && env.GROQ_KEY_NEW, groqFallbackBody, deadline, false);
     const primary = validateGroqVerifierResult(primaryRaw, requireSourceIndexes);
@@ -1884,7 +1900,7 @@ export default {
         && (indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2)
           || hasPinnedPioneerIrrigationEvidence));
       if ((needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration)
-        && ['cloudflare-primary', 'groq-primary'].includes(verifierResult.verifierRoute)
+        && ['cloudflare-primary', 'groq-primary', 'openai-fallback'].includes(verifierResult.verifierRoute)
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
         const repairMinimumWords = requirements.minimumWords
@@ -1921,6 +1937,7 @@ export default {
         }, deadline, {
           requireSourceIndexes: true,
           allowGroqFallback: false,
+          forceOpenAI: verifierResult.verifierRoute === 'openai-fallback',
         });
         const initialVerifierResult = verifierResult;
         expansionResult.accumulatedUsage = combinedProviderUsage(initialVerifierResult, expansionResult);
@@ -1930,6 +1947,7 @@ export default {
           accumulatedUsage: expansionResult.accumulatedUsage,
           totalCloudflareVerifierCalls: expansionResult.totalCloudflareVerifierCalls,
           totalGroqVerifierCalls: expansionResult.totalGroqVerifierCalls,
+          totalOpenAIVerifierCalls: expansionResult.totalOpenAIVerifierCalls,
           totalCloudflareEstimatedNeurons: expansionResult.totalCloudflareEstimatedNeurons,
           totalCloudflareUnmeteredNeurons: expansionResult.totalCloudflareUnmeteredNeurons,
         };
