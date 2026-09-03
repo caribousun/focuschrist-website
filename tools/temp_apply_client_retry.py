@@ -116,6 +116,7 @@ study_path.write_text(study, encoding='utf-8')
 qa_path = ROOT / 'tools/study_intelligence_qa.py'
 qa = qa_path.read_text(encoding='utf-8')
 qa = qa.replace('"request(messages, 25000, profile)",', '"requestWithRetry(messages, profile)",\n        "CLIENT_FIRST_ATTEMPT_MS = 12000",\n        "CLIENT_RETRY_DELAY_MS = 400",')
+qa = qa.replace('study-intelligence-v3.js?v=20260903-16', 'study-intelligence-v3.js?v=20260903-17')
 qa = qa.replace('one bounded browser request, safe rendering, serialized cache-versioned loading', 'one bounded automatic browser retry for transient failures, safe rendering, serialized cache-versioned loading')
 qa_path.write_text(qa, encoding='utf-8')
 
@@ -177,6 +178,12 @@ if "study-intelligence-v3.js?v=20260903-16" not in common:
 common = common.replace("study-intelligence-v3.js?v=20260903-16", "study-intelligence-v3.js?v=20260903-17")
 common_path.write_text(common, encoding='utf-8')
 
+router_path = ROOT / 'study-source-router.js'
+router = router_path.read_text(encoding='utf-8')
+if "study-intelligence-v3.js?v=20260903-16" not in router:
+    raise SystemExit('study-source-router v3 cache marker not found')
+router_path.write_text(router.replace('study-intelligence-v3.js?v=20260903-16', 'study-intelligence-v3.js?v=20260903-17'), encoding='utf-8')
+
 for name in ['ask.html', 'pioneers.html']:
     path = ROOT / name
     text = path.read_text(encoding='utf-8')
@@ -184,9 +191,22 @@ for name in ['ask.html', 'pioneers.html']:
         raise SystemExit(f'{name} site-common cache marker not found')
     path.write_text(text.replace('site-common.js?v=20260903-16', 'site-common.js?v=20260903-17'), encoding='utf-8')
 
+for name in ['tools/hardened_experience_qa.py', 'tools/scripture_grounding_qa.py']:
+    path = ROOT / name
+    text = path.read_text(encoding='utf-8')
+    path.write_text(text.replace('study-intelligence-v3.js?v=20260903-16', 'study-intelligence-v3.js?v=20260903-17'), encoding='utf-8')
+scripture_path = ROOT / 'tools/scripture_grounding_qa.py'
+scripture = scripture_path.read_text(encoding='utf-8').replace('site-common.js?v=20260903-16', 'site-common.js?v=20260903-17')
+scripture_path.write_text(scripture, encoding='utf-8')
+
+inventory_path = ROOT / 'tools/source_integrity_inventory.py'
+inventory = inventory_path.read_text(encoding='utf-8')
+inventory = inventory.replace('if versions != {"20260903-16"}:', 'if versions != {"20260903-17"}:')
+inventory_path.write_text(inventory, encoding='utf-8')
+
 memory_path = ROOT / 'MEMORY.md'
 memory = memory_path.read_text(encoding='utf-8')
-note = "\n- 2026-09-03: Main Ask/Pioneer v3 client transport now performs one bounded automatic retry only for transient network/timeouts, HTTP 408/425/429/5xx, malformed JSON, or empty transport responses. Successful HTTP 200 policy/verifier outcomes are never retried, preserving fail-closed verification semantics. Total browser request budget remains 25 seconds; first attempt is capped at 12 seconds and the retry uses only the remaining budget after a 400 ms delay. Runtime QA permanently covers the owner-reported `Tell me about Old Testament` transient-failure recovery, two-attempt ceiling, no retry after completed policy responses, and no duplicate retry for non-retryable 4xx responses.\n"
+note = "\n- 2026-09-03: Main Ask/Pioneer v3 client transport now performs one bounded automatic retry only for transient network/timeouts, HTTP 408/425/429/5xx, malformed JSON, or empty transport responses. Successful HTTP 200 policy/verifier outcomes are never retried, preserving fail-closed verification semantics. Total browser request budget remains 25 seconds; first attempt is capped at 12 seconds and the retry uses only the remaining budget after a 400 ms delay. Runtime QA permanently covers the owner-reported `Tell me about Old Testament` transient-failure recovery, two-attempt ceiling, no retry after completed policy responses, and no duplicate retry for non-retryable 4xx responses. Runtime v3 loaders are aligned on cache version 20260903-17 so the retry code cannot be bypassed by a stale mixed loader path.\n"
 if note.strip() not in memory:
     memory += note
 memory_path.write_text(memory, encoding='utf-8')
