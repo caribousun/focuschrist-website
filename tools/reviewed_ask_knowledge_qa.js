@@ -35,7 +35,7 @@ function entrySourceUrls(entry) {
     return [...new Set(sources.map((source) => source.url))];
 }
 
-assert(registry && registry.policyVersion === '2026-09-03.17', 'reviewed registry policy version mismatch');
+assert(registry && registry.policyVersion === '2026-09-03.18', 'reviewed registry policy version mismatch');
 assert(Array.isArray(registry.entries) && registry.entries.length >= 12, 'reviewed registry is unexpectedly small');
 assert(questionManifest.release === registry.policyVersion, 'question-contract manifest release mismatch');
 
@@ -86,6 +86,31 @@ assert(ownerFirstVision && ownerFirstVision.id === 'church-first-vision-1820'
     && ownerFirstVision.mode === 'reviewed-local' && ownerFirstVision.sourceIntegrityPassed === true
     && ownerFirstVision.sources.every((source) => source.url.includes('churchofjesuschrist.org')),
     'owner First Vision regression must resolve on Main Ask from reviewed official Church sources with zero provider dependency');
+const ownerBookOfMormon = registry.match('what year did the book of mormon come out', { profile: 'ask' });
+assert(ownerBookOfMormon && ownerBookOfMormon.id === 'church-book-of-mormon-publication-1830'
+    && ownerBookOfMormon.mode === 'reviewed-local' && ownerBookOfMormon.sourceIntegrityPassed === true
+    && ownerBookOfMormon.answer.includes('March 26, 1830')
+    && ownerBookOfMormon.sources.every((source) => source.url.includes('churchofjesuschrist.org')),
+    'owner Book of Mormon publication question must resolve locally from reviewed official Church sources');
+const ownerBookOfMormonFollowup = registry.resolveFollowup('who published it and where was it printed?', {
+    profile: 'ask',
+    history: [
+        { role: 'user', content: 'what year did the book of mormon come out', contextEntryId: ownerBookOfMormon.id },
+        { role: 'assistant', content: ownerBookOfMormon.answer }
+    ]
+});
+assert(ownerBookOfMormonFollowup.resolved === true
+    && ownerBookOfMormonFollowup.entryId === 'church-book-of-mormon-publication-1830',
+    'owner Book of Mormon follow-up did not retain the reviewed subject');
+const ownerBookOfMormonFollowupAnswer = registry.match(ownerBookOfMormonFollowup.query, {
+    profile: 'ask', contextVariant: ownerBookOfMormonFollowup.contextVariant
+});
+assert(ownerBookOfMormonFollowupAnswer
+    && ownerBookOfMormonFollowupAnswer.answer.includes('Egbert B. Grandin')
+    && ownerBookOfMormonFollowupAnswer.answer.includes('Palmyra, New York')
+    && ownerBookOfMormonFollowupAnswer.sources.every((source) => source.url.includes('churchofjesuschrist.org')),
+    'owner Book of Mormon follow-up must answer the printer and location locally from official Church sources');
+
 registry.entries.filter((entry) => entry.profiles.includes('church-history')).forEach((entry) => {
     assert(entry.profiles.includes('ask'), 'reviewed Church History knowledge must also be available to Main Ask: ' + entry.id);
 });

@@ -26,6 +26,7 @@ import worker, {
   parseVerifierJson,
   providerDiagnostic,
   remainingBudget,
+  reviewedDeterministicEvidenceRecovery,
   requiresExternalGeneralResearch,
   sanitizePayload,
 } from './src/index.js';
@@ -164,6 +165,24 @@ assert(forcedOpenAIRepairCalls === 1
   && forcedOpenAIRepairResult.totalGroqVerifierCalls === 0
   && forcedOpenAIRepairResult.totalOpenAIVerifierCalls === 1,
   'a relevant-evidence reconsideration after OpenAI failover must use exactly one additional Luna call and no Groq call');
+
+const enosReviewedRecovery = reviewedDeterministicEvidenceRecovery(
+  'What does Enos 1 teach about prayer and forgiveness?',
+  [{
+    url: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng',
+    content: 'I cried unto him in mighty prayer and supplication for mine own soul. Thy sins are forgiven thee, and my guilt was swept away.',
+  }],
+);
+assert(enosReviewedRecovery
+  && enosReviewedRecovery.recoveryId === 'reviewed-enos-1-prayer-forgiveness'
+  && enosReviewedRecovery.sourceIndexes[0] === 1
+  && /prayer/i.test(enosReviewedRecovery.answer)
+  && /forgiveness|forgiven/i.test(enosReviewedRecovery.answer),
+  'exact Enos 1 official evidence must support the audited deterministic recovery after a verifier false negative');
+assert(reviewedDeterministicEvidenceRecovery(
+  'What does Enos 1 teach about prayer and forgiveness?',
+  [{ url: 'https://example.com/enos/1', content: 'prayer forgiven' }],
+) === null, 'reviewed Enos recovery must never accept a non-Church source');
 
 const verifierFetchBeforeTests = globalThis.fetch;
 let primaryVerifierGroqCalls = 0;
@@ -759,7 +778,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.46',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.47',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
