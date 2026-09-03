@@ -324,3 +324,11 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Candidate .43 therefore extends exact multi-token official Church History topic determinism to the main Ask page as well as Church History. Both the Hyrum seed and its bounded conversation-context retrieval resolve to the same single official Hyrum Smith history topic.
 - Depth repair no longer aims exactly at the publication floor. Faith answers are repaired to at least 25 words and one sentence above the current minimum, and deterministic history-topic prompts explicitly target roughly 100 to 170 words with four sentences. The actual publication floor remains unchanged at 70 words and three sentences.
 - Existing Pioneer .40, Scripture .41, Kirtland .42, official-domain, fail-closed, source relevance, 700-character evidence, request-budget, latency, paraphrase, safety, and rate-limit controls remain unchanged.
+
+
+### Executive AI depth-margin closeout - candidate 2026-09-03.44
+
+- Production .43 again reached the Hyrum Smith contextual follow-up and failed intermittently on answer depth. A fresh direct live diagnostic showed the seed stable at 102 words and the follow-up at exactly 70 words, proving the remaining defect is stochastic boundary-depth output rather than source routing.
+- Candidate .44 does not lower the 70-word/three-sentence faith publication floor. It adds a repair-margin contract of 95 words/four sentences for faith answers and 120 words/four sentences/two paragraphs for selected Pioneer biographies. The margin is used to trigger the existing bounded second verifier pass for deterministic Church History and conversation-context answers that sit too close to the floor.
+- The two-verifier-call ceiling remains unchanged. Official-source restrictions, fail-closed behavior, evidence relevance, 700-character evidence, deterministic Pioneer/Scripture/History routing, latency, safety, paraphrase, and rate-limit controls remain unchanged.
+- The production live matrix now repeats the Hyrum contextual follow-up three additional times and requires every repeat to preserve deterministic single-source official-history retrieval and the existing publication contract.
