@@ -1,0 +1,27 @@
+name: Temporary capacity accounting verification
+on:
+  push:
+    branches: [codex/enos-exact-source-recovery-53-clean]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply capacity accounting patch
+        run: python tools/temp_capacity_accounting_patch.py
+      - name: Run focused and release checks
+        run: |
+          node --check tools/live_ai_response_matrix.js
+          node tools/live_ai_response_matrix.js --definition-check
+          node groq-proxy/source-policy.test.js
+          python tools/pioneer_local_first_qa.py
+          python tools/scripture_grounding_qa.py
+          node tools/live_ai_response_matrix.js
+      - name: Commit verified repair
+        if: success()
+        run: |
+          git config user.name "focusChrist AI verification"
+          git config user.email "actions@users.noreply.github.com"
+          git add tools/live_ai_response_matrix.js MEMORY.md
+          git commit -m "Correct external verifier capacity accounting"
+          git push
