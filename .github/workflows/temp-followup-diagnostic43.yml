@@ -1,0 +1,55 @@
+name: Temporary live followup diagnostic
+
+on:
+  push:
+    branches:
+      - codex/followup-live-diagnostic-43
+    paths:
+      - ".github/workflows/temp-followup-diagnostic43.yml"
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe live Hyrum conversation
+        run: |
+          node <<'NODE'
+          const endpoint = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
+          async function ask(messages, profile='general-knowledge') {
+            const response = await fetch(endpoint, {
+              method: 'POST',
+              headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+              body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: profile, messages }),
+            });
+            const payload = await response.json();
+            console.log(JSON.stringify({
+              status: response.status,
+              answer: payload?.choices?.[0]?.message?.content || '',
+              wordCount: String(payload?.choices?.[0]?.message?.content || '').trim().split(/\s+/).filter(Boolean).length,
+              mode: payload.focuschrist_gateway_mode,
+              policy: payload.focuschrist_source_policy,
+              profile: payload.focuschrist_resolved_profile,
+              classification: payload.focuschrist_classification_mode,
+              retrieval: payload.focuschrist_retrieval_route,
+              verified: payload.focuschrist_source_integrity_verified,
+              sources: payload.focuschrist_sources,
+              relevance: payload.focuschrist_evidence_relevance,
+              verifierRoute: payload.focuschrist_verifier_route,
+              verifierCalls: { groq: payload.focuschrist_groq_verifier_calls, cloudflare: payload.focuschrist_cloudflare_verifier_calls },
+              verifierApproved: payload.focuschrist_verifier_approved,
+              verifierIndexes: payload.focuschrist_verifier_source_indexes,
+              verifierAnswerLength: payload.focuschrist_verifier_answer_length,
+              providerStatus: payload.focuschrist_provider_status,
+              providerCode: payload.focuschrist_provider_code,
+            }));
+            return payload?.choices?.[0]?.message?.content || '';
+          }
+          const seedQ = 'Who was Hyrum Smith and what service did he give in the early Church?';
+          const seed = await ask([{ role: 'user', content: seedQ }]);
+          const followQ = 'What leadership responsibility did he hold?';
+          await ask([
+            { role: 'user', content: seedQ },
+            { role: 'assistant', content: seed },
+            { role: 'user', content: followQ },
+          ]);
+          NODE
