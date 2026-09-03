@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.44';
+const POLICY_VERSION = '2026-09-03.45';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -148,6 +148,7 @@ async function submit(test, messages = null) {
             verifierOutputTokens: Number(payload.focuschrist_verifier_output_tokens || 0), estimatedNeurons: Number(payload.focuschrist_verifier_estimated_neurons || 0),
             cloudflareVerifierCalls: Number(payload.focuschrist_cloudflare_verifier_calls || 0),
             groqVerifierCalls: Number(payload.focuschrist_groq_verifier_calls || 0),
+            openaiVerifierCalls: Number(payload.focuschrist_openai_verifier_calls || 0),
             conservativeUnmeteredNeurons: Number(payload.focuschrist_verifier_conservative_unmetered_neurons || 0),
             verified: payload.focuschrist_source_integrity_verified === true, wordCount: answer.split(/\s+/).filter(Boolean).length,
             sourceUrls: sources.map((source) => String(source.url || '')),
@@ -170,7 +171,7 @@ function validate(test, result) {
     for (const pattern of test.factPatterns || []) assert(pattern.test(result.answer), test.id + ' omitted expected answer concept ' + pattern);
     for (const pattern of test.contradictionPatterns || []) assert(!pattern.test(result.answer), test.id + ' returned a negated or contradictory expected fact');
     if (test.officialOnly) {
-        assert(['groq-primary', 'groq-primary-repair', 'cloudflare-primary', 'cloudflare-fast-fallback', 'groq-fallback'].includes(result.verifierRoute), test.id + ' omitted a verifier route');
+        assert(['groq-primary', 'groq-primary-repair', 'openai-fallback', 'cloudflare-primary', 'cloudflare-fast-fallback', 'groq-fallback'].includes(result.verifierRoute), test.id + ' omitted a verifier route');
         assert(result.verified && result.sourceHosts.length > 0 && result.sourceHosts.every((host) => host === 'churchofjesuschrist.org' || host.endsWith('.churchofjesuschrist.org')), test.id + ' was not official-only verified');
         assert(result.retrievalRoute === 'church-source-index' && result.groqResearchCalls === 0 && result.indexSources > 0 && result.officialFetchCalls <= 2, test.id + ' did not prove bounded zero-Groq research');
         if (test.id === 'regression-alma32-deterministic-source') {
@@ -186,8 +187,12 @@ function validate(test, result) {
         assert(result.verifierInputTokens > 0 && result.verifierOutputTokens > 0, test.id + ' omitted verifier usage receipts');
         assert(result.cloudflareVerifierCalls >= 0 && result.cloudflareVerifierCalls <= 2
             && result.groqVerifierCalls >= 0 && result.groqVerifierCalls <= 2
-            && result.cloudflareVerifierCalls + result.groqVerifierCalls >= 1,
+            && result.openaiVerifierCalls >= 0 && result.openaiVerifierCalls <= 1
+            && result.cloudflareVerifierCalls + result.groqVerifierCalls + result.openaiVerifierCalls >= 1
+            && result.cloudflareVerifierCalls + result.groqVerifierCalls + result.openaiVerifierCalls <= 2,
         test.id + ' returned invalid per-provider verifier call accounting');
+        assert(!(result.openaiVerifierCalls > 0 && (result.cloudflareVerifierCalls > 0 || result.groqVerifierCalls !== 1)),
+            test.id + ' stacked OpenAI failover beyond the two-provider ceiling');
         assert(!(result.groqVerifierCalls > 0 && result.cloudflareVerifierCalls > 1),
             test.id + ' stacked verifier fallback with depth repair');
         if (result.verifierRoute.startsWith('cloudflare-')) assert(result.estimatedNeurons > 0, test.id + ' omitted Cloudflare neuron accounting');
