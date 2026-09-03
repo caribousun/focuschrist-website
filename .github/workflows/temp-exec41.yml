@@ -19,7 +19,7 @@ jobs:
           ref: codex/executive-ai-scripture-closeout-41
           fetch-depth: 0
       - name: Apply policy 41 patch
-        run: python tools/temp_exec41_patch_v2.py
+        run: python tools/temp_exec41_patch_v3.py
       - name: Run executive release suite
         run: |
           node groq-proxy/source-policy.test.js
