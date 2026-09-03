@@ -1,11 +1,14 @@
 import worker, {
   classifyResearchScope,
+  compactParagraphPack,
   deterministicScriptureSource,
   extractRelevantParagraphs,
   fetchOfficialSource,
   hasExcessiveSourceOverlap,
   isPioneerIrrigationIntent,
+  OFFICIAL_EXCERPT_CACHE_VERSION,
   rankChurchSourceCandidates,
+  relevantParagraphText,
   REQUEST_BUDGET_MS,
 } from './src/index.js';
 
@@ -63,6 +66,35 @@ assert(isPioneerIrrigationIntent('Why did cooperative irrigation contribute to s
   && !isPioneerIrrigationIntent('How did pioneers cooperate to build temples?', 'pioneers')
   && !isPioneerIrrigationIntent('Why did cooperative irrigation contribute to settlement life?', 'ask'),
   'bounded Pioneer irrigation intent must cover the short live paraphrase without escaping to unrelated topics or pages');
+const pinnedExtractionCandidate = {
+  url: 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng',
+  title: 'Chapter Twenty-Six: Pioneers to the West',
+  tokens: 'chapter twenty six pioneers west',
+  topicPinned: true,
+};
+const pinnedExtractionParagraphs = [
+  'The pioneer company prepared wagons and traveled west across the plains.',
+  'Additional pioneer companies followed the established route in later seasons.',
+  'Leaders organized camp responsibilities for the westward journey.',
+  'The advance company entered the Salt Lake Valley and immediately set up a crude irrigation system for planting.',
+  'Families then worked to establish a settlement and build their new community.',
+  'Travel records documented daily mileage and conditions along the trail.',
+  'Other companies prepared supplies for the continuing migration.',
+];
+const packedPinnedParagraphs = compactParagraphPack(
+  pinnedExtractionParagraphs,
+  pinnedExtractionCandidate,
+  'Why did cooperative irrigation matter to early pioneer communities?',
+);
+const selectedPinnedText = relevantParagraphText(
+  packedPinnedParagraphs,
+  'Why did cooperative irrigation matter to early pioneer communities?',
+  pinnedExtractionCandidate,
+);
+assert(packedPinnedParagraphs.some((paragraph) => paragraph.includes('crude irrigation system'))
+  && /irrigat/i.test(selectedPinnedText)
+  && /pioneer|communit|settle/i.test(selectedPinnedText),
+  'topic-aware cache packing and selection must retain direct irrigation plus Pioneer settlement evidence');
 assert(rankChurchSourceCandidates('How do I replace a bicycle chain?', 'ask').length === 0,
   'an unrelated question must not receive a strong Church-source match');
 
@@ -498,7 +530,7 @@ const cachedPioneerResponse = () => new Response(JSON.stringify({ paragraphs: ca
 const chapterTwentySixUrl = 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng';
 const chapterTwentySixDigest = await globalThis.crypto.subtle.digest(
   'SHA-256',
-  new TextEncoder().encode(chapterTwentySixUrl),
+  new TextEncoder().encode(`${OFFICIAL_EXCERPT_CACHE_VERSION}\n${chapterTwentySixUrl}`),
 );
 const chapterTwentySixCacheUrl = `https://focuschrist-groq-proxy.caribousun.workers.dev/__official_excerpt_cache/${Array.from(
   new Uint8Array(chapterTwentySixDigest),
