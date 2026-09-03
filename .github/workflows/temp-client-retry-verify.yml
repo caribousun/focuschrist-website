@@ -17,7 +17,9 @@ jobs:
           ref: codex/client-transient-retry-scratch
           fetch-depth: 0
       - name: Apply bounded client retry patch
-        run: python tools/temp_apply_client_retry.py
+        run: |
+          python tools/temp_apply_client_retry.py
+          python -c "from pathlib import Path; p=Path('tools/study_intelligence_qa.py'); s=p.read_text(); p.write_text(s.replace('study-intelligence-v3.js?v=20260903-16','study-intelligence-v3.js?v=20260903-17'))"
       - name: Run focused retry QA
         run: |
           python tools/study_intelligence_qa.py
