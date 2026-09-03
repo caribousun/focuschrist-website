@@ -490,7 +490,7 @@ try {
 
 
 const cachedPioneerParagraphs = [
-  'Families planned water channels together as the settlement took root in the valley.',
+  'Pioneer families planned water channels as the settlement took root in the valley.',
 ];
 const cachedPioneerResponse = () => new Response(JSON.stringify({ paragraphs: cachedPioneerParagraphs }), {
   headers: { 'Content-Type': 'application/json' },
