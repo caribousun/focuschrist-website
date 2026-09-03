@@ -23,8 +23,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.49';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.49';
+const SOURCE_POLICY_VERSION = '2026-09-03.50';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.50';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -471,16 +471,26 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
   }).filter((item) => item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
     .slice(0, 2);
-  if (candidate && candidate.deterministic === true && selected.length) {
+  if (candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true) && selected.length) {
     const positions = new Set();
+    // A deterministic history topic is an article-level match, not merely a
+    // paragraph-level keyword match. Preserve its lead paragraphs so origin,
+    // date, identity, and purpose are not displaced by a later heading that
+    // happens to share more query tokens (for example "organization").
+    if (candidate.deterministicHistoryTopic === true) {
+      for (let position = 0; position < Math.min(2, sourceParagraphs.length); position += 1) positions.add(position);
+    }
     selected.forEach((item) => {
-      for (let offset = 0; offset <= 3; offset += 1) {
+      const firstOffset = candidate.deterministicHistoryTopic === true ? -1 : 0;
+      const lastOffset = candidate.deterministicHistoryTopic === true ? 2 : 3;
+      for (let offset = firstOffset; offset <= lastOffset; offset += 1) {
         const position = item.position + offset;
         if (position >= 0 && position < sourceParagraphs.length) positions.add(position);
       }
     });
+    const limit = candidate.deterministicHistoryTopic === true ? 1200 : 700;
     return Array.from(positions).sort((left, right) => left - right)
-      .map((position) => sourceParagraphs[position]).join(' ').slice(0, 700);
+      .map((position) => sourceParagraphs[position]).join(' ').slice(0, limit);
   }
   return selected.map((item) => item.text).join(' ').slice(0, 700);
 }
@@ -519,7 +529,8 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
     const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
     const topicScore = (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
-    return { text, position, score: topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
+    const historyLeadScore = candidate && candidate.deterministicHistoryTopic === true && position < 2 ? 1200 : 0;
+    return { text, position, score: historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
   }).sort((left, right) => right.score - left.score)
     .filter((item) => {
       if (size + item.text.length > 4200) return false;

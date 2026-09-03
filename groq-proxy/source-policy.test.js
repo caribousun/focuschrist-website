@@ -11,6 +11,7 @@ import worker, {
   callVerifier,
   classifyResearchScope,
   collectSourceEvidence,
+  compactParagraphPack,
   extractSelectedPioneerName,
   extractTellMyStoryEntry,
   evaluateQuestionSafety,
@@ -25,6 +26,7 @@ import worker, {
   needsIdentityClarification,
   parseVerifierJson,
   providerDiagnostic,
+  relevantParagraphText,
   remainingBudget,
   reviewedDeterministicEvidenceRecovery,
   requiresExternalGeneralResearch,
@@ -206,6 +208,37 @@ assert(reviewedDeterministicEvidenceRecovery(
   'Tell me about the Kirtland Temple.',
   [{ url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'Kirtland Temple history.' }],
 ) === null, 'reviewed Relief Society recovery must not activate for unrelated Church History topics');
+
+const reliefHistoryQuestion = 'What should I know about the organization of the Relief Society when it began and why.';
+const reliefHistoryCandidate = {
+  url: 'https://www.churchofjesuschrist.org/study/history/topics/relief-society?lang=eng',
+  title: 'Relief Society',
+  tokens: 'relief society organization history women service',
+  deterministicHistoryTopic: true,
+};
+const reliefHistoryParagraphs = [
+  'The Female Relief Society of Nauvoo was organized in March 1842. Joseph Smith gave women a commission to relieve the poor and save souls, and women continued to pray, testify, and bless the sick and poor.',
+  'In 1854 women began to organize again in local Relief Societies and assisted neighbors and poor Saints.',
+  'By 1867 local societies were reestablished in Utah under Church direction.',
+  'A Central Organization developed later as Relief Societies multiplied and greater coordination became necessary.',
+];
+const reliefHistoryExcerpt = relevantParagraphText(reliefHistoryParagraphs, reliefHistoryQuestion, reliefHistoryCandidate);
+assert(/March 1842/i.test(reliefHistoryExcerpt)
+  && /relieve the poor/i.test(reliefHistoryExcerpt)
+  && /Central Organization/i.test(reliefHistoryExcerpt),
+  'deterministic Church History evidence must preserve the article lead while including query-relevant later context');
+const reliefHistoryPack = compactParagraphPack(reliefHistoryParagraphs, reliefHistoryCandidate, reliefHistoryQuestion);
+assert(reliefHistoryPack.some((paragraph) => /March 1842/i.test(paragraph)),
+  'cached deterministic Church History evidence must retain the article lead paragraph');
+const reliefHistoryWarmExcerpt = relevantParagraphText(reliefHistoryPack, reliefHistoryQuestion, reliefHistoryCandidate);
+assert(/March 1842/i.test(reliefHistoryWarmExcerpt) && /relieve the poor/i.test(reliefHistoryWarmExcerpt),
+  'warm-cache deterministic Church History evidence must retain origin and purpose context');
+const reliefGeneralRecovery = reviewedDeterministicEvidenceRecovery(reliefHistoryQuestion, [{
+  url: reliefHistoryCandidate.url,
+  content: reliefHistoryWarmExcerpt,
+}]);
+assert(reliefGeneralRecovery && reliefGeneralRecovery.recoveryId === 'reviewed-relief-society-nauvoo',
+  'the exact broader Relief Society organization wording must reach the audited recovery from the general official topic');
 
 const workerSourceForDeterministicLane = await import('node:fs').then((fs) => fs.readFileSync(new URL('./src/index.js', import.meta.url), 'utf8'));
 const deterministicLanePosition = workerSourceForDeterministicLane.indexOf("const reviewedDeterministic = retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'");
@@ -810,7 +843,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.49',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.50',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
