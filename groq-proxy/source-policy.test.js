@@ -195,13 +195,23 @@ const enosSinWordRecovery = reviewedDeterministicEvidenceRecovery(
 assert(enosSinWordRecovery
   && enosSinWordRecovery.recoveryId === 'reviewed-enos-1-prayer-forgiveness',
   'exact Enos 1 evidence using sins or guilt language must activate the audited recovery without requiring the literal word forgiven');
+const enosExactSourceRecovery = reviewedDeterministicEvidenceRecovery(
+  'What does Enos 1 teach about prayer and forgiveness?',
+  [{
+    url: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng',
+    content: 'This is a substantive excerpt returned from the exact official Enos 1 chapter after deterministic indexed retrieval and evidence admission. It is long enough to prove that the official chapter was actually fetched rather than inferred from a URL alone.',
+  }],
+);
+assert(enosExactSourceRecovery
+  && enosExactSourceRecovery.recoveryId === 'reviewed-enos-1-prayer-forgiveness',
+  'the audited Enos answer must not depend on which exact words survive deterministic excerpt truncation once the exact official Enos 1 source has been substantively fetched');
 assert(reviewedDeterministicEvidenceRecovery(
   'What does Enos 1 teach about prayer and forgiveness?',
   [{
     url: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng',
-    content: 'Enos prayed earnestly to God throughout the day.',
+    content: 'too short',
   }],
-) === null, 'the Enos recovery must still require sin, guilt, or forgiveness evidence in addition to prayer');
+) === null, 'the Enos recovery must not activate from a bare URL with no substantive retrieved evidence');
 
 
 const coldEnosQuestion = 'What does Enos 1 teach about prayer and forgiveness?';
@@ -889,7 +899,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.52',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.53',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
