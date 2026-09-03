@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.50';
+const POLICY_VERSION = '2026-09-03.51';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -384,6 +384,8 @@ if (process.argv.includes('--definition-check')) {
 
     const warmTest = specimen('warm-cache-enos', 'ask', 'faith-study', 'What does Enos 1 teach about prayer and forgiveness?', 'faith-study', true, 'enos', /\/enos\/1/i);
     const warmFirst = await submit(warmTest); const warmSecond = await submit(warmTest);
+    console.log(JSON.stringify({ ...warmFirst, phase: 'cold-enos' }));
+    console.log(JSON.stringify({ ...warmSecond, phase: 'warm-enos' }));
     validate(warmTest, warmFirst); validate(warmTest, warmSecond);
     await validateActualOfficialEvidence(warmTest, warmSecond);
     assert(warmSecond.cacheHits > 0, 'one-hour official excerpt cache did not produce a warm hit');
