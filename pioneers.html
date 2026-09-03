@@ -982,6 +982,7 @@
  <button onclick="sendMessage()" id="sendBtn">Ask</button>
  <button onclick="clearChat()" id="clearBtn" style="padding:15px 20px;background:#333;border:1px solid #555;border-radius:30px;color:#aaa;font-weight:bold;cursor:pointer;">New Question</button>
  </div>
+ <p style="max-width:860px;margin:12px auto 0;color:#b8c4c8;font-size:0.9rem;line-height:1.55;text-align:center;">AI-assisted answers are study aids and may contain errors. Unreviewed questions and limited recent context may be sent to external AI providers for research and verification. Please do not submit sensitive personal information.</p>
  <div class="scripture-categories">
  <div class="category-row">
  <div class="category-title">PIONEER TOPICS</div>
@@ -1411,7 +1412,14 @@
         sendMessage();
     }}
     function askTopic(t){const q=t;const i=document.getElementById('userInput');i.value='';document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);askAI(q).then(r=>{l.remove();addMessage(r.answer,false,r.sources)})}
-    function containsInappropriate(t){t=t.toLowerCase();for(let w of inappropriate)if(t.includes(w))return true;return false}
+    function containsInappropriate(t){
+        if(window.focusChristQuestionSafety&&typeof window.focusChristQuestionSafety.evaluate==='function')return !window.focusChristQuestionSafety.evaluate(t).allowed;
+        const n=String(t||'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim(),c=n.replace(/\s+/g,'');
+        const blocked=inappropriate.some(w=>n.includes(w))||/f+u+c+k+|s+h+i+t+|b+i+t+c+h+/.test(c)||/\b(?:sex|sexual|porn|pornography|nude|naked|intercourse|masturbat(?:e|ion|ing)|orgasm|genitals?)\b/.test(n);
+        const group=/\b(?:religion|faith|church|christian|catholic|jewish|jews|muslim|islam|hindu|buddhist|culture|ethnic|race|nationality|immigrant|democrat|republican|liberal|conservative)\w*\b/.test(n);
+        const attack=/\b(?:stupid|idiots?|evil|inferior|worthless|disgusting|trash|vermin|subhuman|hate|scum|morons?|should die|should be killed)\b/.test(n);
+        return blocked||(group&&attack);
+    }
     function findAnswer(q){
         q=q.toLowerCase();
         let bestMatch = null;
@@ -1724,7 +1732,7 @@
         if(!q)return;
         // Clear chat for fresh start
         document.getElementById('chatBox').innerHTML='';
-        if(containsInappropriate(q)){addMessage(q,true);i.value='';addMessage("We welcome all who seek truth with respect and love. How can I help you learn about Jesus Christ?",false,[{text:'🕍 Come Unto Christ',url:'https://www.churchofjesuschrist.org/comeuntochrist'}]);return}
+        if(containsInappropriate(q)){i.value='';addMessage("focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.",false,[]);return}
         b.disabled=true;addMessage(q,true);i.value='';const l=document.createElement('div');l.className='loading';l.innerHTML='<p>🙏 Seeking divine guidance...</p>';document.getElementById('chatBox').appendChild(l);l.remove();b.disabled=false;// Check Tell My Story FIRST for pioneer names
         const storyMatch = await searchTellMyStory(q);
         let response;

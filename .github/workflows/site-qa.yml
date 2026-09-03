@@ -74,7 +74,12 @@ jobs:
         run: node tools/question_safety_runtime_qa.js
 
       - name: Exercise gateway source policy
-        run: node groq-proxy/source-policy.test.js
+        run: |
+          node groq-proxy/source-policy.test.js
+          node groq-proxy/church-source-index.test.js
+
+      - name: Validate committed Church source index
+        run: python tools/build_church_source_index.py --check
 
       - name: Validate shared site JavaScript
         run: node --check site-common.js
@@ -120,6 +125,9 @@ jobs:
 
       - name: Validate live AI response matrix
         run: node --check tools/live_ai_response_matrix.js
+
+      - name: Validate generated Church source index JavaScript
+        run: node --check groq-proxy/src/church-source-index.js
 
       - name: Verify deployed production Ask contracts
         if: github.event_name == 'push'

@@ -1,0 +1,34 @@
+name: Church Source Index Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 7 * * *"
+    - cron: "53 7 * * 0"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: focuschrist-church-source-audit
+  cancel-in-progress: false
+
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Compare robots and sitemap revision
+        run: python tools/audit_church_source_freshness.py
+
+  weekly-full-refresh-check:
+    if: github.event_name == 'workflow_dispatch' || github.event.schedule == '53 7 * * 0'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Rebuild source index from official sitemaps
+        run: python tools/build_church_source_index.py
+      - name: Require the committed index to be current
+        run: git diff --exit-code -- groq-proxy/src/church-source-index.js

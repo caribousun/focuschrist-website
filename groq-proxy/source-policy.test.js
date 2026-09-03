@@ -212,6 +212,23 @@ assert(timeoutFallbackCalls === 1
   'a logical Cloudflare timeout must reserve time for exactly one Groq fallback and then fail closed');
 globalThis.fetch = verifierFetchBeforeTests;
 
+let rateLimitProviderCalls = 0;
+globalThis.fetch = async () => { rateLimitProviderCalls += 1; throw new Error('rate-limited request reached a provider'); };
+const rateLimitedResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+  method: 'POST',
+  headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json', 'CF-Connecting-IP': '192.0.2.1' },
+  body: JSON.stringify({ messages: [{ role: 'user', content: 'Why do seasons change?' }] }),
+}), {
+  ASK_RATE_LIMITER: { limit: async ({ key }) => ({ success: key !== 'public-ask:192.0.2.1' }) },
+  AI: { run: async () => { throw new Error('rate-limited request reached AI'); } },
+});
+const rateLimitedPayload = await rateLimitedResponse.json();
+assert(rateLimitedResponse.status === 429
+  && rateLimitedPayload.focuschrist_gateway_mode === 'request-rate-limit'
+  && rateLimitProviderCalls === 0,
+  'the production rate-limit binding must stop abusive volume before source or AI calls');
+globalThis.fetch = verifierFetchBeforeTests;
+
 const faithMessages = [{ role: 'user', content: 'What does Isaiah 1:18 teach?' }];
 const faith = classifyResearchScope(faithMessages);
 assert(faith.faith, 'scripture citations must use the faith research scope');
@@ -571,6 +588,7 @@ try {
 }
 
 const gatewayBodies = [];
+const gatewayVerifierBodies = [];
 const expandedGeneralAnswer = repeatedSubstantiveAnswer('documented', 50);
 globalThis.fetch = async (_url, options) => {
   const body = JSON.parse(options.body);
@@ -591,22 +609,7 @@ globalThis.fetch = async (_url, options) => {
       }],
     }), { status: 200, headers: { 'Content-Type': 'application/json' } });
   }
-  if (gatewayBodies.length === 2) {
-    return new Response(JSON.stringify({
-      choices: [{ message: { content: JSON.stringify({
-        approved: true,
-        answer: 'Ada Lovelace died on November 27, 1852.',
-        source_indexes: [1],
-      }) } }],
-    }), { status: 200, headers: { 'Content-Type': 'application/json' } });
-  }
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: JSON.stringify({
-      approved: true,
-      answer: expandedGeneralAnswer,
-      source_indexes: [1],
-    }) } }],
-  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  throw new Error('unexpected Groq verifier request during Cloudflare depth test');
 };
 try {
   const gatewayResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
@@ -617,16 +620,28 @@ try {
       focuschrist_profile: 'general-knowledge',
       messages: [{ role: 'user', content: 'When did Ada Lovelace die?' }],
     }),
-  }), { GROQ_KEY_NEW: 'test-key' });
+  }), {
+    GROQ_KEY_NEW: 'test-key',
+    AI: { run: async (_model, body) => {
+      gatewayVerifierBodies.push(body);
+      return { response: {
+        approved: true,
+        answer: gatewayVerifierBodies.length === 1
+          ? 'Ada Lovelace died on November 27, 1852.'
+          : expandedGeneralAnswer,
+        source_indexes: [1],
+      } };
+    } },
+  });
   const gatewayPayload = await gatewayResponse.json();
-  assert(gatewayBodies.length === 3,
+  assert(gatewayBodies.length === 1 && gatewayVerifierBodies.length === 2,
     'a short verified answer must trigger exactly one evidence-only expansion pass');
-  assert(gatewayBodies[2].messages[0].content.includes('previous approved answer did not meet')
-    && gatewayBodies[2].messages[0].content.includes('at least 45 words'),
+  assert(gatewayVerifierBodies[1].messages[0].content.includes('previous approved answer did not meet')
+    && gatewayVerifierBodies[1].messages[0].content.includes('at least 45 words'),
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.21',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.22',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
