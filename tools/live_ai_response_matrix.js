@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.25';
+const POLICY_VERSION = '2026-09-03.26';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -67,7 +67,7 @@ const rounds = [1, 2, 3].map((round) => [
         ['Explain how', 'What did', 'Why did'],
         ['cooperative irrigation', 'shared irrigation work in Latter-day Saint settlements'],
         ['help pioneer communities?', 'matter to early pioneer communities?', 'contribute to settlement life?']),
-    'faith-study', true, 'pioneer', /(?:a-brief-history|pioneer|settlement|irrigat)/i, 'pioneer'),
+    'faith-study', true, 'pioneer', /(?:a-brief-history|daily-life-of-first-generation|pioneer|settlement|irrigat)/i, 'pioneer'),
     specimen(`round-${round}-history`, 'church-history', 'faith-study', varied(
         ['Explain', 'Give me the historical setting for', 'What should I know about'],
         ['the organization of the Relief Society', 'the Female Relief Society of Nauvoo'],

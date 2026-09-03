@@ -107,6 +107,12 @@ for (const fragmentSize of [4, 3, 2]) {
   assert(hasExcessiveSourceOverlap(fragments.join(' Independent transition. '), [{ content: copiedWords }]),
     `the answer guard must reject ordered reconstruction split into ${fragmentSize}-word fragments`);
 }
+const sparseCommonPhrases = [];
+for (let index = 0; index < 30; index += 2) {
+  sparseCommonPhrases.push(`${copiedWords.split(' ').slice(index, index + 2).join(' ')} ${Array(10).fill(`independent${index}`).join(' ')}`);
+}
+assert(!hasExcessiveSourceOverlap(sparseCommonPhrases.join(' '), [{ content: copiedWords }]),
+  'sparse ordered two-word matches inside a much longer independent answer must not be mislabeled as dense source reconstruction');
 const reorderedFragments = [];
 for (let index = 0; index < 30; index += 3) {
   reorderedFragments.push(copiedWords.split(' ').slice(index, index + 3).join(' '));

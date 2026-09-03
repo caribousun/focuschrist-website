@@ -20,7 +20,7 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.25';
+const SOURCE_POLICY_VERSION = '2026-09-03.26';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -564,14 +564,13 @@ function hasExcessiveSourceOverlap(answer, evidence, limit = 25) {
       }
       if (longest >= 2) {
         reconstructedWords += longest;
-        if (reconstructedWords > limit) return true;
         answerIndex += longest;
         sourceFloor = longestSourceIndex + longest;
       } else {
         answerIndex += 1;
       }
     }
-    return false;
+    return reconstructedWords > limit && reconstructedWords / answerTokens.length >= 0.4;
   });
 }
 
