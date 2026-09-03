@@ -694,7 +694,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.39',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.40',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
