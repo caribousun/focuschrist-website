@@ -459,7 +459,7 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
   return (Array.isArray(paragraphs) ? paragraphs : []).map((text, position) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
     const discoveryOverlap = discoveryTokens.filter((token) => tokens.has(token)).length;
-    const queryOverlap = queryTokens.filter((token) => tokens.has(token)).length;
+    const queryOverlap = topicPinned ? queryTokens.filter((token) => tokens.has(token)).length : 0;
     const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
     const topicScore = (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
@@ -495,9 +495,17 @@ async function readBoundedText(response, maxBytes) {
   return text + decoder.decode();
 }
 
+function officialExcerptCacheVariant(candidate) {
+  return candidate && candidate.topicPinned === true
+    && /\/study\/manual\/church-history-in-the-fulness-of-times\/chapter-twenty-six/.test(String(candidate.url || ''))
+    ? 'pioneer-irrigation'
+    : 'default';
+}
+
 async function evidenceCacheKey(candidate, question) {
   if (!globalThis.crypto || !globalThis.crypto.subtle) return null;
-  const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${candidate.url}`;
+  const variant = officialExcerptCacheVariant(candidate);
+  const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${candidate.url}`;
   const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(normalized));
   const hex = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
   return new Request(`https://focuschrist-groq-proxy.caribousun.workers.dev/__official_excerpt_cache/${hex}`);
@@ -1768,6 +1776,8 @@ export {
   rankChurchSourceCandidates,
   relevantParagraphText,
   deterministicScriptureSource,
+  evidenceCacheKey,
+  officialExcerptCacheVariant,
   retrieveIndexedChurchEvidence,
   remainingBudget,
   requiresExternalGeneralResearch,
