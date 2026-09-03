@@ -103,8 +103,9 @@ assert(malformedFallbackCalls === 1
   && malformedFallbackBody.model === 'openai/gpt-oss-20b'
   && malformedFallbackBody.messages[0].content === verifierBodyForTest.messages[0].content
   && malformedFallbackBody.temperature === verifierBodyForTest.temperature
-  && malformedFallbackBody.max_tokens === verifierBodyForTest.max_tokens,
-  'malformed Cloudflare output must trigger one identical, server-owned Groq verifier request');
+  && malformedFallbackBody.max_tokens === verifierBodyForTest.max_tokens
+  && malformedFallbackBody.response_format === undefined,
+  'malformed Cloudflare output must trigger one server-owned Groq verifier request without brittle provider-side JSON enforcement');
 
 let missingIndexesFallbackCalls = 0;
 globalThis.fetch = async () => {
@@ -136,6 +137,51 @@ assert(missingBindingFallbackCalls === 1
   && missingBindingFallbackResult.verifierRoute === 'groq-fallback'
   && missingBindingFallbackResult.fallbackReason === 'binding-missing',
   'a missing Cloudflare binding must call Groq exactly once and then fail closed');
+
+let malformedJsonFallbackCalls = 0;
+globalThis.fetch = async () => {
+  malformedJsonFallbackCalls += 1;
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: 'not valid JSON' } }],
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+const malformedJsonFallbackResult = await callVerifier({ GROQ_KEY_NEW: 'test-key' },
+  verifierBodyForTest, Date.now() + 12000);
+assert(malformedJsonFallbackCalls === 1
+  && malformedJsonFallbackResult.response.status === 502
+  && malformedJsonFallbackResult.data.error.code === 'invalid_verifier_response'
+  && malformedJsonFallbackResult.formatContract === true,
+  'a successful Groq fallback with malformed JSON must fail closed without another request');
+
+let nonStringAnswerFallbackCalls = 0;
+globalThis.fetch = async () => {
+  nonStringAnswerFallbackCalls += 1;
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: JSON.stringify({ approved: true, answer: ['wrong type'], source_indexes: [1] }) } }],
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+const nonStringAnswerFallbackResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async () => ({ response: { unexpected: 'provider metadata' } }) },
+}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
+assert(nonStringAnswerFallbackCalls === 1
+  && nonStringAnswerFallbackResult.response.status === 502
+  && nonStringAnswerFallbackResult.data.error.code === 'invalid_verifier_response',
+  'a successful Groq fallback with a non-string answer must fail closed without coercion');
+
+let missingRequiredIndexesFallbackCalls = 0;
+globalThis.fetch = async () => {
+  missingRequiredIndexesFallbackCalls += 1;
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: JSON.stringify({ approved: true, answer: 'Missing indexes.' }) } }],
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+const missingRequiredIndexesFallbackResult = await callVerifier({ GROQ_KEY_NEW: 'test-key' },
+  verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
+assert(missingRequiredIndexesFallbackCalls === 1
+  && missingRequiredIndexesFallbackResult.response.status === 502
+  && missingRequiredIndexesFallbackResult.data.error.code === 'invalid_verifier_response',
+  'a successful evidence-verifier fallback without source indexes must fail closed without another request');
 
 let rejectionFallbackCalls = 0;
 globalThis.fetch = async () => { rejectionFallbackCalls += 1; throw new Error('valid rejection reached Groq'); };
@@ -580,7 +626,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.20',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.21',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
