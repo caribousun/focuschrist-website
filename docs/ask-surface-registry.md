@@ -1,6 +1,6 @@
 # focusChrist Ask Surface Registry
 
-Browser release/cache: `2026-09-03.16` / `20260903-16`; Worker policy: `2026-09-03.22`
+Browser release/cache: `2026-09-03.16` / `20260903-16`; Worker policy: `2026-09-03.23`
 
 This registry records the final user-visible owner after all inline, deferred, and dynamically loaded scripts execute. A link to the Ask page is not classified as a separate Ask surface.
 
