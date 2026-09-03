@@ -315,3 +315,12 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - The official Kirtland Temple Church History topic directly documents the March 27, 1836 dedication, the revealed dedicatory prayer, Hosanna Shout, hymn, and subsequent spiritual manifestations. The failure was therefore source-selection/verifier ambiguity, not missing evidence.
 - Candidate .42 makes explicit multi-token Church History topic names deterministic on the Church History page. The exact named history topic becomes the single indexed source, uses a question-specific cache key, receives question-focused cache packing, exposes a deterministic-history receipt, and gets a focused verifier/reconsideration instruction.
 - The exact Kirtland failure is now a permanent production regression. Pioneer .40 behavior, Scripture .41 behavior, official-domain enforcement, fail-closed verification, answer-depth, paraphrase, 700-character evidence, request-budget, latency, and rate-limit controls remain unchanged.
+
+
+### Executive AI conversational history closeout - candidate 2026-09-03.43
+
+- Production .42 passed all three paced rounds, all permanent Pioneer/Alma/Kirtland regressions, and all burst questions. The next failure occurred later in the matrix at the Hyrum Smith contextual follow-up.
+- A direct live diagnostic reproduced the underlying intermittency: the Hyrum seed question could be rejected despite the exact official Hyrum Smith history topic existing, while the immediate pronoun follow-up could pass at only 71 words after two verifier calls.
+- Candidate .43 therefore extends exact multi-token official Church History topic determinism to the main Ask page as well as Church History. Both the Hyrum seed and its bounded conversation-context retrieval resolve to the same single official Hyrum Smith history topic.
+- Depth repair no longer aims exactly at the publication floor. Faith answers are repaired to at least 25 words and one sentence above the current minimum, and deterministic history-topic prompts explicitly target roughly 100 to 170 words with four sentences. The actual publication floor remains unchanged at 70 words and three sentences.
+- Existing Pioneer .40, Scripture .41, Kirtland .42, official-domain, fail-closed, source relevance, 700-character evidence, request-budget, latency, paraphrase, safety, and rate-limit controls remain unchanged.
