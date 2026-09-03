@@ -7,7 +7,7 @@ import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP
 
 const RESEARCH_MODEL = 'groq/compound-mini';
 const VERIFIER_MODEL = 'openai/gpt-oss-20b';
-const CLOUDFLARE_VERIFIER_MODEL = '@cf/meta/llama-3.2-11b-vision-instruct';
+const CLOUDFLARE_VERIFIER_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 const ALLOWED_ORIGINS = new Set([
   'https://focuschrist.com',
@@ -20,11 +20,11 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.23';
+const SOURCE_POLICY_VERSION = '2026-09-03.24';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
-const CLOUDFLARE_VERIFIER_LIMIT_MS = 9000;
+const CLOUDFLARE_VERIFIER_LIMIT_MS = 12000;
 const VERIFIER_FALLBACK_RESERVE_MS = 5000;
 const OFFICIAL_FETCH_LIMIT_MS = 9000;
 const OFFICIAL_HTML_BYTE_LIMIT = 1500000;
@@ -985,7 +985,7 @@ function verifierRouteDiagnostic(result) {
     diagnostic.focuschrist_verifier_output_tokens = Math.round(outputTokens);
   }
   if (diagnostic.focuschrist_verifier_route === 'cloudflare-primary' && (inputTokens > 0 || outputTokens > 0)) {
-    diagnostic.focuschrist_verifier_estimated_neurons = Math.ceil((inputTokens * 4410 + outputTokens * 61493) / 1000000);
+    diagnostic.focuschrist_verifier_estimated_neurons = Math.ceil((inputTokens * 26668 + outputTokens * 204805) / 1000000);
   }
   return diagnostic;
 }
@@ -1376,7 +1376,7 @@ export default {
         if (indexed.evidence.length) {
           evidence = indexed.evidence;
           allEvidence = indexed.evidence;
-          draft = 'Write a direct, complete answer to the visitor question using only the supplied official Church evidence.';
+          draft = '';
           retrievalDiagnostic.focuschrist_retrieval_route = 'church-source-index';
         }
       }
@@ -1444,7 +1444,7 @@ export default {
           ), 200, origin);
         }
       }
-      if (!draft || !evidence.length) {
+      if ((!draft && retrievalDiagnostic.focuschrist_retrieval_route !== 'church-source-index') || !evidence.length) {
         return jsonResponse(fallbackPayload(
           'research-insufficient-evidence',
           { ...(sanitized.scope.lowRiskDiagnostic || {}), ...retrievalDiagnostic },
@@ -1464,11 +1464,11 @@ export default {
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
       ].join('\n') : [
         'You are a strict evidence verifier. Return one JSON object only.',
-        'Evaluate the draft against the supplied source excerpts. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence.',
-        'Repair the draft into a direct, complete answer using the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
+        'Compose the final answer from the supplied source excerpts. If the DRAFT block is empty, write the answer directly from EVIDENCE and never reject merely because no candidate draft was supplied.',
+        'If a draft is present, repair it into a direct, complete answer using the evidence. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
         'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give at least 70 words and three complete sentences. A nuanced question normally needs two to five short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
         'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
-        'Set approved true whenever the evidence supports a useful answer, even if unsupported parts of the draft must be removed. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
+        'Set approved true whenever the evidence contains material that can responsibly answer the question, including when DRAFT is empty. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `QUESTION:\n${sanitized.scope.question}`,
@@ -1480,7 +1480,7 @@ export default {
       const verifierBody = {
         messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
-        max_tokens: sanitized.scope.selectedPioneer ? 900 : 700,
+        max_tokens: sanitized.scope.selectedPioneer ? 900 : 500,
         response_format: { type: 'json_object' },
       };
       let verifierResult = await callVerifier(env, verifierBody, deadline, {

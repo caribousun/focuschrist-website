@@ -210,6 +210,7 @@ assert(await fetchOfficialSource(approvedCandidate, 'Who is Hyrum Smith?', Date.
 
 let officialFetchCalls = 0;
 let groqCalls = 0;
+let indexedVerifierBody = null;
 globalThis.fetch = async (url) => {
   const target = String(url || '');
   if (target.includes('api.groq.com')) {
@@ -242,7 +243,10 @@ try {
       messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
     }),
   }), {
-    AI: { run: async () => ({ response: { approved: true, answer: verifiedAnswer, source_indexes: [1] } }) },
+    AI: { run: async (_model, body) => {
+      indexedVerifierBody = body;
+      return { response: { approved: true, answer: verifiedAnswer, source_indexes: [1] } };
+    } },
   });
   const payload = await response.json();
   assert(response.status === 200
@@ -255,6 +259,11 @@ try {
   'indexed official evidence must answer without a Groq key and return complete receipts: ' + JSON.stringify(payload));
   assert(officialFetchCalls > 0 && officialFetchCalls <= 2 && groqCalls === 0,
     'the indexed lane must fetch at most two official pages and make zero Groq calls');
+  assert(indexedVerifierBody
+    && indexedVerifierBody.max_tokens === 500
+    && indexedVerifierBody.messages[0].content.includes('If the DRAFT block is empty, write the answer directly from EVIDENCE')
+    && /DRAFT:\n\n\nEVIDENCE:/.test(indexedVerifierBody.messages[0].content),
+  'indexed evidence must reach the verifier with no fake candidate draft and an explicit compose-from-evidence contract');
 } finally {
   globalThis.fetch = originalFetch;
 }
