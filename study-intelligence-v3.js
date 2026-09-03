@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const POLICY_VERSION = '2026-09-01.15';
+    const POLICY_VERSION = '2026-09-03.16';
     let askRequestSerial = 0;
 
     const FAITH_TERMS = new Set([
@@ -27,6 +27,14 @@
         'doctrine and covenants','pearl of great price','holy ghost','heavenly father','spirit world','joseph smith','emma smith','oliver cowdery',
         'brigham young','president nelson','russell m nelson','general conference','church history','church teaching','church calling','church mission',
         'church ward','church bishop','quorum of the seventy','temple garment','temple endowment','temple sealing'
+    ];
+    const FAITH_PERSON_PHRASES = [
+        'hyrum smith','lucy mack smith','eliza r snow','lorenzo snow','wilford woodruff','john taylor',
+        'heber c kimball','parley p pratt','orson pratt','david whitmer','martin harris','emily partridge',
+        'helen mar kimball','porter rockwell','willard richards','john d lee','sidney rigdon',
+        'joseph f smith','joseph fielding smith','harold b lee','spencer w kimball','ezra taft benson',
+        'howard w hunter','gordon b hinckley','thomas s monson','russell m nelson','dallin h oaks',
+        'henry b eyring','jeffrey r holland'
     ];
     const FAITH_PERSON_NAME_QUESTION_CASELESS_PATTERN = /(\bwho\s+(?:is|was)\s+)(?:Nephi|Alma|Moroni|Ether|Helaman|Mormon)\s+(?!the\b|and\b|or\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s*[?.!]*$)/giu;
     const FAITH_PERSON_NAME_ACTION_CASELESS_PATTERN = /(\b(?:what|when|where|why|how)\s+(?:did|does|is|was)\s+)(?:Nephi|Alma|Moroni|Ether|Helaman|Mormon)\s+(?!the\b|and\b|or\b)[\p{L}'’.-]{2,}(?:\s+[\p{L}'’.-]{2,}){0,1}(?=\s+(?:act(?:ed|ing)?|became|become|composed?|did|died?|lived?|made|make|said|say|served?|spoke|talked?|writes?|wrote)\b)/giu;
@@ -130,6 +138,7 @@
         const faithTokens = words(faithQuery);
         if (faithTokens.some(function (word) { return FAITH_TERMS.has(word); })) return 'faith-study';
         if (FAITH_PHRASES.some(function (phrase) { return phraseMatch(faithQuery, phrase); })) return 'faith-study';
+        if (FAITH_PERSON_PHRASES.some(function (phrase) { return phraseMatch(faithQuery, phrase); })) return 'faith-study';
         return 'general-knowledge';
     }
 
@@ -339,7 +348,11 @@
                 sources: Array.isArray(data.focuschrist_sources) ? data.focuschrist_sources : [],
                 serverVerified: data.focuschrist_source_integrity_verified === true,
                 gatewayMode: String(data.focuschrist_gateway_mode || ''),
-                policyVersion: String(data.focuschrist_source_policy || '')
+                policyVersion: String(data.focuschrist_source_policy || ''),
+                resolvedProfile: String(data.focuschrist_resolved_profile || ''),
+                classificationMode: String(data.focuschrist_classification_mode || ''),
+                providerStatus: Number(data.focuschrist_provider_status || 0),
+                providerCode: String(data.focuschrist_provider_code || '')
             };
         } finally {
             if (timer) window.clearTimeout(timer);
@@ -473,9 +486,8 @@
         const messages = buildMessages(effectiveQuery, profile, groundedLocalReference, verifiedContext, combinedReference);
         let lastError = null;
 
-        for (const timeout of [25000, 18000]) {
-            try {
-                const researched = await request(messages, timeout, profile);
+        try {
+                const researched = await request(messages, 25000, profile);
                 let answer = researched.content;
                 answer = removeBoilerplateClosing(answer, profile);
                 answer = normalizeDisplayText(answer);
@@ -500,19 +512,22 @@
                     sourceIntegrityPassed: integrity.ok && researched.serverVerified,
                     sourceIntegrityStatus: researched.serverVerified ? (researched.gatewayMode || 'retrieval-researched-and-verified') : (researched.gatewayMode || 'verification-unavailable'),
                     sourcePolicyVersion: researched.policyVersion,
+                    resolvedProfile: researched.resolvedProfile || profile,
+                    classificationMode: researched.classificationMode || 'browser-classifier',
+                    providerStatus: researched.providerStatus,
+                    providerCode: researched.providerCode,
                     contextResolved: contextResolution.resolved === true,
                     contextEntryId: contextResolution.entryId || null,
                     contextQuestion: contextResolution.contextQuestion || null
                 };
-            } catch (error) {
-                lastError = error;
-                console.warn('focusChrist Study Intelligence v3 attempt failed:', error && error.message ? error.message : error);
-            }
+        } catch (error) {
+            lastError = error;
+            console.warn('focusChrist Study Intelligence v3 request failed:', error && error.message ? error.message : error);
         }
 
         console.error('focusChrist Study Intelligence v3 failed:', lastError);
         return {
-            answer: 'I could not complete that answer just now. Please try again, rephrase the question, or use the verified study links shown with the conversation.',
+            answer: 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.',
             sources: [],
             profile: profile,
             localMatch: null,
@@ -539,6 +554,15 @@
             if (!input || !button || !box || typeof window.addMessage !== 'function') return;
             const question = input.value.trim();
             if (!question) return;
+            const safety = window.focusChristQuestionSafety && typeof window.focusChristQuestionSafety.evaluate === 'function'
+                ? window.focusChristQuestionSafety.evaluate(question)
+                : { allowed: !(typeof window.containsInappropriate === 'function' && window.containsInappropriate(question)), response: '' };
+            if (!safety.allowed) {
+                input.value = '';
+                window.addMessage(safety.response || 'Please rephrase the question respectfully.', false, []);
+                try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+                return;
+            }
             const requestId = ++askRequestSerial;
 
             box.querySelectorAll('.welcome, .ask-welcome').forEach(function (node) { node.remove(); });
@@ -552,11 +576,6 @@
             box.scrollTop = box.scrollHeight;
 
             try {
-                if (typeof window.containsInappropriate === 'function' && window.containsInappropriate(question)) {
-                    loading.remove();
-                    window.addMessage('I can help with respectful and safe questions. Please rephrase the request in a way I can assist with.', false, []);
-                    return;
-                }
                 const result = await askV3(question, '');
                 if (requestId !== askRequestSerial) return;
                 if (loading.isConnected) loading.remove();

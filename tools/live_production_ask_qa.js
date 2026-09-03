@@ -192,12 +192,12 @@ function requireSubstantive(match, label, expected) {
     const live = await waitForExactDeployment();
     console.log('Exact production dependency graph verified: ' + ASSETS.length + ' assets / ' + CANONICAL_TARGETS.length + ' canonical cache keys');
 
-    assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260901-15')
+    assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260903-16')
         && live['ask.html'].includes('ask-experience.js?v=20260903-2'),
         'production Ask HTML does not load the .15 controllers');
-    assert(live['pioneers.html'].includes('pioneer-experience.js?v=20260901-15'),
+    assert(live['pioneers.html'].includes('pioneer-experience.js?v=20260903-16'),
         'production Pioneer HTML does not load the .15 controller');
-    assert(live['church-history.html'].includes('church-history-experience.js?v=20260901-15'),
+    assert(live['church-history.html'].includes('church-history-experience.js?v=20260903-16'),
         'production Church History HTML does not load the .15 controller');
 
     global.window = {};
@@ -205,7 +205,7 @@ function requireSubstantive(match, label, expected) {
         filename: ORIGIN + '/reviewed-ask-knowledge.js'
     });
     const registry = window.focusChristReviewedKnowledge;
-    assert(registry && registry.policyVersion === '2026-09-01.15',
+    assert(registry && registry.policyVersion === '2026-09-03.16',
         'production reviewed registry policy is not .15');
 
     const lincolnQuestion = 'What date did Abraham Lincoln die?';

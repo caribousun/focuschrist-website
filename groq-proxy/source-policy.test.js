@@ -1,26 +1,44 @@
 import worker, {
   GENERAL_ANSWER_FALLBACK,
+  PROVIDER_CALL_LIMIT_MS,
+  REQUEST_BUDGET_MS,
   SOURCE_INTEGRITY_FALLBACK,
   answerMeetsSubstanceContract,
   answerSubstanceRequirements,
+  callGroq,
   classifyResearchScope,
   collectSourceEvidence,
   extractSelectedPioneerName,
   extractTellMyStoryEntry,
+  evaluateQuestionSafety,
   guardVerifiedAnswer,
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
+  isOfficialChurchIdentityEvidence,
   isJsonValidationFailure,
   isTellMyStorySource,
   needsIdentityClarification,
   parseVerifierJson,
   providerDiagnostic,
+  remainingBudget,
   requiresExternalGeneralResearch,
   sanitizePayload,
 } from './src/index.js';
 
 function assert(condition, message) { if (!condition) throw new Error(message); }
+
+assert(REQUEST_BUDGET_MS === 22000 && PROVIDER_CALL_LIMIT_MS === 10500,
+  'the Worker must own a 22-second total budget with bounded provider stages');
+assert(remainingBudget(Date.now() - 1) === 0,
+  'expired Worker deadlines must report no remaining request budget');
+let expiredDeadlineCalls = 0;
+const fetchBeforeExpiredDeadline = globalThis.fetch;
+globalThis.fetch = async () => { expiredDeadlineCalls += 1; throw new Error('expired deadline reached provider'); };
+const expiredDeadlineResult = await callGroq('test-key', {}, Date.now() - 1);
+globalThis.fetch = fetchBeforeExpiredDeadline;
+assert(expiredDeadlineCalls === 0 && expiredDeadlineResult.response.status === 504,
+  'an expired shared deadline must fail immediately without a provider request');
 
 const faithMessages = [{ role: 'user', content: 'What does Isaiah 1:18 teach?' }];
 const faith = classifyResearchScope(faithMessages);
@@ -142,6 +160,25 @@ const evidence = collectSourceEvidence({
 assert(evidence.length === 2, 'gateway must collect tool-returned source evidence');
 assert(isOfficialChurchSource(evidence[0]), 'official Church subpages must be recognized');
 assert(!isOfficialChurchSource(evidence[1]), 'non-Church evidence must not be treated as official');
+const hyrumEvidence = [{
+  title: 'Hyrum Smith',
+  url: 'https://history.churchofjesuschrist.org/content/hyrum-smith',
+  host: 'history.churchofjesuschrist.org',
+  content: 'Church history biography of Hyrum Smith.',
+}];
+assert(isOfficialChurchIdentityEvidence('Who is Hyrum Smith?', hyrumEvidence),
+  'official Church history evidence must promote an initially general Hyrum Smith question to faith-study');
+assert(isOfficialChurchIdentityEvidence('Who is Hirum Smith?', hyrumEvidence),
+  'official Church history evidence must tolerate a one-edit spelling error in a historical identity');
+assert(!isOfficialChurchIdentityEvidence('Who is Will Smith?', hyrumEvidence),
+  'official evidence for a different Smith must not promote an unrelated person');
+
+assert(evaluateQuestionSafety('Why are Catholics stupid?').kind === 'respect-boundary',
+  'the Worker must block protected-group attacks before provider use');
+assert(evaluateQuestionSafety('I am being sexually abused and need help').kind === 'urgent-safety',
+  'the Worker must preserve an urgent safety response for abuse disclosures');
+assert(evaluateQuestionSafety('What does the Church teach about political neutrality?').allowed,
+  'the Worker must preserve respectful questions about faith and politics');
 
 function generalScopeForTest() { return { faith: false, selectedPioneer: false }; }
 function repeatedSubstantiveAnswer(word, count, paragraphs = 1) {
@@ -264,6 +301,84 @@ assert(providerDiagnostic({
 'the finite allowlist must preserve the known public rate-limit code');
 
 const originalFetch = globalThis.fetch;
+let boundaryProviderCalls = 0;
+globalThis.fetch = async () => {
+  boundaryProviderCalls += 1;
+  throw new Error('blocked content reached provider');
+};
+try {
+  const boundaryResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      messages: [{ role: 'user', content: 'Why are Catholics stupid?' }],
+    }),
+  }), { GROQ_KEY_NEW: 'test-key' });
+  const boundaryPayload = await boundaryResponse.json();
+  assert(boundaryProviderCalls === 0
+    && boundaryPayload.focuschrist_gateway_mode === 'respect-boundary'
+    && boundaryPayload.focuschrist_classification_mode === 'server-question-safety',
+  'the Worker must return the respectful boundary without a provider request');
+} finally {
+  globalThis.fetch = originalFetch;
+}
+
+let identityUpgradeCalls = 0;
+const hyrumVerifiedAnswer = repeatedSubstantiveAnswer('history', 75, 3);
+globalThis.fetch = async (_url, options) => {
+  identityUpgradeCalls += 1;
+  const body = JSON.parse(options.body);
+  if (identityUpgradeCalls === 1) {
+    return new Response(JSON.stringify({
+      choices: [{ message: {
+        content: 'A research draft about Hyrum Smith.',
+        executed_tools: [{ search_results: [
+          {
+            title: 'Hyrum Smith',
+            url: 'https://history.churchofjesuschrist.org/content/hyrum-smith',
+            content: 'Church history biography of Hyrum Smith.',
+          },
+          {
+            title: 'Unverified Hyrum Smith page',
+            url: 'https://example.com/hyrum-smith',
+            content: 'Nonofficial result that must be removed after identity resolution.',
+          },
+        ] }],
+      } }],
+    }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  }
+  assert(body.messages[0].content.includes('For a Latter-day Saint question'),
+    'identity-upgraded evidence must enter the faith verifier contract');
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: JSON.stringify({
+      approved: true,
+      answer: hyrumVerifiedAnswer,
+      source_indexes: [1],
+    }) } }],
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+try {
+  const identityUpgradeResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'general-knowledge',
+      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+    }),
+  }), { GROQ_KEY_NEW: 'test-key' });
+  const identityUpgradePayload = await identityUpgradeResponse.json();
+  assert(identityUpgradeCalls === 2
+    && identityUpgradePayload.focuschrist_resolved_profile === 'faith-study'
+    && identityUpgradePayload.focuschrist_classification_mode === 'official-church-identity-evidence'
+    && identityUpgradePayload.focuschrist_sources.length === 1
+    && identityUpgradePayload.focuschrist_sources[0].url.includes('churchofjesuschrist.org'),
+  'official identity evidence must upgrade Hyrum Smith to faith-study and remove nonofficial evidence');
+} finally {
+  globalThis.fetch = originalFetch;
+}
+
 const gatewayBodies = [];
 const expandedGeneralAnswer = repeatedSubstantiveAnswer('documented', 50);
 globalThis.fetch = async (_url, options) => {
@@ -320,7 +435,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-01.15',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.16',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

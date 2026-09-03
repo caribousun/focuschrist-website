@@ -381,6 +381,24 @@
     async function answerQuestion(rawQuestion) {
         const question = normalizeQuestion(rawQuestion);
         if (!question || historyBusy) return;
+        const safety = window.focusChristQuestionSafety && typeof window.focusChristQuestionSafety.evaluate === 'function'
+            ? window.focusChristQuestionSafety.evaluate(question)
+            : { allowed: !(typeof window.containsInappropriate === 'function' && window.containsInappropriate(question)), response: '' };
+        if (!safety.allowed) {
+            const input = byId('historyQuestion');
+            const status = byId('historyStatus');
+            if (input) input.value = '';
+            appendMessage(createMessage('assistant', safety.response || 'Please rephrase the question respectfully.'));
+            setConversationMode(true);
+            if (status) status.textContent = safety.kind === 'urgent-safety'
+                ? 'Safety guidance provided. Ask a different question when you are ready.'
+                : 'Please rephrase the question respectfully.';
+            window.setTimeout(focusLatestAnswer, 70);
+            if (input) {
+                try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+            }
+            return;
+        }
         const requestId = ++historyRequestSerial;
 
         const input = byId('historyQuestion');

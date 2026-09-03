@@ -45,6 +45,11 @@ global.sessionStorage = { setItem() {}, removeItem() {} };
 global.conversationHistory = [];
 global.URL = URL;
 
+const siteCommonSource = fs.readFileSync('site-common.js', 'utf8');
+vm.runInThisContext(
+    siteCommonSource.slice(0, siteCommonSource.indexOf('    const OFFICIAL_RESOURCE_LINKS')) + '\n})();',
+    { filename: 'site-common-question-safety.js' }
+);
 vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { filename: 'reviewed-ask-knowledge.js' });
 
 let fetchCalls = 0;
@@ -59,7 +64,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official Church History', url: 'https://www.churchofjesuschrist.org/study/church-history' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.15'
+                focuschrist_source_policy: '2026-09-03.16'
             };
         }
     };
@@ -210,6 +215,19 @@ function assert(condition, message) {
         assert(!/cannot verify the specific source claim|please confirm the subject|could not complete/i.test(messages[1].text),
             'visible Pioneer topic returned a known generic non-answer: ' + topicQuestion);
     }
+
+    window.clearChat();
+    messages.length = 0;
+    const callsBeforeBoundary = fetchCalls;
+    input.value = 'Why are Democrats morons?';
+    await window.sendMessage();
+    assert(fetchCalls === callsBeforeBoundary && conversationHistory.length === 0,
+        'blocked Pioneer content must make zero Worker requests and create no history');
+    assert(messages.length === 1 && messages[0].isUser === false
+        && messages[0].text === window.focusChristQuestionSafety.respectfulResponse,
+        'Pioneer must render only the approved respectful redirect');
+    assert(input.disabled === false && button.disabled === false,
+        'Pioneer boundary must leave controls ready');
 
     console.log('Pioneer Ask final-owner runtime QA PASS: local handcart answer made zero Worker requests; negative and stale-response controls passed');
 })().catch((error) => { console.error(error); process.exit(1); });

@@ -1,6 +1,6 @@
 # focusChrist Ask Surface Registry
 
-Release candidate: `2026-09-01.15` / cache `20260901-15`
+Release candidate: `2026-09-03.16` / cache `20260903-16`
 
 This registry records the final user-visible owner after all inline, deferred, and dynamically loaded scripts execute. A link to the Ask page is not classified as a separate Ask surface.
 
@@ -29,11 +29,14 @@ This registry records the final user-visible owner after all inline, deferred, a
 - `ask-question-contracts.json` is the machine-readable inventory of exact Ask starters, Ask topics, Pioneer topics, and Church History cards. QA reparses the production HTML and fails on any count, value, owner, or lane drift.
 - The 494-entry legacy Ask database remains quarantined except for its three previously reviewed entries. The Pioneer legacy database remains fully quarantined.
 - `site-common.js` owns the browser source-integrity guard and dynamically loads shared study assets on Ask and Pioneers.
+- `site-common.js` also owns the shared question-safety evaluator. Main Ask, Pioneers, and Church History evaluate the question before rendering the user turn, writing history, disabling controls, or starting a Worker request. The Worker enforces the same boundary for direct API traffic.
+- Profanity, explicit sexual content, and derogatory attacks on a religion, culture, ethnicity, nationality, or political affiliation receive the approved focusChrist mission redirect. The blocked text is not echoed or stored. Immediate abuse or danger disclosures receive urgent safety guidance. Respectful doctrinal, historical, interfaith, cultural, and political-neutrality questions remain answerable.
 - `study-intelligence-v3.js` owns broad Ask final submission and supplies the research function used by Church History.
 - `pioneer-experience.js` deliberately owns Pioneer submission so person-selection and card behavior cannot be replaced by a global handler.
 - The Worker owns external retrieval and server verification. Browser links alone never create a verification receipt.
 - No service worker is registered. Cache control is the versioned asset query string plus the GitHub Pages/edge response cache.
 - Art and Watch pages route context into the main Ask page but do not render a separate inline AI answer surface.
+- The browser makes one bounded Worker attempt per unreviewed question. The Worker owns a shared 22-second request budget across research, verification, and any eligible retry or expansion; the browser ceiling is 25 seconds.
 
 ## Permanent discovery control
 

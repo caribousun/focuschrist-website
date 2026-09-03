@@ -14,8 +14,13 @@ const ALLOWED_ORIGINS = new Set([
 const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
 const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
-const GENERAL_ANSWER_FALLBACK = 'I could not complete that general answer just now. Please try again or rephrase the question.';
-const SOURCE_POLICY_VERSION = '2026-09-01.15';
+const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
+const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
+const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
+const SOURCE_POLICY_VERSION = '2026-09-03.16';
+const REQUEST_BUDGET_MS = 22000;
+const PROVIDER_CALL_LIMIT_MS = 10500;
+const MIN_RETRY_BUDGET_MS = 3500;
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
 const SERVER_RESEARCH_POLICY = [
@@ -27,6 +32,7 @@ const SERVER_RESEARCH_POLICY = [
   '- Distinguish source text, official teaching, historical reporting, interpretation, and practical application.',
   '- If the available evidence does not support a claim, omit it or state the limitation.',
   '- focusChrist is independent and must never be described as an official or endorsed Church property.',
+  '- Do not answer profanity, explicit sexual requests, or content that demeans a religion, culture, ethnicity, nationality, or political affiliation. Return only the focusChrist respectful-boundary response supplied by the gateway.',
   '- Give a direct, complete, useful answer. Do not confuse brevity with quality and never reduce a sincere question to a one- or two-word response.',
   '- A simple fact should include the answer and the context needed to understand it. A nuanced question normally needs two to five short paragraphs.',
   '- Keep the answer readable. Do not expose internal reasoning or tool traces.',
@@ -45,6 +51,38 @@ const KNOWN_FALSE_SOURCE_PATTERNS = [
 const REVIEWED_COLOR_CORRECTION = 'No. Doctrine and Covenants 76:31-34 does not mention red, white, black, or golden lights and does not assign colors to degrees of glory. Those verses discuss people who know God\'s power and then deny it. Doctrine and Covenants 18:15 teaches the joy of helping bring one soul to Jesus Christ; it does not describe colors or degrees of glory.';
 const GENERAL_RESEARCH_REQUIRED_PATTERN = /\b(?:current|currently|today|tonight|tomorrow|yesterday|latest|recent|news|weather|forecast|price|cost|rate|score|schedule|election|president|prime\s+minister|chief\s+executive|ceo|law|legal|court|tax|financial|finance|investment|stock|crypto|medical|medicine|medication|diagnosis|symptom|dose|suicide|self-harm|emergency|abuse|citation|cite|source|quotation|quote|statistics?|percentage)\b/i;
 const EXPLICIT_NON_PIONEER_PATTERN = /\b(?:biblical|bible|old\s+testament|new\s+testament|book\s+of\s+exodus|moses|israelites?|egypt|pharaoh|genesis|oregon\s+trail|american\s+history|secular\s+history|not\s+(?:lds|latter[- ]day\s+saint)|non[- ]pioneer)\b/i;
+
+function normalizeQuestionSafetyText(value) {
+  return String(value || '')
+    .normalize('NFKD')
+    .toLowerCase()
+    .replace(/[013457@$]/g, (character) => ({ '0': 'o', '1': 'i', '3': 'e', '4': 'a', '5': 's', '7': 't', '@': 'a', '$': 's' })[character] || character)
+    .replace(/([a-z])\1{2,}/g, '$1$1')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function evaluateQuestionSafety(value) {
+  const normalized = normalizeQuestionSafetyText(value);
+  const compact = normalized.replace(/\s+/g, '');
+  if (/\b(?:sexual abuse|sexually abused|rape|raped|molest|molested|assaulted|immediate danger|being threatened|threatening me|hurt me|hurting me|kill me|being abused)\b/.test(normalized)) {
+    return { allowed: false, kind: 'urgent-safety', response: URGENT_SAFETY_RESPONSE };
+  }
+  const profanity = /\b(?:fuck|fucking|fucked|motherfucker|shit|bullshit|bitch|bastard|ass|asshole|whore|slut|piss|dick|cock|pussy|faggot|nigger|retard|damn|crap|wtf|stfu)\b/.test(normalized)
+    || /f+u+c+k+|s+h+i+t+|b+i+t+c+h+/.test(compact);
+  const explicitSexual = /\b(?:sex|sexual|porn|pornography|nude|nudes|naked|intercourse|masturbate|masturbation|masturbating|orgasm|genital|genitals|explicit sex|sexual act|sexual fantasy|have sex|having sex)\b/.test(normalized);
+  const protectedGroup = /\b(?:religion|religions|religious|faith|faiths|church|churches|christian|christians|catholic|catholics|protestant|protestants|latter day saint|latter day saints|lds|mormon|mormons|jewish|jews|muslim|muslims|islam|hindu|hindus|buddhist|buddhists|culture|cultures|cultural|ethnicity|ethnicities|ethnic|race|races|racial|nationality|nationalities|immigrant|immigrants|democrat|democrats|republican|republicans|liberal|liberals|conservative|conservatives|political party|political parties|political affiliation|political affiliations)\b/.test(normalized);
+  const derogatory = /\b(?:stupid|idiot|idiots|evil|inferior|worthless|disgusting|trash|vermin|subhuman|hate|hateful|scum|moron|morons|should die|should be killed|deserve to die)\b/.test(normalized);
+  const groupAttack = protectedGroup && derogatory
+    && (/\b(?:why|are|is|all|those|these|people|followers|members|believers)\b/.test(normalized)
+      || /\b(?:should die|should be killed|deserve to die|subhuman|vermin)\b/.test(normalized));
+  const structuredGroupAttack = /\b(?:why are|all|those|these)\s+[a-z-]{3,30}(?:\s+people)?\s+(?:are\s+|is\s+)?(?:stupid|idiots?|evil|inferior|worthless|disgusting|trash|vermin|subhuman|scum|morons?|hateful)\b/.test(normalized);
+  if (profanity || explicitSexual || groupAttack || structuredGroupAttack) {
+    return { allowed: false, kind: 'respect-boundary', response: RESPECTFUL_QUESTION_RESPONSE };
+  }
+  return { allowed: true, kind: 'allowed', response: '' };
+}
 
 function corsHeaders(origin) {
   return {
@@ -181,6 +219,51 @@ function isOfficialChurchSource(source) {
   return source && (source.host === OFFICIAL_CHURCH_HOST || source.host.endsWith(`.${OFFICIAL_CHURCH_HOST}`));
 }
 
+function identityTokens(question) {
+  const value = String(question || '').toLowerCase().replace(/[^a-z0-9' -]/g, ' ').replace(/\s+/g, ' ').trim();
+  const match = value.match(/^(?:who\s+(?:is|was)|tell\s+me\s+about)\s+(.+?)(?:\s*[?.!]|$)/);
+  if (!match) return [];
+  return match[1].split(/\s+/).filter((token) => token.length >= 2).slice(0, 5);
+}
+
+function withinOneEdit(left, right) {
+  if (left === right) return true;
+  if (Math.abs(left.length - right.length) > 1 || Math.max(left.length, right.length) < 4) return false;
+  let row = Array.from({ length: right.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= left.length; i += 1) {
+    const next = [i];
+    for (let j = 1; j <= right.length; j += 1) {
+      next[j] = Math.min(
+        next[j - 1] + 1,
+        row[j] + 1,
+        row[j - 1] + (left[i - 1] === right[j - 1] ? 0 : 1),
+      );
+    }
+    row = next;
+  }
+  return row[right.length] <= 1;
+}
+
+function isOfficialChurchIdentityEvidence(question, evidence) {
+  const requested = identityTokens(question);
+  if (requested.length < 2) return false;
+  return (Array.isArray(evidence) ? evidence : []).some((source) => {
+    if (!isOfficialChurchSource(source)) return false;
+    let pathname = '';
+    try { pathname = new URL(source.url).pathname.toLowerCase(); } catch (_error) {}
+    const historyContext = source.host.startsWith('history.')
+      || /\/(?:study\/)?(?:church-history|history)(?:\/|$)/.test(pathname)
+      || /\b(?:church history|latter-day saint|the church of jesus christ)\b/i.test(`${source.title} ${source.content}`);
+    if (!historyContext) return false;
+    const evidenceTokens = String(`${source.title} ${source.url}`)
+      .toLowerCase()
+      .replace(/[^a-z0-9' -]/g, ' ')
+      .split(/\s+/)
+      .filter(Boolean);
+    return requested.every((token) => evidenceTokens.some((candidate) => withinOneEdit(token, candidate)));
+  });
+}
+
 function isTellMyStorySource(source) {
   return Boolean(source && source.sourceClass === 'tell-my-story-too' && source.url === TELL_MY_STORY_URL);
 }
@@ -213,10 +296,17 @@ function extractTellMyStoryEntry(bookText, selectedName) {
     .slice(0, 14000);
 }
 
-async function fetchTellMyStoryEvidence(selectedName) {
+async function fetchTellMyStoryEvidence(selectedName, deadline) {
   if (!selectedName) return null;
+  const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  const available = deadline ? remainingBudget(deadline) : 4000;
+  if (available < 250) return null;
+  const timer = controller ? setTimeout(() => controller.abort(), Math.max(200, Math.min(4000, available - 50))) : null;
   try {
-    const response = await fetch(TELL_MY_STORY_URL, { headers: { Accept: 'text/plain' } });
+    const response = await fetch(TELL_MY_STORY_URL, {
+      headers: { Accept: 'text/plain' },
+      signal: controller ? controller.signal : undefined,
+    });
     if (!response.ok) return null;
     const entry = extractTellMyStoryEntry(await response.text(), selectedName);
     if (!entry) return null;
@@ -229,6 +319,8 @@ async function fetchTellMyStoryEvidence(selectedName) {
     };
   } catch (_error) {
     return null;
+  } finally {
+    if (timer) clearTimeout(timer);
   }
 }
 
@@ -339,27 +431,56 @@ function needsIdentityClarification(question) {
   return ['was', 'is', 'did', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom', 'murdered', 'get', 'got', 'be'].includes(bare[1]);
 }
 
-async function callGroq(apiKey, body, mayRetry = true) {
-  const response = await fetch(GROQ_ENDPOINT, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      'Content-Type': 'application/json',
-      // Basic search keeps official-source retrieval within the provider's
-      // request-size limit; the Worker independently verifies its snippets.
-      'Groq-Model-Version': '2025-07-23',
-    },
-    body: JSON.stringify(body),
-  });
+function remainingBudget(deadline) {
+  return Math.max(0, Number(deadline || 0) - Date.now());
+}
+
+function providerFailure(status, code) {
+  return {
+    response: new Response(JSON.stringify({ error: { code } }), {
+      status,
+      headers: { 'Content-Type': 'application/json' },
+    }),
+    data: { error: { code } },
+  };
+}
+
+async function callGroq(apiKey, body, deadline, mayRetry = true) {
+  const available = remainingBudget(deadline);
+  if (available < 250) return providerFailure(504, 'timeout');
+  const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  const timeoutMs = Math.max(200, Math.min(PROVIDER_CALL_LIMIT_MS, available - 50));
+  const timer = controller ? setTimeout(() => controller.abort(), timeoutMs) : null;
+  let response;
+  try {
+    response = await fetch(GROQ_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+        // Basic search keeps official-source retrieval within the provider's
+        // request-size limit; the Worker independently verifies its snippets.
+        'Groq-Model-Version': '2025-07-23',
+      },
+      body: JSON.stringify(body),
+      signal: controller ? controller.signal : undefined,
+    });
+  } catch (error) {
+    return providerFailure(error && error.name === 'AbortError' ? 504 : 503,
+      error && error.name === 'AbortError' ? 'timeout' : 'service_unavailable');
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
   let data = null;
   try { data = await response.json(); } catch (_error) {}
-  if (response.status === 429 && mayRetry) {
+  if (response.status === 429 && mayRetry && remainingBudget(deadline) >= MIN_RETRY_BUDGET_MS) {
     const message = data && data.error ? String(data.error.message || '') : '';
     const messageDelay = message.match(/try again in\s+([\d.]+)s/i);
     const retrySeconds = Number.parseFloat(response.headers.get('retry-after') || (messageDelay ? messageDelay[1] : '2'));
-    const waitMs = Math.min(30000, Math.max(1000, Number.isFinite(retrySeconds) ? (retrySeconds * 1000) + 500 : 2500));
+    const requestedWait = Number.isFinite(retrySeconds) ? (retrySeconds * 1000) + 100 : 500;
+    const waitMs = Math.min(1000, Math.max(250, requestedWait), Math.max(0, remainingBudget(deadline) - MIN_RETRY_BUDGET_MS));
     await new Promise((resolve) => setTimeout(resolve, waitMs));
-    return callGroq(apiKey, body, false);
+    return callGroq(apiKey, body, deadline, false);
   }
   return { response, data };
 }
@@ -380,11 +501,13 @@ function fallbackPayload(mode, extra, scope) {
     focuschrist_source_integrity_verified: false,
     focuschrist_source_policy: SOURCE_POLICY_VERSION,
     focuschrist_gateway_mode: mode,
+    focuschrist_resolved_profile: scope && scope.faith ? 'faith-study' : (scope && scope.profile || 'general-knowledge'),
+    focuschrist_classification_mode: scope && scope.classificationMode || 'request-scope',
     ...(extra || {}),
   };
 }
 
-async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
+async function produceLowRiskGeneralAnswer(apiKey, scope, draft, deadline) {
   const diagnostic = { focuschrist_low_risk_stage: 'started' };
   scope.lowRiskDiagnostic = diagnostic;
   if (requiresExternalGeneralResearch(scope.question)) {
@@ -409,7 +532,7 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
     temperature: 0,
     max_tokens: 700,
     response_format: { type: 'json_object' },
-  });
+  }, deadline);
   if (!result.response.ok) {
     Object.assign(diagnostic, providerDiagnostic(result));
     diagnostic.focuschrist_low_risk_stage = 'initial-provider-error';
@@ -426,6 +549,10 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
   if (verdict && verdict.approved === true
     && !answerMeetsSubstanceContract(verdict.answer, scope)) {
     const requirements = answerSubstanceRequirements(scope);
+    if (remainingBudget(deadline) < 4500) {
+      diagnostic.focuschrist_low_risk_stage = 'expansion-skipped-deadline';
+      return null;
+    }
     const expansionResult = await callGroq(apiKey, {
       model: VERIFIER_MODEL,
       messages: [{ role: 'user', content: [
@@ -440,7 +567,7 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft) {
       temperature: 0,
       max_tokens: 900,
       response_format: { type: 'json_object' },
-    });
+    }, deadline, false);
     if (expansionResult.response.ok) {
       const expansionContent = expansionResult.data && expansionResult.data.choices && expansionResult.data.choices[0]
         ? expansionResult.data.choices[0].message.content
@@ -513,6 +640,19 @@ export default {
     }
     const sanitized = sanitizePayload(payload || {});
     if (!sanitized.scope.question) return jsonResponse({ error: 'A user message is required' }, 400, origin);
+    const safety = evaluateQuestionSafety(sanitized.scope.question);
+    if (!safety.allowed) {
+      return jsonResponse({
+        id: 'focuschrist-question-boundary',
+        choices: [{ index: 0, message: { role: 'assistant', content: safety.response }, finish_reason: 'content_filter' }],
+        focuschrist_sources: [],
+        focuschrist_source_integrity_verified: false,
+        focuschrist_source_policy: SOURCE_POLICY_VERSION,
+        focuschrist_gateway_mode: safety.kind,
+        focuschrist_resolved_profile: 'local-boundary',
+        focuschrist_classification_mode: 'server-question-safety',
+      }, 200, origin);
+    }
     if (!sanitized.scope.faith && needsIdentityClarification(sanitized.scope.question)) {
       return jsonResponse(generalAnswerPayload(
         'Which Joseph do you mean? Please include the last name or a little more context.',
@@ -526,14 +666,15 @@ export default {
       return jsonResponse(fallbackPayload('research-unavailable', null, sanitized.scope), 200, origin);
     }
 
+    const deadline = Date.now() + REQUEST_BUDGET_MS;
     try {
       const tellMyStoryEvidence = sanitized.scope.selectedPioneer
-        ? await fetchTellMyStoryEvidence(sanitized.scope.selectedPioneerName)
+        ? await fetchTellMyStoryEvidence(sanitized.scope.selectedPioneerName, deadline)
         : null;
-      const researchResult = await callGroq(env.GROQ_KEY_NEW, sanitized.research);
+      const researchResult = await callGroq(env.GROQ_KEY_NEW, sanitized.research, deadline);
       if (!researchResult.response.ok && !tellMyStoryEvidence) {
         if (!sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
-          const directGeneralAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, '');
+          const directGeneralAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, '', deadline);
           if (directGeneralAnswer) {
             return jsonResponse(generalAnswerPayload(directGeneralAnswer, 'general-ai-low-risk'), 200, origin);
           }
@@ -553,6 +694,11 @@ export default {
         ? `Write a concise, accurate biographical summary of ${sanitized.scope.selectedPioneerName} from the supplied Tell My Story, Too entry.`
         : '');
       const allEvidence = collectSourceEvidence(researchMessage);
+      if (!sanitized.scope.faith && isOfficialChurchIdentityEvidence(sanitized.scope.question, allEvidence)) {
+        sanitized.scope.faith = true;
+        sanitized.scope.profile = 'faith-study';
+        sanitized.scope.classificationMode = 'official-church-identity-evidence';
+      }
       const officialEvidence = [];
       const officialUrls = new Set();
       allEvidence.filter(isOfficialChurchSource).forEach((source) => {
@@ -566,7 +712,7 @@ export default {
         ? [tellMyStoryEvidence].filter(Boolean)
         : (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence);
       if (draft && !evidence.length && !sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
-        const generalAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, draft);
+        const generalAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, draft, deadline);
         if (generalAnswer) {
           return jsonResponse(generalAnswerPayload(generalAnswer, 'general-ai-consensus'), 200, origin);
         }
@@ -611,15 +757,16 @@ export default {
         max_tokens: sanitized.scope.selectedPioneer ? 1000 : 1500,
         response_format: { type: 'json_object' },
       };
-      let verifierResult = await callGroq(env.GROQ_KEY_NEW, verifierBody);
-      if (!verifierResult.response.ok && isJsonValidationFailure(verifierResult)) {
-        await new Promise((resolve) => setTimeout(resolve, 12000));
+      let verifierResult = await callGroq(env.GROQ_KEY_NEW, verifierBody, deadline);
+      if (!verifierResult.response.ok && isJsonValidationFailure(verifierResult)
+        && remainingBudget(deadline) >= 4500) {
+        await new Promise((resolve) => setTimeout(resolve, Math.min(250, remainingBudget(deadline))));
         verifierResult = await callGroq(env.GROQ_KEY_NEW, {
           ...verifierBody,
           messages: [{ role: 'user', content: `${verifierPrompt}\n\nReturn the JSON object as plain text with no markdown fence.` }],
           max_tokens: sanitized.scope.selectedPioneer ? 1200 : 1800,
           response_format: undefined,
-        });
+        }, deadline, false);
       }
       if (!verifierResult.response.ok) {
         return jsonResponse(fallbackPayload('verification-provider-error', providerDiagnostic(verifierResult), sanitized.scope), 200, origin);
@@ -632,7 +779,8 @@ export default {
         ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
         : [];
       if (verdict && verdict.approved === true && indexes.length
-        && !answerMeetsSubstanceContract(verdict.answer, sanitized.scope)) {
+        && !answerMeetsSubstanceContract(verdict.answer, sanitized.scope)
+        && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
         const expansionPrompt = [
           verifierPrompt,
@@ -647,7 +795,7 @@ export default {
           ...verifierBody,
           messages: [{ role: 'user', content: expansionPrompt }],
           max_tokens: sanitized.scope.selectedPioneer ? 1400 : 1800,
-        });
+        }, deadline, false);
         if (expansionResult.response.ok) {
           const expansionContent = expansionResult.data && expansionResult.data.choices && expansionResult.data.choices[0]
             ? expansionResult.data.choices[0].message.content
@@ -695,6 +843,8 @@ export default {
         focuschrist_source_integrity_verified: true,
         focuschrist_source_policy: SOURCE_POLICY_VERSION,
         focuschrist_gateway_mode: 'retrieval-researched-and-verified',
+        focuschrist_resolved_profile: sanitized.scope.faith ? 'faith-study' : (sanitized.scope.profile || 'general-knowledge'),
+        focuschrist_classification_mode: sanitized.scope.classificationMode || 'request-scope',
         focuschrist_answer_word_count: answer.split(/\s+/).filter(Boolean).length,
       }, 200, origin);
     } catch (_error) {
@@ -705,23 +855,29 @@ export default {
 
 export {
   GENERAL_ANSWER_FALLBACK,
+  PROVIDER_CALL_LIMIT_MS,
+  REQUEST_BUDGET_MS,
   SOURCE_INTEGRITY_FALLBACK,
   answerMeetsSubstanceContract,
   answerSubstanceRequirements,
+  callGroq,
   classifyResearchScope,
   collectSourceEvidence,
   extractSelectedPioneerName,
   extractTellMyStoryEntry,
+  evaluateQuestionSafety,
   fetchTellMyStoryEvidence,
   guardVerifiedAnswer,
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
+  isOfficialChurchIdentityEvidence,
   isJsonValidationFailure,
   isTellMyStorySource,
   needsIdentityClarification,
   parseVerifierJson,
   providerDiagnostic,
+  remainingBudget,
   requiresExternalGeneralResearch,
   sanitizePayload,
 };

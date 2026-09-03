@@ -51,6 +51,10 @@ jobs:
         working-directory: groq-proxy
         run: npx --no-install wrangler deploy --config wrangler.toml
 
+      - name: Run live AI response matrix
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        run: node tools/live_ai_response_matrix.js
+
       - name: Report missing deployment authorization
         if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''
         run: |

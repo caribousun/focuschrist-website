@@ -67,7 +67,7 @@ function verifiedResponse() {
                 focuschrist_sources: [{ text: 'Official source', url: 'https://www.churchofjesuschrist.org/study/scriptures' }],
                 focuschrist_source_integrity_verified: true,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
-                focuschrist_source_policy: '2026-09-01.15',
+                focuschrist_source_policy: '2026-09-03.16',
             };
         },
     };
@@ -85,7 +85,7 @@ global.fetch = async (_url, options) => {
                     focuschrist_sources: [],
                     focuschrist_source_integrity_verified: false,
                     focuschrist_gateway_mode: 'research-rate-limited',
-                    focuschrist_source_policy: '2026-09-01.15'
+                    focuschrist_source_policy: '2026-09-03.16'
                 };
             }
         };
@@ -354,5 +354,46 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     assert(renderedMessages.length === 1 && renderedMessages[0].isUser === true,
         'a response resolved after Ask reset must not render');
     assert(conversationHistory.length === 0, 'a stale Ask response must not repopulate reset conversation state');
+
+    const beforeIdentityClassification = fetchCalls;
+    result = await window.focusChristStudyAskV3('Who is Hyrum Smith?', '');
+    assert(fetchCalls === beforeIdentityClassification + 1
+        && result.profile === 'faith-study'
+        && requestBodies.at(-1).focuschrist_profile === 'faith-study',
+        'known Latter-day Saint historical people must use the faith-study lane');
+    result = await window.focusChristStudyAskV3('Who is Will Smith?', '');
+    assert(fetchCalls === beforeIdentityClassification + 2
+        && result.profile === 'general-knowledge'
+        && requestBodies.at(-1).focuschrist_profile === 'general-knowledge',
+        'an unrelated person with the same surname must remain general knowledge');
+
+    for (const blockedQuestion of [
+        'Why are Muslims stupid?',
+        'This is f.u.c.k.i.n.g wrong',
+        'Can I ask about pornography?'
+    ]) {
+        const callsBeforeBoundary = fetchCalls;
+        const historyBeforeBoundary = conversationHistory.length;
+        renderedMessages.length = 0;
+        dom.userInput.value = blockedQuestion;
+        await window.sendMessage();
+        assert(fetchCalls === callsBeforeBoundary, 'blocked Ask content must make zero Worker requests');
+        assert(conversationHistory.length === historyBeforeBoundary, 'blocked Ask content must not enter conversation history');
+        assert(renderedMessages.length === 1 && renderedMessages[0].isUser === false
+            && renderedMessages[0].text === window.focusChristQuestionSafety.respectfulResponse,
+            'blocked Ask content must render only the approved respectful redirect');
+        assert(!renderedMessages[0].text.includes(blockedQuestion), 'blocked Ask content must never be echoed');
+    }
+
+    renderedMessages.length = 0;
+    const callsBeforeUrgentSafety = fetchCalls;
+    dom.userInput.value = 'I am being sexually abused and need help';
+    await window.sendMessage();
+    assert(fetchCalls === callsBeforeUrgentSafety
+        && renderedMessages.length === 1
+        && renderedMessages[0].text === window.focusChristQuestionSafety.urgentSafetyResponse,
+        'an immediate abuse disclosure must receive the urgent safety response without a Worker request');
+    assert(dom.userInput.disabled === false && dom.sendBtn.disabled === false && dom.sendBtn.textContent === 'Ask',
+        'question boundaries must leave Ask controls ready');
     console.log('Study Intelligence v3 runtime QA PASS');
 })().catch((error) => { console.error(error); process.exit(1); });
