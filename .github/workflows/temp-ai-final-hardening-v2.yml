@@ -19,7 +19,9 @@ jobs:
           ref: codex/ai-final-hardening-20260903
           fetch-depth: 0
       - name: Apply hardening patch
-        run: python tools/temp_ai_hardening_patch.py
+        run: |
+          python tools/temp_ai_hardening_patch.py
+          python tools/temp_ai_hardening_test_patch.py
       - name: Verify release
         run: |
           node groq-proxy/source-policy.test.js
@@ -48,6 +50,6 @@ jobs:
         run: |
           git config user.name "focusChrist AI hardening"
           git config user.email "actions@users.noreply.github.com"
-          git add MEMORY.md groq-proxy/src/index.js groq-proxy/source-policy.test.js tools/live_ai_response_matrix.js tools/pioneer_local_first_qa.py tools/scripture_grounding_qa.py
+          git add MEMORY.md groq-proxy/src/index.js groq-proxy/source-policy.test.js groq-proxy/church-source-index.test.js tools/live_ai_response_matrix.js tools/pioneer_local_first_qa.py tools/scripture_grounding_qa.py
           git commit -m "Harden Ask verifier reliability"
           git push origin HEAD:codex/ai-final-hardening-20260903
