@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "groq-proxy/**"
+      - "tools/live_ai_response_matrix.js"
       - ".github/workflows/deploy-worker.yml"
 
 permissions:
