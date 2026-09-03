@@ -81,7 +81,7 @@ Framework sources:
 - MetaGPT: https://github.com/FoundationAgents/MetaGPT
 - Hermes Agent: https://github.com/NousResearch/hermes-agent
 
-Production status remains `VERIFIED FAIL` until repository CI, Worker deployment, exact policy `.21`, the five-question live matrix, and visitor-path checks all pass.
+Production status remains `VERIFIED FAIL` until repository CI, Worker deployment, exact policy `.25`, the 15-core and three-request burst live matrix, capacity and latency gates, and rendered visitor-path checks all pass.
 
 Policy `.19` proved that GPT-OSS 20B could satisfy the contract on three of five live specimens, but it is not on Cloudflare's documented JSON Mode supported-model list and returned unusable output on the other two. Candidate `.20` uses Cloudflare Llama 3.3 70B fast for the primary verifier and retains Groq 20B only as the one-shot operational fallback. Acceptance requires the exact `.20` policy and at least four of five Cloudflare-primary routes.
 
@@ -94,3 +94,5 @@ Candidate `.23` uses `@cf/meta/llama-3.2-11b-vision-instruct` as the primary ver
 Policy `.23` failed because the 11B endpoint returned Cloudflare `service_unavailable` on the deployed indexed requests and pushed verification to Groq fallback. The run also revealed that the indexed lane mislabeled a task instruction as `DRAFT`, which could prompt a strict verifier to reject it. Candidate `.24` corrects that gateway semantics defect, restores the proven 70B JSON-mode primary with a bounded 12-second window, and reduces normal output to 500 tokens. No retrieval or integrity gate is removed.
 
 Policy `.20` proved the Llama verifier can return strong source-indexed answers, but its 6.5-second ceiling was too tight for all complex prompts. Candidate `.21` allows 9 seconds while reserving 5 seconds for one Groq fallback. Because Groq's strict provider-side JSON enforcement itself returned `json_validate_failed`, the fallback now relies on the existing plain-JSON prompt plus the Worker's strict parser and context-aware verdict validator. Malformed fallback output still fails closed.
+
+Policy `.24` proved the restored 70B primary could answer all 15 core requests without provider failure, while 13 passed the complete answer contract. Two approved answers were rejected by the unchanged source-overlap guard. Candidate `.25` adds a single Cloudflare-only paraphrase/depth repair under the same deadline and caps its normal output at 400 tokens. This uses the already selected no-cost verifier instead of adding a new provider, and the unchanged capacity gate must include both calls when a repair occurs.

@@ -186,3 +186,9 @@ The prior reliability work centered on owner-reproduced reviewed-local failures,
 - Live endpoint availability after incident: `VERIFIED PASS`, intermittent success observed.
 - Exact original provider-stage failure: `UNAVAILABLE / UNPROVEN` because diagnostics were not retained.
 - All-page broad remote-lane reliability and latency: `UNAVAILABLE / UNPROVEN` until the new matrix is implemented and run.
+
+## Policy .24 overlap failure and policy .25 repair
+
+Exact `.24` deployed successfully and returned complete Cloudflare-primary answers for 13 of 15 paced core specimens. The two failures had relevant indexed Church evidence, `approved: true`, and valid source indexes, but the deterministic final guard rejected the generated wording for excessive ordered overlap with source excerpts. The system therefore failed closed as designed.
+
+Candidate `.25` does not raise or remove the overlap limit. It tells the first verifier pass to use independent phrasing and adds one bounded combined repair when an approved answer fails either depth or overlap. That repair uses Cloudflare only, is capped at 400 normal-output tokens, shares the 22-second request deadline, and cannot run after a Groq fallback. Production remains `VERIFIED FAIL` until the exact `.25` matrix, capacity calculation, and rendered journeys pass.

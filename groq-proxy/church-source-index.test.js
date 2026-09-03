@@ -211,6 +211,8 @@ assert(await fetchOfficialSource(approvedCandidate, 'Who is Hyrum Smith?', Date.
 let officialFetchCalls = 0;
 let groqCalls = 0;
 let indexedVerifierBody = null;
+let quoteRepairCalls = 0;
+let quoteRepairBody = null;
 globalThis.fetch = async (url) => {
   const target = String(url || '');
   if (target.includes('api.groq.com')) {
@@ -262,8 +264,36 @@ try {
   assert(indexedVerifierBody
     && indexedVerifierBody.max_tokens === 500
     && indexedVerifierBody.messages[0].content.includes('If the DRAFT block is empty, write the answer directly from EVIDENCE')
+    && indexedVerifierBody.messages[0].content.includes('Use independently worded paraphrase')
     && /DRAFT:\n\n\nEVIDENCE:/.test(indexedVerifierBody.messages[0].content),
   'indexed evidence must reach the verifier with no fake candidate draft and an explicit compose-from-evidence contract');
+
+  const quoteRepairResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'faith-study',
+      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+    }),
+  }), {
+    AI: { run: async (_model, body) => {
+      quoteRepairCalls += 1;
+      quoteRepairBody = body;
+      if (quoteRepairCalls === 1) {
+        const copiedEvidence = 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution';
+        return { response: { approved: true, answer: `${copiedEvidence}. ${copiedEvidence}. ${copiedEvidence}.`, source_indexes: [1] } };
+      }
+      return { response: { approved: true, answer: verifiedAnswer, source_indexes: [1] } };
+    } },
+  });
+  const quoteRepairPayload = await quoteRepairResponse.json();
+  assert(quoteRepairCalls === 2
+    && quoteRepairBody.max_tokens === 400
+    && quoteRepairBody.messages[0].content.includes('Rewrite the answer in genuinely independent language')
+    && quoteRepairPayload.focuschrist_source_integrity_verified === true
+    && quoteRepairPayload.focuschrist_cloudflare_verifier_calls === 2,
+  'an approved but overcopied indexed answer must receive one bounded Cloudflare-only paraphrase repair');
 } finally {
   globalThis.fetch = originalFetch;
 }
