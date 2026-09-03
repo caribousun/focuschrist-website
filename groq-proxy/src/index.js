@@ -21,8 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.41';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.41';
+const SOURCE_POLICY_VERSION = '2026-09-03.42';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.42';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -346,6 +346,27 @@ function deterministicScriptureSource(question) {
   };
 }
 
+function deterministicHistoryTopicSource(question, page) {
+  if (page !== 'church-history') return null;
+  const queryTokens = normalizeDiscoveryTokens(question);
+  if (queryTokens.length < 2) return null;
+  const matches = CHURCH_SOURCE_INDEX.map((entry) => {
+    if (entry.kind !== 'history-topic') return null;
+    const titleTokens = normalizeDiscoveryTokens(entry.title);
+    if (titleTokens.length < 2 || !titleTokens.every((token) => queryTokens.includes(token))) return null;
+    return {
+      ...entry,
+      deterministicHistoryTopic: true,
+      titleTokenCount: titleTokens.length,
+      score: 900 + titleTokens.length * 25 + Number(entry.priority || 0) / 20,
+      overlapCount: queryTokens.filter((token) => new Set(normalizeDiscoveryTokens(entry.tokens)).has(token)).length,
+    };
+  }).filter(Boolean);
+  return matches.sort((left, right) => right.titleTokenCount - left.titleTokenCount
+    || right.score - left.score
+    || String(left.url).localeCompare(String(right.url)))[0] || null;
+}
+
 function isPioneerIrrigationIntent(question, page) {
   return page === 'pioneers'
     && /\b(?:irrigat\w*|shared\s+water|water\s+(?:management|distribution|systems?))\b/i.test(String(question || ''));
@@ -485,11 +506,12 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
   const discoveryTokens = normalizeDiscoveryTokens(`${candidate.title || ''} ${candidate.tokens || ''}`);
   const queryTokens = normalizeDiscoveryTokens(question);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
+  const questionFocused = topicPinned || Boolean(candidate && candidate.deterministicHistoryTopic === true);
   let size = 0;
   return (Array.isArray(paragraphs) ? paragraphs : []).map((text, position) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
     const discoveryOverlap = discoveryTokens.filter((token) => tokens.has(token)).length;
-    const queryOverlap = topicPinned ? queryTokens.filter((token) => tokens.has(token)).length : 0;
+    const queryOverlap = questionFocused ? queryTokens.filter((token) => tokens.has(token)).length : 0;
     const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
     const topicScore = (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
@@ -535,7 +557,8 @@ function officialExcerptCacheVariant(candidate) {
 async function evidenceCacheKey(candidate, question) {
   if (!globalThis.crypto || !globalThis.crypto.subtle) return null;
   const variant = officialExcerptCacheVariant(candidate);
-  const deterministicQuestionKey = candidate && candidate.deterministic === true
+  const deterministicQuestionKey = candidate
+    && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true)
     ? normalizeDiscoveryTokens(question).slice(0, 12).join('-')
     : '';
   const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${deterministicQuestionKey}\n${candidate.url}`;
@@ -613,13 +636,17 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
 async function retrieveIndexedChurchEvidence(question, page, deadline) {
   const rankedCandidates = rankChurchSourceCandidates(question, page);
   const deterministicScripture = deterministicScriptureSource(question);
+  const deterministicHistoryTopic = deterministicScripture ? null : deterministicHistoryTopicSource(question, page);
   const candidates = deterministicScripture
     ? [{ ...deterministicScripture, score: 1000, overlapCount: normalizeDiscoveryTokens(question).length }]
-    : rankedCandidates;
+    : deterministicHistoryTopic
+      ? [deterministicHistoryTopic]
+      : rankedCandidates;
   const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
-  const fetchCandidates = deterministicScripture ? candidates.slice(0, 1) : candidates.slice(0, 2);
+  const singleSource = Boolean(deterministicScripture || deterministicHistoryTopic);
+  const fetchCandidates = singleSource ? candidates.slice(0, 1) : candidates.slice(0, 2);
   const fetched = await Promise.all(fetchCandidates.map((candidate) => fetchOfficialSource(candidate, question, deadline, counters)));
-  const evidence = fetched.filter(Boolean).slice(0, deterministicScripture ? 1 : 2);
+  const evidence = fetched.filter(Boolean).slice(0, singleSource ? 1 : 2);
   return {
     candidates,
     evidence,
@@ -627,6 +654,7 @@ async function retrieveIndexedChurchEvidence(question, page, deadline) {
     cacheHits: counters.cacheHits,
     cacheMisses: counters.cacheMisses,
     deterministicScripture: Boolean(deterministicScripture),
+    deterministicHistoryTopic: Boolean(deterministicHistoryTopic),
   };
 }
 
@@ -1609,6 +1637,7 @@ export default {
         retrievalDiagnostic.focuschrist_index_candidates = indexed.candidates.length;
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
         retrievalDiagnostic.focuschrist_deterministic_scripture = indexed.deterministicScripture === true;
+        retrievalDiagnostic.focuschrist_deterministic_history_topic = indexed.deterministicHistoryTopic === true;
         retrievalDiagnostic.focuschrist_official_fetch_calls = indexed.fetchCalls;
         retrievalDiagnostic.focuschrist_official_cache_hits = indexed.cacheHits;
         retrievalDiagnostic.focuschrist_official_cache_misses = indexed.cacheMisses;
@@ -1712,7 +1741,9 @@ export default {
         'Interpret ordinary awkward grammar by its clear intended meaning. Do not reject a scripture, doctrine, or history question merely because its wording is imperfect. If the named official source directly addresses the named topic or concept, answer from that evidence.',
         retrievalDiagnostic.focuschrist_deterministic_scripture === true
           ? 'The visitor explicitly named a canonical scripture chapter. EVIDENCE contains that exact official scripture source and no competing research source. If its excerpt directly addresses the requested concept, compose the supported answer from it and approve it. Do not reject merely because the visitor asks for an explanation rather than a quotation.'
-          : 'Evaluate the supplied official evidence normally under the source-integrity contract.',
+          : retrievalDiagnostic.focuschrist_deterministic_history_topic === true
+            ? 'The visitor explicitly named an indexed Church History topic. EVIDENCE contains that exact official Church History topic and no competing research source. If its excerpt directly describes the requested event, date, purpose, or historical setting, compose the supported answer from it and approve it.'
+            : 'Evaluate the supplied official evidence normally under the source-integrity contract.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `QUESTION:\n${sanitized.scope.question}`,
@@ -1773,7 +1804,9 @@ export default {
           needsRelevantEvidenceReconsideration
             ? (retrievalDiagnostic.focuschrist_deterministic_scripture === true
               ? 'This is the exact canonical scripture source named by the visitor. Re-read its excerpt for the requested concept. If the excerpt supports a responsible explanation, write that explanation and set approved true with source_indexes [1]. Keep approved false only if the excerpt truly lacks the requested concept.'
-              : 'If the evidence can responsibly answer the question, write the supported answer and set approved true with its source indexes. If it still cannot, keep approved false.')
+              : retrievalDiagnostic.focuschrist_deterministic_history_topic === true
+                ? 'This is the exact official Church History topic named by the visitor. Re-read its excerpt for the requested historical event or setting. If the excerpt supports a responsible answer, write it and set approved true with source_indexes [1]. Keep approved false only if that exact topic excerpt truly lacks the requested material.'
+                : 'If the evidence can responsibly answer the question, write the supported answer and set approved true with its source indexes. If it still cannot, keep approved false.')
             : needsDepthRepair
             ? `Rewrite it using at least ${requirements.minimumWords} words, ${requirements.minimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s).`
             : 'Keep the answer complete and concise.',
@@ -1918,6 +1951,7 @@ export {
   rankChurchSourceCandidates,
   relevantParagraphText,
   deterministicScriptureSource,
+  deterministicHistoryTopicSource,
   evidenceCacheKey,
   officialExcerptCacheVariant,
   retrieveIndexedChurchEvidence,

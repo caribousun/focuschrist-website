@@ -307,3 +307,11 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Explicit canonical scripture questions were still retrieving up to two indexed sources, and the chapter excerpt cache was keyed only by source URL, allowing an excerpt compacted for one wording to be reused for materially different wording.
 - Candidate .41 makes explicit scripture references deterministic end to end: one canonical official scripture source, a question-specific deterministic scripture cache key with warm reuse for the identical question, a deterministic-source receipt, and verifier instructions recognizing that the evidence is the exact canonical source named by the visitor.
 - The exact failing Alma 32 wording is now a permanent production regression. All source-integrity, official-domain, answer-depth, paraphrase, 700-character evidence, latency, request-budget, rate-limit, and fail-closed controls remain unchanged.
+
+
+### Executive AI named Church History closeout - candidate 2026-09-03.42
+
+- Production .41 verified that both permanent Pioneer irrigation and Alma 32 deterministic regressions pass. The remaining live failure moved to the Kirtland burst question: What occurred around the 1836 dedication of the Kirtland Temple?
+- The official Kirtland Temple Church History topic directly documents the March 27, 1836 dedication, the revealed dedicatory prayer, Hosanna Shout, hymn, and subsequent spiritual manifestations. The failure was therefore source-selection/verifier ambiguity, not missing evidence.
+- Candidate .42 makes explicit multi-token Church History topic names deterministic on the Church History page. The exact named history topic becomes the single indexed source, uses a question-specific cache key, receives question-focused cache packing, exposes a deterministic-history receipt, and gets a focused verifier/reconsideration instruction.
+- The exact Kirtland failure is now a permanent production regression. Pioneer .40 behavior, Scripture .41 behavior, official-domain enforcement, fail-closed verification, answer-depth, paraphrase, 700-character evidence, request-budget, latency, and rate-limit controls remain unchanged.
