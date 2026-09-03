@@ -263,3 +263,10 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Main Ask is now the universal superset for reviewed Pioneer and Church History knowledge. Reviewed matches remain profile-aware on their specialized pages, but any already-audited answer can resolve on Main Ask with zero provider dependency.
 - The post-reset production matrix proved Cloudflare verifier calls still fail with zero provider usage. This invalidates quota-reset waiting as the root fix. Production policy `.35` routes verification through the already-authorized Groq path using Compound Mini, while retaining strict evidence/source-index validation and zero Cloudflare verifier calls. The dormant Cloudflare adapter remains tested but is not the production verifier.
 - Production remains unverified until PR QA, deployment, the full live AI matrix, and the exact owner First Vision journey pass.
+
+
+### Ask final verifier hardening - candidate 2026-09-03.36
+
+- Production .35 proved the provider-route correction worked: Groq verification returned successful source-grounded answers for several doctrine, general, scripture, and Pioneer cases with zero Cloudflare calls. The remaining matrix failures were verifier-format failures and false-negative rejections, not source-index failure.
+- Candidate .36 separates research and verification models again: Compound Mini remains research-only; Groq GPT-OSS 20B is the verification model. The verifier parser now tolerates harmless wrapper text, one bounded JSON-format repair is permitted, faith answers receive a larger completion budget, and the existing evidence-reconsideration/depth-repair path now works on Groq primary as well as Cloudflare primary.
+- Quality gates remain fail-closed. Final source indexes, official-domain rules, substance requirements, overlap controls, and known-false-claim guards remain mandatory.
