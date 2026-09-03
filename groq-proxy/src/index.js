@@ -10,6 +10,8 @@ const VERIFIER_MODEL = 'openai/gpt-oss-20b';
 const CLOUDFLARE_VERIFIER_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 const CLOUDFLARE_FALLBACK_MODEL = '@cf/meta/llama-3.1-8b-instruct-fp8-fast';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
+const OPENAI_VERIFIER_MODEL = 'gpt-5.6-luna';
+const OPENAI_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
 const ALLOWED_ORIGINS = new Set([
   'https://focuschrist.com',
   'https://www.focuschrist.com',
@@ -21,8 +23,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.44';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.44';
+const SOURCE_POLICY_VERSION = '2026-09-03.45';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.45';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1004,6 +1006,50 @@ async function callGroq(apiKey, body, deadline, mayRetry = true) {
   return { response, data, callCount: 1 };
 }
 
+async function callOpenAIVerifier(apiKey, body, deadline) {
+  if (!apiKey) return { ...providerFailure(503, 'service_unavailable'), openaiCallCount: 0 };
+  const available = remainingBudget(deadline);
+  if (available < 250) return { ...providerFailure(504, 'timeout'), openaiCallCount: 0 };
+  const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+  const timeoutMs = Math.max(200, Math.min(PROVIDER_CALL_LIMIT_MS, available - 50));
+  const timer = controller ? setTimeout(() => controller.abort(), timeoutMs) : null;
+  let response;
+  try {
+    response = await fetch(OPENAI_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        model: OPENAI_VERIFIER_MODEL,
+        messages: body.messages,
+        reasoning_effort: 'low',
+        max_completion_tokens: Math.max(300, Number(body.max_tokens || 0)),
+        response_format: body.response_format || { type: 'json_object' },
+        store: false,
+      }),
+      signal: controller ? controller.signal : undefined,
+    });
+  } catch (error) {
+    return {
+      ...providerFailure(error && error.name === 'AbortError' ? 504 : 503,
+        error && error.name === 'AbortError' ? 'timeout' : 'service_unavailable'),
+      openaiCallCount: 1,
+    };
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+  let data = null;
+  try { data = await response.json(); } catch (_error) {}
+  return {
+    response,
+    data,
+    openaiCallCount: 1,
+    openaiRequestId: String(response.headers.get('x-request-id') || ''),
+  };
+}
+
 function verifierContent(result) {
   return result && result.data && result.data.choices && result.data.choices[0]
     ? String(result.data.choices[0].message && result.data.choices[0].message.content || '')
@@ -1145,8 +1191,12 @@ function verifierRouteDiagnostic(result) {
     || inferredCloudflareCalls);
   const groqCalls = Number(result && result.totalGroqVerifierCalls
     || (route === 'groq-fallback' ? result && result.callCount || 0 : 0));
+  const openaiCalls = Number(result && result.totalOpenAIVerifierCalls
+    || result && result.openaiCallCount
+    || (route === 'openai-fallback' ? 1 : 0));
   diagnostic.focuschrist_cloudflare_verifier_calls = Math.max(0, cloudflareCalls);
   diagnostic.focuschrist_groq_verifier_calls = Math.max(0, groqCalls);
+  diagnostic.focuschrist_openai_verifier_calls = Math.max(0, openaiCalls);
   diagnostic.focuschrist_verifier_primary_attempted = cloudflareCalls > 0;
   diagnostic.focuschrist_verifier_conservative_unmetered_neurons = Math.max(0, Number(
     result && (result.totalCloudflareUnmeteredNeurons
@@ -1199,6 +1249,10 @@ function accumulateVerifierCalls(target, ...results) {
     const diagnostic = verifierRouteDiagnostic(result);
     return sum + Number(diagnostic.focuschrist_groq_verifier_calls || 0);
   }, 0);
+  target.totalOpenAIVerifierCalls = results.reduce((sum, result) => {
+    const diagnostic = verifierRouteDiagnostic(result);
+    return sum + Number(diagnostic.focuschrist_openai_verifier_calls || 0);
+  }, 0);
   target.totalCloudflareEstimatedNeurons = results.reduce((sum, result) => sum + Number(
     result && (result.totalCloudflareEstimatedNeurons
       || result.cloudflareEstimatedNeurons) || 0,
@@ -1236,6 +1290,30 @@ async function callVerifier(env, body, deadline, options = {}) {
         verifierDurationMs: Date.now() - started,
       };
     }
+    const primaryStatus = Number(primary && primary.response && primary.response.status || 0);
+    const primaryFallbackReason = primary.formatContract || (primary.response && primary.response.ok)
+      ? 'format-contract'
+      : (primaryStatus === 429
+        ? 'primary-rate-limited'
+        : (primaryStatus === 504 ? 'primary-timeout' : 'primary-unavailable'));
+    if (env && env.OPENAI_API_KEY && remainingBudget(deadline) >= MIN_RETRY_BUDGET_MS) {
+      const openaiRaw = await callOpenAIVerifier(env.OPENAI_API_KEY, plainJsonBody, deadline);
+      const openaiFallback = validateVerifierResult(openaiRaw, requireSourceIndexes);
+      openaiFallback.accumulatedUsage = combinedProviderUsage(primaryRaw, openaiFallback);
+      return {
+        ...openaiFallback,
+        verifierRoute: 'openai-fallback',
+        fallbackReason: primaryFallbackReason,
+        primaryDiagnostic: providerDiagnostic(primary),
+        accumulatedUsage: combinedProviderUsage(primaryRaw, openaiFallback),
+        totalCloudflareVerifierCalls: 0,
+        totalCloudflareEstimatedNeurons: 0,
+        totalCloudflareUnmeteredNeurons: 0,
+        totalGroqVerifierCalls: Number(primaryRaw.callCount || primary.callCount || 1),
+        totalOpenAIVerifierCalls: Number(openaiRaw.openaiCallCount || 1),
+        verifierDurationMs: Date.now() - started,
+      };
+    }
     if (primary.formatContract && remainingBudget(deadline) >= MIN_RETRY_BUDGET_MS) {
       const repairPrompt = [
         String(plainJsonBody.messages && plainJsonBody.messages[0] && plainJsonBody.messages[0].content || ''),
@@ -1260,6 +1338,7 @@ async function callVerifier(env, body, deadline, options = {}) {
         totalCloudflareEstimatedNeurons: 0,
         totalCloudflareUnmeteredNeurons: 0,
         totalGroqVerifierCalls: Number(primaryRaw.callCount || 1) + Number(repair.callCount || 1),
+        totalOpenAIVerifierCalls: 0,
         verifierDurationMs: Date.now() - started,
       };
     }
@@ -1271,6 +1350,7 @@ async function callVerifier(env, body, deadline, options = {}) {
       totalCloudflareEstimatedNeurons: 0,
       totalCloudflareUnmeteredNeurons: 0,
       totalGroqVerifierCalls: Number(primary.callCount || 1),
+      totalOpenAIVerifierCalls: 0,
       verifierDurationMs: Date.now() - started,
     };
   }
@@ -1941,6 +2021,7 @@ export {
   answerMeetsRepairMargin,
   answerSubstanceRequirements,
   callGroq,
+  callOpenAIVerifier,
   callCloudflareVerifier,
   callVerifier,
   classifyResearchScope,

@@ -6,6 +6,7 @@ import worker, {
   answerMeetsSubstanceContract,
   answerSubstanceRequirements,
   callGroq,
+  callOpenAIVerifier,
   callCloudflareVerifier,
   callVerifier,
   classifyResearchScope,
@@ -99,6 +100,45 @@ assert(directGroqVerifierCalls === 1
   && directGroqVerifierResult.totalCloudflareVerifierCalls === 0
   && directGroqVerifierResult.totalGroqVerifierCalls === 1,
   'production verifier route must use exactly one Groq Compound Mini call and zero Cloudflare calls');
+
+const fetchBeforeOpenAIFallback = globalThis.fetch;
+let groqThenOpenAICalls = 0;
+let openAIBodyForFallback;
+globalThis.fetch = async (url, init) => {
+  groqThenOpenAICalls += 1;
+  if (String(url).includes('api.groq.com')) {
+    return new Response(JSON.stringify({ error: { code: 'service_unavailable' } }), {
+      status: 503, headers: { 'Content-Type': 'application/json' },
+    });
+  }
+  assert(String(url) === 'https://api.openai.com/v1/chat/completions',
+    'Groq provider failure must fall back only to the OpenAI verifier endpoint');
+  openAIBodyForFallback = JSON.parse(init.body);
+  assert(init.headers.Authorization === 'Bearer openai-test-key',
+    'OpenAI fallback must use the server-owned OpenAI secret');
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: '{"approved":true,"answer":"Supported answer.","source_indexes":[1]}' } }],
+    usage: { prompt_tokens: 180, completion_tokens: 28 },
+  }), { status: 200, headers: { 'Content-Type': 'application/json', 'x-request-id': 'req_focus_test' } });
+};
+const openAIFallbackResult = await callVerifier({
+  GROQ_KEY_NEW: 'groq-test-key',
+  OPENAI_API_KEY: 'openai-test-key',
+  VERIFIER_PROVIDER: 'groq',
+}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
+globalThis.fetch = fetchBeforeOpenAIFallback;
+assert(groqThenOpenAICalls === 2
+  && openAIFallbackResult.response.ok
+  && openAIFallbackResult.verifierRoute === 'openai-fallback'
+  && openAIFallbackResult.fallbackReason === 'primary-unavailable'
+  && openAIFallbackResult.totalGroqVerifierCalls === 1
+  && openAIFallbackResult.totalOpenAIVerifierCalls === 1
+  && openAIFallbackResult.totalCloudflareVerifierCalls === 0
+  && openAIBodyForFallback.model === 'gpt-5.6-luna'
+  && openAIBodyForFallback.reasoning_effort === 'low'
+  && openAIBodyForFallback.response_format.type === 'json_object'
+  && openAIBodyForFallback.store === false,
+  'a true Groq provider failure must use exactly one GPT-5.6 Luna fallback call with the same verifier contract');
 
 const verifierFetchBeforeTests = globalThis.fetch;
 let primaryVerifierGroqCalls = 0;
@@ -694,7 +734,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.44',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.45',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
