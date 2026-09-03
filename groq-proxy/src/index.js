@@ -23,8 +23,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.48';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.48';
+const SOURCE_POLICY_VERSION = '2026-09-03.49';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.49';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1873,6 +1873,53 @@ export default {
           { ...(sanitized.scope.lowRiskDiagnostic || {}), ...retrievalDiagnostic },
           sanitized.scope,
         ), 200, origin);
+      }
+
+      // Exact reviewed recoveries do not need a stochastic model verdict once the
+      // Worker has already retrieved and validated their pinned official source.
+      // This keeps these narrow owner journeys available during provider faults or
+      // rate pressure without weakening the fail-closed contract for any other ask.
+      const reviewedDeterministic = retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
+        ? reviewedDeterministicEvidenceRecovery(sanitized.scope.retrievalQuestion, evidence)
+        : null;
+      if (reviewedDeterministic) {
+        const recoveryIndexes = reviewedDeterministic.sourceIndexes
+          .filter((sourceIndex) => Number.isInteger(sourceIndex) && sourceIndex >= 1 && sourceIndex <= evidence.length);
+        const recoveryEvidence = recoveryIndexes.map((sourceIndex) => evidence[sourceIndex - 1]);
+        const recoveryAnswer = guardVerifiedAnswer(
+          reviewedDeterministic.answer,
+          recoveryEvidence,
+          sanitized.scope,
+          recoveryEvidence.length > 0,
+        );
+        if (recoveryAnswer !== SOURCE_INTEGRITY_FALLBACK && recoveryEvidence.length > 0) {
+          return jsonResponse({
+            id: 'focuschrist-reviewed-deterministic-evidence',
+            choices: [{
+              index: 0,
+              message: { role: 'assistant', content: recoveryAnswer },
+              finish_reason: 'stop',
+            }],
+            focuschrist_sources: recoveryEvidence.map((source) => ({
+              text: source.title || 'Source',
+              url: source.url,
+            })),
+            focuschrist_source_integrity_verified: true,
+            focuschrist_source_policy: SOURCE_POLICY_VERSION,
+            focuschrist_gateway_mode: 'retrieval-researched-and-verified',
+            focuschrist_resolved_profile: sanitized.scope.faith ? 'faith-study' : (sanitized.scope.profile || 'general-knowledge'),
+            focuschrist_classification_mode: sanitized.scope.classificationMode || 'request-scope',
+            focuschrist_answer_word_count: recoveryAnswer.split(/\s+/).filter(Boolean).length,
+            focuschrist_evidence_relevance: evidenceRelevanceReceipt(sanitized.scope.retrievalQuestion, recoveryEvidence),
+            focuschrist_verifier_route: 'reviewed-deterministic',
+            focuschrist_cloudflare_verifier_calls: 0,
+            focuschrist_groq_verifier_calls: 0,
+            focuschrist_openai_verifier_calls: 0,
+            focuschrist_verifier_conservative_unmetered_neurons: 0,
+            focuschrist_reviewed_deterministic_recovery: reviewedDeterministic.recoveryId,
+            ...retrievalDiagnostic,
+          }, 200, origin);
+        }
       }
 
       const verifierPrompt = sanitized.scope.selectedPioneer ? [
