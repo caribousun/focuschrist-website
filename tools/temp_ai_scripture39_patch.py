@@ -109,6 +109,120 @@ policy = Path('groq-proxy/source-policy.test.js')
 pt = policy.read_text(encoding='utf-8').replace("focuschrist_source_policy === '2026-09-03.38'", "focuschrist_source_policy === '2026-09-03.39'")
 policy.write_text(pt, encoding='utf-8')
 
+index_test = Path('groq-proxy/church-source-index.test.js')
+it = index_test.read_text(encoding='utf-8')
+it = it.replace("""const cachedPioneerParagraphs = [
+  'Pioneer families planned water channels as the settlement took root in the valley.',
+];
+const cachedPioneerResponse = () => new Response(JSON.stringify({ paragraphs: cachedPioneerParagraphs }), {
+  headers: { 'Content-Type': 'application/json' },
+});
+""", """const cachedPioneerParagraphs = [
+  'Pioneer families planned water channels as the settlement took root in the valley.',
+];
+const cachedRelevantPioneerParagraphs = [
+  'Cooperative irrigation supported settlement life as pioneer families planned shared water channels in the valley.',
+];
+const cachedPioneerResponse = (paragraphs = cachedPioneerParagraphs) => new Response(JSON.stringify({ paragraphs }), {
+  headers: { 'Content-Type': 'application/json' },
+});
+""", 1)
+it = it.replace("""async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false }) {""", """async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false, cacheParagraphs = cachedPioneerParagraphs }) {""", 1)
+it = it.replace("""        : cachedPioneerResponse()),""", """        : cachedPioneerResponse(cacheParagraphs)),""", 1)
+old_positive = """try {
+  const positive = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+    approveSecond: true,
+  });
+  assert(positive.verifierCalls === 2
+    && positive.groqCalls === 0
+    && positive.officialFetchCalls === 0
+    && positive.payload.focuschrist_source_integrity_verified === true
+    && positive.payload.focuschrist_cloudflare_verifier_calls === 2
+    && positive.payload.focuschrist_groq_verifier_calls === 0
+    && positive.payload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six'))
+    && positive.payload.focuschrist_evidence_relevance.length > 0
+    && positive.payload.focuschrist_evidence_relevance.every((entry) => entry.overlap_count < 2)
+    && REQUEST_BUDGET_MS === 22000,
+  'cached sub-threshold chapter 26 evidence must alone enable one bounded Cloudflare reconsideration inside the unchanged request budget');
+
+  const askNegative = await runPioneerReconsiderationCase({
+"""
+new_positive = """try {
+  const subThreshold = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+  });
+  assert(subThreshold.verifierCalls === 0
+    && subThreshold.groqCalls === 0
+    && subThreshold.officialFetchCalls >= 1
+    && subThreshold.payload.focuschrist_source_integrity_verified !== true
+    && subThreshold.payload.focuschrist_gateway_mode === 'research-unavailable',
+  'cached evidence below the two-unique-concept relevance floor must be rejected before verification');
+
+  const positive = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+    approveSecond: true,
+    cacheParagraphs: cachedRelevantPioneerParagraphs,
+  });
+  assert(positive.verifierCalls === 2
+    && positive.groqCalls === 0
+    && positive.officialFetchCalls === 0
+    && positive.payload.focuschrist_source_integrity_verified === true
+    && positive.payload.focuschrist_cloudflare_verifier_calls === 2
+    && positive.payload.focuschrist_groq_verifier_calls === 0
+    && positive.payload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six'))
+    && positive.payload.focuschrist_evidence_relevance.length > 0
+    && positive.payload.focuschrist_evidence_relevance.every((entry) => entry.overlap_count >= 2)
+    && REQUEST_BUDGET_MS === 22000,
+  'cached relevant chapter 26 evidence must enable one bounded reconsideration inside the unchanged request budget');
+
+  const askNegative = await runPioneerReconsiderationCase({
+"""
+if old_positive not in it:
+    raise SystemExit('Pioneer reconsideration positive test anchor missing')
+it = it.replace(old_positive, new_positive, 1)
+it = it.replace("""  assert(askNegative.verifierCalls === 1
+    && askNegative.groqCalls === 0
+    && askNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && askNegative.payload.focuschrist_source_integrity_verified !== true,
+  'the same sub-threshold irrigation wording on general Ask must not receive the Pioneer reconsideration');
+""", """  assert(askNegative.verifierCalls === 0
+    && askNegative.groqCalls === 0
+    && askNegative.officialFetchCalls >= 1
+    && askNegative.payload.focuschrist_source_integrity_verified !== true,
+  'sub-threshold cached irrigation evidence on general Ask must be rejected before verification');
+""", 1)
+it = it.replace("""  assert(unrelatedNegative.verifierCalls === 1
+    && unrelatedNegative.groqCalls === 0
+    && unrelatedNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && unrelatedNegative.payload.focuschrist_source_integrity_verified !== true,
+  'unrelated Pioneer cooperation must not receive the irrigation reconsideration');
+""", """  assert(unrelatedNegative.verifierCalls === 0
+    && unrelatedNegative.groqCalls === 0
+    && unrelatedNegative.officialFetchCalls >= 1
+    && unrelatedNegative.payload.focuschrist_source_integrity_verified !== true,
+  'unrelated cached Pioneer evidence must be rejected before verification');
+""", 1)
+it = it.replace("""  assert(missingPinnedNegative.verifierCalls === 1
+    && missingPinnedNegative.groqCalls === 0
+    && missingPinnedNegative.officialFetchCalls >= 1
+    && missingPinnedNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && missingPinnedNegative.payload.focuschrist_source_integrity_verified !== true,
+  'Pioneer irrigation without the exact chapter 26 evidence must not receive the pinned-source reconsideration');
+""", """  assert(missingPinnedNegative.verifierCalls === 0
+    && missingPinnedNegative.groqCalls === 0
+    && missingPinnedNegative.officialFetchCalls >= 1
+    && missingPinnedNegative.payload.focuschrist_source_integrity_verified !== true,
+  'Pioneer irrigation without relevant cached chapter 26 evidence must fail before verification');
+""", 1)
+index_test.write_text(it, encoding='utf-8')
+
 memory = Path('MEMORY.md')
 mem = memory.read_text(encoding='utf-8')
 note = "\n\n### Ask cached relevance and deterministic scripture context - candidate 2026-09-03.39\n\n- Production .38 confirmed the new unique-relevance rule on fresh official fetches, but live testing exposed that cached excerpts still bypassed that rule. The same run also showed a clear Alma 32 question can be over-rejected when retrieval returns only the two narrowest lexical matches rather than the surrounding verses that explain how faith develops.\n- Candidate .39 applies the same two-unique-concept relevance rule to both cache hits and fresh official fetches. Deterministic scripture routes now include a small bounded window of adjacent paragraphs around the strongest matches so the verifier receives the surrounding scriptural explanation rather than isolated verses. The canonical 700-character evidence cap remains unchanged.\n- Verification remains fail-closed and official-only for faith questions. This change improves evidence quality and cache consistency rather than relaxing approval standards.\n"
