@@ -9,7 +9,7 @@
 (function () {
     'use strict';
 
-    const POLICY_VERSION = '2026-09-03.16';
+    const POLICY_VERSION = '2026-09-03.17';
 
     function officialHistorySource(label, url, note) {
         return {
@@ -24,7 +24,7 @@
     function churchHistoryCard(config) {
         return {
             id: config.id,
-            profiles: ['church-history'],
+            profiles: ['ask', 'church-history'],
             priority: 175,
             reviewedOn: '2026-09-01',
             integrityKey: config.id + '-v1',
@@ -543,7 +543,7 @@
         },
         {
             id: 'pioneer-handcart-travel-1856',
-            profiles: ['pioneers', 'church-history'],
+            profiles: ['ask', 'pioneers', 'church-history'],
             priority: 140,
             reviewedOn: '2026-09-01',
             integrityKey: 'pioneer-handcart-travel-1856-v1',
@@ -588,7 +588,7 @@
         },
         {
             id: 'pioneer-nauvoo-exodus-1846',
-            profiles: ['pioneers', 'church-history'],
+            profiles: ['ask', 'pioneers', 'church-history'],
             priority: 130,
             reviewedOn: '2026-09-01',
             integrityKey: 'pioneer-nauvoo-exodus-1846-v1',
@@ -622,7 +622,7 @@
         },
         {
             id: 'church-first-vision-1820',
-            profiles: ['church-history'],
+            profiles: ['ask', 'church-history'],
             priority: 120,
             reviewedOn: '2026-09-01',
             integrityKey: 'church-first-vision-1820-v1',
@@ -638,6 +638,7 @@
                 'When was the First Vision?',
                 'Where did the First Vision happen?',
                 'Tell me about the First Vision',
+                'Tell me about First Vision',
                 'What do the different First Vision accounts say, and how does the Church explain them?'
             ],
             negativeTests: [
@@ -834,7 +835,7 @@
         }),
         {
             id: 'church-organization-1830',
-            profiles: ['church-history'],
+            profiles: ['ask', 'church-history'],
             priority: 115,
             reviewedOn: '2026-09-01',
             integrityKey: 'church-organization-1830-v1',

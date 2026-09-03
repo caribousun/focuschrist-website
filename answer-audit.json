@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "reviewed_on": "2026-09-01",
+  "reviewed_on": "2026-09-03",
   "review_standard": "L-044 exact-claim review against authoritative domain-appropriate primary sources; official Gospel Library and Church History sources govern faith and history claims",
   "reviewed_answers": [
     {
@@ -112,21 +112,21 @@
     },
     {
       "id": "pioneer-handcart-travel-1856",
-      "entry_sha256": "b906904f161f7afce40df4021e4a5a1dc8729abf9834ab34876ec00b9ede5857",
+      "entry_sha256": "5ebe443609fe1f0961b1e0922ea40137eef67fcc22e897fc856045dda8f2385c",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng"
       ]
     },
     {
       "id": "pioneer-nauvoo-exodus-1846",
-      "entry_sha256": "3de2cfbeded02e962c216c3654ea355f87cb87e950ebd78b84a497f481627228",
+      "entry_sha256": "2400c0d9a9926a683cc61ba8c98dff42a34c7282d4706983914d719c4c70c494",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/departure-from-nauvoo?lang=eng"
       ]
     },
     {
       "id": "church-first-vision-1820",
-      "entry_sha256": "0262054bd1a01cb49b9607991d9f83792daf7e9bfb20c2a01510696e3f5b8c65",
+      "entry_sha256": "74735b6acc92070439035d4d4ce9b0f5c9f05716ecd7bd71e32925f56f7e1e09",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-jr?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng"
@@ -134,7 +134,7 @@
     },
     {
       "id": "church-book-of-mormon-translation-seer-stones",
-      "entry_sha256": "e0e261d66b36be447e7f13f611389af568db5582f5395a38bbb91a35f29a63ce",
+      "entry_sha256": "e5a8ac7bbda525dd1fd4fcfd94f623be054975fb6cb1b952ac3525d7705adcd5",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/book-of-mormon-translation?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/seer-stones?lang=eng"
@@ -142,7 +142,7 @@
     },
     {
       "id": "church-priesthood-restoration",
-      "entry_sha256": "2972fe5d70d3f4ace7e0f46f77e73ff74629bdb0c2763a1f35c0f96639eea0b9",
+      "entry_sha256": "70a47b57af54d04035f4b42220b24a64e0be44be0b376a3c50026e5c6b5f8da2",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-aaronic-priesthood?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-melchizedek-priesthood?lang=eng"
@@ -150,14 +150,14 @@
     },
     {
       "id": "church-kirtland-safety-society",
-      "entry_sha256": "9de3cb6c18389db231d81c8c32d81ddcb64a6d320254aca7a01a9273482d56ab",
+      "entry_sha256": "ce2968c2985e857d22a9646057826e53d88b800c023d8af351b850ae8ca6000c",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng"
       ]
     },
     {
       "id": "church-joseph-smith-plural-marriage",
-      "entry_sha256": "fae3d47b2241d08de1334833538dcdf8a33ca2cf1a8892721af86ed8d798d8c1",
+      "entry_sha256": "3cba2e8fddb2f4e257bffde74ab8714af8218faa95c635fbf6779ce619905619",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-and-plural-marriage?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/plural-marriage-in-the-church-of-jesus-christ-of-latter-day-saints?lang=eng"
@@ -165,21 +165,21 @@
     },
     {
       "id": "church-mountain-meadows-massacre",
-      "entry_sha256": "9cb81e5fb4a027d71e42d8be0e126d3ce50c482100fd17dc44f934e88674c392",
+      "entry_sha256": "6a992ef110b7f18d70263a7feb2fedcc3a7c99da7ab34cc58914e1e06571c6e0",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/mountain-meadows-massacre?lang=eng"
       ]
     },
     {
       "id": "church-word-of-wisdom-development",
-      "entry_sha256": "550ff8cbc24bf880f57eb75802328b238c90b720bdaa28bafbb284596b8341a5",
+      "entry_sha256": "6457dff6bf63af450729b7415d8bac075d0f516f74fe0e5d5e74a2dd9977ad13",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/word-of-wisdom-dc-89?lang=eng"
       ]
     },
     {
       "id": "church-global-growth-twentieth-century",
-      "entry_sha256": "31f6fab8996009f69efc60f309fbb9f4fd042b3e3059ec90bf2e8f3a28e9de87",
+      "entry_sha256": "037967d08d945ee8e379914eb23502a5c92eda4fbf137a1f428bcdb95a06c245",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v3?lang=eng",
@@ -188,14 +188,14 @@
     },
     {
       "id": "church-womens-history-study",
-      "entry_sha256": "9a868051d372516a0a176f2a14b471d72c57e406cf75eed01f13d22a2e861e6c",
+      "entry_sha256": "27f4ceff7c7bda0c4196b3e636c6326a9cdd281ace9f8a9b20d609cd39484a0b",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history/womens-history?lang=eng"
       ]
     },
     {
       "id": "church-organization-1830",
-      "entry_sha256": "5e1307014006daa827d4bfe5b7f8a46102fdf139a246bc8128d1b34e34eefa04",
+      "entry_sha256": "0d431ee95feda506ffacd9a2eda6a959d1780848b498f60137733042bdc3d27f",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/founding-meeting-of-the-church-of-christ?lang=eng"
       ]
