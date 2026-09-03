@@ -1,5 +1,6 @@
 import worker, {
   classifyResearchScope,
+  answerMeetsRepairMargin,
   compactParagraphPack,
   deterministicHistoryTopicSource,
   deterministicScriptureSource,
@@ -20,6 +21,14 @@ import worker, {
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
+
+const boundaryFaithAnswer = [
+  'Hyrum Smith held an important leadership responsibility in the early Church and assisted senior Church leadership during a demanding period of growth and change.',
+  'He also carried other significant responsibilities that placed him near the center of Church administration and service during the Nauvoo period.',
+  'These duties show that his role involved substantial leadership responsibility within the developing Church organization.'
+].join(' ');
+assert(!answerMeetsRepairMargin(boundaryFaithAnswer, { faith: true }),
+  'faith repair margin must reject a three-sentence answer that sits near the publication boundary');
 
 const alma = deterministicScriptureSource('What does Alma 32:21 teach about faith?');
 assert(alma && alma.url === 'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?id=p21&lang=eng',

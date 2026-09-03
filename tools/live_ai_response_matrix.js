@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.43';
+const POLICY_VERSION = '2026-09-03.44';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -349,6 +349,20 @@ if (process.argv.includes('--definition-check')) {
     assert(followUp.deterministicHistoryTopic === true && followUp.indexSources === 1 && followUp.officialFetchCalls <= 1,
         'Hyrum contextual follow-up did not preserve single-source deterministic official history retrieval');
     await validateActualOfficialEvidence(followUpTest, followUp);
+    const repeatedFollowUps = [];
+    for (let repetition = 1; repetition <= 3; repetition += 1) {
+        await new Promise((resolve) => setTimeout(resolve, INTER_REQUEST_DELAY_MS));
+        const repeated = await submit({ ...followUpTest, id: `follow-up-context-repeat-${repetition}` }, [
+            { role: 'user', content: hyrumSeedTest.question },
+            { role: 'assistant', content: initial.answer },
+            { role: 'user', content: followUpTest.question },
+        ]);
+        validate(followUpTest, repeated);
+        assert(repeated.deterministicHistoryTopic === true && repeated.indexSources === 1 && repeated.officialFetchCalls <= 1,
+            `Hyrum repeated contextual follow-up ${repetition} lost deterministic official-history retrieval`);
+        await validateActualOfficialEvidence(followUpTest, repeated);
+        repeatedFollowUps.push(repeated);
+    }
     const resetTest = specimen('fresh-reset', 'ask', 'general-knowledge', 'Why do seasons change on Earth?', 'general-knowledge', false, 'seasons');
     const reset = await submit(resetTest); validate(resetTest, reset);
 
@@ -361,7 +375,7 @@ if (process.argv.includes('--definition-check')) {
     assert(warmSecond.elapsedMs <= warmFirst.elapsedMs + 3000, 'warm retrieval regressed more than three seconds');
 
     const allMeasured = [...results, ...regressionResults, ...burstResults, ...blockedResults, ...respectfulResults,
-        invalidCorinthians, invalidAlma, initial, followUp, reset, warmFirst, warmSecond];
+        invalidCorinthians, invalidAlma, initial, followUp, ...repeatedFollowUps, reset, warmFirst, warmSecond];
     const times = allMeasured.map((result) => result.elapsedMs);
     const indexed = allMeasured.filter((result) => result.retrievalRoute === 'church-source-index');
     const indexedNeuronCosts = indexed.map((result) =>

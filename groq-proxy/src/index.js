@@ -21,8 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.43';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.43';
+const SOURCE_POLICY_VERSION = '2026-09-03.44';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.44';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -868,6 +868,17 @@ function answerMeetsSubstanceContract(answer, scope) {
   return words >= requirements.minimumWords
     && sentences >= requirements.minimumSentences
     && paragraphs >= requirements.minimumParagraphs;
+}
+
+function answerMeetsRepairMargin(answer, scope) {
+  const text = String(answer || '').replace(/\s+/g, ' ').trim();
+  const original = String(answer || '').trim();
+  const words = text ? text.split(' ').filter(Boolean).length : 0;
+  const sentences = countCompleteSentences(text);
+  const paragraphs = original ? original.split(/\n\s*\n/).filter((value) => value.trim()).length : 0;
+  if (scope && scope.selectedPioneer) return words >= 120 && sentences >= 4 && paragraphs >= 2;
+  if (scope && scope.faith) return words >= 95 && sentences >= 4 && paragraphs >= 1;
+  return words >= 55 && sentences >= 3 && paragraphs >= 1;
 }
 
 function countCompleteSentences(answer) {
@@ -1777,7 +1788,10 @@ export default {
         : [];
       const selectedEvidenceBeforeRepair = indexes.map((index) => evidence[index - 1]);
       const needsDepthRepair = Boolean(verdict && verdict.approved === true && indexes.length
-        && !answerMeetsSubstanceContract(verdict.answer, sanitized.scope));
+        && (!answerMeetsSubstanceContract(verdict.answer, sanitized.scope)
+          || ((retrievalDiagnostic.focuschrist_deterministic_history_topic === true
+            || sanitized.scope.classificationMode === 'conversation-context')
+            && !answerMeetsRepairMargin(verdict.answer, sanitized.scope))));
       const needsParaphraseRepair = Boolean(verdict && verdict.approved === true && indexes.length
         && hasExcessiveSourceOverlap(verdict.answer, selectedEvidenceBeforeRepair));
       const indexedEvidenceRelevance = evidenceRelevanceReceipt(sanitized.scope.retrievalQuestion, evidence);
@@ -1811,7 +1825,7 @@ export default {
                 ? 'This is the exact official Church History topic named by the visitor or resolved from bounded conversation context. Re-read its excerpt for the requested identity, leadership role, event, or setting. If the excerpt supports a responsible answer, write a complete answer of roughly 100 to 170 words with at least four sentences and set approved true with source_indexes [1]. Keep approved false only if that exact topic excerpt truly lacks the requested material.'
                 : 'If the evidence can responsibly answer the question, write the supported answer and set approved true with its source indexes. If it still cannot, keep approved false.')
             : needsDepthRepair
-            ? `Rewrite it using at least ${repairMinimumWords} words, ${repairMinimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s). The publication gate is lower, but this repair target deliberately includes safety margin. Do not stop at the minimum.`
+            ? `Rewrite it using at least ${repairMinimumWords} words, ${repairMinimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s). The publication gate is lower, but this repair target deliberately includes safety margin. Do not stop at the minimum. For a conversation-context or deterministic Church History answer, treat this margin as mandatory for the repaired draft.`
             : 'Keep the answer complete and concise.',
           needsParaphraseRepair
             ? 'Rewrite the answer in genuinely independent language. Do not copy a long passage or reconstruct the source in ordered fragments. Preserve supported facts, but change the sentence structure and wording throughout.'
@@ -1924,6 +1938,7 @@ export {
   REQUEST_BUDGET_MS,
   SOURCE_INTEGRITY_FALLBACK,
   answerMeetsSubstanceContract,
+  answerMeetsRepairMargin,
   answerSubstanceRequirements,
   callGroq,
   callCloudflareVerifier,
