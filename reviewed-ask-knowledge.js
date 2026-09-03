@@ -9,7 +9,7 @@
 (function () {
     'use strict';
 
-    const POLICY_VERSION = '2026-09-03.17';
+    const POLICY_VERSION = '2026-09-03.18';
 
     function officialHistorySource(label, url, note) {
         return {
@@ -618,6 +618,83 @@
                     tier: 'Official Church History',
                     note: 'Official history of the 1846 departure from Nauvoo.'
                 }
+            ]
+        },
+        {
+            id: 'church-book-of-mormon-publication-1830',
+            profiles: ['ask', 'church-history'],
+            priority: 170,
+            reviewedOn: '2026-09-03',
+            integrityKey: 'church-book-of-mormon-publication-1830-v1',
+            contextLabel: 'Book of Mormon first publication',
+            followup: {
+                anchor: 'Book of Mormon publication 1830 Grandin Palmyra',
+                cues: [
+                    'who', 'where', 'when', 'date', 'year', 'publish', 'published', 'publisher', 'publication',
+                    'print', 'printed', 'printer', 'grandin', 'palmyra', 'sale', 'available', 'copies', 'cost',
+                    'finance', 'financed', 'martin harris'
+                ],
+                ellipsis: ['Who published it?', 'Where was it printed?', 'Who printed it?', 'When exactly?'],
+                block: ['musical', 'broadway', 'movie', 'film', 'soundtrack'],
+                variants: [
+                    {
+                        id: 'printer-publisher-location',
+                        cues: ['who', 'where', 'publish', 'published', 'publisher', 'print', 'printed', 'printer', 'grandin', 'palmyra'],
+                        intent: {
+                            all: [
+                                ['publish', 'published', 'publisher', 'print', 'printed', 'printer'],
+                                ['who', 'where', 'published', 'printed', 'publisher', 'printer', 'grandin', 'palmyra']
+                            ],
+                            none: ['musical', 'broadway', 'movie', 'film', 'soundtrack']
+                        },
+                        answer: 'The first edition of the Book of Mormon was printed and published through the shop of Egbert B. Grandin in Palmyra, New York. Joseph Smith arranged with Grandin to produce 5,000 copies, and Martin Harris financed the $3,000 printing contract by mortgaging part of his farm. Printing began in 1829, and the first completed copies were offered for sale at Grandin\'s bookstore in Palmyra on March 26, 1830. So for the first edition, the printer and publisher was Egbert B. Grandin, and the place of publication was Palmyra, New York.',
+                        sources: [
+                            officialHistorySource('Grandin Printshop: Book of Mormon Publication Site', 'https://www.churchofjesuschrist.org/learn/locations/grandin-printshop?lang=eng', 'Official historic-site history of the first Book of Mormon printing and sale in Palmyra.'),
+                            officialHistorySource('Historical Summary - Joseph Smith', 'https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/historical-summary?lang=eng', 'Official historical timeline recording the March 26, 1830 public availability at Grandin\'s bookstore.')
+                        ]
+                    },
+                    {
+                        id: 'publication-date',
+                        cues: ['when', 'date', 'year', 'sale', 'available'],
+                        intent: {
+                            all: [['when', 'date', 'year', 'sale', 'available', 'published', 'publication']]
+                        },
+                        answer: 'The first printed copies of the Book of Mormon became available to the public on March 26, 1830, at Egbert B. Grandin\'s bookstore in Palmyra, New York. Printing had begun in 1829, but March 26, 1830 is the date official Church historical sources give for the book becoming available for sale. The first edition consisted of 5,000 copies. Martin Harris helped finance the printing agreement, and Grandin\'s Palmyra shop carried out the printing and publication work.',
+                        sources: [
+                            officialHistorySource('Grandin Printshop: Book of Mormon Publication Site', 'https://www.churchofjesuschrist.org/learn/locations/grandin-printshop?lang=eng', 'Official historic-site history identifying March 26, 1830 as the first sale date.'),
+                            officialHistorySource('Historical Summary - Joseph Smith', 'https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/historical-summary?lang=eng', 'Official historical timeline recording the March 26, 1830 public availability.')
+                        ]
+                    }
+                ]
+            },
+            match: {
+                exact: [
+                    'what year did the book of mormon come out',
+                    'What year did the Book of Mormon come out?',
+                    'When was the Book of Mormon first published?',
+                    'What year was the Book of Mormon published?'
+                ],
+                all: [
+                    ['book of mormon'],
+                    ['when', 'year', 'date', 'come out', 'came out', 'published', 'publication', 'released', 'first edition', 'available', 'sale']
+                ],
+                none: ['musical', 'broadway', 'movie', 'film', 'soundtrack']
+            },
+            positiveTests: [
+                'what year did the book of mormon come out',
+                'What year did the Book of Mormon come out?',
+                'When was the Book of Mormon first published?',
+                'What year was the Book of Mormon published?'
+            ],
+            negativeTests: [
+                'What year did The Book of Mormon musical come out?',
+                'When did the Book of Mormon Broadway soundtrack come out?',
+                'When was the Book of Mormon movie released?'
+            ],
+            answer: 'The first edition of the Book of Mormon became available to the public on March 26, 1830, in Palmyra, New York. Egbert B. Grandin and his printing shop produced the first edition after Joseph Smith arranged for 5,000 copies to be printed. Martin Harris helped finance the $3,000 printing contract by mortgaging part of his farm. Official Church historical sources identify Grandin\'s bookstore in Palmyra as the place where the first completed copies went on sale. So the concise answer is 1830, with March 26, 1830 as the first public sale date.',
+            sources: [
+                officialHistorySource('Grandin Printshop: Book of Mormon Publication Site', 'https://www.churchofjesuschrist.org/learn/locations/grandin-printshop?lang=eng', 'Official historic-site history of the first Book of Mormon printing and public sale.'),
+                officialHistorySource('Historical Summary - Joseph Smith', 'https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/historical-summary?lang=eng', 'Official historical timeline recording the March 26, 1830 public availability at Grandin\'s bookstore.')
             ]
         },
         {

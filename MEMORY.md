@@ -347,3 +347,12 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Production .45 proved the OPENAI_API_KEY survives Worker deployment and that GPT-5.6 Luna successfully verifies official-source answers when Groq is unavailable. It also exposed false-negative Luna rejections on strongly relevant Church History and Pioneer evidence.
 - Candidate .46 extends the existing bounded evidence-reconsideration/depth-repair mechanism to an OpenAI failover verdict. After one failed Groq primary and one Luna fallback, a third and final provider call may be made only when the server already has strongly relevant indexed evidence or the Luna answer needs the existing depth/paraphrase repair. That repair call is forced directly to Luna and never returns to Groq.
 - Normal successful requests remain one verifier call. A simple provider failover remains two calls. Three calls are permitted only for failed-primary plus bounded Luna repair, under the same 22-second request deadline and $5 OpenAI project hard limit. Official-source restrictions, source indexes, fail-closed publication, deterministic routing, and all answer guards remain unchanged.
+
+
+### Final owner journey hardening - candidate 2026-09-03.47
+
+- Production .46 passed the doctrine, Scripture, Pioneer, Church History, regression, and burst strata but exposed one intermittent warm-cache Enos 1 false rejection and reproduced the owner's exact Book of Mormon publication question plus follow-up failure.
+- Candidate .47 adds an audited reviewed-local Book of Mormon first-publication entry for Main Ask and Church History, including contextual follow-ups for publisher, printer, location, and publication date. The exact owner wording `what year did the book of mormon come out` is a permanent local regression.
+- Candidate .47 also adds a narrowly scoped reviewed deterministic recovery for the exact Enos 1 prayer-and-forgiveness intent. It can activate only after exact official Enos 1 evidence has already been retrieved and both prayer and forgiveness language are present in that evidence. It does not broaden source authority or bypass evidence retrieval.
+- The production-local gate is updated to the actual reviewed registry release and now executes the exact owner Book of Mormon question and follow-up from the production-served registry bytes.
+- Production remains unverified until PR CI, Worker deployment, the full live matrix, and the exact owner production journey all pass.

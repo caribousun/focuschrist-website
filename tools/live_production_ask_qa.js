@@ -192,7 +192,7 @@ function requireSubstantive(match, label, expected) {
     const live = await waitForExactDeployment();
     console.log('Exact production dependency graph verified: ' + ASSETS.length + ' assets / ' + CANONICAL_TARGETS.length + ' canonical cache keys');
 
-    assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260903-16')
+    assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260903-18')
         && live['ask.html'].includes('ask-experience.js?v=20260903-2'),
         'production Ask HTML does not load the .15 controllers');
     assert(live['pioneers.html'].includes('pioneer-experience.js?v=20260903-16'),
@@ -205,8 +205,34 @@ function requireSubstantive(match, label, expected) {
         filename: ORIGIN + '/reviewed-ask-knowledge.js'
     });
     const registry = window.focusChristReviewedKnowledge;
-    assert(registry && registry.policyVersion === '2026-09-03.16',
-        'production reviewed registry policy is not .15');
+    assert(registry && registry.policyVersion === '2026-09-03.18',
+        'production reviewed registry policy is not .18');
+
+    const ownerBookQuestion = 'what year did the book of mormon come out';
+    const ownerBookMain = requireSubstantive(
+        registry.match(ownerBookQuestion, { profile: 'ask' }),
+        'Owner Book of Mormon publication question',
+        'March 26, 1830'
+    );
+    assert(ownerBookMain.id === 'church-book-of-mormon-publication-1830'
+        && ownerBookMain.sources.every((source) => source.url.includes('churchofjesuschrist.org')),
+        'production owner Book of Mormon question did not use the audited local official-source entry');
+    const ownerBookFollow = registry.resolveFollowup('who published it and where was it printed?', {
+        profile: 'ask',
+        history: [
+            { role: 'user', content: ownerBookQuestion, contextEntryId: ownerBookMain.id },
+            { role: 'assistant', content: ownerBookMain.answer }
+        ]
+    });
+    assert(ownerBookFollow.resolved === true && ownerBookFollow.entryId === ownerBookMain.id,
+        'production owner Book of Mormon follow-up did not retain local context');
+    const ownerBookFollowAnswer = requireSubstantive(
+        registry.match(ownerBookFollow.query, { profile: 'ask', contextVariant: ownerBookFollow.contextVariant }),
+        'Owner Book of Mormon publication follow-up',
+        'Egbert B. Grandin'
+    );
+    assert(ownerBookFollowAnswer.answer.includes('Palmyra, New York'),
+        'production owner Book of Mormon follow-up omitted the printing location');
 
     const lincolnQuestion = 'What date did Abraham Lincoln die?';
     const lincolnMain = requireSubstantive(
