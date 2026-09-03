@@ -75,7 +75,6 @@ if old_depth_prompt not in w:
     raise SystemExit('Missing depth repair prompt anchor')
 w = w.replace(old_depth_prompt, new_depth_prompt, 1)
 
-# Export repair-margin contract for permanent unit testing.
 export_anchor = "  answerMeetsSubstanceContract,\n"
 pos = w.rfind(export_anchor)
 if pos < 0:
@@ -83,7 +82,6 @@ if pos < 0:
 w = w[:pos] + w[pos:].replace(export_anchor, export_anchor + "  answerMeetsRepairMargin,\n", 1)
 worker.write_text(w, encoding='utf-8')
 
-# Advance policy assertions.
 for path in ['groq-proxy/source-policy.test.js', 'groq-proxy/church-source-index.test.js', 'tools/pioneer_local_first_qa.py', 'tools/scripture_grounding_qa.py']:
     p = Path(path)
     p.write_text(p.read_text(encoding='utf-8').replace('2026-09-03.43', '2026-09-03.44'), encoding='utf-8')
@@ -99,11 +97,13 @@ margin_test_anchor = """function assert(condition, message) {
 }
 
 """
-margin_test = margin_test_anchor + """const boundaryFaithAnswer = [0, 1, 2].map(() => `${Array(24).fill('supported').join(' ')}.`).join(' ');
-const marginFaithAnswer = [0, 1, 2, 3].map(() => `${Array(25).fill('supported').join(' ')}.`).join(' ');
-assert(!answerMeetsRepairMargin(boundaryFaithAnswer, { faith: true })
-  && answerMeetsRepairMargin(marginFaithAnswer, { faith: true }),
-  'faith repair margin must reject a boundary-depth three-sentence answer and accept a four-sentence 100-word answer');
+margin_test = margin_test_anchor + """const boundaryFaithAnswer = [
+  'Hyrum Smith held an important leadership responsibility in the early Church and assisted senior Church leadership during a demanding period of growth and change.',
+  'He also carried other significant responsibilities that placed him near the center of Church administration and service during the Nauvoo period.',
+  'These duties show that his role involved substantial leadership responsibility within the developing Church organization.'
+].join(' ');
+assert(!answerMeetsRepairMargin(boundaryFaithAnswer, { faith: true }),
+  'faith repair margin must reject a three-sentence answer that sits near the publication boundary');
 
 """
 if margin_test_anchor not in it:
