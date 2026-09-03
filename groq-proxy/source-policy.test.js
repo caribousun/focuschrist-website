@@ -185,6 +185,23 @@ assert(reviewedDeterministicEvidenceRecovery(
   'What does Enos 1 teach about prayer and forgiveness?',
   [{ url: 'https://example.com/enos/1', content: 'prayer forgiven' }],
 ) === null, 'reviewed Enos recovery must never accept a non-Church source');
+const enosSinWordRecovery = reviewedDeterministicEvidenceRecovery(
+  'What does Enos 1 teach about prayer and forgiveness?',
+  [{
+    url: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng',
+    content: 'Enos cried unto God in mighty prayer for his own soul. The Lord spoke to him about his sins, and Enos said his guilt was swept away.',
+  }],
+);
+assert(enosSinWordRecovery
+  && enosSinWordRecovery.recoveryId === 'reviewed-enos-1-prayer-forgiveness',
+  'exact Enos 1 evidence using sins or guilt language must activate the audited recovery without requiring the literal word forgiven');
+assert(reviewedDeterministicEvidenceRecovery(
+  'What does Enos 1 teach about prayer and forgiveness?',
+  [{
+    url: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng',
+    content: 'Enos prayed earnestly to God throughout the day.',
+  }],
+) === null, 'the Enos recovery must still require sin, guilt, or forgiveness evidence in addition to prayer');
 
 
 const coldEnosQuestion = 'What does Enos 1 teach about prayer and forgiveness?';
@@ -872,7 +889,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.51',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.52',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
