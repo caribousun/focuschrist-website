@@ -18,11 +18,11 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.20';
+const SOURCE_POLICY_VERSION = '2026-09-03.21';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
-const CLOUDFLARE_VERIFIER_LIMIT_MS = 6500;
+const CLOUDFLARE_VERIFIER_LIMIT_MS = 9000;
 const VERIFIER_FALLBACK_RESERVE_MS = 5000;
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
@@ -516,6 +516,16 @@ function isVerifierVerdictShape(value, requireSourceIndexes = false) {
       : (value.source_indexes === undefined || validSourceIndexes)));
 }
 
+function validateGroqVerifierResult(result, requireSourceIndexes = false) {
+  if (!result || !result.response || !result.response.ok) return result;
+  const verdict = parseVerifierJson(verifierContent(result));
+  if (isVerifierVerdictShape(verdict, requireSourceIndexes)) return result;
+  return {
+    ...providerFailure(502, 'invalid_verifier_response'),
+    formatContract: true,
+  };
+}
+
 async function callCloudflareVerifier(ai, body, deadline) {
   if (!ai || typeof ai.run !== 'function') return providerFailure(503, 'service_unavailable');
   const available = remainingBudget(deadline);
@@ -592,11 +602,13 @@ function verifierRouteDiagnostic(result) {
 async function callVerifier(env, body, deadline, options = {}) {
   const started = Date.now();
   const requireSourceIndexes = options.requireSourceIndexes === true;
+  const { response_format: _providerEnforcedFormat, ...plainJsonBody } = body;
+  const groqFallbackBody = { ...plainJsonBody, model: VERIFIER_MODEL };
   if (!env || !env.AI || typeof env.AI.run !== 'function') {
-    const fallback = await callGroq(env && env.GROQ_KEY_NEW, {
-      ...body,
-      model: VERIFIER_MODEL,
-    }, deadline, false);
+    const fallback = validateGroqVerifierResult(
+      await callGroq(env && env.GROQ_KEY_NEW, groqFallbackBody, deadline, false),
+      requireSourceIndexes,
+    );
     return {
       ...fallback,
       verifierRoute: 'groq-fallback',
@@ -606,10 +618,10 @@ async function callVerifier(env, body, deadline, options = {}) {
     };
   }
   if (remainingBudget(deadline) < VERIFIER_FALLBACK_RESERVE_MS + 250) {
-    const fallback = await callGroq(env.GROQ_KEY_NEW, {
-      ...body,
-      model: VERIFIER_MODEL,
-    }, deadline, false);
+    const fallback = validateGroqVerifierResult(
+      await callGroq(env.GROQ_KEY_NEW, groqFallbackBody, deadline, false),
+      requireSourceIndexes,
+    );
     return {
       ...fallback,
       verifierRoute: 'groq-fallback',
@@ -641,10 +653,10 @@ async function callVerifier(env, body, deadline, options = {}) {
     : (primary.response.status === 429
       ? 'primary-rate-limited'
       : (primary.response.status === 504 ? 'primary-timeout' : 'primary-unavailable'));
-  const fallback = await callGroq(env && env.GROQ_KEY_NEW, {
-    ...body,
-    model: VERIFIER_MODEL,
-  }, deadline, false);
+  const fallback = validateGroqVerifierResult(
+    await callGroq(env && env.GROQ_KEY_NEW, groqFallbackBody, deadline, false),
+    requireSourceIndexes,
+  );
   return {
     ...fallback,
     verifierRoute: 'groq-fallback',

@@ -63,6 +63,8 @@ The exact `.19` deployment proved the native AI binding but failed acceptance. T
 
 Candidate policy `2026-09-03.20` changes only the Cloudflare verifier model to the non-deprecated `@cf/meta/llama-3.3-70b-instruct-fp8-fast`, which Cloudflare explicitly lists as JSON Mode compatible. Groq Compound Mini research, one-shot Groq 20B fallback, deadlines, evidence limits, source-index requirement, diagnostics, and deterministic final guards are unchanged. Production remains `VERIFIED FAIL` pending the exact `.20` live matrix.
 
+The clean `.20` rerun removed the propagation variable and still failed. The 70B verifier completed some strict verdicts in 5.4 to 6.1 seconds but timed out on other complex prompts at the 6.5-second ceiling. Groq's fallback then sometimes returned `json_validate_failed` before the Worker could parse or validate the model output. Candidate `.21` raises only the primary ceiling to 9 seconds while preserving a 5-second fallback reserve, removes provider-side `response_format` enforcement from the single Groq fallback while retaining the prompt JSON contract and Worker parser, and adds a 15-second post-deploy settle before the matrix. No second fallback or verifier retry is added. Production remains `VERIFIED FAIL` pending exact `.21` acceptance.
+
 ## Owner-reproduced incident
 
 The Main Ask page accepted `who is hyrum smith` but eventually displayed:
