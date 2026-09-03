@@ -20,7 +20,7 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.28';
+const SOURCE_POLICY_VERSION = '2026-09-03.29';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -355,11 +355,20 @@ function rankChurchSourceCandidates(question, page) {
     const titleTokens = normalizeDiscoveryTokens(entry.title);
     const titleMatch = titleTokens.length > 0 && titleTokens.every((token) => queryTokens.includes(token));
     let score = overlaps.length * 18 + Number(entry.priority || 0) / 20 + (titleMatch ? 40 : 0);
+    // Prefer a focused, one-concept Gospel Topic when its complete title is
+    // explicitly present in the question. This prevents broad framing topics
+    // such as "Jesus Christ" from outranking the visitor's named subject, as
+    // in "the grace of Jesus Christ", while preserving ordinary multi-topic
+    // ranking and deterministic scripture routing.
+    const focusedTopicMatch = entry.kind === 'gospel-topic'
+      && titleTokens.length === 1
+      && queryTokens.includes(titleTokens[0]);
+    if (focusedTopicMatch) score += 60;
     if (page === 'church-history' && /history/.test(entry.kind)) score += 8;
     if (page === 'pioneers' && /pioneer|history/.test(`${entry.tokens} ${entry.kind}`)) score += 8;
     const topicPinned = pioneerIrrigation && /\/history\/topics\/pioneer-settlements/.test(entry.url);
     if (topicPinned) score += 500;
-    return { ...entry, score, overlapCount: overlaps.length, titleMatch, topicPinned };
+    return { ...entry, score, overlapCount: overlaps.length, titleMatch, focusedTopicMatch, topicPinned };
   }).filter((entry) => entry.topicPinned
     || entry.overlapCount >= 2
     || (entry.overlapCount >= 1 && (queryTokens.length === 1 || entry.titleMatch)));
