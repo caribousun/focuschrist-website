@@ -12,6 +12,7 @@ import worker, {
   officialExcerptCacheVariant,
   rankChurchSourceCandidates,
   relevantParagraphText,
+  retrieveIndexedChurchEvidence,
   REQUEST_BUDGET_MS,
 } from './src/index.js';
 
@@ -37,6 +38,18 @@ assert(deterministicScriptureSource('What does Psalm 150 teach?')
   'valid upper-bound canonical chapters must remain routable');
 assert(deterministicScriptureSource('Tell me about Alma Smith') === null,
   'a person name must not be misclassified as a scripture reference');
+const almaChapterQuestion = 'Using the official scripture text, explain the seed comparison in Alma 32 teach about faith and the word?';
+const almaChapterVariant = 'What lesson does Alma chapter 32 give about faith growing?';
+const almaChapterCandidate = deterministicScriptureSource(almaChapterQuestion);
+assert(almaChapterCandidate && almaChapterCandidate.deterministic === true,
+  'the exact production Alma 32 regression must resolve to a deterministic canonical scripture source');
+const almaCacheKeyA = await evidenceCacheKey(almaChapterCandidate, almaChapterQuestion);
+const almaCacheKeyARepeat = await evidenceCacheKey(almaChapterCandidate, almaChapterQuestion);
+const almaCacheKeyB = await evidenceCacheKey(deterministicScriptureSource(almaChapterVariant), almaChapterVariant);
+assert(almaCacheKeyA && almaCacheKeyARepeat && almaCacheKeyB
+  && almaCacheKeyA.url === almaCacheKeyARepeat.url
+  && almaCacheKeyA.url !== almaCacheKeyB.url,
+  'deterministic scripture cache keys must be stable for the same question but isolated across different question wording');
 assert(isPioneerIrrigationIntent('What did cooperative irrigation contribute to settlement life?', 'pioneers'),
   'the exact production Pioneer irrigation regression must enter the pinned evidence lane');
 const followUpScope = classifyResearchScope([
@@ -268,6 +281,31 @@ globalThis.fetch = async () => { rejectedFetchCalls += 1; throw new Error('unapp
 assert(await fetchOfficialSource({ url: 'https://example.com/fake', title: 'Fake' }, 'fake question', Date.now() + 2000) === null
   && rejectedFetchCalls === 0,
   'an unapproved URL must be rejected before network use');
+
+const exactAlmaQuestion = 'Using the official scripture text, explain the seed comparison in Alma 32 teach about faith and the word?';
+const exactAlmaCandidate = deterministicScriptureSource(exactAlmaQuestion);
+let exactAlmaFetchCalls = 0;
+const savedCachesForAlma = globalThis.caches;
+const savedFetchForAlma = globalThis.fetch;
+delete globalThis.caches;
+globalThis.fetch = async (url) => {
+  exactAlmaFetchCalls += 1;
+  assert(String(url).includes('/study/scriptures/bofm/alma/32'),
+    'explicit Alma 32 retrieval must not fetch a competing indexed source');
+  return new Response('<p>Faith is not to have a perfect knowledge of things; if people have faith they hope for things which are not seen, which are true.</p><p>Alma compares the word unto a seed and invites hearers to give place that a seed may be planted in the heart and nourished as it grows.</p>', {
+    status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' },
+  });
+};
+const exactAlmaEvidence = await retrieveIndexedChurchEvidence(exactAlmaQuestion, 'ask', Date.now() + 4000);
+assert(exactAlmaCandidate
+  && exactAlmaEvidence.deterministicScripture === true
+  && exactAlmaEvidence.evidence.length === 1
+  && exactAlmaEvidence.evidence[0].url.includes('/study/scriptures/bofm/alma/32')
+  && exactAlmaFetchCalls === 1,
+  'explicit canonical scripture retrieval must fetch exactly one deterministic official scripture source');
+globalThis.fetch = savedFetchForAlma;
+if (savedCachesForAlma === undefined) delete globalThis.caches;
+else globalThis.caches = savedCachesForAlma;
 
 const approvedCandidate = rankChurchSourceCandidates('Who is Hyrum Smith?', 'ask')[0];
 const excerptCache = new Map();

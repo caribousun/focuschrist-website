@@ -21,8 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.40';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.40';
+const SOURCE_POLICY_VERSION = '2026-09-03.41';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.41';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -535,7 +535,10 @@ function officialExcerptCacheVariant(candidate) {
 async function evidenceCacheKey(candidate, question) {
   if (!globalThis.crypto || !globalThis.crypto.subtle) return null;
   const variant = officialExcerptCacheVariant(candidate);
-  const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${candidate.url}`;
+  const deterministicQuestionKey = candidate && candidate.deterministic === true
+    ? normalizeDiscoveryTokens(question).slice(0, 12).join('-')
+    : '';
+  const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${deterministicQuestionKey}\n${candidate.url}`;
   const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(normalized));
   const hex = Array.from(new Uint8Array(digest), (byte) => byte.toString(16).padStart(2, '0')).join('');
   return new Request(`https://focuschrist-groq-proxy.caribousun.workers.dev/__official_excerpt_cache/${hex}`);
@@ -608,11 +611,23 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
 }
 
 async function retrieveIndexedChurchEvidence(question, page, deadline) {
-  const candidates = rankChurchSourceCandidates(question, page);
+  const rankedCandidates = rankChurchSourceCandidates(question, page);
+  const deterministicScripture = deterministicScriptureSource(question);
+  const candidates = deterministicScripture
+    ? [{ ...deterministicScripture, score: 1000, overlapCount: normalizeDiscoveryTokens(question).length }]
+    : rankedCandidates;
   const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
-  const fetched = await Promise.all(candidates.slice(0, 2).map((candidate) => fetchOfficialSource(candidate, question, deadline, counters)));
-  const evidence = fetched.filter(Boolean).slice(0, 2);
-  return { candidates, evidence, fetchCalls: counters.attempts, cacheHits: counters.cacheHits, cacheMisses: counters.cacheMisses };
+  const fetchCandidates = deterministicScripture ? candidates.slice(0, 1) : candidates.slice(0, 2);
+  const fetched = await Promise.all(fetchCandidates.map((candidate) => fetchOfficialSource(candidate, question, deadline, counters)));
+  const evidence = fetched.filter(Boolean).slice(0, deterministicScripture ? 1 : 2);
+  return {
+    candidates,
+    evidence,
+    fetchCalls: counters.attempts,
+    cacheHits: counters.cacheHits,
+    cacheMisses: counters.cacheMisses,
+    deterministicScripture: Boolean(deterministicScripture),
+  };
 }
 
 function hasExcessiveSourceOverlap(answer, evidence, limit = 25) {
@@ -1593,6 +1608,7 @@ export default {
         const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline);
         retrievalDiagnostic.focuschrist_index_candidates = indexed.candidates.length;
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
+        retrievalDiagnostic.focuschrist_deterministic_scripture = indexed.deterministicScripture === true;
         retrievalDiagnostic.focuschrist_official_fetch_calls = indexed.fetchCalls;
         retrievalDiagnostic.focuschrist_official_cache_hits = indexed.cacheHits;
         retrievalDiagnostic.focuschrist_official_cache_misses = indexed.cacheMisses;
@@ -1694,6 +1710,9 @@ export default {
         'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
         'Set approved true whenever the evidence contains material that can responsibly answer the question, including when DRAFT is empty. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Interpret ordinary awkward grammar by its clear intended meaning. Do not reject a scripture, doctrine, or history question merely because its wording is imperfect. If the named official source directly addresses the named topic or concept, answer from that evidence.',
+        retrievalDiagnostic.focuschrist_deterministic_scripture === true
+          ? 'The visitor explicitly named a canonical scripture chapter. EVIDENCE contains that exact official scripture source and no competing research source. If its excerpt directly addresses the requested concept, compose the supported answer from it and approve it. Do not reject merely because the visitor asks for an explanation rather than a quotation.'
+          : 'Evaluate the supplied official evidence normally under the source-integrity contract.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `QUESTION:\n${sanitized.scope.question}`,
@@ -1752,7 +1771,9 @@ export default {
             ? 'Your previous approved answer did not meet the required answer depth.'
             : 'Your previous approved answer failed the final publication overlap check.',
           needsRelevantEvidenceReconsideration
-            ? 'If the evidence can responsibly answer the question, write the supported answer and set approved true with its source indexes. If it still cannot, keep approved false.'
+            ? (retrievalDiagnostic.focuschrist_deterministic_scripture === true
+              ? 'This is the exact canonical scripture source named by the visitor. Re-read its excerpt for the requested concept. If the excerpt supports a responsible explanation, write that explanation and set approved true with source_indexes [1]. Keep approved false only if the excerpt truly lacks the requested concept.'
+              : 'If the evidence can responsibly answer the question, write the supported answer and set approved true with its source indexes. If it still cannot, keep approved false.')
             : needsDepthRepair
             ? `Rewrite it using at least ${requirements.minimumWords} words, ${requirements.minimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s).`
             : 'Keep the answer complete and concise.',
