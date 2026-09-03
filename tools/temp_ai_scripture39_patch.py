@@ -46,7 +46,7 @@ new_relevant = """function relevantParagraphText(paragraphs, question, candidate
       }
     });
     return Array.from(positions).sort((left, right) => left - right)
-      .map((position) => sourceParagraphs[position]).join(' ').slice(0, 1200);
+      .map((position) => sourceParagraphs[position]).join(' ').slice(0, 700);
   }
   return selected.map((item) => item.text).join(' ').slice(0, 700);
 }
@@ -92,12 +92,6 @@ new_fresh = """    if (!content || uniqueEvidenceOverlapCount(content, question)
 if old_fresh not in w:
     raise SystemExit('Fresh relevance anchor missing')
 w = w.replace(old_fresh, new_fresh, 1)
-
-old_slice = "content: String(content || '').replace(/\\s+/g, ' ').trim().slice(0, 700),"
-new_slice = "content: String(content || '').replace(/\\s+/g, ' ').trim().slice(0, 1200),"
-if old_slice not in w:
-    raise SystemExit('Canonical source content slice anchor missing')
-w = w.replace(old_slice, new_slice, 1)
 worker.write_text(w, encoding='utf-8')
 
 for path in ['tools/pioneer_local_first_qa.py', 'tools/scripture_grounding_qa.py']:
@@ -117,6 +111,6 @@ policy.write_text(pt, encoding='utf-8')
 
 memory = Path('MEMORY.md')
 mem = memory.read_text(encoding='utf-8')
-note = "\n\n### Ask cached relevance and deterministic scripture context - candidate 2026-09-03.39\n\n- Production .38 confirmed the new unique-relevance rule on fresh official fetches, but live testing exposed that cached excerpts still bypassed that rule. The same run also showed a clear Alma 32 question can be over-rejected when retrieval returns only the two narrowest lexical matches rather than the surrounding verses that explain how faith develops.\n- Candidate .39 applies the same two-unique-concept relevance rule to both cache hits and fresh official fetches. Deterministic scripture routes now include a small bounded window of adjacent paragraphs around the strongest matches so the verifier receives the surrounding scriptural explanation rather than isolated verses. Canonical evidence excerpts may carry up to 1,200 characters, still within the existing bounded verifier evidence budget.\n- Verification remains fail-closed and official-only for faith questions. This change improves evidence quality and cache consistency rather than relaxing approval standards.\n"
+note = "\n\n### Ask cached relevance and deterministic scripture context - candidate 2026-09-03.39\n\n- Production .38 confirmed the new unique-relevance rule on fresh official fetches, but live testing exposed that cached excerpts still bypassed that rule. The same run also showed a clear Alma 32 question can be over-rejected when retrieval returns only the two narrowest lexical matches rather than the surrounding verses that explain how faith develops.\n- Candidate .39 applies the same two-unique-concept relevance rule to both cache hits and fresh official fetches. Deterministic scripture routes now include a small bounded window of adjacent paragraphs around the strongest matches so the verifier receives the surrounding scriptural explanation rather than isolated verses. The canonical 700-character evidence cap remains unchanged.\n- Verification remains fail-closed and official-only for faith questions. This change improves evidence quality and cache consistency rather than relaxing approval standards.\n"
 if 'Ask cached relevance and deterministic scripture context - candidate 2026-09-03.39' not in mem:
     memory.write_text(mem + note, encoding='utf-8')
