@@ -81,7 +81,7 @@ Framework sources:
 - MetaGPT: https://github.com/FoundationAgents/MetaGPT
 - Hermes Agent: https://github.com/NousResearch/hermes-agent
 
-Production status remains `VERIFIED FAIL` until repository CI, Worker deployment, exact policy `.27`, the 15-core and three-request burst live matrix, capacity and latency gates, and rendered visitor-path checks all pass.
+Production status remains `VERIFIED FAIL` until repository CI, Worker deployment, exact policy `.28`, the 15-core and three-request burst live matrix, capacity and latency gates, and rendered visitor-path checks all pass.
 
 Policy `.19` proved that GPT-OSS 20B could satisfy the contract on three of five live specimens, but it is not on Cloudflare's documented JSON Mode supported-model list and returned unusable output on the other two. Candidate `.20` uses Cloudflare Llama 3.3 70B fast for the primary verifier and retains Groq 20B only as the one-shot operational fallback. Acceptance requires the exact `.20` policy and at least four of five Cloudflare-primary routes.
 
@@ -100,3 +100,5 @@ Policy `.24` proved the restored 70B primary could answer all 15 core requests w
 Policy `.25` kept the provider path stable but showed that counting every ordered two-word match across a long response can falsely classify common doctrinal phrasing as source reconstruction. Candidate `.26` retains the absolute consecutive-copy limit and adds a 40 percent density requirement only to the cumulative fragmented-copy rule. This is a deterministic guard correction, not a provider change or a weaker evidence requirement.
 
 Policy `.26` passed 14 of 15 core specimens and proved the overlap fix, but one fast Cloudflare false rejection occurred for a terse Pioneer irrigation paraphrase and succeeded on immediate replay. Candidate `.27` uses a topic-specific official source pin and one same-provider reconsideration only when indexed official evidence has direct lexical relevance. It does not add a provider, a Groq call, or an unverified answer path.
+
+Policy `.27` stabilized Pioneer routing and again passed 14 of 15 core specimens, but the final doctrine request exhausted the 12-second Cloudflare ceiling and the Groq fallback made zero calls. Candidate `.28` keeps the total request ceiling fixed while allocating 15 seconds to Cloudflare, reserving 3 seconds for one fallback, and reducing normal output to 400 tokens. This is a budget allocation change within the existing provider architecture.

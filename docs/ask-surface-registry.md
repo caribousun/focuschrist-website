@@ -1,6 +1,6 @@
 # focusChrist Ask Surface Registry
 
-Browser release/cache: `2026-09-03.16` / `20260903-16`; Worker policy: `2026-09-03.27`
+Browser release/cache: `2026-09-03.16` / `20260903-16`; Worker policy: `2026-09-03.28`
 
 This registry records the final user-visible owner after all inline, deferred, and dynamically loaded scripts execute. A link to the Ask page is not classified as a separate Ask surface.
 
@@ -36,7 +36,7 @@ This registry records the final user-visible owner after all inline, deferred, a
 - The Worker owns external retrieval and server verification. A deterministic 900-URL official Church index and canonical scripture router run before Groq research. Cloudflare Workers AI performs primary verification; the existing Groq verifier is a one-shot operational fallback. A valid rejection never triggers provider fallback. One same-provider reconsideration is permitted only when a false verdict conflicts with direct lexical relevance in indexed official evidence; a second false verdict remains closed. Provider fallback never stacks with the single combined depth/paraphrase repair or reconsideration. Browser links alone never create a verification receipt.
 - No service worker is registered. Cache control is the versioned asset query string plus the GitHub Pages/edge response cache.
 - Art and Watch pages route context into the main Ask page but do not render a separate inline AI answer surface.
-- The browser makes one bounded Worker attempt per unreviewed question. The Worker owns a shared 22-second request budget across research, verification, and any eligible retry or expansion; the browser ceiling is 25 seconds.
+- The browser makes one bounded Worker attempt per unreviewed question. The Worker owns a shared 22-second request budget across research, verification, and any eligible retry or expansion; Cloudflare may use at most 15 seconds and one Groq operational fallback retains a 3-second reserve. The browser ceiling is 25 seconds.
 - Official excerpt packs are sanitized, bounded, cached by canonical Church URL for at most one hour, and selected against each live question without caching the question or answer. Public receipts report actual fetch attempts and cache outcomes.
 - The Cloudflare rate-limit binding caps the AI path at 20 requests per client address per minute at each location. The address is not logged or sent to an AI provider.
 
