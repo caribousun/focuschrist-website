@@ -20,7 +20,7 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.26';
+const SOURCE_POLICY_VERSION = '2026-09-03.27';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -347,6 +347,8 @@ function rankChurchSourceCandidates(question, page) {
   const queryTokens = normalizeDiscoveryTokens(question);
   if (!queryTokens.length) return [];
   const scripture = deterministicScriptureSource(question);
+  const pioneerIrrigation = page === 'pioneers'
+    && /\b(?:irrigat\w*|shared\s+water|water\s+(?:management|distribution|systems?))\b/i.test(String(question || ''));
   const ranked = CHURCH_SOURCE_INDEX.map((entry) => {
     const sourceTokens = new Set(normalizeDiscoveryTokens(entry.tokens));
     const overlaps = queryTokens.filter((token) => sourceTokens.has(token));
@@ -355,8 +357,12 @@ function rankChurchSourceCandidates(question, page) {
     let score = overlaps.length * 18 + Number(entry.priority || 0) / 20 + (titleMatch ? 40 : 0);
     if (page === 'church-history' && /history/.test(entry.kind)) score += 8;
     if (page === 'pioneers' && /pioneer|history/.test(`${entry.tokens} ${entry.kind}`)) score += 8;
-    return { ...entry, score, overlapCount: overlaps.length, titleMatch };
-  }).filter((entry) => entry.overlapCount >= 2 || (entry.overlapCount >= 1 && (queryTokens.length === 1 || entry.titleMatch)));
+    const topicPinned = pioneerIrrigation && /\/history\/topics\/pioneer-settlements/.test(entry.url);
+    if (topicPinned) score += 500;
+    return { ...entry, score, overlapCount: overlaps.length, titleMatch, topicPinned };
+  }).filter((entry) => entry.topicPinned
+    || entry.overlapCount >= 2
+    || (entry.overlapCount >= 1 && (queryTokens.length === 1 || entry.titleMatch)));
   if (scripture) ranked.push({ ...scripture, score: 1000, overlapCount: queryTokens.length });
   return ranked.sort((left, right) => right.score - left.score || String(left.url).localeCompare(String(right.url))).slice(0, 6);
 }
@@ -1505,17 +1511,25 @@ export default {
         && !answerMeetsSubstanceContract(verdict.answer, sanitized.scope));
       const needsParaphraseRepair = Boolean(verdict && verdict.approved === true && indexes.length
         && hasExcessiveSourceOverlap(verdict.answer, selectedEvidenceBeforeRepair));
-      if ((needsDepthRepair || needsParaphraseRepair)
+      const indexedEvidenceRelevance = evidenceRelevanceReceipt(sanitized.scope.retrievalQuestion, evidence);
+      const needsRelevantEvidenceReconsideration = Boolean(verdict && verdict.approved === false
+        && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
+        && indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2));
+      if ((needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration)
         && verifierResult.verifierRoute !== 'groq-fallback'
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
         const expansionPrompt = [
           verifierPrompt,
           '',
-          needsDepthRepair
+          needsRelevantEvidenceReconsideration
+            ? 'Your previous rejection may be a false negative because the indexed official evidence has direct lexical relevance. Re-evaluate it once without presuming either approval or rejection.'
+            : needsDepthRepair
             ? 'Your previous approved answer did not meet the required answer depth.'
             : 'Your previous approved answer failed the final publication overlap check.',
-          needsDepthRepair
+          needsRelevantEvidenceReconsideration
+            ? 'If the evidence can responsibly answer the question, write the supported answer and set approved true with its source indexes. If it still cannot, keep approved false.'
+            : needsDepthRepair
             ? `Rewrite it using at least ${requirements.minimumWords} words, ${requirements.minimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s).`
             : 'Keep the answer complete and concise.',
           needsParaphraseRepair
