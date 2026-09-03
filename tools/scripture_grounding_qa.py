@@ -16,12 +16,12 @@ required_by_file = {
         "the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price",
         "SCRIPTURE ACCURACY IS A HARD REQUIREMENT",
         "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
-        "if(dbResult.verified)", "site-common.js?v=20260903-16", "Legacy fallback path",
+        "if(dbResult.verified)", "site-common.js?v=20260903-17", "Legacy fallback path",
     ),
     "site-common.js": (
         "window.focusChristSourceIntegrity", "isScriptureDependent",
         "unreviewed-source-dependent-generation", "ungrounded-scripture-citation",
-        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260903-16",
+        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260903-17",
     ),
     "study-intelligence-v3.js": (
         "if (localReference.found && localReference.verified)", "groundedLocalReference",

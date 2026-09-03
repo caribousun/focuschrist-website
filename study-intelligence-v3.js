@@ -8,6 +8,10 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
+    const CLIENT_REQUEST_BUDGET_MS = 25000;
+    const CLIENT_FIRST_ATTEMPT_MS = 12000;
+    const CLIENT_RETRY_DELAY_MS = 400;
+    const CLIENT_MIN_RETRY_BUDGET_MS = 3000;
     const POLICY_VERSION = '2026-09-03.16';
     let askRequestSerial = 0;
 
@@ -322,9 +326,20 @@
         return messages;
     }
 
+    function requestFailure(message, retryable, status) {
+        const error = new Error(message);
+        error.focusChristRetryable = retryable !== false;
+        if (status) error.focusChristStatus = Number(status);
+        return error;
+    }
+
+    function isRetryableRequestFailure(error) {
+        return !error || error.focusChristRetryable !== false;
+    }
+
     async function request(messages, timeoutMs, profile) {
         const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
-        const timer = controller ? window.setTimeout(function () { controller.abort(); }, timeoutMs) : null;
+        const timer = controller ? window.setTimeout(function () { controller.abort(); }, Math.max(1, timeoutMs)) : null;
         try {
             const response = await fetch(PROXY_URL, {
                 method: 'POST',
@@ -339,10 +354,21 @@
                 }),
                 signal: controller ? controller.signal : undefined
             });
-            if (!response.ok) throw new Error('Study service returned ' + response.status);
-            const data = await response.json();
+            if (!response.ok) {
+                const status = Number(response.status || 0);
+                const retryable = status === 408 || status === 425 || status === 429 || status >= 500;
+                throw requestFailure('Study service returned ' + status, retryable, status);
+            }
+            let data;
+            try {
+                data = await response.json();
+            } catch (error) {
+                const malformed = requestFailure('Study service returned invalid JSON', true);
+                malformed.cause = error;
+                throw malformed;
+            }
             const content = data && data.choices && data.choices[0] && data.choices[0].message ? data.choices[0].message.content : '';
-            if (!content) throw new Error('Empty study response');
+            if (!content) throw requestFailure('Empty study response', true);
             return {
                 content: String(content).trim(),
                 sources: Array.isArray(data.focuschrist_sources) ? data.focuschrist_sources : [],
@@ -356,6 +382,36 @@
             };
         } finally {
             if (timer) window.clearTimeout(timer);
+        }
+    }
+
+    async function requestWithRetry(messages, profile) {
+        const started = Date.now();
+        const remainingBudget = function () {
+            return Math.max(0, CLIENT_REQUEST_BUDGET_MS - (Date.now() - started));
+        };
+        let firstError = null;
+        try {
+            const first = await request(messages, Math.min(CLIENT_FIRST_ATTEMPT_MS, remainingBudget()), profile);
+            first.clientAttempts = 1;
+            return first;
+        } catch (error) {
+            firstError = error;
+            if (!isRetryableRequestFailure(error)) throw error;
+        }
+
+        if (remainingBudget() <= CLIENT_RETRY_DELAY_MS + CLIENT_MIN_RETRY_BUDGET_MS) throw firstError;
+        await new Promise(function (resolve) { window.setTimeout(resolve, CLIENT_RETRY_DELAY_MS); });
+        const retryBudget = remainingBudget();
+        if (retryBudget < CLIENT_MIN_RETRY_BUDGET_MS) throw firstError;
+
+        try {
+            const second = await request(messages, retryBudget, profile);
+            second.clientAttempts = 2;
+            return second;
+        } catch (error) {
+            error.focusChristClientAttempts = 2;
+            throw error;
         }
     }
 
@@ -487,7 +543,7 @@
         let lastError = null;
 
         try {
-                const researched = await request(messages, 25000, profile);
+                const researched = await requestWithRetry(messages, profile);
                 let answer = researched.content;
                 answer = removeBoilerplateClosing(answer, profile);
                 answer = normalizeDisplayText(answer);
@@ -516,6 +572,7 @@
                     classificationMode: researched.classificationMode || 'browser-classifier',
                     providerStatus: researched.providerStatus,
                     providerCode: researched.providerCode,
+                    clientAttempts: researched.clientAttempts || 1,
                     contextResolved: contextResolution.resolved === true,
                     contextEntryId: contextResolution.entryId || null,
                     contextQuestion: contextResolution.contextQuestion || null

@@ -58,6 +58,8 @@ let fetchCalls = 0;
 const requestBodies = [];
 let delayedAskResponse = null;
 let forceWorkerRateLimit = false;
+let transientFailuresRemaining = 0;
+let nonRetryableStatus = 0;
 function verifiedResponse() {
     return {
         ok: true,
@@ -76,6 +78,13 @@ global.fetch = async (_url, options) => {
     fetchCalls += 1;
     const body = JSON.parse(options.body);
     requestBodies.push(body);
+    if (transientFailuresRemaining > 0) {
+        transientFailuresRemaining -= 1;
+        throw new TypeError('Injected transient network failure');
+    }
+    if (nonRetryableStatus) {
+        return { ok: false, status: nonRetryableStatus, statusText: 'Injected non-retryable failure' };
+    }
     if (forceWorkerRateLimit) {
         return {
             ok: true,
@@ -395,5 +404,39 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         'an immediate abuse disclosure must receive the urgent safety response without a Worker request');
     assert(dom.userInput.disabled === false && dom.sendBtn.disabled === false && dom.sendBtn.textContent === 'Ask',
         'question boundaries must leave Ask controls ready');
+
+
+    window.focusChristCancelAskRequests();
+    const beforeTransientRetry = fetchCalls;
+    transientFailuresRemaining = 1;
+    result = await window.focusChristStudyAskV3('Tell me about Old Testament', '');
+    assert(fetchCalls === beforeTransientRetry + 2
+        && result.answer === 'RESEARCHED VERIFIED ANSWER'
+        && result.clientAttempts === 2,
+        'a transient first-request failure must retry once and return the successful verified answer');
+    assert(!/temporarily unavailable/i.test(result.answer),
+        'a recovered transient request must never render the unavailable message');
+
+    const beforeVerifiedPolicyResult = fetchCalls;
+    forceWorkerRateLimit = true;
+    result = await window.focusChristStudyAskV3('What does Genesis teach about creation?', '');
+    forceWorkerRateLimit = false;
+    assert(fetchCalls === beforeVerifiedPolicyResult + 1 && result.clientAttempts === 1,
+        'a completed HTTP 200 policy response must not trigger client verifier shopping');
+
+    const beforeExhaustedRetry = fetchCalls;
+    transientFailuresRemaining = 2;
+    result = await window.focusChristStudyAskV3('Tell me about Old Testament history', '');
+    assert(fetchCalls === beforeExhaustedRetry + 2
+        && /answer service is temporarily unavailable/i.test(result.answer),
+        'two transient failures must stop after one retry and return the visible bounded fallback');
+
+    const beforeNonRetryable = fetchCalls;
+    nonRetryableStatus = 400;
+    result = await window.focusChristStudyAskV3('Tell me about Old Testament books', '');
+    nonRetryableStatus = 0;
+    assert(fetchCalls === beforeNonRetryable + 1
+        && /answer service is temporarily unavailable/i.test(result.answer),
+        'a non-retryable 4xx response must not create a duplicate request');
     console.log('Study Intelligence v3 runtime QA PASS');
 })().catch((error) => { console.error(error); process.exit(1); });
