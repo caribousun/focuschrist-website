@@ -22,6 +22,17 @@ The new live matrix submitted five unreviewed questions directly through the dep
 
 Measured sample: two failures out of five, 40 percent fallback/abort incidence, p95 26.0 seconds, maximum 26.0 seconds. The sample proves that the defect is path-dependent and affects more than the original Hyrum Smith question.
 
+## First post-deploy acceptance, Worker policy 2026-09-03.16
+
+`VERIFIED FAIL`
+
+- Browser deployment and post-merge site QA passed at merge `179b8be3d0a4788ab88fc3fe48289a116d47f37c`.
+- Cloudflare Worker deployment succeeded with version ID `5d846d4a-6714-46fe-aaf3-c6d6506ca5e8`.
+- The new live matrix failed as designed. Hyrum Smith completed in 8.9 seconds but used `general-ai-low-risk`, returned no sources or verification receipt, and was only 60 words. The research-first identity upgrade could not operate when research was unavailable.
+- Scripture and Pioneer specimens terminated in 4.8 and 5.6 seconds with explicit `research-rate-limited` fallbacks. The new deadline fixed the excessive wait, but reliability still failed.
+
+Follow-up root cause: known Church-person classification must exist server-side before the research call, not only in the browser or as a post-research evidence upgrade. The one permitted 429 retry also needs to honor the provider's bounded delay within the shared deadline. The five-specimen matrix should pace calls to avoid creating an artificial burst while still gating each response's own latency.
+
 ## Owner-reproduced incident
 
 The Main Ask page accepted `who is hyrum smith` but eventually displayed:

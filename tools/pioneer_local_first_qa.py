@@ -4,6 +4,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = "2026-09-03.16"
+WORKER_POLICY = "2026-09-03.17"
 CACHE = "20260903-16"
 
 
@@ -80,7 +81,7 @@ def main() -> int:
 
     if f"PIONEER_POLICY_VERSION = '{POLICY}'" not in experience:
         errors.append("Pioneer browser policy is not current")
-    if f"SOURCE_POLICY_VERSION = '{POLICY}'" not in worker:
+    if f"SOURCE_POLICY_VERSION = '{WORKER_POLICY}'" not in worker:
         errors.append("Worker source policy is not current")
     if f"policyVersion: '{POLICY}'" not in common:
         errors.append("shared source-integrity policy is not current")
