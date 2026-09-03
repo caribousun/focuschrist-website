@@ -59,6 +59,10 @@ Worker policy 2026-09-03.19 separates the two AI stages across providers. Groq C
 
 Official Cloudflare documentation states a 10,000-neuron daily free allocation, 300 text-generation requests per minute, JSON-compatible response formatting, and no use of Workers AI customer content for training or service improvement without explicit consent. Production remains `VERIFIED FAIL` until the exact `.19` deployment and five-question matrix pass.
 
+The exact `.19` deployment proved the native AI binding but failed acceptance. Three of five specimens used Cloudflare successfully. The Hyrum Smith and Pioneer evidence prompts produced an empty/unusable primary response and used the one-shot Groq fallback; Pioneer recovered, but Hyrum's fallback returned `json_validate_failed`. Cloudflare's official JSON Mode supported-model list does not include GPT-OSS 20B, so the intermittent strict-output behavior was outside the documented contract.
+
+Candidate policy `2026-09-03.20` changes only the Cloudflare verifier model to the non-deprecated `@cf/meta/llama-3.3-70b-instruct-fp8-fast`, which Cloudflare explicitly lists as JSON Mode compatible. Groq Compound Mini research, one-shot Groq 20B fallback, deadlines, evidence limits, source-index requirement, diagnostics, and deterministic final guards are unchanged. Production remains `VERIFIED FAIL` pending the exact `.20` live matrix.
+
 ## Owner-reproduced incident
 
 The Main Ask page accepted `who is hyrum smith` but eventually displayed:

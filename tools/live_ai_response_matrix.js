@@ -125,8 +125,8 @@ async function submit(specimen) {
         const specimen = specimens[index];
         const result = results[index];
         assert(result.status === 200, specimen.id + ' returned HTTP ' + result.status);
-        assert(result.policyVersion === '2026-09-03.19',
-            specimen.id + ' returned Worker policy ' + result.policyVersion + ' instead of 2026-09-03.19');
+        assert(result.policyVersion === '2026-09-03.20',
+            specimen.id + ' returned Worker policy ' + result.policyVersion + ' instead of 2026-09-03.20');
         assert(result.elapsedMs <= HARD_LIMIT_MS, specimen.id + ' exceeded the 25-second visitor ceiling');
         assert(result.wordCount >= specimen.minimumWords, specimen.id + ' returned an incomplete answer');
         assert(!/could not complete|temporarily unavailable|could not verify|please rephrase/i.test(result.answer),

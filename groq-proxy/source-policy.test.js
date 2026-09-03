@@ -54,12 +54,17 @@ assert(isVerifierVerdictShape({ approved: true, answer: 'Supported answer.', sou
   && !isVerifierVerdictShape({ approved: true, answer: 'Evidence answer without indexes.' }, true)
   && !isVerifierVerdictShape({ approved: 'true', answer: 'Unsupported shape.', source_indexes: [1] }),
   'verifier adapters must accept only the server-owned verdict shape');
+let cloudflareModelForTest = '';
 const cloudflareObjectResult = await callCloudflareVerifier({
-  run: async () => ({ response: { approved: false, answer: '', source_indexes: [] } }),
+  run: async (model) => {
+    cloudflareModelForTest = model;
+    return { response: { approved: false, answer: '', source_indexes: [] } };
+  },
 }, verifierBodyForTest, Date.now() + 7000);
 assert(cloudflareObjectResult.response.ok
+  && cloudflareModelForTest === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
   && JSON.parse(cloudflareObjectResult.data.choices[0].message.content).approved === false,
-  'the Cloudflare verifier adapter must normalize a direct structured verdict');
+  'the Cloudflare verifier adapter must use the JSON-mode-supported model and normalize a direct structured verdict');
 const cloudflareChoicesResult = await callCloudflareVerifier({
   run: async () => ({ choices: [{ message: { content: '{"approved":false,"answer":"","source_indexes":[]}' } }] }),
 }, verifierBodyForTest, Date.now() + 7000);
@@ -575,7 +580,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.19',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.20',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

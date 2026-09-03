@@ -21,7 +21,7 @@ Do not race verifiers. Racing doubles consumption and can turn a valid rejection
 
 | Candidate | Official API | Free availability | Privacy / production finding | Decision |
 |---|---|---|---|---|
-| Cloudflare Workers AI | Yes, native Worker binding and REST API | 10,000 neurons/day; 300 text-generation RPM | Cloudflare says customer content is not used for model training or service improvement without explicit consent | Primary verifier candidate |
+| Cloudflare Workers AI | Yes, native Worker binding and REST API | 10,000 neurons/day; 300 text-generation RPM | Cloudflare says customer content is not used for model training or service improvement without explicit consent; the selected Llama 3.3 70B fast model is on the official JSON Mode list | Primary verifier candidate |
 | Groq | Yes, OpenAI-compatible API | Compound Mini 70K TPM; GPT-OSS verifier models 8K TPM on Free | Current provider; live 429 reproduced on the verifier | Keep research and one fallback lane |
 | Duck.ai | No official developer API located | Free end-user chat | Consumer chat UI is not a production integration contract | Reject unofficial wrappers |
 | OpenRouter free models | Yes | 50 requests/day and 20 RPM without purchased credits | OpenRouter says the free-model limits are usually unsuitable for production | Evaluation only |
@@ -39,6 +39,7 @@ Do not race verifiers. Racing doubles consumption and can turn a valid rejection
 - Cloudflare limits: https://developers.cloudflare.com/workers-ai/platform/limits/
 - Cloudflare data usage: https://developers.cloudflare.com/workers-ai/platform/data-usage/
 - Cloudflare GPT-OSS 20B: https://developers.cloudflare.com/workers-ai/models/gpt-oss-20b/
+- Cloudflare Llama 3.3 70B fast: https://developers.cloudflare.com/workers-ai/models/llama-3.3-70b-instruct-fp8-fast/
 - Cloudflare AI binding: https://developers.cloudflare.com/workers-ai/configuration/bindings/
 - Cloudflare JSON mode: https://developers.cloudflare.com/workers-ai/features/json-mode/
 - Groq rate limits: https://console.groq.com/docs/rate-limits
@@ -60,4 +61,6 @@ Do not race verifiers. Racing doubles consumption and can turn a valid rejection
 
 CrewAI, AutoGen, and MetaGPT can organize specialized roles, but they do not supply free model inference. focusChrist already uses the valuable real-time pattern—specialized safety, research, verification, and deterministic guard roles—without framework overhead. Consider a framework only for asynchronous work such as source-index maintenance, reviewed-answer proposals, nightly regression analysis, artwork/content workflows, and Shorts production. Do not place open-ended agent conversations in the visitor's latency path.
 
-Production status remains `VERIFIED FAIL` until repository CI, Worker deployment, exact policy `.19`, the five-question live matrix, and visitor-path checks all pass.
+Production status remains `VERIFIED FAIL` until repository CI, Worker deployment, exact policy `.20`, the five-question live matrix, and visitor-path checks all pass.
+
+Policy `.19` proved that GPT-OSS 20B could satisfy the contract on three of five live specimens, but it is not on Cloudflare's documented JSON Mode supported-model list and returned unusable output on the other two. Candidate `.20` uses Cloudflare Llama 3.3 70B fast for the primary verifier and retains Groq 20B only as the one-shot operational fallback. Acceptance requires the exact `.20` policy and at least four of five Cloudflare-primary routes.
