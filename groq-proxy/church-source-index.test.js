@@ -42,15 +42,15 @@ const pioneerCandidates = rankChurchSourceCandidates(
   'How did Latter-day Saint pioneer communities organize irrigation?',
   'pioneers',
 );
-assert(pioneerCandidates.length && pioneerCandidates[0].url.includes('/learn/history/a-brief-history'),
-  'pioneer irrigation must rank the official history page whose rendered text directly discusses cooperative irrigation');
+assert(pioneerCandidates.length && pioneerCandidates[0].url.includes('/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six'),
+  'pioneer irrigation must rank the official Church history manual chapter whose rendered text directly documents irrigation and the Salt Lake Valley settlement');
 const focusedPioneerCandidates = rankChurchSourceCandidates(
   'What did cooperative irrigation contribute to settlement life?',
   'pioneers',
 );
 assert(focusedPioneerCandidates.length
-  && focusedPioneerCandidates[0].url.includes('/learn/history/a-brief-history'),
-  'Pioneer-page irrigation questions must pin the official page with directly extractable irrigation evidence');
+  && focusedPioneerCandidates[0].url.includes('/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six'),
+  'Pioneer-page irrigation questions must pin the official manual page with directly extractable irrigation and settlement evidence');
 assert(rankChurchSourceCandidates('How did pioneers cooperate to build temples?', 'pioneers')
   .every((candidate) => candidate.topicPinned !== true),
   'unrelated Pioneer-page cooperation questions must not trigger the irrigation topic pin');
