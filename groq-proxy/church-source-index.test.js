@@ -42,8 +42,21 @@ const pioneerCandidates = rankChurchSourceCandidates(
   'How did Latter-day Saint pioneer communities organize irrigation?',
   'pioneers',
 );
-assert(pioneerCandidates.length && pioneerCandidates[0].url.endsWith('/learn/history/a-brief-history?lang=eng'),
-  'pioneer irrigation must rank the approved official history source first');
+assert(pioneerCandidates.length && pioneerCandidates[0].url.includes('/study/history/topics/pioneer-settlements'),
+  'pioneer irrigation must rank the directly relevant official Pioneer Settlements topic first');
+const focusedPioneerCandidates = rankChurchSourceCandidates(
+  'What did cooperative irrigation contribute to settlement life?',
+  'pioneers',
+);
+assert(focusedPioneerCandidates.length
+  && focusedPioneerCandidates[0].url.includes('/study/history/topics/pioneer-settlements'),
+  'Pioneer-page irrigation questions must pin the directly relevant official Pioneer Settlements topic');
+assert(rankChurchSourceCandidates('How did pioneers cooperate to build temples?', 'pioneers')
+  .every((candidate) => candidate.topicPinned !== true),
+  'unrelated Pioneer-page cooperation questions must not trigger the irrigation topic pin');
+assert(rankChurchSourceCandidates('What did cooperative irrigation contribute to settlement life?', 'ask')
+  .every((candidate) => candidate.topicPinned !== true),
+  'the Pioneer irrigation topic pin must not escape onto the general Ask page');
 assert(rankChurchSourceCandidates('How do I replace a bicycle chain?', 'ask').length === 0,
   'an unrelated question must not receive a strong Church-source match');
 
@@ -219,6 +232,8 @@ let groqCalls = 0;
 let indexedVerifierBody = null;
 let quoteRepairCalls = 0;
 let quoteRepairBody = null;
+let reconsiderationCalls = 0;
+let reconsiderationBody = null;
 globalThis.fetch = async (url) => {
   const target = String(url || '');
   if (target.includes('api.groq.com')) {
@@ -300,6 +315,31 @@ try {
     && quoteRepairPayload.focuschrist_source_integrity_verified === true
     && quoteRepairPayload.focuschrist_cloudflare_verifier_calls === 2,
   'an approved but overcopied indexed answer must receive one bounded Cloudflare-only paraphrase repair');
+
+  const reconsiderationResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'faith-study',
+      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+    }),
+  }), {
+    AI: { run: async (_model, body) => {
+      reconsiderationCalls += 1;
+      reconsiderationBody = body;
+      return { response: reconsiderationCalls === 1
+        ? { approved: false, answer: '', source_indexes: [] }
+        : { approved: true, answer: verifiedAnswer, source_indexes: [1] } };
+    } },
+  });
+  const reconsiderationPayload = await reconsiderationResponse.json();
+  assert(reconsiderationCalls === 2
+    && reconsiderationBody.max_tokens === 400
+    && reconsiderationBody.messages[0].content.includes('previous rejection may be a false negative')
+    && reconsiderationPayload.focuschrist_source_integrity_verified === true
+    && reconsiderationPayload.focuschrist_cloudflare_verifier_calls === 2,
+  'a fast negative verdict over strongly relevant indexed official evidence must receive one bounded Cloudflare-only reconsideration');
 } finally {
   globalThis.fetch = originalFetch;
 }
