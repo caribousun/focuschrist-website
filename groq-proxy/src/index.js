@@ -6,7 +6,7 @@ import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP
 // unreviewed answer before returning it to the browser.
 
 const RESEARCH_MODEL = 'groq/compound-mini';
-const VERIFIER_MODEL = 'groq/compound-mini';
+const VERIFIER_MODEL = 'openai/gpt-oss-20b';
 const CLOUDFLARE_VERIFIER_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 const CLOUDFLARE_FALLBACK_MODEL = '@cf/meta/llama-3.1-8b-instruct-fp8-fast';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
@@ -21,8 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.35';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.35';
+const SOURCE_POLICY_VERSION = '2026-09-03.36';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.36';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -740,7 +740,14 @@ function evidenceForVerifier(evidence) {
 
 function parseVerifierJson(text) {
   const raw = String(text || '').trim().replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
-  try { return JSON.parse(raw); } catch (_error) { return null; }
+  if (!raw) return null;
+  try { return JSON.parse(raw); } catch (_error) {}
+  const firstBrace = raw.indexOf('{');
+  const lastBrace = raw.lastIndexOf('}');
+  if (firstBrace >= 0 && lastBrace > firstBrace) {
+    try { return JSON.parse(raw.slice(firstBrace, lastBrace + 1)); } catch (_error) {}
+  }
+  return null;
 }
 
 function isJsonValidationFailure(result) {
@@ -1114,14 +1121,51 @@ async function callVerifier(env, body, deadline, options = {}) {
   const { response_format: _providerEnforcedFormat, ...plainJsonBody } = body;
   const groqFallbackBody = { ...plainJsonBody, model: VERIFIER_MODEL };
   if (String(env && env.VERIFIER_PROVIDER || '').toLowerCase() === 'groq') {
-    const primary = validateGroqVerifierResult(
-      await callGroq(env && env.GROQ_KEY_NEW, groqFallbackBody, deadline, false),
-      requireSourceIndexes,
-    );
+    const primaryRaw = await callGroq(env && env.GROQ_KEY_NEW, groqFallbackBody, deadline, false);
+    const primary = validateGroqVerifierResult(primaryRaw, requireSourceIndexes);
+    if (primary.response && primary.response.ok) {
+      return {
+        ...primary,
+        verifierRoute: 'groq-primary',
+        fallbackReason: null,
+        totalCloudflareVerifierCalls: 0,
+        totalCloudflareEstimatedNeurons: 0,
+        totalCloudflareUnmeteredNeurons: 0,
+        totalGroqVerifierCalls: Number(primary.callCount || 1),
+        verifierDurationMs: Date.now() - started,
+      };
+    }
+    if (primary.formatContract && remainingBudget(deadline) >= MIN_RETRY_BUDGET_MS) {
+      const repairPrompt = [
+        String(plainJsonBody.messages && plainJsonBody.messages[0] && plainJsonBody.messages[0].content || ''),
+        '',
+        'FORMAT REPAIR: Return only one complete valid JSON object matching the requested schema. Do not use markdown fences, commentary, citations outside the JSON, or trailing text.'
+      ].join('\n');
+      const repairBody = {
+        ...groqFallbackBody,
+        messages: [{ role: 'user', content: repairPrompt }],
+        max_tokens: Math.max(Number(groqFallbackBody.max_tokens || 0), 700),
+      };
+      const repair = validateGroqVerifierResult(
+        await callGroq(env && env.GROQ_KEY_NEW, repairBody, deadline, false),
+        requireSourceIndexes,
+      );
+      repair.accumulatedUsage = combinedProviderUsage(primaryRaw, repair);
+      return {
+        ...repair,
+        verifierRoute: 'groq-primary-repair',
+        fallbackReason: repair.response && repair.response.ok ? 'format-repair' : 'format-repair-failed',
+        totalCloudflareVerifierCalls: 0,
+        totalCloudflareEstimatedNeurons: 0,
+        totalCloudflareUnmeteredNeurons: 0,
+        totalGroqVerifierCalls: Number(primaryRaw.callCount || 1) + Number(repair.callCount || 1),
+        verifierDurationMs: Date.now() - started,
+      };
+    }
     return {
       ...primary,
       verifierRoute: 'groq-primary',
-      fallbackReason: primary.response && primary.response.ok ? null : 'groq-primary-error',
+      fallbackReason: 'groq-primary-error',
       totalCloudflareVerifierCalls: 0,
       totalCloudflareEstimatedNeurons: 0,
       totalCloudflareUnmeteredNeurons: 0,
@@ -1613,7 +1657,7 @@ export default {
       const verifierBody = {
         messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
-        max_tokens: sanitized.scope.selectedPioneer ? 900 : 400,
+        max_tokens: sanitized.scope.selectedPioneer ? 900 : (sanitized.scope.faith ? 700 : 500),
         response_format: { type: 'json_object' },
       };
       let verifierResult = await callVerifier(env, verifierBody, deadline, {
@@ -1648,7 +1692,7 @@ export default {
         && (indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2)
           || hasPinnedPioneerIrrigationEvidence));
       if ((needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration)
-        && verifierResult.verifierRoute === 'cloudflare-primary'
+        && ['cloudflare-primary', 'groq-primary'].includes(verifierResult.verifierRoute)
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
         const expansionPrompt = [
@@ -1674,7 +1718,7 @@ export default {
         const expansionResult = await callVerifier(env, {
           ...verifierBody,
           messages: [{ role: 'user', content: expansionPrompt }],
-          max_tokens: sanitized.scope.selectedPioneer ? 900 : 400,
+          max_tokens: sanitized.scope.selectedPioneer ? 900 : (sanitized.scope.faith ? 700 : 500),
         }, deadline, {
           requireSourceIndexes: true,
           allowGroqFallback: false,

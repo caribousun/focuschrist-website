@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.35';
+const POLICY_VERSION = '2026-09-03.36';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -156,14 +156,14 @@ function validate(test, result) {
     for (const pattern of test.factPatterns || []) assert(pattern.test(result.answer), test.id + ' omitted expected answer concept ' + pattern);
     for (const pattern of test.contradictionPatterns || []) assert(!pattern.test(result.answer), test.id + ' returned a negated or contradictory expected fact');
     if (test.officialOnly) {
-        assert(['groq-primary', 'cloudflare-primary', 'cloudflare-fast-fallback', 'groq-fallback'].includes(result.verifierRoute), test.id + ' omitted a verifier route');
+        assert(['groq-primary', 'groq-primary-repair', 'cloudflare-primary', 'cloudflare-fast-fallback', 'groq-fallback'].includes(result.verifierRoute), test.id + ' omitted a verifier route');
         assert(result.verified && result.sourceHosts.length > 0 && result.sourceHosts.every((host) => host === 'churchofjesuschrist.org' || host.endsWith('.churchofjesuschrist.org')), test.id + ' was not official-only verified');
         assert(result.retrievalRoute === 'church-source-index' && result.groqResearchCalls === 0 && result.indexSources > 0 && result.officialFetchCalls <= 2, test.id + ' did not prove bounded zero-Groq research');
         assert(result.sourceUrls.some((url) => test.sourcePattern.test(url)), test.id + ' selected an off-topic source URL');
         assert(result.evidenceRelevance.length > 0 && result.evidenceRelevance.every((entry) => entry.overlap_count >= 2 && result.sourceUrls.includes(entry.url)), test.id + ' did not prove selected-excerpt relevance');
         assert(result.verifierInputTokens > 0 && result.verifierOutputTokens > 0, test.id + ' omitted verifier usage receipts');
         assert(result.cloudflareVerifierCalls >= 0 && result.cloudflareVerifierCalls <= 2
-            && result.groqVerifierCalls >= 0 && result.groqVerifierCalls <= 1
+            && result.groqVerifierCalls >= 0 && result.groqVerifierCalls <= 2
             && result.cloudflareVerifierCalls + result.groqVerifierCalls >= 1,
         test.id + ' returned invalid per-provider verifier call accounting');
         assert(!(result.groqVerifierCalls > 0 && result.cloudflareVerifierCalls > 1),
