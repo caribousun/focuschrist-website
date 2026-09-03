@@ -5,6 +5,73 @@
 (function () {
     'use strict';
 
+    const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
+    const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
+
+    function normalizeQuestionSafetyText(value) {
+        return String(value || '')
+            .normalize('NFKD')
+            .toLowerCase()
+            .replace(/[013457@$]/g, function (character) {
+                return ({ '0': 'o', '1': 'i', '3': 'e', '4': 'a', '5': 's', '7': 't', '@': 'a', '$': 's' })[character] || character;
+            })
+            .replace(/([a-z])\1{2,}/g, '$1$1')
+            .replace(/[^a-z0-9]+/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    function matchesAny(value, patterns) {
+        return patterns.some(function (pattern) { return pattern.test(value); });
+    }
+
+    function evaluateQuestionSafety(value) {
+        const normalized = normalizeQuestionSafetyText(value);
+        const compact = normalized.replace(/\s+/g, '');
+        const urgentSafety = matchesAny(normalized, [
+            /\b(?:sexual abuse|sexually abused|rape|raped|molest|molested|assaulted)\b/,
+            /\b(?:immediate danger|being threatened|threatening me|hurt me|hurting me|kill me|being abused)\b/
+        ]);
+        if (urgentSafety) {
+            return { allowed: false, kind: 'urgent-safety', response: URGENT_SAFETY_RESPONSE };
+        }
+
+        const profanity = matchesAny(normalized, [
+            /\b(?:fuck|fucking|fucked|motherfucker|shit|bullshit|bitch|bastard|ass|asshole|whore|slut|piss|dick|cock|pussy|faggot|nigger|retard|wtf|stfu)\b/,
+            /\b(?:damn|crap)\b/
+        ]) || matchesAny(compact, [
+            /f+u+c+k+/,
+            /s+h+i+t+/,
+            /b+i+t+c+h+/
+        ]);
+
+        const explicitSexual = matchesAny(normalized, [
+            /\b(?:sex|sexual|porn|pornography|nude|nudes|naked|intercourse|masturbat(?:e|ion|ing)|orgasm|genitals?)\b/,
+            /\b(?:explicit sex|sexual act|sexual fantasy|have sex|having sex)\b/
+        ]);
+
+        const protectedGroup = /\b(?:religion|religions|religious|faith|faiths|church|churches|christian|christians|catholic|catholics|protestant|protestants|latter day saint|latter day saints|lds|mormon|mormons|jewish|jews|muslim|muslims|islam|hindu|hindus|buddhist|buddhists|culture|cultures|cultural|ethnicity|ethnicities|ethnic|race|races|racial|nationality|nationalities|immigrant|immigrants|democrat|democrats|republican|republicans|liberal|liberals|conservative|conservatives|political party|political parties|political affiliation|political affiliations)\b/;
+        const derogatory = /\b(?:stupid|idiot|idiots|evil|inferior|worthless|disgusting|trash|vermin|subhuman|hate|hateful|scum|moron|morons|should die|should be killed|deserve to die)\b/;
+        const groupAttack = (protectedGroup.test(normalized) && derogatory.test(normalized))
+            && (/\b(?:why|are|is|all|those|these|people|followers|members|believers)\b/.test(normalized)
+                || /\b(?:should die|should be killed|deserve to die|subhuman|vermin)\b/.test(normalized));
+        const structuredGroupAttack = /\b(?:why are|all|those|these)\s+[a-z-]{3,30}(?:\s+people)?\s+(?:are\s+|is\s+)?(?:stupid|idiots?|evil|inferior|worthless|disgusting|trash|vermin|subhuman|scum|morons?|hateful)\b/.test(normalized);
+
+        if (profanity || explicitSexual || groupAttack || structuredGroupAttack) {
+            return { allowed: false, kind: 'respect-boundary', response: RESPECTFUL_QUESTION_RESPONSE };
+        }
+        return { allowed: true, kind: 'allowed', response: '' };
+    }
+
+    window.focusChristQuestionSafety = Object.freeze({
+        respectfulResponse: RESPECTFUL_QUESTION_RESPONSE,
+        urgentSafetyResponse: URGENT_SAFETY_RESPONSE,
+        evaluate: evaluateQuestionSafety
+    });
+    window.containsInappropriate = function (value) {
+        return evaluateQuestionSafety(value).allowed === false;
+    };
+
     const OFFICIAL_RESOURCE_LINKS = [
         ['Church Website', 'https://www.churchofjesuschrist.org/?lang=eng'],
         ['Gospel Library', 'https://www.churchofjesuschrist.org/study?lang=eng&platform=web'],
@@ -435,7 +502,7 @@
     }
 
     window.focusChristSourceIntegrity = Object.freeze({
-        policyVersion: '2026-09-01.15',
+        policyVersion: '2026-09-03.16',
         fallback: SOURCE_INTEGRITY_FALLBACK,
         extractScriptureCitations: extractScriptureCitations,
         isScriptureDependent: function (text) {
@@ -470,7 +537,7 @@
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260901-15', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260903-16', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {

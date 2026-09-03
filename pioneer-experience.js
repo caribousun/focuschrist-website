@@ -7,7 +7,7 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-01.15';
+    const PIONEER_POLICY_VERSION = '2026-09-03.16';
     let pioneerRequestSerial = 0;
 
     const PIONEER_PAGE_CONTEXT = [
@@ -625,6 +625,17 @@
         if (!input || !button) return;
         const question = input.value.trim();
         if (!question) return;
+        const safety = window.focusChristQuestionSafety && typeof window.focusChristQuestionSafety.evaluate === 'function'
+            ? window.focusChristQuestionSafety.evaluate(question)
+            : { allowed: !(typeof window.containsInappropriate === 'function' && window.containsInappropriate(question)), response: '' };
+        if (!safety.allowed) {
+            input.value = '';
+            const answer = window.addMessage(safety.response || 'Please rephrase the question respectfully.', false);
+            setConversationMode(true);
+            positionAnswer(answer);
+            try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+            return;
+        }
         const requestId = ++pioneerRequestSerial;
 
         removeWelcome();
@@ -635,14 +646,6 @@
         let loading = null;
 
         try {
-            if (typeof containsInappropriate === 'function' && containsInappropriate(question)) {
-                if (loading) loading.remove();
-                const answer = window.addMessage('I can help with respectful and safe questions about Latter-day Saint pioneer history. Please rephrase the request.', false);
-                setConversationMode(true);
-                positionAnswer(answer);
-                return;
-            }
-
             const contextResolution = resolvePioneerContext(question);
             const reviewed = reviewedPioneerKnowledge(question, contextResolution);
             if (reviewed) {

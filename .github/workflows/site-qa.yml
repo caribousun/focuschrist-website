@@ -70,6 +70,9 @@ jobs:
       - name: Exercise final Study Intelligence owner
         run: node tools/study_intelligence_v3_runtime_qa.js
 
+      - name: Exercise shared question safety boundaries
+        run: node tools/question_safety_runtime_qa.js
+
       - name: Exercise gateway source policy
         run: node groq-proxy/source-policy.test.js
 
@@ -114,6 +117,9 @@ jobs:
 
       - name: Validate live production Ask gate
         run: node --check tools/live_production_ask_qa.js
+
+      - name: Validate live AI response matrix
+        run: node --check tools/live_ai_response_matrix.js
 
       - name: Verify deployed production Ask contracts
         if: github.event_name == 'push'

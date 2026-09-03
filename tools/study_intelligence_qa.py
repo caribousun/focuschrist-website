@@ -72,6 +72,7 @@ def main() -> int:
         "convertMarkdownTables",
         "focusChristStudyAskV3",
         "temperature: 0.25",
+        "request(messages, 25000, profile)",
         "data-focuschrist-study-intelligence-version', '3'",
     )
     for marker in required_grounded_markers:
@@ -87,6 +88,7 @@ def main() -> int:
         "max_tokens: 800",
         "innerHTML = text",
         "innerHTML=text",
+        "[25000, 18000]",
     )
     for marker in forbidden_policy_markers:
         if marker in policy or marker in grounded:
@@ -94,7 +96,7 @@ def main() -> int:
 
     required_common_markers = (
         "loadStudyIntelligence",
-        "study-intelligence-v3.js?v=20260901-15",
+        "study-intelligence-v3.js?v=20260903-16",
         "data-focuschrist-study-intelligence-v3",
         "path.endsWith('/ask.html')",
         "path.endsWith('/pioneers.html')",
@@ -115,7 +117,7 @@ def main() -> int:
     print(
         "Verified foundation + adaptive + grounded policy, broad general-question handling, optional specific faith bridges, "
         "no forced devotional closings, verified Restoration grounding, display normalization, semantic local matching, "
-        "retry/timeouts, safe rendering, serialized cache-versioned loading, and Ask/Pioneer integration."
+        "one bounded browser request, safe rendering, serialized cache-versioned loading, and Ask/Pioneer integration."
     )
     return 0
 

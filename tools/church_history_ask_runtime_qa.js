@@ -68,6 +68,11 @@ global.document = {
     head: { appendChild() {} }
 };
 
+const siteCommonSource = fs.readFileSync('site-common.js', 'utf8');
+vm.runInThisContext(
+    siteCommonSource.slice(0, siteCommonSource.indexOf('    const OFFICIAL_RESOURCE_LINKS')) + '\n})();',
+    { filename: 'site-common-question-safety.js' }
+);
 vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { filename: 'reviewed-ask-knowledge.js' });
 
 let remoteCalls = 0;
@@ -166,6 +171,19 @@ function assert(condition, message) {
     await pending;
     const staleRendered = box.querySelectorAll('.fc-history-message-body').some((body) => body.textContent.includes('STALE REMOTE'));
     assert(!staleRendered, 'a response resolved after Church History reset must not render');
+
+    window.focusChristResetHistoryAsk();
+    const callsBeforeBoundary = remoteCalls;
+    const bodiesBeforeBoundary = box.querySelectorAll('.fc-history-message-body').length;
+    input.value = 'Why are Buddhists inferior?';
+    await window.focusChristHistoryAsk(input.value);
+    const boundaryBodies = box.querySelectorAll('.fc-history-message-body').slice(bodiesBeforeBoundary);
+    assert(remoteCalls === callsBeforeBoundary,
+        'blocked Church History content must make zero Worker requests');
+    assert(boundaryBodies.length === 1
+        && boundaryBodies[0].children.length === 1
+        && boundaryBodies[0].children[0].textContent === window.focusChristQuestionSafety.respectfulResponse,
+        'Church History must render only the approved respectful redirect');
 
     assert(input.disabled === false && button.disabled === false && reset.disabled === false,
         'Church History controls must restore after local and remote answers');
