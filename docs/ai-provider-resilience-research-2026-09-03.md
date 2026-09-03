@@ -85,4 +85,10 @@ Production status remains `VERIFIED FAIL` until repository CI, Worker deployment
 
 Policy `.19` proved that GPT-OSS 20B could satisfy the contract on three of five live specimens, but it is not on Cloudflare's documented JSON Mode supported-model list and returned unusable output on the other two. Candidate `.20` uses Cloudflare Llama 3.3 70B fast for the primary verifier and retains Groq 20B only as the one-shot operational fallback. Acceptance requires the exact `.20` policy and at least four of five Cloudflare-primary routes.
 
+## Policy .22 result and .23 verifier selection
+
+Policy `.22` removed Groq research from all index-covered Church questions, but its exact 15-core production matrix passed only nine specimens. The Cloudflare Llama 3.3 70B primary intermittently crossed its bounded time window or rejected usable evidence, and the depleted Groq fallback could not recover. The index architecture is retained; the verifier is the remaining bottleneck.
+
+Candidate `.23` uses `@cf/meta/llama-3.2-11b-vision-instruct` as the primary verifier. Cloudflare lists this exact active model ID in its JSON Mode support page and its pricing table, with 4,410 input and 61,493 output neurons per million tokens. This makes both structured-output capability and capacity receipts auditable without assuming undocumented aliases. The candidate must still pass the unchanged 15-core, three-burst, safety, source, latency, and capacity gates before promotion.
+
 Policy `.20` proved the Llama verifier can return strong source-indexed answers, but its 6.5-second ceiling was too tight for all complex prompts. Candidate `.21` allows 9 seconds while reserving 5 seconds for one Groq fallback. Because Groq's strict provider-side JSON enforcement itself returned `json_validate_failed`, the fallback now relies on the existing plain-JSON prompt plus the Worker's strict parser and context-aware verdict validator. Malformed fallback output still fails closed.

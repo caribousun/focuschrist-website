@@ -63,6 +63,12 @@ The exact `.19` deployment proved the native AI binding but failed acceptance. T
 
 Candidate policy `2026-09-03.20` changes only the Cloudflare verifier model to the non-deprecated `@cf/meta/llama-3.3-70b-instruct-fp8-fast`, which Cloudflare explicitly lists as JSON Mode compatible. Groq Compound Mini research, one-shot Groq 20B fallback, deadlines, evidence limits, source-index requirement, diagnostics, and deterministic final guards are unchanged. Production remains `VERIFIED FAIL` pending the exact `.20` live matrix.
 
+## Policy .22 deployed failure
+
+Policy `.22` deployed at commit `c9288cb18352e74e95fea3678a95fe5a85d621a4`, Worker version `5051c511-0873-4cf3-a1ef-b84c240342f1`. The new 900-URL official Church index successfully answered covered retrieval needs without Groq research. The exact 15-core matrix nevertheless passed only nine specimens because the 70B Cloudflare verifier intermittently timed out or rejected usable indexed evidence, and the depleted Groq operational fallback could not recover. This isolates the remaining failure to verifier reliability rather than retrieval.
+
+Candidate `.23` retains the index and every source-integrity control, but selects `@cf/meta/llama-3.2-11b-vision-instruct` for primary verification. Cloudflare documents this exact active ID for JSON Mode and prices it at 4,410 input and 61,493 output neurons per million tokens. Promotion still requires the complete unchanged live matrix and rendered browser journeys.
+
 The clean `.20` rerun removed the propagation variable and still failed. The 70B verifier completed some strict verdicts in 5.4 to 6.1 seconds but timed out on other complex prompts at the 6.5-second ceiling. Groq's fallback then sometimes returned `json_validate_failed` before the Worker could parse or validate the model output. Candidate `.21` raises only the primary ceiling to 9 seconds while preserving a 5-second fallback reserve, removes provider-side `response_format` enforcement from the single Groq fallback while retaining the prompt JSON contract and Worker parser, and adds a 15-second post-deploy settle before the matrix. No second fallback or verifier retry is added. Production remains `VERIFIED FAIL` pending exact `.21` acceptance.
 
 ## Owner-reproduced incident
