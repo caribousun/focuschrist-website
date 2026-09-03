@@ -210,3 +210,12 @@ Candidate `.27` pins Pioneer-page irrigation intent to the official Pioneer Sett
 Exact `.27` proved the Pioneer routing and indexed-verdict changes but failed one of 15 core specimens when the final doctrine request reached the 12-second Cloudflare primary ceiling. The receipt showed one Cloudflare attempt and zero Groq fallback calls. The system failed closed, while the other 14 core answers remained complete.
 
 Candidate `.28` keeps the 22-second Worker deadline and all live p95 and 25-second visitor ceilings unchanged. It allocates at most 15 seconds to Cloudflare instead of 12, retains a 3-second reserve for one Groq operational fallback instead of 5, and lowers normal verifier output from 500 to 400 tokens. This favors the provider that is actually completing the indexed workload and reduces generation size without changing retrieval, verification, source, safety, copyright, or capacity requirements. Production remains `VERIFIED FAIL` pending exact `.28` acceptance.
+
+
+## Policies .28 and .29 results and policy .30 operational fallback
+
+Exact `.28` returned complete answers for all 15 paced core specimens with official indexed retrieval and zero Groq research, but the release failed source precision because grace selected broad Jesus Christ pages. Exact `.29` fixed that route and passed the other 14 core specimens, but the first cold Atonement request failed closed after the Cloudflare primary did not complete and the Groq fallback did not recover.
+
+Candidate `.30` replaces that ineffective operational fallback with Cloudflare's active, priced `@cf/meta/llama-3.1-8b-instruct-fp8-fast` model through the existing AI binding. It does not claim provider-enforced JSON support. The output must pass the strict local parser, source-index requirement, substance guard, source-overlap guard, and known-false-claim guard. It runs only after an operational failure or malformed contract, never after a valid rejection, and cannot trigger a third verifier call. The primary/fallback allocation is 12/5 seconds inside the unchanged 22-second request budget.
+
+Exact per-model neuron pricing is recorded. Each Cloudflare attempt without usage adds a conservative 1,000-neuron allowance, including a timed-out call that may continue provider-side and a failed repair call. The capacity gate adds measured and conservative usage. Production remains `VERIFIED FAIL` pending the full live matrix and rendered journeys.

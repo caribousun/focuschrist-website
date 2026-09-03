@@ -253,6 +253,10 @@ let officialFetchCalls = 0;
 let groqCalls = 0;
 let indexedVerifierBody = null;
 let quoteRepairCalls = 0;
+let fastFallbackCalls = 0;
+let timedOutPrimaryFallbackCalls = 0;
+let timedOutDepthRepairCalls = 0;
+let shallowFastFallbackCalls = 0;
 let quoteRepairBody = null;
 let reconsiderationCalls = 0;
 let reconsiderationBody = null;
@@ -310,6 +314,117 @@ try {
     && indexedVerifierBody.messages[0].content.includes('Use independently worded paraphrase')
     && /DRAFT:\n\n\nEVIDENCE:/.test(indexedVerifierBody.messages[0].content),
   'indexed evidence must reach the verifier with no fake candidate draft and an explicit compose-from-evidence contract');
+
+  const fastFallbackResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'faith-study',
+      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+    }),
+  }), {
+    AI: { run: async (model, body) => {
+      fastFallbackCalls += 1;
+      if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') {
+        const error = new Error('primary unavailable'); error.status = 503; throw error;
+      }
+      assert(model === '@cf/meta/llama-3.1-8b-instruct-fp8-fast'
+        && body.response_format === undefined,
+      'the operational fallback must use the priced fast model with prompt-enforced JSON');
+      return {
+        response: JSON.stringify({ approved: true, answer: verifiedAnswer, source_indexes: [1] }),
+        usage: { prompt_tokens: 700, completion_tokens: 170 },
+      };
+    } },
+  });
+  const fastFallbackPayload = await fastFallbackResponse.json();
+  assert(fastFallbackCalls === 2
+    && fastFallbackPayload.focuschrist_source_integrity_verified === true
+    && fastFallbackPayload.focuschrist_verifier_route === 'cloudflare-fast-fallback'
+    && fastFallbackPayload.focuschrist_cloudflare_verifier_calls === 2
+    && fastFallbackPayload.focuschrist_groq_verifier_calls === 0
+    && fastFallbackPayload.focuschrist_verifier_estimated_neurons > 0
+    && fastFallbackPayload.focuschrist_verifier_conservative_unmetered_neurons >= 1000,
+  'a primary provider outage must recover through exactly one metered Cloudflare fast fallback');
+
+  const timedOutPrimaryFallbackResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'faith-study',
+      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+    }),
+  }), {
+    AI: { run: async (model) => {
+      timedOutPrimaryFallbackCalls += 1;
+      if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return new Promise(() => {});
+      return {
+        response: JSON.stringify({ approved: true, answer: verifiedAnswer, source_indexes: [1] }),
+        usage: { prompt_tokens: 700, completion_tokens: 170 },
+      };
+    } },
+  });
+  const timedOutPrimaryFallbackPayload = await timedOutPrimaryFallbackResponse.json();
+  assert(timedOutPrimaryFallbackCalls === 2
+    && timedOutPrimaryFallbackPayload.focuschrist_source_integrity_verified === true
+    && timedOutPrimaryFallbackPayload.focuschrist_verifier_route === 'cloudflare-fast-fallback'
+    && timedOutPrimaryFallbackPayload.focuschrist_cloudflare_verifier_calls === 2
+    && timedOutPrimaryFallbackPayload.focuschrist_groq_verifier_calls === 0
+    && timedOutPrimaryFallbackPayload.focuschrist_verifier_estimated_neurons > 0
+    && timedOutPrimaryFallbackPayload.focuschrist_verifier_conservative_unmetered_neurons >= 1000,
+  'a timed-out primary plus successful fallback must expose measured and conservative capacity receipts');
+
+  const timedOutDepthRepairResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'faith-study',
+      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+    }),
+  }), {
+    AI: { run: async () => {
+      timedOutDepthRepairCalls += 1;
+      if (timedOutDepthRepairCalls === 1) {
+        return {
+          response: { approved: true, answer: 'Hyrum Smith was a trusted early Church leader.', source_indexes: [1] },
+          usage: { prompt_tokens: 700, completion_tokens: 20 },
+        };
+      }
+      return new Promise(() => {});
+    } },
+  });
+  const timedOutDepthRepairPayload = await timedOutDepthRepairResponse.json();
+  assert(timedOutDepthRepairCalls === 2
+    && timedOutDepthRepairPayload.focuschrist_source_integrity_verified === false
+    && timedOutDepthRepairPayload.focuschrist_gateway_mode === 'verification-rejected'
+    && timedOutDepthRepairPayload.focuschrist_cloudflare_verifier_calls === 2
+    && timedOutDepthRepairPayload.focuschrist_groq_verifier_calls === 0
+    && timedOutDepthRepairPayload.focuschrist_verifier_estimated_neurons > 0
+    && timedOutDepthRepairPayload.focuschrist_verifier_conservative_unmetered_neurons >= 1000,
+  'a timed-out required repair must fail closed while preserving both Cloudflare calls and unresolved capacity');
+
+  const shallowFastFallbackResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'faith-study',
+      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
+    }),
+  }), {
+    AI: { run: async (model) => {
+      shallowFastFallbackCalls += 1;
+      if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return { response: { unexpected: 'metadata' } };
+      return { response: JSON.stringify({ approved: true, answer: 'Hyrum Smith was a Church leader.', source_indexes: [1] }) };
+    } },
+  });
+  const shallowFastFallbackPayload = await shallowFastFallbackResponse.json();
+  assert(shallowFastFallbackCalls === 2
+    && shallowFastFallbackPayload.focuschrist_source_integrity_verified === false,
+  'a shallow operational fallback must fail closed without stacking a third verifier call');
 
   const quoteRepairResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
     method: 'POST',

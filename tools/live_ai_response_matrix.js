@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.29';
+const POLICY_VERSION = '2026-09-03.30';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -156,7 +156,7 @@ function validate(test, result) {
     for (const pattern of test.factPatterns || []) assert(pattern.test(result.answer), test.id + ' omitted expected answer concept ' + pattern);
     for (const pattern of test.contradictionPatterns || []) assert(!pattern.test(result.answer), test.id + ' returned a negated or contradictory expected fact');
     if (test.officialOnly) {
-        assert(['cloudflare-primary', 'groq-fallback'].includes(result.verifierRoute), test.id + ' omitted a verifier route');
+        assert(['cloudflare-primary', 'cloudflare-fast-fallback', 'groq-fallback'].includes(result.verifierRoute), test.id + ' omitted a verifier route');
         assert(result.verified && result.sourceHosts.length > 0 && result.sourceHosts.every((host) => host === 'churchofjesuschrist.org' || host.endsWith('.churchofjesuschrist.org')), test.id + ' was not official-only verified');
         assert(result.retrievalRoute === 'church-source-index' && result.groqResearchCalls === 0 && result.indexSources > 0 && result.officialFetchCalls <= 2, test.id + ' did not prove bounded zero-Groq research');
         assert(result.sourceUrls.some((url) => test.sourcePattern.test(url)), test.id + ' selected an off-topic source URL');
@@ -168,7 +168,7 @@ function validate(test, result) {
         test.id + ' returned invalid per-provider verifier call accounting');
         assert(!(result.groqVerifierCalls > 0 && result.cloudflareVerifierCalls > 1),
             test.id + ' stacked verifier fallback with depth repair');
-        if (result.verifierRoute === 'cloudflare-primary') assert(result.estimatedNeurons > 0, test.id + ' omitted Cloudflare neuron accounting');
+        if (result.verifierRoute.startsWith('cloudflare-')) assert(result.estimatedNeurons > 0, test.id + ' omitted Cloudflare neuron accounting');
     }
 }
 
@@ -332,8 +332,8 @@ if (process.argv.includes('--definition-check')) {
         invalidCorinthians, invalidAlma, initial, followUp, reset, warmFirst, warmSecond];
     const times = allMeasured.map((result) => result.elapsedMs);
     const indexed = allMeasured.filter((result) => result.retrievalRoute === 'church-source-index');
-    const indexedNeuronCosts = indexed.map((result) => Math.max(
-        Number(result.estimatedNeurons || 0), Number(result.conservativeUnmeteredNeurons || 0)));
+    const indexedNeuronCosts = indexed.map((result) =>
+        Number(result.estimatedNeurons || 0) + Number(result.conservativeUnmeteredNeurons || 0));
     assert(indexedNeuronCosts.length >= 15 && indexedNeuronCosts.every((cost) => cost > 0),
         'insufficient complete indexed usage samples for capacity proof');
     const p95IndexedNeurons = percentile(indexedNeuronCosts, 0.95);

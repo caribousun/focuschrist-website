@@ -86,40 +86,46 @@ assert(cloudflarePrimaryResult.response.ok
 
 let malformedFallbackCalls = 0;
 let malformedFallbackBody;
-globalThis.fetch = async (_url, options) => {
-  malformedFallbackCalls += 1;
-  malformedFallbackBody = JSON.parse(options.body);
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }) } }],
-  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
-};
+let malformedFallbackModel = '';
+globalThis.fetch = async () => { throw new Error('Cloudflare fast fallback reached Groq'); };
 const malformedFallbackResult = await callVerifier({
   GROQ_KEY_NEW: 'test-key',
-  AI: { run: async () => ({ response: { unexpected: 'provider metadata' } }) },
+  AI: { run: async (model, body) => {
+    malformedFallbackCalls += 1;
+    if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return { response: { unexpected: 'provider metadata' } };
+    malformedFallbackModel = model;
+    malformedFallbackBody = body;
+    return {
+      response: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }),
+      usage: { prompt_tokens: 200, completion_tokens: 30 },
+    };
+  } },
 }, verifierBodyForTest, Date.now() + 12000);
-assert(malformedFallbackCalls === 1
-  && malformedFallbackResult.verifierRoute === 'groq-fallback'
+assert(malformedFallbackCalls === 2
+  && malformedFallbackResult.verifierRoute === 'cloudflare-fast-fallback'
   && malformedFallbackResult.fallbackReason === 'format-contract'
-  && malformedFallbackBody.model === 'openai/gpt-oss-20b'
+  && malformedFallbackModel === '@cf/meta/llama-3.1-8b-instruct-fp8-fast'
   && malformedFallbackBody.messages[0].content === verifierBodyForTest.messages[0].content
   && malformedFallbackBody.temperature === verifierBodyForTest.temperature
   && malformedFallbackBody.max_tokens === verifierBodyForTest.max_tokens
-  && malformedFallbackBody.response_format === undefined,
-  'malformed Cloudflare output must trigger one server-owned Groq verifier request without brittle provider-side JSON enforcement');
+  && malformedFallbackBody.response_format === undefined
+  && malformedFallbackResult.totalCloudflareVerifierCalls === 2
+  && malformedFallbackResult.totalCloudflareEstimatedNeurons > 0
+  && malformedFallbackResult.totalCloudflareUnmeteredNeurons >= 1000,
+  'malformed primary output must trigger one priced Cloudflare fast fallback with complete accounting');
 
 let missingIndexesFallbackCalls = 0;
-globalThis.fetch = async () => {
-  missingIndexesFallbackCalls += 1;
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }) } }],
-  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
-};
 const missingIndexesFallbackResult = await callVerifier({
   GROQ_KEY_NEW: 'test-key',
-  AI: { run: async () => ({ response: { approved: true, answer: 'Missing evidence indexes.' } }) },
+  AI: { run: async (model) => {
+    missingIndexesFallbackCalls += 1;
+    return model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
+      ? { response: { approved: true, answer: 'Missing evidence indexes.' } }
+      : { response: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }) };
+  } },
 }, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-assert(missingIndexesFallbackCalls === 1
-  && missingIndexesFallbackResult.verifierRoute === 'groq-fallback'
+assert(missingIndexesFallbackCalls === 2
+  && missingIndexesFallbackResult.verifierRoute === 'cloudflare-fast-fallback'
   && missingIndexesFallbackResult.fallbackReason === 'format-contract',
   'an evidence verifier verdict without source indexes must use exactly one operational fallback');
 
@@ -139,46 +145,47 @@ assert(missingBindingFallbackCalls === 1
   'a missing Cloudflare binding must call Groq exactly once and then fail closed');
 
 let malformedJsonFallbackCalls = 0;
-globalThis.fetch = async () => {
-  malformedJsonFallbackCalls += 1;
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: 'not valid JSON' } }],
-  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
-};
-const malformedJsonFallbackResult = await callVerifier({ GROQ_KEY_NEW: 'test-key' },
-  verifierBodyForTest, Date.now() + 12000);
-assert(malformedJsonFallbackCalls === 1
+const malformedJsonFallbackResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async (model) => {
+    malformedJsonFallbackCalls += 1;
+    return model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
+      ? { response: { unexpected: 'provider metadata' } }
+      : { response: 'not valid JSON' };
+  } },
+}, verifierBodyForTest, Date.now() + 12000);
+assert(malformedJsonFallbackCalls === 2
   && malformedJsonFallbackResult.response.status === 502
   && malformedJsonFallbackResult.data.error.code === 'invalid_verifier_response'
   && malformedJsonFallbackResult.formatContract === true,
-  'a successful Groq fallback with malformed JSON must fail closed without another request');
+  'a successful fast fallback with malformed JSON must fail closed without another request');
 
 let nonStringAnswerFallbackCalls = 0;
-globalThis.fetch = async () => {
-  nonStringAnswerFallbackCalls += 1;
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: JSON.stringify({ approved: true, answer: ['wrong type'], source_indexes: [1] }) } }],
-  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
-};
 const nonStringAnswerFallbackResult = await callVerifier({
   GROQ_KEY_NEW: 'test-key',
-  AI: { run: async () => ({ response: { unexpected: 'provider metadata' } }) },
+  AI: { run: async (model) => {
+    nonStringAnswerFallbackCalls += 1;
+    return model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
+      ? { response: { unexpected: 'provider metadata' } }
+      : { response: JSON.stringify({ approved: true, answer: ['wrong type'], source_indexes: [1] }) };
+  } },
 }, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-assert(nonStringAnswerFallbackCalls === 1
+assert(nonStringAnswerFallbackCalls === 2
   && nonStringAnswerFallbackResult.response.status === 502
   && nonStringAnswerFallbackResult.data.error.code === 'invalid_verifier_response',
-  'a successful Groq fallback with a non-string answer must fail closed without coercion');
+  'a successful fast fallback with a non-string answer must fail closed without coercion');
 
 let missingRequiredIndexesFallbackCalls = 0;
-globalThis.fetch = async () => {
-  missingRequiredIndexesFallbackCalls += 1;
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: JSON.stringify({ approved: true, answer: 'Missing indexes.' }) } }],
-  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
-};
-const missingRequiredIndexesFallbackResult = await callVerifier({ GROQ_KEY_NEW: 'test-key' },
-  verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-assert(missingRequiredIndexesFallbackCalls === 1
+const missingRequiredIndexesFallbackResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async (model) => {
+    missingRequiredIndexesFallbackCalls += 1;
+    return model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
+      ? { response: { unexpected: 'provider metadata' } }
+      : { response: JSON.stringify({ approved: true, answer: 'Missing indexes.' }) };
+  } },
+}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
+assert(missingRequiredIndexesFallbackCalls === 2
   && missingRequiredIndexesFallbackResult.response.status === 502
   && missingRequiredIndexesFallbackResult.data.error.code === 'invalid_verifier_response',
   'a successful evidence-verifier fallback without source indexes must fail closed without another request');
@@ -194,22 +201,40 @@ assert(cloudflareRejectionResult.verifierRoute === 'cloudflare-primary'
   'a valid Cloudflare rejection must fail closed without verifier shopping');
 
 let timeoutFallbackCalls = 0;
-globalThis.fetch = async () => {
-  timeoutFallbackCalls += 1;
-  return new Response(JSON.stringify({ error: { code: 'rate_limit_exceeded' } }), {
-    status: 429,
-    headers: { 'Content-Type': 'application/json' },
-  });
-};
 const timeoutFallbackResult = await callVerifier({
   GROQ_KEY_NEW: 'test-key',
-  AI: { run: async () => new Promise(() => {}) },
+  AI: { run: async (model) => {
+    timeoutFallbackCalls += 1;
+    if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return new Promise(() => {});
+    const error = new Error('rate limited'); error.status = 429; throw error;
+  } },
 }, verifierBodyForTest, Date.now() + 5300);
-assert(timeoutFallbackCalls === 1
-  && timeoutFallbackResult.verifierRoute === 'groq-fallback'
+assert(timeoutFallbackCalls === 2
+  && timeoutFallbackResult.verifierRoute === 'cloudflare-fast-fallback'
   && timeoutFallbackResult.fallbackReason === 'primary-timeout'
-  && timeoutFallbackResult.response.status === 429,
-  'a logical Cloudflare timeout must reserve time for exactly one Groq fallback and then fail closed');
+  && timeoutFallbackResult.response.status === 429
+  && timeoutFallbackResult.totalCloudflareUnmeteredNeurons >= 2000,
+  'a logical primary timeout must reserve time for one fast fallback and account for both unresolved calls');
+
+let timeoutRecoveryCalls = 0;
+const timeoutRecoveryResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async (model) => {
+    timeoutRecoveryCalls += 1;
+    if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return new Promise(() => {});
+    return {
+      response: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }),
+      usage: { prompt_tokens: 200, completion_tokens: 30 },
+    };
+  } },
+}, verifierBodyForTest, Date.now() + 5300, { requireSourceIndexes: true });
+assert(timeoutRecoveryCalls === 2
+  && timeoutRecoveryResult.response.ok
+  && timeoutRecoveryResult.verifierRoute === 'cloudflare-fast-fallback'
+  && timeoutRecoveryResult.totalCloudflareVerifierCalls === 2
+  && timeoutRecoveryResult.totalCloudflareEstimatedNeurons > 0
+  && timeoutRecoveryResult.totalCloudflareUnmeteredNeurons >= 1000,
+  'a timed-out primary plus successful fast fallback must account for measured and unresolved Cloudflare work');
 globalThis.fetch = verifierFetchBeforeTests;
 
 let rateLimitProviderCalls = 0;
@@ -641,7 +666,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.29',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.30',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
