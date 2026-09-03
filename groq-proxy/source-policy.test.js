@@ -72,6 +72,30 @@ assert(cloudflareChoicesResult.response.ok
   && JSON.parse(cloudflareChoicesResult.data.choices[0].message.content).approved === false,
   'the Cloudflare verifier adapter must normalize OpenAI choices-shaped output');
 
+const verifierFetchBeforeGroqPrimary = globalThis.fetch;
+let directGroqVerifierCalls = 0;
+globalThis.fetch = async (_url, init) => {
+  directGroqVerifierCalls += 1;
+  const requestBody = JSON.parse(init.body);
+  assert(requestBody.model === 'groq/compound-mini', 'production Groq verifier must use Compound Mini');
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: '{"approved":true,"answer":"Supported answer.","source_indexes":[1]}' } }],
+    usage: { prompt_tokens: 200, completion_tokens: 30 },
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+const directGroqVerifierResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  VERIFIER_PROVIDER: 'groq',
+  AI: { run: async () => { throw new Error('production Groq-primary route must not call Cloudflare'); } },
+}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
+globalThis.fetch = verifierFetchBeforeGroqPrimary;
+assert(directGroqVerifierCalls === 1
+  && directGroqVerifierResult.response.ok
+  && directGroqVerifierResult.verifierRoute === 'groq-primary'
+  && directGroqVerifierResult.totalCloudflareVerifierCalls === 0
+  && directGroqVerifierResult.totalGroqVerifierCalls === 1,
+  'production verifier route must use exactly one Groq Compound Mini call and zero Cloudflare calls');
+
 const verifierFetchBeforeTests = globalThis.fetch;
 let primaryVerifierGroqCalls = 0;
 globalThis.fetch = async () => { primaryVerifierGroqCalls += 1; throw new Error('Groq verifier should not run'); };
@@ -666,7 +690,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.34',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.35',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

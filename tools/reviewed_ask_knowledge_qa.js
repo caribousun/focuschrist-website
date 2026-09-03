@@ -35,7 +35,7 @@ function entrySourceUrls(entry) {
     return [...new Set(sources.map((source) => source.url))];
 }
 
-assert(registry && registry.policyVersion === '2026-09-03.16', 'reviewed registry policy version mismatch');
+assert(registry && registry.policyVersion === '2026-09-03.17', 'reviewed registry policy version mismatch');
 assert(Array.isArray(registry.entries) && registry.entries.length >= 12, 'reviewed registry is unexpectedly small');
 assert(questionManifest.release === registry.policyVersion, 'question-contract manifest release mismatch');
 
@@ -79,6 +79,18 @@ registry.entries.forEach((entry) => {
             assert(!result || result.id !== entry.id, `profile boundary failed: ${entry.id} appeared on ${profile}`);
         });
     });
+});
+
+const ownerFirstVision = registry.match('Tell me about First Vision', { profile: 'ask' });
+assert(ownerFirstVision && ownerFirstVision.id === 'church-first-vision-1820'
+    && ownerFirstVision.mode === 'reviewed-local' && ownerFirstVision.sourceIntegrityPassed === true
+    && ownerFirstVision.sources.every((source) => source.url.includes('churchofjesuschrist.org')),
+    'owner First Vision regression must resolve on Main Ask from reviewed official Church sources with zero provider dependency');
+registry.entries.filter((entry) => entry.profiles.includes('church-history')).forEach((entry) => {
+    assert(entry.profiles.includes('ask'), 'reviewed Church History knowledge must also be available to Main Ask: ' + entry.id);
+});
+registry.entries.filter((entry) => entry.profiles.includes('pioneers')).forEach((entry) => {
+    assert(entry.profiles.includes('ask'), 'reviewed Pioneer knowledge must also be available to Main Ask: ' + entry.id);
 });
 
 const handcart = registry.match('What year did the handcarts begin?', { profile: 'pioneers' });

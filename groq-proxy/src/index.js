@@ -6,7 +6,7 @@ import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP
 // unreviewed answer before returning it to the browser.
 
 const RESEARCH_MODEL = 'groq/compound-mini';
-const VERIFIER_MODEL = 'openai/gpt-oss-20b';
+const VERIFIER_MODEL = 'groq/compound-mini';
 const CLOUDFLARE_VERIFIER_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
 const CLOUDFLARE_FALLBACK_MODEL = '@cf/meta/llama-3.1-8b-instruct-fp8-fast';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
@@ -21,8 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.34';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.34';
+const SOURCE_POLICY_VERSION = '2026-09-03.35';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.35';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1113,6 +1113,22 @@ async function callVerifier(env, body, deadline, options = {}) {
   const allowGroqFallback = options.allowGroqFallback !== false;
   const { response_format: _providerEnforcedFormat, ...plainJsonBody } = body;
   const groqFallbackBody = { ...plainJsonBody, model: VERIFIER_MODEL };
+  if (String(env && env.VERIFIER_PROVIDER || '').toLowerCase() === 'groq') {
+    const primary = validateGroqVerifierResult(
+      await callGroq(env && env.GROQ_KEY_NEW, groqFallbackBody, deadline, false),
+      requireSourceIndexes,
+    );
+    return {
+      ...primary,
+      verifierRoute: 'groq-primary',
+      fallbackReason: primary.response && primary.response.ok ? null : 'groq-primary-error',
+      totalCloudflareVerifierCalls: 0,
+      totalCloudflareEstimatedNeurons: 0,
+      totalCloudflareUnmeteredNeurons: 0,
+      totalGroqVerifierCalls: Number(primary.callCount || 1),
+      verifierDurationMs: Date.now() - started,
+    };
+  }
   if (!env || !env.AI || typeof env.AI.run !== 'function') {
     if (!allowGroqFallback) {
       return {
