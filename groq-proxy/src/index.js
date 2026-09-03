@@ -21,7 +21,7 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.30';
+const SOURCE_POLICY_VERSION = '2026-09-03.31';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -368,7 +368,7 @@ function rankChurchSourceCandidates(question, page) {
     if (focusedTopicMatch) score += 60;
     if (page === 'church-history' && /history/.test(entry.kind)) score += 8;
     if (page === 'pioneers' && /pioneer|history/.test(`${entry.tokens} ${entry.kind}`)) score += 8;
-    const topicPinned = pioneerIrrigation && /\/history\/topics\/pioneer-settlements/.test(entry.url);
+    const topicPinned = pioneerIrrigation && /\/learn\/history\/a-brief-history/.test(entry.url);
     if (topicPinned) score += 500;
     return { ...entry, score, overlapCount: overlaps.length, titleMatch, focusedTopicMatch, topicPinned };
   }).filter((entry) => entry.topicPinned

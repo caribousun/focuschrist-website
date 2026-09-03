@@ -219,3 +219,11 @@ Exact `.28` returned complete answers for all 15 paced core specimens with offic
 Candidate `.30` replaces that ineffective operational fallback with Cloudflare's active, priced `@cf/meta/llama-3.1-8b-instruct-fp8-fast` model through the existing AI binding. It does not claim provider-enforced JSON support. The output must pass the strict local parser, source-index requirement, substance guard, source-overlap guard, and known-false-claim guard. It runs only after an operational failure or malformed contract, never after a valid rejection, and cannot trigger a third verifier call. The primary/fallback allocation is 12/5 seconds inside the unchanged 22-second request budget.
 
 Exact per-model neuron pricing is recorded. Each Cloudflare attempt without usage adds a conservative 1,000-neuron allowance, including a timed-out call that may continue provider-side and a failed repair call. The capacity gate adds measured and conservative usage. Production remains `VERIFIED FAIL` pending the full live matrix and rendered journeys.
+
+
+## Exact policy .30 production result and .31 source correction
+
+- Policy `.30` merged at `1ff829fe371129b804c98498b4c5c5d4cb5de07b` and deployed as Worker version `469fe621-dcb4-4531-a59e-9e8cfb1bb68c` in run `33723103367`. Pages run `33723103277` and Site QA run `33723103338` passed.
+- All 15 core questions returned complete answers with correct profiles and required receipts. The same-binding fast fallback recovered one Relief Society request in 13,231 ms, reporting two Cloudflare calls, eight measured neurons, and the 1,000-neuron conservative allowance. Indexed requests used official sources and zero Groq research.
+- The gate failed during independent source-page validation. The Pioneer answers cited the official Pioneer Settlements page, whose rendered article text discusses settlements and limited water but does not directly contain irrigation or cooperation. Production remains `VERIFIED FAIL`.
+- Candidate `.31` pins Pioneer-page irrigation questions to the official brief-history page whose rendered article directly states that Saints saw spiritual value in cooperative irrigation and economics. The source check, answer check, retrieval limits, provider path, safety rules, latency ceilings, and capacity gates remain unchanged.
