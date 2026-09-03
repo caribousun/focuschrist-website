@@ -226,7 +226,7 @@
 
         const chatBox = document.getElementById('chatBox');
         if (chatBox) {
-            chatBox.insertAdjacentElement('afterend', dock);
+            chatBox.insertAdjacentElement('beforebegin', dock);
         } else {
             document.body.appendChild(dock);
         }
@@ -343,7 +343,8 @@
             behavior: preferredScrollBehavior()
         });
 
-        scrollPageToElement(chatBox);
+        const followupDock = document.getElementById('askFollowupDock');
+        scrollPageToElement(followupDock && followupDock.classList.contains('visible') ? followupDock : chatBox);
     }
 
     function submitQuestion(question) {

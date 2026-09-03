@@ -177,8 +177,11 @@ def main() -> int:
 
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     home_art = "assets/page-art/home-seek-study-remember.webp"
-    if f'src="{home_art}"' not in home or 'class="fc-content-artwork"' not in home:
+    if f'src="{home_art}"' not in home or 'class="fc-content-artwork fc-home-purpose-art"' not in home:
         fail(errors, "index.html: approved supporting artwork missing or not wired")
+    for marker in ('href="home.css?v=20260903-1"', 'class="fc-home-purpose-split"', 'class="fc-home-purpose-copy"'):
+        if marker not in home:
+            fail(errors, f"index.html: Missionary-style Home composition marker missing: {marker}")
     home_art_path = ROOT / home_art
     if not home_art_path.exists() or home_art_path.stat().st_size == 0:
         fail(errors, f"index.html: supporting artwork asset missing or empty: {home_art}")
@@ -211,13 +214,21 @@ def main() -> int:
     ask_css = (ROOT / "ask-experience.css").read_text(encoding="utf-8")
     for marker in (
         'grid-template-columns: minmax(0, 1.45fr) minmax(310px, .75fr)',
-        '.ask-conversation-copy .ask-conversation-reset--fallback',
+        '.ask-conversation-copy .ask-section-heading',
         'grid-template-areas: "links art"',
         '@media (max-width: 1050px)',
         '.ask-continue-card span',
     ):
         if marker not in ask_css:
             fail(errors, f"ask-experience.css: polished artwork-flow marker missing: {marker}")
+
+    ask_js = (ROOT / "ask-experience.js").read_text(encoding="utf-8")
+    for marker in ("chatBox.insertAdjacentElement('beforebegin', dock)", "followupDock.classList.contains('visible') ? followupDock : chatBox"):
+        if marker not in ask_js:
+            fail(errors, f"ask-experience.js: follow-up visibility marker missing: {marker}")
+    for unrequested_control in ("Clear & Start Over", "Clear Conversation", "data-focuschrist-conversation-reset"):
+        if unrequested_control in (ROOT / "study-journey.js").read_text(encoding="utf-8"):
+            fail(errors, f"study-journey.js: unrequested reset control remains: {unrequested_control}")
 
     pioneers = (ROOT / "pioneers.html").read_text(encoding="utf-8")
     if 'fc-visual-hero--history' not in pioneers:

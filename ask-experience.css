@@ -275,27 +275,13 @@ body {
     margin-bottom: 30px;
 }
 
-.ask-conversation-copy {
-    display: flex;
-    flex-direction: column;
-}
-
 .ask-conversation-copy .ask-section-heading,
 .ask-conversation-copy .ask-section-copy {
     text-align: left;
 }
 
 .ask-conversation-copy .ask-section-copy {
-    order: 2;
     margin-bottom: 0;
-}
-
-.ask-conversation-copy .ask-section-heading { order: 1; }
-
-.ask-conversation-copy .ask-conversation-reset--fallback {
-    order: 3;
-    align-self: flex-start;
-    margin: 22px 0 0;
 }
 
 .ask-supporting-art.fc-content-artwork {
@@ -589,10 +575,6 @@ body {
         min-height: 270px;
         object-fit: cover;
         object-position: center;
-    }
-    .ask-conversation-copy .ask-conversation-reset--fallback {
-        width: 100%;
-        align-self: stretch;
     }
 }
 

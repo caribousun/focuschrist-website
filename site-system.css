@@ -629,16 +629,6 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     color: var(--fc-cream);
     outline: none;
 }
-.ask-conversation-reset--fallback {
-    display: block;
-    margin: 0 auto 14px;
-}
-.ask-followup-actions {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 9px;
-}
-
 .fc-visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -679,8 +669,6 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     .fc-grid--4 { grid-template-columns: 1fr; }
     .fc-actions { align-items: stretch; }
     .fc-button { width: 100%; }
-    .ask-followup-actions { justify-content: stretch; }
-    .ask-followup-actions .ask-conversation-reset { width: 100%; }
     .fc-content-artwork { border-radius: 16px; }
     .fc-content-artwork figcaption {
         padding: 36px 17px 13px;

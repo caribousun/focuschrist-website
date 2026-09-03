@@ -193,7 +193,7 @@ function requireSubstantive(match, label, expected) {
     console.log('Exact production dependency graph verified: ' + ASSETS.length + ' assets / ' + CANONICAL_TARGETS.length + ' canonical cache keys');
 
     assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260901-15')
-        && live['ask.html'].includes('ask-experience.js?v=20260901-15'),
+        && live['ask.html'].includes('ask-experience.js?v=20260903-1'),
         'production Ask HTML does not load the .15 controllers');
     assert(live['pioneers.html'].includes('pioneer-experience.js?v=20260901-15'),
         'production Pioneer HTML does not load the .15 controller');
