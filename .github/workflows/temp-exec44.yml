@@ -1,4 +1,5 @@
 name: Temporary depth-margin closeout verification
+# rerun after unit fixture correction
 on:
   push:
     branches: [codex/executive-ai-depth-margin-44]
