@@ -51,3 +51,5 @@ jobs:
           git add MEMORY.md groq-proxy/src/index.js groq-proxy/source-policy.test.js tools/live_ai_response_matrix.js tools/pioneer_local_first_qa.py tools/scripture_grounding_qa.py
           git commit -m "Harden cached relevance and scripture context"
           git push origin HEAD:codex/ai-scripture-evidence-39
+
+# rerun after restoring the canonical evidence cap
