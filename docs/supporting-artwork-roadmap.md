@@ -38,6 +38,7 @@ All candidates must use cinematic photographic realism, natural anatomy and fabr
 - Ask, `ask-nicodemus`: approved. Retained beside Continue Your Study.
 - Walking candidate: rejected. Do not reuse its concept.
 - Cartoon-styled candidate: rejected. The rejection is a permanent exclusion for this artwork program.
+- Answers courtyard teaching candidate generated on 2026-09-03: rejected. It did not match the approved focusChrist character or the established page artwork and must never be used.
 
 ## Performance release gate
 

@@ -203,6 +203,8 @@ def main() -> int:
             fail(errors, f"ask.html: supporting artwork exceeds 120 KB performance budget: {ask_art}")
     for marker in (
         'class="ask-conversation-feature"',
+        'id="conversationClearBtn"',
+        '>Clear Conversation</button>',
         'class="ask-continue-layout"',
         'loading="lazy"',
         'decoding="async"',
@@ -215,6 +217,7 @@ def main() -> int:
     for marker in (
         'grid-template-columns: minmax(0, 1.45fr) minmax(310px, .75fr)',
         '.ask-conversation-copy .ask-section-heading',
+        '.ask-clear-conversation',
         'grid-template-areas: "links art"',
         '@media (max-width: 1050px)',
         '.ask-continue-card span',
@@ -223,7 +226,7 @@ def main() -> int:
             fail(errors, f"ask-experience.css: polished artwork-flow marker missing: {marker}")
 
     ask_js = (ROOT / "ask-experience.js").read_text(encoding="utf-8")
-    for marker in ("chatBox.insertAdjacentElement('beforebegin', dock)", "followupDock.classList.contains('visible') ? followupDock : chatBox"):
+    for marker in ("chatBox.insertAdjacentElement('beforebegin', dock)", "followupDock.classList.contains('visible') ? followupDock : chatBox", "document.getElementById('conversationClearBtn')"):
         if marker not in ask_js:
             fail(errors, f"ask-experience.js: follow-up visibility marker missing: {marker}")
     for unrequested_control in ("Clear & Start Over", "Clear Conversation", "data-focuschrist-conversation-reset"):

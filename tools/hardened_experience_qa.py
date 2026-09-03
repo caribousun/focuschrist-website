@@ -91,6 +91,8 @@ def main() -> int:
         "chatBox.insertAdjacentElement('beforebegin', dock)",
         "followupDock.classList.contains('visible') ? followupDock : chatBox",
         "followupInput.focus({ preventScroll: true })",
+        "document.getElementById('conversationClearBtn')",
+        "focusAskComposer(false)",
     ), errors)
 
     require(pioneer_css, "pioneer-experience.css", (

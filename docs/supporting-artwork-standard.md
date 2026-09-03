@@ -13,6 +13,7 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Skin, hands, eyes, hair, fabric, light, and environments must look naturally photographed, not painted, cartooned, airbrushed, or game-rendered.
 - Expressions should be compassionate and restrained. Avoid exaggerated smiles, halos, fantasy lighting, and theatrical poses.
 - Artwork must clearly reflect the theme and content near its placement.
+- Existing approved focusChrist artwork is the literal visual reference for character likeness, realism, light, color, and emotional restraint. Photorealism by itself is not a match.
 - Favor varied compositions and placements. Images may sit left, right, or span a section when that creates better flow. Do not mechanically center every image.
 
 ## Page layout
@@ -56,6 +57,7 @@ Supporting artwork beautifies the content of each page without replacing or chan
 
 - The walking image generated for the Ask page was rejected and must not be used.
 - The earlier stylized Nicodemus image was rejected because it looked cartoon-like and must not be used.
+- The 2026-09-03 Answers-page courtyard teaching candidate was rejected because it did not match the approved focusChrist character or established artwork. It must not be used or treated as a style reference.
 
 ## Release protection
 

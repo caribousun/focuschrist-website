@@ -219,7 +219,7 @@
 
         const note = document.createElement('div');
         note.className = 'ask-followup-note';
-        note.textContent = 'Your previous questions and answers remain part of this conversation. Use New Question above when you want to start over.';
+        note.textContent = 'Your previous questions and answers remain part of this conversation. Use Clear Conversation above when you want to start over.';
         shell.appendChild(note);
 
         dock.appendChild(shell);
@@ -477,6 +477,7 @@
 
     function initNewQuestionButton() {
         const button = document.getElementById('clearBtn');
+        const conversationButton = document.getElementById('conversationClearBtn');
         if (!button) return;
         const originalClear = typeof window.clearChat === 'function' ? window.clearChat : null;
         if (originalClear) {
@@ -498,10 +499,17 @@
         }
         button.addEventListener('click', function () {
             window.setTimeout(function () {
-                const input = document.getElementById('userInput');
-                if (input) input.focus();
+                focusAskComposer(false);
             }, 0);
         });
+        if (conversationButton) {
+            conversationButton.addEventListener('click', function () {
+                if (typeof window.clearChat === 'function') window.clearChat();
+                window.setTimeout(function () {
+                    focusAskComposer(false);
+                }, 0);
+            });
+        }
     }
 
     function initInputLabeling() {

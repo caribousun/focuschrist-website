@@ -293,7 +293,7 @@ def main() -> int:
             fail(errors, f"Ask redesigned experience marker missing/duplicated: {marker}")
     if '<link rel="stylesheet" href="ask-experience.css">' not in ask:
         fail(errors, "Ask experience stylesheet missing")
-    if '<script src="ask-experience.js?v=20260903-1" defer></script>' not in ask:
+    if '<script src="ask-experience.js?v=20260903-2" defer></script>' not in ask:
         fail(errors, "Ask experience controller missing")
     if ask.count('data-ask-starter') < 6:
         fail(errors, "Ask starter question set unexpectedly incomplete")
