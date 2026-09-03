@@ -1,0 +1,55 @@
+name: Temporary Enos production diagnostic
+
+on:
+  push:
+    branches:
+      - codex/enos-production-diagnostic-51
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exercise deployed Enos route twice
+        shell: bash
+        run: |
+          node <<'NODE'
+          const endpoint = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
+          const body = {
+            focuschrist_page: 'ask',
+            focuschrist_profile: 'faith-study',
+            messages: [{ role: 'user', content: 'What does Enos 1 teach about prayer and forgiveness?' }],
+          };
+          for (let i = 1; i <= 2; i += 1) {
+            const started = Date.now();
+            const response = await fetch(endpoint, {
+              method: 'POST',
+              headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+              body: JSON.stringify(body),
+            });
+            const payload = await response.json();
+            console.log(JSON.stringify({
+              attempt: i,
+              status: response.status,
+              elapsedMs: Date.now() - started,
+              answer: payload?.choices?.[0]?.message?.content || '',
+              gatewayMode: payload.focuschrist_gateway_mode,
+              policy: payload.focuschrist_source_policy,
+              verifierRoute: payload.focuschrist_verifier_route,
+              reviewedRecovery: payload.focuschrist_reviewed_deterministic_recovery,
+              retrievalRoute: payload.focuschrist_retrieval_route,
+              deterministicScripture: payload.focuschrist_deterministic_scripture,
+              sources: payload.focuschrist_sources,
+              evidenceRelevance: payload.focuschrist_evidence_relevance,
+              cacheHits: payload.focuschrist_official_cache_hits,
+              cacheMisses: payload.focuschrist_official_cache_misses,
+              indexSources: payload.focuschrist_index_sources,
+              officialFetchCalls: payload.focuschrist_official_fetch_calls,
+              groqVerifierCalls: payload.focuschrist_groq_verifier_calls,
+              openaiVerifierCalls: payload.focuschrist_openai_verifier_calls,
+              verified: payload.focuschrist_source_integrity_verified,
+            }));
+          }
+          NODE
