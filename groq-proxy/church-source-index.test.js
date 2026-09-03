@@ -6,6 +6,7 @@ import worker, {
   hasExcessiveSourceOverlap,
   isPioneerIrrigationIntent,
   rankChurchSourceCandidates,
+  REQUEST_BUDGET_MS,
 } from './src/index.js';
 
 function assert(condition, message) {
@@ -487,40 +488,123 @@ try {
 }
 
 
-let shortPioneerVerifierCalls = 0;
-const pioneerEvidenceAnswer = 'Cooperative irrigation helped early Latter-day Saint settlers make dry land productive and establish a durable community in the Salt Lake Valley. The official history describes leaders preparing the pioneer companies with practical instruction about irrigation, followed by the advance company creating a basic system as soon as it entered the valley. Shared planning and labor therefore supported planting and the physical development of the settlement. This work mattered because reliable water made agriculture possible in an arid place and gave the arriving Saints a practical foundation for building their new community together.';
-globalThis.fetch = async (url) => {
-  if (String(url || '').includes('api.groq.com')) throw new Error('pinned indexed evidence must not call Groq');
-  return new Response(`<!doctype html><html><body>
-    <p>Church leaders taught the emigrating companies about planting seeds and irrigation while preparing the pioneer journey.</p>
-    <p>The advance company entered the Salt Lake Valley and immediately set up a crude irrigation system to prepare the land for planting and establish the settlement.</p>
-  </body></html>`, { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
-};
-try {
-  const shortPioneerResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+
+const cachedPioneerParagraphs = [
+  'Families planned water channels together as the settlement took root in the valley.',
+];
+const cachedPioneerResponse = () => new Response(JSON.stringify({ paragraphs: cachedPioneerParagraphs }), {
+  headers: { 'Content-Type': 'application/json' },
+});
+const chapterTwentySixUrl = 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng';
+const chapterTwentySixDigest = await globalThis.crypto.subtle.digest(
+  'SHA-256',
+  new TextEncoder().encode(chapterTwentySixUrl),
+);
+const chapterTwentySixCacheUrl = `https://focuschrist-groq-proxy.caribousun.workers.dev/__official_excerpt_cache/${Array.from(
+  new Uint8Array(chapterTwentySixDigest),
+  (byte) => byte.toString(16).padStart(2, '0'),
+).join('')}`;
+const pioneerEvidenceAnswer = 'Cooperative irrigation helped early Latter-day Saint settlers make dry land productive and establish a durable community in the Salt Lake Valley. The official history describes families planning channels that distributed scarce water as the settlement took root. Shared planning and labor therefore supported planting and the physical development of the new community. This work mattered because dependable water access made agriculture possible in an arid place and gave arriving Saints a practical foundation for building together. Their coordinated water work was one part of turning the valley into a lasting settlement.';
+const originalCaches = globalThis.caches;
+
+async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false }) {
+  let verifierCalls = 0;
+  let groqCalls = 0;
+  let officialFetchCalls = 0;
+  globalThis.caches = {
+    default: {
+      match: async (request) => (omitPinnedSource && request.url === chapterTwentySixCacheUrl
+        ? null
+        : cachedPioneerResponse()),
+      put: async () => {},
+    },
+  };
+  globalThis.fetch = async (url) => {
+    if (String(url || '').includes('api.groq.com')) {
+      groqCalls += 1;
+      return new Response(JSON.stringify({ error: { message: 'Groq must not be called' } }), {
+        status: 429,
+        headers: { 'Content-Type': 'application/json' },
+      });
+    }
+    officialFetchCalls += 1;
+    return new Response('', { status: 503, headers: { 'Content-Type': 'text/html' } });
+  };
+  const response = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
     method: 'POST',
     headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      focuschrist_page: 'pioneers',
-      focuschrist_profile: 'pioneer-study',
-      messages: [{ role: 'user', content: 'Why did cooperative irrigation contribute to settlement life?' }],
+      focuschrist_page: page,
+      focuschrist_profile: profile,
+      messages: [{ role: 'user', content: question }],
     }),
   }), {
     AI: { run: async () => {
-      shortPioneerVerifierCalls += 1;
-      return { response: shortPioneerVerifierCalls === 1
-        ? { approved: false, answer: '', source_indexes: [] }
-        : { approved: true, answer: pioneerEvidenceAnswer, source_indexes: [1] } };
+      verifierCalls += 1;
+      return { response: approveSecond && verifierCalls === 2
+        ? { approved: true, answer: pioneerEvidenceAnswer, source_indexes: [1] }
+        : { approved: false, answer: '', source_indexes: [] } };
     } },
   });
-  const shortPioneerPayload = await shortPioneerResponse.json();
-  assert(shortPioneerVerifierCalls === 2
-    && shortPioneerPayload.focuschrist_source_integrity_verified === true
-    && shortPioneerPayload.focuschrist_cloudflare_verifier_calls === 2
-    && shortPioneerPayload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six')),
-  'a false negative for the pinned short Pioneer irrigation paraphrase must receive one bounded reconsideration and publish only verified official evidence');
+  return { payload: await response.json(), verifierCalls, groqCalls, officialFetchCalls };
+}
+
+try {
+  const positive = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+    approveSecond: true,
+  });
+  assert(positive.verifierCalls === 2
+    && positive.groqCalls === 0
+    && positive.officialFetchCalls === 0
+    && positive.payload.focuschrist_source_integrity_verified === true
+    && positive.payload.focuschrist_cloudflare_verifier_calls === 2
+    && positive.payload.focuschrist_groq_verifier_calls === 0
+    && positive.payload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six'))
+    && positive.payload.focuschrist_evidence_relevance.length > 0
+    && positive.payload.focuschrist_evidence_relevance.every((entry) => entry.overlap_count < 2)
+    && REQUEST_BUDGET_MS === 22000,
+  'cached sub-threshold chapter 26 evidence must alone enable one bounded Cloudflare reconsideration inside the unchanged request budget');
+
+  const askNegative = await runPioneerReconsiderationCase({
+    page: 'ask',
+    profile: 'faith-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+  });
+  assert(askNegative.verifierCalls === 1
+    && askNegative.groqCalls === 0
+    && askNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && askNegative.payload.focuschrist_source_integrity_verified !== true,
+  'the same sub-threshold irrigation wording on general Ask must not receive the Pioneer reconsideration');
+
+  const unrelatedNegative = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'How did pioneers cooperate to build temples?',
+  });
+  assert(unrelatedNegative.verifierCalls === 1
+    && unrelatedNegative.groqCalls === 0
+    && unrelatedNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && unrelatedNegative.payload.focuschrist_source_integrity_verified !== true,
+  'unrelated Pioneer cooperation must not receive the irrigation reconsideration');
+
+  const missingPinnedNegative = await runPioneerReconsiderationCase({
+    page: 'pioneers',
+    profile: 'pioneer-study',
+    question: 'Why did cooperative irrigation contribute to settlement life?',
+    omitPinnedSource: true,
+  });
+  assert(missingPinnedNegative.verifierCalls === 1
+    && missingPinnedNegative.groqCalls === 0
+    && missingPinnedNegative.officialFetchCalls >= 1
+    && missingPinnedNegative.payload.focuschrist_cloudflare_verifier_calls === 1
+    && missingPinnedNegative.payload.focuschrist_source_integrity_verified !== true,
+  'Pioneer irrigation without the exact chapter 26 evidence must not receive the pinned-source reconsideration');
 } finally {
   globalThis.fetch = originalFetch;
+  globalThis.caches = originalCaches;
 }
 
 console.log('Church source index QA PASS');
