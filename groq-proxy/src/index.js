@@ -20,7 +20,7 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.24';
+const SOURCE_POLICY_VERSION = '2026-09-03.25';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1466,7 +1466,8 @@ export default {
         'You are a strict evidence verifier. Return one JSON object only.',
         'Compose the final answer from the supplied source excerpts. If the DRAFT block is empty, write the answer directly from EVIDENCE and never reject merely because no candidate draft was supplied.',
         'If a draft is present, repair it into a direct, complete answer using the evidence. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
-        'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give at least 70 words and three complete sentences. A nuanced question normally needs two to five short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
+        'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give 90 to 220 words and at least three complete sentences. A nuanced question normally needs two to four short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
+        'Use independently worded paraphrase. Do not copy a long passage or reconstruct the source in ordered fragments. Apart from unavoidable names and short doctrinal phrases, avoid matching source wording for more than eight consecutive words.',
         'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
         'Set approved true whenever the evidence contains material that can responsibly answer the question, including when DRAFT is empty. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
@@ -1500,16 +1501,27 @@ export default {
       let indexes = verdict && Array.isArray(verdict.source_indexes)
         ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
         : [];
-      if (verdict && verdict.approved === true && indexes.length
-        && !answerMeetsSubstanceContract(verdict.answer, sanitized.scope)
+      const selectedEvidenceBeforeRepair = indexes.map((index) => evidence[index - 1]);
+      const needsDepthRepair = Boolean(verdict && verdict.approved === true && indexes.length
+        && !answerMeetsSubstanceContract(verdict.answer, sanitized.scope));
+      const needsParaphraseRepair = Boolean(verdict && verdict.approved === true && indexes.length
+        && hasExcessiveSourceOverlap(verdict.answer, selectedEvidenceBeforeRepair));
+      if ((needsDepthRepair || needsParaphraseRepair)
         && verifierResult.verifierRoute !== 'groq-fallback'
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
         const expansionPrompt = [
           verifierPrompt,
           '',
-          'Your previous approved answer did not meet the required answer depth.',
-          `Rewrite it using at least ${requirements.minimumWords} words, ${requirements.minimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s).`,
+          needsDepthRepair
+            ? 'Your previous approved answer did not meet the required answer depth.'
+            : 'Your previous approved answer failed the final publication overlap check.',
+          needsDepthRepair
+            ? `Rewrite it using at least ${requirements.minimumWords} words, ${requirements.minimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s).`
+            : 'Keep the answer complete and concise.',
+          needsParaphraseRepair
+            ? 'Rewrite the answer in genuinely independent language. Do not copy a long passage or reconstruct the source in ordered fragments. Preserve supported facts, but change the sentence structure and wording throughout.'
+            : 'Preserve the independently worded explanation.',
           'State the direct answer first. Add only useful explanatory context supported by the supplied evidence; do not pad, repeat, speculate, or add facts from memory.',
           `PREVIOUS ANSWER:\n${String(verdict.answer || '').trim()}`,
           'Return the complete JSON object again with approved, answer, and source_indexes.',
@@ -1517,7 +1529,7 @@ export default {
         const expansionResult = await callVerifier(env, {
           ...verifierBody,
           messages: [{ role: 'user', content: expansionPrompt }],
-          max_tokens: 900,
+          max_tokens: sanitized.scope.selectedPioneer ? 900 : 400,
         }, deadline, {
           requireSourceIndexes: true,
           allowGroqFallback: false,
