@@ -277,3 +277,10 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Production .36 eliminated most prior failures but showed GPT-OSS verifier completions repeatedly exhausting the 700-token cap on some Relief Society and grace questions, while a directly relevant Alma 32 variant was still over-rejected.
 - Candidate .37 uses Groq-supported GPT-OSS controls: low reasoning effort, reasoning excluded from the response, and JSON response mode. Faith verification gets a 1,000-token completion ceiling. The verifier instructions explicitly interpret understandable awkward grammar and prohibit rejecting a named official scripture/history topic merely because the visitor phrased the question imperfectly.
 - Source integrity remains fail-closed. Official-domain restriction, source indexes, evidence relevance, depth, paraphrase, known-false-claim checks, and bounded reconsideration remain mandatory.
+
+
+### Ask evidence relevance receipt correction - candidate 2026-09-03.38
+
+- Production .37 fixed the prior GPT-OSS truncation and false-negative problems: doctrine, scripture, Relief Society, grace, general knowledge, and most Pioneer cases passed live. One Pioneer holdout exposed a real receipt mismatch: fetch acceptance counted repeated occurrences of one query word, while the publication matrix correctly required two unique overlapping concepts.
+- Candidate .38 makes official evidence admission use the same unique-token relevance standard as the final evidence receipt. A source with one repeated matching word is rejected, allowing the next genuinely relevant indexed official source to be selected instead.
+- This does not weaken any answer gate. It tightens evidence admission so the retrieval stage and final production relevance receipt use the same standard.
