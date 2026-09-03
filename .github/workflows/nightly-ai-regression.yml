@@ -1,0 +1,26 @@
+name: Nightly Ask Production Regression
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 8 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: focuschrist-nightly-ask-production
+  cancel-in-progress: false
+
+jobs:
+  production-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Validate committed Church source index
+        run: python tools/build_church_source_index.py --check
+
+      - name: Run paced production AI matrix
+        run: node tools/live_ai_response_matrix.js --baseline

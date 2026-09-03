@@ -4,3 +4,11 @@ compatibility_date = "2024-01-01"
 
 [ai]
 binding = "AI"
+
+[[ratelimits]]
+name = "ASK_RATE_LIMITER"
+namespace_id = "90322026"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60

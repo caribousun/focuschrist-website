@@ -215,9 +215,9 @@
     {
       "path": "ask.html",
       "status": "verified",
-      "published_text_sha256": "bb39f0c59ba29283cff61d1f449fc1795ab59254d86db7074860293ead049a2d",
+      "published_text_sha256": "538369c7417456e196489398d56fa258a7eb48e486be0a7f5cce2187cb5b5bd8",
       "reviewed_on": "2026-09-03",
-      "review_standard": "L-044 universal source-integrity review; approved supporting artwork descriptions and presentation order reviewed; owner-requested Clear Conversation control reviewed as non-source-dependent interface wording; embedded answers governed by separate fail-closed inventory and runtime checks",
+      "review_standard": "L-044 universal source-integrity review; approved supporting artwork descriptions and presentation order reviewed; owner-requested Clear Conversation control reviewed as non-source-dependent interface wording; external-provider disclosure reviewed against deployed data flow; embedded answers governed by separate fail-closed inventory and runtime checks",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng"
       ]
@@ -225,9 +225,9 @@
     {
       "path": "church-history.html",
       "status": "verified",
-      "published_text_sha256": "eaf899da42ec54c56b10dc0cae742caa98617b68754acbf9f44d171d3f4a79c0",
+      "published_text_sha256": "f038419039767c4854bcccfa023198bb754c8af8d66a124d5d0618f4918311df",
       "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "review_standard": "L-044 universal source-integrity review; external-provider disclosure reviewed against deployed data flow",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v1?lang=eng",
@@ -279,9 +279,9 @@
     {
       "path": "pioneers.html",
       "status": "verified",
-      "published_text_sha256": "f2d811e25d2fea93bafa4fa5c13920fc271508d8093b86af36203ce6abeb8ffd",
+      "published_text_sha256": "be938ab891688f010286550663cc4f38a3529bf1e4f3b96600f48e84cd08269c",
       "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review; journal excerpts checked against the linked Church History transcript; Tell My Story, Too used only as a person-indexing research lead pending authoritative corroboration",
+      "review_standard": "L-044 universal source-integrity review; journal excerpts checked against the linked Church History transcript; Tell My Story, Too used only as a person-indexing research lead pending authoritative corroboration; external-provider disclosure reviewed against deployed data flow",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng",
         "https://history.churchofjesuschrist.org/timeline/us-migration-mormon-emigration-and-the-handcart-experiment",
