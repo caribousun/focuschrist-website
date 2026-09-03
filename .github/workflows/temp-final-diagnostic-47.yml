@@ -1,0 +1,55 @@
+name: Temporary final production diagnostic
+on:
+  push:
+    branches:
+      - codex/production-final-diagnostic-47
+permissions:
+  contents: read
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run exact production journeys
+        shell: bash
+        run: |
+          node <<'NODE'
+          const endpoint = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
+          const headers = { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' };
+          async function ask(label, messages, profile='faith-study') {
+            const started = Date.now();
+            const response = await fetch(endpoint, {
+              method: 'POST', headers,
+              body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: profile, messages })
+            });
+            const p = await response.json();
+            const answer = String(p?.choices?.[0]?.message?.content || '');
+            const out = {
+              label, status: response.status, elapsedMs: Date.now()-started,
+              policy: p.focuschrist_source_policy,
+              mode: p.focuschrist_gateway_mode,
+              route: p.focuschrist_verifier_route,
+              resolvedProfile: p.focuschrist_resolved_profile,
+              retrieval: p.focuschrist_retrieval_route,
+              verified: p.focuschrist_source_integrity_verified,
+              words: answer.trim().split(/\s+/).filter(Boolean).length,
+              cacheHits: p.focuschrist_official_cache_hits || 0,
+              cacheMisses: p.focuschrist_official_cache_misses || 0,
+              groqVerifierCalls: p.focuschrist_groq_verifier_calls || 0,
+              openaiVerifierCalls: p.focuschrist_openai_verifier_calls || 0,
+              verifierApproved: p.focuschrist_verifier_approved,
+              verifierIndexes: p.focuschrist_verifier_source_indexes,
+              sources: (p.focuschrist_sources || []).map(s=>s.url),
+              answer
+            };
+            console.log(JSON.stringify(out));
+            return { p, answer };
+          }
+          const enos1 = await ask('enos-first', [{role:'user',content:'What does Enos 1 teach about prayer and forgiveness?'}]);
+          const enos2 = await ask('enos-second', [{role:'user',content:'What does Enos 1 teach about prayer and forgiveness?'}]);
+          const bom = await ask('book-of-mormon-year', [{role:'user',content:'what year did the book of mormon come out'}], 'general-knowledge');
+          await ask('book-of-mormon-followup', [
+            {role:'user',content:'what year did the book of mormon come out'},
+            {role:'assistant',content:bom.answer},
+            {role:'user',content:'who published it and where was it printed?'}
+          ], 'general-knowledge');
+          NODE
