@@ -5,6 +5,7 @@
 
 const RESEARCH_MODEL = 'groq/compound-mini';
 const VERIFIER_MODEL = 'openai/gpt-oss-20b';
+const CLOUDFLARE_VERIFIER_MODEL = '@cf/openai/gpt-oss-20b';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 const ALLOWED_ORIGINS = new Set([
   'https://focuschrist.com',
@@ -17,10 +18,12 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.18';
+const SOURCE_POLICY_VERSION = '2026-09-03.19';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
+const CLOUDFLARE_VERIFIER_LIMIT_MS = 6500;
+const VERIFIER_FALLBACK_RESERVE_MS = 5000;
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
 const SERVER_RESEARCH_POLICY = [
@@ -177,6 +180,7 @@ function sanitizePayload(payload) {
     // Keeping them out of the research request prevents an Ask-page keyword
     // from inheriting Pioneer scope and sharply reduces provider token use.
     messages: [{ role: 'system', content: SERVER_RESEARCH_POLICY + '\n' + scopeInstruction }, ...conversationMessages],
+    max_tokens: 700,
   };
   return { research, scope };
 }
@@ -495,6 +499,161 @@ async function callGroq(apiKey, body, deadline, mayRetry = true) {
   return { response, data };
 }
 
+function verifierContent(result) {
+  return result && result.data && result.data.choices && result.data.choices[0]
+    ? String(result.data.choices[0].message && result.data.choices[0].message.content || '')
+    : '';
+}
+
+function isVerifierVerdictShape(value, requireSourceIndexes = false) {
+  const validSourceIndexes = Array.isArray(value && value.source_indexes)
+    && value.source_indexes.every((index) => Number.isInteger(index));
+  return Boolean(value && typeof value === 'object' && !Array.isArray(value)
+    && typeof value.approved === 'boolean'
+    && typeof value.answer === 'string'
+    && (requireSourceIndexes
+      ? validSourceIndexes
+      : (value.source_indexes === undefined || validSourceIndexes)));
+}
+
+async function callCloudflareVerifier(ai, body, deadline) {
+  if (!ai || typeof ai.run !== 'function') return providerFailure(503, 'service_unavailable');
+  const available = remainingBudget(deadline);
+  if (available < VERIFIER_FALLBACK_RESERVE_MS + 250) return providerFailure(504, 'timeout');
+  const timeoutMs = Math.max(200, Math.min(
+    CLOUDFLARE_VERIFIER_LIMIT_MS,
+    available - VERIFIER_FALLBACK_RESERVE_MS,
+  ));
+  let timer;
+  try {
+    const timeout = new Promise((resolve) => {
+      timer = setTimeout(() => resolve({ focuschristTimeout: true }), timeoutMs);
+    });
+    const raw = await Promise.race([
+      ai.run(CLOUDFLARE_VERIFIER_MODEL, {
+        messages: body.messages,
+        temperature: body.temperature,
+        max_tokens: body.max_tokens,
+        ...(body.response_format ? { response_format: body.response_format } : {}),
+      }),
+      timeout,
+    ]);
+    if (raw && raw.focuschristTimeout) return providerFailure(504, 'timeout');
+    let content = '';
+    if (raw && raw.choices && raw.choices[0] && raw.choices[0].message) {
+      content = String(raw.choices[0].message.content || '');
+    } else if (raw && typeof raw.response === 'string') {
+      content = raw.response;
+    } else if (raw && isVerifierVerdictShape(raw.response)) {
+      content = JSON.stringify(raw.response);
+    }
+    if (!content.trim()) {
+      return { ...providerFailure(502, 'service_unavailable'), formatContract: true };
+    }
+    return {
+      response: new Response(JSON.stringify({ ok: true }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      }),
+      data: { choices: [{ message: { content } }] },
+    };
+  } catch (error) {
+    const status = Number(error && (error.status || error.statusCode)) || 503;
+    const code = status === 429 ? 'rate_limit_exceeded'
+      : (status === 504 ? 'timeout' : 'service_unavailable');
+    return providerFailure(status >= 400 && status <= 599 ? status : 503, code);
+  } finally {
+    if (timer) clearTimeout(timer);
+  }
+}
+
+function verifierRouteDiagnostic(result) {
+  const diagnostic = {
+    focuschrist_verifier_route: result && result.verifierRoute
+      ? result.verifierRoute
+      : 'cloudflare-primary',
+  };
+  if (result && result.primaryDiagnostic) {
+    diagnostic.focuschrist_verifier_primary_status = result.primaryDiagnostic.focuschrist_provider_status || 0;
+    diagnostic.focuschrist_verifier_primary_code = result.primaryDiagnostic.focuschrist_provider_code || '';
+  }
+  if (result && result.fallbackReason) {
+    diagnostic.focuschrist_verifier_fallback_reason = result.fallbackReason;
+  }
+  if (result && result.fallbackSkippedDeadline) {
+    diagnostic.focuschrist_verifier_fallback_skipped_deadline = true;
+  }
+  if (result && Number.isFinite(result.verifierDurationMs)) {
+    diagnostic.focuschrist_verifier_duration_ms = Math.max(0, Math.round(result.verifierDurationMs));
+  }
+  return diagnostic;
+}
+
+async function callVerifier(env, body, deadline, options = {}) {
+  const started = Date.now();
+  const requireSourceIndexes = options.requireSourceIndexes === true;
+  if (!env || !env.AI || typeof env.AI.run !== 'function') {
+    const fallback = await callGroq(env && env.GROQ_KEY_NEW, {
+      ...body,
+      model: VERIFIER_MODEL,
+    }, deadline, false);
+    return {
+      ...fallback,
+      verifierRoute: 'groq-fallback',
+      fallbackReason: 'binding-missing',
+      primaryDiagnostic: providerDiagnostic(providerFailure(503, 'service_unavailable')),
+      verifierDurationMs: Date.now() - started,
+    };
+  }
+  if (remainingBudget(deadline) < VERIFIER_FALLBACK_RESERVE_MS + 250) {
+    const fallback = await callGroq(env.GROQ_KEY_NEW, {
+      ...body,
+      model: VERIFIER_MODEL,
+    }, deadline, false);
+    return {
+      ...fallback,
+      verifierRoute: 'groq-fallback',
+      fallbackReason: 'deadline-direct',
+      verifierDurationMs: Date.now() - started,
+    };
+  }
+  const primary = await callCloudflareVerifier(env && env.AI, body, deadline);
+  const primaryVerdict = primary.response.ok ? parseVerifierJson(verifierContent(primary)) : null;
+  if (primary.response.ok && isVerifierVerdictShape(primaryVerdict, requireSourceIndexes)) {
+    return {
+      ...primary,
+      verifierRoute: 'cloudflare-primary',
+      verifierDurationMs: Date.now() - started,
+    };
+  }
+  const primaryDiagnostic = providerDiagnostic(primary);
+  if (remainingBudget(deadline) < 250) {
+    return {
+      ...primary,
+      verifierRoute: 'cloudflare-primary',
+      primaryDiagnostic,
+      fallbackSkippedDeadline: true,
+      verifierDurationMs: Date.now() - started,
+    };
+  }
+  const fallbackReason = primary.formatContract || primary.response.ok
+    ? 'format-contract'
+    : (primary.response.status === 429
+      ? 'primary-rate-limited'
+      : (primary.response.status === 504 ? 'primary-timeout' : 'primary-unavailable'));
+  const fallback = await callGroq(env && env.GROQ_KEY_NEW, {
+    ...body,
+    model: VERIFIER_MODEL,
+  }, deadline, false);
+  return {
+    ...fallback,
+    verifierRoute: 'groq-fallback',
+    primaryDiagnostic,
+    fallbackReason,
+    verifierDurationMs: Date.now() - started,
+  };
+}
+
 function fallbackPayload(mode, extra, scope) {
   const general = scope && !scope.faith && !scope.selectedPioneer;
   return {
@@ -517,7 +676,7 @@ function fallbackPayload(mode, extra, scope) {
   };
 }
 
-async function produceLowRiskGeneralAnswer(apiKey, scope, draft, deadline) {
+async function produceLowRiskGeneralAnswer(env, scope, draft, deadline) {
   const diagnostic = { focuschrist_low_risk_stage: 'started' };
   scope.lowRiskDiagnostic = diagnostic;
   if (requiresExternalGeneralResearch(scope.question)) {
@@ -536,13 +695,13 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft, deadline) {
     '',
     `DRAFT:\n${draft || '(No draft was available. Write the answer directly from stable general knowledge.)'}`,
   ].join('\n');
-  const result = await callGroq(apiKey, {
-    model: VERIFIER_MODEL,
+  const result = await callVerifier(env, {
     messages: [{ role: 'user', content: prompt }],
     temperature: 0,
-    max_tokens: 700,
+    max_tokens: 500,
     response_format: { type: 'json_object' },
   }, deadline);
+  Object.assign(diagnostic, verifierRouteDiagnostic(result));
   if (!result.response.ok) {
     Object.assign(diagnostic, providerDiagnostic(result));
     diagnostic.focuschrist_low_risk_stage = 'initial-provider-error';
@@ -563,8 +722,7 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft, deadline) {
       diagnostic.focuschrist_low_risk_stage = 'expansion-skipped-deadline';
       return null;
     }
-    const expansionResult = await callGroq(apiKey, {
-      model: VERIFIER_MODEL,
+    const expansionResult = await callVerifier(env, {
       messages: [{ role: 'user', content: [
         prompt,
         '',
@@ -575,9 +733,10 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft, deadline) {
         'Return the complete JSON object again with approved and answer.',
       ].join('\n') }],
       temperature: 0,
-      max_tokens: 900,
+      max_tokens: 650,
       response_format: { type: 'json_object' },
-    }, deadline, false);
+    }, deadline);
+    Object.assign(diagnostic, verifierRouteDiagnostic(expansionResult));
     if (expansionResult.response.ok) {
       const expansionContent = expansionResult.data && expansionResult.data.choices && expansionResult.data.choices[0]
         ? expansionResult.data.choices[0].message.content
@@ -603,7 +762,7 @@ async function produceLowRiskGeneralAnswer(apiKey, scope, draft, deadline) {
   return answer;
 }
 
-function generalAnswerPayload(answer, mode) {
+function generalAnswerPayload(answer, mode, extra) {
   return {
     id: 'focuschrist-general-ai-answer',
     choices: [{
@@ -616,6 +775,7 @@ function generalAnswerPayload(answer, mode) {
     focuschrist_source_policy: SOURCE_POLICY_VERSION,
     focuschrist_gateway_mode: mode,
     focuschrist_answer_word_count: String(answer || '').split(/\s+/).filter(Boolean).length,
+    ...(extra || {}),
   };
 }
 
@@ -684,9 +844,13 @@ export default {
       const researchResult = await callGroq(env.GROQ_KEY_NEW, sanitized.research, deadline);
       if (!researchResult.response.ok && !tellMyStoryEvidence) {
         if (!sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
-          const directGeneralAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, '', deadline);
+          const directGeneralAnswer = await produceLowRiskGeneralAnswer(env, sanitized.scope, '', deadline);
           if (directGeneralAnswer) {
-            return jsonResponse(generalAnswerPayload(directGeneralAnswer, 'general-ai-low-risk'), 200, origin);
+            return jsonResponse(generalAnswerPayload(
+              directGeneralAnswer,
+              'general-ai-low-risk',
+              sanitized.scope.lowRiskDiagnostic,
+            ), 200, origin);
           }
         }
         const limited = researchResult.response.status === 429;
@@ -699,7 +863,9 @@ export default {
       const researchMessage = researchResult.response.ok && researchResult.data && researchResult.data.choices && researchResult.data.choices[0]
         ? researchResult.data.choices[0].message
         : null;
-      const researchDraft = researchMessage ? String(researchMessage.content || '').trim() : '';
+      const researchDraft = researchMessage
+        ? String(researchMessage.content || '').trim().slice(0, 4000)
+        : '';
       const draft = researchDraft || (tellMyStoryEvidence
         ? `Write a concise, accurate biographical summary of ${sanitized.scope.selectedPioneerName} from the supplied Tell My Story, Too entry.`
         : '');
@@ -722,9 +888,13 @@ export default {
         ? [tellMyStoryEvidence].filter(Boolean)
         : (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence).slice(0, 2);
       if (draft && !evidence.length && !sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
-        const generalAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, draft, deadline);
+        const generalAnswer = await produceLowRiskGeneralAnswer(env, sanitized.scope, draft, deadline);
         if (generalAnswer) {
-          return jsonResponse(generalAnswerPayload(generalAnswer, 'general-ai-consensus'), 200, origin);
+          return jsonResponse(generalAnswerPayload(
+            generalAnswer,
+            'general-ai-consensus',
+            sanitized.scope.lowRiskDiagnostic,
+          ), 200, origin);
         }
       }
       if (!draft || !evidence.length) {
@@ -761,25 +931,19 @@ export default {
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
       ].join('\n');
       const verifierBody = {
-        model: VERIFIER_MODEL,
         messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
-        max_tokens: sanitized.scope.selectedPioneer ? 1000 : 1500,
+        max_tokens: sanitized.scope.selectedPioneer ? 900 : 700,
         response_format: { type: 'json_object' },
       };
-      let verifierResult = await callGroq(env.GROQ_KEY_NEW, verifierBody, deadline);
-      if (!verifierResult.response.ok && isJsonValidationFailure(verifierResult)
-        && remainingBudget(deadline) >= 4500) {
-        await new Promise((resolve) => setTimeout(resolve, Math.min(250, remainingBudget(deadline))));
-        verifierResult = await callGroq(env.GROQ_KEY_NEW, {
-          ...verifierBody,
-          messages: [{ role: 'user', content: `${verifierPrompt}\n\nReturn the JSON object as plain text with no markdown fence.` }],
-          max_tokens: sanitized.scope.selectedPioneer ? 1200 : 1800,
-          response_format: undefined,
-        }, deadline, false);
-      }
+      let verifierResult = await callVerifier(env, verifierBody, deadline, {
+        requireSourceIndexes: true,
+      });
       if (!verifierResult.response.ok) {
-        return jsonResponse(fallbackPayload('verification-provider-error', providerDiagnostic(verifierResult), sanitized.scope), 200, origin);
+        return jsonResponse(fallbackPayload('verification-provider-error', {
+          ...providerDiagnostic(verifierResult),
+          ...verifierRouteDiagnostic(verifierResult),
+        }, sanitized.scope), 200, origin);
       }
       const verifierContent = verifierResult.data && verifierResult.data.choices && verifierResult.data.choices[0]
         ? verifierResult.data.choices[0].message.content
@@ -801,11 +965,11 @@ export default {
           `PREVIOUS ANSWER:\n${String(verdict.answer || '').trim()}`,
           'Return the complete JSON object again with approved, answer, and source_indexes.',
         ].join('\n');
-        const expansionResult = await callGroq(env.GROQ_KEY_NEW, {
+        const expansionResult = await callVerifier(env, {
           ...verifierBody,
           messages: [{ role: 'user', content: expansionPrompt }],
-          max_tokens: sanitized.scope.selectedPioneer ? 1400 : 1800,
-        }, deadline, false);
+          max_tokens: sanitized.scope.selectedPioneer ? 1100 : 900,
+        }, deadline, { requireSourceIndexes: true });
         if (expansionResult.response.ok) {
           const expansionContent = expansionResult.data && expansionResult.data.choices && expansionResult.data.choices[0]
             ? expansionResult.data.choices[0].message.content
@@ -813,6 +977,7 @@ export default {
           const expansionVerdict = parseVerifierJson(expansionContent);
           if (expansionVerdict) {
             verdict = expansionVerdict;
+            verifierResult = expansionResult;
             indexes = Array.isArray(verdict.source_indexes)
               ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
               : [];
@@ -833,6 +998,7 @@ export default {
             ? verdict.source_indexes.slice(0, 6)
             : [],
           focuschrist_verifier_answer_length: verdict ? String(verdict.answer || '').length : 0,
+          ...verifierRouteDiagnostic(verifierResult),
         }, sanitized.scope), 200, origin);
       }
 
@@ -856,6 +1022,7 @@ export default {
         focuschrist_resolved_profile: sanitized.scope.faith ? 'faith-study' : (sanitized.scope.profile || 'general-knowledge'),
         focuschrist_classification_mode: sanitized.scope.classificationMode || 'request-scope',
         focuschrist_answer_word_count: answer.split(/\s+/).filter(Boolean).length,
+        ...verifierRouteDiagnostic(verifierResult),
       }, 200, origin);
     } catch (_error) {
       return jsonResponse(fallbackPayload('research-exception', null, sanitized.scope), 200, origin);
@@ -871,6 +1038,8 @@ export {
   answerMeetsSubstanceContract,
   answerSubstanceRequirements,
   callGroq,
+  callCloudflareVerifier,
+  callVerifier,
   classifyResearchScope,
   collectSourceEvidence,
   extractSelectedPioneerName,
@@ -883,6 +1052,7 @@ export {
   isOfficialChurchSource,
   isOfficialChurchIdentityEvidence,
   isJsonValidationFailure,
+  isVerifierVerdictShape,
   isTellMyStorySource,
   needsIdentityClarification,
   parseVerifierJson,

@@ -6,6 +6,8 @@ import worker, {
   answerMeetsSubstanceContract,
   answerSubstanceRequirements,
   callGroq,
+  callCloudflareVerifier,
+  callVerifier,
   classifyResearchScope,
   collectSourceEvidence,
   extractSelectedPioneerName,
@@ -17,6 +19,7 @@ import worker, {
   isOfficialChurchSource,
   isOfficialChurchIdentityEvidence,
   isJsonValidationFailure,
+  isVerifierVerdictShape,
   isTellMyStorySource,
   needsIdentityClarification,
   parseVerifierJson,
@@ -39,6 +42,124 @@ const expiredDeadlineResult = await callGroq('test-key', {}, Date.now() - 1);
 globalThis.fetch = fetchBeforeExpiredDeadline;
 assert(expiredDeadlineCalls === 0 && expiredDeadlineResult.response.status === 504,
   'an expired shared deadline must fail immediately without a provider request');
+
+const verifierBodyForTest = {
+  messages: [{ role: 'user', content: 'Return a verifier verdict.' }],
+  temperature: 0,
+  max_tokens: 300,
+  response_format: { type: 'json_object' },
+};
+assert(isVerifierVerdictShape({ approved: true, answer: 'Supported answer.', source_indexes: [1] })
+  && isVerifierVerdictShape({ approved: true, answer: 'Low-risk answer without indexes.' })
+  && !isVerifierVerdictShape({ approved: true, answer: 'Evidence answer without indexes.' }, true)
+  && !isVerifierVerdictShape({ approved: 'true', answer: 'Unsupported shape.', source_indexes: [1] }),
+  'verifier adapters must accept only the server-owned verdict shape');
+const cloudflareObjectResult = await callCloudflareVerifier({
+  run: async () => ({ response: { approved: false, answer: '', source_indexes: [] } }),
+}, verifierBodyForTest, Date.now() + 7000);
+assert(cloudflareObjectResult.response.ok
+  && JSON.parse(cloudflareObjectResult.data.choices[0].message.content).approved === false,
+  'the Cloudflare verifier adapter must normalize a direct structured verdict');
+const cloudflareChoicesResult = await callCloudflareVerifier({
+  run: async () => ({ choices: [{ message: { content: '{"approved":false,"answer":"","source_indexes":[]}' } }] }),
+}, verifierBodyForTest, Date.now() + 7000);
+assert(cloudflareChoicesResult.response.ok
+  && JSON.parse(cloudflareChoicesResult.data.choices[0].message.content).approved === false,
+  'the Cloudflare verifier adapter must normalize OpenAI choices-shaped output');
+
+const verifierFetchBeforeTests = globalThis.fetch;
+let primaryVerifierGroqCalls = 0;
+globalThis.fetch = async () => { primaryVerifierGroqCalls += 1; throw new Error('Groq verifier should not run'); };
+const cloudflarePrimaryResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async () => ({ response: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }) }) },
+}, verifierBodyForTest, Date.now() + 12000);
+assert(cloudflarePrimaryResult.response.ok
+  && cloudflarePrimaryResult.verifierRoute === 'cloudflare-primary'
+  && primaryVerifierGroqCalls === 0,
+  'a valid Cloudflare verdict must not call the Groq fallback');
+
+let malformedFallbackCalls = 0;
+let malformedFallbackBody;
+globalThis.fetch = async (_url, options) => {
+  malformedFallbackCalls += 1;
+  malformedFallbackBody = JSON.parse(options.body);
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }) } }],
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+const malformedFallbackResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async () => ({ response: { unexpected: 'provider metadata' } }) },
+}, verifierBodyForTest, Date.now() + 12000);
+assert(malformedFallbackCalls === 1
+  && malformedFallbackResult.verifierRoute === 'groq-fallback'
+  && malformedFallbackResult.fallbackReason === 'format-contract'
+  && malformedFallbackBody.model === 'openai/gpt-oss-20b'
+  && malformedFallbackBody.messages[0].content === verifierBodyForTest.messages[0].content
+  && malformedFallbackBody.temperature === verifierBodyForTest.temperature
+  && malformedFallbackBody.max_tokens === verifierBodyForTest.max_tokens,
+  'malformed Cloudflare output must trigger one identical, server-owned Groq verifier request');
+
+let missingIndexesFallbackCalls = 0;
+globalThis.fetch = async () => {
+  missingIndexesFallbackCalls += 1;
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }) } }],
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+const missingIndexesFallbackResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async () => ({ response: { approved: true, answer: 'Missing evidence indexes.' } }) },
+}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
+assert(missingIndexesFallbackCalls === 1
+  && missingIndexesFallbackResult.verifierRoute === 'groq-fallback'
+  && missingIndexesFallbackResult.fallbackReason === 'format-contract',
+  'an evidence verifier verdict without source indexes must use exactly one operational fallback');
+
+let missingBindingFallbackCalls = 0;
+globalThis.fetch = async () => {
+  missingBindingFallbackCalls += 1;
+  return new Response(JSON.stringify({ error: { code: 'service_unavailable' } }), {
+    status: 503,
+    headers: { 'Content-Type': 'application/json' },
+  });
+};
+const missingBindingFallbackResult = await callVerifier({ GROQ_KEY_NEW: 'test-key' },
+  verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
+assert(missingBindingFallbackCalls === 1
+  && missingBindingFallbackResult.verifierRoute === 'groq-fallback'
+  && missingBindingFallbackResult.fallbackReason === 'binding-missing',
+  'a missing Cloudflare binding must call Groq exactly once and then fail closed');
+
+let rejectionFallbackCalls = 0;
+globalThis.fetch = async () => { rejectionFallbackCalls += 1; throw new Error('valid rejection reached Groq'); };
+const cloudflareRejectionResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async () => ({ response: { approved: false, answer: '', source_indexes: [] } }) },
+}, verifierBodyForTest, Date.now() + 12000);
+assert(cloudflareRejectionResult.verifierRoute === 'cloudflare-primary'
+  && rejectionFallbackCalls === 0,
+  'a valid Cloudflare rejection must fail closed without verifier shopping');
+
+let timeoutFallbackCalls = 0;
+globalThis.fetch = async () => {
+  timeoutFallbackCalls += 1;
+  return new Response(JSON.stringify({ error: { code: 'rate_limit_exceeded' } }), {
+    status: 429,
+    headers: { 'Content-Type': 'application/json' },
+  });
+};
+const timeoutFallbackResult = await callVerifier({
+  GROQ_KEY_NEW: 'test-key',
+  AI: { run: async () => new Promise(() => {}) },
+}, verifierBodyForTest, Date.now() + 5300);
+assert(timeoutFallbackCalls === 1
+  && timeoutFallbackResult.verifierRoute === 'groq-fallback'
+  && timeoutFallbackResult.fallbackReason === 'primary-timeout'
+  && timeoutFallbackResult.response.status === 429,
+  'a logical Cloudflare timeout must reserve time for exactly one Groq fallback and then fail closed');
+globalThis.fetch = verifierFetchBeforeTests;
 
 const faithMessages = [{ role: 'user', content: 'What does Isaiah 1:18 teach?' }];
 const faith = classifyResearchScope(faithMessages);
@@ -454,7 +575,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.18',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.19',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
