@@ -7,6 +7,7 @@ import worker, {
   fetchOfficialSource,
   hasExcessiveSourceOverlap,
   isPioneerIrrigationIntent,
+  isPinnedPioneerIrrigationSource,
   OFFICIAL_EXCERPT_CACHE_VERSION,
   officialExcerptCacheVariant,
   rankChurchSourceCandidates,
@@ -36,6 +37,8 @@ assert(deterministicScriptureSource('What does Psalm 150 teach?')
   'valid upper-bound canonical chapters must remain routable');
 assert(deterministicScriptureSource('Tell me about Alma Smith') === null,
   'a person name must not be misclassified as a scripture reference');
+assert(isPioneerIrrigationIntent('What did cooperative irrigation contribute to settlement life?', 'pioneers'),
+  'the exact production Pioneer irrigation regression must enter the pinned evidence lane');
 const followUpScope = classifyResearchScope([
   { role: 'user', content: 'Who is Hyrum Smith?' },
   { role: 'assistant', content: 'Hyrum Smith was an early Church leader and Joseph Smith\'s brother.' },
@@ -626,7 +629,7 @@ try {
   const positive = await runPioneerReconsiderationCase({
     page: 'pioneers',
     profile: 'pioneer-study',
-    question: 'Why did cooperative irrigation contribute to settlement life?',
+    question: 'What did cooperative irrigation contribute to settlement life?',
     approveSecond: true,
     cacheParagraphs: cachedRelevantPioneerParagraphs,
   });
@@ -637,6 +640,7 @@ try {
     && positive.payload.focuschrist_cloudflare_verifier_calls === 2
     && positive.payload.focuschrist_groq_verifier_calls === 0
     && positive.payload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six'))
+    && positive.payload.focuschrist_evidence_relevance.some((entry) => entry.url.includes('/chapter-twenty-six') && entry.overlap_count >= 2)
     && positive.payload.focuschrist_evidence_relevance.length > 0
     && positive.payload.focuschrist_evidence_relevance.every((entry) => entry.overlap_count >= 2)
     && REQUEST_BUDGET_MS === 22000,

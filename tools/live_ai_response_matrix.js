@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.39';
+const POLICY_VERSION = '2026-09-03.40';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -88,6 +88,12 @@ for (const stratum of ['scripture', 'doctrine', 'pioneer', 'church-history']) {
     assert(rounds.flat().filter((test) => test.stratum === stratum).length === 3,
         `release matrix must contain exactly three ${stratum} holdouts`);
 }
+
+const productionRegressions = [
+    specimen('regression-pioneer-irrigation-displayed-source', 'pioneers', 'pioneer-study',
+        'What did cooperative irrigation contribute to settlement life?',
+        'faith-study', true, 'pioneer', /(?:chapter-twenty-six|a-brief-history|irrigat)/i, 'pioneer'),
+];
 
 const burst = [
     specimen('burst-temples', 'ask', 'faith-study', 'For what purposes do Latter-day Saints build and worship in temples?', 'faith-study', true, 'temples', /temple/i),
@@ -260,6 +266,7 @@ if (process.argv.includes('--definition-check')) {
         core: rounds.flat().length,
         holdouts: Object.fromEntries(['scripture', 'doctrine', 'pioneer', 'church-history']
             .map((stratum) => [stratum, rounds.flat().filter((test) => test.stratum === stratum).length])),
+        regressions: productionRegressions.length,
         burst: burst.length,
     }));
     process.exit(0);
@@ -285,6 +292,11 @@ if (process.argv.includes('--definition-check')) {
     selectedRounds.flat().forEach((test, index) => validate(test, results[index]));
     for (let index = 0; index < selectedRounds.flat().length; index += 1) {
         await validateActualOfficialEvidence(selectedRounds.flat()[index], results[index]);
+    }
+    const regressionResults = await runSequential(productionRegressions);
+    regressionResults.forEach((result, index) => validate(productionRegressions[index], result));
+    for (let index = 0; index < productionRegressions.length; index += 1) {
+        await validateActualOfficialEvidence(productionRegressions[index], regressionResults[index]);
     }
     const burstResults = await Promise.all(burst.map((test) => submit(test)));
     burstResults.forEach((result, index) => { console.log(JSON.stringify({ ...result, answer: undefined })); validate(burst[index], result); });
@@ -328,7 +340,7 @@ if (process.argv.includes('--definition-check')) {
     assert(warmSecond.elapsedMs <= 12000, 'warm indexed retrieval exceeded 12 seconds');
     assert(warmSecond.elapsedMs <= warmFirst.elapsedMs + 3000, 'warm retrieval regressed more than three seconds');
 
-    const allMeasured = [...results, ...burstResults, ...blockedResults, ...respectfulResults,
+    const allMeasured = [...results, ...regressionResults, ...burstResults, ...blockedResults, ...respectfulResults,
         invalidCorinthians, invalidAlma, initial, followUp, reset, warmFirst, warmSecond];
     const times = allMeasured.map((result) => result.elapsedMs);
     const indexed = allMeasured.filter((result) => result.retrievalRoute === 'church-source-index');

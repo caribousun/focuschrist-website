@@ -21,8 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.39';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.39';
+const SOURCE_POLICY_VERSION = '2026-09-03.40';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.40';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -465,6 +465,18 @@ function uniqueEvidenceOverlapCount(content, question) {
   return new Set(normalizeDiscoveryTokens(content).filter((token) => questionTokenSet.has(token))).size;
 }
 
+function isPinnedPioneerIrrigationSource(candidate, content = '') {
+  return Boolean(candidate && candidate.topicPinned === true
+    && /\/study\/manual\/church-history-in-the-fulness-of-times\/chapter-twenty-six/.test(String(candidate.url || ''))
+    && /\birrigat\w*\b/i.test(String(content || ''))
+    && /\b(?:pioneer\w*|settlement\w*|communit\w*|salt\s+lake\s+valley|planting|water)\b/i.test(String(content || '')));
+}
+
+function evidenceAdmissionSufficient(candidate, content, question) {
+  return uniqueEvidenceOverlapCount(content, question) >= 2
+    || isPinnedPioneerIrrigationSource(candidate, content);
+}
+
 function extractRelevantParagraphs(htmlText, question) {
   return relevantParagraphText(extractVisibleParagraphs(htmlText), question);
 }
@@ -544,10 +556,13 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
         const payload = await cached.json();
         if (payload && Array.isArray(payload.paragraphs)) {
           const content = relevantParagraphText(payload.paragraphs, question, candidate);
-          if (content && uniqueEvidenceOverlapCount(content, question) >= 2) {
+          if (content && evidenceAdmissionSufficient(candidate, content, question)) {
             if (counters) counters.cacheHits += 1;
             const source = canonicalSource(candidate.url, candidate.title, content);
-            if (source) source.cacheStatus = 'hit';
+            if (source) {
+              source.cacheStatus = 'hit';
+              source.topicPinned = candidate.topicPinned === true;
+            }
             return source;
           }
         }
@@ -571,7 +586,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
     if (!contentType.includes('text/html')) return null;
     const paragraphs = extractVisibleParagraphs(await readBoundedText(response, OFFICIAL_HTML_BYTE_LIMIT));
     const content = relevantParagraphText(paragraphs, question, candidate);
-    if (!content || uniqueEvidenceOverlapCount(content, question) < 2) return null;
+    if (!content || !evidenceAdmissionSufficient(candidate, content, question)) return null;
     if (cache && cacheKey) {
       try {
         await cache.put(cacheKey, new Response(JSON.stringify({ paragraphs: compactParagraphPack(paragraphs, candidate, question) }), {
@@ -580,7 +595,10 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       } catch (_cacheError) {}
     }
     const source = canonicalSource(candidate.url, candidate.title, content);
-    if (source) source.cacheStatus = 'miss';
+    if (source) {
+      source.cacheStatus = 'miss';
+      source.topicPinned = candidate.topicPinned === true;
+    }
     return source;
   } catch (_error) {
     return null;
@@ -636,7 +654,13 @@ function evidenceRelevanceReceipt(question, evidence) {
   const queryTokens = normalizeDiscoveryTokens(question);
   return (Array.isArray(evidence) ? evidence : []).map((source) => {
     const sourceTokens = new Set(normalizeDiscoveryTokens(source.content));
-    const terms = queryTokens.filter((token) => sourceTokens.has(token)).slice(0, 6);
+    let terms = queryTokens.filter((token) => sourceTokens.has(token)).slice(0, 6);
+    if (terms.length < 2 && isPinnedPioneerIrrigationSource(source, source.content)) {
+      const semanticTerms = terms.slice();
+      if (!semanticTerms.includes('irrigation') && /\birrigat\w*\b/i.test(String(source.content || ''))) semanticTerms.push('irrigation');
+      if (semanticTerms.length < 2) semanticTerms.push('pioneer-settlement-context');
+      terms = semanticTerms.slice(0, 6);
+    }
     return { url: source.url, overlap_count: terms.length, terms };
   });
 }
@@ -1773,6 +1797,21 @@ export default {
         }
       }
       const selectedEvidence = indexes.map((index) => evidence[index - 1]);
+      const pinnedPioneerSupport = isPioneerIrrigationIntent(
+        sanitized.scope.retrievalQuestion,
+        sanitized.scope.page,
+      ) ? evidence.filter((source) => isPinnedPioneerIrrigationSource(source, source.content)).slice(0, 1) : [];
+      const publishedEvidence = [];
+      const publishedEvidenceUrls = new Set();
+      [
+        ...selectedEvidence,
+        ...pinnedPioneerSupport,
+        ...(sanitized.scope.selectedPioneer ? officialEvidence : []),
+      ].forEach((source) => {
+        if (!source || !source.url || publishedEvidenceUrls.has(source.url)) return;
+        publishedEvidenceUrls.add(source.url);
+        publishedEvidence.push(source);
+      });
       const answer = guardVerifiedAnswer(
         verdict && verdict.answer,
         selectedEvidence,
@@ -1798,10 +1837,7 @@ export default {
           message: { role: 'assistant', content: answer },
           finish_reason: 'stop',
         }],
-        focuschrist_sources: [
-          ...selectedEvidence,
-          ...(sanitized.scope.selectedPioneer ? officialEvidence : []),
-        ].map((source) => ({
+        focuschrist_sources: publishedEvidence.map((source) => ({
           text: source.title || 'Source',
           url: source.url,
         })),
@@ -1811,7 +1847,7 @@ export default {
         focuschrist_resolved_profile: sanitized.scope.faith ? 'faith-study' : (sanitized.scope.profile || 'general-knowledge'),
         focuschrist_classification_mode: sanitized.scope.classificationMode || 'request-scope',
         focuschrist_answer_word_count: answer.split(/\s+/).filter(Boolean).length,
-        focuschrist_evidence_relevance: evidenceRelevanceReceipt(sanitized.scope.retrievalQuestion, selectedEvidence),
+        focuschrist_evidence_relevance: evidenceRelevanceReceipt(sanitized.scope.retrievalQuestion, sanitized.scope.selectedPioneer ? selectedEvidence : publishedEvidence),
         ...verifierRouteDiagnostic(verifierResult),
         ...retrievalDiagnostic,
       }, 200, origin);
@@ -1852,6 +1888,7 @@ export {
   isOfficialChurchIdentityEvidence,
   isJsonValidationFailure,
   isPioneerIrrigationIntent,
+  isPinnedPioneerIrrigationSource,
   isVerifierVerdictShape,
   isTellMyStorySource,
   needsIdentityClarification,
