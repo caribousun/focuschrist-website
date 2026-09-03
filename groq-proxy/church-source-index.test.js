@@ -58,8 +58,9 @@ const kirtlandVariantCandidate = deterministicHistoryTopicSource(kirtlandVariant
 assert(kirtlandCandidate && kirtlandCandidate.deterministicHistoryTopic === true
   && /\/study\/history\/topics\/kirtland-temple/.test(kirtlandCandidate.url),
   'the exact production Kirtland regression must resolve to the named official Kirtland Temple history topic');
-assert(deterministicHistoryTopicSource(kirtlandQuestion, 'ask') === null,
-  'named Church History topic determinism must remain scoped to the Church History page');
+assert(deterministicHistoryTopicSource(kirtlandQuestion, 'ask')
+  && /\/study\/history\/topics\/kirtland-temple/.test(deterministicHistoryTopicSource(kirtlandQuestion, 'ask').url),
+  'an exact multi-token official history topic must remain deterministic on the main Ask page as well');
 const kirtlandCacheA = await evidenceCacheKey(kirtlandCandidate, kirtlandQuestion);
 const kirtlandCacheB = await evidenceCacheKey(kirtlandVariantCandidate, kirtlandVariant);
 assert(kirtlandCacheA && kirtlandCacheB && kirtlandCacheA.url !== kirtlandCacheB.url,
@@ -74,6 +75,15 @@ const followUpScope = classifyResearchScope([
 assert(followUpScope.faith && followUpScope.classificationMode === 'conversation-context'
   && followUpScope.retrievalQuestion.startsWith('hyrum smith:'),
   'bounded conversation context must resolve a Church-person pronoun before retrieval');
+const hyrumAskTopic = deterministicHistoryTopicSource(
+  'Who was Hyrum Smith and what service did he give in the early Church?',
+  'ask',
+);
+const hyrumFollowTopic = deterministicHistoryTopicSource(followUpScope.retrievalQuestion, 'ask');
+assert(hyrumAskTopic && hyrumFollowTopic
+  && /\/study\/history\/topics\/hyrum-smith/.test(hyrumAskTopic.url)
+  && hyrumAskTopic.url === hyrumFollowTopic.url,
+  'Hyrum Smith seed and bounded pronoun follow-up must resolve to the same single official history topic');
 
 const pioneerCandidates = rankChurchSourceCandidates(
   'How did Latter-day Saint pioneer communities organize irrigation?',

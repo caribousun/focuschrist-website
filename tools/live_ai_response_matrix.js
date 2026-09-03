@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.42';
+const POLICY_VERSION = '2026-09-03.43';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -340,10 +340,14 @@ if (process.argv.includes('--definition-check')) {
         'Who was Hyrum Smith and what service did he give in the early Church?',
         'faith-study', true, 'hyrum', /hyrum-smith/i);
     const initial = await submit(hyrumSeedTest); validate(hyrumSeedTest, initial);
+    assert(initial.deterministicHistoryTopic === true && initial.indexSources === 1 && initial.officialFetchCalls <= 1,
+        'Hyrum seed did not prove single-source deterministic official history retrieval');
     await validateActualOfficialEvidence(hyrumSeedTest, initial);
     const followUpTest = specimen('follow-up-context', 'ask', 'general-knowledge', 'What leadership responsibility did he hold?', 'faith-study', true, 'hyrum', /hyrum-smith/i);
     const followUp = await submit(followUpTest, [{ role: 'user', content: hyrumSeedTest.question }, { role: 'assistant', content: initial.answer }, { role: 'user', content: followUpTest.question }]);
     validate(followUpTest, followUp);
+    assert(followUp.deterministicHistoryTopic === true && followUp.indexSources === 1 && followUp.officialFetchCalls <= 1,
+        'Hyrum contextual follow-up did not preserve single-source deterministic official history retrieval');
     await validateActualOfficialEvidence(followUpTest, followUp);
     const resetTest = specimen('fresh-reset', 'ask', 'general-knowledge', 'Why do seasons change on Earth?', 'general-knowledge', false, 'seasons');
     const reset = await submit(resetTest); validate(resetTest, reset);

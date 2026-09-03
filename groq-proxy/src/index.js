@@ -21,8 +21,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.42';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.42';
+const SOURCE_POLICY_VERSION = '2026-09-03.43';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.43';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -347,7 +347,7 @@ function deterministicScriptureSource(question) {
 }
 
 function deterministicHistoryTopicSource(question, page) {
-  if (page !== 'church-history') return null;
+  if (!['ask', 'church-history'].includes(page)) return null;
   const queryTokens = normalizeDiscoveryTokens(question);
   if (queryTokens.length < 2) return null;
   const matches = CHURCH_SOURCE_INDEX.map((entry) => {
@@ -1742,7 +1742,7 @@ export default {
         retrievalDiagnostic.focuschrist_deterministic_scripture === true
           ? 'The visitor explicitly named a canonical scripture chapter. EVIDENCE contains that exact official scripture source and no competing research source. If its excerpt directly addresses the requested concept, compose the supported answer from it and approve it. Do not reject merely because the visitor asks for an explanation rather than a quotation.'
           : retrievalDiagnostic.focuschrist_deterministic_history_topic === true
-            ? 'The visitor explicitly named an indexed Church History topic. EVIDENCE contains that exact official Church History topic and no competing research source. If its excerpt directly describes the requested event, date, purpose, or historical setting, compose the supported answer from it and approve it.'
+            ? 'The visitor explicitly named, or the bounded conversation context resolved to, an indexed Church History topic. EVIDENCE contains that exact official Church History topic and no competing research source. If its excerpt directly describes the requested identity, role, event, date, purpose, or historical setting, compose the supported answer from it and approve it. For a faith or Church-history answer, aim for 100 to 170 words and at least four complete sentences so the response clears the publication-depth floor with margin.'
             : 'Evaluate the supplied official evidence normally under the source-integrity contract.',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
@@ -1793,6 +1793,9 @@ export default {
         && ['cloudflare-primary', 'groq-primary'].includes(verifierResult.verifierRoute)
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
+        const repairMinimumWords = requirements.minimumWords
+          + (sanitized.scope.selectedPioneer ? 30 : (sanitized.scope.faith ? 25 : 10));
+        const repairMinimumSentences = requirements.minimumSentences + (sanitized.scope.faith ? 1 : 0);
         const expansionPrompt = [
           verifierPrompt,
           '',
@@ -1805,10 +1808,10 @@ export default {
             ? (retrievalDiagnostic.focuschrist_deterministic_scripture === true
               ? 'This is the exact canonical scripture source named by the visitor. Re-read its excerpt for the requested concept. If the excerpt supports a responsible explanation, write that explanation and set approved true with source_indexes [1]. Keep approved false only if the excerpt truly lacks the requested concept.'
               : retrievalDiagnostic.focuschrist_deterministic_history_topic === true
-                ? 'This is the exact official Church History topic named by the visitor. Re-read its excerpt for the requested historical event or setting. If the excerpt supports a responsible answer, write it and set approved true with source_indexes [1]. Keep approved false only if that exact topic excerpt truly lacks the requested material.'
+                ? 'This is the exact official Church History topic named by the visitor or resolved from bounded conversation context. Re-read its excerpt for the requested identity, leadership role, event, or setting. If the excerpt supports a responsible answer, write a complete answer of roughly 100 to 170 words with at least four sentences and set approved true with source_indexes [1]. Keep approved false only if that exact topic excerpt truly lacks the requested material.'
                 : 'If the evidence can responsibly answer the question, write the supported answer and set approved true with its source indexes. If it still cannot, keep approved false.')
             : needsDepthRepair
-            ? `Rewrite it using at least ${requirements.minimumWords} words, ${requirements.minimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s).`
+            ? `Rewrite it using at least ${repairMinimumWords} words, ${repairMinimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s). The publication gate is lower, but this repair target deliberately includes safety margin. Do not stop at the minimum.`
             : 'Keep the answer complete and concise.',
           needsParaphraseRepair
             ? 'Rewrite the answer in genuinely independent language. Do not copy a long passage or reconstruct the source in ordered fragments. Preserve supported facts, but change the sentence structure and wording throughout.'
