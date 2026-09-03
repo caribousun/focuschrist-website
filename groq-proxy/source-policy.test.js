@@ -140,6 +140,31 @@ assert(groqThenOpenAICalls === 2
   && openAIBodyForFallback.store === false,
   'a true Groq provider failure must use exactly one GPT-5.6 Luna fallback call with the same verifier contract');
 
+const fetchBeforeForcedOpenAIRepair = globalThis.fetch;
+let forcedOpenAIRepairCalls = 0;
+globalThis.fetch = async (url, init) => {
+  forcedOpenAIRepairCalls += 1;
+  assert(String(url) === 'https://api.openai.com/v1/chat/completions',
+    'bounded Luna reconsideration must not return to Groq');
+  const requestBody = JSON.parse(init.body);
+  assert(requestBody.model === 'gpt-5.6-luna', 'bounded Luna reconsideration must remain on the allowed project model');
+  return new Response(JSON.stringify({
+    choices: [{ message: { content: '{"approved":true,"answer":"Supported reconsidered answer.","source_indexes":[1]}' } }],
+    usage: { prompt_tokens: 210, completion_tokens: 34 },
+  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+};
+const forcedOpenAIRepairResult = await callVerifier({
+  OPENAI_API_KEY: 'openai-test-key',
+  VERIFIER_PROVIDER: 'groq',
+}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true, forceOpenAI: true });
+globalThis.fetch = fetchBeforeForcedOpenAIRepair;
+assert(forcedOpenAIRepairCalls === 1
+  && forcedOpenAIRepairResult.response.ok
+  && forcedOpenAIRepairResult.verifierRoute === 'openai-repair'
+  && forcedOpenAIRepairResult.totalGroqVerifierCalls === 0
+  && forcedOpenAIRepairResult.totalOpenAIVerifierCalls === 1,
+  'a relevant-evidence reconsideration after OpenAI failover must use exactly one additional Luna call and no Groq call');
+
 const verifierFetchBeforeTests = globalThis.fetch;
 let primaryVerifierGroqCalls = 0;
 globalThis.fetch = async () => { primaryVerifierGroqCalls += 1; throw new Error('Groq verifier should not run'); };
@@ -734,7 +759,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.45',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.46',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
