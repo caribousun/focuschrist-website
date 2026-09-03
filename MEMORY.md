@@ -332,3 +332,11 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Candidate .44 does not lower the 70-word/three-sentence faith publication floor. It adds a repair-margin contract of 95 words/four sentences for faith answers and 120 words/four sentences/two paragraphs for selected Pioneer biographies. The margin is used to trigger the existing bounded second verifier pass for deterministic Church History and conversation-context answers that sit too close to the floor.
 - The two-verifier-call ceiling remains unchanged. Official-source restrictions, fail-closed behavior, evidence relevance, 700-character evidence, deterministic Pioneer/Scripture/History routing, latency, safety, paraphrase, and rate-limit controls remain unchanged.
 - The production live matrix now repeats the Hyrum contextual follow-up three additional times and requires every repeat to preserve deterministic single-source official-history retrieval and the existing publication contract.
+
+
+### Executive AI independent verifier failover - candidate 2026-09-03.45
+
+- Production .44 confirmed the depth-margin repair but later encountered true Groq provider failures with zero verifier tokens on otherwise valid official-source questions. This identified Groq availability as the remaining single point of failure.
+- The owner created a dedicated FocusChrist OpenAI project, enforced a $5 monthly hard spend limit, restricted model use to GPT-5.6 Luna, created a project service account, and stored its key in the production Worker as the OPENAI_API_KEY secret.
+- Candidate .45 keeps Groq GPT-OSS 20B as the primary verifier. A genuine Groq provider failure, rate limit, timeout, or malformed verifier contract can use exactly one independent OpenAI GPT-5.6 Luna verifier call, preserving the overall two-provider-call ceiling. Valid Groq approvals and valid Groq rejections never shop for a second opinion.
+- OpenAI fallback uses the same source-index requirement and fail-closed verifier schema, low reasoning effort, JSON response mode, no response storage, and the existing shared request deadline. Source routing, official-domain requirements, evidence relevance, local-reviewed first routing, Pioneer/Scripture/History determinism, safety, and publication-depth gates remain unchanged.
