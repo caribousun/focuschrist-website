@@ -284,3 +284,10 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Production .37 fixed the prior GPT-OSS truncation and false-negative problems: doctrine, scripture, Relief Society, grace, general knowledge, and most Pioneer cases passed live. One Pioneer holdout exposed a real receipt mismatch: fetch acceptance counted repeated occurrences of one query word, while the publication matrix correctly required two unique overlapping concepts.
 - Candidate .38 makes official evidence admission use the same unique-token relevance standard as the final evidence receipt. A source with one repeated matching word is rejected, allowing the next genuinely relevant indexed official source to be selected instead.
 - This does not weaken any answer gate. It tightens evidence admission so the retrieval stage and final production relevance receipt use the same standard.
+
+
+### Ask cached relevance and deterministic scripture context - candidate 2026-09-03.39
+
+- Production .38 confirmed the new unique-relevance rule on fresh official fetches, but live testing exposed that cached excerpts still bypassed that rule. The same run also showed a clear Alma 32 question can be over-rejected when retrieval returns only the two narrowest lexical matches rather than the surrounding verses that explain how faith develops.
+- Candidate .39 applies the same two-unique-concept relevance rule to both cache hits and fresh official fetches. Deterministic scripture routes now include a small bounded window of adjacent paragraphs around the strongest matches so the verifier receives the surrounding scriptural explanation rather than isolated verses. The canonical 700-character evidence cap remains unchanged.
+- Verification remains fail-closed and official-only for faith questions. This change improves evidence quality and cache consistency rather than relaxing approval standards.
