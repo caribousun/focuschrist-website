@@ -283,7 +283,7 @@ try {
   assert(officialFetchCalls > 0 && officialFetchCalls <= 2 && groqCalls === 0,
     'the indexed lane must fetch at most two official pages and make zero Groq calls');
   assert(indexedVerifierBody
-    && indexedVerifierBody.max_tokens === 500
+    && indexedVerifierBody.max_tokens === 400
     && indexedVerifierBody.messages[0].content.includes('If the DRAFT block is empty, write the answer directly from EVIDENCE')
     && indexedVerifierBody.messages[0].content.includes('Use independently worded paraphrase')
     && /DRAFT:\n\n\nEVIDENCE:/.test(indexedVerifierBody.messages[0].content),

@@ -20,12 +20,12 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.27';
+const SOURCE_POLICY_VERSION = '2026-09-03.28';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
-const CLOUDFLARE_VERIFIER_LIMIT_MS = 12000;
-const VERIFIER_FALLBACK_RESERVE_MS = 5000;
+const CLOUDFLARE_VERIFIER_LIMIT_MS = 15000;
+const VERIFIER_FALLBACK_RESERVE_MS = 3000;
 const OFFICIAL_FETCH_LIMIT_MS = 9000;
 const OFFICIAL_HTML_BYTE_LIMIT = 1500000;
 const REQUEST_BODY_BYTE_LIMIT = 65536;
@@ -1486,7 +1486,7 @@ export default {
       const verifierBody = {
         messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
-        max_tokens: sanitized.scope.selectedPioneer ? 900 : 500,
+        max_tokens: sanitized.scope.selectedPioneer ? 900 : 400,
         response_format: { type: 'json_object' },
       };
       let verifierResult = await callVerifier(env, verifierBody, deadline, {
