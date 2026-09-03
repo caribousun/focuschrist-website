@@ -102,3 +102,10 @@ Policy `.25` kept the provider path stable but showed that counting every ordere
 Policy `.26` passed 14 of 15 core specimens and proved the overlap fix, but one fast Cloudflare false rejection occurred for a terse Pioneer irrigation paraphrase and succeeded on immediate replay. Candidate `.27` uses a topic-specific official source pin and one same-provider reconsideration only when indexed official evidence has direct lexical relevance. It does not add a provider, a Groq call, or an unverified answer path.
 
 Policy `.27` stabilized Pioneer routing and again passed 14 of 15 core specimens, but the final doctrine request exhausted the 12-second Cloudflare ceiling and the Groq fallback made zero calls. Candidate `.28` keeps the total request ceiling fixed while allocating 15 seconds to Cloudflare, reserving 3 seconds for one fallback, and reducing normal output to 400 tokens. This is a budget allocation change within the existing provider architecture.
+
+
+## Policy .30 priced Cloudflare fallback decision
+
+Cloudflare's current pricing table lists the active `@cf/meta/llama-3.1-8b-instruct-fp8-fast` model at 4,119 neurons per million input tokens and 34,868 neurons per million output tokens. Its exact priced identifier differs from the identifier on Cloudflare's JSON Mode list, so `.30` does not send `response_format` or claim provider-enforced JSON for this fallback. It uses the server-owned JSON prompt and rejects output that does not pass the strict local verdict schema. This provides a same-binding operational fallback without a new credential, framework, or visitor-data recipient. A valid primary rejection terminates, and no request may exceed two verifier calls.
+
+Capacity accounting adds measured usage to a conservative 1,000-neuron allowance for each Cloudflare call without returned usage, including a primary or repair call that loses the local timeout race and may continue provider-side.

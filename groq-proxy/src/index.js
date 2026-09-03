@@ -8,6 +8,7 @@ import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP
 const RESEARCH_MODEL = 'groq/compound-mini';
 const VERIFIER_MODEL = 'openai/gpt-oss-20b';
 const CLOUDFLARE_VERIFIER_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
+const CLOUDFLARE_FALLBACK_MODEL = '@cf/meta/llama-3.1-8b-instruct-fp8-fast';
 const GROQ_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
 const ALLOWED_ORIGINS = new Set([
   'https://focuschrist.com',
@@ -20,13 +21,14 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.29';
+const SOURCE_POLICY_VERSION = '2026-09-03.30';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
-const CLOUDFLARE_VERIFIER_LIMIT_MS = 15000;
-const VERIFIER_FALLBACK_RESERVE_MS = 3000;
+const CLOUDFLARE_VERIFIER_LIMIT_MS = 12000;
+const VERIFIER_FALLBACK_RESERVE_MS = 5000;
 const OFFICIAL_FETCH_LIMIT_MS = 9000;
+const CLOUDFLARE_UNMETERED_CALL_NEURONS = 1000;
 const OFFICIAL_HTML_BYTE_LIMIT = 1500000;
 const REQUEST_BODY_BYTE_LIMIT = 65536;
 const REQUEST_MESSAGE_LIMIT = 16;
@@ -893,39 +895,61 @@ function isVerifierVerdictShape(value, requireSourceIndexes = false) {
       : (value.source_indexes === undefined || validSourceIndexes)));
 }
 
-function validateGroqVerifierResult(result, requireSourceIndexes = false) {
+function validateVerifierResult(result, requireSourceIndexes = false) {
   if (!result || !result.response || !result.response.ok) return result;
   const verdict = parseVerifierJson(verifierContent(result));
   if (isVerifierVerdictShape(verdict, requireSourceIndexes)) return result;
   return {
+    ...result,
     ...providerFailure(502, 'invalid_verifier_response'),
     formatContract: true,
   };
 }
 
-async function callCloudflareVerifier(ai, body, deadline) {
+function validateGroqVerifierResult(result, requireSourceIndexes = false) {
+  return validateVerifierResult(result, requireSourceIndexes);
+}
+
+function cloudflareNeuronEstimate(usage, model) {
+  const inputTokens = Number(usage && (usage.prompt_tokens || usage.input_tokens) || 0);
+  const outputTokens = Number(usage && (usage.completion_tokens || usage.output_tokens) || 0);
+  const rates = model === CLOUDFLARE_FALLBACK_MODEL
+    ? { input: 4119, output: 34868 }
+    : { input: 26668, output: 204805 };
+  if (inputTokens <= 0 && outputTokens <= 0) return 0;
+  return Math.ceil((inputTokens * rates.input + outputTokens * rates.output) / 1000000);
+}
+
+async function callCloudflareVerifier(ai, body, deadline, options = {}) {
   if (!ai || typeof ai.run !== 'function') return providerFailure(503, 'service_unavailable');
+  const model = options.model || CLOUDFLARE_VERIFIER_MODEL;
+  const reserveMs = Number.isFinite(options.reserveMs) ? Math.max(0, options.reserveMs) : VERIFIER_FALLBACK_RESERVE_MS;
+  const limitMs = Number.isFinite(options.limitMs) ? Math.max(200, options.limitMs) : CLOUDFLARE_VERIFIER_LIMIT_MS;
+  const enforceResponseFormat = options.enforceResponseFormat !== false;
   const available = remainingBudget(deadline);
-  if (available < VERIFIER_FALLBACK_RESERVE_MS + 250) return providerFailure(504, 'timeout');
-  const timeoutMs = Math.max(200, Math.min(
-    CLOUDFLARE_VERIFIER_LIMIT_MS,
-    available - VERIFIER_FALLBACK_RESERVE_MS,
-  ));
+  if (available < reserveMs + 250) return providerFailure(504, 'timeout');
+  const timeoutMs = Math.max(200, Math.min(limitMs, available - reserveMs));
   let timer;
   try {
     const timeout = new Promise((resolve) => {
       timer = setTimeout(() => resolve({ focuschristTimeout: true }), timeoutMs);
     });
     const raw = await Promise.race([
-      ai.run(CLOUDFLARE_VERIFIER_MODEL, {
+      ai.run(model, {
         messages: body.messages,
         temperature: body.temperature,
         max_tokens: body.max_tokens,
-        ...(body.response_format ? { response_format: body.response_format } : {}),
+        ...(enforceResponseFormat && body.response_format ? { response_format: body.response_format } : {}),
       }),
       timeout,
     ]);
-    if (raw && raw.focuschristTimeout) return providerFailure(504, 'timeout');
+    if (raw && raw.focuschristTimeout) return {
+      ...providerFailure(504, 'timeout'),
+      cloudflareCallCount: 1,
+      cloudflareModel: model,
+      cloudflareEstimatedNeurons: 0,
+      cloudflareUnmeteredNeurons: CLOUDFLARE_UNMETERED_CALL_NEURONS,
+    };
     let content = '';
     if (raw && raw.choices && raw.choices[0] && raw.choices[0].message) {
       content = String(raw.choices[0].message.content || '');
@@ -934,8 +958,16 @@ async function callCloudflareVerifier(ai, body, deadline) {
     } else if (raw && isVerifierVerdictShape(raw.response)) {
       content = JSON.stringify(raw.response);
     }
+    const estimatedNeurons = cloudflareNeuronEstimate(raw && raw.usage, model);
     if (!content.trim()) {
-      return { ...providerFailure(502, 'service_unavailable'), formatContract: true };
+      return {
+        ...providerFailure(502, 'service_unavailable'),
+        formatContract: true,
+        cloudflareCallCount: 1,
+        cloudflareModel: model,
+        cloudflareEstimatedNeurons: estimatedNeurons,
+        cloudflareUnmeteredNeurons: estimatedNeurons > 0 ? 0 : CLOUDFLARE_UNMETERED_CALL_NEURONS,
+      };
     }
     return {
       response: new Response(JSON.stringify({ ok: true }), {
@@ -946,12 +978,22 @@ async function callCloudflareVerifier(ai, body, deadline) {
         choices: [{ message: { content } }],
         usage: raw && raw.usage && typeof raw.usage === 'object' ? raw.usage : {},
       },
+      cloudflareCallCount: 1,
+      cloudflareModel: model,
+      cloudflareEstimatedNeurons: estimatedNeurons,
+      cloudflareUnmeteredNeurons: estimatedNeurons > 0 ? 0 : CLOUDFLARE_UNMETERED_CALL_NEURONS,
     };
   } catch (error) {
     const status = Number(error && (error.status || error.statusCode)) || 503;
     const code = status === 429 ? 'rate_limit_exceeded'
       : (status === 504 ? 'timeout' : 'service_unavailable');
-    return providerFailure(status >= 400 && status <= 599 ? status : 503, code);
+    return {
+      ...providerFailure(status >= 400 && status <= 599 ? status : 503, code),
+      cloudflareCallCount: 1,
+      cloudflareModel: model,
+      cloudflareEstimatedNeurons: 0,
+      cloudflareUnmeteredNeurons: CLOUDFLARE_UNMETERED_CALL_NEURONS,
+    };
   } finally {
     if (timer) clearTimeout(timer);
   }
@@ -969,16 +1011,21 @@ function verifierRouteDiagnostic(result) {
       : 'cloudflare-primary',
   };
   const route = diagnostic.focuschrist_verifier_route;
-  const inferredCloudflareCalls = route === 'cloudflare-primary'
-    ? 1
-    : (route === 'groq-fallback' && !['binding-missing', 'deadline-direct'].includes(String(result && result.fallbackReason || '')) ? 1 : 0);
-  const cloudflareCalls = Number(result && result.totalCloudflareVerifierCalls || inferredCloudflareCalls);
+  const inferredCloudflareCalls = route === 'cloudflare-primary' ? 1
+    : (route === 'cloudflare-fast-fallback' ? 2
+      : (route === 'groq-fallback' && !['binding-missing', 'deadline-direct'].includes(String(result && result.fallbackReason || '')) ? 1 : 0));
+  const cloudflareCalls = Number(result && result.totalCloudflareVerifierCalls
+    || result && result.cloudflareCallCount
+    || inferredCloudflareCalls);
   const groqCalls = Number(result && result.totalGroqVerifierCalls
     || (route === 'groq-fallback' ? result && result.callCount || 0 : 0));
   diagnostic.focuschrist_cloudflare_verifier_calls = Math.max(0, cloudflareCalls);
   diagnostic.focuschrist_groq_verifier_calls = Math.max(0, groqCalls);
   diagnostic.focuschrist_verifier_primary_attempted = cloudflareCalls > 0;
-  diagnostic.focuschrist_verifier_conservative_unmetered_neurons = route === 'groq-fallback' && cloudflareCalls > 0 ? 1000 : 0;
+  diagnostic.focuschrist_verifier_conservative_unmetered_neurons = Math.max(0, Number(
+    result && (result.totalCloudflareUnmeteredNeurons
+      || result.cloudflareUnmeteredNeurons) || 0,
+  ));
   if (result && result.primaryDiagnostic) {
     diagnostic.focuschrist_verifier_primary_status = result.primaryDiagnostic.focuschrist_provider_status || 0;
     diagnostic.focuschrist_verifier_primary_code = result.primaryDiagnostic.focuschrist_provider_code || '';
@@ -998,7 +1045,11 @@ function verifierRouteDiagnostic(result) {
   if (Number.isFinite(outputTokens) && outputTokens > 0) {
     diagnostic.focuschrist_verifier_output_tokens = Math.round(outputTokens);
   }
-  if (diagnostic.focuschrist_verifier_route === 'cloudflare-primary' && (inputTokens > 0 || outputTokens > 0)) {
+  const measuredCloudflareNeurons = Number(result && (result.totalCloudflareEstimatedNeurons
+    || result.cloudflareEstimatedNeurons) || 0);
+  if (measuredCloudflareNeurons > 0) {
+    diagnostic.focuschrist_verifier_estimated_neurons = Math.ceil(measuredCloudflareNeurons);
+  } else if (diagnostic.focuschrist_verifier_route === 'cloudflare-primary' && (inputTokens > 0 || outputTokens > 0)) {
     diagnostic.focuschrist_verifier_estimated_neurons = Math.ceil((inputTokens * 26668 + outputTokens * 204805) / 1000000);
   }
   return diagnostic;
@@ -1022,6 +1073,14 @@ function accumulateVerifierCalls(target, ...results) {
     const diagnostic = verifierRouteDiagnostic(result);
     return sum + Number(diagnostic.focuschrist_groq_verifier_calls || 0);
   }, 0);
+  target.totalCloudflareEstimatedNeurons = results.reduce((sum, result) => sum + Number(
+    result && (result.totalCloudflareEstimatedNeurons
+      || result.cloudflareEstimatedNeurons) || 0,
+  ), 0);
+  target.totalCloudflareUnmeteredNeurons = results.reduce((sum, result) => sum + Number(
+    result && (result.totalCloudflareUnmeteredNeurons
+      || result.cloudflareUnmeteredNeurons) || 0,
+  ), 0);
   return target;
 }
 
@@ -1057,18 +1116,26 @@ async function callVerifier(env, body, deadline, options = {}) {
       return {
         ...providerFailure(504, 'timeout'),
         verifierRoute: 'cloudflare-required-deadline',
-        fallbackReason: 'groq-disabled-indexed-lane',
+        fallbackReason: 'operational-fallback-disabled',
         verifierDurationMs: Date.now() - started,
       };
     }
-    const fallback = validateGroqVerifierResult(
-      await callGroq(env.GROQ_KEY_NEW, groqFallbackBody, deadline, false),
+    const fallback = validateVerifierResult(
+      await callCloudflareVerifier(env.AI, plainJsonBody, deadline, {
+        model: CLOUDFLARE_FALLBACK_MODEL,
+        reserveMs: 0,
+        limitMs: remainingBudget(deadline),
+        enforceResponseFormat: false,
+      }),
       requireSourceIndexes,
     );
     return {
       ...fallback,
-      verifierRoute: 'groq-fallback',
+      verifierRoute: 'cloudflare-fast-fallback',
       fallbackReason: 'deadline-direct',
+      totalCloudflareVerifierCalls: Number(fallback.cloudflareCallCount || 0),
+      totalCloudflareEstimatedNeurons: Number(fallback.cloudflareEstimatedNeurons || 0),
+      totalCloudflareUnmeteredNeurons: Number(fallback.cloudflareUnmeteredNeurons || 0),
       verifierDurationMs: Date.now() - started,
     };
   }
@@ -1096,7 +1163,7 @@ async function callVerifier(env, body, deadline, options = {}) {
       ...primary,
       verifierRoute: 'cloudflare-primary',
       primaryDiagnostic,
-      fallbackReason: 'groq-disabled-indexed-lane',
+      fallbackReason: 'operational-fallback-disabled',
       verifierDurationMs: Date.now() - started,
     };
   }
@@ -1105,15 +1172,27 @@ async function callVerifier(env, body, deadline, options = {}) {
     : (primary.response.status === 429
       ? 'primary-rate-limited'
       : (primary.response.status === 504 ? 'primary-timeout' : 'primary-unavailable'));
-  const fallback = validateGroqVerifierResult(
-    await callGroq(env && env.GROQ_KEY_NEW, groqFallbackBody, deadline, false),
+  const fallback = validateVerifierResult(
+    await callCloudflareVerifier(env.AI, plainJsonBody, deadline, {
+      model: CLOUDFLARE_FALLBACK_MODEL,
+      reserveMs: 0,
+      limitMs: remainingBudget(deadline),
+      enforceResponseFormat: false,
+    }),
     requireSourceIndexes,
   );
   return {
     ...fallback,
-    verifierRoute: 'groq-fallback',
+    verifierRoute: 'cloudflare-fast-fallback',
     primaryDiagnostic,
     fallbackReason,
+    accumulatedUsage: combinedProviderUsage(primary, fallback),
+    totalCloudflareVerifierCalls: Number(primary.cloudflareCallCount || 0)
+      + Number(fallback.cloudflareCallCount || 0),
+    totalCloudflareEstimatedNeurons: Number(primary.cloudflareEstimatedNeurons || 0)
+      + Number(fallback.cloudflareEstimatedNeurons || 0),
+    totalCloudflareUnmeteredNeurons: Number(primary.cloudflareUnmeteredNeurons || 0)
+      + Number(fallback.cloudflareUnmeteredNeurons || 0),
     verifierDurationMs: Date.now() - started,
   };
 }
@@ -1525,7 +1604,7 @@ export default {
         && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
         && indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2));
       if ((needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration)
-        && verifierResult.verifierRoute !== 'groq-fallback'
+        && verifierResult.verifierRoute === 'cloudflare-primary'
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
         const expansionPrompt = [
@@ -1556,8 +1635,17 @@ export default {
           requireSourceIndexes: true,
           allowGroqFallback: false,
         });
-        expansionResult.accumulatedUsage = combinedProviderUsage(verifierResult, expansionResult);
-        accumulateVerifierCalls(expansionResult, verifierResult, expansionResult);
+        const initialVerifierResult = verifierResult;
+        expansionResult.accumulatedUsage = combinedProviderUsage(initialVerifierResult, expansionResult);
+        accumulateVerifierCalls(expansionResult, initialVerifierResult, expansionResult);
+        verifierResult = {
+          ...initialVerifierResult,
+          accumulatedUsage: expansionResult.accumulatedUsage,
+          totalCloudflareVerifierCalls: expansionResult.totalCloudflareVerifierCalls,
+          totalGroqVerifierCalls: expansionResult.totalGroqVerifierCalls,
+          totalCloudflareEstimatedNeurons: expansionResult.totalCloudflareEstimatedNeurons,
+          totalCloudflareUnmeteredNeurons: expansionResult.totalCloudflareUnmeteredNeurons,
+        };
         if (expansionResult.response.ok) {
           const expansionContent = expansionResult.data && expansionResult.data.choices && expansionResult.data.choices[0]
             ? expansionResult.data.choices[0].message.content
