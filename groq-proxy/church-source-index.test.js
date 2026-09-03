@@ -1,6 +1,7 @@
 import worker, {
   classifyResearchScope,
   compactParagraphPack,
+  deterministicHistoryTopicSource,
   deterministicScriptureSource,
   evidenceCacheKey,
   extractRelevantParagraphs,
@@ -50,6 +51,19 @@ assert(almaCacheKeyA && almaCacheKeyARepeat && almaCacheKeyB
   && almaCacheKeyA.url === almaCacheKeyARepeat.url
   && almaCacheKeyA.url !== almaCacheKeyB.url,
   'deterministic scripture cache keys must be stable for the same question but isolated across different question wording');
+const kirtlandQuestion = 'What occurred around the 1836 dedication of the Kirtland Temple?';
+const kirtlandVariant = 'What should I know about the construction of the Kirtland Temple?';
+const kirtlandCandidate = deterministicHistoryTopicSource(kirtlandQuestion, 'church-history');
+const kirtlandVariantCandidate = deterministicHistoryTopicSource(kirtlandVariant, 'church-history');
+assert(kirtlandCandidate && kirtlandCandidate.deterministicHistoryTopic === true
+  && /\/study\/history\/topics\/kirtland-temple/.test(kirtlandCandidate.url),
+  'the exact production Kirtland regression must resolve to the named official Kirtland Temple history topic');
+assert(deterministicHistoryTopicSource(kirtlandQuestion, 'ask') === null,
+  'named Church History topic determinism must remain scoped to the Church History page');
+const kirtlandCacheA = await evidenceCacheKey(kirtlandCandidate, kirtlandQuestion);
+const kirtlandCacheB = await evidenceCacheKey(kirtlandVariantCandidate, kirtlandVariant);
+assert(kirtlandCacheA && kirtlandCacheB && kirtlandCacheA.url !== kirtlandCacheB.url,
+  'deterministic history-topic cache keys must remain question-specific');
 assert(isPioneerIrrigationIntent('What did cooperative irrigation contribute to settlement life?', 'pioneers'),
   'the exact production Pioneer irrigation regression must enter the pinned evidence lane');
 const followUpScope = classifyResearchScope([
@@ -306,6 +320,29 @@ assert(exactAlmaCandidate
 globalThis.fetch = savedFetchForAlma;
 if (savedCachesForAlma === undefined) delete globalThis.caches;
 else globalThis.caches = savedCachesForAlma;
+
+const exactKirtlandQuestion = 'What occurred around the 1836 dedication of the Kirtland Temple?';
+let exactKirtlandFetchCalls = 0;
+const savedCachesForKirtland = globalThis.caches;
+const savedFetchForKirtland = globalThis.fetch;
+delete globalThis.caches;
+globalThis.fetch = async (url) => {
+  exactKirtlandFetchCalls += 1;
+  assert(String(url).includes('/study/history/topics/kirtland-temple'),
+    'explicit Kirtland Temple history retrieval must not fetch a competing indexed source');
+  return new Response('<p>On March 27, 1836, the Saints assembled for the Kirtland Temple dedication. Joseph Smith offered the revealed dedicatory prayer, and the Saints gave the Hosanna Shout and sang The Spirit of God.</p><p>At the dedication and in meetings during the following weeks, Latter-day Saints experienced dramatic outpourings of the Holy Spirit and other spiritual events in the Kirtland Temple.</p>', {
+    status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' },
+  });
+};
+const exactKirtlandEvidence = await retrieveIndexedChurchEvidence(exactKirtlandQuestion, 'church-history', Date.now() + 4000);
+assert(exactKirtlandEvidence.deterministicHistoryTopic === true
+  && exactKirtlandEvidence.evidence.length === 1
+  && exactKirtlandEvidence.evidence[0].url.includes('/study/history/topics/kirtland-temple')
+  && exactKirtlandFetchCalls === 1,
+  'explicit named Church History retrieval must fetch exactly one matching official history topic');
+globalThis.fetch = savedFetchForKirtland;
+if (savedCachesForKirtland === undefined) delete globalThis.caches;
+else globalThis.caches = savedCachesForKirtland;
 
 const approvedCandidate = rankChurchSourceCandidates('Who is Hyrum Smith?', 'ask')[0];
 const excerptCache = new Map();

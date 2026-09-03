@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.41';
+const POLICY_VERSION = '2026-09-03.42';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -96,6 +96,9 @@ const productionRegressions = [
     specimen('regression-alma32-deterministic-source', 'ask', 'faith-study',
         'Using the official scripture text, explain the seed comparison in Alma 32 teach about faith and the word?',
         'faith-study', true, 'alma', /\/alma\/32/i, 'scripture'),
+    specimen('regression-kirtland-deterministic-history-topic', 'church-history', 'faith-study',
+        'What occurred around the 1836 dedication of the Kirtland Temple?',
+        'faith-study', true, 'kirtland', /\/history\/topics\/kirtland-temple/i, 'church-history'),
 ];
 
 const burst = [
@@ -151,6 +154,7 @@ async function submit(test, messages = null) {
             sourceHosts: sources.map((source) => { try { return new URL(source.url).hostname.toLowerCase(); } catch (_error) { return 'invalid'; } }),
             evidenceRelevance: Array.isArray(payload.focuschrist_evidence_relevance) ? payload.focuschrist_evidence_relevance : [],
             deterministicScripture: payload.focuschrist_deterministic_scripture === true,
+            deterministicHistoryTopic: payload.focuschrist_deterministic_history_topic === true,
         };
     } finally { clearTimeout(timer); }
 }
@@ -172,6 +176,10 @@ function validate(test, result) {
         if (test.id === 'regression-alma32-deterministic-source') {
             assert(result.deterministicScripture === true && result.indexSources === 1 && result.officialFetchCalls <= 1,
                 test.id + ' did not prove single-source deterministic scripture retrieval');
+        }
+        if (test.id === 'regression-kirtland-deterministic-history-topic') {
+            assert(result.deterministicHistoryTopic === true && result.indexSources === 1 && result.officialFetchCalls <= 1,
+                test.id + ' did not prove single-source named Church History retrieval');
         }
         assert(result.sourceUrls.some((url) => test.sourcePattern.test(url)), test.id + ' selected an off-topic source URL');
         assert(result.evidenceRelevance.length > 0 && result.evidenceRelevance.every((entry) => entry.overlap_count >= 2 && result.sourceUrls.includes(entry.url)), test.id + ' did not prove selected-excerpt relevance');
