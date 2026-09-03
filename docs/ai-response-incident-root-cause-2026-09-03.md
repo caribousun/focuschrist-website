@@ -33,6 +33,20 @@ Measured sample: two failures out of five, 40 percent fallback/abort incidence, 
 
 Follow-up root cause: known Church-person classification must exist server-side before the research call, not only in the browser or as a post-research evidence upgrade. The one permitted 429 retry also needs to honor the provider's bounded delay within the shared deadline. The five-specimen matrix should pace calls to avoid creating an artificial burst while still gating each response's own latency.
 
+## Second post-deploy acceptance, Worker policy 2026-09-03.17
+
+`VERIFIED FAIL`
+
+- Hyrum Smith passed in 3.6 seconds with 211 words, faith-study classification, and official Church History sources only.
+- General science passed in 4.8 seconds.
+- The next three faith/history specimens reached the verifier but returned `verification-provider-error`; later inspection identified HTTP 429 `rate_limit_exceeded` on the verifier.
+- A separate Alma 32 request after the burst passed in 11.7 seconds with 83 words and five official Church sources, proving the verifier was healthy outside the token window.
+- A later 15-second-paced matrix still produced verifier 429 responses for two middle specimens, while the first, fourth, and fifth passed.
+
+Official Groq documentation lists a free-plan limit of 8,000 tokens per minute for `openai/gpt-oss-20b`, compared with 70,000 tokens per minute for `groq/compound-mini`. The pre-repair verifier could receive six evidence excerpts of up to 1,800 characters each, plus the draft and policy. The remaining bottleneck was verifier input volume, not request count alone.
+
+Worker policy 2026-09-03.18 therefore caps collected evidence at four compact excerpts and sends only the two highest-ranked eligible sources to verification, with each excerpt capped at 700 characters and the complete evidence block capped at 5,000 characters. This retains a distinct verifier step while fitting the existing no-new-cost provider limits.
+
 ## Owner-reproduced incident
 
 The Main Ask page accepted `who is hyrum smith` but eventually displayed:

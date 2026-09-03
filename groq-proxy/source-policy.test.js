@@ -172,6 +172,13 @@ const evidence = collectSourceEvidence({
 assert(evidence.length === 2, 'gateway must collect tool-returned source evidence');
 assert(isOfficialChurchSource(evidence[0]), 'official Church subpages must be recognized');
 assert(!isOfficialChurchSource(evidence[1]), 'non-Church evidence must not be treated as official');
+const boundedEvidence = collectSourceEvidence({ executed_tools: [{ search_results: Array.from({ length: 6 }, (_, index) => ({
+  title: `Source ${index + 1}`,
+  url: `https://example.com/source-${index + 1}`,
+  content: 'evidence '.repeat(300),
+})) }] });
+assert(boundedEvidence.length === 4 && boundedEvidence.every((source) => source.content.length <= 700),
+  'research evidence must be capped before verification to remain inside the provider token budget');
 const hyrumEvidence = [{
   title: 'Hyrum Smith',
   url: 'https://history.churchofjesuschrist.org/content/hyrum-smith',
@@ -447,7 +454,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.17',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.18',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

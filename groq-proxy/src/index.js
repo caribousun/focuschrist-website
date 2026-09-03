@@ -17,7 +17,7 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.17';
+const SOURCE_POLICY_VERSION = '2026-09-03.18';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -189,7 +189,7 @@ function canonicalSource(rawUrl, title, content) {
       url: url.href,
       host: url.hostname.toLowerCase(),
       title: String(title || url.hostname).replace(/\s+/g, ' ').trim().slice(0, 180),
-      content: String(content || '').replace(/\s+/g, ' ').trim().slice(0, 1800),
+      content: String(content || '').replace(/\s+/g, ' ').trim().slice(0, 700),
     };
   } catch (_error) {
     return null;
@@ -222,7 +222,7 @@ function collectSourceEvidence(message) {
       unique.push(source);
     }
   });
-  return unique.slice(0, 6);
+  return unique.slice(0, 4);
 }
 
 function isOfficialChurchSource(source) {
@@ -341,7 +341,7 @@ function evidenceForVerifier(evidence) {
     `TITLE: ${source.title}`,
     `URL: ${source.url}`,
     `CONTENT: ${source.content || '(No retrievable source excerpt was returned.)'}`,
-  ].join('\n')).join('\n\n').slice(0, 18000);
+  ].join('\n')).join('\n\n').slice(0, 5000);
 }
 
 function parseVerifierJson(text) {
@@ -720,7 +720,7 @@ export default {
       });
       const evidence = sanitized.scope.selectedPioneer
         ? [tellMyStoryEvidence].filter(Boolean)
-        : (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence);
+        : (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence).slice(0, 2);
       if (draft && !evidence.length && !sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
         const generalAnswer = await produceLowRiskGeneralAnswer(env.GROQ_KEY_NEW, sanitized.scope, draft, deadline);
         if (generalAnswer) {

@@ -3,7 +3,7 @@ const ORIGIN = 'https://focuschrist.com';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
-const INTER_REQUEST_DELAY_MS = BASELINE_MODE ? 0 : 3000;
+const INTER_REQUEST_DELAY_MS = BASELINE_MODE ? 0 : 5000;
 
 const specimens = [
     {
@@ -76,6 +76,8 @@ async function submit(specimen) {
             elapsedMs,
             gatewayMode: String(payload.focuschrist_gateway_mode || ''),
             policyVersion: String(payload.focuschrist_source_policy || ''),
+            providerStatus: Number(payload.focuschrist_provider_status || 0),
+            providerCode: String(payload.focuschrist_provider_code || ''),
             resolvedProfile: String(payload.focuschrist_resolved_profile || ''),
             classificationMode: String(payload.focuschrist_classification_mode || ''),
             verified: payload.focuschrist_source_integrity_verified === true,
@@ -118,8 +120,8 @@ async function submit(specimen) {
         const specimen = specimens[index];
         const result = results[index];
         assert(result.status === 200, specimen.id + ' returned HTTP ' + result.status);
-        assert(result.policyVersion === '2026-09-03.17',
-            specimen.id + ' returned Worker policy ' + result.policyVersion + ' instead of 2026-09-03.17');
+        assert(result.policyVersion === '2026-09-03.18',
+            specimen.id + ' returned Worker policy ' + result.policyVersion + ' instead of 2026-09-03.18');
         assert(result.elapsedMs <= HARD_LIMIT_MS, specimen.id + ' exceeded the 25-second visitor ceiling');
         assert(result.wordCount >= specimen.minimumWords, specimen.id + ' returned an incomplete answer');
         assert(!/could not complete|temporarily unavailable|could not verify|please rephrase/i.test(result.answer),
