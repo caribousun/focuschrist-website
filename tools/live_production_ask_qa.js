@@ -281,4 +281,31 @@ function requireSubstantive(match, label, expected) {
         '1856'
     );
     requireSubstantive(
-        registry.match('How does the Church explain Joseph Smith and plural marm«ëŒ+Š×ž®º+º$zzb¥
+        registry.match('How does the Church explain Joseph Smith and plural marriage?', { profile: 'church-history' }),
+        'Church History plural marriage card',
+        'early 1840s'
+    );
+    requireSubstantive(
+        registry.match('Who is Jesus Christ, and why is He central to Latter-day Saint belief?', { profile: 'ask' }),
+        'Jesus Christ card',
+        'Savior and Redeemer'
+    );
+
+    for (const competing of [
+        'Do we know what time he died, john adams?',
+        'When did he dieâ€”washington?',
+        'What time did he die, JFK?'
+    ]) {
+        const isolated = registry.resolveFollowup(competing, {
+            profile: 'ask',
+            history: [{ role: 'user', content: 'What date did Joseph Smith die?', contextEntryId: josephMain.id }]
+        });
+        assert(isolated.resolved === false && isolated.entryId === null,
+            'production inherited Joseph Smith for competing identity: ' + competing);
+    }
+
+    console.log('LIVE PRODUCTION ASK QA PASS: exact deployed assets and critical conversations verified');
+})().catch((error) => {
+    console.error(error);
+    process.exit(1);
+});
