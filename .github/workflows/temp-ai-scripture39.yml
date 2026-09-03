@@ -1,0 +1,53 @@
+name: Temporary AI scripture39 verification
+
+on:
+  push:
+    branches:
+      - codex/ai-scripture-evidence-39
+    paths:
+      - ".github/workflows/temp-ai-scripture39.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: codex/ai-scripture-evidence-39
+          fetch-depth: 0
+      - name: Apply policy 39 patch
+        run: python tools/temp_ai_scripture39_patch.py
+      - name: Run release suite
+        run: |
+          node groq-proxy/source-policy.test.js
+          node groq-proxy/church-source-index.test.js
+          python tools/build_church_source_index.py --check
+          python tools/site_qa.py
+          python tools/unified_experience_qa.py
+          python tools/resource_qa.py
+          python tools/study_intelligence_qa.py
+          python tools/hardened_experience_qa.py
+          python tools/pioneer_local_first_qa.py
+          python tools/production_hardening_qa.py
+          python tools/church_history_qa.py
+          python tools/scripture_grounding_qa.py
+          python tools/source_integrity_inventory.py
+          python tools/static_content_audit.py
+          node tools/source_integrity_runtime_qa.js
+          node tools/reviewed_ask_knowledge_qa.js
+          node tools/pioneer_ask_runtime_qa.js
+          node tools/church_history_ask_runtime_qa.js
+          node tools/study_intelligence_v3_runtime_qa.js
+          node tools/question_safety_runtime_qa.js
+          node --check groq-proxy/src/index.js
+          node --check tools/live_ai_response_matrix.js
+      - name: Commit verified patch
+        run: |
+          git config user.name "focusChrist AI verification"
+          git config user.email "actions@users.noreply.github.com"
+          git add MEMORY.md groq-proxy/src/index.js groq-proxy/source-policy.test.js tools/live_ai_response_matrix.js tools/pioneer_local_first_qa.py tools/scripture_grounding_qa.py
+          git commit -m "Harden cached relevance and scripture context"
+          git push origin HEAD:codex/ai-scripture-evidence-39
