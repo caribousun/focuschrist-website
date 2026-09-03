@@ -47,6 +47,18 @@ Official Groq documentation lists a free-plan limit of 8,000 tokens per minute f
 
 Worker policy 2026-09-03.18 therefore caps collected evidence at four compact excerpts and sends only the two highest-ranked eligible sources to verification, with each excerpt capped at 700 characters and the complete evidence block capped at 5,000 characters. This retains a distinct verifier step while fitting the existing no-new-cost provider limits.
 
+## Third post-deploy acceptance, Worker policy 2026-09-03.18
+
+`VERIFIED FAIL`
+
+- Four of five production specimens passed with verified answers in 3.3 to 10.6 seconds.
+- The final Church History specimen reached the verifier but returned HTTP 429 `rate_limit_exceeded` after 7.0 seconds.
+- The evidence reduction materially improved throughput but did not remove the single-model 8,000-TPM bottleneck. A core public question service cannot depend on that verifier lane alone.
+
+Worker policy 2026-09-03.19 separates the two AI stages across providers. Groq Compound Mini continues official-source research. Cloudflare Workers AI `@cf/openai/gpt-oss-20b` becomes the primary evidence verifier through the Worker's native `AI` binding; Groq `openai/gpt-oss-20b` remains a one-shot operational fallback. Both receive the same server-owned prompt, evidence, output contract, and deterministic final guards. A valid verifier rejection never triggers another model, preventing verdict shopping. The research draft and completion ceilings are also bounded.
+
+Official Cloudflare documentation states a 10,000-neuron daily free allocation, 300 text-generation requests per minute, JSON-compatible response formatting, and no use of Workers AI customer content for training or service improvement without explicit consent. Production remains `VERIFIED FAIL` until the exact `.19` deployment and five-question matrix pass.
+
 ## Owner-reproduced incident
 
 The Main Ask page accepted `who is hyrum smith` but eventually displayed:

@@ -78,6 +78,11 @@ async function submit(specimen) {
             policyVersion: String(payload.focuschrist_source_policy || ''),
             providerStatus: Number(payload.focuschrist_provider_status || 0),
             providerCode: String(payload.focuschrist_provider_code || ''),
+            verifierRoute: String(payload.focuschrist_verifier_route || ''),
+            verifierFallbackReason: String(payload.focuschrist_verifier_fallback_reason || ''),
+            verifierPrimaryStatus: Number(payload.focuschrist_verifier_primary_status || 0),
+            verifierPrimaryCode: String(payload.focuschrist_verifier_primary_code || ''),
+            verifierDurationMs: Number(payload.focuschrist_verifier_duration_ms || 0),
             resolvedProfile: String(payload.focuschrist_resolved_profile || ''),
             classificationMode: String(payload.focuschrist_classification_mode || ''),
             verified: payload.focuschrist_source_integrity_verified === true,
@@ -120,14 +125,16 @@ async function submit(specimen) {
         const specimen = specimens[index];
         const result = results[index];
         assert(result.status === 200, specimen.id + ' returned HTTP ' + result.status);
-        assert(result.policyVersion === '2026-09-03.18',
-            specimen.id + ' returned Worker policy ' + result.policyVersion + ' instead of 2026-09-03.18');
+        assert(result.policyVersion === '2026-09-03.19',
+            specimen.id + ' returned Worker policy ' + result.policyVersion + ' instead of 2026-09-03.19');
         assert(result.elapsedMs <= HARD_LIMIT_MS, specimen.id + ' exceeded the 25-second visitor ceiling');
         assert(result.wordCount >= specimen.minimumWords, specimen.id + ' returned an incomplete answer');
         assert(!/could not complete|temporarily unavailable|could not verify|please rephrase/i.test(result.answer),
             specimen.id + ' returned a known fallback instead of an answer');
         assert(result.resolvedProfile === specimen.expectedProfile,
             specimen.id + ' resolved to ' + result.resolvedProfile + ' instead of ' + specimen.expectedProfile);
+        assert(result.verifierRoute === 'cloudflare-primary' || result.verifierRoute === 'groq-fallback',
+            specimen.id + ' did not return a recognized verifier route');
         if (specimen.officialOnly) {
             assert(result.verified && result.sourceHosts.length > 0
                 && result.sourceHosts.every((host) => host === 'churchofjesuschrist.org' || host.endsWith('.churchofjesuschrist.org')),
@@ -137,8 +144,20 @@ async function submit(specimen) {
 
     const times = results.map((result) => result.elapsedMs);
     const p95 = percentile(times, 0.95);
+    const primaryCount = results.filter((result) => result.verifierRoute === 'cloudflare-primary').length;
+    const fallbackCount = results.filter((result) => result.verifierRoute === 'groq-fallback').length;
+    assert(primaryCount >= 4,
+        'Cloudflare primary verifier handled only ' + primaryCount + '/5 specimens; routes=' + JSON.stringify(
+            results.map((result) => ({ id: result.id, route: result.verifierRoute, reason: result.verifierFallbackReason }))
+        ));
     assert(p95 <= P95_LIMIT_MS, 'matrix p95 exceeded 20 seconds: ' + p95 + 'ms');
-    console.log('Live AI response matrix PASS: ' + JSON.stringify({ count: results.length, p95Ms: p95, maxMs: Math.max(...times) }));
+    console.log('Live AI response matrix PASS: ' + JSON.stringify({
+        count: results.length,
+        cloudflarePrimary: primaryCount,
+        groqFallback: fallbackCount,
+        p95Ms: p95,
+        maxMs: Math.max(...times)
+    }));
 })().catch((error) => {
     console.error('Live AI response matrix FAIL:', error.message);
     process.exit(1);
