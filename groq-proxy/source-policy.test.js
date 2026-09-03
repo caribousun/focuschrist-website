@@ -186,6 +186,35 @@ assert(reviewedDeterministicEvidenceRecovery(
   [{ url: 'https://example.com/enos/1', content: 'prayer forgiven' }],
 ) === null, 'reviewed Enos recovery must never accept a non-Church source');
 
+
+const coldEnosQuestion = 'What does Enos 1 teach about prayer and forgiveness?';
+const coldEnosCandidate = {
+  deterministic: true,
+  title: 'Enos 1',
+  tokens: 'Enos 1',
+  url: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng',
+};
+const coldEnosParagraphs = [
+  `Enos describes earnest prayer for his own soul before God. ${'This paragraph supplies surrounding narrative context without adding the later forgiveness statement. '.repeat(12)}`,
+  'The narrative continues with additional setting and sequence before the answer to his pleading is stated.',
+  'Another paragraph supplies intervening narrative context about the experience and its progression.',
+  'The account continues before recording the Lord’s answer to Enos and the change that followed.',
+  'The Lord tells Enos that his sins are forgiven, and Enos explains that his guilt is swept away because of faith in Christ.',
+];
+const coldEnosExcerpt = relevantParagraphText(coldEnosParagraphs, coldEnosQuestion, coldEnosCandidate);
+assert(/\bpray\w*\b/i.test(coldEnosExcerpt) && /\bforgiv\w*\b/i.test(coldEnosExcerpt),
+  'cold deterministic scripture extraction must preserve both high-relevance concepts before surrounding context');
+const coldEnosRecovery = reviewedDeterministicEvidenceRecovery(coldEnosQuestion, [{
+  url: coldEnosCandidate.url,
+  content: coldEnosExcerpt,
+}]);
+assert(coldEnosRecovery && coldEnosRecovery.recoveryId === 'reviewed-enos-1-prayer-forgiveness',
+  'cold Enos 1 official extraction must activate the same audited recovery as a warm-cache request');
+const coldEnosCachePack = compactParagraphPack(coldEnosParagraphs, coldEnosCandidate, coldEnosQuestion);
+assert(coldEnosCachePack.some((paragraph) => /\bpray\w*\b/i.test(paragraph))
+  && coldEnosCachePack.some((paragraph) => /\bforgiv\w*\b/i.test(paragraph)),
+  'deterministic scripture cache packing must prioritize the visitor question so warm retrieval preserves both concepts');
+
 const reliefReviewedRecovery = reviewedDeterministicEvidenceRecovery(
   'Give me the historical setting for the Female Relief Society of Nauvoo when it began and why.',
   [{
@@ -843,7 +872,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.50',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-03.51',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

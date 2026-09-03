@@ -23,8 +23,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.50';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.50';
+const SOURCE_POLICY_VERSION = '2026-09-03.51';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.51';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -471,26 +471,43 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
   }).filter((item) => item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
     .slice(0, 2);
-  if (candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true) && selected.length) {
+  if (candidate && candidate.deterministic === true && selected.length) {
+    // A named scripture chapter is already pinned to one canonical source.
+    // Keep both highest-relevance anchor paragraphs before surrounding context.
+    // This prevents a long early paragraph from truncating a later paragraph
+    // that supplies a second concept in the visitor's question (for example
+    // Enos 1 prayer plus forgiveness) on a cold, uncached fetch.
+    const anchorPositions = Array.from(new Set(selected.map((item) => item.position)))
+      .sort((left, right) => left - right);
+    const contextPositions = new Set();
+    selected.forEach((item) => {
+      for (let offset = -1; offset <= 3; offset += 1) {
+        const position = item.position + offset;
+        if (position >= 0 && position < sourceParagraphs.length && !anchorPositions.includes(position)) {
+          contextPositions.add(position);
+        }
+      }
+    });
+    return [
+      ...anchorPositions,
+      ...Array.from(contextPositions).sort((left, right) => left - right),
+    ].map((position) => sourceParagraphs[position]).join(' ').slice(0, 4200);
+  }
+  if (candidate && candidate.deterministicHistoryTopic === true && selected.length) {
     const positions = new Set();
     // A deterministic history topic is an article-level match, not merely a
     // paragraph-level keyword match. Preserve its lead paragraphs so origin,
     // date, identity, and purpose are not displaced by a later heading that
     // happens to share more query tokens (for example "organization").
-    if (candidate.deterministicHistoryTopic === true) {
-      for (let position = 0; position < Math.min(2, sourceParagraphs.length); position += 1) positions.add(position);
-    }
+    for (let position = 0; position < Math.min(2, sourceParagraphs.length); position += 1) positions.add(position);
     selected.forEach((item) => {
-      const firstOffset = candidate.deterministicHistoryTopic === true ? -1 : 0;
-      const lastOffset = candidate.deterministicHistoryTopic === true ? 2 : 3;
-      for (let offset = firstOffset; offset <= lastOffset; offset += 1) {
+      for (let offset = -1; offset <= 2; offset += 1) {
         const position = item.position + offset;
         if (position >= 0 && position < sourceParagraphs.length) positions.add(position);
       }
     });
-    const limit = candidate.deterministicHistoryTopic === true ? 1200 : 700;
     return Array.from(positions).sort((left, right) => left - right)
-      .map((position) => sourceParagraphs[position]).join(' ').slice(0, limit);
+      .map((position) => sourceParagraphs[position]).join(' ').slice(0, 1200);
   }
   return selected.map((item) => item.text).join(' ').slice(0, 700);
 }
@@ -520,7 +537,7 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
   const discoveryTokens = normalizeDiscoveryTokens(`${candidate.title || ''} ${candidate.tokens || ''}`);
   const queryTokens = normalizeDiscoveryTokens(question);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
-  const questionFocused = topicPinned || Boolean(candidate && candidate.deterministicHistoryTopic === true);
+  const questionFocused = topicPinned || Boolean(candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true));
   let size = 0;
   return (Array.isArray(paragraphs) ? paragraphs : []).map((text, position) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
