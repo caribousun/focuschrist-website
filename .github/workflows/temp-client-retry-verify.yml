@@ -17,7 +17,15 @@ jobs:
           ref: codex/client-transient-retry-scratch
           fetch-depth: 0
       - name: Apply bounded client retry patch
-        run: python tools/temp_apply_client_retry.py
+        run: |
+          python tools/temp_apply_client_retry.py
+          python - <<'PY'
+          from pathlib import Path
+          for name in ['site-common.js','study-source-router.js','ask.html','pioneers.html','church-history.html']:
+              p = Path(name)
+              p.write_text(p.read_text(encoding='utf-8').replace('study-intelligence-v3.js?v=20260903-16','study-intelligence-v3.js?v=20260903-17'), encoding='utf-8')
+          PY
+          grep -H "study-intelligence-v3.js?v=" site-common.js study-source-router.js ask.html pioneers.html church-history.html || true
       - name: Run focused retry QA
         run: |
           python tools/study_intelligence_qa.py
@@ -51,6 +59,6 @@ jobs:
         run: |
           git config user.name "focusChrist retry verification"
           git config user.email "actions@users.noreply.github.com"
-          git add study-intelligence-v3.js site-common.js study-source-router.js ask.html pioneers.html tools/study_intelligence_qa.py tools/hardened_experience_qa.py tools/scripture_grounding_qa.py tools/source_integrity_inventory.py tools/study_intelligence_v3_runtime_qa.js MEMORY.md
+          git add study-intelligence-v3.js site-common.js study-source-router.js ask.html pioneers.html church-history.html tools/study_intelligence_qa.py tools/hardened_experience_qa.py tools/scripture_grounding_qa.py tools/source_integrity_inventory.py tools/study_intelligence_v3_runtime_qa.js MEMORY.md
           git commit -m "Add bounded client retry for transient Ask failures"
           git push origin HEAD:codex/client-transient-retry-scratch
