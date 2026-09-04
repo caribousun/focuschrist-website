@@ -127,6 +127,10 @@
     margin-top: 28px;
 }
 
+.fc-artwork-detail-actions [hidden] {
+    display: none !important;
+}
+
 .fc-artwork-detail-actions .fc-button {
     min-height: 44px;
 }
