@@ -53,11 +53,33 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Approved realistic predawn image of Jesus Christ speaking with Nicodemus.
 - Placement: right of a clean vertical continuation list inside a unified presentation panel. At tablet and mobile widths, the image stacks above the links.
 
+### Church History
+
+- `assets/history/first-vision-800.webp`
+- `assets/history/first-vision-1400.webp`
+- `assets/history/joseph-emma-harmony-800.webp`
+- `assets/history/joseph-emma-harmony-1400.webp`
+- `assets/history/three-witnesses-800.webp`
+- `assets/history/three-witnesses-1400.webp`
+- `assets/history/restoration-print-shop-800.webp`
+- `assets/history/restoration-print-shop-1400.webp`
+- `assets/history/preserving-the-record-800.webp`
+- `assets/history/preserving-the-record-1400.webp`
+- `assets/history/christ-museum-record-800.webp`
+- `assets/history/christ-museum-record-1400.webp`
+- `assets/history/christ-through-eras-800.webp`
+- `assets/history/christ-through-eras-1400.webp`
+- Approved as seven sequential visual chapters distributed through the History page. The sequence begins after the unchanged hero and source standard, leaves the Ask controls unobstructed, alternates visual offsets, and concludes before the continuation links.
+- The First Vision portrayal keeps Jesus Christ and Joseph Smith as the primary characters while God the Father is forward-facing but lightly seen.
+- The Three Witnesses portrait uses their June 1829 ages: Oliver Cowdery 22, David Whitmer 24, and Martin Harris 46.
+
 ## Not selected
 
 - The walking image generated for the Ask page was rejected and must not be used.
 - The earlier stylized Nicodemus image was rejected because it looked cartoon-like and must not be used.
 - The 2026-09-03 Answers-page courtyard teaching candidate was rejected because it did not match the approved focusChrist character or established artwork. It must not be used or treated as a style reference.
+- The Church History `A Worldwide Living History` candidate was rejected and must not be used.
+- All Moroni and Joseph bedroom candidates reviewed on 2026-09-04 were rejected and must not be used.
 
 ## Release protection
 

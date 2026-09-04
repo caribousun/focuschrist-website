@@ -18,7 +18,7 @@ All candidates must use cinematic photographic realism, natural anatomy and fabr
 | Inspirational Art | Let the gallery remain the visual focus | 0 additional by default | No supporting image should compete with the gallery or featured studies | Existing optimized thumbnails | Existing visual experience is sufficient pending live review |
 | Missionary | Establish the visual standard for the site | 2 existing | Alternating full editorial sections with text and art | Existing landscape assets | Reference page; no change |
 | Pioneers | Support journey, sacrifice, covenant, and remembrance | 2 candidates | One wide trail transition; one inset portrait or camp scene aligned to the journal material, alternating sides | 16:9 landscape and 4:5 portrait | Brief ready; candidate approval required |
-| Church History | Move from sacred beginnings to careful source study | 2 candidates | First: quiet right-side sacred grove study scene. Second: left-side archival table with journals, maps, and scripture near source-type exploration | 3:2 landscape and 4:5 portrait | Brief ready; candidate approval required |
+| Church History | Move from sacred beginnings to careful source study | 7 approved | Sequential visual chapters from the First Vision through witnesses, publication, preservation, global history, and Christ-centered remembrance | Responsive panoramic WebP, 800 and 1400 pixel variants | Approved and integrated; hero unchanged |
 | Watch | Connect a viewed message to reflection and continued study | 2 candidates | One side composition near Continue by Theme; one low, wide transition before official video resources | 3:2 landscape and 2:1 landscape | Brief ready; candidate approval required |
 | About | Show the human purpose behind the site and its Christ-centered study model | 2 candidates | One right-side scene near Help people turn toward Jesus Christ; one left-side scripture and source-study scene near clarity and source awareness | 3:2 landscape and 4:5 portrait | Brief ready; candidate approval required |
 
@@ -39,6 +39,8 @@ All candidates must use cinematic photographic realism, natural anatomy and fabr
 - Walking candidate: rejected. Do not reuse its concept.
 - Cartoon-styled candidate: rejected. The rejection is a permanent exclusion for this artwork program.
 - Answers courtyard teaching candidate generated on 2026-09-03: rejected. It did not match the approved focusChrist character or the established page artwork and must never be used.
+- Church History: seven approved images integrated as a narrative sequence. The approved forest hero remains unchanged.
+- Church History rejected art: `A Worldwide Living History` and every Moroni appearing to Joseph bedroom revision reviewed on 2026-09-04. Do not place them on the site.
 
 ## Performance release gate
 

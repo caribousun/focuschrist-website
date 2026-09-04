@@ -108,6 +108,20 @@ def check_supporting_art_assets(errors: list[str]) -> None:
         "assets/page-art/ask-seek-study-1400.webp": (1400, 700),
         "assets/page-art/ask-nicodemus-640.webp": (640, 800),
         "assets/page-art/ask-nicodemus-1122.webp": (1122, 1402),
+        "assets/history/first-vision-800.webp": (800, 267),
+        "assets/history/first-vision-1400.webp": (1400, 468),
+        "assets/history/joseph-emma-harmony-800.webp": (800, 267),
+        "assets/history/joseph-emma-harmony-1400.webp": (1400, 467),
+        "assets/history/three-witnesses-800.webp": (800, 267),
+        "assets/history/three-witnesses-1400.webp": (1400, 467),
+        "assets/history/restoration-print-shop-800.webp": (800, 267),
+        "assets/history/restoration-print-shop-1400.webp": (1400, 467),
+        "assets/history/preserving-the-record-800.webp": (800, 267),
+        "assets/history/preserving-the-record-1400.webp": (1400, 467),
+        "assets/history/christ-museum-record-800.webp": (800, 400),
+        "assets/history/christ-museum-record-1400.webp": (1400, 700),
+        "assets/history/christ-through-eras-800.webp": (800, 267),
+        "assets/history/christ-through-eras-1400.webp": (1400, 467),
     }
     for rel, expected in floors.items():
         path = ROOT / rel

@@ -225,16 +225,22 @@
     {
       "path": "church-history.html",
       "status": "verified",
-      "published_text_sha256": "f038419039767c4854bcccfa023198bb754c8af8d66a124d5d0618f4918311df",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review; external-provider disclosure reviewed against deployed data flow",
+      "published_text_sha256": "96e141478457a608fa2738a89d3f07ec410b2c4040d8084c5cdc81ea2b383c9b",
+      "reviewed_on": "2026-09-04",
+      "review_standard": "L-044 universal source-integrity review; owner-approved Church History supporting artwork and historically grounded caption copy reviewed; hero preservation verified; external-provider disclosure reviewed against deployed data flow",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v1?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v2?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v3?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v4?lang=eng",
-        "https://www.churchofjesuschrist.org/study/history/topics?lang=eng"
+        "https://www.churchofjesuschrist.org/study/history/topics?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/first-vision-accounts?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/witnesses-of-the-book-of-mormon?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/topics/printing-and-publishing-the-book-of-mormon?lang=eng",
+        "https://churchhistorylibrary.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng"
       ]
     },
     {
