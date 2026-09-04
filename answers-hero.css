@@ -1,6 +1,10 @@
 /* Answers page artwork sequence - owner-approved source images, 2026-09-04.
    Page-specific only; shared hero geometry remains owned by site-system.css. */
 
+.fc-visual-hero--answers {
+    display: block;
+}
+
 .fc-visual-hero--answers::before {
     background-image: url('assets/heroes/answers-christ-companion.png');
     background-position: center 46%;
