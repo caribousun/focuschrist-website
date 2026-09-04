@@ -76,6 +76,16 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - The First Vision portrayal keeps Jesus Christ and Joseph Smith as the primary characters while God the Father is forward-facing but lightly seen.
 - The Three Witnesses portrait uses their June 1829 ages: Oliver Cowdery 22, David Whitmer 24, and Martin Harris 46.
 
+### Missionary Work
+
+- `assets/missionary/christ-commissions-twelve-900.webp`
+- `assets/missionary/christ-commissions-twelve-1100.webp`
+- `assets/missionary/christ-commissions-twelve-1672.webp`
+- Approved depiction of Jesus Christ walking with exactly twelve distinct Apostles as He gives them their commission to teach all nations.
+- Placement: a wide supporting artwork immediately beneath the Christ's commission text and Matthew 28:19 quotation. The 900 and 1100 pixel variants serve the page responsively, and selecting the image opens the full 1672 pixel source.
+- Christ retains the approved `art/The-Living-Christ.png` likeness and wears a muted deep blue-gray outer robe over a warm ochre-brown tunic. Record these colors as used so later Christ artwork intentionally rotates to a different historically plausible palette unless Wyatt requests otherwise.
+- Preserve the exact count of Christ plus twelve Apostles, the warm Judean field, restrained expression, distinct Apostle faces, natural movement, and near-photorealistic finish.
+
 ## Not selected
 
 - The walking image generated for the Ask page was rejected and must not be used.

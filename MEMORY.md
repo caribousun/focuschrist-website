@@ -414,3 +414,11 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Production main is 9c77886ca150d6ed2e0d4011f871ff40a2362a19 after PR #121 and the live-ratio correction in PR #122. PR, push, and Pages runs 398, 399, 400, 401, 408, and 409 passed.
 - Live visual verification confirmed 505 pixel cards, 335 pixel image heights, 475 pixel complete card heights, 30 pixel pair gaps, successful loading of all four 1400 pixel sources, no horizontal overflow, and the unchanged Missionary hero.
 - Next session: preserve all approved Missionary Work artwork and continue Wyatt-directed page enrichment, with Home remaining the primary planned page.
+
+### Missionary Work Great Commission artwork approved
+
+- Wyatt approved the warm, near-photorealistic Judean walking scene of Jesus Christ commissioning exactly twelve distinct Apostles.
+- Preserve the exact Christ likeness, restrained expression, total count of thirteen men, distinct Apostle faces, natural walking movement, warm landscape, and premium live-action finish.
+- Approved Christ wardrobe for this image is a muted deep blue-gray outer robe over a warm ochre-brown tunic. Treat that palette as used and rotate future Christ wardrobe colors intentionally.
+- The artwork belongs directly beneath the Christ's commission text. Responsive 900 and 1100 pixel WebP variants serve the page, and the full 1672 pixel WebP opens when selected.
+- The Mission page hero remains locked and unchanged.
