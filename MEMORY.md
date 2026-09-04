@@ -429,4 +429,12 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Read the Savior's commission, Study Early Missionaries, and Explore the Growth of the Work use the same detail-first pattern before visitors leave for the official source.
 - Preserve direct original URLs as no-JavaScript fallbacks and preserve normal modified-click behavior.
 - The Mission detail experience must retain keyboard access, native Escape handling, backdrop close, focus return, responsive stacking, and the established focusChrist colors and typography.
+
+### Site-wide artwork detail standard
+
+- The Mission detail-first pattern is now the site-wide standard for appropriate supporting artwork on Home, Ask, Answers, Church History, Mission, and the four Featured Art and Study cards at the bottom of Art.
+- The verified inventory is 24 supporting artwork triggers: 17 outside Mission and 7 on Mission. Each record provides reviewed context, an official source, and a full-size image action. Featured Art cards also link to their complete study page.
+- Keep original destinations as no-JavaScript fallbacks and preserve modified-click behavior. Keep mouse, touch, keyboard, Escape, backdrop close, focus return, scroll locking, and narrow-screen stacking.
+- Do not apply the detail window to heroes, the Pioneer hero, the main Art gallery, dedicated Art and Study page images, Watch thumbnails, logos, icons, arrows, controls, or the dialog's own display image. Those surfaces retain their existing purpose-specific behavior.
+- The Mission and site-wide circular close controls must use precisely centered CSS-drawn crossing lines. Do not use the multiplication glyph because its visual weight does not sit in the geometric center.
 - This interaction changes presentation only. It does not authorize changes to approved artwork pixels, heroes, page order, or source destinations.

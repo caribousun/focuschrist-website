@@ -50,7 +50,8 @@ Confirm that:
 3. For Ask/Pioneers/Church History changes, test the actual live composer after every script is loaded. At minimum verify the sky, Joseph Smith death, handcart start-year, Pioneer Exodus, First Vision, Church organization, and negative-control families recorded in `docs/all-page-ai-ask-executive-prompt.md`.
 4. Confirm reviewed-local answers make zero Worker requests and still answer when the Worker is unavailable.
 5. For Art changes, test preview + full-resolution modal + keyboard controls.
-6. Record material production changes and verification evidence in Focus Current State and Decision & Change Log.
+6. For supporting-art changes, run `python tools/artwork_details_qa.py` and verify the detail window, official source, full-size action, fallback destination, intentional exclusions, and centered close control.
+7. Record material production changes and verification evidence in Focus Current State and Decision & Change Log.
 
 ## Recovery
 Git history is the primary restore mechanism. If a production defect is found:
