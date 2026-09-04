@@ -156,8 +156,9 @@
 
 /* The Saints narrative follows the dark Ask surface. Keep a modest visual buffer
    even though the shared section primitive is intentionally flush-top. */
-.fc-history-page #ask-history + .fc-section.fc-section--flush-top {
-    padding-top: clamp(24px, 2.5vw, 34px);
+.fc-history-page #ask-history + .fc-section.fc-section--flush-top,
+.fc-history-page .fc-history-art-section--quiet + .fc-section.fc-section--flush-top {
+    padding-top: clamp(56px, 7vw, 92px);
 }
 
 .fc-history-era-grid {
@@ -454,6 +455,15 @@
 }
 .fc-history-form-buttons { display: flex; gap: 10px; flex: 0 0 auto; }
 .fc-history-form-buttons .fc-button { min-height: 48px; border-radius: 999px; padding-inline: 22px; }
+.fc-history-helper {
+    margin: 0;
+    padding: 22px clamp(24px, 3vw, 34px) 24px;
+    border-top: 1px solid rgba(134,175,200,.18);
+    background: rgba(134,175,200,.055);
+    color: #d5dfdd;
+    font-size: 1rem;
+    line-height: 1.65;
+}
 #historyAskButton {
     border-color: var(--fc-gold);
     background: var(--fc-gold);

@@ -42,7 +42,8 @@ if not errors:
         ('id="historyResetButton"', "New Question control"),
         ('study-source-router.js', "source router loader"),
         ('church-history-experience.js?v=20260903-16', "versioned history experience loader"),
-        ('church-history.css?v=20260904-1', "versioned history stylesheet"),
+        ('church-history.css?v=20260904-2', "versioned history stylesheet"),
+        ('site-system.css?v=20260904-1', "versioned shared artwork interaction stylesheet"),
         ('assets/heroes/church-history.webp', "repository-local Sacred Grove hero delivery pattern"),
         ('referrerpolicy="no-referrer"', "hero no-referrer delivery"),
         ('1815–1846', "Saints Volume 1 era"),
@@ -95,6 +96,11 @@ if not errors:
         errors.append("church-history.html: approved artwork narrative order drifted")
     if history.count('loading="lazy"') < 7 or history.count('decoding="async"') < 8:
         errors.append("church-history.html: approved supporting artwork must remain lazy-loaded and asynchronously decoded")
+    if history.count('class="fc-art-link"') != 7:
+        errors.append("church-history.html: every approved supporting artwork must open its full-resolution source")
+    for asset in approved_art_order:
+        if f'href="{asset}"' not in history:
+            errors.append(f"church-history.html: full-resolution artwork link missing: {asset}")
     opening = history.split('<section class="fc-page-intro"', 1)[0]
     for asset in approved_art_order:
         if asset in opening:
@@ -174,8 +180,10 @@ if not errors:
         ('.fc-history-form-buttons', "Ask-style form actions"),
         ('.fc-history-hero--image-error', "hero failure fallback styling"),
         ('html[data-focuschrist-history-conversation-active]', "active conversation visual state"),
-        ('.fc-history-page #ask-history + .fc-section.fc-section--flush-top', "Saints narrative section buffer selector"),
-        ('padding-top: clamp(24px, 2.5vw, 34px);', "Saints narrative section top buffer"),
+        ('.fc-history-page .fc-history-art-section--quiet + .fc-section.fc-section--flush-top', "current Saints narrative section buffer selector"),
+        ('padding-top: clamp(56px, 7vw, 92px);', "Saints narrative section top buffer"),
+        ('.fc-history-helper', "History disclosure inset styling"),
+        ('padding: 22px clamp(24px, 3vw, 34px) 24px;', "History disclosure edge spacing"),
         ('.fc-history-art-panel', "approved artwork presentation surface"),
         ('.fc-history-art-panel--offset-left', "alternating artwork alignment"),
         ('aspect-ratio: 12 / 5;', "mobile panoramic artwork crop"),
