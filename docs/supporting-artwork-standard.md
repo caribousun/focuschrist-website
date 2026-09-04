@@ -33,10 +33,12 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Use `loading="lazy"` and `decoding="async"` for supporting artwork.
 - Keep source artwork outside the runtime page unless an original is specifically required.
 - Every appropriate non-hero artwork displayed in page content must provide a clear path to its highest-resolution local source when clicked or keyboard-activated. Use a semantic link with a visible focus state and preserve the original destination as the no-JavaScript fallback.
+- Normal full-size image activation opens the exact local source inside a same-page viewer. The viewer must close with its centered control, Escape, or the backdrop and must return focus to the invoking control. Modified clicks retain the original new-tab behavior.
 - The Art gallery may use its existing accessible full-screen viewer instead of opening a raw image tab. Art study pages may continue linking directly to their full source.
 - Home, Ask, Answers, Church History, Mission, and the Featured Art and Study cards open an accessible detail window first. The window must explain the scene, distinguish portrayals from documentary images, provide an official source, and offer a clear full-size image action.
 - Featured Art and Study cards also provide a direct action to the complete study page. Their original study-page destination remains the fallback.
 - The Read the Art Study action is optional. It remains hidden by default and appears only when the selected artwork record has a reviewed complete study page.
+- Artwork descriptions must be sacred, respectful, specific to the selected image, and genuinely informative. Do not fill artwork windows or captions with repeated documentary, provenance, or portrayal disclaimers.
 - Preserve normal modified-click behavior so visitors can still open an original destination in a new tab.
 - The dialog must support mouse, touch, keyboard activation, Escape, backdrop close, focus return, body scroll locking, and responsive stacking.
 - The circular close control uses CSS-drawn crossing lines centered at exactly 50 percent on both axes. Do not replace it with a font multiplication glyph, which appears optically off-center.

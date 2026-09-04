@@ -312,7 +312,9 @@
     <link rel="stylesheet" href="art-experience.css">
     <link rel="stylesheet" href="art-hero.css?v=20260830-6">
     <link rel="stylesheet" href="artwork-details.css?v=20260904-2">
+    <link rel="stylesheet" href="full-image-viewer.css?v=20260904-1">
     <script src="artwork-details.js?v=20260904-1" defer></script>
+    <script src="full-image-viewer.js?v=20260904-1" defer></script>
 </head>
 <body class="fc-site">
     <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation">
@@ -523,7 +525,7 @@
     
     <section data-focuschrist-featured-art-study="true" aria-labelledby="featured-art-study-title" style="max-width:1200px;margin:15px auto 55px;padding:0 30px;">
         <h2 id="featured-art-study-title" style="text-align:center;color:#c9a961;font-family:'Times New Roman',serif;letter-spacing:5px;margin-bottom:12px;">FEATURED ART &amp; STUDY</h2>
-        <p style="max-width:820px;margin:0 auto 28px;text-align:center;color:#d4c4b0;line-height:1.7;">Selected gallery works are paired with scripture and related study. The artwork remains unchanged; these pages add a study path without asserting artist or provenance beyond the gallery record.</p>
+        <p style="max-width:820px;margin:0 auto 28px;text-align:center;color:#d4c4b0;line-height:1.7;">Selected gallery works are paired with scripture and focused study paths that invite deeper reflection on the Savior's life, teachings, and promises.</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;">
             <a href="art-study/the-living-christ.html" data-artwork-detail="art-living-christ" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/The-Living-Christ.webp" alt="The Living Christ featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">The Living Christ: Study</span></a>
             <a href="art-study/the-good-shepherd.html" data-artwork-detail="art-good-shepherd" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/The-Good-Shephard.webp" alt="The Good Shepherd featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">The Good Shepherd: Study</span></a>
@@ -543,7 +545,7 @@
                 <div class="fc-actions fc-artwork-detail-actions">
                     <a class="fc-button fc-button--primary" id="artworkDetailSource" href="#" target="_blank" rel="noopener noreferrer">Study the Official Source</a>
                     <a class="fc-button" id="artworkDetailStudy" hidden>Read the Art Study</a>
-                    <a class="fc-button" id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer">View Full-Size Image</a>
+                    <a class="fc-button" id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog">View Full-Size Image</a>
                     <button class="fc-button" type="button" data-artwork-detail-close>Close</button>
                 </div>
             </div>
@@ -555,25 +557,25 @@
             <span data-detail-eyebrow>Art and study</span>
             <span data-detail-title>The Living Christ</span>
             <p data-detail-paragraph>This devotional artwork invites reflection on Jesus Christ as the risen and living Son of God. Christian hope centers not only on what He taught, but on the witness that He rose from the tomb and lives.</p>
-            <p data-detail-paragraph>The gallery title is The Living Christ. The artwork remains unchanged, and focusChrist does not assert artist, date, or provenance beyond the existing gallery record.</p>
+            <p data-detail-paragraph>The quiet light and the Savior's steady presence invite worshipful reflection on a living Redeemer. Because He overcame death, faith in Him reaches beyond remembrance and becomes trust in a Lord who still leads, comforts, and saves.</p>
         </article>
         <article data-artwork-detail-content="art-good-shepherd" data-detail-image="art/thumbs/The-Good-Shephard.webp" data-detail-full="art/The-Good-Shephard.jpg" data-detail-image-alt="The Good Shepherd devotional artwork" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&amp;id=p11-p16#p11" data-detail-source-label="Read John 10:11 to 16" data-detail-study="art-study/the-good-shepherd.html" data-detail-study-label="Open the Complete Art Study">
             <span data-detail-eyebrow>Art and study</span>
             <span data-detail-title>The Good Shepherd</span>
             <p data-detail-paragraph>Jesus used the image of a shepherd to describe His relationship with those who follow Him. He knows His sheep, calls them, leads them, protects them, and gives His life for them.</p>
-            <p data-detail-paragraph>This is devotional artwork connected with that scriptural image. focusChrist does not assert artist, date, or provenance beyond the existing gallery record.</p>
+            <p data-detail-paragraph>The shepherd's nearness to the flock reflects both tenderness and watchful care. In John 10, Jesus distinguishes Himself as the Good Shepherd who knows His sheep and willingly lays down His life for them.</p>
         </article>
         <article data-artwork-detail-content="art-little-children" data-detail-image="art/thumbs/Suffer-the-Little-Children.webp" data-detail-full="art/Suffer-the-Little-Children.jpg" data-detail-image-alt="Suffer the Little Children devotional artwork" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&amp;id=p13-p16#p13" data-detail-source-label="Read Mark 10:13 to 16" data-detail-study="art-study/suffer-the-little-children.html" data-detail-study-label="Open the Complete Art Study">
             <span data-detail-eyebrow>Art and study</span>
             <span data-detail-title>Suffer the Little Children</span>
             <p data-detail-paragraph>When people brought children to Jesus, He welcomed them, took them in His arms, and blessed them. He also used their example to teach humility, trust, and willingness to receive God's kingdom.</p>
-            <p data-detail-paragraph>This devotional artwork reflects that scriptural account. focusChrist does not assert artist, date, or provenance beyond the existing gallery record.</p>
+            <p data-detail-paragraph>The children's closeness to the Savior shows that they were not interruptions to His ministry. His welcome gives them dignity and teaches every disciple to receive God's kingdom with humility, trust, and an open heart.</p>
         </article>
         <article data-artwork-detail-content="art-be-still" data-detail-image="art/thumbs/Be-Still.webp" data-detail-full="art/Be-Still.png" data-detail-image-alt="Be Still devotional artwork" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&amp;id=p10#p10" data-detail-source-label="Read Psalm 46:10" data-detail-study="art-study/be-still.html" data-detail-study-label="Open the Complete Art Study">
             <span data-detail-eyebrow>Art and study</span>
             <span data-detail-title>Be Still</span>
             <p data-detail-paragraph>Psalm 46 places the invitation to be still inside a world of upheaval. Scriptural stillness can mean trusting that God remains God even when circumstances are unsettled.</p>
-            <p data-detail-paragraph>This devotional artwork invites that reflection. focusChrist does not assert artist, date, or provenance beyond the existing gallery record.</p>
+            <p data-detail-paragraph>The calm presence of Christ within the scene reflects the promise at the heart of the psalm. Stillness is not the absence of trouble, but the choice to remember God's power and trust Him while the world remains unsettled.</p>
         </article>
     </section>
 

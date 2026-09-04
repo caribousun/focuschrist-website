@@ -20,8 +20,10 @@
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="site-system.css?v=20260904-1">
     <link rel="stylesheet" href="missionary.css?v=20260904-5">
+    <link rel="stylesheet" href="full-image-viewer.css?v=20260904-1">
     <script src="site-common.js?v=20260903-16" defer></script>
     <script src="missionary-details.js?v=20260904-1" defer></script>
+    <script src="full-image-viewer.js?v=20260904-1" defer></script>
 </head>
 <body class="fc-site fc-missionary-page">
     <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation">
@@ -409,7 +411,7 @@
                 <div class="fc-missionary-detail-copy" id="missionaryDetailCopy"></div>
                 <div class="fc-actions fc-missionary-detail-actions">
                     <a class="fc-button fc-button--primary" id="missionaryDetailSource" href="#" target="_blank" rel="noopener noreferrer">Study the Official Source</a>
-                    <a class="fc-button" id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer">View Full-Size Image</a>
+                    <a class="fc-button" id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog">View Full-Size Image</a>
                     <button class="fc-button" type="button" data-missionary-detail-close>Close</button>
                 </div>
             </div>
@@ -421,19 +423,19 @@
             <span data-detail-eyebrow>Christ's commission</span>
             <span data-detail-title>The Savior Sends His Apostles</span>
             <p data-detail-paragraph>Matthew 28 records the risen Lord sending His disciples to teach and baptize among all nations. The commission joins proclamation with discipleship as people are invited to learn and live everything Christ taught.</p>
-            <p data-detail-paragraph>This artwork is a reverent historical portrayal of that commission. It presents Christ and the Twelve walking with purpose, but it is not a documentary image of a recorded moment.</p>
+            <p data-detail-paragraph>Christ and the Twelve walking with purpose express the movement of that commission. The Apostles would carry His witness outward, establish the Church, minister in His name, and teach others to become disciples of the risen Lord.</p>
         </article>
         <article data-missionary-detail-content="samuel-smith" data-detail-image="assets/missionary/samuel-smith-first-mission-1400.webp" data-detail-full="assets/missionary/samuel-smith-first-mission-1400.webp" data-detail-image-alt="Historical portrayal of Samuel Smith carrying copies of the Book of Mormon" data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/early-missionaries?lang=eng" data-detail-source-label="Study Early Missionaries">
             <span data-detail-eyebrow>Restoration beginnings</span>
             <span data-detail-title>Samuel Smith Carries the Message</span>
             <p data-detail-paragraph>Samuel Smith, Joseph Smith's brother, became the first missionary called after the Church was organized. In June 1830, he traveled through nearby communities carrying copies of the Book of Mormon and sharing the message of the Restoration.</p>
-            <p data-detail-paragraph>This image is a historical portrayal of that early service. The road, landscape, clothing, and pose help visitors picture the journey without claiming to reproduce one documented scene.</p>
+            <p data-detail-paragraph>The books in Samuel's arms and the long road ahead reflect the simple means and determined faith of early missionary service. His efforts seemed small at first, yet the message he carried helped prepare people to hear and share the restored gospel.</p>
         </article>
         <article data-missionary-detail-content="crossing-oceans" data-detail-image="assets/missionary/early-missionaries-liverpool-1400.webp" data-detail-full="assets/missionary/early-missionaries-liverpool-1400.webp" data-detail-image-alt="Historical portrayal of early missionaries arriving at Liverpool by sailing ship" data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/growth-of-missionary-work?lang=eng" data-detail-source-label="Explore Missionary Growth">
             <span data-detail-eyebrow>Across borders and oceans</span>
             <span data-detail-title>A Witness Carried to New Nations</span>
             <p data-detail-paragraph>During the 1830s and 1840s, missionaries traveled beyond their familiar communities into Canada, England, and the Pacific. Their service required long journeys, new languages, and faith amid uncertainty.</p>
-            <p data-detail-paragraph>This Liverpool scene is a historical portrayal of missionaries arriving by sea. It represents the sacrifice and resolve of those journeys rather than one identified landing.</p>
+            <p data-detail-paragraph>In 1837, Heber C. Kimball and six other missionaries opened the British Mission and began their labors in Preston. The harbor and ship recall the faith required to leave home, cross the Atlantic, and preach Jesus Christ in an unfamiliar land.</p>
         </article>
         <article data-missionary-detail-content="early-missionaries" data-detail-image="assets/missionary/samuel-smith-first-mission-1400.webp" data-detail-full="assets/missionary/samuel-smith-first-mission-1400.webp" data-detail-image-alt="Historical portrayal of Samuel Smith beginning missionary service" data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/early-missionaries?lang=eng" data-detail-source-label="Open the Early Missionaries Topic">
             <span data-detail-eyebrow>Learn the history</span>
@@ -451,25 +453,25 @@
             <span data-detail-eyebrow>Centered on Jesus Christ</span>
             <span data-detail-title>One Savior, One Invitation</span>
             <p data-detail-paragraph>The missionary purpose is to invite others to come unto Christ by helping them receive the restored gospel. Teaching, baptism, the gift of the Holy Ghost, and continued discipleship all point toward a deeper relationship with Him.</p>
-            <p data-detail-paragraph>This is symbolic artwork. Christ at the center represents the shared purpose that connects missionary teaching and service in many settings.</p>
+            <p data-detail-paragraph>Placing Christ at the center expresses the purpose shared by every faithful assignment. Whether missionaries teach, serve, support congregations, or strengthen communities, their work is meant to help people feel His love and draw nearer to Him.</p>
         </article>
         <article data-missionary-detail-content="worldwide-work" data-detail-image="assets/missionary/light-across-world.webp" data-detail-full="assets/missionary/light-across-world.webp" data-detail-image-alt="Symbolic artwork of missionary companionships serving communities across a world map" data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/growth-of-missionary-work?lang=eng" data-detail-source-label="Explore the Growth of the Work">
             <span data-detail-eyebrow>Every nation and people</span>
             <span data-detail-title>A Global Work Lived Locally</span>
             <p data-detail-paragraph>Missionaries serve among many cultures and languages, while local members and leaders continue building faith and belonging in their own communities. The worldwide Church grows through one relationship and one invitation at a time.</p>
-            <p data-detail-paragraph>This composite artwork represents that global reach. Its connected scenes are symbolic and do not document a single place or event.</p>
+            <p data-detail-paragraph>The connected communities and distant horizons reflect one gospel carried into many circumstances. The work becomes personal as missionaries learn a people's language, listen to their questions, serve beside them, and testify of Jesus Christ.</p>
         </article>
         <article data-missionary-detail-content="teaching-families" data-detail-image="assets/missionary/sister-missionaries-teaching-1400.webp" data-detail-full="assets/missionary/sister-missionaries-teaching-1400.webp" data-detail-image-alt="Portrayal of sister missionaries listening to and teaching a family" data-detail-source="https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/03-chapter-1?lang=eng" data-detail-source-label="Study Preach My Gospel">
             <span data-detail-eyebrow>Listen, teach, and invite</span>
             <span data-detail-title>Begin With the Person</span>
             <p data-detail-paragraph>Missionary teaching begins with listening. Missionaries seek to understand a person's questions, beliefs, and hopes, then teach the gospel of Jesus Christ clearly and invite personal action.</p>
-            <p data-detail-paragraph>This image is a contemporary portrayal of that pattern. It represents a respectful conversation rather than an identified family or recorded lesson.</p>
+            <p data-detail-paragraph>The open scriptures, attentive expressions, and seated circle emphasize teaching with people rather than merely speaking to them. Meaningful missionary lessons make room for questions, the Holy Ghost, and each person's freedom to choose.</p>
         </article>
         <article data-missionary-detail-content="service-missionaries" data-detail-image="assets/missionary/service-missionaries-food-pantry-1400.webp" data-detail-full="assets/missionary/service-missionaries-food-pantry-1400.webp" data-detail-image-alt="Portrayal of young and senior service missionaries helping at a food pantry" data-detail-source="https://www.churchofjesuschrist.org/callings/missionary?lang=eng" data-detail-source-label="Explore Missionary Service">
             <span data-detail-eyebrow>Love expressed through service</span>
             <span data-detail-title>Different Gifts, the Same Savior</span>
             <p data-detail-paragraph>Service missionaries use their abilities to help meet local needs through assignments suited to their circumstances. Young adults, senior couples, and individuals may serve in different ways while sharing a Christ-centered purpose.</p>
-            <p data-detail-paragraph>This image is a contemporary portrayal of community service. It represents missionaries and neighbors working together, not one documented food-pantry event.</p>
+            <p data-detail-paragraph>The shared work at the table reflects discipleship expressed through willing hands. Service missionaries help care for practical needs while following the Savior's example of noticing individuals, lifting burdens, and serving with compassion.</p>
         </article>
     </section>
 
