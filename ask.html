@@ -150,6 +150,8 @@
     <link rel="stylesheet" href="site-header.css">
     <link rel="stylesheet" href="ask-experience.css">
     <link rel="stylesheet" href="site-system.css?v=20260904-1">
+    <link rel="stylesheet" href="artwork-details.css?v=20260904-1">
+    <script src="artwork-details.js?v=20260904-1" defer></script>
     <link rel="stylesheet" href="ask-hero.css?v=20260830-4">
 </head>
 <body class="fc-site">
@@ -227,7 +229,7 @@
         <section class="ask-conversation-section" aria-labelledby="conversation-heading">
             <div class="ask-conversation-feature">
                 <figure class="fc-content-artwork ask-supporting-art ask-conversation-art">
-                    <a class="fc-art-link" href="assets/page-art/ask-seek-study-1400.webp" target="_blank" rel="noopener noreferrer">
+                    <a class="fc-art-link" href="assets/page-art/ask-seek-study-1400.webp" target="_blank" rel="noopener noreferrer" data-artwork-detail="ask-seek-study" aria-haspopup="dialog" aria-label="Learn about Christ and a sincere seeker studying together">
                     <img src="assets/page-art/ask-seek-study-1400.webp" srcset="assets/page-art/ask-seek-study-800.webp 800w, assets/page-art/ask-seek-study-1400.webp 1400w" sizes="(max-width: 1050px) calc(100vw - 40px), 650px" alt="Jesus Christ seated beside a present-day seeker as they study scripture together outdoors" width="1400" height="700" loading="lazy" decoding="async">
                     </a>
                 </figure>
@@ -303,13 +305,46 @@
                     <a class="ask-continue-card" href="https://www.churchofjesuschrist.org/study?lang=eng" target="_blank" rel="noopener noreferrer"><strong>Official Church Study</strong><span>Continue in Gospel Library and official Church resources.</span></a>
                 </div>
                 <figure class="fc-content-artwork ask-supporting-art ask-continue-art">
-                    <a class="fc-art-link" href="assets/page-art/ask-nicodemus-1122.webp" target="_blank" rel="noopener noreferrer">
+                    <a class="fc-art-link" href="assets/page-art/ask-nicodemus-1122.webp" target="_blank" rel="noopener noreferrer" data-artwork-detail="ask-nicodemus" aria-haspopup="dialog" aria-label="Learn about Jesus Christ and Nicodemus">
                     <img src="assets/page-art/ask-nicodemus-1122.webp" srcset="assets/page-art/ask-nicodemus-640.webp 640w, assets/page-art/ask-nicodemus-1122.webp 1122w" sizes="(max-width: 1050px) min(90vw, 560px), 390px" alt="Jesus Christ speaking with Nicodemus in a quiet predawn setting" width="1122" height="1402" loading="lazy" decoding="async">
                     </a>
                 </figure>
             </div>
         </section>
     </main>
+
+    <dialog class="fc-artwork-detail-dialog" id="artworkDetailDialog" aria-labelledby="artworkDetailTitle" aria-describedby="artworkDetailCopy">
+        <div class="fc-artwork-detail-shell">
+            <button class="fc-artwork-detail-close" type="button" data-artwork-detail-close aria-label="Close detail window">×</button>
+            <div class="fc-artwork-detail-media"><img id="artworkDetailImage" src="" alt=""></div>
+            <div class="fc-artwork-detail-body">
+                <p class="fc-eyebrow" id="artworkDetailEyebrow">Explore the artwork</p>
+                <h2 id="artworkDetailTitle"></h2>
+                <div class="fc-artwork-detail-copy" id="artworkDetailCopy"></div>
+                <div class="fc-actions fc-artwork-detail-actions">
+                    <a class="fc-button fc-button--primary" id="artworkDetailSource" href="#" target="_blank" rel="noopener noreferrer">Study the Official Source</a>
+                    <a class="fc-button" id="artworkDetailStudy" href="#">Read the Art Study</a>
+                    <a class="fc-button" id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer">View Full-Size Image</a>
+                    <button class="fc-button" type="button" data-artwork-detail-close>Close</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <section hidden aria-hidden="true">
+        <article data-artwork-detail-content="ask-seek-study" data-detail-image="assets/page-art/ask-seek-study-1400.webp" data-detail-full="assets/page-art/ask-seek-study-1400.webp" data-detail-image-alt="Symbolic artwork of Jesus Christ studying scripture beside a present-day seeker" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng" data-detail-source-label="Read Matthew 7:7">
+            <span data-detail-eyebrow>Ask, seek, and knock</span>
+            <span data-detail-title>A Question Can Begin a Study Journey</span>
+            <p data-detail-paragraph>Jesus invited people to ask, seek, and knock. This symbolic artwork connects that invitation with sincere questions, scripture study, prayer, and a willingness to keep learning.</p>
+            <p data-detail-paragraph>The scene is a contemporary devotional portrayal, not a documentary image. Christ beside the seeker represents the hope that honest study can draw a person closer to Him.</p>
+        </article>
+        <article data-artwork-detail-content="ask-nicodemus" data-detail-image="assets/page-art/ask-nicodemus-1122.webp" data-detail-full="assets/page-art/ask-nicodemus-1122.webp" data-detail-image-alt="Historical portrayal of Jesus Christ speaking with Nicodemus in a quiet predawn setting" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng" data-detail-source-label="Read John 3">
+            <span data-detail-eyebrow>A question brought to Christ</span>
+            <span data-detail-title>Jesus Christ and Nicodemus</span>
+            <p data-detail-paragraph>John 3 records Nicodemus coming to Jesus by night and asking questions. Their conversation includes the Savior's teaching about being born again and God's love in sending His Son.</p>
+            <p data-detail-paragraph>This artwork is a reverent historical portrayal of that conversation. Its setting and expressions help visitors imagine the exchange without claiming to reproduce a documented visual scene.</p>
+        </article>
+    </section>
 
 <footer class="fc-footer" data-focuschrist-footer="standard"><p>© 2026 focusChrist - All are welcome here.</p>        <p data-focuschrist-independence="footer" style="max-width: 900px; margin: 14px auto 0; line-height: 1.6; font-size: 0.92em;">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer" style="color: #c9a961;">ChurchofJesusChrist.org</a>.</p>
     </footer>

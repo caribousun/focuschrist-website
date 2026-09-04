@@ -26,9 +26,9 @@
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "61af4bc525e63446d8ae3c5b957a7ad4d8ccac314138bb3c17aa25ca8859e1f8",
+      "published_text_sha256": "2b97c33634534600e59025da202a02fb2e8d0386533c52c04e6be9e84ef5b5b8",
       "reviewed_on": "2026-09-04",
-      "review_standard": "L-048 owner-directed hero restoration and artwork placement review",
+      "review_standard": "L-048 owner-directed hero restoration and artwork placement review; site-wide artwork detail explanations reviewed as symbolic or devotional interpretation",
       "authoritative_sources": [
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/are-latter-day-saints-christian.html",
@@ -39,7 +39,9 @@
         "answers/prayer-and-personal-revelation.html",
         "answers/why-families-are-important.html",
         "answers/bible-and-book-of-mormon-together.html",
-        "answers/faith-in-jesus-christ-during-trials.html"
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng"
       ]
     },
     {
@@ -207,27 +209,34 @@
     },
     {
       "path": "art.html",
-      "status": "non-source-dependent",
-      "published_text_sha256": "fd418fe8bb60b852da4ef7e171c7b078fd12d6eb2bc2fa735be852b9df8cf0ae",
-      "reviewed_on": "2026-09-02",
-      "review_standard": "L-044 universal source-integrity review"
+      "status": "verified",
+      "published_text_sha256": "0d4f6441890c18e5f4d3e1172442a043c44a0ae76fad5c4a3dda9c9d3d3cf669",
+      "reviewed_on": "2026-09-04",
+      "review_standard": "L-044 universal source-integrity review; Featured Art and Study detail explanations reviewed as devotional interpretation with no added provenance claims",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10"
+      ]
     },
     {
       "path": "ask.html",
       "status": "verified",
-      "published_text_sha256": "538369c7417456e196489398d56fa258a7eb48e486be0a7f5cce2187cb5b5bd8",
-      "reviewed_on": "2026-09-03",
-      "review_standard": "L-044 universal source-integrity review; approved supporting artwork descriptions and presentation order reviewed; owner-requested Clear Conversation control reviewed as non-source-dependent interface wording; external-provider disclosure reviewed against deployed data flow; embedded answers governed by separate fail-closed inventory and runtime checks",
+      "published_text_sha256": "c80d11a2163e79a6211585cd75d48754c6faaeb5ccc49d5a2ec0e0097eea7c19",
+      "reviewed_on": "2026-09-04",
+      "review_standard": "L-044 universal source-integrity review; approved supporting artwork detail explanations reviewed as devotional and historical portrayals; owner-requested Clear Conversation control reviewed as non-source-dependent interface wording; external-provider disclosure reviewed against deployed data flow; embedded answers governed by separate fail-closed inventory and runtime checks",
       "authoritative_sources": [
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng"
       ]
     },
     {
       "path": "church-history.html",
       "status": "verified",
-      "published_text_sha256": "96e141478457a608fa2738a89d3f07ec410b2c4040d8084c5cdc81ea2b383c9b",
+      "published_text_sha256": "e62aee2b8f02975a22236f7a0eb8e9ea23d5b3b924d18619d295af028ca285fe",
       "reviewed_on": "2026-09-04",
-      "review_standard": "L-044 universal source-integrity review; owner-approved Church History supporting artwork and historically grounded caption copy reviewed; hero preservation verified; external-provider disclosure reviewed against deployed data flow",
+      "review_standard": "L-044 universal source-integrity review; owner-approved Church History supporting artwork, captions, and detail-window explanations reviewed; historical, symbolic, and composite portrayals labeled; hero preservation verified; external-provider disclosure reviewed against deployed data flow",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v1?lang=eng",
@@ -240,6 +249,7 @@
         "https://www.churchofjesuschrist.org/study/history/topics/witnesses-of-the-book-of-mormon?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/printing-and-publishing-the-book-of-mormon?lang=eng",
         "https://churchhistorylibrary.churchofjesuschrist.org/?lang=eng",
+        "https://history.churchofjesuschrist.org/landing/church-history-library?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng"
       ]
     },
@@ -253,9 +263,9 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "3e5419fe26ea2a555293a5b913564a276790c2b5103f01cb1582bdc073a1d5e1",
-      "reviewed_on": "2026-09-03",
-      "review_standard": "L-044 universal source-integrity review; Missionary discovery path reviewed against the linked page and sources; approved Home artwork wording unchanged and presentation order reviewed",
+      "published_text_sha256": "b6ada354dc6f6bfc834621e3e8992aabedc9f6facacb8afcf151408d1b04725f",
+      "reviewed_on": "2026-09-04",
+      "review_standard": "L-044 universal source-integrity review; Missionary discovery path reviewed against the linked page and sources; approved Home artwork detail explanation reviewed as symbolic devotional interpretation",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng"

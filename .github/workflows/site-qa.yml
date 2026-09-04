@@ -28,6 +28,9 @@ jobs:
       - name: Run focusChrist unified experience QA
         run: python tools/unified_experience_qa.py
 
+      - name: Run site-wide artwork detail QA
+        run: python tools/artwork_details_qa.py
+
       - name: Run focusChrist resource QA
         run: python tools/resource_qa.py
 
@@ -83,6 +86,9 @@ jobs:
 
       - name: Validate shared site JavaScript
         run: node --check site-common.js
+
+      - name: Validate artwork detail JavaScript
+        run: node --check artwork-details.js
 
       - name: Validate Study Intelligence JavaScript
         run: node --check study-intelligence.js

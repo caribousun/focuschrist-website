@@ -1,6 +1,6 @@
 # focusChrist Supporting Artwork Standard
 
-Updated: 2026-09-02
+Updated: 2026-09-04
 
 ## Purpose
 
@@ -32,10 +32,22 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Use explicit `width` and `height` attributes to prevent layout movement.
 - Use `loading="lazy"` and `decoding="async"` for supporting artwork.
 - Keep source artwork outside the runtime page unless an original is specifically required.
-- Every non-hero artwork displayed in page content must open its highest-resolution local source when clicked or keyboard-activated. Use a semantic link with a visible focus state and `target="_blank"` plus `rel="noopener noreferrer"`.
+- Every appropriate non-hero artwork displayed in page content must provide a clear path to its highest-resolution local source when clicked or keyboard-activated. Use a semantic link with a visible focus state and preserve the original destination as the no-JavaScript fallback.
 - The Art gallery may use its existing accessible full-screen viewer instead of opening a raw image tab. Art study pages may continue linking directly to their full source.
-- The Mission page may open an accessible detail window first when the original artwork link remains the no-JavaScript fallback and the window provides a clear full-size image action. The detail window must also explain the scene, distinguish portrayals from documentary images, and provide an official source when relevant.
+- Home, Ask, Answers, Church History, Mission, and the Featured Art and Study cards open an accessible detail window first. The window must explain the scene, distinguish portrayals from documentary images, provide an official source, and offer a clear full-size image action.
+- Featured Art and Study cards also provide a direct action to the complete study page. Their original study-page destination remains the fallback.
+- Preserve normal modified-click behavior so visitors can still open an original destination in a new tab.
+- The dialog must support mouse, touch, keyboard activation, Escape, backdrop close, focus return, body scroll locking, and responsive stacking.
+- The circular close control uses CSS-drawn crossing lines centered at exactly 50 percent on both axes. Do not replace it with a font multiplication glyph, which appears optically off-center.
 - Page heroes remain non-interactive unless Wyatt separately approves a change to their behavior.
+
+## Site-wide interaction inventory
+
+- 24 supporting artworks use the detail-first experience: 1 Home, 2 Ask, 3 Answers, 7 Church History, 7 Mission, and 4 Featured Art and Study cards.
+- All heroes remain unchanged. The Pioneer hero retains its preexisting full-image link and is not enrolled in the detail window.
+- The 39 main Art gallery works retain the dedicated full-screen gallery viewer and its contextual study actions.
+- The four main images on dedicated Art and Study pages continue opening their full sources because the surrounding page already provides the detailed study experience.
+- Watch thumbnails retain their video-link behavior. Logos, icons, arrows, play controls, and dialog display images are not artwork-detail triggers.
 
 ## Approved artwork
 
@@ -100,5 +112,6 @@ Supporting artwork beautifies the content of each page without replacing or chan
 
 - `tools/unified_experience_qa.py` verifies that approved supporting artwork remains wired, responsive, lazy-loaded, and within its delivery-size budget.
 - `tools/unified_experience_qa.py` also verifies that every supporting artwork collection retains a full-resolution opening path.
+- `tools/artwork_details_qa.py` verifies the 17 new records, the 7 existing Mission artwork triggers, exact trigger-to-record matching, required official sources, local full-size assets, intentional exclusions, interaction safeguards, and the centered close controls.
 - `tools/production_hardening_qa.py` verifies the production WebP dimensions.
 - Any new approved supporting artwork must extend these checks.
