@@ -396,3 +396,11 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - All seven History supporting artworks open their highest-resolution local source. This is also the permanent site-wide standard for non-hero supporting art on Home, Ask, Answers, Missionary Work, History, and Art study pages. The Art gallery retains its accessible full-screen viewer.
 - Heroes remain locked and unchanged unless Wyatt explicitly approves a specific hero change. Do not interpret adding page content or supporting art as permission to alter a hero.
 - Next session: continue improving the other site pages, with additional page-specific content planned for Missionary Work and Home. Read both brains, inspect the current live pages and existing artwork, preserve approved content and heroes, and propose additions that fit each page's distinct theme before implementation.
+
+### Preserving the Record artwork correction - approved and live
+
+- Wyatt approved the revised `Preserving the Record` History supporting artwork with Christ in a slimmer, more natural robe silhouette. Preserve the approved face, composition, setting, and supporting archivist exactly unless Wyatt explicitly requests another change.
+- Only `assets/history/preserving-the-record-1400.webp` and `assets/history/preserving-the-record-800.webp` changed. The Church History hero, page structure, copy, links, and interaction behavior remain unchanged.
+- Production main is commit `4f310a311b4f6e304a809be214e60a95d45fb5f2` from PR #119. PR Site QA run 394, push Site QA run 395, and GitHub Pages run 406 passed.
+- Live verification returned HTTP 200 for the Church History page and both image assets. The live 1400 and 800 files exactly matched the approved deployment hashes. The 1400 variant remains the click-to-open full-size source.
+- Next session: preserve this approved artwork and continue Wyatt-directed improvements to Missionary Work and Home.
