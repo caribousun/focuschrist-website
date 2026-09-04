@@ -35,11 +35,15 @@ def main() -> int:
             errors.append(f"{relative}: trigger and record keys do not match")
         if text.count('id="artworkDetailDialog"') != 1:
             errors.append(f"{relative}: shared artwork detail dialog missing or duplicated")
+        if text.count('id="artworkDetailStudy" hidden') != 1:
+            errors.append(f"{relative}: optional study action must start hidden exactly once")
+        if re.search(r'id="artworkDetailStudy"[^>]*href=', text):
+            errors.append(f"{relative}: hidden study action must not have a default destination")
         for marker in (
-            'href="artwork-details.css?v=20260904-1"',
+            'href="artwork-details.css?v=20260904-2"',
             'src="artwork-details.js?v=20260904-1"',
             'id="artworkDetailSource"',
-            'id="artworkDetailStudy"',
+            'id="artworkDetailStudy" hidden',
             'id="artworkDetailFullImage"',
             'data-artwork-detail-close',
             'aria-haspopup="dialog"',
@@ -77,6 +81,19 @@ def main() -> int:
         errors.append("missionary.html: centered close-control stylesheet version missing")
 
     art = (ROOT / "art.html").read_text(encoding="utf-8")
+    study_links = {
+        relative: len(re.findall(r'data-detail-study="[^"]+"', (ROOT / relative).read_text(encoding="utf-8")))
+        for relative in PAGES
+    }
+    if study_links["art.html"] != 4 or any(
+        count != 0 for relative, count in study_links.items() if relative != "art.html"
+    ):
+        errors.append("only the four Featured Art and Study records may expose complete study links")
+    for study_path in re.findall(r'data-detail-study="([^"]+)"', art):
+        target = (ROOT / study_path).resolve()
+        if not target.is_relative_to(ROOT.resolve()) or not target.exists():
+            errors.append(f"art.html: complete study page does not exist: {study_path}")
+
     gallery_section = art.split('<div class="gallery">', 1)[1].split('data-focuschrist-featured-art-study', 1)[0]
     if "data-artwork-detail=" in gallery_section:
         errors.append("art.html: main gallery must retain its existing dedicated viewer")
@@ -106,6 +123,9 @@ def main() -> int:
         "returnFocus.focus()",
         "document.body.classList.add('fc-dialog-open')",
         "dialog.addEventListener('cancel'",
+        "study.hidden = false",
+        "study.hidden = true",
+        "study.removeAttribute('href')",
     ):
         if marker not in js:
             errors.append(f"artwork-details.js: missing interaction marker: {marker}")
@@ -118,6 +138,8 @@ def main() -> int:
         ".fc-artwork-detail-close::after",
         "translate(-50%, -50%) rotate(45deg)",
         "translate(-50%, -50%) rotate(-45deg)",
+        ".fc-artwork-detail-actions [hidden]",
+        "display: none !important;",
     ):
         if marker not in css:
             errors.append(f"artwork-details.css: missing presentation marker: {marker}")

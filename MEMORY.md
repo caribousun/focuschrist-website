@@ -438,3 +438,4 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Do not apply the detail window to heroes, the Pioneer hero, the main Art gallery, dedicated Art and Study page images, Watch thumbnails, logos, icons, arrows, controls, or the dialog's own display image. Those surfaces retain their existing purpose-specific behavior.
 - The Mission and site-wide circular close controls must use precisely centered CSS-drawn crossing lines. Do not use the multiplication glyph because its visual weight does not sit in the geometric center.
 - This interaction changes presentation only. It does not authorize changes to approved artwork pixels, heroes, page order, or source destinations.
+- Read the Art Study is an optional action reserved for the four Featured Art and Study records. Keep it hidden by default and reveal it only when a selected record has a reviewed complete study page.

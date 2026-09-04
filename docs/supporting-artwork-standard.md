@@ -36,6 +36,7 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - The Art gallery may use its existing accessible full-screen viewer instead of opening a raw image tab. Art study pages may continue linking directly to their full source.
 - Home, Ask, Answers, Church History, Mission, and the Featured Art and Study cards open an accessible detail window first. The window must explain the scene, distinguish portrayals from documentary images, provide an official source, and offer a clear full-size image action.
 - Featured Art and Study cards also provide a direct action to the complete study page. Their original study-page destination remains the fallback.
+- The Read the Art Study action is optional. It remains hidden by default and appears only when the selected artwork record has a reviewed complete study page.
 - Preserve normal modified-click behavior so visitors can still open an original destination in a new tab.
 - The dialog must support mouse, touch, keyboard activation, Escape, backdrop close, focus return, body scroll locking, and responsive stacking.
 - The circular close control uses CSS-drawn crossing lines centered at exactly 50 percent on both axes. Do not replace it with a font multiplication glyph, which appears optically off-center.
