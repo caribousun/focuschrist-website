@@ -12,6 +12,13 @@ PAGES = {
     "church-history.html": 7,
     "art.html": 4,
 }
+ROOT_VIEWER_PAGES = (*PAGES, "missionary.html", "pioneers.html")
+ART_STUDY_PAGES = (
+    "art-study/the-living-christ.html",
+    "art-study/the-good-shepherd.html",
+    "art-study/suffer-the-little-children.html",
+    "art-study/be-still.html",
+)
 
 
 def main() -> int:
@@ -79,6 +86,9 @@ def main() -> int:
         errors.append(f"missionary.html: expected 7 image detail triggers, found {len(mission_image_triggers)}")
     if "missionary.css?v=20260904-5" not in missionary:
         errors.append("missionary.html: centered close-control stylesheet version missing")
+    mission_records = re.findall(r'data-missionary-detail-content="([^"]+)"', missionary)
+    if len(mission_records) != 9 or len(set(mission_records)) != 9:
+        errors.append(f"missionary.html: expected 9 unique detail records, found {len(mission_records)}")
 
     art = (ROOT / "art.html").read_text(encoding="utf-8")
     study_links = {
@@ -98,12 +108,7 @@ def main() -> int:
     if "data-artwork-detail=" in gallery_section:
         errors.append("art.html: main gallery must retain its existing dedicated viewer")
 
-    for relative in (
-        "art-study/the-living-christ.html",
-        "art-study/the-good-shepherd.html",
-        "art-study/suffer-the-little-children.html",
-        "art-study/be-still.html",
-    ):
+    for relative in ART_STUDY_PAGES:
         text = (ROOT / relative).read_text(encoding="utf-8")
         if "data-artwork-detail=" in text:
             errors.append(f"{relative}: dedicated study page artwork should retain direct full-size behavior")
@@ -111,6 +116,72 @@ def main() -> int:
     pioneer = (ROOT / "pioneers.html").read_text(encoding="utf-8", errors="replace")
     if 'class="fc-visual-hero fc-visual-hero--history"' not in pioneer or "data-artwork-detail=" in pioneer:
         errors.append("pioneers.html: Pioneer hero behavior changed or was incorrectly enrolled")
+
+    for relative in ROOT_VIEWER_PAGES:
+        text = (ROOT / relative).read_text(encoding="utf-8", errors="replace")
+        for marker in (
+            'href="full-image-viewer.css?v=20260904-1"',
+            'src="full-image-viewer.js?v=20260904-1"',
+        ):
+            if text.count(marker) != 1:
+                errors.append(f"{relative}: full-image viewer asset must load exactly once: {marker}")
+
+    for relative in ART_STUDY_PAGES:
+        text = (ROOT / relative).read_text(encoding="utf-8")
+        for marker in (
+            'href="../full-image-viewer.css?v=20260904-1"',
+            'src="../full-image-viewer.js?v=20260904-1"',
+        ):
+            if text.count(marker) != 1:
+                errors.append(f"{relative}: full-image viewer asset must load exactly once: {marker}")
+
+    viewer_documents = [
+        (ROOT / relative).read_text(encoding="utf-8", errors="replace")
+        for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
+    ]
+    viewer_triggers = sum(text.count("data-full-image-viewer") for text in viewer_documents)
+    if viewer_triggers != 11:
+        errors.append(f"same-page full-image viewer must have exactly 11 scoped triggers, found {viewer_triggers}")
+    if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:
+        errors.append("shared artwork full-size action is not enrolled in the same-page viewer")
+    if 'id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in missionary:
+        errors.append("Mission full-size action is not enrolled in the same-page viewer")
+    if 'fc-visual-hero--history' not in pioneer or 'data-full-image-viewer' not in pioneer:
+        errors.append("Pioneer hero must retain its approved full-image action through the same-page viewer")
+
+    full_assets: list[str] = []
+    for relative in (*PAGES, "missionary.html"):
+        text = (ROOT / relative).read_text(encoding="utf-8")
+        for asset in re.findall(r'data-detail-full="([^"]+)"', text):
+            full_assets.append(asset)
+            target = (ROOT / asset).resolve()
+            if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
+                errors.append(f"{relative}: missing full-image source: {asset}")
+    if len(full_assets) != 26:
+        errors.append(f"expected 26 artwork detail full-image sources, found {len(full_assets)}")
+
+    detail_paragraphs: list[str] = []
+    for relative in (*PAGES, "missionary.html"):
+        detail_paragraphs.extend(
+            re.findall(
+                r'<p data-detail-paragraph>(.*?)</p>',
+                (ROOT / relative).read_text(encoding="utf-8"),
+                re.S,
+            )
+        )
+    flattened_copy = " ".join(detail_paragraphs).lower()
+    for phrase in (
+        "documentary",
+        "does not assert",
+        "provenance",
+        "without claiming",
+        "historical portrayal",
+        "contemporary portrayal",
+        "not one documented",
+        "not a documented",
+    ):
+        if phrase in flattened_copy:
+            errors.append(f"artwork detail copy contains generic disclaimer wording: {phrase}")
 
     js = (ROOT / "artwork-details.js").read_text(encoding="utf-8")
     for marker in (
@@ -129,6 +200,22 @@ def main() -> int:
     ):
         if marker not in js:
             errors.append(f"artwork-details.js: missing interaction marker: {marker}")
+
+    full_viewer_js = (ROOT / "full-image-viewer.js").read_text(encoding="utf-8")
+    for marker in (
+        "dialog.showModal()",
+        "event.metaKey",
+        "event.ctrlKey",
+        "event.shiftKey",
+        "event.altKey",
+        "event.target === stage",
+        "returnFocus.focus()",
+        "dialog.addEventListener('cancel'",
+        "document.body.classList.add('fc-full-image-open')",
+        "image.removeAttribute('src')",
+    ):
+        if marker not in full_viewer_js:
+            errors.append(f"full-image-viewer.js: missing interaction marker: {marker}")
 
     css = (ROOT / "artwork-details.css").read_text(encoding="utf-8")
     for marker in (
@@ -154,6 +241,19 @@ def main() -> int:
         if marker not in mission_css:
             errors.append(f"missionary.css: missing centered close-control marker: {marker}")
 
+    full_viewer_css = (ROOT / "full-image-viewer.css").read_text(encoding="utf-8")
+    for marker in (
+        ".fc-full-image-viewer::backdrop",
+        "object-fit: contain",
+        ".fc-full-image-close::before",
+        ".fc-full-image-close::after",
+        "translate(-50%, -50%) rotate(45deg)",
+        "translate(-50%, -50%) rotate(-45deg)",
+        "@media (max-width: 640px)",
+    ):
+        if marker not in full_viewer_css:
+            errors.append(f"full-image-viewer.css: missing presentation marker: {marker}")
+
     if errors:
         print("Artwork detail QA: FAIL")
         for error in errors:
@@ -162,7 +262,7 @@ def main() -> int:
 
     print("Artwork detail QA: PASS")
     print("17 new artwork triggers and 7 existing Mission artwork triggers verified")
-    print("Heroes, main Art gallery, Art and Study page images, and video thumbnails remain excluded")
+    print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 
 

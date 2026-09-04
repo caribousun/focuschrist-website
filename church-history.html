@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="site-system.css?v=20260904-1">
     <link rel="stylesheet" href="church-history.css?v=20260904-2">
     <link rel="stylesheet" href="artwork-details.css?v=20260904-2">
+    <link rel="stylesheet" href="full-image-viewer.css?v=20260904-1">
     <script src="site-common.js?v=20260903-16" defer></script>
     <script src="artwork-details.js?v=20260904-1" defer></script>
+    <script src="full-image-viewer.js?v=20260904-1" defer></script>
     <script src="reviewed-ask-knowledge.js?v=20260903-18" defer></script>
     <script src="study-source-router.js?v=20260903-16" defer></script>
     <script src="study-intelligence-v3.js?v=20260903-17" defer></script>
@@ -377,7 +379,7 @@
                 <div class="fc-actions fc-artwork-detail-actions">
                     <a class="fc-button fc-button--primary" id="artworkDetailSource" href="#" target="_blank" rel="noopener noreferrer">Study the Official Source</a>
                     <a class="fc-button" id="artworkDetailStudy" hidden>Read the Art Study</a>
-                    <a class="fc-button" id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer">View Full-Size Image</a>
+                    <a class="fc-button" id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog">View Full-Size Image</a>
                     <button class="fc-button" type="button" data-artwork-detail-close>Close</button>
                 </div>
             </div>
@@ -389,43 +391,43 @@
             <span data-detail-eyebrow>Sacred beginnings</span>
             <span data-detail-title>The First Vision</span>
             <p data-detail-paragraph>Joseph Smith left several accounts of his experience in the grove. Those records allow visitors to study the First Vision through his own descriptions and the historical setting in which each account was prepared.</p>
-            <p data-detail-paragraph>This image is a reverent historical portrayal based on those accounts. Its composition and visual details are interpretive and should not be understood as a documentary image of the event.</p>
+            <p data-detail-paragraph>The grove, Joseph's kneeling prayer, and the light above direct attention to his central testimony: Heavenly Father and Jesus Christ appeared and spoke to him. His accounts invite careful study of both the sacred experience and its lasting meaning.</p>
         </article>
         <article data-artwork-detail-content="history-harmony" data-detail-image="assets/history/joseph-emma-harmony-1400.webp" data-detail-full="assets/history/joseph-emma-harmony-1400.webp" data-detail-image-alt="Historical portrayal of Joseph and Emma Smith working together at Harmony" data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng" data-detail-source-label="Study Emma Hale Smith">
             <span data-detail-eyebrow>Faith in daily work</span>
             <span data-detail-title>Joseph and Emma at Harmony</span>
             <p data-detail-paragraph>The Restoration unfolded through public events and quiet daily work. Emma Hale Smith's history includes her marriage to Joseph, the translation period, early Church service, and the many demands placed upon their family.</p>
-            <p data-detail-paragraph>This is a historical portrayal of work and support at Harmony, not one documented instant. The setting represents the ordinary labor that accompanied the early Restoration.</p>
+            <p data-detail-paragraph>Emma assisted Joseph as a scribe during part of the translation and sustained him through opposition, loss, and repeated displacement. The quiet work at Harmony reminds readers that the Restoration advanced through sacrifice inside ordinary family life.</p>
         </article>
         <article data-artwork-detail-content="history-three-witnesses" data-detail-image="assets/history/three-witnesses-1400.webp" data-detail-full="assets/history/three-witnesses-1400.webp" data-detail-image-alt="Historical portrayal of Oliver Cowdery, David Whitmer, and Martin Harris in 1829" data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/witnesses-of-the-book-of-mormon?lang=eng" data-detail-source-label="Study the Book of Mormon Witnesses">
             <span data-detail-eyebrow>Witnesses of the record</span>
             <span data-detail-title>The Three Witnesses</span>
             <p data-detail-paragraph>Oliver Cowdery, David Whitmer, and Martin Harris gave their names and testimony to the Book of Mormon record. Their statement has accompanied published editions of the Book of Mormon.</p>
-            <p data-detail-paragraph>This artwork portrays the three men at their ages in 1829. It is a historical interpretation and not a documentary image of their shared experience.</p>
+            <p data-detail-paragraph>Their written testimony declares that an angel showed them the plates and that the voice of God bore witness of the translation. Each man maintained his testimony of the Book of Mormon throughout his life.</p>
         </article>
         <article data-artwork-detail-content="history-print-shop" data-detail-image="assets/history/restoration-print-shop-1400.webp" data-detail-full="assets/history/restoration-print-shop-1400.webp" data-detail-image-alt="Historical and symbolic portrayal of workers printing the Book of Mormon" data-detail-source="https://www.churchofjesuschrist.org/study/history/topics/printing-and-publishing-the-book-of-mormon?lang=eng" data-detail-source-label="Study the Book of Mormon's Publication">
             <span data-detail-eyebrow>From manuscript to book</span>
             <span data-detail-title>The Restoration Print Shop</span>
             <p data-detail-paragraph>Preparing the Book of Mormon for publication required financing, typesetting, printing, binding, and other ordinary labor. That work carried the translated record from manuscript pages into the hands of readers.</p>
-            <p data-detail-paragraph>This is a historical and symbolic portrayal. The print work represents the publication process, while Christ's presence is devotional symbolism and not a claim of a recorded appearance in the print shop.</p>
+            <p data-detail-paragraph>The press, type, ink, and gathered pages show how sacred testimony also depended upon patient human labor. Placing Christ beside that work keeps its purpose in view: bringing another witness of Him into the hands of readers.</p>
         </article>
         <article data-artwork-detail-content="history-preserving-record" data-detail-image="assets/history/preserving-the-record-1400.webp" data-detail-full="assets/history/preserving-the-record-1400.webp" data-detail-image-alt="Symbolic artwork of Jesus Christ beside an archivist preserving an early record" data-detail-source="https://history.churchofjesuschrist.org/landing/church-history-library?lang=eng" data-detail-source-label="Visit the Church History Library">
             <span data-detail-eyebrow>History kept and studied</span>
             <span data-detail-title>Preserving the Record</span>
             <p data-detail-paragraph>Careful preservation keeps journals, documents, photographs, and other records available for responsible historical study. The Church History Library provides access to collections and research pathways for that work.</p>
-            <p data-detail-paragraph>This scene is symbolic artwork rather than a documentary archive event. Christ's presence expresses the devotional purpose of keeping Him central while records are preserved and studied.</p>
+            <p data-detail-paragraph>The careful handling of the aged record honors the lives and testimonies carried within it. Keeping Jesus Christ near the work reminds us that Church history is most meaningful when records help people understand His influence in the lives of disciples.</p>
         </article>
         <article data-artwork-detail-content="history-museum-record" data-detail-image="assets/history/christ-museum-record-1400.webp" data-detail-full="assets/history/christ-museum-record-1400.webp" data-detail-image-alt="Symbolic artwork of Jesus Christ looking upon a preserved historical record" data-detail-source="https://www.churchofjesuschrist.org/study/church-history?lang=eng" data-detail-source-label="Open Official Church History">
             <span data-detail-eyebrow>The record endures</span>
             <span data-detail-title>History Preserved for Future Generations</span>
             <p data-detail-paragraph>Preserved records allow later generations to examine the lives, decisions, faith, and challenges of people who came before them. Responsible study begins with the sources and remains open about what they do and do not establish.</p>
-            <p data-detail-paragraph>This museum scene is symbolic artwork, not a documentary event. It represents each generation encountering the historical record while keeping Jesus Christ at the center of the larger story.</p>
+            <p data-detail-paragraph>The opened record and attentive study connect one generation with another. Reading original sources with faith and care can deepen gratitude, correct assumptions, and reveal how disciples sought to follow Jesus Christ amid real challenges.</p>
         </article>
         <article data-artwork-detail-content="history-through-eras" data-detail-image="assets/history/christ-through-eras-1400.webp" data-detail-full="assets/history/christ-through-eras-1400.webp" data-detail-image-alt="Composite artwork of Jesus Christ across Restoration and worldwide Church history scenes" data-detail-source="https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng" data-detail-source-label="Explore Global Church Histories">
             <span data-detail-eyebrow>The center of the story</span>
             <span data-detail-title>Jesus Christ Across Generations</span>
             <p data-detail-paragraph>Church history reaches across periods, places, cultures, and people. Global histories help visitors see how faith and Church life developed in communities beyond a single nation or era.</p>
-            <p data-detail-paragraph>This is composite symbolic artwork. Its scenes connect the Restoration record and the worldwide Church to Jesus Christ without claiming to depict one time, place, or documented gathering.</p>
+            <p data-detail-paragraph>The connected eras and communities show a work that has crossed oceans, languages, and generations. Through every setting, the lasting center of the story is Jesus Christ and the invitation to hear Him and follow Him.</p>
         </article>
     </section>
 

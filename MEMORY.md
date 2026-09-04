@@ -439,3 +439,5 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - The Mission and site-wide circular close controls must use precisely centered CSS-drawn crossing lines. Do not use the multiplication glyph because its visual weight does not sit in the geometric center.
 - This interaction changes presentation only. It does not authorize changes to approved artwork pixels, heroes, page order, or source destinations.
 - Read the Art Study is an optional action reserved for the four Featured Art and Study records. Keep it hidden by default and reveal it only when a selected record has a reviewed complete study page.
+- Eligible full-size artwork opens in the shared same-page viewer and can be closed without leaving the page. Preserve the original link as the no-JavaScript and modified-click fallback.
+- Artwork-window descriptions and image captions must be sacred, respectful, specific, and informative. Do not repeat documentary, provenance, or portrayal disclaimers beneath each image.

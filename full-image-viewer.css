@@ -1,0 +1,113 @@
+.fc-full-image-open {
+    overflow: hidden;
+}
+
+.fc-full-image-viewer {
+    width: 100vw;
+    max-width: none;
+    height: 100vh;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: #061820;
+    color: var(--fc-cream, #fff2dc);
+}
+
+.fc-full-image-viewer::backdrop {
+    background: rgba(2, 12, 17, .94);
+    backdrop-filter: blur(5px);
+}
+
+.fc-full-image-stage {
+    display: grid;
+    width: 100%;
+    min-height: 100%;
+    padding: clamp(64px, 7vw, 88px) clamp(14px, 3vw, 42px) clamp(18px, 3vw, 38px);
+    place-items: center;
+    box-sizing: border-box;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(34, 73, 86, .3), transparent 58%),
+        #061820;
+    cursor: zoom-out;
+}
+
+.fc-full-image-stage img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100vh - clamp(90px, 10vw, 126px));
+    object-fit: contain;
+    box-shadow: 0 24px 72px rgba(0, 0, 0, .48);
+    cursor: default;
+}
+
+.fc-full-image-close {
+    position: fixed;
+    z-index: 2;
+    top: max(16px, env(safe-area-inset-top));
+    right: max(16px, env(safe-area-inset-right));
+    display: grid;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    place-items: center;
+    border: 1px solid rgba(255, 242, 220, .55);
+    border-radius: 50%;
+    background: rgba(7, 24, 31, .92);
+    color: var(--fc-cream, #fff2dc);
+    font-size: 0;
+    cursor: pointer;
+}
+
+.fc-full-image-close::before,
+.fc-full-image-close::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 19px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    transform-origin: center;
+}
+
+.fc-full-image-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.fc-full-image-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.fc-full-image-close:hover,
+.fc-full-image-close:focus-visible {
+    border-color: var(--fc-gold-light, #f0c36a);
+    background: #173946;
+    outline: 3px solid rgba(240, 195, 106, .32);
+    outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+    .fc-full-image-stage {
+        padding: 72px 10px 14px;
+    }
+
+    .fc-full-image-close {
+        width: 46px;
+        height: 46px;
+    }
+
+    .fc-full-image-stage img {
+        max-height: calc(100vh - 88px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fc-full-image-viewer {
+        scroll-behavior: auto;
+    }
+}

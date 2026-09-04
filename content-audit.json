@@ -26,9 +26,9 @@
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "2b97c33634534600e59025da202a02fb2e8d0386533c52c04e6be9e84ef5b5b8",
+      "published_text_sha256": "43ec35ae5235ee190e9b38aa4d66bc5fa72e73612dcc4382fd1853cefcb2ee2c",
       "reviewed_on": "2026-09-04",
-      "review_standard": "L-048 owner-directed hero restoration and artwork placement review; site-wide artwork detail explanations reviewed as symbolic or devotional interpretation",
+      "review_standard": "L-048 owner-directed hero restoration and artwork placement review; artwork details revised for sacred, image-specific, source-grounded meaning",
       "authoritative_sources": [
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/are-latter-day-saints-christian.html",
@@ -167,9 +167,9 @@
     {
       "path": "art-study/be-still.html",
       "status": "verified",
-      "published_text_sha256": "af2b1e6fd5c60bab2a38532dda2a58fa997e85ba32b32417dbbfd47635e2c1bc",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review; devotional interpretation labeled as interpretation",
+      "published_text_sha256": "e2c191e023da071e7a378d3ee5a768f4bb72b8a51efdce7044fd4bfb5fcc8e1a",
+      "reviewed_on": "2026-09-04",
+      "review_standard": "L-044 universal source-integrity review; owner-directed sacred image caption and same-page full-image behavior",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10"
       ]
@@ -177,9 +177,9 @@
     {
       "path": "art-study/suffer-the-little-children.html",
       "status": "verified",
-      "published_text_sha256": "67e2c09b9ae4ac0bad0d7219204020db8b70010346acde9ee99ef2c9d4710d11",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review; devotional interpretation labeled as interpretation",
+      "published_text_sha256": "8c0cfbd9a8ee5adfe4bc51b6b8f309f500325cdf6e18074121a23926a7ed65b8",
+      "reviewed_on": "2026-09-04",
+      "review_standard": "L-044 universal source-integrity review; owner-directed sacred image caption and same-page full-image behavior",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p11-p25#p11"
@@ -188,9 +188,9 @@
     {
       "path": "art-study/the-good-shepherd.html",
       "status": "verified",
-      "published_text_sha256": "20f841cffcc9155e09e92cabc50a2851ec8b7b96ab510825a18655ce7ad93053",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review; devotional interpretation labeled as interpretation",
+      "published_text_sha256": "c1599954c8ad45f1275191c7e5699a4c1046957889b2632a143a0c99185d4721",
+      "reviewed_on": "2026-09-04",
+      "review_standard": "L-044 universal source-integrity review; owner-directed sacred image caption and same-page full-image behavior",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
         "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng"
@@ -199,9 +199,9 @@
     {
       "path": "art-study/the-living-christ.html",
       "status": "verified",
-      "published_text_sha256": "2a92c3d759fd4679c7f12ffd2d873801938804bcee408a2f7f77bb356d2faa89",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review; devotional interpretation labeled as interpretation",
+      "published_text_sha256": "7ea967d7207c57fb2e3864c1134ad7c43c1407ce62116958c0fc0086c5635cb8",
+      "reviewed_on": "2026-09-04",
+      "review_standard": "L-044 universal source-integrity review; owner-directed sacred image caption and same-page full-image behavior",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng"
@@ -210,9 +210,9 @@
     {
       "path": "art.html",
       "status": "verified",
-      "published_text_sha256": "0d4f6441890c18e5f4d3e1172442a043c44a0ae76fad5c4a3dda9c9d3d3cf669",
+      "published_text_sha256": "6210bb87dd9c4c192796a019683b196dd967bf49a87eb746050658e0b762cd26",
       "reviewed_on": "2026-09-04",
-      "review_standard": "L-044 universal source-integrity review; Featured Art and Study detail explanations reviewed as devotional interpretation with no added provenance claims",
+      "review_standard": "L-044 universal source-integrity review; Featured Art and Study explanations revised for sacred, image-specific, source-grounded meaning",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
@@ -223,9 +223,9 @@
     {
       "path": "ask.html",
       "status": "verified",
-      "published_text_sha256": "c80d11a2163e79a6211585cd75d48754c6faaeb5ccc49d5a2ec0e0097eea7c19",
+      "published_text_sha256": "c648addf831ae31bd7947b48a98ec2e5eae85b8c38d56d3a394ca7b5b18b5127",
       "reviewed_on": "2026-09-04",
-      "review_standard": "L-044 universal source-integrity review; approved supporting artwork detail explanations reviewed as devotional and historical portrayals; owner-requested Clear Conversation control reviewed as non-source-dependent interface wording; external-provider disclosure reviewed against deployed data flow; embedded answers governed by separate fail-closed inventory and runtime checks",
+      "review_standard": "L-044 universal source-integrity review; approved artwork explanations revised for sacred and source-grounded meaning; owner-requested Clear Conversation control reviewed as non-source-dependent interface wording; external-provider disclosure reviewed against deployed data flow; embedded answers governed by separate fail-closed inventory and runtime checks",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng"
@@ -234,9 +234,9 @@
     {
       "path": "church-history.html",
       "status": "verified",
-      "published_text_sha256": "e62aee2b8f02975a22236f7a0eb8e9ea23d5b3b924d18619d295af028ca285fe",
+      "published_text_sha256": "f67c0724b97998c66debc57e2c03bcc95eeb58ae13540b6092996b6d21fdc3b8",
       "reviewed_on": "2026-09-04",
-      "review_standard": "L-044 universal source-integrity review; owner-approved Church History supporting artwork, captions, and detail-window explanations reviewed; historical, symbolic, and composite portrayals labeled; hero preservation verified; external-provider disclosure reviewed against deployed data flow",
+      "review_standard": "L-044 universal source-integrity review; owner-approved Church History artwork explanations revised for sacred, image-specific historical meaning; hero preservation verified; external-provider disclosure reviewed against deployed data flow",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v1?lang=eng",
@@ -263,9 +263,9 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "b6ada354dc6f6bfc834621e3e8992aabedc9f6facacb8afcf151408d1b04725f",
+      "published_text_sha256": "2ff630a32babbb3d02f83385c1da561443dd6476ff053ed13eedca95df8c6aa9",
       "reviewed_on": "2026-09-04",
-      "review_standard": "L-044 universal source-integrity review; Missionary discovery path reviewed against the linked page and sources; approved Home artwork detail explanation reviewed as symbolic devotional interpretation",
+      "review_standard": "L-044 universal source-integrity review; Missionary discovery path reviewed against the linked page and sources; approved Home artwork explanation revised for sacred, image-specific meaning",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng"
@@ -274,7 +274,7 @@
     {
       "path": "missionary.html",
       "status": "verified",
-      "published_text_sha256": "0caae3d7889444c2c4710ae1c521317fcfaba6d937505147623c9c071ca4cd13",
+      "published_text_sha256": "d12ae3109a8cfb694e5a479ed90f232191d71271b0201eff6ce2758c5f2cd4c4",
       "reviewed_on": "2026-09-04",
       "review_standard": "L-044 universal source-integrity review; scripture quotations, historical chronology, missionary purpose, service descriptions, visit expectations, approved artwork captions, and all Mission detail-window explanations checked against direct official Church sources",
       "authoritative_sources": [

@@ -87,6 +87,12 @@ jobs:
       - name: Validate artwork detail JavaScript
         run: node --check artwork-details.js
 
+      - name: Validate full-image viewer JavaScript
+        run: node --check full-image-viewer.js
+
+      - name: Run full-image viewer runtime QA
+        run: node tools/full_image_viewer_runtime_qa.js
+
       - name: Validate Study Intelligence JavaScript
         run: node --check study-intelligence.js
 
