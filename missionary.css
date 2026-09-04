@@ -168,6 +168,63 @@
     text-align: center;
 }
 
+.fc-missionary-photo-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 1080px;
+    gap: clamp(18px, 3vw, 30px);
+    margin: 38px auto 0;
+}
+
+.fc-missionary-photo-card {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid rgba(240,195,106,.24);
+    border-radius: 18px;
+    background: linear-gradient(155deg, rgba(27,55,65,.98), rgba(17,39,49,.98));
+    box-shadow: 0 20px 42px rgba(3,18,24,.22);
+}
+
+.fc-missionary-photo-card picture {
+    display: block;
+    overflow: hidden;
+}
+
+.fc-missionary-photo-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.fc-missionary-photo-card figcaption {
+    min-height: 138px;
+    padding: 18px 20px 20px;
+}
+
+.fc-missionary-photo-card figcaption strong,
+.fc-missionary-photo-card figcaption span {
+    display: block;
+}
+
+.fc-missionary-photo-card figcaption strong {
+    color: var(--fc-cream);
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.08rem;
+    font-weight: 400;
+}
+
+.fc-missionary-photo-card figcaption span {
+    margin-top: 8px;
+    color: var(--fc-muted);
+    font-size: .92rem;
+    line-height: 1.58;
+}
+
+.fc-missionary-photo-pair--service {
+    margin-bottom: 34px;
+}
+
 .fc-missionary-work-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -392,6 +449,21 @@
 
     .fc-missionary-work-grid {
         grid-template-columns: 1fr;
+    }
+
+    .fc-missionary-photo-pair {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 28px;
+    }
+
+    .fc-missionary-photo-card {
+        border-radius: 16px;
+    }
+
+    .fc-missionary-photo-card figcaption {
+        min-height: 0;
+        padding: 16px 17px 18px;
     }
 
     .fc-missionary-work-card {
