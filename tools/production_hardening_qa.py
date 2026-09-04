@@ -130,6 +130,9 @@ def check_supporting_art_assets(errors: list[str]) -> None:
         "assets/missionary/sister-missionaries-teaching-1400.webp": (1400, 933),
         "assets/missionary/service-missionaries-food-pantry-800.webp": (800, 533),
         "assets/missionary/service-missionaries-food-pantry-1400.webp": (1400, 933),
+        "assets/missionary/christ-commissions-twelve-900.webp": (900, 507),
+        "assets/missionary/christ-commissions-twelve-1100.webp": (1100, 619),
+        "assets/missionary/christ-commissions-twelve-1672.webp": (1672, 941),
     }
     for rel, expected in floors.items():
         path = ROOT / rel
@@ -256,6 +259,9 @@ def main() -> int:
         "assets/missionary/sister-missionaries-teaching-1400.webp",
         "assets/missionary/service-missionaries-food-pantry-800.webp",
         "assets/missionary/service-missionaries-food-pantry-1400.webp",
+        "assets/missionary/christ-commissions-twelve-900.webp",
+        "assets/missionary/christ-commissions-twelve-1100.webp",
+        "assets/missionary/christ-commissions-twelve-1672.webp",
         "data-focuschrist-primary-missionary",
         "Meet with Missionaries",
         "Explore Ways to Serve",
