@@ -80,7 +80,7 @@ def check_hero_assets(errors: list[str]) -> None:
     floors = {
         "assets/heroes/home.webp": (1400, 700),
         "assets/heroes/ask.webp": (2100, 700),
-        "assets/heroes/answers-christ-companion.png": (2048, 682),
+        "assets/heroes/answers.webp": (2100, 700),
         "assets/heroes/art.webp": (2100, 700),
         "assets/heroes/church-history.webp": (1900, 700),
         "assets/heroes/pioneers.webp": (2100, 700),
@@ -174,7 +174,7 @@ def main() -> int:
     hero_refs = {
         "site-system.css": "assets/heroes/home.webp",
         "ask-hero.css": "assets/heroes/ask.webp",
-        "answers.html": "assets/heroes/answers-christ-companion.png",
+        "answers-hero.css": "assets/heroes/answers.webp",
         "art-hero.css": "assets/heroes/art.webp",
         "church-history-experience.js": "assets/heroes/church-history.webp",
         "pioneers.html": "assets/heroes/pioneers.webp",
@@ -185,14 +185,28 @@ def main() -> int:
     for rel, marker in hero_refs.items():
         require(read(rel, errors), rel, (marker,), errors)
 
-    answers_css = read("answers-hero.css", errors)
-    if not re.search(r"\.fc-visual-hero--answers\s*\{[^}]*display\s*:\s*block", answers_css, re.DOTALL):
-        errors.append("answers-hero.css must keep the linked Answers hero as a block-level opening image")
+    answers_page = read("answers.html", errors)
+    original_answers_hero = (
+        '<div class="fc-visual-hero fc-visual-hero--christ fc-visual-hero--answers" '
+        'aria-label="Open scriptures and study materials overlooking a peaceful sunset landscape"></div>'
+    )
+    if original_answers_hero not in answers_page:
+        errors.append("answers.html must preserve the owner-approved original Answers hero unless the owner explicitly approves a hero change")
+    answers_art_order = [
+        "assets/heroes/answers-christ-companion.png",
+        "assets/answers-christ-portrait.png",
+        "assets/answers-christ-walking.png",
+    ]
+    assert_order(answers_page, "answers.html supporting artwork", answers_art_order, errors)
+    opening = answers_page.split('<section class="fc-page-intro"', 1)[0]
+    for art_path in answers_art_order:
+        if art_path in opening:
+            errors.append(f"answers.html uses supporting artwork as the hero without explicit owner approval: {art_path}")
 
     social = {
         "index.html": "home.webp",
         "ask.html": "ask.webp",
-        "answers.html": "answers-christ-companion.png",
+        "answers.html": "answers.webp",
         "art.html": "art.webp",
         "church-history.html": "church-history.webp",
         "pioneers.html": "pioneers.webp",
