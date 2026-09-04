@@ -199,6 +199,8 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - The Church History page has seven approved supporting scenes: the First Vision, Joseph and Emma at Harmony, the Three Witnesses at their June 1829 ages, the Restoration print shop, preserving the historical record, Christ beside a museum record, and Christ across historical eras.
 - The Church History `A Worldwide Living History` candidate and every reviewed Moroni appearing to Joseph bedroom revision are rejected and must never be placed on the site.
 - Approved History art is distributed as responsive visual chapters through the existing page. The 1916x821 forest hero remains unchanged.
+- Every non-hero artwork displayed within page content must open its highest-resolution local source when clicked or keyboard-activated. This applies site-wide. The Art gallery may retain its full-screen viewer. Page heroes stay non-interactive unless Wyatt explicitly approves changing their behavior.
+- Supporting-art captions, notices, and section introductions must retain comfortable inset and top spacing at desktop and mobile sizes. Text may not sit against a panel edge or directly against the preceding section boundary.
 
 ## FocusChrist All-Page Ask Reliability Standard (September 1, 2026)
 

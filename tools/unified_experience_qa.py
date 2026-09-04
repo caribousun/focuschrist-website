@@ -85,7 +85,7 @@ def main() -> int:
             "width: var(--fc-ultrawide-hero-width)",
             "--fc-hero-edge-left-top", "--fc-hero-edge-right-bottom",
             "rgba(0,0,0,.50) 9%", "rgba(0,0,0,.50) 91%",
-            ".fc-card", ".fc-button", ".fc-content-artwork", ".fc-footer", "prefers-reduced-motion",
+            ".fc-card", ".fc-button", ".fc-content-artwork", ".fc-art-link", ".fc-footer", "prefers-reduced-motion",
         ):
             if marker not in css:
                 fail(errors, f"site-system.css missing design-system marker: {marker}")
@@ -146,7 +146,7 @@ def main() -> int:
             continue
         text = path.read_text(encoding="utf-8")
         system_href = expected_system_href(relative)
-        if f'href="{system_href}"' not in text:
+        if f'href="{system_href}' not in text:
             fail(errors, f"{relative}: unified site-system stylesheet missing")
         body_tag = re.search(r"<body[^>]*>", text, re.I)
         if not body_tag or "fc-site" not in body_tag.group(0):
@@ -185,6 +185,8 @@ def main() -> int:
     home_art_path = ROOT / home_art
     if not home_art_path.exists() or home_art_path.stat().st_size == 0:
         fail(errors, f"index.html: supporting artwork asset missing or empty: {home_art}")
+    if f'class="fc-art-link" href="{home_art}"' not in home:
+        fail(errors, "index.html: Home supporting artwork must open its full-resolution source")
 
     ask = (ROOT / "ask.html").read_text(encoding="utf-8")
     ask_art_assets = (
@@ -213,6 +215,9 @@ def main() -> int:
     ):
         if marker not in ask:
             fail(errors, f"ask.html: supporting artwork responsive marker missing: {marker}")
+    for full_art in ("assets/page-art/ask-seek-study-1400.webp", "assets/page-art/ask-nicodemus-1122.webp"):
+        if f'class="fc-art-link" href="{full_art}"' not in ask:
+            fail(errors, f"ask.html: full-resolution supporting artwork link missing: {full_art}")
 
     history = (ROOT / "church-history.html").read_text(encoding="utf-8")
     history_art_assets = (
@@ -240,7 +245,7 @@ def main() -> int:
         elif history_art_path.stat().st_size > 120_000:
             fail(errors, f"church-history.html: supporting artwork exceeds 120 KB performance budget: {history_art}")
     for marker in (
-        'church-history.css?v=20260904-1',
+        'church-history.css?v=20260904-2',
         'class="fc-history-art-panel fc-history-art-panel--wide"',
         'class="fc-history-art-panel fc-history-art-panel--inline fc-history-art-panel--offset-left"',
         'class="fc-history-art-panel fc-history-art-panel--inline fc-history-art-panel--offset-right"',
@@ -250,6 +255,9 @@ def main() -> int:
     ):
         if marker not in history:
             fail(errors, f"church-history.html: artwork-flow marker missing: {marker}")
+    for full_art in history_art_assets[1::2]:
+        if f'class="fc-art-link" href="{full_art}"' not in history:
+            fail(errors, f"church-history.html: full-resolution supporting artwork link missing: {full_art}")
     history_opening = history.split('<section class="fc-page-intro"', 1)[0]
     for history_art in history_art_assets:
         if history_art in history_opening:
@@ -326,6 +334,30 @@ def main() -> int:
     art = (ROOT / "art.html").read_text(encoding="utf-8")
     if "art-experience.css" not in art:
         fail(errors, "art.html: unified Art presentation stylesheet missing")
+    if 'data-full-src=' not in art or 'id="imageModal"' not in art:
+        fail(errors, "art.html: gallery artwork must retain its full-resolution viewer")
+
+    supporting_art_links = {
+        "answers.html": (
+            "assets/heroes/answers-christ-companion.png",
+            "assets/answers-christ-portrait.png",
+            "assets/answers-christ-walking.png",
+        ),
+        "missionary.html": (
+            "assets/missionary/christ-centered-world.webp",
+            "assets/missionary/light-across-world.webp",
+        ),
+    }
+    for relative, assets in supporting_art_links.items():
+        page = (ROOT / relative).read_text(encoding="utf-8")
+        for asset in assets:
+            if f'href="{asset}"' not in page:
+                fail(errors, f"{relative}: full-resolution supporting artwork link missing: {asset}")
+
+    for study_page in (ROOT / "art-study").glob("*.html"):
+        page = study_page.read_text(encoding="utf-8")
+        if not re.search(r'<figure[^>]*>\s*<a href="\.\./art/[^\"]+"', page, re.S):
+            fail(errors, f"{study_page.relative_to(ROOT)}: featured artwork must open its full-resolution source")
 
     ask = (ROOT / "ask.html").read_text(encoding="utf-8")
     if '<header class="ask-hero"' in ask:

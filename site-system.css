@@ -443,6 +443,26 @@ body.fc-site img { max-width: 100%; }
     height: auto;
 }
 
+/* Every supporting artwork surface opens its full-resolution source. */
+.fc-art-link {
+    display: block;
+    color: inherit;
+    cursor: zoom-in;
+    text-decoration: none;
+}
+.fc-art-link img {
+    transition: filter .22s ease, transform .22s ease;
+}
+.fc-art-link:hover img {
+    filter: brightness(1.025);
+    transform: scale(1.006);
+}
+.fc-art-link:focus-visible {
+    border-radius: inherit;
+    outline: 3px solid var(--fc-gold-light);
+    outline-offset: -3px;
+}
+
 .fc-content-artwork figcaption {
     position: absolute;
     right: 0;
@@ -678,6 +698,7 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
+    .fc-art-link img { transition: none; }
     *, *::before, *::after {
         scroll-behavior: auto !important;
         animation-duration: 0.001ms !important;

@@ -32,6 +32,9 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Use explicit `width` and `height` attributes to prevent layout movement.
 - Use `loading="lazy"` and `decoding="async"` for supporting artwork.
 - Keep source artwork outside the runtime page unless an original is specifically required.
+- Every non-hero artwork displayed in page content must open its highest-resolution local source when clicked or keyboard-activated. Use a semantic link with a visible focus state and `target="_blank"` plus `rel="noopener noreferrer"`.
+- The Art gallery may use its existing accessible full-screen viewer instead of opening a raw image tab. Art study pages may continue linking directly to their full source.
+- Page heroes remain non-interactive unless Wyatt separately approves a change to their behavior.
 
 ## Approved artwork
 
@@ -84,5 +87,6 @@ Supporting artwork beautifies the content of each page without replacing or chan
 ## Release protection
 
 - `tools/unified_experience_qa.py` verifies that approved supporting artwork remains wired, responsive, lazy-loaded, and within its delivery-size budget.
+- `tools/unified_experience_qa.py` also verifies that every supporting artwork collection retains a full-resolution opening path.
 - `tools/production_hardening_qa.py` verifies the production WebP dimensions.
 - Any new approved supporting artwork must extend these checks.
