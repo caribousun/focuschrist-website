@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import hashlib
 import re
 import struct
 import sys
@@ -62,11 +63,24 @@ def webp_dimensions(path: Path) -> tuple[int, int]:
     raise ValueError("WebP dimensions unavailable")
 
 
+def png_dimensions(path: Path) -> tuple[int, int]:
+    data = path.read_bytes()[:24]
+    if len(data) < 24 or data[:8] != b"\x89PNG\r\n\x1a\n" or data[12:16] != b"IHDR":
+        raise ValueError("not a PNG with an IHDR header")
+    return struct.unpack(">II", data[16:24])
+
+
+def image_dimensions(path: Path) -> tuple[int, int]:
+    if path.suffix.lower() == ".png":
+        return png_dimensions(path)
+    return webp_dimensions(path)
+
+
 def check_hero_assets(errors: list[str]) -> None:
     floors = {
         "assets/heroes/home.webp": (1400, 700),
         "assets/heroes/ask.webp": (2100, 700),
-        "assets/heroes/answers.webp": (2100, 700),
+        "assets/heroes/answers-christ-companion.png": (2048, 682),
         "assets/heroes/art.webp": (2100, 700),
         "assets/heroes/church-history.webp": (1900, 700),
         "assets/heroes/pioneers.webp": (2100, 700),
@@ -80,7 +94,7 @@ def check_hero_assets(errors: list[str]) -> None:
             errors.append(f"{rel} missing, empty, or implausibly small")
             continue
         try:
-            w, h = webp_dimensions(path)
+            w, h = image_dimensions(path)
         except Exception as exc:
             errors.append(f"{rel} dimension check failed: {exc}")
             continue
@@ -109,6 +123,32 @@ def check_supporting_art_assets(errors: list[str]) -> None:
             errors.append(f"{rel} has unexpected dimensions: {actual[0]}x{actual[1]}, expected {expected[0]}x{expected[1]}")
 
 
+def check_answers_art_assets(errors: list[str]) -> None:
+    approved = {
+        "assets/heroes/answers-christ-companion.png": ((2048, 682), "d6fd78e892da505de24e0c84f6a68c70e823f20c052eb8320d0ceac538282f91"),
+        "assets/answers-christ-portrait.png": ((941, 1672), "b64d4d125fe03f7b8f2bb3f1e919b0e8107d4b9cc24b8a38fdf854176cf62c45"),
+        "assets/answers-christ-walking.png": ((2048, 682), "60dedc0b4fde604470975b0bfe08def25c6bf5448e1310b93175d86a3837fa97"),
+    }
+    for rel, (expected_dimensions, expected_sha256) in approved.items():
+        path = ROOT / rel
+        if not path.exists() or path.stat().st_size == 0:
+            errors.append(f"{rel} missing or empty")
+            continue
+        try:
+            actual_dimensions = image_dimensions(path)
+        except Exception as exc:
+            errors.append(f"{rel} dimension check failed: {exc}")
+            continue
+        if actual_dimensions != expected_dimensions:
+            errors.append(
+                f"{rel} has unexpected dimensions: {actual_dimensions[0]}x{actual_dimensions[1]}, "
+                f"expected {expected_dimensions[0]}x{expected_dimensions[1]}"
+            )
+        actual_sha256 = hashlib.sha256(path.read_bytes()).hexdigest()
+        if actual_sha256 != expected_sha256:
+            errors.append(f"{rel} no longer matches the owner-approved source image")
+
+
 def check_no_editable_drive_runtime(errors: list[str]) -> None:
     forbidden = ("lh3.googleusercontent.com/d/", "drive.google.com/file/d/", "caribousun.github.io/focuschrist-website/Jesus.png")
     runtime = []
@@ -128,12 +168,13 @@ def main() -> int:
 
     check_hero_assets(errors)
     check_supporting_art_assets(errors)
+    check_answers_art_assets(errors)
     check_no_editable_drive_runtime(errors)
 
     hero_refs = {
         "site-system.css": "assets/heroes/home.webp",
         "ask-hero.css": "assets/heroes/ask.webp",
-        "answers-hero.css": "assets/heroes/answers.webp",
+        "answers.html": "assets/heroes/answers-christ-companion.png",
         "art-hero.css": "assets/heroes/art.webp",
         "church-history-experience.js": "assets/heroes/church-history.webp",
         "pioneers.html": "assets/heroes/pioneers.webp",
@@ -147,7 +188,7 @@ def main() -> int:
     social = {
         "index.html": "home.webp",
         "ask.html": "ask.webp",
-        "answers.html": "answers.webp",
+        "answers.html": "answers-christ-companion.png",
         "art.html": "art.webp",
         "church-history.html": "church-history.webp",
         "pioneers.html": "pioneers.webp",
