@@ -404,3 +404,13 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Production main is commit `4f310a311b4f6e304a809be214e60a95d45fb5f2` from PR #119. PR Site QA run 394, push Site QA run 395, and GitHub Pages run 406 passed.
 - Live verification returned HTTP 200 for the Church History page and both image assets. The live 1400 and 800 files exactly matched the approved deployment hashes. The 1400 variant remains the click-to-open full-size source.
 - Next session: preserve this approved artwork and continue Wyatt-directed improvements to Missionary Work and Home.
+
+### Missionary Work four-image expansion - approved and live
+
+- Wyatt approved all four smaller Missionary Work images. The historical pair shows Samuel Smith carrying copies of the Book of Mormon and early missionaries arriving at Liverpool. The modern pair shows sister missionaries teaching a family and young and senior missionaries serving at a food pantry.
+- The Liverpool image uses Wyatt's corrected version in which the front missionary holds the closed book naturally with both hands. Preserve that exact approved correction.
+- The historical pair appears beneath the early-missionary timeline. The modern pair appears beneath Different Assignments, the Same Savior and above the assignment cards. Each pair uses a compact two-column layout on desktop and a one-column stack at 700 pixels and below.
+- Every new image has 800 x 533 and 1400 x 933 repository-local WebP variants below 120,000 bytes. Each card opens its 1400 pixel local source. The Missionary hero and the two existing wide feature artworks remain unchanged.
+- Production main is 9c77886ca150d6ed2e0d4011f871ff40a2362a19 after PR #121 and the live-ratio correction in PR #122. PR, push, and Pages runs 398, 399, 400, 401, 408, and 409 passed.
+- Live visual verification confirmed 505 pixel cards, 335 pixel image heights, 475 pixel complete card heights, 30 pixel pair gaps, successful loading of all four 1400 pixel sources, no horizontal overflow, and the unchanged Missionary hero.
+- Next session: preserve all approved Missionary Work artwork and continue Wyatt-directed page enrichment, with Home remaining the primary planned page.
