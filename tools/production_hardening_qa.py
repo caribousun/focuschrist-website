@@ -185,6 +185,10 @@ def main() -> int:
     for rel, marker in hero_refs.items():
         require(read(rel, errors), rel, (marker,), errors)
 
+    answers_css = read("answers-hero.css", errors)
+    if not re.search(r"\.fc-visual-hero--answers\s*\{[^}]*display\s*:\s*block", answers_css, re.DOTALL):
+        errors.append("answers-hero.css must keep the linked Answers hero as a block-level opening image")
+
     social = {
         "index.html": "home.webp",
         "ask.html": "ask.webp",
