@@ -346,6 +346,10 @@ def main() -> int:
         "missionary.html": (
             "assets/missionary/christ-centered-world.webp",
             "assets/missionary/light-across-world.webp",
+            "assets/missionary/samuel-smith-first-mission-1400.webp",
+            "assets/missionary/early-missionaries-liverpool-1400.webp",
+            "assets/missionary/sister-missionaries-teaching-1400.webp",
+            "assets/missionary/service-missionaries-food-pantry-1400.webp",
         ),
     }
     for relative, assets in supporting_art_links.items():
@@ -353,6 +357,26 @@ def main() -> int:
         for asset in assets:
             if f'href="{asset}"' not in page:
                 fail(errors, f"{relative}: full-resolution supporting artwork link missing: {asset}")
+
+    missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
+    missionary_art_variants = (
+        "assets/missionary/samuel-smith-first-mission-800.webp",
+        "assets/missionary/samuel-smith-first-mission-1400.webp",
+        "assets/missionary/early-missionaries-liverpool-800.webp",
+        "assets/missionary/early-missionaries-liverpool-1400.webp",
+        "assets/missionary/sister-missionaries-teaching-800.webp",
+        "assets/missionary/sister-missionaries-teaching-1400.webp",
+        "assets/missionary/service-missionaries-food-pantry-800.webp",
+        "assets/missionary/service-missionaries-food-pantry-1400.webp",
+    )
+    for asset in missionary_art_variants:
+        path = ROOT / asset
+        if not path.exists() or path.stat().st_size == 0:
+            fail(errors, f"missionary.html: supporting artwork asset missing or empty: {asset}")
+        elif path.stat().st_size > 120_000:
+            fail(errors, f"missionary.html: supporting artwork exceeds 120 KB performance budget: {asset}")
+        if f'"{asset}"' not in missionary:
+            fail(errors, f"missionary.html: responsive supporting artwork marker missing: {asset}")
 
     for study_page in (ROOT / "art-study").glob("*.html"):
         page = study_page.read_text(encoding="utf-8")
