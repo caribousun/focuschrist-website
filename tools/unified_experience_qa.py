@@ -213,6 +213,47 @@ def main() -> int:
     ):
         if marker not in ask:
             fail(errors, f"ask.html: supporting artwork responsive marker missing: {marker}")
+
+    history = (ROOT / "church-history.html").read_text(encoding="utf-8")
+    history_art_assets = (
+        "assets/history/first-vision-800.webp",
+        "assets/history/first-vision-1400.webp",
+        "assets/history/joseph-emma-harmony-800.webp",
+        "assets/history/joseph-emma-harmony-1400.webp",
+        "assets/history/three-witnesses-800.webp",
+        "assets/history/three-witnesses-1400.webp",
+        "assets/history/restoration-print-shop-800.webp",
+        "assets/history/restoration-print-shop-1400.webp",
+        "assets/history/preserving-the-record-800.webp",
+        "assets/history/preserving-the-record-1400.webp",
+        "assets/history/christ-museum-record-800.webp",
+        "assets/history/christ-museum-record-1400.webp",
+        "assets/history/christ-through-eras-800.webp",
+        "assets/history/christ-through-eras-1400.webp",
+    )
+    for history_art in history_art_assets:
+        history_art_path = ROOT / history_art
+        if history_art not in history:
+            fail(errors, f"church-history.html: approved supporting artwork not wired: {history_art}")
+        if not history_art_path.exists() or history_art_path.stat().st_size == 0:
+            fail(errors, f"church-history.html: supporting artwork asset missing or empty: {history_art}")
+        elif history_art_path.stat().st_size > 120_000:
+            fail(errors, f"church-history.html: supporting artwork exceeds 120 KB performance budget: {history_art}")
+    for marker in (
+        'church-history.css?v=20260904-1',
+        'class="fc-history-art-panel fc-history-art-panel--wide"',
+        'class="fc-history-art-panel fc-history-art-panel--inline fc-history-art-panel--offset-left"',
+        'class="fc-history-art-panel fc-history-art-panel--inline fc-history-art-panel--offset-right"',
+        'loading="lazy"',
+        'srcset="assets/history/first-vision-800.webp 800w',
+        'srcset="assets/history/christ-through-eras-800.webp 800w',
+    ):
+        if marker not in history:
+            fail(errors, f"church-history.html: artwork-flow marker missing: {marker}")
+    history_opening = history.split('<section class="fc-page-intro"', 1)[0]
+    for history_art in history_art_assets:
+        if history_art in history_opening:
+            fail(errors, f"church-history.html: supporting artwork replaced the approved hero: {history_art}")
     ask_css = (ROOT / "ask-experience.css").read_text(encoding="utf-8")
     for marker in (
         'grid-template-columns: minmax(0, 1.45fr) minmax(310px, .75fr)',

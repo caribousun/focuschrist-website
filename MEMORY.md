@@ -191,6 +191,15 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Search/discovery controls (`robots.txt`, `sitemap.xml`, canonical metadata, specific high-resolution social preview images) must be preserved and updated with material page changes.
 - Production learning rule: when a presentation review exposes a defect class, fix the instance and add a regression gate so future sessions cannot silently regress it.
 
+### FocusChrist supporting artwork rules and Church History approval (September 4, 2026)
+
+- Never replace, alter, or repurpose a page hero without Wyatt's explicit approval. Supporting art always begins below the approved hero.
+- Before presenting or integrating new art: create a robust page-specific prompt, generate the art, verify the complete image against approved likeness, realism, historical accuracy, anatomy, scale, and page uniqueness, then redesign any failed candidate before asking Wyatt to review it.
+- Jesus Christ must match the approved `art/The-Living-Christ.png` source likeness. Photorealism alone is not enough.
+- The Church History page has seven approved supporting scenes: the First Vision, Joseph and Emma at Harmony, the Three Witnesses at their June 1829 ages, the Restoration print shop, preserving the historical record, Christ beside a museum record, and Christ across historical eras.
+- The Church History `A Worldwide Living History` candidate and every reviewed Moroni appearing to Joseph bedroom revision are rejected and must never be placed on the site.
+- Approved History art is distributed as responsive visual chapters through the existing page. The 1916x821 forest hero remains unchanged.
+
 ## FocusChrist All-Page Ask Reliability Standard (September 1, 2026)
 
 - Master Brain governance and `docs/all-page-ai-ask-executive-prompt.md` control every Ask change.

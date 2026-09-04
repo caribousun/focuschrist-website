@@ -42,7 +42,7 @@ if not errors:
         ('id="historyResetButton"', "New Question control"),
         ('study-source-router.js', "source router loader"),
         ('church-history-experience.js?v=20260903-16', "versioned history experience loader"),
-        ('church-history.css?v=20260830-2', "versioned history stylesheet"),
+        ('church-history.css?v=20260904-1', "versioned history stylesheet"),
         ('assets/heroes/church-history.webp', "repository-local Sacred Grove hero delivery pattern"),
         ('referrerpolicy="no-referrer"', "hero no-referrer delivery"),
         ('1815–1846', "Saints Volume 1 era"),
@@ -53,6 +53,13 @@ if not errors:
         ('https://www.churchofjesuschrist.org/study/church-history/saints?lang=eng', "official Saints hub"),
         ('https://www.churchofjesuschrist.org/study/history/topics?lang=eng', "Church History Topics"),
         ('https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng', "Global Histories"),
+        ('assets/history/first-vision-1400.webp', "approved First Vision artwork"),
+        ('assets/history/joseph-emma-harmony-1400.webp', "approved Joseph and Emma artwork"),
+        ('assets/history/three-witnesses-1400.webp', "approved Three Witnesses artwork"),
+        ('assets/history/restoration-print-shop-1400.webp', "approved Restoration print shop artwork"),
+        ('assets/history/preserving-the-record-1400.webp', "approved record preservation artwork"),
+        ('assets/history/christ-museum-record-1400.webp', "approved museum record artwork"),
+        ('assets/history/christ-through-eras-1400.webp', "approved Christ across generations artwork"),
         ('focusChrist is an independent faith-based website', "independence disclosure"),
     ]:
         if needle not in history:
@@ -61,15 +68,43 @@ if not errors:
         errors.append("church-history.html: broken Drive uc hero delivery pattern remains")
 
     source_lock_pos = history.find('fc-history-source-lock')
+    first_vision_pos = history.find('assets/history/first-vision-1400.webp')
     ask_pos = history.find('id="ask-history"')
+    harmony_pos = history.find('assets/history/joseph-emma-harmony-1400.webp')
     saints_pos = history.find('Read <em>Saints</em> Across Four Eras')
     official_index_pos = history.find('id="official-history-index"')
-    if min(source_lock_pos, ask_pos, saints_pos, official_index_pos) < 0 or not (
-        source_lock_pos < ask_pos < saints_pos < official_index_pos
+    christ_eras_pos = history.find('assets/history/christ-through-eras-1400.webp')
+    if min(source_lock_pos, first_vision_pos, ask_pos, harmony_pos, saints_pos, official_index_pos, christ_eras_pos) < 0 or not (
+        source_lock_pos < first_vision_pos < ask_pos < harmony_pos < saints_pos < official_index_pos < christ_eras_pos
     ):
         errors.append(
-            "church-history.html: page order must be intro/source standard -> Ask Church History -> Saints eras -> official source index"
+            "church-history.html: page order must preserve source standard -> First Vision -> Ask -> Harmony -> Saints -> official index -> Christ across generations"
         )
+
+    approved_art_order = [
+        "assets/history/first-vision-1400.webp",
+        "assets/history/joseph-emma-harmony-1400.webp",
+        "assets/history/three-witnesses-1400.webp",
+        "assets/history/restoration-print-shop-1400.webp",
+        "assets/history/preserving-the-record-1400.webp",
+        "assets/history/christ-museum-record-1400.webp",
+        "assets/history/christ-through-eras-1400.webp",
+    ]
+    art_positions = [history.find(asset) for asset in approved_art_order]
+    if art_positions != sorted(art_positions):
+        errors.append("church-history.html: approved artwork narrative order drifted")
+    if history.count('loading="lazy"') < 7 or history.count('decoding="async"') < 8:
+        errors.append("church-history.html: approved supporting artwork must remain lazy-loaded and asynchronously decoded")
+    opening = history.split('<section class="fc-page-intro"', 1)[0]
+    for asset in approved_art_order:
+        if asset in opening:
+            errors.append(f"church-history.html: supporting artwork cannot replace the approved History hero: {asset}")
+    for forbidden in (
+        "A Worldwide Living History",
+        "Moroni Appears to Joseph - proportion revision",
+    ):
+        if forbidden in history:
+            errors.append(f"church-history.html: rejected artwork reference present: {forbidden}")
 
     router = (ROOT / "study-source-router.js").read_text(encoding="utf-8")
     for needle, label in [
@@ -141,6 +176,9 @@ if not errors:
         ('html[data-focuschrist-history-conversation-active]', "active conversation visual state"),
         ('.fc-history-page #ask-history + .fc-section.fc-section--flush-top', "Saints narrative section buffer selector"),
         ('padding-top: clamp(24px, 2.5vw, 34px);', "Saints narrative section top buffer"),
+        ('.fc-history-art-panel', "approved artwork presentation surface"),
+        ('.fc-history-art-panel--offset-left', "alternating artwork alignment"),
+        ('aspect-ratio: 12 / 5;', "mobile panoramic artwork crop"),
     ]:
         if needle not in css:
             errors.append(f"church-history.css: missing {label}")
