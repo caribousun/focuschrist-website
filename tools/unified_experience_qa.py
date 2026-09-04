@@ -381,6 +381,59 @@ def main() -> int:
         if f'"{asset}"' not in missionary:
             fail(errors, f"missionary.html: responsive supporting artwork marker missing: {asset}")
 
+    missionary_detail_keys = (
+        "commission",
+        "samuel-smith",
+        "crossing-oceans",
+        "early-missionaries",
+        "growth-of-work",
+        "missionary-purpose",
+        "worldwide-work",
+        "teaching-families",
+        "service-missionaries",
+    )
+    if missionary.count('data-missionary-detail=') != 10:
+        fail(errors, "missionary.html: expected seven artwork and three study-link detail triggers")
+    for key in missionary_detail_keys:
+        if f'data-missionary-detail-content="{key}"' not in missionary:
+            fail(errors, f"missionary.html: detail content missing for {key}")
+    for marker in (
+        'missionary-details.js?v=20260904-1',
+        'id="missionaryDetailDialog"',
+        'id="missionaryDetailFullImage"',
+        'id="missionaryDetailSource"',
+        'aria-haspopup="dialog"',
+        'View Full-Size Image',
+    ):
+        if marker not in missionary:
+            fail(errors, f"missionary.html: artwork detail marker missing: {marker}")
+
+    missionary_detail_js_path = ROOT / "missionary-details.js"
+    if not missionary_detail_js_path.exists() or missionary_detail_js_path.stat().st_size == 0:
+        fail(errors, "missionary-details.js missing or empty")
+    else:
+        missionary_detail_js = missionary_detail_js_path.read_text(encoding="utf-8")
+        for marker in (
+            "dialog.showModal()",
+            "dialog.close()",
+            "dialog.addEventListener('cancel'",
+            "event.metaKey",
+            "returnFocus.focus()",
+            "document.body.classList.add('fc-dialog-open')",
+        ):
+            if marker not in missionary_detail_js:
+                fail(errors, f"missionary-details.js: accessibility or interaction marker missing: {marker}")
+
+    missionary_css = (ROOT / "missionary.css").read_text(encoding="utf-8")
+    for marker in (
+        ".fc-missionary-detail-dialog",
+        ".fc-missionary-detail-dialog::backdrop",
+        ".fc-missionary-detail-shell",
+        ".fc-missionary-detail-actions",
+    ):
+        if marker not in missionary_css:
+            fail(errors, f"missionary.css: artwork detail presentation marker missing: {marker}")
+
     for study_page in (ROOT / "art-study").glob("*.html"):
         page = study_page.read_text(encoding="utf-8")
         if not re.search(r'<figure[^>]*>\s*<a href="\.\./art/[^\"]+"', page, re.S):

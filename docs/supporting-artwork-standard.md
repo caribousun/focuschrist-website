@@ -34,6 +34,7 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Keep source artwork outside the runtime page unless an original is specifically required.
 - Every non-hero artwork displayed in page content must open its highest-resolution local source when clicked or keyboard-activated. Use a semantic link with a visible focus state and `target="_blank"` plus `rel="noopener noreferrer"`.
 - The Art gallery may use its existing accessible full-screen viewer instead of opening a raw image tab. Art study pages may continue linking directly to their full source.
+- The Mission page may open an accessible detail window first when the original artwork link remains the no-JavaScript fallback and the window provides a clear full-size image action. The detail window must also explain the scene, distinguish portrayals from documentary images, and provide an official source when relevant.
 - Page heroes remain non-interactive unless Wyatt separately approves a change to their behavior.
 
 ## Approved artwork
@@ -85,6 +86,7 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Placement: a wide supporting artwork immediately beneath the Christ's commission text and Matthew 28:19 quotation. The 900 and 1100 pixel variants serve the page responsively, and selecting the image opens the full 1672 pixel source.
 - Christ retains the approved `art/The-Living-Christ.png` likeness and wears a muted deep blue-gray outer robe over a warm ochre-brown tunic. Record these colors as used so later Christ artwork intentionally rotates to a different historically plausible palette unless Wyatt requests otherwise.
 - Preserve the exact count of Christ plus twelve Apostles, the warm Judean field, restrained expression, distinct Apostle faces, natural movement, and near-photorealistic finish.
+- All seven Mission supporting artworks open a shared detail window containing the selected image, reviewed context, an official source, and a separate full-size image action. Read the Savior's commission, Study Early Missionaries, and Explore the Growth of the Work use the same pattern before visitors choose the official source.
 
 ## Not selected
 
