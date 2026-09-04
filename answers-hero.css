@@ -1,23 +1,11 @@
 /* Answers page artwork sequence - owner-approved source images, 2026-09-04.
    Page-specific only; shared hero geometry remains owned by site-system.css. */
 
-.fc-visual-hero--answers {
-    display: block;
-}
-
 .fc-visual-hero--answers::before {
-    background-image: url('assets/heroes/answers-christ-companion.png');
-    background-position: center 46%;
+    background-image: url('assets/heroes/answers.webp');
+    background-position: center 58%;
+    background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(16px) brightness(0.72) saturate(0.88);
-    transform: scale(1.04);
-    z-index: -2;
-}
-
-.fc-visual-hero--answers > img {
-    object-fit: contain;
-    object-position: center 46%;
-    z-index: -1;
 }
 
 .fc-answers-art {
@@ -80,7 +68,7 @@
 }
 
 .fc-answers-grid--continued {
-    margin-top: 0;
+    margin-top: clamp(36px, 5vw, 58px);
 }
 
 .fc-answers-art--wide {
@@ -107,9 +95,8 @@
 }
 
 @media (max-width: 900px) {
-    .fc-visual-hero--answers > img {
-        object-fit: cover;
-        object-position: 54% 46%;
+    .fc-visual-hero--answers::before {
+        background-position: center 55%;
     }
 
     .fc-answers-art--portrait {
@@ -149,12 +136,6 @@
 
     .fc-answers-art--wide img {
         object-position: center 48%;
-    }
-}
-
-@media (min-width: 2560px) {
-    .fc-visual-hero--answers::before {
-        transform: translateX(-50%) scale(1.04);
     }
 }
 
