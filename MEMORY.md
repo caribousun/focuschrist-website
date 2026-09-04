@@ -422,3 +422,11 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Approved Christ wardrobe for this image is a muted deep blue-gray outer robe over a warm ochre-brown tunic. Treat that palette as used and rotate future Christ wardrobe colors intentionally.
 - The artwork belongs directly beneath the Christ's commission text. Responsive 900 and 1100 pixel WebP variants serve the page, and the full 1672 pixel WebP opens when selected.
 - The Mission page hero remains locked and unchanged.
+
+### Missionary Work interactive artwork details
+
+- All seven Mission supporting artworks use one accessible detail window that explains the selected scene, distinguishes portrayals from documentary images, links to an official source, and offers a separate full-size image choice.
+- Read the Savior's commission, Study Early Missionaries, and Explore the Growth of the Work use the same detail-first pattern before visitors leave for the official source.
+- Preserve direct original URLs as no-JavaScript fallbacks and preserve normal modified-click behavior.
+- The Mission detail experience must retain keyboard access, native Escape handling, backdrop close, focus return, responsive stacking, and the established focusChrist colors and typography.
+- This interaction changes presentation only. It does not authorize changes to approved artwork pixels, heroes, page order, or source destinations.
