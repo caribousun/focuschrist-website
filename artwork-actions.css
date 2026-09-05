@@ -1,0 +1,36 @@
+/* Shared responsive controls for artwork details and gallery study drawers. */
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions, .fc-art-study-links) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+    gap: 10px;
+    align-items: stretch;
+}
+
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions, .fc-art-study-links) > :is(a, button) {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    height: 100%;
+    margin: 0;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.35;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions, .fc-art-study-links) > [hidden] {
+    display: none !important;
+}
+
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close]) {
+    grid-column: 1 / -1;
+    justify-self: end;
+    width: auto;
+    min-width: 6rem;
+    margin-top: 4px;
+}
