@@ -7,9 +7,12 @@
 }
 
 .fc-artwork-detail-dialog {
+    position: fixed;
+    inset: 0;
     width: min(1120px, calc(100vw - 36px));
     max-width: none;
     max-height: min(90vh, 820px);
+    max-height: min(90dvh, 820px);
     margin: auto;
     padding: 0;
     overflow: auto;
@@ -140,6 +143,7 @@
     .fc-artwork-detail-dialog {
         width: min(720px, calc(100vw - 24px));
         max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
         border-radius: 18px;
     }
 

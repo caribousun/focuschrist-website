@@ -455,7 +455,7 @@ def main() -> int:
         if f'data-missionary-detail-content="{key}"' not in missionary:
             fail(errors, f"missionary.html: detail content missing for {key}")
     for marker in (
-        'missionary-details.js?v=20260904-1',
+        'missionary-details.js?v=20260905-viewport',
         'id="missionaryDetailDialog"',
         'id="missionaryDetailFullImage"',
         'id="missionaryDetailSource"',
@@ -475,7 +475,7 @@ def main() -> int:
             "dialog.close()",
             "dialog.addEventListener('cancel'",
             "event.metaKey",
-            "returnFocus.focus()",
+            "returnFocus.focus({ preventScroll: true })",
             "document.body.classList.add('fc-dialog-open')",
         ):
             if marker not in missionary_detail_js:
