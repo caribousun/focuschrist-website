@@ -123,6 +123,15 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Placement: a wide supporting artwork immediately beneath the Christ's commission text and Matthew 28:19 quotation. The 900 and 1100 pixel variants serve the page responsively, and selecting the image opens the full 1672 pixel source.
 - Christ retains the approved `art/The-Living-Christ.png` likeness and wears a muted deep blue-gray outer robe over a warm ochre-brown tunic. Record these colors as used so later Christ artwork intentionally rotates to a different historically plausible palette unless Wyatt requests otherwise.
 - Preserve the exact count of Christ plus twelve Apostles, the warm Judean field, restrained expression, distinct Apostle faces, natural movement, and near-photorealistic finish.
+
+### Pioneers
+
+- Ten approved photorealistic scenes are integrated as four visual chapters without changing the approved Pioneer hero.
+- The story order is: leaving Nauvoo, Winter Quarters, daily life on the trail, traveling beside the Platte River, a river crossing, the handcart journey, rescue wagons arriving, the first view of the Salt Lake Valley, building a new community, and construction of the Salt Lake Temple.
+- The artwork is distributed around the existing Journey, Trail, and Willie and Martin history sections. It is not presented as one detached gallery and is not placed inside the expandable history controls.
+- Desktop presentation uses compact two-card and three-card editorial grids. Tablet presentation reduces three-card groups to two columns. Mobile presentation uses one column with the original 16:9 composition preserved.
+- Each scene has 800 and 1400 pixel responsive WebP variants. Each opens its local 1672 pixel source through the shared same-page image viewer, with the semantic link retained as a new-tab fallback.
+- Preserve the distinct people, clothing, family relationships, broken-up wagon groupings, and photorealistic finish Wyatt approved. The rejected original winter rescue image must never be used.
 - All seven Mission supporting artworks open a shared detail window containing the selected image, reviewed context, an official source, and a separate full-size image action. Read the Savior's commission, Study Early Missionaries, and Explore the Growth of the Work use the same pattern before visitors choose the official source.
 
 ## Not selected

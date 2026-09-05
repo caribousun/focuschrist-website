@@ -140,14 +140,16 @@ def main() -> int:
         for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
     ]
     viewer_triggers = sum(text.count("data-full-image-viewer") for text in viewer_documents)
-    if viewer_triggers != 11:
-        errors.append(f"same-page full-image viewer must have exactly 11 scoped triggers, found {viewer_triggers}")
+    if viewer_triggers != 21:
+        errors.append(f"same-page full-image viewer must have exactly 21 scoped triggers, found {viewer_triggers}")
     if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:
         errors.append("shared artwork full-size action is not enrolled in the same-page viewer")
     if 'id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in missionary:
         errors.append("Mission full-size action is not enrolled in the same-page viewer")
     if 'fc-visual-hero--history' not in pioneer or 'data-full-image-viewer' not in pioneer:
         errors.append("Pioneer hero must retain its approved full-image action through the same-page viewer")
+    if pioneer.count("data-full-image-viewer") != 11:
+        errors.append("Pioneer page must retain viewer actions for its hero and ten approved supporting artworks")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):
