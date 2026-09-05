@@ -142,6 +142,22 @@ def check_supporting_art_assets(errors: list[str]) -> None:
         "assets/missionary/christ-commissions-twelve-1100.webp": (1100, 619),
         "assets/missionary/christ-commissions-twelve-1672.webp": (1672, 941),
     }
+    pioneer_sources = {
+        "leaving-nauvoo": (1671, 941),
+        "winter-quarters": (1672, 941),
+        "life-along-trail": (1672, 941),
+        "platte-river": (1672, 941),
+        "river-crossing": (1672, 941),
+        "handcart-journey": (1672, 941),
+        "rescue-wagons": (1672, 941),
+        "first-view-valley": (1672, 941),
+        "building-community": (1672, 941),
+        "salt-lake-temple": (1672, 941),
+    }
+    for name, full_dimensions in pioneer_sources.items():
+        floors[f"assets/pioneers/{name}-800.webp"] = (800, 450)
+        floors[f"assets/pioneers/{name}-1400.webp"] = (1400, 788)
+        floors[f"assets/pioneers/{name}-1672.webp"] = full_dimensions
     for rel, expected in floors.items():
         path = ROOT / rel
         if not path.exists() or path.stat().st_size == 0:
@@ -309,6 +325,24 @@ def main() -> int:
         "study/history/topics/pioneer-trek",
         "nps.gov/articles/000/mormon-pioneer-trail-junior-ranger",
     ), errors)
+    pioneer_art_order = [
+        "assets/pioneers/leaving-nauvoo-1672.webp",
+        "assets/pioneers/winter-quarters-1672.webp",
+        "assets/pioneers/life-along-trail-1672.webp",
+        "assets/pioneers/platte-river-1672.webp",
+        "assets/pioneers/river-crossing-1672.webp",
+        "assets/pioneers/handcart-journey-1672.webp",
+        "assets/pioneers/rescue-wagons-1672.webp",
+        "assets/pioneers/first-view-valley-1672.webp",
+        "assets/pioneers/building-community-1672.webp",
+        "assets/pioneers/salt-lake-temple-1672.webp",
+    ]
+    assert_order(pioneers, "pioneers.html approved artwork story", pioneer_art_order, errors)
+    for art_path in pioneer_art_order:
+        if f'class="fc-art-link" href="{art_path}"' not in pioneers:
+            errors.append(f"pioneers.html full-resolution artwork link missing: {art_path}")
+    if pioneers.count("data-full-image-viewer") < 11:
+        errors.append("pioneers.html must retain viewer behavior for the hero and all ten supporting artworks")
     for unsupported in (
         "William A. Anderson, Pioneer Journal",
         "British convert journal entry",

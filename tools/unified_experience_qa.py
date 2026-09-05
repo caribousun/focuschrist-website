@@ -320,6 +320,36 @@ def main() -> int:
     if '>New Question</button>' not in pioneers:
         fail(errors, "pioneers.html: New Question reset language missing")
 
+    pioneer_art_names = (
+        "leaving-nauvoo", "winter-quarters", "life-along-trail", "platte-river",
+        "river-crossing", "handcart-journey", "rescue-wagons", "first-view-valley",
+        "building-community", "salt-lake-temple",
+    )
+    for name in pioneer_art_names:
+        for width in (800, 1400, 1672):
+            pioneer_art = f"assets/pioneers/{name}-{width}.webp"
+            pioneer_art_path = ROOT / pioneer_art
+            if pioneer_art not in pioneers:
+                fail(errors, f"pioneers.html: approved supporting artwork not wired: {pioneer_art}")
+            if not pioneer_art_path.exists() or pioneer_art_path.stat().st_size == 0:
+                fail(errors, f"pioneers.html: supporting artwork asset missing or empty: {pioneer_art}")
+            elif width != 1672 and pioneer_art_path.stat().st_size > 120_000:
+                fail(errors, f"pioneers.html: delivered supporting artwork exceeds 120 KB: {pioneer_art}")
+        full_art = f"assets/pioneers/{name}-1672.webp"
+        if f'class="fc-art-link" href="{full_art}"' not in pioneers:
+            fail(errors, f"pioneers.html: full-resolution supporting artwork link missing: {full_art}")
+    for marker in (
+        'class="pioneer-art-grid pioneer-art-grid--two"',
+        'class="pioneer-art-grid pioneer-art-grid--three"',
+        'data-full-image-viewer',
+        'loading="lazy"',
+        'decoding="async"',
+    ):
+        if marker not in pioneers:
+            fail(errors, f"pioneers.html: supporting artwork flow marker missing: {marker}")
+    if pioneers.count("data-full-image-viewer") < 11:
+        fail(errors, "pioneers.html: hero and all ten supporting artworks must retain full-image viewer behavior")
+
     pioneer_js = ROOT / "pioneer-experience.js"
     if not pioneer_js.exists() or pioneer_js.stat().st_size == 0:
         fail(errors, "pioneer-experience.js missing or empty")
