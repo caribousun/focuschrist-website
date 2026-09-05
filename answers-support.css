@@ -1,0 +1,6 @@
+.fc-answer-support { margin: 32px 0; }
+.fc-answer-support img { display: block; width: 100%; height: auto; }
+.fc-answer-support figcaption { position: static; padding: 14px 20px; background: #10232d; }
+.article details { margin: 18px 0; padding: 18px 22px; border: 1px solid rgba(240,195,106,.25); border-radius: 12px; }
+.article summary { cursor: pointer; font-weight: 600; }
+.article summary:focus-visible { outline: 2px solid #f0c36a; outline-offset: 4px; }

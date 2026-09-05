@@ -398,7 +398,13 @@ def main() -> int:
             "assets/heroes/answers-christ-companion.png",
             "assets/answers-christ-portrait.png",
             "assets/answers-christ-walking.png",
-            "assets/page-art/answers-savior-welcomes-child-1672.webp",
+            "assets/page-art/answers-savior-welcomes-child-1672.webp?v=20260905-approved-face",
+            "assets/page-art/answers-quiet-prayer-1536.webp",
+            "assets/page-art/answers-child-loss-father-1726.webp",
+            "assets/page-art/answers-child-loss-parents-1726.webp",
+            "assets/page-art/answers-divorced-father-1724.webp",
+
+            "assets/page-art/answers-comfort-in-grief-1536.webp",
         ),
         "missionary.html": (
             "assets/missionary/christ-centered-world.webp",

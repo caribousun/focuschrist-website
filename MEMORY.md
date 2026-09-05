@@ -1,5 +1,7 @@
 # MEMORY.md - Long-Term Memory
 
+GitHub release connection: read GITHUB-CONNECTION.md. The owner authorized the existing GitHub plugin for approved Focus releases when CLI is unavailable. Verify plugin access before declaring GitHub blocked or asking for another device login. Never store credentials in memory.
+
 ## CRITICAL WORKING RULE - NEVER FORGET
 
 **Wyatt's Mandatory Verification Rule:**
@@ -458,3 +460,19 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - New eye-corrected filenames replace all Ask image, srcset, detail, and full-size references to prevent reuse of cached older assets. The 1672 pixel WebP preserves the supplied RGB pixels losslessly; the 900 pixel preview is optimized for the existing delivery budget.
 - Source SHA-256: ca9b20ecd0bad7fa68e30f47755a5966a9847b19df3d69c8b3c82fdf12ae8ea1.
 - Preserve the hero, captions, layout, official sources, detail dialog, and full-image viewer. Verify production delivery after release; repository equality alone does not establish that every responsive image is correct.
+
+
+## Answers mother-and-child likeness approved
+
+- Wyatt approved the corrected scene generated from The Living Christ reference on 2026-09-05. Exact approved native size is 1667 x 943. Full WebP is lossless with zero decoded RGB difference; legacy 1672 filename retained for compatibility. The 900 x 509 preview is 108,022 bytes.
+- Full SHA256: 73320056c0d66dcc0b9111663b8ec942ad5c1c3ab29acc6b462884e3ab755385. Preview SHA256: a504aa0a1d0b28a531f0f05ecfbf475706e30692ce5df2672c270d427d49f898.
+- Page dimensions, srcset and inline/detail/full cache references reflect the approved version. Hero unchanged; captions, Mark 10 study route and shared centered viewers preserved.
+- Local structural, artwork, static-content, unified experience, production hardening and full-image runtime checks passed. Independent review verified exact full-source pixel fidelity and preserved bindings. Deployment and live acceptance pending at this commit.
+- Next: verify production release, then enrich Answers and prepare a few distinct thematic supporting images for individual owner approval. No new supporting image is approved yet.
+
+
+## Mandatory image review and Nicodemus rejection
+
+Every created or edited picture must be hyper photorealistic and high clarity, whether or not Christ appears. Every depiction of Christ must use The Living Christ.png as the literal identity source and preserve the exact approved likeness. After creation, inspect the actual full-resolution pixels and compare the face against the approved source. Record per-candidate identity, realism, clarity, anatomy and artifact PASS/FAIL; a prompt or successful generation is not a review. Failure or unverifiable quality blocks approval recommendation and deployment. Owner approval remains required.
+
+The newly generated Nicodemus nighttime scene exec-b8a3f6df-c1be-4189-b558-35cd7d452dec.png is REJECTED because Nicodemus already appears on Ask. Do not publish it, count it as approved or use it as a future reference. Audit existing site artwork before ideation to prevent duplicate subjects/scenes. The approved mother-and-child correction remains approved and unpublished; collect additional approved Answers artwork before the batch release.
