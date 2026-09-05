@@ -34,7 +34,8 @@
         image.alt = imageAlt(trigger);
         document.body.classList.add('fc-full-image-open');
         dialog.showModal();
-        closeButton.focus();
+        dialog.scrollTop = 0;
+        closeButton.focus({ preventScroll: true });
     }
 
     document.addEventListener('click', function (event) {
@@ -61,7 +62,7 @@
         document.body.classList.remove('fc-full-image-open');
         image.removeAttribute('src');
         image.alt = '';
-        if (returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus();
+        if (returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus({ preventScroll: true });
         returnFocus = null;
     });
 }());

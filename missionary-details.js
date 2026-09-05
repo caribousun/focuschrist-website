@@ -39,8 +39,9 @@
         returnFocus = trigger;
         document.body.classList.add('fc-dialog-open');
         dialog.showModal();
+        dialog.scrollTop = 0;
         const closeButton = dialog.querySelector('[data-missionary-detail-close]');
-        if (closeButton) closeButton.focus();
+        if (closeButton) closeButton.focus({ preventScroll: true });
     }
 
     document.querySelectorAll('[data-missionary-detail]').forEach(function (trigger) {
@@ -65,7 +66,7 @@
 
     dialog.addEventListener('close', function () {
         document.body.classList.remove('fc-dialog-open');
-        if (returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus();
+        if (returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus({ preventScroll: true });
         returnFocus = null;
     });
 }());

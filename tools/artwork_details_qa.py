@@ -48,8 +48,8 @@ def main() -> int:
         if re.search(r'id="artworkDetailStudy"[^>]*href=', text):
             errors.append(f"{relative}: hidden study action must not have a default destination")
         for marker in (
-            'href="artwork-details.css?v=20260904-2"',
-            'src="artwork-details.js?v=20260904-1"',
+            'href="artwork-details.css?v=20260905-viewport"',
+            'src="artwork-details.js?v=20260905-viewport"',
             'id="artworkDetailSource"',
             'id="artworkDetailStudy" hidden',
             'id="artworkDetailFullImage"',
@@ -85,7 +85,7 @@ def main() -> int:
     )
     if len(mission_image_triggers) != 7:
         errors.append(f"missionary.html: expected 7 image detail triggers, found {len(mission_image_triggers)}")
-    if "missionary.css?v=20260904-5" not in missionary:
+    if "missionary.css?v=20260905-viewport" not in missionary:
         errors.append("missionary.html: centered close-control stylesheet version missing")
     mission_records = re.findall(r'data-missionary-detail-content="([^"]+)"', missionary)
     if len(mission_records) != 9 or len(set(mission_records)) != 9:
@@ -122,8 +122,8 @@ def main() -> int:
     for relative in ROOT_VIEWER_PAGES:
         text = (ROOT / relative).read_text(encoding="utf-8", errors="replace")
         for marker in (
-            'href="full-image-viewer.css?v=20260904-1"',
-            'src="full-image-viewer.js?v=20260904-1"',
+            'href="full-image-viewer.css?v=20260905-viewport"',
+            'src="full-image-viewer.js?v=20260905-viewport"',
         ):
             if text.count(marker) != 1:
                 errors.append(f"{relative}: full-image viewer asset must load exactly once: {marker}")
@@ -131,8 +131,8 @@ def main() -> int:
     for relative in ART_STUDY_PAGES:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for marker in (
-            'href="../full-image-viewer.css?v=20260904-1"',
-            'src="../full-image-viewer.js?v=20260904-1"',
+            'href="../full-image-viewer.css?v=20260905-viewport"',
+            'src="../full-image-viewer.js?v=20260905-viewport"',
         ):
             if text.count(marker) != 1:
                 errors.append(f"{relative}: full-image viewer asset must load exactly once: {marker}")
@@ -195,7 +195,7 @@ def main() -> int:
         "event.shiftKey",
         "event.altKey",
         "event.target === dialog",
-        "returnFocus.focus()",
+        "returnFocus.focus({ preventScroll: true })",
         "document.body.classList.add('fc-dialog-open')",
         "dialog.addEventListener('cancel'",
         "study.hidden = false",
@@ -213,7 +213,7 @@ def main() -> int:
         "event.shiftKey",
         "event.altKey",
         "event.target === stage",
-        "returnFocus.focus()",
+        "returnFocus.focus({ preventScroll: true })",
         "dialog.addEventListener('cancel'",
         "document.body.classList.add('fc-full-image-open')",
         "image.removeAttribute('src')",

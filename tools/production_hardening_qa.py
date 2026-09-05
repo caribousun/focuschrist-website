@@ -294,7 +294,7 @@ def main() -> int:
         "assets/missionary/christ-commissions-twelve-900.webp",
         "assets/missionary/christ-commissions-twelve-1100.webp",
         "assets/missionary/christ-commissions-twelve-1672.webp",
-        "missionary-details.js?v=20260904-1",
+        "missionary-details.js?v=20260905-viewport",
         "id=\"missionaryDetailDialog\"",
         "View Full-Size Image",
         "data-focuschrist-primary-missionary",
