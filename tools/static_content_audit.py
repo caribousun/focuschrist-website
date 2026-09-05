@@ -147,7 +147,7 @@ def validate() -> int:
             errors.append(f"{name}: missing review date or standard")
         actual_hash = content_hash(path)
         if record.get("published_text_sha256") != actual_hash:
-            errors.append(f"{name}: published wording changed after review")
+            errors.append(f"{name}: published wording changed after review (expected {record.get('published_text_sha256')}, actual {actual_hash})")
 
     if errors:
         print("STATIC CONTENT AUDIT FAIL")
