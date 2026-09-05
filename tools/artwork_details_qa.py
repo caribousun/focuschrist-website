@@ -3,6 +3,7 @@ from __future__ import annotations
 from pathlib import Path
 import re
 import sys
+from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
@@ -63,7 +64,7 @@ def main() -> int:
             for asset in re.findall(fr'{attr}="([^"]+)"', text):
                 if asset.startswith(("http://", "https://", "#")):
                     continue
-                target = (path.parent / asset).resolve()
+                target = (path.parent / urlsplit(asset).path).resolve()
                 if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                     errors.append(f"{relative}: missing local artwork asset: {asset}")
 
@@ -158,7 +159,7 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for asset in re.findall(r'data-detail-full="([^"]+)"', text):
             full_assets.append(asset)
-            target = (ROOT / asset).resolve()
+            target = (ROOT / urlsplit(asset).path).resolve()
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
     if len(full_assets) != 40:
