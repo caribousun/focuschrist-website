@@ -1,8 +1,8 @@
 /* focusChrist Ask page approved image-first hero.
    Shared site hero geometry is preserved; only artwork and responsive crop are page-specific.
-   Final approved Ask teaching scene: 2026-08-30. */
+   Approved light-red scarf hero: 2026-09-05. */
 .fc-visual-hero--ask::before {
-    background-image: url('assets/heroes/ask.webp');
+    background-image: url('assets/heroes/ask.webp?v=20260905-approved-red');
     background-position: center top;
 }
 

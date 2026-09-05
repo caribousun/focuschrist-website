@@ -79,7 +79,7 @@ def image_dimensions(path: Path) -> tuple[int, int]:
 def check_hero_assets(errors: list[str]) -> None:
     floors = {
         "assets/heroes/home.webp": (1400, 700),
-        "assets/heroes/ask.webp": (2100, 700),
+        "assets/heroes/ask.webp": (2048, 682),  # Owner-approved native source; no artificial upscale.
         "assets/heroes/answers.webp": (2100, 700),
         "assets/heroes/art.webp": (2100, 700),
         "assets/heroes/church-history.webp": (1900, 700),
