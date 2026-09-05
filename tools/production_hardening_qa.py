@@ -112,8 +112,8 @@ def check_supporting_art_assets(errors: list[str]) -> None:
         "assets/page-art/ask-seek-study-1400.webp": (1400, 700),
         "assets/page-art/ask-nicodemus-640.webp": (640, 800),
         "assets/page-art/ask-nicodemus-1122.webp": (1122, 1402),
-        "assets/page-art/ask-road-to-emmaus-900.webp": (900, 507),
-        "assets/page-art/ask-road-to-emmaus-1672.webp": (1672, 941),
+        "assets/page-art/ask-road-to-emmaus-eye-corrected-900.webp": (900, 507),
+        "assets/page-art/ask-road-to-emmaus-eye-corrected-1672.webp": (1672, 941),
         "assets/page-art/answers-savior-welcomes-child-900.webp": (900, 507),
         "assets/page-art/answers-savior-welcomes-child-1672.webp": (1672, 941),
         "assets/history/first-vision-800.webp": (800, 267),
@@ -183,8 +183,8 @@ def check_owner_approved_art_assets(errors: list[str]) -> None:
         "assets/page-art/home-light-through-study-1672.webp": ((1672, 941), "ec0bc754f789d3270850e45c0ea462d444805cb6761daa6f42a99f30557f56c2"),
         "assets/page-art/answers-savior-welcomes-child-900.webp": ((900, 507), "e5814f534b06903dce146ef0a6a0cde3871b03aaebfd42d7a8875cbe117d1032"),
         "assets/page-art/answers-savior-welcomes-child-1672.webp": ((1672, 941), "4451a5277670609c3319759bbdfa42f9b7ac13a25c76caa26bf7127ed00e78dc"),
-        "assets/page-art/ask-road-to-emmaus-900.webp": ((900, 507), "008d5efc6922eea76ff9cf8221541c28d08c16236eb4d8d76205227573622e67"),
-        "assets/page-art/ask-road-to-emmaus-1672.webp": ((1672, 941), "fcc13df68cdaa81cfd88fd7cfb5a0b08ea0d6ad4c6b7ff2291c1565e0553aad8"),
+        "assets/page-art/ask-road-to-emmaus-eye-corrected-900.webp": ((900, 507), "5268f8586b4bcb42e0b67e5b0e8af0763805d2b73caec53d96d806b5039fe2d2"),
+        "assets/page-art/ask-road-to-emmaus-eye-corrected-1672.webp": ((1672, 941), "0005adf659148dc8d80cfa933ad28e778dccf2dd727f9a2a03248316a739587b"),
     }
     for rel, (expected_dimensions, expected_sha256) in approved.items():
         path = ROOT / rel

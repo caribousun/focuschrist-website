@@ -451,3 +451,10 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - The final corrected `He Opened the Scriptures` belongs on Ask after the Nicodemus artwork. Christ wears an ochre cloak and walks with exactly two distinct disciples. The earlier similar-looking-disciple version remains rejected.
 - All four use responsive 900 pixel WebP assets plus 1672 pixel full-size WebP assets, sacred scene-specific detail copy, official scripture links, and the closable same-page full-image viewer.
 - Preserve every existing hero and previously approved supporting image unless Wyatt explicitly requests a specific change.
+
+### Ask Emmaus eye correction, September 5, 2026
+
+- Wyatt rejected the previous deployed disciple eye as too white and supplied emmaus-eye-corrected(2).png as the exact replacement.
+- New eye-corrected filenames replace all Ask image, srcset, detail, and full-size references to prevent reuse of cached older assets. The 1672 pixel WebP preserves the supplied RGB pixels losslessly; the 900 pixel preview is optimized for the existing delivery budget.
+- Source SHA-256: ca9b20ecd0bad7fa68e30f47755a5966a9847b19df3d69c8b3c82fdf12ae8ea1.
+- Preserve the hero, captions, layout, official sources, detail dialog, and full-image viewer. Verify production delivery after release; repository equality alone does not establish that every responsive image is correct.

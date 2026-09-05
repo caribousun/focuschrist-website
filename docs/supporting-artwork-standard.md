@@ -82,8 +82,8 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Approved realistic predawn image of Jesus Christ speaking with Nicodemus.
 - Placement: right of a clean vertical continuation list inside a unified presentation panel. At tablet and mobile widths, the image stacks above the links.
 
-- `assets/page-art/ask-road-to-emmaus-900.webp`
-- `assets/page-art/ask-road-to-emmaus-1672.webp`
+- `assets/page-art/ask-road-to-emmaus-eye-corrected-900.webp`
+- `assets/page-art/ask-road-to-emmaus-eye-corrected-1672.webp`
 - Approved after the Nicodemus continuation artwork.
 - The scene contains Jesus Christ and exactly two distinct disciples walking toward Emmaus. Preserve the approved ochre cloak, Christ likeness, two-disciple count, walking movement, and warm near-photographic atmosphere.
 
