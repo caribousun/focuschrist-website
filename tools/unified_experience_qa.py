@@ -214,7 +214,7 @@ def main() -> int:
         "assets/page-art/ask-seek-study-1400.webp",
         "assets/page-art/ask-nicodemus-640.webp",
         "assets/page-art/ask-nicodemus-1122.webp",
-        "assets/page-art/ask-road-to-emmaus-900.webp",
+        "assets/page-art/ask-road-to-emmaus-eye-corrected-900.webp",
     )
     for ask_art in ask_art_assets:
         ask_art_path = ROOT / ask_art
@@ -233,14 +233,14 @@ def main() -> int:
         'decoding="async"',
         'srcset="assets/page-art/ask-seek-study-800.webp 800w',
         'srcset="assets/page-art/ask-nicodemus-640.webp 640w',
-        'srcset="assets/page-art/ask-road-to-emmaus-900.webp 900w',
+        'srcset="assets/page-art/ask-road-to-emmaus-eye-corrected-900.webp 900w',
     ):
         if marker not in ask:
             fail(errors, f"ask.html: supporting artwork responsive marker missing: {marker}")
     for full_art in (
         "assets/page-art/ask-seek-study-1400.webp",
         "assets/page-art/ask-nicodemus-1122.webp",
-        "assets/page-art/ask-road-to-emmaus-1672.webp",
+        "assets/page-art/ask-road-to-emmaus-eye-corrected-1672.webp",
     ):
         if f'class="fc-art-link" href="{full_art}"' not in ask:
             fail(errors, f"ask.html: full-resolution supporting artwork link missing: {full_art}")
