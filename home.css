@@ -5,6 +5,31 @@
     align-items: center;
 }
 
+.fc-home-featured-art.fc-content-artwork {
+    margin: 0;
+}
+
+.fc-home-featured-art--invitation {
+    margin-bottom: clamp(44px, 7vw, 76px) !important;
+}
+
+.fc-home-featured-art--study {
+    margin-block: clamp(32px, 5vw, 52px) !important;
+}
+
+.fc-home-featured-art img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.fc-home-study-paths {
+    margin-top: 30px;
+}
+
+.fc-home-study-paths--continued {
+    margin-top: 0;
+}
+
 .fc-home-purpose-copy > p:not(.fc-eyebrow) {
     margin: 18px 0 0;
     color: var(--fc-text);

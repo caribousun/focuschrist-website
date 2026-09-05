@@ -71,6 +71,19 @@
     margin-top: clamp(36px, 5vw, 58px);
 }
 
+.fc-answers-family-art.fc-content-artwork {
+    margin: clamp(36px, 5vw, 58px) 0 0;
+}
+
+.fc-answers-family-art img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.fc-answers-grid--after-family {
+    margin-top: clamp(30px, 4vw, 42px);
+}
+
 .fc-answers-art--wide {
     margin-top: clamp(36px, 5vw, 58px);
     aspect-ratio: 3 / 1;

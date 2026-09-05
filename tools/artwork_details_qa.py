@@ -6,9 +6,9 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
-    "index.html": 1,
-    "ask.html": 2,
-    "answers.html": 3,
+    "index.html": 3,
+    "ask.html": 3,
+    "answers.html": 4,
     "church-history.html": 7,
     "art.html": 4,
 }
@@ -70,9 +70,9 @@ def main() -> int:
         if len(sources) != expected_count or any(not source.startswith("https://") for source in sources):
             errors.append(f"{relative}: every record must have one HTTPS official source")
 
-    if len(all_trigger_keys) != 17 or len(all_record_keys) != 17:
-        errors.append("site-wide non-Mission artwork detail total must be exactly 17")
-    if len(set(all_trigger_keys)) != 17 or len(set(all_record_keys)) != 17:
+    if len(all_trigger_keys) != 21 or len(all_record_keys) != 21:
+        errors.append("site-wide non-Mission artwork detail total must be exactly 21")
+    if len(set(all_trigger_keys)) != 21 or len(set(all_record_keys)) != 21:
         errors.append("site-wide artwork detail keys must be unique")
 
     missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
@@ -157,8 +157,8 @@ def main() -> int:
             target = (ROOT / asset).resolve()
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
-    if len(full_assets) != 26:
-        errors.append(f"expected 26 artwork detail full-image sources, found {len(full_assets)}")
+    if len(full_assets) != 30:
+        errors.append(f"expected 30 artwork detail full-image sources, found {len(full_assets)}")
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -261,7 +261,7 @@ def main() -> int:
         return 1
 
     print("Artwork detail QA: PASS")
-    print("17 new artwork triggers and 7 existing Mission artwork triggers verified")
+    print("21 non-Mission artwork triggers and 7 Mission artwork triggers verified")
     print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 

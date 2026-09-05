@@ -179,7 +179,7 @@ def main() -> int:
     home_art = "assets/page-art/home-seek-study-remember.webp"
     if f'src="{home_art}"' not in home or 'class="fc-content-artwork fc-home-purpose-art"' not in home:
         fail(errors, "index.html: approved supporting artwork missing or not wired")
-    for marker in ('href="home.css?v=20260903-1"', 'class="fc-home-purpose-split"', 'class="fc-home-purpose-copy"'):
+    for marker in ('href="home.css?v=20260905-1"', 'class="fc-home-purpose-split"', 'class="fc-home-purpose-copy"'):
         if marker not in home:
             fail(errors, f"index.html: Missionary-style Home composition marker missing: {marker}")
     home_art_path = ROOT / home_art
@@ -187,6 +187,26 @@ def main() -> int:
         fail(errors, f"index.html: supporting artwork asset missing or empty: {home_art}")
     if f'class="fc-art-link" href="{home_art}"' not in home:
         fail(errors, "index.html: Home supporting artwork must open its full-resolution source")
+    home_new_art = (
+        "assets/page-art/home-come-and-see-900.webp",
+        "assets/page-art/home-come-and-see-1672.webp",
+        "assets/page-art/home-light-through-study-900.webp",
+        "assets/page-art/home-light-through-study-1672.webp",
+    )
+    for asset in home_new_art:
+        path = ROOT / asset
+        if asset not in home:
+            fail(errors, f"index.html: approved supporting artwork not wired: {asset}")
+        if not path.exists() or path.stat().st_size == 0:
+            fail(errors, f"index.html: supporting artwork asset missing or empty: {asset}")
+        elif asset.endswith("-900.webp") and path.stat().st_size > 120_000:
+            fail(errors, f"index.html: responsive supporting artwork exceeds 120 KB performance budget: {asset}")
+    for full_art in (
+        "assets/page-art/home-come-and-see-1672.webp",
+        "assets/page-art/home-light-through-study-1672.webp",
+    ):
+        if f'class="fc-art-link" href="{full_art}"' not in home:
+            fail(errors, f"index.html: full-resolution supporting artwork link missing: {full_art}")
 
     ask = (ROOT / "ask.html").read_text(encoding="utf-8")
     ask_art_assets = (
@@ -194,6 +214,7 @@ def main() -> int:
         "assets/page-art/ask-seek-study-1400.webp",
         "assets/page-art/ask-nicodemus-640.webp",
         "assets/page-art/ask-nicodemus-1122.webp",
+        "assets/page-art/ask-road-to-emmaus-900.webp",
     )
     for ask_art in ask_art_assets:
         ask_art_path = ROOT / ask_art
@@ -212,10 +233,15 @@ def main() -> int:
         'decoding="async"',
         'srcset="assets/page-art/ask-seek-study-800.webp 800w',
         'srcset="assets/page-art/ask-nicodemus-640.webp 640w',
+        'srcset="assets/page-art/ask-road-to-emmaus-900.webp 900w',
     ):
         if marker not in ask:
             fail(errors, f"ask.html: supporting artwork responsive marker missing: {marker}")
-    for full_art in ("assets/page-art/ask-seek-study-1400.webp", "assets/page-art/ask-nicodemus-1122.webp"):
+    for full_art in (
+        "assets/page-art/ask-seek-study-1400.webp",
+        "assets/page-art/ask-nicodemus-1122.webp",
+        "assets/page-art/ask-road-to-emmaus-1672.webp",
+    ):
         if f'class="fc-art-link" href="{full_art}"' not in ask:
             fail(errors, f"ask.html: full-resolution supporting artwork link missing: {full_art}")
 
@@ -342,6 +368,7 @@ def main() -> int:
             "assets/heroes/answers-christ-companion.png",
             "assets/answers-christ-portrait.png",
             "assets/answers-christ-walking.png",
+            "assets/page-art/answers-savior-welcomes-child-1672.webp",
         ),
         "missionary.html": (
             "assets/missionary/christ-centered-world.webp",
