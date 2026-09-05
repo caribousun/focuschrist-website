@@ -177,7 +177,7 @@ def main() -> int:
 
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     home_art = "assets/page-art/home-seek-study-remember.webp"
-    if f'src="{home_art}"' not in home or 'class="fc-content-artwork fc-home-purpose-art"' not in home:
+    if not re.search(r'src="' + re.escape(home_art) + r'(?:\?[^"\s]*)?"', home) or 'class="fc-content-artwork fc-home-purpose-art"' not in home:
         fail(errors, "index.html: approved supporting artwork missing or not wired")
     for marker in ('href="home.css?v=20260905-1"', 'class="fc-home-purpose-split"', 'class="fc-home-purpose-copy"'):
         if marker not in home:
@@ -185,7 +185,7 @@ def main() -> int:
     home_art_path = ROOT / home_art
     if not home_art_path.exists() or home_art_path.stat().st_size == 0:
         fail(errors, f"index.html: supporting artwork asset missing or empty: {home_art}")
-    if f'class="fc-art-link" href="{home_art}"' not in home:
+    if not re.search(r'class="fc-art-link" href="' + re.escape(home_art) + r'(?:\?[^"\s]*)?"', home):
         fail(errors, "index.html: Home supporting artwork must open its full-resolution source")
     home_new_art = (
         "assets/page-art/home-come-and-see-900.webp",
