@@ -102,7 +102,7 @@ def main() -> int:
         relative: len(re.findall(r'data-detail-study="[^"]+"', (ROOT / relative).read_text(encoding="utf-8")))
         for relative in PAGES
     }
-    expected_studies = {"art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 5, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1}
+    expected_studies = {"art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 9, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1}
     for relative, count in study_links.items():
         if count != expected_studies.get(relative, 0):
             errors.append(f"{relative}: unexpected related study count {count}")
