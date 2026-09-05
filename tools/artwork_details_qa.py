@@ -8,7 +8,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
     "index.html": 3,
-    "ask.html": 3,
+    "ask.html": 5,
     "answers.html": 4,
     "church-history.html": 7,
     "art.html": 4,
@@ -72,9 +72,9 @@ def main() -> int:
         if len(sources) != expected_count or any(not source.startswith("https://") for source in sources):
             errors.append(f"{relative}: every record must have one HTTPS official source")
 
-    if len(all_trigger_keys) != 31 or len(all_record_keys) != 31:
-        errors.append("site-wide non-Mission artwork detail total must be exactly 31")
-    if len(set(all_trigger_keys)) != 31 or len(set(all_record_keys)) != 31:
+    if len(all_trigger_keys) != 33 or len(all_record_keys) != 33:
+        errors.append("site-wide non-Mission artwork detail total must be exactly 33")
+    if len(set(all_trigger_keys)) != 33 or len(set(all_record_keys)) != 33:
         errors.append("site-wide artwork detail keys must be unique")
 
     missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
@@ -97,10 +97,10 @@ def main() -> int:
         relative: len(re.findall(r'data-detail-study="[^"]+"', (ROOT / relative).read_text(encoding="utf-8")))
         for relative in PAGES
     }
-    if study_links["art.html"] != 4 or study_links["index.html"] != 3 or any(
-        count != 0 for relative, count in study_links.items() if relative not in ("art.html", "index.html")
+    if study_links["art.html"] != 4 or study_links["index.html"] != 3 or study_links["ask.html"] != 5 or any(
+        count != 0 for relative, count in study_links.items() if relative not in ("art.html", "index.html", "ask.html")
     ):
-        errors.append("four Featured Art studies and three Home related studies are required")
+        errors.append("four Featured Art, three Home, and five Ask related studies are required")
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     if len(re.findall(r'data-detail-topic="[^"]+"', home)) != 3:
         errors.append("all three Home artworks need contextual Ask topics")
@@ -169,8 +169,8 @@ def main() -> int:
             target = (ROOT / urlsplit(asset).path).resolve()
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
-    if len(full_assets) != 40:
-        errors.append(f"expected 40 artwork detail full-image sources, found {len(full_assets)}")
+    if len(full_assets) != 42:
+        errors.append(f"expected 42 artwork detail full-image sources, found {len(full_assets)}")
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -278,7 +278,7 @@ def main() -> int:
         return 1
 
     print("Artwork detail QA: PASS")
-    print("31 non-Mission artwork triggers and 7 Mission artwork triggers verified")
+    print("33 non-Mission artwork triggers and 7 Mission artwork triggers verified")
     print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 
