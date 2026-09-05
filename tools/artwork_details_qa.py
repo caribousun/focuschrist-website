@@ -50,7 +50,7 @@ def main() -> int:
             errors.append(f"{relative}: hidden study action must not have a default destination")
         for marker in (
             'href="artwork-details.css?v=20260905-viewport"',
-            'src="artwork-details.js?v=20260905-viewport"',
+            'src="artwork-details.js?v=20260905-home-study"',
             'id="artworkDetailSource"',
             'id="artworkDetailStudy" hidden',
             'id="artworkDetailFullImage"',
@@ -97,10 +97,17 @@ def main() -> int:
         relative: len(re.findall(r'data-detail-study="[^"]+"', (ROOT / relative).read_text(encoding="utf-8")))
         for relative in PAGES
     }
-    if study_links["art.html"] != 4 or any(
-        count != 0 for relative, count in study_links.items() if relative != "art.html"
+    if study_links["art.html"] != 4 or study_links["index.html"] != 3 or any(
+        count != 0 for relative, count in study_links.items() if relative not in ("art.html", "index.html")
     ):
-        errors.append("only the four Featured Art and Study records may expose complete study links")
+        errors.append("four Featured Art studies and three Home related studies are required")
+    home = (ROOT / "index.html").read_text(encoding="utf-8")
+    if len(re.findall(r'data-detail-topic="[^"]+"', home)) != 3:
+        errors.append("all three Home artworks need contextual Ask topics")
+    for study_path in re.findall(r'data-detail-study="([^"]+)"', home):
+        target = (ROOT / study_path).resolve()
+        if not target.is_relative_to(ROOT.resolve()) or not target.is_file():
+            errors.append(f"index.html: related study missing: {study_path}")
     for study_path in re.findall(r'data-detail-study="([^"]+)"', art):
         target = (ROOT / study_path).resolve()
         if not target.is_relative_to(ROOT.resolve()) or not target.exists():
