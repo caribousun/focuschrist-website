@@ -237,7 +237,7 @@ def main() -> int:
             errors.append(f"artwork-details.css: missing presentation marker: {marker}")
 
     mission_css = (ROOT / "missionary.css").read_text(encoding="utf-8")
-    mission_dialog_rule = re.search(r'\\.fc-missionary-detail-dialog\\s*\\{([^}]+)\\}', mission_css, re.S)
+    mission_dialog_rule = re.search(r'\.fc-missionary-detail-dialog\s*\{([^}]+)\}', mission_css, re.S)
     if not mission_dialog_rule or "margin: auto;" not in mission_dialog_rule.group(1):
         errors.append("missionary.css: artwork detail dialog must remain viewport-centered")
 
