@@ -11,8 +11,9 @@ PAGES = {
     "answers.html": 4,
     "church-history.html": 7,
     "art.html": 4,
+    "pioneers.html": 10,
 }
-ROOT_VIEWER_PAGES = (*PAGES, "missionary.html", "pioneers.html")
+ROOT_VIEWER_PAGES = (*PAGES, "missionary.html")
 ART_STUDY_PAGES = (
     "art-study/the-living-christ.html",
     "art-study/the-good-shepherd.html",
@@ -70,9 +71,9 @@ def main() -> int:
         if len(sources) != expected_count or any(not source.startswith("https://") for source in sources):
             errors.append(f"{relative}: every record must have one HTTPS official source")
 
-    if len(all_trigger_keys) != 21 or len(all_record_keys) != 21:
-        errors.append("site-wide non-Mission artwork detail total must be exactly 21")
-    if len(set(all_trigger_keys)) != 21 or len(set(all_record_keys)) != 21:
+    if len(all_trigger_keys) != 31 or len(all_record_keys) != 31:
+        errors.append("site-wide non-Mission artwork detail total must be exactly 31")
+    if len(set(all_trigger_keys)) != 31 or len(set(all_record_keys)) != 31:
         errors.append("site-wide artwork detail keys must be unique")
 
     missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
@@ -114,7 +115,8 @@ def main() -> int:
             errors.append(f"{relative}: dedicated study page artwork should retain direct full-size behavior")
 
     pioneer = (ROOT / "pioneers.html").read_text(encoding="utf-8", errors="replace")
-    if 'class="fc-visual-hero fc-visual-hero--history"' not in pioneer or "data-artwork-detail=" in pioneer:
+    pioneer_hero = re.search(r'<a class="fc-visual-hero fc-visual-hero--history"[^>]*>', pioneer)
+    if not pioneer_hero or "data-artwork-detail=" in pioneer_hero.group(0):
         errors.append("pioneers.html: Pioneer hero behavior changed or was incorrectly enrolled")
 
     for relative in ROOT_VIEWER_PAGES:
@@ -140,16 +142,16 @@ def main() -> int:
         for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
     ]
     viewer_triggers = sum(text.count("data-full-image-viewer") for text in viewer_documents)
-    if viewer_triggers != 21:
-        errors.append(f"same-page full-image viewer must have exactly 21 scoped triggers, found {viewer_triggers}")
+    if viewer_triggers != 22:
+        errors.append(f"same-page full-image viewer must have exactly 22 scoped triggers, found {viewer_triggers}")
     if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:
         errors.append("shared artwork full-size action is not enrolled in the same-page viewer")
     if 'id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in missionary:
         errors.append("Mission full-size action is not enrolled in the same-page viewer")
     if 'fc-visual-hero--history' not in pioneer or 'data-full-image-viewer' not in pioneer:
         errors.append("Pioneer hero must retain its approved full-image action through the same-page viewer")
-    if pioneer.count("data-full-image-viewer") != 11:
-        errors.append("Pioneer page must retain viewer actions for its hero and ten approved supporting artworks")
+    if pioneer.count("data-full-image-viewer") != 12:
+        errors.append("Pioneer page must retain its hero viewer, ten artwork fallbacks, and the detail-dialog full-size action")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -159,8 +161,8 @@ def main() -> int:
             target = (ROOT / asset).resolve()
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
-    if len(full_assets) != 30:
-        errors.append(f"expected 30 artwork detail full-image sources, found {len(full_assets)}")
+    if len(full_assets) != 40:
+        errors.append(f"expected 40 artwork detail full-image sources, found {len(full_assets)}")
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -263,7 +265,7 @@ def main() -> int:
         return 1
 
     print("Artwork detail QA: PASS")
-    print("21 non-Mission artwork triggers and 7 Mission artwork triggers verified")
+    print("31 non-Mission artwork triggers and 7 Mission artwork triggers verified")
     print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 
