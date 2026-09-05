@@ -25,7 +25,8 @@ class MockElement {
         if (name === 'src') this.src = '';
     }
 
-    focus() {
+    focus(options) {
+        this.focusOptions = options;
         this.focused = true;
     }
 }
@@ -89,6 +90,7 @@ trigger.dataset.fullImageAlt = 'Sacred artwork of Jesus Christ';
 trigger.querySelector = () => null;
 trigger.closest = selector => selector === 'a[data-full-image-viewer]' ? trigger : null;
 
+dialog.scrollTop = 250;
 let prevented = false;
 documentListeners.click({
     target: trigger,
@@ -103,15 +105,18 @@ documentListeners.click({
 
 assert(prevented, 'ordinary activation must remain on the current page');
 assert(dialog.open, 'ordinary activation did not open the full-image dialog');
+assert(dialog.scrollTop === 0, 'new image must open at the top of its viewer');
 assert(image.src === trigger.href, 'viewer did not use the exact existing image destination');
 assert(image.alt === trigger.dataset.fullImageAlt, 'viewer did not preserve meaningful alternative text');
 assert(bodyClasses.has('fc-full-image-open'), 'viewer did not lock page scrolling');
 assert(closeButton.focused, 'focus did not move to the close control');
+assert(closeButton.focusOptions.preventScroll === true, 'opening focus must not shift the page');
 
 closeButton.listeners.click();
 assert(!dialog.open, 'close control did not close the viewer');
 assert(!bodyClasses.has('fc-full-image-open'), 'scroll lock remained after close');
 assert(trigger.focused, 'focus did not return to the invoking control');
+assert(trigger.focusOptions.preventScroll === true, 'returning focus must not shift the page');
 assert(image.src === '', 'full image source remained loaded after close');
 
 const showsBeforeModifiedClick = dialog.showCount;

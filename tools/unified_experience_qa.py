@@ -205,7 +205,7 @@ def main() -> int:
         "assets/page-art/home-come-and-see-1672.webp",
         "assets/page-art/home-light-through-study-1672.webp",
     ):
-        if f'class="fc-art-link" href="{full_art}"' not in home:
+        if not re.search(r'class="fc-art-link" href="' + re.escape(full_art) + r'(?:\?[^"\s]*)?"', home):
             fail(errors, f"index.html: full-resolution supporting artwork link missing: {full_art}")
 
     ask = (ROOT / "ask.html").read_text(encoding="utf-8")
