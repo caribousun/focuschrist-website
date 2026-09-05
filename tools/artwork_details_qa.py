@@ -9,7 +9,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
     "index.html": 3,
     "ask.html": 5,
-    "answers.html": 4,
+    "answers.html": 9,
+    "answers/death-of-a-child.html": 2,
+    "answers/divorce-and-faith.html": 1,
     "church-history.html": 7,
     "art.html": 4,
     "pioneers.html": 10,
@@ -33,8 +35,8 @@ def main() -> int:
         text = path.read_text(encoding="utf-8")
         trigger_keys = re.findall(r'data-artwork-detail="([^"]+)"', text)
         record_keys = re.findall(r'data-artwork-detail-content="([^"]+)"', text)
-        all_trigger_keys.extend(trigger_keys)
-        all_record_keys.extend(record_keys)
+        all_trigger_keys.extend(relative + ":" + key for key in trigger_keys)
+        all_record_keys.extend(relative + ":" + key for key in record_keys)
 
         if len(trigger_keys) != expected_count:
             errors.append(f"{relative}: expected {expected_count} artwork detail triggers, found {len(trigger_keys)}")
@@ -48,6 +50,7 @@ def main() -> int:
             errors.append(f"{relative}: optional study action must start hidden exactly once")
         if re.search(r'id="artworkDetailStudy"[^>]*href=', text):
             errors.append(f"{relative}: hidden study action must not have a default destination")
+        prefix = "../" if "/" in relative else ""
         for marker in (
             'href="artwork-details.css?v=20260905-viewport"',
             'src="artwork-details.js?v=20260905-home-study"',
@@ -57,6 +60,8 @@ def main() -> int:
             'data-artwork-detail-close',
             'aria-haspopup="dialog"',
         ):
+            if marker.startswith(('href="', 'src="')):
+                marker = marker.replace('="', '="' + prefix, 1)
             if marker not in text:
                 errors.append(f"{relative}: missing artwork detail marker: {marker}")
 
@@ -72,9 +77,9 @@ def main() -> int:
         if len(sources) != expected_count or any(not source.startswith("https://") for source in sources):
             errors.append(f"{relative}: every record must have one HTTPS official source")
 
-    if len(all_trigger_keys) != 33 or len(all_record_keys) != 33:
-        errors.append("site-wide non-Mission artwork detail total must be exactly 33")
-    if len(set(all_trigger_keys)) != 33 or len(set(all_record_keys)) != 33:
+    if len(all_trigger_keys) != 41 or len(all_record_keys) != 41:
+        errors.append("site-wide non-Mission artwork detail total must be exactly 41")
+    if len(set(all_trigger_keys)) != 41 or len(set(all_record_keys)) != 41:
         errors.append("site-wide artwork detail keys must be unique")
 
     missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
@@ -97,10 +102,14 @@ def main() -> int:
         relative: len(re.findall(r'data-detail-study="[^"]+"', (ROOT / relative).read_text(encoding="utf-8")))
         for relative in PAGES
     }
-    if study_links["art.html"] != 4 or study_links["index.html"] != 3 or study_links["ask.html"] != 5 or any(
-        count != 0 for relative, count in study_links.items() if relative not in ("art.html", "index.html", "ask.html")
-    ):
-        errors.append("four Featured Art, three Home, and five Ask related studies are required")
+    expected_studies = {"art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 5, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1}
+    for relative, count in study_links.items():
+        if count != expected_studies.get(relative, 0):
+            errors.append(f"{relative}: unexpected related study count {count}")
+        for study_path in re.findall(r'data-detail-study="([^"]+)"', (ROOT / relative).read_text(encoding="utf-8")):
+            target = (ROOT / relative).parent / study_path
+            if not target.resolve().is_relative_to(ROOT.resolve()) or not target.is_file():
+                errors.append(f"{relative}: related study missing: {study_path}")
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     if len(re.findall(r'data-detail-topic="[^"]+"', home)) != 3:
         errors.append("all three Home artworks need contextual Ask topics")
@@ -133,6 +142,8 @@ def main() -> int:
             'href="full-image-viewer.css?v=20260905-viewport"',
             'src="full-image-viewer.js?v=20260905-viewport"',
         ):
+            if "/" in relative and '="../' not in marker:
+                marker = marker.replace('="', '="../', 1)
             if text.count(marker) != 1:
                 errors.append(f"{relative}: full-image viewer asset must load exactly once: {marker}")
 
@@ -142,6 +153,8 @@ def main() -> int:
             'href="../full-image-viewer.css?v=20260905-viewport"',
             'src="../full-image-viewer.js?v=20260905-viewport"',
         ):
+            if "/" in relative and '="../' not in marker:
+                marker = marker.replace('="', '="../', 1)
             if text.count(marker) != 1:
                 errors.append(f"{relative}: full-image viewer asset must load exactly once: {marker}")
 
@@ -150,8 +163,8 @@ def main() -> int:
         for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
     ]
     viewer_triggers = sum(text.count("data-full-image-viewer") for text in viewer_documents)
-    if viewer_triggers != 22:
-        errors.append(f"same-page full-image viewer must have exactly 22 scoped triggers, found {viewer_triggers}")
+    if viewer_triggers != 24:
+        errors.append(f"same-page full-image viewer must have exactly 24 scoped triggers, found {viewer_triggers}")
     if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:
         errors.append("shared artwork full-size action is not enrolled in the same-page viewer")
     if 'id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in missionary:
@@ -166,11 +179,11 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for asset in re.findall(r'data-detail-full="([^"]+)"', text):
             full_assets.append(asset)
-            target = (ROOT / urlsplit(asset).path).resolve()
+            target = ((ROOT / relative).parent / urlsplit(asset).path).resolve()
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
-    if len(full_assets) != 42:
-        errors.append(f"expected 42 artwork detail full-image sources, found {len(full_assets)}")
+    if len(full_assets) != 50:
+        errors.append(f"expected 50 artwork detail full-image sources, found {len(full_assets)}")
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -278,7 +291,7 @@ def main() -> int:
         return 1
 
     print("Artwork detail QA: PASS")
-    print("33 non-Mission artwork triggers and 7 Mission artwork triggers verified")
+    print("41 non-Mission artwork triggers and 7 Mission artwork triggers verified")
     print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 

@@ -19,6 +19,8 @@ CORE = {
     "about.html": "https://focuschrist.com/about.html",
 }
 ANSWER_PAGES = {
+    "answers/death-of-a-child.html": "https://focuschrist.com/answers/death-of-a-child.html",
+    "answers/divorce-and-faith.html": "https://focuschrist.com/answers/divorce-and-faith.html",
     "answers/jesus-christ-latter-day-saint-beliefs.html": "https://focuschrist.com/answers/jesus-christ-latter-day-saint-beliefs.html",
     "answers/are-latter-day-saints-christian.html": "https://focuschrist.com/answers/are-latter-day-saints-christian.html",
     "answers/what-is-the-book-of-mormon.html": "https://focuschrist.com/answers/what-is-the-book-of-mormon.html",

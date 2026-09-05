@@ -26,23 +26,13 @@
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "82e72a283992d170955cfcd037f7feaa8862bf1727938f8c3b1a63ac1d61a37f",
+      "published_text_sha256": "a380988bb300e9baeff61689d1e511490bff450708d1688e1cf383bce977d332",
       "reviewed_on": "2026-09-05",
-      "review_standard": "L-049 owner-approved supporting artwork placement; sacred, image-specific detail copy verified against Mark 10",
+      "review_standard": "Source-grounded compassionate study and symbolic artwork copy reviewed against cited official scripture and Church resources; reflections distinguished from doctrinal claims; independent review completed.",
       "authoritative_sources": [
-        "answers/jesus-christ-latter-day-saint-beliefs.html",
-        "answers/are-latter-day-saints-christian.html",
-        "answers/what-is-the-book-of-mormon.html",
-        "answers/why-latter-day-saints-build-temples.html",
-        "answers/what-happens-after-death.html",
-        "answers/who-was-joseph-smith.html",
-        "answers/prayer-and-personal-revelation.html",
-        "answers/why-families-are-important.html",
-        "answers/bible-and-book-of-mormon-together.html",
-        "answers/faith-in-jesus-christ-during-trials.html",
-        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web"
       ]
     },
     {
@@ -336,6 +326,34 @@
         "https://www.churchofjesuschrist.org/study/video/easter-videos/2020-02-4000-this-easter-hearhim-jesus-christs-words-are-for-you-1080p?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
         "https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng"
+      ]
+    },
+    {
+      "path": "answers/death-of-a-child.html",
+      "status": "verified",
+      "published_text_sha256": "a28400e7624277ef6892673998407fc8b6cf38c618d1bf1823f8b7b2ae776cb3",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "Source-grounded compassionate study and symbolic artwork copy reviewed against cited official scripture and Church resources; reflections distinguished from doctrinal claims; independent review completed.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web"
+      ]
+    },
+    {
+      "path": "answers/divorce-and-faith.html",
+      "status": "verified",
+      "published_text_sha256": "19abb99242054448a76a7cef0a97e9ce90f6e32dd67803079a2cda2aaada3d52",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "Source-grounded compassionate study and symbolic artwork copy reviewed against cited official scripture and Church resources; reflections distinguished from doctrinal claims; independent review completed.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/ensign/2018/07/ministering-to-members-who-are-divorced?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/divorce/divorce?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web"
       ]
     }
   ]
