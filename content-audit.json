@@ -26,9 +26,9 @@
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "a380988bb300e9baeff61689d1e511490bff450708d1688e1cf383bce977d332",
+      "published_text_sha256": "a1de5f57b77c0fe2b839053c97dc66458dcc4ab1407c058d44fbaf2f447541b9",
       "reviewed_on": "2026-09-05",
-      "review_standard": "Source-grounded compassionate study and symbolic artwork copy reviewed against cited official scripture and Church resources; reflections distinguished from doctrinal claims; independent review completed.",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -48,127 +48,213 @@
         "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
-        "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web"
+        "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/are-latter-day-saints-christian.html",
       "status": "verified",
-      "published_text_sha256": "31bc0c20da67fcc1100d4d43c666dfaf38d01ffd8705801c1705aabcecc314dc",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "d8dd46cbd81580d3d3e1b572b40a6631da6788d34ecfa8e120caaba2e5785f8a",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://faq.churchofjesuschrist.org/are-mormons-christian",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.html",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/bible-and-book-of-mormon-together.html",
       "status": "verified",
-      "published_text_sha256": "d88c55a63f3842df9184102bcc0bd4a561aa9d157253a7db02635672107f5ebf",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "2f272f4a4b2a466851ecc649be3c97562f91b207a2ad390b1256102a67942926",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/how-the-bible-and-the-book-of-mormon-work-together",
-        "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ"
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures?lang=eng",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/faith-in-jesus-christ-during-trials.html",
       "status": "verified",
-      "published_text_sha256": "a9a22c7c9fd15f09e2920fa6056dda195e8786306899e6101fa2cd9733f460f0",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "1000a29d67f1b96d8136a3e78a8d3ad3c7056ef2658719f9290fc83b2412bad8",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith-in-jesus-christ-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/adversity?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?id=p11-p13&lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?id=p11-p13&lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
       "status": "verified",
-      "published_text_sha256": "75b44bda6ba7364aad81c8ffd19c2cbab43a55e3b078cc2ca238f8821b4d8ef9",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "20225ba129099076e0cd7b29d9b3392891ee7ab478761e5139f5531bdd0de972",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/prayer-and-personal-revelation.html",
       "status": "verified",
-      "published_text_sha256": "fceb76412b0d8984646a61ca2aee2a1039ee9c1803f24f13d16880bb9c99954d",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "036d0eb2c1fdcdce5c6c06ac31442a9e5c5e38ccfacb6094cee334fa4d96cd81",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/revelation-study-guide?lang=eng",
-        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/holy-ghost-study-guide?lang=eng"
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/holy-ghost-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/what-happens-after-death.html",
       "status": "verified",
-      "published_text_sha256": "8403efa495034d629436deba5e87e921c0f3b62aacd56913eed911209e53e359",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "1387c65e65db89d28912e481d1932f76d45eee945d5ced044693ea8c82f5a541",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/spirit-world-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation-study-guide?lang=eng",
-        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/salvation-study-guide?lang=eng"
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/salvation-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/what-is-the-book-of-mormon.html",
       "status": "verified",
-      "published_text_sha256": "9f9c905649c5ba7dd37b50fcae24c6f1f3af2e2ecae4d66690b6dcfdd78def2d",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "0f488918a0c45485e33a68bfb72e50595ad9dd36dc109e3840bc66267d1f5f3e",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ",
         "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/how-the-bible-and-the-book-of-mormon-work-together",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/who-was-joseph-smith.html",
       "status": "verified",
-      "published_text_sha256": "686ea3c86c2355705dbe14649d5f215d7d8d3ebc431df4297324ffce33d9dd4a",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "d463e23671b4840fbad72c472554dcd3462e5f95d54bac5122333598d69c74ec",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://newsroom.churchofjesuschrist.org/ldsnewsroom/eng/background-information/joseph-smith-and-the-restoration",
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-and-plural-marriage?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/why-families-are-important.html",
       "status": "verified",
-      "published_text_sha256": "0eab0bfa02d2cf6a8a32c04100d6ce96b886dc08541698c714f8af45bf512dc1",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "a78d144b96c089943a602b76edd327323e477c8a87c09dd5da1d2e799fbc471e",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/family-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/feature/the-family-a-proclamation-to-the-world?lang=eng",
-        "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+        "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/why-latter-day-saints-build-temples.html",
       "status": "verified",
-      "published_text_sha256": "c9646de9f59a61de8fcc53d687bbd698f18f763910618b32f36dd245358e6a6c",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review",
+      "published_text_sha256": "f6d30e5dae83727c84d01e83576da27b0b07f3fce9c6f4ec496e04ea7f3b2612",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng",
-        "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+        "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/temples/ordinances-and-covenants?lang=eng",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
@@ -347,29 +433,41 @@
     {
       "path": "answers/death-of-a-child.html",
       "status": "verified",
-      "published_text_sha256": "a28400e7624277ef6892673998407fc8b6cf38c618d1bf1823f8b7b2ae776cb3",
+      "published_text_sha256": "4a47d35ef1b33bbd0b78312d6b59744c8a2189fd2d4b629bd3d83c72336df832",
       "reviewed_on": "2026-09-05",
-      "review_standard": "Source-grounded compassionate study and symbolic artwork copy reviewed against cited official scripture and Church resources; reflections distinguished from doctrinal claims; independent review completed.",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng",
-        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web"
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/"
       ]
     },
     {
       "path": "answers/divorce-and-faith.html",
       "status": "verified",
-      "published_text_sha256": "19abb99242054448a76a7cef0a97e9ce90f6e32dd67803079a2cda2aaada3d52",
+      "published_text_sha256": "2997171141bd660db2e7e04371b1f22bfaa8a60fae86d1f8c5cd987eec3efdf3",
       "reviewed_on": "2026-09-05",
-      "review_standard": "Source-grounded compassionate study and symbolic artwork copy reviewed against cited official scripture and Church resources; reflections distinguished from doctrinal claims; independent review completed.",
+      "review_standard": "L-044 source-integrity review; independent empathy, doctrinal accuracy and study-link review",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/ensign/2018/07/ministering-to-members-who-are-divorced?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/divorce/divorce?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
-        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web"
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/"
       ]
     }
   ]
