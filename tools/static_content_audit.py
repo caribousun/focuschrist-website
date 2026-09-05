@@ -22,7 +22,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 LEDGER = ROOT / "content-audit.json"
 SKIP_TAGS = {"script", "style", "svg", "noscript", "template"}
-PUBLISHED_ATTRIBUTES = {"alt", "aria-label", "placeholder", "title"}
+PUBLISHED_ATTRIBUTES = ("alt", "aria-label", "placeholder", "title")
 VALID_STATUSES = {"verified", "non-source-dependent"}
 
 
