@@ -10,6 +10,7 @@
     width: min(1120px, calc(100vw - 36px));
     max-width: none;
     max-height: min(90vh, 820px);
+    margin: auto;
     padding: 0;
     overflow: auto;
     border: 1px solid rgba(240, 195, 106, .38);

@@ -224,6 +224,7 @@ def main() -> int:
     css = (ROOT / "artwork-details.css").read_text(encoding="utf-8")
     for marker in (
         ".fc-artwork-detail-dialog::backdrop",
+        "margin: auto;",
         "@media (max-width: 820px)",
         ".fc-artwork-detail-close::before",
         ".fc-artwork-detail-close::after",
@@ -236,6 +237,10 @@ def main() -> int:
             errors.append(f"artwork-details.css: missing presentation marker: {marker}")
 
     mission_css = (ROOT / "missionary.css").read_text(encoding="utf-8")
+    mission_dialog_rule = re.search(r'\.fc-missionary-detail-dialog\s*\{([^}]+)\}', mission_css, re.S)
+    if not mission_dialog_rule or "margin: auto;" not in mission_dialog_rule.group(1):
+        errors.append("missionary.css: artwork detail dialog must remain viewport-centered")
+
     for marker in (
         ".fc-missionary-detail-close::before",
         ".fc-missionary-detail-close::after",
