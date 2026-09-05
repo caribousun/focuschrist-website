@@ -168,11 +168,16 @@
     {
       "path": "art-study/be-still.html",
       "status": "verified",
-      "published_text_sha256": "e2c191e023da071e7a378d3ee5a768f4bb72b8a51efdce7044fd4bfb5fcc8e1a",
-      "reviewed_on": "2026-09-04",
-      "review_standard": "L-044 universal source-integrity review; owner-directed sacred image caption and same-page full-image behavior",
+      "published_text_sha256": "5c74e401eeaec3268c856ed1225f5ec6b2fbd2daa2ab0360cd720b280e96aa51",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "Owner-directed Be Still enrichment; independent scripture and source review of added context and clearly labeled reflection prompts; artwork unchanged.",
       "authoritative_sources": [
-        "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10"
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?lang=eng"
       ]
     },
     {
