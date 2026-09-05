@@ -12,6 +12,12 @@
     const study = document.getElementById('artworkDetailStudy');
     const fullImage = document.getElementById('artworkDetailFullImage');
     const closeButtons = dialog.querySelectorAll('[data-artwork-detail-close]');
+    const isHome = window.location.pathname === '/' || window.location.pathname === '/index.html';
+    const ask = document.createElement('a');
+    ask.className = 'fc-button';
+    ask.textContent = 'Ask About This Artwork';
+    ask.hidden = true;
+    if (fullImage) fullImage.before(ask);
     let returnFocus = null;
 
     function openDetail(key, trigger) {
@@ -36,6 +42,17 @@
         source.href = record.dataset.detailSource || trigger.href;
         source.textContent = record.dataset.detailSourceLabel || 'Study the Official Source';
         fullImage.href = record.dataset.detailFull || trigger.href;
+
+        ask.hidden = true;
+        ask.removeAttribute('href');
+        if (isHome && record.dataset.detailTopic) {
+            const params = new URLSearchParams();
+            params.set('art', title.textContent);
+            params.set('topic', record.dataset.detailTopic);
+            params.set('return', 'index.html?artwork=' + encodeURIComponent(key));
+            ask.href = 'ask.html?' + params.toString() + '#ask-question';
+            ask.hidden = false;
+        }
 
         if (record.dataset.detailStudy) {
             study.href = record.dataset.detailStudy;
@@ -80,4 +97,12 @@
         if (returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus({ preventScroll: true });
         returnFocus = null;
     });
+
+    if (isHome) {
+        const requested = new URLSearchParams(window.location.search).get('artwork');
+        const trigger = Array.from(document.querySelectorAll('[data-artwork-detail]')).find(function (item) {
+            return item.dataset.artworkDetail === requested;
+        });
+        if (trigger) openDetail(trigger.dataset.artworkDetail, trigger);
+    }
 }());

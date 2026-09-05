@@ -11,6 +11,12 @@
         try {
             const url = new URL(raw, window.location.href);
             if (url.origin !== window.location.origin) return fallback;
+            if (url.pathname === '/index.html') {
+                const key = url.searchParams.get('artwork');
+                const homeArtwork = ['home-come-and-see', 'home-seek-study', 'home-light-through-study'];
+                if (!homeArtwork.includes(key)) return fallback;
+                return url.pathname + '?artwork=' + encodeURIComponent(key);
+            }
             if (!url.pathname.toLowerCase().endsWith('/art.html')) return fallback;
             return url.pathname.split('/').pop() + url.search + url.hash;
         } catch (_error) {
