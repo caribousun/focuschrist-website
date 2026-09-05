@@ -433,7 +433,7 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 ### Site-wide artwork detail standard
 
 - The Mission detail-first pattern is now the site-wide standard for appropriate supporting artwork on Home, Ask, Answers, Church History, Mission, and the four Featured Art and Study cards at the bottom of Art.
-- The verified inventory is 24 supporting artwork triggers: 17 outside Mission and 7 on Mission. Each record provides reviewed context, an official source, and a full-size image action. Featured Art cards also link to their complete study page.
+- The verified inventory is 28 supporting artwork triggers: 21 outside Mission and 7 on Mission. Each record provides reviewed context, an official source, and a full-size image action. Featured Art cards also link to their complete study page.
 - Keep original destinations as no-JavaScript fallbacks and preserve modified-click behavior. Keep mouse, touch, keyboard, Escape, backdrop close, focus return, scroll locking, and narrow-screen stacking.
 - Do not apply the detail window to heroes, the Pioneer hero, the main Art gallery, dedicated Art and Study page images, Watch thumbnails, logos, icons, arrows, controls, or the dialog's own display image. Those surfaces retain their existing purpose-specific behavior.
 - The Mission and site-wide circular close controls must use precisely centered CSS-drawn crossing lines. Do not use the multiplication glyph because its visual weight does not sit in the geometric center.
@@ -441,3 +441,13 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 - Read the Art Study is an optional action reserved for the four Featured Art and Study records. Keep it hidden by default and reveal it only when a selected record has a reviewed complete study page.
 - Eligible full-size artwork opens in the shared same-page viewer and can be closed without leaving the page. Preserve the original link as the no-JavaScript and modified-click fallback.
 - Artwork-window descriptions and image captions must be sacred, respectful, specific, and informative. Do not repeat documentary, provenance, or portrayal disclaimers beneath each image.
+
+### Home, Answers, and Ask supporting artwork approvals
+
+- Wyatt approved four additional supporting images and their exact page placements on September 5, 2026.
+- `Come and See` belongs on Home between the welcome introduction and Our Purpose. Christ wears a muted olive-green outer cloak.
+- `Light Through Study` belongs on Home within More Ways to Study. Christ wears a slate-blue cloak.
+- The final corrected `The Savior Welcomes Each One` belongs on Answers near the family study path. Christ wears a burgundy mantle. Earlier bruised-face versions remain rejected.
+- The final corrected `He Opened the Scriptures` belongs on Ask after the Nicodemus artwork. Christ wears an ochre cloak and walks with exactly two distinct disciples. The earlier similar-looking-disciple version remains rejected.
+- All four use responsive 900 pixel WebP assets plus 1672 pixel full-size WebP assets, sacred scene-specific detail copy, official scripture links, and the closable same-page full-image viewer.
+- Preserve every existing hero and previously approved supporting image unless Wyatt explicitly requests a specific change.

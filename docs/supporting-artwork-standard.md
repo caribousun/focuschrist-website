@@ -1,6 +1,6 @@
 # focusChrist Supporting Artwork Standard
 
-Updated: 2026-09-04
+Updated: 2026-09-05
 
 ## Purpose
 
@@ -46,7 +46,7 @@ Supporting artwork beautifies the content of each page without replacing or chan
 
 ## Site-wide interaction inventory
 
-- 24 supporting artworks use the detail-first experience: 1 Home, 2 Ask, 3 Answers, 7 Church History, 7 Mission, and 4 Featured Art and Study cards.
+- 28 supporting artworks use the detail-first experience: 3 Home, 3 Ask, 4 Answers, 7 Church History, 7 Mission, and 4 Featured Art and Study cards.
 - All heroes remain unchanged. The Pioneer hero retains its preexisting full-image link and is not enrolled in the detail window.
 - The 39 main Art gallery works retain the dedicated full-screen gallery viewer and its contextual study actions.
 - The four main images on dedicated Art and Study pages continue opening their full sources because the surrounding page already provides the detailed study experience.
@@ -60,6 +60,16 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Approved for the Our Purpose section.
 - Placement: a large image on the right of the purpose copy in a Missionary-style editorial split. On narrow screens, the purpose copy remains first and the image follows before the study-path cards.
 
+- `assets/page-art/home-come-and-see-900.webp`
+- `assets/page-art/home-come-and-see-1672.webp`
+- Approved for the opening transition between the welcome introduction and Our Purpose.
+- The image shows Christ in a muted olive-green outer cloak inviting four attentive seekers to walk with Him. Preserve the approved likeness, restrained expression, people, composition, and warm Galilee setting.
+
+- `assets/page-art/home-light-through-study-900.webp`
+- `assets/page-art/home-light-through-study-1672.webp`
+- Approved within More Ways to Study, between the first and second rows of study paths.
+- The image shows Christ in a slate-blue cloak studying with a young man and an older woman. Preserve the approved likeness, three-person composition, books, light, and near-photographic finish.
+
 ### Ask
 
 - `assets/page-art/ask-seek-study-800.webp`
@@ -71,6 +81,18 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - `assets/page-art/ask-nicodemus-1122.webp`
 - Approved realistic predawn image of Jesus Christ speaking with Nicodemus.
 - Placement: right of a clean vertical continuation list inside a unified presentation panel. At tablet and mobile widths, the image stacks above the links.
+
+- `assets/page-art/ask-road-to-emmaus-900.webp`
+- `assets/page-art/ask-road-to-emmaus-1672.webp`
+- Approved after the Nicodemus continuation artwork.
+- The scene contains Jesus Christ and exactly two distinct disciples walking toward Emmaus. Preserve the approved ochre cloak, Christ likeness, two-disciple count, walking movement, and warm near-photographic atmosphere.
+
+### Answers
+
+- `assets/page-art/answers-savior-welcomes-child-900.webp`
+- `assets/page-art/answers-savior-welcomes-child-1672.webp`
+- Approved between the family-related answer path and the next row of Answer Library topics.
+- The image shows Christ in a burgundy mantle welcoming a mother and young child. Preserve the approved Christ likeness, clear healthy complexion, gentle expression, family, composition, and near-photographic finish.
 
 ### Church History
 
@@ -115,6 +137,6 @@ Supporting artwork beautifies the content of each page without replacing or chan
 
 - `tools/unified_experience_qa.py` verifies that approved supporting artwork remains wired, responsive, lazy-loaded, and within its delivery-size budget.
 - `tools/unified_experience_qa.py` also verifies that every supporting artwork collection retains a full-resolution opening path.
-- `tools/artwork_details_qa.py` verifies the 17 new records, the 7 existing Mission artwork triggers, exact trigger-to-record matching, required official sources, local full-size assets, intentional exclusions, interaction safeguards, and the centered close controls.
+- `tools/artwork_details_qa.py` verifies the 21 non-Mission records, the 7 Mission artwork triggers, exact trigger-to-record matching, required official sources, local full-size assets, intentional exclusions, interaction safeguards, and the centered close controls.
 - `tools/production_hardening_qa.py` verifies the production WebP dimensions.
 - Any new approved supporting artwork must extend these checks.

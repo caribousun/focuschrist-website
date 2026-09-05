@@ -246,7 +246,8 @@ body {
 
 .ask-conversation-section,
 .ask-topic-section,
-.ask-continue-section {
+.ask-continue-section,
+.ask-emmaus-section {
     margin-top: clamp(52px, 7vw, 78px);
 }
 
@@ -325,6 +326,15 @@ body {
     display: block;
     width: 100%;
     height: auto;
+}
+
+.ask-emmaus-art.fc-content-artwork {
+    margin: 0;
+}
+
+.ask-emmaus-art img {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
 }
 
 .ask-continue-section {

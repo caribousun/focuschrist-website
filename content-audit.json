@@ -26,9 +26,9 @@
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "43ec35ae5235ee190e9b38aa4d66bc5fa72e73612dcc4382fd1853cefcb2ee2c",
-      "reviewed_on": "2026-09-04",
-      "review_standard": "L-048 owner-directed hero restoration and artwork placement review; artwork details revised for sacred, image-specific, source-grounded meaning",
+      "published_text_sha256": "82e72a283992d170955cfcd037f7feaa8862bf1727938f8c3b1a63ac1d61a37f",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-049 owner-approved supporting artwork placement; sacred, image-specific detail copy verified against Mark 10",
       "authoritative_sources": [
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/are-latter-day-saints-christian.html",
@@ -41,7 +41,8 @@
         "answers/bible-and-book-of-mormon-together.html",
         "answers/faith-in-jesus-christ-during-trials.html",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng"
       ]
     },
     {
@@ -223,12 +224,13 @@
     {
       "path": "ask.html",
       "status": "verified",
-      "published_text_sha256": "c648addf831ae31bd7947b48a98ec2e5eae85b8c38d56d3a394ca7b5b18b5127",
-      "reviewed_on": "2026-09-04",
-      "review_standard": "L-044 universal source-integrity review; approved artwork explanations revised for sacred and source-grounded meaning; owner-requested Clear Conversation control reviewed as non-source-dependent interface wording; external-provider disclosure reviewed against deployed data flow; embedded answers governed by separate fail-closed inventory and runtime checks",
+      "published_text_sha256": "d42ca9e88449161db565c974bbeaecac2f6565eabb711e33325ea00fe0b4c29a",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-049 owner-approved Emmaus artwork placement; sacred, image-specific detail copy verified against Luke 24; prior Ask controls and embedded-answer governance preserved",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng"
       ]
     },
     {
@@ -263,12 +265,14 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "2ff630a32babbb3d02f83385c1da561443dd6476ff053ed13eedca95df8c6aa9",
-      "reviewed_on": "2026-09-04",
-      "review_standard": "L-044 universal source-integrity review; Missionary discovery path reviewed against the linked page and sources; approved Home artwork explanation revised for sacred, image-specific meaning",
+      "published_text_sha256": "1f205ddb2bf9697ad88e12322f3100f5970e9322d65174e6190905c75d999f0c",
+      "reviewed_on": "2026-09-05",
+      "review_standard": "L-049 owner-approved Home artwork placement; sacred, image-specific detail copy verified against John 1 and John 5; existing Home content preserved",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
-        "https://www.churchofjesuschrist.org/study/church-history?lang=eng"
+        "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng"
       ]
     },
     {

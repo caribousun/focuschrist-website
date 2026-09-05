@@ -104,10 +104,18 @@ def check_hero_assets(errors: list[str]) -> None:
 
 def check_supporting_art_assets(errors: list[str]) -> None:
     floors = {
+        "assets/page-art/home-come-and-see-900.webp": (900, 507),
+        "assets/page-art/home-come-and-see-1672.webp": (1672, 941),
+        "assets/page-art/home-light-through-study-900.webp": (900, 507),
+        "assets/page-art/home-light-through-study-1672.webp": (1672, 941),
         "assets/page-art/ask-seek-study-800.webp": (800, 400),
         "assets/page-art/ask-seek-study-1400.webp": (1400, 700),
         "assets/page-art/ask-nicodemus-640.webp": (640, 800),
         "assets/page-art/ask-nicodemus-1122.webp": (1122, 1402),
+        "assets/page-art/ask-road-to-emmaus-900.webp": (900, 507),
+        "assets/page-art/ask-road-to-emmaus-1672.webp": (1672, 941),
+        "assets/page-art/answers-savior-welcomes-child-900.webp": (900, 507),
+        "assets/page-art/answers-savior-welcomes-child-1672.webp": (1672, 941),
         "assets/history/first-vision-800.webp": (800, 267),
         "assets/history/first-vision-1400.webp": (1400, 468),
         "assets/history/joseph-emma-harmony-800.webp": (800, 267),
@@ -148,11 +156,19 @@ def check_supporting_art_assets(errors: list[str]) -> None:
             errors.append(f"{rel} has unexpected dimensions: {actual[0]}x{actual[1]}, expected {expected[0]}x{expected[1]}")
 
 
-def check_answers_art_assets(errors: list[str]) -> None:
+def check_owner_approved_art_assets(errors: list[str]) -> None:
     approved = {
         "assets/heroes/answers-christ-companion.png": ((2048, 682), "d6fd78e892da505de24e0c84f6a68c70e823f20c052eb8320d0ceac538282f91"),
         "assets/answers-christ-portrait.png": ((941, 1672), "b64d4d125fe03f7b8f2bb3f1e919b0e8107d4b9cc24b8a38fdf854176cf62c45"),
         "assets/answers-christ-walking.png": ((2048, 682), "60dedc0b4fde604470975b0bfe08def25c6bf5448e1310b93175d86a3837fa97"),
+        "assets/page-art/home-come-and-see-900.webp": ((900, 507), "5e4c8fc290778e2a8531850e2d4640cd62d9b79c98d0b4f92956d9b49071b6fe"),
+        "assets/page-art/home-come-and-see-1672.webp": ((1672, 941), "7978ecbd809a7cc642bcc38959027c8b4338cec5668fdde9e10a312c9fc3d0b3"),
+        "assets/page-art/home-light-through-study-900.webp": ((900, 507), "2f71cce4b5ce2f4b3ecec484091e77df114fa2be2f6b66ef7a6f4248fb3f48d9"),
+        "assets/page-art/home-light-through-study-1672.webp": ((1672, 941), "ec0bc754f789d3270850e45c0ea462d444805cb6761daa6f42a99f30557f56c2"),
+        "assets/page-art/answers-savior-welcomes-child-900.webp": ((900, 507), "e5814f534b06903dce146ef0a6a0cde3871b03aaebfd42d7a8875cbe117d1032"),
+        "assets/page-art/answers-savior-welcomes-child-1672.webp": ((1672, 941), "4451a5277670609c3319759bbdfa42f9b7ac13a25c76caa26bf7127ed00e78dc"),
+        "assets/page-art/ask-road-to-emmaus-900.webp": ((900, 507), "008d5efc6922eea76ff9cf8221541c28d08c16236eb4d8d76205227573622e67"),
+        "assets/page-art/ask-road-to-emmaus-1672.webp": ((1672, 941), "fcc13df68cdaa81cfd88fd7cfb5a0b08ea0d6ad4c6b7ff2291c1565e0553aad8"),
     }
     for rel, (expected_dimensions, expected_sha256) in approved.items():
         path = ROOT / rel
@@ -193,7 +209,7 @@ def main() -> int:
 
     check_hero_assets(errors)
     check_supporting_art_assets(errors)
-    check_answers_art_assets(errors)
+    check_owner_approved_art_assets(errors)
     check_no_editable_drive_runtime(errors)
 
     hero_refs = {
