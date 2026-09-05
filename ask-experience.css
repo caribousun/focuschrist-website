@@ -668,3 +668,13 @@ body.fc-site .ask-followup-button:focus-visible {
 body.fc-site .ask-followup-note {
     color: var(--ask-faint) !important;
 }
+
+/* Approved Ask scenes: complete composition, compact cards, responsive stacking. */
+.ask-scene-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; margin-top: clamp(40px, 6vw, 64px); }
+.ask-scene-card { min-width: 0; overflow: hidden; }
+.ask-scene-card .fc-art-link { display: block; }
+.ask-scene-card img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: contain; }
+.ask-scene-card.fc-content-artwork figcaption { position: static; background: #10232d; padding: 18px 22px 22px; line-height: 1.5; text-align: left; }
+.ask-scene-card figcaption strong { display: block; color: var(--ask-gold-light); font-family: Georgia, serif; font-size: 1.2rem; font-weight: 400; }
+.ask-scene-card figcaption span { display: block; margin-top: 5px; font-size: .9rem; }
+@media (max-width: 700px) { .ask-scene-pair { grid-template-columns: minmax(0, 1fr); gap: 22px; } }

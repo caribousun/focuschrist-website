@@ -224,13 +224,15 @@
     {
       "path": "ask.html",
       "status": "verified",
-      "published_text_sha256": "d42ca9e88449161db565c974bbeaecac2f6565eabb711e33325ea00fe0b4c29a",
+      "published_text_sha256": "46e97e85c47f5d9f0e9d62312215cf16081b5d7b0299b687611bff1c67c939f9",
       "reviewed_on": "2026-09-05",
-      "review_standard": "L-049 owner-approved Emmaus artwork placement; sacred, image-specific detail copy verified against Luke 24; prior Ask controls and embedded-answer governance preserved",
+      "review_standard": "Owner-approved Ask artwork pair and authorized page enrichment; added scene descriptions independently checked against John 4 and Luke 10:38-42; existing reviewed prose preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?id=p38-p42&lang=eng"
       ]
     },
     {
