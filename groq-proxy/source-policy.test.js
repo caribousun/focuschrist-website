@@ -302,10 +302,27 @@ try {
     'warm pipeline must use the actual paragraph cache, not a second mocked fetch');
   const historyCandidate = { deterministicHistoryTopic: true, title: 'Kirtland Temple', tokens: 'Kirtland temple dedication',
     url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng' };
-  globalThis.fetch = async () => new Response(`<p>Kirtland Temple dedication. ${'Surrounding historical setting explains the construction and dedication of the temple. '.repeat(12)}</p><p>The Kirtland Temple dedication occurred in 1836 and forms part of this historical account.</p>`, { headers: { 'Content-Type': 'text/html' } });
+  globalThis.fetch = async () => new Response(`<p>Kirtland Temple dedication. ${'Surrounding historical setting explains the construction and dedication of the temple. '.repeat(12)}</p><p>The Kirtland Temple dedication occurred in 1836 and forms part of this historical account.</p><p>${'Later worship and study continued in the completed building with meetings and activities. '.repeat(12)}</p>`, { headers: { 'Content-Type': 'text/html' } });
   const historySource = await fetchOfficialSource(historyCandidate, 'What occurred around the 1836 dedication of the Kirtland Temple?', Date.now() + 5000);
-  assert(historySource && historySource.content.length > 700 && historySource.content.length <= 1200
-    && /1836/.test(historySource.content), 'trusted history context must preserve the date beyond the old cutoff within1200 characters');
+  const historyWarm = await fetchOfficialSource(historyCandidate, 'What occurred around the 1836 dedication of the Kirtland Temple?', Date.now() + 5000);
+  for (const source of [historySource, historyWarm]) {
+    assert(source && source.content.length <= 1200
+      && source.content.startsWith('The Kirtland Temple dedication occurred in 1836'),
+      'explicit-year history must put the event before long construction leads on cold and cached reads');
+  }
+  assert(historyWarm.cacheStatus === 'hit', 'dated history must exercise cached paragraph selection');
+  const reliefCandidate = { deterministicHistoryTopic: true, title: 'Relief Society', tokens: 'relief society organization' };
+  const reliefParagraphs = [
+    'The Relief Society began in Nauvoo in 1842 with women supporting charitable and religious work.',
+    'The early meetings established leadership and purposes.',
+    'Relief Society organization organization organization describes later administrative arrangements.'
+  ];
+  const reliefQuestion = 'Explain the Relief Society organization.';
+  assert(relevantParagraphText(reliefParagraphs, reliefQuestion, reliefCandidate).startsWith(reliefParagraphs[0]),
+    'general undated history must retain the founding lead rather than later keyword-heavy paragraphs');
+  const reliefPack = compactParagraphPack(reliefParagraphs, reliefCandidate, reliefQuestion);
+  assert(relevantParagraphText(reliefPack, reliefQuestion, reliefCandidate).startsWith(reliefParagraphs[0]),
+    'undated Relief Society founding context must survive cache packing');
 } finally {
   globalThis.fetch = pipelineFetchBefore;
   if (pipelineCachesBefore === undefined) delete globalThis.caches; else globalThis.caches = pipelineCachesBefore;
