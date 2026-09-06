@@ -174,7 +174,6 @@ def main() -> int:
     if pioneer.count("data-full-image-viewer") != 11:
         errors.append("Pioneer page must retain ten artwork fallbacks, and the detail-dialog full-size action")
 
-    # Every image-first page needs a discoverable exact-source hero action.
     hero_pages = 0
     for path in ROOT.rglob("*.html"):
         page = path.read_text(encoding="utf-8")
@@ -201,8 +200,8 @@ def main() -> int:
                 errors.append(f"{relative}: missing hero study metadata: {marker}")
         if 'data-full-image-viewer' in hero_link:
             errors.append(f"{relative}: hero must open study before full-size viewer")
-    if hero_pages != 26:
-        errors.append(f"expected26 image-first pages including404, found{hero_pages}")
+    if hero_pages != 27:
+        errors.append(f"expected27 image-first pages including404, found{hero_pages}")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -217,73 +216,24 @@ def main() -> int:
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
-        detail_paragraphs.extend(
-            re.findall(
-                r'<p data-detail-paragraph>(.*?)</p>',
-                (ROOT / relative).read_text(encoding="utf-8"),
-                re.S,
-            )
-        )
+        detail_paragraphs.extend(re.findall(r'<p data-detail-paragraph>(.*?)</p>', (ROOT / relative).read_text(encoding="utf-8"), re.S))
     flattened_copy = " ".join(detail_paragraphs).lower()
-    for phrase in (
-        "documentary",
-        "does not assert",
-        "provenance",
-        "without claiming",
-        "historical portrayal",
-        "contemporary portrayal",
-        "not one documented",
-        "not a documented",
-    ):
+    for phrase in ("documentary", "does not assert", "provenance", "without claiming", "historical portrayal", "contemporary portrayal", "not one documented", "not a documented"):
         if phrase in flattened_copy:
             errors.append(f"artwork detail copy contains generic disclaimer wording: {phrase}")
 
     js = (ROOT / "artwork-details.js").read_text(encoding="utf-8")
-    for marker in (
-        "dialog.showModal()",
-        "event.metaKey",
-        "event.ctrlKey",
-        "event.shiftKey",
-        "event.altKey",
-        "event.target === dialog",
-        "returnFocus.focus({ preventScroll: true })",
-        "document.body.classList.add('fc-dialog-open')",
-        "dialog.addEventListener('cancel'",
-        "study.hidden = false",
-        "study.hidden = true",
-        "study.removeAttribute('href')",
-    ):
+    for marker in ("dialog.showModal()", "event.metaKey", "event.ctrlKey", "event.shiftKey", "event.altKey", "event.target === dialog", "returnFocus.focus({ preventScroll: true })", "document.body.classList.add('fc-dialog-open')", "dialog.addEventListener('cancel'", "study.hidden = false", "study.hidden = true", "study.removeAttribute('href')"):
         if marker not in js:
             errors.append(f"artwork-details.js: missing interaction marker: {marker}")
 
     full_viewer_js = (ROOT / "full-image-viewer.js").read_text(encoding="utf-8")
-    for marker in (
-        "dialog.showModal()",
-        "event.metaKey",
-        "event.ctrlKey",
-        "event.shiftKey",
-        "event.altKey",
-        "event.target === stage",
-        "returnFocus.focus({ preventScroll: true })",
-        "dialog.addEventListener('cancel'",
-        "document.body.classList.add('fc-full-image-open')",
-        "image.removeAttribute('src')",
-    ):
+    for marker in ("dialog.showModal()", "event.metaKey", "event.ctrlKey", "event.shiftKey", "event.altKey", "event.target === stage", "returnFocus.focus({ preventScroll: true })", "dialog.addEventListener('cancel'", "document.body.classList.add('fc-full-image-open')", "image.removeAttribute('src')"):
         if marker not in full_viewer_js:
             errors.append(f"full-image-viewer.js: missing interaction marker: {marker}")
 
     css = (ROOT / "artwork-details.css").read_text(encoding="utf-8")
-    for marker in (
-        ".fc-artwork-detail-dialog::backdrop",
-        "margin: auto;",
-        "@media (max-width: 820px)",
-        ".fc-artwork-detail-close::before",
-        ".fc-artwork-detail-close::after",
-        "translate(-50%, -50%) rotate(45deg)",
-        "translate(-50%, -50%) rotate(-45deg)",
-        ".fc-artwork-detail-actions [hidden]",
-        "display: none !important;",
-    ):
+    for marker in (".fc-artwork-detail-dialog::backdrop", "margin: auto;", "@media (max-width: 820px)", ".fc-artwork-detail-close::before", ".fc-artwork-detail-close::after", "translate(-50%, -50%) rotate(45deg)", "translate(-50%, -50%) rotate(-45deg)", ".fc-artwork-detail-actions [hidden]", "display: none !important;"):
         if marker not in css:
             errors.append(f"artwork-details.css: missing presentation marker: {marker}")
 
@@ -292,25 +242,12 @@ def main() -> int:
     if not mission_dialog_rule or "margin: auto;" not in mission_dialog_rule.group(1):
         errors.append("missionary.css: artwork detail dialog must remain viewport-centered")
 
-    for marker in (
-        ".fc-missionary-detail-close::before",
-        ".fc-missionary-detail-close::after",
-        "translate(-50%, -50%) rotate(45deg)",
-        "translate(-50%, -50%) rotate(-45deg)",
-    ):
+    for marker in (".fc-missionary-detail-close::before", ".fc-missionary-detail-close::after", "translate(-50%, -50%) rotate(45deg)", "translate(-50%, -50%) rotate(-45deg)"):
         if marker not in mission_css:
             errors.append(f"missionary.css: missing centered close-control marker: {marker}")
 
     full_viewer_css = (ROOT / "full-image-viewer.css").read_text(encoding="utf-8")
-    for marker in (
-        ".fc-full-image-viewer::backdrop",
-        "object-fit: contain",
-        ".fc-full-image-close::before",
-        ".fc-full-image-close::after",
-        "translate(-50%, -50%) rotate(45deg)",
-        "translate(-50%, -50%) rotate(-45deg)",
-        "@media (max-width: 640px)",
-    ):
+    for marker in (".fc-full-image-viewer::backdrop", "object-fit: contain", ".fc-full-image-close::before", ".fc-full-image-close::after", "translate(-50%, -50%) rotate(45deg)", "translate(-50%, -50%) rotate(-45deg)", "@media (max-width: 640px)"):
         if marker not in full_viewer_css:
             errors.append(f"full-image-viewer.css: missing presentation marker: {marker}")
 
