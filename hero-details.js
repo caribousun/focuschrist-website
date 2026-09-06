@@ -54,7 +54,7 @@
     dialog.id = 'heroDetailDialog';
     dialog.className = 'fc-artwork-detail-dialog fc-hero-detail-dialog';
     dialog.setAttribute('aria-labelledby', 'heroDetailTitle');
-    dialog.innerHTML = '<div class="fc-artwork-detail-shell"><button class="fc-artwork-detail-close" type="button" data-hero-close aria-label="Close artwork details"></button><div class="fc-artwork-detail-media"><img alt=""></div><div class="fc-artwork-detail-body"><p class="fc-eyebrow">Explore the artwork</p><h2 id="heroDetailTitle"></h2><div class="fc-artwork-detail-copy"></div><div class="fc-actions fc-artwork-detail-actions"><a class="fc-button fc-button--primary" data-hero-source-link target="_blank" rel="noopener noreferrer"></a><a class="fc-button" data-hero-study-link></a><a class="fc-button" data-hero-ask-link>Ask About This Artwork</a><a class="fc-button" data-full-image-viewer aria-haspopup="dialog">View Full-Size Image</a><button class="fc-button" type="button" data-hero-close>Close</button></div></div></div>';
+    dialog.innerHTML = '<div class="fc-artwork-detail-shell"><button class="fc-artwork-detail-close" type="button" data-hero-close aria-label="Close artwork details"></button><div class="fc-artwork-detail-media"><img alt=""></div><div class="fc-artwork-detail-body"><p class="fc-eyebrow">Explore the artwork</p><h2 id="heroDetailTitle"></h2><div class="fc-artwork-detail-copy" tabindex="0" role="region" aria-label="Artwork reflection"></div><div class="fc-actions fc-artwork-detail-actions"><a class="fc-button fc-button--primary" data-hero-source-link target="_blank" rel="noopener noreferrer"></a><a class="fc-button" data-hero-study-link></a><a class="fc-button" data-hero-ask-link>Ask About This Artwork</a><a class="fc-button" data-full-image-viewer aria-haspopup="dialog">View Full-Size Image</a><button class="fc-button" type="button" data-hero-close>Close</button></div></div></div>';
     document.body.appendChild(dialog);
     const image = dialog.querySelector('img');
     const title = dialog.querySelector('h2');
@@ -109,6 +109,7 @@
         document.body.classList.add('fc-dialog-open');
         if (!dialog.open) dialog.showModal();
         dialog.scrollTop = 0;
+        copy.scrollTop = 0;
         dialog.querySelector('[data-hero-close]').focus({ preventScroll: true });
         return true;
     }
