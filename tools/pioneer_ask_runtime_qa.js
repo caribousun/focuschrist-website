@@ -8,7 +8,7 @@ function node() {
         classList: { add() {}, remove() {}, toggle() {}, contains() { return false; } },
         children: [],
         appendChild(child) { this.children.push(child); child.parentNode = this; return child; },
-        setAttribute() {}, addEventListener() {},
+        attributes: {}, setAttribute(name, value) { this.attributes[name] = String(value); }, getAttribute(name) { return this.attributes[name] || null; }, listeners: {}, addEventListener(type, handler) { this.listeners[type] = handler; },
         querySelector() { return null; }, querySelectorAll() { return []; }, closest() { return null; },
         remove() { this.isConnected = false; },
         getBoundingClientRect() { return { top: 40, height: 40 }; },
@@ -54,15 +54,16 @@ vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { file
 
 let fetchCalls = 0;
 let delayedResponse = null;
+let allowDisclosureRetry = false;
 const requestBodies = [];
-function verifiedResponse() {
+function verifiedResponse(verified = true) {
     return {
         ok: true,
         async json() {
             return {
                 choices: [{ message: { content: 'VERIFIED REMOTE PIONEER ANSWER' } }],
                 focuschrist_sources: [{ text: 'Official Church History', url: 'https://www.churchofjesuschrist.org/study/church-history' }],
-                focuschrist_source_integrity_verified: true,
+                focuschrist_source_integrity_verified: verified,
                 focuschrist_gateway_mode: 'retrieval-researched-and-verified',
                 focuschrist_source_policy: '2026-09-03.16'
             };
@@ -73,9 +74,10 @@ global.fetch = async (_url, options) => {
     fetchCalls += 1;
     const body = JSON.parse(options.body);
     requestBodies.push(body);
-    if (body.messages.some((message) => String(message.content || '').includes('FAIL DISCLOSURE'))) {
+    if (!allowDisclosureRetry && body.messages.some((message) => String(message.content || '').includes('FAIL DISCLOSURE'))) {
         throw new Error('simulated disclosure provider failure');
     }
+    if (body.messages.some(message => String(message.content || '').includes('UNVERIFIED DISCLOSURE'))) return verifiedResponse(false);
     const isDelayed = body.messages.some((message) => String(message.content || '').includes('delayed pioneer detail'));
     if (isDelayed) return new Promise((resolve) => { delayedResponse = () => resolve(verifiedResponse()); });
     return verifiedResponse();
@@ -153,10 +155,10 @@ function assert(condition, message) {
     }
     for (const specimen of [disclosure('Journey'), disclosure('Trail')]) {
         await window.focusChristRunPioneerDisclosure(specimen.control, 'FAIL DISCLOSURE', specimen.kind);
-        assert(specimen.response.dataset.focuschristLoaded === 'local-reviewed-card',
-            specimen.kind + ' disclosure must retain its reviewed local card after provider failure');
-        assert(specimen.response.children.some((child) => child.textContent.includes('Reviewed ' + specimen.kind.toLowerCase())),
-            specimen.kind + ' disclosure did not render its local page content');
+        assert(specimen.response.dataset.focuschristResearchState === 'error',
+            specimen.kind + ' disclosure must expose a recoverable error after provider failure');
+        assert(specimen.response.children.some((child) => child.textContent === 'Try again'),
+            specimen.kind + ' disclosure must offer an explicit retry');
     }
     assert(fetchCalls === 2, 'Journey and Trail optional enhancements should each make exactly one Worker attempt');
 
@@ -183,6 +185,9 @@ function assert(condition, message) {
         });
         const before = fetchCalls;
         const pendingDisclosure = window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
+        assert(specimen.response.getAttribute('aria-busy') === 'true'
+            && specimen.response.children.some(child => child.textContent.includes('Researching this topic')),
+            kind + ' first open must clearly identify pending research');
         await window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
         await window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
         assert(fetchCalls === before + 1, kind + ' reopening during research must not duplicate the request');
@@ -204,6 +209,28 @@ function assert(condition, message) {
             kind + ' reopening must preserve the complete researched answer and controls');
         assert(fetchCalls === before + 1, kind + ' reopening completed research must not request again');
     }
+
+    const retrySpecimen = disclosure('Journey');
+    Object.defineProperty(retrySpecimen.response, 'innerHTML', {
+        set() { this.children = []; }, get() { return ''; }
+    });
+    await window.focusChristRunPioneerDisclosure(retrySpecimen.control, 'FAIL DISCLOSURE', 'Journey');
+    const retryButton = retrySpecimen.response.children.find(child => child.textContent === 'Try again');
+    assert(retryButton, 'failed research must expose a retry control');
+    allowDisclosureRetry = true;
+    const beforeRetry = fetchCalls;
+    await retryButton.listeners.click({ stopPropagation() {} });
+    assert(fetchCalls === beforeRetry + 1 && retrySpecimen.response.dataset.focuschristResearchState === 'complete',
+        'explicit retry must recover to the verified answer');
+    assert(!retrySpecimen.response.children.some(child => child.textContent.includes('Reviewed journey summary')),
+        'retry must never replace research with duplicated card text');
+    allowDisclosureRetry = false;
+
+    const rejectedSpecimen = disclosure('Trail');
+    await window.focusChristRunPioneerDisclosure(rejectedSpecimen.control, 'UNVERIFIED DISCLOSURE', 'Trail');
+    assert(rejectedSpecimen.response.dataset.focuschristResearchState === 'error'
+        && !rejectedSpecimen.response.children.some(child => child.textContent === 'VERIFIED REMOTE PIONEER ANSWER'),
+        'an unverified server answer must never appear as completed research');
 
     const beforeDelayed = messages.length;
     input.value = 'Tell me a delayed pioneer detail';

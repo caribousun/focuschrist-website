@@ -9,6 +9,7 @@ on:
       - "groq-proxy/**"
       - "tools/build_church_source_index.py"
       - "tools/live_ai_response_matrix.js"
+      - "tools/pioneer_disclosure_live_qa.js"
       - ".github/workflows/deploy-worker.yml"
 
 permissions:
@@ -67,6 +68,10 @@ jobs:
       - name: Run live AI response matrix
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
         run: node tools/live_ai_response_matrix.js
+
+      - name: Verify all Pioneer topic answers
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        run: node tools/pioneer_disclosure_live_qa.js
 
       - name: Report missing deployment authorization
         if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''

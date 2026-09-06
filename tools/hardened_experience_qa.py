@@ -119,9 +119,9 @@ def main() -> int:
         "reviewed-local-book-entry",
         "if (localAnswer) return",
         "requestIdleCallback",
-        "reviewedLocalDisclosure",
-        "local-reviewed-card",
-        "failure must never replace it with a refusal or empty panel",
+        "researchDisclosure",
+        "research-unavailable",
+        "Try again",
     ), errors)
 
     require(pioneer_page, "pioneers.html", (
@@ -140,14 +140,12 @@ def main() -> int:
     disclosure_start = pioneer.find("async function runDisclosure")
     disclosure_end = pioneer.find("function disclosureTopic", disclosure_start)
     disclosure_flow = pioneer[disclosure_start:disclosure_end]
-    disclosure_local = disclosure_flow.find("renderDisclosureAnswer(aiResponse, localAnswer)")
-    disclosure_ai = disclosure_flow.find("requestPioneerAI")
-    if disclosure_local < 0 or disclosure_ai < 0 or disclosure_local > disclosure_ai:
-        errors.append("timeline/trail disclosures must render reviewed local card content before optional AI research")
-    if "showLoading(" in disclosure_flow:
-        errors.append("timeline/trail disclosures must not show a provider-dependent spinner")
-    if "result.sourceIntegrityPassed" not in disclosure_flow:
-        errors.append("timeline/trail disclosures must not replace local content with unverified AI output")
+    if "await researchDisclosure(control, aiResponse, mappedTopic, kind)" not in disclosure_flow:
+        errors.append("timeline/trail disclosures must use the shared research state owner")
+    if "result.sourceIntegrityPassed" not in pioneer:
+        errors.append("timeline/trail disclosures must not publish unverified AI output")
+    if "reviewedLocalDisclosure" in pioneer:
+        errors.append("timeline/trail disclosures must not duplicate summaries as detailed answers")
 
     smith_start = pioneer_book.find("ELIZABETH SMITH")
     smith_page_two = pioneer_book.find("(Elizabeth Smith - Page 2)", smith_start)

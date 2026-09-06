@@ -189,9 +189,9 @@
         ].filter(Boolean).join('\n');
     }
 
-    async function requestPioneerAI(question, pageReference) {
+    async function requestPioneerAI(question, pageReference, disclosureKey) {
         const messages = [{ role: 'system', content: buildSystemPrompt(question, pageReference || '') }];
-        recentHistory().forEach(function (item) { messages.push({ role: item.role, content: String(item.content) }); });
+        if (!disclosureKey) recentHistory().forEach(function (item) { messages.push({ role: item.role, content: String(item.content) }); });
         messages.push({ role: 'user', content: question });
 
         const controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
@@ -204,6 +204,7 @@
                     model: MODEL,
                     messages: messages,
                     focuschrist_page: 'pioneers',
+                    focuschrist_pioneer_topic: disclosureKey || undefined,
                     focuschrist_profile: 'pioneer-study',
                     temperature: 0.2,
                     max_tokens: 1200
@@ -496,12 +497,25 @@
         ].filter(Boolean).join('\n');
     }
 
-    function renderDisclosureAnswer(container, answer) {
+    function renderDisclosureAnswer(container, answer, sources) {
         container.innerHTML = '';
         String(answer || '').split('\n').map(function (part) { return part.trim(); }).filter(Boolean).forEach(function (part) {
             const p = document.createElement('p');
             p.textContent = part;
             container.appendChild(p);
+        });
+        (Array.isArray(sources) ? sources : []).forEach(function (source) {
+            let url;
+            try { url = new URL(source.url); } catch (_error) { return; }
+            if (url.protocol !== 'https:' || !(url.hostname === 'churchofjesuschrist.org' || url.hostname.endsWith('.churchofjesuschrist.org'))) return;
+            const paragraph = document.createElement('p');
+            const link = document.createElement('a');
+            link.href = url.href;
+            link.textContent = 'Read the source: ' + String(source.text || 'Official Church history');
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            paragraph.appendChild(link);
+            container.appendChild(paragraph);
         });
         const collapse = document.createElement('button');
         collapse.type = 'button';
@@ -519,15 +533,42 @@
         container.appendChild(collapse);
     }
 
-    function reviewedLocalDisclosure(control, kind, mappedTopic) {
-        const date = control.querySelector('.timeline-date, .map-date');
-        const desc = control.querySelector('.timeline-desc, .map-content p');
-        const parts = [
-            'Reviewed ' + String(kind || 'pioneer history').toLowerCase() + ' summary: ' + String(mappedTopic || '').trim(),
-            date && date.textContent.trim() ? date.textContent.trim() : '',
-            desc && desc.textContent.trim() ? desc.textContent.trim() : ''
-        ].filter(Boolean);
-        return parts.join('\n\n');
+    async function researchDisclosure(control, aiResponse, mappedTopic, kind) {
+        if (aiResponse.dataset.focuschristResearchState === 'pending') return;
+        aiResponse.dataset.focuschristResearchState = 'pending';
+        control.setAttribute('data-focuschrist-disclosure-mode', 'loading');
+        aiResponse.setAttribute('aria-busy', 'true');
+        renderDisclosureAnswer(aiResponse, 'Researching this topic. The detailed answer will appear here.');
+        try {
+            const pageReference = controlPageReference(control, kind, mappedTopic);
+            const heading = control.querySelector('.timeline-title, .map-content h4, .map-content h3');
+            const subject = heading ? heading.textContent.trim() : mappedTopic;
+            const query = 'Explain this Latter-day Saint pioneer history topic: ' + subject;
+            const result = await requestPioneerAI(query, pageReference, control.getAttribute('data-topic'));
+            if (!result || !result.sourceIntegrityPassed || !result.answer) {
+                throw new Error('The detailed topic answer could not be verified');
+            }
+            renderDisclosureAnswer(aiResponse, result.answer, result.sources);
+            aiResponse.dataset.focuschristResearchState = 'complete';
+            aiResponse.dataset.focuschristLoaded = 'verified-research';
+            control.setAttribute('data-focuschrist-disclosure-mode', 'verified-research');
+        } catch (error) {
+            console.error('Pioneer disclosure error:', error);
+            aiResponse.dataset.focuschristResearchState = 'error';
+            control.setAttribute('data-focuschrist-disclosure-mode', 'research-unavailable');
+            renderDisclosureAnswer(aiResponse, 'A detailed answer could not be verified right now. You can try again or continue with the historical sources linked on this page.');
+            const retry = document.createElement('button');
+            retry.type = 'button';
+            retry.className = 'pioneer-collapse-action';
+            retry.textContent = 'Try again';
+            retry.addEventListener('click', function (event) {
+                event.stopPropagation();
+                return researchDisclosure(control, aiResponse, mappedTopic, kind);
+            });
+            aiResponse.appendChild(retry);
+        } finally {
+            aiResponse.setAttribute('aria-busy', 'false');
+        }
     }
 
     async function runDisclosure(control, mappedTopic, kind) {
@@ -552,28 +593,9 @@
         }
 
         aiResponse.style.display = 'block';
-        // Reopening reveals the existing answer, including while research is pending.
-        // Never redraw the short card over a completed verified response.
-        if (aiResponse.dataset.focuschristResearchStarted === 'true') return;
-        const localAnswer = reviewedLocalDisclosure(control, kind, mappedTopic);
-        renderDisclosureAnswer(aiResponse, localAnswer);
-        aiResponse.dataset.focuschristLoaded = 'local-reviewed-card';
-        control.setAttribute('data-focuschrist-disclosure-mode', 'reviewed-local-card');
-        aiResponse.dataset.focuschristResearchStarted = 'true';
-        try {
-            const pageReference = controlPageReference(control, kind, mappedTopic);
-            const query = 'Latter-day Saint pioneer history - ' + kind + ': ' + mappedTopic;
-            const result = await requestPioneerAI(query, pageReference);
-            if (result && result.sourceIntegrityPassed && result.answer) {
-                renderDisclosureAnswer(aiResponse, result.answer);
-                aiResponse.dataset.focuschristLoaded = 'verified-research';
-                control.setAttribute('data-focuschrist-disclosure-mode', 'verified-research');
-            }
-        } catch (error) {
-            console.error('Pioneer disclosure error:', error);
-            // The reviewed local card remains visible; a provider or verifier
-            // failure must never replace it with a refusal or empty panel.
-        }
+        // A collapse only hides the panel. Preserve its answer or pending request.
+        if (aiResponse.dataset.focuschristResearchState) return;
+        await researchDisclosure(control, aiResponse, mappedTopic, kind);
     }
     window.focusChristRunPioneerDisclosure = runDisclosure;
 

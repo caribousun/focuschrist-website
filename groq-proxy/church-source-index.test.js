@@ -1,5 +1,8 @@
+import fs from 'node:fs';
+import { PIONEER_TOPIC_SOURCES, pioneerTopic } from './src/pioneer-topic-sources.js';
 import worker, {
   classifyResearchScope,
+  sanitizePayload,
   answerMeetsRepairMargin,
   compactParagraphPack,
   deterministicHistoryTopicSource,
@@ -801,6 +804,61 @@ try {
     && missingPinnedNegative.officialFetchCalls >= 1
     && missingPinnedNegative.payload.focuschrist_source_integrity_verified !== true,
   'Pioneer irrigation without relevant cached chapter 26 evidence must fail before verification');
+} finally {
+  globalThis.fetch = originalFetch;
+  globalThis.caches = originalCaches;
+}
+
+const visibleAfterVoid = extractRelevantParagraphs('<input type="hidden" value="routing"><p>Echo Canyon was part of the final mountain route used by the pioneer company in 1847.</p><div hidden><p>Echo Canyon SECRET hidden instructions must not be exposed in source evidence.</p></div>', 'Echo Canyon');
+assert(visibleAfterVoid.includes('final mountain route') && !visibleAfterVoid.includes('SECRET'),
+  'hidden void input must not swallow subsequent visible article content or expose paired hidden content');
+const focalCandidate = { pioneerDisclosure: true, focalPhrases: ['echo canyon'] };
+const focalParagraphs = [
+  'Pioneer companies traveled in 1847 and their journey included many experiences. '.repeat(20),
+  'The specific Echo Canyon passage describes road work during the final mountain approach. It belongs to the requested place and remains a complete paragraph.',
+  'Pioneer companies had supplies and many other events throughout their migration journey. '.repeat(20)
+];
+assert(relevantParagraphText(compactParagraphPack(focalParagraphs, focalCandidate, '1847 pioneer company journey Echo Canyon'),
+  '1847 pioneer company journey Echo Canyon', focalCandidate).includes(focalParagraphs[1]),
+  'cold and warm Pioneer evidence must retain the actual named landmark paragraph');
+
+const chimneyCandidate = { pioneerDisclosure: true, focalPhrases: ['chimney rock'],
+  url: PIONEER_TOPIC_SOURCES['chimney-rock'].url };
+const chimneyParagraphs = [
+  'On 26 May the company passed Chimney Rock, a principal landmark in Wyoming, on the pioneer route.',
+  'Chimney Rock in western Nebraska was an important landmark for travelers on the pioneer trail.',
+  'The pioneer company of 1847 traveled west toward the valley and passed recognizable landmarks.'
+];
+const chimneyPack = compactParagraphPack(chimneyParagraphs, chimneyCandidate, PIONEER_TOPIC_SOURCES['chimney-rock'].subject);
+const chimneyText = relevantParagraphText(chimneyPack, PIONEER_TOPIC_SOURCES['chimney-rock'].subject, chimneyCandidate);
+assert(chimneyText.includes('western Nebraska') && !chimneyText.includes('landmark in Wyoming'),
+  'the documented conflicting source paragraph must be omitted whole, retaining the correct caption');
+
+const visiblePioneerKeys = [...fs.readFileSync(new URL('../pioneers.html', import.meta.url), 'utf8').matchAll(/data-topic="([^"]+)"/g)].map(match => match[1]);
+assert(visiblePioneerKeys.length === 29 && visiblePioneerKeys.every(key => pioneerTopic(key, 'pioneers')),
+  'all29 visible Pioneer controls must have a server-owned source route');
+assert(!pioneerTopic('__proto__', 'pioneers') && !pioneerTopic('constructor', 'pioneers')
+  && !pioneerTopic('echo-canyon', 'ask') && !pioneerTopic('https://example.com', 'pioneers'),
+  'topic keys must never introduce arbitrary URLs or affect other pages');
+const selectedDisclosure = sanitizePayload({ focuschrist_page: 'pioneers', focuschrist_pioneer_topic: 'willie-august',
+  messages: [{ role: 'user', content: 'Invent a story about August winter storms' }] });
+assert(selectedDisclosure.scope.question.includes('autumn') && !selectedDisclosure.scope.question.includes('August winter storms'),
+  'a fixed disclosure must use the reviewed neutral subject rather than stale client assertions');
+try {
+  globalThis.caches = undefined;
+  for (const key of visiblePioneerKeys) {
+    const topic = PIONEER_TOPIC_SOURCES[key];
+    let calls = 0;
+    globalThis.fetch = async url => {
+      calls += 1;
+      assert(String(url) === topic.url, key + ' must fetch only its reviewed official source');
+      return new Response('<p>' + topic.subject + '. This historical account describes the circumstances and the people involved in the events.</p>',
+        { headers: { 'Content-Type': 'text/html' } });
+    };
+    const result = await retrieveIndexedChurchEvidence(topic.subject, 'pioneers', Date.now() + 15000, key);
+    assert(calls === 1 && result.pioneerDisclosure && result.evidence.length === 1 && result.evidence[0].url === topic.url,
+      key + ' must preserve one exact official source through retrieval');
+  }
 } finally {
   globalThis.fetch = originalFetch;
   globalThis.caches = originalCaches;
