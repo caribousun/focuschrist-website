@@ -1,0 +1,15 @@
+# Visual resource enrichment reviewed handoff
+
+Owner requested execution of the site-wide visual study prompt, with Look Unto Me and Rejoice in Christ as the priority. Baseline: b8964737c66098085d92818eb75c9f3212de4309.
+
+Implemented 61 contextual source-linked cards across all 26 canonical pages. The signature page has 11 cards distributed through its historical setting, D&C 6 passage, Rejoice section and application/media section. Existing Watch library stays intact and gains two signature-study messages. Other pages receive two small context-specific companions before their onward study, with Home directly following the signature invitation. Original heroes, artwork bytes, artwork viewers, answer controllers, Worker, provider settings and source guards are unchanged.
+
+Resources: 11 new exact-byte official source previews and existing Watch images. Verified all 20 reused official video destinations HTTP 200 with corresponding titles in this session; all 11 new destinations and image responses succeeded. Resource previews link to exact official sources. Seminary and 2 Nephi OG icons were rejected in favor of each lesson's actual lead image. Collection and lesson cards have no play symbol. Restricted Look Unto Christ music video remains a text link only. Source-native lesson artwork is a preview, not an owner-generated Focus depiction. Media Library sharing FAQ was read directly. Source titles/preview URLs/dimensions/hashes are recorded in the two source ledgers.
+
+Independent agent review: COMMIT PASS on all 61 descriptions, page mappings, source choices, signature placements, CSS, CI additions and preservation of existing behavior. Reviewer independently ran the 26-page resource-thumbnail gate. The published-content audit has been refreshed only after that review, retaining previous authoritative sources and adding exact preview destinations.
+
+Local verification: all 42 applicable existing Site QA steps succeeded (one initial missing-alt defect on the Art page was repaired and the structural gate rerun successfully). Static semantic ledger and new resource-thumbnail gate also pass. The new gate requires all canonical pages, source/image identity, intrinsic sizes, lazy load, existing local links and section anchors, and absence of artwork-viewer attributes on source previews. It runs in both Site QA and Pages deployment.
+
+Presentation limitation before release: the cloud browser rejects localhost with ERR_BLOCKED_BY_CLIENT, and exposes no viewport resizing capability. Local preview and mobile/ultrawide screenshot inspection remain unavailable. Live desktop inspection follows deployment. CSS specifies two columns changing to one below 700px, readable card spacing, intrinsic aspect ratios and visible focus. CSS inspection is not a visual-device pass.
+
+Release and live inspection receipts must be recorded in canonical Focus Current State, START HERE and Run Log. Do not claim full visual readiness until those observations are made; do not claim all videos played, Google indexing, or a fresh AI-provider matrix from this static-only change.
