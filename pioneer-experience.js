@@ -7,8 +7,94 @@
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MODEL = 'groq/compound';
-    const PIONEER_POLICY_VERSION = '2026-09-03.16';
+    const PIONEER_POLICY_VERSION = '2026-09-06.20';
     let pioneerRequestSerial = 0;
+
+    const PIONEER_TOPIC_ANSWERS = Object.freeze({
+        'Exodus from Nauvoo': {
+            answer: 'The Latter-day Saint exodus from Nauvoo began in February 1846 after mounting hostility made it unsafe for Church members to remain. Thousands crossed the Mississippi River and traveled slowly across Iowa. The difficult journey led Church leaders to establish way stations and, eventually, Winter Quarters near the Missouri River. The exodus was more than a single wagon departure: it was an organized migration that continued as later companies followed the first Saints west.',
+            sources: [['Departure from Nauvoo', 'https://www.churchofjesuschrist.org/study/history/topics/departure-from-nauvoo?lang=eng']]
+        },
+        'Winter Quarters': {
+            answer: 'Winter Quarters was a temporary Latter-day Saint settlement beside the Missouri River, established in 1846 after the difficult crossing of Iowa. Mud and sickness had slowed the migration, and families built cabins and dugouts, endured disease and shortages, and prepared companies and supplies for the journey west. It also became an important place of Church organization before Brigham Young and the vanguard company departed for the Salt Lake Valley in 1847.',
+            sources: [['Winter Quarters', 'https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng']]
+        },
+        'Handcart Companies': {
+            answer: 'From 1856 through 1860, 10 Latter-day Saint emigrating companies crossed the plains with handcarts. The plan offered people who could not afford wagon travel a less expensive way to gather to Utah. Most companies completed the journey without extraordinary loss, but the late-departing Willie and Martin companies were trapped by severe storms in 1856. Their suffering and the rescue sent from Utah are central parts of the handcart story.',
+            sources: [['Handcart Companies', 'https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng']]
+        },
+        'Brigham Young': {
+            answer: 'Brigham Young became President of the Quorum of the Twelve Apostles after Joseph Smith\'s death and directed preparations for the Saints\' westward migration. He led the 1847 vanguard company to the Salt Lake Valley and later served as the second President of the Church and the first governor of Utah Territory. His pioneer-era leadership included organizing migration, settlements, missionary work, temples, and the gathering of converts from many nations.',
+            sources: [['Brigham Young', 'https://www.churchofjesuschrist.org/study/history/topics/brigham-young?lang=eng']]
+        },
+        'Salt Lake Valley': {
+            answer: 'The 1847 vanguard company entered the Salt Lake Valley in July, with Brigham Young arriving on July 24. The pioneers immediately began planting, diverting water for irrigation, surveying a city, and building a settlement. The valley was not empty land: Native peoples had long used the wider region, and later settlement brought complicated and often strained relationships over land and resources.',
+            sources: [['Salt Lake Valley', 'https://www.churchofjesuschrist.org/study/history/topics/salt-lake-valley?lang=eng'], ['Pioneer Settlements', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-settlements?lang=eng']]
+        },
+        'Pioneer Life': {
+            answer: 'Pioneer life required constant work. On the trail, families walked, cared for animals, repaired wagons or handcarts, gathered fuel and water, cooked, washed, and made camp each day. In new settlements they built shelter, planted crops, dug irrigation ditches, established schools and worship services, and relied on neighbors when food, labor, or medical help was scarce. Experiences varied greatly by company, year, wealth, health, age, and location.',
+            sources: [['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng'], ['Pioneer Settlements', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-settlements?lang=eng']]
+        },
+        'Women Pioneers': {
+            answer: 'Women were essential participants in the pioneer migration and settlement. They drove teams, pulled handcarts, prepared food, cared for children and the sick, gave birth on the trail, earned income, preserved family records, and helped establish religious and community life. Their journals and life histories show courage and faith, but also grief, exhaustion, disagreement, leadership, and individual agency rather than one single pioneer experience.',
+            sources: [['Latter-day Saint Women\'s History', 'https://www.churchofjesuschrist.org/study/church-history/womens-history?lang=eng'], ['Church History Biographical Database', 'https://history.churchofjesuschrist.org/chd/landing?lang=eng']]
+        },
+        'Pioneer Faith': {
+            answer: 'Many Latter-day Saint pioneers understood gathering as a covenant commitment to Jesus Christ. Prayer, worship, scripture, temple covenants, hymns, and mutual service helped them interpret sacrifice and endure uncertainty. Their records also preserve fear, sorrow, frustration, and questions. Pioneer faith is therefore best understood through their own journals and histories, not as a claim that every traveler felt or experienced the journey in the same way.',
+            sources: [['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng'], ['Hymns of the Trail', 'https://history.churchofjesuschrist.org/content/museum/museum-treasures-hymns-of-the-trail?lang=eng']]
+        },
+        'Pioneer Miracles': {
+            answer: 'Pioneer accounts sometimes describe rescues, providential timing, unexpected food, healing, or strength beyond what participants believed they possessed. One well-known example is the fight to save the 1848 crops from crickets, later remembered in connection with arriving gulls. Official Church history also cautions that this story developed in the retelling. The most responsible study preserves both the pioneers\' faith-filled interpretation and what the surviving historical evidence can establish.',
+            sources: [['Crickets and Seagulls', 'https://www.churchofjesuschrist.org/study/history/topics/crickets-and-seagulls?lang=eng'], ['Handcart Companies', 'https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng']]
+        },
+        'Pioneer Legacy': {
+            answer: 'The pioneer legacy includes faith, migration, rescue, family sacrifice, temple building, and the creation of communities across the West. It also includes difficult history: settlement affected Native peoples, strained land and water relationships, and produced conflict as well as cooperation. Remembering the pioneers honestly means honoring courage and service while listening to individual records and acknowledging the consequences and complexities of settlement.',
+            sources: [['Pioneer Settlements', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-settlements?lang=eng'], ['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng']]
+        },
+        'Martin Handcart Company': {
+            answer: 'Edward Martin led the fifth handcart company of 1856. Because the company left late, its members encountered deep snow, bitter cold, hunger, exhaustion, and death in present-day Wyoming. Rescuers from Utah brought food, wagons, clothing, and assistance, and the surviving company members reached Salt Lake City on November 30. Their story should be remembered both for extraordinary faith and rescue and for the grave consequences of late departure and inadequate provisions.',
+            sources: [['Handcart Companies', 'https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng'], ['Go and Bring Them In', 'https://www.churchofjesuschrist.org/study/ensign/2006/12/go-and-bring-them-in?lang=eng']]
+        },
+        'Willie Handcart Company': {
+            answer: 'James G. Willie led the fourth handcart company of 1856. The company departed late and was caught by severe autumn snow and cold in present-day Wyoming. Food had become critically scarce before rescuers from Utah reached the travelers. Survivors arrived in Salt Lake City on November 9. The Willie company\'s history joins devotion and endurance with an important warning about timing, preparation, and the human cost of the disaster.',
+            sources: [['Handcart Companies', 'https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng'], ['Five Things about the Handcart Rescue', 'https://www.churchofjesuschrist.org/learn/history/sites/wyoming/discover/five-things-you-might-not-know-about-the-handcart-rescue?lang=eng']]
+        },
+        'Pioneer Daily Life': {
+            answer: 'A typical travel day began early with prayer, breakfast, packing, and preparing animals or handcarts. Companies traveled as weather, water, terrain, health, and livestock allowed, then formed camp, cooked, repaired equipment, cared for the sick, guarded animals, and recorded the day. Sundays were often set apart for worship and rest. Daily routines differed between wagon and handcart companies and changed again once families began building permanent settlements.',
+            sources: [['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng'], ['1847 Trek Daily Summaries', 'https://newsroom.churchofjesuschrist.org/article/how-brigham-young-first-arrived-in-the-salt-lake-valley']]
+        },
+        'Pioneer Children': {
+            answer: 'Children walked or rode according to their age, health, and available space. Many helped gather fuel, fetch water, herd livestock, care for younger children, prepare camp, or pull a handcart. They also played, sang, learned, and formed friendships. Journals and family histories record both adventure and severe hardship, including illness, hunger, bereavement, and deaths. Their experiences are best studied as individual lives rather than as one simplified pioneer-child story.',
+            sources: [['Church History Biographical Database', 'https://history.churchofjesuschrist.org/chd/landing?lang=eng'], ['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng']]
+        },
+        'Pioneer Food': {
+            answer: 'Pioneer food depended on the company, season, resources, and stage of the journey. Travelers commonly carried durable staples such as flour or meal, bacon, beans, rice, dried fruit, sugar, and salt, while milk, butter, fresh meat, or gathered food varied with circumstances. Meals were cooked over fires, and safe water and fuel could be difficult to find. Rations became dangerously small in some late companies, especially during the 1856 handcart disaster.',
+            sources: [['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng'], ['Handcart Companies', 'https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng']]
+        },
+        'Pioneer Clothing': {
+            answer: 'Pioneers generally wore ordinary mid-19th-century clothing adapted as well as possible for months of travel and outdoor labor. Layered wool and cotton garments, hats or bonnets, aprons, coats, stockings, boots, and sturdy shoes offered protection, but clothing wore out and had to be patched repeatedly. What a person owned depended on age, means, occupation, origin, and available packing space, so no single costume represents every Latter-day Saint pioneer.',
+            sources: [['Church History Biographical Database', 'https://history.churchofjesuschrist.org/chd/landing?lang=eng'], ['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng']]
+        },
+        'Pioneer Trails': {
+            answer: 'The Latter-day Saint pioneer route began at Nauvoo, crossed Iowa to the Missouri River settlements, and then followed established overland corridors through present-day Nebraska and Wyoming before turning toward the Salt Lake Valley. Travelers passed landmarks such as Chimney Rock, Fort Laramie, Independence Rock, the Sweetwater River, South Pass, Fort Bridger, and Emigration Canyon. Routes and outfitting points changed over time, especially for later handcart companies.',
+            sources: [['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng'], ['Mormon Handcart Trail', 'https://history.churchofjesuschrist.org/article/interactive-map-mormon-handcart-trail?lang=eng']]
+        }
+    });
+
+    function reviewedTopicAnswer(topic) {
+        const entry = PIONEER_TOPIC_ANSWERS[String(topic || '').trim()];
+        if (!entry) return null;
+        return {
+            id: 'pioneer-topic-' + String(topic).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+            answer: entry.answer,
+            sources: entry.sources.map(function (source) {
+                return { text: source[0], label: source[0], url: source[1], tier: 'Official Church History' };
+            }),
+            mode: 'reviewed-local-pioneer-topic',
+            sourceIntegrityPassed: true,
+            verifiedGrounding: true
+        };
+    }
 
     const PIONEER_PAGE_CONTEXT = [
         'PIONEER PAGE HARD CONTEXT:',
@@ -759,7 +845,7 @@
         const requestId = ++pioneerRequestSerial;
         box.innerHTML = '';
         window.addMessage(topic, true);
-        const reviewed = reviewedPioneerKnowledge(topic);
+        const reviewed = reviewedTopicAnswer(topic) || reviewedPioneerKnowledge(topic);
         if (reviewed) {
             const answer = window.addMessage(reviewed.answer, false, reviewed.sources || []);
             rememberExchange(topic, reviewed.answer, reviewed);

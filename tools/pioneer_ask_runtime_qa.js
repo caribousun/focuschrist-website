@@ -269,6 +269,7 @@ function assert(condition, message) {
         'Pioneer Joseph age follow-up must remain reviewed and useful during Worker rate limits');
 
     const questionContracts = JSON.parse(fs.readFileSync('ask-question-contracts.json', 'utf8'));
+    const callsBeforeTopics = fetchCalls;
     for (const topicQuestion of questionContracts.contracts.pioneer_topics.values) {
         window.clearChat();
         messages.length = 0;
@@ -277,7 +278,12 @@ function assert(condition, message) {
             'visible Pioneer topic did not complete through its final runtime owner: ' + topicQuestion);
         assert(!/cannot verify the specific source claim|please confirm the subject|could not complete/i.test(messages[1].text),
             'visible Pioneer topic returned a known generic non-answer: ' + topicQuestion);
+        assert(Array.isArray(messages[1].sources) && messages[1].sources.length > 0
+            && messages[1].sources.every((source) => /churchofjesuschrist\.org/.test(source.url)),
+            'visible Pioneer topic must include an official Church history source: ' + topicQuestion);
     }
+    assert(fetchCalls === callsBeforeTopics,
+        'all visible Pioneer topics must complete locally without a Worker request');
 
     window.clearChat();
     messages.length = 0;
