@@ -20,3 +20,89 @@ a[data-hero-viewer]:focus-visible {
     min-width: 6rem;
     margin-top: 4px;
 }
+
+/* Keep the image centered in the visible pane and reserve room for actions. */
+.fc-hero-detail-dialog {
+    width: min(1320px, calc(100vw - 36px));
+    height: min(820px, calc(100dvh - 36px));
+    max-height: calc(100dvh - 36px);
+    overflow: hidden;
+}
+
+.fc-hero-detail-dialog .fc-artwork-detail-shell {
+    height: 100%;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+}
+
+.fc-hero-detail-dialog .fc-artwork-detail-media {
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+}
+
+.fc-hero-detail-dialog .fc-artwork-detail-media img {
+    min-height: 0;
+    max-height: 100%;
+    object-position: center;
+}
+
+.fc-hero-detail-dialog .fc-artwork-detail-body {
+    min-height: 0;
+    padding: 58px clamp(22px, 3vw, 40px) 24px;
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    align-content: start;
+}
+
+.fc-hero-detail-dialog .fc-artwork-detail-copy {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    padding-right: 10px;
+}
+
+.fc-hero-detail-dialog .fc-artwork-detail-actions {
+    margin-top: 20px;
+}
+
+.fc-site .fc-hero-detail-dialog .fc-artwork-detail-actions > :is(a, button) {
+    height: auto;
+    min-width: 0;
+    max-width: 100%;
+}
+
+@media (max-width: 1050px), (max-height: 700px) {
+    .fc-hero-detail-dialog {
+        width: calc(100vw - 24px);
+        height: auto;
+        max-height: calc(100dvh - 24px);
+        overflow-y: auto;
+    }
+
+    .fc-hero-detail-dialog .fc-artwork-detail-shell {
+        height: auto;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .fc-hero-detail-dialog .fc-artwork-detail-media {
+        height: min(34dvh, 320px);
+        max-height: none;
+    }
+
+    .fc-hero-detail-dialog .fc-artwork-detail-media img {
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .fc-hero-detail-dialog .fc-artwork-detail-body {
+        display: block;
+        padding: 26px 22px;
+    }
+
+    .fc-hero-detail-dialog .fc-artwork-detail-copy {
+        overflow: visible;
+        padding-right: 0;
+    }
+}

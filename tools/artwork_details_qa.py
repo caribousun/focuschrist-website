@@ -185,7 +185,7 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", "hero-details.js?v=20260906-hero-study", "hero-details.css?v=20260906-hero-study", "artwork-details.css?v=20260905-viewport"):
+        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", "hero-details.js?v=20260906-centered-panels", "hero-details.css?v=20260906-centered-panels", "artwork-details.css?v=20260905-viewport"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
         hero_links = re.findall(r'<a[^>]*data-hero-viewer[^>]*>', page)
