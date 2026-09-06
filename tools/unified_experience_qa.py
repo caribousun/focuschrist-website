@@ -455,8 +455,11 @@ def main() -> int:
         "teaching-families",
         "service-missionaries",
     )
-    if missionary.count('data-missionary-detail=') != 10:
-        fail(errors, "missionary.html: expected seven artwork and three study-link detail triggers")
+    commission_link = re.search(r'<a[^>]+href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28\?lang=eng"[^>]*>Read the Savior\'s commission</a>', missionary)
+    if not commission_link or 'data-missionary-detail' in commission_link.group(0):
+        fail(errors, 'missionary.html: scripture commission link must reach shared scripture reader directly')
+    if missionary.count('data-missionary-detail=') != 9:
+        fail(errors, "missionary.html: expected seven artwork and two non-scripture study-link detail triggers")
     for key in missionary_detail_keys:
         if f'data-missionary-detail-content="{key}"' not in missionary:
             fail(errors, f"missionary.html: detail content missing for {key}")

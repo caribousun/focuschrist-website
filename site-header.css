@@ -285,7 +285,7 @@ body.fc-site .fc-history-message--assistant {
 
 /* Content must never show through a fixed navigation bar. The opaque base
    above also protects reading when JavaScript is unavailable. Scroll styling
-   adds depth without changing header geometry or moving the page. */
+   adds depth without moving the underlying page. */
 .nav[data-focuschrist-header="standard"].fc-header-scrolled {
     background: #102b36 !important;
     box-shadow: 0 1px 0 rgba(240,195,106,.32), 0 8px 24px rgba(4,16,22,.20) !important;
@@ -312,4 +312,32 @@ body.fc-site .fc-history-message--assistant {
     .nav[data-focuschrist-header="standard"] .nav-links a {
         transition: none !important;
     }
+}
+
+/* Refined desktop proportions: stable artwork beneath a quieter reading bar. */
+@media (min-width: 1021px) {
+    .nav[data-focuschrist-header="standard"] {
+        height: 72px;
+        min-height: 72px;
+        padding: 0 clamp(24px, 2.5vw, 48px) !important;
+        transition: height 180ms ease, min-height 180ms ease, box-shadow 180ms ease;
+    }
+    .nav[data-focuschrist-header="standard"] .nav-logo {
+        font-size: 24px !important;
+        letter-spacing: 4px !important;
+    }
+    .nav[data-focuschrist-header="standard"] .nav-links {
+        gap: clamp(18px, 1.8vw, 32px) !important;
+    }
+    .nav[data-focuschrist-header="standard"] .nav-links a {
+        font-size: 13px !important;
+        letter-spacing: 1.5px !important;
+    }
+    .nav[data-focuschrist-header="standard"].fc-header-scrolled {
+        height: 64px;
+        min-height: 64px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .nav[data-focuschrist-header="standard"] { transition: none !important; }
 }

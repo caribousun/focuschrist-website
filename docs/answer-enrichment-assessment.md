@@ -8,7 +8,7 @@ New source-specific media: Oaks’s April 2007 Divorce talk and the John 10 Good
 
 Scripture reader: all 220 currently linked chapters (7,583 verses) are exact-text extractions from official chapter HTML, checked with source/data checksums. Footnote markers are excluded. It supports chapter, range, multiple verse, and legacy dotted links; dynamically inserted links; a source link; X/Close, Escape, and backdrop dismissal. Unavailable or invalid content is refused with an original-source route, never generated. Future chapters require catalog refresh. The shared loader reaches root and nested pages.
 
-Navigation: opaque theme-matched teal prevents text bleeding through even without JavaScript; a passive, animation-frame-throttled scroll state adds a gold edge and shadow without changing header geometry.
+Navigation: opaque theme-matched teal prevents text bleeding through even without JavaScript; a passive, animation-frame-throttled scroll state adds a gold edge and shadow without moving underlying page content; the refined desktop bar settles from 72px to 64px while scrolling.
 
 Independent review covers new prose, actual official media destinations, reader/data code and source samples, header behavior and permanent gates. CI now checks every Answer, catalog completeness/integrity, and reader runtime behavior in both review and deployment workflows. Production browser verification follows deployment; mobile and ultrawide rendering must remain unverified unless those viewports are actually available.
 
