@@ -710,7 +710,12 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
 /* The fixed desktop navigation owns real opening space. Keep this reservation
    stable when the reading bar contracts, so artwork never moves on scroll. */
 @media (min-width: 1021px) {
-    body.fc-site:has(.nav[data-focuschrist-header="standard"]) { padding-top: 72px; }
+    body.fc-site:has(.nav[data-focuschrist-header="standard"]) { padding-top: 52px; }
+    body.fc-site .nav[data-focuschrist-header="standard"] {
+        height: 52px;
+        min-height: 52px;
+        padding: 10px 28px !important;
+    }
 }
 
 /* The approved close portrait needs its full vertical composition, unlike a
@@ -743,26 +748,52 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     max-width: none;
     background-image: url('assets/heroes/home-christ-fully-approved.png');
     background-position: center;
-    background-size: contain;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     transform: translateX(-50%);
     -webkit-mask-image: none;
     mask-image: none;
 }
 
-/* Fit the complete desktop opening, including its actions, in shorter windows.
-   Menu geometry stays unchanged. Artwork yields space before readable text does. */
+/* The approved 2048:684 artwork owns the desktop hero ratio. */
 @media (min-width:1021px) {
-    body.fc-site { --fc-opening-hero-height:clamp(180px,calc(100dvh - 390px),440px); }
+    body.fc-site { --fc-opening-hero-height:auto; }
     body.fc-site:has(.fc-home-hero),
     body.fc-site:has(.fc-answer-detail-hero) {
-        --fc-opening-hero-height: clamp(
-            180px,
-            min(calc(100vw * 0.333984375), calc(100dvh - 390px)),
-            684px
-        );
+        --fc-opening-hero-height: auto;
     }
-    body.fc-site .fc-visual-hero { min-height:var(--fc-opening-hero-height); }
+    body.fc-site .fc-visual-hero {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 2048 / 684;
+    }
+}
+
+/* The recovery page has eight equally important routes. Keep the complete
+   recovery choice set inside the same opening viewport without hiding links. */
+@media (min-width:701px) {
+    body.fc-not-found .fc-page-intro { padding-block: 8px; }
+    body.fc-not-found .fc-page-intro .fc-card { padding: 8px 12px; }
+    body.fc-not-found .fc-page-intro .fc-eyebrow { margin: 0 0 4px; }
+    body.fc-not-found .fc-page-intro .fc-section-heading { font-size: 1.5rem; line-height: 1.05; }
+    body.fc-not-found .fc-page-intro .fc-section-intro {
+        max-width: 1100px;
+        margin-top: 4px;
+        font-size: .85rem;
+        line-height: 1.25;
+    }
+    body.fc-not-found .fc-page-intro .fc-actions { gap: 6px; margin-top: 6px !important; }
+    body.fc-not-found .fc-page-intro .fc-button {
+        min-height: 32px;
+        padding: 5px 10px;
+        font-size: .75rem;
+    }
+    body.fc-not-found .fc-page-intro .fc-card > p:last-child {
+        margin-top: 5px !important;
+        font-size: .75rem;
+        line-height: 1.2;
+    }
 }
 @media (min-width:1021px) {
     body.fc-site .fc-page-intro { padding-top:clamp(16px,2.4dvh,38px);padding-bottom:clamp(20px,3dvh,46px); }
@@ -774,23 +805,31 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
 /* Locked shared opening geometry: hero height depends only on the viewport,
    never on page copy or script timing. The introduction fills the remainder. */
 @media (min-width:1021px) {
+    body.fc-site .fc-home-hero,
+    body.fc-site .fc-answer-detail-hero {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 2048 / 684;
+    }
     body.fc-site .fc-page-intro {
-        min-height: calc(100dvh - 72px - var(--fc-opening-hero-height)) !important;
+        min-height: 0 !important;
         margin-top: 0;
-        padding-block: 22px 26px;
+        padding-block: clamp(8px, 1.25dvh, 14px);
     }
     body.fc-site .fc-page-intro .fc-display {
-        font-size: clamp(2.15rem, 5dvh, 3.25rem);
-        line-height: 1.08;
+        font-size: clamp(1.9rem, 3.3dvh, 2.75rem);
+        line-height: 1.04;
     }
     body.fc-site .fc-page-intro-copy {
-        max-width: 860px;
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-top: 12px;
+        max-width: 1400px;
+        font-size: clamp(.88rem, 1.45dvh, .96rem);
+        line-height: 1.35;
+        margin-top: 6px;
     }
-    body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom: 12px; }
-    body.fc-site .fc-page-intro .fc-actions { margin-top: 16px; }
+    body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom: 5px; font-size: .66rem; }
+    body.fc-site .fc-page-intro .fc-actions { margin-top: 8px; }
+    body.fc-site .fc-page-intro .fc-button { padding-block: 9px; }
     body.fc-site .fc-visual-hero:not(.fc-visual-hero--portrait)::before {
         background-position: center 25% !important;
     }
@@ -806,17 +845,52 @@ body.fc-site .fc-visual-hero {
     min-height: var(--fc-opening-hero-height);
 }
 @media (max-width:1020px) {
-    body.fc-site { --fc-opening-hero-height: clamp(350px, 27vw, 440px); }
+    body.fc-site { --fc-opening-hero-height: auto; }
+    body.fc-site .fc-visual-hero {
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 2048 / 684;
+    }
 }
 @media (max-width:700px) {
     body.fc-site { --fc-opening-hero-height: 300px; }
 
-    /* Mobile retains the established close framing without extra enlargement.
-       At 100% hero height, the complete vertical composition and shoulders fit. */
+    /* Mobile retains the established approved close framing. */
     body.fc-site .fc-home-hero::before,
     body.fc-site .fc-answer-detail-hero::before {
         width: 100%;
-        background-size: auto 100%;
-        background-position: center;
+        background-size: auto 120%;
+        background-position: center 24%;
+    }
+    body.fc-site .fc-visual-hero {
+        height: var(--fc-opening-hero-height);
+        min-height: var(--fc-opening-hero-height);
+        aspect-ratio: auto;
+    }
+    body.fc-not-found .fc-page-intro { padding-block: 8px; }
+    body.fc-not-found .fc-page-intro .fc-card { padding: 8px; }
+    body.fc-not-found .fc-page-intro .fc-eyebrow { margin: 0 0 4px; }
+    body.fc-not-found .fc-page-intro .fc-section-heading { font-size: 1.4rem; line-height: 1.05; }
+    body.fc-not-found .fc-page-intro .fc-section-intro {
+        margin-top: 4px;
+        font-size: .8rem;
+        line-height: 1.2;
+    }
+    body.fc-not-found .fc-page-intro .fc-actions {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 5px;
+        margin-top: 6px !important;
+    }
+    body.fc-not-found .fc-page-intro .fc-button {
+        width: auto;
+        min-height: 32px;
+        padding: 5px 7px;
+        font-size: .7rem;
+    }
+    body.fc-not-found .fc-page-intro .fc-card > p:last-child {
+        margin-top: 5px !important;
+        font-size: .7rem;
+        line-height: 1.15;
     }
 }

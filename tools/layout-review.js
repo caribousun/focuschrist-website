@@ -33,11 +33,15 @@ function measure() {
  const actionsVisible=actions.every(bottom=>bottom<=w.innerHeight-8);
  const approvedHero=hero?.matches('.fc-home-hero,.fc-answer-detail-hero');
  const approvedHeroStyle=approvedHero?w.getComputedStyle(hero,'::before'):null;
- const approvedHeroExpectedSize=w.innerWidth<=700?'auto 100%':'contain';
- const approvedHeroCentered=!approvedHero||approvedHeroStyle.backgroundPosition==='50% 50%'||approvedHeroStyle.backgroundPosition==='center';
- const approvedHeroFit=!approvedHero||(approvedHeroStyle.backgroundSize===approvedHeroExpectedSize&&approvedHeroCentered);
+ const approvedHeroExpectedSize=w.innerWidth<=700?'auto 120%':'100% auto';
+ const approvedHeroExpectedPosition=w.innerWidth<=700?'50% 24%':'50% 50%';
+ const approvedHeroCentered=!approvedHero||approvedHeroStyle.backgroundPosition===approvedHeroExpectedPosition||approvedHeroStyle.backgroundPosition==='center';
+ const heroRatioFit=!hero||w.innerWidth<=700||Math.abs(h.height-(h.width*684/2048))<=1;
+ const approvedRatioFit=!approvedHero||heroRatioFit;
+ const approvedHeroFit=!approvedHero||(approvedHeroStyle.backgroundSize===approvedHeroExpectedSize&&approvedHeroCentered&&approvedRatioFit);
+ const headerHeightFit=!nav||Math.abs(n.height-(w.innerWidth>1020?52:62))<=1;
  const openingVisible=!introBottom||introBottom<=w.innerHeight+1;
- return {heroHeight:h?.height,stylesheet:d.querySelector('link[href*="site-system.css"]')?.getAttribute('href'),page:page.value,viewport:[w.innerWidth,w.innerHeight],overflow:d.documentElement.scrollWidth>d.documentElement.clientWidth+1,introBottom,openingVisible,actionsVisible,approvedHeroFit,approvedHeroExpectedSize,approvedHeroBackgroundSize:approvedHeroStyle?.backgroundSize,approvedHeroBackgroundPosition:approvedHeroStyle?.backgroundPosition,heroTop:h?.top,headerBottom:n?.bottom,heroClear:!h||!n||h.top>=n.bottom-1,rows};
+ return {heroHeight:h?.height,stylesheet:d.querySelector('link[href*="site-system.css"]')?.getAttribute('href'),page:page.value,viewport:[w.innerWidth,w.innerHeight],overflow:d.documentElement.scrollWidth>d.documentElement.clientWidth+1,introBottom,openingVisible,actionsVisible,heroRatioFit,headerHeightFit,approvedHeroFit,approvedRatioFit,approvedHeroExpectedSize,approvedHeroBackgroundSize:approvedHeroStyle?.backgroundSize,approvedHeroBackgroundPosition:approvedHeroStyle?.backgroundPosition,heroTop:h?.top,headerBottom:n?.bottom,heroClear:!h||!n||h.top>=n.bottom-1,rows};
 }
 document.getElementById('open').onclick=()=>openPage().then(()=>report.textContent=JSON.stringify(measure(),null,2));
 document.getElementById('top').onclick=()=>{preview.contentWindow.scrollTo(0,0);mediaIndex=-1;};
@@ -53,7 +57,7 @@ document.getElementById('audit').onclick=async()=>{
   page.value=option.value;size.value=viewport.value;await openPage();results.push(measure());
   report.textContent=JSON.stringify({progress:results.length,results},null,2);
  }}catch(error){report.textContent+='\n'+error.message;}
- const failures=results.filter(result=>result.overflow||!result.heroClear||!result.openingVisible||!result.actionsVisible||!result.approvedHeroFit);
+ const failures=results.filter(result=>result.overflow||!result.heroClear||!result.openingVisible||!result.actionsVisible||!result.heroRatioFit||!result.headerHeightFit||!result.approvedHeroFit);
  report.textContent=JSON.stringify({complete:true,pass:failures.length===0,checked:results.length,failures,results},null,2);
  report.dataset.complete='true';report.dataset.pass=failures.length?'false':'true';
 };
@@ -63,6 +67,9 @@ fetch('../sitemap.xml').then(r=>r.text()).then(xml=>{
  for(const loc of sitemap.querySelectorAll('loc')){
   const path=new URL(loc.textContent).pathname.slice(1)||'index.html';
   const option=document.createElement('option');option.value=path;option.textContent=path;page.append(option);
+ }
+ if(![...page.options].some(option=>option.value==='404.html')){
+  const option=document.createElement('option');option.value='404.html';option.textContent='404.html';page.append(option);
  }
  page.value='ask.html';return openPage();
 }).then(()=>report.textContent=JSON.stringify(measure(),null,2)).catch(error=>report.textContent=error.message);

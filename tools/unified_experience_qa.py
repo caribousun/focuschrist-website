@@ -8,7 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 ROOT_PAGES = [
-    "index.html", "ask.html", "answers.html", "art.html", "church-history.html", "pioneers.html",
+    "index.html", "ask.html", "answers.html", "art.html", "church-history.html", "missionary.html", "pioneers.html",
     "about.html", "watch.html", "404.html",
 ]
 NESTED_PAGES = sorted(
@@ -146,7 +146,7 @@ def main() -> int:
         else:
             for marker in (
                 "assets/heroes/home-christ-fully-approved.png",
-                "background-size: contain",
+                "background-size: 100% auto",
                 "background-position: center",
                 "background-repeat: no-repeat",
             ):
@@ -154,8 +154,6 @@ def main() -> int:
                     fail(errors, f"site-system.css approved hero rule missing: {marker}")
             if "background-size: cover" in approved_hero_css:
                 fail(errors, "site-system.css approved hero must not use cover cropping")
-        if "background-size: auto 120%" in css:
-            fail(errors, "site-system.css approved mobile hero must not retain 120 percent vertical cropping")
         approved_rule_start = css.find(".fc-home-hero::before,\n.fc-answer-detail-hero::before")
         ultrawide_start = css.find("@media (min-width: 2560px)")
         if approved_rule_start <= ultrawide_start:
@@ -164,14 +162,19 @@ def main() -> int:
         final_approved_rule = css_block(css, "body.fc-site .fc-home-hero::before,\n    body.fc-site .fc-answer-detail-hero::before")
         if final_approved_rule_start < approved_rule_start or final_approved_rule is None:
             fail(errors, "site-system.css missing final mobile approved hero override")
-        elif "background-size: auto 100%" not in final_approved_rule or "background-position: center" not in final_approved_rule:
-            fail(errors, "site-system.css final mobile approved hero override must retain 100 percent centered height-fit")
+        elif "background-size: auto 120%" not in final_approved_rule or "background-position: center 24%" not in final_approved_rule:
+            fail(errors, "site-system.css final mobile approved hero override must retain approved close framing")
         for marker in (
             "body.fc-site:has(.fc-home-hero)",
             "body.fc-site:has(.fc-answer-detail-hero)",
-            "calc(100vw * 0.333984375)",
-            "calc(100dvh - 390px)",
-            "background-size: auto 100%",
+            "aspect-ratio: 2048 / 684",
+            "background-size: 100% auto",
+            "background-size: auto 120%",
+            "padding-top: 52px",
+            "body.fc-site .fc-page-intro",
+            "body.fc-site .fc-visual-hero",
+            "body.fc-not-found .fc-page-intro .fc-actions",
+            "grid-template-columns: repeat(2, minmax(0, 1fr))",
         ):
             if marker not in css:
                 fail(errors, f"site-system.css missing approved hero geometry marker: {marker}")
@@ -204,8 +207,13 @@ def main() -> int:
             fail(errors, f"{relative}: site-system cache revision missing")
         else:
             approved_cache_versions.add(cache_match.group(1))
-    if approved_cache_versions != {"20260906-full-composition"}:
+    if approved_cache_versions != {"20260906-global-hero-lock"}:
         fail(errors, f"approved hero pages have inconsistent site-system cache revisions: {sorted(approved_cache_versions)}")
+
+    for relative in PUBLIC_PAGES:
+        public_text = (ROOT / relative).read_text(encoding="utf-8")
+        if 'site-system.css?v=20260906-global-hero-lock' not in public_text:
+            fail(errors, f"{relative}: shared hero/menu cache revision is not globally locked")
 
     for relative in PUBLIC_PAGES:
         path = ROOT / relative
@@ -241,10 +249,13 @@ def main() -> int:
     layout_review_js = (ROOT / "tools/layout-review.js").read_text(encoding="utf-8")
     for marker in (
         "approvedHeroFit",
-        "approvedHeroExpectedSize=w.innerWidth<=700?'auto 100%':'contain'",
+        "approvedHeroExpectedSize=w.innerWidth<=700?'auto 120%':'100% auto'",
+        "approvedRatioFit",
+        "heroRatioFit",
+        "headerHeightFit",
         "approvedHeroCentered",
         "openingVisible",
-        "result.overflow||!result.heroClear||!result.openingVisible||!result.actionsVisible||!result.approvedHeroFit",
+        "result.overflow||!result.heroClear||!result.openingVisible||!result.actionsVisible||!result.heroRatioFit||!result.headerHeightFit||!result.approvedHeroFit",
         "report.dataset.pass=failures.length?'false':'true'",
     ):
         if marker not in layout_review_js:
