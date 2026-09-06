@@ -45,6 +45,15 @@ jobs:
       - name: Verify visual resource coverage and source thumbnails
         run: python tools/resource_thumbnail_qa.py
 
+      - name: Verify every permanent Answer study experience
+        run: python tools/answer_study_qa.py
+
+      - name: Verify scripture reader sources and interactions
+        run: |
+          python tools/build_scripture_reader_data.py --check
+          node tools/scripture_reader_runtime_qa.js
+          node --check header-scroll.js
+
       - name: Run focusChrist resource QA
         run: python tools/resource_qa.py
 

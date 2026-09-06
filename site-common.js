@@ -541,6 +541,12 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        const scriptureStyle = document.createElement('link');
+        scriptureStyle.rel = 'stylesheet';
+        scriptureStyle.href = relativeAssetHref('scripture-reader.css?v=20260906-1');
+        document.head.appendChild(scriptureStyle);
+        appendScript(relativeAssetHref('scripture-reader.js?v=20260906-1'), 'data-focuschrist-scripture-reader');
+        appendScript(relativeAssetHref('header-scroll.js?v=20260906-1'), 'data-focuschrist-header-scroll');
         ensureMainLandmark();
         normalizeFooterIdentity();
         ensurePrimaryStudyNavigation();

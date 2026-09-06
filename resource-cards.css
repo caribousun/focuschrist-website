@@ -32,3 +32,5 @@
 .fc-answer-depth .fc-study-feature h2,.fc-answer-depth .fc-study-feature h3{margin-top:0}
 .fc-answer-depth section[id]{scroll-margin-top:110px}
 @media(max-width:800px){.fc-answer-depth .fc-study-feature{grid-template-columns:1fr;gap:20px}}
+
+.fc-resource-grid>.fc-resource-card:only-child{grid-column:1/-1;width:100%;max-width:620px;justify-self:center}
