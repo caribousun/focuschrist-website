@@ -316,7 +316,7 @@ try {
   const historySource = await fetchOfficialSource(historyCandidate, 'What occurred around the 1836 dedication of the Kirtland Temple?', Date.now() + 5000);
   const historyWarm = await fetchOfficialSource(historyCandidate, 'What occurred around the 1836 dedication of the Kirtland Temple?', Date.now() + 5000);
   for (const source of [historySource, historyWarm]) {
-    assert(source && source.content.length <= 1200
+    assert(source && source.content.length <= 4200
       && source.content.startsWith('The Kirtland Temple dedication occurred in 1836'),
       'explicit-year history must put the event before long construction leads on cold and cached reads');
   }
@@ -996,7 +996,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-06.59',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-06.60',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

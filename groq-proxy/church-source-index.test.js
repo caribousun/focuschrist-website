@@ -307,6 +307,20 @@ const hyrumParaphrase = 'As Joseph Smith’s older brother, Hyrum became a trust
 assert(!hasExcessiveSourceOverlap(hyrumParaphrase, [{ content: hyrumEvidenceParagraph }]),
   'the answer guard must allow an independently worded factual paraphrase of Church-history evidence');
 
+const completeHistoryCandidate = { deterministicHistoryTopic: true, title: 'Hyrum Smith',
+  url: 'https://www.churchofjesuschrist.org/study/history/topics/hyrum-smith?lang=eng' };
+const completeHistoryParagraphs = [
+  'Hyrum Smith was born in Vermont and supported his family and the early Church. ' + 'His early years included schooling and family responsibilities. '.repeat(9),
+  'Hyrum Smith helped oversee Book of Mormon printing and led a Church branch before moving west. ' + 'The historical account also describes his travels and family life. '.repeat(6),
+  'In Nauvoo Hyrum Smith held important leadership responsibilities. He succeeded his father as Church patriarch in 1841 and was appointed Assistant President of the Church. He also served on the city council and the temple committee.'
+];
+const completeHistoryQuestion = 'Hyrum Smith What leadership responsibility did he hold?';
+for (const pack of [completeHistoryParagraphs, compactParagraphPack(completeHistoryParagraphs, completeHistoryCandidate, completeHistoryQuestion)]) {
+  const text = relevantParagraphText(pack, completeHistoryQuestion, completeHistoryCandidate);
+  assert(text.includes(completeHistoryParagraphs[2]) && text.length <= 4200,
+    'cold and warm history evidence must preserve the complete leadership paragraph beyond the former1200character cutoff');
+}
+
 const originalFetch = globalThis.fetch;
 const clarificationResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
   method: 'POST',

@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-06.59';
+const POLICY_VERSION = '2026-09-06.60';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -33,7 +33,7 @@ const facts = {
 };
 const contradictions = {
     almaWord: [/kept warm|watered with the word|faith is a seed/i],
-    hyrum: [/hyrum.{0,50}\b(?:was|is) not\b.{0,30}(?:leader|patriarch)/i],
+    hyrum: [/hyrum.{0,50}\b(?:was|is) not\b.{0,30}(?:leader|patriarch)/i, /hyrum(?:\s+smith)?(?:\s*\([^)]*\))?\s+(?:was|is)\s+(?:the\s+)?younger brother/i],
     pioneer: [/(?:irrigation|cooperation).{0,50}\bdid not\b.{0,30}(?:help|matter|contribute)/i],
     relief: [/relief society.{0,50}\b(?:was|is) not\b.{0,30}(?:organized|founded|created)/i],
     temples: [/latter-day saints.{0,60}\bdo not\b.{0,30}(?:build|worship).{0,20}temple/i],
