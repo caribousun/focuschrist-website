@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from html.parser import HTMLParser
+import hashlib
 from pathlib import Path
 import re
 import sys
@@ -139,6 +140,73 @@ def main() -> int:
             if "url(" in ultrawide or "image-set(" in ultrawide or "--fc-hero-image" in ultrawide:
                 fail(errors, "site-system.css ultrawide atmosphere must not contain a duplicate image layer")
 
+        approved_hero_css = css_block(css, ".fc-home-hero::before,\n.fc-answer-detail-hero::before")
+        if approved_hero_css is None:
+            fail(errors, "site-system.css missing the shared approved Home/Answer hero rule")
+        else:
+            for marker in (
+                "assets/heroes/home-christ-fully-approved.png",
+                "background-size: contain",
+                "background-position: center",
+                "background-repeat: no-repeat",
+            ):
+                if marker not in approved_hero_css:
+                    fail(errors, f"site-system.css approved hero rule missing: {marker}")
+            if "background-size: cover" in approved_hero_css:
+                fail(errors, "site-system.css approved hero must not use cover cropping")
+        if "background-size: auto 120%" in css:
+            fail(errors, "site-system.css approved mobile hero must not retain 120 percent vertical cropping")
+        approved_rule_start = css.find(".fc-home-hero::before,\n.fc-answer-detail-hero::before")
+        ultrawide_start = css.find("@media (min-width: 2560px)")
+        if approved_rule_start <= ultrawide_start:
+            fail(errors, "site-system.css approved hero containment must override the earlier ultrawide hero rule")
+        final_approved_rule_start = css.rfind("body.fc-site .fc-home-hero::before,\n    body.fc-site .fc-answer-detail-hero::before")
+        final_approved_rule = css_block(css, "body.fc-site .fc-home-hero::before,\n    body.fc-site .fc-answer-detail-hero::before")
+        if final_approved_rule_start < approved_rule_start or final_approved_rule is None:
+            fail(errors, "site-system.css missing final mobile approved hero override")
+        elif "background-size: auto 100%" not in final_approved_rule or "background-position: center" not in final_approved_rule:
+            fail(errors, "site-system.css final mobile approved hero override must retain 100 percent centered height-fit")
+        for marker in (
+            "body.fc-site:has(.fc-home-hero)",
+            "body.fc-site:has(.fc-answer-detail-hero)",
+            "calc(100vw * 0.333984375)",
+            "calc(100dvh - 390px)",
+            "background-size: auto 100%",
+        ):
+            if marker not in css:
+                fail(errors, f"site-system.css missing approved hero geometry marker: {marker}")
+
+    approved_hero_path = ROOT / "assets/heroes/home-christ-fully-approved.png"
+    approved_hero_sha = "823e46fe509f71f3d8dfc9dd277e50223e55e6c53e2af9af5d8c55b9c0a45384"
+    if not approved_hero_path.exists():
+        fail(errors, "approved Home/Answer hero asset is missing")
+    elif hashlib.sha256(approved_hero_path.read_bytes()).hexdigest() != approved_hero_sha:
+        fail(errors, "approved Home/Answer hero asset bytes changed")
+
+    approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
+    if len(approved_answer_pages) != 13:
+        fail(errors, f"expected 13 Answer detail pages, found {len(approved_answer_pages)}")
+    approved_hero_pages = ["index.html", *approved_answer_pages]
+    approved_cache_versions: set[str] = set()
+    for relative in approved_hero_pages:
+        page_text = (ROOT / relative).read_text(encoding="utf-8")
+        expected_class = "fc-home-hero" if relative == "index.html" else "fc-answer-detail-hero"
+        expected_href = "assets/heroes/home-christ-fully-approved.png" if relative == "index.html" else "../assets/heroes/home-christ-fully-approved.png"
+        hero_pattern = re.compile(
+            r'<a\b(?=[^>]*\bclass="[^"]*\b' + re.escape(expected_class) +
+            r'\b[^"]*")(?=[^>]*\bhref="' + re.escape(expected_href) + r'")[^>]*>',
+            re.I,
+        )
+        if not hero_pattern.search(page_text):
+            fail(errors, f"{relative}: exact approved shared hero is not fully wired")
+        cache_match = re.search(r'(?:\.\./)?site-system\.css\?v=([^"\s]+)', page_text)
+        if not cache_match:
+            fail(errors, f"{relative}: site-system cache revision missing")
+        else:
+            approved_cache_versions.add(cache_match.group(1))
+    if approved_cache_versions != {"20260906-full-composition"}:
+        fail(errors, f"approved hero pages have inconsistent site-system cache revisions: {sorted(approved_cache_versions)}")
+
     for relative in PUBLIC_PAGES:
         path = ROOT / relative
         if not path.exists() or path.stat().st_size == 0:
@@ -169,6 +237,18 @@ def main() -> int:
         hero = re.search(r'<(?:div|a) class="fc-visual-hero[^>]*>.*?</(?:div|a)>', text, re.S | re.I)
         if hero and re.search(r"<h[1-6]\b|<p\b", hero.group(0), re.I):
             fail(errors, f"{relative}: text content detected inside image-first hero")
+
+    layout_review_js = (ROOT / "tools/layout-review.js").read_text(encoding="utf-8")
+    for marker in (
+        "approvedHeroFit",
+        "approvedHeroExpectedSize=w.innerWidth<=700?'auto 100%':'contain'",
+        "approvedHeroCentered",
+        "openingVisible",
+        "result.overflow||!result.heroClear||!result.openingVisible||!result.actionsVisible||!result.approvedHeroFit",
+        "report.dataset.pass=failures.length?'false':'true'",
+    ):
+        if marker not in layout_review_js:
+            fail(errors, f"tools/layout-review.js missing enforceable responsive audit marker: {marker}")
 
     for relative in ("index.html", "ask.html", "answers.html", "art.html", "about.html", "watch.html"):
         text = (ROOT / relative).read_text(encoding="utf-8")

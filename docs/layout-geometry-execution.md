@@ -14,7 +14,7 @@ All 24 contextual Answer companions retain their original thumbnails, titles and
 
 ## Verification procedure
 
-`tools/layout-review.html` is a noindex internal review page with same-origin iframes sized at 390x844, 820x1180, 1363x936, 1920x1200 and 3440x1440. It loads all canonical pages from the sitemap, records real iframe viewport dimensions, document overflow, opening header clearance and every contextual prose/card height. CSS scale only fits the review frame on the reviewer screen; media queries run at the selected iframe width. This is responsive browser verification, not a physical-device test. Visually inspect representative hero compositions and both media rows of every Answer; automated dimensions do not replace visual judgment.
+`tools/layout-review.html` is a noindex internal review page with same-origin iframes sized at 360x800, 390x844, 820x1180, 1024x768, 1363x936, 1366x768, 1536x792, 1920x990, 1920x1080, 1920x1200 and 3440x1440. It loads all canonical pages from the sitemap, records real iframe viewport dimensions, document overflow, opening header clearance and every contextual prose/card height. CSS scale only fits the review frame on the reviewer screen; media queries run at the selected iframe width. This is responsive browser verification, not a physical-device test. Visually inspect representative hero compositions and both media rows of every Answer; automated dimensions do not replace visual judgment.
 
 Release and production verification receipts are recorded in the canonical project memory after deployment. Prior PR179 desktop acceptance did not catch the owner's geometry defects and is superseded for presentation quality.
 
