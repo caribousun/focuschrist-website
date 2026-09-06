@@ -740,9 +740,36 @@ function evidenceRelevanceReceipt(question, evidence) {
   });
 }
 
+const REVIEWED_ALMA_32_WORD_AND_FAITH = "In Alma 32, Alma compares the word to a seed and invites people to begin with a desire to believe. Faith is the trust involved in making room for that word and trying the invitation; the word is what is planted. In verses 28-35, Alma describes noticing the effects of the growing seed, including an enlarged soul and increased understanding. He distinguishes that experience from knowing everything. Verses 37-43 then stress continued care, diligence, patience, and looking forward to the fruit. Neglect can prevent growth even when the seed is good. The comparison invites sustained attention to God's word rather than demanding instant certainty. Read the full passage to distinguish Alma's imagery from additional gardening details that a modern retelling might invent.";
+
 function reviewedDeterministicEvidenceRecovery(question, evidence) {
   const value = String(question || '');
   const sources = Array.isArray(evidence) ? evidence : [];
+  // A bounded chapter-level study of this metaphor. Verse-specific, comparative,
+  // historical and personal instructions remain on the normal evidence route.
+  const almaStudyVocabulary = new Set('how does do can what is are alma 32 describe describes developing develop faith teach teaches about the seed comparison metaphor lesson lessons teachings of in explain growth grow growing nourish nourishing word and patience diligence a tell me'.split(' '));
+  const almaFaithQuestion = value.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean).every((token) => almaStudyVocabulary.has(token))
+    && /\balma\s+32\b(?!\s*[:0-9])/i.test(value)
+    && /\b(?:faith|seed)\b/i.test(value)
+    && !/\b(?:compare|contradict|versus|history|historical|archaeology|baptism|poverty|poor|money|medical|medicine|medication|diagnosis|prove|proof|guarantee)\b/i.test(value)
+    && !/\balma\s+32\s*:\s*\d|\b(?:verse|verses|chapter|chapters)\s+\d|\b(?:john|james|nephi|moroni|mosiah)\s+\d/i.test(value);
+  if (almaFaithQuestion) {
+    const sourceIndex = sources.findIndex((source) => {
+      let parsed;
+      try { parsed = new URL(String(source && source.url || '')); } catch (_error) { return false; }
+      const content = String(source && source.content || '');
+      return parsed.protocol === 'https:'
+        && parsed.hostname === 'www.churchofjesuschrist.org'
+        && parsed.pathname === '/study/scriptures/bofm/alma/32'
+        && /\bword\b/i.test(content) && /\bseed\b/i.test(content)
+        && /\bfaith\b/i.test(content) && content.trim().length >= 180;
+    });
+    if (sourceIndex >= 0) return {
+      recoveryId: 'reviewed-alma-32-word-and-faith',
+      answer: REVIEWED_ALMA_32_WORD_AND_FAITH,
+      sourceIndexes: [sourceIndex + 1],
+    };
+  }
   if (/\benos\s+1\b/i.test(value)
     && /\bpray\w*\b/i.test(value)
     && /\bforgiv\w*\b/i.test(value)) {
@@ -1965,6 +1992,7 @@ export default {
         'Compose the final answer from the supplied source excerpts. If the DRAFT block is empty, write the answer directly from EVIDENCE and never reject merely because no candidate draft was supplied.',
         'If a draft is present, repair it into a direct, complete answer using the evidence. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
         'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give 90 to 220 words and at least three complete sentences. A nuanced question normally needs two to four short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
+        'Preserve the exact subjects and relationships in scriptural comparisons. Do not extend a metaphor with invented physical details or present a personal application as something the passage says. If the text compares the word to a seed, do not replace the word with faith or invent watering, warmth, or other gardening instructions.',
         'Use independently worded paraphrase. Do not copy a long passage or reconstruct the source in ordered fragments. Apart from unavoidable names and short doctrinal phrases, avoid matching source wording for more than eight consecutive words.',
         'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
         'Set approved true whenever the evidence contains material that can responsibly answer the question, including when DRAFT is empty. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',

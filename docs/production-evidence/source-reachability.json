@@ -1,0 +1,419 @@
+[
+  {
+    "url": "https://faq.churchofjesuschrist.org/are-mormons-christian",
+    "status": 200,
+    "final": "https://faq.churchofjesuschrist.org/are-mormons-christian"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/another-testament-of-jesus-christ"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/how-the-bible-and-the-book-of-mormon-work-together",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/comeuntochrist/believe/book-of-mormon/how-the-bible-and-the-book-of-mormon-work-together"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/feature/the-family-a-proclamation-to-the-world?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/feature/the-family-a-proclamation-to-the-world?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/ensign/2018/07/ministering-to-members-who-are-divorced?lang=eng",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/general-conference/2013/10/like-a-broken-vessel?lang=eng",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/general-conference/2022/10/14renlund?lang=eng",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-and-plural-marriage?lang=eng",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/counseling-resources/grief-and-loss?lang=eng",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/divorce/divorce?lang=eng",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/first-vision-accounts?lang=eng",
+    "error": "<urlopen error timed out>"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/adversity?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/adversity?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith-in-jesus-christ-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith-in-jesus-christ-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/family-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/family-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/holy-ghost-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/holy-ghost-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/revelation-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/revelation-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/salvation-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/salvation-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/seeking-answers/04-recognize-revelation-is-a-process?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/seeking-answers/04-recognize-revelation-is-a-process?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/spirit-world-study-guide?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/spirit-world-study-guide?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p11-p25#p11",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p11-p25#p11"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?id=p11-p13&lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?id=p11-p13&lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?lang=eng&id=p13-p17#p13",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?lang=eng&id=p13-p17#p13"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p26-p28#p26",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&id=p26-p28#p26"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p27#p27",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p27#p27"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p38-p42#p38",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p38-p42#p38"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p35-p41#p35",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p35-p41#p35"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study/scriptures?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/study?lang=eng&platform=web"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/temples/ordinances-and-covenants?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/temples/ordinances-and-covenants?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/temples?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/temples?lang=eng"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all"
+  },
+  {
+    "url": "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+    "status": 200,
+    "final": "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng"
+  },
+  {
+    "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.html",
+    "status": 200,
+    "final": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.html"
+  }
+]

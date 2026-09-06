@@ -242,6 +242,26 @@ assert(coldEnosCachePack.some((paragraph) => /\bpray\w*\b/i.test(paragraph))
   && coldEnosCachePack.some((paragraph) => /\bforgiv\w*\b/i.test(paragraph)),
   'deterministic scripture cache packing must prioritize the visitor question so warm retrieval preserves both concepts');
 
+const almaEvidence = [{ url: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng',
+  content: 'Alma teaches about faith and invites a desire to believe. He compares the word to a seed planted in the heart. The seed begins to swell and enlighten understanding. The tree needs continued nourishment, diligence and patience.' }];
+const almaRecovery = reviewedDeterministicEvidenceRecovery('How does Alma 32 describe developing faith?', almaEvidence);
+assert(almaRecovery && almaRecovery.recoveryId === 'reviewed-alma-32-word-and-faith'
+  && /compares the word to a seed/.test(almaRecovery.answer)
+  && !/kept warm|watered with the word|faith is a seed/i.test(almaRecovery.answer),
+  'Alma 32 must retain the word/seed relationship and exclude invented gardening claims');
+for (const question of ['How does Alma 32:21 define faith?', 'Compare Alma 32 with James 2 on faith.',
+  'What does Alma 32 teach about poverty and faith?', 'Does Alma 32 prove I should stop medication through faith?',
+  'How does Alma 33 describe developing faith?']) {
+  assert(reviewedDeterministicEvidenceRecovery(question, almaEvidence) === null,
+    'bounded Alma 32 summary must not replace a different question: ' + question);
+}
+assert(reviewedDeterministicEvidenceRecovery('How does Alma 32 describe developing faith?',
+  [{...almaEvidence[0], url:'https://example.com/study/scriptures/bofm/alma/32'}]) === null,
+  'Alma recovery requires the exact official source');
+assert(reviewedDeterministicEvidenceRecovery('How does Alma 32 describe developing faith?',
+  [{...almaEvidence[0], content:'Alma 32'}]) === null,
+  'Alma recovery must fail closed for missing source content');
+
 const reliefReviewedRecovery = reviewedDeterministicEvidenceRecovery(
   'Give me the historical setting for the Female Relief Society of Nauvoo when it began and why.',
   [{

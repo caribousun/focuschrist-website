@@ -480,3 +480,7 @@ The newly generated Nicodemus nighttime scene exec-b8a3f6df-c1be-4189-b558-35cd7
 
 ## Connected study depth across the entire site
 Wyatt requires every focusChrist section and destination to support rich, accurate, respectful study. One example page is a benchmark for the whole site, not the scope limit. Follow `docs/connected-study-experience-prompt.md`: develop passages in context, explain resources, distinguish evidence from reflection, and connect pages with a clear reason to continue. Bare source lists and short summaries do not meet this requirement. Preserve approved artwork and AI source safeguards. Verify destination pages and actual learning journeys before reporting completion.
+
+
+## Production sanity and URL discoverability
+Wyatt's “advertised all over the internet” means correctly exposed URLs, canonical metadata, sitemaps, search discovery, social previews and relevant channel links. Do not reinterpret it as a new paid or mass advertising campaign. Use the full-production-sanity prompt, independent verdict challenge and one bounded follow-up repair; actual live semantic review must accompany automated passes. A source URL and model verification flag do not establish that each generated claim is accurate. Preserve scripture's exact relationships, including Alma 32 comparing the word to a seed. Record indexing/access limitations honestly.
