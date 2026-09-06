@@ -40,8 +40,11 @@ function measure() {
  const approvedRatioFit=!approvedHero||heroRatioFit;
  const approvedHeroFit=!approvedHero||(approvedHeroStyle.backgroundSize===approvedHeroExpectedSize&&approvedHeroCentered&&approvedRatioFit);
  const headerHeightFit=!nav||Math.abs(n.height-(w.innerWidth>1020?52:62))<=1;
- const openingVisible=!introBottom||introBottom<=w.innerHeight+1;
- return {heroHeight:h?.height,stylesheet:d.querySelector('link[href*="site-system.css"]')?.getAttribute('href'),page:page.value,viewport:[w.innerWidth,w.innerHeight],overflow:d.documentElement.scrollWidth>d.documentElement.clientWidth+1,introBottom,openingVisible,actionsVisible,heroRatioFit,headerHeightFit,approvedHeroFit,approvedRatioFit,approvedHeroExpectedSize,approvedHeroBackgroundSize:approvedHeroStyle?.backgroundSize,approvedHeroBackgroundPosition:approvedHeroStyle?.backgroundPosition,heroTop:h?.top,headerBottom:n?.bottom,heroClear:!h||!n||h.top>=n.bottom-1,rows};
+ const openingVisible=!introBottom||introBottom>=w.innerHeight-1;
+ const openingAligned=!introBottom||(introBottom>=w.innerHeight-1&&introBottom<=w.innerHeight+9);
+ const nextTop=intro?.nextElementSibling?.getBoundingClientRect().top;
+ const nextSectionHidden=!nextTop||nextTop>=w.innerHeight-1;
+ return {heroHeight:h?.height,stylesheet:d.querySelector('link[href*="site-system.css"]')?.getAttribute('href'),page:page.value,viewport:[w.innerWidth,w.innerHeight],overflow:d.documentElement.scrollWidth>d.documentElement.clientWidth+1,introBottom,nextTop,openingVisible,openingAligned,nextSectionHidden,actionsVisible,heroRatioFit,headerHeightFit,approvedHeroFit,approvedRatioFit,approvedHeroExpectedSize,approvedHeroBackgroundSize:approvedHeroStyle?.backgroundSize,approvedHeroBackgroundPosition:approvedHeroStyle?.backgroundPosition,heroTop:h?.top,headerBottom:n?.bottom,heroClear:!h||!n||h.top>=n.bottom-1,rows};
 }
 document.getElementById('open').onclick=()=>openPage().then(()=>report.textContent=JSON.stringify(measure(),null,2));
 document.getElementById('top').onclick=()=>{preview.contentWindow.scrollTo(0,0);mediaIndex=-1;};
@@ -57,7 +60,7 @@ document.getElementById('audit').onclick=async()=>{
   page.value=option.value;size.value=viewport.value;await openPage();results.push(measure());
   report.textContent=JSON.stringify({progress:results.length,results},null,2);
  }}catch(error){report.textContent+='\n'+error.message;}
- const failures=results.filter(result=>result.overflow||!result.heroClear||!result.openingVisible||!result.actionsVisible||!result.heroRatioFit||!result.headerHeightFit||!result.approvedHeroFit);
+ const failures=results.filter(result=>result.overflow||!result.heroClear||!result.openingVisible||!result.openingAligned||!result.nextSectionHidden||!result.actionsVisible||!result.heroRatioFit||!result.headerHeightFit||!result.approvedHeroFit);
  report.textContent=JSON.stringify({complete:true,pass:failures.length===0,checked:results.length,failures,results},null,2);
  report.dataset.complete='true';report.dataset.pass=failures.length?'false':'true';
 };
