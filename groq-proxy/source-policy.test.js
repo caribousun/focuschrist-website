@@ -17,6 +17,7 @@ import worker, {
   evaluateQuestionSafety,
   fetchOfficialSource,
   guardVerifiedAnswer,
+  verifiedAnswerFailureReason,
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
@@ -35,6 +36,15 @@ import worker, {
 } from './src/index.js';
 
 function assert(condition, message) { if (!condition) throw new Error(message); }
+
+assert(verifiedAnswerFailureReason('Short answer.', [], { faith: true }, false) === 'not-approved',
+  'publication diagnostics must distinguish verifier rejection');
+assert(verifiedAnswerFailureReason('Short answer.', [{host:'www.churchofjesuschrist.org',content:'A source.'}], {faith:true}, true) === 'insufficient-substance',
+  'publication diagnostics must distinguish an approved but insufficient answer');
+const copiedFixture = 'A deliberately copied source passage contains enough consecutive words to exceed the strict publication copying limit and must never be released simply because a verifier marked its answer as approved.';
+assert(verifiedAnswerFailureReason(copiedFixture, [{host:'www.churchofjesuschrist.org',content:copiedFixture}], {faith:true}, true) === 'excessive-source-overlap'
+  && guardVerifiedAnswer(copiedFixture, [{host:'www.churchofjesuschrist.org',content:copiedFixture}], {faith:true}, true) === SOURCE_INTEGRITY_FALLBACK,
+  'publication diagnostics must preserve the copying safeguard');
 
 assert(REQUEST_BUDGET_MS === 22000 && PROVIDER_CALL_LIMIT_MS === 10500,
   'the Worker must own a 22-second total budget with bounded provider stages');
@@ -986,7 +996,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-03.53',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-06.54',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

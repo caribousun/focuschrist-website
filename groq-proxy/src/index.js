@@ -23,8 +23,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-03.53';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-03.53';
+const SOURCE_POLICY_VERSION = '2026-09-06.54';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.54';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -371,6 +371,15 @@ function deterministicHistoryTopicSource(question, page) {
     || String(left.url).localeCompare(String(right.url)))[0] || null;
 }
 
+function namedGospelTopicSource(question, page, ranked) {
+  if (page !== 'ask' || /\b(?:compare|contrast|versus|vs|difference between|relationship between)\b/i.test(String(question || ''))) return null;
+  const top = ranked[0];
+  if (!top || top.kind !== 'gospel-topic' || !top.titleMatch
+    || normalizeDiscoveryTokens(top.title).length < 2
+    || ranked.slice(1).some((entry) => entry.titleMatch)) return null;
+  return { ...top, namedGospelTopic: true };
+}
+
 function isPioneerIrrigationIntent(question, page) {
   return page === 'pioneers'
     && /\b(?:irrigat\w*|shared\s+water|water\s+(?:management|distribution|systems?))\b/i.test(String(question || ''));
@@ -476,7 +485,18 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
     return { text, position, overlap, topicScore, score: (historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 400 : 0) + topicScore + overlap * 20 + Math.min(10, text.length / 180) };
   }).filter((item) => item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
-    .slice(0, 2);
+    .slice(0, candidate && candidate.namedGospelTopic === true ? sourceParagraphs.length : 2);
+  if (candidate && candidate.namedGospelTopic === true) {
+    // A uniquely named short topic needs complete explanatory paragraphs, not
+    // a 700-character fragment. Keep relevance-ranked paragraphs within the
+    // existing scripture-sized budget, then restore their reading order.
+    let characters = 0;
+    return selected.filter((item) => {
+      if (characters + item.text.length + 1 > 4200) return false;
+      characters += item.text.length + 1;
+      return true;
+    }).sort((left, right) => left.position - right.position).map((item) => item.text).join(' ');
+  }
   if (isPinnedAlma32FaithStudy(candidate, question)) {
     // Keep the original question anchors; add the actual comparison rather than
     // replacing the evidence that establishes relevance to the visitor's question.
@@ -554,7 +574,7 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
   const discoveryTokens = normalizeDiscoveryTokens(`${candidate.title || ''} ${candidate.tokens || ''}`);
   const queryTokens = normalizeDiscoveryTokens(question);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
-  const questionFocused = topicPinned || Boolean(candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true));
+  const questionFocused = topicPinned || Boolean(candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true));
   const almaPinned = isPinnedAlma32FaithStudy(candidate, question);
   const originalAnchors = almaPinned ? (Array.isArray(paragraphs) ? paragraphs : []).map((text, position) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
@@ -615,7 +635,7 @@ async function evidenceCacheKey(candidate, question) {
   if (!globalThis.crypto || !globalThis.crypto.subtle) return null;
   const variant = officialExcerptCacheVariant(candidate);
   const deterministicQuestionKey = candidate
-    && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true)
+    && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true)
     ? normalizeDiscoveryTokens(question).slice(0, 12).join('-') + (isPinnedAlma32FaithStudy(candidate, question) ? '-word-seed-v1' : '') + (explicitHistoryYears(candidate, question).length ? '-dated-history-v1' : '')
     : '';
   const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${deterministicQuestionKey}\n${candidate.url}`;
@@ -642,7 +662,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
           if (content && evidenceAdmissionSufficient(candidate, content, question)) {
             if (counters) counters.cacheHits += 1;
             const source = canonicalSource(candidate.url, candidate.title, content,
-              candidate.deterministic === true ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
+              candidate.deterministic === true || candidate.namedGospelTopic === true ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
             if (source) {
               source.cacheStatus = 'hit';
               source.topicPinned = candidate.topicPinned === true;
@@ -679,7 +699,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       } catch (_cacheError) {}
     }
     const source = canonicalSource(candidate.url, candidate.title, content,
-      candidate.deterministic === true ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
+      candidate.deterministic === true || candidate.namedGospelTopic === true ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
     if (source) {
       source.cacheStatus = 'miss';
       source.topicPinned = candidate.topicPinned === true;
@@ -696,13 +716,14 @@ async function retrieveIndexedChurchEvidence(question, page, deadline) {
   const rankedCandidates = rankChurchSourceCandidates(question, page);
   const deterministicScripture = deterministicScriptureSource(question);
   const deterministicHistoryTopic = deterministicScripture ? null : deterministicHistoryTopicSource(question, page);
+  const namedGospelTopic = deterministicScripture || deterministicHistoryTopic ? null : namedGospelTopicSource(question, page, rankedCandidates);
   const candidates = deterministicScripture
     ? [{ ...deterministicScripture, score: 1000, overlapCount: normalizeDiscoveryTokens(question).length }]
     : deterministicHistoryTopic
       ? [deterministicHistoryTopic]
-      : rankedCandidates;
+      : namedGospelTopic ? [namedGospelTopic] : rankedCandidates;
   const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
-  const singleSource = Boolean(deterministicScripture || deterministicHistoryTopic);
+  const singleSource = Boolean(deterministicScripture || deterministicHistoryTopic || namedGospelTopic);
   const fetchCandidates = singleSource ? candidates.slice(0, 1) : candidates.slice(0, 2);
   const fetched = await Promise.all(fetchCandidates.map((candidate) => fetchOfficialSource(candidate, question, deadline, counters)));
   const evidence = fetched.filter(Boolean).slice(0, singleSource ? 1 : 2);
@@ -714,6 +735,7 @@ async function retrieveIndexedChurchEvidence(question, page, deadline) {
     cacheMisses: counters.cacheMisses,
     deterministicScripture: Boolean(deterministicScripture),
     deterministicHistoryTopic: Boolean(deterministicHistoryTopic),
+    namedGospelTopic: Boolean(namedGospelTopic),
   };
 }
 
@@ -982,15 +1004,22 @@ function isJsonValidationFailure(result) {
     && /json[_ -]?validate|failed_generation/i.test(`${error.code || ''} ${error.type || ''} ${error.message || ''}`));
 }
 
-function guardVerifiedAnswer(answer, evidence, scope, approved) {
+function verifiedAnswerFailureReason(answer, evidence, scope, approved) {
   const text = String(answer || '').trim();
-  if (!approved || !text || !Array.isArray(evidence) || !evidence.length) return SOURCE_INTEGRITY_FALLBACK;
-  if (scope.selectedPioneer && !evidence.some(isTellMyStorySource)) return SOURCE_INTEGRITY_FALLBACK;
-  if (scope.faith && !scope.selectedPioneer && !evidence.some(isOfficialChurchSource)) return SOURCE_INTEGRITY_FALLBACK;
-  if (hasKnownFalseClaim(text)) return SOURCE_INTEGRITY_FALLBACK;
-  if (hasExcessiveSourceOverlap(text, evidence)) return SOURCE_INTEGRITY_FALLBACK;
-  if (!answerMeetsSubstanceContract(text, scope)) return SOURCE_INTEGRITY_FALLBACK;
-  return text;
+  if (!approved) return 'not-approved';
+  if (!text) return 'empty-answer';
+  if (!Array.isArray(evidence) || !evidence.length) return 'missing-evidence';
+  if (scope.selectedPioneer && !evidence.some(isTellMyStorySource)) return 'missing-biography';
+  if (scope.faith && !scope.selectedPioneer && !evidence.some(isOfficialChurchSource)) return 'missing-official-source';
+  if (hasKnownFalseClaim(text)) return 'known-false-claim';
+  if (hasExcessiveSourceOverlap(text, evidence)) return 'excessive-source-overlap';
+  if (!answerMeetsSubstanceContract(text, scope)) return 'insufficient-substance';
+  return null;
+}
+
+function guardVerifiedAnswer(answer, evidence, scope, approved) {
+  return verifiedAnswerFailureReason(answer, evidence, scope, approved)
+    ? SOURCE_INTEGRITY_FALLBACK : String(answer || '').trim();
 }
 
 function answerSubstanceRequirements(scope) {
@@ -1884,6 +1913,7 @@ export default {
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
         retrievalDiagnostic.focuschrist_deterministic_scripture = indexed.deterministicScripture === true;
         retrievalDiagnostic.focuschrist_deterministic_history_topic = indexed.deterministicHistoryTopic === true;
+        retrievalDiagnostic.focuschrist_named_gospel_topic = indexed.namedGospelTopic === true;
         retrievalDiagnostic.focuschrist_official_fetch_calls = indexed.fetchCalls;
         retrievalDiagnostic.focuschrist_official_cache_hits = indexed.cacheHits;
         retrievalDiagnostic.focuschrist_official_cache_misses = indexed.cacheMisses;
@@ -2197,6 +2227,7 @@ export default {
       if (answer === SOURCE_INTEGRITY_FALLBACK) {
         return jsonResponse(fallbackPayload('verification-rejected', {
           focuschrist_verifier_approved: Boolean(verdict && verdict.approved === true),
+          focuschrist_verifier_publication_failure: verifiedAnswerFailureReason(verdict && verdict.answer, selectedEvidence, sanitized.scope, Boolean(verdict && verdict.approved === true && indexes.length)),
           focuschrist_verifier_source_indexes: verdict && Array.isArray(verdict.source_indexes)
             ? verdict.source_indexes.slice(0, 6)
             : [],
@@ -2278,6 +2309,8 @@ export {
   reviewedDeterministicEvidenceRecovery,
   deterministicScriptureSource,
   deterministicHistoryTopicSource,
+  namedGospelTopicSource,
+  verifiedAnswerFailureReason,
   evidenceCacheKey,
   officialExcerptCacheVariant,
   retrieveIndexedChurchEvidence,
