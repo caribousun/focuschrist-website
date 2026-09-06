@@ -1,0 +1,3369 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-09-06",
+  "extraction": "Official English canonical verse paragraphs only; verse-number spans and superscript footnote markers removed; text-node order and punctuation preserved; whitespace normalized; sequential verse numbers required. No headings, summaries or footnotes.",
+  "discovery": "Explicit canonical chapter paths in deployed HTML and runtime JS, including proxy runtime; excludes tests, tools and unused church-source-index.js.",
+  "chapters": [
+    {
+      "chapter": "bofm/1-ne/10",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/10?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "957e474a63493e4ad7813951e7090a6a545b7e1414da9029fe4dc90e0e3083e3",
+      "data_sha256": "f1108a349faa4417b9f608d7af6c91a7a162c946a0789fce34e2e9692d97d790",
+      "verse_count": 22,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/1-ne/11",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "3cc2b296c4161ff866759ccae68e81e65f5c86718385fcc0a77ec1ca57fe6cc6",
+      "data_sha256": "d4af31d170898491b36d6e5dfa04599b64fccb490544ff656d7b23a68cbb37e0",
+      "verse_count": 36,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/1-ne/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e4316430a7473ce2e2cd57f6e5449c75303853073836465ee5141a9b19f56f6e",
+      "data_sha256": "620880e793c98451a66fab98b4dc60093b2bc197e28155194628dae08231ddb2",
+      "verse_count": 23,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/1-ne/15",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/15?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4233c979563fce8812cc3a28c7006691523e51cfb65c74fd0a238789c4221628",
+      "data_sha256": "e4cf07e425a67c122425468f970c2450af2f30de000d94a396bb8c7b0882c912",
+      "verse_count": 36,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/1-ne/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "5a0161b3aa7c18426471c5cde6c983ce656215af41c16733f60a6316a703e2cd",
+      "data_sha256": "10d16fc8ba567b30abbd685b853ab6a7cd50e97d1b8578ab65e79a441b1a2843",
+      "verse_count": 24,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/1-ne/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "31fc8b39d9928ba09b69554441297cbb359aaa8dda61a16acf6fbfa945561d17",
+      "data_sha256": "178837fa740a74fd2818cc3172cb8051c80f7677a4cb7b5e5230798b25b5e750",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/1-ne/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "84e7e20b7b4e0154c981b18eb56aea4f5386a34ddff0a30c84977df8a683370d",
+      "data_sha256": "e3fbfb90157cc95bebc828b7520bb845c5ea8a7b9ce0f2acdb39c47aacc0de4b",
+      "verse_count": 22,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/1-ne/8",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/8?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "5d6fdc9a2fe544d6a86d5f0eb3072d54e08c19750bd87d53dd5f0566c9a4a427",
+      "data_sha256": "6c798bab0ec24212bb068f939a9df885c9019cf09a1454036605dca8b388111c",
+      "verse_count": 38,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e2306b7e8611b8b6fabd7bb6ab7444029ece16e1692295ed15adff1d86cc5c0c",
+      "data_sha256": "ba4416fabf2e02be923215bcc51fb06257efb8f690375d2cff78119171b7ebf4",
+      "verse_count": 32,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/11",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "ad1ae8ac6caea15b79e22b8e55c67c688adc98210adb8b5974d17933b09feaff",
+      "data_sha256": "9e24957d94c749763cb67fc58c29c01ee761235296f05ff3b1eb9820d4ac5db3",
+      "verse_count": 8,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "503ed99e7fb64a328df10783577b81c303c8ae292b4ac3416f268f60ca0bae7d",
+      "data_sha256": "78a975ab27a4f0039ebba0e9e2d358b8baae5807a3125821e5b9cdb49183bb24",
+      "verse_count": 22,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "8278f5fdb22ecb497482fce2456b0a20df332afcea79eb0ee7021ebe077681b7",
+      "data_sha256": "98fd923077380696c4a5c892bd839640e86443387d0849ac600d17e4dee9a233",
+      "verse_count": 30,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/25",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "658a26ae64d9364971c07b6d3947a429f7053666e72b68ade82f7ccb0800ae5d",
+      "data_sha256": "12454262c8e36abc1145a7a5e7aa32d17b3c3b30d1c93b520a66b872b90fd039",
+      "verse_count": 30,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/what-is-the-book-of-mormon.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/27",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/27?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f387e4f63f9e07a4e0f18a0b0c33fb8a578a788ad1d7378ca2bc0e0db77c011d",
+      "data_sha256": "28733a0f25fc438e53a4bef78ae1071999374d338d1977906463708048d5d419",
+      "verse_count": 35,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/28",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/28?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "81c31091d1b317eb0c9b9e270dd4bf8a9618c4114721848bdbb92004999710e7",
+      "data_sha256": "942f702b0e6e98b4aa19d2202417c1707d3b847ac7a094343080a134cdf3b4ce",
+      "verse_count": 32,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/31",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b7da2584694636527f89ac48d9c8c8d75b024b784344cd59f04348cff5b229fc",
+      "data_sha256": "65a4027bfbb5729de707cf43f33f37a524d3db2b87db9d5aed9f2780c0cb8e01",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/what-is-the-book-of-mormon.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/32",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/32?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "0944400cadb4585d184fbb31e7b7fc2681785fde119196061b178e4bfbd66a1f",
+      "data_sha256": "caef28e7481fb11ce2f8c5c4d72c3b65f922693571652d39b59b2a74149d879f",
+      "verse_count": 9,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/2-ne/9",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/9?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "ef5889a120a0ae1825000a5e5b197cec3d38f1d873ff843b1ee2794cc909fdc8",
+      "data_sha256": "b38ffb8dd645476c3d2f3b9bbe1bfcb1e4760c6fbab4e089b3a2b8b2bb366f83",
+      "verse_count": 54,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/11",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "674e0d2a0004d58e9f43031bbde5cddfe761c04f17a45322726537dc13e4af52",
+      "data_sha256": "c083eb9cf05855f01b2a294c186f39b6502113c31e71b8d96ae50ee2a86de281",
+      "verse_count": 41,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "ask.html",
+        "pioneers.html",
+        "watch.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "89d9c8171dcfcebc5ad78ab58d825121bd75d97646745dc3e1798a8ac7b860f5",
+      "data_sha256": "60c0ca79dc5f480dc2139f7a4cbcb3c96389337f3fe37d9421ecdfb70f5bb47b",
+      "verse_count": 48,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/bible-and-book-of-mormon-together.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/13",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/13?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "cb7d6a4bec2aaaba8980e758966b5c4a6323fb80228f8053107abe85dd5a4bce",
+      "data_sha256": "740e9b0ee5dc8cab810f29a73bd0aee23b963adade7d21dc22686a4dd8486df3",
+      "verse_count": 34,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/17",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d9e103e31d746810896b57dd7b5ba6431dda999ff52a2920d5aeebe4d45aee18",
+      "data_sha256": "a771a5d03a34285e340e3e10e32b40ecb60bef2caadc71d8181d9c867dad4335",
+      "verse_count": 25,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/why-families-are-important.html",
+        "art-study/suffer-the-little-children.html",
+        "watch.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/18",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "7a85a6ee6624addaaaed1ce56ddf7c8197e436497626133988b1365e75a35bac",
+      "data_sha256": "196cd056c6e5d6c11ab82a2c2c1959ecb51864762edaa79ba469285259634df8",
+      "verse_count": 39,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/19",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "8099e5ccb38b1fed6d467bca205fa90ad0c1a29c7fc1f14f5bc582ef5bc1255c",
+      "data_sha256": "b10099ba5a9262f0665cd9c49e96e2d1222b22960ab7946147ab7277d643c99f",
+      "verse_count": 36,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/20",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/20?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e53516ba1a86cb48bc771c0635e7fff19f04402f07d15f6554a050089fb744da",
+      "data_sha256": "372971e7d05a79b7a3f60af70ca683138972318742248b430f770c72e8e7ab19",
+      "verse_count": 46,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/27",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "8aadb3cdb6073f6b8aaecd930f11c7e362e2bb4e7850c0e855c8b807aede3239",
+      "data_sha256": "e03d50690773c7e389d2aeac25b94c6632b766d7506180d253ee39ed5051a90a",
+      "verse_count": 33,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/28",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/28?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2b3d740dee2b83607d6272628a57fcdf3a928cf90f9d14989d76202c05118721",
+      "data_sha256": "ae21b1ee73f347c7c7607979641aa653c948553c60fa1e46a81d070d487c414e",
+      "verse_count": 40,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/3-ne/9",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/9?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "90f88b132d60db6cdec62f7658b1f05cdc21c6f4db9b480ed0c7b7ae7966a3e2",
+      "data_sha256": "fb04c1e6c01b108ed2a1b369f8453fd6e79ef4bb6de80f5dcb82ce0e9d376093",
+      "verse_count": 22,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/11",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/11?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "31954ff8d353fd50dd862e6d3e905f272e3adde7057f08dec1a5514b067b0975",
+      "data_sha256": "e53732c075fe0ca99454d4574b24c3669efd834b3c58e584f373c38cb881ad15",
+      "verse_count": 46,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "ec0023c68dd86bcc27eec813a5c276f30db198d16d122716edb0b1c51d3a114a",
+      "data_sha256": "dc75a903b0043a0ab459ca35d4d2feb5f58dc6ffab66f9caf3c822746e833bbc",
+      "verse_count": 37,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/19",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/19?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2bf7676810f10ab3c6f5f6947d5bbecb00ba30d7d24bdc65c4831af2fcf52bf3",
+      "data_sha256": "98601f13dff7c5c764207a310dfdbf07ee4c74d2fce7d13dbeae7e9a85b3d940",
+      "verse_count": 36,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/24",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/24?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d16bb89bfb6bfc69a656ebe148cd340ee681c735a120827a7488d40d70114488",
+      "data_sha256": "eda10f98bfb9024cd6ed34028e703ca0152b61aa5ea0b6e4a9ad20bd36650223",
+      "verse_count": 30,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/32",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "75d0b74242d9d75d44c3af2dbd21ad183a6b2df857854c74f9361a6be18d9140",
+      "data_sha256": "58631fbc8ec8250ef12fde2c78d7bfbce56aa87e38c281cfc6f5caedfa963381",
+      "verse_count": 43,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/prayer-and-personal-revelation.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "ask.html",
+        "groq-proxy/src/index.js"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/34",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/34?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "90cafd0608bf4cd5cb328c8e2d8296a64e8ee7d4cfc890a947aeeed7890525bb",
+      "data_sha256": "a4b8512c6c287573900d90f927429259d0f91f25ba0372d5a2dfaaaebb42fd6d",
+      "verse_count": 41,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/37",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "bab4f9e4f43203d4023996d150639ece06f5347e06b3d1482d7368d8ecefea77",
+      "data_sha256": "e5a6bd88c37e232dc95a078a92a6153de48314cf7485d14768032d48964d6a8a",
+      "verse_count": 47,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/39",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/39?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6d022cdc309b2a1cccb7d0c9e3188d278e69e5aa48aa146fcb81a2adf30dd108",
+      "data_sha256": "81f4cce5ac4636bba77a13b653f5753d6974b856cf0c5a3ff555b6e7b61f6f46",
+      "verse_count": 19,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/40",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "40097d641887535b6408079506e02139076414adac9edb46312c3d6d40ad7054",
+      "data_sha256": "5a7ece66ae42558c4cbf678701e2441d7f6eb783a1d5441549934b673f48206c",
+      "verse_count": 26,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/what-happens-after-death.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/41",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/41?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "90ad0f062f99231f2df1c546d568daeffe7439b73385ba84a37b12975e2a4767",
+      "data_sha256": "70882b1300fa896b0b08dd9e3c49b9a4cb97117e0d0a69b037a7225663b020f5",
+      "verse_count": 15,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/42",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "73d839d10756486c270f3c1678f048eb4080fbd8b9309884ff489a386f819008",
+      "data_sha256": "1919e16a5fdb68fd5be91d7e8cf089981450d6f00ac688488331ceb20640fc73",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "0a00770481167721a6efd8bdcd9aae2b2373a7032233e79be0b60de7b6d448e2",
+      "data_sha256": "9cad309fca52116971fdab920da1bb0f0d927f0b000020494f7adff4789ccc2f",
+      "verse_count": 62,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/alma/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "90733b3d7452f095c9a7912e8ae7d9337b6ee2193bd86f98fcc2c9f2908072f9",
+      "data_sha256": "b5df9b8b1dd7fd1168348df385784c256dbb0ac88b41bdfdc5903af3f16f32cb",
+      "verse_count": 27,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "ask.html",
+        "pioneers.html",
+        "watch.html"
+      ]
+    },
+    {
+      "chapter": "bofm/enos/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "ec90e7c61dbc7eb70c833577b840cb8ecaf9d8c52ee7cc29f23c21ebfb8da176",
+      "data_sha256": "217438eb6d07584222bd5e0b056bef7fe11fb76b65316bb9587375c7b0b0e275",
+      "verse_count": 27,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "groq-proxy/src/index.js"
+      ]
+    },
+    {
+      "chapter": "bofm/ether/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "cf4d9eef85f3bcb47ef3eb1873fcbd408193aa0495686fa06201d43ee1a421e3",
+      "data_sha256": "947bc0d29976f57d16953fdc07f200885bf43cf0b376b9655a716532567a9daf",
+      "verse_count": 41,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/ether/15",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/15?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "653e1aacc7109aec727221015598766b0906d2c67a1b8d7c703d8bad1f49d385",
+      "data_sha256": "0026e2326bfadc5b40072f25fa0de6b50c9500a1a4aa8a6e48a1457df2c0dd61",
+      "verse_count": 34,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/ether/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f4a852e4c1562b62f3ce3ce3056e385174b0f2ab8b8494423803962253c6270e",
+      "data_sha256": "78d5692cc894e35d3f20f30ea983c30cf5613b0c7f412e5f1f18efe2d2d63bf6",
+      "verse_count": 28,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/hel/14",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/14?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "27493b1217365b39c3668e8905a5c824fcbf394d8c349f3d2b0ef89f6848df85",
+      "data_sha256": "01a778f0fdacdae44890f1629ea6f541004e9842131cf099e322df06570547d8",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/jacob/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/jacob/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b4087cc7af37104594a2da8e0c8cfdb7e801737c2e1a9e47cd6c242b5063d3b6",
+      "data_sha256": "b1995019f70fdf5a345726c89a55d5bb56c22269ba9f82c4a4b19610ee6bdc15",
+      "verse_count": 77,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/morm/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "28dc2d6d6c5a9d679e624f4422eb33cd35767c500f002beec86d9c5ca9be2215",
+      "data_sha256": "20ba1e2b83e74393906a745ee2598c90f90f6e0a93e6af3da089376b87d85dc2",
+      "verse_count": 10,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/moro/10",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "7e994acb79f828dd9b4bf9647d05c387db50c72b6f0debf459b3a1757b2db040",
+      "data_sha256": "774c991a1233a1c8adf284c62e1631bb79ef3bfadb4d3388e21f23eed15c9f0e",
+      "verse_count": 34,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/what-is-the-book-of-mormon.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/moro/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "fbc2885708752ccc9a9281fa889830a695acdfc8be60d4d409b729368172058d",
+      "data_sha256": "f8c7a281c53bab6f9db4333f1ba84659033886f78fe0f1cd5b9950b5f20ed154",
+      "verse_count": 3,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/moro/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b53774bc2266cc70be90d0e63c95ab88af7ea1d5956e382ffa7bd82490d88ef8",
+      "data_sha256": "b2df26611e51444a2a221640f3b187e6920a564365c9bf9a694328a7a24076a0",
+      "verse_count": 48,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/bible-and-book-of-mormon-together.html"
+      ]
+    },
+    {
+      "chapter": "bofm/moro/8",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "8ebffa8dec5fcdca4b13789a7939bce49edfffe6055760d8c9acb87eb8fc3180",
+      "data_sha256": "882aad7c51919f3d96e67b23f89c6c438188053ccca9687297acfc751b0b5404",
+      "verse_count": 30,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers.html",
+        "answers/death-of-a-child.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/mosiah/14",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/14?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "00ce36aa0a98b8da09e1c683763c4fe6dc854e5566f8b5165023cfebdad6b586",
+      "data_sha256": "1632de41034b80bcbc12b520f11f60cf56541d980c2fd1d0f89474039203da30",
+      "verse_count": 12,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/mosiah/16",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/16?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "893631c6aa2ce3f55f606231bc344f7352c4cef59923aec58674a386eca4eb54",
+      "data_sha256": "19e35970c22839a18bc0fe68e1c2e212139f1d70ceec15b486426ccf9406a890",
+      "verse_count": 15,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/mosiah/18",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4870e5832b1bb9580cb83ef256b03647e4cd3b8b86449fa65cd3987ac5cac60e",
+      "data_sha256": "8e7b6db222cef869d21c445fe3ea2b9b883febcaff016171493348e861e8205a",
+      "verse_count": 35,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "missionary.html"
+      ]
+    },
+    {
+      "chapter": "bofm/mosiah/24",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "7c80821d004a4c66e7b5a40626c08ed82a97958ecfa9c00be03ae2c4b71d310d",
+      "data_sha256": "77ba1049d01fc48745d13e69fa29ecf3b2d6d54ef82f6b2fafc8d2256a3d8eec",
+      "verse_count": 25,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "bofm/mosiah/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e20be7f631d057f4d79ab2582855e5c26d349de30d64d6b9d554e60248c8402a",
+      "data_sha256": "00006fe9468a0428f674a1bc5e53b788d003fe8d9df6427bde4b6380b2fc375f",
+      "verse_count": 27,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "bofm/mosiah/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f8cb0257e1cc3bae2513b5c446b0c4ab5baf77f479c567a31ab2275788eab682",
+      "data_sha256": "be0e81b20188de43339172fdaf846f3a6b2751652714b568af1089f72546e8aa",
+      "verse_count": 30,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "143ea226b8e9d9e2f4b785c0074c39f6c7b2bf6b50ee899c1d66d90f246aa8ac",
+      "data_sha256": "766dcbf7184ba4d5d9458cfefc85d79f72506188aa3535b7eb1c13fe44b2fd07",
+      "verse_count": 39,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/10",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/10?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "0148583b4132bc36c736e1bcc9aa5b7884136855ca9a37a7b5021270089c7d59",
+      "data_sha256": "06fb1dc2e1b9941da7a94207c4c1073bca6ed711394f66e38a825915b0918996",
+      "verse_count": 70,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/101",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "a1b75c5d262e0adfb1ffcc2f95771da6576e3296a2cac44f93b20f9c9d498ef7",
+      "data_sha256": "59510d0a3394eb7a317f5bd76c8dfffb0789e82fa8e6dc946d18a061814a9836",
+      "verse_count": 101,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "art-study/be-still.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/103",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/103?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f57c591b1069f37375e6693c1c9a6fd0ee1db4373822b3430c362a58e5c869bc",
+      "data_sha256": "c1b6bdfb0545d767d6e11cf4ea5932f7c80bcb27047ef9af38e56ee18d07ca74",
+      "verse_count": 40,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/109",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "60f7b769d31470ab00520367b04194d914f87071dad08f7cc59431f6bde9a0f2",
+      "data_sha256": "16a69cf300e87d6e5f5f4e8f0c4f3747e328d928862be68a5013b65fc419eaf5",
+      "verse_count": 80,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/why-latter-day-saints-build-temples.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/110",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "1efe22369f59c2f5d564078cfedeb5aca5171f032de3999f6759eb18bab4325d",
+      "data_sha256": "194385acae4fabc402414019f34f580b4e833ea7b7dee71d4f94dc539ab1a8d7",
+      "verse_count": 16,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/why-latter-day-saints-build-temples.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/119",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2c2a11a789fa213172a66d327430c9bbc0747eb6af6a0c26de27ce7d38432ea5",
+      "data_sha256": "71eb308feaff5d52fdd0b01a9bf086ebdf4e206294633983d77c5305f191c293",
+      "verse_count": 7,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/121",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "62247b143f7561eccd2f2de59e4f41130ad823290a139a52791ccc1a583ef6af",
+      "data_sha256": "65c038e9febf6f0e3d05e11e040528d46ab9178e0d827c1efc6b7f0fa071b6c3",
+      "verse_count": 46,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/122",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d1311b832487ba08529fd9088ef1988b6935317549a67fc34fa6b3b36a426cbf",
+      "data_sha256": "b19aac6996f57d87957263439ba55ca1cebf4cf5ccadcf20eb7e18d57c993e6f",
+      "verse_count": 9,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/128",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b8c2ec7c395f92f6f3e0c74473faab6ed023ce1808fe167080b1b470f5dde769",
+      "data_sha256": "cc486edd901a0f1a423ebe83d11405419062ab715aeac8fd063933c8b957d169",
+      "verse_count": 25,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/13",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/13?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e93252d2994436819d14477717219e1332c1fca2bdbeba4d830d1fe5397f5370",
+      "data_sha256": "512a0abfac9f57f43a94142b60320e33fbfd1cdb4e87155ab1195c944589dfd0",
+      "verse_count": 1,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/130",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "cb3b14ec21394f94fdec23f3a6a1f321516a7245d82b4d5f264dec0a7ebbc18a",
+      "data_sha256": "55c75cff14984dfdb2844d78b7cd4e18c643e2a008e16ff89679c4b138f2c5f1",
+      "verse_count": 23,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/131",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/131?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "34a83e9f5506ea673c17712229353b20f92a0de39aac1dc5580abbfc54dc77df",
+      "data_sha256": "59e80194864b708ac4aa9e452e0aa92131ecbe5606a76dd2f607fc433e1dfa75",
+      "verse_count": 8,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/132",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "80c8b008f80d143dbbd63816969d7700987b3175de2ce70b1cc255224d0d775a",
+      "data_sha256": "761661b0876302c3e96972f51040cb77bee7fcd9879c92acf5512ad53000997a",
+      "verse_count": 66,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/133",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/133?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d3d8eb8bc377e0eecbc4c6da18361b6421236dde0bef479dcdab1632ee2cba96",
+      "data_sha256": "968a49bb161b7d3d1768269311aa9c6fba61d507714308a9ee5e906f6c9d027c",
+      "verse_count": 74,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/135",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/135?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2feffcc3cd34fa8733eda41574ebb76542be29e07a157f5dba7bcb03ce5fed26",
+      "data_sha256": "5bde7a0f5aa4ae23f294a44334d3d9082ac7bb9a115151ba7516806fbdedb86f",
+      "verse_count": 7,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "reviewed-ask-knowledge.js"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/137",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b1b251882a19924e3c6d22e6966dc8a6ea588c68130b0f4e01800800ef4c209a",
+      "data_sha256": "8c2e151fa4a236687a919f86c9d318de4a6a3639e91efc694f91fd472ce4213e",
+      "verse_count": 10,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers.html",
+        "answers/death-of-a-child.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/138",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "63c54b3585ee2ce1fd2399bef7ab1a3393aa81099c5485e88380dc41a64e2b51",
+      "data_sha256": "29ad119953c360ebe554b2076416768b2d470fe562b02a63d772f83c99bb3607",
+      "verse_count": 60,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/what-happens-after-death.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/18",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f5de17d100d95625bdb668e4f89bb39137c4b96f8939c94cf766b96ce6d7bbbf",
+      "data_sha256": "23fbf331950e7e9f0e3e5cddee424415193fb307d82b00af4b5a92930ac48b43",
+      "verse_count": 47,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "groq-proxy/src/index.js",
+        "missionary.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/19",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "1bdd915a1610fa091d1092b23bae5825e3467ecfb485456d59243f9b038dd006",
+      "data_sha256": "f14beb540acffe0c0e9c93c37edb782940e85dacff47951556bd3476429291a3",
+      "verse_count": 41,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/20",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "90eed02be837ef3d94534a7b2b4af9cecf366e66a806c48c04b25b2e97a44484",
+      "data_sha256": "d3d70873245a77b51c5c7c01008390567602d8e8d1102e41bc77fbd36ef8a3f6",
+      "verse_count": 84,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/27",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f9ed2799490a52c1303c6268685c8887124978103aaec8fbb1ccd2dd2e26ea5a",
+      "data_sha256": "8ad0b4bcb0606452bfa83bfe5d2f5b75ff336b8c94c025aaefcc85e7511235cd",
+      "verse_count": 18,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "3d64c95b6f056687dc152cf2541fb165eeba29f82e4980cc043333dfac1af7dd",
+      "data_sha256": "916e01625ad887adf525cb5e00a91e12c6f34a088c97af38ce1ad81f27a59fd1",
+      "verse_count": 7,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "missionary.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/42",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/42?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2c74a9ace3759c1394f469ce1560e720ba3b23ce0577c38b46fcdf4420a70392",
+      "data_sha256": "1ad4e2e421531e3f1e7e8c413c47241c93e99481e6508cba7189414dd038d30f",
+      "verse_count": 93,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/45",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "44e80ffacbc993a2c1c664b05ea42f5316eb1cb1cba550bef4a216f1dab1d029",
+      "data_sha256": "aa888fb4b0a4ad502322b550ab85afc5e43ab485038eeddd9377873da049192f",
+      "verse_count": 75,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/46",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/46?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "db6fe808c4cb2a0207d6535d4b086ad408ee05021341182a348d702b897a6e53",
+      "data_sha256": "60ab5db6fa61a52cf9058635307cd010be96f8bb61a9b7f677addc277a309390",
+      "verse_count": 33,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/50",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/50?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "adcbd7d14f6782ff523392a48d78d42c86b417849b25dc92313d84dfbfc014d9",
+      "data_sha256": "630e04c84fc33605b89aa3c02b8fb7304dffcf40cb99644db4290c4a9fc8db0a",
+      "verse_count": 46,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/58",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c2c0e94be4b6ca8730a0a64b5611874f94a654f75f6a654a5964e2823c9b9b24",
+      "data_sha256": "ac7a1559b162c55dc233db886f17f7c606639d358172a6edc1ec9dadc5970d25",
+      "verse_count": 65,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "art-study/be-still.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/59",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/59?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "76941480aae943f64e61a4fb325e9d9b5fe1cd76a22a9f6fff0ab3fcd02d9885",
+      "data_sha256": "5e49dd94516b964feec0b15e6cab1679a4b9d31fd383bd9dbfdd5457c1d1d3aa",
+      "verse_count": 24,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6d4a6c43ad51b6aa078b311ffb0cbda41fb134e0e2b7f250e5c339c1582564fc",
+      "data_sha256": "37ffe396881cb0f4ecc808951ab90e49b6e502ac042dec6b2ee4c0722e97b7ac",
+      "verse_count": 37,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/who-was-joseph-smith.html",
+        "ask.html",
+        "index.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/64",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/64?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b5159e1548da0f546f4edbc364f7373c2bef78729a635f9267ce5229f425b17a",
+      "data_sha256": "28cee4364a258e9ea86d7e2bf8f7edd59461279ce47e21cfc54e98113fd849a6",
+      "verse_count": 43,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/68",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/68?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d3ed73283a2f6f813470a28db3f6c41ba2770f27ee8cdb138b606ccdcc4ed112",
+      "data_sha256": "61bb71483f39abb15abca90e4e840c8e45731ff490ca0a8962a416bcaeabc25e",
+      "verse_count": 35,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "416830d2922fe627cf2f868362d3c852cf19c14e019f5a7b355f650bb155f3ee",
+      "data_sha256": "81e821f1dfbe5008825b16139d1d17fa58550ae01cb58e8e1e8ffaef8835700b",
+      "verse_count": 8,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/76",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4f2dcbd0bf9d873e18245989df932ba69828b36e2523c9a3ffbf999c968b8bda",
+      "data_sha256": "a85523de15496d23ec75bfa7d72e4c6802d7697a58b3d09d81609c8c11797d56",
+      "verse_count": 119,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "groq-proxy/src/index.js",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/8",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6874b2366e78a7b1747ad399a0c2f2e343c10dabe2c47ffd364942d35d9b7728",
+      "data_sha256": "fcfdbba263d7e4ae2b6a9dd3403b097dd49c3512c03108fae7f3c6e7e25d9cbc",
+      "verse_count": 12,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/prayer-and-personal-revelation.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/84",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "12b10305b424551e52b101f404b8d302824525020b584b4ebe80ffa0e39a0bf1",
+      "data_sha256": "d75b68e3c29af91958f9e143f97699311569a9663166623e7c6138414a6164ac",
+      "verse_count": 120,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/88",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b7138376be24e89a6d5761cae47a5ee03bda97d09b19041de8e1e99a819be299",
+      "data_sha256": "1e914e42c8f3bc0f5ae3e5e1d18638bd6ba2101f69da14bba675137d3e2e749e",
+      "verse_count": 141,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/89",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "78e9d29fe8e3f80600d64473f6dcdac88ca89fee2d49096522011515028060d2",
+      "data_sha256": "284e906b3ea8b830554ea41837f768d837a500978487acd93e068cea22bf72fe",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/9",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6a39562b57038b922265b9368cd2fd32af508aab97cb2f217ce65ca760d97005",
+      "data_sha256": "4d602cd78eda6b84a4439c27e188c3b4f35ca5f5df7656e6ed69b297473b63a5",
+      "verse_count": 14,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/prayer-and-personal-revelation.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "dc-testament/dc/98",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "68b298566c06937807e3792d7b30ed940563448a92629dd893e4bba1fb5ce9ef",
+      "data_sha256": "603485fd6002b0fd87849cc3f3fde1ca7fd7006316f7059c811e095f8fd59bf4",
+      "verse_count": 48,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-cor/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "49426c8a11f462c0324e60f6e3cde9567ad1d10571b3c8bbb5c3b605941f7d97",
+      "data_sha256": "2e293af9382d3ccdaf905f70aba89d3acbbfb0bf0de896df07949bc68e8b16dd",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-cor/13",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/13?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "937ed379dc265d629a7a123cb8e38c5b6055149d75aac486a582d57622b47d38",
+      "data_sha256": "22ae02d71f1cd4feb6f8b89b316ecb06072fbcc35144dfb1e03edd8efa2329ac",
+      "verse_count": 13,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/bible-and-book-of-mormon-together.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-cor/14",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/14?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f78f14032e42e6409d44d616e7d4763c23616a78605a8fc43ac6cb4311822f34",
+      "data_sha256": "28c2009b7dcea3863780225e24707484a9a6410962bd05d62a06a23e7cedd4a6",
+      "verse_count": 40,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-cor/15",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "13226f20174f713e94ad4b671be5b36234a541d7de09d341289285c473f06276",
+      "data_sha256": "9129ca08560120bfd311c60ce1e15c56c48e10e3533dd88d79ff2e5aacf29780",
+      "verse_count": 58,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/what-happens-after-death.html",
+        "art-study/the-living-christ.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-cor/16",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/16?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "072d877d27ca599aea393cd32bbd60e7031b491fb5b00bf5f8ef3e6a030499a8",
+      "data_sha256": "47cafc98e172e07d749ab0dda55457e1b6b0a1f7266cadc1c5f9a8b9e85f8c24",
+      "verse_count": 24,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-cor/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "dd8ef2d586ca941246dfd707df4af46ae04a7445e847a49d2dcdb655f41b85fd",
+      "data_sha256": "f8cd08f7011aafea1b197af8f24a12f6ec58669ca9020e1198625ca4f56f6865",
+      "verse_count": 20,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-jn/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6434a04e7598402e899e364155fc8154ba1c5fb5da514881bf91f9505bfd228a",
+      "data_sha256": "aaf01e50e99174f1008c25f9bf1e5b5db9e1fde58f852e8f3ecbf54b7ec1055a",
+      "verse_count": 24,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-jn/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-jn/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4a8ca09aa37a35d1ec0caa25fd231e1168d207f11cf8bc6bacfd8558ef5979cb",
+      "data_sha256": "9140935dbb3c4bbed1417e863b41f8fbb0d188b5714a726ef84b6838c622dc64",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-pet/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e24e1bf7c03a071dca513c418e6256c872262eadde7ccd375aa3eed2a8a70c18",
+      "data_sha256": "647a95f97e4be02d49d98ad3e460089ad0a9bc177daa9d35481e49ea66f751f2",
+      "verse_count": 25,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-pet/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "3f0d186f51dcb7ec6c68edb9f41f173cb00306c3c0a97b8225282e2d46c42c8e",
+      "data_sha256": "816f6304ef83f0f649c0c2c753b463bae1182f9cbe9487bca757f557cd5bcbeb",
+      "verse_count": 22,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/1-pet/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-pet/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "fde480714076dec21de2c81354b104bfdf65fa09a2d2020c368d1d6b61248930",
+      "data_sha256": "a6bdaa557d5806e31aa049e317267c4058cb9a42075c9b992e8a7f3cdacc4b3d",
+      "verse_count": 19,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/2-cor/13",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/13?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "89c6e94c88c73aa4f9b379c98962e5a7368fd83efdaff92508fd5fe136798f28",
+      "data_sha256": "3d43becb99e98b57e0985d38555ba0e4d21dc86b50d0e5f52d7126473131537f",
+      "verse_count": 14,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/2-cor/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "98d601566a7428c5029a715503a2cd47d5a631497729b50c62a7e57f5e236351",
+      "data_sha256": "5f5104200423200941fc091d1bf880fbfe2d9dd6da8b2ffd4b3780a887679897",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/2-cor/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c68b964bc756c45436ae99f96ee7878c95e1e431913a35db7c1a8dcf90c2ce51",
+      "data_sha256": "77c36e6c3083e8fc7a91c24532b782b930d9a407da89cd2ff92e570ff3fcc372",
+      "verse_count": 16,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/2-thes/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-thes/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b5d026cb86fa26c9eafdc1fd9524a29987ed4e899c7e7e250cd1cbb2e01eeb0f",
+      "data_sha256": "ce80b421f91c373680bf5adefb7f19ffeb4b188f5be86664b88dc4fa28bf6ebd",
+      "verse_count": 17,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/2-tim/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-tim/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "23d9ed3274e01fd1d16fba0856b1f7e46bed3a4c84785f2b30af7e26edecfa49",
+      "data_sha256": "27585346900d403542574fe99ff1bcd6361580946ad41ed81ddeedc2a7a78137",
+      "verse_count": 17,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/acts/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4878cf5f25713e9be348a78138dc42aee6e413e73f797002ba194781850a8a80",
+      "data_sha256": "929b0127c1a706a915d1a30b462ab72489f8b66503a892876528aa24056d8ac3",
+      "verse_count": 47,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/acts/20",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/20?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "434c91d012e13082ee1f08ba48bcc8dc2328d3d54ada3c7f1170bfe8d33d5a29",
+      "data_sha256": "9c6017ded7f57114164c144efd82d7c626bd23c757c2dd318521b84cd49a16e0",
+      "verse_count": 38,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/acts/8",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/8?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "0eaadea18c16d11832e272950f3ae924d43e99b6ea7e9ee3cc7cc12165605db2",
+      "data_sha256": "2295cd64a43689b8c64bd92a032753963e45a3c3b729947567ed15758e703749",
+      "verse_count": 40,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/acts/9",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/9?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b11b2905dda497341caad19e42d46b93049bb61f6f30d2e84201babf555dd55e",
+      "data_sha256": "38603eaac65cd0b53ab365755e1cdca6fe29ffbd2db7b0b3ad8a4fa71676254c",
+      "verse_count": 43,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/col/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/col/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c0965d69c603024e250845d9e4b35b1a96f6849c25210c4f7c9547dcbbb34f5e",
+      "data_sha256": "ccfc364e2262f5157838142f89112dd6714d05d3c4d2631aa4bcaf42aed64a8f",
+      "verse_count": 25,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/eph/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "61de32d4ba65bd94faed46eb5a2e3ca26e37c16d9718bd8c8a0c136bbdb896d9",
+      "data_sha256": "9c4caf40367ea62b797348d540e6f2725c03a35470fa91e8d66fba4911bcc63a",
+      "verse_count": 22,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/eph/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6f00b230c9fff188a2201c288d84914c2ee2547946deb87591d37fb7b8822f65",
+      "data_sha256": "7750acf17994368b5eb518e46cbffd13ae25ecb8c75aea5d3524b602d1dbe73a",
+      "verse_count": 32,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/gal/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/gal/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4a4627829d016d031b4cd5d6027068d63e29013e518db28849a4303509395a46",
+      "data_sha256": "c9d2e426ccff80b337bccd1d2d12192e65eaaebf2dee66303ff318538586b90f",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/gal/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/gal/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "db3da6df4950b3682ee088f28795eef740f557d8d410b879d7e1e9468a81a7f2",
+      "data_sha256": "29e1504a6990136e4f2dde04d0a7c49d3377e32efedb006bae9a30556860e01a",
+      "verse_count": 26,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/heb/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "fb08aabdbaaf93fcfb30f2dcdea6259e4a755e361a7b6b134ac0043c6c65d57f",
+      "data_sha256": "c3638b55f782c2455372b9843755513097012f4c936e0545a9f99b76407d1231",
+      "verse_count": 14,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/heb/10",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/10?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "41c7867b8e7cb261e5b72b5db0545755fe43a88767410c79ab4cf3f1fcf072ef",
+      "data_sha256": "f1048bc7b6be8abd8a55ace955277601dfb5b7ae346a3d589532a98eb3e4a131",
+      "verse_count": 39,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/heb/11",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/11?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "cb576422f3134a06c97e462b1cb57e205c72354067713532cef7bed7a7697cd2",
+      "data_sha256": "baeff55306d2b3c68771f8a1baff190ae3957e7a27f81e5df8eb00f8652a6163",
+      "verse_count": 40,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/heb/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "1771e0b428e54a45c13b9b5a41ec8ccad423f53dc1aed5781f0e4aa30f000c07",
+      "data_sha256": "46623481b71278103874df3ed78b9c15b7659e8733652b8fba8b2a828cc3a28e",
+      "verse_count": 29,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+      ]
+    },
+    {
+      "chapter": "nt/heb/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "addfa9d19167da9b3e2cdeccb58b35f355e0ece52103e7c5bc09cf7fcbaf8c25",
+      "data_sha256": "ee7a5dd3f7704033ff53aca7c16900affafd17c5fad44254ad7e026b1069f76a",
+      "verse_count": 14,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/heb/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "35f36e7564fd9b1a9e376e3c5a944e60f7b9c6add3d689293cefa7aa834789ea",
+      "data_sha256": "1067ae115ed0d8fda9a6d706342829343a5199e951f66283b175746171279dc7",
+      "verse_count": 20,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/james/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "acab44f9f34706e7e41d45c283dc03603fc7d8a842466f438b1ff48caf51c6ad",
+      "data_sha256": "9ef0ec725119e3dd48eb3359285cbeb2ee078d30c42bc84f535199f77fd4e0cc",
+      "verse_count": 27,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers.html",
+        "answers/prayer-and-personal-revelation.html",
+        "ask.html",
+        "hero-details.js",
+        "watch.html"
+      ]
+    },
+    {
+      "chapter": "nt/james/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "a04451a0489267bb5e7e581ffdd38c24d0209f68602d6fab962449a268503a20",
+      "data_sha256": "4207af267bbcd659e1d1ef1fca04cd1d1a6044f0521300701d3edd64392209d8",
+      "verse_count": 26,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/james/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/james/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f959fb7a39884a62fccccc7673c9d812a7588186073d6bf6ce0a8c3b75d2ac6b",
+      "data_sha256": "f7a85f03ecb2c6901001e110ffbec1881713f23a8085687ff7b4279183e1c866",
+      "verse_count": 20,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c432292331c9f3d8dad0f32f406058dd43791fec4e14a108dbfaf6d05ff0ee28",
+      "data_sha256": "b4458c5eab11e19966ce617862b977e4ff5277510caf394159e81417d72c6115",
+      "verse_count": 51,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "index.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/10",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4a29f89d94bdd6c550c01a83227309e59ade4d70b432505a637c2fe64f8ff2f8",
+      "data_sha256": "9fb029a48181883cd6bb11e3ea9caf2d89dc1da7a520cf05323e070780c9832a",
+      "verse_count": 42,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "art-study/the-good-shepherd.html",
+        "art.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/11",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "00fcfb60b3af44e778815dd49d61fb7e99e67fb3ddd92ebc63ceb52b8445fac8",
+      "data_sha256": "5fa4404d548fb3b1eada4e741b34887c589b524f26206bd3538053a4e46df164",
+      "verse_count": 57,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/death-of-a-child.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/what-happens-after-death.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/13",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "cb3153932d67db539b7330300a39e6c6e3c8ce9083836581d0e27d1b4a8beaca",
+      "data_sha256": "5f91b85f5fc81d5d1088c5db2588e387c1b5b59560f9b47660b8c746e2ab36b9",
+      "verse_count": 38,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/are-latter-day-saints-christian.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/14",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "84ae920032a3aacd3c15f7900982d7cdd6e16f4b7602035635d1cd34a12f025b",
+      "data_sha256": "b7e4b41e839bf1c68665f3f5943c0babb181e30f342230d0be731875ea737866",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "art-study/be-still.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/16",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/16?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "53909478a961ca8ba431d69f5da12448479be72ee21724f223666700a1e37236",
+      "data_sha256": "4f727204789988572d2e90d3472c14777fcd46f0561e10b1f0d08795886f9998",
+      "verse_count": 33,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/17",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "532bf57592ae1945083628a4a562dc922e2528bd89fde79333e1c7f16fd7709d",
+      "data_sha256": "194d6496fe89b2289dd82663c8c8aa47754af78a6ddbe81f3b3862cf57eef502",
+      "verse_count": 26,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/are-latter-day-saints-christian.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/20",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4d836721c1c4ffbcd9d8b7a792afe89719eb7bcfebade4e0f0c8d58d4c8a8f05",
+      "data_sha256": "efe366fd07f7bc7c743911b54b7192b0b0b948df43e58c1affbd876611363915",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/what-happens-after-death.html",
+        "art-study/the-living-christ.html",
+        "ask.html",
+        "hero-details.js",
+        "watch.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "a42eb5cf369655986559b7944b3310ac59e1ffa1a6c0584b17d524f84f9b8f89",
+      "data_sha256": "a3f995a1340ffd36edf352ef80682e939edb031636fe1079bb3cfbddb4866244",
+      "verse_count": 36,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "73c820504c23517f70739b3c8ac48fb9fa0f76490c38eb24229d34471335d13d",
+      "data_sha256": "e43aaf5c1f3e89a1b1e9dfda98a6064521bfd724ee61c12fddbe0e31b34bdaab",
+      "verse_count": 54,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "ecd27681f6f2e225722d0c37a6a7b75bf381c64a82b4690e852af6244d40b3a7",
+      "data_sha256": "f7cf8f46436aae4b3c3788d558dcc3ef2dca319dd1960dd226e1ccdf4e90b38c",
+      "verse_count": 47,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "index.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "848b893aebcbe3d880e3c6f0562e13dc35315d394aaad9a36f204caaf57bda81",
+      "data_sha256": "c4bc0c323971a0cd04ecad0bbfe5a1ec075c84c0d2375c47ecccc51d1cab5388",
+      "verse_count": 71,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2b4e9b500d6d8c340754ce5bd3c11ae8b9419951eb46c46a29edca8d2a15db18",
+      "data_sha256": "4624e2df67a14bb4242b1797869d9ae1298395003e8e915e3eae9f2d661cca30",
+      "verse_count": 53,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/john/8",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/8?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "54af5058196149991e910224da14ab78c2cbacafd74f8ae030a730ea952065b3",
+      "data_sha256": "3e071a564fe37a7ca187424d698370f8a7aefe30d1a9b465aa1271551e72ff53",
+      "verse_count": 59,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/10",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c658fa7dea39ead1e558fb054c87436e8442fd4a8bd5a4fc913d3434c873b978",
+      "data_sha256": "a38076a656a6471ed1db11b173543b808d5241bca9f233fab08b5fce5f4b1ff7",
+      "verse_count": 42,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "art-study/be-still.html",
+        "ask.html",
+        "watch.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "1d0ba290421590533e365e97f46d1148db05a82e45c56d02e35cbd5dab23dc4a",
+      "data_sha256": "3b2c58a9fd685b1be9d0edd3fe892bbb1df70c0d87d83e4785c2f5dfe757f5af",
+      "verse_count": 52,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/22",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "fe903049b186349526d6faf4842494ce967c2633f4d28f49870f04c6195b5526",
+      "data_sha256": "ee389a5ea7f456c43f5cf817a76e263d9408e3976c0ed2d8e2f58f1ebc91958c",
+      "verse_count": 71,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/24",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "262825aed10ade0c8ef52661a9118ebe925c34dd49376397218f81174ddf68f8",
+      "data_sha256": "58711be10378169156ba6a8699353a9d6a93e73b10025308191f0af95dadbf1b",
+      "verse_count": 53,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6d8130e5d805cc74841cf189c81c2f55b8a27e2190e3d16744f216a9385e825f",
+      "data_sha256": "99b1aeb32120a03211c65ce562d2eabbc0ae1fb0cad334da2909b27ef782423a",
+      "verse_count": 44,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "5deb026ce220a92a2658150c1ade8418545de8b997e5758cd80d7d42904e43d5",
+      "data_sha256": "b8ad2f2a8ea945fcef6482351505cb67ef0c6e236a69c01a03946bf790447ccc",
+      "verse_count": 49,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/8",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/8?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "7b6b20e513f4bd8a3a2aec601b322427237dbe58c0c6071b4aa66e3c30c09657",
+      "data_sha256": "b5563becc9573d8e0b707802f537abcc72373314e6c95b67637a0d153cbe47ca",
+      "verse_count": 56,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/mark/10",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c3e03be84b251078eaf13ebce861f4054f5f02b27cc940c0bf75018fc03a12dd",
+      "data_sha256": "f3260aba8d05b44f890ee74c91b1355f037c06674de9235e55de29949cddf29a",
+      "verse_count": 52,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers.html",
+        "answers/why-families-are-important.html",
+        "art-study/suffer-the-little-children.html",
+        "art.html",
+        "watch.html"
+      ]
+    },
+    {
+      "chapter": "nt/mark/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d90a6b52cec1f433ebdffa6b29e5b167c4ab744120a0c1b21a035506c65cbfc8",
+      "data_sha256": "eea329389af2bf2d01157ab9b3d44c5172bc22e45f6338a1a38fd8ce421209dc",
+      "verse_count": 41,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "art-study/be-still.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/11",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "1f346a0c85ffd8a2992b7f8f21404530a656e71023560070e8f84c619aefe9f1",
+      "data_sha256": "2049461aa79e14d4d47fdaee1d5c7ae8ef5e05bcf20457ac604c325e2a0e6b04",
+      "verse_count": 30,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "007d69988e8cd6b60cb031814a927990cbf695a9c0c7243f04391f0b66e2a622",
+      "data_sha256": "7053bb009ba41186551aa200bbd646e480d17e34d310371703f9f1fa49991a73",
+      "verse_count": 50,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/13",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "1fe7245db05e7686262373bf255ef1223698a95e74ff3f4e59cc6ed9cd8c5ba2",
+      "data_sha256": "7b3035e793e948d6fff92b5a17ec65b8bf0c4333ebf38c0ab54350f22ddc5e37",
+      "verse_count": 58,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/14",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "12f60a316ed33efaf0ed234ce68e2d7921f8392b2baad35fefb8717079c1b550",
+      "data_sha256": "5a9f5c769d1bc51226707733e6f068ed1c16f642776c4895a59d51acfd0a377c",
+      "verse_count": 36,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/16",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/16?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "97cd2c742f825f71d0a4fba300d64df12eae1c9bae0ab8cd4f76aa425e4dee0d",
+      "data_sha256": "ffe918d844a802c74c46dd432a12ed104757d6688b5b77b7d66f46dbe5aa9de8",
+      "verse_count": 28,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/17",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/17?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4000a266a1218e2e6eb1d14bb4710ccf8df7d535e1363adaeb594c476bb247fa",
+      "data_sha256": "834eb18d7f80f492fe1c8cc7368165c8946aab91072faf60ccaaf66e20f40075",
+      "verse_count": 27,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/26",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f4227db8744f4f3e3e06d5ff499cb1f3e91664bf42ba2f26a32f9af31a8cd65c",
+      "data_sha256": "18b5e040e096a7b8a46c7a9a5c3643efe29c3285dec1c4635409c42aea28f8b2",
+      "verse_count": 75,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/27",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/27?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b2b25b946394e4726704ef7c0eda143cf020ded919ade20dd0674bd1c4219b21",
+      "data_sha256": "80ca5fe78ac48d063beb3d705bfa5f177d31c526f99b1a1eed3a8c6f0daef192",
+      "verse_count": 66,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/28",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "5081e1c828c71a28c57bb60dc7d6a5b9e9289375fbcb81fe328b591f21168fa4",
+      "data_sha256": "83c1e76cb05fd0764a276199530e1ea32314ea63a373af1c5b99bafe25629901",
+      "verse_count": 20,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "hero-details.js",
+        "missionary.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "0843e899718805191dfb80b5ddee512d623c72be653c81ff32ede336e5d9a301",
+      "data_sha256": "74f06839505fb8a1eb0c0ab3db2eb120b3e928d824edc8af6029d6b5a0f0cdd5",
+      "verse_count": 17,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "62dcf73b1f988a3eab320e36e6ac6f244b2c8011342e4633b88d0290daea5e2e",
+      "data_sha256": "5e5e6fdb078b7812113c5e115c854615af5f5c5e32608b821e05a585b0e92e7e",
+      "verse_count": 25,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "f81dc7e7accbf011b88f167fe5c85bd6e1c46fd1a24f0d93a39be7c6d0f99229",
+      "data_sha256": "1a557c5451d9e6f8e3a886d0d1a675da2f2abcbfdf8c50829c6b9ce095a0aaba",
+      "verse_count": 48,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/bible-and-book-of-mormon-together.html",
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "406d02c7c9dcabefadb97e90630c765c44ceee235c9e0e855eb93f43135c730d",
+      "data_sha256": "27acaa49d3cb9ed78e6fae7cc47a6a3fb9b5231357ee36ad5145669d75ba6935",
+      "verse_count": 34,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/prayer-and-personal-revelation.html",
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "48127e7378985380da8d6ac674a51c25b93020a08a31af80745e40d1d8c3fcae",
+      "data_sha256": "723b89b32b5f5e7f3d0cedd0ea741c47787c226c99d12e5dce6d9c4e57a3c284",
+      "verse_count": 29,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "hero-details.js"
+      ]
+    },
+    {
+      "chapter": "nt/matt/9",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6381989ea9e0ccbbeaccb0af85231143a75b0c7cfd7d87ce87af01774703bfb0",
+      "data_sha256": "31e757666232f692437c992f77ba2cbe303161375f1e36a6ab0fa9f233f7cb3f",
+      "verse_count": 38,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/philip/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e62b86b876c735fd46a84634e28ff64b43a8ecb4fcc755cf05e112393c07601c",
+      "data_sha256": "c7c8d0a514ff29b7b379062241d7e7c648ed86c20853cc0e1d48adeab6d31fd4",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+      ]
+    },
+    {
+      "chapter": "nt/philip/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d3db4fe928e3c7d1d032ef0e692da826a916cf494271fa538d57fdf264bf33fc",
+      "data_sha256": "a6b89f22f91a9b2979478178a9bf33532dc95ed679233e237014e631b3a825c5",
+      "verse_count": 23,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+      ]
+    },
+    {
+      "chapter": "nt/rev/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b16de98b9e7a3122302d853f8a6c9603bfee6c2d749ba7db5ff6daaf98a5263c",
+      "data_sha256": "06a212957d137af7cbfd39de207a1be9d28c87a6b8257d81acebd9b8365f5c30",
+      "verse_count": 17,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/rev/22",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/22?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "12aec5dc5d1cd91cd0a05e8cc805cd6e04f5342a41e1de4fa0bc8e0d4b787b79",
+      "data_sha256": "7ca2f2c0a202318b36dcaf952dad3d5673059cb95d0c5d655121485b9bcd61ca",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/rev/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "74c506f885a83300a72baf289facc05ca7c4a0293bf00b137199060fec1a2b04",
+      "data_sha256": "41b51dba2c88c40aa3452bfba84d1b051c48cb0f6c1b0c9bd836ccfa83ac4007",
+      "verse_count": 17,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/rom/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "77751ce30afdfb7d94fa6d445a0fdfc14e986acb48bf26021ad236498743459f",
+      "data_sha256": "ca1f4bebdda8bc6d577e97f75a47c953f2b3c99bb11896ba485158b19a685772",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/divorce-and-faith.html",
+        "answers/why-families-are-important.html"
+      ]
+    },
+    {
+      "chapter": "nt/rom/15",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/15?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "835ac2c4cac1a1af97a35d89bb85887d4f37c04d6b5b20e87a606bfff8dbe9c3",
+      "data_sha256": "4bcf8ed4d3a21ec4cbade06cabd4371344456ce8d5adaaf5e69847eab44476f4",
+      "verse_count": 33,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/rom/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "ca00d076e6553a4425d4662bf9a5a7c324cc4c8273007883b4c8656d96fd8873",
+      "data_sha256": "88141bb389dd624935856e93591892d779ba33efcff33c65a7d674bf4a462f6c",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/rom/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4349d7934c266faf16687cb3a375e4a98e913172254f76f7bdb9d91b190679d0",
+      "data_sha256": "2399709ba1f17ffbe4ece881254fb778128119c537217b67adafd72c7ed2bac6",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/rom/8",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/8?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "57af24afc773f1dc348b3cb967fffdd53652d51bcfa73ca59862c3d14e50d524",
+      "data_sha256": "322e05d7ee22944ee89bac115ffd487d44048b7a0e7d83bc1646bacdc07dc122",
+      "verse_count": 39,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/titus/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/titus/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "dd02512cc7bd0d5b3286c2dbeac20db231c35d018c9d288a53205ad6681dba52",
+      "data_sha256": "982c036acdb8f87552287a841902d1704fef258c7ccb58ae0d992483f10b5c26",
+      "verse_count": 16,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/1-kgs/19",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/19?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "8c24236d72edd29d19f4fc4da190a407d827c333bc8048adf98c37795bf94fdf",
+      "data_sha256": "11b6a02e4c306e178230199c2a1bda92952f73902f35fc3afc2802a44a0c786e",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/1-kgs/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c88d34d0d86d3045a4d8e586169bcbae56d7a9544c0569950658507966e2b977",
+      "data_sha256": "3f81eda0d8cb373da67c4100f03910a6e85900f788a4bb394fb15e573403d880",
+      "verse_count": 38,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/2-kgs/2",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/2-kgs/2?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "75631eb05b767321d5cd0db728d78e8cdaca7db75654b590b283f0a4ba4db5c1",
+      "data_sha256": "b73ec9022ce931d877826252a3dca911b78e5ba6e212177564cdb45bb31b1999",
+      "verse_count": 25,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/amos/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/amos/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "be7d5e3b0ca7b2ed25ab73d16f577e022ec7c01206c99254adcfc87cd618b337",
+      "data_sha256": "ff8bf653992415861a37b98748d358d7203b005628b124a479fdbd5a242cc6db",
+      "verse_count": 15,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/dan/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/dan/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "adc6a6dced26768fa2ea0d29402a8eb05be8455d73b47c8192cc0f0d95f73c27",
+      "data_sha256": "ce68bae72c1d5a1c3471e31580933327f4705d346e03cd81ffa747a8f2c655ba",
+      "verse_count": 28,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/ex/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "4edf8fc1fee01084df75332571c8963db0c851c9f760ddb12d8d55caf1c67311",
+      "data_sha256": "d2d2c7ab3a5f126e8a6429aa57ef39252c5f2d4ce1be43b6f5311ae584a46479",
+      "verse_count": 51,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/ex/14",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/14?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "213d35c1573470886015a72e73be3f7f66698a036950804defb80f055432ee9f",
+      "data_sha256": "a55d4d27dec95804e126c2564e71323d2cad5ed0357b5f466177ec729d38f66c",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/ex/20",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/20?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "97f0eca09c951bb91a5f9decb5cac00f7c307b6d6e1e8d5bdbbfc5b458093bbc",
+      "data_sha256": "cb34bf8fdb88e1c0ced3e4094db6721ffca8182a67ba9881bd7809432c665f73",
+      "verse_count": 26,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/ex/28",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/28?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2cef36237bf840e913eb47802f4a007b11e7b13e5a0c931931fb38434e3a8833",
+      "data_sha256": "d73e53ca8df6b270e4f012e7fe1d445cac3437cf4ee81c9ab2acbf7b03550eb7",
+      "verse_count": 43,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/ex/30",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/30?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "320862285ec42def2709f14c270e5cbe42e0ea31a5767e3f92ec944872ff9cde",
+      "data_sha256": "693ee7d42adc331cc323a3fbe618ea79bf7c87806dfa6081e2d3f063023877e9",
+      "verse_count": 38,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/ex/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b9a9d350318ce5f5c6cf1907a04524b19aeec0c24fd39b1baa8fab9cbb8e373a",
+      "data_sha256": "e1422b6b6c5efb90fb0fb090b596753fa953662c619fd5a4982a40f5b5eb4c30",
+      "verse_count": 25,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/ezek/37",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/37?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "5a12ed1feff5485498158247221c83313771bbac3f77cb5ce87bd8d58e26dfd3",
+      "data_sha256": "2ddaf815a725df73d875a5062e274e03d84de1edfe60ecb33432caaac4d20a06",
+      "verse_count": 28,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/gen/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "82d767afc622ee2641b93c428a22e692c3b0b6d400cc90c5aa036cf8d6de6677",
+      "data_sha256": "45c452e656bae7c94a3628e80f3e247613cd43c750ee17c17122cd3f99f3f232",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/gen/11",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/11?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "925f8185de837b7b4dd9336158053521a9d161652a1214209b0ec8ed44060c73",
+      "data_sha256": "e6771153a1a3e8fec59d0058081740c9bd3045b15fa9e676a1f60281d5d47035",
+      "verse_count": 32,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/gen/12",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/12?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d1e1d28a93da5adb3f0daeff9770602afb94346f5b8ec76f2534b1b16be69e46",
+      "data_sha256": "5df13de77033ce0fa71957fc50ce45b4d9c3632fe41580bf89b98165f74a3f2a",
+      "verse_count": 20,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/gen/14",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/14?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "8a285c9535d16bb6325a43cb3bcc0c004a1839db749c2e6ec736390681ce5f25",
+      "data_sha256": "94667833764baf1be5696342608b1819cdf234373deb3ce41388c36fa1a9ac91",
+      "verse_count": 24,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/gen/18",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/18?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2c6194aaf41223798cf6c1cc851fca110039310956a9363ae05a1ace20aab63c",
+      "data_sha256": "146137523c42725c3d92b84c3adee5e5d272309452861a4a59e1a31efaab3791",
+      "verse_count": 33,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/gen/21",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/21?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d29e5aff94fc0f0db532113fc1dbcee7e0fd609ff40b3b7077929458e7cac3a1",
+      "data_sha256": "caeae042cf58a1289a7a31e1879318ef0198786c6870ac524000b2b6a6f47463",
+      "verse_count": 34,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/gen/32",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/32?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "1fe57d1e7e4837d961882d810b8a6cb6414fc6e319237027269c47e8146c5e14",
+      "data_sha256": "1f1d029a571b9164abd644daa1b6a0dd40b60dbfa4a85f0763383135e68b7afa",
+      "verse_count": 32,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/gen/6",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/6?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "6b1f6e6f1e956e4223f973e0ca5f879ed14b50c7eab02e654cb5d0b2b788b8e9",
+      "data_sha256": "3fd9b07726984ddd198c3003c9bca610dc5aac1c31a5ef9771644ab7b616844e",
+      "verse_count": 22,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/isa/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "5dcc2f6007145e927acae3c1dba6f57c2d12db4d5e48bc0ff164528856446cde",
+      "data_sha256": "3391c8368c0da434dc3795c3ff298b44ec1708c8cbd0e1df2be3da38889201ea",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/isa/29",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/29?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "04ca26e9e08bd459686c4698558213a129f37dcd7095d83e1c7313db186b64c7",
+      "data_sha256": "1e344bd9ce7e859091773bf292389ca5790e6f2b19c19a85b4ce18e41d95ce42",
+      "verse_count": 24,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/isa/40",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/40?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "1019e8dfd31edffb80fafbb7681f3e826756880c4a7b7dace1a8877abb073e03",
+      "data_sha256": "e2713410d85b5e2c58a9a9c3066c9cbb9bcce255c2f7c0b425c96ec43ec652db",
+      "verse_count": 31,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/isa/53",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "06bd1ec3f66d9e739f451511b9542a406aa5450e16916a0b9103a9ec7d94307a",
+      "data_sha256": "dae2e90e939841b9807b2954b7b4939641ea0ae70b2856a28345366eb2e1a997",
+      "verse_count": 12,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/isa/58",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/58?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b51daabb7bb0ba39abe4693694d8188e546e8f8cf2ceeda91a40b2b402cbfd1a",
+      "data_sha256": "6f12b9eb645ed8c4ab891f09be691015d5d3fa75ed9d3834da323db02e993243",
+      "verse_count": 14,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/isa/60",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/60?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "da49d4dc64f75be94c2fc170ed8399bac0e637d5060077d90f7da7cd4a340939",
+      "data_sha256": "e29583f041e283408bd3aad0e9731a3f1e6a5ebe745a1779f94918d85c3a21d7",
+      "verse_count": 22,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/isa/9",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/9?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "a6f7403bef48362dc3dd870cdf5349273ada389a61b6ed59d6d5fd8c5e8449e2",
+      "data_sha256": "ba74c27cb9ab65eb42483c32f99a5b166c3240edf0a5b883228ad9c04abede52",
+      "verse_count": 21,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/job/19",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/job/19?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "a48a74157480c926332c8e64d15380762bb6af68facc6bea604cf734c9571aa9",
+      "data_sha256": "732df59b15e8ff23536cf2993ec8b934041688d6711eb44c9bdf8f9110cb95e8",
+      "verse_count": 29,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/josh/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/josh/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "22efc9683b6950c36a2bec2fdf972c31b432dfbdb0df8008f8a7ec09ec6d295b",
+      "data_sha256": "8608d6a3adbb2067ee4abb5482328203032e7ed7412a5892cedfa0220830d09c",
+      "verse_count": 18,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/josh/24",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/josh/24?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "012c46a93e6807e59a582b418df244c2db4f045aad0b92a6f4dd3742ff688791",
+      "data_sha256": "f10363205016479ceaf49a93ef8c8b63c56748c499c463a54500ef465fe17ed5",
+      "verse_count": 33,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/lev/16",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/lev/16?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "28088e5422875279c24ed247bdabe3a72d681094e49506c1a36c9b5384c9e065",
+      "data_sha256": "ab0243c22f696e20d3d50debc828660795fd5b2620f58284aaef9b6c468c5a1e",
+      "verse_count": 34,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/mal/3",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/mal/3?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e622a2d46486352a6b9bfcc5c89c5ded54db081817c94cf0610f344d5acc27bd",
+      "data_sha256": "79c63156e8e4e248cb31798c9e6c6275d0ec6aaabf07f5d7339fb426e07c4d76",
+      "verse_count": 18,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/mal/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/mal/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "126c3c49737fd49adb767f836e0a7ca83149c60e6226df69e3fcc57d76a774e6",
+      "data_sha256": "7e840e8bac11bcfc25e91feda9da466cba898c3ca2838b0e1866bd92d1ab3c54",
+      "verse_count": 6,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html",
+        "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "ot/num/21",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/num/21?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "fcd56c5cee3099aa8deb8ebb142ee2c89b5e235421984aecfa93d52e6eb542b8",
+      "data_sha256": "a98efeb47d9667f89b3ed65510eb3b1a8aa13ecad1ed0ab45a03cea614a6e297",
+      "verse_count": 35,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+      ]
+    },
+    {
+      "chapter": "ot/ps/23",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "b61b90109d4444a9b424447b84ba554475e10c571adf353b48bfc23e2653d260",
+      "data_sha256": "26391cdbc69874fe56d0d327774ca7b53254c9cfa0bcc5112f69c2e0a7f8ffeb",
+      "verse_count": 6,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "art-study/the-good-shepherd.html"
+      ]
+    },
+    {
+      "chapter": "ot/ps/46",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "748c7a42b326002e3ebd4f7ce9eec1a699c2fe0b09ec10ec0110497077d1e8f5",
+      "data_sha256": "7a072a1577be11e9672ae336cd7bdfe8be8a898c2afa42e475029d4e0eab9b53",
+      "verse_count": 11,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "art-study/be-still.html",
+        "art.html"
+      ]
+    },
+    {
+      "chapter": "pgp/a-of-f/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "3f45f89ba75bb0e9f34c10878f031fe52ebae7c4a8b1025f4e8ce3961d5a05c2",
+      "data_sha256": "6dc12321fe0fe056e7fcbd5a9ca9957af59eee74bc15580ca083686d7c3e5410",
+      "verse_count": 13,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html"
+      ]
+    },
+    {
+      "chapter": "pgp/js-h/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "8e8a1bfd47f2738767ee7e6667e3998853ca6933ec9c2568a3824d72d5b06268",
+      "data_sha256": "00c4a42b0600697cd6d22af08dbd40f02ba6dd6e6f2ff3f5ab9a93be92235748",
+      "verse_count": 75,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "answers/who-was-joseph-smith.html",
+        "ask.html",
+        "pioneers.html",
+        "watch.html"
+      ]
+    },
+    {
+      "chapter": "pgp/moses/7",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "90de2a096a056bf646446fca0ba0ba95f99854fbeb86f5d18420fdde8c7be754",
+      "data_sha256": "5cf59ca4aea885f67bcb5d71a2a367f0067f3e8f3e66f55adef4cf944d79aaec",
+      "verse_count": 69,
+      "verified_on": "2026-09-06",
+      "linked_from": [
+        "ask.html"
+      ]
+    }
+  ],
+  "skipped_nonchapter_links": {
+    "bofm": [
+      "answers/what-is-the-book-of-mormon.html",
+      "ask.html",
+      "pioneers.html"
+    ],
+    "bofm/1-ne": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "bofm/2-ne": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "bofm/alma": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "bofm/hel": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "bofm/introduction": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "bofm/morm": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "dc-testament": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "gs/j": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/1-cor": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/1-jn": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/1-pet": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/1-thes": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/1-tim": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/2-cor": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/2-jn": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/2-pet": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/2-thes": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/2-tim": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/3-jn": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/acts": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/col": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/eph": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/gal": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/heb": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/james": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/john": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/luke": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/mark": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/matt": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/phil": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/phile": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/rev": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/rom": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "nt/titus": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/1-ch": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/1-kgs": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/1-sm": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/2-ch": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/2-kgs": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/2-sm": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/amos": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/dan": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/deut": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/est": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/ex": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/ezek": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/ezra": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/gen": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/hab": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/hag": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/hosea": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/isa": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/jer": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/job": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/joel": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/jonah": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/josh": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/judg": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/lam": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/lev": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/mal": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/micah": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/nahum": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/neh": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/num": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/obad": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/prov": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/ps": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/ruth": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/zech": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "ot/zeph": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "pgp": [
+      "ask.html",
+      "pioneers.html"
+    ],
+    "the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles": [
+      "answers.html",
+      "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "art-study/the-living-christ.html",
+      "art.html",
+      "hero-details.js",
+      "reviewed-ask-knowledge.js"
+    ]
+  }
+}

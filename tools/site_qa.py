@@ -42,10 +42,10 @@ OLD_MODEL = "llama-3.1-8b-instant"
 NEW_MODEL = "openai/gpt-oss-20b"
 VERIFICATION_FILE = "google3fa84a4b37862f36.html"
 HEADER_PAGES = {
-    **{name: "site-header.css" for name in CORE},
-    **{name: "../site-header.css" for name in ANSWER_PAGES},
-    **{name: "../site-header.css" for name in ART_STUDY_PAGES},
-    "404.html": "site-header.css",
+    **{name: "site-header.css?v=20260906-complete" for name in CORE},
+    **{name: "../site-header.css?v=20260906-complete" for name in ANSWER_PAGES},
+    **{name: "../site-header.css?v=20260906-complete" for name in ART_STUDY_PAGES},
+    "404.html": "site-header.css?v=20260906-complete",
 }
 HEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")
 

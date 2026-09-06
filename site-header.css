@@ -1,6 +1,6 @@
 /* focusChrist canonical site header
    Shared by all public pages. Page-specific hero/banner content remains independent.
-   Harvest Sky palette: translucent twilight blue, sunflower highlights, parchment text. */
+   Harvest Sky palette: opaque twilight teal, sunflower highlights, parchment text. */
 
 .nav[data-focuschrist-header="standard"] {
     position: fixed !important;
@@ -13,10 +13,12 @@
     justify-content: space-between !important;
     align-items: center !important;
     z-index: 1000 !important;
-    background: linear-gradient(180deg, rgba(10,28,37,0.90) 0%, rgba(15,39,50,0.62) 54%, rgba(15,39,50,0) 100%) !important;
+    background: linear-gradient(180deg, #0a1c25 0%, #102b36 100%) !important;
     border: 0 !important;
     border-bottom: 0 !important;
     box-shadow: none !important;
+    box-sizing: border-box;
+    transition: box-shadow 180ms ease;
 }
 
 .nav[data-focuschrist-header="standard"] .nav-logo {
@@ -278,5 +280,36 @@ body.fc-site .fc-history-message--assistant {
         margin-left: 0 !important;
         margin-right: 0 !important;
         max-width: none !important;
+    }
+}
+
+/* Content must never show through a fixed navigation bar. The opaque base
+   above also protects reading when JavaScript is unavailable. Scroll styling
+   adds depth without changing header geometry or moving the page. */
+.nav[data-focuschrist-header="standard"].fc-header-scrolled {
+    background: #102b36 !important;
+    box-shadow: 0 1px 0 rgba(240,195,106,.32), 0 8px 24px rgba(4,16,22,.20) !important;
+}
+
+.nav[data-focuschrist-header="standard"] .nav-links a.active,
+.nav[data-focuschrist-header="standard"] .nav-links a[aria-current="page"] {
+    text-decoration: underline !important;
+    text-decoration-color: rgba(240,195,106,.75) !important;
+    text-decoration-thickness: 1px !important;
+    text-underline-offset: 7px;
+}
+
+.nav[data-focuschrist-header="standard"] .nav-logo:focus-visible,
+.nav[data-focuschrist-header="standard"] .nav-links a:focus-visible,
+.nav[data-focuschrist-header="standard"] .hamburger-menu a:focus-visible {
+    outline: 2px solid #f0c36a !important;
+    outline-offset: 5px;
+    border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav[data-focuschrist-header="standard"],
+    .nav[data-focuschrist-header="standard"] .nav-links a {
+        transition: none !important;
     }
 }

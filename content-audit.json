@@ -9,28 +9,42 @@
       "path": "404.html",
       "status": "non-source-dependent",
       "published_text_sha256": "5cded631e2fc80698b5e5f0ec976684d5d2351daf920753393871c2daed31e90",
-      "reviewed_on": "2026-09-02",
-      "review_standard": "L-044 universal source-integrity review; Missionary recovery path added Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js."
+      "reviewed_on": "2026-09-06",
+      "review_standard": "L-044 universal source-integrity review; Missionary recovery path added Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all"
+      ]
     },
     {
       "path": "about.html",
       "status": "verified",
-      "published_text_sha256": "703af7fa3fa1ce42439072b1f26dc836f72a51430956d9d50f08d2fabe15bf68",
+      "published_text_sha256": "6dd5fa9e01f60095226dd61f399027f25c5a2743d8dd0d354fad4e77c20c41a3",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3.16?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2016-02-0160-sharing-the-gospel?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2016-02-0160-sharing-the-gospel?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all"
       ]
     },
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "48f0d5deaec233b267ac2d8da00c249175522c15fbd7ec534c7de18f22c1599d",
+      "published_text_sha256": "a94d0201178e551af3e5dc4edc22104d0a6140566b93f4befeab88be00329fa6",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -64,9 +78,9 @@
     {
       "path": "answers/are-latter-day-saints-christian.html",
       "status": "verified",
-      "published_text_sha256": "7576f5fe47697b198c5224cbdb42418edf548695cdc44fc5ca74be432271dd50",
+      "published_text_sha256": "53417dfe0d585e0b33c6a7b84fc3092be85770f7d1915bcd375b3d7f052fabc4",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://faq.churchofjesuschrist.org/are-mormons-christian",
         "https://www.churchofjesuschrist.org/",
@@ -86,15 +100,17 @@
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_2_the_father.html",
         "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng"
       ]
     },
     {
       "path": "answers/bible-and-book-of-mormon-together.html",
       "status": "verified",
-      "published_text_sha256": "2f51f934d76c4b3cf86d1553894d8a760286ffc2f7e3def5978a2b31d5999bf9",
+      "published_text_sha256": "ea694ea7ab80e79e0a639dea0e6a56c0b2cdfdea2f026886dbfcb6da007690b8",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -114,15 +130,20 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/13?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng"
       ]
     },
     {
       "path": "answers/death-of-a-child.html",
       "status": "verified",
-      "published_text_sha256": "b167e8766e6ff1412fb59e4dfcc2b81d33b3cfec08c11cd47a84ec17d39fb12f",
+      "published_text_sha256": "febc8ce9b1deda4475e053aff854a1d302571640820937890f3ac910e8ca7142",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -139,15 +160,16 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2014-11-0010-the-refiners-fire?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2014-11-0010-the-refiners-fire?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng"
       ]
     },
     {
       "path": "answers/divorce-and-faith.html",
       "status": "verified",
-      "published_text_sha256": "192b99e731499523b57ed8202a83a4117ed73ae6a7748582da81f9c66cc5a71d",
+      "published_text_sha256": "fc1ba2f6b723d3e5e79212109b97daf96561a7c49b3b7a133fb81fb1fa810565",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -163,15 +185,17 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2022-10-2030-kristin-yee?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2022-10-2030-kristin-yee?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2007/04/divorce?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/23yee?lang=eng"
       ]
     },
     {
       "path": "answers/faith-in-jesus-christ-during-trials.html",
       "status": "verified",
-      "published_text_sha256": "8afa36067485f94d48844f6beeb6ffdbdbc144e9665a4d77a17e47f794406df6",
+      "published_text_sha256": "2b15818bd56ba6837bd974bdb9665d198fa8a8c5b77faee48e720b1e0457cbdc",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing review preserved. Expanded question-specific scripture and teaching reviewed against actual official source content; independent agent semantic/source review passed before this hash refresh. Personal applications labeled, original media source and image identity preserved during contextual relocation, and related flagship continuation verified.",
+      "review_standard": "Existing review preserved. Expanded question-specific scripture and teaching reviewed against actual official source content; independent agent semantic/source review passed before this hash refresh. Personal applications labeled, original media source and image identity preserved during contextual relocation, and related flagship continuation verified. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -191,15 +215,18 @@
         "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2014-11-0024-wherefore-didst-thou-doubt?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?id=p11-p13&amp;lang=eng#p11",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?id=p10-p21&amp;lang=eng#p10",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?id=p27-p33&amp;lang=eng#p27"
       ]
     },
     {
       "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
       "status": "verified",
-      "published_text_sha256": "459a7317c7f7f6b7a4a4f512ca700d1708c1700232e75e8cb5ae838848660829",
+      "published_text_sha256": "fd9840e8308693c6ceac4fcf605c01935558792a0cc8464d3898f7fd37182e8e",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -218,7 +245,9 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2022-07-0510-jesus-christ-has-compassion-and-heals-the-people-3-nephi-171-10?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2022-07-0510-jesus-christ-has-compassion-and-heals-the-people-3-nephi-171-10?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng"
       ]
     },
     {
@@ -226,7 +255,7 @@
       "status": "verified",
       "published_text_sha256": "85486809d2020f42a73096ca0b741ee1542460cb048b55f95a8ee991a6927602",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Actual authoritative source content reviewed for expanded historical setting, D&C 6:32-37, Atonement and rejoicing passages, Soares 2020 and Uchtdorf 2022. Independent agent source and semantic review passed before this hash refresh. Scripture, history, apostolic teaching, curriculum and focusChrist applications distinguished. Existing media source review preserved.",
+      "review_standard": "Actual authoritative source content reviewed for expanded historical setting, D&C 6:32-37, Atonement and rejoicing passages, Soares 2020 and Uchtdorf 2022. Independent agent source and semantic review passed before this hash refresh. Scripture, history, apostolic teaching, curriculum and focusChrist applications distinguished. Existing media source review preserved. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-seminary-teacher-manual-2025/061-doctrine-and-covenants-6?lang=eng",
@@ -255,15 +284,36 @@
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?lang=eng",
         "https://www.churchofjesuschrist.org/study/general-conference/2020/10/43soares?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/12uchtdorf?lang=eng"
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/12uchtdorf?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&amp;lang=eng#p32",
+        "https://www.churchofjesuschrist.org/study/general-conference/2020/10/43soares?id=p3&amp;lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/12?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?id=p4&amp;lang=eng#p4",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?id=p1-p8&amp;lang=eng#p1",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?id=p23-p26&amp;lang=eng#p23",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11?id=p4-p8&amp;lang=eng#p4",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?id=p22-p33&amp;lang=eng#p22",
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/num/21?id=p4-p9&amp;lang=eng#p4",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?id=p36-p37&amp;lang=eng#p36",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/12?id=p1-p3&amp;lang=eng#p1",
+        "https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?alang=eng&amp;collectionId=1708f0e87f184f9e812608d5f51bdb13&amp;lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/look-unto-christ-official-2025-theme-music-video?lang=eng",
+        "https://www.churchofjesuschrist.org/study/new-era/2014/12/rejoice-in-christ?lang=eng",
+        "https://www.churchofjesuschrist.org/study/church-historians-press/jsp-revelations/dc-006-1829_04_01_000?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?id=p4-p13&amp;lang=eng#p4"
       ]
     },
     {
       "path": "answers/prayer-and-personal-revelation.html",
       "status": "verified",
-      "published_text_sha256": "175c24252dbd48eba232205ef5932ff0f910dfc0a36a6992cd7d62e8a2a0879c",
+      "published_text_sha256": "012c7af491dcf1fdf9e2f9d9c3bfe7e833270d883cc61b6d614d8e1732bcd5cb",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing review preserved. Expanded question-specific scripture and teaching reviewed against actual official source content; independent agent semantic/source review passed before this hash refresh. Personal applications labeled, original media source and image identity preserved during contextual relocation, and related flagship continuation verified.",
+      "review_standard": "Existing review preserved. Expanded question-specific scripture and teaching reviewed against actual official source content; independent agent semantic/source review passed before this hash refresh. Personal applications labeled, original media source and image identity preserved during contextual relocation, and related flagship continuation verified. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -285,15 +335,16 @@
         "https://www.churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng",
         "https://www.churchofjesuschrist.org/study/general-conference/2024/04/15dushku?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p22-p23&amp;lang=eng#p22"
       ]
     },
     {
       "path": "answers/what-happens-after-death.html",
       "status": "verified",
-      "published_text_sha256": "0a286195c6b4a237a9bea3349f6f1c9cbb2208d3704d3d64b0d8476986e5eebc",
+      "published_text_sha256": "59d681a687b77e8fabe8b384ff89353d2f0b231587dafbf0c61b1171478d8f91",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -310,15 +361,16 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng"
       ]
     },
     {
       "path": "answers/what-is-the-book-of-mormon.html",
       "status": "verified",
-      "published_text_sha256": "03c5683a9fe69dd427647d42ad873c012147ff3bde5a1263b66154ad4134e066",
+      "published_text_sha256": "92f5a8eae4ed1c35cd925b0c5b8fcd66c6bc554d8c01f251cd89b894b4675f89",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -335,15 +387,18 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11?lang=eng",
-        "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-seminary-student-manual-2024/11-2-nephi-20-25/112-student?lang=eng"
+        "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-seminary-student-manual-2024/11-2-nephi-20-25/112-student?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng"
       ]
     },
     {
       "path": "answers/who-was-joseph-smith.html",
       "status": "verified",
-      "published_text_sha256": "0a504a3c1fb19e9830e725226406ec1a7648c1d6707c9b24f70ebb43dd38b014",
+      "published_text_sha256": "6419301c0ba82b694d557baee6f71a226c9b3029835c6fc348687d7a53a78359",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://newsroom.churchofjesuschrist.org/ldsnewsroom/eng/background-information/joseph-smith-and-the-restoration",
         "https://www.churchofjesuschrist.org/",
@@ -358,15 +413,16 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2017-01-0100-ask-of-god-joseph-smiths-first-vision?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng"
       ]
     },
     {
       "path": "answers/why-families-are-important.html",
       "status": "verified",
-      "published_text_sha256": "e7065ff165b803efa5e50a0e061770926f7d54027b76d1edee25b47a85fed210",
+      "published_text_sha256": "4a2b2bcc00bcea2be8ca39c996a343dfdbf16a29dcbcacd931f11b96b00c12e0",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -382,15 +438,17 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2016-04-2090-family-councils?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2016/04/family-councils?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng"
       ]
     },
     {
       "path": "answers/why-latter-day-saints-build-temples.html",
       "status": "verified",
-      "published_text_sha256": "dfccdee35476fe7b289f64c67f523acc9186c814cbcaa92e904ed660c9f561be",
+      "published_text_sha256": "e7411e2cdb3e454bb0994d9dec2158fba49ba6d864bf1cefd590c4968f62e534",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -407,7 +465,9 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2023-10-0060-welcome-to-the-temple-video-president-nelson-elder-and-sister-christofferson?lang=eng",
-        "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration"
+        "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng",
+        "https://www.churchofjesuschrist.org/temples/what-is-temple-endowment?lang=eng"
       ]
     },
     {
@@ -415,7 +475,7 @@
       "status": "verified",
       "published_text_sha256": "1962b12d6153285ed632fedaef8f35e880be537813982f4a513eb2339f5fa030",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng",
@@ -424,36 +484,61 @@
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10",
         "https://www.churchofjesuschrist.org/media/video/2020-02-2001-hearhim-listen-to-the-voice-of-jesus-christ?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&amp;id=p35-p41#p35",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&amp;id=p27#p27",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&amp;id=p38-p42#p38",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng&amp;id=p26-p28#p26",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?lang=eng&amp;id=p13-p17#p13"
       ]
     },
     {
       "path": "art-study/suffer-the-little-children.html",
       "status": "verified",
-      "published_text_sha256": "8c3bd37332c48b60da4057b424bf679083dddecc8fafbb56352acec9247a51e4",
+      "published_text_sha256": "28db2362f77eedb0cff10c38c3d3d129dc73af7f2d0784c224bad7e6e5b8b5e1",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p11-p25#p11",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
         "https://www.churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all"
       ]
     },
     {
       "path": "art-study/the-good-shepherd.html",
       "status": "verified",
-      "published_text_sha256": "467e6270feb817e5c295b0488ad373b98e82ea8fceb24be0020d00fe98282d0a",
+      "published_text_sha256": "d73381e27c018b6fe8c33937fe71a60bbe24033de36d4a1d68a10dae8370bc4a",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
         "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2022-07-0510-jesus-christ-has-compassion-and-heals-the-people-3-nephi-171-10?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng"
       ]
     },
     {
@@ -461,28 +546,40 @@
       "status": "verified",
       "published_text_sha256": "74961570c09a9822723632fde3d1cfc70023e17685c22c89c2004fd949768201",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all"
       ]
     },
     {
       "path": "art.html",
       "status": "verified",
-      "published_text_sha256": "8b796c0cfbc4139199dd612655dd565fab2d30fa5d1684ba96be70d64e07858c",
+      "published_text_sha256": "a1c747f550ac1b11932799e00588dfa25a0a271b909a9b24cf2eb61d402d4d6c",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
         "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&id=p10#p10",
         "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all"
       ]
     },
     {
@@ -490,7 +587,7 @@
       "status": "verified",
       "published_text_sha256": "badb7fb82c64e6693243e25bcb08c35b658f3f70b690515b698de4c2c1d88a40",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng",
@@ -499,7 +596,14 @@
         "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2020-02-2001-hearhim-listen-to-the-voice-of-jesus-christ?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/study?lang=eng"
       ]
     },
     {
@@ -507,7 +611,7 @@
       "status": "verified",
       "published_text_sha256": "b8e41d9e4a1a212472d28951f8d1710f303097d6a73f22e78dbdc685805c6334",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://churchhistorylibrary.churchofjesuschrist.org/?lang=eng",
         "https://history.churchofjesuschrist.org/landing/church-history-library?lang=eng",
@@ -524,7 +628,12 @@
         "https://www.churchofjesuschrist.org/study/manual/first-vision-accounts?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/first-vision-accounts?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2017-01-0100-ask-of-god-joseph-smiths-first-vision?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2017-01-0100-ask-of-god-joseph-smiths-first-vision?lang=eng",
+        "https://www.churchofjesuschrist.org/study/church-history/womens-history?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/joseph-smith-papers-podcasts?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays?lang=eng",
+        "https://www.churchofjesuschrist.org/study/video/answers-to-church-history-questions?lang=eng",
+        "https://www.churchofjesuschrist.org/study/church-history/saints?lang=eng"
       ]
     },
     {
@@ -537,9 +646,9 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "be343225553b115d5f53d5f85ac15f0181e7cfa7d54e99ac14b48ad4aa60ffb0",
+      "published_text_sha256": "eb2a9c9b2fae494cf0caef95e5415eb58333e152d9d7aedf0b3a5eecc84a473f",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
@@ -547,15 +656,21 @@
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&lang=eng#p32",
         "https://www.churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ?lang=eng",
-        "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration"
+        "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&amp;lang=eng#p32"
       ]
     },
     {
       "path": "missionary.html",
       "status": "verified",
-      "published_text_sha256": "39ca8297be6d225be7fe3b97c74226c3246cfbde0e86f852e35ffedf130ea076",
+      "published_text_sha256": "b877712e17017ebe92bc46b9f8815bafba753cd223e658329582142bd161e30e",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/callings/missionary?lang=eng",
         "https://www.churchofjesuschrist.org/comeuntochrist/belong/share-goodness/what-to-expect-from-a-lesson-with-missionaries",
@@ -570,15 +685,24 @@
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/16?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2016-02-0160-sharing-the-gospel?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all",
+        "https://www.churchofjesuschrist.org/comeuntochrist",
+        "https://www.churchofjesuschrist.org/callings/missionary/young-teaching-missionaries?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023?lang=eng"
       ]
     },
     {
       "path": "pioneers.html",
       "status": "verified",
-      "published_text_sha256": "b79c457ba949f83ff71f44ec263423b2b5179985674a14d1dfda2ccac901d566",
+      "published_text_sha256": "50b0f952e2746029afbf581deebf771e4186187cf21982c66500e2ef705a7e96",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://archives.utah.gov/2021/01/04/utahs-road-to-statehood-125-years/",
         "https://history.churchofjesuschrist.org/chd/individual/elizabeth-crook-1827?lang=eng",
@@ -596,15 +720,21 @@
         "https://wyoparks.wyo.gov/index.php/places-to-go/fort-bridger",
         "https://history.churchofjesuschrist.org/exhibit/historic-sites/wyoming/passing-through-the-sweetwater?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2016-12-0001-pioneer-journeys-more-than-a-trek?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all"
       ]
     },
     {
       "path": "watch.html",
       "status": "verified",
-      "published_text_sha256": "cd6921b466c0fcb5a5e50fdce8dec5c028a3b7b873cb621ec8215cee600add45",
+      "published_text_sha256": "e621d47a5b5862955e2ea375c67c4cfacb321d6cb5c14748b34d0ab96f229b7e",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2010-07-0004-the-restoration?lang=eng",
@@ -638,7 +768,16 @@
         "https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng",
         "https://www.churchofjesuschrist.org/tools/help/frequently-asked-questions-about-gospel-media?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all",
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/jesus/videos",
+        "https://www.churchofjesuschrist.org/comeuntochrist/believe/bible/videos",
+        "https://www.churchofjesuschrist.org/study/general-conference?lang=eng"
       ]
     }
   ]

@@ -27,7 +27,7 @@
     {
       "key": "cfm-rejoice",
       "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-book-of-mormon-2024/10?lang=eng",
-      "title": "March 4\u201310: \u201cWe Rejoice in Christ.\u201d 2 Nephi 20\u201325",
+      "title": "March 4–10: “We Rejoice in Christ.” 2 Nephi 20–25",
       "thumbnail": "https://www.churchofjesuschrist.org/imgs/a6d849e46fe111ecb00ceeeeac1e3d64afed97cb/full/%21320%2C/0/default",
       "local_thumbnail": "assets/resources/cfm-rejoice.jpg",
       "width": 320,
@@ -39,7 +39,7 @@
     {
       "key": "cfm-philippians",
       "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-new-testament-2027/41?lang=eng",
-      "title": "October 4\u201310. \u201cI Can Do All Things Through Christ Which Strengtheneth Me\u201d: Philippians; Colossians",
+      "title": "October 4–10. “I Can Do All Things Through Christ Which Strengtheneth Me”: Philippians; Colossians",
       "thumbnail": "https://www.churchofjesuschrist.org/imgs/af04af0e9b7611eeb814eeeeac1ee8793f85f2e5/full/%21500%2C/0/default",
       "local_thumbnail": "assets/resources/cfm-philippians.jpg",
       "width": 500,
@@ -51,7 +51,7 @@
     {
       "key": "seminary",
       "url": "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-seminary-teacher-manual-2025/061-doctrine-and-covenants-6?lang=eng",
-      "title": "Lesson 17\u2014Doctrine and Covenants 6: \u201cLook unto Me in Every Thought; Doubt Not, Fear Not\u201d",
+      "title": "Lesson 17—Doctrine and Covenants 6: “Look unto Me in Every Thought; Doubt Not, Fear Not”",
       "thumbnail": "https://www.churchofjesuschrist.org/imgs/9126c808756411ec9ef8eeeeac1eb2e621b22861/full/%21500%2C/0/default",
       "local_thumbnail": "assets/resources/seminary.jpg",
       "width": 500,
@@ -63,7 +63,7 @@
     {
       "key": "rejoice",
       "url": "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
-      "title": "\u2018Rejoice in Christ\u2019: Salt Lake Temple Celebration Welcomes the World",
+      "title": "‘Rejoice in Christ’: Salt Lake Temple Celebration Welcomes the World",
       "thumbnail": "https://newsroom.churchofjesuschrist.org/media/640x480/rejoice-in-christ-thumb.jpeg",
       "local_thumbnail": "assets/resources/rejoice.jpg",
       "width": 640,
@@ -153,6 +153,30 @@
       "width": 1200,
       "height": 630,
       "sha256": "c4ad1d0f45d2d6b602602605d6ddf340be5dcd7fc5be4c56e6adca611d65964c",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "divorce",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2007/04/divorce?lang=eng",
+      "title": "Divorce",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/2fac7d3e6b3025c4fa74ff18a9aa08640a4c96ce/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/divorce.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "ba20ce399a4c0df27d929ad3be2bfef8e5b31ea4003e6e8311c540202d83d5df",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "good-shepherd",
+      "url": "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng",
+      "title": "The Good Shepherd and Other Sheep I Have",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/https%3A%2F%2Fwww.churchofjesuschrist.org%2Fimgs%2Fea69166f95805dd1a148412f7fdeb1b9f30d5cd7%2Ffull%2F%2521768%252C%2F0%2Fdefault/full/!640,/0/default",
+      "local_thumbnail": "assets/resources/good-shepherd.jpg",
+      "width": 640,
+      "height": 359,
+      "sha256": "55f0e89e5f1d9e7326d8f0562d04b42ed45c686ea1e94f19fc939a1e1d28bbfd",
       "status": 200,
       "verified_date": "2026-09-06"
     }

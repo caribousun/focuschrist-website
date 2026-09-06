@@ -1,0 +1,40 @@
+body.fc-scripture-open { overflow: hidden; }
+dialog.fc-scripture-reader {
+    position: fixed; inset: 0; margin: auto; padding: 0;
+    width: min(760px, calc(100vw - 32px)); max-width: none;
+    max-height: min(82vh, 900px); max-height: min(82dvh, 900px);
+    border: 1px solid rgba(217, 184, 119, .45); border-radius: 22px;
+    color: #f4f0e7; background: #102a32;
+    box-shadow: 0 28px 100px rgba(0, 0, 0, .6); overflow: hidden;
+    font-family: inherit; text-align: left;
+}
+.fc-scripture-reader::backdrop { background: rgba(3, 13, 18, .78); backdrop-filter: blur(6px); }
+.fc-scripture-shell { display: flex; flex-direction: column; max-height: min(82vh, 900px); max-height: min(82dvh, 900px); }
+.fc-scripture-header { display: flex; flex: 0 0 auto; gap: 20px; align-items: flex-start; justify-content: space-between; padding: 25px 30px 20px; border-bottom: 1px solid rgba(217, 184, 119, .22); }
+.fc-scripture-eyebrow { margin: 0 0 7px; color: #d9b877; font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 700; }
+.fc-scripture-reader h2 { margin: 0; padding: 0; color: #fff4dc; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.45rem, 4vw, 1.9rem); line-height: 1.2; overflow-wrap: anywhere; }
+.fc-scripture-context { margin: 9px 0 0; color: #b8c9cb; font-size: .8rem; line-height: 1.5; }
+.fc-scripture-reader button { cursor: pointer; font: inherit; }
+.fc-scripture-x { display: grid; place-items: center; flex: 0 0 44px; width: 44px; height: 44px; padding: 0; border: 1px solid rgba(217, 184, 119, .35); border-radius: 50%; color: #f4e2bb; background: rgba(255, 255, 255, .04); font-size: 1.65rem !important; line-height: 1; }
+.fc-scripture-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; scrollbar-color: #779497 #102a32; padding: 26px 30px 28px; }
+.fc-scripture-status { color: #d3dfe0; font-size: 1rem; line-height: 1.7; margin: 0; }
+.fc-scripture-status:empty { display: none; }
+.fc-scripture-verse { color: #f4f0e7; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.08rem, 2.8vw, 1.2rem); line-height: 1.85; margin: 0 0 18px; padding-left: 2.1em; position: relative; overflow-wrap: anywhere; }
+.fc-scripture-verse:last-child { margin-bottom: 0; }
+.fc-scripture-number { position: absolute; left: 0; top: .15em; width: 2em; color: #d9b877; font-family: system-ui, sans-serif; font-size: .7em; font-weight: 600; line-height: 2.4; }
+.fc-scripture-footer { display: flex; flex: 0 0 auto; align-items: center; justify-content: space-between; gap: 16px; padding: 17px 30px; border-top: 1px solid rgba(217, 184, 119, .22); background: #0c222a; }
+.fc-scripture-reader .fc-scripture-source { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: #edd49f; font-size: .9rem; text-decoration: none; text-underline-offset: 4px; }
+.fc-scripture-reader .fc-scripture-source:hover { text-decoration: underline; }
+.fc-scripture-close { min-height: 44px; padding: 9px 24px; border: 1px solid #d9b877; border-radius: 999px; background: #d9b877; color: #102a32; font-weight: 700 !important; }
+.fc-scripture-x:hover { background: rgba(217, 184, 119, .15); }
+.fc-scripture-close:hover { background: #efd29b; }
+.fc-scripture-reader :focus-visible { outline: 3px solid #fff0c8; outline-offset: 4px; }
+.fc-scripture-body:focus-visible { outline-offset: -5px; }
+.fc-scripture-sr { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+@media (max-width: 520px) {
+    dialog.fc-scripture-reader { border-radius: 17px; }
+    .fc-scripture-header { padding: 20px 20px 16px; gap: 12px; }
+    .fc-scripture-body { padding: 22px 20px; }
+    .fc-scripture-footer { padding: 13px 20px; }
+}
+@media (prefers-reduced-motion: reduce) { .fc-scripture-reader, .fc-scripture-reader * { scroll-behavior: auto; } }
