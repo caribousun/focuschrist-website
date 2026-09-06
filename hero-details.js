@@ -65,9 +65,15 @@
     const fullImage = dialog.querySelector('[data-full-image-viewer]');
     let returnFocus = null;
 
+    function getRecordKey(trigger) {
+        if (trigger.dataset.heroRecord && records[trigger.dataset.heroRecord]) return trigger.dataset.heroRecord;
+        if (trigger.classList.contains('fc-home-hero') || trigger.classList.contains('fc-answer-detail-hero')) return 'home';
+        const basename = new URL(trigger.href).pathname.split('/').pop().replace(/\.(?:webp|png|jpe?g|avif)$/i, '');
+        return { missionary: 'mission', 'church-history': 'history' }[basename] || basename;
+    }
+
     function openDetail(trigger) {
-        const basename = new URL(trigger.href).pathname.split('/').pop().replace(/\.webp$/, '');
-        const key = { missionary: 'mission', 'church-history': 'history' }[basename] || basename;
+        const key = getRecordKey(trigger);
         const record = records[key];
         if (!record) return false;
         image.src = trigger.href;
