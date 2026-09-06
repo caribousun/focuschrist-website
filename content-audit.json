@@ -169,9 +169,9 @@
     {
       "path": "answers/faith-in-jesus-christ-during-trials.html",
       "status": "verified",
-      "published_text_sha256": "28c374f98e1c70df318581b7d1acf9227d37385737d49c9fbf0d7b76587e27dd",
+      "published_text_sha256": "8afa36067485f94d48844f6beeb6ffdbdbc144e9665a4d77a17e47f794406df6",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing review preserved. Expanded question-specific scripture and teaching reviewed against actual official source content; independent agent semantic/source review passed before this hash refresh. Personal applications labeled, original media source and image identity preserved during contextual relocation, and related flagship continuation verified.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -189,7 +189,9 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2014-11-0024-wherefore-didst-thou-doubt?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2014-11-0024-wherefore-didst-thou-doubt?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng"
       ]
     },
     {
@@ -259,9 +261,9 @@
     {
       "path": "answers/prayer-and-personal-revelation.html",
       "status": "verified",
-      "published_text_sha256": "ddf6bbefd92b136a27090665c28294cd51f48dde52068996cb276cae3e0caeac",
+      "published_text_sha256": "175c24252dbd48eba232205ef5932ff0f910dfc0a36a6992cd7d62e8a2a0879c",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Existing review preserved. Expanded question-specific scripture and teaching reviewed against actual official source content; independent agent semantic/source review passed before this hash refresh. Personal applications labeled, original media source and image identity preserved during contextual relocation, and related flagship continuation verified.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -281,7 +283,9 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng"
+        "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2024/04/15dushku?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng"
       ]
     },
     {
