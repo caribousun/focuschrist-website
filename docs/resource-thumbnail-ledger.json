@@ -131,6 +131,30 @@
       "sha256": "82b1307ab4504f00ff8010cf9678cba339aa290945b0156ea3bdc61d4ba56c7f",
       "status": 200,
       "verified_date": "2026-09-06"
+    },
+    {
+      "key": "look-christ",
+      "url": "https://www.churchofjesuschrist.org/media/video/2025-06-look-unto-christ?lang=eng",
+      "title": "Look Unto Christ",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/k1rz6ejij35ipafv59vncxvj343v4gbevwb3qkm6/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/look-christ.jpg",
+      "width": 1200,
+      "height": 630,
+      "sha256": "f4deee4980cd77c838682d6ccfd20ab30f513451446313d59287a013d005562b",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "nephi-visual",
+      "url": "https://www.churchofjesuschrist.org/media/image/meme-2-nephi-christ-449ddc4?lang=eng",
+      "title": "Christ",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/449ddc4ca1547ac2357e01aab9d0b7ff86f63887/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/nephi-visual.jpg",
+      "width": 1200,
+      "height": 630,
+      "sha256": "c4ad1d0f45d2d6b602602605d6ddf340be5dcd7fc5be4c56e6adca611d65964c",
+      "status": 200,
+      "verified_date": "2026-09-06"
     }
   ],
   "reviewed_on": "2026-09-06",
