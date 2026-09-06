@@ -192,7 +192,7 @@ function requireSubstantive(match, label, expected) {
     const live = await waitForExactDeployment();
     console.log('Exact production dependency graph verified: ' + ASSETS.length + ' assets / ' + CANONICAL_TARGETS.length + ' canonical cache keys');
 
-    assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260903-18')
+    assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260906-19')
         && live['ask.html'].includes('ask-experience.js?v=20260903-2'),
         'production Ask HTML does not load the .15 controllers');
     assert(live['pioneers.html'].includes('pioneer-experience.js?v=20260903-16'),
@@ -205,8 +205,14 @@ function requireSubstantive(match, label, expected) {
         filename: ORIGIN + '/reviewed-ask-knowledge.js'
     });
     const registry = window.focusChristReviewedKnowledge;
-    assert(registry && registry.policyVersion === '2026-09-03.18',
-        'production reviewed registry policy is not .18');
+    assert(registry && registry.policyVersion === '2026-09-06.19',
+        'production reviewed registry policy is not .19');
+
+    for (const profile of ['ask', 'pioneers', 'church-history']) {
+        const winter = requireSubstantive(registry.match('Winter Quarters', { profile }), 'Winter Quarters / ' + profile, 'Mud and sickness');
+        assert(winter.mode === 'reviewed-local' && winter.sourceIntegrityPassed === true
+            && !/trans.?continental/i.test(winter.answer), 'Winter Quarters production correction is missing');
+    }
 
     const ownerBookQuestion = 'what year did the book of mormon come out';
     const ownerBookMain = requireSubstantive(
