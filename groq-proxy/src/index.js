@@ -457,8 +457,14 @@ function extractVisibleParagraphs(htmlText) {
   return paragraphs;
 }
 
+function explicitHistoryYears(candidate, question) {
+  return candidate && candidate.deterministicHistoryTopic === true
+    ? Array.from(new Set(String(question || '').match(/\b[12]\d{3}\b/g) || [])) : [];
+}
+
 function relevantParagraphText(paragraphs, question, candidate = null) {
   const sourceParagraphs = Array.isArray(paragraphs) ? paragraphs : [];
+  const historyYears = explicitHistoryYears(candidate, question);
   const queryTokens = normalizeDiscoveryTokens(question);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
   const selected = sourceParagraphs.map((text, position) => {
@@ -467,7 +473,7 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
     const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
     const topicScore = (pinnedIrrigation ? 240 : 0) + (pinnedSettlement ? 40 : 0);
-    return { text, position, overlap, topicScore, score: topicScore + overlap * 20 + Math.min(10, text.length / 180) };
+    return { text, position, overlap, topicScore, score: (historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 400 : 0) + topicScore + overlap * 20 + Math.min(10, text.length / 180) };
   }).filter((item) => item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
     .slice(0, 2);
@@ -514,7 +520,9 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
         if (position >= 0 && position < sourceParagraphs.length) positions.add(position);
       }
     });
-    return Array.from(positions).sort((left, right) => left - right)
+    // An explicitly dated question needs its matching event before general leads.
+    const anchors = historyYears.length ? selected.map((item) => item.position) : [];
+    return [...anchors, ...Array.from(positions).sort((left, right) => left - right).filter((position) => !anchors.includes(position))]
       .map((position) => sourceParagraphs[position]).join(' ').slice(0, 1200);
   }
   return selected.map((item) => item.text).join(' ').slice(0, 700);
@@ -542,6 +550,7 @@ function extractRelevantParagraphs(htmlText, question) {
 }
 
 function compactParagraphPack(paragraphs, candidate, question = '') {
+  const historyYears = explicitHistoryYears(candidate, question);
   const discoveryTokens = normalizeDiscoveryTokens(`${candidate.title || ''} ${candidate.tokens || ''}`);
   const queryTokens = normalizeDiscoveryTokens(question);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
@@ -561,8 +570,9 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
     const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
     const topicScore = (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
-    const historyLeadScore = candidate && candidate.deterministicHistoryTopic === true && position < 2 ? 1200 : 0;
-    return { text, position, score: (originalAnchors.includes(position) || position === metaphorPosition ? 2400 : 0) + historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
+    const historyLeadScore = candidate && candidate.deterministicHistoryTopic === true && !historyYears.length && position < 2 ? 1200 : 0;
+    const historyYearScore = historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 2400 : 0;
+    return { text, position, score: (originalAnchors.includes(position) || position === metaphorPosition ? 2400 : 0) + historyYearScore + historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
   }).sort((left, right) => right.score - left.score)
     .filter((item) => {
       if (size + item.text.length > 4200) return false;
@@ -606,7 +616,7 @@ async function evidenceCacheKey(candidate, question) {
   const variant = officialExcerptCacheVariant(candidate);
   const deterministicQuestionKey = candidate
     && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true)
-    ? normalizeDiscoveryTokens(question).slice(0, 12).join('-') + (isPinnedAlma32FaithStudy(candidate, question) ? '-word-seed-v1' : '')
+    ? normalizeDiscoveryTokens(question).slice(0, 12).join('-') + (isPinnedAlma32FaithStudy(candidate, question) ? '-word-seed-v1' : '') + (explicitHistoryYears(candidate, question).length ? '-dated-history-v1' : '')
     : '';
   const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${deterministicQuestionKey}\n${candidate.url}`;
   const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(normalized));
