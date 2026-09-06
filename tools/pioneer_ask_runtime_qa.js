@@ -114,7 +114,7 @@ function assert(condition, message) {
 
     messages.length = 0;
     await window.askTopic('Winter Quarters');
-    assert(fetchCalls === 0 && messages[1].text.includes('Mud and sickness')
+    assert(fetchCalls === 0 && messages[1].text.includes('mud, sickness, and shortages')
         && !/trans.?continental/i.test(messages[1].text)
         && messages[1].sources.some((source) => source.url.includes('/winter-quarters?')),
         'Winter Quarters topic must render reviewed history without a provider request or invented road project');
