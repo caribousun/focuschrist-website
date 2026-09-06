@@ -264,12 +264,9 @@ def main() -> int:
         require(read(rel, errors), rel, (marker,), errors)
 
     answers_page = read("answers.html", errors)
-    original_answers_hero = (
-        '<div class="fc-visual-hero fc-visual-hero--christ fc-visual-hero--answers" '
-        'aria-label="Open scriptures and study materials overlooking a peaceful sunset landscape">'
-    )
-    if original_answers_hero not in answers_page:
-        errors.append("answers.html must preserve the owner-approved original Answers hero unless the owner explicitly approves a hero change")
+    answers_hero = re.search(r'<a class="fc-visual-hero fc-visual-hero--christ fc-visual-hero--answers"[^>]*>', answers_page)
+    if not answers_hero or 'href="assets/heroes/answers.webp"' not in answers_hero.group(0) or 'data-full-image-alt="Open scriptures and study materials overlooking a peaceful sunset landscape"' not in answers_hero.group(0):
+        errors.append("answers.html must preserve the owner-approved original Answers hero image and scene description")
     answers_art_order = [
         "assets/heroes/answers-christ-companion.png",
         "assets/answers-christ-portrait.png",
@@ -387,7 +384,7 @@ def main() -> int:
     ), errors)
     if re.search(r"youtube\.com|@theRisen636|CHANNEL\s*=", art_router, re.I):
         errors.append("art-study-router.js must not use YouTube/@theRisen636 as an artwork study destination")
-    if "art-ask-context.js?v=20260905-home-study" not in read("ask.html", errors):
+    if "art-ask-context.js?v=20260906-hero-return" not in read("ask.html", errors):
         errors.append("ask.html must load contextual artwork Ask bridge")
     if art.count("art/thumbs/new/") < 11 or art.count("data-full-src=\"art/new/") < 11:
         errors.append("art.html must use localized thumbnails + full-resolution targets for all newly added artworks")

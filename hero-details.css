@@ -1,0 +1,22 @@
+/* Hero artwork uses the shared study dialog without placing controls over art. */
+a.fc-visual-hero[data-hero-viewer] {
+    display: block;
+    cursor: pointer;
+}
+
+a[data-hero-viewer]:focus-visible {
+    outline: 3px solid var(--fc-gold-light, #f0c36a);
+    outline-offset: -5px;
+}
+
+.fc-hero-detail-dialog .fc-artwork-detail-media img {
+    object-fit: contain;
+}
+
+.fc-site .fc-hero-detail-dialog .fc-artwork-detail-actions > [data-hero-close] {
+    grid-column: 1 / -1;
+    justify-self: end;
+    width: auto;
+    min-width: 6rem;
+    margin-top: 4px;
+}

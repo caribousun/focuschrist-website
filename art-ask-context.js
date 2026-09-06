@@ -11,6 +11,10 @@
         try {
             const url = new URL(raw, window.location.href);
             if (url.origin !== window.location.origin) return fallback;
+            const heroPaths = ["/church-history.html", "/answers.html", "/art.html", "/pioneers.html", "/about.html", "/watch.html", "/404.html", "/missionary.html", "/ask.html", "/index.html", "/art-study/suffer-the-little-children.html", "/art-study/be-still.html", "/art-study/the-living-christ.html", "/art-study/the-good-shepherd.html", "/answers/what-is-the-book-of-mormon.html", "/answers/are-latter-day-saints-christian.html", "/answers/what-happens-after-death.html", "/answers/who-was-joseph-smith.html", "/answers/why-latter-day-saints-build-temples.html", "/answers/divorce-and-faith.html", "/answers/jesus-christ-latter-day-saint-beliefs.html", "/answers/why-families-are-important.html", "/answers/bible-and-book-of-mormon-together.html", "/answers/faith-in-jesus-christ-during-trials.html", "/answers/prayer-and-personal-revelation.html", "/answers/death-of-a-child.html"];
+            if (url.searchParams.get('hero') === '1' && heroPaths.includes(url.pathname)) {
+                return url.pathname + '?hero=1';
+            }
             if (url.pathname === '/index.html') {
                 const key = url.searchParams.get('artwork');
                 const homeArtwork = ['home-come-and-see', 'home-seek-study', 'home-light-through-study'];
