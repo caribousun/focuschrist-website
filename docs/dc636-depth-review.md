@@ -13,7 +13,7 @@ The published visual release already supplied twelve contextual resource cards. 
 - Doctrine and Covenants Student Manual (2017), chapter 5: whether the Lord's presence/wounds language was literal or figurative is unknown. The article preserves that uncertainty.
 - Seminary teacher lesson on D&C 6 (2025): considers verses 36-37 together and directs study toward the Savior's Atonement and Resurrection.
 - 3 Nephi 11:10-17 and Alma 7:11-13: witnesses of the risen Savior's wounds and His power to succor. The application invites honest prayer without promising grief will disappear.
-- Ulisses Soares, Look Unto Me in Every Thought (October 2020): aligning thoughts and desires with Christ. Ordinary-life practices are expressly focusChrist applications.
+- Ulisses Soares, Seek Christ in Every Thought (October 2020): aligning thoughts and desires with Christ. Ordinary-life practices are expressly focusChrist applications.
 - Dieter F. Uchtdorf, Jesus Christ Is the Strength of Youth (October 2022): principles, agency and responsible choices instead of expecting a prescribed answer for every choice.
 - Matthew 14:22-33, Hebrews 12:1-3 and Alma 37:36-37: asking for help, enduring with attention to Jesus and remembering Him in ordinary daily actions.
 - Philippians 3:7-14; 4:4-13; 2 Nephi 11:4-8; 25:23-26: knowing Christ, continued discipleship, prayer/gratitude/practice in difficult circumstances, covenant/redemption and teaching children where to look for remission of sins.
@@ -27,4 +27,10 @@ Five-step guided sequence now reads Look, Remember, Talk, Rejoice, Act. Native e
 
 ## Acceptance record
 
-Independent source review: PASS. Permanent QA and release evidence are recorded in the final Focus Current State, recovery and Run Log receipt. Production acceptance must inspect the actual final deployed article, its anchor/expand controls and thumbnails. Home spacing passed at the available 1348 by 926 desktop viewport before editing. Mobile and ultrawide screenshots remain UNVERIFIED because this browser exposes no viewport resize capability. Responsive CSS is not visual evidence.
+Independent source review: PASS. Permanent QA and release evidence are recorded in the final Focus Current State, recovery and Run Log receipt. Production acceptance must inspect the actual final deployed article, its anchor/expand controls and thumbnails. Home spacing passed at the available desktop size (screenshots displayed at 1348 by 926; browser later reported 1363 by 936 CSS pixels) before editing. Mobile and ultrawide screenshots remain UNVERIFIED because this browser exposes no viewport resize capability. Responsive CSS is not visual evidence.
+
+## Published acceptance
+
+PR174 merged as `77080c99c6f6eb5db768e4f3987a7b766f2b7946`. Rendered review caught one awkward sentence introduced by a partial final wording substitution; independent review approved the full-sentence correction. PR175 merged as `b31e3391d4256ad80b3fb46c10a1c7cd636df4d4`. Site QA run `34049155867` and Pages `34049155929` succeeded. Final live HTML exactly matched reviewed bytes, SHA256 `84cfb08066cf88fe55a27119ea0de5fe77d0c86213f0ebedac827b207a16b3bd`.
+
+Actual desktop screenshots passed for Home spacing, everyday questions, five-step cards, expanded wounds/Atonement and Rejoice study, seven-day study and media. All twelve source thumbnails loaded, anchors and native expandable content worked, and no horizontal overflow was observed. The corrected sentence was visually rechecked. Current State, START HERE recovery and Run Log were updated and reread before the next Answer batch began. Mobile/ultrawide remain UNVERIFIED. All-video playback and a fresh AI-provider matrix are not claimed.

@@ -25,3 +25,10 @@
 .fc-signature-study #guided-study .fc-card:last-child{grid-column:1/-1}
 .fc-signature-study .fc-resource-section--inline{width:100%;margin-inline:0}
 @media(max-width:700px){.fc-resource-grid{grid-template-columns:1fr;gap:20px}.fc-resource-section{width:calc(100% - 32px);padding:22px 18px}.fc-resource-card__body{padding:18px}.fc-signature-study .article{width:calc(100% - 36px)}}
+
+/* Question-specific scripture and media companions for enriched Answers. */
+.fc-answer-depth .fc-study-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);align-items:start;gap:28px;margin:28px 0 36px}
+.fc-answer-depth .fc-study-feature>div{min-width:0}
+.fc-answer-depth .fc-study-feature h2,.fc-answer-depth .fc-study-feature h3{margin-top:0}
+.fc-answer-depth section[id]{scroll-margin-top:110px}
+@media(max-width:800px){.fc-answer-depth .fc-study-feature{grid-template-columns:1fr;gap:20px}}
