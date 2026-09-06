@@ -741,29 +741,30 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom:14px; }
 }
 
-/* Preserve the whole panorama when the viewport budget makes a shallow hero.
-   Scale the artwork to its native ratio; never zoom it to fill a wider screen. */
+/* Keep wide artwork wide. The opening budget is measured from the real intro
+   content, so short windows do not force an image into a narrow island. */
 @media (min-width:1021px) {
-    body.fc-site .fc-visual-hero:not(.fc-visual-hero--portrait) {
-        --fc-panorama-ratio: 3;
-        background: radial-gradient(ellipse at 50% 35%, #52605a 0%, #233e47 60%, #142a35 100%);
+    body.fc-site .fc-page-intro {
+        min-height: 0 !important;
+        padding-block: 22px 26px;
     }
-    body.fc-site .fc-visual-hero.fc-history-hero { --fc-panorama-ratio: 2.3337; }
-    body.fc-site .fc-visual-hero:not(.fc-visual-hero--portrait)::before,
-    body.fc-site .fc-visual-hero > img {
-        inset: 0 auto 0 50%;
-        width: min(100%, calc(var(--fc-opening-hero-height) * var(--fc-panorama-ratio, 3)));
-        max-width: 100%;
-        height: 100%;
-        transform: translateX(-50%);
-        background-size: contain;
-        background-position: center center !important;
-        object-fit: contain;
-        object-position: center center !important;
-        -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
-        mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+    body.fc-site .fc-page-intro .fc-display {
+        font-size: clamp(2.15rem, 5dvh, 3.25rem);
+        line-height: 1.08;
     }
+    body.fc-site .fc-page-intro-copy {
+        max-width: 860px;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-top: 12px;
+    }
+    body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom: 12px; }
+    body.fc-site .fc-page-intro .fc-actions { margin-top: 16px; }
+    body.fc-site .fc-visual-hero:not(.fc-visual-hero--portrait)::before {
+        background-position: center 25% !important;
+    }
+    body.fc-site .fc-visual-hero > img { object-position: center 35% !important; }
     body.fc-site .fc-visual-hero::after {
-        background: linear-gradient(180deg, rgba(10,24,31,.08), transparent 25%, transparent 90%, var(--fc-bg-warm));
+        background: linear-gradient(180deg, rgba(10,24,31,.08), transparent 25%, transparent 94%, var(--fc-bg-warm));
     }
 }
