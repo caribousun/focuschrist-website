@@ -32,3 +32,5 @@ The owner clarified that URL advertising means correct exposure through search, 
 - [Existing YouTube study referral](https://www.youtube.com/shorts/fPSuW-eML9c) and [existing Instagram referral](https://www.instagram.com/p/Dc2QIMyFefB/): observed in public search results; direct web retrieval was throttled/unavailable, so fresh post-body or engagement claims are not made.
 
 This is the pre-release review checkpoint. Independent approval, exact commit, deployment and final gate results are recorded in Focus Current State after publication. Any external limitation remains explicit rather than being converted into a claim that everything on the internet was checked.
+
+The first PR check exposed a legacy QA assertion requiring eight literal August 30 sitemap dates. That assertion rejected truthful later updates. The correction retains the original minimum release date per core URL, validates date syntax, and allows later substantive updates; the discovery gate separately rejects future dates. No production gate was skipped.
