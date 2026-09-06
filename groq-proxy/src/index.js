@@ -24,8 +24,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-06.56';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.56';
+const SOURCE_POLICY_VERSION = '2026-09-06.57';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.57';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -508,6 +508,9 @@ function pioneerParagraphScore(paragraphs, position, candidate) {
   if (!candidate || !candidate.pioneerDisclosure || !candidate.focalPhrases?.length) return 0;
   const matches = text => candidate.focalPhrases.some(phrase => String(text || '').toLowerCase().includes(phrase));
   if (matches(paragraphs[position])) return 1200;
+  if (candidate.url === 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng') {
+    return /the pioneer company of 1847 traversed/i.test(paragraphs[position] || '') ? 350 : 0;
+  }
   if (matches(paragraphs[position - 1]) || matches(paragraphs[position + 1])) return 350;
   return 0;
 }
@@ -2108,6 +2111,7 @@ export default {
         'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give 90 to 220 words and at least three complete sentences. A nuanced question normally needs two to four short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
         'Preserve the exact subjects and relationships in scriptural comparisons. Do not extend a metaphor with invented physical details or present a personal application as something the passage says. If the text compares the word to a seed, do not replace the word with faith or invent watering, warmth, or other gardening instructions.',
         'Use independently worded paraphrase. Do not copy a long passage or reconstruct the source in ordered fragments. Apart from unavoidable names and short doctrinal phrases, avoid matching source wording for more than eight consecutive words.',
+        'Explain the supported facts in a fresh structure organized around the visitor question. Do not follow the source sentence by sentence or substitute synonyms into its clauses. Shared short fragments in the same order can also reproduce too much of the source. Rebuild the explanation while preserving exact names, dates, offices, relationships, and chronology. Do not add facts or filler to dilute overlap.',
         'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
         'Set approved true whenever the evidence contains material that can responsibly answer the question, including when DRAFT is empty. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Interpret ordinary awkward grammar by its clear intended meaning. Do not reject a scripture, doctrine, or history question merely because its wording is imperfect. If the named official source directly addresses the named topic or concept, answer from that evidence.',
@@ -2192,7 +2196,7 @@ export default {
             ? `Rewrite it using at least ${repairMinimumWords} words, ${repairMinimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s). The publication gate is lower, but this repair target deliberately includes safety margin. Do not stop at the minimum. For a conversation-context or deterministic Church History answer, treat this margin as mandatory for the repaired draft.`
             : 'Keep the answer complete and concise.',
           needsParaphraseRepair
-            ? 'Rewrite the answer in genuinely independent language. Do not copy a long passage or reconstruct the source in ordered fragments. Preserve supported facts, but change the sentence structure and wording throughout.'
+            ? 'Rewrite the answer in genuinely independent language. The previous answer also fails the overlap check, even if it needs depth repair. Do not retain its sentence skeleton or assemble the source from short ordered fragments. Start a fresh explanation organized around the question, preserving exact facts, names, dates, and chronology. Do not add unsupported detail or filler. Keep both the required depth and independent wording.'
             : 'Preserve the independently worded explanation.',
           'State the direct answer first. Add only useful explanatory context supported by the supplied evidence; do not pad, repeat, speculate, or add facts from memory.',
           `PREVIOUS ANSWER:\n${String(verdict.answer || '').trim()}`,
