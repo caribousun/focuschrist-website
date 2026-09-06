@@ -3,6 +3,7 @@ import worker, {
   answerMeetsRepairMargin,
   compactParagraphPack,
   deterministicHistoryTopicSource,
+  namedGospelTopicSource,
   deterministicScriptureSource,
   evidenceCacheKey,
   extractRelevantParagraphs,
@@ -21,6 +22,33 @@ import worker, {
 function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
+
+const interfaithQuestion = 'What do Latter-day Saints teach about religious freedom and respecting people of other religions?';
+const interfaithRanked = rankChurchSourceCandidates(interfaithQuestion, 'ask');
+const namedInterfaith = namedGospelTopicSource(interfaithQuestion, 'ask', interfaithRanked);
+assert(namedInterfaith && namedInterfaith.namedGospelTopic === true && /\/religious-freedom\?/.test(namedInterfaith.url),
+  'a uniquely named Gospel Topic must displace generic historical keyword matches');
+assert(!namedGospelTopicSource('Compare religious freedom and political neutrality', 'ask', interfaithRanked)
+  && !namedGospelTopicSource(interfaithQuestion, 'church-history', interfaithRanked)
+  && !namedGospelTopicSource(interfaithQuestion, 'ask', [interfaithRanked[0], { titleMatch: true }]),
+  'comparison, history-profile and multiple named-topic questions must retain multi-source routing');
+// Synthetic extraction fixture: the responsive paragraph follows larger generic paragraphs.
+const interfaithParagraphs = [
+  'Religious freedom lets people choose their religion and share their faith. '.repeat(8).trim(),
+  'The principle protects religious organizations and their worship practices. '.repeat(8).trim(),
+  'People may gather for worship and teach religious ideas within their communities. '.repeat(8).trim(),
+  "Respect for other religions includes defending another person's freedom of belief even when we disagree. This concern applies to neighbors as well as members of our own faith."
+];
+const namedExcerpt = relevantParagraphText(interfaithParagraphs, interfaithQuestion, namedInterfaith);
+assert(namedExcerpt.length > 700 && namedExcerpt.length <= 4200
+  && namedExcerpt.includes(interfaithParagraphs[3]) && namedExcerpt.endsWith('.'),
+  'named-topic evidence must retain complete responsive paragraphs beyond the former700-character cutoff');
+const warmNamedExcerpt = relevantParagraphText(compactParagraphPack(interfaithParagraphs, namedInterfaith, interfaithQuestion), interfaithQuestion, namedInterfaith);
+assert(warmNamedExcerpt.includes(interfaithParagraphs[3]), 'warm named-topic cache must retain the interfaith relationship');
+const namedKeyA = await evidenceCacheKey(namedInterfaith, interfaithQuestion);
+const namedKeyB = await evidenceCacheKey(namedInterfaith, 'What does religious freedom mean for institutions?');
+assert(namedKeyA && namedKeyB && namedKeyA.url !== namedKeyB.url,
+  'named-topic caches must isolate different questions about the same article');
 
 const boundaryFaithAnswer = [
   'Hyrum Smith held an important leadership responsibility in the early Church and assisted senior Church leadership during a demanding period of growth and change.',

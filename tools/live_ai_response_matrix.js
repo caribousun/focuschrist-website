@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-03.53';
+const POLICY_VERSION = '2026-09-06.54';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -161,6 +161,8 @@ async function submit(test, messages = null) {
             evidenceRelevance: Array.isArray(payload.focuschrist_evidence_relevance) ? payload.focuschrist_evidence_relevance : [],
             deterministicScripture: payload.focuschrist_deterministic_scripture === true,
             deterministicHistoryTopic: payload.focuschrist_deterministic_history_topic === true,
+            namedGospelTopic: payload.focuschrist_named_gospel_topic === true,
+            publicationFailure: String(payload.focuschrist_verifier_publication_failure || ''),
             reviewedRecovery: String(payload.focuschrist_reviewed_deterministic_recovery || ''),
         };
     } finally { clearTimeout(timer); }
@@ -170,7 +172,7 @@ function validate(test, result) {
     assert(result.status === 200, test.id + ' returned HTTP ' + result.status);
     assert(result.policyVersion === POLICY_VERSION, test.id + ' returned Worker policy ' + result.policyVersion);
     assert(result.elapsedMs <= HARD_LIMIT_MS, test.id + ' exceeded the 25-second visitor ceiling');
-    assert(result.wordCount >= test.minimumWords, test.id + ' returned an incomplete answer');
+    assert(result.wordCount >= test.minimumWords, test.id + ' returned an incomplete answer' + (result.publicationFailure ? ' / ' + result.publicationFailure : ''));
     assert(!/could not complete|temporarily unavailable|could not verify|please rephrase/i.test(result.answer), test.id + ' returned a known fallback');
     assert(result.resolvedProfile === test.expectedProfile, test.id + ' resolved to ' + result.resolvedProfile);
     assert(result.classificationMode.length > 0, test.id + ' omitted the classification receipt');
@@ -180,6 +182,10 @@ function validate(test, result) {
         assert(['reviewed-deterministic', 'groq-primary', 'groq-primary-repair', 'openai-fallback', 'openai-repair', 'cloudflare-primary', 'cloudflare-fast-fallback', 'groq-fallback'].includes(result.verifierRoute), test.id + ' omitted a verifier route');
         assert(result.verified && result.sourceHosts.length > 0 && result.sourceHosts.every((host) => host === 'churchofjesuschrist.org' || host.endsWith('.churchofjesuschrist.org')), test.id + ' was not official-only verified');
         assert(result.retrievalRoute === 'church-source-index' && result.groqResearchCalls === 0 && result.indexSources > 0 && result.officialFetchCalls <= 2, test.id + ' did not prove bounded zero-Groq research');
+        if (test.id === 'respectful-interfaith') {
+            assert(result.namedGospelTopic === true && result.indexSources === 1 && result.officialFetchCalls <= 1,
+                'interfaith answer must use the uniquely named official Gospel Topic');
+        }
         if (test.id === 'regression-alma32-deterministic-source') {
             assert(result.deterministicScripture === true && result.indexSources === 1 && result.officialFetchCalls <= 1,
                 test.id + ' did not prove single-source deterministic scripture retrieval');
