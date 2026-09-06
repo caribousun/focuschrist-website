@@ -42,6 +42,9 @@ jobs:
       - name: Check canonical URLs and search discovery metadata
         run: python tools/discovery_qa.py
 
+      - name: Verify visual resource coverage and source thumbnails
+        run: python tools/resource_thumbnail_qa.py
+
       - name: Run focusChrist resource QA
         run: python tools/resource_qa.py
 

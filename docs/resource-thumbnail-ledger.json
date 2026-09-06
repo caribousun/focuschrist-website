@@ -1,0 +1,139 @@
+{
+  "resources": [
+    {
+      "key": "harmony",
+      "url": "https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng",
+      "title": "Days of Harmony",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/7fc7a82f77be9711408c1658e5e8938738edd7ed/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/harmony.jpg",
+      "width": 1200,
+      "height": 630,
+      "sha256": "9251d667684ace1f4125481d818c459eafae93aca4613a0b9aa2b29db082f706",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "look-event",
+      "url": "https://www.churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ?lang=eng",
+      "title": "January 2025 Worldwide Discussion for Youth - Look Unto Christ",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/2l9zx8u36utcvdmh0hwjobfqd2y3k6602xte1mop/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/look-event.jpg",
+      "width": 1200,
+      "height": 630,
+      "sha256": "24dd3c06070c6bc98a061c7350188b11d406bc8466c7600fc6b5fc17c73bc143",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "cfm-rejoice",
+      "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-book-of-mormon-2024/10?lang=eng",
+      "title": "March 4\u201310: \u201cWe Rejoice in Christ.\u201d 2 Nephi 20\u201325",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/a6d849e46fe111ecb00ceeeeac1e3d64afed97cb/full/%21320%2C/0/default",
+      "local_thumbnail": "assets/resources/cfm-rejoice.jpg",
+      "width": 320,
+      "height": 240,
+      "sha256": "3d1ef4c92e87261095eaa23f32b32efbc3208d28ea06d33a674d5f5da0bb1228",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "cfm-philippians",
+      "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-new-testament-2027/41?lang=eng",
+      "title": "October 4\u201310. \u201cI Can Do All Things Through Christ Which Strengtheneth Me\u201d: Philippians; Colossians",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/af04af0e9b7611eeb814eeeeac1ee8793f85f2e5/full/%21500%2C/0/default",
+      "local_thumbnail": "assets/resources/cfm-philippians.jpg",
+      "width": 500,
+      "height": 281,
+      "sha256": "2e5a6a20a635e30640679615c5830d4aabd713dd23d214fa70972a35902de2ac",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "seminary",
+      "url": "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-seminary-teacher-manual-2025/061-doctrine-and-covenants-6?lang=eng",
+      "title": "Lesson 17\u2014Doctrine and Covenants 6: \u201cLook unto Me in Every Thought; Doubt Not, Fear Not\u201d",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/9126c808756411ec9ef8eeeeac1eb2e621b22861/full/%21500%2C/0/default",
+      "local_thumbnail": "assets/resources/seminary.jpg",
+      "width": 500,
+      "height": 333,
+      "sha256": "6139bdb298147bec87a0e7e7808987439ee16d1210a9869f2fad6969cd9f3607",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "rejoice",
+      "url": "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+      "title": "\u2018Rejoice in Christ\u2019: Salt Lake Temple Celebration Welcomes the World",
+      "thumbnail": "https://newsroom.churchofjesuschrist.org/media/640x480/rejoice-in-christ-thumb.jpeg",
+      "local_thumbnail": "assets/resources/rejoice.jpg",
+      "width": 640,
+      "height": 480,
+      "sha256": "e88aa0af986bc8afefe96bceaba5f6a14874cd810e9717abe8a92724d53e6f8f",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "youth",
+      "url": "https://www.churchofjesuschrist.org/callings/youth?lang=eng",
+      "title": "Rejoice in Christ.",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/d152e83248a331805b38343ddd01d5936af4fb93/full/!1280%2C720/0/default",
+      "local_thumbnail": "assets/resources/youth.jpg",
+      "width": 1279,
+      "height": 720,
+      "sha256": "7746206e4c603a1435916e5922ed78e026d8b9cadcd0b1610a242366682ea76a",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "look-worldwide",
+      "url": "https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng",
+      "title": "Look Unto Christ: Worldwide Event for Youth",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/y9sajwhw4mbhump5k6iwk1xxb0aud8hevpshxdfr/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/look-worldwide.jpg",
+      "width": 1200,
+      "height": 630,
+      "sha256": "df7cc9da54abe58a8390a3aa8c867124996f276535a514cafc3c4e0666bf9d95",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "strength",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?alang=eng&collectionId=1708f0e87f184f9e812608d5f51bdb13&lang=eng",
+      "title": "Jesus Christ Is the Strength of Youth",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/34b569eb41af11ed8e33eeeeac1ecf6724142267/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/strength.jpg",
+      "width": 1200,
+      "height": 630,
+      "sha256": "6b1e1e36c5e936dbbf0d4896e3b94ade8d5b71ae24b6b057043e2effc66958ba",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "doubt",
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-11-0024-wherefore-didst-thou-doubt?lang=eng",
+      "title": "Wherefore Didst Thou Doubt?",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/b423ba90771c7116b4b9dea7a99e2c96ba4b5522/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/doubt.jpg",
+      "width": 1200,
+      "height": 630,
+      "sha256": "7ea2ed80547bcb8f7ca2337c039f9e7d5b43ceb010171e7a40034e8c41626e00",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    },
+    {
+      "key": "nephi",
+      "url": "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-seminary-student-manual-2024/11-2-nephi-20-25/112-student?lang=eng",
+      "title": "2 Nephi 25: Saved by Jesus Christ",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/4f5affc019a711ed976feeeeac1e068be74cbc4f/full/%21320%2C/0/default",
+      "local_thumbnail": "assets/resources/nephi.jpg",
+      "width": 320,
+      "height": 168,
+      "sha256": "82b1307ab4504f00ff8010cf9678cba339aa290945b0156ea3bdc61d4ba56c7f",
+      "status": 200,
+      "verified_date": "2026-09-06"
+    }
+  ],
+  "reviewed_on": "2026-09-06",
+  "permission_source": "https://www.churchofjesuschrist.org/tools/help/frequently-asked-questions-about-gospel-media?lang=eng",
+  "method": "Downloaded exact source preview bytes. Media cards link directly to official resource; lesson images are native representative images, not custom artwork. No video files rehosted. Music video marked Church Use Only remains text-link-only. Sources independently reviewed before release."
+}
