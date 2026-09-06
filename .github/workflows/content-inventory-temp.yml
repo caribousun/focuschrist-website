@@ -1,0 +1,11 @@
+name: Temporary Content Inventory
+on:
+  push:
+    branches: [main]
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Emit reviewed content hashes
+        run: python tools/static_content_audit.py --inventory | grep -E 'index.html|look-unto-me-doctrine-and-covenants-6-36.html'
