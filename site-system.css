@@ -801,7 +801,7 @@ body.fc-site .fc-visual-hero {
     body.fc-site { --fc-opening-hero-height: 300px; }
 
     /* Mobile keeps a deliberate close portrait crop while retaining the robe
-       and lower mist. The original lossless 2170px PNG remains untouched. */
+       and lower mist. The exact owner-supplied 2048px PNG remains untouched. */
     body.fc-site .fc-home-hero::before,
     body.fc-site .fc-answer-detail-hero::before {
         width: 100%;
