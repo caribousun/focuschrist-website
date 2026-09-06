@@ -1,3 +1,4 @@
+import { PIONEER_SOURCE_URLS, PIONEER_FOCAL_PHRASES, pioneerTopic } from './pioneer-topic-sources.js';
 import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP_REVISION } from './church-source-index.js';
 
 // focusChrist server-owned, retrieval-grounded AI gateway.
@@ -23,8 +24,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-06.54';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.54';
+const SOURCE_POLICY_VERSION = '2026-09-06.55';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.55';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -209,10 +210,19 @@ function sanitizePayload(payload) {
         .map((message) => ({ role: message.role, content: message.content.slice(0, 12000) }))
     : [];
   const scope = classifyResearchScope(clientMessages, payload.focuschrist_page, payload.focuschrist_profile);
+  const disclosureTopic = pioneerTopic(payload.focuschrist_pioneer_topic, scope.page);
+  if (disclosureTopic) {
+    scope.pioneerTopicKey = payload.focuschrist_pioneer_topic;
+    scope.selectedPioneer = false;
+    scope.selectedPioneerName = '';
+    scope.question = `Explain ${disclosureTopic.subject}. Give a useful historical account using the supplied sources and distinguish established facts from recollections.`;
+    scope.retrievalQuestion = disclosureTopic.subject;
+  }
   const conversationMessages = clientMessages
     .filter((message) => message.role === 'user' || message.role === 'assistant')
     .slice(-8)
     .map((message) => ({ role: message.role, content: message.content.slice(0, 3000) }));
+  if (disclosureTopic) conversationMessages.splice(0, conversationMessages.length, { role: 'user', content: scope.question });
   let scopeInstruction;
   if (scope.selectedPioneer) {
     scopeInstruction = `The visitor selected the pioneer ${scope.selectedPioneerName}. Search only site:churchofjesuschrist.org to corroborate that exact person's identity, company, dates, and journey. The gateway will separately supply the selected Tell My Story, Too biography.`;
@@ -420,7 +430,9 @@ function rankChurchSourceCandidates(question, page) {
 function isAllowedOfficialFetchUrl(rawUrl, deterministic = false) {
   try {
     const url = new URL(String(rawUrl || ''));
-    if (url.protocol !== 'https:' || url.hostname !== 'www.churchofjesuschrist.org') return false;
+    if (url.protocol !== 'https:') return false;
+    if (PIONEER_SOURCE_URLS.has(url.href)) return true;
+    if (url.hostname !== 'www.churchofjesuschrist.org') return false;
     if (/\/(?:search|scriptures\/search)(?:\/|$)/i.test(url.pathname) || /internal-use-only/i.test(url.pathname)) return false;
     if (![...url.searchParams.keys()].every((key) => key === 'lang' || key === 'id')) return false;
     if (url.searchParams.get('lang') && url.searchParams.get('lang') !== 'eng') return false;
@@ -442,7 +454,7 @@ function extractVisibleParagraphs(htmlText) {
   const clean = String(htmlText || '')
     .replace(/<!--[\s\S]*?-->/g, ' ')
     .replace(/<(script|style|nav|header|footer|svg|form|noscript|template|iframe)\b[\s\S]*?(?:<\/\1>|$)/gi, ' ')
-    .replace(/<([a-z][a-z0-9-]*)\b[^>]*(?:\bhidden\b|\binert\b|aria-hidden\s*=\s*["']?true|style\s*=\s*(?:"[^"]*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^"]*"|'[^']*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^']*'|[^\s>]*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^\s>]*))[^>]*>[\s\S]*?(?:<\/\1>|$)/gi, ' ');
+    .replace(/<((?!(?:area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)\b)[a-z][a-z0-9-]*)\b[^>]*(?:\bhidden\b|\binert\b|aria-hidden\s*=\s*["']?true|style\s*=\s*(?:"[^"]*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^"]*"|'[^']*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^']*'|[^\s>]*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^\s>]*))[^>]*>[\s\S]*?(?:<\/\1>|$)/gi, ' ');
   const paragraphs = [];
   const seen = new Set();
   let retainedCharacters = 0;
@@ -471,8 +483,22 @@ function explicitHistoryYears(candidate, question) {
     ? Array.from(new Set(String(question || '').match(/\b[12]\d{3}\b/g) || [])) : [];
 }
 
+function eligibleSourceParagraphs(paragraphs, candidate) {
+  return (Array.isArray(paragraphs) ? paragraphs : []).filter(text => !(candidate?.pioneerDisclosure
+    && candidate.url === 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng'
+    && /Chimney Rock.{0,50}landmark in Wyoming/i.test(text)));
+}
+
+function pioneerParagraphScore(paragraphs, position, candidate) {
+  if (!candidate || !candidate.pioneerDisclosure || !candidate.focalPhrases?.length) return 0;
+  const matches = text => candidate.focalPhrases.some(phrase => String(text || '').toLowerCase().includes(phrase));
+  if (matches(paragraphs[position])) return 1200;
+  if (matches(paragraphs[position - 1]) || matches(paragraphs[position + 1])) return 350;
+  return 0;
+}
+
 function relevantParagraphText(paragraphs, question, candidate = null) {
-  const sourceParagraphs = Array.isArray(paragraphs) ? paragraphs : [];
+  const sourceParagraphs = eligibleSourceParagraphs(paragraphs, candidate);
   const historyYears = explicitHistoryYears(candidate, question);
   const queryTokens = normalizeDiscoveryTokens(question);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
@@ -481,12 +507,12 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
     const overlap = queryTokens.filter((token) => tokens.has(token)).length;
     const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
-    const topicScore = (pinnedIrrigation ? 240 : 0) + (pinnedSettlement ? 40 : 0);
+    const topicScore = pioneerParagraphScore(sourceParagraphs, position, candidate) + (pinnedIrrigation ? 240 : 0) + (pinnedSettlement ? 40 : 0);
     return { text, position, overlap, topicScore, score: (historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 400 : 0) + topicScore + overlap * 20 + Math.min(10, text.length / 180) };
   }).filter((item) => item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
-    .slice(0, candidate && candidate.namedGospelTopic === true ? sourceParagraphs.length : 2);
-  if (candidate && candidate.namedGospelTopic === true) {
+    .slice(0, candidate && (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true) ? sourceParagraphs.length : 2);
+  if (candidate && (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true)) {
     // A uniquely named short topic needs complete explanatory paragraphs, not
     // a 700-character fragment. Keep relevance-ranked paragraphs within the
     // existing scripture-sized budget, then restore their reading order.
@@ -570,11 +596,12 @@ function extractRelevantParagraphs(htmlText, question) {
 }
 
 function compactParagraphPack(paragraphs, candidate, question = '') {
+  paragraphs = eligibleSourceParagraphs(paragraphs, candidate);
   const historyYears = explicitHistoryYears(candidate, question);
   const discoveryTokens = normalizeDiscoveryTokens(`${candidate.title || ''} ${candidate.tokens || ''}`);
   const queryTokens = normalizeDiscoveryTokens(question);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
-  const questionFocused = topicPinned || Boolean(candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true));
+  const questionFocused = topicPinned || Boolean(candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true || (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true)));
   const almaPinned = isPinnedAlma32FaithStudy(candidate, question);
   const originalAnchors = almaPinned ? (Array.isArray(paragraphs) ? paragraphs : []).map((text, position) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
@@ -589,7 +616,7 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
     const queryOverlap = questionFocused ? queryTokens.filter((token) => tokens.has(token)).length : 0;
     const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
-    const topicScore = (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
+    const topicScore = pioneerParagraphScore(paragraphs, position, candidate) + (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
     const historyLeadScore = candidate && candidate.deterministicHistoryTopic === true && !historyYears.length && position < 2 ? 1200 : 0;
     const historyYearScore = historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 2400 : 0;
     return { text, position, score: (originalAnchors.includes(position) || position === metaphorPosition ? 2400 : 0) + historyYearScore + historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
@@ -635,7 +662,7 @@ async function evidenceCacheKey(candidate, question) {
   if (!globalThis.crypto || !globalThis.crypto.subtle) return null;
   const variant = officialExcerptCacheVariant(candidate);
   const deterministicQuestionKey = candidate
-    && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true)
+    && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true || (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true))
     ? normalizeDiscoveryTokens(question).slice(0, 12).join('-') + (isPinnedAlma32FaithStudy(candidate, question) ? '-word-seed-v1' : '') + (explicitHistoryYears(candidate, question).length ? '-dated-history-v1' : '')
     : '';
   const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${deterministicQuestionKey}\n${candidate.url}`;
@@ -662,7 +689,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
           if (content && evidenceAdmissionSufficient(candidate, content, question)) {
             if (counters) counters.cacheHits += 1;
             const source = canonicalSource(candidate.url, candidate.title, content,
-              candidate.deterministic === true || candidate.namedGospelTopic === true ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
+              candidate.deterministic === true || (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true) ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
             if (source) {
               source.cacheStatus = 'hit';
               source.topicPinned = candidate.topicPinned === true;
@@ -699,7 +726,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       } catch (_cacheError) {}
     }
     const source = canonicalSource(candidate.url, candidate.title, content,
-      candidate.deterministic === true || candidate.namedGospelTopic === true ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
+      candidate.deterministic === true || (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true) ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
     if (source) {
       source.cacheStatus = 'miss';
       source.topicPinned = candidate.topicPinned === true;
@@ -712,18 +739,19 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
   }
 }
 
-async function retrieveIndexedChurchEvidence(question, page, deadline) {
+async function retrieveIndexedChurchEvidence(question, page, deadline, pioneerTopicKey = '') {
   const rankedCandidates = rankChurchSourceCandidates(question, page);
   const deterministicScripture = deterministicScriptureSource(question);
   const deterministicHistoryTopic = deterministicScripture ? null : deterministicHistoryTopicSource(question, page);
   const namedGospelTopic = deterministicScripture || deterministicHistoryTopic ? null : namedGospelTopicSource(question, page, rankedCandidates);
-  const candidates = deterministicScripture
+  const topic = pioneerTopic(pioneerTopicKey, page);
+  const candidates = topic ? [{ url: topic.url, title: topic.subject, kind: 'pioneer-disclosure', pioneerDisclosure: true, focalPhrases: PIONEER_FOCAL_PHRASES[pioneerTopicKey] || [] }] : deterministicScripture
     ? [{ ...deterministicScripture, score: 1000, overlapCount: normalizeDiscoveryTokens(question).length }]
     : deterministicHistoryTopic
       ? [deterministicHistoryTopic]
       : namedGospelTopic ? [namedGospelTopic] : rankedCandidates;
   const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
-  const singleSource = Boolean(deterministicScripture || deterministicHistoryTopic || namedGospelTopic);
+  const singleSource = Boolean(topic || deterministicScripture || deterministicHistoryTopic || namedGospelTopic);
   const fetchCandidates = singleSource ? candidates.slice(0, 1) : candidates.slice(0, 2);
   const fetched = await Promise.all(fetchCandidates.map((candidate) => fetchOfficialSource(candidate, question, deadline, counters)));
   const evidence = fetched.filter(Boolean).slice(0, singleSource ? 1 : 2);
@@ -736,6 +764,7 @@ async function retrieveIndexedChurchEvidence(question, page, deadline) {
     deterministicScripture: Boolean(deterministicScripture),
     deterministicHistoryTopic: Boolean(deterministicHistoryTopic),
     namedGospelTopic: Boolean(namedGospelTopic),
+    pioneerDisclosure: Boolean(topic),
   };
 }
 
@@ -1908,12 +1937,13 @@ export default {
       if (tellMyStoryEvidence) retrievalDiagnostic.focuschrist_retrieval_route = 'reviewed-pioneer-biography';
 
       if (sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
-        const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline);
+        const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline, sanitized.scope.pioneerTopicKey);
         retrievalDiagnostic.focuschrist_index_candidates = indexed.candidates.length;
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
         retrievalDiagnostic.focuschrist_deterministic_scripture = indexed.deterministicScripture === true;
         retrievalDiagnostic.focuschrist_deterministic_history_topic = indexed.deterministicHistoryTopic === true;
         retrievalDiagnostic.focuschrist_named_gospel_topic = indexed.namedGospelTopic === true;
+        retrievalDiagnostic.focuschrist_pioneer_disclosure = indexed.pioneerDisclosure === true;
         retrievalDiagnostic.focuschrist_official_fetch_calls = indexed.fetchCalls;
         retrievalDiagnostic.focuschrist_official_cache_hits = indexed.cacheHits;
         retrievalDiagnostic.focuschrist_official_cache_misses = indexed.cacheMisses;

@@ -4,8 +4,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = "2026-09-03.16"
-WORKER_POLICY = "2026-09-06.54"
-CACHE = "20260906-reopen"
+WORKER_POLICY = "2026-09-06.55"
+CACHE = "20260906-disclosure-states"
 
 
 def block(text: str, start: str, end: str) -> str:
@@ -35,14 +35,15 @@ def main() -> int:
     if not disclosure:
         errors.append("Journey/Trail disclosure flow is missing")
     else:
-        if disclosure.find("renderDisclosureAnswer(aiResponse, localAnswer)") > disclosure.find("requestPioneerAI"):
-            errors.append("card disclosure calls AI before rendering reviewed local content")
-        if "showLoading(" in disclosure:
-            errors.append("card disclosure still contains a provider-dependent spinner")
-        if "result.sourceIntegrityPassed" not in disclosure:
-            errors.append("card disclosure can replace local content without verification")
-        if "renderDisclosureAnswer(aiResponse, 'I could not" in disclosure:
-            errors.append("card disclosure still installs a refusal after AI failure")
+        if "await researchDisclosure(control, aiResponse, mappedTopic, kind)" not in disclosure:
+            errors.append("card disclosure does not use the shared research state owner")
+        if "result.sourceIntegrityPassed" not in experience:
+            errors.append("card disclosure can publish unverified content")
+        if "reviewedLocalDisclosure" in experience:
+            errors.append("card disclosure still duplicates the short summary as an answer")
+        for state in ("'pending'", "'complete'", "'error'", "'Try again'"):
+            if state not in experience:
+                errors.append("missing disclosure state or recovery: " + state)
 
     send_flow = block(experience, "window.sendMessage = async function", "window.askTellMyStory")
     contextual_request = "requestPioneerAI(contextResolution.query || question, pageReference)"
@@ -55,7 +56,7 @@ def main() -> int:
 
     required_markers = (
         "reviewed-local-book-entry",
-        "local-reviewed-card",
+        "research-unavailable",
         "requestIdleCallback",
         "Tell My Story, Too — ",
         "const nextStory = storyPosition >= 0 ? storyStarts[storyPosition + 1] : null",
