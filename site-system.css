@@ -827,7 +827,7 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
         line-height: 1.35;
         margin-top: 6px;
     }
-    body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom: 5px; font-size: .66rem; }
+    body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom: 5px; }
     body.fc-site .fc-page-intro .fc-actions { margin-top: 8px; }
     body.fc-site .fc-page-intro .fc-button { padding-block: 9px; }
     body.fc-site .fc-visual-hero:not(.fc-visual-hero--portrait)::before {
@@ -837,6 +837,71 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     body.fc-site .fc-visual-hero::after {
         background: linear-gradient(180deg, rgba(10,24,31,.08), transparent 25%, transparent 94%, var(--fc-bg-warm));
     }
+}
+
+/* Opening-panel presentation polish. These treatments deliberately retain the
+   existing line boxes, margins, button heights, and panel geometry. */
+body.fc-site .fc-page-intro .fc-eyebrow {
+    display: flex;
+    width: min(100%, 760px);
+    min-height: 1em;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 1.5vw, 18px);
+    color: #f6c965;
+    font-size: clamp(.76rem, 1.35dvh, .86rem);
+    font-weight: 800;
+    letter-spacing: clamp(2.7px, .28vw, 4px);
+    line-height: 1;
+    text-shadow: 0 1px 10px rgba(240,195,106,.18);
+}
+body.fc-site .fc-page-intro .fc-eyebrow::before,
+body.fc-site .fc-page-intro .fc-eyebrow::after {
+    content: "";
+    width: clamp(22px, 4vw, 54px);
+    height: 1px;
+    flex: 0 1 auto;
+    background: linear-gradient(90deg, transparent, rgba(246,201,101,.72));
+}
+body.fc-site .fc-page-intro .fc-eyebrow::after {
+    background: linear-gradient(90deg, rgba(246,201,101,.72), transparent);
+}
+body.fc-site .fc-page-intro .fc-button {
+    border-color: rgba(164,207,230,.82);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,0)),
+        rgba(41,73,86,.5);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 7px 18px rgba(5,17,23,.13);
+    font-size: .92rem;
+    letter-spacing: .01em;
+}
+body.fc-site .fc-page-intro .fc-button--primary {
+    border-color: #efbc48;
+    background: linear-gradient(180deg, #f0ba40 0%, #e7aa2c 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,245,208,.5),
+        0 8px 20px rgba(5,17,23,.2),
+        0 0 0 1px rgba(240,195,106,.08);
+}
+body.fc-site .fc-page-intro-scripture,
+body.fc-site .fc-page-intro .art-scroll-cue {
+    color: #f6c965;
+    text-shadow: 0 1px 10px rgba(240,195,106,.14);
+}
+
+@media (max-width:700px) {
+    body.fc-site .fc-page-intro .fc-eyebrow {
+        font-size: .76rem;
+        letter-spacing: 2.4px;
+        gap: 8px;
+        min-height: 1.3em;
+        line-height: 1.3;
+    }
+    body.fc-site .fc-page-intro .fc-eyebrow::before,
+    body.fc-site .fc-page-intro .fc-eyebrow::after { width: 18px; }
 }
 
 /* One hero box on every page, including History on narrow screens. */
