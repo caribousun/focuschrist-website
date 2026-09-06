@@ -679,3 +679,20 @@
         width: 100%;
     }
 }
+
+/* Preserve shared hero and typography; give the long Mission title room and
+   spend less of a short desktop viewport on empty introduction padding. */
+@media (min-width: 901px) {
+    .fc-missionary-page .fc-page-intro > .fc-container--standard {
+        max-width: var(--fc-gallery);
+    }
+
+    .fc-missionary-page .fc-page-intro .fc-display {
+        max-width: none;
+    }
+
+    .fc-missionary-page .fc-page-intro {
+        padding-top: clamp(16px, 2.4dvh, 38px);
+        padding-bottom: clamp(20px, 3dvh, 46px);
+    }
+}

@@ -91,7 +91,7 @@ def main() -> int:
     )
     if len(mission_image_triggers) != 7:
         errors.append(f"missionary.html: expected 7 image detail triggers, found {len(mission_image_triggers)}")
-    if "missionary.css?v=20260906-mission-hero-approved" not in missionary:
+    if "missionary.css?v=20260906-mission-intro-fit" not in missionary:
         errors.append("missionary.html: centered close-control stylesheet version missing")
     mission_records = re.findall(r'data-missionary-detail-content="([^"]+)"', missionary)
     if len(mission_records) != 9 or len(set(mission_records)) != 9:
