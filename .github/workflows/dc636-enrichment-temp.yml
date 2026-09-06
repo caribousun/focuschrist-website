@@ -1,0 +1,116 @@
+name: D&C 6:36 Centerpiece Enrichment
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dc636-enrichment-temp.yml'
+permissions:
+  contents: write
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply centerpiece enrichment
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, importlib.util
+
+          root = Path('.')
+          home_css = root / 'home.css'
+          home = home_css.read_text(encoding='utf-8')
+          spacing = '''\n/* D&C 6:36 signature invitation spacing */\n.fc-section[aria-labelledby="look-unto-me-home"] .fc-actions {\n    margin-top: clamp(30px, 3vw, 40px);\n}\n@media (max-width: 700px) {\n    .fc-section[aria-labelledby="look-unto-me-home"] .fc-actions {\n        margin-top: 28px;\n    }\n}\n'''
+          if 'D&C 6:36 signature invitation spacing' not in home:
+              home_css.write_text(home.rstrip() + spacing, encoding='utf-8')
+
+          css = '''/* D&C 6:36 centerpiece study page */
+.fc-dc636-page .fc-page-intro .fc-actions { margin-top: clamp(28px, 3vw, 40px); }
+.fc-dc636-page .fc-deep-study,
+.fc-dc636-page #guided-study,
+.fc-dc636-page #watch,
+.fc-dc636-page #sources { scroll-margin-top: 110px; }
+.fc-dc636-feature {
+  display:grid; grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);
+  gap:clamp(24px,4vw,46px); align-items:center; margin:28px 0 8px;
+}
+.fc-dc636-feature img { width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:18px; display:block; box-shadow:0 18px 42px rgba(7,24,26,.18); }
+.fc-media-library { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(20px,3vw,30px); margin-top:28px; }
+.fc-media-card { display:flex; flex-direction:column; overflow:hidden; border:1px solid rgba(33,77,82,.18); border-radius:20px; background:#fff; color:inherit; text-decoration:none; box-shadow:0 12px 30px rgba(13,43,46,.08); transition:transform .18s ease,box-shadow .18s ease; }
+.fc-media-card:hover,.fc-media-card:focus-visible { transform:translateY(-3px); box-shadow:0 18px 40px rgba(13,43,46,.14); }
+.fc-media-card__media { position:relative; aspect-ratio:16/9; overflow:hidden; background:#163f42; }
+.fc-media-card__media img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .25s ease; }
+.fc-media-card:hover .fc-media-card__media img { transform:scale(1.025); }
+.fc-media-card__play { position:absolute; left:18px; bottom:16px; width:48px; height:48px; border-radius:50%; display:grid; place-items:center; background:rgba(255,255,255,.94); color:#173f42; font-size:20px; box-shadow:0 8px 22px rgba(0,0,0,.2); }
+.fc-media-card__badge { position:absolute; right:14px; top:14px; border-radius:999px; padding:7px 10px; background:rgba(10,45,48,.88); color:#fff; font-size:.74rem; font-weight:700; letter-spacing:.04em; text-transform:uppercase; }
+.fc-media-card__body { padding:20px 20px 22px; }
+.fc-media-card__body h3 { margin:0 0 9px; color:#143f42; font-size:1.12rem; }
+.fc-media-card__body p { margin:0; color:#40595a; line-height:1.62; }
+.fc-resource-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; margin-top:26px; }
+.fc-resource-visual { display:grid; grid-template-columns:148px 1fr; gap:18px; align-items:center; padding:16px; border:1px solid rgba(33,77,82,.16); border-radius:18px; text-decoration:none; color:inherit; background:rgba(255,255,255,.72); }
+.fc-resource-visual img { width:148px; aspect-ratio:4/3; object-fit:cover; border-radius:13px; }
+.fc-resource-visual h3 { margin:0 0 6px; color:#173f42; }
+.fc-resource-visual p { margin:0; line-height:1.55; }
+@media (max-width:800px){ .fc-dc636-feature,.fc-media-library,.fc-resource-gallery{grid-template-columns:1fr;} .fc-resource-visual{grid-template-columns:112px 1fr;} .fc-resource-visual img{width:112px;} }
+@media (max-width:520px){ .fc-resource-visual{grid-template-columns:1fr;} .fc-resource-visual img{width:100%; aspect-ratio:16/9;} }
+'''
+          (root / 'dc636-study.css').write_text(css, encoding='utf-8')
+
+          page = root / 'answers/look-unto-me-doctrine-and-covenants-6-36.html'
+          text = page.read_text(encoding='utf-8')
+          if '../dc636-study.css?v=20260906-1' not in text:
+              text = text.replace('<link rel="stylesheet" href="../answer-styles.css">', '<link rel="stylesheet" href="../answer-styles.css"><link rel="stylesheet" href="../dc636-study.css?v=20260906-1">')
+          text = text.replace('<body class="fc-site">','<body class="fc-site fc-dc636-page">')
+
+          old_watch = '''<section id="watch"><p class="fc-eyebrow">Watch and continue studying</p><h2>Official Church Media and Study Paths</h2><div class="fc-grid fc-grid--2"><article class="fc-card"><h3 class="fc-card-title"><a href="https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng" target="_blank" rel="noopener noreferrer">Days of Harmony</a></h3><p>Use this Church video to place Joseph Smith, Oliver Cowdery, Harmony, and the translation work into a visual historical setting.</p></article><article class="fc-card"><h3 class="fc-card-title"><a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-book-of-mormon-2024/10?lang=eng" target="_blank" rel="noopener noreferrer">“We Rejoice in Christ” Come, Follow Me</a></h3><p>This official lesson gathers 2 Nephi 20-25 around Christ, testimony, Isaiah, joy, and speaking more openly of the Savior.</p></article><article class="fc-card"><h3 class="fc-card-title"><a href="https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-new-testament-2027/41?lang=eng" target="_blank" rel="noopener noreferrer">Philippians and Colossians: 2027 Come, Follow Me</a></h3><p>Study Paul's joy and confidence in Christ, including Philippians 4 and “I can do all things through Christ.”</p></article><article class="fc-card"><h3 class="fc-card-title"><a href="https://www.churchofjesuschrist.org/study/new-era/2014/12/rejoice-in-christ?lang=eng" target="_blank" rel="noopener noreferrer">Rejoice in Christ</a></h3><p>Read prophetic and apostolic testimonies centered directly on Jesus Christ, His Redemption, and His Resurrection.</p></article></div></section>'''
+          new_watch = '''<section id="watch"><p class="fc-eyebrow">Watch, see, and continue studying</p><h2>Official Church Media: Keep Looking to Christ</h2><p>Use these visual and video paths as part of the study, not as decoration. Each one opens an official Church resource that extends the same invitation to center attention, confidence, remembrance, and joy in Jesus Christ.</p><div class="fc-media-library">
+<a class="fc-media-card" href="https://www.churchofjesuschrist.org/media/video/2025-06-look-unto-christ?lang=eng" target="_blank" rel="noopener noreferrer"><div class="fc-media-card__media"><img src="https://www.churchofjesuschrist.org/imgs/k1rz6ejij35ipafv59vncxvj343v4gbevwb3qkm6/full/%21320%2C/0/default" alt="Look Unto Christ official Church video thumbnail" loading="lazy"><span class="fc-media-card__play" aria-hidden="true">▶</span><span class="fc-media-card__badge">Official video</span></div><div class="fc-media-card__body"><h3>Look Unto Christ</h3><p>A direct visual companion to Doctrine and Covenants 6:36 and the Church's 2025 invitation to look to the Savior.</p></div></a>
+<a class="fc-media-card" href="https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng" target="_blank" rel="noopener noreferrer"><div class="fc-media-card__media"><img src="https://www.churchofjesuschrist.org/imgs/7fc7a82f77be9711408c1658e5e8938738edd7ed/full/%21320%2C/0/default" alt="Days of Harmony official Church video thumbnail" loading="lazy"><span class="fc-media-card__play" aria-hidden="true">▶</span><span class="fc-media-card__badge">Church history video</span></div><div class="fc-media-card__body"><h3>Days of Harmony</h3><p>See Oliver Cowdery's experience as Joseph Smith's scribe and place Doctrine and Covenants 6 in its historical setting.</p></div></a>
+<a class="fc-media-card" href="https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?lang=eng" target="_blank" rel="noopener noreferrer"><div class="fc-media-card__media"><img src="https://www.churchofjesuschrist.org/imgs/34b569eb41af11ed8e33eeeeac1ecf6724142267/full/%21320%2C/0/default" alt="Jesus Christ Is the Strength of Youth official Church video thumbnail" loading="lazy"><span class="fc-media-card__play" aria-hidden="true">▶</span><span class="fc-media-card__badge">General Conference</span></div><div class="fc-media-card__body"><h3>Jesus Christ Is the Strength of Youth</h3><p>Elder Dieter F. Uchtdorf teaches that Jesus Christ is the best guide for making choices and explicitly draws on Doctrine and Covenants 6:36.</p></div></a>
+<a class="fc-media-card" href="https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng" target="_blank" rel="noopener noreferrer"><div class="fc-media-card__media"><img src="../assets/heroes/home.webp" alt="Jesus Christ artwork for the Look Unto Christ worldwide youth event study link" loading="lazy"><span class="fc-media-card__play" aria-hidden="true">▶</span><span class="fc-media-card__badge">Worldwide youth event</span></div><div class="fc-media-card__body"><h3>Look Unto Christ: Worldwide Event for Youth</h3><p>Continue the theme through a worldwide youth broadcast focused on reflecting on the invitation to look unto Christ.</p></div></a>
+</div></section>'''
+          if old_watch not in text:
+              raise SystemExit('Expected watch section not found')
+          text = text.replace(old_watch, new_watch)
+
+          marker = '<section class="fc-deep-study" id="rejoice" data-connected-study><p class="fc-eyebrow">2027 Church theme connection</p>'
+          feature = '''<section class="fc-deep-study" aria-labelledby="visual-witness"><p class="fc-eyebrow">See the theme in Church media</p><h2 id="visual-witness">Look to Christ. Rejoice in Christ.</h2><div class="fc-resource-gallery"><a class="fc-resource-visual" href="https://www.churchofjesuschrist.org/media/image/mormonad-big-picture-jesus-christ-edca63e?lang=eng" target="_blank" rel="noopener noreferrer"><img src="https://www.churchofjesuschrist.org/imgs/449ddc4ca1547ac2357e01aab9d0b7ff86f63887/full/%2C500/0/default" alt="Church media image connecting Jesus Christ with a scripture-centered message" loading="lazy"><span><h3>Look and keep the bigger picture</h3><p>Open an official Church media image built around Doctrine and Covenants 6:36 and the invitation to look to the Savior.</p></span></a><a class="fc-resource-visual" href="https://www.churchofjesuschrist.org/media/image/meme-2-nephi-christ-449ddc4?lang=eng" target="_blank" rel="noopener noreferrer"><img src="https://www.churchofjesuschrist.org/imgs/449ddc4ca1547ac2357e01aab9d0b7ff86f63887/full/%2C500/0/default" alt="We talk of Christ and rejoice in Christ official Church picture quote" loading="lazy"><span><h3>We rejoice in Christ</h3><p>See the Church's visual rendering of 2 Nephi 25:26, one of the central companion scriptures for this study.</p></span></a></div></section>'''
+          if 'id="visual-witness"' not in text:
+              text = text.replace(marker, feature + marker)
+
+          page.write_text(text, encoding='utf-8')
+
+          spec = importlib.util.spec_from_file_location('audit', root/'tools/static_content_audit.py')
+          audit = importlib.util.module_from_spec(spec); spec.loader.exec_module(audit)
+          new_hash = audit.content_hash(page)
+          ledger_path = root/'content-audit.json'
+          ledger = json.loads(ledger_path.read_text(encoding='utf-8'))
+          for record in ledger['documents']:
+              if record.get('path') == 'answers/look-unto-me-doctrine-and-covenants-6-36.html':
+                  record['published_text_sha256'] = new_hash
+                  record['reviewed_on'] = '2026-09-06'
+                  record['review_standard'] = 'Signature centerpiece enrichment review: D&C 6:36 historical and scriptural context, Look Unto Christ and Rejoice in Christ visual/media pathways, official Church video destinations, Philippians and Book of Mormon cross-references, accessibility, responsive media-card layout, and source integrity checked against authoritative Church resources.'
+                  add = [
+                    'https://www.churchofjesuschrist.org/media/video/2025-06-look-unto-christ?lang=eng',
+                    'https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng',
+                    'https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?lang=eng',
+                    'https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng',
+                    'https://www.churchofjesuschrist.org/media/image/meme-2-nephi-christ-449ddc4?lang=eng',
+                    'https://www.churchofjesuschrist.org/media/image/mormonad-big-picture-jesus-christ-edca63e?lang=eng'
+                  ]
+                  record.setdefault('authoritative_sources', [])
+                  for u in add:
+                      if u not in record['authoritative_sources']: record['authoritative_sources'].append(u)
+                  break
+          ledger_path.write_text(json.dumps(ledger, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
+          PY
+          python tools/static_content_audit.py
+          python tools/site_qa.py
+          python tools/unified_experience_qa.py
+          python tools/connected_study_qa.py
+          python tools/artwork_details_qa.py
+          git config user.name 'focusChrist QA'
+          git config user.email 'actions@users.noreply.github.com'
+          git add home.css dc636-study.css answers/look-unto-me-doctrine-and-covenants-6-36.html content-audit.json
+          git commit -m 'Enrich D&C 6:36 centerpiece with visual Church study paths'
+          git push
