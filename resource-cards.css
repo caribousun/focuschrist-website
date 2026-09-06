@@ -66,7 +66,7 @@
 .fc-answer-depth .fc-study-lead .fc-eyebrow {margin-bottom:16px;font-size:.7rem;letter-spacing:.2em;}
 .fc-answer-depth .fc-study-lead :is(h2,h3) {font-size:clamp(1.4rem,2.2vw,1.85rem);line-height:1.25;margin-bottom:18px;}
 .fc-answer-depth .fc-study-reading {border-top:1px solid rgba(134,175,200,.24);margin-top:26px;padding-top:24px;}
-.fc-answer-depth .fc-study-reading > p {max-width:72ch;}
+.fc-answer-depth .fc-study-reading > p {max-width:none;}
 .fc-answer-depth .fc-study-reading > :last-child {margin-bottom:0;}
 @media(max-width:800px) {
     .fc-answer-depth .fc-study-panel .fc-study-feature {grid-template-columns:1fr;gap:22px;}

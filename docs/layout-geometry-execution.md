@@ -35,3 +35,7 @@ The full-composition contain approach was rejected: the narrow centered artwork 
 ## Locked shared geometry and full opening viewport
 
 Owner clarified that no following section may show in the opening, and hero vertical size must stay consistent when switching pages. The content-measured ResizeObserver implementation is removed. Desktop hero height is one shared clamp(180px, calc(100dvh - 390px), 440px), determined only by viewport height. Every introductory section fills the remaining viewport beneath the72px header, with zero negative top margin. No page-specific JavaScript changes hero height. Very short screens still allow natural readable overflow. Home's rejected blur layer is removed; the approved portrait blends through a smooth opacity mask into warm-to-teal gradients. Numerical verification now records heroHeight and waits two animation frames after fonts before measuring.
+
+## Full-width study discussion
+
+Owner approved the improved panel grouping but identified excess empty right space below the divider. Remove the72ch paragraph cap inside .fc-study-reading only; these paragraphs now use the panel's available width. Preserve the header/video row, all wording and unique media, and locked opening geometry.
