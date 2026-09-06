@@ -727,3 +727,21 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     -webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);
     mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);
 }
+
+/* Fit the complete desktop opening, including its actions, in shorter windows.
+   Menu geometry stays unchanged. Artwork yields space before readable text does. */
+@media (min-width:1021px) {
+    body.fc-site { --fc-opening-hero-height:clamp(160px,min(27vw,40dvh,calc(100dvh - 410px)),440px); }
+    body.fc-site .fc-visual-hero { min-height:var(--fc-opening-hero-height); }
+}
+@media (min-width:1021px) {
+    body.fc-site .fc-page-intro { padding-top:clamp(16px,2.4dvh,38px);padding-bottom:clamp(20px,3dvh,46px); }
+    body.fc-site .fc-page-intro .fc-display { font-size:clamp(2.4rem,min(5.4vw,7dvh),4.25rem); }
+    body.fc-site .fc-page-intro .fc-actions { margin-top:18px; }
+    body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom:14px; }
+}
+
+@media(min-width:1021px) {
+    body.fc-site .fc-visual-hero:not(.fc-visual-hero--portrait)::before {background-position:center top!important;}
+    body.fc-site .fc-visual-hero > img {object-position:center top!important;}
+}
