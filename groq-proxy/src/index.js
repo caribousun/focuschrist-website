@@ -24,8 +24,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-06.59';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.59';
+const SOURCE_POLICY_VERSION = '2026-09-06.60';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.60';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -586,8 +586,13 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
     });
     // An explicitly dated question needs its matching event before general leads.
     const anchors = historyYears.length ? selected.map((item) => item.position) : [];
+    let characters = 0;
     return [...anchors, ...Array.from(positions).sort((left, right) => left - right).filter((position) => !anchors.includes(position))]
-      .map((position) => sourceParagraphs[position]).join(' ').slice(0, 1200);
+      .map((position) => sourceParagraphs[position]).filter((text) => {
+        if (characters + text.length + 1 > 4200) return false;
+        characters += text.length + 1;
+        return true;
+      }).join(' ');
   }
   return selected.map((item) => item.text).join(' ').slice(0, 700);
 }
@@ -709,7 +714,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
           if (content && evidenceAdmissionSufficient(candidate, content, question)) {
             if (counters) counters.cacheHits += 1;
             const source = canonicalSource(candidate.url, candidate.title, content,
-              candidate.deterministic === true || (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true) ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
+              candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true ? 4200 : 700);
             if (source) {
               source.cacheStatus = 'hit';
               source.topicPinned = candidate.topicPinned === true;
@@ -746,7 +751,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       } catch (_cacheError) {}
     }
     const source = canonicalSource(candidate.url, candidate.title, content,
-      candidate.deterministic === true || (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true) ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
+      candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true ? 4200 : 700);
     if (source) {
       source.cacheStatus = 'miss';
       source.topicPinned = candidate.topicPinned === true;
@@ -2117,7 +2122,7 @@ export default {
         retrievalDiagnostic.focuschrist_deterministic_scripture === true
           ? 'The visitor explicitly named a canonical scripture chapter. EVIDENCE contains that exact official scripture source and no competing research source. If its excerpt directly addresses the requested concept, compose the supported answer from it and approve it. Do not reject merely because the visitor asks for an explanation rather than a quotation.'
           : retrievalDiagnostic.focuschrist_deterministic_history_topic === true
-            ? 'The visitor explicitly named, or the bounded conversation context resolved to, an indexed Church History topic. EVIDENCE contains that exact official Church History topic and no competing research source. If its excerpt directly describes the requested identity, role, event, date, purpose, or historical setting, compose the supported answer from it and approve it. For a faith or Church-history answer, aim for 100 to 170 words and at least four complete sentences so the response clears the publication-depth floor with margin.'
+            ? 'The visitor explicitly named, or the bounded conversation context resolved to, an indexed Church History topic. EVIDENCE contains that exact official Church History topic and no competing research source. If its excerpt directly describes the requested identity, role, event, date, purpose, or historical setting, compose the supported answer from it and approve it. For a faith or Church-history answer, aim for 100 to 170 words and at least four complete sentences so the response clears the publication-depth floor with margin. Do not infer relative ages within a family or add biographical relationships that the evidence does not explicitly state.'
             : 'Evaluate the supplied official evidence normally under the source-integrity contract.',
         sanitized.scope.pioneerTopicKey
           ? 'This is a fixed historical timeline entry. Describe only causal links explicitly stated in the evidence: chronology or paragraph proximity does not establish cause. Do not infer motives, feelings, sounds, or present-day conditions. Do not invent journals, quotations, later accounts, or source descriptions. Keep dates and companies distinct, and do not move an event to the requested year simply because that year appears in the question. Omit unbounded comparisons. Attribute remembered experiences to the named narrator. Write a connected historical explanation without Context or Source fact labels and without repeating the same facts in a second summary.'
