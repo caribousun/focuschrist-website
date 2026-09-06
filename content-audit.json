@@ -8,16 +8,16 @@
     {
       "path": "404.html",
       "status": "non-source-dependent",
-      "published_text_sha256": "a9eec1d2ea96680e0c45656983867039c6172d2e41ab6fa8112e99ce48eb6b90",
+      "published_text_sha256": "f2d7bd6c5b0ecdeb83ba2e0488b691e4385843e2eb203a51cc249545d32148d0",
       "reviewed_on": "2026-09-02",
-      "review_standard": "L-044 universal source-integrity review; Missionary recovery path added"
+      "review_standard": "L-044 universal source-integrity review; Missionary recovery path added Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved."
     },
     {
       "path": "about.html",
       "status": "verified",
-      "published_text_sha256": "518479e7e8343c70e6b500d5b4acd4eb5ea029dab242c83179cfd9f2299a3224",
+      "published_text_sha256": "85bfdb0699d22c79c3ea2f3b4b9d0ff0a2904c5902f77057c52bcb0df5e46ace",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3.16?lang=eng"
@@ -26,9 +26,9 @@
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "9c68829738ee9f2523550d67e52744cbca403a7cbd6a161e9848a29a622d090e",
+      "published_text_sha256": "a070b7d9bd6fda6a2bfab915c65ea570f6c304eefd393c6a37a4600c5a8d71d2",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Topic navigation label and invitation reviewed for empathetic, non-doctrinal wording; existing destinations preserved.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Topic navigation label and invitation reviewed for empathetic, non-doctrinal wording; existing destinations preserved. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
@@ -60,9 +60,9 @@
     {
       "path": "answers/are-latter-day-saints-christian.html",
       "status": "verified",
-      "published_text_sha256": "3da229e121bd31c1b4b2855274494f5733c9f5b625e70f3a1cbf0c6a95262741",
+      "published_text_sha256": "1eb8e63084194cb7b838b83da25849d76e6f3058369fc45a56f1148a5631f53d",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://faq.churchofjesuschrist.org/are-mormons-christian",
         "https://www.churchofjesuschrist.org/",
@@ -86,9 +86,9 @@
     {
       "path": "answers/bible-and-book-of-mormon-together.html",
       "status": "verified",
-      "published_text_sha256": "a21c2073400b8f5d33d845d21eab821a1e2722d5cc34017209df25c89c9c4481",
+      "published_text_sha256": "68ea3ab7fea144e9151aeb472b569a215143131e5fc174cfadcbc1bfb91f6b76",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -112,9 +112,9 @@
     {
       "path": "answers/faith-in-jesus-christ-during-trials.html",
       "status": "verified",
-      "published_text_sha256": "d619551eb63b3375816c6826e1f10f6e56726a6b6c590e26f0c7b3da3d6cc287",
+      "published_text_sha256": "6c89c2686b735cd39dda86ab2bcf9dcd1ea5b868715db1f5fb352fb02b064bd4",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -136,9 +136,9 @@
     {
       "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
       "status": "verified",
-      "published_text_sha256": "36eb8f48a9235e6ed8d93e3ac1b8f79511a24964e1306a761703ba37d99b857c",
+      "published_text_sha256": "5f36a3fb6eeb1c82cc4c83b9a1048dd11ef23b65c7378795f17b8ccff77b531c",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -161,9 +161,9 @@
     {
       "path": "answers/prayer-and-personal-revelation.html",
       "status": "verified",
-      "published_text_sha256": "8b4b72d43e39b2eb9eda2e27cff93119d92303ef5412569fbf4a1ffc62e9cd2c",
+      "published_text_sha256": "7e53a8076d6234d35ad1d60b2a5c191386eab35c893fcaede433ba574ca188cc",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -187,9 +187,9 @@
     {
       "path": "answers/what-happens-after-death.html",
       "status": "verified",
-      "published_text_sha256": "5e48be2fc2c0aac129db5717e0ba010ba5674a7c061a0c1ab1ec83da510dd8fa",
+      "published_text_sha256": "81e89eb6ddf736c7252aa228ccf738372762eb6795e968b355da7a3c27dc5e98",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -210,9 +210,9 @@
     {
       "path": "answers/what-is-the-book-of-mormon.html",
       "status": "verified",
-      "published_text_sha256": "2b04f2ef4e0011f027c440b71dbfdff5873768133039558d7804d4adc120bb19",
+      "published_text_sha256": "6affd79125c1875d771c925183af016317fb37438988d3110d04c44d75e157a6",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -233,9 +233,9 @@
     {
       "path": "answers/who-was-joseph-smith.html",
       "status": "verified",
-      "published_text_sha256": "39ad17157d425ace45b7e6f4041cc50db4079f2b529092423ece3df801f1d87a",
+      "published_text_sha256": "af7d28444a365a355ca4f4ec9adb5e5035672585d6e1631681e1a60f9a0192dc",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://newsroom.churchofjesuschrist.org/ldsnewsroom/eng/background-information/joseph-smith-and-the-restoration",
         "https://www.churchofjesuschrist.org/",
@@ -254,9 +254,9 @@
     {
       "path": "answers/why-families-are-important.html",
       "status": "verified",
-      "published_text_sha256": "50968585582d67c17e5d29d39dab2be5413c27779fbf300e8acd53a99faa4cd6",
+      "published_text_sha256": "daf7dd54930b65ae5558b5319845ae20cc6c08366ba4db3fbc05b4f2cf23d92d",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -276,9 +276,9 @@
     {
       "path": "answers/why-latter-day-saints-build-temples.html",
       "status": "verified",
-      "published_text_sha256": "1e1eed6fb915b8854a82687d758ce1fbdebbcf75113d9ba2b21971ec31dc32d4",
+      "published_text_sha256": "ccb493cdaf4e1d21b7021869e671f8949fdf3d9e20ff55f118c8e2fb9b1114c4",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -299,9 +299,9 @@
     {
       "path": "art-study/be-still.html",
       "status": "verified",
-      "published_text_sha256": "39f0b5978b51d47b98faba940f2ba191a607a0fa642f754c596d04183478e44d",
+      "published_text_sha256": "16499c8827ae8754db8235deeaf408548a0f513f637aab03bdf1d53373b893a7",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/101?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/58?lang=eng",
@@ -314,9 +314,9 @@
     {
       "path": "art-study/suffer-the-little-children.html",
       "status": "verified",
-      "published_text_sha256": "d0012dc4cf6569583e0b8a6457934c19045d85e4db393cee5de214894bb2547b",
+      "published_text_sha256": "445678a3ef1cbd6bfee51d9f0a4b033b87f3bfe2909068395d47ae73dbe205ec",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p11-p25#p11",
@@ -327,9 +327,9 @@
     {
       "path": "art-study/the-good-shepherd.html",
       "status": "verified",
-      "published_text_sha256": "000ec7f1aadcb2cae67f358cc85b891d3111c2e2fba0e174c3380fb8d6043598",
+      "published_text_sha256": "04798ebdf81b046883a04e660c037759404e495b8a6e8abcc9945ec78ff7ff4e",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
@@ -339,9 +339,9 @@
     {
       "path": "art-study/the-living-christ.html",
       "status": "verified",
-      "published_text_sha256": "59f51ed232139af926d82c058a6e3d4af4f63514ca3774846f34102aee708af4",
+      "published_text_sha256": "fa7371ce4559846678ef7b18b8bdb0bd01e6f083cd8d1a3283d84290ae702692",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
@@ -351,9 +351,9 @@
     {
       "path": "art.html",
       "status": "verified",
-      "published_text_sha256": "b63881f37f89752247164a7f41966d3743f35853a1967baea45f6092c783b95c",
+      "published_text_sha256": "b2cafaabc16b7b1d9e2c3ebcdcb5d64bd138be902a555a52110e9a04f8a1f613",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
@@ -364,9 +364,9 @@
     {
       "path": "ask.html",
       "status": "verified",
-      "published_text_sha256": "3225a8732ba7814109e9784b3d5bb91a3c1c9ed587cdba7791a482455e94bdd4",
+      "published_text_sha256": "a75f0136d9634d4287baf4486e075c8757e24c55138047323ede6c011ede945b",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng",
@@ -379,9 +379,9 @@
     {
       "path": "church-history.html",
       "status": "verified",
-      "published_text_sha256": "377abf9c2864afe95ded2d3c52b2b0427b12408f940bd7674789b525bac9d9d3",
+      "published_text_sha256": "0fa4c7fcce31f8066724fb9ee206af3e1d7269c714daea8e1436dbd8347a6a39",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://churchhistorylibrary.churchofjesuschrist.org/?lang=eng",
         "https://history.churchofjesuschrist.org/landing/church-history-library?lang=eng",
@@ -409,9 +409,9 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "9a7b4117e2be6a25d1a3ed2aede41d2749b0a7515b7030e984fd2c66eb46aba2",
+      "published_text_sha256": "81c624371ffd15cbd564b36456752aef25a8a62a0717559a4a0bd3e7924d3c0a",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
@@ -422,9 +422,9 @@
     {
       "path": "missionary.html",
       "status": "verified",
-      "published_text_sha256": "67159db0a2f91e22663cf2d20a260b7ed51356cbedb1b62a2ed1a67d980ca8f9",
+      "published_text_sha256": "92955a1a8b408f3bf273c9e7dd2ad7859b1a2da33de26dad78c0c049b3c1d583",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/callings/missionary?lang=eng",
         "https://www.churchofjesuschrist.org/comeuntochrist/belong/share-goodness/what-to-expect-from-a-lesson-with-missionaries",
@@ -443,9 +443,9 @@
     {
       "path": "pioneers.html",
       "status": "verified",
-      "published_text_sha256": "9b2b2f2d9aeb4012c7d3c2b934fe09f23ef1ea3affff907e2ffd102853aa46b8",
+      "published_text_sha256": "7752852a1047ab315e8350a8d6468016cb6fcfd2a10734df2b2f1f0ed82f9445",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Full production audit corrected vanguard Independence Rock chronology against Church History and removed unsupported July labels from three geographical stops.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Full production audit corrected vanguard Independence Rock chronology against Church History and removed unsupported July labels from three geographical stops. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://archives.utah.gov/2021/01/04/utahs-road-to-statehood-125-years/",
         "https://history.churchofjesuschrist.org/chd/individual/elizabeth-crook-1827?lang=eng",
@@ -467,9 +467,9 @@
     {
       "path": "watch.html",
       "status": "verified",
-      "published_text_sha256": "621d26767739a70f8136365547483b08a07e64d72f13fd0f9c444ee5fe975df2",
+      "published_text_sha256": "973da516a26f4000bcc22181f292d3bc145b695eae84d35f8b2c0fbd23af4538",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
@@ -481,9 +481,9 @@
     {
       "path": "answers/death-of-a-child.html",
       "status": "verified",
-      "published_text_sha256": "9b8ad9c5d5c806ff22a64287b471fa9b73f20c0dc732adf1315f1594c4b587dd",
+      "published_text_sha256": "a2d1ff1efee870d1531a24f2b362105cd065b2590f77c26db987cc00f93bb3a2",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -504,9 +504,9 @@
     {
       "path": "answers/divorce-and-faith.html",
       "status": "verified",
-      "published_text_sha256": "23bdac53a8b9918bacb894e619d3a630a7b0f8be5224a1548b51c56ab37a619a",
+      "published_text_sha256": "d816300e69b9a645ac281308a55530d187377fe25f3f1dd0172c71189cf191ae",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked.",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Hero utility control reviewed: only View full-screen image and its accessible label added; prior substantive source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
