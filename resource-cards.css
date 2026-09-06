@@ -22,5 +22,6 @@
 .fc-signature-study .fc-page-intro .fc-actions{margin-top:32px}
 .fc-signature-study section[id]{scroll-margin-top:110px}
 .fc-signature-study #passage>h3{margin-top:24px}
+.fc-signature-study #guided-study .fc-card:last-child{grid-column:1/-1}
 .fc-signature-study .fc-resource-section--inline{width:100%;margin-inline:0}
 @media(max-width:700px){.fc-resource-grid{grid-template-columns:1fr;gap:20px}.fc-resource-section{width:calc(100% - 32px);padding:22px 18px}.fc-resource-card__body{padding:18px}.fc-signature-study .article{width:calc(100% - 36px)}}
