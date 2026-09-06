@@ -115,3 +115,37 @@
         scroll-behavior: auto;
     }
 }
+
+/* Shared utility pill: no effect on hero size, crop, or introduction flow. */
+.fc-visual-hero .fc-hero-fullscreen {
+    position: absolute;
+    z-index: 3;
+    right: clamp(18px, 2.4vw, 44px);
+    bottom: 16px;
+    min-height: 44px;
+    padding: 9px 16px;
+    border-color: rgba(240, 195, 106, .5);
+    background: rgba(7, 24, 31, .82);
+    color: var(--fc-cream, #fff2dc) !important;
+    font-size: .78rem;
+    line-height: 1.2;
+    letter-spacing: .2px;
+    backdrop-filter: blur(8px);
+}
+
+.fc-visual-hero .fc-hero-fullscreen:hover,
+.fc-visual-hero .fc-hero-fullscreen:focus-visible,
+.fc-visual-hero:focus-visible .fc-hero-fullscreen {
+    border-color: var(--fc-gold-light, #f0c36a);
+    background: #173946;
+    outline: 2px solid var(--fc-gold-light, #f0c36a);
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .fc-visual-hero .fc-hero-fullscreen {
+        right: 12px;
+        bottom: 12px;
+        padding-inline: 13px;
+    }
+}

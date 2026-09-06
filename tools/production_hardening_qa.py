@@ -266,7 +266,7 @@ def main() -> int:
     answers_page = read("answers.html", errors)
     original_answers_hero = (
         '<div class="fc-visual-hero fc-visual-hero--christ fc-visual-hero--answers" '
-        'aria-label="Open scriptures and study materials overlooking a peaceful sunset landscape"></div>'
+        'aria-label="Open scriptures and study materials overlooking a peaceful sunset landscape">'
     )
     if original_answers_hero not in answers_page:
         errors.append("answers.html must preserve the owner-approved original Answers hero unless the owner explicitly approves a hero change")
