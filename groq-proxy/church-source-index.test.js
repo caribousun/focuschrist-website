@@ -863,14 +863,14 @@ const handcartCandidate = { pioneerDisclosure: true, focalPhrases: ['willie', 'm
   url: PIONEER_TOPIC_SOURCES['willie-july'].url };
 const handcartParagraphs = [
   'In 1855 the New Orleans route was abandoned and emigrants used another port on the pioneer journey.',
-  'The chapter also describes general travel arrangements for many other emigrants over several years.',
+  'Twiss Birmingham described hunger and illness as a member of the first handcart company, a separate group.',
   'The Willie and Martin companies departed late in 1856 and experienced delays while handcarts were built.',
   'Their carts needed repairs, and the companies continued west toward the Salt Lake Valley.',
   'More people died in these two companies than in any other immigrant group in the United States.'
 ];
 for (const pack of [handcartParagraphs, compactParagraphPack(handcartParagraphs, handcartCandidate, 'Willie and Martin late departure 1856')]) {
   const text = relevantParagraphText(pack, 'Willie and Martin late departure 1856', handcartCandidate);
-  assert(text.includes('departed late in 1856') && !text.includes('New Orleans') && !text.includes('any other immigrant group'),
+  assert(text.includes('departed late in 1856') && !text.includes('New Orleans') && !text.includes('Twiss Birmingham') && !text.includes('any other immigrant group'),
     'cold and warm focal evidence must omit unrelated route policy and the documented unbounded comparison');
 }
 try {
