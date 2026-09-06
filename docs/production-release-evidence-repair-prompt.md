@@ -1,0 +1,7 @@
+# Bounded release evidence repair
+
+Execute once for the concrete PR149 live regression, then run the complete release matrix once. Do not change success criteria or repeat stochastic tests merely to obtain a green result.
+
+The published Worker selected scripture context but canonicalized it to700 characters. Live Alma32 requests either lost the word/seed explanation or returned a source-verification fallback. Preserve already bounded selected context for server-derived deterministic scripture(4200) and history(1200), retaining700 for provider-discovered evidence. For the already reviewed narrow Alma32 faith question, retain original question anchors and add the actual word/seed paragraph on the exact official chapter in both cold extraction and paragraph caching. Give this narrow cache shape its own key so previously incomplete packs cannot be reused. Preserve source admission, source-host restrictions, semantic checks, answer substance, copy-overlap checks and request budgets.
+
+Test the full official fetch-to-canonicalization-to-recovery pipeline cold and warm, including concepts beyond700 characters. Keep source-failure and unrelated-question exclusions. Inspect actual official chapter extraction, obtain independent review, and deploy only after required QA. Recheck the exact rendered visitor question and complete live matrix. If an unrelated external blocker remains, record it and stop with an honest pending result instead of declaring production readiness.
