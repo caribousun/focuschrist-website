@@ -40,10 +40,10 @@ const PIONEER_FOCAL_PHRASES = Object.freeze({
   sweetwater: ['sweetwater'], 'south-pass': ['south pass'], 'fort-bridger': ['fort bridger'],
   'echo-canyon': ['echo canyon'], canyon: ['emigration canyon'],
   'willie-july': ['willie', 'martin'],
-  'willie-august': ['willie', 'martin', 'snow'],
-  'willie-september': ['willie', 'martin', 'snow'],
-  'willie-october': ['rescue', 'willie', 'martin'],
-  'willie-november': ['november', 'arrived', 'willie', 'martin'],
+  'willie-august': ['willie', 'martin'],
+  'willie-september': ['willie', 'martin'],
+  'willie-october': ['willie', 'martin'],
+  'willie-november': ['willie', 'martin'],
   'martin-september': ['cove', 'martin'],
 });
 const PIONEER_SOURCE_URLS = new Set(Object.values(PIONEER_TOPIC_SOURCES).map(topic => topic.url));
