@@ -14,6 +14,7 @@ function varied(prefixes, subjects, suffixes) {
 
 const facts = {
     hyrum: [/hyrum/i, /(?:joseph|patriarch|leader|church)/i],
+    almaWord: [/word.{0,40}seed/i, /faith/i],
     alma: [/faith/i, /(?:seed|word|grow|experiment)/i],
     pioneer: [/(?:irrigat|cooperat)/i, /(?:community|settle|utah|worship|shared)/i],
     relief: [/relief society/i, /(?:nauvoo|1842|women|charit|spiritual|organization)/i],
@@ -31,6 +32,7 @@ const facts = {
     enos: [/enos/i, /(?:prayer|forgive|faith|soul)/i],
 };
 const contradictions = {
+    almaWord: [/kept warm|watered with the word|faith is a seed/i],
     hyrum: [/hyrum.{0,50}\b(?:was|is) not\b.{0,30}(?:leader|patriarch)/i],
     pioneer: [/(?:irrigation|cooperation).{0,50}\bdid not\b.{0,30}(?:help|matter|contribute)/i],
     relief: [/relief society.{0,50}\b(?:was|is) not\b.{0,30}(?:organized|founded|created)/i],
@@ -90,6 +92,9 @@ for (const stratum of ['scripture', 'doctrine', 'pioneer', 'church-history']) {
 }
 
 const productionRegressions = [
+    specimen('regression-alma32-word-seed-integrity', 'ask', 'faith-study',
+        'How does Alma 32 describe developing faith?',
+        'faith-study', true, 'almaWord', /\/alma\/32/i, 'scripture'),
     specimen('regression-pioneer-irrigation-displayed-source', 'pioneers', 'pioneer-study',
         'What did cooperative irrigation contribute to settlement life?',
         'faith-study', true, 'pioneer', /(?:chapter-twenty-six|a-brief-history|irrigat)/i, 'pioneer'),

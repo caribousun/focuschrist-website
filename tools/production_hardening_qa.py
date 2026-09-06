@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from datetime import date
 import hashlib
 import re
 import struct
@@ -426,8 +427,16 @@ def main() -> int:
     for url in ("ask.html", "answers.html", "watch.html", "art.html", "missionary.html", "church-history.html", "pioneers.html", "about.html"):
         if f"https://focuschrist.com/{url}" not in sitemap:
             errors.append(f"sitemap.xml missing core page {url}")
-    if sitemap.count("<lastmod>2026-08-30</lastmod>") < 8:
-        errors.append("sitemap.xml core-page lastmod values were not refreshed for hardened production release")
+    # Preserve the original release floor while permitting truthful later updates.
+    # Requiring the literal old date prevents valid content releases from refreshing it.
+    for url in ("", "ask.html", "answers.html", "watch.html", "art.html", "missionary.html", "church-history.html", "pioneers.html", "about.html"):
+        entry = re.search(r"<loc>" + re.escape("https://focuschrist.com/" + url) + r"</loc>\s*<lastmod>([^<]+)</lastmod>", sitemap)
+        try:
+            current_enough = entry is not None and date.fromisoformat(entry.group(1)) >= date(2026, 8, 30)
+        except ValueError:
+            current_enough = False
+        if not current_enough:
+            errors.append(f"sitemap.xml core-page lastmod missing, invalid, or older than production baseline: {url or '/'}")
 
     checklist = read("WEBSITE_CHECKLIST.md", errors)
     memory = read("MEMORY.md", errors)
