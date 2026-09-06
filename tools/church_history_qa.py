@@ -43,7 +43,7 @@ if not errors:
         ('study-source-router.js', "source router loader"),
         ('church-history-experience.js?v=20260903-16', "versioned history experience loader"),
         ('church-history.css?v=20260904-2', "versioned history stylesheet"),
-        ('site-system.css?v=20260906-fit', "versioned shared artwork interaction stylesheet"),
+        ('site-system.css?v=20260906-frame', "versioned shared artwork interaction stylesheet"),
         ('assets/heroes/church-history.webp', "repository-local Sacred Grove hero delivery pattern"),
         ('referrerpolicy="no-referrer"', "hero no-referrer delivery"),
         ('1815–1846', "Saints Volume 1 era"),
