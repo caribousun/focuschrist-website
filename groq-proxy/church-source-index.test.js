@@ -834,6 +834,36 @@ const chimneyText = relevantParagraphText(chimneyPack, PIONEER_TOPIC_SOURCES['ch
 assert(chimneyText.includes('western Nebraska') && !chimneyText.includes('landmark in Wyoming'),
   'the documented conflicting source paragraph must be omitted whole, retaining the correct caption');
 
+const handcartCandidate = { pioneerDisclosure: true, focalPhrases: ['willie', 'martin'],
+  url: PIONEER_TOPIC_SOURCES['willie-july'].url };
+const handcartParagraphs = [
+  'In 1855 the New Orleans route was abandoned and emigrants used another port on the pioneer journey.',
+  'The chapter also describes general travel arrangements for many other emigrants over several years.',
+  'The Willie and Martin companies departed late in 1856 and experienced delays while handcarts were built.',
+  'Their carts needed repairs, and the companies continued west toward the Salt Lake Valley.',
+  'More people died in these two companies than in any other immigrant group in the United States.'
+];
+for (const pack of [handcartParagraphs, compactParagraphPack(handcartParagraphs, handcartCandidate, 'Willie and Martin late departure 1856')]) {
+  const text = relevantParagraphText(pack, 'Willie and Martin late departure 1856', handcartCandidate);
+  assert(text.includes('departed late in 1856') && !text.includes('New Orleans') && !text.includes('any other immigrant group'),
+    'cold and warm focal evidence must omit unrelated route policy and the documented unbounded comparison');
+}
+try {
+  globalThis.caches = undefined;
+  const journey = '<header><h2>Journey of the Pioneer Company</h2><script><p>Chimney Rock FALSESCRIPT was invented as a false historical claim inside a script header.</p></script></header><p>Chimney Rock was visible for days as the pioneer companies crossed western Nebraska on their journey.</p><h2>Establishing a Settlement in the Valley</h2>';
+  globalThis.fetch = async () => new Response('<h2>The Pueblo Saints</h2><p>The Mississippi Saints reached Chimney Rock in July 1846 before traveling to Pueblo.</p>' + journey,
+    { headers: { 'Content-Type': 'text/html' } });
+  const scoped = await fetchOfficialSource(chimneyCandidate, 'Chimney Rock pioneer journey', Date.now() + 5000);
+  assert(scoped?.content.includes('western Nebraska') && !scoped.content.includes('Mississippi Saints') && !scoped.content.includes('FALSESCRIPT'),
+    'fixed 1847 landmark extraction must exclude the earlier 1846 company section');
+  globalThis.fetch = async () => new Response('<div hidden>' + journey + '</div>', { headers: { 'Content-Type': 'text/html' } });
+  assert(!await fetchOfficialSource(chimneyCandidate, 'Chimney Rock pioneer journey', Date.now() + 5000),
+    'chapter scoping must never promote hidden headings or evidence');
+} finally {
+  globalThis.fetch = originalFetch;
+  globalThis.caches = originalCaches;
+}
+
 const visiblePioneerKeys = [...fs.readFileSync(new URL('../pioneers.html', import.meta.url), 'utf8').matchAll(/data-topic="([^"]+)"/g)].map(match => match[1]);
 assert(visiblePioneerKeys.length === 29 && visiblePioneerKeys.every(key => pioneerTopic(key, 'pioneers')),
   'all29 visible Pioneer controls must have a server-owned source route');
@@ -852,7 +882,7 @@ try {
     globalThis.fetch = async url => {
       calls += 1;
       assert(String(url) === topic.url, key + ' must fetch only its reviewed official source');
-      return new Response('<p>' + topic.subject + '. This historical account describes the circumstances and the people involved in the events.</p>',
+      return new Response('<h2>Journey of the Pioneer Company</h2><p>' + topic.subject + '. This historical account describes the circumstances and the people involved in the events.</p><h2>Establishing a Settlement in the Valley</h2>',
         { headers: { 'Content-Type': 'text/html' } });
     };
     const result = await retrieveIndexedChurchEvidence(topic.subject, 'pioneers', Date.now() + 15000, key);
