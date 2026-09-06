@@ -15,6 +15,7 @@ import worker, {
   extractSelectedPioneerName,
   extractTellMyStoryEntry,
   evaluateQuestionSafety,
+  fetchOfficialSource,
   guardVerifiedAnswer,
   hasKnownFalseClaim,
   isReviewedColorRegression,
@@ -261,6 +262,55 @@ assert(reviewedDeterministicEvidenceRecovery('How does Alma 32 describe developi
 assert(reviewedDeterministicEvidenceRecovery('How does Alma 32 describe developing faith?',
   [{...almaEvidence[0], content:'Alma 32'}]) === null,
   'Alma recovery must fail closed for missing source content');
+
+// Reproduce the production extraction -> canonical source -> recovery path.
+// The metaphor paragraph deliberately occurs beyond the old 700-character cut.
+const pipelineQuestion = 'How does Alma 32 describe developing faith?';
+const pipelineCandidate = { deterministic: true, title: 'Alma 32', tokens: 'Alma 32', url: almaEvidence[0].url };
+const pipelineParagraphs = [
+  `Alma describes faith. ${'The passage supplies setting and surrounding discussion for this chapter. '.repeat(14)}`,
+  `Faith describes patient growth. ${'The listener considers the invitation with sustained attention. '.repeat(6)}`,
+  'The speaker compares the word to a seed. The invitation asks listeners to make room and notice the growth of understanding while continuing in faith.',
+  'This separate paragraph describes the word and the seed, with several further observations about their relationship.',
+];
+const pipelineFetchBefore = globalThis.fetch;
+const pipelineCachesBefore = globalThis.caches;
+const pipelineCryptoBefore = globalThis.crypto;
+if (!globalThis.crypto) globalThis.crypto = (await import('node:crypto')).webcrypto;
+let pipelineFetchCount = 0;
+const pipelineCache = new Map();
+globalThis.caches = { default: {
+  async match(request) { const response = pipelineCache.get(request.url); return response ? response.clone() : undefined; },
+  async put(request, response) { pipelineCache.set(request.url, response.clone()); },
+} };
+globalThis.fetch = async () => {
+  pipelineFetchCount += 1;
+  return new Response(pipelineParagraphs.map((text) => `<p>${text}</p>`).join(''), { headers: { 'Content-Type': 'text/html' } });
+};
+try {
+  const cold = await fetchOfficialSource(pipelineCandidate, pipelineQuestion, Date.now() + 5000);
+  const warm = await fetchOfficialSource(pipelineCandidate, pipelineQuestion, Date.now() + 5000);
+  for (const source of [cold, warm]) {
+    assert(source && source.content.length > 700 && source.content.length <= 4200,
+      'trusted deterministic scripture must retain its bounded selected context through canonicalization');
+    assert(/\balma\b/i.test(source.content) && /\bfaith\b/i.test(source.content),
+      'metaphor selection must preserve the original question anchors for source admission');
+    assert(reviewedDeterministicEvidenceRecovery(pipelineQuestion, [source])?.recoveryId === 'reviewed-alma-32-word-and-faith',
+      'cold and warm official fetch pipelines must preserve the word/seed/faith evidence');
+  }
+  assert(cold.cacheStatus === 'miss' && warm.cacheStatus === 'hit' && pipelineFetchCount === 1,
+    'warm pipeline must use the actual paragraph cache, not a second mocked fetch');
+  const historyCandidate = { deterministicHistoryTopic: true, title: 'Kirtland Temple', tokens: 'Kirtland temple dedication',
+    url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng' };
+  globalThis.fetch = async () => new Response(`<p>Kirtland Temple dedication. ${'Surrounding historical setting explains the construction and dedication of the temple. '.repeat(12)}</p><p>The Kirtland Temple dedication occurred in 1836 and forms part of this historical account.</p>`, { headers: { 'Content-Type': 'text/html' } });
+  const historySource = await fetchOfficialSource(historyCandidate, 'What occurred around the 1836 dedication of the Kirtland Temple?', Date.now() + 5000);
+  assert(historySource && historySource.content.length > 700 && historySource.content.length <= 1200
+    && /1836/.test(historySource.content), 'trusted history context must preserve the date beyond the old cutoff within1200 characters');
+} finally {
+  globalThis.fetch = pipelineFetchBefore;
+  if (pipelineCachesBefore === undefined) delete globalThis.caches; else globalThis.caches = pipelineCachesBefore;
+  if (pipelineCryptoBefore === undefined) delete globalThis.crypto;
+}
 
 const reliefReviewedRecovery = reviewedDeterministicEvidenceRecovery(
   'Give me the historical setting for the Female Relief Society of Nauvoo when it began and why.',

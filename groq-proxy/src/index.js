@@ -238,7 +238,7 @@ function sanitizePayload(payload) {
   return { research, scope };
 }
 
-function canonicalSource(rawUrl, title, content) {
+function canonicalSource(rawUrl, title, content, contentLimit = 700) {
   try {
     const url = new URL(String(rawUrl || ''));
     if (url.protocol !== 'https:') return null;
@@ -246,7 +246,7 @@ function canonicalSource(rawUrl, title, content) {
       url: url.href,
       host: url.hostname.toLowerCase(),
       title: String(title || url.hostname).replace(/\s+/g, ' ').trim().slice(0, 180),
-      content: String(content || '').replace(/\s+/g, ' ').trim().slice(0, 700),
+      content: String(content || '').replace(/\s+/g, ' ').trim().slice(0, Math.min(4200, contentLimit)),
     };
   } catch (_error) {
     return null;
@@ -471,6 +471,14 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
   }).filter((item) => item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
     .slice(0, 2);
+  if (isPinnedAlma32FaithStudy(candidate, question)) {
+    // Keep the original question anchors; add the actual comparison rather than
+    // replacing the evidence that establishes relevance to the visitor's question.
+    const position = sourceParagraphs.findIndex((text) => /\bword\b/i.test(text) && /\bseed\b/i.test(text));
+    if (position >= 0 && !selected.some((item) => item.position === position)) {
+      selected.push({ text: sourceParagraphs[position], position });
+    }
+  }
   if (candidate && candidate.deterministic === true && selected.length) {
     // A named scripture chapter is already pinned to one canonical source.
     // Keep both highest-relevance anchor paragraphs before surrounding context.
@@ -538,6 +546,13 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
   const queryTokens = normalizeDiscoveryTokens(question);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
   const questionFocused = topicPinned || Boolean(candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true));
+  const almaPinned = isPinnedAlma32FaithStudy(candidate, question);
+  const originalAnchors = almaPinned ? (Array.isArray(paragraphs) ? paragraphs : []).map((text, position) => {
+    const tokens = new Set(normalizeDiscoveryTokens(text));
+    return { position, overlap: queryTokens.filter((token) => tokens.has(token)).length,
+      score: queryTokens.filter((token) => tokens.has(token)).length * 20 + Math.min(10, text.length / 180) };
+  }).filter((item) => item.overlap > 0).sort((left, right) => right.score - left.score).slice(0, 2).map((item) => item.position) : [];
+  const metaphorPosition = almaPinned ? paragraphs.findIndex((text) => /\bword\b/i.test(text) && /\bseed\b/i.test(text)) : -1;
   let size = 0;
   return (Array.isArray(paragraphs) ? paragraphs : []).map((text, position) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
@@ -547,7 +562,7 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
     const topicScore = (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
     const historyLeadScore = candidate && candidate.deterministicHistoryTopic === true && position < 2 ? 1200 : 0;
-    return { text, position, score: historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
+    return { text, position, score: (originalAnchors.includes(position) || position === metaphorPosition ? 2400 : 0) + historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
   }).sort((left, right) => right.score - left.score)
     .filter((item) => {
       if (size + item.text.length > 4200) return false;
@@ -591,7 +606,7 @@ async function evidenceCacheKey(candidate, question) {
   const variant = officialExcerptCacheVariant(candidate);
   const deterministicQuestionKey = candidate
     && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true)
-    ? normalizeDiscoveryTokens(question).slice(0, 12).join('-')
+    ? normalizeDiscoveryTokens(question).slice(0, 12).join('-') + (isPinnedAlma32FaithStudy(candidate, question) ? '-word-seed-v1' : '')
     : '';
   const normalized = `${OFFICIAL_EXCERPT_CACHE_VERSION}\n${variant}\n${deterministicQuestionKey}\n${candidate.url}`;
   const digest = await globalThis.crypto.subtle.digest('SHA-256', new TextEncoder().encode(normalized));
@@ -616,7 +631,8 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
           const content = relevantParagraphText(payload.paragraphs, question, candidate);
           if (content && evidenceAdmissionSufficient(candidate, content, question)) {
             if (counters) counters.cacheHits += 1;
-            const source = canonicalSource(candidate.url, candidate.title, content);
+            const source = canonicalSource(candidate.url, candidate.title, content,
+              candidate.deterministic === true ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
             if (source) {
               source.cacheStatus = 'hit';
               source.topicPinned = candidate.topicPinned === true;
@@ -652,7 +668,8 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
         }));
       } catch (_cacheError) {}
     }
-    const source = canonicalSource(candidate.url, candidate.title, content);
+    const source = canonicalSource(candidate.url, candidate.title, content,
+      candidate.deterministic === true ? 4200 : candidate.deterministicHistoryTopic === true ? 1200 : 700);
     if (source) {
       source.cacheStatus = 'miss';
       source.topicPinned = candidate.topicPinned === true;
@@ -742,18 +759,27 @@ function evidenceRelevanceReceipt(question, evidence) {
 
 const REVIEWED_ALMA_32_WORD_AND_FAITH = "In Alma 32, Alma compares the word to a seed and invites people to begin with a desire to believe. Faith is the trust involved in making room for that word and trying the invitation; the word is what is planted. In verses 28-35, Alma describes noticing the effects of the growing seed, including an enlarged soul and increased understanding. He distinguishes that experience from knowing everything. Verses 37-43 then stress continued care, diligence, patience, and looking forward to the fruit. Neglect can prevent growth even when the seed is good. The comparison invites sustained attention to God's word rather than demanding instant certainty. Read the full passage to distinguish Alma's imagery from additional gardening details that a modern retelling might invent.";
 
-function reviewedDeterministicEvidenceRecovery(question, evidence) {
-  const value = String(question || '');
-  const sources = Array.isArray(evidence) ? evidence : [];
+function isAlma32FaithStudyQuestion(value) {
   // A bounded chapter-level study of this metaphor. Verse-specific, comparative,
   // historical and personal instructions remain on the normal evidence route.
   const almaStudyVocabulary = new Set('how does do can what is are alma 32 describe describes developing develop faith teach teaches about the seed comparison metaphor lesson lessons teachings of in explain growth grow growing nourish nourishing word and patience diligence a tell me'.split(' '));
-  const almaFaithQuestion = value.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean).every((token) => almaStudyVocabulary.has(token))
+  return String(value || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean).every((token) => almaStudyVocabulary.has(token))
     && /\balma\s+32\b(?!\s*[:0-9])/i.test(value)
     && /\b(?:faith|seed)\b/i.test(value)
     && !/\b(?:compare|contradict|versus|history|historical|archaeology|baptism|poverty|poor|money|medical|medicine|medication|diagnosis|prove|proof|guarantee)\b/i.test(value)
     && !/\balma\s+32\s*:\s*\d|\b(?:verse|verses|chapter|chapters)\s+\d|\b(?:john|james|nephi|moroni|mosiah)\s+\d/i.test(value);
-  if (almaFaithQuestion) {
+}
+
+function isPinnedAlma32FaithStudy(candidate, question) {
+  return Boolean(candidate && candidate.deterministic === true
+    && /^https:\/\/www\.churchofjesuschrist\.org\/study\/scriptures\/bofm\/alma\/32(?:\?|$)/.test(String(candidate.url || ''))
+    && isAlma32FaithStudyQuestion(question));
+}
+
+function reviewedDeterministicEvidenceRecovery(question, evidence) {
+  const value = String(question || '');
+  const sources = Array.isArray(evidence) ? evidence : [];
+  if (isAlma32FaithStudyQuestion(value)) {
     const sourceIndex = sources.findIndex((source) => {
       let parsed;
       try { parsed = new URL(String(source && source.url || '')); } catch (_error) { return false; }
