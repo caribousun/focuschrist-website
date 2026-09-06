@@ -2,7 +2,7 @@
    Page-specific only. Shared site geometry, typography, header and footer remain authoritative. */
 
 .fc-visual-hero--watch::before {
-    background-image: url('assets/heroes/watch.webp') !important;
+    background-image: url('assets/heroes/watch.webp?v=20260906-approved') !important;
     background-position: center 48% !important;
 }
 
@@ -44,7 +44,7 @@
     border-radius: 18px;
     background:
         linear-gradient(180deg, rgba(7, 27, 36, 0.05) 30%, rgba(7, 27, 36, 0.92) 100%),
-        url('assets/heroes/watch.webp') center 48% / cover no-repeat;
+        url('assets/heroes/watch.webp?v=20260906-approved') center 48% / cover no-repeat;
 }
 
 .watch-featured-media::after,
@@ -507,3 +507,18 @@
     pointer-events: none;
 }
 .watch-path-card[data-watch-path="watch"] > * { position: relative; z-index: 1; }
+
+/* Approved complete Watch composition, inside the unchanged shared hero box. */
+.fc-visual-hero--watch::before {
+    inset: 76px 0 0;
+    width: 100%;
+    background-size: contain;
+    background-position: center center !important;
+    transform: none;
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+.fc-visual-hero--watch::after {
+    background: none;
+}
