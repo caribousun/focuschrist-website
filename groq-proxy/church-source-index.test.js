@@ -649,6 +649,21 @@ try {
     && quoteRepairPayload.focuschrist_cloudflare_verifier_calls === 2,
   'an approved but overcopied indexed answer must receive one bounded Cloudflare-only paraphrase repair');
 
+  let failedOverlapCalls = 0;
+  const failedOverlapResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: 'faith-study', messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }] }),
+  }), { AI: { run: async () => {
+    failedOverlapCalls += 1;
+    const copied = 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution';
+    const fragments = copied.split(' ').reduce((all, word, index) => { if (index % 4 === 0) all.push([]); all[all.length - 1].push(word); return all; }, []).map(words => words.join(' ')).join(' Indeed, ');
+    return { response: { approved: true, answer: fragments + '. ' + fragments + '. ' + fragments + '.', source_indexes: [1] } };
+  } } });
+  const failedOverlapPayload = await failedOverlapResponse.json();
+  assert(failedOverlapCalls === 2 && failedOverlapPayload.focuschrist_source_integrity_verified === false
+    && failedOverlapPayload.focuschrist_verifier_publication_failure === 'excessive-source-overlap',
+    'a repair that still reconstructs ordered source fragments must fail closed without a third call');
+
   const reconsiderationResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
     method: 'POST',
     headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
@@ -833,6 +848,16 @@ const chimneyPack = compactParagraphPack(chimneyParagraphs, chimneyCandidate, PI
 const chimneyText = relevantParagraphText(chimneyPack, PIONEER_TOPIC_SOURCES['chimney-rock'].subject, chimneyCandidate);
 assert(chimneyText.includes('western Nebraska') && !chimneyText.includes('landmark in Wyoming'),
   'the documented conflicting source paragraph must be omitted whole, retaining the correct caption');
+
+const landmarkContext = [
+  'The pioneer company of 1847 traversed eleven hundred miles from Winter Quarters to the Salt Lake Valley.',
+  'William Clayton recalled a speech about prayer and repentance on the journey, without mentioning this landmark.',
+  'Chimney Rock could be seen for days as the companies crossed western Nebraska on the pioneer trail.',
+  'A separate recollection described other personal experiences and should not be connected to this landmark.'
+];
+const landmarkText = relevantParagraphText(compactParagraphPack(landmarkContext, chimneyCandidate, 'Chimney Rock 1847'), 'Chimney Rock 1847', chimneyCandidate);
+assert(landmarkText.includes('eleven hundred miles') && landmarkText.includes('western Nebraska') && !landmarkText.includes('recollection') && !landmarkText.includes('repentance'),
+  'landmarks must use direct place evidence and explicit route context rather than unrelated adjacent recollections');
 
 const handcartCandidate = { pioneerDisclosure: true, focalPhrases: ['willie', 'martin'],
   url: PIONEER_TOPIC_SOURCES['willie-july'].url };
