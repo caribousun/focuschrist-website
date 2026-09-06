@@ -731,7 +731,7 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
 /* Fit the complete desktop opening, including its actions, in shorter windows.
    Menu geometry stays unchanged. Artwork yields space before readable text does. */
 @media (min-width:1021px) {
-    body.fc-site { --fc-opening-hero-height:clamp(160px,min(27vw,40dvh,calc(100dvh - 410px)),440px); }
+    body.fc-site { --fc-opening-hero-height:clamp(180px,calc(100dvh - 390px),440px); }
     body.fc-site .fc-visual-hero { min-height:var(--fc-opening-hero-height); }
 }
 @media (min-width:1021px) {
@@ -741,11 +741,12 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom:14px; }
 }
 
-/* Keep wide artwork wide. The opening budget is measured from the real intro
-   content, so short windows do not force an image into a narrow island. */
+/* Locked shared opening geometry: hero height depends only on the viewport,
+   never on page copy or script timing. The introduction fills the remainder. */
 @media (min-width:1021px) {
     body.fc-site .fc-page-intro {
-        min-height: 0 !important;
+        min-height: calc(100dvh - 72px - var(--fc-opening-hero-height)) !important;
+        margin-top: 0;
         padding-block: 22px 26px;
     }
     body.fc-site .fc-page-intro .fc-display {
@@ -767,4 +768,16 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     body.fc-site .fc-visual-hero::after {
         background: linear-gradient(180deg, rgba(10,24,31,.08), transparent 25%, transparent 94%, var(--fc-bg-warm));
     }
+}
+
+/* One hero box on every page, including History on narrow screens. */
+body.fc-site .fc-visual-hero {
+    height: var(--fc-opening-hero-height);
+    min-height: var(--fc-opening-hero-height);
+}
+@media (max-width:1020px) {
+    body.fc-site { --fc-opening-hero-height: clamp(350px, 27vw, 440px); }
+}
+@media (max-width:700px) {
+    body.fc-site { --fc-opening-hero-height: 300px; }
 }

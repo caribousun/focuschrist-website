@@ -179,7 +179,7 @@ def main() -> int:
     home_art = "assets/page-art/home-seek-study-remember.webp"
     if not re.search(r'src="' + re.escape(home_art) + r'(?:\?[^"\s]*)?"', home) or 'class="fc-content-artwork fc-home-purpose-art"' not in home:
         fail(errors, "index.html: approved supporting artwork missing or not wired")
-    for marker in ('href="home.css?v=20260906-sky"', 'class="fc-home-purpose-split"', 'class="fc-home-purpose-copy"'):
+    for marker in ('href="home.css?v=20260906-soft-sky"', 'class="fc-home-purpose-split"', 'class="fc-home-purpose-copy"'):
         if marker not in home:
             fail(errors, f"index.html: Missionary-style Home composition marker missing: {marker}")
     home_art_path = ROOT / home_art
