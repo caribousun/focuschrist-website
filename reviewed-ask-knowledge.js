@@ -9,7 +9,7 @@
 (function () {
     'use strict';
 
-    const POLICY_VERSION = '2026-09-03.18';
+    const POLICY_VERSION = '2026-09-06.19';
 
     function officialHistorySource(label, url, note) {
         return {
@@ -540,6 +540,22 @@
                     note: 'Places the attack soon after 5:00 p.m. on June 27, 1844.'
                 }
             ]
+        },
+        {
+            id: 'pioneer-winter-quarters-overview',
+            profiles: ['ask', 'pioneers', 'church-history'],
+            priority: 175,
+            reviewedOn: '2026-09-06',
+            integrityKey: 'pioneer-winter-quarters-overview-v1',
+            match: {
+                exact: ['Winter Quarters', 'What was Winter Quarters?', 'Tell me about Winter Quarters', 'Why did the Saints stop at Winter Quarters?'],
+                all: [['winter quarters'], ['overview', 'temporary settlement', 'pause migration']],
+                none: ['temple', 'tickets', 'hours', 'hotel', 'military']
+            },
+            positiveTests: ['Winter Quarters', 'What was Winter Quarters?', 'Tell me about Winter Quarters', 'Why did the Saints stop at Winter Quarters?'],
+            negativeTests: ['What are the Winter Quarters Temple opening hours?', 'Describe military winter quarters', 'Who designed the Winter Quarters Temple?'],
+            answer: 'Winter Quarters was a temporary Latter-day Saint settlement beside the Missouri River, established in 1846 after the Saints left Nauvoo. Mud and sickness had slowed their journey across Iowa, so Church leaders paused westward migration to prepare for winter. Residents built shelters and faced shortages, hunger and disease while organizing and outfitting companies for the journey ahead. Brigham Young left Winter Quarters on April 7, 1847, to join the vanguard pioneer company. Those who remained prepared homes, crops and supplies for later migrants. As the lease on Omaha tribal land approached its end, the Saints moved across the river into Iowa, where Kanesville became their new emigration headquarters.',
+            sources: [officialHistorySource('Winter Quarters', 'https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng', 'Official account of the winter pause, settlement, migration preparations and move to Kanesville.')]
         },
         {
             id: 'pioneer-handcart-travel-1856',

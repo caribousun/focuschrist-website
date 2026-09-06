@@ -111,6 +111,13 @@ function assert(condition, message) {
         'visible Handcart Companies topic must render the substantive reviewed answer');
 
     messages.length = 0;
+    await window.askTopic('Winter Quarters');
+    assert(fetchCalls === 0 && messages[1].text.includes('Mud and sickness')
+        && !/trans.?continental/i.test(messages[1].text)
+        && messages[1].sources.some((source) => source.url.includes('/winter-quarters?')),
+        'Winter Quarters topic must render reviewed history without a provider request or invented road project');
+
+    messages.length = 0;
     await window.askTopic('Exodus from Nauvoo');
     assert(fetchCalls === 0 && messages[1].text.includes('1846'),
         'Pioneer topic button owner must use reviewed local knowledge before the Worker');

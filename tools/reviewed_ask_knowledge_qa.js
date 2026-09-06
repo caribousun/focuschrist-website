@@ -35,7 +35,7 @@ function entrySourceUrls(entry) {
     return [...new Set(sources.map((source) => source.url))];
 }
 
-assert(registry && registry.policyVersion === '2026-09-03.18', 'reviewed registry policy version mismatch');
+assert(registry && registry.policyVersion === '2026-09-06.19', 'reviewed registry policy version mismatch');
 assert(Array.isArray(registry.entries) && registry.entries.length >= 12, 'reviewed registry is unexpectedly small');
 assert(questionManifest.release === registry.policyVersion, 'question-contract manifest release mismatch');
 
@@ -117,6 +117,14 @@ registry.entries.filter((entry) => entry.profiles.includes('church-history')).fo
 registry.entries.filter((entry) => entry.profiles.includes('pioneers')).forEach((entry) => {
     assert(entry.profiles.includes('ask'), 'reviewed Pioneer knowledge must also be available to Main Ask: ' + entry.id);
 });
+
+for (const profile of ['ask', 'pioneers', 'church-history']) {
+    const winter = registry.match('Winter Quarters', { profile });
+    assert(winter && winter.id === 'pioneer-winter-quarters-overview' && winter.mode === 'reviewed-local'
+        && winter.sourceIntegrityPassed === true, 'Winter Quarters must use reviewed source content');
+    assert(winter.answer.includes('Mud and sickness') && !/trans.?continental|road completion|completion of.*road/i.test(winter.answer),
+        'Winter Quarters must explain the documented winter pause without an invented road project');
+}
 
 const handcart = registry.match('What year did the handcarts begin?', { profile: 'pioneers' });
 assert(handcart && handcart.answer.includes('1856'), 'owner handcart regression did not answer 1856');
