@@ -67,3 +67,20 @@
         margin-top: 28px;
     }
 }
+
+/* Desktop Home is full-bleed like the site's other page heroes. Preserve the
+   approved lower atmospheric transition; mobile uses its own closer crop. */
+@media (min-width: 701px) {
+    body.fc-site .fc-home-hero::before {
+        width: 100%;
+        max-width: none;
+        background-size: cover;
+        background-position: center 10%;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+
+    body.fc-site .fc-home-hero::after {
+        background: linear-gradient(180deg, transparent 65%, rgba(28,55,67,.08) 76%, rgba(28,55,67,.32) 86%, rgba(28,55,67,.7) 94%, #1c3743 100%);
+    }
+}
