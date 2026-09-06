@@ -222,9 +222,9 @@
     {
       "path": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
       "status": "verified",
-      "published_text_sha256": "d16e16ab26ffa12a29287276deab7b0ad16f85002d5cd7754f0c263185c63e27",
+      "published_text_sha256": "c4d031590f085f50d55d417f674d0f206c20c2fe0fc1566627b04bc9930717f1",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine.",
+      "review_standard": "Actual authoritative source content reviewed for expanded historical setting, D&C 6:32-37, Atonement and rejoicing passages, Soares 2020 and Uchtdorf 2022. Independent agent source and semantic review passed before this hash refresh. Scripture, history, apostolic teaching, curriculum and focusChrist applications distinguished. Existing media source review preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-seminary-teacher-manual-2025/061-doctrine-and-covenants-6?lang=eng",
@@ -248,7 +248,12 @@
         "https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?alang=eng&collectionId=1708f0e87f184f9e812608d5f51bdb13&lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2025-06-look-unto-christ?lang=eng",
-        "https://www.churchofjesuschrist.org/media/image/meme-2-nephi-christ-449ddc4?lang=eng"
+        "https://www.churchofjesuschrist.org/media/image/meme-2-nephi-christ-449ddc4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2020/10/43soares?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/12uchtdorf?lang=eng"
       ]
     },
     {
