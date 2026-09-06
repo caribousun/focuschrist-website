@@ -813,7 +813,7 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
         aspect-ratio: 2048 / 684;
     }
     body.fc-site .fc-page-intro {
-        min-height: 0 !important;
+        min-height: max(0px, calc(100dvh - 52px - 33.3984375vw + 8px)) !important;
         margin-top: 0;
         padding-block: clamp(8px, 1.25dvh, 14px);
     }
@@ -851,6 +851,9 @@ body.fc-site .fc-visual-hero {
         min-height: 0;
         aspect-ratio: 2048 / 684;
     }
+    body.fc-site .fc-page-intro {
+        min-height: max(0px, calc(100dvh - 62px - 33.3984375vw + 8px)) !important;
+    }
 }
 @media (max-width:700px) {
     body.fc-site { --fc-opening-hero-height: 300px; }
@@ -866,6 +869,9 @@ body.fc-site .fc-visual-hero {
         height: var(--fc-opening-hero-height);
         min-height: var(--fc-opening-hero-height);
         aspect-ratio: auto;
+    }
+    body.fc-site .fc-page-intro {
+        min-height: max(0px, calc(100dvh - 362px)) !important;
     }
     body.fc-not-found .fc-page-intro { padding-block: 8px; }
     body.fc-not-found .fc-page-intro .fc-card { padding: 8px; }
