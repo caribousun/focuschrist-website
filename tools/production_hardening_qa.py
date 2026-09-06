@@ -384,7 +384,7 @@ def main() -> int:
     ), errors)
     if re.search(r"youtube\.com|@theRisen636|CHANNEL\s*=", art_router, re.I):
         errors.append("art-study-router.js must not use YouTube/@theRisen636 as an artwork study destination")
-    if "art-ask-context.js?v=20260906-hero-return" not in read("ask.html", errors):
+    if "art-ask-context.js?v=20260906-watch-return" not in read("ask.html", errors):
         errors.append("ask.html must load contextual artwork Ask bridge")
     if art.count("art/thumbs/new/") < 11 or art.count("data-full-src=\"art/new/") < 11:
         errors.append("art.html must use localized thumbnails + full-resolution targets for all newly added artworks")
