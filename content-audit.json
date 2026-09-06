@@ -110,6 +110,51 @@
       ]
     },
     {
+      "path": "answers/death-of-a-child.html",
+      "status": "verified",
+      "published_text_sha256": "d0258dae6770e2cbdfea4aaa205a45757d130f01564da933562d0a3a77beb365",
+      "reviewed_on": "2026-09-06",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/counseling-resources/grief-and-loss?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng"
+      ]
+    },
+    {
+      "path": "answers/divorce-and-faith.html",
+      "status": "verified",
+      "published_text_sha256": "d31ff4e06067f6932530086520e62ba04152dda0ff1b7dcd125ac1cdbb63386a",
+      "reviewed_on": "2026-09-06",
+      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/",
+        "https://www.churchofjesuschrist.org/?lang=eng",
+        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+        "https://www.churchofjesuschrist.org/study/ensign/2018/07/ministering-to-members-who-are-divorced?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/divorce/divorce?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng",
+        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+        "https://www.churchofjesuschrist.org/temples?lang=eng",
+        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng"
+      ]
+    },
+    {
       "path": "answers/faith-in-jesus-christ-during-trials.html",
       "status": "verified",
       "published_text_sha256": "657dfe1b7f8938b036fb4af6a10680d95de552d470191ab98e48224cbaca63ea",
@@ -156,6 +201,29 @@
         "https://www.churchofjesuschrist.org/temples?lang=eng",
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng"
+      ]
+    },
+    {
+      "path": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "status": "verified",
+      "published_text_sha256": "d411194b14c64ee5d2024b2c3267d1e86036cc1c018f0c0d312d4e8f9b0e0248",
+      "reviewed_on": "2026-09-06",
+      "review_standard": "Signature Christ-centered study review: Doctrine and Covenants 6 historical and scriptural context, 2027 Rejoice in Christ theme, Philippians and Book of Mormon cross-references, official Church media destinations, interpretation/application boundaries, accessibility, connected-study routing, and source integrity checked against authoritative Church sources.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-seminary-teacher-manual-2025/061-doctrine-and-covenants-6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-student-manual-2017/chapter-5-doctrine-and-covenants-6-8-9?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/oliver-cowderys-gift?lang=eng",
+        "https://www.churchofjesuschrist.org/callings/youth?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?id=p4-p13&lang=eng#p4",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?id=p1-p8&lang=eng#p1",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?id=p23-p26&lang=eng#p23",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11?id=p4-p8&lang=eng#p4",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?id=p36-p37&lang=eng#p36",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/heb/12?id=p1-p3&lang=eng#p1",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?id=p22-p33&lang=eng#p22",
+        "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-book-of-mormon-2024/10?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-new-testament-2027/41?lang=eng"
       ]
     },
     {
@@ -409,14 +477,15 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "164613853cddde53434161a098fdb445ecd0736c3707b16ed0df3c7bfb7db227",
+      "published_text_sha256": "1f11578f3b9363c67f69df6f4efad690fcdd499d93a9a65dc8fb83416b184e0c",
       "reviewed_on": "2026-09-06",
       "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng"
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&lang=eng#p32"
       ]
     },
     {
@@ -502,51 +571,6 @@
         "https://www.churchofjesuschrist.org/study/video/easter-videos/2020-02-4000-this-easter-hearhim-jesus-christs-words-are-for-you-1080p?lang=eng",
         "https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng",
         "https://www.churchofjesuschrist.org/tools/help/frequently-asked-questions-about-gospel-media?lang=eng"
-      ]
-    },
-    {
-      "path": "answers/death-of-a-child.html",
-      "status": "verified",
-      "published_text_sha256": "d0258dae6770e2cbdfea4aaa205a45757d130f01564da933562d0a3a77beb365",
-      "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
-      "authoritative_sources": [
-        "https://www.churchofjesuschrist.org/",
-        "https://www.churchofjesuschrist.org/?lang=eng",
-        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
-        "https://www.churchofjesuschrist.org/study/manual/counseling-resources/grief-and-loss?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
-        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
-        "https://www.churchofjesuschrist.org/temples?lang=eng",
-        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
-        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng"
-      ]
-    },
-    {
-      "path": "answers/divorce-and-faith.html",
-      "status": "verified",
-      "published_text_sha256": "d31ff4e06067f6932530086520e62ba04152dda0ff1b7dcd125ac1cdbb63386a",
-      "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
-      "authoritative_sources": [
-        "https://www.churchofjesuschrist.org/",
-        "https://www.churchofjesuschrist.org/?lang=eng",
-        "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
-        "https://www.churchofjesuschrist.org/study/ensign/2018/07/ministering-to-members-who-are-divorced?lang=eng",
-        "https://www.churchofjesuschrist.org/study/manual/divorce/divorce?lang=eng",
-        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/abuse?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng",
-        "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
-        "https://www.churchofjesuschrist.org/temples?lang=eng",
-        "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
-        "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng"
       ]
     }
   ]
