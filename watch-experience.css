@@ -3,7 +3,7 @@
 
 .fc-visual-hero--watch::before {
     background-image: url('assets/heroes/watch.webp?v=20260906-approved') !important;
-    background-position: center top !important;
+    background-position: center 20px !important;
 }
 
 .watch-media-section {
