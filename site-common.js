@@ -540,34 +540,6 @@
         appendScript('study-intelligence-v3.js?v=20260903-17', 'data-focuschrist-study-intelligence-v3');
     }
 
-    function fitOpeningToViewport() {
-        const hero = document.querySelector('.fc-visual-hero');
-        const intro = document.querySelector('.fc-page-intro');
-        if (!hero || !intro) return;
-        let pending = false;
-        function update() {
-            pending = false;
-            if (window.innerWidth <= 1020) {
-                document.body.style.removeProperty('--fc-opening-hero-height');
-                return;
-            }
-            const width = Math.min(document.documentElement.clientWidth, 1920);
-            const ratio = hero.classList.contains('fc-history-hero') ? 1916 / 821 : 3;
-            const naturalHeight = hero.classList.contains('fc-visual-hero--portrait') ? 440 : width / ratio;
-            const available = window.innerHeight - 72 - intro.getBoundingClientRect().height;
-            // On extremely short windows, allow normal page scrolling rather than clip content.
-            const height = Math.max(180, Math.min(naturalHeight, available));
-            document.body.style.setProperty('--fc-opening-hero-height', height + 'px');
-        }
-        function schedule() {
-            if (!pending) { pending = true; window.requestAnimationFrame(update); }
-        }
-        new ResizeObserver(schedule).observe(intro);
-        window.addEventListener('resize', schedule, { passive: true });
-        document.fonts.ready.then(schedule);
-        update();
-    }
-
     document.addEventListener('DOMContentLoaded', function () {
         const scriptureStyle = document.createElement('link');
         scriptureStyle.rel = 'stylesheet';
@@ -575,7 +547,6 @@
         document.head.appendChild(scriptureStyle);
         appendScript(relativeAssetHref('scripture-reader.js?v=20260906-1'), 'data-focuschrist-scripture-reader');
         appendScript(relativeAssetHref('header-scroll.js?v=20260906-1'), 'data-focuschrist-header-scroll');
-        fitOpeningToViewport();
         ensureMainLandmark();
         normalizeFooterIdentity();
         ensurePrimaryStudyNavigation();

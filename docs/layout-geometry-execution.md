@@ -31,3 +31,7 @@ The owner still rejected the opening artwork: reducing banner height while retai
 ## Owner rejection of PR182 and wide-opening correction
 
 The full-composition contain approach was rejected: the narrow centered artwork and empty side bands looked wrong. Restore wide panoramas, keep navigation untouched, and measure the actual introductory content after fonts and responsive wrapping. The image receives the remaining viewport height instead of a fixed 410px text allowance. Introduction spacing and title size are restrained. On unusually short windows, content may flow normally; it is never clipped or hidden. The review harness now varies its page URL per load and reports the stylesheet version to avoid confusing cached HTML with the current release.
+
+## Locked shared geometry and full opening viewport
+
+Owner clarified that no following section may show in the opening, and hero vertical size must stay consistent when switching pages. The content-measured ResizeObserver implementation is removed. Desktop hero height is one shared clamp(180px, calc(100dvh - 390px), 440px), determined only by viewport height. Every introductory section fills the remaining viewport beneath the72px header, with zero negative top margin. No page-specific JavaScript changes hero height. Very short screens still allow natural readable overflow. Home's rejected blur layer is removed; the approved portrait blends through a smooth opacity mask into warm-to-teal gradients. Numerical verification now records heroHeight and waits two animation frames after fonts before measuring.
