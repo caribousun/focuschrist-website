@@ -1,7 +1,7 @@
 /* Missionary page visual direction: paths of light across the Harvest Sky. */
 
 .fc-visual-hero--missionary > img {
-    object-position: center 20%;
+    object-position: center top;
 }
 
 .fc-visual-hero--missionary::after {
@@ -677,34 +677,5 @@
 
     .fc-missionary-detail-actions .fc-button {
         width: 100%;
-    }
-}
-
-/* Keep the desktop opening within the usable browser height, including both
-   actions. Natural content growth remains available for enlarged text. */
-@media (min-width: 901px) {
-    .fc-missionary-page {
-        --fc-opening-hero-height: clamp(240px, min(27vw, 44dvh), 440px);
-    }
-
-    .fc-missionary-page .fc-page-intro {
-        padding-block: 20px 24px;
-    }
-
-    .fc-missionary-page .fc-page-intro .fc-display {
-        font-size: clamp(2.5rem, 5.5dvh, 3.5rem);
-    }
-
-    .fc-missionary-page .fc-page-intro-copy {
-        margin-top: 12px;
-        line-height: 1.6;
-    }
-
-    .fc-missionary-page .fc-page-intro-scripture {
-        margin-top: 12px;
-    }
-
-    .fc-missionary-page .fc-page-intro .fc-actions {
-        margin-top: 16px;
     }
 }
