@@ -176,6 +176,35 @@ function assert(condition, message) {
         && pioneerFollowupQuery.includes('When did the Oregon Trail migration begin?'),
         'Pioneer remote follow-up must explicitly resolve the immediately preceding subject');
 
+    for (const kind of ['Journey', 'Trail', 'Willie & Martin Companies']) {
+        const specimen = disclosure(kind);
+        Object.defineProperty(specimen.response, 'innerHTML', {
+            set() { this.children = []; }, get() { return ''; }
+        });
+        const before = fetchCalls;
+        const pendingDisclosure = window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
+        await window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
+        await window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
+        assert(fetchCalls === before + 1, kind + ' reopening during research must not duplicate the request');
+        await window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
+        assert(specimen.response.style.display === 'none', kind + ' must collapse while research is pending');
+        delayedResponse();
+        await pendingDisclosure;
+        assert(specimen.response.style.display === 'none' && !specimen.control.classList.contains('expanded'),
+            kind + ' a completed background response must not reopen a collapsed disclosure');
+        await window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
+        const completed = specimen.response.children.slice();
+        assert(completed.some(child => child.textContent === 'VERIFIED REMOTE PIONEER ANSWER'),
+            kind + ' must render completed research');
+        await window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
+        await window.focusChristRunPioneerDisclosure(specimen.control, 'delayed pioneer detail', kind);
+        assert(specimen.response.dataset.focuschristLoaded === 'verified-research'
+            && specimen.response.children.length === completed.length
+            && specimen.response.children.every((child, index) => child === completed[index]),
+            kind + ' reopening must preserve the complete researched answer and controls');
+        assert(fetchCalls === before + 1, kind + ' reopening completed research must not request again');
+    }
+
     const beforeDelayed = messages.length;
     input.value = 'Tell me a delayed pioneer detail';
     const pending = window.sendMessage();

@@ -552,11 +552,13 @@
         }
 
         aiResponse.style.display = 'block';
+        // Reopening reveals the existing answer, including while research is pending.
+        // Never redraw the short card over a completed verified response.
+        if (aiResponse.dataset.focuschristResearchStarted === 'true') return;
         const localAnswer = reviewedLocalDisclosure(control, kind, mappedTopic);
         renderDisclosureAnswer(aiResponse, localAnswer);
         aiResponse.dataset.focuschristLoaded = 'local-reviewed-card';
         control.setAttribute('data-focuschrist-disclosure-mode', 'reviewed-local-card');
-        if (aiResponse.dataset.focuschristResearchStarted === 'true') return;
         aiResponse.dataset.focuschristResearchStarted = 'true';
         try {
             const pageReference = controlPageReference(control, kind, mappedTopic);
