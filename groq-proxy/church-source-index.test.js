@@ -649,6 +649,50 @@ try {
     && quoteRepairPayload.focuschrist_cloudflare_verifier_calls === 2,
   'an approved but overcopied indexed answer must receive one bounded Cloudflare-only paraphrase repair');
 
+  const beforeIndependentRepairFetch = globalThis.fetch;
+  let independentGroqCalls = 0;
+  let independentOpenAICalls = 0;
+  let independentRepairSucceeds = true;
+  try {
+    globalThis.fetch = async (url, init) => {
+      const target = String(url);
+      if (target.includes('api.groq.com')) {
+        independentGroqCalls += 1;
+        const copied = 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution';
+        return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ approved: true, answer: copied + '. ' + copied + '. ' + copied + '.', source_indexes: [1] }) } }] }), { headers: { 'Content-Type': 'application/json' } });
+      }
+      if (target === 'https://api.openai.com/v1/chat/completions') {
+        independentOpenAICalls += 1;
+        const body = JSON.parse(init.body);
+        assert(body.model === 'gpt-5.6-luna' && body.messages[0].content.includes('previous answer also fails the overlap check'),
+          'independent repair must use the existing allowed verifier and the complete repair contract');
+        return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ approved: true, answer: independentRepairSucceeds ? verifiedAnswer : 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution. '.repeat(3), source_indexes: [1] }) } }] }), { headers: { 'Content-Type': 'application/json' } });
+      }
+      return beforeIndependentRepairFetch(url, init);
+    };
+    const independentResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+      method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: 'faith-study', messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }] }),
+    }), { VERIFIER_PROVIDER: 'groq', GROQ_KEY_NEW: 'test-groq', OPENAI_API_KEY: 'test-openai' });
+    const independentPayload = await independentResponse.json();
+    assert(independentGroqCalls === 1 && independentOpenAICalls === 1 && independentPayload.focuschrist_source_integrity_verified === true
+      && independentPayload.focuschrist_verifier_route === 'openai-repair'
+      && independentPayload.focuschrist_groq_verifier_calls === 1 && independentPayload.focuschrist_openai_verifier_calls === 1,
+      'overlap from a successful Groq primary must use exactly one independent repair and preserve combined accounting');
+    independentRepairSucceeds = false;
+    independentGroqCalls = 0;
+    independentOpenAICalls = 0;
+    const rejectedIndependentResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+      method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: 'faith-study', messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }] }),
+    }), { VERIFIER_PROVIDER: 'groq', GROQ_KEY_NEW: 'test-groq', OPENAI_API_KEY: 'test-openai' });
+    const rejectedIndependentPayload = await rejectedIndependentResponse.json();
+    assert(independentGroqCalls === 1 && independentOpenAICalls === 1
+      && rejectedIndependentPayload.focuschrist_source_integrity_verified === false
+      && rejectedIndependentPayload.focuschrist_verifier_publication_failure === 'excessive-source-overlap',
+      'an independent repair that still overcopies must fail closed with no third attempt');
+  } finally { globalThis.fetch = beforeIndependentRepairFetch; }
+
   let failedOverlapCalls = 0;
   const failedOverlapResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
     method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
