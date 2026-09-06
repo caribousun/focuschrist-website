@@ -27,7 +27,7 @@
 @media(max-width:700px){.fc-resource-grid{grid-template-columns:1fr;gap:20px}.fc-resource-section{width:calc(100% - 32px);padding:22px 18px}.fc-resource-card__body{padding:18px}.fc-signature-study .article{width:calc(100% - 36px)}}
 
 /* Question-specific scripture and media companions for enriched Answers. */
-.fc-answer-depth .fc-study-feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);align-items:start;gap:28px;margin:28px 0 36px}
+.fc-answer-depth .fc-study-feature{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:32px;margin:28px 0 36px}
 .fc-answer-depth .fc-study-feature>div{min-width:0}
 .fc-answer-depth .fc-study-feature h2,.fc-answer-depth .fc-study-feature h3{margin-top:0}
 .fc-answer-depth section[id]{scroll-margin-top:110px}
@@ -36,3 +36,15 @@
 .fc-resource-grid>.fc-resource-card:only-child{grid-column:1/-1;width:100%;max-width:620px;justify-self:center}
 
 .fc-resource-section [id] { scroll-margin-top: 110px; }
+
+/* Contextual companions: the explanation already lives beside the preview.
+   A bounded thumbnail and concise source label keep the media subordinate to
+   the reading, without clipping images or adding filler to the prose. */
+.fc-answer-depth .fc-study-feature > .fc-resource-card { width:100%; max-width:340px; justify-self:end; }
+.fc-answer-depth .fc-study-feature > div > p:last-child { margin-bottom:0; }
+.fc-answer-depth .fc-study-feature .fc-resource-card__body { padding:16px 18px; }
+.fc-answer-depth .fc-study-feature .fc-resource-card h3 { margin-bottom:8px!important; font-size:1.05rem!important; }
+.fc-answer-depth .fc-study-feature .fc-resource-card__source { margin-top:8px; }
+@media(max-width:800px) {
+    .fc-answer-depth .fc-study-feature > .fc-resource-card { max-width:420px; justify-self:center; }
+}

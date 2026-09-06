@@ -40,7 +40,7 @@
     --fc-section-y: clamp(48px, 7vw, 82px);
     --fc-gap: clamp(18px, 3vw, 30px);
     --fc-opening-hero-height: clamp(350px, 27vw, 440px);
-    --fc-opening-flow-header-height: 0px;
+    --fc-opening-flow-header-height: 72px;
     --fc-ultrawide-hero-width: 1920px;
 }
 
@@ -705,4 +705,25 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
         animation-iteration-count: 1 !important;
         transition-duration: 0.001ms !important;
     }
+}
+
+/* The fixed desktop navigation owns real opening space. Keep this reservation
+   stable when the reading bar contracts, so artwork never moves on scroll. */
+@media (min-width: 1021px) {
+    body.fc-site:has(.nav[data-focuschrist-header="standard"]) { padding-top: 72px; }
+}
+
+/* The approved close portrait needs its full vertical composition, unlike a
+   panorama. Scale to the hero height and blend its native edges into warm sky. */
+.fc-visual-hero--portrait {
+    background: radial-gradient(ellipse at 50% 35%, #aa7c28 0%, #5a491f 42%, #203b43 78%, #142a35 100%);
+}
+.fc-visual-hero--portrait::before {
+    inset:0 auto 0 50%;
+    width: min(100%, calc(var(--fc-opening-hero-height) * 1.894));
+    background-size:cover;
+    background-position:center top;
+    transform:translateX(-50%);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);
+    mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);
 }
