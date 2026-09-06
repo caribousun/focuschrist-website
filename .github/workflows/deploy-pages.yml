@@ -37,7 +37,9 @@ jobs:
         run: python tools/resource_thumbnail_qa.py
 
       - name: Verify every permanent Answer study experience
-        run: python tools/answer_study_qa.py
+        run: |
+          python tools/answer_study_qa.py
+          python tools/answer_video_uniqueness_qa.py
 
       - name: Verify scripture reader sources and interactions
         run: |

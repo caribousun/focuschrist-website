@@ -4,13 +4,19 @@ Scope: all thirteen permanent Answer pages, all twenty-six published content pag
 
 All thirteen Answer pages now have visible study navigation, media beside distinct topical teaching, optional reflection, source attribution, and continued study. Existing approved substantive text, heroes, artworks, and fail-closed source/AI behavior are preserved. No uniform card or word quota substitutes for relevance.
 
-New source-specific media: Oaks’s April 2007 Divorce talk and the John 10 Good Shepherd film, with actual official thumbnails. Removed the unrelated Good Things to Come card from Pioneers and children’s song from Art. Corrected Watch’s Good Samaritan study route to service. Remaining cross-page reuse has a topic-specific purpose recorded below.
+New source-specific media: Oaks’s April 2007 Divorce talk and the John 10 Good Shepherd film, with actual official thumbnails. Removed the unrelated Good Things to Come card from Pioneers and children’s song from Art. Corrected Watch’s Good Samaritan study route to service. The owner subsequently required unique Answer videos: the final policy and replacements below supersede the earlier allowance for relevant Answer reuse.
 
 Scripture reader: all 220 currently linked chapters (7,583 verses) are exact-text extractions from official chapter HTML, checked with source/data checksums. Footnote markers are excluded. It supports chapter, range, multiple verse, and legacy dotted links; dynamically inserted links; a source link; X/Close, Escape, and backdrop dismissal. Unavailable or invalid content is refused with an original-source route, never generated. Future chapters require catalog refresh. The shared loader reaches root and nested pages.
 
 Navigation: opaque theme-matched teal prevents text bleeding through even without JavaScript; a passive, animation-frame-throttled scroll state adds a gold edge and shadow without moving underlying page content; the refined desktop bar settles from 72px to 64px while scrolling.
 
 Independent review covers new prose, actual official media destinations, reader/data code and source samples, header behavior and permanent gates. CI now checks every Answer, catalog completeness/integrity, and reader runtime behavior in both review and deployment workflows. Production browser verification follows deployment; mobile and ultrawide rendering must remain unverified unless those viewports are actually available.
+
+## Final owner direction: unique Answer videos
+
+Answer video selections are now exclusive to their individual Answer page and absent from Watch. Twenty-four newly verified native previews replace reused choices; the already unique Divorce video and four flagship videos remain. All twenty-nine Answer video cards have distinct source-reviewed identities, with no Watch or cross-Answer repetitions. The non-video lessons, scripture imagery, announcement and resource collection retain their separate purposes. Other site sections retain topic-relevant media under the original relevance rule.
+
+The permanent answer_video_uniqueness_qa.py gate reads actual Answer and Watch placements, checks canonical URLs and reviewed alternate-source identities, and prevents duplicates hidden behind a changed resource key. Known transcript aliases for the same talk share an identity. Direct video links also count; ordinary written-source citations are not video placements. This gate runs in both review and deployment workflows.
 
 ## Source and relevance review notes
 
