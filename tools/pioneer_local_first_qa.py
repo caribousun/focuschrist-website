@@ -5,7 +5,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = "2026-09-03.16"
 WORKER_POLICY = "2026-09-06.60"
-CACHE = "20260906-disclosure-states"
+CACHE = "20260906-topic-answers"
 
 
 def block(text: str, start: str, end: str) -> str:
