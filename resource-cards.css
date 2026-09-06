@@ -34,3 +34,5 @@
 @media(max-width:800px){.fc-answer-depth .fc-study-feature{grid-template-columns:1fr;gap:20px}}
 
 .fc-resource-grid>.fc-resource-card:only-child{grid-column:1/-1;width:100%;max-width:620px;justify-self:center}
+
+.fc-resource-section [id] { scroll-margin-top: 110px; }
