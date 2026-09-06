@@ -161,9 +161,9 @@
     {
       "path": "answers/prayer-and-personal-revelation.html",
       "status": "verified",
-      "published_text_sha256": "a36948919ad1a0ec7c257a9b29f19e2f3cb5a54a34753d133f471dace05cb0a2",
+      "published_text_sha256": "d8207dd17837aa1425430cc8f6eb3c19b24e86aa4744752a9b5321460a0eb18a",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
+      "review_standard": "Watch enrichment: primary official source titles/descriptions and cited scripture read; 20 exact source thumbnails inspected; original reflection distinguished from official teaching; independent agent source and destination review PASS before commit. Reciprocal study links verified. Prior substantive source reviews retained.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -210,9 +210,9 @@
     {
       "path": "answers/what-is-the-book-of-mormon.html",
       "status": "verified",
-      "published_text_sha256": "a573dbe9fd360413214a812a41ce0d8bc5a8b529f49710938e5aad4ba33611f0",
+      "published_text_sha256": "96483bca7290d69a977654ad99cf56afd122ef8f785501e2bcc1b6c86db7bb28",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
+      "review_standard": "Watch enrichment: primary official source titles/descriptions and cited scripture read; 20 exact source thumbnails inspected; original reflection distinguished from official teaching; independent agent source and destination review PASS before commit. Reciprocal study links verified. Prior substantive source reviews retained.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -276,9 +276,9 @@
     {
       "path": "answers/why-latter-day-saints-build-temples.html",
       "status": "verified",
-      "published_text_sha256": "e264134d26e4c873963c55c785296356734f61b082d56169b1cd254c323ffc0d",
+      "published_text_sha256": "2858a78e20900450bd896f193681ec02cc1bb2c304cdcb89735b48135d8d7e23",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
+      "review_standard": "Watch enrichment: primary official source titles/descriptions and cited scripture read; 20 exact source thumbnails inspected; original reflection distinguished from official teaching; independent agent source and destination review PASS before commit. Reciprocal study links verified. Prior substantive source reviews retained.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -467,15 +467,41 @@
     {
       "path": "watch.html",
       "status": "verified",
-      "published_text_sha256": "710c0df79a0cdd8233baa50badac92a88d76277da32aa97f64bce7b95aa045fa",
+      "published_text_sha256": "054a99b9bada262b04953be1170c79a2599b5ec41d1ebedd609508776aa23cf8",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Connected whole-site study enrichment: primary-source semantic review and independent reviewer passed; scriptural context, evidence/interpretation distinctions, care, and purposeful continuation checked. Clickable hero accessible label reviewed; distracting overlay pill removed. Prior substantive source review preserved. Scene interpretations and source/study routes reviewed separately in hero-details.js.",
+      "review_standard": "Watch enrichment: primary official source titles/descriptions and cited scripture read; 20 exact source thumbnails inspected; original reflection distinguished from official teaching; independent agent source and destination review PASS before commit. Reciprocal study links verified. Prior substantive source reviews retained.",
       "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2010-07-0004-the-restoration?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2014-11-0010-the-refiners-fire?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2016-02-0160-sharing-the-gospel?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2016-04-2090-family-councils?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2016-06-0008-mitch-mobile?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2016-12-0001-pioneer-journeys-more-than-a-trek?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2017-01-0100-ask-of-god-joseph-smiths-first-vision?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2020-02-2001-hearhim-listen-to-the-voice-of-jesus-christ?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2022-07-0510-jesus-christ-has-compassion-and-heals-the-people-3-nephi-171-10?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2022-10-2030-kristin-yee?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2023-10-0060-welcome-to-the-temple-video-president-nelson-elder-and-sister-christofferson?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku?lang=eng",
+        "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
         "https://www.churchofjesuschrist.org/study/video/easter-videos/2020-02-4000-this-easter-hearhim-jesus-christs-words-are-for-you-1080p?lang=eng",
-        "https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng"
+        "https://www.churchofjesuschrist.org/study/videos-and-images?lang=eng",
+        "https://www.churchofjesuschrist.org/tools/help/frequently-asked-questions-about-gospel-media?lang=eng"
       ]
     },
     {

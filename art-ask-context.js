@@ -1,5 +1,5 @@
 /* focusChrist contextual artwork study bridge for Ask.
- * Activated only when Ask receives ?art=... from the Art modal.
+ * Activated when Ask receives artwork or Watch study context.
  * Keeps the selected artwork/topic visible and provides an exact return path.
  */
 (function () {
@@ -28,6 +28,16 @@
         }
     }
 
+    function safeWatchReturn(raw) {
+        const fallback = '/watch.html#watch-topics';
+        try {
+            const url = new URL(raw || fallback, window.location.href);
+            const sections = ['watch-topics', 'featured-study', 'life-of-christ', 'book-of-mormon', 'prayer-and-revelation', 'hope-in-trials', 'restoration-and-history', 'temples-and-family', 'love-and-service'];
+            if (url.origin !== window.location.origin || url.pathname !== '/watch.html') return fallback;
+            return sections.includes(url.hash.slice(1)) ? '/watch.html' + url.hash : fallback;
+        } catch (_error) { return fallback; }
+    }
+
     function ensureStyles() {
         if (document.getElementById('focuschrist-art-ask-context-styles')) return;
         const style = document.createElement('style');
@@ -45,19 +55,19 @@
         document.head.appendChild(style);
     }
 
-    function createContext(art, topic, returnUrl) {
+    function createContext(art, topic, returnUrl, watch) {
         const card = document.querySelector('.ask-study-card');
         if (!card || card.querySelector('[data-focuschrist-art-context]')) return;
 
         const context = document.createElement('aside');
         context.className = 'ask-art-context';
         context.setAttribute('data-focuschrist-art-context', 'true');
-        context.setAttribute('aria-label', 'Artwork study context');
+        context.setAttribute('aria-label', watch ? 'Watch study context' : 'Artwork study context');
 
         const copy = document.createElement('div');
         const kicker = document.createElement('span');
         kicker.className = 'ask-art-context-kicker';
-        kicker.textContent = 'Studying artwork';
+        kicker.textContent = watch ? 'Continuing from Watch' : 'Studying artwork';
         copy.appendChild(kicker);
 
         const title = document.createElement('strong');
@@ -76,7 +86,7 @@
         const back = document.createElement('a');
         back.className = 'ask-art-context-return';
         back.href = returnUrl;
-        back.textContent = 'Return to this artwork';
+        back.textContent = watch ? 'Return to Watch study' : 'Return to this artwork';
         back.setAttribute('data-focuschrist-art-return', 'true');
         context.appendChild(back);
         card.insertBefore(context, card.firstChild);
@@ -92,11 +102,11 @@
         document.body.appendChild(back);
     }
 
-    function prefillQuestion(art, topic) {
+    function prefillQuestion(art, topic, watch) {
         const input = document.getElementById('userInput');
         if (!input || input.value.trim()) return;
         const subject = topic || art;
-        input.value = 'Help me study the artwork "' + art + '". What do the scriptures and official Church resources teach about ' + subject + '?';
+        input.value = watch ? 'What do the scriptures and official Church resources teach about ' + subject + '?' : 'Help me study the artwork "' + art + '". What do the scriptures and official Church resources teach about ' + subject + '?';
         input.setAttribute('data-focuschrist-art-prefill', 'true');
         window.setTimeout(function () {
             try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
@@ -105,14 +115,15 @@
 
     function init() {
         const params = new URLSearchParams(window.location.search);
-        const art = (params.get('art') || '').trim();
+        const watch = (params.get('watch') || '').trim().slice(0, 180);
+        const art = (params.get('art') || watch).trim().slice(0, 180);
         if (!art) return;
-        const topic = (params.get('topic') || art).trim();
-        const returnUrl = safeReturnUrl(params.get('return'), art);
+        const topic = (params.get('topic') || art).trim().slice(0, 180);
+        const returnUrl = watch ? safeWatchReturn(params.get('return')) : safeReturnUrl(params.get('return'), art);
         ensureStyles();
-        createContext(art, topic, returnUrl);
-        createPersistentReturn(art, returnUrl);
-        prefillQuestion(art, topic);
+        createContext(art, topic, returnUrl, watch);
+        if (!watch) createPersistentReturn(art, returnUrl);
+        prefillQuestion(art, topic, watch);
         document.documentElement.setAttribute('data-focuschrist-art-ask-context', 'ready');
     }
 

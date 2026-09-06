@@ -64,7 +64,7 @@ def main() -> int:
     watch = (ROOT / "watch.html").read_text(encoding="utf-8")
     for marker in (
         "Official Church Video &amp; Study",
-        "The media remains on ChurchofJesusChrist.org",
+        "The videos remain on ChurchofJesusChrist.org",
         "@theRisen636",
     ):
         if marker not in watch:
