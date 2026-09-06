@@ -728,9 +728,7 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);
 }
 
-/* Selected wide portrait treatment for the home page and opened Answer topics.
-   The approved original remains home.webp; option 1 remains available beside
-   this asset. The PNG is used directly to avoid recompression and softness. */
+/* The home page and opened Answer topics share the same hero image and treatment. */
 .fc-home-hero,
 .fc-answer-detail-hero {
     background: #07303b;
