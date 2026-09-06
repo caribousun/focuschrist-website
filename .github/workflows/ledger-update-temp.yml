@@ -1,0 +1,63 @@
+name: Temporary Ledger Update
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/ledger-update-temp.yml'
+permissions:
+  contents: write
+jobs:
+  update-ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Register reviewed content
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('content-audit.json')
+          data = json.loads(p.read_text(encoding='utf-8'))
+          docs = data['documents']
+          by_path = {d['path']: d for d in docs}
+          home = by_path['index.html']
+          home['published_text_sha256'] = '1f11578f3b9363c67f69df6f4efad690fcdd499d93a9a65dc8fb83416b184e0c'
+          home['reviewed_on'] = '2026-09-06'
+          if 'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&lang=eng#p32' not in home['authoritative_sources']:
+              home['authoritative_sources'].append('https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&lang=eng#p32')
+          new_path = 'answers/look-unto-me-doctrine-and-covenants-6-36.html'
+          record = {
+              'path': new_path,
+              'status': 'verified',
+              'published_text_sha256': 'd411194b14c64ee5d2024b2c3267d1e86036cc1c018f0c0d312d4e8f9b0e0248',
+              'reviewed_on': '2026-09-06',
+              'review_standard': 'Signature Christ-centered study review: Doctrine and Covenants 6 historical and scriptural context, 2027 Rejoice in Christ theme, Philippians and Book of Mormon cross-references, official Church media destinations, interpretation/application boundaries, accessibility, connected-study routing, and source integrity checked against authoritative Church sources.',
+              'authoritative_sources': [
+                  'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng',
+                  'https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-seminary-teacher-manual-2025/061-doctrine-and-covenants-6?lang=eng',
+                  'https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-student-manual-2017/chapter-5-doctrine-and-covenants-6-8-9?lang=eng',
+                  'https://www.churchofjesuschrist.org/study/manual/revelations-in-context/oliver-cowderys-gift?lang=eng',
+                  'https://www.churchofjesuschrist.org/callings/youth?lang=eng',
+                  'https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?id=p4-p13&lang=eng#p4',
+                  'https://www.churchofjesuschrist.org/study/scriptures/nt/philip/3?id=p1-p8&lang=eng#p1',
+                  'https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?id=p23-p26&lang=eng#p23',
+                  'https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/11?id=p4-p8&lang=eng#p4',
+                  'https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?id=p36-p37&lang=eng#p36',
+                  'https://www.churchofjesuschrist.org/study/scriptures/nt/heb/12?id=p1-p3&lang=eng#p1',
+                  'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?id=p22-p33&lang=eng#p22',
+                  'https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-book-of-mormon-2024/10?lang=eng',
+                  'https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-new-testament-2027/41?lang=eng'
+              ]
+          }
+          if new_path in by_path:
+              by_path[new_path].update(record)
+          else:
+              docs.append(record)
+              docs.sort(key=lambda d: d['path'])
+          p.write_text(json.dumps(data, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+          PY
+          git config user.name 'focusChrist QA'
+          git config user.email 'actions@users.noreply.github.com'
+          git add content-audit.json
+          git commit -m 'Register reviewed D&C 6:36 and Home content'
+          git push
