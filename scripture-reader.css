@@ -38,3 +38,24 @@ dialog.fc-scripture-reader {
     .fc-scripture-footer { padding: 13px 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .fc-scripture-reader, .fc-scripture-reader * { scroll-behavior: auto; } }
+
+/* Draw the close mark geometrically; font baselines otherwise shift × downward. */
+.fc-scripture-reader .fc-scripture-x {
+    position: relative;
+    font-size: 0 !important;
+}
+.fc-scripture-reader .fc-scripture-x::before,
+.fc-scripture-reader .fc-scripture-x::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.fc-scripture-reader .fc-scripture-x::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

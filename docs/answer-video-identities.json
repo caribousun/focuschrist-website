@@ -1,0 +1,467 @@
+{
+  "policy": "Answer video selections must be distinct from Watch and from every other Answer. Identity records are source-reviewed; alternate URLs for the same production share an identity. Non-video study/source citations are not video placements.",
+  "resources": {
+    "because": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng",
+      "title": "Because of Him—Easter Video",
+      "video_identity": "churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video",
+      "aliases": []
+    },
+    "resurrected": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected?lang=eng",
+      "title": "Jesus Is Resurrected",
+      "video_identity": "churchofjesuschrist.org/media/video/2011-10-0021-jesus-is-resurrected",
+      "aliases": []
+    },
+    "hear": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-02-2001-hearhim-listen-to-the-voice-of-jesus-christ?lang=eng",
+      "title": "#HearHim: Listen to the Voice of Jesus Christ",
+      "video_identity": "churchofjesuschrist.org/media/video/2020-02-2001-hearhim-listen-to-the-voice-of-jesus-christ",
+      "aliases": []
+    },
+    "americas": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11?lang=eng",
+      "title": "Jesus Christ Appears in the Ancient Americas | 3 Nephi 8–11",
+      "video_identity": "churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11",
+      "aliases": []
+    },
+    "compassion": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-07-0510-jesus-christ-has-compassion-and-heals-the-people-3-nephi-171-10?lang=eng",
+      "title": "Jesus Christ Has Compassion and Heals the People | 3 Nephi 17:1–10",
+      "video_identity": "churchofjesuschrist.org/media/video/2022-07-0510-jesus-christ-has-compassion-and-heals-the-people-3-nephi-171-10",
+      "aliases": []
+    },
+    "angels": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17?lang=eng",
+      "title": "Jesus Christ and Angels Minister with Compassion | 3 Nephi 17",
+      "video_identity": "churchofjesuschrist.org/media/video/2022-07-0500-jesus-christ-performs-miracles-among-the-people-of-nephi-3-nephi-17",
+      "aliases": []
+    },
+    "pillars": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku?lang=eng",
+      "title": "Pillars and Rays",
+      "video_identity": "churchofjesuschrist.org/media/video/2024-04-1050-alexander-dushku",
+      "aliases": []
+    },
+    "light": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light?lang=eng",
+      "title": "The Hope of God's Light",
+      "video_identity": "churchofjesuschrist.org/media/video/2014-07-0006-the-hope-of-gods-light",
+      "aliases": []
+    },
+    "good": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come?lang=eng",
+      "title": "Good Things to Come",
+      "video_identity": "churchofjesuschrist.org/media/video/2010-05-0012-good-things-to-come",
+      "aliases": []
+    },
+    "refiner": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-11-0010-the-refiners-fire?lang=eng",
+      "title": "The Refiner's Fire",
+      "video_identity": "churchofjesuschrist.org/media/video/2014-11-0010-the-refiners-fire",
+      "aliases": []
+    },
+    "restoration": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2010-07-0004-the-restoration?lang=eng",
+      "title": "The Restoration",
+      "video_identity": "churchofjesuschrist.org/media/video/2010-07-0004-the-restoration",
+      "aliases": []
+    },
+    "vision": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2017-01-0100-ask-of-god-joseph-smiths-first-vision?lang=eng",
+      "title": "Ask of God: Joseph Smith's First Vision",
+      "video_identity": "churchofjesuschrist.org/media/video/2017-01-0100-ask-of-god-joseph-smiths-first-vision",
+      "aliases": []
+    },
+    "pioneers": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2016-12-0001-pioneer-journeys-more-than-a-trek?lang=eng",
+      "title": "Pioneer Journeys—More Than a Trek",
+      "video_identity": "churchofjesuschrist.org/media/video/2016-12-0001-pioneer-journeys-more-than-a-trek",
+      "aliases": []
+    },
+    "temple": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2023-10-0060-welcome-to-the-temple-video-president-nelson-elder-and-sister-christofferson?lang=eng",
+      "title": "Welcome to the House of the Lord",
+      "video_identity": "churchofjesuschrist.org/media/video/2023-10-0060-welcome-to-the-temple-video-president-nelson-elder-and-sister-christofferson",
+      "aliases": []
+    },
+    "family": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2016-04-2090-family-councils?lang=eng",
+      "title": "Family Councils",
+      "video_identity": "churchofjesuschrist.org/media/video/2016-04-2090-family-councils",
+      "aliases": []
+    },
+    "song": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng",
+      "title": "I Feel My Savior’s Love",
+      "video_identity": "churchofjesuschrist.org/media/video/i-feel-my-saviors-love",
+      "aliases": []
+    },
+    "samaritan": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan?lang=eng",
+      "title": "Parable of the Good Samaritan",
+      "video_identity": "churchofjesuschrist.org/media/video/2011-10-0010-parable-of-the-good-samaritan",
+      "aliases": []
+    },
+    "sharing": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2016-02-0160-sharing-the-gospel?lang=eng",
+      "title": "Sharing the Gospel",
+      "video_identity": "churchofjesuschrist.org/media/video/2016-02-0160-sharing-the-gospel",
+      "aliases": []
+    },
+    "mitch": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2016-06-0008-mitch-mobile?lang=eng",
+      "title": "Mitch Mobile",
+      "video_identity": "churchofjesuschrist.org/media/video/2016-06-0008-mitch-mobile",
+      "aliases": []
+    },
+    "forgiveness": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-10-2030-kristin-yee?lang=eng",
+      "title": "Beauty for Ashes: The Healing Path of Forgiveness",
+      "video_identity": "churchofjesuschrist.org/media/video/2022-10-2030-kristin-yee",
+      "aliases": []
+    },
+    "look-event": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ?lang=eng",
+      "title": "January 2025 Worldwide Discussion for Youth - Look Unto Christ",
+      "video_identity": "churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ",
+      "aliases": []
+    },
+    "rejoice": {
+      "kind": "non-video",
+      "presentation": "Church announcement",
+      "url": "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+      "title": "‘Rejoice in Christ’: Salt Lake Temple Celebration Welcomes the World"
+    },
+    "look-worldwide": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng",
+      "title": "Look Unto Christ: Worldwide Event for Youth",
+      "video_identity": "churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth",
+      "aliases": []
+    },
+    "harmony": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony?lang=eng",
+      "title": "Days of Harmony",
+      "video_identity": "churchofjesuschrist.org/media/video/2018-03-1000-days-of-harmony",
+      "aliases": []
+    },
+    "unique-finding-faith": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2004-01-0001-finding-faith-in-christ?lang=eng",
+      "title": "Finding Faith in Christ",
+      "video_identity": "churchofjesuschrist.org/media/video/2004-01-0001-finding-faith-in-christ",
+      "aliases": []
+    },
+    "unique-savior-done": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2021-04-3050-dallin-h-oaks?lang=eng",
+      "title": "What Has Our Savior Done for Us?",
+      "video_identity": "churchofjesuschrist.org/media/video/2021-04-3050-dallin-h-oaks",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2021/04/35oaks?lang=eng"
+      ]
+    },
+    "unique-are-we-christians": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2009-02-0007-are-we-christians?lang=eng",
+      "title": "Are We Christians?",
+      "video_identity": "churchofjesuschrist.org/media/video/2009-02-0007-are-we-christians",
+      "aliases": []
+    },
+    "unique-christian-believers": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-08-2490-believers-in-the-book-of-mormon?lang=eng",
+      "title": "Believers in the Book of Mormon",
+      "video_identity": "churchofjesuschrist.org/media/video/2012-08-2490-believers-in-the-book-of-mormon",
+      "aliases": []
+    },
+    "unique-bom-introduction": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2018-05-0500-what-is-the-book-of-mormon?lang=eng",
+      "title": "What Is the Book of Mormon?",
+      "video_identity": "churchofjesuschrist.org/media/video/2018-05-0500-what-is-the-book-of-mormon",
+      "aliases": []
+    },
+    "nephi": {
+      "kind": "non-video",
+      "presentation": "Study lesson",
+      "url": "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-seminary-student-manual-2024/11-2-nephi-20-25/112-student?lang=eng",
+      "title": "2 Nephi 25: Saved by Jesus Christ"
+    },
+    "unique-temples-time": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2019-11-8000-temples-through-time?lang=eng",
+      "title": "Temples Through Time",
+      "video_identity": "churchofjesuschrist.org/media/video/2019-11-8000-temples-through-time",
+      "aliases": []
+    },
+    "unique-temple-foundation": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2021-10-4070-russell-m-nelson?lang=eng",
+      "title": "The Temple and Your Spiritual Foundation",
+      "video_identity": "churchofjesuschrist.org/media/video/2021-10-4070-russell-m-nelson",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2021/10/47nelson?lang=eng"
+      ]
+    },
+    "no-more-death": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/04/and-there-shall-be-no-more-death?lang=eng",
+      "title": "And There Shall Be No More Death",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2016/04/and-there-shall-be-no-more-death",
+      "aliases": []
+    },
+    "doors-death": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/1992/04/doors-of-death?lang=eng",
+      "title": "Doors of Death",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/1992/04/doors-of-death",
+      "aliases": []
+    },
+    "unique-joseph-film": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2011-03-0001-joseph-smith-the-prophet-of-the-restoration?lang=eng",
+      "title": "Joseph Smith: The Prophet of the Restoration",
+      "video_identity": "churchofjesuschrist.org/media/video/2011-03-0001-joseph-smith-the-prophet-of-the-restoration",
+      "aliases": []
+    },
+    "unique-joseph-andersen": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-10-2030-elder-neil-l-andersen?lang=eng",
+      "title": "Joseph Smith",
+      "video_identity": "churchofjesuschrist.org/media/video/2014-10-2030-elder-neil-l-andersen",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2014/10/joseph-smith?lang=eng"
+      ]
+    },
+    "unique-prayer-supernal": {
+      "kind": "video",
+      "presentation": "Conference video · 14:58",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2007/04/using-the-supernal-gift-of-prayer?lang=eng",
+      "title": "Using the Supernal Gift of Prayer",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2007/04/using-the-supernal-gift-of-prayer",
+      "aliases": []
+    },
+    "unique-prayer-framework": {
+      "kind": "video",
+      "presentation": "Conference video · 12:41",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-10-1040-dale-g-renlund?lang=eng",
+      "title": "A Framework for Personal Revelation",
+      "video_identity": "churchofjesuschrist.org/media/video/2022-10-1040-dale-g-renlund",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/14renlund?lang=eng"
+      ]
+    },
+    "eternal-families": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/04/eternal-families?lang=eng",
+      "title": "Eternal Families",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2016/04/eternal-families",
+      "aliases": []
+    },
+    "fathers": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/04/fathers?lang=eng",
+      "title": "Fathers",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2016/04/fathers",
+      "aliases": []
+    },
+    "unique-two-scripture-witnesses": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-08-3100-bible-and-book-of-mormon?lang=eng",
+      "title": "Bible and Book of Mormon",
+      "video_identity": "churchofjesuschrist.org/media/video/2012-08-3100-bible-and-book-of-mormon",
+      "aliases": []
+    },
+    "unique-words-never-cease": {
+      "kind": "video",
+      "presentation": "Conference message",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2008/04/my-words-never-cease?lang=eng",
+      "title": "My Words ... Never Cease",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2008/04/my-words-never-cease",
+      "aliases": []
+    },
+    "unique-trials-burdens": {
+      "kind": "video",
+      "presentation": "Conference video · 16:23",
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-04-4050-elder-david-a-bednar?lang=eng",
+      "title": "Bear Up Their Burdens with Ease",
+      "video_identity": "churchofjesuschrist.org/media/video/2014-04-4050-elder-david-a-bednar",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2014/04/bear-up-their-burdens-with-ease?lang=eng"
+      ]
+    },
+    "unique-trials-mountains": {
+      "kind": "video",
+      "presentation": "Conference video · 19:38",
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-04-1070-president-henry-b-eyring?lang=eng",
+      "title": "Mountains to Climb",
+      "video_identity": "churchofjesuschrist.org/media/video/2012-04-1070-president-henry-b-eyring",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2012/04/mountains-to-climb?lang=eng"
+      ]
+    },
+    "good-shepherd": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have?lang=eng",
+      "title": "The Good Shepherd and Other Sheep I Have",
+      "video_identity": "churchofjesuschrist.org/study/video/teachings/2011-10-059-the-good-shepherd-and-other-sheep-i-have",
+      "aliases": []
+    },
+    "because-i-live": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2012/10/because-i-live-ye-shall-live-also?lang=eng",
+      "title": "Because I Live, Ye Shall Live Also",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2012/10/because-i-live-ye-shall-live-also",
+      "aliases": []
+    },
+    "grave-victory": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2021/04/42aburto?lang=eng",
+      "title": "The Grave Has No Victory",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2021/04/42aburto",
+      "aliases": []
+    },
+    "divorce": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2007/04/divorce?lang=eng",
+      "title": "Divorce",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2007/04/divorce",
+      "aliases": []
+    },
+    "healing-wings": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2022/04/24kearon?lang=eng",
+      "title": "He Is Risen with Healing in His Wings: We Can Be More Than Conquerors",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2022/04/24kearon",
+      "aliases": []
+    },
+    "seminary": {
+      "kind": "non-video",
+      "presentation": "Study lesson",
+      "url": "https://www.churchofjesuschrist.org/study/manual/doctrine-and-covenants-seminary-teacher-manual-2025/061-doctrine-and-covenants-6?lang=eng",
+      "title": "Lesson 17—Doctrine and Covenants 6: “Look unto Me in Every Thought; Doubt Not, Fear Not”"
+    },
+    "doubt": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-11-0024-wherefore-didst-thou-doubt?lang=eng",
+      "title": "Wherefore Didst Thou Doubt?",
+      "video_identity": "churchofjesuschrist.org/media/video/2014-11-0024-wherefore-didst-thou-doubt",
+      "aliases": []
+    },
+    "unique-flagship-love": {
+      "kind": "video",
+      "presentation": "Church video and transcript",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2025/04/56tai?lang=eng",
+      "title": "The Love of God",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2025/04/56tai",
+      "aliases": []
+    },
+    "cfm-rejoice": {
+      "kind": "non-video",
+      "presentation": "Study lesson",
+      "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-book-of-mormon-2024/10?lang=eng",
+      "title": "March 4–10: “We Rejoice in Christ.” 2 Nephi 20–25"
+    },
+    "cfm-philippians": {
+      "kind": "non-video",
+      "presentation": "Study lesson",
+      "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-new-testament-2027/41?lang=eng",
+      "title": "October 4–10. “I Can Do All Things Through Christ Which Strengtheneth Me”: Philippians; Colossians"
+    },
+    "nephi-visual": {
+      "kind": "non-video",
+      "presentation": "Scripture picture quote",
+      "url": "https://www.churchofjesuschrist.org/media/image/meme-2-nephi-christ-449ddc4?lang=eng",
+      "title": "Christ"
+    },
+    "strength": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?alang=eng&collectionId=1708f0e87f184f9e812608d5f51bdb13&lang=eng",
+      "title": "Jesus Christ Is the Strength of Youth",
+      "video_identity": "churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf",
+      "aliases": []
+    },
+    "unique-flagship-look": {
+      "kind": "video",
+      "presentation": "Church video and transcript",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2025/10/45christofferson?lang=eng",
+      "title": "Look to God and Live",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2025/10/45christofferson",
+      "aliases": []
+    },
+    "youth": {
+      "kind": "non-video",
+      "presentation": "Resource collection",
+      "url": "https://www.churchofjesuschrist.org/callings/youth?lang=eng",
+      "title": "Rejoice in Christ."
+    },
+    "look-christ": {
+      "kind": "video",
+      "presentation": "Church music video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2025-06-look-unto-christ?lang=eng",
+      "title": "Look Unto Christ",
+      "video_identity": "churchofjesuschrist.org/media/video/2025-06-look-unto-christ",
+      "aliases": []
+    }
+  }
+}
