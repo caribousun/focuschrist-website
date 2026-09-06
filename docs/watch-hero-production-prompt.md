@@ -1,3 +1,7 @@
+# Watch full-width correction
+
+Owner rejected PR159 contained artwork presentation. Screenshot identifies Watch; the word Mission in the correction is interpreted against that screenshot and active Watch task. Only Watch is changed. Restore shared full-width cover, edge masks, lower fade and unchanged hero height. Keep approved image pixels. Watch desktop image aligns center top. Full composition remains available through hero study and full-size viewer; cover necessarily crops different areas at different viewport proportions. This supersedes contained-image presentation notes below.
+
 # Approved Watch hero release
 
 Owner approved exec-f2fbc1fa-7bfe-4b23-be85-a892d26f5821.png. This exact approved image supersedes the previous unapproved candidates. The owner explicitly authorized fixing and displaying requested images, overriding the earlier private-display restriction for this work. Preserve preferred warm lighting and exact approved pixels.

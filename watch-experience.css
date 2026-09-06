@@ -3,7 +3,7 @@
 
 .fc-visual-hero--watch::before {
     background-image: url('assets/heroes/watch.webp?v=20260906-approved') !important;
-    background-position: center 48% !important;
+    background-position: center 20px !important;
 }
 
 .watch-media-section {
@@ -507,18 +507,3 @@
     pointer-events: none;
 }
 .watch-path-card[data-watch-path="watch"] > * { position: relative; z-index: 1; }
-
-/* Approved complete Watch composition, inside the unchanged shared hero box. */
-.fc-visual-hero--watch::before {
-    inset: 76px 0 0;
-    width: 100%;
-    background-size: contain;
-    background-position: center center !important;
-    transform: none;
-    -webkit-mask-image: none;
-    mask-image: none;
-}
-
-.fc-visual-hero--watch::after {
-    background: none;
-}
