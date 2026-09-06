@@ -28,7 +28,10 @@ function measure() {
   return {key:card.dataset.resourceKey,sideBySide:side,proseHeight:Math.round(p.height),cardHeight:Math.round(c.height),excess:side?Math.round(c.height-p.height):0};
  });
  const n=nav?.getBoundingClientRect(),h=hero?.getBoundingClientRect();
- return {page:page.value,viewport:[w.innerWidth,w.innerHeight],overflow:d.documentElement.scrollWidth>d.documentElement.clientWidth+1,heroTop:h?.top,headerBottom:n?.bottom,heroClear:!h||!n||h.top>=n.bottom-1,rows};
+ const intro=d.querySelector('.fc-page-intro'),introBottom=intro?.getBoundingClientRect().bottom;
+ const actions=[...d.querySelectorAll('.fc-page-intro .fc-actions a,.fc-page-intro .fc-actions button')].map(a=>a.getBoundingClientRect().bottom);
+ const actionsVisible=actions.every(bottom=>bottom<=w.innerHeight-8);
+ return {page:page.value,viewport:[w.innerWidth,w.innerHeight],overflow:d.documentElement.scrollWidth>d.documentElement.clientWidth+1,introBottom,actionsVisible,heroTop:h?.top,headerBottom:n?.bottom,heroClear:!h||!n||h.top>=n.bottom-1,rows};
 }
 document.getElementById('open').onclick=()=>openPage().then(()=>report.textContent=JSON.stringify(measure(),null,2));
 document.getElementById('top').onclick=()=>{preview.contentWindow.scrollTo(0,0);mediaIndex=-1;};

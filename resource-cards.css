@@ -48,3 +48,27 @@
 @media(max-width:800px) {
     .fc-answer-depth .fc-study-feature > .fc-resource-card { max-width:420px; justify-self:center; }
 }
+
+/* A complete watch/read panel replaces disconnected columns. The introduction
+   shares one compact row with its source; the longer discussion reads below. */
+.fc-answer-depth .fc-study-panel {
+    margin:28px 0 36px;
+    padding:clamp(22px,3vw,34px);
+    border:1px solid rgba(134,175,200,.3);
+    border-radius:18px;
+    background:linear-gradient(135deg,rgba(41,74,87,.55),rgba(16,43,54,.7));
+}
+.fc-answer-depth .fc-study-panel .fc-study-feature {
+    grid-template-columns:minmax(0,1fr) minmax(240px,340px);
+    gap:clamp(24px,3vw,40px);
+    margin:0;
+}
+.fc-answer-depth .fc-study-lead .fc-eyebrow {margin-bottom:16px;font-size:.7rem;letter-spacing:.2em;}
+.fc-answer-depth .fc-study-lead :is(h2,h3) {font-size:clamp(1.4rem,2.2vw,1.85rem);line-height:1.25;margin-bottom:18px;}
+.fc-answer-depth .fc-study-reading {border-top:1px solid rgba(134,175,200,.24);margin-top:26px;padding-top:24px;}
+.fc-answer-depth .fc-study-reading > p {max-width:72ch;}
+.fc-answer-depth .fc-study-reading > :last-child {margin-bottom:0;}
+@media(max-width:800px) {
+    .fc-answer-depth .fc-study-panel .fc-study-feature {grid-template-columns:1fr;gap:22px;}
+    .fc-answer-depth .fc-study-panel .fc-resource-card {justify-self:start;max-width:420px;}
+}
