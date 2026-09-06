@@ -27,3 +27,7 @@ The owner accepted the menu itself and reported opening buttons below the fold i
 ## Full composition correction after PR181
 
 The owner still rejected the opening artwork: reducing banner height while retaining cover cropped the foreground even though viewport bounds passed. Desktop panoramas now scale proportionally to their full native composition inside the available hero height, with narrow edge blending into the site background. The Sacred Grove uses its own 1916:821 ratio. Bottom fading is confined to the final tenth of the artwork, protecting hands, books, paths and other foreground details. Approved menu geometry and artwork files remain unchanged. Numerical fit is only a regression guard; rendered composition must also be reviewed.
+
+## Owner rejection of PR182 and wide-opening correction
+
+The full-composition contain approach was rejected: the narrow centered artwork and empty side bands looked wrong. Restore wide panoramas, keep navigation untouched, and measure the actual introductory content after fonts and responsive wrapping. The image receives the remaining viewport height instead of a fixed 410px text allowance. Introduction spacing and title size are restrained. On unusually short windows, content may flow normally; it is never clipped or hidden. The review harness now varies its page URL per load and reports the stylesheet version to avoid confusing cached HTML with the current release.

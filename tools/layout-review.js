@@ -15,7 +15,7 @@ function openPage() {
   return new Promise((resolve,reject)=>{
     const timer=setTimeout(()=>reject(new Error('Page load timed out')),15000);
     preview.onload=async()=>{clearTimeout(timer);await preview.contentDocument.fonts.ready;resolve();};
-    preview.src='../'+page.value+'?layout-review=geometry';
+    preview.src='../'+page.value+'?layout-review='+Date.now();
   });
 }
 function measure() {
@@ -31,7 +31,7 @@ function measure() {
  const intro=d.querySelector('.fc-page-intro'),introBottom=intro?.getBoundingClientRect().bottom;
  const actions=[...d.querySelectorAll('.fc-page-intro .fc-actions a,.fc-page-intro .fc-actions button')].map(a=>a.getBoundingClientRect().bottom);
  const actionsVisible=actions.every(bottom=>bottom<=w.innerHeight-8);
- return {page:page.value,viewport:[w.innerWidth,w.innerHeight],overflow:d.documentElement.scrollWidth>d.documentElement.clientWidth+1,introBottom,actionsVisible,heroTop:h?.top,headerBottom:n?.bottom,heroClear:!h||!n||h.top>=n.bottom-1,rows};
+ return {stylesheet:d.querySelector('link[href*="site-system.css"]')?.getAttribute('href'),page:page.value,viewport:[w.innerWidth,w.innerHeight],overflow:d.documentElement.scrollWidth>d.documentElement.clientWidth+1,introBottom,actionsVisible,heroTop:h?.top,headerBottom:n?.bottom,heroClear:!h||!n||h.top>=n.bottom-1,rows};
 }
 document.getElementById('open').onclick=()=>openPage().then(()=>report.textContent=JSON.stringify(measure(),null,2));
 document.getElementById('top').onclick=()=>{preview.contentWindow.scrollTo(0,0);mediaIndex=-1;};
