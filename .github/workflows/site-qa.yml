@@ -99,6 +99,9 @@ jobs:
       - name: Validate full-image viewer JavaScript
         run: node --check full-image-viewer.js
 
+      - name: Check hero study JavaScript
+        run: node --check hero-details.js
+
       - name: Run full-image viewer runtime QA
         run: node tools/full_image_viewer_runtime_qa.js
 

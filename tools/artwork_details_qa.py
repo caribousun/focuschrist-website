@@ -139,7 +139,7 @@ def main() -> int:
     for relative in ROOT_VIEWER_PAGES:
         text = (ROOT / relative).read_text(encoding="utf-8", errors="replace")
         for marker in (
-            'href="full-image-viewer.css?v=20260906-hero-controls"',
+            'href="full-image-viewer.css?v=20260905-viewport"',
             'src="full-image-viewer.js?v=20260905-viewport"',
         ):
             if "/" in relative and '="../' not in marker:
@@ -150,7 +150,7 @@ def main() -> int:
     for relative in ART_STUDY_PAGES:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for marker in (
-            'href="../full-image-viewer.css?v=20260906-hero-controls"',
+            'href="../full-image-viewer.css?v=20260905-viewport"',
             'src="../full-image-viewer.js?v=20260905-viewport"',
         ):
             if "/" in relative and '="../' not in marker:
@@ -163,16 +163,16 @@ def main() -> int:
         for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
     ]
     viewer_triggers = sum(text.count("data-full-image-viewer") for text in viewer_documents)
-    if viewer_triggers != 36:
-        errors.append(f"same-page full-image viewer must have exactly 36 scoped triggers, found {viewer_triggers}")
+    if viewer_triggers != 23:
+        errors.append(f"same-page full-image viewer must have exactly 23 scoped triggers, found {viewer_triggers}")
     if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:
         errors.append("shared artwork full-size action is not enrolled in the same-page viewer")
     if 'id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in missionary:
         errors.append("Mission full-size action is not enrolled in the same-page viewer")
     if 'fc-visual-hero--history' not in pioneer or 'data-full-image-viewer' not in pioneer:
         errors.append("Pioneer hero must retain its approved full-image action through the same-page viewer")
-    if pioneer.count("data-full-image-viewer") != 12:
-        errors.append("Pioneer page must retain its hero viewer, ten artwork fallbacks, and the detail-dialog full-size action")
+    if pioneer.count("data-full-image-viewer") != 11:
+        errors.append("Pioneer page must retain ten artwork fallbacks, and the detail-dialog full-size action")
 
     # Every image-first page needs a discoverable exact-source hero action.
     hero_pages = 0
@@ -183,16 +183,24 @@ def main() -> int:
         hero_pages += 1
         relative = path.relative_to(ROOT).as_posix()
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
-        if page.count('class="fc-button fc-hero-fullscreen"') != 1:
-            errors.append(f"{relative}: expected one visible hero full-screen pill")
-        for asset in ("full-image-viewer.css?v=20260906-hero-controls", "full-image-viewer.js?v=20260905-viewport"):
+        if 'fc-hero-fullscreen' in page:
+            errors.append(f"{relative}: hero must not display an overlay pill")
+        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", "hero-details.js?v=20260906-hero-study", "hero-details.css?v=20260906-hero-study", "artwork-details.css?v=20260905-viewport"):
             if page.count(prefix + asset) != 1:
-                errors.append(f"{relative}: hero viewer dependency missing or duplicated: {asset}")
-        hero_link = re.search(r'<a[^>]*class="fc-button fc-hero-fullscreen"[^>]*href="([^\"]+)"[^>]*data-full-image-viewer', page)
-        if not hero_link:
-            hero_link = re.search(r'<a class="fc-visual-hero[^>]*href="([^\"]+)"[^>]*data-full-image-viewer', page)
-        if not hero_link or not (path.parent / urlsplit(hero_link.group(1)).path).is_file():
-            errors.append(f"{relative}: hero full-screen action lacks a real local image")
+                errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
+        hero_links = re.findall(r'<a[^>]*data-hero-viewer[^>]*>', page)
+        if len(hero_links) != 1:
+            errors.append(f"{relative}: expected one clickable hero")
+            continue
+        hero_link = hero_links[0]
+        asset = re.search(r'href="([^\"]+)"', hero_link)
+        if not asset or not (path.parent / urlsplit(asset.group(1)).path).is_file():
+            errors.append(f"{relative}: hero study action lacks a real local image")
+        for marker in ('aria-haspopup="dialog"', 'data-full-image-alt=', 'data-hero-ask='):
+            if marker not in hero_link:
+                errors.append(f"{relative}: missing hero study metadata: {marker}")
+        if 'data-full-image-viewer' in hero_link:
+            errors.append(f"{relative}: hero must open study before full-size viewer")
     if hero_pages != 26:
         errors.append(f"expected26 image-first pages including404, found{hero_pages}")
 

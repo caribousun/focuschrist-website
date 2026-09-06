@@ -1,9 +1,9 @@
-# Site-wide hero full-screen action
+# Heroes as part of the study experience
 
-The owner requested a clear way to view every page hero uncropped at full size and delegated the choice between image click and a pill. Every image-first page now has a lower-right View full-screen image pill, using the existing same-page dialog. All26 pages are enrolled, including the twelve answer studies, four art studies and404 page.
+The owner rejected the overlay pill introduced in PR156. Each of the26 hero images is now itself an accessible link opening the shared artwork study layout. There is no visible control over the hero. Existing hero assets, dimensions, cropping, introduction typography and Mission opening fit remain unchanged.
 
-Each control links to its actual hero asset. The Mission link retains its approved image cache key; Ask retains its approved-red key; nested pages use their actual shared Home hero with correct relative paths. Pioneers preserves its existing whole-hero anchor and adds a visible span pill without nesting anchors. Existing full-image-viewer.js handles close, Escape, background click, scroll lock and focus return. New pages load that same script and stylesheet exactly once.
+The study dialogue uses the existing artwork typography, navy palette and pill styling. Each of nine hero scenes has two interpretive paragraphs, an existing official scripture or study source, a related local study, Ask About This Artwork, View Full-Size Image and close controls. Shared Home hero images on nested studies connect back into the relevant page. Scene descriptions are based on visual inspection, and symbolic compositions are identified without inventing historical events.
 
-Hero assets, dimensions, cropping, layout and main introduction typography are unchanged. Pill styling is absolutely positioned, uses the existing pill class and palette, and retains a44px minimum touch target. No new animation or image generation is involved.
+View Full-Size Image opens the existing uncropped viewer above the study dialogue. Closing it returns to the study options. Closing the study returns focus to the hero. Modified clicks retain the image link fallback. Contextual Ask includes an exact same-origin return route that reopens the hero study, so artwork, questions and further reading form one journey.
 
-The source-content ledger update is limited to the reviewed control label and accessible label. Historical, scriptural, doctrinal and study text is unchanged. Independent review and live interaction verification are required for release closure in Focus Current State and Run Log.
+The content ledger preserves prior substantive source reviews while recording removal of the rejected utility labels. The new scene copy and interaction require independent review, source checks and live verification before release closure.
