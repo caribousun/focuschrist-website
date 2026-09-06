@@ -39,7 +39,7 @@ const PIONEER_FOCAL_PHRASES = Object.freeze({
   'fort-laramie': ['fort laramie'], 'independence-rock': ['independence rock'],
   sweetwater: ['sweetwater'], 'south-pass': ['south pass'], 'fort-bridger': ['fort bridger'],
   'echo-canyon': ['echo canyon'], canyon: ['emigration canyon'],
-  'willie-july': ['willie', 'martin', 'liverpool'],
+  'willie-july': ['willie', 'martin'],
   'willie-august': ['willie', 'martin', 'snow'],
   'willie-september': ['willie', 'martin', 'snow'],
   'willie-october': ['rescue', 'willie', 'martin'],

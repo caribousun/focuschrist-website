@@ -24,8 +24,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-06.55';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.55';
+const SOURCE_POLICY_VERSION = '2026-09-06.56';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.56';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -450,11 +450,21 @@ function decodeHtmlEntities(value) {
     .replace(/&apos;|&#39;/gi, "'").replace(/&lt;/gi, '<').replace(/&gt;/gi, '>');
 }
 
-function extractVisibleParagraphs(htmlText) {
-  const clean = String(htmlText || '')
+function extractVisibleParagraphs(htmlText, candidate = null) {
+  const scopedJourney = candidate?.pioneerDisclosure
+    && candidate.url === 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng';
+  let clean = String(htmlText || '')
     .replace(/<!--[\s\S]*?-->/g, ' ')
-    .replace(/<(script|style|nav|header|footer|svg|form|noscript|template|iframe)\b[\s\S]*?(?:<\/\1>|$)/gi, ' ')
+    .replace(/<(script|style|nav|footer|svg|form|noscript|template|iframe)\b[\s\S]*?(?:<\/\1>|$)/gi, ' ')
+    .replace(/<header\b[\s\S]*?(?:<\/header>|$)/gi, match => scopedJourney ? match : ' ')
     .replace(/<((?!(?:area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)\b)[a-z][a-z0-9-]*)\b[^>]*(?:\bhidden\b|\binert\b|aria-hidden\s*=\s*["']?true|style\s*=\s*(?:"[^"]*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^"]*"|'[^']*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^']*'|[^\s>]*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^\s>]*))[^>]*>[\s\S]*?(?:<\/\1>|$)/gi, ' ');
+  if (scopedJourney) {
+    // Scope this chapter's fixed 1847 landmarks after visibility filtering.
+    // Earlier sections describe different companies in 1846.
+    const journey = /<h2\b[^>]*>\s*Journey of the Pioneer Company\s*<\/h2>([\s\S]*?)<h2\b[^>]*>\s*Establishing a Settlement in the Valley\s*<\/h2>/i.exec(clean);
+    if (!journey) return [];
+    clean = journey[1];
+  }
   const paragraphs = [];
   const seen = new Set();
   let retainedCharacters = 0;
@@ -484,9 +494,14 @@ function explicitHistoryYears(candidate, question) {
 }
 
 function eligibleSourceParagraphs(paragraphs, candidate) {
-  return (Array.isArray(paragraphs) ? paragraphs : []).filter(text => !(candidate?.pioneerDisclosure
-    && candidate.url === 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng'
-    && /Chimney Rock.{0,50}landmark in Wyoming/i.test(text)));
+  return (Array.isArray(paragraphs) ? paragraphs : []).filter(text => {
+    if (!candidate?.pioneerDisclosure) return true;
+    if (candidate.url === 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng'
+      && /Chimney Rock.{0,50}landmark in Wyoming/i.test(text)) return false;
+    if (candidate.url === 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-eight?lang=eng'
+      && /more people died.{0,100}any other immigrant group in the United States/i.test(text)) return false;
+    return true;
+  });
 }
 
 function pioneerParagraphScore(paragraphs, position, candidate) {
@@ -509,7 +524,8 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
     const topicScore = pioneerParagraphScore(sourceParagraphs, position, candidate) + (pinnedIrrigation ? 240 : 0) + (pinnedSettlement ? 40 : 0);
     return { text, position, overlap, topicScore, score: (historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 400 : 0) + topicScore + overlap * 20 + Math.min(10, text.length / 180) };
-  }).filter((item) => item.overlap > 0 || item.topicScore > 0)
+  }).filter((item) => candidate?.pioneerDisclosure && candidate.focalPhrases?.length
+    ? item.topicScore > 0 : item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
     .slice(0, candidate && (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true) ? sourceParagraphs.length : 2);
   if (candidate && (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true)) {
@@ -620,7 +636,9 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
     const historyLeadScore = candidate && candidate.deterministicHistoryTopic === true && !historyYears.length && position < 2 ? 1200 : 0;
     const historyYearScore = historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 2400 : 0;
     return { text, position, score: (originalAnchors.includes(position) || position === metaphorPosition ? 2400 : 0) + historyYearScore + historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
-  }).sort((left, right) => right.score - left.score)
+  }).filter(item => !candidate?.pioneerDisclosure || !candidate.focalPhrases?.length
+    || pioneerParagraphScore(paragraphs, item.position, candidate) > 0)
+    .sort((left, right) => right.score - left.score)
     .filter((item) => {
       if (size + item.text.length > 4200) return false;
       size += item.text.length;
@@ -715,7 +733,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
     if (!response.ok || response.status >= 300) return null;
     const contentType = String(response.headers.get('content-type') || '').toLowerCase();
     if (!contentType.includes('text/html')) return null;
-    const paragraphs = extractVisibleParagraphs(await readBoundedText(response, OFFICIAL_HTML_BYTE_LIMIT));
+    const paragraphs = extractVisibleParagraphs(await readBoundedText(response, OFFICIAL_HTML_BYTE_LIMIT), candidate);
     const content = relevantParagraphText(paragraphs, question, candidate);
     if (!content || !evidenceAdmissionSufficient(candidate, content, question)) return null;
     if (cache && cacheKey) {
@@ -2098,6 +2116,9 @@ export default {
           : retrievalDiagnostic.focuschrist_deterministic_history_topic === true
             ? 'The visitor explicitly named, or the bounded conversation context resolved to, an indexed Church History topic. EVIDENCE contains that exact official Church History topic and no competing research source. If its excerpt directly describes the requested identity, role, event, date, purpose, or historical setting, compose the supported answer from it and approve it. For a faith or Church-history answer, aim for 100 to 170 words and at least four complete sentences so the response clears the publication-depth floor with margin.'
             : 'Evaluate the supplied official evidence normally under the source-integrity contract.',
+        sanitized.scope.pioneerTopicKey
+          ? 'This is a fixed historical timeline entry. Describe only causal links explicitly stated in the evidence: chronology or paragraph proximity does not establish cause. Do not infer motives, feelings, sounds, or present-day conditions. Do not invent journals, quotations, later accounts, or source descriptions. Keep dates and companies distinct, and do not move an event to the requested year simply because that year appears in the question. Omit unbounded comparisons. Attribute remembered experiences to the named narrator. Write a connected historical explanation without Context or Source fact labels and without repeating the same facts in a second summary.'
+          : '',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `QUESTION:\n${sanitized.scope.question}`,
