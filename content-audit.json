@@ -591,9 +591,9 @@
     {
       "path": "art.html",
       "status": "verified",
-      "published_text_sha256": "3c5cc4ef32b0febafe0b63b06286d0f957c362765b9a8eec1bd8cd03ec3ddddd",
+      "published_text_sha256": "6c275e7bc78748fac2be17bcd85a5a6b39ed75b84824e91d25d44748395edbe3",
       "reviewed_on": "2026-09-06",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Final Art introduction independently checked against remaining Resurrection resource.",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Final Art introduction independently checked against remaining Resurrection resource. Existing gallery instruction moved verbatim from dynamic insertion into the opening introduction so its full height is included; no new substantive claim.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
