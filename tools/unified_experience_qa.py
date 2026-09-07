@@ -261,7 +261,7 @@ def main() -> int:
         "openingAligned",
         "nextSectionHidden",
         "result.overflow||!result.heroClear||!result.openingVisible||!result.openingAligned||!result.nextSectionHidden||!result.actionsVisible||!result.heroRatioFit||!result.headerHeightFit||!result.approvedHeroFit",
-        "report.dataset.pass=failures.length?'false':'true'",
+        "report.dataset.pass=String(!auditError&&results.length===expected&&failures.length===0)",
     ):
         if marker not in layout_review_js:
             fail(errors, f"tools/layout-review.js missing enforceable responsive audit marker: {marker}")
