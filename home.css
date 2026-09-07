@@ -44,9 +44,35 @@
     margin-top: clamp(34px, 5vw, 52px);
 }
 
-/* Give the signature D&C 6:36 invitation a deliberate visual break before its buttons. */
+/* Keep study copy, supporting details, and action pills visually distinct. */
+.fc-cfm-home .fc-page-intro-copy {
+    margin-bottom: 0;
+}
+
+.fc-cfm-home__highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.fc-cfm-home__highlights span {
+    padding: 8px 13px;
+    border: 1px solid rgba(240, 195, 106, .38);
+    border-radius: 999px;
+    background: rgba(134, 175, 200, .08);
+    color: #e4edf0;
+    font-size: .82rem;
+    font-weight: 700;
+}
+
+.fc-section[aria-labelledby="cfm-home"] .fc-actions {
+    margin-top: 22px;
+}
+
 .fc-section[aria-labelledby="look-unto-me-home"] .fc-actions {
-    margin-top: clamp(30px, 3vw, 40px);
+    margin-top: 22px;
 }
 
 @media (max-width: 900px) {
@@ -63,8 +89,19 @@
         object-position: center;
     }
 
+    .fc-section[aria-labelledby="cfm-home"] .fc-actions,
     .fc-section[aria-labelledby="look-unto-me-home"] .fc-actions {
-        margin-top: 28px;
+        margin-top: 18px;
+    }
+
+    .fc-cfm-home__highlights {
+        display: grid;
+        gap: 8px;
+        margin-top: 18px;
+    }
+
+    .fc-cfm-home__highlights span {
+        text-align: center;
     }
 }
 
