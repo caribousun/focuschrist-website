@@ -145,7 +145,7 @@ def main() -> int:
             fail(errors, "site-system.css missing the shared approved Home/Answer hero rule")
         else:
             for marker in (
-                "assets/heroes/home-christ-fully-approved.png",
+                "assets/heroes/home-christ-signature-approved-20260907.png",
                 "background-size: 100% auto",
                 "background-position: center",
                 "background-repeat: no-repeat",
@@ -182,12 +182,18 @@ def main() -> int:
             if marker not in css:
                 fail(errors, f"site-system.css missing approved hero geometry marker: {marker}")
 
-    approved_hero_path = ROOT / "assets/heroes/home-christ-fully-approved.png"
-    approved_hero_sha = "823e46fe509f71f3d8dfc9dd277e50223e55e6c53e2af9af5d8c55b9c0a45384"
+    approved_hero_path = ROOT / "assets/heroes/home-christ-signature-approved-20260907.png"
+    approved_hero_sha = "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
     if not approved_hero_path.exists():
         fail(errors, "approved Home/Answer hero asset is missing")
     elif hashlib.sha256(approved_hero_path.read_bytes()).hexdigest() != approved_hero_sha:
         fail(errors, "approved Home/Answer hero asset bytes changed")
+    elif approved_hero_path.read_bytes()[16:24] != (2048).to_bytes(4, "big") + (684).to_bytes(4, "big"):
+        fail(errors, "approved Home/Answer hero must retain its exact 2048 by 684 dimensions")
+
+    original_hero_path = ROOT / "assets/heroes/home-christ-fully-approved.png"
+    if not original_hero_path.exists() or hashlib.sha256(original_hero_path.read_bytes()).hexdigest() != "823e46fe509f71f3d8dfc9dd277e50223e55e6c53e2af9af5d8c55b9c0a45384":
+        fail(errors, "original approved hero must remain unchanged for recovery")
 
     approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
     if len(approved_answer_pages) != 13:
@@ -197,7 +203,7 @@ def main() -> int:
     for relative in approved_hero_pages:
         page_text = (ROOT / relative).read_text(encoding="utf-8")
         expected_class = "fc-home-hero" if relative == "index.html" else "fc-answer-detail-hero"
-        expected_href = "assets/heroes/home-christ-fully-approved.png" if relative == "index.html" else "../assets/heroes/home-christ-fully-approved.png"
+        expected_href = "assets/heroes/home-christ-signature-approved-20260907.png" if relative == "index.html" else "../assets/heroes/home-christ-signature-approved-20260907.png"
         hero_pattern = re.compile(
             r'<a\b(?=[^>]*\bclass="[^"]*\b' + re.escape(expected_class) +
             r'\b[^"]*")(?=[^>]*\bhref="' + re.escape(expected_href) + r'")[^>]*>',
@@ -210,12 +216,12 @@ def main() -> int:
             fail(errors, f"{relative}: site-system cache revision missing")
         else:
             approved_cache_versions.add(cache_match.group(1))
-    if approved_cache_versions != {"20260907-below-hero-uniform"}:
+    if approved_cache_versions != {"20260907-approved-signature"}:
         fail(errors, f"approved hero pages have inconsistent site-system cache revisions: {sorted(approved_cache_versions)}")
 
     for relative in PUBLIC_PAGES:
         public_text = (ROOT / relative).read_text(encoding="utf-8")
-        if 'site-system.css?v=20260907-below-hero-uniform' not in public_text:
+        if 'site-system.css?v=20260907-approved-signature' not in public_text:
             fail(errors, f"{relative}: shared hero/menu cache revision is not globally locked")
 
     for relative in PUBLIC_PAGES:
