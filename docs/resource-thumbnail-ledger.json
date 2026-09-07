@@ -856,19 +856,19 @@
       "description": "Walk the historic setting with missionaries, then compare the surviving First Vision accounts."
     },
     {
-      "key": "home-abide-with-me",
-      "url": "https://www.churchofjesuschrist.org/media/video/2014-01-0001-abide-with-me?lang=eng",
-      "title": "Abide with Me",
-      "thumbnail": "https://www.churchofjesuschrist.org/imgs/4aca5e67de79dadb82a58c01c075abf20d6e6b8a/full/1200,630/0/default",
-      "local_thumbnail": "assets/resources/home-abide-with-me.jpg",
+      "key": "home-peace-in-christ",
+      "url": "https://www.churchofjesuschrist.org/media/video/2018-01-0010-peace-in-christ?lang=eng",
+      "title": "Peace in Christ",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/d6eca6530ca7abe61012f66f26f3df821800c770/full/1200,630/0/default",
+      "local_thumbnail": "assets/resources/home-peace-in-christ.jpg",
       "width": 1200,
       "height": 630,
-      "sha256": "3d0fb028b909c7bfcc48d1f76477ca454edeae4e65dca53ef2ec3b3160d5f641",
+      "sha256": "195d1264b3e0c8d6f9970db252b3d395bf1ed9a8252a2b0349fae8fd6091a499",
       "status": 200,
       "thumbnail_status": 200,
       "verified_date": "2026-09-07",
-      "kind": "Church video",
-      "description": "Turn toward God in prayer and seek the Savior’s comfort amid change and uncertainty."
+      "kind": "Church music video",
+      "description": "When the world feels unsettled, turn toward the Savior and remember that lasting peace is found in Him."
     },
     {
       "key": "mission-what-missionaries-do",
