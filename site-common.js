@@ -125,6 +125,7 @@
     function relativeWatchHref() { return relativeRootHref('watch.html'); }
     function relativeHistoryHref() { return relativeRootHref('church-history.html'); }
     function relativeMissionaryHref() { return relativeRootHref('missionary.html'); }
+    function relativeComeFollowMeHref() { return relativeRootHref('come-follow-me.html'); }
     function relativeAssetHref(name) { return relativeRootHref(name); }
 
     function onWatchPage() {
@@ -137,6 +138,22 @@
 
     function onMissionaryPage() {
         return window.location.pathname.toLowerCase().endsWith('/missionary.html');
+    }
+
+    function onComeFollowMePage() {
+        return window.location.pathname.toLowerCase().endsWith('/come-follow-me.html');
+    }
+
+    function createComeFollowMeLink(text) {
+        const link = document.createElement('a');
+        link.href = relativeComeFollowMeHref();
+        link.textContent = text;
+        link.setAttribute('data-focuschrist-come-follow-me', 'true');
+        if (onComeFollowMePage()) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
+        return link;
     }
 
     function createWatchLink(text) {
@@ -215,6 +232,16 @@
         }
 
         const menu = document.getElementById('hamburgerMenu');
+        if (menu && !menu.querySelector('[data-focuschrist-come-follow-me]')) {
+            const comeFollowMe = createComeFollowMeLink('COME, FOLLOW ME');
+            const answers = Array.from(menu.querySelectorAll('a')).find(function (link) {
+                return link.textContent.trim().toUpperCase() === 'ANSWERS';
+            });
+            const divider = menu.querySelector('hr');
+            if (answers) answers.insertAdjacentElement('afterend', comeFollowMe);
+            else if (divider) menu.insertBefore(comeFollowMe, divider);
+            else menu.appendChild(comeFollowMe);
+        }
         if (menu && !menu.querySelector('[data-focuschrist-conference-shortcut]')) {
             const conference = createConferenceLink('GENERAL CONFERENCE');
             const answers = Array.from(menu.querySelectorAll('a')).find(function (link) {
