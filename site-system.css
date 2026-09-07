@@ -998,3 +998,91 @@ body.fc-site .fc-visual-hero {
         line-height: 1.15;
     }
 }
+
+/* Shared presentation beneath the artwork. No hero or navigation selectors. */
+body.fc-site:not(.fc-not-found) .fc-page-intro {
+    padding-bottom: 24px;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard {
+    width: calc(100% - clamp(32px, 4vw, 80px));
+    max-width: none;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > * {
+    flex-shrink: 0;
+    min-width: 0;
+    max-width: 100%;
+    margin-block: 0;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-eyebrow {
+    width: 100%;
+    line-height: 1.25;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-display,
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-page-intro-copy {
+    width: 100%;
+    max-width: none;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-page-intro-copy {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-wrap: pretty;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-art-study-hint {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    font-size: .875rem;
+    line-height: 1.4;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-actions {
+    margin-top: auto;
+    padding-top: 4px;
+    gap: 12px;
+    justify-content: center;
+    align-items: stretch;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-button {
+    min-height: 44px;
+    padding: 10px 22px;
+    font-size: 1rem;
+    line-height: 1.25;
+    box-sizing: border-box;
+    overflow-wrap: anywhere;
+}
+@media (min-width:1021px) {
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard,
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-actions),
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-page-intro-scripture),
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-art-study-hint) {
+        gap: clamp(4px, calc((100dvh - 52px - 33.3984375vw - 230px) * .1), 18px);
+    }
+    body.fc-site:not(.fc-not-found) .fc-page-intro .fc-display {
+        font-size: clamp(2rem, min(3.7dvh, calc((100dvh - 52px - 33.3984375vw) * .13)), 2.95rem);
+        line-height: 1.12;
+    }
+}
+@media (max-width:1020px) {
+    body.fc-site:not(.fc-not-found) .fc-page-intro { align-items: stretch; }
+    body.fc-site:not(.fc-not-found) .fc-page-intro .fc-display {
+        font-size: clamp(1.8rem, 4.2vw, 2.6rem);
+        line-height: 1.15;
+    }
+}
+
+@media (max-width:700px) {
+    body.fc-site:not(.fc-not-found) .fc-page-intro .fc-actions {
+        width: 100%;
+    }
+    body.fc-site:not(.fc-not-found) .fc-page-intro .fc-actions .fc-button {
+        width: auto;
+        flex: 0 1 auto;
+        padding-inline: 16px;
+    }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "focuschrist-static-site",
+  "private": true,
+  "scripts": { "dev": "node tools/preview-server.mjs" }
+}

@@ -210,12 +210,12 @@ def main() -> int:
             fail(errors, f"{relative}: site-system cache revision missing")
         else:
             approved_cache_versions.add(cache_match.group(1))
-    if approved_cache_versions != {"20260907-opening-anchor-v2"}:
+    if approved_cache_versions != {"20260907-below-hero-uniform"}:
         fail(errors, f"approved hero pages have inconsistent site-system cache revisions: {sorted(approved_cache_versions)}")
 
     for relative in PUBLIC_PAGES:
         public_text = (ROOT / relative).read_text(encoding="utf-8")
-        if 'site-system.css?v=20260907-opening-anchor-v2' not in public_text:
+        if 'site-system.css?v=20260907-below-hero-uniform' not in public_text:
             fail(errors, f"{relative}: shared hero/menu cache revision is not globally locked")
 
     for relative in PUBLIC_PAGES:
@@ -261,7 +261,7 @@ def main() -> int:
         "openingAligned",
         "nextSectionHidden",
         "result.overflow||!result.heroClear||!result.openingVisible||!result.openingAligned||!result.nextSectionHidden||!result.actionsVisible||!result.heroRatioFit||!result.headerHeightFit||!result.approvedHeroFit",
-        "report.dataset.pass=failures.length?'false':'true'",
+        "report.dataset.pass=String(!auditError&&results.length===expected&&failures.length===0)",
     ):
         if marker not in layout_review_js:
             fail(errors, f"tools/layout-review.js missing enforceable responsive audit marker: {marker}")
