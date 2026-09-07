@@ -1099,3 +1099,29 @@ body.fc-site:not(.fc-not-found) .fc-page-intro .fc-button {
         text-align: center;
     }
 }
+
+
+/* Subtle opening invitation on pages whose next study begins below the fold. */
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-scroll-cue {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: clamp(20px, 3dvh, 34px);
+    color: var(--fc-gold-light);
+    font-size: .73rem;
+    font-weight: 700;
+    letter-spacing: .16em;
+    line-height: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: .9;
+    transition: color .18s ease, transform .18s ease, opacity .18s ease;
+}
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-scroll-cue span:last-child { font-size: 1.1rem; line-height: .7; }
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-scroll-cue:hover,
+body.fc-site:not(.fc-not-found) .fc-page-intro .fc-scroll-cue:focus-visible {
+    color: var(--fc-cream);
+    opacity: 1;
+    transform: translateY(2px);
+}
