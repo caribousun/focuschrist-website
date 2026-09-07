@@ -9,11 +9,9 @@
     christ: {
       watch: {
         kicker: 'Watch',
-        title: 'Because of Him',
-        copy: 'Continue with an official Church video centered on the Savior, His Resurrection, and the hope made possible because of Him.',
-        href: 'https://www.churchofjesuschrist.org/media/video/2020-02-4100-because-of-him-easter-video?lang=eng',
-        thumb: 'https://www.churchofjesuschrist.org/imgs/3a960a019d9f6bb9a0abc1d6dba875c8d0aa13bf/full/!768,/0/default',
-        external: true
+        title: 'Jesus Christ Video Collection',
+        copy: 'Return to the Savior-centered collection above and choose the message that fits your study.',
+        href: '#life-of-christ'
       },
       study: {
         kicker: 'Study',
@@ -31,11 +29,9 @@
     prayer: {
       watch: {
         kicker: 'Watch',
-        title: 'Hear Him',
-        copy: 'Listen to the words and teachings of Jesus Christ and consider what it means to hear Him in your own discipleship.',
-        href: 'https://www.churchofjesuschrist.org/study/video/easter-videos/2020-02-4000-this-easter-hearhim-jesus-christs-words-are-for-you-1080p?lang=eng',
-        thumb: 'https://www.churchofjesuschrist.org/imgs/46BE164CBF18B911A146DA4838DC630D7FEBDD47/full/!768,/0/default',
-        external: true
+        title: 'Prayer and Revelation Videos',
+        copy: 'Return to the prayer and revelation collection and choose a message for the question you carry.',
+        href: '#prayer-and-revelation'
       },
       study: {
         kicker: 'Study',
@@ -53,11 +49,9 @@
     book: {
       watch: {
         kicker: 'Watch',
-        title: 'Jesus Christ Appears in the Ancient Americas',
-        copy: 'Watch the resurrected Savior appear to the people in the Book of Mormon, then continue into the scriptural witness of Jesus Christ.',
-        href: 'https://www.churchofjesuschrist.org/media/video/2022-07-0100-jesus-christ-appears-in-the-ancient-americas-3-nephi-8-11?lang=eng',
-        thumb: 'https://www.churchofjesuschrist.org/imgs/18da2703093511ed8ad5eeeeac1ea1e004d5c967/full/!768,/0/default',
-        external: true
+        title: 'Book of Mormon Video Collection',
+        copy: 'Return to the Book of Mormon collection and choose a scripture witness to watch and study.',
+        href: '#book-of-mormon'
       },
       study: {
         kicker: 'Study',
@@ -75,11 +69,9 @@
     temples: {
       watch: {
         kicker: 'Watch',
-        title: 'Welcome to the House of the Lord',
-        copy: 'Watch an official introduction to the Christ-centered purpose of temples and the covenants made in these sacred spaces.',
-        href: 'https://www.churchofjesuschrist.org/media/video/2023-10-0060-welcome-to-the-temple-video-president-nelson-elder-and-sister-christofferson?lang=eng',
-        thumb: 'https://www.churchofjesuschrist.org/imgs/fbeeffd36f5d11eea80aeeeeac1e2a5eec857672/full/!768,/0/default',
-        external: true
+        title: 'Temple and Family Video Collection',
+        copy: 'Return to the temple and family collection and choose the message that best serves your study.',
+        href: '#temples-and-family'
       },
       study: {
         kicker: 'Study',

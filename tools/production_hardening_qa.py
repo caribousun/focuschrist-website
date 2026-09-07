@@ -398,12 +398,12 @@ def main() -> int:
     watch_css = read("watch-experience.css", errors)
     watch_enrichment = read("watch-study-enrichment.js", errors)
     require(watch_js, "watch-experience.js", (
-        "3a960a019d9f6bb9a0abc1d6dba875c8d0aa13bf",
-        "46BE164CBF18B911A146DA4838DC630D7FEBDD47",
-        "18da2703093511ed8ad5eeeeac1ea1e004d5c967",
-        "fbeeffd36f5d11eea80aeeeeac1e2a5eec857672",
-        "Jesus Christ Appears in the Ancient Americas",
-        "Welcome to the House of the Lord",
+        "Jesus Christ Video Collection",
+        "Prayer and Revelation Videos",
+        "Book of Mormon Video Collection",
+        "Temple and Family Video Collection",
+        "href: '#life-of-christ'",
+        "href: '#book-of-mormon'",
         "--watch-path-thumb",
         "data-watch-thumbnail-ready",
     ), errors)

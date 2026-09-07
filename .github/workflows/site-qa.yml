@@ -49,6 +49,7 @@ jobs:
         run: |
           python tools/answer_study_qa.py
           python tools/answer_video_uniqueness_qa.py
+          python tools/global_video_uniqueness_qa.py
 
       - name: Verify scripture reader sources and interactions
         run: |

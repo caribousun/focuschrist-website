@@ -1,37 +1,37 @@
 {
   "index.html": [
-    "look-event",
+    "home-abide-with-me",
     "rejoice"
   ],
   "ask.html": [
-    "hear",
-    "pillars"
+    "ask-god-wants-prayer",
+    "ask-prayer-changed-life"
   ],
   "answers.html": [
-    "look-worldwide",
-    "compassion"
-  ],
-  "art.html": [
-    "resurrected"
-  ],
-  "missionary.html": [
-    "sharing",
-    "samaritan"
-  ],
-  "church-history.html": [
-    "harmony",
-    "vision"
-  ],
-  "pioneers.html": [
-    "pioneers"
-  ],
-  "about.html": [
-    "because",
-    "sharing"
+    "answers-embrace-faith",
+    "answers-hope-healing"
   ],
   "watch.html": [
     "look-event",
     "look-worldwide"
+  ],
+  "art.html": [
+    "art-lively-resurrection-hope"
+  ],
+  "missionary.html": [
+    "mission-what-missionaries-do",
+    "mission-sharing-heart"
+  ],
+  "church-history.html": [
+    "harmony",
+    "history-sacred-grove"
+  ],
+  "pioneers.html": [
+    "pioneers-modern-courage"
+  ],
+  "about.html": [
+    "about-resurrection-hope",
+    "about-love-essence"
   ],
   "answers/jesus-christ-latter-day-saint-beliefs.html": [
     "unique-finding-faith",
@@ -61,6 +61,20 @@
     "unique-prayer-supernal",
     "unique-prayer-framework"
   ],
+  "answers/look-unto-me-doctrine-and-covenants-6-36.html": [
+    "dc636-faith-mountains",
+    "seminary",
+    "doubt",
+    "unique-flagship-love",
+    "cfm-rejoice",
+    "cfm-philippians",
+    "nephi-visual",
+    "rejoice",
+    "strength",
+    "unique-flagship-look",
+    "youth",
+    "look-christ"
+  ],
   "answers/why-families-are-important.html": [
     "eternal-families",
     "fathers"
@@ -74,20 +88,20 @@
     "unique-trials-mountains"
   ],
   "art-study/the-living-christ.html": [
-    "resurrected",
-    "because"
+    "living-powerful-testimony",
+    "living-he-is-risen-2025"
   ],
   "art-study/the-good-shepherd.html": [
-    "compassion",
+    "shepherd-abiding-compassion",
     "good-shepherd"
   ],
   "art-study/suffer-the-little-children.html": [
-    "angels",
-    "song"
+    "children-lords-love",
+    "children-heartfelt-prayer"
   ],
   "art-study/be-still.html": [
-    "hear",
-    "light"
+    "still-principles-prayer",
+    "still-personal-peace"
   ],
   "answers/death-of-a-child.html": [
     "because-i-live",
@@ -96,19 +110,5 @@
   "answers/divorce-and-faith.html": [
     "divorce",
     "healing-wings"
-  ],
-  "answers/look-unto-me-doctrine-and-covenants-6-36.html": [
-    "harmony",
-    "seminary",
-    "doubt",
-    "unique-flagship-love",
-    "cfm-rejoice",
-    "cfm-philippians",
-    "nephi-visual",
-    "rejoice",
-    "strength",
-    "unique-flagship-look",
-    "youth",
-    "look-christ"
   ]
 }
