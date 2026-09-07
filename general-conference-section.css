@@ -17,8 +17,9 @@ body.fc-site .fc-conference-sessions a,body.fc-site .fc-conference-sessions a:vi
 .fc-talk-list li{padding:.62rem .2rem .68rem .15rem;margin:0;line-height:1.45;border-bottom:1px solid rgba(255,255,255,.09)}
 .fc-talk-list li:last-child{border-bottom:0}
 .fc-talk-list li::marker{color:#d8b96f;font-weight:700;font-variant-numeric:tabular-nums}
+.fc-talk-speaker{display:block;margin-top:.18rem;color:#c9b47e;font-size:.78rem;font-weight:500;letter-spacing:.025em;line-height:1.35}
 body.fc-site .fc-conference-sessions a,body.fc-site .fc-conference-sessions a:visited{color:#fff4d4;font-weight:600;text-decoration:none}
 body.fc-site .fc-conference-sessions a:hover{color:#f0c36a;background:transparent;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.24em}
 body.fc-site .fc-conference-sessions a:focus-visible{color:#fff;background:rgba(233,199,120,.13);outline:3px solid #e9c778;outline-offset:3px;border-radius:3px}
 @media(max-width:900px){.fc-theme-grid,.fc-voice-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fc-next-conference{grid-template-columns:1fr}.fc-conference-sessions{grid-template-columns:1fr}}
-@media(max-width:620px){.fc-theme-grid,.fc-voice-grid{grid-template-columns:1fr}.fc-conference-section{padding-inline:1rem}.fc-next-conference{padding:1.25rem}.fc-conference-actions .fc-button{width:100%;text-align:center}.fc-conference-sessions summary{padding:1rem;font-size:1rem}.fc-conference-sessions summary:before{flex-basis:2rem;width:2rem;height:2rem}.fc-talk-list{padding:.65rem 1rem .85rem 3.2rem}.fc-talk-list li{padding:.58rem .1rem .62rem;line-height:1.42}}
+@media(max-width:620px){.fc-theme-grid,.fc-voice-grid{grid-template-columns:1fr}.fc-conference-section{padding-inline:1rem}.fc-next-conference{padding:1.25rem}.fc-conference-actions .fc-button{width:100%;text-align:center}.fc-conference-sessions summary{padding:1rem;font-size:1rem}.fc-conference-sessions summary:before{flex-basis:2rem;width:2rem;height:2rem}.fc-talk-list{padding:.65rem 1rem .85rem 3.2rem}.fc-talk-list li{padding:.58rem .1rem .62rem;line-height:1.42}.fc-talk-speaker{font-size:.76rem;margin-top:.15rem}}
