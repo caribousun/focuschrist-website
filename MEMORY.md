@@ -504,3 +504,10 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - Review Home, Ask, Answers, Art, Mission, Church History, Pioneers, Watch, and About individually at representative desktop sizes and preserve mobile safety.
 - The full reusable continuation prompt and active release status are recorded in `memory/2026-09-07.md`.
 - Home is the positional master for the gold opening statement. Every top-level page must align its gold statement to Home on the same vertical position and centered horizontal axis; subsequent elements flow downward. Never center the entire group independently by content height.
+
+### focusChrist mobile opening-panel lock
+
+- Production PR 206 / dc3814f20fbf78266e32abee555d7f0bf7c973b2 removes excessive opening-panel space only at widths up to 700px across all public pages. Above 700px, the approved tablet and desktop layout is locked.
+- Mobile opening panels follow their content. Do not restore a remaining-viewport or 100dvh minimum height that pushes actions below a blank band.
+- The Answers library and every individual Answer page use exactly one Continue/down arrow beneath the hero and no repeated body controls. About’s existing Continue control remains unchanged.
+- Preserve the 360x800 and 390x844 all-page checks for content containment, inter-element gaps, trailing space, horizontal overflow, hero framing and action visibility.
