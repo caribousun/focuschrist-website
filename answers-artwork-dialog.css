@@ -1,0 +1,126 @@
+/* Only the Answers library's supporting-artwork popup uses these rules. */
+#artworkDetailDialog {
+    height: min(820px, calc(100dvh - 36px));
+    max-height: calc(100dvh - 36px);
+    overflow: hidden;
+}
+
+#artworkDetailDialog .fc-artwork-detail-shell {
+    height: 100%;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+}
+
+#artworkDetailDialog .fc-artwork-detail-media {
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+}
+
+#artworkDetailDialog .fc-artwork-detail-media img {
+    height: 100%;
+    max-height: 100%;
+    min-height: 0;
+    object-fit: contain;
+    object-position: center;
+}
+
+#artworkDetailDialog .fc-artwork-detail-body {
+    display: grid;
+    grid-template-rows: auto auto minmax(0, 1fr) auto;
+    align-content: start;
+    min-height: 0;
+    padding: 58px clamp(22px, 3vw, 38px) 24px;
+}
+
+#artworkDetailDialog .fc-artwork-detail-body h2 {
+    font-size: clamp(1.75rem, 2.7vw, 2.35rem);
+}
+
+#artworkDetailDialog .fc-artwork-detail-copy {
+    min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-gutter: stable;
+    padding-right: 8px;
+}
+
+#artworkDetailDialog .fc-artwork-detail-copy:focus-visible {
+    outline: 2px solid var(--fc-gold-light, #f0c36a);
+    outline-offset: 3px;
+}
+
+#artworkDetailDialog .fc-artwork-detail-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#artworkDetailDialog .fc-artwork-detail-actions > :is(a, button) {
+    grid-column: auto;
+    justify-self: stretch;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    min-height: 60px;
+    margin: 0;
+    padding: 10px 12px;
+    line-height: 1.35;
+}
+
+@media (max-width: 820px) {
+    #artworkDetailDialog {
+        width: calc(100vw - 24px);
+        height: calc(100dvh - 24px);
+        max-height: calc(100dvh - 24px);
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-shell {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: min(25dvh, 200px) minmax(0, 1fr);
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-media {
+        max-height: none;
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-body {
+        padding: 20px 20px 18px;
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-body h2 {
+        font-size: clamp(1.5rem, 4vw, 1.85rem);
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-actions {
+        margin-top: 16px;
+    }
+}
+
+/* Very short windows retain natural scrolling rather than clipping content. */
+@media (max-height: 600px) {
+    #artworkDetailDialog {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-shell {
+        height: auto;
+        grid-template-rows: auto;
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-body {
+        display: block;
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-copy {
+        overflow: visible;
+    }
+
+    #artworkDetailDialog .fc-artwork-detail-media {
+        height: min(32dvh, 240px);
+        align-self: start;
+    }
+}
