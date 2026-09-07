@@ -830,6 +830,7 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom: 5px; }
     body.fc-site .fc-page-intro .fc-actions { margin-top: 8px; }
     body.fc-site .fc-page-intro .fc-button { padding-block: 9px; }
+    body.fc-site:not(.fc-not-found) .fc-page-intro { align-items: stretch; }
 
     /* Use the opening panel's existing vertical room as intentional rhythm.
        The panel and hero geometry stay locked; only space between its words
