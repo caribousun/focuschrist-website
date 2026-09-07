@@ -5,6 +5,16 @@
 (function () {
     'use strict';
 
+    // Preserve existing conference bookmarks after moving the study into its own page.
+    const conferenceLegacyAnchors = ['#general-conference', '#general-conference-title', '#conference-topics', '#conference-messages', '#conference-practice', '#conference-voices', '#conference-pathways'];
+    function forwardLegacyConferenceBookmark() {
+        if (!window.location.pathname.toLowerCase().endsWith('/answers.html') || !conferenceLegacyAnchors.includes(window.location.hash)) return;
+        const fragment = ['#general-conference', '#general-conference-title'].includes(window.location.hash) ? '' : window.location.hash;
+        window.location.replace('general-conference.html' + window.location.search + fragment);
+    }
+    forwardLegacyConferenceBookmark();
+    window.addEventListener('hashchange', forwardLegacyConferenceBookmark);
+
     const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
     const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
 
@@ -194,9 +204,13 @@
 
     function createConferenceLink(text) {
         const link = document.createElement('a');
-        link.href = relativeRootHref('answers.html') + '#general-conference';
+        link.href = relativeRootHref('general-conference.html');
         link.textContent = text;
         link.setAttribute('data-focuschrist-conference-shortcut', 'true');
+        if (window.location.pathname.toLowerCase().endsWith('/general-conference.html')) {
+            link.classList.add('active');
+            link.setAttribute('aria-current', 'page');
+        }
         return link;
     }
 
@@ -329,11 +343,10 @@
                 window.toggleMenu();
             }
         });
-        menu.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                menu.classList.remove('show');
-                syncExpanded();
-            });
+        menu.addEventListener('click', function (event) {
+            if (!event.target.closest('a')) return;
+            menu.classList.remove('show');
+            syncExpanded();
         });
         document.addEventListener('click', function (event) {
             if (!menu.classList.contains('show')) return;
@@ -355,7 +368,81 @@
     function ensureConferenceTopicShortcut() {
         const topics = document.querySelector('.fc-answers-jump-links');
         if (!topics || topics.querySelector('[data-focuschrist-conference-shortcut]')) return;
+        const existing = Array.from(topics.querySelectorAll('a')).find(link => link.getAttribute('href') === 'general-conference.html');
+        if (existing) {
+            existing.setAttribute('data-focuschrist-conference-shortcut', 'true');
+            return;
+        }
         topics.appendChild(createConferenceLink('General Conference'));
+    }
+
+    function currentStudyTopic(pathname, hash) {
+        const path = pathname.toLowerCase();
+        const topics = {
+            'jesus-christ-latter-day-saint-beliefs.html': 'Jesus Christ',
+            'are-latter-day-saints-christian.html': 'Christian Identity',
+            'what-is-the-book-of-mormon.html': 'Book of Mormon',
+            'bible-and-book-of-mormon-together.html': 'Bible & Book of Mormon',
+            'why-latter-day-saints-build-temples.html': 'Temples',
+            'who-was-joseph-smith.html': 'Joseph Smith',
+            'prayer-and-personal-revelation.html': 'Prayer & Revelation',
+            'why-families-are-important.html': 'Families',
+            'what-is-eternal-marriage.html': 'Eternal Marriage',
+            'what-happens-after-death.html': 'Life After Death',
+            'faith-in-jesus-christ-during-trials.html': 'Faith in Trials',
+            'death-of-a-child.html': 'Death of a Child',
+            'divorce-and-faith.html': 'Divorce',
+            'look-unto-me-doctrine-and-covenants-6-36.html': hash === '#stand-forever' ? 'Stand Forever' : 'Look Unto Me'
+        };
+        const file = path.split('/').pop();
+        if (path.includes('/answers/') && topics[file]) return {label:topics[file], href:file + (hash === '#stand-forever' ? hash : ''), location:hash === '#stand-forever'};
+        if (file === 'answers.html') {
+            const sections = {'#quiet-prayer-title':'Prayer & Revelation', '#comfort-in-grief-title':'Grief', '#loss-topic':'Death of a Child', '#divorce-topic':'Divorce'};
+            if (sections[hash]) return {label:sections[hash],href:hash,location:true};
+        }
+        if (file === 'come-follow-me.html') return {label:'Come, Follow Me',href:file};
+        if (file === 'general-conference.html') return {label:'General Conference',href:file};
+        return null;
+    }
+
+    function initCurrentStudyNavigation() {
+        const style = document.createElement('link');
+        style.rel = 'stylesheet';
+        style.href = relativeAssetHref('study-navigation.css?v=20260907-topics');
+        document.head.appendChild(style);
+        const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
+        if (!header) return;
+        const desktop = header.querySelector('.nav-links');
+        const menu = document.getElementById('hamburgerMenu');
+        if (!desktop || !menu) return;
+        const originalDesktop = Array.from(desktop.querySelectorAll('a')).map(link => ({link, text:link.textContent, href:link.getAttribute('href'), active:link.classList.contains('active'), current:link.getAttribute('aria-current')}));
+        const originalMenu = Array.from(menu.querySelectorAll('a')).map(link => ({link, active:link.classList.contains('active'), current:link.getAttribute('aria-current')}));
+        function sync() {
+            desktop.querySelectorAll('[data-focuschrist-generated-topic]').forEach(link => link.remove());
+            menu.querySelectorAll('[data-focuschrist-generated-topic]').forEach(link => link.remove());
+            originalDesktop.concat(originalMenu).forEach(item => {
+                if (item.text !== undefined) { item.link.textContent=item.text; item.link.setAttribute('href',item.href); }
+                item.link.classList.toggle('active',item.active);
+                if (item.current) item.link.setAttribute('aria-current',item.current); else item.link.removeAttribute('aria-current');
+                item.link.removeAttribute('data-focuschrist-current-study');
+            });
+            const topic = currentStudyTopic(window.location.pathname,window.location.hash);
+            header.classList.toggle('fc-has-current-study',Boolean(topic));
+            if (!topic) return;
+            let current = Array.from(desktop.querySelectorAll('a')).find(link => link.getAttribute('href') === topic.href);
+            if (!current) {
+                current = document.createElement('a');
+                current.textContent=topic.label.toUpperCase(); current.setAttribute('href',topic.href);current.setAttribute('data-focuschrist-generated-topic','true');
+                const art = Array.from(desktop.querySelectorAll('a')).find(link => /(^|\/)art\.html$/.test(link.getAttribute('href')));
+                if (art) art.insertAdjacentElement('afterend',current); else desktop.appendChild(current);
+            }
+            header.querySelectorAll('a[aria-current],a.active').forEach(link => {link.removeAttribute('aria-current');link.classList.remove('active');});
+            current.classList.add('active'); current.setAttribute('aria-current',topic.location?'location':'page'); current.setAttribute('data-focuschrist-current-study','true');
+            let menuCurrent=Array.from(menu.querySelectorAll('a')).find(link => link.getAttribute('href') === topic.href);
+            if (!menuCurrent) { menuCurrent=document.createElement('a');menuCurrent.href=topic.href;menuCurrent.textContent=topic.label.toUpperCase();menuCurrent.setAttribute('data-focuschrist-generated-topic','true');menu.prepend(menuCurrent); }
+            menuCurrent.classList.add('active');menuCurrent.setAttribute('aria-current',topic.location?'location':'page');
+        }
+        sync(); window.addEventListener('hashchange',sync);
     }
 
     function syncDisclosureState(control) {
@@ -603,6 +690,7 @@
         ensurePrimaryStudyNavigation();
         ensureConferenceTopicShortcut();
         initOfficialResourceMenu();
+        initCurrentStudyNavigation();
         initNavigation();
         initPioneerDisclosures();
         window.setTimeout(loadStudyJourney, 0);

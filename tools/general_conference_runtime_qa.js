@@ -53,4 +53,25 @@ query('   '); assert.equal(reset.disabled, true, 'whitespace does not activate f
 query('', 'saturday-afternoon'); assert.equal(visible().length, 2, 'session-only browsing works');
 assert.equal(groups[1].open, true);
 vm.runInNewContext(source, { document: { getElementById: () => null } });
-console.log('GENERAL CONFERENCE RUNTIME QA PASS: search, accents, combined filters, empty state, counts, reset, disclosure state, and absent-section safety.');
+const common = fs.readFileSync(path.join(__dirname, '..', 'site-common.js'), 'utf8');
+const migrationStart = common.indexOf('const conferenceLegacyAnchors');
+const migrationEnd = common.indexOf('const RESPECTFUL_QUESTION_RESPONSE', migrationStart);
+assert.ok(migrationStart >= 0 && migrationEnd > migrationStart, 'legacy migration must be present');
+function legacy(pathname, hash, search = '') {
+  const replacements = [], events = {};
+  const location = { pathname, hash, search, replace: value => replacements.push(value) };
+  vm.runInNewContext(common.slice(migrationStart, migrationEnd), {
+    window: { location, addEventListener: (name, fn) => { events[name] = fn; } }
+  });
+  return { replacements, events, location };
+}
+assert.deepEqual(legacy('/answers.html', '#general-conference').replacements, ['general-conference.html']);
+assert.deepEqual(legacy('/answers.html', '#conference-messages', '?source=bookmark').replacements,
+  ['general-conference.html?source=bookmark#conference-messages']);
+for (const [page, hash] of [['/answers.html', '#connected-study'], ['/general-conference.html', '#conference-topics'], ['/ask.html', '#general-conference']]) {
+  assert.deepEqual(legacy(page, hash).replacements, [], 'unrelated locations must not redirect');
+}
+const changed = legacy('/answers.html', '#connected-study');
+changed.location.hash = '#conference-practice'; changed.events.hashchange();
+assert.deepEqual(changed.replacements, ['general-conference.html#conference-practice']);
+console.log('GENERAL CONFERENCE RUNTIME QA PASS: search, combined filters, empty state, reset, disclosure state, and exact legacy bookmark migration.');

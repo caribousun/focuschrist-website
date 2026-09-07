@@ -51,15 +51,24 @@ def require(condition, message):
         raise SystemExit('GENERAL CONFERENCE QA FAIL: ' + message)
 
 
-source = (ROOT / 'answers.html').read_text(encoding='utf-8')
+source = (ROOT / 'general-conference.html').read_text(encoding='utf-8')
 doc = Document(source)
 all_nodes = list(doc.root.walk())
 hub = next((n for n in all_nodes if n.attrs.get('id') == 'general-conference'), None)
-require(hub is not None, 'existing conference section anchor must remain')
+require(hub is not None, 'conference study root must remain on the standalone page')
+require(any(n.tag == 'link' and n.attrs.get('rel') == 'canonical' and n.attrs.get('href') == 'https://focuschrist.com/general-conference.html' for n in all_nodes), 'standalone page needs its canonical URL')
+require(sum(n.tag == 'h1' for n in all_nodes) == 1, 'standalone page needs one primary heading')
+active_links = [n for n in all_nodes if n.tag == 'a' and n.attrs.get('aria-current') == 'page']
+require(len(active_links) == 2 and all(urlsplit(n.attrs.get('href', '')).path == 'general-conference.html' and 'active' in n.attrs.get('class', '').split() for n in active_links), 'desktop and mobile menus must mark only General Conference active')
+answers_doc = Document((ROOT / 'answers.html').read_text(encoding='utf-8'))
+answers_nodes = list(answers_doc.root.walk())
+require(not any('data-conference-talk' in n.attrs for n in answers_nodes), 'Answers must link to the standalone hub rather than duplicate its collection')
+require(any(n.attrs.get('id') == 'general-conference' for n in answers_nodes), 'legacy Answers fragment needs a useful migration destination')
+require(any(n.tag == 'a' and urlsplit(n.attrs.get('href', '')).path == 'general-conference.html' for n in answers_nodes), 'Answers needs a direct standalone conference route')
 nodes = list(hub.walk())
 require(sum('data-full-image-viewer' in n.attrs for n in nodes) == 1, 'study illustration must retain one full-image action')
 ids = Counter(n.attrs['id'] for n in all_nodes if 'id' in n.attrs)
-require(all(count == 1 for count in ids.values()), 'Answers IDs must remain unique')
+require(all(count == 1 for count in ids.values()), 'conference page IDs must remain unique')
 cards = [n for n in nodes if 'data-conference-talk' in n.attrs]
 groups = [n for n in nodes if 'data-conference-session' in n.attrs]
 require(len(cards) == 37, 'all 37 April 2026 messages and proceedings must be available statically')
@@ -96,7 +105,7 @@ for n in nodes:
             if n.attrs.get('target') == '_blank':
                 require('noopener' in n.attrs.get('rel', '').split(), 'external tab needs noopener')
             continue
-        target = ROOT / unquote(u.path or 'answers.html')
+        target = ROOT / unquote(u.path or 'general-conference.html')
         require(target.is_file(), 'local study route missing: ' + str(target))
         if u.fragment and target.suffix == '.html' and u.fragment != 'ask-question':
             target_doc = Document(target.read_text(encoding='utf-8'))

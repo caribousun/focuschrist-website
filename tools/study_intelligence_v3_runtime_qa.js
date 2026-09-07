@@ -3,6 +3,7 @@ const vm = require('vm');
 
 global.window = {
     location: { pathname: '/ask.html' },
+    addEventListener() {},
     setTimeout,
     clearTimeout,
     focusChristSourceIntegrity: null,
