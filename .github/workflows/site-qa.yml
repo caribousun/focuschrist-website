@@ -28,6 +28,12 @@ jobs:
       - name: Run Come Follow Me hub QA
         run: python tools/come_follow_me_qa.py
 
+      - name: Verify General Conference study hub and filters
+        run: |
+          python tools/general_conference_qa.py
+          node tools/general_conference_runtime_qa.js
+          node --check general-conference.js
+
       - name: Run focusChrist unified experience QA
         run: python tools/unified_experience_qa.py
 
