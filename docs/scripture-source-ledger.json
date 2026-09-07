@@ -894,6 +894,7 @@
       "verse_count": 16,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/what-is-eternal-marriage.html",
         "answers/why-latter-day-saints-build-temples.html",
         "ask.html",
         "pioneers.html"
@@ -2274,6 +2275,19 @@
       ]
     },
     {
+      "chapter": "nt/matt/19",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/19?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "5aa16b8c9036652dfca99667073df222efe67eee97b64d9afd0c21bc8db02923",
+      "data_sha256": "2063352d2b6542e0a88ff65c5eb62ed2482e5e4fc183e7220a3b18dad791a79c",
+      "verse_count": 30,
+      "verified_on": "2026-09-07",
+      "linked_from": [
+        "answers/what-is-eternal-marriage.html"
+      ]
+    },
+    {
       "chapter": "nt/matt/26",
       "status": "verified",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng",
@@ -2612,6 +2626,19 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html"
+      ]
+    },
+    {
+      "chapter": "ot/eccl/4",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/eccl/4?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c49a2f5836c8afd8f0dfab8e88de97c289e87ec2ee99d4161cc8f6278924dd63",
+      "data_sha256": "961dc7355c5ab47f729cff1c82cb2d45dae6029446e58a50a9a50c94af21eca0",
+      "verse_count": 16,
+      "verified_on": "2026-09-07",
+      "linked_from": [
+        "answers/what-is-eternal-marriage.html"
       ]
     },
     {
