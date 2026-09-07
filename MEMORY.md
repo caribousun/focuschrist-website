@@ -494,3 +494,12 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - Watch monthly-video example for later investigation: https://www.churchofjesuschrist.org/welcome/savior-jesus-christ?lang=eng . Do not claim the video has been located or a monthly update scheduled yet.
 - PR151 fixed the Kirtland cold/cache regression, but the complete live matrix still failed on an incomplete respectful-interfaith answer. See docs/production-verification-handoff.md; do not claim blanket production acceptance.
 - Owner requested one final Answers layout improvement: replace isolated pastoral-topic pills and empty space with a labeled, balanced support panel. Mission then Watch remain separate future chats.
+
+## Opening-panel presentation standard, September 7, 2026
+
+- The hero, hero crop, navigation, opening-panel height, and section dimensions are locked.
+- The text beneath every top-level hero must use the existing vertical space rather than appearing as a compressed cluster.
+- Establish a deliberate visual sequence from hero fade to gold statement, title, supporting copy or scripture, and action pills, with page-aware spacing based on how many elements are present.
+- Short three-part panels should breathe most; action panels use a balanced rhythm; dense Ask and Art panels must still fit without clipping.
+- Review Home, Ask, Answers, Art, Mission, Church History, Pioneers, Watch, and About individually at representative desktop sizes and preserve mobile safety.
+- The full reusable continuation prompt and active release status are recorded in `memory/2026-09-07.md`.

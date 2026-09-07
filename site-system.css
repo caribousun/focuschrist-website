@@ -840,15 +840,15 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: clamp(18px, 2.35dvh, 25px);
+        gap: clamp(26px, 3.4dvh, 34px);
         width: 100%;
     }
     body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-actions) {
-        gap: clamp(13px, 1.72dvh, 18px);
+        gap: clamp(18px, 2.35dvh, 24px);
     }
     body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-page-intro-scripture),
     body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-art-study-hint) {
-        gap: clamp(9px, 1.2dvh, 13px);
+        gap: clamp(13px, 1.72dvh, 18px);
     }
     body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-eyebrow,
     body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-display,
