@@ -66,9 +66,6 @@
     "seminary",
     "doubt",
     "unique-flagship-love",
-    "stand-lord-i-believe",
-    "stand-faith-choice",
-    "stand-spiritual-momentum",
     "cfm-rejoice",
     "cfm-philippians",
     "nephi-visual",
@@ -121,5 +118,14 @@
     "healing-wings"
   ],
   "come-follow-me.html": [],
-  "general-conference.html": []
+  "general-conference.html": [],
+  "answers/stand-forever.html": [
+    "stand-lord-i-believe",
+    "stand-faith-choice",
+    "stand-spiritual-momentum"
+  ],
+  "answers/grief-and-faith.html": [
+    "grief-john-11",
+    "grief-mosiah-18"
+  ]
 }

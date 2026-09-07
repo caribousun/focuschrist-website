@@ -61,7 +61,7 @@ function legacy(pathname, hash, search = '') {
   const replacements = [], events = {};
   const location = { pathname, hash, search, replace: value => replacements.push(value) };
   vm.runInNewContext(common.slice(migrationStart, migrationEnd), {
-    window: { location, addEventListener: (name, fn) => { events[name] = fn; } }
+    window: { location, addEventListener: (name, fn) => { (events[name] ||= []).push(fn); } }
   });
   return { replacements, events, location };
 }
@@ -72,6 +72,6 @@ for (const [page, hash] of [['/answers.html', '#connected-study'], ['/general-co
   assert.deepEqual(legacy(page, hash).replacements, [], 'unrelated locations must not redirect');
 }
 const changed = legacy('/answers.html', '#connected-study');
-changed.location.hash = '#conference-practice'; changed.events.hashchange();
+changed.location.hash = '#conference-practice'; changed.events.hashchange.forEach(fn => fn());
 assert.deepEqual(changed.replacements, ['general-conference.html#conference-practice']);
 console.log('GENERAL CONFERENCE RUNTIME QA PASS: search, combined filters, empty state, reset, disclosure state, and exact legacy bookmark migration.');
