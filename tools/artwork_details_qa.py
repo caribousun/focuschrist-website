@@ -200,8 +200,8 @@ def main() -> int:
                 errors.append(f"{relative}: missing hero study metadata: {marker}")
         if 'data-full-image-viewer' in hero_link:
             errors.append(f"{relative}: hero must open study before full-size viewer")
-    if hero_pages != 27:
-        errors.append(f"expected27 image-first pages including404, found{hero_pages}")
+    if hero_pages != 28:
+        errors.append(f"expected28 image-first pages including404, found{hero_pages}")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):

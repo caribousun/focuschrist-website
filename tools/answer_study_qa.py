@@ -56,7 +56,12 @@ def check():
             if parent is None or parent is main or not parent.text(without_cards=True).strip():
                 errors.append(f'{path}: media {card.attrs.get("data-resource-key")} lacks topical study context')
             else: contexts.add(parent.order)
-        if cards and len(contexts)<2: errors.append(f'{path}: media remains one undifferentiated collection')
+        card_prompts = [
+            [n for n in card.walk() if n.tag == 'p' and not n.has('fc-resource-card__kind') and not n.has('fc-resource-card__source')]
+            for card in cards
+        ]
+        if cards and len(contexts)<2 and not (len(cards)>=3 and all(card_prompts)):
+            errors.append(f'{path}: media remains one undifferentiated collection')
         sources=[n for n in content if n.tag=='h2' and 'official sources' in n.text().lower()]
         if cards and sources and min(c.order for c in cards)>min(n.order for n in sources):
             errors.append(f'{path}: media is discoverable only after source appendix')

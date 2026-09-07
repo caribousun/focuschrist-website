@@ -42,7 +42,7 @@
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "bd0a91dfce65c96566ccd38bb924796f31624d62d3e8761a1987a64542f48b1b",
+      "published_text_sha256": "51e8ead3879a7d0ee26c833858bc6725b01d5a3a62c17aba9004556a7f403205",
       "reviewed_on": "2026-09-07",
       "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Owner clarification: retain exactly one About-style Continue/down-arrow link in each Answer opening, remove repeated body controls. Original substantive content/source approvals preserved. Answers hub popup has a labeled keyboard-focusable reflection region. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement.",
       "authoritative_sources": [
@@ -55,6 +55,7 @@
         "answers/what-is-the-book-of-mormon.html",
         "answers/who-was-joseph-smith.html",
         "answers/why-families-are-important.html",
+        "answers/what-is-eternal-marriage.html",
         "answers/why-latter-day-saints-build-temples.html",
         "https://www.churchofjesuschrist.org/",
         "https://www.churchofjesuschrist.org/?lang=eng",
@@ -391,6 +392,32 @@
       ]
     },
     {
+      "path": "answers/what-is-eternal-marriage.html",
+      "status": "verified",
+      "published_text_sha256": "a960c75225b87ad63a4df21efa150511a83b2fa83378aab3e25c0a8d4ab65cad",
+      "reviewed_on": "2026-09-07",
+      "review_standard": "New Christ-centered eternal marriage study reviewed against official scripture, temple, handbook, abuse-help, and general conference sources. Sealing conditions, the Holy Spirit of Promise, individual agency, equal partnership, safety, and the full belonging of single, divorced, and widowed members are stated with pastoral guardrails. Four visual talks were verified as unique across the site and matched to official source thumbnails. Applications and reflection prompts are labeled as study invitations rather than promises about individual outcomes.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/16?id=p19&lang=eng#p19",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/3?id=p18-p24&lang=eng#p18",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/42?id=p22&lang=eng#p22",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/131?id=p1-p4&lang=eng#p1",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?id=p19&lang=eng#p19",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?id=p41-p46&lang=eng#p41",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?id=p45-p48&lang=eng#p45",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?id=p20-p23&lang=eng#p20",
+        "https://www.churchofjesuschrist.org/study/general-conference/2008/10/celestial-marriage?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2013/04/marriage-watch-and-learn?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/25soares?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2024/04/34carpenter?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/55andersen?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/marriage-study-guide?lang=eng",
+        "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/general-handbook/14-single-members?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/abuse-help-for-victims/introduction?lang=eng"
+      ]
+    },
+    {
       "path": "answers/what-is-the-book-of-mormon.html",
       "status": "verified",
       "published_text_sha256": "07bc7716fbaeaa447d7a71304fa977e60f55705c6797374e8321415b8e4ae7f1",
@@ -449,7 +476,7 @@
     {
       "path": "answers/why-families-are-important.html",
       "status": "verified",
-      "published_text_sha256": "88118525483511f00cef2252ae31680393d9e1d8a6a213dee89f1a32692e9389",
+      "published_text_sha256": "7b550ac4d45d2bb12e43e0f7a043c2d57fa826973325392dd2cc227990244f4a",
       "reviewed_on": "2026-09-07",
       "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Unique Answer video replacements reviewed against actual official source bodies/descriptions and native posters; adjacent media-specific prose updated. No Watch or cross-Answer video repetition permitted. Layout correction removes redundant contextual card descriptions only; all narrative outside cards and all verified media/source identities retained. Independent preservation review required before release. Unified study panel moves existing heading/introduction beside media and preserves the entire scripture discussion below; exact text multiset preserved. Owner clarification: retain exactly one About-style Continue/down-arrow link in each Answer opening, remove repeated body controls. Original substantive content/source approvals preserved. Answers hub popup has a labeled keyboard-focusable reflection region.",
       "authoritative_sources": [

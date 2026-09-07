@@ -196,8 +196,8 @@ def main() -> int:
         fail(errors, "original approved hero must remain unchanged for recovery")
 
     approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
-    if len(approved_answer_pages) != 13:
-        fail(errors, f"expected 13 Answer detail pages, found {len(approved_answer_pages)}")
+    if len(approved_answer_pages) != 14:
+        fail(errors, f"expected 14 Answer detail pages, found {len(approved_answer_pages)}")
     approved_hero_pages = ["index.html", *approved_answer_pages]
     approved_cache_versions: set[str] = set()
     for relative in approved_hero_pages:
