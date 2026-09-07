@@ -12,6 +12,7 @@ CORE = {
     "index.html": "https://focuschrist.com/",
     "ask.html": "https://focuschrist.com/ask.html",
     "answers.html": "https://focuschrist.com/answers.html",
+    "general-conference.html": "https://focuschrist.com/general-conference.html",
     "watch.html": "https://focuschrist.com/watch.html",
     "art.html": "https://focuschrist.com/art.html",
     "missionary.html": "https://focuschrist.com/missionary.html",

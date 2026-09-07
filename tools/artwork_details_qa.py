@@ -16,7 +16,7 @@ PAGES = {
     "art.html": 4,
     "pioneers.html": 10,
 }
-ROOT_VIEWER_PAGES = (*PAGES, "missionary.html")
+ROOT_VIEWER_PAGES = (*PAGES, "missionary.html", "general-conference.html")
 ART_STUDY_PAGES = (
     "art-study/the-living-christ.html",
     "art-study/the-good-shepherd.html",

@@ -33,6 +33,7 @@ jobs:
           python tools/general_conference_qa.py
           node tools/general_conference_runtime_qa.js
           node --check general-conference.js
+          node tools/study_navigation_runtime_qa.js
 
       - name: Run focusChrist unified experience QA
         run: python tools/unified_experience_qa.py

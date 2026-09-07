@@ -5,7 +5,7 @@ function assert(condition, message) {
     if (!condition) throw new Error(message);
 }
 
-global.window = {};
+global.window = { location: { pathname: '/ask.html', hash: '', search: '' }, addEventListener() {} };
 const source = fs.readFileSync('site-common.js', 'utf8');
 const safetyOnly = source.slice(0, source.indexOf('    const OFFICIAL_RESOURCE_LINKS')) + '\n})();';
 vm.runInThisContext(safetyOnly, { filename: 'site-common-question-safety.js' });

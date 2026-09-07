@@ -82,7 +82,7 @@ for attrs in images:
 library = html.split('class="cfm-library"', 1)[-1].split('</section>', 1)[0]
 for destination in ('ask.html', 'answers.html', 'watch.html', 'art.html', 'missionary.html',
                     'church-history.html', 'pioneers.html', 'index.html', 'about.html',
-                    'answers.html#general-conference', 'answers/look-unto-me-doctrine-and-covenants-6-36.html'):
+                    'general-conference.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html'):
     require(f'href="{destination}"' in library, f"connected library route missing: {destination}")
     url = urlparse(destination)
     target = ROOT / url.path

@@ -9,14 +9,16 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ROOT_PAGES = [
     "index.html", "ask.html", "answers.html", "art.html", "church-history.html", "missionary.html", "pioneers.html",
-    "about.html", "watch.html", "404.html",
+    "about.html", "watch.html", "404.html", "general-conference.html",
 ]
 NESTED_PAGES = sorted(
     [p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html")]
     + [p.relative_to(ROOT).as_posix() for p in (ROOT / "art-study").glob("*.html")]
 )
 PUBLIC_PAGES = ROOT_PAGES + NESTED_PAGES
-IMAGE_FIRST_PAGES = [p for p in PUBLIC_PAGES if p != "404.html"]
+# The standalone conference page follows the owner-requested CFM opening layout;
+# its hero and navigation are covered by general_conference_qa.py.
+IMAGE_FIRST_PAGES = [p for p in PUBLIC_PAGES if p not in {"404.html", "general-conference.html"}]
 
 
 class VisibleTextParser(HTMLParser):

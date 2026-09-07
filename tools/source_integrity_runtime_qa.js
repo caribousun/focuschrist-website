@@ -1,7 +1,7 @@
 const fs = require('fs');
 const vm = require('vm');
 
-global.window = { location: { pathname: '/ask.html' } };
+global.window = { location: { pathname: '/ask.html', hash: '', search: '' }, addEventListener() {} };
 global.document = { readyState: 'loading', addEventListener() {} };
 vm.runInThisContext(fs.readFileSync('site-common.js', 'utf8'), { filename: 'site-common.js' });
 
