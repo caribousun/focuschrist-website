@@ -830,6 +830,35 @@ section[data-focuschrist-independence="about"] .fc-button--primary:focus-visible
     body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom: 5px; }
     body.fc-site .fc-page-intro .fc-actions { margin-top: 8px; }
     body.fc-site .fc-page-intro .fc-button { padding-block: 9px; }
+
+    /* Use the opening panel's existing vertical room as intentional rhythm.
+       The panel and hero geometry stay locked; only space between its words
+       is redistributed. Shorter introductions can breathe more, while pages
+       with scripture or additional guidance retain a compact safe rhythm. */
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(18px, 2.35dvh, 25px);
+        width: 100%;
+    }
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-actions) {
+        gap: clamp(13px, 1.72dvh, 18px);
+    }
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-page-intro-scripture),
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-art-study-hint) {
+        gap: clamp(9px, 1.2dvh, 13px);
+    }
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-eyebrow,
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-display,
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-page-intro-copy,
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-page-intro-scripture,
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-actions,
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .art-scroll-cue,
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-art-study-hint {
+        margin-block: 0;
+    }
     body.fc-site .fc-visual-hero:not(.fc-visual-hero--portrait)::before {
         background-position: center 25% !important;
     }

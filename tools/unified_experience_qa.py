@@ -210,12 +210,12 @@ def main() -> int:
             fail(errors, f"{relative}: site-system cache revision missing")
         else:
             approved_cache_versions.add(cache_match.group(1))
-    if approved_cache_versions != {"20260907-opening-type"}:
+    if approved_cache_versions != {"20260907-opening-rhythm"}:
         fail(errors, f"approved hero pages have inconsistent site-system cache revisions: {sorted(approved_cache_versions)}")
 
     for relative in PUBLIC_PAGES:
         public_text = (ROOT / relative).read_text(encoding="utf-8")
-        if 'site-system.css?v=20260907-opening-type' not in public_text:
+        if 'site-system.css?v=20260907-opening-rhythm' not in public_text:
             fail(errors, f"{relative}: shared hero/menu cache revision is not globally locked")
 
     for relative in PUBLIC_PAGES:
