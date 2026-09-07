@@ -175,6 +175,14 @@
         return link;
     }
 
+    function createConferenceLink(text) {
+        const link = document.createElement('a');
+        link.href = relativeRootHref('answers.html') + '#general-conference';
+        link.textContent = text;
+        link.setAttribute('data-focuschrist-conference-shortcut', 'true');
+        return link;
+    }
+
     function ensurePrimaryStudyNavigation() {
         const desktop = document.querySelector('.nav[data-focuschrist-header="standard"] .nav-links');
         if (desktop && !desktop.querySelector('[data-focuschrist-primary-missionary]')) {
@@ -207,6 +215,16 @@
         }
 
         const menu = document.getElementById('hamburgerMenu');
+        if (menu && !menu.querySelector('[data-focuschrist-conference-shortcut]')) {
+            const conference = createConferenceLink('GENERAL CONFERENCE');
+            const answers = Array.from(menu.querySelectorAll('a')).find(function (link) {
+                return link.textContent.trim().toUpperCase() === 'ANSWERS';
+            });
+            const divider = menu.querySelector('hr');
+            if (answers) answers.insertAdjacentElement('afterend', conference);
+            else if (divider) menu.insertBefore(conference, divider);
+            else menu.appendChild(conference);
+        }
         if (menu && !menu.querySelector('[data-focuschrist-primary-missionary]')) {
             const missionary = createMissionaryLink('MISSIONARY WORK');
             const history = menu.querySelector('[data-focuschrist-primary-history]');
@@ -305,6 +323,12 @@
         });
         new MutationObserver(syncExpanded).observe(menu, { attributes: true, attributeFilter: ['class'] });
         syncExpanded();
+    }
+
+    function ensureConferenceTopicShortcut() {
+        const topics = document.querySelector('.fc-answers-jump-links');
+        if (!topics || topics.querySelector('[data-focuschrist-conference-shortcut]')) return;
+        topics.appendChild(createConferenceLink('General Conference'));
     }
 
     function syncDisclosureState(control) {
@@ -550,6 +574,7 @@
         ensureMainLandmark();
         normalizeFooterIdentity();
         ensurePrimaryStudyNavigation();
+        ensureConferenceTopicShortcut();
         initOfficialResourceMenu();
         initNavigation();
         initPioneerDisclosures();
