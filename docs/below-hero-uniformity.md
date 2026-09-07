@@ -22,3 +22,35 @@ Three prompt reviews completed before implementation:
 3. Acceptance: all routes enumerated, real content bounds and visual review
    required, hero comparison and deployed-byte verification required. A passed
    outer-section height measurement alone is not proof of presentation quality.
+
+## Verified implementation
+
+All original stylesheet bytes, navigation, hero selectors and assets are
+preserved. The appended rules apply only to introduction panels and their
+descendants. All 27 HTML modifications are solely the shared stylesheet cache
+revision. Panels now share page-width gutters, aligned gold statements and
+titles, and existing 44px action pills with consistent bottom clearance.
+Narrow screens wrap pills; dense desktop panels size typography and gaps from
+their available space. No content or new action pills were introduced.
+
+## Release validation for PR 202
+
+- Independent screenshot review passed all nine primary pages at 1536 x 792.
+- Independent rendered-DOM review passed all 17 study/detail pages and 404 at
+  1536 x 792. One detail page was also screenshot-reviewed; remaining detail
+  screenshot capture timed out, so no all-detail visual claim is made.
+- All nine primary pages passed fresh-load review at both 390 x 844 and
+  3440 x 1440: 18 completed cases, zero failures. See
+  `below-hero-responsive-results.json` for actual bounds and pill alignment.
+- The 404 recovery card retains its separate, contained button layout.
+- Unified 27-page QA, site QA, Church History QA, static content audit and
+  JavaScript syntax checks pass. GitHub's complete required Site QA also passes.
+- This is browser viewport testing, not physical-device certification. No
+  unrelated AI or content behavior was changed or represented as newly tested.
+
+The review tool now uses fresh page loads at each audited viewport. Reusing a
+mobile-initialized document at desktop widths retained an existing mobile
+navigation state and produced misleading header failures. It also checks real
+text/child bounds, includes incomplete-run failures, normalizes equivalent CSS
+serialization and supports explicit page/viewport groups. Automatic browser
+recovery interrupted earlier broad runs; they are not counted as passes.

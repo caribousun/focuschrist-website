@@ -14,11 +14,12 @@ function openPage() {
   mediaIndex=-1; fit();
   return new Promise((resolve,reject)=>{
     let settling=false;
+    const previousDocument=preview.contentDocument;
     const timer=setTimeout(()=>{clearInterval(poll);reject(new Error('Page load timed out: '+page.value));},20000);
     preview.src='../'+page.value+'?layout-review='+Date.now();
     const poll=setInterval(async()=>{
       const d=preview.contentDocument;
-      if(settling||!d||!d.querySelector('.fc-page-intro')||d.readyState==='loading')return;
+      if(settling||!d||d===previousDocument||d.URL!==preview.src||!d.querySelector('.fc-page-intro')||d.readyState==='loading')return;
       settling=true;clearInterval(poll);
       await Promise.race([d.fonts.ready,new Promise(done=>setTimeout(done,2000))]);
       await new Promise(done=>setTimeout(done,350));
@@ -79,17 +80,16 @@ document.getElementById('audit').onclick=async()=>{
  const expected=jobs.length*viewports.length;
  try {for(const option of jobs){
    page.value=option.value;
-   await openPage();
    for(const viewport of viewports){
-     size.value=viewport.value;fit();
-     await new Promise(done=>setTimeout(done,180));
+     size.value=viewport.value;
+     await openPage();
      results.push(measure());
      report.textContent=JSON.stringify({progress:results.length,total:expected,results},null,2);
    }
  }}catch(error){auditError=error.message;}
  const failures=results.filter(result=>!result.contentContained||result.overflow||!result.heroClear||!result.openingVisible||!result.openingAligned||!result.nextSectionHidden||!result.actionsVisible||!result.heroRatioFit||!result.headerHeightFit||!result.approvedHeroFit);
  report.textContent=JSON.stringify({complete:true,pass:!auditError&&results.length===expected&&failures.length===0,error:auditError,expected,checked:results.length,failures,results},null,2);
- report.dataset.complete='true';report.dataset.pass=failures.length?'false':'true';
+ report.dataset.complete='true';report.dataset.pass=String(!auditError&&results.length===expected&&failures.length===0);
 };
 window.addEventListener('resize',fit);
 fetch('../sitemap.xml').then(r=>r.text()).then(xml=>{
