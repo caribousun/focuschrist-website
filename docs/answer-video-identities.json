@@ -455,6 +455,30 @@
       "url": "https://www.churchofjesuschrist.org/callings/youth?lang=eng",
       "title": "Rejoice in Christ."
     },
+    "stand-lord-i-believe": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
+      "title": "“Lord, I Believe”",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe",
+      "aliases": []
+    },
+    "stand-faith-choice": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2015/10/faith-is-not-by-chance-but-by-choice?lang=eng",
+      "title": "Faith Is Not by Chance, but by Choice",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2015/10/faith-is-not-by-chance-but-by-choice",
+      "aliases": []
+    },
+    "stand-spiritual-momentum": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson?lang=eng",
+      "title": "The Power of Spiritual Momentum",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2022/04/47nelson",
+      "aliases": []
+    },
     "look-christ": {
       "kind": "video",
       "presentation": "Church music video",

@@ -1353,6 +1353,19 @@
       ]
     },
     {
+      "chapter": "dc-testament/dc/93",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "732258daf2e81a3748d34c7df12d72dc7d8b678084032134cbaf4c9c812ad77e",
+      "data_sha256": "df78adf37222dd9e45f1067c15697764ff0a8472a3a9898d735ea71e1e2002b2",
+      "verse_count": 53,
+      "verified_on": "2026-09-07",
+      "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+      ]
+    },
+    {
       "chapter": "dc-testament/dc/98",
       "status": "verified",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/98?lang=eng",
