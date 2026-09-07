@@ -503,3 +503,4 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - Short three-part panels should breathe most; action panels use a balanced rhythm; dense Ask and Art panels must still fit without clipping.
 - Review Home, Ask, Answers, Art, Mission, Church History, Pioneers, Watch, and About individually at representative desktop sizes and preserve mobile safety.
 - The full reusable continuation prompt and active release status are recorded in `memory/2026-09-07.md`.
+- Home is the positional master for the gold opening statement. Every top-level page must align its gold statement to Home on the same vertical position and centered horizontal axis; subsequent elements flow downward. Never center the entire group independently by content height.
