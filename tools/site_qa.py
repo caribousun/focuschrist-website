@@ -20,6 +20,9 @@ CORE = {
     "about.html": "https://focuschrist.com/about.html",
 }
 ANSWER_PAGES = {
+    "answers/grief-and-faith.html": "https://focuschrist.com/answers/grief-and-faith.html",
+    "answers/stand-forever.html": "https://focuschrist.com/answers/stand-forever.html",
+
     "answers/death-of-a-child.html": "https://focuschrist.com/answers/death-of-a-child.html",
     "answers/divorce-and-faith.html": "https://focuschrist.com/answers/divorce-and-faith.html",
     "answers/jesus-christ-latter-day-saint-beliefs.html": "https://focuschrist.com/answers/jesus-christ-latter-day-saint-beliefs.html",

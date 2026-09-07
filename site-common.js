@@ -15,6 +15,16 @@
     forwardLegacyConferenceBookmark();
     window.addEventListener('hashchange', forwardLegacyConferenceBookmark);
 
+    function forwardLegacyTopicBookmark() {
+        const path = window.location.pathname.toLowerCase();
+        const hash = window.location.hash;
+        const topics = {'#quiet-prayer-title':'prayer-and-personal-revelation.html','#comfort-in-grief-title':'grief-and-faith.html','#loss-topic':'death-of-a-child.html','#divorce-topic':'divorce-and-faith.html'};
+        if (path.endsWith('/answers.html') && topics[hash]) window.location.replace('answers/' + topics[hash] + window.location.search);
+        if (path.endsWith('/answers/look-unto-me-doctrine-and-covenants-6-36.html') && hash === '#stand-forever') window.location.replace('stand-forever.html' + window.location.search);
+    }
+    forwardLegacyTopicBookmark();
+    window.addEventListener('hashchange', forwardLegacyTopicBookmark);
+
     const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
     const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
 
@@ -392,6 +402,8 @@
             'faith-in-jesus-christ-during-trials.html': 'Faith in Trials',
             'death-of-a-child.html': 'Death of a Child',
             'divorce-and-faith.html': 'Divorce',
+            'grief-and-faith.html': 'Grief',
+            'stand-forever.html': 'Stand Forever',
             'look-unto-me-doctrine-and-covenants-6-36.html': hash === '#stand-forever' ? 'Stand Forever' : 'Look Unto Me'
         };
         const file = path.split('/').pop();

@@ -35,7 +35,7 @@ def check():
     errors=[]
     canonical={urlsplit(x.text).path.lstrip('/') for x in ET.parse(ROOT/'sitemap.xml').getroot().findall('{*}url/{*}loc')}
     pages=sorted(p for p in canonical if p.startswith('answers/') and p.endswith('.html'))
-    actual={str(p.relative_to(ROOT)) for p in (ROOT/'answers').glob('*.html')}
+    actual={p.relative_to(ROOT).as_posix() for p in (ROOT/'answers').glob('*.html')}
     if set(pages)!=actual: errors.append('Every permanent Answer must be inventoried in the sitemap; no batch subset.')
     for path in pages:
         d=Document(); d.feed((ROOT/path).read_text()); nodes=list(d.root.walk())

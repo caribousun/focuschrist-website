@@ -123,4 +123,25 @@ liveMenu.classList.add('show');menuEvents.click({target:{closest:() => null}});
 assert.equal(liveMenu.classList.contains('show'),true,'non-link menu content must not close the menu');
 documentEvents.keydown({key:'Escape'});
 assert.equal(liveMenu.classList.contains('show'),false);assert.equal(trigger.focused,true);
+
+// Every pill opens its own page; old bookmarks migrate on load and hashchange.
+assert.ok(pills.every(([href]) => !href.includes('#')), 'topic pills must open dedicated pages');
+assert.equal(new Set(pills.map(([href]) => href)).size,16,'topic pages must be distinct');
+const legacySource = source.slice(source.indexOf('const conferenceLegacyAnchors'),source.indexOf('const RESPECTFUL_QUESTION_RESPONSE'));
+for (const [oldPath,oldHash,destination] of [
+ ['/answers.html','#quiet-prayer-title','answers/prayer-and-personal-revelation.html'],
+ ['/answers.html','#comfort-in-grief-title','answers/grief-and-faith.html'],
+ ['/answers.html','#loss-topic','answers/death-of-a-child.html'],
+ ['/answers.html','#divorce-topic','answers/divorce-and-faith.html'],
+ ['/answers/look-unto-me-doctrine-and-covenants-6-36.html','#stand-forever','stand-forever.html']
+]) {
+ const replacements=[], listeners=[];
+ const location={pathname:oldPath,hash:oldHash,search:'?source=saved',replace:value=>replacements.push(value)};
+ vm.runInNewContext(legacySource,{window:{location,addEventListener:(name,fn)=>{if(name==='hashchange')listeners.push(fn);}}});
+ assert.deepEqual(replacements,[destination+'?source=saved'],'legacy bookmark forwards with query');
+ replacements.length=0;listeners.forEach(fn=>fn());assert.deepEqual(replacements,[destination+'?source=saved']);
+ replacements.length=0;location.hash='#unrelated';listeners.forEach(fn=>fn());assert.deepEqual(replacements,[]);
+ location.pathname='/ask.html';location.hash=oldHash;listeners.forEach(fn=>fn());assert.deepEqual(replacements,[]);
+}
+
 console.log('STUDY NAVIGATION RUNTIME QA PASS: all 16 actual topic pills, article routes, CFM/Conference labels, hash restoration, preserved parent links, and duplicate prevention.');

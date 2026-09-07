@@ -1,4 +1,5 @@
 /* General Conference study hub; all styling stays inside the existing section. */
+@media(max-width:380px){.gc-page .gc-page-opening .gc-intro-visual img{max-height:120px}}
 .gc-page{--gc-header:52px;background:#142a35;color:#fff2dc;font-family:'Segoe UI',Tahoma,sans-serif;margin:0;padding-top:var(--gc-header)!important}.gc-page *{box-sizing:border-box}.gc-page .fc-conference-section{padding-block:0 36px;--fc-line:rgba(134,175,200,.28)}
 .gc-page-opening{min-height:calc(100svh - var(--gc-header));padding-block:36px;align-content:center}.gc-page-opening h1{font:clamp(2.8rem,5.5vw,5rem)/1.05 Georgia,serif;color:#fff2dc;margin:12px 0 18px;text-wrap:balance}.gc-opening-tagline{font:1.4rem/1.4 Georgia,serif;color:#f0c36a;margin:0 0 16px}.gc-page-opening .fc-conference-actions{margin-top:24px}.gc-page #conference-study-start{scroll-margin-top:calc(var(--gc-header) + 16px);margin-top:0}
 @media(max-width:1020px){.gc-page{--gc-header:62px;padding-top:0!important}}

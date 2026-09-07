@@ -1019,6 +1019,30 @@
       "verified_date": "2026-09-07",
       "kind": "Church video",
       "description": "Consider both historic sacrifice and the courage required of modern disciples of Jesus Christ."
+    },
+    {
+      "key": "grief-john-11",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
+      "title": "Read John 11",
+      "thumbnail": "assets/page-art/answers-comfort-in-grief-800.webp",
+      "local_thumbnail": "assets/page-art/answers-comfort-in-grief-800.webp",
+      "width": 800,
+      "height": 533,
+      "sha256": "3c9fd2f7002f06d2a73509918ace6361248469e84dede936c5570ee866fe1181",
+      "verified_date": "2026-09-07",
+      "presentation": "Approved focusChrist illustration accompanying official scripture reading; not a source-native thumbnail."
+    },
+    {
+      "key": "grief-mosiah-18",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+      "title": "Read Mosiah 18",
+      "thumbnail": "assets/page-art/home-light-through-study-900.webp",
+      "local_thumbnail": "assets/page-art/home-light-through-study-900.webp",
+      "width": 900,
+      "height": 507,
+      "sha256": "2f71cce4b5ce2f4b3ecec484091e77df114fa2be2f6b66ef7a6f4248fb3f48d9",
+      "verified_date": "2026-09-07",
+      "presentation": "Approved focusChrist illustration accompanying official scripture reading; not a source-native thumbnail."
     }
   ],
   "reviewed_on": "2026-09-07",
