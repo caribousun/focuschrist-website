@@ -968,8 +968,10 @@ body.fc-site .fc-visual-hero {
         min-height: var(--fc-opening-hero-height);
         aspect-ratio: auto;
     }
+    /* Mobile opening panels follow their content. The previous viewport-filling
+       minimum left a large blank band between the copy and actions on tall phones. */
     body.fc-site .fc-page-intro {
-        min-height: max(0px, calc(100dvh - 362px)) !important;
+        min-height: 0 !important;
     }
     body.fc-not-found .fc-page-intro { padding-block: 8px; }
     body.fc-not-found .fc-page-intro .fc-card { padding: 8px; }
