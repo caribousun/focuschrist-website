@@ -1086,3 +1086,16 @@ body.fc-site:not(.fc-not-found) .fc-page-intro .fc-button {
         padding-inline: 16px;
     }
 }
+
+
+/* Owner-approved opening rhythm: preserve the locked hero and bottom actions
+   while creating a clear breath between the gold anchor and the page title. */
+@media (min-width:1021px) {
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-eyebrow {
+        margin-bottom: clamp(10px, 1.45dvh, 15px);
+    }
+
+    body.fc-site:not(.fc-not-found) .fc-page-intro .fc-page-intro-copy {
+        text-align: center;
+    }
+}
