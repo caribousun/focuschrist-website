@@ -1,0 +1,14 @@
+.fc-marriage-covenant{margin:34px 0;padding:clamp(24px,4vw,42px);border:1px solid rgba(240,195,106,.45);border-radius:22px;background:radial-gradient(circle at 88% 0,rgba(240,195,106,.14),transparent 36%),linear-gradient(145deg,#173c4e,#0d2836);color:#f5f1e7;box-shadow:0 20px 48px rgba(5,20,30,.16)}
+.fc-marriage-covenant h2,.fc-marriage-covenant h3{color:#f2cb7c}.fc-marriage-covenant p{color:#eef2ed}
+.fc-marriage-scriptures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.fc-marriage-scriptures a{display:block;padding:20px;border:1px solid rgba(240,195,106,.34);border-radius:15px;background:rgba(255,255,255,.055);color:#fff5d9!important;text-decoration:none!important}
+.fc-marriage-scriptures a:hover{border-color:#f0c36a;background:rgba(240,195,106,.1)}
+.fc-marriage-scriptures strong{display:block;margin-bottom:7px;color:#f0c36a}.fc-marriage-scriptures span{display:block;color:#dce7e8;line-height:1.55;font-size:.94rem}
+.fc-marriage-questions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:28px 0}
+.fc-marriage-questions details{margin:0;padding:20px;border:1px solid rgba(69,100,113,.35);border-radius:16px;background:#f8f4eb}
+.fc-marriage-questions summary{color:#173f52;font-weight:750;line-height:1.4;cursor:pointer}.fc-marriage-questions details p{margin:14px 0 0}
+.fc-marriage-practice{counter-reset:marriage-day;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:24px 0}
+.fc-marriage-practice li{counter-increment:marriage-day;list-style:none;padding:18px 18px 18px 58px;border-radius:14px;background:#f8f4eb;position:relative}
+.fc-marriage-practice li::before{content:counter(marriage-day);position:absolute;left:18px;top:17px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#174358;color:#f7d48b;font-weight:800}
+.fc-marriage-practice strong{display:block;color:#173f52;margin-bottom:4px}
+@media(max-width:720px){.fc-marriage-scriptures,.fc-marriage-questions,.fc-marriage-practice{grid-template-columns:1fr}.fc-marriage-covenant{padding:24px 18px}.fc-marriage-scriptures a{padding:17px}.fc-marriage-questions details{padding:18px}}
