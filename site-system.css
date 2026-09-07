@@ -494,6 +494,7 @@ body.fc-site img { max-width: 100%; }
     align-items: center;
 }
 .fc-actions--center { justify-content: center; }
+.fc-actions--content { margin-top: 22px; }
 
 .fc-button {
     display: inline-flex;
@@ -1079,6 +1080,7 @@ body.fc-site:not(.fc-not-found) .fc-page-intro .fc-button {
 }
 
 @media (max-width:700px) {
+    .fc-actions--content { margin-top: 18px; }
     body.fc-site:not(.fc-not-found) .fc-page-intro .fc-actions {
         width: 100%;
     }

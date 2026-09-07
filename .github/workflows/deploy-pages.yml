@@ -27,6 +27,9 @@ jobs:
       - name: Run focusChrist structural site QA
         run: python tools/site_qa.py
 
+      - name: Run Come Follow Me hub QA
+        run: python tools/come_follow_me_qa.py
+
       - name: Run focusChrist unified experience QA
         run: python tools/unified_experience_qa.py
 
