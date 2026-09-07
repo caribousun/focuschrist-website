@@ -1,5 +1,18 @@
 # Approved Christ hero full-composition correction
 
+## Owner-approved successor: September 7, 2026
+
+Wyatt supplied `fully fully approved.png` and directed: "just use this attached one for now to update the site". This supersedes the earlier asset selection below, not the locked layout geometry.
+
+- Current shared Home and all 13 Answer-detail hero asset: `assets/heroes/home-christ-signature-approved-20260907.png`.
+- Exact uploaded PNG bytes, 2048 by 684, SHA-256 `4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b`.
+- No regeneration, retouching, resampling, compression, or pixel changes during integration.
+- Keep the original `home-christ-fully-approved.png` unchanged for recovery.
+- Both the shared CSS hero and each full-size viewer link must use the new asset. Refresh the shared stylesheet cache key consistently.
+- Preserve hero dimensions, background positioning, navigation, introduction text and spacing, pills, and unrelated page art.
+
+The earlier execution prompt is retained below as historical context; its old filename is no longer the active hero selection.
+
 ## Locked owner execution prompt
 
 Use the exact owner-approved `assets/heroes/home-christ-fully-approved.png` file on the Home page and on every individual Answer page that already uses the shared Christ hero. Do not regenerate, retouch, crop, stretch, compress, recolor, replace, or otherwise change the approved image bytes. The delivered file must remain the 2048 by 684 PNG with SHA-256 `823e46fe509f71f3d8dfc9dd277e50223e55e6c53e2af9af5d8c55b9c0a45384`.
