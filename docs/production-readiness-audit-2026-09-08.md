@@ -18,6 +18,8 @@ The audit used `sitemap.xml` as the public inventory: 33 routes, including 18 pe
 
 The existing content, caption, source-integrity, responsive-layout, runtime, accessibility, discovery and production-hardening gates remain in force. Generic image and introduction placeholders continue to be release-blocking patterns.
 
+The responsive review harness now audits both the shared opening layout and custom H1-based pages, tolerates verified subpixel/scrollbar rounding without weakening its substantive checks, and skips non-resource uses of the shared study-feature class instead of aborting the matrix.
+
 ## Verification evidence
 
 - Site QA: PASS — 9 core pages, 18 automatically discovered Answer pages, four Art studies and 44 gallery images.
