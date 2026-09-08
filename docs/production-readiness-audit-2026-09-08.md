@@ -11,6 +11,7 @@ The audit used `sitemap.xml` as the public inventory: 33 routes, including 18 pe
 3. The Doctrine and Covenants 6 study existed as a permanent page but was absent from the Answer Library hub. It now has both a jump link and a full descriptive study card.
 4. The same study used a shortened custom resource menu. It now preserves its page-specific resources while also exposing the complete canonical site resource set.
 5. Answer QA depended on a hand-maintained list that had omitted two permanent pages. It now discovers every `answers/*.html` page automatically and requires each one on the hub.
+6. The Doctrine and Covenants 6 signature study did not opt into the shared responsive topic-opening layout, leaving its actions below the desktop viewport. It now uses the same responsive opening contract while retaining its signature-study styling.
 
 ## New release protections
 

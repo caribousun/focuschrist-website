@@ -15,7 +15,11 @@ foundational={
  'answers/god-our-heavenly-father.html',
  'answers/restored-church-of-jesus-christ.html',
 }
-expected={p.relative_to(ROOT).as_posix() for p in (ROOT/'answers').glob('*.html')}-foundational
+answer_paths=sorted((ROOT/'answers').glob('*.html'))
+for answer_path in answer_paths:
+ answer_nodes=read(answer_path)
+ assert any(n.tag=='body' and n.has('fc-topic-page') for n in answer_nodes),answer_path.name+': shared responsive topic-page contract'
+expected={p.relative_to(ROOT).as_posix() for p in answer_paths}-foundational
 expected.add('general-conference.html')
 assert {n.attrs['href'] for n in links}==expected, 'topic jump panel must cover every non-foundational Answer plus General Conference'
 for link in links:
@@ -29,7 +33,6 @@ for link in links:
  assert any(n.has('fc-visual-hero') for n in opening.walk()),href+': image in first screen'
  assert any(n.has('fc-page-intro') for n in opening.walk()),href+': title in first screen'
  assert any(n.has('fc-scroll-cue') and n.attrs.get('href')=='#main-content' for n in opening.walk()),href+': continue action'
- assert any(n.tag=='body' and (n.has('fc-topic-page') or n.has('fc-signature-study')) for n in ns)
  assert sum('topic-study-pages.css?' in n.attrs.get('href','') for n in ns)==1
  main=next(n for n in ns if n.tag=='main')
  assert main.order>opening.order and len(main.text().split())>200,href+': substantive study after opening'
