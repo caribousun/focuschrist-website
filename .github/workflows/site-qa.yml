@@ -22,6 +22,12 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Install decoded image QA dependency
+        run: python -m pip install Pillow==12.2.0
+
+      - name: Verify global artwork scanner regression fixtures
+        run: python tools/topic_artwork_uniqueness_runtime_qa.py
+
       - name: Run focusChrist structural site QA
         run: python tools/site_qa.py
 
@@ -57,13 +63,14 @@ jobs:
 
       - name: Verify every permanent Answer study experience
         run: |
+          python tools/answer_study_parser_qa.py
           python tools/topic_study_pages_qa.py
           python tools/topic_inline_scripture_qa.py
-            python tools/topic_artwork_qa.py
-            python tools/topic_body_picture_qa.py
-            python tools/five_picture_manifest_qa.py
-            python tools/topic_artwork_details_qa.py
-            node --check topic-artwork-details.js
+          python tools/topic_artwork_qa.py
+          python tools/topic_body_picture_qa.py
+          python tools/five_picture_manifest_qa.py
+          python tools/topic_artwork_details_qa.py
+          node --check topic-artwork-details.js
           python tools/answer_study_qa.py
           python tools/answer_video_uniqueness_qa.py
           python tools/global_video_uniqueness_qa.py
@@ -138,6 +145,11 @@ jobs:
 
       - name: Check hero study JavaScript
         run: node --check hero-details.js
+
+      - name: Verify artwork caption DOM and legacy detail contracts
+        run: |
+          python tools/topic_artwork_caption_runtime_qa.py
+          node tools/artwork_details_runtime_qa.js
 
       - name: Run full-image viewer runtime QA
         run: node tools/full_image_viewer_runtime_qa.js

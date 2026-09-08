@@ -18,8 +18,8 @@ for file in (ROOT/'scripture-data').rglob('*.json'):
 catalog['D&C']='dc-testament/dc';catalog['Psalms']='ot/ps'
 books='|'.join(re.escape(k) for k in sorted(catalog,key=len,reverse=True))
 reference=re.compile(r'(?<![\w])('+books+r')\s+(\d+)(?::(\d+)(?:[–-](\d+))?)?')
-allnodes=nodes(ROOT/'answers.html');pills=next(n for n in allnodes if n.has('fc-answers-jump-links'))
-paths=[n.attrs['href'] for n in pills.walk() if n.tag=='a'];assert len(paths)==16
+paths=[p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'answers').glob('*.html'))]+['general-conference.html']
+assert len(paths)==19, 'All permanent topic studies must be checked'
 count=0
 for path in paths:
  ns=nodes(ROOT/path);main=next(n for n in ns if n.tag=='main')
@@ -43,5 +43,5 @@ for path in paths:
   match=reference.search(clean(node.text()))
   if match:
    assert key==catalog[match[1]]+'/'+match[2],path+': scripture label links to wrong chapter'
-   if match[3]:assert params.get('id')==['p'+match[3]+('-p'+match[4] if match[4] else '')],path+': verse selection differs from label'
-print(f'TOPIC INLINE SCRIPTURE QA PASS: all16 actual topic destinations, {count} inline links, canonical chapters, valid verse selections, no nested anchors')
+   if match[3] and (node.has('fc-inline-scripture') or params.get('id')):assert params.get('id')==['p'+match[3]+('-p'+match[4] if match[4] else '')],path+': verse selection differs from label'
+print(f'TOPIC INLINE SCRIPTURE QA PASS: all19 topic destinations, {count} scripture links, canonical chapters, exact verse selections, no nested anchors')

@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8"><title>Topic artwork caption regression fixture</title>
+<main><section id="lesson"><h2>Lesson</h2>
+<figure id="prayer"><a href="https://example.org/art.png"><img alt="Art"></a><figcaption><p class="fc-study-visual-label">Study illustration</p><h3>Prayer</h3><p>Read <a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng">Matthew <em>6</em></a> with its setting.</p><p class="fc-study-visual-sources"><a href="https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng">Read Matthew 6</a></p></figcaption></figure>
+<figure id="family"><a href="https://example.org/art.png"><img alt="Art"></a><figcaption><h3>Family</h3><p>Read <a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng">Romans 12</a> and care together.</p></figcaption></figure>
+<figure id="fallback"><a href="https://example.org/art.png"><img alt="Art"></a><figcaption><h3>Fallback</h3>Study <a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng">John 11</a> in context.</figcaption></figure>
+<figure id="unsafe"><a href="https://example.org/art.png"><img alt="Art"></a><figcaption><h3>Safe copying</h3><p id="original-paragraph">Study <a href="javascript:alert(1)" onclick="alert(1)">this</a> and <a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng">John 11</a> safely.</p></figcaption></figure>
+</section></main><script src="../topic-artwork-details.js"></script><script>
+window.addEventListener('load',()=>{
+ const assert=(ok,message)=>{if(!ok)throw Error(message)};
+ const cases=[['prayer','Read Matthew 6 with its setting.','Matthew 6'],['family','Read Romans 12 and care together.','Romans 12'],['fallback','Study John 11 in context.','John 11'],['unsafe','Study this and John 11 safely.','John 11']];
+ try {
+  for(const [id,expected,label] of cases){
+   const original=document.querySelector('#'+id+' figcaption').innerHTML;
+   for(let cycle=0;cycle<2;cycle++){
+    document.querySelector('#'+id+' > a').click();
+    const dialog=document.querySelector('#topicArtworkDetailDialog');const copy=dialog.querySelector('.fc-artwork-detail-copy');
+    assert(dialog.open,id+' panel opens');assert(copy.textContent===expected,id+' preserves exact prose order');
+    const link=copy.querySelector('a.fc-inline-scripture');assert(link&&link.textContent===label,id+' keeps inline reader link');
+    assert(link.href.startsWith('https://www.churchofjesuschrist.org/study/scriptures/'),id+' preserves exact official destination');
+    assert(!copy.querySelector('[onclick],[id],a[href^="javascript:"]'),id+' strips unsafe attributes and duplicate ids');
+    assert(dialog.querySelectorAll('[data-topic-art-source]').length>0,id+' retains source pills');
+    dialog.close();assert(document.querySelector('#'+id+' figcaption').innerHTML===original,id+' leaves original caption intact');
+   }
+  }
+  document.body.dataset.qa='PASS';document.body.dataset.cases=String(cases.length);console.log('TOPIC ARTWORK CAPTION QA PASS: four DOM fixtures, exact linked prose, source pills, safe fallback, repeated open, original DOM preservation');
+ }catch(error){document.body.dataset.qa='FAIL';document.body.dataset.error=error.message;throw error;}
+});
+</script>

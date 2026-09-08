@@ -28,10 +28,11 @@ for file,keys in coverage.items():
  if actual!=keys:errors.append(f'{file}: coverage differs: {actual}')
  for c in parser.cards:
   count+=1;r=sources[c['key']]
-  if len(c['images'])!=1 or len(c['links'])!=((3 if r.get('transcript_url') else 2)+len(r.get('inline_scripture_urls',[]))):errors.append(f'{file}: malformed resource card {c["key"]}');continue
+  inline_expected=r.get('inline_scripture_urls_by_page',{}).get(file,r.get('inline_scripture_urls',[]))
+  if len(c['images'])!=1 or len(c['links'])!=((3 if r.get('transcript_url') else 2)+len(inline_expected)):errors.append(f'{file}: malformed resource card {c["key"]}');continue
   expected_links=[r['url'],r['url']]+([r['transcript_url']] if r.get('transcript_url') else [])
   inline_links=[a for a in c['links'] if 'fc-inline-scripture' in a.get('class','').split()]
-  if [a.get('href') for a in inline_links]!=r.get('inline_scripture_urls',[]):errors.append(f'{file}: unreviewed inline scripture')
+  if [a.get('href') for a in inline_links]!=inline_expected:errors.append(f'{file}: unreviewed inline scripture')
   if [a.get('href') for a in c['links'] if a not in inline_links]!=expected_links:errors.append(f'{file}: mismatched source {c["key"]}')
   if any(any(k in a for k in ['data-hero-viewer','data-full-image-viewer']) for a in c['links']):errors.append(f'{file}: preview hijacked by artwork viewer')
   i=c['images'][0]

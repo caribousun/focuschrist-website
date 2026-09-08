@@ -1,6 +1,42 @@
 (function () {
     'use strict';
 
+    function captionParagraphs(caption) {
+        if (!caption) return [];
+        const excluded = '.fc-study-visual-label, .fc-marriage-era__number, .fc-study-visual-sources, .fc-study-visual-actions';
+        function proseOnly(paragraph) {
+            if (paragraph.matches(excluded)) return false;
+            const words = paragraph.cloneNode(true);
+            words.querySelectorAll('a').forEach(function (link) { link.remove(); });
+            return /[\p{L}\p{N}]/u.test(words.textContent);
+        }
+        function safeClone(node) {
+            const clone = node.cloneNode(true);
+            clone.querySelectorAll('script,style,iframe,object,embed').forEach(function (child) { child.remove(); });
+            [clone].concat(Array.from(clone.querySelectorAll('*'))).forEach(function (child) {
+                Array.from(child.attributes).forEach(function (attribute) {
+                    if (attribute.name === 'id' || /^on/i.test(attribute.name)) child.removeAttribute(attribute.name);
+                });
+                if (child.tagName === 'A') {
+                    try {
+                        const url = new URL(child.getAttribute('href'), document.baseURI);
+                        if (!['http:', 'https:'].includes(url.protocol)) child.removeAttribute('href');
+                    } catch (error) { child.removeAttribute('href'); }
+                }
+            });
+            return clone;
+        }
+        const paragraphs = Array.from(caption.querySelectorAll('p')).filter(proseOnly).map(safeClone);
+        if (paragraphs.length) return paragraphs;
+        const fallback = safeClone(caption);
+        fallback.querySelectorAll('h2,h3,' + excluded).forEach(function (node) { node.remove(); });
+        fallback.querySelectorAll('p').forEach(function (p) { if (!proseOnly(p)) p.remove(); });
+        if (!fallback.textContent.trim()) return [];
+        const paragraph = document.createElement('p');
+        paragraph.append.apply(paragraph, Array.from(fallback.childNodes));
+        return [paragraph];
+    }
+
     function initialize() {
         if (typeof HTMLDialogElement === 'undefined' || document.getElementById('topicArtworkDetailDialog')) return;
         const main = document.querySelector('main');
@@ -57,17 +93,7 @@
             const target = readingTarget(figure, index);
             const heading = caption && caption.querySelector('h2,h3');
             const record = { title: heading ? heading.textContent.trim() : target.textContent.trim(), paragraphs: [], sources: [], target: target };
-            if (caption) {
-                const paragraphs = Array.from(caption.querySelectorAll('p')).filter(function (p) {
-                    return !p.matches('.fc-study-visual-label, .fc-marriage-era__number') && !p.querySelector('a');
-                });
-                record.paragraphs = paragraphs.map(function (p) { return p.textContent.trim(); }).filter(Boolean);
-                if (!record.paragraphs.length) {
-                    const text = caption.cloneNode(true);
-                    text.querySelectorAll('a,h2,h3,.fc-study-visual-label').forEach(function (node) { node.remove(); });
-                    if (text.textContent.trim()) record.paragraphs.push(text.textContent.trim());
-                }
-            }
+            record.paragraphs = captionParagraphs(caption);
             let sources = officialLinks(caption);
             if (!sources.length) sources = officialLinks(figure.closest('.fc-marriage-era'));
             if (!sources.length) sources = officialLinks(figure.closest('section, .gc-intro'));
@@ -97,10 +123,8 @@
             image.src = trigger.href;
             image.alt = trigger.dataset.fullImageAlt || trigger.querySelector('img').alt;
             copy.replaceChildren();
-            record.paragraphs.forEach(function (text) {
-                const paragraph = document.createElement('p');
-                paragraph.textContent = text;
-                copy.appendChild(paragraph);
+            record.paragraphs.forEach(function (paragraph) {
+                copy.appendChild(paragraph.cloneNode(true));
             });
             actions.replaceChildren();
             record.sources.forEach(function (source, index) {

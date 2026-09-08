@@ -393,6 +393,17 @@ def main() -> int:
             if f'href="{target}"' not in text404:
                 fail(errors, f"404.html missing recovery link to {target}")
 
+    # Coverage must remain global; successful per-page counts cannot hide reuse.
+    from topic_artwork_uniqueness_qa import scan as scan_artwork
+    artwork = scan_artwork(ROOT)
+    if len(artwork['pages']) != 19:
+        fail(errors, f"Artwork coverage expected 19 study pages, found {len(artwork['pages'])}")
+    for asset, issue in artwork['assetIssues'].items():
+        fail(errors, f"{asset}: {issue}")
+    for page in artwork['pages']:
+        for issue in page['issues']:
+            fail(errors, f"{page['page']}: {issue}")
+
     if errors:
         print("FocusChrist SITE QA FAILED", file=sys.stderr)
         for error in errors:

@@ -15,6 +15,8 @@ ROOT=Path(__file__).resolve().parents[1]
 placements=json.loads((ROOT/'docs/topic-artwork-placement.json').read_text(encoding='utf-8'))
 assert len(placements)==21
 review=json.loads((ROOT/'docs/topic-artwork-review.json').read_text(encoding='utf-8'))
+exclusive=ROOT/'docs/exclusive-artwork-review.json'
+if exclusive.exists():review['assets'].extend(json.loads(exclusive.read_text(encoding='utf-8'))['assets'])
 approved={r['name']:r for r in review['assets'] if r['status']=='approved'}
 approved['christ-disciples-gaze-v2']=approved['christ-disciples-replacement']
 for record in review['assets']:
@@ -32,9 +34,12 @@ for item in placements:
  for attr in ['href']:
   full=(page.parent/a.attrs.get(attr)).resolve();assert full.is_file()
  src=(page.parent/im.attrs.get('src')).resolve();assert src.is_file()
- assert webp_dimensions(full)==(1536,1024) and webp_dimensions(src)==(800,533)
- assert im.attrs.get('width')=='1536' and im.attrs.get('height')=='1024'
+ expected=(item.get('width',1536),item.get('height',1024));small_expected=(item.get('smallWidth',800),item.get('smallHeight',533))
+ assert webp_dimensions(full)==expected and webp_dimensions(src)==small_expected
+ assert (int(im.attrs.get('width',0)),int(im.attrs.get('height',0)))==expected
  assert full.name==item['asset']+'-1536.webp' and src.name==item['asset']+'-800.webp'
+ approved_paths={x['path'] for x in approved[item['asset']]['published_assets']}
+ assert full.relative_to(ROOT).as_posix() in approved_paths and src.relative_to(ROOT).as_posix() in approved_paths
  assert im.attrs.get('loading')=='lazy' and im.attrs.get('decoding')=='async'
  assert '800w' in im.attrs.get('srcset','') and '1536w' in im.attrs.get('srcset','')
  caption=child(f,'figcaption');assert caption is not None
@@ -47,8 +52,8 @@ for item in placements:
   key=u.path.split('/study/scriptures/')[1];assert (ROOT/'scripture-data'/(key+'.json')).is_file()
  assert len([n for n in doc if n.tag=='script' and 'full-image-viewer.js' in n.attrs.get('src','')])==1
  seen.add(item['asset'])
-assert len(seen)==12
+assert seen=={item['asset'] for item in placements}
 allfigures=sum(sum(n.tag=='figure' and 'data-enriched-study-art' in n.attrs for n in nodes(p)) for p in (ROOT/'answers').glob('*.html'))
 assert allfigures==21
 css=(ROOT/'topic-art.css').read_text();assert 'object-fit:contain' in css and 'height:auto' in css
-print('TOPIC ARTWORK QA PASS: 21 contextual placements, 12 approved assets, exact sources, responsive full-image viewing')
+print('TOPIC ARTWORK QA PASS: 21 contextual placements, individually approved assets, exact sources, responsive full-image viewing')
