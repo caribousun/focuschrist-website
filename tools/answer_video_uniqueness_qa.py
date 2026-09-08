@@ -8,14 +8,18 @@ import json
 import re
 from collections import defaultdict
 from pathlib import Path
-from urllib.parse import urlsplit, unquote
+from urllib.parse import urlsplit, unquote, parse_qs
 from answer_study_qa import Document
 
 ROOT = Path(__file__).resolve().parents[1]
 
 def canonical(url):
     u = urlsplit(url)
-    return u.netloc.lower().removeprefix('www.') + unquote(u.path).rstrip('/').lower()
+    host = u.netloc.lower().removeprefix('www.')
+    if host == 'youtube.com' and u.path == '/watch':
+        video_id = parse_qs(u.query).get('v', [''])[0]
+        if video_id: return host + '/watch/' + video_id
+    return host + unquote(u.path).rstrip('/').lower()
 
 def title_key(value):
     return re.sub(r'[^a-z0-9]', '', value.lower())
@@ -26,6 +30,8 @@ def page(path):
     return list(d.root.walk())
 
 def check():
+    assert canonical('https://www.youtube.com/watch?v=AbC&list=one') == canonical('https://www.youtube.com/watch?v=AbC&list=two')
+    assert canonical('https://www.youtube.com/watch?v=AbC') != canonical('https://www.youtube.com/watch?v=abc'), 'YouTube IDs are case-sensitive and identify distinct videos'
     registry = json.loads((ROOT / 'docs/answer-video-identities.json').read_text())['resources']
     errors, aliases, titles = [], {}, {}
     for key, record in registry.items():

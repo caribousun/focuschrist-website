@@ -35,6 +35,23 @@ keys={'stand-lord-i-believe','stand-faith-choice','stand-spiritual-momentum'}
 assert keys <= {n.attrs.get('data-resource-key') for n in stand}
 assert not keys & {n.attrs.get('data-resource-key') for n in look},'Stand Forever videos moved, not duplicated'
 assert any(n.attrs.get('href')=='stand-forever.html' for n in look),'original page preserves a study pathway'
+series=next(n for n in stand if n.attrs.get('id')=='video-series')
+series_nodes=list(series.walk())
+series_review=next(r for r in __import__('json').loads((ROOT/'docs/topic-study-source-review.json').read_text(encoding='utf-8'))['pages'] if r['path']=='answers/stand-forever.html')['series']
+playlist=series_review['playlist_id']
+series_links=[n.attrs['href'] for n in series_nodes if n.tag=='a']
+assert series_review['playlist_url'] in series_links, 'publisher playlist must remain directly accessible'
+for vid in [series_review['trailer_video_id'],series_review['episode_one_video_id']]:
+ assert any(parse_qs(urlsplit(href).query).get('v')==[vid] and parse_qs(urlsplit(href).query).get('list')==[playlist] for href in series_links), 'series videos preserve publisher playlist context'
+preview=next(n for n in series_nodes if n.tag=='img')
+assert preview.attrs['src']==series_review['remote_thumbnail']
+assert '/'+series_review['trailer_video_id']+'/' in preview.attrs['src'], 'native preview must match trailer'
+assert preview.attrs.get('loading')=='lazy' and preview.attrs.get('alt')
+assert all(preview.attrs.get(k)==str(series_review[k]) for k in ['width','height'])
+assert series.order<next(n.order for n in stand if n.attrs.get('id')=='stand-forever'), 'series is discoverable before original devotional study'
+assert any(n.attrs.get('href')=='#video-series' for n in stand), 'study navigation reaches video series'
+assert not any(n.tag=='iframe' for n in series_nodes), 'direct publisher links work without an embedded player'
+
 grief=read(ROOT/'answers/grief-and-faith.html')
 for slug in ['nt/john/11','bofm/alma/7','bofm/mosiah/18']:
  assert any('churchofjesuschrist.org/study/scriptures/'+slug in n.attrs.get('href','') for n in grief)

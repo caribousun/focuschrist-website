@@ -916,15 +916,21 @@
     {
       "path": "answers/stand-forever.html",
       "status": "verified",
-      "published_text_sha256": "3d09ae2a5460a848ce851d05f1409523fe489a8fd491545849e16b91b8a581cf",
+      "published_text_sha256": "f810cab37ed7e73e25a5f2ded84b9dd731874b2397d142e1ebed7cb4054fed0b",
       "reviewed_on": "2026-09-07",
-      "review_standard": "Independent reviewer read full page and authoritative sources and explicitly approved semantic content. Existing approved Stand Forever subsection moved intact from Look Unto Me, including three companion media cards. Exact visible text comparison passed. New optional reflection/source/continuation scaffold distinguishes site study aids from source teaching.",
+      "review_standard": "Independent reviewer read full page and authoritative sources and explicitly approved semantic content. Existing approved Stand Forever subsection moved intact from Look Unto Me, including three companion media cards. Exact visible text comparison passed. New optional reflection/source/continuation scaffold distinguishes site study aids from source teaching. Independent series panel review: publisher-owned episode descriptions and BYU biography support the series purpose, Episode 1 title and relationship to 2019 devotional. Trailer and playlist links use verified identities; remote preview is native to trailer. No fixed episode count or unreviewed episode summaries introduced.",
       "authoritative_sources": [
         "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
         "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
         "https://www.churchofjesuschrist.org/study/general-conference/2015/10/faith-is-not-by-chance-but-by-choice?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson?lang=eng"
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson?lang=eng",
+        "https://www.youtube.com/playlist?list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://www.youtube.com/watch?v=sdgI1E6WJdQ&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://www.youtube.com/watch?v=dPnO2QEPrPg&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://speeches.byu.edu/speakers/lawrence-e-corbridge/",
+        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-series-official-trailer-elder-lawrence-e-corbridge",
+        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-1-will-you-stand-or-will-you-go-away-elder-lawrence-e-corbridge"
       ]
     },
     {
