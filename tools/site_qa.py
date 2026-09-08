@@ -69,6 +69,12 @@ PLACEHOLDER_CAPTION_PATTERNS = (
     r"does not prescribe",
     r"does not set a timetable",
     r"not a temple ceremony",
+    r"this study connects a historical life with a religious claim",
+    r"give each kind of question the sources it needs",
+    r"this page summarizes the church.s faith claim",
+    r"let this question give direction to the material below",
+    r"keep the source.s words distinct from your own reflection",
+    r"(?:material|content|information) below",
 )
 
 
@@ -419,8 +425,8 @@ def main() -> int:
         for issue in page['issues']:
             fail(errors, f"{page['page']}: {issue}")
 
-    # Artwork captions must describe or interpret the pictured moment. Generic
-    # production disclaimers are internal scaffolding and must never ship as copy.
+    # Artwork captions and their surrounding introductory/foundational copy must
+    # be concrete. Generic production or editorial scaffolding must never ship.
     caption_scope = [
         "answers.html",
         *(path.relative_to(ROOT).as_posix() for path in sorted((ROOT / "answers").glob("*.html"))),
@@ -434,7 +440,12 @@ def main() -> int:
             page_text,
             flags=re.IGNORECASE | re.DOTALL,
         )
-        visible_copy = " ".join(artwork_blocks)
+        introductory_blocks = re.findall(
+            r"<p\b[^>]*class=[\"'][^\"']*\blede\b[^\"']*[\"'][^>]*>.*?</p>|<section\b[^>]*fc-foundation-route[^>]*>.*?</section>",
+            page_text,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        visible_copy = " ".join((*artwork_blocks, *introductory_blocks))
         for pattern in PLACEHOLDER_CAPTION_PATTERNS:
             if re.search(pattern, visible_copy, flags=re.IGNORECASE):
                 fail(errors, f"{relative}: placeholder-style artwork caption matches {pattern!r}")

@@ -518,3 +518,8 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - Mobile opening panels follow their content. Do not restore a remaining-viewport or 100dvh minimum height that pushes actions below a blank band.
 - The Answers library and every individual Answer page use exactly one Continue/down arrow beneath the hero and no repeated body controls. About’s existing Continue control remains unchanged.
 - Preserve the 360x800 and 390x844 all-page checks for content containment, inter-element gaps, trailing space, horizontal overflow, hero framing and action visibility.
+## Answer introduction copy rule — 2026-09-08
+
+- Generic editorial scaffolding is prohibited not only in captions, alt text and expanded image panels, but also in Answer opening copy, foundational-question introductions, notices and text surrounding artwork.
+- State concrete page-specific history, belief, doctrine, source context or visible action. Do not publish phrases that merely explain that “this study” connects subjects, tells readers that different questions need different sources, or otherwise describes the page-building method.
+- Automated QA must inspect these introductory surfaces in addition to artwork blocks and placement ledgers.
