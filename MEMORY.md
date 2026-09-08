@@ -505,6 +505,13 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - The full reusable continuation prompt and active release status are recorded in `memory/2026-09-07.md`.
 - Home is the positional master for the gold opening statement. Every top-level page must align its gold statement to Home on the same vertical position and centered horizontal axis; subsequent elements flow downward. Never center the entire group independently by content height.
 
+## Permanent artwork-caption rule, September 8, 2026
+
+- Wyatt rejected generic image copy such as “historical study illustration, not a photograph or primary record” and “contemporary illustration ... does not depict.” These are internal placeholder/disclaimer statements and must never appear as the visitor-facing description.
+- Every caption and expanded artwork panel must describe a concrete visible element or meaningful action in that exact picture, then connect it naturally to the nearby scripture, doctrine, history, or reflection.
+- Use “Explore and study” only as the short shared eyebrow. The descriptive paragraph must remain image-specific, reverent, useful, and written in the established focusChrist voice.
+- When adding or editing artwork, audit both the inline caption and the expanded modal copy. Run the placeholder-caption gate in `tools/site_qa.py` before release, and extend its page inventory whenever the artwork system expands.
+
 ### focusChrist mobile opening-panel lock
 
 - Production PR 206 / dc3814f20fbf78266e32abee555d7f0bf7c973b2 removes excessive opening-panel space only at widths up to 700px across all public pages. Above 700px, the approved tablet and desktop layout is locked.

@@ -29,7 +29,7 @@
         },
         history: {
             title: 'Light in the Grove',
-            paragraphs: ['Sunlight enters a quiet wooded grove, revealing a path through the trees. The scene evokes the Sacred Grove and creates a reflective opening for the study of Church history; it does not depict a documented moment in the First Vision.', 'Let the image lead into the accounts themselves. Compare what Joseph Smith recorded, attend to the context of each account, and distinguish the historical sources from the artistic choices in this scene.'],
+            paragraphs: ['Sunlight enters a quiet wooded grove and reveals a path through the trees, creating a reflective opening for the study of the Sacred Grove and the First Vision.', 'Let the light, stillness and open path lead into the accounts themselves. Compare what Joseph Smith recorded and attend carefully to the context of each account.'],
             source: 'https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/first-vision-accounts?lang=eng', sourceLabel: 'Read First Vision Accounts', study: 'answers/who-was-joseph-smith.html', studyLabel: 'Study Joseph Smith and the Restoration'
         },
         pioneers: {
