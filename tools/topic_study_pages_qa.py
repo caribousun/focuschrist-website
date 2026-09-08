@@ -11,8 +11,13 @@ errors=[]
 nodes=read(ROOT/'answers.html')
 pills=next(n for n in nodes if n.has('fc-answers-jump-links'))
 links=[n for n in pills.walk() if n.tag=='a']
-assert len(links)==16
-assert len({n.attrs['href'] for n in links})==16
+foundational={
+ 'answers/god-our-heavenly-father.html',
+ 'answers/restored-church-of-jesus-christ.html',
+}
+expected={p.relative_to(ROOT).as_posix() for p in (ROOT/'answers').glob('*.html')}-foundational
+expected.add('general-conference.html')
+assert {n.attrs['href'] for n in links}==expected, 'topic jump panel must cover every non-foundational Answer plus General Conference'
 for link in links:
  href=link.attrs['href'];u=urlsplit(href)
  assert not u.fragment and not u.scheme, 'Every topic opens a dedicated local page'
@@ -24,7 +29,7 @@ for link in links:
  assert any(n.has('fc-visual-hero') for n in opening.walk()),href+': image in first screen'
  assert any(n.has('fc-page-intro') for n in opening.walk()),href+': title in first screen'
  assert any(n.has('fc-scroll-cue') and n.attrs.get('href')=='#main-content' for n in opening.walk()),href+': continue action'
- assert any(n.tag=='body' and n.has('fc-topic-page') for n in ns)
+ assert any(n.tag=='body' and (n.has('fc-topic-page') or n.has('fc-signature-study')) for n in ns)
  assert sum('topic-study-pages.css?' in n.attrs.get('href','') for n in ns)==1
  main=next(n for n in ns if n.tag=='main')
  assert main.order>opening.order and len(main.text().split())>200,href+': substantive study after opening'
@@ -91,4 +96,4 @@ for file in ['stand-forever','god-our-heavenly-father','jesus-christ-latter-day-
   if n.has('fc-inline-scripture'):
    assert n.attrs['href'].startswith('https://www.churchofjesuschrist.org/study/scriptures/')
    assert n.attrs.get('target')=='_blank' and 'noopener' in n.attrs.get('rel','')
-print('TOPIC STUDY PAGES QA PASS: 16 distinct pill destinations; complete openings, same-page hero return, and source-preserving migrations')
+print(f'TOPIC STUDY PAGES QA PASS: {len(links)} distinct pill destinations; complete openings, same-page hero return, and source-preserving migrations')

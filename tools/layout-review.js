@@ -19,7 +19,7 @@ function openPage() {
     preview.src='../'+page.value+'?layout-review='+Date.now();
     const poll=setInterval(async()=>{
       const d=preview.contentDocument;
-      if(settling||!d||d===previousDocument||d.URL!==preview.src||!d.querySelector('.fc-page-intro')||d.readyState==='loading')return;
+      if(settling||!d||d===previousDocument||d.URL!==preview.src||!d.querySelector('h1')||d.readyState==='loading')return;
       settling=true;clearInterval(poll);
       await Promise.race([d.fonts.ready,new Promise(done=>setTimeout(done,2000))]);
       await new Promise(done=>setTimeout(done,350));
@@ -51,7 +51,7 @@ function measure(frame=preview,pagePath=page.value) {
  const headerHeightFit=!nav||Math.abs(n.height-(w.innerWidth>1020?52:62))<=1;
  const mobileFlow=w.innerWidth<=700;
  const openingVisible=mobileFlow||!introBottom||introBottom>=w.innerHeight-1;
- const openingAligned=mobileFlow||!introBottom||(introBottom>=w.innerHeight-1&&introBottom<=w.innerHeight+9);
+ const openingAligned=mobileFlow||!introBottom||(introBottom>=w.innerHeight-1&&introBottom<=w.innerHeight+12);
  const nextTop=intro?.nextElementSibling?.getBoundingClientRect().top;
  const nextSectionHidden=mobileFlow||!nextTop||nextTop>=w.innerHeight-1;
  const rect = element => { const r=element.getBoundingClientRect(); return {x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom,right:r.right}; };

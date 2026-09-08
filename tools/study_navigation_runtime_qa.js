@@ -65,7 +65,12 @@ const pillBlock = html.match(/<div class="fc-answers-jump-links">([\s\S]*?)<\/di
 assert.ok(pillBlock,'real Answers topic pills required');
 const decode = x => x.replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const pills = [...pillBlock[1].matchAll(/<a[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(m => [decode(m[1]),decode(m[2])]);
-assert.equal(pills.length,16,'all sixteen user-visible topic pills are covered');
+const foundational = new Set(['god-our-heavenly-father.html','restored-church-of-jesus-christ.html']);
+const expectedPills = new Set(fs.readdirSync(path.join(root,'answers'))
+  .filter(file => file.endsWith('.html') && !foundational.has(file))
+  .map(file => 'answers/' + file));
+expectedPills.add('general-conference.html');
+assert.deepEqual(new Set(pills.map(([href]) => href)),expectedPills,'all discovered non-foundational Answers plus General Conference are covered');
 function check(h,label) {
   const active = h.header.querySelectorAll('a[aria-current]');
   assert.equal(active.length,2,label+': exactly one active link per navigation surface');
@@ -126,7 +131,7 @@ assert.equal(liveMenu.classList.contains('show'),false);assert.equal(trigger.foc
 
 // Every pill opens its own page; old bookmarks migrate on load and hashchange.
 assert.ok(pills.every(([href]) => !href.includes('#')), 'topic pills must open dedicated pages');
-assert.equal(new Set(pills.map(([href]) => href)).size,16,'topic pages must be distinct');
+assert.equal(new Set(pills.map(([href]) => href)).size,pills.length,'topic pages must be distinct');
 const legacySource = source.slice(source.indexOf('const conferenceLegacyAnchors'),source.indexOf('const RESPECTFUL_QUESTION_RESPONSE'));
 for (const [oldPath,oldHash,destination] of [
  ['/answers.html','#quiet-prayer-title','answers/prayer-and-personal-revelation.html'],
@@ -144,4 +149,4 @@ for (const [oldPath,oldHash,destination] of [
  location.pathname='/ask.html';location.hash=oldHash;listeners.forEach(fn=>fn());assert.deepEqual(replacements,[]);
 }
 
-console.log('STUDY NAVIGATION RUNTIME QA PASS: all 16 actual topic pills, article routes, CFM/Conference labels, hash restoration, preserved parent links, and duplicate prevention.');
+console.log(`STUDY NAVIGATION RUNTIME QA PASS: all ${pills.length} discovered topic pills, article routes, CFM/Conference labels, hash restoration, preserved parent links, and duplicate prevention.`);
