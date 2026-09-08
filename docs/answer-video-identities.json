@@ -550,6 +550,46 @@
       "aliases": [
         "https://www.youtube.com/watch?v=dPnO2QEPrPg"
       ]
+    },
+    "god-stand-forever-29": {
+      "kind": "video",
+      "presentation": "Scripture Central",
+      "url": "https://www.youtube.com/watch?v=z32F-d_tsgg",
+      "title": "Stand Forever, Episode 29: Is There a God Who Is Our Father?",
+      "video_identity": "youtube.com/watch/z32F-d_tsgg",
+      "aliases": [
+        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-29-the-truth-is-there-a-god-who-is-our-father-elder-lawrence-e-corbridge"
+      ]
+    },
+    "god-overcome-world": {
+      "kind": "video",
+      "presentation": "General Conference of The Church of Jesus Christ",
+      "url": "https://www.youtube.com/watch?v=RFKePsgTNg0",
+      "title": "Overcome the World and Find Rest",
+      "video_identity": "youtube.com/watch/RFKePsgTNg0",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/47nelson?lang=eng"
+      ]
+    },
+    "restored-hear-him": {
+      "kind": "video",
+      "presentation": "The Church of Jesus Christ of Latter-day Saints",
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-04-4050-russell-m-nelson?lang=eng",
+      "title": "Hear Him",
+      "video_identity": "churchofjesuschrist.org/media/video/2020-04-4050-russell-m-nelson",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2020/04/45nelson?lang=eng"
+      ]
+    },
+    "restored-come-join": {
+      "kind": "video",
+      "presentation": "The Church of Jesus Christ of Latter-day Saints",
+      "url": "https://www.youtube.com/watch?v=APwBCEjvSJQ",
+      "title": "Come, Join with Us",
+      "video_identity": "youtube.com/watch/APwBCEjvSJQ",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2013/10/come-join-with-us?lang=eng"
+      ]
     }
   }
 }

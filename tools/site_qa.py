@@ -20,6 +20,9 @@ CORE = {
     "about.html": "https://focuschrist.com/about.html",
 }
 ANSWER_PAGES = {
+    "answers/god-our-heavenly-father.html": "https://focuschrist.com/answers/god-our-heavenly-father.html",
+    "answers/restored-church-of-jesus-christ.html": "https://focuschrist.com/answers/restored-church-of-jesus-christ.html",
+
     "answers/grief-and-faith.html": "https://focuschrist.com/answers/grief-and-faith.html",
     "answers/stand-forever.html": "https://focuschrist.com/answers/stand-forever.html",
 

@@ -1043,6 +1043,55 @@
       "sha256": "2f71cce4b5ce2f4b3ecec484091e77df114fa2be2f6b66ef7a6f4248fb3f48d9",
       "verified_date": "2026-09-07",
       "presentation": "Approved focusChrist illustration accompanying official scripture reading; not a source-native thumbnail."
+    },
+    {
+      "key": "god-stand-forever-29",
+      "url": "https://www.youtube.com/watch?v=z32F-d_tsgg",
+      "title": "Stand Forever, Episode 29: Is There a God Who Is Our Father?",
+      "thumbnail": "https://i.ytimg.com/vi/z32F-d_tsgg/hqdefault.jpg",
+      "transcript_url": "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-29-the-truth-is-there-a-god-who-is-our-father-elder-lawrence-e-corbridge",
+      "verified_date": "2026-09-07",
+      "remote_thumbnail": "https://i.ytimg.com/vi/z32F-d_tsgg/hqdefault.jpg",
+      "width": 480,
+      "height": 360,
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?lang=eng"
+      ]
+    },
+    {
+      "key": "god-overcome-world",
+      "url": "https://www.youtube.com/watch?v=RFKePsgTNg0",
+      "title": "Overcome the World and Find Rest",
+      "thumbnail": "https://i.ytimg.com/vi/RFKePsgTNg0/hqdefault.jpg",
+      "transcript_url": "https://www.churchofjesuschrist.org/study/general-conference/2022/10/47nelson?lang=eng",
+      "verified_date": "2026-09-07",
+      "remote_thumbnail": "https://i.ytimg.com/vi/RFKePsgTNg0/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+    },
+    {
+      "key": "restored-hear-him",
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-04-4050-russell-m-nelson?lang=eng",
+      "title": "Hear Him",
+      "thumbnail": "assets/page-art/home-light-through-study-900.webp",
+      "transcript_url": "https://www.churchofjesuschrist.org/study/general-conference/2020/04/45nelson?lang=eng",
+      "verified_date": "2026-09-07",
+      "local_thumbnail": "assets/page-art/home-light-through-study-900.webp",
+      "width": 900,
+      "height": 507,
+      "sha256": "2f71cce4b5ce2f4b3ecec484091e77df114fa2be2f6b66ef7a6f4248fb3f48d9",
+      "presentation": "Clearly labeled approved study illustration, not native video poster"
+    },
+    {
+      "key": "restored-come-join",
+      "url": "https://www.youtube.com/watch?v=APwBCEjvSJQ",
+      "title": "Come, Join with Us",
+      "thumbnail": "https://i.ytimg.com/vi/APwBCEjvSJQ/hqdefault.jpg",
+      "transcript_url": "https://www.churchofjesuschrist.org/study/general-conference/2013/10/come-join-with-us?lang=eng",
+      "verified_date": "2026-09-07",
+      "remote_thumbnail": "https://i.ytimg.com/vi/APwBCEjvSJQ/hqdefault.jpg",
+      "width": 480,
+      "height": 360
     }
   ],
   "reviewed_on": "2026-09-07",

@@ -28,11 +28,18 @@ for file,keys in coverage.items():
  if actual!=keys:errors.append(f'{file}: coverage differs: {actual}')
  for c in parser.cards:
   count+=1;r=sources[c['key']]
-  if len(c['images'])!=1 or len(c['links'])!=2:errors.append(f'{file}: malformed resource card {c["key"]}');continue
-  if any(a.get('href')!=r['url'] for a in c['links']):errors.append(f'{file}: mismatched source {c["key"]}')
+  if len(c['images'])!=1 or len(c['links'])!=((3 if r.get('transcript_url') else 2)+len(r.get('inline_scripture_urls',[]))):errors.append(f'{file}: malformed resource card {c["key"]}');continue
+  expected_links=[r['url'],r['url']]+([r['transcript_url']] if r.get('transcript_url') else [])
+  inline_links=[a for a in c['links'] if 'fc-inline-scripture' in a.get('class','').split()]
+  if [a.get('href') for a in inline_links]!=r.get('inline_scripture_urls',[]):errors.append(f'{file}: unreviewed inline scripture')
+  if [a.get('href') for a in c['links'] if a not in inline_links]!=expected_links:errors.append(f'{file}: mismatched source {c["key"]}')
   if any(any(k in a for k in ['data-hero-viewer','data-full-image-viewer']) for a in c['links']):errors.append(f'{file}: preview hijacked by artwork viewer')
-  i=c['images'][0];img=(p.parent/i['src']).resolve()
-  if img!=ROOT/r['local_thumbnail'] or hashlib.sha256(img.read_bytes()).hexdigest()!=r['sha256']:errors.append(f'{file}: image mismatch')
+  i=c['images'][0]
+  if r.get('remote_thumbnail'):
+   if i['src']!=r['remote_thumbnail']:errors.append(f'{file}: remote native thumbnail mismatch')
+  else:
+   img=(p.parent/i['src']).resolve()
+   if img!=ROOT/r['local_thumbnail'] or hashlib.sha256(img.read_bytes()).hexdigest()!=r['sha256']:errors.append(f'{file}: image mismatch')
   if any(str(r[k])!=i.get(k) for k in ['width','height']) or i.get('loading')!='lazy':errors.append(f'{file}: missing intrinsic sizing/lazy load')
  for link in parser.links:
   u=urlsplit(link)

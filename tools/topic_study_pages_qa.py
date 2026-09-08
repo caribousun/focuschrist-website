@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Gate dedicated topic destinations, complete openings, study content and migration."""
 from pathlib import Path
+import re
 from urllib.parse import urlsplit, unquote, parse_qs
 from answer_study_qa import Document
 ROOT=Path(__file__).resolve().parents[1]
@@ -31,6 +32,26 @@ for link in links:
  return_path=parse_qs(urlsplit(hero.attrs['data-hero-ask']).query)['return'][0]
  assert urlsplit(return_path).path=='/'+href,href+': art study returns to same page'
 stand=read(ROOT/'answers/stand-forever.html');look=read(ROOT/'answers/look-unto-me-doctrine-and-covenants-6-36.html')
+# The four primary questions are full-card links to substantive interconnected studies.
+foundation=next(n for n in stand if n.has('fc-primary-grid') and n.has('fc-foundation-grid'))
+cards=[n for n in foundation.children if n.tag=='article']
+assert len(cards)==4
+routes=[]
+for card in cards:
+ anchors=[n for n in card.walk() if n.tag=='a'];assert len(anchors)==1, 'one accessible link per primary card'
+ href=anchors[0].attrs['href'];routes.append(href)
+ assert any(n.tag=='h4' for n in anchors[0].walk()) and any(n.tag=='img' for n in anchors[0].walk())
+ target=ROOT/'answers'/href;ns=read(target)
+ assert sum(n.tag=='h1' for n in ns)==1
+ assert len(next(n for n in ns if n.tag=='main').text().split())>800
+ assert any(urlsplit(n.attrs.get('href','')).path=='stand-forever.html' for n in ns)
+ assert any('data-full-image-viewer' in n.attrs for n in ns) or href=='restored-church-of-jesus-christ.html'
+assert set(routes)=={'god-our-heavenly-father.html','jesus-christ-latter-day-saint-beliefs.html','who-was-joseph-smith.html','restored-church-of-jesus-christ.html'}
+for file in ['god-our-heavenly-father.html','restored-church-of-jesus-christ.html']:
+ ns=read(ROOT/'answers'/file);hero=next(n for n in ns if 'data-hero-viewer' in n.attrs)
+ assert urlsplit(parse_qs(urlsplit(hero.attrs['data-hero-ask']).query)['return'][0]).path=='/answers/'+file
+ assert any(n.has('fc-topic-opening') for n in ns)
+ assert any(n.attrs.get('href')=='#main-content' and n.has('fc-scroll-cue') for n in ns)
 keys={'stand-lord-i-believe','stand-faith-choice','stand-spiritual-momentum'}
 assert keys <= {n.attrs.get('data-resource-key') for n in stand}
 assert not keys & {n.attrs.get('data-resource-key') for n in look},'Stand Forever videos moved, not duplicated'
@@ -57,4 +78,17 @@ for slug in ['nt/john/11','bofm/alma/7','bofm/mosiah/18']:
  assert any('churchofjesuschrist.org/study/scriptures/'+slug in n.attrs.get('href','') for n in grief)
 assert any('data-full-image-viewer' in n.attrs for n in grief),'approved grief artwork remains viewable'
 assert not any('/media/video/' in n.attrs.get('href','') for n in grief),'reading-only grief study has no duplicate video'
+# Explicit references in enriched study prose and headings open the scripture reader.
+reference=re.compile(r'\b(?:Doctrine and Covenants|D&C|3 Nephi|John|Luke|Matthew|Acts|Moses|Alma|Ephesians|Mosiah)\s+\d+(?::\d+(?:[–-]\d+)?)?')
+for file in ['stand-forever','god-our-heavenly-father','jesus-christ-latter-day-saint-beliefs','who-was-joseph-smith','restored-church-of-jesus-christ']:
+ ns=read(ROOT/'answers'/(file+'.html'));main=next(n for n in ns if n.tag=='main')
+ for n in main.walk():
+  ancestor=n;inside_link=False
+  while ancestor:
+   inside_link=inside_link or ancestor.tag=='a';ancestor=ancestor.parent
+  if not inside_link:assert not reference.search(' '.join(n.words)),file+': unlinked explicit scripture reference'
+  if n.tag=='a':assert not any(child.tag=='a' for child in n.walk() if child is not n),'nested anchor'
+  if n.has('fc-inline-scripture'):
+   assert n.attrs['href'].startswith('https://www.churchofjesuschrist.org/study/scriptures/')
+   assert n.attrs.get('target')=='_blank' and 'noopener' in n.attrs.get('rel','')
 print('TOPIC STUDY PAGES QA PASS: 16 distinct pill destinations; complete openings, same-page hero return, and source-preserving migrations')
