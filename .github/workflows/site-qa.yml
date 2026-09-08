@@ -32,7 +32,9 @@ jobs:
         run: python tools/site_qa.py
 
       - name: Run Come Follow Me hub QA
-        run: python tools/come_follow_me_qa.py
+        run: |
+          python tools/come_follow_me_qa.py
+          node tools/come_follow_me_reading_runtime_qa.js
 
       - name: Verify General Conference study hub and filters
         run: |
