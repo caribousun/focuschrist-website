@@ -29,7 +29,7 @@
         const paragraphs = Array.from(caption.querySelectorAll('p')).filter(proseOnly).map(safeClone);
         if (paragraphs.length) return paragraphs;
         const fallback = safeClone(caption);
-        fallback.querySelectorAll('h2,h3,' + excluded).forEach(function (node) { node.remove(); });
+        fallback.querySelectorAll('h2,h3,h4,:scope > strong,' + excluded).forEach(function (node) { node.remove(); });
         fallback.querySelectorAll('p').forEach(function (p) { if (!proseOnly(p)) p.remove(); });
         if (!fallback.textContent.trim()) return [];
         const paragraph = document.createElement('p');
@@ -99,7 +99,7 @@
             const figure = trigger.closest('figure, .fc-marriage-era, .fc-foundation-card');
             const caption = figure.querySelector('figcaption, .fc-marriage-era__copy, .fc-foundation-card-copy');
             const target = readingTarget(figure, index);
-            const heading = caption && caption.querySelector('h2,h3,h4');
+            const heading = caption && caption.querySelector('h2,h3,h4,:scope > strong');
             const record = {
                 title: heading ? heading.textContent.trim() : target.textContent.trim(),
                 paragraphs: [],

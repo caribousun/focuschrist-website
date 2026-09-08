@@ -192,9 +192,16 @@ def main() -> int:
         (ROOT / relative).read_text(encoding="utf-8", errors="replace")
         for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
     ]
-    viewer_triggers = sum(text.count("data-full-image-viewer") - text.count("data-enriched-study-art=") - text.count("data-five-picture-mandate") - text.count("data-art-study-supporting") for text in viewer_documents)
+    # Preserve the existing enriched-figure scope; supporting Art & Study
+    # pictures are counted separately because they no longer carry viewer attrs.
+    viewer_triggers = sum(text.count("data-full-image-viewer") - text.count("data-enriched-study-art=") - text.count("data-five-picture-mandate") for text in viewer_documents)
     if viewer_triggers != 20:
         errors.append(f"same-page full-image viewer must have exactly 20 scoped triggers, found {viewer_triggers}")
+    for relative in ART_STUDY_PAGES:
+        text = (ROOT / relative).read_text(encoding="utf-8")
+        supporting = [anchor for anchor in re.findall(r'<a\b[^>]*>', text) if 'data-art-study-supporting' in anchor]
+        if len(supporting) != 4 or any('data-full-image-viewer' in anchor for anchor in supporting):
+            errors.append(f"{relative}: requires four supporting picture study triggers without direct full-size activation")
     if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:
         errors.append("shared artwork full-size action is not enrolled in the same-page viewer")
     if 'id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in missionary:
