@@ -54,6 +54,14 @@ You wake up fresh each session. These files are your continuity:
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
+## focusChrist media voice gate
+
+- Every new or edited picture, artwork panel, video card, thumbnail, and media introduction must be reviewed in the visitor-facing context before release.
+- Write with calm, sincere, reverent human warmth. Begin with what can actually be seen or heard, let the human feeling emerge from the moment, and connect it naturally to Jesus Christ, scripture, history, or the nearby study.
+- Do not publish language that sounds like an asset ledger, legal disclaimer, content-generation note, or AI bridge sentence. Avoid repeated constructions such as “reflects the,” “represents,” “embodies,” “makes room for,” “allowing uncertainty,” “directing attention,” or “without presuming.”
+- Warmth never permits invention. Do not assign an unseen relationship, emotion, historical fact, or speaker claim unless the picture, page context, transcript, or verified source supports it.
+- Audit the visible caption, hidden detail-panel copy, alternative text, media introduction, source label, and linked destination together. Run `python tools/media_voice_qa.py` before committing.
+
 ### 🧠 MANDATORY MEMORY RECALL
 
 **ALWAYS run `memory_search` BEFORE answering questions about:**

@@ -53,7 +53,11 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - Use the shared eyebrow “Explore and study” for study artwork. It identifies the interaction without consuming the descriptive paragraph.
 - Preserve source integrity through accurate nearby prose, exact source links, image-specific alternative text, and clear separation between cited claims and reflective application. Do not use repeated disclaimer sentences as a substitute for those controls.
 - Review the page caption and the expanded detail-panel copy together. They may share the same approved description; neither surface may retain stale placeholder language.
-- `tools/site_qa.py` is the release gate for this rule across every permanent Answer page plus Church History and General Conference. Extend its caption scope when another page adopts this artwork pattern.
+- A caption may be accurate and still fail if it sounds clinical, procedural, emotionally distant, or machine-written. Do not merely inventory the people and objects and then attach an abstract lesson. Let a visible gesture, expression, relationship, setting, or quality of light carry the feeling of the moment.
+- Use natural, varied sentences rather than repeating a generated formula. Phrases such as “reflects the,” “represents,” “embodies,” “makes room for,” “allowing uncertainty,” “directing attention,” and “without presuming” are warning signs in media copy and should be replaced with concrete human language.
+- Warmth must never become invention. A relationship, emotion, historical identity, speaker teaching, or doctrinal connection must be visible in the artwork or supported by the nearby page context, transcript, or verified source.
+- Apply this same voice to video and resource introductions. Name what the message offers and why it may matter to the visitor; do not use a generic action sentence merely to fill the card.
+- `tools/site_qa.py` protects against explicit placeholders. `tools/media_voice_qa.py` protects the warmer human voice across all public pages, captions, hidden detail copy, and media resources. Both are mandatory release gates.
 
 ## Site-wide interaction inventory
 
