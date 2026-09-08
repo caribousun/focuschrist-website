@@ -66,7 +66,7 @@ require(not any('data-conference-talk' in n.attrs for n in answers_nodes), 'Answ
 require(any(n.attrs.get('id') == 'general-conference' for n in answers_nodes), 'legacy Answers fragment needs a useful migration destination')
 require(any(n.tag == 'a' and urlsplit(n.attrs.get('href', '')).path == 'general-conference.html' for n in answers_nodes), 'Answers needs a direct standalone conference route')
 nodes = list(hub.walk())
-require(sum('data-full-image-viewer' in n.attrs for n in nodes) == 1, 'study illustration must retain one full-image action')
+require(sum('data-full-image-viewer' in n.attrs for n in nodes) == 6, 'conference must retain its opening viewer and five manifested body artwork viewers')
 ids = Counter(n.attrs['id'] for n in all_nodes if 'id' in n.attrs)
 require(all(count == 1 for count in ids.values()), 'conference page IDs must remain unique')
 cards = [n for n in nodes if 'data-conference-talk' in n.attrs]

@@ -60,6 +60,8 @@ jobs:
           python tools/topic_study_pages_qa.py
           python tools/topic_inline_scripture_qa.py
             python tools/topic_artwork_qa.py
+            python tools/topic_body_picture_qa.py
+            python tools/five_picture_manifest_qa.py
           python tools/answer_study_qa.py
           python tools/answer_video_uniqueness_qa.py
           python tools/global_video_uniqueness_qa.py

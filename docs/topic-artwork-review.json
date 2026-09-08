@@ -224,20 +224,20 @@
     },
     {
       "name": "christ-disciples-replacement",
-      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-062720c6-2e72-4c88-9ce2-27702bcce83b.png",
-      "source_sha256": "b241bab3d8c7d5cd9b1b6d899d440f4f320dc23a41f0a7baee88e7a7224f945e",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-7e228250-8715-4256-877e-d6512b6b34ad.png",
+      "source_sha256": "6c2ffa701e57bbdffdd71970aacfd71c78bbfbf8b002d0dbbd2c3edc980ae0c3",
       "status": "approved",
-      "review": "Direct comparison with Home confirms closely matching eyes, nose, beard, hair and smile. Open hand and resting hand anatomically plausible; natural seated conversation without romantic staging.",
+      "review": "Root and independent reviewer compared the new turned-head teaching composition against the approved Home face. Both eyes now attend coherently to the same visible listener; Home identity, natural hands and crisp skin and cloth are preserved. Replaces the owner-flagged uneven gaze.",
       "robe": "muted terracotta over cream",
       "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
       "published_assets": [
         {
-          "path": "assets/page-art/topics/christ-disciples-800.webp",
-          "sha256": "2ba56a12d1c085acbdf161c224502d26df8fcae1724d0076ab69d9b7fee6858e"
+          "path": "assets/page-art/topics/christ-disciples-gaze-v2-800.webp",
+          "sha256": "2ee02c002693295a2b9f86eee03f432bbec0e0edd4dfd2f40b7fd8ef246f3f7f"
         },
         {
-          "path": "assets/page-art/topics/christ-disciples-1536.webp",
-          "sha256": "db27abf2fd6b96240fe3857fc97f4d78783fd2ad4ffc24f4f50c0d0a7c0d0a9e"
+          "path": "assets/page-art/topics/christ-disciples-gaze-v2-1536.webp",
+          "sha256": "12c2eb794a8816b7d8bc1c770f432c126f9eaaacc1929eae8a20b2b53e4d116d"
         }
       ]
     }

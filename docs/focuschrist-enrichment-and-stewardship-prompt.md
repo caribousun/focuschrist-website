@@ -53,3 +53,19 @@ The three-day production check includes a small rotating enrichment review appro
 ## Complete enriched trigger and artwork gate
 
 The word enriched, whether used by Wyatt or the agent, invokes this entire directive automatically for any work on the site. All new imagery must have ultra-high clarity and near-photographic realism like the Home hero. Every Christ image must be compared side by side with the actual approved Home image; reject any identity drift before publication. Avoid accumulated section padding and excessive blank space; verify rendered gaps and first-screen boundaries. Preserve a recoverable checkpoint in the Focus brain, with Master aligned to the reusable directive.
+
+
+## Mandatory per-page picture coverage and interaction learning
+
+Every topic study page must contain at least five distinct, meaningful body pictures distributed beside the relevant reading within the established page boundaries. Hero images, video previews, resource-card thumbnails and repeated copies do not count toward this minimum. Jesus Christ requires substantial visual coverage appropriate to the central subject. The complete enriched standard still applies to every picture, source, study path and layout.
+
+Inspect rendered picture proportions against intrinsic dimensions at phone and desktop sizes. Constrained width must not retain an unrelated fixed height. Never stretch artwork. Audit each page individually; aggregate placement totals are not proof of complete enrichment.
+
+After every interaction, persist decisions, corrections, lessons, verified results and unfinished work in the canonical Focus records and relevant Master routing. Read back saved updates. A new Focus session must recover from the Master-directed current record. The September 8 Grief stretching and insufficient per-page coverage are explicit regression lessons.
+
+
+## Eye detail and learned layout gates
+
+For every enriched Christ image, compare the complete scene and face detail with the approved Home identity at full resolution and display size. Check both pupils, irises, eyelids, perspective and shared gaze direction. Preserve natural asymmetry; reject wandering, crossed or mismatched generated gaze. Reject a generated correction that does not visibly resolve the defect.
+
+Body artwork must preserve intrinsic proportions, reserve a positive native-ratio box before lazy loading, and include its intended stylesheet. A width reduction must not retain fixed height; a maximum height must not distort the image box. Wide images need their own native ratio. Verify all of this in rendered phone and desktop pages, not solely by reviewing markup.

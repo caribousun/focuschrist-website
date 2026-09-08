@@ -1,0 +1,55 @@
+{
+  "home_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+  "reviewers": [
+    "root",
+    "independent verification agent"
+  ],
+  "approved": [
+    {
+      "name": "christ-children",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-ac0711e8-d954-4d19-ad82-1814a12075b9.png",
+      "source_sha256": "6d3cc54cbff2e5df4c04661fa51ec085c02f14d14b422be46bca6b53c55faa64",
+      "review": "Home likeness, coherent gaze, natural hands and children, petrol-teal robe and near-photographic clarity approved. Mark 10:13-16 devotional interpretation.",
+      "assets": [
+        {
+          "path": "assets/page-art/topics/christ-children-800.webp",
+          "sha256": "3576a23dbafeb4b43a3da81476867554e6e0c3f1b339c7cd796a38d39b6389a7"
+        },
+        {
+          "path": "assets/page-art/topics/christ-children-1536.webp",
+          "sha256": "5c05133df1559c31a57c184f7172d6371d7cbe9bb5f2b7bbf6bfac7306b783d8"
+        }
+      ]
+    },
+    {
+      "name": "christ-disciples-gaze-v2",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-7e228250-8715-4256-877e-d6512b6b34ad.png",
+      "source_sha256": "6c2ffa701e57bbdffdd71970aacfd71c78bbfbf8b002d0dbbd2c3edc980ae0c3",
+      "review": "Root and independent reviewer compared the new turned-head teaching composition against the approved Home face. Both eyes now attend coherently to the same visible listener; Home identity, natural hands and crisp skin and cloth are preserved. Replaces the owner-flagged uneven gaze.",
+      "assets": [
+        {
+          "path": "assets/page-art/topics/christ-disciples-gaze-v2-800.webp",
+          "sha256": "2ee02c002693295a2b9f86eee03f432bbec0e0edd4dfd2f40b7fd8ef246f3f7f"
+        },
+        {
+          "path": "assets/page-art/topics/christ-disciples-gaze-v2-1536.webp",
+          "sha256": "12c2eb794a8816b7d8bc1c770f432c126f9eaaacc1929eae8a20b2b53e4d116d"
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-062720c6-2e72-4c88-9ce2-27702bcce83b.png",
+      "reason": "Superseded after owner flagged uneven eye gaze."
+    },
+    {
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-5c351762-67b7-4bd3-8034-f70ed06c5223.png",
+      "reason": "Rejected: first localized edit did not clearly correct gaze."
+    },
+    {
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-a99ecd46-c577-405e-a345-317a90384661.png",
+      "reason": "Rejected: second localized edit still ambiguous."
+    }
+  ]
+}

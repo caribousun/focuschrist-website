@@ -16,7 +16,7 @@ placements=json.loads((ROOT/'docs/topic-artwork-placement.json').read_text(encod
 assert len(placements)==21
 review=json.loads((ROOT/'docs/topic-artwork-review.json').read_text(encoding='utf-8'))
 approved={r['name']:r for r in review['assets'] if r['status']=='approved'}
-approved['christ-disciples']=approved['christ-disciples-replacement']
+approved['christ-disciples-gaze-v2']=approved['christ-disciples-replacement']
 for record in review['assets']:
  for asset in record['published_assets']:
   assert hashlib.sha256((ROOT/asset['path']).read_bytes()).hexdigest()==asset['sha256'],asset['path']+' changed after independent visual review'

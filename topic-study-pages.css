@@ -21,3 +21,6 @@ body.fc-site.fc-topic-page main > section > :first-child{margin-top:0}
 body.fc-site.fc-topic-page main > section > :last-child{margin-bottom:0}
 body.fc-site.fc-topic-page main > h2{margin-top:32px}
 body.fc-site.fc-topic-page main .fc-study-lead > :is(h2,h3){margin-top:0}
+
+/* Preserve intrinsic proportions when legacy body artwork is narrowed by its container. */
+body.fc-site.fc-topic-page main figure img:not(.fc-resource-card img){max-width:100%;height:auto;max-height:none;aspect-ratio:auto var(--study-image-ratio,3/2);object-fit:contain}
