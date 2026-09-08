@@ -1,0 +1,40 @@
+{
+  "verifiedDate": "2026-09-07",
+  "page": "answers/grief-and-faith.html",
+  "newResources": [
+    {
+      "key": "grief-sunday-will-come",
+      "title": "Sunday Will Come",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2006/10/sunday-will-come?lang=eng",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/7e33d906e873c3fbd4b75ab8bd277a872457fb1b/full/%21768%2C/0/default",
+      "speaker": "Joseph B. Wirthlin",
+      "date": "October 2006",
+      "description": "Hear Elder Wirthlin remember loved ones and speak about the Resurrection. Notice how he speaks of missing them while expressing hope in Christ.",
+      "sourceEvidence": "Full official text read, paragraphs on parents/sister/wife, sorrow, Resurrection, and hope in this life or the next. Native video preview is source page leading player image, distinct from speaker portrait.",
+      "claims": "Wirthlin remembers parents, sister and wife; describes continued sorrow; connects hope to Resurrection. No timetable assigned to individual grief.",
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "image/jpeg",
+      "video_identity": "www.churchofjesuschrist.org/study/general-conference/2006/10/sunday-will-come",
+      "aliases": []
+    },
+    {
+      "key": "grief-christ-is-relief",
+      "title": "Jesus Christ Is Relief",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/04/42johnson?lang=eng",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/c638944b0f0e5062d6f12d2449b66c9bfed18950/full/%21768%2C/0/default",
+      "speaker": "Camille N. Johnson",
+      "date": "April 2023",
+      "description": "Study President Johnson’s invitation to help carry another person’s burdens. Consider one practical form of care that the grieving person would welcome.",
+      "sourceEvidence": "Full official text read, including three kinds of burdens and paragraphs connecting grief/mortal burdens with Mosiah18 care through other people. Native video preview is source page leading player image.",
+      "claims": "Johnson distinguishes grief and mortal burdens from sin, discusses covenant care and temporal/spiritual relief; focusChrist does not apply self-reflective pride language as explanation of another person’s ongoing grief.",
+      "thumbnailStatus": 200,
+      "thumbnailContentType": "image/jpeg",
+      "video_identity": "www.churchofjesuschrist.org/study/general-conference/2023/04/42johnson",
+      "aliases": []
+    }
+  ],
+  "newScripture": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/1?id=p3-p7&lang=eng#p3",
+  "readerCatalogRequirement": "Verify 2 Corinthians1 is in existing catalog; official fallback must remain available.",
+  "preservation": "Both previous scripture resource cards preserved byte-for-byte; approved opening hero and grief artwork unchanged.",
+  "validation": "Unique IDs, internal anchors, existing card identity pass. Video title/URL search found no Answer or Watch duplication before edit. New source posters returned200 image MIME. Independent semantic/browser/ledger QA remains required."
+}

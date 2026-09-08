@@ -1,0 +1,261 @@
+{
+  "reviewed_on": "2026-09-08",
+  "scope": "Independent visual review of12 nonrejected generation outputs. Caption/source integration and rendered page review remain separate.",
+  "home_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+  "excluded": "Owner-rejected initial disciples image remains excluded; never approved or reused.",
+  "prior_robe_inventory": [
+    "ivory",
+    "olive",
+    "slate blue",
+    "ochre",
+    "burgundy",
+    "deep blue-gray",
+    "lavender-gray"
+  ],
+  "assets": [
+    {
+      "name": "christ-praying",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-4d8f2f21-c8f2-46e3-bf45-6d08a30dda96.png",
+      "source_sha256": "260addd59f41d62cf569b7ef293459dbf4e4b55fdddd454574d47c2fa01a9aee",
+      "status": "approved",
+      "review": "Recognizable Home facial structure in lowered three-quarter view; natural clasped hands and kneeling proportions. Quiet devotional setting.",
+      "robe": "deep forest green over undyed linen",
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/christ-praying-800.webp",
+          "sha256": "f73822a024b50bc670e30fac34cd204c60b652d29b7919e8550e6ed3999bea09"
+        },
+        {
+          "path": "assets/page-art/topics/christ-praying-1536.webp",
+          "sha256": "d7e18101a8de21f3cf9072c5a9a2af1544040d644e51ff45215db965f1d905a1"
+        }
+      ]
+    },
+    {
+      "name": "christ-bountiful",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-d9a41e4a-e47d-4f90-8a91-e7d721a86387.png",
+      "source_sha256": "763439794d535bc543fd73718870fbb39fdec68381861168f7389ba4e8524858",
+      "status": "approved",
+      "review": "Home facial proportions and smile retained; natural open hand and attentive group. Use caption as interpretation of3Nephi11, not archaeological reconstruction.",
+      "robe": "pale cerulean over cream",
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/christ-bountiful-800.webp",
+          "sha256": "7f7c26b6aaab078cc05c7ae509d3350f9290cf03d2e97ebb22dddfffa93158ef"
+        },
+        {
+          "path": "assets/page-art/topics/christ-bountiful-1536.webp",
+          "sha256": "1fd4063b0789e0a7d2a71bc5939d9bbf8e025556797f92705b3f87108a492927"
+        }
+      ]
+    },
+    {
+      "name": "christ-storm",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-a3746553-589f-47bb-8cff-41648c25dc41.png",
+      "source_sha256": "3bfc832e5b2a3572f733c7d9849418113ff7b784f582d1c13d862e037d38c667",
+      "status": "approved",
+      "review": "Home facial structure remains recognizable with serious expression; extended hand and boat occupants read naturally. Storm setting conveys scripture context without glamour.",
+      "robe": "muted dark plum-brown over neutral linen",
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/christ-storm-800.webp",
+          "sha256": "5e378b332818789cf4b697df3fc291b30fdf4ef13087450f0f839ecade1dfff3"
+        },
+        {
+          "path": "assets/page-art/topics/christ-storm-1536.webp",
+          "sha256": "047c440935b9ed81e066ec6ca96a54779de1b627656e3d51f225d81b449dd332"
+        }
+      ]
+    },
+    {
+      "name": "paired-scripture-study",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-9550eb19-ec0a-4b71-bda8-fd0c3d6c0bd4.png",
+      "source_sha256": "6f0df02f2b4098bc6a33f72f4d621b504b5ec404bae234ee14c5e1a3a1941eec",
+      "status": "approved",
+      "review": "Crisp books, cloth and hands; suitable comparative study illustration. Printed texture is not verified readable scripture and must not be quoted as source text.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/paired-scripture-study-800.webp",
+          "sha256": "07384075d53cb0f0d6fa4060064fa5309329ff55cb6b72e13c05c2a13249e780"
+        },
+        {
+          "path": "assets/page-art/topics/paired-scripture-study-1536.webp",
+          "sha256": "b591ce2407b479d825b5721ad35e36d80d4567ad42f58473cfe1f5dc599fbd57"
+        }
+      ]
+    },
+    {
+      "name": "family-study",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-d12f99d7-1bd1-4d7a-97aa-535d05594f88.png",
+      "source_sha256": "4d4c8c419c7160f37ceb9cf501268b80a4639d967820e1952bc9c44a89dc6cc3",
+      "status": "approved",
+      "review": "Natural multigenerational listening, proportions and visible hands; crisp ordinary home context.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/family-study-800.webp",
+          "sha256": "6e85b1fad1fe3e2a6167b36d08242eac1b106cc0ecb457d35a7f1e33e6c5476c"
+        },
+        {
+          "path": "assets/page-art/topics/family-study-1536.webp",
+          "sha256": "29efff57999f7a3c12fe9ab0c0c55df0e312b98ce1e6795352e964a88aaaff57"
+        }
+      ]
+    },
+    {
+      "name": "neighbor-service",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-b08f085b-5411-421a-99da-0a0a45ac8e8a.png",
+      "source_sha256": "86bb1ff1902c32f0ee1a6662689e76091b1908649d2879b8150b43943226a174",
+      "status": "approved",
+      "review": "Practical food/flower delivery with natural expressions and believable visible hands. Respectful everyday support.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/neighbor-service-800.webp",
+          "sha256": "39cf0eb2a845fe3a97e5757c892780ddf4623b452f5c8db696a4ed4d2ce9c6cb"
+        },
+        {
+          "path": "assets/page-art/topics/neighbor-service-1536.webp",
+          "sha256": "c18faa48000335d614d12891966cd90de5617221d251e521af9b2db3249b8b02"
+        }
+      ]
+    },
+    {
+      "name": "garden-tomb",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-113e1b4f-af01-4e27-8352-8b0ea4d074f1.png",
+      "source_sha256": "3bfe52f482c20b65d8a701cbfa4a582bc40c598d7a94959845a3c2b047bcfa47",
+      "status": "approved",
+      "review": "Replacement inspected at original resolution. Chamber shadows, stone edges and foliage are cleaner. Remaining texture reads as natural rough limestone. Suitable illustrative empty-tomb scene, without a claim to document a specific historical site.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/garden-tomb-800.webp",
+          "sha256": "d301d4f5b34c9ad34867e335a7378753a0a8a5df96c0dd5fbf811ddac5263198"
+        },
+        {
+          "path": "assets/page-art/topics/garden-tomb-1536.webp",
+          "sha256": "51236fe4f4307d921a17b3295d77b9eb5e8fe1e466ca270c62c3c7ce472b5c01"
+        }
+      ]
+    },
+    {
+      "name": "supportive-walk",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-8e2797be-735b-465a-b9a1-0ee9f608301f.png",
+      "source_sha256": "7c1eece07c522d1720118509470fd4e8e8e9a6ae08baad87f5001e18956d5618",
+      "status": "approved",
+      "review": "Natural gait, cane contact and proportions; respectful personal space and unforced conversation. No romantic or miraculous-healing staging.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/supportive-walk-800.webp",
+          "sha256": "98118707346050b9185bb0ba72ce45e75f2051f3be0777853d334e259943bc26"
+        },
+        {
+          "path": "assets/page-art/topics/supportive-walk-1536.webp",
+          "sha256": "2e8e2225a02344e7e524be61b6024aa4a4bbb5d77aadf82400111f5e38d3094c"
+        }
+      ]
+    },
+    {
+      "name": "quiet-study",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-89218699-e37e-43b0-8e41-bf6233c7272f.png",
+      "source_sha256": "91c9f28cd9bdd8039dc2f701be4089943008f35e24ca8fb266dffa6fa602e729",
+      "status": "approved",
+      "review": "Crisp face, fabric and natural page-following hand. Ordinary thoughtful study; book typography is illustrative, not source text.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/quiet-study-800.webp",
+          "sha256": "2694f861b6c2fb00f115de9e373b96b49ac2c7b9338e7cc1f9e2e4fceea52393"
+        },
+        {
+          "path": "assets/page-art/topics/quiet-study-1536.webp",
+          "sha256": "8b8ca8f2e40b19e5aa8e88e3f80ace1dad7216e4c6c95a105d0aa12d46203306"
+        }
+      ]
+    },
+    {
+      "name": "listening-in-grief",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-c9954289-8be6-422f-a9e5-490edfdc4e00.png",
+      "source_sha256": "cda42780df951a5f570ff0fb3a4d44f5adfa66debc311a2c0c5ea90ac49415ae",
+      "status": "approved",
+      "review": "Clear natural faces and hands, restrained expressions and attentive listening. Does not imply a specific bereavement or documented individuals.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/listening-in-grief-800.webp",
+          "sha256": "33e9da0bf834fc0e6db6cd37a7a543a1955037808d44ec8ed325ac765c7fce1b"
+        },
+        {
+          "path": "assets/page-art/topics/listening-in-grief-1536.webp",
+          "sha256": "2887ed7d2772bc517405a2568f6925bf41c89b32a170a27351e154608d362cb4"
+        }
+      ]
+    },
+    {
+      "name": "historical-study-desk",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-e5ec28da-0342-4cdb-8614-0fb5c9d956d0.png",
+      "source_sha256": "8399f0cfe0e044030a0a3fb95a29f162e0177708d7f14288f8433a69a33f7b32",
+      "status": "approved",
+      "review": "Crisp tabletop, blank papers, book and quill; suitable contextual historical-study scene without invented readable document text.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/historical-study-desk-800.webp",
+          "sha256": "f184ce1cb33fea2ca8b8343fc8463bbfbdefd494c60672b95d6c6bf3d9e020ff"
+        },
+        {
+          "path": "assets/page-art/topics/historical-study-desk-1536.webp",
+          "sha256": "0707bbcd6851d4f11a1fde254e504aba1df34a39fdfa16da3c2cf6a3d0ffea80"
+        }
+      ]
+    },
+    {
+      "name": "christ-disciples-replacement",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-062720c6-2e72-4c88-9ce2-27702bcce83b.png",
+      "source_sha256": "b241bab3d8c7d5cd9b1b6d899d440f4f320dc23a41f0a7baee88e7a7224f945e",
+      "status": "approved",
+      "review": "Direct comparison with Home confirms closely matching eyes, nose, beard, hair and smile. Open hand and resting hand anatomically plausible; natural seated conversation without romantic staging.",
+      "robe": "muted terracotta over cream",
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference.",
+      "published_assets": [
+        {
+          "path": "assets/page-art/topics/christ-disciples-800.webp",
+          "sha256": "2ba56a12d1c085acbdf161c224502d26df8fcae1724d0076ab69d9b7fee6858e"
+        },
+        {
+          "path": "assets/page-art/topics/christ-disciples-1536.webp",
+          "sha256": "db27abf2fd6b96240fe3857fc97f4d78783fd2ad4ffc24f4f50c0d0a7c0d0a9e"
+        }
+      ]
+    }
+  ],
+  "rejected_outputs": [
+    {
+      "name": "garden-tomb",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-f8e7e620-1d05-4d4b-8fb8-b7082092c73d.png",
+      "source_sha256": "caf0a61b6f7feecf3aa9930962c71246f90dd7b4634d465d9eff3e97c43d1024",
+      "status": "rejected for clarity",
+      "review": "Scene and open tomb composition fit; coarse grain/mottled texture weakens rock, shadow and foliage clarity. Regenerate to match crisp photographic quality of the other images.",
+      "robe": null,
+      "viewed": "Actual full-resolution individual image; Christ images compared with exact approved Home reference."
+    }
+  ],
+  "caption_review": {
+    "status": "approved",
+    "placements": 21,
+    "method": "Each caption and its exact source selection read against verified primary chapter text. Contemporary applications and artistic interpretation are identified separately from scripture events and historical evidence. Full viewer, uncropped image styling and exact source pairing checked by tools/topic_artwork_qa.py."
+  }
+}

@@ -1,0 +1,12 @@
+.fc-study-visual{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:center;margin:24px 0 28px;padding:0;max-width:100%}
+.fc-study-visual>a{display:block;min-width:0;border-radius:12px;overflow:hidden;background:#102b36}
+.fc-study-visual img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:contain;margin:0}
+.fc-study-visual figcaption{min-width:0;color:#dce6e9;font-size:1rem;line-height:1.7}
+.fc-study-visual figcaption h3{margin:6px 0 12px!important;font-size:1.2rem;line-height:1.35;color:#f0c36a}
+.fc-study-visual figcaption p{margin:0 0 12px!important}
+.fc-study-visual figcaption p:last-child{margin-bottom:0!important}
+.fc-study-visual .fc-study-visual-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c6d8dc}
+.fc-study-visual-sources{display:flex;flex-wrap:wrap;gap:8px 16px}
+.fc-study-visual-sources a{color:#f0c36a;text-decoration:underline;text-underline-offset:3px}
+.fc-study-visual>a:focus-visible{outline:3px solid #f0c36a;outline-offset:4px}
+@media(max-width:700px){.fc-study-visual{grid-template-columns:minmax(0,1fr);gap:16px;margin-block:20px 24px}.fc-study-visual figcaption{font-size:.96rem}}
