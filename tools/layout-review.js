@@ -30,8 +30,9 @@ function openPage() {
 function measure(frame=preview,pagePath=page.value) {
  const d=frame.contentDocument,w=frame.contentWindow;
  const nav=d.querySelector('.nav'),hero=d.querySelector('.fc-visual-hero');
- const rows=[...d.querySelectorAll('.fc-study-feature')].map(row=>{
+ const rows=[...d.querySelectorAll('.fc-study-feature')].flatMap(row=>{
   const prose=row.querySelector(':scope > div'),card=row.querySelector(':scope > .fc-resource-card');
+  if(!prose||!card)return [];
   const p=prose.getBoundingClientRect(),c=card.getBoundingClientRect();
   const side=c.left>=p.right-1;
   return {key:card.dataset.resourceKey,sideBySide:side,proseHeight:Math.round(p.height),cardHeight:Math.round(c.height),excess:side?Math.round(c.height-p.height):0};
