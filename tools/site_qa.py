@@ -40,6 +40,7 @@ HEADER_PAGES = {
 }
 HEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")
 PLACEHOLDER_CAPTION_PATTERNS = (
+    r"\bstudy illustration\b",
     r"historical study illustration",
     r"contemporary (?:study )?illustration",
     r"not a photograph(?: or primary record)?",

@@ -32,6 +32,7 @@ jobs:
         run: |
           python tools/site_qa.py
           python tools/site_flow_qa.py
+          python tools/media_voice_qa.py
 
       - name: Run Come Follow Me hub QA
         run: |

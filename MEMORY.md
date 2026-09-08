@@ -511,6 +511,10 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - Every caption and expanded artwork panel must describe a concrete visible element or meaningful action in that exact picture, then connect it naturally to the nearby scripture, doctrine, history, or reflection.
 - Use “Explore and study” only as the short shared eyebrow. The descriptive paragraph must remain image-specific, reverent, useful, and written in the established focusChrist voice.
 - When adding or editing artwork, audit both the inline caption and the expanded modal copy. Run the placeholder-caption gate in `tools/site_qa.py` before release, and extend its page inventory whenever the artwork system expands.
+- Wyatt also rejected technically correct copy that still sounded clinical, over-explained, emotionally distant, or machine-written. Describing the objects in a picture is not enough. The prose must help a visitor feel the compassion, hope, reverence, grief, companionship, courage, or quiet faith already present in the exact moment.
+- Use short, varied, natural sentences. Prefer visible people, gestures, expressions, light, setting, relationship and human stakes over abstract bridge language such as “reflects the,” “represents,” “embodies,” “makes room for,” “allowing uncertainty,” “directing attention,” or disclaimer-like qualifications.
+- The rule applies site-wide to pictures, artwork dialogs, video and resource cards, thumbnails, opening media copy, alternative text and duplicated placement records. Warmth must remain factually supported; never invent an emotion, relationship, historical claim or message detail that the image, transcript, nearby study or verified source does not establish.
+- `tools/media_voice_qa.py` is now a required CI and Pages-deployment gate. It audits the complete public HTML inventory and fails if clinical placeholder patterns return in captions or expanded media descriptions.
 
 ### focusChrist mobile opening-panel lock
 
