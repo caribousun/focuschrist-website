@@ -17,19 +17,31 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   if not panel.has('fc-study-feature--illustrated'):errors.append(page.name+': body artwork still nested in split study panel')
   for f in [n for n in panel.walk() if n.has('fc-study-visual')]:
    if f.parent is not panel:errors.append(page.name+': artwork not lifted out of narrow study/media column')
- for a in [n for n in ns if n.tag=='a' and 'href' in n.attrs and (n.parent.tag=='figure' or n.has('fc-marriage-era__art'))]:
+ for a in [n for n in ns if n.tag=='a' and 'href' in n.attrs and (n.parent.tag=='figure' or n.has('fc-marriage-era__art') or n.has('fc-foundation-card__image'))]:
   if not any(n.tag=='img' for n in a.walk()) or not any(n.tag=='main' for n in parents(a)):continue
   if any(n.has('fc-resource-card') or n.tag=='dialog' for n in parents(a)):continue
   if 'data-artwork-detail' in a.attrs:
    preserved+=1;continue
   count+=1;container=a.parent
-  cap=next((n for n in container.walk() if n.tag=='figcaption' or n.has('fc-marriage-era__copy')),None)
+  cap=next((n for n in container.walk() if n.tag=='figcaption' or n.has('fc-marriage-era__copy') or n.has('fc-foundation-card-copy')),None)
   if cap is None or not cap.text().strip():errors.append(page.name+': missing approved body caption')
   sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname=='www.churchofjesuschrist.org'] if cap else []
-  if not sources and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
+  if not sources and 'data-topic-study' not in a.attrs and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
   if 'data-full-image-viewer' not in a.attrs:errors.append(page.name+': native image fallback missing')
   if not (page.parent/urlsplit(a.attrs['href']).path).resolve().is_file():errors.append(page.name+': full image missing')
-assert (count,preserved)==(95,3),(count,preserved)
+assert (count,preserved)==(99,3),(count,preserved)
 assert panels==13,panels
+stand=Document();stand.feed((ROOT/'answers/stand-forever.html').read_text(encoding='utf-8'));stand_nodes=list(stand.root.walk())
+foundation_images=[n for n in stand_nodes if n.tag=='a' and n.has('fc-foundation-card__image')]
+assert len(foundation_images)==4,len(foundation_images)
+for image in foundation_images:
+ study=image.attrs.get('data-topic-study','');assert study and (ROOT/'answers'/study).is_file(),study
+ card=next(n for n in parents(image) if n.has('fc-foundation-card'))
+ direct=next((n for n in card.walk() if n.tag=='a' and n.has('fc-foundation-card-action')),None)
+ assert direct is not None and direct.attrs.get('href')==study,(study,direct.attrs.get('href') if direct else None)
+ assert 'data-full-image-viewer' in image.attrs and 'data-full-image-alt' in image.attrs
+adapter=(ROOT/'topic-artwork-details.js').read_text(encoding='utf-8')
+assert "if (!record.study) {" in adapter,'Foundation cards must not inherit unrelated section sources'
+assert "if (record.study) pill(record.studyLabel, record.study, true);" in adapter,'Foundation topic action missing from detail panel'
 if errors:raise SystemExit('\n'.join(errors))
 print(f'TOPIC ARTWORK DETAILS QA PASS: {count} adapter pictures, {preserved} existing detail pictures, {panels} expanded illustration panels, 19 page dependencies')

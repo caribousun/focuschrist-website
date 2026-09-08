@@ -185,7 +185,7 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", "hero-details.js?v=20260906-centered-panels", "hero-details.css?v=20260906-centered-panels", "artwork-details.css?v=20260905-viewport"):
+        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", "hero-details.js?v=20260906-centered-panels", "hero-details.css?v=20260908-dialog-grid", "artwork-details.css?v=20260905-viewport"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
         hero_links = re.findall(r'<a[^>]*data-hero-viewer[^>]*>', page)
@@ -237,6 +237,34 @@ def main() -> int:
     for marker in (".fc-artwork-detail-dialog::backdrop", "margin: auto;", "@media (max-width: 820px)", ".fc-artwork-detail-close::before", ".fc-artwork-detail-close::after", "translate(-50%, -50%) rotate(45deg)", "translate(-50%, -50%) rotate(-45deg)", ".fc-artwork-detail-actions [hidden]", "display: none !important;"):
         if marker not in css:
             errors.append(f"artwork-details.css: missing presentation marker: {marker}")
+
+    action_css = (ROOT / "artwork-actions.css").read_text(encoding="utf-8")
+    close_rule = re.search(
+        r"\.fc-site\s+:is\(\.fc-artwork-detail-actions,\s*\.fc-missionary-detail-actions\)\s*>\s*:is\(\[data-artwork-detail-close\],\s*\[data-missionary-detail-close\]\)\s*\{([^}]+)\}",
+        action_css,
+        re.S,
+    )
+    if not close_rule:
+        errors.append("artwork-actions.css: shared detail-dialog close action rule missing")
+    else:
+        declarations = close_rule.group(1)
+        for marker in ("grid-column: auto;", "justify-self: stretch;", "width: 100%;", "min-width: 0;", "margin-top: 0;"):
+            if marker not in declarations:
+                errors.append(f"artwork-actions.css: desktop detail actions can separate again; missing {marker}")
+        if re.search(r"grid-column:\s*1\s*/\s*-1", declarations):
+            errors.append("artwork-actions.css: desktop close action must not span a separate full row")
+
+    hero_css = (ROOT / "hero-details.css").read_text(encoding="utf-8")
+    hero_close_rule = re.search(r"\.fc-site \.fc-hero-detail-dialog \.fc-artwork-detail-actions > \[data-hero-close\]\s*\{([^}]+)\}", hero_css, re.S)
+    if not hero_close_rule:
+        errors.append("hero-details.css: desktop hero close action rule missing")
+    else:
+        declarations = hero_close_rule.group(1)
+        for marker in ("grid-column: auto;", "justify-self: stretch;", "width: 100%;", "min-width: 0;", "margin-top: 0;"):
+            if marker not in declarations:
+                errors.append(f"hero-details.css: desktop hero actions can separate again; missing {marker}")
+        if re.search(r"grid-column:\s*1\s*/\s*-1", declarations):
+            errors.append("hero-details.css: desktop hero close action must not span a separate full row")
 
     mission_css = (ROOT / "missionary.css").read_text(encoding="utf-8")
     mission_dialog_rule = re.search(r'\.fc-missionary-detail-dialog\s*\{([^}]+)\}', mission_css, re.S)

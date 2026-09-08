@@ -4,6 +4,7 @@
 <figure id="family"><a href="https://example.org/art.png"><img alt="Art"></a><figcaption><h3>Family</h3><p>Read <a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng">Romans 12</a> and care together.</p></figcaption></figure>
 <figure id="fallback"><a href="https://example.org/art.png"><img alt="Art"></a><figcaption><h3>Fallback</h3>Study <a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng">John 11</a> in context.</figcaption></figure>
 <figure id="unsafe"><a href="https://example.org/art.png"><img alt="Art"></a><figcaption><h3>Safe copying</h3><p id="original-paragraph">Study <a href="javascript:alert(1)" onclick="alert(1)">this</a> and <a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng">John 11</a> safely.</p></figcaption></figure>
+<article><div class="fc-foundation-card" id="foundation"><a class="fc-foundation-card__image" href="https://example.org/foundation.png" data-topic-study="god.html" data-topic-study-label="Open God study"><img alt="A woman praying beside an open book"></a><div class="fc-foundation-card-copy"><h4>God</h4><p>A woman pauses in prayer beside an open book, bringing a sincere question before God.</p><a class="fc-foundation-card-action" href="god.html">Open study</a></div></div></article>
 </section></main><script src="../topic-artwork-details.js"></script><script>
 window.addEventListener('load',()=>{
  const assert=(ok,message)=>{if(!ok)throw Error(message)};
@@ -22,6 +23,15 @@ window.addEventListener('load',()=>{
     dialog.close();assert(document.querySelector('#'+id+' figcaption').innerHTML===original,id+' leaves original caption intact');
    }
   }
+  document.querySelector('#foundation > a').click();
+  const foundationDialog=document.querySelector('#topicArtworkDetailDialog');
+  assert(foundationDialog.open,'foundation picture opens the standard detail panel');
+  assert(foundationDialog.querySelector('#topicArtworkDetailTitle').textContent==='God','foundation panel keeps its topic title');
+  assert(foundationDialog.querySelector('.fc-artwork-detail-copy').textContent==='A woman pauses in prayer beside an open book, bringing a sincere question before God.','foundation panel uses its specific picture copy');
+  const foundationActions=Array.from(foundationDialog.querySelectorAll('.fc-artwork-detail-actions > :is(a,button)')).map(node=>node.textContent.trim());
+  for(const label of ['Open God study','View Full-Size Image','Continue Lesson','Close'])assert(foundationActions.includes(label),'foundation panel includes '+label);
+  assert(foundationActions.length===4,'foundation panel does not inherit unrelated section sources');
+  foundationDialog.close();
   document.body.dataset.qa='PASS';document.body.dataset.cases=String(cases.length);console.log('TOPIC ARTWORK CAPTION QA PASS: four DOM fixtures, exact linked prose, source pills, safe fallback, repeated open, original DOM preservation');
  }catch(error){document.body.dataset.qa='FAIL';document.body.dataset.error=error.message;throw error;}
 });

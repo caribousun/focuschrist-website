@@ -59,6 +59,22 @@ PLACEHOLDER_CAPTION_PATTERNS = (
     r"let this question give direction to the material below",
     r"keep the source.s words distinct from your own reflection",
     r"(?:material|content|information) below",
+    r"the scene shows",
+    r"this scene shows",
+    r"read the instruction to study",
+    r"distinguish (?:its|the) teaching from questions",
+    r"keep the historical introduction",
+    r"what (?:a|the) source says",
+    r"keep (?:the )?(?:source|account|passage) (?:beside|open)",
+    r"follow the linked (?:text|introduction)",
+)
+SITE_WIDE_EDITORIAL_SCAFFOLDING_PATTERNS = (
+    r"the scene shows",
+    r"this scene shows",
+    r"read the instruction to study",
+    r"distinguish (?:its|the) teaching from questions",
+    r"keep the historical introduction",
+    r"what (?:a|the) source says",
 )
 
 
@@ -142,6 +158,12 @@ def inspect_html(path: Path, errors: list[str], require_noopener: bool = True) -
 
 def main() -> int:
     errors: list[str] = []
+
+    for path in sorted(ROOT.rglob("*.html")):
+        page_text = path.read_text(encoding="utf-8", errors="replace")
+        for pattern in SITE_WIDE_EDITORIAL_SCAFFOLDING_PATTERNS:
+            if re.search(pattern, page_text, flags=re.IGNORECASE):
+                fail(errors, f"{path.relative_to(ROOT).as_posix()}: site-wide editorial scaffolding matches {pattern!r}")
 
     for media_path in ROOT.rglob("*"):
         if media_path.is_file() and media_path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif"}:
