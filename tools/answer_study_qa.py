@@ -12,24 +12,24 @@ VOID = {'area','base','br','col','embed','hr','img','input','link','meta','param
 class Node:
     def __init__(self, tag='', attrs=(), parent=None, order=0):
         self.tag, self.attrs, self.parent, self.order = tag, dict(attrs), parent, order
-        self.children, self.words = [], []
+        self.children, self.words, self.content = [], [], []
     def has(self, cls): return cls in self.attrs.get('class','').split()
     def walk(self):
         yield self
         for child in self.children: yield from child.walk()
     def text(self, without_cards=False):
         if without_cards and self.has('fc-resource-card'): return ''
-        return ' '.join(self.words + [c.text(without_cards) for c in self.children])
+        return ''.join(c if isinstance(c,str) else c.text(without_cards) for c in self.content)
 class Document(HTMLParser):
     def __init__(self):
         super().__init__(); self.root=Node(); self.stack=[self.root]; self.order=0
     def handle_starttag(self, tag, attrs):
-        self.order+=1; n=Node(tag,attrs,self.stack[-1],self.order); self.stack[-1].children.append(n)
+        self.order+=1; n=Node(tag,attrs,self.stack[-1],self.order); self.stack[-1].children.append(n); self.stack[-1].content.append(n)
         if tag not in VOID: self.stack.append(n)
     def handle_endtag(self, tag):
         for i in range(len(self.stack)-1,0,-1):
             if self.stack[i].tag==tag: self.stack=self.stack[:i]; break
-    def handle_data(self, text): self.stack[-1].words.append(text)
+    def handle_data(self, text): self.stack[-1].words.append(text); self.stack[-1].content.append(text)
 
 def check():
     errors=[]

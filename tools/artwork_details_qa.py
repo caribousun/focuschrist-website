@@ -51,9 +51,10 @@ def main() -> int:
         if re.search(r'id="artworkDetailStudy"[^>]*href=', text):
             errors.append(f"{relative}: hidden study action must not have a default destination")
         prefix = "../" if "/" in relative else ""
+        detail_version = "20260908-continue-lesson" if relative in {"answers/death-of-a-child.html", "answers/divorce-and-faith.html"} else "20260905-home-study"
         for marker in (
             'href="artwork-details.css?v=20260905-viewport"',
-            'src="artwork-details.js?v=20260905-home-study"',
+            f'src="artwork-details.js?v={detail_version}"',
             'id="artworkDetailSource"',
             'id="artworkDetailStudy" hidden',
             'id="artworkDetailFullImage"',

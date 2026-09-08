@@ -1,0 +1,1828 @@
+{
+  "assets": [
+    {
+      "name": "christian-context",
+      "status": "approved",
+      "source_sha256": "e8f17d4933514009a6538f236a1972001f224d3d716aa0733a5e61e7bde488b7",
+      "source_decoded_rgb_sha256": "40969d4eaf9adf764413369416c9e7ceab6b89072348c1ea4a07d52d96c5d614",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-db71d51f-9879-43df-8ea8-6e27a4fbab4b.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/christian-context-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "38cfa56fa3a3d59978809213e4a0fed0ba369ca9f9aad48aeee03ac122a07e46",
+          "decoded_rgb_sha256": "53186268008853224b2efc0e3fb69a96e188ffeeeb6a5d60661d1babc3b9587f"
+        },
+        {
+          "path": "assets/page-art/exclusive/christian-context-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "3d38df0b74132dfc47d04913a094e0c9ed3899c9ef36b13c3d2f954895b11838",
+          "decoded_rgb_sha256": "2fbc66486b3827d11a7ac18f9543590740280183936bcdcda21b6a875156d58f"
+        }
+      ]
+    },
+    {
+      "name": "christian-question",
+      "status": "approved",
+      "source_sha256": "f7e2de0104cd76d24f6b99965ff46defa5e4f485e7f1cbe28d9cb5bf30c883fb",
+      "source_decoded_rgb_sha256": "c291ddecad9e4082b6d2f2a6fdfb48e241892362a5feec09b905ad354ea50c41",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-b6c00c0e-6fdd-4546-8863-8d465a39b6d0.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/christian-question-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "2eda22eb7d825069cb4f53abeb174f1d35dea27ff86a106bbf0683f60fe910e3",
+          "decoded_rgb_sha256": "839c60a95fbb2a65fe1905932fe5a995a2d2842f97f4ac376a18b6770b0441d3"
+        },
+        {
+          "path": "assets/page-art/exclusive/christian-question-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "ea7e826614ba78435548af7679e9ad6601e99a40aa37caa72d5b0e739c564826",
+          "decoded_rgb_sha256": "132b07649d6910f41d8c80e9e2e06e85c2429d80d3001aaf637e2ddebf3abcf0"
+        }
+      ]
+    },
+    {
+      "name": "christian-care",
+      "status": "approved",
+      "source_sha256": "782091cb6f5c869ac25e8e3485f265a11c772e81ddd730c7b0a09840b0cc5d29",
+      "source_decoded_rgb_sha256": "0a64a262bdb0d62d04fe29fab153bc7b323fccc37234e39233d6d7a8f81262d6",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-9d4659f3-89ee-4bb7-855f-f2068483cc95.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/christian-care-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "43943fa119048736d4dfd266f97a16062b27010d49e45a368c8b37c1374405b4",
+          "decoded_rgb_sha256": "6ec3a38a23f3184f58f3d09a478ef59850d9c8ce1d0ce5c5a7ddd8946783e08e"
+        },
+        {
+          "path": "assets/page-art/exclusive/christian-care-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "bc8067b3c509eaaed627d60ddb4856d3a4f54a357b11d9d49add4c069fa8ba90",
+          "decoded_rgb_sha256": "fdfd5698ccc067980fa844f889ff33eb8300a11d44a89bf56f53e68a98bfedcb"
+        }
+      ]
+    },
+    {
+      "name": "christian-listening",
+      "status": "approved",
+      "source_sha256": "45730e20fd5c0455edc649cf9b592a40f2b44c7166b71c7cf5bc7e56b88ac92c",
+      "source_decoded_rgb_sha256": "0b75d039c77e57568637c0adbda9b2938367673103565007a3bd40e8a8d7ab39",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-306504f6-13f2-4448-bfad-2370a2719495.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/christian-listening-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "7ddb00dc1b3ba3bea55d6bb79f04cb5a2468a9e778bcd21287d5a1eb2ef298ef",
+          "decoded_rgb_sha256": "e759991eb7971c3eca5b0b32625b5be92fa5f8f33596ed24cc14184f7339a7a2"
+        },
+        {
+          "path": "assets/page-art/exclusive/christian-listening-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "ea5bf932030801aa71b81adb94155d4355830236f6c7fc02cc4833d6063060f1",
+          "decoded_rgb_sha256": "37c061e1e7734fd8e5b7315798ed68e4d164c379db0dca3a5e9cf79675eab170"
+        }
+      ]
+    },
+    {
+      "name": "jesus-risen-witness",
+      "status": "approved",
+      "source_sha256": "9b95082783906b42366ebf618a6db7a8c0dc19c73bc8325a2a814cb32a0b56d0",
+      "source_decoded_rgb_sha256": "51a6b6359e25421f43f67d828106662449f6567d19cfdf72d42bee120ef59697",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-37a11e0a-75eb-4f38-ab14-038fa2abfe23.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/jesus-risen-witness-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "53a94a52744db92f00e1033c6ba622ae5a3ce10885c6cff22d3443f26198af71",
+          "decoded_rgb_sha256": "035d4166340fb726951766c8bdbed2f097cbe0a319dcebe650bbf590e68db136"
+        },
+        {
+          "path": "assets/page-art/exclusive/jesus-risen-witness-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "505fdfeda1933ba91a2deab1d4597c98257f7ca6df5c893f77bcda933740011e",
+          "decoded_rgb_sha256": "581b924890fc91b8d2efc507f6602f1106eec05d996d5a09bc95c36e846d8edc"
+        }
+      ]
+    },
+    {
+      "name": "jesus-storm-question",
+      "status": "approved",
+      "source_sha256": "28f1a018b9ed813584359efc69ddf90114d4d2617081cda9f977aef825bdb8f3",
+      "source_decoded_rgb_sha256": "d763ded8ec9fb6d848bf7a88a46d7ec622b0bbcf34a8c4627285b16d77fa05bc",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-9ab813ab-996a-4b8f-b37f-768ee2173a1c.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/jesus-storm-question-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "b55150dcefbcc50baaa44ede28d270082ed56c3971c980e1220b096a42998338",
+          "decoded_rgb_sha256": "e6c338cd1129a61b27b43487b1e9f917580cd39bc91be73d67a83b498b47e4e2"
+        },
+        {
+          "path": "assets/page-art/exclusive/jesus-storm-question-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "e0a658ce64bb06231174a8ba7ab2cce3f511cd38595e7a7883525273c7d5fb95",
+          "decoded_rgb_sha256": "fd77f89c9aced16780f5b190f9cf62a890cac2d9ce8255d7b7a8b65a642fca58"
+        }
+      ]
+    },
+    {
+      "name": "divorce-porch-support",
+      "status": "approved",
+      "source_sha256": "63d6129650a5d83bada484452bd1833a24e25ba2c1d36328d57a923c789525ee",
+      "source_decoded_rgb_sha256": "5504fb905d4c06e31cbaeff00d8bb35a7806550c702cd88ac90df281dcd0e228",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-c6342f3f-2104-4cfe-93ef-b7c91391d873.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/divorce-porch-support-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "ade444bc6f610bd5aff19d195b353c4845b4d03748ab78b6a9d896a5e1ba5cd5",
+          "decoded_rgb_sha256": "cdf8434f3ee6d4e7e8490a3d846d0adcde82346841bcfafb4ff59fac2baa5d78"
+        },
+        {
+          "path": "assets/page-art/exclusive/divorce-porch-support-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c401b749a99576e89dd37b5d4f00a6eeb8b1e0081884289078d2a077b2ad45c1",
+          "decoded_rgb_sha256": "648018369f79bc19607d4eb1e25edfe7dbb5a8316511c949d5e2469a007adfc9"
+        }
+      ]
+    },
+    {
+      "name": "divorce-listen-with-care",
+      "status": "approved",
+      "source_sha256": "a48fc56a4b5685dae029a8878eb821e977fe229d172d367c42a11ccfd046a579",
+      "source_decoded_rgb_sha256": "cae64801f9ef090f3073668e36ea9df37d2820f4ae6d56e9038548fbd39f32d5",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-1a3dc0cd-00c4-40e2-bf06-213b069a9b29.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/divorce-listen-with-care-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "cafda9e8912af847261ef2193b64031883db570885879533c2742543de29d8b9",
+          "decoded_rgb_sha256": "58d8ce92d1502e6c2e8de7291c4ba4b22cc0b17cd7ce46594fb2769a1586e78e"
+        },
+        {
+          "path": "assets/page-art/exclusive/divorce-listen-with-care-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "cf1c5260e7744abd464905a4aa36634350a39152e8aed3991c02217de19f2604",
+          "decoded_rgb_sha256": "fc722eddcb3089f27e488cadee11acacec5d8c6b36d01d549c582aed95bfa09e"
+        }
+      ]
+    },
+    {
+      "name": "divorce-steady-morning",
+      "status": "approved",
+      "source_sha256": "f3ebb2dd4d0dab39381d206b78b5a96b45c45c7b490655e209cce66befa99755",
+      "source_decoded_rgb_sha256": "d1f7cae9f3290d9ce579a9bd089db23819dc6d323b48b762f3a170d3f8d21a46",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-56a6eeb7-025d-497a-bc3b-da00ede9b0d5.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/divorce-steady-morning-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "0fd43bf30ad1c23190c24f0573e618ed7b93466ffc280956617aa9cf16732db8",
+          "decoded_rgb_sha256": "2164909d95ff7740a4dde0627a2a0fa455d9ceb6e7fb0dc62e87ce526f21e73b"
+        },
+        {
+          "path": "assets/page-art/exclusive/divorce-steady-morning-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "6d6a531432174b3322fb93be6cafa9d2b864917576f41725f4d245c9264b526c",
+          "decoded_rgb_sha256": "fd2e553690e87fee16169e4b6e775a450b90198ea8cabbbc579a660f430f45a1"
+        }
+      ]
+    },
+    {
+      "name": "divorce-practical-help",
+      "status": "approved",
+      "source_sha256": "a0a91486f933e6f6a751b6fb8fe9a455bc13b711430815061f9c9709fef4cfb3",
+      "source_decoded_rgb_sha256": "106ff6c03852225b5c841346a9d69d0b85d3d0f3f9bb352e827370a7bff47d5a",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-db5dddb7-8f45-428c-b6cf-890aea15b528.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/divorce-practical-help-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "9f0ed675134f7a9e4f93c0d39006914acbbdeb9e89326845ef2e32cb7c37c5ef",
+          "decoded_rgb_sha256": "db78decdb3cfc441a5de12e03ca1f33955ea666a6a2cc9e2ac658876ba3eac75"
+        },
+        {
+          "path": "assets/page-art/exclusive/divorce-practical-help-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "f47d18adcc8cac2f45b7a8484379349ee40e13a92e1a421276e060c00b44f8fd",
+          "decoded_rgb_sha256": "ed32a9b856b5f5922db186eb98734b3fbef17aa2ca072424d625f38884f6ad33"
+        }
+      ]
+    },
+    {
+      "name": "life-after-death-careful-reading",
+      "status": "approved",
+      "source_sha256": "acf857cd830f378e25458b385bb3cfb6f5a5e718eecb86159f1f81857f290c47",
+      "source_decoded_rgb_sha256": "d617f439cf0d9d0feab9272355b268f401a1cd2143385444029694b8a979a060",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-6d3953c1-b971-4d5b-a942-424089deadd7.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/life-after-death-careful-reading-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "d08907214bfce4d38b789412b21a53aec1b0084ca238672ffacbebfc3d55a8b5",
+          "decoded_rgb_sha256": "e5c0a2fd00aa033b3412532d0c48783cdca5103ba912f0e092946e5d35fe7c6f"
+        },
+        {
+          "path": "assets/page-art/exclusive/life-after-death-careful-reading-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "16460b0c9ff4f4b9a894aa35f82d2b9b50cf804338bf118ce52ddf419af64ea5",
+          "decoded_rgb_sha256": "0e02727b3f63c9240f025ad74e6bc7aca75a59c686bcefc7e1fed9a578aefc69"
+        }
+      ]
+    },
+    {
+      "name": "life-after-death-shared-questions",
+      "status": "approved",
+      "source_sha256": "493953b9c4036b3e9cfe6bb05e5d2b0f4e0e7a6fac6f0d3ca6d574842e37233b",
+      "source_decoded_rgb_sha256": "0be4668eef168b18b8100dabc59b4de67eecb44d83b2b00ac01a91d8ca12ca20",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-3f62712f-4d83-4bd6-aa19-e100a65e9e47.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/life-after-death-shared-questions-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "fd414b1127ad38647597e217eef58dd8c33a1cacd1afb89fce1c22ba00278de5",
+          "decoded_rgb_sha256": "0d2de5d86398c1fc43866e478fd1a28e72957f8fd7d72d663a3b71672780b8a0"
+        },
+        {
+          "path": "assets/page-art/exclusive/life-after-death-shared-questions-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "6630968b8b5fadd57541e5552821d5b833a941010edcc3e29cbfa6c227ad0637",
+          "decoded_rgb_sha256": "6842cfa984cedadb9eb7d4e2399abb9cb538cc61e6de7c63f316346e0793e41e"
+        }
+      ]
+    },
+    {
+      "name": "life-after-death-remembrance",
+      "status": "approved",
+      "source_sha256": "648c477112cb417254b6585afce6fda2a054be43c79950e80f541ac233c20e20",
+      "source_decoded_rgb_sha256": "70a834d976cabddab2bb6939367ace65e8cd91759d30114e22c3d202b21d3330",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-cf040697-5d60-4491-a5a6-40fc66c25f0d.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/life-after-death-remembrance-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "7b5c3fb0d429aad8aa35352c52b2b1e035d5a5fe74bf6b96f22af1970a2a4509",
+          "decoded_rgb_sha256": "81a670cbb154a7ea6f38c4598da0fc41dc14fac283dab12e58d9644c703ec2e6"
+        },
+        {
+          "path": "assets/page-art/exclusive/life-after-death-remembrance-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "b98bf92f4a98ffd6356f60a899b2b2d162edf479eb80f3d9645b7ee20af4273a",
+          "decoded_rgb_sha256": "1215cd6a661989d292267e665dd84fea1107ca990bde086c4d8d0f634f82978e"
+        }
+      ]
+    },
+    {
+      "name": "life-after-death-ordinary-kindness",
+      "status": "approved",
+      "source_sha256": "eb015ecea026af69713ff7ec8e2d56b397fe3aa5f51c278865491208cce50f42",
+      "source_decoded_rgb_sha256": "b22e393396017dfccb03b43bbd6a4973818df0717238fa5f30a994b9264841e9",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-ae16c422-fef1-4104-a5c5-91eb9b71156d.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/life-after-death-ordinary-kindness-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "7d99915f6752fac38db9c26126d88e88ed8d8ea55aa534f0f3bff3c91cab60b0",
+          "decoded_rgb_sha256": "297e7291f284a030fecb3f729e10493c0c571034494249dbc3dbc6ef7af17573"
+        },
+        {
+          "path": "assets/page-art/exclusive/life-after-death-ordinary-kindness-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "35f066cf0e0793a7f476f4820551eb00b50b11d704bfaefd415f2d8d5f7cb3f5",
+          "decoded_rgb_sha256": "79a3a6af5a1dd1eda250d53b6223b974b030227a7f6b7355c8f10835726e6c17"
+        }
+      ]
+    },
+    {
+      "name": "families-patient-small-task",
+      "status": "approved",
+      "source_sha256": "65c43e205e99d8659d0fe4b5654295db2c0bd3c7d7fef2c236a3516282198fd5",
+      "source_decoded_rgb_sha256": "5337df8ce0375087b2a7a306ce09524fada6cf59e24ab6257b2ca2a838ee2521",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-fb53352f-c626-49c3-87b7-c3db9ff65f42.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/families-patient-small-task-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "0f61ae3db0c0e0c6f16c055f1a539d6088e684a30316d7801882ca87fe24fb78",
+          "decoded_rgb_sha256": "684e1d6ffd1315a1d270a9d57aaf412f01d009d595d0e7483129f24d704bc2cb"
+        },
+        {
+          "path": "assets/page-art/exclusive/families-patient-small-task-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c2441f1806ca83305fdf8a3d5c04b0955eb8a5fd7d2b5842918889b7da3d65f3",
+          "decoded_rgb_sha256": "c46611138380fdfb8dccbb6a9ab1a855ed2c2341bf21a51f437613eccb16752e"
+        }
+      ]
+    },
+    {
+      "name": "families-neighbor-garden",
+      "status": "approved",
+      "source_sha256": "1a66d7f636ab859bf3b0f5310cbaec54a8353f11ab99447afacd0340801ddf33",
+      "source_decoded_rgb_sha256": "557ad71a1d5258602a8c6f0c85986266d63ec8135ed50ada6eccadc5a9aa384a",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-c92d57b6-50d7-4da2-b515-054a6e5667d1.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/families-neighbor-garden-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "93fc20c0f50cc73dac39eb947c7784eb468244fa8124cb48df1ee62391355550",
+          "decoded_rgb_sha256": "19def8fb0ad13158cf3aaa4d0e2aa8783724599a0bd55e8249483c456daad4e5"
+        },
+        {
+          "path": "assets/page-art/exclusive/families-neighbor-garden-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "166583f92608bb435c193c1c4a1c7f6b2f98bfb18fb2f277a390816170a37e2c",
+          "decoded_rgb_sha256": "f20837f9344315c8c4adfcd2a651149c7c13ba2a4d046cff4e1520b04bc5a6b2"
+        }
+      ]
+    },
+    {
+      "name": "families-shared-responsibility",
+      "status": "approved",
+      "source_sha256": "eb2b6110705914cac4ad80f00c18220812e8cc19a9815defba579098e012e63a",
+      "source_decoded_rgb_sha256": "eda094df3122517bbfe4de413142c6c0c74a663c26fb03e65d8b3965cff71627",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-bf15208a-b5f0-454c-8a10-b8d6cd144b0b.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/families-shared-responsibility-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "a847b7253c38a64957dee5794c23bd0f396f7a25b7304e224f4320187bb4d0c6",
+          "decoded_rgb_sha256": "6a67fe11d2a6a637965b5a113e4747a54ec9029db81c6e5205e89a59fe1f6ed8"
+        },
+        {
+          "path": "assets/page-art/exclusive/families-shared-responsibility-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "d6f863187b0fdf5a7699c14886d45ee023112f5e0aa28c50a515719e6749a583",
+          "decoded_rgb_sha256": "314a19e18bf78462aebcce7a770f72439848b1a818666939f792b0cd81ef7c8d"
+        }
+      ]
+    },
+    {
+      "name": "families-child-heard",
+      "status": "approved",
+      "source_sha256": "faea68a6fe88f8732eb8c1e8e1464ea8b5d34afde1ecc9f5ee034c2a36676bc4",
+      "source_decoded_rgb_sha256": "5d7a8f7df0f941eeefaebf3b4c92a45ea22fb59618e81f5b47780df92d7ddae6",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07e97-84de-7953-b69a-6cceda7b679d\\exec-38a6cdd3-65d7-44ac-84c2-bbe17b5652df.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/families-child-heard-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "6369fda0a0db32db1bbbbf461565966c3260adccea0f2793b55121d2779a58e3",
+          "decoded_rgb_sha256": "7ce5fbf7806f88126ea4beac194de695798eed5e51efeec2adde0c2ca03e0594"
+        },
+        {
+          "path": "assets/page-art/exclusive/families-child-heard-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "2debba2c45d8b2b1c08f8e1948f11f467596c46b3afa6b4a05a473eec9253dc3",
+          "decoded_rgb_sha256": "90fdb5d909b76ce4f75a83a81569f3884b6088310c7e2dc7fc608b4105c21889"
+        }
+      ]
+    },
+    {
+      "name": "two-witnesses-observation",
+      "status": "approved",
+      "source_sha256": "a9ea17b1a44022b99c07e0bc687d099b077ee205d505e2177e33f8e2b66d5c98",
+      "source_decoded_rgb_sha256": "91fee7659cd4d8f93b2d346f2e7bb075c4ad5494e25ad94376d9673fa4ee4180",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-0df30836-1c1b-4b4c-81d9-419e63deaa8d.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/two-witnesses-observation-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "600354afb1a6086e3c6e58565dcde32fdcc86035a896ba5b1765a85a0efb910b",
+          "decoded_rgb_sha256": "c43ee7c4b443a120aba9c3702815418643d0a2a42052ae96b131bb313e80fe9c"
+        },
+        {
+          "path": "assets/page-art/exclusive/two-witnesses-observation-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "76cd0387261a7ed5254c000dfda64956e958b3f9089075f262719fd85357bf1c",
+          "decoded_rgb_sha256": "8ee89a950763421bc51747d7c8faa60d28ee053b1b0a7d213bbb28f1de14b712"
+        }
+      ]
+    },
+    {
+      "name": "two-witnesses-readers",
+      "status": "approved",
+      "source_sha256": "61afc4b09132e3e934366a9322d21d68f92a6fa3ca753bf18c00c8997327d141",
+      "source_decoded_rgb_sha256": "c93207813a2ed5d8a3dece51a4480cea5b259829e4ede3d5fc7fc76266cc9b85",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-373cdb84-9409-428f-8177-98e102732414.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/two-witnesses-readers-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "80a0c8ceabf176e8727e6d9c05f44d60a4ee12a8a152de2b0649147bbc8ab143",
+          "decoded_rgb_sha256": "64b34a07701090694563ccba29516ca94f4d066c5626dec7df82dc31364ce0c7"
+        },
+        {
+          "path": "assets/page-art/exclusive/two-witnesses-readers-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "b667c0fb89dbf9d4ad850f4d56a88cd7cfa1e2190ad766dd67f0222f14810ba6",
+          "decoded_rgb_sha256": "48f4ed1de75364f51752089b632453fcf126cfbc69c9db1861a0ebefb1e6ded5"
+        }
+      ]
+    },
+    {
+      "name": "two-witnesses-charity",
+      "status": "approved",
+      "source_sha256": "4a976bd243409ff244d05c766e0d03020692584b162d412957f8e5aa3e7b6ba2",
+      "source_decoded_rgb_sha256": "cc2c81aae6691916697debdff39ac67059929b2e80c26bd89b8b84e47b20feb7",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-3834b07f-222e-4c84-bb9c-9ec8d9663f0e.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/two-witnesses-charity-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "223335487c3872b7168573bb520bb0232c0c49bc1a608345ead1826f45e6951d",
+          "decoded_rgb_sha256": "38aa076852dca4b680a69c00f939d1e834d7c0a86dea8b6f29b0a64042871f7a"
+        },
+        {
+          "path": "assets/page-art/exclusive/two-witnesses-charity-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "e58ea4a69155688a2529c3574a6fcc8b2169ff9c2434d9d044b067ba9afec7d2",
+          "decoded_rgb_sha256": "c5a233ccda6b15e2c106aac8ce5110dabf3cb16c641aedc3b2be9777e4e844b1"
+        }
+      ]
+    },
+    {
+      "name": "mormon-nephi-purpose",
+      "status": "approved",
+      "source_sha256": "bcdddbe1ccca30853fc2e9a3ceb7ad5b4e8395eeb7ac958ae005d3b2f25ec0bc",
+      "source_decoded_rgb_sha256": "f04cf1ec1aff57c495d943652c95a23aec12ed6e4480a0f6dce14a29a12a4b8f",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-427756d3-c3af-4e2e-8478-d0fadf00bbc9.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/mormon-nephi-purpose-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "fda06b52d526636fc3a885cad8700a6329e61c221bac71bdcee59a4f988612f0",
+          "decoded_rgb_sha256": "94804486294d10f354b496166fef05bde7baee90319fd3e07261d7d8d1ee5150"
+        },
+        {
+          "path": "assets/page-art/exclusive/mormon-nephi-purpose-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "0a3aa09303563f88cc668483f262c6958d062402822969b303617753a3b4d054",
+          "decoded_rgb_sha256": "b22de0bb3fd1c3a663a97984776b9e9187cafa6aeb8732d7b2adabb32d66bd05"
+        }
+      ]
+    },
+    {
+      "name": "mormon-ponder",
+      "status": "approved",
+      "source_sha256": "e78fafa2bb24a3b2b5d95c3b64c015be6eda2db4124fbe34742c43cf256ea0ef",
+      "source_decoded_rgb_sha256": "0e3953d4dc090859cea5d002b927b9c1971b7e75670afcc307b5cf6b2855dda9",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-644ec29f-aba8-402c-993e-2be6747f3f54.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/mormon-ponder-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "2b9ea55253423cdb78326a7299e05e2e87aad773a7f7721e949ea08a62e518a9",
+          "decoded_rgb_sha256": "2f0020e2c9bb72a47b6813cad5319f23e5d95eb853152b37bc23a8b4419bf22a"
+        },
+        {
+          "path": "assets/page-art/exclusive/mormon-ponder-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "77e4c3974e8dcf7c10be7f82ca348171025e34faba48e3719375e10028f6771e",
+          "decoded_rgb_sha256": "a2418063c603033244397efd442499be5928e97f484c39739044464990dede89"
+        }
+      ]
+    },
+    {
+      "name": "mormon-settle",
+      "status": "approved",
+      "source_sha256": "e6c3a730fb21b2ef9fd08595603f78bae6267aa61c31ecd02b6917feb61f8463",
+      "source_decoded_rgb_sha256": "107bdfac31917ab66a76511ab37f3fe100f1dffce37749eeb6f63b932bca8116",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-aa2f14a4-a344-496d-9c51-4d9ed8f4ebce.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/mormon-settle-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "9fa4015e09f49f0cbba5f460312896c03f6ade4f4f1ec8384e3c2c1784b4c5c0",
+          "decoded_rgb_sha256": "46d723de30c5ec5da0b1d7859d7d26aff1c92b75cbdab2197d2a6f7c9249c34f"
+        },
+        {
+          "path": "assets/page-art/exclusive/mormon-settle-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "f522686e761d898c94d089487dc29def612d18ec71d3c89a5511cfe5a4e4b123",
+          "decoded_rgb_sha256": "3c640426bb4fc05fb35902d1c1fe8a668ebd2fb00c2088ad21f0c9f01e85912b"
+        }
+      ]
+    },
+    {
+      "name": "mormon-covenant-care",
+      "status": "approved",
+      "source_sha256": "5472cf66a186b65674abba71836d8da6a5b1f75930d9bbb07ac2b913d0b76768",
+      "source_decoded_rgb_sha256": "0376eb4efa09c1c49655d367af94c40d0bc68f8f90e6c79af2040745a172c1e1",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-65f220b2-dbff-4ed5-900b-46a3b8661df7.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/mormon-covenant-care-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "f94a6e6e60fe6e6b270791fce183a51099fa0958ca7a004c7a7db34a600a75c6",
+          "decoded_rgb_sha256": "4fbdce8179e528110bb956d0e44e85edd2b9372b395a9c4445d18f4ee610716b"
+        },
+        {
+          "path": "assets/page-art/exclusive/mormon-covenant-care-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "be6f3728c9a431570c17a0c6c59428be35700bb651646e072a27299cbc6a00c3",
+          "decoded_rgb_sha256": "5aa38d5e3371366fcfeb8d0b0baf968f3fe0c6f8c74cecba308dd25e503fd9e8"
+        }
+      ]
+    },
+    {
+      "name": "god-ordinary-kindness",
+      "status": "approved",
+      "source_sha256": "6b1d43729d0c6106e97dd31f7533f4154879336942a7aadaa0f3c8e961de83aa",
+      "source_decoded_rgb_sha256": "6ce4e5342fb6dd28c5c1b9a6ea4d1a57562f5e2f63b194d30ecbb8296244c3d6",
+      "source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a07df5-6413-7db1-bd0b-57555a224255\\exec-ecbeb8cc-1bd5-4e6d-8631-e874daa9053b.png",
+      "reviewed_by": "verify: work/exclusive-art-review.json",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/god-ordinary-kindness-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "ad9886abf2c0b78cb999582f0f97d408dcf29820f35ba204607df48ff3e69e96",
+          "decoded_rgb_sha256": "a716c0259e203bd8b67eac4fd0fa7adb75eee4920099d6ce8019931bda4f363c"
+        },
+        {
+          "path": "assets/page-art/exclusive/god-ordinary-kindness-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c61bf7c6e38dbd77a855ebef50270bee24a665eea5a006cac8a5f56344d07d08",
+          "decoded_rgb_sha256": "8ba0ffd4ceca4a4e22397d485d0461c7cfcdaedd823bc4a0a25962c8ca41911a"
+        }
+      ]
+    },
+    {
+      "name": "god-worth-person",
+      "status": "approved",
+      "source_sha256": "1a487ffa2722af6e12a784b043a6c151a570c41de9e7e701be9d587e7a99cfa9",
+      "source_decoded_rgb_sha256": "e0db980d431121866aa48f68ecde171a7b59a693e16abcbd2c37d3230f4feb86",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\god-worth-person.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/god-worth-person-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "62bba57e4a1e80768173f02241f15d62aad2662db15d6e61dfc886a42c6c7ded",
+          "decoded_rgb_sha256": "d1193515d052fc4f8b11178cd4bd3bca72e89fddb6a3feca0a0265ba2ed17b3e"
+        },
+        {
+          "path": "assets/page-art/exclusive/god-worth-person-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "a5f91680abcbb21af7057b3bd92f7cc5bf595d0ebb3b9a44df938460cb66264d",
+          "decoded_rgb_sha256": "1d9cf5f3d8132e4e381f350e664c11dd8de870747bbbdaae3c01ee27247351a0"
+        }
+      ]
+    },
+    {
+      "name": "god-faith-seed-care",
+      "status": "approved",
+      "source_sha256": "ba8ec3dc5917d93e9bf84b3fcb620839d23e10e51e7bece30e4a7d9bbaa37350",
+      "source_decoded_rgb_sha256": "73f5c8e4d175fbfd22612badeceb3cac3d065191c26086a31136bd8832ed494d",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\god-faith-seed-care.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/god-faith-seed-care-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "efe842eb22dbbc3f76d7640e5b34913d8199f73bf0aa5802d5927fffa3563283",
+          "decoded_rgb_sha256": "efa416fb529af90a9905c4142724c07bc6d0e28e9f3aefce69d050798053ed1d"
+        },
+        {
+          "path": "assets/page-art/exclusive/god-faith-seed-care-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "62c44c0e1e0c8d977fc17bedc22dc2d1c7d3030b16f266681c70414f8c42333a",
+          "decoded_rgb_sha256": "6e55ceaf478e2810b5297b790bb8d2f2b7ac630d6470c59e2bf909b99604ab8d"
+        }
+      ]
+    },
+    {
+      "name": "look-harmony-setting",
+      "status": "approved",
+      "source_sha256": "bf1bc2b0197ae7ab9047466aed6f39a885b0ce5679b6414f1230a0d147502a24",
+      "source_decoded_rgb_sha256": "77cd8bf0572ac377afdd68126ed1e1d29191d5285c6105692d1eab654932efbb",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\look-harmony-setting.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/look-harmony-setting-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "ae1b6c635aa1368c4ca81e165e5fd2b2a94e0bd7d3a9bb098148058c47f12609",
+          "decoded_rgb_sha256": "4e456c6f69e8276abde493e57cb3251b8d2009fe4edd76473b07f6a73c645ecd"
+        },
+        {
+          "path": "assets/page-art/exclusive/look-harmony-setting-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "75ceff5afde19e02290915608a7500bf1cefe9e8a09df0bbcb1a78a9e1471ed3",
+          "decoded_rgb_sha256": "29970fdb117eabdd880cd5094cc1cf6f79d4e0c0487f16b976d6ab403178aff3"
+        }
+      ]
+    },
+    {
+      "name": "look-honest-question",
+      "status": "approved",
+      "source_sha256": "59a0083072f6aad71c0b68651486a9cf3e5ffedc5de0c772a0a6220d739b43ed",
+      "source_decoded_rgb_sha256": "a1ab7c496d84033008db52e6322b42207a9b35cbb7af229d91a00552be3ad959",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\look-honest-question.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/look-honest-question-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "d88c93f23a3235e81789fdef19f1ca6f362311bf8819525aca5bcdb94a0c83eb",
+          "decoded_rgb_sha256": "6e30f3a7bb5f7d81dce6e39e46417e9485bade8c3643ca6b8581b87b5a4f8662"
+        },
+        {
+          "path": "assets/page-art/exclusive/look-honest-question-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "f963444b108f9b237af941fcf6485b27aaaa87e3addd741a5e5a7e45393b3a1f",
+          "decoded_rgb_sha256": "1cb02b47e60d7fe6bf072d426ed7bdb62e2fab942be9f2c5824a3b4909b0567e"
+        }
+      ]
+    },
+    {
+      "name": "look-talk-learning",
+      "status": "approved",
+      "source_sha256": "16fac05dc2b954cfba2497868db16a92b29be9af8206312be99c77b2cde9daec",
+      "source_decoded_rgb_sha256": "e08d964866e31b2a4a22ead4dac4cdb7c0f6b1ad30f0270370636050de7cd642",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\look-talk-learning.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/look-talk-learning-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "9c881a8517e01464966b2897a1b06879e1025aa8c1360f0f267a364420edf3cb",
+          "decoded_rgb_sha256": "4e2d20a9e6ee90f21f71dc6e6fba4c64db167e6ea5fe35064a4e9d6113be443e"
+        },
+        {
+          "path": "assets/page-art/exclusive/look-talk-learning-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "3ccb695a4d7ad052d3c21d9aceb2820680a06aa81eb1db928e11ecf0d7a08ff4",
+          "decoded_rgb_sha256": "9cc0197c2d9e1741f44a3bed9fc26d7a38b2b0aa70f3ace8db9de390cbe095c8"
+        }
+      ]
+    },
+    {
+      "name": "look-do-good-action",
+      "status": "approved",
+      "source_sha256": "6bb16121ac8de112078421f398eec254cf903ac9490fba588da54e0050628b10",
+      "source_decoded_rgb_sha256": "4db4e418613d593dc1c715f771d90626bb7c11d829ee7c67bea53e75f67a6cde",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\look-do-good-action.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/look-do-good-action-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "da48ecc0c1359d227b79ee1668f5899004d414b300e63271d084515f004778ea",
+          "decoded_rgb_sha256": "12fdd3c820636717c2603a0fa8f12607291c3ca61e200bb82deaac7c1c2e7545"
+        },
+        {
+          "path": "assets/page-art/exclusive/look-do-good-action-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "ff012bf964e9c758f287b38d5b385f04fd501e39a69c56329dde2d058dccab89",
+          "decoded_rgb_sha256": "9e46caa7794db10aa0616062a6b340e462c1070d97c55a86ee79844663a4dff2"
+        }
+      ]
+    },
+    {
+      "name": "prayer-trusted-question",
+      "status": "approved",
+      "source_sha256": "0ee49aee765ee60a3a5ade04af1086a97f32a7e94397dcae2663fc7f766d1046",
+      "source_decoded_rgb_sha256": "55d1eb17856a1e8f19c9a726f1f92b9dc715b9a46384ea0492c81a715206890e",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\prayer-trusted-question.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/prayer-trusted-question-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "4ed996ceea26418c9b71309eb4452e3cdc90ebba9c587856526e988448c282e7",
+          "decoded_rgb_sha256": "ee5549c5996bca64d681adb3c24d2ef0c55c553e5afc52f1ab5d8057757b682a"
+        },
+        {
+          "path": "assets/page-art/exclusive/prayer-trusted-question-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c2e138cc55e4a34a4293239e2a3ef24de36ef0e2ad4b991e0152e06bde2ebec6",
+          "decoded_rgb_sha256": "6b4e0ff8f7382a0a73a50cbc6e7f8a79a797f2e7d562a055c2ce89b62da510bc"
+        }
+      ]
+    },
+    {
+      "name": "prayer-careful-record",
+      "status": "approved",
+      "source_sha256": "1cdb452c5e98fbcb68b4234e0940976fb3b34caefa85cbce72c0a614b586fd6c",
+      "source_decoded_rgb_sha256": "24cdfe5cf6c0433cd963642605f0e4602a31ba033c72d408eb4d2963f09e913e",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\prayer-careful-record.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/prayer-careful-record-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "e68c6f8297d08839eecb639a0b250e6d6d6e1ff59969fb034a111645ea69e02f",
+          "decoded_rgb_sha256": "62cacfe429c5a4349f4c4c01e0523cfe86e35cd8fd0e938682323b5038fc36f1"
+        },
+        {
+          "path": "assets/page-art/exclusive/prayer-careful-record-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "4e5f4a179e3b8da240273a4fde6095e7334c4deeb39905c923fb9417003a31be",
+          "decoded_rgb_sha256": "0b6fe1a5df3e1abbd1b63b072172a2abb276dac4a06f1df6d425446a5078d6d1"
+        }
+      ]
+    },
+    {
+      "name": "prayer-thoughtful-counsel",
+      "status": "approved",
+      "source_sha256": "1f03ded54978eb31bb725ff2f8ebda0c0c3d522435581d43a9b40b53fe283c9f",
+      "source_decoded_rgb_sha256": "2d34615b810cd5cbc01d658a45e40761400048a2abfec8495c82d3fa023b6e1c",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\prayer-thoughtful-counsel.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/prayer-thoughtful-counsel-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "0789407746d7d943537ed2fbd3731873b1e8b730b9940bf6796d624e17319a2e",
+          "decoded_rgb_sha256": "34efc0d9a54579fa64ec255e27a5f3effc6a5c80b042d270db9bf164b12cf9c3"
+        },
+        {
+          "path": "assets/page-art/exclusive/prayer-thoughtful-counsel-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c2af31035818448289c368a8ed81f9c1b02463815cf931a0c96e7d23ca494ea0",
+          "decoded_rgb_sha256": "a0310ef239e0713d539af70161ed66f927d067391edaa4e7c837e5e4461748af"
+        }
+      ]
+    },
+    {
+      "name": "prayer-private-room",
+      "status": "approved",
+      "source_sha256": "850cff13adc0960e848b3b68f16a7b107c98878de23437a0aa4d28709766f8ed",
+      "source_decoded_rgb_sha256": "8a7db5dff57e71976be9297675880405c3c27d07d58a08a7e05fe5e35b458cfe",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\prayer-private-room.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/prayer-private-room-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "b98adb0b19e870268b72049cef99b8120fb67879e8e9af79cef74f1f734027fb",
+          "decoded_rgb_sha256": "6252e3b21a0994a98d924f4b63aee5f14d24da61d4b9c436e5425f32eb2ca7ac"
+        },
+        {
+          "path": "assets/page-art/exclusive/prayer-private-room-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "55ed29802843715947ab2dd5c5e72083129d8fddcc55efb1628217559de219ab",
+          "decoded_rgb_sha256": "0ba366aaa3228c377e248063c99530f91235a766597d81a5ff79dde1f702a28f"
+        }
+      ]
+    },
+    {
+      "name": "stand-source-comparison",
+      "status": "approved",
+      "source_sha256": "9c5446c12335ae691cf91ec3ba5c0eb2d2663a01fa69e8c545e0afc15d53be3a",
+      "source_decoded_rgb_sha256": "5d22d0a43c9e952adc54f47916f03a4fa07fec237d37081bbd7c1754c6af6487",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\stand-source-comparison.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/stand-source-comparison-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "0ec805e3c90e8fdc50d2f95f5bc5f55753a7397fcceb98a4e80dc9609aa4aaf2",
+          "decoded_rgb_sha256": "a8bc110dff6ff37e926abe81bf0619eab7c036b681bc8a261894f47f6576b3ee"
+        },
+        {
+          "path": "assets/page-art/exclusive/stand-source-comparison-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c347c6c3ee983d49a94f29910b76cb881c601717f60c99b8f18244c42afc231e",
+          "decoded_rgb_sha256": "92005357d8b4041a68cfe88d415bfb74aeb030abd0fb601bc17cd9023692101a"
+        }
+      ]
+    },
+    {
+      "name": "stand-record-context",
+      "status": "approved",
+      "source_sha256": "604a61c24f8cf57d1d09a748668ad1670c7ae3ec06783859dd5a96e4d0112e8c",
+      "source_decoded_rgb_sha256": "a4fad7c171091d8c22f7c11de4c5cb3cd313da539b91eae104228f6401e34874",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\stand-record-context.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/stand-record-context-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "b2491f06b0fc9e4e8ae826e498455ae530fd9c2c0f44c181174d84314eeeee0e",
+          "decoded_rgb_sha256": "57c10bb0ddaf47efbaa4977780d53b69877952c532d187d3a8e18aea78c855cd"
+        },
+        {
+          "path": "assets/page-art/exclusive/stand-record-context-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "b5a0e46ffb8fc66e0c559dd9b48e84bddee5ff3963426c945865d30cb7e20974",
+          "decoded_rgb_sha256": "601fdbc7d205712119d85ccb7f796cfc8649f65ee058ed551925bd4eb42433a1"
+        }
+      ]
+    },
+    {
+      "name": "stand-faithful-service",
+      "status": "approved",
+      "source_sha256": "660c75fffe0f1dd1003df30940cd9fa7ee6b5a2efe182229fb2b86ca14182774",
+      "source_decoded_rgb_sha256": "154fc14a41613aa13cc4b3ca0328822b3bdad19a01e0a30067b17f77d33ff845",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\stand-faithful-service.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/stand-faithful-service-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "bb4a77de9292c94efcae09dfb4081eaa4c38aa500f95b42d5acef19fefbbeedb",
+          "decoded_rgb_sha256": "68251cfedf74f905ff9fbb1206a5cbd68cd5c34dcf25aa30395af565499168cd"
+        },
+        {
+          "path": "assets/page-art/exclusive/stand-faithful-service-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "8e22759171f5f96a8387cdae2d1dd6d99062998894313fdb47ad67f8875f260f",
+          "decoded_rgb_sha256": "9b0bb545286caeb6b41f504685a2b282277471a0ceef54914e0692e15079d29d"
+        }
+      ]
+    },
+    {
+      "name": "conference-message-notes",
+      "status": "approved",
+      "source_sha256": "f359354fabd6e4bc48159b96b18566f797ba599507c5d3b8cc3455d05190525d",
+      "source_decoded_rgb_sha256": "dbce7664395cb8ca22145930a47db8e43090a5e7d80fcd9e8827b68e69a46874",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\conference-message-notes.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/conference-message-notes-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "bdacd77279217d006984228618e7db3bdd73003e2eb53491abfb14fc80fde68f",
+          "decoded_rgb_sha256": "9f61ecc75569e06149ced26d608e0d241420c6b925c874b40b2ad99b11c185a9"
+        },
+        {
+          "path": "assets/page-art/exclusive/conference-message-notes-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "1be7a0e6c48f67b3a4942af5afc3675f4cf170ad89fe1754f46c6064af39ca8f",
+          "decoded_rgb_sha256": "783b7297d067dd1818cce053a5fc7c41b289b52724d72ce6157bf91f87464026"
+        }
+      ]
+    },
+    {
+      "name": "conference-response-together",
+      "status": "approved",
+      "source_sha256": "6c175e29c90028693d67a0013bd07d83bf0671206ca8e19b503396231ba46e7d",
+      "source_decoded_rgb_sha256": "f91921c6bc7bf6aa1e9c8ca0769ad508c4ca92f211cd38334c7d05cd8175cb43",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\conference-response-together.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/conference-response-together-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "989d85386b466127a6f1413934ef76419f22d2e75cfdf9bc8d42186768f7065d",
+          "decoded_rgb_sha256": "94a8be5d463329f4cb9e4756c5c11a5c3a964c9676e0b1791684612533ae33a2"
+        },
+        {
+          "path": "assets/page-art/exclusive/conference-response-together-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "f033e2aae4968a7462e11c6978198d038bb2feda4508c4504f2e9269d251268b",
+          "decoded_rgb_sha256": "fe82da1d2179c6ccfc40cbdf6931903e98728677419a275a7aa7d22ce97d263d"
+        }
+      ]
+    },
+    {
+      "name": "conference-return-question",
+      "status": "approved",
+      "source_sha256": "51752fd0bcf1d3df4c0ed967d7c0c7097c06f2d11f8c9c7aa7f997a17ba682a7",
+      "source_decoded_rgb_sha256": "c6920964fd12f73a3a3b6d65f39b7a915965e2c6684ae8a4c034e1cc6da7f33d",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\conference-return-question.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/conference-return-question-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "e46d52b976d399f32452fb5db68ce74c367b418ffd137421bd9edeb95a2489f5",
+          "decoded_rgb_sha256": "11934fd76e6e8c04442291c0318a6952d314a80796e745507caf36d3923c1b83"
+        },
+        {
+          "path": "assets/page-art/exclusive/conference-return-question-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "fcbefaaf2040088676125c38c2106864983dace373fb4937b55ceee9ff6f38c9",
+          "decoded_rgb_sha256": "a0d18e76b1585742524a9511d047a1304aa2519b52ed2484065f5c1aacf7d18b"
+        }
+      ]
+    },
+    {
+      "name": "conference-care-followthrough",
+      "status": "approved",
+      "source_sha256": "1836e0c524054fd5d5a71d9abcc6a507eafbb40dff7f7097c0a406388e30e2a8",
+      "source_decoded_rgb_sha256": "7aa66740cfdfa92b364b59819f192578e766e84ca07ad2ec5f554787c6701525",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\conference-care-followthrough.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/conference-care-followthrough-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "f042dce92f014d73f5454f9abdbd57d3a58de85f93891fa5a85905013d7713a9",
+          "decoded_rgb_sha256": "29e5f2e176e49e2a8822b8fb8eaab816c3dcde52ead78b2ca7f9562bfa884f50"
+        },
+        {
+          "path": "assets/page-art/exclusive/conference-care-followthrough-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "878c293cfd2084f108c2534f1d64612c470dcd703829f0f154e7e30d6ef42841",
+          "decoded_rgb_sha256": "9b6a9bff5296ced6f2a093802190739bfcfb0d011417ff167a4dfadd40038b72"
+        }
+      ]
+    },
+    {
+      "name": "temple-purpose-reading",
+      "status": "approved",
+      "source_sha256": "d4dd8c31263fb791a5ce302cfff5ab8beabacae44aa720b2b06d55870b44e8f3",
+      "source_decoded_rgb_sha256": "238ae4e35279c6999e34e676071c21a0583c42993c8ff273514c705b0ecd370d",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\temple-purpose-reading.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/temple-purpose-reading-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "abf4edc3b72cd7127b71dae86977b711f61b0cf8fc932a06aa3d0306c84e86b7",
+          "decoded_rgb_sha256": "c20ee836f4f60b9686fc9aa0f21f35edfe1ba7e6a945136df4eb4a4380089071"
+        },
+        {
+          "path": "assets/page-art/exclusive/temple-purpose-reading-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "4f832d19ab4cd0a7a2c677f8ffd768d5ea25948b382ff9354e2071331bbe0594",
+          "decoded_rgb_sha256": "603fc71acc560ef8e9412d3e94016676c7cdd553ce5eb953850f6dfda68eac6d"
+        }
+      ]
+    },
+    {
+      "name": "temple-preparation-notes",
+      "status": "approved",
+      "source_sha256": "4602975421aec7889f293ff63bc1e78fd6d9f0efbe6f19cba233e39bc2342992",
+      "source_decoded_rgb_sha256": "77e9669b14001a471d1c32d940bc37178cc1ff90b9f85d631aba284ecad6e1c5",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\temple-preparation-notes.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/temple-preparation-notes-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "181c63181084064d79bed40014d9754c0d2b26f8b93a49f44b861a4b494acbab",
+          "decoded_rgb_sha256": "8754a846f478a29cccd6025762a7372f47a278f971d8f405e9903b4a3b473fd6"
+        },
+        {
+          "path": "assets/page-art/exclusive/temple-preparation-notes-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "49465720831fdfbaae4a8b9ce7ebed924a0197568c9caa0be15b3a6177f1ba50",
+          "decoded_rgb_sha256": "396857019158f489ab4662a4410c885f09e02646bb6d26980677328c10308ae7"
+        }
+      ]
+    },
+    {
+      "name": "temple-daily-promises",
+      "status": "approved",
+      "source_sha256": "c86fd91755f7d3bb004dedf8b2189a321a1e79557f7e52b8dc2fe9cb49b3feda",
+      "source_decoded_rgb_sha256": "a04f5a76a8bfa97ae0cad981e8fd2c8ed267ce355ad024b198c2c10e6d4d0b13",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\temple-daily-promises.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/temple-daily-promises-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "9c335ebeee71d15c5cab1f4592d81629ac3e966302526ca63655d3fb1c133595",
+          "decoded_rgb_sha256": "70d392a223608644bfabc24d888300070789db2b2ef6ff9114e56ed275c3993d"
+        },
+        {
+          "path": "assets/page-art/exclusive/temple-daily-promises-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "cee7aaaab2bce7b35b2244e0ac7d2f80b1376d01b1c0636c890ca280214b5291",
+          "decoded_rgb_sha256": "f354d4719f451756b9024908a4c4dd614a88e4ad52d55a9c2480d65227811bc9"
+        }
+      ]
+    },
+    {
+      "name": "temple-covenant-help",
+      "status": "approved",
+      "source_sha256": "6ddf5d5a720bdd970b5bc86825632668c296a9b8b32f8836c566979a1ebf0d38",
+      "source_decoded_rgb_sha256": "47359020fdf58faf21ae97287c18e98269673d0d402406797ecebf51374e6776",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\temple-covenant-help.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/temple-covenant-help-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "ff3d2142a8fa0ebf0416a4d64be6f9866adc131e6d95805ffff3877c77f81fb0",
+          "decoded_rgb_sha256": "194a423ae43517550564ca94eb83eea2204b267ea2a2cb2ebc2ea08301d4bf81"
+        },
+        {
+          "path": "assets/page-art/exclusive/temple-covenant-help-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "22847dc78d12f58244a611815fde33f0065a293d02149caf88a4d3530ea9ebbd",
+          "decoded_rgb_sha256": "355992f02cd651ddfee1c31f86e5fb6ddaba803ac46c74e578c69ed3acc15f4f"
+        }
+      ]
+    },
+    {
+      "name": "trials-honest-prayer",
+      "status": "approved",
+      "source_sha256": "f325c7751b3db397d89771bfa3df8f9506974f11880eccf12e2f4861cfcb9b5e",
+      "source_decoded_rgb_sha256": "5bcba3506a108ac88eb2505b05bad7ff9c6ba3640cb1964bca2604a0ca44255c",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\trials-honest-prayer.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/trials-honest-prayer-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "c70dd58ed3b1e5830165da0ae734a1472790fee19bcee509bdeb57b3086907c9",
+          "decoded_rgb_sha256": "2d081004b57eaf3a50759cc4240ddc468e2acb0a5f89c63e39650994afadfd94"
+        },
+        {
+          "path": "assets/page-art/exclusive/trials-honest-prayer-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "a627357d72cee4327e5e470c449752e38e3c6cd79b5b1c908c166d7f58881255",
+          "decoded_rgb_sha256": "a819f116f46be7228b462aedf691980d3e21366b0ce187ecb5ff800fb592c224"
+        }
+      ]
+    },
+    {
+      "name": "trials-help-within",
+      "status": "approved",
+      "source_sha256": "6b2fedc48f2d808e574e51585e6c05b6b226fb7422cbc047408580be1c6bf281",
+      "source_decoded_rgb_sha256": "0e04a9cbcea9dfe3730d4a3ff3da141bcad2542026baa706ab29e5df1aebc90f",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\trials-help-within.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/trials-help-within-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "b5481b60a696c8e1fe6541e0ce3b3d9365dff70e5002627b1be4f7d03ce3be06",
+          "decoded_rgb_sha256": "b726f2ac3f25440b5c04a84b311bb667f596f160c7a55638645874a3b6131345"
+        },
+        {
+          "path": "assets/page-art/exclusive/trials-help-within-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "9ae1dec7bb5f4480fe9ff6c26f0489cbc596f5bc46af464dbc2265052a31641f",
+          "decoded_rgb_sha256": "c83c3c6e0f4b9e1583141754c98f30ce7e8bfe7af374c3193353a6ea156148af"
+        }
+      ]
+    },
+    {
+      "name": "trials-shared-load",
+      "status": "approved",
+      "source_sha256": "caf3cf03fd4d5b44b254ea21efd7ab3e57724ccb407cac3dbda2b899ed1c8258",
+      "source_decoded_rgb_sha256": "22b6587486adc77001224877dbd3d51be174991d55a8ee1446540a7d448399c8",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\trials-shared-load.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/trials-shared-load-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "8820ec0b80ec9910aba135730812707d75ed2d22fddba3c70f810c068a8d97fa",
+          "decoded_rgb_sha256": "9e644cc7584fd6f8a6373a123b664ab858f56cffe16364a93fd152387702b2ed"
+        },
+        {
+          "path": "assets/page-art/exclusive/trials-shared-load-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "d68dd8091da6df65ef28b38691a702938d7064a86f5dec9206193eb514e0e5d6",
+          "decoded_rgb_sha256": "0314db5ad65b25f7cc224a1f3e6dc065dd2aa98ec048cfbf141d5fd3c087628a"
+        }
+      ]
+    },
+    {
+      "name": "trials-next-step",
+      "status": "approved",
+      "source_sha256": "aa432e57c17a7df22762c5e72cbc3954bb4f276ff0a625f223799f01ccf6bfcd",
+      "source_decoded_rgb_sha256": "eb3b7cc555ac6dbb779c4e6f07027d0567cdca422d11b69f0d472ad7c6192f98",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\trials-next-step.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/trials-next-step-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "e6f74a9d317c42cceaa90af5e886e5aea7ee95b0ab66c2733ef81b3744dd684a",
+          "decoded_rgb_sha256": "75e84c4826f3da4ad3da38a3981bced308abe768794a47d376e24d18d459560c"
+        },
+        {
+          "path": "assets/page-art/exclusive/trials-next-step-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "7560d49728778290418e047d3b636e61817b293d53dd61ae1fe25e1f55262bb0",
+          "decoded_rgb_sha256": "96cbc4d31baaa8a7b983300dc2cd6474508503e7d05fe20630aae9af9ad6d982"
+        }
+      ]
+    },
+    {
+      "name": "joseph-account-reading",
+      "status": "approved",
+      "source_sha256": "38aea55c3752abaf0c92c5e54d6c9fcdf4ad644106f85a8741c898edc8eb36f0",
+      "source_decoded_rgb_sha256": "010e0851510ebbea96a08a4106e4783bf784be4fc4c40c75e6e59c00675925d1",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-approved\\joseph-account-reading.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/joseph-account-reading-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "94641035fb9cdf37d90824ac7d1af880a3bebcce282b1e29d2216d8819e84525",
+          "decoded_rgb_sha256": "a81d626aeae8908d08ee36d6396688cdeb33791ca71bea36bbcee1d381186d9f"
+        },
+        {
+          "path": "assets/page-art/exclusive/joseph-account-reading-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "3aa8d37bd43b7faf2584e2ee1eb302bb3a017bbd2fa0607f26a1f5331f9fbd75",
+          "decoded_rgb_sha256": "729bcfccd0e636e0473280ef7b2a4cfa5b2dee42cc38fff940f3c67c6e22a494"
+        }
+      ]
+    },
+    {
+      "name": "bible-bountiful-witness",
+      "status": "approved",
+      "source_sha256": "b1a71f6b61905fd8eea9076c7fa884e9eeecf7ed5320d3afdf08adc49007fede",
+      "source_decoded_rgb_sha256": "8163eef9491bbde116cc55e3f85afba682b5f9afcaacc73202f3eba66258cc6c",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\bible-bountiful-witness.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/bible-bountiful-witness-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "6d30f4a5e5650f7cc5d591a32e66e840be9a74f0a75815bbeced3d645278f613",
+          "decoded_rgb_sha256": "443ee0a999d8f4bbde40334dbc1a0d11c4389245fde478622f0e2479315bba90"
+        },
+        {
+          "path": "assets/page-art/exclusive/bible-bountiful-witness-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "1d70739ea2056688d9f924adc028ef7ff9d648837ddbf7bb90e92954ac7a8126",
+          "decoded_rgb_sha256": "2479586ccdec0d12a8107cf610e6e08556acafbcd346b9677fdd1c90af81bc8b"
+        }
+      ]
+    },
+    {
+      "name": "child-loss-father-comfort",
+      "status": "approved",
+      "source_sha256": "e82cb8eb091e8aeb1e03bd100ce2dc304186c45550f6aa115c1d8f761461b6b9",
+      "source_decoded_rgb_sha256": "5f658c6b871c5937a841ea912e7798aef3a4a16b14d68ec7f2749c74eae81433",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\child-loss-father-comfort.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/child-loss-father-comfort-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "766ca87002e47099bd37d1a205da629a592575bebf910c1346383d4331ea50de",
+          "decoded_rgb_sha256": "d752fd161cf628554611702a25be2b53104262ae320406d92d21182ecb867f42"
+        },
+        {
+          "path": "assets/page-art/exclusive/child-loss-father-comfort-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "e0f21a915453b9d52d9cd70db76b02445313b3f819a456a8b388872026dca17c",
+          "decoded_rgb_sha256": "2d6300da73372199f534beb1dc36b392dd2624c7625fffc7e6bb1e6d97fad9b8"
+        }
+      ]
+    },
+    {
+      "name": "child-loss-listening",
+      "status": "approved",
+      "source_sha256": "858e25dcfc94168f215a63dc63bbd49bcf5ca720247a59799c69bd1bedd9b434",
+      "source_decoded_rgb_sha256": "58b86651eb6c180dbf388a7d3349fcaba5bce79f6a6d16bdd54cf8a9623e1800",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\child-loss-listening.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/child-loss-listening-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "512e58ee35a2d600c0681f8a86159dec40034342289dedb3c9691754ba4dfd60",
+          "decoded_rgb_sha256": "202b1b7af92c2c27469cc6ca98c1911492119e72a2a9932b72b87cbc5b4dd7e6"
+        },
+        {
+          "path": "assets/page-art/exclusive/child-loss-listening-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "381b59bdb3dcec0900fc60fae0e1c028c14b5103f99c83607e05a8c5cd8a6cac",
+          "decoded_rgb_sha256": "48fb1a86d99459521d257c17287e3f6882aeab1a13f95db45f1815c9ae078100"
+        }
+      ]
+    },
+    {
+      "name": "child-loss-ordinary-help",
+      "status": "approved",
+      "source_sha256": "28c703f2d7889d13409de55fb3d37dff6a49a9ac7bdd6eb1951c97e510a534e4",
+      "source_decoded_rgb_sha256": "451c3150006b29dfc47a952dfc8de0d3bdc91f42dfd07cf0da927aa71a173867",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\child-loss-ordinary-help.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/child-loss-ordinary-help-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "420bbd4ba18e1271f6a43b79797bfa8c671ba79387636e0ed86779ae7785dfd2",
+          "decoded_rgb_sha256": "2c4834ef16bb74c4ac316d0ac3fd1c2d33c4e072ece4e2cee3618c070b9eddbf"
+        },
+        {
+          "path": "assets/page-art/exclusive/child-loss-ordinary-help-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "944310cc38db602106abd0934ff3ab01d8a4789ece5c7a473ef610e5da192318",
+          "decoded_rgb_sha256": "3c6ed7791b8329da5b6670087a74037cc92f8d33f2ae6fa022b1442918094dfd"
+        }
+      ]
+    },
+    {
+      "name": "child-loss-parents-company",
+      "status": "approved",
+      "source_sha256": "c5f66486a034ac47fc32bb563587ed7e5131d535ccef8321d2d8e7c031d68372",
+      "source_decoded_rgb_sha256": "3bf5e9026bbf33e2096bca9cea168e9e9b44714166e369888b8b4239e9b578f5",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\child-loss-parents-company.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/child-loss-parents-company-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "ff328ee86b612b9e77cf17396917129043932961e48512ae61ed02c750aabf29",
+          "decoded_rgb_sha256": "4ec145a9a3f397ff819e4d3a2ef26e092b37d4a329f1919d572f0360b6706f49"
+        },
+        {
+          "path": "assets/page-art/exclusive/child-loss-parents-company-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "e6e8724e1a9a4922597e22c2a102bb971b4f0d76ea09f1e09073506f58cf38f2",
+          "decoded_rgb_sha256": "3e66a8bab2e77c4a207e03dfd23ed70b030a9bef8df9d0c546f97ba815719fee"
+        }
+      ]
+    },
+    {
+      "name": "child-loss-resurrection-dawn",
+      "status": "approved",
+      "source_sha256": "16207ac06cdc685800a661dc0aaba10cb0edc6fc1f16af51dae55ffb73e1a413",
+      "source_decoded_rgb_sha256": "135f64f1d11dd3e4ec55912706b077cb2fe0f8e2c75396120f58457c6c3ece4e",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\child-loss-resurrection-dawn.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/child-loss-resurrection-dawn-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "58a05507a3463833f82b7240654ead1dad181d5cb1348ea89f5dadfb4c75ffae",
+          "decoded_rgb_sha256": "b192a49338a76c61262cd49e855311ffe983cf9eade0bedd8e294685300ba566"
+        },
+        {
+          "path": "assets/page-art/exclusive/child-loss-resurrection-dawn-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "de60989d8fc378cab4c6960e1ee87a7f57c19e340dad04f38d651aec681356f0",
+          "decoded_rgb_sha256": "513b536494967a3e8662fe8587c60df580e9755958130bfa49d7c899d00d2f26"
+        }
+      ]
+    },
+    {
+      "name": "conference-study-prayer",
+      "status": "approved",
+      "source_sha256": "283c3e85f56a1b3fd3a88f06490ff867858edb7b69e9a333563b2265e909ecd0",
+      "source_decoded_rgb_sha256": "4bc9ad743747451edbf56dd4573c083ce8cb9355ab1ede44bb6f41157947e633",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\conference-study-prayer.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/conference-study-prayer-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "fe75305f8868322a2a86b26023706ecbbd91be2cbc0017e8b715960f981793f0",
+          "decoded_rgb_sha256": "5b3364c9353cc57bdcca7cd15151c4e25b06554e317ca86a5d46d6008b8df528"
+        },
+        {
+          "path": "assets/page-art/exclusive/conference-study-prayer-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "b8ec20036ee6f6b9e91d39710d47641ee765f26046811e6eac639ab868350495",
+          "decoded_rgb_sha256": "77b4ecdec448c1e97ad0d90b319e25612929731f64458159c638265462a79e84"
+        }
+      ]
+    },
+    {
+      "name": "god-learn-prayer",
+      "status": "approved",
+      "source_sha256": "bcb1a0b07a2bf534fc77f88a44ccd1629caf45e23a2e829e1a2dd5006889c677",
+      "source_decoded_rgb_sha256": "5b4ec9a1b8e01637004561eddc3d6f4751b2ff9d3b8ce986d7a79b59bcc336bf",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\god-learn-prayer.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/god-learn-prayer-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "175d779451fb4034da6c99f9613ea0c3d38ae910a9f1d05a12f1b37b71c39dc2",
+          "decoded_rgb_sha256": "f91ad1468183ebcc377511c733ba07df1b6fd658bea0219d7bab033461aa5d67"
+        },
+        {
+          "path": "assets/page-art/exclusive/god-learn-prayer-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "535c38d118f05d3bbd32e64e16c14c3c747abb101a7ef0ad96315e7a7d0ce2e1",
+          "decoded_rgb_sha256": "71ea59a2409d687d02ce99e07ee7591db5339dffcbd962e542da64cef81ae024"
+        }
+      ]
+    },
+    {
+      "name": "grief-hope-open-tomb",
+      "status": "approved",
+      "source_sha256": "7afdc1b07b5c4f2894562caf24387ace33a24a2ba29c2d14ee48287e8108394a",
+      "source_decoded_rgb_sha256": "ecfad0b4aaf22f4ef44a62058a3a15da453099afdb7c1d54de9cb18aed91a779",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\grief-hope-open-tomb.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/grief-hope-open-tomb-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "2dd7e55e02f94cef55b7ec89f6d538bcdf04edee6f946095184794bf24262d04",
+          "decoded_rgb_sha256": "22098b89aa3090ce2b00cf88fd25f089fe17db15cccf3b20fc2a60981eaa8735"
+        },
+        {
+          "path": "assets/page-art/exclusive/grief-hope-open-tomb-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "04a562ccdd6a49b81973b08f3802a1b798a6eff0ee5afb880be15e2c2fe41581",
+          "decoded_rgb_sha256": "799b06183c4521611f6bfcc8d54dd32841cb1e87458bbed0aa63c99b17f4ac11"
+        }
+      ]
+    },
+    {
+      "name": "grief-memory-notebook",
+      "status": "approved",
+      "source_sha256": "28559c883bf945129f0f5d43d3efc90ded95ddd487302bc57a4890c53a455467",
+      "source_decoded_rgb_sha256": "aaf11848d46b3901d14cf84fa0abf1637e8a9a3cc1573d465667d1e674710a50",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\grief-memory-notebook.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/grief-memory-notebook-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "30da755276dbe32dfa7a2d647394a7a98c9c6258b6d0ba9c206133af6ea346e4",
+          "decoded_rgb_sha256": "91b23ccf897df939bb9b10e5ea1b0b98dcdf00cc32128b57506f5d9aeceea53e"
+        },
+        {
+          "path": "assets/page-art/exclusive/grief-memory-notebook-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "2dfd6966bd3767fcae7d6078be76ccd714719c63a13e50c0e6639e57fe647b91",
+          "decoded_rgb_sha256": "d612c363990f4dd9cf694dfd0ddd705c1c2604731d4c2eaaa6880e1d97f155e7"
+        }
+      ]
+    },
+    {
+      "name": "grief-savior-compassion",
+      "status": "approved",
+      "source_sha256": "6d5e519db89773ad1f84d43f11ea6d49b37194c0716b74bc6a2553510af6ebdb",
+      "source_decoded_rgb_sha256": "32dcea65e1896b1c952bcf4228827cf38271194366a698b16e8e081ea95cb543",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\grief-savior-compassion.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/grief-savior-compassion-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "7bacb6238c5ca409087eb595ea7f0c46d05da11d2b00df1a357e8d7decfb7434",
+          "decoded_rgb_sha256": "3ce9ad7f0c6c7af3d7177dc072e34340ad379cf88b1c805588ce0d8f5ed317d1"
+        },
+        {
+          "path": "assets/page-art/exclusive/grief-savior-compassion-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "7d62d4e1d46686bbf11cab67aea83184a831a1987e6c8135ed5464bebef714b3",
+          "decoded_rgb_sha256": "7159866ba9c4a026f878592457b825ed033c1252d55c254eddd65385a013ae25"
+        }
+      ]
+    },
+    {
+      "name": "grief-welcome-care",
+      "status": "approved",
+      "source_sha256": "f906f358c675ea956fe709489dfa8c68e363e37da65bf769a562c8a340407d65",
+      "source_decoded_rgb_sha256": "93f9ce5490eeffa23dfb93ceb956330664f3655a8bbc921620b424e17bfd5226",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\grief-welcome-care.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/grief-welcome-care-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "995145a6b387a550fa124ed8dc516994e747f6bbc78faed39d05e1746bb3336b",
+          "decoded_rgb_sha256": "242c4f24f57548b7828870e2c32c94061ad60ed065f656c3f583dc442025af40"
+        },
+        {
+          "path": "assets/page-art/exclusive/grief-welcome-care-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "52a9915af3bd64e66ae9042a1bdb7ddbc52d8f95daedd42772c0159822a73b70",
+          "decoded_rgb_sha256": "e7810edcd814d75af64421a1bbd335e96bcf389d43a0efe69b220218dcd4383f"
+        }
+      ]
+    },
+    {
+      "name": "joseph-inquiry-prayer",
+      "status": "approved",
+      "source_sha256": "64da4e0d97664cad9848413a15e7ad4deb7acab2df3a956c4ee659d226ddcfa5",
+      "source_decoded_rgb_sha256": "402080751aea930fff927d2b67f901b34a2e65e5d20d0a43edf678d8ecf4a088",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\joseph-inquiry-prayer.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/joseph-inquiry-prayer-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "ab0065206d4d47ea2809539506eaf8d6cab7c55234e064636f0d2484aef747b4",
+          "decoded_rgb_sha256": "de34bcf79ff54fb52b57d37110dcd8f83a49665acf55ef767b450b7e63fef727"
+        },
+        {
+          "path": "assets/page-art/exclusive/joseph-inquiry-prayer-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "3bafb0b8154ce46fdcf081803b583bbd118b1824f15cd125bcc8fa2dc8780fbb",
+          "decoded_rgb_sha256": "ee047c3dcd065978759b0d1213c0bf3398a9a0af51d78f27ee1aacd233c005f6"
+        }
+      ]
+    },
+    {
+      "name": "joseph-printing-work",
+      "status": "approved",
+      "source_sha256": "6d26726d75317587c6b26b1ef7cafed7525c05d59bbc10b726079d33fdd2ef35",
+      "source_decoded_rgb_sha256": "008670a46fbb30d9309f6e459f4e98ed574686197042657e28ae0cc68a9603f8",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\joseph-printing-work.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/joseph-printing-work-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "7a74123be0ab33f904346358ec8706db9825b23caa61d86e98fcb21ca5bbbe87",
+          "decoded_rgb_sha256": "5557c9d6386c819f4e66593a0f814d2d583bcb9164625cbb93bb5ac25fbbdeae"
+        },
+        {
+          "path": "assets/page-art/exclusive/joseph-printing-work-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "2f4f78cb7d3fcd27b0360cf211b0e6d9f451655911ed459c04cbb24c29cfd357",
+          "decoded_rgb_sha256": "405f324113b3b81815d5f6dcdc9d4bf1b5814c7e23eaeaa3b3e5dae6002cc153"
+        }
+      ]
+    },
+    {
+      "name": "joseph-shared-reading",
+      "status": "approved",
+      "source_sha256": "9fe837f580d76576472f60b1a00315e65c372f35b7669e88ade17ff8cf2cc37f",
+      "source_decoded_rgb_sha256": "14ed68fc04f7ff214368313824f6ebf858baddd45c32cd2695c31b0f49e36b00",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\joseph-shared-reading.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/joseph-shared-reading-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "7e049bbbb6085da75f60f8fba0622de3cc4b0f7af2fb14160509860fedbaf80d",
+          "decoded_rgb_sha256": "cc4a69feb3761cba612b4024578ee8c2e887bdd04cbe6c0e90189eae8f3973b6"
+        },
+        {
+          "path": "assets/page-art/exclusive/joseph-shared-reading-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "9409e8d6531bc02b5bb4ffae5325f6e392bc93f7fb1ae7c1fc2cab39f8f65dcd",
+          "decoded_rgb_sha256": "e19c2b83f4bc2ab63212208fd8074e937a834095a7a34a89b726e29462f1e892"
+        }
+      ]
+    },
+    {
+      "name": "look-christ-invitation",
+      "status": "approved",
+      "source_sha256": "3e77b99e1d5103973a5b82ed01e90f856af00d3cea4c522ae5cfe7f421f5aedf",
+      "source_decoded_rgb_sha256": "31601daed9a5b93e7ab6c4329b8c08c03a2c2e5cdf3692f480a70677db2f3005",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\look-christ-invitation.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/look-christ-invitation-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "c0144c8fa8ee6d3a7450069657506668f99d56376dc895a03e325d18a420bc0d",
+          "decoded_rgb_sha256": "61abec18aa98e15346f540bedf4f664badc495490d9430a54591eba4f5333cc9"
+        },
+        {
+          "path": "assets/page-art/exclusive/look-christ-invitation-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "d07f31fb9852a1299d241243f334b9a23cc6bf309cc08aa8215b94eb638bbd62",
+          "decoded_rgb_sha256": "15b8257a9ee877f76c0f169c3143eadc8f46e5d3beef6f192739d57da7809c38"
+        }
+      ]
+    },
+    {
+      "name": "restoration-christ-center",
+      "status": "approved",
+      "source_sha256": "a3723ce50c5e1ad5841cdf63c4d7781be0855d0e1bcc21acb7223cfcb0eefd00",
+      "source_decoded_rgb_sha256": "2b7f1f7e9347d20d769e8d32ccf5bde992427c267f115c78b862f79754b0edfe",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\restoration-christ-center.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/restoration-christ-center-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "fea26744a889e8bc0b55114e3cf450e143d1ebd71c2c47a183f033335c3b9979",
+          "decoded_rgb_sha256": "6e3113df1bfae37dd08048d5d5df88bb0a40ad90f6f57256cca3ba3cee7bc06c"
+        },
+        {
+          "path": "assets/page-art/exclusive/restoration-christ-center-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "2a1029d7146bb289941c629f84c18cc2cf17b20e3ea2e53497c4b19514513d2c",
+          "decoded_rgb_sha256": "c2465521c6960e7657d910a051381d49b9df39d0c331fa5502c34a46a25f6ad9"
+        }
+      ]
+    },
+    {
+      "name": "restoration-gospel-teaching",
+      "status": "approved",
+      "source_sha256": "3b8230d3f7c09062e4049a3b74878f9b4bf0a20b3914d7b07c8e350bac0bdad7",
+      "source_decoded_rgb_sha256": "066a119f83b4a69e6de7af846979cd2de1945dc9ccd34b81457ba86f82db5242",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\restoration-gospel-teaching.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/restoration-gospel-teaching-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "a418a135b299ca67d36d8c914f27cee3c8f5477efe6ab242a8206bf47f3afeb8",
+          "decoded_rgb_sha256": "b81d2e85961d9a3357259853a4f3803e077a6992ae22b2b16075876f31be4870"
+        },
+        {
+          "path": "assets/page-art/exclusive/restoration-gospel-teaching-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c39d34e21473fd583298259f1351c28c786e1279f3fcc33c31102ce6943f6307",
+          "decoded_rgb_sha256": "7c8e3e23c4b8f335b045774b99492f5837bbb7d8b324f3f15a3b99ed4a739a8d"
+        }
+      ]
+    },
+    {
+      "name": "restoration-read-original",
+      "status": "approved",
+      "source_sha256": "10c007a8932d1fbea26c17fb7142422141dcda58b51f076ef41c18bae32fbb1a",
+      "source_decoded_rgb_sha256": "c4f9fcac04dbc0268eeefd2442ab5dd62bb98dcae8d58275e4ee7430c4eeb54c",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\restoration-read-original.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/restoration-read-original-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "4268551971ba14e02cd932e7b4a75b1d0bdfeb1bc4c03addc9fa7851c7fab363",
+          "decoded_rgb_sha256": "a100cf6e9786675a12a30bf365047736f2324b7df2c068e04a95e200f78c0ea0"
+        },
+        {
+          "path": "assets/page-art/exclusive/restoration-read-original-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "b6c2ef9a6845a347ef3542bd0b699ca8bfad66ad7dd5a5d07f50c9c7e1934b71",
+          "decoded_rgb_sha256": "0f02c3a5a16a9849dc352654c4d300d38a4b74b301736d57fb203128c4018de7"
+        }
+      ]
+    },
+    {
+      "name": "restoration-shared-questions",
+      "status": "approved",
+      "source_sha256": "2883373f0c0f5643242235bd6e01103dc24bd8ffd344d38c1ecacbb3cb4f447a",
+      "source_decoded_rgb_sha256": "0794cac8afa2c6044744026d946ebfb2b420bb7426dfa9a65bfcfe44bbd578f9",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\restoration-shared-questions.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/restoration-shared-questions-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "b257aaa31b3b59e0f69ef9d3ea118ceeac2cd7297452adc74e394026a56ab2d8",
+          "decoded_rgb_sha256": "1bb133e2552b3b8846c4c66bf2f58421d11b25b0e280056e80efa490226eed4a"
+        },
+        {
+          "path": "assets/page-art/exclusive/restoration-shared-questions-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "b514c0ccce80e90d076aa533cfd2af2d3d86e2cdeeea21b67da9c745af69a58c",
+          "decoded_rgb_sha256": "0d5d1d5f3362f57fef6af1c204d90d2cb1e441c4c4e8928d395db7d76b03a3b0"
+        }
+      ]
+    },
+    {
+      "name": "stand-prayerful-question",
+      "status": "approved",
+      "source_sha256": "842ab33671b3826d0b88479e04249ae98e44d3244bc8e2ac590bd81482904e45",
+      "source_decoded_rgb_sha256": "60017c63128ba3b937e08349126f42ef7a69eeae15b0639f0911987f0b7b0e11",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\stand-prayerful-question.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/stand-prayerful-question-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "c458cb57edc07cce00024f20d9b0ead1e6d77c39ae2ade58a3481d25d1bf1cde",
+          "decoded_rgb_sha256": "462d48abc128f8ce34a9424e21728b5b49e98636b020519f8c02d34087f5d11b"
+        },
+        {
+          "path": "assets/page-art/exclusive/stand-prayerful-question-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "f8e0f0be792a251246bd0a19552be3a361c6f912accca360fe4168df288d9e38",
+          "decoded_rgb_sha256": "dae2ffed0078f73a32fe1bcaee7866d0a930d1fdc286a645b89660ca676aa1af"
+        }
+      ]
+    },
+    {
+      "name": "temple-generations-craft",
+      "status": "approved",
+      "source_sha256": "35f6551c1247071e0b465ca0ef42650b4802a656a57ccf6fcfdc109e6e2affe9",
+      "source_decoded_rgb_sha256": "15787dec76b9ff5243cbdb047947d24845ffee2d338773594d0e16daa6440bcf",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\temple-generations-craft.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/temple-generations-craft-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "5570a4e7ebfe42f2eabde23c67d511b8281480381f50bfb42be6207e6fb0ba8b",
+          "decoded_rgb_sha256": "87f45004f85633ded16c31292d9334bee1e8069dfabb43ca91e798caa3d0d76e"
+        },
+        {
+          "path": "assets/page-art/exclusive/temple-generations-craft-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "4ea462eccae083be1b176ffd868bf94af1c1eedd098116fc50d0aae30610faef",
+          "decoded_rgb_sha256": "6db86e2f37cfa633446a69d3e53b09aab35f98dd32dee2793c9ea806c3e3ab2b"
+        }
+      ]
+    },
+    {
+      "name": "jesus-prayer-solitude-v2",
+      "status": "approved",
+      "source_sha256": "7d864597eb8ee7c44cfbdcd41ece581d96a7fe536bac10b135ef04a8f507c1c5",
+      "source_decoded_rgb_sha256": "d39914f23aa7ddf03c35ab2ef41a5998f38c5c3c7fc52cdf84f28d18858b8862",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\jesus-prayer-solitude-v2.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/jesus-prayer-solitude-v2-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "ae80a0f6817107bd430168d69475129e284b23b5d7f6ebee6f512b957da0686b",
+          "decoded_rgb_sha256": "2c75fa64e8eabf11c56a50ec6220e5205deda25dd4c0fa88f727eeb938a4f187"
+        },
+        {
+          "path": "assets/page-art/exclusive/jesus-prayer-solitude-v2-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "c47ccc320ced6fcc485a4ecd26e23bc3fba69ff0b1697a2fbb060165f7fe0139",
+          "decoded_rgb_sha256": "4294ea71a09efe49f49352f4f717b9b14c6edf6cedda41a426006655de460eea"
+        }
+      ]
+    },
+    {
+      "name": "jesus-compassion-attention-v4",
+      "status": "approved",
+      "source_sha256": "2584a2fa8c9eebc07ff1d4e798e507b1ef151d0d01c2989ebee6374bc85bdd67",
+      "source_decoded_rgb_sha256": "f9dbd4b0ac692ba59de832920361cb12d032ec6aaea1cde3b71eb76265b43f71",
+      "source_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-07\\1-you-can-see-the-portion-3\\work\\exclusive-art-resume-new\\jesus-compassion-attention-v4.png",
+      "reviewed_by": "independent art_review agent",
+      "published_assets": [
+        {
+          "path": "assets/page-art/exclusive/jesus-compassion-attention-v4-800.webp",
+          "width": 800,
+          "height": 533,
+          "sha256": "d4292e30014cd86165b7a4f4947122b0b93a60dcefe621b871d96c3ee08722a2",
+          "decoded_rgb_sha256": "7c44a909f7de7759656ad588d427deae23ecf8f00fd18bc06b9251ebe4d41dbd"
+        },
+        {
+          "path": "assets/page-art/exclusive/jesus-compassion-attention-v4-1536.webp",
+          "width": 1536,
+          "height": 1024,
+          "sha256": "62f63acc32954f39ab53693c18382b3b8df47e5fa18cb2f1a5b4823432450e3d",
+          "decoded_rgb_sha256": "4eb01c6eb423d0c02aa20bec9eeb97885a33f70c2234f3b314d6bcc978737454"
+        }
+      ]
+    }
+  ]
+}

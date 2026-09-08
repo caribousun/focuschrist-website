@@ -18,7 +18,21 @@
     ask.textContent = 'Ask About This Artwork';
     ask.hidden = true;
     if (fullImage) fullImage.before(ask);
+    const resume = document.createElement('button');
+    resume.className = 'fc-button';
+    resume.type = 'button';
+    resume.textContent = 'Continue Lesson';
+    resume.setAttribute('data-artwork-detail-continue', '');
+    resume.hidden = true;
+    if (fullImage) fullImage.after(resume);
     let returnFocus = null;
+    let lessonFigure = null;
+    let continueLesson = false;
+
+    resume.addEventListener('click', function () {
+        continueLesson = true;
+        dialog.close();
+    });
 
     function openDetail(key, trigger) {
         const record = document.querySelector('[data-artwork-detail-content="' + key + '"]');
@@ -64,6 +78,9 @@
         }
 
         returnFocus = trigger;
+        lessonFigure = trigger.closest('main figure');
+        resume.hidden = !lessonFigure;
+        continueLesson = false;
         document.body.classList.add('fc-dialog-open');
         dialog.showModal();
         dialog.scrollTop = 0;
@@ -95,7 +112,10 @@
         document.body.classList.remove('fc-dialog-open');
         image.removeAttribute('src');
         if (returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus({ preventScroll: true });
+        if (continueLesson && lessonFigure) lessonFigure.scrollIntoView({ block: 'start', behavior: 'auto' });
         returnFocus = null;
+        lessonFigure = null;
+        continueLesson = false;
     });
 
     if (isHome) {

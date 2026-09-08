@@ -34,7 +34,15 @@
       "height": 240,
       "sha256": "3d1ef4c92e87261095eaa23f32b32efbc3208d28ea06d33a674d5f5da0bb1228",
       "status": 200,
-      "verified_date": "2026-09-06"
+      "verified_date": "2026-09-06",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/20?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/21?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/22?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/23?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/24?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng"
+      ]
     },
     {
       "key": "cfm-philippians",
@@ -70,7 +78,12 @@
       "height": 480,
       "sha256": "e88aa0af986bc8afefe96bceaba5f6a14874cd810e9717abe8a92724d53e6f8f",
       "status": 200,
-      "verified_date": "2026-09-06"
+      "verified_date": "2026-09-06",
+      "inline_scripture_urls_by_page": {
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng"
+        ]
+      }
     },
     {
       "key": "youth",
@@ -118,7 +131,10 @@
       "height": 630,
       "sha256": "7ea2ed80547bcb8f7ca2337c039f9e7d5b43ceb010171e7a40034e8c41626e00",
       "status": 200,
-      "verified_date": "2026-09-06"
+      "verified_date": "2026-09-06",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?id=p22-p33&lang=eng#p22"
+      ]
     },
     {
       "key": "nephi",
@@ -142,7 +158,10 @@
       "height": 630,
       "sha256": "f4deee4980cd77c838682d6ccfd20ab30f513451446313d59287a013d005562b",
       "status": 200,
-      "verified_date": "2026-09-06"
+      "verified_date": "2026-09-06",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p36&lang=eng#p36"
+      ]
     },
     {
       "key": "nephi-visual",
@@ -613,7 +632,11 @@
       "alt": "Elder D. Todd Christofferson speaking at October 2025 general conference",
       "owning_page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
       "replaces_key": "look-worldwide",
-      "visual_review": "Native 768 by 432 speaker photograph visually inspected; clear face, natural composition, no embedded text clipping. Original downloaded bytes preserved."
+      "visual_review": "Native 768 by 432 speaker photograph visually inspected; clear face, natural composition, no embedded text clipping. Original downloaded bytes preserved.",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p36&lang=eng#p36",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/37?lang=eng"
+      ]
     },
     {
       "key": "about-resurrection-hope",

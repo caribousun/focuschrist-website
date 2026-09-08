@@ -1,0 +1,26 @@
+{
+  "role": "Navigation previews, excluded from body-picture count",
+  "page": "answers/stand-forever.html",
+  "newChristPreview": {
+    "name": "stand-christ-preview",
+    "source_sha256": "90a77f2a6ba30bb10e105517bede68e2f44e07c6fe3a490efd3d9e54f8b0bae4",
+    "review": "Independent full-frame and native face comparison approved; original retained outside publication",
+    "status": "approved",
+    "derivatives": [
+      {
+        "path": "assets/page-art/exclusive/stand-christ-preview-800.webp",
+        "sha256": "cbe711e09916cb3d12697698c87bdc4a5b1203c56038a3f9db8b75b4f59c11c4",
+        "width": 800,
+        "height": 533
+      },
+      {
+        "path": "assets/page-art/exclusive/stand-christ-preview-1536.webp",
+        "sha256": "b53f4d4db919c236bd63696dd866cfbe5ed36380b3cb889230c11ad9b6aab4bc",
+        "width": 1536,
+        "height": 1024
+      }
+    ]
+  },
+  "otherPreviews": "Reuse only Stand Forever own approved body illustrations",
+  "prompt": "Create one reverent photographic study illustration, landscape 3:2. The supplied image is the exact approved Christ identity reference, not an edit target: preserve his precise facial proportions, rounded broad nose, brown hazel eyes, natural smile lines, medium warm complexion, wavy brown hair and beard. Extremely natural photographic facial detail, pores and individual beard hairs, no painterly smoothing. Scene: Jesus in a muted charcoal blue woven robe, chest-up three-quarter portrait, standing beside a sunlit stone doorway, looking calmly toward an unseen listener. Face large, sharply focused, gentle thoughtful expression rather than broad grin, hands outside frame. Soft morning light, natural ancient Judean setting, no text, halos or romantic gestures. A unique Stand Forever navigation illustration about learning who Jesus Christ is; not a depiction of a specific historical event. Preserve exact approved face, avoid generic replacement face."
+}
