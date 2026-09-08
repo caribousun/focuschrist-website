@@ -1,6 +1,6 @@
 # focusChrist Supporting Artwork Standard
 
-Updated: 2026-09-05
+Updated: 2026-09-08
 
 ## Purpose
 
@@ -43,6 +43,16 @@ Supporting artwork beautifies the content of each page without replacing or chan
 - The dialog must support mouse, touch, keyboard activation, Escape, backdrop close, focus return, body scroll locking, and responsive stacking.
 - The circular close control uses CSS-drawn crossing lines centered at exactly 50 percent on both axes. Do not replace it with a font multiplication glyph, which appears optically off-center.
 - Page heroes remain non-interactive unless Wyatt separately approves a change to their behavior.
+
+## Caption prose standard
+
+- Write for the visitor, not for an internal asset ledger. Every visible caption and expanded artwork description must begin with something concrete in the picture: the people, setting, action, expression, light, object, or relationship that carries the meaning.
+- Connect that visible detail to the nearby doctrine, scripture, history, reflection, or invitation. The caption should help the reader notice and study, not explain why the image is legally or historically limited.
+- Never publish generic scaffolding such as “study illustration,” “contemporary illustration,” “historical study illustration,” “not a photograph,” “not a primary record,” “not a reconstruction,” “does not depict,” or equivalent production disclaimers as the descriptive paragraph.
+- Use the shared eyebrow “Explore and study” for study artwork. It identifies the interaction without consuming the descriptive paragraph.
+- Preserve source integrity through accurate nearby prose, exact source links, image-specific alternative text, and clear separation between cited claims and reflective application. Do not use repeated disclaimer sentences as a substitute for those controls.
+- Review the page caption and the expanded detail-panel copy together. They may share the same approved description; neither surface may retain stale placeholder language.
+- `tools/site_qa.py` is the release gate for this rule across every permanent Answer page plus Church History and General Conference. Extend its caption scope when another page adopts this artwork pattern.
 
 ## Site-wide interaction inventory
 

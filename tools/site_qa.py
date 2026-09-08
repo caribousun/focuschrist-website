@@ -55,6 +55,21 @@ HEADER_PAGES = {
     "404.html": "site-header.css?v=20260906-refined",
 }
 HEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")
+PLACEHOLDER_CAPTION_PATTERNS = (
+    r"historical study illustration",
+    r"contemporary (?:study )?illustration",
+    r"not a photograph(?: or primary record)?",
+    r"not (?:a )?reconstruction",
+    r"does not depict",
+    r"does not reconstruct",
+    r"pictured document is not",
+    r"study aid, not",
+    r"visual texture",
+    r"without depicting",
+    r"does not prescribe",
+    r"does not set a timetable",
+    r"not a temple ceremony",
+)
 
 
 class RefParser(HTMLParser):
@@ -403,6 +418,37 @@ def main() -> int:
     for page in artwork['pages']:
         for issue in page['issues']:
             fail(errors, f"{page['page']}: {issue}")
+
+    # Artwork captions must describe or interpret the pictured moment. Generic
+    # production disclaimers are internal scaffolding and must never ship as copy.
+    caption_scope = [
+        "answers.html",
+        *(path.relative_to(ROOT).as_posix() for path in sorted((ROOT / "answers").glob("*.html"))),
+        "general-conference.html",
+        "church-history.html",
+    ]
+    for relative in caption_scope:
+        page_text = (ROOT / relative).read_text(encoding="utf-8")
+        artwork_blocks = re.findall(
+            r"<figure\b[^>]*>.*?</figure>|<article\b[^>]*data-artwork-detail-content[^>]*>.*?</article>|<header\b[^>]*fc-marriage-journey__intro[^>]*>.*?</header>",
+            page_text,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        visible_copy = " ".join(artwork_blocks)
+        for pattern in PLACEHOLDER_CAPTION_PATTERNS:
+            if re.search(pattern, visible_copy, flags=re.IGNORECASE):
+                fail(errors, f"{relative}: placeholder-style artwork caption matches {pattern!r}")
+    for ledger_name in (
+        "docs/topic-artwork-placement.json",
+        "docs/five-picture-placement-part1.json",
+        "docs/five-picture-placement-part2.json",
+        "docs/five-picture-placement-root.json",
+        "docs/exclusive-artwork-ownership.json",
+    ):
+        ledger_text = (ROOT / ledger_name).read_text(encoding="utf-8")
+        for pattern in PLACEHOLDER_CAPTION_PATTERNS:
+            if re.search(pattern, ledger_text, flags=re.IGNORECASE):
+                fail(errors, f"{ledger_name}: placeholder-style artwork description matches {pattern!r}")
 
     if errors:
         print("FocusChrist SITE QA FAILED", file=sys.stderr)
