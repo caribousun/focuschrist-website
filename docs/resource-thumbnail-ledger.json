@@ -82,6 +82,9 @@
       "inline_scripture_urls_by_page": {
         "answers/look-unto-me-doctrine-and-covenants-6-36.html": [
           "https://www.churchofjesuschrist.org/study/scriptures/nt/philip/4?lang=eng"
+        ],
+        "index.html": [
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p36&lang=eng#p36"
         ]
       }
     },
