@@ -59,3 +59,23 @@
 @media(max-width:700px){.cfm-page .cfm-hero{padding:40px 22px;min-height:calc(100svh - var(--cfm-header))}.cfm-hero__copy .cfm-actions{display:grid;grid-template-columns:1fr}.cfm-section{padding:28px 16px}.cfm-week{padding-top:4px}.cfm-jump{padding:16px;gap:2px 20px;justify-content:flex-start}.cfm-jump a{min-height:44px;display:flex;align-items:center}.cfm-focus{padding:22px}.cfm-focus h3{font-size:1.65rem}.cfm-toolkit__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cfm-tool :is(strong,small){margin-inline:12px}.cfm-tool strong{font-size:.95rem}.cfm-tool small{font-size:.84rem}.cfm-days,.cfm-paths,.cfm-library{grid-template-columns:1fr}.cfm-library-card img{aspect-ratio:16/9}.cfm-path__visual img{aspect-ratio:16/10}.cfm-day:last-child{grid-column:auto}.cfm-source-note{text-align:left;font-size:.9rem}.cfm-title{font-size:2rem}.cfm-library-footer{justify-content:stretch}.cfm-library-footer>a{width:100%}}
 @media(max-width:700px){.cfm-hero:after{background:linear-gradient(0deg,rgba(3,28,45,.9),rgba(3,28,45,.48) 65%,rgba(3,28,45,.06))}}
 @media(prefers-reduced-motion:reduce){.cfm-btn{transition:none}}
+
+/* Keep scripture choices in the reading flow and clear of lesson navigation. */
+[data-cfm-current-reading]{font-weight:700;line-height:1.65}
+.cfm-reading-range{display:inline;position:relative}
+.cfm-reading-range>summary,.cfm-month .cfm-reading-range>summary{display:inline;padding:0;font:inherit;color:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px;list-style:none}
+.cfm-reading-range>summary:after,.cfm-month .cfm-reading-range>summary:after{content:" ▾";float:none;font-size:.8em;color:inherit}
+.cfm-reading-range[open]{display:block;margin:8px 0}
+.cfm-reading-range[open]>summary:after,.cfm-month .cfm-reading-range[open]>summary:after{content:" ▴"}
+.cfm-reading-chapters{display:flex;flex-wrap:wrap;gap:8px;padding:10px 0;max-width:100%}
+.cfm-reading-chapters>a,.cfm-month .cfm-reading-chapters>a{display:inline-block;border:1px solid currentColor;border-radius:8px;padding:6px 10px;font:inherit;text-decoration:underline}
+.cfm-schedule-reading{display:block;margin-top:5px}
+.cfm-schedule-reading>a,.cfm-month .cfm-schedule-reading>a{display:inline;font:inherit}
+.cfm-reading-range>summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+
+/* Self-contained reading pills avoid stranded separators when a range expands. */
+[data-cfm-current-reading],.cfm-schedule-reading{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start}
+.cfm-reading-range,.cfm-reading-range[open]{display:block;margin:0;max-width:100%;border:1px solid currentColor;border-radius:8px;padding:6px 10px}
+[data-cfm-current-reading]>a,.cfm-month .cfm-schedule-reading>a{display:block;border:1px solid currentColor;border-radius:8px;padding:6px 10px;line-height:inherit}
+.cfm-reading-range[open]{flex-basis:100%}
+.cfm-reading-chapters{padding-bottom:0}
