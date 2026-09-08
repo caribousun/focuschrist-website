@@ -404,6 +404,8 @@
             'divorce-and-faith.html': 'Divorce',
             'grief-and-faith.html': 'Grief',
             'stand-forever.html': 'Stand Forever',
+            'god-our-heavenly-father.html': 'God',
+            'restored-church-of-jesus-christ.html': 'The restored Church',
             'look-unto-me-doctrine-and-covenants-6-36.html': hash === '#stand-forever' ? 'Stand Forever' : 'Look Unto Me'
         };
         const file = path.split('/').pop();

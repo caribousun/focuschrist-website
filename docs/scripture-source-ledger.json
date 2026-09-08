@@ -1611,6 +1611,19 @@
       ]
     },
     {
+      "chapter": "nt/acts/17",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d6950526bb7ce8832dff83867b46d398377f80677e2f3f670df112b8acdbac05",
+      "data_sha256": "9ea2b3698710392bbbda608ded356fd205b2b9a2bb4b85b041538efb526ba680",
+      "verse_count": 34,
+      "verified_on": "2026-09-07",
+      "linked_from": [
+        "answers/god-our-heavenly-father.html"
+      ]
+    },
+    {
       "chapter": "nt/acts/2",
       "status": "verified",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/2?lang=eng",
@@ -3089,6 +3102,19 @@
         "ask.html",
         "pioneers.html",
         "watch.html"
+      ]
+    },
+    {
+      "chapter": "pgp/moses/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "771f16bcd142b43eca0d3467e749ae3c09aafdecc8fdecaf00125f939865b1d7",
+      "data_sha256": "a9a28500f87a8ea5a2c14566f511c2487865e034f43bc6dd26d8912cfa1251d1",
+      "verse_count": 42,
+      "verified_on": "2026-09-07",
+      "linked_from": [
+        "answers/god-our-heavenly-father.html"
       ]
     },
     {

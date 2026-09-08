@@ -256,3 +256,7 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## focusChrist enrichment standing direction (2026-09-08)
+
+Read `docs/focuschrist-enrichment-and-stewardship-prompt.md` for Wyatt's current definition of enriched and proactive stewardship. It authorizes fitting supporting image creation without repeated advance approval, requires the exact approved Home Christ likeness, reverent scenes, deliberate robe-color variation, accessible theme contrast, extensive connected scripture/video study, and verified production quality. Preserve the approved heroes. See `docs/foundation-artwork-review.md` for the new artwork inventory. The canonical Master Brain remains authoritative and must be loaded.

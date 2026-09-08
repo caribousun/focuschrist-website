@@ -85,6 +85,8 @@ def check():
             if identity in watch:
                 errors.append(f'{path.name}: video already appears in Watch: {key}')
             for link in (n for n in node.walk() if n.tag == 'a'):
+                if link.has('fc-inline-scripture') and link.attrs.get('href','').startswith('https://www.churchofjesuschrist.org/study/scriptures/'):
+                    continue  # Exact inline chapter URLs are gated by resource_thumbnail_qa.py.
                 if aliases.get(canonical(link.attrs.get('href', ''))) != identity:
                     errors.append(f'{path.name}: source URL does not match reviewed video identity: {key}')
         # Direct video links outside thumbnail cards must not reintroduce Watch.

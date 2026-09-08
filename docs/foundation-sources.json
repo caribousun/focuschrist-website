@@ -1,0 +1,56 @@
+{
+  "verifiedDate": "2026-09-07",
+  "reviewStatus": "Independent full-page semantic review approved; resource and artwork verification complete. Browser presentation and regression checks recorded separately.",
+  "pages": {
+    "answers/god-our-heavenly-father.html": {
+      "scriptures": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng"
+      ],
+      "scope": "Original contextual paraphrase, LDS framing, optional reflection and practice; no direct quotations; scripture modules under 200 words per source."
+    },
+    "answers/restored-church-of-jesus-christ.html": {
+      "scriptures": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=eng"
+      ],
+      "scope": "Original contextual paraphrase, LDS framing, optional reflection and practice; no direct quotations; scripture modules under 200 words per source."
+    }
+  },
+  "videos": [
+    {
+      "key": "god-stand-forever-29",
+      "url": "https://www.youtube.com/watch?v=z32F-d_tsgg",
+      "thumbnail": "https://i.ytimg.com/vi/z32F-d_tsgg/hqdefault.jpg",
+      "publisher": "Scripture Central",
+      "source": "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-29-the-truth-is-there-a-god-who-is-our-father-elder-lawrence-e-corbridge",
+      "note": "Publisher HTML independently verified to include exact YouTube ID z32F-d_tsgg. Title says Episode 29 but generic metadata says Episode 31; displayed title follows publisher episode title."
+    },
+    {
+      "key": "god-overcome-world",
+      "url": "https://www.youtube.com/watch?v=RFKePsgTNg0",
+      "thumbnail": "https://i.ytimg.com/vi/RFKePsgTNg0/hqdefault.jpg",
+      "publisher": "General Conference of The Church of Jesus Christ",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2022/10/47nelson?lang=eng"
+    },
+    {
+      "key": "restored-hear-him",
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-04-4050-russell-m-nelson?lang=eng",
+      "thumbnail": "assets/page-art/home-light-through-study-900.webp",
+      "publisher": "The Church of Jesus Christ of Latter-day Saints",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2020/04/45nelson?lang=eng",
+      "note": "Clearly labeled approved study illustration, not native video poster"
+    },
+    {
+      "key": "restored-come-join",
+      "url": "https://www.youtube.com/watch?v=APwBCEjvSJQ",
+      "thumbnail": "https://i.ytimg.com/vi/APwBCEjvSJQ/hqdefault.jpg",
+      "publisher": "The Church of Jesus Christ of Latter-day Saints",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2013/10/come-join-with-us?lang=eng"
+    }
+  ]
+}

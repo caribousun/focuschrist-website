@@ -82,7 +82,7 @@ for (const [href,label] of pills) {
   assert.equal(h.desktop.children.length,desktopSize,'desktop generated topic must not duplicate');
   assert.equal(h.menu.children.length,size,'hash changes must not duplicate generated topic links');check(h,label);
 }
-for (const [file,label] of [['prayer-and-personal-revelation.html','Prayer & Revelation'],['death-of-a-child.html','Death of a Child'],['divorce-and-faith.html','Divorce'],['look-unto-me-doctrine-and-covenants-6-36.html','Look Unto Me']]) {
+for (const [file,label] of [['god-our-heavenly-father.html','God'],['restored-church-of-jesus-christ.html','The Restored Church'],['prayer-and-personal-revelation.html','Prayer & Revelation'],['death-of-a-child.html','Death of a Child'],['divorce-and-faith.html','Divorce'],['look-unto-me-doctrine-and-covenants-6-36.html','Look Unto Me']]) {
   const h=createHarness('/answers/'+file);h.context.initCurrentStudyNavigation();check(h,label);
 }
 const h=createHarness('/answers.html','#quiet-prayer-title');h.context.initCurrentStudyNavigation();check(h,'Prayer & Revelation');
