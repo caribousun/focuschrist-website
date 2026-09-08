@@ -1,12 +1,24 @@
-.fc-study-visual{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px;align-items:center;margin:24px 0 28px;padding:0;max-width:100%}
-.fc-study-visual>a{display:block;min-width:0;border-radius:12px;overflow:hidden;background:#102b36}
+.fc-study-visual{display:flex;flex-wrap:wrap;gap:24px;align-items:center;margin:24px 0 28px;padding:0;max-width:100%}
+.fc-study-visual>a{display:block;flex:1.2 1 320px;min-width:0;border-radius:12px;overflow:hidden;background:#102b36}
 .fc-study-visual img{display:block;width:100%;height:auto;aspect-ratio:auto var(--study-image-ratio,3/2);object-fit:contain;margin:0}
-.fc-study-visual figcaption{min-width:0;color:#dce6e9;font-size:1rem;line-height:1.7}
-.fc-study-visual figcaption h3{margin:6px 0 12px!important;font-size:1.2rem;line-height:1.35;color:#f0c36a}
+.fc-study-visual figcaption{flex:1 1 280px;min-width:0;color:#dce6e9;font-size:1rem;line-height:1.7}
+.fc-study-visual figcaption h3{margin:6px 0 12px!important;font-size:1.2rem!important;line-height:1.35!important;color:#f0c36a}
 .fc-study-visual figcaption p{margin:0 0 12px!important}
 .fc-study-visual figcaption p:last-child{margin-bottom:0!important}
 .fc-study-visual .fc-study-visual-label{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#c6d8dc}
 .fc-study-visual-sources{display:flex;flex-wrap:wrap;gap:8px 16px}
 .fc-study-visual-sources a{color:#f0c36a;text-decoration:underline;text-underline-offset:3px}
 .fc-study-visual>a:focus-visible{outline:3px solid #f0c36a;outline-offset:4px}
-@media(max-width:700px){.fc-study-visual{grid-template-columns:minmax(0,1fr);gap:16px;margin-block:20px 24px}.fc-study-visual figcaption{font-size:.96rem}}
+/* Wrap according to the space the figure actually receives, including cards
+   inside a wide desktop layout. The image never competes in a nested grid. */
+.fc-answer-depth .fc-study-feature.fc-study-feature--illustrated{display:block}
+.fc-answer-depth .fc-study-feature--illustrated .fc-study-heading{margin-bottom:20px}
+.fc-answer-depth .fc-study-feature--illustrated .fc-study-heading .fc-eyebrow{margin-bottom:12px;font-size:.7rem;letter-spacing:.2em}
+.fc-answer-depth .fc-study-feature--illustrated .fc-study-heading h2{font-size:clamp(1.4rem,2.2vw,1.85rem);line-height:1.25;margin:0}
+.fc-answer-depth .fc-study-feature--illustrated>.fc-study-visual{width:100%;margin:0 0 28px}
+.fc-answer-depth .fc-study-feature--illustrated .fc-study-media-row{display:flex;flex-wrap:wrap;gap:28px;align-items:flex-start}
+.fc-answer-depth .fc-study-media-row>.fc-study-discussion{flex:1 1 340px;min-width:0}
+.fc-answer-depth .fc-study-media-row>.fc-resource-card{flex:0 1 340px;width:100%;min-width:0;max-width:340px;margin:0}
+.fc-answer-depth .fc-study-discussion>:first-child{margin-top:0}
+.fc-answer-depth .fc-study-discussion>:last-child{margin-bottom:0}
+@media(max-width:700px){.fc-study-visual{gap:16px;margin-block:20px 24px}.fc-study-visual>a,.fc-study-visual figcaption{flex-basis:100%}.fc-study-visual figcaption{font-size:.96rem}.fc-answer-depth .fc-study-media-row>.fc-resource-card{flex-basis:100%;max-width:420px}.fc-answer-depth .fc-study-feature--illustrated .fc-study-media-row{gap:20px}}
