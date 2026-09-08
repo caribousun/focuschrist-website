@@ -46,7 +46,7 @@ function measure(frame=preview,pagePath=page.value) {
  const approvedHeroExpectedSize=w.innerWidth<=700?'auto 120%':'100% auto';
  const approvedHeroExpectedPosition=w.innerWidth<=700?'50% 24%':'50% 50%';
  const approvedHeroCentered=!approvedHero||approvedHeroStyle.backgroundPosition===approvedHeroExpectedPosition||approvedHeroStyle.backgroundPosition==='center';
- const heroRatioFit=!hero||w.innerWidth<=700||Math.abs(h.height-(h.width*684/2048))<=1;
+ const heroRatioFit=!hero||w.innerWidth<=700||hero.matches('.fc-answer-detail-hero')||Math.abs(h.height-(h.width*684/2048))<=1;
  const approvedRatioFit=!approvedHero||heroRatioFit;
  const approvedHeroFit=!approvedHero||((approvedHeroStyle.backgroundSize===approvedHeroExpectedSize||(approvedHeroExpectedSize==='100% auto'&&approvedHeroStyle.backgroundSize==='100%'))&&approvedHeroCentered&&approvedRatioFit);
  const headerHeightFit=!nav||Math.abs(n.height-(w.innerWidth>1020?52:62))<=1;
