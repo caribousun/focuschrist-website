@@ -162,7 +162,7 @@ def main() -> int:
         (ROOT / relative).read_text(encoding="utf-8", errors="replace")
         for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
     ]
-    viewer_triggers = sum(text.count("data-full-image-viewer") for text in viewer_documents)
+    viewer_triggers = sum(text.count("data-full-image-viewer") - text.count("data-enriched-study-art=") for text in viewer_documents)
     if viewer_triggers != 24:
         errors.append(f"same-page full-image viewer must have exactly 24 scoped triggers, found {viewer_triggers}")
     if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:

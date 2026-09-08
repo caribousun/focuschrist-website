@@ -13,3 +13,11 @@ body.fc-site.fc-topic-page .fc-deep-study{padding-block:28px}
 @media(max-width:1020px){body.fc-site.fc-topic-page{--topic-header:62px;padding-top:0!important}}
 @media(max-width:700px){body.fc-site.fc-topic-page .fc-topic-opening{min-height:max(520px,calc(100svh - var(--topic-header)));grid-template-rows:minmax(180px,1fr) auto}body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro{padding:22px 18px 24px}body.fc-site.fc-topic-page .fc-topic-opening .fc-display{font-size:clamp(2rem,8.5vw,2.75rem)}body.fc-site.fc-topic-page .fc-topic-opening .fc-eyebrow{font-size:.68rem;letter-spacing:.1em}body.fc-site.fc-topic-page .fc-topic-opening .fc-topic-subtitle{font-size:.96rem}body.fc-site.fc-topic-page .fc-topic-opening .fc-eyebrow:before,body.fc-site.fc-topic-page .fc-topic-opening .fc-eyebrow:after{display:none}}
 @media(max-height:540px){body.fc-site.fc-topic-page .fc-topic-opening{height:auto;min-height:0;grid-template-rows:220px auto}}
+
+/* Topic study flow: one section gap, without stacked edge padding and headings. */
+body.fc-site.fc-topic-page main > section{margin-block:32px}
+body.fc-site.fc-topic-page main > .fc-deep-study:not(.fc-foundation-route):not(.fc-foundation-connections):not(.fc-stand-study):not(.fc-stand-series){padding-block:0}
+body.fc-site.fc-topic-page main > section > :first-child{margin-top:0}
+body.fc-site.fc-topic-page main > section > :last-child{margin-bottom:0}
+body.fc-site.fc-topic-page main > h2{margin-top:32px}
+body.fc-site.fc-topic-page main .fc-study-lead > :is(h2,h3){margin-top:0}

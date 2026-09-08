@@ -49,3 +49,7 @@ Write natural, precise prose. Remove long-dash prose punctuation, canned transit
 ## Periodic enrichment review
 
 The three-day production check includes a small rotating enrichment review approximately every third run, with page coverage recorded so every section is considered over time. Add content only where it improves study. Check official sources at appropriate seasons for newly published General Conference, annual youth themes, and relevant study events. Distinguish announcements from published material, preserve useful history, and do not add content merely to show activity.
+
+## Complete enriched trigger and artwork gate
+
+The word enriched, whether used by Wyatt or the agent, invokes this entire directive automatically for any work on the site. All new imagery must have ultra-high clarity and near-photographic realism like the Home hero. Every Christ image must be compared side by side with the actual approved Home image; reject any identity drift before publication. Avoid accumulated section padding and excessive blank space; verify rendered gaps and first-screen boundaries. Preserve a recoverable checkpoint in the Focus brain, with Master aligned to the reusable directive.

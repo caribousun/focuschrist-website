@@ -1092,6 +1092,30 @@
       "remote_thumbnail": "https://i.ytimg.com/vi/APwBCEjvSJQ/hqdefault.jpg",
       "width": 480,
       "height": 360
+    },
+    {
+      "key": "grief-sunday-will-come",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2006/10/sunday-will-come?lang=eng",
+      "title": "Sunday Will Come",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/7e33d906e873c3fbd4b75ab8bd277a872457fb1b/full/%21768%2C/0/default",
+      "remote_thumbnail": "https://www.churchofjesuschrist.org/imgs/7e33d906e873c3fbd4b75ab8bd277a872457fb1b/full/%21768%2C/0/default",
+      "width": 768,
+      "height": 432,
+      "status": 200,
+      "verified_date": "2026-09-07",
+      "source_review": "Full official message reviewed independently; contextual description supported."
+    },
+    {
+      "key": "grief-christ-is-relief",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/04/42johnson?lang=eng",
+      "title": "Jesus Christ Is Relief",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/c638944b0f0e5062d6f12d2449b66c9bfed18950/full/%21768%2C/0/default",
+      "remote_thumbnail": "https://www.churchofjesuschrist.org/imgs/c638944b0f0e5062d6f12d2449b66c9bfed18950/full/%21768%2C/0/default",
+      "width": 768,
+      "height": 432,
+      "status": 200,
+      "verified_date": "2026-09-07",
+      "source_review": "Full official message reviewed independently; contextual description supported."
     }
   ],
   "reviewed_on": "2026-09-07",

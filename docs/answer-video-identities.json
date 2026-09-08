@@ -590,6 +590,22 @@
       "aliases": [
         "https://www.churchofjesuschrist.org/study/general-conference/2013/10/come-join-with-us?lang=eng"
       ]
+    },
+    "grief-sunday-will-come": {
+      "kind": "video",
+      "presentation": "Official general conference message",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2006/10/sunday-will-come?lang=eng",
+      "title": "Sunday Will Come",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2006/10/sunday-will-come",
+      "aliases": []
+    },
+    "grief-christ-is-relief": {
+      "kind": "video",
+      "presentation": "Official general conference message",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/04/42johnson?lang=eng",
+      "title": "Jesus Christ Is Relief",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2023/04/42johnson",
+      "aliases": []
     }
   }
 }

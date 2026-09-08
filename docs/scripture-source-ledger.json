@@ -205,6 +205,19 @@
       ]
     },
     {
+      "chapter": "bofm/2-ne/29",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/29?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "2985f7fb782f84bf4dd161b114d029e342f0c5f240803acae0974a79a1efac4f",
+      "data_sha256": "9ecf223755659b3315dc20f948793cfbda39a59ede19bff44f88dd1821fe5d83",
+      "verse_count": 14,
+      "verified_on": "2026-09-07",
+      "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html"
+      ]
+    },
+    {
       "chapter": "bofm/2-ne/31",
       "status": "verified",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng",
@@ -1543,6 +1556,19 @@
       ]
     },
     {
+      "chapter": "nt/2-cor/1",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/1?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "e67c54526ca1fa7ea206ecc1b1cd49f9fbda3bdaf7d7bdc447cea1aa36f85996",
+      "data_sha256": "af1d21c204141c2fa92147cebaf8d216d4384d242bead99c3e9395103c7d7b5a",
+      "verse_count": 24,
+      "verified_on": "2026-09-07",
+      "linked_from": [
+        "answers/grief-and-faith.html"
+      ]
+    },
+    {
       "chapter": "nt/2-cor/13",
       "status": "verified",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/13?lang=eng",
@@ -2142,6 +2168,19 @@
       "linked_from": [
         "ask.html",
         "pioneers.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/5",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/5?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c66feb75d5980cd3f86caa9da780aa990bcde4f6ba385e868f352e7e0318ff5a",
+      "data_sha256": "2d28d27971721b90e6ef008bce45a106810d3a91e4618389c9871bc3ff618c9d",
+      "verse_count": 39,
+      "verified_on": "2026-09-07",
+      "linked_from": [
+        "answers\\prayer-and-personal-revelation.html"
       ]
     },
     {
