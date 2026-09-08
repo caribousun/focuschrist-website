@@ -23,6 +23,12 @@ ART_STUDY_PAGES = (
     "art-study/suffer-the-little-children.html",
     "art-study/be-still.html",
 )
+ART_STUDY_HEROES = {
+    "art-study/the-living-christ.html": ("../art/The-Living-Christ.png", "living-christ-art"),
+    "art-study/the-good-shepherd.html": ("../art/The-Good-Shephard.jpg", "good-shepherd-art"),
+    "art-study/suffer-the-little-children.html": ("../art/Suffer-the-Little-Children.jpg", "little-children-art"),
+    "art-study/be-still.html": ("../art/Be-Still.png", "be-still-art"),
+}
 
 
 def main() -> int:
@@ -131,6 +137,29 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8")
         if "data-artwork-detail=" in text:
             errors.append(f"{relative}: dedicated study page artwork should retain direct full-size behavior")
+        asset, record = ART_STUDY_HEROES[relative]
+        hero = re.search(r'<a[^>]*data-hero-viewer[^>]*>\s*<img[^>]*>\s*</a>', text, re.S)
+        if not hero:
+            errors.append(f"{relative}: featured artwork hero with intrinsic image is missing")
+        else:
+            hero_text = hero.group(0)
+            for marker in (f'href="{asset}"', f'data-hero-record="{record}"', f'<img src="{asset}"'):
+                if marker not in hero_text:
+                    errors.append(f"{relative}: artwork hero mismatch: {marker}")
+            if "assets/heroes/home.webp" in hero_text:
+                errors.append(f"{relative}: generic Home hero fallback returned")
+        for marker in (
+            'href="../art-study-page.css?v=20260908-image-heroes"',
+            'src="../hero-details.js?v=20260908-art-study-heroes"',
+            'class="fc-page-intro-copy"',
+            '>Begin Scripture Study</a>',
+            'href="#study-resources">Explore Resources</a>',
+            'id="study-resources"',
+        ):
+            if text.count(marker) != 1:
+                errors.append(f"{relative}: enriched opening marker missing or duplicated: {marker}")
+        if re.search(r'<figure[^>]*>.*?' + re.escape(asset) + r'.*?</figure>', text, re.S):
+            errors.append(f"{relative}: featured artwork repeats below its hero")
 
     pioneer = (ROOT / "pioneers.html").read_text(encoding="utf-8", errors="replace")
     pioneer_hero = re.search(r'<a class="fc-visual-hero fc-visual-hero--history"[^>]*>', pioneer)
@@ -164,8 +193,8 @@ def main() -> int:
         for relative in (*ROOT_VIEWER_PAGES, *ART_STUDY_PAGES)
     ]
     viewer_triggers = sum(text.count("data-full-image-viewer") - text.count("data-enriched-study-art=") - text.count("data-five-picture-mandate") for text in viewer_documents)
-    if viewer_triggers != 24:
-        errors.append(f"same-page full-image viewer must have exactly 24 scoped triggers, found {viewer_triggers}")
+    if viewer_triggers != 20:
+        errors.append(f"same-page full-image viewer must have exactly 20 scoped triggers, found {viewer_triggers}")
     if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:
         errors.append("shared artwork full-size action is not enrolled in the same-page viewer")
     if 'id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in missionary:
@@ -185,7 +214,8 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", "hero-details.js?v=20260906-centered-panels", "hero-details.css?v=20260908-dialog-grid", "artwork-details.css?v=20260905-viewport"):
+        hero_script = "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels"
+        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", hero_script, "hero-details.css?v=20260908-dialog-grid", "artwork-details.css?v=20260905-viewport"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
         hero_links = re.findall(r'<a[^>]*data-hero-viewer[^>]*>', page)
@@ -265,6 +295,16 @@ def main() -> int:
                 errors.append(f"hero-details.css: desktop hero actions can separate again; missing {marker}")
         if re.search(r"grid-column:\s*1\s*/\s*-1", declarations):
             errors.append("hero-details.css: desktop hero close action must not span a separate full row")
+
+    art_study_css = (ROOT / "art-study-page.css").read_text(encoding="utf-8")
+    for marker in (".fc-art-study-hero::before", "var(--fc-art-study-image)", "object-fit: contain", 'href$="The-Good-Shephard.jpg"', "transform: scale(1.145)", "transform-origin: center bottom", "@media (max-width: 1020px)", "height: auto", "aspect-ratio: 16 / 10", ":focus-visible"):
+        if marker not in art_study_css:
+            errors.append(f"art-study-page.css: missing resilient hero marker: {marker}")
+
+    hero_js = (ROOT / "hero-details.js").read_text(encoding="utf-8")
+    for record in ART_STUDY_HEROES.values():
+        if f"'{record[1]}':" not in hero_js:
+            errors.append(f"hero-details.js: missing art-study detail record: {record[1]}")
 
     mission_css = (ROOT / "missionary.css").read_text(encoding="utf-8")
     mission_dialog_rule = re.search(r'\.fc-missionary-detail-dialog\s*\{([^}]+)\}', mission_css, re.S)

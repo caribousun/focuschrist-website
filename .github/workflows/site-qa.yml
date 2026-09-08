@@ -49,7 +49,9 @@ jobs:
         run: python tools/unified_experience_qa.py
 
       - name: Run site-wide artwork detail QA
-        run: python tools/artwork_details_qa.py
+        run: |
+          python tools/artwork_details_qa.py
+          node tools/hero_details_runtime_qa.js
 
       - name: Check connected study destinations and learning paths
         run: python tools/connected_study_qa.py
