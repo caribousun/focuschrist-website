@@ -55,6 +55,11 @@ jobs:
           python tools/art_study_enrichment_qa.py
           node tools/hero_details_runtime_qa.js
 
+      - name: Verify every featured art supporting picture study panel
+        run: |
+          npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
+
       - name: Check connected study destinations and learning paths
         run: python tools/connected_study_qa.py
 

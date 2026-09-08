@@ -40,6 +40,8 @@ class AuditParser(HTMLParser):
         self.links: list[str] = []
         self.captions: list[list[str]] = []
         self.caption_links: list[list[str]] = []
+        self.direct_viewers = 0
+        self.featured_destinations: list[str] = []
 
     def handle_starttag(self, tag: str, attrs) -> None:
         data = {key: value or "" for key, value in attrs}
@@ -64,7 +66,11 @@ class AuditParser(HTMLParser):
             self.links.append(href)
             if self.in_study_nav:
                 self.nav_hrefs.append(href)
+            if "data-artwork-detail" in data and href.startswith("art-study/"):
+                self.featured_destinations.append(href)
             if self.in_art_story and "data-full-image-viewer" in data:
+                self.direct_viewers += 1
+            if self.in_art_story and "data-art-study-supporting" in data:
                 self.full_assets.append(href)
             if self.in_figcaption and self.captions:
                 self.caption_links[-1].append(href)
@@ -101,6 +107,10 @@ def local_target(page: Path, href: str) -> Path | None:
 
 def main() -> int:
     errors: list[str] = []
+    gallery = AuditParser()
+    gallery.feed((ROOT / "art.html").read_text(encoding="utf-8"))
+    if set(gallery.featured_destinations) != set(PAGES) or len(gallery.featured_destinations) != len(PAGES):
+        errors.append("Featured Art & Study destinations differ from the complete audited page inventory")
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     reviewed_pages = manifest.get("pages", {})
     required = manifest.get("standard", {}).get("supporting_visuals_per_page")
@@ -123,6 +133,11 @@ def main() -> int:
         parser = AuditParser()
         parser.feed(text)
         parser.close()
+        if parser.direct_viewers:
+            errors.append(f"{relative}: supporting pictures must open study options before the full-image viewer")
+        for asset in ("topic-artwork-details.js", "topic-artwork-details.css"):
+            if not re.search(r'(?:src|href)="\.\./' + re.escape(asset) + r'(?:\?[^\"]*)?"', text):
+                errors.append(f"{relative}: missing required picture study asset {asset}")
 
         for marker in (
             'data-art-study-enriched="true"',

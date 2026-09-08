@@ -1,5 +1,11 @@
 # focusChrist enrichment and stewardship — production execution prompt
 
+## Mandatory complete picture path
+
+Every new or reviewed study picture must open the familiar artwork study panel first, with the selected picture's own title, caption, clickable scripture/source pills, View Full-Size Image, relevant onward study, Continue Lesson, and Close. This applies to all supporting pictures inside Featured Art & Study destinations, not only gallery cards or heroes. Load the shared study-panel script and stylesheet in every applicable page template.
+
+Follow Art -> featured card -> Open the Complete Art Study -> every supporting picture. Derive all destination and picture coverage from the actual pages. The prior direct-viewer and hero-only checks failed this repeated defect class. Require the Art study static and runtime gates, independent review, and actual desktop/phone verification of visible cohesive pills, nested image/reader closing and reopening, keyboard activation, focus restoration, and lesson return before release. Retain original full-image hrefs as no-script fallbacks, preserve image bytes and exact scripture context, and keep full-size viewing as a secondary panel action.
+
 Treat the owner's word **enriched** as a standing quality requirement: a robust, thorough, presentation-worthy study experience that follows the established focusChrist theme and gives a visitor substantial material to study, understandable choices, and a coherent next step. Enrichment is not a decorative card, added word count, or a collection of unexplained links.
 
 ## Implement the four foundational studies
