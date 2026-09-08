@@ -62,6 +62,15 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - Warmth never permits invention. Do not assign an unseen relationship, emotion, historical fact, or speaker claim unless the picture, page context, transcript, or verified source supports it.
 - Audit the visible caption, hidden detail-panel copy, alternative text, media introduction, source label, and linked destination together. Run `python tools/media_voice_qa.py` before committing.
 
+## focusChrist Art & Study completeness and visual gate
+
+- “Enriched” is a release contract, not a subjective label. Every featured Art & Study destination must include one approved hero plus four purpose-built supporting photographs, six valid study-navigation stops, at least three guided reflections, official scripture and Church sources, visual resources, three meaningful onward study paths, a contextual Ask route, and working full-size interactions.
+- Supporting artwork must be exclusive to its one destination page. Never reuse a gallery image or another page's supporting image to satisfy the visual count. Run `python tools/art_study_enrichment_qa.py` before committing.
+- Jesus Christ must retain the exact recognizable likeness established by `assets/heroes/home-christ-signature-approved-20260907.png`. New images must be convincing live-action photographs: natural skin, hair, hands, cloth, lens depth, and physically believable lighting. Painterly, illustrative, CGI, plastic, airbrushed, or poster-like images fail even when attractive.
+- Facial expression must fit the human and spiritual tone of the scene. Joy may be open; grief remains tender; danger requires calm, alert seriousness; hardship shows focused effort and concern; stillness feels peaceful rather than performed. Never default to a broad smile when the scene carries fear, grief, strain, or danger.
+- No image enters page code until it has been directly compared with the approved Home hero for likeness and realism, reviewed for expression-tone fit, recorded in `docs/art-study-image-review.json`, and checked for page exclusivity.
+- Sanity checks must test substantive and visual completeness, not merely file existence, valid HTML, or working links. A technically functional but thin page is a failed page.
+
 ### 🧠 MANDATORY MEMORY RECALL
 
 **ALWAYS run `memory_search` BEFORE answering questions about:**
