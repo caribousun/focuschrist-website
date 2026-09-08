@@ -1,0 +1,43 @@
+{
+  "standard": {
+    "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+    "required_visuals_per_page": 5,
+    "supporting_visuals_per_page": 4,
+    "full_image_dimensions": [1536, 1024],
+    "full_image_format": "WEBP",
+    "style": "ultra-realistic photographic imagery matching the approved Home hero",
+    "rules": [
+      "Every supporting image is created exclusively for one page and is not reused anywhere else.",
+      "Jesus Christ retains the recognizable likeness established by the approved Home hero.",
+      "Skin, hair, hands, fabric, lighting, lens depth, and environments must read as natural photography rather than painting, illustration, CGI, or poster art.",
+      "Facial expressions must fit the scene: joy may be open, grief stays tender, hardship shows focused care, and stillness feels calm rather than performed.",
+      "No asset enters page code until it has passed a direct visual comparison with the identity reference."
+    ]
+  },
+  "pages": {
+    "art-study/the-living-christ.html": [
+      {"asset": "assets/page-art/art-study/full/living-mary-at-tomb.webp", "sha256": "e27a0710f7506eb56ef34f0fc10bda24f0bf0336546995800dfaba38196e6669", "tone": "tender recognition after grief", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/living-peace-to-disciples.webp", "sha256": "6c33ad0e03313afee009ec8e71091e8d2686b292137a30c0c0712d341f594d72", "tone": "reassuring peace after fear", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/living-thomas-witness.webp", "sha256": "f77739780ae55f08ccdbf98d7c5b043f11198c34872ae214bcd6ba5ed2086761", "tone": "patient reassurance and growing faith", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/living-beside-grief.webp", "sha256": "f72203fe48b5598fe23762e13d4a1a9886cfa41b41a6fb7e2af534bc99afbbb0", "tone": "quiet compassion without rushing sorrow", "reviewed": true}
+    ],
+    "art-study/the-good-shepherd.html": [
+      {"asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp", "sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba", "tone": "protective attention", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/shepherd-sees-one.webp", "sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6", "tone": "dignifying compassion", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/shepherd-shares-burden.webp", "sha256": "d7aeb93b9a83147993c7933180d2ea73e7cfd4461c40c778793172927a0d6b5a", "tone": "focused effort and steady concern", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp", "sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041", "tone": "warm recognition in a crowd", "reviewed": true}
+    ],
+    "art-study/suffer-the-little-children.html": [
+      {"asset": "assets/page-art/art-study/full/children-gather-close.webp", "sha256": "85d4a603bd46ef7b1f73c281f0eff4f634206c0bd9d288dce7fa0129b5410cd1", "tone": "unhurried affection and safety", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/children-welcome-shy-child.webp", "sha256": "c95205d67cbcb8ab0337511ec2a5801ccaa3fe417197b79fb379b05b875f7256", "tone": "gentleness at the child's pace", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/children-listen-under-tree.webp", "sha256": "193a5ecda7f4bbda37ae92b26c064edc08aa58442ef98d3b58c6b822f5987805", "tone": "joyful attention to every voice", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/children-quiet-water.webp", "sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336", "tone": "calm and attentive listening", "reviewed": true}
+    ],
+    "art-study/be-still.html": [
+      {"asset": "assets/page-art/art-study/full/still-storm-boat.webp", "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c", "tone": "steadiness amid danger", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/still-city-companion.webp", "sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0", "tone": "concerned companionship in strain", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/still-lakeside-pause.webp", "sha256": "67fcb39e322e93f2389d465a20b73b6f059b41a1557cc627405c5781a796b724", "tone": "quiet without performance", "reviewed": true},
+      {"asset": "assets/page-art/art-study/full/still-shared-lift.webp", "sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869", "tone": "warm practical help", "reviewed": true}
+    ]
+  }
+}

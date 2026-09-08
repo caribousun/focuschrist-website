@@ -155,6 +155,13 @@ Gateway kept dying every ~20 min with code 1000 (graceful close, no reason). Lif
 **Repo:** github.com/caribousun/focuschrist-website
 **Hosting:** GitHub Pages
 
+### Featured Art & Study standard (September 8, 2026)
+
+- Every featured destination must be genuinely enriched: five total visuals (one approved hero plus four exclusive supporting photographs), image-led scripture study, warm picture-specific captions, at least three guided reflection prompts, official resources, reliable internal continuity, contextual Ask routing, and working full-size interactions.
+- Supporting images are unique to their one page and cannot be borrowed from the gallery or another section. Jesus uses the approved Home hero's exact recognizable likeness and must look like live-action photography, never painterly art, CGI, or a devotional poster.
+- Expressions must match the scene. In danger or strenuous work, Christ is calm, focused, compassionate, and serious rather than broadly smiling. In grief, His expression is tender and unhurried. Emotional congruence is part of acceptance, not an optional polish pass.
+- `tools/art_study_enrichment_qa.py` and `docs/art-study-image-review.json` permanently gate visual count, exclusivity, reviewed realism/likeness/tone, navigation, reflection, official-source depth, media interaction, and onward flow. A page that merely exists and opens does not pass production sanity.
+
 ### Images & Assets
 - **Prayer hero image:** `brain/knowledge/projects/focuschrist-prayer-image.jpg` (45,614 bytes)
 - **Image URL:** `https://raw.githubusercontent.com/caribousun/focuschrist-website/main/prayer.jpg`

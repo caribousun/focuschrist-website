@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_on": "2026-09-07",
+  "generated_on": "2026-09-08",
   "extraction": "Official English canonical verse paragraphs only; verse-number spans and superscript footnote markers removed; text-node order and punctuation preserved; whitespace normalized; sequential verse numbers required. No headings, summaries or footnotes.",
   "discovery": "Explicit canonical chapter paths in deployed HTML and runtime JS, including proxy runtime; excludes tests, tools and unused church-source-index.js.",
   "chapters": [
@@ -243,6 +243,19 @@
       ]
     },
     {
+      "chapter": "bofm/2-ne/26",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/26?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "d2897be154329673430035dd2b45aa8bc01636c0f1607ee9686b9fe09bc9375b",
+      "data_sha256": "8c22f7bf5ffe37ac8b4d91c1b7a608464166a94edf66b5bc92612f9a88306e1d",
+      "verse_count": 33,
+      "verified_on": "2026-09-08",
+      "linked_from": [
+        "art-study/suffer-the-little-children.html"
+      ]
+    },
+    {
       "chapter": "bofm/2-ne/27",
       "status": "verified",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/27?lang=eng",
@@ -279,7 +292,7 @@
       "verse_count": 14,
       "verified_on": "2026-09-07",
       "linked_from": [
-        "answers\\bible-and-book-of-mormon-together.html"
+        "answers/bible-and-book-of-mormon-together.html"
       ]
     },
     {
@@ -372,6 +385,19 @@
       ]
     },
     {
+      "chapter": "bofm/3-ne/15",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/15?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "612cd2b1759493b137b7143f68fe51bbc42088e42d0739bf8093a12388aeef37",
+      "data_sha256": "fdf4d0b9aed58edbf0b477bb6e4aeeb4c6d95a342bdf94704ab1e230bc9bba16",
+      "verse_count": 24,
+      "verified_on": "2026-09-08",
+      "linked_from": [
+        "art-study/the-good-shepherd.html"
+      ]
+    },
+    {
       "chapter": "bofm/3-ne/17",
       "status": "verified",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
@@ -439,6 +465,7 @@
       "verse_count": 33,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/restored-church-of-jesus-christ.html",
         "ask.html"
       ]
     },
@@ -531,8 +558,10 @@
       "verse_count": 43,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/god-our-heavenly-father.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/stand-forever.html",
         "answers/what-is-the-book-of-mormon.html",
         "ask.html",
         "groq-proxy/src/index.js"
@@ -647,6 +676,7 @@
         "answers/death-of-a-child.html",
         "answers/divorce-and-faith.html",
         "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/grief-and-faith.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "ask.html",
         "pioneers.html",
@@ -757,6 +787,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/stand-forever.html",
         "answers/what-is-the-book-of-mormon.html",
         "ask.html",
         "pioneers.html"
@@ -844,6 +875,8 @@
         "answers/death-of-a-child.html",
         "answers/divorce-and-faith.html",
         "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/grief-and-faith.html",
+        "answers/restored-church-of-jesus-christ.html",
         "answers/what-is-the-book-of-mormon.html",
         "answers/why-families-are-important.html",
         "answers/why-latter-day-saints-build-temples.html",
@@ -1004,6 +1037,7 @@
       "linked_from": [
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/what-is-eternal-marriage.html",
+        "answers/why-families-are-important.html",
         "ask.html",
         "pioneers.html"
       ]
@@ -1183,6 +1217,7 @@
       "verse_count": 84,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/restored-church-of-jesus-christ.html",
         "ask.html"
       ]
     },
@@ -1263,6 +1298,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/stand-forever.html",
         "ask.html",
         "pioneers.html"
       ]
@@ -1304,8 +1340,10 @@
       "verse_count": 37,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/faith-in-jesus-christ-during-trials.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/stand-forever.html",
         "answers/who-was-joseph-smith.html",
         "ask.html",
         "index.html",
@@ -1436,6 +1474,7 @@
       "linked_from": [
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/prayer-and-personal-revelation.html",
+        "answers/stand-forever.html",
         "ask.html",
         "pioneers.html"
       ]
@@ -1450,7 +1489,8 @@
       "verse_count": 53,
       "verified_on": "2026-09-07",
       "linked_from": [
-        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/stand-forever.html"
       ]
     },
     {
@@ -1792,6 +1832,7 @@
       "linked_from": [
         "answers/are-latter-day-saints-christian.html",
         "answers/bible-and-book-of-mormon-together.html",
+        "answers/restored-church-of-jesus-christ.html",
         "ask.html",
         "pioneers.html"
       ]
@@ -1806,6 +1847,7 @@
       "verse_count": 32,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/why-families-are-important.html",
         "ask.html",
         "pioneers.html"
       ]
@@ -1989,9 +2031,11 @@
       "verse_count": 42,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/faith-in-jesus-christ-during-trials.html",
         "art-study/the-good-shepherd.html",
         "art.html",
-        "ask.html"
+        "ask.html",
+        "hero-details.js"
       ]
     },
     {
@@ -2005,8 +2049,10 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers/death-of-a-child.html",
+        "answers/grief-and-faith.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
-        "answers/what-happens-after-death.html"
+        "answers/what-happens-after-death.html",
+        "art-study/the-living-christ.html"
       ]
     },
     {
@@ -2174,9 +2220,34 @@
       "verse_count": 42,
       "verified_on": "2026-09-06",
       "linked_from": [
-        "art-study/be-still.html",
         "ask.html",
         "watch.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/15",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "180cdf7403ea9bfcded643b44b6198e53dc41d2530c0795c74a1b2eed7fa8093",
+      "data_sha256": "f03d942c6430aa89f12c242f0910e8bd07bddb9e81f2057ca7d510c6c1614f9d",
+      "verse_count": 32,
+      "verified_on": "2026-09-08",
+      "linked_from": [
+        "art-study/the-good-shepherd.html"
+      ]
+    },
+    {
+      "chapter": "nt/luke/19",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "05f3b5ad03a21318113a090a398ed7b3d2416eba5ff9cb8a2aff7bccf9125311",
+      "data_sha256": "5545e1dd47c364ee71c0ddefe5f45d40ee2562e16aca41b429105faf413d18d0",
+      "verse_count": 48,
+      "verified_on": "2026-09-08",
+      "linked_from": [
+        "art-study/the-good-shepherd.html"
       ]
     },
     {
@@ -2245,7 +2316,8 @@
       "verse_count": 39,
       "verified_on": "2026-09-07",
       "linked_from": [
-        "answers\\prayer-and-personal-revelation.html"
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/prayer-and-personal-revelation.html"
       ]
     },
     {
@@ -2287,9 +2359,11 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/why-families-are-important.html",
         "art-study/suffer-the-little-children.html",
         "art.html",
+        "hero-details.js",
         "watch.html"
       ]
     },
@@ -2303,6 +2377,8 @@
       "verse_count": 41,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
         "art-study/be-still.html"
       ]
     },
@@ -2316,7 +2392,9 @@
       "verse_count": 30,
       "verified_on": "2026-09-06",
       "linked_from": [
-        "answers/jesus-christ-latter-day-saint-beliefs.html"
+        "answers/divorce-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "art-study/the-good-shepherd.html"
       ]
     },
     {
@@ -2373,6 +2451,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/stand-forever.html",
         "answers/what-is-eternal-marriage.html",
         "ask.html",
         "pioneers.html"
@@ -2389,6 +2468,19 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html"
+      ]
+    },
+    {
+      "chapter": "nt/matt/18",
+      "status": "verified",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng",
+      "http_status": 200,
+      "source_html_sha256": "c6bdf97b0c04a2be86cf5189b7396454e6b6bb070c44ecf54b30c667e324fb36",
+      "data_sha256": "145324311733ff56e9110d6e012d4154feb8ce7e4733675417174cab804987d0",
+      "verse_count": 35,
+      "verified_on": "2026-09-08",
+      "linked_from": [
+        "art-study/suffer-the-little-children.html"
       ]
     },
     {
@@ -2500,6 +2592,7 @@
       "verse_count": 34,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/god-our-heavenly-father.html",
         "answers/prayer-and-personal-revelation.html",
         "ask.html",
         "pioneers.html"
@@ -2998,6 +3091,7 @@
       "verse_count": 31,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "art-study/the-good-shepherd.html",
         "ask.html",
         "pioneers.html"
       ]
@@ -3161,6 +3255,7 @@
       "verse_count": 6,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/faith-in-jesus-christ-during-trials.html",
         "art-study/the-good-shepherd.html"
       ]
     },
@@ -3174,8 +3269,11 @@
       "verse_count": 11,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/prayer-and-personal-revelation.html",
         "art-study/be-still.html",
-        "art.html"
+        "art.html",
+        "hero-details.js"
       ]
     },
     {
@@ -3271,6 +3369,7 @@
       "pioneers.html"
     ],
     "bofm/introduction": [
+      "answers/who-was-joseph-smith.html",
       "ask.html",
       "pioneers.html"
     ],
@@ -3281,6 +3380,9 @@
     "dc-testament": [
       "ask.html",
       "pioneers.html"
+    ],
+    "gs/good-shepherd": [
+      "art-study/the-good-shepherd.html"
     ],
     "gs/j": [
       "ask.html",
