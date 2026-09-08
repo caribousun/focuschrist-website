@@ -1,0 +1,365 @@
+{
+  "scope": "24 additional meaningful body figures across eight Answer topics; shared source/card text unchanged.",
+  "placements": [
+    {
+      "page": "answers/are-latter-day-saints-christian.html",
+      "section": "questions-to-explore",
+      "asset": "assets/page-art/topics/quiet-study-800.webp",
+      "fullAsset": "assets/page-art/topics/quiet-study-1536.webp",
+      "title": "Give the question time",
+      "description": "A contemporary study illustration. Read the stated beliefs in their own words, then write the question you want to understand more fully.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A woman reading at a table beside an open notebook in a quiet room"
+    },
+    {
+      "page": "answers/are-latter-day-saints-christian.html",
+      "section": "scripture-study",
+      "asset": "assets/page-art/topics/paired-scripture-study-800.webp",
+      "fullAsset": "assets/page-art/topics/paired-scripture-study-1536.webp",
+      "title": "Read the teaching in context",
+      "description": "A study illustration of books and notes. Compare the passages about faith and discipleship rather than relying on a label alone.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Open study books and a notebook arranged on a table for comparing passages"
+    },
+    {
+      "page": "answers/are-latter-day-saints-christian.html",
+      "section": "guided-practice",
+      "asset": "assets/page-art/topics/family-study-800.webp",
+      "fullAsset": "assets/page-art/topics/family-study-1536.webp",
+      "title": "Listen while discussing belief",
+      "description": "A contemporary illustration of shared study. Let each person explain what they understand, with the kindness Christ asks of His disciples.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A multigenerational family listening and studying together around a table"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "section": "watch-and-reflect",
+      "asset": "assets/page-art/topics/paired-scripture-study-800.webp",
+      "fullAsset": "assets/page-art/topics/paired-scripture-study-1536.webp",
+      "title": "Follow Nephi’s stated purpose",
+      "description": "A study illustration. Keep Nephi’s words open while considering why he directs his readers toward Jesus Christ.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/25?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Open study books and a notebook arranged on a table for comparing passages"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "section": "guided-practice",
+      "asset": "assets/page-art/topics/family-study-800.webp",
+      "fullAsset": "assets/page-art/topics/family-study-1536.webp",
+      "title": "Give the reading room to settle",
+      "description": "A contemporary illustration of reading together. Consider the invitation to ponder and pray before continuing.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A multigenerational family listening and studying together around a table"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "section": "guided-practice",
+      "asset": "assets/page-art/topics/neighbor-service-800.webp",
+      "fullAsset": "assets/page-art/topics/neighbor-service-1536.webp",
+      "title": "Read a covenant through acts of care",
+      "description": "A modern illustration of practical help. Compare this ordinary act with the willingness to bear burdens described in the passage.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Neighbors offering food and flowers at a doorway"
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "section": "watch-and-reflect",
+      "asset": "assets/page-art/topics/christ-bountiful-800.webp",
+      "fullAsset": "assets/page-art/topics/christ-bountiful-1536.webp",
+      "title": "Consider the witness at Bountiful",
+      "description": "A devotional interpretation of Christ at Bountiful, not an archaeological reconstruction. Read the account alongside the New Testament witness discussed on this page.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Jesus Christ in a pale cerulean robe speaking with attentive people at Bountiful, a devotional interpretation"
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "section": "guided-practice",
+      "asset": "assets/page-art/topics/neighbor-service-800.webp",
+      "fullAsset": "assets/page-art/topics/neighbor-service-1536.webp",
+      "title": "Let charity shape the comparison",
+      "description": "A contemporary illustration of service. Ask how the teaching about charity could shape the way you respond to someone today.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/13?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Neighbors offering food and flowers at a doorway"
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "section": "scripture-study",
+      "asset": "assets/page-art/topics/quiet-study-800.webp",
+      "fullAsset": "assets/page-art/topics/quiet-study-1536.webp",
+      "title": "Notice before comparing",
+      "description": "A contemporary study illustration. Write what each passage says about grace and discipleship before drawing a conclusion.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A woman reading at a table beside an open notebook in a quiet room"
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "section": "scripture-study",
+      "asset": "assets/page-art/topics/paired-scripture-study-800.webp",
+      "fullAsset": "assets/page-art/topics/paired-scripture-study-1536.webp",
+      "title": "Read the prayer in its setting",
+      "description": "A study illustration. Read Jesus’s teaching about prayer with the surrounding verses, then consider how you might begin honestly.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Open study books and a notebook arranged on a table for comparing passages"
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "section": "choosing-with-care",
+      "asset": "assets/page-art/topics/supportive-walk-800.webp",
+      "fullAsset": "assets/page-art/topics/supportive-walk-1536.webp",
+      "title": "Make room for thoughtful conversation",
+      "description": "A contemporary illustration of companionship. Talking a decision through can be one practical part of careful study; another person’s opinion does not replace your own inquiry.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?id=p7-p9&lang=eng#p7"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Two adults walking together outdoors, one using a cane"
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "section": "waiting-for-guidance",
+      "asset": "assets/page-art/topics/family-study-800.webp",
+      "fullAsset": "assets/page-art/topics/family-study-1536.webp",
+      "title": "Keep a question open together",
+      "description": "A contemporary illustration of shared study. A trusted companion can listen while you give a question more time.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A multigenerational family listening and studying together around a table"
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "section": "scripture-study",
+      "asset": "assets/page-art/topics/quiet-study-800.webp",
+      "fullAsset": "assets/page-art/topics/quiet-study-1536.webp",
+      "title": "Read belonging alongside responsibility",
+      "description": "A contemporary study illustration. Notice the ways this passage asks people to care for one another, then consider one relationship in your own life.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A woman reading at a table beside an open notebook in a quiet room"
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "section": "hope-reflection",
+      "asset": "assets/page-art/topics/listening-in-grief-800.webp",
+      "fullAsset": "assets/page-art/topics/listening-in-grief-1536.webp",
+      "title": "Let someone be heard",
+      "description": "A contemporary illustration of attentive listening, not a recorded family event. Consider how kindness can shape a difficult conversation.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/4?id=p31-p32&lang=eng#p31"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Two women sitting in separate chairs, one speaking and the other listening"
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "section": "watch-study",
+      "asset": "assets/page-art/topics/supportive-walk-800.webp",
+      "fullAsset": "assets/page-art/topics/supportive-walk-1536.webp",
+      "title": "Practice patient companionship",
+      "description": "A contemporary illustration of walking beside someone at their pace. Reflect on how gentleness and patience can shape family relationships.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?id=p41-p43&lang=eng#p41"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Two adults walking together outdoors, one using a cane"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "section": "scripture-study",
+      "asset": "assets/page-art/topics/quiet-study-800.webp",
+      "fullAsset": "assets/page-art/topics/quiet-study-1536.webp",
+      "title": "Read the account carefully",
+      "description": "A contemporary study illustration. Keep the passage open and distinguish its teaching from questions it does not address.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A woman reading at a table beside an open notebook in a quiet room"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "section": "hope-reflection",
+      "asset": "assets/page-art/topics/neighbor-service-800.webp",
+      "fullAsset": "assets/page-art/topics/neighbor-service-1536.webp",
+      "title": "Carry hope into an ordinary kindness",
+      "description": "A contemporary illustration of practical care. Consider a small act of service as you read Paul’s concluding invitation to remain steadfast.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?id=p58&lang=eng#p58"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Neighbors offering food and flowers at a doorway"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "section": "scripture-study",
+      "asset": "assets/page-art/topics/family-study-800.webp",
+      "fullAsset": "assets/page-art/topics/family-study-1536.webp",
+      "title": "Bring questions to the reading together",
+      "description": "A contemporary illustration of shared study. Give each person room to notice something in the resurrection account or name a question that remains.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A multigenerational family listening and studying together around a table"
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "section": "scripture-study",
+      "asset": "assets/page-art/topics/christ-praying-800.webp",
+      "fullAsset": "assets/page-art/topics/christ-praying-1536.webp",
+      "title": "Bring distress into prayer",
+      "description": "A devotional image of Jesus praying. It accompanies the practice of approaching God in distress; it does not depict Joseph Smith’s imprisonment described in this passage.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Jesus Christ kneeling in prayer outdoors in a deep forest green robe"
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "section": "scripture-study",
+      "asset": "assets/page-art/topics/quiet-study-800.webp",
+      "fullAsset": "assets/page-art/topics/quiet-study-1536.webp",
+      "title": "Notice help within difficulty",
+      "description": "A contemporary study illustration. Read how Alma’s people describe help before their circumstances change.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?id=p10-p21&lang=eng#p10"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A woman reading at a table beside an open notebook in a quiet room"
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "section": "continue-study",
+      "asset": "assets/page-art/topics/neighbor-service-800.webp",
+      "fullAsset": "assets/page-art/topics/neighbor-service-1536.webp",
+      "title": "Take one step with support",
+      "description": "A contemporary illustration of practical care. As you consider the passage about burdens, notice one way to receive or offer support.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?id=p14-p15&lang=eng#p14"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Neighbors offering food and flowers at a doorway"
+    },
+    {
+      "page": "answers/grief-and-faith.html",
+      "section": "hope-and-remembrance",
+      "asset": "assets/page-art/topics/garden-tomb-800.webp",
+      "fullAsset": "assets/page-art/topics/garden-tomb-1536.webp",
+      "title": "Hold sorrow and resurrection hope together",
+      "description": "An illustrative garden tomb, not a photograph of a verified historical site. Return to Jesus’s conversation with Martha as you consider the hope described in the message.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?id=p17-p36&lang=eng#p17"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "An empty rock-cut garden tomb in morning light, an illustrative scene"
+    },
+    {
+      "page": "answers/grief-and-faith.html",
+      "section": "carry-together",
+      "asset": "assets/page-art/topics/neighbor-service-800.webp",
+      "fullAsset": "assets/page-art/topics/neighbor-service-1536.webp",
+      "title": "Offer a form of care that is welcome",
+      "description": "A contemporary illustration of practical help. The covenant passage invites people to mourn with and comfort others; the person receiving care can guide what is helpful.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p8-p10&lang=eng#p8"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "Neighbors offering food and flowers at a doorway"
+    },
+    {
+      "page": "answers/grief-and-faith.html",
+      "section": "personal-reflection",
+      "asset": "assets/page-art/topics/quiet-study-800.webp",
+      "fullAsset": "assets/page-art/topics/quiet-study-1536.webp",
+      "title": "Leave room for a memory or question",
+      "description": "A contemporary study illustration. You can pause with the passage, write a memory, or simply name the comfort you need today.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/1?id=p3-p7&lang=eng#p3"
+      ],
+      "width": 1536,
+      "height": 1024,
+      "approvalBasis": "Existing approved asset in docs/topic-artwork-review.json. Caption and rendered placement require independent review.",
+      "alt": "A woman reading at a table beside an open notebook in a quiet room"
+    }
+  ]
+}
