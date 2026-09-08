@@ -606,8 +606,8 @@ def main() -> int:
 
     for study_page in (ROOT / "art-study").glob("*.html"):
         page = study_page.read_text(encoding="utf-8")
-        if not re.search(r'<figure[^>]*>\s*<a href="\.\./art/[^\"]+"', page, re.S):
-            fail(errors, f"{study_page.relative_to(ROOT)}: featured artwork must open its full-resolution source")
+        if not re.search(r'<a(?=[^>]*class="[^"]*fc-art-study-hero[^"]*")(?=[^>]*href="\.\./art/[^"]+")(?=[^>]*data-hero-viewer)[^>]*>', page, re.S):
+            fail(errors, f"{study_page.relative_to(ROOT)}: featured artwork hero must open its detail panel and full-resolution source")
 
     ask = (ROOT / "ask.html").read_text(encoding="utf-8")
     if '<header class="ask-hero"' in ask:

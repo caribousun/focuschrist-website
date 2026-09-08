@@ -51,7 +51,9 @@ jobs:
         run: python tools/unified_experience_qa.py
 
       - name: Run site-wide artwork detail QA
-        run: python tools/artwork_details_qa.py
+        run: |
+          python tools/artwork_details_qa.py
+          node tools/hero_details_runtime_qa.js
 
       - name: Verify visual resource coverage and source thumbnails
         run: python tools/resource_thumbnail_qa.py

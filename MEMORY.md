@@ -536,3 +536,12 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - Desktop artwork actions form one cohesive responsive grid. Never force any Close action onto `grid-column: 1 / -1` or right-align it. The shared artwork dialog and hero dialog have separate CSS owners, so regression tests must inspect both `artwork-actions.css` and `hero-details.css`. Keep the mobile one-column behavior intact.
 - A picture inside a mixed artwork/study card always opens the normal artwork detail panel first. A separate clearly labeled text action may navigate directly to the study. Never make the whole mixed card a single topic link.
 - A topic-aware picture panel must show its matched study action, full-size image, Continue Lesson and Close without inheriting unrelated source actions from an ancestor section. The picture metadata and direct study action must resolve to the same topic.
+
+## Featured Art & Study hero ownership — 2026-09-08
+
+- Each dedicated `art-study/*.html` page owns its featured gallery artwork as its hero. Never reuse the generic Home portrait on The Living Christ, The Good Shepherd, Suffer the Little Children, or Be Still.
+- The hero is the page’s single large artwork presentation. Do not repeat the same image as a second figure immediately below it.
+- Clicking the hero opens its topic-specific reflection first, with official scripture, the matching on-page study, contextual Ask return, full-size viewing and Close. The original image URL remains the no-JavaScript fallback.
+- Art-study heroes use contained artwork over a softened full-bleed version of the same image. Through 1020px, explicitly set `height:auto` with the 16:10 ratio so the shared 300px mobile height cannot override the responsive frame.
+- The Good Shepherd source contains a 110px black strip at the top. Preserve the original full-size file, but frame only its hero image with `scale(1.145)` from `center bottom` so the strip is outside the visible hero without discarding the bottom of the artwork.
+- `tools/artwork_details_qa.py` and `tools/hero_details_runtime_qa.js` are release gates for exact assets, responsive CSS, detail records, study/Ask/full-size continuity and focus restoration.

@@ -46,6 +46,26 @@
             title: 'A Place to Study Together',
             paragraphs: ['Open scriptures and a notebook overlook a gathering place where people approach one another beneath the trees. The warm light and distant temple suggest a setting for study, conversation, and belonging.', "This imagined community reflects focusChrist's invitation to learn about Jesus Christ with care for the people who bring their questions. Begin with His life and teachings, then choose a study that speaks to your present needs."],
             source: 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng', sourceLabel: 'Study Jesus Christ', study: 'answers/jesus-christ-latter-day-saint-beliefs.html', studyLabel: 'Explore Faith in Jesus Christ'
+        },
+        'living-christ-art': {
+            title: 'The Living Christ',
+            paragraphs: ['A radiant portrait centers the smiling face of Jesus Christ against a field of golden light. The brightness gathering around Him gives visual form to Christian hope in a Savior who rose from the tomb and lives.', 'Let the image lead into the witnesses of John 20: Mary hears Jesus call her by name, the disciples see His wounds, and Thomas receives an invitation to believe.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng', sourceLabel: 'Read John 20', study: 'art-study/the-living-christ.html#scripture-study', studyLabel: 'Begin the Scripture Study'
+        },
+        'good-shepherd-art': {
+            title: 'The Good Shepherd',
+            paragraphs: ['Jesus stands in the warmth of a busy village street, His open expression drawing attention to nearness, recognition, and welcome. The everyday setting brings the shepherd image into the places where people live and work.', 'In John 10, Christ describes the good shepherd as one who knows His sheep, calls them, remains with them in danger, and willingly gives His life for them.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng', sourceLabel: 'Read John 10', study: 'art-study/the-good-shepherd.html#scripture-study', studyLabel: 'Begin the Scripture Study'
+        },
+        'little-children-art': {
+            title: 'Suffer the Little Children',
+            paragraphs: ['Jesus sits at the center of a circle of children in an olive grove. Their closeness, varied expressions, and His welcoming gesture emphasize that each child has a place near Him.', 'Mark 10 records that Jesus corrected those who tried to turn children away, then took the children in His arms and blessed them. Read the account with attention to both the barrier and His welcome.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13', sourceLabel: 'Read Mark 10:13–16', study: 'art-study/suffer-the-little-children.html#scripture-study', studyLabel: 'Begin the Scripture Study'
+        },
+        'be-still-art': {
+            title: 'Be Still',
+            paragraphs: ['Christ walks beside a burdened man through a crowded modern street, placing a steadying hand on his shoulder. The surrounding movement makes their quiet companionship the center of the scene.', 'Psalm 46 speaks of God as refuge and strength amid upheaval before giving the invitation to be still and know Him. The image invites reflection on Christ’s presence without pretending that hardship or responsibility disappears.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng', sourceLabel: 'Read Psalm 46', study: 'art-study/be-still.html#psalm-context', studyLabel: 'Begin the Scripture Study'
         }
     };
     const script = document.currentScript;

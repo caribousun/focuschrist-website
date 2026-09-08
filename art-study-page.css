@@ -1,0 +1,64 @@
+.fc-art-study-hero {
+    background: #102e36;
+    isolation: isolate;
+}
+
+.fc-art-study-hero::before {
+    background-image:
+        linear-gradient(90deg, rgba(7, 27, 33, .76), rgba(7, 27, 33, .18) 32%, rgba(7, 27, 33, .18) 68%, rgba(7, 27, 33, .76)),
+        var(--fc-art-study-image);
+    background-position: center;
+    background-size: cover;
+    filter: blur(18px) saturate(.85);
+    inset: -22px;
+    width: auto;
+    height: auto;
+    max-width: none;
+    opacity: .7;
+    transform: scale(1.06);
+    z-index: -2;
+}
+
+.fc-art-study-hero > img {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    z-index: -1;
+}
+
+.fc-art-study-hero[href$="The-Good-Shephard.jpg"] > img {
+    transform: scale(1.145);
+    transform-origin: center bottom;
+}
+
+.fc-art-study-hero::after {
+    background:
+        linear-gradient(180deg, rgba(5, 22, 28, .08) 0%, transparent 52%, rgba(5, 22, 28, .72) 100%),
+        linear-gradient(90deg, rgba(5, 22, 28, .2), transparent 30%, transparent 70%, rgba(5, 22, 28, .2));
+}
+
+.fc-art-study-hero:focus-visible {
+    outline: 3px solid #e9b949;
+    outline-offset: -3px;
+}
+
+@media (max-width: 1020px) {
+    body.fc-site .fc-art-study-hero {
+        height: auto;
+        aspect-ratio: 16 / 10;
+        min-height: 0;
+    }
+
+    .fc-art-study-hero::before {
+        filter: blur(12px) saturate(.85);
+        inset: -16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fc-art-study-hero::before { transform: none; }
+}
