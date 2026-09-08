@@ -41,7 +41,7 @@
         if (typeof HTMLDialogElement === 'undefined' || document.getElementById('topicArtworkDetailDialog')) return;
         const main = document.querySelector('main');
         if (!main) return;
-        const pictures = Array.from(main.querySelectorAll('figure > a[href], .fc-marriage-era__art[href]')).filter(function (link) {
+        const pictures = Array.from(main.querySelectorAll('figure > a[href], .fc-marriage-era__art[href], .fc-foundation-card__image[href]')).filter(function (link) {
             return link.querySelector('img') && !link.closest('.fc-resource-card, dialog')
                 && !link.hasAttribute('data-artwork-detail') && !link.hasAttribute('data-hero-viewer');
         });
@@ -72,6 +72,14 @@
         }
 
         function readingTarget(figure, index) {
+            if (figure.matches('.fc-foundation-card')) {
+                const cardHeading = figure.querySelector('h4');
+                if (cardHeading) {
+                    if (!cardHeading.id) cardHeading.id = 'foundation-card-' + index;
+                    cardHeading.setAttribute('data-topic-reading-target', '');
+                    return cardHeading;
+                }
+            }
             const section = figure.closest('.fc-marriage-era, section');
             let target = section && Array.from(section.querySelectorAll('h2,h3')).find(function (heading) {
                 return !heading.closest('figure, .fc-resource-card');
@@ -88,18 +96,27 @@
         }
 
         function recordFor(trigger, index) {
-            const figure = trigger.closest('figure, .fc-marriage-era');
-            const caption = figure.querySelector('figcaption, .fc-marriage-era__copy');
+            const figure = trigger.closest('figure, .fc-marriage-era, .fc-foundation-card');
+            const caption = figure.querySelector('figcaption, .fc-marriage-era__copy, .fc-foundation-card-copy');
             const target = readingTarget(figure, index);
-            const heading = caption && caption.querySelector('h2,h3');
-            const record = { title: heading ? heading.textContent.trim() : target.textContent.trim(), paragraphs: [], sources: [], target: target };
+            const heading = caption && caption.querySelector('h2,h3,h4');
+            const record = {
+                title: heading ? heading.textContent.trim() : target.textContent.trim(),
+                paragraphs: [],
+                sources: [],
+                target: target,
+                study: trigger.dataset.topicStudy || '',
+                studyLabel: trigger.dataset.topicStudyLabel || 'Open complete study'
+            };
             record.paragraphs = captionParagraphs(caption);
             let sources = officialLinks(caption);
-            if (!sources.length) sources = officialLinks(figure.closest('.fc-marriage-era'));
-            if (!sources.length) sources = officialLinks(figure.closest('section, .gc-intro'));
-            // The opening grief illustration precedes the John 11 study it introduces.
-            if (!sources.length && location.pathname.endsWith('/grief-and-faith.html')) sources = officialLinks(document.getElementById('jesus-wept'));
-            if (!sources.length && figure.closest('.gc-intro')) sources = officialLinks(main).filter(function (link) { return new URL(link.href).pathname === '/study/general-conference'; }).slice(0, 1);
+            if (!record.study) {
+                if (!sources.length) sources = officialLinks(figure.closest('.fc-marriage-era'));
+                if (!sources.length) sources = officialLinks(figure.closest('section, .gc-intro'));
+                // The opening grief illustration precedes the John 11 study it introduces.
+                if (!sources.length && location.pathname.endsWith('/grief-and-faith.html')) sources = officialLinks(document.getElementById('jesus-wept'));
+                if (!sources.length && figure.closest('.gc-intro')) sources = officialLinks(main).filter(function (link) { return new URL(link.href).pathname === '/study/general-conference'; }).slice(0, 1);
+            }
             const seen = new Set();
             sources.forEach(function (link) {
                 if (seen.has(link.href) || record.sources.length >= 3) return;
@@ -127,8 +144,9 @@
                 copy.appendChild(paragraph.cloneNode(true));
             });
             actions.replaceChildren();
+            if (record.study) pill(record.studyLabel, record.study, true);
             record.sources.forEach(function (source, index) {
-                const link = pill(source.label, source.href, index === 0);
+                const link = pill(source.label, source.href, !record.study && index === 0);
                 link.target = '_blank';
                 link.rel = 'noopener noreferrer';
                 if (new URL(source.href).pathname.includes('/study/scriptures/')) link.classList.add('fc-inline-scripture');
@@ -139,7 +157,7 @@
             full.setAttribute('aria-haspopup', 'dialog');
             full.dataset.fullImageAlt = image.alt;
 
-            const related = Array.from(main.querySelectorAll('#continue-study a[href], #conference-pathways a[href]')).find(function (link) {
+            const related = !record.study && Array.from(main.querySelectorAll('#continue-study a[href], #conference-pathways a[href]')).find(function (link) {
                 const url = new URL(link.href);
                 return url.origin === location.origin && url.pathname !== location.pathname && !link.querySelector('img');
             });
@@ -169,7 +187,7 @@
 
         pictures.forEach(function (trigger, index) {
             const record = recordFor(trigger, index);
-            if (!record.sources.length || !record.paragraphs.length) return;
+            if ((!record.sources.length && !record.study) || !record.paragraphs.length) return;
             trigger.removeAttribute('data-full-image-viewer');
             trigger.setAttribute('data-topic-artwork-detail', '');
             trigger.setAttribute('aria-haspopup', 'dialog');

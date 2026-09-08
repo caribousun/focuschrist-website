@@ -530,3 +530,9 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - Never use `href="#"` as a visitor-facing control. Use semantic buttons for in-page actions and reserve links for real destinations. Dynamically populated hidden modal links are the only documented exception.
 - Answer QA must discover `answers/*.html` automatically and require every discovered study to appear on the Answer Library hub. Do not maintain a hand-curated page list that can omit a new study.
 - Cross-site Ask links that end in `#ask-question` must land on the actual composer section. Route, anchor, navigation, source, metadata, responsive, and runtime checks are release blockers, not optional cleanup.
+
+## Artwork dialog action ownership and mixed-card behavior — 2026-09-08
+
+- Desktop artwork actions form one cohesive responsive grid. Never force any Close action onto `grid-column: 1 / -1` or right-align it. The shared artwork dialog and hero dialog have separate CSS owners, so regression tests must inspect both `artwork-actions.css` and `hero-details.css`. Keep the mobile one-column behavior intact.
+- A picture inside a mixed artwork/study card always opens the normal artwork detail panel first. A separate clearly labeled text action may navigate directly to the study. Never make the whole mixed card a single topic link.
+- A topic-aware picture panel must show its matched study action, full-size image, Continue Lesson and Close without inheriting unrelated source actions from an ancestor section. The picture metadata and direct study action must resolve to the same topic.

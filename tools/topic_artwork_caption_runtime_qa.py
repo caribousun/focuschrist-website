@@ -43,7 +43,7 @@ def main():
         parsed.feed(result.stdout)
         if result.returncode or parsed.result.get('data-qa') != 'PASS' or parsed.result.get('data-cases') != '4':
             raise SystemExit('CAPTION DOM QA FAIL: ' + str(parsed.result) + '\n' + result.stderr[-2000:])
-    print('CAPTION DOM QA PASS: 4 actual Chrome fixtures; mixed scripture prose, source actions, safe fallback and repeated opening')
+    print('CAPTION DOM QA PASS: 4 caption fixtures plus a foundation-picture panel; mixed scripture prose, source and study actions, safe fallback and repeated opening')
 
 if __name__ == '__main__':
     main()

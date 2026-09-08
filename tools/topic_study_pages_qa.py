@@ -40,15 +40,22 @@ for link in links:
  return_path=parse_qs(urlsplit(hero.attrs['data-hero-ask']).query)['return'][0]
  assert urlsplit(return_path).path=='/'+href,href+': art study returns to same page'
 stand=read(ROOT/'answers/stand-forever.html');look=read(ROOT/'answers/look-unto-me-doctrine-and-covenants-6-36.html')
-# The four primary questions are full-card links to substantive interconnected studies.
+# Each primary question has an image-first detail link plus an explicit study link.
 foundation=next(n for n in stand if n.has('fc-primary-grid') and n.has('fc-foundation-grid'))
 cards=[n for n in foundation.children if n.tag=='article']
 assert len(cards)==4
 routes=[]
 for card in cards:
- anchors=[n for n in card.walk() if n.tag=='a'];assert len(anchors)==1, 'one accessible link per primary card'
- href=anchors[0].attrs['href'];routes.append(href)
- assert any(n.tag=='h4' for n in anchors[0].walk()) and any(n.tag=='img' for n in anchors[0].walk())
+ anchors=[n for n in card.walk() if n.tag=='a']
+ assert len(anchors)==2, 'foundation card has a detail-first image link and one direct study link'
+ image_link=next(n for n in anchors if 'data-full-image-viewer' in n.attrs)
+ study_link=next(n for n in anchors if n.has('fc-foundation-card-action'))
+ assert any(n.tag=='img' for n in image_link.walk())
+ href=study_link.attrs['href'];routes.append(href)
+ assert image_link.attrs.get('data-topic-study')==href, 'image panel and direct action lead to the same study'
+ assert image_link.attrs.get('aria-haspopup')=='dialog'
+ assert study_link.attrs.get('aria-label','').startswith('Study ')
+ assert any(n.tag=='h4' for n in card.walk())
  target=ROOT/'answers'/href;ns=read(target)
  assert sum(n.tag=='h1' for n in ns)==1
  assert len(next(n for n in ns if n.tag=='main').text().split())>800
