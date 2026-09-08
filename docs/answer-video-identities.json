@@ -530,6 +530,26 @@
       "presentation": "Approved focusChrist illustration accompanying official scripture reading; not a source-native thumbnail.",
       "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
       "title": "Read Mosiah 18"
+    },
+    "stand-series-trailer": {
+      "kind": "video",
+      "presentation": "Scripture Central YouTube series",
+      "url": "https://www.youtube.com/watch?v=sdgI1E6WJdQ&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+      "title": "Stand Forever Series — Official Trailer",
+      "video_identity": "youtube.com/watch/sdgI1E6WJdQ",
+      "aliases": [
+        "https://www.youtube.com/watch?v=sdgI1E6WJdQ"
+      ]
+    },
+    "stand-series-episode-one": {
+      "kind": "video",
+      "presentation": "Scripture Central YouTube series",
+      "url": "https://www.youtube.com/watch?v=dPnO2QEPrPg&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+      "title": "Stand Forever Ep.1 — Will You Stand, or Will You Go Away?",
+      "video_identity": "youtube.com/watch/dPnO2QEPrPg",
+      "aliases": [
+        "https://www.youtube.com/watch?v=dPnO2QEPrPg"
+      ]
     }
   }
 }

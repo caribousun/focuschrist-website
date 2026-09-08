@@ -6,8 +6,26 @@
       "review": "Existing approved Stand Forever subsection moved intact from Look Unto Me, including three companion media cards. Exact visible text comparison passed. New optional reflection/source/continuation scaffold distinguishes site study aids from source teaching.",
       "sources": [
         "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng"
-      ]
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
+        "https://www.youtube.com/playlist?list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://www.youtube.com/watch?v=sdgI1E6WJdQ&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://www.youtube.com/watch?v=dPnO2QEPrPg&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://speeches.byu.edu/speakers/lawrence-e-corbridge/",
+        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-series-official-trailer-elder-lawrence-e-corbridge",
+        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-1-will-you-stand-or-will-you-go-away-elder-lawrence-e-corbridge"
+      ],
+      "series": {
+        "publisher": "Scripture Central",
+        "playlist_id": "PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "playlist_url": "https://www.youtube.com/playlist?list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "trailer_video_id": "sdgI1E6WJdQ",
+        "episode_one_video_id": "dPnO2QEPrPg",
+        "remote_thumbnail": "https://i.ytimg.com/vi/sdgI1E6WJdQ/hqdefault.jpg",
+        "width": 480,
+        "height": 360,
+        "reviewed_on": "2026-09-07",
+        "verification": "Publisher playlist and two video identities verified in browser by implementation agent; independent reviewer verified series purpose, Episode 1 title and relationship to 2019 devotional against publisher episode pages and BYU biography. Native trailer thumbnail identity matches YouTube video ID. No copied episode inventory or count; available selection remains publisher-maintained."
+      }
     },
     {
       "path": "answers/grief-and-faith.html",
