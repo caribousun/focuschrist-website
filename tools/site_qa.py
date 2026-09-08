@@ -20,24 +20,8 @@ CORE = {
     "about.html": "https://focuschrist.com/about.html",
 }
 ANSWER_PAGES = {
-    "answers/god-our-heavenly-father.html": "https://focuschrist.com/answers/god-our-heavenly-father.html",
-    "answers/restored-church-of-jesus-christ.html": "https://focuschrist.com/answers/restored-church-of-jesus-christ.html",
-
-    "answers/grief-and-faith.html": "https://focuschrist.com/answers/grief-and-faith.html",
-    "answers/stand-forever.html": "https://focuschrist.com/answers/stand-forever.html",
-
-    "answers/death-of-a-child.html": "https://focuschrist.com/answers/death-of-a-child.html",
-    "answers/divorce-and-faith.html": "https://focuschrist.com/answers/divorce-and-faith.html",
-    "answers/jesus-christ-latter-day-saint-beliefs.html": "https://focuschrist.com/answers/jesus-christ-latter-day-saint-beliefs.html",
-    "answers/are-latter-day-saints-christian.html": "https://focuschrist.com/answers/are-latter-day-saints-christian.html",
-    "answers/what-is-the-book-of-mormon.html": "https://focuschrist.com/answers/what-is-the-book-of-mormon.html",
-    "answers/why-latter-day-saints-build-temples.html": "https://focuschrist.com/answers/why-latter-day-saints-build-temples.html",
-    "answers/what-happens-after-death.html": "https://focuschrist.com/answers/what-happens-after-death.html",
-    "answers/who-was-joseph-smith.html": "https://focuschrist.com/answers/who-was-joseph-smith.html",
-    "answers/prayer-and-personal-revelation.html": "https://focuschrist.com/answers/prayer-and-personal-revelation.html",
-    "answers/why-families-are-important.html": "https://focuschrist.com/answers/why-families-are-important.html",
-    "answers/bible-and-book-of-mormon-together.html": "https://focuschrist.com/answers/bible-and-book-of-mormon-together.html",
-    "answers/faith-in-jesus-christ-during-trials.html": "https://focuschrist.com/answers/faith-in-jesus-christ-during-trials.html",
+    path.relative_to(ROOT).as_posix(): f"https://focuschrist.com/{path.relative_to(ROOT).as_posix()}"
+    for path in sorted((ROOT / "answers").glob("*.html"))
 }
 ART_STUDY_PAGES = {
     "art-study/the-living-christ.html": "https://focuschrist.com/art-study/the-living-christ.html",

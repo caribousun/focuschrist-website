@@ -106,6 +106,7 @@ body {
 }
 
 .ask-study-card {
+    scroll-margin-top: 5rem;
     background:
         radial-gradient(circle at 100% 0%, rgba(134,175,200,.09), transparent 20rem),
         linear-gradient(145deg, rgba(31,65,77,0.98), rgba(21,45,56,0.99));

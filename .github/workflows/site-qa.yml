@@ -29,7 +29,9 @@ jobs:
         run: python tools/topic_artwork_uniqueness_runtime_qa.py
 
       - name: Run focusChrist structural site QA
-        run: python tools/site_qa.py
+        run: |
+          python tools/site_qa.py
+          python tools/site_flow_qa.py
 
       - name: Run Come Follow Me hub QA
         run: |

@@ -523,3 +523,10 @@ Wyatt's “advertised all over the internet” means correctly exposed URLs, can
 - Generic editorial scaffolding is prohibited not only in captions, alt text and expanded image panels, but also in Answer opening copy, foundational-question introductions, notices and text surrounding artwork.
 - State concrete page-specific history, belief, doctrine, source context or visible action. Do not publish phrases that merely explain that “this study” connects subjects, tells readers that different questions need different sources, or otherwise describes the page-building method.
 - Automated QA must inspect these introductory surfaces in addition to artwork blocks and placement ledgers.
+
+## Public-route continuity release gate — 2026-09-08
+
+- Treat `sitemap.xml` as the canonical public-route inventory. Every listed route must exist, every local link and fragment must resolve, and every public page must offer at least two meaningful local continuation paths.
+- Never use `href="#"` as a visitor-facing control. Use semantic buttons for in-page actions and reserve links for real destinations. Dynamically populated hidden modal links are the only documented exception.
+- Answer QA must discover `answers/*.html` automatically and require every discovered study to appear on the Answer Library hub. Do not maintain a hand-curated page list that can omit a new study.
+- Cross-site Ask links that end in `#ask-question` must land on the actual composer section. Route, anchor, navigation, source, metadata, responsive, and runtime checks are release blockers, not optional cleanup.
