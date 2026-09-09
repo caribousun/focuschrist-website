@@ -152,7 +152,15 @@
                         if (/\b(?:scripture|bible|Book of Mormon|Doctrine and Covenants|Pearl of Great Price)\b|\b(?:Jesus(?: Christ)?|Christ|(?:the )?Lord)\s+(?:says?|said|declares?|promises?|taught|teaches)\b/i.test(paragraph)) throw new Error('unattributed-scripture-quotation');
                         continue;
                     }
-                    const ref = local.reduce((a,b)=> Math.min(Math.abs(b.index-quote.index),Math.abs(b.end-quote.index)) < Math.min(Math.abs(a.index-quote.index),Math.abs(a.end-quote.index)) ? b : a);
+                    const quoteEnd = quote.index + quote[0].length;
+                    // A following parenthetical citation belongs to this whole
+                    // quotation, even when the quotation is several verses long.
+                    const explicitTrailing = local.find(candidate => candidate.index >= quoteEnd
+                        && /^\s*\(\s*$/.test(paragraph.slice(quoteEnd, candidate.index))
+                        && /^\s*\)/.test(paragraph.slice(candidate.end)));
+                    const distance = candidate => candidate.end <= quote.index ? quote.index - candidate.end
+                        : candidate.index >= quoteEnd ? candidate.index - quoteEnd : 0;
+                    const ref = explicitTrailing || local.reduce((a,b) => distance(b) < distance(a) ? b : a);
                     const verses = data.get(ref.key).verses.filter(v=>!ref.verses || ref.verses.includes(v.number));
                     const original = normalize((data.get(ref.key).kind === 'document' ? data.get(ref.key).paragraphs : verses).map(v=>v.text).join(' '));
                     const quoted = normalize(quote[1]);

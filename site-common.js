@@ -740,7 +740,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         installScriptureDisplayGate();
-        appendScript(relativeAssetHref('scripture-library.js?v=20260909-2'), 'data-focuschrist-scripture-library', function () {
+        appendScript(relativeAssetHref('scripture-library.js?v=20260909-3'), 'data-focuschrist-scripture-library', function () {
             appendScript(relativeAssetHref('scripture-reader.js?v=20260909-2'), 'data-focuschrist-scripture-reader');
         });
         const scriptureStyle = document.createElement('link');
