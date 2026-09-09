@@ -260,9 +260,25 @@ assert(almaRecovery && almaRecovery.recoveryId === 'reviewed-alma-32-word-and-fa
   && /compares the word to a seed/.test(almaRecovery.answer)
   && !/kept warm|watered with the word|faith is a seed/i.test(almaRecovery.answer),
   'Alma 32 must retain the word/seed relationship and exclude invented gardening claims');
+const explicitAlmaChapterQuestion = 'What lesson does Alma chapter 32 teach about developing faith?';
+const explicitAlmaChapterRecovery = reviewedDeterministicEvidenceRecovery(explicitAlmaChapterQuestion, almaEvidence);
+assert(explicitAlmaChapterRecovery?.answer === almaRecovery.answer,
+  'equivalent Alma chapter 32 wording must use the same reviewed source-grounded answer');
+const { readFileSync: readAlmaFixture } = await import('node:fs');
+const { default: scriptureFactory } = await import('../scripture-library.js');
+const scriptureCatalogFixture = JSON.parse(readAlmaFixture(new URL('../scripture-data/catalog.json', import.meta.url), 'utf8'));
+const scriptureLibraryFixture = scriptureFactory(scriptureCatalogFixture, async (url) => new Response(readAlmaFixture(new URL('..' + url, import.meta.url))));
+const checkedAlmaRecovery = await scriptureLibraryFixture.checkAnswer(explicitAlmaChapterRecovery.answer, almaEvidence);
+assert(checkedAlmaRecovery.ok
+  && checkedAlmaRecovery.references.some(ref => ref.key === 'bofm/alma/32' && ref.verses?.includes(28))
+  && checkedAlmaRecovery.references.some(ref => ref.key === 'bofm/alma/32' && ref.verses?.includes(43)),
+  'reviewed Alma recovery must pass the real final scripture gate with fully spelled out ranges');
 for (const question of ['How does Alma 32:21 define faith?', 'Compare Alma 32 with James 2 on faith.',
   'What does Alma 32 teach about poverty and faith?', 'Does Alma 32 prove I should stop medication through faith?',
-  'How does Alma 33 describe developing faith?']) {
+  'How does Alma 33 describe developing faith?', 'How does Alma chapter 33 describe developing faith?',
+  'What does Alma chapter 32:21 teach about faith?', 'Compare Alma chapter 32 with James 2 on faith.',
+  'What does Alma chapter 32 teach about poverty and faith?',
+  'Does Alma chapter 32 prove I should stop medication through faith?']) {
   assert(reviewedDeterministicEvidenceRecovery(question, almaEvidence) === null,
     'bounded Alma 32 summary must not replace a different question: ' + question);
 }
@@ -275,7 +291,7 @@ assert(reviewedDeterministicEvidenceRecovery('How does Alma 32 describe developi
 
 // Reproduce the production extraction -> canonical source -> recovery path.
 // The metaphor paragraph deliberately occurs beyond the old 700-character cut.
-const pipelineQuestion = 'How does Alma 32 describe developing faith?';
+const pipelineQuestion = explicitAlmaChapterQuestion;
 const pipelineCandidate = { deterministic: true, title: 'Alma 32', tokens: 'Alma 32', url: almaEvidence[0].url };
 const pipelineParagraphs = [
   `Alma describes faith. ${'The passage supplies setting and surrounding discussion for this chapter. '.repeat(14)}`,
@@ -996,7 +1012,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.61',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.62',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
