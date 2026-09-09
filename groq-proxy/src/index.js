@@ -29,8 +29,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.73';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.73';
+const SOURCE_POLICY_VERSION = '2026-09-09.74';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.74';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -41,7 +41,7 @@ const REQUEST_MESSAGE_LIMIT = 16;
 const OFFICIAL_INDEX_URLS = new Set(CHURCH_SOURCE_INDEX.map((entry) => entry.url));
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
-const SCRIPTURE_QUOTATION_CONTRACT = 'For a scripture quotation, use [[SCRIPTURE:Book chapter:verse]] with a complete canonical book name and an exact supported reference. The application supplies the quotation from its verified library. Keep explanations clearly separate from quotation; never invent verse words. Return only individually supported references.';
+const SCRIPTURE_QUOTATION_CONTRACT = 'For a scripture quotation, use [[SCRIPTURE:Book chapter:verse]] with a complete canonical book name and an exact supported reference. The application supplies the quotation from its verified library. Prefer plain scripture references and clearly identified paraphrase for explanations. When exact quotation is useful, put its SCRIPTURE token in a standalone paragraph, without enclosing quotation marks or embedding it inside a sentence. Never put paraphrases in quotation marks or type scripture quotation words yourself. Keep explanations clearly separate from quotation; never invent verse words. Return only individually supported references.';
 const SERVER_RESEARCH_POLICY = [
   'For scripture quotations, select an exact reference using [[SCRIPTURE:John 3:16]] syntax. The application inserts verified English scripture wording. Never generate scripture quotation text from memory. Label explanations as paraphrase or application. Use complete book names and separate chapter references; do not invent reference labels or URLs.',
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
@@ -183,7 +183,7 @@ function extractSelectedPioneerName(messages) {
 function scriptureSupportContext(messages) {
   const users = (Array.isArray(messages) ? messages : []).filter(message => message?.role === 'user');
   const current = String(users.at(-1)?.content || '').split('\n')[0].toLowerCase().replace(/[?.!]+$/g, '').trim();
-  const requested = /^(?:(?:can|could|would) you |please )?(?:cite|site|quote|give(?: me)?|show(?: me)?|provide)(?: me)? (?:a |an |the |some )?(?:supporting )?(?:scripture|scriptures|verse|verses|scripture reference|scripture references)(?: (?:for|to support) (?:that|this))?$/.test(current);
+  const requested = /^(?:(?:can|could|would) you |please )?(?:cite|site|quote|give(?: me)?|show(?: me)?|provide)(?: me)? (?:a |an |the |some )?(?:supporting )?(?:scripture|scriptures|verse|verses|scripture reference|scripture references)(?: (?:(?:for|to support|supporting) (?:that|this)|that (?:supports|explains) (?:that|this)))?$/.test(current);
   return { requested, antecedent: requested ? String(users.at(-2)?.content || '').split('\n')[0].trim().slice(0, 1200) : '' };
 }
 
@@ -438,20 +438,37 @@ function deterministicScriptureSource(question) {
   };
 }
 
+// Cache only trusted, query-independent source metadata. Visitor questions are
+// never keys in this isolate-lifetime cache.
+const sourceDiscoveryTokens = new Map();
+const sourceDiscoverySets = new Map();
+function cachedSourceTokens(value) {
+  if (!sourceDiscoveryTokens.has(value)) sourceDiscoveryTokens.set(value, normalizeDiscoveryTokens(value));
+  return sourceDiscoveryTokens.get(value);
+}
+function cachedSourceSet(value) {
+  if (!sourceDiscoverySets.has(value)) sourceDiscoverySets.set(value, new Set(cachedSourceTokens(value)));
+  return sourceDiscoverySets.get(value);
+}
+for (const entry of CHURCH_SOURCE_INDEX) {
+  cachedSourceTokens(entry.title);
+  cachedSourceSet(entry.tokens);
+}
+
 function deterministicHistoryTopicSource(question, page) {
   if (!['ask', 'church-history'].includes(page)) return null;
   const queryTokens = normalizeDiscoveryTokens(question);
   if (queryTokens.length < 2) return null;
   const matches = CHURCH_SOURCE_INDEX.map((entry) => {
     if (entry.kind !== 'history-topic') return null;
-    const titleTokens = normalizeDiscoveryTokens(entry.title);
+    const titleTokens = cachedSourceTokens(entry.title);
     if (titleTokens.length < 2 || !titleTokens.every((token) => queryTokens.includes(token))) return null;
     return {
       ...entry,
       deterministicHistoryTopic: true,
       titleTokenCount: titleTokens.length,
       score: 900 + titleTokens.length * 25 + Number(entry.priority || 0) / 20,
-      overlapCount: queryTokens.filter((token) => new Set(normalizeDiscoveryTokens(entry.tokens)).has(token)).length,
+      overlapCount: queryTokens.filter((token) => cachedSourceSet(entry.tokens).has(token)).length,
     };
   }).filter(Boolean);
   return matches.sort((left, right) => right.titleTokenCount - left.titleTokenCount
@@ -499,9 +516,9 @@ function rankChurchSourceCandidates(question, page) {
     }
   }
   const ranked = [...entries.values()].map((entry) => {
-    const sourceTokens = new Set(normalizeDiscoveryTokens(entry.tokens));
+    const sourceTokens = cachedSourceSet(entry.tokens);
     const overlaps = queryTokens.filter((token) => sourceTokens.has(token));
-    const titleTokens = normalizeDiscoveryTokens(entry.title);
+    const titleTokens = cachedSourceTokens(entry.title);
     const titleMatch = titleTokens.length > 0 && titleTokens.every((token) => queryTokens.includes(token));
     let score = overlaps.length * 18 + Number(entry.priority || 0) / 20 + (titleMatch ? 40 : 0);
     if (entry.pioneerDisclosure && entry.focalPhrases?.length) score += 400;
@@ -1419,7 +1436,7 @@ async function callApprovedResearch(env, body, deadline, diagnostic = {}) {
         tools: [{ type: 'web_search', search_context_size: 'low', filters: {
           allowed_domains: [OFFICIAL_CHURCH_HOST, ...APPROVED_LDS_STUDY_HOSTS],
         } }], tool_choice: { type: 'web_search' }, include: ['web_search_call.action.sources'],
-        instructions: 'Search only the allowed LDS sources. Find original articles that address the current question and its core relationships. Search output is discovery metadata, not verified evidence. Return source URLs; do not compose an answer or invent quotations.',
+        instructions: 'Search only the allowed LDS sources. Find original articles that address the current question and its core relationships. If the question asks what a particular scripture corpus teaches, find direct passages in that requested corpus that address the question, in addition to relevant study articles. A modern article about the topic alone does not establish what the requested corpus teaches. Search output is discovery metadata, not verified evidence. Return source URLs; do not compose an answer or invent quotations.',
         input: (body.messages || []).filter(message => message.role === 'user')
           .map(message => ({ role: 'user', content: String(message.content || '').slice(0, 12000) })).slice(-4),
       }),
@@ -1818,6 +1835,13 @@ export default {
     }
     if (sanitized.scope.scriptureSupportRequested && !sanitized.scope.scriptureSupportAntecedent) {
       return jsonResponse(generalAnswerPayload('Which question or teaching would you like a scripture for? Please name the subject so I can find a passage that actually supports it.', 'scripture-context-clarification', {}, sanitized.scope), 200, origin, deadline, localScriptures);
+    }
+    // Reject only canonical catalog errors here; library/network errors are not invalid references.
+    try { localScriptures.references(sanitized.scope.question); }
+    catch (error) {
+      if (['invalid-scripture-reference', 'invalid-verse-selection', 'invalid-numbered-scripture-book'].includes(error.message)) {
+        return jsonResponse(fallbackPayload('invalid-scripture-reference', { focuschrist_verifier_route: 'local-canonical-validation', focuschrist_openai_verifier_calls: 0 }, sanitized.scope), 200, origin, deadline, localScriptures);
+      }
     }
     const supportOldTestament = sanitized.scope.scriptureSupportRequested
       && isGodInOldTestamentQuestion(sanitized.scope.scriptureSupportAntecedent);

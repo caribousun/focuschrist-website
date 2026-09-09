@@ -36,7 +36,7 @@ required_by_file = {
     ),
     "groq-proxy/src/index.js": (
         "SERVER RESEARCH AND SOURCE-INTEGRITY POLICY", "ALLOWED_ORIGINS", "guardVerifiedAnswer",
-        "SOURCE_POLICY_VERSION = '2026-09-09.73'",
+        "SOURCE_POLICY_VERSION = '2026-09-09.74'",
         "retrieval-researched-and-verified", "execute web search", "gpt-5.6-luna", "api.openai.com/v1/responses",
         "churchofjesuschrist.org",
     ),

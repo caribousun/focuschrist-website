@@ -205,8 +205,12 @@ try {
   assert(exhaustedPropagationCalls === 6 && /503/.test(error.message) && /previous-policy/.test(error.message),
     'propagation wait must fail after six attempts with observed status and policy evidence');
 }
+for (const newTopic of ['Can you cite a scripture that supports baptism?', 'Please give me a verse explaining grace']) {
+  const resetScope = classifyResearchScope([{role:'user',content:'is god in the bible old testament'}, {role:'user',content:newTopic}], 'ask', 'faith-study');
+  assert(!resetScope.scriptureSupportAntecedent, 'explicit new scripture subject must not inherit old God context');
+}
 for (const page of ['ask', 'pioneers']) {
-  for (const followup of ['can you cite a scripture', 'can you site a scripture', 'please show me a supporting verse']) {
+  for (const followup of ['can you cite a scripture', 'can you site a scripture', 'please show me a supporting verse', 'Can you cite a scripture that supports that?', 'Please give me a verse that explains this', 'Show me a scripture supporting that']) {
     const conversation = [{role:'user',content:'is god in the bible old testament'},
       {role:'assistant',content:'An earlier answer is conversation, not authoritative evidence.'},
       {role:'user',content:followup}];
@@ -717,6 +721,23 @@ assert(providerDiagnostic({
 'the finite allowlist must preserve the known public rate-limit code');
 
 const originalFetch = globalThis.fetch;
+for (const page of ['ask', 'pioneers']) {
+  for (const question of ['What does Alma 150:1 say?', 'What does John 3:999 teach?']) {
+    let networkCalls = 0;
+    globalThis.fetch = async () => { networkCalls++; throw new Error('Invalid catalog reference must not request network evidence or AI'); };
+    try {
+      const response = await worker.fetch(new Request('https://worker.test', {
+        method:'POST', headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},
+        body:JSON.stringify({messages:[{role:'user',content:question}],focuschrist_page:page,focuschrist_profile:'faith-study'}),
+      }), {OPENAI_API_KEY:'offline'});
+      const result = await response.json();
+      assert(result.focuschrist_gateway_mode === 'invalid-scripture-reference'
+        && result.focuschrist_verifier_route === 'local-canonical-validation'
+        && result.focuschrist_openai_verifier_calls === 0 && networkCalls === 0,
+      'catalog-certified invalid chapters and verses must reject before research or AI on both pages');
+    } finally { globalThis.fetch = originalFetch; }
+  }
+}
 let boundaryProviderCalls = 0;
 globalThis.fetch = async () => {
   boundaryProviderCalls += 1;
@@ -821,7 +842,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.73',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.74',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
@@ -837,6 +858,7 @@ globalThis.fetch = async (url,options={}) => {
   if (String(url).includes("api.openai.com")) {
     const body=JSON.parse(options.body);tokenRepairBodies.push(body);
     assert(body.messages[0].content.includes("For a scripture quotation, use [[SCRIPTURE:Book chapter:verse]]"),"every pass preserves quotation contract");
+    assert(body.messages[0].content.includes("standalone paragraph") && body.messages[0].content.includes("Never put paraphrases in quotation marks"), "every repair separates canonical quotation tokens from explanation");
     return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:true,answer:tokenRepairBodies.length===1?"[[SCRIPTURE:John 3:16]]":tokenDepthAnswer,source_indexes:[1]})}}]}));
   }
   if (String(url).startsWith('https://focuschrist.com/scripture-data/')) return new Response(readAlmaFixture(new URL('..' + new URL(url).pathname, import.meta.url)));

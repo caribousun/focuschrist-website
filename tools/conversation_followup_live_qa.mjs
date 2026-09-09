@@ -8,7 +8,7 @@ for(const page of ['ask','pioneers']) for(const test of cases){
  const messages=[{role:'user',content:test.first},{role:'assistant',content:'Please continue with your question.'},{role:'user',content:test.next}];
  const start=Date.now();const r=await fetch(endpoint,{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:page,focuschrist_profile:'faith-study',messages}),signal:AbortSignal.timeout(26000)});
  const p=await r.json();const answer=p.choices?.[0]?.message?.content||'';
- assert.equal(r.status,200);assert.equal(p.focuschrist_source_policy,'2026-09-09.73');
+ assert.equal(r.status,200);assert.equal(p.focuschrist_source_policy,'2026-09-09.74');
  assert.equal(p.focuschrist_classification_mode,'conversation-context');
  assert.equal(p.focuschrist_source_integrity_verified,true,`${page}: ${test.next}: ${p.focuschrist_gateway_mode}`);
  assert.equal(p.focuschrist_scripture_validated,true);assert.ok(p.focuschrist_sources?.length);

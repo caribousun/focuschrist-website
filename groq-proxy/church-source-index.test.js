@@ -801,4 +801,21 @@ try {
   globalThis.caches = originalCaches;
 }
 
+// Warm metadata caches must not retain query-specific aliases, focal phrases,
+// page boosts or result mutations across visitors.
+const cacheIsolationQuestions = [
+  ['How are the Father Son Holy Ghost described?', 'ask'],
+  ['Why did the pioneers leave Nauvoo in winter 1846?', 'pioneers'],
+  ['What happened at Fort Laramie?', 'pioneers'],
+  ['How did irrigation work?', 'pioneers'],
+  ['What does grace mean?', 'ask'],
+];
+const cacheIsolationExpected = cacheIsolationQuestions.map(([q,p]) => JSON.stringify(rankChurchSourceCandidates(q,p)));
+for (let i = cacheIsolationQuestions.length - 1; i >= 0; i--) {
+  const [q,p] = cacheIsolationQuestions[i];
+  const result = rankChurchSourceCandidates(q,p);
+  assert(JSON.stringify(result) === cacheIsolationExpected[i], 'source cache must preserve per-question ranking');
+  if (result[0]) result[0].score = -999;
+  assert(JSON.stringify(rankChurchSourceCandidates(q,p)) === cacheIsolationExpected[i], 'returned result mutation must not contaminate cached metadata');
+}
 console.log('Church source index QA PASS');

@@ -158,9 +158,10 @@
     },
     {
       "id": "church-joseph-smith-plural-marriage",
-      "entry_sha256": "3cba2e8fddb2f4e257bffde74ab8714af8218faa95c635fbf6779ce619905619",
+      "entry_sha256": "7a7220b5bfab1a41c3bacf8ef53c074592db8e2c074175fc0d4b897cb0290cb0",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-and-plural-marriage?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/plural-marriage-in-kirtland-and-nauvoo?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/plural-marriage-in-the-church-of-jesus-christ-of-latter-day-saints?lang=eng"
       ]
     },
@@ -180,8 +181,9 @@
     },
     {
       "id": "church-global-growth-twentieth-century",
-      "entry_sha256": "037967d08d945ee8e379914eb23502a5c92eda4fbf137a1f428bcdb95a06c245",
+      "entry_sha256": "f974c8d02faff4916bfa515fafe04fe934c5fb149e09629efc0287ec46142a2a",
       "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/global-histories/philippines/ph-overview?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v3?lang=eng",
         "https://www.churchofjesuschrist.org/study/history/saints-v4?lang=eng"
@@ -189,7 +191,7 @@
     },
     {
       "id": "church-womens-history-study",
-      "entry_sha256": "27f4ceff7c7bda0c4196b3e636c6326a9cdd281ace9f8a9b20d609cd39484a0b",
+      "entry_sha256": "1da02b053d46179c3a24399cab1652e4bc7d879e328150344de50a9852b4edd8",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/church-history/womens-history?lang=eng"
       ]
