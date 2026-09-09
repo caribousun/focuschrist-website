@@ -25,7 +25,9 @@ jobs:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-          persist-credentials: false
+          # Match existing CI checkout behavior: legacy gitlinks in this repo
+          # break checkout's recursive credential-removal step when false.
+          persist-credentials: true
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -48,4 +50,3 @@ jobs:
           name: question-preview-receipt-${{ github.event.pull_request.head.sha }}
           path: question-preview-receipt.json
           if-no-files-found: ignore
-
