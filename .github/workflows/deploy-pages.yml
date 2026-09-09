@@ -148,6 +148,7 @@ jobs:
           node groq-proxy/direct-scripture-reading.test.js
           node groq-proxy/paragraph-intent.test.js
           node groq-proxy/source-caveat.test.js
+          node groq-proxy/missing-subject.test.js
           node tools/scripture_quote_display_qa.js
 
       - name: Validate shared site JavaScript
