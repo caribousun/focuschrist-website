@@ -67,6 +67,7 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
 
       - name: Verify visual resource coverage and source thumbnails
         run: python tools/resource_thumbnail_qa.py
@@ -139,7 +140,6 @@ jobs:
           node groq-proxy/source-discovery.test.js
           node groq-proxy/evidence-budget.test.js
           node groq-proxy/openai-research.test.js
-          node tools/ask_composer_scroll_runtime_qa.js
           node tools/scripture_quote_display_qa.js
 
       - name: Validate shared site JavaScript

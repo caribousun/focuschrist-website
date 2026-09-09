@@ -28,8 +28,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.71';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.71';
+const SOURCE_POLICY_VERSION = '2026-09-09.72';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.72';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1405,7 +1405,7 @@ async function callApprovedResearch(env, body, deadline, diagnostic = {}) {
   let stage = "transport";
   try {
     const response = await fetch('https://api.openai.com/v1/responses', {
-      method: 'POST', redirect: 'error', signal: controller.signal,
+      method: 'POST', redirect: 'manual', signal: controller.signal,
       headers: { Authorization: `Bearer ${env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
         model: OPENAI_VERIFIER_MODEL, store: false, reasoning: { effort: 'low' },
@@ -1419,6 +1419,10 @@ async function callApprovedResearch(env, body, deadline, diagnostic = {}) {
       }),
     });
     diagnostic.focuschrist_openai_research_http_status = response.status;
+    if (response.status >= 300 && response.status < 400) {
+      diagnostic.focuschrist_openai_research_error_stage = 'provider-redirect';
+      return providerFailure(502, 'service_unavailable');
+    }
     stage = "response-body";
     const raw = await response.text();
     if (raw.length > 128000) throw new Error('response-limit');
@@ -1475,7 +1479,7 @@ async function callOpenAIVerifier(apiKey, body, deadline) {
   let response;
   try {
     response = await fetch(OPENAI_ENDPOINT, {
-      method: 'POST',
+      method: 'POST', redirect: 'manual',
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
@@ -1490,6 +1494,7 @@ async function callOpenAIVerifier(apiKey, body, deadline) {
       }),
       signal: controller ? controller.signal : undefined,
     });
+    if (response.status >= 300 && response.status < 400) return { ...providerFailure(502, 'service_unavailable'), openaiCallCount: 1 };
     const raw = await response.text();
     if (raw.length > 128000) throw new Error('response-limit');
     return { response, data: JSON.parse(raw), openaiCallCount: 1 };

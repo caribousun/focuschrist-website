@@ -29,6 +29,11 @@ try{
  globalThis.fetch=async(_url,options)=>({text:()=>new Promise((_resolve,reject)=>options.signal.addEventListener('abort',()=>reject(new DOMException('stalled body','AbortError'))))});
  const stalled=await callVerifier(env,body,Date.now()+350,{requireSourceIndexes:true});
  assert.equal(stalled.response.status,504,'verifier timeout must include the response body after headers');
+ let redirectCalls=0;
+ globalThis.fetch=async(_url,options)=>{redirectCalls++;assert.equal(options.redirect,'manual','Workers-compatible redirect mode must not forward credentials');return new Response('',{status:302,headers:{Location:'https://unapproved.example'}});};
+ assert.equal((await callApprovedResearch(env,body,Date.now()+22000,{})).response.status,502);
+ assert.equal((await callVerifier(env,body,Date.now()+10000)).response.status,502);
+ assert.equal(redirectCalls,2,'redirect targets must never receive an additional request');
  for (const indexed of [false,true]) {
   let searches=0,verifications=0,articles=0;
   globalThis.fetch=async(url,options={})=>{
