@@ -147,6 +147,9 @@ jobs:
           node groq-proxy/source-policy.test.js
           node groq-proxy/conversation-context.test.js
           node groq-proxy/research-escalation.test.js
+          node groq-proxy/scripture-evidence.test.js
+          node groq-proxy/source-discovery.test.js
+          node groq-proxy/evidence-budget.test.js
           node groq-proxy/church-source-index.test.js
 
       - name: Validate committed Church source index

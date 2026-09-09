@@ -25,7 +25,7 @@ for (const denied of [
 ]) assert.equal(isAllowedResearchFetchUrl(denied), false, `Unsafe or unsupported fetch URL: ${denied}`);
 
 try {
-  for (const [topic, question, rejectAgain, articleUnavailable] of [...topics, [...topics[0], true], [...topics[0], false, true]]) {
+  for (const [topic, question, rejectAgain, articleUnavailable, prior = [], profile = 'faith-study'] of [...topics, [...topics[0], true], [...topics[0], false, true], ['forgiveness','How can it help someone rebuild trust?',false,false,['What is forgiveness?']], ['humility','How can humility help someone rebuild trust?',false,false,[],'general-knowledge']]) {
     const events = [];
     let researchCalls = 0;
     let verifierCalls = 0;
@@ -56,7 +56,7 @@ try {
       }
       throw new Error('Unexpected offline fixture request: ' + address);
     };
-    const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'faith-study',messages:[{role:'user',content:question}]})}), {
+    const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:profile,messages:[...prior.map(content=>({role:'user',content})),{role:'user',content:question}]})}), {
       GROQ_KEY_NEW:'offline-fixture',
       AI:{run:async (_model, body) => {
         verifierCalls++;
@@ -87,6 +87,7 @@ try {
       continue;
     }
     assert.equal(payload.focuschrist_source_integrity_verified, true, JSON.stringify(payload));
+    if (profile === 'general-knowledge') assert.equal(payload.focuschrist_resolved_profile,'general-knowledge','local-first approved-source research must not force a religious classification');
     assert.equal(payload.focuschrist_scripture_validated, true);
     assert.ok(payload.focuschrist_sources.some(source => source.url === discoveredUrl));
   }

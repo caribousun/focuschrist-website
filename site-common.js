@@ -729,19 +729,19 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260903-1'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260909-question-review'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260909-18', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260909-19', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {
         installScriptureDisplayGate();
-        appendScript(relativeAssetHref('scripture-library.js?v=20260909-3'), 'data-focuschrist-scripture-library', function () {
+        appendScript(relativeAssetHref('scripture-library.js?v=20260909-4'), 'data-focuschrist-scripture-library', function () {
             appendScript(relativeAssetHref('scripture-reader.js?v=20260909-2'), 'data-focuschrist-scripture-reader');
         });
         const scriptureStyle = document.createElement('link');

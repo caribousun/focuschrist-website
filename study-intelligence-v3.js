@@ -473,6 +473,32 @@
     }
 
     async function askV3(query, additionalReference) {
+        // Resolve an incomplete identity from the visitor's words only. A local
+        // answer bank or an assistant's previous guess cannot establish identity.
+        const userTurns = recentHistory().filter(function (item) { return item.role === 'user'; });
+        const priorUserQuestion = userTurns.length ? String(userTurns[userTurns.length - 1].content) : '';
+        if (/\b(?:my|our)\s+(?:great[- ]?)?(?:grandmother|grandfather|ancestor|family)\b/i.test(query)
+            && /\b(?:how old|age|when|which|identify)\b/i.test(query)) {
+            return { answer: 'Please provide your ancestor\'s name and any birth date, travel date, or company information you know so I can help identify the right records.',
+                sources: [], clarification: true, profile: currentMode() };
+        }
+        const bareJosephDeath = /\bjoseph(?=\s*(?:[?.!]|$)|\s+(?:die|died|death|killed|martyred|martyrdom|murdered|was|is|did|get|got)\b)/i.test(query)
+            && /\b(?:die|died|death|killed|martyred|martyrdom|murdered)\b/i.test(query)
+            && !/\bjoseph\s+(?:smith|the\s+prophet|of\s+|in\s+|son\s+|jr\b)/i.test(query);
+        if (bareJosephDeath) {
+            if (/\bjoseph\s+smith\b/i.test(priorUserQuestion)
+                && !/\bjoseph\s+(?:of|in|son)\b/i.test(priorUserQuestion)) {
+                query = String(query).replace(/\bjoseph\b/i, 'Joseph Smith');
+            } else {
+                return { answer: 'Which Joseph do you mean: Joseph Smith, Joseph in the Bible, or someone else?',
+                    sources: [], clarification: true, profile: currentMode() };
+            }
+        }
+        if (!priorUserQuestion && /^(?:and\s+)?which\s+(?:one|interpretation)\b/i.test(String(query).trim())
+            && /\b(?:interpretation|right|correct)\b/i.test(query)) {
+            return { answer: 'Which passage or interpretations would you like to compare? Please share the reference or the two views.',
+                sources: [], clarification: true, profile: currentMode() };
+        }
         if (window.focusChristScriptureReady) {
             try {
                 const library = await window.focusChristScriptureReady;
@@ -488,7 +514,9 @@
         // answer (for example, returning Joseph Smith's death date to "How old was
         // he?"). The original wording already received direct reviewed matching in
         // resolveFollowup, so generic contextual research must bypass both local banks.
-        const allowContextualLocalMatch = contextResolution.genericContext !== true;
+        const deathAsBackground = /\bjoseph\b/i.test(query)
+            && /\b(?:after|before|following|since)\s+(?:the\s+)?(?:death|martyrdom|murder|joseph)\b/i.test(query);
+        const allowContextualLocalMatch = contextResolution.genericContext !== true && !deathAsBackground;
         const reviewedReference = allowContextualLocalMatch
             ? reviewedKnowledgeReference(effectiveQuery, contextResolution)
             : null;
@@ -551,6 +579,16 @@
 
         try {
                 const researched = await requestWithRetry(messages, profile);
+                const unavailable = /(?:unavailable|rate-limited|timeout|transport-failure)/i.test(researched.gatewayMode)
+                    || researched.providerStatus === 429 || researched.providerStatus >= 500;
+                if (unavailable && !researched.serverVerified) {
+                    // An operational failure is not a source claim or a scope refusal.
+                    return { answer: 'I’m unable to check our approved study sources right now. Please try again in a moment.', sources: [], profile: profile,
+                        verifiedGrounding: false, sourceIntegrityPassed: false,
+                        sourceIntegrityStatus: researched.gatewayMode, unavailable: true,
+                        providerStatus: researched.providerStatus, providerCode: researched.providerCode,
+                        sourcePolicyVersion: researched.policyVersion, clientAttempts: researched.clientAttempts || 1 };
+                }
                 let answer = researched.content;
                 answer = removeBoilerplateClosing(answer, profile);
                 answer = normalizeDisplayText(answer);

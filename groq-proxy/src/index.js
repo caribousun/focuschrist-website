@@ -1,4 +1,4 @@
-import { PIONEER_SOURCE_URLS, PIONEER_FOCAL_PHRASES, pioneerTopic } from './pioneer-topic-sources.js';
+import { PIONEER_SOURCE_URLS, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, pioneerTopic } from './pioneer-topic-sources.js';
 import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP_REVISION } from './church-source-index.js';
 import createScriptureLibrary from '../../scripture-library.js';
 import scriptureCatalog from '../../scripture-data/catalog.json' with { type: 'json' };
@@ -31,8 +31,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.68';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.68';
+const SOURCE_POLICY_VERSION = '2026-09-09.69';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.69';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -330,7 +330,7 @@ function canonicalSource(rawUrl, title, content, contentLimit = 700) {
       url: url.href,
       host: url.hostname.toLowerCase(),
       title: String(title || url.hostname).replace(/\s+/g, ' ').trim().slice(0, 180),
-      content: String(content || '').replace(/\s+/g, ' ').trim().slice(0, Math.min(4200, contentLimit)),
+      content: String(content || '').replace(/[^\S\r\n]+/g, ' ').replace(/\r\n?/g,'\n').replace(/\n{3,}/g,'\n\n').trim().slice(0, Math.min(4200, contentLimit)),
     };
   } catch (_error) {
     return null;
@@ -465,10 +465,10 @@ function deterministicHistoryTopicSource(question, page) {
 }
 
 function namedGospelTopicSource(question, page, ranked) {
-  if (page !== 'ask' || /\b(?:compare|contrast|versus|vs|difference between|relationship between)\b/i.test(String(question || ''))) return null;
+  if (!['ask','pioneers','church-history'].includes(page) || /\b(?:compare|contrast|versus|vs|difference between|relationship between)\b/i.test(String(question || ''))) return null;
   const top = ranked[0];
   if (!top || top.kind !== 'gospel-topic' || !top.titleMatch
-    || normalizeDiscoveryTokens(top.title).length < 2
+    || normalizeDiscoveryTokens(top.title).length < 1
     || ranked.slice(1).some((entry) => entry.titleMatch)) return null;
   return { ...top, namedGospelTopic: true };
 }
@@ -483,12 +483,23 @@ function rankChurchSourceCandidates(question, page) {
   if (!queryTokens.length) return [];
   const scripture = deterministicScriptureSource(question);
   const pioneerIrrigation = isPioneerIrrigationIntent(question, page);
-  const ranked = CHURCH_SOURCE_INDEX.map((entry) => {
+  const entries = new Map(CHURCH_SOURCE_INDEX.map(entry=>[entry.url,entry]));
+  if (page === 'pioneers') {
+    for (const [key,topic] of Object.entries(PIONEER_TOPIC_SOURCES)) {
+      const existing = entries.get(topic.url) || {url:topic.url,title:topic.subject,kind:'history-topic',priority:95,tokens:''};
+      const focal = (PIONEER_FOCAL_PHRASES[key] || []).filter(phrase=>phrase.split(/\s+/).length > 1
+        && new RegExp('\\b'+phrase.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'\\b','i').test(question));
+      entries.set(topic.url,{...existing,tokens:existing.tokens+' '+topic.subject+' '+(PIONEER_FOCAL_PHRASES[key] || []).join(' '),
+        namedGospelTopic:true,...(focal.length ? {pioneerDisclosure:true,focalPhrases:[...(existing.focalPhrases || []),...focal]} : {})});
+    }
+  }
+  const ranked = [...entries.values()].map((entry) => {
     const sourceTokens = new Set(normalizeDiscoveryTokens(entry.tokens));
     const overlaps = queryTokens.filter((token) => sourceTokens.has(token));
     const titleTokens = normalizeDiscoveryTokens(entry.title);
     const titleMatch = titleTokens.length > 0 && titleTokens.every((token) => queryTokens.includes(token));
     let score = overlaps.length * 18 + Number(entry.priority || 0) / 20 + (titleMatch ? 40 : 0);
+    if (entry.pioneerDisclosure && entry.focalPhrases?.length) score += 400;
     // Prefer a focused, one-concept Gospel Topic when its complete title is
     // explicitly present in the question. This prevents broad framing topics
     // such as "Jesus Christ" from outranking the visitor's named subject, as
@@ -502,7 +513,7 @@ function rankChurchSourceCandidates(question, page) {
     if (page === 'pioneers' && /pioneer|history/.test(`${entry.tokens} ${entry.kind}`)) score += 8;
     const topicPinned = pioneerIrrigation && /\/study\/manual\/church-history-in-the-fulness-of-times\/chapter-twenty-six/.test(entry.url);
     if (topicPinned) score += 500;
-    return { ...entry, score, overlapCount: overlaps.length, titleMatch, focusedTopicMatch, topicPinned };
+    return { ...entry, namedGospelTopic:entry.namedGospelTopic || entry.kind === 'history-topic', score, overlapCount: overlaps.length, titleMatch, focusedTopicMatch, topicPinned };
   }).filter((entry) => entry.topicPinned
     || entry.overlapCount >= 2
     || (entry.overlapCount >= 1 && (queryTokens.length === 1 || entry.titleMatch)));
@@ -555,7 +566,7 @@ function extractVisibleParagraphs(htmlText, candidate = null) {
     && candidate.url === 'https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng';
   let clean = String(htmlText || '')
     .replace(/<!--[\s\S]*?-->/g, ' ')
-    .replace(/<(script|style|nav|footer|svg|form|noscript|template|iframe)\b[\s\S]*?(?:<\/\1>|$)/gi, ' ')
+    .replace(/<(head|script|style|nav|footer|svg|form|noscript|template|iframe)\b[\s\S]*?(?:<\/\1>|$)/gi, ' ')
     .replace(/<header\b[\s\S]*?(?:<\/header>|$)/gi, match => scopedJourney ? match : ' ')
     .replace(/<((?!(?:area|base|br|col|embed|hr|img|input|link|meta|param|source|track|wbr)\b)[a-z][a-z0-9-]*)\b[^>]*(?:\bhidden\b|\binert\b|aria-hidden\s*=\s*["']?true|style\s*=\s*(?:"[^"]*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^"]*"|'[^']*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^']*'|[^\s>]*(?:display\s*:\s*none|visibility\s*:\s*hidden)[^\s>]*))[^>]*>[\s\S]*?(?:<\/\1>|$)/gi, ' ');
   if (scopedJourney) {
@@ -584,7 +595,7 @@ function extractVisibleParagraphs(htmlText, candidate = null) {
     const parts = match[1].split(/(?:<br\b[^>]*>\s*){2,}|<\/?(?:div|section|article|li)\b[^>]*>/gi);
     parts.forEach(consider);
   }
-  clean.split(/(?:<br\b[^>]*>\s*){2,}/gi).forEach(consider);
+  if (/(?:<br\b[^>]*>\s*){2,}/i.test(clean)) clean.split(/(?:<br\b[^>]*>\s*){2,}/gi).forEach(consider);
   return paragraphs;
 }
 
@@ -635,11 +646,20 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
     // a 700-character fragment. Keep relevance-ranked paragraphs within the
     // existing scripture-sized budget, then restore their reading order.
     let characters = 0;
-    return selected.filter((item) => {
-      if (characters + item.text.length + 1 > 4200) return false;
-      characters += item.text.length + 1;
-      return true;
-    }).sort((left, right) => left.position - right.position).map((item) => item.text).join(' ');
+    const positions = new Set();
+    for (const item of selected) {
+      for (const position of [item.position,item.position-1,item.position+1]) {
+        if (position < 0 || position >= sourceParagraphs.length || positions.has(position)) continue;
+        // Landmark evidence has an explicit source scope. Mere adjacency must
+        // not attach a separate recollection to the named place or journey.
+        if (candidate.pioneerDisclosure && candidate.focalPhrases?.length
+          && pioneerParagraphScore(sourceParagraphs, position, candidate) <= 0) continue;
+        const text = sourceParagraphs[position];
+        if (characters + text.length + 2 > 4200) continue;
+        positions.add(position); characters += text.length + 2;
+      }
+    }
+    return [...positions].sort((a,b)=>a-b).map(position=>sourceParagraphs[position]).join('\n\n');
   }
   if (isPinnedAlma32FaithStudy(candidate, question)) {
     // Keep the original question anchors; add the actual comparison rather than
@@ -692,7 +712,7 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
         if (characters + text.length + 1 > 4200) return false;
         characters += text.length + 1;
         return true;
-      }).join(' ');
+      }).join('\n\n');
   }
   return selected.map((item) => item.text).join(' ').slice(0, 700);
 }
@@ -710,7 +730,14 @@ function isPinnedPioneerIrrigationSource(candidate, content = '') {
 }
 
 function evidenceAdmissionSufficient(candidate, content, question) {
+  const titleTokens = normalizeDiscoveryTokens(candidate?.title || '');
+  const questionTokens = new Set(normalizeDiscoveryTokens(question));
+  const bodyTokens = new Set(normalizeDiscoveryTokens(content));
+  const explicitGospelTopic = candidate?.namedGospelTopic === true && candidate.kind === 'gospel-topic'
+    && titleTokens.length > 0 && titleTokens.every(token => questionTokens.has(token) && bodyTokens.has(token))
+    && String(content).split(/\s+/).length >= 25;
   return uniqueEvidenceOverlapCount(content, question) >= 2
+    || explicitGospelTopic
     || isPinnedPioneerIrrigationSource(candidate, content);
 }
 
@@ -720,6 +747,7 @@ function extractRelevantParagraphs(htmlText, question) {
 
 function compactParagraphPack(paragraphs, candidate, question = '') {
   paragraphs = eligibleSourceParagraphs(paragraphs, candidate);
+  if (candidate?.namedGospelTopic || candidate?.pioneerDisclosure) return relevantParagraphText(paragraphs,question,candidate).split('\n\n').filter(Boolean);
   const historyYears = explicitHistoryYears(candidate, question);
   const discoveryTokens = normalizeDiscoveryTokens(`${candidate.title || ''} ${candidate.tokens || ''}`);
   const queryTokens = normalizeDiscoveryTokens(question);
@@ -951,6 +979,7 @@ function hasExcessiveSourceOverlap(answer, evidence, limit = 25) {
     }
     let reconstructedWords = 0;
     let sourceFloor = 0;
+    let orderedPassWords = 0;
     for (let answerIndex = 0; answerIndex < answerTokens.length;) {
       let longest = 0;
       let longestSourceIndex = -1;
@@ -963,8 +992,21 @@ function hasExcessiveSourceOverlap(answer, evidence, limit = 25) {
           longestSourceIndex = sourceIndex;
         }
       }
+      // Repeating a substantial ordered reconstruction cannot dilute its
+      // copying ratio. Restart only after a full source-derived pass, never
+      // merely because ordinary short phrases or names recur.
+      if (longest < 2 && orderedPassWords > limit) {
+        for (let sourceIndex = 0; sourceIndex < sourceFloor; sourceIndex += 1) {
+          let length = 0;
+          while (answerTokens[answerIndex + length]
+            && sourceTokens[sourceIndex + length] === answerTokens[answerIndex + length]) length += 1;
+          if (length > longest) { longest = length; longestSourceIndex = sourceIndex; }
+        }
+        if (longest >= 2) orderedPassWords = 0;
+      }
       if (longest >= 2) {
         reconstructedWords += longest;
+        orderedPassWords += longest;
         answerIndex += longest;
         sourceFloor = longestSourceIndex + longest;
       } else {
@@ -1180,13 +1222,17 @@ async function fetchTellMyStoryEvidence(selectedName, deadline) {
 }
 
 function evidenceForVerifier(evidence) {
-  return evidence.map((source, index) => [
+  const text = evidence.map((source, index) => [
     `SOURCE ${index + 1}`,
     `SOURCE CLASS: ${source.sourceClass || (isOfficialChurchSource(source) ? 'official-church' : 'web')}`,
     `TITLE: ${source.title}`,
     `URL: ${source.url}`,
     `CONTENT: ${source.content || '(No retrievable source excerpt was returned.)'}`,
-  ].join('\n')).join('\n\n').slice(0, 5000);
+  ].join('\n')).join('\n\n');
+  // Keep all six admitted article passages (up to 4,200 characters each),
+  // or the bounded canonical pack. Never truncate a final passage or source.
+  if (evidence.length > 6 || text.length > 40000) throw new Error('evidence-pack-limit');
+  return text;
 }
 
 function parseVerifierJson(text) {
@@ -1365,14 +1411,14 @@ async function callGroq(apiKey, body, deadline, mayRetry = true) {
   let data = null;
   try { data = await response.json(); } catch (_error) {}
   if (response.status === 429 && mayRetry && remainingBudget(deadline) >= MIN_RETRY_BUDGET_MS) {
-    const message = data && data.error ? String(data.error.message || '') : '';
-    const messageDelay = message.match(/try again in\s+([\d.]+)s/i);
-    const retrySeconds = Number.parseFloat(response.headers.get('retry-after') || (messageDelay ? messageDelay[1] : '2'));
-    const requestedWait = Number.isFinite(retrySeconds) ? (retrySeconds * 1000) + 100 : 500;
-    const waitMs = Math.min(5000, Math.max(250, requestedWait), Math.max(0, remainingBudget(deadline) - MIN_RETRY_BUDGET_MS));
-    await new Promise((resolve) => setTimeout(resolve, waitMs));
-    const retried = await callGroq(apiKey, body, deadline, false);
-    return { ...retried, callCount: 1 + Number(retried.callCount || 0) };
+    const retrySeconds = providerRetryAfterSeconds({ response, data });
+    const waitMs = Math.max(250, (retrySeconds ?? 2) * 1000 + 100);
+    // Never shorten the provider's cooldown to fit our request deadline.
+    if (waitMs + MIN_RETRY_BUDGET_MS <= remainingBudget(deadline)) {
+      await new Promise((resolve) => setTimeout(resolve, waitMs));
+      const retried = await callGroq(apiKey, body, deadline, false);
+      return { ...retried, callCount: 1 + Number(retried.callCount || 0) };
+    }
   }
   return { response, data, callCount: 1 };
 }
@@ -1979,6 +2025,24 @@ function generalAnswerPayload(answer, mode, extra, scope) {
   };
 }
 
+function providerRetryAfterSeconds(result) {
+  const header = result?.response?.headers?.get('retry-after');
+  if (header) {
+    const seconds = /^\d+(?:\.\d+)?$/.test(header.trim()) ? Number(header)
+      : (Date.parse(header) - Date.now()) / 1000;
+    if (Number.isFinite(seconds) && seconds >= 0) return Math.ceil(seconds);
+  }
+  const message = String(result?.data?.error?.message || '');
+  const delay = message.match(/try again in\s+((?:[\d.]+\s*(?:milliseconds?|minutes?|seconds?|hours?|ms|h|m|s)\s*)+)/i);
+  if (!delay) return null;
+  let seconds = 0;
+  for (const match of delay[1].matchAll(/([\d.]+)\s*(milliseconds?|minutes?|seconds?|hours?|ms|h|m|s)/gi)) {
+    const unit = match[2].toLowerCase();
+    seconds += Number(match[1]) * (unit === 'ms' || unit.startsWith('milli') ? .001 : unit.startsWith('m') ? 60 : unit.startsWith('h') ? 3600 : 1);
+  }
+  return Number.isFinite(seconds) && seconds >= 0 ? Math.ceil(seconds) : null;
+}
+
 function providerDiagnostic(result) {
   const error = result && result.data && result.data.error ? result.data.error : {};
   const rawCode = String(error.code || error.type || '');
@@ -1991,6 +2055,11 @@ function providerDiagnostic(result) {
   return {
     focuschrist_provider_status: result && result.response ? result.response.status : 0,
     focuschrist_provider_code: safeCode,
+    ...(result?.response?.status === 429 ? {
+      focuschrist_provider_retry_after_seconds: providerRetryAfterSeconds(result),
+      focuschrist_provider_rate_limit_category: /\b(?:per day|daily|TPD|RPD)\b/i.test(String(error.message || '')) ? 'daily-quota'
+        : /\b(?:per minute|TPM|RPM|per second)\b/i.test(String(error.message || '')) ? 'pacing' : 'unspecified',
+    } : {}),
   };
 }
 
@@ -2132,7 +2201,29 @@ export default {
       const retrievalDiagnostic = requestDiagnostic;
       if (tellMyStoryEvidence) retrievalDiagnostic.focuschrist_retrieval_route = 'reviewed-pioneer-biography';
 
-      const relatedSources = sanitized.scope.faith && !sanitized.scope.selectedPioneer
+      if (!sanitized.scope.selectedPioneer) {
+        try {
+          // Current explicit references take precedence. Only preceding USER
+          // questions can supply a missing reference through retrievalQuestion.
+          const currentRefs = localScriptures.references(sanitized.scope.question);
+          const scriptureEvidence = await localScriptures.evidenceRequest(currentRefs.length
+            ? sanitized.scope.question : sanitized.scope.retrievalQuestion);
+          if (scriptureEvidence.length) {
+            evidence = scriptureEvidence;
+            allEvidence = scriptureEvidence;
+            retrievalDiagnostic.focuschrist_retrieval_route = 'church-source-index';
+            retrievalDiagnostic.focuschrist_deterministic_scripture = true;
+            retrievalDiagnostic.focuschrist_local_canonical_evidence = true;
+            retrievalDiagnostic.focuschrist_index_candidates = scriptureEvidence.length;
+            retrievalDiagnostic.focuschrist_index_sources = scriptureEvidence.length;
+          }
+        } catch (_error) {
+          // Invalid or unavailable passages never become admitted evidence.
+          // Existing bounded research and the final reference gate still apply.
+        }
+      }
+
+      const relatedSources = !evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer
         ? relatedConversationSources(sanitized.scope) : [];
       if (relatedSources.length) {
         const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
@@ -2150,9 +2241,7 @@ export default {
         retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + Number(counters.transportFailures || 0);
       }
 
-      if (!evidence.length && sanitized.scope.faith && !sanitized.scope.selectedPioneer && (!sanitized.scope.conversationContext.length
-          || (deterministicHistoryTopicSource(sanitized.scope.retrievalQuestion, sanitized.scope.page)
-            && !/\b(?:same|different|compare|contrast|versus|relationship)\b/i.test(sanitized.scope.question)))) {
+      if (!evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer) {
         const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline, sanitized.scope.pioneerTopicKey);
         retrievalDiagnostic.focuschrist_index_candidates = indexed.candidates.length;
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
@@ -2305,7 +2394,9 @@ export default {
       ].join('\n') : [
         'You are a strict evidence verifier. Return one JSON object only.',
         'Compose the final answer from the supplied source excerpts. If the DRAFT block is empty, write the answer directly from EVIDENCE and never reject merely because no candidate draft was supplied.',
+        'When EVIDENCE is canonical scripture, explain the current question from that passage. A request to teach, explain, compare, or apply is not satisfied by returning only the passage text. Previous user questions supply conversational context only, not evidence or a replacement question.',
         'If a draft is present, repair it into a direct, complete answer using the evidence. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
+        'Keep each person, organization, place, date, and action attached to the relationship actually stated in its source context. A shift of time or setting can change the subject even within one paragraph. Never combine an earlier location with a later organization merely because both occur in the same excerpt. Do not increase geographic specificity, infer an unnamed city, or resolve an ambiguous referent unless the evidence explicitly supports it. Preserve these limits when combining neighboring paragraphs or separate sources.',
         'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give 90 to 220 words and at least three complete sentences. A nuanced question normally needs two to four short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
         'Preserve the exact subjects and relationships in scriptural comparisons. Do not extend a metaphor with invented physical details or present a personal application as something the passage says. If the text compares the word to a seed, do not replace the word with faith or invent watering, warmth, or other gardening instructions.',
         'Use independently worded paraphrase. Do not copy a long passage or reconstruct the source in ordered fragments. Apart from unavoidable names and short doctrinal phrases, avoid matching source wording for more than eight consecutive words.',
@@ -2357,7 +2448,7 @@ export default {
       let freshResearchEvidence = false;
       // A local index hit is a discovery lead, not proof that the question can
       // be answered from that excerpt. Search once before declining an unknown.
-      if (verdict?.approved === false && sanitized.scope.faith && !sanitized.scope.selectedPioneer
+      if (verdict?.approved === false && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer
           && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
           && !retrievalDiagnostic.focuschrist_groq_research_calls && env?.GROQ_KEY_NEW
           && remainingBudget(deadline) >= 9000) {
@@ -2611,6 +2702,7 @@ export {
   needsIdentityClarification,
   parseVerifierJson,
   providerDiagnostic,
+  evidenceForVerifier,
   rankChurchSourceCandidates,
   relevantParagraphText,
   reviewedDeterministicEvidenceRecovery,

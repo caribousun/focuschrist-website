@@ -26,13 +26,25 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+const humilityBody = 'Humility means recognizing our dependence on God and being willing to learn. Humility does not mean that a person has no worth or must be weak.';
+const fontPage = `<html><head><title>Humility</title><link onload="fonts.forEach(f => f.family.startsWith('Ensign') ? f.display='swap' : f.display='auto'); humility worth humility worth" href="font.css"></head><body><p>${humilityBody}</p></body></html>`;
+const humilityExtract = extractRelevantParagraphs(fontPage, 'How can I study humility without confusing it with having no worth?');
+assert(humilityExtract === humilityBody && !/startsWith|font|display|swap|forEach/.test(humilityExtract),
+  'head metadata and link onload code must not outrank or contaminate actual paragraph evidence');
+const noParagraphPage = '<html><head><title>Humility</title></head><body><div>Humility without a paragraph boundary is not a valid fallback excerpt for this article extraction fixture.</div></body></html>';
+assert(extractRelevantParagraphs(noParagraphPage,'humility') === '',
+  'a document without paragraphs or repeated BR delimiters must not become one aggregate evidence paragraph');
+const lineBreakBody = 'Humility invites a willingness to learn and recognize that other people can offer useful understanding.';
+assert(extractRelevantParagraphs(`<div>${lineBreakBody}<br><br>Different topic without the requested concept is described in this other paragraph.</div>`, 'humility').includes(lineBreakBody),
+  'genuine repeated BR paragraph delimiters must retain their fallback support');
+
 const interfaithQuestion = 'What do Latter-day Saints teach about religious freedom and respecting people of other religions?';
 const interfaithRanked = rankChurchSourceCandidates(interfaithQuestion, 'ask');
 const namedInterfaith = namedGospelTopicSource(interfaithQuestion, 'ask', interfaithRanked);
 assert(namedInterfaith && namedInterfaith.namedGospelTopic === true && /\/religious-freedom\?/.test(namedInterfaith.url),
   'a uniquely named Gospel Topic must displace generic historical keyword matches');
 assert(!namedGospelTopicSource('Compare religious freedom and political neutrality', 'ask', interfaithRanked)
-  && !namedGospelTopicSource(interfaithQuestion, 'church-history', interfaithRanked)
+  && !namedGospelTopicSource(interfaithQuestion, 'unrelated-surface', interfaithRanked)
   && !namedGospelTopicSource(interfaithQuestion, 'ask', [interfaithRanked[0], { titleMatch: true }]),
   'comparison, history-profile and multiple named-topic questions must retain multi-source routing');
 // Synthetic extraction fixture: the responsive paragraph follows larger generic paragraphs.

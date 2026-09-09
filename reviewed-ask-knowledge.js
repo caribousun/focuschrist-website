@@ -986,6 +986,7 @@
             return !/\b(?:song|music|album|book|movie|film|poem|painting|artwork|design)\b/.test(query);
         },
         'joseph-smith': function (query) {
+            if (/\b(?:after|before|following|since)\s+(?:the\s+)?(?:death|martyrdom|murder|joseph)\b/.test(query)) return false;
             if (/\bjoseph the prophet\b/.test(query)) return true;
             const explicit = query.match(/\bjoseph smith(?:\s+(\w+))?/);
             if (explicit) {
@@ -997,6 +998,7 @@
             return !bare[1] || ['was', 'is', 'did', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom', 'murdered', 'get', 'got'].includes(bare[1]);
         },
         'lds-handcart': function (query) {
+            if (/\b(?:my|our|she|her|he|his|ancestor|grandmother|grandfather|food|ration|rations|short|shortage|shortages|diet|meal|meals)\b/.test(query)) return false;
             return !/\b(?:amusement park|race|racing|shopping|grocery|patent|video game|game)\b/.test(query);
         },
         'restored-church': function (query) {
