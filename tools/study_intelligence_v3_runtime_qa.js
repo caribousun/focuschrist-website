@@ -1,10 +1,11 @@
 const fs = require('fs');
 const vm = require('vm');
 
+const scheduledRequestTimeouts = [];
 global.window = {
     location: { pathname: '/ask.html' },
     addEventListener() {},
-    setTimeout,
+    setTimeout(callback, delay) { scheduledRequestTimeouts.push(delay); return setTimeout(callback, delay); },
     clearTimeout,
     focusChristSourceIntegrity: null,
 };
@@ -431,6 +432,31 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         'a transient first-request failure must retry once and return the successful verified answer');
     assert(!/temporarily unavailable/i.test(result.answer),
         'a recovered transient request must never render the unavailable message');
+
+    assert(scheduledRequestTimeouts.some(delay => delay === 65000)
+        && !scheduledRequestTimeouts.includes(12000),
+        'first request must allow the complete 60-second Worker plus transport budget');
+    const realNow = Date.now, realFetch = global.fetch, fakeStart = Date.now();
+    let elapsed = 0, lateCalls = 0;
+    try {
+        Date.now = () => fakeStart + elapsed;
+        global.fetch = async () => {
+            lateCalls += 1;
+            elapsed = 65000;
+            throw new TypeError('Injected failure after complete request budget');
+        };
+        await window.focusChristStudyAskV3('Explain an unfamiliar Old Testament historical question', '');
+        assert(lateCalls === 1, 'exhausted request budget must never launch a late duplicate');
+    } finally { Date.now = realNow; global.fetch = realFetch; }
+
+    const harnessSource = fs.readFileSync('tools/question-acceptance-local.cjs', 'utf8');
+    const signalExpression = harnessSource.match(/signal:(options\.signal \? AbortSignal\.any\([^\n]+?)\}\);/);
+    assert(signalExpression, 'acceptance harness must retain the browser abort signal');
+    const controller = new AbortController();
+    const forwarded = new Function('options', 'AbortSignal', 'return ' + signalExpression[1])({ signal: controller.signal }, AbortSignal);
+    controller.abort(new Error('Browser deadline reached'));
+    assert(forwarded.aborted && forwarded.reason === controller.signal.reason,
+        'browser abort must propagate through the harness transport deadline');
 
     const beforeVerifiedPolicyResult = fetchCalls;
     forceWorkerRateLimit = true;

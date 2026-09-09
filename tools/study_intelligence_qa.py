@@ -31,7 +31,7 @@ def main() -> int:
         "focusChristStudyAskV3",
         "temperature: 0.25",
         "requestWithRetry(messages, profile)",
-        "CLIENT_FIRST_ATTEMPT_MS = 12000",
+        "CLIENT_FIRST_ATTEMPT_MS = 65000",
         "CLIENT_RETRY_DELAY_MS = 400",
         "data-focuschrist-study-intelligence-version', '3'",
     )
@@ -56,7 +56,7 @@ def main() -> int:
 
     required_common_markers = (
         "loadStudyIntelligence",
-        "study-intelligence-v3.js?v=20260909-21",
+        "study-intelligence-v3.js?v=20260909-22",
         "data-focuschrist-study-intelligence-v3",
         "path.endsWith('/ask.html')",
         "path.endsWith('/pioneers.html')",

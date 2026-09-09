@@ -8,7 +8,7 @@
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
     const MAX_TOKENS = 1500;
     const CLIENT_REQUEST_BUDGET_MS = 65000;
-    const CLIENT_FIRST_ATTEMPT_MS = 12000;
+    const CLIENT_FIRST_ATTEMPT_MS = 65000;
     const CLIENT_RETRY_DELAY_MS = 400;
     const CLIENT_MIN_RETRY_BUDGET_MS = 3000;
     const POLICY_VERSION = '2026-09-03.16';

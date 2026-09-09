@@ -21,7 +21,7 @@ required_by_file = {
     "site-common.js": (
         "window.focusChristSourceIntegrity", "isScriptureDependent",
         "unreviewed-source-dependent-generation", "ungrounded-scripture-citation",
-        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260909-21",
+        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260909-22",
     ),
     "study-intelligence-v3.js": (
         "if (localReference.found && localReference.verified)", "groundedLocalReference",

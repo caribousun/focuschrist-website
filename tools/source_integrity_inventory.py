@@ -97,7 +97,7 @@ runtime_files = [ROOT / "site-common.js", ROOT / "study-source-router.js", ROOT 
 versions = set()
 for path in runtime_files:
     versions.update(re.findall(r"study-intelligence-v3\.js\?v=(\d+-\d+)", path.read_text(encoding="utf-8")))
-if versions != {"20260909-21"}:
+if versions != {"20260909-22"}:
     errors.append(f"mixed Study Intelligence v3 cache versions: {sorted(versions)}")
 
 cache_markers = {
