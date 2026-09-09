@@ -120,6 +120,7 @@ async function readerControls() {
     const pioneerCode = fs.readFileSync(path.join(root,'pioneer-experience.js'),'utf8');
     window.eval(pioneerCode.slice(pioneerCode.indexOf('    function positionAnswer('),pioneerCode.indexOf('    function pioneerRecordContext(')));
     accepted.dispatchEvent(new window.CustomEvent('focuschrist:answer-ready',{bubbles:true}));
+    await new Promise(resolve => setTimeout(resolve,80));
     assert.equal(scrollCalls[0][1],1688,'position final answer using transcript viewport coordinates and current scroll');
     assert.equal(scrollCalls[1][0],'page','offscreen desktop transcript must also move into the page viewport');
     const askCode = fs.readFileSync(path.join(root,'ask-experience.js'),'utf8');
@@ -135,6 +136,7 @@ async function readerControls() {
     box.appendChild(newerQuestion);
     const priorScrollCount = scrollCalls.length;
     accepted.dispatchEvent(new window.CustomEvent('focuschrist:answer-ready',{bubbles:true}));
+    await new Promise(resolve => setTimeout(resolve,80));
     assert.equal(scrollCalls.length,priorScrollCount,'older completed answer must not pull a new conversation backward');
     assert.equal(window.readyChanges || 0,0,'older answer must not unlock the current composer');
     newerQuestion.remove();

@@ -170,8 +170,8 @@
         primaryInput.value = question;
         followupInput.value = '';
         setFollowupBusy(true);
+        focusConversation();
         window.sendMessage();
-        window.setTimeout(focusConversation, 80);
     }
 
     function initFollowupComposer() {
@@ -340,7 +340,7 @@
         const answerTopInsideChat = answer.getBoundingClientRect().top - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
         chatBox.scrollTo({
             top: Math.max(0, answerTopInsideChat - 18),
-            behavior: preferredScrollBehavior()
+            behavior: 'instant'
         });
 
         // Bring the answer into view, including when the transcript has its own scrollbar.
@@ -353,8 +353,8 @@
         input.value = question;
         input.focus();
         if (typeof window.sendMessage === 'function') {
+            focusConversation();
             window.sendMessage();
-            window.setTimeout(focusConversation, 80);
         }
     }
 
@@ -453,11 +453,13 @@
         const chatBox = document.getElementById('chatBox');
         if (!chatBox || typeof MutationObserver === 'undefined') return;
         chatBox.addEventListener('focuschrist:answer-ready', function (event) {
-            if (event.target !== chatBox.lastElementChild) return;
-            addRelatedStudyToLatestAnswer();
-            setFollowupVisible(true);
-            setFollowupBusy(false);
-            focusLatestAnswer();
+            window.setTimeout(function () {
+                if (event.target !== chatBox.lastElementChild) return;
+                addRelatedStudyToLatestAnswer();
+                setFollowupVisible(true);
+                setFollowupBusy(false);
+                focusLatestAnswer();
+            }, 60);
         });
         const observer = new MutationObserver(function (mutations) {
             const addedAnswer = mutations.some(function (mutation) {

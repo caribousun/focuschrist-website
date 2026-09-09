@@ -454,7 +454,7 @@
         const box = chatBox();
         if (!box || !answerElement) return;
         const internalTop = Math.max(0, answerElement.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 12);
-        box.scrollTo({ top: internalTop, behavior: preferredScrollBehavior() });
+        box.scrollTo({ top: internalTop, behavior: 'instant' });
         const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
         const headerHeight = header && getComputedStyle(header).position === 'fixed' ? header.getBoundingClientRect().height : 0;
         const safeTop = headerHeight + 18;
@@ -465,8 +465,10 @@
     }
 
     document.addEventListener('focuschrist:answer-ready', function (event) {
-        const box = chatBox();
-        if (box && event.target === box.lastElementChild) positionAnswer(event.target);
+        window.setTimeout(function () {
+            const box = chatBox();
+            if (box && event.target === box.lastElementChild) positionAnswer(event.target);
+        }, 60);
     });
 
     function pioneerRecordContext(choice) {
