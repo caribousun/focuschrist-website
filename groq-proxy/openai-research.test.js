@@ -20,10 +20,22 @@ try{
  for(const reason of ['content_filter','private-secret-value']){globalThis.fetch=async()=>response({...completed,status:'incomplete',incomplete_details:{reason}});const diagnostic={};const rejected=await callApprovedResearch(env,body,Date.now()+22000,diagnostic);assert.equal(rejected.response.ok,false);assert(!JSON.stringify(diagnostic).includes('private-secret-value'));}
  globalThis.fetch=async()=>new Response('',{status:302,headers:{location:'https://evil.example'}});
  assert.equal((await hydrateResearchEvidence(leads,'forgiveness trust',Date.now()+10000,{})).length,0,'redirect article must never become evidence');
- globalThis.fetch=async()=>new Response('<p>Forgiveness and trust require an honest willingness to listen carefully and acknowledge hurt. People may need patient effort and meaningful changes in conduct as they consider how relationships can become more dependable over time.</p>',{headers:{'Content-Type':'text/html'}});
- assert.equal((await hydrateResearchEvidence(leads,'forgiveness trust',Date.now()+10000,{})).length,1,'actual fetched approved text required');
+ globalThis.fetch=async()=>new Response('<h1>Forgiveness &amp; Trust</h1><p>Forgiveness and trust require an honest willingness to listen carefully and acknowledge hurt. People may need patient effort and meaningful changes in conduct as they consider how relationships can become more dependable over time.</p>',{headers:{'Content-Type':'text/html'}});
+ const titledEvidence=await hydrateResearchEvidence(leads,'forgiveness trust',Date.now()+10000,{});
+ assert.equal(titledEvidence.length,1,'actual fetched approved text required');
+ assert.equal(titledEvidence[0].title,'Forgiveness & Trust','citation label comes from fetched article heading');
  globalThis.fetch=async(_url,options)=>new Promise((_resolve,reject)=>options.signal.addEventListener('abort',()=>reject(new DOMException('private failure','AbortError'))));
- const timeout=await callApprovedResearch(env,body,Date.now()+7600,{});assert.equal(timeout.response.status,504);
+ const realSetTimeout=globalThis.setTimeout;
+ let searchTimerBudget=0;
+ globalThis.setTimeout=(callback,delay)=>{searchTimerBudget=delay;return realSetTimeout(callback,1);};
+ try {
+  const bounded=await callApprovedResearch(env,body,Date.now()+60000,{});
+  assert.equal(bounded.response.status,504);
+  assert.equal(searchTimerBudget,35000,'search may wait35s within overall60s budget');
+  await callApprovedResearch(env,body,Date.now()+18000,{});
+  assert(searchTimerBudget>5900 && searchTimerBudget<=6000,'search must reserve12s when less total time remains');
+ } finally {globalThis.setTimeout=realSetTimeout;}
+ const timeout=await callApprovedResearch(env,body,Date.now()+13100,{});assert.equal(timeout.response.status,504);
  globalThis.fetch=async(url)=>{assert.equal(String(url),'https://api.openai.com/v1/chat/completions');return response({choices:[{message:{content:JSON.stringify({approved:false,answer:'',source_indexes:[]})}}]});};
  for(const forceOpenAI of [false,true]){const verified=await callVerifier(env,body,Date.now()+10000,{forceOpenAI,requireSourceIndexes:true});assert.equal(verified.totalOpenAIVerifierCalls,1);assert.equal(verified.verifierRoute,forceOpenAI?'openai-repair':'openai-primary');}
  globalThis.fetch=async(_url,options)=>({text:()=>new Promise((_resolve,reject)=>options.signal.addEventListener('abort',()=>reject(new DOMException('stalled body','AbortError'))))});

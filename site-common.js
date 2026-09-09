@@ -729,14 +729,14 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260909-openai-only'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260909-openai-only-2'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260909-20', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260909-21', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {

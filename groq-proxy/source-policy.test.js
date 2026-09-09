@@ -47,8 +47,8 @@ assert(verifiedAnswerFailureReason(copiedFixture, [{url:'https://www.churchofjes
   && guardVerifiedAnswer(copiedFixture, [{url:'https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith',host:'www.churchofjesuschrist.org',content:copiedFixture}], {faith:true}, true) === SOURCE_INTEGRITY_FALLBACK,
   'publication diagnostics must preserve the copying safeguard');
 
-assert(REQUEST_BUDGET_MS === 22000 && PROVIDER_CALL_LIMIT_MS === 10500,
-  'the Worker must own a 22-second total budget with bounded provider stages');
+assert(REQUEST_BUDGET_MS === 60000 && PROVIDER_CALL_LIMIT_MS === 10500,
+  'the Worker must own a 60-second total budget with bounded provider stages');
 assert(remainingBudget(Date.now() - 1) === 0,
   'expired Worker deadlines must report no remaining request budget');
 let expiredDeadlineCalls = 0;
@@ -821,7 +821,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.72',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.73',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

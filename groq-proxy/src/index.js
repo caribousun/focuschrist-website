@@ -1,3 +1,4 @@
+import { checkCorpusCoverage, requestedTeachingCorpora } from './corpus-coverage.js';
 import { PIONEER_SOURCE_URLS, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, pioneerTopic } from './pioneer-topic-sources.js';
 import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP_REVISION } from './church-source-index.js';
 import createScriptureLibrary from '../../scripture-library.js';
@@ -28,9 +29,9 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.72';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.72';
-const REQUEST_BUDGET_MS = 22000;
+const SOURCE_POLICY_VERSION = '2026-09-09.73';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.73';
+const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
 const OFFICIAL_FETCH_LIMIT_MS = 9000;
@@ -856,7 +857,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
           const content = relevantParagraphText(payload.paragraphs, question, candidate);
           if (content && evidenceAdmissionSufficient(candidate, content, question)) {
             if (counters) counters.cacheHits += 1;
-            const source = canonicalSource(candidate.url, candidate.title, content,
+            const source = canonicalSource(candidate.url, candidate.researched && payload.title ? payload.title : candidate.title, content,
               candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true ? 4200 : 700);
             if (source) {
               source.cacheStatus = 'hit';
@@ -886,17 +887,22 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
     }
     const contentType = String(response.headers.get('content-type') || '').toLowerCase();
     if (!contentType.includes('text/html')) return null;
-    const paragraphs = extractVisibleParagraphs(await readBoundedText(response, OFFICIAL_HTML_BYTE_LIMIT), candidate);
+    const html = await readBoundedText(response, OFFICIAL_HTML_BYTE_LIMIT);
+    const titleMatch = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i) || html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i);
+    const title = candidate.researched && titleMatch
+      ? decodeHtmlEntities(titleMatch[1].replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim().slice(0, 180)
+      : candidate.title;
+    const paragraphs = extractVisibleParagraphs(html, candidate);
     const content = relevantParagraphText(paragraphs, question, candidate);
     if (!content || !evidenceAdmissionSufficient(candidate, content, question)) return null;
     if (cache && cacheKey) {
       try {
-        await cache.put(cacheKey, new Response(JSON.stringify({ paragraphs: compactParagraphPack(paragraphs, candidate, question) }), {
+        await cache.put(cacheKey, new Response(JSON.stringify({ title, paragraphs: compactParagraphPack(paragraphs, candidate, question) }), {
           headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=3600' },
         }));
       } catch (_cacheError) {}
     }
-    const source = canonicalSource(candidate.url, candidate.title, content,
+    const source = canonicalSource(candidate.url, title, content,
       candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true ? 4200 : 700);
     if (source) {
       source.cacheStatus = 'miss';
@@ -1391,7 +1397,7 @@ function providerFailure(status, code) {
 }
 
 async function callApprovedResearch(env, body, deadline, diagnostic = {}) {
-  const reserve = 6500; // Article hydration plus the existing semantic verifier.
+  const reserve = 12000; // Article hydration plus the existing semantic verifier.
   if (!env?.OPENAI_API_KEY || diagnostic.focuschrist_openai_research_calls
       || remainingBudget(deadline) < reserve + 1000) {
     diagnostic.focuschrist_openai_research_error_stage = !env?.OPENAI_API_KEY ? 'missing-key' : diagnostic.focuschrist_openai_research_calls ? 'call-limit' : 'deadline-reserve';
@@ -1400,7 +1406,7 @@ async function callApprovedResearch(env, body, deadline, diagnostic = {}) {
   diagnostic.focuschrist_openai_research_calls = 1;
   diagnostic.focuschrist_research_provider = 'openai';
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), Math.min(8000, remainingBudget(deadline) - reserve));
+  const timer = setTimeout(() => controller.abort(), Math.min(35000, remainingBudget(deadline) - reserve));
   let result;
   let stage = "transport";
   try {
@@ -2059,6 +2065,8 @@ export default {
         'Attribute diary material, descendant recollections, family histories, traditions, and miraculous accounts to the people or source traditions named in the entry. Do not present them as official Church declarations.',
         'Do not reproduce long passages. Paraphrase the biography and preserve meaningful uncertainty words such as apparently, probably, recalled, reported, or according to the entry.',
         'If the entry contains usable biographical information for the selected person, set approved true and source_indexes to [1]. Set approved false only if the evidence is empty or belongs to a different person.',
+        requestedTeachingCorpora(sanitized.scope).length
+          ? 'The visitor requests teaching from a named scriptural corpus. Cite at least one concrete canonical chapter or verse from each requested corpus in your answer, supported by the selected EVIDENCE. A generic modern doctrinal explanation without such support does not meet this request. Do not invent a citation to satisfy this requirement; reject when evidence lacks it.' : '',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
@@ -2083,6 +2091,8 @@ export default {
         sanitized.scope.pioneerTopicKey
           ? 'This is a fixed historical timeline entry. Describe only causal links explicitly stated in the evidence: chronology or paragraph proximity does not establish cause. Do not infer motives, feelings, sounds, or present-day conditions. Do not invent journals, quotations, later accounts, or source descriptions. Keep dates and companies distinct, and do not move an event to the requested year simply because that year appears in the question. Omit unbounded comparisons. Attribute remembered experiences to the named narrator. Write a connected historical explanation without Context or Source fact labels and without repeating the same facts in a second summary.'
           : '',
+        requestedTeachingCorpora(sanitized.scope).length
+          ? 'The visitor requests teaching from a named scriptural corpus. Cite at least one concrete canonical chapter or verse from each requested corpus in your answer, supported by the selected EVIDENCE. A generic modern doctrinal explanation without such support does not meet this request. Do not invent a citation to satisfy this requirement; reject when evidence lacks it.' : '',
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `QUESTION:\n${sanitized.scope.question}`,
@@ -2116,6 +2126,13 @@ export default {
       let indexes = verdict && Array.isArray(verdict.source_indexes)
         ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
         : [];
+      const initialCorpusCoverage = checkCorpusCoverage(sanitized.scope, verdict?.answer,
+        indexes.map(index => evidence[index - 1]), localScriptures, isAllowedResearchFetchUrl);
+      if (verdict?.approved === true && !initialCorpusCoverage.ok) {
+        verdict = { ...verdict, approved: false };
+        indexes = [];
+        retrievalDiagnostic.focuschrist_corpus_coverage_failure = initialCorpusCoverage.reason;
+      }
       let freshResearchEvidence = false;
       // A local index hit is a discovery lead, not proof that the question can
       // be answered from that excerpt. Search once before declining an unknown.
@@ -2256,6 +2273,15 @@ export default {
             reviewedDeterministicRecovery: reviewedRecovery.recoveryId,
           };
         }
+      }
+      const finalCorpusCoverage = checkCorpusCoverage(sanitized.scope, verdict?.answer,
+        indexes.map(index => evidence[index - 1]), localScriptures, isAllowedResearchFetchUrl);
+      if (verdict?.approved === true && !finalCorpusCoverage.ok) {
+        verdict = { ...verdict, approved: false };
+        indexes = [];
+        retrievalDiagnostic.focuschrist_corpus_coverage_failure = finalCorpusCoverage.reason;
+      } else if (finalCorpusCoverage.ok) {
+        delete retrievalDiagnostic.focuschrist_corpus_coverage_failure;
       }
       const selectedEvidence = indexes.map((index) => evidence[index - 1]);
       const pinnedPioneerSupport = isPioneerIrrigationIntent(

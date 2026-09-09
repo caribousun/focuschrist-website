@@ -11,7 +11,7 @@ http.createServer(async(req,res)=>{
     if(url.pathname==='/__question_review_ai') {
       if(req.method!=='POST'){res.writeHead(405);res.end();return;}
       let bytes=0, chunks=[];for await(const chunk of req){bytes+=chunk.length;if(bytes>120000)throw new Error('Request too large');chunks.push(chunk);}
-      const upstream=await fetch(endpoint,{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:Buffer.concat(chunks),signal:AbortSignal.timeout(28000)});
+      const upstream=await fetch(endpoint,{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:Buffer.concat(chunks),signal:AbortSignal.timeout(70000)});
       res.writeHead(upstream.status,{'Content-Type':'application/json','Cache-Control':'no-store'});res.end(await upstream.text());return;
     }
     if(!['GET','HEAD'].includes(req.method)){res.writeHead(405);res.end();return;}

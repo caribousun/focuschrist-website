@@ -70,7 +70,7 @@ async function pageContext(page) {
           await pause(Math.max(0,providerGapMs-(Date.now()-lastProviderStart)));lastProviderStart=Date.now();
           const start=Date.now();
           try {
-          const response=await networkFetch(endpoint,{...options,headers:{...options.headers,Origin:'https://focuschrist.com'},signal:AbortSignal.timeout(28000)});
+          const response=await networkFetch(endpoint,{...options,headers:{...options.headers,Origin:'https://focuschrist.com'},signal:AbortSignal.timeout(70000)});
           const payload=await response.clone().json();
           Object.assign(call,{status:response.status,durationMs:Date.now()-start,payload});
           if(payload.focuschrist_source_policy!==expectedPolicy) throw new Error('Candidate policy mismatch: '+payload.focuschrist_source_policy);

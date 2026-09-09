@@ -665,8 +665,8 @@ try {
     && positive.payload.focuschrist_evidence_relevance.some((entry) => entry.url.includes('/chapter-twenty-six') && entry.overlap_count >= 2)
     && positive.payload.focuschrist_evidence_relevance.length > 0
     && positive.payload.focuschrist_evidence_relevance.every((entry) => entry.overlap_count >= 2)
-    && REQUEST_BUDGET_MS === 22000,
-  'cached relevant chapter 26 evidence must enable one bounded reconsideration inside the unchanged request budget');
+    && REQUEST_BUDGET_MS === 60000,
+  'cached relevant chapter 26 evidence must enable one bounded reconsideration inside the OpenAI request budget');
 
   const askNegative = await runPioneerReconsiderationCase({
     page: 'ask',

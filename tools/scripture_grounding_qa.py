@@ -16,12 +16,12 @@ required_by_file = {
         "the Holy Bible, Book of Mormon, Doctrine and Covenants, and Pearl of Great Price",
         "SCRIPTURE ACCURACY IS A HARD REQUIREMENT",
         "Doctrine and Covenants 18:15 is about the joy of bringing a soul to Christ",
-        "if(dbResult.verified)", "site-common.js?v=20260909-openai-only", "Legacy fallback path",
+        "if(dbResult.verified)", "site-common.js?v=20260909-openai-only-2", "Legacy fallback path",
     ),
     "site-common.js": (
         "window.focusChristSourceIntegrity", "isScriptureDependent",
         "unreviewed-source-dependent-generation", "ungrounded-scripture-citation",
-        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260909-20",
+        "ungrounded-scripture-attribution", "study-intelligence-v3.js?v=20260909-21",
     ),
     "study-intelligence-v3.js": (
         "if (localReference.found && localReference.verified)", "groundedLocalReference",
@@ -36,7 +36,7 @@ required_by_file = {
     ),
     "groq-proxy/src/index.js": (
         "SERVER RESEARCH AND SOURCE-INTEGRITY POLICY", "ALLOWED_ORIGINS", "guardVerifiedAnswer",
-        "SOURCE_POLICY_VERSION = '2026-09-09.72'",
+        "SOURCE_POLICY_VERSION = '2026-09-09.73'",
         "retrieval-researched-and-verified", "execute web search", "gpt-5.6-luna", "api.openai.com/v1/responses",
         "churchofjesuschrist.org",
     ),
