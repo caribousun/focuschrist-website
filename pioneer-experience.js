@@ -276,6 +276,12 @@
     }
 
     async function requestPioneerAI(question, pageReference, disclosureKey) {
+        if (!disclosureKey && window.focusChristScriptureReady) {
+            try {
+                const direct = await (await window.focusChristScriptureReady).lookupRequest(question);
+                if (direct) return direct;
+            } catch (_) { /* Continue through the guarded service. */ }
+        }
         const messages = [{ role: 'system', content: buildSystemPrompt(question, pageReference || '') }];
         if (!disclosureKey) recentHistory().forEach(function (item) { messages.push({ role: item.role, content: String(item.content) }); });
         messages.push({ role: 'user', content: question });
@@ -583,7 +589,12 @@
         ].filter(Boolean).join('\n');
     }
 
-    function renderDisclosureAnswer(container, answer, sources) {
+    async function renderDisclosureAnswer(container, answer, sources) {
+        const checked = window.focusChristVerifyScriptureAnswer
+            ? await window.focusChristVerifyScriptureAnswer(answer, sources)
+            : {ok:false,answer:'Scripture verification is temporarily unavailable. Please try again.'};
+        answer = checked.answer;
+        if (!checked.ok) sources = [];
         container.innerHTML = '';
         String(answer || '').split('\n').map(function (part) { return part.trim(); }).filter(Boolean).forEach(function (part) {
             const p = document.createElement('p');
@@ -617,6 +628,8 @@
             }
         });
         container.appendChild(collapse);
+        if (checked.ok && window.focusChristScriptureLibrary) window.focusChristScriptureLibrary.linkify(container);
+        return checked;
     }
 
     async function researchDisclosure(control, aiResponse, mappedTopic, kind) {
@@ -624,7 +637,10 @@
         aiResponse.dataset.focuschristResearchState = 'pending';
         control.setAttribute('data-focuschrist-disclosure-mode', 'loading');
         aiResponse.setAttribute('aria-busy', 'true');
-        renderDisclosureAnswer(aiResponse, 'Researching this topic. The detailed answer will appear here.');
+        aiResponse.innerHTML = '';
+        const loadingText = document.createElement('p');
+        loadingText.textContent = 'Researching this topic. The detailed answer will appear here.';
+        aiResponse.appendChild(loadingText);
         try {
             const pageReference = controlPageReference(control, kind, mappedTopic);
             const heading = control.querySelector('.timeline-title, .map-content h4, .map-content h3');
@@ -634,7 +650,8 @@
             if (!result || !result.sourceIntegrityPassed || !result.answer) {
                 throw new Error('The detailed topic answer could not be verified');
             }
-            renderDisclosureAnswer(aiResponse, result.answer, result.sources);
+            const displayed = await renderDisclosureAnswer(aiResponse, result.answer, result.sources);
+            if (!displayed.ok) throw new Error('Scripture verification rejected the topic answer');
             aiResponse.dataset.focuschristResearchState = 'complete';
             aiResponse.dataset.focuschristLoaded = 'verified-research';
             control.setAttribute('data-focuschrist-disclosure-mode', 'verified-research');
@@ -642,7 +659,7 @@
             console.error('Pioneer disclosure error:', error);
             aiResponse.dataset.focuschristResearchState = 'error';
             control.setAttribute('data-focuschrist-disclosure-mode', 'research-unavailable');
-            renderDisclosureAnswer(aiResponse, 'A detailed answer could not be verified right now. You can try again or continue with the historical sources linked on this page.');
+            await renderDisclosureAnswer(aiResponse, 'A detailed answer could not be verified right now. You can try again or continue with the historical sources linked on this page.');
             const retry = document.createElement('button');
             retry.type = 'button';
             retry.className = 'pioneer-collapse-action';

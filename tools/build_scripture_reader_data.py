@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build local scripture chapters from explicitly linked official English scripture URLs.
+"""Build the complete local English standard works from official scripture URLs.
 
-No inferred chapters, footnotes, headings, introductions or generated wording enter verse
+No footnotes, headings, introductions or generated wording enter numbered verse
 text. Run again after adding scripture links; --check validates the existing catalog.
 Requires Python standard library only. Network concurrency is bounded to six requests.
 """
@@ -39,8 +39,35 @@ class VerseParser(HTMLParser):
         if self.in_title: self.title.append(data)
         if self.current is not None and not self.skip: self.parts.append(data)
 
+class DeclarationParser(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.article = False; self.current = None; self.parts = []; self.paragraphs = []; self.skip = 0
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == 'article': self.article = a.get('id') == 'main'
+        if self.article and tag in ('p','h1','h2','h3','h4') and a.get('id'):
+            self.current = {'id':a['id'], 'role':a.get('class',tag)}; self.parts=[]; self.skip=0
+        if self.current is not None:
+            if self.skip: self.skip += 1
+            elif tag == 'sup': self.skip = 1
+    def handle_endtag(self, tag):
+        if self.current is not None:
+            if self.skip: self.skip -= 1
+            elif tag in ('p','h1','h2','h3','h4'):
+                text = re.sub(r'\s+',' ',''.join(self.parts)).strip()
+                if text: self.paragraphs.append(dict(self.current,text=text))
+                self.current = None
+        if tag == 'article': self.article = False
+    def handle_data(self,data):
+        if self.current is not None and not self.skip: self.parts.append(data)
+
 def discover():
-    refs = {}; skipped = {}
+    inventory = json.loads((ROOT / 'docs/scripture-canon.json').read_text())
+    refs = {book['key'] + '/' + str(chapter): {'standard-works-catalog'}
+            for book in inventory['books'] for chapter in range(1, book['chapters'] + 1)}
+    refs.update({'dc-testament/od/'+str(n): {'standard-works-catalog'} for n in (1,2)})
+    skipped = {}
     for p in sorted(ROOT.rglob('*')):
         rel = p.relative_to(ROOT)
         if p.suffix not in {'.html', '.js'} or EXCLUDE.intersection(rel.parts) or p.name.endswith('.test.js') or p.name == 'church-source-index.js': continue
@@ -54,6 +81,10 @@ def discover():
     return {k: sorted(v) for k,v in sorted(refs.items())}, {k: sorted(v) for k,v in sorted(skipped.items())}
 
 def validate(data):
+    if data.get('kind') == 'document':
+        assert len(data['paragraphs']) >= 10 and len({p['id'] for p in data['paragraphs']}) == len(data['paragraphs'])
+        assert all(p['text'].strip() for p in data['paragraphs'])
+        return
     nums = [v['number'] for v in data['verses']]
     if not nums or nums != list(range(1, len(nums)+1)): raise ValueError('Missing, duplicated or noncontiguous verse numbers: '+str(nums))
     if any(not v['text'] or re.search(r'<[^>]+>',v['text']) for v in data['verses']): raise ValueError('Invalid verse text')
@@ -73,6 +104,9 @@ def fetch(key, files, previous, refresh=False):
             if final_url.split('?')[0].rstrip('/') != url.split('?')[0]: raise ValueError('Unexpected source redirect: '+final_url)
             parser = VerseParser(); parser.feed(raw.decode('utf-8'))
             data = {'title':html.unescape(''.join(parser.title)).strip(), 'source_url':url, 'verses':parser.verses, 'verified_on':datetime.date.today().isoformat()}
+            if key.startswith('dc-testament/od/'):
+                declaration = DeclarationParser(); declaration.feed(raw.decode('utf-8'))
+                data.update(kind='document', paragraphs=declaration.paragraphs)
             validate(data)
             target.parent.mkdir(parents=True,exist_ok=True)
             payload = (json.dumps(data,ensure_ascii=False,indent=2)+'\n').encode('utf-8'); target.write_bytes(payload)
@@ -101,7 +135,7 @@ def main():
         futures={pool.submit(fetch,k,v,previous.get(k),args.refresh):k for k,v in refs.items()}
         for f in concurrent.futures.as_completed(futures):
             result=f.result();results.append(result);print(result['status'],result['chapter'],result.get('verse_count',result.get('error')),flush=True)
-    ledger={'schema_version':1,'generated_on':datetime.date.today().isoformat(),'extraction':'Official English canonical verse paragraphs only; verse-number spans and superscript footnote markers removed; text-node order and punctuation preserved; whitespace normalized; sequential verse numbers required. No headings, summaries or footnotes.','discovery':'Explicit canonical chapter paths in deployed HTML and runtime JS, including proxy runtime; excludes tests, tools and unused church-source-index.js.','chapters':sorted(results,key=lambda x:x['chapter']),'skipped_nonchapter_links':skipped}
+    ledger={'schema_version':1,'generated_on':datetime.date.today().isoformat(),'extraction':'Official English canonical verse paragraphs only; verse-number spans and superscript footnote markers removed; text-node order and punctuation preserved; whitespace normalized; sequential verse numbers required. No headings, summaries or footnotes.','discovery':'Complete standard-works inventory plus explicit runtime links; all dynamically generated Come, Follow Me chapter choices are checked by scripture_library_qa.js.','chapters':sorted(results,key=lambda x:x['chapter']),'skipped_nonchapter_links':skipped}
     LEDGER.write_text(json.dumps(ledger,ensure_ascii=False,indent=2)+'\n')
     return any(r['status']!='verified' for r in results)
 if __name__=='__main__':raise SystemExit(main())

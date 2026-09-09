@@ -28,6 +28,7 @@ class Element {
     removeAttribute(k) { delete this.attributes[k]; }
     hasAttribute(k) { return Object.hasOwn(this.attributes, k); }
     addEventListener(k, fn) { this.listeners[k] = fn; }
+    insertBefore(child) { this.children.unshift(child); return child; }
     appendChild(child) { this.children.push(child); return child; }
     replaceChildren(...children) { this.children = children; }
     focus() { this.focused = true; }
@@ -43,6 +44,7 @@ const listeners = {};
 const document = { getElementById: () => null, createElement: tag => tag === 'dialog' ? dialog : new Element(tag), createTextNode: text => ({ textContent: text }), createDocumentFragment: () => new Element('fragment'), body: { appendChild() {}, classList: { contains: x => classes.has(x), add: x => classes.add(x), remove: x => classes.delete(x) } }, addEventListener: (type, fn) => { listeners[type] = fn; } };
 let requests = [];
 const context = { document, HTMLDialogElement: Element, URL, Set, Map, fetch: url => new Promise(resolve => requests.push({ url, resolve })) };
+context.focusChristScriptureReady = {then: callback => callback({references: () => [], fromURL: () => ({}), chapter: key => context.fetch('/scripture-data/'+key+'.json').then(response => { if (!response.ok) throw new Error('scripture-library-unavailable'); return response.json(); })})};
 context.window = context;
 vm.runInNewContext(fs.readFileSync(require.resolve('../scripture-reader.js'), 'utf8'), context);
 function click(href = base + '?id=p1', props = {}, attrs = {}) {
@@ -55,6 +57,7 @@ const flush = () => new Promise(resolve => setImmediate(resolve));
     for (const props of [{ ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 }, { defaultPrevented: true }]) { click(base, props); assert.equal(requests.length, 0); }
     click(base, {}, { download: '' }); click(base, {}, { 'data-scripture-source': '' }); assert.equal(requests.length, 0);
     const first = click(); assert.equal(first.event.defaultPrevented, true); assert.equal(dialog.open, true); assert(classes.has('fc-scripture-open'));
+    await flush();
     assert.equal(requests[0].url, '/scripture-data/nt/john/20.json');
     dialog.close(); assert(first.link.focused); assert(!classes.has('fc-scripture-open')); assert(classes.has('existing-artwork-lock'));
     const second = click(base + '?id=p2'); assert.equal(requests.length, 1, 'one request per cached chapter');
@@ -64,10 +67,10 @@ const flush = () => new Promise(resolve => setImmediate(resolve));
     assert.equal(fragment.children.length, 1); assert.equal(fragment.children[0].children[1].textContent, ' Second verse.');
     click(base + '?id=p1'); await flush();
     assert.equal(nodes.get('.fc-scripture-verses').children[0].children[0].children[1].textContent, ' <b>Plain source text</b>', 'source is a text node, never inserted HTML');
-    click(base + '?id=p1-p4'); await flush(); assert.match(nodes.get('.fc-scripture-status').textContent, /not available/); assert.equal(nodes.get('.fc-scripture-verses').children.length, 0, 'missing verse cannot produce a truncated passage');
-    click(base.replace('/20', '/21')); assert.equal(requests.length, 2);
-    requests[1].resolve({ ok: false }); await flush(); assert.match(nodes.get('.fc-scripture-status').textContent, /not available/);
-    click(base.replace('/20', '/21')); assert.equal(requests.length, 3, 'failed fetch may retry');
+    click(base + '?id=p1-p4'); await flush(); assert.match(nodes.get('.fc-scripture-status').textContent, /could not|not load/); assert.equal(nodes.get('.fc-scripture-verses').children.length, 0, 'missing verse cannot produce a truncated passage');
+    click(base.replace('/20', '/21')); await flush(); assert.equal(requests.length, 2);
+    requests[1].resolve({ ok: false }); await flush(); assert.match(nodes.get('.fc-scripture-status').textContent, /could not|not load/);
+    click(base.replace('/20', '/21')); await flush(); assert.equal(requests.length, 3, 'failed fetch may retry');
     dialog.close(); requests[2].resolve({ ok: false }); await flush(); assert.equal(dialog.open, false);
     click(); await flush();
     dialog.listeners.pointerdown({ target: dialog }); dialog.listeners.click({ target: dialog }); assert.equal(dialog.open, false, 'backdrop click closes');

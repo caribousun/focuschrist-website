@@ -24,6 +24,11 @@ jobs:
         with:
           submodules: false
 
+      - name: Verify complete scripture library and deterministic guard
+        run: |
+          python tools/build_scripture_catalog.py --check
+          node tools/scripture_library_qa.js
+
       - name: Install decoded image QA dependency
         run: python -m pip install Pillow==12.2.0
 
@@ -61,6 +66,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
 
       - name: Verify visual resource coverage and source thumbnails
         run: python tools/resource_thumbnail_qa.py

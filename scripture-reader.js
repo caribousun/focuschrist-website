@@ -50,6 +50,11 @@
         return parts.join(', ');
     }
     function validate(data, expected) {
+        if (data && data.kind === 'document') {
+            const documentSource = identify(data.source_url);
+            if (!documentSource || documentSource.key !== expected.key || !Array.isArray(data.paragraphs) || !data.paragraphs.length) throw new Error('Invalid scripture document');
+            return data;
+        }
         if (!data || typeof data.title !== 'string' || !data.title.trim() || data.title.length > 120 ||
             typeof data.verified_on !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(data.verified_on) ||
             !Array.isArray(data.verses) || !data.verses.length || data.verses.length > 1000) throw new Error('Invalid scripture data');
@@ -86,12 +91,22 @@
     const passage = dialog.querySelector('.fc-scripture-verses');
     const source = dialog.querySelector('.fc-scripture-source');
     const close = dialog.querySelector('.fc-scripture-x');
+    const footerClose = dialog.querySelector('.fc-scripture-close');
+    const retry = document.createElement('button');
+    retry.type = 'button'; retry.className = 'fc-scripture-close'; retry.textContent = 'Try again'; retry.hidden = true;
+    dialog.querySelector('.fc-scripture-footer').insertBefore(retry, footerClose);
     const cache = new Map();
-    let generation = 0, returnFocus = null, previouslyLocked = false;
+    let generation = 0, returnFocus = null, previouslyLocked = false, activeRef = null;
+    retry.addEventListener('click', () => {
+        if (!root.focusChristScriptureLibrary && root.focusChristLoadScriptureLibrary) root.focusChristLoadScriptureLibrary();
+        if (activeRef && returnFocus) open(activeRef, returnFocus);
+    });
     function getChapter(ref) {
         if (!cache.has(ref.key)) {
-            const request = root.fetch('/scripture-data/' + ref.key + '.json', { credentials: 'same-origin' })
-                .then(response => { if (!response.ok) throw new Error('Scripture unavailable'); return response.json(); })
+            const request = root.focusChristScriptureReady.then(library => {
+                library.fromURL(ref.url.href);
+                return library.chapter(ref.key);
+            })
                 .then(data => validate(data, ref));
             cache.set(ref.key, request);
             request.catch(() => { if (cache.get(ref.key) === request) cache.delete(ref.key); });
@@ -99,6 +114,7 @@
         return cache.get(ref.key);
     }
     async function open(ref, trigger) {
+        activeRef = ref; retry.hidden = true;
         const current = ++generation;
         returnFocus = trigger;
         title.textContent = (trigger.textContent || '').trim().slice(0, 120) || 'Scripture';
@@ -116,34 +132,42 @@
         close.focus({ preventScroll: true });
         try {
             if (ref.invalid) throw new Error('Unrecognized verse selection');
+            const library = await root.focusChristScriptureReady;
+            const labels = library.references((trigger.textContent || '').trim());
+            if (labels.length && labels.some(label => label.key !== ref.key || (label.verses && ref.selection && label.verses.join() !== ref.selection.join()))) throw new Error('Scripture label mismatch');
             const data = await getChapter(ref);
-            const selected = selectVerses(data, ref.selection);
+            const documentAnchor = data.kind === 'document' ? library.fromURL(ref.url.href).paragraph : null;
+            const selected = data.kind === 'document' ? data.paragraphs : selectVerses(data, ref.selection);
             if (generation !== current || !dialog.open) return;
-            title.textContent = data.title + (ref.selection ? ':' + selectionLabel(ref.selection) : '');
-            context.textContent = ref.selection ? (selected.length === 1 ? 'Selected verse' : selected.length + ' selected verses') : 'Complete chapter';
+            title.textContent = data.title + (ref.selection && data.kind !== 'document' ? ':' + selectionLabel(ref.selection) : '');
+            context.textContent = data.kind === 'document' ? 'Complete document, including source introduction and accompanying text' : ref.selection ? (selected.length === 1 ? 'Selected verse' : selected.length + ' selected verses') : 'Complete chapter';
             const fragment = document.createDocumentFragment();
             for (const verse of selected) {
                 const paragraph = document.createElement('p');
                 paragraph.className = 'fc-scripture-verse';
+                if (data.kind === 'document') paragraph.dataset.sourceParagraph = verse.id;
                 const number = document.createElement('span');
                 number.className = 'fc-scripture-number';
                 number.textContent = String(verse.number);
-                paragraph.appendChild(number);
+                if (data.kind !== 'document') paragraph.appendChild(number);
                 paragraph.appendChild(document.createTextNode(' ' + verse.text));
                 fragment.appendChild(paragraph);
             }
             passage.replaceChildren(fragment);
+            if (documentAnchor) passage.querySelector('[data-source-paragraph="'+documentAnchor+'"]')?.scrollIntoView({block:'center'});
             status.textContent = '';
             body.removeAttribute('aria-busy');
-        } catch (_) {
+        } catch (error) {
             if (generation !== current || !dialog.open) return;
             context.textContent = 'Read at the original source';
-            status.textContent = 'This passage is not available in the reader right now. Use “Go to source” to read the scripture on the Church website.';
+            const invalid = /invalid|selection|numbered verses|mismatch/i.test(error.message);
+            status.textContent = invalid ? 'This reference could not be verified. Please check the chapter and verse at the original source.' : 'The scripture could not load right now. Try again, or use “Go to source” to read it on the Church website.';
+            retry.hidden = invalid;
             body.removeAttribute('aria-busy');
         }
     }
     close.addEventListener('click', () => dialog.close());
-    dialog.querySelector('.fc-scripture-close').addEventListener('click', () => dialog.close());
+    footerClose.addEventListener('click', () => dialog.close());
     let outsidePointer = false;
     dialog.addEventListener('pointerdown', event => { outsidePointer = event.target === dialog; });
     dialog.addEventListener('click', event => { if (event.target === dialog && outsidePointer) dialog.close(); outsidePointer = false; });

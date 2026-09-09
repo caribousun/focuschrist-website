@@ -473,6 +473,13 @@
     }
 
     async function askV3(query, additionalReference) {
+        if (window.focusChristScriptureReady) {
+            try {
+                const library = await window.focusChristScriptureReady;
+                const direct = await library.lookupRequest(query);
+                if (direct) return direct;
+            } catch (_) { /* The normal guarded answer lane retains a useful fallback. */ }
+        }
         const contextResolution = resolveQuestionContext(query);
         const effectiveQuery = contextResolution.query || query;
         const profile = classifyQuestion(effectiveQuery);

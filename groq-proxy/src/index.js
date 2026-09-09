@@ -1,5 +1,7 @@
 import { PIONEER_SOURCE_URLS, PIONEER_FOCAL_PHRASES, pioneerTopic } from './pioneer-topic-sources.js';
 import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP_REVISION } from './church-source-index.js';
+import createScriptureLibrary from '../../scripture-library.js';
+import scriptureCatalog from '../../scripture-data/catalog.json' with { type: 'json' };
 
 // focusChrist server-owned, retrieval-grounded AI gateway.
 // Reviewed local answers remain the first choice. This Worker retrieves
@@ -24,8 +26,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-06.60';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-06.60';
+const SOURCE_POLICY_VERSION = '2026-09-09.61';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.61';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -40,6 +42,7 @@ const OFFICIAL_INDEX_URLS = new Set(CHURCH_SOURCE_INDEX.map((entry) => entry.url
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
 const SERVER_RESEARCH_POLICY = [
+  'For scripture quotations, select an exact reference using [[SCRIPTURE:John 3:16]] syntax. The application inserts verified English scripture wording. Never generate scripture quotation text from memory. Label explanations as paraphrase or application. Use complete book names and separate chapter references; do not invent reference labels or URLs.',
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
   '- You MUST execute web search before answering. Do not rely on memory for factual claims.',
@@ -83,21 +86,7 @@ const SCRIPTURE_ROUTES = Object.freeze({
   matthew:['nt','matt'],mark:['nt','mark'],luke:['nt','luke'],john:['nt','john'],acts:['nt','acts'],romans:['nt','rom'],corinthians:['nt','cor'],galatians:['nt','gal'],ephesians:['nt','eph'],philippians:['nt','philip'],colossians:['nt','col'],thessalonians:['nt','thes'],timothy:['nt','tim'],titus:['nt','titus'],philemon:['nt','philem'],hebrews:['nt','heb'],james:['nt','james'],peter:['nt','pet'],jude:['nt','jude'],revelation:['nt','rev'],
   'song of solomon':['ot','song'],nephi:['bofm','ne'],jacob:['bofm','jacob'],enos:['bofm','enos'],jarom:['bofm','jarom'],omni:['bofm','omni'],'words of mormon':['bofm','w-of-m'],mosiah:['bofm','mosiah'],alma:['bofm','alma'],helaman:['bofm','hel'],mormon:['bofm','morm'],ether:['bofm','ether'],moroni:['bofm','moro'],moses:['pgp','moses'],abraham:['pgp','abr'],
 });
-const SCRIPTURE_CHAPTER_LIMITS = Object.freeze({
-  'ot/gen':50,'ot/ex':40,'ot/lev':27,'ot/num':36,'ot/deut':34,'ot/josh':24,'ot/judg':21,'ot/ruth':4,
-  'ot/1-sam':31,'ot/2-sam':24,'ot/1-kgs':22,'ot/2-kgs':25,'ot/1-chr':29,'ot/2-chr':36,'ot/ezra':10,
-  'ot/neh':13,'ot/esth':10,'ot/job':42,'ot/ps':150,'ot/prov':31,'ot/eccl':12,'ot/song':8,'ot/isa':66,
-  'ot/jer':52,'ot/lam':5,'ot/ezek':48,'ot/dan':12,'ot/hosea':14,'ot/joel':3,'ot/amos':9,'ot/obad':1,
-  'ot/jonah':4,'ot/micah':7,'ot/nahum':3,'ot/hab':3,'ot/zeph':3,'ot/hag':2,'ot/zech':14,'ot/mal':4,
-  'nt/matt':28,'nt/mark':16,'nt/luke':24,'nt/john':21,'nt/acts':28,'nt/rom':16,'nt/1-cor':16,
-  'nt/2-cor':13,'nt/gal':6,'nt/eph':6,'nt/philip':4,'nt/col':4,'nt/1-thes':5,'nt/2-thes':3,
-  'nt/1-tim':6,'nt/2-tim':4,'nt/titus':3,'nt/philem':1,'nt/heb':13,'nt/james':5,'nt/1-pet':5,
-  'nt/2-pet':3,'nt/1-jn':5,'nt/2-jn':1,'nt/3-jn':1,'nt/jude':1,'nt/rev':22,
-  'bofm/1-ne':22,'bofm/2-ne':33,'bofm/3-ne':30,'bofm/4-ne':1,'bofm/jacob':7,'bofm/enos':1,
-  'bofm/jarom':1,'bofm/omni':1,'bofm/w-of-m':1,'bofm/mosiah':29,'bofm/alma':63,'bofm/hel':16,
-  'bofm/morm':9,'bofm/ether':15,'bofm/moro':10,'dc-testament/dc':138,'pgp/moses':8,'pgp/abr':5,
-  'pgp/js-m':1,'pgp/js-h':1,'pgp/a-of-f':1,
-});
+const SCRIPTURE_CHAPTER_LIMITS = Object.freeze(Object.fromEntries(scriptureCatalog.books.map(book => [book.key, book.chapters])));
 const SCRIPTURE_MAX_ORDINAL = Object.freeze({
   sam:2,kgs:2,chr:2,cor:2,thes:2,tim:2,pet:2,john:3,ne:4,
 });
@@ -147,7 +136,21 @@ function corsHeaders(origin) {
   };
 }
 
-function jsonResponse(body, status, origin) {
+async function jsonResponse(body, status, origin) {
+  // Final, unconditional output gate: no approval flag or reviewed lane bypasses it.
+  if (body.choices?.[0]?.message?.content) {
+    const library = createScriptureLibrary(scriptureCatalog, path => fetch('https://focuschrist.com' + path, { signal: AbortSignal.timeout(8000) }));
+    const checked = await library.checkAnswer(body.choices[0].message.content, body.focuschrist_sources || []);
+    body.choices[0].message.content = checked.answer;
+    body.focuschrist_scripture_library_version = checked.version;
+    body.focuschrist_scripture_validated = checked.ok;
+    if (!checked.ok) {
+      body.focuschrist_source_integrity_verified = false;
+      body.focuschrist_sources = [];
+      body.focuschrist_scripture_failure = checked.reason;
+      body.choices[0].finish_reason = 'content_filter';
+    }
+  }
   return new Response(JSON.stringify(body), {
     status,
     headers: { 'Content-Type': 'application/json', ...corsHeaders(origin) },
@@ -1908,6 +1911,20 @@ export default {
         // Availability takes precedence if the optional abuse-control binding has a transient fault.
       }
     }
+    const localScriptures = createScriptureLibrary(scriptureCatalog, path => fetch('https://focuschrist.com' + path, { signal: AbortSignal.timeout(8000) }));
+    const directScripture = await localScriptures.lookupRequest(sanitized.scope.question);
+    if (directScripture) return jsonResponse({
+      id: 'focuschrist-local-scripture',
+      choices: [{index:0,message:{role:'assistant',content:directScripture.answer},finish_reason:'stop'}],
+      focuschrist_sources: directScripture.sources,
+      focuschrist_source_integrity_verified: true,
+      focuschrist_source_policy: SOURCE_POLICY_VERSION,
+      focuschrist_gateway_mode: 'local-scripture-library',
+      focuschrist_groq_research_calls: 0,
+      focuschrist_groq_verifier_calls: 0,
+      focuschrist_cloudflare_verifier_calls: 0,
+      focuschrist_openai_verifier_calls: 0,
+    },200,origin);
     if (!sanitized.scope.faith && needsIdentityClarification(sanitized.scope.question)) {
       return jsonResponse(generalAnswerPayload(
         'Which Joseph do you mean? Please include the last name or a little more context.',
@@ -2136,7 +2153,7 @@ export default {
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
       ].join('\n');
       const verifierBody = {
-        messages: [{ role: 'user', content: verifierPrompt }],
+        messages: [{ role: 'user', content: verifierPrompt + '\nFor a scripture quotation, use [[SCRIPTURE:Book chapter:verse]] with a complete canonical book name and an exact supported reference. The application supplies the quotation from its verified library. Keep explanations clearly separate from quotation; never invent verse words. Return only individually supported references.' }],
         temperature: 0,
         max_tokens: sanitized.scope.selectedPioneer ? 900 : (sanitized.scope.faith ? 1000 : 500),
         response_format: { type: 'json_object' },
@@ -2159,6 +2176,11 @@ export default {
         ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
         : [];
       const selectedEvidenceBeforeRepair = indexes.map((index) => evidence[index - 1]);
+      const scriptureBeforeRepair = verdict && verdict.approved === true
+        ? await localScriptures.checkAnswer(verdict.answer, selectedEvidenceBeforeRepair)
+        : {ok:true};
+      const needsScriptureRepair = !scriptureBeforeRepair.ok
+        && !/unavailable|fetch|timeout|integrity-mismatch/i.test(scriptureBeforeRepair.reason || '');
       const needsDepthRepair = Boolean(verdict && verdict.approved === true && indexes.length
         && (!answerMeetsSubstanceContract(verdict.answer, sanitized.scope)
           || ((retrievalDiagnostic.focuschrist_deterministic_history_topic === true
@@ -2175,7 +2197,7 @@ export default {
         && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
         && (indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2)
           || hasPinnedPioneerIrrigationEvidence));
-      if ((needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration)
+      if ((needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration || needsScriptureRepair)
         && ['cloudflare-primary', 'groq-primary', 'openai-fallback'].includes(verifierResult.verifierRoute)
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
@@ -2184,6 +2206,9 @@ export default {
         const repairMinimumSentences = requirements.minimumSentences + (sanitized.scope.faith ? 1 : 0);
         const expansionPrompt = [
           verifierPrompt,
+          needsScriptureRepair
+            ? 'The deterministic scripture check rejected the previous answer: ' + scriptureBeforeRepair.reason + '. Repair it once using only the provided evidence. Remove unsupported references or quotation claims. For exact scripture words use [[SCRIPTURE:Book chapter:verse]] with a complete supported reference. Do not guess a substitute passage. If evidence cannot support the claim, omit it or reject the answer.'
+            : '',
           '',
           needsRelevantEvidenceReconsideration
             ? 'Your previous rejection may be a false negative because the indexed official evidence has direct lexical relevance. Re-evaluate it once without presuming either approval or rejection. Interpret awkward but understandable grammar naturally. A named scripture chapter or Church-history topic that directly addresses the requested concept is usable evidence and should not be rejected merely because the visitor phrased the question imperfectly.'
@@ -2329,6 +2354,7 @@ export default {
 };
 
 export {
+  jsonResponse,
   GENERAL_ANSWER_FALLBACK,
   OFFICIAL_EXCERPT_CACHE_VERSION,
   PROVIDER_CALL_LIMIT_MS,

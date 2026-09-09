@@ -1,0 +1,116 @@
+/* Exercise the production display gate with real DOM nodes and library data. */
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { JSDOM } = require('jsdom');
+const root = path.resolve(__dirname, '..');
+const source = fs.readFileSync(path.join(root, 'site-common.js'), 'utf8');
+const pattern = source.match(/    const SCRIPTURE_CITATION_PATTERN = [^\n]+/)[0];
+const extract = source.slice(source.indexOf('    function extractScriptureCitations('), source.indexOf('    function withoutOutputPersonNameScriptureCollisions('));
+const gate = source.slice(source.indexOf('    window.focusChristVerifyScriptureAnswer ='), source.indexOf('    function loadStudyJourney('));
+assert.ok(gate.includes('function installScriptureDisplayGate()'), 'production gate extraction must resolve');
+const factory = require('../scripture-library.js');
+const library = factory(require('../scripture-data/catalog.json'), async url => new Response(fs.readFileSync(path.join(root, url))));
+const dom = new JSDOM('<div id="chatBox"></div>', { url: 'https://focuschrist.com/pioneers.html', runScripts: 'outside-only' });
+const window = dom.window;
+const box = window.document.getElementById('chatBox');
+window.addMessage = (text, isUser) => {
+    const message = window.document.createElement('div');
+    message.className = isUser ? 'user-message' : 'bot-message';
+    message.textContent = text;
+    box.appendChild(message);
+    return message;
+};
+window.focusChristScriptureLibrary = library;
+window.focusChristScriptureReady = Promise.resolve(library);
+// Execute the actual shared verifier and installer, not a test replacement.
+window.eval(pattern + '\n' + extract + '\n' + gate + '\ninstallScriptureDisplayGate();');
+async function settled(node) {
+    for (let attempt = 0; attempt < 100 && node.hasAttribute('role'); attempt++) await new Promise(resolve => setTimeout(resolve, 5));
+    assert.equal(node.hasAttribute('role'), false, 'answer verification must settle');
+}
+async function readerControls() {
+    const readerDOM = new JSDOM('<a id="passage" href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng&id=p16">John 3:16</a>', { url: 'https://focuschrist.com/pioneers.html', runScripts: 'outside-only' });
+    const w = readerDOM.window;
+    let closeCalls = 0, chapterCalls = 0;
+    // jsdom lacks modal rendering; retain native DOM events, selectors and focus.
+    w.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
+    w.HTMLDialogElement.prototype.close = function () {
+        closeCalls++;
+        this.open = false;
+        this.dispatchEvent(new w.Event('close'));
+    };
+    const retryLibrary = factory(require('../scripture-data/catalog.json'), async url => {
+        chapterCalls++;
+        return chapterCalls === 1 ? new Response('', { status: 503 }) : new Response(fs.readFileSync(path.join(root, url)));
+    });
+    w.focusChristScriptureLibrary = retryLibrary;
+    w.focusChristScriptureReady = Promise.resolve(retryLibrary);
+    w.eval(fs.readFileSync(path.join(root, 'scripture-reader.js'), 'utf8'));
+    const trigger = w.document.getElementById('passage');
+    const dialog = w.document.getElementById('fc-scripture-reader');
+    const footerButtons = Array.from(dialog.querySelectorAll('.fc-scripture-footer button'));
+    const retry = footerButtons.find(button => button.textContent === 'Try again');
+    const footerClose = footerButtons.find(button => button.textContent === 'Close');
+    assert.ok(retry && footerClose && retry !== footerClose, 'retry and footer close must be distinct DOM controls');
+    async function loaded() {
+        for (let i = 0; i < 100 && dialog.querySelector('[aria-busy="true"]'); i++) await new Promise(resolve => setTimeout(resolve, 5));
+        assert.equal(dialog.querySelector('[aria-busy="true"]'), null, 'reader load must settle');
+    }
+    trigger.focus();
+    trigger.click();
+    await loaded();
+    assert.ok(dialog.open && !retry.hidden, '503 must leave an open reader with retry');
+    assert.equal(chapterCalls, 1);
+    retry.click();
+    await loaded();
+    assert.equal(closeCalls, 0, 'retry must not invoke close');
+    assert.ok(dialog.open && retry.hidden, 'successful retry must keep the reader open');
+    assert.equal(chapterCalls, 2, 'retry must discard the rejected load and fetch again');
+    assert.equal(dialog.querySelectorAll('.fc-scripture-verse').length, 1);
+    footerClose.click();
+    assert.equal(closeCalls, 1, 'footer Close must call the dialog close handler');
+    assert.equal(dialog.open, false);
+    assert.equal(w.document.activeElement, trigger, 'footer close must return focus to its scripture link');
+    assert.ok(!w.document.body.classList.contains('fc-scripture-open'));
+    trigger.click();
+    await loaded();
+    assert.ok(dialog.open, 'reader must reopen after footer close');
+    dialog.querySelector('.fc-scripture-x').click();
+    assert.equal(closeCalls, 2, 'header close must remain independently bound');
+    assert.equal(w.document.activeElement, trigger);
+    readerDOM.window.close();
+}
+(async () => {
+    let clicks = 0;
+    const choiceMessage = window.addMessage('Choose a pioneer.', false, []);
+    const choices = window.document.createElement('div');
+    choices.className = 'pioneer-choice-list';
+    const button = window.document.createElement('button');
+    button.textContent = 'Elizabeth';
+    button.addEventListener('click', () => clicks++);
+    choices.appendChild(button);
+    choiceMessage.appendChild(choices);
+    await settled(choiceMessage);
+    assert.ok(choiceMessage.isConnected && choiceMessage.contains(button), 'returned message and appended pioneer controls must survive');
+    button.click();
+    assert.equal(clicks, 1, 'original choice listener must survive');
+    const rejected = window.addMessage('John 99:1 teaches faith.', false, []);
+    assert.ok(!rejected.textContent.includes('John 99:1'), 'unverified text must never flash before verification');
+    await settled(rejected);
+    assert.ok(rejected.textContent.includes('could not confirm') && !rejected.textContent.includes('John 99:1'));
+    const accepted = window.addMessage('Read John 3:16.', false, []);
+    await settled(accepted);
+    assert.ok(accepted.querySelector('a[href*="/nt/john/3"]'), 'accepted citations must become reader links');
+    window.focusChristScriptureReady = Promise.reject(new Error('catalog unavailable'));
+    window.focusChristScriptureReady.catch(() => {});
+    const ordinary = window.addMessage('Choose a pioneer.', false, []);
+    const unavailable = window.addMessage('Read John 3:16.', false, []);
+    await settled(ordinary);
+    await settled(unavailable);
+    assert.equal(ordinary.textContent, 'Choose a pioneer.', 'nonscripture actions remain usable during outage');
+    assert.ok(unavailable.textContent.includes('temporarily unavailable'), 'scripture must fail closed during outage');
+    await readerControls();
+    dom.window.close();
+    console.log('PASS: shared verifier, stable Pioneer controls, invalid-text blocking, citation links, catalog outage, distinct reader Retry/Close handlers, 503 recovery and focus return.');
+})().catch(error => { console.error(error); dom.window.close(); process.exitCode = 1; });
