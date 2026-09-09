@@ -26,8 +26,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.63';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.63';
+const SOURCE_POLICY_VERSION = '2026-09-09.64';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.64';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -876,7 +876,7 @@ function isAlma32FaithStudyQuestion(value) {
   value = String(value || "").replace(/\balma\s+chapter\s+32\b/gi, "Alma 32");
   // A bounded chapter-level study of this metaphor. Verse-specific, comparative,
   // historical and personal instructions remain on the normal evidence route.
-  const almaStudyVocabulary = new Set('how does do can what is are alma 32 describe describes developing develop faith teach teaches about the seed comparison metaphor lesson lessons teachings of in explain growth grow growing nourish nourishing word and patience diligence a tell me with emphasis on meaning'.split(' '));
+  const almaStudyVocabulary = new Set('how does do can what is are alma 32 describe describes developing develop faith teach teaches about the seed comparison metaphor lesson lessons teachings of in explain growth grow growing nourish nourishing word and patience diligence a tell me with emphasis on meaning using official scripture text should reader understand give identity cause'.split(' '));
   return String(value || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean).every((token) => almaStudyVocabulary.has(token))
     && /\balma\s+32\b(?!\s*[:0-9])/i.test(value)
     && /\b(?:faith|seed)\b/i.test(value)

@@ -277,6 +277,42 @@ assert(checkedAlmaRecovery.ok
   && checkedAlmaRecovery.references.some(ref => ref.key === 'bofm/alma/32' && ref.verses?.includes(28))
   && checkedAlmaRecovery.references.some(ref => ref.key === 'bofm/alma/32' && ref.verses?.includes(43)),
   'reviewed Alma recovery must pass the real final scripture gate with fully spelled out ranges');
+// Exhaust the live scripture matrix's 18 combinations rather than sampling them.
+// Include the plain chapter name and every duplicate-question emphasis suffix.
+const almaStudyPrefixes = ['Using the official scripture text, explain', 'What lesson does', 'How should a reader understand'];
+const almaStudySubjects = ['Alma chapter 32', 'the seed comparison in Alma 32', 'Alma 32'];
+const almaStudySuffixes = ['teach about developing faith?', 'give about faith growing?', 'teach about faith and the word?'];
+const almaStudyEmphases = ['', 'identity', 'cause', 'meaning'];
+let almaStudyFixtureCount = 0;
+for (const prefix of almaStudyPrefixes) for (const subject of almaStudySubjects) for (const suffix of almaStudySuffixes) for (const emphasis of almaStudyEmphases) {
+  const baseQuestion = `${prefix} ${subject} ${suffix}`;
+  const question = emphasis ? `${baseQuestion.replace(/\?$/, '')}, with emphasis on ${emphasis}?` : baseQuestion;
+  const recovery = reviewedDeterministicEvidenceRecovery(question, almaEvidence);
+  assert(recovery?.answer === almaRecovery.answer, 'equivalent bounded scripture-matrix wording must preserve the reviewed answer: ' + question);
+  assert((await scriptureLibraryFixture.checkAnswer(recovery.answer, almaEvidence)).ok,
+    'every matrix wording must survive the actual final scripture guard: ' + question);
+  almaStudyFixtureCount++;
+}
+assert(almaStudyFixtureCount === 108, 'cover all 18 live combinations, plain chapter aliases and four emphasis cases');
+const releaseMatrixSource = readAlmaFixture(new URL('../tools/live_ai_response_matrix.js', import.meta.url), 'utf8');
+const { runInNewContext } = await import('node:vm');
+const waitForPolicyFixture = runInNewContext(releaseMatrixSource.slice(releaseMatrixSource.indexOf('async function waitForDeployedPolicy('), releaseMatrixSource.indexOf('async function runSequential(')) + '\nwaitForDeployedPolicy;', { assert, POLICY_VERSION:'expected-policy' });
+let propagationCalls = 0;
+const propagationPauses = [];
+await waitForPolicyFixture(async probe => {
+  assert(probe.question === 'When did Joseph die?', 'propagation wait must use only the local clarification probe');
+  propagationCalls++;
+  return {status:200,policyVersion:propagationCalls === 3 ? 'expected-policy' : 'previous-policy'};
+}, async ms => propagationPauses.push(ms));
+assert(propagationCalls === 3 && propagationPauses.join() === '10000,10000', 'propagation probe must stop as soon as the deployed policy matches');
+let exhaustedPropagationCalls = 0;
+try {
+  await waitForPolicyFixture(async () => { exhaustedPropagationCalls++; return {status:503,policyVersion:'previous-policy'}; }, async () => {});
+  throw new Error('Expected propagation failure');
+} catch (error) {
+  assert(exhaustedPropagationCalls === 6 && /503/.test(error.message) && /previous-policy/.test(error.message),
+    'propagation wait must fail after six attempts with observed status and policy evidence');
+}
 for (const page of ['ask', 'pioneers']) {
   for (const followup of ['can you cite a scripture', 'can you site a scripture', 'please show me a supporting verse']) {
     const conversation = [{role:'user',content:'is god in the bible old testament'},
@@ -321,6 +357,9 @@ for (const question of ['How does Alma 32:21 define faith?', 'Compare Alma 32 wi
   'What does Alma 32 teach about faith with emphasis on money?',
   'What does Alma 32 teach about faith with emphasis on medical meaning?',
   'What does Alma 32 teach about faith with emphasis on the meaning of James 2?',
+  'Using the official scripture text, explain Alma chapter 32 give about faith growing with emphasis on medical treatment?',
+  'How should a reader understand Alma 32:21 teach about faith and the word?',
+  'What lesson does Alma 32 give about faith growing with emphasis on money?',
   'Does Alma chapter 32 prove I should stop medication through faith?']) {
   assert(reviewedDeterministicEvidenceRecovery(question, almaEvidence) === null,
     'bounded Alma 32 summary must not replace a different question: ' + question);
@@ -1055,7 +1094,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.63',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.64',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
