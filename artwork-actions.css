@@ -27,10 +27,18 @@
     display: none !important;
 }
 
-.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close]) {
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close], .fc-topic-artwork-detail button) {
     grid-column: auto;
     justify-self: stretch;
     width: 100%;
     min-width: 0;
     margin-top: 0;
+    background: var(--fc-surface);
+    border-color: var(--fc-line);
+    color: var(--fc-cream) !important;
+    box-shadow: none;
+}
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close], .fc-topic-artwork-detail button):hover {
+    background: var(--fc-surface-2);
+    border-color: var(--fc-gold-light);
 }

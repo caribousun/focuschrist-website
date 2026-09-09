@@ -168,7 +168,7 @@ body {
     padding: 0 24px;
     border: 1px solid var(--ask-gold);
     border-radius: 999px;
-    background: var(--ask-gold);
+    background: var(--fc-gold-fill);
     color: #1d2a2e;
     font-weight: 700;
     cursor: pointer;
@@ -182,7 +182,7 @@ body {
 
 .ask-action.secondary {
     border-color: var(--ask-sky);
-    background: var(--fc-action, #c4d8da);
+    background: var(--fc-action-fill);
     color: var(--fc-action-text, #142e38);
 }
 .ask-action.secondary:hover, .ask-action.secondary:focus-visible {

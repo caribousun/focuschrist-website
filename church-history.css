@@ -261,17 +261,6 @@
 .fc-history-page #ask-history .fc-eyebrow { color: var(--fc-sage-light); }
 .fc-history-page #ask-history .fc-section-heading { color: var(--fc-gold-light); }
 .fc-history-page #ask-history .fc-section-intro { color: #c3cfcc; }
-.fc-history-page #ask-history .fc-button:not(.fc-button--primary) {
-    border-color: rgba(134,175,200,.48);
-    background: rgba(134,175,200,.055);
-    color: #e5f0f3;
-}
-.fc-history-page #ask-history .fc-button:not(.fc-button--primary):hover,
-.fc-history-page #ask-history .fc-button:not(.fc-button--primary):focus-visible {
-    border-color: var(--fc-gold-light);
-    background: rgba(224,170,62,.10);
-    color: var(--fc-cream);
-}
 
 .fc-history-ask-heading {
     display: flex;
