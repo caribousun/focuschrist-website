@@ -83,7 +83,7 @@ body.fc-site a { color: var(--fc-gold-light); }
 body.fc-site a:hover { color: var(--fc-cream); }
 body.fc-site img { max-width: 100%; }
 body.fc-site ::selection { background: var(--fc-gold-light); color: var(--fc-ink); }
-body.fc-site main :where(p, li) { text-wrap: pretty; }
+body.fc-site main :where(p, li):not(.fc-page-intro *) { text-wrap: pretty; }
 
 .fc-main-landmark { min-width: 0; }
 
@@ -326,6 +326,25 @@ body.fc-site main :where(p, li) { text-wrap: pretty; }
         transform: translateX(-50%);
     }
 }
+
+/* Approved hero openings retain their production palette. */
+.fc-page-intro, .fc-topic-opening {
+    --fc-bg: #142a35;
+    --fc-bg-deep: #0f2029;
+    --fc-surface: #203d49;
+    --fc-surface-2: #294a57;
+    --fc-gold: #e0aa3e;
+    --fc-gold-light: #f0c36a;
+    --fc-text: #e8e3d8;
+    --fc-muted: #c3c8bd;
+    --fc-line: rgba(134,175,200,.25);
+}
+body.fc-site .fc-page-intro .fc-button { color: #dcebf2 !important; }
+body.fc-site .fc-page-intro .fc-button:hover,
+body.fc-site .fc-page-intro .fc-button:focus-visible { color: var(--fc-cream) !important; }
+body.fc-site .fc-page-intro .fc-button--primary { color: #1d2a2e !important; }
+body.fc-site .fc-page-intro .fc-button--primary:hover,
+body.fc-site .fc-page-intro .fc-button--primary:focus-visible { color: #18262b !important; }
 
 .fc-page-intro {
     margin-top: -1px;
@@ -800,14 +819,59 @@ body.fc-site :where(a, button, input, textarea, select, summary, [tabindex]):not
         line-height: 1.3;
         margin-top: 6px;
     }
+    body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom:14px; }
+}
+
+/* Locked shared opening geometry: hero height depends only on the viewport,
+   never on page copy or script timing. The introduction fills the remainder. */
+@media (min-width:1021px) {
+    body.fc-site .fc-home-hero,
+    body.fc-site .fc-answer-detail-hero {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        aspect-ratio: 2048 / 684;
+    }
+    body.fc-site .fc-page-intro {
+        min-height: max(0px, calc(100dvh - 52px - 33.3984375vw + 8px)) !important;
+        margin-top: 0;
+        padding-block: clamp(8px, 1.25dvh, 14px);
+    }
+    body.fc-site .fc-page-intro .fc-display {
+        font-size: clamp(2.05rem, 3.7dvh, 2.95rem);
+        line-height: 1.02;
+    }
+    body.fc-site .fc-page-intro-copy {
+        max-width: 1400px;
+        font-size: clamp(.98rem, 1.65dvh, 1.08rem);
+        line-height: 1.3;
+        margin-top: 6px;
+    }
     body.fc-site .fc-page-intro .fc-eyebrow { margin-bottom: 5px; }
     body.fc-site .fc-page-intro .fc-actions { margin-top: 8px; }
     body.fc-site .fc-page-intro .fc-button { padding-block: 9px; }
     body.fc-site:not(.fc-not-found) .fc-page-intro { align-items: stretch; }
 
-    /* Reserve the approved desktop introduction inset. */
+    /* Use the opening panel's existing vertical room as intentional rhythm.
+       The panel and hero geometry stay locked; only space between its words
+       is redistributed. Shorter introductions can breathe more, while pages
+       with scripture or additional guidance retain a compact safe rhythm. */
     body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: clamp(26px, 3.4dvh, 34px);
+        width: 100%;
+        box-sizing: border-box;
         padding-top: clamp(22px, 3.1dvh, 31px);
+    }
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-actions) {
+        gap: clamp(18px, 2.35dvh, 24px);
+    }
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-page-intro-scripture),
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard:has(.fc-art-study-hint) {
+        gap: clamp(13px, 1.72dvh, 18px);
     }
     body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-eyebrow,
     body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard > .fc-display,
@@ -837,13 +901,13 @@ body.fc-site .fc-page-intro .fc-eyebrow {
     align-items: center;
     justify-content: center;
     gap: clamp(12px, 1.7vw, 22px);
-    color: var(--fc-gold-light);
+    color: #f6c965;
     font-size: clamp(.96rem, 1.82dvh, 1.16rem);
     font-weight: 800;
     letter-spacing: clamp(2.5px, .24vw, 3.8px);
     line-height: .88;
     text-wrap: balance;
-
+    text-shadow: 0 1px 12px rgba(240,195,106,.24);
 }
 body.fc-site .fc-page-intro .fc-eyebrow::before,
 body.fc-site .fc-page-intro .fc-eyebrow::after {
@@ -857,13 +921,28 @@ body.fc-site .fc-page-intro .fc-eyebrow::after {
     background: linear-gradient(90deg, rgba(246,201,101,.72), transparent);
 }
 body.fc-site .fc-page-intro .fc-button {
+    border-color: rgba(164,207,230,.82);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,0)),
+        rgba(41,73,86,.5);
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 7px 18px rgba(5,17,23,.13);
     font-size: clamp(.98rem, 1.5dvh, 1.06rem);
     letter-spacing: .01em;
 }
+body.fc-site .fc-page-intro .fc-button--primary {
+    border-color: #efbc48;
+    background: linear-gradient(180deg, #f0ba40 0%, #e7aa2c 100%);
+    box-shadow:
+        inset 0 1px 0 rgba(255,245,208,.5),
+        0 8px 20px rgba(5,17,23,.2),
+        0 0 0 1px rgba(240,195,106,.08);
+}
 body.fc-site .fc-page-intro-scripture,
 body.fc-site .fc-page-intro .art-scroll-cue {
-    color: var(--fc-gold-light);
-
+    color: #f6c965;
+    text-shadow: 0 1px 10px rgba(240,195,106,.14);
 }
 
 @media (max-width:700px) {

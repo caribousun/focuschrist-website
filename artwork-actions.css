@@ -27,7 +27,8 @@
     display: none !important;
 }
 
-.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close], .fc-topic-artwork-detail button) {
+.fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > button,
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close]) {
     grid-column: auto;
     justify-self: stretch;
     width: 100%;
@@ -38,7 +39,8 @@
     color: var(--fc-cream) !important;
     box-shadow: none;
 }
-.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close], .fc-topic-artwork-detail button):hover {
+.fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > button:hover,
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close]):hover {
     background: var(--fc-surface-2);
     border-color: var(--fc-gold-light);
 }
