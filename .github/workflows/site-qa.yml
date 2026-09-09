@@ -145,6 +145,7 @@ jobs:
           python tools/build_scripture_catalog.py --check
           node tools/scripture_library_qa.js
           node groq-proxy/source-policy.test.js
+          node groq-proxy/conversation-context.test.js
           node groq-proxy/church-source-index.test.js
 
       - name: Validate committed Church source index

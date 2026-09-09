@@ -131,7 +131,9 @@ jobs:
         run: node tools/question_safety_runtime_qa.js
 
       - name: Exercise gateway source policy
-        run: node groq-proxy/source-policy.test.js
+        run: |
+          node groq-proxy/source-policy.test.js
+          node groq-proxy/conversation-context.test.js
 
       - name: Validate shared site JavaScript
         run: node --check site-common.js

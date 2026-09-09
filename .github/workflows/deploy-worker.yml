@@ -40,6 +40,7 @@ jobs:
       - name: Run Worker source-integrity policy tests
         run: |
           node groq-proxy/source-policy.test.js
+          node groq-proxy/conversation-context.test.js
           node groq-proxy/church-source-index.test.js
 
       - name: Validate committed Church source index
@@ -79,6 +80,10 @@ jobs:
       - name: Run live AI response matrix
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
         run: node tools/live_ai_response_matrix.js
+
+      - name: Verify conversation follow-ups
+        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
+        run: node tools/conversation_followup_live_qa.mjs
 
       - name: Verify all Pioneer topic answers
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''

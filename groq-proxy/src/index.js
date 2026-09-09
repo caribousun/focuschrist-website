@@ -26,8 +26,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.66';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.66';
+const SOURCE_POLICY_VERSION = '2026-09-09.67';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.67';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -194,10 +194,53 @@ function isGodInOldTestamentQuestion(value) {
     && text.split(' ').every(token => vocabulary.has(token));
 }
 
+function rawConversationQuestion(value) {
+  // Remove only the legacy browser context wrapper, never use its claimed
+  // antecedent as authority. Reconstruct context from actual user turns.
+  return String(value || '').split(/\n\nThe immediately preceding user question was:/)[0].trim();
+}
+
+function isReferentialQuestion(value) {
+  const text = rawConversationQuestion(value).toLowerCase().replace(/[?.!]+$/g, '').trim();
+  if (scriptureSupportContext([{ role: 'user', content: text }]).requested) return true;
+  // A possessive inside a question about an explicitly named subject does not
+  // refer back to the conversation (for example, Lincoln and his childhood).
+  const subject = text.match(/^(?:(?:what|when|where|why|how)\s+)?(?:did|does|do|was|is|were|are|can|could|will|would)\s+([a-z]+)/)?.[1];
+  if (subject && !['i','you','we','us','our','your','he','him','his','she','her','they','them','their','it','its','that','this'].includes(subject)
+      && !/\b(?:he|him|she|they|them|it|that|this|there|then)\b/.test(text)) return false;
+  return scriptureSupportContext([{ role: 'user', content: text }]).requested
+    || /\b(?:he|him|his|she|her|hers|they|them|their|it|its|that|this|there|then)\b/.test(text)
+    || /^(?:tell me more|go on|continue|why|how so|what else|and why|and when|and how)$/.test(text);
+}
+
+function userConversationContext(messages) {
+  const users = (Array.isArray(messages) ? messages : []).filter(message => message?.role === 'user');
+  if (!isReferentialQuestion(users.at(-1)?.content)) return [];
+  const context = [];
+  for (let index = users.length - 2; index >= 0 && context.length < 3; index -= 1) {
+    const question = rawConversationQuestion(users[index].content).slice(0, 1200);
+    if (!question) continue;
+    context.unshift(question);
+    if (!isReferentialQuestion(question)) break;
+  }
+  return context;
+}
+
+function conversationInstruction(scope) {
+  if (!scope.conversationContext?.length) return '';
+  return [
+    'CURRENT QUESTION is the request to answer. Earlier user questions identify the conversational subject only; they are not evidence. Earlier assistant statements are not evidence either.',
+    'Resolve pronouns and omitted subjects from the most recent user subject. Address the new attribute or comparison, not the earlier question again. If scope remains ambiguous, explain the source-supported distinctions or ask a specific clarification; do not invent a single date or identity.',
+    `CURRENT QUESTION: ${scope.question}`,
+    `EARLIER USER QUESTIONS (oldest to newest): ${JSON.stringify(scope.conversationContext)}`,
+  ].join('\n');
+}
+
 function classifyResearchScope(messages, requestedPage, requestedProfile) {
   const support = scriptureSupportContext(messages);
-  const originalQuestion = lastUserQuestion(messages);
-  const question = support.antecedent ? `${originalQuestion}\n\nThe preceding user question identifies the topic only, not evidence: ${support.antecedent}` : originalQuestion;
+  const question = rawConversationQuestion(lastUserQuestion(messages));
+  const conversationContext = userConversationContext(messages);
+  if (support.antecedent && !conversationContext.length) conversationContext.push(support.antecedent);
   const normalizedQuestion = question.toLowerCase().replace(/[^a-z0-9\s'-]/g, ' ').replace(/\s+/g, ' ').trim();
   const scriptureTopicQuestion = question
     .replace(CASELESS_CANON_NAME_PERSON_QUESTION_PATTERN, '$1')
@@ -205,12 +248,10 @@ function classifyResearchScope(messages, requestedPage, requestedProfile) {
     .replace(CASELESS_CANON_NAME_PERSON_ABOUT_PATTERN, '$1');
   const page = PAGE_CONTEXTS.has(requestedPage) ? requestedPage : 'ask';
   const profile = PROFILE_CONTEXTS.has(requestedProfile) ? requestedProfile : '';
-  const earlierContext = (Array.isArray(messages) ? messages : []).slice(0, -1)
-    .map((message) => String(message && message.content || '').toLowerCase()).join(' ');
-  const contextualSubject = KNOWN_CHURCH_PERSON_PHRASES.find((name) => earlierContext.includes(name)) || '';
-  const usesConversationContext = Boolean(contextualSubject
-    && /\b(?:he|him|his|she|her|hers|they|them|their|that person|this person|the leader)\b/i.test(question));
-  const retrievalQuestion = support.antecedent ? `${support.antecedent}: cite a supporting scripture` : usesConversationContext ? `${contextualSubject}: ${question}` : question;
+  const contextualSubject = KNOWN_CHURCH_PERSON_PHRASES.find(name => conversationContext.join(' ').toLowerCase().includes(name)) || '';
+  const usesConversationContext = conversationContext.length > 0;
+  const retrievalQuestion = support.antecedent ? `${support.antecedent}: cite a supporting scripture`
+    : usesConversationContext ? `${question}\nEarlier user topic: ${conversationContext.join(' -> ')}` : question;
   const faith = page === 'pioneers'
     || page === 'church-history'
     || profile === 'faith-study'
@@ -219,10 +260,10 @@ function classifyResearchScope(messages, requestedPage, requestedProfile) {
     || FAITH_PATTERN.test(scriptureTopicQuestion)
     || SCRIPTURE_REFERENCE_PATTERN.test(question)
     || SCRIPTURE_BOOK_TOPIC_PATTERN.test(scriptureTopicQuestion)
-    || usesConversationContext;
+    || (usesConversationContext && (Boolean(contextualSubject) || FAITH_PATTERN.test(conversationContext.join(' ')) || SCRIPTURE_BOOK_TOPIC_PATTERN.test(conversationContext.join(' '))));
   const selectedPioneerName = extractSelectedPioneerName(messages);
   return {
-    faith, question, retrievalQuestion, page, profile,
+    faith, question, retrievalQuestion, page, profile, conversationContext,
     classificationMode: support.antecedent || usesConversationContext ? 'conversation-context' : 'request-scope',
     scriptureSupportRequested: support.requested, scriptureSupportAntecedent: support.antecedent,
     selectedPioneer: Boolean(selectedPioneerName), selectedPioneerName,
@@ -269,7 +310,7 @@ function sanitizePayload(payload) {
     // Browser prompts are presentation hints, not server-owned source policy.
     // Keeping them out of the research request prevents an Ask-page keyword
     // from inheriting Pioneer scope and sharply reduces provider token use.
-    messages: [{ role: 'system', content: SERVER_RESEARCH_POLICY + '\n' + scopeInstruction }, ...conversationMessages],
+    messages: [{ role: 'system', content: SERVER_RESEARCH_POLICY + '\n' + scopeInstruction + '\n' + conversationInstruction(scope) }, ...conversationMessages],
     max_tokens: 700,
   };
   return { research, scope };
@@ -2010,7 +2051,9 @@ export default {
       const retrievalDiagnostic = requestDiagnostic;
       if (tellMyStoryEvidence) retrievalDiagnostic.focuschrist_retrieval_route = 'reviewed-pioneer-biography';
 
-      if (sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
+      if (sanitized.scope.faith && !sanitized.scope.selectedPioneer && (!sanitized.scope.conversationContext.length
+          || (deterministicHistoryTopicSource(sanitized.scope.retrievalQuestion, sanitized.scope.page)
+            && !/\b(?:same|different|compare|contrast|versus|relationship)\b/i.test(sanitized.scope.question)))) {
         const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline, sanitized.scope.pioneerTopicKey);
         retrievalDiagnostic.focuschrist_index_candidates = indexed.candidates.length;
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
@@ -2179,6 +2222,7 @@ export default {
         'Schema: {"approved":boolean,"answer":string,"source_indexes":number[]}',
         '',
         `QUESTION:\n${sanitized.scope.question}`,
+        conversationInstruction(sanitized.scope),
         '',
         `DRAFT:\n${draft}`,
         '',
