@@ -59,7 +59,7 @@ def main() -> int:
         prefix = "../" if "/" in relative else ""
         detail_version = "20260908-continue-lesson" if relative in {"answers/death-of-a-child.html", "answers/divorce-and-faith.html"} else "20260905-home-study"
         for marker in (
-            'href="artwork-details.css?v=20260905-viewport"',
+            'href="artwork-details.css?v=20260909-warm"',
             f'src="artwork-details.js?v={detail_version}"',
             'id="artworkDetailSource"',
             'id="artworkDetailStudy" hidden',
@@ -222,7 +222,7 @@ def main() -> int:
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
         hero_script = "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels"
-        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", hero_script, "hero-details.css?v=20260908-dialog-grid", "artwork-details.css?v=20260905-viewport"):
+        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
         hero_links = re.findall(r'<a[^>]*data-hero-viewer[^>]*>', page)

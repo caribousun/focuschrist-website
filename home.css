@@ -45,6 +45,16 @@
 }
 
 /* Keep study copy, supporting details, and action pills visually distinct. */
+.fc-cfm-home {
+    background:
+        radial-gradient(ellipse at 50% 0%, #e7bd632b, transparent 72%),
+        radial-gradient(ellipse at 8% 90%, #758f4126, transparent 65%),
+        linear-gradient(135deg, #365443, #23483f 55%, #193c3c);
+    border-block: 1px solid #d6b66c42;
+    box-shadow: inset 0 1px 0 #f4dba31a;
+}
+.fc-cfm-home .fc-section-heading { color: #fff0cc; text-shadow: 0 2px 20px #dfa7391c; }
+.fc-cfm-home .fc-eyebrow { color: #f5cd76; }
 .fc-cfm-home .fc-page-intro-copy {
     margin-bottom: 0;
 }
@@ -58,11 +68,9 @@
 }
 
 .fc-cfm-home__highlights span {
-    padding: 8px 13px;
-    border: 1px solid rgba(240, 195, 106, .38);
-    border-radius: 999px;
-    background: rgba(134, 175, 200, .08);
-    color: #e4edf0;
+    padding: 4px 13px;
+    border-left: 2px solid #dbb965;
+    color: #e1dec5;
     font-size: .82rem;
     font-weight: 700;
 }

@@ -121,11 +121,11 @@ def main() -> int:
         errors.append("approved Home identity reference is missing")
 
     all_full_assets: list[str] = []
-    all_html = "\n".join(
+    html_pages = [
         path.read_text(encoding="utf-8", errors="replace")
         for path in ROOT.rglob("*.html")
         if ".git" not in path.parts
-    )
+    ]
 
     for relative in PAGES:
         page = ROOT / relative
@@ -141,7 +141,7 @@ def main() -> int:
 
         for marker in (
             'data-art-study-enriched="true"',
-            'href="../art-study-enrichment.css?v=20260908-complete"',
+            'href="../art-study-enrichment.css?v=20260909-warm"',
             'class="fc-study-opening"',
             'class="fc-art-meditation"',
             'class="fc-reflection-prompts"',
@@ -218,7 +218,9 @@ def main() -> int:
     if duplicates:
         errors.append(f"supporting artwork is reused across study pages: {duplicates}")
     for asset in all_full_assets:
-        if all_html.count(asset) != 1:
+        # A responsive image may reference its full source in both href and
+        # srcset. Exclusivity concerns owning pages, not references on that page.
+        if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
     if set(reviewed_pages) != set(PAGES):
         errors.append("image review manifest page inventory does not match the featured studies")
