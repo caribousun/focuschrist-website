@@ -48,6 +48,8 @@ jobs:
           node groq-proxy/openai-research.test.js
           node groq-proxy/corpus-coverage.test.js
           node groq-proxy/corpus-evidence.test.js
+          node groq-proxy/factual-followup.test.js
+          node groq-proxy/relationship-audit.test.js
           node tools/scripture_quote_display_qa.js
           node groq-proxy/church-source-index.test.js
 

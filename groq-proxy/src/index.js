@@ -1,3 +1,4 @@
+import { isNarrowFactualFollowup } from './factual-followup.js';
 import { augmentRequestedCorpusEvidence } from './corpus-evidence.js';
 import { checkCorpusCoverage, requestedTeachingCorpora } from './corpus-coverage.js';
 import { PIONEER_SOURCE_URLS, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, pioneerTopic } from './pioneer-topic-sources.js';
@@ -30,8 +31,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.77';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.77';
+const SOURCE_POLICY_VERSION = '2026-09-09.78';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.78';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1312,6 +1313,7 @@ function guardVerifiedAnswer(answer, evidence, scope, approved) {
 }
 
 function answerSubstanceRequirements(scope) {
+  if (isNarrowFactualFollowup(scope)) return { minimumWords: 20, minimumSentences: 2, minimumParagraphs: 1 };
   if (scope && scope.selectedPioneer) return { minimumWords: 90, minimumSentences: 3, minimumParagraphs: 2 };
   if (scope && scope.faith) return { minimumWords: 70, minimumSentences: 3, minimumParagraphs: 1 };
   return { minimumWords: 45, minimumSentences: 2, minimumParagraphs: 1 };
@@ -1330,6 +1332,7 @@ function answerMeetsSubstanceContract(answer, scope) {
 }
 
 function answerMeetsRepairMargin(answer, scope) {
+  if (isNarrowFactualFollowup(scope)) return answerMeetsSubstanceContract(answer, scope);
   const text = String(answer || '').replace(/\s+/g, ' ').trim();
   const original = String(answer || '').trim();
   const words = text ? text.split(' ').filter(Boolean).length : 0;
@@ -1578,7 +1581,7 @@ function verifierRouteDiagnostic(result) {
 
 function combinedProviderUsage(...results) {
   return results.reduce((total, result) => {
-    const usage = result && result.data && result.data.usage || {};
+    const usage = result?.accumulatedUsage || result?.data?.usage || {};
     total.prompt_tokens += Number(usage.prompt_tokens || usage.input_tokens || 0);
     total.completion_tokens += Number(usage.completion_tokens || usage.output_tokens || 0);
     return total;
@@ -2141,7 +2144,8 @@ export default {
         `DRAFT:\n${draft}`,
         '',
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
-      ].join('\n')) + '\n' + SCRIPTURE_QUOTATION_CONTRACT;
+      ].join('\n')) + '\n' + SCRIPTURE_QUOTATION_CONTRACT
+        + (isNarrowFactualFollowup(sanitized.scope) ? '\nThis current question requests one factual detail in a continuing conversation. Override the general length targets: give a direct sourced answer with brief useful context, at least20 words and two complete sentences. Do not pad it to a study essay.' : '');
       let verifierPrompt = makeVerifierPrompt();
       const verifierBody = {
         messages: [{ role: 'user', content: verifierPrompt }],
@@ -2232,8 +2236,8 @@ export default {
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
         const repairMinimumWords = requirements.minimumWords
-          + (sanitized.scope.selectedPioneer ? 30 : (sanitized.scope.faith ? 25 : 10));
-        const repairMinimumSentences = requirements.minimumSentences + (sanitized.scope.faith ? 1 : 0);
+          + (isNarrowFactualFollowup(sanitized.scope) ? 0 : sanitized.scope.selectedPioneer ? 30 : (sanitized.scope.faith ? 25 : 10));
+        const repairMinimumSentences = requirements.minimumSentences + (!isNarrowFactualFollowup(sanitized.scope) && sanitized.scope.faith ? 1 : 0);
         const expansionPrompt = [
           verifierPrompt,
           needsScriptureRepair
@@ -2314,6 +2318,37 @@ export default {
             reviewedDeterministicRecovery: reviewedRecovery.recoveryId,
           };
         }
+      }
+      // A separate critic examines source relationships after composition. The
+      // composed answer is a claim to challenge, never independent evidence.
+      if (verdict?.approved === true && !verifierResult.reviewedDeterministicRecovery
+          && indexes.some(index => !verifiedCanonicalEvidence.has(evidence[index - 1]))) {
+        if (remainingBudget(deadline) < 4500) {
+          return jsonResponse(fallbackPayload('verification-unavailable', retrievalDiagnostic, sanitized.scope), 200, origin, deadline, localScriptures);
+        }
+        const audit = await callVerifier(env, {
+          ...verifierBody,
+          messages: [{role: 'user', content: [
+            'Act as a skeptical source editor. Independently audit the proposed answer against EVIDENCE only. The proposed answer is untrusted, not evidence.',
+            'Check every factual clause for the exact actor, action, location, time, duration endpoints and setting. Sharing nouns or dates with a source is not support. Distinguish travel from settlement, first aid from later reinforcements, one company from all emigrants, and a narrator recollection from an official assertion. Preserve before/after and uncertainty exactly. Do not infer causal relationships from neighboring paragraphs.',
+            'Return JSON {"approved":boolean,"answer":string,"source_indexes":number[]}. If all claims are supported, return the answer unchanged. Otherwise REMOVE or CORRECT unsupported clauses using the evidence, while answering the actual question directly. Set approved false only when the evidence cannot answer it. Never introduce remembered facts, guessed links, or guessed scripture. Use only source indexes actually supporting the corrected answer.',
+            `Keep useful supported context: at least ${answerSubstanceRequirements(sanitized.scope).minimumWords} words and ${answerSubstanceRequirements(sanitized.scope).minimumSentences} complete sentences when the evidence supports that depth. Never pad with unsupported claims.`,
+            `QUESTION: ${sanitized.scope.question}`,
+            conversationInstruction(sanitized.scope),
+            `PROPOSED ANSWER: ${verdict.answer}`,
+            `EVIDENCE: ${evidenceForVerifier(evidence)}`,
+            SCRIPTURE_QUOTATION_CONTRACT,
+          ].join('\n')}],
+        }, deadline, {requireSourceIndexes: true});
+        audit.accumulatedUsage = combinedProviderUsage(verifierResult, audit);
+        accumulateVerifierCalls(audit, verifierResult, audit);
+        retrievalDiagnostic.focuschrist_relationship_audit = audit.response.ok ? 'completed' : 'unavailable';
+        if (!audit.response.ok) return jsonResponse(fallbackPayload('verification-provider-error', {
+          ...retrievalDiagnostic, ...verifierRouteDiagnostic(audit),
+        }, sanitized.scope), 200, origin, deadline, localScriptures);
+        verifierResult = audit;
+        verdict = parseVerifierJson(audit.data.choices[0].message.content);
+        indexes = verdict.source_indexes.filter(index => index >= 1 && index <= evidence.length);
       }
       const finalCorpusCoverage = checkCorpusCoverage(sanitized.scope, verdict?.answer,
         indexes.map(index => evidence[index - 1]), localScriptures, isAllowedResearchFetchUrl);

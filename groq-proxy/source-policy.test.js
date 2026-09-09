@@ -774,8 +774,8 @@ globalThis.fetch = async (_url, options) => {
   if (identityUpgradeCalls === 1) {
     return searchResponse([{title:'Hyrum Smith',url:'https://history.churchofjesuschrist.org/content/hyrum-smith'},{title:'Unverified Hyrum Smith',url:'https://example.com/hyrum-smith'}]);
   }
-  assert(body.messages[0].content.includes('approved LDS resources')
-    && body.messages[0].content.includes('never present them as official Church declarations'),
+  assert(body.messages[0].content.includes('Act as a skeptical source editor') || (body.messages[0].content.includes('approved LDS resources')
+    && body.messages[0].content.includes('never present them as official Church declarations')),
     'identity-upgraded evidence must enter the faith verifier contract');
   return new Response(JSON.stringify({
     choices: [{ message: { content: JSON.stringify({
@@ -796,7 +796,7 @@ try {
     }),
   }), { OPENAI_API_KEY: 'test-key' });
   const identityUpgradePayload = await identityUpgradeResponse.json();
-  assert(identityUpgradeCalls === 2
+  assert(identityUpgradeCalls === 3
     && identityUpgradePayload.focuschrist_resolved_profile === 'faith-study'
     && identityUpgradePayload.focuschrist_classification_mode === 'official-church-identity-evidence'
     && identityUpgradePayload.focuschrist_sources.length === 1
@@ -833,7 +833,7 @@ try {
 
   });
   const gatewayPayload = await gatewayResponse.json();
-  assert(gatewayBodies.length === 3 && gatewayVerifierBodies.length === 2,
+  assert(gatewayBodies.length === 4 && gatewayVerifierBodies.length === 3,
     'a short verified answer must trigger exactly one evidence-only expansion pass');
   assert(gatewayVerifierBodies[1].messages[0].content.includes('previous approved answer did not meet')
     && gatewayVerifierBodies[1].messages[0].content.includes('at least 45 words'),
@@ -843,7 +843,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.77',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.78',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

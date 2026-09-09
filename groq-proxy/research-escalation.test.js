@@ -78,7 +78,7 @@ try {
       assert.notEqual(payload.focuschrist_source_integrity_verified, true);
       continue;
     }
-    assert.equal(verifierCalls, 2, `${topic}: evidence escalation must use the same verifier once more`);
+    assert.equal(verifierCalls, rejectAgain ? 2 : 3, `${topic}: accepted escalation also requires a separate relationship audit`);
     assert.ok(events.indexOf('research') > events.indexOf('verify'), 'local verification precedes research escalation');
     assert.ok(events.indexOf('hydrated') > events.indexOf('research'), 'discovered article must be fetched after discovery');
     if (rejectAgain) {

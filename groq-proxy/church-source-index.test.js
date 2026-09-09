@@ -528,7 +528,7 @@ try {
     && payload.focuschrist_classification_mode === 'request-scope'
     && payload.focuschrist_sources.every(source => new URL(source.url).hostname === 'www.churchofjesuschrist.org'),
     'indexed official evidence must answer through OpenAI and return complete receipts: ' + JSON.stringify(payload));
-  assert(officialFetchCalls > 0 && officialFetchCalls <= 2 && verifierCalls === 2 && researchCalls === 0,
+  assert(officialFetchCalls > 0 && officialFetchCalls <= 2 && verifierCalls === 3 && researchCalls === 0,
     'indexed evidence must fetch at most two official pages and skip web research');
   assert(verifierBodies[0].max_completion_tokens === 1000
     && verifierBodies[0].messages[0].content.includes('If the DRAFT block is empty, write the answer directly from EVIDENCE')
@@ -551,35 +551,35 @@ try {
     if (verifierCalls === 1) return openAIResponse({ approved: true, answer: 'Hyrum Smith was a trusted early Church leader.', source_indexes: [1] });
     const error = new Error('repair aborted'); error.name = 'AbortError'; throw error;
   });
-  assert(verifierCalls === 2 && timedRepair.payload.focuschrist_source_integrity_verified === false
-    && timedRepair.payload.focuschrist_gateway_mode === 'verification-rejected'
-    && timedRepair.payload.focuschrist_openai_verifier_calls === 2,
-    'a timed-out required depth repair must fail closed with both OpenAI calls accounted for');
+  assert(verifierCalls === 3 && timedRepair.payload.focuschrist_source_integrity_verified === false
+    && timedRepair.payload.focuschrist_gateway_mode === 'verification-provider-error'
+    && timedRepair.payload.focuschrist_openai_verifier_calls === 3,
+    'a timed-out required depth repair must fail closed with all OpenAI calls accounted for');
   const shallow = await runIndexedCase(() => openAIResponse({ approved: true, answer: 'Hyrum Smith was a Church leader.', source_indexes: [1] }));
-  assert(verifierCalls === 2 && shallow.payload.focuschrist_source_integrity_verified === false,
-    'a shallow answer and shallow repair must fail closed without a third verifier call');
+  assert(verifierCalls === 3 && shallow.payload.focuschrist_source_integrity_verified === false,
+    'a shallow answer and shallow repair must fail closed after the separate relationship audit');
   const repaired = await runIndexedCase(() => openAIResponse(verifierCalls === 1 ? copiedVerdict() : accepted()));
-  assert(verifierCalls === 2 && verifierBodies[1].max_completion_tokens === 1000
+  assert(verifierCalls === 3 && verifierBodies[1].max_completion_tokens === 1000
     && verifierBodies[1].messages[0].content.includes('Rewrite the answer in genuinely independent language')
     && verifierBodies[1].messages[0].content.includes('previous answer also fails the overlap check')
     && repaired.payload.focuschrist_source_integrity_verified === true
-    && repaired.payload.focuschrist_verifier_route === 'openai-repair'
-    && repaired.payload.focuschrist_openai_verifier_calls === 2,
+    && repaired.payload.focuschrist_verifier_route === 'openai-primary'
+    && repaired.payload.focuschrist_openai_verifier_calls === 3,
     'overcopied indexed evidence must receive one bounded OpenAI paraphrase repair');
   const copied = await runIndexedCase(() => openAIResponse(copiedVerdict()));
-  assert(verifierCalls === 2 && copied.payload.focuschrist_source_integrity_verified === false
+  assert(verifierCalls === 3 && copied.payload.focuschrist_source_integrity_verified === false
     && copied.payload.focuschrist_verifier_publication_failure === 'excessive-source-overlap',
-    'a still-overcopied repair must fail closed without a third call');
+    'a still-overcopied repair must fail closed after the separate relationship audit');
   const fragments = copiedEvidence.split(' ').reduce((all, word, index) => { if (index % 4 === 0) all.push([]); all[all.length - 1].push(word); return all; }, []).map(words => words.join(' ')).join(' Indeed, ');
   const fragmented = await runIndexedCase(() => openAIResponse({ approved: true, answer: (fragments + '. ').repeat(3), source_indexes: [1] }));
-  assert(verifierCalls === 2 && fragmented.payload.focuschrist_source_integrity_verified === false
+  assert(verifierCalls === 3 && fragmented.payload.focuschrist_source_integrity_verified === false
     && fragmented.payload.focuschrist_verifier_publication_failure === 'excessive-source-overlap',
-    'a repair reconstructing ordered source fragments must fail closed without a third call');
+    'a repair reconstructing ordered source fragments must fail closed after the separate relationship audit');
   const reconsidered = await runIndexedCase(() => openAIResponse(verifierCalls === 1 ? { approved: false, answer: '', source_indexes: [] } : accepted()));
-  assert(verifierCalls === 2 && researchCalls === 1 && verifierBodies[1].max_completion_tokens === 1000
+  assert(verifierCalls === 3 && researchCalls === 1 && verifierBodies[1].max_completion_tokens === 1000
     && verifierBodies[1].messages[0].content.includes('previous rejection may be a false negative')
     && reconsidered.payload.focuschrist_source_integrity_verified === true
-    && reconsidered.payload.focuschrist_openai_verifier_calls === 2,
+    && reconsidered.payload.focuschrist_openai_verifier_calls === 3,
     'a negative indexed verdict must search approved sources once and allow one bounded reconsideration when search returns no new evidence: ' + JSON.stringify({verifierCalls,researchCalls,payload:reconsidered.payload}));
 } finally { globalThis.fetch = originalFetch; }
 
@@ -615,7 +615,7 @@ async function runPioneerReconsiderationCase({ page, profile, question, omitPinn
   globalThis.fetch = async (url) => {
     if (String(url) === 'https://api.openai.com/v1/chat/completions') {
       verifierCalls += 1;
-      return openAIResponse(approveSecond && verifierCalls === 2
+      return openAIResponse(approveSecond && verifierCalls >= 2
         ? { approved: true, answer: pioneerEvidenceAnswer, source_indexes: [1] }
         : { approved: false, answer: '', source_indexes: [] });
     }
@@ -656,11 +656,11 @@ try {
     approveSecond: true,
     cacheParagraphs: cachedRelevantPioneerParagraphs,
   });
-  assert(positive.verifierCalls === 2
+  assert(positive.verifierCalls === 3
     && positive.researchCalls === 1
     && positive.officialFetchCalls === 0
     && positive.payload.focuschrist_source_integrity_verified === true
-    && positive.payload.focuschrist_openai_verifier_calls === 2
+    && positive.payload.focuschrist_openai_verifier_calls === 3
     && positive.payload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six'))
     && positive.payload.focuschrist_evidence_relevance.some((entry) => entry.url.includes('/chapter-twenty-six') && entry.overlap_count >= 2)
     && positive.payload.focuschrist_evidence_relevance.length > 0
