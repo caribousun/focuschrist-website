@@ -218,12 +218,12 @@ def main() -> int:
             fail(errors, f"{relative}: site-system cache revision missing")
         else:
             approved_cache_versions.add(cache_match.group(1))
-    if approved_cache_versions != {"20260907-mobile-flow"}:
+    if approved_cache_versions != {"20260909-warm"}:
         fail(errors, f"approved hero pages have inconsistent site-system cache revisions: {sorted(approved_cache_versions)}")
 
     for relative in PUBLIC_PAGES:
         public_text = (ROOT / relative).read_text(encoding="utf-8")
-        if 'site-system.css?v=20260907-mobile-flow' not in public_text:
+        if 'site-system.css?v=20260909-warm' not in public_text:
             fail(errors, f"{relative}: shared hero/menu cache revision is not globally locked")
 
     for relative in PUBLIC_PAGES:
@@ -375,7 +375,7 @@ def main() -> int:
         elif history_art_path.stat().st_size > 120_000:
             fail(errors, f"church-history.html: supporting artwork exceeds 120 KB performance budget: {history_art}")
     for marker in (
-        'church-history.css?v=20260904-2',
+        'church-history.css?v=20260909-warm',
         'class="fc-history-art-panel fc-history-art-panel--wide"',
         'class="fc-history-art-panel fc-history-art-panel--inline fc-history-art-panel--offset-left"',
         'class="fc-history-art-panel fc-history-art-panel--inline fc-history-art-panel--offset-right"',

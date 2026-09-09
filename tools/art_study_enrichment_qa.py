@@ -141,7 +141,7 @@ def main() -> int:
 
         for marker in (
             'data-art-study-enriched="true"',
-            'href="../art-study-enrichment.css?v=20260908-complete"',
+            'href="../art-study-enrichment.css?v=20260909-warm"',
             'class="fc-study-opening"',
             'class="fc-art-meditation"',
             'class="fc-reflection-prompts"',
