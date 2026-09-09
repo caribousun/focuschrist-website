@@ -44,6 +44,8 @@ global.document = {
 global.sessionStorage = { setItem() {}, removeItem() {} };
 global.conversationHistory = [];
 global.URL = URL;
+const scriptureLibrary = require('../scripture-library.js')(require('../scripture-data/catalog.json'), async url => new Response(fs.readFileSync('.'+url)));
+window.focusChristVerifyScriptureAnswer = (text,sources) => scriptureLibrary.checkAnswer(text,sources);
 
 const siteCommonSource = fs.readFileSync('site-common.js', 'utf8');
 vm.runInThisContext(

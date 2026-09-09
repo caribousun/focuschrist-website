@@ -1,0 +1,353 @@
+{
+  "edition": "Official Church English standard works; KJV Bible",
+  "books": [
+    {
+      "key": "ot/gen",
+      "chapters": 50
+    },
+    {
+      "key": "ot/ex",
+      "chapters": 40
+    },
+    {
+      "key": "ot/lev",
+      "chapters": 27
+    },
+    {
+      "key": "ot/num",
+      "chapters": 36
+    },
+    {
+      "key": "ot/deut",
+      "chapters": 34
+    },
+    {
+      "key": "ot/josh",
+      "chapters": 24
+    },
+    {
+      "key": "ot/judg",
+      "chapters": 21
+    },
+    {
+      "key": "ot/ruth",
+      "chapters": 4
+    },
+    {
+      "key": "ot/1-sam",
+      "chapters": 31
+    },
+    {
+      "key": "ot/2-sam",
+      "chapters": 24
+    },
+    {
+      "key": "ot/1-kgs",
+      "chapters": 22
+    },
+    {
+      "key": "ot/2-kgs",
+      "chapters": 25
+    },
+    {
+      "key": "ot/1-chr",
+      "chapters": 29
+    },
+    {
+      "key": "ot/2-chr",
+      "chapters": 36
+    },
+    {
+      "key": "ot/ezra",
+      "chapters": 10
+    },
+    {
+      "key": "ot/neh",
+      "chapters": 13
+    },
+    {
+      "key": "ot/esth",
+      "chapters": 10
+    },
+    {
+      "key": "ot/job",
+      "chapters": 42
+    },
+    {
+      "key": "ot/ps",
+      "chapters": 150
+    },
+    {
+      "key": "ot/prov",
+      "chapters": 31
+    },
+    {
+      "key": "ot/eccl",
+      "chapters": 12
+    },
+    {
+      "key": "ot/song",
+      "chapters": 8
+    },
+    {
+      "key": "ot/isa",
+      "chapters": 66
+    },
+    {
+      "key": "ot/jer",
+      "chapters": 52
+    },
+    {
+      "key": "ot/lam",
+      "chapters": 5
+    },
+    {
+      "key": "ot/ezek",
+      "chapters": 48
+    },
+    {
+      "key": "ot/dan",
+      "chapters": 12
+    },
+    {
+      "key": "ot/hosea",
+      "chapters": 14
+    },
+    {
+      "key": "ot/joel",
+      "chapters": 3
+    },
+    {
+      "key": "ot/amos",
+      "chapters": 9
+    },
+    {
+      "key": "ot/obad",
+      "chapters": 1
+    },
+    {
+      "key": "ot/jonah",
+      "chapters": 4
+    },
+    {
+      "key": "ot/micah",
+      "chapters": 7
+    },
+    {
+      "key": "ot/nahum",
+      "chapters": 3
+    },
+    {
+      "key": "ot/hab",
+      "chapters": 3
+    },
+    {
+      "key": "ot/zeph",
+      "chapters": 3
+    },
+    {
+      "key": "ot/hag",
+      "chapters": 2
+    },
+    {
+      "key": "ot/zech",
+      "chapters": 14
+    },
+    {
+      "key": "ot/mal",
+      "chapters": 4
+    },
+    {
+      "key": "nt/matt",
+      "chapters": 28
+    },
+    {
+      "key": "nt/mark",
+      "chapters": 16
+    },
+    {
+      "key": "nt/luke",
+      "chapters": 24
+    },
+    {
+      "key": "nt/john",
+      "chapters": 21
+    },
+    {
+      "key": "nt/acts",
+      "chapters": 28
+    },
+    {
+      "key": "nt/rom",
+      "chapters": 16
+    },
+    {
+      "key": "nt/1-cor",
+      "chapters": 16
+    },
+    {
+      "key": "nt/2-cor",
+      "chapters": 13
+    },
+    {
+      "key": "nt/gal",
+      "chapters": 6
+    },
+    {
+      "key": "nt/eph",
+      "chapters": 6
+    },
+    {
+      "key": "nt/philip",
+      "chapters": 4
+    },
+    {
+      "key": "nt/col",
+      "chapters": 4
+    },
+    {
+      "key": "nt/1-thes",
+      "chapters": 5
+    },
+    {
+      "key": "nt/2-thes",
+      "chapters": 3
+    },
+    {
+      "key": "nt/1-tim",
+      "chapters": 6
+    },
+    {
+      "key": "nt/2-tim",
+      "chapters": 4
+    },
+    {
+      "key": "nt/titus",
+      "chapters": 3
+    },
+    {
+      "key": "nt/philem",
+      "chapters": 1
+    },
+    {
+      "key": "nt/heb",
+      "chapters": 13
+    },
+    {
+      "key": "nt/james",
+      "chapters": 5
+    },
+    {
+      "key": "nt/1-pet",
+      "chapters": 5
+    },
+    {
+      "key": "nt/2-pet",
+      "chapters": 3
+    },
+    {
+      "key": "nt/1-jn",
+      "chapters": 5
+    },
+    {
+      "key": "nt/2-jn",
+      "chapters": 1
+    },
+    {
+      "key": "nt/3-jn",
+      "chapters": 1
+    },
+    {
+      "key": "nt/jude",
+      "chapters": 1
+    },
+    {
+      "key": "nt/rev",
+      "chapters": 22
+    },
+    {
+      "key": "bofm/1-ne",
+      "chapters": 22
+    },
+    {
+      "key": "bofm/2-ne",
+      "chapters": 33
+    },
+    {
+      "key": "bofm/3-ne",
+      "chapters": 30
+    },
+    {
+      "key": "bofm/4-ne",
+      "chapters": 1
+    },
+    {
+      "key": "bofm/jacob",
+      "chapters": 7
+    },
+    {
+      "key": "bofm/enos",
+      "chapters": 1
+    },
+    {
+      "key": "bofm/jarom",
+      "chapters": 1
+    },
+    {
+      "key": "bofm/omni",
+      "chapters": 1
+    },
+    {
+      "key": "bofm/w-of-m",
+      "chapters": 1
+    },
+    {
+      "key": "bofm/mosiah",
+      "chapters": 29
+    },
+    {
+      "key": "bofm/alma",
+      "chapters": 63
+    },
+    {
+      "key": "bofm/hel",
+      "chapters": 16
+    },
+    {
+      "key": "bofm/morm",
+      "chapters": 9
+    },
+    {
+      "key": "bofm/ether",
+      "chapters": 15
+    },
+    {
+      "key": "bofm/moro",
+      "chapters": 10
+    },
+    {
+      "key": "dc-testament/dc",
+      "chapters": 138
+    },
+    {
+      "key": "pgp/moses",
+      "chapters": 8
+    },
+    {
+      "key": "pgp/abr",
+      "chapters": 5
+    },
+    {
+      "key": "pgp/js-m",
+      "chapters": 1
+    },
+    {
+      "key": "pgp/js-h",
+      "chapters": 1
+    },
+    {
+      "key": "pgp/a-of-f",
+      "chapters": 1
+    }
+  ]
+}

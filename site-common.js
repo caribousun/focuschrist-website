@@ -622,6 +622,10 @@
             return !trustedReferenceText.includes(normalizeSourceReference(citation));
         });
         const violations = [];
+        if (window.focusChristScriptureLibrary) {
+            try { window.focusChristScriptureLibrary.references(text); }
+            catch (_) { violations.push('invalid-scripture-reference'); }
+        }
 
         // Source-dependent generation must either be a separately reviewed local
         // entry or carry the server-owned retrieval-and-verification receipt.
@@ -680,6 +684,41 @@
         document.body.appendChild(script);
     }
 
+    window.focusChristVerifyScriptureAnswer = async function (text, sources) {
+        const needsLibrary = extractScriptureCitations(text).length || /\d+:\d+|[“”"‘’']|\[\[SCRIPTURE:/i.test(text)
+            || (sources || []).some(source => /\/study\/scriptures\/.+\/\d/.test(source.url || ''));
+        if (!needsLibrary) return {ok:true,answer:String(text || '')};
+        try { return await (await window.focusChristScriptureReady).checkAnswer(text, sources); }
+        catch (_) { return {ok:false,answer:'Scripture verification is temporarily unavailable. Please try again or open the official Gospel Library.'}; }
+    };
+    function installScriptureDisplayGate() {
+        // Validate at the display boundary, including reviewed and legacy answer lanes.
+        const original = window.addMessage;
+        if (typeof original === 'function') window.addMessage = function (text, isUser, sources, extra) {
+            if (isUser) return original(text, isUser, sources, extra);
+            const box = document.getElementById('chatBox');
+            if (!box) return;
+            const pending = document.createElement('div');
+            pending.className = 'message bot-message';
+            pending.textContent = 'Checking scripture sources…';
+            pending.setAttribute('role', 'status');
+            box.appendChild(pending);
+            window.focusChristVerifyScriptureAnswer(text, sources).then(result => {
+                if (!pending.isConnected) return;
+                original(result.answer, false, result.ok ? sources : [], result.ok ? extra : null);
+                const rendered = box.lastElementChild;
+                if (rendered !== pending) {
+                    const controls = Array.from(pending.children);
+                    pending.replaceChildren(...Array.from(rendered.childNodes), ...controls);
+                    rendered.remove();
+                }
+                pending.removeAttribute('role');
+                if (result.ok && window.focusChristScriptureLibrary) window.focusChristScriptureLibrary.linkify(pending);
+            });
+            return pending;
+        };
+    }
+
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
         appendScript(relativeAssetHref('study-journey.js?v=20260903-1'), 'data-focuschrist-study-journey');
@@ -689,15 +728,18 @@
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260903-17', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260909-18', 'data-focuschrist-study-intelligence-v3');
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        installScriptureDisplayGate();
+        appendScript(relativeAssetHref('scripture-library.js?v=20260909-2'), 'data-focuschrist-scripture-library', function () {
+            appendScript(relativeAssetHref('scripture-reader.js?v=20260909-2'), 'data-focuschrist-scripture-reader');
+        });
         const scriptureStyle = document.createElement('link');
         scriptureStyle.rel = 'stylesheet';
         scriptureStyle.href = relativeAssetHref('scripture-reader.css?v=20260909-warm');
         document.head.appendChild(scriptureStyle);
-        appendScript(relativeAssetHref('scripture-reader.js?v=20260906-1'), 'data-focuschrist-scripture-reader');
         appendScript(relativeAssetHref('header-scroll.js?v=20260906-1'), 'data-focuschrist-header-scroll');
         ensureMainLandmark();
         normalizeFooterIdentity();

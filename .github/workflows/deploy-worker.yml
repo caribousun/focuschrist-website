@@ -7,6 +7,8 @@ on:
       - main
     paths:
       - "groq-proxy/**"
+      - "scripture-library.js"
+      - "scripture-data/**"
       - "tools/build_church_source_index.py"
       - "tools/live_ai_response_matrix.js"
       - "tools/pioneer_disclosure_live_qa.js"
@@ -29,6 +31,11 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+
+      - name: Verify complete scripture library and deterministic guard
+        run: |
+          python tools/build_scripture_catalog.py --check
+          node tools/scripture_library_qa.js
 
       - name: Run Worker source-integrity policy tests
         run: |
@@ -59,7 +66,11 @@ jobs:
       - name: Deploy hardened Worker
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
         working-directory: groq-proxy
-        run: npx --no-install wrangler deploy --config wrangler.toml
+        run: |
+          cd ..
+          python tools/wait_for_scripture_release.py
+          cd groq-proxy
+          npx --no-install wrangler deploy --config wrangler.toml
 
       - name: Allow Worker propagation
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
