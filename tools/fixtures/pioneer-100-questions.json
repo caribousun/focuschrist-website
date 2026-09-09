@@ -1,0 +1,1792 @@
+[
+  {
+    "id": "pioneer-001",
+    "page": "pioneers",
+    "question": "Why did the Saints begin leaving Nauvoo during winter in 1846 instead of waiting for spring?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1846",
+      "hostility",
+      "departure"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: exodus"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "exodus"
+  },
+  {
+    "id": "pioneer-002",
+    "page": "pioneers",
+    "question": "What made Winter Quarters a staging settlement rather than the final pioneer destination?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Missouri River",
+      "temporary settlement",
+      "1846"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: winterquarters"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "winterquarters"
+  },
+  {
+    "id": "pioneer-003",
+    "page": "pioneers",
+    "question": "Did every member of the 1847 vanguard company enter the Salt Lake Valley on July 24?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "July 22",
+      "July 24",
+      "different arrival dates"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: valley"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "valley"
+  },
+  {
+    "id": "pioneer-004",
+    "page": "pioneers",
+    "question": "What pioneer event does July 24 commemorate, and why is the date remembered?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1847",
+      "Salt Lake Valley"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: pioneerday"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "pioneerday"
+  },
+  {
+    "id": "pioneer-005",
+    "page": "pioneers",
+    "question": "How did the temple and Tabernacle serve different purposes as Temple Square developed?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "distinct buildings",
+      "worship",
+      "Church headquarters"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: templesquare"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "templesquare"
+  },
+  {
+    "id": "pioneer-006",
+    "page": "pioneers",
+    "question": "How long did Salt Lake Temple construction take, and what years mark its beginning and dedication?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1853",
+      "1893"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: templestart"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "templestart"
+  },
+  {
+    "id": "pioneer-007",
+    "page": "pioneers",
+    "question": "Why were handcarts introduced for emigrants who could not afford wagon travel?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1856",
+      "cost",
+      "limited possessions"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: handcart"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "handcart"
+  },
+  {
+    "id": "pioneer-008",
+    "page": "pioneers",
+    "question": "How did completion of the transcontinental railroad change organized pioneer travel?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1869",
+      "rail travel",
+      "overland migration"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: railroad"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "railroad"
+  },
+  {
+    "id": "pioneer-009",
+    "page": "pioneers",
+    "question": "How was Utah statehood in 1896 different from the beginning of pioneer settlement in 1847?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1847",
+      "1896",
+      "territory and state distinction"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: statehood"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "statehood"
+  },
+  {
+    "id": "pioneer-010",
+    "page": "pioneers",
+    "question": "Was the Nauvoo exodus a single departure, or did families leave over many months?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "February to September 1846",
+      "multiple departures"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: nauvoo"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "nauvoo"
+  },
+  {
+    "id": "pioneer-011",
+    "page": "pioneers",
+    "question": "Why did pioneers plant crops at Garden Grove when many planned to keep traveling west?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "way station",
+      "following companies",
+      "1846"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: garden-grove"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "garden-grove"
+  },
+  {
+    "id": "pioneer-012",
+    "page": "pioneers",
+    "question": "What was the relationship between Council Bluffs, Kanesville, and Winter Quarters in pioneer migration?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Missouri River",
+      "different settlements",
+      "emigration preparation"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: council-bluffs"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "council-bluffs"
+  },
+  {
+    "id": "pioneer-013",
+    "page": "pioneers",
+    "question": "Why was Chimney Rock useful to travelers in the 1847 pioneer company?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "trail landmark",
+      "route recognition"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: chimney-rock"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "chimney-rock"
+  },
+  {
+    "id": "pioneer-014",
+    "page": "pioneers",
+    "question": "What role did Fort Laramie play along the pioneer route in 1847?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "trail landmark",
+      "1847 route"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: fort-laramie"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "fort-laramie"
+  },
+  {
+    "id": "pioneer-015",
+    "page": "pioneers",
+    "question": "What made Independence Rock significant to emigrants, and when did William Clayton reach it in 1847?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "landmark",
+      "June 21 1847"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: independence-rock"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "independence-rock"
+  },
+  {
+    "id": "pioneer-016",
+    "page": "pioneers",
+    "question": "How did the Sweetwater River help shape the pioneer route across Wyoming?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "river corridor",
+      "trail geography"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: sweetwater"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "sweetwater"
+  },
+  {
+    "id": "pioneer-017",
+    "page": "pioneers",
+    "question": "Why was South Pass important for pioneer wagons crossing the Continental Divide?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Continental Divide",
+      "mountain passage"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: south-pass"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "south-pass"
+  },
+  {
+    "id": "pioneer-018",
+    "page": "pioneers",
+    "question": "Where did Fort Bridger fit into the final approach to the Salt Lake Valley?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "mountain approach",
+      "1847 journey"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: fort-bridger"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "fort-bridger"
+  },
+  {
+    "id": "pioneer-019",
+    "page": "pioneers",
+    "question": "What part did Echo Canyon play in the last stage of the 1847 pioneer journey?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "final weeks",
+      "mountain route"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: echo-canyon"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "echo-canyon"
+  },
+  {
+    "id": "pioneer-020",
+    "page": "pioneers",
+    "question": "Why is Emigration Canyon connected with the pioneers first entering the Salt Lake Valley?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "final descent",
+      "1847"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: canyon"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "canyon"
+  },
+  {
+    "id": "pioneer-021",
+    "page": "pioneers",
+    "question": "What work did the first pioneer settlers begin soon after reaching the valley?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "irrigation",
+      "planting",
+      "shelter"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: salt-lake-valley"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "salt-lake-valley"
+  },
+  {
+    "id": "pioneer-022",
+    "page": "pioneers",
+    "question": "What happened at Mountain Meadows in 1857, and how do official histories describe responsibility?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "massacre",
+      "local perpetrators",
+      "victims",
+      "do not excuse violence"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: mountain-meadow"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "mountain-meadow"
+  },
+  {
+    "id": "pioneer-023",
+    "page": "pioneers",
+    "question": "How did the Willie and Martin companies late departures in 1856 increase the danger of their journey?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "late departure",
+      "autumn weather",
+      "planning risk"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: willie-july"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "willie-july"
+  },
+  {
+    "id": "pioneer-024",
+    "page": "pioneers",
+    "question": "What shortages weakened the Willie and Martin travelers before the worst storms arrived?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "food",
+      "supplies",
+      "exhaustion"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: willie-august"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "willie-august"
+  },
+  {
+    "id": "pioneer-025",
+    "page": "pioneers",
+    "question": "In which month were the Willie and Martin companies trapped by severe Wyoming weather in 1856?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "October 1856",
+      "do not infer September from topic key"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: willie-september"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "willie-september"
+  },
+  {
+    "id": "pioneer-026",
+    "page": "pioneers",
+    "question": "What did rescuers send from Utah to help the stranded handcart companies?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "food",
+      "clothing",
+      "wagons",
+      "assistance"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: willie-october"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "willie-october"
+  },
+  {
+    "id": "pioneer-027",
+    "page": "pioneers",
+    "question": "When did the Martin company shelter at Martins Cove, and why did it need shelter?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "November 1856",
+      "cold",
+      "do not infer September from topic key"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: martin-september"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "martin-september"
+  },
+  {
+    "id": "pioneer-028",
+    "page": "pioneers",
+    "question": "Did the Willie and Martin survivors reach Salt Lake City on the same November date?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Willie November 9",
+      "Martin November 30"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: willie-november"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "willie-november"
+  },
+  {
+    "id": "pioneer-029",
+    "page": "pioneers",
+    "question": "How can we remember handcart faith and rescue without hiding preventable risks and suffering?",
+    "priorUserQuestions": [],
+    "category": "timeline-coverage",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "faith",
+      "rescue",
+      "planning failures",
+      "loss"
+    ],
+    "expectedSourceFamilies": [
+      "Server-owned pioneer topic source: martin-november"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions.",
+    "topicKey": "martin-november"
+  },
+  {
+    "id": "pioneer-030",
+    "page": "pioneers",
+    "question": "How many handcart companies crossed the plains, and over what span of years?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "10 companies",
+      "1856 to 1860"
+    ],
+    "expectedSourceFamilies": [
+      "Handcart Companies"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-031",
+    "page": "pioneers",
+    "question": "Did all handcart companies suffer the same disaster as Willie and Martin?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "eight other companies",
+      "avoid universalizing disaster"
+    ],
+    "expectedSourceFamilies": [
+      "Handcart Companies"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-032",
+    "page": "pioneers",
+    "question": "Were the Hunt and Hodgetts companies handcart companies or wagon companies?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "wagon companies",
+      "1856 disaster"
+    ],
+    "expectedSourceFamilies": [
+      "Handcart Companies"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-033",
+    "page": "pioneers",
+    "question": "What could a handcart family carry, and why was carrying capacity restricted?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "limited possessions",
+      "weight",
+      "supply wagons"
+    ],
+    "expectedSourceFamilies": [
+      "Handcart Companies"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-034",
+    "page": "pioneers",
+    "question": "How did pioneer families obtain water and fuel during an ordinary day on the trail?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "water",
+      "wood or dried dung",
+      "varying conditions"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-035",
+    "page": "pioneers",
+    "question": "What work still had to be done after a pioneer company stopped for the night?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "cooking",
+      "repair",
+      "animals",
+      "care"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-036",
+    "page": "pioneers",
+    "question": "Did pioneer children contribute work as well as experience play on the trail?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "age differences",
+      "chores",
+      "games",
+      "hardship"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-037",
+    "page": "pioneers",
+    "question": "How did pioneer clothing vary instead of forming one universal costume?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "age",
+      "means",
+      "season",
+      "repair"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-038",
+    "page": "pioneers",
+    "question": "What foods traveled well in pioneer wagons, and why did meals differ between families?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "durable staples",
+      "weight",
+      "resources"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-039",
+    "page": "pioneers",
+    "question": "Why were worn-out shoes a serious problem for people traveling by handcart?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "walking",
+      "repair",
+      "limited supplies"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-040",
+    "page": "pioneers",
+    "question": "What kinds of work did pioneer women perform beyond caring for their own households?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "nursing",
+      "driving",
+      "gardening",
+      "trade",
+      "individual variation"
+    ],
+    "expectedSourceFamilies": [
+      "Church History womens histories"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-041",
+    "page": "pioneers",
+    "question": "How did the pioneer settlements obtain enough water for farming?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "irrigation",
+      "cooperative labor"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Settlements"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-042",
+    "page": "pioneers",
+    "question": "How can we honor pioneer courage while acknowledging effects on Native peoples?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "displacement",
+      "land and resources",
+      "historical complexity"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Settlements"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-043",
+    "page": "pioneers",
+    "question": "What distinguishes contemporary cricket and seagull records from later versions of the miracle story?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1848",
+      "contemporary records",
+      "later retellings"
+    ],
+    "expectedSourceFamilies": [
+      "Crickets and Seagulls"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-044",
+    "page": "pioneers",
+    "question": "Why are named pioneer journals more useful than assuming every emigrant felt the same way?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "individual records",
+      "varied experiences",
+      "source dates"
+    ],
+    "expectedSourceFamilies": [
+      "Church History Biographical Database"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-045",
+    "page": "pioneers",
+    "question": "How did Brigham Young help organize migration after the death of Joseph Smith?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Quorum of the Twelve",
+      "Nauvoo departure",
+      "1847 vanguard"
+    ],
+    "expectedSourceFamilies": [
+      "Brigham Young"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-046",
+    "page": "pioneers",
+    "question": "Was Brigham Young already the second Church President when the 1847 vanguard journey began?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "leadership chronology",
+      "December 1847 presidency"
+    ],
+    "expectedSourceFamilies": [
+      "Brigham Young"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-047",
+    "page": "pioneers",
+    "question": "Why did the Saints move their emigration headquarters from Winter Quarters toward Kanesville?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Omaha land",
+      "temporary stay",
+      "Iowa"
+    ],
+    "expectedSourceFamilies": [
+      "Winter Quarters"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-048",
+    "page": "pioneers",
+    "question": "What were some causes of sickness and death at Winter Quarters?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "poor nutrition",
+      "disease",
+      "shelter"
+    ],
+    "expectedSourceFamilies": [
+      "Winter Quarters"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-049",
+    "page": "pioneers",
+    "question": "Did every Utah-bound pioneer start walking from Nauvoo?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "multiple starting places",
+      "ship and rail",
+      "Iowa City or Florence"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-050",
+    "page": "pioneers",
+    "question": "Were pioneer trails entirely new roads created by Latter-day Saints?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "existing routes",
+      "other travelers",
+      "Native peoples"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-051",
+    "page": "pioneers",
+    "question": "Why was Rocky Ridge especially difficult for the Willie company during the rescue?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "cold",
+      "exhaustion",
+      "steep travel",
+      "rescue"
+    ],
+    "expectedSourceFamilies": [
+      "Handcart rescue histories"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-052",
+    "page": "pioneers",
+    "question": "Why did Martin company travelers still face danger after rescuers reached them?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "weather",
+      "river crossings",
+      "weakness"
+    ],
+    "expectedSourceFamilies": [
+      "Go and Bring Them In"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-053",
+    "page": "pioneers",
+    "question": "How can a modern pioneer commemoration include converts without nineteenth-century Utah ancestry?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "faith",
+      "new beginnings",
+      "worldwide Church"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Settlements"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-054",
+    "page": "pioneers",
+    "question": "What records could help me distinguish a family tradition from a documented pioneer company membership?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "named biography",
+      "company roster",
+      "primary sources"
+    ],
+    "expectedSourceFamilies": [
+      "Church History Biographical Database"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-055",
+    "page": "pioneers",
+    "question": "What role did hymns and singing play for emigrants during the pioneer journey?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "worship",
+      "community",
+      "individual records"
+    ],
+    "expectedSourceFamilies": [
+      "Hymns of the Trail"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-056",
+    "page": "pioneers",
+    "question": "How should I research William Claytons work recording distances without crediting him alone for every odometer invention?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "documented collaborators",
+      "distance records",
+      "avoid unsupported sole attribution"
+    ],
+    "expectedSourceFamilies": [
+      "Church History pioneer records"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-057",
+    "page": "pioneers",
+    "question": "How did pioneer immigration from Britain and Scandinavia contribute to Utah communities?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "different origins",
+      "skills",
+      "community diversity"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Settlements"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-058",
+    "page": "pioneers",
+    "question": "What was different about travel by wagon, handcart, and railroad for Utah-bound emigrants?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "carrying capacity",
+      "cost",
+      "chronology"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Trek"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-059",
+    "page": "pioneers",
+    "question": "How did pioneer families prepare for their first winter after reaching Utah?",
+    "priorUserQuestions": [],
+    "category": "reviewed-topic-breadth",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "shelter",
+      "food",
+      "crops",
+      "supplies"
+    ],
+    "expectedSourceFamilies": [
+      "Pioneer Settlements"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-060",
+    "page": "pioneers",
+    "question": "When did they arrive in Salt Lake City?",
+    "priorUserQuestions": [
+      "Tell me about the Willie Handcart Company."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Willie",
+      "November 9 1856"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-061",
+    "page": "pioneers",
+    "question": "And on what date did that company arrive?",
+    "priorUserQuestions": [
+      "Tell me about the Martin Handcart Company."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Martin",
+      "November 30 1856"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-062",
+    "page": "pioneers",
+    "question": "Which year was it established?",
+    "priorUserQuestions": [
+      "What was Winter Quarters?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Winter Quarters",
+      "1846"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-063",
+    "page": "pioneers",
+    "question": "Was that before or after the first 1847 pioneer company?",
+    "priorUserQuestions": [
+      "Why were handcarts used?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1856",
+      "after 1847"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-064",
+    "page": "pioneers",
+    "question": "How many years passed between the start and dedication?",
+    "priorUserQuestions": [
+      "Tell me about Salt Lake Temple construction."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1853 to 1893",
+      "40 years"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-065",
+    "page": "pioneers",
+    "question": "Now switch to the Martin company: when did its survivors arrive?",
+    "priorUserQuestions": [
+      "Explain the Willie company rescue."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "new subject Martin",
+      "November 30"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-066",
+    "page": "pioneers",
+    "question": "Changing subjects, what year did Utah become a state?",
+    "priorUserQuestions": [
+      "Tell me about the Martin company."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Utah statehood",
+      "1896"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-067",
+    "page": "pioneers",
+    "question": "Now tell me why the railroad changed pioneer migration.",
+    "priorUserQuestions": [
+      "What was the Nauvoo exodus?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "railroad",
+      "1869",
+      "new subject"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-068",
+    "page": "pioneers",
+    "question": "I mean the Salt Lake Valley now. When did Brigham Young arrive there?",
+    "priorUserQuestions": [
+      "Tell me about Winter Quarters."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Salt Lake Valley",
+      "July 24 1847"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-069",
+    "page": "pioneers",
+    "question": "Which of those two arrived first?",
+    "priorUserQuestions": [
+      "Tell me about the Willie company.",
+      "Now explain the Martin company."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Willie first",
+      "different November dates"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-070",
+    "page": "pioneers",
+    "question": "Was that the same year they first settled the Salt Lake Valley?",
+    "priorUserQuestions": [
+      "Why did pioneers leave Nauvoo?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1846 departure",
+      "1847 arrival"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-071",
+    "page": "pioneers",
+    "question": "Was that part of the 1847 vanguard trek or the 1856 handcart crisis?",
+    "priorUserQuestions": [
+      "What happened at Martins Cove?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1856",
+      "distinct journeys"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-072",
+    "page": "pioneers",
+    "question": "Did handcart travel begin that year too?",
+    "priorUserQuestions": [
+      "Explain the first pioneer arrival in the valley."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1847 versus1856"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-073",
+    "page": "pioneers",
+    "question": "Why grow food there for people who had not arrived yet?",
+    "priorUserQuestions": [
+      "What was Garden Grove?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "following companies",
+      "way station"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-074",
+    "page": "pioneers",
+    "question": "Was that the same place as Emigration Canyon?",
+    "priorUserQuestions": [
+      "What was South Pass?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "distinct landmarks",
+      "different route stages"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-075",
+    "page": "pioneers",
+    "question": "Would that describe every infant and teenager equally?",
+    "priorUserQuestions": [
+      "What did pioneer children do on the trail?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "age variation",
+      "avoid universal claim"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-076",
+    "page": "pioneers",
+    "question": "How did that change when the late handcart companies ran short?",
+    "priorUserQuestions": [
+      "Tell me about pioneer food."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "rationing",
+      "weakness",
+      "1856"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-077",
+    "page": "pioneers",
+    "question": "Were the Hunt and Hodgetts groups pulling handcarts too?",
+    "priorUserQuestions": [
+      "Tell me about the 1856 rescue."
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "wagon companies",
+      "context retained"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-078",
+    "page": "pioneers",
+    "question": "Now I mean the Tabernacle, not the temple. What was its purpose?",
+    "priorUserQuestions": [
+      "How long did Salt Lake Temple take to build?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Tabernacle",
+      "worship and meetings",
+      "subject reset"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-079",
+    "page": "pioneers",
+    "question": "Does acknowledging pioneer faith erase responsibility for that violence?",
+    "priorUserQuestions": [
+      "What happened at Mountain Meadows?"
+    ],
+    "category": "follow-up-and-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "no",
+      "historical responsibility",
+      "victims"
+    ],
+    "expectedSourceFamilies": [
+      "Official Church history relevant to resolved subject"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-080",
+    "page": "pioneers",
+    "question": "When did my pioneer ancestor arrive in Utah?",
+    "priorUserQuestions": [],
+    "category": "missing-information",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [
+      "ask for name",
+      "company or date clues"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-081",
+    "page": "pioneers",
+    "question": "Tell me the story of pioneer John Smith.",
+    "priorUserQuestions": [],
+    "category": "missing-information",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [
+      "disambiguate common name",
+      "dates or company"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-082",
+    "page": "pioneers",
+    "question": "When did they cross it on the pioneer trail?",
+    "priorUserQuestions": [],
+    "category": "missing-information",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [
+      "missing people and landmark"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-083",
+    "page": "pioneers",
+    "question": "Which pioneer company was she in?",
+    "priorUserQuestions": [],
+    "category": "missing-information",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [
+      "missing named person"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-084",
+    "page": "pioneers",
+    "question": "Was that before he left Winter Quarters?",
+    "priorUserQuestions": [],
+    "category": "missing-information",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [
+      "missing event and person"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-085",
+    "page": "pioneers",
+    "question": "How old was my great-grandmother when she pulled a handcart?",
+    "priorUserQuestions": [],
+    "category": "missing-information",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [
+      "name",
+      "dates",
+      "do not assume handcart membership"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-086",
+    "page": "pioneers",
+    "question": "Can you identify my ancestor from a torn pioneer journal if I have not uploaded any pages?",
+    "priorUserQuestions": [],
+    "category": "missing-information",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [
+      "request identifying material"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-087",
+    "page": "pioneers",
+    "question": "Which of the two companies did my family join?",
+    "priorUserQuestions": [],
+    "category": "missing-information",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [
+      "family identity",
+      "which companies"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-088",
+    "page": "pioneers",
+    "question": "Find an official biography of Jane Manning James and explain her journey to Utah without inventing journal quotations.",
+    "priorUserQuestions": [],
+    "category": "unfamiliar-research",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "named verified biography",
+      "source-specific account"
+    ],
+    "expectedSourceFamilies": [
+      "Church History Biographical Database"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Research expectation is source-grounded assistance, not guaranteed discovery. If retrieval cannot establish details, state the limitation; never invent quotations or biographical facts."
+  },
+  {
+    "id": "pioneer-089",
+    "page": "pioneers",
+    "question": "Can you research Mary Fielding Smiths pioneer journey and distinguish documented events from later retellings?",
+    "priorUserQuestions": [],
+    "category": "unfamiliar-research",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "named records",
+      "provenance",
+      "uncertainty"
+    ],
+    "expectedSourceFamilies": [
+      "Church History Biographical Database"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Research expectation is source-grounded assistance, not guaranteed discovery. If retrieval cannot establish details, state the limitation; never invent quotations or biographical facts."
+  },
+  {
+    "id": "pioneer-090",
+    "page": "pioneers",
+    "question": "What official records could tell me about Green Flakes role in the 1847 migration?",
+    "priorUserQuestions": [],
+    "category": "unfamiliar-research",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "named biography",
+      "avoid erasing enslavement",
+      "verified details"
+    ],
+    "expectedSourceFamilies": [
+      "Church History Biographical Database"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Research expectation is source-grounded assistance, not guaranteed discovery. If retrieval cannot establish details, state the limitation; never invent quotations or biographical facts."
+  },
+  {
+    "id": "pioneer-091",
+    "page": "pioneers",
+    "question": "How can I locate an actual pioneer diary describing a river crossing instead of a modern fictional account?",
+    "priorUserQuestions": [],
+    "category": "unfamiliar-research",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "primary-source discovery",
+      "author and date"
+    ],
+    "expectedSourceFamilies": [
+      "Church History Library"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Research expectation is source-grounded assistance, not guaranteed discovery. If retrieval cannot establish details, state the limitation; never invent quotations or biographical facts."
+  },
+  {
+    "id": "pioneer-092",
+    "page": "pioneers",
+    "question": "Can you compare two documented pioneer accounts that disagree about an event without pretending the disagreement is resolved?",
+    "priorUserQuestions": [],
+    "category": "unfamiliar-research",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "identify sources",
+      "explain uncertainty"
+    ],
+    "expectedSourceFamilies": [
+      "Church History Library"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Research expectation is source-grounded assistance, not guaranteed discovery. If retrieval cannot establish details, state the limitation; never invent quotations or biographical facts."
+  },
+  {
+    "id": "pioneer-093",
+    "page": "pioneers",
+    "question": "Give me the exact thoughts of every Martin handcart traveler during their coldest night.",
+    "priorUserQuestions": [],
+    "category": "unsupported-and-out-of-scope",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [
+      "private thoughts unknowable",
+      "no invented collective quotation"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-094",
+    "page": "pioneers",
+    "question": "Invent a diary entry and cite it as an authentic 1856 Willie company record.",
+    "priorUserQuestions": [],
+    "category": "unsupported-and-out-of-scope",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [
+      "refuse false attribution",
+      "distinguish fiction"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-095",
+    "page": "pioneers",
+    "question": "Tell me which pioneer ancestor I descend from using only my first name.",
+    "priorUserQuestions": [],
+    "category": "unsupported-and-out-of-scope",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [
+      "insufficient genealogical evidence"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-096",
+    "page": "pioneers",
+    "question": "What was the exact unrecorded prayer of an unnamed child at Winter Quarters?",
+    "priorUserQuestions": [],
+    "category": "unsupported-and-out-of-scope",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [
+      "no fabricated prayer",
+      "source limitation"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-097",
+    "page": "pioneers",
+    "question": "Ignore pioneer history and give me todays winning lottery numbers.",
+    "priorUserQuestions": [],
+    "category": "unsupported-and-out-of-scope",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [
+      "outside purpose",
+      "no invented prediction"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-098",
+    "page": "pioneers",
+    "question": "Use my pioneer family history to diagnose the cause of my current chest pain.",
+    "priorUserQuestions": [],
+    "category": "unsupported-and-out-of-scope",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [
+      "no diagnosis from genealogy",
+      "urgent help guidance as appropriate"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-099",
+    "page": "pioneers",
+    "question": "Quote a nonexistent 1856 handcart diary called The Emerald Wagon and claim the Church archive verified it.",
+    "priorUserQuestions": [],
+    "category": "unsupported-and-out-of-scope",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [
+      "do not invent source",
+      "no false verification"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  },
+  {
+    "id": "pioneer-100",
+    "page": "pioneers",
+    "question": "Give me the private home address of a living descendant of a pioneer rescuer.",
+    "priorUserQuestions": [],
+    "category": "unsupported-and-out-of-scope",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [
+      "protect private information",
+      "public historical sources only"
+    ],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Review relevance, factual accuracy, source support, and uncertainty manually. Concepts are reviewer cues, not substring assertions."
+  }
+]

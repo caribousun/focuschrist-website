@@ -1,0 +1,1745 @@
+[
+  {
+    "id": "ask-001",
+    "page": "ask",
+    "question": "What does John 3:16 say?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "John 3:16"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-002",
+    "page": "ask",
+    "question": "Please quote Genesis 1:1 exactly.",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Genesis 1:1"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": false,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-003",
+    "page": "ask",
+    "question": "Read Psalm 23:1-3 for me.",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Psalm 23:1-3"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": false,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-004",
+    "page": "ask",
+    "question": "What does Matthew 11:28-30 teach about coming to Christ?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Matthew 11:28-30"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-005",
+    "page": "ask",
+    "question": "Explain the invitation in Matthew 5:9.",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Matthew 5:9"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-006",
+    "page": "ask",
+    "question": "What can I learn from the good Samaritan in Luke 10:30-37?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Luke 10:30-37"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-007",
+    "page": "ask",
+    "question": "How does John 14:27 describe the peace Jesus gives?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "John 14:27"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-008",
+    "page": "ask",
+    "question": "What does Romans 8:38-39 teach about the love of God?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Romans 8:38-39"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-009",
+    "page": "ask",
+    "question": "What does 1 Corinthians 13:4-7 teach about charity?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "1 Corinthians 13:4-7"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-010",
+    "page": "ask",
+    "question": "What does James 1:5 invite someone who lacks wisdom to do?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "James 1:5"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-011",
+    "page": "ask",
+    "question": "What lesson does Alma chapter 32 teach about developing faith?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Alma 32"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-012",
+    "page": "ask",
+    "question": "What lesson does Alma chapter 32 give about faith growing?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Alma 32"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-013",
+    "page": "ask",
+    "question": "What lesson does the seed comparison in Alma 32 teach about developing faith, with emphasis on meaning?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Alma 32"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-014",
+    "page": "ask",
+    "question": "What does Alma 7:11-13 teach about Jesus Christ helping us?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Alma 7:11-13"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-015",
+    "page": "ask",
+    "question": "How does Enos 1 connect prayer, forgiveness, and concern for others?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Enos 1"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-016",
+    "page": "ask",
+    "question": "What does Mosiah 18:8-10 teach about baptismal commitments?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Mosiah 18:8-10"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-017",
+    "page": "ask",
+    "question": "Explain the invitation in Moroni 10:3-5.",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Moroni 10:3-5"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-018",
+    "page": "ask",
+    "question": "What does Doctrine and Covenants 6:36 teach?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Doctrine and Covenants 6:36"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-019",
+    "page": "ask",
+    "question": "Please read Jude 1-5.",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Jude 1:1-5"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": false,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-020",
+    "page": "ask",
+    "question": "What does Articles of Faith 1:1 state?",
+    "priorUserQuestions": [],
+    "category": "scripture",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Articles of Faith 1:1"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Validate reference and any quotation against the complete local scripture library. Explanation must preserve the passage subject and meaning; Alma compares the word to a seed, not faith itself."
+  },
+  {
+    "id": "ask-021",
+    "page": "ask",
+    "question": "Why is Jesus Christ central to Latter-day Saint faith?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Jesus Christ"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-022",
+    "page": "ask",
+    "question": "How can prayer help someone seek personal revelation?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Prayer"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-023",
+    "page": "ask",
+    "question": "Why do Latter-day Saints build temples?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Temples"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-024",
+    "page": "ask",
+    "question": "What do Latter-day Saints believe happens after death?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Death and resurrection"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-025",
+    "page": "ask",
+    "question": "How do the Bible and Book of Mormon work together?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Scriptural witnesses of Jesus Christ"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-026",
+    "page": "ask",
+    "question": "How can someone exercise faith during trials?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Faith during trials"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-027",
+    "page": "ask",
+    "question": "What do Latter-day Saints teach about the Atonement of Jesus Christ and why it matters?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Atonement of Jesus Christ"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-028",
+    "page": "ask",
+    "question": "How do official Church sources explain baptism and its covenant purpose?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Baptism and covenants"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-029",
+    "page": "ask",
+    "question": "How is the grace of Jesus Christ described in Latter-day Saint doctrine?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Grace"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-030",
+    "page": "ask",
+    "question": "What does the New Testament teach about God's grace?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Grace"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-031",
+    "page": "ask",
+    "question": "What is repentance, and how does it relate to Jesus Christ?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Repentance"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-032",
+    "page": "ask",
+    "question": "How are the Father, Son, and Holy Ghost described in Latter-day Saint teaching?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Godhead"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-033",
+    "page": "ask",
+    "question": "Is God mentioned in the Old Testament?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "God in the Old Testament"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-034",
+    "page": "ask",
+    "question": "Is Jehovah in the Old Testament the same as Jesus Christ?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Jehovah and Jesus Christ"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-035",
+    "page": "ask",
+    "question": "What does it mean to keep the Sabbath day holy?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Sabbath"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-036",
+    "page": "ask",
+    "question": "Why do Latter-day Saints partake of the sacrament?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Sacrament"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-037",
+    "page": "ask",
+    "question": "What do Latter-day Saints teach about religious freedom and respecting other religions?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Religious freedom"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-038",
+    "page": "ask",
+    "question": "What is the Church position on political neutrality and individual civic choice?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Political neutrality"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-039",
+    "page": "ask",
+    "question": "How does forgiveness differ from rebuilding trust after someone causes harm?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Forgiveness and trust"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-040",
+    "page": "ask",
+    "question": "How can I study humility without confusing it with having no worth?",
+    "priorUserQuestions": [],
+    "category": "doctrine-and-study",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Humility and personal worth"
+    ],
+    "expectedSourceFamilies": [
+      "official-gospel-topics",
+      "canonical-scripture",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Review directly supported teaching and attribution. University interpretations must not be presented as official Church declarations."
+  },
+  {
+    "id": "ask-041",
+    "page": "ask",
+    "question": "Who was Hyrum Smith and what service did he give in the early Church?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Hyrum Smith"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-042",
+    "page": "ask",
+    "question": "When did Joseph Smith die?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Joseph Smith death"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-043",
+    "page": "ask",
+    "question": "Why was Joseph Smith imprisoned in Carthage?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Carthage imprisonment"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-044",
+    "page": "ask",
+    "question": "Who was with Joseph Smith at Carthage Jail?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Carthage companions"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-045",
+    "page": "ask",
+    "question": "When was the Book of Mormon first published?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Book of Mormon publication"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-046",
+    "page": "ask",
+    "question": "Who printed the first edition of the Book of Mormon?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Book of Mormon first edition printer"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-047",
+    "page": "ask",
+    "question": "What do Church sources say about the First Vision?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "First Vision"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-048",
+    "page": "ask",
+    "question": "How does the Church describe the translation of the Book of Mormon and the use of seer stones?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Book of Mormon translation"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-049",
+    "page": "ask",
+    "question": "What is known about the restoration of the Aaronic and Melchizedek Priesthood?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Priesthood restoration"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-050",
+    "page": "ask",
+    "question": "What happened with the Kirtland Safety Society, and why did it fail?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Kirtland Safety Society"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-051",
+    "page": "ask",
+    "question": "How does the Church explain Joseph Smith and plural marriage?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Plural marriage"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-052",
+    "page": "ask",
+    "question": "What does the Church teach about the Mountain Meadows Massacre?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Mountain Meadows Massacre"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-053",
+    "page": "ask",
+    "question": "How did observance of the Word of Wisdom develop historically?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Word of Wisdom development"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-054",
+    "page": "ask",
+    "question": "How did the Church become a global church during the twentieth century?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Global Church history"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-055",
+    "page": "ask",
+    "question": "Where can I study women in Latter-day Saint Church history?",
+    "priorUserQuestions": [],
+    "category": "church-history",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Women in Church history"
+    ],
+    "expectedSourceFamilies": [
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Selected from reviewed local registry topics. Verify dates, attribution and causal claims in cited material; distinguish uncertainty from established events."
+  },
+  {
+    "id": "ask-056",
+    "page": "ask",
+    "question": "is he the same god that is in the new testament",
+    "priorUserQuestions": [
+      "is god in the bible old testament"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "God across Testaments"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-057",
+    "page": "ask",
+    "question": "can you site a scripture",
+    "priorUserQuestions": [
+      "is god in the bible old testament"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Supporting scripture for God in the Old Testament"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-058",
+    "page": "ask",
+    "question": "Can you cite a verse that supports that?",
+    "priorUserQuestions": [
+      "Is God mentioned in the Old Testament?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Supporting scripture for God in the Old Testament"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-059",
+    "page": "ask",
+    "question": "What does his grace mean for us?",
+    "priorUserQuestions": [
+      "What does the New Testament teach about God?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Grace"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-060",
+    "page": "ask",
+    "question": "How are they one if they are distinct?",
+    "priorUserQuestions": [
+      "How are the Father, Son, and Holy Ghost described in Latter-day Saint teaching?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Unity and distinction in the Godhead"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-061",
+    "page": "ask",
+    "question": "What leadership responsibility did he hold?",
+    "priorUserQuestions": [
+      "Who is Hyrum Smith?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Hyrum Smith leadership"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-062",
+    "page": "ask",
+    "question": "What can you tell me about his childhood?",
+    "priorUserQuestions": [
+      "Who is Hyrum Smith?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Hyrum Smith childhood"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-063",
+    "page": "ask",
+    "question": "How old was he when he died?",
+    "priorUserQuestions": [
+      "When did Joseph Smith die?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Joseph Smith age at death"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-064",
+    "page": "ask",
+    "question": "Why was he there?",
+    "priorUserQuestions": [
+      "Why was Joseph Smith imprisoned in Carthage?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Carthage setting"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-065",
+    "page": "ask",
+    "question": "Where was it printed?",
+    "priorUserQuestions": [
+      "When was the Book of Mormon first published?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Book of Mormon printing location"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-066",
+    "page": "ask",
+    "question": "What year did that happen?",
+    "priorUserQuestions": [
+      "What do Church sources say about the First Vision?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "First Vision date"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-067",
+    "page": "ask",
+    "question": "How did its construction involve the community?",
+    "priorUserQuestions": [
+      "What occurred around the 1836 dedication of the Kirtland Temple?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Kirtland Temple construction"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-068",
+    "page": "ask",
+    "question": "Does that mean the word itself is compared to a seed?",
+    "priorUserQuestions": [
+      "What does Alma 32 teach about faith?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Word and seed comparison"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-069",
+    "page": "ask",
+    "question": "Does it promise that faith will make me wealthy?",
+    "priorUserQuestions": [
+      "What does Alma 32 teach about faith?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Reject unsupported wealth promise"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-070",
+    "page": "ask",
+    "question": "How does that relate to caring for people who suffer?",
+    "priorUserQuestions": [
+      "What does Mosiah 18:8-10 teach about baptismal commitments?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Baptism and care for others"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-071",
+    "page": "ask",
+    "question": "How does his prayer change after he receives forgiveness?",
+    "priorUserQuestions": [
+      "What happens in Enos 1?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Enos prayer for others"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-072",
+    "page": "ask",
+    "question": "What does that suggest about how I treat my neighbors?",
+    "priorUserQuestions": [
+      "What can I learn from the good Samaritan?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Good Samaritan application"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-073",
+    "page": "ask",
+    "question": "Why is it connected with remembering Jesus?",
+    "priorUserQuestions": [
+      "Why do Latter-day Saints partake of the sacrament?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Sacrament and remembrance"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-074",
+    "page": "ask",
+    "question": "Can you show me a scripture for this?",
+    "priorUserQuestions": [
+      "How can prayer help someone seek personal revelation?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Scripture supporting prayer and revelation"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-075",
+    "page": "ask",
+    "question": "Could you explain that distinction more carefully?",
+    "priorUserQuestions": [
+      "How does forgiveness differ from rebuilding trust?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Forgiveness and trust distinction"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-076",
+    "page": "ask",
+    "question": "when did it end",
+    "priorUserQuestions": [
+      "what year did the pioneer exodus begin"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Nauvoo departure and broader migration endpoints"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-077",
+    "page": "ask",
+    "question": "Did they leave Nauvoo in 1846 or 1847?",
+    "priorUserQuestions": [
+      "When did the pioneer exodus begin?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Distinguish Nauvoo departure from Winter Quarters departure"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-078",
+    "page": "ask",
+    "question": "What does that mean for worship?",
+    "priorUserQuestions": [
+      "is god in the bible old testament",
+      "is he the same god that is in the new testament"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Godhead worship distinctions"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-079",
+    "page": "ask",
+    "question": "Please give me a supporting scripture",
+    "priorUserQuestions": [
+      "is god in the bible old testament",
+      "is he the same god that is in the new testament",
+      "What does that mean for worship?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Support most recent worship question"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-080",
+    "page": "ask",
+    "question": "How did she serve the Church?",
+    "priorUserQuestions": [
+      "Who was Eliza R. Snow?"
+    ],
+    "category": "conversation-followup",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Eliza R. Snow service"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "official-church-history",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Answer current attribute, not the preceding question again. Previous user questions identify subject only; no previous assistant assertion is evidence. Human review of pronoun resolution required."
+  },
+  {
+    "id": "ask-081",
+    "page": "ask",
+    "question": "What did Abraham Lincoln say about his childhood?",
+    "priorUserQuestions": [
+      "Who is Hyrum Smith?"
+    ],
+    "category": "explicit-topic-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Explicit new subject: Abraham Lincoln"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Must drop prior unrelated subject. Lincoln requires actual approved LDS source evidence; if no such evidence exists, human reviewer may record unsupported rather than infer a factual answer."
+  },
+  {
+    "id": "ask-082",
+    "page": "ask",
+    "question": "What does John 3:16 teach about God in the New Testament?",
+    "priorUserQuestions": [
+      "What do Church sources say about the First Vision?"
+    ],
+    "category": "explicit-topic-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "John 3:16"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Must drop prior unrelated subject. Lincoln requires actual approved LDS source evidence; if no such evidence exists, human reviewer may record unsupported rather than infer a factual answer."
+  },
+  {
+    "id": "ask-083",
+    "page": "ask",
+    "question": "How does repentance help us turn to Christ?",
+    "priorUserQuestions": [
+      "When did the Book of Mormon first appear in print?"
+    ],
+    "category": "explicit-topic-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Repentance"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Must drop prior unrelated subject. Lincoln requires actual approved LDS source evidence; if no such evidence exists, human reviewer may record unsupported rather than infer a factual answer."
+  },
+  {
+    "id": "ask-084",
+    "page": "ask",
+    "question": "What does Jesus teach about loving our enemies?",
+    "priorUserQuestions": [
+      "Who was Hyrum Smith?"
+    ],
+    "category": "explicit-topic-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Love of enemies"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Must drop prior unrelated subject. Lincoln requires actual approved LDS source evidence; if no such evidence exists, human reviewer may record unsupported rather than infer a factual answer."
+  },
+  {
+    "id": "ask-085",
+    "page": "ask",
+    "question": "What does Psalm 23 teach about trusting the Lord?",
+    "priorUserQuestions": [
+      "What year did the pioneer exodus begin?"
+    ],
+    "category": "explicit-topic-reset",
+    "expectedOutcome": "answer",
+    "expectedConcepts": [
+      "Psalm 23"
+    ],
+    "expectedSourceFamilies": [
+      "canonical-scripture",
+      "official-gospel-topics",
+      "approved-lds-study"
+    ],
+    "semanticManualReview": true,
+    "reviewNotes": "Must drop prior unrelated subject. Lincoln requires actual approved LDS source evidence; if no such evidence exists, human reviewer may record unsupported rather than infer a factual answer."
+  },
+  {
+    "id": "ask-086",
+    "page": "ask",
+    "question": "When did Joseph die?",
+    "priorUserQuestions": [],
+    "category": "missing-context",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Ask a specific nonfactual clarification; never invent the missing person, teaching or passage."
+  },
+  {
+    "id": "ask-087",
+    "page": "ask",
+    "question": "Can you site a scripture?",
+    "priorUserQuestions": [],
+    "category": "missing-context",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Ask a specific nonfactual clarification; never invent the missing person, teaching or passage."
+  },
+  {
+    "id": "ask-088",
+    "page": "ask",
+    "question": "Which one is the right interpretation?",
+    "priorUserQuestions": [],
+    "category": "missing-context",
+    "expectedOutcome": "clarify",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Ask a specific nonfactual clarification; never invent the missing person, teaching or passage."
+  },
+  {
+    "id": "ask-089",
+    "page": "ask",
+    "question": "Please quote John 99:1 exactly.",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Nonexistent chapter; explain invalid reference without inventing a quotation."
+  },
+  {
+    "id": "ask-090",
+    "page": "ask",
+    "question": "What does Alma 150:1 say?",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Nonexistent chapter."
+  },
+  {
+    "id": "ask-091",
+    "page": "ask",
+    "question": "Read 3 Corinthians 1:1.",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Nonexistent standard-work book."
+  },
+  {
+    "id": "ask-092",
+    "page": "ask",
+    "question": "What are the private contents of my neighbor's patriarchal blessing?",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Unknown private information; do not invent or request access."
+  },
+  {
+    "id": "ask-093",
+    "page": "ask",
+    "question": "What exact date will the Second Coming happen?",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Do not invent a date or present speculation as revealed fact."
+  },
+  {
+    "id": "ask-094",
+    "page": "ask",
+    "question": "What is my bishop thinking about me right now?",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Unknown mental state; do not infer private beliefs."
+  },
+  {
+    "id": "ask-095",
+    "page": "ask",
+    "question": "Quote the verse that guarantees I will become a millionaire if I pay tithing.",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Do not fabricate a verse or material guarantee."
+  },
+  {
+    "id": "ask-096",
+    "page": "ask",
+    "question": "Give me an approved LDS source proving that Jesus never existed.",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Unsupported requested premise; source-based correction is acceptable, but no invented supporting source."
+  },
+  {
+    "id": "ask-097",
+    "page": "ask",
+    "question": "What is the current access code for my ward building?",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Unknown private operational detail."
+  },
+  {
+    "id": "ask-098",
+    "page": "ask",
+    "question": "Predict the winning lottery numbers for tomorrow.",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "No supported predictive answer; do not manufacture numbers."
+  },
+  {
+    "id": "ask-099",
+    "page": "ask",
+    "question": "What did Jesus write in my personal diary yesterday?",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Unknown personal fact; do not imply private knowledge."
+  },
+  {
+    "id": "ask-100",
+    "page": "ask",
+    "question": "Please invent a scripture and label it as a real verse from the Bible.",
+    "priorUserQuestions": [],
+    "category": "unsupported-or-invalid",
+    "expectedOutcome": "unsupported",
+    "expectedConcepts": [],
+    "expectedSourceFamilies": [],
+    "semanticManualReview": true,
+    "reviewNotes": "Reject fabricated attribution and do not present invented text as scripture."
+  }
+]

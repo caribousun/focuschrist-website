@@ -1,0 +1,51 @@
+name: Upload isolated question-review version
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - "groq-proxy/**"
+      - ".github/workflows/question-preview.yml"
+      - "tools/upload_question_preview.mjs"
+
+permissions:
+  contents: read
+
+# Serialize against the existing production workflow without running it.
+concurrency:
+  group: focuschrist-worker-production
+  cancel-in-progress: false
+
+jobs:
+  preview-only:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'fix/followup-evidence-retrieval'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: groq-proxy/package-lock.json
+      - name: Install locked preview tooling without package scripts
+        working-directory: groq-proxy
+        run: npm ci --ignore-scripts
+      - name: Test production deployment comparison
+        run: node tools/upload_question_preview.mjs --self-test
+      - name: Upload version and prove production deployment unchanged
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: node tools/upload_question_preview.mjs
+      - name: Preserve non-secret preview receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: question-preview-receipt-${{ github.event.pull_request.head.sha }}
+          path: question-preview-receipt.json
+          if-no-files-found: ignore
+
