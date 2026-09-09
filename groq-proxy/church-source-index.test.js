@@ -548,23 +548,23 @@ try {
       label + ' must fail closed with one OpenAI call and no alternate provider');
   }
   const timedRepair = await runIndexedCase(() => {
-    if (verifierCalls === 1) return openAIResponse({ approved: true, answer: 'Hyrum Smith was a trusted early Church leader.', source_indexes: [1] });
+    if (verifierCalls <= 2) return openAIResponse({ approved: true, answer: 'Hyrum Smith was a trusted early Church leader.', source_indexes: [1] });
     const error = new Error('repair aborted'); error.name = 'AbortError'; throw error;
   });
   assert(verifierCalls === 3 && timedRepair.payload.focuschrist_source_integrity_verified === false
-    && timedRepair.payload.focuschrist_gateway_mode === 'verification-provider-error'
+    && timedRepair.payload.focuschrist_gateway_mode === 'verification-rejected'
     && timedRepair.payload.focuschrist_openai_verifier_calls === 3,
     'a timed-out required depth repair must fail closed with all OpenAI calls accounted for');
   const shallow = await runIndexedCase(() => openAIResponse({ approved: true, answer: 'Hyrum Smith was a Church leader.', source_indexes: [1] }));
   assert(verifierCalls === 3 && shallow.payload.focuschrist_source_integrity_verified === false,
     'a shallow answer and shallow repair must fail closed after the separate relationship audit');
-  const repaired = await runIndexedCase(() => openAIResponse(verifierCalls === 1 ? copiedVerdict() : accepted()));
-  assert(verifierCalls === 3 && verifierBodies[1].max_completion_tokens === 1000
-    && verifierBodies[1].messages[0].content.includes('Rewrite the answer in genuinely independent language')
-    && verifierBodies[1].messages[0].content.includes('previous answer also fails the overlap check')
+  const repaired = await runIndexedCase(() => openAIResponse(verifierCalls <= 2 ? copiedVerdict() : accepted()));
+  assert(verifierCalls === 4 && verifierBodies[2].max_completion_tokens === 1000
+    && verifierBodies[2].messages[0].content.includes('Rewrite the answer in genuinely independent language')
+    && verifierBodies[2].messages[0].content.includes('previous answer also fails the overlap check')
     && repaired.payload.focuschrist_source_integrity_verified === true
     && repaired.payload.focuschrist_verifier_route === 'openai-primary'
-    && repaired.payload.focuschrist_openai_verifier_calls === 3,
+    && repaired.payload.focuschrist_openai_verifier_calls === 4,
     'overcopied indexed evidence must receive one bounded OpenAI paraphrase repair');
   const copied = await runIndexedCase(() => openAIResponse(copiedVerdict()));
   assert(verifierCalls === 3 && copied.payload.focuschrist_source_integrity_verified === false

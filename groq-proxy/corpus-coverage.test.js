@@ -56,7 +56,7 @@ try {
       verifierCalls++;
       const body = JSON.parse(init.body);
       assert(body.messages[0].content.includes('named scriptural corpus') || body.messages[0].content.includes('Act as a skeptical source editor'));
-      return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:true,answer:(supportedRepair && verifierCalls >= 2 ? 'Ephesians 2:8 teaches that salvation is by grace through faith. ' : '') + 'Grace is the divine help that comes through Jesus Christ. God offers strength and forgiveness to those who turn toward Him. This gift helps people change and grow as they seek to follow His teachings. We depend on divine help rather than relying only on our own ability. The official study sources invite readers to deepen their trust in God and seek the assistance He provides throughout their lives. This doctrinal explanation describes a central teaching about grace and the power of Jesus Christ.',source_indexes:[1]})}}]}));
+      return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:true,answer:(supportedRepair && verifierCalls >= 3 ? 'Ephesians 2:8 teaches that salvation is by grace through faith. ' : '') + 'Grace is the divine help that comes through Jesus Christ. God offers strength and forgiveness to those who turn toward Him. This gift helps people change and grow as they seek to follow His teachings. We depend on divine help rather than relying only on our own ability. The official study sources invite readers to deepen their trust in God and seek the assistance He provides throughout their lives. This doctrinal explanation describes a central teaching about grace and the power of Jesus Christ.',source_indexes:[1]})}}]}));
     }
     if (target === 'https://api.openai.com/v1/responses') {
       searches++;
@@ -77,14 +77,14 @@ try {
   searchUnavailable = true; verifierCalls = 0; searches = 0;
   const outageResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',messages:[{role:'user',content:question}]})}),{OPENAI_API_KEY:'test-key'});
   const outage = await outageResponse.json();
-  assert.equal(searches,1); assert.equal(verifierCalls,1);
+  assert.equal(searches,1); assert.equal(verifierCalls,2);
   assert.equal(outage.focuschrist_source_integrity_verified,false);
   assert.equal(outage.focuschrist_gateway_mode,'research-unavailable');
   assert.match(outage.choices[0].message.content,/unable to check/);
   searchUnavailable = false; supportedRepair = true; verifierCalls = 0; searches = 0;
   const repairedResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',messages:[{role:'user',content:question}]})}),{OPENAI_API_KEY:'test-key'});
   const repaired = await repairedResponse.json();
-  assert.equal(searches,1); assert.equal(verifierCalls,3);
+  assert.equal(searches,1); assert.equal(verifierCalls,4);
   assert.equal(repaired.focuschrist_source_integrity_verified,true,JSON.stringify(repaired));
   assert.equal(repaired.focuschrist_scripture_validated,true);
   assert.equal('focuschrist_corpus_coverage_failure' in repaired,false);

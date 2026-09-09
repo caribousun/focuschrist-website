@@ -816,6 +816,7 @@ globalThis.fetch = async (_url, options) => {
   if (gatewayBodies.length === 1) {
     return searchResponse([{title:'Ada Lovelace biography',url:'https://rsc.byu.edu/offline-ada-fixture'}]);
   }
+  if (body.messages[0].content.includes('Act as a skeptical source editor')) return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:true,answer:body.messages[0].content.split('PROPOSED ANSWER: ')[1].split('\nEVIDENCE:')[0],source_indexes:[1]})}}]}));
   gatewayVerifierBodies.push(body);
   return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:true,answer:gatewayVerifierBodies.length===1?'Ada Lovelace died on November 27, 1852.':expandedGeneralAnswer,source_indexes:[1]})}}]}));
 };
@@ -833,7 +834,7 @@ try {
 
   });
   const gatewayPayload = await gatewayResponse.json();
-  assert(gatewayBodies.length === 4 && gatewayVerifierBodies.length === 3,
+  assert(gatewayBodies.length === 5 && gatewayVerifierBodies.length === 2,
     'a short verified answer must trigger exactly one evidence-only expansion pass');
   assert(gatewayVerifierBodies[1].messages[0].content.includes('previous approved answer did not meet')
     && gatewayVerifierBodies[1].messages[0].content.includes('at least 45 words'),
@@ -843,7 +844,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.78',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.79',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

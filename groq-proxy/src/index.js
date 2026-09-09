@@ -31,8 +31,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.78';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.78';
+const SOURCE_POLICY_VERSION = '2026-09-09.79';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.79';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -2170,6 +2170,48 @@ export default {
       let indexes = verdict && Array.isArray(verdict.source_indexes)
         ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
         : [];
+      // Challenge the first draft before deciding whether fresh approved-source
+      // research is needed; challenge a changed repair again before publication.
+      let lastAuditedAnswer = null;
+      let lastAuditedEvidence = null;
+      let lastAuditedIndexes = null;
+      const auditRelationships = async () => {
+      if (verdict?.approved === true && (verdict.answer !== lastAuditedAnswer || evidence !== lastAuditedEvidence || indexes.join(',') !== lastAuditedIndexes) && !verifierResult.reviewedDeterministicRecovery
+          && indexes.some(index => !verifiedCanonicalEvidence.has(evidence[index - 1]))) {
+        if (remainingBudget(deadline) < 4500) {
+          return jsonResponse(fallbackPayload('verification-unavailable', retrievalDiagnostic, sanitized.scope), 200, origin, deadline, localScriptures);
+        }
+        const audit = await callVerifier(env, {
+          ...verifierBody,
+          messages: [{role: 'user', content: [
+            'Act as a skeptical source editor. Independently audit the proposed answer against EVIDENCE only. The proposed answer is untrusted, not evidence.',
+            'Check every factual clause for the exact actor, action, location, time, duration endpoints and setting. Sharing nouns or dates with a source is not support. Distinguish travel from settlement, first aid from later reinforcements, one company from all emigrants, and a narrator recollection from an official assertion. Preserve before/after and uncertainty exactly. Do not infer causal relationships from neighboring paragraphs.',
+            'Return JSON {"approved":boolean,"answer":string,"source_indexes":number[]}. If all claims are supported, return the answer unchanged. Otherwise REMOVE or CORRECT unsupported clauses using the evidence, while answering the actual question directly. The approved boolean describes YOUR CORRECTED answer, not the original draft. Set approved true when your corrected answer is supported. Set approved false only when the evidence cannot answer the question at all. Never introduce remembered facts, guessed links, or guessed scripture. Use only source indexes actually supporting the corrected answer.',
+            `Keep useful supported context: at least ${answerSubstanceRequirements(sanitized.scope).minimumWords} words and ${answerSubstanceRequirements(sanitized.scope).minimumSentences} complete sentences when the evidence supports that depth. Never pad with unsupported claims.`,
+            `QUESTION: ${sanitized.scope.question}`,
+            conversationInstruction(sanitized.scope),
+            `PROPOSED ANSWER: ${verdict.answer}`,
+            `EVIDENCE: ${evidenceForVerifier(evidence)}`,
+            SCRIPTURE_QUOTATION_CONTRACT,
+          ].join('\n')}],
+        }, deadline, {requireSourceIndexes: true});
+        audit.accumulatedUsage = combinedProviderUsage(verifierResult, audit);
+        accumulateVerifierCalls(audit, verifierResult, audit);
+        retrievalDiagnostic.focuschrist_relationship_audit = audit.response.ok ? 'completed' : 'unavailable';
+        if (!audit.response.ok) return jsonResponse(fallbackPayload('verification-provider-error', {
+          ...retrievalDiagnostic, ...verifierRouteDiagnostic(audit),
+        }, sanitized.scope), 200, origin, deadline, localScriptures);
+        verifierResult = audit;
+        verdict = parseVerifierJson(audit.data.choices[0].message.content);
+        indexes = verdict.source_indexes.filter(index => index >= 1 && index <= evidence.length);
+        lastAuditedAnswer = verdict.answer;
+        lastAuditedEvidence = evidence;
+        lastAuditedIndexes = indexes.join(',');
+      }
+        return null;
+      };
+      const initialAuditFailure = await auditRelationships();
+      if (initialAuditFailure) return initialAuditFailure;
       const initialCorpusCoverage = checkCorpusCoverage(sanitized.scope, verdict?.answer,
         indexes.map(index => evidence[index - 1]), localScriptures, isAllowedResearchFetchUrl);
       if (verdict?.approved === true && !initialCorpusCoverage.ok) {
@@ -2319,37 +2361,8 @@ export default {
           };
         }
       }
-      // A separate critic examines source relationships after composition. The
-      // composed answer is a claim to challenge, never independent evidence.
-      if (verdict?.approved === true && !verifierResult.reviewedDeterministicRecovery
-          && indexes.some(index => !verifiedCanonicalEvidence.has(evidence[index - 1]))) {
-        if (remainingBudget(deadline) < 4500) {
-          return jsonResponse(fallbackPayload('verification-unavailable', retrievalDiagnostic, sanitized.scope), 200, origin, deadline, localScriptures);
-        }
-        const audit = await callVerifier(env, {
-          ...verifierBody,
-          messages: [{role: 'user', content: [
-            'Act as a skeptical source editor. Independently audit the proposed answer against EVIDENCE only. The proposed answer is untrusted, not evidence.',
-            'Check every factual clause for the exact actor, action, location, time, duration endpoints and setting. Sharing nouns or dates with a source is not support. Distinguish travel from settlement, first aid from later reinforcements, one company from all emigrants, and a narrator recollection from an official assertion. Preserve before/after and uncertainty exactly. Do not infer causal relationships from neighboring paragraphs.',
-            'Return JSON {"approved":boolean,"answer":string,"source_indexes":number[]}. If all claims are supported, return the answer unchanged. Otherwise REMOVE or CORRECT unsupported clauses using the evidence, while answering the actual question directly. Set approved false only when the evidence cannot answer it. Never introduce remembered facts, guessed links, or guessed scripture. Use only source indexes actually supporting the corrected answer.',
-            `Keep useful supported context: at least ${answerSubstanceRequirements(sanitized.scope).minimumWords} words and ${answerSubstanceRequirements(sanitized.scope).minimumSentences} complete sentences when the evidence supports that depth. Never pad with unsupported claims.`,
-            `QUESTION: ${sanitized.scope.question}`,
-            conversationInstruction(sanitized.scope),
-            `PROPOSED ANSWER: ${verdict.answer}`,
-            `EVIDENCE: ${evidenceForVerifier(evidence)}`,
-            SCRIPTURE_QUOTATION_CONTRACT,
-          ].join('\n')}],
-        }, deadline, {requireSourceIndexes: true});
-        audit.accumulatedUsage = combinedProviderUsage(verifierResult, audit);
-        accumulateVerifierCalls(audit, verifierResult, audit);
-        retrievalDiagnostic.focuschrist_relationship_audit = audit.response.ok ? 'completed' : 'unavailable';
-        if (!audit.response.ok) return jsonResponse(fallbackPayload('verification-provider-error', {
-          ...retrievalDiagnostic, ...verifierRouteDiagnostic(audit),
-        }, sanitized.scope), 200, origin, deadline, localScriptures);
-        verifierResult = audit;
-        verdict = parseVerifierJson(audit.data.choices[0].message.content);
-        indexes = verdict.source_indexes.filter(index => index >= 1 && index <= evidence.length);
-      }
+      const finalAuditFailure = await auditRelationships();
+      if (finalAuditFailure) return finalAuditFailure;
       const finalCorpusCoverage = checkCorpusCoverage(sanitized.scope, verdict?.answer,
         indexes.map(index => evidence[index - 1]), localScriptures, isAllowedResearchFetchUrl);
       if (verdict?.approved === true && !finalCorpusCoverage.ok) {
