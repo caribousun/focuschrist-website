@@ -113,7 +113,11 @@ const followUpScope = classifyResearchScope([
   { role: 'user', content: 'What leadership responsibility did he hold?' },
 ], 'ask', 'general-knowledge');
 assert(followUpScope.faith && followUpScope.classificationMode === 'conversation-context'
-  && followUpScope.retrievalQuestion.startsWith('hyrum smith:'),
+  && followUpScope.question === 'What leadership responsibility did he hold?'
+  && followUpScope.conversationContext.length === 1
+  && followUpScope.conversationContext[0] === 'Who is Hyrum Smith?'
+  && followUpScope.retrievalQuestion.includes(followUpScope.question)
+  && followUpScope.retrievalQuestion.includes('Who is Hyrum Smith?'),
   'bounded conversation context must resolve a Church-person pronoun before retrieval');
 const hyrumAskTopic = deterministicHistoryTopicSource(
   'Who was Hyrum Smith and what service did he give in the early Church?',
