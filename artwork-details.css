@@ -107,8 +107,7 @@
     justify-content: center;
     padding: clamp(42px, 5vw, 68px) clamp(26px, 4vw, 50px) 38px;
     background:
-        radial-gradient(circle at 90% 0%, rgba(240, 195, 106, .12), transparent 22rem),
-        linear-gradient(155deg, rgba(28, 61, 72, .99), rgba(15, 39, 49, .99));
+        linear-gradient(155deg, var(--fc-surface, #24434d), #102832);
 }
 
 .fc-artwork-detail-body h2 {

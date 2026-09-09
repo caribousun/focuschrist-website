@@ -58,10 +58,8 @@
 }
 
 .fc-cfm-home__highlights span {
-    padding: 8px 13px;
-    border: 1px solid rgba(240, 195, 106, .38);
-    border-radius: 999px;
-    background: rgba(134, 175, 200, .08);
+    padding: 4px 13px;
+    border-left: 2px solid var(--fc-gold);
     color: #e4edf0;
     font-size: .82rem;
     font-weight: 700;

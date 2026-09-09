@@ -7,8 +7,8 @@
     --ask-surface-2: #234552;
     --ask-sky: #86afc8;
     --ask-sky-deep: #527b96;
-    --ask-gold: #e0aa3e;
-    --ask-gold-light: #f0c36a;
+    --ask-gold: var(--fc-gold, #dfbb78);
+    --ask-gold-light: var(--fc-gold-light, #f1d39a);
     --ask-sage: #9eaa83;
     --ask-cream: #fff2dc;
     --ask-text: #e8e3d8;
@@ -147,7 +147,7 @@ body {
     padding: 17px 22px;
     border: 1px solid rgba(134,175,200,0.58);
     border-radius: 999px;
-    background: rgba(255,255,255,0.055);
+    background: var(--fc-input, #102832);
     color: var(--ask-cream);
     font-size: 1rem;
     line-height: 1.3;
@@ -156,9 +156,10 @@ body {
 
 .ask-input-area input[type="text"]::placeholder { color: #a1b0b1; }
 .ask-input-area input[type="text"]:focus {
-    outline: none;
+    outline: 2px solid var(--ask-gold-light);
+    outline-offset: 2px;
     border-color: var(--ask-gold-light);
-    background: rgba(255,255,255,0.075);
+    background: var(--fc-input, #102832);
     box-shadow: 0 0 0 3px rgba(240,195,106,0.12);
 }
 
@@ -177,17 +178,16 @@ body {
 .ask-action:hover, .ask-action:focus-visible {
     background: var(--ask-gold-light);
     transform: translateY(-1px);
-    outline: none;
 }
 
 .ask-action.secondary {
     border-color: var(--ask-sky);
-    background: rgba(134,175,200,.035);
-    color: #dcebf2;
+    background: var(--fc-action, #c4d8da);
+    color: var(--fc-action-text, #142e38);
 }
 .ask-action.secondary:hover, .ask-action.secondary:focus-visible {
-    background: rgba(134,175,200,0.14);
-    color: var(--ask-cream);
+    background: var(--fc-action-hover, #e0eded);
+    color: var(--fc-action-text, #142e38);
 }
 
 .ask-ai-notice {
@@ -228,7 +228,7 @@ body {
     border: 1px solid rgba(134,175,200,0.22);
     border-radius: 11px;
     background:
-        linear-gradient(145deg, rgba(134,175,200,0.07), rgba(113,128,92,0.045));
+        var(--fc-surface-2, #315561);
     color: #e4e9df;
     cursor: pointer;
     font-family: inherit;
@@ -242,7 +242,6 @@ body {
     background:
         linear-gradient(145deg, rgba(134,175,200,0.12), rgba(240,195,106,0.07));
     transform: translateY(-2px);
-    outline: none;
 }
 
 .ask-conversation-section,
@@ -312,7 +311,6 @@ body {
     border-color: var(--ask-gold-light);
     background: rgba(240,195,106,.14);
     color: var(--ask-cream);
-    outline: none;
 }
 
 .ask-supporting-art.fc-content-artwork {
@@ -442,7 +440,6 @@ body {
 .ask-chat-box .source-link:focus-visible {
     border-color: var(--ask-gold-light);
     color: var(--ask-cream);
-    outline: none;
 }
 
 .ask-related-study {
@@ -486,7 +483,7 @@ body {
     text-align: left;
 }
 .ask-topic-toggle:hover,
-.ask-topic-toggle:focus-visible { background: rgba(134,175,200,0.08); outline: none; }
+.ask-topic-toggle:focus-visible { background: rgba(134,175,200,0.08); }
 .ask-topic-toggle::after {
     content: "+";
     color: var(--ask-gold-light);
@@ -517,7 +514,6 @@ body {
 .ask-topic-option:focus-visible {
     border-color: var(--ask-gold-light);
     color: var(--ask-cream);
-    outline: none;
 }
 
 .ask-continue-grid {
@@ -567,7 +563,6 @@ body {
     border-color: rgba(240,195,106,0.60);
     background: linear-gradient(145deg, rgba(134,175,200,.10), rgba(240,195,106,.055));
     transform: translateY(-2px);
-    outline: none;
 }
 
 @keyframes askFadeIn {

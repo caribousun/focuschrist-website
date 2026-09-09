@@ -96,7 +96,6 @@ body.fc-site .qa-container .input-area input {
 
 body.fc-site .qa-container .input-area input::placeholder { color: #a0afae; }
 body.fc-site .qa-container .input-area input:focus {
-    outline: none;
     border-color: var(--fc-gold-light);
     box-shadow: 0 0 0 3px rgba(240,195,106,.11);
 }
@@ -121,7 +120,6 @@ body.fc-site .qa-container .input-area #clearBtn {
 body.fc-site .qa-container .input-area button:hover,
 body.fc-site .qa-container .input-area button:focus-visible {
     background: var(--fc-gold-light) !important;
-    outline: none;
 }
 
 body.fc-site .qa-container .input-area #clearBtn:hover,
@@ -165,7 +163,6 @@ body.fc-site .qa-container .category-btn:focus-visible {
     border-color: var(--fc-gold-light);
     background: rgba(240,195,106,.08);
     color: var(--fc-cream);
-    outline: none;
 }
 
 body.fc-site .qa-container .message {
@@ -243,7 +240,6 @@ body.fc-site .pioneer-choice:hover,
 body.fc-site .pioneer-choice:focus-visible {
     border-color: var(--fc-gold-light);
     background: rgba(240,195,106,.16);
-    outline: none;
 }
 
 body.fc-site .pioneer-choice:disabled {
@@ -321,7 +317,6 @@ body.fc-site .journal-collection-link:focus-visible {
     border-color: var(--fc-gold-light);
     background: rgba(240,195,106,.1);
     color: var(--fc-cream);
-    outline: none;
 }
 
 body.fc-site .journal-collections {
@@ -588,7 +583,6 @@ body.fc-site .pioneer-collapse-action:focus-visible {
     border-color: var(--fc-gold-light);
     background: rgba(240,195,106,.09);
     color: var(--fc-cream);
-    outline: none;
 }
 
 body.fc-site .cta { padding: 20px 18px var(--fc-section-y); }
@@ -684,7 +678,6 @@ body.fc-site .pioneer-extra-action:focus-visible {
     border-color: var(--fc-gold-light);
     background: rgba(240,195,106,.10);
     color: var(--fc-cream);
-    outline: none;
 }
 
 /* Keep Journey dates stationary and inside their cards in every interaction state.

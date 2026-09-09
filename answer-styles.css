@@ -34,42 +34,6 @@ a:hover { color: #fff2dc; }
 .hamburger-menu .menu-label { color: #f0c36a; font-size: 0.78em; padding: 10px 12px 4px; }
 .hamburger-menu hr { border: 0; border-top: 1px solid rgba(240,195,106,0.28); width: 100%; }
 
-.answer-hero {
-    position: relative;
-    min-height: 280px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 82px 20px 55px;
-    background:
-        linear-gradient(rgba(14,35,45,0.32), rgba(20,42,53,0.88)),
-        url('assets/heroes/home.webp') center 35% / cover no-repeat;
-}
-.answer-hero.nested {
-    background:
-        linear-gradient(rgba(14,35,45,0.32), rgba(20,42,53,0.88)),
-        url('assets/heroes/home.webp') center 35% / cover no-repeat;
-}
-.answer-hero h1 {
-    margin: 0;
-    max-width: 950px;
-    font-family: 'Times New Roman', serif;
-    color: #fff2dc;
-    font-size: clamp(2rem, 5vw, 3.3rem);
-    line-height: 1.16;
-    letter-spacing: 2px;
-    text-shadow: 0 2px 12px rgba(4,16,22,0.78);
-}
-.answer-hero .eyebrow {
-    color: #f0c36a;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    font-size: 0.82rem;
-    margin-bottom: 14px;
-    text-shadow: 0 2px 8px rgba(4,16,22,0.72);
-}
-
 .content-wrap {
     width: min(920px, calc(100% - 36px));
     margin: 0 auto;
@@ -174,11 +138,9 @@ footer a { color: #f0c36a; }
 @media (max-width: 900px) {
     .nav-links { display: none; }
     .nav { position: relative; padding: 16px 20px; background: #102b36; }
-    .answer-hero { padding-top: 55px; }
 }
 @media (max-width: 720px) { .answer-grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) {
-    .answer-hero { min-height: 220px; padding: 42px 18px; }
     .content-wrap { width: min(100% - 28px, 920px); padding-top: 38px; }
     .answer-card { padding: 22px; }
 }

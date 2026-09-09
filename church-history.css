@@ -151,7 +151,6 @@
     border-color: var(--fc-gold-light);
     background: rgba(240,195,106,.10);
     color: var(--fc-cream);
-    outline: none;
 }
 
 /* The Saints narrative follows the dark Ask surface. Keep a modest visual buffer
@@ -198,7 +197,6 @@
     transform: translateY(-3px);
     border-color: var(--fc-line-strong);
     box-shadow: 0 18px 48px rgba(5,17,23,.3);
-    outline: none;
 }
 .fc-history-era-number {
     align-self: center;
@@ -308,7 +306,6 @@
     border-color: var(--fc-gold-light);
     background: linear-gradient(145deg, rgba(134,175,200,.13), rgba(224,170,62,.09));
     color: var(--fc-cream);
-    outline: none;
 }
 
 .fc-history-chat-shell {
@@ -405,7 +402,6 @@
 .fc-history-verified-sources a:focus-visible {
     border-color: var(--fc-gold-light);
     background: rgba(134,175,200,.12);
-    outline: none;
 }
 .fc-history-verified-sources strong { display: block; color: var(--fc-cream); font-size: .87rem; }
 .fc-history-verified-sources span { display: block; margin-top: 2px; color: #a7b7b8; font-size: .72rem; line-height: 1.4; }
@@ -443,7 +439,6 @@
 .fc-history-form textarea:focus {
     border-color: var(--fc-gold-light);
     background: rgba(255,255,255,.075);
-    outline: none;
     box-shadow: 0 0 0 3px rgba(240,195,106,.12);
 }
 .fc-history-form-actions {
