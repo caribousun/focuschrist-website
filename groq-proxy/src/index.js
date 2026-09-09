@@ -136,10 +136,16 @@ function corsHeaders(origin) {
   };
 }
 
-async function jsonResponse(body, status, origin) {
+function scriptureFetch(path, deadline) {
+  const remaining = deadline - Date.now();
+  if (remaining <= 0) return Promise.reject(new Error('scripture-verification-timeout'));
+  return fetch('https://focuschrist.com' + path, { signal: AbortSignal.timeout(Math.min(8000, remaining)) });
+}
+
+async function jsonResponse(body, status, origin, deadline = Date.now() + 8000, checkedLibrary = null) {
   // Final, unconditional output gate: no approval flag or reviewed lane bypasses it.
   if (body.choices?.[0]?.message?.content) {
-    const library = createScriptureLibrary(scriptureCatalog, path => fetch('https://focuschrist.com' + path, { signal: AbortSignal.timeout(8000) }));
+    const library = checkedLibrary || createScriptureLibrary(scriptureCatalog, path => scriptureFetch(path, deadline));
     const checked = await library.checkAnswer(body.choices[0].message.content, body.focuschrist_sources || []);
     body.choices[0].message.content = checked.answer;
     body.focuschrist_scripture_library_version = checked.version;
@@ -1848,35 +1854,37 @@ function providerDiagnostic(result) {
 
 export default {
   async fetch(request, env) {
+    const deadline = Date.now() + REQUEST_BUDGET_MS;
+    const localScriptures = createScriptureLibrary(scriptureCatalog, path => scriptureFetch(path, deadline));
     const origin = request.headers.get('Origin') || '';
     if (!ALLOWED_ORIGINS.has(origin)) return new Response('Origin not allowed', { status: 403 });
     if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: corsHeaders(origin) });
     if (request.method !== 'POST') return new Response('Method not allowed', { status: 405 });
     if (!(request.headers.get('Content-Type') || '').toLowerCase().includes('application/json')) {
-      return jsonResponse({ error: 'Content-Type must be application/json' }, 415, origin);
+      return jsonResponse({ error: 'Content-Type must be application/json' }, 415, origin, deadline, localScriptures);
     }
 
     const declaredLength = Number(request.headers.get('Content-Length') || 0);
     if (Number.isFinite(declaredLength) && declaredLength > REQUEST_BODY_BYTE_LIMIT) {
-      return jsonResponse({ error: 'Request body is too large.' }, 413, origin);
+      return jsonResponse({ error: 'Request body is too large.' }, 413, origin, deadline, localScriptures);
     }
     let payload;
     try {
       const rawBody = await request.text();
       if (new TextEncoder().encode(rawBody).length > REQUEST_BODY_BYTE_LIMIT) {
-        return jsonResponse({ error: 'Request body is too large.' }, 413, origin);
+        return jsonResponse({ error: 'Request body is too large.' }, 413, origin, deadline, localScriptures);
       }
       payload = JSON.parse(rawBody);
     } catch (_error) {
-      return jsonResponse({ error: 'Invalid JSON' }, 400, origin);
+      return jsonResponse({ error: 'Invalid JSON' }, 400, origin, deadline, localScriptures);
     }
     if (!Array.isArray(payload && payload.messages) || payload.messages.length > REQUEST_MESSAGE_LIMIT) {
-      return jsonResponse({ error: `Use no more than ${REQUEST_MESSAGE_LIMIT} conversation messages.` }, 400, origin);
+      return jsonResponse({ error: `Use no more than ${REQUEST_MESSAGE_LIMIT} conversation messages.` }, 400, origin, deadline, localScriptures);
     }
     const sanitized = sanitizePayload(payload || {});
-    if (!sanitized.scope.question) return jsonResponse({ error: 'A user message is required' }, 400, origin);
+    if (!sanitized.scope.question) return jsonResponse({ error: 'A user message is required' }, 400, origin, deadline, localScriptures);
     if (sanitized.scope.question.length > 1200) {
-      return jsonResponse({ error: 'Please shorten the question to 1,200 characters or fewer.' }, 400, origin);
+      return jsonResponse({ error: 'Please shorten the question to 1,200 characters or fewer.' }, 400, origin, deadline, localScriptures);
     }
     const safety = evaluateQuestionSafety(sanitized.scope.question);
     if (!safety.allowed) {
@@ -1889,7 +1897,7 @@ export default {
         focuschrist_gateway_mode: safety.kind,
         focuschrist_resolved_profile: 'local-boundary',
         focuschrist_classification_mode: 'server-question-safety',
-      }, 200, origin);
+      }, 200, origin, deadline, localScriptures);
     }
     if (env && env.ASK_RATE_LIMITER && typeof env.ASK_RATE_LIMITER.limit === 'function') {
       try {
@@ -1905,13 +1913,12 @@ export default {
             focuschrist_gateway_mode: 'request-rate-limit',
             focuschrist_resolved_profile: 'local-boundary',
             focuschrist_classification_mode: 'server-rate-limit',
-          }, 429, origin);
+          }, 429, origin, deadline, localScriptures);
         }
       } catch (_error) {
         // Availability takes precedence if the optional abuse-control binding has a transient fault.
       }
     }
-    const localScriptures = createScriptureLibrary(scriptureCatalog, path => fetch('https://focuschrist.com' + path, { signal: AbortSignal.timeout(8000) }));
     const directScripture = await localScriptures.lookupRequest(sanitized.scope.question);
     if (directScripture) return jsonResponse({
       id: 'focuschrist-local-scripture',
@@ -1924,7 +1931,7 @@ export default {
       focuschrist_groq_verifier_calls: 0,
       focuschrist_cloudflare_verifier_calls: 0,
       focuschrist_openai_verifier_calls: 0,
-    },200,origin);
+    },200,origin,deadline,localScriptures);
     if (!sanitized.scope.faith && needsIdentityClarification(sanitized.scope.question)) {
       return jsonResponse(generalAnswerPayload(
         'Which Joseph do you mean? Please include the last name or a little more context.',
@@ -1935,12 +1942,11 @@ export default {
           focuschrist_groq_research_calls: 0,
         },
         sanitized.scope,
-      ), 200, origin);
+      ), 200, origin, deadline, localScriptures);
     }
     if (isReviewedColorRegression(sanitized.scope.question)) {
-      return jsonResponse(reviewedColorPayload(), 200, origin);
+      return jsonResponse(reviewedColorPayload(), 200, origin, deadline, localScriptures);
     }
-    const deadline = Date.now() + REQUEST_BUDGET_MS;
     const requestDiagnostic = {
       focuschrist_retrieval_route: 'none',
       focuschrist_index_candidates: 0,
@@ -1962,7 +1968,7 @@ export default {
             'general-ai-low-risk',
             { ...sanitized.scope.lowRiskDiagnostic, focuschrist_retrieval_route: 'none', focuschrist_groq_research_calls: 0 },
             sanitized.scope,
-          ), 200, origin);
+          ), 200, origin, deadline, localScriptures);
         }
       }
 
@@ -2002,7 +2008,7 @@ export default {
           return jsonResponse(fallbackPayload('research-unavailable', {
             ...retrievalDiagnostic,
             ...(sanitized.scope.lowRiskDiagnostic || {}),
-          }, sanitized.scope), 200, origin);
+          }, sanitized.scope), 200, origin, deadline, localScriptures);
         }
         researchResult = await callGroq(env.GROQ_KEY_NEW, sanitized.research, deadline);
         retrievalDiagnostic.focuschrist_groq_research_calls = Number(researchResult.callCount || 0);
@@ -2017,7 +2023,7 @@ export default {
                 'general-ai-low-risk',
                 { ...sanitized.scope.lowRiskDiagnostic, ...retrievalDiagnostic },
                 sanitized.scope,
-              ), 200, origin);
+              ), 200, origin, deadline, localScriptures);
             }
           }
           const limited = researchResult.response.status === 429;
@@ -2025,7 +2031,7 @@ export default {
             limited ? 'research-rate-limited' : 'research-provider-error',
             { ...providerDiagnostic(researchResult), ...retrievalDiagnostic, ...(sanitized.scope.lowRiskDiagnostic || {}) },
             sanitized.scope,
-          ), 200, origin);
+          ), 200, origin, deadline, localScriptures);
         }
         const researchMessage = researchResult.data && researchResult.data.choices && researchResult.data.choices[0]
           ? researchResult.data.choices[0].message
@@ -2057,7 +2063,7 @@ export default {
             'general-ai-consensus',
             { ...sanitized.scope.lowRiskDiagnostic, ...retrievalDiagnostic },
             sanitized.scope,
-          ), 200, origin);
+          ), 200, origin, deadline, localScriptures);
         }
       }
       if ((!draft && retrievalDiagnostic.focuschrist_retrieval_route !== 'church-source-index') || !evidence.length) {
@@ -2065,7 +2071,7 @@ export default {
           'research-insufficient-evidence',
           { ...(sanitized.scope.lowRiskDiagnostic || {}), ...retrievalDiagnostic },
           sanitized.scope,
-        ), 200, origin);
+        ), 200, origin, deadline, localScriptures);
       }
 
       // Exact reviewed recoveries do not need a stochastic model verdict once the
@@ -2111,7 +2117,7 @@ export default {
             focuschrist_verifier_conservative_unmetered_neurons: 0,
             focuschrist_reviewed_deterministic_recovery: reviewedDeterministic.recoveryId,
             ...retrievalDiagnostic,
-          }, 200, origin);
+          }, 200, origin, deadline, localScriptures);
         }
       }
 
@@ -2166,7 +2172,7 @@ export default {
           ...providerDiagnostic(verifierResult),
           ...verifierRouteDiagnostic(verifierResult),
           ...retrievalDiagnostic,
-        }, sanitized.scope), 200, origin);
+        }, sanitized.scope), 200, origin, deadline, localScriptures);
       }
       const verifierContent = verifierResult.data && verifierResult.data.choices && verifierResult.data.choices[0]
         ? verifierResult.data.choices[0].message.content
@@ -2319,7 +2325,7 @@ export default {
           focuschrist_verifier_answer_length: verdict ? String(verdict.answer || '').length : 0,
           ...verifierRouteDiagnostic(verifierResult),
           ...retrievalDiagnostic,
-        }, sanitized.scope), 200, origin);
+        }, sanitized.scope), 200, origin, deadline, localScriptures);
       }
 
       return jsonResponse({
@@ -2343,12 +2349,12 @@ export default {
         ...verifierRouteDiagnostic(verifierResult),
         focuschrist_reviewed_deterministic_recovery: verifierResult.reviewedDeterministicRecovery || null,
         ...retrievalDiagnostic,
-      }, 200, origin);
+      }, 200, origin, deadline, localScriptures);
     } catch (_error) {
       return jsonResponse(fallbackPayload('research-exception', {
         ...requestDiagnostic,
         focuschrist_retrieval_route: 'exception',
-      }, sanitized.scope), 200, origin);
+      }, sanitized.scope), 200, origin, deadline, localScriptures);
     }
   },
 };
