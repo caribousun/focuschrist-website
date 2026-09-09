@@ -28,8 +28,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.70';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.70';
+const SOURCE_POLICY_VERSION = '2026-09-09.71';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.71';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1393,12 +1393,16 @@ function providerFailure(status, code) {
 async function callApprovedResearch(env, body, deadline, diagnostic = {}) {
   const reserve = 6500; // Article hydration plus the existing semantic verifier.
   if (!env?.OPENAI_API_KEY || diagnostic.focuschrist_openai_research_calls
-      || remainingBudget(deadline) < reserve + 1000) return providerFailure(503, 'service_unavailable');
+      || remainingBudget(deadline) < reserve + 1000) {
+    diagnostic.focuschrist_openai_research_error_stage = !env?.OPENAI_API_KEY ? 'missing-key' : diagnostic.focuschrist_openai_research_calls ? 'call-limit' : 'deadline-reserve';
+    return providerFailure(503, 'service_unavailable');
+  }
   diagnostic.focuschrist_openai_research_calls = 1;
   diagnostic.focuschrist_research_provider = 'openai';
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), Math.min(8000, remainingBudget(deadline) - reserve));
   let result;
+  let stage = "transport";
   try {
     const response = await fetch('https://api.openai.com/v1/responses', {
       method: 'POST', redirect: 'error', signal: controller.signal,
@@ -1414,25 +1418,45 @@ async function callApprovedResearch(env, body, deadline, diagnostic = {}) {
           .map(message => ({ role: 'user', content: String(message.content || '').slice(0, 12000) })).slice(-4),
       }),
     });
+    diagnostic.focuschrist_openai_research_http_status = response.status;
+    stage = "response-body";
     const raw = await response.text();
     if (raw.length > 128000) throw new Error('response-limit');
+    stage = "response-json";
     const data = JSON.parse(raw);
+    stage = "response-shape";
     result = { response, data, callCount: 0 };
+    if (!response.ok) diagnostic.focuschrist_openai_research_error_stage = 'http-error';
     if (response.ok) {
-      const completed = data.status === 'completed' && Array.isArray(data.output);
-      const searchCalls = completed ? data.output.filter(item => item.type === 'web_search_call') : [];
-      const valid = searchCalls.length === 1 && searchCalls[0].status === 'completed';
-      if (!valid) result = { ...providerFailure(503, 'service_unavailable'), callCount: 0 };
+      const safeStatus = value => ['completed','incomplete','failed','in_progress','queued','cancelled','searching'].includes(value) ? value : 'unknown';
+      diagnostic.focuschrist_openai_research_response_status = safeStatus(data.status);
+      const reason = data.incomplete_details?.reason;
+      diagnostic.focuschrist_openai_research_incomplete_reason = ['max_output_tokens','content_filter','steered'].includes(reason) ? reason : reason ? 'other' : 'none';
+      const searchCalls = Array.isArray(data.output) ? data.output.filter(item => item?.type === 'web_search_call') : [];
+      diagnostic.focuschrist_openai_research_search_call_count = Math.min(searchCalls.length, 100);
+      diagnostic.focuschrist_openai_research_search_status = searchCalls.length === 1 ? safeStatus(searchCalls[0].status) : 'unknown';
+      // A finished search can supply URL leads even if unused prose exhausted
+      // its token budget. Never consume incomplete tool output or filtered prose.
+      const usableResponse = data.status === 'completed' || (data.status === 'incomplete' && reason === 'max_output_tokens');
+      const valid = usableResponse && !data.error && searchCalls.length === 1 && searchCalls[0].status === 'completed';
+      if (!valid) {
+        diagnostic.focuschrist_openai_research_error_stage = 'incomplete-search';
+        result = { ...providerFailure(503, 'service_unavailable'), callCount: 0 };
+      }
       else {
+        stage = "source-leads";
         const urls = new Set();
-        const leads = (searchCalls[0].action?.sources || []).filter(source => {
-          if (source.type !== 'url' || !isAllowedResearchFetchUrl(source.url) || urls.has(source.url)) return false;
+        const leads = (Array.isArray(searchCalls[0].action?.sources) ? searchCalls[0].action.sources : []).filter(source => {
+          if (!source || source.type !== 'url' || !isAllowedResearchFetchUrl(source.url) || urls.has(source.url)) return false;
           urls.add(source.url); return true;
         }).slice(0, 4).map(source => ({ url: source.url, title: String(source.title || 'Approved study article').slice(0, 200) }));
+        diagnostic.focuschrist_openai_research_lead_count = leads.length;
+        diagnostic.focuschrist_openai_research_error_stage = 'none';
         result.data = { choices: [{ message: { content: '', executed_tools: [{ search_results: leads }] } }] };
       }
     }
   } catch (error) {
+    diagnostic.focuschrist_openai_research_error_stage = controller.signal.aborted ? 'timeout' : error?.message === 'response-limit' ? 'response-limit' : stage;
     result = { ...providerFailure(controller.signal.aborted ? 504 : 503, controller.signal.aborted ? 'timeout' : 'service_unavailable'), callCount: 0 };
   } finally { clearTimeout(timer); }
   const safe = providerDiagnostic(result);
