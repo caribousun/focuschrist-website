@@ -492,7 +492,7 @@ globalThis.fetch = async (url, init) => {
     verifierCalls += 1;
     const body = JSON.parse(init.body);
     verifierBodies.push(body);
-    assert(body.model === 'gpt-5.6-luna' && body.store === false && body.response_format.type === 'json_object', 'all verifier calls must use the approved OpenAI model with the JSON and non-storage contract');
+    assert(body.model === 'gpt-5.6-sol' && body.store === false && body.response_format.type === 'json_object', 'all verifier calls must use the approved OpenAI model with the JSON and non-storage contract');
     return verdictHandler(body, init);
   }
   if (target === 'https://api.openai.com/v1/responses') { researchCalls += 1; return emptyResearchResponse(); }

@@ -1,3 +1,4 @@
+import { augmentRequestedCorpusEvidence } from './corpus-evidence.js';
 import { checkCorpusCoverage, requestedTeachingCorpora } from './corpus-coverage.js';
 import { PIONEER_SOURCE_URLS, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, pioneerTopic } from './pioneer-topic-sources.js';
 import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP_REVISION } from './church-source-index.js';
@@ -9,9 +10,9 @@ import scriptureCatalog from '../../scripture-data/catalog.json' with { type: 'j
 // official evidence for faith questions and independently checks every
 // unreviewed answer before returning it to the browser.
 
-const RESEARCH_MODEL = 'gpt-5.6-luna';
-const VERIFIER_MODEL = 'gpt-5.6-luna';
-const OPENAI_VERIFIER_MODEL = 'gpt-5.6-luna';
+const RESEARCH_MODEL = 'gpt-5.6-sol';
+const VERIFIER_MODEL = 'gpt-5.6-sol';
+const OPENAI_VERIFIER_MODEL = 'gpt-5.6-sol';
 const OPENAI_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
 const ALLOWED_ORIGINS = new Set([
   'https://focuschrist.com',
@@ -29,8 +30,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.75';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.75';
+const SOURCE_POLICY_VERSION = '2026-09-09.76';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.76';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -936,7 +937,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
 
 async function hydrateResearchEvidence(sources, question, deadline, diagnostic = null) {
   const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
-  const official = sources.filter(isApprovedLdsSource).slice(0, 2);
+  const official = sources.filter(isApprovedLdsSource).slice(0, 4);
   const results = await Promise.all(official.map(async source => {
     if (!isAllowedResearchFetchUrl(source.url)) return null;
     const fetched = await fetchOfficialSource({ ...source, researched: true, namedGospelTopic: true },
@@ -2087,6 +2088,15 @@ export default {
         }
       }
 
+      const expandCanonicalEvidence = async () => {
+        const added = await augmentRequestedCorpusEvidence(sanitized.scope, evidence, localScriptures,
+          isAllowedResearchFetchUrl, () => remainingBudget(deadline) > 12000);
+        for (const source of added) verifiedCanonicalEvidence.add(source);
+        evidence = [...evidence, ...added];
+        allEvidence = [...allEvidence, ...added];
+      };
+      await expandCanonicalEvidence();
+
       const makeVerifierPrompt = () => (sanitized.scope.selectedPioneer ? [
         'You are writing a source-grounded biographical summary. Return one JSON object only.',
         `The visitor selected ${sanitized.scope.selectedPioneerName}. The evidence below is that person's permitted Tell My Story, Too entry.`,
@@ -2180,6 +2190,7 @@ export default {
           if (usable.length) {
             evidence = usable;
             allEvidence = usable;
+            await expandCanonicalEvidence();
             draft = String(message?.content || '').slice(0, 4000);
             retrievalDiagnostic.focuschrist_retrieval_route = 'index-then-approved-research';
             retrievalDiagnostic.focuschrist_deterministic_scripture = false;

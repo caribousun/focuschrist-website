@@ -8,7 +8,7 @@ const response=data=>new Response(JSON.stringify(data),{headers:{'Content-Type':
 const completed={status:'completed',output:[{type:'web_search_call',status:'completed',action:{sources:[{type:'url',url:approved},{type:'url',url:'https://churchofjesuschrist.org.evil.example/article'},{type:'url',url:'https://user:pass@www.churchofjesuschrist.org/study/article'},{type:'url',url:'https://unapproved.rsc.byu.edu/article'}]}},{type:'message',content:[{type:'output_text',text:'UNVERIFIED ANSWER MUST NEVER BECOME DRAFT'}]}]};
 let calls=0;
 try{
- globalThis.fetch=async(url,options)=>{calls++;assert.equal(String(url),'https://api.openai.com/v1/responses');const request=JSON.parse(options.body);assert.equal(request.model,'gpt-5.6-luna');assert.equal(request.max_tool_calls,1);assert.equal(request.max_output_tokens,900);assert.equal(request.store,false);assert.equal(request.tool_choice.type,'web_search');assert(request.tools[0].filters.allowed_domains.includes('churchofjesuschrist.org'));assert(request.tools[0].filters.allowed_domains.includes('rsc.byu.edu'));assert(!JSON.stringify(request.input).includes('UNTRUSTED'));assert.deepEqual(request.include,['web_search_call.action.sources']);return response(completed);};
+ globalThis.fetch=async(url,options)=>{calls++;assert.equal(String(url),'https://api.openai.com/v1/responses');const request=JSON.parse(options.body);assert.equal(request.model,'gpt-5.6-sol');assert.equal(request.max_tool_calls,1);assert.equal(request.max_output_tokens,900);assert.equal(request.store,false);assert.equal(request.tool_choice.type,'web_search');assert(request.tools[0].filters.allowed_domains.includes('churchofjesuschrist.org'));assert(request.tools[0].filters.allowed_domains.includes('rsc.byu.edu'));assert(!JSON.stringify(request.input).includes('UNTRUSTED'));assert.deepEqual(request.include,['web_search_call.action.sources']);return response(completed);};
  const diagnostic={};const result=await callApprovedResearch(env,body,Date.now()+22000,diagnostic);
  assert.equal(calls,1);assert.equal(result.data.choices[0].message.content,'');const leads=collectSourceEvidence(result.data.choices[0].message);assert.deepEqual(leads.map(x=>x.url),[approved]);assert.equal(leads[0].content,'');
  await callApprovedResearch(env,body,Date.now()+22000,diagnostic);assert.equal(calls,1,'one Responses request maximum across request phases');
@@ -24,6 +24,13 @@ try{
  const titledEvidence=await hydrateResearchEvidence(leads,'forgiveness trust',Date.now()+10000,{});
  assert.equal(titledEvidence.length,1,'actual fetched approved text required');
  assert.equal(titledEvidence[0].title,'Forgiveness & Trust','citation label comes from fetched article heading');
+ const leadUrls=Array.from({length:6},(_,index)=>'https://www.churchofjesuschrist.org/study/general-conference/2025/04/forgiveness-'+index);
+ const hydratedUrls=[];
+ globalThis.fetch=async(url)=>{hydratedUrls.push(String(url));return new Response('<h1>Approved source</h1><p>Forgiveness and trust require patient care and honest conduct. A person may forgive without restoring trust immediately. Appropriate boundaries protect people while relationships are considered carefully over time.</p>',{headers:{'Content-Type':'text/html'}});};
+ const fourSources=await hydrateResearchEvidence(leadUrls.map(url=>({url,title:'Lead'})),'forgiveness trust',Date.now()+10000,{});
+ assert.deepEqual(hydratedUrls,leadUrls.slice(0,4),'hydrate all four bounded approved leads, never a fifth');
+ assert.equal(fourSources.length,4,'third and fourth fetched sources must remain available to verifier');
+ assert(fourSources.every(source=>source.content.length<=4200),'ordinary source excerpts remain bounded');
  globalThis.fetch=async(_url,options)=>new Promise((_resolve,reject)=>options.signal.addEventListener('abort',()=>reject(new DOMException('private failure','AbortError'))));
  const realSetTimeout=globalThis.setTimeout;
  let searchTimerBudget=0;

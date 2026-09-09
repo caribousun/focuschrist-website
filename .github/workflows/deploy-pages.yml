@@ -141,6 +141,7 @@ jobs:
           node groq-proxy/evidence-budget.test.js
           node groq-proxy/openai-research.test.js
           node groq-proxy/corpus-coverage.test.js
+          node groq-proxy/corpus-evidence.test.js
           node tools/scripture_quote_display_qa.js
 
       - name: Validate shared site JavaScript

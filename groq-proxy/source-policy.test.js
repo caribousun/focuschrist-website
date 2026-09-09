@@ -429,7 +429,7 @@ const faith = classifyResearchScope(faithMessages);
 assert(faith.faith, 'scripture citations must use the faith research scope');
 
 const clean = sanitizePayload({ model: 'other', temperature: 0.9, max_tokens: 9000, messages: faithMessages });
-assert(clean.research.model === 'gpt-5.6-luna', 'gateway must own the research model');
+assert(clean.research.model === 'gpt-5.6-sol', 'gateway must own the research model');
 assert(clean.research.messages[0].content.includes('SERVER RESEARCH AND SOURCE-INTEGRITY POLICY'),
   'gateway must prepend the server research policy');
 assert(clean.research.messages[0].content.includes('never reduce a sincere question to a one- or two-word response')
@@ -843,7 +843,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.75',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.76',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
