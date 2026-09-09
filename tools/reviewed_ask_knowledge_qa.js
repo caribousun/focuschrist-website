@@ -6,6 +6,21 @@ global.window = {};
 vm.runInThisContext(fs.readFileSync('reviewed-ask-knowledge.js', 'utf8'), { filename: 'reviewed-ask-knowledge.js' });
 
 const registry = window.focusChristReviewedKnowledge;
+for (const profile of ['ask', 'pioneers']) {
+    for (const followup of ['can you cite a scripture', 'can you site a scripture', 'please show me a supporting verse']) {
+        const context = registry.resolveFollowup(followup, { profile, history: [
+            { role:'user', content:'is god in the bible old testament' },
+            { role:'assistant', content:'Prior prose is not scripture evidence.' }
+        ] });
+        if (!context.resolved || !context.genericContext || context.contextQuestion !== 'is god in the bible old testament') {
+            throw new Error('Scripture follow-up lost immediate user context: ' + profile + ' ' + followup);
+        }
+    }
+    const noHistory = registry.resolveFollowup('can you site a scripture', {profile,history:[]});
+    if (noHistory.resolved) throw new Error('Missing scripture context must never be invented');
+    const changed = registry.resolveFollowup('can you cite a scripture about baptism', {profile,history:[{role:'user',content:'is god in the bible old testament'}]});
+    if (changed.resolved) throw new Error('An explicit new scripture subject must not inherit an unrelated topic');
+}
 const audit = JSON.parse(fs.readFileSync('answer-audit.json', 'utf8'));
 const questionManifest = JSON.parse(fs.readFileSync('ask-question-contracts.json', 'utf8'));
 

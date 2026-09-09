@@ -26,8 +26,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.62';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.62';
+const SOURCE_POLICY_VERSION = '2026-09-09.63';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.63';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -179,8 +179,24 @@ function extractSelectedPioneerName(messages) {
   return name.length >= 2 && name.length <= 120 ? name : '';
 }
 
+function scriptureSupportContext(messages) {
+  const users = (Array.isArray(messages) ? messages : []).filter(message => message?.role === 'user');
+  const current = String(users.at(-1)?.content || '').split('\n')[0].toLowerCase().replace(/[?.!]+$/g, '').trim();
+  const requested = /^(?:(?:can|could|would) you |please )?(?:cite|site|quote|give(?: me)?|show(?: me)?|provide)(?: me)? (?:a |an |the |some )?(?:supporting )?(?:scripture|scriptures|verse|verses|scripture reference|scripture references)(?: (?:for|to support) (?:that|this))?$/.test(current);
+  return { requested, antecedent: requested ? String(users.at(-2)?.content || '').split('\n')[0].trim().slice(0, 1200) : '' };
+}
+
+function isGodInOldTestamentQuestion(value) {
+  const text = String(value || '').toLowerCase().replace(/[^a-z ]/g, ' ').replace(/\s+/g, ' ').trim();
+  const vocabulary = new Set('is god in the bible old testament mentioned named does appear where can i find'.split(' '));
+  return /\bgod\b/.test(text) && /\bold testament\b/.test(text)
+    && text.split(' ').every(token => vocabulary.has(token));
+}
+
 function classifyResearchScope(messages, requestedPage, requestedProfile) {
-  const question = lastUserQuestion(messages);
+  const support = scriptureSupportContext(messages);
+  const originalQuestion = lastUserQuestion(messages);
+  const question = support.antecedent ? `${originalQuestion}\n\nThe preceding user question identifies the topic only, not evidence: ${support.antecedent}` : originalQuestion;
   const normalizedQuestion = question.toLowerCase().replace(/[^a-z0-9\s'-]/g, ' ').replace(/\s+/g, ' ').trim();
   const scriptureTopicQuestion = question
     .replace(CASELESS_CANON_NAME_PERSON_QUESTION_PATTERN, '$1')
@@ -193,7 +209,7 @@ function classifyResearchScope(messages, requestedPage, requestedProfile) {
   const contextualSubject = KNOWN_CHURCH_PERSON_PHRASES.find((name) => earlierContext.includes(name)) || '';
   const usesConversationContext = Boolean(contextualSubject
     && /\b(?:he|him|his|she|her|hers|they|them|their|that person|this person|the leader)\b/i.test(question));
-  const retrievalQuestion = usesConversationContext ? `${contextualSubject}: ${question}` : question;
+  const retrievalQuestion = support.antecedent ? `${support.antecedent}: cite a supporting scripture` : usesConversationContext ? `${contextualSubject}: ${question}` : question;
   const faith = page === 'pioneers'
     || page === 'church-history'
     || profile === 'faith-study'
@@ -206,7 +222,8 @@ function classifyResearchScope(messages, requestedPage, requestedProfile) {
   const selectedPioneerName = extractSelectedPioneerName(messages);
   return {
     faith, question, retrievalQuestion, page, profile,
-    classificationMode: usesConversationContext ? 'conversation-context' : 'request-scope',
+    classificationMode: support.antecedent || usesConversationContext ? 'conversation-context' : 'request-scope',
+    scriptureSupportRequested: support.requested, scriptureSupportAntecedent: support.antecedent,
     selectedPioneer: Boolean(selectedPioneerName), selectedPioneerName,
   };
 }
@@ -859,7 +876,7 @@ function isAlma32FaithStudyQuestion(value) {
   value = String(value || "").replace(/\balma\s+chapter\s+32\b/gi, "Alma 32");
   // A bounded chapter-level study of this metaphor. Verse-specific, comparative,
   // historical and personal instructions remain on the normal evidence route.
-  const almaStudyVocabulary = new Set('how does do can what is are alma 32 describe describes developing develop faith teach teaches about the seed comparison metaphor lesson lessons teachings of in explain growth grow growing nourish nourishing word and patience diligence a tell me'.split(' '));
+  const almaStudyVocabulary = new Set('how does do can what is are alma 32 describe describes developing develop faith teach teaches about the seed comparison metaphor lesson lessons teachings of in explain growth grow growing nourish nourishing word and patience diligence a tell me with emphasis on meaning'.split(' '));
   return String(value || '').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(Boolean).every((token) => almaStudyVocabulary.has(token))
     && /\balma\s+32\b(?!\s*[:0-9])/i.test(value)
     && /\b(?:faith|seed)\b/i.test(value)
@@ -1921,7 +1938,13 @@ export default {
         // Availability takes precedence if the optional abuse-control binding has a transient fault.
       }
     }
-    const directScripture = await localScriptures.lookupRequest(sanitized.scope.question);
+    if (sanitized.scope.scriptureSupportRequested && !sanitized.scope.scriptureSupportAntecedent) {
+      return jsonResponse(generalAnswerPayload('Which question or teaching would you like a scripture for? Please name the subject so I can find a passage that actually supports it.', 'scripture-context-clarification', {}, sanitized.scope), 200, origin, deadline, localScriptures);
+    }
+    const supportOldTestament = sanitized.scope.scriptureSupportRequested
+      && isGodInOldTestamentQuestion(sanitized.scope.scriptureSupportAntecedent);
+    const directScripture = await localScriptures.lookupRequest(supportOldTestament ? 'Genesis 1:1' : sanitized.scope.question);
+    if (directScripture && supportOldTestament) directScripture.answer = 'Genesis 1:1 explicitly names God as the creator of heaven and earth.\n\n' + directScripture.answer;
     if (directScripture) return jsonResponse({
       id: 'focuschrist-local-scripture',
       choices: [{index:0,message:{role:'assistant',content:directScripture.answer},finish_reason:'stop'}],
@@ -2362,6 +2385,7 @@ export default {
 };
 
 export {
+  isGodInOldTestamentQuestion,
   jsonResponse,
   GENERAL_ANSWER_FALLBACK,
   OFFICIAL_EXCERPT_CACHE_VERSION,

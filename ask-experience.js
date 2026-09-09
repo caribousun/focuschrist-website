@@ -343,8 +343,8 @@
             behavior: preferredScrollBehavior()
         });
 
-        const followupDock = document.getElementById('askFollowupDock');
-        scrollPageToElement(followupDock && followupDock.classList.contains('visible') ? followupDock : chatBox);
+        // Bring the answer into view, including when the transcript has its own scrollbar.
+        scrollPageToElement(chatBox.scrollHeight > chatBox.clientHeight + 2 ? chatBox : answer);
     }
 
     function submitQuestion(question) {
@@ -452,16 +452,25 @@
     function initRelatedStudyObserver() {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox || typeof MutationObserver === 'undefined') return;
+        chatBox.addEventListener('focuschrist:answer-ready', function (event) {
+            if (event.target !== chatBox.lastElementChild) return;
+            addRelatedStudyToLatestAnswer();
+            setFollowupVisible(true);
+            setFollowupBusy(false);
+            focusLatestAnswer();
+        });
         const observer = new MutationObserver(function (mutations) {
             const addedAnswer = mutations.some(function (mutation) {
                 return Array.from(mutation.addedNodes || []).some(function (node) {
                     if (node.nodeType !== 1) return false;
+                    if (!node.isConnected || node.hasAttribute('data-scripture-pending')) return false;
                     if (node.classList && node.classList.contains('bot-message')) return true;
                     return typeof node.querySelector === 'function' && Boolean(node.querySelector('.bot-message'));
                 });
             });
             if (addedAnswer) {
                 window.setTimeout(function () {
+                    if (chatBox.lastElementChild && (!chatBox.lastElementChild.classList.contains('bot-message') || chatBox.lastElementChild.hasAttribute('data-scripture-pending'))) return;
                     addRelatedStudyToLatestAnswer();
                     setFollowupVisible(true);
                     setFollowupBusy(false);

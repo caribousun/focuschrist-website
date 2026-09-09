@@ -89,7 +89,7 @@ def main() -> int:
 
     require(ask_js, "ask-experience.js", (
         "chatBox.insertAdjacentElement('beforebegin', dock)",
-        "followupDock.classList.contains('visible') ? followupDock : chatBox",
+        "chatBox.scrollHeight > chatBox.clientHeight + 2 ? chatBox : answer",
         "followupInput.focus({ preventScroll: true })",
         "document.getElementById('conversationClearBtn')",
         "focusAskComposer(false)",

@@ -615,6 +615,10 @@
     function guardGeneratedAnswer(answer, options) {
         const settings = options || {};
         const text = String(answer || '').trim();
+        // This fixed clarification makes no source claim and must remain usable without evidence.
+        if (text === 'Which question or teaching would you like a scripture for? Please name the subject so I can find a passage that actually supports it.') {
+            return { ok: true, answer: text, citations: [], ungroundedCitations: [], violations: [] };
+        }
         const serverVerified = settings.serverVerified === true;
         const trustedReferenceText = normalizeSourceReference(settings.trustedReferenceText || '');
         const citations = extractScriptureCitations(text);
@@ -702,6 +706,7 @@
             pending.className = 'message bot-message';
             pending.textContent = 'Checking scripture sources…';
             pending.setAttribute('role', 'status');
+            pending.setAttribute('data-scripture-pending', 'true');
             box.appendChild(pending);
             window.focusChristVerifyScriptureAnswer(text, sources).then(result => {
                 if (!pending.isConnected) return;
@@ -713,7 +718,9 @@
                     rendered.remove();
                 }
                 pending.removeAttribute('role');
+                pending.removeAttribute('data-scripture-pending');
                 if (result.ok && window.focusChristScriptureLibrary) window.focusChristScriptureLibrary.linkify(pending);
+                pending.dispatchEvent(new CustomEvent('focuschrist:answer-ready', { bubbles: true }));
             });
             return pending;
         };
