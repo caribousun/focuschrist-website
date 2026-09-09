@@ -427,6 +427,8 @@
                     },
                     {
                         id: 'carthage-imprisonment',
+                        directSubject: 'joseph smith',
+                        directContext: ['carthage'],
                         cues: ['why', 'carthage', 'jail'],
                         intent: {
                             all: [
@@ -435,7 +437,7 @@
                             ],
                             none: ['die', 'died', 'death', 'killed', 'murdered', 'martyred', 'mob', 'shot', 'attack']
                         },
-                        answer: 'Joseph Smith was in Carthage Jail while awaiting legal proceedings after the Nauvoo city council ordered the destruction of the Nauvoo Expositor press, which officials treated as a riot. After Joseph went to Carthage and submitted to arrest, authorities also brought a treason charge that prevented his release on bail. He and several companions were confined in the jail while Illinois governor Thomas Ford traveled to Nauvoo. On June 27, 1844, a mob attacked the jail and killed Joseph and Hyrum Smith. Explaining the charges gives the legal setting; it does not justify the extrajudicial killings.',
+                        answer: 'Joseph Smith was in Carthage Jail while awaiting legal proceedings after the Nauvoo city council ordered the destruction of the Nauvoo Expositor press, which officials treated as a riot. After Joseph went to Carthage and submitted to arrest, authorities also brought a treason charge that prevented his release on bail. He and several companions were confined in the jail. On June 27, 1844, a mob attacked the jail and killed Joseph and Hyrum Smith. Explaining the charges gives the legal setting; it does not justify the extrajudicial killings.',
                         sources: [
                             officialHistorySource('Deaths of Joseph and Hyrum Smith', 'https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng', 'Official account of the arrests, charges, confinement, and attack.'),
                             officialHistorySource('Carthage Jail', 'https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/carthage-jail?lang=eng', 'Official historic-site account of the confinement and attack.')
@@ -457,6 +459,8 @@
                     },
                     {
                         id: 'carthage-companions',
+                        directSubject: 'joseph smith',
+                        directContext: ['carthage'],
                         cues: ['who', 'with'],
                         intent: {
                             all: [
@@ -465,7 +469,7 @@
                             ],
                             none: ['killed', 'murdered', 'mob', 'shot', 'attack', 'attacked']
                         },
-                        answer: 'Joseph Smith was confined at Carthage with his brother Hyrum Smith and several associates. By the time of the attack on June 27, 1844, Joseph, Hyrum, John Taylor, and Willard Richards were together in an upstairs room of the jail. The mob killed Joseph and Hyrum. John Taylor was seriously wounded, while Willard Richards survived with only a minor wound. Other supporters had been present during the imprisonment, but those four were in the room during the final assault. Official Church history distinguishes the people present at the attack from the larger group who had accompanied or visited Joseph earlier.',
+                        answer: 'Joseph Smith was confined at Carthage with his brother Hyrum Smith and several associates. By the time of the attack on June 27, 1844, Joseph, Hyrum, John Taylor, and Willard Richards were together in an upstairs room of the jail. The mob killed Joseph and Hyrum. John Taylor was seriously wounded, while Willard Richards survived. Other supporters had been present during the imprisonment, but those four were in the room during the final assault. Official Church history distinguishes the people present at the attack from the larger group who had accompanied or visited Joseph earlier.',
                         sources: [
                             officialHistorySource('Deaths of Joseph and Hyrum Smith', 'https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng', 'Official account identifying the four men in the room during the attack.'),
                             officialHistorySource('Carthage Jail', 'https://www.churchofjesuschrist.org/learn/history/sites/historic-nauvoo/carthage-jail?lang=eng', 'Official historic-site account of the men present and the attack.')
@@ -655,11 +659,13 @@
                 variants: [
                     {
                         id: 'printer-publisher-location',
+                        directSubject: 'book of mormon',
+                        directContext: ['first', 'original'],
                         cues: ['who', 'where', 'publish', 'published', 'publisher', 'print', 'printed', 'printer', 'grandin', 'palmyra'],
                         intent: {
                             all: [
                                 ['publish', 'published', 'publisher', 'print', 'printed', 'printer'],
-                                ['who', 'where', 'published', 'printed', 'publisher', 'printer', 'grandin', 'palmyra']
+                                ['who', 'where']
                             ],
                             none: ['musical', 'broadway', 'movie', 'film', 'soundtrack']
                         },
@@ -753,7 +759,8 @@
                     url: 'https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng',
                     tier: 'Official Church History',
                     note: 'Official collection and discussion of the historical accounts.'
-                }
+                },
+                officialHistorySource('First Vision Accounts - Gospel Topics Essays', 'https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/first-vision-accounts?lang=eng', 'Official essay identifying the four firsthand accounts and their publication history.')
             ]
         },
         churchHistoryCard({
@@ -815,7 +822,7 @@
                 'How should a modern workplace safety society operate?',
                 'What happened to a Kirtland, Ohio school society?'
             ],
-            answer: 'Church leaders and other investors organized the Kirtland Safety Society in late 1836 after rapid growth created a need for local credit. Ohio denied its bank charter, so it opened in January 1837 as a joint-stock association. It failed within the year and ceased operating by August. Official Church history describes several contributing causes: undercapitalization, risky lending and speculation, heavy debts and spending, hostile efforts to undermine confidence, and the broader Panic of 1837, which damaged banks across the United States. Many people lost money, lawsuits followed, and the crisis intensified dissent against Joseph Smith. The Church does not reduce the collapse to persecution alone; it acknowledges financial mistakes alongside the national economic downturn and organized opposition.',
+            answer: 'Joseph Smith and other Church leaders established the Kirtland Safety Society in November 1836 to support the local economy and the gathering of the Saints. The state legislature did not grant it a banking charter, and its directors decided in January 1837 to operate without one. It struggled and ceased operations by August 1837. Official Church history describes several contributing factors: failures to anticipate problems, land speculation and overspending, inadequate support within the community, outside opposition, and the national Panic of 1837. Falling land values left many Saints with debts on property worth less than they had paid. Joseph Smith and Sidney Rigdon were also tried and fined for circulating banking notes. The losses caused hardship and intensified dissent. The official account presents a combination of internal difficulties, opposition, and wider economic conditions.',
             sources: [
                 officialHistorySource('Kirtland Safety Society', 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng', 'Official history of the institution, its operation, and causes of failure.')
             ]
@@ -839,6 +846,7 @@
             answer: 'The Church teaches that monogamy is God\'s standing law for marriage unless He commands otherwise. It also teaches that, in the early 1840s, Joseph Smith introduced plural marriage to a limited group of Church members because he believed God had commanded the practice as part of the Restoration. Historical evidence indicates that Joseph was sealed to multiple women, including both eternity-only sealings and marriages understood to include mortal relationships. The practice was difficult, controversial, and generally confidential, so the surviving record is incomplete and some later reminiscences conflict. The Church therefore acknowledges important facts without claiming certainty about every relationship or motive. It does not present plural marriage as necessary for exaltation today, and the Church ended authorization of new plural marriages beginning with the 1890 Manifesto.',
             sources: [
                 officialHistorySource('Joseph Smith and Plural Marriage', 'https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-and-plural-marriage?lang=eng', 'Official Church History topic describing Joseph Smith\'s plural marriages and the limits of the surviving record.'),
+                officialHistorySource('Plural Marriage in Kirtland and Nauvoo', 'https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/plural-marriage-in-kirtland-and-nauvoo?lang=eng', 'Official essay distinguishing sealings for time and eternity from eternity-only sealings.'),
                 officialHistorySource('Plural Marriage in The Church of Jesus Christ of Latter-day Saints', 'https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/plural-marriage-in-the-church-of-jesus-christ-of-latter-day-saints?lang=eng', 'Official Gospel Topics essay on the history and discontinuance of plural marriage.')
             ]
         }),
@@ -898,8 +906,9 @@
                 'How did global churches grow in the first century?',
                 'How can a modern company become a global business?'
             ],
-            answer: 'During the twentieth century, the Church changed from a community concentrated in the western United States into an international faith. Missionary work expanded, local congregations and stakes were organized in more nations, scripture and Church materials were translated into additional languages, and temples were built closer to members outside North America. Improvements in travel and communication helped, but global growth also depended on local converts and leaders who built enduring congregations in their own cultures. Church administration gradually placed greater responsibility in regional and local leadership rather than expecting members to gather to Utah. Official global histories emphasize that this was not one uniform American expansion: the Church developed through distinct national histories, political conditions, migrations, conflicts, and acts of faith by members around the world.',
+            answer: 'The Church became more international through missionary work and the development of congregations, local leadership, temples, and translated study materials in many countries. The official Global Histories collection presents this development through individual national histories. The Philippines provides one documented twentieth-century example: missionary work accelerated after 1961, the first stake was organized in 1973, and the first temple was dedicated in 1984. The same history connects the service of Filipino members with a local missionary training center and translation into multiple Philippine languages. By the 1990s membership there exceeded a quarter of a million. This example shows how missionary work and the sustained service of local members helped build a lasting Church community. The country histories and Saints volumes offer paths for comparing that experience with developments elsewhere.',
             sources: [
+                officialHistorySource('Philippines: Overview', 'https://www.churchofjesuschrist.org/study/history/global-histories/philippines/ph-overview?lang=eng', 'Official country history documenting missionary work, stakes, temple, training and translation.'),
                 officialHistorySource('Global Histories', 'https://www.churchofjesuschrist.org/study/history/global-histories?lang=eng', 'Official collection of country and regional Latter-day Saint histories.'),
                 officialHistorySource('Saints, Volume 3: Boldly, Nobly, and Independent', 'https://www.churchofjesuschrist.org/study/history/saints-v3?lang=eng', 'Official narrative history covering worldwide Church development from 1893 to 1955.'),
                 officialHistorySource('Saints, Volume 4: Sounded in Every Ear', 'https://www.churchofjesuschrist.org/study/history/saints-v4?lang=eng', 'Official narrative history covering worldwide Church development from 1955 to 2020.')
@@ -921,7 +930,7 @@
                 'Where can I study women in ancient Roman history?',
                 'What women\'s studies programs are offered by universities?'
             ],
-            answer: 'The Church History Library provides an official Women\'s History study collection that gathers biographies, documents, articles, videos, and links to primary-source projects. A strong study path is to begin with that collection, then follow the people and organizations it identifies into the Church History Biographical Database, the Relief Society\'s published history, the First Fifty Years of Relief Society documents, and the Saints narrative history. These sources show women as converts, missionaries, healers, emigrants, temple workers, Relief Society leaders, writers, and builders of local congregations. Because women\'s experiences differed by time and place, studying both institutional histories and women\'s own diaries, minutes, letters, and oral histories gives a fuller account than a single summary can provide.',
+            answer: 'Begin with the official Women\'s History collection in Gospel Library. It links to At the Pulpit, The First Fifty Years of Relief Society, and Daughters in My Kingdom. These are useful starting points for studying women\'s voices and the history of Relief Society. Choose one of these resources, follow its chapters or documents, and note the named people, dates, and setting before comparing it with another account. Keeping a passage in its historical context helps distinguish what that record actually says from a modern interpretation. The collection provides several substantial study paths, so you can explore a particular person, address, or period rather than rely on a short general summary.',
             sources: [
                 officialHistorySource('Women\'s History', 'https://www.churchofjesuschrist.org/study/church-history/womens-history?lang=eng', 'Official Church History study collection devoted to women\'s history.')
             ]
@@ -986,17 +995,19 @@
             return !/\b(?:song|music|album|book|movie|film|poem|painting|artwork|design)\b/.test(query);
         },
         'joseph-smith': function (query) {
+            if (/\b(?:after|before|following|since)\s+(?:the\s+)?(?:death|martyrdom|murder|joseph)\b/.test(query)) return false;
             if (/\bjoseph the prophet\b/.test(query)) return true;
             const explicit = query.match(/\bjoseph smith(?:\s+(\w+))?/);
             if (explicit) {
                 if (explicit[1] === 'the') return /\bjoseph smith the prophet\b/.test(query);
-                return !explicit[1] || ['jr', 'junior', 'was', 'is', 'did', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom', 'murdered', 'get', 'got'].includes(explicit[1]);
+                return !explicit[1] || ['jr', 'junior', 'was', 'is', 'did', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom', 'murdered', 'get', 'got', 'imprisoned', 'held', 'detained', 'at', 'in'].includes(explicit[1]);
             }
             const bare = query.match(/\bjoseph(?:\s+(\w+))?/);
             if (!bare) return false;
             return !bare[1] || ['was', 'is', 'did', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom', 'murdered', 'get', 'got'].includes(bare[1]);
         },
         'lds-handcart': function (query) {
+            if (/\b(?:my|our|she|her|he|his|ancestor|grandmother|grandfather|food|ration|rations|short|shortage|shortages|diet|meal|meals)\b/.test(query)) return false;
             return !/\b(?:amusement park|race|racing|shopping|grocery|patent|video game|game)\b/.test(query);
         },
         'restored-church': function (query) {
@@ -1238,17 +1249,32 @@
         return Object.freeze(value);
     }
 
+    function directReviewedVariant(entry, question, profile) {
+        const query = normalize(question);
+        const tokens = new Set(query.split(' ').filter(Boolean));
+        return ((entry.followup || {}).variants || []).find(function (variant) {
+            if (!variant.directSubject || !hasTerm(query, tokens, variant.directSubject)) return false;
+            if (variant.directContext && !variant.directContext.some(function (term) { return hasTerm(query, tokens, term); })) return false;
+            // Preserve the entry's profile, exclusions and identity guard while
+            // replacing its default intent with this reviewed variant's intent.
+            return entryMatches(Object.assign({}, entry, { match: Object.assign({}, entry.match, {
+                exact: [], all: (variant.intent || {}).all || [],
+                none: (entry.match.none || []).concat((variant.intent || {}).none || [])
+            }) }), question, profile);
+        }) || null;
+    }
+
     function match(question, options) {
         const profile = String(options && options.profile || 'ask');
         const matched = ENTRIES
-            .filter(function (entry) { return entryMatches(entry, question, profile); })
+            .filter(function (entry) { return entryMatches(entry, question, profile) || directReviewedVariant(entry, question, profile); })
             .sort(function (left, right) { return right.priority - left.priority; })[0];
         if (!matched) return null;
         const variant = options && options.contextVariant && matched.followup
             ? (matched.followup.variants || []).find(function (candidate) {
                 return candidate.id === options.contextVariant;
             })
-            : null;
+            : directReviewedVariant(matched, question, profile);
         const selectedSources = variant && Array.isArray(variant.sources) ? variant.sources : matched.sources;
         return {
             id: matched.id,

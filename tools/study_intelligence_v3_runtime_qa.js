@@ -1,10 +1,11 @@
 const fs = require('fs');
 const vm = require('vm');
 
+const scheduledRequestTimeouts = [];
 global.window = {
     location: { pathname: '/ask.html' },
     addEventListener() {},
-    setTimeout,
+    setTimeout(callback, delay) { scheduledRequestTimeouts.push(delay); return setTimeout(callback, delay); },
     clearTimeout,
     focusChristSourceIntegrity: null,
 };
@@ -91,10 +92,11 @@ global.fetch = async (_url, options) => {
             ok: true,
             async json() {
                 return {
-                    choices: [{ message: { content: 'RATE-LIMIT FALLBACK MUST NOT RENDER' } }],
+                    choices: [{ message: { content: 'I’m unable to check our approved study sources right now. Please try again in a moment. Joseph Smith died in 1999.' } }],
                     focuschrist_sources: [],
                     focuschrist_source_integrity_verified: false,
                     focuschrist_gateway_mode: 'research-rate-limited',
+                    focuschrist_provider_status: 429,
                     focuschrist_source_policy: '2026-09-03.16'
                 };
             }
@@ -123,14 +125,27 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     result = await window.focusChristStudyAskV3('how are colors used in scripture', '');
     assert(result.answer === 'VERIFIED COLOR ANSWER' && fetchCalls === 0, 'plural verified intent must bypass generation');
     result = await window.focusChristStudyAskV3('what year was joseph killed', '');
-    assert(result.answer.includes('1844') && result.localMatch === 'joseph-smith-death-1844' && fetchCalls === 0,
-        'reviewed Joseph Smith death intent must answer during research rate limits');
+    assert(result.clarification === true && !result.answer.includes('1844') && fetchCalls === 0,
+        'unqualified Joseph death intent must clarify identity before local matching');
     result = await window.focusChristStudyAskV3('when did Joseph Smith die', '');
     assert(result.answer.includes('1844') && fetchCalls === 0,
         'explicit Joseph Smith death phrasing must match the reviewed answer');
     result = await window.focusChristStudyAskV3('when did Joseph die', '');
-    assert(result.answer.includes('1844') && fetchCalls === 0,
-        'bare Joseph death phrasing on the LDS Ask page must use the qualified reviewed answer');
+    assert(result.clarification === true && !result.answer.includes('1844') && fetchCalls === 0,
+        'bare Joseph death phrasing must not infer identity from the LDS page');
+    conversationHistory.push({ role: 'assistant', content: 'We are discussing Joseph Smith.' });
+    result = await window.focusChristStudyAskV3('When did Joseph die?', '');
+    assert(result.clarification === true, 'assistant claims must not establish the visitor\'s intended Joseph');
+    conversationHistory.push({ role: 'user', content: 'Tell me about Joseph Smith.' });
+    result = await window.focusChristStudyAskV3('When did Joseph die?', '');
+    assert(result.answer.includes('1844') && !result.clarification, 'explicit preceding user identity must resolve Joseph');
+    conversationHistory.push({ role: 'user', content: 'Tell me about Joseph in Egypt.' });
+    result = await window.focusChristStudyAskV3('When did Joseph die?', '');
+    assert(!result.answer.includes('1844'), 'new user subject must prevent stale Smith identity');
+    conversationHistory.length = 0;
+    result = await window.focusChristStudyAskV3('Which one is the right interpretation?', '');
+    assert(result.clarification === true && result.sources.length === 0 && fetchCalls === 0,
+        'interpretation with no passage or context must ask for the missing reference');
 
     result = await window.focusChristStudyAskV3('Who is Jesus Christ, and why is He central to Latter-day Saint belief?', '');
     assert(result.reviewedLocal === true && result.answer.split(/\s+/).length >= 70 && result.sources.length >= 1 && fetchCalls === 0,
@@ -418,12 +433,40 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     assert(!/temporarily unavailable/i.test(result.answer),
         'a recovered transient request must never render the unavailable message');
 
+    assert(scheduledRequestTimeouts.some(delay => delay === 65000)
+        && !scheduledRequestTimeouts.includes(12000),
+        'first request must allow the complete 60-second Worker plus transport budget');
+    const realNow = Date.now, realFetch = global.fetch, fakeStart = Date.now();
+    let elapsed = 0, lateCalls = 0;
+    try {
+        Date.now = () => fakeStart + elapsed;
+        global.fetch = async () => {
+            lateCalls += 1;
+            elapsed = 65000;
+            throw new TypeError('Injected failure after complete request budget');
+        };
+        await window.focusChristStudyAskV3('Explain an unfamiliar Old Testament historical question', '');
+        assert(lateCalls === 1, 'exhausted request budget must never launch a late duplicate');
+    } finally { Date.now = realNow; global.fetch = realFetch; }
+
+    const harnessSource = fs.readFileSync('tools/question-acceptance-local.cjs', 'utf8');
+    const signalExpression = harnessSource.match(/signal:(options\.signal \? AbortSignal\.any\([^\n]+?)\}\);/);
+    assert(signalExpression, 'acceptance harness must retain the browser abort signal');
+    const controller = new AbortController();
+    const forwarded = new Function('options', 'AbortSignal', 'return ' + signalExpression[1])({ signal: controller.signal }, AbortSignal);
+    controller.abort(new Error('Browser deadline reached'));
+    assert(forwarded.aborted && forwarded.reason === controller.signal.reason,
+        'browser abort must propagate through the harness transport deadline');
+
     const beforeVerifiedPolicyResult = fetchCalls;
     forceWorkerRateLimit = true;
     result = await window.focusChristStudyAskV3('What does Genesis teach about creation?', '');
     forceWorkerRateLimit = false;
     assert(fetchCalls === beforeVerifiedPolicyResult + 1 && result.clientAttempts === 1,
         'a completed HTTP 200 policy response must not trigger client verifier shopping');
+    assert(result.answer === 'I’m unable to check our approved study sources right now. Please try again in a moment.'
+        && result.unavailable === true && result.sources.length === 0,
+        'Worker outage must render only the exact approved message, without appended unverified claims or scope fallback');
 
     const beforeExhaustedRetry = fetchCalls;
     transientFailuresRemaining = 2;
@@ -439,5 +482,19 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     assert(fetchCalls === beforeNonRetryable + 1
         && /answer service is temporarily unavailable/i.test(result.answer),
         'a non-retryable 4xx response must not create a duplicate request');
+    conversationHistory.length = 0;
+    result = await window.focusChristStudyAskV3('How did Brigham Young help organize migration after the death of Joseph Smith?', '');
+    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && !result.reviewedLocal,
+        'death mentioned as background must not hijack migration relationship question in either local bank');
+    conversationHistory.push({ role: 'user', content: 'Tell me about the Salt Lake Temple.' });
+    result = await window.focusChristStudyAskV3('How old was my great-grandmother when she pulled a handcart?', '');
+    assert(result.clarification === true && /name/.test(result.answer),
+        'unknown ancestor age must ask for identifying records before handcart overview matching');
+    conversationHistory.push({ role: 'user', content: 'Tell me about pioneer food.' });
+    result = await window.focusChristStudyAskV3('How did that change when the late handcart companies ran short?', '');
+    assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && result.contextResolved === true,
+        'food shortage followup must use contextual research instead of handcart overview');
+    assert(requestBodies.at(-1).messages.some(m => m.role === 'user' && /pioneer food/.test(m.content)),
+        'actual user food context must reach the research request');
     console.log('Study Intelligence v3 runtime QA PASS');
 })().catch((error) => { console.error(error); process.exit(1); });

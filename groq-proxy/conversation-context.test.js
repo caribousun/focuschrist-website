@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import worker, { classifyResearchScope, sanitizePayload } from './src/index.js';
+import worker, { classifyResearchScope, sanitizePayload, relatedConversationSources } from './src/index.js';
 
 const legacy = (question, antecedent) => `${question}\n\nThe immediately preceding user question was: "${antecedent}".\n\nResolve pronouns and omitted subjects only from that immediately preceding question.`;
 const examples = [
@@ -65,8 +65,35 @@ for (const page of ['ask', 'pioneers']) {
     'ordinary multiline user wording must not be truncated as if it were a legacy wrapper');
 }
 
-// Prove contextual relationships do not short-circuit into an antecedent-only
-// index result. Mock provider rejection; no model or official endpoint is called.
+const pairPaths = [
+  ['gospel-topics/jesus-christ', 'gospel-topics/godhead'],
+  ['history/topics/departure-from-nauvoo', 'history/topics/pioneer-trek']
+];
+for (const [index,[antecedent,current]] of examples.entries()) {
+  const scope = classifyResearchScope([{role:'user',content:antecedent},{role:'user',content:current}],'ask','faith-study');
+  const candidates = relatedConversationSources(scope);
+  assert.equal(candidates.length, 2, 'each relationship requires two complementary sources');
+  for (const path of pairPaths[index]) assert.ok(candidates.some(candidate=>candidate.url.includes(path)));
+}
+assert.deepEqual(relatedConversationSources(classifyResearchScope([
+  {role:'user',content:'When was the biblical Exodus of Moses from Egypt?'},
+  {role:'user',content:'When did it end?'}
+],'pioneers','faith-study')), [], 'Biblical Exodus must not select Latter-day Saint migration sources');
+assert.deepEqual(relatedConversationSources(classifyResearchScope([
+  {role:'user',content:examples[0][0]}, {role:'user',content:'What causes ocean tides?'}
+],'ask','general-knowledge')), [], 'an unrelated new subject must not inherit a prior evidence pair');
+assert.deepEqual(relatedConversationSources(classifyResearchScope([
+  {role:'user',content:examples[0][0]}, {role:'user',content:'What does John 3:16 teach about God in the New Testament?'}
+],'ask','faith-study')), [], 'an explicit scripture request must retain canonical passage precedence');
+for (const messages of [
+  [{role:'user',content:"What does the New Testament teach about God's grace?"}],
+  [{role:'user',content:examples[0][0]}, {role:'user',content:'What does his grace mean for us?'}],
+  [{role:'user',content:examples[1][0]}, {role:'user',content:'What challenges did they face during the pioneer migration?'}]
+]) assert.deepEqual(relatedConversationSources(classifyResearchScope(messages,'ask','faith-study')), [],
+  'specific grace or pioneer experience questions must keep their own retrieval instead of an identity or chronology pack');
+
+// Prove paired official retrieval precedes model research, then falls back to
+// research when those sources are unavailable. Every fetch is an offline mock.
 const originalFetch = globalThis.fetch;
 try {
   for (const page of ['ask','pioneers']) for (const [antecedent,current] of examples) {
@@ -75,9 +102,13 @@ try {
       calls.push({url:String(url),body:options?.body ? JSON.parse(options.body) : null});
       return new Response(JSON.stringify({error:{message:'Offline route fixture unavailable'}}),{status:400,headers:{'Content-Type':'application/json'}});
     };
-    await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:page,focuschrist_profile:'faith-study',messages:[{role:'user',content:antecedent},{role:'assistant',content:assistantClaim},{role:'user',content:current}]})}),{GROQ_KEY_NEW:'offline-fixture'});
-    assert.ok(calls.length > 0 && calls[0].url.includes('api.groq.com'), 'relationship follow-up must research the new question before taking an old-topic index answer');
-    assert.ok(calls[0].body.messages.some(message=>message.content.includes(current)), 'research must receive the current comparison or end-date request');
+    await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:page,focuschrist_profile:'faith-study',messages:[{role:'user',content:antecedent},{role:'assistant',content:assistantClaim},{role:'user',content:current}]})}),{OPENAI_API_KEY:'offline-fixture'});
+    const expectedPaths = pairPaths[examples.findIndex(example=>example[0]===antecedent)];
+    for (const path of expectedPaths) assert.ok(calls.some(call=>call.url.includes(path)), 'both complementary official sources must be attempted');
+    assert.ok(calls[0].url.includes('churchofjesuschrist.org'), 'paired official evidence must be attempted before model research');
+    const researchCall = calls.find(call=>call.url.endsWith('/v1/responses'));
+    assert.ok(researchCall, 'unavailable paired sources must still allow ordinary research');
+    assert.ok(researchCall.body.input.some(message=>message.content.includes(current)), 'research must receive the current comparison or end-date request');
   }
 } finally { globalThis.fetch = originalFetch; }
-console.log('Conversation context QA PASS: both surfaces, raw/legacy requests, current intent, user-only bounded context, reset/missing/three-turn cases, and research-first relationship routing.');
+console.log('Conversation context QA PASS: both surfaces, raw/legacy requests, current intent, user-only bounded context, reset/missing/three-turn cases, paired official retrieval and research fallback.');

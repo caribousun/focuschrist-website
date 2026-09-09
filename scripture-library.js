@@ -180,14 +180,41 @@
         }
     }
     async function lookupRequest(question) {
-        const candidate = String(question).trim().replace(/^please\s+/i,'').replace(/^(?:quote|read|show(?:\s+me)?|give\s+me(?:\s+the\s+text\s+of)?)\s+/i,'').replace(/^what\s+does\s+/i,'').replace(/\s+say\??$/i,'').replace(/[?.]$/,'');
         try {
-            const refs = references(candidate);
-            if (refs.length !== 1 || refs[0].text.length !== candidate.length) return null;
-            const ref = refs[0], data = await chapter(ref.key);
+            const request = String(question).trim(), refs = references(request);
+            if (refs.length !== 1) return null;
+            const ref = refs[0];
+            const before = request.slice(0,ref.index).trim(), after = request.slice(ref.end).trim();
+            const courtesy = '(?:please\\s+)?(?:(?:can|could|would)\\s+you\\s+)?(?:please\\s+)?';
+            const command = new RegExp('^'+courtesy+'(?:read|quote|show(?:\\s+me)?|give\\s+me|provide(?:\\s+me)?)(?:\\s+(?:the\\s+)?(?:text|words)(?:\\s+of)?)?$','i');
+            const modifiers = /^(?:(?:[,\s]*(?:exactly|verbatim|word for word|for me|please)))*[?.!]*$/i;
+            const asksWords = /^what\s+does$/i.test(before) && /^say(?:\s+(?:exactly|for me))?[?.!]*$/i.test(after);
+            if (!asksWords && !((!before || command.test(before)) && modifiers.test(after))) return null;
+            const candidate = ref.text, data = await chapter(ref.key);
             const rows = data.kind === 'document' ? data.paragraphs : data.verses.filter(v=>!ref.verses || ref.verses.includes(v.number));
             return { answer: candidate+'\n\n'+rows.map(v=>v.text).join('\n\n'), sources:[{text:candidate,url:ref.url}], verifiedGrounding:true, scriptureLibraryVersion:catalog.version, sourceIntegrityPassed:true, sourceIntegrityStatus:'local-scripture-library' };
         } catch (_) { return null; }
+    }
+    async function evidenceRequest(question) {
+        const refs = references(question);
+        if (!refs.length) return [];
+        if (refs.length > 3) throw new Error('scripture-evidence-range-too-large');
+        let characters = 0;
+        const evidence = await Promise.all(refs.map(async ref => {
+            const data = await chapter(ref.key);
+            const surrounding = ref.verses ? new Set(ref.verses.flatMap(number=>[number-2,number-1,number,number+1,number+2]).filter(number=>number>=1 && number<=data.verses.length)) : null;
+            const rows = data.kind === 'document' ? data.paragraphs : data.verses.filter(v=>!surrounding || surrounding.has(v.number));
+            const book = catalog.books.find(book=>ref.key.startsWith(book.key+'/'));
+            const title = surrounding ? book.name+' '+ref.key.split('/').pop()+':'+rows.map(v=>v.number).join(',') : ref.text;
+            const url = surrounding ? base+ref.key+'?lang=eng&id='+rows.map(v=>'p'+v.number).join(',')+'#p'+rows[0].number : ref.url;
+            const content = rows.map(v=>v.text).join('\n');
+            // Keep complete verses and documents; never truncate a proposition.
+            characters += content.length;
+            if (characters > 18000) throw new Error('scripture-evidence-range-too-large');
+            return { title, text:title, url, requestedReference:ref.text, host:'www.churchofjesuschrist.org', content,
+                sourceClass:'canonical-scripture', localCanonical:true, scriptureLibraryVersion:catalog.version };
+        }));
+        return evidence;
     }
     function linkify(element) {
         if (!element || !element.ownerDocument) return;
@@ -206,5 +233,5 @@
             fragment.appendChild(doc.createTextNode(node.textContent.slice(start)));node.replaceWith(fragment);
         }
     }
-    return Object.freeze({ references, fromURL, chapter, checkAnswer, selection, lookupRequest, linkify, version: catalog.version });
+    return Object.freeze({ references, fromURL, chapter, checkAnswer, selection, lookupRequest, evidenceRequest, linkify, version: catalog.version });
 });

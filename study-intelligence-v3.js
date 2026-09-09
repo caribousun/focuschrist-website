@@ -1,15 +1,14 @@
 /* focusChrist Study Intelligence v3
  * Hardened response hygiene + broader LDS intent + verified core grounding.
- * Loaded after v2 and owns the final Ask/Pioneer AI functions when ready.
+ * Owns the final Ask/Pioneer AI functions when ready.
  */
 (function () {
     'use strict';
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
-    const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
-    const CLIENT_REQUEST_BUDGET_MS = 25000;
-    const CLIENT_FIRST_ATTEMPT_MS = 12000;
+    const CLIENT_REQUEST_BUDGET_MS = 65000;
+    const CLIENT_FIRST_ATTEMPT_MS = 65000;
     const CLIENT_RETRY_DELAY_MS = 400;
     const CLIENT_MIN_RETRY_BUDGET_MS = 3000;
     const POLICY_VERSION = '2026-09-03.16';
@@ -345,7 +344,6 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    model: MODEL,
                     messages: messages,
                     focuschrist_page: currentMode(),
                     focuschrist_profile: profile,
@@ -457,13 +455,11 @@
     }
 
     function normalizeDisplayText(answer) {
+        // Canonical quotations must retain their source punctuation. Typography
+        // rewriting here would invalidate an otherwise verified scripture quote.
         let text = convertMarkdownTables(answer);
         text = text
             .replace(/[\u00A0\u2007\u202F]/g, ' ')
-            .replace(/[\u2010\u2011\u2012\u2013\u2014\u2212]/g, '-')
-            .replace(/[\u2018\u2019]/g, "'")
-            .replace(/[\u201C\u201D]/g, '"')
-            .replace(/\u2026/g, '...')
             .replace(/^\s*:\s*/, '')
             .replace(/[ \t]+\n/g, '\n')
             .replace(/[ \t]{2,}/g, ' ')
@@ -473,6 +469,32 @@
     }
 
     async function askV3(query, additionalReference) {
+        // Resolve an incomplete identity from the visitor's words only. A local
+        // answer bank or an assistant's previous guess cannot establish identity.
+        const userTurns = recentHistory().filter(function (item) { return item.role === 'user'; });
+        const priorUserQuestion = userTurns.length ? String(userTurns[userTurns.length - 1].content) : '';
+        if (/\b(?:my|our)\s+(?:great[- ]?)?(?:grandmother|grandfather|ancestor|family)\b/i.test(query)
+            && /\b(?:how old|age|when|which|identify)\b/i.test(query)) {
+            return { answer: 'Please provide your ancestor\'s name and any birth date, travel date, or company information you know so I can help identify the right records.',
+                sources: [], clarification: true, profile: currentMode() };
+        }
+        const bareJosephDeath = /\bjoseph(?=\s*(?:[?.!]|$)|\s+(?:die|died|death|killed|martyred|martyrdom|murdered|was|is|did|get|got)\b)/i.test(query)
+            && /\b(?:die|died|death|killed|martyred|martyrdom|murdered)\b/i.test(query)
+            && !/\bjoseph\s+(?:smith|the\s+prophet|of\s+|in\s+|son\s+|jr\b)/i.test(query);
+        if (bareJosephDeath) {
+            if (/\bjoseph\s+smith\b/i.test(priorUserQuestion)
+                && !/\bjoseph\s+(?:of|in|son)\b/i.test(priorUserQuestion)) {
+                query = String(query).replace(/\bjoseph\b/i, 'Joseph Smith');
+            } else {
+                return { answer: 'Which Joseph do you mean: Joseph Smith, Joseph in the Bible, or someone else?',
+                    sources: [], clarification: true, profile: currentMode() };
+            }
+        }
+        if (!priorUserQuestion && /^(?:and\s+)?which\s+(?:one|interpretation)\b/i.test(String(query).trim())
+            && /\b(?:interpretation|right|correct)\b/i.test(query)) {
+            return { answer: 'Which passage or interpretations would you like to compare? Please share the reference or the two views.',
+                sources: [], clarification: true, profile: currentMode() };
+        }
         if (window.focusChristScriptureReady) {
             try {
                 const library = await window.focusChristScriptureReady;
@@ -488,7 +510,9 @@
         // answer (for example, returning Joseph Smith's death date to "How old was
         // he?"). The original wording already received direct reviewed matching in
         // resolveFollowup, so generic contextual research must bypass both local banks.
-        const allowContextualLocalMatch = contextResolution.genericContext !== true;
+        const deathAsBackground = /\bjoseph\b/i.test(query)
+            && /\b(?:after|before|following|since)\s+(?:the\s+)?(?:death|martyrdom|murder|joseph)\b/i.test(query);
+        const allowContextualLocalMatch = contextResolution.genericContext !== true && !deathAsBackground;
         const reviewedReference = allowContextualLocalMatch
             ? reviewedKnowledgeReference(effectiveQuery, contextResolution)
             : null;
@@ -551,6 +575,16 @@
 
         try {
                 const researched = await requestWithRetry(messages, profile);
+                const unavailable = /(?:unavailable|rate-limited|timeout|transport-failure)/i.test(researched.gatewayMode)
+                    || researched.providerStatus === 429 || researched.providerStatus >= 500;
+                if (unavailable && !researched.serverVerified) {
+                    // An operational failure is not a source claim or a scope refusal.
+                    return { answer: 'I’m unable to check our approved study sources right now. Please try again in a moment.', sources: [], profile: profile,
+                        verifiedGrounding: false, sourceIntegrityPassed: false,
+                        sourceIntegrityStatus: researched.gatewayMode, unavailable: true,
+                        providerStatus: researched.providerStatus, providerCode: researched.providerCode,
+                        sourcePolicyVersion: researched.policyVersion, clientAttempts: researched.clientAttempts || 1 };
+                }
                 let answer = researched.content;
                 answer = removeBoilerplateClosing(answer, profile);
                 answer = normalizeDisplayText(answer);

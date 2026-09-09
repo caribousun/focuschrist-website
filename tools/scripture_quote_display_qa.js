@@ -1,0 +1,25 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const root=path.resolve(__dirname,'..');
+const code=fs.readFileSync(path.join(root,'study-intelligence-v3.js'),'utf8');
+const context=vm.createContext({});
+vm.runInContext(code.slice(code.indexOf('    function convertMarkdownTables('),code.indexOf('    async function askV3(')),context);
+const library=require('../scripture-library.js')(require('../scripture-data/catalog.json'),async file=>new Response(fs.readFileSync(path.join(root,file))));
+(async()=>{
+ const lookup=await library.lookupRequest('Quote Mosiah 18:8-10');
+ const passage=require('../scripture-data/bofm/mosiah/18.json').verses.filter(verse=>verse.number>=8&&verse.number<=10).map(verse=>verse.text).join(' ');
+ const exact={answer:'“'+passage+'” (Mosiah 18:8-10)',sources:lookup.sources};
+ assert(exact.answer.includes('life—'),'actual canonical passage must exercise source em dash');
+ const displayed=context.normalizeDisplayText(exact.answer);
+ assert.equal(displayed,exact.answer,'display formatting must preserve the complete canonical quotation');
+ assert.equal((await library.checkAnswer(displayed,exact.sources)).ok,true,'actual shared validator must accept displayed canonical wording');
+ const modified=displayed.replace('eternal life','endless riches');
+ assert.notEqual(modified,displayed);
+ assert.equal((await library.checkAnswer(modified,exact.sources)).ok,false,'changed words must still fail validation');
+ assert.equal((await library.checkAnswer(displayed.replaceAll('—','-'),exact.sources)).ok,false,'punctuation mutation remains detectable');
+ const punctuation='“Come—learn,” she said. It’s a quotation…';
+ assert.equal(context.normalizeDisplayText(punctuation),punctuation,'typographic quotes, apostrophes and ellipses must survive as well');
+ console.log('PASS: actual Mosiah18:8-10 source punctuation survives display; altered wording/punctuation rejected by shared validator.');
+})().catch(error=>{console.error(error);process.exitCode=1;});

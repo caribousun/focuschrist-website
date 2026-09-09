@@ -1,0 +1,37 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import createLibrary from '../scripture-library.js';
+import { augmentRequestedCorpusEvidence } from './src/corpus-evidence.js';
+
+const catalog = JSON.parse(fs.readFileSync(new URL('../scripture-data/catalog.json', import.meta.url)));
+let loads = 0;
+const library = createLibrary(catalog, async url => {
+  loads++;
+  return new Response(fs.readFileSync(new URL('..' + url, import.meta.url)));
+});
+const approved = url => String(url).startsWith('https://www.churchofjesuschrist.org/');
+const scope = {question:'What does the New Testament teach about grace?'};
+const source = {url:'https://www.churchofjesuschrist.org/study/manual/gospel-topics/grace',content:'Consider Ephesians 2:8-9 and John 15:1-5.',title:'Romans 8:1'};
+const added = await augmentRequestedCorpusEvidence(scope,[source],library,approved);
+assert.equal(added.length,2);
+assert(added[0].content.includes('For by grace are ye saved through faith'));
+assert.equal(loads,2);
+assert(added.every(s=>s.localCanonical && s.scriptureLibraryVersion === catalog.version));
+assert.deepEqual(await augmentRequestedCorpusEvidence(scope,[{...source,content:'Grace is a gift.',title:'Ephesians 2:8-9'}],library,approved),[]);
+assert.deepEqual(await augmentRequestedCorpusEvidence(scope,[{...source,url:'https://unapproved.test/'}],library,approved),[]);
+assert.deepEqual(await augmentRequestedCorpusEvidence({question:'Who first printed the Book of Mormon?'},[source],library,approved),[]);
+assert.deepEqual(await augmentRequestedCorpusEvidence(scope,[source],library,approved,()=>false),[]);
+assert.deepEqual(await augmentRequestedCorpusEvidence(scope,[{...source,content:'Alma 32:21'}],library,approved),[]);
+assert.deepEqual(await augmentRequestedCorpusEvidence(scope,[{...source,content:'John 999:1'}],library,approved),[]);
+const unavailable = {...library,evidenceRequest:async()=>{throw Error('unavailable');}};
+assert.deepEqual(await augmentRequestedCorpusEvidence(scope,[source],unavailable,approved),[]);
+let attempts = 0;
+const oversized = {...library,evidenceRequest:async()=>{attempts++;return [{content:'x'.repeat(6001)}];}};
+assert.deepEqual(await augmentRequestedCorpusEvidence(scope,[{...source,content:'Ephesians 2:8-9; John 15:1-5; Romans 8:1.'}],oversized,approved),[]);
+assert.equal(attempts,2,'oversized or failed selections must not cause an unbounded search through article references');
+const ranked = await augmentRequestedCorpusEvidence(scope,[{...source,content:'Jesus described a vine in John 15:1-5.\nPaul discusses love in Romans 8:38-39.\nGrace and salvation are discussed in Ephesians 2:8-9.'}],library,approved);
+assert(ranked[0].url.includes('/nt/eph/2'), 'explicit later passage in a grace-related paragraph must outrank incidental earlier citations');
+assert.equal(ranked.length,2,'semantic ranking must preserve the two-passage bound');
+const otherTopic = await augmentRequestedCorpusEvidence({question:'What does the New Testament teach about love?'},[{...source,content:'Jesus described a vine in John 15:1-5.\nPaul discusses love in Romans 8:38-39.\nGrace and salvation are discussed in Ephesians 2:8-9.'}],library,approved);
+assert(otherTopic[0].url.includes('/nt/rom/8'),'ranking must follow actual requested concept, not a preferred scripture whitelist');
+console.log('Requested corpus evidence QA PASS');

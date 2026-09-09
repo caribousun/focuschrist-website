@@ -9,6 +9,18 @@ const integrity = window.focusChristSourceIntegrity;
 const guard = integrity.guardGeneratedAnswer;
 function assert(condition, message) { if (!condition) throw new Error(message); }
 
+for (const safeMessage of [
+    'focusChrist is here to help you learn of Jesus Christ and draw closer to Him. I couldn’t find a supported answer to this question in our study library or approved LDS sources. You’re welcome to ask about Jesus Christ, scripture, faith, or Church history.',
+    'I’m unable to check our approved study sources right now. Please try again in a moment.',
+    'Which Joseph do you mean? Please include the last name or a little more context.'
+]) {
+    const result = guard(safeMessage, { sourceDependent: true, serverVerified: false });
+    assert(result.ok && result.answer === safeMessage, 'scope and outage messages must retain their distinct wording');
+    assert(!guard(safeMessage + ' Genesis 99:99 proves this.', {
+        sourceDependent: true, serverVerified: false
+    }).ok, 'safe wording must not allow an appended unsupported claim');
+}
+
 assert(!guard('2 Corinthians 12:2 teaches this.', { trustedReferenceText: '1 Corinthians 12:2' }).ok,
     'numbered books must not collapse into the same citation');
 assert(!guard('D&C 76:31-34 teaches colored degrees of glory.', {

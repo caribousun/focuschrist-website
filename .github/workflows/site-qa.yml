@@ -60,6 +60,7 @@ jobs:
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
 
       - name: Check connected study destinations and learning paths
         run: python tools/connected_study_qa.py
@@ -146,6 +147,21 @@ jobs:
           node tools/scripture_library_qa.js
           node groq-proxy/source-policy.test.js
           node groq-proxy/conversation-context.test.js
+          node groq-proxy/research-escalation.test.js
+          node groq-proxy/scripture-evidence.test.js
+          node groq-proxy/source-discovery.test.js
+          node groq-proxy/evidence-budget.test.js
+          node groq-proxy/openai-research.test.js
+          node groq-proxy/corpus-coverage.test.js
+          node groq-proxy/corpus-evidence.test.js
+          node groq-proxy/factual-followup.test.js
+          node groq-proxy/relationship-audit.test.js
+          node groq-proxy/reviewed-source-context.test.js
+          node groq-proxy/direct-scripture-reading.test.js
+          node groq-proxy/paragraph-intent.test.js
+          node groq-proxy/source-caveat.test.js
+          node groq-proxy/missing-subject.test.js
+          node tools/scripture_quote_display_qa.js
           node groq-proxy/church-source-index.test.js
 
       - name: Validate committed Church source index
@@ -170,12 +186,6 @@ jobs:
 
       - name: Run full-image viewer runtime QA
         run: node tools/full_image_viewer_runtime_qa.js
-
-      - name: Validate Study Intelligence JavaScript
-        run: node --check study-intelligence.js
-
-      - name: Validate adaptive Study Intelligence JavaScript
-        run: node --check study-intelligence-v2.js
 
       - name: Validate grounded Study Intelligence JavaScript
         run: node --check study-intelligence-v3.js

@@ -314,10 +314,8 @@ def main() -> int:
     if pioneers.count('role="button" tabindex="0" aria-expanded="false"') < 16:
         fail(errors, "Pioneers disclosure keyboard/ARIA attributes unexpectedly missing")
 
-    if OLD_MODEL in ask or OLD_MODEL in pioneers:
-        fail(errors, "Retired Groq model reintroduced into Ask/Pioneers")
-    if NEW_MODEL not in ask or NEW_MODEL not in pioneers:
-        fail(errors, "Current Groq model missing from Ask/Pioneers")
+    if any(model in page for model in (OLD_MODEL, NEW_MODEL, 'groq/compound') for page in (ask, pioneers)):
+        fail(errors, "Retired AI model reintroduced into Ask/Pioneers; the server owns OpenAI selection")
     if ask.count('data-focuschrist-ai-notice="true"') != 1:
         fail(errors, "Ask AI/privacy transparency notice missing/duplicated")
     for marker in (
@@ -330,7 +328,7 @@ def main() -> int:
             fail(errors, f"Ask redesigned experience marker missing/duplicated: {marker}")
     if '<link rel="stylesheet" href="ask-experience.css?v=20260909-warm">' not in ask:
         fail(errors, "Ask experience stylesheet missing")
-    if '<script src="ask-experience.js?v=20260909-followup" defer></script>' not in ask:
+    if '<script src="ask-experience.js?v=20260909-openai-only-2" defer></script>' not in ask:
         fail(errors, "Ask experience controller missing")
     if ask.count('data-ask-starter') < 6:
         fail(errors, "Ask starter question set unexpectedly incomplete")

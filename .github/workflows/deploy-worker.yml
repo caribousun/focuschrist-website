@@ -41,6 +41,21 @@ jobs:
         run: |
           node groq-proxy/source-policy.test.js
           node groq-proxy/conversation-context.test.js
+          node groq-proxy/research-escalation.test.js
+          node groq-proxy/scripture-evidence.test.js
+          node groq-proxy/source-discovery.test.js
+          node groq-proxy/evidence-budget.test.js
+          node groq-proxy/openai-research.test.js
+          node groq-proxy/corpus-coverage.test.js
+          node groq-proxy/corpus-evidence.test.js
+          node groq-proxy/factual-followup.test.js
+          node groq-proxy/relationship-audit.test.js
+          node groq-proxy/reviewed-source-context.test.js
+          node groq-proxy/direct-scripture-reading.test.js
+          node groq-proxy/paragraph-intent.test.js
+          node groq-proxy/source-caveat.test.js
+          node groq-proxy/missing-subject.test.js
+          node tools/scripture_quote_display_qa.js
           node groq-proxy/church-source-index.test.js
 
       - name: Validate committed Church source index

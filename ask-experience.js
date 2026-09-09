@@ -344,7 +344,15 @@
         });
 
         // Bring the answer into view, including when the transcript has its own scrollbar.
-        scrollPageToElement(chatBox.scrollHeight > chatBox.clientHeight + 2 ? chatBox : answer);
+        const transcriptTarget = chatBox.scrollHeight > chatBox.clientHeight + 2 ? chatBox : answer;
+        const dock = document.getElementById('askFollowupDock');
+        const dockVisible = dock && dock.classList.contains('visible') && dock.getAttribute('aria-hidden') !== 'true';
+        // Keep the follow-up field above the transcript visible together with
+        // the beginning of the answer whenever the viewport has room for both.
+        const composerAndAnswerFit = dockVisible
+            && transcriptTarget.getBoundingClientRect().top - dock.getBoundingClientRect().top + 120
+                <= window.innerHeight - fixedHeaderOffset();
+        scrollPageToElement(composerAndAnswerFit ? dock : transcriptTarget);
     }
 
     function submitQuestion(question) {
