@@ -175,6 +175,8 @@ function validate(test, result) {
     assert(result.elapsedMs <= HARD_LIMIT_MS, test.id + ' exceeded the 25-second visitor ceiling');
     assert(result.resolvedProfile === test.expectedProfile, test.id + ' resolved to ' + result.resolvedProfile);
     assert(result.classificationMode.length > 0, test.id + ' omitted the classification receipt');
+    assert(result.groqResearchCalls === 0 && result.groqVerifierCalls === 0 && result.cloudflareVerifierCalls === 0,
+        test.id + ' used a retired AI provider');
     if (test.allowSourceLimitation && !result.verified) {
         assert(['research-insufficient-evidence', 'verification-rejected'].includes(result.gatewayMode), test.id + ' returned a provider or policy error instead of an approved-source limitation');
         assert(result.answer === 'focusChrist is here to help you learn of Jesus Christ and draw closer to Him. I couldn’t find a supported answer to this question in our study library or approved LDS sources. You’re welcome to ask about Jesus Christ, scripture, faith, or Church history.', test.id + ' omitted the exact source limitation');
@@ -196,7 +198,7 @@ function validate(test, result) {
     for (const pattern of test.factPatterns || []) assert(pattern.test(result.answer), test.id + ' omitted expected answer concept ' + pattern);
     for (const pattern of test.contradictionPatterns || []) assert(!pattern.test(result.answer), test.id + ' returned a negated or contradictory expected fact');
     if (test.officialOnly) {
-        assert(['reviewed-deterministic', 'groq-primary', 'groq-primary-repair', 'openai-fallback', 'openai-repair', 'cloudflare-primary', 'cloudflare-fast-fallback', 'groq-fallback'].includes(result.verifierRoute), test.id + ' omitted a verifier route');
+        assert(['reviewed-deterministic', 'openai-primary', 'openai-repair'].includes(result.verifierRoute), test.id + ' omitted an OpenAI-only or reviewed-local verifier route');
         assert(result.verified && result.sourceHosts.length > 0 && result.sourceHosts.every((host) => host === 'churchofjesuschrist.org' || host.endsWith('.churchofjesuschrist.org')), test.id + ' was not official-only verified');
         assert(result.retrievalRoute === 'church-source-index' && result.groqResearchCalls === 0 && result.indexSources > 0 && result.officialFetchCalls <= 2, test.id + ' did not prove bounded zero-Groq research');
         if (test.id === 'respectful-interfaith') {
@@ -222,18 +224,10 @@ function validate(test, result) {
                 test.id + ' deterministic reviewed recovery unexpectedly consumed a verifier provider');
         } else {
             assert(result.verifierInputTokens > 0 && result.verifierOutputTokens > 0, test.id + ' omitted verifier usage receipts');
-            assert(result.cloudflareVerifierCalls >= 0 && result.cloudflareVerifierCalls <= 2
-                && result.groqVerifierCalls >= 0 && result.groqVerifierCalls <= 2
-                && result.openaiVerifierCalls >= 0 && result.openaiVerifierCalls <= 2
-                && verifierCallTotal >= 1 && verifierCallTotal <= 3,
-            test.id + ' returned invalid per-provider verifier call accounting');
-            assert(!(result.openaiVerifierCalls > 0 && result.cloudflareVerifierCalls > 0),
-                test.id + ' mixed Cloudflare and OpenAI verifier routes');
-            assert(!(result.openaiVerifierCalls === 2 && result.groqVerifierCalls !== 1),
-                test.id + ' used two Luna calls without one failed Groq primary attempt');
-            assert(!(result.groqVerifierCalls > 0 && result.cloudflareVerifierCalls > 1),
-                test.id + ' stacked verifier fallback with depth repair');
-            if (result.verifierRoute.startsWith('cloudflare-')) assert(result.estimatedNeurons > 0, test.id + ' omitted Cloudflare neuron accounting');
+            assert(Number.isInteger(result.openaiVerifierCalls)
+                && result.openaiVerifierCalls >= 1 && result.openaiVerifierCalls <= 2
+                && verifierCallTotal === result.openaiVerifierCalls,
+                test.id + ' returned invalid bounded OpenAI-only verifier call accounting');
         }
     }
 }
