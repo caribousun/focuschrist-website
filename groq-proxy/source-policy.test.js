@@ -493,7 +493,7 @@ assert(reliefGeneralRecovery && reliefGeneralRecovery.recoveryId === 'reviewed-r
 
 const workerSourceForDeterministicLane = await import('node:fs').then((fs) => fs.readFileSync(new URL('./src/index.js', import.meta.url), 'utf8'));
 const deterministicLanePosition = workerSourceForDeterministicLane.indexOf("const reviewedDeterministic = retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'");
-const verifierPromptPosition = workerSourceForDeterministicLane.indexOf('const verifierPrompt = sanitized.scope.selectedPioneer');
+const verifierPromptPosition = workerSourceForDeterministicLane.indexOf('const verifierPrompt = (sanitized.scope.selectedPioneer');
 assert(deterministicLanePosition >= 0 && verifierPromptPosition > deterministicLanePosition
   && workerSourceForDeterministicLane.includes("focuschrist_verifier_route: 'reviewed-deterministic'")
   && workerSourceForDeterministicLane.includes('focuschrist_groq_verifier_calls: 0')
@@ -1094,13 +1094,40 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.65',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.66',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
 }
 
 const limitedBodies = [];
+// A depth repair must retain the same quotation contract as the first verdict.
+// The first answer contains a valid token, so scripture-error repair is not its trigger.
+const tokenRepairBodies = [];
+const johnChapterFixture = JSON.parse(readAlmaFixture(new URL('../scripture-data/nt/john/3.json', import.meta.url), 'utf8'));
+const tokenDepthAnswer = "John 3:16 presents divine love through the gift of the Son. It connects belief in him with eternal life, contrasting that promised outcome with perishing. The focus is on what God gives and the response invited from those who hear. The verse can therefore guide a discussion of love, belief, and life without requiring details that the text never supplies. Read it within its chapter when considering those relationships. Its invitation does not state that believing prevents every mortal hardship or grants material wealth. Those would be additional claims requiring separate evidence, rather than conclusions established by this passage.\n\n[[SCRIPTURE:John 3:16]]";
+globalThis.fetch = async url => {
+  if (String(url).startsWith('https://focuschrist.com/scripture-data/')) return new Response(readAlmaFixture(new URL('..' + new URL(url).pathname, import.meta.url)));
+  if (String(url).includes('churchofjesuschrist.org/study/scriptures/nt/john/3')) return new Response(johnChapterFixture.verses.map(verse => `<p class="verse" id="p${verse.number}">${verse.text}</p>`).join(''), {headers:{'Content-Type':'text/html'}});
+  throw new Error('Unexpected network route in scripture depth-repair fixture: ' + url);
+};
+try {
+  const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'faith-study',messages:[{role:'user',content:'How does John 3:16 describe God and love?'}]})}), {
+    AI:{run:async (_model,body) => {
+      tokenRepairBodies.push(body);
+      assert(body.messages[0].content.includes('For a scripture quotation, use [[SCRIPTURE:Book chapter:verse]]'), 'every verifier pass must retain the mandatory library-token contract');
+      return {response:{approved:true,answer:tokenRepairBodies.length===1?'[[SCRIPTURE:John 3:16]]':tokenDepthAnswer,source_indexes:[1]}};
+    }}
+  });
+  const result = await response.json();
+  assert(tokenRepairBodies.length === 2 && tokenRepairBodies[1].messages[0].content.includes('required answer depth'),
+    'a valid token-only answer must trigger exactly one depth repair, not skip substantive explanation');
+  assert(result.focuschrist_source_integrity_verified && result.focuschrist_scripture_validated
+    && result.choices[0].message.content.includes(johnChapterFixture.verses[15].text)
+    && !result.choices[0].message.content.includes('[[SCRIPTURE:'), 'final gate must insert and accept only the actual verified verse wording after repair');
+  assert(!(await scriptureLibraryFixture.checkAnswer(tokenDepthAnswer.replace('[[SCRIPTURE:John 3:16]]','“God guarantees wealth to all believers.” (John 3:16)'),[])).ok,
+    'retaining the repair contract must not permit wrong raw quotation text');
+} finally { globalThis.fetch = originalFetch; }
 const expandedLowRiskAnswer = repeatedSubstantiveAnswer('historical', 50);
 globalThis.fetch = async (_url, options) => {
   const body = JSON.parse(options.body);
