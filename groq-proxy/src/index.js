@@ -26,8 +26,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.65';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.65';
+const SOURCE_POLICY_VERSION = '2026-09-09.66';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.66';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -41,6 +41,7 @@ const REQUEST_MESSAGE_LIMIT = 16;
 const OFFICIAL_INDEX_URLS = new Set(CHURCH_SOURCE_INDEX.map((entry) => entry.url));
 const PAGE_CONTEXTS = new Set(['ask', 'pioneers', 'church-history']);
 const PROFILE_CONTEXTS = new Set(['general-knowledge', 'faith-study', 'pioneer-study', 'high-stakes']);
+const SCRIPTURE_QUOTATION_CONTRACT = 'For a scripture quotation, use [[SCRIPTURE:Book chapter:verse]] with a complete canonical book name and an exact supported reference. The application supplies the quotation from its verified library. Keep explanations clearly separate from quotation; never invent verse words. Return only individually supported references.';
 const SERVER_RESEARCH_POLICY = [
   'For scripture quotations, select an exact reference using [[SCRIPTURE:John 3:16]] syntax. The application inserts verified English scripture wording. Never generate scripture quotation text from memory. Label explanations as paraphrase or application. Use complete book names and separate chapter references; do not invent reference labels or URLs.',
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
@@ -2146,7 +2147,7 @@ export default {
         }
       }
 
-      const verifierPrompt = sanitized.scope.selectedPioneer ? [
+      const verifierPrompt = (sanitized.scope.selectedPioneer ? [
         'You are writing a source-grounded biographical summary. Return one JSON object only.',
         `The visitor selected ${sanitized.scope.selectedPioneerName}. The evidence below is that person's permitted Tell My Story, Too entry.`,
         'Write a concise two-to-four paragraph answer using only facts in that entry. Do not use the optional research draft or add facts from memory.',
@@ -2182,9 +2183,9 @@ export default {
         `DRAFT:\n${draft}`,
         '',
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
-      ].join('\n');
+      ].join('\n')) + '\n' + SCRIPTURE_QUOTATION_CONTRACT;
       const verifierBody = {
-        messages: [{ role: 'user', content: verifierPrompt + '\nFor a scripture quotation, use [[SCRIPTURE:Book chapter:verse]] with a complete canonical book name and an exact supported reference. The application supplies the quotation from its verified library. Keep explanations clearly separate from quotation; never invent verse words. Return only individually supported references.' }],
+        messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
         max_tokens: sanitized.scope.selectedPioneer ? 900 : (sanitized.scope.faith ? 1000 : 500),
         response_format: { type: 'json_object' },
@@ -2245,7 +2246,9 @@ export default {
             ? 'Your previous rejection may be a false negative because the indexed official evidence has direct lexical relevance. Re-evaluate it once without presuming either approval or rejection. Interpret awkward but understandable grammar naturally. A named scripture chapter or Church-history topic that directly addresses the requested concept is usable evidence and should not be rejected merely because the visitor phrased the question imperfectly.'
             : needsDepthRepair
             ? 'Your previous approved answer did not meet the required answer depth.'
-            : 'Your previous approved answer failed the final publication overlap check.',
+            : needsParaphraseRepair
+            ? 'Your previous approved answer failed the final publication overlap check.'
+            : 'Your previous approved answer failed the deterministic scripture check.',
           needsRelevantEvidenceReconsideration
             ? (retrievalDiagnostic.focuschrist_deterministic_scripture === true
               ? 'This is the exact canonical scripture source named by the visitor. Re-read its excerpt for the requested concept. If the excerpt supports a responsible explanation, write that explanation and set approved true with source_indexes [1]. Keep approved false only if the excerpt truly lacks the requested concept.'
