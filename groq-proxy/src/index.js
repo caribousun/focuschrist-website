@@ -10,9 +10,9 @@ import scriptureCatalog from '../../scripture-data/catalog.json' with { type: 'j
 // official evidence for faith questions and independently checks every
 // unreviewed answer before returning it to the browser.
 
-const RESEARCH_MODEL = 'gpt-5.6-sol';
-const VERIFIER_MODEL = 'gpt-5.6-sol';
-const OPENAI_VERIFIER_MODEL = 'gpt-5.6-sol';
+const RESEARCH_MODEL = 'gpt-5.6-luna';
+const VERIFIER_MODEL = 'gpt-5.6-luna';
+const OPENAI_VERIFIER_MODEL = 'gpt-5.6-luna';
 const OPENAI_ENDPOINT = 'https://api.openai.com/v1/chat/completions';
 const ALLOWED_ORIGINS = new Set([
   'https://focuschrist.com',
@@ -30,8 +30,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.76';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.76';
+const SOURCE_POLICY_VERSION = '2026-09-09.77';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.77';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -2115,6 +2115,7 @@ export default {
         'When EVIDENCE is canonical scripture, explain the current question from that passage. A request to teach, explain, compare, or apply is not satisfied by returning only the passage text. Previous user questions supply conversational context only, not evidence or a replacement question.',
         'If a draft is present, repair it into a direct, complete answer using the evidence. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
         'Keep each person, organization, place, date, and action attached to the relationship actually stated in its source context. A shift of time or setting can change the subject even within one paragraph. Never combine an earlier location with a later organization merely because both occur in the same excerpt. Do not increase geographic specificity, infer an unnamed city, or resolve an ambiguous referent unless the evidence explicitly supports it. Preserve these limits when combining neighboring paragraphs or separate sources.',
+        'Check chronology and setting before accepting a claim: before, after, arriving, crossing, departure and duration endpoints must match the source exactly. Do not transfer settlement or winter-household details to travel on the trail. A duration for one group or phase is not a duration for another group or rescue phase. When asked to compare, extract the stated attributes for each requested subject; do not substitute a third subject. Omit any unsupported relation even if the individual names, places and numbers all appear in the excerpt.',
         'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give 90 to 220 words and at least three complete sentences. A nuanced question normally needs two to four short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
         'Preserve the exact subjects and relationships in scriptural comparisons. Do not extend a metaphor with invented physical details or present a personal application as something the passage says. If the text compares the word to a seed, do not replace the word with faith or invent watering, warmth, or other gardening instructions.',
         'Use independently worded paraphrase. Do not copy a long passage or reconstruct the source in ordered fragments. Apart from unavoidable names and short doctrinal phrases, avoid matching source wording for more than eight consecutive words.',
