@@ -28,6 +28,22 @@ const library = factory(catalog,localFetch);
     assert.equal((await library.checkAnswer('John 3:16', [{text:'John 4:16',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng'}])).ok,false);
     assert.equal((await library.checkAnswer('John 3:16', [{text:'John 3:16',url:'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=spa'}])).ok,false);
     assert.equal((await library.checkAnswer('[[SCRIPTURE:John 3:16]]',[])).answer,'“'+exact+'” (John 3:16)');
+    const longQuote = JSON.parse(fs.readFileSync(path.join(root,'scripture-data/bofm/alma/7.json'))).verses
+        .filter(verse => verse.number >= 11 && verse.number <= 13).map(verse => verse.text).join(' ');
+    for (const answer of [
+        'Read John 3:16. Here is another passage: [[SCRIPTURE:Alma 7:11-13]]',
+        '[[SCRIPTURE:John 3:16]]\n\n[[SCRIPTURE:Alma 7:11-13]]',
+        'John 3:16\n\n“'+longQuote+'” Alma 7:11-13',
+        'Alma 7:11-13\n\n“'+exact+'” (John 3:16)',
+    ]) assert.equal((await library.checkAnswer(answer,[])).ok,true,
+        'whole quotation interval must associate with its own citation, not an unrelated earlier passage');
+    for (const answer of [
+        'John 3:16 “'+exact+'” (John 3:17)',
+        'Alma 7:11-13 “'+longQuote+'” (John 3:16)',
+        'Read John 3:16. “'+longQuote.replace('pains','riches')+'” (Alma 7:11-13)',
+        'John 3:16 “Go” (John 3:16)',
+    ]) assert.equal((await library.checkAnswer(answer,[])).ok,false,
+        'explicit wrong attribution and changed or short invented words must remain blocked');
     assert.ok((await library.lookupRequest('Quote John 3:16')).answer.includes(exact));
     assert.equal(await library.lookupRequest('How can John 3:16 help me?'),null);
     assert.equal((await factory(catalog,async()=>new Response('changed')).checkAnswer('John 3:16',[])).ok,false);
