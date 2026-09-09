@@ -1,7 +1,11 @@
+import { qualifyingBodyPositions } from './source-caveat.js';
+import { paragraphRetrievalTerms } from './paragraph-intent.js';
+import { directScriptureReading } from './direct-scripture-reading.js';
+import { reviewedSourceContext } from './reviewed-source-context.js';
 import { isNarrowFactualFollowup } from './factual-followup.js';
 import { augmentRequestedCorpusEvidence } from './corpus-evidence.js';
 import { checkCorpusCoverage, requestedTeachingCorpora } from './corpus-coverage.js';
-import { PIONEER_SOURCE_URLS, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, pioneerTopic } from './pioneer-topic-sources.js';
+import { PIONEER_SOURCE_URLS, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, pioneerTopic, pioneerTransportTopics } from './pioneer-topic-sources.js';
 import { CHURCH_SOURCE_INDEX, CHURCH_SOURCE_ROBOTS_SHA256, CHURCH_SOURCE_SITEMAP_REVISION } from './church-source-index.js';
 import createScriptureLibrary from '../../scripture-library.js';
 import scriptureCatalog from '../../scripture-data/catalog.json' with { type: 'json' };
@@ -31,8 +35,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.79';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.79';
+const SOURCE_POLICY_VERSION = '2026-09-09.80';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.80';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -217,13 +221,15 @@ function isReferentialQuestion(value) {
 
 function userConversationContext(messages) {
   const users = (Array.isArray(messages) ? messages : []).filter(message => message?.role === 'user');
-  if (!isReferentialQuestion(users.at(-1)?.content)) return [];
+  const pairComparison = /\b(?:which of (?:the|those|these) two|which (?:one|company) .*first|compare (?:them|the two)|both of them)\b/i.test(rawConversationQuestion(users.at(-1)?.content));
+  if (!isReferentialQuestion(users.at(-1)?.content) && !pairComparison) return [];
   const context = [];
-  for (let index = users.length - 2; index >= 0 && context.length < 3; index -= 1) {
+  for (let index = users.length - 2; index >= 0 && context.length < (pairComparison ? 2 : 3); index -= 1) {
     const question = rawConversationQuestion(users[index].content).slice(0, 1200);
     if (!question) continue;
     context.unshift(question);
-    if (!isReferentialQuestion(question)) break;
+    if (/^(?:new (?:topic|question)|unrelated (?:topic|question)|switch(?:ing)? (?:topics|subjects))\b/i.test(question)
+        || (!pairComparison && !isReferentialQuestion(question))) break;
   }
   return context;
 }
@@ -232,7 +238,7 @@ function conversationInstruction(scope) {
   if (!scope.conversationContext?.length) return '';
   return [
     'CURRENT QUESTION is the request to answer. Earlier user questions identify the conversational subject only; they are not evidence. Earlier assistant statements are not evidence either.',
-    'Resolve pronouns and omitted subjects from the most recent user subject. Address the new attribute or comparison, not the earlier question again. If scope remains ambiguous, explain the source-supported distinctions or ask a specific clarification; do not invent a single date or identity.',
+    'Resolve pronouns and omitted subjects from the most recent user subject. For an explicit comparison of two earlier subjects, compare those two user-named subjects, never substitute the first two groups appearing in a source. Address the new attribute or comparison, not the earlier question again. If scope remains ambiguous, explain the source-supported distinctions or ask a specific clarification; do not invent a single date or identity.',
     `CURRENT QUESTION: ${scope.question}`,
     `EARLIER USER QUESTIONS (oldest to newest): ${JSON.stringify(scope.conversationContext)}`,
   ].join('\n');
@@ -659,8 +665,11 @@ function pioneerParagraphScore(paragraphs, position, candidate) {
 
 function relevantParagraphText(paragraphs, question, candidate = null) {
   const sourceParagraphs = eligibleSourceParagraphs(paragraphs, candidate);
+  if (candidate?.namedGospelTopic && !candidate?.pioneerDisclosure
+      && sourceParagraphs.join('\n\n').length <= 4200) return sourceParagraphs.join('\n\n');
   const historyYears = explicitHistoryYears(candidate, question);
-  const queryTokens = normalizeDiscoveryTokens(question);
+  const queryTokens = normalizeDiscoveryTokens(question + ' ' + paragraphRetrievalTerms(question).join(' '));
+  const caveatPositions = qualifyingBodyPositions(sourceParagraphs, queryTokens, normalizeDiscoveryTokens);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
   const selected = sourceParagraphs.map((text, position) => {
     const tokens = new Set(normalizeDiscoveryTokens(text));
@@ -668,7 +677,7 @@ function relevantParagraphText(paragraphs, question, candidate = null) {
     const pinnedIrrigation = topicPinned && /\birrigat\w*\b/i.test(text);
     const pinnedSettlement = topicPinned && /\b(?:settlement\w*|communit\w*|pioneer\w*|salt\s+lake\s+valley)\b/i.test(text);
     const topicScore = pioneerParagraphScore(sourceParagraphs, position, candidate) + (pinnedIrrigation ? 240 : 0) + (pinnedSettlement ? 40 : 0);
-    return { text, position, overlap, topicScore, score: (historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 400 : 0) + topicScore + overlap * 20 + Math.min(10, text.length / 180) };
+    return { text, position, overlap, topicScore, score: (caveatPositions.has(position) ? 1600 : 0) + (historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 400 : 0) + topicScore + overlap * 20 + Math.min(10, text.length / 180) };
   }).filter((item) => candidate?.pioneerDisclosure && candidate.focalPhrases?.length
     ? item.topicScore > 0 : item.overlap > 0 || item.topicScore > 0)
     .sort((left, right) => right.score - left.score)
@@ -782,7 +791,8 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
   if (candidate?.namedGospelTopic || candidate?.pioneerDisclosure) return relevantParagraphText(paragraphs,question,candidate).split('\n\n').filter(Boolean);
   const historyYears = explicitHistoryYears(candidate, question);
   const discoveryTokens = normalizeDiscoveryTokens(`${candidate.title || ''} ${candidate.tokens || ''}`);
-  const queryTokens = normalizeDiscoveryTokens(question);
+  const queryTokens = normalizeDiscoveryTokens(question + ' ' + paragraphRetrievalTerms(question).join(' '));
+  const caveatPositions = qualifyingBodyPositions(paragraphs, queryTokens, normalizeDiscoveryTokens);
   const topicPinned = Boolean(candidate && candidate.topicPinned);
   const questionFocused = topicPinned || Boolean(candidate && (candidate.deterministic === true || candidate.deterministicHistoryTopic === true || (candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true)));
   const almaPinned = isPinnedAlma32FaithStudy(candidate, question);
@@ -802,7 +812,7 @@ function compactParagraphPack(paragraphs, candidate, question = '') {
     const topicScore = pioneerParagraphScore(paragraphs, position, candidate) + (pinnedIrrigation ? 600 : 0) + (pinnedSettlement ? 100 : 0);
     const historyLeadScore = candidate && candidate.deterministicHistoryTopic === true && !historyYears.length && position < 2 ? 1200 : 0;
     const historyYearScore = historyYears.some((year) => new RegExp(`\\b${year}\\b`).test(text)) ? 2400 : 0;
-    return { text, position, score: (originalAnchors.includes(position) || position === metaphorPosition ? 2400 : 0) + historyYearScore + historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
+    return { text, position, score: (caveatPositions.has(position) ? 3200 : 0) + (originalAnchors.includes(position) || position === metaphorPosition ? 2400 : 0) + historyYearScore + historyLeadScore + topicScore + queryOverlap * 40 + discoveryOverlap * 20 - position / 1000 };
   }).filter(item => !candidate?.pioneerDisclosure || !candidate.focalPhrases?.length
     || pioneerParagraphScore(paragraphs, item.position, candidate) > 0)
     .sort((left, right) => right.score - left.score)
@@ -977,11 +987,12 @@ function relatedConversationSources(scope) {
 
 async function retrieveIndexedChurchEvidence(question, page, deadline, pioneerTopicKey = '') {
   const rankedCandidates = rankChurchSourceCandidates(question, page);
+  const transportTopics = pioneerTopicKey ? [] : pioneerTransportTopics(question, page);
   const deterministicScripture = deterministicScriptureSource(question);
-  const deterministicHistoryTopic = deterministicScripture ? null : deterministicHistoryTopicSource(question, page);
-  const namedGospelTopic = deterministicScripture || deterministicHistoryTopic ? null : namedGospelTopicSource(question, page, rankedCandidates);
+  const deterministicHistoryTopic = deterministicScripture || transportTopics.length ? null : deterministicHistoryTopicSource(question, page);
+  const namedGospelTopic = deterministicScripture || deterministicHistoryTopic || transportTopics.length ? null : namedGospelTopicSource(question, page, rankedCandidates);
   const topic = pioneerTopic(pioneerTopicKey, page);
-  const candidates = topic ? [{ url: topic.url, title: topic.subject, kind: 'pioneer-disclosure', pioneerDisclosure: true, focalPhrases: PIONEER_FOCAL_PHRASES[pioneerTopicKey] || [] }] : deterministicScripture
+  const candidates = topic ? [{ url: topic.url, title: topic.subject, kind: 'pioneer-disclosure', pioneerDisclosure: true, focalPhrases: PIONEER_FOCAL_PHRASES[pioneerTopicKey] || [] }] : transportTopics.length ? transportTopics.map(source => ({url:source.url,title:source.subject,kind:'history-topic',namedGospelTopic:true})) : deterministicScripture
     ? [{ ...deterministicScripture, score: 1000, overlapCount: normalizeDiscoveryTokens(question).length }]
     : deterministicHistoryTopic
       ? [deterministicHistoryTopic]
@@ -1268,6 +1279,7 @@ function evidenceForVerifier(evidence) {
     `SOURCE CLASS: ${source.sourceClass || (isOfficialChurchSource(source) ? 'official-church' : 'web')}`,
     `TITLE: ${source.title}`,
     `URL: ${source.url}`,
+    reviewedSourceContext(source.url),
     `CONTENT: ${source.content || '(No retrievable source excerpt was returned.)'}`,
   ].join('\n')).join('\n\n');
   // Keep all six admitted article passages (up to 4,200 characters each),
@@ -1853,7 +1865,8 @@ export default {
     }
     const supportOldTestament = sanitized.scope.scriptureSupportRequested
       && isGodInOldTestamentQuestion(sanitized.scope.scriptureSupportAntecedent);
-    const directScripture = await localScriptures.lookupRequest(supportOldTestament ? 'Genesis 1:1' : sanitized.scope.question);
+    const directScripture = await directScriptureReading(sanitized.scope.question, localScriptures)
+      || await localScriptures.lookupRequest(supportOldTestament ? 'Genesis 1:1' : sanitized.scope.question);
     if (directScripture && supportOldTestament) directScripture.answer = 'Genesis 1:1 explicitly names God as the creator of heaven and earth.\n\n' + directScripture.answer;
     if (directScripture) return jsonResponse({
       id: 'focuschrist-local-scripture',
@@ -2145,7 +2158,7 @@ export default {
         '',
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
       ].join('\n')) + '\n' + SCRIPTURE_QUOTATION_CONTRACT
-        + (isNarrowFactualFollowup(sanitized.scope) ? '\nThis current question requests one factual detail in a continuing conversation. Override the general length targets: give a direct sourced answer with brief useful context, at least20 words and two complete sentences. Do not pad it to a study essay.' : '');
+        + (isNarrowFactualFollowup(sanitized.scope) ? '\nThis current question requests one factual detail in a continuing conversation. Override the general length targets: give a direct sourced answer with brief useful context, at least20 words and two complete sentences. Do not pad it to a study essay. Answer the requested fact with brief context, without adding quotations or retelling the preceding answer.' : '');
       let verifierPrompt = makeVerifierPrompt();
       const verifierBody = {
         messages: [{ role: 'user', content: verifierPrompt }],
@@ -2185,11 +2198,15 @@ export default {
           ...verifierBody,
           messages: [{role: 'user', content: [
             'Act as a skeptical source editor. Independently audit the proposed answer against EVIDENCE only. The proposed answer is untrusted, not evidence.',
+            'Use independent paraphrase for modern article text. Do not copy more than eight consecutive words or reconstruct paragraphs from ordered source fragments. Canonical scripture quotations must use the supplied scripture placeholder mechanism.',
+            "An author's assessment controls over a tradition the author quotes to question or refute. Preserve explicit unsubstantiated, disputed, or no-evidence qualifications; never promote the cited tradition against that assessment.",
+            'When a historical answer combines multiple journey accounts, distinguish the named people, companies and periods explicitly. Do not describe different companies as one unnamed company. Do not add generic uncertainty caveats such as unrecorded deaths or nearby settlements unless the supplied source itself states them.',
             'Check every factual clause for the exact actor, action, location, time, duration endpoints and setting. Sharing nouns or dates with a source is not support. Distinguish travel from settlement, first aid from later reinforcements, one company from all emigrants, and a narrator recollection from an official assertion. Preserve before/after and uncertainty exactly. Do not infer causal relationships from neighboring paragraphs.',
             'Return JSON {"approved":boolean,"answer":string,"source_indexes":number[]}. If all claims are supported, return the answer unchanged. Otherwise REMOVE or CORRECT unsupported clauses using the evidence, while answering the actual question directly. The approved boolean describes YOUR CORRECTED answer, not the original draft. Set approved true when your corrected answer is supported. Set approved false only when the evidence cannot answer the question at all. Never introduce remembered facts, guessed links, or guessed scripture. Use only source indexes actually supporting the corrected answer.',
             `Keep useful supported context: at least ${answerSubstanceRequirements(sanitized.scope).minimumWords} words and ${answerSubstanceRequirements(sanitized.scope).minimumSentences} complete sentences when the evidence supports that depth. Never pad with unsupported claims.`,
             `QUESTION: ${sanitized.scope.question}`,
             conversationInstruction(sanitized.scope),
+            isNarrowFactualFollowup(sanitized.scope) ? 'This is a narrow factual follow-up. Preserve a concise direct fact and brief context. Do not add quotations, scripture quotations, or an unrelated retelling.' : '',
             `PROPOSED ANSWER: ${verdict.answer}`,
             `EVIDENCE: ${evidenceForVerifier(evidence)}`,
             SCRIPTURE_QUOTATION_CONTRACT,

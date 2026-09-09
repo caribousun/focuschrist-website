@@ -144,6 +144,10 @@ jobs:
           node groq-proxy/corpus-evidence.test.js
           node groq-proxy/factual-followup.test.js
           node groq-proxy/relationship-audit.test.js
+          node groq-proxy/reviewed-source-context.test.js
+          node groq-proxy/direct-scripture-reading.test.js
+          node groq-proxy/paragraph-intent.test.js
+          node groq-proxy/source-caveat.test.js
           node tools/scripture_quote_display_qa.js
 
       - name: Validate shared site JavaScript

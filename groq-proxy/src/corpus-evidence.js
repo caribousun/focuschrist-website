@@ -8,6 +8,8 @@ export async function augmentRequestedCorpusEvidence(scope, evidence, library, a
   if (!required.length || !hasBudget()) return [];
   const refs = new Map();
   const existing = new Set();
+  const stop = new Set('a an the what does do did is are was were how why can could would should about teach teaches teaching teachings say says according to in from of and or for with that this scripture scriptures bible old new testament book mormon doctrine covenants pearl great price'.split(' '));
+  const query = new Set((String(scope.question || '').toLowerCase().match(/[a-z]+/g) || []).filter(token => token.length > 2 && !stop.has(token)));
   for (const source of evidence || []) {
     if (!source?.content || !approvedSource(source.url)) continue;
     if (/\/study\/scriptures\//.test(source.url)) {
@@ -16,14 +18,24 @@ export async function augmentRequestedCorpusEvidence(scope, evidence, library, a
     }
     try {
       for (const ref of library.references(source.content)) {
-        if (required.includes(ref.key.split('/')[0]) && ref.verses && !refs.has(ref.text)) refs.set(ref.text, ref);
+        if (!required.includes(ref.key.split('/')[0]) || !ref.verses) continue;
+        // Rank the actual article context near each citation, not the whole
+        // article title. A later relevant passage may precede the first two
+        // incidental references without inventing a topical verse association.
+        const start = Math.max(source.content.lastIndexOf('\n', ref.index) + 1, ref.index - 180);
+        const nextBreak = source.content.indexOf('\n', ref.end);
+        const end = Math.min(nextBreak < 0 ? source.content.length : nextBreak, ref.end + 180);
+        const words = new Set((source.content.slice(start,end).toLowerCase().match(/[a-z]+/g) || []));
+        const score = [...query].filter(token => words.has(token)).length;
+        const previous = refs.get(ref.text);
+        if (!previous || score > previous.score) refs.set(ref.text, {ref,score});
       }
     } catch (_) { /* Invalid article citations cannot become evidence. */ }
   }
   const added = [];
   let characters = 0;
   let attempts = 0;
-  for (const ref of refs.values()) {
+  for (const {ref} of [...refs.values()].sort((a,b)=>b.score-a.score)) {
     if (attempts >= 2 || !hasBudget()) break;
     if (existing.has(ref.key)) continue;
     attempts++;

@@ -1,9 +1,13 @@
-// Server-owned source routes for the 29 visible Pioneer timeline controls.
+// Server-owned source routes for Pioneer timeline controls and reviewed history discovery.
 // IDs select reviewed official sources, never a client-supplied URL or evidence.
 const history = slug => `https://www.churchofjesuschrist.org/study/history/topics/${slug}?lang=eng`;
 const manual = number => `https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-${number}?lang=eng`;
 const route = (subject, url) => Object.freeze({ subject, url });
 const PIONEER_TOPIC_SOURCES = Object.freeze({
+  'vanguard-journey': route('The 1847 vanguard company: existing Oregon and Reed-Donner trails, route construction, advance and rear divisions, and July arrival chronology', manual('twenty-six')),
+  'emigration-origins': route('Emigration origins, starting places, departures and transport: Liverpool departures, European converts, ocean ships and later railroad travel', history('emigration')),
+  'migration-patterns': route('Pioneer trek: diverse origins, outfitting near Nebraska and Iowa, wagon and handcart travel, and migration methods', history('pioneer-trek')),
+  'camp-routine': route('Gates company in 1853: camp routines, evening chores, washing dishes, night watch, and unyoking oxen', 'https://rsc.byu.edu/john-lyon-life-pioneer-poet/our-ain-mountain-hame-1853'),
   exodus: route('Departure from Nauvoo in 1846: reasons, preparations, and the westward exodus', history('departure-from-nauvoo')),
   winterquarters: route('Winter Quarters: its purpose, living conditions, and preparations for migration', history('winter-quarters')),
   valley: route('Salt Lake Valley: arrival of the 1847 pioneer company and early settlement', history('salt-lake-valley')),
@@ -35,6 +39,7 @@ const PIONEER_TOPIC_SOURCES = Object.freeze({
   'martin-november': route('Willie and Martin handcart companies: faith, rescue, and historical legacy', history('handcart-companies')),
 });
 const PIONEER_FOCAL_PHRASES = Object.freeze({
+  'camp-routine': ['night', 'dishes', 'unyoked'],
   'garden-grove': ['garden grove'], 'chimney-rock': ['chimney rock'],
   'fort-laramie': ['fort laramie'], 'independence-rock': ['independence rock'],
   sweetwater: ['sweetwater'], 'south-pass': ['south pass'], 'fort-bridger': ['fort bridger'],
@@ -51,4 +56,14 @@ function pioneerTopic(key, page) {
   return page === 'pioneers' && typeof key === 'string' && Object.hasOwn(PIONEER_TOPIC_SOURCES, key)
     ? PIONEER_TOPIC_SOURCES[key] : null;
 }
-export { PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, PIONEER_SOURCE_URLS, pioneerTopic };
+// Source diversity for historical transport comparisons, independent of fixture wording.
+// Returned routes must still pass the caller's ordinary source fetch and budget gates.
+function pioneerTransportTopics(question, page) {
+  if (page !== 'pioneers' || typeof question !== 'string') return [];
+  const rail = /\b(?:railroads?|railways?|rail|trains?)\b/i.test(question);
+  const wagon = /\bwagons?\b/i.test(question);
+  const handcart = /\bhand[ -]?carts?\b/i.test(question);
+  if (!rail || !(wagon || handcart)) return [];
+  return handcart ? [PIONEER_TOPIC_SOURCES.railroad, PIONEER_TOPIC_SOURCES.handcart] : [PIONEER_TOPIC_SOURCES.railroad];
+}
+export { pioneerTransportTopics, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, PIONEER_SOURCE_URLS, pioneerTopic };

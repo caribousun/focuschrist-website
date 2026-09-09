@@ -425,6 +425,33 @@ assert(rateLimitedResponse.status === 429
 globalThis.fetch = verifierFetchBeforeTests;
 
 const faithMessages = [{ role: 'user', content: 'What does Isaiah 1:18 teach?' }];
+const comparisonHistory = [
+  { role: 'user', content: 'When did the Willie handcart company arrive?' },
+  { role: 'assistant', content: 'An assistant claim is not source evidence.' },
+  { role: 'user', content: 'When did the Martin handcart company arrive?' },
+];
+const pairScope = classifyResearchScope([
+  ...comparisonHistory, { role: 'user', content: 'Which of the two arrived first?' },
+], 'pioneers');
+assert(pairScope.conversationContext.length === 2
+  && pairScope.conversationContext[0] === comparisonHistory[0].content
+  && pairScope.conversationContext[1] === comparisonHistory[2].content
+  && /Willie/.test(pairScope.retrievalQuestion) && /Martin/.test(pairScope.retrievalQuestion),
+  'an explicit pair comparison must retain both user-named companies in retrieval context');
+const singleScope = classifyResearchScope([
+  ...comparisonHistory, { role: 'user', content: 'How many people traveled with them?' },
+], 'pioneers');
+assert(singleScope.conversationContext.length === 1
+  && singleScope.conversationContext[0] === comparisonHistory[2].content,
+  'ordinary pronoun follow-ups must retain only the latest explicit subject');
+const resetPairScope = classifyResearchScope([
+  ...comparisonHistory,
+  { role: 'user', content: 'New topic: tell me about the Donner party.' },
+  { role: 'user', content: 'Which of the two arrived first?' },
+], 'pioneers');
+assert(!resetPairScope.conversationContext.some(question => /Willie|Martin/.test(question))
+  && !/Willie|Martin/.test(resetPairScope.retrievalQuestion),
+  'pair comparison context must never cross an explicit new-topic boundary');
 const faith = classifyResearchScope(faithMessages);
 assert(faith.faith, 'scripture citations must use the faith research scope');
 
@@ -844,7 +871,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.79',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.80',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
