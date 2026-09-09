@@ -18,6 +18,7 @@ import worker, {
   guardVerifiedAnswer,
   verifiedAnswerFailureReason,
   hasKnownFalseClaim,
+  hasExcessiveSourceOverlap,
   isReviewedColorRegression,
   isOfficialChurchSource,
   isApprovedLdsSource,
@@ -842,7 +843,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.74',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.75',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
@@ -879,6 +880,25 @@ try {
     'retaining the repair contract must not permit wrong raw quotation text');
 } finally { globalThis.fetch = originalFetch; }
 const expandedLowRiskAnswer = repeatedSubstantiveAnswer('historical', 50);
+const mosiahQuote = JSON.parse(readAlmaFixture(new URL('../scripture-data/bofm/mosiah/18.json', import.meta.url))).verses.find(v=>v.number===8).text;
+const mosiahExplanation = 'Mosiah 18:8-10 describes baptismal commitment through willingness to belong to God and care for others. Alma connects that desire with sharing burdens, comforting those who need comfort, and standing as witnesses. These actions give practical meaning to entering the covenant. They concern relationships with God and with people in need, rather than a promise that every hardship disappears. The invitation joins inward willingness with a public commitment to serve. Its promised blessing includes the Spirit, while the human response includes faithful service. The passage therefore gives a reader both a purpose for baptism and a way to consider daily responsibilities toward other people.';
+const mosiahAnswer = mosiahExplanation + '\n\n“' + mosiahQuote + '” (Mosiah 18:8)';
+assert(hasExcessiveSourceOverlap(mosiahAnswer, [{content:mosiahQuote,url:'https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18',localCanonical:true,sourceClass:'canonical-scripture'}]),
+  'a claimed canonical URL or metadata must not grant overlap exemption');
+let mosiahCalls = 0;
+globalThis.fetch = async (url) => {
+  if (String(url).startsWith('https://focuschrist.com/scripture-data/')) return new Response(readAlmaFixture(new URL('..' + new URL(url).pathname, import.meta.url)));
+  mosiahCalls++;
+  return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:true,answer:mosiahAnswer,source_indexes:[1]})}}]}));
+};
+try {
+  const response = await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',messages:[{role:'user',content:'What does Mosiah 18:8-10 teach about baptismal commitments?'}]})}),{OPENAI_API_KEY:'offline'});
+  const result = await response.json();
+  assert(result.focuschrist_source_integrity_verified && result.focuschrist_scripture_validated && mosiahCalls === 1,
+    'hash-checked canonical quotation with substantive explanation must not trigger article-copy rejection or repair');
+  assert(!(await scriptureLibraryFixture.checkAnswer(mosiahAnswer.replace('bear one another’s burdens','guarantee earthly riches'),[])).ok,
+    'canonical overlap exemption must never authorize modified scripture wording');
+} finally { globalThis.fetch = originalFetch; }
 globalThis.fetch = async (_url, options) => {
   const body = JSON.parse(options.body);
   limitedBodies.push(body);

@@ -78,8 +78,11 @@ async function main() {
       env:{...process.env,CI:'true',WRANGLER_SEND_METRICS:'false'},timeout:300000,maxBuffer:2*1024*1024
     });
     Object.assign(receipt,previewReceipt(result.stdout));
-  } catch (_) {
-    // Never print provider output, child-process environment, or error objects.
+  } catch (error) {
+    // Only categorical flags leave the process; never expose provider text or credentials.
+    const failureText = String(error?.stderr || '') + String(error?.stdout || '');
+    receipt.uploadFailure = { cpuMention: /cpu/i.test(failureText), freePlanMention: /free/i.test(failureText), paidPlanMention: /paid/i.test(failureText), limitMention: /limit/i.test(failureText), authenticationMention: /authentication|unauthorized/i.test(failureText) };
+    console.error(JSON.stringify({uploadFailure:receipt.uploadFailure}));
     failed = true;
   } finally {
     try {

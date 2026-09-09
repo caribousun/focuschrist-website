@@ -29,8 +29,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.74';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.74';
+const SOURCE_POLICY_VERSION = '2026-09-09.75';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.75';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1003,10 +1003,14 @@ async function retrieveIndexedChurchEvidence(question, page, deadline, pioneerTo
   };
 }
 
+// Only records returned by our hash-checked library receive this capability.
+// URLs, model output and externally supplied metadata cannot grant it.
+const verifiedCanonicalEvidence = new WeakSet();
 function hasExcessiveSourceOverlap(answer, evidence, limit = 25) {
   const answerTokens = String(answer || '').toLowerCase().match(/[a-z0-9']+/g) || [];
   if (answerTokens.length <= limit) return false;
   return (Array.isArray(evidence) ? evidence : []).some((source) => {
+    if (verifiedCanonicalEvidence.has(source)) return false;
     const sourceTokens = String(source.content || '').toLowerCase().match(/[a-z0-9']+/g) || [];
     const sourceText = ` ${sourceTokens.join(' ')} `;
     for (let index = 0; index + limit < answerTokens.length; index += 1) {
@@ -1913,6 +1917,7 @@ export default {
           const scriptureEvidence = await localScriptures.evidenceRequest(currentRefs.length
             ? sanitized.scope.question : sanitized.scope.retrievalQuestion);
           if (scriptureEvidence.length) {
+            for (const source of scriptureEvidence) verifiedCanonicalEvidence.add(source);
             evidence = scriptureEvidence;
             allEvidence = scriptureEvidence;
             retrievalDiagnostic.focuschrist_retrieval_route = 'church-source-index';
