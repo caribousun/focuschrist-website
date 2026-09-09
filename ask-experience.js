@@ -404,14 +404,14 @@
 
         if (sendButton) {
             sendButton.addEventListener('click', function () {
-                window.setTimeout(focusConversation, 80);
+                focusConversation();
             });
         }
 
         if (input) {
             input.addEventListener('keypress', function (event) {
                 if (event.key === 'Enter') {
-                    window.setTimeout(focusConversation, 80);
+                    focusConversation();
                 }
             });
         }
