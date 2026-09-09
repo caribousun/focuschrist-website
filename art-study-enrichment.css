@@ -66,7 +66,7 @@
     padding: clamp(1.25rem, 3vw, 2rem);
     border: 1px solid var(--fc-line);
     border-radius: 20px;
-    background: linear-gradient(155deg, #2c4949, #172f37);
+    background: radial-gradient(ellipse at 5% 0%, #b99b5924, transparent 60%), linear-gradient(145deg, #294b40, #152f37);
 }
 
 .fc-art-meditation > header {
@@ -87,9 +87,9 @@
 .fc-art-story {
     overflow: hidden;
     margin: 0;
-    border: 1px solid rgba(255, 255, 255, .12);
+    border: 1px solid #c6aa6559;
     border-radius: 15px;
-    background: linear-gradient(145deg, var(--fc-paper-light), var(--fc-paper));
+    background: var(--fc-reading-fill);
     box-shadow: 0 12px 30px #061d2433;
 }
 
@@ -113,7 +113,7 @@
 
 .fc-art-story figcaption {
     padding: 1.35rem 1.4rem 1.5rem;
-    color: var(--fc-ink);
+    color: var(--fc-text);
     font-size: .97rem;
     line-height: 1.62;
 }
@@ -121,7 +121,7 @@
 .fc-art-story figcaption strong {
     display: block;
     margin-bottom: .35rem;
-    color: var(--fc-ink);
+    color: var(--fc-text);
     font-family: Georgia, serif;
     font-size: 1.35rem;
     font-weight: 400;
@@ -161,7 +161,7 @@
     padding: clamp(1.25rem, 3vw, 2rem);
     border-left: 4px solid var(--study-gold);
     border-radius: 0 16px 16px 0;
-    background: linear-gradient(130deg, var(--fc-paper-light), var(--fc-paper));
+    background: var(--fc-reading-fill);
     box-shadow: 0 16px 40px #061d2426;
 }
 
@@ -169,14 +169,15 @@
     margin-top: 0;
 }
 
-/* Ivory artwork captions and source readings keep their own complete ink palette. */
-.fc-art-study-page .fc-source-panel :is(h2, h3, p, strong),
-.fc-art-study-page .fc-art-story figcaption strong { color: var(--fc-ink); }
+/* Warm caption and source surfaces continue the light within the artwork. */
+.fc-art-study-page .fc-source-panel :is(h2, h3, strong),
+.fc-art-study-page .fc-art-story figcaption strong { color: var(--fc-gold-light); }
+.fc-art-study-page .fc-source-panel p { color: var(--fc-text); }
 .fc-art-study-page .fc-source-panel a,
-.fc-art-study-page .fc-art-story figcaption a { color: var(--fc-ink-link); text-underline-offset: .2em; }
+.fc-art-study-page .fc-art-story figcaption a { color: var(--fc-gold-light); text-underline-offset: .2em; }
 .fc-art-study-page .fc-source-panel a:hover,
-.fc-art-study-page .fc-art-story figcaption a:hover { color: #102f32; }
-.fc-reflection-prompts details[open] { border-color: var(--fc-gold); background: linear-gradient(130deg, #34534f, #203d40); }
+.fc-art-study-page .fc-art-story figcaption a:hover { color: var(--fc-cream); }
+.fc-reflection-prompts details[open] { border-color: var(--fc-gold); background: linear-gradient(130deg, #4a5540, #2e4438); }
 .fc-art-study-page .fc-study-nav a:focus-visible { background: var(--fc-action-fill); color: var(--fc-action-text); }
 
 .fc-continuation-grid {

@@ -46,20 +46,15 @@
 
 /* Keep study copy, supporting details, and action pills visually distinct. */
 .fc-cfm-home {
-    background: linear-gradient(120deg, var(--fc-paper-light), var(--fc-paper));
-    border-block: 1px solid var(--fc-paper-line);
-    --fc-cream: var(--fc-ink);
-    --fc-text: var(--fc-ink-muted);
+    background:
+        radial-gradient(ellipse at 50% 0%, #e7bd632b, transparent 72%),
+        radial-gradient(ellipse at 8% 90%, #758f4126, transparent 65%),
+        linear-gradient(135deg, #365443, #23483f 55%, #193c3c);
+    border-block: 1px solid #d6b66c42;
+    box-shadow: inset 0 1px 0 #f4dba31a;
 }
-.fc-cfm-home .fc-eyebrow { color: var(--fc-ink-link); }
-.fc-cfm-home .fc-button { border-color: #799a98; }
-.fc-cfm-home .fc-button--primary {
-    background: linear-gradient(145deg, #346269, #203b3e);
-    border-color: var(--fc-ink);
-    color: var(--fc-paper-light) !important;
-}
-.fc-cfm-home .fc-button--primary:hover,
-.fc-cfm-home .fc-button--primary:focus-visible { background: var(--fc-ink-link); }
+.fc-cfm-home .fc-section-heading { color: #fff0cc; text-shadow: 0 2px 20px #dfa7391c; }
+.fc-cfm-home .fc-eyebrow { color: #f5cd76; }
 .fc-cfm-home .fc-page-intro-copy {
     margin-bottom: 0;
 }
@@ -74,8 +69,8 @@
 
 .fc-cfm-home__highlights span {
     padding: 4px 13px;
-    border-left: 2px solid #83958a;
-    color: var(--fc-ink-muted);
+    border-left: 2px solid #dbb965;
+    color: #e1dec5;
     font-size: .82rem;
     font-weight: 700;
 }

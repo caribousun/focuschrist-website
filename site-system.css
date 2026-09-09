@@ -5,17 +5,17 @@
    and restrained autumn warmth. Brown is a supporting earth tone, not the atmosphere. */
 
 :root {
-    --fc-bg: #112630;
-    --fc-bg-deep: #0b1d25;
+    --fc-bg: #142a35;
+    --fc-bg-deep: #10252d;
     --fc-bg-warm: #1c3743;
-    --fc-surface: #24434d;
-    --fc-surface-2: #315561;
+    --fc-surface: #24483f;
+    --fc-surface-2: #365c4d;
     --fc-surface-soft: rgba(134, 175, 200, 0.075);
     --fc-surface-hover: rgba(240, 195, 106, 0.105);
     --fc-sky: #86afc8;
     --fc-sky-deep: #527b96;
-    --fc-gold: #dfbb78;
-    --fc-gold-light: #f1d39a;
+    --fc-gold: #e8b54d;
+    --fc-gold-light: #f3cf83;
     --fc-gold-deep: #b87d24;
     --fc-sage: #71805c;
     --fc-sage-light: #9eaa83;
@@ -23,11 +23,11 @@
     --fc-maple: #82483c;
     --fc-earth: #38251c;
     --fc-cream: #fff2dc;
-    --fc-text: #eee9df;
-    --fc-muted: #c9d1ca;
+    --fc-text: #f0e8d9;
+    --fc-muted: #d2d2bb;
     --fc-faint: #92a6a8;
-    --fc-line: rgba(164, 194, 198, 0.36);
-    --fc-action: #c4d8da;
+    --fc-line: rgba(210, 185, 121, .36);
+    --fc-action: #d8bd89;
     --fc-font-display: Georgia, 'Times New Roman', serif;
     --fc-font-body: 'Segoe UI', Tahoma, sans-serif;
     --fc-parchment: #fff2dc;
@@ -37,11 +37,12 @@
     --fc-ink-muted: #465c59;
     --fc-ink-link: #245d62;
     --fc-paper-line: #c5c4ae;
-    --fc-gold-fill: linear-gradient(145deg, #f4dfac, #dfbb78);
-    --fc-action-fill: linear-gradient(145deg, #e0eded, #b8d2d1);
-    --fc-card-fill: linear-gradient(145deg, #2e515a, #1c3943);
-    --fc-action-hover: #e0eded;
-    --fc-action-text: #142e38;
+    --fc-gold-fill: linear-gradient(155deg, #f7d77f 0%, #e9b846 58%, #dda334 100%);
+    --fc-action-fill: linear-gradient(155deg, #f3e4c3, #d7bd8b);
+    --fc-card-fill: radial-gradient(ellipse at 8% 0%, #d4b3651a, transparent 70%), linear-gradient(145deg, #315547, #1d3b38);
+    --fc-reading-fill: radial-gradient(ellipse at 100% 0%, #e5b96320, transparent 75%), linear-gradient(145deg, #354d3e, #233b35);
+    --fc-action-hover: #fff0cf;
+    --fc-action-text: #26392e;
     --fc-input: #102832;
     --fc-line-warm: rgba(224, 170, 62, 0.28);
     --fc-line-strong: rgba(240, 195, 106, 0.52);
@@ -68,7 +69,7 @@ body.fc-site {
     font-family: 'Segoe UI', Tahoma, sans-serif;
     background:
         radial-gradient(circle at 84% 4%, rgba(134,175,200,.14), transparent 30rem),
-        radial-gradient(circle at 14% 34%, rgba(224,170,62,.055), transparent 28rem),
+        radial-gradient(ellipse at 12% 30%, rgba(222,172,70,.10), transparent 36rem),
         linear-gradient(180deg, #17323f 0%, var(--fc-bg) 42%, var(--fc-bg-deep) 100%);
     color: var(--fc-cream);
     line-height: 1.7;
@@ -117,8 +118,8 @@ body.fc-site main :where(p, li):not(.fc-page-intro *) { text-wrap: pretty; }
 }
 .fc-section--warm {
     background:
-        radial-gradient(circle at 78% 0%, rgba(223,187,120,.08), transparent 26rem),
-        linear-gradient(145deg, #304e4b, #203e40);
+        radial-gradient(ellipse at 50% 0%, rgba(226,181,89,.16), transparent 70%),
+        linear-gradient(140deg, #294b42, #1b3439);
     border-block: 1px solid rgba(240,195,106,.08);
 }
 
@@ -150,7 +151,7 @@ body.fc-site main :where(p, li):not(.fc-page-intro *) { text-wrap: pretty; }
 
 .fc-section-heading {
     margin: 0;
-    color: var(--fc-cream);
+    color: var(--fc-gold-light);
     font-size: clamp(1.8rem, 3.8vw, 2.55rem);
     line-height: 1.18;
     text-wrap: balance;
@@ -328,7 +329,7 @@ body.fc-site main :where(p, li):not(.fc-page-intro *) { text-wrap: pretty; }
 }
 
 /* Approved hero openings retain their production palette. */
-.fc-page-intro, .fc-topic-opening {
+.fc-visual-hero, .fc-page-intro, .fc-topic-opening {
     --fc-bg: #142a35;
     --fc-bg-deep: #0f2029;
     --fc-surface: #203d49;
@@ -338,6 +339,12 @@ body.fc-site main :where(p, li):not(.fc-page-intro *) { text-wrap: pretty; }
     --fc-text: #e8e3d8;
     --fc-muted: #c3c8bd;
     --fc-line: rgba(134,175,200,.25);
+    --study-gold: #f0c36a;
+}
+.fc-page-intro .fc-card {
+    background: radial-gradient(circle at 100% 0%, rgba(134,175,200,.085), transparent 15rem),
+        linear-gradient(145deg, rgba(34,66,78,.90), rgba(24,49,60,.94));
+    box-shadow: 0 10px 32px rgba(5,17,23,.18);
 }
 body.fc-site .fc-page-intro .fc-button { color: #dcebf2 !important; }
 body.fc-site .fc-page-intro .fc-button:hover,
@@ -417,7 +424,7 @@ body.fc-site .fc-page-intro .fc-button--primary:focus-visible { color: #18262b !
     background:
         var(--fc-card-fill);
     color: var(--fc-text);
-    box-shadow: 0 10px 32px rgba(5,17,23,0.18);
+    box-shadow: inset 0 1px 0 #f4dba31a, 0 14px 32px #05111740;
 }
 
 .fc-card::before {
@@ -539,7 +546,7 @@ body.fc-site .fc-page-intro .fc-button--primary:focus-visible { color: #18262b !
     border-radius: 999px;
     background: var(--fc-action-fill);
     color: var(--fc-action-text) !important;
-    box-shadow: inset 0 1px 0 #ffffff9c, 0 5px 14px #05111738;
+    box-shadow: inset 0 1px 0 #fff7dd9c, 0 5px 15px #05111752;
     font: inherit;
     font-size: 0.9rem;
     font-weight: 700;
