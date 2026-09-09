@@ -3,6 +3,7 @@ import worker, {
   PROVIDER_CALL_LIMIT_MS,
   REQUEST_BUDGET_MS,
   SOURCE_INTEGRITY_FALLBACK,
+  SOURCE_UNAVAILABLE_MESSAGE,
   answerMeetsSubstanceContract,
   answerSubstanceRequirements,
   callGroq,
@@ -21,6 +22,7 @@ import worker, {
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
+  isApprovedLdsSource,
   isGodInOldTestamentQuestion,
   isOfficialChurchIdentityEvidence,
   isJsonValidationFailure,
@@ -40,11 +42,11 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
 
 assert(verifiedAnswerFailureReason('Short answer.', [], { faith: true }, false) === 'not-approved',
   'publication diagnostics must distinguish verifier rejection');
-assert(verifiedAnswerFailureReason('Short answer.', [{host:'www.churchofjesuschrist.org',content:'A source.'}], {faith:true}, true) === 'insufficient-substance',
+assert(verifiedAnswerFailureReason('Short answer.', [{url:'https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith',host:'www.churchofjesuschrist.org',content:'A source.'}], {faith:true}, true) === 'insufficient-substance',
   'publication diagnostics must distinguish an approved but insufficient answer');
 const copiedFixture = 'A deliberately copied source passage contains enough consecutive words to exceed the strict publication copying limit and must never be released simply because a verifier marked its answer as approved.';
-assert(verifiedAnswerFailureReason(copiedFixture, [{host:'www.churchofjesuschrist.org',content:copiedFixture}], {faith:true}, true) === 'excessive-source-overlap'
-  && guardVerifiedAnswer(copiedFixture, [{host:'www.churchofjesuschrist.org',content:copiedFixture}], {faith:true}, true) === SOURCE_INTEGRITY_FALLBACK,
+assert(verifiedAnswerFailureReason(copiedFixture, [{url:'https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith',host:'www.churchofjesuschrist.org',content:copiedFixture}], {faith:true}, true) === 'excessive-source-overlap'
+  && guardVerifiedAnswer(copiedFixture, [{url:'https://www.churchofjesuschrist.org/study/manual/gospel-topics/faith',host:'www.churchofjesuschrist.org',content:copiedFixture}], {faith:true}, true) === SOURCE_INTEGRITY_FALLBACK,
   'publication diagnostics must preserve the copying safeguard');
 
 assert(REQUEST_BUDGET_MS === 22000 && PROVIDER_CALL_LIMIT_MS === 10500,
@@ -493,7 +495,7 @@ assert(reliefGeneralRecovery && reliefGeneralRecovery.recoveryId === 'reviewed-r
 
 const workerSourceForDeterministicLane = await import('node:fs').then((fs) => fs.readFileSync(new URL('./src/index.js', import.meta.url), 'utf8'));
 const deterministicLanePosition = workerSourceForDeterministicLane.indexOf("const reviewedDeterministic = retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'");
-const verifierPromptPosition = workerSourceForDeterministicLane.indexOf('const verifierPrompt = (sanitized.scope.selectedPioneer');
+const verifierPromptPosition = workerSourceForDeterministicLane.indexOf('const makeVerifierPrompt = () => (sanitized.scope.selectedPioneer');
 assert(deterministicLanePosition >= 0 && verifierPromptPosition > deterministicLanePosition
   && workerSourceForDeterministicLane.includes("focuschrist_verifier_route: 'reviewed-deterministic'")
   && workerSourceForDeterministicLane.includes('focuschrist_groq_verifier_calls: 0')
@@ -695,12 +697,16 @@ assert(clean.research.messages[0].content.includes('never reduce a sincere quest
   'gateway must preserve the substantive-answer contract');
 assert(answerSubstanceRequirements(generalScopeForTest()).minimumWords === 45,
   'general research must enforce a numeric answer-depth floor');
-assert(clean.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
-  'faith research must be instructed to search the official Church domain');
+assert(/search only site:churchofjesuschrist.org/i.test(clean.research.messages[0].content)
+  && clean.research.messages[0].content.includes('site:rsc.byu.edu')
+  && clean.research.messages[0].content.includes('never present them as official Church declarations'),
+  'faith research must search approved LDS domains and distinguish scholarship from official declarations');
 
 const general = sanitizePayload({ messages: [{ role: 'user', content: 'Why is the daytime sky blue?' }] });
-assert(!general.scope.faith && !general.research.messages[0].content.includes('search only site:churchofjesuschrist.org'),
-  'ordinary questions must not be forced into the Church-only domain');
+assert(!general.scope.faith && general.scope.approvedSourcesOnly === true
+  && /search only site:churchofjesuschrist.org/i.test(general.research.messages[0].content)
+  && general.research.messages[0].content.includes('site:rsc.byu.edu'),
+  'ordinary questions retain general classification but must use owner-approved LDS evidence');
 const knownChurchPerson = classifyResearchScope(
   [{ role: 'user', content: 'Who is Hyrum Smith?' }],
   'ask',
@@ -814,6 +820,20 @@ const evidence = collectSourceEvidence({
 assert(evidence.length === 2, 'gateway must collect tool-returned source evidence');
 assert(isOfficialChurchSource(evidence[0]), 'official Church subpages must be recognized');
 assert(!isOfficialChurchSource(evidence[1]), 'non-Church evidence must not be treated as official');
+for (const host of ['rsc.byu.edu','scriptures.byu.edu','speeches.byu.edu','eom.byu.edu','www.byui.edu']) {
+  const source = {host,url:`https://${host}/study-fixture`,content:'Attributed university scholarship.'};
+  assert(isApprovedLdsSource(source), 'owner-approved LDS study host must be admitted: ' + host);
+  assert(!isOfficialChurchSource(source), 'university study material must not become an official Church declaration');
+  assert(verifiedAnswerFailureReason('A short explanation.', [source], {faith:true}, true) === 'insufficient-substance',
+    'approved university evidence must reach unchanged substance checks, not fail the source allowlist');
+}
+for (const url of [
+  'https://rsc.byu.edu.evil.example/article', 'https://evil-rsc.byu.edu/article',
+  'https://byu.edu/article', 'https://reddit.com/r/latterdaysaints',
+  'https://example.com/opinion', 'https://user:password@rsc.byu.edu/article',
+  'https://rsc.byu.edu:8443/article', 'http://rsc.byu.edu/article'
+]) assert(!isApprovedLdsSource({url,host:'rsc.byu.edu'}),
+  'actual URL must govern approval despite a forged host property: ' + url);
 const boundedEvidence = collectSourceEvidence({ executed_tools: [{ search_results: Array.from({ length: 6 }, (_, index) => ({
   title: `Source ${index + 1}`,
   url: `https://example.com/source-${index + 1}`,
@@ -988,6 +1008,9 @@ try {
 let identityUpgradeCalls = 0;
 const hyrumVerifiedAnswer = repeatedSubstantiveAnswer('history', 75, 3);
 globalThis.fetch = async (_url, options) => {
+  if (String(_url).startsWith('https://history.churchofjesuschrist.org/content/hyrum-smith')) {
+    return new Response('<p>Hyrum Smith, sometimes written Hirum Smith in a question, is the subject of this Church history biography. This introductory source describes his service and historical setting for readers studying his life.</p>', {headers:{'Content-Type':'text/html'}});
+  }
   identityUpgradeCalls += 1;
   const body = JSON.parse(options.body);
   if (identityUpgradeCalls === 1) {
@@ -1009,7 +1032,8 @@ globalThis.fetch = async (_url, options) => {
       } }],
     }), { status: 200, headers: { 'Content-Type': 'application/json' } });
   }
-  assert(body.messages[0].content.includes('For a Latter-day Saint question'),
+  assert(body.messages[0].content.includes('approved LDS resources')
+    && body.messages[0].content.includes('never present them as official Church declarations'),
     'identity-upgraded evidence must enter the faith verifier contract');
   return new Response(JSON.stringify({
     choices: [{ message: { content: JSON.stringify({
@@ -1044,6 +1068,7 @@ const gatewayBodies = [];
 const gatewayVerifierBodies = [];
 const expandedGeneralAnswer = repeatedSubstantiveAnswer('documented', 50);
 globalThis.fetch = async (_url, options) => {
+  if (String(_url) === 'https://rsc.byu.edu/offline-ada-fixture') return new Response('<p>Ada Lovelace is the subject of this synthetic biography fixture. She died on November 27, 1852. The fixture provides a bounded historical date for testing an approved university source without contacting any real university article.</p>', {headers:{'Content-Type':'text/html'}});
   const body = JSON.parse(options.body);
   gatewayBodies.push(body);
   if (gatewayBodies.length === 1) {
@@ -1054,7 +1079,7 @@ globalThis.fetch = async (_url, options) => {
           executed_tools: [{
             search_results: [{
               title: 'Ada Lovelace biography',
-              url: 'https://example.com/ada-lovelace',
+              url: 'https://rsc.byu.edu/offline-ada-fixture',
               content: 'Ada Lovelace died on November 27, 1852, after a period of illness.',
             }],
           }],
@@ -1093,8 +1118,11 @@ try {
     && gatewayVerifierBodies[1].messages[0].content.includes('at least 45 words'),
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
+    && gatewayPayload.focuschrist_source_integrity_verified === true
+    && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
+    && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.67',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.68',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
@@ -1155,15 +1183,12 @@ try {
     }),
   }), { GROQ_KEY_NEW: 'test-key' });
   const limitedPayload = await limitedResponse.json();
-  assert(limitedBodies.length === 4,
-    'a research rate limit plus short low-risk answer must perform one research retry and one depth expansion');
-  assert(limitedBodies[3].messages[0].content.includes('previous approved answer was too brief')
-    && limitedBodies[3].messages[0].content.includes('at least 45 words'),
-    'the low-risk expansion retry must carry the numeric depth contract');
-  assert(limitedPayload.focuschrist_gateway_mode === 'general-ai-low-risk'
-    && limitedPayload.choices[0].message.content === expandedLowRiskAnswer
-    && limitedPayload.focuschrist_answer_word_count >= 45,
-    'stable general knowledge must remain substantive when the research model is rate-limited');
+  assert(limitedBodies.length === 2,
+    'rate-limited research may retry once but must not invoke an unsourced model fallback');
+  assert(limitedPayload.focuschrist_gateway_mode === 'research-rate-limited'
+    && limitedPayload.focuschrist_source_integrity_verified !== true
+    && limitedPayload.choices[0].message.content === SOURCE_UNAVAILABLE_MESSAGE,
+    'general knowledge must remain closed when no approved evidence is available');
 } finally {
   globalThis.fetch = originalFetch;
 }
@@ -1188,12 +1213,40 @@ try {
   }), { GROQ_KEY_NEW: 'test-key' });
   const noEvidencePayload = await noEvidenceResponse.json();
   assert(noEvidencePayload.focuschrist_gateway_mode === 'research-insufficient-evidence'
-    && noEvidencePayload.focuschrist_low_risk_stage === 'initial-verdict-rejected'
-    && noEvidencePayload.focuschrist_low_risk_initial_approved === false
-    && noEvidencePayload.focuschrist_low_risk_initial_words === 0,
-    'insufficient-evidence fallbacks must retain the safe low-risk stage and numeric receipt');
+    && noEvidenceCalls === 1
+    && noEvidencePayload.focuschrist_source_integrity_verified !== true
+    && noEvidencePayload.choices[0].message.content === SOURCE_INTEGRITY_FALLBACK,
+    'missing evidence must stop after research without an unsourced model bypass');
 } finally {
   globalThis.fetch = originalFetch;
 }
 
+for (const sourceUrl of ['https://example.com/ada-lovelace', 'https://rsc.byu.edu/offline-unavailable-fixture']) {
+  let generalVerifierCalls = 0;
+  globalThis.fetch = async (url) => {
+    if (String(url).includes('api.groq.com')) return new Response(JSON.stringify({choices:[{message:{
+      content:'Ada Lovelace died on November 27, 1852.',
+      executed_tools:[{search_results:[{url:sourceUrl,title:'Synthetic research fixture',content:'Ada Lovelace died on November 27, 1852. This search snippet alone must not establish a verified answer.'}]}]
+    }}]}), {headers:{'Content-Type':'application/json'}});
+    assert(String(url) === 'https://rsc.byu.edu/offline-unavailable-fixture', 'unapproved research domains must never be fetched');
+    return new Response('', {status:503});
+  };
+  try {
+    const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'general-knowledge',messages:[{role:'user',content:'When did Ada Lovelace die?'}]})}), {
+      GROQ_KEY_NEW:'offline-fixture', AI:{run:async()=>{generalVerifierCalls++; throw new Error('Unapproved or unfetched evidence reached a verifier');}}
+    });
+    const payload = await response.json();
+    const transportUnavailable = sourceUrl.includes('rsc.byu.edu');
+    assert(generalVerifierCalls === 0 && payload.focuschrist_source_integrity_verified !== true
+      && payload.focuschrist_gateway_mode === (transportUnavailable ? 'research-unavailable' : 'research-insufficient-evidence')
+      && payload.choices[0].message.content === (transportUnavailable ? SOURCE_UNAVAILABLE_MESSAGE : SOURCE_INTEGRITY_FALLBACK),
+      'general questions must decline unapproved evidence and approved search snippets without fetched article text');
+  } finally { globalThis.fetch = originalFetch; }
+}
+const unavailableResponse = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',messages:[{role:'user',content:'What causes ocean tides?'}]})}), {});
+const unavailablePayload = await unavailableResponse.json();
+assert(unavailablePayload.focuschrist_gateway_mode === 'research-unavailable'
+  && unavailablePayload.choices[0].message.content === SOURCE_UNAVAILABLE_MESSAGE
+  && unavailablePayload.focuschrist_source_integrity_verified !== true,
+  'an unavailable research service must invite retry rather than imply the question lacked support');
 console.log('Gateway source policy QA PASS');

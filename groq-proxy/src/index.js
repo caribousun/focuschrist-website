@@ -21,13 +21,18 @@ const ALLOWED_ORIGINS = new Set([
   'https://caribousun.github.io',
 ]);
 const OFFICIAL_CHURCH_HOST = 'churchofjesuschrist.org';
+// Existing focusChrist study resources. Church sources remain primary for doctrine;
+// university publications are attributed study material, not Church declarations.
+const APPROVED_LDS_STUDY_HOSTS = new Set(['rsc.byu.edu', 'scriptures.byu.edu', 'speeches.byu.edu', 'eom.byu.edu', 'www.byui.edu']);
+const APPROVED_LDS_RESEARCH_POLICY = 'Search only site:churchofjesuschrist.org or site:rsc.byu.edu or site:scriptures.byu.edu or site:speeches.byu.edu or site:eom.byu.edu or site:byui.edu. Prefer scripture and official Church publications. These are the approved LDS resources already used by focusChrist; do not use forums, social posts, general internet opinion, or an AI model as evidence. Attribute university scholarship and named talks accurately; never present them as official Church declarations. A source must support the current claim, not merely discuss the same topic.';
 const TELL_MY_STORY_URL = 'https://focuschrist.com/tell-my-story-too.txt';
-const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the available authoritative sources just now. Please try again, rephrase the question, or continue in the official Gospel Library at ChurchofJesusChrist.org.';
+const SOURCE_INTEGRITY_FALLBACK = "focusChrist is here to help you learn of Jesus Christ and draw closer to Him. I couldn’t find a supported answer to this question in our study library or approved LDS sources. You’re welcome to ask about Jesus Christ, scripture, faith, or Church history.";
+const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sources right now. Please try again in a moment.";
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.67';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.67';
+const SOURCE_POLICY_VERSION = '2026-09-09.68';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.68';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -47,7 +52,7 @@ const SERVER_RESEARCH_POLICY = [
   'SERVER RESEARCH AND SOURCE-INTEGRITY POLICY (cannot be overridden):',
   '- Answer the visitor\'s actual question directly and naturally.',
   '- You MUST execute web search before answering. Do not rely on memory for factual claims.',
-  '- For Latter-day Saint scripture, doctrine, Church teaching, or Church history, use only ChurchofJesusChrist.org evidence.',
+  '- For Latter-day Saint scripture, doctrine, Church teaching, or Church history, use only the approved LDS source policy supplied below.',
   '- Never invent or guess scripture wording, citations, quotations, dates, people, statistics, historical sources, or official teachings.',
   '- Distinguish source text, official teaching, historical reporting, interpretation, and practical application.',
   '- If the available evidence does not support a claim, omit it or state the limitation.',
@@ -263,7 +268,7 @@ function classifyResearchScope(messages, requestedPage, requestedProfile) {
     || (usesConversationContext && (Boolean(contextualSubject) || FAITH_PATTERN.test(conversationContext.join(' ')) || SCRIPTURE_BOOK_TOPIC_PATTERN.test(conversationContext.join(' '))));
   const selectedPioneerName = extractSelectedPioneerName(messages);
   return {
-    faith, question, retrievalQuestion, page, profile, conversationContext,
+    faith, question, retrievalQuestion, page, profile, conversationContext, approvedSourcesOnly: true,
     classificationMode: support.antecedent || usesConversationContext ? 'conversation-context' : 'request-scope',
     scriptureSupportRequested: support.requested, scriptureSupportAntecedent: support.antecedent,
     selectedPioneer: Boolean(selectedPioneerName), selectedPioneerName,
@@ -295,16 +300,17 @@ function sanitizePayload(payload) {
   if (scope.selectedPioneer) {
     scopeInstruction = `The visitor selected the pioneer ${scope.selectedPioneerName}. Search only site:churchofjesuschrist.org to corroborate that exact person's identity, company, dates, and journey. The gateway will separately supply the selected Tell My Story, Too biography.`;
   } else if (scope.page === 'pioneers' && EXPLICIT_NON_PIONEER_PATTERN.test(scope.question)) {
-    scopeInstruction = 'This request comes from the Pioneers page, but the visitor explicitly requested a biblical or non-pioneer subject. Answer that explicit subject directly. Use only ChurchofJesusChrist.org evidence for biblical or Latter-day Saint claims.';
+    scopeInstruction = 'This request comes from the Pioneers page, but the visitor explicitly requested a biblical or non-pioneer subject. Answer that explicit subject directly.';
   } else if (scope.page === 'pioneers') {
-    scopeInstruction = 'This request comes from the focusChrist Pioneers page. Interpret ambiguous labels in Latter-day Saint pioneer and Church-history context. In particular, an unqualified Exodus means the 1846 exodus from Nauvoo, not the biblical Exodus. Search only site:churchofjesuschrist.org and distinguish established fact from recollection, tradition, and interpretation.';
+    scopeInstruction = 'This request comes from the focusChrist Pioneers page. Interpret ambiguous labels in Latter-day Saint pioneer and Church-history context. In particular, an unqualified Exodus means the 1846 exodus from Nauvoo, not the biblical Exodus. Distinguish established fact from recollection, tradition, and interpretation.';
   } else if (scope.page === 'church-history') {
-    scopeInstruction = 'This request comes from the focusChrist Church History page. Interpret ambiguous questions and follow-ups within Latter-day Saint Church history. Search only site:churchofjesuschrist.org and prefer the official Church History and Saints source family.';
+    scopeInstruction = 'This request comes from the focusChrist Church History page. Interpret ambiguous questions and follow-ups within Latter-day Saint Church history. Prefer the official Church History and Saints source family.';
   } else if (scope.faith) {
-    scopeInstruction = 'For this request, search only site:churchofjesuschrist.org and use only ChurchofJesusChrist.org evidence.';
+    scopeInstruction = 'For this request, prefer scripture and official Church publications.';
   } else {
     scopeInstruction = 'Use web search to gather reliable evidence before answering.';
   }
+  if (!scope.selectedPioneer) scopeInstruction += '\n' + APPROVED_LDS_RESEARCH_POLICY;
   const research = {
     model: RESEARCH_MODEL,
     // Browser prompts are presentation hints, not server-owned source policy.
@@ -362,6 +368,15 @@ function collectSourceEvidence(message) {
 
 function isOfficialChurchSource(source) {
   return source && (source.host === OFFICIAL_CHURCH_HOST || source.host.endsWith(`.${OFFICIAL_CHURCH_HOST}`));
+}
+
+function isApprovedLdsSource(source) {
+  try {
+    const url = new URL(source?.url);
+    return url.protocol === 'https:' && !url.username && !url.password && !url.port
+      && (url.hostname === OFFICIAL_CHURCH_HOST || url.hostname.endsWith('.' + OFFICIAL_CHURCH_HOST)
+        || APPROVED_LDS_STUDY_HOSTS.has(url.hostname));
+  } catch (_) { return false; }
 }
 
 function normalizeDiscoveryTokens(value) {
@@ -495,7 +510,24 @@ function rankChurchSourceCandidates(question, page) {
   return ranked.sort((left, right) => right.score - left.score || String(left.url).localeCompare(String(right.url))).slice(0, 6);
 }
 
-function isAllowedOfficialFetchUrl(rawUrl, deterministic = false) {
+function isAllowedResearchFetchUrl(rawUrl) {
+  try {
+    const url = new URL(rawUrl);
+    if (url.protocol !== 'https:' || url.username || url.password || url.port) return false;
+    if (![...url.searchParams.keys()].every(key => ['lang','id','name'].includes(key))) return false;
+    if (url.searchParams.has('lang') && url.searchParams.get('lang') !== 'eng') return false;
+    if (/\/(?:search|internal-use-only|login|account|api)(?:\/|$)/i.test(url.pathname)) return false;
+    if (['www.churchofjesuschrist.org','churchofjesuschrist.org'].includes(url.hostname)) return /^\/study\//.test(url.pathname);
+    if (url.hostname === 'history.churchofjesuschrist.org') return /^\/(?:content|exhibit|landing|chd)\//.test(url.pathname);
+    if (url.hostname === 'churchhistorylibrary.churchofjesuschrist.org') return /^\/db\//.test(url.pathname);
+    if (APPROVED_LDS_STUDY_HOSTS.has(url.hostname)) return url.pathname !== '/' && !/\/(?:login|search|account|user|api|wp-admin)(?:\/|$)/i.test(url.pathname);
+    if (url.hostname === 'newsroom.churchofjesuschrist.org') return /^\/(?:article|topic|ldsnewsroom)\//.test(url.pathname);
+    return false;
+  } catch (_) { return false; }
+}
+
+function isAllowedOfficialFetchUrl(rawUrl, deterministic = false, researched = false) {
+  if (researched) return isAllowedResearchFetchUrl(rawUrl);
   try {
     const url = new URL(String(rawUrl || ''));
     if (url.protocol !== 'https:') return false;
@@ -765,9 +797,12 @@ async function evidenceCacheKey(candidate, question) {
 }
 
 async function fetchOfficialSource(candidate, question, deadline, counters = null) {
-  if (!isAllowedOfficialFetchUrl(candidate.url, candidate.deterministic === true)) return null;
+  if (!isAllowedOfficialFetchUrl(candidate.url, candidate.deterministic === true, candidate.researched === true)) return null;
   const available = remainingBudget(deadline);
-  if (available < 300) return null;
+  if (available < 300) {
+    if (counters) counters.transportFailures = Number(counters.transportFailures || 0) + 1;
+    return null;
+  }
   let cache = null;
   let cacheKey = null;
   try {
@@ -805,7 +840,10 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       headers: { Accept: 'text/html', 'Accept-Language': 'en', 'User-Agent': 'focusChrist-official-source/1.0 (+https://focuschrist.com/about.html)' },
       signal: controller ? controller.signal : undefined,
     });
-    if (!response.ok || response.status >= 300) return null;
+    if (!response.ok || response.status >= 300) {
+      if (counters && (response.status === 429 || response.status >= 500)) counters.transportFailures = Number(counters.transportFailures || 0) + 1;
+      return null;
+    }
     const contentType = String(response.headers.get('content-type') || '').toLowerCase();
     if (!contentType.includes('text/html')) return null;
     const paragraphs = extractVisibleParagraphs(await readBoundedText(response, OFFICIAL_HTML_BYTE_LIMIT), candidate);
@@ -826,10 +864,50 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
     }
     return source;
   } catch (_error) {
+    if (counters && String(_error?.message || '') !== 'official_html_too_large') counters.transportFailures = Number(counters.transportFailures || 0) + 1;
     return null;
   } finally {
     if (timer) clearTimeout(timer);
   }
+}
+
+async function hydrateResearchEvidence(sources, question, deadline, diagnostic = null) {
+  const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
+  const official = sources.filter(isApprovedLdsSource).slice(0, 2);
+  const results = await Promise.all(official.map(async source => {
+    if (!isAllowedResearchFetchUrl(source.url)) return null;
+    const fetched = await fetchOfficialSource({ ...source, researched: true, namedGospelTopic: true },
+      question, deadline, counters);
+    if (!fetched) return null;
+    const result = fetched;
+    return { ...result, sourceClass: isOfficialChurchSource(result) ? 'official-church' : 'attributed-lds-study' };
+  }));
+  if (diagnostic) {
+    diagnostic.focuschrist_source_transport_failures = Number(diagnostic.focuschrist_source_transport_failures || 0) + Number(counters.transportFailures || 0);
+    diagnostic.focuschrist_official_fetch_calls = Number(diagnostic.focuschrist_official_fetch_calls || 0) + counters.attempts;
+    diagnostic.focuschrist_official_cache_hits = Number(diagnostic.focuschrist_official_cache_hits || 0) + counters.cacheHits;
+    diagnostic.focuschrist_official_cache_misses = Number(diagnostic.focuschrist_official_cache_misses || 0) + counters.cacheMisses;
+  }
+  return results.filter(Boolean);
+}
+
+function relatedConversationSources(scope) {
+  if (deterministicScriptureSource(scope.question)) return [];
+  const topic = [scope.question, ...(scope.conversationContext || [])].join(' ').toLowerCase();
+  let paths = [];
+  const identityQuestion = /\b(?:who|where|same|different|identity|jehovah|is god|was god|is he|was he)\b/i.test(scope.question);
+  if (identityQuestion && /\b(?:god|jehovah|jesus|christ)\b/.test(topic) && /\b(?:old|new) testament\b/.test(topic)) {
+    paths = ['gospel-topics/jesus-christ', 'gospel-topics/godhead'];
+  } else if (/\b(?:when|year|date|begin|start|end|finish|last|long|departure|arrival)\b/i.test(scope.question)
+      && /\b(?:pioneer|pioneers|nauvoo|latter.day saint|mormon)\b/.test(topic)
+      && /\b(?:exodus|migration|trek|depart(?:ure)?|journey)\b/.test(topic)
+      && !/\b(?:biblical|moses|egypt|pharaoh)\b/.test(topic)) {
+    paths = ['history/topics/departure-from-nauvoo', 'history/topics/pioneer-trek'];
+  }
+  // This selects complementary evidence, never an answer or approval. These
+  // indexed official articles supply the distinctions a title-only match misses.
+  return paths.map(path => CHURCH_SOURCE_INDEX.find(entry => entry.url.includes('/' + path + '?')))
+    .filter(Boolean).map(entry => ({ ...entry, namedGospelTopic: true }));
 }
 
 async function retrieveIndexedChurchEvidence(question, page, deadline, pioneerTopicKey = '') {
@@ -854,6 +932,7 @@ async function retrieveIndexedChurchEvidence(question, page, deadline, pioneerTo
     fetchCalls: counters.attempts,
     cacheHits: counters.cacheHits,
     cacheMisses: counters.cacheMisses,
+    transportFailures: Number(counters.transportFailures || 0),
     deterministicScripture: Boolean(deterministicScripture),
     deterministicHistoryTopic: Boolean(deterministicHistoryTopic),
     namedGospelTopic: Boolean(namedGospelTopic),
@@ -1134,7 +1213,7 @@ function verifiedAnswerFailureReason(answer, evidence, scope, approved) {
   if (!text) return 'empty-answer';
   if (!Array.isArray(evidence) || !evidence.length) return 'missing-evidence';
   if (scope.selectedPioneer && !evidence.some(isTellMyStorySource)) return 'missing-biography';
-  if (scope.faith && !scope.selectedPioneer && !evidence.some(isOfficialChurchSource)) return 'missing-official-source';
+  if ((scope.faith || scope.approvedSourcesOnly) && !scope.selectedPioneer && (!evidence.length || !evidence.every(isApprovedLdsSource))) return 'missing-official-source';
   if (hasKnownFalseClaim(text)) return 'known-false-claim';
   if (hasExcessiveSourceOverlap(text, evidence)) return 'excessive-source-overlap';
   if (!answerMeetsSubstanceContract(text, scope)) return 'insufficient-substance';
@@ -1771,11 +1850,13 @@ async function callVerifier(env, body, deadline, options = {}) {
 
 function fallbackPayload(mode, extra, scope) {
   const general = scope && !scope.faith && !scope.selectedPioneer;
+  const unavailable = /(?:unavailable|provider-error|rate-limited|exception)/.test(mode);
+  const message = unavailable ? SOURCE_UNAVAILABLE_MESSAGE : SOURCE_INTEGRITY_FALLBACK;
   return {
     id: 'focuschrist-source-policy',
     choices: [{
       index: 0,
-      message: { role: 'assistant', content: general ? GENERAL_ANSWER_FALLBACK : SOURCE_INTEGRITY_FALLBACK },
+      message: { role: 'assistant', content: message },
       finish_reason: 'content_filter',
     }],
     focuschrist_sources: general ? [] : [{
@@ -2026,7 +2107,7 @@ export default {
       focuschrist_source_robots_hash: CHURCH_SOURCE_ROBOTS_SHA256.slice(0, 12),
     };
     try {
-      if (!sanitized.scope.faith && !sanitized.scope.selectedPioneer
+      if (!sanitized.scope.approvedSourcesOnly && !sanitized.scope.faith && !sanitized.scope.selectedPioneer
         && !prefersResearchFirstGeneral(sanitized.scope.question)) {
         const directGeneralAnswer = await produceLowRiskGeneralAnswer(env, sanitized.scope, '', deadline);
         if (directGeneralAnswer) {
@@ -2051,7 +2132,25 @@ export default {
       const retrievalDiagnostic = requestDiagnostic;
       if (tellMyStoryEvidence) retrievalDiagnostic.focuschrist_retrieval_route = 'reviewed-pioneer-biography';
 
-      if (sanitized.scope.faith && !sanitized.scope.selectedPioneer && (!sanitized.scope.conversationContext.length
+      const relatedSources = sanitized.scope.faith && !sanitized.scope.selectedPioneer
+        ? relatedConversationSources(sanitized.scope) : [];
+      if (relatedSources.length) {
+        const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
+        evidence = (await Promise.all(relatedSources.map(source => fetchOfficialSource(source,
+          `${sanitized.scope.retrievalQuestion} ${source.title}`, deadline, counters)))).filter(Boolean);
+        if (evidence.length !== relatedSources.length) evidence = [];
+        allEvidence = evidence;
+        retrievalDiagnostic.focuschrist_retrieval_route = 'church-source-index';
+        retrievalDiagnostic.focuschrist_related_source_pack = true;
+        retrievalDiagnostic.focuschrist_index_candidates = relatedSources.length;
+        retrievalDiagnostic.focuschrist_index_sources = evidence.length;
+        retrievalDiagnostic.focuschrist_official_fetch_calls = counters.attempts;
+        retrievalDiagnostic.focuschrist_official_cache_hits = counters.cacheHits;
+        retrievalDiagnostic.focuschrist_official_cache_misses = counters.cacheMisses;
+        retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + Number(counters.transportFailures || 0);
+      }
+
+      if (!evidence.length && sanitized.scope.faith && !sanitized.scope.selectedPioneer && (!sanitized.scope.conversationContext.length
           || (deterministicHistoryTopicSource(sanitized.scope.retrievalQuestion, sanitized.scope.page)
             && !/\b(?:same|different|compare|contrast|versus|relationship)\b/i.test(sanitized.scope.question)))) {
         const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline, sanitized.scope.pioneerTopicKey);
@@ -2064,6 +2163,7 @@ export default {
         retrievalDiagnostic.focuschrist_official_fetch_calls = indexed.fetchCalls;
         retrievalDiagnostic.focuschrist_official_cache_hits = indexed.cacheHits;
         retrievalDiagnostic.focuschrist_official_cache_misses = indexed.cacheMisses;
+        retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + Number(indexed.transportFailures || 0);
         if (indexed.evidence.length) {
           evidence = indexed.evidence;
           allEvidence = indexed.evidence;
@@ -2083,7 +2183,7 @@ export default {
         retrievalDiagnostic.focuschrist_groq_research_calls = Number(researchResult.callCount || 0);
         retrievalDiagnostic.focuschrist_retrieval_route = 'groq-research';
         if (!researchResult.response.ok) {
-          if (!sanitized.scope.faith && !sanitized.scope.selectedPioneer
+          if (!sanitized.scope.approvedSourcesOnly && !sanitized.scope.faith && !sanitized.scope.selectedPioneer
             && !requiresExternalGeneralResearch(sanitized.scope.question)) {
             const fallbackGeneralAnswer = await produceLowRiskGeneralAnswer(env, sanitized.scope, '', deadline);
             if (fallbackGeneralAnswer) {
@@ -2112,7 +2212,9 @@ export default {
           sanitized.scope.profile = 'faith-study';
           sanitized.scope.classificationMode = 'official-church-identity-evidence';
         }
-        evidence = (sanitized.scope.faith ? allEvidence.filter(isOfficialChurchSource) : allEvidence).slice(0, 2);
+        evidence = sanitized.scope.approvedSourcesOnly
+          ? await hydrateResearchEvidence(allEvidence, sanitized.scope.retrievalQuestion, deadline - 3500, retrievalDiagnostic)
+          : allEvidence.slice(0, 2);
       }
 
       const officialEvidence = [];
@@ -2124,7 +2226,7 @@ export default {
           officialEvidence.push(source);
         }
       });
-      if (draft && !evidence.length && !sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
+      if (draft && !evidence.length && !sanitized.scope.approvedSourcesOnly && !sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
         const generalAnswer = await produceLowRiskGeneralAnswer(env, sanitized.scope, draft, deadline);
         if (generalAnswer) {
           return jsonResponse(generalAnswerPayload(
@@ -2135,9 +2237,9 @@ export default {
           ), 200, origin, deadline, localScriptures);
         }
       }
-      if ((!draft && retrievalDiagnostic.focuschrist_retrieval_route !== 'church-source-index') || !evidence.length) {
+      if (!evidence.length) {
         return jsonResponse(fallbackPayload(
-          'research-insufficient-evidence',
+          retrievalDiagnostic.focuschrist_source_transport_failures > 0 ? 'research-unavailable' : 'research-insufficient-evidence',
           { ...(sanitized.scope.lowRiskDiagnostic || {}), ...retrievalDiagnostic },
           sanitized.scope,
         ), 200, origin, deadline, localScriptures);
@@ -2190,7 +2292,7 @@ export default {
         }
       }
 
-      const verifierPrompt = (sanitized.scope.selectedPioneer ? [
+      const makeVerifierPrompt = () => (sanitized.scope.selectedPioneer ? [
         'You are writing a source-grounded biographical summary. Return one JSON object only.',
         `The visitor selected ${sanitized.scope.selectedPioneerName}. The evidence below is that person's permitted Tell My Story, Too entry.`,
         'Write a concise two-to-four paragraph answer using only facts in that entry. Do not use the optional research draft or add facts from memory.',
@@ -2208,7 +2310,7 @@ export default {
         'Preserve the exact subjects and relationships in scriptural comparisons. Do not extend a metaphor with invented physical details or present a personal application as something the passage says. If the text compares the word to a seed, do not replace the word with faith or invent watering, warmth, or other gardening instructions.',
         'Use independently worded paraphrase. Do not copy a long passage or reconstruct the source in ordered fragments. Apart from unavoidable names and short doctrinal phrases, avoid matching source wording for more than eight consecutive words.',
         'Explain the supported facts in a fresh structure organized around the visitor question. Do not follow the source sentence by sentence or substitute synonyms into its clauses. Shared short fragments in the same order can also reproduce too much of the source. Rebuild the explanation while preserving exact names, dates, offices, relationships, and chronology. Do not add facts or filler to dilute overlap.',
-        'For a Latter-day Saint question, reject any evidence outside ChurchofJesusChrist.org.',
+        APPROVED_LDS_RESEARCH_POLICY,
         'Set approved true whenever the evidence contains material that can responsibly answer the question, including when DRAFT is empty. Set approved false only when the evidence is empty, unrelated, or cannot support a responsible answer. source_indexes must list the 1-based evidence sources that directly support the final answer.',
         'Interpret ordinary awkward grammar by its clear intended meaning. Do not reject a scripture, doctrine, or history question merely because its wording is imperfect. If the named official source directly addresses the named topic or concept, answer from that evidence.',
         retrievalDiagnostic.focuschrist_deterministic_scripture === true
@@ -2228,6 +2330,7 @@ export default {
         '',
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
       ].join('\n')) + '\n' + SCRIPTURE_QUOTATION_CONTRACT;
+      let verifierPrompt = makeVerifierPrompt();
       const verifierBody = {
         messages: [{ role: 'user', content: verifierPrompt }],
         temperature: 0,
@@ -2251,6 +2354,37 @@ export default {
       let indexes = verdict && Array.isArray(verdict.source_indexes)
         ? verdict.source_indexes.filter((index) => Number.isInteger(index) && index >= 1 && index <= evidence.length)
         : [];
+      let freshResearchEvidence = false;
+      // A local index hit is a discovery lead, not proof that the question can
+      // be answered from that excerpt. Search once before declining an unknown.
+      if (verdict?.approved === false && sanitized.scope.faith && !sanitized.scope.selectedPioneer
+          && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
+          && !retrievalDiagnostic.focuschrist_groq_research_calls && env?.GROQ_KEY_NEW
+          && remainingBudget(deadline) >= 9000) {
+        const researched = await callGroq(env.GROQ_KEY_NEW, sanitized.research, deadline - 4500);
+        retrievalDiagnostic.focuschrist_groq_research_calls = Number(researched.callCount || 0);
+        retrievalDiagnostic.focuschrist_research_escalated = true;
+        if (!researched.response.ok && (researched.response.status === 429 || researched.response.status >= 500)) retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + 1;
+        if (researched.response.ok) {
+          const message = researched.data?.choices?.[0]?.message;
+          const discovered = await hydrateResearchEvidence(collectSourceEvidence(message),
+            sanitized.scope.retrievalQuestion, deadline - 3500, retrievalDiagnostic);
+          const usable = discovered.filter(source => source.content && source.content.length >= 80);
+          if (usable.length) {
+            evidence = usable;
+            allEvidence = usable;
+            draft = String(message?.content || '').slice(0, 4000);
+            retrievalDiagnostic.focuschrist_retrieval_route = 'index-then-approved-research';
+            retrievalDiagnostic.focuschrist_deterministic_scripture = false;
+            retrievalDiagnostic.focuschrist_deterministic_history_topic = false;
+            retrievalDiagnostic.focuschrist_named_gospel_topic = false;
+            retrievalDiagnostic.focuschrist_related_source_pack = false;
+            verifierPrompt = makeVerifierPrompt();
+            indexes = [];
+            freshResearchEvidence = true;
+          }
+        }
+      }
       const selectedEvidenceBeforeRepair = indexes.map((index) => evidence[index - 1]);
       const scriptureBeforeRepair = verdict && verdict.approved === true
         ? await localScriptures.checkAnswer(verdict.answer, selectedEvidenceBeforeRepair)
@@ -2270,10 +2404,11 @@ export default {
         sanitized.scope.page,
       ) && evidence.some((entry) => /\/study\/manual\/church-history-in-the-fulness-of-times\/chapter-twenty-six/.test(entry.url));
       const needsRelevantEvidenceReconsideration = Boolean(verdict && verdict.approved === false
+        && !retrievalDiagnostic.focuschrist_source_transport_failures
         && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
         && (indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2)
           || hasPinnedPioneerIrrigationEvidence));
-      if ((needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration || needsScriptureRepair)
+      if ((freshResearchEvidence || needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration || needsScriptureRepair)
         && ['cloudflare-primary', 'groq-primary', 'openai-fallback'].includes(verifierResult.verifierRoute)
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
@@ -2286,7 +2421,9 @@ export default {
             ? 'The deterministic scripture check rejected the previous answer: ' + scriptureBeforeRepair.reason + '. Repair it once using only the provided evidence. Remove unsupported references or quotation claims. For exact scripture words use [[SCRIPTURE:Book chapter:verse]] with a complete supported reference. Do not guess a substitute passage. If evidence cannot support the claim, omit it or reject the answer.'
             : '',
           '',
-          needsRelevantEvidenceReconsideration
+          freshResearchEvidence
+            ? 'Additional approved-source research was required because the first local excerpts did not answer the question. Verify the new EVIDENCE independently and answer the current question if supported; the earlier rejection applies to the earlier evidence only.'
+            : needsRelevantEvidenceReconsideration
             ? 'Your previous rejection may be a false negative because the indexed official evidence has direct lexical relevance. Re-evaluate it once without presuming either approval or rejection. Interpret awkward but understandable grammar naturally. A named scripture chapter or Church-history topic that directly addresses the requested concept is usable evidence and should not be rejected merely because the visitor phrased the question imperfectly.'
             : needsDepthRepair
             ? 'Your previous approved answer did not meet the required answer depth.'
@@ -2388,7 +2525,7 @@ export default {
         Boolean(verdict && verdict.approved === true && indexes.length),
       );
       if (answer === SOURCE_INTEGRITY_FALLBACK) {
-        return jsonResponse(fallbackPayload('verification-rejected', {
+        return jsonResponse(fallbackPayload(!freshResearchEvidence && retrievalDiagnostic.focuschrist_source_transport_failures > 0 ? 'research-unavailable' : 'verification-rejected', {
           focuschrist_verifier_approved: Boolean(verdict && verdict.approved === true),
           focuschrist_verifier_publication_failure: verifiedAnswerFailureReason(verdict && verdict.answer, selectedEvidence, sanitized.scope, Boolean(verdict && verdict.approved === true && indexes.length)),
           focuschrist_verifier_source_indexes: verdict && Array.isArray(verdict.source_indexes)
@@ -2439,6 +2576,7 @@ export {
   PROVIDER_CALL_LIMIT_MS,
   REQUEST_BUDGET_MS,
   SOURCE_INTEGRITY_FALLBACK,
+  SOURCE_UNAVAILABLE_MESSAGE,
   answerMeetsSubstanceContract,
   answerMeetsRepairMargin,
   answerSubstanceRequirements,
@@ -2447,6 +2585,10 @@ export {
   callCloudflareVerifier,
   callVerifier,
   classifyResearchScope,
+  relatedConversationSources,
+  isAllowedResearchFetchUrl,
+  isApprovedLdsSource,
+  hydrateResearchEvidence,
   collectSourceEvidence,
   compactParagraphPack,
   extractSelectedPioneerName,

@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-09.67';
+const POLICY_VERSION = '2026-09-09.68';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -45,6 +45,7 @@ const contradictions = {
 
 function specimen(id, page, profile, question, expectedProfile, officialOnly, factKey, sourcePattern, stratum = null) {
     return { id, page, profile, question, expectedProfile, officialOnly,
+        allowSourceLimitation: !officialOnly && expectedProfile === 'general-knowledge',
         factPatterns: facts[factKey] || [], contradictionPatterns: contradictions[factKey] || [],
         sourcePattern, stratum, minimumWords: officialOnly ? 70 : 45 };
 }
@@ -172,10 +173,26 @@ function validate(test, result) {
     assert(result.status === 200, test.id + ' returned HTTP ' + result.status);
     assert(result.policyVersion === POLICY_VERSION, test.id + ' returned Worker policy ' + result.policyVersion);
     assert(result.elapsedMs <= HARD_LIMIT_MS, test.id + ' exceeded the 25-second visitor ceiling');
-    assert(result.wordCount >= test.minimumWords, test.id + ' returned an incomplete answer' + (result.publicationFailure ? ' / ' + result.publicationFailure : ''));
-    assert(!/could not complete|temporarily unavailable|could not verify|please rephrase/i.test(result.answer), test.id + ' returned a known fallback');
     assert(result.resolvedProfile === test.expectedProfile, test.id + ' resolved to ' + result.resolvedProfile);
     assert(result.classificationMode.length > 0, test.id + ' omitted the classification receipt');
+    if (test.allowSourceLimitation && !result.verified) {
+        assert(['research-insufficient-evidence', 'verification-rejected'].includes(result.gatewayMode), test.id + ' returned a provider or policy error instead of an approved-source limitation');
+        assert(result.answer === 'focusChrist is here to help you learn of Jesus Christ and draw closer to Him. I couldn’t find a supported answer to this question in our study library or approved LDS sources. You’re welcome to ask about Jesus Christ, scripture, faith, or Church history.', test.id + ' omitted the exact source limitation');
+        assert(result.sourceUrls.length === 0, test.id + ' returned unverified source claims');
+        result.outcome = 'source-limited';
+        result.answered = false;
+        return;
+    }
+    const approvedHosts = new Set(['rsc.byu.edu','scriptures.byu.edu','speeches.byu.edu','eom.byu.edu','www.byui.edu']);
+    assert(result.verified && result.sourceUrls.length > 0 && result.sourceUrls.every(value => {
+        try { const url = new URL(value); return url.protocol === 'https:' && !url.username && !url.password && !url.port
+            && (url.hostname === 'churchofjesuschrist.org' || url.hostname.endsWith('.churchofjesuschrist.org') || approvedHosts.has(url.hostname)); }
+        catch (_) { return false; }
+    }), test.id + ' must answer only from verified approved LDS sources');
+    result.outcome = 'answered';
+    result.answered = true;
+    assert(result.wordCount >= test.minimumWords, test.id + ' returned an incomplete answer' + (result.publicationFailure ? ' / ' + result.publicationFailure : ''));
+    assert(!/could not complete|temporarily unavailable|could not verify|please rephrase/i.test(result.answer), test.id + ' returned a known fallback');
     for (const pattern of test.factPatterns || []) assert(pattern.test(result.answer), test.id + ' omitted expected answer concept ' + pattern);
     for (const pattern of test.contradictionPatterns || []) assert(!pattern.test(result.answer), test.id + ' returned a negated or contradictory expected fact');
     if (test.officialOnly) {
@@ -439,6 +456,8 @@ if (process.argv.includes('--definition-check')) {
     assert(p95 <= P95_LIMIT_MS, 'matrix p95 exceeded 20 seconds: ' + p95 + 'ms');
     assert(allMeasured.every((result) => !result.error), 'one or more matrix requests failed');
     console.log('Live AI response matrix PASS: ' + JSON.stringify({ count: allMeasured.length, indexed: indexed.length,
+        answered: allMeasured.filter(result => result.answered === true).length,
+        sourceLimited: allMeasured.filter(result => result.outcome === 'source-limited').length,
         groqResearchCalls: allMeasured.reduce((sum, result) => sum + Number(result.groqResearchCalls || 0), 0),
         p95Ms: p95, maxMs: Math.max(...times), burst: burstResults.length,
         cloudflareIndexedNeurons: indexedNeuronCosts.reduce((sum, cost) => sum + cost, 0),

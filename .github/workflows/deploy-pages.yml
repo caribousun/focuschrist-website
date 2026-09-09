@@ -134,6 +134,7 @@ jobs:
         run: |
           node groq-proxy/source-policy.test.js
           node groq-proxy/conversation-context.test.js
+          node groq-proxy/research-escalation.test.js
 
       - name: Validate shared site JavaScript
         run: node --check site-common.js

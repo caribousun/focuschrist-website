@@ -583,7 +583,8 @@
             || /\b(?:red|white|black|golden)\b.{0,180}\b(?:does\s+not|do\s+not|is\s+not|are\s+not|never)\b/i.test(value);
         return !explicitCorrection;
     }
-    const SOURCE_INTEGRITY_FALLBACK = 'I cannot verify the specific source claim well enough to present it as authoritative. Please confirm the subject in the official Gospel Library at ChurchofJesusChrist.org. I would rather acknowledge that limit than attach an incorrect passage or quotation to a teaching.';
+    const SOURCE_INTEGRITY_FALLBACK = "focusChrist is here to help you learn of Jesus Christ and draw closer to Him. I couldn’t find a supported answer to this question in our study library or approved LDS sources. You’re welcome to ask about Jesus Christ, scripture, faith, or Church history.";
+    const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sources right now. Please try again in a moment.";
 
     function normalizeSourceReference(text) {
         return String(text || '')
@@ -616,7 +617,7 @@
         const settings = options || {};
         const text = String(answer || '').trim();
         // This fixed clarification makes no source claim and must remain usable without evidence.
-        if (text === 'Which question or teaching would you like a scripture for? Please name the subject so I can find a passage that actually supports it.') {
+        if (text === SOURCE_INTEGRITY_FALLBACK || text === SOURCE_UNAVAILABLE_MESSAGE || text === 'Which Joseph do you mean? Please include the last name or a little more context.' || text === 'Which question or teaching would you like a scripture for? Please name the subject so I can find a passage that actually supports it.') {
             return { ok: true, answer: text, citations: [], ungroundedCitations: [], violations: [] };
         }
         const serverVerified = settings.serverVerified === true;
