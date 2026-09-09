@@ -1,7 +1,9 @@
+import {withVerifierFixture} from './openai-fixture.js';
+const worker=withVerifierFixture(actualWorker);
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import createLibrary from '../scripture-library.js';
-import worker from './src/index.js';
+import actualWorker from './src/index.js';
 const read = path => readFileSync(new URL('../'+path,import.meta.url));
 const catalog = JSON.parse(read('scripture-data/catalog.json'));
 const localFetch = async value => new Response(read(new URL(value,'https://focuschrist.com').pathname.slice(1)));
@@ -34,12 +36,16 @@ try {
     ['Does it promise that faith will make me wealthy?',['What does Alma 32 teach about faith?']],
     ['How does that relate to caring for people who suffer?',['What does Mosiah 18:8-10 teach about baptismal commitments?']]
   ]) {
-    let verifierCalls=0;
+    let verifierCalls=0, researchCalls=0;
     globalThis.fetch = async url => {
+      if (String(url) === 'https://api.openai.com/v1/responses') {
+        researchCalls++;
+        return new Response(JSON.stringify({status:'completed',output:[{type:'web_search_call',status:'completed',action:{sources:[]}}]}),{headers:{'Content-Type':'application/json'}});
+      }
       assert.ok(String(url).startsWith('https://focuschrist.com/scripture-data/'),'verified local scripture must not require official HTML or research');
       return localFetch(url);
     };
-    const response = await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'faith-study',messages:[...prior.map(content=>({role:'user',content})),{role:'user',content:question}]})}),{AI:{run:async(_model,body)=>{
+    const response = await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'faith-study',messages:[...prior.map(content=>({role:'user',content})),{role:'user',content:question}]})}),{verifierFixture:async(_model,body)=>{
       verifierCalls++;
       const prompt=body.messages[0].content;
       assert.ok(prompt.includes(`QUESTION:\n${question}`),'current explanatory request must remain primary');
@@ -53,11 +59,12 @@ try {
       else assert.ok(prompt.includes('bear one another’s burdens') || prompt.includes("bear one another's burdens"));
       // A mocked rejection proves that passage availability cannot bypass the verdict.
       return {response:{approved:false,answer:'The fixture withholds approval.',source_indexes:[]}};
-    }}});
+    }});
     const payload=await response.json();
     assert.ok(verifierCalls>=1 && verifierCalls<=2,'explanation must reach the bounded verifier');
     assert.equal(payload.focuschrist_local_canonical_evidence,true);
-    assert.equal(payload.focuschrist_groq_research_calls,0);
+    assert.equal(researchCalls,question.includes('Matthew') ? 0 : 1,'supported canonical evidence answers locally; rejected explanation can perform one approved search');
+    assert.equal(Number(payload.focuschrist_openai_research_calls || 0),researchCalls);
     assert.equal(payload.focuschrist_source_integrity_verified,question.includes('Matthew'));
     if(question.includes('Matthew')) assert.equal(payload.choices[0].message.content,answer);
   }

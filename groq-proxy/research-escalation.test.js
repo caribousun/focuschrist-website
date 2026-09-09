@@ -1,6 +1,8 @@
+import {withVerifierFixture} from './openai-fixture.js';
+const worker=withVerifierFixture(actualWorker);
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import worker, { isAllowedResearchFetchUrl, hydrateResearchEvidence, SOURCE_UNAVAILABLE_MESSAGE } from './src/index.js';
+import actualWorker, { isAllowedResearchFetchUrl, hydrateResearchEvidence, SOURCE_UNAVAILABLE_MESSAGE } from './src/index.js';
 
 // Synthetic transport fixtures exercise retrieval and verification, not doctrine.
 // No provider or official site is contacted and no mocked verdict proves a claim.
@@ -34,15 +36,12 @@ try {
       if (address.startsWith('https://focuschrist.com/scripture-data/')) {
         return new Response(readFileSync(new URL('..' + new URL(address).pathname, import.meta.url)));
       }
-      if (address.includes('api.groq.com')) {
+      if (address.endsWith('/v1/responses')) {
         researchCalls++;
         events.push('research');
         const body = JSON.parse(options.body);
-        assert.ok(body.messages.some(message => message.content.includes(question)), 'research must retain current question');
-        return json({choices:[{message:{content:'A newly discovered article addresses the requested relationship.', executed_tools:[{search_results:[{
-          url:discoveredUrl, title:'Additional study about rebuilding trust',
-          content:`${topic} and rebuilding trust are discussed in this search result. Search metadata only; retrieve the article to verify its fuller account.`
-        }]}]}}]});
+        assert.ok(body.input.some(message => message.content.includes(question)), 'research must retain current question');
+        return json({status:'completed',output:[{type:'web_search_call',status:'completed',action:{sources:[{type:'url',url:discoveredUrl}]}}]});
       }
       if (address === discoveredUrl) {
         events.push('hydrated');
@@ -57,8 +56,8 @@ try {
       throw new Error('Unexpected offline fixture request: ' + address);
     };
     const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:profile,messages:[...prior.map(content=>({role:'user',content})),{role:'user',content:question}]})}), {
-      GROQ_KEY_NEW:'offline-fixture',
-      AI:{run:async (_model, body) => {
+      OPENAI_API_KEY:'offline-fixture',
+      verifierFixture:async (_model, body) => {
         verifierCalls++;
         events.push('verify');
         const prompt = body.messages[0].content;
@@ -68,7 +67,7 @@ try {
         assert.ok(prompt.includes('FETCHED_NEW_EVIDENCE'), 'second verifier must receive newly fetched article text');
         if (rejectAgain) return {response:{approved:false,answer:'The additional source still does not establish a responsible answer.',source_indexes:[]}};
         return {response:{approved:true,answer,source_indexes:[1]}};
-      }}
+      }
     });
     const payload = await response.json();
     assert.equal(researchCalls, 1, `${topic}: rejected local evidence must cause exactly one external research pass`);
@@ -94,12 +93,12 @@ try {
   for (const question of ['How can forgiveness help someone rebuild trust?', 'Is God the same in the Old Testament and New Testament?']) {
     let failedArticles = 0;
     globalThis.fetch = async url => {
-      if (String(url).includes('api.groq.com')) return json({choices:[{message:{content:'No supported article was found.',executed_tools:[]}}]});
+      if (String(url).endsWith('/v1/responses')) return json({status:'completed',output:[{type:'web_search_call',status:'completed',action:{sources:[]}}]});
       assert.ok(String(url).includes('churchofjesuschrist.org'), 'initial retrieval fixture must only fetch approved articles');
       failedArticles++;
       return new Response('', {status:503});
     };
-    const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'faith-study',messages:[{role:'user',content:question}]})}), {GROQ_KEY_NEW:'offline-fixture'});
+    const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'faith-study',messages:[{role:'user',content:question}]})}), {OPENAI_API_KEY:'offline-fixture'});
     const payload = await response.json();
     assert.ok(failedArticles > 0);
     assert.equal(payload.focuschrist_source_transport_failures, failedArticles, 'initial indexed and paired article failures must all propagate without resetting the count');

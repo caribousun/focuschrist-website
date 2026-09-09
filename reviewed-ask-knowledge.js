@@ -427,6 +427,8 @@
                     },
                     {
                         id: 'carthage-imprisonment',
+                        directSubject: 'joseph smith',
+                        directContext: ['carthage'],
                         cues: ['why', 'carthage', 'jail'],
                         intent: {
                             all: [
@@ -457,6 +459,8 @@
                     },
                     {
                         id: 'carthage-companions',
+                        directSubject: 'joseph smith',
+                        directContext: ['carthage'],
                         cues: ['who', 'with'],
                         intent: {
                             all: [
@@ -655,11 +659,13 @@
                 variants: [
                     {
                         id: 'printer-publisher-location',
+                        directSubject: 'book of mormon',
+                        directContext: ['first', 'original'],
                         cues: ['who', 'where', 'publish', 'published', 'publisher', 'print', 'printed', 'printer', 'grandin', 'palmyra'],
                         intent: {
                             all: [
                                 ['publish', 'published', 'publisher', 'print', 'printed', 'printer'],
-                                ['who', 'where', 'published', 'printed', 'publisher', 'printer', 'grandin', 'palmyra']
+                                ['who', 'where']
                             ],
                             none: ['musical', 'broadway', 'movie', 'film', 'soundtrack']
                         },
@@ -753,7 +759,8 @@
                     url: 'https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng',
                     tier: 'Official Church History',
                     note: 'Official collection and discussion of the historical accounts.'
-                }
+                },
+                officialHistorySource('First Vision Accounts - Gospel Topics Essays', 'https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/first-vision-accounts?lang=eng', 'Official essay identifying the four firsthand accounts and their publication history.')
             ]
         },
         churchHistoryCard({
@@ -815,7 +822,7 @@
                 'How should a modern workplace safety society operate?',
                 'What happened to a Kirtland, Ohio school society?'
             ],
-            answer: 'Church leaders and other investors organized the Kirtland Safety Society in late 1836 after rapid growth created a need for local credit. Ohio denied its bank charter, so it opened in January 1837 as a joint-stock association. It failed within the year and ceased operating by August. Official Church history describes several contributing causes: undercapitalization, risky lending and speculation, heavy debts and spending, hostile efforts to undermine confidence, and the broader Panic of 1837, which damaged banks across the United States. Many people lost money, lawsuits followed, and the crisis intensified dissent against Joseph Smith. The Church does not reduce the collapse to persecution alone; it acknowledges financial mistakes alongside the national economic downturn and organized opposition.',
+            answer: 'Joseph Smith and other Church leaders established the Kirtland Safety Society in November 1836 to support the local economy and the gathering of the Saints. The state legislature did not grant it a banking charter, and its directors decided in January 1837 to operate without one. It struggled and ceased operations by August 1837. Official Church history describes several contributing factors: failures to anticipate problems, land speculation and overspending, inadequate support within the community, outside opposition, and the national Panic of 1837. Falling land values left many Saints with debts on property worth less than they had paid. Joseph Smith and Sidney Rigdon were also tried and fined for circulating banking notes. The losses caused hardship and intensified dissent. The official account presents a combination of internal difficulties, opposition, and wider economic conditions.',
             sources: [
                 officialHistorySource('Kirtland Safety Society', 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng', 'Official history of the institution, its operation, and causes of failure.')
             ]
@@ -991,7 +998,7 @@
             const explicit = query.match(/\bjoseph smith(?:\s+(\w+))?/);
             if (explicit) {
                 if (explicit[1] === 'the') return /\bjoseph smith the prophet\b/.test(query);
-                return !explicit[1] || ['jr', 'junior', 'was', 'is', 'did', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom', 'murdered', 'get', 'got'].includes(explicit[1]);
+                return !explicit[1] || ['jr', 'junior', 'was', 'is', 'did', 'die', 'died', 'death', 'killed', 'martyred', 'martyrdom', 'murdered', 'get', 'got', 'imprisoned', 'held', 'detained', 'at', 'in'].includes(explicit[1]);
             }
             const bare = query.match(/\bjoseph(?:\s+(\w+))?/);
             if (!bare) return false;
@@ -1240,17 +1247,32 @@
         return Object.freeze(value);
     }
 
+    function directReviewedVariant(entry, question, profile) {
+        const query = normalize(question);
+        const tokens = new Set(query.split(' ').filter(Boolean));
+        return ((entry.followup || {}).variants || []).find(function (variant) {
+            if (!variant.directSubject || !hasTerm(query, tokens, variant.directSubject)) return false;
+            if (variant.directContext && !variant.directContext.some(function (term) { return hasTerm(query, tokens, term); })) return false;
+            // Preserve the entry's profile, exclusions and identity guard while
+            // replacing its default intent with this reviewed variant's intent.
+            return entryMatches(Object.assign({}, entry, { match: Object.assign({}, entry.match, {
+                exact: [], all: (variant.intent || {}).all || [],
+                none: (entry.match.none || []).concat((variant.intent || {}).none || [])
+            }) }), question, profile);
+        }) || null;
+    }
+
     function match(question, options) {
         const profile = String(options && options.profile || 'ask');
         const matched = ENTRIES
-            .filter(function (entry) { return entryMatches(entry, question, profile); })
+            .filter(function (entry) { return entryMatches(entry, question, profile) || directReviewedVariant(entry, question, profile); })
             .sort(function (left, right) { return right.priority - left.priority; })[0];
         if (!matched) return null;
         const variant = options && options.contextVariant && matched.followup
             ? (matched.followup.variants || []).find(function (candidate) {
                 return candidate.id === options.contextVariant;
             })
-            : null;
+            : directReviewedVariant(matched, question, profile);
         const selectedSources = variant && Array.isArray(variant.sources) ? variant.sources : matched.sources;
         return {
             id: matched.id,

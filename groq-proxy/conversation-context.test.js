@@ -102,13 +102,13 @@ try {
       calls.push({url:String(url),body:options?.body ? JSON.parse(options.body) : null});
       return new Response(JSON.stringify({error:{message:'Offline route fixture unavailable'}}),{status:400,headers:{'Content-Type':'application/json'}});
     };
-    await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:page,focuschrist_profile:'faith-study',messages:[{role:'user',content:antecedent},{role:'assistant',content:assistantClaim},{role:'user',content:current}]})}),{GROQ_KEY_NEW:'offline-fixture'});
+    await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:page,focuschrist_profile:'faith-study',messages:[{role:'user',content:antecedent},{role:'assistant',content:assistantClaim},{role:'user',content:current}]})}),{OPENAI_API_KEY:'offline-fixture'});
     const expectedPaths = pairPaths[examples.findIndex(example=>example[0]===antecedent)];
     for (const path of expectedPaths) assert.ok(calls.some(call=>call.url.includes(path)), 'both complementary official sources must be attempted');
     assert.ok(calls[0].url.includes('churchofjesuschrist.org'), 'paired official evidence must be attempted before model research');
-    const researchCall = calls.find(call=>call.url.includes('api.groq.com'));
+    const researchCall = calls.find(call=>call.url.endsWith('/v1/responses'));
     assert.ok(researchCall, 'unavailable paired sources must still allow ordinary research');
-    assert.ok(researchCall.body.messages.some(message=>message.content.includes(current)), 'research must receive the current comparison or end-date request');
+    assert.ok(researchCall.body.input.some(message=>message.content.includes(current)), 'research must receive the current comparison or end-date request');
   }
 } finally { globalThis.fetch = originalFetch; }
 console.log('Conversation context QA PASS: both surfaces, raw/legacy requests, current intent, user-only bounded context, reset/missing/three-turn cases, paired official retrieval and research fallback.');

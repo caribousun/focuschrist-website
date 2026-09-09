@@ -915,8 +915,8 @@
     }
 </style>
 
-    <script src="site-common.js?v=20260909-question-review" defer></script>
-    <script src="reviewed-ask-knowledge.js?v=20260909-question-review" defer></script>
+    <script src="site-common.js?v=20260909-openai-only" defer></script>
+    <script src="reviewed-ask-knowledge.js?v=20260909-openai-only" defer></script>
     <link rel="stylesheet" href="site-header.css?v=20260906-refined">
     <link rel="stylesheet" href="site-system.css?v=20260909-warm">
     <link rel="stylesheet" href="pioneer-experience.css?v=20260909-warm">
@@ -1708,7 +1708,6 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    model: 'openai/gpt-oss-20b',
                     messages: messages,
                     temperature: 0.7,
                     max_tokens: 800
@@ -2563,7 +2562,7 @@
 
          <p data-focuschrist-independence="footer" style="max-width: 900px; margin: 14px auto 0; line-height: 1.6; font-size: 0.92em;">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" target="_blank" rel="noopener noreferrer" style="color: #c9a961;">ChurchofJesusChrist.org</a>.</p>
     </footer>
-    <script src="pioneer-experience.js?v=20260909-followup" defer></script>
+    <script src="pioneer-experience.js?v=20260909-openai-only" defer></script>
 </body>
 
 </html>

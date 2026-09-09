@@ -6,7 +6,6 @@
     'use strict';
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
-    const MODEL = 'groq/compound';
     const PIONEER_POLICY_VERSION = '2026-09-03.16';
     let pioneerRequestSerial = 0;
 
@@ -293,7 +292,6 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    model: MODEL,
                     messages: messages,
                     focuschrist_page: 'pioneers',
                     focuschrist_pioneer_topic: disclosureKey || undefined,

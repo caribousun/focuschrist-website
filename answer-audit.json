@@ -101,7 +101,7 @@
     },
     {
       "id": "joseph-smith-death-1844",
-      "entry_sha256": "b93c2cbdee7f3c460acd81de05d6e44f05e5a4c2a602394b60813ab09d60d2c1",
+      "entry_sha256": "f58a254468594cababdd6f826138163897168084a2b8389836d64c97af87ba7a",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/deaths-of-joseph-and-hyrum-smith?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-26?lang=eng",
@@ -126,10 +126,11 @@
     },
     {
       "id": "church-first-vision-1820",
-      "entry_sha256": "74735b6acc92070439035d4d4ce9b0f5c9f05716ecd7bd71e32925f56f7e1e09",
+      "entry_sha256": "ac5ad908d48ab1671240d40b0e3192a01a4fce1a0b1ccb482d20058180d108d7",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/joseph-smith-jr?lang=eng",
-        "https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng"
+        "https://www.churchofjesuschrist.org/study/history/topics/joseph-smiths-first-vision-accounts?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics-essays/first-vision-accounts?lang=eng"
       ]
     },
     {
@@ -150,7 +151,7 @@
     },
     {
       "id": "church-kirtland-safety-society",
-      "entry_sha256": "ce2968c2985e857d22a9646057826e53d88b800c023d8af351b850ae8ca6000c",
+      "entry_sha256": "7f4643ecfc8c452d888c5146f32b89a9572c8bc999c98b9392e4b42d0ba70bfc",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng"
       ]
@@ -202,7 +203,7 @@
     },
     {
       "id": "church-book-of-mormon-publication-1830",
-      "entry_sha256": "1cdf2798794f533ccf726133924befa527fc2e6c1232cca266de772893ac7082",
+      "entry_sha256": "2baf0cb6458b7f29bf2e56b51e08296639667d98b94dad46466c258808526cf1",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/learn/locations/grandin-printshop?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/historical-summary?lang=eng"

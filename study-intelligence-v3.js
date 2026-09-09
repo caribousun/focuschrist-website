@@ -1,12 +1,11 @@
 /* focusChrist Study Intelligence v3
  * Hardened response hygiene + broader LDS intent + verified core grounding.
- * Loaded after v2 and owns the final Ask/Pioneer AI functions when ready.
+ * Owns the final Ask/Pioneer AI functions when ready.
  */
 (function () {
     'use strict';
 
     const PROXY_URL = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
-    const MODEL = 'groq/compound';
     const MAX_TOKENS = 1500;
     const CLIENT_REQUEST_BUDGET_MS = 25000;
     const CLIENT_FIRST_ATTEMPT_MS = 12000;
@@ -345,7 +344,6 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    model: MODEL,
                     messages: messages,
                     focuschrist_page: currentMode(),
                     focuschrist_profile: profile,
@@ -457,13 +455,11 @@
     }
 
     function normalizeDisplayText(answer) {
+        // Canonical quotations must retain their source punctuation. Typography
+        // rewriting here would invalidate an otherwise verified scripture quote.
         let text = convertMarkdownTables(answer);
         text = text
             .replace(/[\u00A0\u2007\u202F]/g, ' ')
-            .replace(/[\u2010\u2011\u2012\u2013\u2014\u2212]/g, '-')
-            .replace(/[\u2018\u2019]/g, "'")
-            .replace(/[\u201C\u201D]/g, '"')
-            .replace(/\u2026/g, '...')
             .replace(/^\s*:\s*/, '')
             .replace(/[ \t]+\n/g, '\n')
             .replace(/[ \t]{2,}/g, ' ')

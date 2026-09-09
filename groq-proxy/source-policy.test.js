@@ -6,9 +6,7 @@ import worker, {
   SOURCE_UNAVAILABLE_MESSAGE,
   answerMeetsSubstanceContract,
   answerSubstanceRequirements,
-  callGroq,
   callOpenAIVerifier,
-  callCloudflareVerifier,
   callVerifier,
   classifyResearchScope,
   collectSourceEvidence,
@@ -56,7 +54,7 @@ assert(remainingBudget(Date.now() - 1) === 0,
 let expiredDeadlineCalls = 0;
 const fetchBeforeExpiredDeadline = globalThis.fetch;
 globalThis.fetch = async () => { expiredDeadlineCalls += 1; throw new Error('expired deadline reached provider'); };
-const expiredDeadlineResult = await callGroq('test-key', {}, Date.now() - 1);
+const expiredDeadlineResult = await callOpenAIVerifier('test-key', {}, Date.now() - 1);
 globalThis.fetch = fetchBeforeExpiredDeadline;
 assert(expiredDeadlineCalls === 0 && expiredDeadlineResult.response.status === 504,
   'an expired shared deadline must fail immediately without a provider request');
@@ -72,116 +70,8 @@ assert(isVerifierVerdictShape({ approved: true, answer: 'Supported answer.', sou
   && !isVerifierVerdictShape({ approved: true, answer: 'Evidence answer without indexes.' }, true)
   && !isVerifierVerdictShape({ approved: 'true', answer: 'Unsupported shape.', source_indexes: [1] }),
   'verifier adapters must accept only the server-owned verdict shape');
-let cloudflareModelForTest = '';
-const cloudflareObjectResult = await callCloudflareVerifier({
-  run: async (model) => {
-    cloudflareModelForTest = model;
-    return { response: { approved: false, answer: '', source_indexes: [] } };
-  },
-}, verifierBodyForTest, Date.now() + 7000);
-assert(cloudflareObjectResult.response.ok
-  && cloudflareModelForTest === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
-  && JSON.parse(cloudflareObjectResult.data.choices[0].message.content).approved === false,
-  'the Cloudflare verifier adapter must use the JSON-mode-supported model and normalize a direct structured verdict');
-const cloudflareChoicesResult = await callCloudflareVerifier({
-  run: async () => ({ choices: [{ message: { content: '{"approved":false,"answer":"","source_indexes":[]}' } }] }),
-}, verifierBodyForTest, Date.now() + 7000);
-assert(cloudflareChoicesResult.response.ok
-  && JSON.parse(cloudflareChoicesResult.data.choices[0].message.content).approved === false,
-  'the Cloudflare verifier adapter must normalize OpenAI choices-shaped output');
-
-const verifierFetchBeforeGroqPrimary = globalThis.fetch;
-let directGroqVerifierCalls = 0;
-globalThis.fetch = async (_url, init) => {
-  directGroqVerifierCalls += 1;
-  const requestBody = JSON.parse(init.body);
-  assert(requestBody.model === 'openai/gpt-oss-20b'
-    && requestBody.reasoning_effort === 'low'
-    && requestBody.include_reasoning === false
-    && requestBody.response_format && requestBody.response_format.type === 'json_object',
-    'production Groq verifier must use GPT-OSS 20B with low reasoning and JSON mode');
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: '{"approved":true,"answer":"Supported answer.","source_indexes":[1]}' } }],
-    usage: { prompt_tokens: 200, completion_tokens: 30 },
-  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
-};
-const directGroqVerifierResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  VERIFIER_PROVIDER: 'groq',
-  AI: { run: async () => { throw new Error('production Groq-primary route must not call Cloudflare'); } },
-}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-globalThis.fetch = verifierFetchBeforeGroqPrimary;
-assert(directGroqVerifierCalls === 1
-  && directGroqVerifierResult.response.ok
-  && directGroqVerifierResult.verifierRoute === 'groq-primary'
-  && directGroqVerifierResult.totalCloudflareVerifierCalls === 0
-  && directGroqVerifierResult.totalGroqVerifierCalls === 1,
-  'production verifier route must use exactly one Groq Compound Mini call and zero Cloudflare calls');
-
-const fetchBeforeOpenAIFallback = globalThis.fetch;
-let groqThenOpenAICalls = 0;
-let openAIBodyForFallback;
-globalThis.fetch = async (url, init) => {
-  groqThenOpenAICalls += 1;
-  if (String(url).includes('api.groq.com')) {
-    return new Response(JSON.stringify({ error: { code: 'service_unavailable' } }), {
-      status: 503, headers: { 'Content-Type': 'application/json' },
-    });
-  }
-  assert(String(url) === 'https://api.openai.com/v1/chat/completions',
-    'Groq provider failure must fall back only to the OpenAI verifier endpoint');
-  openAIBodyForFallback = JSON.parse(init.body);
-  assert(init.headers.Authorization === 'Bearer openai-test-key',
-    'OpenAI fallback must use the server-owned OpenAI secret');
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: '{"approved":true,"answer":"Supported answer.","source_indexes":[1]}' } }],
-    usage: { prompt_tokens: 180, completion_tokens: 28 },
-  }), { status: 200, headers: { 'Content-Type': 'application/json', 'x-request-id': 'req_focus_test' } });
-};
-const openAIFallbackResult = await callVerifier({
-  GROQ_KEY_NEW: 'groq-test-key',
-  OPENAI_API_KEY: 'openai-test-key',
-  VERIFIER_PROVIDER: 'groq',
-}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-globalThis.fetch = fetchBeforeOpenAIFallback;
-assert(groqThenOpenAICalls === 2
-  && openAIFallbackResult.response.ok
-  && openAIFallbackResult.verifierRoute === 'openai-fallback'
-  && openAIFallbackResult.fallbackReason === 'primary-unavailable'
-  && openAIFallbackResult.totalGroqVerifierCalls === 1
-  && openAIFallbackResult.totalOpenAIVerifierCalls === 1
-  && openAIFallbackResult.totalCloudflareVerifierCalls === 0
-  && openAIBodyForFallback.model === 'gpt-5.6-luna'
-  && openAIBodyForFallback.reasoning_effort === 'low'
-  && openAIBodyForFallback.response_format.type === 'json_object'
-  && openAIBodyForFallback.store === false,
-  'a true Groq provider failure must use exactly one GPT-5.6 Luna fallback call with the same verifier contract');
-
-const fetchBeforeForcedOpenAIRepair = globalThis.fetch;
-let forcedOpenAIRepairCalls = 0;
-globalThis.fetch = async (url, init) => {
-  forcedOpenAIRepairCalls += 1;
-  assert(String(url) === 'https://api.openai.com/v1/chat/completions',
-    'bounded Luna reconsideration must not return to Groq');
-  const requestBody = JSON.parse(init.body);
-  assert(requestBody.model === 'gpt-5.6-luna', 'bounded Luna reconsideration must remain on the allowed project model');
-  return new Response(JSON.stringify({
-    choices: [{ message: { content: '{"approved":true,"answer":"Supported reconsidered answer.","source_indexes":[1]}' } }],
-    usage: { prompt_tokens: 210, completion_tokens: 34 },
-  }), { status: 200, headers: { 'Content-Type': 'application/json' } });
-};
-const forcedOpenAIRepairResult = await callVerifier({
-  OPENAI_API_KEY: 'openai-test-key',
-  VERIFIER_PROVIDER: 'groq',
-}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true, forceOpenAI: true });
-globalThis.fetch = fetchBeforeForcedOpenAIRepair;
-assert(forcedOpenAIRepairCalls === 1
-  && forcedOpenAIRepairResult.response.ok
-  && forcedOpenAIRepairResult.verifierRoute === 'openai-repair'
-  && forcedOpenAIRepairResult.totalGroqVerifierCalls === 0
-  && forcedOpenAIRepairResult.totalOpenAIVerifierCalls === 1,
-  'a relevant-evidence reconsideration after OpenAI failover must use exactly one additional Luna call and no Groq call');
-
+// Provider transport, malformed verdicts, deadline/body timeout and one-call
+// source discovery boundaries are exercised in openai-research.test.js.
 const enosReviewedRecovery = reviewedDeterministicEvidenceRecovery(
   'What does Enos 1 teach about prayer and forgiveness?',
   [{
@@ -334,7 +224,7 @@ for (const page of ['ask', 'pioneers']) {
       const response = await worker.fetch(new Request('https://worker.test', { method:'POST', headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'}, body:JSON.stringify({messages:conversation,focuschrist_page:page,focuschrist_profile:'faith-study'}) }), {});
       const result = await response.json();
       assert(result.focuschrist_gateway_mode === 'local-scripture-library' && result.focuschrist_source_integrity_verified
-        && result.focuschrist_scripture_validated && result.focuschrist_groq_verifier_calls === 0,
+        && result.focuschrist_scripture_validated && result.focuschrist_openai_verifier_calls === 0,
         'Ask and Pioneer supporting scripture must pass the final gate without a stochastic quotation');
       assert(result.choices[0].message.content.includes('In the beginning God created the heaven and the earth.') && supportCalls > 0,
         'support answer must contain the actual Genesis 1:1 wording');
@@ -498,174 +388,19 @@ const deterministicLanePosition = workerSourceForDeterministicLane.indexOf("cons
 const verifierPromptPosition = workerSourceForDeterministicLane.indexOf('const makeVerifierPrompt = () => (sanitized.scope.selectedPioneer');
 assert(deterministicLanePosition >= 0 && verifierPromptPosition > deterministicLanePosition
   && workerSourceForDeterministicLane.includes("focuschrist_verifier_route: 'reviewed-deterministic'")
-  && workerSourceForDeterministicLane.includes('focuschrist_groq_verifier_calls: 0')
   && workerSourceForDeterministicLane.includes('focuschrist_openai_verifier_calls: 0'),
   'audited deterministic evidence recoveries must resolve before verifier providers are invoked');
 
 const verifierFetchBeforeTests = globalThis.fetch;
-let primaryVerifierGroqCalls = 0;
-globalThis.fetch = async () => { primaryVerifierGroqCalls += 1; throw new Error('Groq verifier should not run'); };
-const cloudflarePrimaryResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async () => ({ response: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }) }) },
-}, verifierBodyForTest, Date.now() + 12000);
-assert(cloudflarePrimaryResult.response.ok
-  && cloudflarePrimaryResult.verifierRoute === 'cloudflare-primary'
-  && primaryVerifierGroqCalls === 0,
-  'a valid Cloudflare verdict must not call the Groq fallback');
-
-let malformedFallbackCalls = 0;
-let malformedFallbackBody;
-let malformedFallbackModel = '';
-globalThis.fetch = async () => { throw new Error('Cloudflare fast fallback reached Groq'); };
-const malformedFallbackResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async (model, body) => {
-    malformedFallbackCalls += 1;
-    if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return { response: { unexpected: 'provider metadata' } };
-    malformedFallbackModel = model;
-    malformedFallbackBody = body;
-    return {
-      response: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }),
-      usage: { prompt_tokens: 200, completion_tokens: 30 },
-    };
-  } },
-}, verifierBodyForTest, Date.now() + 12000);
-assert(malformedFallbackCalls === 2
-  && malformedFallbackResult.verifierRoute === 'cloudflare-fast-fallback'
-  && malformedFallbackResult.fallbackReason === 'format-contract'
-  && malformedFallbackModel === '@cf/meta/llama-3.1-8b-instruct-fp8-fast'
-  && malformedFallbackBody.messages[0].content === verifierBodyForTest.messages[0].content
-  && malformedFallbackBody.temperature === verifierBodyForTest.temperature
-  && malformedFallbackBody.max_tokens === verifierBodyForTest.max_tokens
-  && malformedFallbackBody.response_format === undefined
-  && malformedFallbackResult.totalCloudflareVerifierCalls === 2
-  && malformedFallbackResult.totalCloudflareEstimatedNeurons > 0
-  && malformedFallbackResult.totalCloudflareUnmeteredNeurons >= 1000,
-  'malformed primary output must trigger one priced Cloudflare fast fallback with complete accounting');
-
-let missingIndexesFallbackCalls = 0;
-const missingIndexesFallbackResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async (model) => {
-    missingIndexesFallbackCalls += 1;
-    return model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
-      ? { response: { approved: true, answer: 'Missing evidence indexes.' } }
-      : { response: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }) };
-  } },
-}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-assert(missingIndexesFallbackCalls === 2
-  && missingIndexesFallbackResult.verifierRoute === 'cloudflare-fast-fallback'
-  && missingIndexesFallbackResult.fallbackReason === 'format-contract',
-  'an evidence verifier verdict without source indexes must use exactly one operational fallback');
-
-let missingBindingFallbackCalls = 0;
-globalThis.fetch = async () => {
-  missingBindingFallbackCalls += 1;
-  return new Response(JSON.stringify({ error: { code: 'service_unavailable' } }), {
-    status: 503,
-    headers: { 'Content-Type': 'application/json' },
-  });
-};
-const missingBindingFallbackResult = await callVerifier({ GROQ_KEY_NEW: 'test-key' },
-  verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-assert(missingBindingFallbackCalls === 1
-  && missingBindingFallbackResult.verifierRoute === 'groq-fallback'
-  && missingBindingFallbackResult.fallbackReason === 'binding-missing',
-  'a missing Cloudflare binding must call Groq exactly once and then fail closed');
-
-let malformedJsonFallbackCalls = 0;
-const malformedJsonFallbackResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async (model) => {
-    malformedJsonFallbackCalls += 1;
-    return model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
-      ? { response: { unexpected: 'provider metadata' } }
-      : { response: 'not valid JSON' };
-  } },
-}, verifierBodyForTest, Date.now() + 12000);
-assert(malformedJsonFallbackCalls === 2
-  && malformedJsonFallbackResult.response.status === 502
-  && malformedJsonFallbackResult.data.error.code === 'invalid_verifier_response'
-  && malformedJsonFallbackResult.formatContract === true,
-  'a successful fast fallback with malformed JSON must fail closed without another request');
-
-let nonStringAnswerFallbackCalls = 0;
-const nonStringAnswerFallbackResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async (model) => {
-    nonStringAnswerFallbackCalls += 1;
-    return model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
-      ? { response: { unexpected: 'provider metadata' } }
-      : { response: JSON.stringify({ approved: true, answer: ['wrong type'], source_indexes: [1] }) };
-  } },
-}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-assert(nonStringAnswerFallbackCalls === 2
-  && nonStringAnswerFallbackResult.response.status === 502
-  && nonStringAnswerFallbackResult.data.error.code === 'invalid_verifier_response',
-  'a successful fast fallback with a non-string answer must fail closed without coercion');
-
-let missingRequiredIndexesFallbackCalls = 0;
-const missingRequiredIndexesFallbackResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async (model) => {
-    missingRequiredIndexesFallbackCalls += 1;
-    return model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast'
-      ? { response: { unexpected: 'provider metadata' } }
-      : { response: JSON.stringify({ approved: true, answer: 'Missing indexes.' }) };
-  } },
-}, verifierBodyForTest, Date.now() + 12000, { requireSourceIndexes: true });
-assert(missingRequiredIndexesFallbackCalls === 2
-  && missingRequiredIndexesFallbackResult.response.status === 502
-  && missingRequiredIndexesFallbackResult.data.error.code === 'invalid_verifier_response',
-  'a successful evidence-verifier fallback without source indexes must fail closed without another request');
-
-let rejectionFallbackCalls = 0;
-globalThis.fetch = async () => { rejectionFallbackCalls += 1; throw new Error('valid rejection reached Groq'); };
-const cloudflareRejectionResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async () => ({ response: { approved: false, answer: '', source_indexes: [] } }) },
-}, verifierBodyForTest, Date.now() + 12000);
-assert(cloudflareRejectionResult.verifierRoute === 'cloudflare-primary'
-  && rejectionFallbackCalls === 0,
-  'a valid Cloudflare rejection must fail closed without verifier shopping');
-
-let timeoutFallbackCalls = 0;
-const timeoutFallbackResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async (model) => {
-    timeoutFallbackCalls += 1;
-    if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return new Promise(() => {});
-    const error = new Error('rate limited'); error.status = 429; throw error;
-  } },
-}, verifierBodyForTest, Date.now() + 5300);
-assert(timeoutFallbackCalls === 2
-  && timeoutFallbackResult.verifierRoute === 'cloudflare-fast-fallback'
-  && timeoutFallbackResult.fallbackReason === 'primary-timeout'
-  && timeoutFallbackResult.response.status === 429
-  && timeoutFallbackResult.totalCloudflareUnmeteredNeurons >= 2000,
-  'a logical primary timeout must reserve time for one fast fallback and account for both unresolved calls');
-
-let timeoutRecoveryCalls = 0;
-const timeoutRecoveryResult = await callVerifier({
-  GROQ_KEY_NEW: 'test-key',
-  AI: { run: async (model) => {
-    timeoutRecoveryCalls += 1;
-    if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return new Promise(() => {});
-    return {
-      response: JSON.stringify({ approved: true, answer: 'Supported answer.', source_indexes: [1] }),
-      usage: { prompt_tokens: 200, completion_tokens: 30 },
-    };
-  } },
-}, verifierBodyForTest, Date.now() + 5300, { requireSourceIndexes: true });
-assert(timeoutRecoveryCalls === 2
-  && timeoutRecoveryResult.response.ok
-  && timeoutRecoveryResult.verifierRoute === 'cloudflare-fast-fallback'
-  && timeoutRecoveryResult.totalCloudflareVerifierCalls === 2
-  && timeoutRecoveryResult.totalCloudflareEstimatedNeurons > 0
-  && timeoutRecoveryResult.totalCloudflareUnmeteredNeurons >= 1000,
-  'a timed-out primary plus successful fast fallback must account for measured and unresolved Cloudflare work');
-globalThis.fetch = verifierFetchBeforeTests;
+for (const invalidVerdict of ['not json', JSON.stringify({approved:true,answer:42,source_indexes:[1]}), JSON.stringify({approved:true,answer:'Answer'})]) {
+  globalThis.fetch=async()=>new Response(JSON.stringify({choices:[{message:{content:invalidVerdict}}]}));
+  const invalid=await callVerifier({OPENAI_API_KEY:'offline'},verifierBodyForTest,Date.now()+5000,{requireSourceIndexes:true});
+  assert(!invalid.response.ok,'malformed OpenAI verdict must fail closed');
+}
+globalThis.fetch=async()=>new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:false,answer:'',source_indexes:[]})}}]}));
+const rejectedVerdict=await callVerifier({OPENAI_API_KEY:'offline'},verifierBodyForTest,Date.now()+5000,{requireSourceIndexes:true});
+assert(rejectedVerdict.response.ok && parseVerifierJson(rejectedVerdict.data.choices[0].message.content).approved===false,'valid rejection must remain rejection without provider shopping');
+globalThis.fetch=verifierFetchBeforeTests;
 
 let rateLimitProviderCalls = 0;
 globalThis.fetch = async () => { rateLimitProviderCalls += 1; throw new Error('rate-limited request reached a provider'); };
@@ -675,7 +410,7 @@ const rateLimitedResponse = await worker.fetch(new Request('https://focuschrist-
   body: JSON.stringify({ messages: [{ role: 'user', content: 'Why do seasons change?' }] }),
 }), {
   ASK_RATE_LIMITER: { limit: async ({ key }) => ({ success: key !== 'public-ask:192.0.2.1' }) },
-  AI: { run: async () => { throw new Error('rate-limited request reached AI'); } },
+  OPENAI_API_KEY: 'offline-rate-limit',
 });
 const rateLimitedPayload = await rateLimitedResponse.json();
 assert(rateLimitedResponse.status === 429
@@ -689,7 +424,7 @@ const faith = classifyResearchScope(faithMessages);
 assert(faith.faith, 'scripture citations must use the faith research scope');
 
 const clean = sanitizePayload({ model: 'other', temperature: 0.9, max_tokens: 9000, messages: faithMessages });
-assert(clean.research.model === 'groq/compound-mini', 'gateway must own the research model');
+assert(clean.research.model === 'gpt-5.6-luna', 'gateway must own the research model');
 assert(clean.research.messages[0].content.includes('SERVER RESEARCH AND SOURCE-INTEGRITY POLICY'),
   'gateway must prepend the server research policy');
 assert(clean.research.messages[0].content.includes('never reduce a sincere question to a one- or two-word response')
@@ -995,7 +730,7 @@ try {
       focuschrist_page: 'ask',
       messages: [{ role: 'user', content: 'Why are Catholics stupid?' }],
     }),
-  }), { GROQ_KEY_NEW: 'test-key' });
+  }), { OPENAI_API_KEY: 'test-key' });
   const boundaryPayload = await boundaryResponse.json();
   assert(boundaryProviderCalls === 0
     && boundaryPayload.focuschrist_gateway_mode === 'respect-boundary'
@@ -1005,6 +740,7 @@ try {
   globalThis.fetch = originalFetch;
 }
 
+function searchResponse(sources) { return new Response(JSON.stringify({status:'completed',output:[{type:'web_search_call',status:'completed',action:{sources:sources.map(source=>({...source,type:'url'}))}}]}),{headers:{'Content-Type':'application/json'}}); }
 let identityUpgradeCalls = 0;
 const hyrumVerifiedAnswer = repeatedSubstantiveAnswer('history', 75, 3);
 globalThis.fetch = async (_url, options) => {
@@ -1014,23 +750,7 @@ globalThis.fetch = async (_url, options) => {
   identityUpgradeCalls += 1;
   const body = JSON.parse(options.body);
   if (identityUpgradeCalls === 1) {
-    return new Response(JSON.stringify({
-      choices: [{ message: {
-        content: 'A research draft about Hyrum Smith.',
-        executed_tools: [{ search_results: [
-          {
-            title: 'Hyrum Smith',
-            url: 'https://history.churchofjesuschrist.org/content/hyrum-smith',
-            content: 'Church history biography of Hyrum Smith.',
-          },
-          {
-            title: 'Unverified Hyrum Smith page',
-            url: 'https://example.com/hyrum-smith',
-            content: 'Nonofficial result that must be removed after identity resolution.',
-          },
-        ] }],
-      } }],
-    }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+    return searchResponse([{title:'Hyrum Smith',url:'https://history.churchofjesuschrist.org/content/hyrum-smith'},{title:'Unverified Hyrum Smith',url:'https://example.com/hyrum-smith'}]);
   }
   assert(body.messages[0].content.includes('approved LDS resources')
     && body.messages[0].content.includes('never present them as official Church declarations'),
@@ -1052,7 +772,7 @@ try {
       focuschrist_profile: 'general-knowledge',
       messages: [{ role: 'user', content: 'Who is Hirum Smith?' }],
     }),
-  }), { GROQ_KEY_NEW: 'test-key' });
+  }), { OPENAI_API_KEY: 'test-key' });
   const identityUpgradePayload = await identityUpgradeResponse.json();
   assert(identityUpgradeCalls === 2
     && identityUpgradePayload.focuschrist_resolved_profile === 'faith-study'
@@ -1072,22 +792,10 @@ globalThis.fetch = async (_url, options) => {
   const body = JSON.parse(options.body);
   gatewayBodies.push(body);
   if (gatewayBodies.length === 1) {
-    return new Response(JSON.stringify({
-      choices: [{
-        message: {
-          content: 'Ada Lovelace died on November 27, 1852.',
-          executed_tools: [{
-            search_results: [{
-              title: 'Ada Lovelace biography',
-              url: 'https://rsc.byu.edu/offline-ada-fixture',
-              content: 'Ada Lovelace died on November 27, 1852, after a period of illness.',
-            }],
-          }],
-        },
-      }],
-    }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+    return searchResponse([{title:'Ada Lovelace biography',url:'https://rsc.byu.edu/offline-ada-fixture'}]);
   }
-  throw new Error('unexpected Groq verifier request during Cloudflare depth test');
+  gatewayVerifierBodies.push(body);
+  return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:true,answer:gatewayVerifierBodies.length===1?'Ada Lovelace died on November 27, 1852.':expandedGeneralAnswer,source_indexes:[1]})}}]}));
 };
 try {
   const gatewayResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
@@ -1099,20 +807,11 @@ try {
       messages: [{ role: 'user', content: 'When did Ada Lovelace die?' }],
     }),
   }), {
-    GROQ_KEY_NEW: 'test-key',
-    AI: { run: async (_model, body) => {
-      gatewayVerifierBodies.push(body);
-      return { response: {
-        approved: true,
-        answer: gatewayVerifierBodies.length === 1
-          ? 'Ada Lovelace died on November 27, 1852.'
-          : expandedGeneralAnswer,
-        source_indexes: [1],
-      } };
-    } },
+    OPENAI_API_KEY: 'test-key',
+
   });
   const gatewayPayload = await gatewayResponse.json();
-  assert(gatewayBodies.length === 1 && gatewayVerifierBodies.length === 2,
+  assert(gatewayBodies.length === 3 && gatewayVerifierBodies.length === 2,
     'a short verified answer must trigger exactly one evidence-only expansion pass');
   assert(gatewayVerifierBodies[1].messages[0].content.includes('previous approved answer did not meet')
     && gatewayVerifierBodies[1].messages[0].content.includes('at least 45 words'),
@@ -1122,7 +821,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.69',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.70',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
@@ -1134,18 +833,19 @@ const limitedBodies = [];
 const tokenRepairBodies = [];
 const johnChapterFixture = JSON.parse(readAlmaFixture(new URL('../scripture-data/nt/john/3.json', import.meta.url), 'utf8'));
 const tokenDepthAnswer = "John 3:16 presents divine love through the gift of the Son. It connects belief in him with eternal life, contrasting that promised outcome with perishing. The focus is on what God gives and the response invited from those who hear. The verse can therefore guide a discussion of love, belief, and life without requiring details that the text never supplies. Read it within its chapter when considering those relationships. Its invitation does not state that believing prevents every mortal hardship or grants material wealth. Those would be additional claims requiring separate evidence, rather than conclusions established by this passage.\n\n[[SCRIPTURE:John 3:16]]";
-globalThis.fetch = async url => {
+globalThis.fetch = async (url,options={}) => {
+  if (String(url).includes("api.openai.com")) {
+    const body=JSON.parse(options.body);tokenRepairBodies.push(body);
+    assert(body.messages[0].content.includes("For a scripture quotation, use [[SCRIPTURE:Book chapter:verse]]"),"every pass preserves quotation contract");
+    return new Response(JSON.stringify({choices:[{message:{content:JSON.stringify({approved:true,answer:tokenRepairBodies.length===1?"[[SCRIPTURE:John 3:16]]":tokenDepthAnswer,source_indexes:[1]})}}]}));
+  }
   if (String(url).startsWith('https://focuschrist.com/scripture-data/')) return new Response(readAlmaFixture(new URL('..' + new URL(url).pathname, import.meta.url)));
   if (String(url).includes('churchofjesuschrist.org/study/scriptures/nt/john/3')) return new Response(johnChapterFixture.verses.map(verse => `<p class="verse" id="p${verse.number}">${verse.text}</p>`).join(''), {headers:{'Content-Type':'text/html'}});
   throw new Error('Unexpected network route in scripture depth-repair fixture: ' + url);
 };
 try {
   const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'faith-study',messages:[{role:'user',content:'How does John 3:16 describe God and love?'}]})}), {
-    AI:{run:async (_model,body) => {
-      tokenRepairBodies.push(body);
-      assert(body.messages[0].content.includes('For a scripture quotation, use [[SCRIPTURE:Book chapter:verse]]'), 'every verifier pass must retain the mandatory library-token contract');
-      return {response:{approved:true,answer:tokenRepairBodies.length===1?'[[SCRIPTURE:John 3:16]]':tokenDepthAnswer,source_indexes:[1]}};
-    }}
+    OPENAI_API_KEY:'offline'
   });
   const result = await response.json();
   assert(tokenRepairBodies.length === 2 && tokenRepairBodies[1].messages[0].content.includes('required answer depth'),
@@ -1181,10 +881,10 @@ try {
       focuschrist_profile: 'general-knowledge',
       messages: [{ role: 'user', content: 'What date did Abraham Lincoln die?' }],
     }),
-  }), { GROQ_KEY_NEW: 'test-key' });
+  }), { OPENAI_API_KEY: 'test-key' });
   const limitedPayload = await limitedResponse.json();
-  assert(limitedBodies.length === 2,
-    'rate-limited research may retry once but must not invoke an unsourced model fallback');
+  assert(limitedBodies.length === 1,
+    'rate-limited research must stop after one bounded request but must not invoke an unsourced model fallback');
   assert(limitedPayload.focuschrist_gateway_mode === 'research-rate-limited'
     && limitedPayload.focuschrist_source_integrity_verified !== true
     && limitedPayload.choices[0].message.content === SOURCE_UNAVAILABLE_MESSAGE,
@@ -1196,10 +896,7 @@ try {
 let noEvidenceCalls = 0;
 globalThis.fetch = async () => {
   noEvidenceCalls += 1;
-  const payload = noEvidenceCalls === 1
-    ? { choices: [{ message: { content: 'A draft without returned source evidence.' } }] }
-    : { choices: [{ message: { content: JSON.stringify({ approved: false, answer: '' }) } }] };
-  return new Response(JSON.stringify(payload), { status: 200, headers: { 'Content-Type': 'application/json' } });
+  return searchResponse([]);
 };
 try {
   const noEvidenceResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
@@ -1210,7 +907,7 @@ try {
       focuschrist_profile: 'general-knowledge',
       messages: [{ role: 'user', content: 'When did an obscure historical event happen?' }],
     }),
-  }), { GROQ_KEY_NEW: 'test-key' });
+  }), { OPENAI_API_KEY: 'test-key' });
   const noEvidencePayload = await noEvidenceResponse.json();
   assert(noEvidencePayload.focuschrist_gateway_mode === 'research-insufficient-evidence'
     && noEvidenceCalls === 1
@@ -1224,16 +921,14 @@ try {
 for (const sourceUrl of ['https://example.com/ada-lovelace', 'https://rsc.byu.edu/offline-unavailable-fixture']) {
   let generalVerifierCalls = 0;
   globalThis.fetch = async (url) => {
-    if (String(url).includes('api.groq.com')) return new Response(JSON.stringify({choices:[{message:{
-      content:'Ada Lovelace died on November 27, 1852.',
-      executed_tools:[{search_results:[{url:sourceUrl,title:'Synthetic research fixture',content:'Ada Lovelace died on November 27, 1852. This search snippet alone must not establish a verified answer.'}]}]
-    }}]}), {headers:{'Content-Type':'application/json'}});
+    if(String(url).endsWith('/v1/responses')) return searchResponse([{url:sourceUrl,title:'Synthetic research fixture'}]);
+    if(String(url).endsWith('/v1/chat/completions')) { generalVerifierCalls++; throw new Error('Unfetched evidence reached verifier'); }
     assert(String(url) === 'https://rsc.byu.edu/offline-unavailable-fixture', 'unapproved research domains must never be fetched');
     return new Response('', {status:503});
   };
   try {
     const response = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'general-knowledge',messages:[{role:'user',content:'When did Ada Lovelace die?'}]})}), {
-      GROQ_KEY_NEW:'offline-fixture', AI:{run:async()=>{generalVerifierCalls++; throw new Error('Unapproved or unfetched evidence reached a verifier');}}
+      OPENAI_API_KEY:'offline-fixture'
     });
     const payload = await response.json();
     const transportUnavailable = sourceUrl.includes('rsc.byu.edu');

@@ -363,6 +363,20 @@ assert(registry.resolveFollowup('Do we know the time he died, exactly?', {
     assert(!registry.match(question, { profile }), 'independent-review false positive survived: ' + question);
 });
 
+for (const profile of ['ask','church-history']) {
+    for (const [question, variant] of [
+        ['Why was Joseph Smith imprisoned in Carthage?', 'carthage-imprisonment'],
+        ['Who was with Joseph Smith at Carthage Jail?', 'carthage-companions'],
+        ['Who printed the first edition of the Book of Mormon?', 'printer-publisher-location'],
+        ['Where was the Book of Mormon first printed?', 'printer-publisher-location']
+    ]) assert(registry.match(question,{profile})?.contextVariant === variant,'direct reviewed variant missing: '+question);
+    assert(registry.match('When was the Book of Mormon first published?',{profile})?.contextVariant !== 'printer-publisher-location','date intent must retain publication date');
+}
+for (const question of ['Who was with Joseph at Carthage Jail?', 'Why was Joseph Smith Sr. imprisoned in Carthage?', 'Who was with Joseph Smith in Liberty Jail?', 'Who printed the first Book of Mormon musical?', 'Who printed the 2020 edition of the Book of Mormon?']) {
+    assert(!registry.match(question,{profile:'ask'}),'unresolved subject or different source scope must not route direct variant: '+question);
+}
+assert(!registry.match('Who printed the first edition of the Book of Mormon?',{profile:'unsupported-profile'}),'direct variants must preserve profile boundaries');
+
 const auditRecords = Array.isArray(audit.reviewed_knowledge) ? audit.reviewed_knowledge : [];
 const auditById = new Map(auditRecords.map((record) => [record.id, record]));
 assert(auditById.size === registry.entries.length, 'reviewed knowledge ledger count mismatch');

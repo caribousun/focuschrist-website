@@ -4,8 +4,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = "2026-09-03.16"
-WORKER_POLICY = "2026-09-09.69"
-CACHE = "20260909-followup"
+WORKER_POLICY = "2026-09-09.70"
+CACHE = "20260909-openai-only"
 
 
 def block(text: str, start: str, end: str) -> str:

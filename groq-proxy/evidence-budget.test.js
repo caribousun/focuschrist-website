@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { evidenceForVerifier, providerDiagnostic, callGroq } from './src/index.js';
+import { evidenceForVerifier, providerDiagnostic, callOpenAIVerifier } from './src/index.js';
 const sources = Array.from({length:6},(_,i)=>({host:'www.churchofjesuschrist.org',title:`Article ${i}`,url:`https://www.churchofjesuschrist.org/study/topic${i}`,content:'x'.repeat(4180)+`END-${i}`}));
 const packed=evidenceForVerifier(sources);
 for(const source of sources) assert(packed.includes(source.content));
@@ -20,8 +20,8 @@ assert(!JSON.stringify(providerDiagnostic(limited('secret-key private account','
 const original=globalThis.fetch;let count=0;
 try {
  globalThis.fetch=async()=>{count++;return new Response(JSON.stringify({error:{code:'rate_limit_exceeded',message:'Daily quota'}}),{status:429,headers:{'retry-after':'3600'}});};
- const result=await callGroq('test',{},Date.now()+10000);assert.equal(count,1);assert.equal(result.response.status,429);
+ const result=await callOpenAIVerifier('test',{},Date.now()+10000);assert.equal(count,1);assert.equal(result.response.status,429);
  globalThis.fetch=async()=>{count++;return count===2?new Response(JSON.stringify({error:{code:'rate_limit_exceeded'}}),{status:429,headers:{'retry-after':'0'}}):new Response('{}',{status:200});};
- const retry=await callGroq('test',{},Date.now()+10000);assert.equal(retry.callCount,2);assert.equal(count,3);
+ const retry=await callOpenAIVerifier('test',{},Date.now()+10000);assert.equal(retry.openaiCallCount,1);assert.equal(count,2);assert.equal(retry.response.status,429,'rate limiting must not invoke another provider or silently loop');
 } finally {globalThis.fetch=original;}
-console.log('PASS: complete bounded source packs, safe quota diagnostics, respected cooldown and bounded retry.');
+console.log('PASS: complete bounded source packs, safe quota diagnostics, single-provider bounded calls without retry loops.');

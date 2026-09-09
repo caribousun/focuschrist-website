@@ -138,6 +138,9 @@ jobs:
           node groq-proxy/scripture-evidence.test.js
           node groq-proxy/source-discovery.test.js
           node groq-proxy/evidence-budget.test.js
+          node groq-proxy/openai-research.test.js
+          node tools/ask_composer_scroll_runtime_qa.js
+          node tools/scripture_quote_display_qa.js
 
       - name: Validate shared site JavaScript
         run: node --check site-common.js
@@ -155,12 +158,6 @@ jobs:
 
       - name: Run full-image viewer runtime QA
         run: node tools/full_image_viewer_runtime_qa.js
-
-      - name: Validate Study Intelligence JavaScript
-        run: node --check study-intelligence.js
-
-      - name: Validate adaptive Study Intelligence JavaScript
-        run: node --check study-intelligence-v2.js
 
       - name: Validate grounded Study Intelligence JavaScript
         run: node --check study-intelligence-v3.js

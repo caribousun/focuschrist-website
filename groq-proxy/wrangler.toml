@@ -3,10 +3,8 @@ main = "src/index.js"
 compatibility_date = "2024-01-01"
 
 [vars]
-VERIFIER_PROVIDER = "groq"
-
-[ai]
-binding = "AI"
+VERIFIER_PROVIDER = "openai"
+RESEARCH_PROVIDER = "openai"
 
 [[ratelimits]]
 name = "ASK_RATE_LIMITER"

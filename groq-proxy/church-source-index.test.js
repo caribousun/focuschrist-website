@@ -319,7 +319,7 @@ for (let index = 0; index < 30; index += 3) {
 assert(!hasExcessiveSourceOverlap(reorderedFragments.reverse().join(' Independent transition. '), [{ content: copiedWords }]),
   'the answer guard must not label reordered short fragments as reconstruction of one ordered passage');
 const hyrumEvidenceParagraph = 'Hyrum Smith was the older brother of Joseph Smith and an important leader in the early Church. He was born in Vermont in 1800, supported his brother through persecution, served as presiding patriarch and assistant president of the Church, and remained faithful to his testimony. Hyrum and Joseph were killed at Carthage Jail in 1844, and Church members remember his loyalty, service, sacrifice, and devotion to Jesus Christ and his family.';
-const hyrumParaphrase = 'As Joseph Smith’s older brother, Hyrum became a trusted leader during the Church’s earliest years. Born in Vermont in 1800, he repeatedly stood beside Joseph when opposition intensified. His responsibilities included service as the presiding patriarch and as an assistant president. He continued to affirm his faith even under severe pressure. The brothers died at Carthage Jail in 1844. Latter-day Saints therefore remember Hyrum for devoted leadership, loyalty to family, courage in persecution, and a life centered on Jesus Christ.';
+const hyrumParaphrase = 'As Joseph SmithÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s older brother, Hyrum became a trusted leader during the ChurchÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢s earliest years. Born in Vermont in 1800, he repeatedly stood beside Joseph when opposition intensified. His responsibilities included service as the presiding patriarch and as an assistant president. He continued to affirm his faith even under severe pressure. The brothers died at Carthage Jail in 1844. Latter-day Saints therefore remember Hyrum for devoted leadership, loyalty to family, courage in persecution, and a life centered on Jesus Christ.';
 assert(!hasExcessiveSourceOverlap(hyrumParaphrase, [{ content: hyrumEvidenceParagraph }]),
   'the answer guard must allow an independently worded factual paraphrase of Church-history evidence');
 
@@ -476,297 +476,112 @@ assert(await fetchOfficialSource(approvedCandidate, 'Who is Hyrum Smith?', Date.
   'oversized official HTML must fail closed');
 
 let officialFetchCalls = 0;
-let groqCalls = 0;
-let indexedVerifierBody = null;
-let quoteRepairCalls = 0;
-let fastFallbackCalls = 0;
-let timedOutPrimaryFallbackCalls = 0;
-let timedOutDepthRepairCalls = 0;
-let shallowFastFallbackCalls = 0;
-let quoteRepairBody = null;
-let reconsiderationCalls = 0;
-let reconsiderationBody = null;
-globalThis.fetch = async (url) => {
+let verifierCalls = 0;
+let researchCalls = 0;
+let verifierBodies = [];
+let verdictHandler;
+const openAIResponse = verdict => new Response(JSON.stringify({
+  choices: [{ message: { content: JSON.stringify(verdict) } }],
+  usage: { prompt_tokens: 700, completion_tokens: 170 },
+}), { headers: { 'Content-Type': 'application/json' } });
+const emptyResearchResponse = () => new Response(JSON.stringify({ output: [{ type: 'web_search_call', status: 'completed', action: { sources: [] } }], status: 'completed' }), { headers: { 'Content-Type': 'application/json' } });
+const testEnv = { OPENAI_API_KEY: 'test-openai' };
+globalThis.fetch = async (url, init) => {
   const target = String(url || '');
-  if (target.includes('api.groq.com')) {
-    groqCalls += 1;
-    throw new Error('indexed evidence must not call Groq');
+  if (target === 'https://api.openai.com/v1/chat/completions') {
+    verifierCalls += 1;
+    const body = JSON.parse(init.body);
+    verifierBodies.push(body);
+    assert(body.model === 'gpt-5.6-luna' && body.store === false && body.response_format.type === 'json_object', 'all verifier calls must use the approved OpenAI model with the JSON and non-storage contract');
+    return verdictHandler(body, init);
   }
+  if (target === 'https://api.openai.com/v1/responses') { researchCalls += 1; return emptyResearchResponse(); }
+  assert(new URL(target).hostname === 'www.churchofjesuschrist.org', 'unexpected provider or unapproved source request: ' + target);
   officialFetchCalls += 1;
-  return new Response(`<!doctype html><html><body>
-    <p>Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church.</p>
-    <p>Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution.</p>
-  </body></html>`, { status: 200, headers: { 'Content-Type': 'text/html; charset=utf-8' } });
+  return new Response(`<html><body><p>Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church.</p><p>Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution.</p></body></html>`, { headers: { 'Content-Type': 'text/html' } });
 };
-
 const verifiedAnswer = 'Hyrum Smith was an important leader in the early history of The Church of Jesus Christ of Latter-day Saints and the older brother of Joseph Smith. The official historical evidence identifies his trusted leadership and his service as Church patriarch. It also shows that he remained with Joseph through severe persecution. His life is therefore remembered for family loyalty, religious service, and steadfast commitment during the Church\'s earliest years. That record gives readers a clear starting point for further study.';
+const copiedEvidence = 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution';
+const accepted = () => ({ approved: true, answer: verifiedAnswer, source_indexes: [1] });
+const copiedVerdict = () => ({ approved: true, answer: (copiedEvidence + '. ').repeat(3), source_indexes: [1] });
+async function runIndexedCase(handler) {
+  verifierCalls = 0; researchCalls = 0; officialFetchCalls = 0; verifierBodies = [];
+  verdictHandler = handler;
+  const response = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
+    method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: 'general-knowledge', messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }] }),
+  }), testEnv);
+  return { response, payload: await response.json() };
+}
 try {
   const oversizedResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST',
-    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
     body: JSON.stringify({ messages: [{ role: 'user', content: 'x'.repeat(1201) }] }),
   }), {});
-  assert(oversizedResponse.status === 400 && officialFetchCalls === 0 && groqCalls === 0,
+  assert(oversizedResponse.status === 400 && officialFetchCalls === 0 && verifierCalls === 0 && researchCalls === 0,
     'oversized questions must be rejected before provider or source network use');
-
-  const response = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST',
-    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      focuschrist_page: 'ask',
-      focuschrist_profile: 'general-knowledge',
-      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
-    }),
-  }), {
-    AI: { run: async (_model, body) => {
-      indexedVerifierBody = body;
-      return { response: { approved: true, answer: verifiedAnswer, source_indexes: [1] } };
-    } },
-  });
-  const payload = await response.json();
-  assert(response.status === 200
-    && payload.focuschrist_source_integrity_verified === true
+  const { response, payload } = await runIndexedCase(() => openAIResponse(accepted()));
+  assert(response.status === 200 && payload.focuschrist_source_integrity_verified === true
     && payload.focuschrist_retrieval_route === 'church-source-index'
-    && payload.focuschrist_groq_research_calls === 0
+    && Number(payload.focuschrist_openai_research_calls || 0) === 0
     && payload.focuschrist_resolved_profile === 'faith-study'
     && payload.focuschrist_classification_mode === 'request-scope'
-    && payload.focuschrist_sources.every((source) => new URL(source.url).hostname === 'www.churchofjesuschrist.org'),
-  'indexed official evidence must answer without a Groq key and return complete receipts: ' + JSON.stringify(payload));
-  assert(officialFetchCalls > 0 && officialFetchCalls <= 2 && groqCalls === 0,
-    'the indexed lane must fetch at most two official pages and make zero Groq calls');
-  assert(indexedVerifierBody
-    && indexedVerifierBody.max_tokens === 1000
-    && indexedVerifierBody.messages[0].content.includes('If the DRAFT block is empty, write the answer directly from EVIDENCE')
-    && indexedVerifierBody.messages[0].content.includes('Use independently worded paraphrase')
-    && /DRAFT:\n\n\nEVIDENCE:/.test(indexedVerifierBody.messages[0].content),
-  'indexed evidence must reach the verifier with no fake candidate draft and an explicit compose-from-evidence contract');
+    && payload.focuschrist_sources.every(source => new URL(source.url).hostname === 'www.churchofjesuschrist.org'),
+    'indexed official evidence must answer through OpenAI and return complete receipts: ' + JSON.stringify(payload));
+  assert(officialFetchCalls > 0 && officialFetchCalls <= 2 && verifierCalls === 2 && researchCalls === 0,
+    'indexed evidence must fetch at most two official pages and skip web research');
+  assert(verifierBodies[0].max_completion_tokens === 1000
+    && verifierBodies[0].messages[0].content.includes('If the DRAFT block is empty, write the answer directly from EVIDENCE')
+    && verifierBodies[0].messages[0].content.includes('Use independently worded paraphrase')
+    && /DRAFT:\n\n\nEVIDENCE:/.test(verifierBodies[0].messages[0].content),
+    'indexed verifier must receive the complete compose-from-evidence contract');
 
-  const fastFallbackResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST',
-    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      focuschrist_page: 'ask',
-      focuschrist_profile: 'faith-study',
-      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
-    }),
-  }), {
-    AI: { run: async (model, body) => {
-      fastFallbackCalls += 1;
-      if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') {
-        const error = new Error('primary unavailable'); error.status = 503; throw error;
-      }
-      assert(model === '@cf/meta/llama-3.1-8b-instruct-fp8-fast'
-        && body.response_format === undefined,
-      'the operational fallback must use the priced fast model with prompt-enforced JSON');
-      return {
-        response: JSON.stringify({ approved: true, answer: verifiedAnswer, source_indexes: [1] }),
-        usage: { prompt_tokens: 700, completion_tokens: 170 },
-      };
-    } },
+  for (const [label, handler] of [
+    ['outage', () => new Response('{}', { status: 503 })],
+    ['timeout', () => { const error = new Error('aborted'); error.name = 'AbortError'; throw error; }],
+    ['malformed verdict', () => openAIResponse({ unexpected: 'metadata' })],
+  ]) {
+    const result = await runIndexedCase(handler);
+    assert(verifierCalls === 1 && researchCalls === 0 && result.payload.focuschrist_source_integrity_verified === false
+      && result.payload.focuschrist_gateway_mode === 'verification-provider-error'
+      && result.payload.focuschrist_openai_verifier_calls === 1,
+      label + ' must fail closed with one OpenAI call and no alternate provider');
+  }
+  const timedRepair = await runIndexedCase(() => {
+    if (verifierCalls === 1) return openAIResponse({ approved: true, answer: 'Hyrum Smith was a trusted early Church leader.', source_indexes: [1] });
+    const error = new Error('repair aborted'); error.name = 'AbortError'; throw error;
   });
-  const fastFallbackPayload = await fastFallbackResponse.json();
-  assert(fastFallbackCalls === 2
-    && fastFallbackPayload.focuschrist_source_integrity_verified === true
-    && fastFallbackPayload.focuschrist_verifier_route === 'cloudflare-fast-fallback'
-    && fastFallbackPayload.focuschrist_cloudflare_verifier_calls === 2
-    && fastFallbackPayload.focuschrist_groq_verifier_calls === 0
-    && fastFallbackPayload.focuschrist_verifier_estimated_neurons > 0
-    && fastFallbackPayload.focuschrist_verifier_conservative_unmetered_neurons >= 1000,
-  'a primary provider outage must recover through exactly one metered Cloudflare fast fallback');
-
-  const timedOutPrimaryFallbackResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST',
-    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      focuschrist_page: 'ask',
-      focuschrist_profile: 'faith-study',
-      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
-    }),
-  }), {
-    AI: { run: async (model) => {
-      timedOutPrimaryFallbackCalls += 1;
-      if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return new Promise(() => {});
-      return {
-        response: JSON.stringify({ approved: true, answer: verifiedAnswer, source_indexes: [1] }),
-        usage: { prompt_tokens: 700, completion_tokens: 170 },
-      };
-    } },
-  });
-  const timedOutPrimaryFallbackPayload = await timedOutPrimaryFallbackResponse.json();
-  assert(timedOutPrimaryFallbackCalls === 2
-    && timedOutPrimaryFallbackPayload.focuschrist_source_integrity_verified === true
-    && timedOutPrimaryFallbackPayload.focuschrist_verifier_route === 'cloudflare-fast-fallback'
-    && timedOutPrimaryFallbackPayload.focuschrist_cloudflare_verifier_calls === 2
-    && timedOutPrimaryFallbackPayload.focuschrist_groq_verifier_calls === 0
-    && timedOutPrimaryFallbackPayload.focuschrist_verifier_estimated_neurons > 0
-    && timedOutPrimaryFallbackPayload.focuschrist_verifier_conservative_unmetered_neurons >= 1000,
-  'a timed-out primary plus successful fallback must expose measured and conservative capacity receipts');
-
-  const timedOutDepthRepairResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST',
-    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      focuschrist_page: 'ask',
-      focuschrist_profile: 'faith-study',
-      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
-    }),
-  }), {
-    AI: { run: async () => {
-      timedOutDepthRepairCalls += 1;
-      if (timedOutDepthRepairCalls === 1) {
-        return {
-          response: { approved: true, answer: 'Hyrum Smith was a trusted early Church leader.', source_indexes: [1] },
-          usage: { prompt_tokens: 700, completion_tokens: 20 },
-        };
-      }
-      return new Promise(() => {});
-    } },
-  });
-  const timedOutDepthRepairPayload = await timedOutDepthRepairResponse.json();
-  assert(timedOutDepthRepairCalls === 2
-    && timedOutDepthRepairPayload.focuschrist_source_integrity_verified === false
-    && timedOutDepthRepairPayload.focuschrist_gateway_mode === 'verification-rejected'
-    && timedOutDepthRepairPayload.focuschrist_cloudflare_verifier_calls === 2
-    && timedOutDepthRepairPayload.focuschrist_groq_verifier_calls === 0
-    && timedOutDepthRepairPayload.focuschrist_verifier_estimated_neurons > 0
-    && timedOutDepthRepairPayload.focuschrist_verifier_conservative_unmetered_neurons >= 1000,
-  'a timed-out required repair must fail closed while preserving both Cloudflare calls and unresolved capacity');
-
-  const shallowFastFallbackResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST',
-    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      focuschrist_page: 'ask',
-      focuschrist_profile: 'faith-study',
-      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
-    }),
-  }), {
-    AI: { run: async (model) => {
-      shallowFastFallbackCalls += 1;
-      if (model === '@cf/meta/llama-3.3-70b-instruct-fp8-fast') return { response: { unexpected: 'metadata' } };
-      return { response: JSON.stringify({ approved: true, answer: 'Hyrum Smith was a Church leader.', source_indexes: [1] }) };
-    } },
-  });
-  const shallowFastFallbackPayload = await shallowFastFallbackResponse.json();
-  assert(shallowFastFallbackCalls === 2
-    && shallowFastFallbackPayload.focuschrist_source_integrity_verified === false,
-  'a shallow operational fallback must fail closed without stacking a third verifier call');
-
-  const quoteRepairResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST',
-    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      focuschrist_page: 'ask',
-      focuschrist_profile: 'faith-study',
-      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
-    }),
-  }), {
-    AI: { run: async (_model, body) => {
-      quoteRepairCalls += 1;
-      quoteRepairBody = body;
-      if (quoteRepairCalls === 1) {
-        const copiedEvidence = 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution';
-        return { response: { approved: true, answer: `${copiedEvidence}. ${copiedEvidence}. ${copiedEvidence}.`, source_indexes: [1] } };
-      }
-      return { response: { approved: true, answer: verifiedAnswer, source_indexes: [1] } };
-    } },
-  });
-  const quoteRepairPayload = await quoteRepairResponse.json();
-  assert(quoteRepairCalls === 2
-    && quoteRepairBody.max_tokens === 1000
-    && quoteRepairBody.messages[0].content.includes('Rewrite the answer in genuinely independent language')
-    && quoteRepairPayload.focuschrist_source_integrity_verified === true
-    && quoteRepairPayload.focuschrist_cloudflare_verifier_calls === 2,
-  'an approved but overcopied indexed answer must receive one bounded Cloudflare-only paraphrase repair');
-
-  const beforeIndependentRepairFetch = globalThis.fetch;
-  let independentGroqCalls = 0;
-  let independentOpenAICalls = 0;
-  let independentRepairSucceeds = true;
-  try {
-    globalThis.fetch = async (url, init) => {
-      const target = String(url);
-      if (target.includes('api.groq.com')) {
-        independentGroqCalls += 1;
-        const copied = 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution';
-        return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ approved: true, answer: copied + '. ' + copied + '. ' + copied + '.', source_indexes: [1] }) } }] }), { headers: { 'Content-Type': 'application/json' } });
-      }
-      if (target === 'https://api.openai.com/v1/chat/completions') {
-        independentOpenAICalls += 1;
-        const body = JSON.parse(init.body);
-        assert(body.model === 'gpt-5.6-luna' && body.messages[0].content.includes('previous answer also fails the overlap check'),
-          'independent repair must use the existing allowed verifier and the complete repair contract');
-        return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ approved: true, answer: independentRepairSucceeds ? verifiedAnswer : 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution. '.repeat(3), source_indexes: [1] }) } }] }), { headers: { 'Content-Type': 'application/json' } });
-      }
-      return beforeIndependentRepairFetch(url, init);
-    };
-    const independentResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-      method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: 'faith-study', messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }] }),
-    }), { VERIFIER_PROVIDER: 'groq', GROQ_KEY_NEW: 'test-groq', OPENAI_API_KEY: 'test-openai' });
-    const independentPayload = await independentResponse.json();
-    assert(independentGroqCalls === 1 && independentOpenAICalls === 1 && independentPayload.focuschrist_source_integrity_verified === true
-      && independentPayload.focuschrist_verifier_route === 'openai-repair'
-      && independentPayload.focuschrist_groq_verifier_calls === 1 && independentPayload.focuschrist_openai_verifier_calls === 1,
-      'overlap from a successful Groq primary must use exactly one independent repair and preserve combined accounting');
-    independentRepairSucceeds = false;
-    independentGroqCalls = 0;
-    independentOpenAICalls = 0;
-    const rejectedIndependentResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-      method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-      body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: 'faith-study', messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }] }),
-    }), { VERIFIER_PROVIDER: 'groq', GROQ_KEY_NEW: 'test-groq', OPENAI_API_KEY: 'test-openai' });
-    const rejectedIndependentPayload = await rejectedIndependentResponse.json();
-    assert(independentGroqCalls === 1 && independentOpenAICalls === 1
-      && rejectedIndependentPayload.focuschrist_source_integrity_verified === false
-      && rejectedIndependentPayload.focuschrist_verifier_publication_failure === 'excessive-source-overlap',
-      'an independent repair that still overcopies must fail closed with no third attempt');
-  } finally { globalThis.fetch = beforeIndependentRepairFetch; }
-
-  let failedOverlapCalls = 0;
-  const failedOverlapResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-    body: JSON.stringify({ focuschrist_page: 'ask', focuschrist_profile: 'faith-study', messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }] }),
-  }), { AI: { run: async () => {
-    failedOverlapCalls += 1;
-    const copied = 'Hyrum Smith was the older brother of Joseph Smith and a trusted leader in the early Church Hyrum Smith served as Church patriarch and remained with Joseph Smith during severe persecution';
-    const fragments = copied.split(' ').reduce((all, word, index) => { if (index % 4 === 0) all.push([]); all[all.length - 1].push(word); return all; }, []).map(words => words.join(' ')).join(' Indeed, ');
-    return { response: { approved: true, answer: fragments + '. ' + fragments + '. ' + fragments + '.', source_indexes: [1] } };
-  } } });
-  const failedOverlapPayload = await failedOverlapResponse.json();
-  assert(failedOverlapCalls === 2 && failedOverlapPayload.focuschrist_source_integrity_verified === false
-    && failedOverlapPayload.focuschrist_verifier_publication_failure === 'excessive-source-overlap',
-    'a repair that still reconstructs ordered source fragments must fail closed without a third call');
-
-  const reconsiderationResponse = await worker.fetch(new Request('https://focuschrist-groq-proxy.caribousun.workers.dev', {
-    method: 'POST',
-    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      focuschrist_page: 'ask',
-      focuschrist_profile: 'faith-study',
-      messages: [{ role: 'user', content: 'Who is Hyrum Smith?' }],
-    }),
-  }), {
-    AI: { run: async (_model, body) => {
-      reconsiderationCalls += 1;
-      reconsiderationBody = body;
-      return { response: reconsiderationCalls === 1
-        ? { approved: false, answer: '', source_indexes: [] }
-        : { approved: true, answer: verifiedAnswer, source_indexes: [1] } };
-    } },
-  });
-  const reconsiderationPayload = await reconsiderationResponse.json();
-  assert(reconsiderationCalls === 2
-    && reconsiderationBody.max_tokens === 1000
-    && reconsiderationBody.messages[0].content.includes('previous rejection may be a false negative')
-    && reconsiderationPayload.focuschrist_source_integrity_verified === true
-    && reconsiderationPayload.focuschrist_cloudflare_verifier_calls === 2,
-  'a fast negative verdict over strongly relevant indexed official evidence must receive one bounded Cloudflare-only reconsideration');
-} finally {
-  globalThis.fetch = originalFetch;
-}
-
-
+  assert(verifierCalls === 2 && timedRepair.payload.focuschrist_source_integrity_verified === false
+    && timedRepair.payload.focuschrist_gateway_mode === 'verification-rejected'
+    && timedRepair.payload.focuschrist_openai_verifier_calls === 2,
+    'a timed-out required depth repair must fail closed with both OpenAI calls accounted for');
+  const shallow = await runIndexedCase(() => openAIResponse({ approved: true, answer: 'Hyrum Smith was a Church leader.', source_indexes: [1] }));
+  assert(verifierCalls === 2 && shallow.payload.focuschrist_source_integrity_verified === false,
+    'a shallow answer and shallow repair must fail closed without a third verifier call');
+  const repaired = await runIndexedCase(() => openAIResponse(verifierCalls === 1 ? copiedVerdict() : accepted()));
+  assert(verifierCalls === 2 && verifierBodies[1].max_completion_tokens === 1000
+    && verifierBodies[1].messages[0].content.includes('Rewrite the answer in genuinely independent language')
+    && verifierBodies[1].messages[0].content.includes('previous answer also fails the overlap check')
+    && repaired.payload.focuschrist_source_integrity_verified === true
+    && repaired.payload.focuschrist_verifier_route === 'openai-repair'
+    && repaired.payload.focuschrist_openai_verifier_calls === 2,
+    'overcopied indexed evidence must receive one bounded OpenAI paraphrase repair');
+  const copied = await runIndexedCase(() => openAIResponse(copiedVerdict()));
+  assert(verifierCalls === 2 && copied.payload.focuschrist_source_integrity_verified === false
+    && copied.payload.focuschrist_verifier_publication_failure === 'excessive-source-overlap',
+    'a still-overcopied repair must fail closed without a third call');
+  const fragments = copiedEvidence.split(' ').reduce((all, word, index) => { if (index % 4 === 0) all.push([]); all[all.length - 1].push(word); return all; }, []).map(words => words.join(' ')).join(' Indeed, ');
+  const fragmented = await runIndexedCase(() => openAIResponse({ approved: true, answer: (fragments + '. ').repeat(3), source_indexes: [1] }));
+  assert(verifierCalls === 2 && fragmented.payload.focuschrist_source_integrity_verified === false
+    && fragmented.payload.focuschrist_verifier_publication_failure === 'excessive-source-overlap',
+    'a repair reconstructing ordered source fragments must fail closed without a third call');
+  const reconsidered = await runIndexedCase(() => openAIResponse(verifierCalls === 1 ? { approved: false, answer: '', source_indexes: [] } : accepted()));
+  assert(verifierCalls === 2 && researchCalls === 1 && verifierBodies[1].max_completion_tokens === 1000
+    && verifierBodies[1].messages[0].content.includes('previous rejection may be a false negative')
+    && reconsidered.payload.focuschrist_source_integrity_verified === true
+    && reconsidered.payload.focuschrist_openai_verifier_calls === 2,
+    'a negative indexed verdict must search approved sources once and allow one bounded reconsideration when search returns no new evidence: ' + JSON.stringify({verifierCalls,researchCalls,payload:reconsidered.payload}));
+} finally { globalThis.fetch = originalFetch; }
 
 const cachedPioneerParagraphs = [
   'Pioneer families planned water channels as the settlement took root in the valley.',
@@ -787,7 +602,7 @@ const originalCaches = globalThis.caches;
 
 async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false, cacheParagraphs = cachedPioneerParagraphs }) {
   let verifierCalls = 0;
-  let groqCalls = 0;
+  let researchCalls = 0;
   let officialFetchCalls = 0;
   globalThis.caches = {
     default: {
@@ -798,13 +613,14 @@ async function runPioneerReconsiderationCase({ page, profile, question, omitPinn
     },
   };
   globalThis.fetch = async (url) => {
-    if (String(url || '').includes('api.groq.com')) {
-      groqCalls += 1;
-      return new Response(JSON.stringify({ error: { message: 'Groq must not be called' } }), {
-        status: 429,
-        headers: { 'Content-Type': 'application/json' },
-      });
+    if (String(url) === 'https://api.openai.com/v1/chat/completions') {
+      verifierCalls += 1;
+      return openAIResponse(approveSecond && verifierCalls === 2
+        ? { approved: true, answer: pioneerEvidenceAnswer, source_indexes: [1] }
+        : { approved: false, answer: '', source_indexes: [] });
     }
+    if (String(url) === 'https://api.openai.com/v1/responses') { researchCalls += 1; return emptyResearchResponse(); }
+    assert(new URL(String(url)).hostname === 'www.churchofjesuschrist.org', 'unexpected provider or unapproved source');
     officialFetchCalls += 1;
     return new Response('', { status: 503, headers: { 'Content-Type': 'text/html' } });
   };
@@ -816,15 +632,8 @@ async function runPioneerReconsiderationCase({ page, profile, question, omitPinn
       focuschrist_profile: profile,
       messages: [{ role: 'user', content: question }],
     }),
-  }), {
-    AI: { run: async () => {
-      verifierCalls += 1;
-      return { response: approveSecond && verifierCalls === 2
-        ? { approved: true, answer: pioneerEvidenceAnswer, source_indexes: [1] }
-        : { approved: false, answer: '', source_indexes: [] } };
-    } },
-  });
-  return { payload: await response.json(), verifierCalls, groqCalls, officialFetchCalls };
+  }), testEnv);
+  return { payload: await response.json(), verifierCalls, researchCalls, officialFetchCalls };
 }
 
 try {
@@ -834,7 +643,7 @@ try {
     question: 'Why did cooperative irrigation contribute to settlement life?',
   });
   assert(subThreshold.verifierCalls === 0
-    && subThreshold.groqCalls === 0
+    && subThreshold.researchCalls === 1
     && subThreshold.officialFetchCalls >= 1
     && subThreshold.payload.focuschrist_source_integrity_verified !== true
     && subThreshold.payload.focuschrist_gateway_mode === 'research-unavailable',
@@ -848,11 +657,10 @@ try {
     cacheParagraphs: cachedRelevantPioneerParagraphs,
   });
   assert(positive.verifierCalls === 2
-    && positive.groqCalls === 0
+    && positive.researchCalls === 1
     && positive.officialFetchCalls === 0
     && positive.payload.focuschrist_source_integrity_verified === true
-    && positive.payload.focuschrist_cloudflare_verifier_calls === 2
-    && positive.payload.focuschrist_groq_verifier_calls === 0
+    && positive.payload.focuschrist_openai_verifier_calls === 2
     && positive.payload.focuschrist_sources.some((entry) => entry.url.includes('/chapter-twenty-six'))
     && positive.payload.focuschrist_evidence_relevance.some((entry) => entry.url.includes('/chapter-twenty-six') && entry.overlap_count >= 2)
     && positive.payload.focuschrist_evidence_relevance.length > 0
@@ -866,7 +674,7 @@ try {
     question: 'Why did cooperative irrigation contribute to settlement life?',
   });
   assert(askNegative.verifierCalls === 0
-    && askNegative.groqCalls === 0
+    && askNegative.researchCalls === 1
     && askNegative.officialFetchCalls >= 1
     && askNegative.payload.focuschrist_source_integrity_verified !== true,
   'sub-threshold cached irrigation evidence on general Ask must be rejected before verification');
@@ -877,7 +685,7 @@ try {
     question: 'How did pioneers cooperate to build temples?',
   });
   assert(unrelatedNegative.verifierCalls === 0
-    && unrelatedNegative.groqCalls === 0
+    && unrelatedNegative.researchCalls === 1
     && unrelatedNegative.officialFetchCalls >= 1
     && unrelatedNegative.payload.focuschrist_source_integrity_verified !== true,
   'unrelated cached Pioneer evidence must be rejected before verification');
@@ -889,7 +697,7 @@ try {
     omitPinnedSource: true,
   });
   assert(missingPinnedNegative.verifierCalls === 0
-    && missingPinnedNegative.groqCalls === 0
+    && missingPinnedNegative.researchCalls === 1
     && missingPinnedNegative.officialFetchCalls >= 1
     && missingPinnedNegative.payload.focuschrist_source_integrity_verified !== true,
   'Pioneer irrigation without relevant cached chapter 26 evidence must fail before verification');
