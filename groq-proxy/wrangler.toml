@@ -13,3 +13,6 @@ namespace_id = "90322026"
   [ratelimits.simple]
   limit = 20
   period = 60
+
+[limits]
+cpu_ms = 1000
