@@ -21,6 +21,7 @@ import worker, {
   hasKnownFalseClaim,
   isReviewedColorRegression,
   isOfficialChurchSource,
+  isGodInOldTestamentQuestion,
   isOfficialChurchIdentityEvidence,
   isJsonValidationFailure,
   isVerifierVerdictShape,
@@ -264,6 +265,9 @@ const explicitAlmaChapterQuestion = 'What lesson does Alma chapter 32 teach abou
 const explicitAlmaChapterRecovery = reviewedDeterministicEvidenceRecovery(explicitAlmaChapterQuestion, almaEvidence);
 assert(explicitAlmaChapterRecovery?.answer === almaRecovery.answer,
   'equivalent Alma chapter 32 wording must use the same reviewed source-grounded answer');
+const meaningAlmaRecovery = reviewedDeterministicEvidenceRecovery('What lesson does the seed comparison in Alma 32 teach about developing faith, with emphasis on meaning?', almaEvidence);
+assert(meaningAlmaRecovery?.answer === almaRecovery.answer,
+  'ordinary emphasis-on-meaning phrasing must preserve the reviewed word-to-seed explanation');
 const { readFileSync: readAlmaFixture } = await import('node:fs');
 const { default: scriptureFactory } = await import('../scripture-library.js');
 const scriptureCatalogFixture = JSON.parse(readAlmaFixture(new URL('../scripture-data/catalog.json', import.meta.url), 'utf8'));
@@ -273,11 +277,50 @@ assert(checkedAlmaRecovery.ok
   && checkedAlmaRecovery.references.some(ref => ref.key === 'bofm/alma/32' && ref.verses?.includes(28))
   && checkedAlmaRecovery.references.some(ref => ref.key === 'bofm/alma/32' && ref.verses?.includes(43)),
   'reviewed Alma recovery must pass the real final scripture gate with fully spelled out ranges');
+for (const page of ['ask', 'pioneers']) {
+  for (const followup of ['can you cite a scripture', 'can you site a scripture', 'please show me a supporting verse']) {
+    const conversation = [{role:'user',content:'is god in the bible old testament'},
+      {role:'assistant',content:'An earlier answer is conversation, not authoritative evidence.'},
+      {role:'user',content:followup}];
+    const scope = classifyResearchScope(conversation, page, 'faith-study');
+    assert(scope.scriptureSupportAntecedent === conversation[0].content
+      && scope.retrievalQuestion.includes('old testament'), 'support follow-up must retain its immediately preceding user subject');
+    const beforeSupportFetch = globalThis.fetch;
+    let supportCalls = 0;
+    globalThis.fetch = async url => {
+      supportCalls++;
+      assert(String(url) === 'https://focuschrist.com/scripture-data/ot/gen/1.json', 'support answer must use exact canonical library bytes, not model memory');
+      return new Response(readAlmaFixture(new URL('../scripture-data/ot/gen/1.json', import.meta.url)));
+    };
+    try {
+      const response = await worker.fetch(new Request('https://worker.test', { method:'POST', headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'}, body:JSON.stringify({messages:conversation,focuschrist_page:page,focuschrist_profile:'faith-study'}) }), {});
+      const result = await response.json();
+      assert(result.focuschrist_gateway_mode === 'local-scripture-library' && result.focuschrist_source_integrity_verified
+        && result.focuschrist_scripture_validated && result.focuschrist_groq_verifier_calls === 0,
+        'Ask and Pioneer supporting scripture must pass the final gate without a stochastic quotation');
+      assert(result.choices[0].message.content.includes('In the beginning God created the heaven and the earth.') && supportCalls > 0,
+        'support answer must contain the actual Genesis 1:1 wording');
+    } finally { globalThis.fetch = beforeSupportFetch; }
+  }
+}
+for (const competing of ['Is God not in the Old Testament?', 'Is Jesus God in the Old Testament?',
+  'Are other gods in the Old Testament?', 'Does God guarantee wealth in the Old Testament?']) {
+  assert(!isGodInOldTestamentQuestion(competing), 'bounded Genesis support must not answer a different claim: ' + competing);
+}
+const changedSupportScope = classifyResearchScope([{role:'user',content:'is god in the bible old testament'},
+  {role:'user',content:'Does faith guarantee wealth?'}, {role:'assistant',content:'God in the Old Testament'},
+  {role:'user',content:'can you cite a scripture'}], 'ask', 'faith-study');
+assert(changedSupportScope.scriptureSupportAntecedent === 'Does faith guarantee wealth?'
+  && !isGodInOldTestamentQuestion(changedSupportScope.scriptureSupportAntecedent),
+  'older user topics and assistant claims must not override the immediate user antecedent');
 for (const question of ['How does Alma 32:21 define faith?', 'Compare Alma 32 with James 2 on faith.',
   'What does Alma 32 teach about poverty and faith?', 'Does Alma 32 prove I should stop medication through faith?',
   'How does Alma 33 describe developing faith?', 'How does Alma chapter 33 describe developing faith?',
   'What does Alma chapter 32:21 teach about faith?', 'Compare Alma chapter 32 with James 2 on faith.',
   'What does Alma chapter 32 teach about poverty and faith?',
+  'What does Alma 32 teach about faith with emphasis on money?',
+  'What does Alma 32 teach about faith with emphasis on medical meaning?',
+  'What does Alma 32 teach about faith with emphasis on the meaning of James 2?',
   'Does Alma chapter 32 prove I should stop medication through faith?']) {
   assert(reviewedDeterministicEvidenceRecovery(question, almaEvidence) === null,
     'bounded Alma 32 summary must not replace a different question: ' + question);
@@ -1012,7 +1055,7 @@ try {
     'the expansion retry must carry the numeric depth contract');
   assert(gatewayPayload.choices[0].message.content === expandedGeneralAnswer
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-09.62',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-09.63',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;

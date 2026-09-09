@@ -170,8 +170,8 @@
         primaryInput.value = question;
         followupInput.value = '';
         setFollowupBusy(true);
+        focusConversation();
         window.sendMessage();
-        window.setTimeout(focusConversation, 80);
     }
 
     function initFollowupComposer() {
@@ -340,11 +340,11 @@
         const answerTopInsideChat = answer.getBoundingClientRect().top - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
         chatBox.scrollTo({
             top: Math.max(0, answerTopInsideChat - 18),
-            behavior: preferredScrollBehavior()
+            behavior: 'instant'
         });
 
-        const followupDock = document.getElementById('askFollowupDock');
-        scrollPageToElement(followupDock && followupDock.classList.contains('visible') ? followupDock : chatBox);
+        // Bring the answer into view, including when the transcript has its own scrollbar.
+        scrollPageToElement(chatBox.scrollHeight > chatBox.clientHeight + 2 ? chatBox : answer);
     }
 
     function submitQuestion(question) {
@@ -353,8 +353,8 @@
         input.value = question;
         input.focus();
         if (typeof window.sendMessage === 'function') {
+            focusConversation();
             window.sendMessage();
-            window.setTimeout(focusConversation, 80);
         }
     }
 
@@ -404,14 +404,14 @@
 
         if (sendButton) {
             sendButton.addEventListener('click', function () {
-                window.setTimeout(focusConversation, 80);
+                focusConversation();
             });
         }
 
         if (input) {
             input.addEventListener('keypress', function (event) {
                 if (event.key === 'Enter') {
-                    window.setTimeout(focusConversation, 80);
+                    focusConversation();
                 }
             });
         }
@@ -452,16 +452,27 @@
     function initRelatedStudyObserver() {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox || typeof MutationObserver === 'undefined') return;
+        chatBox.addEventListener('focuschrist:answer-ready', function (event) {
+            window.setTimeout(function () {
+                if (event.target !== chatBox.lastElementChild) return;
+                addRelatedStudyToLatestAnswer();
+                setFollowupVisible(true);
+                setFollowupBusy(false);
+                focusLatestAnswer();
+            }, 60);
+        });
         const observer = new MutationObserver(function (mutations) {
             const addedAnswer = mutations.some(function (mutation) {
                 return Array.from(mutation.addedNodes || []).some(function (node) {
                     if (node.nodeType !== 1) return false;
+                    if (!node.isConnected || node.hasAttribute('data-scripture-pending')) return false;
                     if (node.classList && node.classList.contains('bot-message')) return true;
                     return typeof node.querySelector === 'function' && Boolean(node.querySelector('.bot-message'));
                 });
             });
             if (addedAnswer) {
                 window.setTimeout(function () {
+                    if (chatBox.lastElementChild && (!chatBox.lastElementChild.classList.contains('bot-message') || chatBox.lastElementChild.hasAttribute('data-scripture-pending'))) return;
                     addRelatedStudyToLatestAnswer();
                     setFollowupVisible(true);
                     setFollowupBusy(false);

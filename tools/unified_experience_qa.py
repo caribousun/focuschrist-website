@@ -405,7 +405,7 @@ def main() -> int:
             fail(errors, f"ask-experience.css: polished artwork-flow marker missing: {marker}")
 
     ask_js = (ROOT / "ask-experience.js").read_text(encoding="utf-8")
-    for marker in ("chatBox.insertAdjacentElement('beforebegin', dock)", "followupDock.classList.contains('visible') ? followupDock : chatBox", "document.getElementById('conversationClearBtn')"):
+    for marker in ("chatBox.insertAdjacentElement('beforebegin', dock)", "chatBox.scrollHeight > chatBox.clientHeight + 2 ? chatBox : answer", "document.getElementById('conversationClearBtn')"):
         if marker not in ask_js:
             fail(errors, f"ask-experience.js: follow-up visibility marker missing: {marker}")
     for unrequested_control in ("Clear & Start Over", "Clear Conversation", "data-focuschrist-conversation-reset"):

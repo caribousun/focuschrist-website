@@ -453,16 +453,23 @@
     function positionAnswer(answerElement) {
         const box = chatBox();
         if (!box || !answerElement) return;
-        const internalTop = Math.max(0, answerElement.offsetTop - box.offsetTop - 12);
-        box.scrollTo({ top: internalTop, behavior: 'smooth' });
+        const internalTop = Math.max(0, answerElement.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 12);
+        box.scrollTo({ top: internalTop, behavior: 'instant' });
         const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
         const headerHeight = header && getComputedStyle(header).position === 'fixed' ? header.getBoundingClientRect().height : 0;
         const safeTop = headerHeight + 18;
-        const rect = box.getBoundingClientRect();
+        const rect = (box.scrollHeight > box.clientHeight + 2 ? box : answerElement).getBoundingClientRect();
         if (rect.top < safeTop || rect.top > window.innerHeight * 0.72) {
-            window.scrollTo({ top: window.scrollY + rect.top - safeTop, behavior: 'smooth' });
+            window.scrollTo({ top: window.scrollY + rect.top - safeTop, behavior: preferredScrollBehavior() });
         }
     }
+
+    document.addEventListener('focuschrist:answer-ready', function (event) {
+        window.setTimeout(function () {
+            const box = chatBox();
+            if (box && event.target === box.lastElementChild) positionAnswer(event.target);
+        }, 60);
+    });
 
     function pioneerRecordContext(choice) {
         const name = String(choice && choice.name || '').trim();

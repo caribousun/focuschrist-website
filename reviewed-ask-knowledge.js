@@ -1125,6 +1125,10 @@
         };
     }
 
+    function isScriptureSupportFollowup(value) {
+        return /^(?:(?:can|could|would) you |please )?(?:cite|site|quote|give(?: me)?|show(?: me)?|provide)(?: me)? (?:a |an |the |some )?(?:supporting )?(?:scripture|scriptures|verse|verses|scripture reference|scripture references)(?: (?:for|to support) (?:that|this))?$/.test(normalize(value));
+    }
+
     function resolveFollowup(question, options) {
         const profile = String(options && options.profile || 'ask');
         const original = String(question || '').trim();
@@ -1135,7 +1139,8 @@
 
         const normalizedQuery = normalize(original);
         const tokens = normalizedQuery.split(' ').filter(Boolean);
-        const referential = /\b(?:he|him|his|she|her|hers|they|them|their|it|its|that|this|there|then)\b/.test(normalizedQuery);
+        const scriptureSupport = isScriptureSupportFollowup(original);
+        const referential = scriptureSupport || /\b(?:he|him|his|she|her|hers|they|them|their|it|its|that|this|there|then)\b/.test(normalizedQuery);
         const elliptical = tokens.length <= 8 && /^(?:and|what|when|where|how|do|did|was|is|about)\b/.test(normalizedQuery);
         if (!normalizedQuery || (!referential && !elliptical)) {
             return { query: original, resolved: false, entryId: null, contextLabel: '' };
@@ -1154,6 +1159,7 @@
             }
         }
         if (!priorQuestion) return { query: original, resolved: false, entryId: null, contextLabel: '' };
+        if (scriptureSupport) return genericFollowupResolution(original, normalizedQuery, true, priorQuestion);
 
         const priorEntry = priorContextEntryId
             ? ENTRIES.find(function (entry) {
