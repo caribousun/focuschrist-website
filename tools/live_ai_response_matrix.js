@@ -1,6 +1,6 @@
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-09.63';
+const POLICY_VERSION = '2026-09-09.64';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -289,6 +289,20 @@ async function validateActualOfficialEvidence(test, result) {
     }
 }
 
+async function waitForDeployedPolicy(submitProbe = submit, pause = ms => new Promise(resolve => setTimeout(resolve, ms))) {
+    const observations = [];
+    for (let attempt = 1; attempt <= 6; attempt++) {
+        let probe;
+        try {
+            probe = await submitProbe({ id: 'deployed-policy-probe', page: 'ask', profile: 'general-knowledge', question: 'When did Joseph die?' });
+        } catch (error) { probe = { status: 0, policyVersion: '', error: error.name || error.message }; }
+        observations.push({ attempt, status: probe.status, policyVersion: probe.policyVersion, error: probe.error });
+        if (probe.status === 200 && probe.policyVersion === POLICY_VERSION) return probe;
+        if (attempt < 6) await pause(10000);
+    }
+    assert(false, 'deployed policy probe failed after bounded propagation wait: ' + JSON.stringify(observations));
+}
+
 async function runSequential(tests) {
     const results = [];
     for (let index = 0; index < tests.length; index += 1) {
@@ -316,9 +330,7 @@ if (process.argv.includes('--definition-check')) {
 }
 
 (async () => {
-    const policyProbe = await submit({ id: 'deployed-policy-probe', page: 'ask', profile: 'general-knowledge', question: 'When did Joseph die?' });
-    assert(policyProbe.status === 200 && policyProbe.policyVersion === POLICY_VERSION,
-        'deployed policy probe failed before the paced release matrix');
+    await waitForDeployedPolicy();
     const selectedRounds = BASELINE_MODE ? rounds.slice(0, 1) : rounds;
     const results = [];
     for (let roundIndex = 0; roundIndex < selectedRounds.length; roundIndex += 1) {
