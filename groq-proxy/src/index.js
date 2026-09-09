@@ -26,8 +26,8 @@ const SOURCE_INTEGRITY_FALLBACK = 'I could not verify a reliable answer from the
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.61';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.61';
+const SOURCE_POLICY_VERSION = '2026-09-09.62';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.62';
 const REQUEST_BUDGET_MS = 22000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -852,9 +852,11 @@ function evidenceRelevanceReceipt(question, evidence) {
   });
 }
 
-const REVIEWED_ALMA_32_WORD_AND_FAITH = "In Alma 32, Alma compares the word to a seed and invites people to begin with a desire to believe. Faith is the trust involved in making room for that word and trying the invitation; the word is what is planted. In verses 28-35, Alma describes noticing the effects of the growing seed, including an enlarged soul and increased understanding. He distinguishes that experience from knowing everything. Verses 37-43 then stress continued care, diligence, patience, and looking forward to the fruit. Neglect can prevent growth even when the seed is good. The comparison invites sustained attention to God's word rather than demanding instant certainty. Read the full passage to distinguish Alma's imagery from additional gardening details that a modern retelling might invent.";
+const REVIEWED_ALMA_32_WORD_AND_FAITH = "In Alma 32, Alma compares the word to a seed and invites people to begin with a desire to believe. Faith is the trust involved in making room for that word and trying the invitation; the word is what is planted. In Alma 32:28-35, Alma describes noticing the effects of the growing seed, including an enlarged soul and increased understanding. He distinguishes that experience from knowing everything. Alma 32:37-43 then stresses continued care, diligence, patience, and looking forward to the fruit. Neglect can prevent growth even when the seed is good. The comparison invites sustained attention to God's word rather than demanding instant certainty. Read the full passage to distinguish Alma's imagery from additional gardening details that a modern retelling might invent.";
 
 function isAlma32FaithStudyQuestion(value) {
+  // Normalize only this equivalent chapter label; retain all scope exclusions.
+  value = String(value || "").replace(/\balma\s+chapter\s+32\b/gi, "Alma 32");
   // A bounded chapter-level study of this metaphor. Verse-specific, comparative,
   // historical and personal instructions remain on the normal evidence route.
   const almaStudyVocabulary = new Set('how does do can what is are alma 32 describe describes developing develop faith teach teaches about the seed comparison metaphor lesson lessons teachings of in explain growth grow growing nourish nourishing word and patience diligence a tell me'.split(' '));
