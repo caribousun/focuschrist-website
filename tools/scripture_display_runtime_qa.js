@@ -85,6 +85,22 @@ async function readerControls() {
     assert.equal(closeCalls, 2, 'header close must remain independently bound');
     assert.equal(w.document.activeElement, trigger);
     readerDOM.window.close();
+
+    const rangeDOM = new JSDOM('<a id="range" href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11">Read John 10:11 to 16</a>', { url: 'https://focuschrist.com/art.html', runScripts: 'outside-only' });
+    const rangeWindow = rangeDOM.window;
+    rangeWindow.HTMLDialogElement.prototype.showModal = function () { this.open = true; };
+    rangeWindow.HTMLDialogElement.prototype.close = function () { this.open = false; this.dispatchEvent(new rangeWindow.Event('close')); };
+    const rangeLibrary = factory(require('../scripture-data/catalog.json'), async url => new Response(fs.readFileSync(path.join(root, url))));
+    rangeWindow.focusChristScriptureLibrary = rangeLibrary;
+    rangeWindow.focusChristScriptureReady = Promise.resolve(rangeLibrary);
+    rangeWindow.eval(fs.readFileSync(path.join(root, 'scripture-reader.js'), 'utf8'));
+    const rangeTrigger = rangeWindow.document.getElementById('range');
+    const rangeDialog = rangeWindow.document.getElementById('fc-scripture-reader');
+    rangeTrigger.click();
+    for (let i = 0; i < 100 && rangeDialog.querySelector('[aria-busy="true"]'); i++) await new Promise(resolve => setTimeout(resolve, 5));
+    assert.equal(rangeDialog.querySelector('.fc-scripture-status').textContent, '', 'spoken verse range label must pass scripture reader verification');
+    assert.equal(rangeDialog.querySelectorAll('.fc-scripture-verse').length, 6, 'spoken verse range label must open every requested verse');
+    rangeDOM.window.close();
 }
 (async () => {
     let clicks = 0;

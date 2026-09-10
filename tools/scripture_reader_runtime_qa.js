@@ -13,6 +13,8 @@ assert.equal(api.reference(base, 'Read John 20').selection, null);
 assert.deepEqual(api.reference(base + '.2', 'John 20:2-3').selection, [2, 3]);
 assert.deepEqual(api.reference(base + '.2-3', '').selection, [2, 3]);
 assert.deepEqual(api.reference(base + '.2?id=p5', 'John 20:2-3').selection, [5]);
+assert.deepEqual(api.reference('https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11', 'Read John 10:11 to 16').selection, [11, 12, 13, 14, 15, 16]);
+assert.deepEqual(api.reference('https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13', 'Read Mark 10:13 through 16').selection, [13, 14, 15, 16]);
 for (const suffix of ['?id=p3-p1', '?id=p0', '?id=p1-p10000', '?id=oops']) assert.equal(api.reference(base + suffix, '').invalid, true);
 for (const url of [base.replace('www.churchofjesuschrist.org', 'evil.churchofjesuschrist.org'), base.replace('https:', 'http:'), base.replace('/nt/', '/manual/'), base + '/foo', 'javascript:alert(1)']) assert.equal(api.reference(url, ''), null);
 const data = { title: 'John 20', source_url: base + '?lang=eng', verified_on: '2026-09-06', verses: [{ number: 1, text: '<b>Plain source text</b>' }, { number: 2, text: 'Second verse.' }, { number: 3, text: 'Third verse.' }] };

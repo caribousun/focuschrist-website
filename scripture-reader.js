@@ -21,6 +21,12 @@
         }
         return Array.from(result).sort((a, b) => a - b);
     }
+    function normalizeDisplayLabel(value) {
+        // Artwork detail buttons use reader-friendly wording such as
+        // "John 10:11 to 16"; normalize that wording before comparing it
+        // with the exact verse range encoded in the trusted source URL.
+        return String(value || '').replace(/\b(?:to|through)\b/gi, '-');
+    }
     function reference(href, label) {
         const found = identify(href);
         if (!found) return null;
@@ -133,7 +139,7 @@
         try {
             if (ref.invalid) throw new Error('Unrecognized verse selection');
             const library = await root.focusChristScriptureReady;
-            const labels = library.references((trigger.textContent || '').trim());
+            const labels = library.references(normalizeDisplayLabel((trigger.textContent || '').trim()));
             if (labels.length && labels.some(label => label.key !== ref.key || (label.verses && ref.selection && label.verses.join() !== ref.selection.join()))) throw new Error('Scripture label mismatch');
             const data = await getChapter(ref);
             const documentAnchor = data.kind === 'document' ? library.fromURL(ref.url.href).paragraph : null;
