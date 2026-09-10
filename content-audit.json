@@ -42,7 +42,7 @@
     {
       "path": "answers.html",
       "status": "verified",
-      "published_text_sha256": "3d5e34fe4ae4f364227963b6989ac51f0959daeb841cc5fb0886c67b47ea640b",
+      "published_text_sha256": "593559114efb80bbc03e750bdf5c244643050dea57357f8ff80f0c8331927eb0",
       "reviewed_on": "2026-09-08",
       "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Owner clarification: retain exactly one About-style Continue/down-arrow link in each Answer opening, remove repeated body controls. Original substantive content/source approvals preserved. Answers hub popup has a labeled keyboard-focusable reflection region. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. Dedicated-topic directory routes reviewed; overview link now accurately names the Stand Forever study destination. Independent reviewer approved compact directory continuation links to God our Heavenly Father and the restored Church; existing16topic destinations preserved. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
       "authoritative_sources": [
@@ -242,6 +242,41 @@
       ]
     },
     {
+      "path": "answers/god-our-heavenly-father.html",
+      "status": "verified",
+      "published_text_sha256": "d77fecd96863c5f2d44b8030d2a03c9640aca4e58fd4bbf4923603599335e0cc",
+      "reviewed_on": "2026-09-08",
+      "review_standard": "Independent full-page semantic review approved by root reviewer against primary scriptures; verification agent reviewed source framing, optional reflections, media summaries, illustration identity and accessible source pathways. Original contextual paraphrase, LDS framing, optional reflection and practice; no direct quotations; scripture modules under 200 words per source. Independent final editorial review approved readable punctuation without changed meaning; official source text and verse ranges preserved. Explicit inline scripture links reviewed for exact book, chapter and verse targets, preserving visible reference wording and existing reader behavior. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng",
+        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-29-the-truth-is-there-a-god-who-is-our-father-elder-lawrence-e-corbridge",
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/47nelson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?id=p5-p13&lang=eng#p5",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?id=p22-p34&lang=eng#p22"
+      ]
+    },
+    {
+      "path": "answers/grief-and-faith.html",
+      "status": "verified",
+      "published_text_sha256": "d80f7fa4266a73ed63a61fdc0761683f8934d140ed6b7c238f531a420d5a72a8",
+      "reviewed_on": "2026-09-08",
+      "review_standard": "Independent reviewer read full page and authoritative sources and explicitly approved semantic content. Scripture paraphrases reviewed in their surrounding chapter context. John 11 supports Lazarus, Martha and Mary, resurrection hope and Jesus weeping; Alma 7:11â€“13 supports Christs suffering and knowing how to help; Mosiah 18:8â€“10 supports baptismal commitments to bear burdens, mourn and comfort. Practical suggestions and reflection questions are explicitly optional focusChrist study aids. Existing approved illustrations are identified as study illustrations, not source-native chapter images. No video placements. Independent final editorial review approved readable punctuation without changed meaning; official source text and verse ranges preserved. Explicit inline scripture links reviewed for exact book, chapter and verse targets, preserving visible reference wording and existing reader behavior. Inline scripture destinations independently checked against explicit references and chapter verse ranges. Contextual artwork captions reviewed against cited primary passages; artistic interpretation separated from historical evidence. Grief expansion independently reviewed against official scripture and full conference messages. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p9&lang=eng#p9",
+        "https://www.churchofjesuschrist.org/study/general-conference/2006/10/sunday-will-come?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2023/04/42johnson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?id=p17-p36&lang=eng#p17",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p8-p10&lang=eng#p8",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/1?id=p3-p7&lang=eng#p3"
+      ]
+    },
+    {
       "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
       "status": "verified",
       "published_text_sha256": "21ef972dee4141fe8022c311d6e91a0137319affe56776d5f5aaaefdc09af6f9",
@@ -382,6 +417,49 @@
         "https://www.churchofjesuschrist.org/media/video/2022-10-1040-dale-g-renlund?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/5?id=p16&lang=eng#p16",
         "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?id=p7-p9&lang=eng#p7"
+      ]
+    },
+    {
+      "path": "answers/restored-church-of-jesus-christ.html",
+      "status": "verified",
+      "published_text_sha256": "a3d64ddc7b23b9c1f8ebabb5a879174d90677bf2333d439e7a09296dc3750f16",
+      "reviewed_on": "2026-09-08",
+      "review_standard": "Independent full-page semantic review approved by root reviewer against primary scriptures; verification agent reviewed source framing, optional reflections, media summaries, illustration identity and accessible source pathways. Original contextual paraphrase, LDS framing, optional reflection and practice; no direct quotations; scripture modules under 200 words per source. Independent final editorial review approved readable punctuation without changed meaning; official source text and verse ranges preserved. Explicit inline scripture links reviewed for exact book, chapter and verse targets, preserving visible reference wording and existing reader behavior. Inline scripture destinations independently checked against explicit references and chapter verse ranges. Contextual artwork captions reviewed against cited primary passages; artistic interpretation separated from historical evidence. Grief expansion independently reviewed against official scripture and full conference messages. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2020/04/45nelson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2013/10/come-join-with-us?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p8-p10&lang=eng#p8",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?id=p13-p22&lang=eng#p13",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?id=p1-p12&lang=eng#p1",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?id=p1-p22&lang=eng#p1"
+      ]
+    },
+    {
+      "path": "answers/stand-forever.html",
+      "status": "verified",
+      "published_text_sha256": "f66281eaf2ab12ebf31bad8ae0d36af5980197731cee9bb49ffedc77cad2c9bb",
+      "reviewed_on": "2026-09-08",
+      "review_standard": "Independent reviewer read full page and authoritative sources and explicitly approved semantic content. Existing approved Stand Forever subsection moved intact from Look Unto Me, including three companion media cards. Exact visible text comparison passed. New optional reflection/source/continuation scaffold distinguishes site study aids from source teaching. Independent series panel review: publisher-owned episode descriptions and BYU biography support the series purpose, Episode 1 title and relationship to 2019 devotional. Trailer and playlist links use verified identities; remote preview is native to trailer. No fixed episode count or unreviewed episode summaries introduced. Independent foundational-study enrichment review: four original primary questions retain their text and link to distinct relevant studies. New reading guidance separates source claims from personal application; images reviewed against approved Home likeness and existing art, with artistic descriptions and full-image viewing. Independent final editorial review approved readable punctuation without changed meaning; official source text and verse ranges preserved. Explicit inline scripture links reviewed for exact book, chapter and verse targets, preserving visible reference wording and existing reader behavior. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
+      "authoritative_sources": [
+        "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2015/10/faith-is-not-by-chance-but-by-choice?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson?lang=eng",
+        "https://www.youtube.com/playlist?list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://www.youtube.com/watch?v=sdgI1E6WJdQ&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://www.youtube.com/watch?v=dPnO2QEPrPg&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
+        "https://speeches.byu.edu/speakers/lawrence-e-corbridge/",
+        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-series-official-trailer-elder-lawrence-e-corbridge",
+        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-1-will-you-stand-or-will-you-go-away-elder-lawrence-e-corbridge",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?id=p7-p9&lang=eng#p7",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?id=p24&lang=eng#p24",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?id=p4-p5&lang=eng#p4",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p33-p34&lang=eng#p33"
       ]
     },
     {
@@ -742,13 +820,6 @@
       ]
     },
     {
-      "path": "google3fa84a4b37862f36.html",
-      "status": "non-source-dependent",
-      "published_text_sha256": "ffdba67eb6588805c874a230431ebe4f0fd1b890995876e874b1177fc3764d44",
-      "reviewed_on": "2026-08-31",
-      "review_standard": "L-044 universal source-integrity review"
-    },
-    {
       "path": "come-follow-me.html",
       "status": "verified",
       "published_text_sha256": "050eaa8363206f14b596ce8b62354b8fb20a88d8a72425ebe4dd884263aecb83",
@@ -761,6 +832,64 @@
         "https://newsroom.churchofjesuschrist.org/article/2027-curriculum-for-latter-day-saints-is-the-new-testament",
         "https://rsc.byu.edu/my-gospel-study/come-follow-me"
       ]
+    },
+    {
+      "path": "general-conference.html",
+      "status": "verified",
+      "published_text_sha256": "371867d92a4da449458a1fd987aa5a3b673fb1e273d0fbf0a300efb43d169319",
+      "reviewed_on": "2026-09-08",
+      "review_standard": "Independent migration review: all37 official message titles, speakers, native previews, session content, six previously source-reviewed introductions and explicitly labeled optional focusChrist reflections preserved. Full official message bodies and source-preview identities were verified in the preceding review. Standalone opening, navigation and study actions reviewed; existing source context retained. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04?lang=eng",
+        "https://newsroom.churchofjesuschrist.org/event/october-2026-general-conference",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/11oaks?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/12christofferson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/13kearon?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/14yee?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/15gilbert?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/16bednar?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/17teh?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/18becerra?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/19eyring?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/21christofferson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/22larson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/23stevenson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/24ortega?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/25wu?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/26wunderli?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/27causse?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/28holmes?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/29matswagothata?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/210soares?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/41uchtdorf?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/42freeman?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/43larreal?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/44rowe?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/45rasband?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/46renlund?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/47mutombo?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/48walker?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/49oaks?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/51christofferson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/52wong?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/53hall?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/54porter?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/55andersen?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/56cook?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/57wakolo?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/58gong?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/59oaks?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2025/10/24brown?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2023/04/58nelson?lang=eng",
+        "https://www.churchofjesuschrist.org/study/general-conference/2008/10/finding-joy-in-the-journey?lang=eng"
+      ]
+    },
+    {
+      "path": "google3fa84a4b37862f36.html",
+      "status": "non-source-dependent",
+      "published_text_sha256": "ffdba67eb6588805c874a230431ebe4f0fd1b890995876e874b1177fc3764d44",
+      "reviewed_on": "2026-08-31",
+      "review_standard": "L-044 universal source-integrity review"
     },
     {
       "path": "index.html",
@@ -848,6 +977,14 @@
       ]
     },
     {
+      "path": "tools/layout-review.html",
+      "status": "non-source-dependent",
+      "published_text_sha256": "d2eea08b027e05843f487357f123b3e296391f17665a7363f734c38c680ae85b",
+      "reviewed_on": "2026-09-06",
+      "review_standard": "Internal noindex viewport review controls and accurate limitations; no doctrinal claims or new content sources.",
+      "authoritative_sources": []
+    },
+    {
       "path": "watch.html",
       "status": "verified",
       "published_text_sha256": "ac4973e21120c9bc6738562cd31a0cbb14881094992b749e87f1bb0ebe35ac13",
@@ -895,143 +1032,6 @@
         "https://www.churchofjesuschrist.org/media/video/2025-10-look-unto-christ-worldwide-event-for-youth?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ?lang=eng"
-      ]
-    },
-    {
-      "path": "tools/layout-review.html",
-      "status": "non-source-dependent",
-      "published_text_sha256": "d2eea08b027e05843f487357f123b3e296391f17665a7363f734c38c680ae85b",
-      "reviewed_on": "2026-09-06",
-      "review_standard": "Internal noindex viewport review controls and accurate limitations; no doctrinal claims or new content sources.",
-      "authoritative_sources": []
-    },
-    {
-      "path": "general-conference.html",
-      "status": "verified",
-      "published_text_sha256": "371867d92a4da449458a1fd987aa5a3b673fb1e273d0fbf0a300efb43d169319",
-      "reviewed_on": "2026-09-08",
-      "review_standard": "Independent migration review: all37 official message titles, speakers, native previews, session content, six previously source-reviewed introductions and explicitly labeled optional focusChrist reflections preserved. Full official message bodies and source-preview identities were verified in the preceding review. Standalone opening, navigation and study actions reviewed; existing source context retained. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
-      "authoritative_sources": [
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04?lang=eng",
-        "https://newsroom.churchofjesuschrist.org/event/october-2026-general-conference",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/11oaks?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/12christofferson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/13kearon?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/14yee?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/15gilbert?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/16bednar?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/17teh?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/18becerra?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/19eyring?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/21christofferson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/22larson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/23stevenson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/24ortega?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/25wu?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/26wunderli?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/27causse?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/28holmes?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/29matswagothata?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/210soares?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/41uchtdorf?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/42freeman?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/43larreal?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/44rowe?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/45rasband?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/46renlund?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/47mutombo?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/48walker?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/49oaks?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/51christofferson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/52wong?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/53hall?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/54porter?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/55andersen?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/56cook?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/57wakolo?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/58gong?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2026/04/59oaks?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2025/10/24brown?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2023/04/58nelson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2008/10/finding-joy-in-the-journey?lang=eng"
-      ]
-    },
-    {
-      "path": "answers/stand-forever.html",
-      "status": "verified",
-      "published_text_sha256": "f66281eaf2ab12ebf31bad8ae0d36af5980197731cee9bb49ffedc77cad2c9bb",
-      "reviewed_on": "2026-09-08",
-      "review_standard": "Independent reviewer read full page and authoritative sources and explicitly approved semantic content. Existing approved Stand Forever subsection moved intact from Look Unto Me, including three companion media cards. Exact visible text comparison passed. New optional reflection/source/continuation scaffold distinguishes site study aids from source teaching. Independent series panel review: publisher-owned episode descriptions and BYU biography support the series purpose, Episode 1 title and relationship to 2019 devotional. Trailer and playlist links use verified identities; remote preview is native to trailer. No fixed episode count or unreviewed episode summaries introduced. Independent foundational-study enrichment review: four original primary questions retain their text and link to distinct relevant studies. New reading guidance separates source claims from personal application; images reviewed against approved Home likeness and existing art, with artistic descriptions and full-image viewing. Independent final editorial review approved readable punctuation without changed meaning; official source text and verse ranges preserved. Explicit inline scripture links reviewed for exact book, chapter and verse targets, preserving visible reference wording and existing reader behavior. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
-      "authoritative_sources": [
-        "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2015/10/faith-is-not-by-chance-but-by-choice?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2022/04/47nelson?lang=eng",
-        "https://www.youtube.com/playlist?list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
-        "https://www.youtube.com/watch?v=sdgI1E6WJdQ&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
-        "https://www.youtube.com/watch?v=dPnO2QEPrPg&list=PLhfh21X9suLd8AvrHpr2hrjOKXNUuXkrY",
-        "https://speeches.byu.edu/speakers/lawrence-e-corbridge/",
-        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-series-official-trailer-elder-lawrence-e-corbridge",
-        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-1-will-you-stand-or-will-you-go-away-elder-lawrence-e-corbridge",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/9?id=p7-p9&lang=eng#p7",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/93?id=p24&lang=eng#p24",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?id=p4-p5&lang=eng#p4",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p33-p34&lang=eng#p33"
-      ]
-    },
-    {
-      "path": "answers/grief-and-faith.html",
-      "status": "verified",
-      "published_text_sha256": "d80f7fa4266a73ed63a61fdc0761683f8934d140ed6b7c238f531a420d5a72a8",
-      "reviewed_on": "2026-09-08",
-      "review_standard": "Independent reviewer read full page and authoritative sources and explicitly approved semantic content. Scripture paraphrases reviewed in their surrounding chapter context. John 11 supports Lazarus, Martha and Mary, resurrection hope and Jesus weeping; Alma 7:11–13 supports Christs suffering and knowing how to help; Mosiah 18:8–10 supports baptismal commitments to bear burdens, mourn and comfort. Practical suggestions and reflection questions are explicitly optional focusChrist study aids. Existing approved illustrations are identified as study illustrations, not source-native chapter images. No video placements. Independent final editorial review approved readable punctuation without changed meaning; official source text and verse ranges preserved. Explicit inline scripture links reviewed for exact book, chapter and verse targets, preserving visible reference wording and existing reader behavior. Inline scripture destinations independently checked against explicit references and chapter verse ranges. Contextual artwork captions reviewed against cited primary passages; artistic interpretation separated from historical evidence. Grief expansion independently reviewed against official scripture and full conference messages. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
-      "authoritative_sources": [
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p9&lang=eng#p9",
-        "https://www.churchofjesuschrist.org/study/general-conference/2006/10/sunday-will-come?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2023/04/42johnson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?id=p17-p36&lang=eng#p17",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p8-p10&lang=eng#p8",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/2-cor/1?id=p3-p7&lang=eng#p3"
-      ]
-    },
-    {
-      "path": "answers/god-our-heavenly-father.html",
-      "status": "verified",
-      "published_text_sha256": "d77fecd96863c5f2d44b8030d2a03c9640aca4e58fd4bbf4923603599335e0cc",
-      "reviewed_on": "2026-09-08",
-      "review_standard": "Independent full-page semantic review approved by root reviewer against primary scriptures; verification agent reviewed source framing, optional reflections, media summaries, illustration identity and accessible source pathways. Original contextual paraphrase, LDS framing, optional reflection and practice; no direct quotations; scripture modules under 200 words per source. Independent final editorial review approved readable punctuation without changed meaning; official source text and verse ranges preserved. Explicit inline scripture links reviewed for exact book, chapter and verse targets, preserving visible reference wording and existing reader behavior. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
-      "authoritative_sources": [
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/32?lang=eng",
-        "https://scripturecentral.org/shows/stand-forever/episodes/stand-forever-ep-29-the-truth-is-there-a-god-who-is-our-father-elder-lawrence-e-corbridge",
-        "https://www.churchofjesuschrist.org/study/general-conference/2022/10/47nelson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?id=p5-p13&lang=eng#p5",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?id=p22-p34&lang=eng#p22"
-      ]
-    },
-    {
-      "path": "answers/restored-church-of-jesus-christ.html",
-      "status": "verified",
-      "published_text_sha256": "a3d64ddc7b23b9c1f8ebabb5a879174d90677bf2333d439e7a09296dc3750f16",
-      "reviewed_on": "2026-09-08",
-      "review_standard": "Independent full-page semantic review approved by root reviewer against primary scriptures; verification agent reviewed source framing, optional reflections, media summaries, illustration identity and accessible source pathways. Original contextual paraphrase, LDS framing, optional reflection and practice; no direct quotations; scripture modules under 200 words per source. Independent final editorial review approved readable punctuation without changed meaning; official source text and verse ranges preserved. Explicit inline scripture links reviewed for exact book, chapter and verse targets, preserving visible reference wording and existing reader behavior. Inline scripture destinations independently checked against explicit references and chapter verse ranges. Contextual artwork captions reviewed against cited primary passages; artistic interpretation separated from historical evidence. Grief expansion independently reviewed against official scripture and full conference messages. Five-picture mandate: contextual caption and alt text independently reviewed; source claims distinguished from optional personal applications; new image identity, eyes, anatomy and clarity independently reviewed. Native aspect ratio and per-page distinct body-picture count enforced separately. Page-exclusive artwork captions and alternative text independently reviewed against exact approved originals and existing source context; illustrative interpretations remain explicit. Current source links preserved, exact inline scripture selections and added official chapter text independently verified. Stale Grief scene description corrected to the reviewed walking scene. Navigation previews remain excluded from body-picture counts. Owner-directed artwork-caption review completed September 8, 2026: visitor-facing captions and expanded descriptions use concrete image-specific language, retain accurate source links, and contain no generic production disclaimers. Independent verifier reviewed the complete changed caption set and regression scope. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
-      "authoritative_sources": [
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2020/04/45nelson?lang=eng",
-        "https://www.churchofjesuschrist.org/study/general-conference/2013/10/come-join-with-us?lang=eng",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p8-p10&lang=eng#p8",
-        "https://www.churchofjesuschrist.org/study/scriptures/nt/eph/2?id=p13-p22&lang=eng#p13",
-        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?id=p1-p12&lang=eng#p1",
-        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?id=p1-p22&lang=eng#p1"
       ]
     }
   ]
