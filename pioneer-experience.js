@@ -43,7 +43,7 @@
             sources: [['Latter-day Saint Women\'s History', 'https://www.churchofjesuschrist.org/study/church-history/womens-history?lang=eng'], ['Church History Biographical Database', 'https://history.churchofjesuschrist.org/chd/landing?lang=eng']]
         },
         'Pioneer Faith': {
-            answer: 'Many Latter-day Saint pioneers understood gathering as a covenant commitment to Jesus Christ. Converts left homes, relatives, languages, and familiar cultures because they believed God had restored the gospel and called the Saints to gather. Temple covenants made in Nauvoo, teachings about Zion, and hope for a community where they could worship together gave religious meaning to the migration.\n\nFaith appeared in daily practices as much as in dramatic stories. Travelers prayed, read scripture, blessed the sick, worshipped on Sundays, sang hymns, shared food, buried loved ones, and served exhausted companions. “Come, Come, Ye Saints,” written during the 1846 crossing of Iowa, gave words to both hardship and hope. For many, rescue and mutual care became evidence of discipleship.\n\nTheir records also contain fear, anger, doubt, loneliness, and spiritual struggle. Faith did not make travelers immune to grief or guarantee the outcome they wanted. Some later remembered divine help; others emphasized endurance, practical cooperation, or loss. Pioneer faith is most meaningful when studied through individual voices and when sacrifice is connected to Christlike service rather than romanticized suffering.',
+            answer: 'Many Latter-day Saint pioneers understood gathering as a covenant commitment to Jesus Christ. Converts left homes, relatives, languages, and familiar cultures because they believed God had restored the gospel and called the Saints to gather. Temple covenants made in Nauvoo, teachings about Zion, and hope for a community where they could worship together gave religious meaning to the migration.\n\nFaith appeared in daily practices as much as in dramatic stories. Travelers prayed, read scripture, blessed the sick, worshipped on Sundays, sang hymns, shared food, buried loved ones, and served exhausted companions. The hymn Come, Come, Ye Saints, written during the 1846 crossing of Iowa, gave words to both hardship and hope. For many, rescue and mutual care became evidence of discipleship.\n\nTheir records also contain fear, anger, doubt, loneliness, and spiritual struggle. Faith did not make travelers immune to grief or guarantee the outcome they wanted. Some later remembered divine help; others emphasized endurance, practical cooperation, or loss. Pioneer faith is most meaningful when studied through individual voices and when sacrifice is connected to Christlike service rather than romanticized suffering.',
             sources: [['Pioneer Trek', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng'], ['Hymns of the Trail', 'https://history.churchofjesuschrist.org/content/museum/museum-treasures-hymns-of-the-trail?lang=eng']]
         },
         'Pioneer Miracles': {
@@ -152,6 +152,8 @@
             : /handcart(?!\s+racing)/i.test(text) ? 'Handcart Companies'
             : /pioneer children|children.*trail|kids.*pioneer/i.test(text) ? 'Pioneer Children'
             : /pioneer food|what did pioneers eat|pioneer meals/i.test(text) ? 'Pioneer Food'
+            : /women pioneers|women.*pioneer|pioneer.*women/i.test(text) ? 'Women Pioneers'
+            : /pioneer faith|faith.*pioneer|pioneer.*faith/i.test(text) ? 'Pioneer Faith'
             : /daily life|life on the trail|ordinary day.*pioneer/i.test(text) ? 'Pioneer Daily Life'
             : /\bbrigham young\b/i.test(text) ? 'Brigham Young'
             : null;
@@ -381,6 +383,11 @@
         const input = userInput();
         if (!input || input.disabled || !input.isConnected) return;
         try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+        input.setAttribute('data-focuschrist-composer-ready', 'true');
+        if (document.activeElement === input && typeof input.setSelectionRange === 'function') {
+            const end = input.value.length;
+            input.setSelectionRange(end, end);
+        }
     }
 
     function ensurePioneerEntryStyles() {
@@ -498,17 +505,24 @@
         if (!box || !answerElement) return;
         if (typeof promoteLatestExchangeToTop === 'function') promoteLatestExchangeToTop(answerElement);
         if (!answerElement.classList || !answerElement.classList.contains('bot-message')) answerElement = box.querySelector('.bot-message') || answerElement;
-        const internalTop = Math.max(0, answerElement.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 12);
-        box.scrollTo({ top: internalTop, behavior: 'instant' });
+        const questionElement = answerElement.previousElementSibling && answerElement.previousElementSibling.classList.contains('user-message')
+            ? answerElement.previousElementSibling
+            : null;
+        const anchor = questionElement || answerElement;
+        const boxRectBefore = box.getBoundingClientRect();
+        const internalTop = Math.max(0, anchor.getBoundingClientRect().top - boxRectBefore.top + box.scrollTop - 12);
+        // Keep the newest question at the top of the chat viewport so the
+        // question and the beginning of its answer are visible together.
+        box.scrollTo({ top: internalTop, behavior: 'auto' });
         const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
         const headerHeight = header && getComputedStyle(header).position === 'fixed' ? header.getBoundingClientRect().height : 0;
         const safeTop = headerHeight + 18;
-        const rect = (box.scrollHeight > box.clientHeight + 2 ? box : answerElement).getBoundingClientRect();
-        if (rect.top < safeTop || rect.top > window.innerHeight * 0.72) {
-            window.scrollTo({ top: window.scrollY + rect.top - safeTop, behavior: preferredScrollBehavior() });
+        const boxRect = box.getBoundingClientRect();
+        if (boxRect.top < safeTop || boxRect.top > window.innerHeight * 0.72) {
+            window.scrollTo({ top: Math.max(0, window.scrollY + boxRect.top - safeTop), behavior: 'auto' });
         }
-        // Every completed answer leaves the next-question field ready. Keep
-        // focus from triggering another scroll so the answer remains in view.
+        // Every completed answer leaves the next-question field clicked,
+        // focused, and ready without undoing the question/answer scroll.
         if (typeof focusPioneerInput === 'function') window.setTimeout(focusPioneerInput, 80);
     }
 
