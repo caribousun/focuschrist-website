@@ -5,6 +5,12 @@ const path = require('node:path');
 const { execFileSync } = require('node:child_process');
 const { JSDOM } = require('jsdom');
 const root = path.resolve(__dirname, '..');
+process.on('uncaughtException', error => {
+    const detail = String(error && error.stack ? error.stack : error).replace(/\r?\n/g, '%0A');
+    console.error(detail);
+    console.log(`::error title=Featured art study runtime QA failure::${detail}`);
+    process.exitCode = 1;
+});
 const ref = process.argv.find(arg => arg.startsWith('--ref='))?.slice(6);
 const read = file => ref ? execFileSync('git', ['show', `${ref}:${file}`], { cwd: root, encoding: 'utf8' }) : fs.readFileSync(path.join(root, file), 'utf8');
 const gallery = new JSDOM(read('art.html'), { url: 'https://focuschrist.com/art.html' });
