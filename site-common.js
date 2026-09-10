@@ -689,6 +689,18 @@
         document.body.appendChild(script);
     }
 
+    function installCloudflareWebAnalytics() {
+        if (document.querySelector('script[data-focuschrist-cloudflare-analytics]')) return;
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+        script.setAttribute('data-cf-beacon', JSON.stringify({ token: '05b324aea08441af9eceed61a56dbd78' }));
+        script.setAttribute('data-focuschrist-cloudflare-analytics', 'true');
+        document.head.appendChild(script);
+    }
+
+    installCloudflareWebAnalytics();
+
     window.focusChristVerifyScriptureAnswer = async function (text, sources) {
         const needsLibrary = extractScriptureCitations(text).length || /\d+:\d+|[“”"‘’']|\[\[SCRIPTURE:/i.test(text)
             || (sources || []).some(source => /\/study\/scriptures\/.+\/\d/.test(source.url || ''));
