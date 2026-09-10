@@ -334,7 +334,7 @@
         const conversation = document.getElementById('conversation-heading');
         if (conversation) scrollPageToElement(conversation);
         const chatBox = document.getElementById('chatBox');
-        if (chatBox) chatBox.removeAttribute('data-focuschrist-latest-first');
+        if (chatBox && typeof chatBox.removeAttribute === 'function') chatBox.removeAttribute('data-focuschrist-latest-first');
     }
 
     function promoteLatestExchangeToTop(answerCandidate) {
