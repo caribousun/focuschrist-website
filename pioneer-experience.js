@@ -26,6 +26,10 @@
             answer: 'Brigham Young was born in Vermont in 1801, joined the Church in 1832, and became an Apostle in 1835. Following the deaths of Joseph and Hyrum Smith in 1844, the Quorum of the Twelve Apostles, with Young as its president, provided Church leadership. He directed preparations to complete temple ordinances in Nauvoo and organize the Saints’ departure.\n\nYoung led the 1847 vanguard company toward the Great Basin. The company mapped the route, recorded landmarks, prepared the way for later travelers, and entered the Salt Lake Valley in July. Young then supervised a much larger migration and encouraged settlements throughout the Intermountain West. He became the second President of the Church in 1847 and later served as the first governor of Utah Territory.\n\nHis legacy is extensive and complicated. Under his leadership, converts gathered from many nations, communities and irrigation systems were established, missionary work expanded, and temples were planned or built. The era also included conflict, plural marriage, restrictive racial policies, and difficult relations with Native peoples and the federal government. Studying Brigham Young responsibly requires both attention to his central role in pioneer survival and settlement and honest engagement with the full historical record.',
             sources: [['Brigham Young', 'https://www.churchofjesuschrist.org/study/history/topics/brigham-young?lang=eng']]
         },
+        'Joseph Smith': {
+            answer: 'Joseph Smith (1805–1844) was the founding prophet and first President of The Church of Jesus Christ of Latter-day Saints. He organized the Church in 1830, led its early communities through Ohio, Missouri, and Illinois, and directed the building of the Nauvoo Temple before his death in Carthage, Illinois, in June 1844. His leadership shaped the religious community whose members later left Nauvoo and began the westward pioneer migration in 1846.\n\nA Pioneer-page answer should distinguish Joseph Smith from later pioneer leaders. He did not lead the 1846 exodus or the 1847 vanguard company; Brigham Young and other leaders organized those journeys after Joseph Smith’s death. To study his life responsibly, compare the official Church history narrative with specific documents and recognize that his legacy includes both sincere religious devotion and difficult historical questions.',
+            sources: [['Joseph Smith', 'https://www.churchofjesuschrist.org/study/history/topics/joseph-smith?lang=eng'], ['The Church in Nauvoo', 'https://www.churchofjesuschrist.org/study/history/topics/nauvoo?lang=eng']]
+        },
         'Salt Lake Valley': {
             answer: 'Members of the 1847 vanguard company first entered the Salt Lake Valley on July 22. Brigham Young, delayed by illness, arrived on July 24. The company had traveled more than a thousand miles from the Missouri River, following established portions of western trails before turning through the mountains toward the valley.\n\nWork began immediately. Pioneers diverted water, broke dry soil, planted late crops, surveyed a city, and constructed a fort for protection and shared labor. Later companies arrived that same year, and continued immigration transformed the valley into the administrative and spiritual center of the Church. Irrigation, cooperation, and organized settlement became defining features of early community building.\n\nThe valley was not vacant or without prior claims. Ute, Shoshone, and other Native peoples had long known, traveled through, hunted in, and used the wider region. As Latter-day Saint settlements expanded, different understandings of land and resources contributed to trade and cooperation but also displacement and conflict. The Salt Lake Valley story is therefore both an account of refuge and determined settlement and part of a larger western history whose consequences affected existing Native communities.',
             sources: [['Salt Lake Valley', 'https://www.churchofjesuschrist.org/study/history/topics/salt-lake-valley?lang=eng'], ['Pioneer Settlements', 'https://www.churchofjesuschrist.org/study/history/topics/pioneer-settlements?lang=eng']]
@@ -137,6 +141,21 @@
             contextEntryId: resolution.entryId || null,
             contextQuestion: resolution.contextQuestion || null
         });
+    }
+
+    function directPioneerQuestion(question) {
+        const text = String(question || '').toLowerCase();
+        const topic = /\bjoseph smith\b(?!\s+barlow\b)/i.test(text) ? 'Joseph Smith'
+            : /winter quarters/i.test(text) ? 'Winter Quarters'
+            : /\bwillie\b.*\bhandcart|\bhandcart\b.*\bwillie\b/i.test(text) ? 'Willie Handcart Company'
+            : /\bmartin\b.*\bhandcart|\bhandcart\b.*\bmartin\b/i.test(text) ? 'Martin Handcart Company'
+            : /handcart(?!\s+racing)/i.test(text) ? 'Handcart Companies'
+            : /pioneer children|children.*trail|kids.*pioneer/i.test(text) ? 'Pioneer Children'
+            : /pioneer food|what did pioneers eat|pioneer meals/i.test(text) ? 'Pioneer Food'
+            : /daily life|life on the trail|ordinary day.*pioneer/i.test(text) ? 'Pioneer Daily Life'
+            : /\bbrigham young\b/i.test(text) ? 'Brigham Young'
+            : null;
+        return topic ? reviewedTopicAnswer(topic) : null;
     }
 
     function appendTextParagraph(parent, text) {
@@ -818,7 +837,7 @@
 
         try {
             const contextResolution = resolvePioneerContext(question);
-            const reviewed = reviewedPioneerKnowledge(question, contextResolution);
+            const reviewed = directPioneerQuestion(question) || reviewedPioneerKnowledge(question, contextResolution);
             if (reviewed) {
                 const answer = window.addMessage(reviewed.answer, false, reviewed.sources || []);
                 rememberExchange(question, reviewed.answer, reviewed);
@@ -829,28 +848,12 @@
 
             loading = showLoading();
 
-            let pageReference = '';
-            if (typeof searchTellMyStory === 'function') {
-                const storyMatch = await searchTellMyStory(question);
-                if (requestId !== pioneerRequestSerial) return;
-                if (storyMatch && storyMatch[0] && storyMatch[0].full === false && storyMatch[0].choices) {
-                    if (loading) loading.remove();
-                    const answer = renderPioneerChoices(storyMatch[0], question);
-                    setConversationMode(true);
-                    positionAnswer(answer);
-                    return;
-                }
-                if (storyMatch && storyMatch[0] && storyMatch[0].full === true) {
-                    if (loading && loading.isConnected) loading.remove();
-                    await answerSelectedPioneer(storyMatch[0], question, requestId);
-                    return;
-                }
-                if (Array.isArray(storyMatch) && storyMatch.length && typeof storyMatch[0] === 'string') {
-                    pageReference = 'Relevant excerpts located in the page Tell My Story collection:\n' + storyMatch.join('\n\n');
-                }
-            }
-
-            const response = await requestPioneerAI(contextResolution.query || question, pageReference);
+            // Tell My Story, Too is an explicit optional experience. Do not run
+            // its loose name matcher for ordinary Pioneer questions: a generic
+            // question such as "Who was Joseph Smith?" can otherwise resolve to
+            // an unrelated similarly named biography before the normal Pioneer
+            // answer path has a chance to respond.
+            const response = await requestPioneerAI(contextResolution.query || question, '');
             if (requestId !== pioneerRequestSerial) return;
             if (loading && loading.isConnected) loading.remove();
             rememberExchange(question, response.answer, contextResolution);

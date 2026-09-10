@@ -5,7 +5,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = "2026-09-03.16"
 WORKER_POLICY = "2026-09-09.81"
-CACHE = "20260910-followup-visibility-5"
+CACHE = "20260910-pioneer-routing-6"
 
 
 def block(text: str, start: str, end: str) -> str:
@@ -46,13 +46,13 @@ def main() -> int:
                 errors.append("missing disclosure state or recovery: " + state)
 
     send_flow = block(experience, "window.sendMessage = async function", "window.askTellMyStory")
-    contextual_request = "requestPioneerAI(contextResolution.query || question, pageReference)"
-    if send_flow.find("searchTellMyStory(question)") > send_flow.find(contextual_request):
-        errors.append("free-form questions call AI before checking the local book")
+    contextual_request = "requestPioneerAI(contextResolution.query || question, '')"
+    if "searchTellMyStory(question)" in send_flow:
+        errors.append("free-form questions must not run the loose Tell My Story name matcher")
     if "const contextResolution = resolvePioneerContext(question)" not in send_flow:
         errors.append("free-form Pioneer questions do not resolve immediate conversation context")
     if "const response = await " + contextual_request not in send_flow:
-        errors.append("true local no-matches no longer reach the AI queue")
+        errors.append("true local no-matches no longer reach the Pioneer AI queue")
 
     required_markers = (
         "reviewed-local-book-entry",
