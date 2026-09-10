@@ -690,6 +690,8 @@
     }
 
     function installCloudflareWebAnalytics() {
+        if (typeof document === 'undefined' || !document.head
+            || typeof document.createElement !== 'function') return;
         if (document.querySelector('script[data-focuschrist-cloudflare-analytics]')) return;
         const script = document.createElement('script');
         script.type = 'module';
