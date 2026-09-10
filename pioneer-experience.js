@@ -477,8 +477,8 @@
     function positionAnswer(answerElement) {
         const box = chatBox();
         if (!box || !answerElement) return;
-        promoteLatestExchangeToTop(answerElement);
-        answerElement = box.querySelector('.bot-message') || answerElement;
+        if (typeof promoteLatestExchangeToTop === 'function') promoteLatestExchangeToTop(answerElement);
+        if (!answerElement.classList || !answerElement.classList.contains('bot-message')) answerElement = box.querySelector('.bot-message') || answerElement;
         const internalTop = Math.max(0, answerElement.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 12);
         box.scrollTo({ top: internalTop, behavior: 'instant' });
         const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
@@ -490,13 +490,19 @@
         }
         // Every completed answer leaves the next-question field ready. Keep
         // focus from triggering another scroll so the answer remains in view.
-        window.setTimeout(focusPioneerInput, 80);
+        if (typeof focusPioneerInput === 'function') window.setTimeout(focusPioneerInput, 80);
     }
 
     document.addEventListener('focuschrist:answer-ready', function (event) {
         window.setTimeout(function () {
             const box = chatBox();
-            if (box && event.target === box.querySelector('.bot-message')) positionAnswer(event.target);
+            if (box && event.target && event.target.classList && event.target.classList.contains('bot-message')) {
+                const newerQuestion = Array.from(box.querySelectorAll('.user-message')).some(function (question) {
+                    return Boolean(event.target.compareDocumentPosition(question) & 4);
+                });
+                if (newerQuestion) return;
+                positionAnswer(event.target);
+            }
         }, 60);
     });
 

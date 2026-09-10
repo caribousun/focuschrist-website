@@ -360,11 +360,13 @@
     function focusLatestAnswer(answerCandidate) {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox) return;
-        promoteLatestExchangeToTop(answerCandidate);
+        if (typeof promoteLatestExchangeToTop === 'function') promoteLatestExchangeToTop(answerCandidate);
         const answers = chatBox.querySelectorAll('.bot-message');
         if (!answers.length) return;
 
-        const answer = answers[0];
+        const answer = answerCandidate && answerCandidate.classList && answerCandidate.classList.contains('bot-message')
+            ? answerCandidate
+            : (typeof promoteLatestExchangeToTop === 'function' ? answers[0] : answers[answers.length - 1]);
         const userMessages = chatBox.querySelectorAll('.user-message');
         const latestUserMessage = userMessages.length ? userMessages[0] : null;
         const exchangeStart = latestUserMessage || answer;
@@ -398,7 +400,7 @@
     function focusLatestAnswerSettled(answer) {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox || !answer || !answer.isConnected) return;
-        promoteLatestExchangeToTop(answer);
+        if (typeof promoteLatestExchangeToTop === 'function') promoteLatestExchangeToTop(answer);
         const userMessages = chatBox.querySelectorAll('.user-message');
         const exchangeStart = userMessages.length ? userMessages[0] : answer;
         const exchangeTopInsideChat = exchangeStart.getBoundingClientRect().top
@@ -518,11 +520,15 @@
         chatBox.addEventListener('focuschrist:answer-ready', function (event) {
             window.setTimeout(function () {
                 if (!event.target || !event.target.classList || !event.target.classList.contains('bot-message')) return;
+                const newerQuestion = Array.from(chatBox.querySelectorAll('.user-message')).some(function (question) {
+                    return Boolean(event.target.compareDocumentPosition(question) & 4);
+                });
+                if (newerQuestion) return;
                 addRelatedStudyToLatestAnswer();
                 setFollowupVisible(true);
                 setFollowupBusy(false);
                 focusLatestAnswer(event.target);
-                focusFollowupComposer();
+                if (typeof focusFollowupComposer === 'function') focusFollowupComposer();
             }, 60);
         });
         const observer = new MutationObserver(function (mutations) {
@@ -542,7 +548,7 @@
                     setFollowupVisible(true);
                     setFollowupBusy(false);
                     focusLatestAnswer();
-                    focusFollowupComposer();
+                    if (typeof focusFollowupComposer === 'function') focusFollowupComposer();
                 }, 60);
             }
         });
