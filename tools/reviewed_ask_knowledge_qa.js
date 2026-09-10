@@ -101,6 +101,9 @@ assert(ownerFirstVision && ownerFirstVision.id === 'church-first-vision-1820'
     && ownerFirstVision.mode === 'reviewed-local' && ownerFirstVision.sourceIntegrityPassed === true
     && ownerFirstVision.sources.every((source) => source.url.includes('churchofjesuschrist.org')),
     'owner First Vision regression must resolve on Main Ask from reviewed official Church sources with zero provider dependency');
+const holyGhostRelationship = registry.match('Who is the Holy Ghost in relation to God and Jesus?', { profile: 'ask' });
+assert(!holyGhostRelationship || holyGhostRelationship.id !== 'ask-jesus-christ-central',
+    'Holy Ghost relationship questions must not reuse the reviewed Jesus Christ answer');
 const ownerBookOfMormon = registry.match('what year did the book of mormon come out', { profile: 'ask' });
 assert(ownerBookOfMormon && ownerBookOfMormon.id === 'church-book-of-mormon-publication-1830'
     && ownerBookOfMormon.mode === 'reviewed-local' && ownerBookOfMormon.sourceIntegrityPassed === true

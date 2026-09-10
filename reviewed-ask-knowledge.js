@@ -140,7 +140,7 @@
                     ['jesus', 'jesus christ', 'christ'],
                     ['who', 'central', 'important', 'belief', 'believe']
                 ],
-                none: ['jesus christ superstar', 'actor', 'film', 'movie', 'paint', 'painted', 'painting']
+                none: ['jesus christ superstar', 'actor', 'film', 'movie', 'paint', 'painted', 'painting', 'holy ghost', 'holy spirit', 'godhead']
             },
             positiveTests: [
                 'Who is Jesus Christ, and why is He central to Latter-day Saint belief?',
