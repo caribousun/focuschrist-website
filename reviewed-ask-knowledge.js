@@ -125,6 +125,97 @@
             ]
         },
         {
+            id: 'ask-god-the-father',
+            profiles: ['ask'],
+            priority: 185,
+            reviewedOn: '2026-09-10',
+            integrityKey: 'ask-god-the-father-v1',
+            match: {
+                exact: [
+                    'Who is God?',
+                    'Who is God the Father?',
+                    'What is God in Latter-day Saint belief?'
+                ],
+                all: [
+                    ['god', 'father', 'heavenly'],
+                    ['who', 'what', 'belief', 'believe']
+                ],
+                none: ['jesus', 'christ', 'holy ghost', 'holy spirit', 'godhead', 'movie', 'painting']
+            },
+            positiveTests: [
+                'Who is God?',
+                'Who is God the Father?',
+                'What is God in Latter-day Saint belief?'
+            ],
+            negativeTests: [
+                'Who is Jesus Christ to God?',
+                'Who is the Holy Ghost in relation to God and Jesus?'
+            ],
+            answer: 'God the Father is the Supreme Being whom Latter-day Saints worship and pray to. He is the Creator, Ruler, and Preserver of all things, and He is our Heavenly Father. Latter-day Saint teaching holds that the Father has a tangible body of flesh and bones and that we are His literal spirit children with eternal potential.\n\nThe Godhead consists of three distinct beings: God the Father, Jesus Christ, and the Holy Ghost. They are united in purpose and doctrine. The Father is the object of worship, Jesus Christ is the Lord and Redeemer, and the Holy Ghost reveals and testifies of the Father and the Son.',
+            sources: [
+                {
+                    text: 'God the Father - Gospel Topics',
+                    label: 'God the Father - Gospel Topics',
+                    url: 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/god-the-father?lang=eng',
+                    tier: 'Official Church teaching',
+                    note: 'Official overview of God the Father in Latter-day Saint belief.'
+                },
+                {
+                    text: 'Godhead - Gospel Topics',
+                    label: 'Godhead - Gospel Topics',
+                    url: 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng',
+                    tier: 'Official Church teaching',
+                    note: 'Official overview of the distinct members and unity of the Godhead.'
+                }
+            ]
+        },
+        {
+            id: 'ask-holy-ghost-godhead',
+            profiles: ['ask'],
+            priority: 185,
+            reviewedOn: '2026-09-10',
+            integrityKey: 'ask-holy-ghost-godhead-v1',
+            match: {
+                exact: [
+                    'Who is the Holy Ghost in relation to God and Jesus?',
+                    'Who is the Holy Ghost in relation to God the Father and Jesus Christ?',
+                    'What is the Holy Ghost in the Godhead?'
+                ],
+                all: [
+                    ['holy ghost', 'holy spirit'],
+                    ['god', 'father', 'godhead'],
+                    ['jesus', 'christ', 'son', 'relation', 'relationship']
+                ],
+                none: ['movie', 'painting', 'actor']
+            },
+            positiveTests: [
+                'Who is the Holy Ghost in relation to God and Jesus?',
+                'Who is the Holy Ghost in relation to God the Father and Jesus Christ?',
+                'What is the Holy Ghost in the Godhead?'
+            ],
+            negativeTests: [
+                'Who is Jesus Christ?',
+                'What does the Holy Ghost do as a constant companion?'
+            ],
+            answer: 'The Holy Ghost is the third member of the Godhead, together with God the Father and Jesus Christ. The Father, the Son, and the Holy Ghost are distinct beings, united in purpose and doctrine. The Holy Ghost does not replace the Father or the Son; He bears witness of Them, reveals truth, teaches and comforts, and helps people recognize and follow Jesus Christ.\n\nLatter-day Saint scripture teaches that the Holy Ghost is a personage of Spirit, while the Father and the Son have tangible bodies of flesh and bones. His role is personal and active: He testifies of the Father and the Son and guides those who seek truth and live faithfully.',
+            sources: [
+                {
+                    text: 'The Godhead - Gospel Topics',
+                    label: 'The Godhead - Gospel Topics',
+                    url: 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng',
+                    tier: 'Official Church teaching',
+                    note: 'Official overview of the Father, Son, and Holy Ghost as distinct members of the Godhead.'
+                },
+                {
+                    text: 'Doctrine and Covenants 130:22',
+                    label: 'Doctrine and Covenants 130:22',
+                    url: 'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130.22?lang=eng',
+                    tier: 'Official scripture',
+                    note: 'Scripture describing the Father and Son as having bodies of flesh and bones and the Holy Ghost as a personage of Spirit.'
+                }
+            ]
+        },
+        {
             id: 'ask-jesus-christ-central',
             profiles: ['ask'],
             priority: 180,

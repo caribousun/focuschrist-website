@@ -52,6 +52,22 @@
       ]
     },
     {
+      "id": "ask-god-the-father",
+      "entry_sha256": "d801370cf72af38e6f8ae5d19d278aabed712c156fbe91d0741a0872799f997e",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/god-the-father?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng"
+      ]
+    },
+    {
+      "id": "ask-holy-ghost-godhead",
+      "entry_sha256": "5a7c52078e8edb5659b15ec7e6a4b8c36a6fc3fb63801d80a60885b47c62b385",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130.22?lang=eng"
+      ]
+    },
+    {
       "id": "ask-jesus-christ-central",
       "entry_sha256": "df252443c6af5bbcb2f76bf0e464dc96ee06db8686c8dc105a4f383a31a02af2",
       "authoritative_sources": [
