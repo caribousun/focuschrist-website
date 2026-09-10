@@ -494,6 +494,18 @@ function namedGospelTopicSource(question, page, ranked) {
   return { ...top, namedGospelTopic: true };
 }
 
+function foundationalIdentitySource(question, page) {
+  if (page !== 'ask') return null;
+  const normalized = String(question || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\s'-]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (!/^(?:who is|what is|tell me about) (?:the )?(?:one true )?god$/.test(normalized)
+    && !/^(?:who is|what is) (?:the )?heavenly father$/.test(normalized)) return null;
+  return CHURCH_SOURCE_INDEX.find((entry) => entry.url === 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/god-the-father?lang=eng') || null;
+}
+
 function isPioneerIrrigationIntent(question, page) {
   return page === 'pioneers'
     && /\b(?:irrigat\w*|shared\s+water|water\s+(?:management|distribution|systems?))\b/i.test(String(question || ''));
@@ -502,6 +514,7 @@ function isPioneerIrrigationIntent(question, page) {
 function rankChurchSourceCandidates(question, page) {
   const queryTokens = normalizeDiscoveryTokens(question);
   if (!queryTokens.length) return [];
+  const foundationalIdentity = foundationalIdentitySource(question, page);
   const scripture = deterministicScriptureSource(question);
   const pioneerIrrigation = isPioneerIrrigationIntent(question, page);
   // Discovery vocabulary from the opening definition of the official Godhead
@@ -552,6 +565,7 @@ function rankChurchSourceCandidates(question, page) {
     if (page === 'pioneers' && /pioneer|history/.test(`${entry.tokens} ${entry.kind}`)) score += 8;
     const topicPinned = pioneerIrrigation && /\/study\/manual\/church-history-in-the-fulness-of-times\/chapter-twenty-six/.test(entry.url);
     if (topicPinned) score += 500;
+    if (foundationalIdentity && entry.url === foundationalIdentity.url) score += 500;
     return { ...entry, namedGospelTopic:entry.namedGospelTopic || entry.kind === 'history-topic', score, overlapCount: overlaps.length, titleMatch, focusedTopicMatch, topicPinned };
   }).filter((entry) => entry.topicPinned
     || entry.overlapCount >= 2
@@ -775,10 +789,16 @@ function evidenceAdmissionSufficient(candidate, content, question) {
   const titleTokens = normalizeDiscoveryTokens(candidate?.title || '');
   const questionTokens = new Set(normalizeDiscoveryTokens(question));
   const bodyTokens = new Set(normalizeDiscoveryTokens(content));
+  const foundationalIdentityEvidence = candidate?.namedGospelTopic === true
+    && /\/study\/manual\/gospel-topics\/(?:god-the-father|godhead)\?lang=eng/.test(String(candidate?.url || ''))
+    && /^(?:who is|what is|tell me about) (?:the )?(?:one true )?god$/.test(String(question || '').toLowerCase().replace(/[^a-z0-9\s'-]/g, ' ').replace(/\s+/g, ' ').trim())
+    && /\bgod\b/i.test(String(content || ''))
+    && String(content).split(/\s+/).length >= 25;
   const explicitGospelTopic = candidate?.namedGospelTopic === true && candidate.kind === 'gospel-topic'
     && titleTokens.length > 0 && titleTokens.every(token => questionTokens.has(token) && bodyTokens.has(token))
     && String(content).split(/\s+/).length >= 25;
   return uniqueEvidenceOverlapCount(content, question) >= 2
+    || foundationalIdentityEvidence
     || explicitGospelTopic
     || isPinnedPioneerIrrigationSource(candidate, content);
 }
@@ -988,16 +1008,21 @@ function relatedConversationSources(scope) {
 
 async function retrieveIndexedChurchEvidence(question, page, deadline, pioneerTopicKey = '') {
   const rankedCandidates = rankChurchSourceCandidates(question, page);
+  const foundationalIdentity = foundationalIdentitySource(question, page);
   const transportTopics = pioneerTopicKey ? [] : pioneerTransportTopics(question, page);
   const deterministicScripture = deterministicScriptureSource(question);
   const deterministicHistoryTopic = deterministicScripture || transportTopics.length ? null : deterministicHistoryTopicSource(question, page);
-  const namedGospelTopic = deterministicScripture || deterministicHistoryTopic || transportTopics.length ? null : namedGospelTopicSource(question, page, rankedCandidates);
+  const namedGospelTopic = deterministicScripture || deterministicHistoryTopic || transportTopics.length || foundationalIdentity ? null : namedGospelTopicSource(question, page, rankedCandidates);
+  const foundationalCompanion = foundationalIdentity
+    ? CHURCH_SOURCE_INDEX.find((entry) => entry.url === 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng')
+    : null;
   const topic = pioneerTopic(pioneerTopicKey, page);
   const candidates = topic ? [{ url: topic.url, title: topic.subject, kind: 'pioneer-disclosure', pioneerDisclosure: true, focalPhrases: PIONEER_FOCAL_PHRASES[pioneerTopicKey] || [] }] : transportTopics.length ? transportTopics.map(source => ({url:source.url,title:source.subject,kind:'history-topic',namedGospelTopic:true})) : deterministicScripture
     ? [{ ...deterministicScripture, score: 1000, overlapCount: normalizeDiscoveryTokens(question).length }]
     : deterministicHistoryTopic
       ? [deterministicHistoryTopic]
-      : namedGospelTopic ? [namedGospelTopic] : rankedCandidates;
+      : foundationalIdentity ? [{ ...foundationalIdentity, namedGospelTopic: true }, ...(foundationalCompanion ? [{ ...foundationalCompanion, namedGospelTopic: true }] : [])]
+        : namedGospelTopic ? [namedGospelTopic] : rankedCandidates;
   const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
   const singleSource = Boolean(topic || deterministicScripture || deterministicHistoryTopic || namedGospelTopic);
   const fetchCandidates = singleSource ? candidates.slice(0, 1) : candidates.slice(0, 2);

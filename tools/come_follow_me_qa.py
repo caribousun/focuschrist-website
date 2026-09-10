@@ -36,6 +36,9 @@ require("Jeremiah 31–33; 36–39; Lamentations 1; 3" in script, "October 26 le
 require("data-cfm-current-title" in html, "current lesson title is not wired")
 require(html.count("data-cfm-current-lesson") >= 2, "weekly lesson must be available in the main action and toolkit")
 require("cfm-toolkit__grid" in html, "official study toolkit is missing")
+toolkit = html.split('class="cfm-toolkit__grid"', 1)[-1].split('</div></div><div class="cfm-week-nav"', 1)[0]
+toolkit_images = re.findall(r'<img[^>]+class="cfm-tool__image"[^>]+src="([^"]+)"', toolkit)
+require(len(toolkit_images) == 4 and len(set(toolkit_images)) == 4, "study toolkit cards must use four distinct artworks")
 require("003-improve-learning?lang=eng" in html, "official learning guidance is missing")
 require("004-old-testament-overview?lang=eng" in html, "official Old Testament overview is missing")
 require("document.querySelectorAll('[data-cfm-current-lesson]')" in script, "all current-lesson links must update together")
