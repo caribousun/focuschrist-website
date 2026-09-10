@@ -42,7 +42,7 @@ if not errors:
         ('id="historyResetButton"', "New Question control"),
         ('study-source-router.js', "source router loader"),
         ('church-history-experience.js?v=20260903-16', "versioned history experience loader"),
-        ('church-history.css?v=20260909-warm', "versioned history stylesheet"),
+        ('church-history.css?v=20260910-topic-pills-1', "versioned history stylesheet"),
         ('site-system.css?v=20260909-warm', "versioned shared artwork interaction stylesheet"),
         ('assets/heroes/church-history.webp', "repository-local Sacred Grove hero delivery pattern"),
         ('referrerpolicy="no-referrer"', "hero no-referrer delivery"),
@@ -187,6 +187,12 @@ if not errors:
         ('.fc-history-art-panel', "approved artwork presentation surface"),
         ('.fc-history-art-panel--offset-left', "alternating artwork alignment"),
         ('aspect-ratio: 12 / 5;', "mobile panoramic artwork crop"),
+        ('.fc-history-predictions button', "Ask/Pioneer-matched history topic pills"),
+        ("font-family: 'Segoe UI', Tahoma, sans-serif;", "shared pill typography family"),
+        ("font-size: .88rem;", "shared pill typography size"),
+        ("font-weight: 400;", "shared pill typography weight"),
+        ("background: rgba(10,36,46,.78);", "shared pill surface color"),
+        ("color: #f4c66f;", "shared pill text color"),
     ]:
         if needle not in css:
             errors.append(f"church-history.css: missing {label}")
