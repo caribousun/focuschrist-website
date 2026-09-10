@@ -333,15 +333,22 @@
     function focusConversation() {
         const conversation = document.getElementById('conversation-heading');
         if (conversation) scrollPageToElement(conversation);
+        const chatBox = document.getElementById('chatBox');
+        if (chatBox) chatBox.removeAttribute('data-focuschrist-latest-first');
     }
 
-    function promoteLatestExchangeToTop() {
+    function promoteLatestExchangeToTop(answerCandidate) {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox) return;
+        if (chatBox.getAttribute('data-focuschrist-latest-first') === 'true') return;
         const answers = chatBox.querySelectorAll('.bot-message');
         const users = chatBox.querySelectorAll('.user-message');
-        const answer = answers.length ? answers[answers.length - 1] : null;
-        const user = users.length ? users[users.length - 1] : null;
+        const answer = answerCandidate && answerCandidate.classList && answerCandidate.classList.contains('bot-message')
+            ? answerCandidate
+            : (answers.length ? answers[answers.length - 1] : null);
+        const user = answer && answer.previousElementSibling && answer.previousElementSibling.classList.contains('user-message')
+            ? answer.previousElementSibling
+            : (users.length ? users[users.length - 1] : null);
         if (!answer) return;
         const first = chatBox.firstElementChild;
         if (user && user !== first) chatBox.insertBefore(user, first);
@@ -350,10 +357,10 @@
         chatBox.setAttribute('data-focuschrist-latest-first', 'true');
     }
 
-    function focusLatestAnswer() {
+    function focusLatestAnswer(answerCandidate) {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox) return;
-        promoteLatestExchangeToTop();
+        promoteLatestExchangeToTop(answerCandidate);
         const answers = chatBox.querySelectorAll('.bot-message');
         if (!answers.length) return;
 
@@ -391,7 +398,7 @@
     function focusLatestAnswerSettled(answer) {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox || !answer || !answer.isConnected) return;
-        promoteLatestExchangeToTop();
+        promoteLatestExchangeToTop(answer);
         const userMessages = chatBox.querySelectorAll('.user-message');
         const exchangeStart = userMessages.length ? userMessages[0] : answer;
         const exchangeTopInsideChat = exchangeStart.getBoundingClientRect().top
@@ -514,7 +521,7 @@
                 addRelatedStudyToLatestAnswer();
                 setFollowupVisible(true);
                 setFollowupBusy(false);
-                focusLatestAnswer();
+                focusLatestAnswer(event.target);
                 focusFollowupComposer();
             }, 60);
         });

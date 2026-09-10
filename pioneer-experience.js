@@ -454,13 +454,18 @@
         return loading;
     }
 
-    function promoteLatestExchangeToTop() {
+    function promoteLatestExchangeToTop(answerCandidate) {
         const box = chatBox();
         if (!box) return;
+        if (box.getAttribute('data-focuschrist-latest-first') === 'true') return;
         const answers = box.querySelectorAll('.bot-message');
         const users = box.querySelectorAll('.user-message');
-        const answer = answers.length ? answers[answers.length - 1] : null;
-        const user = users.length ? users[users.length - 1] : null;
+        const answer = answerCandidate && answerCandidate.classList && answerCandidate.classList.contains('bot-message')
+            ? answerCandidate
+            : (answers.length ? answers[answers.length - 1] : null);
+        const user = answer && answer.previousElementSibling && answer.previousElementSibling.classList.contains('user-message')
+            ? answer.previousElementSibling
+            : (users.length ? users[users.length - 1] : null);
         if (!answer) return;
         const first = box.firstElementChild;
         if (user && user !== first) box.insertBefore(user, first);
@@ -472,7 +477,7 @@
     function positionAnswer(answerElement) {
         const box = chatBox();
         if (!box || !answerElement) return;
-        promoteLatestExchangeToTop();
+        promoteLatestExchangeToTop(answerElement);
         answerElement = box.querySelector('.bot-message') || answerElement;
         const internalTop = Math.max(0, answerElement.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 12);
         box.scrollTo({ top: internalTop, behavior: 'instant' });
@@ -797,6 +802,8 @@
         const requestId = ++pioneerRequestSerial;
 
         removeWelcome();
+        const box = chatBox();
+        if (box) box.removeAttribute('data-focuschrist-latest-first');
         window.addMessage(question, true);
         input.value = '';
         button.disabled = true;
