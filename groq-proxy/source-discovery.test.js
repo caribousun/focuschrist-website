@@ -1,10 +1,14 @@
 import {withVerifierFixture} from './openai-fixture.js';
 const worker=withVerifierFixture(actualWorker);
 import assert from 'node:assert/strict';
-import actualWorker,{rankChurchSourceCandidates,namedGospelTopicSource,fetchOfficialSource,extractRelevantParagraphs,relevantParagraphText,compactParagraphPack,hasExcessiveSourceOverlap} from './src/index.js';
+import actualWorker,{rankChurchSourceCandidates,namedGospelTopicSource,fetchOfficialSource,retrieveIndexedChurchEvidence,extractRelevantParagraphs,relevantParagraphText,compactParagraphPack,hasExcessiveSourceOverlap} from './src/index.js';
 const originalFetch=globalThis.fetch;
 const godheadQuestion='How are the Father, Son, and Holy Ghost described in Latter-day Saint teaching?';
 assert.equal(rankChurchSourceCandidates(godheadQuestion,'ask')[0].title,'Godhead');
+assert.equal(rankChurchSourceCandidates('Who is God?','ask')[0].title,'God The Father',
+  'short foundational identity questions must prioritize God The Father over related topics');
+assert.equal(rankChurchSourceCandidates('What is God?','ask')[0].title,'God The Father',
+  'equivalent foundational identity wording must share the same focused route');
 assert.equal(rankChurchSourceCandidates('How can teaching help someone learn?','ask').some(x=>x.sourceAliasMatch),false);
 const janeQuestion='Find an official biography of Jane Manning James and explain her journey to Utah without inventing journal quotations.';
 assert.equal(rankChurchSourceCandidates(janeQuestion,'pioneers')[0].title,'Jane Elizabeth Manning James');
@@ -26,6 +30,18 @@ const fragments=copied.split(' ').reduce((parts,word,index)=>{if(index%4===0)par
 assert.equal(hasExcessiveSourceOverlap((fragments+'. ').repeat(3),[{content:copied}]),true,'repeated ordered reconstruction cannot dilute the copying ratio');
 assert.equal(hasExcessiveSourceOverlap(('Hyrum Smith appears in this independently composed discussion of questions whose wording has little relation to the original account. ').repeat(3),[{content:copied}]),false,'ordinary repeated names cannot restart a substantial ordered source pass');
 try {
+  const identityFetches=[];
+  globalThis.fetch=async(request)=>{
+    const url=String(request?.url || request);
+    identityFetches.push(url);
+    return new Response('<h1>Official identity</h1><p>Who is God? God is our loving Heavenly Father. The Godhead teaches us about God and His work. Official teachings explain His character, purpose, identity, and relationship with His children in clear language for study and worship.</p>',{headers:{'Content-Type':'text/html'}});
+  };
+  const identityEvidence=await retrieveIndexedChurchEvidence('Who is God?','ask',Date.now()+10000);
+  assert.deepEqual(identityFetches,[
+    'https://www.churchofjesuschrist.org/study/manual/gospel-topics/god-the-father?lang=eng',
+    'https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng',
+  ],'foundational identity questions must fetch the focused Father source and its Godhead companion');
+  assert.equal(identityEvidence.evidence.length,2,'foundational identity questions must retain both approved sources when available');
   for(const page of ['ask','pioneers','church-history']) {
     const candidate=namedGospelTopicSource(question,page,rankChurchSourceCandidates(question,page));
     assert.ok(candidate?.url.includes('/humility?'),'unambiguous explicit Gospel Topic must be eligible on each study surface');
