@@ -156,6 +156,11 @@
         }
     }
 
+    function focusFollowupComposer() {
+        if (!followupInput || followupBusy || !followupInput.isConnected) return;
+        try { followupInput.focus({ preventScroll: true }); } catch (_error) { followupInput.focus(); }
+    }
+
     function submitFollowup() {
         if (!followupInput || followupBusy) return;
         const question = followupInput.value.trim();
@@ -493,6 +498,7 @@
                 setFollowupVisible(true);
                 setFollowupBusy(false);
                 focusLatestAnswer();
+                focusFollowupComposer();
             }, 60);
         });
         const observer = new MutationObserver(function (mutations) {
@@ -511,9 +517,7 @@
                     setFollowupVisible(true);
                     setFollowupBusy(false);
                     focusLatestAnswer();
-                    if (followupInput && window.matchMedia && window.matchMedia('(pointer: fine)').matches) {
-                        try { followupInput.focus({ preventScroll: true }); } catch (_error) { followupInput.focus(); }
-                    }
+                    focusFollowupComposer();
                 }, 60);
             }
         });
