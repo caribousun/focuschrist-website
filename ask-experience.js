@@ -510,7 +510,7 @@
         if (!chatBox || typeof MutationObserver === 'undefined') return;
         chatBox.addEventListener('focuschrist:answer-ready', function (event) {
             window.setTimeout(function () {
-                if (event.target !== chatBox.querySelector('.bot-message')) return;
+                if (!event.target || !event.target.classList || !event.target.classList.contains('bot-message')) return;
                 addRelatedStudyToLatestAnswer();
                 setFollowupVisible(true);
                 setFollowupBusy(false);
