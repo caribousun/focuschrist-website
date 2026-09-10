@@ -135,7 +135,7 @@ body.fc-site .qa-container .scripture-categories {
 }
 
 body.fc-site .qa-container .category-title {
-    margin: 0 0 18px;
+    margin: 0 0 14px;
     color: var(--fc-gold-light);
     font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(1.45rem, 2.2vw, 1.9rem);
@@ -149,7 +149,7 @@ body.fc-site .qa-container .category-row { gap: 8px; }
 body.fc-site .qa-container .pioneer-topic-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 14px;
+    gap: 10px;
     margin: 0;
 }
 
@@ -158,17 +158,17 @@ body.fc-site .qa-container .category-btn {
     line-height: 1.2;
     display: inline-flex;
     width: 100%;
-    min-height: 72px;
+    min-height: 58px;
     align-items: center;
     justify-content: center;
     margin: 0;
-    padding: 14px 16px;
+    padding: 10px 12px;
     border: 1px solid rgba(201,169,97,.62);
     border-radius: 15px;
     background: rgba(10,36,46,.78);
     color: #f4c66f;
     text-decoration: none;
-    font-size: .94rem;
+    font-size: .88rem;
     text-align: center;
     transition: border-color .2s ease, background .2s ease, color .2s ease;
 }
