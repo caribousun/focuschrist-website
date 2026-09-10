@@ -337,9 +337,13 @@
         if (!answers.length) return;
 
         const answer = answers[answers.length - 1];
-        const answerTopInsideChat = answer.getBoundingClientRect().top - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
+        const userMessages = chatBox.querySelectorAll('.user-message');
+        const latestUserMessage = userMessages.length ? userMessages[userMessages.length - 1] : null;
+        const exchangeStart = latestUserMessage || answer;
+        const exchangeTopInsideChat = exchangeStart.getBoundingClientRect().top
+            - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
         chatBox.scrollTo({
-            top: Math.max(0, answerTopInsideChat - 18),
+            top: Math.max(0, exchangeTopInsideChat - 18),
             behavior: 'instant'
         });
 
@@ -353,6 +357,28 @@
             && transcriptTarget.getBoundingClientRect().top - dock.getBoundingClientRect().top + 120
                 <= window.innerHeight - fixedHeaderOffset();
         scrollPageToElement(composerAndAnswerFit ? dock : transcriptTarget);
+
+        // Source links, scripture verification, and related-study content can
+        // extend the newest answer after the first layout pass. Re-run the
+        // same exchange anchor once the browser has settled those additions so
+        // later questions do not drift above the viewport.
+        window.setTimeout(function () {
+            if (answer.isConnected) focusLatestAnswerSettled(answer);
+        }, 180);
+    }
+
+    function focusLatestAnswerSettled(answer) {
+        const chatBox = document.getElementById('chatBox');
+        if (!chatBox || !answer || !answer.isConnected) return;
+        const userMessages = chatBox.querySelectorAll('.user-message');
+        const exchangeStart = userMessages.length ? userMessages[userMessages.length - 1] : answer;
+        const exchangeTopInsideChat = exchangeStart.getBoundingClientRect().top
+            - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
+        chatBox.scrollTo({ top: Math.max(0, exchangeTopInsideChat - 18), behavior: 'instant' });
+        const dock = document.getElementById('askFollowupDock');
+        const dockVisible = dock && dock.classList.contains('visible') && dock.getAttribute('aria-hidden') !== 'true';
+        const transcriptTarget = chatBox.scrollHeight > chatBox.clientHeight + 2 ? chatBox : answer;
+        scrollPageToElement(dockVisible ? dock : transcriptTarget);
     }
 
     function submitQuestion(question) {
