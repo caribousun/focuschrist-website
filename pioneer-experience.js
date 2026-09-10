@@ -803,7 +803,7 @@
 
         removeWelcome();
         const box = chatBox();
-        if (box) box.removeAttribute('data-focuschrist-latest-first');
+        if (box && typeof box.removeAttribute === 'function') box.removeAttribute('data-focuschrist-latest-first');
         window.addMessage(question, true);
         input.value = '';
         button.disabled = true;
