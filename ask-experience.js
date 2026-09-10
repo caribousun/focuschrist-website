@@ -335,15 +335,31 @@
         if (conversation) scrollPageToElement(conversation);
     }
 
-    function focusLatestAnswer() {
+    function promoteLatestExchangeToTop() {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox) return;
         const answers = chatBox.querySelectorAll('.bot-message');
+        const users = chatBox.querySelectorAll('.user-message');
+        const answer = answers.length ? answers[answers.length - 1] : null;
+        const user = users.length ? users[users.length - 1] : null;
+        if (!answer) return;
+        const first = chatBox.firstElementChild;
+        if (user && user !== first) chatBox.insertBefore(user, first);
+        const answerAnchor = user && user.isConnected ? user.nextSibling : chatBox.firstElementChild;
+        if (answer !== answerAnchor) chatBox.insertBefore(answer, answerAnchor);
+        chatBox.setAttribute('data-focuschrist-latest-first', 'true');
+    }
+
+    function focusLatestAnswer() {
+        const chatBox = document.getElementById('chatBox');
+        if (!chatBox) return;
+        promoteLatestExchangeToTop();
+        const answers = chatBox.querySelectorAll('.bot-message');
         if (!answers.length) return;
 
-        const answer = answers[answers.length - 1];
+        const answer = answers[0];
         const userMessages = chatBox.querySelectorAll('.user-message');
-        const latestUserMessage = userMessages.length ? userMessages[userMessages.length - 1] : null;
+        const latestUserMessage = userMessages.length ? userMessages[0] : null;
         const exchangeStart = latestUserMessage || answer;
         const exchangeTopInsideChat = exchangeStart.getBoundingClientRect().top
             - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
@@ -375,8 +391,9 @@
     function focusLatestAnswerSettled(answer) {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox || !answer || !answer.isConnected) return;
+        promoteLatestExchangeToTop();
         const userMessages = chatBox.querySelectorAll('.user-message');
-        const exchangeStart = userMessages.length ? userMessages[userMessages.length - 1] : answer;
+        const exchangeStart = userMessages.length ? userMessages[0] : answer;
         const exchangeTopInsideChat = exchangeStart.getBoundingClientRect().top
             - chatBox.getBoundingClientRect().top + chatBox.scrollTop;
         chatBox.scrollTo({ top: Math.max(0, exchangeTopInsideChat - 18), behavior: 'instant' });
@@ -468,12 +485,12 @@
         if (!chatBox) return;
         const answers = chatBox.querySelectorAll('.bot-message');
         if (!answers.length) return;
-        const answer = answers[answers.length - 1];
+        const answer = answers[0];
         if (answer.querySelector('.ask-related-study')) return;
 
         const userMessages = chatBox.querySelectorAll('.user-message');
         if (!userMessages.length) return;
-        const question = userMessages[userMessages.length - 1].textContent || '';
+        const question = userMessages[0].textContent || '';
         const related = findRelatedStudy(question);
         if (!related) return;
 
@@ -493,7 +510,7 @@
         if (!chatBox || typeof MutationObserver === 'undefined') return;
         chatBox.addEventListener('focuschrist:answer-ready', function (event) {
             window.setTimeout(function () {
-                if (event.target !== chatBox.lastElementChild) return;
+                if (event.target !== chatBox.querySelector('.bot-message')) return;
                 addRelatedStudyToLatestAnswer();
                 setFollowupVisible(true);
                 setFollowupBusy(false);
@@ -512,7 +529,8 @@
             });
             if (addedAnswer) {
                 window.setTimeout(function () {
-                    if (chatBox.lastElementChild && (!chatBox.lastElementChild.classList.contains('bot-message') || chatBox.lastElementChild.hasAttribute('data-scripture-pending'))) return;
+                    const latestAnswer = chatBox.querySelector('.bot-message');
+                    if (latestAnswer && latestAnswer.hasAttribute('data-scripture-pending')) return;
                     addRelatedStudyToLatestAnswer();
                     setFollowupVisible(true);
                     setFollowupBusy(false);

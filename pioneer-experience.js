@@ -454,9 +454,26 @@
         return loading;
     }
 
+    function promoteLatestExchangeToTop() {
+        const box = chatBox();
+        if (!box) return;
+        const answers = box.querySelectorAll('.bot-message');
+        const users = box.querySelectorAll('.user-message');
+        const answer = answers.length ? answers[answers.length - 1] : null;
+        const user = users.length ? users[users.length - 1] : null;
+        if (!answer) return;
+        const first = box.firstElementChild;
+        if (user && user !== first) box.insertBefore(user, first);
+        const answerAnchor = user && user.isConnected ? user.nextSibling : box.firstElementChild;
+        if (answer !== answerAnchor) box.insertBefore(answer, answerAnchor);
+        box.setAttribute('data-focuschrist-latest-first', 'true');
+    }
+
     function positionAnswer(answerElement) {
         const box = chatBox();
         if (!box || !answerElement) return;
+        promoteLatestExchangeToTop();
+        answerElement = box.querySelector('.bot-message') || answerElement;
         const internalTop = Math.max(0, answerElement.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - 12);
         box.scrollTo({ top: internalTop, behavior: 'instant' });
         const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
@@ -474,7 +491,7 @@
     document.addEventListener('focuschrist:answer-ready', function (event) {
         window.setTimeout(function () {
             const box = chatBox();
-            if (box && event.target === box.lastElementChild) positionAnswer(event.target);
+            if (box && event.target === box.querySelector('.bot-message')) positionAnswer(event.target);
         }, 60);
     });
 
