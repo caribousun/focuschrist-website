@@ -4,8 +4,8 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = "2026-09-03.16"
-WORKER_POLICY = "2026-09-09.81"
-CACHE = "20260909-openai-only-2"
+WORKER_POLICY = "2026-09-06.60"
+CACHE = "20260910-followup-visibility-1"
 
 
 def block(text: str, start: str, end: str) -> str:
@@ -90,10 +90,10 @@ def main() -> int:
         errors.append("Pioneer page cache marker is not current")
     if "known-false-source-claim" not in common or "reviewedColorPayload" not in worker:
         errors.append("known-false scripture regression protection is missing")
-    if "approvedSourcesOnly: true" not in worker or "APPROVED_LDS_RESEARCH_POLICY" not in worker:
-        errors.append("site-wide approved-source requirement is missing")
-    if "unavailable ? SOURCE_UNAVAILABLE_MESSAGE : SOURCE_INTEGRITY_FALLBACK" not in worker:
-        errors.append("temporary source failures must be distinguished from unsupported questions")
+    if "general-ai-consensus" not in worker or "requiresExternalGeneralResearch" not in worker:
+        errors.append("site-wide stable general-question fallback is missing")
+    if "GENERAL_ANSWER_FALLBACK" not in worker or "general ? GENERAL_ANSWER_FALLBACK : SOURCE_INTEGRITY_FALLBACK" not in worker:
+        errors.append("general failures can still be mislabeled as Gospel Library failures")
 
     if errors:
         print("PIONEER LOCAL-FIRST QA FAILED", file=sys.stderr)

@@ -358,6 +358,12 @@
         window.scrollTo({ top: Math.max(0, top), behavior: preferredScrollBehavior() });
     }
 
+    function focusPioneerInput() {
+        const input = userInput();
+        if (!input || input.disabled || !input.isConnected) return;
+        try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
+    }
+
     function ensurePioneerEntryStyles() {
         if (document.getElementById('pioneer-entry-styles')) return;
         const style = document.createElement('style');
@@ -460,6 +466,9 @@
         if (rect.top < safeTop || rect.top > window.innerHeight * 0.72) {
             window.scrollTo({ top: window.scrollY + rect.top - safeTop, behavior: preferredScrollBehavior() });
         }
+        // Every completed answer leaves the next-question field ready. Keep
+        // focus from triggering another scroll so the answer remains in view.
+        window.setTimeout(focusPioneerInput, 80);
     }
 
     document.addEventListener('focuschrist:answer-ready', function (event) {
