@@ -12,6 +12,7 @@ CORE = {
     "index.html": "https://focuschrist.com/",
     "ask.html": "https://focuschrist.com/ask.html",
     "answers.html": "https://focuschrist.com/answers.html",
+    "general-conference.html": "https://focuschrist.com/general-conference.html",
     "watch.html": "https://focuschrist.com/watch.html",
     "art.html": "https://focuschrist.com/art.html",
     "missionary.html": "https://focuschrist.com/missionary.html",
@@ -19,18 +20,8 @@ CORE = {
     "about.html": "https://focuschrist.com/about.html",
 }
 ANSWER_PAGES = {
-    "answers/death-of-a-child.html": "https://focuschrist.com/answers/death-of-a-child.html",
-    "answers/divorce-and-faith.html": "https://focuschrist.com/answers/divorce-and-faith.html",
-    "answers/jesus-christ-latter-day-saint-beliefs.html": "https://focuschrist.com/answers/jesus-christ-latter-day-saint-beliefs.html",
-    "answers/are-latter-day-saints-christian.html": "https://focuschrist.com/answers/are-latter-day-saints-christian.html",
-    "answers/what-is-the-book-of-mormon.html": "https://focuschrist.com/answers/what-is-the-book-of-mormon.html",
-    "answers/why-latter-day-saints-build-temples.html": "https://focuschrist.com/answers/why-latter-day-saints-build-temples.html",
-    "answers/what-happens-after-death.html": "https://focuschrist.com/answers/what-happens-after-death.html",
-    "answers/who-was-joseph-smith.html": "https://focuschrist.com/answers/who-was-joseph-smith.html",
-    "answers/prayer-and-personal-revelation.html": "https://focuschrist.com/answers/prayer-and-personal-revelation.html",
-    "answers/why-families-are-important.html": "https://focuschrist.com/answers/why-families-are-important.html",
-    "answers/bible-and-book-of-mormon-together.html": "https://focuschrist.com/answers/bible-and-book-of-mormon-together.html",
-    "answers/faith-in-jesus-christ-during-trials.html": "https://focuschrist.com/answers/faith-in-jesus-christ-during-trials.html",
+    path.relative_to(ROOT).as_posix(): f"https://focuschrist.com/{path.relative_to(ROOT).as_posix()}"
+    for path in sorted((ROOT / "answers").glob("*.html"))
 }
 ART_STUDY_PAGES = {
     "art-study/the-living-christ.html": "https://focuschrist.com/art-study/the-living-christ.html",
@@ -48,6 +39,44 @@ HEADER_PAGES = {
     "404.html": "site-header.css?v=20260906-refined",
 }
 HEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")
+PLACEHOLDER_CAPTION_PATTERNS = (
+    r"\bstudy illustration\b",
+    r"historical study illustration",
+    r"contemporary (?:study )?illustration",
+    r"not a photograph(?: or primary record)?",
+    r"not (?:a )?reconstruction",
+    r"does not depict",
+    r"does not reconstruct",
+    r"pictured document is not",
+    r"study aid, not",
+    r"visual texture",
+    r"without depicting",
+    r"does not prescribe",
+    r"does not set a timetable",
+    r"not a temple ceremony",
+    r"this study connects a historical life with a religious claim",
+    r"give each kind of question the sources it needs",
+    r"this page summarizes the church.s faith claim",
+    r"let this question give direction to the material below",
+    r"keep the source.s words distinct from your own reflection",
+    r"(?:material|content|information) below",
+    r"the scene shows",
+    r"this scene shows",
+    r"read the instruction to study",
+    r"distinguish (?:its|the) teaching from questions",
+    r"keep the historical introduction",
+    r"what (?:a|the) source says",
+    r"keep (?:the )?(?:source|account|passage) (?:beside|open)",
+    r"follow the linked (?:text|introduction)",
+)
+SITE_WIDE_EDITORIAL_SCAFFOLDING_PATTERNS = (
+    r"the scene shows",
+    r"this scene shows",
+    r"read the instruction to study",
+    r"distinguish (?:its|the) teaching from questions",
+    r"keep the historical introduction",
+    r"what (?:a|the) source says",
+)
 
 
 class RefParser(HTMLParser):
@@ -130,6 +159,12 @@ def inspect_html(path: Path, errors: list[str], require_noopener: bool = True) -
 
 def main() -> int:
     errors: list[str] = []
+
+    for path in sorted(ROOT.rglob("*.html")):
+        page_text = path.read_text(encoding="utf-8", errors="replace")
+        for pattern in SITE_WIDE_EDITORIAL_SCAFFOLDING_PATTERNS:
+            if re.search(pattern, page_text, flags=re.IGNORECASE):
+                fail(errors, f"{path.relative_to(ROOT).as_posix()}: site-wide editorial scaffolding matches {pattern!r}")
 
     for media_path in ROOT.rglob("*"):
         if media_path.is_file() and media_path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif"}:
@@ -279,10 +314,8 @@ def main() -> int:
     if pioneers.count('role="button" tabindex="0" aria-expanded="false"') < 16:
         fail(errors, "Pioneers disclosure keyboard/ARIA attributes unexpectedly missing")
 
-    if OLD_MODEL in ask or OLD_MODEL in pioneers:
-        fail(errors, "Retired Groq model reintroduced into Ask/Pioneers")
-    if NEW_MODEL not in ask or NEW_MODEL not in pioneers:
-        fail(errors, "Current Groq model missing from Ask/Pioneers")
+    if any(model in page for model in (OLD_MODEL, NEW_MODEL, 'groq/compound') for page in (ask, pioneers)):
+        fail(errors, "Retired AI model reintroduced into Ask/Pioneers; the server owns OpenAI selection")
     if ask.count('data-focuschrist-ai-notice="true"') != 1:
         fail(errors, "Ask AI/privacy transparency notice missing/duplicated")
     for marker in (
@@ -293,9 +326,9 @@ def main() -> int:
     ):
         if ask.count(marker) != 1:
             fail(errors, f"Ask redesigned experience marker missing/duplicated: {marker}")
-    if '<link rel="stylesheet" href="ask-experience.css?v=20260905-approved-pair">' not in ask:
+    if '<link rel="stylesheet" href="ask-experience.css?v=20260909-warm">' not in ask:
         fail(errors, "Ask experience stylesheet missing")
-    if '<script src="ask-experience.js?v=20260910-followup-visibility-1" defer></script>' not in ask:
+    if '<script src="ask-experience.js?v=20260910-followup-visibility-2" defer></script>' not in ask:
         fail(errors, "Ask experience controller missing")
     if ask.count('data-ask-starter') < 6:
         fail(errors, "Ask starter question set unexpectedly incomplete")
@@ -385,6 +418,53 @@ def main() -> int:
         for target in ("index.html", "ask.html", "answers.html", "watch.html", "art.html", "missionary.html", "pioneers.html", "about.html"):
             if f'href="{target}"' not in text404:
                 fail(errors, f"404.html missing recovery link to {target}")
+
+    # Coverage must remain global; successful per-page counts cannot hide reuse.
+    from topic_artwork_uniqueness_qa import scan as scan_artwork
+    artwork = scan_artwork(ROOT)
+    if len(artwork['pages']) != 19:
+        fail(errors, f"Artwork coverage expected 19 study pages, found {len(artwork['pages'])}")
+    for asset, issue in artwork['assetIssues'].items():
+        fail(errors, f"{asset}: {issue}")
+    for page in artwork['pages']:
+        for issue in page['issues']:
+            fail(errors, f"{page['page']}: {issue}")
+
+    # Artwork captions and their surrounding introductory/foundational copy must
+    # be concrete. Generic production or editorial scaffolding must never ship.
+    caption_scope = [
+        "answers.html",
+        *(path.relative_to(ROOT).as_posix() for path in sorted((ROOT / "answers").glob("*.html"))),
+        "general-conference.html",
+        "church-history.html",
+    ]
+    for relative in caption_scope:
+        page_text = (ROOT / relative).read_text(encoding="utf-8")
+        artwork_blocks = re.findall(
+            r"<figure\b[^>]*>.*?</figure>|<article\b[^>]*data-artwork-detail-content[^>]*>.*?</article>|<header\b[^>]*fc-marriage-journey__intro[^>]*>.*?</header>",
+            page_text,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        introductory_blocks = re.findall(
+            r"<p\b[^>]*class=[\"'][^\"']*\blede\b[^\"']*[\"'][^>]*>.*?</p>|<section\b[^>]*fc-foundation-route[^>]*>.*?</section>",
+            page_text,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        visible_copy = " ".join((*artwork_blocks, *introductory_blocks))
+        for pattern in PLACEHOLDER_CAPTION_PATTERNS:
+            if re.search(pattern, visible_copy, flags=re.IGNORECASE):
+                fail(errors, f"{relative}: placeholder-style artwork caption matches {pattern!r}")
+    for ledger_name in (
+        "docs/topic-artwork-placement.json",
+        "docs/five-picture-placement-part1.json",
+        "docs/five-picture-placement-part2.json",
+        "docs/five-picture-placement-root.json",
+        "docs/exclusive-artwork-ownership.json",
+    ):
+        ledger_text = (ROOT / ledger_name).read_text(encoding="utf-8")
+        for pattern in PLACEHOLDER_CAPTION_PATTERNS:
+            if re.search(pattern, ledger_text, flags=re.IGNORECASE):
+                fail(errors, f"{ledger_name}: placeholder-style artwork description matches {pattern!r}")
 
     if errors:
         print("FocusChrist SITE QA FAILED", file=sys.stderr)
