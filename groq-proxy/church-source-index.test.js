@@ -699,6 +699,15 @@ assert(!reviewedDeterministicEvidenceRecovery(
   [{ title: 'Kirtland Temple', url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'Kirtland Temple dedication 1836 prayer Jesus Christ Elijah.' }],
   'church-history',
 ), 'a corpus-extended Kirtland question must remain on the normal evidence route');
+assert(!reviewedDeterministicEvidenceRecovery(
+  exactKirtlandQuestion,
+  [{ title: 'Kirtland Temple', url: 'https://example.org/study/history/topics/kirtland-temple', content: 'Kirtland Temple dedication 1836.' }],
+  'church-history',
+) && !reviewedDeterministicEvidenceRecovery(
+  exactKirtlandQuestion,
+  [{ title: 'Kirtland Temple', url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-safety-society?lang=eng', content: 'Kirtland Temple dedication 1836.' }],
+  'church-history',
+), 'the reviewed Kirtland release route must reject a nonofficial host or a different official page');
 const originalCaches = globalThis.caches;
 
 async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false, cacheParagraphs = cachedPioneerParagraphs }) {

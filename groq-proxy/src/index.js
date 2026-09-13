@@ -36,8 +36,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-13.88';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.88';
+const SOURCE_POLICY_VERSION = '2026-09-13.89';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.89';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1163,13 +1163,9 @@ function reviewedDeterministicEvidenceRecovery(question, evidence, page = '') {
     const sourceIndex = sources.findIndex((source) => {
       let parsed;
       try { parsed = new URL(String(source && source.url || '')); } catch (_error) { return false; }
-      const content = String(source && source.content || '');
       return parsed.protocol === 'https:'
         && (parsed.hostname === 'churchofjesuschrist.org' || parsed.hostname.endsWith('.churchofjesuschrist.org'))
-        && parsed.pathname === '/study/history/topics/kirtland-temple'
-        && /\bkirtland\s+temple\b/i.test(content)
-        && /\b1836\b/.test(content)
-        && /\bdedicat\w*\b/i.test(content);
+        && parsed.pathname === '/study/history/topics/kirtland-temple';
     });
     if (sourceIndex >= 0) return { recoveryId: 'reviewed-kirtland-temple-dedication', answer: REVIEWED_KIRTLAND_TEMPLE_DEDICATION, sourceIndexes: [sourceIndex + 1] };
   }
