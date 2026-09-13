@@ -11,6 +11,9 @@ on:
       - "scripture-data/**"
       - "tools/build_church_source_index.py"
       - "tools/live_ai_response_matrix.js"
+      - "tools/live_ai_capacity_contract.js"
+      - "tools/live_ai_capacity_contract.test.js"
+      - "tools/conversation_followup_live_qa.mjs"
       - "tools/pioneer_disclosure_live_qa.js"
       - ".github/workflows/deploy-worker.yml"
 
@@ -39,6 +42,7 @@ jobs:
 
       - name: Run Worker source-integrity policy tests
         run: |
+          node tools/live_ai_capacity_contract.test.js
           node groq-proxy/source-policy.test.js
           node groq-proxy/conversation-context.test.js
           node groq-proxy/research-escalation.test.js
@@ -50,6 +54,7 @@ jobs:
           node groq-proxy/corpus-evidence.test.js
           node groq-proxy/factual-followup.test.js
           node groq-proxy/relationship-audit.test.js
+          node groq-proxy/historical-relationship.test.js
           node groq-proxy/reviewed-source-context.test.js
           node groq-proxy/direct-scripture-reading.test.js
           node groq-proxy/paragraph-intent.test.js
@@ -80,6 +85,7 @@ jobs:
         run: npm ci --ignore-scripts
 
       - name: Deploy hardened Worker
+        id: deploy_worker
         if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
         working-directory: groq-proxy
         run: |
@@ -93,16 +99,30 @@ jobs:
         run: sleep 15
 
       - name: Run live AI response matrix
-        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
-        run: node tools/live_ai_response_matrix.js
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        shell: bash
+        run: node tools/live_ai_response_matrix.js 2>&1 | tee "$RUNNER_TEMP/focus-ai-matrix.log"
 
       - name: Verify conversation follow-ups
-        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
-        run: node tools/conversation_followup_live_qa.mjs
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        shell: bash
+        run: node tools/conversation_followup_live_qa.mjs 2>&1 | tee "$RUNNER_TEMP/focus-followups.log"
 
       - name: Verify all Pioneer topic answers
-        if: env.CLOUDFLARE_API_TOKEN != '' && env.CLOUDFLARE_ACCOUNT_ID != ''
-        run: node tools/pioneer_disclosure_live_qa.js
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        shell: bash
+        run: node tools/pioneer_disclosure_live_qa.js 2>&1 | tee "$RUNNER_TEMP/focus-pioneer-topics.log"
+
+      - name: Preserve live verification evidence
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: focus-live-verification-${{ github.sha }}
+          path: |
+            ${{ runner.temp }}/focus-ai-matrix.log
+            ${{ runner.temp }}/focus-followups.log
+            ${{ runner.temp }}/focus-pioneer-topics.log
+          if-no-files-found: error
 
       - name: Report missing deployment authorization
         if: env.CLOUDFLARE_API_TOKEN == '' || env.CLOUDFLARE_ACCOUNT_ID == ''

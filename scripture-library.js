@@ -55,7 +55,10 @@
         // Generated answers must spell out each reference. Unknown books and
         // shorthand continuations cannot disappear from validation silently.
         for (const suspect of String(text).matchAll(/\b(?:[1-9]\s+)?[A-Za-z]+\s+\d+:\d+/g)) {
-            if (/^(?:at|after|before|about|around|by|from|until)\s+(?:[0-1]?\d|2[0-3]):[0-5]\d$/i.test(suspect[0])) continue;
+            // Clock ranges such as "from 8:00 to 10:00" and "between 6:00
+            // and 7:00" are historical prose, not unknown scripture books.
+            // Keep this exception lexical and require a valid clock value.
+            if (/^(?:at|after|before|about|around|by|from|until|to|between|and|or|an|a|through|approximately|roughly)\s+(?:[0-1]?\d|2[0-3]):[0-5]\d$/i.test(suspect[0])) continue;
             if (!found.some(ref=>suspect.index>=ref.index && suspect.index<ref.end)) throw new Error('unrecognized-scripture-reference');
         }
         for (const suspect of String(text).matchAll(/\b[1-9]\s+(?:Nephi|John|Samuel|Kings|Chronicles|Corinthians|Thessalonians|Timothy|Peter)\s+\d+/gi)) {
