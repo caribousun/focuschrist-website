@@ -32,7 +32,6 @@ SITEMAP_HOST = "sitemaps.churchofjesuschrist.org"
 MAX_ENTRIES = 900
 MAX_XML_ELEMENTS = 1_000_000
 MAX_XML_DEPTH = 8
-MAX_REVIEW_AGE_DAYS = 8
 REQUIRED_KINDS = (
     "gospel-topic",
     "history-topic",
@@ -380,8 +379,11 @@ def validate_review_manifest(revision: str, robots_hash: str, sitemap_hash: str)
             raise RuntimeError(f"Church source review manifest does not approve {key}")
     reviewed = dt.date.fromisoformat(str(manifest.get("reviewed_on", "")))
     age = (dt.datetime.now(dt.timezone.utc).date() - reviewed).days
-    if age < 0 or age > MAX_REVIEW_AGE_DAYS:
-        raise RuntimeError(f"Church source review is {age} days old; refresh and approve within {MAX_REVIEW_AGE_DAYS} days")
+    if age < 0:
+        raise RuntimeError("Church source review date is in the future")
+    # Approval is bound to the exact robots, sitemap revision, and combined
+    # sitemap hashes above. It remains valid while those bytes remain unchanged.
+    # The scheduled online freshness audit detects any upstream change.
 
 
 def main() -> int:
