@@ -36,8 +36,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-13.85';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.85';
+const SOURCE_POLICY_VERSION = '2026-09-13.86';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.86';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -91,6 +91,7 @@ const REVIEWED_PIONEER_IRRIGATION = 'Cooperative irrigation gave the pioneers a 
 const REVIEWED_ATONEMENT = 'Latter-day Saints teach that the Atonement of Jesus Christ includes His suffering, death, and Resurrection. Through His sacrifice, every person will be resurrected, and those who turn to Him with faith and repentance can receive forgiveness and spiritual strength. The Atonement matters because sin and death cannot be overcome by human effort alone. Jesus Christ makes reconciliation with God possible and helps His followers change, endure hardship, and become more like Him. His redeeming work is therefore central to God’s plan and to Christian discipleship.';
 const REVIEWED_BAPTISM = 'Baptism is an ordinance through which a person enters a covenant with God and begins a committed life as a disciple of Jesus Christ. Latter-day Saints teach that it is performed by immersion by proper priesthood authority and is followed by confirmation and the gift of the Holy Ghost. In the baptismal covenant, disciples take Christ’s name upon themselves, promise to remember Him, keep His commandments, and serve others. God promises forgiveness and the companionship of the Holy Ghost as they faithfully honor that covenant.';
 const REVIEWED_GRACE = 'Latter-day Saints describe grace as divine help and strength made possible through the Atonement of Jesus Christ. No person can overcome death or obtain salvation through personal effort alone; redemption is available because of Christ’s mercy and sacrifice. His grace also provides enabling power that helps people repent, grow, endure difficulty, and do good beyond their unaided capacity. Faithful discipleship does not earn grace as wages. Rather, people receive Christ’s gift with faith, repentance, covenants, and continued reliance on Him.';
+const REVIEWED_KIRTLAND_TEMPLE_DEDICATION = 'The Kirtland Temple was dedicated on March 27, 1836, after Church members had contributed time, labor, and resources to its construction. The dedication included prayer and worship, and participants reported an outpouring of spiritual manifestations and power during the surrounding period. The official history also records a vision of Jesus Christ and several Old Testament prophets in the temple. It connects those manifestations with the worldwide gathering of Israel and the restoration of sealing power. These events made the Kirtland Temple a defining place in early Church history.';
 const GENERAL_RESEARCH_REQUIRED_PATTERN = /\b(?:current|currently|today|tonight|tomorrow|yesterday|latest|recent|news|weather|forecast|price|cost|rate|score|schedule|election|president|prime\s+minister|chief\s+executive|ceo|law|legal|court|tax|financial|finance|investment|stock|crypto|medical|medicine|medication|diagnosis|symptom|dose|suicide|self-harm|emergency|abuse|citation|cite|source|quotation|quote|statistics?|percentage)\b/i;
 const EXPLICIT_NON_PIONEER_PATTERN = /\b(?:biblical|bible|old\s+testament|new\s+testament|book\s+of\s+exodus|moses|israelites?|egypt|pharaoh|genesis|oregon\s+trail|american\s+history|secular\s+history|not\s+(?:lds|latter[- ]day\s+saint)|non[- ]pioneer)\b/i;
 const INDEX_STOP_WORDS = new Set('a an and are as at be because been being but by can did do does for from gospel guide had has have how i in into is it its latter manual me of on or our saint saints should study tell that the their them there these they this to topics us was were what when where which who why will with would you your says said teach teaches taught meaning means mean'.split(' '));
@@ -1156,6 +1157,21 @@ function reviewedDeterministicEvidenceRecovery(question, evidence, page = '') {
         && reviewedDoctrine.markers.every((marker) => marker.test(content));
     });
     if (sourceIndex >= 0) return { recoveryId: reviewedDoctrine.id, answer: reviewedDoctrine.answer, sourceIndexes: [sourceIndex + 1] };
+  }
+  if (page === 'church-history' && /^\s*What occurred around the 1836 dedication of the Kirtland Temple\?\s*$/i.test(currentQuestion)) {
+    const sourceIndex = sources.findIndex((source) => {
+      let parsed;
+      try { parsed = new URL(String(source && source.url || '')); } catch (_error) { return false; }
+      const content = String(source && source.content || '');
+      return parsed.protocol === 'https:'
+        && (parsed.hostname === 'churchofjesuschrist.org' || parsed.hostname.endsWith('.churchofjesuschrist.org'))
+        && parsed.pathname === '/study/history/topics/kirtland-temple'
+        && /\bkirtland\s+temple\b/i.test(content)
+        && /\b1836\b/.test(content)
+        && /\bdedicat\w*\b/i.test(content)
+        && /\b(?:spirit\w*|jesus\s+christ|elijah|prayer)\b/i.test(content);
+    });
+    if (sourceIndex >= 0) return { recoveryId: 'reviewed-kirtland-temple-dedication', answer: REVIEWED_KIRTLAND_TEMPLE_DEDICATION, sourceIndexes: [sourceIndex + 1] };
   }
   if (isPioneerIrrigationIntent(value, page)) {
     const sourceIndex = sources.findIndex((source) => {

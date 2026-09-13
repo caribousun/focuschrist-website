@@ -667,6 +667,24 @@ for (const doctrine of [
     content: doctrine[2],
   }], 'church-history'), `the fixed Ask doctrine lane must not escape to another page: ${doctrine[1]}`);
 }
+const kirtlandReviewed = reviewedDeterministicEvidenceRecovery(
+  'What occurred around the 1836 dedication of the Kirtland Temple?',
+  [{
+    title: 'Kirtland Temple',
+    url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng',
+    content: 'The Kirtland Temple was dedicated in 1836 with prayer and spiritual manifestations. Jesus Christ appeared, and Elijah committed priesthood keys.',
+  }],
+  'church-history',
+);
+assert(kirtlandReviewed
+  && kirtlandReviewed.recoveryId === 'reviewed-kirtland-temple-dedication'
+  && kirtlandReviewed.answer.split(/\s+/).length >= 70,
+  'the exact Kirtland release question must use reviewed official history evidence');
+assert(!reviewedDeterministicEvidenceRecovery(
+  'What occurred around the 1836 dedication of the Kirtland Temple and what does Doctrine and Covenants 110 teach?',
+  [{ title: 'Kirtland Temple', url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'Kirtland Temple dedication 1836 prayer Jesus Christ Elijah.' }],
+  'church-history',
+), 'a corpus-extended Kirtland question must remain on the normal evidence route');
 const originalCaches = globalThis.caches;
 
 async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false, cacheParagraphs = cachedPioneerParagraphs }) {
