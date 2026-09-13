@@ -390,7 +390,7 @@ assert(reliefGeneralRecovery && reliefGeneralRecovery.recoveryId === 'reviewed-r
   'the exact broader Relief Society organization wording must reach the audited recovery from the general official topic');
 
 const workerSourceForDeterministicLane = await import('node:fs').then((fs) => fs.readFileSync(new URL('./src/index.js', import.meta.url), 'utf8'));
-const deterministicLanePosition = workerSourceForDeterministicLane.indexOf("const reviewedDeterministic = retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'");
+const deterministicLanePosition = workerSourceForDeterministicLane.indexOf("const reviewedDeterministic = reviewedReading || (retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'");
 const verifierPromptPosition = workerSourceForDeterministicLane.indexOf('const makeVerifierPrompt = () => (sanitized.scope.selectedPioneer');
 assert(deterministicLanePosition >= 0 && verifierPromptPosition > deterministicLanePosition
   && workerSourceForDeterministicLane.includes("focuschrist_verifier_route: 'reviewed-deterministic'")
@@ -872,7 +872,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-13.93',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-13.94',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
@@ -1056,13 +1056,11 @@ for (const [key, expectedUrl, answer] of [
         focuschrist_pioneer_topic: key, messages: [{ role: 'user', content: `Explain ${PIONEER_TOPIC_SOURCES[key].subject}` }] }),
     }), { OPENAI_API_KEY: 'offline-fixture' });
     const payload = await response.json();
-    assert(officialFetches === 1 && providerFetches >= 1
-      && payload.focuschrist_source_integrity_verified === true
-      && payload.focuschrist_pioneer_disclosure === true
-      && payload.focuschrist_index_sources === 1
-      && payload.focuschrist_sources.length === 1
-      && payload.focuschrist_sources[0].url === expectedUrl,
-    `${key} must bypass generic scripture and conversation discovery and publish from its one pinned topic source`);
+    assert(officialFetches === 1 && providerFetches === 0
+      && payload.focuschrist_source_integrity_verified === false
+      && payload.focuschrist_gateway_mode === 'reviewed-source-review-required'
+      && payload.focuschrist_pioneer_disclosure === true,
+    `${key} must hold an altered source for review without model fallback`);
   } finally { globalThis.fetch = originalFetch; }
 }
 let hyrumProviderCalls = 0;

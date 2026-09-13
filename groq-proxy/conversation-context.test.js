@@ -107,8 +107,11 @@ try {
     for (const path of expectedPaths) assert.ok(calls.some(call=>call.url.includes(path)), 'both complementary official sources must be attempted');
     assert.ok(calls[0].url.includes('churchofjesuschrist.org'), 'paired official evidence must be attempted before model research');
     const researchCall = calls.find(call=>call.url.endsWith('/v1/responses'));
-    assert.ok(researchCall, 'unavailable paired sources must still allow ordinary research');
-    assert.ok(researchCall.body.input.some(message=>message.content.includes(current)), 'research must receive the current comparison or end-date request');
+    if (current.includes('same god')) assert.equal(researchCall,undefined,'reviewed identity comparison must hold unavailable evidence for review without model fallback');
+    else {
+      assert.ok(researchCall, 'ordinary event followups retain research when paired sources are unavailable');
+      assert.ok(researchCall.body.input.some(message=>message.content.includes(current)), 'research must receive the current end-date request');
+    }
   }
 } finally { globalThis.fetch = originalFetch; }
 console.log('Conversation context QA PASS: both surfaces, raw/legacy requests, current intent, user-only bounded context, reset/missing/three-turn cases, paired official retrieval and research fallback.');

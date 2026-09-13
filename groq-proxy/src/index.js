@@ -1,3 +1,4 @@
+import { fingerprintReviewedParagraphs, verifyReviewedReading, REVIEWED_SOURCE_EXTRACTION_VERSION } from './reviewed-readings.js';
 import { needsMissingSubjectClarification } from './missing-subject.js';
 import { qualifyingBodyPositions } from './source-caveat.js';
 import { paragraphRetrievalTerms } from './paragraph-intent.js';
@@ -38,8 +39,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-13.93';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.93';
+const SOURCE_POLICY_VERSION = '2026-09-13.94';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.94';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -207,6 +208,16 @@ function isGodInOldTestamentQuestion(value) {
   const vocabulary = new Set('is god in the bible old testament mentioned named does appear where can i find'.split(' '));
   return /\bgod\b/.test(text) && /\bold testament\b/.test(text)
     && text.split(' ').every(token => vocabulary.has(token));
+}
+
+function reviewedGodComparisonKey(scope) {
+  if (!['ask','pioneers'].includes(scope?.page) || scope.classificationMode !== 'conversation-context'
+    || scope.selectedPioneer || scope.pioneerTopicKey || scope.scriptureSupportRequested) return '';
+  const context = scope.conversationContext || [];
+  if (context.length !== 1 || !isGodInOldTestamentQuestion(context[0])) return '';
+  const current = String(scope.question || '').toLowerCase().replace(/[?.!]+$/g,'').replace(/\s+/g,' ').trim();
+  return /^is (?:he|this|that) the same god (?:that is |who is )?in the new testament$/.test(current)
+    ? 'god-across-testaments' : '';
 }
 
 function rawConversationQuestion(value) {
@@ -895,6 +906,10 @@ async function evidenceCacheKey(candidate, question) {
   return new Request(`https://focuschrist-groq-proxy.caribousun.workers.dev/__official_excerpt_cache/${hex}`);
 }
 
+async function captureReviewedSourceSnapshot(candidate, html) {
+  return fingerprintReviewedParagraphs(candidate.url, extractVisibleParagraphs(html, candidate));
+}
+
 async function fetchOfficialSource(candidate, question, deadline, counters = null) {
   if (!isAllowedOfficialFetchUrl(candidate.url, candidate.deterministic === true, candidate.researched === true)) return null;
   const available = remainingBudget(deadline);
@@ -911,13 +926,20 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       const cached = await cache.match(cacheKey);
       if (cached) {
         const payload = await cached.json();
-        if (payload && Array.isArray(payload.paragraphs)) {
-          const content = relevantParagraphText(payload.paragraphs, question, candidate);
+        let reviewedSnapshot = null;
+        if (candidate.reviewedSourceRequired && Array.isArray(payload?.reviewedParagraphs)
+          && payload.sourceExtractionVersion === REVIEWED_SOURCE_EXTRACTION_VERSION) {
+          reviewedSnapshot = await fingerprintReviewedParagraphs(candidate.url, payload.reviewedParagraphs);
+          if (reviewedSnapshot.sourceSha256 !== payload.sourceSha256) reviewedSnapshot = null;
+        }
+        if (payload && Array.isArray(payload.paragraphs) && (!candidate.reviewedSourceRequired || reviewedSnapshot)) {
+          const content = relevantParagraphText(reviewedSnapshot ? reviewedSnapshot.paragraphs : payload.paragraphs, question, candidate);
           if (content && evidenceAdmissionSufficient(candidate, content, question)) {
             if (counters) counters.cacheHits += 1;
             const source = canonicalSource(candidate.url, candidate.researched && payload.title ? payload.title : candidate.title, content,
               candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true ? 4200 : 700);
             if (source) {
+              if (reviewedSnapshot) { source.sourceSha256 = reviewedSnapshot.sourceSha256; source.sourceExtractionVersion = reviewedSnapshot.extractionVersion; }
               source.cacheStatus = 'hit';
               source.topicPinned = candidate.topicPinned === true;
             }
@@ -951,11 +973,12 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
       ? decodeHtmlEntities(titleMatch[1].replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim().slice(0, 180)
       : candidate.title;
     const paragraphs = extractVisibleParagraphs(html, candidate);
+    const reviewedSnapshot = candidate.reviewedSourceRequired ? await fingerprintReviewedParagraphs(candidate.url, paragraphs) : null;
     const content = relevantParagraphText(paragraphs, question, candidate);
     if (!content || !evidenceAdmissionSufficient(candidate, content, question)) return null;
     if (cache && cacheKey) {
       try {
-        await cache.put(cacheKey, new Response(JSON.stringify({ title, paragraphs: compactParagraphPack(paragraphs, candidate, question) }), {
+        await cache.put(cacheKey, new Response(JSON.stringify({ title, paragraphs: compactParagraphPack(paragraphs, candidate, question), ...(reviewedSnapshot ? {reviewedParagraphs:reviewedSnapshot.paragraphs,sourceSha256:reviewedSnapshot.sourceSha256,sourceExtractionVersion:reviewedSnapshot.extractionVersion} : {}) }), {
           headers: { 'Content-Type': 'application/json', 'Cache-Control': 'public, max-age=3600' },
         }));
       } catch (_cacheError) {}
@@ -963,6 +986,7 @@ async function fetchOfficialSource(candidate, question, deadline, counters = nul
     const source = canonicalSource(candidate.url, title, content,
       candidate.deterministic === true || candidate.deterministicHistoryTopic === true || candidate.namedGospelTopic === true || candidate.pioneerDisclosure === true ? 4200 : 700);
     if (source) {
+      if (reviewedSnapshot) { source.sourceSha256 = reviewedSnapshot.sourceSha256; source.sourceExtractionVersion = reviewedSnapshot.extractionVersion; }
       source.cacheStatus = 'miss';
       source.topicPinned = candidate.topicPinned === true;
     }
@@ -1025,7 +1049,7 @@ async function retrieveIndexedChurchEvidence(question, page, deadline, pioneerTo
     ? CHURCH_SOURCE_INDEX.find((entry) => entry.url === 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng')
     : null;
   const topic = pioneerTopic(pioneerTopicKey, page);
-  const candidates = topic ? [{ url: topic.url, title: topic.subject, kind: 'pioneer-disclosure', pioneerDisclosure: true, focalPhrases: PIONEER_FOCAL_PHRASES[pioneerTopicKey] || [] }] : transportTopics.length ? transportTopics.map(source => ({url:source.url,title:source.subject,kind:'history-topic',namedGospelTopic:true})) : deterministicScripture
+  const candidates = topic ? [{ url: topic.url, title: topic.subject, kind: 'pioneer-disclosure', pioneerDisclosure: true, reviewedSourceRequired: true, focalPhrases: PIONEER_FOCAL_PHRASES[pioneerTopicKey] || [] }] : transportTopics.length ? transportTopics.map(source => ({url:source.url,title:source.subject,kind:'history-topic',namedGospelTopic:true})) : deterministicScripture
     ? [{ ...deterministicScripture, score: 1000, overlapCount: normalizeDiscoveryTokens(question).length }]
     : deterministicHistoryTopic
       ? [deterministicHistoryTopic]
@@ -2106,12 +2130,13 @@ export default {
         }
       }
 
+      const reviewedGodKey = reviewedGodComparisonKey(sanitized.scope);
       const relatedSources = !evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly)
         && !sanitized.scope.selectedPioneer && !sanitized.scope.pioneerTopicKey
         ? relatedConversationSources(sanitized.scope) : [];
       if (relatedSources.length) {
         const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
-        evidence = (await Promise.all(relatedSources.map(source => fetchOfficialSource(source,
+        evidence = (await Promise.all(relatedSources.map(source => fetchOfficialSource(reviewedGodKey ? {...source,reviewedSourceRequired:true} : source,
           `${sanitized.scope.retrievalQuestion} ${source.title}`, deadline, counters)))).filter(Boolean);
         if (evidence.length !== relatedSources.length) evidence = [];
         allEvidence = evidence;
@@ -2125,7 +2150,7 @@ export default {
         retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + Number(counters.transportFailures || 0);
       }
 
-      if (!evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer) {
+      if (!evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer && !reviewedGodKey) {
         const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline, sanitized.scope.pioneerTopicKey);
         retrievalDiagnostic.focuschrist_index_candidates = indexed.candidates.length;
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
@@ -2142,6 +2167,29 @@ export default {
           allEvidence = indexed.evidence;
           draft = '';
           retrievalDiagnostic.focuschrist_retrieval_route = 'church-source-index';
+        }
+      }
+
+      const reviewedReadingKey = sanitized.scope.pioneerTopicKey || reviewedGodKey;
+      let reviewedReading = null;
+      if (reviewedReadingKey) {
+        const expectedUrls = sanitized.scope.pioneerTopicKey
+          ? [PIONEER_TOPIC_SOURCES[sanitized.scope.pioneerTopicKey].url]
+          : ['https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ?lang=eng',
+            'https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng'];
+        reviewedReading = await verifyReviewedReading(reviewedReadingKey, evidence, expectedUrls);
+        if (!reviewedReading) {
+          const limited = fallbackPayload('reviewed-source-review-required', {
+            ...retrievalDiagnostic, focuschrist_reviewed_reading_status:'source-or-review-unavailable',
+          }, sanitized.scope);
+          limited.choices[0].message.content = 'I can’t verify this study reading right now. You can still open the approved study sources below.';
+          limited.focuschrist_sources = expectedUrls.map(url => ({
+            text: evidence.find(source => source.url === url)?.title
+              || (sanitized.scope.pioneerTopicKey ? PIONEER_TOPIC_SOURCES[sanitized.scope.pioneerTopicKey].subject
+                : url.includes('/jesus-christ?') ? 'Jesus Christ' : 'Godhead'),
+            url,
+          }));
+          return jsonResponse(limited, 200, origin, deadline, localScriptures);
         }
       }
 
@@ -2221,9 +2269,9 @@ export default {
       // Worker has already retrieved and validated their pinned official source.
       // This keeps these narrow owner journeys available during provider faults or
       // rate pressure without weakening the fail-closed contract for any other ask.
-      const reviewedDeterministic = retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
+      const reviewedDeterministic = reviewedReading || (retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
         ? reviewedDeterministicEvidenceRecovery(sanitized.scope.retrievalQuestion, evidence, sanitized.scope.page)
-        : null;
+        : null);
       if (reviewedDeterministic) {
         const recoveryIndexes = reviewedDeterministic.sourceIndexes
           .filter((sourceIndex) => Number.isInteger(sourceIndex) && sourceIndex >= 1 && sourceIndex <= evidence.length);
@@ -2257,10 +2305,15 @@ export default {
             focuschrist_openai_verifier_calls: 0,
             focuschrist_verifier_conservative_unmetered_neurons: 0,
             focuschrist_reviewed_deterministic_recovery: reviewedDeterministic.recoveryId,
+            ...(reviewedReading ? {focuschrist_review_revision:reviewedReading.reviewRevision,focuschrist_reviewed_reading_status:'verified-current-source'} : {}),
             ...retrievalDiagnostic,
           }, 200, origin, deadline, localScriptures);
         }
       }
+
+      if (reviewedReadingKey) return jsonResponse(fallbackPayload('reviewed-source-review-required', {
+        ...retrievalDiagnostic, focuschrist_reviewed_reading_status:'publication-check-failed',
+      }, sanitized.scope), 200, origin, deadline, localScriptures);
 
       const expandCanonicalEvidence = async () => {
         const added = await augmentRequestedCorpusEvidence(sanitized.scope, evidence, localScriptures,
@@ -2639,6 +2692,7 @@ export default {
 
 export {
   isGodInOldTestamentQuestion,
+  reviewedGodComparisonKey,
   jsonResponse,
   GENERAL_ANSWER_FALLBACK,
   OFFICIAL_EXCERPT_CACHE_VERSION,
@@ -2665,6 +2719,7 @@ export {
   extractRelevantParagraphs,
   fetchTellMyStoryEvidence,
   fetchOfficialSource,
+  captureReviewedSourceSnapshot,
   guardVerifiedAnswer,
   hasKnownFalseClaim,
   hasExcessiveSourceOverlap,
