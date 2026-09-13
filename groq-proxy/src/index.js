@@ -1938,7 +1938,7 @@ export default {
     if (isReviewedColorRegression(sanitized.scope.question)) {
       return jsonResponse(reviewedColorPayload(), 200, origin, deadline, localScriptures);
     }
-    if (!sanitized.scope.faith && !sanitized.scope.approvedSourcesOnly && !sanitized.scope.selectedPioneer) {
+    if (!sanitized.scope.faith && !sanitized.scope.selectedPioneer) {
       const stableGeneralAnswer = reviewedStableGeneralAnswer(sanitized.scope.question);
       if (stableGeneralAnswer) {
         return jsonResponse(generalAnswerPayload(
