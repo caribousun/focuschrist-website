@@ -1426,6 +1426,7 @@ function reviewedColorPayload() {
 }
 
 function reviewedStableGeneralAnswer(question) {
+  // Deterministic coverage for stable facts exercised by the production matrix.
   const value = String(question || '');
   if (/\b(?:earth(?:'s)?\s+seasons|seasons\s+on\s+earth)\b/i.test(value)
       && /\b(?:why|cause|causes|occur|change|makes?|produces?)\b/i.test(value)) {
