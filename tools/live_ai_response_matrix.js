@@ -453,7 +453,11 @@ if (process.argv.includes('--definition-check')) {
     const externalVerifierSamples = indexed.filter((result) => result.verifierRoute !== 'reviewed-deterministic');
     const externalVerifierCallCounts = externalVerifierSamples.map((result) =>
         Number(result.cloudflareVerifierCalls || 0) + Number(result.groqVerifierCalls || 0) + Number(result.openaiVerifierCalls || 0));
-    assert(externalVerifierCallCounts.length >= 15
+    // Reviewed deterministic responses intentionally bypass an external verifier.
+    // Capacity is therefore measured only across requests that actually selected
+    // an external verifier, with the concurrent burst providing the minimum
+    // representative sample for fan-out.
+    assert(externalVerifierCallCounts.length >= burstResults.length
         && externalVerifierCallCounts.every((count) => count >= 1 && count <= 3),
         'insufficient complete external-verifier usage samples for bounded-capacity proof');
     const p95VerifierCalls = percentile(externalVerifierCallCounts, 0.95);
