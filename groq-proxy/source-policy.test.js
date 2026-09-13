@@ -1008,10 +1008,17 @@ for (const sourceUrl of ['https://example.com/ada-lovelace', 'https://rsc.byu.ed
       'general questions must decline unapproved evidence and approved search snippets without fetched article text');
   } finally { globalThis.fetch = originalFetch; }
 }
-const unavailableResponse = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',messages:[{role:'user',content:'What causes ocean tides?'}]})}), {});
-const unavailablePayload = await unavailableResponse.json();
-assert(unavailablePayload.focuschrist_gateway_mode === 'research-unavailable'
-  && unavailablePayload.choices[0].message.content === SOURCE_UNAVAILABLE_MESSAGE
-  && unavailablePayload.focuschrist_source_integrity_verified !== true,
-  'an unavailable research service must invite retry rather than imply the question lacked support');
+for (const [question, expected] of [
+  ["What makes Earth's seasons occur?", /tilt.{0,80}(?:axis|orbit)|axis.{0,80}(?:tilt|orbit)/i],
+  ['What causes ocean tides?', /moon.{0,80}gravit|gravit.{0,80}moon/i],
+  ['How did the ocean contain so much salt?', /(?:mineral|ion|rock).{0,100}(?:river|water|ocean)/i],
+]) {
+  const stableResponse = await worker.fetch(new Request('https://worker.test', {method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'general-knowledge',messages:[{role:'user',content:question}]})}), {});
+  const stablePayload = await stableResponse.json();
+  assert(stablePayload.focuschrist_gateway_mode === 'reviewed-stable-general'
+    && stablePayload.focuschrist_verifier_route === 'reviewed-deterministic'
+    && expected.test(stablePayload.choices[0].message.content)
+    && stablePayload.focuschrist_source_integrity_verified !== true,
+    'reviewed stable facts must bypass unavailable research with the expected causal concept');
+}
 console.log('Gateway source policy QA PASS');
