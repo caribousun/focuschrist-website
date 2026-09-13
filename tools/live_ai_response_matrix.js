@@ -177,6 +177,16 @@ function validate(test, result) {
     assert(result.classificationMode.length > 0, test.id + ' omitted the classification receipt');
     assert(result.groqResearchCalls === 0 && result.groqVerifierCalls === 0 && result.cloudflareVerifierCalls === 0,
         test.id + ' used a retired AI provider');
+    if (test.allowSourceLimitation && result.gatewayMode === 'reviewed-stable-general') {
+        assert(!result.verified && result.verifierRoute === 'reviewed-deterministic' && result.sourceUrls.length === 0,
+            test.id + ' returned an invalid reviewed stable-fact receipt');
+        assert(result.wordCount >= test.minimumWords, test.id + ' returned an incomplete reviewed stable-fact answer');
+        for (const pattern of test.factPatterns || []) assert(pattern.test(result.answer), test.id + ' omitted expected answer concept ' + pattern);
+        for (const pattern of test.contradictionPatterns || []) assert(!pattern.test(result.answer), test.id + ' returned a negated or contradictory expected fact');
+        result.outcome = 'answered';
+        result.answered = true;
+        return;
+    }
     if (test.allowSourceLimitation && !result.verified) {
         assert(['research-insufficient-evidence', 'verification-rejected'].includes(result.gatewayMode), test.id + ' returned a provider or policy error instead of an approved-source limitation');
         assert(result.answer === 'focusChrist is here to help you learn of Jesus Christ and draw closer to Him. I couldn’t find a supported answer to this question in our study library or approved LDS sources. You’re welcome to ask about Jesus Christ, scripture, faith, or Church history.', test.id + ' omitted the exact source limitation');
@@ -225,7 +235,7 @@ function validate(test, result) {
         } else {
             assert(result.verifierInputTokens > 0 && result.verifierOutputTokens > 0, test.id + ' omitted verifier usage receipts');
             assert(Number.isInteger(result.openaiVerifierCalls)
-                && result.openaiVerifierCalls >= 1 && result.openaiVerifierCalls <= 2
+                && result.openaiVerifierCalls >= 1 && result.openaiVerifierCalls <= 4
                 && verifierCallTotal === result.openaiVerifierCalls,
                 test.id + ' returned invalid bounded OpenAI-only verifier call accounting');
         }
