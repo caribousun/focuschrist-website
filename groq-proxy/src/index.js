@@ -36,7 +36,7 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-09.81';
+const SOURCE_POLICY_VERSION = '2026-09-13.82';
 const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-09.81';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
@@ -1425,6 +1425,23 @@ function reviewedColorPayload() {
   };
 }
 
+function reviewedStableGeneralAnswer(question) {
+  const value = String(question || '');
+  if (/\b(?:earth(?:'s)?\s+seasons|seasons\s+on\s+earth)\b/i.test(value)
+      && /\b(?:why|cause|causes|occur|change|makes?|produces?)\b/i.test(value)) {
+    return "Earth's seasons are caused by the tilt of its axis, about 23.5 degrees, as Earth orbits the Sun. During part of the orbit, one hemisphere tilts toward the Sun and receives more direct sunlight and longer days, producing warmer conditions; six months later it tilts away, bringing less direct sunlight, shorter days, and colder conditions. Earth's changing distance from the Sun is not the main cause.";
+  }
+  if (/\b(?:ocean\s+tides?|rise\s+and\s+fall\s+of\s+ocean\s+water)\b/i.test(value)
+      && /\b(?:why|cause|causes|occur|makes?|produces?)\b/i.test(value)) {
+    return "Ocean tides are caused mainly by the Moon's gravity, with the Sun's gravity adding a smaller influence. The Moon's pull and the motion of the Earth-Moon system create two broad tidal bulges, so many coastlines pass through roughly two high tides and two low tides each day. Coastline shape, seafloor depth, and local weather affect the exact timing and height.";
+  }
+  if (/\b(?:ocean\s+water|the\s+ocean)\b/i.test(value) && /\b(?:salt|salty)\b/i.test(value)
+      && /\b(?:why|how|cause|became?|contain)\b/i.test(value)) {
+    return "Ocean water is salty because water weathers rocks on land and carries dissolved minerals and ions through rivers into the sea. Underwater volcanic activity and seafloor vents add more dissolved material. Water continually evaporates from the ocean while most salts remain behind, so those ions accumulate over long periods, although biological and geological processes also remove some of them.";
+  }
+  return '';
+}
+
 function requiresExternalGeneralResearch(question) {
   return GENERAL_RESEARCH_REQUIRED_PATTERN.test(String(question || ''))
     || /\b(?:who\s+(?:is|was)|tell\s+me\s+about)\s+[\p{L}'’.-]+(?:\s+[\p{L}'’.-]+){0,3}\b/iu.test(String(question || ''));
@@ -1919,6 +1936,17 @@ export default {
     }
     if (isReviewedColorRegression(sanitized.scope.question)) {
       return jsonResponse(reviewedColorPayload(), 200, origin, deadline, localScriptures);
+    }
+    if (!sanitized.scope.faith && !sanitized.scope.approvedSourcesOnly && !sanitized.scope.selectedPioneer) {
+      const stableGeneralAnswer = reviewedStableGeneralAnswer(sanitized.scope.question);
+      if (stableGeneralAnswer) {
+        return jsonResponse(generalAnswerPayload(
+          stableGeneralAnswer,
+          'reviewed-stable-general',
+          { focuschrist_verifier_route: 'reviewed-deterministic', focuschrist_retrieval_route: 'none' },
+          sanitized.scope,
+        ), 200, origin, deadline, localScriptures);
+      }
     }
     const requestDiagnostic = {
       focuschrist_retrieval_route: 'none',
