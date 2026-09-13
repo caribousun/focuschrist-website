@@ -171,6 +171,14 @@ async function submit(test, messages = null) {
 }
 
 function validate(test, result) {
+    try { return validateResult(test, result); }
+    catch (error) {
+        console.error('Live AI validation diagnostic: ' + JSON.stringify({testId:test.id, question:test.question, result}));
+        throw error;
+    }
+}
+
+function validateResult(test, result) {
     assert(result.status === 200, test.id + ' returned HTTP ' + result.status);
     assert(result.policyVersion === POLICY_VERSION, test.id + ' returned Worker policy ' + result.policyVersion);
     assert(result.elapsedMs <= HARD_LIMIT_MS, test.id + ' exceeded the 25-second visitor ceiling');

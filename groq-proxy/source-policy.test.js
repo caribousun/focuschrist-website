@@ -1103,3 +1103,43 @@ try {
     'the Hyrum pronoun follow-up must remain verified from one pinned official source without provider dependence');
 } finally { globalThis.fetch = originalFetch; }
 console.log('Gateway source policy QA PASS');
+
+// A fresh general question must use the reviewed causal explanation regardless
+// of natural word order, without inheriting an earlier Church-history subject.
+const seasonsAssert = (await import('node:assert/strict')).default;
+const seasonsOriginalFetch = globalThis.fetch;
+try {
+  let externalCalls = 0;
+  globalThis.fetch = async () => { externalCalls++; return new Response('{}', {status:503}); };
+  const positiveSeasons = [
+    'Why do seasons change on Earth?',
+    "Why do Earth's seasons change?",
+    'Why do the seasons on Earth occur?',
+    'What causes the seasons to change on Earth?',
+    'What makes seasons on Earth happen?',
+    'Why does Earth have seasons?',
+    'What causes Earth’s seasons?',
+  ];
+  for (const question of positiveSeasons) for (const withHistory of [false,true]) {
+    const messages = withHistory ? [{role:'user',content:'Who was Hyrum Smith?'},{role:'assistant',content:'Earlier Church-history discussion.'},{role:'user',content:question}] : [{role:'user',content:question}];
+    const response = await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:'general-knowledge',messages})}),{OPENAI_API_KEY:'offline-fixture'});
+    const result = await response.json();
+    seasonsAssert.equal(result.focuschrist_gateway_mode,'reviewed-stable-general',question);
+    seasonsAssert.equal(result.focuschrist_resolved_profile,'general-knowledge');
+    seasonsAssert.equal(result.focuschrist_classification_mode,'request-scope');
+    seasonsAssert.match(result.choices[0].message.content,/tilt.*axis/);
+    seasonsAssert.equal(externalCalls,0,'fresh reset and equivalent wording must not invoke external research');
+  }
+  for (const [question, profile] of [
+    ['Why do seasons change on Mars?','general-knowledge'],
+    ['Why do seasons change on Earth and how does this compare with Mars?','general-knowledge'],
+    ["What makes Earth's seasons affect crop prices?",'general-knowledge'],
+    ['Why do seasons change on Earth? Explain the symbolism in scripture.','general-knowledge'],
+    ['Why do seasons change on Earth?','faith-study'],
+  ]) {
+    const response = await worker.fetch(new Request('https://worker.test',{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:'ask',focuschrist_profile:profile,messages:[{role:'user',content:question}]})}),{OPENAI_API_KEY:'offline-fixture'});
+    const result = await response.json();
+    seasonsAssert.notEqual(result.focuschrist_gateway_mode,'reviewed-stable-general',question+' / '+profile);
+  }
+} finally { globalThis.fetch=seasonsOriginalFetch; }
+console.log('PASS: fresh-reset seasons paraphrases use zero external requests; compound, other-planet and faith scopes retain ordinary routing.');

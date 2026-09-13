@@ -1524,10 +1524,10 @@ function reviewedColorPayload() {
 }
 
 function reviewedStableGeneralAnswer(question) {
-  // Deterministic coverage for stable facts exercised by the production matrix.
-  const value = String(question || '');
-  if (/\b(?:earth(?:'s)?\s+seasons|seasons\s+on\s+earth)\b/i.test(value)
-      && /\b(?:why|cause|causes|occur|change|makes?|produces?)\b/i.test(value)) {
+  // Match a single causal question, including natural placement of "on Earth".
+  // Anchoring keeps comparative, compound and other-planet questions on research.
+  const value = String(question || '').trim().replace(/[’‘]/g, "'");
+  if (/^(?:(?:why|how)\s+(?:do|does)\s+(?:earth(?:'s)?\s+seasons|(?:the\s+)?seasons(?:\s+on\s+earth)?)\s+(?:change|occur|happen)(?:\s+on\s+earth)?|what\s+(?:causes?|makes?|produces?)\s+(?:earth(?:'s)?\s+seasons|(?:the\s+)?seasons(?:\s+on\s+earth)?)(?:\s+(?:to\s+)?(?:change|occur|happen)(?:\s+on\s+earth)?)?|why\s+does\s+earth\s+have\s+seasons)[?.!]*$/i.test(value)) {
     return "Earth's seasons are caused by the tilt of its axis, about 23.5 degrees, as Earth orbits the Sun. During part of the orbit, one hemisphere tilts toward the Sun and receives more direct sunlight and longer days, producing warmer conditions; six months later it tilts away, bringing less direct sunlight, shorter days, and colder conditions. Earth's changing distance from the Sun is not the main cause.";
   }
   if (/\b(?:ocean\s+tides?|rise\s+and\s+fall\s+of\s+ocean\s+water)\b/i.test(value)
