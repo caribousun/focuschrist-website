@@ -1,6 +1,7 @@
+const { MAX_EXTERNAL_VERIFIER_CALLS, validateExternalVerifierCapacity } = require('./live_ai_capacity_contract.js');
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-13.90';
+const POLICY_VERSION = '2026-09-13.91';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -235,7 +236,7 @@ function validate(test, result) {
         } else {
             assert(result.verifierInputTokens > 0 && result.verifierOutputTokens > 0, test.id + ' omitted verifier usage receipts');
             assert(Number.isInteger(result.openaiVerifierCalls)
-                && result.openaiVerifierCalls >= 1 && result.openaiVerifierCalls <= 4
+                && result.openaiVerifierCalls >= 1 && result.openaiVerifierCalls <= MAX_EXTERNAL_VERIFIER_CALLS
                 && verifierCallTotal === result.openaiVerifierCalls,
                 test.id + ' returned invalid bounded OpenAI-only verifier call accounting');
         }
@@ -450,24 +451,11 @@ if (process.argv.includes('--definition-check')) {
     assert(indexed.length >= 15, 'insufficient indexed usage samples for capacity proof');
     assert(indexedNeuronCosts.every((cost) => cost === 0),
         'indexed faith traffic unexpectedly consumed Cloudflare AI neurons');
-    const externalVerifierSamples = indexed.filter((result) => result.verifierRoute !== 'reviewed-deterministic');
-    const externalVerifierCallCounts = externalVerifierSamples.map((result) =>
-        Number(result.cloudflareVerifierCalls || 0) + Number(result.groqVerifierCalls || 0) + Number(result.openaiVerifierCalls || 0));
     // Reviewed deterministic responses intentionally bypass an external verifier.
     // Capacity is therefore measured only across requests that actually selected
     // an external verifier. The Temple and Prayer burst lanes intentionally
     // exercise concurrent external verification; Kirtland is reviewed locally.
-    const requiredExternalBurstIds = new Set(['burst-temples', 'burst-prayer']);
-    const externalBurstSamples = burstResults.filter((result) => requiredExternalBurstIds.has(result.id)
-        && result.verifierRoute !== 'reviewed-deterministic');
-    assert(externalBurstSamples.length === requiredExternalBurstIds.size
-        && externalVerifierCallCounts.length >= requiredExternalBurstIds.size
-        && externalVerifierCallCounts.every((count) => count >= 1 && count <= 3),
-        'insufficient complete external-verifier usage samples for bounded-capacity proof');
-    const p95VerifierCalls = percentile(externalVerifierCallCounts, 0.95);
-    const projectedVerifierCallsAt50Daily = p95VerifierCalls * 50;
-    assert(projectedVerifierCallsAt50Daily <= 150,
-        'bounded verifier fan-out exceeds 150 calls for 50 daily indexed questions: ' + projectedVerifierCallsAt50Daily);
+    const verifierCapacity = validateExternalVerifierCapacity(indexed, burstResults);
     assert(indexed.some((result) => result.cacheMisses > 0), 'no cold official-source cache miss was observed');
     const p95 = percentile(times, 0.95);
     assert(p95 <= P95_LIMIT_MS, 'matrix p95 exceeded 20 seconds: ' + p95 + 'ms');
@@ -478,5 +466,5 @@ if (process.argv.includes('--definition-check')) {
         groqResearchCalls: allMeasured.reduce((sum, result) => sum + Number(result.groqResearchCalls || 0), 0),
         p95Ms: p95, maxMs: Math.max(...times), burst: burstResults.length,
         cloudflareIndexedNeurons: indexedNeuronCosts.reduce((sum, cost) => sum + cost, 0),
-        p95VerifierCalls, projectedVerifierCallsAt50Daily, warmCacheHits: warmSecond.cacheHits }));
+        ...verifierCapacity, warmCacheHits: warmSecond.cacheHits }));
 })().catch((error) => { console.error('Live AI response matrix FAIL:', error.message); process.exit(1); });

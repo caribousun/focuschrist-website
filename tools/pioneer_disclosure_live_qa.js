@@ -1,6 +1,7 @@
 // Run every visible Pioneer topic against production; never count a fallback as a pass.
 (async () => {
     const { PIONEER_TOPIC_SOURCES } = await import('../groq-proxy/src/pioneer-topic-sources.js');
+    const { hasWinterQuartersLocationSwap } = await import('../groq-proxy/src/historical-relationship.js');
     const { OFFICIAL_EXCERPT_CACHE_VERSION } = await import('../groq-proxy/src/index.js');
     const results = [];
     for (const [key, topic] of Object.entries(PIONEER_TOPIC_SOURCES)) {
@@ -21,9 +22,14 @@
             const passed = response.ok && data.focuschrist_source_integrity_verified === true
                 && data.focuschrist_source_policy === OFFICIAL_EXCERPT_CACHE_VERSION
                 && data.focuschrist_pioneer_disclosure === true && words >= 70
+                && data.focuschrist_scripture_validated === true && !hasWinterQuartersLocationSwap(answer)
                 && urls.includes(topic.url) && data.focuschrist_index_sources === 1
                 && data.focuschrist_official_fetch_calls <= 1 && elapsedMs <= 25000;
-            const result = { key, passed, elapsedMs, words, urls, answer, reason: data.focuschrist_verifier_publication_failure || data.focuschrist_gateway_mode };
+            const result = { key, passed, elapsedMs, words, urls, answer,
+                reason: data.focuschrist_scripture_failure || data.focuschrist_verifier_publication_failure || data.focuschrist_gateway_mode,
+                scriptureValidated: data.focuschrist_scripture_validated,
+                verifierRoute: data.focuschrist_verifier_route, verifierCalls: data.focuschrist_openai_verifier_calls,
+                policy: data.focuschrist_source_policy };
             results.push(result); console.log(JSON.stringify(result));
         } catch (error) {
             const result = { key, passed: false, error: error.message };

@@ -18,6 +18,8 @@ const library = factory(catalog,localFetch);
     assert.equal(library.references('Jude 1-5')[0].verses.length,5);
     for(const bad of ['John 3:16 says “Money\nis salvation.”','John 3:16 says “Go”.']) assert.equal((await library.checkAnswer(bad,[])).ok,false,bad);
     assert.equal((await library.checkAnswer('I love Jesus Christ. My mother said “Eat your vegetables.”',[])).ok,true);
+    for (const good of ['The night watch ran from 8:00 to 10:00 p.m.', 'The camp ate between 6:00 and 7:00.', 'They worked until approximately 18:30.', 'They prepared for an 8:00 or 9:00 A.M. departure.', 'At 8:00 or 9:00 P.M., Gates called a halt.']) assert.equal((await library.checkAnswer(good,[])).ok,true,good);
+    for (const bad of ['They met to 25:99.', 'Zedekiah 8:00 teaches faith.', '3 Corinthians 8:00 teaches faith.', 'John 3:99 at 8:00 p.m.', 'John 3:16 says “We wash dishes from 8:00 to 10:00.”']) assert.equal((await library.checkAnswer(bad,[])).ok,false,bad);
     for(const n of [1,2]) { const exactDocument=await library.lookupRequest('Official Declaration '+n); assert.equal((await library.checkAnswer(exactDocument.answer,exactDocument.sources)).ok,true); }
     const exact = JSON.parse(fs.readFileSync(path.join(root,'scripture-data/nt/john/3.json'))).verses[15].text;
     assert.equal((await library.checkAnswer('“'+exact+'” (John 3:16)',[])).ok,true);

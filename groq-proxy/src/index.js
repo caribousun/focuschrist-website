@@ -4,6 +4,7 @@ import { paragraphRetrievalTerms } from './paragraph-intent.js';
 import { directScriptureReading } from './direct-scripture-reading.js';
 import { reviewedSourceContext } from './reviewed-source-context.js';
 import { isNarrowFactualFollowup } from './factual-followup.js';
+import { hasWinterQuartersLocationSwap } from './historical-relationship.js';
 import { augmentRequestedCorpusEvidence } from './corpus-evidence.js';
 import { checkCorpusCoverage, requestedTeachingCorpora } from './corpus-coverage.js';
 import { PIONEER_SOURCE_URLS, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, pioneerTopic, pioneerTransportTopics } from './pioneer-topic-sources.js';
@@ -36,8 +37,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-13.90';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.90';
+const SOURCE_POLICY_VERSION = '2026-09-13.91';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.91';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1475,6 +1476,7 @@ function countCompleteSentences(answer) {
 
 function hasKnownFalseClaim(text) {
   const value = String(text || '');
+  if (hasWinterQuartersLocationSwap(value)) return true;
   if (!KNOWN_FALSE_SOURCE_PATTERNS.some((pattern) => pattern.test(value))) return false;
   const explicitCorrection = /\b(?:does\s+not|do\s+not|doesn't|don't|is\s+not|are\s+not|never|no\s+such)\b.{0,180}\b(?:red|white|black|golden)\b/i.test(value)
     || /\b(?:red|white|black|golden)\b.{0,180}\b(?:does\s+not|do\s+not|is\s+not|are\s+not|never)\b/i.test(value);
@@ -2268,7 +2270,9 @@ export default {
         'If a draft is present, repair it into a direct, complete answer using the evidence. Every externally checkable claim, quotation, attribution, date, statistic, scripture citation, and statement of official teaching must be directly supported by the evidence. Remove unsupported detail and correct contradictions, but preserve useful supported explanation. Do not add facts from memory.',
         'Keep each person, organization, place, date, and action attached to the relationship actually stated in its source context. A shift of time or setting can change the subject even within one paragraph. Never combine an earlier location with a later organization merely because both occur in the same excerpt. Do not increase geographic specificity, infer an unnamed city, or resolve an ambiguous referent unless the evidence explicitly supports it. Preserve these limits when combining neighboring paragraphs or separate sources.',
         'Check chronology and setting before accepting a claim: before, after, arriving, crossing, departure and duration endpoints must match the source exactly. Do not transfer settlement or winter-household details to travel on the trail. A duration for one group or phase is not a duration for another group or rescue phase. When asked to compare, extract the stated attributes for each requested subject; do not substitute a third subject. Omit any unsupported relation even if the individual names, places and numbers all appear in the excerpt.',
-        'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give 90 to 220 words and at least three complete sentences. A nuanced question normally needs two to four short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
+        isNarrowFactualFollowup(sanitized.scope)
+          ? 'For this narrow factual follow-up, give a direct sourced answer with brief useful context: at least 20 words and two complete sentences. Answer only the requested detail; do not add quotations, retell the preceding answer, or pad it into an essay.'
+          : 'For a simple general fact, give at least 45 words and two complete sentences. For a faith or Church-history question, give 90 to 220 words and at least three complete sentences. A nuanced question normally needs two to four short paragraphs. Put the direct answer first, then explain the context supported by the evidence. Never return a one-line fact fragment, a one- or two-word answer, or padded repetition.',
         'Preserve the exact subjects and relationships in scriptural comparisons. Do not extend a metaphor with invented physical details or present a personal application as something the passage says. If the text compares the word to a seed, do not replace the word with faith or invent watering, warmth, or other gardening instructions.',
         'Use independently worded paraphrase. Do not copy a long passage or reconstruct the source in ordered fragments. Apart from unavoidable names and short doctrinal phrases, avoid matching source wording for more than eight consecutive words.',
         'Explain the supported facts in a fresh structure organized around the visitor question. Do not follow the source sentence by sentence or substitute synonyms into its clauses. Shared short fragments in the same order can also reproduce too much of the source. Rebuild the explanation while preserving exact names, dates, offices, relationships, and chronology. Do not add facts or filler to dilute overlap.',
@@ -2278,7 +2282,7 @@ export default {
         retrievalDiagnostic.focuschrist_deterministic_scripture === true
           ? 'The visitor explicitly named a canonical scripture chapter. EVIDENCE contains that exact official scripture source and no competing research source. If its excerpt directly addresses the requested concept, compose the supported answer from it and approve it. Do not reject merely because the visitor asks for an explanation rather than a quotation.'
           : retrievalDiagnostic.focuschrist_deterministic_history_topic === true
-            ? 'The visitor explicitly named, or the bounded conversation context resolved to, an indexed Church History topic. EVIDENCE contains that exact official Church History topic and no competing research source. If its excerpt directly describes the requested identity, role, event, date, purpose, or historical setting, compose the supported answer from it and approve it. For a faith or Church-history answer, aim for 100 to 170 words and at least four complete sentences so the response clears the publication-depth floor with margin. Do not infer relative ages within a family or add biographical relationships that the evidence does not explicitly state.'
+            ? 'The visitor explicitly named, or the bounded conversation context resolved to, an indexed Church History topic. EVIDENCE contains that exact official Church History topic and no competing research source. If its excerpt directly describes the requested identity, role, event, date, purpose, or historical setting, compose the supported answer from it and approve it. ' + (isNarrowFactualFollowup(sanitized.scope) ? 'Use the narrow factual follow-up depth stated above. ' : 'For a faith or Church-history answer, aim for 100 to 170 words and at least four complete sentences so the response clears the publication-depth floor with margin. ') + 'Do not infer relative ages within a family or add biographical relationships that the evidence does not explicitly state.'
             : 'Evaluate the supplied official evidence normally under the source-integrity contract.',
         sanitized.scope.pioneerTopicKey
           ? 'This is a fixed historical timeline entry. Describe only causal links explicitly stated in the evidence: chronology or paragraph proximity does not establish cause. Do not infer motives, feelings, sounds, or present-day conditions. Do not invent journals, quotations, later accounts, or source descriptions. Keep dates and companies distinct, and do not move an event to the requested year simply because that year appears in the question. Omit unbounded comparisons. Attribute remembered experiences to the named narrator. Write a connected historical explanation without Context or Source fact labels and without repeating the same facts in a second summary.'
@@ -2293,8 +2297,7 @@ export default {
         `DRAFT:\n${draft}`,
         '',
         `EVIDENCE:\n${evidenceForVerifier(evidence)}`,
-      ].join('\n')) + '\n' + SCRIPTURE_QUOTATION_CONTRACT
-        + (isNarrowFactualFollowup(sanitized.scope) ? '\nThis current question requests one factual detail in a continuing conversation. Override the general length targets: give a direct sourced answer with brief useful context, at least20 words and two complete sentences. Do not pad it to a study essay. Answer the requested fact with brief context, without adding quotations or retelling the preceding answer.' : '');
+      ].join('\n')) + '\n' + SCRIPTURE_QUOTATION_CONTRACT;
       let verifierPrompt = makeVerifierPrompt();
       const verifierBody = {
         messages: [{ role: 'user', content: verifierPrompt }],
@@ -2338,11 +2341,14 @@ export default {
             "An author's assessment controls over a tradition the author quotes to question or refute. Preserve explicit unsubstantiated, disputed, or no-evidence qualifications; never promote the cited tradition against that assessment.",
             'When a historical answer combines multiple journey accounts, distinguish the named people, companies and periods explicitly. Do not describe different companies as one unnamed company. Do not add generic uncertainty caveats such as unrecorded deaths or nearby settlements unless the supplied source itself states them.',
             'Check every factual clause for the exact actor, action, location, time, duration endpoints and setting. Sharing nouns or dates with a source is not support. Distinguish travel from settlement, first aid from later reinforcements, one company from all emigrants, and a narrator recollection from an official assertion. Preserve before/after and uncertainty exactly. Do not infer causal relationships from neighboring paragraphs.',
-            'Return JSON {"approved":boolean,"answer":string,"source_indexes":number[]}. If all claims are supported, return the answer unchanged. Otherwise REMOVE or CORRECT unsupported clauses using the evidence, while answering the actual question directly. The approved boolean describes YOUR CORRECTED answer, not the original draft. Set approved true when your corrected answer is supported. Set approved false only when the evidence cannot answer the question at all. Never introduce remembered facts, guessed links, or guessed scripture. Use only source indexes actually supporting the corrected answer.',
+            'Return JSON {"approved":boolean,"answer":string,"source_indexes":number[]}. If all claims are supported and the wording meets the paraphrase contract, return the answer unchanged. Otherwise REMOVE or CORRECT only the unsupported clauses or copied wording using the evidence, while answering the actual question directly. The approved boolean describes YOUR CORRECTED answer, not the original draft. Set approved true when your corrected answer is supported. Set approved false only when the evidence cannot answer the question at all. Never introduce remembered facts, guessed links, or guessed scripture. Use only source indexes actually supporting the corrected answer.',
             `Keep useful supported context: at least ${answerSubstanceRequirements(sanitized.scope).minimumWords} words and ${answerSubstanceRequirements(sanitized.scope).minimumSentences} complete sentences when the evidence supports that depth. Never pad with unsupported claims.`,
             `QUESTION: ${sanitized.scope.question}`,
             conversationInstruction(sanitized.scope),
             isNarrowFactualFollowup(sanitized.scope) ? 'This is a narrow factual follow-up. Preserve a concise direct fact and brief context. Do not add quotations, scripture quotations, or an unrelated retelling.' : '',
+            hasExcessiveSourceOverlap(verdict.answer, indexes.map(index => evidence[index - 1]))
+              ? 'The deterministic wording check found excessive source overlap in this proposed answer. Correct the wording as well as auditing its facts. Organize the response around the requested detail in a fresh sentence structure; do not reconstruct the source from short fragments. Do not add facts or filler to dilute copying.'
+              : 'The proposed answer already passes the deterministic source-overlap check. Preserve its independent sentence structure while auditing factual support. If a factual clause needs correction, change only that clause; do not replace the whole answer with the source paragraph structure.',
             `PROPOSED ANSWER: ${verdict.answer}`,
             `EVIDENCE: ${evidenceForVerifier(evidence)}`,
             SCRIPTURE_QUOTATION_CONTRACT,
@@ -2416,6 +2422,8 @@ export default {
             && !answerMeetsRepairMargin(verdict.answer, sanitized.scope))));
       const needsParaphraseRepair = Boolean(verdict && verdict.approved === true && indexes.length
         && hasExcessiveSourceOverlap(verdict.answer, selectedEvidenceBeforeRepair));
+      const needsHistoricalRelationRepair = Boolean(verdict?.approved === true && indexes.length
+        && hasWinterQuartersLocationSwap(verdict.answer));
       const indexedEvidenceRelevance = evidenceRelevanceReceipt(sanitized.scope.retrievalQuestion, evidence);
       const hasPinnedPioneerIrrigationEvidence = isPioneerIrrigationIntent(
         sanitized.scope.retrievalQuestion,
@@ -2426,7 +2434,7 @@ export default {
         && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
         && (indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2)
           || hasPinnedPioneerIrrigationEvidence));
-      if ((freshResearchEvidence || needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration || needsScriptureRepair)
+      if ((freshResearchEvidence || needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration || needsScriptureRepair || needsHistoricalRelationRepair)
         && ['openai-primary'].includes(verifierResult.verifierRoute)
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
@@ -2435,6 +2443,9 @@ export default {
         const repairMinimumSentences = requirements.minimumSentences + (!isNarrowFactualFollowup(sanitized.scope) && sanitized.scope.faith ? 1 : 0);
         const expansionPrompt = [
           verifierPrompt,
+          needsHistoricalRelationRepair
+            ? 'The previous answer placed the Winter Quarters storehouse in St. Louis. Recheck the purchase location and destination separately in the supplied EVIDENCE. Correct or omit the unsupported location clause using that evidence only; this repair instruction is not evidence. Do not infer a relationship from nearby names.'
+            : '',
           needsScriptureRepair
             ? 'The deterministic scripture check rejected the previous answer: ' + scriptureBeforeRepair.reason + '. Repair it once using only the provided evidence. Remove unsupported references or quotation claims. For exact scripture words use [[SCRIPTURE:Book chapter:verse]] with a complete supported reference. Do not guess a substitute passage. If evidence cannot support the claim, omit it or reject the answer.'
             : '',
@@ -2452,7 +2463,7 @@ export default {
             ? (retrievalDiagnostic.focuschrist_deterministic_scripture === true
               ? 'This is the exact canonical scripture source named by the visitor. Re-read its excerpt for the requested concept. If the excerpt supports a responsible explanation, write that explanation and set approved true with source_indexes [1]. Keep approved false only if the excerpt truly lacks the requested concept.'
               : retrievalDiagnostic.focuschrist_deterministic_history_topic === true
-                ? 'This is the exact official Church History topic named by the visitor or resolved from bounded conversation context. Re-read its excerpt for the requested identity, leadership role, event, or setting. If the excerpt supports a responsible answer, write a complete answer of roughly 100 to 170 words with at least four sentences and set approved true with source_indexes [1]. Keep approved false only if that exact topic excerpt truly lacks the requested material.'
+                ? 'This is the exact official Church History topic named by the visitor or resolved from bounded conversation context. Re-read its excerpt for the requested identity, leadership role, event, or setting. If the excerpt supports a responsible answer, write a supported answer ' + (isNarrowFactualFollowup(sanitized.scope) ? 'with at least 20 words and two complete sentences' : 'of roughly 100 to 170 words with at least four sentences') + ' and set approved true with source_indexes [1]. Keep approved false only if that exact topic excerpt truly lacks the requested material.'
                 : 'If the evidence can responsibly answer the question, write the supported answer and set approved true with its source indexes. If it still cannot, keep approved false.')
             : needsDepthRepair
             ? `Rewrite it using at least ${repairMinimumWords} words, ${repairMinimumSentences} complete sentences, and ${requirements.minimumParagraphs} paragraph(s). The publication gate is lower, but this repair target deliberately includes safety margin. Do not stop at the minimum. For a conversation-context or deterministic Church History answer, treat this margin as mandatory for the repaired draft.`

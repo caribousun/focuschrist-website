@@ -156,6 +156,7 @@ jobs:
           node groq-proxy/corpus-evidence.test.js
           node groq-proxy/factual-followup.test.js
           node groq-proxy/relationship-audit.test.js
+          node groq-proxy/historical-relationship.test.js
           node groq-proxy/reviewed-source-context.test.js
           node groq-proxy/direct-scripture-reading.test.js
           node groq-proxy/paragraph-intent.test.js
@@ -221,7 +222,9 @@ jobs:
         run: node --check tools/live_production_ask_qa.js
 
       - name: Validate live AI response matrix
-        run: node --check tools/live_ai_response_matrix.js
+        run: |
+          node --check tools/live_ai_response_matrix.js
+          node tools/live_ai_capacity_contract.test.js
 
       - name: Validate generated Church source index JavaScript
         run: node --check groq-proxy/src/church-source-index.js
