@@ -36,8 +36,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-13.89';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.89';
+const SOURCE_POLICY_VERSION = '2026-09-13.90';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.90';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1988,8 +1988,9 @@ export default {
     }
     const supportOldTestament = sanitized.scope.scriptureSupportRequested
       && isGodInOldTestamentQuestion(sanitized.scope.scriptureSupportAntecedent);
-    const directScripture = await directScriptureReading(sanitized.scope.question, localScriptures)
-      || await localScriptures.lookupRequest(supportOldTestament ? 'Genesis 1:1' : sanitized.scope.question);
+    const directScripture = sanitized.scope.pioneerTopicKey ? null
+      : await directScriptureReading(sanitized.scope.question, localScriptures)
+        || await localScriptures.lookupRequest(supportOldTestament ? 'Genesis 1:1' : sanitized.scope.question);
     if (directScripture && supportOldTestament) directScripture.answer = 'Genesis 1:1 explicitly names God as the creator of heaven and earth.\n\n' + directScripture.answer;
     if (directScripture) return jsonResponse({
       id: 'focuschrist-local-scripture',
@@ -2060,7 +2061,7 @@ export default {
       const retrievalDiagnostic = requestDiagnostic;
       if (tellMyStoryEvidence) retrievalDiagnostic.focuschrist_retrieval_route = 'reviewed-pioneer-biography';
 
-      if (!sanitized.scope.selectedPioneer) {
+      if (!sanitized.scope.selectedPioneer && !sanitized.scope.pioneerTopicKey) {
         try {
           // Current explicit references take precedence. Only preceding USER
           // questions can supply a missing reference through retrievalQuestion.
@@ -2083,7 +2084,8 @@ export default {
         }
       }
 
-      const relatedSources = !evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer
+      const relatedSources = !evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly)
+        && !sanitized.scope.selectedPioneer && !sanitized.scope.pioneerTopicKey
         ? relatedConversationSources(sanitized.scope) : [];
       if (relatedSources.length) {
         const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };

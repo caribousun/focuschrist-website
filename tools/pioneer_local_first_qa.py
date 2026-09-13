@@ -4,7 +4,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = "2026-09-03.16"
-WORKER_POLICY = "2026-09-13.89"
+WORKER_POLICY = "2026-09-13.90"
 CACHE = "20260910-pioneer-routing-7"
 
 

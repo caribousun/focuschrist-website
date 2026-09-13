@@ -36,6 +36,7 @@ import worker, {
   requiresExternalGeneralResearch,
   sanitizePayload,
 } from './src/index.js';
+import { PIONEER_TOPIC_SOURCES } from './src/pioneer-topic-sources.js';
 
 function assert(condition, message) { if (!condition) throw new Error(message); }
 
@@ -871,7 +872,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-13.89',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-13.90',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
@@ -1020,6 +1021,49 @@ for (const [question, expected] of [
     && expected.test(stablePayload.choices[0].message.content)
     && stablePayload.focuschrist_source_integrity_verified !== true,
     'reviewed stable facts must bypass unavailable research with the expected causal concept');
+}
+for (const [key, expectedUrl, answer] of [
+  ['camp-routine', 'https://rsc.byu.edu/john-lyon-life-pioneer-poet/our-ain-mountain-hame-1853',
+    'The Gates company followed an organized camp routine in 1853. Evening work included washing dishes and caring for equipment after travel. Teamsters unyoked the oxen, while assigned guards kept a night watch over the camp and animals. These repeated duties helped the company protect scarce supplies, care for livestock, and prepare for the next day of travel. The account presents ordinary cooperation as an essential part of overland movement: progress depended not only on miles traveled but also on shared chores, orderly watches, and reliable care at every stopping place.'],
+  ['exodus', 'https://www.churchofjesuschrist.org/study/history/topics/departure-from-nauvoo?lang=eng',
+    'The 1846 departure from Nauvoo followed rising hostility and an agreement that Church members would leave. Leaders organized companies, prepared wagons, and tried to help families with fewer resources. Many Saints crossed the Mississippi River and established temporary camps as the migration moved west. The official account also distinguishes the main organized departures from the final forced removal of people who remained in September. The exodus was therefore both a planned community undertaking and a response to worsening violence, beginning the longer movement toward settlements in the West.'],
+]) {
+  let officialFetches = 0;
+  let providerFetches = 0;
+  globalThis.caches = undefined;
+  globalThis.fetch = async (url, options = {}) => {
+    if (String(url) === expectedUrl) {
+      officialFetches += 1;
+      return new Response(`<p>${PIONEER_TOPIC_SOURCES[key].subject}. Night watch, dishes, and oxen unyoked were part of camp work. Leaders organized companies, wagons, river crossings, temporary camps, and assistance for poorer families during the Nauvoo departure. This established historical account supplies the selected topic.</p>`,
+        { headers: { 'Content-Type': 'text/html' } });
+    }
+    if (String(url).endsWith('/v1/chat/completions')) {
+      providerFetches += 1;
+      const body = JSON.parse(options.body);
+      const prompt = body.messages[0].content;
+      const proposed = prompt.includes('PROPOSED ANSWER: ')
+        ? prompt.split('PROPOSED ANSWER: ')[1].split('\nEVIDENCE:')[0]
+        : answer;
+      return new Response(JSON.stringify({ choices: [{ message: { content: JSON.stringify({ approved: true, answer: proposed, source_indexes: [1] }) } }] }),
+        { headers: { 'Content-Type': 'application/json' } });
+    }
+    throw new Error(`unexpected selected-topic fetch: ${url}`);
+  };
+  try {
+    const response = await worker.fetch(new Request('https://worker.test', {
+      method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ focuschrist_page: 'pioneers', focuschrist_profile: 'pioneer-study',
+        focuschrist_pioneer_topic: key, messages: [{ role: 'user', content: `Explain ${PIONEER_TOPIC_SOURCES[key].subject}` }] }),
+    }), { OPENAI_API_KEY: 'offline-fixture' });
+    const payload = await response.json();
+    assert(officialFetches === 1 && providerFetches >= 1
+      && payload.focuschrist_source_integrity_verified === true
+      && payload.focuschrist_pioneer_disclosure === true
+      && payload.focuschrist_index_sources === 1
+      && payload.focuschrist_sources.length === 1
+      && payload.focuschrist_sources[0].url === expectedUrl,
+    `${key} must bypass generic scripture and conversation discovery and publish from its one pinned topic source`);
+  } finally { globalThis.fetch = originalFetch; }
 }
 let hyrumProviderCalls = 0;
 globalThis.fetch = async (url) => {

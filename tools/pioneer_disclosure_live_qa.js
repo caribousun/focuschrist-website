@@ -6,6 +6,7 @@
     for (const [key, topic] of Object.entries(PIONEER_TOPIC_SOURCES)) {
         if (results.length) await new Promise(resolve => setTimeout(resolve, 5000));
         try {
+            const started = performance.now();
             const response = await fetch('https://focuschrist-groq-proxy.caribousun.workers.dev', {
                 method: 'POST', headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
                 body: JSON.stringify({ focuschrist_page: 'pioneers', focuschrist_profile: 'pioneer-study',
@@ -13,6 +14,7 @@
                 signal: AbortSignal.timeout(26000)
             });
             const data = await response.json();
+            const elapsedMs = Math.round(performance.now() - started);
             const answer = data.choices?.[0]?.message?.content || '';
             const words = answer.trim().split(/\s+/).length;
             const urls = (data.focuschrist_sources || []).map(source => source.url);
@@ -20,8 +22,8 @@
                 && data.focuschrist_source_policy === OFFICIAL_EXCERPT_CACHE_VERSION
                 && data.focuschrist_pioneer_disclosure === true && words >= 70
                 && urls.includes(topic.url) && data.focuschrist_index_sources === 1
-                && data.focuschrist_official_fetch_calls <= 1;
-            const result = { key, passed, words, urls, answer, reason: data.focuschrist_verifier_publication_failure || data.focuschrist_gateway_mode };
+                && data.focuschrist_official_fetch_calls <= 1 && elapsedMs <= 25000;
+            const result = { key, passed, elapsedMs, words, urls, answer, reason: data.focuschrist_verifier_publication_failure || data.focuschrist_gateway_mode };
             results.push(result); console.log(JSON.stringify(result));
         } catch (error) {
             const result = { key, passed: false, error: error.message };
