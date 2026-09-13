@@ -4,7 +4,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 POLICY = "2026-09-03.16"
-WORKER_POLICY = "2026-09-13.93"
+WORKER_POLICY = "2026-09-13.94"
 CACHE = "20260913-pioneer-composer-8"
 
 

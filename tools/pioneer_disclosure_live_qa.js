@@ -3,6 +3,7 @@
     const { PIONEER_TOPIC_SOURCES } = await import('../groq-proxy/src/pioneer-topic-sources.js');
     const { hasWinterQuartersLocationSwap } = await import('../groq-proxy/src/historical-relationship.js');
     const { OFFICIAL_EXCERPT_CACHE_VERSION } = await import('../groq-proxy/src/index.js');
+    const { default: reviewedReadings } = await import('../groq-proxy/src/reviewed-readings.json', {with:{type:'json'}});
     const results = [];
     for (const [key, topic] of Object.entries(PIONEER_TOPIC_SOURCES)) {
         if (results.length) await new Promise(resolve => setTimeout(resolve, 5000));
@@ -19,10 +20,14 @@
             const answer = data.choices?.[0]?.message?.content || '';
             const words = answer.trim().split(/\s+/).length;
             const urls = (data.focuschrist_sources || []).map(source => source.url);
+            const reviewed = reviewedReadings.readings[key];
             const passed = response.ok && data.focuschrist_source_integrity_verified === true
                 && data.focuschrist_source_policy === OFFICIAL_EXCERPT_CACHE_VERSION
                 && data.focuschrist_pioneer_disclosure === true && words >= 70
                 && data.focuschrist_scripture_validated === true && !hasWinterQuartersLocationSwap(answer)
+                && answer === reviewed?.answer && data.focuschrist_openai_verifier_calls === 0
+                && data.focuschrist_reviewed_reading_status === 'verified-current-source'
+                && data.focuschrist_review_revision === reviewed?.reviewRevision
                 && urls.includes(topic.url) && data.focuschrist_index_sources === 1
                 && data.focuschrist_official_fetch_calls <= 1 && elapsedMs <= 25000;
             const result = { key, passed, elapsedMs, words, urls, answer,

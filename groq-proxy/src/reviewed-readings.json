@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 1,
+  "readings": {
+    "vanguard-journey": {
+      "answer": "The 1847 company traveled about 1,100 miles from Winter Quarters to the Salt Lake Valley, relying mainly on routes that already existed. They followed the Platte River valley to Fort Laramie, reached it on 1 June, crossed to the river’s south side, and used the Oregon Trail for about 397 miles to Fort Bridger, reached on 7 July. There the route turned south and joined the year-old Reed-Donner track into the Salt Lake Valley; consequently, the pioneers did relatively little trailblazing before the mountain section, although the final route required difficult road work.\n\nAs travel became harder beyond Fort Bridger, the company divided into an advance or vanguard group, the main company, and a rear group accompanying the ill Brigham Young. After 13 July, Orson Pratt’s division moved ahead to survey and prepare a wagon road through Emigration Canyon. Pratt and Erastus Snow first saw the valley on 21 July, and the advance company entered it on 22 July. Young and the rear company reached the canyon’s mouth on 24 July. Woodruff’s later recollection says Young experienced a vision while viewing the valley and declared it the right place; this is presented as a remembered experience, distinct from the dated travel chronology.",
+      "answerSha256": "7fc475e7bee4ddaf6cfaf2f90ab6927fb95b78fecd1e26e6bbd6782e7aba90e7",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng",
+          "sourceSha256": "42c520919198cdc8dac187bd20ed4e42a8123172843e1d684ed239e20ee3c162",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "emigration-origins": {
+      "answer": "Latter-day Saint emigration began with converts leaving their homelands for successive gathering centers: Ohio, Missouri, and Illinois, followed later by the North American West. From 1840 to 1890, more than 85,000 Saints migrated to Nauvoo and the West. About 55,000 left the British Isles, 25,000 left Scandinavia, and 6,000 left continental Europe, while smaller groups came from other regions. After missionaries reached Great Britain in 1837, Church leaders increasingly coordinated migration, and between 1840 and 1846, Church-sponsored companies brought about 4,000 converts from England to the United States.\n\nLiverpool became the principal shipping hub for European emigrants. Church agents assembled travelers there, arranged transportation, collected deposits, published sailing information and packing instructions, and helped establish the organization that emigrants themselves used aboard ship, with some companies forming wards. The Perpetual Emigrating Fund, chartered in 1849, provided loans for nearly half of immigrant converts during the following four decades; repayment was intended to help later emigrants. Transportation also changed: steamships replaced sailing vessels, and railroads eventually replaced wagon trains. Church-funded emigration continued until 1887, after which individual migration continued for some decades while Church leaders increasingly emphasized strengthening branches and stakes abroad. These details come from the supplied historical account and are presented as an institutional historical summary rather than as personal recollections.",
+      "answerSha256": "5b3c555e2328c9c84d72ddd1760c29b280b58280be2119e27f361e6db0aba370",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/emigration?lang=eng",
+          "sourceSha256": "85c92e4af1a98bf8377f02fbfb9a58be7486017c9ff6ae4a985a76aa0a181dd3",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "migration-patterns": {
+      "answer": "Between 1847 and 1868, approximately 60,000–70,000 Latter-day Saints migrated to Utah and nearby regions from the United States, Canada, and Europe. For many European converts, the journey began with an Atlantic crossing—often from Liverpool to New Orleans—followed by travel up the Mississippi and Missouri Rivers to the greater Winter Quarters and Kanesville area. The overland portion was roughly 1,000 miles and generally took months.\n\nFrom 1847 to 1861, most migrants traveled in wagon companies, while a smaller number used handcarts. Companies typically prepared near the present-day border of Nebraska and Iowa. Church leaders also used financial and logistical systems to broaden participation: the Perpetual Emigrating Fund, established in 1849, assisted those unable to pay, and from 1861 onward the “down-and-back” method sent wagons along the trail in both directions to carry supplies and reduce outfitting costs. Other migrants reached the Salt Lake Valley by routes from California, southeastern Texas, or western Missouri, and some—including the Brooklyn company in 1846—traveled by sea around South America to California.\n\nThese are documented migration patterns and organizational methods. By contrast, Ann Agatha Walker Pratt’s statement about arriving in the valley—describing overwhelming, mingled emotions—is a personal recollection and should be treated as her remembered experience rather than a general account of every traveler’s response.",
+      "answerSha256": "939e0eff2e334f07f3e3d5784c49a32a4d88ca381bd4a92abd56da5b642bec4b",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/pioneer-trek?lang=eng",
+          "sourceSha256": "262c5fe97ccbe09771e8a7d6f639a8911965ef6622bd271850831b3ae142faeb",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "camp-routine": {
+      "answer": "In the Gates company’s 1853 overland routine, the day began around 4:00 or 4:30 a.m. with prayer. Families ate breakfast, women prepared food, and men gathered and yoked the oxen for departure at about 8:00 or 9:00 a.m. After traveling in two stretches, the company halted around 8:00 or 9:00 p.m. for a light meal. The exhausted travelers then washed the dishes, sang, prayed, appointed boys and men for night watch, and unyoked the oxen before resting.\n\nThe account presents these details as a routine described for the early part of the journey, not as a universal practice of every emigrant group. Guard duty was an organized responsibility: adult men generally served three to four hours at least twice weekly, while Elder Gates assigned Brother Lyon to oversee the watch. Some guard-duty problems are preserved in diary entries, including men sleeping or refusing to serve; these recollections help document difficulties rather than replace the broader routine. Other remembered observations, such as James Farmer’s August 19 description of grasshoppers, are separate firsthand recollections and should not be treated as part of the nightly schedule.",
+      "answerSha256": "6c9e224cfef625f1c71a9dbadbb697f935b04ebc08134716ccb4c8b85fd25005",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://rsc.byu.edu/john-lyon-life-pioneer-poet/our-ain-mountain-hame-1853",
+          "sourceSha256": "1c564dbce07c6e5c691818dc13ba017995c255bb3e71294fe97f495107f2e010",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "exodus": {
+      "answer": "The 1846 departure from Nauvoo resulted from rising hostility toward Latter-day Saints and an agreement made by Church leaders during the fall of 1845. That agreement called for members to begin leaving during the winter and helped prevent mob attacks during the first departures. Church leaders had already planned a large westward movement: they intended to organize 25 companies of 100 wagons each for a spring exodus, while members also covenanted to help poorer Saints make the journey.\n\nBetween February 4 and March 1, about 400 wagons carried approximately 2,000 people across the Mississippi River to Sugar Creek, Iowa. Another 12,000 crossed into Iowa during the spring and summer, and several hundred more joined the migration in September. Most evacuees eventually traveled toward Council Bluffs in western Iowa, although many remained dispersed in the surrounding region for months or years. Leaders tried to sell the Nauvoo Temple and other Church properties to aid the poor but found no buyer for the temple.\n\nThe account distinguishes established events from later depictions. Most companies crossed peacefully by ferry; a few may have crossed on the ice between February 25 and March 1, so the common portrayal of a general forced crossing over a frozen river is not supported. In September, an armed attack and ensuing fighting caused the remaining Latter-day Saints and their sympathizers to leave Nauvoo quickly.",
+      "answerSha256": "7863445f7ad367707c069b27be118b6f1aeacd623da887af85dc65b31cc036b9",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/departure-from-nauvoo?lang=eng",
+          "sourceSha256": "b77db83a5da0c59fd080d89c8d1f3f133559588b2f6215956aead439113d32b3",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "winterquarters": {
+      "answer": "Winter Quarters was a temporary settlement established in 1846 when Brigham Young and the Quorum of the Twelve paused the Saints’ westward migration after a painfully slow 300-mile trek across Iowa Territory. Mud and sickness had taken a toll, so reaching the Great Basin that summer was no longer feasible. Church leaders selected a site in Indian Territory near the Missouri River in the Council Bluffs region, arranged an agreement involving the Omaha and Potawatomi tribes and United States Indian agents, and used the settlement to prepare for the eventual exodus.\n\nLiving conditions were difficult. Approximately 7,000 Saints reached Winter Quarters, while nearly 3,000 remained in camps along the Iowa trail. The Saints built dugouts and log cabins amid shortages of food and supplies; hunger, malnutrition, crowding, and disease were persistent problems. As the weather improved, they constructed sturdier homes, planted and fenced crops, and called additional bishops to care for the poor and needy.\n\nPreparation for migration included recruiting 500 men for the Mormon Battalion. Much of their service pay was donated to Bishop Newel K. Whitney, who purchased food and supplies in St. Louis for the Winter Quarters storehouse. Leaders also organized the exodus, and Brigham Young left on April 7, 1847, to join members of a vanguard pioneer company. The source presents Young’s revelation and reported dreams as part of his experience, while describing the settlement’s construction, shortages, provisioning, and migration preparations as historical events. After Young returned in fall 1847, the Saints began moving east across the river as the Omaha tribal-land lease neared expiration; their new emigration headquarters was eventually named Kanesville.",
+      "answerSha256": "64ad28977d291b3fbe87341904842f6d30631477909a8d13b93164fcec25ecfc",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng",
+          "sourceSha256": "62e7eb2feb2c4263675efdb8888a796ea57a0945e1e9f8764ab6606b18f141d7",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "valley": {
+      "answer": "Brigham Young led the vanguard company into the Salt Lake Valley on July 24, 1847. The arrival followed earlier planning by Church leaders, including Young, Parley Pratt, and George A. Smith, who had become interested in the Great Salt Lake region by fall 1845 as a possible place for settlement and relations with western American Indian nations.\n\nThe pioneers did not immediately scatter across the valley. They camped in a fort while Orson Pratt and Henry Sherwood surveyed a planned city modeled on Joseph Smith’s City of Zion: broad streets, large blocks, and space reserved for a future temple. City Creek supplied irrigation for residential gardens and orchards, while farmland south of the city was designated for crops such as wheat, corn, oats, and flax. This created a settlement pattern in which homes stood relatively close together and agriculture extended beyond the city.\n\nAs additional Saints arrived, residential areas and agricultural communities expanded along the valley’s creeks. The source presents these settlement details as historical facts; it does not include a separate personal recollection or eyewitness memory to distinguish from the documented account.",
+      "answerSha256": "19a20774116cdf944d5a4b16512110c3b149f7735ff1a160de5366beffb6b658",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/salt-lake-valley?lang=eng",
+          "sourceSha256": "8c976bade384b10f61681ce16f43bdc892cef7c0a169585bc29b1daf94b9702e",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "pioneerday": {
+      "answer": "Pioneer Day is observed each year on 24 July to commemorate the arrival of the first company of Latter-day Saint pioneers in the Salt Lake Valley in 1847. The company was led by Brigham Young and formed part of a migration that began in 1846 in Illinois and continued through Iowa and Nebraska toward the Rocky Mountains. The journey covered more than a thousand miles and involved difficult terrain, severe weather, personal sacrifice, illness, and deaths; Church activities such as parades, concerts, reenactments, and historical dress remember both this first company and later pioneers.\n\nSeveral details come from later recollections rather than being presented as contemporaneous documentation in this excerpt. In an 1870 Deseret News article, Brigham Young recalled that 143 pioneers began the 1847 journey with ox teams, cattle, and limited equipment, describing road building and difficult travel. The account also attributes to him the declaration “This is the right place” when the company reached the valley. Abigail Smith Abbott’s quoted experience belongs to her 1849 migration with George A. Smith’s company, not the original 1847 arrival. The source further estimates that about 70,000 Latter-day Saints traveled to Utah between 1847 and 1869.",
+      "answerSha256": "e6ca1a9f303df317872f4d683fa26a9c1217f32640ff3f6c8397899dbb313e58",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://newsroom.churchofjesuschrist.org/article/mormons-celebrate-their-pioneer-heritage",
+          "sourceSha256": "0abed8be2e1c3d9a8498851e579a9af954512e6b04f9dd23c257447dd20b010a",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "templesquare": {
+      "answer": "Temple Square developed from an early model of a planned Church center into the administrative and public heart of the Church in Salt Lake City. After Latter-day Saints arrived in the Salt Lake Valley, Brigham Young selected the temple site; construction on the Salt Lake Temple began in February 1853, and the temple was completed and dedicated in 1893. Brigham Young soon constructed an office for the Church President adjacent to his home, one block east of the temple site.\n\nThe first major building on the square was the Old Tabernacle, built in 1851–1852 with room for roughly 2,500 people. A larger Tabernacle replaced it: its cornerstones were laid in July 1864, regular meetings began there in 1867, and it was dedicated in October 1875. Other early facilities included the Endowment House, dedicated in 1855 and regarded by Brigham Young as a temporary temple; it served for 34 years before being decommissioned and demolished in 1889. The Council House served as the headquarters of Utah Territorial government during the 1850s and as a Church administration building from 1850 to 1883.\n\nAs the Church expanded, the surrounding blocks added educational, visitor, and administrative buildings. The Bureau of Information, first built in 1904, served tourists visiting Temple Square, while the institution successively known as Salt Lake Academy, Latter-day Saints College, and Latter-day Saints University occupied various locations before settling on the Temple Square campus in 1901. After it relocated as Latter-day Saints Business College in the 1930s, its former rooms were used as offices. The Church Administration Building, completed in 1917, housed the President of the Church and other senior leaders. These are documented historical details in the supplied Church History Topics account; the excerpt presents no personal recollections to attribute separately.",
+      "answerSha256": "55fd4c4a893a026208290e3f8bd571d90c7da6c7402808d97971ca629d927234",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/church-headquarters?lang=eng",
+          "sourceSha256": "3ab039fb3b1515f83f39b1c9f4cfb7fdc4f102e079417f8873fe5d137a787166",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "templestart": {
+      "answer": "Construction of the Salt Lake Temple began with a groundbreaking ceremony in 1853. The ceremony took place on February 14, and the cornerstones were laid and dedicated on April 6. Truman O. Angell, working with Brigham Young, designed the building, whose symbolism represented priesthood, temple covenants, and the plan of salvation. The Saints chose locally quarried granite, and stonecutters shaped the rock for placement in the temple walls.\n\nThe project extended across four decades. Experience gained while completing temples in St. George in 1877, Logan in 1884, and Manti in 1888 contributed to new interior plans for temple ordinances; the Salt Lake Temple’s interior plans consequently changed from those originally directed by Brigham Young to plans developed by Wilford Woodruff. Joseph Don Carlos Young supervised the completion of the spires and interior and incorporated a steel frame, electric lighting, steam heating, and elevators.\n\nThe temple was completed and dedicated in 1893. Dedication sessions were held twice daily for nearly 20 days, including sessions for children, and Wilford Woodruff gave the dedicatory prayer during the first session on April 6. The source separately reports that people who passed by noted the continuous chiseling sounds, while many attendees described heavenly manifestations and a sense of the Lord’s acceptance; these are reported observations and attendee descriptions rather than technical measurements or independently stated construction details.",
+      "answerSha256": "9fc9e9bde02230d3f3d22bcee876dff27724560a85915a5d5b9baa9292981572",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/salt-lake-temple?lang=eng",
+          "sourceSha256": "da83227b55f814c6c1f03cdf5b113dd069434746f9618b4313a39890be43a381",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "handcart": {
+      "answer": "Handcarts were adopted because they cost less than wagons and could move faster. In the mid-1850s, Brigham Young directed Church leaders to organize handcart companies as a less expensive transportation method, while the Perpetual Emigrating Fund Company offered loans to emigrants who could not otherwise afford the journey. Rather than use oxen to pull wagons, the pioneers pulled wooden carts themselves.\n\nHandcart travel occurred from 1856 through 1860, but it involved only 10 of more than 350 Latter-day Saint emigrating companies. Most handcart companies completed the journey without major incident, and by 1860 about 3,000 handcart pioneers had successfully made the trek. The fatality rate among the other handcart companies did not exceed that of wagon companies. The Willie and Martin companies had a much more difficult experience in 1856, when winter storms trapped them, together with the Hunt and Hodgetts wagon companies, on the plains of present-day Wyoming. The combined figures for all four groups include close to 1,500 people stranded and approximately 250 deaths; a rescue effort involving Church members and more than 300 rescuers helped save over 1,200 lives. These figures are the article’s reported historical totals. The article also notes that some accounts of the rescue and its aftermath exaggerated details, distinguishing its documented account from later or embellished recollections.",
+      "answerSha256": "63faa970d65b8b7448ba12b674ba8173108202ad85f29b0aeac696779823dd65",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng",
+          "sourceSha256": "88c7cd71c3acd6bf386dc6ac47774bcc02fa0ac61a1af04a7d0f6697caa3716d",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "railroad": {
+      "answer": "The transcontinental railroad ended the era in which Latter-day Saint migrants traveled to Utah by wagon teams or handcarts. During the Civil War period, the United States encouraged railroad construction by offering companies more than 100 million acres of public land. In 1868, Union Pacific and Central Pacific managers approached Brigham Young about completing a rail connection between the eastern United States and the Pacific coast; Young signed agreements committing 5,000 Latter-day Saint workers to help build more than 350 miles of track.\n\nThe line was completed at Promontory Summit in northern Utah on May 10, 1869. One week later, Latter-day Saint workers began building a connection to Salt Lake City, improving transportation of goods and making missionary travel easier. A journey that had taken months by wagon in 1847 could thereafter be made in a few days by rail. The source presents these points as established historical facts. It does not supply a personal recollection or memoir account, so no recollected experience can be separately attributed or compared with the documented events here.",
+      "answerSha256": "c92253290f0b59ff23f7e77c6205203a9e1ea3567b5ca982e418a2d0b355b5d0",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/railroad?lang=eng",
+          "sourceSha256": "15553074aa52a041d7773e0f13f28d35c36adfad04ba1764852ce1aabe50813a",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "statehood": {
+      "answer": "Utah became a state in January 1896, when President Grover Cleveland declared it an equal state in the Union. Before that, Utah was a federal territory created by Congress in the Compromise of 1850; its governors and other officials were appointed by the United States government. Statehood changed this arrangement by allowing local elections and giving Utah representatives and senators in Congress.\n\nThe path to statehood took decades. The territorial legislature held conventions that petitioned Congress for admission in 1856, 1862, 1867, 1872, and 1882, but Congress rejected the requests, citing plural marriage in particular. Four years after Wilford Woodruff’s 1890 Manifesto, Congress passed the Utah Enabling Act, which authorized Utah’s people to establish a state government and constitution. Voters ratified the constitution a year later, completing the constitutional step before admission.\n\nThese are the documented political milestones. Earlier statements by Brigham Young and Wilford Woodruff about the Salt Lake Valley describe their religious understanding of the region as a promised gathering place; those statements are expressions attributed to them, not part of the legal process that produced statehood. The earlier provisional State of Deseret, which operated for a little over a year, was superseded by Utah Territory.",
+      "answerSha256": "9738d8b2ffcd3025119ca40f01708b772b262c3a9b23d0567995caed37799515",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/utah?lang=eng",
+          "sourceSha256": "02cc3beb7ea9d043991a435658a842d7267e1ed3fa7df8f55e0f99e77012ffa2",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "nauvoo": {
+      "answer": "The Latter-day Saints’ departure from Nauvoo occurred in stages from February through September 1846. Church leaders had planned a large spring exodus, but rising hostility led Brigham Young and other leaders to negotiate a truce in fall 1845 that required Church members to begin leaving during the winter. From February 4 to March 1, about 400 wagons carried roughly 2,000 Saints across the Mississippi River, mostly by ferry, to Sugar Creek, Iowa; another 12,000 crossed into Iowa during the spring and summer, and hundreds more departed in September. Members covenanted to assist poorer travelers, while Church leaders attempted to sell the Nauvoo Temple to help the poor but found no buyer.\n\nThe established account differs from some earlier depictions of the crossing. Those accounts portrayed a mob forcing the Saints over the frozen river, whereas the truce prevented mob attacks during the initial departure; most companies used ferries, although a few may have crossed on the ice between February 25 and March 1. In September, several hundred armed men attacked Saints and other defenders of Nauvoo. Cannon and gunfire caused at least three deaths and a few dozen injuries before a neutral committee negotiated an end to the fighting, after which the remaining Saints and sympathizers quickly left. Most evacuees traveled toward Council Bluffs, while many remained scattered in the surrounding area for months or years; only a few families stayed in Illinois.",
+      "answerSha256": "8bbee6b970104283cca3f62d3ca90057645f10f59315850342e06a221b76843c",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/departure-from-nauvoo?lang=eng",
+          "sourceSha256": "b77db83a5da0c59fd080d89c8d1f3f133559588b2f6215956aead439113d32b3",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "garden-grove": {
+      "answer": "Garden Grove was the first permanent camp established for Latter-day Saints who would follow westward. The Saints reached it on 24 April 1846, about halfway across Iowa—144 miles west of Nauvoo and 120 miles east of the Missouri River. Within three weeks, the pioneers had broken 715 acres of prairie and built cabins; separately, 200 people were assigned to improve the way station. A high council was called to regulate both Church and civic affairs. Samuel Bent, Aaron Johnson, and David Fullmer were called to preside over the settlement, and Bent died there on 16 August 1846.\n\nGarden Grove lacked enough timber to accommodate all the companies expected from Nauvoo, so scouts were sent to explore the region. Parley P. Pratt located groves about twenty-five miles northwest, and, a few days later, Brigham Young organized Mount Pisgah as a second way station. Both settlements were important pioneer way stations from 1846 to 1852, although Mount Pisgah soon exceeded Garden Grove in size and significance. In the fall of 1846, an estimated 600 people were at Garden Grove, while the Saints were dispersed among several other locations.\n\nThe account also records individual statements rather than administrative measurements: Parley’s reported exclamation when he identified Mount Pisgah and Ezra T. Benson’s declaration that it was the first place where he felt willing to stay after leaving Nauvoo. These statements convey personal reactions and should not be treated as population or organizational statistics.",
+      "answerSha256": "548cb3debed5022dc3c29248ed28ceae1347318e5801e46495d52e4f76e8414a",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-five?lang=eng",
+          "sourceSha256": "f064042dd6fe6f3078191822ba9fa851778a0ef5f5c866799971d79a3d0a1205",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "council-bluffs": {
+      "answer": "In 1846, after a difficult 300-mile movement across Iowa Territory, Brigham Young and the Quorum of the Twelve paused the westward journey for winter. Church leaders selected a site in Indian Territory near the Missouri River, reached an agreement with Omaha and Potawatomi tribes and United States agents, and established Winter Quarters. About 7,000 Saints arrived there, while nearly 3,000 remained in camps along the Iowa trail. Food shortages, crowded conditions, malnutrition, and disease made the settlement difficult.\n\nMigration preparation included building homes, planting and fencing crops, caring for the poor, and gathering food and supplies. Five hundred men joined the Mormon Battalion, and much of their pay was used to purchase provisions for the Winter Quarters storehouse. After Brigham Young left in April 1847, those remaining continued preparing for larger migrations. When the Omaha land lease neared expiration, Saints moved east across the river into Iowa, establishing the emigration headquarters later called Kanesville. Kanesville became the staging point for companies heading west and was later renamed Council Bluffs; Winter Quarters became Florence, Nebraska. The source also reports Young’s dreams and spiritual guidance as experiences that influenced his planning, distinguishing those reported experiences from the documented settlement, relocation, and provisioning activities.",
+      "answerSha256": "b8a76d77b7e64ff53949079636777492f7e6a10763b6d03b4668a9f3b03a1d98",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng",
+          "sourceSha256": "62e7eb2feb2c4263675efdb8888a796ea57a0945e1e9f8764ab6606b18f141d7",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "chimney-rock": {
+      "answer": "Chimney Rock was a prominent landmark along the 1847 pioneer company’s westward route. As emigrant companies crossed western Nebraska, the rock could be seen for days, making it a recognizable feature along the trail. The company had begun near Winter Quarters, traveled six hundred miles along the Platte River valley to Fort Laramie, and arrived there on June 1. After crossing to the Platte’s south side, the pioneers followed the Oregon Trail for almost four hundred additional miles to Fort Bridger. Near Chimney Rock, the pioneers met a band of Sioux, described in the source as their first meeting with Great Plains Indians. These route details and the landmark’s visibility are presented as statements in the supplied historical account. The excerpt does not provide a separately identified pioneer recollection, journal entry, or quotation, so no personal recollection can be attributed beyond those documented statements.",
+      "answerSha256": "d77659d0e6d7664913b9572d9cdd9e4b1b07f5e2e6179ba19234a1bb08af25ee",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng",
+          "sourceSha256": "42c520919198cdc8dac187bd20ed4e42a8123172843e1d684ed239e20ee3c162",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "fort-laramie": {
+      "answer": "Fort Laramie was a major landmark on the 1847 pioneer company’s route from Winter Quarters to the Salt Lake Valley. The company reached it on 1 June after traveling about 600 miles along the Platte River valley. Before Fort Laramie, the Mormon Trail generally paralleled the Oregon Trail on the river’s north side, partly because the pioneers sought better grazing and wished to avoid conflict with Oregon-bound immigrants. At Fort Laramie, forbidding bluffs made the northern route impractical, so the pioneers crossed to the Platte’s south side and followed the Oregon Trail for nearly 400 miles toward Fort Bridger.\n\nThe stop also had practical and social importance: the company halted for repairs, Brigham Young celebrated his forty-sixth birthday, and some Pueblo Saints joined the camp. The source further records that the odometer had been installed on 16 May between Council Bluffs and Fort Laramie to measure travel distances. These route details, dates, and activities are presented as historical facts in the supplied official account. No separate recollection or named narrator is supplied here, so the evidence does not support labeling any particular detail as a personal memory.",
+      "answerSha256": "46e2f83c068b3bd51829019d5b81483a41d07beabd8875df67f7e7b02ce270fb",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng",
+          "sourceSha256": "42c520919198cdc8dac187bd20ed4e42a8123172843e1d684ed239e20ee3c162",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "independence-rock": {
+      "answer": "Independence Rock was a famous landmark on the 1847 pioneer company’s route west. After traveling about 600 miles along the Platte River valley from Winter Quarters, the company reached Fort Laramie on 1 June, crossed to the Platte’s south side, and continued along the Oregon Trail. Independence Rock marked the beginning of a 96-mile route along Wyoming’s Sweetwater River; west of the rock, the trail crossed the Continental Divide at South Pass before the pioneers reached Fort Bridger on 7 July. The source also records emigrant graffiti carved on the rock from pioneer days to the present. The supplied account presents these as route facts and contains no separate personal recollection or remembered experience to distinguish.",
+      "answerSha256": "6dd01be09812fe239a2bebae0a1dae3b41de42bcd326f2535f9593440b32c23e",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng",
+          "sourceSha256": "42c520919198cdc8dac187bd20ed4e42a8123172843e1d684ed239e20ee3c162",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "sweetwater": {
+      "answer": "The established account identifies the Sweetwater River as part of the 1847 pioneer company’s route west. After traveling about 600 miles along the Platte River valley, the company reached Fort Laramie on 1 June, crossed to the Platte’s south side, and continued along the Oregon Trail toward Fort Bridger. Independence Rock marked the beginning of a 96-mile stretch beside Wyoming’s Sweetwater River. The broader journey extended roughly 1,100 miles from Winter Quarters, near present-day Omaha, Nebraska, to the Salt Lake Valley. The supplied source contains no firsthand recollection or later memory specifically about traveling along the Sweetwater, so those details cannot be added or treated as established evidence here. Its mention of emigrant graffiti at Independence Rock is a description of the site, not a personal recollection from the 1847 company.",
+      "answerSha256": "a5f12e83d53601e9ec94872ca5023a9838bb2d84d483fad3f8ffa1e4abda4651",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng",
+          "sourceSha256": "42c520919198cdc8dac187bd20ed4e42a8123172843e1d684ed239e20ee3c162",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "south-pass": {
+      "answer": "The established account places South Pass on the 1847 pioneer company’s route across the Continental Divide, west of Independence Rock in present-day Wyoming. After traveling about 600 miles up the Platte River valley from Winter Quarters, the company reached Fort Laramie on 1 June, crossed to the Platte’s south side, and continued along the Oregon Trail for nearly 400 miles toward Fort Bridger. The company passed through South Pass, crossed the Green River, and reached Fort Bridger on 7 July before turning south onto the Reed-Donner trail toward the Salt Lake Valley. The source also records that the pioneers met Jim Bridger somewhere southwest of South Pass, but it gives no named narrator or separate recollection for that detail. Thus, the route, dates, crossings, and locations are presented as historical facts, while no additional remembered experience should be attributed to the pioneers from this excerpt.",
+      "answerSha256": "bcbdc47a7520b572a219dd566f7b7a028c270b8c8680a639e536a582ced92b79",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng",
+          "sourceSha256": "42c520919198cdc8dac187bd20ed4e42a8123172843e1d684ed239e20ee3c162",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "fort-bridger": {
+      "answer": "The 1847 pioneer company reached Fort Bridger on 7 July after traveling from Fort Laramie along nearly 400 miles of the Oregon Trail. They had crossed the Continental Divide at South Pass, continued through the Green River country, and then followed the Reed-Donner party’s year-old track, because the Oregon Trail turned north at Fort Bridger while their route continued toward the Salt Lake Valley.\n\nThe mountain approach was increasingly difficult. The company divided into three groups: Brigham Young, ill with mountain fever, fell behind the main body, while Orson Pratt led a third division ahead after 13 July to survey the route and prepare a wagon road through what became Emigration Canyon. On 21 July, Pratt and Erastus Snow saw the Salt Lake Valley for the first time, then returned to camp after making a twelve-mile circuit into it.\n\nThese details are presented in the supplied source as an established historical account. The excerpt does not identify any portion as a later recollection or attach the events to a named personal memoir; therefore, the report that Pratt and Snow shouted for joy is included as the source’s narrative of the event, not separately classified here as firsthand recollection.",
+      "answerSha256": "8118db45727d02a3cd605df1aef569089e80031be1101a3c3f7ad70991d5c2ee",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng",
+          "sourceSha256": "42c520919198cdc8dac187bd20ed4e42a8123172843e1d684ed239e20ee3c162",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "echo-canyon": {
+      "answer": "During the final weeks of the 1847 pioneer company journey, Echo Canyon was a difficult passage toward the Weber River. Orson Pratt’s advance company, one of three separate pioneer companies, traveled 13 1/4 miles down the narrow canyon to the Weber River junction, while workers used shovels to fill ravines and remove tree stumps. The main company covered 16.75 miles, stopping about one mile short of the river, and observed grains, vines, berries, and flowers; the canyon’s echoes attracted attention from both people and animals.\n\nThe source further records that, on a Sabbath near the canyon’s foot, the main camp fasted and prayed while Heber C. Kimball reported that Brigham Young was deathly ill. These details are presented in the supplied official historical account. The passage does not identify a separate personal recollection, so no additional details can be classified as recollections on the evidence provided.",
+      "answerSha256": "947926df4f443e24e06db82b6b65fe1babc6890cb1d22c9698074ca684086c73",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://newsroom.churchofjesuschrist.org/article/how-brigham-young-first-arrived-in-the-salt-lake-valley",
+          "sourceSha256": "ce4335b26012f2e79d520cfc68af7e794ea2c1c72fc43bbf31b5c9fb72c07ebe",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "canyon": {
+      "answer": "In 1847, Emigration Canyon formed part of the difficult mountain approach to the Salt Lake Valley after the pioneer company traveled west from Winter Quarters. The company followed the Platte River valley and then the Oregon Trail to Fort Bridger; beyond that point, mountain travel became harder, and by the time the company reached the valley it had separated into three groups. After 13 July, Orson Pratt’s advance division surveyed the route and prepared a wagon road through the canyon. On 21 July, Pratt and Erastus Snow saw the Salt Lake Valley, then returned to camp after making a twelve-mile circuit. These are the established movements recorded in the account.\n\nThe advance company entered the valley on 22 July and immediately set up a crude irrigation system to prepare the land for planting. On 24 July, Brigham Young, ill with mountain fever and traveling with the rear company, reached the mouth of Emigration Canyon; Wilford Woodruff drove him there in a carriage. Woodruff’s account presents their thoughts about future orchards, fields, and a temple, while Young said he was satisfied that the valley could serve as a resting place for the Saints. Those reflections are recollections associated with the observers, not additional details about the route itself.",
+      "answerSha256": "38ca1a03102b2b50487a07594a9c4370dbf3f4d2273afc8737a85e41d3fa9757",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-six?lang=eng",
+          "sourceSha256": "42c520919198cdc8dac187bd20ed4e42a8123172843e1d684ed239e20ee3c162",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "salt-lake-valley": {
+      "answer": "A vanguard company led by Brigham Young entered the Salt Lake Valley on July 24, 1847. The valley was not entirely unused: Ute and Shoshone peoples hunted and gathered there, although it was used less intensively than other nearby valleys. After arriving, the company stayed together in a fort while Orson Pratt and Henry Sherwood surveyed a planned city based on Joseph Smith’s plat of the City of Zion. Wide streets and large blocks were laid out, with space reserved for a future temple at the center.\n\nBuilding the settlement required organizing water, homes, and agriculture. City Creek supplied irrigation for residential gardens and orchards, while farmland south of the city was designated for wheat, corn, oats, and flax. Rather than spreading households widely across the arid landscape, the settlers built homes close together and cultivated crops outside the city. This arrangement became a pattern for later Latter-day Saint settlements in the Great Basin.\n\nThe source also records an earlier planning statement by Brigham Young about sending people beyond the Rocky Mountains and locating near the Great Salt Lake. That quotation reflects the relocation plans before the arrival, whereas the survey, irrigation, farming, and settlement arrangements describe developments after the company reached the valley. Continued immigration and the 1869 transcontinental railroad later accompanied Salt Lake City’s growth into a permanent center for the Saints.",
+      "answerSha256": "47484a237d26a032a6335bf1a9a83294d67db9b37cbcc5345c7e4cd2c809115a",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/salt-lake-valley?lang=eng",
+          "sourceSha256": "8c976bade384b10f61681ce16f43bdc892cef7c0a169585bc29b1daf94b9702e",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "mountain-meadow": {
+      "answer": "In September 1857, a branch of the territorial militia in southern Utah, composed entirely of Latter-day Saints and assisted by some American Indians whom they recruited, laid siege to an emigrant wagon train traveling from Arkansas to California. The attackers later killed 120 men, women, and children at Mountain Meadows; 17 young children were spared because they were considered too young to describe what had happened. The Church’s account presents these details as its historical narrative and separately addresses later allegations about responsibility.\n\nResponsibility rests with local Church leaders who also held civic and militia authority in southern Utah. The Church’s cited historical study concludes that a series of decisions by those leaders produced the massacre, while sermons by Brigham Young, George A. Smith, and others contributed to a hostile climate; it does not conclude that Brigham Young ordered the killings. Two Latter-day Saints were excommunicated, nine men were indicted, and John D. Lee was the only participant convicted and executed. The account therefore distinguishes local responsibility from the allegation that the massacre was commanded by Young, which it describes as false, while acknowledging that the event was an inexcusable departure from Christian teaching.",
+      "answerSha256": "fbf9e5efa5dc0faa40b3216ba07bb7e09c10d42ad7ec686536a79001d349ec51",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/mountain-meadows-massacre?lang=eng",
+          "sourceSha256": "1329fa0cab95ad50493c8db51d6a59b327b6db51213705cb9f9323ca505731fd",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "willie-july": {
+      "answer": "In 1856, the Willie and Martin companies left Liverpool later than intended, then lost additional time at Iowa City while new handcarts were being made. Poorly seasoned cart timber led to major repairs at Florence, Nebraska; when winter weather arrived, Willie was east of South Pass and Martin was farther east near the North Platte’s final crossing. Rescuers reached Willie on October 19 and Martin nine days afterward, finding both groups in extreme cold, weakness, and hunger; deaths had already occurred, and almost a hundred more followed despite the aid. Willie reached Salt Lake City on November 9, while Martin arrived on November 30. The journey’s severe consequences included widowed women, orphaned children, and emigrants whose frozen feet or legs prevented walking. Ephraim Hanks’s account of encountering Martin’s company and distributing buffalo meat is specifically presented as his personal recollection, so its vivid descriptions should be distinguished from the narrative’s broader historical assertions.",
+      "answerSha256": "bd9b17250c921971eca879a3ea2e76ce37af68bd8f224b71a7bf6bddb408d422",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-eight?lang=eng",
+          "sourceSha256": "b8359ce3ab3edbe3424c60968523371dfb087b00b41c7f66be96aec511d6dc49",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "willie-august": {
+      "answer": "The Willie and Martin handcart companies suffered from late departures from Liverpool, delays in Iowa City while new handcarts were constructed, and extensive repairs in Florence, Nebraska because the carts’ wood was not properly seasoned. These setbacks left both companies on the plains as autumn advanced. Early snows then trapped the Willie Company a few miles east of South Pass, while the Martin Company remained farther back near the last crossing of the North Platte River. Relief parties found Willie on 19 October 1856 and Martin nine days later; the immigrants were freezing, listless, and near starvation, and deaths had occurred before assistance arrived, with nearly a hundred more dying afterward.\n\nThe rescue and journey to Salt Lake City remained extremely difficult. Some immigrants could not walk because of frozen feet or legs, and the account records severe injuries, including the amputation of ten-year-old Ellen Pucell’s legs. The Willie Company reached Salt Lake City on 9 November, and the Martin Company arrived on 30 November. These dates and conditions are presented as historical account. By contrast, Ephraim Hanks’s description of seeing Martin Company members as starved forms who welcomed his buffalo meat is explicitly his recollection, so it should be distinguished from the narrative’s dated events and reported outcomes.",
+      "answerSha256": "f74020411a3a122fcd202a5c3a7b0ea405bcd10af31d9afbb9b870b26c4f4a16",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-eight?lang=eng",
+          "sourceSha256": "b8359ce3ab3edbe3424c60968523371dfb087b00b41c7f66be96aec511d6dc49",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "willie-september": {
+      "answer": "In October 1856, the Willie and Martin handcart companies were stranded in Wyoming after beginning their journey late from Liverpool and experiencing further delays in Iowa City and Florence, Nebraska, where newly built handcarts required extensive repairs. Early snow trapped the Willie Company a few miles east of South Pass, while the Martin Company remained farther east near the last crossing of the North Platte River. Relief parties located the Willie Company on 19 October and the Martin Company nine days later; the immigrants were suffering from cold, hunger, and exhaustion, and many had already died. The Willie Company reached Salt Lake City on 9 November, and the Martin Company arrived on 30 November, after difficult travel in which some people suffered frozen feet and legs.\n\nThe account also preserves a personal recollection rather than presenting every detail as an independently verified observation. Ephraim Hanks remembered finding the Martin Company while carrying buffalo meat and described the immigrants as emaciated, cold, and deeply grateful for the food. His description is identified as his recollection of the encounter, whereas the companies’ locations, discovery dates, deaths, and arrival dates are presented as the historical narrative.",
+      "answerSha256": "395cda1c21af8fe42cc6cbf4e30332dc56ba21e63dbebb8678fa5a68618bc7eb",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-eight?lang=eng",
+          "sourceSha256": "b8359ce3ab3edbe3424c60968523371dfb087b00b41c7f66be96aec511d6dc49",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "willie-october": {
+      "answer": "The Willie and Martin handcart companies were rescued in late 1856 after leaving Liverpool late, waiting in Iowa City for new handcarts, and suffering further delays in Florence, Nebraska, where extensive repairs were needed because the carts’ wood had not been properly seasoned. Early snow then trapped the Willie Company east of South Pass and the Martin Company near the last crossing of the North Platte River. Relief parties found Willie on 19 October and Martin nine days later; the immigrants were freezing, listless, and near starvation, with scores already dead and nearly a hundred more dying after help arrived. Many women were widowed, children were orphaned, and several immigrants could not walk because of frozen feet and legs. Willie reached Salt Lake City on 9 November, while Martin arrived on 30 November. These events and dates are reported in the account. A separate recollection comes from Ephraim Hanks, who said he reached the Martin Company as it was camping, observed the immigrants’ extreme suffering, and brought them fresh buffalo meat; this should be treated as his remembered experience rather than as an independently verified detail. The account therefore presents the rescue as an organized relief effort and a hazardous winter recovery involving two delayed companies.",
+      "answerSha256": "b411ed696c736e88c8e5e2d256404995c707507bad71d6b09275a107ce6f516a",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-eight?lang=eng",
+          "sourceSha256": "b8359ce3ab3edbe3424c60968523371dfb087b00b41c7f66be96aec511d6dc49",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "martin-september": {
+      "answer": "In November 1856, the Martin handcart company found shelter at a cove near Devil’s Gate after overcrowding at Devil’s Gate led everyone to agree to move the company on November 4. The cove offered greater protection from the weather, but the company still faced hunger, cold, exhaustion, dysentery, and deaths. The Sweetwater River, filled with floating ice, flowed between Devil’s Gate and the cove, and memories of suffering and deaths associated with crossing the Platte led many to cry to the Lord for help.\n\nThe company’s suffering had begun before reaching the cove. The source estimates that 150–170 members of the Martin company died, although it cautions that exact figures are difficult to establish. On November 10, Ephraim Hanks arrived with two pack animals carrying frozen buffalo meat; his account says that people soon cooked and ate it with thankful hearts.\n\nSome vivid details come from recollections rather than from an independent count. Martha Robinson Blackham later related that thirteen pioneers died during the storm after the Platte crossing and described people dying in various circumstances. Hanks also wrote of desperate requests for meat from adults and children. These recollections illuminate the experience of suffering, while the account directly gives the November 4 relocation, the estimated death toll, and Hanks’s November 10 arrival with food.",
+      "answerSha256": "dca305f3ca694640391943491890a77495c32ea7c0c1788897b355f29cc8a66e",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/ensign/2006/12/go-and-bring-them-in?lang=eng",
+          "sourceSha256": "975ef4b21541077176ab7fb7ff105e60bc0b9906a04abb93669eddd57d967018",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "willie-november": {
+      "answer": "The Willie and Martin handcart companies reached Salt Lake City in November 1856 after leaving Liverpool late, facing delays while new handcarts were built and repaired, and encountering early snow on the plains. Relief parties located the Willie Company on 19 October and the Martin Company nine days afterward. The Willie Company entered Salt Lake City on 9 November, while the Martin Company arrived on 30 November, when Saints in the city greeted them with cheers.\n\nThe rescue brought assistance to immigrants who were freezing, weak from hunger, and in some cases unable to walk because of severely frozen feet and legs. The source also reports that many women had been widowed and children orphaned. It says that scores had died before the rescuers arrived and that almost a hundred more died afterward. This account documents the rescue, provisions such as the buffalo meat described by Ephraim Hanks, and the companies’ reception in the valley, but it does not give a detailed description of organized medical or household care after their arrival.\n\nThe account presents the companies’ departure problems, rescue dates, deaths, arrival dates, and physical conditions as part of its historical narrative. Its description of Ephraim Hanks finding the Martin Company—including the immigrants’ appearance and their response to the meat he carried—is explicitly Hanks’s recollection. It should therefore be distinguished from the chapter’s own narrative statements rather than treated as an independent contemporaneous observation by its author.",
+      "answerSha256": "5a0f1babf23a7f13cf73a9a46f2498aaed74e8abfb9ab9d40343ba81ee008b97",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-twenty-eight?lang=eng",
+          "sourceSha256": "b8359ce3ab3edbe3424c60968523371dfb087b00b41c7f66be96aec511d6dc49",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "martin-november": {
+      "answer": "The Willie and Martin companies were Latter-day Saint handcart companies led by James G. Willie and Edward Martin during the 1856 migration to the Salt Lake Valley. Handcart travel was introduced as a less expensive and more efficient alternative to ox-drawn wagons, and the Perpetual Emigrating Fund Company provided loans for some emigrants who could not otherwise afford the journey. Their faith is part of the story’s religious legacy: Latter-day Saints remember these companies for enduring a late-season crisis and for the community’s organized response to fellow travelers.\n\nWinter storms trapped the Willie and Martin companies, together with the Hunt and Hodgetts wagon companies, on the plains of present-day Wyoming. The article reports that nearly 1,500 people across all four groups were stranded and approximately 250 died, while thousands of Church members supplied food and aid and more than 300 rescuers went out to meet the companies; over 1,200 lives were saved. These totals should not be assigned to Willie and Martin alone.\n\nEstablished facts include the 1856 setting, the rescue effort, and the later success of handcart migration through 1860. The source cautions that some accounts of the rescue and its aftermath exaggerated details, so those dramatic details should be distinguished from the established account. The episode’s historical legacy rests on the rapid response, rescuers’ risks, and continuing care for survivors.",
+      "answerSha256": "1b7b5d6f9eb32025d1706ecc68668939cb9ae186ddf39a65fd658475ed85f4e7",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng",
+          "sourceSha256": "88c7cd71c3acd6bf386dc6ac47774bcc02fa0ac61a1af04a7d0f6697caa3716d",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "god-across-testaments": {
+      "answer": "Yes. In the explanation above, Jehovah refers to Jesus Christ. Latter-day Saint teaching identifies Jesus as Jehovah in the Old Testament and the Messiah in the New Testament, so these descriptions refer to the same divine person. This is separate from the distinction between Jesus Christ and God the Eternal Father: the Church teaches that the Father, Son, and Holy Ghost are distinct beings, united in purpose and doctrine. That distinction does not mean that the God of one Testament was replaced by a different God in the other.",
+      "answerSha256": "639f383202414af92362b434934807ff44bf86966907c355a2f27839bb08caca",
+      "reviewRevision": "2026-09-13-independent-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ?lang=eng",
+          "sourceSha256": "e42851b24638d5c33cb18eadc64fc9caec435a71a249d0d6f2a83be3d083abcb",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng",
+          "sourceSha256": "c445cd28d6f700b13b472dc231ba6b210287fedb2b64cd09ea44e586de5fd257",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    }
+  }
+}

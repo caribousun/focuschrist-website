@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
+import reviewedReadings from '../groq-proxy/src/reviewed-readings.json' with {type:'json'};
 const endpoint=process.env.FOCUSCHRIST_ENDPOINT || 'https://focuschrist-groq-proxy.caribousun.workers.dev';
-const policy=process.env.FOCUSCHRIST_EXPECTED_POLICY || '2026-09-13.93';
+const policy=process.env.FOCUSCHRIST_EXPECTED_POLICY || '2026-09-13.94';
 async function request(page,messages){
  const r=await fetch(endpoint,{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:page,focuschrist_profile:'faith-study',messages}),signal:AbortSignal.timeout(26000)});
  const p=await r.json();
@@ -26,6 +27,13 @@ for(const page of ['ask','pioneers']) for(const test of cases){
  const answer=p.choices?.[0]?.message?.content||'';
  assert.equal(p.focuschrist_classification_mode,'conversation-context');
  for(const pattern of test.expected)assert.match(answer,pattern);
+ if(!test.pioneerDates){
+  const reviewed=reviewedReadings.readings['god-across-testaments'];
+  assert.equal(answer,reviewed.answer,'The comparison must preserve the reviewed referent and source distinction');
+  assert.equal(p.focuschrist_reviewed_reading_status,'verified-current-source');
+  assert.equal(p.focuschrist_review_revision,reviewed.reviewRevision);
+  assert.equal(p.focuschrist_openai_verifier_calls,0);
+ }
  if(test.pioneerDates){
   const sentences=answer.split(/(?<=[.!?])\s+|\n+/);
   for(const sentence of sentences){
