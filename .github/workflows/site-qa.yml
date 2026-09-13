@@ -130,7 +130,9 @@ jobs:
         run: node tools/reviewed_ask_knowledge_qa.js
 
       - name: Exercise Pioneer Ask final owner
-        run: node tools/pioneer_ask_runtime_qa.js
+        run: |
+          node tools/pioneer_ask_runtime_qa.js
+          node tools/pioneer_composer_scroll_runtime_qa.js
 
       - name: Exercise Church History Ask final owner
         run: node tools/church_history_ask_runtime_qa.js

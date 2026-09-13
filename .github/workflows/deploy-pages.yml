@@ -28,6 +28,7 @@ jobs:
         run: |
           python tools/build_scripture_catalog.py --check
           node tools/scripture_library_qa.js
+          node tools/pioneer_composer_scroll_runtime_qa.js
 
       - name: Install decoded image QA dependency
         run: python -m pip install Pillow==12.2.0
