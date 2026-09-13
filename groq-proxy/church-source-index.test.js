@@ -672,7 +672,7 @@ const kirtlandReviewed = reviewedDeterministicEvidenceRecovery(
   [{
     title: 'Kirtland Temple',
     url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng',
-    content: 'The Kirtland Temple was dedicated in 1836 with prayer and spiritual manifestations. Jesus Christ appeared, and Elijah committed priesthood keys.',
+    content: 'The Kirtland Temple dedication occurred in 1836.',
   }],
   'church-history',
 );
