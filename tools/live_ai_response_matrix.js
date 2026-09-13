@@ -455,9 +455,13 @@ if (process.argv.includes('--definition-check')) {
         Number(result.cloudflareVerifierCalls || 0) + Number(result.groqVerifierCalls || 0) + Number(result.openaiVerifierCalls || 0));
     // Reviewed deterministic responses intentionally bypass an external verifier.
     // Capacity is therefore measured only across requests that actually selected
-    // an external verifier, with the concurrent burst providing the minimum
-    // representative sample for fan-out.
-    assert(externalVerifierCallCounts.length >= burstResults.length
+    // an external verifier. The Temple and Prayer burst lanes intentionally
+    // exercise concurrent external verification; Kirtland is reviewed locally.
+    const requiredExternalBurstIds = new Set(['burst-temples', 'burst-prayer']);
+    const externalBurstSamples = burstResults.filter((result) => requiredExternalBurstIds.has(result.id)
+        && result.verifierRoute !== 'reviewed-deterministic');
+    assert(externalBurstSamples.length === requiredExternalBurstIds.size
+        && externalVerifierCallCounts.length >= requiredExternalBurstIds.size
         && externalVerifierCallCounts.every((count) => count >= 1 && count <= 3),
         'insufficient complete external-verifier usage samples for bounded-capacity proof');
     const p95VerifierCalls = percentile(externalVerifierCallCounts, 0.95);
