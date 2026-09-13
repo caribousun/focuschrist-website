@@ -680,6 +680,20 @@ assert(kirtlandReviewed
   && kirtlandReviewed.recoveryId === 'reviewed-kirtland-temple-dedication'
   && kirtlandReviewed.answer.split(/\s+/).length >= 70,
   'the exact Kirtland release question must use reviewed official history evidence');
+assert(reviewedDeterministicEvidenceRecovery(
+  exactKirtlandQuestion,
+  [{ title: 'Kirtland Temple', url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'The Kirtland Temple dedication occurred in 1836.' }],
+  'ask',
+), 'the exact Kirtland release question must retain its reviewed route when page classification resolves to Ask');
+assert(!reviewedDeterministicEvidenceRecovery(
+  exactKirtlandQuestion,
+  [{ title: 'Kirtland Temple', url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'The Kirtland Temple dedication occurred in 1836.' }],
+  'pioneers',
+) && !reviewedDeterministicEvidenceRecovery(
+  exactKirtlandQuestion,
+  [{ title: 'Kirtland Temple', url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'The Kirtland Temple dedication occurred in 1836.' }],
+  '',
+), 'the reviewed Kirtland release route must remain limited to Ask and Church History');
 assert(!reviewedDeterministicEvidenceRecovery(
   'What occurred around the 1836 dedication of the Kirtland Temple and what does Doctrine and Covenants 110 teach?',
   [{ title: 'Kirtland Temple', url: 'https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng', content: 'Kirtland Temple dedication 1836 prayer Jesus Christ Elijah.' }],
