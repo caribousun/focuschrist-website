@@ -55,6 +55,7 @@ jobs:
           node groq-proxy/factual-followup.test.js
           node groq-proxy/relationship-audit.test.js
           node groq-proxy/historical-relationship.test.js
+          node groq-proxy/transaction-outcome.test.js
           node groq-proxy/reviewed-source-context.test.js
           node groq-proxy/direct-scripture-reading.test.js
           node groq-proxy/paragraph-intent.test.js

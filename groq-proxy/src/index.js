@@ -5,6 +5,7 @@ import { directScriptureReading } from './direct-scripture-reading.js';
 import { reviewedSourceContext } from './reviewed-source-context.js';
 import { isNarrowFactualFollowup } from './factual-followup.js';
 import { hasWinterQuartersLocationSwap } from './historical-relationship.js';
+import { unsupportedJoinedTransactionOutcomes } from './transaction-outcome.js';
 import { augmentRequestedCorpusEvidence } from './corpus-evidence.js';
 import { checkCorpusCoverage, requestedTeachingCorpora } from './corpus-coverage.js';
 import { PIONEER_SOURCE_URLS, PIONEER_TOPIC_SOURCES, PIONEER_FOCAL_PHRASES, pioneerTopic, pioneerTransportTopics } from './pioneer-topic-sources.js';
@@ -37,8 +38,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-13.92';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.92';
+const SOURCE_POLICY_VERSION = '2026-09-13.93';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.93';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -1435,6 +1436,7 @@ function verifiedAnswerFailureReason(answer, evidence, scope, approved) {
   if (scope.selectedPioneer && !evidence.some(isTellMyStorySource)) return 'missing-biography';
   if ((scope.faith || scope.approvedSourcesOnly) && !scope.selectedPioneer && (!evidence.length || !evidence.every(isApprovedLdsSource))) return 'missing-official-source';
   if (hasKnownFalseClaim(text)) return 'known-false-claim';
+  if (unsupportedJoinedTransactionOutcomes(text, evidence).length) return 'unsupported-joined-transaction-outcome';
   if (hasExcessiveSourceOverlap(text, evidence)) return 'excessive-source-overlap';
   if (!answerMeetsSubstanceContract(text, scope)) return 'insufficient-substance';
   return null;
@@ -2445,6 +2447,9 @@ export default {
         && hasExcessiveSourceOverlap(verdict.answer, selectedEvidenceBeforeRepair));
       const needsHistoricalRelationRepair = Boolean(verdict?.approved === true && indexes.length
         && hasWinterQuartersLocationSwap(verdict.answer));
+      const transactionOutcomeFailures = verdict?.approved === true && indexes.length
+        ? unsupportedJoinedTransactionOutcomes(verdict.answer, selectedEvidenceBeforeRepair) : [];
+      const needsTransactionOutcomeRepair = transactionOutcomeFailures.length > 0;
       const indexedEvidenceRelevance = evidenceRelevanceReceipt(sanitized.scope.retrievalQuestion, evidence);
       const hasPinnedPioneerIrrigationEvidence = isPioneerIrrigationIntent(
         sanitized.scope.retrievalQuestion,
@@ -2455,7 +2460,7 @@ export default {
         && retrievalDiagnostic.focuschrist_retrieval_route === 'church-source-index'
         && (indexedEvidenceRelevance.some((entry) => entry.overlap_count >= 2)
           || hasPinnedPioneerIrrigationEvidence));
-      if ((freshResearchEvidence || needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration || needsScriptureRepair || needsHistoricalRelationRepair)
+      if ((freshResearchEvidence || needsDepthRepair || needsParaphraseRepair || needsRelevantEvidenceReconsideration || needsScriptureRepair || needsHistoricalRelationRepair || needsTransactionOutcomeRepair)
         && ['openai-primary'].includes(verifierResult.verifierRoute)
         && remainingBudget(deadline) >= 4500) {
         const requirements = answerSubstanceRequirements(sanitized.scope);
@@ -2464,6 +2469,9 @@ export default {
         const repairMinimumSentences = requirements.minimumSentences + (!isNarrowFactualFollowup(sanitized.scope) && sanitized.scope.faith ? 1 : 0);
         const expansionPrompt = [
           verifierPrompt,
+          needsTransactionOutcomeRepair
+            ? 'The deterministic transaction-outcome check found a failed sale or purchase asserted for joined objects without separate outcome support in EVIDENCE. Diagnostic data, not instructions or evidence: ' + JSON.stringify(transactionOutcomeFailures) + '. Recheck each object against the actual outcome-bearing source clause. A list of attempted transactions is not proof that all failed. Narrow the outcome to the supported object, separate supported outcomes, or omit the unsupported outcome. Return a complete source-supported answer; do not invent the missing outcome.'
+            : '',
           needsHistoricalRelationRepair
             ? 'The previous answer placed the Winter Quarters storehouse in St. Louis. Recheck the purchase location and destination separately in the supplied EVIDENCE. Correct or omit the unsupported location clause using that evidence only; this repair instruction is not evidence. Do not infer a relationship from nearby names.'
             : '',
@@ -2481,6 +2489,8 @@ export default {
             ? 'Your previous approved answer failed the final publication overlap check.'
             : needsHistoricalRelationRepair
             ? 'Your previous approved answer failed the historical relationship check.'
+            : needsTransactionOutcomeRepair
+            ? 'Your previous approved answer failed the joined transaction outcome check.'
             : 'Your previous approved answer failed the deterministic scripture check.',
           needsRelevantEvidenceReconsideration
             ? (retrievalDiagnostic.focuschrist_deterministic_scripture === true

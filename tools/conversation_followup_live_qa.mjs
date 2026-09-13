@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 const endpoint=process.env.FOCUSCHRIST_ENDPOINT || 'https://focuschrist-groq-proxy.caribousun.workers.dev';
-const policy=process.env.FOCUSCHRIST_EXPECTED_POLICY || '2026-09-13.92';
+const policy=process.env.FOCUSCHRIST_EXPECTED_POLICY || '2026-09-13.93';
 async function request(page,messages){
  const r=await fetch(endpoint,{method:'POST',headers:{Origin:'https://focuschrist.com','Content-Type':'application/json'},body:JSON.stringify({focuschrist_page:page,focuschrist_profile:'faith-study',messages}),signal:AbortSignal.timeout(26000)});
  const p=await r.json();
