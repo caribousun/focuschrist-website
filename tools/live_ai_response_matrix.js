@@ -27,7 +27,7 @@ const facts = {
     baptism: [/baptis/i, /(?:covenant|ordinance|remission|holy ghost|jesus christ)/i],
     grace: [/grace/i, /(?:jesus christ|savior|salvation|strength)/i],
     kirtland: [/kirtland/i, /(?:dedicat|1836|temple|spiritual)/i],
-    interfaith: [/(?:respect|love|kind|dignity)/i, /(?:faith|religion|belief)/i],
+    interfaith: [/(?:respect|love|kind|dignity|freedom|toleran|goodwill|courtesy)/i, /(?:faith|religion|belief)/i],
     political: [/(?:neutral|nonpartisan|party)/i, /(?:individual|civic|vote|choice|citizen)/i],
     enos: [/enos/i, /(?:prayer|forgive|faith|soul)/i],
 };
