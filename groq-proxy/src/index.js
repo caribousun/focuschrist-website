@@ -36,8 +36,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-13.82';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.82';
+const SOURCE_POLICY_VERSION = '2026-09-13.83';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.83';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -86,6 +86,7 @@ const KNOWN_FALSE_SOURCE_PATTERNS = [
 const REVIEWED_COLOR_CORRECTION = 'No. Doctrine and Covenants 76:31-34 does not mention red, white, black, or golden lights and does not assign colors to degrees of glory. Those verses discuss people who know God\'s power and then deny it. Doctrine and Covenants 18:15 teaches the joy of helping bring one soul to Jesus Christ; it does not describe colors or degrees of glory.';
 const REVIEWED_ENOS_1_PRAYER_FORGIVENESS = 'Enos 1 teaches that sincere prayer can include sustained pleading with God for forgiveness and then expand into concern for others. Enos describes wrestling before God for his own soul and crying to Him throughout the day and into the night. The Lord tells Enos that his sins are forgiven because of his faith in Christ, and Enos says his guilt was swept away. After receiving that assurance, he prays for the Nephites and then for the Lamanites. The chapter therefore connects earnest prayer, faith in Jesus Christ, forgiveness, spiritual assurance, and a growing desire for the welfare of other people.';
 const REVIEWED_RELIEF_SOCIETY_NAUVOO = 'The Female Relief Society of Nauvoo was organized in March 1842 as a formal organization for Latter-day Saint women. It grew from women’s efforts to meet practical needs in Nauvoo and was organized under Joseph Smith’s direction. Its early work joined charitable service with spiritual responsibilities: members cared for poor and needy Saints, counseled one another, discussed religious teachings, prayed, and bore testimony. Joseph Smith described its commission as extending beyond relief of the poor to the spiritual welfare of souls. The early Relief Society therefore gave women an organized setting for both compassionate service and spiritual participation in the life of the Church.';
+const REVIEWED_HYRUM_SMITH_LEADERSHIP = 'The clearest direct answer is that Hyrum Smith served as Assistant President of the Church and, beginning in 1841, as Church patriarch after Joseph Smith Sr. Those were not his only responsibilities. Earlier, he had been Second Counselor in the First Presidency and a member of the Kirtland High Council; he also helped organize the School of the Prophets and supervised work on the Kirtland Temple. His public service in Nauvoo extended to its city council, legion, vice mayor’s office, temple committee, and Council of Fifty.';
 const GENERAL_RESEARCH_REQUIRED_PATTERN = /\b(?:current|currently|today|tonight|tomorrow|yesterday|latest|recent|news|weather|forecast|price|cost|rate|score|schedule|election|president|prime\s+minister|chief\s+executive|ceo|law|legal|court|tax|financial|finance|investment|stock|crypto|medical|medicine|medication|diagnosis|symptom|dose|suicide|self-harm|emergency|abuse|citation|cite|source|quotation|quote|statistics?|percentage)\b/i;
 const EXPLICIT_NON_PIONEER_PATTERN = /\b(?:biblical|bible|old\s+testament|new\s+testament|book\s+of\s+exodus|moses|israelites?|egypt|pharaoh|genesis|oregon\s+trail|american\s+history|secular\s+history|not\s+(?:lds|latter[- ]day\s+saint)|non[- ]pioneer)\b/i;
 const INDEX_STOP_WORDS = new Set('a an and are as at be because been being but by can did do does for from gospel guide had has have how i in into is it its latter manual me of on or our saint saints should study tell that the their them there these they this to topics us was were what when where which who why will with would you your says said teach teaches taught meaning means mean'.split(' '));
@@ -1133,6 +1134,7 @@ function isPinnedAlma32FaithStudy(candidate, question) {
 
 function reviewedDeterministicEvidenceRecovery(question, evidence) {
   const value = String(question || '');
+  const currentQuestion = value.split(/\nEarlier user topic:/i)[0];
   const sources = Array.isArray(evidence) ? evidence : [];
   if (isAlma32FaithStudyQuestion(value)) {
     const sourceIndex = sources.findIndex((source) => {
@@ -1187,6 +1189,28 @@ function reviewedDeterministicEvidenceRecovery(question, evidence) {
       return {
         recoveryId: 'reviewed-relief-society-nauvoo',
         answer: REVIEWED_RELIEF_SOCIETY_NAUVOO,
+        sourceIndexes: [sourceIndex + 1],
+      };
+    }
+  }
+  if (/\bhyrum\s+smith\b/i.test(value)
+    && (/\b(?:leader\w*|responsibilit\w*|office|offices|role|roles|service|serve\w*)\b/i.test(currentQuestion)
+      || /\bwho\s+(?:is|was)\s+hyrum\s+smith\b/i.test(currentQuestion))) {
+    const sourceIndex = sources.findIndex((source) => {
+      let parsed;
+      try { parsed = new URL(String(source && source.url || '')); } catch (_error) { return false; }
+      if (parsed.protocol !== 'https:'
+        || !(parsed.hostname === 'churchofjesuschrist.org' || parsed.hostname.endsWith('.churchofjesuschrist.org'))
+        || parsed.pathname !== '/study/history/topics/hyrum-smith') return false;
+      const content = String(source && source.content || '');
+      return /\bhyrum\s+smith\b/i.test(content)
+        && /\bchurch\s+patriarch\b/i.test(content)
+        && /\bassistant\s+president\s+of\s+the\s+church\b/i.test(content);
+    });
+    if (sourceIndex >= 0) {
+      return {
+        recoveryId: 'reviewed-hyrum-smith-leadership',
+        answer: REVIEWED_HYRUM_SMITH_LEADERSHIP,
         sourceIndexes: [sourceIndex + 1],
       };
     }

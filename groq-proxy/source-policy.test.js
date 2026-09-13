@@ -871,7 +871,7 @@ try {
     && gatewayPayload.focuschrist_sources[0].url === 'https://rsc.byu.edu/offline-ada-fixture'
     && gatewayPayload.focuschrist_resolved_profile === 'general-knowledge'
     && gatewayPayload.focuschrist_answer_word_count >= 45
-    && gatewayPayload.focuschrist_source_policy === '2026-09-13.82',
+    && gatewayPayload.focuschrist_source_policy === '2026-09-13.83',
     'the gateway must return the expanded verified answer with a depth receipt');
 } finally {
   globalThis.fetch = originalFetch;
@@ -1021,4 +1021,41 @@ for (const [question, expected] of [
     && stablePayload.focuschrist_source_integrity_verified !== true,
     'reviewed stable facts must bypass unavailable research with the expected causal concept');
 }
+let hyrumProviderCalls = 0;
+globalThis.fetch = async (url) => {
+  if (String(url).startsWith('https://www.churchofjesuschrist.org/study/history/topics/hyrum-smith')) {
+    return new Response([
+      '<p>Hyrum Smith held major leadership responsibilities in the early Church. He led the Church branch in Colesville, served missions, became one of the first high priests ordained in Kirtland, helped organize the School of the Prophets, and served on the Kirtland High Council.</p>',
+      '<p>He was called as Second Counselor in the First Presidency. In Nauvoo, Hyrum succeeded his father, Joseph Smith Sr., as Church patriarch in 1841 and was appointed Assistant President of the Church.</p>',
+      '<p>He also served on the Nauvoo City Council, in the Nauvoo Legion, as vice mayor, on the Nauvoo Temple committee, and in the Council of Fifty.</p>',
+    ].join(''), { headers: { 'Content-Type': 'text/html' } });
+  }
+  hyrumProviderCalls += 1;
+  throw new Error('the pinned Hyrum follow-up reached a provider');
+};
+try {
+  const hyrumResponse = await worker.fetch(new Request('https://worker.test', {
+    method: 'POST',
+    headers: { Origin: 'https://focuschrist.com', 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      focuschrist_page: 'ask',
+      focuschrist_profile: 'general-knowledge',
+      messages: [
+        { role: 'user', content: 'Who was Hyrum Smith and what service did he give in the early Church?' },
+        { role: 'assistant', content: 'Hyrum Smith was an early Church leader.' },
+        { role: 'user', content: 'What leadership responsibility did he hold?' },
+      ],
+    }),
+  }), { OPENAI_API_KEY: 'offline-fixture' });
+  const hyrumPayload = await hyrumResponse.json();
+  assert(hyrumProviderCalls === 0
+    && hyrumPayload.focuschrist_source_integrity_verified === true
+    && hyrumPayload.focuschrist_deterministic_history_topic === true
+    && hyrumPayload.focuschrist_verifier_route === 'reviewed-deterministic'
+    && hyrumPayload.focuschrist_openai_verifier_calls === 0
+    && hyrumPayload.focuschrist_reviewed_deterministic_recovery === 'reviewed-hyrum-smith-leadership'
+    && hyrumPayload.focuschrist_sources.length === 1
+    && /\/study\/history\/topics\/hyrum-smith/.test(hyrumPayload.focuschrist_sources[0].url),
+    'the Hyrum pronoun follow-up must remain verified from one pinned official source without provider dependence');
+} finally { globalThis.fetch = originalFetch; }
 console.log('Gateway source policy QA PASS');

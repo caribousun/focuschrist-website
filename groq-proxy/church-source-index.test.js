@@ -18,6 +18,7 @@ import worker, {
   officialExcerptCacheVariant,
   rankChurchSourceCandidates,
   relevantParagraphText,
+  reviewedDeterministicEvidenceRecovery,
   retrieveIndexedChurchEvidence,
   REQUEST_BUDGET_MS,
 } from './src/index.js';
@@ -140,6 +141,31 @@ assert(hyrumAskTopic && hyrumFollowTopic
   && /\/study\/history\/topics\/hyrum-smith/.test(hyrumAskTopic.url)
   && hyrumAskTopic.url === hyrumFollowTopic.url,
   'Hyrum Smith seed and bounded pronoun follow-up must resolve to the same single official history topic');
+const hyrumReviewedFollowUp = reviewedDeterministicEvidenceRecovery(followUpScope.retrievalQuestion, [{
+  title: 'Hyrum Smith',
+  url: 'https://www.churchofjesuschrist.org/study/history/topics/hyrum-smith?lang=eng',
+  content: 'Hyrum Smith assumed significant leadership duties. He succeeded his father as Church patriarch in 1841 and was appointed Assistant President of the Church. He also served on the Nauvoo City Council, in the Nauvoo Legion, as vice mayor, on the Nauvoo Temple committee, and in the Council of Fifty.',
+}]);
+assert(hyrumReviewedFollowUp
+  && hyrumReviewedFollowUp.recoveryId === 'reviewed-hyrum-smith-leadership'
+  && hyrumReviewedFollowUp.sourceIndexes.join(',') === '1'
+  && hyrumReviewedFollowUp.answer.split(/\s+/).length >= 70
+  && (hyrumReviewedFollowUp.answer.match(/[.!?](?:\s|$)/g) || []).length >= 3
+  && /Church patriarch/.test(hyrumReviewedFollowUp.answer)
+  && /Assistant President of the Church/.test(hyrumReviewedFollowUp.answer),
+  'the pinned Hyrum follow-up must have a substantive reviewed official-evidence answer independent of provider availability');
+assert(!reviewedDeterministicEvidenceRecovery(followUpScope.retrievalQuestion, [{
+  title: 'Hyrum Smith',
+  url: 'https://example.com/hyrum-smith',
+  content: 'Hyrum Smith was Church patriarch and Assistant President of the Church.',
+}]), 'the reviewed Hyrum answer must fail closed for nonofficial evidence');
+for (const unrelatedQuestion of ['Who was his wife?', 'Who killed him?']) {
+  assert(!reviewedDeterministicEvidenceRecovery(`${unrelatedQuestion}\nEarlier user topic: Who was Hyrum Smith?`, [{
+    title: 'Hyrum Smith',
+    url: 'https://www.churchofjesuschrist.org/study/history/topics/hyrum-smith?lang=eng',
+    content: 'Hyrum Smith was Church patriarch and Assistant President of the Church.',
+  }]), `the reviewed leadership answer must not replace the unrelated Hyrum follow-up: ${unrelatedQuestion}`);
+}
 
 const pioneerCandidates = rankChurchSourceCandidates(
   'How did Latter-day Saint pioneer communities organize irrigation?',
