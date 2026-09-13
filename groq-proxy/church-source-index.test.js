@@ -643,6 +643,30 @@ assert(!reviewedDeterministicEvidenceRecovery(
   [{ title: 'Pioneers to the West', url: chapterTwentySixUrl, content: 'Irrigation and planting occurred in the Salt Lake Valley settlement.' }],
   'ask',
 ), 'the Pioneer irrigation recovery must not escape onto the general Ask page');
+for (const doctrine of [
+  ['What do Latter-day Saints teach about the Atonement of Jesus Christ and why it matters?', 'atonement-of-jesus-christ', 'The Atonement of Jesus Christ includes His sacrifice and Resurrection and makes repentance and forgiveness possible.', 'reviewed-atonement-of-jesus-christ'],
+  ['How do official Church sources explain baptism and its covenant purpose?', 'baptism', 'Baptism is an ordinance and covenant with God through Jesus Christ and is followed by the gift of the Holy Ghost.', 'reviewed-baptism-covenant'],
+  ['How is the grace of Jesus Christ described in Latter-day Saint doctrine?', 'grace', 'Grace is strength and salvation made possible through the Atonement and redemption of Jesus Christ.', 'reviewed-grace-of-jesus-christ'],
+]) {
+  const recovery = reviewedDeterministicEvidenceRecovery(doctrine[0], [{
+    title: doctrine[1],
+    url: `https://www.churchofjesuschrist.org/study/manual/gospel-topics/${doctrine[1]}?lang=eng`,
+    content: doctrine[2],
+  }], 'ask');
+  assert(recovery && recovery.recoveryId === doctrine[3]
+    && recovery.answer.split(/\s+/).length >= 70,
+  `the fixed doctrine specimen must use its reviewed official-evidence lane: ${doctrine[1]}`);
+  assert(!reviewedDeterministicEvidenceRecovery(`${doctrine[0]} using Alma 7`, [{
+    title: doctrine[1],
+    url: `https://www.churchofjesuschrist.org/study/manual/gospel-topics/${doctrine[1]}?lang=eng`,
+    content: doctrine[2],
+  }], 'ask'), `a scripture-corpus extension must not enter the fixed doctrine lane: ${doctrine[1]}`);
+  assert(!reviewedDeterministicEvidenceRecovery(doctrine[0], [{
+    title: doctrine[1],
+    url: `https://www.churchofjesuschrist.org/study/manual/gospel-topics/${doctrine[1]}?lang=eng`,
+    content: doctrine[2],
+  }], 'church-history'), `the fixed Ask doctrine lane must not escape to another page: ${doctrine[1]}`);
+}
 const originalCaches = globalThis.caches;
 
 async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false, cacheParagraphs = cachedPioneerParagraphs }) {

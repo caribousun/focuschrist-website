@@ -36,8 +36,8 @@ const SOURCE_UNAVAILABLE_MESSAGE = "I’m unable to check our approved study sou
 const GENERAL_ANSWER_FALLBACK = 'Your question is valid, but the answer service is temporarily unavailable. Please try again in a moment.';
 const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
 const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
-const SOURCE_POLICY_VERSION = '2026-09-13.84';
-const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.84';
+const SOURCE_POLICY_VERSION = '2026-09-13.85';
+const OFFICIAL_EXCERPT_CACHE_VERSION = '2026-09-13.85';
 const REQUEST_BUDGET_MS = 60000;
 const PROVIDER_CALL_LIMIT_MS = 10500;
 const MIN_RETRY_BUDGET_MS = 3500;
@@ -88,6 +88,9 @@ const REVIEWED_ENOS_1_PRAYER_FORGIVENESS = 'Enos 1 teaches that sincere prayer c
 const REVIEWED_RELIEF_SOCIETY_NAUVOO = 'The Female Relief Society of Nauvoo was organized in March 1842 as a formal organization for Latter-day Saint women. It grew from women’s efforts to meet practical needs in Nauvoo and was organized under Joseph Smith’s direction. Its early work joined charitable service with spiritual responsibilities: members cared for poor and needy Saints, counseled one another, discussed religious teachings, prayed, and bore testimony. Joseph Smith described its commission as extending beyond relief of the poor to the spiritual welfare of souls. The early Relief Society therefore gave women an organized setting for both compassionate service and spiritual participation in the life of the Church.';
 const REVIEWED_HYRUM_SMITH_LEADERSHIP = 'The clearest direct answer is that Hyrum Smith served as Assistant President of the Church and, beginning in 1841, as Church patriarch after Joseph Smith Sr. Those were not his only responsibilities. Earlier, he had been Second Counselor in the First Presidency and a member of the Kirtland High Council; he also helped organize the School of the Prophets and supervised work on the Kirtland Temple. His public service in Nauvoo extended to its city council, legion, vice mayor’s office, temple committee, and Council of Fifty.';
 const REVIEWED_PIONEER_IRRIGATION = 'Cooperative irrigation gave the pioneers a practical foundation for settlement in the Salt Lake Valley. Church leaders discussed planting and irrigation while preparing the westward companies. When the advance company entered the valley in July 1847, it immediately made a basic irrigation system to flood the ground and prepare it for planting. Directing water onto the dry land supported crops and helped the Saints begin establishing a lasting community. The work connected shared preparation, agriculture, and settlement rather than treating water management as an isolated project.';
+const REVIEWED_ATONEMENT = 'Latter-day Saints teach that the Atonement of Jesus Christ includes His suffering, death, and Resurrection. Through His sacrifice, every person will be resurrected, and those who turn to Him with faith and repentance can receive forgiveness and spiritual strength. The Atonement matters because sin and death cannot be overcome by human effort alone. Jesus Christ makes reconciliation with God possible and helps His followers change, endure hardship, and become more like Him. His redeeming work is therefore central to God’s plan and to Christian discipleship.';
+const REVIEWED_BAPTISM = 'Baptism is an ordinance through which a person enters a covenant with God and begins a committed life as a disciple of Jesus Christ. Latter-day Saints teach that it is performed by immersion by proper priesthood authority and is followed by confirmation and the gift of the Holy Ghost. In the baptismal covenant, disciples take Christ’s name upon themselves, promise to remember Him, keep His commandments, and serve others. God promises forgiveness and the companionship of the Holy Ghost as they faithfully honor that covenant.';
+const REVIEWED_GRACE = 'Latter-day Saints describe grace as divine help and strength made possible through the Atonement of Jesus Christ. No person can overcome death or obtain salvation through personal effort alone; redemption is available because of Christ’s mercy and sacrifice. His grace also provides enabling power that helps people repent, grow, endure difficulty, and do good beyond their unaided capacity. Faithful discipleship does not earn grace as wages. Rather, people receive Christ’s gift with faith, repentance, covenants, and continued reliance on Him.';
 const GENERAL_RESEARCH_REQUIRED_PATTERN = /\b(?:current|currently|today|tonight|tomorrow|yesterday|latest|recent|news|weather|forecast|price|cost|rate|score|schedule|election|president|prime\s+minister|chief\s+executive|ceo|law|legal|court|tax|financial|finance|investment|stock|crypto|medical|medicine|medication|diagnosis|symptom|dose|suicide|self-harm|emergency|abuse|citation|cite|source|quotation|quote|statistics?|percentage)\b/i;
 const EXPLICIT_NON_PIONEER_PATTERN = /\b(?:biblical|bible|old\s+testament|new\s+testament|book\s+of\s+exodus|moses|israelites?|egypt|pharaoh|genesis|oregon\s+trail|american\s+history|secular\s+history|not\s+(?:lds|latter[- ]day\s+saint)|non[- ]pioneer)\b/i;
 const INDEX_STOP_WORDS = new Set('a an and are as at be because been being but by can did do does for from gospel guide had has have how i in into is it its latter manual me of on or our saint saints should study tell that the their them there these they this to topics us was were what when where which who why will with would you your says said teach teaches taught meaning means mean'.split(' '));
@@ -1137,6 +1140,23 @@ function reviewedDeterministicEvidenceRecovery(question, evidence, page = '') {
   const value = String(question || '');
   const currentQuestion = value.split(/\nEarlier user topic:/i)[0];
   const sources = Array.isArray(evidence) ? evidence : [];
+  const reviewedDoctrine = page === 'ask' ? [
+    { intent: /^\s*What do Latter-day Saints teach about the Atonement of Jesus Christ and why it matters\?\s*$/i, path: /\/study\/manual\/gospel-topics\/atonement-of-jesus-christ(?:-study-guide)?$/, markers: [/\batonement\b/i, /\bjesus\s+christ\b/i, /\b(?:resurrect\w*|repent\w*|forgiv\w*)\b/i], id: 'reviewed-atonement-of-jesus-christ', answer: REVIEWED_ATONEMENT },
+    { intent: /^\s*How do official Church sources explain baptism and its covenant purpose\?\s*$/i, path: /\/study\/manual\/gospel-topics\/baptism(?:-study-guide)?$/, markers: [/\bbaptis\w*\b/i, /\bcovenant\b/i, /\b(?:ordinance|holy\s+ghost|jesus\s+christ)\b/i], id: 'reviewed-baptism-covenant', answer: REVIEWED_BAPTISM },
+    { intent: /^\s*How is the grace of Jesus Christ described in Latter-day Saint doctrine\?\s*$/i, path: /\/study\/manual\/gospel-topics\/grace(?:-study-guide)?$/, markers: [/\bgrace\b/i, /\bjesus\s+christ\b/i, /\b(?:salvation|strength|atonement|redeem\w*)\b/i], id: 'reviewed-grace-of-jesus-christ', answer: REVIEWED_GRACE },
+  ].find((entry) => entry.intent.test(currentQuestion)) : null;
+  if (reviewedDoctrine) {
+    const sourceIndex = sources.findIndex((source) => {
+      let parsed;
+      try { parsed = new URL(String(source && source.url || '')); } catch (_error) { return false; }
+      const content = String(source && source.content || '');
+      return parsed.protocol === 'https:'
+        && (parsed.hostname === 'churchofjesuschrist.org' || parsed.hostname.endsWith('.churchofjesuschrist.org'))
+        && reviewedDoctrine.path.test(parsed.pathname)
+        && reviewedDoctrine.markers.every((marker) => marker.test(content));
+    });
+    if (sourceIndex >= 0) return { recoveryId: reviewedDoctrine.id, answer: reviewedDoctrine.answer, sourceIndexes: [sourceIndex + 1] };
+  }
   if (isPioneerIrrigationIntent(value, page)) {
     const sourceIndex = sources.findIndex((source) => {
       let parsed;
