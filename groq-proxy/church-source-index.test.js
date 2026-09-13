@@ -624,6 +624,25 @@ const chapterTwentySixCacheUrl = (await evidenceCacheKey({
   topicPinned: true,
 }, 'Why did cooperative irrigation contribute to settlement life?')).url;
 const pioneerEvidenceAnswer = 'Cooperative irrigation helped early Latter-day Saint settlers make dry land productive and establish a durable community in the Salt Lake Valley. The official history describes families planning channels that distributed scarce water as the settlement took root. Shared planning and labor therefore supported planting and the physical development of the new community. This work mattered because dependable water access made agriculture possible in an arid place and gave arriving Saints a practical foundation for building together. Their coordinated water work was one part of turning the valley into a lasting settlement.';
+const reviewedPioneerIrrigation = reviewedDeterministicEvidenceRecovery(
+  'What did cooperative irrigation contribute to settlement life?',
+  [{
+    title: 'Pioneers to the West',
+    url: chapterTwentySixUrl,
+    content: 'Church leaders discussed methods of pioneer travel, planting seeds, and irrigation. The advance company entered the Salt Lake Valley and immediately set up a crude irrigation system to flood the land and prepare for planting. These pioneers began establishing a settlement in the valley.',
+  }],
+  'pioneers',
+);
+assert(reviewedPioneerIrrigation
+  && reviewedPioneerIrrigation.recoveryId === 'reviewed-pioneer-irrigation-settlement'
+  && /(?:community|settle|utah|worship|shared)/i.test(reviewedPioneerIrrigation.answer)
+  && reviewedPioneerIrrigation.answer.split(/\s+/).length >= 70,
+  'the pinned irrigation journey must have a substantive reviewed settlement answer');
+assert(!reviewedDeterministicEvidenceRecovery(
+  'What did cooperative irrigation contribute to settlement life?',
+  [{ title: 'Pioneers to the West', url: chapterTwentySixUrl, content: 'Irrigation and planting occurred in the Salt Lake Valley settlement.' }],
+  'ask',
+), 'the Pioneer irrigation recovery must not escape onto the general Ask page');
 const originalCaches = globalThis.caches;
 
 async function runPioneerReconsiderationCase({ page, profile, question, omitPinnedSource = false, approveSecond = false, cacheParagraphs = cachedPioneerParagraphs }) {
