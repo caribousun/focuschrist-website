@@ -379,6 +379,48 @@
         window.scrollTo({ top: Math.max(0, top), behavior: preferredScrollBehavior() });
     }
 
+    const pioneerViewportLimits = new WeakMap();
+    function ensurePioneerInputVisible() {
+        const input = userInput();
+        if (!input || input.disabled || !input.isConnected || document.activeElement !== input) return;
+        const viewport = window.visualViewport;
+        const viewportTop = viewport ? viewport.offsetTop : 0;
+        const safeTop = Math.max(viewportTop + 12, fixedHeaderOffset());
+        const safeBottom = viewportTop + (viewport ? viewport.height : window.innerHeight) - 12;
+        if (safeBottom <= safeTop) return;
+        const composer = input.closest('.input-area') || input;
+        const box = chatBox();
+        if (box && box.querySelector('.bot-message')) {
+            const boxRect = box.getBoundingClientRect();
+            let tail = composer.getBoundingClientRect().bottom - boxRect.bottom;
+            // Keep an answer beginning alongside the input when a keyboard
+            // leaves too little room for the complete mobile button stack.
+            if (safeBottom - safeTop - tail < 120) tail = input.getBoundingClientRect().bottom - boxRect.bottom;
+            const available = safeBottom - safeTop - tail;
+            if (available >= 80) {
+                if (!pioneerViewportLimits.has(box)) {
+                    const style = window.getComputedStyle(box);
+                    pioneerViewportLimits.set(box, {max: parseFloat(style.maxHeight) || 560, min: parseFloat(style.minHeight) || 0});
+                }
+                const limits = pioneerViewportLimits.get(box);
+                const height = Math.min(limits.max, available);
+                box.style.maxHeight = height + 'px';
+                box.style.minHeight = Math.min(limits.min, height) + 'px';
+                // Align the joint transcript/composer layout, not the field
+                // alone. Native focus/selection scrolling cannot leave all of
+                // the answer above the viewport on the next completion.
+                const top = box.getBoundingClientRect().top;
+                window.scrollTo({top: Math.max(0, window.scrollY + top - safeTop), behavior:'auto'});
+                return;
+            }
+        }
+        let rect = composer.getBoundingClientRect();
+        if (rect.height > safeBottom - safeTop) rect = input.getBoundingClientRect();
+        const delta = rect.top < safeTop ? rect.top - safeTop
+            : rect.bottom > safeBottom ? rect.bottom - safeBottom : 0;
+        if (delta) window.scrollTo({top: Math.max(0, window.scrollY + delta), behavior:'auto'});
+    }
+
     function focusPioneerInput() {
         const input = userInput();
         if (!input || input.disabled || !input.isConnected) return;
@@ -388,7 +430,12 @@
             const end = input.value.length;
             input.setSelectionRange(end, end);
         }
+        ensurePioneerInputVisible();
+        if (window.requestAnimationFrame) window.requestAnimationFrame(ensurePioneerInputVisible);
     }
+
+    window.addEventListener('resize', ensurePioneerInputVisible);
+    if (window.visualViewport) window.visualViewport.addEventListener('resize', ensurePioneerInputVisible);
 
     function ensurePioneerEntryStyles() {
         if (document.getElementById('pioneer-entry-styles')) return;
@@ -522,7 +569,7 @@
             window.scrollTo({ top: Math.max(0, window.scrollY + boxRect.top - safeTop), behavior: 'auto' });
         }
         // Every completed answer leaves the next-question field clicked,
-        // focused, and ready without undoing the question/answer scroll.
+        // focused, and entirely visible with only the needed page adjustment.
         if (typeof focusPioneerInput === 'function') window.setTimeout(focusPioneerInput, 80);
     }
 
