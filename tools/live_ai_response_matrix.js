@@ -1,7 +1,7 @@
 const { MAX_EXTERNAL_VERIFIER_CALLS, validateExternalVerifierCapacity } = require('./live_ai_capacity_contract.js');
 const ENDPOINT = 'https://focuschrist-groq-proxy.caribousun.workers.dev';
 const ORIGIN = 'https://focuschrist.com';
-const POLICY_VERSION = '2026-09-13.92';
+const POLICY_VERSION = '2026-09-13.93';
 const HARD_LIMIT_MS = 25000;
 const P95_LIMIT_MS = 20000;
 const BASELINE_MODE = process.argv.includes('--baseline');
@@ -171,6 +171,14 @@ async function submit(test, messages = null) {
 }
 
 function validate(test, result) {
+    try { return validateResult(test, result); }
+    catch (error) {
+        console.error('Live AI validation diagnostic: ' + JSON.stringify({testId:test.id, question:test.question, result}));
+        throw error;
+    }
+}
+
+function validateResult(test, result) {
     assert(result.status === 200, test.id + ' returned HTTP ' + result.status);
     assert(result.policyVersion === POLICY_VERSION, test.id + ' returned Worker policy ' + result.policyVersion);
     assert(result.elapsedMs <= HARD_LIMIT_MS, test.id + ' exceeded the 25-second visitor ceiling');
