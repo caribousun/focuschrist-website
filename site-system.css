@@ -57,6 +57,7 @@
     --fc-section-y: clamp(48px, 7vw, 82px);
     --fc-body-section-space: clamp(16px, 2vw, 24px);
     --fc-body-section-gap: clamp(32px, 4vw, 48px);
+    --fc-body-gutter: clamp(16px, 2vw, 24px);
     --fc-gap: clamp(18px, 3vw, 30px);
     --fc-opening-hero-height: clamp(350px, 27vw, 440px);
     --fc-opening-flow-header-height: 72px;
@@ -1249,4 +1250,50 @@ body.fc-site main > :is(.fc-resource-section, .fc-study-hub):has(+ .fc-section) 
 body.fc-site main :is(.ask-conversation-section, .ask-topic-section,
     .ask-scene-pair, .ask-continue-section, .ask-emmaus-section) {
     margin-top: var(--fc-body-section-gap);
+}
+
+/* A continuous body field, with accents fading at both section boundaries.
+   These outer wrappers never include the approved hero or opening. */
+body.fc-site main > :is(.fc-section, .section, .qa-section, .pioneer-visual-chapter) {
+    background: linear-gradient(180deg, transparent, rgba(134,175,200,.025) 30%, rgba(134,175,200,.025) 70%, transparent);
+    border-block-color: transparent;
+    box-shadow: none;
+}
+body.fc-site main > :is(.fc-section--warm, .fc-cfm-home) {
+    background: linear-gradient(180deg, transparent, rgba(126,153,91,.15) 28%, rgba(72,121,89,.13) 72%, transparent);
+}
+body.fc-site main > .fc-section--dark {
+    background: linear-gradient(180deg, transparent, rgba(6,20,28,.2) 28%, rgba(6,20,28,.2) 72%, transparent);
+}
+
+/* One outer gutter; reading and gallery maximum widths retain their purpose. */
+body.fc-site main > :is(.fc-container, .fc-container--standard, .fc-container--reading, .fc-container--wide),
+body.fc-site main > :is(.fc-section, .section, .qa-section, .pioneer-visual-chapter) > :is(.fc-container, .fc-container--standard, .fc-container--reading, .fc-container--wide),
+body.fc-site main > :is(.fc-resource-section, .fc-study-hub),
+body.fc-site main > .gallery {
+    width: calc(100% - 2 * var(--fc-body-gutter));
+}
+body.fc-site main > :is(.fc-resource-section, .fc-study-hub) {
+    max-width: var(--fc-standard);
+}
+/* These reading containers already provide the outer gutter. */
+body.fc-site main:is(.ask-main, .content-wrap.article) > :is(.fc-resource-section, .fc-study-hub) {
+    width: 100%;
+    margin-inline: 0;
+}
+body.fc-site main.ask-main {
+    width: min(var(--fc-standard), calc(100% - 2 * var(--fc-body-gutter)));
+}
+body.fc-site main.likeness-main,
+body.fc-site main > :is(.cfm-section, .cfm-jump, .fc-gallery-entry) {
+    padding-inline: var(--fc-body-gutter);
+}
+body.fc-site main > .cfm-section { border-top-color: transparent; }
+body.fc-site main > .likeness-chapter { border-top-color: rgba(210,185,121,.16); }
+body.fc-site main > .fc-container--standard:has(> .watch-topic-index) {
+    padding-bottom: var(--fc-body-section-space);
+}
+body.fc-site .watch-topic-index { margin-top: var(--fc-body-section-gap); }
+@media (max-width: 700px) {
+    body.fc-site main.content-wrap.article { width: calc(100% - 2 * var(--fc-body-gutter)); }
 }
