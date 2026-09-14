@@ -995,10 +995,23 @@ body.fc-site .fc-visual-hero {
         min-height: var(--fc-opening-hero-height);
         aspect-ratio: auto;
     }
-    /* Mobile opening panels follow their content. The previous viewport-filling
-       minimum left a large blank band between the copy and actions on tall phones. */
+    /* Keep the next section below the first mobile screen. The extra pixel
+       accounts for the introduction's existing -1px overlap with the hero.
+       Long introductions still grow naturally on short screens. */
     body.fc-site .fc-page-intro {
-        min-height: 0 !important;
+        min-height: max(0px, calc(100vh - var(--fc-mobile-intro-top, calc(62px + var(--fc-opening-hero-height) - 1px)))) !important;
+        min-height: max(0px, calc(100dvh - var(--fc-mobile-intro-top, calc(62px + var(--fc-opening-hero-height) - 1px)))) !important;
+    }
+    /* Keep copy and actions together; spare height belongs below the group. */
+    body.fc-site .fc-page-intro > .fc-container--standard {
+        align-self: start;
+    }
+    body.fc-site.fc-topic-page .fc-topic-opening,
+    body.fc-site .fc-gallery-intro,
+    body.fc-site .cfm-hero,
+    body.fc-site .gc-page-opening {
+        min-height: max(0px, calc(100vh - var(--fc-mobile-intro-top, 62px))) !important;
+        min-height: max(0px, calc(100dvh - var(--fc-mobile-intro-top, 62px))) !important;
     }
     body.fc-not-found .fc-page-intro { padding-block: 8px; }
     body.fc-not-found .fc-page-intro .fc-card { padding: 8px; }

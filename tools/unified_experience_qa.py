@@ -177,7 +177,9 @@ def main() -> int:
             "body.fc-site .fc-visual-hero",
             "calc(100dvh - 52px - 33.3984375vw + 8px)",
             "calc(100dvh - 62px - 33.3984375vw + 8px)",
-            "min-height: 0 !important;",
+            "calc(100dvh - var(--fc-mobile-intro-top, calc(62px + var(--fc-opening-hero-height) - 1px)))",
+            "align-self: start;",
+            "calc(100dvh - var(--fc-mobile-intro-top, 62px))",
             "body.fc-not-found .fc-page-intro .fc-actions",
             "grid-template-columns: repeat(2, minmax(0, 1fr))",
         ):
@@ -218,12 +220,12 @@ def main() -> int:
             fail(errors, f"{relative}: site-system cache revision missing")
         else:
             approved_cache_versions.add(cache_match.group(1))
-    if approved_cache_versions != {"20260909-warm"}:
+    if approved_cache_versions != {"20260914-mobile-opening-1"}:
         fail(errors, f"approved hero pages have inconsistent site-system cache revisions: {sorted(approved_cache_versions)}")
 
     for relative in PUBLIC_PAGES:
         public_text = (ROOT / relative).read_text(encoding="utf-8")
-        if 'site-system.css?v=20260909-warm' not in public_text:
+        if 'site-system.css?v=20260914-mobile-opening-1' not in public_text:
             fail(errors, f"{relative}: shared hero/menu cache revision is not globally locked")
 
     for relative in PUBLIC_PAGES:
