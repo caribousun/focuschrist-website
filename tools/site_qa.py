@@ -9,6 +9,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 CORE = {
+    "search.html": "https://focuschrist.com/search.html",
     "index.html": "https://focuschrist.com/",
     "ask.html": "https://focuschrist.com/ask.html",
     "answers.html": "https://focuschrist.com/answers.html",

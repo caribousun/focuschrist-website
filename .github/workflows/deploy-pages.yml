@@ -36,6 +36,11 @@ jobs:
       - name: Verify global artwork scanner regression fixtures
         run: python tools/topic_artwork_uniqueness_runtime_qa.py
 
+      - name: Verify published-content search index and behavior
+        run: |
+          python tools/build_site_search.py --check
+          python tools/site_search_qa.py
+
       - name: Run focusChrist structural site QA
         run: |
           python tools/site_qa.py
@@ -72,6 +77,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
 
       - name: Verify visual resource coverage and source thumbnails
         run: python tools/resource_thumbnail_qa.py
@@ -201,6 +207,9 @@ jobs:
 
       - name: Validate Pioneer experience JavaScript
         run: node --check pioneer-experience.js
+
+      - name: Rebuild public search index for publication
+        run: python tools/build_site_search.py
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
