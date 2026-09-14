@@ -40,7 +40,7 @@ body.fc-site .gallery-item .caption {
 body.fc-site [data-focuschrist-featured-art-study="true"] {
     max-width: var(--fc-wide) !important;
     margin: 0 auto !important;
-    padding: 0 18px var(--fc-section-y) !important;
+    padding: 0 18px var(--fc-body-section-space) !important;
 }
 
 body.fc-site [data-focuschrist-featured-art-study="true"] > h2 {
