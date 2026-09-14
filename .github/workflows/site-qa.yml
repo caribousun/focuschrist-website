@@ -28,6 +28,11 @@ jobs:
       - name: Verify global artwork scanner regression fixtures
         run: python tools/topic_artwork_uniqueness_runtime_qa.py
 
+      - name: Verify published-content search index and behavior
+        run: |
+          python tools/build_site_search.py --check
+          python tools/site_search_qa.py
+
       - name: Run focusChrist structural site QA
         run: |
           python tools/site_qa.py
@@ -65,6 +70,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/topic_artwork_sources_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
 
       - name: Check connected study destinations and learning paths
         run: python tools/connected_study_qa.py
