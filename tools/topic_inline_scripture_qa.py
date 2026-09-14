@@ -20,6 +20,11 @@ books='|'.join(re.escape(k) for k in sorted(catalog,key=len,reverse=True))
 reference=re.compile(r'(?<![\w])('+books+r')\s+(\d+)(?::(\d+)(?:[–-](\d+))?)?')
 paths=['index.html']+[p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'answers').glob('*.html'))]+['general-conference.html']
 assert len(paths)==20, 'Home and all permanent topic studies must be checked'
+# Discover the Featured Art destinations from their public gallery links. Body prose
+# was previously outside this gate, so missing citations passed picture-panel QA.
+featured=sorted({n.attrs['href'] for n in nodes(ROOT/'art.html') if n.tag=='a' and 'data-artwork-detail' in n.attrs and n.attrs.get('href','').startswith('art-study/')})
+assert len(featured)==4, 'Check every Featured Art study destination'
+paths+=featured
 count=0
 for path in paths:
  ns=nodes(ROOT/path);main=next(n for n in ns if n.tag=='main')
@@ -30,7 +35,7 @@ for path in paths:
   if not linked:
    assert not reference.search(clean(' '.join(node.words))),path+': explicit scripture remains unlinked: '+' '.join(node.words)
   if node.tag=='a':assert not any(n.tag=='a' for n in node.walk() if n is not node),path+': nested anchor'
-  if not node.has('fc-inline-scripture'):continue
+  if not (node.has('fc-inline-scripture') or (path in featured and node.tag=='a' and re.search(r'/study/scriptures/(?:ot|nt|bofm|dc-testament|pgp)/[^/]+/\d+',node.attrs.get('href','')))):continue
   count+=1;u=urlsplit(node.attrs['href']);prefix='/study/scriptures/'
   assert u.netloc=='www.churchofjesuschrist.org' and u.path.startswith(prefix)
   key=u.path[len(prefix):];file=ROOT/'scripture-data'/(key+'.json');assert file.is_file(),path+': unavailable scripture chapter '+key
@@ -44,4 +49,4 @@ for path in paths:
   if match:
    assert key==catalog[match[1]]+'/'+match[2],path+': scripture label links to wrong chapter'
    if match[3] and (node.has('fc-inline-scripture') or params.get('id')):assert params.get('id')==['p'+match[3]+('-p'+match[4] if match[4] else '')],path+': verse selection differs from label'
-print(f'TOPIC INLINE SCRIPTURE QA PASS: Home and all19 topic destinations, {count} scripture links, canonical chapters, exact verse selections, no nested anchors')
+print(f'TOPIC INLINE SCRIPTURE QA PASS: Home, all19 topic destinations and all{len(featured)} Featured Art bodies, {count} scripture links, canonical chapters, exact verse selections, no nested anchors')

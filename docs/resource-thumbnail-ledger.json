@@ -209,7 +209,12 @@
       "height": 359,
       "sha256": "55f0e89e5f1d9e7326d8f0562d04b42ed45c686ea1e94f19fc939a1e1d28bbfd",
       "status": 200,
-      "verified_date": "2026-09-06"
+      "verified_date": "2026-09-06",
+      "inline_scripture_urls_by_page": {
+        "art-study/the-good-shepherd.html": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p1-p18#p1"
+        ]
+      }
     },
     {
       "key": "unique-bom-introduction",
@@ -684,7 +689,12 @@
       "thumbnail_status": 200,
       "verified_date": "2026-09-07",
       "kind": "Church video",
-      "description": "Listen for the witness of the living Savior, then return to the Resurrection accounts in John 20."
+      "description": "Listen for the witness of the living Savior, then return to the Resurrection accounts in John 20.",
+      "inline_scripture_urls_by_page": {
+        "art-study/the-living-christ.html": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng"
+        ]
+      }
     },
     {
       "key": "living-he-is-risen-2025",
