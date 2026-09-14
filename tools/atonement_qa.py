@@ -43,4 +43,7 @@ for dependency in ['topic-artwork-details.js','hero-details.js','site-search.js'
 for forbidden in ['cross-v4','cross-v6','cross-v8','cross-v9','cross-v10','-original.png','<base','Local editorial review']:
     require(forbidden not in text,'Rejected/preview artifact in published page: '+forbidden)
 require('href="atonement.html"' in (ROOT/'answers.html').read_text(encoding='utf-8'),'Topic discovery missing')
+require('<div class="atonement-reading"><p></p></div>' not in text,'Empty reading blocks create artificial gaps')
+for n in nodes:
+    if n.has('fc-actions'):require(n.has('atonement-chapter-actions'),'Study actions must share centered spacing')
 print('ATONEMENT QA PASS: chapters,26distinct reviewed visuals,all standard works,reflection,safety and shared study hooks')

@@ -838,7 +838,40 @@
         }
     }
 
+    function initExternalLinks() {
+        if (typeof URL !== 'function' || !document.querySelectorAll) return;
+        function prepare(link) {
+            if (!link || !link.getAttribute) return;
+            let url;
+            try { url = new URL(link.getAttribute('href'), window.location.href); } catch (_) { return; }
+            if (!/^https?:$/.test(url.protocol) || url.origin === window.location.origin || /^(www\.)?focuschrist\.com$/i.test(url.hostname)) return;
+            link.setAttribute('target', '_blank');
+            const rel = new Set((link.getAttribute('rel') || '').split(/\s+/).filter(Boolean));
+            rel.add('noopener'); rel.add('noreferrer');
+            link.setAttribute('rel', Array.from(rel).join(' '));
+        }
+        function scan(root) {
+            if (root.matches && root.matches('a[href]')) prepare(root);
+            if (root.querySelectorAll) root.querySelectorAll('a[href]').forEach(prepare);
+        }
+        scan(document);
+        // Capture prepares native navigation; scripture/art handlers may still
+        // preventDefault and use the site's accessible study dialogs.
+        ['click', 'auxclick'].forEach(type => document.addEventListener(type, function (event) {
+            prepare(event.target && event.target.closest ? event.target.closest('a[href]') : null);
+        }, true));
+        if (typeof MutationObserver === 'function' && document.body) {
+            new MutationObserver(function (changes) {
+                changes.forEach(change => {
+                    if (change.type === 'attributes') prepare(change.target);
+                    else change.addedNodes.forEach(scan);
+                });
+            }).observe(document.body, {childList:true, subtree:true, attributes:true, attributeFilter:['href']});
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
+        initExternalLinks();
         initMobileOpening();
         if (/[?&]gallery-(?:art|position)=/.test(window.location.search)) {
             appendScript(relativeAssetHref('art-gallery-bridge.js?v=20260913-1'), 'data-focuschrist-art-gallery-bridge');

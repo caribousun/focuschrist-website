@@ -453,7 +453,7 @@
 }
 
 .fc-text-link::after {
-    content: '  ›';
+    content: '  â€º';
     margin-left: 7px;
 }
 
@@ -695,4 +695,9 @@
         padding-top: clamp(16px, 2.4dvh, 38px);
         padding-bottom: clamp(20px, 3dvh, 46px);
     }
+}
+
+/* Keep the phone caption outside the artwork tap target. */
+@media (max-width: 700px) {
+  .fc-missionary-commission-artwork figcaption { position: static; padding: 16px; background: transparent; }
 }

@@ -35,6 +35,7 @@ for file,keys in coverage.items():
   if [a.get('href') for a in inline_links]!=inline_expected:errors.append(f'{file}: unreviewed inline scripture')
   if [a.get('href') for a in c['links'] if a not in inline_links]!=expected_links:errors.append(f'{file}: mismatched source {c["key"]}')
   if any(any(k in a for k in ['data-hero-viewer','data-full-image-viewer']) for a in c['links']):errors.append(f'{file}: preview hijacked by artwork viewer')
+  if 'fc-resource-card__image' not in c['links'][0].get('class','').split():errors.append(f'{file}: missing ratio-preserving thumbnail wrapper for {c["key"]}')
   i=c['images'][0]
   if r.get('remote_thumbnail'):
    if i['src']!=r['remote_thumbnail']:errors.append(f'{file}: remote native thumbnail mismatch')
@@ -51,5 +52,8 @@ for file,keys in coverage.items():
   if u.fragment and target.suffix=='.html':
    q=Cards();q.feed(target.read_text())
    if unquote(u.fragment) not in q.ids and u.fragment not in ['ask-question']:errors.append(f'{file}: missing anchor {link}')
+css=(ROOT/'resource-cards.css').read_text()
+for rule in ['aspect-ratio:16/9','object-fit:contain']:
+ if rule not in css:errors.append('Shared thumbnail containment contract missing: '+rule)
 if errors:raise SystemExit('\n'.join(errors))
 print(f'RESOURCE THUMBNAIL QA PASS: {len(coverage)} pages, {count} source-matched cards')

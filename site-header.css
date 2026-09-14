@@ -353,3 +353,18 @@ body.fc-site .fc-history-message--assistant {
 @media (prefers-reduced-motion: reduce) {
     .nav[data-focuschrist-header="standard"] { transition: none !important; }
 }
+
+/* The centerpiece sits between equal-width navigation wings. */
+@media(min-width:1021px){
+ body.fc-site .nav[data-focuschrist-header="standard"] .nav-links:has(.fc-nav-atonement){display:grid!important;grid-template-columns:1fr auto 1fr;gap:clamp(12px,1.4vw,24px)!important}
+ .nav[data-focuschrist-header="standard"] .fc-nav-side{display:flex;align-items:center;gap:clamp(12px,1.4vw,24px)}
+ .nav[data-focuschrist-header="standard"] .fc-nav-side--before{justify-content:flex-end}
+ .nav[data-focuschrist-header="standard"] .fc-nav-side--after{justify-content:flex-start}
+ .nav[data-focuschrist-header="standard"] .nav-links .fc-nav-atonement{padding:9px 14px!important;border:1px solid rgba(240,195,106,.65);border-radius:999px;background:rgba(240,195,106,.12);color:#f0c36a!important;letter-spacing:.6px!important;font-weight:600;text-transform:none}
+}
+@media(min-width:1021px) and (max-width:1400px){
+ .nav[data-focuschrist-header="standard"] .nav-links a{font-size:10px!important;letter-spacing:.6px!important}
+ .nav[data-focuschrist-header="standard"] .nav-logo{font-size:19px!important;letter-spacing:2px!important}
+ .nav[data-focuschrist-header="standard"] .fc-nav-side{gap:12px}
+}
+@media(max-width:1020px){.nav[data-focuschrist-header="standard"] .fc-nav-side{display:contents}}

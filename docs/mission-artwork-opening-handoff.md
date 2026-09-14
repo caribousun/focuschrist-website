@@ -1,3 +1,13 @@
+# Current Mission artwork replacement - 2026-09-14
+
+Owner rejected the previous commissioning Christ likeness. Replacement generated with built-in imagegen using original Home identity (SHA256 4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b) and previous scene as composition only. Output: exec-1f7f7798-cc90-44ca-b660-8c993efb6fe3.png. Independent opening_review technical PASS: compatible identity, twelve disciples, coherent anatomy, warm speaking expression. This is not a new owner approval. Final family assets/missionary/christ-teaches-apostles-home-likeness-20260914-{900,1100,full}.webp. No upscaling; native1672x941. Responsive previews remain under120KB. Review includes full scene, face detail and delivered phone image.
+
+Prompt: Replace the Mission commissioning scene with the exact approved Home Christ, preserving indigo mantle, tan tunic, wide Galilean walking scene, twelve distinct attentive disciples, natural teaching expression and rich live-action photographic detail. Original Home is identity authority; previous scene supplies composition only. No text, halos, CGI or narrow-face substitution.
+
+Sources: Matthew10 documents the Twelve and their mortal-ministry calling. Matthew28:16-20 records the later risen Lord's commission to the eleven. Caption now describes teaching while walking; detail distinguishes these accounts. Faces, clothing and landscape remain artistic interpretation.
+
+Previous receipt retained below; its approved filename is superseded for this one image only.
+
 # Mission artwork and opening layout
 
 Wyatt approved the final likeness correction after the hand and photographic clarity revisions. Approved source: exec-c0eef5f3-1138-443c-abd9-e0b3cf1d692c.png, 1672 x 941, SHA256 242d2cee5e7add6223cab08c49c22c64ed6d291bcbcff7383a102120ccbd15c3. The actual Living Christ portrait was provided as the identity reference. Earlier candidates in this conversation are superseded. Direct display was authorized as an exception for this correction; the standing private-review rule is not permanently waived.

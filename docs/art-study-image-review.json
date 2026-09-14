@@ -493,7 +493,7 @@
         "tone": "reverent hope amid impending departure",
         "reviewed": true,
         "gaze_review": "Architecture and distant unnamed figures; no interpersonal gaze required.",
-        "review_notes": "Compared original1846\u00e2\u20ac\u201c47daguerreotype; horizontalangel vane, circularwindowsbetweentiers. Landscape/colors/minuteornaments interpretive, no modernuprightMoroni."
+        "review_notes": "Compared original1846â€“47daguerreotype; horizontalangel vane, circularwindowsbetweentiers. Landscape/colors/minuteornaments interpretive, no modernuprightMoroni."
       },
       {
         "slot": "nauvoo-legion",
@@ -766,6 +766,14 @@
         "asset": "assets/page-art/atonement/cross-v11.webp",
         "sha256": "ec2c37c521b0ead20fdeb9cba8637ef5f81197278ce645c8ef6a7c42cd2db35e",
         "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      }
+    ],
+    "missionary.html": [
+      {
+        "asset": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-full.webp",
+        "sha256": "7b0dfc36b7f338b2da7f8ca755262d9f703c45683ea1bd315111039d850f1f7d",
+        "tone": "Warm teaching expression, natural live-action detail and twelve attentive disciples. Independently compared with original Home Christ; technical acceptance is not owner approval.",
         "reviewed": true
       }
     ]
