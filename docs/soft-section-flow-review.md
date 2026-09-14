@@ -25,6 +25,14 @@ passed after the nested-container correction. The connected-study rerun required
 Python UTF-8 on Windows; its initial default-codepage failure is an environment
 failure, not a content-integrity exception. Final independent review ACCEPT.
 
+The final computed-style pass covers all 70 applicable outer wrappers at both
+widths (140 observations). It caught higher-priority About closing and History
+Ask rules; these now fade as well, with no opaque wrapper edges or visible
+boundary borders remaining in that inventory. The About override is corrected
+at its existing source instead of adding another important-selector override.
+Unified presentation, Church History and production-hardening checks passed
+after these two final background-only adjustments.
+
 Public deployment, exact bytes and rendered acceptance are recorded separately
 in the canonical release receipt. Future reviews should compare outer edges,
 combined section gaps, nested card ancestry, actual theme boundaries and settled

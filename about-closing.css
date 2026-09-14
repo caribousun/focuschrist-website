@@ -2,11 +2,8 @@
    This file intentionally uses the stable About disclosure marker and !important
    so older shared section/button rules cannot create a light-background/light-text mismatch. */
 body.fc-site section[data-focuschrist-independence="about"].fc-about-close {
-    background:
-        radial-gradient(circle at 86% 12%, rgba(224, 170, 62, 0.08), transparent 28rem),
-        radial-gradient(circle at 10% 92%, rgba(113, 128, 92, 0.20), transparent 26rem),
-        linear-gradient(145deg, #28434a 0%, #334a43 54%, #243943 100%) !important;
-    border-block: 1px solid rgba(240, 195, 106, 0.12) !important;
+    background: linear-gradient(180deg, transparent, rgba(113,148,122,.08) 28%, rgba(83,127,133,.06) 72%, transparent) !important;
+    border-block: 1px solid transparent !important;
     color: #e8e3d8 !important;
 }
 

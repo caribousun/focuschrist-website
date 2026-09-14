@@ -1265,6 +1265,12 @@ body.fc-site main > :is(.fc-section--warm, .fc-cfm-home) {
 body.fc-site main > .fc-section--dark {
     background: linear-gradient(180deg, transparent, rgba(6,20,28,.2) 28%, rgba(6,20,28,.2) 72%, transparent);
 }
+/* Page-specific chapter rules have higher specificity than the shared wrapper. */
+body.fc-site main > .fc-section#ask-history {
+    background: linear-gradient(180deg, transparent, rgba(113,148,122,.08) 28%, rgba(83,127,133,.06) 72%, transparent);
+    border-block-color: transparent;
+    box-shadow: none;
+}
 
 /* One outer gutter; reading and gallery maximum widths retain their purpose. */
 body.fc-site main > :is(.fc-container, .fc-container--standard, .fc-container--reading, .fc-container--wide),
