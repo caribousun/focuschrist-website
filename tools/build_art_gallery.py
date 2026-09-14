@@ -8,7 +8,7 @@ import hashlib
 import json
 import re
 import sys
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from urllib.parse import urljoin, urlsplit, unquote
 from xml.etree import ElementTree as ET
 sys.dont_write_bytecode = True
@@ -147,7 +147,8 @@ def build():
     for entry in entries:
         path = entry['fullImage']
         family = re.sub(r'-\d{3,4}w?(?=\.[^.]+$)', '', path)
-        family = str(Path(family).with_suffix('')).lower()
+        # Artwork identities are URLs: keep slash semantics identical on every OS.
+        family = str(PurePosixPath(family).with_suffix('')).lower()
         digest = hashlib.sha256((ROOT / path.lstrip('/')).read_bytes()).hexdigest()
         identity = identities.get(digest, family)
         identities[digest] = identity
