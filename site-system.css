@@ -1260,14 +1260,14 @@ body.fc-site main > :is(.fc-section, .section, .qa-section, .pioneer-visual-chap
     box-shadow: none;
 }
 body.fc-site main > :is(.fc-section--warm, .fc-cfm-home) {
-    background: linear-gradient(180deg, transparent, rgba(126,153,91,.15) 28%, rgba(72,121,89,.13) 72%, transparent);
+    background: radial-gradient(ellipse 65% 45% at 50% 50%, rgba(113,148,122,.035), transparent);
 }
 body.fc-site main > .fc-section--dark {
-    background: linear-gradient(180deg, transparent, rgba(6,20,28,.2) 28%, rgba(6,20,28,.2) 72%, transparent);
+    background: radial-gradient(ellipse 65% 45% at 50% 50%, rgba(6,20,28,.06), transparent);
 }
 /* Page-specific chapter rules have higher specificity than the shared wrapper. */
 body.fc-site main > .fc-section#ask-history {
-    background: linear-gradient(180deg, transparent, rgba(113,148,122,.08) 28%, rgba(83,127,133,.06) 72%, transparent);
+    background: radial-gradient(ellipse 65% 45% at 50% 50%, rgba(113,148,122,.035), transparent);
     border-block-color: transparent;
     box-shadow: none;
 }
