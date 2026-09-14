@@ -789,6 +789,88 @@
         appendScript('study-intelligence-v3.js?v=20260909-22', 'data-focuschrist-study-intelligence-v3');
     }
 
+    function initOpeningInvitation(intro, mobile) {
+        const questions = {
+            'index.html': 'What would you like to bring closer to Jesus Christ today?',
+            'ask.html': 'What question has been on your heart lately?',
+            'answers.html': 'Which part of your faith would you like to understand more deeply?',
+            'art.html': 'What might you notice if you linger with one picture?',
+            'art-gallery.html': 'Which picture invites you to pause and look more closely?',
+            'atonement.html': 'Where would you welcome the Savior’s help today?',
+            'church-history.html': 'Whose experience could help you understand the past more fully?',
+            'joseph-smith-likeness.html': 'What can a portrait help you notice about a person?',
+            'book-of-mormon-evidences.html': 'Which question would you like to follow back to its sources?',
+            'pioneers.html': 'What can you learn from someone who kept going through uncertainty?',
+            'missionary.html': 'Who could feel Christ’s care through one kind act from you?',
+            'watch.html': 'What message would be helpful to carry into your day?',
+            'about.html': 'What helps you keep Jesus Christ at the center of your study?',
+            'come-follow-me.html': 'When could you make a little time for scripture this week?',
+            'general-conference.html': 'Which invitation could become one small step this week?',
+            'god-our-heavenly-father.html': 'What would you like to understand about your relationship with God?',
+            'restored-church-of-jesus-christ.html': 'What does restoration mean for your own search for Christ?',
+            'are-latter-day-saints-christian.html': 'What does following Jesus Christ mean to you?',
+            'bible-and-book-of-mormon-together.html': 'What might you discover by reading these witnesses together?',
+            'death-of-a-child.html': 'What kind of support would feel gentle and helpful today?',
+            'divorce-and-faith.html': 'What would help you take your next step with care?',
+            'faith-in-jesus-christ-during-trials.html': 'Where have you found a little strength during a hard day?',
+            'grief-and-faith.html': 'Who could sit beside you and listen today?',
+            'jesus-christ-latter-day-saint-beliefs.html': 'Which part of the Savior’s life would you like to know better?',
+            'look-unto-me-doctrine-and-covenants-6-36.html': 'What could help you turn toward Christ in this moment?',
+            'prayer-and-personal-revelation.html': 'What would you like to say to God in your own words?',
+            'stand-forever.html': 'What truth helps you feel steady when questions remain?',
+            'what-happens-after-death.html': 'What would you like to understand about the hope of Resurrection?',
+            'what-is-eternal-marriage.html': 'How can you nurture love and faith in your relationships today?',
+            'what-is-the-book-of-mormon.html': 'What would you like to discover as you begin reading?',
+            'who-was-joseph-smith.html': 'Which part of Joseph Smith’s life would you like to study?',
+            'why-families-are-important.html': 'How could you offer care to someone in your family today?',
+            'why-latter-day-saints-build-temples.html': 'What would you like to understand about temple worship?',
+            'be-still.html': 'Where could you find a quiet moment today?',
+            'suffer-the-little-children.html': 'How could you help a child feel seen and loved?',
+            'the-good-shepherd.html': 'Who might need to know they have not been forgotten?',
+            'the-living-christ.html': 'How does knowing that Christ lives shape your day?'
+        };
+        const file = window.location.pathname.split('/').pop() || 'index.html';
+        const question = questions[file];
+        const cue = intro.querySelector('.fc-mobile-scroll-cue');
+        if (!question || !cue || intro.querySelector('.fc-opening-invitation')) return;
+        const host = intro.querySelector('.fc-page-intro > .fc-container--standard') ||
+            intro.querySelector(':scope > .fc-container--standard, :scope > .cfm-hero__copy, :scope > div') || intro;
+        const invitation = document.createElement('p');
+        invitation.className = 'fc-opening-invitation';
+        const label = document.createElement('span');
+        label.className = 'fc-opening-invitation-label';
+        label.textContent = 'Pause and reflect';
+        const prompt = document.createElement('span');
+        prompt.textContent = question;
+        invitation.appendChild(label);
+        invitation.appendChild(prompt);
+        invitation.hidden = true;
+        host.appendChild(invitation);
+        let frame;
+        function fit() {
+            invitation.hidden = true;
+            if (!mobile.matches || window.innerHeight < 720) return;
+            const before = intro.getBoundingClientRect();
+            const anchor = intro.querySelector('h1');
+            const headingTop = anchor ? anchor.getBoundingClientRect().top : 0;
+            const cueTop = cue.getBoundingClientRect().top;
+            invitation.hidden = false;
+            const after = intro.getBoundingClientRect();
+            const box = invitation.getBoundingClientRect();
+            const headingMoved = anchor && Math.abs(anchor.getBoundingClientRect().top - headingTop) > 1;
+            if (!box.height || box.bottom > cueTop - 24 || Math.abs(after.height - before.height) > 1 || headingMoved) invitation.hidden = true;
+        }
+        function schedule() {
+            if (frame) window.cancelAnimationFrame(frame);
+            frame = window.requestAnimationFrame(fit);
+        }
+        schedule();
+        window.addEventListener('resize', schedule);
+        window.addEventListener('pageshow', schedule);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+        if (typeof ResizeObserver === 'function') new ResizeObserver(schedule).observe(host);
+    }
+
     function initMobileOpening() {
         const intro = document.querySelector('.fc-topic-opening, .fc-page-intro, .fc-gallery-intro, .cfm-hero, .gc-page-opening');
         if (!intro) return;
@@ -828,6 +910,7 @@
             intro.style.setProperty('--fc-mobile-intro-top', Math.floor(top) + 'px');
         }
         measure();
+        initOpeningInvitation(intro, mobile);
         window.addEventListener('resize', measure);
         window.addEventListener('pageshow', measure);
         if (window.ResizeObserver) {

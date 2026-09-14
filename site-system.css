@@ -1310,3 +1310,17 @@ body.fc-site .watch-topic-index { margin-top: var(--fc-body-section-gap); }
 @media (max-width: 700px) {
     body.fc-site main.content-wrap.article { width: calc(100% - 2 * var(--fc-body-gutter)); }
 }
+
+/* Optional reflection uses spare mobile opening space without moving its cue. */
+body.fc-site .fc-opening-invitation { display: none !important; }
+@media (max-width: 700px) {
+    body.fc-site .fc-mobile-cued-opening p.fc-opening-invitation:not([hidden]) {
+        display: block !important; order: 30; flex: 0 0 auto;
+        position: static; width: 100%; max-width: 34ch;
+        margin: 32px auto 0 !important; padding: 0;
+        color: var(--fc-gold-light) !important; font-size: .95rem;
+        font-weight: 400; line-height: 1.55; text-align: center;
+    }
+}
+
+body.fc-site .fc-opening-invitation-label { display: block; margin-bottom: 8px; font-size: .65rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
