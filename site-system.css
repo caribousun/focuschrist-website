@@ -537,6 +537,14 @@ body.fc-site .fc-page-intro .fc-button--primary:focus-visible { color: #18262b !
 .fc-actions--center { justify-content: center; }
 .fc-actions--content { margin-top: 22px; }
 
+/* Short onward-study promotions share one centered invitation. Long study
+   cards retain their reading alignment. */
+.fc-study-promotion { text-align: center; }
+.fc-study-promotion > :is(h2, h3, p) { text-align: center; }
+.fc-study-promotion > p:not(.fc-eyebrow) { max-width: 72ch; margin-inline: auto; }
+.fc-study-promotion > .fc-actions { justify-content: center; }
+
+
 .fc-button {
     display: inline-flex;
     min-height: 48px;

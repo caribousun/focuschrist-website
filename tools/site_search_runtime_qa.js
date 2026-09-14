@@ -25,8 +25,10 @@ async function run(){
     w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};
     w.eval(source);await tick();await tick();
     assert.equal(d.querySelector('[data-search-results] h2 a').getAttribute('href'),top('priesthood restoration')[0]);
-    assert.match(d.getElementById('fc-search-status').textContent,/results/);
+    assert.match(d.getElementById('fc-search-status').textContent,/best match/);
     const submit=q=>{d.getElementById('fc-results-query').value=q;d.getElementById('fc-results-search-form').dispatchEvent(new w.Event('submit',{cancelable:true,bubbles:true}));};
+    assert.equal(search.groupMatches(data.records,'priesthood').best.length,2);
+    submit('priesthood');await tick();assert.equal(d.querySelector('[data-search-results]').children.length,2);assert.equal(d.querySelector('.fc-search-supporting').open,false);assert.equal(d.getElementById('fc-search-more').hidden,true);d.querySelector('.fc-search-supporting summary').click();assert.equal(d.querySelector('.fc-search-supporting').open,true);assert.ok(d.querySelector('.fc-search-supporting ol').children.length>0);
     submit('grief');await tick();assert.equal(new URL(w.location).searchParams.get('q'),'grief');
     assert.equal(d.querySelector('[data-search-results] h2 a').getAttribute('href'),top('grief')[0]);
     const ask=new URL(d.getElementById('fc-search-ask').href);assert.equal(ask.searchParams.get('search-question'),'grief');assert.equal(ask.hash,'#ask-question');
@@ -39,7 +41,7 @@ async function run(){
     dom.window.close();
     const bad=new JSDOM(fs.readFileSync(path.join(root,'search.html'),'utf8'),{url:'https://focuschrist.com/search.html?q=faith',runScripts:'outside-only'});
     let fail=true;bad.window.fetch=async()=>{if(fail)throw Error('offline');return {ok:true,json:async()=>data};};bad.window.eval(source);await tick();await tick();assert.equal(bad.window.document.getElementById('fc-search-retry').hidden,false);
-    fail=false;bad.window.document.getElementById('fc-search-retry').click();await tick();await tick();assert.match(bad.window.document.getElementById('fc-search-status').textContent,/results/);bad.window.close();
+    fail=false;bad.window.document.getElementById('fc-search-retry').click();await tick();await tick();assert.match(bad.window.document.getElementById('fc-search-status').textContent,/best match/);bad.window.close();
     const askDOM=new JSDOM('<input id="userInput">',{url:'https://focuschrist.com/ask.html?search-question=priesthood#ask-question',runScripts:'outside-only'});askDOM.window.eval(source);await tick();assert.equal(askDOM.window.document.getElementById('userInput').value,'priesthood');askDOM.window.close();
     console.log('SEARCH RUNTIME PASS: relevance, safe text, pagination, history, dialog focus, empty/error/retry and Ask prefill');
 }

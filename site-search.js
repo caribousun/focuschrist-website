@@ -31,7 +31,15 @@
         return (start?'… ':'')+text.slice(start,end)+(end<text.length?' …':'');
     }
     function localURL(value) { return typeof value==='string' && /^\/(?!\/)[a-zA-Z0-9_./%?=&#+-]+$/.test(value) && !value.includes('..'); }
-    const api={rank,excerpt,normalize,terms,localURL};
+    function groupMatches(records, query) {
+        const words=terms(query), best=[], supporting=[];
+        rank(records,query).forEach(record=>{
+            const subject=terms(record.title+' '+(record.keywords||''));
+            (words.every(word=>subject.includes(word))?best:supporting).push(record);
+        });
+        return {best,supporting};
+    }
+    const api={rank,groupMatches,excerpt,normalize,terms,localURL};
     if(typeof module!=='undefined' && module.exports) module.exports=api;
     if(!root || !root.document) return;
     const doc=root.document;
@@ -70,7 +78,14 @@
         const f=doc.getElementById('fc-results-search-form'), input=f.querySelector('input');
         const status=doc.getElementById('fc-search-status'), more=doc.getElementById('fc-search-more');
         const ask=doc.getElementById('fc-search-ask'), retry=doc.getElementById('fc-search-retry');
-        let indexPromise, matching=[], shown=0, sequence=0, activeQuery='';
+        const bestHeading=element('h2','fc-search-group-title','Best matches');host.before(bestHeading);
+        const related=element('details','fc-search-supporting');
+        const summary=element('summary');
+        const explanation=element('p','','These pages mention your search or offer related context. They may focus on a different topic.');
+        const relatedHost=element('ol','fc-search-results');relatedHost.setAttribute('aria-label','Supporting references');
+        const relatedMore=element('button','fc-button','Show more supporting references');relatedMore.type='button';
+        related.append(summary,explanation,relatedHost,relatedMore);more.after(related);
+        let indexPromise, matching=[], supporting=[], shown=0, relatedShown=0, sequence=0, activeQuery='';
         function getIndex(){
             if(!indexPromise) indexPromise=fetch(new URL('site-search-index.json',base),{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Index unavailable');return r.json();}).then(data=>{
                 if(data.version!==1 || !Array.isArray(data.records) || !data.records.length || data.records.some(r=>!localURL(r.url)||typeof r.title!=='string'||typeof r.text!=='string'))throw Error('Invalid index');
@@ -78,33 +93,39 @@
             }).catch(e=>{indexPromise=null;throw e;});
             return indexPromise;
         }
-        function appendResults(query){
-            matching.slice(shown,shown+12).forEach(r=>{
+        function appendResults(query, isSupporting=false){
+            const list=isSupporting?supporting:matching, target=isSupporting?relatedHost:host, start=isSupporting?relatedShown:shown;
+            list.slice(start,start+12).forEach(r=>{
                 const item=element('li','fc-search-result');
                 if(r.thumbnail && localURL(r.thumbnail)){const imageLink=element('a');imageLink.href=r.url;imageLink.tabIndex=-1;imageLink.setAttribute('aria-hidden','true');const img=element('img');img.src=new URL(r.thumbnail,root.location.origin).href;img.alt='';img.loading='lazy';img.width=112;img.height=84; imageLink.append(img);item.append(imageLink);}
                 const copy=element('div','fc-search-result-copy');copy.append(element('p','fc-search-category',r.category+' · '+r.pageTitle));
-                const heading=element('h2');const link=element('a','',r.title);link.href=r.url;heading.append(link);copy.append(heading,element('p','fc-search-excerpt',excerpt(r,query)));item.append(copy);host.append(item);
+                const heading=element('h2');const link=element('a','',r.title);link.href=r.url;heading.append(link);copy.append(heading,element('p','fc-search-excerpt',excerpt(r,query)));item.append(copy);target.append(item);
             });
-            shown=Math.min(shown+12,matching.length); more.hidden=shown>=matching.length;
-            status.textContent=matching.length+' '+(matching.length===1?'result':'results')+' for “'+query+'”'+(matching.length>shown?' · Showing '+shown:'');
+            if(isSupporting){relatedShown=Math.min(start+12,list.length);relatedMore.hidden=relatedShown>=list.length;}
+            else {shown=Math.min(start+12,list.length);more.hidden=shown>=list.length;}
+            status.textContent=matching.length?matching.length+' best '+(matching.length===1?'match':'matches')+' for “'+query+'”'+(matching.length>shown?' · Showing '+shown:'')+(supporting.length?' · '+supporting.length+' supporting references below':''):'No direct topic matches for “'+query+'”. Supporting references may help you explore further.';
         }
         async function run(){
             const current=++sequence;
             const query=(new URL(root.location.href).searchParams.get('q')||'').trim().slice(0,200); input.value=query;activeQuery=query;
-            host.replaceChildren();more.hidden=true;retry.hidden=true;matching=[];shown=0;
+            host.replaceChildren();relatedHost.replaceChildren();more.hidden=true;retry.hidden=true;related.hidden=true;related.open=false;bestHeading.hidden=true;matching=[];supporting=[];shown=0;relatedShown=0;
             const askURL=new URL('ask.html',base); if(query)askURL.searchParams.set('search-question',query);askURL.hash='ask-question';ask.href=askURL.href;
             if(!terms(query).length){status.textContent='Enter a topic or question to find a place to begin.';host.removeAttribute('aria-busy');return;}
             status.textContent='Searching published studies…';host.setAttribute('aria-busy','true');
             try{
                 const data=await getIndex(); if(current!==sequence)return;
-                matching=rank(data,query);
-                if(!matching.length)status.textContent='No matching studies for “'+query+'”. Try a shorter phrase, browse the topics, or ask a question below.';
-                else appendResults(query);
+                const groups=groupMatches(data,query);matching=groups.best;supporting=groups.supporting;
+                if(!matching.length&&!supporting.length)status.textContent='No matching studies for “'+query+'”. Try a shorter phrase, browse the topics, or ask a question below.';
+                else {
+                    bestHeading.hidden=!matching.length;appendResults(query);
+                    if(supporting.length){related.hidden=false;summary.textContent='Supporting references ('+supporting.length+')';related.open=!matching.length;appendResults(query,true);}
+                }
             }catch(_){if(current!==sequence)return;status.textContent='Search could not load. Please try again, or browse the topics below.';retry.hidden=false;}
             if(current===sequence)host.removeAttribute('aria-busy');
         }
         f.addEventListener('submit',e=>{e.preventDefault();const url=new URL(root.location.href);url.searchParams.set('q',input.value.trim().slice(0,200));root.history.pushState(null,'',url);run();});
         more.addEventListener('click',()=>{const first=host.children.length;appendResults(activeQuery);const link=host.children[first]?.querySelector('h2 a');if(link)link.focus();});
+        relatedMore.addEventListener('click',()=>{const first=relatedHost.children.length;appendResults(activeQuery,true);relatedHost.children[first]?.querySelector('h2 a')?.focus();});
         retry.addEventListener('click',run);root.addEventListener('popstate',run);run();
     }
     function init(){

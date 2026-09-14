@@ -42,3 +42,10 @@
     .nav[data-focuschrist-header="standard"].fc-has-current-study .nav-links a[data-focuschrist-current-study] {display:-webkit-box!important;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;max-height:2.6em;}
 }
 @media(max-width:540px){.fc-search-row {flex-direction:column;}.fc-search-main{padding:36px 20px 40px;}.fc-search-result{gap:12px;}.fc-search-result img{width:76px;height:76px;}.fc-search-directory{margin-bottom:26px;padding-bottom:24px;}}
+
+.fc-search-group-title {font:normal 28px/1.3 Georgia,serif;color:#f0c36a;margin:28px 0 0;}
+.fc-search-supporting {margin-top:28px;}
+.fc-search-supporting summary {color:#f0c36a;font-weight:600;cursor:pointer;padding:14px 0;min-height:44px;box-sizing:border-box;}
+.fc-search-supporting > p {max-width:68ch;line-height:1.6;}
+.fc-search-supporting summary:focus-visible {outline:2px solid #f0c36a;outline-offset:4px;}
+.fc-search-supporting > button {margin-top:24px;}
