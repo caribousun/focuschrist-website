@@ -15,6 +15,8 @@ for p in ROOT.rglob('*.html'):
    if not any('data-focuschrist-primary-'+marker in n.attrs for n in nav.walk()):errors.append(str(p)+': missing runtime insertion guard '+marker)
   if len(center)!=1 or not center[0].attrs.get('href','').endswith('atonement.html'):errors.append(str(p)+': missing unique center destination')
   if len([n for n in nav.children if n.has('fc-nav-side')])!=2:errors.append(str(p)+': missing balanced navigation wings')
+ for card in (n for n in nodes if n.has('fc-study-promotion')):
+  if any(n.has('fc-button') for n in card.children):errors.append(str(p)+': promotion buttons need shared action spacing')
  for a in (n for n in nodes if n.tag=='a'):
   u=urlsplit(a.attrs.get('href',''))
   if u.scheme not in {'http','https'} or u.hostname in {'focuschrist.com','www.focuschrist.com'}:continue
