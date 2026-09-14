@@ -98,7 +98,7 @@ def main() -> int:
     )
     if len(mission_image_triggers) != 7:
         errors.append(f"missionary.html: expected 7 image detail triggers, found {len(mission_image_triggers)}")
-    if "missionary.css?v=20260906-mission-intro-fit" not in missionary:
+    if "missionary.css?v=20260914-artwork-caption" not in missionary:
         errors.append("missionary.html: centered close-control stylesheet version missing")
     mission_records = re.findall(r'data-missionary-detail-content="([^"]+)"', missionary)
     if len(mission_records) != 9 or len(set(mission_records)) != 9:
@@ -324,6 +324,8 @@ def main() -> int:
             errors.append(f"hero-details.js: missing art-study detail record: {record[1]}")
 
     mission_css = (ROOT / "missionary.css").read_text(encoding="utf-8")
+    if ".fc-missionary-commission-artwork figcaption { position: static;" not in mission_css:
+        errors.append("Mission phone caption must not intercept the picture tap target")
     mission_dialog_rule = re.search(r'\.fc-missionary-detail-dialog\s*\{([^}]+)\}', mission_css, re.S)
     if not mission_dialog_rule or "margin: auto;" not in mission_dialog_rule.group(1):
         errors.append("missionary.css: artwork detail dialog must remain viewport-centered")

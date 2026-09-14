@@ -222,8 +222,12 @@ def main() -> int:
         # srcset. Exclusivity concerns owning pages, not references on that page.
         if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
-    if set(reviewed_pages) != set(PAGES) | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html"}:
-        errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness and Atonement")
+    if set(reviewed_pages) != set(PAGES) | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html"}:
+        errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement and Mission")
+
+    for entry in reviewed_pages.get("missionary.html", []):
+        if not entry.get("reviewed") or hashlib.sha256((ROOT/entry["asset"]).read_bytes()).hexdigest()!=entry.get("sha256"):
+            errors.append("Mission replacement must match reviewed bytes")
 
     from bom_evidences_qa import check as check_evidences
     errors.extend(check_evidences())

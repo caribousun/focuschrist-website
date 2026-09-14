@@ -25,6 +25,11 @@ jobs:
       - name: Install decoded image QA dependency
         run: python -m pip install Pillow==12.2.0
 
+      - name: Verify centered navigation and external-link behavior
+        run: |
+          python tools/navigation_links_qa.py
+          node tools/external_links_runtime_qa.js
+
       - name: Verify the Atonement centerpiece contract
         run: python tools/atonement_qa.py
 

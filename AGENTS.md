@@ -68,6 +68,16 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - Warmth never permits invention. Do not assign an unseen relationship, emotion, historical fact, or speaker claim unless the picture, page context, transcript, or verified source supports it.
 - Audit the visible caption, hidden detail-panel copy, alternative text, media introduction, source label, and linked destination together. Run `python tools/media_voice_qa.py` before committing.
 
+## System-wide artwork uniqueness mandate
+
+Wyatt reaffirmed on2026-09-14: every page and section must have unique artwork. Never reuse an already-created picture from another page, or repeat a picture in another section to fill space. Renaming, cropping, resizing, format conversion or a changed caption does not make a new original. Responsive variants and the detail/full-size views of one picture are one artwork, not additional artworks. Check source lineage and decoded pixels as well as filenames; inspect the complete page inventory. Preserve this rule across new chats and all future site work.
+
+## Resource thumbnail proportions and page rhythm
+
+- Every official resource image must use the shared `fc-resource-card__image` wrapper from `resource-cards.css`: a bounded 16:9 frame with `object-fit: contain`. Keep the image's true intrinsic width/height attributes; never allow responsive width with an unrelated fixed rendered height. Older 4:3 material must remain fully visible with letterboxing, never stretched or cropped to fake widescreen.
+- Run `python tools/resource_thumbnail_qa.py` across the discovered canonical-page inventory. It must reject missing containment wrappers, including new page templates. Matching source bytes and HTML dimensions alone do not verify rendering.
+- Review resource cards in the browser at desktop and phone widths, including a 4:3 and a 16:9 source. Inspect computed object-fit, the actual visible face proportions, alignment and surrounding spacing. Center action groups and promotional/onward cards with shared components, while preserving readable prose. Avoid stacking section padding, margins and empty reading blocks into excessive gaps.
+
 ## focusChrist Art & Study completeness and visual gate
 
 - Every featured destination's supporting picture must open its normal study/detail panel first, with its own title and caption, matching scripture/source pills, View Full-Size Image, relevant onward study, Continue Lesson, and Close. Load the shared topic artwork script and stylesheet. The original image URL remains only a no-script fallback; do not mark a supporting-picture trigger for the bare full-image viewer.

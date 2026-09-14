@@ -1,7 +1,7 @@
 /* The Atonement study uses the shared focusChrist palette and components. */
 body.fc-site.fc-atonement-page .fc-visual-hero>img{object-position:center top !important}
 .atonement-main{max-width:var(--fc-standard);margin-inline:auto;padding-inline:var(--fc-body-gutter)}
-.atonement-welcome,.atonement-chapter{padding-block:var(--fc-body-section-space);margin-block:var(--fc-body-section-gap)}
+.atonement-welcome,.atonement-chapter{padding-block:0;margin-block:var(--fc-body-section-gap)}
 .atonement-welcome,.atonement-chapter-heading{text-align:center}
 .atonement-main h2{font-family:var(--fc-font-display);font-weight:400;font-size:clamp(1.9rem,3.5vw,2.6rem);line-height:1.22;color:var(--fc-gold-light)}
 .atonement-welcome p,.atonement-reading{max-width:72ch;margin-inline:auto}
@@ -23,3 +23,14 @@ body.fc-site.fc-atonement-page .fc-visual-hero>img{object-position:center top !i
 .atonement-next span{color:var(--fc-text);line-height:1.65}
 .atonement-chapter{scroll-margin-top:90px}
 @media(max-width:700px){.atonement-resources,.atonement-next{grid-template-columns:1fr}.atonement-art{margin-block:24px}.atonement-chapter-heading h2{font-size:clamp(1.8rem,7vw,2.3rem)}.atonement-path{gap:10px}.atonement-path .fc-button{flex:1 1 140px;padding-inline:14px}.atonement-chapter-actions{flex-direction:column}}
+
+/* One spacing rhythm; component margins must not stack with empty wrappers. */
+.atonement-chapter-heading{margin-bottom:var(--fc-body-section-space)}
+.atonement-chapter-heading h2{margin:12px 0 0}
+.atonement-chapter>:last-child{margin-bottom:0}
+.atonement-next>a{text-align:center;align-items:center;justify-content:center}
+.atonement-main .fc-actions{justify-content:center}
+.atonement-art figcaption>:is(h3,.fc-study-visual-label){text-align:center}
+.atonement-art .fc-study-visual-sources{justify-content:center}
+.atonement-resources>.fc-resource-card:last-child:nth-child(odd):not(:only-child){grid-column:1/-1;width:calc((100% - 24px)/2);justify-self:center}
+@media(max-width:700px){.atonement-resources>.fc-resource-card:last-child:nth-child(odd):not(:only-child){width:100%}.atonement-main .fc-actions{text-align:center}}
