@@ -531,6 +531,7 @@ body.fc-site .fc-page-intro .fc-button--primary:focus-visible { color: #18262b !
 .fc-actions {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 11px;
     align-items: center;
 }
