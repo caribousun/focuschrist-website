@@ -24,8 +24,8 @@ for path in data['pages']+['/search.html','/404.html']:
     links=[n for n in nodes if 'data-site-search-trigger' in n.attrs]
     assert len(links)==1,path
     assert links[0].attrs.get('aria-label')=='Search focusChrist'
-    assert any(n.tag=='script' and n.attrs.get('src','').endswith('site-search.js?v=20260914-1') for n in nodes),path
-    assert any(n.tag=='link' and n.attrs.get('href','').endswith('site-search.css?v=20260914-1') for n in nodes),path
+    assert any(n.tag=='script' and n.attrs.get('src','').endswith('site-search.js?v=20260914-2') for n in nodes),path
+    assert any(n.tag=='link' and n.attrs.get('href','').endswith('site-search.css?v=20260914-2') for n in nodes),path
 assert '/search.html' not in data['pages']
 fixture=Document();fixture.feed('<main><p>Visible teaching</p><nav>SECRET NAV</nav><dialog>SECRET DIALOG</dialog><div hidden>SECRET HIDDEN</div><script>SECRET SCRIPT</script><footer>SECRET FOOTER</footer><div aria-hidden="true">SECRET ARIA</div><div style="display:none">SECRET STYLE</div></main>')
 assert 'SECRET' not in visible(fixture.root)
