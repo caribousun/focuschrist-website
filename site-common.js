@@ -553,6 +553,15 @@
         }
         identity.textContent = standardText;
         identity.setAttribute('data-focuschrist-footer-identity', 'true');
+        if (!footer.querySelector('[data-focuschrist-art-gallery]')) {
+            const gallery = document.createElement('p');
+            const link = document.createElement('a');
+            link.href = relativeAssetHref('art-gallery.html');
+            link.textContent = 'Art Gallery';
+            link.setAttribute('data-focuschrist-art-gallery', '');
+            gallery.appendChild(link);
+            identity.after(gallery);
+        }
     }
 
     /*
@@ -754,6 +763,9 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        if (/[?&]gallery-(?:art|position)=/.test(window.location.search)) {
+            appendScript(relativeAssetHref('art-gallery-bridge.js?v=20260913-1'), 'data-focuschrist-art-gallery-bridge');
+        }
         installScriptureDisplayGate();
         appendScript(relativeAssetHref('scripture-library.js?v=20260909-4'), 'data-focuschrist-scripture-library', function () {
             appendScript(relativeAssetHref('scripture-reader.js?v=20260910-range-labels-1'), 'data-focuschrist-scripture-reader');

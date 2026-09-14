@@ -748,9 +748,9 @@
     {
       "path": "art.html",
       "status": "verified",
-      "published_text_sha256": "02367b0dae17c88cd2c82353505f3ffd00debc2679e395460ad0fd9a3b857a95",
-      "reviewed_on": "2026-09-08",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Final Art introduction independently checked against remaining Resurrection resource. Existing gallery instruction moved verbatim from dynamic insertion into the opening introduction so its full height is included; no new substantive claim. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated.",
+      "published_text_sha256": "b3133c979234f96c49310c9b87c4e68d667b81c3948699c47c23929e0864b362",
+      "reviewed_on": "2026-09-13",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Final Art introduction independently checked against remaining Resurrection resource. Existing gallery instruction moved verbatim from dynamic insertion into the opening introduction so its full height is included; no new substantive claim. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated. Independent gallery_release_review confirmed the added Browse All Artwork link is navigation only; prior art and study wording preserved.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p11-p16#p11",
         "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p13-p16#p13",
@@ -1033,6 +1033,13 @@
         "https://www.churchofjesuschrist.org/media/video/i-feel-my-saviors-love?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/january-2025-worldwide-discussion-for-youth-look-unto-christ?lang=eng"
       ]
+    },
+    {
+      "path": "art-gallery.html",
+      "status": "non-source-dependent",
+      "published_text_sha256": "adddb37cd55aa49867128e1486d669212f23d8ef53bbb016ad2c805bcc3455de",
+      "reviewed_on": "2026-09-13",
+      "review_standard": "Independent gallery_release_review and gallery_review checked gallery discovery, filter, original-study and loading language: functional navigation only, no new doctrinal, historical or scripture claims; original panels own all study content."
     }
   ]
 }

@@ -59,6 +59,9 @@ jobs:
 
       - name: Run site-wide artwork detail QA
         run: |
+          python tools/build_art_gallery.py --check
+          node --check art-gallery.js
+          node --check art-gallery-bridge.js
           python tools/artwork_details_qa.py
           python tools/art_study_enrichment_qa.py
           node tools/hero_details_runtime_qa.js
