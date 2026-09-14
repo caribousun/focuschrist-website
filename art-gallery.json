@@ -2979,6 +2979,50 @@
       ]
     },
     {
+      "title": "Joseph baptizes Oliver",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/joseph-baptizes-oliver-960.webp",
+      "fullImage": "/assets/page-art/church-history/joseph-baptizes-oliver.webp",
+      "alt": "Joseph raises his right hand while Oliver prepares for immersion in the river.",
+      "id": "art-897a9545efbd",
+      "occurrences": [
+        {
+          "id": "source-7becbdc9d015",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/joseph-baptizes-oliver.webp\"]:has(img[src=\"assets/page-art/church-history/joseph-baptizes-oliver-960.webp\"])",
+          "title": "Joseph baptizes Oliver"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "Joseph receives the apostles’ ministry",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/apostles-ordain-joseph-960.webp",
+      "fullImage": "/assets/page-art/church-history/apostles-ordain-joseph.webp",
+      "alt": "Peter, James, and John place their hands on Joseph’s head while Oliver stands nearby.",
+      "id": "art-61d4f46eb970",
+      "occurrences": [
+        {
+          "id": "source-bfc1c359b5d6",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/apostles-ordain-joseph.webp\"]:has(img[src=\"assets/page-art/church-history/apostles-ordain-joseph-960.webp\"])",
+          "title": "Joseph receives the apostles’ ministry"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Joseph Smith",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/stand-record-context-800.webp",
@@ -3859,6 +3903,28 @@
       ]
     },
     {
+      "title": "Oliver baptizes Joseph",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/oliver-baptizes-joseph-960.webp",
+      "fullImage": "/assets/page-art/church-history/oliver-baptizes-joseph.webp",
+      "alt": "Oliver supports Joseph as he leans backward toward immersion in the river.",
+      "id": "art-6d95cfcaf438",
+      "occurrences": [
+        {
+          "id": "source-437d13507b66",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/oliver-baptizes-joseph.webp\"]:has(img[src=\"assets/page-art/church-history/oliver-baptizes-joseph-960.webp\"])",
+          "title": "Oliver baptizes Joseph"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Oliver Cowdery joins the work",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/joseph-shared-reading-800.webp",
@@ -3878,6 +3944,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Oliver receives the apostles’ ministry",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/apostles-ordain-oliver-960.webp",
+      "fullImage": "/assets/page-art/church-history/apostles-ordain-oliver.webp",
+      "alt": "Peter, James, and John place their hands on Oliver’s head while Joseph stands nearby.",
+      "id": "art-e7ce1b97cd8c",
+      "occurrences": [
+        {
+          "id": "source-4daa731dd462",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/apostles-ordain-oliver.webp\"]:has(img[src=\"assets/page-art/church-history/apostles-ordain-oliver-960.webp\"])",
+          "title": "Oliver receives the apostles’ ministry"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -5671,15 +5759,15 @@
     }
   ],
   "stats": {
-    "artworks": 244,
-    "occurrences": 273,
+    "artworks": 248,
+    "occurrences": 277,
     "byKind": {
       "artwork": 41,
       "full": 1,
       "hero": 33,
       "legacy": 39,
       "missionary": 9,
-      "topic": 153
+      "topic": 157
     }
   }
 }

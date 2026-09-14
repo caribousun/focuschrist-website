@@ -1,6 +1,7 @@
 """Check new historical study art contracts; actual pixel review remains separate."""
 import hashlib
 import json
+import re
 from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 from PIL import Image
@@ -10,7 +11,9 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = 'church-history.html'
 SLOTS = ('richmond-rebuke', 'liberty-prayer', 'liberty-letter', 'porter-reunion',
          'relief-society', 'kirtland-bank', 'kirtland-temple', 'nauvoo-temple',
-         'aaronic-priesthood', 'melchizedek-priesthood', 'nauvoo-legion')
+         'aaronic-priesthood', 'melchizedek-priesthood', 'nauvoo-legion',
+         'joseph-baptizes-oliver', 'oliver-baptizes-joseph',
+         'apostles-ordain-joseph', 'apostles-ordain-oliver')
 SECTIONS = {'richmond-rebuke', 'liberty-jail-study', 'porter-rockwell',
             'relief-society-organization', 'kirtland-safety-society', 'kirtland-temple',
             'nauvoo-temple', 'aaronic-priesthood-restoration',
@@ -57,6 +60,36 @@ def check():
         if thumb.is_file():
             with Image.open(thumb) as im:
                 require(im.format == 'WEBP' and im.width == 960, slot + ': invalid thumbnail format or width')
+    # Keep new pairs in their historical context and preserve the original scenes.
+    section_nodes = {n.attrs.get('id'): n for n in nodes if n.tag == 'section'}
+    pairs = {
+        'aaronic-priesthood-restoration': ('aaronic-priesthood', 'joseph-baptizes-oliver', 'oliver-baptizes-joseph'),
+        'melchizedek-priesthood-restoration': ('melchizedek-priesthood', 'apostles-ordain-joseph', 'apostles-ordain-oliver'),
+    }
+    for section_id, slots in pairs.items():
+        section = section_nodes.get(section_id)
+        if section is None:
+            continue
+        contained = list(section.walk())
+        require([n.attrs.get('data-enriched-study-art') for n in contained if n.tag == 'figure'] == ['history-' + s for s in slots], section_id + ': original scene and two new scenes must remain together in order')
+        pair = [n for n in contained if n.has('fc-priesthood-pair')]
+        require(len(pair) == 1 and len([n for n in pair[0].children if n.tag == 'figure']) == 2, section_id + ': requires one two-scene pair')
+        require(any(n.tag == 'details' and n.has('fc-priesthood-evidence') and any(c.tag == 'summary' for c in n.children) for n in contained), section_id + ': expandable source context missing')
+    by_slot = {n.attrs.get('data-enriched-study-art'): n for n in figures}
+    for slot, verses in [('joseph-baptizes-oliver', 'p70-p73'), ('oliver-baptizes-joseph', 'p71-p73')]:
+        figure = by_slot.get('history-' + slot)
+        if figure is None:
+            continue
+        source_links = [urlsplit(n.attrs.get('href', '')) for n in figure.walk() if n.tag == 'a']
+        require(any(u.scheme == 'https' and u.hostname == 'www.churchofjesuschrist.org' and u.path == '/study/scriptures/pgp/js-h/1' and parse_qs(u.query).get('id') == [verses] and u.fragment == verses.split('-')[0] for u in source_links), slot + ': exact baptism source passage missing')
+        expected = 'Joseph baptized Oliver first' if slot == 'joseph-baptizes-oliver' else 'Oliver then baptized Joseph'
+        require(expected in figure.text(), slot + ': documented baptism sequence missing or reversed')
+    melchizedek = section_nodes.get('melchizedek-priesthood-restoration')
+    if melchizedek is not None:
+        prose = melchizedek.text()
+        require('do not establish the exact date' in prose and 'do not establish who came first' in prose, 'Melchizedek date and recipient-order uncertainty missing')
+        require(not re.search(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+1829(?!\d)', prose), 'precise Melchizedek restoration date asserted')
+        require(any(n.tag == 'a' and n.attrs.get('href') == 'https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-melchizedek-priesthood?lang=eng' for n in melchizedek.walk()), 'Melchizedek documentary dating source missing')
     entries = json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages'].get(PAGE, [])
     require(len(entries) == len(SLOTS) and {e.get('slot') for e in entries} == set(SLOTS), f'{len(SLOTS)} scene review records required')
     require({e.get('asset') for e in entries} == assets, 'review ledger and native figure assets disagree')

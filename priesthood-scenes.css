@@ -1,0 +1,11 @@
+.fc-priesthood-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px; margin:26px 0; }
+.fc-priesthood-pair .fc-priesthood-scene { display:block; margin:0; min-width:0; }
+.fc-priesthood-scene > a { display:block; width:100%; }
+.fc-priesthood-scene figcaption { padding:18px 0 0; }
+.fc-priesthood-pair-title { margin:30px 0 12px; color:var(--fc-cream); font-family:var(--fc-font-display); font-size:1.7rem; }
+.fc-priesthood-note { color:var(--fc-muted); font-size:.92rem; line-height:1.65; }
+.fc-priesthood-evidence { margin:22px 0; border:1px solid var(--fc-line); border-radius:14px; background:rgba(15,40,48,.35); }
+.fc-priesthood-evidence summary { padding:18px 20px; cursor:pointer; color:#f3cf83; font-weight:600; line-height:1.5; }
+.fc-priesthood-evidence > p { padding:0 20px 18px; margin:0; line-height:1.75; }
+.fc-priesthood-evidence summary:focus-visible { outline:2px solid #e8b54d; outline-offset:4px; }
+@media(max-width:700px){.fc-priesthood-pair{grid-template-columns:1fr;gap:30px}.fc-priesthood-pair-title{font-size:1.5rem}}
