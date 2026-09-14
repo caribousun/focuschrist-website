@@ -19,16 +19,28 @@ answer_paths=sorted((ROOT/'answers').glob('*.html'))
 for answer_path in answer_paths:
  answer_nodes=read(answer_path)
  assert any(n.tag=='body' and n.has('fc-topic-page') for n in answer_nodes),answer_path.name+': shared responsive topic-page contract'
-expected={p.relative_to(ROOT).as_posix() for p in answer_paths}-foundational
-expected.add('general-conference.html')
-assert {n.attrs['href'] for n in links}==expected, 'topic jump panel must cover every non-foundational Answer plus General Conference'
+study_destinations={
+ 'general-conference.html', 'book-of-mormon-evidences.html',
+ 'joseph-smith-likeness.html', 'church-history.html', 'pioneers.html',
+ 'come-follow-me.html', 'church-history.html#aaronic-priesthood-restoration',
+ 'church-history.html#melchizedek-priesthood-restoration',
+}
+expected={p.relative_to(ROOT).as_posix() for p in answer_paths}|study_destinations
+assert len(links)==len(expected), 'topic directory must not duplicate destinations'
+assert {n.attrs['href'] for n in links}==expected, 'topic grid must cover every Answer and enriched study destination'
 for link in links:
  href=link.attrs['href'];u=urlsplit(href)
- assert not u.fragment and not u.scheme, 'Every topic opens a dedicated local page'
+ assert not u.scheme and not u.netloc, 'Every topic opens an existing local study'
  p=ROOT/u.path;ns=read(p)
  headings=[n for n in ns if n.tag=='h1']
- assert len(headings)==1 and headings[0].text().strip()==link.text().strip(), href+': heading matches topic'
- if p.name=='general-conference.html':continue
+ assert len(headings)==1, href+': one page heading'
+ if u.fragment:
+  target=next((n for n in ns if n.attrs.get('id')==unquote(u.fragment)),None)
+  assert target is not None and any(n.tag in ('h2','h3') for n in target.walk()),href+': named study section exists'
+ if p.parent!=ROOT/'answers':continue
+ heading_label={'answers/god-our-heavenly-father.html':'God',
+                'answers/restored-church-of-jesus-christ.html':'The restored Church'}.get(href,link.text().strip())
+ assert headings[0].text().strip()==heading_label,href+': heading matches topic destination'
  opening=next(n for n in ns if n.has('fc-topic-opening'))
  assert any(n.has('fc-visual-hero') for n in opening.walk()),href+': image in first screen'
  assert any(n.has('fc-page-intro') for n in opening.walk()),href+': title in first screen'
