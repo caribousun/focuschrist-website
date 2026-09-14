@@ -799,8 +799,6 @@
                 target = '#' + next.id;
             }
             if (target) {
-                const group = intro.querySelector('.fc-container--standard, .cfm-hero__copy') ||
-                    (intro.classList.contains('gc-page-opening') ? intro.firstElementChild : intro);
                 const cue = document.createElement('a');
                 cue.className = 'fc-mobile-scroll-cue';
                 cue.href = target;
@@ -809,7 +807,8 @@
                 arrow.setAttribute('aria-hidden', 'true');
                 arrow.textContent = '↓';
                 cue.appendChild(arrow);
-                group.appendChild(cue);
+                intro.classList.add('fc-mobile-cued-opening');
+                intro.appendChild(cue);
                 if (existing) existing.classList.add('fc-desktop-scroll-cue');
             }
         }
