@@ -170,7 +170,7 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8", errors="replace")
         for marker in (
             'href="full-image-viewer.css?v=20260905-viewport"',
-            'src="full-image-viewer.js?v=20260905-viewport"',
+            'src="full-image-viewer.js?v=20260914-reopen-1"',
         ):
             if "/" in relative and '="../' not in marker:
                 marker = marker.replace('="', '="../', 1)
@@ -181,7 +181,7 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for marker in (
             'href="../full-image-viewer.css?v=20260905-viewport"',
-            'src="../full-image-viewer.js?v=20260905-viewport"',
+            'src="../full-image-viewer.js?v=20260914-reopen-1"',
         ):
             if "/" in relative and '="../' not in marker:
                 marker = marker.replace('="', '="../', 1)
@@ -232,7 +232,7 @@ def main() -> int:
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
         hero_script = ("hero-details.js?v=20260914-joseph-likeness-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260914-evidences-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels")
-        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
+        for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260914-reopen-1", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
         hero_links = re.findall(r'<a[^>]*data-hero-viewer[^>]*>', page)

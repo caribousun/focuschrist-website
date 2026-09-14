@@ -70,5 +70,46 @@ for (const pill of pills) {
 }
 assert(pills[0].classList.contains('fc-inline-scripture'), 'Scripture source still connects to contextual reader');
 assert(!pills[1].classList.contains('fc-inline-scripture'), 'Historical journal remains an ordinary source');
+// A browser queues close events; a fast next opening can precede the old event.
+panel.close();
+const scenes = [...document.querySelectorAll('figure[data-enriched-study-art^="likeness-"] > a')];
+click(scenes[0]);
+panel.removeAttribute('open'); // close() changes state before its queued event runs
+click(scenes[1]);
+const reopenedImage = panel.querySelector('.fc-artwork-detail-media img');
+const reopenedSrc = reopenedImage.getAttribute('src');
+const reopenedFocus = document.activeElement;
+panel.dispatchEvent(new window.Event('close'));
+assert(panel.open, 'Stale close event must not close the next study');
+assert.equal(reopenedImage.getAttribute('src'), reopenedSrc, 'Stale close event must preserve the next image');
+assert.equal(document.activeElement, reopenedFocus, 'Stale close event must preserve current dialog focus');
+panel.close();
+assert.equal(document.activeElement, scenes[1], 'Real next close restores its own trigger');
+assert.equal(reopenedImage.getAttribute('src'), null, 'Real close still clears the image');
+window.eval(read('full-image-viewer.js'));
+const fullTriggers = [0, 1].map(index => {
+    const a = document.createElement('a');
+    a.href = 'assets/full-test-' + index + '.webp';
+    a.setAttribute('data-full-image-viewer', '');
+    a.dataset.fullImageAlt = 'Full test ' + index;
+    a.textContent = 'View full size';
+    document.body.appendChild(a);
+    return a;
+});
+click(fullTriggers[0]);
+const fullPanel = document.querySelector('dialog.fc-full-image-viewer');
+fullPanel.removeAttribute('open');
+click(fullTriggers[1]);
+const fullImage = fullPanel.querySelector('img');
+const fullSrc = fullImage.getAttribute('src');
+const fullFocus = document.activeElement;
+fullPanel.dispatchEvent(new window.Event('close'));
+assert.equal(fullImage.getAttribute('src'), fullSrc, 'Stale full-image close preserves reopened image');
+assert.equal(fullImage.alt, 'Full test 1', 'Stale full-image close preserves alternative text');
+assert.equal(document.activeElement, fullFocus, 'Stale full-image close preserves dialog focus');
+assert(document.body.classList.contains('fc-full-image-open'), 'Reopened full-image scroll lock remains');
+fullPanel.close();
+assert.equal(document.activeElement, fullTriggers[1], 'Actual full-image close returns to current trigger');
+assert.equal(fullImage.getAttribute('src'), null, 'Actual full-image close clears its image');
 dom.window.close();
 console.log('Historical artwork source QA PASS: four real scene panels plus exact HTTPS host boundary, query/fragment preservation and scripture routing');

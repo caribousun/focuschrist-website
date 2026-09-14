@@ -59,6 +59,8 @@
     });
 
     dialog.addEventListener('close', function () {
+        // Ignore a queued close from an earlier opening of this shared viewer.
+        if (dialog.open) return;
         document.body.classList.remove('fc-full-image-open');
         image.removeAttribute('src');
         image.alt = '';

@@ -204,6 +204,8 @@
         dialog.addEventListener('click', function (event) { if (event.target === dialog) dialog.close(); });
         dialog.addEventListener('cancel', function (event) { event.stopPropagation(); });
         dialog.addEventListener('close', function () {
+            // A queued close event can arrive after another artwork has reopened this dialog.
+            if (dialog.open) return;
             if (!document.querySelector('dialog.fc-artwork-detail-dialog[open], dialog.fc-missionary-detail-dialog[open]')) document.body.classList.remove('fc-dialog-open');
             image.removeAttribute('src');
             if (continueTarget) {
