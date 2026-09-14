@@ -27,6 +27,7 @@
     "/art-study/the-living-christ.html",
     "/art.html",
     "/ask.html",
+    "/atonement.html",
     "/book-of-mormon-evidences.html",
     "/church-history.html",
     "/come-follow-me.html",
@@ -147,6 +148,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "A place in the day",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/daily-scripture-960.webp",
+      "fullImage": "/assets/page-art/atonement/daily-scripture.webp",
+      "alt": "An open book and notebook sit before a thoughtful reader. Choose a passage and linger with it.",
+      "id": "art-2028f575425b",
+      "occurrences": [
+        {
+          "id": "source-0f075d91b478",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/daily-scripture.webp\"]:has(img[src=\"assets/page-art/atonement/daily-scripture-960.webp\"])",
+          "title": "A place in the day"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -564,6 +587,50 @@
       ]
     },
     {
+      "title": "Along the road",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/emmaus-v2-960.webp",
+      "fullImage": "/assets/page-art/atonement/emmaus-v2.webp",
+      "alt": "Jesus walks beside two listeners on a country road. Read how He opened the scriptures to the disciples traveling to Emmaus.",
+      "id": "art-62b14c5b9dde",
+      "occurrences": [
+        {
+          "id": "source-79a27d14648c",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/emmaus-v2.webp\"]:has(img[src=\"assets/page-art/atonement/emmaus-v2-960.webp\"])",
+          "title": "Along the road"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An honest prayer",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/prayer-return-960.webp",
+      "fullImage": "/assets/page-art/atonement/prayer-return.webp",
+      "alt": "A man bows his head in the quiet of his home. There is room to speak honestly with God.",
+      "id": "art-c75502f4f1a1",
+      "occurrences": [
+        {
+          "id": "source-69ec0455b65f",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/prayer-return.webp\"]:has(img[src=\"assets/page-art/atonement/prayer-return-960.webp\"])",
+          "title": "An honest prayer"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "An Invitation to Ask and Listen",
       "category": "Ask",
       "thumbnail": "/assets/heroes/ask.webp",
@@ -608,6 +675,28 @@
       ]
     },
     {
+      "title": "As I have done to you",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/servant-960.webp",
+      "fullImage": "/assets/page-art/atonement/servant.webp",
+      "alt": "Jesus kneels with a basin and towel. He asks His disciples to follow His example of service.",
+      "id": "art-d16ed657815e",
+      "occurrences": [
+        {
+          "id": "source-52d00bbc10f4",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/servant.webp\"]:has(img[src=\"assets/page-art/atonement/servant-960.webp\"])",
+          "title": "As I have done to you"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "At a child’s level",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/christchildren-960.webp",
@@ -623,6 +712,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/bom-evidences/christchildren.webp\"]:has(img[src=\"assets/page-art/bom-evidences/christchildren-960.webp\"])",
           "title": "At a child’s level"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "At the cross",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/cross-v11-960.webp",
+      "fullImage": "/assets/page-art/atonement/cross-v11.webp",
+      "alt": "Mary and the beloved disciple stand near Jesus beneath a darkened sky. Pause with John’s account of His love and His finished work.",
+      "id": "art-bfeb0b2f3691",
+      "occurrences": [
+        {
+          "id": "source-3d9a95426e00",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/cross-v11.webp\"]:has(img[src=\"assets/page-art/atonement/cross-v11-960.webp\"])",
+          "title": "At the cross"
         }
       ],
       "categories": [
@@ -1396,6 +1507,28 @@
       ]
     },
     {
+      "title": "Come unto Christ",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/risen-invitation.webp",
+      "fullImage": "/assets/page-art/atonement/risen-invitation.webp",
+      "alt": "Jesus Christ extends an open hand in a sunlit landscape",
+      "id": "art-3caaa571c083",
+      "occurrences": [
+        {
+          "id": "source-34595847b652",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/page-art/atonement/risen-invitation.webp\"]",
+          "title": "Come unto Christ"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Comfort for a Grieving Father",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/answers-child-loss-father-800.webp",
@@ -1462,6 +1595,28 @@
       ]
     },
     {
+      "title": "Coming home",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/father-welcome-960.webp",
+      "fullImage": "/assets/page-art/atonement/father-welcome.webp",
+      "alt": "An elderly father holds his returning son. Read the parable Jesus told about repentance and welcome.",
+      "id": "art-41d14ad4fc95",
+      "occurrences": [
+        {
+          "id": "source-eb3d452c600c",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/father-welcome.webp\"]:has(img[src=\"assets/page-art/atonement/father-welcome-960.webp\"])",
+          "title": "Coming home"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Companionship in grief",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/child-loss-parents-company-800.webp",
@@ -1499,6 +1654,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/topics/paired-scripture-study-1536.webp\"]:has(img[src=\"../assets/page-art/topics/paired-scripture-study-800.webp\"])",
           "title": "Compare the accounts with care"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Compassion at eye level",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/healing-v2-960.webp",
+      "fullImage": "/assets/page-art/atonement/healing-v2.webp",
+      "alt": "Jesus attends to an older man. The Gospels describe His compassion for those who needed Him.",
+      "id": "art-c958f5373c06",
+      "occurrences": [
+        {
+          "id": "source-9a9daae5a516",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/healing-v2.webp\"]:has(img[src=\"assets/page-art/atonement/healing-v2-960.webp\"])",
+          "title": "Compassion at eye level"
         }
       ],
       "categories": [
@@ -2254,6 +2431,28 @@
       ]
     },
     {
+      "title": "He had compassion on them",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/one-by-one-960.webp",
+      "fullImage": "/assets/page-art/atonement/one-by-one.webp",
+      "alt": "Jesus leans toward an older woman as others wait nearby. Read of His compassion and healing among the people in the Book of Mormon.",
+      "id": "art-2146ec14c104",
+      "occurrences": [
+        {
+          "id": "source-efd10d68cdf0",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/one-by-one.webp\"]:has(img[src=\"assets/page-art/atonement/one-by-one-960.webp\"])",
+          "title": "He had compassion on them"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He Opened the Scriptures",
       "category": "Ask",
       "thumbnail": "/assets/page-art/ask-road-to-emmaus-eye-corrected-900.webp",
@@ -2313,6 +2512,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/bom-evidences/whitmer-fields.webp\"]:has(img[src=\"assets/page-art/bom-evidences/whitmer-fields-960.webp\"])",
           "title": "Help for the journey"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Help on the stairs",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/helping-burden-960.webp",
+      "fullImage": "/assets/page-art/atonement/helping-burden.webp",
+      "alt": "Neighbors carry bags together. Bearing another person’s burden often begins with ordinary help.",
+      "id": "art-43f0df69b02c",
+      "occurrences": [
+        {
+          "id": "source-609f598224a5",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/helping-burden.webp\"]:has(img[src=\"assets/page-art/atonement/helping-burden-960.webp\"])",
+          "title": "Help on the stairs"
         }
       ],
       "categories": [
@@ -2518,6 +2739,28 @@
       ]
     },
     {
+      "title": "Hope beyond Eden",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/first-hope-960.webp",
+      "fullImage": "/assets/page-art/atonement/first-hope.webp",
+      "alt": "Two figures face the morning beside cultivated ground and a simple altar. This imagined scene of Adam and Eve invites us to read the promise of redemption they received.",
+      "id": "art-037f96022254",
+      "occurrences": [
+        {
+          "id": "source-970645ea69ed",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/first-hope.webp\"]:has(img[src=\"assets/page-art/atonement/first-hope-960.webp\"])",
+          "title": "Hope beyond Eden"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Hope in a prayer for mercy",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/alma36prayer-960.webp",
@@ -2577,6 +2820,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/child-loss-resurrection-dawn-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/child-loss-resurrection-dawn-800.webp\"])",
           "title": "Hope waits beside sorrow"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "In remembrance of Him",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/bread-cup-960.webp",
+      "fullImage": "/assets/page-art/atonement/bread-cup.webp",
+      "alt": "Bread and a cup rest on a quiet table. Return to the Savior’s words at the Last Supper.",
+      "id": "art-e66af92ef194",
+      "occurrences": [
+        {
+          "id": "source-ebb7b225cd75",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/bread-cup.webp\"]:has(img[src=\"assets/page-art/atonement/bread-cup-960.webp\"])",
+          "title": "In remembrance of Him"
         }
       ],
       "categories": [
@@ -3508,6 +3773,28 @@
       ]
     },
     {
+      "title": "Let them come",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/children-welcome-960.webp",
+      "fullImage": "/assets/page-art/atonement/children-welcome.webp",
+      "alt": "Jesus welcomes a child and an accompanying adult. Read His invitation to let children come to Him.",
+      "id": "art-4800b4bd1f82",
+      "occurrences": [
+        {
+          "id": "source-98f88a6bbd66",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/children-welcome.webp\"]:has(img[src=\"assets/page-art/atonement/children-welcome-960.webp\"])",
+          "title": "Let them come"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Light in the Grove",
       "category": "Church History",
       "thumbnail": "/assets/heroes/church-history.webp",
@@ -3567,6 +3854,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/divorce-listen-with-care-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/divorce-listen-with-care-800.webp\"])",
           "title": "Listen before offering answers"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Listen to Him",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/teaching-grace-v2-960.webp",
+      "fullImage": "/assets/page-art/atonement/teaching-grace-v2.webp",
+      "alt": "Jesus speaks while those around Him listen. Bring a question to His teachings.",
+      "id": "art-e23c55297897",
+      "occurrences": [
+        {
+          "id": "source-0e1895d51a52",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/teaching-grace-v2.webp\"]:has(img[src=\"assets/page-art/atonement/teaching-grace-v2-960.webp\"])",
+          "title": "Listen to Him"
         }
       ],
       "categories": [
@@ -3772,6 +4081,28 @@
       ]
     },
     {
+      "title": "Mary",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/mary-risen-960.webp",
+      "fullImage": "/assets/page-art/atonement/mary-risen.webp",
+      "alt": "A woman turns toward the risen Jesus in a garden. John records that He called Mary by name.",
+      "id": "art-945933055fbf",
+      "occurrences": [
+        {
+          "id": "source-d491ead65096",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/mary-risen.webp\"]:has(img[src=\"assets/page-art/atonement/mary-risen-960.webp\"])",
+          "title": "Mary"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Meet the risen Savior",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/jesus-risen-witness-800.webp",
@@ -3835,6 +4166,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Not my will, but thine",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/gethsemane-v2-960.webp",
+      "fullImage": "/assets/page-art/atonement/gethsemane-v2.webp",
+      "alt": "Under the olive trees, Jesus bows in prayer. Read His words to the Father.",
+      "id": "art-a347d69f2893",
+      "occurrences": [
+        {
+          "id": "source-3c4d07b68939",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/gethsemane-v2.webp\"]:has(img[src=\"assets/page-art/atonement/gethsemane-v2-960.webp\"])",
+          "title": "Not my will, but thine"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -4398,6 +4751,28 @@
       ]
     },
     {
+      "title": "Remember Him",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/sacrament-remembrance-960.webp",
+      "fullImage": "/assets/page-art/atonement/sacrament-remembrance.webp",
+      "alt": "Water cups wait on the sacrament table. Read the prayer that asks us to remember Jesus Christ.",
+      "id": "art-91be09d84555",
+      "occurrences": [
+        {
+          "id": "source-d2b95656ff66",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/sacrament-remembrance.webp\"]:has(img[src=\"assets/page-art/atonement/sacrament-remembrance-960.webp\"])",
+          "title": "Remember Him"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Remember Him Through Art",
       "category": "Art & Study",
       "thumbnail": "/assets/heroes/art.webp",
@@ -4417,6 +4792,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Remembering deliverance",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/passover-table-960.webp",
+      "fullImage": "/assets/page-art/atonement/passover-table.webp",
+      "alt": "Bread, herbs, a cup, and a lamp invite a pause to remember Passover. This symbolic still life leads to the account of deliverance and to Jesus Christ, the Lamb of God.",
+      "id": "art-5b60dd90ada5",
+      "occurrences": [
+        {
+          "id": "source-f041465ce0c5",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/passover-table.webp\"]:has(img[src=\"assets/page-art/atonement/passover-table-960.webp\"])",
+          "title": "Remembering deliverance"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -4505,6 +4902,28 @@
       ],
       "categories": [
         "General Conference"
+      ]
+    },
+    {
+      "title": "Room for hope",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/new-heart-960.webp",
+      "fullImage": "/assets/page-art/atonement/new-heart.webp",
+      "alt": "A woman sits with open scriptures and a quiet expression of gratitude. Consider the change Christ can bring to a heart.",
+      "id": "art-a5f45e2ad1e9",
+      "occurrences": [
+        {
+          "id": "source-65ab9b20e134",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/new-heart.webp\"]:has(img[src=\"assets/page-art/atonement/new-heart-960.webp\"])",
+          "title": "Room for hope"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -4712,6 +5131,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "Stay beside me",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/grief-companionship-960.webp",
+      "fullImage": "/assets/page-art/atonement/grief-companionship.webp",
+      "alt": "A woman rests her hand on another woman’s arm as she weeps. Presence can be a quiet gift in grief.",
+      "id": "art-5b2c366f023a",
+      "occurrences": [
+        {
+          "id": "source-ab0b69f37e73",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/grief-companionship.webp\"]:has(img[src=\"assets/page-art/atonement/grief-companionship-960.webp\"])",
+          "title": "Stay beside me"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -4953,6 +5394,28 @@
       ]
     },
     {
+      "title": "Taking a step to make things right",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/restitution-960.webp",
+      "fullImage": "/assets/page-art/atonement/restitution.webp",
+      "alt": "Two neighbors exchange a tool at a workshop door. Consider the practical work of making amends.",
+      "id": "art-34fd92ea12ad",
+      "occurrences": [
+        {
+          "id": "source-2ec6697de41e",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/restitution.webp\"]:has(img[src=\"assets/page-art/atonement/restitution-960.webp\"])",
+          "title": "Taking a step to make things right"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Talk about what you are learning",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/look-talk-learning-800.webp",
@@ -5147,6 +5610,28 @@
       ]
     },
     {
+      "title": "The heavens above us",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/creation-stars-960.webp",
+      "fullImage": "/assets/page-art/atonement/creation-stars.webp",
+      "alt": "Stars fill the sky above still water. Let the quiet of this imagined landscape lead you to the scriptures about Jesus Christ, the Creator.",
+      "id": "art-80e600d2ed13",
+      "occurrences": [
+        {
+          "id": "source-22d15e1def6a",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/creation-stars.webp\"]:has(img[src=\"assets/page-art/atonement/creation-stars-960.webp\"])",
+          "title": "The heavens above us"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Living Christ",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/The-Living-Christ.webp",
@@ -5275,6 +5760,28 @@
       ]
     },
     {
+      "title": "The road through mortality",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/mortal-path-960.webp",
+      "fullImage": "/assets/page-art/atonement/mortal-path.webp",
+      "alt": "A path leads from green shelter into open, rugged country. Read Lehi’s teaching about agency and redemption.",
+      "id": "art-184837ba925a",
+      "occurrences": [
+        {
+          "id": "source-e5978a5d7cf3",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/mortal-path.webp\"]:has(img[src=\"assets/page-art/atonement/mortal-path-960.webp\"])",
+          "title": "The road through mortality"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Savior in the Storm",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/still-storm-boat.webp",
@@ -5385,6 +5892,28 @@
       ]
     },
     {
+      "title": "The Shepherd seeks the one",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/lost-sheep-960.webp",
+      "fullImage": "/assets/page-art/atonement/lost-sheep.webp",
+      "alt": "The sheep rests in His arms. Jesus tells of a shepherd who goes after the one that is lost.",
+      "id": "art-9eb8fc0e208e",
+      "occurrences": [
+        {
+          "id": "source-5c087c4ee19a",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/lost-sheep.webp\"]:has(img[src=\"assets/page-art/atonement/lost-sheep-960.webp\"])",
+          "title": "The Shepherd seeks the one"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Three Witnesses",
       "category": "Church History",
       "thumbnail": "/assets/history/three-witnesses-1400.webp",
@@ -5404,6 +5933,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "The tomb was empty",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/empty-tomb-960.webp",
+      "fullImage": "/assets/page-art/atonement/empty-tomb.webp",
+      "alt": "Morning light enters a rock-cut tomb. Read the witnesses’ accounts of the risen Savior.",
+      "id": "art-b394f72ba23a",
+      "occurrences": [
+        {
+          "id": "source-acdcecb4a31f",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/empty-tomb.webp\"]:has(img[src=\"assets/page-art/atonement/empty-tomb-960.webp\"])",
+          "title": "The tomb was empty"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -5470,6 +6021,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Those who stayed nearby",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/atonement/cross-mother-disciple-960.webp",
+      "fullImage": "/assets/page-art/atonement/cross-mother-disciple.webp",
+      "alt": "A mother and the disciple look upward. John records the Savior’s care for them from the cross.",
+      "id": "art-f82de0314de8",
+      "occurrences": [
+        {
+          "id": "source-448924d66183",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/atonement/cross-mother-disciple.webp\"]:has(img[src=\"assets/page-art/atonement/cross-mother-disciple-960.webp\"])",
+          "title": "Those who stayed nearby"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -5760,15 +6333,15 @@
     }
   ],
   "stats": {
-    "artworks": 248,
-    "occurrences": 277,
+    "artworks": 274,
+    "occurrences": 303,
     "byKind": {
       "artwork": 41,
       "full": 1,
-      "hero": 33,
+      "hero": 34,
       "legacy": 39,
       "missionary": 9,
-      "topic": 157
+      "topic": 182
     }
   }
 }
