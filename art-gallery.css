@@ -1,0 +1,28 @@
+/* The gallery layout is scoped here. Original panels retain their own styles. */
+.fc-gallery-main { max-width: 1320px; margin: 0 auto; padding: 115px 28px 64px; }
+.fc-gallery-intro { max-width: 760px; margin: 0 auto 32px; text-align: center; }
+.fc-gallery-intro h1 { margin: 12px 0 18px; }
+.fc-gallery-intro > p { line-height: 1.75; }
+.fc-gallery-tools { display: grid; grid-template-columns: 2fr 1fr auto; gap: 16px; align-items: end; margin: 30px 0 14px; }
+.fc-gallery-tools label { display: grid; gap: 8px; color: var(--fc-cream); font-family: 'Segoe UI', Tahoma, sans-serif; }
+.fc-gallery-tools :is(input,select) { width: 100%; min-width: 0; height: 48px; border: 1px solid var(--fc-line); border-radius: 12px; padding: 10px 14px; background: var(--fc-surface); color: var(--fc-cream); font: inherit; }
+.fc-gallery-tools :is(input,select):focus-visible { outline: 2px solid var(--fc-gold-light); outline-offset: 3px; }
+.fc-gallery-count { margin-bottom: 20px; color: var(--fc-muted); }
+.fc-gallery-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 26px; }
+.fc-gallery-card { min-width: 0; border: 1px solid var(--fc-line); border-radius: 18px; background: var(--fc-surface); padding: 12px 12px 18px; }
+.fc-gallery-card[hidden], #artGalleryEmpty[hidden], #artGalleryFrame[hidden], #artGalleryLoading[hidden] { display: none; }
+.fc-gallery-picture { display: flex; align-items: center; justify-content: center; height: 270px; border-radius: 12px; overflow: hidden; background: var(--fc-bg); }
+.fc-gallery-picture img { display: block; max-width: 100%; width: 100%; height: 100%; object-fit: contain; }
+.fc-gallery-picture:focus-visible { outline: 3px solid var(--fc-gold-light); outline-offset: 4px; }
+.fc-gallery-card h2 { font-size: 1.25rem; line-height: 1.4; margin: 16px 5px 8px; color: var(--fc-gold-light); }
+.fc-gallery-card p, .fc-gallery-card details { font-size: .9rem; line-height: 1.5; margin: 0 5px; }
+.fc-gallery-card details { margin-top: 10px; }
+.fc-gallery-card details a { display: block; margin-top: 8px; }
+.fc-gallery-card summary { cursor: pointer; }
+.fc-gallery-dialog { position: fixed; inset: 0; width: 100vw; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--fc-bg); color: var(--fc-cream); }
+.fc-gallery-dialog::backdrop { background: rgba(0,0,0,.8); }
+.fc-gallery-dialog iframe { width: 100%; height: 100%; border: 0; display: block; }
+.fc-gallery-loading { display: grid; gap: 20px; justify-items: center; align-content: center; height: 100%; padding: 28px; text-align: center; }
+.fc-gallery-entry { max-width: 1200px; margin: 24px auto 32px; padding: 0 30px; text-align: center; }
+@media(max-width: 900px) { .fc-gallery-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .fc-gallery-tools { grid-template-columns: 1fr 1fr; } .fc-gallery-tools > button { justify-self: start; } }
+@media(max-width: 540px) { .fc-gallery-main { padding: 98px 18px 40px; } .fc-gallery-tools { grid-template-columns: 1fr; } .fc-gallery-grid { grid-template-columns: 1fr; gap: 20px; } .fc-gallery-picture { height: 290px; } }
