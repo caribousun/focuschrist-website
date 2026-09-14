@@ -3,6 +3,7 @@ body.fc-site.fc-atonement-page .fc-visual-hero > img { object-position: center t
 .atonement-main {
   --atonement-space: clamp(20px, 2.5vw, 28px);
   max-width: 960px;
+  scroll-margin-top: 90px;
   margin-inline: auto;
   padding-inline: var(--fc-body-gutter);
 }
@@ -17,6 +18,7 @@ body.fc-site.fc-atonement-page .fc-visual-hero > img { object-position: center t
 .atonement-welcome > p { max-width: none; margin: 16px 0; line-height: 1.75; }
 .atonement-welcome > .fc-eyebrow { margin: 0; }
 .atonement-path { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-block: var(--fc-body-section-gap); }
+.atonement-path > .fc-button { flex: 0 1 calc((100% - 36px) / 4); min-width: 0; justify-content: center; text-align: center; }
 .atonement-chapter { scroll-margin-top: 90px; }
 .atonement-chapter-heading { margin-bottom: var(--atonement-space); }
 .atonement-chapter-heading .fc-eyebrow { margin: 0; }
@@ -66,7 +68,7 @@ body.fc-site.fc-atonement-page .fc-visual-hero > img { object-position: center t
   .atonement-resources .fc-resource-card__body { padding: 20px; }
   .atonement-art figcaption { padding: 20px; }
   .atonement-path { gap: 10px; }
-  .atonement-path .fc-button { flex: 1 1 140px; padding-inline: 14px; }
+  .atonement-path .fc-button { flex: 0 1 calc(50% - 5px); padding-inline: 14px; }
   .atonement-chapter-actions { flex-direction: column; text-align: center; }
   .atonement-chapter-actions > .fc-button { width: 100%; }
   .atonement-chapter-heading h2 { font-size: clamp(1.8rem, 7vw, 2.3rem); }
