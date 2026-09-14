@@ -8,6 +8,8 @@ The gallery opens the original page in a same-origin frame and activates its exi
 
 `?picture=art-ID` links to a gallery picture. `?gallery-art=source-ID` opens an exact original picture. `?gallery-position=source-ID` returns to the original picture within its lesson without reopening the panel. Unknown source IDs do not activate a different picture. Cross-origin messages and navigation are rejected.
 
+The gallery stays visible while the original panel prepares, then opens that panel directly. Recovery pills appear only on an error or after a 15-second delay. Escape cancels a pending opening and restores the gallery focus. Verify delayed loads, cancellation, error recovery and normal opening whenever changing this transition.
+
 ## Updating artwork
 
 After changing an original artwork trigger or image, run `python tools/build_art_gallery.py`. The generator derives the index from public sitemap pages and validates image paths. CI and Pages deployment run `--check`; an outdated index fails the release. Do not copy original panel prose or pills into the gallery index. Navigation previews, video thumbnails and the error page are not study artwork entries.
