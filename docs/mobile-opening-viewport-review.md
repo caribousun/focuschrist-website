@@ -2,7 +2,7 @@
 
 Owner request: keep the first section on each mobile page filling the visible screen, with the following section appearing after scrolling. This supersedes the older content-height-only mobile opening direction for this scoped preview.
 
-Status: implemented and reviewed locally; not published. Production baseline remains `75bf0522267eff4ca7801a0ced9bad6dcb9fb631` (PR273). Branch: `fix/mobile-opening-viewport`.
+Status: owner approved publication; release checks in progress. Production baseline remains `75bf0522267eff4ca7801a0ced9bad6dcb9fb631` (PR273) until deployment verification. Branch: `fix/mobile-opening-viewport`.
 
 The mobile stylesheet supplies a viewport minimum, and the shared controller measures the opening's actual flow position. This handles normal heroes, naturally proportioned Art study images, topic wrappers, the gallery, Come Follow Me and General Conference. Introductory copy and buttons remain grouped. Long content can extend naturally beyond a short screen. Standard hero images stay at 300px; flexible topic and Come Follow Me artwork can adjust with viewport height under their existing sizing rules. No artwork files or content were edited.
 
@@ -18,4 +18,4 @@ Failures retained: first constant-height approach undersized four natural-ratio 
 
 Limits: browser viewport testing is not physical Android/iOS toolbar certification. No public deployment, universal crop identity across changing toolbar states, or owner visual acceptance is claimed.
 
-Next: owner reviews the local preview. If publication is approved, refresh production state, version the affected shared resources in the public HTML, run the required release checks, publish through the existing GitHub Pages route and verify exact public bytes and mobile behavior. Preserve other active Focus work. Existing production is the rollback baseline.
+Release authorization: Wyatt explicitly instructed "Publish" after reviewing the prepared result. Shared CSS and JavaScript references are versioned in the public HTML so returning browsers request the approved files. Required release checks, GitHub Pages publication and exact public-byte/mobile verification follow. Preserve other active Focus work. Existing production is the rollback baseline.
