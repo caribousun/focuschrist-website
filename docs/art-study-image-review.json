@@ -493,7 +493,7 @@
         "tone": "reverent hope amid impending departure",
         "reviewed": true,
         "gaze_review": "Architecture and distant unnamed figures; no interpersonal gaze required.",
-        "review_notes": "Compared original1846–47daguerreotype; horizontalangel vane, circularwindowsbetweentiers. Landscape/colors/minuteornaments interpretive, no modernuprightMoroni."
+        "review_notes": "Compared original1846\u00e2\u20ac\u201c47daguerreotype; horizontalangel vane, circularwindowsbetweentiers. Landscape/colors/minuteornaments interpretive, no modernuprightMoroni."
       },
       {
         "slot": "nauvoo-legion",
@@ -609,6 +609,164 @@
         "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
         "generated_source_file": "exec-03fbf4b1-e8f5-45e6-a89b-bbbfa403f050.png",
         "review_notes": "Root and independent reviewer compared original full images to the owner-locked master; coherent anatomy, expression, period interpretation and photographic clarity. Faces and phone rendering reviewed before release. Scenes are interpretations, not documented events."
+      }
+    ],
+    "atonement.html": [
+      {
+        "asset": "assets/page-art/atonement/bread-cup.webp",
+        "sha256": "47377ca5a600ee6065530baa891be8bf2085354e5401731c0a9ef2cfe51f9068",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/cross-mother-disciple.webp",
+        "sha256": "8b530a6c6cd46a70d8a489925f175eba6cdac9a6f7e8e616bed55fda2da428e8",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/empty-tomb.webp",
+        "sha256": "9cb4e68c20a33fa111ce3147a698233f5097d54108fab31670197d58e42e71fb",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/father-welcome.webp",
+        "sha256": "8833d7a11a461f8e4d28d4526ef4feccf0235bb83e8cdaa525296de7761cf1a1",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/helping-burden.webp",
+        "sha256": "b135dd643f5c00afb08d997b2e89d2ee91ac5ce11bec6b40f35d04f2c8a966b3",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/lost-sheep.webp",
+        "sha256": "8dd829add0cde60d39dd2de9384fcaf2dca3148966047535a9c6999bf39e0dbf",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/mortal-path.webp",
+        "sha256": "87bb8b64162b4577262081f4b0f065d9533c13b6946a7970d20999c7ad5f7e5f",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/new-heart.webp",
+        "sha256": "d10d581aa31a5473e2d5eee055433bb97c9589bf3d4904eeae0cddc558c6612d",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/prayer-return.webp",
+        "sha256": "882365e010e79576e167716af746c13f2725a38be8864983a6f1ea7cca8eeb49",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/restitution.webp",
+        "sha256": "77810a1cec71d225a081e096083665a1e3a703030e1f4b0627cce9b3baa10075",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/risen-invitation.webp",
+        "sha256": "f67bb0b8fcec459449ef2e32a02924faf313aa42caa3d0dd0e9b17baacf48c16",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/servant.webp",
+        "sha256": "d0a5cc36c725a398e2fc6af11c47d26ad53cd614d1d610d66bbec2a18d36cc29",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/healing-v2.webp",
+        "sha256": "aa828a2eaa66b0e01f4a7bb36784f5a934dd451c3143e44321971105c5beb34c",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/teaching-grace-v2.webp",
+        "sha256": "f517a4378a6fbe16b04b2a2b141f1f83a4b2081f18e7d482a7d08df573dbcd6a",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/gethsemane-v2.webp",
+        "sha256": "dd0ed3feaf288d80498c60e7f449fbfc0e3d872ebb1ad72b47084939e791c576",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/grief-companionship.webp",
+        "sha256": "4c3635eb39edc1ecb65f7ee4af7bbbd9d5bbc1ccb1c828d27d499bafc512d108",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/sacrament-remembrance.webp",
+        "sha256": "d9874fc3172375b410536cc9e2e9d89749c3c94f0ef244cbd247030ac037cf53",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/daily-scripture.webp",
+        "sha256": "f7056f737a67931bc78ad6459f595b948b3d45a54ed7d3a777e1affc83ea49c6",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/mary-risen.webp",
+        "sha256": "fb6c531cf2ea9811e227bed198c10b0e160b2ddd812c7501a0e515c43f97d869",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/children-welcome.webp",
+        "sha256": "788fd266c113c504baff8e3a784a894c54f3487d00348e9cafd285ffb734566c",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/emmaus-v2.webp",
+        "sha256": "77ccd0e18e7e3a91d0538d53300c3ea766fedf1aca98a79898ccafa4d325d936",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/passover-table.webp",
+        "sha256": "e20dc6c28ab5dea7c12e78c1c198efdd0b8d95be3aee235a4bb5ab258f06ca2a",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/creation-stars.webp",
+        "sha256": "018ef85b2cba04ec97f59a11e70b9ff7ea32e00f715bf6fb84774e99dfea929d",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/first-hope.webp",
+        "sha256": "fecacbeca9d2c885707a1feadb25d8b4e502fe3c308aefe15b68a61fdd02e495",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/one-by-one.webp",
+        "sha256": "fb648fe439cb240026241f9198204040e750b1f7314fbcc4f197d727039caf08",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/atonement/cross-v11.webp",
+        "sha256": "ec2c37c521b0ead20fdeb9cba8637ef5f81197278ce645c8ef6a7c42cd2db35e",
+        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
+        "reviewed": true
       }
     ]
   }

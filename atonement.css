@@ -1,0 +1,25 @@
+/* The Atonement study uses the shared focusChrist palette and components. */
+body.fc-site.fc-atonement-page .fc-visual-hero>img{object-position:center top !important}
+.atonement-main{max-width:var(--fc-standard);margin-inline:auto;padding-inline:var(--fc-body-gutter)}
+.atonement-welcome,.atonement-chapter{padding-block:var(--fc-body-section-space);margin-block:var(--fc-body-section-gap)}
+.atonement-welcome,.atonement-chapter-heading{text-align:center}
+.atonement-main h2{font-family:var(--fc-font-display);font-weight:400;font-size:clamp(1.9rem,3.5vw,2.6rem);line-height:1.22;color:var(--fc-gold-light)}
+.atonement-welcome p,.atonement-reading{max-width:72ch;margin-inline:auto}
+.atonement-path{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-block:var(--fc-body-section-gap)}
+.atonement-reading p{line-height:1.8;margin-block:18px}
+.atonement-reading h3{margin-block:28px 12px}
+.atonement-art{margin:32px 0;overflow:hidden;border-radius:var(--fc-radius-lg);border:1px solid var(--fc-line)}
+.atonement-art img{display:block;width:100%;height:auto}
+.atonement-art figcaption{padding:clamp(20px,3vw,32px)}
+.atonement-art figcaption p{max-width:72ch;line-height:1.7}
+.atonement-art .fc-study-visual-sources{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:0}
+.atonement-reading .reflection,.atonement-help{padding:22px;border:1px solid var(--fc-line);border-radius:var(--fc-radius);background:var(--fc-surface-soft);margin-block:24px}
+.atonement-reading summary{cursor:pointer;color:var(--fc-gold-light);font-weight:600;line-height:1.5}
+.atonement-resources{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-block:32px}
+.atonement-resources>.fc-resource-card:only-child{max-width:720px;grid-column:1/-1;justify-self:center;width:100%}
+.atonement-chapter-actions{justify-content:center;gap:20px;margin-top:32px;align-items:center}
+.atonement-next{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-block:28px}
+.atonement-next>a{display:flex;flex-direction:column;gap:12px;padding:24px;border:1px solid var(--fc-line);border-radius:var(--fc-radius);background:var(--fc-surface-soft);text-decoration:none}
+.atonement-next span{color:var(--fc-text);line-height:1.65}
+.atonement-chapter{scroll-margin-top:90px}
+@media(max-width:700px){.atonement-resources,.atonement-next{grid-template-columns:1fr}.atonement-art{margin-block:24px}.atonement-chapter-heading h2{font-size:clamp(1.8rem,7vw,2.3rem)}.atonement-path{gap:10px}.atonement-path .fc-button{flex:1 1 140px;padding-inline:14px}.atonement-chapter-actions{flex-direction:column}}

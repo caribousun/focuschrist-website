@@ -2,6 +2,11 @@
     'use strict';
     if (typeof HTMLDialogElement === 'undefined' || document.getElementById('heroDetailDialog')) return;
     const records = {
+        atonement: {
+            title: 'Come unto Christ',
+            paragraphs: ['Jesus extends an open hand in the sunlight. His attentive expression invites a quiet moment to consider His love.', 'Begin the story of His Atonement before the world, then follow His willing sacrifice, Resurrection, and invitations to receive His grace. This scene is a devotional artistic interpretation.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng&id=p16-p17#p16', sourceLabel: 'Read John 3:16–17', study: 'atonement.html#before-the-world', studyLabel: 'Begin the Atonement Study'
+        },
         'joseph-likeness': {
             title: 'The Face Behind the History',
             paragraphs: ['Light brown hair, a white neckcloth and a dark coat frame the Joseph Smith portrait adopted by focusChrist. This artistic likeness guides the face used in the new scenes on this page.', 'Explore the historical death masks and the creative choices behind our portrait. The adopted image offers a consistent artistic interpretation rather than an authenticated historical photograph.'],

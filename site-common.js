@@ -409,6 +409,7 @@
             'look-unto-me-doctrine-and-covenants-6-36.html': hash === '#stand-forever' ? 'Stand Forever' : 'Look Unto Me'
         };
         const file = path.split('/').pop();
+        if (file === 'atonement.html') return {label:'Atonement',href:file};
         if (path.includes('/answers/') && topics[file]) return {label:topics[file], href:file + (hash === '#stand-forever' ? hash : ''), location:hash === '#stand-forever'};
         if (file === 'answers.html') {
             const sections = {'#quiet-prayer-title':'Prayer & Revelation', '#comfort-in-grief-title':'Grief', '#loss-topic':'Death of a Child', '#divorce-topic':'Divorce'};
@@ -430,6 +431,13 @@
         const desktop = header.querySelector('.nav-links');
         const menu = document.getElementById('hamburgerMenu');
         if (!desktop || !menu) return;
+        if (!menu.querySelector('a[href="' + relativeAssetHref('atonement.html') + '"]')) {
+            const atonementLink = document.createElement('a');
+            atonementLink.href = relativeAssetHref('atonement.html');
+            atonementLink.textContent = 'Atonement of Jesus Christ';
+            const firstRule = menu.querySelector('hr');
+            if (firstRule) firstRule.before(atonementLink); else menu.appendChild(atonementLink);
+        }
         if (!menu.querySelector('[data-focuschrist-evidences]')) {
             const evidenceLink = document.createElement('a');
             evidenceLink.href = relativeAssetHref('book-of-mormon-evidences.html');
