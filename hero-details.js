@@ -3,9 +3,9 @@
     if (typeof HTMLDialogElement === 'undefined' || document.getElementById('heroDetailDialog')) return;
     const records = {
         atonement: {
-            title: 'Come unto Christ',
-            paragraphs: ['Jesus extends an open hand in the sunlight. His attentive expression invites a quiet moment to consider His love.', 'Begin the story of His Atonement before the world, then follow His willing sacrifice, Resurrection, and invitations to receive His grace. This scene is a devotional artistic interpretation.'],
-            source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng&id=p16-p17#p16', sourceLabel: 'Read John 3:16–17', study: 'atonement.html#before-the-world', studyLabel: 'Begin the Atonement Study'
+            title: 'In Gethsemane',
+            paragraphs: ['Beneath the olive branches, Jesus kneels beside a rock with His hands clasped in prayer. His bowed head draws us into a quiet moment of reverence.', 'Read His prayer to the Father in Luke 22, then follow the study of His Atonement, Resurrection, and redeeming love. This scene is a devotional artistic interpretation.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p39-p46#p39', sourceLabel: 'Read Luke 22:39–46', study: 'atonement.html#before-the-world', studyLabel: 'Begin the Atonement Study'
         },
         'joseph-likeness': {
             title: 'The Face Behind the History',

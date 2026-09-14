@@ -1507,28 +1507,6 @@
       ]
     },
     {
-      "title": "Come unto Christ",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/atonement/risen-invitation.webp",
-      "fullImage": "/assets/page-art/atonement/risen-invitation.webp",
-      "alt": "Jesus Christ extends an open hand in a sunlit landscape",
-      "id": "art-3caaa571c083",
-      "occurrences": [
-        {
-          "id": "source-34595847b652",
-          "page": "/atonement.html",
-          "pageTitle": "The Atonement of Jesus Christ",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"assets/page-art/atonement/risen-invitation.webp\"]",
-          "title": "Come unto Christ"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
       "title": "Comfort for a Grieving Father",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/answers-child-loss-father-800.webp",
@@ -2820,6 +2798,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/child-loss-resurrection-dawn-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/child-loss-resurrection-dawn-800.webp\"])",
           "title": "Hope waits beside sorrow"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "In Gethsemane",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/atonement-gethsemane-approved-20260914.webp",
+      "fullImage": "/assets/heroes/atonement-gethsemane-approved-20260914.webp",
+      "alt": "Jesus Christ kneels in prayer beside a rock in a moonlit olive grove",
+      "id": "art-1c82a76d798e",
+      "occurrences": [
+        {
+          "id": "source-b856aca2bf84",
+          "page": "/atonement.html",
+          "pageTitle": "The Atonement of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/heroes/atonement-gethsemane-approved-20260914.webp\"]",
+          "title": "In Gethsemane"
         }
       ],
       "categories": [

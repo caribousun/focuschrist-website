@@ -673,10 +673,17 @@
         "reviewed": true
       },
       {
-        "asset": "assets/page-art/atonement/risen-invitation.webp",
-        "sha256": "f67bb0b8fcec459449ef2e32a02924faf313aa42caa3d0dd0e9b17baacf48c16",
-        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
-        "reviewed": true
+        "asset": "assets/heroes/atonement-gethsemane-approved-20260914.webp",
+        "sha256": "8d0e89246793a71e7c6776e4c33ee6f86c86a9d1a06cdc756cf2e4a0e2ec4937",
+        "tone": "Exact owner-approved sacred Gethsemane composition and face. Lossless format conversion preserves decoded pixels. Mobile is a garden-extension responsive variant of the same artwork.",
+        "reviewed": true,
+        "responsive_variants": [
+          {
+            "asset": "assets/heroes/atonement-gethsemane-mobile-20260914.webp",
+            "sha256": "b17285e89ddf297bd4d81ea4055bfcb05fdc84d3095934778ec43848ab4b8c24",
+            "media": "(max-width:700px)"
+          }
+        ]
       },
       {
         "asset": "assets/page-art/atonement/servant.webp",
