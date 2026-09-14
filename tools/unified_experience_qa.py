@@ -177,7 +177,9 @@ def main() -> int:
             "body.fc-site .fc-visual-hero",
             "calc(100dvh - 52px - 33.3984375vw + 8px)",
             "calc(100dvh - 62px - 33.3984375vw + 8px)",
-            "min-height: 0 !important;",
+            "calc(100dvh - var(--fc-mobile-intro-top, calc(62px + var(--fc-opening-hero-height) - 1px)))",
+            "align-self: start;",
+            "calc(100dvh - var(--fc-mobile-intro-top, 62px))",
             "body.fc-not-found .fc-page-intro .fc-actions",
             "grid-template-columns: repeat(2, minmax(0, 1fr))",
         ):
