@@ -785,6 +785,34 @@
         const intro = document.querySelector('.fc-topic-opening, .fc-page-intro, .fc-gallery-intro, .cfm-hero, .gc-page-opening');
         if (!intro) return;
         const mobile = window.matchMedia('(max-width: 700px)');
+        // Give each study opening an accessible invitation without duplicating
+        // its desktop cue or changing the primary study buttons.
+        if (!document.body.classList.contains('fc-not-found')) {
+            const existing = intro.querySelector('.fc-scroll-cue, .art-scroll-cue');
+            let target = existing && existing.getAttribute('href');
+            let next = intro.nextElementSibling;
+            while (next && next.matches('script, style, link, template')) next = next.nextElementSibling;
+            if (!next && intro.parentElement) next = intro.parentElement.nextElementSibling;
+            if (!target && next) {
+                if (!next.id) next.id = next.matches('.qa-section') ? 'ask-pioneers' : 'fc-opening-next';
+                next.classList.add('fc-mobile-scroll-target');
+                target = '#' + next.id;
+            }
+            if (target) {
+                const group = intro.querySelector('.fc-container--standard, .cfm-hero__copy') ||
+                    (intro.classList.contains('gc-page-opening') ? intro.firstElementChild : intro);
+                const cue = document.createElement('a');
+                cue.className = 'fc-mobile-scroll-cue';
+                cue.href = target;
+                cue.textContent = 'Continue below';
+                const arrow = document.createElement('span');
+                arrow.setAttribute('aria-hidden', 'true');
+                arrow.textContent = '↓';
+                cue.appendChild(arrow);
+                group.appendChild(cue);
+                if (existing) existing.classList.add('fc-desktop-scroll-cue');
+            }
+        }
         function measure() {
             if (!mobile.matches) return;
             // Measure the real flow position, including natural-ratio Art heroes
