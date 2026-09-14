@@ -15,7 +15,21 @@
         url.searchParams.set('gallery-art', source.id);
         return url;
     }
-    function close() { if (dialog.open) dialog.close(); }
+    function reset() {
+        clearTimeout(timer);
+        frame.src = 'about:blank';
+        active = null;
+        document.body.classList.remove('fc-dialog-open');
+        grid.removeAttribute('aria-busy');
+        const url = new URL(location.href); url.searchParams.delete('picture'); history.replaceState(null, '', url);
+        render();
+        if (returnFocus && returnFocus.isConnected) returnFocus.focus({ preventScroll: true });
+    }
+    function close() { if (dialog.open) dialog.close(); else reset(); }
+    function show() {
+        if (!dialog.open) dialog.showModal();
+        document.body.classList.add('fc-dialog-open');
+    }
     function open(art, trigger, source) {
         source = source || art.occurrences[0];
         active = { art, source };
@@ -26,8 +40,10 @@
         frame.hidden = true;
         loading.hidden = false;
         document.getElementById('artGalleryLoadingText').textContent = 'Opening ' + art.title + '…';
-        if (!dialog.open) dialog.showModal();
-        document.body.classList.add('fc-dialog-open');
+        // Keep the gallery visible until the original panel is ready, avoiding
+        // a flash of the recovery controls during an ordinary picture opening.
+        grid.setAttribute('aria-busy', 'true');
+        count.textContent = 'Opening ' + art.title + '…';
         const share = new URL(location.href);
         share.searchParams.set('picture', art.id);
         history.replaceState(null, '', share);
@@ -36,6 +52,7 @@
         clearTimeout(timer);
         timer = setTimeout(function () {
             document.getElementById('artGalleryLoadingText').textContent = 'This picture is taking a little longer. You can open its original study below.';
+            show();
         }, 15000);
     }
     function render() {
@@ -56,20 +73,18 @@
         search.value = ''; category.value = ''; render(); search.focus();
     });
     document.querySelectorAll('[data-gallery-close]').forEach(button => button.addEventListener('click', close));
-    dialog.addEventListener('close', function () {
-        clearTimeout(timer);
-        frame.src = 'about:blank';
-        active = null;
-        document.body.classList.remove('fc-dialog-open');
-        const url = new URL(location.href); url.searchParams.delete('picture'); history.replaceState(null, '', url);
-        if (returnFocus && returnFocus.isConnected) returnFocus.focus({ preventScroll: true });
+    dialog.addEventListener('close', reset);
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && active && !dialog.open) { event.preventDefault(); close(); }
     });
     window.addEventListener('message', async function (event) {
         if (event.origin !== location.origin || event.source !== frame.contentWindow || !active) return;
         const data = event.data;
         if (!data || data.channel !== 'focuschrist-art-gallery') return;
         if (data.action === 'ready') {
+            if (frame.contentDocument?.documentElement.dataset.galleryArtworkReady !== active.source.id) return;
             clearTimeout(timer); frame.hidden = false; loading.hidden = true;
+            grid.removeAttribute('aria-busy'); render(); show();
             frame.contentWindow.focus();
         } else if (data.action === 'selected') {
             const art = artworks.find(item => item.occurrences.some(source => source.id === data.source));
@@ -91,6 +106,7 @@
         } else if (data.action === 'error') {
             clearTimeout(timer);
             document.getElementById('artGalleryLoadingText').textContent = 'The artwork panel could not open here. Please visit its original study.';
+            show();
         }
     });
     fetch('art-gallery.json').then(response => {
