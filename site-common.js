@@ -781,7 +781,30 @@
         appendScript('study-intelligence-v3.js?v=20260909-22', 'data-focuschrist-study-intelligence-v3');
     }
 
+    function initMobileOpening() {
+        const intro = document.querySelector('.fc-topic-opening, .fc-page-intro, .fc-gallery-intro, .cfm-hero, .gc-page-opening');
+        if (!intro) return;
+        const mobile = window.matchMedia('(max-width: 700px)');
+        function measure() {
+            if (!mobile.matches) return;
+            // Measure the real flow position, including natural-ratio Art heroes
+            // and taller navigation under text zoom. Scrolling cannot change it.
+            const top = intro.getBoundingClientRect().top + window.scrollY;
+            intro.style.setProperty('--fc-mobile-intro-top', Math.floor(top) + 'px');
+        }
+        measure();
+        window.addEventListener('resize', measure);
+        window.addEventListener('pageshow', measure);
+        if (window.ResizeObserver) {
+            const observer = new ResizeObserver(measure);
+            document.querySelectorAll('.nav, .fc-visual-hero').forEach(element => {
+                if (!intro.contains(element)) observer.observe(element);
+            });
+        }
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
+        initMobileOpening();
         if (/[?&]gallery-(?:art|position)=/.test(window.location.search)) {
             appendScript(relativeAssetHref('art-gallery-bridge.js?v=20260913-1'), 'data-focuschrist-art-gallery-bridge');
         }
