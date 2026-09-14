@@ -18,6 +18,7 @@ CORE = {
     "missionary.html": "https://focuschrist.com/missionary.html",
     "pioneers.html": "https://focuschrist.com/pioneers.html",
     "about.html": "https://focuschrist.com/about.html",
+    "joseph-smith-likeness.html": "https://focuschrist.com/joseph-smith-likeness.html",
 }
 ANSWER_PAGES = {
     path.relative_to(ROOT).as_posix(): f"https://focuschrist.com/{path.relative_to(ROOT).as_posix()}"

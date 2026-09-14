@@ -35,7 +35,7 @@ def check():
     require(len(links) == 12 and {x.removeprefix('#') for x in links} == TOPICS, 'requires all 12 topic navigation targets exactly once')
     require(TOPICS.issubset(ids), 'topic destination missing')
     require(any(n.tag == 'a' and 'ask.html?study=Book%20of%20Mormon%20Evidences' in n.attrs.get('href', '') for n in content), 'contextual Ask pathway missing')
-    require(text.count('topic-artwork-details.js?v=20260908-exclusive-final') == 1, 'native topic-panel controller missing or duplicated')
+    require(text.count('topic-artwork-details.js?v=20260914-historical-sources-1') == 1, 'native topic-panel controller missing or duplicated')
     require(text.count('topic-artwork-details.css?v=20260908-exclusive-final') == 1, 'approved native topic-panel styles missing or duplicated')
     figures = [n for n in content if n.tag == 'figure' and n.has('fc-study-visual')]
     require(len(figures) == 23, f'owner requires 23 supporting pictures, found {len(figures)}')

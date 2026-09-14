@@ -62,6 +62,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/topic_artwork_sources_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
 
@@ -116,6 +117,9 @@ jobs:
 
       - name: Run Church History source and experience QA
         run: python tools/church_history_qa.py
+
+      - name: Verify Joseph Smith likeness study and provenance
+        run: python tools/joseph_smith_likeness_qa.py
 
       - name: Run scripture grounding QA
         run: python tools/scripture_grounding_qa.py

@@ -1,0 +1,41 @@
+{
+  "page": "joseph-smith-likeness.html",
+  "created": "2026-09-14",
+  "generation_mode": "Built-in image generation; each scene referenced the exact approved portrait.",
+  "identity": {
+    "path": "assets/identities/joseph-smith-owner-approved-20260914.png",
+    "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+  },
+  "interpretation": "Four new scenes are imaginative, not photographs of historical events or forensic reconstructions. The approved identity was preserved.",
+  "prompts": [
+    {
+      "asset": "writing",
+      "prompt": "Use case: historical-scene. Create a new landscape 1536x1024 photographic artwork for an educational article about Joseph Smith portrait reconstruction. Reference image1 is the exact owner-approved Joseph Smith identity and must be used as the actual facial reference; preserve his facial proportions, long distinctive nose, blue-gray eyes, brow, cheek shape, lips, square chin and light brown slightly wavy hair. Do not invent a different handsome actor. Depict him in his late thirties, early1840s Nauvoo-era setting, seated at a modest wooden desk beside a softly lit window. Three-quarter medium portrait, face large and sharply readable, naturally focused gaze lowered to an open plain bound journal. One natural hand rests beside the page, other loosely holds a period quill. Dark wool frock coat, simple waistcoat, high white collar and white neckcloth coherent with reference. Soft daylight, detailed real skin pores and individual hair, woven cloth, tactile worn wood. Gentle thoughtful human expression, not smiling at the camera. Room furnishings restrained and historically plausible; no identifiable or asserted specific event. Convincing live-action photography and natural lens depth, no painterly, CGI, waxy or airbrushed finish, no halo or fantasy. No other people, no readable writing, no labels, no watermark. This is interpretive artwork, not a simulated archival photograph. Preserve reference face identity absolutely while changing pose and expression."
+    },
+    {
+      "asset": "warmth",
+      "prompt": "Use case: historical-scene. Create a second distinct landscape 1536x1024 photographic artwork for an educational article about Joseph Smith's reconstructed likeness. Reference image1 is the exact owner-approved Joseph Smith face. Preserve its distinctive proportions, nose, eyes, brow, lips, cheek and chin shape, light brown wavy hair and blue-gray eyes, do not reinterpret facial identity. Joseph in his late thirties outdoors in a quiet early1840s Nauvoo-inspired setting, waist-up portrait in soft late-afternoon light; simple blurred wooden fence, leafy trees and a modest clapboard building well behind him, no temple or specific documented event. Face large and detailed, nearly frontal with head turned only slightly toward someone just outside frame; a subtle warm closed-mouth smile and relaxed eyes express kindness, not a broad grin. Wear a deep brown wool frock coat with natural texture, muted waistcoat, high white shirt collar and neatly tied white neckcloth. One hand rests lightly on a fence rail with coherent fingers; other out of frame. Natural cinematic photographic realism, visible pores, gentle asymmetry, natural hair, restrained warm tones, clean detail without oversharpening. No text, no watermark, no other people, no painterly or waxy CGI aesthetic. A living expression of the same exact reference identity, explicitly an imaginative scene rather than authenticated historical photography."
+    },
+    {
+      "asset": "portrait-sitting",
+      "prompt": "Use case: historical-scene. Generate landscape1536x1024 live-action photographic artwork for an art-led study of Joseph Smith's likeness. Image1 is the actual owner-locked Joseph Smith reference; preserve his exact distinctive facial geometry, nose, eyes, lips, chin, brow and recognizable identity. Joseph about36 years old in a plausible modest Nauvoo-era1842 interior sits for an artist. This is an imaginative portrait sitting, not a claim to recreate a documented room or particular artist. Joseph sits on a simple wooden chair, his head turned approximately60 degrees into a clear three-quarter profile toward soft windowlight, maintaining a relaxed closed mouth and patient thoughtful expression. His distinctive long nose and jaw line are sharply visible and match the reference. Dark wool frock coat, waistcoat, white high collar and white neckcloth, light-brown swept hair. On far left foreground only the anonymous adult artist's hand and a small edge of drawing paper are visible, softly blurred; do not show or invent another named person's face. The hand holds a simple period pencil or charcoal and its anatomy is coherent. Keep Joseph's head large enough to study, fullheadandshoulders uncropped with some upperbody. Neutral warm limewashedwall, daylight, realistic cloth/skin/hair, restrained authentic nineteenth-century furnishings, no modern equipment, readable text, signature or watermark. Natural photographicclarity, not painting or CGI. No grandiose expression, no halo, no beauty smoothing. Respect the exact inputface rather than substitute a generic actor."
+    },
+    {
+      "asset": "conversation",
+      "prompt": "Use case: historical-scene. New landscape1536x1024 convincinglive-action photographic art for a source-grounded article about Joseph Smith portrait interpretation. Image1 is the exact owner-approved Joseph Smith identity; keep his distinctive nose, eyes, brow, mouth, chin and face shape, light brown hair and blue-gray eyes. Depict him in his late30s seated at a simple woodentable in an early1840s Nauvoo-inspired room, having a quiet animated conversation with two unnamed adult neighbors, one man and one woman. No named historical companions are claimed. Joseph is center-right and most prominent, face large readable threequarter angle toward a listener, eyes making coherent mutualcontact; an attentive warm expression and one relaxed open-hand gesture accompany his words. The two neighbors appear at the left edge mostly in profile or frombehind so Joseph's face remains the focalpoint; attentive expressions, respectfulordinary conversation, no romanticcoupling or touch. An open wornbook lies on thetable with no legible text. Joseph wears charcoal woolfrockcoat, simple waistcoat, highwhitecollar andwhite neckcloth; neighbors plain periodappropriate long-sleeved clothing, womanshair pinnedup, no moderncostuming. Softwindowlight, natural poresandhair, nuanced humanfaces, anatomically coherent handsandarms, realclothandwood, cinematic lensdepth but crispJosephface. This is an imaginative everydayconversation, not a specificrevelation, sermon orphotograph ofanevent. No text, labels, logos, watermark, fantasyglow, CGI, painting, plastic skin or overly cinematic theatrics."
+    }
+  ],
+  "museum_photo": {
+    "asset": "assets/page-art/joseph-smith-likeness/museum-dibble-masks.jpg",
+    "source": "https://churchhistorylibrary.churchofjesuschrist.org/joseph-and-hyrum-death-masks?lang=eng",
+    "image": "https://www.churchofjesuschrist.org/imgs/529faa4c5c591efbe498e3d3dda95c46d5296526/full/%21672%2C378/0/default",
+    "attribution": "The Church of Jesus Christ of Latter-day Saints",
+    "description": "Dibble casts, Joseph left and Hyrum right. Historical artifact photograph, not generated art."
+  },
+  "evidence_limits": [
+    "George Cannon made molds June 29, 1844; surviving cast production dates are unknown.",
+    "Photogrammetry models depict surviving museum objects, not a living face.",
+    "June 25, 1842 journal entry and annotation document a sitting for Sutcliffe Maudsley.",
+    "Our process account is based on the repository historical-character identity record; it does not claim a forensic reconstruction or an authenticated photograph."
+  ]
+}
