@@ -29,6 +29,7 @@ jobs:
         run: |
           python tools/navigation_links_qa.py
           node tools/external_links_runtime_qa.js
+          node tools/mobile_opening_invitation_runtime_qa.js
 
       - name: Verify the Atonement centerpiece contract
         run: python tools/atonement_qa.py
