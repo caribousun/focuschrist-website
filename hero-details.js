@@ -2,6 +2,11 @@
     'use strict';
     if (typeof HTMLDialogElement === 'undefined' || document.getElementById('heroDetailDialog')) return;
     const records = {
+        'bom-evidences': {
+            title: 'Listen, Learn, and Come unto Christ',
+            paragraphs: ['Jesus Christ turns toward a woman while others listen nearby. The shared gaze places patient attention at the heart of this imagined gathering.', 'Let the warmth of the encounter invite you into the record itself: read the Savior’s words, bring sincere questions, and consider how your study can lead to a closer relationship with Him.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng', sourceLabel: 'Read 3 Nephi 11', study: 'book-of-mormon-evidences.html#come-to-christ', studyLabel: 'Explore the Witness of Christ'
+        },
         home: {
             title: 'A Welcoming Savior',
             paragraphs: ["This devotional portrait places Christ's warm expression against golden light. The close composition invites a personal moment of reflection on His compassion and welcome.", 'Consider what helps you turn toward Jesus Christ in daily life. Continue with the study of His life and mission, using scripture to deepen the reflection suggested by the artwork.'],

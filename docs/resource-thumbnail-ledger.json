@@ -1142,8 +1142,47 @@
       "status": 200,
       "verified_date": "2026-09-07",
       "source_review": "Full official message reviewed independently; contextual description supported."
-    }
-  ],
+    },
+{
+  "key": "bom-evidences-translation-documentary",
+  "url": "https://www.churchofjesuschrist.org/media/video/2009-02-1012-episode-12-the-book-of-mormon-translation?lang=eng",
+  "title": "Episode 12—The Book of Mormon Translation",
+  "thumbnail": "https://www.churchofjesuschrist.org/imgs/1c20d54d19907bddae0d5c23e20b2530654126e1/full/1200,630/0/default",
+  "local_thumbnail": "assets/resources/bom-evidences-translation-documentary.jpg",
+  "width": 1200,
+  "height": 630,
+  "sha256": "4886d6706460276d5bf2574a627217079d752f71340d4695612156265b657933",
+  "status": 200,
+  "verified_date": "2026-09-14",
+  "uniqueness_matches_before_integration": []
+},
+{
+  "key": "bom-evidences-restoration-conversation",
+  "url": "https://www.churchofjesuschrist.org/media/video/2020-05-0290-the-book-of-mormon-is-tangible-evidence-of-the-restoration?lang=eng",
+  "title": "The Book of Mormon Is Tangible Evidence of the Restoration",
+  "thumbnail": "https://www.churchofjesuschrist.org/imgs/e350a0548169925c34cc5cb927a41739d3e33ea6/full/1200,630/0/default",
+  "local_thumbnail": "assets/resources/bom-evidences-restoration-conversation.jpg",
+  "width": 1200,
+  "height": 630,
+  "sha256": "b619bb3ac56b00774b4149acdf29aa5e918b43d9f0fc195a45da92154415b760",
+  "status": 200,
+  "verified_date": "2026-09-14",
+  "uniqueness_matches_before_integration": []
+},
+{
+  "key": "bom-evidences-title-page",
+  "url": "https://www.churchofjesuschrist.org/media/video/2012-07-1020-the-title-page-and-translation-of-the-book-of-mormon?lang=eng",
+  "title": "The Title Page and Translation of the Book of Mormon",
+  "thumbnail": "https://www.churchofjesuschrist.org/imgs/91765fce4d40409ab7adf187c02ae260e03a8929/full/1200,630/0/default",
+  "local_thumbnail": "assets/resources/bom-evidences-title-page.jpg",
+  "width": 1200,
+  "height": 630,
+  "sha256": "77cdc362574514959fca07b4b052f89ed8317d8129aaabde51f1756e39ac9166",
+  "status": 200,
+  "verified_date": "2026-09-14",
+  "uniqueness_matches_before_integration": []
+}
+],
   "reviewed_on": "2026-09-07",
   "permission_source": "https://www.churchofjesuschrist.org/tools/help/frequently-asked-questions-about-gospel-media?lang=eng",
   "method": "Downloaded exact source preview bytes. Media cards link directly to official resource; lesson images are native representative images, not custom artwork. No video files rehosted. Music video marked Church Use Only remains text-link-only. Sources independently reviewed before release."

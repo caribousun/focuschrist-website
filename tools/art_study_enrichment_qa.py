@@ -222,15 +222,20 @@ def main() -> int:
         # srcset. Exclusivity concerns owning pages, not references on that page.
         if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
-    if set(reviewed_pages) != set(PAGES):
-        errors.append("image review manifest page inventory does not match the featured studies")
+    if set(reviewed_pages) != set(PAGES) | {"book-of-mormon-evidences.html", "church-history.html"}:
+        errors.append("image review manifest must contain exactly the four featured studies, the Evidences study and Church History")
+
+    from bom_evidences_qa import check as check_evidences
+    errors.extend(check_evidences())
+    from history_art_qa import check as check_history
+    errors.extend(check_history())
 
     if errors:
         print("Art study enrichment QA failed:")
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Art study enrichment QA passed: 4 pages, 20 total visuals, 16 exclusive supporting photographs, 12 reflection prompts, 8 visual resources, and 12 onward study paths verified.")
+    print("Art study enrichment QA passed: 4 pages, 20 total visuals, 16 exclusive supporting photographs, 12 reflection prompts, 8 visual resources, and 12 onward study paths verified; additional Evidences and Church History contracts also passed.")
     return 0
 
 

@@ -414,6 +414,7 @@
             const sections = {'#quiet-prayer-title':'Prayer & Revelation', '#comfort-in-grief-title':'Grief', '#loss-topic':'Death of a Child', '#divorce-topic':'Divorce'};
             if (sections[hash]) return {label:sections[hash],href:hash,location:true};
         }
+        if (path === '/book-of-mormon-evidences.html') return {label:'Evidences',href:file};
         if (file === 'come-follow-me.html') return {label:'Come, Follow Me',href:file};
         if (file === 'general-conference.html') return {label:'General Conference',href:file};
         return null;
@@ -429,6 +430,14 @@
         const desktop = header.querySelector('.nav-links');
         const menu = document.getElementById('hamburgerMenu');
         if (!desktop || !menu) return;
+        if (!menu.querySelector('[data-focuschrist-evidences]')) {
+            const evidenceLink = document.createElement('a');
+            evidenceLink.href = relativeAssetHref('book-of-mormon-evidences.html');
+            evidenceLink.textContent = 'Book of Mormon Evidences';
+            evidenceLink.setAttribute('data-focuschrist-evidences', '');
+            const firstRule = menu.querySelector('hr');
+            if (firstRule) firstRule.before(evidenceLink); else menu.appendChild(evidenceLink);
+        }
         const originalDesktop = Array.from(desktop.querySelectorAll('a')).map(link => ({link, text:link.textContent, href:link.getAttribute('href'), active:link.classList.contains('active'), current:link.getAttribute('aria-current')}));
         const originalMenu = Array.from(menu.querySelectorAll('a')).map(link => ({link, active:link.classList.contains('active'), current:link.getAttribute('aria-current')}));
         function sync() {
@@ -561,6 +570,16 @@
             link.setAttribute('data-focuschrist-art-gallery', '');
             gallery.appendChild(link);
             identity.after(gallery);
+        }
+        if (!footer.querySelector('[data-focuschrist-evidences]')) {
+            const entry = document.createElement('p');
+            const link = document.createElement('a');
+            link.href = relativeAssetHref('book-of-mormon-evidences.html');
+            link.textContent = 'Book of Mormon Evidences';
+            link.setAttribute('data-focuschrist-evidences', '');
+            entry.appendChild(link);
+            const galleryLink = footer.querySelector('[data-focuschrist-art-gallery]');
+            if (galleryLink) galleryLink.parentElement.after(entry); else identity.after(entry);
         }
     }
 

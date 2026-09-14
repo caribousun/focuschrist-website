@@ -27,6 +27,7 @@
     "/art-study/the-living-christ.html",
     "/art.html",
     "/ask.html",
+    "/book-of-mormon-evidences.html",
     "/church-history.html",
     "/come-follow-me.html",
     "/general-conference.html",
@@ -103,6 +104,28 @@
       ]
     },
     {
+      "title": "A house built through sacrifice",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/kirtland-temple-960.webp",
+      "fullImage": "/assets/page-art/church-history/kirtland-temple.webp",
+      "alt": "Worshippers approach the Kirtland Temple along a muddy path, beneath its red roof and pale blue-gray walls.",
+      "id": "art-85a07f6b9325",
+      "occurrences": [
+        {
+          "id": "source-ab6c82072f4b",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/kirtland-temple.webp\"]:has(img[src=\"assets/page-art/church-history/kirtland-temple-960.webp\"])",
+          "title": "A house built through sacrifice"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "A Place to Study Together",
       "category": "About",
       "thumbnail": "/assets/heroes/about.webp",
@@ -122,6 +145,50 @@
       ],
       "categories": [
         "About"
+      ]
+    },
+    {
+      "title": "A prayer from within the walls",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/liberty-prayer-960.webp",
+      "fullImage": "/assets/page-art/church-history/liberty-prayer.webp",
+      "alt": "Joseph sits among straw beneath a narrow barred window, looking upward in earnest prayer.",
+      "id": "art-cf16adc08ee1",
+      "occurrences": [
+        {
+          "id": "source-19a9bce8aa92",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/liberty-prayer.webp\"]:has(img[src=\"assets/page-art/church-history/liberty-prayer-960.webp\"])",
+          "title": "A prayer from within the walls"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "A question about the stone",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/josephmartin-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/josephmartin.webp",
+      "alt": "Martin holds a stone as Joseph turns toward him with a questioning expression.",
+      "id": "art-4f01ec895c68",
+      "occurrences": [
+        {
+          "id": "source-7408bf8f8257",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/josephmartin.webp\"]:has(img[src=\"assets/page-art/bom-evidences/josephmartin-960.webp\"])",
+          "title": "A question about the stone"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -162,6 +229,50 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/foundations/creation-dawn-1536.webp\"]:has(img[src=\"../assets/page-art/foundations/creation-dawn-800.webp\"])",
           "title": "A quiet mountain lake beneath the first light of dawn"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A society ready to serve",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/relief-society-960.webp",
+      "fullImage": "/assets/page-art/church-history/relief-society.webp",
+      "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener.",
+      "id": "art-82ed9c00b587",
+      "occurrences": [
+        {
+          "id": "source-b8f1acb4ee67",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/relief-society.webp\"]:has(img[src=\"assets/page-art/church-history/relief-society-960.webp\"])",
+          "title": "A society ready to serve"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "A welcome for the one",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/christwelcome-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/christwelcome.webp",
+      "alt": "A welcome for the one. Jesus Christ meets an older man with attentive warmth.",
+      "id": "art-1fbd4b170023",
+      "occurrences": [
+        {
+          "id": "source-c2d65ccd03a8",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/christwelcome.webp\"]:has(img[src=\"assets/page-art/bom-evidences/christwelcome-960.webp\"])",
+          "title": "A welcome for the one"
         }
       ],
       "categories": [
@@ -404,6 +515,94 @@
       ],
       "categories": [
         "Ask"
+      ]
+    },
+    {
+      "title": "An offer of hospitality",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/whitmer-traveler-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/whitmer-traveler.webp",
+      "alt": "Joseph turns from the wagon to meet an older traveler’s gaze while Oliver listens and David drives.",
+      "id": "art-d315e1f0d031",
+      "occurrences": [
+        {
+          "id": "source-dcd26a4f5a1d",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/whitmer-traveler.webp\"]:has(img[src=\"assets/page-art/bom-evidences/whitmer-traveler-960.webp\"])",
+          "title": "An offer of hospitality"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "At a child’s level",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/christchildren-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/christchildren.webp",
+      "alt": "At a child’s level. Jesus Christ bends to meet a young girl at her level while an attentive woman stands nearby.",
+      "id": "art-f70fd3efff56",
+      "occurrences": [
+        {
+          "id": "source-a1ad2157dd71",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/christchildren.webp\"]:has(img[src=\"assets/page-art/bom-evidences/christchildren-960.webp\"])",
+          "title": "At a child’s level"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Authority to serve in Christ’s name",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/melchizedek-priesthood-960.webp",
+      "fullImage": "/assets/page-art/church-history/melchizedek-priesthood.webp",
+      "alt": "Joseph and Oliver kneel beside a wooded river while ancient apostles attend to a laying on of hands.",
+      "id": "art-bb47942ed3bc",
+      "occurrences": [
+        {
+          "id": "source-e5842ad4957f",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/melchizedek-priesthood.webp\"]:has(img[src=\"assets/page-art/church-history/melchizedek-priesthood-960.webp\"])",
+          "title": "Authority to serve in Christ’s name"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "Be present with the person before you",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/christ-compassion-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/christ-compassion.webp",
+      "alt": "Jesus Christ bends toward an older woman and meets her gaze with quiet compassion.",
+      "id": "art-1f506aa4355a",
+      "occurrences": [
+        {
+          "id": "source-3b65234a108e",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/christ-compassion.webp\"]:has(img[src=\"assets/page-art/bom-evidences/christ-compassion-960.webp\"])",
+          "title": "Be present with the person before you"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -691,6 +890,28 @@
     {
       "title": "Bring the question to God",
       "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/josephprayer-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/josephprayer.webp",
+      "alt": "An adult Joseph bows in a quiet place of prayer.",
+      "id": "art-97c14f6d65a9",
+      "occurrences": [
+        {
+          "id": "source-e85268061d25",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/josephprayer.webp\"]:has(img[src=\"assets/page-art/bom-evidences/josephprayer-960.webp\"])",
+          "title": "Bring the question to God"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Bring the question to God",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/joseph-inquiry-prayer-800.webp",
       "fullImage": "/assets/page-art/exclusive/joseph-inquiry-prayer-1536.webp",
       "alt": "A man pausing in prayer beside a closed book in a quiet park",
@@ -821,6 +1042,28 @@
       ]
     },
     {
+      "title": "Called to prepare the way",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/aaronic-priesthood-960.webp",
+      "fullImage": "/assets/page-art/church-history/aaronic-priesthood.webp",
+      "alt": "Joseph and Oliver kneel with bowed heads as John the Baptist places a hand on each man’s head.",
+      "id": "art-d98ccbf176b8",
+      "occurrences": [
+        {
+          "id": "source-70e8a9c4f492",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/aaronic-priesthood.webp\"]:has(img[src=\"assets/page-art/church-history/aaronic-priesthood-960.webp\"])",
+          "title": "Called to prepare the way"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Care begins by listening",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/grief-welcome-care-800.webp",
@@ -836,6 +1079,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/grief-welcome-care-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/grief-welcome-care-800.webp\"])",
           "title": "Care begins by listening"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Care for a record that will outlast you",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/preservation-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/preservation.webp",
+      "alt": "Hands draw a cloth around a record of metal leaves.",
+      "id": "art-feee785c7fb0",
+      "occurrences": [
+        {
+          "id": "source-1da86ed033f5",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/preservation.webp\"]:has(img[src=\"assets/page-art/bom-evidences/preservation-960.webp\"])",
+          "title": "Care for a record that will outlast you"
         }
       ],
       "categories": [
@@ -1283,6 +1548,28 @@
       ]
     },
     {
+      "title": "Courage in the room at Richmond",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/richmond-rebuke-960.webp",
+      "fullImage": "/assets/page-art/church-history/richmond-rebuke.webp",
+      "alt": "Joseph stands in ankle chains and raises a hand toward armed guards while Parley Pratt and Hyrum Smith sit beside him.",
+      "id": "art-4cd2f8a7dfad",
+      "occurrences": [
+        {
+          "id": "source-bef4ccffb001",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/richmond-rebuke.webp\"]:has(img[src=\"assets/page-art/church-history/richmond-rebuke-960.webp\"])",
+          "title": "Courage in the room at Richmond"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Covenant character grows in ordinary life",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/eternal-marriage/timeline/02-ancient-home-desktop-v2.webp",
@@ -1437,6 +1724,28 @@
       ]
     },
     {
+      "title": "Encouragement amid the work",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/mary-whitmer-witness-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/mary-whitmer-witness.webp",
+      "alt": "Mary watches an older visitor turn a leaf of the plates beside the barn.",
+      "id": "art-e0744321c304",
+      "occurrences": [
+        {
+          "id": "source-d534ce0faf35",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/mary-whitmer-witness.webp\"]:has(img[src=\"assets/page-art/bom-evidences/mary-whitmer-witness-960.webp\"])",
+          "title": "Encouragement amid the work"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Examine the gospel Christ describes",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/restoration-gospel-teaching-800.webp",
@@ -1478,6 +1787,50 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "Faith along an uncertain road",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/desertjourney-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/desertjourney.webp",
+      "alt": "Faith along an uncertain road. Travelers move together through a rugged landscape, carrying what they need for the next part of the journey.",
+      "id": "art-080b88389286",
+      "occurrences": [
+        {
+          "id": "source-ca4d99c31e7a",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/desertjourney.webp\"]:has(img[src=\"assets/page-art/bom-evidences/desertjourney-960.webp\"])",
+          "title": "Faith along an uncertain road"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Faith amid financial loss",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/kirtland-bank-960.webp",
+      "fullImage": "/assets/page-art/church-history/kirtland-bank.webp",
+      "alt": "Joseph studies an account book with a concerned expression, resting one hand near his forehead.",
+      "id": "art-0da96398096e",
+      "occurrences": [
+        {
+          "id": "source-b78e87293f22",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/kirtland-bank.webp\"]:has(img[src=\"assets/page-art/church-history/kirtland-bank-960.webp\"])",
+          "title": "Faith amid financial loss"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -1654,6 +2007,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "From manuscript to printed page",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/printing-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/printing.webp",
+      "alt": "A printer arranges small pieces of type with ink-marked hands.",
+      "id": "art-626ab642b3f6",
+      "occurrences": [
+        {
+          "id": "source-752109af33ae",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/printing.webp\"]:has(img[src=\"assets/page-art/bom-evidences/printing-960.webp\"])",
+          "title": "From manuscript to printed page"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -1855,6 +2230,28 @@
       ]
     },
     {
+      "title": "Help for the journey",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/whitmer-fields-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/whitmer-fields.webp",
+      "alt": "David pauses beside a fence with a parked plow in the field behind him.",
+      "id": "art-e5fb06465cdf",
+      "occurrences": [
+        {
+          "id": "source-3816850a297b",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/whitmer-fields.webp\"]:has(img[src=\"assets/page-art/bom-evidences/whitmer-fields-960.webp\"])",
+          "title": "Help for the journey"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Help with what matters today",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/divorce-practical-help-800.webp",
@@ -1987,6 +2384,50 @@
       ]
     },
     {
+      "title": "Hope above the river",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/nauvoo-temple-960.webp",
+      "fullImage": "/assets/page-art/church-history/nauvoo-temple.webp",
+      "alt": "The original Nauvoo Temple rises above wooden homes near the Mississippi River, with a horizontal angel weather vane on its tower.",
+      "id": "art-de52b61d82e8",
+      "occurrences": [
+        {
+          "id": "source-0fb16c85a25e",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/nauvoo-temple.webp\"]:has(img[src=\"assets/page-art/church-history/nauvoo-temple-960.webp\"])",
+          "title": "Hope above the river"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "Hope beside the sea",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/bountiful-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/bountiful.webp",
+      "alt": "A green coastal inlet opens between rugged hills and quiet water.",
+      "id": "art-c39985c20c64",
+      "occurrences": [
+        {
+          "id": "source-09f882605c5a",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/bountiful.webp\"]:has(img[src=\"assets/page-art/bom-evidences/bountiful-960.webp\"])",
+          "title": "Hope beside the sea"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Hope between death and resurrection",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/life-after-death-careful-reading-800.webp",
@@ -2002,6 +2443,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/life-after-death-careful-reading-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/life-after-death-careful-reading-800.webp\"])",
           "title": "Hope between death and resurrection"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Hope in a prayer for mercy",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/alma36prayer-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/alma36prayer.webp",
+      "alt": "Hope in a prayer for mercy. A man pauses in prayer, his expression opening toward hope.",
+      "id": "art-4acdfd052f65",
+      "occurrences": [
+        {
+          "id": "source-ac8cee4af675",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/alma36prayer.webp\"]:has(img[src=\"assets/page-art/bom-evidences/alma36prayer-960.webp\"])",
+          "title": "Hope in a prayer for mercy"
         }
       ],
       "categories": [
@@ -2691,6 +3154,28 @@
       ]
     },
     {
+      "title": "Let a careful question guide the comparison",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/statistical-study-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/statistical-study.webp",
+      "alt": "A reader compares a book, notes, and an illustrative scatterplot.",
+      "id": "art-3a685a17eb77",
+      "occurrences": [
+        {
+          "id": "source-7cebb3ac8a39",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/statistical-study.webp\"]:has(img[src=\"assets/page-art/bom-evidences/statistical-study-960.webp\"])",
+          "title": "Let a careful question guide the comparison"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Let a conversation lead to care",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/christian-care-800.webp",
@@ -3021,6 +3506,28 @@
       ]
     },
     {
+      "title": "Listen, Learn, and Come unto Christ",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/hero.webp",
+      "fullImage": "/assets/page-art/bom-evidences/hero.webp",
+      "alt": "Jesus Christ looking toward a woman as attentive listeners gather around Him",
+      "id": "art-af3a1b2d2698",
+      "occurrences": [
+        {
+          "id": "source-7dfd2f924ac6",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/page-art/bom-evidences/hero.webp\"]",
+          "title": "Listen, Learn, and Come unto Christ"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Little Friends",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Little-Friends.webp",
@@ -3087,6 +3594,28 @@
       ]
     },
     {
+      "title": "Make room to learn together",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/modernstudy-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/modernstudy.webp",
+      "alt": "Make room to learn together. Three people share a quiet moment around an open book, with a notebook close at hand.",
+      "id": "art-ff4f55d0cd37",
+      "occurrences": [
+        {
+          "id": "source-5f107ceb18c7",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/modernstudy.webp\"]:has(img[src=\"assets/page-art/bom-evidences/modernstudy-960.webp\"])",
+          "title": "Make room to learn together"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Make space for each person’s voice",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/family-study-800.webp",
@@ -3102,6 +3631,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/topics/family-study-1536.webp\"]:has(img[src=\"../assets/page-art/topics/family-study-800.webp\"])",
           "title": "Make space for each person’s voice"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Make time for the written word",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/josephbible-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/josephbible.webp",
+      "alt": "Joseph studies an open Bible with a writing tool close at hand.",
+      "id": "art-e480b9036af9",
+      "occurrences": [
+        {
+          "id": "source-84cee23bf6d1",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/josephbible.webp\"]:has(img[src=\"assets/page-art/bom-evidences/josephbible-960.webp\"])",
+          "title": "Make time for the written word"
         }
       ],
       "categories": [
@@ -3603,6 +4154,28 @@
       ]
     },
     {
+      "title": "Reading the record carefully",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/manuscripts-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/manuscripts.webp",
+      "alt": "Reading the record carefully. Open manuscripts lie side by side as a reader studies their pages in warm daylight.",
+      "id": "art-49a8cc1ebfd6",
+      "occurrences": [
+        {
+          "id": "source-7c14e9576778",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/manuscripts.webp\"]:has(img[src=\"assets/page-art/bom-evidences/manuscripts-960.webp\"])",
+          "title": "Reading the record carefully"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Receive a message with prayerful attention",
       "category": "General Conference",
       "thumbnail": "/assets/page-art/exclusive/conference-message-notes-800.webp",
@@ -3622,6 +4195,50 @@
       ],
       "categories": [
         "General Conference"
+      ]
+    },
+    {
+      "title": "Receive the voices of the record",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/records-voices-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/records-voices.webp",
+      "alt": "Receive the voices of the record. A reader attends closely to a record held in his hands.",
+      "id": "art-7fbf7926ea0a",
+      "occurrences": [
+        {
+          "id": "source-ad19fadb9c11",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/records-voices.webp\"]:has(img[src=\"assets/page-art/bom-evidences/records-voices-960.webp\"])",
+          "title": "Receive the voices of the record"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Recognized and welcomed",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/porter-reunion-960.webp",
+      "fullImage": "/assets/page-art/church-history/porter-reunion.webp",
+      "alt": "Joseph and Porter Rockwell meet each other’s gaze as Joseph welcomes him at a doorway.",
+      "id": "art-a9327a256c5d",
+      "occurrences": [
+        {
+          "id": "source-af5bc43bebee",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/porter-reunion.webp\"]:has(img[src=\"assets/page-art/church-history/porter-reunion-960.webp\"])",
+          "title": "Recognized and welcomed"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -3666,6 +4283,28 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "Responsibility in a growing city",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/nauvoo-legion-960.webp",
+      "fullImage": "/assets/page-art/church-history/nauvoo-legion.webp",
+      "alt": "Joseph, wearing a dark blue militia uniform, listens to a volunteer on a grassy parade ground.",
+      "id": "art-0b39213855b3",
+      "occurrences": [
+        {
+          "id": "source-0fd34faecef7",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/nauvoo-legion.webp\"]:has(img[src=\"assets/page-art/church-history/nauvoo-legion-960.webp\"])",
+          "title": "Responsibility in a growing city"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -4370,6 +5009,28 @@
       ]
     },
     {
+      "title": "The people beside the work",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/josephemma-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/josephemma.webp",
+      "alt": "Emma pauses with her quill as she and Joseph share a warm glance.",
+      "id": "art-88364b952e48",
+      "occurrences": [
+        {
+          "id": "source-a3b8e155238a",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/josephemma.webp\"]:has(img[src=\"assets/page-art/bom-evidences/josephemma-960.webp\"])",
+          "title": "The people beside the work"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Restoration Print Shop",
       "category": "Church History",
       "thumbnail": "/assets/history/restoration-print-shop-1400.webp",
@@ -4546,6 +5207,28 @@
       ]
     },
     {
+      "title": "The work of dictation",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/translation-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/translation.webp",
+      "alt": "Joseph attends to the hat while Oliver listens and writes.",
+      "id": "art-3b05fe3059b0",
+      "occurrences": [
+        {
+          "id": "source-9e7d8faa6600",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/translation.webp\"]:has(img[src=\"assets/page-art/bom-evidences/translation-960.webp\"])",
+          "title": "The work of dictation"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "There Is a Greater Victory Ahead",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/new/there-is-a-greater-victory-ahead.webp",
@@ -4587,6 +5270,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Three witnesses, distinct voices",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/witnesses-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/witnesses.webp",
+      "alt": "Oliver Cowdery, David Whitmer, and Martin Harris pause in an imagined conversation.",
+      "id": "art-f79d1b28e90b",
+      "occurrences": [
+        {
+          "id": "source-8ee7fa7801a5",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/witnesses.webp\"]:has(img[src=\"assets/page-art/bom-evidences/witnesses-960.webp\"])",
+          "title": "Three witnesses, distinct voices"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -4700,6 +5405,28 @@
       ]
     },
     {
+      "title": "Walk together and listen",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/joseph-emma-walk-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/joseph-emma-walk.webp",
+      "alt": "Joseph and Emma share a warm glance as they walk along a quiet path.",
+      "id": "art-6c98467750b1",
+      "occurrences": [
+        {
+          "id": "source-b8fb45227bb3",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/joseph-emma-walk.webp\"]:has(img[src=\"assets/page-art/bom-evidences/joseph-emma-walk-960.webp\"])",
+          "title": "Walk together and listen"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Welcome the children",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/christ-children-800.webp",
@@ -4786,18 +5513,62 @@
       "categories": [
         "Pioneers"
       ]
+    },
+    {
+      "title": "Words for a scattered people",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/church-history/liberty-letter-960.webp",
+      "fullImage": "/assets/page-art/church-history/liberty-letter.webp",
+      "alt": "Joseph studies letter pages in his hands inside the timber-lined room at Liberty Jail.",
+      "id": "art-24ea87b4eec3",
+      "occurrences": [
+        {
+          "id": "source-613c2b0ba363",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/church-history/liberty-letter.webp\"]:has(img[src=\"assets/page-art/church-history/liberty-letter-960.webp\"])",
+          "title": "Words for a scattered people"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "Words worth preserving",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/bom-evidences/ancientmetalrecords-960.webp",
+      "fullImage": "/assets/page-art/bom-evidences/ancientmetalrecords.webp",
+      "alt": "Words worth preserving. Hands guide an engraving tool across a metal sheet.",
+      "id": "art-e0a3735c1eb9",
+      "occurrences": [
+        {
+          "id": "source-380d198e518a",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/bom-evidences/ancientmetalrecords.webp\"]:has(img[src=\"assets/page-art/bom-evidences/ancientmetalrecords-960.webp\"])",
+          "title": "Words worth preserving"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
     }
   ],
   "stats": {
-    "artworks": 204,
-    "occurrences": 233,
+    "artworks": 239,
+    "occurrences": 268,
     "byKind": {
       "artwork": 41,
       "full": 1,
-      "hero": 31,
+      "hero": 32,
       "legacy": 39,
       "missionary": 9,
-      "topic": 115
+      "topic": 149
     }
   }
 }

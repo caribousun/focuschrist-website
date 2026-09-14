@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "recorded_on": "2026-09-14",
+  "scope": "New historical depictions only; existing site pictures remain unchanged. These generated working references are artistic reconstructions, not authenticated historical photographs. Joseph alone has an owner-locked historical identity; see historical-character-identity.md.",
+  "characters": [
+    {
+      "name": "Emma Hale Smith",
+      "status": "researched working reference, not owner locked",
+      "owner_locked": false,
+      "master_asset": "assets/identities/emma-research-master-20260914.png",
+      "master_sha256": "8f51351e1adf3d65f98920599c10816f027a66ee0ad4aa7a922330ed1066dd60",
+      "generated_source_file": "exec-12c279fe-c773-48a7-958f-8d155cd736bd.png",
+      "event_age": "23 before July 10, 1828; 24 thereafter",
+      "appearance_and_evidence_limits": "**Supported institutional description:** Ryan Carr's [Church magazine article](https://www.churchofjesuschrist.org/study/new-era/2004/10/when-emma-met-joseph?lang=eng) describes black hair, brown eyes, olive complexion and a tall, slender figure. The opening appearance paragraph has no separately identified eyewitness footnote. The [Church student manual](https://www.churchofjesuschrist.org/study/manual/the-pearl-of-great-price-student-manual-2018/joseph-smith-history/joseph-smith-history-1-55-75?lang=eng), citing Ivan J. Barrett's 1973 history, reports beauty, dark eyes, raven hair and above-average size. These are institutional historical summaries, not measured specifications. Beauty is a reported impression, not permission to erase her distinctive features.\n\n**Visual anchors:** 1845 photograph, 1842 Rogers portrait, circa1842 Maudsley profile. Long hair arranged up is consistent with these images; an exact loose length or documented early1828 hairstyle was not established. Do not call a modern loose, flowing hairstyle historically verified. Exact height (including popular 5ft9) remains unverified in the material read.\n\n**1828 instruction:** age23 before July10; Joseph22. Preserve her individual nose, eyelids, oval facial structure and mouth from the photograph, interpreted younger. Black hair, brown eyes, natural olive complexion; no glamorization. A practical pinned arrangement and plain period dress are reasonable scene choices, explicitly reconstruction. Do not copy elaborate1842 jewelry/wardrobe into1828 automatically.\n\n**Clothing controls:** The [Met's American cotton morning dress, c1828, object1978.359](https://www.metmuseum.org/art/collection/search/108029) and [Historic New England dress1827–1828](https://www.historicnewengland.org/explore/collections-access/gusn/42207) supply actual period garments. The latter documents long sleeves enlarged at the upper arm, back fullness and a worked bodice. They establish available period forms, not Emma's ownership or household wealth. Avoid inventing an exact dress color or claiming a museum gown was hers. [JSP scribing event](https://www.josephsmithpapers.org/event/emma-smith-acted-as-jss-scribe) supports Harmony, lateDecember1827–April12,1828.",
+      "written_sources": [
+        "https://www.churchofjesuschrist.org/study/new-era/2004/10/when-emma-met-joseph?lang=eng",
+        "https://www.churchofjesuschrist.org/study/manual/the-pearl-of-great-price-student-manual-2018/joseph-smith-history/joseph-smith-history-1-55-75?lang=eng",
+        "https://www.metmuseum.org/art/collection/search/108029",
+        "https://www.historicnewengland.org/explore/collections-access/gusn/42207",
+        "https://www.josephsmithpapers.org/event/emma-smith-acted-as-jss-scribe"
+      ],
+      "historical_likeness_sources": [
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/emma-hale-smith",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per86---D1-page-163---088-088-emma-smith-full-2.jpg",
+          "provenance": "Oil on canvas, David Rogers, 1842. (Church History Museum, Salt Lake City.)"
+        },
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/emma-hale-smith",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per86---H1-page-406---Emma_Smith_Maudsley.jpg",
+          "provenance": "Gouache and ink on paper, Sutcliffe Maudsley, circa 1842. (Courtesy Church History Museum, Salt Lake City.)"
+        },
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/emma-hale-smith",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per86---J1-page-145---09b_Emma_Smith_with_son_needs_crop.jpg",
+          "provenance": "With son David Hyrum. Photograph, unknown photographer, 1845. (Courtesy Community of Christ Library-Archives, Independence, MO.)"
+        },
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/emma-hale-smith",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/images/per-Emma-Hale-Smith-PH 1300_b0003_f0010_i0598_00001.jpg",
+          "provenance": "Circa 1860–1879, copy of a photograph by Charles W. Carter. (Church History Library, Salt Lake City.)"
+        }
+      ]
+    },
+    {
+      "name": "Oliver Cowdery",
+      "status": "researched working reference, not owner locked",
+      "owner_locked": false,
+      "master_asset": "assets/identities/oliver-research-master-20260914.png",
+      "master_sha256": "079c87d33bc06257b8f93f05584bbaaeb6c3a8f29c6a31f41fac03b6f244cf08",
+      "generated_source_file": "exec-e3ef634d-11a8-415e-ae92-b089c778a0bd.png",
+      "event_age": "22 during translation in 1829",
+      "appearance_and_evidence_limits": "**Eyewitness recollection:** William Lang, his legal colleague, writing in1880, described dark-brown eyes, high forehead, Roman nose, firmly closed lips, prominent lower jaw, slight build, approximately5ft5, clean shaving and neat appearance. Read the reproduced passage in [Patrick Bishop, BYU Studies45:2, p109](https://website-files-bucket.s3.us-west-2.amazonaws.com/articles/article_pdfs/An_Original_Daguerreotype_of_Oliver_Cowdery_Identified.pdf); its citation identifies Lang's History of Seneca County. This is recollection of adult Oliver, not an1829 measurement. Acceptance of Lang's passage does not require accepting that article's separate proposed daguerreotype identification.\n\n**Institutional corroboration:** [Church history manual, chapter5](https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-five?lang=eng) describes slight build and dark wavy hair. Exact complexion and shade of hair remain less firmly specified than his eyes.\n\n**1829 instruction:** age22, short/slight relative to Joseph; dark-brown eyes, dark wavy hair, clean-shaven, source-specific narrow facial geometry. The first generated master reads brown-eyed; do not lighten to green/hazel. Later photographic collar/cravat is a visual reference, not proof of exact1829 dress.",
+      "written_sources": [
+        "https://website-files-bucket.s3.us-west-2.amazonaws.com/articles/article_pdfs/An_Original_Daguerreotype_of_Oliver_Cowdery_Identified.pdf",
+        "https://www.churchofjesuschrist.org/study/manual/church-history-in-the-fulness-of-times/chapter-five?lang=eng"
+      ],
+      "historical_likeness_sources": [
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/oliver-cowdery",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per47---H1-page-76---02a_Oliver_Cowdery_needs_crop.jpg",
+          "provenance": "Unknown photographer, c1845; Coe reproduction1883, CHL."
+        },
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/oliver-cowdery",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per47---D1-page-379---Three-Witnesses-Engravings---Recto-Shot1-(Museum)---Oliver-Cowdery.jpg",
+          "provenance": "Hall and Sons1883 after c1845 daguerreotype; Church History Museum."
+        }
+      ]
+    },
+    {
+      "name": "David Whitmer",
+      "status": "researched working reference, not owner locked",
+      "owner_locked": false,
+      "master_asset": "assets/identities/david-research-master-20260914.png",
+      "master_sha256": "11411c533ec2ced7d7ad3d31d9cb7e538d1ab5ac68b45f6b15fd4478f11f4177",
+      "generated_source_file": "exec-a3ea5f5f-fb4e-4033-922a-88230719539d.png",
+      "event_age": "24 in June 1829",
+      "appearance_and_evidence_limits": "**Direct observer:** George Q. Cannon's [1884 Juvenile Instructor account, p107](https://archive.bookofmormoncentral.org/sites/default/files/archive-files/pdf/cannon/2019-06-03/george_q._cannon_ji_19.7_topics_of_the_times_1_april_1884.pdf) describes very dark eyes, aquiline nose, elderly thin hair/baldness, and estimates youthful height5ft10–11. He also describes an oil likeness said to show David at32, with thick curling hair. This establishes a contemporary observation and an explicitly estimated height, not a measured young portrait reconstruction. His mention of a missing right thumb belongs to1884; injury date is not established here, so do not add it to1829.\n\n**1829 instruction:** age24, very dark-brown eyes, thick wavy/curly hair; preserve broad brow, nose and jaw using both downloaded photographs. Exact youthful hair pigment/complexion and clothing are uncertain. Do not import elderly baldness, sagging eyelids or deep folds. The selected working master supersedes the first age-revision draft; warm brown hair remains interpretation.",
+      "written_sources": [
+        "https://archive.bookofmormoncentral.org/sites/default/files/archive-files/pdf/cannon/2019-06-03/george_q._cannon_ji_19.7_topics_of_the_times_1_april_1884.pdf"
+      ],
+      "historical_likeness_sources": [
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/david-whitmer",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per69---J1-page-319---18b_David_Whitmer_needs_crop.jpg",
+          "provenance": "Unidentified photographer c1855; Community of Christ Library-Archives."
+        },
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/david-whitmer",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per69---H2-page-136---David-Whitmer-CHL-PH-1300.jpg",
+          "provenance": "Jacob T.Hicks c1865; Carter copy, CHL."
+        }
+      ]
+    },
+    {
+      "name": "Martin Harris",
+      "status": "researched working reference, not owner locked",
+      "owner_locked": false,
+      "master_asset": "assets/identities/martin-research-master-20260914.png",
+      "master_sha256": "bbe7c77cec7ffbec0357736fa2976d61f56dcc601be5110ce8034d05b8044094",
+      "generated_source_file": "exec-072cf728-88ad-45a2-808c-46152178635d.png",
+      "event_age": "44 before May 18, 1828; 45 thereafter; 46 in June 1829",
+      "appearance_and_evidence_limits": "**Traced historical synthesis:** Ronald W. Walker's [Martin Harris: Mormonism's Early Convert, p35](https://www.dialoguejournal.com/wp-content/uploads/sbi/articles/Dialogue_V19N04_31.pdf) reports blue eyes, light complexion, robust build, approximately5ft8, gray homespun, a large stiff hat, swept hair curling near the ears and a jaw/chin beard fringe. Its grouped citations are Waddoups1923p980, Caroline Harris's1879 widow's bounty-land claim as reproduced in1983p70, and Palmyra Courier May31,1872. Read the paragraph and bibliography; the underlying originals were not independently inspected in this pass. Thus these details are traced but secondary-mediated, not independently authenticated measurements. Exact brown hair pigment was not verified here.\n\n**Age and instruction:** Born May18,1783: age44 through May17,1828,45 thereafter;46 inJune1829. Use robust middle-aged facial volume, blue eyes and light complexion, while preserving the1870photo's characteristic nose/brow geometry. Do not copy its elderly emaciation or gray hair. Gray homespun is a sourced wardrobe direction; exact1828 outfit and beard state remain reconstruction.",
+      "written_sources": [
+        "https://www.dialoguejournal.com/wp-content/uploads/sbi/articles/Dialogue_V19N04_31.pdf"
+      ],
+      "historical_likeness_sources": [
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/martin-harris",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per69---Martin-Harris---Savage-photo.jpg",
+          "provenance": "Charles R.Savage1870; CHL copy, privately held original."
+        },
+        {
+          "source_page": "https://www.josephsmithpapers.org/person/martin-harris",
+          "image_url": "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/per69---D1-page-379---Three-Witnesses-Engravings---Recto-Shot1-(Museum)---Martin-Harris.jpg",
+          "provenance": "Hall and Sons1883 after Carter c1870 photo; Church History Museum."
+        }
+      ]
+    },
+    {
+      "name": "Orrin Porter Rockwell",
+      "status": "direct primary-reference scene work; no standalone generated master; not owner locked",
+      "owner_locked": false,
+      "master_asset": null,
+      "event_age": "Approximately 29–30 at Christmas 1843; sources differ on birth year",
+      "appearance_and_evidence_limits": " — researched reference and scene limits\n\nUse the [Joseph Smith Papers photographic reference](https://www.josephsmithpapers.org/person/orrin-porter-rockwell): Edward Martin photograph, circa 1866, Church History Library. Exact image URL: https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/A1-Page-640a-Rockwell-Orrin-Porter-PH-9938-obverse.jpg . The [Church History Library reference article](https://churchhistorylibrary.churchofjesuschrist.org/blog/ask-us-top-five-reference-questions-about-orrin-porter-rockwell?lang=eng) also shows an undated image labeled PH 5962; it appears to repeat the same photographic composition and must not be counted as independent corroboration.\n\nThe current JSP biography gives June 1814 as his birth date, citing Council of Fifty and Seventies records; the Church History Library article gives June 25, 1813. Preserve this discrepancy: use approximately 29–30 for Christmas 1843, rather than a falsely exact age. The photograph is approximately 51–53 years old and requires careful age interpretation for that earlier scene. Do not automatically import its later receding hairline or mature beard into young depictions.\n\nThe [contemporary Christmas 1843 journal entry](https://www.josephsmithpapers.org/paper-summary/journal-december-1842-june-1844-book-3-15-july-1843-29-february-1844/218) documents hair falling over his shoulders, Joseph's recognition and joy, and his return from imprisonment. It supports a reunion scene. An embrace, clothing, exact beard shape, room furnishings, hair pigmentation, eye color and stature are not established by that entry and remain interpretation unless further reliable evidence is obtained. The monochrome photograph does not establish color. Keep Porter distinct from Joseph's locked identity.\n\nDo not depict the hair-protection legend as proven invulnerability or promote berry-fundraising stories without verifying their source chain. The grand jury did not indict Porter for the attempted murder of Lilburn Boggs; this procedural result does not settle all historical questions. His Church History study connects friendship and early Restoration community, not a claim that he was a Book of Mormon translator or one of its formal plate witnesses.\n",
+      "source_urls": [
+        "https://churchhistorylibrary.churchofjesuschrist.org/blog/ask-us-top-five-reference-questions-about-orrin-porter-rockwell?lang=eng",
+        "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/A1-Page-640a-Rockwell-Orrin-Porter-PH-9938-obverse.jpg",
+        "https://www.josephsmithpapers.org/paper-summary/journal-december-1842-june-1844-book-3-15-july-1843-29-february-1844/218",
+        "https://www.josephsmithpapers.org/person/orrin-porter-rockwell"
+      ]
+    },
+    {
+      "name": "Hyrum Smith",
+      "status": "direct primary-reference scene work; no standalone generated master; not owner locked",
+      "owner_locked": false,
+      "master_asset": null,
+      "event_age": "38 in November 1838; 39 after February 9, 1839",
+      "appearance_and_evidence_limits": "\n\n[JSP biography](https://www.josephsmithpapers.org/person/hyrum-smith): born February 9, 1800; age 38 in November 1838. Downloaded `hyrum-smith-c1844-maudsley-ink.jpg`: ink on paper, Sutcliffe Maudsley, circa 1844, photograph held by Church History Library. This is a historical drawn portrait at about age 44, not a photograph of the living sitter.\n\nExact image: https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/450x600/per66---D1-page-52---Hyrum-%5BMaudsley%5D.jpg\n\nVisually inspected: long prominent nose, projecting chin, swept wavy hair and sideburns. Supplement with `../joseph-reference/dibble-masks.jpg`, RIGHT mask is Hyrum, LEFT Joseph. Mask inspected again; use only Hyrum's side for his facial geometry. It cannot establish pigmentation or living expression. No reliable written pigmentation or precise stature statement was verified here; color remains interpreted. Clothing shown is circa 1844 portrait dress, not documented Richmond clothing.\n\n\n and scene\n\n[Saints, chapter 31](https://www.churchofjesuschrist.org/study/history/saints-v1/31-how-will-this-end?lang=eng) places this episode in Richmond before Liberty. [Pratt's autobiography, chapter 26](https://www.gutenberg.org/files/44896/44896-h/44896-h.htm) directly recalls lying beside Joseph, who stood to rebuke the guards. Pratt later describes being unchained from Joseph and Hyrum after the hearing. Thus both are supported companions, unlike invented named spectators. The account is retrospective and explicitly approximate in its remembered dialogue.\n\nPratt's account also describes a long beard after many months of imprisonment in 1839. Do not automatically apply that later condition to November 1838. Exact facial hair that night is not established. A cinematic composition with these three researched faces and other prisoners facing away is interpretive, not an authenticated arrangement. Keep them connected by plausible ankle chains, in a cold log room. No warming fire; modest incidental lighting is an artistic accommodation.\n",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/history/saints-v1/31-how-will-this-end?lang=eng",
+        "https://www.gutenberg.org/files/44896/44896-h/44896-h.htm",
+        "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/450x600/per66---D1-page-52---Hyrum-%5BMaudsley%5D.jpg",
+        "https://www.josephsmithpapers.org/person/hyrum-smith",
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng"
+      ],
+      "death_mask_source_note": "Church History Museum collection article supplies the paired Dibble masks: Joseph left, Hyrum right. Hyrum identity uses his own right mask; pigmentation and living expression remain interpretation."
+    },
+    {
+      "name": "Parley Parker Pratt",
+      "status": "direct primary-reference scene work; no standalone generated master; not owner locked",
+      "owner_locked": false,
+      "master_asset": null,
+      "event_age": "31 in November 1838",
+      "appearance_and_evidence_limits": "\n\n[JSP biography](https://www.josephsmithpapers.org/person/parley-parker-pratt): born April 12, 1807; age 31 in November 1838. The downloaded `parley-pratt-c1850-1856-photo.jpg` is the JSP-published Church History Library photograph, circa 1850–1856, likely Marsena Cannon or Lewis W. Chaffin. He is approximately 43–49 in this reference, not 31.\n\nExact image: https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/450x600/per117---J1-page-72---02c_Parley_P_Pratt.jpg\n\nVisually inspected: broad facial structure, substantial jaw, prominent nose, receding hairline and parted hair, sideburns, no full beard. Translate that structure to age 31 with reduced age lines. The photograph cannot establish original eye, hair or skin pigmentation. No reliable written pigmentation or precise stature statement was verified in this bounded pass. Do not mistakenly use the black-hair/hazel-eye description of Parley Parker Pratt Jr.; that concerns his son. Likewise, Pratt's famous light-hair/blue-eye description concerns Joseph Smith, not Pratt himself.\n\n\n and scene\n\n[Saints, chapter 31](https://www.churchofjesuschrist.org/study/history/saints-v1/31-how-will-this-end?lang=eng) places this episode in Richmond before Liberty. [Pratt's autobiography, chapter 26](https://www.gutenberg.org/files/44896/44896-h/44896-h.htm) directly recalls lying beside Joseph, who stood to rebuke the guards. Pratt later describes being unchained from Joseph and Hyrum after the hearing. Thus both are supported companions, unlike invented named spectators. The account is retrospective and explicitly approximate in its remembered dialogue.\n\nPratt's account also describes a long beard after many months of imprisonment in 1839. Do not automatically apply that later condition to November 1838. Exact facial hair that night is not established. A cinematic composition with these three researched faces and other prisoners facing away is interpretive, not an authenticated arrangement. Keep them connected by plausible ankle chains, in a cold log room. No warming fire; modest incidental lighting is an artistic accommodation.\n",
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/history/saints-v1/31-how-will-this-end?lang=eng",
+        "https://www.gutenberg.org/files/44896/44896-h/44896-h.htm",
+        "https://www.josephsmithpapers.org/bc-jsp/content/jsp/images/content/library/images/450x600/per117---J1-page-72---02c_Parley_P_Pratt.jpg",
+        "https://www.josephsmithpapers.org/person/parley-parker-pratt"
+      ]
+    }
+  ]
+}
