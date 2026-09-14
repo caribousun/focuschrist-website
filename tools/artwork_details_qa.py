@@ -231,7 +231,7 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        hero_script = ("hero-details.js?v=20260914-atonement-1" if relative == "atonement.html" else "hero-details.js?v=20260914-joseph-likeness-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260914-evidences-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels")
+        hero_script = ("hero-details.js?v=20260914-sacred-hero-1" if relative == "atonement.html" else "hero-details.js?v=20260914-joseph-likeness-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260914-evidences-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels")
         for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260914-reopen-1", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")

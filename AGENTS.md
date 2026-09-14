@@ -72,6 +72,10 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 
 Wyatt reaffirmed on2026-09-14: every page and section must have unique artwork. Never reuse an already-created picture from another page, or repeat a picture in another section to fill space. Renaming, cropping, resizing, format conversion or a changed caption does not make a new original. Responsive variants and the detail/full-size views of one picture are one artwork, not additional artworks. Check source lineage and decoded pixels as well as filenames; inspect the complete page inventory. Preserve this rule across new chats and all future site work.
 
+## Hero artwork sizing mandate
+
+Measure the existing desktop and phone hero frames before generation. Preserve their width, height and opening layout. Compose new artwork for the measured aspect ratios, keeping faces, hands and essential scenes visible without stretching or empty borders. Use a responsive variant of the same artwork when mobile requires another ratio; extend only necessary surroundings when authorized, preserving approved identity and central composition. Inspect the actual desktop, phone and breakpoint framing. Responsive variants are one artwork, not new unique art. Never enlarge the banner to accommodate an unsuitable image.
+
 ## Resource thumbnail proportions and page rhythm
 
 - Every official resource image must use the shared `fc-resource-card__image` wrapper from `resource-cards.css`: a bounded 16:9 frame with `object-fit: contain`. Keep the image's true intrinsic width/height attributes; never allow responsive width with an unrelated fixed rendered height. Older 4:3 material must remain fully visible with letterboxing, never stretched or cropped to fake widescreen.

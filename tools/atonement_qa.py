@@ -17,6 +17,11 @@ records={r['asset']:r for r in json.loads((ROOT/'docs/art-study-image-review.jso
 heroes=[n for n in nodes if n.tag=='a' and n.attrs.get('data-hero-record')=='atonement']
 require(len(heroes)==1,'One dedicated Atonement hero is required')
 hero_asset=heroes[0].attrs['href']
+variants=records[hero_asset].get('responsive_variants',[])
+require(len(variants)==1,'Hero requires one reviewed mobile garden extension')
+for variant in variants:
+    require(hashlib.sha256((ROOT/variant['asset']).read_bytes()).hexdigest()==variant['sha256'],'Mobile hero must match reviewed bytes')
+    require(any(n.tag=='source' and n.attrs.get('srcset')==variant['asset'] and n.attrs.get('media')==variant['media'] for n in heroes[0].walk()),'Responsive hero source must match reviewed variant')
 require(hero_asset in records and records[hero_asset]['reviewed'] and records[hero_asset]['sha256']==hashlib.sha256((ROOT/hero_asset).read_bytes()).hexdigest(),'Hero must match its reviewed bytes')
 assets=[];hashes=[]
 for fig in figures:
