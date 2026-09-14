@@ -54,6 +54,12 @@ You wake up fresh each session. These files are your continuity:
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
+## Mandatory historical character identity
+
+- Follow `docs/historical-character-identity.md` before creating any new historical-person artwork.
+- EVERY new Joseph Smith image must use the exact owner-mandated `assets/identities/joseph-smith-owner-approved-20260914.png` as its actual image reference and pass direct likeness review. Do not replace or reinterpret that approved identity. Existing pictures may remain unchanged.
+- New Hyrum Smith, Oliver Cowdery, David Whitmer and other named historical people require reliable historical likeness references before generation.
+
 ## focusChrist media voice gate
 
 - Every new or edited picture, artwork panel, video card, thumbnail, and media introduction must be reviewed in the visitor-facing context before release.

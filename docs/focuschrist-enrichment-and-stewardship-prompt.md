@@ -1,5 +1,18 @@
 # focusChrist enrichment and stewardship — production execution prompt
 
+## Historical character, expression and gaze requirements
+
+The owner explicitly includes these requirements in the standing meaning of **enriched**, in addition to every existing requirement below:
+
+- Research the historical record for every named person before creation, using reliable images AND written descriptions. Keep sources for appearance, age at the event, hair/eyes/complexion/stature when known, clothing/hair practices and event context. Distinguish evidence from artistic interpretation. Follow `docs/historical-character-identity.md`.
+- Preserve each person's distinct researched likeness at the age relevant to the scene. Later-life photographs need a careful younger interpretation for early events; never carry elderly features into a young person's scene.
+- Every new Joseph Smith picture must use the exact owner-mandated master `assets/identities/joseph-smith-owner-approved-20260914.png`. Existing pictures may remain unchanged. Never replace the master without explicit owner direction.
+- A master fixes likeness, not expression. Expressions must fit the scene: Joseph's warmth and humor may appear where appropriate; focus, concern, prayer and hardship require their own natural expressions. Reject lifeless stock expressions and automatic broad smiles.
+- Mutual eye contact is mandatory when the scene calls for human engagement. Check head angles and both pupils. In reading/writing scenes, eyes should attend to the correct task. Review the full scene, face crops and phone rendering; preserve the interaction in crops.
+- Research Emma's lifetime portraits/photos and written appearance descriptions, including her long black hair and youthful beauty. Preserve her recognizable features and use a hairstyle appropriate to the scene.
+
+These checks are part of the enriched release gate for current work, future sessions and scheduled reviews. They do not replace the source, scripture, video, original-art, design-preservation, clarity, navigation or verification requirements below.
+
 ## Mandatory complete picture path
 
 Every new or reviewed study picture must open the familiar artwork study panel first, with the selected picture's own title, caption, clickable scripture/source pills, View Full-Size Image, relevant onward study, Continue Lesson, and Close. This applies to all supporting pictures inside Featured Art & Study destinations, not only gallery cards or heroes. Load the shared study-panel script and stylesheet in every applicable page template.
@@ -57,6 +70,8 @@ Write natural, precise prose. Remove long-dash prose punctuation, canned transit
 The three-day production check includes a small rotating enrichment review approximately every third run, with page coverage recorded so every section is considered over time. Add content only where it improves study. Check official sources at appropriate seasons for newly published General Conference, annual youth themes, and relevant study events. Distinguish announcements from published material, preserve useful history, and do not add content merely to show activity.
 
 ## Complete enriched trigger and artwork gate
+
+Owner reaffirmation (14 September 2026): every enriched picture requires hyperrealism, photographic clarity and individual historical/visual verification. Dramatic or cinematic scenes must remain lifelike photographs. Check every visible face, eye direction, hand, period garment, setting and documented participant against the actual sources and approved identities; reject drift and revise before release. Inspect original-resolution facial details and real desktop/phone rendering. For interacting people, pupils and head angles must establish actual eye contact. Follow the full historical-character rules in `docs/historical-character-identity.md`; do not treat attractive art or a successful generation as approval.
 
 The word enriched, whether used by Wyatt or the agent, invokes this entire directive automatically for any work on the site. All new imagery must have ultra-high clarity and near-photographic realism like the Home hero. Every Christ image must be compared side by side with the actual approved Home image; reject any identity drift before publication. Avoid accumulated section padding and excessive blank space; verify rendered gaps and first-screen boundaries. Preserve a recoverable checkpoint in the Focus brain, with Master aligned to the reusable directive.
 

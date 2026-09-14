@@ -11,7 +11,7 @@
         try {
             const url = new URL(raw, window.location.href);
             if (url.origin !== window.location.origin) return fallback;
-            const heroPaths = ["/church-history.html", "/answers.html", "/art.html", "/pioneers.html", "/about.html", "/watch.html", "/404.html", "/missionary.html", "/ask.html", "/index.html", "/art-study/suffer-the-little-children.html", "/art-study/be-still.html", "/art-study/the-living-christ.html", "/art-study/the-good-shepherd.html", "/answers/what-is-the-book-of-mormon.html", "/answers/are-latter-day-saints-christian.html", "/answers/what-happens-after-death.html", "/answers/who-was-joseph-smith.html", "/answers/why-latter-day-saints-build-temples.html", "/answers/divorce-and-faith.html", "/answers/jesus-christ-latter-day-saint-beliefs.html", "/answers/why-families-are-important.html", "/answers/bible-and-book-of-mormon-together.html", "/answers/faith-in-jesus-christ-during-trials.html", "/answers/prayer-and-personal-revelation.html", "/answers/death-of-a-child.html"];
+            const heroPaths = ["/book-of-mormon-evidences.html", "/church-history.html", "/answers.html", "/art.html", "/pioneers.html", "/about.html", "/watch.html", "/404.html", "/missionary.html", "/ask.html", "/index.html", "/art-study/suffer-the-little-children.html", "/art-study/be-still.html", "/art-study/the-living-christ.html", "/art-study/the-good-shepherd.html", "/answers/what-is-the-book-of-mormon.html", "/answers/are-latter-day-saints-christian.html", "/answers/what-happens-after-death.html", "/answers/who-was-joseph-smith.html", "/answers/why-latter-day-saints-build-temples.html", "/answers/divorce-and-faith.html", "/answers/jesus-christ-latter-day-saint-beliefs.html", "/answers/why-families-are-important.html", "/answers/bible-and-book-of-mormon-together.html", "/answers/faith-in-jesus-christ-during-trials.html", "/answers/prayer-and-personal-revelation.html", "/answers/death-of-a-child.html"];
             if (url.searchParams.get('hero') === '1' && heroPaths.includes(url.pathname)) {
                 return url.pathname + '?hero=1';
             }
@@ -38,6 +38,16 @@
         } catch (_error) { return fallback; }
     }
 
+    function safeStudyReturn(raw) {
+        const fallback = '/book-of-mormon-evidences.html';
+        try {
+            const url = new URL(raw || fallback, window.location.href);
+            const sections = ['explore-evidences', 'reading-paths', 'translation', 'manuscripts', 'english-language', 'witnesses', 'literary-patterns', 'alma-36', 'voices', 'ancient-context', 'open-questions', 'come-to-christ', 'study-method', 'source-library'];
+            if (url.origin !== window.location.origin || url.pathname !== fallback) return fallback;
+            return fallback + (sections.includes(url.hash.slice(1)) ? url.hash : '');
+        } catch (_error) { return fallback; }
+    }
+
     function ensureStyles() {
         if (document.getElementById('focuschrist-art-ask-context-styles')) return;
         const style = document.createElement('style');
@@ -55,19 +65,19 @@
         document.head.appendChild(style);
     }
 
-    function createContext(art, topic, returnUrl, watch) {
+    function createContext(art, topic, returnUrl, watch, study) {
         const card = document.querySelector('.ask-study-card');
         if (!card || card.querySelector('[data-focuschrist-art-context]')) return;
 
         const context = document.createElement('aside');
         context.className = 'ask-art-context';
         context.setAttribute('data-focuschrist-art-context', 'true');
-        context.setAttribute('aria-label', watch ? 'Watch study context' : 'Artwork study context');
+        context.setAttribute('aria-label', study ? 'Book of Mormon evidence study context' : watch ? 'Watch study context' : 'Artwork study context');
 
         const copy = document.createElement('div');
         const kicker = document.createElement('span');
         kicker.className = 'ask-art-context-kicker';
-        kicker.textContent = watch ? 'Continuing from Watch' : 'Studying artwork';
+        kicker.textContent = study ? 'Continuing your study' : watch ? 'Continuing from Watch' : 'Studying artwork';
         copy.appendChild(kicker);
 
         const title = document.createElement('strong');
@@ -86,7 +96,7 @@
         const back = document.createElement('a');
         back.className = 'ask-art-context-return';
         back.href = returnUrl;
-        back.textContent = watch ? 'Return to Watch study' : 'Return to this artwork';
+        back.textContent = study ? 'Return to Evidences study' : watch ? 'Return to Watch study' : 'Return to this artwork';
         back.setAttribute('data-focuschrist-art-return', 'true');
         context.appendChild(back);
         card.insertBefore(context, card.firstChild);
@@ -102,11 +112,11 @@
         document.body.appendChild(back);
     }
 
-    function prefillQuestion(art, topic, watch) {
+    function prefillQuestion(art, topic, watch, study) {
         const input = document.getElementById('userInput');
         if (!input || input.value.trim()) return;
         const subject = topic || art;
-        input.value = watch ? 'What do the scriptures and official Church resources teach about ' + subject + '?' : 'Help me study the artwork "' + art + '". What do the scriptures and official Church resources teach about ' + subject + '?';
+        input.value = study ? 'Help me study ' + subject + '. Please distinguish the original sources, scholarly interpretations, and questions that remain open.' : watch ? 'What do the scriptures and official Church resources teach about ' + subject + '?' : 'Help me study the artwork "' + art + '". What do the scriptures and official Church resources teach about ' + subject + '?';
         input.setAttribute('data-focuschrist-art-prefill', 'true');
         window.setTimeout(function () {
             try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
@@ -116,14 +126,15 @@
     function init() {
         const params = new URLSearchParams(window.location.search);
         const watch = (params.get('watch') || '').trim().slice(0, 180);
-        const art = (params.get('art') || watch).trim().slice(0, 180);
+        const study = !watch && !params.get('art') && params.get('study') === 'Book of Mormon Evidences';
+        const art = (params.get('art') || watch || (study ? 'Book of Mormon Evidences' : '')).trim().slice(0, 180);
         if (!art) return;
         const topic = (params.get('topic') || art).trim().slice(0, 180);
-        const returnUrl = watch ? safeWatchReturn(params.get('return')) : safeReturnUrl(params.get('return'), art);
+        const returnUrl = study ? safeStudyReturn(params.get('return')) : watch ? safeWatchReturn(params.get('return')) : safeReturnUrl(params.get('return'), art);
         ensureStyles();
-        createContext(art, topic, returnUrl, watch);
-        if (!watch) createPersistentReturn(art, returnUrl);
-        prefillQuestion(art, topic, watch);
+        createContext(art, topic, returnUrl, watch, study);
+        if (!watch && !study) createPersistentReturn(art, returnUrl);
+        prefillQuestion(art, topic, watch, study);
         document.documentElement.setAttribute('data-focuschrist-art-ask-context', 'ready');
     }
 

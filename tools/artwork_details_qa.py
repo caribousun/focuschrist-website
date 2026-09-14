@@ -194,7 +194,17 @@ def main() -> int:
     ]
     # Preserve the existing enriched-figure scope; supporting Art & Study
     # pictures are counted separately because they no longer carry viewer attrs.
-    viewer_triggers = sum(text.count("data-full-image-viewer") - text.count("data-enriched-study-art=") - text.count("data-five-picture-mandate") for text in viewer_documents)
+    # Only subtract enriched figures that actually contain a bare viewer trigger.
+    # Native topic panels (including History) have no such trigger to subtract.
+    viewer_triggers = sum(
+        text.count("data-full-image-viewer")
+        - sum("data-full-image-viewer" in figure for figure in re.findall(
+            r'<figure\b[^>]*data-enriched-study-art=[\s\S]*?</figure>', text))
+        - sum("data-full-image-viewer" in anchor for anchor in re.findall(
+            r'<a\b[^>]*data-enriched-study-art=[^>]*>', text))
+        - text.count("data-five-picture-mandate")
+        for text in viewer_documents
+    )
     if viewer_triggers != 20:
         errors.append(f"same-page full-image viewer must have exactly 20 scoped triggers, found {viewer_triggers}")
     for relative in ART_STUDY_PAGES:
@@ -221,7 +231,7 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        hero_script = "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels"
+        hero_script = ("hero-details.js?v=20260914-evidences-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels")
         for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260905-viewport", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
@@ -238,8 +248,8 @@ def main() -> int:
                 errors.append(f"{relative}: missing hero study metadata: {marker}")
         if 'data-full-image-viewer' in hero_link:
             errors.append(f"{relative}: hero must open study before full-size viewer")
-    if hero_pages != 32:
-        errors.append(f"expected32 image-first pages including404, found{hero_pages}")
+    if hero_pages != 33:
+        errors.append(f"expected33 image-first pages including404 and the Evidences study, found{hero_pages}")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):
