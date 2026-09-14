@@ -46,4 +46,10 @@ require('href="atonement.html"' in (ROOT/'answers.html').read_text(encoding='utf
 require('<div class="atonement-reading"><p></p></div>' not in text,'Empty reading blocks create artificial gaps')
 for n in nodes:
     if n.has('fc-actions'):require(n.has('atonement-chapter-actions'),'Study actions must share centered spacing')
+for n in nodes:
+    if n.has('atonement-chapter-actions'):
+        require(all(a.has('fc-button') for a in n.children if a.tag=='a'),'Chapter controls must use consistent pills')
+css=(ROOT/'atonement.css').read_text(encoding='utf-8')
+require('720px' not in css and 'nth-child(odd)' not in css,'Resource cards must not introduce singleton or odd-card widths')
+require('.atonement-reading { width: 100%; max-width: none;' in css,'Reading must align with the shared content rail')
 print('ATONEMENT QA PASS: chapters,26distinct reviewed visuals,all standard works,reflection,safety and shared study hooks')
