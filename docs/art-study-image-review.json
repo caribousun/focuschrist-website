@@ -508,6 +508,56 @@
         "gaze_review": "Corrected Joseph/listener mutual gaze visible at full/phone; unverified distant spire removed. Root+independent review passed.",
         "review_notes": "Joseph face exact owner master; costume Maudsleyreferenceonly. Generic1843reviewconversationinterpreted; no claim exactrecordedencounter."
       }
+    ],
+    "joseph-smith-likeness.html": [
+      {
+        "slot": "writing",
+        "asset": "assets/page-art/joseph-smith-likeness/writing.webp",
+        "sha256": "e290f1273ab8fa3b52a22b66f23f22869beed1b0bdedb1a92a753942fe5abf06",
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "tone": "quiet concentration",
+        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "generated_source_file": "exec-6d16db95-f106-413a-a4f7-b4e80900155a.png",
+        "review_notes": "Root and independent reviewer compared original full images to the owner-locked master; coherent anatomy, expression, period interpretation and photographic clarity. Faces and phone rendering reviewed before release. Scenes are interpretations, not documented events."
+      },
+      {
+        "slot": "warmth",
+        "asset": "assets/page-art/joseph-smith-likeness/warmth.webp",
+        "sha256": "6c4d38d5b8542510705ded4a428baa55860dec258f4251d93f5842136bf3a3a2",
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "tone": "gentle warmth",
+        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "generated_source_file": "exec-00a0d68b-08c7-495d-a277-4180b028b308.png",
+        "review_notes": "Root and independent reviewer compared original full images to the owner-locked master; coherent anatomy, expression, period interpretation and photographic clarity. Faces and phone rendering reviewed before release. Scenes are interpretations, not documented events."
+      },
+      {
+        "slot": "portrait-sitting",
+        "asset": "assets/page-art/joseph-smith-likeness/portrait-sitting.webp",
+        "sha256": "778a85a5f8de2eb691a9aef57ffc31ba1160e6b9f8d52d7b5c2014e6a137efba",
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "tone": "patient attentiveness",
+        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "generated_source_file": "exec-b441832a-6fee-4891-a159-f86c2badd2ab.png",
+        "review_notes": "Root and independent reviewer compared original full images to the owner-locked master; coherent anatomy, expression, period interpretation and photographic clarity. Faces and phone rendering reviewed before release. Scenes are interpretations, not documented events."
+      },
+      {
+        "slot": "conversation",
+        "asset": "assets/page-art/joseph-smith-likeness/conversation.webp",
+        "sha256": "9b64ba65797cc96f39eecbc6627ad2ca3ac1511fb1857b4b66f30d01628d871f",
+        "width": 1536,
+        "height": 1024,
+        "reviewed": true,
+        "tone": "engaged conversation",
+        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "generated_source_file": "exec-03fbf4b1-e8f5-45e6-a89b-bbbfa403f050.png",
+        "review_notes": "Root and independent reviewer compared original full images to the owner-locked master; coherent anatomy, expression, period interpretation and photographic clarity. Faces and phone rendering reviewed before release. Scenes are interpretations, not documented events."
+      }
     ]
   }
 }

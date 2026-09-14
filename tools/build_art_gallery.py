@@ -60,7 +60,7 @@ def category(page):
     if page.startswith('/art-study/') or page == '/art.html':
         return 'Art & Study'
     return {'/index.html': 'Home', '/missionary.html': 'Missionary Work',
-            '/church-history.html': 'Church History', '/pioneers.html': 'Pioneers',
+            '/church-history.html': 'Church History', '/joseph-smith-likeness.html': 'Church History', '/pioneers.html': 'Pioneers',
             '/come-follow-me.html': 'Come, Follow Me', '/watch.html': 'Watch',
             '/about.html': 'About', '/ask.html': 'Ask', '/answers.html': 'Gospel Studies',
             '/general-conference.html': 'General Conference'}.get(page, 'Gospel Studies')

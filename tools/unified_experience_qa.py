@@ -9,7 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ROOT_PAGES = [
     "index.html", "ask.html", "answers.html", "art.html", "church-history.html", "missionary.html", "pioneers.html",
-    "about.html", "watch.html", "404.html", "general-conference.html",
+    "about.html", "watch.html", "404.html", "general-conference.html", "joseph-smith-likeness.html",
 ]
 NESTED_PAGES = sorted(
     [p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html")]

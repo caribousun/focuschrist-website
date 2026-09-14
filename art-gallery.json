@@ -32,6 +32,7 @@
     "/come-follow-me.html",
     "/general-conference.html",
     "/index.html",
+    "/joseph-smith-likeness.html",
     "/missionary.html",
     "/pioneers.html",
     "/watch.html"
@@ -119,6 +120,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/church-history/kirtland-temple.webp\"]:has(img[src=\"assets/page-art/church-history/kirtland-temple-960.webp\"])",
           "title": "A house built through sacrifice"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "A moment of warmth",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/warmth-960.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/warmth.webp",
+      "alt": "An artistic interpretation of Joseph Smith resting a hand on a wooden fence in warm daylight",
+      "id": "art-867edfb106f6",
+      "occurrences": [
+        {
+          "id": "source-f97ad5f57892",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/warmth.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/warmth-960.webp\"])",
+          "title": "A moment of warmth"
         }
       ],
       "categories": [
@@ -233,6 +256,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A quiet page",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/writing-960.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/writing.webp",
+      "alt": "An artistic interpretation of Joseph Smith writing beside a sunlit window",
+      "id": "art-536451e8d1e8",
+      "occurrences": [
+        {
+          "id": "source-561c877d1dae",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/writing.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/writing-960.webp\"])",
+          "title": "A quiet page"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -493,6 +538,28 @@
       ],
       "categories": [
         "Missionary Work"
+      ]
+    },
+    {
+      "title": "Across the table",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/conversation-960.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/conversation.webp",
+      "alt": "An artistic interpretation of Joseph Smith speaking with two unnamed listeners around a table",
+      "id": "art-30cf86e83e2c",
+      "occurrences": [
+        {
+          "id": "source-361ed4a2b96d",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/conversation.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/conversation-960.webp\"])",
+          "title": "Across the table"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -4537,6 +4604,28 @@
       ]
     },
     {
+      "title": "Sitting in the light",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/portrait-sitting.webp",
+      "alt": "An imagined Joseph Smith portrait sitting, with an artist’s blurred hand in the foreground",
+      "id": "art-e844a54c76a5",
+      "occurrences": [
+        {
+          "id": "source-9be8f80e412f",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/portrait-sitting.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp\"])",
+          "title": "Sitting in the light"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Stay close and listen",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/listening-in-grief-800.webp",
@@ -4838,6 +4927,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The Face Behind the History",
+      "category": "Church History",
+      "thumbnail": "/assets/identities/joseph-smith-owner-approved-20260914.png",
+      "fullImage": "/assets/identities/joseph-smith-owner-approved-20260914.png",
+      "alt": "The artistic Joseph Smith portrait adopted by focusChrist",
+      "id": "art-5fb216d048a9",
+      "occurrences": [
+        {
+          "id": "source-b11affe42eb8",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/identities/joseph-smith-owner-approved-20260914.png\"]",
+          "title": "The Face Behind the History"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -5560,15 +5671,15 @@
     }
   ],
   "stats": {
-    "artworks": 239,
-    "occurrences": 268,
+    "artworks": 244,
+    "occurrences": 273,
     "byKind": {
       "artwork": 41,
       "full": 1,
-      "hero": 32,
+      "hero": 33,
       "legacy": 39,
       "missionary": 9,
-      "topic": 149
+      "topic": 153
     }
   }
 }

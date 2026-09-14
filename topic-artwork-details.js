@@ -66,7 +66,9 @@
             return Array.from(container.querySelectorAll('a[href]')).filter(function (link) {
                 try {
                     const url = new URL(link.href);
-                    return url.hostname === 'www.churchofjesuschrist.org' && !link.querySelector('img');
+                    return url.protocol === 'https:' && ['www.churchofjesuschrist.org',
+                        'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org'].includes(url.hostname)
+                        && !link.querySelector('img');
                 } catch (error) { return false; }
             });
         }

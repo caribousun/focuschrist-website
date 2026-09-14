@@ -2,6 +2,11 @@
     'use strict';
     if (typeof HTMLDialogElement === 'undefined' || document.getElementById('heroDetailDialog')) return;
     const records = {
+        'joseph-likeness': {
+            title: 'The Face Behind the History',
+            paragraphs: ['Light brown hair, a white neckcloth and a dark coat frame the Joseph Smith portrait adopted by focusChrist. This artistic likeness guides the face used in the new scenes on this page.', 'Explore the historical death masks and the creative choices behind our portrait. The adopted image offers a consistent artistic interpretation rather than an authenticated historical photograph.'],
+            source: 'https://churchhistorylibrary.churchofjesuschrist.org/joseph-and-hyrum-death-masks?lang=eng', sourceLabel: 'Explore the Historical Death Masks', study: 'joseph-smith-likeness.html#our-portrait', studyLabel: 'How We Developed the Portrait'
+        },
         'bom-evidences': {
             title: 'Listen, Learn, and Come unto Christ',
             paragraphs: ['Jesus Christ turns toward a woman while others listen nearby. The shared gaze places patient attention at the heart of this imagined gathering.', 'Let the warmth of the encounter invite you into the record itself: read the Savior’s words, bring sincere questions, and consider how your study can lead to a closer relationship with Him.'],
