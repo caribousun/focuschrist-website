@@ -67,10 +67,13 @@ const decode = x => x.replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const pills = [...pillBlock[1].matchAll(/<a[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(m => [decode(m[1]),decode(m[2])]);
 const foundational = new Set(['god-our-heavenly-father.html','restored-church-of-jesus-christ.html']);
 const expectedPills = new Set(fs.readdirSync(path.join(root,'answers'))
-  .filter(file => file.endsWith('.html') && !foundational.has(file))
+  .filter(file => file.endsWith('.html'))
   .map(file => 'answers/' + file));
-expectedPills.add('general-conference.html');
-assert.deepEqual(new Set(pills.map(([href]) => href)),expectedPills,'all discovered non-foundational Answers plus General Conference are covered');
+const studyDestinations = ['general-conference.html','book-of-mormon-evidences.html',
+  'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html',
+  'church-history.html#aaronic-priesthood-restoration','church-history.html#melchizedek-priesthood-restoration'];
+for (const href of studyDestinations) expectedPills.add(href);
+assert.deepEqual(new Set(pills.map(([href]) => href)),expectedPills,'all discovered Answers and enriched study destinations are covered');
 function check(h,label) {
   const active = h.header.querySelectorAll('a[aria-current]');
   assert.equal(active.length,2,label+': exactly one active link per navigation surface');
@@ -79,7 +82,8 @@ function check(h,label) {
   assert.ok(h.menu.querySelectorAll('a').some(n => /(^|\/)answers\.html$/.test(n.getAttribute('href'))),'Answers parent retained in menu');
   assert.ok(h.desktop.querySelectorAll('a').some(n => /(^|\/)answers\.html$/.test(n.getAttribute('href'))),'Answers parent retained in desktop navigation');
 }
-for (const [href,label] of pills) {
+for (const [href,label] of pills.filter(([href]) =>
+  href === 'general-conference.html' || (href.startsWith('answers/') && !foundational.has(href.slice(8))))) {
   const url = new URL(href,'https://focuschrist.com/answers.html');
   const h = createHarness(url.pathname,url.hash);h.context.initCurrentStudyNavigation();check(h,label);
   const size=h.menu.children.length;h.listeners.hashchange();h.listeners.hashchange();
@@ -129,8 +133,14 @@ assert.equal(liveMenu.classList.contains('show'),true,'non-link menu content mus
 documentEvents.keydown({key:'Escape'});
 assert.equal(liveMenu.classList.contains('show'),false);assert.equal(trigger.focused,true);
 
-// Every pill opens its own page; old bookmarks migrate on load and hashchange.
-assert.ok(pills.every(([href]) => !href.includes('#')), 'topic pills must open dedicated pages');
+// Topics may open a dedicated page or a named section in an enriched study.
+for (const [href] of pills) {
+  const url = new URL(href,'https://focuschrist.com/');
+  assert.equal(url.origin,'https://focuschrist.com','topic destination remains local');
+  const target = path.join(root,url.pathname.slice(1));
+  assert.ok(fs.existsSync(target),'topic page exists: '+href);
+  if (url.hash) assert.ok(fs.readFileSync(target,'utf8').includes('id="'+decodeURIComponent(url.hash.slice(1))+'"'),'topic section exists: '+href);
+}
 assert.equal(new Set(pills.map(([href]) => href)).size,pills.length,'topic pages must be distinct');
 const legacySource = source.slice(source.indexOf('const conferenceLegacyAnchors'),source.indexOf('const RESPECTFUL_QUESTION_RESPONSE'));
 for (const [oldPath,oldHash,destination] of [
