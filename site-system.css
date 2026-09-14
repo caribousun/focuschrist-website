@@ -70,10 +70,8 @@ body.fc-site {
     margin: 0;
     min-height: 100vh;
     font-family: 'Segoe UI', Tahoma, sans-serif;
-    background:
-        radial-gradient(circle at 84% 4%, rgba(134,175,200,.14), transparent 30rem),
-        radial-gradient(ellipse at 12% 30%, rgba(222,172,70,.10), transparent 36rem),
-        linear-gradient(180deg, #17323f 0%, var(--fc-bg) 42%, var(--fc-bg-deep) 100%);
+    /* One uninterrupted canvas: section wrappers never restart this color. */
+    background: #17323f;
     color: var(--fc-cream);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
@@ -1252,24 +1250,25 @@ body.fc-site main :is(.ask-conversation-section, .ask-topic-section,
     margin-top: var(--fc-body-section-gap);
 }
 
-/* A continuous body field, with accents fading at both section boundaries.
-   These outer wrappers never include the approved hero or opening. */
-body.fc-site main > :is(.fc-section, .section, .qa-section, .pioneer-visual-chapter) {
-    background: linear-gradient(180deg, transparent, rgba(134,175,200,.025) 30%, rgba(134,175,200,.025) 70%, transparent);
+/* Continuous body canvas: all layout wrappers are transparent.
+   Cards, artwork overlays and opening content keep their own visual treatment. */
+body.fc-site main > :is(.fc-section, .section, .qa-section, .pioneer-visual-chapter,
+    .cfm-section, .fc-conference-section),
+body.fc-site main > .fc-section#ask-history,
+body.fc-site main.cfm-main {
+    background: none;
     border-block-color: transparent;
     box-shadow: none;
 }
-body.fc-site main > :is(.fc-section--warm, .fc-cfm-home) {
-    background: radial-gradient(ellipse 65% 45% at 50% 50%, rgba(113,148,122,.035), transparent);
-}
-body.fc-site main > .fc-section--dark {
-    background: radial-gradient(ellipse 65% 45% at 50% 50%, rgba(6,20,28,.06), transparent);
-}
-/* Page-specific chapter rules have higher specificity than the shared wrapper. */
-body.fc-site main > .fc-section#ask-history {
-    background: radial-gradient(ellipse 65% 45% at 50% 50%, rgba(113,148,122,.035), transparent);
+body.fc-site main .gc-block,
+body.fc-site main .gc-jumps,
+body.fc-site main .likeness-chapter {
     border-block-color: transparent;
-    box-shadow: none;
+}
+body.fc-site .fc-page-intro { border-bottom-color: transparent; }
+body.fc-site footer[data-focuschrist-footer="standard"] {
+    background: none;
+    border-top-color: transparent;
 }
 
 /* One outer gutter; reading and gallery maximum widths retain their purpose. */
@@ -1295,7 +1294,7 @@ body.fc-site main > :is(.cfm-section, .cfm-jump, .fc-gallery-entry) {
     padding-inline: var(--fc-body-gutter);
 }
 body.fc-site main > .cfm-section { border-top-color: transparent; }
-body.fc-site main > .likeness-chapter { border-top-color: rgba(210,185,121,.16); }
+body.fc-site main > .likeness-chapter { border-top-color: transparent; }
 body.fc-site main > .fc-container--standard:has(> .watch-topic-index) {
     padding-bottom: var(--fc-body-section-space);
 }

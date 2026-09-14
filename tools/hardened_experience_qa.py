@@ -74,7 +74,7 @@ def main() -> int:
         "--fc-ember:",
         "--fc-sky:",
         "Harvest Sky",
-        "radial-gradient(circle at 84% 4%",
+        "background: #17323f;",
         "#ask-question",
     ), errors)
 
