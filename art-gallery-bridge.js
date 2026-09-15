@@ -16,6 +16,15 @@
         if (!source || source.page !== (location.pathname === '/' ? '/index.html' : location.pathname)) throw new Error('Unknown artwork source');
         const trigger = document.querySelector(source.selector);
         if (!trigger) throw new Error('Artwork no longer on this page');
+        const sensitiveGate = trigger.closest('details.atonement-sensitive');
+        if (sensitiveGate) {
+            // A shared/deep link must never count as consent to reveal the scene.
+            if (embedded) { tell('navigate', {url: new URL(source.page + '#' + sensitiveGate.id, location.origin).href}); return; }
+            sensitiveGate.open = false;
+            sensitiveGate.scrollIntoView({block: 'center', behavior: 'instant'});
+            sensitiveGate.querySelector('summary').focus({preventScroll: true});
+            return;
+        }
         if (params.has('gallery-position')) {
             trigger.scrollIntoView({block: 'center', behavior: 'instant'});
             trigger.focus({preventScroll: true});

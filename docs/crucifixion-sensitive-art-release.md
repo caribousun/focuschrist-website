@@ -1,0 +1,11 @@
+# Approved Crucifixion artwork and sensitive-scene reveal
+
+Wyatt approved both latest live-action rear-view scenes, then explicitly requested website publication with blur and a respectful click-to-view warning. The original frontal scenes in the Atonement sacrifice chapter are replaced by lossless WebP exports of those exact approved pixels. Source and delivery hashes are recorded in `art-study-image-review.json`.
+
+Each scene starts in a separate closed native details element. Its summary presents a strongly blurred, dimmed preview, warning and Show image control. Opening reveals the existing artwork/study trigger; Hide image conceals it again. No reveal preference is stored. Gallery and search use a text cover and lead to the closed gate. Shared gallery links and programmatic artwork activation cannot bypass a closed gate. Cache versions were advanced after independent review identified the returning-visitor risk.
+
+Validation: Atonement and sensitive-art contract, media voice, standard layout, gallery/search freshness, search runtime, site structure/flow, artwork detail/enrichment, global artwork uniqueness, source-thumbnail coverage, featured art runtime and historical source runtime passed. Real Chrome at 1440x1000 and 390x844 verified keyboard reveal, independent gates, correct image proportions, study panel, nested full-size viewer, close/hide, reload reset, gallery routes and direct gallery links. With JavaScript disabled, initial concealment and native keyboard reveal/hide passed. Independent reviewer approved the final diff. Production checks are recorded in the shared Focus Current State after release.
+
+The delivered wide images are 2168x725 and 1672x941. The requested 1080x1920 portrait derivatives remain unfinished/unapproved and are not included. Existing approved hero art is unchanged. Prior assets remain available for rollback; revert this release to restore the former page references.
+
+Wyatt separately requires subtle healed nail scars in visible palms and wrists in every newly created post-Resurrection Christ picture. The mandate is saved in the Master Brain, Focus Autonomous Operating System, Hardened Enrichment directive and repository authoring instructions. A system-wide adjustment of existing images is explicitly deferred. Instruction publication is not evidence that another agent has read it.

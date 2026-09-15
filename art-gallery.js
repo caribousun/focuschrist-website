@@ -12,6 +12,7 @@
     const clean = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
     function originalURL(source) {
         const url = new URL(source.page, location.origin);
+        if (source.sensitiveGate) { url.hash = source.sensitiveGate; return url; }
         url.searchParams.set('gallery-art', source.id);
         return url;
     }
@@ -32,6 +33,7 @@
     }
     function open(art, trigger, source) {
         source = source || art.occurrences[0];
+        if (source.sensitiveGate) { location.assign(originalURL(source).href); return; }
         active = { art, source };
         returnFocus = trigger;
         const url = originalURL(source);
@@ -127,8 +129,13 @@
             link.className = 'fc-gallery-picture'; link.href = originalURL(art.occurrences[0]);
             link.setAttribute('aria-label', 'Explore artwork: ' + art.title);
             link.setAttribute('aria-haspopup', 'dialog');
+            if (art.occurrences[0].sensitiveGate) {
+                link.removeAttribute('aria-haspopup');
+                link.setAttribute('aria-label', 'Sensitive scene: ' + art.title + '. Open the study to choose whether to view.');
+            }
             const image = document.createElement('img');
             image.src = art.thumbnail; image.alt = art.alt || art.title; image.loading = 'lazy'; image.decoding = 'async';
+            if (art.occurrences[0].sensitiveGate) image.alt = 'Sensitive scene: The Crucifixion. Open the study to choose whether to view.';
             link.appendChild(image);
             link.addEventListener('click', event => {
                 if (event.button || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;

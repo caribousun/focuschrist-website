@@ -13,6 +13,10 @@ Pass this actual image as the identity reference for every new Joseph scene. Pre
 
 The image is an artistic reconstruction informed by the Church History Museum's Joseph and Hyrum death masks. Joseph's masks supplied primary proportions; Hyrum's were comparative. Owner approval establishes the website character identity, not an authenticated historical photograph or forensic certainty.
 
+## Resurrected Jesus Christ — owner mandate
+
+Every newly created post-Resurrection depiction must show slight, healed nail scars in both palms and both wrists where visible. Carry this into each generation/edit prompt and visually inspect the visible hands and wrists before owner review or publication. Keep scars subtle, with no fresh blood or open wounds; preserve the approved Christ likeness, natural anatomy, pose and perspective. Do not force hidden palms or wrists into view. This records the owner's artistic requirement rather than archaeological proof of nail number or placement. The system-wide review and adjustment of existing pictures is deferred; do not start bulk changes without Wyatt resuming that work.
+
 ## Other historical people
 
 Owner reaffirmation, 14 September 2026: hyperrealism, photographic clarity, historical accuracy and identity consistency are mandatory for EVERY new picture. Cinematic composition must still look like a convincing live-action photograph. Do not accept painterly, waxy, softened, generic or drifting faces. Compare the complete scene and original-resolution face details with the actual identity references, then inspect the delivered phone rendering. Verify eyes, hands, clothing, period setting and the scene's documented participants. Any definite failure requires revision before insertion or release. The owner rejected the first tight Richmond composition because it omitted the chained companions who witnessed Joseph's rebuke; its replacement must include those witnesses and unmistakable interpersonal gaze.

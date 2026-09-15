@@ -136,12 +136,16 @@ def build():
             if not kind:
                 continue
             full = asset(page, full)
+            sensitive_gate = attrs.get('data-sensitive-scene')
+            if sensitive_gate:
+                thumb = attrs['data-sensitive-preview']
             thumb = asset(page, thumb) if thumb else full
             title = title or alt or page_title
             entries.append({'fullImage': full, 'thumbnail': thumb, 'title': title, 'alt': alt or title,
                             'category': category(page), 'occurrence': {
                                 'id': stable('source-', page + '|' + kind + '|' + selector),
-                                'page': page, 'pageTitle': page_title, 'category': category(page), 'kind': kind, 'selector': selector, 'title': title}})
+                                'page': page, 'pageTitle': page_title, 'category': category(page), 'kind': kind, 'selector': selector, 'title': title,
+                                **({'sensitiveGate': sensitive_gate} if sensitive_gate else {})}})
     # The full-size URL is authoritative; exact duplicate files share an identity too.
     # Numeric responsive suffixes are removed only for grouping matching image families.
     groups = {}

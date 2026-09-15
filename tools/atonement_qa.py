@@ -58,3 +58,22 @@ css=(ROOT/'atonement.css').read_text(encoding='utf-8')
 require('720px' not in css and 'nth-child(odd)' not in css,'Resource cards must not introduce singleton or odd-card widths')
 require('.atonement-reading { width: 100%; max-width: none;' in css,'Reading must align with the shared content rail')
 print('ATONEMENT QA PASS: chapters,26distinct reviewed visuals,all standard works,reflection,safety and shared study hooks')
+
+# A shared link or gallery preview is not consent to view a sensitive scene.
+gates=[n for n in nodes if n.tag=='details' and n.has('atonement-sensitive')]
+require(len(gates)==2,'Both approved Crucifixion pictures need separate reveal controls')
+catalog=json.loads((ROOT/'art-gallery.json').read_text(encoding='utf-8'))['artworks']
+search=json.loads((ROOT/'site-search-index.json').read_text(encoding='utf-8'))['records']
+for gate in gates:
+    require('open' not in gate.attrs,'Sensitive pictures must start concealed')
+    summary=next(n for n in gate.children if n.tag=='summary')
+    require('Sensitive scene: The Crucifixion' in summary.text() and 'Show image' in summary.text() and 'Hide image' in summary.text(),'Respectful explicit reveal and hide controls required')
+    trigger=next(n for n in gate.walk() if n.tag=='a' and 'data-sensitive-scene' in n.attrs)
+    require(trigger.parent.tag=='figure','Revealed picture must retain normal study trigger')
+    require(trigger.attrs['data-sensitive-scene']==gate.attrs['id'],'Gallery must route to the matching gate')
+    entry=next(a for a in catalog if a['fullImage']=='/'+trigger.attrs['href'])
+    require(entry['thumbnail']=='/'+trigger.attrs['data-sensitive-preview'],'Gallery thumbnail must be the safe text cover')
+    require(all(o.get('sensitiveGate')==gate.attrs['id'] for o in entry['occurrences']),'Gallery must preserve reveal requirement')
+    require(next(r for r in search if r['url']=='/art-gallery.html?picture='+entry['id'])['thumbnail']==entry['thumbnail'],'Search must use the safe gallery cover')
+require("sensitiveGate && !sensitiveGate.open" in (ROOT/'topic-artwork-details.js').read_text(),'Shared artwork controller must reject closed-gate activation')
+print('SENSITIVE ART QA PASS: two closed independent gates, safe gallery/search covers and protected study activation')
