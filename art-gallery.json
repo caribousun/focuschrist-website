@@ -913,6 +913,28 @@
       ]
     },
     {
+      "title": "Beside my brother",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/brothers-960.webp",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/brothers.webp",
+      "alt": "Joseph smiles at Hyrum with an arm around his shoulders; both wear shirts with rolled sleeves and suspenders",
+      "id": "art-9e1c46263385",
+      "occurrences": [
+        {
+          "id": "source-ce05796c976f",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/brothers.webp\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/brothers-960.webp\"])",
+          "title": "Beside my brother"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Blessed Be the Name of the Lord",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/new/blessed-be-the-name-of-the-lord-job-1-21.webp",
@@ -2805,6 +2827,50 @@
       ]
     },
     {
+      "title": "Hyrum: an artistic reconstruction",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png",
+      "alt": "Artistic reconstruction of Hyrum Smith at age forty-four",
+      "id": "art-1c1178b09dc1",
+      "occurrences": [
+        {
+          "id": "source-dbe3dea58d2c",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png\"])",
+          "title": "Hyrum: an artistic reconstruction"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "Hyrum: the historical cast",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
+      "alt": "Frontal museum photograph of Hyrum Smith’s Dibble death mask",
+      "id": "art-ff71d6d35e67",
+      "occurrences": [
+        {
+          "id": "source-6d3c0adaeffc",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg\"])",
+          "title": "Hyrum: the historical cast"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "In Gethsemane",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/atonement-gethsemane-approved-20260914.webp",
@@ -3352,6 +3418,59 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Joseph: our adopted portrait",
+      "category": "Church History",
+      "thumbnail": "/assets/identities/joseph-smith-owner-approved-20260914.png",
+      "fullImage": "/assets/identities/joseph-smith-owner-approved-20260914.png",
+      "alt": "The adopted artistic portrait of Joseph Smith",
+      "id": "art-5fb216d048a9",
+      "occurrences": [
+        {
+          "id": "source-f7d576189cb8",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[id=\"joseph-comparison-open\"]",
+          "title": "Joseph: our adopted portrait"
+        },
+        {
+          "id": "source-b11affe42eb8",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/identities/joseph-smith-owner-approved-20260914.png\"]",
+          "title": "The Face Behind the History"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
+      "title": "Joseph: the historical cast",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
+      "fullImage": "/assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
+      "alt": "Frontal museum photograph of Joseph Smith’s Dibble death mask",
+      "id": "art-99a0288641e3",
+      "occurrences": [
+        {
+          "id": "source-31eef5f57374",
+          "page": "/joseph-smith-likeness.html",
+          "pageTitle": "The Face Behind the History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg\"]:has(img[src=\"assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg\"])",
+          "title": "Joseph: the historical cast"
+        }
+      ],
+      "categories": [
+        "Church History"
       ]
     },
     {
@@ -5482,28 +5601,6 @@
       ]
     },
     {
-      "title": "The Face Behind the History",
-      "category": "Church History",
-      "thumbnail": "/assets/identities/joseph-smith-owner-approved-20260914.png",
-      "fullImage": "/assets/identities/joseph-smith-owner-approved-20260914.png",
-      "alt": "The artistic Joseph Smith portrait adopted by focusChrist",
-      "id": "art-5fb216d048a9",
-      "occurrences": [
-        {
-          "id": "source-b11affe42eb8",
-          "page": "/joseph-smith-likeness.html",
-          "pageTitle": "The Face Behind the History",
-          "category": "Church History",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"assets/identities/joseph-smith-owner-approved-20260914.png\"]",
-          "title": "The Face Behind the History"
-        }
-      ],
-      "categories": [
-        "Church History"
-      ]
-    },
-    {
       "title": "The First Vision",
       "category": "Church History",
       "thumbnail": "/assets/history/first-vision-1400.webp",
@@ -6333,15 +6430,15 @@
     }
   ],
   "stats": {
-    "artworks": 274,
-    "occurrences": 303,
+    "artworks": 278,
+    "occurrences": 308,
     "byKind": {
       "artwork": 41,
       "full": 1,
       "hero": 34,
       "legacy": 39,
       "missionary": 9,
-      "topic": 182
+      "topic": 187
     }
   }
 }

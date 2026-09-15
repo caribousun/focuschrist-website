@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = 'joseph-smith-likeness.html'
 MASTER = 'assets/identities/joseph-smith-owner-approved-20260914.png'
 MASTER_SHA = '518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827'
-SLOTS = {'portrait-sitting', 'writing', 'warmth', 'conversation'}
+SLOTS = {'portrait-sitting', 'writing', 'warmth', 'conversation', 'brothers'}
 SECTIONS = {'living-portrait', 'death-masks', 'portraits-from-life',
             'our-portrait', 'face-in-motion', 'continue-study'}
 SOURCES = {
@@ -64,8 +64,8 @@ def check():
     require(any(urlsplit(s).path == 'topic-artwork-details.js' for s in scripts), 'native artwork panel script missing')
     require(any(urlsplit(s).path == 'topic-artwork-details.css' for s in styles), 'native artwork panel stylesheet missing')
     figures = [n for n in nodes if n.tag == 'figure' and n.attrs.get('data-enriched-study-art', '').startswith('likeness-')]
-    require(len(figures) == 4 and {n.attrs['data-enriched-study-art'] for n in figures} == {'likeness-' + s for s in SLOTS},
-            'four creative scene inventory differs')
+    require(len(figures) == 5 and {n.attrs['data-enriched-study-art'] for n in figures} == {'likeness-' + s for s in SLOTS},
+            'five creative scene inventory differs')
     expected_assets = {f'assets/page-art/joseph-smith-likeness/{s}.webp' for s in SLOTS}
     for figure in figures:
         slot = figure.attrs['data-enriched-study-art'].removeprefix('likeness-')
@@ -94,8 +94,32 @@ def check():
             with Image.open(thumb) as im:
                 require(im.format == 'WEBP' and im.width == 960, slot + ': invalid responsive image')
 
+    comparisons = [n for n in nodes if n.tag == 'figure' and n.has('likeness-comparison-item')]
+    require(len(comparisons) == 4, 'two portrait and own-mask pairs required')
+    comparison_assets = [MASTER, 'assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg',
+                         'assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png',
+                         'assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg']
+    for figure, asset in zip(comparisons, comparison_assets):
+        anchors = [n for n in figure.children if n.tag == 'a']
+        require(len(anchors) == 1 and anchors[0].attrs.get('href') == asset,
+                'comparison must open its own unchanged portrait or mask: ' + asset)
+        if anchors:
+            require(anchors[0].attrs.get('aria-haspopup') == 'dialog' and
+                    bool(anchors[0].attrs.get('data-topic-study')),
+                    'comparison native panel and study return required: ' + asset)
+        images = [n for n in figure.walk() if n.tag == 'img']
+        with Image.open(ROOT / asset) as im:
+            require(len(images) == 1 and (images[0].attrs.get('width'), images[0].attrs.get('height')) ==
+                    (str(im.width), str(im.height)), 'comparison dimensions differ: ' + asset)
+        require(any(n.tag == 'figcaption' and n.text().strip() for n in figure.children),
+                'comparison caption missing: ' + asset)
+    comparison_record = json.loads((ROOT / 'docs/likeness-mask-comparison-review.json').read_text(encoding='utf-8'))
+    for entry in comparison_record['references']:
+        require(hashlib.sha256((ROOT / entry['asset']).read_bytes()).hexdigest() == entry['sha256'],
+                'comparison reference bytes changed: ' + entry['asset'])
+
     entries = json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages'].get(PAGE, [])
-    require(len(entries) == 4 and {e.get('slot') for e in entries} == SLOTS, 'four scene review records required')
+    require(len(entries) == 5 and {e.get('slot') for e in entries} == SLOTS, 'five scene review records required')
     require({e.get('asset') for e in entries} == expected_assets, 'reviewed assets differ from scene contract')
     for entry in entries:
         asset = entry.get('asset', '')
@@ -129,4 +153,4 @@ if __name__ == '__main__':
     errors = check()
     if errors:
         raise SystemExit('\n'.join(errors))
-    print('Joseph Smith likeness QA PASS: approved hero, four reviewed native artwork panels, six study stops, reflections, primary sources and reciprocal routes')
+    print('Joseph Smith likeness QA PASS: approved hero, five reviewed native artwork panels, six study stops, reflections, primary sources and reciprocal routes')

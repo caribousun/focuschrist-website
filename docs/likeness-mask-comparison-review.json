@@ -1,0 +1,36 @@
+{
+  "status": "Owner approved Hyrum reconstruction and exact casual brothers scene; authorized publication.",
+  "references": [
+    {
+      "asset": "assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
+      "sha256": "0354d0114d31c09b9a1735a027c8eeee2b08dc435c129d70b9d3fb41384f070c",
+      "dimensions": [
+        610,
+        886
+      ]
+    },
+    {
+      "asset": "assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
+      "sha256": "115362472822ab048333fdc6115992eb4dd87fd2925c7d968b12841b8cab4464",
+      "dimensions": [
+        612,
+        886
+      ]
+    },
+    {
+      "asset": "assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png",
+      "sha256": "93cc6192e6b06a6bdba588e2585e38791977ae776cd0e3bb237f96ad9fe490ad",
+      "dimensions": [
+        1122,
+        1402
+      ]
+    }
+  ],
+  "canonical_joseph": "assets/identities/joseph-smith-owner-approved-20260914.png",
+  "mask_provenance": "Unmodified embedded JPEGs from BYU Studies Physical Evidence at Carthage Jail, Figure 18, printed p30. Figure caption identifies Hyrum left and Joseph right; courtesy Museum of Church History and Art.",
+  "brothers_source": "exec-389d3c8c-9b88-4e2a-a7fa-19a22e22e5d9.png",
+  "brothers_png_sha256": "fcd666d914bb497ee6747715983b1f026dd74af74b07c603b8947e2352808c16",
+  "brothers_webp_sha256": "8655582d10ad6c33f3973df15844123190053c1d8fa1d4175c14b5a0dcf43159",
+  "brothers_owner_approved": true,
+  "hyrum_reconstruction_owner_approved": true
+}
