@@ -51,8 +51,9 @@ document.dispatchEvent(new window.Event('DOMContentLoaded'));
 const panel = document.getElementById('topicArtworkDetailDialog');
 const click = node => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
 let checked = 0;
-for (const figure of document.querySelectorAll('figure[data-enriched-study-art^="likeness-"]')) {
-    const expected = [...figure.querySelectorAll('figcaption a[href]')].map(a => a.href);
+for (const figure of document.querySelectorAll('figure[data-enriched-study-art^="likeness-"], figure.likeness-comparison-item')) {
+    const expected = [...figure.querySelectorAll('figcaption a[href]')].filter(a =>
+        ['www.churchofjesuschrist.org', 'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org'].includes(new URL(a.href).hostname)).map(a => a.href);
     assert(expected.length > 0, 'Each real scene supplies its historical source');
     click(figure.querySelector(':scope > a'));
     assert(panel.open, 'Real picture opens the native study panel');
@@ -60,7 +61,7 @@ for (const figure of document.querySelectorAll('figure[data-enriched-study-art^=
         figure.dataset.enrichedStudyArt + ': exact historical source must survive into panel');
     panel.close(); checked++;
 }
-assert.equal(checked, 4);
+assert.equal(checked, 9, 'Five scenes and four comparison pictures retain native source panels');
 click(fixture.querySelector(':scope > a'));
 const pills = [...panel.querySelectorAll('[data-topic-art-source]')];
 assert.deepEqual(pills.map(a => a.href), allowed, 'Only exact HTTPS institutional hosts become source pills');
