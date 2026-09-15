@@ -127,6 +127,8 @@ def build():
                     raise ValueError(page + ': artwork has no recognized native viewer: ' + attrs['href'])
                 full = attrs['href']
                 selector = 'a' + attr('href', full) + ':has(img' + attr('src', image.attrs['src']) + ')'
+                if attrs.get('id'):
+                    selector = 'a' + attr('id', attrs['id'])
                 container = next((p for p in parents if p.tag == 'figure' or p.has('fc-marriage-era') or p.has('fc-foundation-card')), None)
                 caption = first(container, lambda n: n.tag == 'figcaption' or n.has('fc-marriage-era__copy') or n.has('fc-foundation-card-copy'))
                 heading = first(caption, lambda n: n.tag in {'h2', 'h3', 'h4', 'strong'})

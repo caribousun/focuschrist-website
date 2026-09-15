@@ -609,6 +609,18 @@
         "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
         "generated_source_file": "exec-03fbf4b1-e8f5-45e6-a89b-bbbfa403f050.png",
         "review_notes": "Root and independent reviewer compared original full images to the owner-locked master; coherent anatomy, expression, period interpretation and photographic clarity. Faces and phone rendering reviewed before release. Scenes are interpretations, not documented events."
+      },
+      {
+        "slot": "brothers",
+        "asset": "assets/page-art/joseph-smith-likeness/brothers.webp",
+        "responsive": "assets/page-art/joseph-smith-likeness/brothers-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "8655582d10ad6c33f3973df15844123190053c1d8fa1d4175c14b5a0dcf43159",
+        "tone": "relaxed brotherly affection, shared smiles and an arm around the shoulders",
+        "reviewed": true,
+        "owner_approved": true,
+        "approval_note": "Wyatt approved exact casual candidate exec-389d3c8c-9b88-4e2a-a7fa-19a22e22e5d9.png and directed upload and completion."
       }
     ],
     "atonement.html": [
