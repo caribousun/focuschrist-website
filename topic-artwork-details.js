@@ -138,6 +138,12 @@
         }
 
         function showStudy(trigger, record) {
+            const sensitiveGate = trigger.closest('details.atonement-sensitive');
+            if (sensitiveGate && !sensitiveGate.open) {
+                sensitiveGate.scrollIntoView({ block: 'center', behavior: 'auto' });
+                sensitiveGate.querySelector('summary').focus({ preventScroll: true });
+                return;
+            }
             title.textContent = record.title;
             image.src = trigger.href;
             image.alt = trigger.dataset.fullImageAlt || trigger.querySelector('img').alt;

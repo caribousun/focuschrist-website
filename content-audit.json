@@ -1277,7 +1277,7 @@
       "path": "atonement.html",
       "status": "verified",
       "reviewed_on": "2026-09-14",
-      "review_standard": "Independent editorial review of eleven connected chapters against linked standard works and official Church resources. Reviewed visual captions, scene-appropriate Christ identity, symbolic interpretation, resurrection and eternal life distinction, safe restitution and victim support. Source-matched thumbnail review recorded in docs/atonement/resource-review.md. Exact source links retained; artwork is interpretive, not authenticated history. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained.",
+      "review_standard": "Independent editorial review of eleven connected chapters against linked standard works and official Church resources. Reviewed visual captions, scene-appropriate Christ identity, symbolic interpretation, resurrection and eternal life distinction, safe restitution and victim support. Source-matched thumbnail review recorded in docs/atonement/resource-review.md. Exact source links retained; artwork is interpretive, not authenticated history. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained. Crucifixion update: reviewed the two approved rear-view captions against visible composition and John 19; respectful optional-view warnings add no historical or doctrinal claims.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/?lang=eng",
         "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
@@ -1382,7 +1382,7 @@
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng"
       ],
-      "published_text_sha256": "65b3e40262cf554c53627d55d47c3a217f711e7f4176ee4f7f12bd25964ad8dc"
+      "published_text_sha256": "f6cc409407870043c78a1c2eb5f504801f81c887d702a759f7740076901db468"
     }
   ]
 }

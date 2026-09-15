@@ -721,19 +721,20 @@
     {
       "title": "At the cross",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/atonement/cross-v11-960.webp",
-      "fullImage": "/assets/page-art/atonement/cross-v11.webp",
-      "alt": "Mary and the beloved disciple stand near Jesus beneath a darkened sky. Pause with John’s account of His love and His finished work.",
-      "id": "art-bfeb0b2f3691",
+      "thumbnail": "/assets/page-art/atonement/sensitive-scene-preview.png",
+      "fullImage": "/assets/page-art/atonement/cross-rear-approved.webp",
+      "alt": "From above and behind the cross, we look toward the people gathered below and Jerusalem beyond. John records the Savior’s love and His finished work.",
+      "id": "art-f7fbc5005dcb",
       "occurrences": [
         {
-          "id": "source-3d9a95426e00",
+          "id": "source-4bc4424cb115",
           "page": "/atonement.html",
           "pageTitle": "The Atonement of Jesus Christ",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/atonement/cross-v11.webp\"]:has(img[src=\"assets/page-art/atonement/cross-v11-960.webp\"])",
-          "title": "At the cross"
+          "selector": "a[href=\"assets/page-art/atonement/cross-rear-approved.webp\"]:has(img[src=\"assets/page-art/atonement/cross-rear-approved-960.webp\"])",
+          "title": "At the cross",
+          "sensitiveGate": "view-cross-rear-approved"
         }
       ],
       "categories": [
@@ -6123,19 +6124,20 @@
     {
       "title": "Those who stayed nearby",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/atonement/cross-mother-disciple-960.webp",
-      "fullImage": "/assets/page-art/atonement/cross-mother-disciple.webp",
-      "alt": "A mother and the disciple look upward. John records the Savior’s care for them from the cross.",
-      "id": "art-f82de0314de8",
+      "thumbnail": "/assets/page-art/atonement/sensitive-scene-preview.png",
+      "fullImage": "/assets/page-art/atonement/cross-angled-rear-approved.webp",
+      "alt": "From beside and behind the cross, we see those who have stayed nearby. John records the Savior’s tender care for His mother and the beloved disciple.",
+      "id": "art-7bbad019202c",
       "occurrences": [
         {
-          "id": "source-448924d66183",
+          "id": "source-652f47286a99",
           "page": "/atonement.html",
           "pageTitle": "The Atonement of Jesus Christ",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/atonement/cross-mother-disciple.webp\"]:has(img[src=\"assets/page-art/atonement/cross-mother-disciple-960.webp\"])",
-          "title": "Those who stayed nearby"
+          "selector": "a[href=\"assets/page-art/atonement/cross-angled-rear-approved.webp\"]:has(img[src=\"assets/page-art/atonement/cross-angled-rear-approved-960.webp\"])",
+          "title": "Those who stayed nearby",
+          "sensitiveGate": "view-cross-angled-rear-approved"
         }
       ],
       "categories": [

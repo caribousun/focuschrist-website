@@ -56,6 +56,8 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 
 ## Mandatory historical character identity
 
+- Every newly created image of Jesus Christ after His Resurrection must show subtle, healed nail scars in both palms and both wrists wherever those areas are visible. Include this requirement in generation/edit prompts and inspect visible hands and wrists before approval or publication. Preserve natural anatomy, the approved likeness and scene-appropriate perspective; do not add fresh blood, open wounds, extra marks or expose naturally hidden areas. This is Wyatt's required artistic depiction, not a claim that archaeology establishes an exact nail arrangement. A system-wide review of existing resurrected-Christ images is deferred at Wyatt's direction; do not begin bulk revisions now.
+
 - Follow `docs/historical-character-identity.md` before creating any new historical-person artwork.
 - EVERY new Joseph Smith image must use the exact owner-mandated `assets/identities/joseph-smith-owner-approved-20260914.png` as its actual image reference and pass direct likeness review. Do not replace or reinterpret that approved identity. Existing pictures may remain unchanged.
 - New Hyrum Smith, Oliver Cowdery, David Whitmer and other named historical people require reliable historical likeness references before generation.

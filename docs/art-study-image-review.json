@@ -631,10 +631,12 @@
         "reviewed": true
       },
       {
-        "asset": "assets/page-art/atonement/cross-mother-disciple.webp",
-        "sha256": "8b530a6c6cd46a70d8a489925f175eba6cdac9a6f7e8e616bed55fda2da428e8",
-        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
-        "reviewed": true
+        "asset": "assets/page-art/atonement/cross-angled-rear-approved.webp",
+        "sha256": "9646a15aa123fa70df450d0b71f72888e418b4bf317bed7dbccfbc9a20ff655a",
+        "tone": "Somber elevated rear view with natural live-action crowd detail. Owner approved both latest realism versions; facial likeness is not fully visible from behind.",
+        "reviewed": true,
+        "owner_approved": true,
+        "source_sha256": "356ef993f8573c527b769bf34008faa2b8babeb018fdb0fa90c72a061f985116"
       },
       {
         "asset": "assets/page-art/atonement/empty-tomb.webp",
@@ -782,10 +784,12 @@
         "reviewed": true
       },
       {
-        "asset": "assets/page-art/atonement/cross-v11.webp",
-        "sha256": "ec2c37c521b0ead20fdeb9cba8637ef5f81197278ce645c8ef6a7c42cd2db35e",
-        "tone": "Scene-appropriate expression and natural photographic detail; independently reviewed against original Home identity where Christ appears.",
-        "reviewed": true
+        "asset": "assets/page-art/atonement/cross-rear-approved.webp",
+        "sha256": "990a24a1307bcbb4f3e2afa7e86c5a7df64300fba82df22e9fb29ce8630c2086",
+        "tone": "Somber elevated rear view with natural live-action crowd detail. Owner approved both latest realism versions; facial likeness is not fully visible from behind.",
+        "reviewed": true,
+        "owner_approved": true,
+        "source_sha256": "566d6aa635001f7edff629ff078b49821735351cca2765c688674a96fc5ea69d"
       }
     ],
     "missionary.html": [
