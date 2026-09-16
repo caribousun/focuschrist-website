@@ -375,14 +375,26 @@
             answer.appendChild(sourceBox);
         }
 
+        let group = sourceBox.querySelector('.sources-group--focuschrist');
+        if (!group) {
+            group = document.createElement('div');
+            group.className = 'sources-group sources-group--focuschrist';
+            const groupTitle = document.createElement('div');
+            groupTitle.className = 'sources-group-title';
+            groupTitle.textContent = 'Related focusChrist study';
+            const list = document.createElement('div');
+            list.className = 'sources-list';
+            group.appendChild(groupTitle);
+            group.appendChild(list);
+            sourceBox.appendChild(group);
+        }
+
         const link = document.createElement('a');
         link.className = 'source-link source-link--internal';
         link.href = new URL(related.url, window.location.href).href;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
         link.textContent = 'focusChrist Answers: ' + related.label;
         link.setAttribute('data-focuschrist-answer-source', related.url);
-        sourceBox.appendChild(link);
+        group.querySelector('.sources-list').appendChild(link);
     }
 
     function enhanceLatest(chatBox) {
