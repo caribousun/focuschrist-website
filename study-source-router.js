@@ -392,7 +392,7 @@
         const link = document.createElement('a');
         link.className = 'source-link source-link--internal';
         link.href = new URL(related.url, window.location.href).href;
-        link.textContent = 'focusChrist Answers: ' + related.label;
+        link.textContent = 'Read ' + related.label + ' →';
         link.setAttribute('data-focuschrist-answer-source', related.url);
         group.querySelector('.sources-list').appendChild(link);
     }

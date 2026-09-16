@@ -102,7 +102,7 @@ if versions != {"20260909-22"}:
 
 cache_markers = {
     "site-common.js": (common, "study-journey.js?v=20260909-openai-only-2"),
-    "study-journey.js": (journey, "study-source-router.js?v=20260916-answer-source-2"),
+    "study-journey.js": (journey, "study-source-router.js?v=20260916-answer-source-3"),
     "ask.html experience": (ask, "ask-experience.js?v=20260910-followup-visibility-5"),
     "ask.html reviewed knowledge": (ask, "reviewed-ask-knowledge.js?v=20260910-holy-ghost-subject-2"),
     "pioneers.html reviewed knowledge": (pioneers_html, "reviewed-ask-knowledge.js?v=20260909-openai-only-2"),
