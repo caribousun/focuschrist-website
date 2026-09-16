@@ -480,13 +480,13 @@
 }
 
 
-/* Production hardening: every concrete theme Watch route carries a corresponding video thumbnail. */
-.watch-path-card[data-watch-path="watch"] {
+/* Each theme path card carries a visual entry point, not an empty media slot. */
+.watch-path-card {
     position: relative;
     overflow: hidden;
     padding-top: 142px;
 }
-.watch-path-card[data-watch-path="watch"]::before {
+.watch-path-card::before {
     content: "";
     position: absolute;
     inset: 0 0 auto 0;
@@ -496,7 +496,7 @@
     background-position: center 42%;
     filter: saturate(.96) contrast(1.03) brightness(.92);
 }
-.watch-path-card[data-watch-path="watch"]::after {
+.watch-path-card::after {
     content: "";
     position: absolute;
     top: 76px;
@@ -506,4 +506,4 @@
     background: linear-gradient(180deg, transparent, rgba(18,42,53,.98));
     pointer-events: none;
 }
-.watch-path-card[data-watch-path="watch"] > * { position: relative; z-index: 1; }
+.watch-path-card > * { position: relative; z-index: 1; }
