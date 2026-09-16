@@ -448,6 +448,16 @@ body {
 .ask-chat-box .sources-group--focuschrist .sources-group-title {
     color: var(--ask-gold-light);
 }
+.ask-chat-box .sources-group--focuschrist {
+    margin-top: 18px;
+    padding: 14px 16px 16px;
+    border: 1px solid rgba(240,195,106,0.4);
+    border-radius: 13px;
+    background: linear-gradient(135deg, rgba(240,195,106,0.09), rgba(16,42,53,0.32));
+}
+.ask-chat-box .sources-group--focuschrist .sources-group-title {
+    margin-bottom: 10px;
+}
 .ask-chat-box .sources-list {
     display: flex;
     flex-wrap: wrap;
@@ -471,11 +481,15 @@ body {
     transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
 }
 .ask-chat-box .source-link--internal {
-    width: 100%;
-    border-color: var(--ask-gold-light);
-    background: linear-gradient(135deg, rgba(240,195,106,0.2), rgba(224,170,62,0.08));
-    color: var(--ask-gold-light);
+    width: fit-content;
+    min-width: min(320px, 100%);
+    border-color: #f6d99d;
+    background: linear-gradient(135deg, #f1c45f, #dfa536);
+    color: #122a35;
     font-weight: 700;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(5,17,23,0.25), inset 0 1px 0 rgba(255,255,255,0.24);
 }
 .ask-chat-box .source-link:hover,
 .ask-chat-box .source-link:focus-visible {
@@ -490,8 +504,14 @@ body {
 }
 .ask-chat-box .source-link--internal:hover,
 .ask-chat-box .source-link--internal:focus-visible {
-    background: rgba(240,195,106,0.28);
-    color: var(--ask-cream);
+    background: linear-gradient(135deg, #ffda7e, #edb83f);
+    color: #10252f;
+}
+
+@media (max-width: 720px) {
+    .ask-chat-box .sources-group--focuschrist .source-link--internal {
+        width: 100%;
+    }
 }
 
 .ask-related-study {
