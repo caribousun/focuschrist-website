@@ -480,7 +480,8 @@
 }
 
 
-/* Each theme path card carries a visual entry point, not an empty media slot. */
+/* Production hardening: every concrete theme Watch route carries a corresponding video thumbnail.
+   Each theme path card carries a visual entry point, not an empty media slot. */
 .watch-path-card {
     position: relative;
     overflow: hidden;

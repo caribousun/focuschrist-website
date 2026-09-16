@@ -354,6 +354,40 @@ body.fc-site .fc-page-intro .fc-button--primary { color: #1d2a2e !important; }
 body.fc-site .fc-page-intro .fc-button--primary:hover,
 body.fc-site .fc-page-intro .fc-button--primary:focus-visible { color: #18262b !important; }
 
+/* Elevated secondary calls to action keep the gold primary visually dominant
+   while giving supporting paths a clear, intentional destination cue. */
+body.fc-site .fc-page-intro .fc-button:not(.fc-button--primary) {
+    border-color: rgba(240,195,106,.78);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,0)),
+        linear-gradient(135deg, rgba(34,72,85,.92), rgba(10,28,36,.82));
+    color: #f3d494 !important;
+    box-shadow:
+        inset 0 0 0 1px rgba(240,195,106,.12),
+        inset 0 1px 0 rgba(255,255,255,.08),
+        0 8px 18px rgba(5,17,23,.22);
+}
+body.fc-site .fc-page-intro .fc-button:not(.fc-button--primary)::after {
+    content: "→";
+    margin-left: 10px;
+    color: var(--fc-gold-light);
+    font-size: 1.12em;
+    line-height: 1;
+}
+body.fc-site .fc-page-intro .fc-button:not(.fc-button--primary):hover,
+body.fc-site .fc-page-intro .fc-button:not(.fc-button--primary):focus-visible {
+    border-color: var(--fc-gold-light);
+    background:
+        linear-gradient(180deg, rgba(240,195,106,.11), rgba(240,195,106,.035)),
+        linear-gradient(135deg, rgba(38,80,94,.96), rgba(12,31,40,.88));
+    color: #fff2dc !important;
+    box-shadow:
+        inset 0 0 0 1px rgba(240,195,106,.2),
+        inset 0 1px 0 rgba(255,255,255,.1),
+        0 10px 22px rgba(5,17,23,.3),
+        0 0 0 1px rgba(240,195,106,.08);
+}
+
 .fc-page-intro {
     margin-top: -1px;
     padding: clamp(24px, 3.2vw, 38px) 0 clamp(30px, 4vw, 46px);
