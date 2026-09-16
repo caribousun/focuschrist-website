@@ -18,6 +18,10 @@
     backdrop-filter: blur(12px);
 }
 
+.fc-art-study-page .cta-row {
+    justify-content: center;
+}
+
 .fc-art-study-page .fc-study-nav a {
     display: inline-flex;
     min-height: 40px;
