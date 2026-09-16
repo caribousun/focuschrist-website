@@ -81,4 +81,9 @@ for (const query of ['what does Mark say about baptism?', 'what does Song of Sol
     const sources = window.focusChristSourceRouter.sourcesForQuestion(query);
     assert(sources.some((source) => source.url.includes('/study/scriptures?')), 'router omitted Scriptures hub: ' + query);
 }
+const jesusStudy = window.focusChristSourceRouter.answerStudySourceForQuestion('Who is Jesus Christ?');
+assert(jesusStudy && jesusStudy.url === 'answers/jesus-christ-latter-day-saint-beliefs.html', 'Jesus question did not map to the internal Answers study');
+const griefStudy = window.focusChristSourceRouter.answerStudySourceForQuestion('How can I support someone grieving after the death of a child?');
+assert(griefStudy && griefStudy.url === 'answers/death-of-a-child.html', 'specific child-loss question did not win its internal Answers study match');
+assert(!window.focusChristSourceRouter.answerStudySourceForQuestion('Why is the sky blue?'), 'unrelated question received an internal Answers study link');
 console.log('Source integrity runtime QA PASS');

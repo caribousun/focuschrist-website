@@ -143,7 +143,7 @@
 
     function loadVerifiedSourceRouter() {
         const path = window.location.pathname.toLowerCase();
-        if (path.endsWith('/ask.html') || path.endsWith('/pioneers.html')) appendDynamicScript('study-source-router.js?v=20260909-openai-only-2', 'data-focuschrist-source-router');
+        if (path.endsWith('/ask.html') || path.endsWith('/pioneers.html')) appendDynamicScript('study-source-router.js?v=20260916-answer-source-1', 'data-focuschrist-source-router');
     }
 
     function loadArtStudyRouter() {
