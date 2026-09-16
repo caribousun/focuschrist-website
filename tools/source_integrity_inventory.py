@@ -109,7 +109,7 @@ cache_markers = {
     "pioneers.html": (pioneers_html, "pioneer-experience.js?v=20260913-pioneer-composer-8"),
     "church-history.html common": (history_html, "site-common.js?v=20260914-opening-invitation-1"),
     "church-history.html reviewed knowledge": (history_html, "reviewed-ask-knowledge.js?v=20260909-openai-only-2"),
-    "church-history.html router": (history_html, "study-source-router.js?v=20260916-answer-source-3"),
+    "church-history.html router": (history_html, "study-source-router.js?v=20260916-answer-source-2"),
     "church-history.html experience": (history_html, "church-history-experience.js?v=20260903-16"),
 }
 for label, (text, marker) in cache_markers.items():
