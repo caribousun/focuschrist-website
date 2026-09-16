@@ -18,13 +18,15 @@
         kicker: 'Study',
         title: 'Jesus Christ',
         copy: 'Continue into a permanent focusChrist Answer about His divine Sonship, Atonement, Resurrection, mission, and promised return.',
-        href: 'answers/jesus-christ-latter-day-saint-beliefs.html'
+        href: 'answers/jesus-christ-latter-day-saint-beliefs.html',
+        thumb: 'assets/watch/resurrected.jpg'
       },
       continue: {
         kicker: 'Art & Study',
         title: 'The Living Christ',
         copy: 'Continue through visual study centered on the risen and living Savior, then follow the related scripture and study paths.',
-        href: 'art-study/the-living-christ.html'
+        href: 'art-study/the-living-christ.html',
+        thumb: 'art/thumbs/The-Living-Christ.webp'
       }
     },
     prayer: {
@@ -39,13 +41,15 @@
         kicker: 'Study',
         title: 'Prayer & Personal Revelation',
         copy: 'Study prayer, guidance from God, recognizing spiritual impressions, and faithful waiting when an answer is not immediate.',
-        href: 'answers/prayer-and-personal-revelation.html'
+        href: 'answers/prayer-and-personal-revelation.html',
+        thumb: 'assets/watch/pillars.jpg'
       },
       continue: {
         kicker: 'Art & Study',
         title: 'Be Still',
         copy: 'Continue with Psalm 46:10 and a visual study path about trusting God and becoming still amid uncertainty.',
-        href: 'art-study/be-still.html'
+        href: 'art-study/be-still.html',
+        thumb: 'assets/watch/light.jpg'
       }
     },
     book: {
@@ -60,13 +64,15 @@
         kicker: 'Study',
         title: 'What Is the Book of Mormon?',
         copy: 'Continue into a permanent Answer about the Book of Mormon as another testament of Jesus Christ and its relationship to the Bible.',
-        href: 'answers/what-is-the-book-of-mormon.html'
+        href: 'answers/what-is-the-book-of-mormon.html',
+        thumb: 'assets/watch/americas.jpg'
       },
       continue: {
         kicker: 'Continue',
         title: 'Bible & Book of Mormon Together',
         copy: 'Explore how Latter-day Saints study two distinct scriptural witnesses together and what each contributes.',
-        href: 'answers/bible-and-book-of-mormon-together.html'
+        href: 'answers/bible-and-book-of-mormon-together.html',
+        thumb: 'assets/watch/angels.jpg'
       }
     },
     temples: {
@@ -81,13 +87,15 @@
         kicker: 'Study',
         title: 'Why Latter-day Saints Build Temples',
         copy: 'Study worship, covenants, ordinances, eternal families, and service for the dead in a permanent focusChrist Answer.',
-        href: 'answers/why-latter-day-saints-build-temples.html'
+        href: 'answers/why-latter-day-saints-build-temples.html',
+        thumb: 'assets/watch/family.jpg'
       },
       continue: {
         kicker: 'Ask',
         title: 'Ask Your Temple Question',
         copy: 'Continue with the specific question you have now and explore the answer with the focusChrist Ask experience.',
-        href: 'ask.html'
+        href: 'ask.html',
+        thumb: 'assets/watch/song.jpg'
       }
     }
   };
