@@ -302,7 +302,12 @@ def main() -> int:
             fail(errors, f"{study_path}: official scripture/Church study pathway missing")
         if study_path not in art:
             fail(errors, f"art.html missing featured study link for {study_path}")
-        local_images = [img for img in parser.images if img.get("src", "").startswith("../art/")]
+        approved_shared_hero = "../assets/heroes/home-christ-signature-approved-20260907.png"
+        local_images = [
+            img for img in parser.images
+            if img.get("src", "").startswith("../art/")
+            or (study_path == "art-study/the-living-christ.html" and img.get("src") == approved_shared_hero)
+        ]
         if not local_images:
             fail(errors, f"{study_path}: local gallery artwork image missing")
 

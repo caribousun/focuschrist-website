@@ -519,6 +519,15 @@
           "title": "A Welcoming Savior"
         },
         {
+          "id": "source-559ae1a7edd4",
+          "page": "/art-study/the-living-christ.html",
+          "pageTitle": "The Living Christ",
+          "category": "Art & Study",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
+          "title": "The Living Christ"
+        },
+        {
           "id": "source-474c8900aa1d",
           "page": "/index.html",
           "pageTitle": "Welcome to focusChrist",
@@ -529,6 +538,7 @@
         }
       ],
       "categories": [
+        "Art & Study",
         "Gospel Studies",
         "Home"
       ]
@@ -5744,15 +5754,6 @@
           "category": "Art & Study",
           "kind": "artwork",
           "selector": "a[data-artwork-detail=\"art-living-christ\"]",
-          "title": "The Living Christ"
-        },
-        {
-          "id": "source-55267da1b916",
-          "page": "/art-study/the-living-christ.html",
-          "pageTitle": "The Living Christ",
-          "category": "Art & Study",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../art/The-Living-Christ.png\"]",
           "title": "The Living Christ"
         },
         {

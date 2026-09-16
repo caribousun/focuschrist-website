@@ -32,7 +32,7 @@ dialog.showModal = () => { dialog.open = true; };
 dialog.close = () => { dialog.open = false; dialog.listeners.close(); };
 
 const cases = [
-    ['living-christ-art', '/art/The-Living-Christ.png', 'The Living Christ', '/art-study/the-living-christ.html#scripture-study'],
+    ['living-christ-art', '/assets/heroes/home-christ-signature-approved-20260907.png', 'The Living Christ', '/art-study/the-living-christ.html#scripture-study'],
     ['good-shepherd-art', '/art/The-Good-Shephard.jpg', 'The Good Shepherd', '/art-study/the-good-shepherd.html#scripture-study'],
     ['little-children-art', '/art/Suffer-the-Little-Children.jpg', 'Suffer the Little Children', '/art-study/suffer-the-little-children.html#scripture-study'],
     ['be-still-art', '/art/Be-Still.png', 'Be Still', '/art-study/be-still.html#psalm-context'],

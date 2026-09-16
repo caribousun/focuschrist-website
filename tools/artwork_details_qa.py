@@ -24,7 +24,7 @@ ART_STUDY_PAGES = (
     "art-study/be-still.html",
 )
 ART_STUDY_HEROES = {
-    "art-study/the-living-christ.html": ("../art/The-Living-Christ.png", "living-christ-art"),
+    "art-study/the-living-christ.html": ("../assets/heroes/home-christ-signature-approved-20260907.png", "living-christ-art"),
     "art-study/the-good-shepherd.html": ("../art/The-Good-Shephard.jpg", "good-shepherd-art"),
     "art-study/suffer-the-little-children.html": ("../art/Suffer-the-Little-Children.jpg", "little-children-art"),
     "art-study/be-still.html": ("../art/Be-Still.png", "be-still-art"),
