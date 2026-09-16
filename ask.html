@@ -148,7 +148,7 @@
     <script src="reviewed-ask-knowledge.js?v=20260910-holy-ghost-subject-2" defer></script>
     <script src="ask-experience.js?v=20260910-followup-visibility-5" defer></script>
     <link rel="stylesheet" href="site-header.css?v=20260914-christ-center">
-    <link rel="stylesheet" href="ask-experience.css?v=20260916-answer-source-pills-1">
+    <link rel="stylesheet" href="ask-experience.css?v=20260916-answer-source-pills-2">
     <link rel="stylesheet" href="site-system.css?v=20260914-standard-rails-1">
     <link rel="stylesheet" href="artwork-details.css?v=20260909-warm">
     <link rel="stylesheet" href="full-image-viewer.css?v=20260905-viewport">
@@ -1133,23 +1133,37 @@
         sourceTitle.textContent = 'Sources';
         sourceBox.appendChild(sourceTitle);
 
+        const officialGroup = document.createElement('div');
+        officialGroup.className = 'sources-group sources-group--official';
+        const officialTitle = document.createElement('div');
+        officialTitle.className = 'sources-group-title';
+        officialTitle.textContent = 'Official Church sources';
+        const officialList = document.createElement('div');
+        officialList.className = 'sources-list';
+        officialGroup.appendChild(officialTitle);
+        officialGroup.appendChild(officialList);
+
         sources.forEach(function (source) {
             if (!source || !source.url) return;
             try {
                 const parsed = new URL(source.url, window.location.href);
                 if (parsed.protocol !== 'https:' && parsed.protocol !== 'http:') return;
                 const link = document.createElement('a');
-                link.className = 'source-link';
+                const isInternal = parsed.origin === window.location.origin;
+                link.className = isInternal ? 'source-link source-link--internal' : 'source-link';
                 link.href = parsed.href;
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
+                if (!isInternal) {
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                }
                 link.textContent = String(source.text || 'Source');
-                sourceBox.appendChild(link);
+                officialList.appendChild(link);
             } catch (error) {
                 console.warn('Skipped invalid source URL');
             }
         });
 
+        if (officialList.querySelector('.source-link')) sourceBox.appendChild(officialGroup);
         if (sourceBox.querySelector('.source-link')) message.appendChild(sourceBox);
     }
 

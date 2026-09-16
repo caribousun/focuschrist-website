@@ -333,7 +333,7 @@ def main() -> int:
     ):
         if ask.count(marker) != 1:
             fail(errors, f"Ask redesigned experience marker missing/duplicated: {marker}")
-    if '<link rel="stylesheet" href="ask-experience.css?v=20260916-answer-source-pills-1">' not in ask:
+    if '<link rel="stylesheet" href="ask-experience.css?v=20260916-answer-source-pills-2">' not in ask:
         fail(errors, "Ask experience stylesheet missing")
     if '<script src="ask-experience.js?v=20260910-followup-visibility-5" defer></script>' not in ask:
         fail(errors, "Ask experience controller missing")
