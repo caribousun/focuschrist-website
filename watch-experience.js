@@ -11,7 +11,8 @@
         kicker: 'Watch',
         title: 'Jesus Christ Video Collection',
         copy: 'Return to the Savior-centered collection above and choose the message that fits your study.',
-        href: '#life-of-christ'
+        href: '#life-of-christ',
+        thumb: 'assets/watch/because.jpg'
       },
       study: {
         kicker: 'Study',
@@ -31,7 +32,8 @@
         kicker: 'Watch',
         title: 'Prayer and Revelation Videos',
         copy: 'Return to the prayer and revelation collection and choose a message for the question you carry.',
-        href: '#prayer-and-revelation'
+        href: '#prayer-and-revelation',
+        thumb: 'assets/watch/hear.jpg'
       },
       study: {
         kicker: 'Study',
@@ -51,7 +53,8 @@
         kicker: 'Watch',
         title: 'Book of Mormon Video Collection',
         copy: 'Return to the Book of Mormon collection and choose a scripture witness to watch and study.',
-        href: '#book-of-mormon'
+        href: '#book-of-mormon',
+        thumb: 'assets/watch/compassion.jpg'
       },
       study: {
         kicker: 'Study',
@@ -71,7 +74,8 @@
         kicker: 'Watch',
         title: 'Temple and Family Video Collection',
         copy: 'Return to the temple and family collection and choose the message that best serves your study.',
-        href: '#temples-and-family'
+        href: '#temples-and-family',
+        thumb: 'assets/watch/temple.jpg'
       },
       study: {
         kicker: 'Study',
