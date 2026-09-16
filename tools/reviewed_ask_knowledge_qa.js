@@ -156,7 +156,7 @@ assert(handcartCard && handcartCard.id === 'pioneer-handcart-travel-1856' && han
 
 const starterQuestions = [...fs.readFileSync('ask.html', 'utf8').matchAll(/data-ask-starter\s+data-question="([^"]+)"/g)]
     .map((match) => match[1]);
-assert(starterQuestions.length === 6, 'Ask starter-card inventory changed without updating the executable contract');
+assert(starterQuestions.length === 8, 'Ask starter-card inventory changed without updating the executable contract');
 starterQuestions.forEach((question) => {
     const result = registry.match(question, { profile: 'ask' });
     assert(result && result.mode === 'reviewed-local', 'visible Ask starter is not reviewed-local: ' + question);
