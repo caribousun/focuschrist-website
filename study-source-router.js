@@ -48,6 +48,26 @@
         citation: ['BYU Scripture Citation Index', 'https://scriptures.byu.edu/']
     };
 
+    const ANSWER_STUDY_RULES = [
+        { terms: ['death of a child', 'child loss', 'lost a child'], label: 'Death of a Child', url: 'answers/death-of-a-child.html', weight: 120 },
+        { terms: ['divorce'], label: 'Divorce and Faith', url: 'answers/divorce-and-faith.html', weight: 115 },
+        { terms: ['grief', 'grieving', 'mourn', 'mourning'], label: 'Grief and Faith', url: 'answers/grief-and-faith.html', weight: 110 },
+        { terms: ['eternal marriage'], label: 'What Is Eternal Marriage?', url: 'answers/what-is-eternal-marriage.html', weight: 105 },
+        { terms: ['family', 'families', 'eternal family', 'children'], label: 'Why Are Families Important?', url: 'answers/why-families-are-important.html', weight: 100 },
+        { terms: ['atonement', 'redeem', 'redeemer'], label: 'The Atonement of Jesus Christ', url: 'atonement.html', weight: 100 },
+        { terms: ['after death', 'life after death', 'spirit world', 'resurrection', 'judgment'], label: 'What Happens After Death?', url: 'answers/what-happens-after-death.html', weight: 98 },
+        { terms: ['temple', 'temples', 'endowment', 'sealing'], label: 'Why Latter-day Saints Build Temples', url: 'answers/why-latter-day-saints-build-temples.html', weight: 98 },
+        { terms: ['bible and the book of mormon', 'bible and book of mormon', 'two scriptural witnesses'], label: 'How the Bible and Book of Mormon Work Together', url: 'answers/bible-and-book-of-mormon-together.html', weight: 98 },
+        { terms: ['book of mormon'], label: 'What Is the Book of Mormon?', url: 'answers/what-is-the-book-of-mormon.html', weight: 94 },
+        { terms: ['prayer', 'personal revelation', 'revelation'], label: 'Prayer and Personal Revelation', url: 'answers/prayer-and-personal-revelation.html', weight: 94 },
+        { terms: ['faith', 'trial', 'trials', 'adversity', 'hard time', 'difficult time', 'suffering'], label: 'Faith in Jesus Christ During Trials', url: 'answers/faith-in-jesus-christ-during-trials.html', weight: 90 },
+        { terms: ['restored church', 'restoration', 'restored gospel'], label: 'The Restored Church of Jesus Christ', url: 'answers/restored-church-of-jesus-christ.html', weight: 92 },
+        { terms: ['joseph smith', 'first vision'], label: 'Who Was Joseph Smith?', url: 'answers/who-was-joseph-smith.html', weight: 90 },
+        { terms: ['god the father', 'heavenly father', 'who is god', 'what is god'], label: 'God Our Heavenly Father', url: 'answers/god-our-heavenly-father.html', weight: 90 },
+        { terms: ['christian', 'christians'], label: 'Are Latter-day Saints Christian?', url: 'answers/are-latter-day-saints-christian.html', weight: 86 },
+        { terms: ['jesus christ', 'savior', 'jesus', 'christ'], label: 'What Latter-day Saints Believe About Jesus Christ', url: 'answers/jesus-christ-latter-day-saint-beliefs.html', weight: 80 }
+    ];
+
     const FAITH_TERMS = [
         'jesus','christ','savior','redeemer','god','heavenly father','holy ghost','spirit','gospel','faith','repentance',
         'baptism','confirmation','sacrament','atonement','resurrection','prayer','revelation','scripture','bible','book of mormon',
@@ -118,6 +138,13 @@
 
     function source(labelUrl, tier, note) {
         return { label: labelUrl[0], url: labelUrl[1], tier: tier, note: note || '' };
+    }
+
+    function answerStudySourceForQuestion(question) {
+        const q = normalize(question);
+        return ANSWER_STUDY_RULES
+            .filter(function (rule) { return rule.terms.some(function (term) { return q.includes(term); }); })
+            .sort(function (a, b) { return b.weight - a.weight; })[0] || null;
     }
 
     function historyEraSources(q, results) {
@@ -332,11 +359,40 @@
         answer.appendChild(panel);
     }
 
+    function appendAnswerStudySource(answer, question) {
+        if (!answer || answer.querySelector('[data-focuschrist-answer-source]')) return;
+        const related = answerStudySourceForQuestion(question);
+        if (!related) return;
+
+        let sourceBox = answer.querySelector('.sources');
+        if (!sourceBox) {
+            sourceBox = document.createElement('div');
+            sourceBox.className = 'sources';
+            const title = document.createElement('div');
+            title.className = 'sources-title';
+            title.textContent = 'Sources';
+            sourceBox.appendChild(title);
+            answer.appendChild(sourceBox);
+        }
+
+        const link = document.createElement('a');
+        link.className = 'source-link source-link--internal';
+        link.href = new URL(related.url, window.location.href).href;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.textContent = 'focusChrist Answers: ' + related.label;
+        link.setAttribute('data-focuschrist-answer-source', related.url);
+        sourceBox.appendChild(link);
+    }
+
     function enhanceLatest(chatBox) {
         if (!chatBox) return;
         const answers = chatBox.querySelectorAll('.bot-message');
         if (!answers.length) return;
-        appendSourcePaths(answers[answers.length - 1], latestQuestion(chatBox));
+        const answer = answers[answers.length - 1];
+        const question = latestQuestion(chatBox);
+        appendAnswerStudySource(answer, question);
+        appendSourcePaths(answer, question);
     }
 
     function initAnswerObserver() {
@@ -365,6 +421,7 @@
         churchSearchUrl: churchSearchUrl,
         sourcesForQuestion: sourcesForQuestion,
         sourcesForHistoryQuestion: sourcesForHistoryQuestion,
+        answerStudySourceForQuestion: answerStudySourceForQuestion,
         historyPromptContext: historyPromptContext
     };
 
