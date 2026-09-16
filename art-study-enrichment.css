@@ -8,6 +8,7 @@
     position: sticky;
     top: 74px;
     z-index: 8;
+    justify-content: center;
     margin: 1.4rem 0 2.4rem;
     padding: .8rem 1rem;
     border: 1px solid rgba(240, 195, 106, .22);
