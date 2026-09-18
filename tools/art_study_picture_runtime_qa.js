@@ -89,6 +89,7 @@ for (const card of cards) {
         assert.equal(document.activeElement, full, 'Nested viewer restores action focus');
         assert(document.body.classList.contains('fc-dialog-open'), 'Parent study scroll lock survives nested close');
         const close = [...panel.querySelectorAll('button')].find(button => button.textContent === 'Close');
+        assert(close.hasAttribute('data-artwork-detail-close'), `${relative}: Close action exposes the shared artwork styling hook`);
         click(close);
         assert(!panel.open && document.activeElement === trigger, 'Close returns to invoking picture');
         click(trigger);
