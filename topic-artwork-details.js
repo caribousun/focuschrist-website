@@ -183,6 +183,7 @@
             done.className = 'fc-button';
             done.type = 'button';
             done.textContent = 'Close';
+            done.dataset.artworkDetailClose = '';
             done.addEventListener('click', function () { dialog.close(); });
             actions.appendChild(done);
             returnFocus = trigger;
