@@ -40,7 +40,7 @@
     box-shadow: none;
 }
 
-.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close]) {
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close], [data-hero-close]) {
     border-color: var(--fc-gold, #e8b94f);
 }
 
