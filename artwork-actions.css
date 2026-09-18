@@ -48,6 +48,12 @@
     border-color: var(--fc-gold, #e8b94f);
 }
 
+@media (min-width: 821px) {
+    .fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > [data-artwork-detail-close] {
+        grid-column: 2;
+    }
+}
+
 .fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > button:hover,
 .fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close]):hover {
     background: var(--fc-surface-2);

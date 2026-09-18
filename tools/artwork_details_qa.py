@@ -302,6 +302,8 @@ def main() -> int:
             errors.append("artwork-actions.css: desktop close action must not span a separate full row")
     if ".fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > [data-artwork-detail-close]" not in action_css:
         errors.append("artwork-actions.css: topic art-study Close action needs a specificity-safe gold border rule")
+    if "@media (min-width: 821px)" not in action_css or "grid-column: 2;" not in action_css:
+        errors.append("artwork-actions.css: desktop topic art-study Close action must remain in the bottom-right grid column")
 
     hero_css = (ROOT / "hero-details.css").read_text(encoding="utf-8")
     hero_close_rule = re.search(r"\.fc-site \.fc-hero-detail-dialog \.fc-artwork-detail-actions > \[data-hero-close\]\s*\{([^}]+)\}", hero_css, re.S)
