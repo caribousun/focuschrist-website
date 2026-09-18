@@ -39,6 +39,11 @@
     color: var(--fc-cream) !important;
     box-shadow: none;
 }
+
+.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close]) {
+    border-color: var(--fc-gold, #e8b94f);
+}
+
 .fc-site .fc-topic-artwork-detail .fc-artwork-detail-actions > button:hover,
 .fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions) > :is([data-artwork-detail-close], [data-missionary-detail-close]):hover {
     background: var(--fc-surface-2);
