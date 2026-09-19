@@ -21,6 +21,7 @@ class Element {
   setAttribute(name, value) { this.attrs[name] = value; }
   removeAttribute(name) { delete this.attrs[name]; }
   appendChild(child) { child.parent = this; this.children.push(child); return child; }
+  insertBefore(child, reference) { child.parent = this; this.children.splice(this.children.indexOf(reference), 0, child); return child; }
   prepend(child) { child.parent = this; this.children.unshift(child); }
   insertAdjacentElement(position, child) {
     assert.equal(position,'afterend'); child.parent=this.parent;
@@ -106,6 +107,11 @@ const shortcut=createHarness('/answers.html');shortcut.topics.appendChild(new El
 shortcut.context.ensureConferenceTopicShortcut();shortcut.context.ensureConferenceTopicShortcut();
 assert.equal(shortcut.topics.children.length,1,'existing conference pill must not be duplicated');
 shortcut.topics.children=[];shortcut.context.ensureConferenceTopicShortcut();shortcut.context.ensureConferenceTopicShortcut();assert.equal(shortcut.topics.children.length,1);
+shortcut.topics.children=[];
+for (const label of ['Aaronic Priesthood', 'Families', 'Grief', 'Temples']) shortcut.topics.appendChild(new Element('a', {href:'#'+label}, label));
+shortcut.context.ensureConferenceTopicShortcut();
+shortcut.context.ensureConferenceTopicShortcut();
+assert.deepEqual(shortcut.topics.children.map(n => n.textContent), ['Aaronic Priesthood', 'Families', 'General Conference', 'Grief', 'Temples'], 'fallback conference insertion preserves alphabetical order without duplication');
 assert.ok(source.includes('initCurrentStudyNavigation();'),'runtime initializer must invoke topic navigation');
 // Links generated after a hash change must close the already initialized menu.
 const menuEvents = {}, triggerEvents = {}, documentEvents = {};

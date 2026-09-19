@@ -28,6 +28,7 @@ jobs:
       - name: Verify centered navigation and external-link behavior
         run: |
           python tools/navigation_links_qa.py
+          python tools/topic_pill_order_qa.py
           node tools/external_links_runtime_qa.js
           node tools/mobile_opening_invitation_runtime_qa.js
 

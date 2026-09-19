@@ -383,7 +383,11 @@
             existing.setAttribute('data-focuschrist-conference-shortcut', 'true');
             return;
         }
-        topics.appendChild(createConferenceLink('General Conference'));
+        const shortcut = createConferenceLink('General Conference');
+        const following = Array.from(topics.querySelectorAll('a')).find(link =>
+            link.textContent.trim().localeCompare('General Conference', 'en', {sensitivity: 'base'}) > 0);
+        if (following) topics.insertBefore(shortcut, following);
+        else topics.appendChild(shortcut);
     }
 
     function currentStudyTopic(pathname, hash) {
