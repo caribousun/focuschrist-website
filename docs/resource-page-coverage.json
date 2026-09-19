@@ -126,7 +126,9 @@
     "divorce",
     "healing-wings"
   ],
-  "come-follow-me.html": [],
+  "come-follow-me.html": [
+    "cfm-study-vision"
+  ],
   "general-conference.html": [],
   "answers/stand-forever.html": [
     "stand-lord-i-believe",
@@ -179,5 +181,13 @@
     "birth-light-life-world",
     "birth-everlasting-light",
     "birth-greatest-gift"
+  ],
+  "answers/aaronic-priesthood-restoration.html": [
+    "focused-aaronic-restoration",
+    "focused-aaronic-blessings"
+  ],
+  "answers/melchizedek-priesthood-restoration.html": [
+    "focused-melchizedek-keys",
+    "focused-melchizedek-organization"
   ]
 }

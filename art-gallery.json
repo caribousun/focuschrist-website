@@ -3,6 +3,7 @@
   "pages": [
     "/about.html",
     "/answers.html",
+    "/answers/aaronic-priesthood-restoration.html",
     "/answers/are-latter-day-saints-christian.html",
     "/answers/bible-and-book-of-mormon-together.html",
     "/answers/death-of-a-child.html",
@@ -12,6 +13,7 @@
     "/answers/grief-and-faith.html",
     "/answers/jesus-christ-latter-day-saint-beliefs.html",
     "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+    "/answers/melchizedek-priesthood-restoration.html",
     "/answers/prayer-and-personal-revelation.html",
     "/answers/restored-church-of-jesus-christ.html",
     "/answers/stand-forever.html",
@@ -1065,24 +1067,24 @@
     },
     {
       "title": "Authority to serve in Christ’s name",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/church-history/melchizedek-priesthood-960.webp",
       "fullImage": "/assets/page-art/church-history/melchizedek-priesthood.webp",
       "alt": "Joseph Smith and Oliver Cowdery stand with Peter, James, and John in a wooded setting near the Susquehanna River.",
       "id": "art-bb47942ed3bc",
       "occurrences": [
         {
-          "id": "source-e5842ad4957f",
-          "page": "/church-history.html",
-          "pageTitle": "Church History",
-          "category": "Church History",
+          "id": "source-45e7949fd482",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/church-history/melchizedek-priesthood.webp\"]:has(img[src=\"assets/page-art/church-history/melchizedek-priesthood-960.webp\"])",
+          "selector": "a[href=\"../assets/page-art/church-history/melchizedek-priesthood.webp\"]:has(img[src=\"../assets/page-art/church-history/melchizedek-priesthood-960.webp\"])",
           "title": "Authority to serve in Christ’s name"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -1522,6 +1524,28 @@
       ]
     },
     {
+      "title": "Bring the question to scripture",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/focused-answers/aaronic-study-960.webp",
+      "fullImage": "/assets/page-art/focused-answers/aaronic-study-full.webp",
+      "alt": "A young adult reads an open scripture book beside his notebook.",
+      "id": "art-d1444e5d00f0",
+      "occurrences": [
+        {
+          "id": "source-34e7730065f2",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/focused-answers/aaronic-study-full.webp\"]:has(img[src=\"../assets/page-art/focused-answers/aaronic-study-960.webp\"])",
+          "title": "Bring the question to scripture"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Bring your question into the light",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/christian-question-800.webp",
@@ -1633,24 +1657,24 @@
     },
     {
       "title": "Called to prepare the way",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/church-history/aaronic-priesthood-960.webp",
       "fullImage": "/assets/page-art/church-history/aaronic-priesthood.webp",
       "alt": "Joseph and Oliver kneel with bowed heads as John the Baptist places a hand on each man’s head.",
       "id": "art-d98ccbf176b8",
       "occurrences": [
         {
-          "id": "source-70e8a9c4f492",
-          "page": "/church-history.html",
-          "pageTitle": "Church History",
-          "category": "Church History",
+          "id": "source-e4ff15e55ee4",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/church-history/aaronic-priesthood.webp\"]:has(img[src=\"assets/page-art/church-history/aaronic-priesthood-960.webp\"])",
+          "selector": "a[href=\"../assets/page-art/church-history/aaronic-priesthood.webp\"]:has(img[src=\"../assets/page-art/church-history/aaronic-priesthood-960.webp\"])",
           "title": "Called to prepare the way"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -1717,6 +1741,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "Carry a burden together",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/focused-answers/aaronic-service-960.webp",
+      "fullImage": "/assets/page-art/focused-answers/aaronic-service-full.webp",
+      "alt": "Two young adult men bring a basket of groceries to an older woman at her doorway.",
+      "id": "art-441d1954b4b7",
+      "occurrences": [
+        {
+          "id": "source-316c73bc2975",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/focused-answers/aaronic-service-full.webp\"]:has(img[src=\"../assets/page-art/focused-answers/aaronic-service-960.webp\"])",
+          "title": "Carry a burden together"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -2380,6 +2426,28 @@
       ]
     },
     {
+      "title": "Deeper study",
+      "category": "Come, Follow Me",
+      "thumbnail": "/assets/page-art/come-follow-me/old-testament-journey-2026.webp",
+      "fullImage": "/assets/page-art/come-follow-me/old-testament-journey-2026.webp",
+      "alt": "An open scroll overlooking an ancient path, olive trees, and a shepherd at dawn",
+      "id": "art-3c47f281e806",
+      "occurrences": [
+        {
+          "id": "source-08e54661c1c6",
+          "page": "/come-follow-me.html",
+          "pageTitle": "Come, Follow Me",
+          "category": "Come, Follow Me",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/come-follow-me/old-testament-journey-2026.webp\"]:has(img[src=\"assets/page-art/come-follow-me/old-testament-journey-2026.webp\"])",
+          "title": "Deeper study"
+        }
+      ],
+      "categories": [
+        "Come, Follow Me"
+      ]
+    },
+    {
       "title": "Different Gifts, the Same Savior",
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/service-missionaries-food-pantry-1400.webp",
@@ -2619,6 +2687,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Family study",
+      "category": "Come, Follow Me",
+      "thumbnail": "/assets/page-art/come-follow-me/family-study-2026.webp",
+      "fullImage": "/assets/page-art/come-follow-me/family-study-2026.webp",
+      "alt": "A multigenerational family studying scripture together",
+      "id": "art-94bb0bea1438",
+      "occurrences": [
+        {
+          "id": "source-01181716a4f7",
+          "page": "/come-follow-me.html",
+          "pageTitle": "Come, Follow Me",
+          "category": "Come, Follow Me",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/come-follow-me/family-study-2026.webp\"]:has(img[src=\"assets/page-art/come-follow-me/family-study-2026.webp\"])",
+          "title": "Family study"
+        }
+      ],
+      "categories": [
+        "Come, Follow Me"
       ]
     },
     {
@@ -4163,24 +4253,24 @@
     },
     {
       "title": "Joseph baptizes Oliver",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/church-history/joseph-baptizes-oliver-960.webp",
       "fullImage": "/assets/page-art/church-history/joseph-baptizes-oliver.webp",
       "alt": "Joseph raises his right hand while Oliver prepares for immersion in the river.",
       "id": "art-897a9545efbd",
       "occurrences": [
         {
-          "id": "source-7becbdc9d015",
-          "page": "/church-history.html",
-          "pageTitle": "Church History",
-          "category": "Church History",
+          "id": "source-b93c2a456711",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/church-history/joseph-baptizes-oliver.webp\"]:has(img[src=\"assets/page-art/church-history/joseph-baptizes-oliver-960.webp\"])",
+          "selector": "a[href=\"../assets/page-art/church-history/joseph-baptizes-oliver.webp\"]:has(img[src=\"../assets/page-art/church-history/joseph-baptizes-oliver-960.webp\"])",
           "title": "Joseph baptizes Oliver"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -4207,24 +4297,24 @@
     },
     {
       "title": "Joseph receives the apostles’ ministry",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/church-history/apostles-ordain-joseph-960.webp",
       "fullImage": "/assets/page-art/church-history/apostles-ordain-joseph.webp",
       "alt": "Peter, James, and John place their hands on Joseph’s head while Oliver stands nearby.",
       "id": "art-61d4f46eb970",
       "occurrences": [
         {
-          "id": "source-bfc1c359b5d6",
-          "page": "/church-history.html",
-          "pageTitle": "Church History",
-          "category": "Church History",
+          "id": "source-961cd046011f",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/church-history/apostles-ordain-joseph.webp\"]:has(img[src=\"assets/page-art/church-history/apostles-ordain-joseph-960.webp\"])",
+          "selector": "a[href=\"../assets/page-art/church-history/apostles-ordain-joseph.webp\"]:has(img[src=\"../assets/page-art/church-history/apostles-ordain-joseph-960.webp\"])",
           "title": "Joseph receives the apostles’ ministry"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -5007,6 +5097,28 @@
       ]
     },
     {
+      "title": "Listen with patience",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/focused-answers/melchizedek-listen-960.webp",
+      "fullImage": "/assets/page-art/focused-answers/melchizedek-listen-full.webp",
+      "alt": "Two men sit in a garden, one speaking while the other listens.",
+      "id": "art-23fb5ef3fcb2",
+      "occurrences": [
+        {
+          "id": "source-d2f52d125ec8",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/focused-answers/melchizedek-listen-full.webp\"]:has(img[src=\"../assets/page-art/focused-answers/melchizedek-listen-960.webp\"])",
+          "title": "Listen with patience"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Listen, Learn, and Come unto Christ",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/hero.webp",
@@ -5026,6 +5138,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Listen, ponder, and carry a thought with you",
+      "category": "General Conference",
+      "thumbnail": "/assets/heroes/topics/conference-listening-960.webp",
+      "fullImage": "/assets/heroes/topics/conference-listening-full.webp",
+      "alt": "A woman wearing headphones writes in a notebook beside a tablet and open scriptures.",
+      "id": "art-9507397d1477",
+      "occurrences": [
+        {
+          "id": "source-6e3b6995cbca",
+          "page": "/general-conference.html",
+          "pageTitle": "General Conference",
+          "category": "General Conference",
+          "kind": "topic",
+          "selector": "a[href=\"assets/heroes/topics/conference-listening-full.webp\"]:has(img[src=\"assets/heroes/topics/conference-listening-960.webp\"])",
+          "title": "Listen, ponder, and carry a thought with you"
+        }
+      ],
+      "categories": [
+        "General Conference"
       ]
     },
     {
@@ -5492,24 +5626,24 @@
     },
     {
       "title": "Oliver baptizes Joseph",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/church-history/oliver-baptizes-joseph-960.webp",
       "fullImage": "/assets/page-art/church-history/oliver-baptizes-joseph.webp",
       "alt": "Oliver supports Joseph as he leans backward toward immersion in the river.",
       "id": "art-6d95cfcaf438",
       "occurrences": [
         {
-          "id": "source-437d13507b66",
-          "page": "/church-history.html",
-          "pageTitle": "Church History",
-          "category": "Church History",
+          "id": "source-061b16f91902",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/church-history/oliver-baptizes-joseph.webp\"]:has(img[src=\"assets/page-art/church-history/oliver-baptizes-joseph-960.webp\"])",
+          "selector": "a[href=\"../assets/page-art/church-history/oliver-baptizes-joseph.webp\"]:has(img[src=\"../assets/page-art/church-history/oliver-baptizes-joseph-960.webp\"])",
           "title": "Oliver baptizes Joseph"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -5536,24 +5670,24 @@
     },
     {
       "title": "Oliver receives the apostles’ ministry",
-      "category": "Church History",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/church-history/apostles-ordain-oliver-960.webp",
       "fullImage": "/assets/page-art/church-history/apostles-ordain-oliver.webp",
       "alt": "Peter, James, and John place their hands on Oliver’s head while Joseph stands nearby.",
       "id": "art-e7ce1b97cd8c",
       "occurrences": [
         {
-          "id": "source-4daa731dd462",
-          "page": "/church-history.html",
-          "pageTitle": "Church History",
-          "category": "Church History",
+          "id": "source-78e0e5f78b74",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"assets/page-art/church-history/apostles-ordain-oliver.webp\"]:has(img[src=\"assets/page-art/church-history/apostles-ordain-oliver-960.webp\"])",
+          "selector": "a[href=\"../assets/page-art/church-history/apostles-ordain-oliver.webp\"]:has(img[src=\"../assets/page-art/church-history/apostles-ordain-oliver-960.webp\"])",
           "title": "Oliver receives the apostles’ ministry"
         }
       ],
       "categories": [
-        "Church History"
+        "Gospel Studies"
       ]
     },
     {
@@ -5733,21 +5867,21 @@
       ]
     },
     {
-      "title": "Personal scripture study beside a sunlit window",
-      "category": "General Conference",
+      "title": "Personal study",
+      "category": "Come, Follow Me",
       "thumbnail": "/assets/page-art/come-follow-me/personal-study-2026.webp",
       "fullImage": "/assets/page-art/come-follow-me/personal-study-2026.webp",
-      "alt": "Personal scripture study beside a sunlit window",
+      "alt": "Personal Old Testament scripture study beside a sunlit window",
       "id": "art-bcdcb9855d9a",
       "occurrences": [
         {
-          "id": "source-3585ff43bd79",
-          "page": "/general-conference.html",
-          "pageTitle": "General Conference",
-          "category": "General Conference",
+          "id": "source-6050fbe84895",
+          "page": "/come-follow-me.html",
+          "pageTitle": "Come, Follow Me",
+          "category": "Come, Follow Me",
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/come-follow-me/personal-study-2026.webp\"]:has(img[src=\"assets/page-art/come-follow-me/personal-study-2026.webp\"])",
-          "title": "Personal scripture study beside a sunlit window"
+          "title": "Personal study"
         },
         {
           "id": "source-7311627012ee",
@@ -5760,7 +5894,7 @@
         }
       ],
       "categories": [
-        "General Conference",
+        "Come, Follow Me",
         "Gospel Studies"
       ]
     },
@@ -6000,6 +6134,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/two-witnesses-observation-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/two-witnesses-observation-800.webp\"])",
           "title": "Read first, then compare"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Read the witnesses carefully",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/focused-answers/melchizedek-records-960.webp",
+      "fullImage": "/assets/page-art/focused-answers/melchizedek-records-full.webp",
+      "alt": "Open reference books, notes, a pencil, and glasses lie on a reading desk.",
+      "id": "art-d8a8e36ac955",
+      "occurrences": [
+        {
+          "id": "source-220b24f96be8",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/focused-answers/melchizedek-records-full.webp\"]:has(img[src=\"../assets/page-art/focused-answers/melchizedek-records-960.webp\"])",
+          "title": "Read the witnesses carefully"
         }
       ],
       "categories": [
@@ -7712,6 +7868,28 @@
       ]
     },
     {
+      "title": "Two men place their hands on a seated man’s head as they offer a priesthood blessing.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/melchizedek-full.webp",
+      "fullImage": "/assets/heroes/topics/melchizedek-full.webp",
+      "alt": "Two men place their hands on a seated man’s head as they offer a priesthood blessing.",
+      "id": "art-fa0eef5c45cd",
+      "occurrences": [
+        {
+          "id": "source-40f2c786a09f",
+          "page": "/answers/melchizedek-priesthood-restoration.html",
+          "pageTitle": "Melchizedek Priesthood",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/melchizedek-full.webp\"]",
+          "title": "Two men place their hands on a seated man’s head as they offer a priesthood blessing."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Two volunteers pack food together in a community room.",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/topics/restoration-full.webp",
@@ -7749,6 +7927,28 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/divorce-full.webp\"]",
           "title": "Two women meet at an apartment doorway and share a grocery bag beside a moving box."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Two young men prepare bread at a sacrament table beside the chapel’s front platform.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/aaronic-full.webp",
+      "fullImage": "/assets/heroes/topics/aaronic-full.webp",
+      "alt": "Two young men prepare bread at a sacrament table beside the chapel’s front platform.",
+      "id": "art-1c946d7ff77f",
+      "occurrences": [
+        {
+          "id": "source-f5a73dd8fd7c",
+          "page": "/answers/aaronic-priesthood-restoration.html",
+          "pageTitle": "Aaronic Priesthood",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/aaronic-full.webp\"]",
+          "title": "Two young men prepare bread at a sacrament table beside the chapel’s front platform."
         }
       ],
       "categories": [
@@ -7977,15 +8177,15 @@
     }
   ],
   "stats": {
-    "artworks": 356,
-    "occurrences": 367,
+    "artworks": 365,
+    "occurrences": 376,
     "byKind": {
       "artwork": 41,
       "full": 1,
-      "hero": 35,
+      "hero": 37,
       "legacy": 39,
       "missionary": 9,
-      "topic": 245
+      "topic": 252
     }
   }
 }

@@ -37,7 +37,17 @@
             const subject=terms(record.title+' '+(record.keywords||''));
             (words.every(word=>subject.includes(word))?best:supporting).push(record);
         });
-        return {best,supporting};
+        // Prefer a complete matching study; keep its more specific passages available below.
+        const complete=new Set(best.filter(record=>!record.url.includes('#')).map(record=>record.url));
+        const destinations=[];
+        best.forEach(record=>{
+            (record.url.includes('#') && complete.has(record.url.split('#')[0]) ? supporting : destinations).push(record);
+        });
+        const hasStudy=destinations.some(record=>record.category!=='Art');
+        return {best:destinations.filter(record=>{
+            if(hasStudy && record.category==='Art'){supporting.push(record);return false;}
+            return true;
+        }),supporting};
     }
     const api={rank,groupMatches,excerpt,normalize,terms,localURL};
     if(typeof module!=='undefined' && module.exports) module.exports=api;

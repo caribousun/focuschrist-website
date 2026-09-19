@@ -7,7 +7,7 @@ const root=path.resolve(__dirname,'..');
 const search=require('../site-search.js');
 const data=require('../site-search-index.json');
 const top=q=>search.rank(data.records,q).slice(0,5).map(r=>r.url);
-assert.deepEqual(top('priesthood restoration').slice(0,2),['/church-history.html#aaronic-priesthood-restoration','/church-history.html#melchizedek-priesthood-restoration']);
+assert.deepEqual(top('priesthood restoration').slice(0,2),['/answers/aaronic-priesthood-restoration.html','/answers/melchizedek-priesthood-restoration.html']);
 assert.equal(top('Restoration')[0],'/answers/restored-church-of-jesus-christ.html');
 assert.equal(top('Joseph Smith death mask')[0],'/joseph-smith-likeness.html#death-masks');
 assert.equal(top('D&C 6:36')[0],'/answers/look-unto-me-doctrine-and-covenants-6-36.html');

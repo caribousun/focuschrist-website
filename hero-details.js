@@ -101,6 +101,22 @@
         "study": "answers/are-latter-day-saints-christian.html#scripture-study",
         "studyLabel": "Study Christian discipleship"
     },
+    "topic-aaronic": {
+    "title": "Prepare to serve at the sacrament table",
+    "paragraphs": ["Two young men attend to the bread and white cloth at a chapel’s sacrament table. This imagined contemporary scene connects priesthood study with careful, reverent service. Read John the Baptist’s words, then consider how preparation can help us remember Jesus Christ."],
+    "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/13?lang=eng",
+    "sourceLabel": "Read Doctrine and Covenants 13",
+    "study": "answers/aaronic-priesthood-restoration.html#begin-study",
+    "studyLabel": "Open the Aaronic Priesthood study"
+},
+    "topic-melchizedek": {
+    "title": "A blessing offered with care",
+    "paragraphs": ["Two men bow their heads as they offer a priesthood blessing to a seated man. This imagined contemporary scene invites reflection on service offered with humility and care. Follow the historical witnesses in this study and consider how the Lord’s counsel shapes the exercise of authority."],
+    "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng",
+    "sourceLabel": "Read Doctrine and Covenants 128",
+    "study": "answers/melchizedek-priesthood-restoration.html#begin-study",
+    "studyLabel": "Open the Melchizedek Priesthood study"
+},
     "topic-bible-bom": {
         "title": "Two witnesses in one study",
         "paragraphs": [

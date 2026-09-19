@@ -1,0 +1,21 @@
+.fc-priesthood-pair { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--fc-body-gutter,24px); align-items:start; }
+.fc-priesthood-pair .fc-study-visual { width:100%; margin-inline:0; }
+.fc-priesthood-account > .fc-study-visual { margin-inline:auto; }
+.fc-priesthood-note { color:var(--fc-text-muted,#d4dfdf); }
+@media(max-width:700px) { .fc-priesthood-pair { grid-template-columns:1fr; } }
+
+/* Keep the established Conference opening frame while giving its image a study panel. */
+.gc-page-opening .gc-intro-visual.fc-study-visual { display:block; padding:0; }
+.gc-page-opening .gc-intro-visual figcaption h3 { font-size:1rem; margin:0 0 8px; }
+.gc-page-opening .gc-intro-visual figcaption p { margin:0 0 8px; }
+
+@media(max-width:700px){
+ body.fc-site .fc-topic-unique-hero[data-hero-record="topic-aaronic"]::before { background-position:center; }
+}
+
+/* Preserve the three familiar study cards while their artwork opens a study panel. */
+.cfm-paths > .cfm-path.fc-study-visual{display:flex;flex-direction:column;margin:0;gap:0;max-width:none;padding:0}
+.cfm-paths .cfm-path__visual{display:block;width:100%}
+.cfm-paths .cfm-path__body{display:flex;flex-direction:column;padding:22px}
+.cfm-paths .fc-study-visual-sources{font-size:.9rem;margin:16px 0 0}
+@media(max-width:880px){.cfm-paths .cfm-path__body{padding:18px}}

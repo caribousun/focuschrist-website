@@ -1,0 +1,31 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const vm = require('node:vm');
+const root = path.resolve(__dirname, '..');
+const common = fs.readFileSync(path.join(root, 'site-common.js'), 'utf8');
+const redirect = common.slice(common.indexOf('function forwardLegacyTopicBookmark()'), common.indexOf('    forwardLegacyTopicBookmark();'));
+const bridge = fs.readFileSync(path.join(root, 'art-ask-context.js'), 'utf8');
+const safeReturn = bridge.slice(bridge.indexOf('function safeReturnUrl('), bridge.indexOf('    function safeWatchReturn('));
+assert(redirect.startsWith('function') && safeReturn.startsWith('function'));
+for (const kind of ['aaronic', 'melchizedek']) {
+    const hash = '#' + kind + '-priesthood-restoration';
+    const page = '/answers/' + kind + '-priesthood-restoration.html';
+    const replacements = [];
+    const location = {pathname: '/church-history.html', hash, search: '?source=bookmark', origin: 'https://focuschrist.com', href: 'https://focuschrist.com/ask.html', replace: target => replacements.push(target)};
+    const context = {window: {location}, URL, encodeURIComponent};
+    vm.createContext(context);
+    vm.runInContext(redirect + '\n' + safeReturn, context);
+    context.forwardLegacyTopicBookmark();
+    assert.deepEqual(replacements, [page.slice(1) + '?source=bookmark' + hash], 'Legacy bookmark preserves query and exact account');
+    location.pathname = page;
+    context.forwardLegacyTopicBookmark();
+    assert.equal(replacements.length, 1, 'Destination does not redirect into a loop');
+    assert.equal(context.safeReturnUrl(page + '?hero=1', 'study'), page + '?hero=1', 'Hero Ask returns to its own hero');
+    assert.equal(context.safeReturnUrl(page + '#guided-practice', 'study'), page + '#guided-practice', 'Supporting study Ask returns to its own lesson');
+    assert.equal(context.safeReturnUrl('https://other.example' + page + '#guided-practice', 'study'), 'art.html?art=study', 'External return is rejected');
+    const html = fs.readFileSync(path.join(root, page.slice(1)), 'utf8');
+    assert(html.includes('id="' + hash.slice(1) + '"'), 'Redirect account anchor remains valid');
+}
+console.log('FOCUSED ANSWERS RUNTIME PASS: both legacy history bookmarks, no redirect loops, own hero/lesson Ask returns, external return rejection');

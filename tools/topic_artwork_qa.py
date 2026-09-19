@@ -54,6 +54,9 @@ for item in placements:
  seen.add(item['asset'])
 assert seen=={item['asset'] for item in placements}
 allfigures=sum(sum(n.tag=='figure' and 'data-enriched-study-art' in n.attrs for n in nodes(p)) for p in (ROOT/'answers').glob('*.html'))
-assert allfigures==21
+moved_ids = {"history-aaronic-priesthood", "history-joseph-baptizes-oliver", "history-oliver-baptizes-joseph", "history-melchizedek-priesthood", "history-apostles-ordain-joseph", "history-apostles-ordain-oliver"}
+moved = [n.attrs["data-enriched-study-art"] for p in (ROOT/"answers").glob("*.html") for n in nodes(p) if n.tag == "figure" and n.attrs.get("data-enriched-study-art") in moved_ids]
+assert len(moved) == 6 and set(moved) == moved_ids, "All six preserved historical figures must appear once in Answers"
+assert allfigures == len(placements) + len(moved_ids)
 css=(ROOT/'topic-art.css').read_text();assert 'object-fit:contain' in css and 'height:auto' in css
 print('TOPIC ARTWORK QA PASS: 21 contextual placements, individually approved assets, exact sources, responsive full-image viewing')

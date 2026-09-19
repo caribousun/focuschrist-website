@@ -8,11 +8,21 @@ const root = path.resolve(__dirname, '..');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const manifest = JSON.parse(read('docs/sitewide-artwork-review.json'));
 assert.equal(manifest.heroes.length, 19, 'All nineteen replacement heroes require runtime verification');
+const focusedHeroes = JSON.parse(read('docs/focused-answers-art-review.json')).images.filter(record => record.role === 'hero').map(record => {
+    const aaronic = record.id === 'aaronic-hero', key = record.id.replace(/-hero$/, '');
+    const chapter = aaronic ? '13' : '128', title = aaronic ? 'Prepare to serve at the sacrament table' : 'A blessing offered with care';
+    const ask = new URL('/ask.html', 'https://focuschrist.com');
+    ask.searchParams.set('topic', (aaronic ? 'Aaronic' : 'Melchizedek') + ' Priesthood');
+    ask.searchParams.set('return', '/' + record.page + '?hero=1');
+    return {...record, key, title, source: 'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/' + chapter + '?lang=eng', sourceLabel: 'Read Doctrine and Covenants ' + chapter, study: record.page + '#begin-study', ask: ask.href};
+});
+assert.deepEqual(new Set(focusedHeroes.map(record => record.key)), new Set(['aaronic', 'melchizedek']), 'Both new focused heroes require runtime verification');
+const runtimeHeroes = [...manifest.heroes, ...focusedHeroes];
 const canonical = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => new URL(m[1]).pathname);
-assert.equal(canonical.length, 39, 'Discover the complete canonical inventory');
+assert.equal(canonical.length, 41, 'Discover the complete canonical inventory');
 const click = (window, node) => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
 let checks = 0;
-for (const record of manifest.heroes) {
+for (const record of runtimeHeroes) {
     assert(canonical.includes('/' + record.page), `${record.key}: canonical destination`);
     // Run at two viewport settings to catch viewport-dependent script branches; JSDOM does not render CSS.
     for (const width of [1440, 390]) {
@@ -70,4 +80,4 @@ for (const record of manifest.heroes) {
         dom.window.close(); checks++;
     }
 }
-console.log(`PASS ${checks} hero interaction contexts across ${manifest.heroes.length} destinations. CSS framing, keyboard native activation and actual phone rendering require browser verification.`);
+console.log(`PASS ${checks} hero interaction contexts across ${runtimeHeroes.length} destinations. CSS framing, keyboard native activation and actual phone rendering require browser verification.`);

@@ -34,6 +34,10 @@ def check():
     ids = [n.attrs['id'] for n in nodes if n.attrs.get('id')]
     require(len(ids) == len(set(ids)), 'duplicate IDs')
     require(SECTIONS.issubset(ids), 'historical study anchors missing: ' + ', '.join(sorted(SECTIONS - set(ids))))
+    # The six priesthood scenes now belong to their focused destinations.
+    for topic in ('aaronic', 'melchizedek'):
+        moved = Document(); moved.feed((ROOT / 'answers' / (topic + '-priesthood-restoration.html')).read_text(encoding='utf-8'))
+        nodes.extend(moved.root.walk())
     figures = [n for n in nodes if n.tag == 'figure' and n.attrs.get('data-enriched-study-art', '').startswith('history-')]
     require(len(figures) == len(SLOTS), f'requires exactly {len(SLOTS)} new historical figures')
     require({n.attrs.get('data-enriched-study-art') for n in figures} == {'history-' + s for s in SLOTS}, 'figure inventory differs from the requested scenes')
@@ -46,7 +50,7 @@ def check():
         require(len(triggers) == 1, slot + ': requires one direct native image trigger')
         if triggers:
             trigger = triggers[0]
-            require(urlsplit(trigger.attrs.get('href', '')).path == expected, slot + ': full asset path differs')
+            require(urlsplit(trigger.attrs.get('href', '')).path.removeprefix('../') == expected, slot + ': full asset path differs')
             require(trigger.attrs.get('aria-haspopup') == 'dialog', slot + ': dialog semantics missing')
             require(not any(k in trigger.attrs for k in ('data-artwork-detail', 'data-hero-viewer', 'data-full-image-viewer')), slot + ': bypasses native topic study panel')
             require(bool(trigger.attrs.get('data-topic-study')), slot + ': onward study missing')
@@ -92,6 +96,8 @@ def check():
         require(not re.search(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+1829(?!\d)', prose), 'precise Melchizedek restoration date asserted')
         require(any(n.tag == 'a' and n.attrs.get('href') == 'https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-melchizedek-priesthood?lang=eng' for n in melchizedek.walk()), 'Melchizedek documentary dating source missing')
     entries = json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages'].get(PAGE, [])
+    for topic in ('aaronic', 'melchizedek'):
+        entries += [e for e in json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages']['answers/' + topic + '-priesthood-restoration.html'] if e.get('slot') in SLOTS]
     additions = {e['asset']: e for e in sitewide_entries() if e['page'] == PAGE and not e['talk']}
     baseline_entries = [e for e in entries if e.get('asset') not in additions]
     require(len(entries) == len(SLOTS) + len(additions) and len(baseline_entries) == len(SLOTS) and {e.get('slot') for e in baseline_entries} == set(SLOTS), f'{len(SLOTS)} preserved scenes plus {len(additions)} reviewed sitewide additions required')
