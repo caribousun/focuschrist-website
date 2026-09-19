@@ -5,24 +5,24 @@
   "records": [
     {
       "key": "look-peter-rescue",
-      "prompt": "Create one ORIGINAL photorealistic live-action focusChrist supporting artwork, landscape3:2. Preserve supplied Christ reference exact facial identity while changing pose and expression naturally for thisscene. Natural period materials, realistic hands/proportions, coherent scene eyecontact, no fantasy/painting/plastic skin. No text/slogans/logos/watermarks. Full heads and essential hands/action insideframe. Mortal Jesus no nail scars. Matthew14:30–31 fourth watch, dark predawn storm on Galilean lake. Jesus in wet ivory linen and mutedblue mantle stands uponwater, bends to immediately catch sinking adultPeter's extendedforearm with anatomically clear firm singlehandgrip. Peter chestdeep water, alarm and trustingappeal on face, his otherhand visible steadying. Jesus calm focused compassion eyesDOWNtoPeter who looksUPtomeetHim. Jesus exactreferenceface; Peterdistinct middleaged shortdarkhairbeard. Distantsmallwoodenboatdisciples. Physicallycoherentwaves, waterline andwetcloth. Reverent rescue not posing.",
+      "prompt": "Fresh waterline composition using approved Home Christ identity and owner-approved reciprocal forearm grip. Peter foreground raises left arm; Christ left shoulder, elbow and wrist connect to His left hand. Final expression-only edit: steady loving reassurance, confident small smile, release excessive brow/jaw strain; preserve approved grip, pose, likeness and setting. Mortal-ministry scene with no Crucifixion scars.",
       "ref": true,
-      "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-b56b3e3e-1acb-4aa6-a994-07228a4c1e14.png",
-      "selected_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-bf6f87ac-89d6-4da6-a08f-7dda226d703c.png",
-      "asset": "assets/page-art/sitewide-narratives/look-peter-rescue-full.webp",
-      "thumbnail": "assets/page-art/sitewide-narratives/look-peter-rescue-960.webp",
-      "sha256": "68d029a69f572b31590b9b84e045f55081fdd20b611b0e2b97360810a4609c1f",
-      "thumbnail_sha256": "c35afa1a6a1c8667a9549a13347ea4b70423faf9cb7a2ee9be3a9670b6a96320",
-      "source_sha256": "ec7b8c5e4c090d9479ae20ab46e029fc6fd920894c7d4f17693dbd0c920922ee",
+      "path": "exec-40def308-5c69-4658-8167-4b0d512a91db.png",
+      "selected_source": "exec-40def308-5c69-4658-8167-4b0d512a91db.png",
+      "asset": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-full.webp",
+      "thumbnail": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-960.webp",
+      "sha256": "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
+      "thumbnail_sha256": "a14d3fe4ba637d2bdc8ecef8190a910ef28fbdfcba3f6405843ee31ce2d713d6",
+      "source_sha256": "674486aa46ee701e8e13173a60b0dd3548f0655502b9ef27316fd6f05040a2f9",
       "width": 960,
       "height": 640,
-      "owner_approval": false,
+      "owner_approval": true,
       "technical_review_passed": true,
-      "status": "integrated_after_independent_visual_review",
+      "status": "owner_approved_20260919",
       "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
       "anchor": "every-thought",
       "title": "Immediately Jesus reached for him",
-      "alt": "Jesus grasps Peter’s raised hand as Peter looks up from the stormy water",
+      "alt": "Jesus and Peter grasp each other’s forearms as Christ looks toward Peter with reassuring resolve",
       "caption": "Peter sees the wind, becomes afraid, and cries for help. Matthew records that Jesus immediately reaches out and catches him. This scene invites us to notice the Savior’s response as carefully as Peter’s fear.",
       "study": "look-unto-me-doctrine-and-covenants-6-36.html#every-thought",
       "sources": [
@@ -33,10 +33,18 @@
       ],
       "ask": "../ask.html?topic=Immediately+Jesus+reached+for+him&art=Immediately+Jesus+reached+for+him&return=%2Fanswers%2Flook-unto-me-doctrine-and-covenants-6-36.html%23every-thought#ask-question",
       "independent_visual_review": {
-        "reviewer": "parent agent",
-        "result": "technical pass",
-        "observations": "One connected clasp; two wrists traceable to their respective arms; paired thumbs and curved fingers. Upper extra hand removed. Original scene and recognizable Christ face preserved."
-      }
+        "reviewer": "parent actual-pixel comparison; independent release review",
+        "result": "owner-approved final; integration verification required",
+        "observations": "Final approved front/three-quarter Christ left arm, Peter left arm, reciprocal grasp and reassuring facial expression retained. Earlier technically passed images rejected by owner are excluded."
+      },
+      "owner_approval_evidence": {
+        "date": "2026-09-19",
+        "statement": "approved",
+        "scope": "final expression variant after requests for reassuring I got you expression, active presence without grimace",
+        "source_file": "exec-40def308-5c69-4658-8167-4b0d512a91db.png",
+        "source_sha256": "674486aa46ee701e8e13173a60b0dd3548f0655502b9ef27316fd6f05040a2f9"
+      },
+      "approved_grip_reference_sha256": "e05d3d7fbf8a02adbb5be6b994f8bd876422b1f3d32e081e7cd2ce031251f937"
     },
     {
       "key": "trials-almas-people",
@@ -134,6 +142,42 @@
       "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-bfbac351-6ac8-4d06-a11a-abfa1540f77c.png",
       "sha256": "7c47dc6a631dbc9adc534c24fe841ba4ed3a33b1b5b96cd1c64b1f03b9948fdf",
       "reason": "John too similar to Christ; Christ gaze above witness"
+    },
+    {
+      "sha256": "d17e67b7ad831dc4034b6891b65c5af8f297119130056e98275cdc28725f5f0a",
+      "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+    },
+    {
+      "sha256": "24d509bcd57bb14a2113c89401f88ee59dc535f4e7a744eb5c77b27c2f6d9b0d",
+      "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+    },
+    {
+      "sha256": "3c045f7578ddd3ba9cddc087c052b168c1d1c2e68a768cb0ef3a6e7535da71e0",
+      "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+    },
+    {
+      "sha256": "a8031522921ec230cac3720bc2cca5ec9f3f2850b59cb5e5c4dbb0386f255e73",
+      "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+    },
+    {
+      "sha256": "6b8ce02d6f888c6da3710b08d192bcf20e63839a32a1879867910aefd1949d72",
+      "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+    },
+    {
+      "sha256": "5e4d4c0fe72da769b2e37fc47985342eb1b425a1805ec3f1cceddce10b2b53b7",
+      "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+    },
+    {
+      "sha256": "68d029a69f572b31590b9b84e045f55081fdd20b611b0e2b97360810a4609c1f",
+      "reason": "Existing published image remains pending a successful replacement; owner rejected grasp anatomy."
+    },
+    {
+      "sha256": "3f7e39e778a02f8febb90c4930ce3e47ee2f5ac49e073e11c8a65a9a21716d79",
+      "reason": "Wyatt accepts Peter arm only; Christ hand/arm still wrong. Do not publish full image. Preserve Peter arm as partial reference."
+    },
+    {
+      "sha256": "b1b05d3650a45abf9a68abe2848da3c53b2c2cd50ef01f86c429ee47604b8fd3",
+      "reason": "Wyatt rejects bent unnatural arm and drifted Christ likeness. Recreate scene fresh."
     }
   ],
   "manual_drift_review": {

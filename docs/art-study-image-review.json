@@ -1162,15 +1162,16 @@
     ],
     "answers/look-unto-me-doctrine-and-covenants-6-36.html": [
       {
-        "asset": "assets/page-art/sitewide-narratives/look-peter-rescue-full.webp",
-        "sha256": "68d029a69f572b31590b9b84e045f55081fdd20b611b0e2b97360810a4609c1f",
+        "asset": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-full.webp",
+        "sha256": "f6b5502c16f4a272b0e80209876366f86285c38ce5547b28d6fbe98d9849427a",
         "tone": "urgent rescue and focused compassion",
         "reviewed": true,
         "technical_review_passed": true,
-        "owner_approved": false,
+        "owner_approved": true,
         "review_record": "docs/sitewide-narrative-supporting-review.json",
         "width": 1536,
-        "height": 1024
+        "height": 1024,
+        "owner_approval_evidence": "Wyatt: approved, final expression variant exec-40def308-5c69-4658-8167-4b0d512a91db.png"
       }
     ],
     "answers/faith-in-jesus-christ-during-trials.html": [

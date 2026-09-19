@@ -1,0 +1,56 @@
+[
+  {
+    "sha256": "d17e67b7ad831dc4034b6891b65c5af8f297119130056e98275cdc28725f5f0a",
+    "source": "exec-7a3de2bf-2b51-4f74-a324-d800dccafc0f.png",
+    "status": "rejected",
+    "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+  },
+  {
+    "sha256": "24d509bcd57bb14a2113c89401f88ee59dc535f4e7a744eb5c77b27c2f6d9b0d",
+    "source": "exec-8edfaef7-c5e5-4a50-af6c-a0c66e555f93.png",
+    "status": "rejected",
+    "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+  },
+  {
+    "sha256": "3c045f7578ddd3ba9cddc087c052b168c1d1c2e68a768cb0ef3a6e7535da71e0",
+    "source": "exec-2742d364-ecf1-4ef3-9012-fa4fca156d38.png",
+    "status": "rejected",
+    "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+  },
+  {
+    "sha256": "a8031522921ec230cac3720bc2cca5ec9f3f2850b59cb5e5c4dbb0386f255e73",
+    "source": "exec-2e797703-a4a7-4db2-b71b-1bb2b2b8d468.png",
+    "status": "rejected",
+    "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+  },
+  {
+    "sha256": "6b8ce02d6f888c6da3710b08d192bcf20e63839a32a1879867910aefd1949d72",
+    "source": "exec-2b6e9c01-c04f-4a6d-af4a-1bee28296b3b.png",
+    "status": "rejected",
+    "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+  },
+  {
+    "sha256": "5e4d4c0fe72da769b2e37fc47985342eb1b425a1805ec3f1cceddce10b2b53b7",
+    "source": "exec-695dc8a8-a405-4433-a7a3-9548c3d430bf.png",
+    "status": "rejected",
+    "reason": "Owner rejected rescue anatomy; do not reintroduce this candidate or derivatives."
+  },
+  {
+    "sha256": "68d029a69f572b31590b9b84e045f55081fdd20b611b0e2b97360810a4609c1f",
+    "source": "look-peter-rescue-full.webp",
+    "status": "rejected_for_replacement",
+    "reason": "Historical published image superseded by owner-approved replacement on 2026-09-19; prior grasp rejected."
+  },
+  {
+    "sha256": "3f7e39e778a02f8febb90c4930ce3e47ee2f5ac49e073e11c8a65a9a21716d79",
+    "source": "exec-1f3f7297-ca45-4c29-8daf-a0777ee2cc24.png",
+    "status": "partial-owner-rejection",
+    "reason": "Wyatt accepts Peter arm only; Christ hand/arm still wrong. Do not publish full image. Preserve Peter arm as partial reference."
+  },
+  {
+    "sha256": "b1b05d3650a45abf9a68abe2848da3c53b2c2cd50ef01f86c429ee47604b8fd3",
+    "source": "exec-02bfa589-8e4e-4b15-abaa-a80921520b34.png",
+    "status": "owner-rejected",
+    "reason": "Wyatt rejects bent unnatural arm and drifted Christ likeness. Recreate scene fresh."
+  }
+]
