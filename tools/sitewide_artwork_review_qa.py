@@ -50,7 +50,7 @@ def main():
     if args.baseline_report:Path(args.baseline_report).write_text(json.dumps({'baseline':baseline,'images':preserved},indent=2),encoding='utf8')
     ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
     pages=[urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
-    check(len(pages)==39 and len(set(pages))==39,'Sitemap must expose all 39 unique canonical destinations')
+    check(len(pages)==41 and len(set(pages))==41,'Sitemap must expose all 41 unique canonical destinations')
     parsed={}
     for page in pages:
         check((ROOT/page).is_file(),'Missing canonical page '+page)
@@ -109,7 +109,14 @@ def main():
             check(bool(match),key+': missing '+variable)
             if match:check(((ROOT/page).parent/match.group(1)).resolve()==(ROOT/asset).resolve(),key+': wrong '+variable)
     # Added CSS must be scoped and must not alter width/height/frame geometry.
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css'],cwd=ROOT,text=True)
+    # The focused-study additions have a separate, closed visual-review baseline.
+    # Exempt only the exact reviewed bytes, never arbitrary later edits to this file.
+    focused=json.loads((ROOT/'tools/focused_answers_baseline.json').read_text(encoding='utf8'))
+    reviewed=focused['reviewed_stylesheets']
+    check(set(reviewed)=={'focused-answers.css'}, 'Unexpected focused stylesheet exemption')
+    for name,digest in reviewed.items():
+        check(sha(ROOT/name)==digest, 'Focused stylesheet differs from reviewed bytes: '+name)
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css'],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():

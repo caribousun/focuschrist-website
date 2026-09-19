@@ -55,6 +55,10 @@ def build():
             target = next((n for n in lineage if n.attrs.get('id') and (n is heading or n.tag in {'section','article'})), None)
             if not target or target.attrs['id'] in used: continue
             used.add(target.attrs['id'])
+            # These retained bookmarks now forward to their own complete studies.
+            if path == '/church-history.html' and target.attrs['id'] in {
+                'aaronic-priesthood-restoration', 'melchizedek-priesthood-restoration'
+            }: continue
             if target.tag in {'section','article'}:
                 bodytext = clean(visible(target))
             else:

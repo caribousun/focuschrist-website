@@ -23,8 +23,7 @@ study_destinations={
  'atonement.html', 'birth-of-christ.html',
  'general-conference.html', 'book-of-mormon-evidences.html',
  'joseph-smith-likeness.html', 'church-history.html', 'pioneers.html',
- 'come-follow-me.html', 'church-history.html#aaronic-priesthood-restoration',
- 'church-history.html#melchizedek-priesthood-restoration',
+ 'come-follow-me.html',
 }
 expected={p.relative_to(ROOT).as_posix() for p in answer_paths}|study_destinations
 assert len(links)==len(expected), 'topic directory must not duplicate destinations'

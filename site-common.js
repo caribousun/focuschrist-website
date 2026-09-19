@@ -20,6 +20,8 @@
         const hash = window.location.hash;
         const topics = {'#quiet-prayer-title':'prayer-and-personal-revelation.html','#comfort-in-grief-title':'grief-and-faith.html','#loss-topic':'death-of-a-child.html','#divorce-topic':'divorce-and-faith.html'};
         if (path.endsWith('/answers.html') && topics[hash]) window.location.replace('answers/' + topics[hash] + window.location.search);
+        const priesthood = {'#aaronic-priesthood-restoration':'aaronic-priesthood-restoration.html','#melchizedek-priesthood-restoration':'melchizedek-priesthood-restoration.html'};
+        if (path.endsWith('/church-history.html') && priesthood[hash]) window.location.replace('answers/' + priesthood[hash] + window.location.search + hash);
         if (path.endsWith('/answers/look-unto-me-doctrine-and-covenants-6-36.html') && hash === '#stand-forever') window.location.replace('stand-forever.html' + window.location.search);
     }
     forwardLegacyTopicBookmark();
@@ -393,6 +395,8 @@
     function currentStudyTopic(pathname, hash) {
         const path = pathname.toLowerCase();
         const topics = {
+            'aaronic-priesthood-restoration.html': 'Aaronic Priesthood',
+            'melchizedek-priesthood-restoration.html': 'Melchizedek Priesthood',
             'jesus-christ-latter-day-saint-beliefs.html': 'Jesus Christ',
             'are-latter-day-saints-christian.html': 'Christian Identity',
             'what-is-the-book-of-mormon.html': 'Book of Mormon',

@@ -2,6 +2,7 @@
 """Verify every body-artwork entry can reach the shared contextual detail adapter."""
 from pathlib import Path
 import json
+import hashlib
 from urllib.parse import urlsplit
 from answer_study_qa import Document
 from study_gap_art_qa import sitewide_entries
@@ -11,6 +12,13 @@ def parents(n):
   n=n.parent;yield n
 errors=[];count=0;preserved=0;panels=0;life_assets=[];gap_assets=[];sitewide_assets=[]
 new_review = {e['asset']: e for e in sitewide_entries() if not e['talk'] and (e['page'].startswith('answers/') or e['page']=='general-conference.html')}
+focused_review = {e['asset']: e for e in json.loads((ROOT/'docs/focused-answers-art-review.json').read_text(encoding='utf-8'))['images'] if e['role'] == 'body'}
+assert len(focused_review) == 4, 'Exact four new supporting photographs required'
+opening_review = {e['asset']: e for e in json.loads((ROOT/'docs/focused-answers-art-review.json').read_text(encoding='utf-8'))['images'] if e['role'] == 'opening'}
+assert len(opening_review) == 1 and {e['id'] for e in opening_review.values()} == {'conference-listening'}, 'Exact reviewed Conference opening required'
+opening_assets=[]
+focused_assets=[]; relocated_assets=[]
+relocated_names={'aaronic-priesthood','joseph-baptizes-oliver','oliver-baptizes-joseph','melchizedek-priesthood','apostles-ordain-joseph','apostles-ordain-oliver'}
 for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.html']:
  d=Document();d.feed(page.read_text(encoding='utf-8'));ns=list(d.root.walk())
  for asset,tag,attr in [('topic-artwork-details.js','script','src'),('topic-artwork-details.css','link','href')]:
@@ -31,7 +39,22 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname=='www.churchofjesuschrist.org'] if cap else []
   if not sources and 'data-topic-study' not in a.attrs and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
   relative_asset=(page.parent/urlsplit(a.attrs['href']).path).resolve().relative_to(ROOT).as_posix()
-  if relative_asset in new_review:
+  if relative_asset in focused_review or (relative_asset.startswith('assets/page-art/church-history/') and Path(relative_asset).stem in relocated_names):
+   if relative_asset in focused_review:
+    record=focused_review[relative_asset]
+    assert record['page']==page.relative_to(ROOT).as_posix(), 'Focused artwork ownership mismatch'
+    assert record['reviewed'] and hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['sha256'], 'Focused artwork changed since review'
+    focused_assets.append(relative_asset)
+   else: relocated_assets.append(relative_asset)
+   if 'data-full-image-viewer' in a.attrs or a.attrs.get('aria-haspopup')!='dialog': errors.append(page.name+': focused picture must open study details first')
+  elif relative_asset in opening_review:
+   record=opening_review[relative_asset]
+   assert record['page']==page.relative_to(ROOT).as_posix()=='general-conference.html', 'Conference opening ownership mismatch'
+   assert record['reviewed'] and hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['sha256'], 'Conference opening changed since review'
+   if 'data-full-image-viewer' in a.attrs or a.attrs.get('aria-haspopup')!='dialog': errors.append(page.name+': opening picture must show study details first')
+   assert a.attrs.get('data-topic-study')=='general-conference.html#conference-messages', 'Conference opening study target changed'
+   opening_assets.append(relative_asset)
+  elif relative_asset in new_review:
    record=new_review[relative_asset]
    if record['page']!=page.relative_to(ROOT).as_posix():errors.append(page.name+': sitewide artwork is on the wrong page')
    if 'data-full-image-viewer' in a.attrs or a.attrs.get('aria-haspopup')!='dialog':errors.append(page.name+': sitewide picture must open study details first')
@@ -50,7 +73,11 @@ assert len(life_assets)==18 and len(set(life_assets))==18 and set(life_assets)==
 gap_review=json.loads((ROOT/'docs/study-gap-art-review.json').read_text(encoding='utf-8'))['artworks']
 assert len(gap_assets)==4 and len(set(gap_assets))==4 and set(gap_assets)=={entry['asset'] for entry in gap_review},'Study-gap adapter inventory differs from reviewed art'
 assert len(sitewide_assets)==len(new_review) and set(sitewide_assets)==set(new_review),'Sitewide adapter inventory differs from exact reviewed additions'
-assert (count-len(life_assets)-len(gap_assets)-len(sitewide_assets),preserved)==(99,3),(count,preserved)
+assert len(opening_assets)==1 and set(opening_assets)==set(opening_review), 'Conference opening must replace its existing slot exactly once'
+# The opening replaces an existing picture and remains within the 99-picture baseline.
+assert len(focused_assets)==4 and set(focused_assets)==set(focused_review), 'Focused body artwork inventory mismatch'
+assert len(relocated_assets)==6 and {Path(a).stem for a in relocated_assets}==relocated_names, 'Preserved historical artwork inventory mismatch'
+assert (count-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert panels==12,panels
@@ -67,4 +94,4 @@ adapter=(ROOT/'topic-artwork-details.js').read_text(encoding='utf-8')
 assert "if (!record.study) {" in adapter,'Foundation cards must not inherit unrelated section sources'
 assert "if (record.study) pill(record.studyLabel, record.study, true);" in adapter,'Foundation topic action missing from detail panel'
 if errors:raise SystemExit('\n'.join(errors))
-print(f'TOPIC ARTWORK DETAILS QA PASS: {count} adapter pictures, {preserved} existing detail pictures, {panels} expanded illustration panels, 19 page dependencies')
+print(f'TOPIC ARTWORK DETAILS QA PASS: {count} adapter pictures, {preserved} existing detail pictures, {panels} expanded illustration panels, {len(list((ROOT/'answers').glob('*.html')))+1} page dependencies')

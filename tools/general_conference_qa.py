@@ -67,7 +67,16 @@ answers_nodes = list(answers_doc.root.walk())
 require(any(n.attrs.get('id') == 'general-conference' for n in answers_nodes), 'legacy Answers fragment needs a useful migration destination')
 require(any(n.tag == 'a' and urlsplit(n.attrs.get('href', '')).path == 'general-conference.html' for n in answers_nodes), 'Answers needs a direct standalone conference route')
 nodes = list(hub.walk())
-require(sum('data-full-image-viewer' in n.attrs for n in nodes) == 6, 'conference must retain its opening viewer and five manifested body artwork viewers')
+require(sum('data-full-image-viewer' in n.attrs for n in nodes) == 5, 'conference must retain all five manifested body artwork viewers')
+opening = [n for n in nodes if n.attrs.get('data-exclusive-artwork') == 'conference-listening']
+require(len(opening) == 1, 'conference needs exactly one exclusive opening study picture')
+opening_links = [n for n in opening[0].walk() if n.tag == 'a' and any(c.tag == 'img' for c in n.walk())]
+require(len(opening_links) == 1, 'conference opening needs one picture trigger')
+opening_trigger = opening_links[0]
+require(opening_trigger.attrs.get('href') == 'assets/heroes/topics/conference-listening-full.webp' and opening_trigger.attrs.get('aria-haspopup') == 'dialog' and 'data-full-image-viewer' not in opening_trigger.attrs, 'conference opening must preserve its own picture and open study details first')
+require(opening_trigger.attrs.get('data-topic-study') == 'general-conference.html#conference-messages', 'conference opening must continue to its own messages')
+require(any(n.tag == 'a' and n.attrs.get('href') == 'https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/1?lang=eng&id=p37-p38#p37' for n in opening[0].walk()), 'conference opening must retain its exact scripture source')
+require(sum(n.tag == 'script' and 'topic-artwork-details.js' in n.attrs.get('src', '') for n in all_nodes) == 1, 'conference opening requires the shared study adapter once')
 ids = Counter(n.attrs['id'] for n in all_nodes if 'id' in n.attrs)
 require(all(count == 1 for count in ids.values()), 'conference page IDs must remain unique')
 cards = [n for n in nodes if 'data-conference-talk' in n.attrs]

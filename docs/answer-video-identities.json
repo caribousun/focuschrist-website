@@ -783,6 +783,46 @@
       "aliases": [],
       "source_review": "docs/sitewide-talk-thumbnail-review.json",
       "review_note": "Read actual official talk: compassion, patience and qualified professional care; thematic artwork is not a speaker portrait or historical anecdote."
+    },
+    "focused-aaronic-restoration": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2010-07-018-restoration-of-the-aaronic-priesthood?lang=eng",
+      "title": "Restoration of the Aaronic Priesthood",
+      "video_identity": "churchofjesuschrist.org/media/video/2010-07-018-restoration-of-the-aaronic-priesthood",
+      "aliases": []
+    },
+    "focused-aaronic-blessings": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2010-05-1130-restoration-of-the-priesthood?lang=eng",
+      "title": "Restoration of the Priesthood",
+      "video_identity": "churchofjesuschrist.org/media/video/2010-05-1130-restoration-of-the-priesthood",
+      "aliases": []
+    },
+    "focused-melchizedek-keys": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2020-04-3060-dallin-h-oaks?lang=eng",
+      "title": "The Melchizedek Priesthood and the Keys",
+      "video_identity": "churchofjesuschrist.org/media/video/2020-04-3060-dallin-h-oaks",
+      "aliases": []
+    },
+    "focused-melchizedek-organization": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2017-12-0130-the-restoration-of-the-priesthood-authority-and-organization?lang=eng",
+      "title": "The Restoration of the Priesthood Authority and Organization",
+      "video_identity": "churchofjesuschrist.org/media/video/2017-12-0130-the-restoration-of-the-priesthood-authority-and-organization",
+      "aliases": []
+    },
+    "cfm-study-vision": {
+      "kind": "video",
+      "presentation": "Church video",
+      "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-helps-home/video-9?lang=eng",
+      "title": "Come, Follow Me: Vision",
+      "video_identity": "churchofjesuschrist.org/study/manual/come-follow-me-helps-home/video-9",
+      "aliases": []
     }
   }
 }

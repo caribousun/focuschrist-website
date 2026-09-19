@@ -201,9 +201,10 @@ def main() -> int:
         fail(errors, "original approved hero must remain unchanged for recovery")
 
     approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
-    if len(approved_answer_pages) != 18:
-        fail(errors, f"expected 18 Answer detail pages, found {len(approved_answer_pages)}")
+    if len(approved_answer_pages) != 20:
+        fail(errors, f"expected 20 Answer detail pages, found {len(approved_answer_pages)}")
     topic_plans = {p["page"]: p["key"] for p in json.loads((ROOT / "docs/sitewide-hero-production-plan.json").read_text(encoding="utf-8"))["plans"]}
+    topic_plans.update({e["page"]: e["id"].removesuffix("-hero") for e in json.loads((ROOT / "docs/focused-answers-art-review.json").read_text(encoding="utf-8"))["images"] if e["role"] == "hero"})
     approved_hero_pages = ["index.html", *approved_answer_pages]
     approved_cache_versions: set[str] = set()
     for relative in approved_hero_pages:

@@ -92,8 +92,7 @@ const expectedPills = new Set(fs.readdirSync(path.join(root,'answers'))
   .filter(file => file.endsWith('.html'))
   .map(file => 'answers/' + file));
 const studyDestinations = ['birth-of-christ.html','atonement.html','general-conference.html','book-of-mormon-evidences.html',
-  'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html',
-  'church-history.html#aaronic-priesthood-restoration','church-history.html#melchizedek-priesthood-restoration'];
+  'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html'];
 for (const href of studyDestinations) expectedPills.add(href);
 assert.deepEqual(new Set(pills.map(([href]) => href)),expectedPills,'all discovered Answers and enriched study destinations are covered');
 function check(h,label) {

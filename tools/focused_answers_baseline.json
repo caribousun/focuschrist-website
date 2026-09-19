@@ -1,0 +1,3420 @@
+{
+  "commit": "1302ed7f8aaaab004ad4da97a09c5c605942608f",
+  "images": [
+    {
+      "path": "assets/answers-christ-portrait.png",
+      "git_blob_sha1": "2e5e3be1ba57e396d9bdab1782b09c4f43b8d8e9"
+    },
+    {
+      "path": "assets/answers-christ-walking.png",
+      "git_blob_sha1": "acceace5a3e200f2b9c86d58d0c6689674de0b3b"
+    },
+    {
+      "path": "assets/heroes/about.webp",
+      "git_blob_sha1": "73bd7554b495c5a615fa4f50f035b24ea81643f7"
+    },
+    {
+      "path": "assets/heroes/answers-christ-companion.png",
+      "git_blob_sha1": "4a6e3986d446c82016ba722bef80e938cce5fbf6"
+    },
+    {
+      "path": "assets/heroes/answers.webp",
+      "git_blob_sha1": "15de62cc299d02514ff7ecbcad82023ed0a76df0"
+    },
+    {
+      "path": "assets/heroes/art.webp",
+      "git_blob_sha1": "50bf54130b8e6567082c6be8d0a4dfcb1ce7c07a"
+    },
+    {
+      "path": "assets/heroes/ask.webp",
+      "git_blob_sha1": "d066e066510c08e8bb41eb269ea113c4034aff04"
+    },
+    {
+      "path": "assets/heroes/atonement-gethsemane-approved-20260914.webp",
+      "git_blob_sha1": "8b05a1eaece13bd9d1b2a00b1f0269bd9803ece2"
+    },
+    {
+      "path": "assets/heroes/atonement-gethsemane-mobile-20260914.webp",
+      "git_blob_sha1": "68b5157ccbe91b43e04d74c22fa478a0e3d31ad2"
+    },
+    {
+      "path": "assets/heroes/church-history.webp",
+      "git_blob_sha1": "ececb63d45e857516e3c066b4ea5a8edaab4080c"
+    },
+    {
+      "path": "assets/heroes/come-follow-me-2026-desktop.webp",
+      "git_blob_sha1": "6b65005402689531b9a3c31ea4762c10f8299904"
+    },
+    {
+      "path": "assets/heroes/come-follow-me-2026-mobile.webp",
+      "git_blob_sha1": "97f9e3aed3b535fe80f5861c24684221b0c40a81"
+    },
+    {
+      "path": "assets/heroes/home-christ-fully-approved.png",
+      "git_blob_sha1": "bdf4cc769d66a8b4c41e39a9baec17730eec5a8d"
+    },
+    {
+      "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "git_blob_sha1": "e64fc0697f7e66f13b2060f1ddcf30dd0f1c3eb2"
+    },
+    {
+      "path": "assets/heroes/home-option-1-ultra.png",
+      "git_blob_sha1": "ab4a3ff146bfa4bbfffb78657ad43e580642e337"
+    },
+    {
+      "path": "assets/heroes/home-option-3-ultra.png",
+      "git_blob_sha1": "12fe6a5483a7608af18b729f1e6dce0abb68e5e5"
+    },
+    {
+      "path": "assets/heroes/home.webp",
+      "git_blob_sha1": "31d8f690a7e5634ee27a20eeab68bbb7c45586da"
+    },
+    {
+      "path": "assets/heroes/missionary.webp",
+      "git_blob_sha1": "80bf4a8a5a4c4861d2a94112c17ecbbdc7dedb77"
+    },
+    {
+      "path": "assets/heroes/pioneers.webp",
+      "git_blob_sha1": "c8ff8e1bee9c4d231cc3f40d4a0e7f0d1d36b4b6"
+    },
+    {
+      "path": "assets/heroes/topics/bible-bom-desktop.webp",
+      "git_blob_sha1": "d852f963a987558313cb7ace95f322936a2e8f21"
+    },
+    {
+      "path": "assets/heroes/topics/bible-bom-full.webp",
+      "git_blob_sha1": "40d25ba87f69eb07a69dc0530ac414da7d7b1a5f"
+    },
+    {
+      "path": "assets/heroes/topics/bible-bom-mobile.webp",
+      "git_blob_sha1": "4b182c3054cc0672f69b479a7003cf884a26ed2d"
+    },
+    {
+      "path": "assets/heroes/topics/book-of-mormon-desktop.webp",
+      "git_blob_sha1": "92565f1efdaae3f015447e054cf5e68a4e3191e4"
+    },
+    {
+      "path": "assets/heroes/topics/book-of-mormon-full.webp",
+      "git_blob_sha1": "aec62179a5760e2a476d30652a8bc8a0578d8410"
+    },
+    {
+      "path": "assets/heroes/topics/book-of-mormon-mobile.webp",
+      "git_blob_sha1": "ca6cf16aad9607fcaaf5b9a78f7e2107d053007f"
+    },
+    {
+      "path": "assets/heroes/topics/child-loss-desktop.webp",
+      "git_blob_sha1": "69aafac89ed1a5c2fe20253bfb3d86409da7b709"
+    },
+    {
+      "path": "assets/heroes/topics/child-loss-full.webp",
+      "git_blob_sha1": "28155cb0c472675d5fb2b6f0ec5d36926a22f0be"
+    },
+    {
+      "path": "assets/heroes/topics/child-loss-mobile.webp",
+      "git_blob_sha1": "c65ddc9723835e45cd0fd22cd88650a6b3a9fb9f"
+    },
+    {
+      "path": "assets/heroes/topics/christian-desktop.webp",
+      "git_blob_sha1": "b48e60a72bb000caf3572a453ea623861be611dc"
+    },
+    {
+      "path": "assets/heroes/topics/christian-full.webp",
+      "git_blob_sha1": "bb0aa1758493d5fc2fd46823160816bc5ef29088"
+    },
+    {
+      "path": "assets/heroes/topics/christian-mobile.webp",
+      "git_blob_sha1": "5b314db5cc6718ceaaa488b204a288dc693e634b"
+    },
+    {
+      "path": "assets/heroes/topics/divorce-desktop.webp",
+      "git_blob_sha1": "f86ecf0bf4a0632258ba83da94ccb6cb93cc68da"
+    },
+    {
+      "path": "assets/heroes/topics/divorce-full.webp",
+      "git_blob_sha1": "e3c895f199d95eeed83d5409657ccdd4921997f5"
+    },
+    {
+      "path": "assets/heroes/topics/divorce-mobile.webp",
+      "git_blob_sha1": "02422acb5abd692e0eca2e5c9b0cb03649919e1c"
+    },
+    {
+      "path": "assets/heroes/topics/families-desktop.webp",
+      "git_blob_sha1": "e368775ab12c697ef1051db55141a89aa9b0ded2"
+    },
+    {
+      "path": "assets/heroes/topics/families-full.webp",
+      "git_blob_sha1": "e95acc3c17a0b1a6c729af9da4ef3582b9b55a0b"
+    },
+    {
+      "path": "assets/heroes/topics/families-mobile.webp",
+      "git_blob_sha1": "26562bb9be7b6e72e1f1baf3bdc28f671e23ac45"
+    },
+    {
+      "path": "assets/heroes/topics/father-desktop.webp",
+      "git_blob_sha1": "46654492e9d8851dbe513799144a66f2d8a68156"
+    },
+    {
+      "path": "assets/heroes/topics/father-full.webp",
+      "git_blob_sha1": "af001b65e5ac9791e687b2bfe11930d64e4d7906"
+    },
+    {
+      "path": "assets/heroes/topics/father-mobile.webp",
+      "git_blob_sha1": "440e8a2ac205a04e97a6dd198298f2a5ec180dee"
+    },
+    {
+      "path": "assets/heroes/topics/grief-desktop.webp",
+      "git_blob_sha1": "d981cb58734188e0b498e7c940b1ccdc42fb3994"
+    },
+    {
+      "path": "assets/heroes/topics/grief-full.webp",
+      "git_blob_sha1": "5cfb6157870bb1559d3c4fdc318a3ce7087b8573"
+    },
+    {
+      "path": "assets/heroes/topics/grief-mobile.webp",
+      "git_blob_sha1": "3d82dc94e964208f89fcf535baefd64c44f1d43b"
+    },
+    {
+      "path": "assets/heroes/topics/jesus-desktop.webp",
+      "git_blob_sha1": "fcfd6e76c29f9bf3fde089b925a633f68e6737a0"
+    },
+    {
+      "path": "assets/heroes/topics/jesus-full.webp",
+      "git_blob_sha1": "34c3073d54ced32e56fb182523b7320b66023715"
+    },
+    {
+      "path": "assets/heroes/topics/jesus-mobile.webp",
+      "git_blob_sha1": "c9d20eadce69e8beab52d76aecf3ac01ea957191"
+    },
+    {
+      "path": "assets/heroes/topics/joseph-desktop.webp",
+      "git_blob_sha1": "e1f1c689d9eb0c0b0c0f77ba841fd85581d21505"
+    },
+    {
+      "path": "assets/heroes/topics/joseph-full.webp",
+      "git_blob_sha1": "aa29676792ee9be27b995424d6f38fff90b63132"
+    },
+    {
+      "path": "assets/heroes/topics/joseph-mobile.webp",
+      "git_blob_sha1": "9139e523409114e4a142132ddb28b7be42f814c7"
+    },
+    {
+      "path": "assets/heroes/topics/life-after-death-desktop.webp",
+      "git_blob_sha1": "fe299cfd7caaad381d656fb7c5879856efca74e4"
+    },
+    {
+      "path": "assets/heroes/topics/life-after-death-full.webp",
+      "git_blob_sha1": "3f2df9d7f64658fdd65b8e73448900d5a71ae110"
+    },
+    {
+      "path": "assets/heroes/topics/life-after-death-mobile.webp",
+      "git_blob_sha1": "0f0b3e49b748a36f0b7d261b2804112a82abc87a"
+    },
+    {
+      "path": "assets/heroes/topics/living-christ-desktop.webp",
+      "git_blob_sha1": "413b05b2968343ed814ce478f1b17c8c0a03cf6f"
+    },
+    {
+      "path": "assets/heroes/topics/living-christ-full.webp",
+      "git_blob_sha1": "c06c05b00e328f897efbf0fcc21ebdef0674e0cc"
+    },
+    {
+      "path": "assets/heroes/topics/living-christ-mobile.webp",
+      "git_blob_sha1": "1f65fe8e12698d7e0ff123f808a59cd8660a25d1"
+    },
+    {
+      "path": "assets/heroes/topics/look-unto-desktop.webp",
+      "git_blob_sha1": "b594e0e607d69fb5a241175a2e9959e855f5f4a0"
+    },
+    {
+      "path": "assets/heroes/topics/look-unto-full.webp",
+      "git_blob_sha1": "2efa87e0ed32b5dda6d5fc863382c0c5ee9d81ac"
+    },
+    {
+      "path": "assets/heroes/topics/look-unto-mobile.webp",
+      "git_blob_sha1": "177f55e525e3b67a25fc61e843032d2b61e545db"
+    },
+    {
+      "path": "assets/heroes/topics/marriage-desktop.webp",
+      "git_blob_sha1": "323ca7e575aed748e5fc5745af71793b78499762"
+    },
+    {
+      "path": "assets/heroes/topics/marriage-full.webp",
+      "git_blob_sha1": "5620265d8a55d7c862d430d34485241ec432a8de"
+    },
+    {
+      "path": "assets/heroes/topics/marriage-mobile.webp",
+      "git_blob_sha1": "bb231e50ac992705862f0d4e7a3e8113b1adb5fb"
+    },
+    {
+      "path": "assets/heroes/topics/prayer-desktop.webp",
+      "git_blob_sha1": "0e0997e02254ece2cf284d4121d00890ab220bdd"
+    },
+    {
+      "path": "assets/heroes/topics/prayer-full.webp",
+      "git_blob_sha1": "df2b4d08301b6c5e7f9d20108648218067b81c40"
+    },
+    {
+      "path": "assets/heroes/topics/prayer-mobile.webp",
+      "git_blob_sha1": "c7ebdea5816ddf059d11cb4e1a102ed141b450ee"
+    },
+    {
+      "path": "assets/heroes/topics/restoration-desktop.webp",
+      "git_blob_sha1": "be61b616015e0fe35d2d2da3093a51bb7080e818"
+    },
+    {
+      "path": "assets/heroes/topics/restoration-full.webp",
+      "git_blob_sha1": "92a4a1df6768a1a0a08740ca5a6b8567006b33cd"
+    },
+    {
+      "path": "assets/heroes/topics/restoration-mobile.webp",
+      "git_blob_sha1": "4d29a446d782a2c621f2749ddba64e52cf5433f9"
+    },
+    {
+      "path": "assets/heroes/topics/stand-forever-desktop.webp",
+      "git_blob_sha1": "55df64c1102c88c43a3a54affa2541aaabf1d580"
+    },
+    {
+      "path": "assets/heroes/topics/stand-forever-full.webp",
+      "git_blob_sha1": "c100d0b89d8114ec4b85dcc1a6cd07f8954dd59d"
+    },
+    {
+      "path": "assets/heroes/topics/stand-forever-mobile.webp",
+      "git_blob_sha1": "634409cf59addde02e46f50e3fb9efa017215507"
+    },
+    {
+      "path": "assets/heroes/topics/temples-desktop.webp",
+      "git_blob_sha1": "f259afd91fc1864a5b0a983715495ac363b75279"
+    },
+    {
+      "path": "assets/heroes/topics/temples-full.webp",
+      "git_blob_sha1": "3c9261fa7b85544df42faa92f3883feb431438ae"
+    },
+    {
+      "path": "assets/heroes/topics/temples-mobile.webp",
+      "git_blob_sha1": "b6a0fdeacb5fbc57bca952a89c89cbedf254439f"
+    },
+    {
+      "path": "assets/heroes/topics/trials-desktop.webp",
+      "git_blob_sha1": "0d36cafa3922698c665877326954bc2b8cb8dbb7"
+    },
+    {
+      "path": "assets/heroes/topics/trials-full.webp",
+      "git_blob_sha1": "5c0bc519de3bfa73b3d879d02535ebb03ee89925"
+    },
+    {
+      "path": "assets/heroes/topics/trials-mobile.webp",
+      "git_blob_sha1": "3f558f19e263c484a7a231e0d2feff2e1c841d64"
+    },
+    {
+      "path": "assets/heroes/watch.webp",
+      "git_blob_sha1": "09d9fd5bd1fc8a371c843597d297e45adc315806"
+    },
+    {
+      "path": "assets/history/christ-museum-record-1400.webp",
+      "git_blob_sha1": "f8adced267f9cc1c22552b62bdb80c4ad959a503"
+    },
+    {
+      "path": "assets/history/christ-museum-record-800.webp",
+      "git_blob_sha1": "bd6f7f5245189cb8e171fa23ac303e3067b79a3b"
+    },
+    {
+      "path": "assets/history/christ-through-eras-1400.webp",
+      "git_blob_sha1": "6adc21e90c6268cc4e35d77c47228c8ea9c5a1a4"
+    },
+    {
+      "path": "assets/history/christ-through-eras-800.webp",
+      "git_blob_sha1": "9f045de07558712f364dea25f0149af6286ab95e"
+    },
+    {
+      "path": "assets/history/first-vision-1400.webp",
+      "git_blob_sha1": "57e7a568a6e90eaa0c2bd47f68251fd92c8165ec"
+    },
+    {
+      "path": "assets/history/first-vision-800.webp",
+      "git_blob_sha1": "1bdd7714244cf778890c841334e5ce0e798ec29a"
+    },
+    {
+      "path": "assets/history/joseph-emma-harmony-1400.webp",
+      "git_blob_sha1": "7cd9534253f23723d5399f9453b1d4ff2730dbd3"
+    },
+    {
+      "path": "assets/history/joseph-emma-harmony-800.webp",
+      "git_blob_sha1": "150e4c468e8adda7d1eb1734b9cf431a05719ea4"
+    },
+    {
+      "path": "assets/history/preserving-the-record-1400.webp",
+      "git_blob_sha1": "3e6303bff98ac75d989942bafe9a4d7f5fb754ef"
+    },
+    {
+      "path": "assets/history/preserving-the-record-800.webp",
+      "git_blob_sha1": "066d3d940b6f406c34ea3a1a78648fcd7e7ba9c6"
+    },
+    {
+      "path": "assets/history/restoration-print-shop-1400.webp",
+      "git_blob_sha1": "6654c2d31d3f7ef30e1546d5cf35d1adfd6528b2"
+    },
+    {
+      "path": "assets/history/restoration-print-shop-800.webp",
+      "git_blob_sha1": "b27c7052d2bcc4d2782b8945467cb59ff20a0f4f"
+    },
+    {
+      "path": "assets/history/three-witnesses-1400.webp",
+      "git_blob_sha1": "60fdaa33fe0f58a9d26f1fd0f2b14169801b6379"
+    },
+    {
+      "path": "assets/history/three-witnesses-800.webp",
+      "git_blob_sha1": "f48778edfacc923302872b4805d4b6ee3c473f2a"
+    },
+    {
+      "path": "assets/identities/david-research-master-20260914.png",
+      "git_blob_sha1": "8ac32e9a504e94badea0c454ca39f4fd24f4a46b"
+    },
+    {
+      "path": "assets/identities/emma-research-master-20260914.png",
+      "git_blob_sha1": "ad2eae5e755f2217270b249477152937ae8cd496"
+    },
+    {
+      "path": "assets/identities/joseph-smith-owner-approved-20260914.png",
+      "git_blob_sha1": "b9ac43cc8898ad8acd2141af042ebe30d2f09fcb"
+    },
+    {
+      "path": "assets/identities/martin-research-master-20260914.png",
+      "git_blob_sha1": "086d589408d767cd562bb90cae2d744e99f786d3"
+    },
+    {
+      "path": "assets/identities/oliver-research-master-20260914.png",
+      "git_blob_sha1": "aff2bd7a27dc3eb97076ac44454b7ba5a55528e0"
+    },
+    {
+      "path": "assets/missionary/christ-centered-world.webp",
+      "git_blob_sha1": "b9691268ea1526bdef4672833f06e14ed22a3d95"
+    },
+    {
+      "path": "assets/missionary/christ-commissions-twelve-1100.webp",
+      "git_blob_sha1": "05052b0f3799786b1a924f8740e403715d1c24e3"
+    },
+    {
+      "path": "assets/missionary/christ-commissions-twelve-1672.webp",
+      "git_blob_sha1": "3b281332455b9b311e74b3832cbf96082c3fda94"
+    },
+    {
+      "path": "assets/missionary/christ-commissions-twelve-900.webp",
+      "git_blob_sha1": "45dd3bdc2b795d2d4654eee808fd27560c07f517"
+    },
+    {
+      "path": "assets/missionary/christ-commissions-twelve-approved-1100.webp",
+      "git_blob_sha1": "52c772936f55ee17f09d1a9a7ea0435be838143c"
+    },
+    {
+      "path": "assets/missionary/christ-commissions-twelve-approved-900.webp",
+      "git_blob_sha1": "82b46a5f2267e1b35789a1c81d16c8a0007cc492"
+    },
+    {
+      "path": "assets/missionary/christ-commissions-twelve-approved-full.webp",
+      "git_blob_sha1": "d3fc071cf54a09e51888aaa4b344646cac3a1482"
+    },
+    {
+      "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-1100.webp",
+      "git_blob_sha1": "30ac953ca9c4868fbc62cbe79f1c6a095b69640e"
+    },
+    {
+      "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-900.webp",
+      "git_blob_sha1": "37aff2b8e3601743e841e72c6084b4c77b5eb5e1"
+    },
+    {
+      "path": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-full.webp",
+      "git_blob_sha1": "ac28a2795a5585a2c7d386f769e522bb1fb7dfcc"
+    },
+    {
+      "path": "assets/missionary/early-missionaries-liverpool-1400.webp",
+      "git_blob_sha1": "7fd2d9258d0d250f03a68b24c4570a759c3ca628"
+    },
+    {
+      "path": "assets/missionary/early-missionaries-liverpool-800.webp",
+      "git_blob_sha1": "ad19dfd93219f1e27a68bf8c2b9b30450de09214"
+    },
+    {
+      "path": "assets/missionary/light-across-world.webp",
+      "git_blob_sha1": "155f99c6aa8e6c07a2c59e473cc9e459c7940fdf"
+    },
+    {
+      "path": "assets/missionary/samuel-smith-first-mission-1400.webp",
+      "git_blob_sha1": "3455f891ab0358ec7c46f57d07b61fc3e5b4ce70"
+    },
+    {
+      "path": "assets/missionary/samuel-smith-first-mission-800.webp",
+      "git_blob_sha1": "0d9944a2d54301081b6f69b009d8d01177917ae8"
+    },
+    {
+      "path": "assets/missionary/service-missionaries-food-pantry-1400.webp",
+      "git_blob_sha1": "a2e5d9c2cd7d2bf7b35d2339e5f1b764fb1ab090"
+    },
+    {
+      "path": "assets/missionary/service-missionaries-food-pantry-800.webp",
+      "git_blob_sha1": "7a80deeafd726a86d4dd543690479c7eae3860fc"
+    },
+    {
+      "path": "assets/missionary/sister-missionaries-teaching-1400.webp",
+      "git_blob_sha1": "0348edb003c60a241162328b1dc4e6027ce842cd"
+    },
+    {
+      "path": "assets/missionary/sister-missionaries-teaching-800.webp",
+      "git_blob_sha1": "02192ce8ab28350a29dd8cff2c9860e9a515b683"
+    },
+    {
+      "path": "assets/page-art/answers-child-loss-father-1726.webp",
+      "git_blob_sha1": "7759e5ecbd835adc5ff6ce72a275b7de5e553845"
+    },
+    {
+      "path": "assets/page-art/answers-child-loss-father-800.webp",
+      "git_blob_sha1": "d7deb1e3b2adfb09dfe2d0c9c372009ee51f55a6"
+    },
+    {
+      "path": "assets/page-art/answers-child-loss-parents-1726.webp",
+      "git_blob_sha1": "e6b53fd490d6a3e85c64aff3bc40db792466859f"
+    },
+    {
+      "path": "assets/page-art/answers-child-loss-parents-800.webp",
+      "git_blob_sha1": "1e67a0a239df2c3dfa75b053ffa996f8f919b12c"
+    },
+    {
+      "path": "assets/page-art/answers-comfort-in-grief-1536.webp",
+      "git_blob_sha1": "24b5c723a373ef2a1b927940c0c29948857581fa"
+    },
+    {
+      "path": "assets/page-art/answers-comfort-in-grief-800.webp",
+      "git_blob_sha1": "1205bacbff92da95d77c7cb7de85286dc129b995"
+    },
+    {
+      "path": "assets/page-art/answers-divorced-father-1724.webp",
+      "git_blob_sha1": "bd1d7d7dc54438f13299ba0f76f000c3e59f830f"
+    },
+    {
+      "path": "assets/page-art/answers-divorced-father-800.webp",
+      "git_blob_sha1": "0c945959015fe0308e6afcf0bbd07b089ce8869f"
+    },
+    {
+      "path": "assets/page-art/answers-quiet-prayer-1536.webp",
+      "git_blob_sha1": "f9b58ffb024e5937f706a2dffe85df388289e72a"
+    },
+    {
+      "path": "assets/page-art/answers-quiet-prayer-800.webp",
+      "git_blob_sha1": "bc81aa6cca6502d15b6bef65e447237d08fc4a4b"
+    },
+    {
+      "path": "assets/page-art/answers-savior-welcomes-child-1672.webp",
+      "git_blob_sha1": "c37ced9fad0e62ede6b723f7373f05c90540289e"
+    },
+    {
+      "path": "assets/page-art/answers-savior-welcomes-child-900.webp",
+      "git_blob_sha1": "29c176337359172688dce0447f480717bb422f8a"
+    },
+    {
+      "path": "assets/page-art/art-study/full/children-gather-close.webp",
+      "git_blob_sha1": "d7007e2958333945cb026730497d2bb82ce0f4ce"
+    },
+    {
+      "path": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+      "git_blob_sha1": "372a390fd384827b533a9b68614290d7d00b9a14"
+    },
+    {
+      "path": "assets/page-art/art-study/full/children-listen-under-tree.webp",
+      "git_blob_sha1": "cfb80767d8a91b48515af3295a68c3edf7557274"
+    },
+    {
+      "path": "assets/page-art/art-study/full/children-quiet-water.webp",
+      "git_blob_sha1": "08e85e6c96d2469394ee73486102ded18c85c6ed"
+    },
+    {
+      "path": "assets/page-art/art-study/full/children-welcome-shy-child.webp",
+      "git_blob_sha1": "e8edf2d1352071d8483344be13952d4e9df00848"
+    },
+    {
+      "path": "assets/page-art/art-study/full/living-beside-grief.webp",
+      "git_blob_sha1": "db6b5f0b81884f11c6402e2c2cf3f9b7bf8b9abf"
+    },
+    {
+      "path": "assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
+      "git_blob_sha1": "1a8f051036e9b61c4d5196cc48c5702aed5d82fb"
+    },
+    {
+      "path": "assets/page-art/art-study/full/living-mary-at-tomb.webp",
+      "git_blob_sha1": "01b1488ef5d2f3a72e9b0a8c7668bf23c9628751"
+    },
+    {
+      "path": "assets/page-art/art-study/full/living-peace-to-disciples.webp",
+      "git_blob_sha1": "c9e4b00b7f04ba57a681dbbd66030c76ebb047fe"
+    },
+    {
+      "path": "assets/page-art/art-study/full/living-thomas-witness.webp",
+      "git_blob_sha1": "81672636bd9eeec14e61e71bc338ae371f29b2a5"
+    },
+    {
+      "path": "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+      "git_blob_sha1": "9a28a4f1177d9c5bb2b948cefa41f59b86c15a65"
+    },
+    {
+      "path": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+      "git_blob_sha1": "3ab847c06155a61d2913b6d9cff45a9d77ac93a6"
+    },
+    {
+      "path": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+      "git_blob_sha1": "aa61b260745537d55a6d66ec16dbb5a858dd3299"
+    },
+    {
+      "path": "assets/page-art/art-study/full/shepherd-sees-one.webp",
+      "git_blob_sha1": "16fdd703c36281d8fc9120e29161a702636d9577"
+    },
+    {
+      "path": "assets/page-art/art-study/full/shepherd-shares-burden.webp",
+      "git_blob_sha1": "bee33a36b02fbbab6cfc11f1b24f71aa27881f9b"
+    },
+    {
+      "path": "assets/page-art/art-study/full/still-city-companion.webp",
+      "git_blob_sha1": "e7db882342ec5bbfb88a882fcfaac01ef452f972"
+    },
+    {
+      "path": "assets/page-art/art-study/full/still-lakeside-pause.webp",
+      "git_blob_sha1": "86898f8ce9cdf3dc446d031b2cb5a36a9c451b94"
+    },
+    {
+      "path": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+      "git_blob_sha1": "ddcc9683042ce14d6cb1e5491bc4ac5f3226ba8b"
+    },
+    {
+      "path": "assets/page-art/art-study/full/still-shared-lift.webp",
+      "git_blob_sha1": "774b712ee74e9b4bada5c3a687134bb17fef66fc"
+    },
+    {
+      "path": "assets/page-art/art-study/full/still-storm-boat.webp",
+      "git_blob_sha1": "86262ad246ccb3e087260245377d9e7a15dccbab"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/children-gather-close.webp",
+      "git_blob_sha1": "9d43f744e5179463a53a993ec9353700ec267a23"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+      "git_blob_sha1": "1a7bf398ada025eac556b092ff6021f698b8d2b7"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/children-listen-under-tree.webp",
+      "git_blob_sha1": "e400d9e6357b92f774df90120ea132ab06b0f6d4"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/children-quiet-water.webp",
+      "git_blob_sha1": "1915e6c4890307ab23e9032b0df704852e74e855"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/children-welcome-shy-child.webp",
+      "git_blob_sha1": "b5dce4d30f83d8445b05fc4262df85b02b9e3b00"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/living-beside-grief.webp",
+      "git_blob_sha1": "0ee696813e8da28c58941c951e9cb849d3bb9442"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp",
+      "git_blob_sha1": "f507e4382f944d2bdffc2ae4d2b9be660c7d1a0a"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/living-mary-at-tomb.webp",
+      "git_blob_sha1": "47dbd5be325dd28649c7146bd95c41ec0ad8828f"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/living-peace-to-disciples.webp",
+      "git_blob_sha1": "716543ac57dd72b26c573a20cd6d73a2e95f19fe"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/living-thomas-witness.webp",
+      "git_blob_sha1": "1bf0e0f79f652af72f3a3db210ec10f5530c9098"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
+      "git_blob_sha1": "c13e831de63f301fb9cf2c09ad569bd46eddceb8"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
+      "git_blob_sha1": "28648ac12852965565041ac31951b59d97199e85"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+      "git_blob_sha1": "8a8341649ba57eb4c6467e256f1ca7d318db5699"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/shepherd-sees-one.webp",
+      "git_blob_sha1": "e25d7b920ce30ddb74ee22fbf97771ad11e55720"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/shepherd-shares-burden.webp",
+      "git_blob_sha1": "9c419118cccad5b0be8e62c7ad5793e96979ccf5"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/still-city-companion.webp",
+      "git_blob_sha1": "abba02131d3d08b124dd20d61881b7e7bc5fd8e0"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
+      "git_blob_sha1": "dd393976bb8fde8f9fb160722387281b832f7b3c"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+      "git_blob_sha1": "32996b0dac098fe929837981a95dd62fb5e99461"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/still-shared-lift.webp",
+      "git_blob_sha1": "defeca250a53669a6dce54eaf864a382bb2aa27f"
+    },
+    {
+      "path": "assets/page-art/art-study/thumbs/still-storm-boat.webp",
+      "git_blob_sha1": "5bd71817948a1524606ed29f97fb7dd6ea82cb75"
+    },
+    {
+      "path": "assets/page-art/ask-mary-1536.webp",
+      "git_blob_sha1": "dce15841e9b2144067456404a45ddf02a233d289"
+    },
+    {
+      "path": "assets/page-art/ask-mary-800.webp",
+      "git_blob_sha1": "06086a8dc48c8d1ea6628d890829f13776fa9e6f"
+    },
+    {
+      "path": "assets/page-art/ask-nicodemus-1122.webp",
+      "git_blob_sha1": "628cefcf4f04b8fac81ae5e1419c4267eb5594be"
+    },
+    {
+      "path": "assets/page-art/ask-nicodemus-640.webp",
+      "git_blob_sha1": "354336e01b4e1a21526f368e917dcbd337b6567a"
+    },
+    {
+      "path": "assets/page-art/ask-road-to-emmaus-1672.webp",
+      "git_blob_sha1": "8a7f54621716a4e3da1b788aa94844796667b2c5"
+    },
+    {
+      "path": "assets/page-art/ask-road-to-emmaus-900.webp",
+      "git_blob_sha1": "3f1e7e1611100fc7f2f10a97c0171398803ff0c8"
+    },
+    {
+      "path": "assets/page-art/ask-road-to-emmaus-eye-corrected-1672.webp",
+      "git_blob_sha1": "372976415e8ff7080927a2297936b8124b7fadbc"
+    },
+    {
+      "path": "assets/page-art/ask-road-to-emmaus-eye-corrected-900.webp",
+      "git_blob_sha1": "25c9419e301dd009be4f846dc56395ab2f1c75e3"
+    },
+    {
+      "path": "assets/page-art/ask-seek-study-1400.webp",
+      "git_blob_sha1": "d91832d5fba3ced4b5389acf1cf7d1ba4ba11d51"
+    },
+    {
+      "path": "assets/page-art/ask-seek-study-800.webp",
+      "git_blob_sha1": "94fd5945793f70dde64ba2248dc5cdf2afca9e07"
+    },
+    {
+      "path": "assets/page-art/ask-well-1536.webp",
+      "git_blob_sha1": "970d7a69d37dfab36d93ed09c7d526adcc84f8a0"
+    },
+    {
+      "path": "assets/page-art/ask-well-800.webp",
+      "git_blob_sha1": "b77cb84448e7b0c2061bd52c59a9c7d98ac1d035"
+    },
+    {
+      "path": "assets/page-art/atonement/bread-cup-960.webp",
+      "git_blob_sha1": "98405cd488a98cb149d5be81da8b9ba81204115c"
+    },
+    {
+      "path": "assets/page-art/atonement/bread-cup.webp",
+      "git_blob_sha1": "0d8b893f46bdb57c4856880a0061f2686e076cf2"
+    },
+    {
+      "path": "assets/page-art/atonement/children-welcome-960.webp",
+      "git_blob_sha1": "f55f0afbdac685f303414624815f09990c9d426a"
+    },
+    {
+      "path": "assets/page-art/atonement/children-welcome.webp",
+      "git_blob_sha1": "58b750b6693ff6cad5f681a53339c29564d0220c"
+    },
+    {
+      "path": "assets/page-art/atonement/creation-stars-960.webp",
+      "git_blob_sha1": "ca7d600ab028fd2e1441d39c1811c39be7f60e43"
+    },
+    {
+      "path": "assets/page-art/atonement/creation-stars.webp",
+      "git_blob_sha1": "9d65b8eb972756e96227cb21084e221afeb8fa10"
+    },
+    {
+      "path": "assets/page-art/atonement/cross-angled-rear-approved-960.webp",
+      "git_blob_sha1": "79f48f1d8921e41e9014f7e053a02e35eaac43dd"
+    },
+    {
+      "path": "assets/page-art/atonement/cross-angled-rear-approved.webp",
+      "git_blob_sha1": "22750c8abe121a2aa6e3a9b2ed9c44ae09bb9d6d"
+    },
+    {
+      "path": "assets/page-art/atonement/cross-mother-disciple-960.webp",
+      "git_blob_sha1": "0848816e80b0909db3aeb70d151f3a6a32378c03"
+    },
+    {
+      "path": "assets/page-art/atonement/cross-mother-disciple.webp",
+      "git_blob_sha1": "08f50adbcb16e5368652f608b8a1e5bc328c19d0"
+    },
+    {
+      "path": "assets/page-art/atonement/cross-rear-approved-960.webp",
+      "git_blob_sha1": "6d902c184c5319d4567045a63d5b772a77a1283e"
+    },
+    {
+      "path": "assets/page-art/atonement/cross-rear-approved.webp",
+      "git_blob_sha1": "4e59efe430e6124e01b36c076a2e44a41c0c4abc"
+    },
+    {
+      "path": "assets/page-art/atonement/cross-v11-960.webp",
+      "git_blob_sha1": "971cf566412bb45ccd9df283894692ddc59582fc"
+    },
+    {
+      "path": "assets/page-art/atonement/cross-v11.webp",
+      "git_blob_sha1": "efedc1778f2597ec56e46787215df816d2763499"
+    },
+    {
+      "path": "assets/page-art/atonement/daily-scripture-960.webp",
+      "git_blob_sha1": "1990359acdc8376221dcf8f9e3e8ab59256be15a"
+    },
+    {
+      "path": "assets/page-art/atonement/daily-scripture.webp",
+      "git_blob_sha1": "8487479b6bad334a4a863a4eafdd79f7ac00b0f8"
+    },
+    {
+      "path": "assets/page-art/atonement/emmaus-v2-960.webp",
+      "git_blob_sha1": "07675d902e86cc8bf66fe4252f0dce3c032df31f"
+    },
+    {
+      "path": "assets/page-art/atonement/emmaus-v2.webp",
+      "git_blob_sha1": "76085657104a0ed5649a852d70942c0665d79a24"
+    },
+    {
+      "path": "assets/page-art/atonement/empty-tomb-960.webp",
+      "git_blob_sha1": "6dc64573ce78c3d50efb7afb49d3689a469f8445"
+    },
+    {
+      "path": "assets/page-art/atonement/empty-tomb.webp",
+      "git_blob_sha1": "aa78a8fbf40447492bc63c1b6f201f04de94a3ee"
+    },
+    {
+      "path": "assets/page-art/atonement/father-welcome-960.webp",
+      "git_blob_sha1": "5d3d60820e6a3a68e7beaffb6a0f1eeb2967099d"
+    },
+    {
+      "path": "assets/page-art/atonement/father-welcome.webp",
+      "git_blob_sha1": "bc906fba61d00af97786c1dc804c4b3b8bed4b1d"
+    },
+    {
+      "path": "assets/page-art/atonement/first-hope-960.webp",
+      "git_blob_sha1": "9d587af5743e01dc883af3392c1a2290bbbb6a53"
+    },
+    {
+      "path": "assets/page-art/atonement/first-hope.webp",
+      "git_blob_sha1": "04004b98684daad1740be839bd2d6e138cf38a3e"
+    },
+    {
+      "path": "assets/page-art/atonement/gethsemane-v2-960.webp",
+      "git_blob_sha1": "9dd47d30e3f9a5153e3364b7d6ae405561f772f9"
+    },
+    {
+      "path": "assets/page-art/atonement/gethsemane-v2.webp",
+      "git_blob_sha1": "7d2dbd2ca19c08a769ba93df6cbe0ed70bf9accc"
+    },
+    {
+      "path": "assets/page-art/atonement/grief-companionship-960.webp",
+      "git_blob_sha1": "bdf0e1f39cf1379d661c8b22392e9b3209986286"
+    },
+    {
+      "path": "assets/page-art/atonement/grief-companionship.webp",
+      "git_blob_sha1": "3a7fff13a0a76eab2987c5b7594daa67f1b31a03"
+    },
+    {
+      "path": "assets/page-art/atonement/healing-v2-960.webp",
+      "git_blob_sha1": "a6b5295e9b67f9524be1c25788f487c0c1797e1b"
+    },
+    {
+      "path": "assets/page-art/atonement/healing-v2.webp",
+      "git_blob_sha1": "0a1d7f8cdc5942512b172c56e1db49717cd10fc0"
+    },
+    {
+      "path": "assets/page-art/atonement/helping-burden-960.webp",
+      "git_blob_sha1": "e52bf4d4381ac45f1114db84f2c5709075738f83"
+    },
+    {
+      "path": "assets/page-art/atonement/helping-burden.webp",
+      "git_blob_sha1": "ed08bcfa8f1543eef79059131c5beb565a547be7"
+    },
+    {
+      "path": "assets/page-art/atonement/lost-sheep-960.webp",
+      "git_blob_sha1": "ad0a954a0994df2165e4780f272f3eeff429cbaa"
+    },
+    {
+      "path": "assets/page-art/atonement/lost-sheep.webp",
+      "git_blob_sha1": "34e063f0917e9caf5ed280c47406bd417a114047"
+    },
+    {
+      "path": "assets/page-art/atonement/mary-risen-960.webp",
+      "git_blob_sha1": "ed42660949dbd57b9914d1aac8325daff60cf74b"
+    },
+    {
+      "path": "assets/page-art/atonement/mary-risen.webp",
+      "git_blob_sha1": "f511e3fff4d23e0b08a664bd314b5c109fd92eee"
+    },
+    {
+      "path": "assets/page-art/atonement/mortal-path-960.webp",
+      "git_blob_sha1": "820da7c2cd05016c2a79a1b482ae1daa6f24fec1"
+    },
+    {
+      "path": "assets/page-art/atonement/mortal-path.webp",
+      "git_blob_sha1": "7ee225a526f5aefa2ab1d06a31827fcdec291806"
+    },
+    {
+      "path": "assets/page-art/atonement/new-heart-960.webp",
+      "git_blob_sha1": "b2c18e2c702d4327bb58c9a6b1cbda0b742b8a09"
+    },
+    {
+      "path": "assets/page-art/atonement/new-heart.webp",
+      "git_blob_sha1": "af5755926e68da150e5cf1c9e2c076a0c8b903bd"
+    },
+    {
+      "path": "assets/page-art/atonement/one-by-one-960.webp",
+      "git_blob_sha1": "39be18f4172fd3c86e33e7f8c7da3b6493251849"
+    },
+    {
+      "path": "assets/page-art/atonement/one-by-one.webp",
+      "git_blob_sha1": "7fbd617e1c261f7f405706ae729527c76cad650f"
+    },
+    {
+      "path": "assets/page-art/atonement/passover-table-960.webp",
+      "git_blob_sha1": "e03fba07a26b66bac0a1543c87c0ea32bb95d823"
+    },
+    {
+      "path": "assets/page-art/atonement/passover-table.webp",
+      "git_blob_sha1": "a757a4222c4c62ea1ef13ac770c16297567c6c1a"
+    },
+    {
+      "path": "assets/page-art/atonement/prayer-return-960.webp",
+      "git_blob_sha1": "cd4fd996c7d29bc2f5c90012e4ab6bf5e392f74e"
+    },
+    {
+      "path": "assets/page-art/atonement/prayer-return.webp",
+      "git_blob_sha1": "de1095ebc377d0e6b3a9370745073057693eaf6d"
+    },
+    {
+      "path": "assets/page-art/atonement/restitution-960.webp",
+      "git_blob_sha1": "52ef1f83e97d24810669523dfcfd402bca7cef7a"
+    },
+    {
+      "path": "assets/page-art/atonement/restitution.webp",
+      "git_blob_sha1": "c8dc5d8fca021018e445573d2c999a5a80e9bb60"
+    },
+    {
+      "path": "assets/page-art/atonement/risen-invitation-960.webp",
+      "git_blob_sha1": "5186aff43b06d0dc59b98e07722ef8a9a6da952c"
+    },
+    {
+      "path": "assets/page-art/atonement/risen-invitation.webp",
+      "git_blob_sha1": "630a7054ebfa768594a8135d1afed8ace2aa642f"
+    },
+    {
+      "path": "assets/page-art/atonement/sacrament-remembrance-960.webp",
+      "git_blob_sha1": "beb97abfee35ac0fd7fb73b760b95be8656daeee"
+    },
+    {
+      "path": "assets/page-art/atonement/sacrament-remembrance.webp",
+      "git_blob_sha1": "340a9fe0d95359d778cf2168a8cd0148a9f095d2"
+    },
+    {
+      "path": "assets/page-art/atonement/sensitive-scene-preview.png",
+      "git_blob_sha1": "02e6ce2ed7642ea83bf23138a067b472eede9b89"
+    },
+    {
+      "path": "assets/page-art/atonement/servant-960.webp",
+      "git_blob_sha1": "1b47cdfed2cd6e17c8ff894f3ae8fb112b242e33"
+    },
+    {
+      "path": "assets/page-art/atonement/servant.webp",
+      "git_blob_sha1": "2845c7ebb999c37dae664592e15bf7972b8810e0"
+    },
+    {
+      "path": "assets/page-art/atonement/teaching-grace-v2-960.webp",
+      "git_blob_sha1": "e93ee0c41785f2c1c895f872a76ca45cc8a520c2"
+    },
+    {
+      "path": "assets/page-art/atonement/teaching-grace-v2.webp",
+      "git_blob_sha1": "d3444e95e3942fe15ddd6bae12ffdf989254ad56"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/01-isaiah-ahaz-800.webp",
+      "git_blob_sha1": "d6c253747f5d933e6c46d5e7f2437e1e8cc764ba"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/01-isaiah-ahaz-full.webp",
+      "git_blob_sha1": "fec5777f637d273dd8554834c4a0eec7a75eb38e"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/02-bethlehem-800.webp",
+      "git_blob_sha1": "463fecd3b08d9d5aa1ad3b174994e5fc6f582db1"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/02-bethlehem-full.webp",
+      "git_blob_sha1": "2908cd9ea55d5d4b4016578857a7180a48ea59b9"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/03-nephi-vision-800.webp",
+      "git_blob_sha1": "fbc281b7499c4569b02e003f057aef2e8c2ef216"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/03-nephi-vision-full.webp",
+      "git_blob_sha1": "c783e7dd4449331e2db73f9be1b8c45a394b525c"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/04-benjamin-angel-800.webp",
+      "git_blob_sha1": "93c56f1761daf4c895a70d58701d91643fb00e78"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/04-benjamin-angel-full.webp",
+      "git_blob_sha1": "e1e1e9d3e9817bca52ba67f682e6534f9d17ba29"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/05-alma-teaches-800.webp",
+      "git_blob_sha1": "3ae1f96cc884af9a9c222fab0f8b525320813f77"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/05-alma-teaches-full.webp",
+      "git_blob_sha1": "d945f8d9973074f20cf09e8113ec0aea768e73ae"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/06-samuel-wall-800.webp",
+      "git_blob_sha1": "b2b9e012cd7d83f3a02679708585ccab07a9f30c"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/06-samuel-wall-full.webp",
+      "git_blob_sha1": "715f217b6973db816abf8f45eb2d9b8e38f85814"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/07-zacharias-800.webp",
+      "git_blob_sha1": "27410f571d5ae7f9a4f55009aaa387f078d02f25"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/07-zacharias-full.webp",
+      "git_blob_sha1": "f6b710be4c4926c77d4cc59d97053f8e239b9906"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/08-annunciation-800.webp",
+      "git_blob_sha1": "1ba137d5ea601abb3740e4611fb4d50bbbd5124a"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/08-annunciation-full.webp",
+      "git_blob_sha1": "50c01411dff139e15274c648fa414b613b2965fc"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/09-mary-elisabeth-800.webp",
+      "git_blob_sha1": "e2216885013b17bd5652281e6028d79ae560154e"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/09-mary-elisabeth-full.webp",
+      "git_blob_sha1": "7d4966c494249619abd7a13a62dff1ea94b2b645"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/10-joseph-dream-800.webp",
+      "git_blob_sha1": "14ae28e796cd66893fdc77f88bb57b764d7b1a03"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/10-joseph-dream-full.webp",
+      "git_blob_sha1": "bf8abba35816c0c164bf22708ed979d88c0129f5"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/11-journey-bethlehem-800.webp",
+      "git_blob_sha1": "1d2cc519851edb85a1a5f1c5ed1bf49b13133326"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/11-journey-bethlehem-full.webp",
+      "git_blob_sha1": "34ef0abfb1a1775a30ddff57265a6ba00a854f9a"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/12-nativity-hero-800.webp",
+      "git_blob_sha1": "edfe02768685ae8d7619a8ea929913c7760c7aa5"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+      "git_blob_sha1": "639c79cfaed08a9a6f8637cc5170774fe7e048d7"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/13-shepherds-message-800.webp",
+      "git_blob_sha1": "b19fc7bd164083ef1e012e4774f95e971f7534db"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/13-shepherds-message-full.webp",
+      "git_blob_sha1": "6bfc29331ad1a45721a0f95924a6191c245a2894"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/14-shepherds-find-800.webp",
+      "git_blob_sha1": "bbc95dd72cafc9d2958941cee91755fb193aff50"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/14-shepherds-find-full.webp",
+      "git_blob_sha1": "9493b753b7a366f56d624476b2ebed6694f0147e"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/15-simeon-800.webp",
+      "git_blob_sha1": "99038c63b229154c148b6dfe2a26e7954eee25bd"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/15-simeon-full.webp",
+      "git_blob_sha1": "9757f5fadf9cd3fc9af323f4358e0e4d37818e69"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/16-anna-800.webp",
+      "git_blob_sha1": "c1304f189309377354a68d4a4fb7d491f62b049c"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/16-anna-full.webp",
+      "git_blob_sha1": "c830377212b86e97f74ff590e9c98165f0f8e526"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/17-magi-house-800.webp",
+      "git_blob_sha1": "2a3121da2f6e81a38f106c7cc4c174ecad11af09"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/17-magi-house-full.webp",
+      "git_blob_sha1": "f8294f3f555e944a28232de16949bbf073d3ee95"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/18-egypt-800.webp",
+      "git_blob_sha1": "8e654d9e2fae7ad011aa2c4f7437ff279edae5ff"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/18-egypt-full.webp",
+      "git_blob_sha1": "77e2ce381d5eb181164a86d11f32829c64725032"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/19-nephi-prays-800.webp",
+      "git_blob_sha1": "e3dd59be93bede5e3629f164c633a7bac6012abe"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/19-nephi-prays-full.webp",
+      "git_blob_sha1": "e8ac741882438d821a07b8ccaa282b90a5e3a45f"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/20-night-light-800.webp",
+      "git_blob_sha1": "22045e64a16d90700e05f609753a16f7d0c05c32"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/20-night-light-full.webp",
+      "git_blob_sha1": "807363dd16bc54798637e8239f4c95ef5754677f"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/21-john-naming-800.webp",
+      "git_blob_sha1": "938c22731d15f22f485904fac2b741552ad65c92"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/21-john-naming-full.webp",
+      "git_blob_sha1": "4e56906c419d0ce65d44dc0af96a5aa2e4e308a3"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/22-mary-praise-800.webp",
+      "git_blob_sha1": "a9ee5f9e01ba7c233ce949477ca6d15b871f3035"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/22-mary-praise-full.webp",
+      "git_blob_sha1": "00604e8425ec1101fe9ceac2041ee8449d73b260"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/23-nazareth-return-800.webp",
+      "git_blob_sha1": "c798a2a28e8cef5edc100c847a8a451a14bf08f3"
+    },
+    {
+      "path": "assets/page-art/birth-of-christ/23-nazareth-return-full.webp",
+      "git_blob_sha1": "fa8cb87db211a4c51babfbf5c35cc29841ccf0bf"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/alma36prayer-960.webp",
+      "git_blob_sha1": "ebfc86c95f0d659166a717e6ae937baa19b460ea"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/alma36prayer.webp",
+      "git_blob_sha1": "24e67a781a17f61d642603628ea0fe9a0e336353"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/ancientmetalrecords-960.webp",
+      "git_blob_sha1": "2d41cd9dae996cc271291fb3189163d233ef630d"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/ancientmetalrecords.webp",
+      "git_blob_sha1": "aea19f2766cf3dbbea3c17eac700cf77c3429677"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/bountiful-960.webp",
+      "git_blob_sha1": "6baf57e7efd5030eca8afb4f2b47a3df39a54689"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/bountiful.webp",
+      "git_blob_sha1": "5b3bedb4e631484a4a3b868fd5934c4786fd8e20"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/christ-compassion-960.webp",
+      "git_blob_sha1": "5b6d3eddbd589da0e3b88e42fd4f8929d9c57422"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/christ-compassion.webp",
+      "git_blob_sha1": "28c888599b1e497e1e663fa52aa7eac9433e0bc1"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/christchildren-960.webp",
+      "git_blob_sha1": "bd126adb0bea391f3018f80a3e30cc7dc1739ab2"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/christchildren.webp",
+      "git_blob_sha1": "d3e9d42e936c6111deb885ac3fb15fe4c4c2a18a"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/christwelcome-960.webp",
+      "git_blob_sha1": "4ff538daafa8a4376ff540ea5a287906c5a42a57"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/christwelcome.webp",
+      "git_blob_sha1": "81e879d984b8520711fa142b1007b89c647ed471"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/desertjourney-960.webp",
+      "git_blob_sha1": "4f7d073308bd949efbef08333d292b14de823d0c"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/desertjourney.webp",
+      "git_blob_sha1": "cca8cb162211ed09aa8f340f9ed883cec667bdf7"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/hero-960.webp",
+      "git_blob_sha1": "885a3457115b0f12696c881c422e0b9ad0435472"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/hero.webp",
+      "git_blob_sha1": "5b18a5255a3b8e99c243248847d6a724bb966b86"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/joseph-emma-walk-960.webp",
+      "git_blob_sha1": "3dc04a31a9e30075a7d6c0877d2910f5d2b09f9d"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/joseph-emma-walk.webp",
+      "git_blob_sha1": "95df4a02f2ec76da4e507bd667a2edde2f50aab0"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/josephbible-960.webp",
+      "git_blob_sha1": "649727f05c165b26797cc52bb76b34b856173960"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/josephbible.webp",
+      "git_blob_sha1": "f290ae71ca1bdd1ac7bbdf8d134831a3693a5ba0"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/josephemma-960.webp",
+      "git_blob_sha1": "480b9f7aab1dba512ba21bda6f759c00ac3a397f"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/josephemma.webp",
+      "git_blob_sha1": "14f8dc3e7cbd38abd016b5246e84e2fab42f49f7"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/josephmartin-960.webp",
+      "git_blob_sha1": "a3073a35c2cd73d1adbe436b736c80c2e222bb3b"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/josephmartin.webp",
+      "git_blob_sha1": "b4db44876f5d8c118492e1233829a4b81ecc4388"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/josephprayer-960.webp",
+      "git_blob_sha1": "1ba2e7cb6f46786d255263637ba0fd0aec470b86"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/josephprayer.webp",
+      "git_blob_sha1": "b4bf0332120130c6032b43dcdf67751155da2472"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/manuscripts-960.webp",
+      "git_blob_sha1": "83f8c8bea7ce46a82e803873ce657b978debfa3c"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/manuscripts.webp",
+      "git_blob_sha1": "ba626665e72dd3a6dd6aad12362865fa09bbcbb5"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/mary-whitmer-witness-960.webp",
+      "git_blob_sha1": "db43f26e633c94f6e89ca1945a3b0e73b6f183f8"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/mary-whitmer-witness.webp",
+      "git_blob_sha1": "b3f5e565cb973f2f635e66dccd414ccbb027ee0c"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/modernstudy-960.webp",
+      "git_blob_sha1": "a5a3584e15c84e2fb07f76e4210c6b11f96a5963"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/modernstudy.webp",
+      "git_blob_sha1": "c1f11161ab2de294b859dd97294704a6536fb8ee"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/preservation-960.webp",
+      "git_blob_sha1": "28a669399ce56832c9e64a27e7637f0c39dfc6d6"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/preservation.webp",
+      "git_blob_sha1": "ab861cb129b01e579f5c2d23b23a4d127850eff5"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/printing-960.webp",
+      "git_blob_sha1": "6c25e3fc887aa47cf8660d1796096b81aa549efa"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/printing.webp",
+      "git_blob_sha1": "699c76cb4a58bc76e0076cd36ec75e3671b84d59"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/records-voices-960.webp",
+      "git_blob_sha1": "418a193b472a12a4885231c2bb30faa5d9a96c0e"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/records-voices.webp",
+      "git_blob_sha1": "a3e997274f01922d794bb8e85e7cc18894c03db6"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/statistical-study-960.webp",
+      "git_blob_sha1": "7fafa9d495f85b71f32826e91f186966854a8a13"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/statistical-study.webp",
+      "git_blob_sha1": "aa7e99de3cbcf0e3904f734c0cd427edb89d6511"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/translation-960.webp",
+      "git_blob_sha1": "7003dc0409d1d712aa6befadc6e3c4632582bedf"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/translation.webp",
+      "git_blob_sha1": "aaa339a4221fc34b723ca27ce8670a6b6106b409"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/whitmer-fields-960.webp",
+      "git_blob_sha1": "1f591dcbdbec448ba8fac85d690eaa137265e0a5"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/whitmer-fields.webp",
+      "git_blob_sha1": "a654c0ab6012bda4d60535c78515f327490ffd24"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/whitmer-traveler-960.webp",
+      "git_blob_sha1": "3a3e8dc1a0df0da4b6fae4762f39930466343614"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/whitmer-traveler.webp",
+      "git_blob_sha1": "0a255ce6ae509bf2f40ebe7db6ae9e94647467fe"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/witnesses-960.webp",
+      "git_blob_sha1": "824cfff42b0ca8af9c76b685f832877532845855"
+    },
+    {
+      "path": "assets/page-art/bom-evidences/witnesses.webp",
+      "git_blob_sha1": "e2f54c5c6000e86548d9744dadfda4e0431d3601"
+    },
+    {
+      "path": "assets/page-art/church-history/aaronic-priesthood-960.webp",
+      "git_blob_sha1": "f5ed0657bfc53f165e42e739cdca3a650c684717"
+    },
+    {
+      "path": "assets/page-art/church-history/aaronic-priesthood.webp",
+      "git_blob_sha1": "50380ff36e7f2322932477cb30ead4ef9b030340"
+    },
+    {
+      "path": "assets/page-art/church-history/apostles-ordain-joseph-960.webp",
+      "git_blob_sha1": "baef211223ac023259db5b37209627fdeb2d872a"
+    },
+    {
+      "path": "assets/page-art/church-history/apostles-ordain-joseph.webp",
+      "git_blob_sha1": "d3a06d70474f1708a8ee2b0307104caef44b9e51"
+    },
+    {
+      "path": "assets/page-art/church-history/apostles-ordain-oliver-960.webp",
+      "git_blob_sha1": "7913f5edfe9452c181ce5f86f5465d8d4aa33327"
+    },
+    {
+      "path": "assets/page-art/church-history/apostles-ordain-oliver.webp",
+      "git_blob_sha1": "1aaaebdcabff3243c2461a634dbb70a6358a9796"
+    },
+    {
+      "path": "assets/page-art/church-history/joseph-baptizes-oliver-960.webp",
+      "git_blob_sha1": "7c78b1e9f0add9a9bff16f235d4e9b8706ad93a4"
+    },
+    {
+      "path": "assets/page-art/church-history/joseph-baptizes-oliver.webp",
+      "git_blob_sha1": "9c6205086f0e9ae2124e91d00ca9fe758392232f"
+    },
+    {
+      "path": "assets/page-art/church-history/kirtland-bank-960.webp",
+      "git_blob_sha1": "33c0b4b51dd6abb05e5f239efa0dc8a6a7677c00"
+    },
+    {
+      "path": "assets/page-art/church-history/kirtland-bank.webp",
+      "git_blob_sha1": "5d93db2b7394b9fd8584958533f22bae45789f85"
+    },
+    {
+      "path": "assets/page-art/church-history/kirtland-temple-960.webp",
+      "git_blob_sha1": "e6ac80b7962da1d4b467d4eae5b77ee2254f01af"
+    },
+    {
+      "path": "assets/page-art/church-history/kirtland-temple.webp",
+      "git_blob_sha1": "07f63a7e7c98f37e82d3979ce037a0d4cdd02daa"
+    },
+    {
+      "path": "assets/page-art/church-history/liberty-letter-960.webp",
+      "git_blob_sha1": "afff05bc6777553359eae0109a08aef27a558b40"
+    },
+    {
+      "path": "assets/page-art/church-history/liberty-letter.webp",
+      "git_blob_sha1": "1881b00cb7ac0ec4ce4dc81b54a3894800097723"
+    },
+    {
+      "path": "assets/page-art/church-history/liberty-prayer-960.webp",
+      "git_blob_sha1": "5c76d323f0fdf87cf6edd10b2808539a67426ce2"
+    },
+    {
+      "path": "assets/page-art/church-history/liberty-prayer.webp",
+      "git_blob_sha1": "43b2af83d67c26418f9aeb213fdaaf800ca5f128"
+    },
+    {
+      "path": "assets/page-art/church-history/melchizedek-priesthood-960.webp",
+      "git_blob_sha1": "248efd76fd016d39e7c2e8e4ab0a971c70e0ba95"
+    },
+    {
+      "path": "assets/page-art/church-history/melchizedek-priesthood.webp",
+      "git_blob_sha1": "c9e0c1564ae15a032e88f73acb2ae857fa2657e2"
+    },
+    {
+      "path": "assets/page-art/church-history/nauvoo-legion-960.webp",
+      "git_blob_sha1": "297e70631e785b73265b5d303aa8d2b071b24f7e"
+    },
+    {
+      "path": "assets/page-art/church-history/nauvoo-legion.webp",
+      "git_blob_sha1": "e5c623c1fc1128e5a4a5f5f2ce7c398784416747"
+    },
+    {
+      "path": "assets/page-art/church-history/nauvoo-temple-960.webp",
+      "git_blob_sha1": "9909c04dd2c4f5f22d57ddc2ebfe9a9caf37909c"
+    },
+    {
+      "path": "assets/page-art/church-history/nauvoo-temple.webp",
+      "git_blob_sha1": "3762d26a7ce57543d01016106bb1c33ee6e9a461"
+    },
+    {
+      "path": "assets/page-art/church-history/oliver-baptizes-joseph-960.webp",
+      "git_blob_sha1": "359a5c337ffc327224b99bca146d0632700ebc2b"
+    },
+    {
+      "path": "assets/page-art/church-history/oliver-baptizes-joseph.webp",
+      "git_blob_sha1": "be480e5121cc2e22da5c7ade7fb8dab5cfee6392"
+    },
+    {
+      "path": "assets/page-art/church-history/porter-reunion-960.webp",
+      "git_blob_sha1": "f4b486b7e124d216d642243b65dc5e44f245728e"
+    },
+    {
+      "path": "assets/page-art/church-history/porter-reunion.webp",
+      "git_blob_sha1": "d0bbaa9a5dff4fac2b4ed9938d761c13cf24fed7"
+    },
+    {
+      "path": "assets/page-art/church-history/relief-society-960.webp",
+      "git_blob_sha1": "17d96f922072f48807fed1001381247dde19cf18"
+    },
+    {
+      "path": "assets/page-art/church-history/relief-society.webp",
+      "git_blob_sha1": "4d45cd6cde2f8f70606f3292b63bf3f7b57035d2"
+    },
+    {
+      "path": "assets/page-art/church-history/richmond-rebuke-960.webp",
+      "git_blob_sha1": "9486d0600ed49a235686798956480a3d0a127994"
+    },
+    {
+      "path": "assets/page-art/church-history/richmond-rebuke.webp",
+      "git_blob_sha1": "8dff80bacec58df367d831f3b60f104c2a574ea6"
+    },
+    {
+      "path": "assets/page-art/come-follow-me/family-study-2026.webp",
+      "git_blob_sha1": "11d63670b13da245d023744abfb1968cc81e6816"
+    },
+    {
+      "path": "assets/page-art/come-follow-me/old-testament-journey-2026.webp",
+      "git_blob_sha1": "bf48311a259bf9a3906c872b825437b73829dd51"
+    },
+    {
+      "path": "assets/page-art/come-follow-me/personal-study-2026.webp",
+      "git_blob_sha1": "a8fff600c71fd5bcf3161761cbe74a1e4a611238"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp",
+      "git_blob_sha1": "1f2fe39dd67c984f6531a6072f9f684c49a65689"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/01-eden-desktop.webp",
+      "git_blob_sha1": "50ac9d577f956d47477f07cbd3c1a06e747677e2"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/01-eden-mobile-v2.webp",
+      "git_blob_sha1": "b7e1b05702e4ed93634ea136b422a7d5124f388b"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/01-eden-mobile.webp",
+      "git_blob_sha1": "1d00c2e422b539086281af70b592ab177bce97e1"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/02-ancient-home-desktop-v2.webp",
+      "git_blob_sha1": "26f1431abaae42e96624499afe3b7442599fde82"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/02-ancient-home-desktop.webp",
+      "git_blob_sha1": "959cf4d3fc54342c478ce892b9afd1fadbd1fd32"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/02-ancient-home-mobile-v2.webp",
+      "git_blob_sha1": "23e7b3d4bed88a22bac398e455cbe95f52f2794f"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/02-ancient-home-mobile.webp",
+      "git_blob_sha1": "4fc204011087d594a7c951da336a4dfca1c3f4e9"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/03-biblical-world-desktop-v2.webp",
+      "git_blob_sha1": "29427d9a8694adb36b29db90f67ec731fe1c0501"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/03-biblical-world-desktop.webp",
+      "git_blob_sha1": "48e4a4e17b7073e85e1cff835371ecec0f44351a"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/03-biblical-world-mobile-v2.webp",
+      "git_blob_sha1": "a3dfea4c957cef62fe7218d9f984176d889b17ae"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/03-biblical-world-mobile.webp",
+      "git_blob_sha1": "80d30df56a8e5e95ac4e797bd37cf923108d2f0e"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/04-restoration-desktop-v2.webp",
+      "git_blob_sha1": "0f207ae1c99c7650b1782388f99e2a4178fca32e"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/04-restoration-desktop.webp",
+      "git_blob_sha1": "a0fe53afb349bb7a09478b504ae9637b9805a86b"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/04-restoration-mobile-v2.webp",
+      "git_blob_sha1": "19fb6bb64509c5199e950a738955d386887ac1d0"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/04-restoration-mobile.webp",
+      "git_blob_sha1": "0ec05b0ab6a4e71d0bb080ffd93d87fc233c1edc"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/05-marriage-belonging-desktop-v2.webp",
+      "git_blob_sha1": "ad9e88db56edf75c9b630b1646be0d217e219167"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/05-marriage-belonging-desktop.webp",
+      "git_blob_sha1": "cb855ed3540c8c91f1ef52917d25d2140feb2d41"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/05-marriage-belonging-mobile-v2.webp",
+      "git_blob_sha1": "c6ef4bb04dcc0d260727c87acda73a4a5bd240e0"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/05-marriage-belonging-mobile.webp",
+      "git_blob_sha1": "be244bea3343353e68c3ff95c814b2a00ac9140e"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/06-temple-marriage-desktop-v2.webp",
+      "git_blob_sha1": "1dd827f50c0f05e0be102ca1e80825966654896b"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/06-temple-marriage-desktop-v3.webp",
+      "git_blob_sha1": "5dcc90bba4491854c0264cd395fa7f11a4325aee"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/06-temple-marriage-desktop.webp",
+      "git_blob_sha1": "e55f362f0201d504f558bf7a3d75895d6aeea984"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/06-temple-marriage-mobile-v2.webp",
+      "git_blob_sha1": "b0afdfb08eecd153157efeb14c2725d6d4c5156d"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/06-temple-marriage-mobile-v3.webp",
+      "git_blob_sha1": "a69cc7be195d39b40bc222a18b0df3d82c51148e"
+    },
+    {
+      "path": "assets/page-art/eternal-marriage/timeline/06-temple-marriage-mobile.webp",
+      "git_blob_sha1": "62052a935fa4852de17f6105f237772ba0dbcc68"
+    },
+    {
+      "path": "assets/page-art/exclusive/bible-bountiful-witness-1536.webp",
+      "git_blob_sha1": "71b83f636509923dd08d4ff0dba7bd076d1614bc"
+    },
+    {
+      "path": "assets/page-art/exclusive/bible-bountiful-witness-800.webp",
+      "git_blob_sha1": "2c35ca827e14198617ab52887ac7be07a9d41763"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-father-comfort-1536.webp",
+      "git_blob_sha1": "3394203aa9d6de91dc65deb9e10af2e0ee02a733"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-father-comfort-800.webp",
+      "git_blob_sha1": "6d4a4b75c0586c58db6627f246066d51f1ff02cf"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-listening-1536.webp",
+      "git_blob_sha1": "1b65494e8ba0f1ff4949e6344c3af2c0255f5683"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-listening-800.webp",
+      "git_blob_sha1": "368cd49615fb6819e6283bf1993df79435cc32a0"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-ordinary-help-1536.webp",
+      "git_blob_sha1": "5c920db034395671b987c9301da7ff7d0a15f4ca"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-ordinary-help-800.webp",
+      "git_blob_sha1": "c6ef4da5ae49036a80cd3034bc0adccb77ccc094"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-parents-company-1536.webp",
+      "git_blob_sha1": "dba792911be665cdb98a89b77029b2a16004b3d3"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-parents-company-800.webp",
+      "git_blob_sha1": "989de46b3923e1b3c32b5710cdc0d5fec8117364"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-resurrection-dawn-1536.webp",
+      "git_blob_sha1": "eba0905d2c2d8f399769c72c7ccd53ab330b8a9a"
+    },
+    {
+      "path": "assets/page-art/exclusive/child-loss-resurrection-dawn-800.webp",
+      "git_blob_sha1": "82751eba11de32184cf14ef80ecea6b8844da1fa"
+    },
+    {
+      "path": "assets/page-art/exclusive/christian-care-1536.webp",
+      "git_blob_sha1": "a327df89d808318cf89808fe9dfa495e1440ee44"
+    },
+    {
+      "path": "assets/page-art/exclusive/christian-care-800.webp",
+      "git_blob_sha1": "74a460aaf3adcbc48729f3a5d20351fc279abc17"
+    },
+    {
+      "path": "assets/page-art/exclusive/christian-context-1536.webp",
+      "git_blob_sha1": "b39a006fd937b4dbf030b10c26a9982f8f3e5d5a"
+    },
+    {
+      "path": "assets/page-art/exclusive/christian-context-800.webp",
+      "git_blob_sha1": "414937a5f307c6e52f0e689af3a3193effb6948b"
+    },
+    {
+      "path": "assets/page-art/exclusive/christian-listening-1536.webp",
+      "git_blob_sha1": "d372d994d3905357c4a5f242b53df4ebf49fd6fc"
+    },
+    {
+      "path": "assets/page-art/exclusive/christian-listening-800.webp",
+      "git_blob_sha1": "f3cf71b914c16429e2701943c6630e74dfb57b84"
+    },
+    {
+      "path": "assets/page-art/exclusive/christian-question-1536.webp",
+      "git_blob_sha1": "ab31b6a74490c3b25a899ef3043bbf7e7b45e587"
+    },
+    {
+      "path": "assets/page-art/exclusive/christian-question-800.webp",
+      "git_blob_sha1": "fd310a018cd4203c7ae76cf3cafed37c4d9450bc"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-care-followthrough-1536.webp",
+      "git_blob_sha1": "20dfe81b29dc836bb5f25f2935c5937be87bc604"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-care-followthrough-800.webp",
+      "git_blob_sha1": "12606f823dbb776a96ae6cd6d442afe7069e7824"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-message-notes-1536.webp",
+      "git_blob_sha1": "0b62f07a553f12b8ebf0be73b68f7c13fc2fe138"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-message-notes-800.webp",
+      "git_blob_sha1": "244ba008c3070249fdc33771cf8669b667e6ac24"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-response-together-1536.webp",
+      "git_blob_sha1": "3f8fe08c5ff18a7f7f24c07ca7f3ac753c528d8a"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-response-together-800.webp",
+      "git_blob_sha1": "2d855990e55c8c871102c1a9b77a96191a73c693"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-return-question-1536.webp",
+      "git_blob_sha1": "35c403826b8b9d62ca2dfe06d624a849a7eae48a"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-return-question-800.webp",
+      "git_blob_sha1": "69f96c061d7b7f7f34eab361a329c268ee018401"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-study-prayer-1536.webp",
+      "git_blob_sha1": "bfc0aa7991b8de010333c5b86e7ceab8dfc92718"
+    },
+    {
+      "path": "assets/page-art/exclusive/conference-study-prayer-800.webp",
+      "git_blob_sha1": "c52ca3aae4f82c2ef64f4c111b8d339ad58d65f3"
+    },
+    {
+      "path": "assets/page-art/exclusive/divorce-listen-with-care-1536.webp",
+      "git_blob_sha1": "62b3000c8d6495c59f00be58f3bd11c5c66ad32f"
+    },
+    {
+      "path": "assets/page-art/exclusive/divorce-listen-with-care-800.webp",
+      "git_blob_sha1": "ab95432ca1c9437913bf91975f7dca052d46a612"
+    },
+    {
+      "path": "assets/page-art/exclusive/divorce-porch-support-1536.webp",
+      "git_blob_sha1": "848e4a439737392aa4474e7a2d92ca61ef45b295"
+    },
+    {
+      "path": "assets/page-art/exclusive/divorce-porch-support-800.webp",
+      "git_blob_sha1": "e10dc3b47b6379fc342f490ba9aac5cd6eef5dbd"
+    },
+    {
+      "path": "assets/page-art/exclusive/divorce-practical-help-1536.webp",
+      "git_blob_sha1": "70d191908459d3a9837facd3b6fa556181d113d0"
+    },
+    {
+      "path": "assets/page-art/exclusive/divorce-practical-help-800.webp",
+      "git_blob_sha1": "4b89b50ce25cef5dd3b457c56e68d1c48193b2d2"
+    },
+    {
+      "path": "assets/page-art/exclusive/divorce-steady-morning-1536.webp",
+      "git_blob_sha1": "c78862e4b7dcc888a5ecacefa13d9eaf39b54806"
+    },
+    {
+      "path": "assets/page-art/exclusive/divorce-steady-morning-800.webp",
+      "git_blob_sha1": "f1de74a26f14a348807e6b4bd26b208e0927df92"
+    },
+    {
+      "path": "assets/page-art/exclusive/families-child-heard-1536.webp",
+      "git_blob_sha1": "5a02fb7ea9fad2a078c164924e373d77411e1608"
+    },
+    {
+      "path": "assets/page-art/exclusive/families-child-heard-800.webp",
+      "git_blob_sha1": "dc5d96b9ddca172992c748efcee9078103398374"
+    },
+    {
+      "path": "assets/page-art/exclusive/families-neighbor-garden-1536.webp",
+      "git_blob_sha1": "3380e19baa1280570648412d67724241410dea2e"
+    },
+    {
+      "path": "assets/page-art/exclusive/families-neighbor-garden-800.webp",
+      "git_blob_sha1": "cd77097a1adac79f3b396c24c43aa99cff529313"
+    },
+    {
+      "path": "assets/page-art/exclusive/families-patient-small-task-1536.webp",
+      "git_blob_sha1": "d72862496c232d9071047e759c361498e2f8ef8b"
+    },
+    {
+      "path": "assets/page-art/exclusive/families-patient-small-task-800.webp",
+      "git_blob_sha1": "4a57529b32e506ee0f785b379da77f6fb75c1a06"
+    },
+    {
+      "path": "assets/page-art/exclusive/families-shared-responsibility-1536.webp",
+      "git_blob_sha1": "40750d885580132c98bc48dca624353ff384c6d8"
+    },
+    {
+      "path": "assets/page-art/exclusive/families-shared-responsibility-800.webp",
+      "git_blob_sha1": "4fd7c46500020da3c37cad5ccbfe3ce28cfa8a9b"
+    },
+    {
+      "path": "assets/page-art/exclusive/god-faith-seed-care-1536.webp",
+      "git_blob_sha1": "a20d15c5eae4d59ffdf59b87ee7d0b39abff6430"
+    },
+    {
+      "path": "assets/page-art/exclusive/god-faith-seed-care-800.webp",
+      "git_blob_sha1": "ddf711516acac9f2bc0deb14064f1b7567b35ead"
+    },
+    {
+      "path": "assets/page-art/exclusive/god-learn-prayer-1536.webp",
+      "git_blob_sha1": "da0578c39992ab90f2d8908434ad1bfa75bf92e3"
+    },
+    {
+      "path": "assets/page-art/exclusive/god-learn-prayer-800.webp",
+      "git_blob_sha1": "a172d63fd3d13909ce74f6847d94dd56f13fb735"
+    },
+    {
+      "path": "assets/page-art/exclusive/god-ordinary-kindness-1536.webp",
+      "git_blob_sha1": "064d778a4fd70c27e208bfdd020286282a6c51b5"
+    },
+    {
+      "path": "assets/page-art/exclusive/god-ordinary-kindness-800.webp",
+      "git_blob_sha1": "45b49ecf888afab81f80c215e7bd4e8ce15b830b"
+    },
+    {
+      "path": "assets/page-art/exclusive/god-worth-person-1536.webp",
+      "git_blob_sha1": "80e55152909f421cf986de08ce99e037ad4e3606"
+    },
+    {
+      "path": "assets/page-art/exclusive/god-worth-person-800.webp",
+      "git_blob_sha1": "0d83214ba1047a568f3debf49a7f70c55711e705"
+    },
+    {
+      "path": "assets/page-art/exclusive/grief-hope-open-tomb-1536.webp",
+      "git_blob_sha1": "a7eb51e90d6f55221598dd5f889bbdd80471c2a1"
+    },
+    {
+      "path": "assets/page-art/exclusive/grief-hope-open-tomb-800.webp",
+      "git_blob_sha1": "11b344ef565bc54629f5e1cf09e1e1bc1fb86e0a"
+    },
+    {
+      "path": "assets/page-art/exclusive/grief-memory-notebook-1536.webp",
+      "git_blob_sha1": "b0c4105c0b9e6c483e240e945d9f9654bae6aac3"
+    },
+    {
+      "path": "assets/page-art/exclusive/grief-memory-notebook-800.webp",
+      "git_blob_sha1": "0b5d6fc0773b64f8b9ff30ce225e97bc7d689bf4"
+    },
+    {
+      "path": "assets/page-art/exclusive/grief-savior-compassion-1536.webp",
+      "git_blob_sha1": "668c91e39a3e7f8a0973424806cf5d7858472081"
+    },
+    {
+      "path": "assets/page-art/exclusive/grief-savior-compassion-800.webp",
+      "git_blob_sha1": "d1e43f5f522edd7cd356755edd8dc1322970f506"
+    },
+    {
+      "path": "assets/page-art/exclusive/grief-welcome-care-1536.webp",
+      "git_blob_sha1": "aadb6dee6953f1b203bb908adf612e1dc402769d"
+    },
+    {
+      "path": "assets/page-art/exclusive/grief-welcome-care-800.webp",
+      "git_blob_sha1": "182f1aa23ec8fe2bdff89eaa0ab7a230c0d799e9"
+    },
+    {
+      "path": "assets/page-art/exclusive/jesus-compassion-attention-v4-1536.webp",
+      "git_blob_sha1": "98ec86666b74567aefabec53e000a86d72cd6129"
+    },
+    {
+      "path": "assets/page-art/exclusive/jesus-compassion-attention-v4-800.webp",
+      "git_blob_sha1": "8a5e0e2d44cb6751b99637b39dc808e7662c5e4c"
+    },
+    {
+      "path": "assets/page-art/exclusive/jesus-prayer-solitude-v2-1536.webp",
+      "git_blob_sha1": "463c9f889d918d6ba76971115238dfcbac189aec"
+    },
+    {
+      "path": "assets/page-art/exclusive/jesus-prayer-solitude-v2-800.webp",
+      "git_blob_sha1": "66394f2f369205643b3c69da080c5d53de60a651"
+    },
+    {
+      "path": "assets/page-art/exclusive/jesus-risen-witness-1536.webp",
+      "git_blob_sha1": "4d9e79c18fb6aa0cb4441e22713495b8ad772f35"
+    },
+    {
+      "path": "assets/page-art/exclusive/jesus-risen-witness-800.webp",
+      "git_blob_sha1": "1dcca5dcf63f644ebfb1c9d37eb8c4fb4088555a"
+    },
+    {
+      "path": "assets/page-art/exclusive/jesus-storm-question-1536.webp",
+      "git_blob_sha1": "44ebed929987fb8f5fe3799ccec704448d3969c9"
+    },
+    {
+      "path": "assets/page-art/exclusive/jesus-storm-question-800.webp",
+      "git_blob_sha1": "a6be79f48c3554d2c183320b69f1e1db77c9f66b"
+    },
+    {
+      "path": "assets/page-art/exclusive/joseph-account-reading-1536.webp",
+      "git_blob_sha1": "de0f8554a5f4141e99cc79b8ba85610050052f44"
+    },
+    {
+      "path": "assets/page-art/exclusive/joseph-account-reading-800.webp",
+      "git_blob_sha1": "6319180fa5c87b533c076c35614f8d82a852bd49"
+    },
+    {
+      "path": "assets/page-art/exclusive/joseph-inquiry-prayer-1536.webp",
+      "git_blob_sha1": "627895482326d3d86c40100828895c86a615be72"
+    },
+    {
+      "path": "assets/page-art/exclusive/joseph-inquiry-prayer-800.webp",
+      "git_blob_sha1": "af1df07aeb7f71baef6477e7e7b5145ab89ea42e"
+    },
+    {
+      "path": "assets/page-art/exclusive/joseph-printing-work-1536.webp",
+      "git_blob_sha1": "8ae078be7ff990896f3147b41e5152773b51ff57"
+    },
+    {
+      "path": "assets/page-art/exclusive/joseph-printing-work-800.webp",
+      "git_blob_sha1": "4403b7e03dae8ae6d68b5ef79f61275847aa0c9f"
+    },
+    {
+      "path": "assets/page-art/exclusive/joseph-shared-reading-1536.webp",
+      "git_blob_sha1": "21744ff9e4e03d9014f359a2cdff12533eb0381b"
+    },
+    {
+      "path": "assets/page-art/exclusive/joseph-shared-reading-800.webp",
+      "git_blob_sha1": "aa9b3f481e8d42bea0c6f13deae79c6955b8ce35"
+    },
+    {
+      "path": "assets/page-art/exclusive/life-after-death-careful-reading-1536.webp",
+      "git_blob_sha1": "3cbe517380f335483d4f903614c5e084d1a17d61"
+    },
+    {
+      "path": "assets/page-art/exclusive/life-after-death-careful-reading-800.webp",
+      "git_blob_sha1": "d633cc6777744515acef2a2d2273bd5ab45db03f"
+    },
+    {
+      "path": "assets/page-art/exclusive/life-after-death-ordinary-kindness-1536.webp",
+      "git_blob_sha1": "dd6ef2ba7b6f47b7102d4df6bb35518ca4d8c29a"
+    },
+    {
+      "path": "assets/page-art/exclusive/life-after-death-ordinary-kindness-800.webp",
+      "git_blob_sha1": "665ce58bfa01fa1d8229dabd5aad09e4daff126f"
+    },
+    {
+      "path": "assets/page-art/exclusive/life-after-death-remembrance-1536.webp",
+      "git_blob_sha1": "ac15b4990a29d35625cddbd5281fadf7e1c65b8b"
+    },
+    {
+      "path": "assets/page-art/exclusive/life-after-death-remembrance-800.webp",
+      "git_blob_sha1": "a119e7bd8bad5d07edc3947e5d161e2781dfa8b8"
+    },
+    {
+      "path": "assets/page-art/exclusive/life-after-death-shared-questions-1536.webp",
+      "git_blob_sha1": "e5d3186670996d930b480691db1621af806235d6"
+    },
+    {
+      "path": "assets/page-art/exclusive/life-after-death-shared-questions-800.webp",
+      "git_blob_sha1": "8b0b31ee9ffbfdc132f2849aa412391db97f0030"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-christ-invitation-1536.webp",
+      "git_blob_sha1": "1773efb3d2376d2124617d03e15c5dbea829122c"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-christ-invitation-800.webp",
+      "git_blob_sha1": "bce08902c21e6ce2e9cbfb2cad0cea757fae071b"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-do-good-action-1536.webp",
+      "git_blob_sha1": "22a5b546759e305709077d87afe9c36dbcf72c79"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-do-good-action-800.webp",
+      "git_blob_sha1": "9ce6820fd383ed13ccd896aa928ea1ea8518d328"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-harmony-setting-1536.webp",
+      "git_blob_sha1": "38b8022cb9793d1e21b762be35e19857d541d1c8"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-harmony-setting-800.webp",
+      "git_blob_sha1": "b1cb2761fe468b678e301860ab3842a9dbf153b4"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-honest-question-1536.webp",
+      "git_blob_sha1": "37e2176c07d1a16ea273d7879d2d2e6ef536a243"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-honest-question-800.webp",
+      "git_blob_sha1": "025aebfca627d627ea2d185c1da2150af7a83ffa"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-talk-learning-1536.webp",
+      "git_blob_sha1": "3d8c803ce094ac369c43dd55e2ac661ed59673c6"
+    },
+    {
+      "path": "assets/page-art/exclusive/look-talk-learning-800.webp",
+      "git_blob_sha1": "dd8ceb78e6c229b832e5fa433f768d5b576b3573"
+    },
+    {
+      "path": "assets/page-art/exclusive/mormon-covenant-care-1536.webp",
+      "git_blob_sha1": "c8d34883d96a35af6f0473cbce789b3c9d0a1fc1"
+    },
+    {
+      "path": "assets/page-art/exclusive/mormon-covenant-care-800.webp",
+      "git_blob_sha1": "023c894a312519aee98ca6a4829610bacac1ed7b"
+    },
+    {
+      "path": "assets/page-art/exclusive/mormon-nephi-purpose-1536.webp",
+      "git_blob_sha1": "daea2bd7622ba54f54773c590134169b66996294"
+    },
+    {
+      "path": "assets/page-art/exclusive/mormon-nephi-purpose-800.webp",
+      "git_blob_sha1": "2a381c30e755139e5e1b4c2527f613d46568036a"
+    },
+    {
+      "path": "assets/page-art/exclusive/mormon-ponder-1536.webp",
+      "git_blob_sha1": "519b33ecd5ba7868d12b6cc5deb99b82c41f0b07"
+    },
+    {
+      "path": "assets/page-art/exclusive/mormon-ponder-800.webp",
+      "git_blob_sha1": "08d42c18d2ca749eefae6b786f64c6f479397edf"
+    },
+    {
+      "path": "assets/page-art/exclusive/mormon-settle-1536.webp",
+      "git_blob_sha1": "007d037884254acb4a0eb737cfbf04072c73541d"
+    },
+    {
+      "path": "assets/page-art/exclusive/mormon-settle-800.webp",
+      "git_blob_sha1": "59f64884c968e1f0dedfd5d91e9e90272553b5ff"
+    },
+    {
+      "path": "assets/page-art/exclusive/prayer-careful-record-1536.webp",
+      "git_blob_sha1": "50609b7d3d5f57c880141f250988b4eada12dc98"
+    },
+    {
+      "path": "assets/page-art/exclusive/prayer-careful-record-800.webp",
+      "git_blob_sha1": "b8dc90451ed191450f5f2ee2356e2c47b678f6fe"
+    },
+    {
+      "path": "assets/page-art/exclusive/prayer-private-room-1536.webp",
+      "git_blob_sha1": "6683c7ada2184c659cf7ec0f37ea5266b6c5495e"
+    },
+    {
+      "path": "assets/page-art/exclusive/prayer-private-room-800.webp",
+      "git_blob_sha1": "7e01afbf301c5154f1b06622ebe98ca8aa472747"
+    },
+    {
+      "path": "assets/page-art/exclusive/prayer-thoughtful-counsel-1536.webp",
+      "git_blob_sha1": "b885031096292c1e68d1c514572b0479eb980729"
+    },
+    {
+      "path": "assets/page-art/exclusive/prayer-thoughtful-counsel-800.webp",
+      "git_blob_sha1": "406084c54fedc833357aba5e7369ab47206d9452"
+    },
+    {
+      "path": "assets/page-art/exclusive/prayer-trusted-question-1536.webp",
+      "git_blob_sha1": "a51835dbe08d3fe0cee72967dcc3b1e40079bd5b"
+    },
+    {
+      "path": "assets/page-art/exclusive/prayer-trusted-question-800.webp",
+      "git_blob_sha1": "686c6e7a85457afc9b4986cef713f92d39f0e353"
+    },
+    {
+      "path": "assets/page-art/exclusive/restoration-christ-center-1536.webp",
+      "git_blob_sha1": "292e24db60276d3070e9f6dd0a04646dcd1670c9"
+    },
+    {
+      "path": "assets/page-art/exclusive/restoration-christ-center-800.webp",
+      "git_blob_sha1": "b8172f0ac84722d61f33d8067fce47dd69723843"
+    },
+    {
+      "path": "assets/page-art/exclusive/restoration-gospel-teaching-1536.webp",
+      "git_blob_sha1": "0df1acbaffadb088cc6dadc477520dfab869cdd3"
+    },
+    {
+      "path": "assets/page-art/exclusive/restoration-gospel-teaching-800.webp",
+      "git_blob_sha1": "9b529280cdfdec21b88b90c432520de828931b60"
+    },
+    {
+      "path": "assets/page-art/exclusive/restoration-read-original-1536.webp",
+      "git_blob_sha1": "d619149d3e2d5d26b5836fabd9d01d2a3ba78632"
+    },
+    {
+      "path": "assets/page-art/exclusive/restoration-read-original-800.webp",
+      "git_blob_sha1": "014ccaa06525b64082d23c98b51451e4fe25d3cd"
+    },
+    {
+      "path": "assets/page-art/exclusive/restoration-shared-questions-1536.webp",
+      "git_blob_sha1": "dfbfb6521085d85d01e5a506334447972d33584f"
+    },
+    {
+      "path": "assets/page-art/exclusive/restoration-shared-questions-800.webp",
+      "git_blob_sha1": "1c4bd770e815be9dc10d5eb99369d223a3cbd8b7"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-christ-preview-1536.webp",
+      "git_blob_sha1": "345dc2c3a283bea53971de23075ee2b072b7b7e5"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-christ-preview-800.webp",
+      "git_blob_sha1": "ac93f65ee8a437426fe00f2727d50ec937e2e35c"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-faithful-service-1536.webp",
+      "git_blob_sha1": "1af5cca12b67a86a9e7503a5b0ca93834b6a9fe8"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-faithful-service-800.webp",
+      "git_blob_sha1": "de1987ce0ddd5f970f81f8e59cac24cd8060b2b9"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-prayerful-question-1536.webp",
+      "git_blob_sha1": "d8462713eb9404483ebe62d6c85108e86d4f1be8"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-prayerful-question-800.webp",
+      "git_blob_sha1": "3a32d66105cd583630413156ceb2fb63a6c05c86"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-record-context-1536.webp",
+      "git_blob_sha1": "1ff509b0fa98fb6a4427b1d5ea364522b2bfafdf"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-record-context-800.webp",
+      "git_blob_sha1": "24a5ffc4a5f4d1c4ba522f123d6a912f262bbbc8"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-source-comparison-1536.webp",
+      "git_blob_sha1": "fec7da7952d0f770b23c80ac0f75c4f31e93b75f"
+    },
+    {
+      "path": "assets/page-art/exclusive/stand-source-comparison-800.webp",
+      "git_blob_sha1": "25579511da48eaa45dc8fe78463c6a4e2bc44480"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-covenant-help-1536.webp",
+      "git_blob_sha1": "0b53c9b1ed3381affce50af287b37b6fd862ad9d"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-covenant-help-800.webp",
+      "git_blob_sha1": "08549bd12b88369cc3d9ed89412229b82447be0e"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-daily-promises-1536.webp",
+      "git_blob_sha1": "2c320ac24579c5ef64b1f9cfc8bff2b03631d59a"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-daily-promises-800.webp",
+      "git_blob_sha1": "ef3e19392955cb74bfa2b800cf87d49aca73de34"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-generations-craft-1536.webp",
+      "git_blob_sha1": "a90c1c07a1755febddf0d2c150bfbd1b67df5cf2"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-generations-craft-800.webp",
+      "git_blob_sha1": "c8da8734570c93bd28721393ed61cca146c4b485"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-preparation-notes-1536.webp",
+      "git_blob_sha1": "5b8bd8cb7933241038d871c3b56cb39120ce5946"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-preparation-notes-800.webp",
+      "git_blob_sha1": "8feeb862629a3551d319cac47ae3d8ab846cec52"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-purpose-reading-1536.webp",
+      "git_blob_sha1": "91db21b8a8b8935de15d90ed7aa9fade68e748e4"
+    },
+    {
+      "path": "assets/page-art/exclusive/temple-purpose-reading-800.webp",
+      "git_blob_sha1": "c597df4509f75767e1aa76c27bb6610ec68ea47c"
+    },
+    {
+      "path": "assets/page-art/exclusive/trials-help-within-1536.webp",
+      "git_blob_sha1": "8475c8ac3ede367459bb9d40a3f378ce7d03fa64"
+    },
+    {
+      "path": "assets/page-art/exclusive/trials-help-within-800.webp",
+      "git_blob_sha1": "2930d488a37a682e0dd49dd768e9a93f53978881"
+    },
+    {
+      "path": "assets/page-art/exclusive/trials-honest-prayer-1536.webp",
+      "git_blob_sha1": "944931eaf1ec735b73fca42af3b627872e0a038b"
+    },
+    {
+      "path": "assets/page-art/exclusive/trials-honest-prayer-800.webp",
+      "git_blob_sha1": "70bbee5335294b904d4f29f33b7b9f503817e4da"
+    },
+    {
+      "path": "assets/page-art/exclusive/trials-next-step-1536.webp",
+      "git_blob_sha1": "d0dfa6d1cdfdb6d99e37ab0fa37838fe750c2a6c"
+    },
+    {
+      "path": "assets/page-art/exclusive/trials-next-step-800.webp",
+      "git_blob_sha1": "f52acd742c4b51c4980453f781d35eb8b3552722"
+    },
+    {
+      "path": "assets/page-art/exclusive/trials-shared-load-1536.webp",
+      "git_blob_sha1": "e6b023195f8eae468abfadfb60914d417866ac2a"
+    },
+    {
+      "path": "assets/page-art/exclusive/trials-shared-load-800.webp",
+      "git_blob_sha1": "6bca938aa17c78f346e5dfeab83439af36a64f5c"
+    },
+    {
+      "path": "assets/page-art/exclusive/two-witnesses-charity-1536.webp",
+      "git_blob_sha1": "fac0bd3f6fd803f8dee0ad36ddb40f9cd280aa77"
+    },
+    {
+      "path": "assets/page-art/exclusive/two-witnesses-charity-800.webp",
+      "git_blob_sha1": "a2e2e5098191296bf6b6ad98527a5e432ce086b3"
+    },
+    {
+      "path": "assets/page-art/exclusive/two-witnesses-observation-1536.webp",
+      "git_blob_sha1": "c47e687d6b75b5246a7805ae13452f367f281bd8"
+    },
+    {
+      "path": "assets/page-art/exclusive/two-witnesses-observation-800.webp",
+      "git_blob_sha1": "40e1bd8786bd67b42fece504019acec9fae4e9ae"
+    },
+    {
+      "path": "assets/page-art/exclusive/two-witnesses-readers-1536.webp",
+      "git_blob_sha1": "bf77602436e8ab717388f467e2a5c16dd79c9133"
+    },
+    {
+      "path": "assets/page-art/exclusive/two-witnesses-readers-800.webp",
+      "git_blob_sha1": "d761b066db73335550e6894965ff7e236fbdb90e"
+    },
+    {
+      "path": "assets/page-art/foundations/christ-teaching-1536.webp",
+      "git_blob_sha1": "ab312615750fe5cddc62d6d036ef945d17e8c325"
+    },
+    {
+      "path": "assets/page-art/foundations/christ-teaching-800.webp",
+      "git_blob_sha1": "d5757389e65aacb37a2dabe829e2e4405d4c3f9b"
+    },
+    {
+      "path": "assets/page-art/foundations/creation-dawn-1536.webp",
+      "git_blob_sha1": "947158711734cdcd4bd35c8a149e82e1bf91ee4a"
+    },
+    {
+      "path": "assets/page-art/foundations/creation-dawn-800.webp",
+      "git_blob_sha1": "023b2386925165c66fe2f020cd299adef8980d52"
+    },
+    {
+      "path": "assets/page-art/home-come-and-see-1672.webp",
+      "git_blob_sha1": "6e68a4bc5cf3b406d9ac05006d2cfcaa47601b5a"
+    },
+    {
+      "path": "assets/page-art/home-come-and-see-900.webp",
+      "git_blob_sha1": "bcb3a258e8732d06c21060669cfe00b322dcb24f"
+    },
+    {
+      "path": "assets/page-art/home-light-through-study-1672.webp",
+      "git_blob_sha1": "fb9daeff720e4509d229cb89dcfba66ef7c8e72e"
+    },
+    {
+      "path": "assets/page-art/home-light-through-study-900.webp",
+      "git_blob_sha1": "46de2afb16f7b5886a8eb62b6b993428d0f0ebe2"
+    },
+    {
+      "path": "assets/page-art/home-seek-study-remember.webp",
+      "git_blob_sha1": "189edd618f582b58e459a16dcd7cd659c935d93b"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/brothers-960.webp",
+      "git_blob_sha1": "eed68fa66dc5ae3737697c5fea4fc8c6ab671583"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/brothers.webp",
+      "git_blob_sha1": "585306282635a347b0bbcfa6e9be4b1c50e40bcd"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/conversation-960.webp",
+      "git_blob_sha1": "c2ab1604bfecd327e6c2207e3b06b13b7bbde245"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/conversation.webp",
+      "git_blob_sha1": "07f678184d1f99f0ea379379f1fb9ad4bc10f105"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
+      "git_blob_sha1": "fc5d6713c6c620c92b83355b8c97c18afad5e401"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png",
+      "git_blob_sha1": "d3c3020f967eb46dc9ae2475efd767ae9a827722"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
+      "git_blob_sha1": "e8c099a38cd19c58d1f7c527305c8e8af02c7d8f"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/museum-dibble-masks.jpg",
+      "git_blob_sha1": "0260f0bd39d0b3fcb911531507a8f5a65b44ff11"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp",
+      "git_blob_sha1": "e20e0aa33f0dee5b1da9ffae054d729b123712cd"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/portrait-sitting.webp",
+      "git_blob_sha1": "88d46ed1ad0056dae4b0604a08ba95bf53cc73a5"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/warmth-960.webp",
+      "git_blob_sha1": "e7681f7df9cd5d6added4e36d33f2dcfe59c9e84"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/warmth.webp",
+      "git_blob_sha1": "1588a5aabe8f849f91dec4d6259da96c9fad138c"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/writing-960.webp",
+      "git_blob_sha1": "1cda3fcc045c5e7147b3faa18523e67ed897ef7f"
+    },
+    {
+      "path": "assets/page-art/joseph-smith-likeness/writing.webp",
+      "git_blob_sha1": "3be3f05eef29b0d0c57f9ea161b66c016d29fc98"
+    },
+    {
+      "path": "assets/page-art/life-after-death/emmaus-1536.webp",
+      "git_blob_sha1": "e44db8d10f84c0964da5dd98d829274a50724689"
+    },
+    {
+      "path": "assets/page-art/life-after-death/emmaus-800.webp",
+      "git_blob_sha1": "09d82c67258fc0ccc71089758cb155d5ff88d064"
+    },
+    {
+      "path": "assets/page-art/life-after-death/martha-1536.webp",
+      "git_blob_sha1": "7fb098885117df58d7d5dfc14988c1affa7e0c7f"
+    },
+    {
+      "path": "assets/page-art/life-after-death/martha-800.webp",
+      "git_blob_sha1": "e1dbd8946a5c89c4d0f5bf28be952d8ff8793e2d"
+    },
+    {
+      "path": "assets/page-art/life-after-death/mary-1536.webp",
+      "git_blob_sha1": "eded9e55df01da03083fec4703846f6db296f938"
+    },
+    {
+      "path": "assets/page-art/life-after-death/mary-800.webp",
+      "git_blob_sha1": "8983ad5c4c56778096f9f9cfdd8e3f230cb48d77"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-caregiver-1536.webp",
+      "git_blob_sha1": "7f8c7f9d3449718a197389313163bed5fe61b779"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-caregiver-800.webp",
+      "git_blob_sha1": "1c5685917f715f21909900b0ab09f0151b2f0f77"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-grief-1536.webp",
+      "git_blob_sha1": "3dfbf7d39713035f169887a846f158fa136fe590"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-grief-800.webp",
+      "git_blob_sha1": "b01a66253ab8bafceb22b34f5fd6f6b6d6cd7bda"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-illness-1536.webp",
+      "git_blob_sha1": "38b069c7759e7b44a24ee5f0da105e087e055c74"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-illness-800.webp",
+      "git_blob_sha1": "7a47661b14bcbbc61d0c74006f2e1c5a7a47a525"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-loneliness-1536.webp",
+      "git_blob_sha1": "2d51dbf25a89972c4090de2967e460136a971469"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-loneliness-800.webp",
+      "git_blob_sha1": "1975161446369d1728fe7f83942d7cfd32b74087"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-uncertainty-1536.webp",
+      "git_blob_sha1": "42b4ac6872bc1970a4a79288959f425a1c28ad1a"
+    },
+    {
+      "path": "assets/page-art/life-after-death/modern-uncertainty-800.webp",
+      "git_blob_sha1": "f1fc57a18e80f996e8519a64e7f36a6d5a89468f"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-bread-1536.webp",
+      "git_blob_sha1": "9eb1c7d7f9926765ffb4366bbd128e6a1374bfe3"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-bread-800.webp",
+      "git_blob_sha1": "af03d100a9d90c5f41df2afe57a3cc89e4bf8a38"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-children-1536.webp",
+      "git_blob_sha1": "1b13478098cb74c0638401242590dee701f449d6"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-children-800.webp",
+      "git_blob_sha1": "a4d9e1bca4a5666e6c36689aef8ad6fea79e1bb3"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-healing-1536.webp",
+      "git_blob_sha1": "37f28b7f3d60107888cccc82cc8a40c692dcbfc9"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-healing-800.webp",
+      "git_blob_sha1": "dc3c7d4dcb61a9767c8761df14b06f91c3b5d5c6"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-prayer-1536.webp",
+      "git_blob_sha1": "af45a79d67d7272fab0c25854eaa6c6ccf6a1d0e"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-prayer-800.webp",
+      "git_blob_sha1": "bf0cea078ca94f14a9cf02d62b48accf1e870d44"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-records-1536.webp",
+      "git_blob_sha1": "0b45873f016312d7c2be629bbc69d4997fab5355"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-records-800.webp",
+      "git_blob_sha1": "8045f04304e64c63d58e457de712611060b5afc3"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-teaching-1536.webp",
+      "git_blob_sha1": "eb61161d6f950af50240962c49a2cf26d11cb176"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-teaching-800.webp",
+      "git_blob_sha1": "2bf6fc181bf7d7c363baa39a156f9194ff4fea7a"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-three-1536.webp",
+      "git_blob_sha1": "be2e8461466ad4e14e7c570b95f2e9a22ae9d3fa"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-three-800.webp",
+      "git_blob_sha1": "01d02d161c340fa9cf270e4a7faebefc82b1c84e"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-witness-1536.webp",
+      "git_blob_sha1": "da8a4351c96293057bc5320541c2ada968310722"
+    },
+    {
+      "path": "assets/page-art/life-after-death/nephi-witness-800.webp",
+      "git_blob_sha1": "32174c92e6db9b38e23bb2d1b890efe2a3a286f9"
+    },
+    {
+      "path": "assets/page-art/life-after-death/peace-1536.webp",
+      "git_blob_sha1": "e2eda3200af0568195b7a3e80d9c672f752057c1"
+    },
+    {
+      "path": "assets/page-art/life-after-death/peace-800.webp",
+      "git_blob_sha1": "28dc11901b4e43854264a8d157a58de64b3b8a15"
+    },
+    {
+      "path": "assets/page-art/life-after-death/thomas-1536.webp",
+      "git_blob_sha1": "bb135a3c2f828fc8b33113713db7ce25c7a98d56"
+    },
+    {
+      "path": "assets/page-art/life-after-death/thomas-800.webp",
+      "git_blob_sha1": "96448066f783a2eabedb0a8592af7fff4d42cad0"
+    },
+    {
+      "path": "assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-800.webp",
+      "git_blob_sha1": "3679736e2b072d5e4ff21689e11fead010fe3218"
+    },
+    {
+      "path": "assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-full.webp",
+      "git_blob_sha1": "b882754601992f8ed8e5db35e49a5a975134b781"
+    },
+    {
+      "path": "assets/page-art/sitewide-community/history-relief-practical-care-20260919-800.webp",
+      "git_blob_sha1": "b0888fd2a07674c86472c18677e2c7c334116c81"
+    },
+    {
+      "path": "assets/page-art/sitewide-community/history-relief-practical-care-20260919-full.webp",
+      "git_blob_sha1": "aff1f5b3f75ec80d847adac958210cbbc3e5f3aa"
+    },
+    {
+      "path": "assets/page-art/sitewide-community/marriage-community-welcome-20260919-800.webp",
+      "git_blob_sha1": "f16c9f17436f899ccea6bb0489dfbb061201ff57"
+    },
+    {
+      "path": "assets/page-art/sitewide-community/marriage-community-welcome-20260919-full.webp",
+      "git_blob_sha1": "72c41681d4f197e437d900bbbdedfc008793aed3"
+    },
+    {
+      "path": "assets/page-art/sitewide-narratives/birth-john-witness-960.webp",
+      "git_blob_sha1": "19d6b22609ae189a471d8e7cbd54f45157c9832e"
+    },
+    {
+      "path": "assets/page-art/sitewide-narratives/birth-john-witness-full.webp",
+      "git_blob_sha1": "a9a6da2b0a26877f4215ce56e1769a5f7ed45b90"
+    },
+    {
+      "path": "assets/page-art/sitewide-narratives/look-peter-rescue-960.webp",
+      "git_blob_sha1": "289e4d19f13589473a2912eeab5b3cfd09150e30"
+    },
+    {
+      "path": "assets/page-art/sitewide-narratives/look-peter-rescue-full.webp",
+      "git_blob_sha1": "4e8f4829bd1cc568a9156fe4ce05f7ed6cfb6fec"
+    },
+    {
+      "path": "assets/page-art/sitewide-narratives/trials-almas-people-960.webp",
+      "git_blob_sha1": "9a6cbf50279da280472bd34b309e6d6aa7f29ed2"
+    },
+    {
+      "path": "assets/page-art/sitewide-narratives/trials-almas-people-full.webp",
+      "git_blob_sha1": "8c05e5d94715051f20cd1ef98bd592fe940b1fa9"
+    },
+    {
+      "path": "assets/page-art/sitewide/bom-alma-helaman-960.webp",
+      "git_blob_sha1": "0a591605bd2624b4cf02087685e5e2568731a0d5"
+    },
+    {
+      "path": "assets/page-art/sitewide/bom-alma-helaman-full.webp",
+      "git_blob_sha1": "adb5ef7745dbd4ee949c2ffc5f6bd2661fb07b14"
+    },
+    {
+      "path": "assets/page-art/sitewide/bom-archaeology-context-960.webp",
+      "git_blob_sha1": "7c7e66beaa911e256dafd653a85e14861db5cc7c"
+    },
+    {
+      "path": "assets/page-art/sitewide/bom-archaeology-context-full.webp",
+      "git_blob_sha1": "976153aca790e2b60242e31606550479682d90c8"
+    },
+    {
+      "path": "assets/page-art/sitewide/bom-language-comparison-960.webp",
+      "git_blob_sha1": "0bcb62dc1081b212abcd18aceec42befeb29940c"
+    },
+    {
+      "path": "assets/page-art/sitewide/bom-language-comparison-full.webp",
+      "git_blob_sha1": "9c582631a5fbddbf33bde42734eb150f3bd75bd1"
+    },
+    {
+      "path": "assets/page-art/sitewide/bom-mormon-moroni-960.webp",
+      "git_blob_sha1": "af4e4c68bdf380748ca896e61f8f0c847b35f34f"
+    },
+    {
+      "path": "assets/page-art/sitewide/bom-mormon-moroni-full.webp",
+      "git_blob_sha1": "e5cdd412f4cf10a39b12d79b8f4c2cc8ca789c7d"
+    },
+    {
+      "path": "assets/page-art/study-additions/child-keepsake-800.webp",
+      "git_blob_sha1": "fe8ce1494a9c3fd5252bb479ecae81c775beafa8"
+    },
+    {
+      "path": "assets/page-art/study-additions/child-keepsake-full.webp",
+      "git_blob_sha1": "fd4e5444916c704f3e7499ec3cbf2960bab6805b"
+    },
+    {
+      "path": "assets/page-art/study-additions/divorce-child-800.webp",
+      "git_blob_sha1": "fe2229fc169e11534cb0e74a098faf33918f0c5f"
+    },
+    {
+      "path": "assets/page-art/study-additions/divorce-child-full.webp",
+      "git_blob_sha1": "27530d76d3a067ae5bad5da18774290a5800f44e"
+    },
+    {
+      "path": "assets/page-art/study-additions/jesus-weeps-bethany-800.webp",
+      "git_blob_sha1": "35d7a97335bdd125ec3e10a4372ca1a9c3fb2885"
+    },
+    {
+      "path": "assets/page-art/study-additions/jesus-weeps-bethany-full.webp",
+      "git_blob_sha1": "2337f83581bd640fecda6f63abfd5fa8be2e9d51"
+    },
+    {
+      "path": "assets/page-art/study-additions/paul-athens-800.webp",
+      "git_blob_sha1": "c3c52911884359cac1c9803fb80b8880f81c1285"
+    },
+    {
+      "path": "assets/page-art/study-additions/paul-athens-full.webp",
+      "git_blob_sha1": "c69a45241326ea9f553df8bd496f6dfc81ff8e7c"
+    },
+    {
+      "path": "assets/page-art/talk-thumbnails/holland-lord-believe-960.webp",
+      "git_blob_sha1": "fde598640ac1946037ad1f12edbf56691602bd8f"
+    },
+    {
+      "path": "assets/page-art/talk-thumbnails/holland-lord-believe-full.webp",
+      "git_blob_sha1": "abd445c8de4c2c6f081c103af0cd02fb01cb7981"
+    },
+    {
+      "path": "assets/page-art/talk-thumbnails/holland-qualified-care-960.webp",
+      "git_blob_sha1": "c54b1dec8ed10fe75f79a37d9d86c024a554bac5"
+    },
+    {
+      "path": "assets/page-art/talk-thumbnails/holland-qualified-care-full.webp",
+      "git_blob_sha1": "57ce9687461899264c495ff0ba1772562422a89f"
+    },
+    {
+      "path": "assets/page-art/talk-thumbnails/renlund-guided-flight-960.webp",
+      "git_blob_sha1": "f2d5138cfeb028ce8081ec9d8fd3286bd15d469b"
+    },
+    {
+      "path": "assets/page-art/talk-thumbnails/renlund-guided-flight-full.webp",
+      "git_blob_sha1": "fa4a9822c14013a285251ed113a548d911f03669"
+    },
+    {
+      "path": "assets/page-art/talk-thumbnails/uchtdorf-youth-choice-960.webp",
+      "git_blob_sha1": "2430a4d8ede288a1e092da6835ec533de9d461f7"
+    },
+    {
+      "path": "assets/page-art/talk-thumbnails/uchtdorf-youth-choice-full.webp",
+      "git_blob_sha1": "01f2104bd079291a951650266e3ca8553358bccd"
+    },
+    {
+      "path": "assets/page-art/topics/christ-bountiful-1536.webp",
+      "git_blob_sha1": "5b5b29232e277ab2b60862a2198cabfc4cf641a2"
+    },
+    {
+      "path": "assets/page-art/topics/christ-bountiful-800.webp",
+      "git_blob_sha1": "aef2790b53f078bb33bae8403a253e706ff7568e"
+    },
+    {
+      "path": "assets/page-art/topics/christ-children-1536.webp",
+      "git_blob_sha1": "fa82ccf178841fc49bea44b1a4e23aa00ccf6a58"
+    },
+    {
+      "path": "assets/page-art/topics/christ-children-800.webp",
+      "git_blob_sha1": "e081165d4726fdfba526372f86a32bdb41647056"
+    },
+    {
+      "path": "assets/page-art/topics/christ-disciples-1536.webp",
+      "git_blob_sha1": "55eed5eb81ee12f9a1a593b55b53d0701319c0b0"
+    },
+    {
+      "path": "assets/page-art/topics/christ-disciples-800.webp",
+      "git_blob_sha1": "7fabadc08319875c5f3f2754163993a6147499bd"
+    },
+    {
+      "path": "assets/page-art/topics/christ-disciples-gaze-v2-1536.webp",
+      "git_blob_sha1": "f36210dc4e74163862faeb705b22f69de7f88362"
+    },
+    {
+      "path": "assets/page-art/topics/christ-disciples-gaze-v2-800.webp",
+      "git_blob_sha1": "6da6ef12e5e9698cf5ff2470d4a44c4fc2a29180"
+    },
+    {
+      "path": "assets/page-art/topics/christ-praying-1536.webp",
+      "git_blob_sha1": "3b37836c00a7d22272559e212dc46a14df867787"
+    },
+    {
+      "path": "assets/page-art/topics/christ-praying-800.webp",
+      "git_blob_sha1": "f2e9275f8a83f66e5a1103c0e7b451de19f14955"
+    },
+    {
+      "path": "assets/page-art/topics/christ-storm-1536.webp",
+      "git_blob_sha1": "1386bc2ac8cf689cd49582f88e76545d2e94c612"
+    },
+    {
+      "path": "assets/page-art/topics/christ-storm-800.webp",
+      "git_blob_sha1": "4e71ad765f9289ec2e8cf72f63417ca7c4492242"
+    },
+    {
+      "path": "assets/page-art/topics/family-study-1536.webp",
+      "git_blob_sha1": "6aeb1befa7cd62bfa3ec98e06916b883c98a9a87"
+    },
+    {
+      "path": "assets/page-art/topics/family-study-800.webp",
+      "git_blob_sha1": "d053fba2c4e15bc9cbde9de456ce77dd40be0c2a"
+    },
+    {
+      "path": "assets/page-art/topics/garden-tomb-1536.webp",
+      "git_blob_sha1": "efdec21d5a44e52a87ec9234fb34e64437735d02"
+    },
+    {
+      "path": "assets/page-art/topics/garden-tomb-800.webp",
+      "git_blob_sha1": "3a82fbbd5ebc99a62518223ac3482949cbcf9e8a"
+    },
+    {
+      "path": "assets/page-art/topics/historical-study-desk-1536.webp",
+      "git_blob_sha1": "b94974bfbb5444986397b9a0d3bdbf1cc72fc34b"
+    },
+    {
+      "path": "assets/page-art/topics/historical-study-desk-800.webp",
+      "git_blob_sha1": "ea26764d4270b9caa1f8b22bff9aef872b4794e9"
+    },
+    {
+      "path": "assets/page-art/topics/listening-in-grief-1536.webp",
+      "git_blob_sha1": "962356262f0b3fce15ba73f491ec33225a87ed44"
+    },
+    {
+      "path": "assets/page-art/topics/listening-in-grief-800.webp",
+      "git_blob_sha1": "acd5dea41bc1a8ce0d6ae768a8cbf07e05a091ea"
+    },
+    {
+      "path": "assets/page-art/topics/neighbor-service-1536.webp",
+      "git_blob_sha1": "69411c0199f20c4e34109d885288744d5380ca25"
+    },
+    {
+      "path": "assets/page-art/topics/neighbor-service-800.webp",
+      "git_blob_sha1": "cf141450aa5d72890882aed469d58460e4060a25"
+    },
+    {
+      "path": "assets/page-art/topics/paired-scripture-study-1536.webp",
+      "git_blob_sha1": "573f0845ce41dc2658704b30c2ebe8f040a71557"
+    },
+    {
+      "path": "assets/page-art/topics/paired-scripture-study-800.webp",
+      "git_blob_sha1": "4a95990da9e516de88d368fd2309279d811be7e4"
+    },
+    {
+      "path": "assets/page-art/topics/quiet-study-1536.webp",
+      "git_blob_sha1": "a4ad29770768aaac4e7bd8376a27ff0f4f2072ec"
+    },
+    {
+      "path": "assets/page-art/topics/quiet-study-800.webp",
+      "git_blob_sha1": "2f2a9616dc30113c125833a4bd79ff44d1918e25"
+    },
+    {
+      "path": "assets/page-art/topics/supportive-walk-1536.webp",
+      "git_blob_sha1": "011c15d522ac9162ca1fb28324a0aca3f148017f"
+    },
+    {
+      "path": "assets/page-art/topics/supportive-walk-800.webp",
+      "git_blob_sha1": "c15cd88aef8cc318b701efb0dd5f688b4c141622"
+    },
+    {
+      "path": "assets/pioneers/building-community-1400.webp",
+      "git_blob_sha1": "8ec998fccd0b40bf5714d64e4c8b0fa34776d756"
+    },
+    {
+      "path": "assets/pioneers/building-community-1672.webp",
+      "git_blob_sha1": "2c2588167a7c373678a657b6a3a67967c6a9d112"
+    },
+    {
+      "path": "assets/pioneers/building-community-800.webp",
+      "git_blob_sha1": "b3983227b9ee0dde0bd0341356c544b570f0fd1f"
+    },
+    {
+      "path": "assets/pioneers/first-view-valley-1400.webp",
+      "git_blob_sha1": "69e54733db325372f7196b48b53aaaea9fc5ccd2"
+    },
+    {
+      "path": "assets/pioneers/first-view-valley-1672.webp",
+      "git_blob_sha1": "10232ac14832dd2dca35877e30217278f4f40753"
+    },
+    {
+      "path": "assets/pioneers/first-view-valley-800.webp",
+      "git_blob_sha1": "099a2725ba4a932cb5a162d84aaa8379e6334906"
+    },
+    {
+      "path": "assets/pioneers/handcart-journey-1400.webp",
+      "git_blob_sha1": "750a0d0efb01aa9e9889919b665e6c272f6b2ab3"
+    },
+    {
+      "path": "assets/pioneers/handcart-journey-1672.webp",
+      "git_blob_sha1": "ffd10fa6beca22506726d0e12a4e802b4c52a3a0"
+    },
+    {
+      "path": "assets/pioneers/handcart-journey-800.webp",
+      "git_blob_sha1": "6eece9c8dc1a7ef80007b4df8d1709808ca3cfd0"
+    },
+    {
+      "path": "assets/pioneers/leaving-nauvoo-1400.webp",
+      "git_blob_sha1": "59ed955eaab89693055fc30b1d87a093662cadab"
+    },
+    {
+      "path": "assets/pioneers/leaving-nauvoo-1672.webp",
+      "git_blob_sha1": "a6e3528dbe65fa745f0cbde2429d85fd604a3ca1"
+    },
+    {
+      "path": "assets/pioneers/leaving-nauvoo-800.webp",
+      "git_blob_sha1": "aa0ada4f9d86a52c169ba4922036e3454a874ab4"
+    },
+    {
+      "path": "assets/pioneers/life-along-trail-1400.webp",
+      "git_blob_sha1": "65c75af2d7eddcb88210af64a47c306eba5825b2"
+    },
+    {
+      "path": "assets/pioneers/life-along-trail-1672.webp",
+      "git_blob_sha1": "941366e2af4e90ca05cce986cfa1ac65753e1b16"
+    },
+    {
+      "path": "assets/pioneers/life-along-trail-800.webp",
+      "git_blob_sha1": "6b0f2d17f3172b9dadb5cc07e073595fa79ec717"
+    },
+    {
+      "path": "assets/pioneers/platte-river-1400.webp",
+      "git_blob_sha1": "6a7439187e197518e27394c55c5d8c10cc96685c"
+    },
+    {
+      "path": "assets/pioneers/platte-river-1672.webp",
+      "git_blob_sha1": "ea8816c3f96af2e93380de3cd7b21e4f1527d960"
+    },
+    {
+      "path": "assets/pioneers/platte-river-800.webp",
+      "git_blob_sha1": "ee0bfee866548e014e1336bd8e4d8e6051ed4525"
+    },
+    {
+      "path": "assets/pioneers/rescue-wagons-1400.webp",
+      "git_blob_sha1": "b6e4ec252722145d406a1999dda53495dde1957b"
+    },
+    {
+      "path": "assets/pioneers/rescue-wagons-1672.webp",
+      "git_blob_sha1": "f7f7c6ab6c7bb8127099c447d132e2e0b5645eba"
+    },
+    {
+      "path": "assets/pioneers/rescue-wagons-800.webp",
+      "git_blob_sha1": "ae5536175153676171bcd26863946b81cfad2f5f"
+    },
+    {
+      "path": "assets/pioneers/river-crossing-1400.webp",
+      "git_blob_sha1": "200fa74f03fcb6aeabfdf4a8b3a901eefa7cb9ff"
+    },
+    {
+      "path": "assets/pioneers/river-crossing-1672.webp",
+      "git_blob_sha1": "1d24a0cfed5fa640f52df3b30f79e535817dff66"
+    },
+    {
+      "path": "assets/pioneers/river-crossing-800.webp",
+      "git_blob_sha1": "9f252a98f9c77b83aa8c5c3d8a83311b39a9ae19"
+    },
+    {
+      "path": "assets/pioneers/salt-lake-temple-1400.webp",
+      "git_blob_sha1": "9fc6475792fc1b2acab17343e3ca295fdecaa059"
+    },
+    {
+      "path": "assets/pioneers/salt-lake-temple-1672.webp",
+      "git_blob_sha1": "dc424c50bc761d2663cc4c488739f03781003c30"
+    },
+    {
+      "path": "assets/pioneers/salt-lake-temple-800.webp",
+      "git_blob_sha1": "276fd61a7d69a9b2f98efce16cb6df5d4aba76b3"
+    },
+    {
+      "path": "assets/pioneers/winter-quarters-1400.webp",
+      "git_blob_sha1": "fb35caf5e0c32ed03119cb792c026f8c99b15ee3"
+    },
+    {
+      "path": "assets/pioneers/winter-quarters-1672.webp",
+      "git_blob_sha1": "6ad75153cf1ba39122452aa9cd4c1cf99eb58682"
+    },
+    {
+      "path": "assets/pioneers/winter-quarters-800.webp",
+      "git_blob_sha1": "b751abf2f5af312c8c0a06a92ef083655b1c8bf5"
+    },
+    {
+      "path": "assets/resources/about-love-essence.jpg",
+      "git_blob_sha1": "38a71f26679cf9167e6f55664ea37171ae73a07b"
+    },
+    {
+      "path": "assets/resources/about-resurrection-hope.jpg",
+      "git_blob_sha1": "f9b4171f38c9c0fad5bb4849b4232b9a9050a741"
+    },
+    {
+      "path": "assets/resources/answers-embrace-faith.jpg",
+      "git_blob_sha1": "5eaf31d41148e4fead9f8e9e798296f527ba6981"
+    },
+    {
+      "path": "assets/resources/answers-hope-healing.jpg",
+      "git_blob_sha1": "6da03ae789919d90389f9abd6a0f6121c859ace4"
+    },
+    {
+      "path": "assets/resources/art-lively-resurrection-hope.jpg",
+      "git_blob_sha1": "f9379c518558b2cc52b79c3893e7d7592f225995"
+    },
+    {
+      "path": "assets/resources/ask-god-wants-prayer.jpg",
+      "git_blob_sha1": "f9765bf5b93120f28c99925ed0e1515bdd05a4ed"
+    },
+    {
+      "path": "assets/resources/ask-prayer-changed-life.jpg",
+      "git_blob_sha1": "506654247a701fabfafde9c13fd80b5e99a09082"
+    },
+    {
+      "path": "assets/resources/atonement-atonement-guide.jpg",
+      "git_blob_sha1": "dfe5c3dd95be30aa1fb5f3a9706ad7bec7cf01d0"
+    },
+    {
+      "path": "assets/resources/atonement-covenants.jpg",
+      "git_blob_sha1": "be0a50d4863f724f4d51d8db66403854d7b09f5c"
+    },
+    {
+      "path": "assets/resources/atonement-drawing-power.jpg",
+      "git_blob_sha1": "b0ed9e123c1a432ed94f9b14b34365d5bea1956f"
+    },
+    {
+      "path": "assets/resources/atonement-gift-of-grace.jpg",
+      "git_blob_sha1": "71012136b4f2f45a0f937ba4a2a346de94f9498e"
+    },
+    {
+      "path": "assets/resources/atonement-lifted-up.jpg",
+      "git_blob_sha1": "533ca2a349eab6edafd8b20b4659fe2e936b0512"
+    },
+    {
+      "path": "assets/resources/atonement-make-amends.jpg",
+      "git_blob_sha1": "7f0f7e15b387f07103039fde12ac65d08a5ad9ce"
+    },
+    {
+      "path": "assets/resources/atonement-none-were-with-him.jpg",
+      "git_blob_sha1": "1a0dfb4eb9c93d8a05a546587096f58381436a11"
+    },
+    {
+      "path": "assets/resources/atonement-purifying-power.jpg",
+      "git_blob_sha1": "806ae086da7915ebe3fe549d3c982072326de99e"
+    },
+    {
+      "path": "assets/resources/atonement-repentance.jpg",
+      "git_blob_sha1": "e5e0e78656022653e9a9f02abd05f56808dc41f4"
+    },
+    {
+      "path": "assets/resources/atonement-resurrection.jpg",
+      "git_blob_sha1": "abb9ca88af320d497323d977d5ec611ad3785f7a"
+    },
+    {
+      "path": "assets/resources/atonement-strengthened.jpg",
+      "git_blob_sha1": "947f0c3bb2eb8eb11a7af4aac62a4a235f72e11e"
+    },
+    {
+      "path": "assets/resources/birth-of-christ/christ-child.jpg",
+      "git_blob_sha1": "8f8a30d42073fe8e5e55214ba4413ce710ba530d"
+    },
+    {
+      "path": "assets/resources/birth-of-christ/everlasting-light.jpg",
+      "git_blob_sha1": "beb5f2e3512bde03a52490443da2c8a08c900a77"
+    },
+    {
+      "path": "assets/resources/birth-of-christ/greatest-gift.jpg",
+      "git_blob_sha1": "2af7efc94c861ff517c08196f3f785610a35c3ea"
+    },
+    {
+      "path": "assets/resources/birth-of-christ/light-life-world.jpg",
+      "git_blob_sha1": "0e7d8338192f4dff700312652d52aed253878130"
+    },
+    {
+      "path": "assets/resources/birth-of-christ/mary-mother-jesus.jpg",
+      "git_blob_sha1": "db23e8acd5ca9da9ac8052dca36ba36187b9c2c3"
+    },
+    {
+      "path": "assets/resources/birth-of-christ/presented-temple.jpg",
+      "git_blob_sha1": "69c753ae0ac7c058aef62b0b6f01d903a7b19f53"
+    },
+    {
+      "path": "assets/resources/birth-of-christ/samuel-fulfilled.jpg",
+      "git_blob_sha1": "45557ac36ca12acfc840b556c49a6df4e0accc65"
+    },
+    {
+      "path": "assets/resources/birth-of-christ/samuel-signs.jpg",
+      "git_blob_sha1": "bdc983aa49a62bb1e799a973ec0239951b92198b"
+    },
+    {
+      "path": "assets/resources/bom-evidences-restoration-conversation.jpg",
+      "git_blob_sha1": "511698e705898d454dcb631f87fe6dcb5ae564bb"
+    },
+    {
+      "path": "assets/resources/bom-evidences-title-page.jpg",
+      "git_blob_sha1": "bd3c03e8911b3b8a168ab723de5e826ab3c02ae3"
+    },
+    {
+      "path": "assets/resources/bom-evidences-translation-documentary.jpg",
+      "git_blob_sha1": "ab9b32c5bc4d1fbc55bd698a1cffa8079df0c602"
+    },
+    {
+      "path": "assets/resources/cfm-philippians.jpg",
+      "git_blob_sha1": "8497683651fbd84df36ee6d41047b0cf0f3d0617"
+    },
+    {
+      "path": "assets/resources/cfm-rejoice.jpg",
+      "git_blob_sha1": "fb9879ce57db5115fea7ac9e20d361355b93b9d7"
+    },
+    {
+      "path": "assets/resources/children-heartfelt-prayer.jpg",
+      "git_blob_sha1": "34c3f809a9b573e0b89ab09481b0cf0b7e54d168"
+    },
+    {
+      "path": "assets/resources/children-lords-love.jpg",
+      "git_blob_sha1": "7769928e1a0f47775fe1c7b364b6db70aec6f208"
+    },
+    {
+      "path": "assets/resources/conference-2026/11oaks.jpg",
+      "git_blob_sha1": "4a78cf201128bb110562b2d0d98c88f082c002c2"
+    },
+    {
+      "path": "assets/resources/conference-2026/12christofferson.jpg",
+      "git_blob_sha1": "09bbf5f2dc45ab222f5224a9ec4601360cab4606"
+    },
+    {
+      "path": "assets/resources/conference-2026/13kearon.jpg",
+      "git_blob_sha1": "c94b4327e5b2804cd51e0c7f4d14a14b65b77c88"
+    },
+    {
+      "path": "assets/resources/conference-2026/14yee.jpg",
+      "git_blob_sha1": "3115d3a6e21298abcac980ae827a2c45c7d4ddcf"
+    },
+    {
+      "path": "assets/resources/conference-2026/15gilbert.jpg",
+      "git_blob_sha1": "ae91c6256091b394bee7a7cf6ccaaf008380931b"
+    },
+    {
+      "path": "assets/resources/conference-2026/16bednar.jpg",
+      "git_blob_sha1": "c42676a7f2be7d78e066f21c5eaac5bd54029c07"
+    },
+    {
+      "path": "assets/resources/conference-2026/17teh.jpg",
+      "git_blob_sha1": "1de54dfbe61787eadafef0669601305d6aeec06b"
+    },
+    {
+      "path": "assets/resources/conference-2026/18becerra.jpg",
+      "git_blob_sha1": "a7d15fccbe7c5f41de94db36201bb673bc700092"
+    },
+    {
+      "path": "assets/resources/conference-2026/19eyring.jpg",
+      "git_blob_sha1": "fbfc889108e0b78ba951ff5907ef7fc27b0735f2"
+    },
+    {
+      "path": "assets/resources/conference-2026/210soares.jpg",
+      "git_blob_sha1": "ce4b2a704d0541a796b69314ec9b2f683739d9ad"
+    },
+    {
+      "path": "assets/resources/conference-2026/21christofferson.jpg",
+      "git_blob_sha1": "a4f3fd8b5746a0cb6b3f8d81dce0ded799c5f972"
+    },
+    {
+      "path": "assets/resources/conference-2026/22larson.jpg",
+      "git_blob_sha1": "2b608484e1768ccf687f3bda6f7693f6aa49418e"
+    },
+    {
+      "path": "assets/resources/conference-2026/23stevenson.jpg",
+      "git_blob_sha1": "47a5ab89baef43d5029fca7645661f12c54c92e0"
+    },
+    {
+      "path": "assets/resources/conference-2026/24ortega.jpg",
+      "git_blob_sha1": "f140d003789af076c1c966eb3121ea7b708fec25"
+    },
+    {
+      "path": "assets/resources/conference-2026/25wu.jpg",
+      "git_blob_sha1": "0ed0ec36a5205f40440260cd03a15fd9d2303c0c"
+    },
+    {
+      "path": "assets/resources/conference-2026/26wunderli.jpg",
+      "git_blob_sha1": "ab4cd44d69ac56ea1593d99fb03a283534eca48e"
+    },
+    {
+      "path": "assets/resources/conference-2026/27causse.jpg",
+      "git_blob_sha1": "3b8b5330b5fabba47629e2d09c79eae26280c6e9"
+    },
+    {
+      "path": "assets/resources/conference-2026/28holmes.jpg",
+      "git_blob_sha1": "43e6beb3552a4bae4d120a2eb57ce7b92251ec01"
+    },
+    {
+      "path": "assets/resources/conference-2026/29matswagothata.jpg",
+      "git_blob_sha1": "d96ad7e280ddafa65e7b29edb51adf0f19aa91c7"
+    },
+    {
+      "path": "assets/resources/conference-2026/41uchtdorf.jpg",
+      "git_blob_sha1": "8f681152f916d89b0b11eb3e3e5cde6e1a4c9455"
+    },
+    {
+      "path": "assets/resources/conference-2026/42freeman.jpg",
+      "git_blob_sha1": "a0e87b348c04f2b8397a8632e856c616672e4e61"
+    },
+    {
+      "path": "assets/resources/conference-2026/43larreal.jpg",
+      "git_blob_sha1": "e59d43fb6a016b7ab8c383878459ef9273d516ff"
+    },
+    {
+      "path": "assets/resources/conference-2026/44rowe.jpg",
+      "git_blob_sha1": "2703b6474020d47419b2fb70e17775c3cef5491e"
+    },
+    {
+      "path": "assets/resources/conference-2026/45rasband.jpg",
+      "git_blob_sha1": "90a3f3415ac7285dc1ce9bf23ca17da00f27b576"
+    },
+    {
+      "path": "assets/resources/conference-2026/46renlund.jpg",
+      "git_blob_sha1": "b53acbe40483d80b9b43c6d0771fa2feeec9e9f7"
+    },
+    {
+      "path": "assets/resources/conference-2026/47mutombo.jpg",
+      "git_blob_sha1": "14e194b6f8eeb4dc6f69d61d7d09e306e268882d"
+    },
+    {
+      "path": "assets/resources/conference-2026/48walker.jpg",
+      "git_blob_sha1": "23ce64a9b0dd8dddddbd03b42a1eadfa118809f9"
+    },
+    {
+      "path": "assets/resources/conference-2026/49oaks.jpg",
+      "git_blob_sha1": "6d2b382ad14fe23a235854935d978115093b5294"
+    },
+    {
+      "path": "assets/resources/conference-2026/51christofferson.jpg",
+      "git_blob_sha1": "f4219427e3e961c2dcb82086690a917da08de276"
+    },
+    {
+      "path": "assets/resources/conference-2026/52wong.jpg",
+      "git_blob_sha1": "653c0134ea90a88830093283379c3c7a7554f60a"
+    },
+    {
+      "path": "assets/resources/conference-2026/53hall.jpg",
+      "git_blob_sha1": "524161f63fefac2a4572f0374dfcf61c4293bb6f"
+    },
+    {
+      "path": "assets/resources/conference-2026/54porter.jpg",
+      "git_blob_sha1": "f7f19f9dd9875abddecd1e8c956ef2f4fbb664d3"
+    },
+    {
+      "path": "assets/resources/conference-2026/55andersen.jpg",
+      "git_blob_sha1": "ea0ad4a7a6d0247e5540add946ac05433b6897d5"
+    },
+    {
+      "path": "assets/resources/conference-2026/56cook.jpg",
+      "git_blob_sha1": "b3160af8726c5f4aaca58203d0645efa664b9f9d"
+    },
+    {
+      "path": "assets/resources/conference-2026/57wakolo.jpg",
+      "git_blob_sha1": "0513a038f6e4f50e5699cfe2e4eaff7db43de096"
+    },
+    {
+      "path": "assets/resources/conference-2026/58gong.jpg",
+      "git_blob_sha1": "47b15f3122baae006ba44f56ebd10f3498e69ed5"
+    },
+    {
+      "path": "assets/resources/conference-2026/59oaks.jpg",
+      "git_blob_sha1": "304855d758c05a30fc6b0212e172ccf938c40445"
+    },
+    {
+      "path": "assets/resources/conference-2026/brown-2025-testimony.jpg",
+      "git_blob_sha1": "b0aed9e9d124783f063d9247bd8b954747c6e828"
+    },
+    {
+      "path": "assets/resources/conference-2026/monson-2008-joy.jpg",
+      "git_blob_sha1": "5c5ccec546d68c918f5a051a762bea27c1070dfd"
+    },
+    {
+      "path": "assets/resources/conference-2026/nelson-2023-answer.jpg",
+      "git_blob_sha1": "b6e6e7ea51feb09648fbd85c8669406841824402"
+    },
+    {
+      "path": "assets/resources/dc636-faith-mountains.jpg",
+      "git_blob_sha1": "642ad8fc34e24b5b77404030d2af78e3c9821c7c"
+    },
+    {
+      "path": "assets/resources/divorce.jpg",
+      "git_blob_sha1": "12a6ff9c3a35f5423b87be6677f700b26e56c07d"
+    },
+    {
+      "path": "assets/resources/doubt.jpg",
+      "git_blob_sha1": "83b4eee0ae0d8ba328e88603bb8cb435f5b9f1e4"
+    },
+    {
+      "path": "assets/resources/eternal-marriage-carpenter.jpg",
+      "git_blob_sha1": "069928a8a3079cd34cb825c8cd1996897ed7a334"
+    },
+    {
+      "path": "assets/resources/eternal-marriage-clayton.jpg",
+      "git_blob_sha1": "6d1b379cbfe6950bfe4b5c51b7c615e014571238"
+    },
+    {
+      "path": "assets/resources/eternal-marriage-nelson.jpg",
+      "git_blob_sha1": "c4fdd4d42a2f2d7b298b33bae8e45723eee2e750"
+    },
+    {
+      "path": "assets/resources/eternal-marriage-soares.jpg",
+      "git_blob_sha1": "375c25038936ba3e91fde5a3310b0fba96a152a2"
+    },
+    {
+      "path": "assets/resources/good-shepherd.jpg",
+      "git_blob_sha1": "79ac9a3e2e9920b9f8761f1e467671656a1149bb"
+    },
+    {
+      "path": "assets/resources/grief/freeman-covenant-relationship.jpg",
+      "git_blob_sha1": "f3dadd09a8e826bbe7a45f71033a3dfd55eead86"
+    },
+    {
+      "path": "assets/resources/harmony.jpg",
+      "git_blob_sha1": "128b644dae247d996b7f1203e4f1662474310b03"
+    },
+    {
+      "path": "assets/resources/history-sacred-grove.jpg",
+      "git_blob_sha1": "bbf5013f3ab6625838c9a4871a08aa46de84b55e"
+    },
+    {
+      "path": "assets/resources/home-abide-with-me.jpg",
+      "git_blob_sha1": "42c6b1bac32b3a80176b2bab26c6db7e7d0aa9f9"
+    },
+    {
+      "path": "assets/resources/home-peace-in-christ.jpg",
+      "git_blob_sha1": "0075832ff8be66b2235876d5b2b065eea11763f4"
+    },
+    {
+      "path": "assets/resources/life-after-death/christ-at-temple.jpg",
+      "git_blob_sha1": "bf315f88db55122ccd27a5735280aa9c3a897f88"
+    },
+    {
+      "path": "assets/resources/life-after-death/christ-prays-children.jpg",
+      "git_blob_sha1": "2762d4413b94883f52f92cd867a7152debde7cd9"
+    },
+    {
+      "path": "assets/resources/life-after-death/kingdoms-of-glory.jpg",
+      "git_blob_sha1": "d64e062ebad7eb099207a8aec4a4fe694c71fb64"
+    },
+    {
+      "path": "assets/resources/life-after-death/our-fathers-glorious-plan.jpg",
+      "git_blob_sha1": "0ba14474c47003b5b7b50823221437279108b362"
+    },
+    {
+      "path": "assets/resources/life-after-death/redemption-dead-testimony-jesus.jpg",
+      "git_blob_sha1": "ea1ca240e474591194d7dabc0f436c2fee392980"
+    },
+    {
+      "path": "assets/resources/life-after-death/trust-in-the-lord.jpg",
+      "git_blob_sha1": "3bdbd6219365ab4287284493681c4b7e82aa75b2"
+    },
+    {
+      "path": "assets/resources/life-after-death/vision-redemption-dead.jpg",
+      "git_blob_sha1": "fef795365ddf696680a59f15c95728999f2ae595"
+    },
+    {
+      "path": "assets/resources/living-he-is-risen-2025.jpg",
+      "git_blob_sha1": "f1da4d45b91c220f62ca093bb9fcce4ba18d7abe"
+    },
+    {
+      "path": "assets/resources/living-powerful-testimony.jpg",
+      "git_blob_sha1": "f4857ee2e9c3a16d6999486eaec6a86ff6fc988e"
+    },
+    {
+      "path": "assets/resources/look-christ.jpg",
+      "git_blob_sha1": "22745d285bb0fc9d465d4cc1b0d90dabd9d0a69f"
+    },
+    {
+      "path": "assets/resources/look-event.jpg",
+      "git_blob_sha1": "6659edd2956527eb01f9ebd453f07af6d0df0d8f"
+    },
+    {
+      "path": "assets/resources/look-worldwide.jpg",
+      "git_blob_sha1": "df0b1e63534cd98aac176f248ce8977037152389"
+    },
+    {
+      "path": "assets/resources/mission-sharing-heart.jpg",
+      "git_blob_sha1": "029e50ece757a806b8f3a7f3ed62ab97517879c2"
+    },
+    {
+      "path": "assets/resources/mission-what-missionaries-do.jpg",
+      "git_blob_sha1": "a49db22a36792e9a3ddf7cd14bd5a19f9b0d6586"
+    },
+    {
+      "path": "assets/resources/nephi-visual.jpg",
+      "git_blob_sha1": "545c85906b8a3b6bd637cade7d6dfe501b1b5328"
+    },
+    {
+      "path": "assets/resources/nephi.jpg",
+      "git_blob_sha1": "cb5f8a95c8f970c1af62727f2a506d38548ef85f"
+    },
+    {
+      "path": "assets/resources/pioneers-modern-courage.jpg",
+      "git_blob_sha1": "a1072e7107e0e3b4631c1f4a206e86e23ae0148d"
+    },
+    {
+      "path": "assets/resources/rejoice.jpg",
+      "git_blob_sha1": "671590edb56b479ed894df38256e45261b1d7f35"
+    },
+    {
+      "path": "assets/resources/seminary.jpg",
+      "git_blob_sha1": "00b797953cf23992d6eaebcbfb4a0f4c6eeaccca"
+    },
+    {
+      "path": "assets/resources/shepherd-abiding-compassion.jpg",
+      "git_blob_sha1": "49686a226c8e74f96fac70bcf51903af14808124"
+    },
+    {
+      "path": "assets/resources/stand-faith-choice.jpg",
+      "git_blob_sha1": "cfebaca5cc623a9f2433258134416aacdb1ef48c"
+    },
+    {
+      "path": "assets/resources/stand-lord-i-believe.jpg",
+      "git_blob_sha1": "f58dec99d20590bc92873cf378b98e783256b019"
+    },
+    {
+      "path": "assets/resources/stand-spiritual-momentum.jpg",
+      "git_blob_sha1": "36794c2a243d02c6243ceaf82ecbd2596193692a"
+    },
+    {
+      "path": "assets/resources/still-personal-peace.jpg",
+      "git_blob_sha1": "8171e0464841073cdf78c4100cfc069dc6c395d5"
+    },
+    {
+      "path": "assets/resources/still-principles-prayer.jpg",
+      "git_blob_sha1": "fba916cfb597ef21088cf5099777a284b235e109"
+    },
+    {
+      "path": "assets/resources/strength.jpg",
+      "git_blob_sha1": "241beb3890bd9d31dc3dea4df3e1c5494b4a5ff4"
+    },
+    {
+      "path": "assets/resources/unique-are-we-christians.jpg",
+      "git_blob_sha1": "e884348448455d4555a3d249f325be062d6db3a2"
+    },
+    {
+      "path": "assets/resources/unique-because-i-live.jpg",
+      "git_blob_sha1": "c0222bbf1d953ff7859c20dbbc6eef70477efa54"
+    },
+    {
+      "path": "assets/resources/unique-bom-introduction.jpg",
+      "git_blob_sha1": "85b601aa457920fde59451ace9e2b896322e2c3e"
+    },
+    {
+      "path": "assets/resources/unique-christian-believers.jpg",
+      "git_blob_sha1": "0a35c04df08e8859e3983890e436668b896935ba"
+    },
+    {
+      "path": "assets/resources/unique-doors-death.jpg",
+      "git_blob_sha1": "6551d3cdbb764492852ec0d568c7527d10527db7"
+    },
+    {
+      "path": "assets/resources/unique-eternal-families.jpg",
+      "git_blob_sha1": "606c6b6fba79edf4bbc3fc986c682d84e9048f42"
+    },
+    {
+      "path": "assets/resources/unique-fathers.jpg",
+      "git_blob_sha1": "3b3be2cc396334068fff64ccd89e450f09e05bef"
+    },
+    {
+      "path": "assets/resources/unique-finding-faith.jpg",
+      "git_blob_sha1": "ccab1f3a14e7db687f135515fc815ff424339941"
+    },
+    {
+      "path": "assets/resources/unique-flagship-look.jpg",
+      "git_blob_sha1": "3fc63e2ba1fbd41960fb851578c703fedcf9b029"
+    },
+    {
+      "path": "assets/resources/unique-flagship-love.jpg",
+      "git_blob_sha1": "5d1adef1deeb74deb2299deed95c13c108453032"
+    },
+    {
+      "path": "assets/resources/unique-grave-victory.jpg",
+      "git_blob_sha1": "980dc9a51544d228e357e5f6493e5fd076861923"
+    },
+    {
+      "path": "assets/resources/unique-healing-wings.jpg",
+      "git_blob_sha1": "bc865af617788ecd9e4a35474ee9104b8142be59"
+    },
+    {
+      "path": "assets/resources/unique-joseph-andersen.jpg",
+      "git_blob_sha1": "56c9d7d3979b0e93be9a8ebae5e9509c3dcd6547"
+    },
+    {
+      "path": "assets/resources/unique-joseph-film.jpg",
+      "git_blob_sha1": "93898f0e555974cba7477d5b3c31e8d54e06034c"
+    },
+    {
+      "path": "assets/resources/unique-no-more-death.jpg",
+      "git_blob_sha1": "4947d78f6c80e0f4d9e5a395f23a192b5197e844"
+    },
+    {
+      "path": "assets/resources/unique-prayer-framework.jpg",
+      "git_blob_sha1": "21a9313be9512ae2ad3f6a11013004bb91e273d2"
+    },
+    {
+      "path": "assets/resources/unique-prayer-supernal.jpg",
+      "git_blob_sha1": "73af6697a649490880b41d8aa51ad39f61fa1f0b"
+    },
+    {
+      "path": "assets/resources/unique-savior-done.jpg",
+      "git_blob_sha1": "9562a70ecbeebdf4db634306865e0bbcbed6d938"
+    },
+    {
+      "path": "assets/resources/unique-temple-foundation.jpg",
+      "git_blob_sha1": "4a812e5ea895daa92cb538b943e68d819fbce71d"
+    },
+    {
+      "path": "assets/resources/unique-temples-time.jpg",
+      "git_blob_sha1": "ad529502ff3634143880f2441afa0b89bb33ff83"
+    },
+    {
+      "path": "assets/resources/unique-trials-burdens.jpg",
+      "git_blob_sha1": "f15c305826928dfab33811ebdfa3236983e9d909"
+    },
+    {
+      "path": "assets/resources/unique-trials-mountains.jpg",
+      "git_blob_sha1": "8813f93226a46e0ab940efbf01b9c799cb640125"
+    },
+    {
+      "path": "assets/resources/unique-two-scripture-witnesses.jpg",
+      "git_blob_sha1": "1e4ffb73c54b89120cd863e034fdcd0de7af941d"
+    },
+    {
+      "path": "assets/resources/unique-words-never-cease.jpg",
+      "git_blob_sha1": "99493426650ae4459a88ff6f8a76f04a71f040cc"
+    },
+    {
+      "path": "assets/resources/youth.jpg",
+      "git_blob_sha1": "8b198393d813cc06333d45b45305e285e7f68761"
+    },
+    {
+      "path": "assets/watch/americas.jpg",
+      "git_blob_sha1": "d62d5b65b6a5bd33000eae7a1eb96ff04fd79396"
+    },
+    {
+      "path": "assets/watch/angels.jpg",
+      "git_blob_sha1": "a69f84e571dd02751224e88f82fd891e1048f8a5"
+    },
+    {
+      "path": "assets/watch/because.jpg",
+      "git_blob_sha1": "1732243411af13c53865d4f45edc27827a252ef0"
+    },
+    {
+      "path": "assets/watch/compassion.jpg",
+      "git_blob_sha1": "3b1fe6ec48f5acd6baed67af46f0c42bde7bda7f"
+    },
+    {
+      "path": "assets/watch/family.jpg",
+      "git_blob_sha1": "fc30c57f891a8cb1ad625fdc2e1e08d5263f6812"
+    },
+    {
+      "path": "assets/watch/forgiveness.jpg",
+      "git_blob_sha1": "a683b4d02c7baca3db631b5c262021fc0faa7983"
+    },
+    {
+      "path": "assets/watch/good.jpg",
+      "git_blob_sha1": "a784329108cd6187787a07a8db5994874154ffd6"
+    },
+    {
+      "path": "assets/watch/hear.jpg",
+      "git_blob_sha1": "ad36c4fd8dc7e95d3661645e9fd7f8db8fee81ad"
+    },
+    {
+      "path": "assets/watch/light.jpg",
+      "git_blob_sha1": "231acf9e9038cd0a14bfa6761638dac0ef1e7a7f"
+    },
+    {
+      "path": "assets/watch/mitch.jpg",
+      "git_blob_sha1": "b9467ddc9ca1769127caba48c0f8de951d927bf1"
+    },
+    {
+      "path": "assets/watch/pillars.jpg",
+      "git_blob_sha1": "39239e18df78f5316915259ffe81f219c44213e6"
+    },
+    {
+      "path": "assets/watch/pioneers.jpg",
+      "git_blob_sha1": "53e2ec2bc10c1a5f91f76cf91fbb0fe9316c68c5"
+    },
+    {
+      "path": "assets/watch/refiner.jpg",
+      "git_blob_sha1": "c1fe26b5f20b909b373269af74937e1d3de90f08"
+    },
+    {
+      "path": "assets/watch/restoration.jpg",
+      "git_blob_sha1": "b1b509c65b4e4e75f0b70b7363cf87d8787ca2fa"
+    },
+    {
+      "path": "assets/watch/resurrected.jpg",
+      "git_blob_sha1": "de188e1a6f9a1af9ba4ae863ff6c0d1e91f02300"
+    },
+    {
+      "path": "assets/watch/samaritan.jpg",
+      "git_blob_sha1": "173c053cd118da90960f6ce53d497deaa770b509"
+    },
+    {
+      "path": "assets/watch/sharing.jpg",
+      "git_blob_sha1": "eb3dd533d4e651d8bb89c6ccb465e7a454102ae5"
+    },
+    {
+      "path": "assets/watch/song.jpg",
+      "git_blob_sha1": "7d58e3a5c370be3ecb6aaa70cc54e7ab2fcbdcdd"
+    },
+    {
+      "path": "assets/watch/temple.jpg",
+      "git_blob_sha1": "0ec73671df1ece1c2a8e9326d529eb68bbb49fc0"
+    },
+    {
+      "path": "assets/watch/vision.jpg",
+      "git_blob_sha1": "6187b29474bbc84185b1b93e4559a498193a9f6b"
+    }
+  ],
+  "reviewed_stylesheets": {
+    "focused-answers.css": "a3c39449799c720ac75aaa252f70e9bf2eced6346bdf89709ebe7f9cbab56224"
+  }
+}

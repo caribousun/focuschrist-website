@@ -534,30 +534,6 @@
         "gaze_review": "Joseph looks down toward the ledger; no interpersonal gaze required."
       },
       {
-        "slot": "aaronic-priesthood",
-        "asset": "assets/page-art/church-history/aaronic-priesthood.webp",
-        "responsive": "assets/page-art/church-history/aaronic-priesthood-960.webp",
-        "width": 1672,
-        "height": 941,
-        "sha256": "996ac2a6161e96d356b9646b744d88c6e6c022e25d1376d2592c6022b11cd17f",
-        "original_sha256": "f53da7c973b96b3c300fb86d559f27bf14dbf455f908a0ddc4124a3d2cbfd4a2",
-        "tone": "earnest reverence and receptive prayer",
-        "reviewed": true,
-        "gaze_review": "Closed/bowed eyes fit receiving an ordinance; messenger attends to recipients."
-      },
-      {
-        "slot": "melchizedek-priesthood",
-        "asset": "assets/page-art/church-history/melchizedek-priesthood.webp",
-        "responsive": "assets/page-art/church-history/melchizedek-priesthood-960.webp",
-        "width": 1536,
-        "height": 1024,
-        "sha256": "17eaf893ea33d059cd6d4848cb12e6b8fce95f680573fb0156a9c97cf420c4be",
-        "original_sha256": "7ddce618ed30bf3aeb983d0d3ddb4a3837a6f26b34b86d5ebc0437c8ef72d7d6",
-        "tone": "Owner approved final Joseph-reference revision: recognizable approved Joseph identity interpreted at age 23; distinct natural apostle clothing consistent across three scenes; Peter brown hair and similar adult apparent age. Apostles exact appearance and clothing remain artistic interpretations.",
-        "reviewed": true,
-        "gaze_review": "Joseph and Oliver stand with eyes open, attending to Peter as he speaks; James and John share attention within the encounter rather than facing the viewer."
-      },
-      {
         "slot": "kirtland-temple",
         "asset": "assets/page-art/church-history/kirtland-temple.webp",
         "responsive": "assets/page-art/church-history/kirtland-temple-960.webp",
@@ -595,58 +571,6 @@
         "reviewed": true,
         "gaze_review": "Corrected Joseph/listener mutual gaze visible at full/phone; unverified distant spire removed. Root+independent review passed.",
         "review_notes": "Joseph face exact owner master; costume Maudsleyreferenceonly. Generic1843reviewconversationinterpreted; no claim exactrecordedencounter."
-      },
-      {
-        "slot": "joseph-baptizes-oliver",
-        "asset": "assets/page-art/church-history/joseph-baptizes-oliver.webp",
-        "width": 1536,
-        "height": 1024,
-        "sha256": "489ec3a62ae4e0602dd585a760db13c2952be8ebe4b306b7f596625b00b54a78",
-        "original_sha256": "d33a321c436c6aa6a36379a9919af90e45506f42a72e614f3873a4716c88450a",
-        "tone": "reverent attention and gentle care",
-        "reviewed": true,
-        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
-        "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
-        "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
-      },
-      {
-        "slot": "oliver-baptizes-joseph",
-        "asset": "assets/page-art/church-history/oliver-baptizes-joseph.webp",
-        "width": 1536,
-        "height": 1024,
-        "sha256": "4133de47b818b87d62679c217903e06a676c1b95779bf298a1091d04e0053f22",
-        "original_sha256": "f7f8bce70587ef34a0f2b4dad91f5deac47f83cae3a1d3e2b2fb7f143bab3ffa",
-        "tone": "reverent attention and gentle care",
-        "reviewed": true,
-        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
-        "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
-        "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
-      },
-      {
-        "slot": "apostles-ordain-joseph",
-        "asset": "assets/page-art/church-history/apostles-ordain-joseph.webp",
-        "width": 1536,
-        "height": 1024,
-        "sha256": "71a3726740db06b16e6eaa3a3e98f0c8aa4db7a4ff6d8cfd158668f201e51e0e",
-        "original_sha256": "6d4fdc031f128adf88e5cbc31ad5b0f394e6c7d02b5da84a69076083f370b4aa",
-        "tone": "Owner approved final Joseph-reference revision: recognizable approved Joseph identity interpreted at age 23; distinct natural apostle clothing consistent across three scenes; Peter brown hair and similar adult apparent age. Apostles exact appearance and clothing remain artistic interpretations.",
-        "reviewed": true,
-        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
-        "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
-        "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
-      },
-      {
-        "slot": "apostles-ordain-oliver",
-        "asset": "assets/page-art/church-history/apostles-ordain-oliver.webp",
-        "width": 1536,
-        "height": 1024,
-        "sha256": "332b6acbc1d9908f843f85e227e43c4ff0cac8d2906284043b4f919e183e809f",
-        "original_sha256": "46be227158ad19560ab9d1bc4b919e496ed78598189278128318bdb2d34cc613",
-        "tone": "Owner approved final Joseph-reference revision: recognizable approved Joseph identity interpreted at age 23; distinct natural apostle clothing consistent across three scenes; Peter brown hair and similar adult apparent age. Apostles exact appearance and clothing remain artistic interpretations.",
-        "reviewed": true,
-        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
-        "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
-        "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
       },
       {
         "asset": "assets/page-art/sitewide-community/history-relief-practical-care-20260919-full.webp",
@@ -1260,6 +1184,134 @@
         "review_record": "docs/sitewide-narrative-supporting-review.json",
         "width": 1536,
         "height": 1024
+      }
+    ],
+    "answers/aaronic-priesthood-restoration.html": [
+      {
+        "slot": "aaronic-priesthood",
+        "asset": "assets/page-art/church-history/aaronic-priesthood.webp",
+        "responsive": "assets/page-art/church-history/aaronic-priesthood-960.webp",
+        "width": 1672,
+        "height": 941,
+        "sha256": "996ac2a6161e96d356b9646b744d88c6e6c022e25d1376d2592c6022b11cd17f",
+        "original_sha256": "f53da7c973b96b3c300fb86d559f27bf14dbf455f908a0ddc4124a3d2cbfd4a2",
+        "tone": "earnest reverence and receptive prayer",
+        "reviewed": true,
+        "gaze_review": "Closed/bowed eyes fit receiving an ordinance; messenger attends to recipients."
+      },
+      {
+        "slot": "joseph-baptizes-oliver",
+        "asset": "assets/page-art/church-history/joseph-baptizes-oliver.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "489ec3a62ae4e0602dd585a760db13c2952be8ebe4b306b7f596625b00b54a78",
+        "original_sha256": "d33a321c436c6aa6a36379a9919af90e45506f42a72e614f3873a4716c88450a",
+        "tone": "reverent attention and gentle care",
+        "reviewed": true,
+        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
+        "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
+      },
+      {
+        "slot": "oliver-baptizes-joseph",
+        "asset": "assets/page-art/church-history/oliver-baptizes-joseph.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "4133de47b818b87d62679c217903e06a676c1b95779bf298a1091d04e0053f22",
+        "original_sha256": "f7f8bce70587ef34a0f2b4dad91f5deac47f83cae3a1d3e2b2fb7f143bab3ffa",
+        "tone": "reverent attention and gentle care",
+        "reviewed": true,
+        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
+        "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
+      },
+      {
+        "slot": "aaronic-study",
+        "asset": "assets/page-art/focused-answers/aaronic-study-full.webp",
+        "responsive": "assets/page-art/focused-answers/aaronic-study-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "f468f5e98b80b716950972f569b542da453c5d42a4f9a085746a90b3553e6211",
+        "original_sha256": "49f1ac23220d7d2fd0fb153153cca39c4e314dfe6d18fed710801e608a2c4d58",
+        "tone": "quiet study and attentive service",
+        "reviewed": true,
+        "gaze_review": "Main agent full-frame pixel review: photographic clarity, natural anatomy, source/interpretation boundary, distinct composition and scene relevance. Contemporary people are unnamed; no locked likeness was generated or changed. Responsive browser framing and independent review are separate release gates."
+      },
+      {
+        "slot": "aaronic-service",
+        "asset": "assets/page-art/focused-answers/aaronic-service-full.webp",
+        "responsive": "assets/page-art/focused-answers/aaronic-service-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "90a5b3a4a567f9e68fb87e79a11549427b03798a66710601150dcf5eb70b33ad",
+        "original_sha256": "d98a8d183a72d05605b98918e6e79a0fa0dd5abe92dfb1ac66cc5f8c79ad7925",
+        "tone": "quiet study and attentive service",
+        "reviewed": true,
+        "gaze_review": "Main agent full-frame pixel review: photographic clarity, natural anatomy, source/interpretation boundary, distinct composition and scene relevance. Contemporary people are unnamed; no locked likeness was generated or changed. Responsive browser framing and independent review are separate release gates."
+      }
+    ],
+    "answers/melchizedek-priesthood-restoration.html": [
+      {
+        "slot": "melchizedek-priesthood",
+        "asset": "assets/page-art/church-history/melchizedek-priesthood.webp",
+        "responsive": "assets/page-art/church-history/melchizedek-priesthood-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "17eaf893ea33d059cd6d4848cb12e6b8fce95f680573fb0156a9c97cf420c4be",
+        "original_sha256": "7ddce618ed30bf3aeb983d0d3ddb4a3837a6f26b34b86d5ebc0437c8ef72d7d6",
+        "tone": "Owner approved final Joseph-reference revision: recognizable approved Joseph identity interpreted at age 23; distinct natural apostle clothing consistent across three scenes; Peter brown hair and similar adult apparent age. Apostles exact appearance and clothing remain artistic interpretations.",
+        "reviewed": true,
+        "gaze_review": "Joseph and Oliver stand with eyes open, attending to Peter as he speaks; James and John share attention within the encounter rather than facing the viewer."
+      },
+      {
+        "slot": "apostles-ordain-joseph",
+        "asset": "assets/page-art/church-history/apostles-ordain-joseph.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "71a3726740db06b16e6eaa3a3e98f0c8aa4db7a4ff6d8cfd158668f201e51e0e",
+        "original_sha256": "6d4fdc031f128adf88e5cbc31ad5b0f394e6c7d02b5da84a69076083f370b4aa",
+        "tone": "Owner approved final Joseph-reference revision: recognizable approved Joseph identity interpreted at age 23; distinct natural apostle clothing consistent across three scenes; Peter brown hair and similar adult apparent age. Apostles exact appearance and clothing remain artistic interpretations.",
+        "reviewed": true,
+        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
+        "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
+      },
+      {
+        "slot": "apostles-ordain-oliver",
+        "asset": "assets/page-art/church-history/apostles-ordain-oliver.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "332b6acbc1d9908f843f85e227e43c4ff0cac8d2906284043b4f919e183e809f",
+        "original_sha256": "46be227158ad19560ab9d1bc4b919e496ed78598189278128318bdb2d34cc613",
+        "tone": "Owner approved final Joseph-reference revision: recognizable approved Joseph identity interpreted at age 23; distinct natural apostle clothing consistent across three scenes; Peter brown hair and similar adult apparent age. Apostles exact appearance and clothing remain artistic interpretations.",
+        "reviewed": true,
+        "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
+        "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
+      },
+      {
+        "slot": "melchizedek-listen",
+        "asset": "assets/page-art/focused-answers/melchizedek-listen-full.webp",
+        "responsive": "assets/page-art/focused-answers/melchizedek-listen-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "ba7dc7061b07abc1c4a2c52c20f9500f9b3cf79e0e7440514e258a45ca123b16",
+        "original_sha256": "c8adb31e7c8e4240f3c966e4ba57785c209d51dfb2c9888c23299a4deec26b61",
+        "tone": "quiet study and attentive service",
+        "reviewed": true,
+        "gaze_review": "Main agent full-frame pixel review: photographic clarity, natural anatomy, source/interpretation boundary, distinct composition and scene relevance. Contemporary people are unnamed; no locked likeness was generated or changed. Responsive browser framing and independent review are separate release gates."
+      },
+      {
+        "slot": "melchizedek-records",
+        "asset": "assets/page-art/focused-answers/melchizedek-records-full.webp",
+        "responsive": "assets/page-art/focused-answers/melchizedek-records-960.webp",
+        "width": 1536,
+        "height": 1024,
+        "sha256": "420472dafa794c387fe61d7df6a97733b33ce30ee5f36f0d55534278cad03bea",
+        "original_sha256": "46128f162a0e10e0ce69501e3335293b5ced2ef1c23356e49f9d6f38d7fdf830",
+        "tone": "quiet study and attentive service",
+        "reviewed": true,
+        "gaze_review": "Main agent full-frame pixel review: photographic clarity, natural anatomy, source/interpretation boundary, distinct composition and scene relevance. Contemporary people are unnamed; no locked likeness was generated or changed. Responsive browser framing and independent review are separate release gates."
       }
     ]
   }
