@@ -1574,6 +1574,99 @@
       "sha256": "e07c3e534c0b2c9b73dc6dce4ab3d741e1d70be3806687f049d3cf87d7e2bb64",
       "status": 200,
       "verified_date": "2026-09-14"
+    },
+    {
+      "key": "lad-vision-redemption-dead",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/10/the-vision-of-the-redemption-of-the-dead?lang=eng",
+      "title": "The Vision of the Redemption of the Dead",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/028f04dd3ffe938764487a5cbad105795751de70/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/life-after-death/vision-redemption-dead.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "c8fe49b388f18a0ab07a7d8b8193eea8dcdb2fe1340bf7bf1e3710d9eb4b6baf",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?id=p29-p35&lang=eng#p29"
+      ]
+    },
+    {
+      "key": "lad-trust-in-the-lord",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2019/10/17oaks?lang=eng",
+      "title": "Trust in the Lord",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/f5bc1dc7fc38462d4ecc7ba8156aa75a52657c81/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/life-after-death/trust-in-the-lord.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "63d75917a1826235af1e1c972af244a3a3bc879fa2d437a92f36f4b5bd1c1f13",
+      "status": 200,
+      "verified_date": "2026-09-19"
+    },
+    {
+      "key": "lad-kingdoms-of-glory",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/17oaks?lang=eng",
+      "title": "Kingdoms of Glory",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/b3b286016da34d719d0ccb8c818a0ee2de7cf145/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/life-after-death/kingdoms-of-glory.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "00fea752f510e6a0556aa121c859436ff9ceb057d10d0158b9734771a2d1290e",
+      "status": 200,
+      "verified_date": "2026-09-19"
+    },
+    {
+      "key": "lad-our-fathers-glorious-plan",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2017/04/our-fathers-glorious-plan?lang=eng",
+      "title": "Our Father\u2019s Glorious Plan",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/ee1194956571fe74e98e388c75759c9c05c10ad5/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/life-after-death/our-fathers-glorious-plan.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "b714bc08f3e0289d3e6d1c24b0039803fa5d72e23018a0d00c4831afa0188866",
+      "status": 200,
+      "verified_date": "2026-09-19"
+    },
+    {
+      "key": "lad-redemption-dead-testimony-jesus",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2000/10/the-redemption-of-the-dead-and-the-testimony-of-jesus?lang=eng",
+      "title": "The Redemption of the Dead and the Testimony of Jesus",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/5a61e84d2674d7d47599774d5f1da6104e2efe86/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/life-after-death/redemption-dead-testimony-jesus.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "bdcf5d7b535c2f0c5cd022456eff47095f09b8236240871a3ffce13ec3eeed48",
+      "status": 200,
+      "verified_date": "2026-09-19"
+    },
+    {
+      "key": "lad-christ-at-temple",
+      "url": "https://www.churchofjesuschrist.org/study/video/3-nephi-8-11/2022-07-0130-jesus-christ-shows-himself-at-the-temple-3-nephi-111-17-eng?lang=eng",
+      "title": "Jesus Christ Appears at the Temple | 3 Nephi 11:1\u201317",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/82a5a33ffce45bf4a40860914a38719767cfc462/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/life-after-death/christ-at-temple.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "23046cfa8083778dc09ce1f5d2a95ad956d06fac16021ea7e641afe0355caf70",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?id=p14-p17&lang=eng#p14"
+      ]
+    },
+    {
+      "key": "lad-christ-prays-children",
+      "url": "https://www.churchofjesuschrist.org/study/video/3-nephi-17/2022-07-0520-jesus-christ-prays-and-angels-minister-to-the-children-3-nephi-1711-25-eng?lang=eng",
+      "title": "Jesus Christ Prays and Angels Minister to the Children | 3 Nephi 17:11\u201325",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/056b1f35819073be4db6fc1f05b7a19b5089c01d/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/life-after-death/christ-prays-children.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "fc9f92b22dec51f3a88743327d7c839da58726a42b24e275b37ef708db5942b7",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?id=p11-p25&lang=eng#p11"
+      ]
     }
   ],
   "reviewed_on": "2026-09-07",

@@ -493,7 +493,7 @@
         "tone": "reverent hope amid impending departure",
         "reviewed": true,
         "gaze_review": "Architecture and distant unnamed figures; no interpersonal gaze required.",
-        "review_notes": "Compared original1846â€“47daguerreotype; horizontalangel vane, circularwindowsbetweentiers. Landscape/colors/minuteornaments interpretive, no modernuprightMoroni."
+        "review_notes": "Compared original1846\u00e2\u20ac\u201c47daguerreotype; horizontalangel vane, circularwindowsbetweentiers. Landscape/colors/minuteornaments interpretive, no modernuprightMoroni."
       },
       {
         "slot": "nauvoo-legion",
@@ -798,6 +798,134 @@
         "sha256": "7b0dfc36b7f338b2da7f8ca755262d9f703c45683ea1bd315111039d850f1f7d",
         "tone": "Warm teaching expression, natural live-action detail and twelve attentive disciples. Independently compared with original Home Christ; technical acceptance is not owner approval.",
         "reviewed": true
+      }
+    ],
+    "answers/what-happens-after-death.html": [
+      {
+        "asset": "assets/page-art/life-after-death/martha-1536.webp",
+        "sha256": "0ed587f7b3405a4d66270d1fac42583dfea0bf4e2ce8639ac1d7e33b255e544b",
+        "tone": "Christ listens to Martha",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/mary-1536.webp",
+        "sha256": "d8d4b707cd2375c609bfea4c465d75f0414291661caa249c930ed5fbb9fa6519",
+        "tone": "Mary recognizes the risen Savior",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/peace-1536.webp",
+        "sha256": "bce244f3b5dfad08d70f5dd6f81cdec59a5d0ecdcbf4bd3cd18cf78ed33c411e",
+        "tone": "Peace among the disciples",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/thomas-1536.webp",
+        "sha256": "e59d4d8c7ff9d7889795720f740dbb4a711fb3953caef0c61da0bb0e83de9682",
+        "tone": "An invitation to Thomas",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/emmaus-1536.webp",
+        "sha256": "eaa5f44f9dfe577577382f008aa505469eb9b226304d26e9b0f302ec0768900b",
+        "tone": "Known in the breaking of bread",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/nephi-witness-1536.webp",
+        "sha256": "e0a00022735064d655d66ef77cbc673695e7286d809dcefa2b578059ac348eb1",
+        "tone": "One by one",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/nephi-teaching-1536.webp",
+        "sha256": "f1dbaca7cc524bd70ac5e74816f5def7e9d59dc4da8f95a6fc654a2b68abb64a",
+        "tone": "Blessed are the merciful",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/nephi-healing-1536.webp",
+        "sha256": "7d2c4a58a6726b2bfd935f5d7f675c038287691ee743e20db760a8bcdaef205e",
+        "tone": "He healed them every one",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/nephi-prayer-1536.webp",
+        "sha256": "f14c3f874b3c5f5cc61c64aeb5bc55e44e739b1da5a3dff39530e5d0fc466049",
+        "tone": "He prayed for them",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/nephi-children-1536.webp",
+        "sha256": "8dbb2bb043e8c98dc29cb699cb8daed03ff6584441c609fdad8e6d33e9413dfb",
+        "tone": "A blessing for each child",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/nephi-bread-1536.webp",
+        "sha256": "7d30c2a66b20ed7b1b2cd83c596792379be5ca01e6c70e10f89ba4b57e52e17a",
+        "tone": "He gives bread and fills their souls",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/nephi-records-1536.webp",
+        "sha256": "5268326ede12f31108c1e4ca80ec383261372f74cc7a5d1a504320dbef77eb20",
+        "tone": "Preserving the resurrection witness",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/nephi-three-1536.webp",
+        "sha256": "388976b23554c3877ba0dd9cb0c0181b088280225e5b3819e4ced94843b27312",
+        "tone": "The desire to keep serving",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/modern-grief-1536.webp",
+        "sha256": "2a6249936625daf282fc2772c56b3a34eae76a5b690c7802836bef46f4099921",
+        "tone": "Companionship in grief",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/modern-illness-1536.webp",
+        "sha256": "37e1c0d6202c1b1a8785569c990708b720b8bc083ef334f480b284e25720b0e2",
+        "tone": "Presence during illness",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/modern-loneliness-1536.webp",
+        "sha256": "402f2cec75039e61b9ef5f376bfd3e9affd0a1ab0c0433c9d6823431f44d18fe",
+        "tone": "A conversation on the bench",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/modern-caregiver-1536.webp",
+        "sha256": "1da6bae44ebe7ca7ce96ff0cd167f5b347d6d4812a3a0e9bf400aa5646ae0136",
+        "tone": "Rest for the caregiver",
+        "reviewed": true,
+        "technical_review_passed": true
+      },
+      {
+        "asset": "assets/page-art/life-after-death/modern-uncertainty-1536.webp",
+        "sha256": "a368aace621c93081e8fd8b294fe940d34afd6e98599022d0a587286c4c20632",
+        "tone": "Hope when the way is unclear",
+        "reviewed": true,
+        "technical_review_passed": true
       }
     ]
   }

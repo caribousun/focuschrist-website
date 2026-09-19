@@ -222,8 +222,26 @@ def main() -> int:
         # srcset. Exclusivity concerns owning pages, not references on that page.
         if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
-    if set(reviewed_pages) != set(PAGES) | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html"}:
-        errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement and Mission")
+    if set(reviewed_pages) != set(PAGES) | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html"}:
+        errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement, Mission and Life After Death")
+
+    life_entries = reviewed_pages.get("answers/what-happens-after-death.html", [])
+    if len(life_entries) != 18:
+        errors.append("Life After Death requires 18 technical artwork review records")
+    life_review_path = ROOT / "docs/life-after-death-art-review.json"
+    if life_review_path.is_file():
+        life_review = json.loads(life_review_path.read_text(encoding="utf-8"))
+        expected_life_assets = {entry.get("asset") for entry in life_review.get("artworks", [])}
+        if len({entry.get("asset") for entry in life_entries}) != 18 or {entry.get("asset") for entry in life_entries} != expected_life_assets:
+            errors.append("Life After Death technical review inventory must match its complete artwork review")
+    for entry in life_entries:
+        asset = ROOT / entry.get("asset", "")
+        if (entry.get("reviewed") is not True or entry.get("technical_review_passed") is not True
+                or not entry.get("tone") or not asset.is_file()
+                or hashlib.sha256(asset.read_bytes()).hexdigest() != entry.get("sha256")):
+            errors.append(f"Life After Death artwork must match reviewed bytes and pass technical review: {entry.get('asset')}")
+    from life_after_death_qa import check as check_life_after_death
+    errors.extend(check_life_after_death())
 
     for entry in reviewed_pages.get("missionary.html", []):
         if not entry.get("reviewed") or hashlib.sha256((ROOT/entry["asset"]).read_bytes()).hexdigest()!=entry.get("sha256"):

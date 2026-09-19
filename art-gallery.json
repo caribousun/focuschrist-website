@@ -41,6 +41,28 @@
   ],
   "artworks": [
     {
+      "title": "A blessing for each child",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/nephi-children-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/nephi-children-1536.webp",
+      "alt": "Jesus blesses a child while other children and a parent wait nearby.",
+      "id": "art-993a9d736f42",
+      "occurrences": [
+        {
+          "id": "source-bbc2a6bdfa53",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/nephi-children-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-children-800.webp\"])",
+          "title": "A blessing for each child"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A Breath Before the Next Step",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/still-lakeside-pause.webp",
@@ -60,6 +82,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "A conversation on the bench",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/modern-loneliness-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/modern-loneliness-1536.webp",
+      "alt": "Devotional artwork of Christ speaking with an older man on a park bench.",
+      "id": "art-340234f29125",
+      "occurrences": [
+        {
+          "id": "source-7cc58aab89c1",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/modern-loneliness-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/modern-loneliness-800.webp\"])",
+          "title": "A conversation on the bench"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -663,6 +707,28 @@
       ]
     },
     {
+      "title": "An invitation to Thomas",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/thomas-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/thomas-1536.webp",
+      "alt": "Jesus offers His hand as Thomas listens and looks into His face.",
+      "id": "art-43d8cb1d6f13",
+      "occurrences": [
+        {
+          "id": "source-b45decb2ab54",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/thomas-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/thomas-800.webp\"])",
+          "title": "An invitation to Thomas"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "An offer of hospitality",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/whitmer-traveler-960.webp",
@@ -943,6 +1009,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "Blessed are the merciful",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/nephi-teaching-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/nephi-teaching-1536.webp",
+      "alt": "Jesus teaches a gathering of adults and children, looking toward a listener.",
+      "id": "art-ed03003db4a1",
+      "occurrences": [
+        {
+          "id": "source-8fdf7f11d3f4",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/nephi-teaching-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-teaching-800.webp\"])",
+          "title": "Blessed are the merciful"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -1430,6 +1518,28 @@
       ]
     },
     {
+      "title": "Christ listens to Martha",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/martha-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/martha-1536.webp",
+      "alt": "Jesus listens to Martha outside Bethany as she speaks with Him after Lazarus’s death.",
+      "id": "art-dcbee2660a2a",
+      "occurrences": [
+        {
+          "id": "source-8e0247109e59",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/martha-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/martha-800.webp\"])",
+          "title": "Christ listens to Martha"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Christ teaches unity without domination",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/eternal-marriage/timeline/03-biblical-world-desktop-v2.webp",
@@ -1621,6 +1731,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/atonement/father-welcome.webp\"]:has(img[src=\"assets/page-art/atonement/father-welcome-960.webp\"])",
           "title": "Coming home"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Companionship in grief",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/modern-grief-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/modern-grief-1536.webp",
+      "alt": "Devotional artwork of the risen Christ listening to a woman holding a keepsake box and photograph.",
+      "id": "art-6c951df8550e",
+      "occurrences": [
+        {
+          "id": "source-dcdadf834841",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/modern-grief-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/modern-grief-800.webp\"])",
+          "title": "Companionship in grief"
         }
       ],
       "categories": [
@@ -2442,6 +2574,28 @@
       ]
     },
     {
+      "title": "He gives bread and fills their souls",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/nephi-bread-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/nephi-bread-1536.webp",
+      "alt": "Christ gives broken bread to a standing disciple as others receive bread behind them.",
+      "id": "art-d459a99f0a7d",
+      "occurrences": [
+        {
+          "id": "source-3a9203219b80",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/nephi-bread-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-bread-800.webp\"])",
+          "title": "He gives bread and fills their souls"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He had compassion on them",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/one-by-one-960.webp",
@@ -2457,6 +2611,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/atonement/one-by-one.webp\"]:has(img[src=\"assets/page-art/atonement/one-by-one-960.webp\"])",
           "title": "He had compassion on them"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He healed them every one",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/nephi-healing-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/nephi-healing-1536.webp",
+      "alt": "Christ meets the gaze of a seated woman and rests a hand on her shoulder.",
+      "id": "art-ac05d3be4ad8",
+      "occurrences": [
+        {
+          "id": "source-31e8ba2b23cd",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/nephi-healing-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-healing-800.webp\"])",
+          "title": "He healed them every one"
         }
       ],
       "categories": [
@@ -2483,6 +2659,28 @@
       ],
       "categories": [
         "Ask"
+      ]
+    },
+    {
+      "title": "He prayed for them",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/nephi-prayer-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/nephi-prayer-1536.webp",
+      "alt": "Jesus kneels upon the earth in prayer among kneeling adults and children.",
+      "id": "art-8dd25035b170",
+      "occurrences": [
+        {
+          "id": "source-39cd02a2e215",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/nephi-prayer-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-prayer-800.webp\"])",
+          "title": "He prayed for them"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -2831,6 +3029,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/child-loss-resurrection-dawn-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/child-loss-resurrection-dawn-800.webp\"])",
           "title": "Hope waits beside sorrow"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Hope when the way is unclear",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/modern-uncertainty-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/modern-uncertainty-1536.webp",
+      "alt": "Devotional artwork of Christ speaking with a young man beside a desk in his apartment.",
+      "id": "art-c147f53c002c",
+      "occurrences": [
+        {
+          "id": "source-b0e4189de14e",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/modern-uncertainty-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/modern-uncertainty-800.webp\"])",
+          "title": "Hope when the way is unclear"
         }
       ],
       "categories": [
@@ -3617,6 +3837,28 @@
       ]
     },
     {
+      "title": "Known in the breaking of bread",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/emmaus-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/emmaus-1536.webp",
+      "alt": "Jesus breaks bread at a table with two disciples in Emmaus.",
+      "id": "art-788a2d67c810",
+      "occurrences": [
+        {
+          "id": "source-9c6fbb65be50",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/emmaus-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/emmaus-800.webp\"])",
+          "title": "Known in the breaking of bread"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Learn from Christ, then practice His teaching",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/christ-disciples-gaze-v2-800.webp",
@@ -4233,6 +4475,28 @@
       ]
     },
     {
+      "title": "Mary recognizes the risen Savior",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/mary-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/mary-1536.webp",
+      "alt": "Mary Magdalene faces the risen Jesus in a garden near the tomb.",
+      "id": "art-c50515eac18c",
+      "occurrences": [
+        {
+          "id": "source-ab31402e34ca",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/mary-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/mary-800.webp\"])",
+          "title": "Mary recognizes the risen Savior"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Meet the risen Savior",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/jesus-risen-witness-800.webp",
@@ -4453,6 +4717,28 @@
       ]
     },
     {
+      "title": "One by one",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/nephi-witness-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/nephi-witness-1536.webp",
+      "alt": "The risen Christ offers His hand to a man among the people at Bountiful.",
+      "id": "art-d7f91fb62637",
+      "occurrences": [
+        {
+          "id": "source-9b83ab1bc3f1",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/nephi-witness-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-witness-800.webp\"])",
+          "title": "One by one"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "One Savior, One Invitation",
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/christ-centered-world.webp",
@@ -4512,6 +4798,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/mormon-ponder-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/mormon-ponder-800.webp\"])",
           "title": "Pause and ponder the promise"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Peace among the disciples",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/peace-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/peace-1536.webp",
+      "alt": "The risen Jesus addresses gathered disciples and shows His healed hands.",
+      "id": "art-6fcbd04d180b",
+      "occurrences": [
+        {
+          "id": "source-35df8f61f56a",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/peace-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/peace-800.webp\"])",
+          "title": "Peace among the disciples"
         }
       ],
       "categories": [
@@ -4683,6 +4991,28 @@
       ]
     },
     {
+      "title": "Presence during illness",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/modern-illness-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/modern-illness-1536.webp",
+      "alt": "Devotional artwork of Christ sitting beside a man in a treatment chair, meeting his gaze.",
+      "id": "art-26ab779b9ab5",
+      "occurrences": [
+        {
+          "id": "source-6618f3180b15",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/modern-illness-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/modern-illness-800.webp\"])",
+          "title": "Presence during illness"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Preserving the Record",
       "category": "Church History",
       "thumbnail": "/assets/history/preserving-the-record-1400.webp",
@@ -4702,6 +5032,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "Preserving the resurrection witness",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/nephi-records-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/nephi-records-1536.webp",
+      "alt": "Jesus speaks with Nephi over an ancient record while disciples listen.",
+      "id": "art-1060873513ec",
+      "occurrences": [
+        {
+          "id": "source-5bb47f39ac39",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/nephi-records-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-records-800.webp\"])",
+          "title": "Preserving the resurrection witness"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -4988,6 +5340,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "Rest for the caregiver",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/modern-caregiver-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/modern-caregiver-1536.webp",
+      "alt": "Devotional artwork of Christ listening across a kitchen table to a tired caregiver.",
+      "id": "art-dda2ed9f2e9c",
+      "occurrences": [
+        {
+          "id": "source-b17d86156551",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/modern-caregiver-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/modern-caregiver-800.webp\"])",
+          "title": "Rest for the caregiver"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -5605,6 +5979,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp\"]:has(img[src=\"../assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp\"])",
           "title": "The beginning: companionship and shared stewardship"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The desire to keep serving",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/life-after-death/nephi-three-800.webp",
+      "fullImage": "/assets/page-art/life-after-death/nephi-three-1536.webp",
+      "alt": "Christ turns toward three disciples in an attentive conversation.",
+      "id": "art-01cf77fcaba4",
+      "occurrences": [
+        {
+          "id": "source-a10839058c22",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/life-after-death/nephi-three-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-three-800.webp\"])",
+          "title": "The desire to keep serving"
         }
       ],
       "categories": [
@@ -6433,15 +6829,15 @@
     }
   ],
   "stats": {
-    "artworks": 278,
-    "occurrences": 308,
+    "artworks": 296,
+    "occurrences": 326,
     "byKind": {
       "artwork": 41,
       "full": 1,
       "hero": 34,
       "legacy": 39,
       "missionary": 9,
-      "topic": 187
+      "topic": 205
     }
   }
 }
