@@ -368,3 +368,12 @@ body.fc-site .fc-history-message--assistant {
  .nav[data-focuschrist-header="standard"] .fc-nav-side{gap:12px}
 }
 @media(max-width:1020px){.nav[data-focuschrist-header="standard"] .fc-nav-side{display:contents}}
+
+/* Long current-study labels fall back to the existing menu before controls collide. */
+@media (min-width:1021px) {
+ body.fc-site .nav[data-focuschrist-header="standard"].fc-nav-compact > .nav-links {display:flex!important;max-width:calc(100vw - 420px);min-width:0;}
+ body.fc-site .nav[data-focuschrist-header="standard"].fc-nav-compact .fc-nav-side {display:contents;}
+ body.fc-site .nav[data-focuschrist-header="standard"].fc-nav-compact .nav-links a {display:none!important;}
+ body.fc-site .nav[data-focuschrist-header="standard"].fc-nav-compact .nav-links a[data-focuschrist-current-study],
+ body.fc-site .nav[data-focuschrist-header="standard"].fc-nav-compact:not(.fc-has-current-study) .nav-links .fc-nav-atonement {display:block!important;white-space:normal;text-align:center;}
+}

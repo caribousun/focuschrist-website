@@ -1,0 +1,154 @@
+{
+  "date": "2026-09-19",
+  "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+  "identity_reference_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+  "records": [
+    {
+      "key": "look-peter-rescue",
+      "prompt": "Create one ORIGINAL photorealistic live-action focusChrist supporting artwork, landscape3:2. Preserve supplied Christ reference exact facial identity while changing pose and expression naturally for thisscene. Natural period materials, realistic hands/proportions, coherent scene eyecontact, no fantasy/painting/plastic skin. No text/slogans/logos/watermarks. Full heads and essential hands/action insideframe. Mortal Jesus no nail scars. Matthew14:30–31 fourth watch, dark predawn storm on Galilean lake. Jesus in wet ivory linen and mutedblue mantle stands uponwater, bends to immediately catch sinking adultPeter's extendedforearm with anatomically clear firm singlehandgrip. Peter chestdeep water, alarm and trustingappeal on face, his otherhand visible steadying. Jesus calm focused compassion eyesDOWNtoPeter who looksUPtomeetHim. Jesus exactreferenceface; Peterdistinct middleaged shortdarkhairbeard. Distantsmallwoodenboatdisciples. Physicallycoherentwaves, waterline andwetcloth. Reverent rescue not posing.",
+      "ref": true,
+      "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-b56b3e3e-1acb-4aa6-a994-07228a4c1e14.png",
+      "selected_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-bf6f87ac-89d6-4da6-a08f-7dda226d703c.png",
+      "asset": "assets/page-art/sitewide-narratives/look-peter-rescue-full.webp",
+      "thumbnail": "assets/page-art/sitewide-narratives/look-peter-rescue-960.webp",
+      "sha256": "68d029a69f572b31590b9b84e045f55081fdd20b611b0e2b97360810a4609c1f",
+      "thumbnail_sha256": "c35afa1a6a1c8667a9549a13347ea4b70423faf9cb7a2ee9be3a9670b6a96320",
+      "source_sha256": "ec7b8c5e4c090d9479ae20ab46e029fc6fd920894c7d4f17693dbd0c920922ee",
+      "width": 960,
+      "height": 640,
+      "owner_approval": false,
+      "technical_review_passed": true,
+      "status": "integrated_after_independent_visual_review",
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "anchor": "every-thought",
+      "title": "Immediately Jesus reached for him",
+      "alt": "Jesus grasps Peter’s raised hand as Peter looks up from the stormy water",
+      "caption": "Peter sees the wind, becomes afraid, and cries for help. Matthew records that Jesus immediately reaches out and catches him. This scene invites us to notice the Savior’s response as carefully as Peter’s fear.",
+      "study": "look-unto-me-doctrine-and-covenants-6-36.html#every-thought",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/14?id=p30-p31&lang=eng#p30",
+          "label": "Matthew 14:30–31"
+        }
+      ],
+      "ask": "../ask.html?topic=Immediately+Jesus+reached+for+him&art=Immediately+Jesus+reached+for+him&return=%2Fanswers%2Flook-unto-me-doctrine-and-covenants-6-36.html%23every-thought#ask-question",
+      "independent_visual_review": {
+        "reviewer": "parent agent",
+        "result": "technical pass",
+        "observations": "One connected clasp; two wrists traceable to their respective arms; paired thumbs and curved fingers. Upper extra hand removed. Original scene and recognizable Christ face preserved."
+      }
+    },
+    {
+      "key": "trials-almas-people",
+      "prompt": "Create one ORIGINAL photorealistic live-action focusChrist supporting artwork, landscape3:2. Preserve supplied Christ reference exact facial identity while changing pose and expression naturally for thisscene. Natural period materials, realistic hands/proportions, coherent scene eyecontact, no fantasy/painting/plastic skin. No text/slogans/logos/watermarks. Full heads and essential hands/action insideframe. Mortal Jesus no nail scars. Mosiah24:14–15 narrativeinterpretation. Two unnamed ancient members of Alma'scommunity, adultwoman and middleagedman distinctfaces in plain wovenearthcoloredtunics, sharecarrying a modest heavy wickerbasketofgrain along an ordinarysettlementpath. Both hands support its handles clearly, upright backs strengthened, soberhope andgentlemutualencouragement not triumphantliberation. Burdensremain yettheycanbear them. Backgroundsimplemudbrick/woodhomesplants, no precise claimedarchaeologicalsite, no fancydress/metalarmor/shackles/captorviolence. No Christ inimage. Exact physical task unspecified byscripture, sceneisinterpretation.",
+      "ref": false,
+      "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-363ebc35-46c8-4f40-aaa8-16d71deb6ccd.png",
+      "selected_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-363ebc35-46c8-4f40-aaa8-16d71deb6ccd.png",
+      "asset": "assets/page-art/sitewide-narratives/trials-almas-people-full.webp",
+      "thumbnail": "assets/page-art/sitewide-narratives/trials-almas-people-960.webp",
+      "sha256": "2cd4c40791018fde32cda8f14384569c11c1ff3a05a71b3400fe6663aabde99a",
+      "thumbnail_sha256": "cef1bb9e3171f437001cb1b9366373fba49211df10d82c2d01dd01b2f7ba27d0",
+      "source_sha256": "48a244ca5eb699ccffb2777e1090116ec6fe7b00ed3bab687d3f9b6c1f1b2e7e",
+      "width": 960,
+      "height": 640,
+      "owner_approval": false,
+      "technical_review_passed": true,
+      "status": "integrated_after_independent_visual_review",
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "anchor": "scripture-study",
+      "title": "Strength while the burden remains",
+      "alt": "Two adults share the weight of a grain basket and exchange a look of encouragement",
+      "caption": "The Lord strengthens Alma’s people to bear their burdens before He leads them out of bondage. Two neighbors sharing a heavy basket give that strength an everyday form. Their task and surroundings are an artistic interpretation of the passage.",
+      "study": "faith-in-jesus-christ-during-trials.html#scripture-study",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?id=p14-p15&lang=eng#p14",
+          "label": "Mosiah 24:14–15"
+        }
+      ],
+      "ask": "../ask.html?topic=Strength+while+the+burden+remains&art=Strength+while+the+burden+remains&return=%2Fanswers%2Ffaith-in-jesus-christ-during-trials.html%23scripture-study#ask-question",
+      "independent_visual_review": {
+        "reviewer": "parent agent",
+        "result": "technical pass",
+        "observations": "Coherent basket support and anatomy, sincere mutual gaze, adult appearance, plain clothing; unspecified task and setting explicitly identified as artistic interpretation."
+      }
+    },
+    {
+      "key": "birth-john-witness",
+      "prompt": "Create one ORIGINAL photorealistic live-action focusChrist supporting artwork, landscape3:2. Preserve supplied Christ reference exact facial identity while changing pose and expression naturally for thisscene. Natural period materials, realistic hands/proportions, coherent scene eyecontact, no fantasy/painting/plastic skin. No text/slogans/logos/watermarks. Full heads and essential hands/action insideframe. Mortal Jesus no nail scars. John1:35–37 lateradultministry (notNativity). JohnBaptist atLEFT ageabout30 matchingJesusadultage, ruggeddarkhairedbeardedyoungman in coarsecamelhairgarment withplainleatherbelt (not greyelderly). John standswithTWOyoungadultdisciples and gesturesnaturally towardJesus walkingatRIGHT on riverbankpath, Jordan reedsandstones. Allthree gaze towardJesus; Jesus facesalongpath, exactreferenceidentity recognizable threequarterangle mutedochremantleoverivorylinen. This is witnessing 'Lamb ofGod', no literal lamb/nohalo/nobaptism. Clear fourpeople only, differentfaces, naturalhandpointing. Period firstcenturyJudeanclothsetting, warmmorninglight.",
+      "ref": true,
+      "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-bfbac351-6ac8-4d06-a11a-abfa1540f77c.png",
+      "selected_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-233d27c8-e4b4-4ba1-bf7a-0bbeb3054aec.png",
+      "asset": "assets/page-art/sitewide-narratives/birth-john-witness-full.webp",
+      "thumbnail": "assets/page-art/sitewide-narratives/birth-john-witness-960.webp",
+      "sha256": "ceb1fcfaedeceea5f806c1c31748eb9880e1f7c92262fda8e01975221bbe2216",
+      "thumbnail_sha256": "34e62bae4bcfae1ebaef07c1893e5903f8d9d2194b4d784273de5217bc3b7c14",
+      "source_sha256": "7c0458ed95fb9e7fbc3bb4da195e1da911db4ac1ef0dea95179ccf358c9a06d9",
+      "width": 960,
+      "height": 640,
+      "owner_approval": false,
+      "technical_review_passed": true,
+      "status": "integrated_after_independent_visual_review",
+      "page": "birth-of-christ.html",
+      "anchor": "word-made-flesh",
+      "title": "John points his disciples toward Christ",
+      "alt": "John the Baptist directs two disciples toward Jesus beside the river",
+      "caption": "Years after Jesus’s birth, John the Baptist directs two disciples toward Him as the Lamb of God, and they follow Jesus. The witness points beyond himself to the Savior. This scene from the adult ministry extends the chapter’s testimony that the Word became flesh.",
+      "study": "birth-of-christ.html#word-made-flesh",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?id=p35-p37&lang=eng#p35",
+          "label": "John 1:35–37"
+        }
+      ],
+      "ask": "ask.html?topic=John+points+his+disciples+toward+Christ&art=John+points+his+disciples+toward+Christ&return=%2Fbirth-of-christ.html%23word-made-flesh#ask-question",
+      "independent_visual_review": {
+        "reviewer": "parent agent",
+        "result": "technical pass",
+        "observations": "John distinct through shorter hair, narrower face and shorter beard; Christ gaze meets John; four people and natural hands; adult ministry age, camel hair and first-century Jordan context coherent."
+      }
+    }
+  ],
+  "edit_prompts": {
+    "peter_hand_first": "EDIT ONLY the two connecting hands at the central rescue grip in this image. Preserve all other pixels/composition as closely as possible: faces, likeness, mutual gaze, storm, boat, clothing, pose, lighting. User loves the scene; do not redesign. Resolve the hand anatomy into TWO DISTINCT anatomically correct hands: Jesus's right arm descends from his rolled ivory sleeve; his right hand firmly wraps Peter's exposed RIGHT forearm a few inches below Peter's wrist. Jesus has one thumb visible on the near side and four naturally curved fingers wrapping behind with believable visible knuckles, no extra digit. Peter's right arm rises from dark sleeve; CONTINUE IT beyond Jesus's grip into Peter's clearly visible separate right wrist and open relaxed hand directed upward beside Jesus's sleeve, FIVE fingers (four fingers plus thumb) anatomically coherent and distinct, no merged hands. The hands must not become a clasp or fist-like knot. Maintain rescue strength, full anatomy inside frame, natural wet skin, no nail scars. Keep faces EXACTLY unchanged.",
+    "peter_hand_clasp": "Edit ONLY the rescue hand connection in the middle of this photograph. Preserve the user's loved scene, EXACT faces, mutual gaze, body poses, lighting, clothes, storm, boat and water. Replace current wrist-grip plus open hand with ONE unmistakable simple hand-to-hand clasp: Jesus's right hand at the end of his descending ivory-sleeved arm holds Peter's raised RIGHT HAND at the end of Peter's dark-sleeved rising arm. Both wrist-to-hand connections clearly traceable to their own forearms. Exactly TWO hands at this contact, one each man, normal thumb and four fingers per hand naturally occluded as they grasp, don't force all fingers visible. REMOVE Peter's currently upward open hand entirely; REMOVE every separate finger wrap on forearms. Only a compact strong natural right-hand-to-right-hand rescue clasp, no interlaced fingers, no third hand, no detached fingers, no wrist wrap. No scars. Preserve all scene outside these connecting hands.",
+    "john_distinctness": "Edit ONLY John the Baptist's identity on the left-center and Jesus's gaze on the RIGHT, preserving this exact four-person riverbank scene, composition, clothing, lighting and the supplied approved Jesus likeness. John is the standing camel-hair-clad pointing man, NOT either disciple. Make John visibly a DIFFERENT man than Jesus: age about 30, short STRAIGHT dark cropped ear-length hair, narrower long face, prominent slightly hooked nose, broad heavy eyebrows, sparse short black beard, lean rugged outdoor features. Retain his camel-hair garment, leather belt, staff and natural gesture. Keep two disciples distinct and unchanged. Jesus on right keeps EXACT approved face structure, hair, beard and recognizable identity from reference image2; change only eyes and slight head orientation so Jesus looks directly at John’s face to his left, calm warm attentive expression, no upward sky-gaze. No extra people, no new hands, no text, no halo. Historical first-century Jordan environment. Preserve Jesus's natural hands with no nail scars."
+  },
+  "rejected": [
+    {
+      "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-b56b3e3e-1acb-4aa6-a994-07228a4c1e14.png",
+      "sha256": "f7843a4c2468acc612e8f67a801df9a0091b5b07c8b662ce9b2c5e8055147663",
+      "reason": "Owner rejected ambiguous rescue hands"
+    },
+    {
+      "path": "C:/Users/wyatt/.codex/generated_images/01a0bae3-a5a7-76c1-ad8b-e3687aac75b8/exec-d5fea515-bdef-4dbc-b745-153c8c65f450.png",
+      "sha256": "398a1931ba74a50209137a8b59d81bf142fea6df7d62670168df947d1b256c9e",
+      "reason": "Owner rejected multiple hands not joined"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-a07f433b-0f87-49ba-bdcb-b4b42125392a.png",
+      "sha256": "0fa2d606bc6de9032b049975999dc0afbb1ec71516f6bc07f134491cb5753282",
+      "reason": "Superseded by requested simple hand-to-hand clasp"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-bfbac351-6ac8-4d06-a11a-abfa1540f77c.png",
+      "sha256": "7c47dc6a631dbc9adc534c24fe841ba4ed3a33b1b5b96cd1c64b1f03b9948fdf",
+      "reason": "John too similar to Christ; Christ gaze above witness"
+    }
+  ],
+  "manual_drift_review": {
+    "reference": "Actual approved Home signature pixels viewed beside selected Peter and John candidates",
+    "identity": "Christ facial structure, beard and recognizable likeness preserved; expression and gaze serve scenes",
+    "protected_reference_unchanged": true,
+    "owner_correction_scope": "Peter hand connection only; loved face, pose, storm, boat and atmosphere preserved closely",
+    "owner_rejection_exact": "looks like multiple hands not joined",
+    "standalone_gate": "No artwork_drift_qa.py or drift contract exists in this checkout; actual-image manual review and hash comparison recorded instead."
+  },
+  "verification": {
+    "runtime": "PASS detail first, source, own study anchor, contextual Ask return, full image, close, reopen and focus restoration at 1440 and390 script widths; jsdom is not rendered browser proof",
+    "media_voice_qa": "pass",
+    "study_layout_uniformity_qa": "pass",
+    "topic_artwork_details_qa": "existing hardcoded aggregate count fails124 vs prior99+listed additions; parent must include current new manifests",
+    "browser": "pending parent desktop and phone verification"
+  }
+}

@@ -1,8 +1,8 @@
 {
   "standard": {
     "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
-    "required_visuals_per_page": 5,
-    "supporting_visuals_per_page": 4,
+    "required_visuals_per_page": 6,
+    "supporting_visuals_per_page": 5,
     "full_image_dimensions": [
       1536,
       1024
@@ -42,6 +42,17 @@
         "sha256": "f72203fe48b5598fe23762e13d4a1a9886cfa41b41a6fb7e2af534bc99afbbb0",
         "tone": "quiet compassion without rushing sorrow",
         "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
+        "sha256": "8d49d722fe4b91f452a545a08a875e623b19e2c803396cac54704a58ff0b09f5",
+        "tone": "quiet fellowship and attentive welcome",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-supporting-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ],
     "art-study/the-good-shepherd.html": [
@@ -68,6 +79,17 @@
         "sha256": "db1509ed08bfe12b04e4de33a3b6a728e8427895c6a3b567c01a517e91891041",
         "tone": "warm recognition in a crowd",
         "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+        "sha256": "029684658fd2fd404729db71ee451862ffb67ea6aae62ae50ed1e2254a8f946f",
+        "tone": "focused care and patient determination",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-supporting-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ],
     "art-study/suffer-the-little-children.html": [
@@ -94,6 +116,17 @@
         "sha256": "e50fc2b7e243ffa4e442d29fa970a9169c6211a00d625db45ba548fca83b1336",
         "tone": "calm and attentive listening",
         "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+        "sha256": "afde94ae47f90109be64adba21ed2c6f9f5a3d5e8e00d125d5f0352812c34d1e",
+        "tone": "attentive welcome and ordinary care",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-supporting-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ],
     "art-study/be-still.html": [
@@ -120,6 +153,17 @@
         "sha256": "a9c935fab827fcc3e2b6b3c53d748373f9cc7660020a2089c992ab0b741da869",
         "tone": "warm practical help",
         "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+        "sha256": "09123ea02209812f8158a257fbc0ac5562231f3cb6a14bc0303951bd992fae18",
+        "tone": "quiet, thoughtful attention",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-supporting-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ],
     "book-of-mormon-evidences.html": [
@@ -369,6 +413,50 @@
         "tone": "warm mutual attention and encouragement",
         "reviewed": true,
         "gaze_review": "Full, face/hand, and phone review passed; plausible age and mutual attention, not authenticated facial identity."
+      },
+      {
+        "asset": "assets/page-art/sitewide/bom-archaeology-context-full.webp",
+        "sha256": "70ebf0f6b4159563c17be3a1ea7b2d0d45f74f8d281f171fc2a270bed51857d3",
+        "tone": "patient attention to field context",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-gap-supporting-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/sitewide/bom-alma-helaman-full.webp",
+        "sha256": "372bee3a1b726719dd7074338b68aa49d21c14c0a033aca4cdc4808821a4ef55",
+        "tone": "earnest fatherly testimony and attentive listening",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-gap-supporting-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/sitewide/bom-mormon-moroni-full.webp",
+        "sha256": "56afc5108cad293f4f44d6e3adb6ed657578c8511ee62bb8e4a768682f75d63f",
+        "tone": "sober trust amid danger",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-gap-supporting-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/sitewide/bom-language-comparison-full.webp",
+        "sha256": "15a580c2f7bce400413c66bde58cd24e4e47fd248df9e7b30df9df12a54288b2",
+        "tone": "careful concentration on source comparison",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-gap-supporting-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ],
     "church-history.html": [
@@ -559,6 +647,17 @@
         "identity_reference": "assets/identities/joseph-smith-owner-approved-20260914.png",
         "oliver_reference": "assets/identities/oliver-research-master-20260914.png",
         "review_notes": "Root and independent reviewer inspected full compositions, face and hand details; interpreted young adult likenesses retained. Ancient faces and exact arrangement are artistic interpretations. Phone rendering checked before release."
+      },
+      {
+        "asset": "assets/page-art/sitewide-community/history-relief-practical-care-20260919-full.webp",
+        "sha256": "d92548ff1fff65133e898206cbbbe5b75da977289ff2bf19d5ce4892407244db",
+        "tone": "practical care and collaborative attention",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-community-supporting-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ],
     "joseph-smith-likeness.html": [
@@ -1066,6 +1165,17 @@
         "sha256": "3e014257fe2ae2883c7b9d9b3ffd5b336547e9a303a26347bfd7c3a18cce416c",
         "tone": "The family settles in Nazareth after their return. The Savior’s early years unfold within the daily care of a home.",
         "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/sitewide-narratives/birth-john-witness-full.webp",
+        "sha256": "ceb1fcfaedeceea5f806c1c31748eb9880e1f7c92262fda8e01975221bbe2216",
+        "tone": "attentive witness directing others to Christ",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-narrative-supporting-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ],
     "answers/death-of-a-child.html": [
@@ -1098,6 +1208,58 @@
         "sha256": "5027f66a420278dd422241c6c714b63c8f21ac02994dd200fcf782057d40bbf9",
         "tone": "Source-grounded compassionate attention; reviewed in study-gap-art-review.md.",
         "reviewed": true
+      }
+    ],
+    "come-follow-me.html": [
+      {
+        "asset": "assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-full.webp",
+        "sha256": "22da953eb7184cdb41b9108cb2551c956de3fae0580335069e962dc4e29332b2",
+        "tone": "patient service and shared work",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-community-supporting-review.json",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "answers/what-is-eternal-marriage.html": [
+      {
+        "asset": "assets/page-art/sitewide-community/marriage-community-welcome-20260919-full.webp",
+        "sha256": "75ac198b8c78b6cd5202ac999142f5d019b7d9a44ff3552b25b183e76417ffad",
+        "tone": "warm welcome and attentive participation",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-community-supporting-review.json",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "answers/look-unto-me-doctrine-and-covenants-6-36.html": [
+      {
+        "asset": "assets/page-art/sitewide-narratives/look-peter-rescue-full.webp",
+        "sha256": "68d029a69f572b31590b9b84e045f55081fdd20b611b0e2b97360810a4609c1f",
+        "tone": "urgent rescue and focused compassion",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-narrative-supporting-review.json",
+        "width": 1536,
+        "height": 1024
+      }
+    ],
+    "answers/faith-in-jesus-christ-during-trials.html": [
+      {
+        "asset": "assets/page-art/sitewide-narratives/trials-almas-people-full.webp",
+        "sha256": "2cd4c40791018fde32cda8f14384569c11c1ff3a05a71b3400fe6663aabde99a",
+        "tone": "encouragement while sharing a heavy burden",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/sitewide-narrative-supporting-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ]
   }

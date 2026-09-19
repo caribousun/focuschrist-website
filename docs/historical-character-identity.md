@@ -1,5 +1,13 @@
 # Mandatory historical character likenesses
 
+## Every owner-approved character is locked
+
+Wyatt reaffirmed on 2026-09-19 that every owner-approved character identity is locked across the website and all future projects. This includes Jesus Christ, Joseph Smith, Joseph of the Nativity, Mary, Alma and all other approved characters; it is not limited to Joseph Smith. Use exact actual approved reference pixels in every new depiction or edit, and compare the resulting face directly. Preserve identity through historically appropriate aging, expression, pose and lighting rather than substituting a new actor. Research the person and event before creation: age at that time, appearance, clothing, setting and atmosphere. Keep documented facts separate from artistic interpretation.
+
+`docs/approved-character-identities.json` separates confirmed asset provenance from unresolved mappings. A published image, technical pass, researched working reference or filename containing approved is not by itself owner approval. Where approval evidence or the person-to-reference mapping remains unresolved, reconcile it before reusing that identity; do not guess which Alma or Mary is intended. The registry is an initial evidence inventory, not a closed list of everyone protected by this mandate. Preserve all previously approved artwork while reconciling records. Only specific owner direction may replace an approved identity.
+
+Jesus Christ's canonical identity reference is `assets/heroes/home-christ-signature-approved-20260907.png`. Use its actual pixels, with scene-appropriate expression and the post-Resurrection requirements below. This faith-content identity mandate does not change the Wyatt-protected foundation.
+
 ## Joseph Smith — owner mandated
 
 Wyatt approved this portrait and explicitly mandated it as the exact Joseph Smith likeness for every newly created site image. The owner's instruction is: "I am mandating this as the joseph smith the site will use so you will use any created picture of joseph with this exact likeness in all images - ensure this mandate is recorded".
@@ -41,4 +49,4 @@ Do not depict the hair-protection legend as proven invulnerability or promote be
 
 ## Durable reference package
 
-`docs/historical-character-references.json` records the selected Emma, Oliver, David, and Martin working-master assets and SHA256 hashes, historical likeness provenance URLs, written appearance sources, event ages, and unresolved details. These are researched working references, **not owner-locked identities**. Joseph alone is owner locked under the mandate above. Porter, Hyrum, and Parley currently use direct primary references for their scenes and have no standalone generated master. Do not mistake an institutional summary for an eyewitness measurement, or monochrome portrait colorization for documented pigmentation. Historical source photographs remain research material; only the generated working masters are copied into site assets.
+`docs/historical-character-references.json` records the selected Emma, Oliver, David, and Martin working-master assets and SHA256 hashes, historical likeness provenance URLs, written appearance sources, event ages, and unresolved details. These entries were recorded as researched working references, **not proof of owner approval**. The former statement that Joseph alone was owner locked is superseded by the all-approved-character mandate above. Check subsequent explicit approval evidence in the approval-aware registry before reuse; do not promote a working reference merely because another character was approved. Porter, Hyrum, and Parley currently use direct primary references for their scenes and have no standalone generated master. Do not mistake an institutional summary for an eyewitness measurement, or monochrome portrait colorization for documented pigmentation. Historical source photographs remain research material; only the generated working masters are copied into site assets.

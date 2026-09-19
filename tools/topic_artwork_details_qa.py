@@ -4,11 +4,13 @@ from pathlib import Path
 import json
 from urllib.parse import urlsplit
 from answer_study_qa import Document
+from study_gap_art_qa import sitewide_entries
 ROOT=Path(__file__).resolve().parents[1]
 def parents(n):
  while n.parent:
   n=n.parent;yield n
-errors=[];count=0;preserved=0;panels=0;life_assets=[];gap_assets=[]
+errors=[];count=0;preserved=0;panels=0;life_assets=[];gap_assets=[];sitewide_assets=[]
+new_review = {e['asset']: e for e in sitewide_entries() if not e['talk'] and (e['page'].startswith('answers/') or e['page']=='general-conference.html')}
 for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.html']:
  d=Document();d.feed(page.read_text(encoding='utf-8'));ns=list(d.root.walk())
  for asset,tag,attr in [('topic-artwork-details.js','script','src'),('topic-artwork-details.css','link','href')]:
@@ -28,7 +30,13 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   if cap is None or not cap.text().strip():errors.append(page.name+': missing approved body caption')
   sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname=='www.churchofjesuschrist.org'] if cap else []
   if not sources and 'data-topic-study' not in a.attrs and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
-  if 'data-life-after-death-art' in container.attrs or 'data-study-gap-art' in container.attrs:
+  relative_asset=(page.parent/urlsplit(a.attrs['href']).path).resolve().relative_to(ROOT).as_posix()
+  if relative_asset in new_review:
+   record=new_review[relative_asset]
+   if record['page']!=page.relative_to(ROOT).as_posix():errors.append(page.name+': sitewide artwork is on the wrong page')
+   if 'data-full-image-viewer' in a.attrs or a.attrs.get('aria-haspopup')!='dialog':errors.append(page.name+': sitewide picture must open study details first')
+   sitewide_assets.append(relative_asset)
+  elif 'data-life-after-death-art' in container.attrs or 'data-study-gap-art' in container.attrs:
    # The anchor href is the native fallback. New figures intentionally let the
    # study adapter install the first action rather than the bare-image viewer.
    if 'data-full-image-viewer' in a.attrs:errors.append(page.name+': new picture must open study options first')
@@ -41,7 +49,8 @@ reviewed_life_assets={entry['asset'] for entry in life_review}
 assert len(life_assets)==18 and len(set(life_assets))==18 and set(life_assets)==reviewed_life_assets,'Life After Death adapter inventory differs from reviewed art'
 gap_review=json.loads((ROOT/'docs/study-gap-art-review.json').read_text(encoding='utf-8'))['artworks']
 assert len(gap_assets)==4 and len(set(gap_assets))==4 and set(gap_assets)=={entry['asset'] for entry in gap_review},'Study-gap adapter inventory differs from reviewed art'
-assert (count-len(life_assets)-len(gap_assets),preserved)==(99,3),(count,preserved)
+assert len(sitewide_assets)==len(new_review) and set(sitewide_assets)==set(new_review),'Sitewide adapter inventory differs from exact reviewed additions'
+assert (count-len(life_assets)-len(gap_assets)-len(sitewide_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert panels==12,panels

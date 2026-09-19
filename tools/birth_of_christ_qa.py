@@ -35,6 +35,7 @@ def references(page, nodes):
 
 
 def check():
+    from study_gap_art_qa import check_sitewide, sitewide_entries
     errors = []
     def require(condition, message):
         if not condition:
@@ -43,6 +44,10 @@ def check():
     text = PAGE.read_text(encoding="utf-8")
     nodes = list(Parser(text).root.walk())
     figures = [n for n in nodes if n.tag == "figure" and "data-birth-art" in n.attrs]
+    additions = [e for e in sitewide_entries() if e['page'] == PAGE.name and not e['talk']]
+    additional_figures = [n for n in nodes if n.tag == 'figure' and n.attrs.get('data-exclusive-artwork') in {e['key'] for e in additions}]
+    require(len(additional_figures) == len(additions), 'reviewed sitewide narrative inventory differs')
+    errors.extend(check_sitewide(PAGE.name))
     heroes = [n for n in nodes if n.tag == "a" and n.attrs.get("data-hero-record") == "birth-of-christ"]
     require(len(figures) >= 22 and len(heroes) == 1, "requires at least22 body pictures and exactly one unique hero")
     require(not re.search(r"BIRTH_(?:ART|RESOURCE)_|\b(?:TODO|PLACEHOLDER)\b", text), "unresolved integration placeholder")

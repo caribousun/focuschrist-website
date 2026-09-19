@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-19",
+  "tool": "built-in image_gen.imagegen",
+  "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+  "initial_prompts": [
+    {
+      "slug": "living-breakfast-shore-20260919",
+      "page": "the-living-christ",
+      "prompt": "Use case: historical-scene, convincing live-action photograph. Create one original 3:2 landscape supporting study photograph (1536x1024) of the risen Jesus Christ sharing breakfast with disciples on the rocky shore of the Sea of Tiberias in early morning, grounded in John 21:9-14. Input image is the exact mandatory Christ identity reference only: preserve this same recognizable face, facial proportions, eyes, nose, beard, hair, complexion, natural realistic skin; change pose and restrained warm expression naturally. Christ seated center-left in a light undyed linen tunic with a muted slate-blue wool mantle, passing bread to an attentive adult male disciple at right; three other adult disciples sit near a low charcoal fire with fish and simple flat bread. Unnamed disciples have individually different plausible ancient Levantine adult faces, not authenticated portraits; wool/linen garments, sandals, no modern objects. A small wooden fishing boat and nets on the shore behind them, low Galilean hills. Christ and recipient meet each other's pupils in unmistakable mutual eye contact. Warm, quiet fellowship after a difficult night, no staged camera pose or exaggerated laughter. Mandatory post-Resurrection artistic depiction: subtle healed nail scars in BOTH palms and BOTH wrists wherever visible, slight closed pale scars, no blood, open wounds or extra marks. Maintain natural hands and do not force hidden areas into view. Clear lifelike cloth, hands, skin and physical dawn light, 50mm photographic depth. Keep faces, exchange of bread, fire and food inside frame. No halo, radiating aura, painterly finish, CGI, airbrushing, text or watermark."
+    },
+    {
+      "slug": "shepherd-seeks-one-20260919",
+      "page": "the-good-shepherd",
+      "prompt": "Use case: historical-scene, convincing live-action photograph. Original 3:2 landscape supporting study photograph (1536x1024): an artistic interpretation of Christ as the shepherd seeking the lost sheep in Luke 15:4-7. Input image is exact mandatory Christ identity reference, preserve this same recognizable face, eyes/nose/beard/hair/complexion with photoreal texture. Christ in a muted dark moss-green wool outer mantle over a natural linen tunic cautiously descends a stony Judean hillside at dusk toward ONE separated small sheep standing safely beside scrub at right. He is still several steps away, no sheep in His arms or on His shoulders, no duplicate carried-lamb composition. Christ's face seen clearly in three-quarter profile, head and both eyes directed toward that sheep, calm alert concern rather than broad smile, one hand holds a plain wooden shepherd's staff, other relaxed. Period sandals and woven cloth; the interpretation illustrates the parable rather than a claimed recorded event. Rocky Mediterranean scrub landscape and physically believable fading daylight, warm rim at horizon and clear cool light on face, medium-wide lens, natural skin/hair/cloth/wood/anatomy. No cliffs implying imminent lethal fall, no injury, no modern gear, no halo, no text, no painterly/plastic/CGI style."
+    },
+    {
+      "slug": "children-listen-at-home-20260919",
+      "page": "suffer-the-little-children",
+      "prompt": "Use case: photorealistic-natural. Create one original 3:2 landscape supporting Christian study photograph (1536x1024). A modern mother in her thirties sits on a low entryway bench leaning slightly forward to listen at eye level to her school-age son around eight, just returned home with a backpack set on the floor. Both fully clothed in ordinary modest contemporary clothes, mother muted plum cardigan and jeans, child ochre long sleeve shirt and trousers. The child speaks quietly with one natural open hand; the mother's face is tender, attentive and serious, both pairs of eyes making clear direct mutual eye contact. Safe welcoming lived-in home, door closed, soft afternoon window light, wood bench, simple houseplant, no luxury styling. This is a present-day application of receiving a child in Christ's name, not a historical Bible event. Natural family warmth, no forced smiles or theatrical distress, no threatening person, no Jesus figure, no halo, no text or religious logo. Crisp documentary photograph with lifelike skin, hair, hands, clothing, physical lens depth and natural colors; no painting, illustration, plastic or airbrushed skin. Keep faces and gestures entirely visible and compose for a responsive webpage at phone width."
+    },
+    {
+      "slug": "still-phone-down-scripture-20260919",
+      "page": "be-still",
+      "prompt": "Use case: photorealistic-natural. Create one original 3:2 landscape supporting Christian study photograph (1536x1024). A modern Black adult man around forty sits alone at a modest kitchen table early morning, setting a smartphone FACE DOWN off to his left while his other hand lightly rests beside an open worn Bible in front of him. His head and BOTH eyes look DOWN toward the Bible page, not toward camera or phone; his expression is calm, thoughtful and unperformed, no broad grin. Dark teal knit sweater, ordinary home, gentle side window daylight, glass of water, restrained domestic background. This illustrates choosing quiet attention to God, a modern devotional application of Psalm 46:10, not an ancient historical scene. No readable invented scripture, phone UI, brand logos, no Jesus figure or supernatural effects. Natural skin pores, realistic fingers/hands, page/cloth/wood textures, convincing editorial live-action photography and gentle depth. Both hands and the face fully in frame with open book visibly separate from phone, composition readable on phone screen. No painted, CGI, plastic or airbrushed look."
+    }
+  ],
+  "edits": [
+    {
+      "slug": "shepherd-seeks-one-20260919",
+      "prompt": "Edit Image 1 only: fix Christ's gaze to look unmistakably DOWN AND RIGHT at the little sheep beside the scrub. Lower/turn His chin and aim BOTH pupils at the sheep's eyes. The original currently looks past and above it. Preserve the exact same established Christ identity from Image 2 (identity reference), face shape, hair, beard, age, serious caring expression, whole composition, moss-green mantle, linen tunic, hands/staff, sheep, hillside and natural photographic light. No other changes, no smile added, no carrying sheep, no text. Convincing live-action photograph, not illustration. Keep 1536x1024 3:2."
+    },
+    {
+      "slug": "still-phone-down-scripture-20260919",
+      "prompt": "Edit this photo only in two precise ways. 1. The man's face currently points to the phone. Rotate his head slightly rightward (his left) so his nose is above the open Bible, tilt head DOWN and aim BOTH pupils directly at the BIBLE PAGE in front of him. Reading attention to the scripture, not phone or camera. Preserve the same man and quiet thoughtful expression. 2. REMOVE the lettered wall sign at upper left entirely, leaving plain clean painted wall. Preserve the phone facedown, book, hand positions, clothes, room, physical light, and photographic realism. No other text, logos or changed objects. 1536x1024."
+    },
+    {
+      "slug": "living-breakfast-shore-20260919",
+      "prompt": "Make ONLY a very small local correction to this otherwise finished photo: the mark on Jesus Christ's outstretched wrist (the arm passing bread) is reddish/dark and resembles an incision. Change that mark to a subtle fully HEALED, CLOSED, PALE SKIN-COLORED scar, slight natural indentation, no red/dark center, no raised pink rim, no open cut or blood. Keep the wrist scar visible but quiet. The other exposed wrist's scar should likewise be a tiny closed pale healed mark. Do NOT move or uncover any hands; palms naturally obscured remain hidden. Preserve ALL faces exactly, all pupils/eye direction, expressions, Christ identity, hand anatomy, bread, blue robe, composition, dawn, shore, disciples and every other detail. No new marks elsewhere. Photographic 1536x1024.\n"
+    }
+  ]
+}

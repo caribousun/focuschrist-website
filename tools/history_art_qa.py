@@ -6,6 +6,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlsplit
 from PIL import Image
 from answer_study_qa import Document
+from study_gap_art_qa import sitewide_entries, check_sitewide
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = 'church-history.html'
@@ -91,7 +92,11 @@ def check():
         require(not re.search(r'\b(?:January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{1,2},?\s+1829(?!\d)', prose), 'precise Melchizedek restoration date asserted')
         require(any(n.tag == 'a' and n.attrs.get('href') == 'https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-melchizedek-priesthood?lang=eng' for n in melchizedek.walk()), 'Melchizedek documentary dating source missing')
     entries = json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages'].get(PAGE, [])
-    require(len(entries) == len(SLOTS) and {e.get('slot') for e in entries} == set(SLOTS), f'{len(SLOTS)} scene review records required')
+    additions = {e['asset']: e for e in sitewide_entries() if e['page'] == PAGE and not e['talk']}
+    baseline_entries = [e for e in entries if e.get('asset') not in additions]
+    require(len(entries) == len(SLOTS) + len(additions) and len(baseline_entries) == len(SLOTS) and {e.get('slot') for e in baseline_entries} == set(SLOTS), f'{len(SLOTS)} preserved scenes plus {len(additions)} reviewed sitewide additions required')
+    assets.update(additions)
+    errors.extend(check_sitewide(PAGE))
     require({e.get('asset') for e in entries} == assets, 'review ledger and native figure assets disagree')
     for entry in entries:
         asset = entry.get('asset', ''); path = (ROOT / asset).resolve()

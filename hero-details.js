@@ -88,6 +88,218 @@
             source: 'https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng', sourceLabel: 'Read Psalm 46', study: 'art-study/be-still.html#psalm-context', studyLabel: 'Begin the Scripture Study'
         }
     };
+    // Each topic keeps its own artwork context and return to the study.
+    Object.assign(records, {
+    "topic-christian": {
+        "title": "A neighbor receives a meal",
+        "paragraphs": [
+            "A young woman hands a covered meal to an older man in a community kitchen.",
+            "Their shared attention gives an ordinary act of care its warmth. In John 13:34–35, Jesus teaches His disciples to love one another. This modern scene invites reflection on following Him through service."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng",
+        "sourceLabel": "Read John 13:34–35",
+        "study": "answers/are-latter-day-saints-christian.html#scripture-study",
+        "studyLabel": "Study Christian discipleship"
+    },
+    "topic-bible-bom": {
+        "title": "Two witnesses in one study",
+        "paragraphs": [
+            "A reader follows a passage with her finger while two open scripture volumes rest before her.",
+            "The quiet comparison invites careful reading of the Bible and the Book of Mormon. Read 2 Nephi 29:8, then consider how each record bears witness of Jesus Christ. This is an imagined modern study scene."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/29?lang=eng",
+        "sourceLabel": "Read 2 Nephi 29:8",
+        "study": "answers/bible-and-book-of-mormon-together.html#scripture-study",
+        "studyLabel": "Compare the two witnesses"
+    },
+    "topic-child-loss": {
+        "title": "Someone stays beside you",
+        "paragraphs": [
+            "A woman holds a small knitted cap while a friend stays close beside her.",
+            "The cap and patient company give room to sorrow without asking it to end. Moroni 8 teaches of Christ’s mercy toward little children; this imagined moment of support does not explain the cause of any family’s loss."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng",
+        "sourceLabel": "Read Moroni 8",
+        "study": "answers/death-of-a-child.html#scripture-study",
+        "studyLabel": "Continue the gentle study"
+    },
+    "topic-divorce": {
+        "title": "Help with the next step",
+        "paragraphs": [
+            "A woman receives groceries at her new doorway while a friend meets her eyes.",
+            "A small act of practical help can ease a difficult day. Mosiah 18:8–9 teaches a willingness to bear burdens and mourn with others. The scene is a modern reflection on support through change."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "sourceLabel": "Read Mosiah 18:8–9",
+        "study": "answers/divorce-and-faith.html#scripture-study",
+        "studyLabel": "Study support through change"
+    },
+    "topic-trials": {
+        "title": "A steady hand on a difficult path",
+        "paragraphs": [
+            "Jesus steadies a weary man on a rain-soaked path and listens as their eyes meet.",
+            "The rough ground gives this devotional scene a sense of effort and companionship. Read Christ’s invitation in Matthew 11:28–30, then consider the spiritual and practical help available during a trial. The scene is symbolic rather than a recorded event."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng",
+        "sourceLabel": "Read Matthew 11:28–30",
+        "study": "answers/faith-in-jesus-christ-during-trials.html#scripture-study",
+        "studyLabel": "Study faith during trials"
+    },
+    "topic-father": {
+        "title": "Jesus teaches of His Father",
+        "paragraphs": [
+            "Jesus turns toward Philip in a lamplit room, speaking with an open hand.",
+            "In John 14:8–10, Philip asks about the Father, and Jesus explains His relationship with Him. Read their exchange in context. The faces, clothing, and room are an artistic interpretation of the account."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng",
+        "sourceLabel": "Read John 14:8–10",
+        "study": "answers/god-our-heavenly-father.html#pray-to-the-father",
+        "studyLabel": "Study Christ’s teaching of the Father"
+    },
+    "topic-grief": {
+        "title": "Compassion at Nain",
+        "paragraphs": [
+            "Jesus meets a grieving widow outside the town while mourners wait nearby.",
+            "Luke 7:11–15 records His compassion for the widow of Nain before He restores her son to life. This interpretation pauses with His attention to her sorrow; the town, clothing, and faces are artistic choices."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng",
+        "sourceLabel": "Read Luke 7:11–15",
+        "study": "answers/grief-and-faith.html#comfort-in-grief",
+        "studyLabel": "Begin with compassion"
+    },
+    "topic-jesus": {
+        "title": "Living water at the well",
+        "paragraphs": [
+            "Jesus and a woman speak beside a stone well, with her water jar close at hand.",
+            "John 4:7–26 records the Savior’s conversation with a Samaritan woman about living water and worship. Follow their words beyond this imagined moment; the setting, faces, and clothing are artistic interpretations."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng",
+        "sourceLabel": "Read John 4:7–26",
+        "study": "answers/jesus-christ-latter-day-saint-beliefs.html#scripture-study",
+        "studyLabel": "Study the Savior’s life and teachings"
+    },
+    "topic-look-unto": {
+        "title": "Look to Him while the way unfolds",
+        "paragraphs": [
+            "Jesus stands along an olive-lined path with a hand over His heart and a calm, attentive expression.",
+            "This devotional scene invites a pause with Doctrine and Covenants 6:36. Read the verse with its surrounding counsel, then consider what turning toward Christ might mean in an ordinary decision. It does not portray the historical setting of the revelation."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng&id=p36#p36",
+        "sourceLabel": "Read Doctrine and Covenants 6:36",
+        "study": "answers/look-unto-me-doctrine-and-covenants-6-36.html#passage",
+        "studyLabel": "Read the passage in context"
+    },
+    "topic-restoration": {
+        "title": "A congregation cares for one another",
+        "paragraphs": [
+            "Two volunteers prepare a box of food together, attending to the work before them.",
+            "Their shared task offers a modern reflection on covenant care. Mosiah 18:8–10 describes a people willing to bear burdens and serve God. Continue into the study of Christ’s Church, its teachings, and its claims."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+        "sourceLabel": "Read Mosiah 18:21",
+        "study": "answers/restored-church-of-jesus-christ.html#covenant-life",
+        "studyLabel": "Study covenant life together"
+    },
+    "topic-stand-forever": {
+        "title": "Build on the rock",
+        "paragraphs": [
+            "A reader stands on solid rock with a closed scripture book as the clouds begin to clear.",
+            "The landscape offers a modern visual reflection on Helaman 5:12 and the invitation to build on Jesus Christ. Let the image lead into the questions and original sources explored in Stand Forever."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/5?lang=eng",
+        "sourceLabel": "Read Helaman 5:12",
+        "study": "answers/stand-forever.html#stand-forever",
+        "studyLabel": "Explore the foundational questions"
+    },
+    "topic-life-after-death": {
+        "title": "A living Savior on the shore",
+        "paragraphs": [
+            "The risen Jesus stands on the shore at dawn, looking toward the fishermen on the water.",
+            "John 21:4–14 records His appearance by the Sea of Tiberias and the meal He shares with His disciples. The shoreline, boat, and faces are artistic interpretations. Read the account as one witness of the Savior’s life after death."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/21?lang=eng",
+        "sourceLabel": "Read John 21:4–14",
+        "study": "answers/what-happens-after-death.html#resurrection",
+        "studyLabel": "Study the Resurrection witnesses"
+    },
+    "topic-marriage": {
+        "title": "Care through the years",
+        "paragraphs": [
+            "An older couple share a small moment of care beneath a flowering tree.",
+            "Their attentive faces invite reflection on love practiced through the years. Continue into the teaching about eternal marriage in Doctrine and Covenants 132:19, keeping the scripture’s covenant context distinct from this imagined modern scene."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng",
+        "sourceLabel": "Read Doctrine and Covenants 132:19",
+        "study": "answers/what-is-eternal-marriage.html#meaning",
+        "studyLabel": "Study the meaning of eternal marriage"
+    },
+    "topic-book-of-mormon": {
+        "title": "Begin with the record",
+        "paragraphs": [
+            "A traveler reads the Book of Mormon while daylight enters the train window.",
+            "An ordinary journey becomes time to consider the record. Read Moroni 10:3–5, then follow its invitation to remember, ponder, and ask God. This is an imagined contemporary reading scene."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng",
+        "sourceLabel": "Read Moroni 10:3–5",
+        "study": "answers/what-is-the-book-of-mormon.html#scripture-study",
+        "studyLabel": "Begin studying the Book of Mormon"
+    },
+    "topic-joseph": {
+        "title": "Joseph and the published record",
+        "paragraphs": [
+            "Joseph Smith holds a small bound book outside an early printing shop.",
+            "This interpretation places him near the publication of the Book of Mormon in 1830, when he was twenty-four. The pose and surroundings are imagined. Continue with Joseph Smith—History and the linked historical sources to examine his own account and the record around it."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
+        "sourceLabel": "Read Joseph Smith—History",
+        "study": "answers/who-was-joseph-smith.html#scripture-study",
+        "studyLabel": "Study Joseph Smith and the record"
+    },
+    "topic-families": {
+        "title": "Love in the work of a day",
+        "paragraphs": [
+            "Three generations gather around the kitchen counter to work the dough together.",
+            "Their shared attention gives a familiar household task a sense of care and belonging. Mosiah 4:14–15 teaches parents to help children love and serve one another. This imagined family moment invites reflection on patient daily teaching."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
+        "sourceLabel": "Read Mosiah 4:14–15",
+        "study": "answers/why-families-are-important.html#scripture-study",
+        "studyLabel": "Study love and family responsibility"
+    },
+    "topic-temples": {
+        "title": "Remembering the generations",
+        "paragraphs": [
+            "An older woman and a younger man study a family photograph together.",
+            "Remembering a person can begin with a name, a picture, and a story. Doctrine and Covenants 128:18 connects generations in the work of salvation. This modern interpretation leads into study of family history and temple service."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng",
+        "sourceLabel": "Read Doctrine and Covenants 128:18",
+        "study": "answers/why-latter-day-saints-build-temples.html#scripture-study",
+        "studyLabel": "Study temples and generations"
+    },
+    "topic-living-christ": {
+        "title": "He lives and ministers",
+        "paragraphs": [
+            "The risen Savior meets your gaze with a warm smile, one hand resting over His heart.",
+            "This devotional portrait invites a quiet moment with Jesus Christ. The Living Christ bears apostolic testimony of His Resurrection, continuing ministry, and promised return; the garden, gesture, and expression are artistic interpretation."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+        "sourceLabel": "Read The Living Christ",
+        "study": "art-study/the-living-christ.html#scripture-study",
+        "studyLabel": "Read the Resurrection witnesses"
+    },
+    "topic-prayer": {
+        "title": "He went out to pray",
+        "paragraphs": [
+            "Jesus pauses alone in prayer beneath the night sky.",
+            "Luke 6:12 records that He went into a mountain and continued all night in prayer to God. The landscape and moment shown here are artistic interpretations. Read the account, then explore prayer and personal revelation with its context in view."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p12#p12",
+        "sourceLabel": "Read Luke 6:12",
+        "study": "answers/prayer-and-personal-revelation.html#scripture-study",
+        "studyLabel": "Study prayer and personal revelation"
+    }
+});
     const script = document.currentScript;
     const siteBase = new URL('.', script ? script.src : window.location.href);
     const dialog = document.createElement('dialog');

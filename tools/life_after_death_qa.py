@@ -70,7 +70,7 @@ def check():
     require(len(figures) == 18, "requires 18 new reviewed Christ figures")
     require(Counter(n.attrs.get("data-life-art-group") for n in figures) == Counter(GROUPS), "requires 5 New Testament, 8 Third Nephi and 5 modern figures")
     require(not re.search(r"LIFE_(?:ART|RESOURCE)_|\b(?:TODO|PLACEHOLDER)\b", text), "unresolved artwork/resource placeholder")
-    require('assets/heroes/home-christ-signature-approved-20260907.png' in text, "approved hero reference missing")
+    require(any(n.tag == 'a' and n.attrs.get('data-hero-record') == 'topic-life-after-death' and n.attrs.get('href') == '../assets/heroes/topics/life-after-death-full.webp' for n in nodes), "unique Life After Death hero reference missing")
     require(any(n.tag == "header" and n.has("fc-topic-opening") for n in nodes), "original opening structure missing")
     require(any(n.attrs.get("data-focuschrist-header") == "standard" for n in nodes), "standard header missing")
     for asset in ("topic-artwork-details.js", "topic-artwork-details.css"):

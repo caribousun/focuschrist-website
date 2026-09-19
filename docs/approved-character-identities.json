@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "recorded_on": "2026-09-19",
+  "mandate": "All owner-approved character identities locked across website and future projects; actual approved reference pixels required.",
+  "scope": "Initial evidence inventory, not exhaustive. Other owner-approved characters remain protected even if absent.",
+  "approval_boundary": "Technical review and working-master selection never establish owner approval. Existing saved approval records bind the cited assets; no new artwork approval is created here.",
+  "characters": [
+    {
+      "character": "Jesus Christ",
+      "owner_identity_locked": true,
+      "reference_mapping": "confirmed",
+      "reference": {
+        "asset": "assets/heroes/home-christ-signature-approved-20260907.png",
+        "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+      },
+      "approval_evidence": [
+        "AGENTS.md: focusChrist Art & Study completeness and visual gate",
+        "docs/focuschrist-enrichment-and-stewardship-prompt.md"
+      ],
+      "reuse_allowed_with_required_research": true
+    },
+    {
+      "character": "Joseph Smith",
+      "owner_identity_locked": true,
+      "reference_mapping": "confirmed",
+      "reference": {
+        "asset": "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "sha256": "518f1b28b894418b5ad876a3004cdc54f798ad33a6910afaaaa69a5d1785a827"
+      },
+      "approval_evidence": [
+        "docs/historical-character-identity.md: explicit owner mandate, generation and attached confirmation"
+      ],
+      "reuse_allowed_with_required_research": true
+    },
+    {
+      "character": "Mary, mother of Jesus",
+      "owner_identity_locked": true,
+      "reference_mapping": "approved scene reference; no separate portrait master claimed",
+      "reference": {
+        "asset": "assets/page-art/birth-of-christ/03-nephi-vision-full.webp",
+        "sha256": "3fe576c8a45bbefdb77431ea23d83e90f32390b503fc0ccedde2b574f512fdd2"
+      },
+      "role_in_reference": "Adult mother holding infant; not Mary of Bethany or Mary Magdalene.",
+      "approval_evidence": [
+        "docs/birth-of-christ-art-review.json: 03-nephi-vision",
+        "Wyatt, active task2026-09-19: all of these images are wonderful and enriched as the user likes. Good job. Feel free to create more if it further enhances the stories and I hope you are using all the ones you have created."
+      ],
+      "reuse_allowed_with_required_research": true,
+      "constraints": "Use actual full approved scene as identity reference, isolating only the identified character. Do not transfer other faces. Preserve related approved Birth scenes as continuity evidence."
+    },
+    {
+      "character": "Joseph of the Nativity",
+      "owner_identity_locked": true,
+      "reference_mapping": "approved scene reference; no separate portrait master claimed",
+      "reference": {
+        "asset": "assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+        "sha256": "f126c57a91c8deb85438afa23a15170eb33f542d2919e2fd039a81c6a1371c1e"
+      },
+      "role_in_reference": "Adult Joseph beside Mary and infant; not Joseph Smith.",
+      "approval_evidence": [
+        "docs/birth-of-christ-art-review.json: 12-nativity-hero",
+        "Wyatt, active task2026-09-19: all of these images are wonderful and enriched as the user likes. Good job. Feel free to create more if it further enhances the stories and I hope you are using all the ones you have created."
+      ],
+      "reuse_allowed_with_required_research": true,
+      "constraints": "Use actual full approved scene as identity reference, isolating only the identified character. Do not transfer other faces. Preserve related approved Birth scenes as continuity evidence."
+    },
+    {
+      "character": "Alma the Younger",
+      "owner_identity_locked": true,
+      "reference_mapping": "confirmed approved Alma 7 Gideon scene",
+      "approval_evidence": [
+        "docs/birth-of-christ-art-review.json: 05-alma-teaches",
+        "Wyatt, active task2026-09-19: all of these images are wonderful and enriched as the user likes. Good job. Feel free to create more if it further enhances the stories and I hope you are using all the ones you have created."
+      ],
+      "scene_source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?id=p7-p13&lang=eng#p7",
+      "saved_scene_description": "Alma teaching in Gideon; Alma 7:7-13, per saved prompt and source record.",
+      "reuse_allowed_with_required_research": true,
+      "reference": {
+        "asset": "assets/page-art/birth-of-christ/05-alma-teaches-full.webp",
+        "sha256": "7568e3b8a2bf09c6d6f317f3617dd8187cccc25380343b06a0ae69a6fa42c963"
+      },
+      "identity_reconciliation": {
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/5?lang=eng&id=p3#p3",
+        "finding": "Alma 5:3 identifies this ministry speaker as son of Alma; saved Birth 05 scene is his Alma 7 teaching in Gideon. This reference does not identify or approve Alma the Elder."
+      },
+      "later_scene_review": "Direct pixels compared with assets/page-art/sitewide/bom-alma-helaman-full.webp: facial nose/brow/mouth and recognizable identity retained with age-appropriate graying; distinct younger Helaman. Technical pass, not new owner approval."
+    }
+  ],
+  "unresolved_other_characters": "Reconcile every additional approved character against exact saved asset and owner approval provenance before new use; do not infer approval from current publication."
+}

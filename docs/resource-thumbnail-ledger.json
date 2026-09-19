@@ -116,13 +116,23 @@
       "key": "strength",
       "url": "https://www.churchofjesuschrist.org/media/video/2022-10-1020-dieter-f-uchtdorf?alang=eng&collectionId=1708f0e87f184f9e812608d5f51bdb13&lang=eng",
       "title": "Jesus Christ Is the Strength of Youth",
-      "thumbnail": "https://www.churchofjesuschrist.org/imgs/34b569eb41af11ed8e33eeeeac1ecf6724142267/full/1200,630/0/default",
-      "local_thumbnail": "assets/resources/strength.jpg",
-      "width": 1200,
-      "height": 630,
-      "sha256": "6b1e1e36c5e936dbbf0d4896e3b94ade8d5b71ae24b6b057043e2effc66958ba",
+      "local_thumbnail": "assets/page-art/talk-thumbnails/uchtdorf-youth-choice-960.webp",
+      "width": 960,
+      "height": 540,
+      "sha256": "5e020cc7d87396065c1a5609b08b2efe9ec87e95bfbbde77f694375008e7d882",
       "status": 200,
-      "verified_date": "2026-09-06"
+      "verified_date": "2026-09-06",
+      "previous_official_preview": {
+        "thumbnail": "https://www.churchofjesuschrist.org/imgs/34b569eb41af11ed8e33eeeeac1ecf6724142267/full/1200,630/0/default",
+        "local_thumbnail": "assets/resources/strength.jpg",
+        "width": 1200,
+        "height": 630,
+        "sha256": "6b1e1e36c5e936dbbf0d4896e3b94ade8d5b71ae24b6b057043e2effc66958ba"
+      },
+      "thumbnail_type": "original focusChrist thematic artwork",
+      "rights_basis": "Original artwork generated with the built-in image tool; independently reviewed. Linked to the actual official talk; not an official video still or speaker portrait.",
+      "artwork_review": "docs/sitewide-talk-thumbnail-review.json",
+      "owner_approval": false
     },
     {
       "key": "doubt",
@@ -538,17 +548,27 @@
       "key": "unique-prayer-framework",
       "url": "https://www.churchofjesuschrist.org/media/video/2022-10-1040-dale-g-renlund?lang=eng",
       "title": "A Framework for Personal Revelation",
-      "thumbnail": "https://www.churchofjesuschrist.org/imgs/ddf085d241bf11edb2b0eeeeac1e90437fe19001/full/!768,/0/default",
-      "original_og_image": "https://www.churchofjesuschrist.org/imgs/ddf085d241bf11edb2b0eeeeac1e90437fe19001/full/1200,630/0/default",
-      "local_thumbnail": "assets/resources/unique-prayer-framework.jpg",
-      "width": 768,
-      "height": 432,
-      "sha256": "b8720cf60c001cbbc297f3edcc4ecc93908a44fe471f168d565abf0e48c0fd17",
+      "local_thumbnail": "assets/page-art/talk-thumbnails/renlund-guided-flight-960.webp",
+      "width": 960,
+      "height": 540,
+      "sha256": "9e789982b7196569bd78928dd72e819b83a435527866a26c860b47f34eaf592d",
       "status": 200,
       "verified_date": "2026-09-06",
-      "image_status": 200,
-      "image_bytes": 42592,
-      "rights_basis": "Official Church website video preview, linked directly to its source; native image bytes preserved."
+      "rights_basis": "Original artwork generated with the built-in image tool; independently reviewed. Linked to the actual official talk; not an official video still or speaker portrait.",
+      "previous_official_preview": {
+        "thumbnail": "https://www.churchofjesuschrist.org/imgs/ddf085d241bf11edb2b0eeeeac1e90437fe19001/full/!768,/0/default",
+        "local_thumbnail": "assets/resources/unique-prayer-framework.jpg",
+        "width": 768,
+        "height": 432,
+        "sha256": "b8720cf60c001cbbc297f3edcc4ecc93908a44fe471f168d565abf0e48c0fd17",
+        "rights_basis": "Official Church website video preview, linked directly to its source; native image bytes preserved.",
+        "image_status": 200,
+        "image_bytes": 42592,
+        "original_og_image": "https://www.churchofjesuschrist.org/imgs/ddf085d241bf11edb2b0eeeeac1e90437fe19001/full/1200,630/0/default"
+      },
+      "thumbnail_type": "original focusChrist thematic artwork",
+      "artwork_review": "docs/sitewide-talk-thumbnail-review.json",
+      "owner_approval": false
     },
     {
       "key": "unique-prayer-supernal",
@@ -940,16 +960,29 @@
       "key": "stand-lord-i-believe",
       "url": "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
       "title": "\u201cLord, I Believe\u201d",
-      "thumbnail": "https://www.churchofjesuschrist.org/imgs/6b0ae1a363362b138509cb6469d3d372d23b64ff/full/%21768%2C/0/default",
-      "local_thumbnail": "assets/resources/stand-lord-i-believe.jpg",
-      "width": 768,
-      "height": 432,
-      "sha256": "ff67a3660b668d44fc51310fa827a04e26e7743661e2ec6a48db5f48323f825d",
+      "local_thumbnail": "assets/page-art/talk-thumbnails/holland-lord-believe-960.webp",
+      "width": 960,
+      "height": 540,
+      "sha256": "4b25bee84d246a1f2a547d044ab5998c28d57d2b02bba359fa1d8d3554faa3e3",
       "status": 200,
       "thumbnail_status": 200,
       "verified_date": "2026-09-07",
       "kind": "General conference",
-      "description": "Acknowledge questions honestly while beginning with the faith already present."
+      "description": "Acknowledge questions honestly while beginning with the faith already present.",
+      "previous_official_preview": {
+        "thumbnail": "https://www.churchofjesuschrist.org/imgs/6b0ae1a363362b138509cb6469d3d372d23b64ff/full/%21768%2C/0/default",
+        "local_thumbnail": "assets/resources/stand-lord-i-believe.jpg",
+        "width": 768,
+        "height": 432,
+        "sha256": "ff67a3660b668d44fc51310fa827a04e26e7743661e2ec6a48db5f48323f825d"
+      },
+      "thumbnail_type": "original focusChrist thematic artwork",
+      "rights_basis": "Original artwork generated with the built-in image tool; independently reviewed. Linked to the actual official talk; not an official video still or speaker portrait.",
+      "artwork_review": "docs/sitewide-talk-thumbnail-review.json",
+      "owner_approval": false,
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?id=p22-p24&lang=eng#p22"
+      ]
     },
     {
       "key": "stand-faith-choice",
@@ -1799,6 +1832,19 @@
       "status": 200,
       "verified_date": "2026-09-19",
       "source_review": "docs/grief-freeman-resource-review.json"
+    },
+    {
+      "key": "holland-qualified-care",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2013/10/like-a-broken-vessel?lang=eng",
+      "title": "Like a Broken Vessel",
+      "local_thumbnail": "assets/page-art/talk-thumbnails/holland-qualified-care-960.webp",
+      "width": 960,
+      "height": 540,
+      "sha256": "2f9c18d0c4b33491c2657d4699a50fdb28efff4c8055d3017c8f7cea2725398a",
+      "thumbnail_type": "original focusChrist thematic artwork",
+      "rights_basis": "Original artwork generated with the built-in image tool; independently reviewed. Linked to the actual official talk; not an official video still or speaker portrait.",
+      "artwork_review": "docs/sitewide-talk-thumbnail-review.json",
+      "owner_approval": false
     }
   ],
   "reviewed_on": "2026-09-07",

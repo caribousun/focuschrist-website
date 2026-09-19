@@ -10,6 +10,7 @@ import sys
 from urllib.parse import urlsplit
 
 from PIL import Image
+from study_gap_art_qa import sitewide_entries, check_sitewide
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -113,9 +114,11 @@ def main() -> int:
         errors.append("Featured Art & Study destinations differ from the complete audited page inventory")
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     reviewed_pages = manifest.get("pages", {})
+    additions = [entry for entry in sitewide_entries() if not entry['talk']]
+    errors.extend(check_sitewide())
     required = manifest.get("standard", {}).get("supporting_visuals_per_page")
-    if required != 4:
-        errors.append("review manifest must require four supporting visuals per page")
+    if required != 5:
+        errors.append("review manifest must require five supporting visuals per page")
     reference = ROOT / manifest.get("standard", {}).get("identity_reference", "")
     if not reference.is_file():
         errors.append("approved Home identity reference is missing")
@@ -128,6 +131,8 @@ def main() -> int:
     ]
 
     for relative in PAGES:
+        page_additions = [entry for entry in additions if entry['page'] == relative]
+        expected_supporting = 4 + len(page_additions)
         page = ROOT / relative
         text = page.read_text(encoding="utf-8")
         parser = AuditParser()
@@ -156,8 +161,8 @@ def main() -> int:
         for href in parser.nav_hrefs:
             if not href.startswith("#") or href[1:] not in parser.ids:
                 errors.append(f"{relative}: navigation target does not exist: {href}")
-        if parser.figures != 4 or len(parser.full_assets) != 4 or len(parser.thumb_assets) != 4:
-            errors.append(f"{relative}: requires exactly four interactive supporting artworks")
+        if parser.figures != expected_supporting or len(parser.full_assets) != expected_supporting or len(parser.thumb_assets) != expected_supporting:
+            errors.append(f"{relative}: requires four preserved artworks plus {len(page_additions)} reviewed additions")
         if parser.details < 3:
             errors.append(f"{relative}: requires at least three guided reflection prompts")
         if parser.resource_cards < 2:
@@ -167,9 +172,9 @@ def main() -> int:
         church_links = [href for href in parser.links if href.startswith("https://www.churchofjesuschrist.org/")]
         if len(church_links) < 8:
             errors.append(f"{relative}: expected at least 8 official scripture or Church links, found {len(church_links)}")
-        if len(parser.captions) != 4 or any(len(" ".join(parts).split()) < 18 for parts in parser.captions):
+        if len(parser.captions) != expected_supporting or any(len(" ".join(parts).split()) < 18 for parts in parser.captions):
             errors.append(f"{relative}: every supporting artwork needs a substantive image-specific caption")
-        if len(parser.caption_links) != 4 or any(
+        if len(parser.caption_links) != expected_supporting or any(
             not any(href.startswith("https://www.churchofjesuschrist.org/") for href in links)
             for links in parser.caption_links
         ):
@@ -177,11 +182,11 @@ def main() -> int:
 
         entries = reviewed_pages.get(relative, [])
         reviewed_assets = ["../" + entry.get("asset", "") for entry in entries]
-        if len(entries) != 4 or any(
+        if len(entries) != expected_supporting or any(
             not entry.get("reviewed") or not entry.get("tone") or not re.fullmatch(r"[0-9a-f]{64}", entry.get("sha256", ""))
             for entry in entries
         ):
-            errors.append(f"{relative}: four hash-bound expression-and-style review records are required")
+            errors.append(f"{relative}: {expected_supporting} hash-bound expression-and-style review records are required")
         if reviewed_assets != parser.full_assets:
             errors.append(f"{relative}: page artwork does not match the reviewed exclusive-art manifest")
 
@@ -222,7 +227,7 @@ def main() -> int:
         # srcset. Exclusivity concerns owning pages, not references on that page.
         if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
-    if set(reviewed_pages) != set(PAGES) | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"}:
+    if set(reviewed_pages) != set(PAGES) | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions}:
         errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement, Mission, Life After Death, Birth of Christ and the four reviewed study-gap pages")
 
     life_entries = reviewed_pages.get("answers/what-happens-after-death.html", [])
@@ -259,7 +264,7 @@ def main() -> int:
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Art study enrichment QA passed: 4 pages, 20 total visuals, 16 exclusive supporting photographs, 12 reflection prompts, 8 visual resources, and 12 onward study paths verified; additional Evidences and Church History contracts also passed.")
+    print("Art study enrichment QA passed: 4 featured pages with four preserved plus manifest-bound supporting additions each; exact sources, reviewed hashes, reflection/resource/onward paths, and Evidences/Church History contracts verified.")
     return 0
 
 

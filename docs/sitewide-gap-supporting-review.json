@@ -1,0 +1,195 @@
+{
+  "date": "2026-09-19",
+  "mode": "built-in imagegen",
+  "records": [
+    {
+      "key": "bom-archaeology-context",
+      "anchor": "open-questions",
+      "prompt": "Create ONE original ultra-realistic live-action photograph for focusChrist supporting study artwork. Landscape 3:2, 1536x1024. Natural skin, physically believable light, real cloth and objects, documentary photographic clarity, normal anatomy. No painting, illustration, CGI, waxy faces, text overlay, watermark, decorative frame, fantasy light. Composition must preserve all faces, essential hands and action in full image and reduced phone view. An unnamed present-day female field archaeologist in practical sun shirt and trousers kneels beside a SHALLOW, safe rectangular excavation unit outdoors in plain dry countryside. She looks intently DOWN at her clipboard while recording visible soil layers in the clean vertical profile immediately beside her. A simple black-and-white measuring scale stands upright against the profile, trowel lies safely on a mat. Thin grid string across the top edge, ordinary field notebook with indistinct pencil marks, no readable labels, no named site, no precious artifact, no human remains. Authentic understated context recording rather than treasure hunting. Realistic clean layering not theatrical rainbow stripes; natural diffused daylight and calm concentration. One face and two normal hands clearly arranged, a wide scene with the archaeologist and soil profile both legible.",
+      "page": "book-of-mormon-evidences.html",
+      "status": "inserted_after_independent_visual_pass",
+      "owner_approval": false,
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-f4c877da-51ce-405a-bf5b-414e884e50ae.png",
+      "source_sha256": "1c537b6e835d51db72feda6795cb85849c0cf31c4ef6deb454c713e68d92b0d9",
+      "asset": "assets/page-art/sitewide/bom-archaeology-context-full.webp",
+      "thumbnail": "assets/page-art/sitewide/bom-archaeology-context-960.webp",
+      "sha256": "70ebf0f6b4159563c17be3a1ea7b2d0d45f74f8d281f171fc2a270bed51857d3",
+      "thumbnail_sha256": "7f7d3b8954ff2190186c6e5e49df7c4ee624f9cf9448a24e94ee5a5030bd7a85",
+      "width": 1536,
+      "height": 1024,
+      "generator_visual_review": "Full-image preview: natural photographic detail, coherent anatomy and subject-directed gaze; figures fit full 3:2 framing.",
+      "sources": [
+        {
+          "url": "https://www.nps.gov/articles/sec-standards-archeo-doc-guidelines.htm",
+          "claim": "Field documentation records excavation methods, observations and stratigraphic relationships."
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/book-of-mormon-geography?lang=eng",
+          "claim": "No official position identifies precise ancient Book of Mormon locations."
+        }
+      ],
+      "history_limits": "Unnamed modern scholar and location; technical process is interpretive photograph. No claimed ancientAmericanfind, actual institution or proven geography.",
+      "source_review": "Opened primary sources live on2026-09-19; scripture, institutional practice and the authors own research distinguished from artistic interpretation.",
+      "title": "Notice what lies around a find",
+      "caption": "An archaeologist records the layers beside her before moving on. The patient work around an object helps others ask when, where and how it came to rest there. As you examine a proposed connection, look for that surrounding evidence as carefully as the object itself.",
+      "alt": "A field archaeologist writes on a clipboard beside a measured soil profile.",
+      "study": "book-of-mormon-evidences.html#open-questions",
+      "ask": "ask.html?topic=Notice+what+lies+around+a+find&art=Notice+what+lies+around+a+find&return=%2Fbook-of-mormon-evidences.html%23open-questions#ask-question",
+      "technical_review_passed": true,
+      "independent_review": "Parent inspected all four full WebP files: photographic realism, subject-directed gaze, anatomical hands, age distinction and essential framing pass. Parent explicitly authorized insertion; owner approval remains false.",
+      "phone_scale_review": "374px uncropped preview inspected by generator; essential gaze/action remains visible. This is not the rendered phone browser study check.",
+      "browser_review": "pending parent complete desktop and phone study verification",
+      "validation": {
+        "bounded_runtime": "Four own source/study/Ask/full/nestedclose/reopen/focus paths passed at1440/390 scriptwidths.",
+        "media_voice_qa": "passed",
+        "topic_artwork_details_qa": "passed",
+        "study_layout_uniformity_qa": "passed",
+        "preservation": "All23 preexisting BoM figure blocks preserved exactly; only8 linesadded; newasset hashesverified.",
+        "browser": "pending parent rendered checks"
+      }
+    },
+    {
+      "key": "bom-alma-helaman",
+      "anchor": "alma-36",
+      "reference": "assets/page-art/bom-evidences/alma36prayer.webp",
+      "prompt": "Create ONE original ultra-realistic live-action photograph for focusChrist supporting study artwork. Landscape 3:2, 1536x1024. Natural skin, physically believable light, real cloth and objects, documentary photographic clarity, normal anatomy. No painting, illustration, CGI, waxy faces, text overlay, watermark, decorative frame, fantasy light. Composition must preserve all faces, essential hands and action in full image and reduced phone view. REFERENCE is the established artistic Alma identity in youth, NOT an edit target. Make a completely NEW scene decades later: Alma, recognizable same facial proportions and straight dark hair, now a weathered middle-aged father with a few grey strands, speaks tenderly and earnestly to his youthful adult son Helaman (about20 as artistic age interpretation, not a child). Seated face to face at equal eye level on low simple benches in a quiet earthen courtyard, genuine unmistakable mutual eye contact, both faces 3/4 visible, Alma gestures naturally with one open hand and Helaman listens with hands resting separately on knees. Father has muted rust woven mantle and plain undyed tunic; son subdued moss-green simple cloth, distinct face, black hair. No European medieval costumes, fantasy jewelry, feathers, pyramids or claimed specific ancient geography. No books or visible writing needed. Source Alma36:1-3 records father addressing son in youth, then recounting conversion to Christ; this is the telling later, not the earlier angel/conversion scene. Faces, numerical ages, clothing and location are respectful artistic interpretation. Soft courtyard shade, warm natural light, gravity with intimate hope, not broad posing smiles.",
+      "page": "book-of-mormon-evidences.html",
+      "status": "inserted_after_independent_visual_pass",
+      "owner_approval": false,
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-eb70c167-5b59-46e7-b336-eb543bc764d1.png",
+      "source_sha256": "47826f79f3ae9ac30279b066e929b15d8513b107a21eae9b4de999f610152be7",
+      "asset": "assets/page-art/sitewide/bom-alma-helaman-full.webp",
+      "thumbnail": "assets/page-art/sitewide/bom-alma-helaman-960.webp",
+      "sha256": "372bee3a1b726719dd7074338b68aa49d21c14c0a033aca4cdc4808821a4ef55",
+      "thumbnail_sha256": "2b86c769aa423c76afd497ec16eeddfa6d92ae2ba409a39730e174bd776fd732",
+      "width": 1536,
+      "height": 1024,
+      "generator_visual_review": "Full-image preview: natural photographic detail, coherent anatomy and subject-directed gaze; figures fit full 3:2 framing.",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/36?lang=eng",
+          "claim": "Chapter address and verses1-3: Alma instructs son Helaman, who is in youth;17-21 recount turning toward Christ and joy."
+        }
+      ],
+      "history_limits": "Alma reference establishes site artistic identity, not authenticated appearance. Helaman youth textuallysupported; numericalage20 and Alma middleage, clothing/courtyard are interpretive. No surviving reliable portrait of either.",
+      "source_review": "Opened primary sources live on2026-09-19; scripture, institutional practice and the authors own research distinguished from artistic interpretation.",
+      "title": "A father shares the mercy he remembers",
+      "caption": "Alma speaks while Helaman listens, their faces turned toward one another. Before tracing the patterns in Alma 36, hear the father telling his son how remembering Jesus Christ changed his despair into joy. What would you want someone you love to remember from your own experience of mercy?",
+      "alt": "A middle-aged Alma speaks to his youthful adult son Helaman in a quiet courtyard.",
+      "study": "book-of-mormon-evidences.html#alma-36",
+      "ask": "ask.html?topic=A+father+shares+the+mercy+he+remembers&art=A+father+shares+the+mercy+he+remembers&return=%2Fbook-of-mormon-evidences.html%23alma-36#ask-question",
+      "technical_review_passed": true,
+      "independent_review": "Parent inspected all four full WebP files: photographic realism, subject-directed gaze, anatomical hands, age distinction and essential framing pass. Parent explicitly authorized insertion; owner approval remains false.",
+      "phone_scale_review": "374px uncropped preview inspected by generator; essential gaze/action remains visible. This is not the rendered phone browser study check.",
+      "browser_review": "pending parent complete desktop and phone study verification",
+      "validation": {
+        "bounded_runtime": "Four own source/study/Ask/full/nestedclose/reopen/focus paths passed at1440/390 scriptwidths.",
+        "media_voice_qa": "passed",
+        "topic_artwork_details_qa": "passed",
+        "study_layout_uniformity_qa": "passed",
+        "preservation": "All23 preexisting BoM figure blocks preserved exactly; only8 linesadded; newasset hashesverified.",
+        "browser": "pending parent rendered checks"
+      }
+    },
+    {
+      "key": "bom-mormon-moroni",
+      "anchor": "voices",
+      "prompt": "Create ONE original ultra-realistic live-action photograph for focusChrist supporting study artwork. Landscape 3:2, 1536x1024. Natural skin, physically believable light, real cloth and objects, documentary photographic clarity, normal anatomy. No painting, illustration, CGI, waxy faces, text overlay, watermark, decorative frame, fantasy light. Composition must preserve all faces, essential hands and action in full image and reduced phone view. Respectful narrative interpretation of Mormon6:6. An aging father Mormon, weathered older man with greying dark hair and a lined face, passes a SMALL compact stack of dull metal record leaves wrapped partly in plain cloth to his grown adult son Moroni, a distinct younger dark-haired man. They sit close beside a low stone ledge in an unadorned shelter. Mormon supports the object from its left side, Moroni accepts from right with TWO visibly separate natural hands and fingers; keep hands intelligible, no fused fingers. The two men meet one anothers eyes with quiet serious trust and sadness before dangerous times. No triumph or broad smile. Simple woven taupe tunic and smoky blue mantle for father, earth-brown tunic for son, plausible generic ancient materials, no medieval armor, ceremonial feathers, fantasy ornaments, modern clothing or named archaeological setting. Record has modest small scale and no legible invented glyphs, no claim to exact documented construction. Background simple dusky daylight, distant soft landscape, no battle, no Christ, no angels. Text states Mormon began to be old and gave a few plates to son; exact faces, numerical age, costume, setting and physical record design remain artistic interpretation.",
+      "page": "book-of-mormon-evidences.html",
+      "status": "inserted_after_independent_visual_pass",
+      "owner_approval": false,
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-16e87754-6486-4304-8d29-3021c0d37970.png",
+      "source_sha256": "8c90b37491cfc5fd5c31ea5863b28f837ddb0bc7e0281b8fcf3a0b9e62ffc436",
+      "asset": "assets/page-art/sitewide/bom-mormon-moroni-full.webp",
+      "thumbnail": "assets/page-art/sitewide/bom-mormon-moroni-960.webp",
+      "sha256": "56afc5108cad293f4f44d6e3adb6ed657578c8511ee62bb8e4a768682f75d63f",
+      "thumbnail_sha256": "1368e34a83479fd21cfb948ed2c4fdf8c2a569b2b9862b59a26aff962e405534",
+      "width": 1536,
+      "height": 1024,
+      "generator_visual_review": "Full-image preview: natural photographic detail, coherent anatomy and subject-directed gaze; figures fit full 3:2 framing.",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/6?lang=eng",
+          "claim": "Verses5-6 place the record transfer after384years and Mormon describes becoming old and giving few plates to sonMoroni."
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/morm/1?lang=eng",
+          "claim": "Mormon describes being aboutten when Ammaron commissions him; chronology acrossMormon1-2 implies early-to-mid70s at recordtransfer."
+        }
+      ],
+      "history_limits": "No authenticated appearance evidence. Mormon aging follows approximate chronology; Moronis numericalage, exact clothing, environment and platesconstruction unknown. Familyrelationship and transfer textuallysupported. No claim exact archaeologicalrecord.",
+      "source_review": "Opened primary sources live on2026-09-19; scripture, institutional practice and the authors own research distinguished from artistic interpretation.",
+      "correction_prompt": "Edit this existing original scene with ONE targeted historical age correction. Preserve composition, clothing, hands, record bundle, setting, lighting, mutual eye contact and the younger Moroni exactly. The LEFT man Mormon must read as approximately seventy-four years old, consistent with the narrative chronology from Mormon 1-2 to Mormon 6:5-6. Preserve his established facial proportions but add natural age: predominantly silver-grey hair and beard, finer thinning at temples, deeper natural forehead and cheek lines, older eyes and neck, subtle age in his hands. Still robust enough to pass the record, no caricature or frailty exaggeration. Maintain convincing live-action photographic skin texture, no waxy smoothing. Do not change Moroni's age or face. No text, no extra objects.",
+      "title": "A record entrusted to his son",
+      "caption": "Mormon and Moroni hold the wrapped record between them. An aging father is placing more than an object in his son's care: the words will continue beyond his own voice. Read Mormon 6:6 and notice the small record he preserves for Moroni amid the danger facing their people.",
+      "alt": "An elderly Mormon passes a small cloth-wrapped record to his adult son Moroni.",
+      "study": "book-of-mormon-evidences.html#voices",
+      "ask": "ask.html?topic=A+record+entrusted+to+his+son&art=A+record+entrusted+to+his+son&return=%2Fbook-of-mormon-evidences.html%23voices#ask-question",
+      "technical_review_passed": true,
+      "independent_review": "Parent inspected all four full WebP files: photographic realism, subject-directed gaze, anatomical hands, age distinction and essential framing pass. Parent explicitly authorized insertion; owner approval remains false.",
+      "phone_scale_review": "374px uncropped preview inspected by generator; essential gaze/action remains visible. This is not the rendered phone browser study check.",
+      "browser_review": "pending parent complete desktop and phone study verification",
+      "validation": {
+        "bounded_runtime": "Four own source/study/Ask/full/nestedclose/reopen/focus paths passed at1440/390 scriptwidths.",
+        "media_voice_qa": "passed",
+        "topic_artwork_details_qa": "passed",
+        "study_layout_uniformity_qa": "passed",
+        "preservation": "All23 preexisting BoM figure blocks preserved exactly; only8 linesadded; newasset hashesverified.",
+        "browser": "pending parent rendered checks"
+      }
+    },
+    {
+      "key": "bom-language-comparison",
+      "anchor": "english-language",
+      "prompt": "Create ONE original ultra-realistic live-action photograph for focusChrist supporting study artwork. Landscape 3:2, 1536x1024. Natural skin, physically believable light, real cloth and objects, documentary photographic clarity, normal anatomy. No painting, illustration, CGI, waxy faces, text overlay, watermark, decorative frame, fantasy light. Composition must preserve all faces, essential hands and action in full image and reduced phone view. An ORIGINAL close overhead documentary photograph of a modern linguistic researcher comparing THREE different printed historical-English text excerpts on a modest oak desk. Two natural adult hands only, one rests by a page while the other uses a plain pencil to connect matching clause positions in a handwritten comparison notebook. Three papers show realistic but deliberately softly out-of-focus small type, no legible invented quotations, names, dates, scripture or labels. A few thin translucent removable color strips mark parallel passage positions, never stuck onto fragile originals: these are ordinary paper working copies. A closed plain reference book at one edge, soft window light, nuanced paper texture, ordinary thoughtful scholarship. No laptop scatterplot, no open Bible pair, no ancient metal plates, no antique manuscript claims, no visible face or fake research evidence. Documentary clarity on hands, pencil and the comparison arrangement; perspective and hand anatomy must be physically coherent.",
+      "page": "book-of-mormon-evidences.html",
+      "status": "inserted_after_independent_visual_pass",
+      "owner_approval": false,
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-547bca80-fee8-4ca8-b49d-05ebda67a024.png",
+      "source_sha256": "03d27b952c52daf266cd748cea387c8a2fb711e2d4f77666fa0a40b809bd6b6c",
+      "asset": "assets/page-art/sitewide/bom-language-comparison-full.webp",
+      "thumbnail": "assets/page-art/sitewide/bom-language-comparison-960.webp",
+      "sha256": "15a580c2f7bce400413c66bde58cd24e4e47fd248df9e7b30df9df12a54288b2",
+      "thumbnail_sha256": "5c3555821f81b705c35b41e9076502a117f01a5170709511714664623576c422",
+      "width": 1536,
+      "height": 1024,
+      "generator_visual_review": "Full-image preview: natural photographic detail, coherent anatomy and subject-directed gaze; figures fit full 3:2 framing.",
+      "sources": [
+        {
+          "url": "https://journal.interpreterfoundation.org/what-command-syntax-tells-us-about-book-of-mormon-authorship/",
+          "claim": "Author compares command syntax and historical linguistic usage to argue about authorship."
+        },
+        {
+          "url": "https://www.dialoguejournal.com/articles/joseph-smiths-spiritual-language-the-presence-of-early-modern-english-in-the-book-of-mormon/",
+          "claim": "Alternative author analysis considers Early Modern English and Josephs religious linguistic resources."
+        }
+      ],
+      "history_limits": "Modern original workingcopy comparison scene. Visible text deliberatelyunreadable; papers do not reproduce authentic manuscripts or assert researchresults. Illustration supports evaluating both arguments.",
+      "source_review": "Opened primary sources live on2026-09-19; scripture, institutional practice and the authors own research distinguished from artistic interpretation.",
+      "title": "Compare the words with care",
+      "caption": "A pencil follows connections across three working copies. Careful comparison begins by looking closely at the wording, then asking whether the proposed explanation accounts for it. Read the researchers' own arguments, including where they disagree, before deciding what a pattern can establish.",
+      "alt": "A researcher uses pencil notes and colored tabs to compare passages across three printed working copies.",
+      "study": "book-of-mormon-evidences.html#english-language",
+      "ask": "ask.html?topic=Compare+the+words+with+care&art=Compare+the+words+with+care&return=%2Fbook-of-mormon-evidences.html%23english-language#ask-question",
+      "technical_review_passed": true,
+      "independent_review": "Parent inspected all four full WebP files: photographic realism, subject-directed gaze, anatomical hands, age distinction and essential framing pass. Parent explicitly authorized insertion; owner approval remains false.",
+      "phone_scale_review": "374px uncropped preview inspected by generator; essential gaze/action remains visible. This is not the rendered phone browser study check.",
+      "browser_review": "pending parent complete desktop and phone study verification",
+      "validation": {
+        "bounded_runtime": "Four own source/study/Ask/full/nestedclose/reopen/focus paths passed at1440/390 scriptwidths.",
+        "media_voice_qa": "passed",
+        "topic_artwork_details_qa": "passed",
+        "study_layout_uniformity_qa": "passed",
+        "preservation": "All23 preexisting BoM figure blocks preserved exactly; only8 linesadded; newasset hashesverified.",
+        "browser": "pending parent rendered checks"
+      }
+    }
+  ],
+  "rejected": [
+    {
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-ef354728-eead-46d5-8c71-b8881bc36226.png",
+      "sha256": "9054a187a06a4962b6b0826336e67bbba89874ff7ccf3f03cc5671d8a26f479e",
+      "reason": "Mormon read too young; corrected to narrative chronology early-to-mid70s before insertion."
+    }
+  ]
+}

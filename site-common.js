@@ -477,7 +477,27 @@
             if (!menuCurrent) { menuCurrent=document.createElement('a');menuCurrent.href=topic.href;menuCurrent.textContent=topic.label.toUpperCase();menuCurrent.setAttribute('data-focuschrist-generated-topic','true');menu.prepend(menuCurrent); }
             menuCurrent.classList.add('active');menuCurrent.setAttribute('aria-current',topic.location?'location':'page');
         }
-        sync(); window.addEventListener('hashchange',sync);
+        function fitDesktopNavigation() {
+            header.classList.remove('fc-nav-compact');
+            if (window.innerWidth <= 1020) return;
+            const logo = header.querySelector('.nav-logo');
+            const tools = header.querySelector('.hamburger-wrap');
+            if (!logo || !tools) return;
+            const linksRect = desktop.getBoundingClientRect();
+            const search = header.querySelector('.fc-search-trigger');
+            const rightEdge = Math.min(tools.getBoundingClientRect().left,
+                search ? search.getBoundingClientRect().left : Infinity);
+            if (linksRect.left < logo.getBoundingClientRect().right + 20 || linksRect.right > rightEdge - 20) {
+                header.classList.add('fc-nav-compact');
+            }
+        }
+        function scheduleNavigationFit() { window.requestAnimationFrame(fitDesktopNavigation); }
+        sync();
+        scheduleNavigationFit();
+        window.addEventListener('hashchange',function () { sync(); scheduleNavigationFit(); });
+        window.addEventListener('resize',scheduleNavigationFit);
+        window.addEventListener('load',scheduleNavigationFit);
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleNavigationFit);
     }
 
     function syncDisclosureState(control) {

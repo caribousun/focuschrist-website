@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 import hashlib
 from pathlib import Path
 import re
+import json
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -202,19 +203,22 @@ def main() -> int:
     approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
     if len(approved_answer_pages) != 18:
         fail(errors, f"expected 18 Answer detail pages, found {len(approved_answer_pages)}")
+    topic_plans = {p["page"]: p["key"] for p in json.loads((ROOT / "docs/sitewide-hero-production-plan.json").read_text(encoding="utf-8"))["plans"]}
     approved_hero_pages = ["index.html", *approved_answer_pages]
     approved_cache_versions: set[str] = set()
     for relative in approved_hero_pages:
         page_text = (ROOT / relative).read_text(encoding="utf-8")
         expected_class = "fc-home-hero" if relative == "index.html" else "fc-answer-detail-hero"
-        expected_href = "assets/heroes/home-christ-signature-approved-20260907.png" if relative == "index.html" else "../assets/heroes/home-christ-signature-approved-20260907.png"
+        expected_href = "assets/heroes/home-christ-signature-approved-20260907.png" if relative == "index.html" else f"../assets/heroes/topics/{topic_plans[relative]}-full.webp"
         hero_pattern = re.compile(
             r'<a\b(?=[^>]*\bclass="[^"]*\b' + re.escape(expected_class) +
             r'\b[^"]*")(?=[^>]*\bhref="' + re.escape(expected_href) + r'")[^>]*>',
             re.I,
         )
         if not hero_pattern.search(page_text):
-            fail(errors, f"{relative}: exact approved shared hero is not fully wired")
+            fail(errors, f"{relative}: expected page hero is not fully wired")
+        if relative != "index.html" and f'data-hero-record="topic-{topic_plans[relative]}"' not in page_text:
+            fail(errors, f"{relative}: own topic hero record missing")
         cache_match = re.search(r'(?:\.\./)?site-system\.css\?v=([^"\s]+)', page_text)
         if not cache_match:
             fail(errors, f"{relative}: site-system cache revision missing")
@@ -608,7 +612,7 @@ def main() -> int:
 
     for study_page in (ROOT / "art-study").glob("*.html"):
         page = study_page.read_text(encoding="utf-8")
-        hero_pattern = r'<a(?=[^>]*class="[^"]*fc-art-study-hero[^"]*")(?=[^>]*href="\.\./(?:art/[^"]+|assets/heroes/home-christ-signature-approved-20260907\.png)")(?=[^>]*data-hero-viewer)[^>]*>'
+        hero_pattern = r'<a(?=[^>]*class="[^"]*fc-art-study-hero[^"]*")(?=[^>]*href="\.\./(?:art/[^"]+|assets/heroes/topics/living-christ-full\.webp)")(?=[^>]*data-hero-viewer)[^>]*>'
         if not re.search(hero_pattern, page, re.S):
             fail(errors, f"{study_page.relative_to(ROOT)}: featured artwork hero must open its detail panel and full-resolution source")
 

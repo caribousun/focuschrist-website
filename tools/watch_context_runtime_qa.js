@@ -31,4 +31,40 @@ assert.equal(birth.back.href, '/birth-of-christ.html?hero=1');
 assert(birth.input.value.includes('The birth of Jesus Christ'));
 assert.equal(run('?' + new URLSearchParams({art:'Birth artwork',return:'https://evil.example/birth-of-christ.html?hero=1'})).back.href, 'art.html?art=Birth%20artwork');
 assert.equal(run('').context,undefined);
+const heroes = JSON.parse(fs.readFileSync('docs/sitewide-artwork-review.json', 'utf8')).heroes;
+assert.equal(heroes.length, 19, 'Exercise every reviewed replacement hero');
+for (const hero of heroes) {
+ const ask = new URL(hero.ask, 'https://focuschrist.com');
+ const destination = ask.searchParams.get('return');
+ assert.equal(destination, '/' + hero.page + '?hero=1');
+ const result = run(ask.search);
+ assert.equal(result.back.href, destination, hero.key + ': hero return must preserve its page');
+ assert.equal(result.body.children[0].href, destination, hero.key + ': persistent hero return must agree');
+ assert.equal(run('?' + new URLSearchParams({art:hero.title, return:'https://evil.example' + destination})).back.href, 'art.html?art=' + encodeURIComponent(hero.title));
+}
+for (const destination of ['/atonement.html?hero=1', '/joseph-smith-likeness.html?hero=1']) {
+ assert.equal(run('?' + new URLSearchParams({art:'Existing hero',return:destination})).back.href, destination);
+}
+const studyReturns = [
+ ['/answers/faith-in-jesus-christ-during-trials.html#scripture-study', 'Strength while the burden remains'],
+ ['/answers/look-unto-me-doctrine-and-covenants-6-36.html#every-thought', 'Immediately Jesus reached for him'],
+ ['/birth-of-christ.html#word-made-flesh', 'John points his disciples toward Christ'],
+ ['/book-of-mormon-evidences.html#alma-36', 'Alma and Helaman'],
+ ['/church-history.html#relief-society-organization', 'Practical care'],
+ ['/come-follow-me.html#study-practice', 'Learning through service']
+];
+for (const [destination, title] of studyReturns) {
+ const [pagePath, fragment] = destination.slice(1).split('#');
+ assert(fs.readFileSync(pagePath, 'utf8').includes('id="' + fragment + '"'), 'Regression return must name a real study anchor');
+ const result = run('?' + new URLSearchParams({art:title, topic:title, return:destination}));
+ assert.equal(result.back.href, destination, 'Context card must preserve the own-page anchor');
+ assert.equal(result.body.children[0].href, destination, 'Persistent return must agree');
+ assert(result.input.value.includes(title));
+}
+for (const destination of ['https://evil.example/answers/faith-in-jesus-christ-during-trials.html#scripture-study', '//evil.example/come-follow-me.html#study-pattern', 'javascript:alert(1)', '/not-a-study.html#scripture-study', '/answers/faith-in-jesus-christ-during-trials.html#%3Cscript%3E']) {
+ assert.equal(run('?' + new URLSearchParams({art:'Study', return:destination})).back.href, 'art.html?art=Study', 'Unsafe or unknown destination must fall back');
+}
+assert.equal(run('?' + new URLSearchParams({art:'Study',return:'/answers/faith-in-jesus-christ-during-trials.html?redirect=https://evil.example#scripture-study'})).back.href, '/answers/faith-in-jesus-christ-during-trials.html#scripture-study');
+assert.equal(run('?' + new URLSearchParams({art:'Gallery',return:'/art.html?art=Gallery#art-grid'})).back.href, 'art.html?art=Gallery#art-grid', 'Keep original gallery selection and anchor');
+assert.equal(run('?' + new URLSearchParams({art:'Home',return:'/index.html?artwork=home-come-and-see#study'})).back.href, '/index.html?artwork=home-come-and-see', 'Keep approved Home artwork routing');
 console.log('Watch context runtime QA PASSED: section returns, external/invalid URL rejection, safe text, retained question, artwork regression, no automatic submission.');
