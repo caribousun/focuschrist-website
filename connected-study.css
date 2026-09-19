@@ -5,6 +5,7 @@
 .fc-deep-study p { margin: 0 0 1.2rem; }
 .fc-deep-study a { color: var(--fc-gold-light, #f1d39a); text-decoration: underline; text-underline-offset: .18em; overflow-wrap: anywhere; }
 .fc-deep-study a:hover { color: #fff2dc; }
+.fc-deep-study a.cta { text-decoration: none; }
 .fc-deep-study a:focus-visible, .fc-study-nav a:focus-visible, .fc-deep-study summary:focus-visible { outline: 3px solid #f0c36a; outline-offset: 5px; }
 .fc-study-hub { max-width: 1050px; margin: 3rem auto; padding: clamp(22px, 4vw, 42px); background: var(--fc-card-fill); border: 1px solid var(--fc-line); border-radius: 12px; box-sizing: border-box; text-align: left; }
 .fc-study-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1.5rem; }
