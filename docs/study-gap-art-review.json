@@ -1,0 +1,65 @@
+{
+  "date": "2026-09-19",
+  "artworks": [
+    {
+      "key": "child-keepsake",
+      "asset": "assets/page-art/study-additions/child-keepsake-full.webp",
+      "thumbnail": "assets/page-art/study-additions/child-keepsake-800.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "21f8d51208679d614d896485d0938b797b3e94ac362086ba4b4b09d43a19c958",
+      "thumbnail_sha256": "f99e61c0aabf8136c2b3209ddab3f9353fcb075887e4d10e81829a8977d5901d",
+      "source_file": "exec-9f094486-007a-4079-91ba-5cbea482ac50.png",
+      "source_sha256": "e3c8c8ea695c4c825e59efd601a4cb7dceefdd4cc89928b2f357c19b32bb567a",
+      "reviewed": true,
+      "review": "Independent visual/source review in study-gap-art-review.md; full WebP decoded pixels exactly match reviewed source.",
+      "owner_approval": false,
+      "page": "answers/death-of-a-child.html"
+    },
+    {
+      "key": "divorce-child",
+      "asset": "assets/page-art/study-additions/divorce-child-full.webp",
+      "thumbnail": "assets/page-art/study-additions/divorce-child-800.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "747bf0256c57308a63e4c9dff74cc418ed775e616687c5aacf9ef0caf6772936",
+      "thumbnail_sha256": "acf078a677f812c49918e3684c53ed5d554072c99973f85341b15126f3a102ba",
+      "source_file": "exec-7695ebf7-e8e5-4f2e-a87b-3bc0070420d8.png",
+      "source_sha256": "b873e56a3df4771820d76c6204e79003abcee017b12a9345110b1e7e5e0c4bb4",
+      "reviewed": true,
+      "review": "Independent visual/source review in study-gap-art-review.md; full WebP decoded pixels exactly match reviewed source.",
+      "owner_approval": false,
+      "page": "answers/divorce-and-faith.html"
+    },
+    {
+      "key": "paul-athens",
+      "asset": "assets/page-art/study-additions/paul-athens-full.webp",
+      "thumbnail": "assets/page-art/study-additions/paul-athens-800.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "9a67c0bbe0a59e862a64cadce1b3893ca2f7bc7a1fceee3d21542ab0f80d2cf8",
+      "thumbnail_sha256": "b81226dc82e7338bd20c27a9fc0dfdc98fa459b2e05125563bda3eeb5d215070",
+      "source_file": "exec-7897243f-b56a-4580-ba3f-e7b41532c6ce.png",
+      "source_sha256": "42e3ba6bf275a39f2d4ad666f2d90b3e5dd0876d7de59bffe81751219c514f23",
+      "reviewed": true,
+      "review": "Independent visual/source review in study-gap-art-review.md; full WebP decoded pixels exactly match reviewed source.",
+      "owner_approval": false,
+      "page": "answers/god-our-heavenly-father.html"
+    },
+    {
+      "key": "jesus-weeps-bethany",
+      "asset": "assets/page-art/study-additions/jesus-weeps-bethany-full.webp",
+      "thumbnail": "assets/page-art/study-additions/jesus-weeps-bethany-800.webp",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "5027f66a420278dd422241c6c714b63c8f21ac02994dd200fcf782057d40bbf9",
+      "thumbnail_sha256": "350dd05a51caa02614f10bf22ee72b252cfd0b46b82b7912a7c028ec408fdf45",
+      "source_file": "exec-77ce3f34-adcb-433b-ba96-c7d6dafc421c.png",
+      "source_sha256": "fefc43e2c62919227ea058b2327a53028c6a4be6d22b57e05e01b11eefb46043",
+      "reviewed": true,
+      "review": "Independent visual/source review in study-gap-art-review.md; full WebP decoded pixels exactly match reviewed source.",
+      "owner_approval": false,
+      "page": "answers/grief-and-faith.html"
+    }
+  ]
+}

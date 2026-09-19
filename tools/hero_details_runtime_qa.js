@@ -32,6 +32,7 @@ dialog.showModal = () => { dialog.open = true; };
 dialog.close = () => { dialog.open = false; dialog.listeners.close(); };
 
 const cases = [
+    ['birth-of-christ', '/assets/page-art/birth-of-christ/12-nativity-hero-full.webp', 'Mary lays her newborn Son in a manger', '/birth-of-christ.html#promised-son'],
     ['living-christ-art', '/assets/heroes/home-christ-signature-approved-20260907.png', 'The Living Christ', '/art-study/the-living-christ.html#scripture-study'],
     ['good-shepherd-art', '/art/The-Good-Shephard.jpg', 'The Good Shepherd', '/art-study/the-good-shepherd.html#scripture-study'],
     ['little-children-art', '/art/Suffer-the-Little-Children.jpg', 'Suffer the Little Children', '/art-study/suffer-the-little-children.html#scripture-study'],
@@ -67,6 +68,7 @@ vm.runInNewContext(fs.readFileSync('hero-details.js', 'utf8'), {
 });
 
 cases.forEach(([record, href, expectedTitle, expectedStudy], index) => {
+    window.location.pathname = record === 'birth-of-christ' ? '/birth-of-christ.html' : '/art-study/the-good-shepherd.html';
     let prevented = false;
     triggers[index].listeners.click({ button: 0, preventDefault() { prevented = true; } });
     assert(prevented && dialog.open, `${record} must open the hero detail dialog`);
@@ -75,10 +77,14 @@ cases.forEach(([record, href, expectedTitle, expectedStudy], index) => {
     assert.strictEqual(selectors['.fc-artwork-detail-copy'].children.length, 2);
     assert.strictEqual(new URL(selectors['[data-hero-study-link]'].href).pathname + new URL(selectors['[data-hero-study-link]'].href).hash, expectedStudy);
     assert.strictEqual(selectors['[data-full-image-viewer]'].href, `https://focuschrist.com${href}`);
-    assert(new URL(selectors['[data-hero-ask-link]'].href).searchParams.get('return').includes('/art-study/'));
+    assert.strictEqual(new URL(selectors['[data-hero-ask-link]'].href).searchParams.get('return'), window.location.pathname + '?hero=1');
+    if (record === 'birth-of-christ') {
+        assert.strictEqual(selectors['[data-hero-source-link]'].href, 'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?lang=eng&id=p6-p7#p6');
+        assert(new URL(selectors['[data-hero-ask-link]'].href).searchParams.get('topic').includes('newborn'));
+    }
     dialog.close();
     assert(triggers[index].focused, `${record} must restore focus when closed`);
 });
 
 assert(!bodyClasses.has('fc-dialog-open'));
-console.log('Hero details runtime QA passed: all four art-study heroes open their own reflection, study, Ask, and full-size routes.');
+console.log('Hero details runtime QA passed: Birth and all four art-study heroes open their own reflection, study, Ask, and full-size routes.');

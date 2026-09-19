@@ -26,5 +26,9 @@ for(const value of ['https://evil.example/watch.html#love-and-service','javascri
 const raw=run('?'+new URLSearchParams({watch:'<img src=x onerror=alert(1)>',topic:'prayer'}));assert.equal(raw.context.children[0].children[1].textContent,'<img src=x onerror=alert(1)>');
 assert.equal(run('?watch=Video','My own question').input.value,'My own question');
 const art=run('?'+new URLSearchParams({art:'Watch hero',return:'/watch.html?hero=1'}));assert.equal(art.back.href,'/watch.html?hero=1');assert.equal(art.back.textContent,'Return to this artwork');assert(art.input.value.includes('artwork'));assert.equal(art.body.children.length,1);
+const birth = run('?' + new URLSearchParams({art:'Mary lays her newborn Son in a manger',topic:'The birth of Jesus Christ',return:'/birth-of-christ.html?hero=1'}));
+assert.equal(birth.back.href, '/birth-of-christ.html?hero=1');
+assert(birth.input.value.includes('The birth of Jesus Christ'));
+assert.equal(run('?' + new URLSearchParams({art:'Birth artwork',return:'https://evil.example/birth-of-christ.html?hero=1'})).back.href, 'art.html?art=Birth%20artwork');
 assert.equal(run('').context,undefined);
 console.log('Watch context runtime QA PASSED: section returns, external/invalid URL rejection, safe text, retained question, artwork regression, no automatic submission.');
