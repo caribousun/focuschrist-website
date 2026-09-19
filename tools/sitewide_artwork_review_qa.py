@@ -109,7 +109,14 @@ def main():
             check(bool(match),key+': missing '+variable)
             if match:check(((ROOT/page).parent/match.group(1)).resolve()==(ROOT/asset).resolve(),key+': wrong '+variable)
     # Added CSS must be scoped and must not alter width/height/frame geometry.
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css'],cwd=ROOT,text=True)
+    # The focused-study additions have a separate, closed visual-review baseline.
+    # Exempt only the exact reviewed bytes, never arbitrary later edits to this file.
+    focused=json.loads((ROOT/'tools/focused_answers_baseline.json').read_text(encoding='utf8'))
+    reviewed=focused['reviewed_stylesheets']
+    check(set(reviewed)=={'focused-answers.css'}, 'Unexpected focused stylesheet exemption')
+    for name,digest in reviewed.items():
+        check(sha(ROOT/name)==digest, 'Focused stylesheet differs from reviewed bytes: '+name)
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css'],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():

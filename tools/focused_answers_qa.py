@@ -50,6 +50,10 @@ def opening(page, nodes):
 
 def check():
     errors = []
+    reviewed = json.loads((ROOT/'tools/focused_answers_baseline.json').read_text(encoding='utf-8'))['reviewed_stylesheets']
+    assert set(reviewed) == {'focused-answers.css'}, 'Unexpected reviewed stylesheet'
+    for name, digest in reviewed.items():
+        assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest() == digest, name + ': differs from reviewed CSS'
     nodes = document(ROOT/'answers.html')
     directory = next(n for n in nodes if n.has('fc-answers-jump-links'))
     routes = [n.attrs['href'] for n in directory.walk() if n.tag == 'a']

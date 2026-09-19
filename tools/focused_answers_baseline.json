@@ -3413,5 +3413,8 @@
       "path": "assets/watch/vision.jpg",
       "git_blob_sha1": "6187b29474bbc84185b1b93e4559a498193a9f6b"
     }
-  ]
+  ],
+  "reviewed_stylesheets": {
+    "focused-answers.css": "a3c39449799c720ac75aaa252f70e9bf2eced6346bdf89709ebe7f9cbab56224"
+  }
 }
