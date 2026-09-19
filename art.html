@@ -223,12 +223,35 @@
         
         .modal .close {
             position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #c9a961;
-            font-size: 40px;
+            right: max(22px, env(safe-area-inset-right));
+            bottom: max(18px, env(safe-area-inset-bottom));
+            top: auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 100px;
+            min-height: 42px;
+            padding: 8px 15px;
+            border: 1px solid rgba(240, 204, 130, .72);
+            border-radius: 999px;
+            background: rgba(17, 11, 7, .90);
+            color: #f0cc82;
+            font: inherit;
+            font-size: .82rem;
+            font-weight: 700;
+            line-height: 1.2;
             cursor: pointer;
             z-index: 1001;
+            box-sizing: border-box;
+            backdrop-filter: blur(8px);
+        }
+
+        .modal .close:hover,
+        .modal .close:focus-visible {
+            background: rgba(48, 31, 18, .96);
+            color: #f8ead7;
+            outline: 3px solid rgba(240, 204, 130, .28);
+            outline-offset: 2px;
         }
         
         .modal .nav-arrow {
@@ -593,7 +616,7 @@
 
     <!-- Fullscreen Modal -->
     <div class="modal" id="imageModal" onclick="handleModalClick(event)">
-        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="close" type="button" onclick="closeModal()" aria-label="Close artwork viewer">Close</button>
         <span class="nav-arrow left" onclick="navigate(-1)">&#10094;</span>
         <img id="modalImage" src="" alt="Full screen">
         <span class="nav-arrow right" onclick="navigate(1)">&#10095;</span>
