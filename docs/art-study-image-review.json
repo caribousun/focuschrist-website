@@ -493,7 +493,7 @@
         "tone": "reverent hope amid impending departure",
         "reviewed": true,
         "gaze_review": "Architecture and distant unnamed figures; no interpersonal gaze required.",
-        "review_notes": "Compared original1846\u00e2\u20ac\u201c47daguerreotype; horizontalangel vane, circularwindowsbetweentiers. Landscape/colors/minuteornaments interpretive, no modernuprightMoroni."
+        "review_notes": "Compared original1846â€“47daguerreotype; horizontalangel vane, circularwindowsbetweentiers. Landscape/colors/minuteornaments interpretive, no modernuprightMoroni."
       },
       {
         "slot": "nauvoo-legion",
@@ -926,6 +926,178 @@
         "tone": "Hope when the way is unclear",
         "reviewed": true,
         "technical_review_passed": true
+      }
+    ],
+    "birth-of-christ.html": [
+      {
+        "asset": "assets/page-art/birth-of-christ/01-isaiah-ahaz-full.webp",
+        "sha256": "632de1c9edd54beadd407cbd077e7cd2f33839b86607aae760c234830fcf30b5",
+        "tone": "Amid fear for Jerusalem, Isaiah brings a word from the Lord. Read the encounter and the promise of Immanuel in its setting.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/02-bethlehem-full.webp",
+        "sha256": "fb341eb89bd1089b253267ae4fd453f89902f1554862dab9abd891e1d191d50a",
+        "tone": "The quiet hills invite us to consider Micah’s promise about Bethlehem and the ruler who would come from it.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/03-nephi-vision-full.webp",
+        "sha256": "3fe576c8a45bbefdb77431ea23d83e90f32390b503fc0ccedde2b574f512fdd2",
+        "tone": "Nephi sees a mother with the Son of God in her arms. Through this vision, he comes to understand the love of God.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/04-benjamin-angel-full.webp",
+        "sha256": "e5b3dce364db67631bc24b2f22ed75dd132cb175bf36f07396dfe00ebf60c0e7",
+        "tone": "The angel brings good tidings of the Lord’s coming among His people. Benjamin will share this witness of the Savior’s birth and saving mission.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/05-alma-teaches-full.webp",
+        "sha256": "7568e3b8a2bf09c6d6f317f3617dd8187cccc25380343b06a0ae69a6fa42c963",
+        "tone": "Alma teaches that the Son will be born of Mary and take upon Himself the pains and infirmities of His people. His coming brings help for the whole human journey.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/06-samuel-wall-full.webp",
+        "sha256": "ee76376aee064f47275c9ace64bf3ac185fcf3560803e5f5861708b449ea4a82",
+        "tone": "Samuel announces the signs that will accompany the Savior’s birth. His message asks his hearers to trust the Lord through the years of waiting.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/07-zacharias-full.webp",
+        "sha256": "fca9e54e4431a56cb052a1e9198b97f314c5ac30af8eab6396dd8c71b0986f33",
+        "tone": "Zacharias hears that Elisabeth will bear a son. John’s life will help prepare a people to receive the Lord.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/08-annunciation-full.webp",
+        "sha256": "a643f31dbb22808a66b266c90604403274847aab70acaa741d090bb56c22773e",
+        "tone": "The announcement comes to Mary with an invitation to trust God. Her question and willing response are part of the account Luke asks us to hear.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/09-mary-elisabeth-full.webp",
+        "sha256": "c640153004ab730a1c5081d07571e9532664d93cfb463017e67b393904880217",
+        "tone": "Their greeting becomes a moment of recognition and blessing. Elisabeth welcomes Mary as the mother of her Lord.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/10-joseph-dream-full.webp",
+        "sha256": "37aa958bba7dd5f2fc18857db999b7fa7d6f99e672c85ade66b72ca3fef84b04",
+        "tone": "Joseph receives direction to take Mary as his wife and name the child Jesus. He rises ready to act on the message.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/11-journey-bethlehem-full.webp",
+        "sha256": "71dda6c7caed921751e192be9142178bad96efc34e100808ef45cffd4d864472",
+        "tone": "Joseph goes to Bethlehem with Mary. Their journey leads into Luke’s account of the Savior’s humble birth.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+        "sha256": "f126c57a91c8deb85438afa23a15170eb33f542d2919e2fd039a81c6a1371c1e",
+        "tone": "Mary wraps her firstborn Son and lays Him in a manger. The promised Savior has entered mortal life.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/13-shepherds-message-full.webp",
+        "sha256": "da2d4741684bb2172f273bc98f079e2821879261c879d8c66c0f84f68fc7d301",
+        "tone": "The shepherds hear news of great joy: the Savior is born. They are given a sign that will help them find the child.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/14-shepherds-find-full.webp",
+        "sha256": "0fefc12583273a0ae30f4fc021b66251a233dd2ddd541bc41f9261f8107ff99e",
+        "tone": "The shepherds come with haste and share what they have heard. Mary keeps these things and ponders them in her heart.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/15-simeon-full.webp",
+        "sha256": "1c21de1a1f67a5c8b89f0395e23106a8b17d285e491746dd505eb719dfd6993f",
+        "tone": "Simeon gives thanks for the salvation he has lived to see. His witness welcomes the light prepared for all people.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/16-anna-full.webp",
+        "sha256": "6a355616699c8edf07967dd5ca5c379d13de4e4d582c56be5efbdcd02620e469",
+        "tone": "Anna gives thanks to the Lord and speaks of the child to those looking for redemption. Her patient worship opens into a living witness.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/17-magi-house-full.webp",
+        "sha256": "728d567e283bbd78348a787e365be177197a4aab7601141d3e3b97ad1c26a98c",
+        "tone": "The visitors find the child with Mary, worship Him, and offer their gifts. Matthew brings us into a house for this encounter.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/18-egypt-full.webp",
+        "sha256": "b3ffffac0444ff7941727f1ef931e37c93c4b98f8641d46d1bfdc7d5f7ba8bc8",
+        "tone": "Following the warning, Joseph takes the child and Mary toward Egypt. His prompt care protects the young family through danger.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/19-nephi-prays-full.webp",
+        "sha256": "9d6408ca316904b522a334a062b7b4d86b643531482fd2f597847bbc926f6c33",
+        "tone": "Nephi pours out his sorrow for the believers. The Lord’s voice assures him that the promised sign will come.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/20-night-light-full.webp",
+        "sha256": "317907ac4e6c8086b9e73894889fafbf7d92eb633eb3c331f466e8e506a70a36",
+        "tone": "The sun has gone down, yet the darkness does not come. The light and the new star fulfill the promised signs of the Savior’s birth.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/21-john-naming-full.webp",
+        "sha256": "e4008ac569db9da9bfe56c047626e6411513849e0abdcb408d413ffeae8049e8",
+        "tone": "The child’s name confirms the angel’s message. Zacharias’s voice returns in praise, and the neighbors share the family’s wonder.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/22-mary-praise-full.webp",
+        "sha256": "f433118be0f1fa2751e6fd566c50bce4120ed4ecdc4de722502b1e7f17c5c1cf",
+        "tone": "Mary’s words celebrate God’s mercy and faithfulness. Her song joins personal gratitude to the hope of His people.",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/birth-of-christ/23-nazareth-return-full.webp",
+        "sha256": "3e014257fe2ae2883c7b9d9b3ffd5b336547e9a303a26347bfd7c3a18cce416c",
+        "tone": "The family settles in Nazareth after their return. The Savior’s early years unfold within the daily care of a home.",
+        "reviewed": true
+      }
+    ],
+    "answers/death-of-a-child.html": [
+      {
+        "asset": "assets/page-art/study-additions/child-keepsake-full.webp",
+        "sha256": "21f8d51208679d614d896485d0938b797b3e94ac362086ba4b4b09d43a19c958",
+        "tone": "Source-grounded compassionate attention; reviewed in study-gap-art-review.md.",
+        "reviewed": true
+      }
+    ],
+    "answers/divorce-and-faith.html": [
+      {
+        "asset": "assets/page-art/study-additions/divorce-child-full.webp",
+        "sha256": "747bf0256c57308a63e4c9dff74cc418ed775e616687c5aacf9ef0caf6772936",
+        "tone": "Source-grounded compassionate attention; reviewed in study-gap-art-review.md.",
+        "reviewed": true
+      }
+    ],
+    "answers/god-our-heavenly-father.html": [
+      {
+        "asset": "assets/page-art/study-additions/paul-athens-full.webp",
+        "sha256": "9a67c0bbe0a59e862a64cadce1b3893ca2f7bc7a1fceee3d21542ab0f80d2cf8",
+        "tone": "Source-grounded compassionate attention; reviewed in study-gap-art-review.md.",
+        "reviewed": true
+      }
+    ],
+    "answers/grief-and-faith.html": [
+      {
+        "asset": "assets/page-art/study-additions/jesus-weeps-bethany-full.webp",
+        "sha256": "5027f66a420278dd422241c6c714b63c8f21ac02994dd200fcf782057d40bbf9",
+        "tone": "Source-grounded compassionate attention; reviewed in study-gap-art-review.md.",
+        "reviewed": true
       }
     ]
   }

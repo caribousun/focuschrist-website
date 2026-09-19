@@ -20,7 +20,7 @@ for answer_path in answer_paths:
  answer_nodes=read(answer_path)
  assert any(n.tag=='body' and n.has('fc-topic-page') for n in answer_nodes),answer_path.name+': shared responsive topic-page contract'
 study_destinations={
- 'atonement.html',
+ 'atonement.html', 'birth-of-christ.html',
  'general-conference.html', 'book-of-mormon-evidences.html',
  'joseph-smith-likeness.html', 'church-history.html', 'pioneers.html',
  'come-follow-me.html', 'church-history.html#aaronic-priesthood-restoration',

@@ -70,7 +70,7 @@ const foundational = new Set(['god-our-heavenly-father.html','restored-church-of
 const expectedPills = new Set(fs.readdirSync(path.join(root,'answers'))
   .filter(file => file.endsWith('.html'))
   .map(file => 'answers/' + file));
-const studyDestinations = ['atonement.html','general-conference.html','book-of-mormon-evidences.html',
+const studyDestinations = ['birth-of-christ.html','atonement.html','general-conference.html','book-of-mormon-evidences.html',
   'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html',
   'church-history.html#aaronic-priesthood-restoration','church-history.html#melchizedek-priesthood-restoration'];
 for (const href of studyDestinations) expectedPills.add(href);

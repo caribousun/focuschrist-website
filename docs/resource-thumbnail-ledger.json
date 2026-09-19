@@ -1667,6 +1667,138 @@
       "inline_scripture_urls": [
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?id=p11-p25&lang=eng#p11"
       ]
+    },
+    {
+      "key": "birth-samuel-signs",
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-01-0730-samuel-prophecies-the-signs-of-christs-birth-and-death?lang=eng",
+      "title": "Samuel Prophesies the Signs of Christ's Birth and Death",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/g6dv6d6z6krhabnhc0l08agxfm5m4h3efauw1qjy/full/!800,/0/default",
+      "local_thumbnail": "assets/resources/birth-of-christ/samuel-signs.jpg",
+      "width": 590,
+      "height": 332,
+      "sha256": "712f2dceab8f8d89b74fc5e803538006c5683643c0f429b70a53968577dbc42b",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/hel/14?id=p2-p6&lang=eng#p2",
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/1?id=p15-p21&lang=eng#p15"
+      ],
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    {
+      "key": "birth-mary-mother-jesus",
+      "url": "https://www.churchofjesuschrist.org/study/video/bible-videos-the-life-of-jesus-christ/2011-10-027-mary-the-mother-of-jesus?lang=eng",
+      "title": "Mary, the Mother of Jesus",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/11073493a984151fa4bd8dd870a5be9c2a61de20/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/birth-of-christ/mary-mother-jesus.jpg",
+      "width": 768,
+      "height": 431,
+      "sha256": "5a0f6aff5bd283d6ef6b1980bf32e59ed70b6f58d47ad579233c7ee94ba1be4a",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/1?id=p26-p38&lang=eng#p26"
+      ],
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    {
+      "key": "birth-christ-child",
+      "url": "https://www.churchofjesuschrist.org/media/video/2019-09-0050-the-christ-child-a-nativity-story-lighttheworld?lang=eng",
+      "title": "The Christ Child",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/f0bc909fe94975fb2bd6dcc68be39132beab6b0b/full/!800,/0/default",
+      "local_thumbnail": "assets/resources/birth-of-christ/christ-child.jpg",
+      "width": 800,
+      "height": 450,
+      "sha256": "b180d19f253a9d4e34a6bc77a9307a58fab9b8a047ff4b1d6bd0b0cf1c18a7a1",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [],
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    {
+      "key": "birth-presented-temple",
+      "url": "https://www.churchofjesuschrist.org/study/video/nativity/2011-10-006-the-christ-child-is-presented-at-the-temple?lang=eng",
+      "title": "The Christ Child Is Presented at the Temple",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/0dc4fb56a491de0cbe144edb7ada2708cdb8fb1e/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/birth-of-christ/presented-temple.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "a803b9843571d66e4bd7836b98a10fdb92ada170bfc97271e5cd5b07ff57a5e4",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [],
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    {
+      "key": "birth-samuel-fulfilled",
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-08-3330-samuel-the-lamanites-prophecy-fulfilled?lang=eng",
+      "title": "Samuel the Lamanite's Prophecy Fulfilled",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/42285b18649e67f0037389034a2f72ab378979dc/full/!800,/0/default",
+      "local_thumbnail": "assets/resources/birth-of-christ/samuel-fulfilled.jpg",
+      "width": 800,
+      "height": 450,
+      "sha256": "f2487643d94ff4bac5f988d7a1c1ecbbe8129a66061e21659029600e097133ed",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/1?id=p9-p21&lang=eng#p9"
+      ],
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    {
+      "key": "birth-light-life-world",
+      "url": "https://www.churchofjesuschrist.org/study/broadcasts/article/christmas-devotional/2015/12/the-light-and-the-life-of-the-world?lang=eng",
+      "title": "The Light and the Life of the World",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/7cf35e4992631da0c326eac9d36fe81ae3c5a132/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/birth-of-christ/light-life-world.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "7e65163024fa288dac1c534e9da799bc52b5ab015fb9133a58e47e2bc549b664",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [],
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    {
+      "key": "birth-everlasting-light",
+      "url": "https://www.churchofjesuschrist.org/study/broadcasts/christmas-devotional/2025/11/11porter?lang=eng",
+      "title": "The Everlasting Light",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/y5j5blnhgg5v8m1jfouqn4cihcglj9cuhnfoerc4/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/birth-of-christ/everlasting-light.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "22ee4f45f3f97fb9ec929798f8ff4135c6e509659314c1b25d4933461c0d6702",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [],
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    {
+      "key": "birth-greatest-gift",
+      "url": "https://www.churchofjesuschrist.org/study/broadcasts/christmas-devotional/2022/12/12teixeira?lang=eng",
+      "title": "Christmas\u2019s Greatest Gift",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/c29bea784677c587ac7732d9bd3a7884057e7b19/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/birth-of-christ/greatest-gift.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "941bc7c96594eda1e99e11692bd33ffecb57c88fef7254875f646162ef1e6b8b",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "inline_scripture_urls": [],
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    {
+      "key": "grief-freeman-covenant-relationship",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/42freeman?lang=eng",
+      "title": "Walking in Covenant Relationship with Christ",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/b86dd6e65f16340387aae922778dfb7bae2b11c8/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/grief/freeman-covenant-relationship.jpg",
+      "width": 768,
+      "height": 432,
+      "sha256": "7a9e26c67be6684fe3db5a69cac0d8e432938da207e0a4791c3dad81fadb923b",
+      "status": 200,
+      "verified_date": "2026-09-19",
+      "source_review": "docs/grief-freeman-resource-review.json"
     }
   ],
   "reviewed_on": "2026-09-07",

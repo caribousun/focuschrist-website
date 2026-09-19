@@ -28,6 +28,7 @@
     "/art.html",
     "/ask.html",
     "/atonement.html",
+    "/birth-of-christ.html",
     "/book-of-mormon-evidences.html",
     "/church-history.html",
     "/come-follow-me.html",
@@ -151,6 +152,28 @@
       ]
     },
     {
+      "title": "A home in Nazareth",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/23-nazareth-return-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/23-nazareth-return-full.webp",
+      "alt": "Joseph carries the young Jesus beside Mary at a village doorway.",
+      "id": "art-8db61ea68c2e",
+      "occurrences": [
+        {
+          "id": "source-1575e9ee9e7f",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/23-nazareth-return-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/23-nazareth-return-800.webp\"])",
+          "title": "A home in Nazareth"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A house built through sacrifice",
       "category": "Church History",
       "thumbnail": "/assets/page-art/church-history/kirtland-temple-960.webp",
@@ -192,6 +215,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "A night as light as day",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/20-night-light-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/20-night-light-full.webp",
+      "alt": "People look across a brightly lit settlement beneath a sky with a small new star.",
+      "id": "art-1b8530b11465",
+      "occurrences": [
+        {
+          "id": "source-025f0cc2ceee",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/20-night-light-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/20-night-light-800.webp\"])",
+          "title": "A night as light as day"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -641,6 +686,28 @@
       ]
     },
     {
+      "title": "Alma teaches of the coming Savior",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/05-alma-teaches-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/05-alma-teaches-full.webp",
+      "alt": "Alma speaks with a small group who listen closely to him.",
+      "id": "art-e1eacd11845a",
+      "occurrences": [
+        {
+          "id": "source-84d130357c6e",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/05-alma-teaches-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/05-alma-teaches-800.webp\"])",
+          "title": "Alma teaches of the coming Savior"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Along the road",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/emmaus-v2-960.webp",
@@ -656,6 +723,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/atonement/emmaus-v2.webp\"]:has(img[src=\"assets/page-art/atonement/emmaus-v2-960.webp\"])",
           "title": "Along the road"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An angel awakens Benjamin",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/04-benjamin-angel-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/04-benjamin-angel-full.webp",
+      "alt": "Benjamin sits up from his resting mat and listens to an angel.",
+      "id": "art-c200c9d9b69a",
+      "occurrences": [
+        {
+          "id": "source-27326a10f591",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/04-benjamin-angel-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/04-benjamin-angel-800.webp\"])",
+          "title": "An angel awakens Benjamin"
         }
       ],
       "categories": [
@@ -744,6 +833,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/bom-evidences/whitmer-traveler.webp\"]:has(img[src=\"assets/page-art/bom-evidences/whitmer-traveler-960.webp\"])",
           "title": "An offer of hospitality"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Anna gives thanks and bears witness",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/16-anna-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/16-anna-full.webp",
+      "alt": "Anna speaks to a woman in the temple precinct while Mary holds Jesus nearby.",
+      "id": "art-576c772f9bf5",
+      "occurrences": [
+        {
+          "id": "source-037e6db8c50f",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/16-anna-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/16-anna-800.webp\"])",
+          "title": "Anna gives thanks and bears witness"
         }
       ],
       "categories": [
@@ -1009,6 +1120,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "Bethlehem in the promise",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/02-bethlehem-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/02-bethlehem-full.webp",
+      "alt": "A small stone settlement rests among the hills and olive trees of Judea.",
+      "id": "art-aea8c79db189",
+      "occurrences": [
+        {
+          "id": "source-164b9f77e68c",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/02-bethlehem-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/02-bethlehem-800.webp\"])",
+          "title": "Bethlehem in the promise"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -2420,6 +2553,28 @@
       ]
     },
     {
+      "title": "Gabriel speaks to Zacharias",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/07-zacharias-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/07-zacharias-full.webp",
+      "alt": "Gabriel addresses Zacharias beside the altar of incense.",
+      "id": "art-5bfaa3be779a",
+      "occurrences": [
+        {
+          "id": "source-ccdbf1e9c43e",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/07-zacharias-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/07-zacharias-800.webp\"])",
+          "title": "Gabriel speaks to Zacharias"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Gathered into His Arms",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-carries-lamb.webp",
@@ -2527,6 +2682,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Good tidings to the shepherds",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/13-shepherds-message-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/13-shepherds-message-full.webp",
+      "alt": "An angel addresses shepherds among their sheep, with a heavenly host behind him.",
+      "id": "art-21b032271556",
+      "occurrences": [
+        {
+          "id": "source-4f488c2d27ad",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/13-shepherds-message-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/13-shepherds-message-800.webp\"])",
+          "title": "Good tidings to the shepherds"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -2765,6 +2942,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/divorce-practical-help-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/divorce-practical-help-800.webp\"])",
           "title": "Help with what matters today"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "His name is John",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/21-john-naming-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/21-john-naming-full.webp",
+      "alt": "Zacharias sits with a writing tablet as Elisabeth holds their newborn son.",
+      "id": "art-b72e7a385150",
+      "occurrences": [
+        {
+          "id": "source-56ba535d6575",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/21-john-naming-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/21-john-naming-800.webp\"])",
+          "title": "His name is John"
         }
       ],
       "categories": [
@@ -3168,6 +3367,28 @@
       ]
     },
     {
+      "title": "Isaiah brings the promise to Ahaz",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/01-isaiah-ahaz-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/01-isaiah-ahaz-full.webp",
+      "alt": "Isaiah speaks with Ahaz beside the water conduit, with Isaiah’s son nearby.",
+      "id": "art-211c8ee58538",
+      "occurrences": [
+        {
+          "id": "source-b3386c6e7465",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/01-isaiah-ahaz-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/01-isaiah-ahaz-800.webp\"])",
+          "title": "Isaiah brings the promise to Ahaz"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Jesus and Mary His Mom",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Jesus-and-Mary-his-mom.webp",
@@ -3498,6 +3719,28 @@
       ]
     },
     {
+      "title": "Jesus weeps with those who mourn",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/study-additions/jesus-weeps-bethany-800.webp",
+      "fullImage": "/assets/page-art/study-additions/jesus-weeps-bethany-full.webp",
+      "alt": "Jesus looks with sorrow toward Mary of Bethany as she kneels before Him, with other mourners nearby.",
+      "id": "art-262bb5dcc6cf",
+      "occurrences": [
+        {
+          "id": "source-b3e855ce0f87",
+          "page": "/answers/grief-and-faith.html",
+          "pageTitle": "Grief",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/study-additions/jesus-weeps-bethany-full.webp\"]:has(img[src=\"../assets/page-art/study-additions/jesus-weeps-bethany-800.webp\"])",
+          "title": "Jesus weeps with those who mourn"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Jesus with Apostles Sunflowers",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Jesus-with-apostles-sunflowers.webp",
@@ -3561,6 +3804,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "Joseph receives reassurance in a dream",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/10-joseph-dream-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/10-joseph-dream-full.webp",
+      "alt": "Joseph sleeps as an angel speaks in a dream.",
+      "id": "art-ca4e7570b1b1",
+      "occurrences": [
+        {
+          "id": "source-a20722ea6d04",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/10-joseph-dream-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/10-joseph-dream-800.webp\"])",
+          "title": "Joseph receives reassurance in a dream"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -3645,6 +3910,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/topics/historical-study-desk-1536.webp\"]:has(img[src=\"../assets/page-art/topics/historical-study-desk-800.webp\"])",
           "title": "Joseph Smith's accounts across time"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Joseph takes the family away by night",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/18-egypt-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/18-egypt-full.webp",
+      "alt": "Joseph and Mary travel at night while Mary carries the child close to her.",
+      "id": "art-262d05596f3b",
+      "occurrences": [
+        {
+          "id": "source-3419bf3c7a57",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/18-egypt-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/18-egypt-800.webp\"])",
+          "title": "Joseph takes the family away by night"
         }
       ],
       "categories": [
@@ -3918,6 +4205,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/bom-evidences/statistical-study.webp\"]:has(img[src=\"assets/page-art/bom-evidences/statistical-study-960.webp\"])",
           "title": "Let a careful question guide the comparison"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Let a child know you are listening",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/study-additions/divorce-child-800.webp",
+      "fullImage": "/assets/page-art/study-additions/divorce-child-full.webp",
+      "alt": "A mother and daughter hold hands across a kitchen table and look at one another.",
+      "id": "art-5439eb028503",
+      "occurrences": [
+        {
+          "id": "source-0b7a50d1cc65",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/study-additions/divorce-child-full.webp\"]:has(img[src=\"../assets/page-art/study-additions/divorce-child-800.webp\"])",
+          "title": "Let a child know you are listening"
         }
       ],
       "categories": [
@@ -4233,6 +4542,28 @@
       ]
     },
     {
+      "title": "Listen to a child’s memories",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/study-additions/child-keepsake-800.webp",
+      "fullImage": "/assets/page-art/study-additions/child-keepsake-full.webp",
+      "alt": "A boy holds a wooden toy truck while a woman sits on the rug and listens at his level.",
+      "id": "art-f2fa4c1b8eb9",
+      "occurrences": [
+        {
+          "id": "source-0b3f08c448db",
+          "page": "/answers/death-of-a-child.html",
+          "pageTitle": "Death of a Child",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/study-additions/child-keepsake-full.webp\"]:has(img[src=\"../assets/page-art/study-additions/child-keepsake-800.webp\"])",
+          "title": "Listen to a child’s memories"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Listen to Him",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/teaching-grace-v2-960.webp",
@@ -4475,6 +4806,94 @@
       ]
     },
     {
+      "title": "Mary and Elisabeth rejoice together",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/09-mary-elisabeth-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/09-mary-elisabeth-full.webp",
+      "alt": "Mary and Elisabeth greet one another, holding each other’s arms.",
+      "id": "art-ccf625af93bd",
+      "occurrences": [
+        {
+          "id": "source-eeb27c58b788",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/09-mary-elisabeth-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/09-mary-elisabeth-800.webp\"])",
+          "title": "Mary and Elisabeth rejoice together"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Mary lays her newborn Son in a manger",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+      "alt": "Mary lays her swaddled newborn in a manger while Joseph watches nearby.",
+      "id": "art-774a493d9a07",
+      "occurrences": [
+        {
+          "id": "source-e38a0bb83b9b",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/page-art/birth-of-christ/12-nativity-hero-full.webp\"]",
+          "title": "Mary lays her newborn Son in a manger"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Mary magnifies the Lord",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/22-mary-praise-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/22-mary-praise-full.webp",
+      "alt": "Mary lifts her eyes and opens her hands in grateful praise.",
+      "id": "art-99132bbe9c1c",
+      "occurrences": [
+        {
+          "id": "source-e59335353880",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/22-mary-praise-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/22-mary-praise-800.webp\"])",
+          "title": "Mary magnifies the Lord"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Mary receives Gabriel’s message",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/08-annunciation-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/08-annunciation-full.webp",
+      "alt": "Mary listens to Gabriel in a modest room.",
+      "id": "art-ff990be3450b",
+      "occurrences": [
+        {
+          "id": "source-397411b21367",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/08-annunciation-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/08-annunciation-800.webp\"])",
+          "title": "Mary receives Gabriel’s message"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Mary recognizes the risen Savior",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/life-after-death/mary-800.webp",
@@ -4534,6 +4953,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/topics/garden-tomb-1536.webp\"]:has(img[src=\"../assets/page-art/topics/garden-tomb-800.webp\"])",
           "title": "Morning at the empty tomb"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Nephi prays for his people",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/19-nephi-prays-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/19-nephi-prays-full.webp",
+      "alt": "Nephi kneels alone and looks upward as the day draws on.",
+      "id": "art-cd2424b30745",
+      "occurrences": [
+        {
+          "id": "source-810e0707c12d",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/19-nephi-prays-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/19-nephi-prays-800.webp\"])",
+          "title": "Nephi prays for his people"
         }
       ],
       "categories": [
@@ -4780,6 +5221,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Paul invites Athens to seek God",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/study-additions/paul-athens-800.webp",
+      "fullImage": "/assets/page-art/study-additions/paul-athens-full.webp",
+      "alt": "Paul speaks to a group of listeners in Athens, with ancient buildings in the distance.",
+      "id": "art-b90e159b29f3",
+      "occurrences": [
+        {
+          "id": "source-b0abdac62344",
+          "page": "/answers/god-our-heavenly-father.html",
+          "pageTitle": "God",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/study-additions/paul-athens-full.webp\"]:has(img[src=\"../assets/page-art/study-additions/paul-athens-800.webp\"])",
+          "title": "Paul invites Athens to seek God"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -5431,6 +5894,28 @@
       ]
     },
     {
+      "title": "Samuel promises the signs",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/06-samuel-wall-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/06-samuel-wall-full.webp",
+      "alt": "Samuel stands on the city wall and speaks to listeners below.",
+      "id": "art-2d989c3e578a",
+      "occurrences": [
+        {
+          "id": "source-4bd130013eab",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/06-samuel-wall-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/06-samuel-wall-800.webp\"])",
+          "title": "Samuel promises the signs"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Samuel Smith Carries the Message",
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/samuel-smith-first-mission-1400.webp",
@@ -5587,6 +6072,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/trials-shared-load-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/trials-shared-load-800.webp\"])",
           "title": "Share the weight"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Simeon receives the child",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/15-simeon-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/15-simeon-full.webp",
+      "alt": "Simeon holds the infant Jesus and speaks with Mary as Joseph listens.",
+      "id": "art-ba961f203f0f",
+      "occurrences": [
+        {
+          "id": "source-7057033e5c00",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/15-simeon-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/15-simeon-800.webp\"])",
+          "title": "Simeon receives the child"
         }
       ],
       "categories": [
@@ -6136,6 +6643,28 @@
       ]
     },
     {
+      "title": "The journey to Bethlehem",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/11-journey-bethlehem-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/11-journey-bethlehem-full.webp",
+      "alt": "Mary and Joseph walk a rocky road through the hills.",
+      "id": "art-d4bbcd319b14",
+      "occurrences": [
+        {
+          "id": "source-781d673f42d6",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/11-journey-bethlehem-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/11-journey-bethlehem-800.webp\"])",
+          "title": "The journey to Bethlehem"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Living Christ",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/The-Living-Christ.webp",
@@ -6164,6 +6693,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "The mother and child Nephi saw",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/03-nephi-vision-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/03-nephi-vision-full.webp",
+      "alt": "Mary cradles the infant Jesus and looks into His eyes.",
+      "id": "art-ef87045da0c3",
+      "occurrences": [
+        {
+          "id": "source-b6a27b5260bb",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/03-nephi-vision-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/03-nephi-vision-800.webp\"])",
+          "title": "The mother and child Nephi saw"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -6409,6 +6960,28 @@
       ]
     },
     {
+      "title": "The shepherds find the child",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/14-shepherds-find-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/14-shepherds-find-full.webp",
+      "alt": "Shepherds enter and find Mary, Joseph, and the infant lying in a manger.",
+      "id": "art-d104492b6b99",
+      "occurrences": [
+        {
+          "id": "source-1103b7adcb83",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/14-shepherds-find-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/14-shepherds-find-800.webp\"])",
+          "title": "The shepherds find the child"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Three Witnesses",
       "category": "Church History",
       "thumbnail": "/assets/history/three-witnesses-1400.webp",
@@ -6446,6 +7019,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/atonement/empty-tomb.webp\"]:has(img[src=\"assets/page-art/atonement/empty-tomb-960.webp\"])",
           "title": "The tomb was empty"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The wise men worship in the house",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/birth-of-christ/17-magi-house-800.webp",
+      "fullImage": "/assets/page-art/birth-of-christ/17-magi-house-full.webp",
+      "alt": "Wise men kneel with gifts before Mary and the young child in a house.",
+      "id": "art-5121f2d97061",
+      "occurrences": [
+        {
+          "id": "source-4174d2441cf9",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/birth-of-christ/17-magi-house-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/17-magi-house-800.webp\"])",
+          "title": "The wise men worship in the house"
         }
       ],
       "categories": [
@@ -6829,15 +7424,15 @@
     }
   ],
   "stats": {
-    "artworks": 296,
-    "occurrences": 326,
+    "artworks": 323,
+    "occurrences": 353,
     "byKind": {
       "artwork": 41,
       "full": 1,
-      "hero": 34,
+      "hero": 35,
       "legacy": 39,
       "missionary": 9,
-      "topic": 205
+      "topic": 231
     }
   }
 }

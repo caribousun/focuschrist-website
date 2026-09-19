@@ -231,7 +231,7 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        hero_script = ("hero-details.js?v=20260914-sacred-hero-1" if relative == "atonement.html" else "hero-details.js?v=20260914-joseph-likeness-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260914-evidences-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels")
+        hero_script = ("hero-details.js?v=20260919-birth-1" if relative == "birth-of-christ.html" else "hero-details.js?v=20260914-sacred-hero-1" if relative == "atonement.html" else "hero-details.js?v=20260914-joseph-likeness-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260914-evidences-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels")
         for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260914-reopen-1", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
@@ -248,8 +248,8 @@ def main() -> int:
                 errors.append(f"{relative}: missing hero study metadata: {marker}")
         if 'data-full-image-viewer' in hero_link:
             errors.append(f"{relative}: hero must open study before full-size viewer")
-    if hero_pages != 35:
-        errors.append(f"expected35 image-first pages including404, Evidences, Joseph likeness and Atonement, found{hero_pages}")
+    if hero_pages != 36:
+        errors.append(f"expected36 image-first pages including404, Evidences, Joseph likeness, Atonement and Birth of Christ, found{hero_pages}")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):

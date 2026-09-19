@@ -2,6 +2,11 @@
     'use strict';
     if (typeof HTMLDialogElement === 'undefined' || document.getElementById('heroDetailDialog')) return;
     const records = {
+        'birth-of-christ': {
+            title: 'Mary lays her newborn Son in a manger',
+            paragraphs: ['Mary lays her swaddled newborn in a manger. This tender moment turns our attention to the birth of Jesus Christ in Bethlehem.', 'Read Luke 2:6–7, then follow the scriptural promises and witnesses surrounding His birth. The setting is an artistic interpretation of the account.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?lang=eng&id=p6-p7#p6', sourceLabel: 'Read Luke 2:6–7', study: 'birth-of-christ.html#promised-son', studyLabel: 'Begin the Birth of Christ Study'
+        },
         atonement: {
             title: 'In Gethsemane',
             paragraphs: ['Beneath the olive branches, Jesus kneels beside a rock with His hands clasped in prayer. His bowed head draws us into a quiet moment of reverence.', 'Read His prayer to the Father in Luke 22, then follow the study of His Atonement, Resurrection, and redeeming love. This scene is a devotional artistic interpretation.'],

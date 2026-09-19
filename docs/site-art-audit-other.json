@@ -1,0 +1,1675 @@
+{
+  "review_date": "2026-09-19",
+  "scope": "Read-only source/content placement audit of remaining canonical study destinations; not a new visual approval or responsive runtime check. Existing approved heroes preserved. No file mutations beyond this report.",
+  "sitemap_paths": [
+    "/",
+    "/ask.html",
+    "/answers.html",
+    "/watch.html",
+    "/art.html",
+    "/missionary.html",
+    "/church-history.html",
+    "/come-follow-me.html",
+    "/pioneers.html",
+    "/about.html",
+    "/answers/jesus-christ-latter-day-saint-beliefs.html",
+    "/answers/are-latter-day-saints-christian.html",
+    "/answers/what-is-the-book-of-mormon.html",
+    "/answers/why-latter-day-saints-build-temples.html",
+    "/answers/what-happens-after-death.html",
+    "/answers/who-was-joseph-smith.html",
+    "/answers/prayer-and-personal-revelation.html",
+    "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+    "/answers/why-families-are-important.html",
+    "/answers/what-is-eternal-marriage.html",
+    "/answers/bible-and-book-of-mormon-together.html",
+    "/answers/faith-in-jesus-christ-during-trials.html",
+    "/art-study/the-living-christ.html",
+    "/art-study/the-good-shepherd.html",
+    "/art-study/suffer-the-little-children.html",
+    "/art-study/be-still.html",
+    "/answers/death-of-a-child.html",
+    "/answers/divorce-and-faith.html",
+    "/general-conference.html",
+    "/answers/grief-and-faith.html",
+    "/answers/stand-forever.html",
+    "/answers/god-our-heavenly-father.html",
+    "/answers/restored-church-of-jesus-christ.html",
+    "/art-gallery.html",
+    "/book-of-mormon-evidences.html",
+    "/joseph-smith-likeness.html",
+    "/search.html",
+    "/atonement.html",
+    "/birth-of-christ.html"
+  ],
+  "excluded_or_other_agent_scope": [
+    "Home and utilities: ask, answers directory, watch directory, search, art/art-gallery",
+    "28 Answers destinations except requested Life resurrection cross-check",
+    "Four art-study destinations",
+    "Missionary page reviewed by another agent"
+  ],
+  "pages": [
+    {
+      "page": "church-history.html",
+      "headings": [
+        "The Face Behind the History",
+        "Explore Book of Mormon Evidences",
+        "The First Vision",
+        "Ask Church History",
+        "Joseph and Emma at Harmony",
+        "John the Baptist and the authority to baptize",
+        "Called to prepare the way",
+        "Into the waters of baptism",
+        "Joseph baptizes Oliver",
+        "Oliver baptizes Joseph",
+        "Peter, James, and John: authority and unfolding understanding",
+        "Authority to serve in Christ’s name",
+        "A ministry received by both men",
+        "Joseph receives the apostles’ ministry",
+        "Oliver receives the apostles’ ministry",
+        "Read Saints Across Four Eras",
+        "The Three Witnesses",
+        "The Standard of Truth",
+        "No Unhallowed Hand",
+        "Boldly, Nobly, and Independent",
+        "Sounded in Every Ear",
+        "The Restoration Print Shop",
+        "Kirtland: A House Built for Learning and Prayer",
+        "A house built through sacrifice",
+        "Kirtland's financial hopes and a painful failure",
+        "Faith amid financial loss",
+        "Richmond: A Voice against Cruelty",
+        "Courage in the room at Richmond",
+        "Liberty Jail: Words of Peace from a Place of Suffering",
+        "A prayer from within the walls",
+        "Bring the question into prayer",
+        "Words for a scattered people",
+        "Let suffering change how you treat others",
+        "The Nauvoo Legion: protection, public service, and tension",
+        "Responsibility in a growing city",
+        "Relief Society: Faith Organized to Care",
+        "A society ready to serve",
+        "Porter Rockwell: A Friend Recognized at the Door",
+        "Recognized and welcomed",
+        "Nauvoo: Strength for the Journey Ahead",
+        "Hope above the river",
+        "Preserving the Record",
+        "Go Deeper by Source Type",
+        "Church History Topics",
+        "First Vision",
+        "Women's History",
+        "Joseph Smith Papers Podcasts",
+        "Gospel Topics Essays",
+        "Answers to Church History Questions",
+        "Global Histories",
+        "Saints Library",
+        "History Preserved for Future Generations",
+        "Jesus Christ Across Generations",
+        "History, Pioneer Experience, and Open Study",
+        "Pioneer Faith & History",
+        "Ask Beyond History",
+        "Permanent Answers",
+        "See the setting, then read the record",
+        "Days of Harmony",
+        "Sacred Grove Historic Site, Part 1: The First Vision",
+        "Work through one historical question carefully",
+        "Place Joseph Smith in the inquiry",
+        "Explore the book and its claims",
+        "Carry these source habits into pioneer history",
+        ""
+      ],
+      "unique_img_sources": 25,
+      "images": [
+        {
+          "src": "assets/heroes/church-history.webp",
+          "alt": "A peaceful wooded grove at dawn with warm sunlight filtering through the trees"
+        },
+        {
+          "src": "assets/history/first-vision-1400.webp",
+          "alt": "Joseph Smith kneeling in a wooded grove as God the Father and Jesus Christ appear in heavenly light"
+        },
+        {
+          "src": "assets/history/joseph-emma-harmony-1400.webp",
+          "alt": "Joseph and Emma Smith working together at a table in their Harmony home"
+        },
+        {
+          "src": "assets/page-art/church-history/aaronic-priesthood-960.webp",
+          "alt": "Joseph and Oliver kneel with bowed heads as John the Baptist places a hand on each man’s head."
+        },
+        {
+          "src": "assets/page-art/church-history/joseph-baptizes-oliver-960.webp",
+          "alt": "Joseph raises his right hand while Oliver prepares for immersion in the river."
+        },
+        {
+          "src": "assets/page-art/church-history/oliver-baptizes-joseph-960.webp",
+          "alt": "Oliver supports Joseph as he leans backward toward immersion in the river."
+        },
+        {
+          "src": "assets/page-art/church-history/melchizedek-priesthood-960.webp",
+          "alt": "Joseph Smith and Oliver Cowdery stand with Peter, James, and John in a wooded setting near the Susquehanna River."
+        },
+        {
+          "src": "assets/page-art/church-history/apostles-ordain-joseph-960.webp",
+          "alt": "Peter, James, and John place their hands on Joseph’s head while Oliver stands nearby."
+        },
+        {
+          "src": "assets/page-art/church-history/apostles-ordain-oliver-960.webp",
+          "alt": "Peter, James, and John place their hands on Oliver’s head while Joseph stands nearby."
+        },
+        {
+          "src": "assets/history/three-witnesses-1400.webp",
+          "alt": "Oliver Cowdery, David Whitmer, and Martin Harris depicted at their ages in 1829"
+        },
+        {
+          "src": "assets/history/restoration-print-shop-1400.webp",
+          "alt": "Printers working at hand presses in an early nineteenth-century print shop as Jesus Christ observes"
+        },
+        {
+          "src": "assets/page-art/church-history/kirtland-temple-960.webp",
+          "alt": "Worshippers approach the Kirtland Temple along a muddy path, beneath its red roof and pale blue-gray walls."
+        },
+        {
+          "src": "assets/page-art/church-history/kirtland-bank-960.webp",
+          "alt": "Joseph studies an account book with a concerned expression, resting one hand near his forehead."
+        },
+        {
+          "src": "assets/page-art/church-history/richmond-rebuke-960.webp",
+          "alt": "Joseph stands in ankle chains and raises a hand toward armed guards while Parley Pratt and Hyrum Smith sit beside him."
+        },
+        {
+          "src": "assets/page-art/church-history/liberty-prayer-960.webp",
+          "alt": "Joseph sits among straw beneath a narrow barred window, looking upward in earnest prayer."
+        },
+        {
+          "src": "assets/page-art/church-history/liberty-letter-960.webp",
+          "alt": "Joseph studies letter pages in his hands inside the timber-lined room at Liberty Jail."
+        },
+        {
+          "src": "assets/page-art/church-history/nauvoo-legion-960.webp",
+          "alt": "Joseph, wearing a dark blue militia uniform, listens to a volunteer on a grassy parade ground."
+        },
+        {
+          "src": "assets/page-art/church-history/relief-society-960.webp",
+          "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener."
+        },
+        {
+          "src": "assets/page-art/church-history/porter-reunion-960.webp",
+          "alt": "Joseph and Porter Rockwell meet each other’s gaze as Joseph welcomes him at a doorway."
+        },
+        {
+          "src": "assets/page-art/church-history/nauvoo-temple-960.webp",
+          "alt": "The original Nauvoo Temple rises above wooden homes near the Mississippi River, with a horizontal angel weather vane on its tower."
+        },
+        {
+          "src": "assets/history/preserving-the-record-1400.webp",
+          "alt": "Jesus Christ standing beside an archivist who carefully preserves an early historical volume"
+        },
+        {
+          "src": "assets/history/christ-museum-record-1400.webp",
+          "alt": "Jesus Christ looking upon a preserved historical book displayed in a modern museum"
+        },
+        {
+          "src": "assets/history/christ-through-eras-1400.webp",
+          "alt": "Jesus Christ standing between scenes of the Restoration record and the worldwide Church"
+        },
+        {
+          "src": "assets/resources/harmony.jpg",
+          "alt": "Days of Harmony resource preview"
+        },
+        {
+          "src": "assets/resources/history-sacred-grove.jpg",
+          "alt": "Sacred Grove Historic Site, Part 1: The First Vision official video preview"
+        }
+      ],
+      "coverage_assessment": "All 11 topic-directory chapters have direct illustrations: Book of Mormon translation/Harmony; Aaronic restoration and both baptisms; Melchizedek restoration and both ordinations; Kirtland temple; Kirtland finances; Richmond; Liberty prayer and letter; Nauvoo Legion; Relief Society; Porter reunion; Nauvoo temple. First Vision and record-preservation sections also illustrated. No critical missing chapter moment.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "come-follow-me.html",
+      "headings": [
+        "He Shall Direct Thy Paths",
+        "Look for Jesus Christ",
+        "Open your study toolkit",
+        "Give one passage your full attention",
+        "What is happening here?",
+        "What helps me look to Christ?",
+        "What will I carry into today?",
+        "Seven days of scripture and discipleship",
+        "Begin",
+        "Read",
+        "Trust",
+        "Speak",
+        "Become",
+        "Ponder",
+        "Remember",
+        "One lesson, several faithful paths",
+        "Personal study",
+        "Family study",
+        "Deeper study",
+        "2026 Old Testament schedule",
+        "Let one question open a deeper journey",
+        "Look unto Me",
+        "Bring your scripture questions",
+        "Find a study for real life",
+        "Make room to watch and ponder",
+        "Connect with prophetic teaching",
+        "Slow down with an image",
+        "Turn learning into service",
+        "Follow the historical sources",
+        "Explore faith along the trail",
+        "Keep Christ at the center",
+        "Looking ahead to 2027"
+      ],
+      "unique_img_sources": 12,
+      "images": [
+        {
+          "src": "assets/page-art/come-follow-me/personal-study-2026.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/come-follow-me/family-study-2026.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/home-light-through-study-900.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/come-follow-me/old-testament-journey-2026.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/come-follow-me/personal-study-2026.webp",
+          "alt": "Hands studying an open Bible beside a notebook in early morning light"
+        },
+        {
+          "src": "assets/page-art/come-follow-me/family-study-2026.webp",
+          "alt": "A multigenerational family discussing scripture together around a table"
+        },
+        {
+          "src": "assets/page-art/come-follow-me/old-testament-journey-2026.webp",
+          "alt": "An open scroll and lamp beside an ancient path leading through olive hills at dawn"
+        },
+        {
+          "src": "assets/heroes/home-christ-signature-approved-20260907.png",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/ask.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/answers.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/watch.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/home-light-through-study-900.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/art.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/missionary.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/church-history.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/pioneers.webp",
+          "alt": ""
+        }
+      ],
+      "coverage_assessment": "Study-process destination: personal, family and Old Testament journey art plus onward thumbnails support its reading workflow. Seven day prompts and schedule do not require seven new narrative scenes. Existing repeated navigation thumbnails are not a reason to generate filler.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "pioneers.html",
+      "headings": [
+        "Ask About Pioneers",
+        "Ask About Pioneers",
+        "From Nauvoo to Winter Quarters",
+        "THE JOURNEY",
+        "The Exodus Begins - February 1846",
+        "Winter Quarters - 1846-1847",
+        "Entering the Valley - July 21-24, 1847",
+        "Pioneer Day - July 24, 1847",
+        "Temple Square Development",
+        "Salt Lake Temple Construction",
+        "Handcart Companies - 1856-1860",
+        "Transcontinental Railroad",
+        "Utah Statehood",
+        "The trail was lived one day at a time",
+        "THE TRAIL",
+        "Handcarts, hardship, and rescue",
+        "Willie & Martin Companies",
+        "Arrival was the beginning of another work",
+        "PRIMARY-SOURCE JOURNALS",
+        "Franklin D. Richards",
+        "James G. Willie",
+        "Daniel W. Jones",
+        "Carry the story into your own discipleship",
+        "Pioneers",
+        "Read a life, then consider what it asks of us",
+        "Compare evidence and accounts",
+        "Explore faith and practical support",
+        "When pioneer loss touches your own grief",
+        ""
+      ],
+      "unique_img_sources": 12,
+      "images": [
+        {
+          "src": "assets/heroes/pioneers.webp",
+          "alt": "Latter-day Saint pioneers traveling westward with handcarts and covered wagons toward distant mountains at sunrise"
+        },
+        {
+          "src": "assets/pioneers/leaving-nauvoo-800.webp",
+          "alt": "A pioneer family leaving Nauvoo with a covered wagon in winter"
+        },
+        {
+          "src": "assets/pioneers/winter-quarters-800.webp",
+          "alt": "Pioneer families building shelter at Winter Quarters"
+        },
+        {
+          "src": "assets/pioneers/life-along-trail-800.webp",
+          "alt": "Pioneers repairing a wagon, preparing food, and tending oxen beside a stream"
+        },
+        {
+          "src": "assets/pioneers/platte-river-800.webp",
+          "alt": "Separate groups of pioneer wagons traveling west beside the Platte River"
+        },
+        {
+          "src": "assets/pioneers/river-crossing-800.webp",
+          "alt": "Pioneers guiding an ox-drawn covered wagon through a rocky river"
+        },
+        {
+          "src": "assets/pioneers/handcart-journey-800.webp",
+          "alt": "A pioneer family pulling and guiding a loaded handcart across the plains"
+        },
+        {
+          "src": "assets/pioneers/rescue-wagons-800.webp",
+          "alt": "Rescuers distributing flour and blankets to handcart pioneers after an early snowfall"
+        },
+        {
+          "src": "assets/pioneers/first-view-valley-800.webp",
+          "alt": "A pioneer husband and wife overlooking the Salt Lake Valley beside their wagon and oxen"
+        },
+        {
+          "src": "assets/pioneers/building-community-800.webp",
+          "alt": "Distinct pioneer workers building homes and community structures in the Salt Lake Valley"
+        },
+        {
+          "src": "assets/pioneers/salt-lake-temple-800.webp",
+          "alt": "Distinct nineteenth-century workers constructing the Salt Lake Temple"
+        },
+        {
+          "src": "assets/resources/pioneers-modern-courage.jpg",
+          "alt": "Pioneers official video preview"
+        }
+      ],
+      "coverage_assessment": "Departure, Winter Quarters, trail life, Platte journey, river crossing, handcarts, rescue, first valley view, community building and temple construction all pictured. Railroad/statehood are brief timeline entries rather than developed unpictured story sections. No critical addition.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "book-of-mormon-evidences.html",
+      "headings": [
+        "Many paths into one remarkable record",
+        "Three ways to begin",
+        "Translation: the claim and the historical record",
+        "The work of dictation",
+        "What the Church teaches about translation",
+        "The instruments and the people in the room",
+        "The people beside the work",
+        "Martin Harris and the substituted stone",
+        "A question about the stone",
+        "Walk together and listen",
+        "The manuscripts and the earliest English text",
+        "Care for a record that will outlast you",
+        "Reading the record carefully",
+        "What survives of the original manuscript",
+        "Why a second manuscript matters",
+        "Royal Skousen's critical-text project",
+        "Careful scholarship includes editorial independence",
+        "The English Bible is part of the discussion",
+        "The work of printing and publication",
+        "From manuscript to printed page",
+        "What can the English language tell us?",
+        "Make time for the written word",
+        "Stanford Carmack: look at sentence patterns",
+        "Why unusual grammar deserves more than a joke",
+        "What the Early Modern English proposal does not claim",
+        "A serious alternative interpretation",
+        "A household that made room for the work",
+        "David's fields and the journey he wanted to make",
+        "Help for the journey",
+        "A traveler beside the wagon",
+        "An offer of hospitality",
+        "Mary's work and her own witness",
+        "Encouragement amid the work",
+        "The witnesses: read the claims in their own words",
+        "Three witnesses, distinct voices",
+        "The Three Witnesses: read the statement and its history",
+        "The Eight Witnesses: a different kind of testimony",
+        "Continuing testimony and differing recollections",
+        "Literary patterns: read, compare, and test",
+        "A book that rewards a second reading",
+        "Hope in a prayer for mercy",
+        "Alma 36: turning toward Christ at the center",
+        "How strong is the proposed pattern?",
+        "Voices and records within the book",
+        "Let a careful question guide the comparison",
+        "Receive the voices of the record",
+        "Can a computer recognize different voices?",
+        "Names that invite a closer reading",
+        "Records within a record",
+        "Ancient context: journeys, names, and material records",
+        "Faith along an uncertain road",
+        "Follow the text before drawing a map",
+        "Nahom: a real inscription and a proposed connection",
+        "The eastward turn and Bountiful",
+        "Hope beside the sea",
+        "Words worth preserving",
+        "Writing sacred words on metal",
+        "Names: a promising field that needs careful controls",
+        "Hebrew and Egyptian proposals",
+        "Archaeology, populations, and questions still open",
+        "Archaeology in the Americas",
+        "Horses: distinguish new discoveries from the wrong time period",
+        "Metals: the material, technique, and date all matter",
+        "DNA: evidence about populations and limits on identification",
+        "Let the study lead you toward Jesus Christ",
+        "Bring the question to God",
+        "A welcome for the one",
+        "The witness the book invites each reader to seek",
+        "At a child’s level",
+        "A welcome that becomes personal",
+        "Be present with the person before you",
+        "A careful way to continue",
+        "Make room to learn together",
+        "Questions for personal study or a conversation",
+        "Source library",
+        "Hear the history and the witness",
+        "Episode 12—The Book of Mormon Translation",
+        "The Book of Mormon Is Tangible Evidence of the Restoration",
+        "The Title Page and Translation of the Book of Mormon",
+        "Keep studying with a question that matters to you"
+      ],
+      "unique_img_sources": 27,
+      "images": [
+        {
+          "src": "assets/page-art/bom-evidences/hero.webp",
+          "alt": "Jesus Christ exchanging an attentive gaze with a woman in a gathered group"
+        },
+        {
+          "src": "assets/page-art/bom-evidences/translation-960.webp",
+          "alt": "Joseph attends to the hat while Oliver listens and writes."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/josephemma-960.webp",
+          "alt": "Emma pauses with her quill as she and Joseph share a warm glance."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/josephmartin-960.webp",
+          "alt": "Martin holds a stone as Joseph turns toward him with a questioning expression."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/joseph-emma-walk-960.webp",
+          "alt": "Joseph and Emma share a warm glance as they walk along a quiet path."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/preservation-960.webp",
+          "alt": "Hands draw a cloth around a record of metal leaves."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/manuscripts-960.webp",
+          "alt": "Reading the record carefully. Open manuscripts lie side by side as a reader studies their pages in warm daylight."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/printing-960.webp",
+          "alt": "A printer arranges small pieces of type with ink-marked hands."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/josephbible-960.webp",
+          "alt": "Joseph studies an open Bible with a writing tool close at hand."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/whitmer-fields-960.webp",
+          "alt": "David pauses beside a fence with a parked plow in the field behind him."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/whitmer-traveler-960.webp",
+          "alt": "Joseph turns from the wagon to meet an older traveler’s gaze while Oliver listens and David drives."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/mary-whitmer-witness-960.webp",
+          "alt": "Mary watches an older visitor turn a leaf of the plates beside the barn."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/witnesses-960.webp",
+          "alt": "Oliver Cowdery, David Whitmer, and Martin Harris pause in an imagined conversation."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/alma36prayer-960.webp",
+          "alt": "Hope in a prayer for mercy. A man pauses in prayer, his expression opening toward hope."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/statistical-study-960.webp",
+          "alt": "A reader compares a book, notes, and an illustrative scatterplot."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/records-voices-960.webp",
+          "alt": "Receive the voices of the record. A reader attends closely to a record held in his hands."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/desertjourney-960.webp",
+          "alt": "Faith along an uncertain road. Travelers move together through a rugged landscape, carrying what they need for the next part of the journey."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/bountiful-960.webp",
+          "alt": "A green coastal inlet opens between rugged hills and quiet water."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/ancientmetalrecords-960.webp",
+          "alt": "Words worth preserving. Hands guide an engraving tool across a metal sheet."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/josephprayer-960.webp",
+          "alt": "An adult Joseph bows in a quiet place of prayer."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/christwelcome-960.webp",
+          "alt": "A welcome for the one. Jesus Christ meets an older man with attentive warmth."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/christchildren-960.webp",
+          "alt": "At a child’s level. Jesus Christ bends to meet a young girl at her level while an attentive woman stands nearby."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/christ-compassion-960.webp",
+          "alt": "Jesus Christ bends toward an older woman and meets her gaze with quiet compassion."
+        },
+        {
+          "src": "assets/page-art/bom-evidences/modernstudy-960.webp",
+          "alt": "Make room to learn together. Three people share a quiet moment around an open book, with a notebook close at hand."
+        },
+        {
+          "src": "assets/resources/bom-evidences-translation-documentary.jpg",
+          "alt": "Episode 12—The Book of Mormon Translation — official video preview"
+        },
+        {
+          "src": "assets/resources/bom-evidences-restoration-conversation.jpg",
+          "alt": "The Book of Mormon Is Tangible Evidence of the Restoration — official video preview"
+        },
+        {
+          "src": "assets/resources/bom-evidences-title-page.jpg",
+          "alt": "The Title Page and Translation of the Book of Mormon — official video preview"
+        }
+      ],
+      "coverage_assessment": "Translation, witnesses, manuscript/printing, language study, Whitmer household, literary reading, internal voices, ancient journey/coast/records and devotional conclusion have extensive relevant imagery. Archaeology/DNA section is an evidence discussion; invented archaeological scene could falsely imply proof. No critical addition.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "joseph-smith-likeness.html",
+      "headings": [
+        "History has a human face",
+        "A moment of warmth",
+        "The death masks",
+        "Joseph on the left. Hyrum on the right.",
+        "Joseph beside his own death mask",
+        "Hyrum beside his own death mask",
+        "Beside my brother",
+        "Joseph sat for a portrait",
+        "Sitting in the light",
+        "How we developed the focusChrist portrait",
+        "A quiet page",
+        "A face changes when a person speaks",
+        "Across the table",
+        "Keep exploring Joseph Smith"
+      ],
+      "unique_img_sources": 10,
+      "images": [
+        {
+          "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+          "alt": "The artistic Joseph Smith portrait adopted by focusChrist, with light brown hair, a white neckcloth and a dark coat"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/warmth-960.webp",
+          "alt": "An artistic interpretation of Joseph Smith resting a hand on a wooden fence in warm daylight"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/museum-dibble-masks.jpg",
+          "alt": "Museum photograph of the Dibble death masks: Joseph Smith on the left and Hyrum Smith on the right"
+        },
+        {
+          "src": "assets/identities/joseph-smith-owner-approved-20260914.png",
+          "alt": "The adopted artistic portrait of Joseph Smith"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/joseph-death-mask.jpg",
+          "alt": "Frontal museum photograph of Joseph Smith’s Dibble death mask"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/hyrum-reconstruction.png",
+          "alt": "Artistic reconstruction of Hyrum Smith at age forty-four"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/hyrum-death-mask.jpg",
+          "alt": "Frontal museum photograph of Hyrum Smith’s Dibble death mask"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/brothers-960.webp",
+          "alt": "Joseph smiles at Hyrum with an arm around his shoulders; both wear shirts with rolled sleeves and suspenders"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp",
+          "alt": "An imagined Joseph Smith portrait sitting, with an artist’s blurred hand in the foreground"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/writing-960.webp",
+          "alt": "An artistic interpretation of Joseph Smith writing beside a sunlit window"
+        },
+        {
+          "src": "assets/page-art/joseph-smith-likeness/conversation-960.webp",
+          "alt": "An artistic interpretation of Joseph Smith speaking with two unnamed listeners around a table"
+        }
+      ],
+      "coverage_assessment": "Actual documentary masks, adopted portrait and separate warmth/brothers/portrait-sitting/writing/conversation scenes cover the argument. Comparative reuse of reference portrait is integral to likeness comparison, not a request for replacement. Preserve approved identity.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "atonement.html",
+      "headings": [
+        "Because He lives, we can begin again",
+        "Before the world: chosen from the beginning",
+        "The Beloved Son and the Father's will",
+        "The heavens above us",
+        "Creation belongs to the story",
+        "Atonement of Jesus Christ",
+        "Why we need a Savior",
+        "Mortal life, agency, and the Fall",
+        "The road through mortality",
+        "Justice and mercy",
+        "The Shepherd seeks the one",
+        "The promise reaches Adam, Eve, and the prophets",
+        "Redemption taught from the beginning",
+        "Hope beyond Eden",
+        "Enoch sees the Redeemer",
+        "The Lamb and the suffering servant",
+        "Remembering deliverance",
+        "His willing sacrifice",
+        "At the table",
+        "In remembrance of Him",
+        "In Gethsemane",
+        "Not my will, but thine",
+        "At the cross",
+        "At the cross",
+        "Those who stayed nearby",
+        "The Purifying Power of Gethsemane",
+        "None Were with Him",
+        "Lifted Up upon the Cross",
+        "Resurrection and living hope",
+        "The tomb was empty",
+        "Mary",
+        "Along the road",
+        "Resurrection",
+        "The Book of Mormon witnesses of His love",
+        "A Redeemer promised",
+        "He had compassion on them",
+        "One by one",
+        "An invitation that remains open",
+        "His living voice in the Doctrine and Covenants",
+        "Hear the Savior speak",
+        "A place in the day",
+        "Mercy reaches beyond the grave",
+        "Look unto Him",
+        "Sin, repentance, and forgiveness",
+        "Come honestly",
+        "An honest prayer",
+        "A heart can turn",
+        "Coming home",
+        "Taking a step to make things right",
+        "Repentance",
+        "Step 9: Wherever possible, make direct restitution to all persons we have harmed.",
+        "Grace and becoming new",
+        "Room for hope",
+        "Listen to Him",
+        "The Gift of Grace",
+        "Drawing the Power of Jesus Christ into Our Lives",
+        "He knows our burdens",
+        "Help on the stairs",
+        "Compassion at eye level",
+        "Stay beside me",
+        "Strengthened by the Atonement of Jesus Christ",
+        "Is It Possible to Forgive?",
+        "Remember Him each day",
+        "As I have done to you",
+        "Remember Him",
+        "Let them come",
+        "Covenants",
+        "Keep walking with Him"
+      ],
+      "unique_img_sources": 37,
+      "images": [
+        {
+          "src": "assets/heroes/atonement-gethsemane-approved-20260914.webp",
+          "alt": "Jesus Christ kneels in prayer beside a rock in a moonlit olive grove"
+        },
+        {
+          "src": "assets/page-art/atonement/creation-stars-960.webp",
+          "alt": "Stars fill the sky above still water. Let the quiet of this imagined landscape lead you to the scriptures about Jesus Christ, the Creator."
+        },
+        {
+          "src": "assets/resources/atonement-atonement-guide.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/atonement/mortal-path-960.webp",
+          "alt": "A path leads from green shelter into open, rugged country. Read Lehi’s teaching about agency and redemption."
+        },
+        {
+          "src": "assets/page-art/atonement/lost-sheep-960.webp",
+          "alt": "The sheep rests in His arms. Jesus tells of a shepherd who goes after the one that is lost."
+        },
+        {
+          "src": "assets/page-art/atonement/first-hope-960.webp",
+          "alt": "Two figures face the morning beside cultivated ground and a simple altar. This imagined scene of Adam and Eve invites us to read the promise of redemption they received."
+        },
+        {
+          "src": "assets/page-art/atonement/passover-table-960.webp",
+          "alt": "Bread, herbs, a cup, and a lamp invite a pause to remember Passover. This symbolic still life leads to the account of deliverance and to Jesus Christ, the Lamb of God."
+        },
+        {
+          "src": "assets/page-art/atonement/bread-cup-960.webp",
+          "alt": "Bread and a cup rest on a quiet table. Return to the Savior’s words at the Last Supper."
+        },
+        {
+          "src": "assets/page-art/atonement/gethsemane-v2-960.webp",
+          "alt": "Under the olive trees, Jesus bows in prayer. Read His words to the Father."
+        },
+        {
+          "src": "assets/page-art/atonement/cross-rear-approved-960.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/atonement/cross-rear-approved-960.webp",
+          "alt": "From above and behind the cross, we look toward the people gathered below and Jerusalem beyond. John records the Savior’s love and His finished work."
+        },
+        {
+          "src": "assets/page-art/atonement/cross-angled-rear-approved-960.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/atonement/cross-angled-rear-approved-960.webp",
+          "alt": "From beside and behind the cross, we see those who have stayed nearby. John records the Savior’s tender care for His mother and the beloved disciple."
+        },
+        {
+          "src": "assets/resources/atonement-purifying-power.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/resources/atonement-none-were-with-him.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/resources/atonement-lifted-up.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/atonement/empty-tomb-960.webp",
+          "alt": "Morning light enters a rock-cut tomb. Read the witnesses’ accounts of the risen Savior."
+        },
+        {
+          "src": "assets/page-art/atonement/mary-risen-960.webp",
+          "alt": "A woman turns toward the risen Jesus in a garden. John records that He called Mary by name."
+        },
+        {
+          "src": "assets/page-art/atonement/emmaus-v2-960.webp",
+          "alt": "Jesus walks beside two listeners on a country road. Read how He opened the scriptures to the disciples traveling to Emmaus."
+        },
+        {
+          "src": "assets/resources/atonement-resurrection.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/atonement/one-by-one-960.webp",
+          "alt": "Jesus leans toward an older woman as others wait nearby. Read of His compassion and healing among the people in the Book of Mormon."
+        },
+        {
+          "src": "assets/page-art/atonement/daily-scripture-960.webp",
+          "alt": "An open book and notebook sit before a thoughtful reader. Choose a passage and linger with it."
+        },
+        {
+          "src": "assets/page-art/atonement/prayer-return-960.webp",
+          "alt": "A man bows his head in the quiet of his home. There is room to speak honestly with God."
+        },
+        {
+          "src": "assets/page-art/atonement/father-welcome-960.webp",
+          "alt": "An elderly father holds his returning son. Read the parable Jesus told about repentance and welcome."
+        },
+        {
+          "src": "assets/page-art/atonement/restitution-960.webp",
+          "alt": "Two neighbors exchange a tool at a workshop door. Consider the practical work of making amends."
+        },
+        {
+          "src": "assets/resources/atonement-repentance.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/resources/atonement-make-amends.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/atonement/new-heart-960.webp",
+          "alt": "A woman sits with open scriptures and a quiet expression of gratitude. Consider the change Christ can bring to a heart."
+        },
+        {
+          "src": "assets/page-art/atonement/teaching-grace-v2-960.webp",
+          "alt": "Jesus speaks while those around Him listen. Bring a question to His teachings."
+        },
+        {
+          "src": "assets/resources/atonement-gift-of-grace.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/resources/atonement-drawing-power.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/atonement/helping-burden-960.webp",
+          "alt": "Neighbors carry bags together. Bearing another person’s burden often begins with ordinary help."
+        },
+        {
+          "src": "assets/page-art/atonement/healing-v2-960.webp",
+          "alt": "Jesus attends to an older man. The Gospels describe His compassion for those who needed Him."
+        },
+        {
+          "src": "assets/page-art/atonement/grief-companionship-960.webp",
+          "alt": "A woman rests her hand on another woman’s arm as she weeps. Presence can be a quiet gift in grief."
+        },
+        {
+          "src": "assets/resources/atonement-strengthened.jpg",
+          "alt": ""
+        },
+        {
+          "src": "assets/page-art/atonement/servant-960.webp",
+          "alt": "Jesus kneels with a basin and towel. He asks His disciples to follow His example of service."
+        },
+        {
+          "src": "assets/page-art/atonement/sacrament-remembrance-960.webp",
+          "alt": "Water cups wait on the sacrament table. Read the prayer that asks us to remember Jesus Christ."
+        },
+        {
+          "src": "assets/page-art/atonement/children-welcome-960.webp",
+          "alt": "Jesus welcomes a child and an accompanying adult. Read His invitation to let children come to Him."
+        },
+        {
+          "src": "assets/resources/atonement-covenants.jpg",
+          "alt": ""
+        }
+      ],
+      "coverage_assessment": "Resurrection has empty tomb, Mary encountering risen Christ, Emmaus road and official Resurrection resource. Broader sacrifice and compassion chapters are well illustrated. No critical unpictured Resurrection event within the page narrative; adding Ascension, breakfast by sea or another witness merely expands scope.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "headings": [
+        "Christ Meets Us in Grief",
+        "Christ listens to Martha",
+        "Mary Magdalene Sees the Living Lord",
+        "Morning at the empty tomb",
+        "Mary recognizes the risen Savior",
+        "A witness that reaches into personal loss",
+        "And There Shall Be No More Death",
+        "Everyone Will Be Resurrected",
+        "Peace among the disciples",
+        "Thomas and the witness we receive",
+        "An invitation to Thomas",
+        "What Happens Between Death and Resurrection?",
+        "Hope between death and resurrection",
+        "Christ's work reaches those who have died",
+        "The Redemption of the Dead and the Testimony of Jesus",
+        "The Vision of the Redemption of the Dead",
+        "Resurrection, Judgment, and Eternal Life",
+        "Bring questions to the reading together",
+        "What do the kingdoms of glory teach us?",
+        "Kingdoms of Glory",
+        "Jesus Christ Ministers in the Book of Mormon",
+        "One by one, they come to Him",
+        "One by one",
+        "He teaches a life shaped by mercy",
+        "Blessed are the merciful",
+        "He receives the sick and afflicted",
+        "He healed them every one",
+        "He kneels and prays for them",
+        "He prayed for them",
+        "He blesses the children individually",
+        "A blessing for each child",
+        "He gives bread and fills their souls",
+        "He gives bread and fills their souls",
+        "He asks that the resurrection witness be recorded",
+        "Preserving the resurrection witness",
+        "He listens to the disciples' desires",
+        "The desire to keep serving",
+        "Watch these moments and return to the text",
+        "Jesus Christ Appears at the Temple | 3 Nephi 11:1–17",
+        "Jesus Christ Prays and Angels Minister to the Children | 3 Nephi 17:11–25",
+        "Walk with Christ While You Wait",
+        "Known in the breaking of bread",
+        "Hold hope and remembrance together",
+        "If you are reading while grieving",
+        "Let hope become a kindness",
+        "Use the time we have today",
+        "Doors of Death",
+        "Hope in Christ in Our Personal Circumstances",
+        "When a loved one's place is empty",
+        "Companionship in grief",
+        "When illness changes the day",
+        "Presence during illness",
+        "When loneliness makes life feel smaller",
+        "A conversation on the bench",
+        "When you are carrying someone else's needs",
+        "Rest for the caregiver",
+        "When the future is uncertain",
+        "Hope when the way is unclear",
+        "Official Sources and Further Study",
+        "Our Father’s Glorious Plan",
+        "Trust in the Lord",
+        "Where would you like to go next?",
+        "Families and eternity",
+        "Faith during trials",
+        "When a child has died",
+        "Why temple service includes the dead"
+      ],
+      "unique_img_sources": 32,
+      "images": [
+        {
+          "src": "../assets/page-art/life-after-death/martha-800.webp",
+          "alt": "Jesus listens to Martha outside Bethany as she speaks with Him after Lazarus’s death."
+        },
+        {
+          "src": "../assets/page-art/topics/garden-tomb-800.webp",
+          "alt": "Interpretive illustration of an open empty rock-cut tomb in a garden"
+        },
+        {
+          "src": "../assets/page-art/life-after-death/mary-800.webp",
+          "alt": "Mary Magdalene faces the risen Jesus in a garden near the tomb."
+        },
+        {
+          "src": "../assets/resources/unique-no-more-death.jpg",
+          "alt": "Elder Paul V. Johnson speaking in April 2016"
+        },
+        {
+          "src": "../assets/page-art/life-after-death/peace-800.webp",
+          "alt": "The risen Jesus addresses gathered disciples and shows His healed hands."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/thomas-800.webp",
+          "alt": "Jesus offers His hand as Thomas listens and looks into His face."
+        },
+        {
+          "src": "../assets/page-art/exclusive/life-after-death-careful-reading-800.webp",
+          "alt": "An older man pausing over an open book in a quiet garden"
+        },
+        {
+          "src": "../assets/resources/life-after-death/redemption-dead-testimony-jesus.jpg",
+          "alt": "D. Todd Christofferson speaking at general conference in October 2000"
+        },
+        {
+          "src": "../assets/resources/life-after-death/vision-redemption-dead.jpg",
+          "alt": "M. Russell Ballard speaking at general conference in October 2018"
+        },
+        {
+          "src": "../assets/page-art/exclusive/life-after-death-shared-questions-800.webp",
+          "alt": "Three generations discussing a question from a shared reading"
+        },
+        {
+          "src": "../assets/resources/life-after-death/kingdoms-of-glory.jpg",
+          "alt": "Dallin H. Oaks speaking at general conference in October 2023"
+        },
+        {
+          "src": "../assets/page-art/life-after-death/nephi-witness-800.webp",
+          "alt": "The risen Christ offers His hand to a man among the people at Bountiful."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/nephi-teaching-800.webp",
+          "alt": "Jesus teaches a gathering of adults and children, looking toward a listener."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/nephi-healing-800.webp",
+          "alt": "Christ meets the gaze of a seated woman and rests a hand on her shoulder."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/nephi-prayer-800.webp",
+          "alt": "Jesus kneels upon the earth in prayer among kneeling adults and children."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/nephi-children-800.webp",
+          "alt": "Jesus blesses a child while other children and a parent wait nearby."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/nephi-bread-800.webp",
+          "alt": "Christ gives broken bread to a standing disciple as others receive bread behind them."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/nephi-records-800.webp",
+          "alt": "Jesus speaks with Nephi over an ancient record while disciples listen."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/nephi-three-800.webp",
+          "alt": "Christ turns toward three disciples in an attentive conversation."
+        },
+        {
+          "src": "../assets/resources/life-after-death/christ-at-temple.jpg",
+          "alt": "Jesus Christ with open arms in an official Book of Mormon video scene"
+        },
+        {
+          "src": "../assets/resources/life-after-death/christ-prays-children.jpg",
+          "alt": "Angels descending toward a gathered crowd in an official Book of Mormon video scene"
+        },
+        {
+          "src": "../assets/page-art/life-after-death/emmaus-800.webp",
+          "alt": "Jesus breaks bread at a table with two disciples in Emmaus."
+        },
+        {
+          "src": "../assets/page-art/exclusive/life-after-death-remembrance-800.webp",
+          "alt": "A grandmother sharing a keepsake and a memory with her grandson"
+        },
+        {
+          "src": "../assets/page-art/exclusive/life-after-death-ordinary-kindness-800.webp",
+          "alt": "A neighbor helping care for a small herb garden"
+        },
+        {
+          "src": "../assets/resources/unique-doors-death.jpg",
+          "alt": "Elder Russell M. Nelson speaking in April 1992"
+        },
+        {
+          "src": "../assets/page-art/life-after-death/modern-grief-800.webp",
+          "alt": "Devotional artwork of the risen Christ listening to a woman holding a keepsake box and photograph."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/modern-illness-800.webp",
+          "alt": "Devotional artwork of Christ sitting beside a man in a treatment chair, meeting his gaze."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/modern-loneliness-800.webp",
+          "alt": "Devotional artwork of Christ speaking with an older man on a park bench."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/modern-caregiver-800.webp",
+          "alt": "Devotional artwork of Christ listening across a kitchen table to a tired caregiver."
+        },
+        {
+          "src": "../assets/page-art/life-after-death/modern-uncertainty-800.webp",
+          "alt": "Devotional artwork of Christ speaking with a young man beside a desk in his apartment."
+        },
+        {
+          "src": "../assets/resources/life-after-death/our-fathers-glorious-plan.jpg",
+          "alt": "Weatherford T. Clayton speaking at general conference in April 2017"
+        },
+        {
+          "src": "../assets/resources/life-after-death/trust-in-the-lord.jpg",
+          "alt": "Dallin H. Oaks speaking at general conference in October 2019"
+        }
+      ],
+      "coverage_assessment": "Resurrection witnesses include Mary, gathered disciples, Thomas and Emmaus table; extensive distinct 3 Nephi encounters plus modern applications. Intermediate state/judgment sections use reading and family discussion art deliberately. No critical gap; do not add speculative literal depictions of kingdoms or the spirit world for count.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "birth-of-christ.html",
+      "headings": [
+        "The Promised Son",
+        "Isaiah brings the promise to Ahaz",
+        "Bethlehem in the promise",
+        "Witnesses across the Book of Mormon",
+        "The mother and child Nephi saw",
+        "An angel awakens Benjamin",
+        "Alma teaches of the coming Savior",
+        "Samuel promises the signs",
+        "Watch Samuel announce the signs",
+        "Samuel Prophesies the Signs of Christ's Birth and Death",
+        "A People Prepared for the Lord",
+        "Gabriel speaks to Zacharias",
+        "A name, a birth, and a voice of praise",
+        "His name is John",
+        "Mary Hears and Responds",
+        "Mary receives Gabriel’s message",
+        "Mary and Elisabeth rejoice together",
+        "Mary magnifies the Lord",
+        "Return to the announcement",
+        "Mary, the Mother of Jesus",
+        "Joseph Responds, and the Family Travels",
+        "Joseph receives reassurance in a dream",
+        "The journey to Bethlehem",
+        "The Savior Is Born",
+        "A film to accompany your reading",
+        "The Christ Child",
+        "Good News Reaches the Shepherds",
+        "Good tidings to the shepherds",
+        "The shepherds find the child",
+        "Simeon and Anna Recognize the Savior",
+        "Simeon receives the child",
+        "Anna gives thanks and bears witness",
+        "See the temple witness in context",
+        "The Christ Child Is Presented at the Temple",
+        "Worship, Warning, and Care for the Child",
+        "The wise men worship in the house",
+        "Joseph takes the family away by night",
+        "A home in Nazareth",
+        "The Promised Sign Comes",
+        "Nephi prays for his people",
+        "A night as light as day",
+        "Samuel the Lamanite's Prophecy Fulfilled",
+        "The Light and the Life of the World",
+        "The Word Was Made Flesh",
+        "Read and watch with the scriptures open",
+        "The Everlasting Light",
+        "Christmas’s Greatest Gift",
+        "Continue with Jesus Christ",
+        "His Atonement",
+        "The Book of Mormon's witness",
+        "Life after death",
+        "Prayer and personal revelation"
+      ],
+      "unique_img_sources": 31,
+      "images": [
+        {
+          "src": "assets/page-art/birth-of-christ/12-nativity-hero-full.webp",
+          "alt": "Mary lays her swaddled newborn in a manger while Joseph watches nearby."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/01-isaiah-ahaz-800.webp",
+          "alt": "Isaiah speaks with Ahaz beside the water conduit, with Isaiah’s son nearby."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/02-bethlehem-800.webp",
+          "alt": "A small stone settlement rests among the hills and olive trees of Judea."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/03-nephi-vision-800.webp",
+          "alt": "Mary cradles the infant Jesus and looks into His eyes."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/04-benjamin-angel-800.webp",
+          "alt": "Benjamin sits up from his resting mat and listens to an angel."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/05-alma-teaches-800.webp",
+          "alt": "Alma speaks with a small group who listen closely to him."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/06-samuel-wall-800.webp",
+          "alt": "Samuel stands on the city wall and speaks to listeners below."
+        },
+        {
+          "src": "assets/resources/birth-of-christ/samuel-signs.jpg",
+          "alt": "Samuel raises his hand while preaching from the city wall in the Book of Mormon video."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/07-zacharias-800.webp",
+          "alt": "Gabriel addresses Zacharias beside the altar of incense."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/21-john-naming-800.webp",
+          "alt": "Zacharias sits with a writing tablet as Elisabeth holds their newborn son."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/08-annunciation-800.webp",
+          "alt": "Mary listens to Gabriel in a modest room."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/09-mary-elisabeth-800.webp",
+          "alt": "Mary and Elisabeth greet one another, holding each other’s arms."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/22-mary-praise-800.webp",
+          "alt": "Mary lifts her eyes and opens her hands in grateful praise."
+        },
+        {
+          "src": "assets/resources/birth-of-christ/mary-mother-jesus.jpg",
+          "alt": "Mary in a blue-gray head covering in the Church Bible video."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/10-joseph-dream-800.webp",
+          "alt": "Joseph sleeps as an angel speaks in a dream."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/11-journey-bethlehem-800.webp",
+          "alt": "Mary and Joseph walk a rocky road through the hills."
+        },
+        {
+          "src": "assets/resources/birth-of-christ/christ-child.jpg",
+          "alt": "Mary and Joseph with the infant Jesus in the Church film The Christ Child."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/13-shepherds-message-800.webp",
+          "alt": "An angel addresses shepherds among their sheep, with a heavenly host behind him."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/14-shepherds-find-800.webp",
+          "alt": "Shepherds enter and find Mary, Joseph, and the infant lying in a manger."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/15-simeon-800.webp",
+          "alt": "Simeon holds the infant Jesus and speaks with Mary as Joseph listens."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/16-anna-800.webp",
+          "alt": "Anna speaks to a woman in the temple precinct while Mary holds Jesus nearby."
+        },
+        {
+          "src": "assets/resources/birth-of-christ/presented-temple.jpg",
+          "alt": "Mary holding the infant Jesus beside Joseph outside the temple in the Church Bible video."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/17-magi-house-800.webp",
+          "alt": "Wise men kneel with gifts before Mary and the young child in a house."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/18-egypt-800.webp",
+          "alt": "Joseph and Mary travel at night while Mary carries the child close to her."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/23-nazareth-return-800.webp",
+          "alt": "Joseph carries the young Jesus beside Mary at a village doorway."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/19-nephi-prays-800.webp",
+          "alt": "Nephi kneels alone and looks upward as the day draws on."
+        },
+        {
+          "src": "assets/page-art/birth-of-christ/20-night-light-800.webp",
+          "alt": "People look across a brightly lit settlement beneath a sky with a small new star."
+        },
+        {
+          "src": "assets/resources/birth-of-christ/samuel-fulfilled.jpg",
+          "alt": "A man looks upward in a Church dramatization of the promised birth sign."
+        },
+        {
+          "src": "assets/resources/birth-of-christ/light-life-world.jpg",
+          "alt": "David A. Bednar speaking at the Christmas devotional."
+        },
+        {
+          "src": "assets/resources/birth-of-christ/everlasting-light.jpg",
+          "alt": "Susan H. Porter speaking at the Christmas devotional."
+        },
+        {
+          "src": "assets/resources/birth-of-christ/greatest-gift.jpg",
+          "alt": "José A. Teixeira speaking at a Christmas-decorated lectern."
+        }
+      ],
+      "coverage_assessment": "23 final unique scenes independently reviewed separately; no additional story gap identified within current scope.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "general-conference.html",
+      "headings": [
+        "Six paths into the messages",
+        "Receive a message with prayerful attention",
+        "Prayer and peace",
+        "Ministering with love",
+        "Enduring and becoming",
+        "Hope in the risen Christ",
+        "Becoming a peacemaker",
+        "Marriage and Christlike growth",
+        "Pause for prayer before moving on",
+        "Bring your study into prayer",
+        "Find your next message",
+        "Introduction",
+        "Solemn Assembly",
+        "About His Business",
+        "Ministering—“That Ye Love One Another; as I Have Loved You”",
+        "Come Home",
+        "All Who Have Endured Valiantly",
+        "Follow the Prophet; He Knows the Way",
+        "Tithing—Putting God First",
+        "Prayers for Peace",
+        "Sustaining of General Authorities, Area Seventies, and General Officers",
+        "Church Auditing Department Report, 2025",
+        "Lost Luggage, Redeemed Souls",
+        "Christ—Author and Finisher of Our Faith",
+        "“I Will Give Away All My Sins to Know Thee”",
+        "Jesus Christ Is Not Our Burden; He Is Our Relief",
+        "Love All; Love Each",
+        "Jesus Christ Is the Way",
+        "He Knows You by Name",
+        "Jesus Christ—the True Vine",
+        "Encounter at the Empty Tomb",
+        "Best Days and Worst Days",
+        "I Feel My Savior’s Love",
+        "Choose Jesus Christ as Your Guide",
+        "He Is Risen",
+        "Because of Jesus Christ",
+        "The Joy of a Covenant Relationship with God",
+        "A Peculiar Treasure",
+        "Alive in Christ",
+        "The Character of Christ",
+        "Remember, Remember",
+        "I Glory in My Jesus",
+        "“Here Am I, Send Me”",
+        "Eternal Marriage Is an Eternal Journey",
+        "Keys, Covenants, and Easter",
+        "Come unto Christ—Together",
+        "’Tis Eastertide: No One Walks Alone",
+        "Closing Remarks",
+        "One message. One meaningful step.",
+        "Choose one response together",
+        "Notice the witness of Christ",
+        "Study beyond a sentence",
+        "Make room for action",
+        "Enduring voices for deeper study",
+        "Return with a question",
+        "Elder David A. Bednar",
+        "Elder Kevin G. Brown",
+        "President Russell M. Nelson",
+        "President Thomas S. Monson",
+        "Elder Lawrence E. Corbridge",
+        "Explore more of focusChrist",
+        "Let study lead toward care",
+        "Come, Follow Me",
+        "Look Unto Me",
+        "Ask a question",
+        "Gospel answers",
+        "Watch and listen",
+        "Christ-centered art",
+        "Mission and service",
+        "Church history",
+        "Pioneer stories"
+      ],
+      "unique_img_sources": 54,
+      "images": [
+        {
+          "src": "assets/page-art/come-follow-me/personal-study-2026.webp",
+          "alt": "An open Bible and notebook in warm morning light"
+        },
+        {
+          "src": "assets/page-art/exclusive/conference-message-notes-800.webp",
+          "alt": "A woman listening to a message with a notebook ready"
+        },
+        {
+          "src": "assets/resources/conference-2026/19eyring.jpg",
+          "alt": "By President Henry B. Eyring — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/14yee.jpg",
+          "alt": "By Sister Kristin M. Yee — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/16bednar.jpg",
+          "alt": "By Elder David A. Bednar — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/41uchtdorf.jpg",
+          "alt": "By President Dieter F. Uchtdorf — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/49oaks.jpg",
+          "alt": "By President Dallin H. Oaks — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/55andersen.jpg",
+          "alt": "By Elder Neil L. Andersen — official message preview"
+        },
+        {
+          "src": "assets/page-art/exclusive/conference-study-prayer-800.webp",
+          "alt": "A woman pausing in prayer after study at her dining table"
+        },
+        {
+          "src": "assets/resources/conference-2026/11oaks.jpg",
+          "alt": "By President Dallin H. Oaks — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/12christofferson.jpg",
+          "alt": "Presented by President D. Todd Christofferson — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/13kearon.jpg",
+          "alt": "By Elder Patrick Kearon — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/14yee.jpg",
+          "alt": "By Sister Kristin M. Yee — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/15gilbert.jpg",
+          "alt": "By Elder Clark G. Gilbert — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/16bednar.jpg",
+          "alt": "By Elder David A. Bednar — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/17teh.jpg",
+          "alt": "By Elder Michael John U. Teh — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/18becerra.jpg",
+          "alt": "By Elder Jorge T. Becerra — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/19eyring.jpg",
+          "alt": "By President Henry B. Eyring — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/21christofferson.jpg",
+          "alt": "Presented by President D. Todd Christofferson — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/22larson.jpg",
+          "alt": "Presented by Jared B. Larson — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/23stevenson.jpg",
+          "alt": "By Elder Gary E. Stevenson — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/24ortega.jpg",
+          "alt": "By Elder Eduardo F. Ortega — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/25wu.jpg",
+          "alt": "By Elder Wan-Liang Wu — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/26wunderli.jpg",
+          "alt": "By Brother David J. Wunderli — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/27causse.jpg",
+          "alt": "By Elder Gérald Caussé — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/28holmes.jpg",
+          "alt": "By Elder Brian J. Holmes — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/29matswagothata.jpg",
+          "alt": "By Elder Clement M. Matswagothata — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/210soares.jpg",
+          "alt": "By Elder Ulisses Soares — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/41uchtdorf.jpg",
+          "alt": "By President Dieter F. Uchtdorf — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/42freeman.jpg",
+          "alt": "By President Emily Belle Freeman — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/43larreal.jpg",
+          "alt": "By Elder Pedro X. Larreal — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/44rowe.jpg",
+          "alt": "By Elder Edward B. Rowe — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/45rasband.jpg",
+          "alt": "By Elder Ronald A. Rasband — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/46renlund.jpg",
+          "alt": "By Elder Dale G. Renlund — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/47mutombo.jpg",
+          "alt": "By Elder Thierry K. Mutombo — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/48walker.jpg",
+          "alt": "By Elder Alan R. Walker — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/49oaks.jpg",
+          "alt": "By President Dallin H. Oaks — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/51christofferson.jpg",
+          "alt": "By President D. Todd Christofferson — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/52wong.jpg",
+          "alt": "By Elder Chi Hong (Sam) Wong — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/53hall.jpg",
+          "alt": "By Elder Aaron T. Hall — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/54porter.jpg",
+          "alt": "By President Susan H. Porter — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/55andersen.jpg",
+          "alt": "By Elder Neil L. Andersen — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/56cook.jpg",
+          "alt": "By Elder Quentin L. Cook — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/57wakolo.jpg",
+          "alt": "By Elder Taniela B. Wakolo — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/58gong.jpg",
+          "alt": "By Elder Gerrit W. Gong — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/59oaks.jpg",
+          "alt": "By President Dallin H. Oaks — official message preview"
+        },
+        {
+          "src": "assets/page-art/exclusive/conference-response-together-800.webp",
+          "alt": "Four friends discussing what they noticed in a shared study"
+        },
+        {
+          "src": "assets/page-art/exclusive/conference-return-question-800.webp",
+          "alt": "An older woman returning to her notes and a complete message"
+        },
+        {
+          "src": "assets/resources/conference-2026/16bednar.jpg",
+          "alt": "By Elder David A. Bednar — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/brown-2025-testimony.jpg",
+          "alt": "By Elder Kevin G. Brown — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/nelson-2023-answer.jpg",
+          "alt": "By President Russell M. Nelson — official message preview"
+        },
+        {
+          "src": "assets/resources/conference-2026/monson-2008-joy.jpg",
+          "alt": "By President Thomas S. Monson — official message preview"
+        },
+        {
+          "src": "assets/page-art/exclusive/conference-care-followthrough-800.webp",
+          "alt": "A parent and teenager preparing coats for others to use"
+        },
+        {
+          "src": "assets/heroes/come-follow-me-2026-desktop.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/answers.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/ask.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/answers.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/watch.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/art.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/missionary.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/church-history.webp",
+          "alt": ""
+        },
+        {
+          "src": "assets/heroes/pioneers.webp",
+          "alt": ""
+        }
+      ],
+      "coverage_assessment": "Speaker/resource directory and six study paths contain numerous meaningful official previews; not a sequential narrative requiring added historical scenes.",
+      "recommendation": "No additional artwork required"
+    },
+    {
+      "page": "about.html",
+      "headings": [
+        "Help people turn toward Jesus Christ",
+        "Jesus Christ is the center",
+        "Study with clarity and source awareness",
+        "Ask",
+        "Verify",
+        "Continue",
+        "Explore the faith behind this resource",
+        "Finding Hope Through the Resurrection of Christ",
+        "Love—the Essence of the Gospel",
+        "What you can expect from a study here",
+        "See a respectful comparison in practice",
+        "See how a historical question is studied",
+        "See scripture, image, and reflection work together"
+      ],
+      "unique_img_sources": 2,
+      "images": [
+        {
+          "src": "assets/resources/about-resurrection-hope.jpg",
+          "alt": "Finding Hope Through the Resurrection of Christ official video preview"
+        },
+        {
+          "src": "assets/resources/about-love-essence.jpg",
+          "alt": "Love—the Essence of the Gospel official video preview"
+        }
+      ],
+      "coverage_assessment": "Purpose/expectations page with existing Christ-centered imagery, not an underillustrated historical narrative.",
+      "recommendation": "No additional artwork required"
+    }
+  ],
+  "critical_unpictured_story_gaps": [],
+  "recommended_new_art_count": 0,
+  "resurrection_conclusion": "Atonement and Life After Death adequately illustrate the major resurrection moments they teach. No critical addition recommended.",
+  "limits": "Counts are distinct img src strings, not unique decoded originals; hidden viewer images/resource thumbnails can contribute. Coverage judgment relies on actual headings, image placements/alt text and current content; source assets were not freshly pixel-audited in this broad pass. Existing visual defects and deferred bulk revisions are outside scope."
+}

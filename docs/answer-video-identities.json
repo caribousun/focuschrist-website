@@ -678,6 +678,99 @@
       "verified_date": "2026-09-19",
       "source_review": "docs/life-after-death-resource-review.json",
       "identity_note": "Official separately published excerpt with its own segment identity and title; footage overlaps the longer parent film already linked on Watch. This is not an alternate URL for the entire parent film."
+    },
+    "birth-samuel-signs": {
+      "kind": "video",
+      "presentation": "Book of Mormon video excerpt",
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-01-0730-samuel-prophecies-the-signs-of-christs-birth-and-death?lang=eng",
+      "title": "Samuel Prophesies the Signs of Christ's Birth and Death",
+      "video_identity": "churchofjesuschrist.org/media/video/2024-01-0730-samuel-prophecies-the-signs-of-christs-birth-and-death",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/birth-of-christ-resource-review.json",
+      "production_note": "Excerpt in the official Helaman 13–16; 3 Nephi 1 Book of Mormon Videos collection. Do not count as an independent production from other segments of that film."
+    },
+    "birth-mary-mother-jesus": {
+      "kind": "video",
+      "presentation": "Bible video",
+      "url": "https://www.churchofjesuschrist.org/study/video/bible-videos-the-life-of-jesus-christ/2011-10-027-mary-the-mother-of-jesus?lang=eng",
+      "title": "Mary, the Mother of Jesus",
+      "video_identity": "churchofjesuschrist.org/study/video/bible-videos-the-life-of-jesus-christ/2011-10-027-mary-the-mother-of-jesus",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/media/video/2011-10-0027-mary-the-mother-of-jesus?lang=eng"
+      ],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    "birth-christ-child": {
+      "kind": "video",
+      "presentation": "Church nativity film",
+      "url": "https://www.churchofjesuschrist.org/media/video/2019-09-0050-the-christ-child-a-nativity-story-lighttheworld?lang=eng",
+      "title": "The Christ Child",
+      "video_identity": "churchofjesuschrist.org/media/video/2019-09-0050-the-christ-child-a-nativity-story-lighttheworld",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    "birth-presented-temple": {
+      "kind": "video",
+      "presentation": "Bible video",
+      "url": "https://www.churchofjesuschrist.org/study/video/nativity/2011-10-006-the-christ-child-is-presented-at-the-temple?lang=eng",
+      "title": "The Christ Child Is Presented at the Temple",
+      "video_identity": "churchofjesuschrist.org/study/video/nativity/2011-10-006-the-christ-child-is-presented-at-the-temple",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    "birth-samuel-fulfilled": {
+      "kind": "video",
+      "presentation": "Church scripture video",
+      "url": "https://www.churchofjesuschrist.org/media/video/2012-08-3330-samuel-the-lamanites-prophecy-fulfilled?lang=eng",
+      "title": "Samuel the Lamanite's Prophecy Fulfilled",
+      "video_identity": "churchofjesuschrist.org/media/video/2012-08-3330-samuel-the-lamanites-prophecy-fulfilled",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    "birth-light-life-world": {
+      "kind": "video",
+      "presentation": "Christmas devotional video and text",
+      "url": "https://www.churchofjesuschrist.org/study/broadcasts/article/christmas-devotional/2015/12/the-light-and-the-life-of-the-world?lang=eng",
+      "title": "The Light and the Life of the World",
+      "video_identity": "churchofjesuschrist.org/study/broadcasts/article/christmas-devotional/2015/12/the-light-and-the-life-of-the-world",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    "birth-everlasting-light": {
+      "kind": "video",
+      "presentation": "Christmas devotional video and text",
+      "url": "https://www.churchofjesuschrist.org/study/broadcasts/christmas-devotional/2025/11/11porter?lang=eng",
+      "title": "The Everlasting Light",
+      "video_identity": "churchofjesuschrist.org/study/broadcasts/christmas-devotional/2025/11/11porter",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    "birth-greatest-gift": {
+      "kind": "video",
+      "presentation": "Christmas devotional video and text",
+      "url": "https://www.churchofjesuschrist.org/study/broadcasts/christmas-devotional/2022/12/12teixeira?lang=eng",
+      "title": "Christmas’s Greatest Gift",
+      "video_identity": "churchofjesuschrist.org/study/broadcasts/christmas-devotional/2022/12/12teixeira",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/birth-of-christ-resource-review.json"
+    },
+    "grief-freeman-covenant-relationship": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/42freeman?lang=eng",
+      "title": "Walking in Covenant Relationship with Christ",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2023/10/42freeman",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/grief-freeman-resource-review.json"
     }
   }
 }
