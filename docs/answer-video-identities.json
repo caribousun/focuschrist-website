@@ -606,6 +606,78 @@
       "title": "Jesus Christ Is Relief",
       "video_identity": "churchofjesuschrist.org/study/general-conference/2023/04/42johnson",
       "aliases": []
+    },
+    "lad-vision-redemption-dead": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/10/the-vision-of-the-redemption-of-the-dead?lang=eng",
+      "title": "The Vision of the Redemption of the Dead",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2018/10/the-vision-of-the-redemption-of-the-dead",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/life-after-death-resource-review.json"
+    },
+    "lad-trust-in-the-lord": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2019/10/17oaks?lang=eng",
+      "title": "Trust in the Lord",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2019/10/17oaks",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/life-after-death-resource-review.json"
+    },
+    "lad-kingdoms-of-glory": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/17oaks?lang=eng",
+      "title": "Kingdoms of Glory",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2023/10/17oaks",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/life-after-death-resource-review.json"
+    },
+    "lad-our-fathers-glorious-plan": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2017/04/our-fathers-glorious-plan?lang=eng",
+      "title": "Our Father’s Glorious Plan",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2017/04/our-fathers-glorious-plan",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/life-after-death-resource-review.json"
+    },
+    "lad-redemption-dead-testimony-jesus": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2000/10/the-redemption-of-the-dead-and-the-testimony-of-jesus?lang=eng",
+      "title": "The Redemption of the Dead and the Testimony of Jesus",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2000/10/the-redemption-of-the-dead-and-the-testimony-of-jesus",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/life-after-death-resource-review.json"
+    },
+    "lad-christ-at-temple": {
+      "kind": "video",
+      "presentation": "Book of Mormon video excerpt",
+      "url": "https://www.churchofjesuschrist.org/study/video/3-nephi-8-11/2022-07-0130-jesus-christ-shows-himself-at-the-temple-3-nephi-111-17-eng?lang=eng",
+      "title": "Jesus Christ Appears at the Temple | 3 Nephi 11:1–17",
+      "video_identity": "churchofjesuschrist.org/study/video/3-nephi-8-11/2022-07-0130-jesus-christ-shows-himself-at-the-temple-3-nephi-111-17-eng",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/life-after-death-resource-review.json",
+      "identity_note": "Official separately published excerpt with its own segment identity and title; footage overlaps the longer parent film already linked on Watch. This is not an alternate URL for the entire parent film."
+    },
+    "lad-christ-prays-children": {
+      "kind": "video",
+      "presentation": "Book of Mormon video excerpt",
+      "url": "https://www.churchofjesuschrist.org/study/video/3-nephi-17/2022-07-0520-jesus-christ-prays-and-angels-minister-to-the-children-3-nephi-1711-25-eng?lang=eng",
+      "title": "Jesus Christ Prays and Angels Minister to the Children | 3 Nephi 17:11–25",
+      "video_identity": "churchofjesuschrist.org/study/video/3-nephi-17/2022-07-0520-jesus-christ-prays-and-angels-minister-to-the-children-3-nephi-1711-25-eng",
+      "aliases": [],
+      "verified_date": "2026-09-19",
+      "source_review": "docs/life-after-death-resource-review.json",
+      "identity_note": "Official separately published excerpt with its own segment identity and title; footage overlaps the longer parent film already linked on Watch. This is not an alternate URL for the entire parent film."
     }
   }
 }
