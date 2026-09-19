@@ -1,0 +1,528 @@
+{
+  "reviewer": "other_study_review",
+  "scope": "Independent individual full-scene pixel review of all 19 desktop sources and all 19 mobile sources; not contact-sheet-only. Actual approved Home and Joseph references viewed immediately before candidate pairs.",
+  "owner_approved": false,
+  "browser_verified": false,
+  "rendered_css_crop_verified": false,
+  "technical_result": "pass",
+  "blocking_defects": [],
+  "boundary": "Visual technical review of source assets only; does not claim owner acceptance or browser rendering verification. Fine exact historical event facts depend on primary-source records.",
+  "records": [
+    {
+      "key": "christian",
+      "owner_approved": false,
+      "notes": "Modern young adult volunteer and older recipient exchange food with reciprocal eye contact. Distinct faces, credible hands on tray, contemporary service kitchen. Phone retains both full heads and exchange.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-001f3d54-ee0a-4119-a0a6-2477130294d1.png",
+        "sha256": "e46692d558b1e0d629b08d6e9106c7bc7120a7bc21af331fb6fe57a68170ef85",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-8ccec0fa-90c7-4a54-9b52-3e82f099dc41.png",
+        "sha256": "4c9c25be6be1ac858cb3c5a417e496f89ae02de0d84deeb4b2bdf7eef56928be",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "bible-bom",
+      "owner_approved": false,
+      "notes": "Modern adult reader looks down to open page and pointing finger. Two books remain visible with credible hands. Library and clothing contemporary; phone preserves both books and full head.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-1d43f05a-ea58-4210-bb06-f06e505c5a88.png",
+        "sha256": "cce2d4192ea330397716c0edc494d4e8fc4c97be6ce89667951af76eeffeaed0",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-ee1f9b0b-c464-4457-8bf8-b8c892b2d6ec.png",
+        "sha256": "f625763cfcb0557449db99f2670dc5c5f8c68bbe3c593a2e492fe88a78bc3e40",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "child-loss",
+      "owner_approved": false,
+      "notes": "Two adult women share restrained grief and companionship; infant cap held naturally. Companion looks to grieving woman, whose averted gaze is emotionally coherent. Phone retains cap, comforting hand and both heads.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-8f3e57a1-0642-44a0-a874-fdd518322c78.png",
+        "sha256": "27143dbf9679eb3efefd9407c011911b004e4af1edbdc819273a31a358dc4842",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-c4be88e3-ccd4-4442-aa8c-ff33fe61a277.png",
+        "sha256": "ea84ca57d101834b2220bc9e16e10402430afa2b0efb89e366ba05477edeb367",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "divorce",
+      "owner_approved": false,
+      "notes": "Adult women exchange groceries at apartment doorway. Reciprocal gaze and hand placement credible; modern clothes, moving box and quiet hopeful atmosphere. Phone preserves full figures and meaningful hands.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-cd65da9a-5832-48ea-a361-6b8f44f2ca43.png",
+        "sha256": "1a9b72985601009611b0c68acef56c26d70077bb49c718266d574188cf54fac1",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-e926c485-a7cb-4c3f-bf9f-ab6259066049.png",
+        "sha256": "4ca7591e41a3b3e798e4d796bf492eb42a1d5c5c2a8d47fe6e053cad2bf450cd",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "trials",
+      "owner_approved": false,
+      "notes": "Christ likeness recognizable in profile against Home; distinct younger modern hiker. Mutual eye contact and supporting grip credible. Symbolic mixed-era scene is intentional, not historical reconstruction. Pale closed wrist detail; no bleeding or open hole. Phone retains heads, grip and grounded feet.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-c3c107c0-4a21-4fac-9ba1-4612d3ed832c.png",
+        "sha256": "f090c4863ae9c0432c85ca7044f1633ebfcc134f63fd1f119146fa9fa281577e",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-18587a17-dcbd-4e4d-b4d5-ee3b4e32c6f9.png",
+        "sha256": "c7da5ba913f78504380267acd78a816853c48881518169dacafb05bfe3bccf92",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "father",
+      "owner_approved": false,
+      "notes": "Christ likeness recognizable against Home, teaching an older distinct listener with mutual attention. Woven robes, pottery, oil lamps and stone room visually plausible. Pre-Resurrection hands uninjured. Phone retains heads and teaching hand.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-024e60b7-01fd-468c-aa4a-3cad48fe5a86.png",
+        "sha256": "671fdf8653abae81609467d35f7a7dc9264fcafccd355c492e1cee7b647aa0d8",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-8f8736e7-ff60-49dc-b2db-0cd9707c9f2e.png",
+        "sha256": "0f3f10616707facc3edc83d32e8a43574633ad5e5623ad4e83982f2fb6381726",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "grief",
+      "owner_approved": false,
+      "notes": "Christ likeness recognizable in sober profile. Grieving adult woman looks up to Him; His attention meets her. Mourning procession, bier, stone gate and plain robes fit narrative atmosphere. Pre-Resurrection hands uninjured. Phone retains clasp and complete heads.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-2c12d105-790e-4efa-93ac-491990f39f01.png",
+        "sha256": "46c4982eeed60b1e3b7442430793e01615770a3ceb1bd336a5051a8ad3fb826f",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-7c997dfb-2c4f-474b-8337-3290952f68f7.png",
+        "sha256": "29880c7f75e3655b535b206742c796994900c533e5070f622c9eea60208a2856",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "jesus",
+      "owner_approved": false,
+      "notes": "Christ likeness recognizable in smiling profile. Adult woman at well returns gaze. Plain woven robes, jar, well and hillside village visually coherent. Pre-Resurrection hands uninjured. Phone retains both figures and gesture.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-ef82cc6d-6f53-4d65-a9f3-33c45fc359e9.png",
+        "sha256": "67b8677509095a3e215afcccbdae7fbc933a0644a6d6d751c1f24c57dc5b9bf0",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-b7495c3c-86ea-4436-b7de-542abb3e1837.png",
+        "sha256": "a2b4145c90c9c78c91704cc954b86b54bde6602388ccb916d5dde0264781e0e1",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "look-unto",
+      "owner_approved": false,
+      "notes": "Christ likeness, beard and hair remain recognizable against Home with calm direct gaze. Hand rests naturally over chest; pale closed wrist mark, no hole or blood. Dawn olive hillside and plain robes suit invitation. Phone retains full head and both visible hands.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-8f293365-4939-4d24-b927-7ca7d4f13a34.png",
+        "sha256": "8877006786b8a21ecc55b69145a673ace391cfeb9ff72241224d1d35cde6bee1",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-2779800a-4a1b-4971-9dc8-8bce92f7d031.png",
+        "sha256": "ab89a119adb2f7d625aab0a6c849578d67f4ae662e221764665f6698a93718a0",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "restoration",
+      "owner_approved": false,
+      "notes": "Two distinct modern adult volunteers look toward food packing task. Fingers and grip are coherent; contemporary modest clothing and community room. Phone retains all meaningful hands and complete heads.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-d231c2b6-9107-42f2-aad8-a9fda3935b7d.png",
+        "sha256": "f8e6e78253535363da773e6b6dce309e5752a8ba2da12a051db8e106a9e9ac71",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-1a6dd36a-340b-43cb-baa2-8b842684ce23.png",
+        "sha256": "8f1b2005d3aa4b8dbf822deecb2dd0eb4329a862c996d1ead7fa0f7b289e7cd5",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "stand-forever",
+      "owner_approved": false,
+      "notes": "Modern young adult holds scripture on mountain overlook, looking thoughtfully toward distance. Proportions, book grip, hiking clothes and brightening atmosphere coherent. Phone retains entire person.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-b49a7903-829b-4929-a056-d5b434a25ec3.png",
+        "sha256": "601b64c3611f8773a2909cbddb2d84e4381083d8a43f6a443abf5a845cec5a7f",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-067314cb-cc56-4569-a3ac-ba8ef627df54.png",
+        "sha256": "b4630fdc3ada736c9b7274b79949a12a8315ae86c45a113f8db334f0f1ed9ba3",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "life-after-death",
+      "owner_approved": false,
+      "notes": "Christ recognizable smiling profile beside lake and distant fishing boat. Open invitation hand with subtle closed wrist detail; no fresh wound or hole. Robes and shore coherent for post-Resurrection illustration. Phone retains full head, hand and feet.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-9738261c-b4ac-4413-9b81-1804adc2259b.png",
+        "sha256": "890d846665995260e82e2d723f3a3dfc73077f06c762b3b4ebd6373d7ae5cfd3",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-f1edf3dd-e50f-4362-a271-4d2c1e7b249b.png",
+        "sha256": "b68b266ef42dddc7d2ee30b5ad19bab173b6c4ce6c6953a1a07f47ead9f52f06",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "marriage",
+      "owner_approved": false,
+      "notes": "Older couple with natural age cues share warm mutual gaze and small caring gesture. Hands, sweaters, garden and light credible. Phone retains complete heads and gesture; no historical identity claimed.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-5e43bfba-cb59-4924-be88-3d0d6c45b81c.png",
+        "sha256": "bbaab6ae7f9cd36a9a6ad20760adfcf8961282e8abf7ccdd210bccdb5d174c49",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-3fe1997d-ed8d-48de-a7c8-d3552cdadf70.png",
+        "sha256": "541c73f4e282964c84564c060b3aa12589459692b53615fa96e3e385d6820194",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "book-of-mormon",
+      "owner_approved": false,
+      "notes": "Distinct young modern adult reads on transit with eyes lowered to pages; title correctly readable, hands and book orientation coherent. Phone retains full head, both hands and book.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-6d2a7ddc-b043-4887-b650-6040087d26ae.png",
+        "sha256": "45e5032a09f830f283f6fef68d88085823cc46c59bccbff768b0b6543c8cac59",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-d1563563-4f66-42da-85ab-4b4c16c9d81f.png",
+        "sha256": "7e7b99b05ec7d839408afae97fe0a9e111e2806f86ba40750c4145b59978b8b0",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "joseph",
+      "owner_approved": false,
+      "notes": "Joseph face retains blue eyes, clean-shaven jaw, nose and mouth of approved reference; adult age presentation coherent. Black coat, waistcoat and white neckcloth, printing press, timber street and wagon are period-consistent visual cues. Direct gaze works as portrait; phone preserves full head, book and hands. Specific location/date accuracy remains source-record responsibility.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-4b94aab7-9c7e-4976-9c6c-2e690fc980fa.png",
+        "sha256": "e8ec75b37cd22927a774a63382d1ccf824fddd61a9ecc9986b32c82a486b48ba",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-bdf38c3c-f892-4402-b015-69005415149e.png",
+        "sha256": "cd1b927620c7c303c0e018a1c15dfc8ed3cfbb7d6337702f98212590dbd4f998",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "families",
+      "owner_approved": false,
+      "notes": "Older woman, adult father and school-age child have differentiated faces and appropriate age cues. Child and father exchange warm gaze while grandmother attends dough. Six coherent hands, contemporary kitchen/clothing. Phone retains all heads and kneading hands.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-b2ed7f66-9190-48b3-831a-892dfb9458e6.png",
+        "sha256": "47623b45e87b66fda4e09fefdf45cc20f8fb659258a22c7571791adbfcd59ae0",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-7ed1d08a-0909-445e-a9e7-af625acfcb12.png",
+        "sha256": "04ee7d025cd83b968f3e0fd38622d0621683981ceb699cd536c62597f12372d7",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "temples",
+      "owner_approved": false,
+      "notes": "Older woman and teenage/young adult youth share family-history photograph task; age separation and attention coherent. Modern clothes and home workspace. Fingers holding photograph credible; phone preserves full heads, photograph and hands.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-a94fa030-6351-4685-beb0-7934f5c4c9b6.png",
+        "sha256": "1a2b00b7fa5da0833f84f6201707b4e5316891493b2bec517b79bfde0def9d89",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-1fc96efd-c900-44a9-b038-23e3395abb37.png",
+        "sha256": "213f652eaac9e4cae010b6670c7b8c46fee2aab101403ad7c2bc69619b6f56d8",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    },
+    {
+      "key": "living-christ",
+      "owner_approved": false,
+      "notes": "New closer source individually viewed beside actual approved Home reference. Recognizable same facial structure, warm direct gaze, natural skin/hair, coherent hand over heart and woven cloth. Narrow closed pink wrist scar; palm naturally hidden. Period garden atmosphere is interpretation. Top head margin is small; root subsequently verified actual desktop and phone crop. Technical pass, owner approval not claimed.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-3216a6af-548a-44c2-8fa3-d42616090091.png",
+        "sha256": "fe97798a7c215392ac61f00cf91618f761f1c81c1a50928095f8456b5a6f3ce2",
+        "dimensions": [
+          2170,
+          725
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-3216a6af-548a-44c2-8fa3-d42616090091.png",
+        "sha256": "fe97798a7c215392ac61f00cf91618f761f1c81c1a50928095f8456b5a6f3ce2",
+        "dimensions": [
+          2170,
+          725
+        ],
+        "full_heads_and_meaningful_hands_preserved": true,
+        "variant_note": "Same wide source used for measured approximately1.6 phone frame, not superseded portrait. Root verified rendered phone crop."
+      },
+      "superseded_source_note": "Previous blessing scene rejected by owner; review below applies only to closer warm reassuring replacement."
+    },
+    {
+      "key": "prayer",
+      "owner_approved": false,
+      "notes": "Christ recognizable against Home in upward prayer gaze. Clasped hands coherent and uninjured for mortal ministry. Plain robe, olive hillside and blue moonlit atmosphere suited to prayer. Phone preserves full head, clasped hands and feet.",
+      "desktop": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-a9dead1f-f1d6-430c-bc70-a9a755d11a10.png",
+        "sha256": "9f7e8c57862727723bc9792fd2d5c0259807e468c945a7f4fafd45e56012d65d",
+        "dimensions": [
+          2172,
+          724
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      },
+      "mobile": {
+        "result": "pass",
+        "individually_viewed": true,
+        "path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae3-a5a7-76c1-ad8b-e3687aac75b8\\exec-a2b567ea-53f5-4840-a7c0-d17f03fe32de.png",
+        "sha256": "b6bd4f3ff4cf855e7cc0d34d3466454018840c11f614dbf279ed4da58a13f3df",
+        "dimensions": [
+          1024,
+          1536
+        ],
+        "full_heads_and_meaningful_hands_preserved": true
+      }
+    }
+  ],
+  "browser_evidence": "Root separately completed actual desktop/phone checks; see docs/sitewide-browser-review.json. This independent reviewer performed source-pixel review, not the browser actions."
+}

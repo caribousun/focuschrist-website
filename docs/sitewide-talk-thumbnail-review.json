@@ -1,0 +1,145 @@
+{
+  "date": "2026-09-19",
+  "inventory": {
+    "canonical_pages": 39,
+    "conference_url_links": 212,
+    "distinct_conference_urls": 89,
+    "conference_links_outside_cards": 67,
+    "caveat": "Conference URL-only scan was supplemented with actual resource-card titles and media/video aliases before deciding gaps. Renlund and Uchtdorf already had cards; only their thumbnail references change."
+  },
+  "generation_mode": "built-in imagegen",
+  "records": [
+    {
+      "key": "holland-qualified-care",
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "operation": "new contextual resource card for existing text link",
+      "title": "Like a Broken Vessel",
+      "speaker": "Jeffrey R. Holland",
+      "date": "October 2013",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2013/10/like-a-broken-vessel?lang=eng",
+      "source_basis": "Talk specifically encourages compassion, qualified professional care for debilitating mental/emotional symptoms, and patience; no claim this picture reenacts a named anecdote.",
+      "prompt": "Create one ORIGINAL ultra-realistic live-action PHOTOGRAPH for a focusChrist talk thumbnail. Exact landscape16:9 frame,1920x1080 preferred. No text, watermark, title, logo, playbutton, collage, borders, painting, CGI or waxy skin. Natural believable light, real materials, normal anatomical hands. Essential action and faces fully inside frame and legible at360px. This is an independently created thematic picture, NOT a video still or authentic portrait of a speaker. An ordinary adult man in his forties speaks quietly with an attentive female professional in a calm modest counseling room. They sit in two simple armchairs at equal eye level angled toward one another, unmistakable mutual gaze, respectful space, no desk barrier. Man thoughtful and tired but dignified, neither melodramatic despair nor forced recovery smile. Counselor has a closed plain notebook resting naturally on her knees, hands visible relaxed and distinct. Natural warm daylight, muted blue and sage furnishings. No medicine, medical labels, diagnosis imagery, broken object metaphor, religious icon, or celebrity likeness. The concrete theme is seeking qualified help and receiving compassionate attention.",
+      "owner_approval": false,
+      "status": "integrated_independent_visual_review_passed",
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-6046925c-2d24-4131-b6f2-3f72a256b75a.png",
+      "source_sha256": "b3a8a88eec147f7120b43c29013ce93c8af8055f0f120aad92119ca492f0c96f",
+      "asset": "assets/page-art/talk-thumbnails/holland-qualified-care-full.webp",
+      "sha256": "f1686e00e068a050559d98566e5980cdb75be7da6ffd26d20518937dceee41be",
+      "thumbnail": "assets/page-art/talk-thumbnails/holland-qualified-care-960.webp",
+      "thumbnail_sha256": "2f9c18d0c4b33491c2657d4699a50fdb28efff4c8055d3017c8f7cea2725398a",
+      "width": 960,
+      "height": 540,
+      "resource_key": "holland-qualified-care",
+      "alt": "A man receiving compassionate attention from a professional in a quiet counseling room",
+      "technical_review_passed": true,
+      "independent_visual_review": {
+        "reviewer": "parent agent",
+        "result": "pass",
+        "observations": "Sincere mutual gaze; natural hands and closed notebook; adult age and dignified counseling context."
+      }
+    },
+    {
+      "key": "renlund-guided-flight",
+      "page": "answers/prayer-and-personal-revelation.html",
+      "operation": "replace generic speaker thumbnail in existing unique-prayer-framework card; original file preserved",
+      "title": "A Framework for Personal Revelation",
+      "speaker": "Dale G. Renlund",
+      "date": "October 2022",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2022/10/14renlund?lang=eng",
+      "source_basis": "Opening explicitly compares personal revelation framework with trained pilots following aircraftcapacity and airtrafficcontrol runway/flightpath guidance.",
+      "prompt": "Create one ORIGINAL ultra-realistic live-action PHOTOGRAPH for a focusChrist talk thumbnail. Exact landscape16:9 frame,1920x1080 preferred. No text, watermark, title, logo, playbutton, collage, borders, painting, CGI or waxy skin. Natural believable light, real materials, normal anatomical hands. Essential action and faces fully inside frame and legible at360px. This is an independently created thematic picture, NOT a video still or authentic portrait of a speaker. Ground-level documentary aviation photograph at early morning: a small ordinary white single-engine airplane aligned safely on a marked runway, seen from behind at a slight3/4 angle. Wings symmetrical and physically correct, three plausible wheels, tail and fuselage coherent, runway centerline stretches into distant daylight with subdued blue edge lights. No aircraft in air, no exaggerated sunbeams, no dangerous stance, no people near propeller, no readable registration or airline logo. Quiet purposeful readiness, realistic asphalt, hangar distant off to side, balanced wide composition. Illustrates operating within a guiding framework, not flight spectacle.",
+      "owner_approval": false,
+      "status": "integrated_independent_visual_review_passed",
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-3137d1e0-8b80-44cd-9fa8-514b2caf5bfe.png",
+      "source_sha256": "934bb1d7273e32d1113480bbc0b63df6572629cada84d8187beb98bfc1ad26f7",
+      "asset": "assets/page-art/talk-thumbnails/renlund-guided-flight-full.webp",
+      "sha256": "327f0d1dc91071e83545107ad8d3b67c389f2cc810667c8500249e63cead32c0",
+      "thumbnail": "assets/page-art/talk-thumbnails/renlund-guided-flight-960.webp",
+      "thumbnail_sha256": "9e789982b7196569bd78928dd72e819b83a435527866a26c860b47f34eaf592d",
+      "width": 960,
+      "height": 540,
+      "correction_prompt": "Edit this runway image into a technically plausible quiet illustration of guided flight. Keep the sunrise, realistic photography, modest high-wing single-engine plane, and warm atmosphere. Pull camera backward so BOTH wing tips and whole aircraft are well within frame with margins. Put plane directly aligned on runway centerline, viewed from rear. Replace ALL blue edge lights with white runway edge lights, no yellow taxiway line, no readable text. A long straight runway with white centerline markings guides the aircraft toward distant morning light. Whole aircraft including every wingtip must be visible, no crop. Landscape 16:9. No logos, no extra aircraft.",
+      "resource_key": "unique-prayer-framework",
+      "alt": "A small aircraft aligned with a marked runway in morning light",
+      "technical_review_passed": true,
+      "independent_visual_review": {
+        "reviewer": "parent agent",
+        "result": "pass",
+        "observations": "Whole aircraft centered on runway; coherent wings, three wheels and white edge lights; no clipped essential element."
+      }
+    },
+    {
+      "key": "uchtdorf-youth-choice",
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "operation": "replace generic speaker thumbnail in existing strength resource card; original file preserved",
+      "title": "Jesus Christ Is the Strength of Youth",
+      "speaker": "Dieter F. Uchtdorf",
+      "date": "October 2022",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2022/10/12uchtdorf?lang=eng",
+      "source_basis": "Talk teaches choosing through Christ-centered principles rather than a list of every permittedbehavior; this ordinarykindness is an illustrativeapplication, not a narratedanecdote.",
+      "prompt": "Create one ORIGINAL ultra-realistic live-action PHOTOGRAPH for a focusChrist talk thumbnail. Exact landscape16:9 frame,1920x1080 preferred. No text, watermark, title, logo, playbutton, collage, borders, painting, CGI or waxy skin. Natural believable light, real materials, normal anatomical hands. Essential action and faces fully inside frame and legible at360px. This is an independently created thematic picture, NOT a video still or authentic portrait of a speaker. At ordinary secondary-school outdoor steps in daylight, two modestly dressed older teenage girls pause face to face. One returns a dropped closed blue notebook to the other; both share genuine eye contact and a small natural relieved smile. Hands clearly separated around the notebook, no extra fingers or fused limbs. One backpack over a shoulder, simple grey and soft rust clothing, school doorway softly out of focus. Human-scale everyday choice to be honest and kind; no religious badge, celebrity, romance, staged preaching or implied specificstory. Keep bothfaces and book large enough to understand in smallthumbnail.",
+      "owner_approval": false,
+      "status": "integrated_independent_visual_review_passed",
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-f3373ddd-db36-4e6c-bf80-0282a5544902.png",
+      "source_sha256": "a4ed68987bd1567a7915acb1c3aa135f34fde261cc11fc6bb6cde32748fcfe41",
+      "asset": "assets/page-art/talk-thumbnails/uchtdorf-youth-choice-full.webp",
+      "sha256": "879615cb4cceb5e8ff28cc4f28022167d400e8be9a534523a41e2d7ec6833ae5",
+      "thumbnail": "assets/page-art/talk-thumbnails/uchtdorf-youth-choice-960.webp",
+      "thumbnail_sha256": "5e020cc7d87396065c1a5609b08b2efe9ec87e95bfbbde77f694375008e7d882",
+      "width": 960,
+      "height": 540,
+      "resource_key": "strength",
+      "alt": "Two young women exchanging a notebook with attentive smiles outside a school",
+      "technical_review_passed": true,
+      "independent_visual_review": {
+        "reviewer": "parent agent",
+        "result": "pass",
+        "observations": "Teenage appearance; natural notebook transfer and mutual eye contact; ordinary clothing and school setting."
+      }
+    },
+    {
+      "key": "holland-lord-believe",
+      "page": "answers/stand-forever.html",
+      "operation": "replace existing speaker preview with original thematic thumbnail; preserve Look text source and avoid duplicate video card",
+      "title": "Lord, I Believe",
+      "speaker": "Jeffrey R. Holland",
+      "date": "April 2013",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
+      "reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "source_basis": "Talk begins with the fathers plea inMark9:22-24 and describes Christ healing theboy, referencingverses24-27. Show fathers appeal; childnotvisible to avoid inventing symptomstaging.",
+      "prompt": "Create one ORIGINAL ultra-realistic live-action PHOTOGRAPH for a focusChrist talk thumbnail. Exact landscape16:9 frame,1920x1080 preferred. No text, watermark, title, logo, playbutton, collage, borders, painting, CGI or waxy skin. Natural believable light, real materials, normal anatomical hands. Essential action and faces fully inside frame and legible at360px. This is an independently created thematic picture, NOT a video still or authentic portrait of a speaker. The supplied reference fixes ONLY the exact recognizable Christ face and photographic realism. Make a NEW natural first-century biblicalscene based on Mark9:22-24: mortal Jesus in dusty muted teal mantle and undyed linen stands close face-to-face with a distressed adult Jewish father pleading for his son. Father in rough warm brown mantle, distinct blackandgrey hair, earnest moist eyes, one hand open naturally toward Jesus at waistheight. They meet oneanothers eyes with compassionate focused seriousness; no broadsmile, no camera gaze, no romance. Jesus listens with relaxed hands, no touchinggesture needed. The afflicted son is outside thecrop, no visibleinjury, no performing crowd or staged miracle. Plain limestone wall and Galilean scrub softlybehind, believable daylight. No wounds or nail scars during mortalministry. Historical facial appearance/age offather and precise setting/costume are artisticinterpretation. Both faces3/4 legible, heads and bothhands within16:9 frame.",
+      "owner_approval": false,
+      "status": "integrated_independent_visual_review_passed",
+      "source_file": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bae5-8cbc-7483-a17c-c1ef04edbd1f\\exec-05f9ad1a-ecc8-4688-8436-3211512c6369.png",
+      "source_sha256": "4ac573b48ca244c36b8270e593b449543f12f7b11b22127acf294eb807694b0c",
+      "asset": "assets/page-art/talk-thumbnails/holland-lord-believe-full.webp",
+      "sha256": "feef39779b982035b7cba633463e5ba626cb0089b2f9472eea5229da1bcc9d04",
+      "thumbnail": "assets/page-art/talk-thumbnails/holland-lord-believe-960.webp",
+      "thumbnail_sha256": "4b25bee84d246a1f2a547d044ab5998c28d57d2b02bba359fa1d8d3554faa3e3",
+      "width": 960,
+      "height": 540,
+      "resource_key": "stand-lord-i-believe",
+      "alt": "Jesus listening with compassion as a father makes an earnest appeal",
+      "technical_review_passed": true,
+      "independent_visual_review": {
+        "reviewer": "parent agent",
+        "result": "pass",
+        "observations": "Christ identity compared to approved Home signature reference; concern and eye contact directed at father; mortal unscarred hands; plausible first-century clothing and setting."
+      },
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?id=p22-p24&lang=eng#p22"
+      ]
+    }
+  ],
+  "rejected_sha256": [
+    "543c7b2fac435fa973a404a5105256f3d18c144499aac1b7a350d6756eb12ad5"
+  ],
+  "rejected_reason": "Initial airplane candidate clipped a wing and used blue taxiway lights; revised before integration.",
+  "verification": {
+    "bounded_cards": "pass: four unique thumbnails; eight exact official-source links; intrinsic dimensions, lazy loading, shared containment CSS; original two speaker-preview files unchanged vs81cb709",
+    "media_voice_qa": "pass",
+    "study_layout_uniformity_qa": "pass",
+    "resource_thumbnail_qa": "no card mismatches; full gate blocked at check time by nineteen missing topic hero full links in concurrent parent integration",
+    "browser": "pending parent desktop/phone verification"
+  }
+}

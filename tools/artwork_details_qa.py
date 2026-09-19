@@ -2,10 +2,12 @@ from __future__ import annotations
 
 from pathlib import Path
 import re
+import json
 import sys
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
+TOPIC_HERO_PAGES = {p["page"] for p in json.loads((ROOT / "docs/sitewide-hero-production-plan.json").read_text(encoding="utf-8"))["plans"]}
 PAGES = {
     "index.html": 3,
     "ask.html": 5,
@@ -24,7 +26,7 @@ ART_STUDY_PAGES = (
     "art-study/be-still.html",
 )
 ART_STUDY_HEROES = {
-    "art-study/the-living-christ.html": ("../assets/heroes/home-christ-signature-approved-20260907.png", "living-christ-art"),
+    "art-study/the-living-christ.html": ("../assets/heroes/topics/living-christ-full.webp", "topic-living-christ"),
     "art-study/the-good-shepherd.html": ("../art/The-Good-Shephard.jpg", "good-shepherd-art"),
     "art-study/suffer-the-little-children.html": ("../art/Suffer-the-Little-Children.jpg", "little-children-art"),
     "art-study/be-still.html": ("../art/Be-Still.png", "be-still-art"),
@@ -134,23 +136,28 @@ def main() -> int:
         errors.append("art.html: main gallery must retain its existing dedicated viewer")
 
     for relative in ART_STUDY_PAGES:
+        from study_gap_art_qa import sitewide_entries
+        expected_supporting = 4 + sum(e['page'] == relative and not e['talk'] for e in sitewide_entries())
         text = (ROOT / relative).read_text(encoding="utf-8")
         if "data-artwork-detail=" in text:
             errors.append(f"{relative}: dedicated study page artwork should retain direct full-size behavior")
         asset, record = ART_STUDY_HEROES[relative]
-        hero = re.search(r'<a[^>]*data-hero-viewer[^>]*>\s*<img[^>]*>\s*</a>', text, re.S)
+        intrinsic = relative != 'art-study/the-living-christ.html'
+        hero = re.search(r'<a[^>]*data-hero-viewer[^>]*>' + (r'\s*<img[^>]*>\s*</a>' if intrinsic else ''), text, re.S)
         if not hero:
             errors.append(f"{relative}: featured artwork hero with intrinsic image is missing")
         else:
             hero_text = hero.group(0)
-            for marker in (f'href="{asset}"', f'data-hero-record="{record}"', f'<img src="{asset}"'):
+            markers = [f'href="{asset}"', f'data-hero-record="{record}"']
+            markers += [f'<img src="{asset}"'] if intrinsic else ['fc-topic-unique-hero', '--topic-hero-desktop:', '--topic-hero-mobile:']
+            for marker in markers:
                 if marker not in hero_text:
                     errors.append(f"{relative}: artwork hero mismatch: {marker}")
             if "assets/heroes/home.webp" in hero_text:
                 errors.append(f"{relative}: generic Home hero fallback returned")
         for marker in (
             'href="../art-study-page.css?v=20260908-image-heroes"',
-            'src="../hero-details.js?v=20260908-art-study-heroes"',
+            ('src="../hero-details.js?v=20260908-art-study-heroes"' if intrinsic else 'src="../hero-details.js?v=20260919-topic-heroes-2"'),
             'class="fc-page-intro-copy"',
             '>Begin Scripture Study</a>',
             'href="#study-resources">Explore Resources</a>',
@@ -210,8 +217,8 @@ def main() -> int:
     for relative in ART_STUDY_PAGES:
         text = (ROOT / relative).read_text(encoding="utf-8")
         supporting = [anchor for anchor in re.findall(r'<a\b[^>]*>', text) if 'data-art-study-supporting' in anchor]
-        if len(supporting) != 4 or any('data-full-image-viewer' in anchor for anchor in supporting):
-            errors.append(f"{relative}: requires four supporting picture study triggers without direct full-size activation")
+        if len(supporting) != expected_supporting or any('data-full-image-viewer' in anchor for anchor in supporting):
+            errors.append(f"{relative}: requires {expected_supporting} manifest-bound supporting picture study triggers without direct full-size activation")
     if 'id="artworkDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in art:
         errors.append("shared artwork full-size action is not enrolled in the same-page viewer")
     if 'id="missionaryDetailFullImage" href="#" target="_blank" rel="noopener noreferrer" data-full-image-viewer aria-haspopup="dialog"' not in missionary:
@@ -231,7 +238,7 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        hero_script = ("hero-details.js?v=20260919-birth-1" if relative == "birth-of-christ.html" else "hero-details.js?v=20260914-sacred-hero-1" if relative == "atonement.html" else "hero-details.js?v=20260914-joseph-likeness-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260914-evidences-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels")
+        hero_script = ("hero-details.js?v=20260919-topic-heroes-2" if relative in TOPIC_HERO_PAGES else "hero-details.js?v=20260919-birth-1" if relative == "birth-of-christ.html" else "hero-details.js?v=20260914-sacred-hero-1" if relative == "atonement.html" else "hero-details.js?v=20260914-joseph-likeness-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260914-evidences-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260908-art-study-heroes" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260906-centered-panels")
         for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260914-reopen-1", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
@@ -324,7 +331,7 @@ def main() -> int:
 
     hero_js = (ROOT / "hero-details.js").read_text(encoding="utf-8")
     for record in ART_STUDY_HEROES.values():
-        if f"'{record[1]}':" not in hero_js:
+        if not re.search(r"[\"']" + re.escape(record[1]) + r"[\"']\s*:", hero_js):
             errors.append(f"hero-details.js: missing art-study detail record: {record[1]}")
 
     mission_css = (ROOT / "missionary.css").read_text(encoding="utf-8")

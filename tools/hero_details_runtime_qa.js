@@ -33,7 +33,7 @@ dialog.close = () => { dialog.open = false; dialog.listeners.close(); };
 
 const cases = [
     ['birth-of-christ', '/assets/page-art/birth-of-christ/12-nativity-hero-full.webp', 'Mary lays her newborn Son in a manger', '/birth-of-christ.html#promised-son'],
-    ['living-christ-art', '/assets/heroes/home-christ-signature-approved-20260907.png', 'The Living Christ', '/art-study/the-living-christ.html#scripture-study'],
+    ['topic-living-christ', '/assets/heroes/topics/living-christ-full.webp', 'He lives and ministers', '/art-study/the-living-christ.html#scripture-study'],
     ['good-shepherd-art', '/art/The-Good-Shephard.jpg', 'The Good Shepherd', '/art-study/the-good-shepherd.html#scripture-study'],
     ['little-children-art', '/art/Suffer-the-Little-Children.jpg', 'Suffer the Little Children', '/art-study/suffer-the-little-children.html#scripture-study'],
     ['be-still-art', '/art/Be-Still.png', 'Be Still', '/art-study/be-still.html#psalm-context'],

@@ -41,7 +41,7 @@ for (const card of cards) {
     }
     document.dispatchEvent(new window.Event('DOMContentLoaded'));
     const triggers = [...document.querySelectorAll('a[data-art-study-supporting]')];
-    assert.equal(triggers.length, 4, `${relative}: all four supporting pictures discovered`);
+    assert.equal(triggers.length, 5, `${relative}: all five supporting pictures discovered`);
     const titles = new Set();
     const click = node => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
     for (const trigger of triggers) {
@@ -58,7 +58,7 @@ for (const card of cards) {
         assert(panel.open && !viewer.open, 'Image opens study panel first');
         const title = panel.querySelector('h2').textContent.trim();
         assert.equal(title, expectedTitle, 'Panel keeps image-specific title');
-        assert(!titles.has(title), 'Four distinct image study titles');
+        assert(!titles.has(title), 'Five distinct image study titles');
         titles.add(title);
         assert.equal(panel.querySelector('img').src, trigger.href, 'Panel uses original full artwork');
         const copy = panel.querySelector('.fc-artwork-detail-copy');
@@ -108,5 +108,5 @@ for (const card of cards) {
     dom.window.close();
 }
 gallery.window.close();
-assert.equal(checked, 16);
-console.log('Art study picture DOM QA passed: 4 featured paths, 16 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.');
+assert.equal(checked, 20);
+console.log('Art study picture DOM QA passed: 4 featured paths, 20 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.');

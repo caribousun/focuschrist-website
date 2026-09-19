@@ -54,13 +54,34 @@ function createHarness(pathname, hash = '') {
   }
   const topics = new Element(), head = new Element('head'), listeners = {};
   const location = {pathname, hash};
-  const context = {window:{location,addEventListener:(name,fn) => {listeners[name]=fn;}},
+  const context = {window:{location,innerWidth:390,requestAnimationFrame:fn => fn(),addEventListener:(name,fn) => {listeners[name]=fn;}},
     document:{head,createElement:tag => new Element(tag),getElementById:() => menu,
       querySelector:s => s === '.fc-answers-jump-links' ? topics : header},
     relativeAssetHref:p => prefix+p, createConferenceLink:text => new Element('a', {href:'general-conference.html','data-focuschrist-conference-shortcut':'true'},text)};
   vm.createContext(context); vm.runInContext(implementation,context);
   return {context,header,desktop,menu,topics,head,location,listeners};
 }
+// Exercise actual collision decisions independently of topic-label fixtures.
+const fitting = createHarness('/answers/what-is-eternal-marriage.html');
+const logo = fitting.header.appendChild(new Element('a',{class:'nav-logo'}));
+const controls = fitting.header.appendChild(new Element('div',{class:'hamburger-wrap'}));
+const searchControl = fitting.header.appendChild(new Element('a',{class:'fc-search-trigger'}));
+logo.getBoundingClientRect=()=>({left:28,right:183});
+controls.getBoundingClientRect=()=>({left:1380,right:1420});
+searchControl.getBoundingClientRect=()=>({left:1300,right:1370});
+let bounds={left:142,right:1298};
+fitting.desktop.getBoundingClientRect=()=>bounds;
+fitting.context.window.innerWidth=1440;
+fitting.context.initCurrentStudyNavigation();
+assert.ok(fitting.header.classList.contains('fc-nav-compact'),'measured logo overlap compacts navigation');
+bounds={left:220,right:1310};fitting.listeners.resize();
+assert.ok(fitting.header.classList.contains('fc-nav-compact'),'search overlap also compacts navigation');
+bounds={left:220,right:1240};fitting.listeners.resize();
+assert.equal(fitting.header.classList.contains('fc-nav-compact'),false,'sufficient room restores full navigation');
+bounds={left:142,right:1298};fitting.listeners.resize();
+fitting.context.window.innerWidth=390;fitting.listeners.resize();
+assert.equal(fitting.header.classList.contains('fc-nav-compact'),false,'phone retains its established header mode');
+assert.ok(fitting.menu.querySelectorAll('a').some(a=>a.getAttribute('href')==='../answers.html'),'compact mode preserves menu destinations');
 const html = fs.readFileSync(path.join(root,'answers.html'),'utf8');
 const pillBlock = html.match(/<div class="fc-answers-jump-links">([\s\S]*?)<\/div>/);
 assert.ok(pillBlock,'real Answers topic pills required');

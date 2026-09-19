@@ -130,6 +130,72 @@
       ]
     },
     {
+      "title": "A devotional portrait of Jesus Christ on a rocky hillside path with one hand over His heart.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/look-unto-full.webp",
+      "fullImage": "/assets/heroes/topics/look-unto-full.webp",
+      "alt": "A devotional portrait of Jesus Christ on a rocky hillside path with one hand over His heart.",
+      "id": "art-bcc9c512f8c1",
+      "occurrences": [
+        {
+          "id": "source-bdfc5673897b",
+          "page": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "pageTitle": "Look Unto Me",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/look-unto-full.webp\"]",
+          "title": "A devotional portrait of Jesus Christ on a rocky hillside path with one hand over His heart."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A devotional scene of Jesus Christ supporting a weary man’s arm on a wet rocky path.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/trials-full.webp",
+      "fullImage": "/assets/heroes/topics/trials-full.webp",
+      "alt": "A devotional scene of Jesus Christ supporting a weary man’s arm on a wet rocky path.",
+      "id": "art-6508cdc4a30c",
+      "occurrences": [
+        {
+          "id": "source-c71979d08056",
+          "page": "/answers/faith-in-jesus-christ-during-trials.html",
+          "pageTitle": "Faith in Trials",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/trials-full.webp\"]",
+          "title": "A devotional scene of Jesus Christ supporting a weary man’s arm on a wet rocky path."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A father shares the mercy he remembers",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide/bom-alma-helaman-960.webp",
+      "fullImage": "/assets/page-art/sitewide/bom-alma-helaman-full.webp",
+      "alt": "A middle-aged Alma speaks to his youthful adult son Helaman in a quiet courtyard.",
+      "id": "art-982f29ada403",
+      "occurrences": [
+        {
+          "id": "source-858796d66be0",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/sitewide/bom-alma-helaman-full.webp\"]:has(img[src=\"assets/page-art/sitewide/bom-alma-helaman-960.webp\"])",
+          "title": "A father shares the mercy he remembers"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A Global Work Lived Locally",
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/light-across-world.webp",
@@ -149,6 +215,50 @@
       ],
       "categories": [
         "Missionary Work"
+      ]
+    },
+    {
+      "title": "A grandmother, father, and young daughter knead bread together in a home kitchen.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/families-full.webp",
+      "fullImage": "/assets/heroes/topics/families-full.webp",
+      "alt": "A grandmother, father, and young daughter knead bread together in a home kitchen.",
+      "id": "art-3334c3fb6909",
+      "occurrences": [
+        {
+          "id": "source-3b53859bc6aa",
+          "page": "/answers/why-families-are-important.html",
+          "pageTitle": "Families",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/families-full.webp\"]",
+          "title": "A grandmother, father, and young daughter knead bread together in a home kitchen."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A grieving woman holds a child’s knitted cap while a friend sits beside her on a lakeside bench.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/child-loss-full.webp",
+      "fullImage": "/assets/heroes/topics/child-loss-full.webp",
+      "alt": "A grieving woman holds a child’s knitted cap while a friend sits beside her on a lakeside bench.",
+      "id": "art-068ac68fd349",
+      "occurrences": [
+        {
+          "id": "source-fe5dde80fd40",
+          "page": "/answers/death-of-a-child.html",
+          "pageTitle": "Death of a Child",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/child-loss-full.webp\"]",
+          "title": "A grieving woman holds a child’s knitted cap while a friend sits beside her on a lakeside bench."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -196,6 +306,28 @@
       ]
     },
     {
+      "title": "A man holds a closed scripture book on a broad rock outcrop and looks toward a clearing horizon.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/stand-forever-full.webp",
+      "fullImage": "/assets/heroes/topics/stand-forever-full.webp",
+      "alt": "A man holds a closed scripture book on a broad rock outcrop and looks toward a clearing horizon.",
+      "id": "art-9e587c9d51bf",
+      "occurrences": [
+        {
+          "id": "source-07fba2d165e3",
+          "page": "/answers/stand-forever.html",
+          "pageTitle": "Stand Forever",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/stand-forever-full.webp\"]",
+          "title": "A man holds a closed scripture book on a broad rock outcrop and looks toward a clearing horizon."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A moment of warmth",
       "category": "Church History",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/warmth-960.webp",
@@ -233,6 +365,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/birth-of-christ/20-night-light-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/20-night-light-800.webp\"])",
           "title": "A night as light as day"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A Place in the Conversation",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide-community/marriage-community-welcome-20260919-800.webp",
+      "fullImage": "/assets/page-art/sitewide-community/marriage-community-welcome-20260919-full.webp",
+      "alt": "Adults welcome a woman into their conversation, drawing an empty chair into the circle.",
+      "id": "art-825736c6c7ff",
+      "occurrences": [
+        {
+          "id": "source-96f1048637b0",
+          "page": "/answers/what-is-eternal-marriage.html",
+          "pageTitle": "Eternal Marriage",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/sitewide-community/marriage-community-welcome-20260919-full.webp\"]:has(img[src=\"../assets/page-art/sitewide-community/marriage-community-welcome-20260919-800.webp\"])",
+          "title": "A Place in the Conversation"
         }
       ],
       "categories": [
@@ -394,6 +548,28 @@
       ]
     },
     {
+      "title": "A record entrusted to his son",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide/bom-mormon-moroni-960.webp",
+      "fullImage": "/assets/page-art/sitewide/bom-mormon-moroni-full.webp",
+      "alt": "An elderly Mormon passes a small cloth-wrapped record to his adult son Moroni.",
+      "id": "art-fe9fd9054fee",
+      "occurrences": [
+        {
+          "id": "source-9de6733e4994",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/sitewide/bom-mormon-moroni-full.webp\"]:has(img[src=\"assets/page-art/sitewide/bom-mormon-moroni-960.webp\"])",
+          "title": "A record entrusted to his son"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A society ready to serve",
       "category": "Church History",
       "thumbnail": "/assets/page-art/church-history/relief-society-960.webp",
@@ -439,183 +615,12 @@
     },
     {
       "title": "A Welcoming Savior",
-      "category": "Gospel Studies",
+      "category": "Home",
       "thumbnail": "/assets/heroes/home-christ-signature-approved-20260907.png",
       "fullImage": "/assets/heroes/home-christ-signature-approved-20260907.png",
       "alt": "Jesus Christ",
       "id": "art-62b57c3e7b47",
       "occurrences": [
-        {
-          "id": "source-e67065986591",
-          "page": "/answers/are-latter-day-saints-christian.html",
-          "pageTitle": "Christian Identity",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-e04d3bdfb386",
-          "page": "/answers/bible-and-book-of-mormon-together.html",
-          "pageTitle": "Bible & Book of Mormon",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-ccac2593a3b6",
-          "page": "/answers/death-of-a-child.html",
-          "pageTitle": "Death of a Child",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-558b9030c523",
-          "page": "/answers/divorce-and-faith.html",
-          "pageTitle": "Divorce",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-cadc2c508394",
-          "page": "/answers/faith-in-jesus-christ-during-trials.html",
-          "pageTitle": "Faith in Trials",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-403886264c14",
-          "page": "/answers/god-our-heavenly-father.html",
-          "pageTitle": "God",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-13a18edb540f",
-          "page": "/answers/grief-and-faith.html",
-          "pageTitle": "Grief",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-a968406f1a71",
-          "page": "/answers/jesus-christ-latter-day-saint-beliefs.html",
-          "pageTitle": "Jesus Christ",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-2ce5241bb860",
-          "page": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
-          "pageTitle": "Look Unto Me",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-201a22860ab1",
-          "page": "/answers/prayer-and-personal-revelation.html",
-          "pageTitle": "Prayer & Revelation",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-50d030a28462",
-          "page": "/answers/restored-church-of-jesus-christ.html",
-          "pageTitle": "The restored Church",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-96da97d2bcdf",
-          "page": "/answers/stand-forever.html",
-          "pageTitle": "Stand Forever",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-9d37b589f40b",
-          "page": "/answers/what-happens-after-death.html",
-          "pageTitle": "Life After Death",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-219cc1580bda",
-          "page": "/answers/what-is-eternal-marriage.html",
-          "pageTitle": "Eternal Marriage",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-344f6e500c05",
-          "page": "/answers/what-is-the-book-of-mormon.html",
-          "pageTitle": "Book of Mormon",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-c8739e73dcbb",
-          "page": "/answers/who-was-joseph-smith.html",
-          "pageTitle": "Joseph Smith",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-70c6e8a6167f",
-          "page": "/answers/why-families-are-important.html",
-          "pageTitle": "Families",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-44f4d773debb",
-          "page": "/answers/why-latter-day-saints-build-temples.html",
-          "pageTitle": "Temples",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "A Welcoming Savior"
-        },
-        {
-          "id": "source-559ae1a7edd4",
-          "page": "/art-study/the-living-christ.html",
-          "pageTitle": "The Living Christ",
-          "category": "Art & Study",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/home-christ-signature-approved-20260907.png\"]",
-          "title": "The Living Christ"
-        },
         {
           "id": "source-474c8900aa1d",
           "page": "/index.html",
@@ -627,8 +632,6 @@
         }
       ],
       "categories": [
-        "Art & Study",
-        "Gospel Studies",
         "Home"
       ]
     },
@@ -661,6 +664,72 @@
       ],
       "categories": [
         "Missionary Work"
+      ]
+    },
+    {
+      "title": "A woman and an older man meet each other’s eyes while sharing a covered meal in a community kitchen.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/christian-full.webp",
+      "fullImage": "/assets/heroes/topics/christian-full.webp",
+      "alt": "A woman and an older man meet each other’s eyes while sharing a covered meal in a community kitchen.",
+      "id": "art-51abf4f6fb60",
+      "occurrences": [
+        {
+          "id": "source-71b95a682f52",
+          "page": "/answers/are-latter-day-saints-christian.html",
+          "pageTitle": "Christian Identity",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/christian-full.webp\"]",
+          "title": "A woman and an older man meet each other’s eyes while sharing a covered meal in a community kitchen."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A woman reads two open scripture volumes side by side at a library desk.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/bible-bom-full.webp",
+      "fullImage": "/assets/heroes/topics/bible-bom-full.webp",
+      "alt": "A woman reads two open scripture volumes side by side at a library desk.",
+      "id": "art-e2d998b6c629",
+      "occurrences": [
+        {
+          "id": "source-7a084f699fd4",
+          "page": "/answers/bible-and-book-of-mormon-together.html",
+          "pageTitle": "Bible & Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/bible-bom-full.webp\"]",
+          "title": "A woman reads two open scripture volumes side by side at a library desk."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A young adult man reads the Book of Mormon on a commuter train.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/book-of-mormon-full.webp",
+      "fullImage": "/assets/heroes/topics/book-of-mormon-full.webp",
+      "alt": "A young adult man reads the Book of Mormon on a commuter train.",
+      "id": "art-9ac526885164",
+      "occurrences": [
+        {
+          "id": "source-60ba0f59757c",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/book-of-mormon-full.webp\"]",
+          "title": "A young adult man reads the Book of Mormon on a commuter train."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -752,6 +821,28 @@
       ]
     },
     {
+      "title": "An artistic interpretation of Joseph Smith at age twenty-four holding a bound book near an early nineteenth-century printing shop.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/joseph-full.webp",
+      "fullImage": "/assets/heroes/topics/joseph-full.webp",
+      "alt": "An artistic interpretation of Joseph Smith at age twenty-four holding a bound book near an early nineteenth-century printing shop.",
+      "id": "art-42c7aa77296b",
+      "occurrences": [
+        {
+          "id": "source-46e45d7e7255",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/joseph-full.webp\"]",
+          "title": "An artistic interpretation of Joseph Smith at age twenty-four holding a bound book near an early nineteenth-century printing shop."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "An honest prayer",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/prayer-return-960.webp",
@@ -833,6 +924,50 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/bom-evidences/whitmer-traveler.webp\"]:has(img[src=\"assets/page-art/bom-evidences/whitmer-traveler-960.webp\"])",
           "title": "An offer of hospitality"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An older married couple meet each other’s eyes while tending a cardigan in a sunlit garden.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/marriage-full.webp",
+      "fullImage": "/assets/heroes/topics/marriage-full.webp",
+      "alt": "An older married couple meet each other’s eyes while tending a cardigan in a sunlit garden.",
+      "id": "art-95387ea7ca5d",
+      "occurrences": [
+        {
+          "id": "source-81c1f0ded122",
+          "page": "/answers/what-is-eternal-marriage.html",
+          "pageTitle": "Eternal Marriage",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/marriage-full.webp\"]",
+          "title": "An older married couple meet each other’s eyes while tending a cardigan in a sunlit garden."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An older woman and a younger man examine an ancestor photograph beside family-history notes.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/temples-full.webp",
+      "fullImage": "/assets/heroes/topics/temples-full.webp",
+      "alt": "An older woman and a younger man examine an ancestor photograph beside family-history notes.",
+      "id": "art-54d2406b70cd",
+      "occurrences": [
+        {
+          "id": "source-1700b90f9bf6",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/temples-full.webp\"]",
+          "title": "An older woman and a younger man examine an ancestor photograph beside family-history notes."
         }
       ],
       "categories": [
@@ -1182,6 +1317,28 @@
           "kind": "legacy",
           "selector": ".gallery-item:has(img[src=\"art/thumbs/new/blessed-be-the-name-of-the-lord-job-1-21.webp\"])",
           "title": "Blessed Be the Name of the Lord"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
+      "title": "Breakfast on the Shore",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp",
+      "fullImage": "/assets/page-art/art-study/full/living-breakfast-shore-20260919.webp",
+      "alt": "The risen Jesus Christ shares bread with disciples beside a small fire on the shore.",
+      "id": "art-f6d313c50a8b",
+      "occurrences": [
+        {
+          "id": "source-ce0bedf22fb4",
+          "page": "/art-study/the-living-christ.html",
+          "pageTitle": "The Living Christ",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/living-breakfast-shore-20260919.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/living-breakfast-shore-20260919.webp\"])",
+          "title": "Breakfast on the Shore"
         }
       ],
       "categories": [
@@ -1541,6 +1698,28 @@
       ]
     },
     {
+      "title": "Care Takes Shape in Ordinary Hands",
+      "category": "Church History",
+      "thumbnail": "/assets/page-art/sitewide-community/history-relief-practical-care-20260919-800.webp",
+      "fullImage": "/assets/page-art/sitewide-community/history-relief-practical-care-20260919-full.webp",
+      "alt": "Two women in an 1840s household talk as they prepare simple clothing beside a basket of folded cloth.",
+      "id": "art-d970c5766eb0",
+      "occurrences": [
+        {
+          "id": "source-6abe4ced5ab8",
+          "page": "/church-history.html",
+          "pageTitle": "Church History",
+          "category": "Church History",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/sitewide-community/history-relief-practical-care-20260919-full.webp\"]:has(img[src=\"assets/page-art/sitewide-community/history-relief-practical-care-20260919-800.webp\"])",
+          "title": "Care Takes Shape in Ordinary Hands"
+        }
+      ],
+      "categories": [
+        "Church History"
+      ]
+    },
+    {
       "title": "Carry a covenant into daily care",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/temple-covenant-help-800.webp",
@@ -1560,6 +1739,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Carry Learning into a Helpful Act",
+      "category": "Come, Follow Me",
+      "thumbnail": "/assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-800.webp",
+      "fullImage": "/assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-full.webp",
+      "alt": "A teenager tightens a gate hinge while an older neighbor steadies the gate and watches the work.",
+      "id": "art-14e3d3e42c7f",
+      "occurrences": [
+        {
+          "id": "source-98f5c74fdcd7",
+          "page": "/come-follow-me.html",
+          "pageTitle": "Come, Follow Me",
+          "category": "Come, Follow Me",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-full.webp\"]:has(img[src=\"assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-800.webp\"])",
+          "title": "Carry Learning into a Helpful Act"
+        }
+      ],
+      "categories": [
+        "Come, Follow Me"
       ]
     },
     {
@@ -1611,7 +1812,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/restoration-read-original-800.webp",
       "fullImage": "/assets/page-art/exclusive/restoration-read-original-1536.webp",
-      "alt": "A writing table with an open book, blank paper and an inkwell",
+      "alt": "A writing table with a closed book, blank paper and an inkwell",
       "id": "art-7810dd0474b7",
       "occurrences": [
         {
@@ -1930,6 +2131,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/topics/paired-scripture-study-1536.webp\"]:has(img[src=\"../assets/page-art/topics/paired-scripture-study-800.webp\"])",
           "title": "Compare the accounts with care"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Compare the words with care",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide/bom-language-comparison-960.webp",
+      "fullImage": "/assets/page-art/sitewide/bom-language-comparison-full.webp",
+      "alt": "A researcher uses pencil notes and colored tabs to compare passages across three printed working copies.",
+      "id": "art-d48ab4906bff",
+      "occurrences": [
+        {
+          "id": "source-6afab4be9819",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/sitewide/bom-language-comparison-full.webp\"]:has(img[src=\"assets/page-art/sitewide/bom-language-comparison-960.webp\"])",
+          "title": "Compare the words with care"
         }
       ],
       "categories": [
@@ -2641,6 +2864,28 @@
       ]
     },
     {
+      "title": "Give the Moment Your Attention",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp",
+      "fullImage": "/assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp",
+      "alt": "A man sets his phone face down and turns his attention to an open Bible at the kitchen table.",
+      "id": "art-323ababeb1b9",
+      "occurrences": [
+        {
+          "id": "source-e8554ce0209a",
+          "page": "/art-study/be-still.html",
+          "pageTitle": "Be Still",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/still-phone-down-scripture-20260919.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/still-phone-down-scripture-20260919.webp\"])",
+          "title": "Give the Moment Your Attention"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "God",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/stand-prayerful-question-800.webp",
@@ -3301,6 +3546,28 @@
       ]
     },
     {
+      "title": "Immediately Jesus reached for him",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide-narratives/look-peter-rescue-960.webp",
+      "fullImage": "/assets/page-art/sitewide-narratives/look-peter-rescue-full.webp",
+      "alt": "Jesus grasps Peter’s raised hand as Peter looks up from the stormy water",
+      "id": "art-c8270c49a1a7",
+      "occurrences": [
+        {
+          "id": "source-00136f7bfcb9",
+          "page": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+          "pageTitle": "Look Unto Me",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/sitewide-narratives/look-peter-rescue-full.webp\"]:has(img[src=\"../assets/page-art/sitewide-narratives/look-peter-rescue-960.webp\"])",
+          "title": "Immediately Jesus reached for him"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "In Gethsemane",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/atonement-gethsemane-approved-20260914.webp",
@@ -3521,6 +3788,28 @@
       ]
     },
     {
+      "title": "Jesus Christ alone in prayer on a hillside at night.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/prayer-full.webp",
+      "fullImage": "/assets/heroes/topics/prayer-full.webp",
+      "alt": "Jesus Christ alone in prayer on a hillside at night.",
+      "id": "art-37aa56cefb98",
+      "occurrences": [
+        {
+          "id": "source-b76b468e391e",
+          "page": "/answers/prayer-and-personal-revelation.html",
+          "pageTitle": "Prayer & Revelation",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/prayer-full.webp\"]",
+          "title": "Jesus Christ alone in prayer on a hillside at night."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Jesus Christ and Nicodemus",
       "category": "Ask",
       "thumbnail": "/assets/page-art/ask-nicodemus-1122.webp",
@@ -3543,6 +3832,28 @@
       ]
     },
     {
+      "title": "Jesus Christ meets the eyes of the widow of Nain with mourners and a covered bier nearby.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/grief-full.webp",
+      "fullImage": "/assets/heroes/topics/grief-full.webp",
+      "alt": "Jesus Christ meets the eyes of the widow of Nain with mourners and a covered bier nearby.",
+      "id": "art-f6fd674955b6",
+      "occurrences": [
+        {
+          "id": "source-1294f58f9329",
+          "page": "/answers/grief-and-faith.html",
+          "pageTitle": "Grief",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/grief-full.webp\"]",
+          "title": "Jesus Christ meets the eyes of the widow of Nain with mourners and a covered bier nearby."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Jesus Christ seated on a stone ledge, teaching with an open hand",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/foundations/christ-teaching-800.webp",
@@ -3558,6 +3869,50 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/foundations/christ-teaching-1536.webp\"]:has(img[src=\"../assets/page-art/foundations/christ-teaching-800.webp\"])",
           "title": "Jesus Christ seated on a stone ledge, teaching with an open hand"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Jesus Christ speaks with Philip in a simple lamplit room as they meet each other’s eyes.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/father-full.webp",
+      "fullImage": "/assets/heroes/topics/father-full.webp",
+      "alt": "Jesus Christ speaks with Philip in a simple lamplit room as they meet each other’s eyes.",
+      "id": "art-7fa791a89c6c",
+      "occurrences": [
+        {
+          "id": "source-b7ac239f7b01",
+          "page": "/answers/god-our-heavenly-father.html",
+          "pageTitle": "God",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/father-full.webp\"]",
+          "title": "Jesus Christ speaks with Philip in a simple lamplit room as they meet each other’s eyes."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Jesus Christ speaks with the Samaritan woman beside a stone well and clay water jar.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/jesus-full.webp",
+      "fullImage": "/assets/heroes/topics/jesus-full.webp",
+      "alt": "Jesus Christ speaks with the Samaritan woman beside a stone well and clay water jar.",
+      "id": "art-dae2fc206157",
+      "occurrences": [
+        {
+          "id": "source-33d077c1eb1c",
+          "page": "/answers/jesus-christ-latter-day-saint-beliefs.html",
+          "pageTitle": "Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/jesus-full.webp\"]",
+          "title": "Jesus Christ speaks with the Samaritan woman beside a stone well and clay water jar."
         }
       ],
       "categories": [
@@ -3760,6 +4115,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "John points his disciples toward Christ",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide-narratives/birth-john-witness-960.webp",
+      "fullImage": "/assets/page-art/sitewide-narratives/birth-john-witness-full.webp",
+      "alt": "John the Baptist directs two disciples toward Jesus beside the river",
+      "id": "art-926460f9e979",
+      "occurrences": [
+        {
+          "id": "source-2f392fe5c4d3",
+          "page": "/birth-of-christ.html",
+          "pageTitle": "The Birth of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/sitewide-narratives/birth-john-witness-full.webp\"]:has(img[src=\"assets/page-art/sitewide-narratives/birth-john-witness-960.webp\"])",
+          "title": "John points his disciples toward Christ"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -5048,6 +5425,28 @@
       ]
     },
     {
+      "title": "Notice what lies around a find",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide/bom-archaeology-context-960.webp",
+      "fullImage": "/assets/page-art/sitewide/bom-archaeology-context-full.webp",
+      "alt": "A field archaeologist writes on a clipboard beside a measured soil profile.",
+      "id": "art-73cc12c920aa",
+      "occurrences": [
+        {
+          "id": "source-2edfa1c564dc",
+          "page": "/book-of-mormon-evidences.html",
+          "pageTitle": "Book of Mormon Evidences",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/sitewide/bom-archaeology-context-full.webp\"]:has(img[src=\"assets/page-art/sitewide/bom-archaeology-context-960.webp\"])",
+          "title": "Notice what lies around a find"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Now I See",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Now-I-see.webp",
@@ -6277,6 +6676,28 @@
       ]
     },
     {
+      "title": "Strength while the burden remains",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide-narratives/trials-almas-people-960.webp",
+      "fullImage": "/assets/page-art/sitewide-narratives/trials-almas-people-full.webp",
+      "alt": "Two adults share the weight of a grain basket and exchange a look of encouragement",
+      "id": "art-f718852e063b",
+      "occurrences": [
+        {
+          "id": "source-52be54ea43c3",
+          "page": "/answers/faith-in-jesus-christ-during-trials.html",
+          "pageTitle": "Faith in Trials",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/sitewide-narratives/trials-almas-people-full.webp\"]:has(img[src=\"../assets/page-art/sitewide-narratives/trials-almas-people-960.webp\"])",
+          "title": "Strength while the burden remains"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Study a claim together",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/restoration-shared-questions-800.webp",
@@ -6806,6 +7227,50 @@
       ]
     },
     {
+      "title": "The risen Jesus Christ offers a warm, reassuring smile with one hand resting over His heart.",
+      "category": "Art & Study",
+      "thumbnail": "/assets/heroes/topics/living-christ-full.webp",
+      "fullImage": "/assets/heroes/topics/living-christ-full.webp",
+      "alt": "The risen Jesus Christ offers a warm, reassuring smile with one hand resting over His heart.",
+      "id": "art-e99268a32ea9",
+      "occurrences": [
+        {
+          "id": "source-0d06979021fe",
+          "page": "/art-study/the-living-christ.html",
+          "pageTitle": "The Living Christ",
+          "category": "Art & Study",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/living-christ-full.webp\"]",
+          "title": "The risen Jesus Christ offers a warm, reassuring smile with one hand resting over His heart."
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
+      "title": "The risen Jesus Christ stands on a lakeshore at dawn with a fishing boat on the water.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/life-after-death-full.webp",
+      "fullImage": "/assets/heroes/topics/life-after-death-full.webp",
+      "alt": "The risen Jesus Christ stands on a lakeshore at dawn with a fishing boat on the water.",
+      "id": "art-d1c9044a5feb",
+      "occurrences": [
+        {
+          "id": "source-05917e2404df",
+          "page": "/answers/what-happens-after-death.html",
+          "pageTitle": "Life After Death",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/life-after-death-full.webp\"]",
+          "title": "The risen Jesus Christ stands on a lakeshore at dawn with a fishing boat on the water."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The road through mortality",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/mortal-path-960.webp",
@@ -7181,6 +7646,28 @@
       ]
     },
     {
+      "title": "Time to Listen",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp",
+      "fullImage": "/assets/page-art/art-study/full/children-listen-at-home-20260919.webp",
+      "alt": "A mother sits at her young son’s eye level and listens as he speaks at home.",
+      "id": "art-b2ce0618db9b",
+      "occurrences": [
+        {
+          "id": "source-b528affbe380",
+          "page": "/art-study/suffer-the-little-children.html",
+          "pageTitle": "Suffer the Little Children",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/children-listen-at-home-20260919.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/children-listen-at-home-20260919.webp\"])",
+          "title": "Time to Listen"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Tranquil Morning",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Tranquil-Morning.webp",
@@ -7225,6 +7712,50 @@
       ]
     },
     {
+      "title": "Two volunteers pack food together in a community room.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/restoration-full.webp",
+      "fullImage": "/assets/heroes/topics/restoration-full.webp",
+      "alt": "Two volunteers pack food together in a community room.",
+      "id": "art-cb137d848ecc",
+      "occurrences": [
+        {
+          "id": "source-6cb291b5f23a",
+          "page": "/answers/restored-church-of-jesus-christ.html",
+          "pageTitle": "The restored Church",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/restoration-full.webp\"]",
+          "title": "Two volunteers pack food together in a community room."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Two women meet at an apartment doorway and share a grocery bag beside a moving box.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/divorce-full.webp",
+      "fullImage": "/assets/heroes/topics/divorce-full.webp",
+      "alt": "Two women meet at an apartment doorway and share a grocery bag beside a moving box.",
+      "id": "art-e4633fb8805a",
+      "occurrences": [
+        {
+          "id": "source-68f24071f594",
+          "page": "/answers/divorce-and-faith.html",
+          "pageTitle": "Divorce",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/divorce-full.webp\"]",
+          "title": "Two women meet at an apartment doorway and share a grocery bag beside a moving box."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Unhurried Welcome",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/children-gather-close.webp",
@@ -7240,6 +7771,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/art-study/full/children-gather-close.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/children-gather-close.webp\"])",
           "title": "Unhurried Welcome"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
+      "title": "Until He Finds It",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp",
+      "fullImage": "/assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+      "alt": "Christ as the Good Shepherd approaches one sheep among rocks and scrub at dusk.",
+      "id": "art-65c1316a584d",
+      "occurrences": [
+        {
+          "id": "source-97eab23b1c97",
+          "page": "/art-study/the-good-shepherd.html",
+          "pageTitle": "The Good Shepherd",
+          "category": "Art & Study",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp\"]:has(img[src=\"../assets/page-art/art-study/thumbs/shepherd-seeks-one-20260919.webp\"])",
+          "title": "Until He Finds It"
         }
       ],
       "categories": [
@@ -7424,15 +7977,15 @@
     }
   ],
   "stats": {
-    "artworks": 323,
-    "occurrences": 353,
+    "artworks": 356,
+    "occurrences": 367,
     "byKind": {
       "artwork": 41,
       "full": 1,
       "hero": 35,
       "legacy": 39,
       "missionary": 9,
-      "topic": 231
+      "topic": 245
     }
   }
 }

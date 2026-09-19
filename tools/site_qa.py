@@ -35,10 +35,10 @@ OLD_MODEL = "llama-3.1-8b-instant"
 NEW_MODEL = "openai/gpt-oss-20b"
 VERIFICATION_FILE = "google3fa84a4b37862f36.html"
 HEADER_PAGES = {
-    **{name: "site-header.css?v=20260914-christ-center" for name in CORE},
-    **{name: "../site-header.css?v=20260914-christ-center" for name in ANSWER_PAGES},
-    **{name: "../site-header.css?v=20260914-christ-center" for name in ART_STUDY_PAGES},
-    "404.html": "site-header.css?v=20260914-christ-center",
+    **{name: "site-header.css?v=20260919-sitewide-nav-1" for name in CORE},
+    **{name: "../site-header.css?v=20260919-sitewide-nav-1" for name in ANSWER_PAGES},
+    **{name: "../site-header.css?v=20260919-sitewide-nav-1" for name in ART_STUDY_PAGES},
+    "404.html": "site-header.css?v=20260919-sitewide-nav-1",
 }
 HEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")
 PLACEHOLDER_CAPTION_PATTERNS = (
@@ -302,13 +302,12 @@ def main() -> int:
             fail(errors, f"{study_path}: official scripture/Church study pathway missing")
         if study_path not in art:
             fail(errors, f"art.html missing featured study link for {study_path}")
-        approved_shared_hero = "../assets/heroes/home-christ-signature-approved-20260907.png"
+        living_hero = 'href="../assets/heroes/topics/living-christ-full.webp"' in text and 'data-hero-record="topic-living-christ"' in text and (ROOT / "assets/heroes/topics/living-christ-full.webp").is_file()
         local_images = [
             img for img in parser.images
             if img.get("src", "").startswith("../art/")
-            or (study_path == "art-study/the-living-christ.html" and img.get("src") == approved_shared_hero)
         ]
-        if not local_images:
+        if not local_images and not (study_path == "art-study/the-living-christ.html" and living_hero):
             fail(errors, f"{study_path}: local gallery artwork image missing")
 
 

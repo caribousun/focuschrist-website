@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 from PIL import Image
 from answer_study_qa import Document
+from study_gap_art_qa import sitewide_entries
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = 'book-of-mormon-evidences.html'
@@ -38,7 +39,8 @@ def check():
     require(text.count('topic-artwork-details.js?v=20260914-reopen-1') == 1, 'native topic-panel controller missing or duplicated')
     require(text.count('topic-artwork-details.css?v=20260908-exclusive-final') == 1, 'approved native topic-panel styles missing or duplicated')
     figures = [n for n in content if n.tag == 'figure' and n.has('fc-study-visual')]
-    require(len(figures) == 23, f'owner requires 23 supporting pictures, found {len(figures)}')
+    additions = {e['asset']: e for e in sitewide_entries() if e['page'] == PAGE and not e['talk']}
+    require(len(figures) == 23 + len(additions), f'requires 23 preserved supporting pictures plus {len(additions)} reviewed additions, found {len(figures)}')
     assets = []
     for figure in figures:
         triggers = [n for n in figure.children if n.tag == 'a' and any(c.tag == 'img' for c in n.walk())]
@@ -53,7 +55,11 @@ def check():
         require(bool(trigger.attrs.get('data-topic-study')), asset + ': onward study action missing')
         caption = next((n for n in figure.children if n.tag == 'figcaption'), None)
         require(caption is not None and len(caption.text().split()) >= 35, asset + ': meaningful reflection missing')
-        require(caption is not None and any(n.tag == 'a' and urlsplit(n.attrs.get('href', '')).hostname == 'www.churchofjesuschrist.org' for n in caption.walk()), asset + ': official source pill missing')
+        if asset in additions:
+            actual_sources = [n.attrs.get('href') for n in caption.walk() if n.tag == 'a' and urlsplit(n.attrs.get('href', '')).scheme == 'https'] if caption else []
+            require(actual_sources == additions[asset]['markup_sources'], asset + ': exact reviewed primary source pills differ')
+        else:
+            require(caption is not None and any(n.tag == 'a' and urlsplit(n.attrs.get('href', '')).hostname == 'www.churchofjesuschrist.org' for n in caption.walk()), asset + ': official source pill missing')
     heroes = [n for n in nodes if n.tag == 'a' and 'data-hero-viewer' in n.attrs]
     require(len(heroes) == 1, 'requires one hero in addition to 23 supporting pictures')
     if heroes:
@@ -61,7 +67,7 @@ def check():
         assets.append(urlsplit(heroes[0].attrs.get('href', '')).path)
     require(len(assets) == len(set(assets)), 'artwork assets repeated within the study')
     entries = json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages'].get(PAGE, [])
-    require(len(entries) == 24, f'review ledger requires 24 images including hero, found {len(entries)}')
+    require(len(entries) == 24 + len(additions), f'review ledger requires 24 preserved images plus {len(additions)} reviewed additions, found {len(entries)}')
     require({x.get('asset') for x in entries} == set(assets), 'page assets and reviewed ledger disagree')
     for entry in entries:
         asset = entry.get('asset', ''); path = (ROOT / asset).resolve()
@@ -89,4 +95,4 @@ if __name__ == '__main__':
     failures = check()
     if failures:
         raise SystemExit('\n'.join(failures))
-    print('Evidences QA PASS: 23 native supporting pictures plus hero, 12 topics, 3 videos, source reflections, reviewed bytes and protected identity masters')
+    print('Evidences QA PASS: 23 preserved supporting pictures plus manifest-bound additions and hero, 12 topics, 3 videos, exact primary sources, reviewed bytes and protected identity masters')

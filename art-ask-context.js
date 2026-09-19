@@ -11,9 +11,15 @@
         try {
             const url = new URL(raw, window.location.href);
             if (url.origin !== window.location.origin) return fallback;
-            const heroPaths = ["/birth-of-christ.html", "/book-of-mormon-evidences.html", "/church-history.html", "/answers.html", "/art.html", "/pioneers.html", "/about.html", "/watch.html", "/404.html", "/missionary.html", "/ask.html", "/index.html", "/art-study/suffer-the-little-children.html", "/art-study/be-still.html", "/art-study/the-living-christ.html", "/art-study/the-good-shepherd.html", "/answers/what-is-the-book-of-mormon.html", "/answers/are-latter-day-saints-christian.html", "/answers/what-happens-after-death.html", "/answers/who-was-joseph-smith.html", "/answers/why-latter-day-saints-build-temples.html", "/answers/divorce-and-faith.html", "/answers/jesus-christ-latter-day-saint-beliefs.html", "/answers/why-families-are-important.html", "/answers/bible-and-book-of-mormon-together.html", "/answers/faith-in-jesus-christ-during-trials.html", "/answers/prayer-and-personal-revelation.html", "/answers/death-of-a-child.html"];
+            const heroPaths = ["/birth-of-christ.html", "/book-of-mormon-evidences.html", "/church-history.html", "/answers.html", "/art.html", "/pioneers.html", "/about.html", "/watch.html", "/404.html", "/missionary.html", "/ask.html", "/index.html", "/art-study/suffer-the-little-children.html", "/art-study/be-still.html", "/art-study/the-living-christ.html", "/art-study/the-good-shepherd.html", "/answers/what-is-the-book-of-mormon.html", "/answers/are-latter-day-saints-christian.html", "/answers/what-happens-after-death.html", "/answers/who-was-joseph-smith.html", "/answers/why-latter-day-saints-build-temples.html", "/answers/divorce-and-faith.html", "/answers/jesus-christ-latter-day-saint-beliefs.html", "/answers/why-families-are-important.html", "/answers/bible-and-book-of-mormon-together.html", "/answers/faith-in-jesus-christ-during-trials.html", "/answers/prayer-and-personal-revelation.html", "/answers/death-of-a-child.html", "/answers/god-our-heavenly-father.html", "/answers/grief-and-faith.html", "/answers/look-unto-me-doctrine-and-covenants-6-36.html", "/answers/restored-church-of-jesus-christ.html", "/answers/stand-forever.html", "/answers/what-is-eternal-marriage.html", "/atonement.html", "/joseph-smith-likeness.html"];
             if (url.searchParams.get('hero') === '1' && heroPaths.includes(url.pathname)) {
                 return url.pathname + '?hero=1';
+            }
+            // Supporting artwork returns to its lesson, not the gallery. Keep
+            // only a known local page and a plain fragment; discard query data.
+            const studyPaths = heroPaths.concat(['/come-follow-me.html', '/general-conference.html']);
+            if (!['/art.html', '/index.html', '/ask.html'].includes(url.pathname) && studyPaths.includes(url.pathname) && /^#[A-Za-z][A-Za-z0-9_.:-]*$/.test(url.hash)) {
+                return url.pathname + url.hash;
             }
             if (url.pathname === '/index.html') {
                 const key = url.searchParams.get('artwork');

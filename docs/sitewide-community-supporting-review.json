@@ -1,0 +1,116 @@
+{
+  "date": "2026-09-19",
+  "scope": "Three exclusive supporting scenes requested after sitewide review; preserves all existing artwork and heroes.",
+  "tool": "built-in image_gen.imagegen",
+  "prompt_record": "docs/sitewide-community-supporting-prompts.json",
+  "source_check": "Sources opened and read live2026-09-19. Only primary official Church records/manuals and museum collection material used.",
+  "artworks": [
+    {
+      "page": "church-history.html",
+      "section": "relief-society-organization",
+      "slug": "history-relief-practical-care-20260919",
+      "file": "exec-0fac7821-5ef8-4b7b-a9d5-dc4f16590cf3.png",
+      "title": "Care Takes Shape in Ordinary Hands",
+      "alt": "Two women in an 1840s household talk as they prepare simple clothing beside a basket of folded cloth.",
+      "caption": "A small shirt is held up beside folded cloth as two women share the work. The early Relief Society donation record includes clothing and household textiles, reminding us how practical gifts can meet ordinary needs.",
+      "source": "https://www.churchofjesuschrist.org/study/church-historians-press/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-5?lang=eng",
+      "source_label": "Read the March 1842 donation record",
+      "study": "church-history.html#relief-society-organization",
+      "study_label": "Continue Relief Society history",
+      "research": [
+        "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-1?lang=eng",
+        "https://www.churchhistorianspress.org/the-first-fifty-years-of-relief-society/part-1/1-2/1-2-5?lang=eng",
+        "https://www.metmuseum.org/art/collection/search/80769"
+      ],
+      "documented": "Founding March 17, 1842 record establishes organized care and roles. March 29/31 donations list a gown, bonnet, quilt covers, silk and a basket. Met American cotton dress ca1840 supplies contemporary material/silhouette context.",
+      "interpretation": "Two unnamed adult women, approximate ages30/50, household, shirt-mending action, facial features, garment colors and exact room are original interpretation, not an identified documented visit or named portraits.",
+      "review": "Parent independently inspected mutual eye contact, natural hands/cloth and plain1840s room. Agent checked center-parted pinned hair, high-neck long-sleeved cotton dresses/aprons, ordinary sewing tools, no modern machine or fixtures. No claim of exact historical reconstruction.",
+      "asset": "assets/page-art/sitewide-community/history-relief-practical-care-20260919-full.webp",
+      "thumbnail": "assets/page-art/sitewide-community/history-relief-practical-care-20260919-800.webp",
+      "original_file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-19\\conti\\work\\sitewide-supporting-originals\\history-relief-practical-care-20260919-final.png",
+      "original_sha256": "951db0fb04631b4b516000ea51c2e02aea033492411727077425e00d80dd4f0b",
+      "sha256": "d92548ff1fff65133e898206cbbbe5b75da977289ff2bf19d5ce4892407244db",
+      "thumbnail_sha256": "908d00aef7ea2bcb65fd4eab23dbbe9969f179e57e76c1a0ea03ad399d548f6b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "independent_reviewer": "parent root",
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "runtime_status": "DOM contract passed; real desktop/phone rendered verification pending parent"
+    },
+    {
+      "page": "come-follow-me.html",
+      "section": "seven-days",
+      "slug": "cfm-gate-repair-service-20260919",
+      "file": "exec-a9e45725-dc1e-4634-817b-a4fb3a01852e.png",
+      "title": "Carry Learning into a Helpful Act",
+      "alt": "A teenager tightens a gate hinge while an older neighbor steadies the gate and watches the work.",
+      "caption": "One steadies the gate while the other tightens its hinge. Their shared effort offers a simple place to begin when scripture study leads to an act of service.",
+      "source": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/003-improve-learning?lang=eng",
+      "source_label": "Ideas to Improve Learning",
+      "study": "missionary.html",
+      "study_label": "Explore sharing and service",
+      "research": [
+        "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/003-improve-learning?lang=eng"
+      ],
+      "documented": "Official2026 learning guidance says to relate scripture to life and live by what one learns; it invites acting on promptings.",
+      "interpretation": "Contemporary teen and older neighbor, ages16/70 approximate; gate repair is an illustrative application, not a named individual, historical event or particular dated weekly lesson.",
+      "review": "Parent independently passed age variation, shared hinge attention, hands and tool plausibility. Agent enlarged hinge crop confirms screwdriver tip aligned with visible screw on post-side hinge leaf. No family relationship inferred.",
+      "asset": "assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-full.webp",
+      "thumbnail": "assets/page-art/sitewide-community/cfm-gate-repair-service-20260919-800.webp",
+      "original_file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-19\\conti\\work\\sitewide-supporting-originals\\cfm-gate-repair-service-20260919-final.png",
+      "original_sha256": "c463c89b2f133772a8ec762cb8d9dcc1ee43dfcf49db8338cc5b960cb1ef67d6",
+      "sha256": "22da953eb7184cdb41b9108cb2551c956de3fae0580335069e962dc4e29332b2",
+      "thumbnail_sha256": "c6309b1ff9496e5398c5c20f55daf498d1962b7b1500977e8aafabca0a10d751",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "independent_reviewer": "parent root",
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "runtime_status": "DOM contract passed; real desktop/phone rendered verification pending parent"
+    },
+    {
+      "page": "answers/what-is-eternal-marriage.html",
+      "section": "questions",
+      "slug": "marriage-community-welcome-20260919",
+      "file": "exec-4a46644f-b874-4430-80bb-4d3cb88b5ac9.png",
+      "title": "A Place in the Conversation",
+      "alt": "Adults welcome a woman into their conversation, drawing an empty chair into the circle.",
+      "caption": "An empty chair is drawn into the circle, and the arriving woman is met with warm attention. Welcoming participation begins with noticing someone and inviting them to join the conversation.",
+      "source": "https://www.churchofjesuschrist.org/study/manual/general-handbook/14-single-members?lang=eng",
+      "source_label": "Study belonging and participation",
+      "study": "../answers/why-families-are-important.html",
+      "study_label": "Explore care and belonging",
+      "research": [
+        "https://www.churchofjesuschrist.org/study/manual/general-handbook/14-single-members?lang=eng"
+      ],
+      "documented": "Handbook14.0 teaches that all are invited to belong and contribute.14.1 describes participation with people of all ages and circumstances;14.2 includes gospel learning and caring service.",
+      "interpretation": "Generic modern community room and unnamed adults; no depicted marital status, family relationship, grief, divorce, widowhood or matchmaking is inferred.",
+      "review": "Parent independently passed aligned welcoming eye contact, natural chair invitation, adult age variation, hands and realistic room. Agent checked modest contemporary dress and caption boundaries.",
+      "asset": "assets/page-art/sitewide-community/marriage-community-welcome-20260919-full.webp",
+      "thumbnail": "assets/page-art/sitewide-community/marriage-community-welcome-20260919-800.webp",
+      "original_file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-19\\conti\\work\\sitewide-supporting-originals\\marriage-community-welcome-20260919-final.png",
+      "original_sha256": "8b3fa1d44a23a12c720f29cb18fdd79ae09dc8ea51939e3ebcb7ca5bee27e6e7",
+      "sha256": "75ac198b8c78b6cd5202ac999142f5d019b7d9a44ff3552b25b183e76417ffad",
+      "thumbnail_sha256": "a0ceb7dd2f97ab3f3d436a01d2bbc9ef99c1c64b7ee35d8b15806d8f31ee35d9",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "independent_reviewer": "parent root",
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "runtime_status": "DOM contract passed; real desktop/phone rendered verification pending parent"
+    }
+  ],
+  "verification": [
+    "Three-page DOM gate passed: exact new picture title/source, study panel first, nested full-size close, focus, Continue Lesson and reopen",
+    "Media voice QA passed",
+    "Study layout static gate passed",
+    "Real desktop/phone browser verification pending parent"
+  ]
+}

@@ -461,7 +461,9 @@
       "url": "https://www.churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe?lang=eng",
       "title": "“Lord, I Believe”",
       "video_identity": "churchofjesuschrist.org/study/general-conference/2013/04/lord-i-believe",
-      "aliases": []
+      "aliases": [],
+      "source_review": "docs/sitewide-talk-thumbnail-review.json",
+      "review_note": "Existing single video identity preserved. New original thematic thumbnail interprets the Mark9 father appeal; compared against actual approved Christ face and independently reviewed; owner approval not claimed."
     },
     "stand-faith-choice": {
       "kind": "video",
@@ -771,6 +773,16 @@
       "aliases": [],
       "verified_date": "2026-09-19",
       "source_review": "docs/grief-freeman-resource-review.json"
+    },
+    "holland-qualified-care": {
+      "kind": "video",
+      "presentation": "Church video and transcript",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2013/10/like-a-broken-vessel?lang=eng",
+      "title": "Like a Broken Vessel",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2013/10/like-a-broken-vessel",
+      "aliases": [],
+      "source_review": "docs/sitewide-talk-thumbnail-review.json",
+      "review_note": "Read actual official talk: compassion, patience and qualified professional care; thematic artwork is not a speaker portrait or historical anecdote."
     }
   }
 }

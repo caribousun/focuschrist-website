@@ -1,0 +1,171 @@
+{
+  "date": "2026-09-19",
+  "status": "local browser verification recorded; publication and final completion not claimed",
+  "performed_by": "Root agent using actual CUA browser; evidence relayed to independent documentation agent in this task",
+  "owner_approval": false,
+  "published": false,
+  "coverage": {
+    "canonical_pages": {
+      "pages": 39,
+      "viewports": [
+        "desktop",
+        "phone"
+      ],
+      "page_viewport_checks": 78,
+      "result": "pass",
+      "checks": [
+        "no horizontal overflow",
+        "no completed broken images",
+        "footer present"
+      ]
+    },
+    "new_heroes": {
+      "artworks": 19,
+      "artwork_viewport_checks": 38,
+      "result": "pass",
+      "checks": [
+        "actual desktop and phone opening",
+        "detail panel",
+        "full-size viewer",
+        "close"
+      ]
+    },
+    "art_study_supporting": {
+      "images": 20,
+      "image_viewport_checks": 40,
+      "result": "pass",
+      "checks": [
+        "keyboard activation",
+        "detail panel",
+        "full-size viewer",
+        "Continue Lesson"
+      ]
+    },
+    "other_new_supporting": {
+      "placements": 10,
+      "placement_viewport_checks": 20,
+      "result": "pass",
+      "checks": [
+        "keyboard activation",
+        "detail panel",
+        "full-size viewer",
+        "Continue Lesson"
+      ]
+    }
+  },
+  "specific_journeys": [
+    {
+      "name": "Living Christ replacement",
+      "result": "pass",
+      "checks": [
+        "replacement checked on actual desktop screen",
+        "replacement checked on actual phone screen"
+      ],
+      "owner_approval": false
+    },
+    {
+      "name": "Come Follow Me supporting panel repair",
+      "result": "pass",
+      "desktop_viewport": [
+        1440,
+        1000
+      ],
+      "phone_viewport": [
+        391,
+        844
+      ],
+      "observed": "Rounded blue/green panel, gold buttons, contained full image; screenshots visually verified."
+    },
+    {
+      "name": "Desktop Eternal Marriage navigation",
+      "result": "pass",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "fresh_files": true,
+      "rectangles": {
+        "logo": {
+          "x": 28,
+          "width": 154.66
+        },
+        "centered_study_title": {
+          "x": 641,
+          "width": 142.24
+        },
+        "search": {
+          "x": 1265,
+          "width": 87.36
+        }
+      },
+      "checks": [
+        "no overlap",
+        "hamburger opens complete navigation",
+        "hamburger closes",
+        "phone391 has no horizontal overflow"
+      ]
+    },
+    {
+      "name": "Trials artwork to Ask and return",
+      "result": "pass",
+      "method": "actual keyboard activation of body artwork Ask link, prefill inspection and Return click",
+      "return_destination": "/answers/faith-in-jesus-christ-during-trials.html#scripture-study"
+    },
+    {
+      "name": "Art featured Living Christ to complete study",
+      "result": "pass",
+      "method": "actual keyboard navigation from featured card to existing detail panel to Open the Complete Art Study",
+      "destination": "art-study/the-living-christ.html"
+    },
+    {
+      "name": "Four new talk thumbnails",
+      "result": "pass",
+      "view": "actual phone screens in context",
+      "placements": [
+        "Trials care",
+        "Stand Forever Lord I Believe",
+        "Prayer runway",
+        "Look Unto Me youth book"
+      ],
+      "checks": [
+        "no image crop problem",
+        "readable captions",
+        "official talk destinations"
+      ]
+    },
+    {
+      "name": "Living Christ hero Ask and return",
+      "result": "pass",
+      "view": "actual desktop CUA",
+      "checks": [
+        "hero Ask opens prefilled question",
+        "Return reaches exact source URL",
+        "hero dialog reopens"
+      ],
+      "return_destination": "/art-study/the-living-christ.html?hero=1"
+    },
+    {
+      "name": "Search to Trials artwork in gallery",
+      "result": "pass",
+      "view": "actual desktop CUA and screenshot",
+      "query": "Strength while the burden remains",
+      "best_matches": 1,
+      "supporting_matches": 8,
+      "method": "Enter on actual search result",
+      "destination": "/art-gallery.html?picture=art-f718852e063b",
+      "observed": "Gallery embeds exact Trials source panel; desktop screenshot visually verified."
+    },
+    {
+      "name": "Trials gallery scripture reader",
+      "result": "pass",
+      "view": "actual CUA",
+      "source_label": "Mosiah 24:14\u201315",
+      "observed": "Source opens in-place reader with the two correct verses."
+    }
+  ],
+  "evidence_boundaries": [
+    "Records root-performed local browser checks, not publication or deployed byte verification.",
+    "Independent image likeness/source review and owner approval are separate.",
+    "No final completion claim; release gates and next-phase scope remain with root."
+  ]
+}

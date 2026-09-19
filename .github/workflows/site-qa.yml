@@ -21,6 +21,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Install decoded image QA dependency
         run: python -m pip install Pillow==12.2.0
@@ -70,6 +72,8 @@ jobs:
           node --check art-gallery.js
           node --check art-gallery-bridge.js
           python tools/artwork_details_qa.py
+          python tools/sitewide_artwork_review_qa.py --self-test
+          python tools/sitewide_artwork_review_qa.py
           python tools/art_study_enrichment_qa.py
           python tools/birth_of_christ_qa.py
           python tools/study_gap_art_qa.py
@@ -79,6 +83,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/sitewide_hero_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/topic_artwork_sources_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
