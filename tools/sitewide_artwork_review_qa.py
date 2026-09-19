@@ -116,7 +116,16 @@ def main():
     check(set(reviewed)=={'focused-answers.css'}, 'Unexpected focused stylesheet exemption')
     for name,digest in reviewed.items():
         check(sha(ROOT/name)==digest, 'Focused stylesheet differs from reviewed bytes: '+name)
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css'],cwd=ROOT,text=True)
+    # The standalone review desk has its own document; its stylesheet must never
+    # be loaded by visitor pages or imported by a site stylesheet.
+    tool_style = 'tools/anatomy-review/style.css'
+    for path in [*ROOT.rglob('*.html'), *ROOT.rglob('*.css'), *ROOT.rglob('*.js')]:
+        relative = path.relative_to(ROOT).as_posix()
+        if relative.startswith(('tools/', '.git/', 'node_modules/', 'focuschrist-repo/')):
+            continue
+        check('anatomy-review' not in path.read_text(encoding='utf8'),
+              'Visitor asset references standalone anatomy review tool: '+relative)
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():

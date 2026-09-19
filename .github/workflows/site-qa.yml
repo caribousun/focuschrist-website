@@ -37,6 +37,9 @@ jobs:
       - name: Verify the Atonement centerpiece contract
         run: python tools/atonement_qa.py
 
+      - name: Verify anatomy review rejection and annotation safeguards
+        run: node tools/anatomy-review/core.test.js
+
       - name: Verify global artwork scanner regression fixtures
         run: python tools/topic_artwork_uniqueness_runtime_qa.py
 
