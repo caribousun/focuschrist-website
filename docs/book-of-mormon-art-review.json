@@ -902,32 +902,44 @@
       "key": "30-descent-bountiful",
       "asset": "assets/page-art/book-of-mormon-stories/30-descent-bountiful-full.webp",
       "thumbnail": "assets/page-art/book-of-mormon-stories/30-descent-bountiful-960.webp",
-      "sha256": "f1442c78fc192cb46512b30774486dedb2ede0d8ad3cbcde90c8b96aa40c0f47",
-      "thumbnail_sha256": "18f3f72fa5c8cb2c71b3eabde6d04fdd0de74c7c391613aeaf584e61e4d82230",
+      "sha256": "68527ed8adcd33a7dc027f20d316faa31d213a89e8748cd41685c2d28e7e966f",
+      "thumbnail_sha256": "96281095e8cf2652d3076104df80e30f44c925e97ae0b9a70b81f2aee0fc8378",
       "christ": true,
       "reviewed": true,
       "owner_approved": true,
-      "approval_basis": "Owner standing instruction in active task: shown pictures are assumed approved unless he comments with a correction; superseded candidates remain excluded.",
+      "approval_basis": "Wyatt explicitly identified the exact approved Desktop originals for publication.",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?id=p1-p8&lang=eng#p1",
       "label": "3 Nephi 11:1–8",
       "title": "The promised Savior descends",
       "caption": "The people turn toward heaven and see a Man descending in a white robe. The Father has invited them to hear His Beloved Son. Pause with the gathering at this moment of wonder, before the Savior speaks.",
       "alt": "Christ in a white robe descends within heavenly light toward the people gathered around the temple at Bountiful.",
       "source_file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-19\\con-2\\outputs\\book-of-mormon-art\\30-descent-bountiful.png",
-      "source_sha256": "a849d5f2c97a31e01353b3e7fb644551347d95141aa39d3c981c05de6c0eb243",
+      "source_sha256": "a498738f1996c9315ae78ba2697ba71812328a95104d84342d2e168ca0954e28",
       "width": 1536,
       "height": 1024,
       "review": {
-        "file": "exec-e0254215-e617-4923-ac4e-189041ad25c0.png",
-        "scene": "bountiful-descent-natural-scars",
-        "status": "pass-with-scar-resolution-limit",
-        "reason": "Owner-liked wide composition preserved. Visible palm/wrist marks read muted skin-toned rather than bright white slits at displayed native image scale; no visible fresh bleeding or open wound. Hands occupy few pixels, so fine scar texture cannot be certified; likeness-resolution limit of wide descent remains. Composition praise not treated as final owner approval."
+        "file": "exec-859eec55-bf8e-40ad-91ba-0afd24cce702.png",
+        "scene": "bountiful-descent-likeness-edit-v2",
+        "status": "pass-with-owner-approved-gaze-limitation",
+        "reason": "Direct actual-pixel comparison with approved hero and output30: face meaningfully replaced, with more recognizable approved eye/brow/nose/smile/beard configuration and visibly open eyes. Gaze reads level-left rather than down toward crowd, recorded as technical limitation. Wyatt subsequently explicitly approved this exact candidate for now; preserve approved pixels and do not make unrequested gaze edit. Wider scene, anatomy and composition retained.",
+        "ownerApproval": "Explicit Wyatt approval: approved for now; supersedes original30 and rejected f2986 candidate for selection."
       },
       "owner_approval_evidence": {
         "date": "2026-09-19",
-        "scope": "Final pictures displayed in this active task with no outstanding owner correction",
-        "owner_statement": "if I don't comment on a picture it is assumed it is approved",
-        "method": "owner-authorized standing approval rule, separate from technical image review"
+        "scope": "30-descent-bountiful",
+        "owner_statement": "These were the two I approved",
+        "method": "Owner-supplied original file; SHA256 matched reviewed source"
+      },
+      "superseded_review": {
+        "sha256": "f1442c78fc192cb46512b30774486dedb2ede0d8ad3cbcde90c8b96aa40c0f47",
+        "thumbnail_sha256": "18f3f72fa5c8cb2c71b3eabde6d04fdd0de74c7c391613aeaf584e61e4d82230",
+        "source_sha256": "a849d5f2c97a31e01353b3e7fb644551347d95141aa39d3c981c05de6c0eb243",
+        "review": {
+          "file": "exec-e0254215-e617-4923-ac4e-189041ad25c0.png",
+          "scene": "bountiful-descent-natural-scars",
+          "status": "pass-with-scar-resolution-limit",
+          "reason": "Owner-liked wide composition preserved. Visible palm/wrist marks read muted skin-toned rather than bright white slits at displayed native image scale; no visible fresh bleeding or open wound. Hands occupy few pixels, so fine scar texture cannot be certified; likeness-resolution limit of wide descent remains. Composition praise not treated as final owner approval."
+        }
       }
     },
     {
@@ -998,32 +1010,44 @@
       "key": "33-descent-near",
       "asset": "assets/page-art/book-of-mormon-stories/33-descent-near-full.webp",
       "thumbnail": "assets/page-art/book-of-mormon-stories/33-descent-near-960.webp",
-      "sha256": "d15f0ad767675577b164ce23233bf258025ae3661263cd8b9267511e5123315e",
-      "thumbnail_sha256": "149169c4430007077bd8275b0796b0084514e44d71a6258947ef826bf114dd06",
+      "sha256": "0ad52ec19b653e8ec430cf77355166d987d586f0961d4c07e417ff451e50bb1d",
+      "thumbnail_sha256": "a61fca4a61fc10d6f4b67618f35958a1a03b6c5eb2cdac41ef633e2c487bd02b",
       "christ": true,
       "reviewed": true,
       "owner_approved": true,
-      "approval_basis": "Owner standing instruction in active task: shown pictures are assumed approved unless he comments with a correction; superseded candidates remain excluded.",
+      "approval_basis": "Wyatt explicitly identified the exact approved Desktop originals for publication.",
       "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?id=p8&lang=eng#p8",
       "label": "3 Nephi 11:8",
       "title": "Coming down to His people",
       "caption": "The distant promise becomes a person before their eyes. Jesus comes down and stands among them. Stay with the quiet attention of this moment, and read the introduction that follows.",
       "alt": "Christ descends close to the gathering in white, His attention turned toward an older man looking up at Him.",
       "source_file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-19\\con-2\\outputs\\book-of-mormon-art\\33-descent-near.png",
-      "source_sha256": "1b3b61510b9416b84775399f6ba71cbc663a02ab089d9a763a942ab9cbb0836b",
+      "source_sha256": "eab4d8122f2abba1c42102ce1c5264caa98a60fa74cd167fe5a49dd82f93ebd6",
       "width": 1536,
       "height": 1024,
       "review": {
-        "file": "exec-81df1099-a803-4f7f-899a-fccff4952254.png",
-        "scene": "bountiful-close-descent",
-        "status": "pass-with-likeness-resolution-limit",
-        "reason": "Closer Christ face is recognizable against approved hero with no obvious identity drift; open downward attention directed toward older man at right. White robe, bare feet, column light, coherent hands/feet and people. Facial detail more assessable than wide descent but not sufficient to claim exact pixel parity; tiny scar details remain limited by image scale."
+        "file": "exec-44cd843e-6378-4797-af24-b70f24e88441.png",
+        "scene": "bountiful-close-descent-natural-scars-v2",
+        "status": "pass",
+        "reason": "Direct actual-pixel comparison with output33: both palms now opaque with very small muted skin-tone/crease-like closed marks. Original bright white slit/hole impression materially reduced; no light shining through hands. Fingers and wrist transitions remain natural, and recognizable existing33 face and composition retained. Addresses explicit new owner scar correction; previous review/assumed approval superseded on scar criterion.",
+        "ownerSupersession": "New owner correction invalidated acceptance of prior white-hole marks. Candidate technically passes correction; parent records owner selection separately."
       },
       "owner_approval_evidence": {
         "date": "2026-09-19",
-        "scope": "Final pictures displayed in this active task with no outstanding owner correction",
-        "owner_statement": "if I don't comment on a picture it is assumed it is approved",
-        "method": "owner-authorized standing approval rule, separate from technical image review"
+        "scope": "33-descent-near",
+        "owner_statement": "These were the two I approved",
+        "method": "Owner-supplied original file; SHA256 matched reviewed source"
+      },
+      "superseded_review": {
+        "sha256": "d15f0ad767675577b164ce23233bf258025ae3661263cd8b9267511e5123315e",
+        "thumbnail_sha256": "149169c4430007077bd8275b0796b0084514e44d71a6258947ef826bf114dd06",
+        "source_sha256": "1b3b61510b9416b84775399f6ba71cbc663a02ab089d9a763a942ab9cbb0836b",
+        "review": {
+          "file": "exec-81df1099-a803-4f7f-899a-fccff4952254.png",
+          "scene": "bountiful-close-descent",
+          "status": "pass-with-likeness-resolution-limit",
+          "reason": "Closer Christ face is recognizable against approved hero with no obvious identity drift; open downward attention directed toward older man at right. White robe, bare feet, column light, coherent hands/feet and people. Facial detail more assessable than wide descent but not sufficient to claim exact pixel parity; tiny scar details remain limited by image scale."
+        }
       }
     },
     {
