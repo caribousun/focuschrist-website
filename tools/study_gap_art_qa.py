@@ -21,7 +21,7 @@ SITEWIDE = {
     'sitewide-supporting-review.json': {'living-breakfast-shore-20260919', 'shepherd-seeks-one-20260919', 'children-listen-at-home-20260919', 'still-phone-down-scripture-20260919'},
     'sitewide-gap-supporting-review.json': {'bom-archaeology-context', 'bom-alma-helaman', 'bom-mormon-moroni', 'bom-language-comparison'},
     'sitewide-community-supporting-review.json': {'history-relief-practical-care-20260919', 'cfm-gate-repair-service-20260919', 'marriage-community-welcome-20260919'},
-    'sitewide-narrative-supporting-review.json': {'look-peter-rescue', 'trials-almas-people', 'birth-john-witness'},
+    'sitewide-narrative-supporting-review.json': {'look-peter-rescue', 'trials-almas-people', 'birth-john-witness', 'two-witnesses-emmaus-20260919'},
     'sitewide-talk-thumbnail-review.json': {'holland-qualified-care', 'renlund-guided-flight', 'uchtdorf-youth-choice', 'holland-lord-believe'},
 }
 

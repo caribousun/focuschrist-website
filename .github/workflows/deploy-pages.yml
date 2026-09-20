@@ -79,6 +79,8 @@ jobs:
           python tools/book_of_mormon_stories_qa.py --self-test
           python tools/book_of_mormon_stories_qa.py
           python tools/study_gap_art_qa.py
+          python tools/study_section_balance_qa.py --self-test
+          python tools/study_section_balance_qa.py
           node tools/hero_details_runtime_qa.js
 
       - name: Verify every featured art supporting picture study panel

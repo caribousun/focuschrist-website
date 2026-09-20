@@ -3504,6 +3504,28 @@
       ]
     },
     {
+      "title": "He opens the scriptures along the way",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-960.webp",
+      "fullImage": "/assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-full.webp",
+      "alt": "Jesus in a sage-green mantle speaks with two attentive disciples on the road to Emmaus.",
+      "id": "art-06f3df238ac7",
+      "occurrences": [
+        {
+          "id": "source-46a2f025e157",
+          "page": "/answers/bible-and-book-of-mormon-together.html",
+          "pageTitle": "Bible & Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-full.webp\"]:has(img[src=\"../assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-960.webp\"])",
+          "title": "He opens the scriptures along the way"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He prayed for them",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/life-after-death/nephi-prayer-800.webp",
@@ -9035,15 +9057,15 @@
     }
   ],
   "stats": {
-    "artworks": 404,
-    "occurrences": 415,
+    "artworks": 405,
+    "occurrences": 416,
     "byKind": {
       "artwork": 41,
       "full": 1,
       "hero": 37,
       "legacy": 39,
       "missionary": 9,
-      "topic": 291
+      "topic": 292
     }
   }
 }

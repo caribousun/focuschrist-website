@@ -151,6 +151,11 @@ jobs:
       - name: Verify shared study layout rails and navigation
         run: python tools/study_layout_uniformity_qa.py
 
+      - name: Verify study section balance and paired media
+        run: |
+          python tools/study_section_balance_qa.py --self-test
+          python tools/study_section_balance_qa.py
+
       - name: Verify Joseph Smith likeness study and provenance
         run: python tools/joseph_smith_likeness_qa.py
 
