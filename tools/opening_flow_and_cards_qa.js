@@ -8,6 +8,15 @@ const fn = source.slice(source.indexOf('    function initMobileOpening('), sourc
 const pages = [...fs.readFileSync('sitemap.xml', 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)]
   .map(m => new URL(m[1]).pathname.slice(1) || 'index.html');
 let openings = 0;
+const sectionCopyPages = new Set([
+  'answers/what-is-eternal-marriage.html',
+  'answers/look-unto-me-doctrine-and-covenants-6-36.html',
+  'answers/bible-and-book-of-mormon-together.html',
+  'answers/melchizedek-priesthood-restoration.html',
+  'birth-of-christ.html', 'joseph-smith-likeness.html',
+  'art-study/the-living-christ.html', 'art-study/the-good-shepherd.html',
+  'art-study/suffer-the-little-children.html', 'art-study/be-still.html'
+]);
 for (const page of pages) {
   const virtualConsole = new VirtualConsole();
   virtualConsole.on('jsdomError', error => {
@@ -32,11 +41,18 @@ for (const page of pages) {
     const target = w.document.getElementById(cue.hash.slice(1));
     assert(target, page + ': missing next-section destination');
     assert(!target.hidden, page + ': mobile cue targets hidden supporting content');
+    if (sectionCopyPages.has(page) && w.document.querySelector('.fc-mobile-opening-notes')) {
+      assert.equal(target, w.document.querySelector('.fc-mobile-opening-notes'), page + ': Continue must not skip retained introduction');
+    }
+    if (page === 'answers/look-unto-me-doctrine-and-covenants-6-36.html') {
+      assert(target.textContent.includes('Look unto me in every thought; doubt not, fear not.'), 'Exact scripture must remain at Continue destination');
+      assert(target.querySelector('.fc-inline-scripture[href*="id=p36"]'), 'Scripture reference must remain clickable');
+    }
     assert.equal(opening.querySelectorAll('.fc-mobile-scroll-cue').length, 1, page + ': duplicate invitation');
     for (const action of opening.querySelectorAll('[data-fc-mobile-label]')) {
       assert(action.getAttribute('aria-label').includes(action.textContent.trim()), page + ': accessible name must include visible action wording');
     }
-    if (!w.document.body.classList.contains('fc-main-opening')) {
+    if (!w.document.body.classList.contains('fc-main-opening') && !sectionCopyPages.has(page)) {
       const restoredCopy = opening.cloneNode(true);
       restoredCopy.querySelector('.fc-mobile-scroll-cue').remove();
       assert.equal(restoredCopy.textContent.replace(/\s+/g, ' ').trim(), originalText, page + ': individual study opening must remain untouched');

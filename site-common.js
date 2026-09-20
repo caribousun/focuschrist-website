@@ -905,7 +905,17 @@
         const intro = document.querySelector('.fc-topic-opening, .fc-page-intro, .fc-gallery-intro, .cfm-hero, .gc-page-opening');
         if (!intro) return;
         const mobile = window.matchMedia('(max-width: 700px)');
-        if (document.body.classList.contains('fc-main-opening')) {
+        // Owner-authorized wording repairs only; section images and geometry stay original.
+        const sectionCopyPages = new Set([
+            '/answers/what-is-eternal-marriage.html',
+            '/answers/look-unto-me-doctrine-and-covenants-6-36.html',
+            '/answers/bible-and-book-of-mormon-together.html',
+            '/answers/melchizedek-priesthood-restoration.html',
+            '/birth-of-christ.html', '/joseph-smith-likeness.html',
+            '/art-study/the-living-christ.html', '/art-study/the-good-shepherd.html',
+            '/art-study/suffer-the-little-children.html', '/art-study/be-still.html'
+        ]);
+        if (document.body.classList.contains('fc-main-opening') || sectionCopyPages.has(window.location.pathname)) {
             // Fit the opening by editing its mobile copy and labels, never by adding
             // artwork borders or surrounds. Longer explanations remain in the page.
             const path = window.location.pathname;
@@ -977,6 +987,41 @@
                 moveBelow('.fc-conference-lead');
                 moveBelow('.gc-stats');
             }
+            if (path === '/answers/what-is-eternal-marriage.html') {
+                moveBelow('.fc-topic-subtitle');
+                shortText('.fc-page-intro-copy', 'An eternal covenant centered on Christ.', true);
+            }
+            if (path === '/answers/look-unto-me-doctrine-and-covenants-6-36.html') {
+                moveBelow('.fc-topic-subtitle');
+                moveBelow('.fc-page-intro-copy');
+                moveBelow('.fc-page-intro-copy + .fc-page-intro-copy');
+                shortText('.fc-actions > a:first-child', 'Read D&C 6');
+                shortText('.fc-actions > a:nth-child(2)', 'Rejoice in Christ');
+            }
+            if (path === '/answers/bible-and-book-of-mormon-together.html') {
+                shortText('.fc-eyebrow', 'Study Jesus Christ');
+                moveBelow('.fc-topic-subtitle');
+            }
+            if (path === '/answers/melchizedek-priesthood-restoration.html') {
+                shortText('.fc-eyebrow', 'Priesthood Restoration');
+                moveBelow('.fc-topic-subtitle');
+            }
+            if (path === '/birth-of-christ.html') {
+                shortText('.fc-eyebrow', 'Study Jesus Christ');
+                shortText('h1', 'The Birth of Christ');
+                shortText('.fc-topic-subtitle', 'Promises Fulfilled');
+            }
+            if (path === '/joseph-smith-likeness.html') {
+                shortText('.fc-eyebrow', 'Portraits and Memory');
+                shortText('h1', 'Joseph Smith');
+                shortText('.fc-page-intro-copy', 'Death masks and living portraits.', true);
+            }
+            if (sectionCopyPages.has(path) && path.startsWith('/art-study/')) {
+                moveBelow('.fc-page-intro-copy');
+                shortText('.fc-actions > a:first-child', 'Scripture Study');
+                shortText('.fc-actions > a:nth-child(2)', 'Resources');
+            }
+            if (path === '/art-study/suffer-the-little-children.html') shortText('h1', 'Jesus and Children');
             if (changes.length) {
                 if (hasSupportingCopy) intro.after(notes);
                 const arrangeCopy = () => {
@@ -993,6 +1038,8 @@
             const existing = intro.querySelector('.fc-scroll-cue, .art-scroll-cue');
             let target = existing && existing.getAttribute('href');
             let next = intro.nextElementSibling;
+            // Continue into retained section copy before advancing to the study.
+            if (sectionCopyPages.has(window.location.pathname) && next && next.matches('.fc-mobile-opening-notes')) target = null;
             while (next && next.matches('script, style, link, template')) next = next.nextElementSibling;
             if (!next && intro.parentElement) next = intro.parentElement.nextElementSibling;
             if (!target && next) {
