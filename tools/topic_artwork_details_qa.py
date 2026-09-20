@@ -16,6 +16,12 @@ focused_review = {e['asset']: e for e in json.loads((ROOT/'docs/focused-answers-
 assert len(focused_review) == 4, 'Exact four new supporting photographs required'
 opening_review = {e['asset']: e for e in json.loads((ROOT/'docs/focused-answers-art-review.json').read_text(encoding='utf-8'))['images'] if e['role'] == 'opening'}
 assert len(opening_review) == 1 and {e['id'] for e in opening_review.values()} == {'conference-listening'}, 'Exact reviewed Conference opening required'
+bom_manifest = json.loads((ROOT/'docs/book-of-mormon-art-review.json').read_text(encoding='utf-8'))
+assert bom_manifest.get('page') == 'answers/what-is-the-book-of-mormon.html', 'Book of Mormon review ownership mismatch'
+bom_entries = bom_manifest.get('artworks', [])
+bom_review = {entry['asset']: entry for entry in bom_entries}
+assert bom_entries and len(bom_review) == len(bom_entries), 'Book of Mormon review requires unique original assets'
+bom_assets=[]
 opening_assets=[]
 focused_assets=[]; relocated_assets=[]
 relocated_names={'aaronic-priesthood','joseph-baptizes-oliver','oliver-baptizes-joseph','melchizedek-priesthood','apostles-ordain-joseph','apostles-ordain-oliver'}
@@ -54,6 +60,15 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    if 'data-full-image-viewer' in a.attrs or a.attrs.get('aria-haspopup')!='dialog': errors.append(page.name+': opening picture must show study details first')
    assert a.attrs.get('data-topic-study')=='general-conference.html#conference-messages', 'Conference opening study target changed'
    opening_assets.append(relative_asset)
+  elif relative_asset in bom_review:
+   record=bom_review[relative_asset]
+   assert page.relative_to(ROOT).as_posix()==bom_manifest['page'], 'Book of Mormon artwork is on the wrong page'
+   assert record.get('reviewed') is True and hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record.get('sha256'), 'Book of Mormon artwork changed since review'
+   assert container.attrs.get('data-bom-story-art')==record['key'], 'Book of Mormon figure key differs from review'
+   # Like the preserved topic pictures, this page retains a native fallback marker.
+   # The required shared adapter removes it and installs the study action first.
+   if a.attrs.get('aria-haspopup')!='dialog' or container.attrs.get('data-topic-art')!='bom-'+record['key']:errors.append(page.name+': Book of Mormon picture must bind the shared study adapter')
+   bom_assets.append(relative_asset)
   elif relative_asset in new_review:
    record=new_review[relative_asset]
    if record['page']!=page.relative_to(ROOT).as_posix():errors.append(page.name+': sitewide artwork is on the wrong page')
@@ -73,11 +88,12 @@ assert len(life_assets)==18 and len(set(life_assets))==18 and set(life_assets)==
 gap_review=json.loads((ROOT/'docs/study-gap-art-review.json').read_text(encoding='utf-8'))['artworks']
 assert len(gap_assets)==4 and len(set(gap_assets))==4 and set(gap_assets)=={entry['asset'] for entry in gap_review},'Study-gap adapter inventory differs from reviewed art'
 assert len(sitewide_assets)==len(new_review) and set(sitewide_assets)==set(new_review),'Sitewide adapter inventory differs from exact reviewed additions'
+assert len(bom_assets)==len(bom_review) and set(bom_assets)==set(bom_review), 'Book of Mormon adapter inventory differs from exact reviewed additions'
 assert len(opening_assets)==1 and set(opening_assets)==set(opening_review), 'Conference opening must replace its existing slot exactly once'
 # The opening replaces an existing picture and remains within the 99-picture baseline.
 assert len(focused_assets)==4 and set(focused_assets)==set(focused_review), 'Focused body artwork inventory mismatch'
 assert len(relocated_assets)==6 and {Path(a).stem for a in relocated_assets}==relocated_names, 'Preserved historical artwork inventory mismatch'
-assert (count-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets),preserved)==(99,3),(count,preserved)
+assert (count-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert panels==12,panels

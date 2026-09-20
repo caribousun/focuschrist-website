@@ -831,6 +831,78 @@
       "title": "O Youth of the Noble Birthright",
       "video_identity": "churchofjesuschrist.org/study/general-conference/2024/10/46wilcox",
       "aliases": []
+    },
+    "bom-story-lehi-sariah": {
+      "kind": "reading",
+      "presentation": "Official illustrated scripture story",
+      "url": "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-stories-2024/02-lehi-and-sariah-leave-jerusalem?lang=eng",
+      "title": "Lehi and Sariah Leave Jerusalem",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/eng/manual/book-of-mormon-stories-2024/02-lehi-and-sariah-leave-jerusalem"
+      ],
+      "reviewed_on": "2026-09-19",
+      "source_review": "docs/book-of-mormon-resource-review.json",
+      "notes": "The card opens the official illustrated story article, which also offers an embedded story video. It is presented as an illustrated scripture story."
+    },
+    "bom-story-enos": {
+      "kind": "reading",
+      "presentation": "Official illustrated scripture story",
+      "url": "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-stories-2024/15-enos?lang=eng",
+      "title": "Enos",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/eng/manual/book-of-mormon-stories-2024/15-enos"
+      ],
+      "reviewed_on": "2026-09-19",
+      "source_review": "docs/book-of-mormon-resource-review.json",
+      "notes": "The card opens the official illustrated story article, which also offers an embedded story video. It is presented as an illustrated scripture story."
+    },
+    "bom-story-benjamin": {
+      "kind": "reading",
+      "presentation": "Official illustrated scripture story",
+      "url": "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-stories-2024/17-king-benjamin?lang=eng",
+      "title": "King Benjamin",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/eng/manual/book-of-mormon-stories-2024/17-king-benjamin"
+      ],
+      "reviewed_on": "2026-09-19",
+      "source_review": "docs/book-of-mormon-resource-review.json",
+      "notes": "The card opens the official illustrated story article, which also offers an embedded story video. It is presented as an illustrated scripture story."
+    },
+    "bom-story-abinadi": {
+      "kind": "reading",
+      "presentation": "Official illustrated scripture story",
+      "url": "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-stories-2024/18-abinadi-and-king-noah?lang=eng",
+      "title": "Abinadi and King Noah",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/eng/manual/book-of-mormon-stories-2024/18-abinadi-and-king-noah"
+      ],
+      "reviewed_on": "2026-09-19",
+      "source_review": "docs/book-of-mormon-resource-review.json",
+      "notes": "The card opens the official illustrated story article, which also offers an embedded story video. It is presented as an illustrated scripture story."
+    },
+    "bom-story-abish": {
+      "kind": "reading",
+      "presentation": "Official illustrated scripture story",
+      "url": "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-stories-2024/28-abish?lang=eng",
+      "title": "Abish",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/eng/manual/book-of-mormon-stories-2024/28-abish"
+      ],
+      "reviewed_on": "2026-09-19",
+      "source_review": "docs/book-of-mormon-resource-review.json",
+      "notes": "The card opens the official illustrated story article, which also offers an embedded story video. It is presented as an illustrated scripture story."
+    },
+    "bom-story-moroni": {
+      "kind": "reading",
+      "presentation": "Official illustrated scripture story",
+      "url": "https://www.churchofjesuschrist.org/study/manual/book-of-mormon-stories-2024/55-moroni-the-prophet?lang=eng",
+      "title": "Moroni the Prophet",
+      "aliases": [
+        "https://www.churchofjesuschrist.org/study/eng/manual/book-of-mormon-stories-2024/55-moroni-the-prophet"
+      ],
+      "reviewed_on": "2026-09-19",
+      "source_review": "docs/book-of-mormon-resource-review.json",
+      "notes": "The card opens the official illustrated story article, which also offers an embedded story video. It is presented as an illustrated scripture story."
     }
   }
 }

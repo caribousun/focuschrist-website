@@ -116,6 +116,11 @@ def main():
     check(set(reviewed)=={'focused-answers.css'}, 'Unexpected focused stylesheet exemption')
     for name,digest in reviewed.items():
         check(sha(ROOT/name)==digest, 'Focused stylesheet differs from reviewed bytes: '+name)
+    # The separately reviewed Book of Mormon directory owns this exact stylesheet.
+    # Keep the hero geometry gate closed to every other file and later CSS edit.
+    bom_style = 'bom-story-journey.css'
+    check(sha(ROOT/bom_style)=='9c1963e6981ec14114ee08da6230c26048ea491177936599d1e8050da4f6be9f',
+          'Book of Mormon stylesheet differs from reviewed bytes')
     # The standalone review desk has its own document; its stylesheet must never
     # be loaded by visitor pages or imported by a site stylesheet.
     tool_style = 'tools/anatomy-review/style.css'
@@ -125,7 +130,10 @@ def main():
             continue
         check('anatomy-review' not in path.read_text(encoding='utf8'),
               'Visitor asset references standalone anatomy review tool: '+relative)
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style],cwd=ROOT,text=True)
+        if relative != 'answers/what-is-the-book-of-mormon.html':
+            check(bom_style not in path.read_text(encoding='utf8'),
+                  'Book of Mormon stylesheet referenced outside its owning page: '+relative)
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():
