@@ -517,9 +517,9 @@
     {
       "path": "answers/settle-this-in-your-hearts.html",
       "status": "verified",
-      "published_text_sha256": "894c9b0fc24031a7d285683c9c228ae4611f4d192d3c618a60dde0900f2a63c5",
+      "published_text_sha256": "a42c9e2eb6f228c979743ed07f31354546b5d8b192a50c3eab106b11dd3a2d2f",
       "reviewed_on": "2026-09-20",
-      "review_standard": "Primary and independent agent semantic review against official devotional reporting, original companion talks, and linked scripture accounts. BYU transcript explicitly forthcoming. Companion scripture interpretations distinguished from speaker examples; pictures reviewed separately with source and identity evidence. Contextual study destinations and captions checked; technical review is not owner artwork approval.",
+      "review_standard": "Primary and independent semantic review against the user-supplied September 15 audio using two full local transcription passes and targeted recognition. Eight selected excerpts agree; full unofficial transcript includes two bracketed uncertainties and does not claim human listening or BYU editorial approval. Original companion reporting, scripture and artwork distinctions remain. Approved hero and artwork unchanged; timestamp seek, focus and errors tested.",
       "authoritative_sources": [
         "https://news.byu.edu/faith/devotional-settle-this-in-your-hearts",
         "https://newsroom.churchofjesuschrist.org/article/elder-andersen-byu-devotional-settle-this-in-your-heart-september-2026",
@@ -544,7 +544,8 @@
         "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p11-p13#p11",
         "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/4?lang=eng&id=p1-p2#p1",
         "https://www.thechurchnews.com/leaders/2026/09/16/elder-neil-andersen-byu-devotional-settle-in-your-hearts/",
-        "https://youtu.be/W23OZiA221Y"
+        "https://youtu.be/W23OZiA221Y",
+        "https://speeches.byu.edu/wp-content/uploads/2026/09/BYUS-Andersen-Neil-L.-2026_09_15-v1.0.mp3"
       ]
     },
     {

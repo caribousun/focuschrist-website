@@ -1,0 +1,55 @@
+{
+  "source_file_sha256": "efa7b1fa5261a8c35cc8d0ad5959edcf191433a863ed0c5f9f84931f746d9f54",
+  "duration_seconds": 1536,
+  "official_audio": "https://speeches.byu.edu/wp-content/uploads/2026/09/BYUS-Andersen-Neil-L.-2026_09_15-v1.0.mp3",
+  "official_source": "https://speeches.byu.edu/talks/neil-l-andersen/settle-this-in-your-hearts/",
+  "method": "Two local faster-whisper passes (small.en and base.en), full textual comparison, targeted repeat recognition, scripture/proper-name reconciliation. Not a human-listened or BYU-edited transcript.",
+  "uncertainties": [
+    "15:56: prepositions around mortal life and eternal life",
+    "22:24: And/when a heart"
+  ],
+  "selected_excerpts": [
+    {
+      "section": "the-invitation",
+      "start": 514,
+      "text": "To settle this in your heart is to courageously choose the road of discipleship, with a determination to never turn away."
+    },
+    {
+      "section": "new-testament",
+      "start": 1030,
+      "text": "Immerse yourself deeply into the divine mission, the perfect life, the life-changing teachings, the incomparable Atonement, and the breathtaking promises He offers you."
+    },
+    {
+      "section": "old-testament",
+      "start": 273,
+      "text": "For many of us, this is not something that suddenly falls upon us. Rather, it comes as our faith in Christ and spiritual sensitivity grow step by step, while at the same time experiencing the distastefulness and emptiness of the world’s allure."
+    },
+    {
+      "section": "book-of-mormon",
+      "start": 1078,
+      "text": "Second, embrace more completely the Book of Mormon. When was the last time you read the Book of Mormon from the first page until the last? Was it when you were on your mission? If so, it is time to read it again."
+    },
+    {
+      "section": "pearl-of-great-price",
+      "start": 646,
+      "text": "To settle this in your heart does not mean you have to settle everything in your mind."
+    },
+    {
+      "section": "church-history",
+      "start": 324,
+      "text": "The decision to permanently follow Jesus Christ is greatly bolstered by the impressions, promptings, and unforgettable spiritual moments you experience in your life."
+    },
+    {
+      "section": "faith-today",
+      "start": 1045,
+      "text": "Pray more in His name. Read His words. Apply His teachings. Speak His name in reverence and conviction. Believe in His power to forgive and refine you."
+    },
+    {
+      "section": "continue-study",
+      "start": 1474,
+      "text": "He lives. He is the central being of all human history. He is our Savior and Redeemer."
+    }
+  ],
+  "paragraph_count": 60,
+  "artwork_count": 15
+}
