@@ -905,24 +905,80 @@
         const intro = document.querySelector('.fc-topic-opening, .fc-page-intro, .fc-gallery-intro, .cfm-hero, .gc-page-opening');
         if (!intro) return;
         const mobile = window.matchMedia('(max-width: 700px)');
-        // A quiet atmospheric surround fills the common frame while the sharp
-        // foreground keeps the entire approved picture, including its people.
-        const sceneFrames = document.querySelectorAll('.fc-visual-hero, .gc-page-opening .gc-intro-visual, .cfm-hero');
-        sceneFrames.forEach(frame => {
-            const surround = document.createElement('span');
-            surround.className = 'fc-mobile-hero-surround';
-            surround.setAttribute('aria-hidden', 'true');
-            frame.prepend(surround);
-            function updateScene() {
-                if (!mobile.matches) return;
-                const image = frame.querySelector('img');
-                const background = image ? 'url("' + (image.currentSrc || image.src) + '")' : getComputedStyle(frame, '::before').backgroundImage;
-                surround.style.backgroundImage = background;
+        if (document.body.classList.contains('fc-main-opening')) {
+            // Fit the opening by editing its mobile copy and labels, never by adding
+            // artwork borders or surrounds. Longer explanations remain in the page.
+            const path = window.location.pathname;
+            const notes = document.createElement('section');
+            notes.className = 'fc-mobile-opening-notes';
+            notes.setAttribute('aria-label', 'Continue the introduction');
+            notes.hidden = true;
+            const changes = [];
+            let hasSupportingCopy = false;
+            function shortText(selector, text, retainBelow) {
+                const element = intro.querySelector(selector);
+                if (!element) return;
+                const original = Array.from(element.childNodes);
+                const accessibleName = element.getAttribute('aria-label');
+                const label = element.textContent.trim();
+                const explanation = retainBelow ? document.createElement('p') : null;
+                if (explanation) { notes.appendChild(explanation); hasSupportingCopy = true; }
+                changes.push(function (compact) {
+                    if (compact) {
+                        if (explanation) explanation.replaceChildren(...original);
+                        element.textContent = text;
+                        if (element.matches('a')) {
+                            element.setAttribute('aria-label', text + ': ' + (accessibleName || label));
+                            element.setAttribute('data-fc-mobile-label', '');
+                        }
+                    } else {
+                        element.replaceChildren(...original);
+                        if (element.matches('a')) {
+                            element.removeAttribute('data-fc-mobile-label');
+                            if (accessibleName) element.setAttribute('aria-label', accessibleName);
+                            else element.removeAttribute('aria-label');
+                        }
+                    }
+                });
             }
-            updateScene();
-            frame.querySelector('img')?.addEventListener('load', updateScene);
-            mobile.addEventListener('change', updateScene);
-        });
+            function moveBelow(selector) {
+                const element = intro.querySelector(selector);
+                if (!element) return;
+                hasSupportingCopy = true;
+                const marker = document.createComment('Opening content returns here on desktop');
+                element.before(marker);
+                changes.push(function (compact) {
+                    if (compact) notes.appendChild(element);
+                    else marker.after(element);
+                });
+            }
+            const labels = {
+                '/watch.html': ['Video Studies', 'YouTube', 'Ask'],
+                '/missionary.html': ['Meet Missionaries', 'Ways to Serve'],
+                '/church-history.html': ['Ask about History', 'Official History']
+            };
+            const buttons = labels[path];
+            if (buttons) buttons.forEach((label, index) => shortText('.fc-actions > a:nth-child(' + (index + 1) + ')', label));
+            if (path === '/answers.html') {
+                shortText('h1', 'Answers About Jesus Christ');
+                shortText('.fc-page-intro-copy', 'Explore scripture, faith, and Latter-day Saint beliefs.');
+            }
+            if (path === '/watch.html') shortText('h1', 'Watch & Study');
+            if (path === '/missionary.html') {
+                shortText('h1', 'Invite Others to Christ');
+                moveBelow('.fc-page-intro-scripture');
+            }
+            if (path === '/art.html') moveBelow('.fc-art-study-hint');
+            if (changes.length) {
+                if (hasSupportingCopy) intro.after(notes);
+                const arrangeCopy = () => {
+                    changes.forEach(change => change(mobile.matches));
+                    notes.hidden = !mobile.matches || !notes.textContent.trim();
+                };
+                arrangeCopy();
+                mobile.addEventListener('change', arrangeCopy);
+            }
+        }
         // Give each study opening an accessible invitation without duplicating
         // its desktop cue or changing the primary study buttons.
         if (!document.body.classList.contains('fc-not-found')) {
