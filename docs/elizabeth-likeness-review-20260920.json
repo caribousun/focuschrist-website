@@ -1,0 +1,93 @@
+{
+  "reference": "assets/identities/elizabeth-crook-panting-owner-approved-20260920.png",
+  "reference_sha256": "b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e",
+  "approval_quote": "Approved with that exact likeness. Update all pictures that have her with this new",
+  "replacements": [
+    {
+      "id": "07-elizabeth-family",
+      "old_asset": "assets/pioneers/story/07-elizabeth-family-full.webp",
+      "old_sha256": "1dc6ced43c7f8ec41983c60f6c5febbfc05f887aa15e46ac9a26aeda60a60d11",
+      "asset": "assets/pioneers/story/07-elizabeth-family-approved-20260920-full.webp",
+      "preview": "assets/pioneers/story/07-elizabeth-family-approved-20260920-800.webp",
+      "newsha": "d20589f9e993155efb873fce372af215eea060764e97f1a11c51edafa7f846ec",
+      "preview_sha256": "791bebee05d84b8b9362dbcb25cb3b83bf5a2ad79e1f4e22e535fb9c1a69825e",
+      "identity_reference": "assets/identities/elizabeth-crook-panting-owner-approved-20260920.png",
+      "reference_sha256": "b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e",
+      "technical_review": true,
+      "expression": "Attentive concern while traveling with her children; exact approved scene.",
+      "source_file": "elizabeth-family-photoreal-option-1.png",
+      "source_sha256": "b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e",
+      "width": 1536,
+      "height": 1024,
+      "owner_approved_scene": true
+    },
+    {
+      "id": "09-elizabeth-fuel",
+      "old_asset": "assets/pioneers/story/09-elizabeth-fuel-full.webp",
+      "old_sha256": "ac40b30555f9a8fc8122da3ee9f208a9fe9d05425f7e5aed9ca6530e6d25177a",
+      "asset": "assets/pioneers/story/09-elizabeth-fuel-approved-20260920-full.webp",
+      "preview": "assets/pioneers/story/09-elizabeth-fuel-approved-20260920-800.webp",
+      "newsha": "6e09b67d18b954a60d4695ffc8ca758a6688dd05c6e3228b62803e2bfe47af68",
+      "preview_sha256": "cccee195a38af78153b9f5a7d0ee65365217045f875a193103debe1067a6a813",
+      "identity_reference": "assets/identities/elizabeth-crook-panting-owner-approved-20260920.png",
+      "reference_sha256": "b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e",
+      "technical_review": true,
+      "expression": "Task-directed downward gaze and focused physical effort while gathering fuel.",
+      "source_file": "elizabeth-fuel-detail-v3.png",
+      "source_sha256": "c368f575aba912b274f657e71edf3d01f3f42940d6cac3328707d3b0b564331d",
+      "width": 1536,
+      "height": 1024,
+      "owner_approved_scene": false
+    },
+    {
+      "id": "10-cave-gift",
+      "old_asset": "assets/pioneers/story/10-cave-gift-full.webp",
+      "old_sha256": "9ee9305939a09466db099940d7393f3951e0041f667d9425e0f59ec609f0aa30",
+      "asset": "assets/pioneers/story/10-cave-gift-approved-20260920-full.webp",
+      "preview": "assets/pioneers/story/10-cave-gift-approved-20260920-800.webp",
+      "newsha": "65d595ac6bb257cdc760d09189f6382e477664da303b98463ec59167749c9712",
+      "preview_sha256": "3a9dd28bafc5590a91402cd8b18bace0ab8ff08b661172eed2b9bab2d9c0e58a",
+      "identity_reference": "assets/identities/elizabeth-crook-panting-owner-approved-20260920.png",
+      "reference_sha256": "b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e",
+      "technical_review": true,
+      "expression": "Quiet surprise and gratitude toward the person offering food.",
+      "source_file": "elizabeth-cave-detail-v3.png",
+      "source_sha256": "d46702add7fa729b9a481328597b6ebc46e4c8ca3673b038360e6ccef5f60c19",
+      "width": 1536,
+      "height": 1024,
+      "owner_approved_scene": false
+    },
+    {
+      "id": "11-sharing-meat",
+      "old_asset": "assets/pioneers/story/11-sharing-meat-full.webp",
+      "old_sha256": "2fc80093f3506b6cf7c29cc9fe854cff164b9b10eb9546000d62d2229c50f8a4",
+      "asset": "assets/pioneers/story/11-sharing-meat-approved-20260920-full.webp",
+      "preview": "assets/pioneers/story/11-sharing-meat-approved-20260920-800.webp",
+      "newsha": "67e4ea7b6727290134b8fbbbd9e9e714b562a50c6bc91f16d0e4f472865aacf2",
+      "preview_sha256": "5000215f72d62e2760547007620e302225e8dcd9e5e872689d12371c66fdd6bf",
+      "identity_reference": "assets/identities/elizabeth-crook-panting-owner-approved-20260920.png",
+      "reference_sha256": "b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e",
+      "technical_review": true,
+      "expression": "Gentle reassuring smile and engaged eye contact with the recipient.",
+      "source_file": "elizabeth-sharing-detail-v2.png",
+      "source_sha256": "491ca996159cb89854335b4dbc49a5872e8af655b4d9461988f2fb0cc849ece0",
+      "width": 1536,
+      "height": 1024,
+      "owner_approved_scene": false
+    }
+  ],
+  "scope": "Four Elizabeth originals and their responsive/full-size/gallery/search references. No new originals counted. Source originals retained without public references.",
+  "source_limits": "Historical likeness interpretation. Wrapped food parcel and exact cave setting are artistic staging, not newly established historical detail. Family testimony about dried buffalo meat is unchanged.",
+  "quality": "All generated sources1536x1024; do not claim4K. Improved face area/detail, no upscaling substituted for detail.",
+  "rejected_candidates": [
+    "exec-465f2686-f736-4bbc-abb2-07dfe1ac4698.png",
+    "exec-53cf36cf-098f-4828-ad44-dcfef3523968.png",
+    "elizabeth-fuel-detail-v2.png"
+  ],
+  "rejection_reasons": [
+    "Insufficient facial detail in first derivatives",
+    "Fuelv2 repeated reference gaze/expression"
+  ],
+  "independent_reviewer": "pioneer_revision_review",
+  "visual_review": "Passed actual full-scene detail/identity/expression review. Browser runtime/public verification recorded separately."
+}

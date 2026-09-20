@@ -308,3 +308,7 @@ Read `docs/focuschrist-enrichment-and-stewardship-prompt.md` for Wyatt's current
 ## Anatomy reference and rejection discipline
 
 Wyatt requires a reusable anatomy-reference workflow after repeated rejected Peter-rescue arms. Consult tools/anatomy-review/README.md and its local Review Desk before complex human contact. Trace each complete limb and anatomical side; compare a clear posed reference before generating the finished scene. Record rejected source hashes and never reuse their derivatives as a fix. The tool checks annotations and review completeness, not final-pixel anatomical correctness. A technical pass does not override owner rejection. After repeated local failures, rebuild both interacting limbs rather than patching fingers repeatedly.
+
+## Enriched human expression and Elizabeth identity
+
+Every person in every new or edited image must have a detailed natural expression fitting the scene; identity consistency never means repeating a blank expression or identical gaze. Inspect likeness, facial detail and scene-expression separately. For Elizabeth Crook Panting use the exact owner-approved reference in `assets/identities/elizabeth-crook-panting-owner-approved-20260920.png` and the approval registry. Preserve photographic clarity, natural skin and eyes; reject waxy or doll-like faces even if source photographs are flat.

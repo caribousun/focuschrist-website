@@ -84,6 +84,20 @@
         "finding": "Alma 5:3 identifies this ministry speaker as son of Alma; saved Birth 05 scene is his Alma 7 teaching in Gideon. This reference does not identify or approve Alma the Elder."
       },
       "later_scene_review": "Direct pixels compared with assets/page-art/sitewide/bom-alma-helaman-full.webp: facial nose/brow/mouth and recognizable identity retained with age-appropriate graying; distinct younger Helaman. Technical pass, not new owner approval."
+    },
+    {
+      "character": "Elizabeth Crook Panting",
+      "owner_identity_locked": true,
+      "reference_mapping": "Exact owner-approved adult woman in family scene; children are not this identity.",
+      "reference": {
+        "asset": "assets/identities/elizabeth-crook-panting-owner-approved-20260920.png",
+        "sha256": "b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e"
+      },
+      "approval_evidence": [
+        "Wyatt, originating Focus task: Approved with that exact likeness. Update all pictures that have her with this new"
+      ],
+      "reuse_allowed_with_required_research": true,
+      "constraints": "Actual reference pixels required. Preserve recognizable face with event-appropriate age and distinct detailed expressions fitting each scene. Photograph-quality detail, natural skin, eyes and anatomy. The identity is an approved artistic interpretation, not an authenticated photograph."
     }
   ],
   "unresolved_other_characters": "Reconcile every additional approved character against exact saved asset and owner approval provenance before new use; do not infer approval from current publication."
