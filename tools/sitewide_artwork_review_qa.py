@@ -151,6 +151,28 @@ def main():
         additions += '\n' + (ROOT/'topic-heroes.css').read_text(encoding='utf-8')
     for selector,body in re.findall(r'([^{}]+)\{([^{}]*)\}',re.sub(r'/\*.*?\*/','',additions,flags=re.S)):
         if selector.strip().startswith('@'):continue
+        # Separate owner-authorized mobile opening and Conference banner review.
+        # Exact file hashes prevent this scoped acceptance from admitting later edits.
+        if selector.strip().startswith('.gc-page .gc-page-opening'):
+            check(sha(ROOT/'general-conference-section.css')=='adf3bfd98848449955227b94eddc457993018798c4a1425825c85cad1a85e982',
+                  'Conference opening CSS differs from reviewed bytes')
+            continue
+        if selector.strip()=='body.fc-site' and body.strip()=='--fc-opening-hero-height: clamp(320px, 44svh, 420px);':
+            check(sha(ROOT/'site-system.css')=='0bc1ecf42529eac86c87251aadeb501409e700512d322bcfe3c7ace76e981bb0',
+                  'Mobile opening CSS differs from reviewed bytes')
+            continue
+        dropdown_selectors = {
+            '.nav[data-focuschrist-header="standard"] .hamburger-menu a:focus-visible',
+            '.nav[data-focuschrist-header="standard"] .hamburger-menu a[aria-current="page"]',
+            '.nav[data-focuschrist-header="standard"] .hamburger-menu a.active',
+        }
+        if all(part.strip() in dropdown_selectors for part in selector.split(',')):
+            check(sha(ROOT/'site-header.css')=='020d490bc22af96ff2f59edcbaf0e638ad045d85caf9d3a0bde50907e7d5b2a6',
+                  'Dropdown stylesheet differs from reviewed gold-menu bytes')
+            check(all(prop in {'outline-offset','border-radius','box-shadow','font-weight'}
+                      for prop in re.findall(r'([a-z-]+)\s*:',body)),
+                  'Dropdown focus/current rule changes unexpected properties')
+            continue
         navigation_fallback = all('.nav[data-focuschrist-header="standard"].fc-nav-compact' in part and '.nav-links' in part or '.nav[data-focuschrist-header="standard"].fc-nav-compact .fc-nav-side' in part for part in selector.split(','))
         if navigation_fallback:
             # The separately reviewed collision fix affects navigation only.
