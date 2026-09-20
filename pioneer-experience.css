@@ -186,6 +186,13 @@ body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions {
     gap: 10px;
 }
 
+@media (min-width: 1021px) {
+    body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions,
+    body.fc-site .qa-container .pioneer-topic-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
 body.fc-site nav[aria-label="Pioneer study sections"] .fc-button,
 body.fc-site .qa-container .pioneer-topic-grid .category-btn {
     width: 100%;

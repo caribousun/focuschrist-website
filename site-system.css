@@ -1025,7 +1025,13 @@ body.fc-site .fc-visual-hero {
     }
 }
 @media (max-width:700px) {
-    body.fc-site { --fc-opening-hero-height: clamp(320px, 44svh, 420px); }
+    body.fc-site { --fc-mobile-hero-height: clamp(320px, min(58svh, 115vw), 600px); --fc-opening-hero-height: var(--fc-mobile-hero-height); }
+
+    /* Mobile focal points retain the main subject as the opening grows taller. */
+    body.fc-site .fc-visual-hero.fc-visual-hero--ask::before { background-position: 45% top !important; }
+    body.fc-site .fc-visual-hero.fc-visual-hero--watch::before { background-position: 47% center !important; }
+    body.fc-site.fc-bom-evidences .fc-visual-hero.fc-visual-hero--bom > img { object-position: 20% 35% !important; }
+    body.fc-site .fc-visual-hero.likeness-hero > img { object-fit: cover !important; }
 
     /* Mobile retains the established approved close framing. */
     body.fc-site .fc-home-hero::before,
@@ -1359,3 +1365,60 @@ body.fc-site .fc-opening-invitation { display: none !important; }
 }
 
 body.fc-site .fc-opening-invitation-label { display: block; margin-bottom: 8px; font-size: .65rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+
+/* Every mobile page image uses the same vertical frame. Section art is untouched. */
+@media (max-width: 700px) {
+    body.fc-site .fc-visual-hero,
+    body.fc-site.fc-topic-page .fc-topic-opening > .fc-visual-hero.fc-topic-unique-hero {
+        height: var(--fc-mobile-hero-height) !important;
+        min-height: var(--fc-mobile-hero-height) !important;
+        max-height: var(--fc-mobile-hero-height) !important;
+        aspect-ratio: auto !important;
+    }
+    body.fc-site.fc-topic-page .fc-topic-opening {
+        grid-template-rows: var(--fc-mobile-hero-height) auto !important;
+    }
+    body.fc-site .fc-art-study-hero > img {
+        object-fit: cover;
+        transform: none;
+    }
+    body.fc-site .fc-art-study-hero[href$="The-Good-Shephard.jpg"] > img {
+        transform: scale(1.145); transform-origin: center bottom;
+    }
+    body.fc-site .fc-art-study-hero > picture {
+        position: absolute; inset: 0; display: block; width: 100%; height: 100%; z-index: -1;
+    }
+    body.fc-site .fc-art-study-hero > picture > img {
+        display: block; width: 100%; height: 100%; object-fit: cover; object-position: center;
+    }
+    body.fc-site.cfm-page .cfm-hero {
+        display: block; background: none;
+        padding: calc(var(--fc-mobile-hero-height) + 28px) 22px 88px;
+    }
+    body.fc-site.cfm-page .cfm-hero::before {
+        content: ''; position: absolute; inset: 0 0 auto;
+        height: var(--fc-mobile-hero-height);
+        background: center/cover no-repeat url('assets/heroes/come-follow-me-2026-mobile.webp');
+    }
+    body.fc-site.cfm-page .cfm-hero::after {
+        height: var(--fc-mobile-hero-height); bottom: auto;
+        background: linear-gradient(0deg, rgba(3,28,45,.4), transparent 45%);
+    }
+}
+
+@media (min-width: 701px) {
+    body.fc-site .fc-art-study-hero > picture { display: contents; }
+    body.fc-site .fc-art-study-hero > picture > img {
+        position: absolute; inset: 0; width: 100%; height: 100%; max-width: none;
+        object-fit: contain; object-position: center; transform: none; z-index: -1;
+    }
+}
+
+@media (max-width: 700px) {
+    body.fc-site.gc-page .gc-page-opening { padding-top: 0; }
+    body.fc-site.gc-page .gc-page-opening .gc-intro-visual {
+        width: calc(100% + 32px); max-width: none; margin-inline: -16px;
+    }
+    body.fc-site.gc-page .gc-page-opening .gc-intro-visual > a { border: 0; border-radius: 0; }
+    body.fc-site.gc-page .gc-page-opening .gc-intro-visual img { border-radius: 0; }
+}

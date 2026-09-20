@@ -289,6 +289,35 @@ function assert(condition, message) {
 
     window.clearChat();
     messages.length = 0;
+    const familyCases = [
+        ['Elizabeth Crook Panting', /Willie handcart company.*1856/s],
+        ['Tell me about Elizabeth Panting Crook and her handcart company', /Christopher.*Jane/s],
+        ['Who was Elizabeth Crook?', /November 9/],
+        ['Tell me Elizabeth Crook Panting’s cave miracle', /neither an exact date nor a securely identified location/],
+        ['Was the stranger in Elizabeth Panting’s cave Jesus?', /does not establish the stranger’s identity/],
+        ['Where and on what date was Elizabeth Crook’s cave?', /neither an exact date nor a securely identified location/],
+        ['Jane Panting Bell', /not an eyewitness to entering the cave/],
+        ['Tell me about Jane’s second witness', /June Cranney Monson/],
+        ['Did Jane see Elizabeth Crook Panting receive the meat in the cave?', /not an eyewitness/]
+    ];
+    const callsBeforeFamily = fetchCalls;
+    for (const [question, expected] of familyCases) {
+        window.clearChat(); messages.length = 0; input.value = question;
+        await window.sendMessage();
+        const answer = messages.find(message => !message.isUser);
+        assert(answer && expected.test(answer.text), 'reviewed family answer failed: ' + question);
+        assert(answer.sources.some(source => /pioneers\.html#/.test(source.url)), 'family study link missing: ' + question);
+        assert(!answer.sources.some(source => /member_pdfs/.test(source.url)), 'owner-removed PDF action was restored');
+        assert(!input.disabled && !button.disabled, 'family answer left composer disabled');
+    }
+    assert(fetchCalls === callsBeforeFamily, 'reviewed family queries must work without a Worker request');
+    for (const question of ['Elizabeth Taylor films', 'Jane Austen biography', 'What was Elizabeth Crook Panting’s favorite color?']) {
+        window.clearChat(); messages.length = 0; input.value = question;
+        const before = fetchCalls; await window.sendMessage();
+        assert(fetchCalls > before, 'unrelated or unreviewed family detail must retain research path: ' + question);
+        assert(!messages.some(message => !message.isUser && /June Cranney Monson/.test(message.text)), 'family overview hijacked unrelated query');
+    }
+    window.clearChat(); messages.length = 0;
     const callsBeforeBoundary = fetchCalls;
     input.value = 'Why are Democrats morons?';
     await window.sendMessage();

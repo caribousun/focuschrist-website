@@ -1,0 +1,61 @@
+{
+  "scope": "All mobile page heroes; Pioneer desktop controls, mobile reading copy and menu clipping",
+  "baseline": "8c38089ec3bdf5a912ab1153356f62d00a541248",
+  "canonical_routes": 41,
+  "pages_with_hero": 39,
+  "without_hero": [
+    "art-gallery.html",
+    "search.html"
+  ],
+  "mobile_height_cases": [
+    {
+      "viewport": [
+        320,
+        844
+      ],
+      "hero_px": 368,
+      "pages": 41,
+      "overflow": 0
+    },
+    {
+      "viewport": [
+        360,
+        640
+      ],
+      "hero_px": 371.2,
+      "pages": 41,
+      "overflow": 0
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "hero_px": 448.95,
+      "pages": 41,
+      "overflow": 0
+    },
+    {
+      "viewport": [
+        432,
+        900
+      ],
+      "hero_px": 496.8,
+      "pages": 41,
+      "overflow": 0
+    }
+  ],
+  "visual_review": "All 39 image openings inspected at 390x844; narrow 320px review for Ask, Watch, Pioneer and children; Conference full-width rechecked at432. Existing sections and desktop retained.",
+  "menu_checks": "87 visible Pioneer controls measured at320/360/432/1280; 56 menu/navigation/topic controls at200% text in isolated preview; no label escapes.",
+  "desktop_controls": "Pioneer navigation and Ask topic pills three columns above1020px; mobile two columns preserved.",
+  "family_ask": "Reviewed Elizabeth name variants, cave testimony, Jane later second witness; unknown details stay unknown; unrelated queries retain research fallback.",
+  "deferred": "Additional Christ pictures on Pioneer deferred by Wyatt until next week; not permanent ratio exception.",
+  "mobile_variant": {
+    "path": "assets/heroes/art-study/children-mobile-20260920.webp",
+    "source": "art/Suffer-the-Little-Children.jpg",
+    "source_sha256": "406537e9ed21d1df18044b3d0d519bf3126573398d2a1d48bfb6edee98ed5d01",
+    "sha256": "c3663d87fe1bd32c8b75a719becc10fc642bb4d0e773460a72f5f708817aa460",
+    "method": "Imagegen portrait adaptation of approved scene with environmental extension. All six children and Christ retained; not pixel-identical center preservation. Independent visual review passed composition and no obvious anatomy defects. Original desktop and full-size asset unchanged."
+  },
+  "evidence_boundary": "Browser inspection and automated tests do not claim owner visual acceptance."
+}

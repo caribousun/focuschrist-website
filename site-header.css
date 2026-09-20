@@ -125,6 +125,8 @@
     min-width: 230px !important;
     max-height: min(76vh, 620px);
     overflow-y: auto;
+    scrollbar-gutter: stable;
+    scroll-padding-block: 12px;
     margin: 0 !important;
     padding: 12px !important;
     background: #091f29 !important;
@@ -143,6 +145,10 @@
 
 .nav[data-focuschrist-header="standard"] .hamburger-menu a {
     display: block !important;
+    flex: 0 0 auto;
+    height: auto;
+    white-space: normal;
+    overflow-wrap: anywhere;
     margin: 0;
     padding: 12px 14px !important;
     color: #f0c36a !important;
@@ -168,6 +174,7 @@
 }
 
 .nav[data-focuschrist-header="standard"] .hamburger-menu hr {
+    flex: 0 0 auto;
     width: 100%;
     margin: 8px 0 !important;
     border: 0 !important;
@@ -175,6 +182,7 @@
 }
 
 .nav[data-focuschrist-header="standard"] .menu-label {
+    flex: 0 0 auto;
     padding: 8px 12px 4px !important;
     color: #f0c36a !important;
     font-size: 0.78em !important;

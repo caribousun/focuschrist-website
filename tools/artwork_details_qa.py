@@ -155,7 +155,7 @@ def main() -> int:
             errors.append(f"{relative}: dedicated study page artwork should retain direct full-size behavior")
         asset, record = ART_STUDY_HEROES[relative]
         intrinsic = relative != 'art-study/the-living-christ.html'
-        hero = re.search(r'<a[^>]*data-hero-viewer[^>]*>' + (r'\s*<img[^>]*>\s*</a>' if intrinsic else ''), text, re.S)
+        hero = re.search(r'<a[^>]*data-hero-viewer[^>]*>' + (r'\s*(?:<picture>\s*<source[^>]*>\s*)?<img[^>]*>\s*(?:</picture>\s*)?</a>' if intrinsic else ''), text, re.S)
         if not hero:
             errors.append(f"{relative}: featured artwork hero with intrinsic image is missing")
         else:
