@@ -123,6 +123,9 @@ def main():
     pioneer_ask_style = 'pioneer-experience.css'
     # Independently reviewed study-body and Answers-directory styles, no hero rules.
     settle_style = 'settle-heart-study.css'
+    row_style = 'complete-card-rows.css'
+    check(sha(ROOT/row_style)=='7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941',
+          'Reviewed complete card row stylesheet changed')
     check(sha(ROOT/settle_style)=='ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2',
           'Settle study stylesheet differs from reviewed bytes')
     # Owner-requested two-column topics and Ask presentation were reviewed
@@ -154,7 +157,7 @@ def main():
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(sha(ROOT/'site-system.css')=='b1dcd1c1bc1ab585f0803af31ad8d56789a4f2e07202c4bfb59ab0849656a0e1', 'Reviewed mobile polish stylesheet changed: site-system.css')
     check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)'+settle_style,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)'+settle_style,':(exclude)'+row_style,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():

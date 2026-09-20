@@ -85,6 +85,12 @@ Wyatt requires every new or changed pill and hamburger-menu item to be checked f
 
 ## Resource thumbnail proportions and page rhythm
 
+### Mandatory complete card rows — Wyatt, 2026-09-20
+
+Do not publish a multi-card grid with an empty final slot or a large unintended blank area beside a stranded last card. At every active column breakpoint, complete the row through a deliberate responsive arrangement: span the remaining card(s), rebalance columns, or add genuinely relevant source-grounded content only when warranted. Never add filler, duplicate artwork, fictitious image sides, or unrelated material merely to fill space. Preserve source-image proportions, readable copy, approved hero geometry and mobile stacking.
+
+This is a release mandate for all page and topic sections, including resource thumbnails, supporting artwork, related studies and Pioneer cards. Inventory the actual grids, inspect the parent row and its unused space, and verify rendered desktop/tablet/phone layouts. A link, image, overflow or equal-height check alone does not establish row completeness. The shared resource-grid regression must reject removal of its odd-row completion rule, discover all consumers and require the current shared stylesheet version. Record any other layout patterns needing a separate check rather than claiming a whole-site visual pass from one component's test.
+
 New study pages must use the shared `--fc-standard` content boundary and `--fc-body-gutter` outer gutters. A padded main may add twice the gutter to its maximum width so the visible content still aligns with the standard. Use shared section-spacing tokens and `.fc-actions` for centered pill groups; keep chapter directories centered at mobile breakpoints. Avoid independent 780/850/900px nested width islands inside one illustrated study. Purposeful reading columns and wide galleries may retain their established widths. Check all later stylesheet overrides, not only the first matching rule, and run `tools/study_layout_uniformity_qa.py` plus rendered phone/desktop checks before release.
 
 - Every official resource image must use the shared `fc-resource-card__image` wrapper from `resource-cards.css`: a bounded 16:9 frame with `object-fit: contain`. Keep the image's true intrinsic width/height attributes; never allow responsive width with an unrelated fixed rendered height. Older 4:3 material must remain fully visible with letterboxing, never stretched or cropped to fake widescreen.
