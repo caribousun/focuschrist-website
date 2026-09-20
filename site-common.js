@@ -928,7 +928,10 @@
                 arrow.textContent = '↓';
                 cue.appendChild(arrow);
                 intro.classList.add('fc-mobile-cued-opening');
-                intro.appendChild(cue);
+                // Keep the invitation in the introduction's content flow, below
+                // its actions, rather than overlaid on the opening's bottom edge.
+                const cueHost = intro.querySelector('.fc-page-intro') || intro;
+                cueHost.appendChild(cue);
                 if (existing) existing.classList.add('fc-desktop-scroll-cue');
             }
         }
