@@ -33,7 +33,16 @@ ART_STUDY_HEROES = {
 }
 
 
+def local_target(page: Path, value: str) -> Path:
+    # A leading slash is a site-root URL, not an operating-system root.
+    asset_path = urlsplit(value).path
+    return (ROOT / asset_path.lstrip("/") if asset_path.startswith("/") else page.parent / asset_path).resolve()
+
+
 def main() -> int:
+    assert local_target(ROOT / "404.html", "/assets/heroes/home.webp") == (ROOT / "assets/heroes/home.webp").resolve()
+    assert local_target(ROOT / "answers/example.html", "../assets/heroes/home.webp?x=1") == (ROOT / "assets/heroes/home.webp").resolve()
+    assert not local_target(ROOT / "404.html", "/assets/heroes/qa-missing-image.webp").is_file()
     errors: list[str] = []
     all_trigger_keys: list[str] = []
     all_record_keys: list[str] = []
@@ -78,7 +87,7 @@ def main() -> int:
             for asset in re.findall(fr'{attr}="([^"]+)"', text):
                 if asset.startswith(("http://", "https://", "#")):
                     continue
-                target = (path.parent / urlsplit(asset).path).resolve()
+                target = local_target(path, asset)
                 if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                     errors.append(f"{relative}: missing local artwork asset: {asset}")
 
@@ -117,7 +126,7 @@ def main() -> int:
             errors.append(f"{relative}: unexpected related study count {count}")
         for study_path in re.findall(r'data-detail-study="([^"]+)"', (ROOT / relative).read_text(encoding="utf-8")):
             destination = urlsplit(study_path)
-            target = (ROOT / relative).parent / destination.path
+            target = local_target(ROOT / relative, study_path)
             if not target.resolve().is_relative_to(ROOT.resolve()) or not target.is_file():
                 errors.append(f"{relative}: related study missing: {study_path}")
             elif destination.fragment and f'id="{destination.fragment}"' not in target.read_text(encoding="utf-8"):
@@ -126,11 +135,11 @@ def main() -> int:
     if len(re.findall(r'data-detail-topic="[^"]+"', home)) != 3:
         errors.append("all three Home artworks need contextual Ask topics")
     for study_path in re.findall(r'data-detail-study="([^"]+)"', home):
-        target = (ROOT / study_path).resolve()
+        target = local_target(ROOT / "index.html", study_path)
         if not target.is_relative_to(ROOT.resolve()) or not target.is_file():
             errors.append(f"index.html: related study missing: {study_path}")
     for study_path in re.findall(r'data-detail-study="([^"]+)"', art):
-        target = (ROOT / study_path).resolve()
+        target = local_target(ROOT / "index.html", study_path)
         if not target.is_relative_to(ROOT.resolve()) or not target.exists():
             errors.append(f"art.html: complete study page does not exist: {study_path}")
 
@@ -253,7 +262,7 @@ def main() -> int:
             continue
         hero_link = hero_links[0]
         asset = re.search(r'href="([^\"]+)"', hero_link)
-        if not asset or not (path.parent / urlsplit(asset.group(1)).path).is_file():
+        if not asset or not local_target(path, asset.group(1)).is_file():
             errors.append(f"{relative}: hero study action lacks a real local image")
         for marker in ('aria-haspopup="dialog"', 'data-full-image-alt=', 'data-hero-ask='):
             if marker not in hero_link:
@@ -268,7 +277,7 @@ def main() -> int:
         text = (ROOT / relative).read_text(encoding="utf-8")
         for asset in re.findall(r'data-detail-full="([^"]+)"', text):
             full_assets.append(asset)
-            target = ((ROOT / relative).parent / urlsplit(asset).path).resolve()
+            target = local_target(ROOT / relative, asset)
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
     if len(full_assets) != 68:

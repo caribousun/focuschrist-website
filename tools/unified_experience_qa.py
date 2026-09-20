@@ -52,6 +52,8 @@ def visible_text(html: str) -> str:
 
 
 def expected_system_href(path: str) -> str:
+    if path == "404.html":
+        return "/site-system.css"
     return "../site-system.css" if "/" in path else "site-system.css"
 
 

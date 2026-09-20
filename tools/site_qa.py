@@ -38,7 +38,7 @@ HEADER_PAGES = {
     **{name: "site-header.css?v=20260919-sitewide-nav-1" for name in CORE},
     **{name: "../site-header.css?v=20260919-sitewide-nav-1" for name in ANSWER_PAGES},
     **{name: "../site-header.css?v=20260919-sitewide-nav-1" for name in ART_STUDY_PAGES},
-    "404.html": "site-header.css?v=20260919-sitewide-nav-1",
+    "404.html": "/site-header.css?v=20260919-sitewide-nav-1",
 }
 HEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")
 PLACEHOLDER_CAPTION_PATTERNS = (
@@ -422,7 +422,7 @@ def main() -> int:
     else:
         text404 = page404.read_text(encoding="utf-8")
         for target in ("index.html", "ask.html", "answers.html", "watch.html", "art.html", "missionary.html", "pioneers.html", "about.html"):
-            if f'href="{target}"' not in text404:
+            if f'href="/{target}"' not in text404:
                 fail(errors, f"404.html missing recovery link to {target}")
 
     # Coverage must remain global; successful per-page counts cannot hide reuse.
