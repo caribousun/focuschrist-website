@@ -119,6 +119,9 @@ def main():
     # The separately reviewed Book of Mormon directory owns this exact stylesheet.
     # Keep the hero geometry gate closed to every other file and later CSS edit.
     bom_style = 'bom-story-journey.css'
+    pioneer_style = 'pioneer-story.css'
+    check(sha(ROOT/pioneer_style)=='40f31ae7ab2cc6a1ae8ef12cb890dc181f526b7b8a3ec3c70b35333b7e3c61d9',
+          'Pioneer stylesheet differs from reviewed bytes')
     check(sha(ROOT/bom_style)=='9c1963e6981ec14114ee08da6230c26048ea491177936599d1e8050da4f6be9f',
           'Book of Mormon stylesheet differs from reviewed bytes')
     # The standalone review desk has its own document; its stylesheet must never
@@ -133,7 +136,10 @@ def main():
         if relative != 'answers/what-is-the-book-of-mormon.html':
             check(bom_style not in path.read_text(encoding='utf8'),
                   'Book of Mormon stylesheet referenced outside its owning page: '+relative)
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style],cwd=ROOT,text=True)
+        if relative != 'pioneers.html':
+            check(pioneer_style not in path.read_text(encoding='utf8'),
+                  'Pioneer stylesheet referenced outside its owning page: '+relative)
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():
