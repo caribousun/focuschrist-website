@@ -203,16 +203,34 @@
             title.className = 'sources-title';
             title.textContent = 'Sources';
             sourceWrap.appendChild(title);
+            const group = document.createElement('div');
+            group.className = 'sources-group sources-group--referenced';
+            const groupTitle = document.createElement('div');
+            groupTitle.className = 'sources-group-title';
+            groupTitle.textContent = 'Referenced sources';
+            const list = document.createElement('div');
+            list.className = 'sources-list';
+            group.appendChild(groupTitle);
+            group.appendChild(list);
             sources.forEach(function (source) {
+                if (!source || !source.url) return;
+                const href = safeSourceHref(source.url);
+                if (href === '#') return;
                 const link = document.createElement('a');
-                link.className = 'source-link';
-                link.href = safeSourceHref(source.url || '#');
-                link.target = '_blank';
-                link.rel = 'noopener noreferrer';
+                const internal = new URL(href).origin === window.location.origin;
+                link.className = internal ? 'source-link source-link--internal' : 'source-link';
+                link.href = href;
+                if (!internal) {
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                }
                 link.textContent = source.text || 'Source';
-                sourceWrap.appendChild(link);
+                list.appendChild(link);
             });
-            message.appendChild(sourceWrap);
+            if (list.children.length) {
+                sourceWrap.appendChild(group);
+                message.appendChild(sourceWrap);
+            }
         }
 
         if (!isUser && extraBtn && extraBtn.text) {
@@ -1006,9 +1024,9 @@
             const welcome = document.createElement('div');
             welcome.className = 'welcome';
             const h3 = document.createElement('h3');
-            h3.textContent = 'Ask About Pioneers';
+            h3.textContent = 'What would you like to understand?';
             const p = document.createElement('p');
-            p.textContent = 'Ask a sincere question about Latter-day Saint pioneers and their history, or choose a topic below.';
+            p.textContent = 'Ask about pioneer lives, journeys, and faith. Follow historical sources and related focusChrist studies beneath each answer.';
             welcome.appendChild(h3);
             welcome.appendChild(p);
             box.appendChild(welcome);

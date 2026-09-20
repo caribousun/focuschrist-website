@@ -919,7 +919,7 @@
     <script src="reviewed-ask-knowledge.js?v=20260909-openai-only-2" defer></script>
     <link rel="stylesheet" href="site-header.css?v=20260919-sitewide-nav-1">
     <link rel="stylesheet" href="site-system.css?v=20260914-standard-rails-1">
-    <link rel="stylesheet" href="pioneer-experience.css?v=20260910-topic-pills-2">
+    <link rel="stylesheet" href="pioneer-experience.css?v=20260920-ask-study-sources">
     <link rel="stylesheet" href="artwork-details.css?v=20260909-warm">
     <link rel="stylesheet" href="full-image-viewer.css?v=20260905-viewport">
     <script src="artwork-details.js?v=20260905-home-study" defer></script>
@@ -931,7 +931,7 @@
 <link rel="stylesheet" href="resource-cards.css?v=20260909-warm">
 <link rel="stylesheet" href="site-search.css?v=20260914-standard-rails-1"><script src="site-search.js?v=20260919-focused-answers-1" defer></script><link rel="stylesheet" href="pioneer-story.css?v=20260920-story-1">
 <script src="pioneer-story.js?v=20260920-story-1" defer></script>
-</head>
+<script src="study-source-router.js?v=20260920-pioneer-study-1" data-focuschrist-source-router="true" defer></script></head>
 
 <body class="fc-site">
 <nav class="nav" data-focuschrist-header="standard" aria-label="Primary navigation">
@@ -978,8 +978,8 @@
  <div class="qa-container">
  <div class="chat-box" id="chatBox">
  <div class="welcome">
- <h3>Ask About Pioneers</h3>
- <p>Ask a sincere question about Latter-day Saint pioneers and their history.<br>Type your question below or click a topic.</p>
+ <h3>What would you like to understand?</h3>
+ <p>Ask about pioneer lives, journeys, and faith. Follow historical sources and related focusChrist studies beneath each answer.</p>
  </div>
  </div>
  <div class="input-area">
@@ -987,7 +987,7 @@
  <button onclick="sendMessage()" id="sendBtn">Ask</button>
  <button onclick="clearChat()" id="clearBtn" style="padding:15px 20px;background:#333;border:1px solid #555;border-radius:30px;color:#aaa;font-weight:bold;cursor:pointer;">New Question</button>
  </div>
- <p style="max-width:860px;margin:12px auto 0;color:#b8c4c8;font-size:0.9rem;line-height:1.55;text-align:center;">AI-assisted answers are study aids and may contain errors. Unreviewed questions and limited recent context may be sent to external AI providers for research and verification. Please do not submit sensitive personal information.</p>
+ <p class="pioneer-ai-notice">AI-assisted answers are study aids and may contain errors. Unreviewed questions and limited recent context may be sent to external AI providers for research and verification. Please do not submit sensitive personal information.</p>
  <div class="scripture-categories">
  <div class="category-row">
  <div class="category-title">PIONEER TOPICS</div>
@@ -1760,7 +1760,7 @@
      }
     function clearChat() {
         conversationHistory = [];
-        document.getElementById('chatBox').innerHTML = '<div class="welcome"><h3>Ask About Pioneers</h3><p>Ask a sincere question about Latter-day Saint pioneers and their history.<br>Type your question below or click a topic.</p></div>';
+        document.getElementById('chatBox').innerHTML = '<div class="welcome"><h3>What would you like to understand?</h3><p>Ask about pioneer lives, journeys, and faith. Follow historical sources and related focusChrist studies beneath each answer.</p></div>';
         document.getElementById('userInput').value = '';
     }
 </script>
@@ -2637,7 +2637,7 @@
 
          <p data-focuschrist-independence="footer" style="max-width: 900px; margin: 14px auto 0; line-height: 1.6; font-size: 0.92em;">focusChrist is an independent faith-based website and is not an official website of, sponsored by, or endorsed by The Church of Jesus Christ of Latter-day Saints. For official Church information, visit <a href="https://www.churchofjesuschrist.org/" style="color: #c9a961;" target="_blank" rel="noopener noreferrer">ChurchofJesusChrist.org</a>.</p>
     </footer>
-    <script src="pioneer-experience.js?v=20260913-pioneer-composer-8" defer></script>
+    <script src="pioneer-experience.js?v=20260920-ask-study-sources" defer></script>
 </body>
 
 </html>

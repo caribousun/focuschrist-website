@@ -161,7 +161,7 @@ def main() -> int:
         "requestAnimationFrame",
         "window.addEventListener('load'",
         "loadVerifiedSourceRouter",
-        "study-source-router.js?v=20260916-answer-source-3",
+        "study-source-router.js?v=20260920-pioneer-study-1",
         "loadArtStudyRouter",
         "art-study-router.js?v=20260830-3",
         "loadWatchStudyEnrichment",
