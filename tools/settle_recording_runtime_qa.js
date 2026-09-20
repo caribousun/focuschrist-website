@@ -1,0 +1,44 @@
+'use strict';
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const { JSDOM } = require('jsdom');
+const root = path.resolve(__dirname, '..');
+const html = fs.readFileSync(path.join(root, 'answers/settle-this-in-your-hearts.html'), 'utf8');
+const transcript = fs.readFileSync(path.join(root, 'assets/transcripts/andersen-settle-this-in-your-hearts-20260915.txt'), 'utf8');
+assert(!/reason cannot authenticate/i.test(html + transcript), 'Transcription must not reverse the statement about reason');
+assert(/reason can authenticate/i.test(html) && /reason can authenticate/i.test(transcript));
+const dom = new JSDOM(html, { runScripts: 'outside-only', url: 'https://focuschrist.com/answers/settle-this-in-your-hearts.html' });
+const { window } = dom;
+const document = window.document;
+const audio = document.querySelector('audio');
+let ready = 0;
+Object.defineProperty(audio, 'readyState', { get: () => ready });
+Object.defineProperty(audio, 'duration', { get: () => 1536.192 });
+audio.play = () => Promise.resolve();
+document.getElementById('devotional-recording').scrollIntoView = () => {};
+window.eval(fs.readFileSync(path.join(root, 'settle-heart-recording.js'), 'utf8'));
+const links = [...document.querySelectorAll('.fc-settle-quote a[data-recording-start]')];
+assert.equal(links.length, 8);
+assert.equal(document.querySelectorAll('.fc-settle-quote footer').length, 0, 'Attribution must not inherit page-footer styling');
+assert(!document.getElementById('recording-transcript').open, 'Transcript starts collapsed');
+const activate = link => link.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
+(async () => {
+  // Latest selection must win when metadata is still loading.
+  activate(links[0]); activate(links[4]);
+  audio.dispatchEvent(new window.Event('loadedmetadata'));
+  await new Promise(setImmediate);
+  assert.equal(audio.currentTime, 646);
+  assert.equal(document.activeElement, audio);
+  // Enhanced/rehydrated paragraph links must retain working controls.
+  const clone = links[1].cloneNode(true); links[1].replaceWith(clone);
+  ready = 1; activate(clone); await new Promise(setImmediate);
+  assert.equal(audio.currentTime, 1030);
+  assert(document.getElementById('recording-status').textContent.includes('17:10'));
+  audio.play = () => Promise.reject(new Error('playback unavailable'));
+  activate(links[0]); await new Promise(setImmediate);
+  assert(document.getElementById('recording-status').textContent.includes('Press Play'));
+  assert(links[0].href.endsWith('#t=514'), 'No-script original audio fallback remains');
+  console.log('SETTLE RECORDING QA PASS: exact negation, collapsed transcript, metadata race, cloned links, focus, seek and playback fallback');
+  window.close();
+})().catch(error => { console.error(error); process.exitCode = 1; });

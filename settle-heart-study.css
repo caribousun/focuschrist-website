@@ -14,3 +14,12 @@
 
 /* Match the established 24–32px transition around study source actions. */
 .fc-settle-page #the-invitation > .fc-actions{margin-block:28px}
+
+/* Keep spoken excerpts on the shared reading rail and let the transcript expand naturally. */
+.fc-settle-page .fc-settle-quote{margin:24px 0 32px;padding:18px 22px;border-left:3px solid var(--fc-gold-light);background:var(--fc-card-fill);border-radius:0 12px 12px 0}
+.fc-settle-page .fc-settle-quote p{margin:0 0 12px}
+.fc-settle-page .fc-settle-quote .fc-settle-attribution{font-size:.9em;line-height:1.65;margin:0}
+.fc-settle-page .fc-settle-recording audio{display:block;width:100%;margin:20px 0 24px}
+.fc-settle-page #recording-transcript .fc-actions{margin:24px 0}
+.fc-settle-page #devotional-recording{scroll-margin-top:100px}
+@media(max-width:700px){.fc-settle-page .fc-settle-quote{padding:16px 18px}}
