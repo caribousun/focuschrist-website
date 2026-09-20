@@ -277,6 +277,7 @@ jobs:
         run: |
           node --check pioneer-story.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/pioneer_story_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/pioneer_related_study_runtime_qa.js
 
       - name: Validate live production Ask gate
         run: node --check tools/live_production_ask_qa.js

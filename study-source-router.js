@@ -142,6 +142,15 @@
 
     function answerStudySourceForQuestion(question) {
         const q = normalize(question);
+        const pioneerRules = [
+            { pattern: /\belizabeth (?:crook|panting)\b|\bcrook panting\b/, label: 'Elizabeth Crook Panting and her children', url: 'pioneers.html#elizabeth-crook-panting' },
+            { pattern: /\bbrigham young\b/, label: 'Brigham Young’s rescue appeal', url: 'pioneers.html#pioneer-story-13-brigham-appeal' },
+            { pattern: /\bnauvoo\b|\bwinter quarters\b/, label: 'From Nauvoo to Winter Quarters', url: 'pioneers.html#pioneer-departure-heading' },
+            { pattern: /\bhandcart\b|\bwillie (?:company|handcart)\b|\bmartin (?:company|handcart)\b/, label: 'The handcart journey', url: 'pioneers.html#pioneer-ocean-to-plains' },
+            { pattern: /\bpioneer.{0,30}\brescue\b|\brescue.{0,30}\bpioneer\b/, label: 'The pioneer rescue', url: 'pioneers.html#pioneer-rescue-story' }
+        ];
+        const pioneer = pioneerRules.find(function (rule) { return rule.pattern.test(q); });
+        if (pioneer) return pioneer;
         return ANSWER_STUDY_RULES
             .filter(function (rule) { return rule.terms.some(function (term) { return q.includes(term); }); })
             .sort(function (a, b) { return b.weight - a.weight; })[0] || null;
@@ -310,6 +319,17 @@
         return messages.length ? (messages[messages.length - 1].textContent || '').trim() : '';
     }
 
+    function questionForAnswer(answer) {
+        // Both chronological and newest-first layouts keep each question before its answer.
+        let previous = answer.previousElementSibling;
+        while (previous) {
+            if (previous.classList.contains('user-message')) return previous.textContent || '';
+            if (previous.classList.contains('bot-message')) break;
+            previous = previous.previousElementSibling;
+        }
+        return '';
+    }
+
     function appendSourcePaths(answer, question) {
         if (!answer || answer.querySelector('.fc-source-paths')) return;
         const sources = sourcesForQuestion(question);
@@ -401,16 +421,22 @@
         if (!chatBox) return;
         const answers = chatBox.querySelectorAll('.bot-message');
         if (!answers.length) return;
-        const answer = answers[answers.length - 1];
-        const question = latestQuestion(chatBox);
-        appendAnswerStudySource(answer, question);
-        appendSourcePaths(answer, question);
+        answers.forEach(function (answer) {
+            if (answer.hasAttribute('data-scripture-pending')) return;
+            const question = questionForAnswer(answer);
+            if (!question) return;
+            appendAnswerStudySource(answer, question);
+            appendSourcePaths(answer, question);
+        });
     }
 
     function initAnswerObserver() {
         const chatBox = document.getElementById('chatBox');
         if (!chatBox || typeof MutationObserver === 'undefined') return;
         enhanceLatest(chatBox);
+        chatBox.addEventListener('focuschrist:answer-ready', function () {
+            window.setTimeout(function () { enhanceLatest(chatBox); }, 40);
+        });
         const observer = new MutationObserver(function () {
             window.setTimeout(function () { enhanceLatest(chatBox); }, 40);
         });

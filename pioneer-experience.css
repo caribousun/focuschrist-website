@@ -148,7 +148,7 @@ body.fc-site .qa-container .category-row { gap: 8px; }
 
 body.fc-site .qa-container .pioneer-topic-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     margin: 0;
 }
@@ -180,12 +180,21 @@ body.fc-site .qa-container .category-btn:focus-visible {
     color: #ffe0a0;
 }
 
-@media (min-width: 769px) and (max-width: 1050px) {
-    body.fc-site .qa-container .pioneer-topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
 }
 
-@media (max-width: 768px) {
-    body.fc-site .qa-container .pioneer-topic-grid { grid-template-columns: 1fr; }
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-button,
+body.fc-site .qa-container .pioneer-topic-grid .category-btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    height: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    text-align: center;
 }
 
 body.fc-site .qa-container .message {
@@ -947,4 +956,141 @@ body.fc-site .pioneer-collapse-action {
     body.fc-site :is(.timeline-item,.map-point)[data-focus-expand]::after { right: 14px; top: 16px; }
     body.fc-site [data-focus-expand] > .map-date { margin-bottom: 12px; }
     body.fc-site [data-focus-expand] .ai-response { padding: 16px !important; }
+}
+
+/* Match the established Ask question, response and source presentation. */
+body.fc-site .qa-container .chat-box .sources {
+    margin-top: 16px;
+    padding: 16px;
+    border: 1px solid rgba(240,195,106,0.28);
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(10,31,40,0.72), rgba(31,65,76,0.5));
+    box-shadow: inset 0 1px 0 rgba(255,242,220,0.04);
+}
+body.fc-site .qa-container .chat-box .sources-title {
+    margin-bottom: 14px;
+    color: var(--fc-gold-light);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+body.fc-site .qa-container .chat-box .sources-group {
+    margin-top: 12px;
+}
+body.fc-site .qa-container .chat-box .sources-group--official {
+    margin-top: 0;
+}
+body.fc-site .qa-container .chat-box .sources-group-title {
+    margin-bottom: 8px;
+    color: var(--fc-sage-light);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+body.fc-site .qa-container .chat-box .sources-group--focuschrist .sources-group-title {
+    color: var(--fc-gold-light);
+}
+body.fc-site .qa-container .chat-box .sources-group--focuschrist {
+    margin-top: 18px;
+    padding: 14px 16px 16px;
+    border: 1px solid rgba(240,195,106,0.4);
+    border-radius: 13px;
+    background: linear-gradient(135deg, rgba(240,195,106,0.09), rgba(16,42,53,0.32));
+}
+body.fc-site .qa-container .chat-box .sources-group--focuschrist .sources-group-title {
+    margin-bottom: 10px;
+}
+body.fc-site .qa-container .chat-box .sources-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+body.fc-site .qa-container .chat-box .source-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 42px;
+    box-sizing: border-box;
+    max-width: 100%;
+    padding: 9px 14px;
+    border: 1px solid rgba(240,195,106,0.78);
+    border-radius: 999px;
+    background: rgba(25,57,68,0.96);
+    color: var(--fc-cream);
+    font-size: 0.9rem;
+    line-height: 1.3;
+    text-decoration: none;
+    text-align: left;
+    transition: background-color .18s ease, border-color .18s ease, color .18s ease, transform .18s ease;
+}
+body.fc-site .qa-container .chat-box .source-link--internal {
+    width: fit-content;
+    min-width: min(320px, 100%);
+    border-color: #f6d99d;
+    background: linear-gradient(135deg, #f1c45f, #dfa536);
+    color: #122a35;
+    font-weight: 700;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(5,17,23,0.25), inset 0 1px 0 rgba(255,255,255,0.24);
+}
+body.fc-site .qa-container .chat-box .source-link:hover,
+body.fc-site .qa-container .chat-box .source-link:focus-visible {
+    border-color: var(--fc-gold-light);
+    color: var(--fc-cream);
+    background: rgba(224,170,62,0.2);
+    transform: translateY(-1px);
+}
+body.fc-site .qa-container .chat-box .source-link:focus-visible {
+    outline: 3px solid rgba(240,195,106,0.35);
+    outline-offset: 2px;
+}
+body.fc-site .qa-container .chat-box .source-link--internal:hover,
+body.fc-site .qa-container .chat-box .source-link--internal:focus-visible {
+    background: linear-gradient(135deg, #ffda7e, #edb83f);
+    color: #10252f;
+}
+
+@media (max-width: 720px) {
+    body.fc-site .qa-container .chat-box .sources-group--focuschrist .source-link--internal {
+        width: 100%;
+    }
+}
+
+body.fc-site .qa-container {
+    background: radial-gradient(circle at 100% 0%, rgba(134,175,200,.09), transparent 20rem),
+        linear-gradient(145deg, rgba(31,65,77,.98), rgba(21,45,56,.99));
+    border-color: rgba(134,175,200,.34);
+}
+body.fc-site .qa-container .chat-box:has(.welcome) {
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+body.fc-site .qa-container .welcome { padding: 8px 0 20px; }
+body.fc-site .qa-container .welcome h3 { font-size: clamp(1.75rem, 4vw, 2.35rem); }
+body.fc-site .qa-container .input-area input { background: var(--fc-input, #102832); }
+body.fc-site .qa-container .input-area button { background: var(--fc-gold-fill) !important; }
+body.fc-site .qa-container .input-area #clearBtn {
+    background: var(--fc-action-fill) !important;
+    color: var(--fc-action-text, #142e38) !important;
+}
+body.fc-site .qa-container .pioneer-ai-notice {
+    margin: 18px auto 0;
+    max-width: 850px;
+    padding: 11px 15px;
+    color: #9fb0b1;
+    font-size: .78rem;
+    line-height: 1.55;
+    text-align: center;
+    border-top: 1px solid rgba(134,175,200,.12);
+}
+@media (max-width: 700px) {
+    body.fc-site .qa-container .chat-box { padding: 10px; }
+    body.fc-site .qa-container .message { margin-inline: 0; padding: 16px; }
+    body.fc-site .qa-container .chat-box .sources { padding: 12px; }
+    body.fc-site .qa-container .chat-box .sources-group--focuschrist { padding: 12px; }
+    body.fc-site .qa-container .chat-box .source-link { width: 100%; min-width: 0; }
 }
