@@ -156,6 +156,10 @@ def main():
         if selector.strip().startswith('@'):continue
         # Separate owner-authorized mobile opening and Conference banner review.
         # Exact file hashes prevent this scoped acceptance from admitting later edits.
+        if selector.strip()=='body.fc-site.cfm-page .cfm-hero::before' and body.strip()=='background-position:center 25%':
+            check(sha(ROOT/'come-follow-me.css')=='d550f16a7f3708e638522d46acd65dfbce8ae74fcb516b28ac0bf2c639822984',
+                  'Come Follow Me mobile focal point differs from reviewed bytes')
+            continue
         if selector.strip().startswith('.gc-page .gc-page-opening'):
             check(sha(ROOT/'general-conference-section.css')=='83b30800abdb31ff894314897030e7d7f8d469136267c00eea275dbed53cabe3',
                   'Conference opening CSS differs from reviewed bytes')
