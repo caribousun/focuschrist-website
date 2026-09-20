@@ -16,10 +16,17 @@ for (const page of pages) {
   });
   const dom = new JSDOM(fs.readFileSync(page, 'utf8'), {url:'https://focuschrist.com/' + page, runScripts:'outside-only', virtualConsole});
   const w = dom.window;
-  w.matchMedia = () => ({matches:true});
+  w.matchMedia = () => ({matches:true, addEventListener() {}});
+  // Pseudo-element painting is a browser check, not a JSDOM feature.
+  const computedStyle = w.getComputedStyle.bind(w);
+  w.getComputedStyle = (element, pseudo) => pseudo ? {backgroundImage:'none'} : computedStyle(element);
   w.eval('function initOpeningInvitation() {}\n' + fn + '\ninitMobileOpening();');
   const opening = w.document.querySelector('.fc-mobile-cued-opening');
   if (opening) {
+    for (const surround of w.document.querySelectorAll('.fc-mobile-hero-surround')) {
+      assert.equal(surround.getAttribute('aria-hidden'), 'true', page + ': decorative surround must be silent');
+      assert.equal(surround.parentElement.querySelectorAll(':scope > .fc-mobile-hero-surround').length, 1);
+    }
     const cue = opening.querySelector('.fc-mobile-scroll-cue');
     assert(cue, page + ': missing mobile invitation');
     assert.equal(cue.parentElement, opening.querySelector('.fc-page-intro') || opening, page + ': cue must follow introduction content');

@@ -1029,7 +1029,7 @@ body.fc-site .fc-visual-hero {
     }
 }
 @media (max-width:700px) {
-    body.fc-site { --fc-mobile-hero-height: clamp(320px, 115vw, 800px); --fc-opening-hero-height: var(--fc-mobile-hero-height); }
+    body.fc-site { --fc-mobile-hero-height: clamp(100px, calc(100svh - 480px), 360px); --fc-opening-hero-height: var(--fc-mobile-hero-height); }
 
     /* Mobile focal points retain the main subject as the opening grows taller. */
     body.fc-site .fc-visual-hero.likeness-hero > img { object-fit: cover !important; }
@@ -1470,4 +1470,85 @@ body.fc-site .fc-opening-invitation-label { display: block; margin-bottom: 8px; 
 /* Search stays within its row between the small-phone and mobile breakpoints. */
 @media (min-width: 541px) and (max-width: 700px) {
     body.fc-site .fc-search-row > .fc-button { width: auto; }
+}
+
+/* A single mobile image budget leaves room for the complete first-screen opening.
+   Content can still grow with enlarged text; nothing is clipped to force a fit. */
+.fc-mobile-hero-surround { display: none; }
+@media (max-width: 700px) {
+    body.fc-site .fc-mobile-hero-surround {
+        display: block; position: absolute; inset: 0 0 auto;
+        height: var(--fc-mobile-hero-height); z-index: -3; pointer-events: none;
+        background: center / cover no-repeat; filter: blur(18px) brightness(.55);
+        transform: scale(1.12);
+    }
+    body.fc-site .gc-page-opening .gc-intro-visual { position: relative; isolation: isolate; }
+    body.fc-site .cfm-hero > .fc-mobile-hero-surround { z-index: 0; }
+    body.fc-site .cfm-hero::before { z-index: 1; }
+    body.fc-site:not(.fc-not-found) .fc-page-intro {
+        padding: 14px 16px 12px !important;
+        justify-content: flex-start; gap: 8px;
+        box-sizing: border-box;
+    }
+    body.fc-site:not(.fc-not-found) .fc-page-intro > .fc-container--standard {
+        width: 100%; gap: 8px; margin-block: auto;
+    }
+    body.fc-site .fc-mobile-cued-opening :is(h1, .fc-display) {
+        font-size: clamp(1.5rem, 6vw, 1.85rem) !important;
+        line-height: 1.12 !important;
+        margin-block: 0 !important;
+    }
+    body.fc-site .fc-mobile-cued-opening .fc-eyebrow {
+        font-size: .65rem !important; line-height: 1.3 !important;
+        letter-spacing: .12em; margin-block: 0 !important;
+    }
+    body.fc-site .fc-mobile-cued-opening :is(.fc-page-intro-copy, .fc-page-intro-scripture, .fc-topic-subtitle, .fc-art-study-hint, .fc-conference-lead) {
+        font-size: .9rem !important; line-height: 1.35 !important;
+        margin-block: 0 !important;
+    }
+    body.fc-site .fc-mobile-cued-opening :is(.fc-actions, .cfm-actions, .fc-conference-actions) {
+        display: flex; flex-wrap: wrap; justify-content: center;
+        gap: 8px !important; margin: 4px 0 0 !important; padding: 0 !important;
+    }
+    body.fc-site .fc-mobile-cued-opening :is(.fc-button, .cfm-btn) {
+        width: auto !important; min-height: 44px; flex: 0 1 auto;
+        padding: 9px 14px !important; font-size: .875rem !important;
+        line-height: 1.25; box-sizing: border-box;
+    }
+    body.fc-site .fc-mobile-scroll-cue {
+        margin: auto auto 0 !important; padding: 8px 14px;
+        min-height: 44px; border-color: transparent; background: transparent;
+        letter-spacing: .1em;
+    }
+    body.fc-site .fc-mobile-cued-opening p.fc-opening-invitation:not([hidden]) { display: none !important; }
+    body.fc-site.cfm-page .cfm-hero {
+        padding: calc(var(--fc-mobile-hero-height) + 14px) 16px 12px !important;
+        box-sizing: border-box; overflow: hidden;
+        display: flex; flex-direction: column; gap: 8px;
+    }
+    body.fc-site .cfm-hero__copy { width: 100%; text-align: center; margin-block: auto; }
+    body.fc-site .cfm-hero__copy > * + * { margin-top: 8px !important; }
+    body.fc-site .cfm-hero__copy > p { font-size: .9rem; line-height: 1.35; }
+    body.fc-site.gc-page .gc-page-opening { gap: 14px; padding-bottom: 12px !important; }
+    body.fc-site .gc-page-opening > div { display: grid; gap: 8px; }
+    body.fc-site .gc-page-opening .gc-opening-tagline { font-size: 1rem; line-height: 1.3; margin: 0; }
+    body.fc-site .gc-page-opening .gc-stats { margin: 0; }
+    body.fc-site .gc-page-opening .gc-stats span { padding: 4px 8px; }
+    body.fc-site .fc-gallery-intro { padding: 14px 16px 12px !important; }
+    /* Keep the whole approved scene visible inside the shared frame. */
+    body.fc-site .fc-visual-hero[class]::before {
+        background-size: contain !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    body.fc-site .fc-visual-hero :is(img, picture > img),
+    body.fc-site.gc-page .gc-page-opening .gc-intro-visual img {
+        object-fit: contain !important; object-position: center !important;
+        transform: none !important;
+    }
+    body.fc-site.cfm-page .cfm-hero::before { background-size: contain; }
+    /* The approved home panorama has ample sky on either side of its portrait. */
+    body.fc-site .fc-visual-hero.fc-home-hero::before {
+        background-size: auto 100% !important;
+    }
 }

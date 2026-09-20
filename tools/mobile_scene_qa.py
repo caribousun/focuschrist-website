@@ -21,5 +21,7 @@ for variant in record['variants']:
     if variant['page'] in ('missionary', 'bom'):
         assert '<source media="(max-width:700px)" srcset="' + variant['mobile'] in html
         assert '<img src="' + variant['original'] in html, 'Desktop fallback lost: ' + page
-assert '--fc-mobile-hero-height: clamp(320px, 115vw, 800px)' in css
+assert '--fc-mobile-hero-height: clamp(100px, calc(100svh - 480px), 360px)' in css
+assert 'background-size: contain !important' in css
+assert 'object-fit: contain !important' in css
 print('Mobile scene QA PASS: seven reviewed portraits, original bytes/full-size links and desktop fallbacks retained.')

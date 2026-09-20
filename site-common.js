@@ -905,6 +905,24 @@
         const intro = document.querySelector('.fc-topic-opening, .fc-page-intro, .fc-gallery-intro, .cfm-hero, .gc-page-opening');
         if (!intro) return;
         const mobile = window.matchMedia('(max-width: 700px)');
+        // A quiet atmospheric surround fills the common frame while the sharp
+        // foreground keeps the entire approved picture, including its people.
+        const sceneFrames = document.querySelectorAll('.fc-visual-hero, .gc-page-opening .gc-intro-visual, .cfm-hero');
+        sceneFrames.forEach(frame => {
+            const surround = document.createElement('span');
+            surround.className = 'fc-mobile-hero-surround';
+            surround.setAttribute('aria-hidden', 'true');
+            frame.prepend(surround);
+            function updateScene() {
+                if (!mobile.matches) return;
+                const image = frame.querySelector('img');
+                const background = image ? 'url("' + (image.currentSrc || image.src) + '")' : getComputedStyle(frame, '::before').backgroundImage;
+                surround.style.backgroundImage = background;
+            }
+            updateScene();
+            frame.querySelector('img')?.addEventListener('load', updateScene);
+            mobile.addEventListener('change', updateScene);
+        });
         // Give each study opening an accessible invitation without duplicating
         // its desktop cue or changing the primary study buttons.
         if (!document.body.classList.contains('fc-not-found')) {
