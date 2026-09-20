@@ -2,6 +2,7 @@
 from pathlib import Path
 import hashlib
 import json
+import re
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -38,4 +39,10 @@ cue_override = mobile_opening_css.split('body.fc-site .fc-mobile-scroll-cue {',1
 assert cue_override.strip() == 'margin: auto auto 0 !important;', 'Continue must inherit the Book of Mormon Evidences pill style'
 assert 'background-size: contain' not in mobile_opening_css
 assert 'object-fit: contain' not in mobile_opening_css
+# Copy polish must preserve PR348's owner-approved sizes and focal points.
+locked_css, copy_css = css.split('/* Consistent mobile copy rhythm', 1)
+assert hashlib.sha256(locked_css.rstrip().encode()).hexdigest() == 'aeaba99eaf45c0bda4afb9b03f9c7ae421947da1cfca3898fef06d1f3e12dab3', 'Owner-approved hero frame or focal point changed'
+assert '--fc-mobile-hero-height:' not in copy_css, 'Copy spacing must not redefine hero height'
+assert '.fc-visual-hero' not in copy_css and not re.search(r'(?<![\w-])(?:height|min-height|max-height)\s*:', copy_css), 'Copy polish must not override locked frame dimensions'
+assert 'background-position' not in copy_css and 'object-position' not in copy_css, 'Copy polish must not recrop approved artwork'
 print('Mobile scene QA PASS: seven reviewed portraits, original bytes/full-size links and desktop fallbacks retained.')
