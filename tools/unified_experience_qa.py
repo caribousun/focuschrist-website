@@ -215,7 +215,7 @@ def main() -> int:
         expected_class = "fc-home-hero" if relative == "index.html" else "fc-answer-detail-hero"
         expected_href = "assets/heroes/home-christ-signature-approved-20260907.png" if relative == "index.html" else f"../assets/heroes/topics/{topic_plans[relative]}-full.webp"
         if relative == "answers/settle-this-in-your-hearts.html":
-            expected_href = "../assets/page-art/settle-heart/01-settled-path-full.webp"
+            expected_href = "../assets/page-art/settle-heart/01-settled-path-wide-20260920-full.webp"
         hero_pattern = re.compile(
             r'<a\b(?=[^>]*\bclass="[^"]*\b' + re.escape(expected_class) +
             r'\b[^"]*")(?=[^>]*\bhref="' + re.escape(expected_href) + r'")[^>]*>',

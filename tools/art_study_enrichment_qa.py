@@ -154,7 +154,8 @@ def settle_review_errors(reviewed_pages, root=ROOT):
         a=root/e['asset']
         if not a.is_file() or hashlib.sha256(a.read_bytes()).hexdigest()!=e.get('sha256') or not e.get('reviewed') or not e.get('technical_review_passed') or not e.get('tone'):
             errors.append('Settled faith technical artwork review mismatch: '+e['asset'])
-        elif Image.open(a).size!=(1536,1024):errors.append('Settled faith image dimensions changed: '+e['asset'])
+        elif Image.open(a).size!=((2172,724) if e.get('key')=='01-settled-path' else (1536,1024)):
+            errors.append('Settled faith image dimensions changed: '+e['asset'])
         g=next((x for x in global_entries if x.get('asset')==e['asset']),{})
         if g.get('sha256')!=e.get('sha256') or g.get('christ')!=e.get('christ') or not g.get('technical_review_passed'):
             errors.append('Settled faith global review evidence mismatch: '+e['asset'])

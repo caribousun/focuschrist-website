@@ -11,3 +11,6 @@
 
 /* Keep enlarged reading text within the same study rail on narrow phones. */
 .fc-settle-page main{overflow-wrap:anywhere}
+
+/* Match the established 24–32px transition around study source actions. */
+.fc-settle-page #the-invitation > .fc-actions{margin-block:28px}
