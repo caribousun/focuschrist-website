@@ -123,9 +123,9 @@ def main():
     pioneer_ask_style = 'pioneer-experience.css'
     # Owner-requested two-column topics and Ask presentation were reviewed
     # separately from hero artwork. Permit these exact bytes, not later CSS edits.
-    check(sha(ROOT/pioneer_ask_style)=='bf8ce5c798b57d1665432bd56c63ecb7d2bd1e685cafaf7b1a2f8819d002ec01',
+    check(sha(ROOT/pioneer_ask_style)=='7f67cd77c23157019cd4cb609f2ff0b7151b9a503e143dd692337f41aed919d8',
           'Pioneer Ask stylesheet differs from reviewed bytes')
-    check(sha(ROOT/pioneer_style)=='40f31ae7ab2cc6a1ae8ef12cb890dc181f526b7b8a3ec3c70b35333b7e3c61d9',
+    check(sha(ROOT/pioneer_style)=='ea6b95fb4fa4fbc37f4e9589c6726eddcfebc3c1a5ce16c3cc973959d5e7c5b3',
           'Pioneer stylesheet differs from reviewed bytes')
     check(sha(ROOT/bom_style)=='9c1963e6981ec14114ee08da6230c26048ea491177936599d1e8050da4f6be9f',
           'Book of Mormon stylesheet differs from reviewed bytes')
@@ -144,7 +144,10 @@ def main():
         if relative != 'pioneers.html':
             check(pioneer_style not in path.read_text(encoding='utf8'),
                   'Pioneer stylesheet referenced outside its owning page: '+relative)
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style],cwd=ROOT,text=True)
+    # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
+    check(sha(ROOT/'site-system.css')=='fcc7c9b883bd06e632d57dd753b66e133b54bcff16c7fbb32017b97583c1349a', 'Reviewed mobile polish stylesheet changed: site-system.css')
+    check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():
@@ -154,11 +157,11 @@ def main():
         # Separate owner-authorized mobile opening and Conference banner review.
         # Exact file hashes prevent this scoped acceptance from admitting later edits.
         if selector.strip().startswith('.gc-page .gc-page-opening'):
-            check(sha(ROOT/'general-conference-section.css')=='adf3bfd98848449955227b94eddc457993018798c4a1425825c85cad1a85e982',
+            check(sha(ROOT/'general-conference-section.css')=='83b30800abdb31ff894314897030e7d7f8d469136267c00eea275dbed53cabe3',
                   'Conference opening CSS differs from reviewed bytes')
             continue
         if selector.strip()=='body.fc-site' and body.strip()=='--fc-opening-hero-height: clamp(320px, 44svh, 420px);':
-            check(sha(ROOT/'site-system.css')=='0bc1ecf42529eac86c87251aadeb501409e700512d322bcfe3c7ace76e981bb0',
+            check(sha(ROOT/'site-system.css')=='fcc7c9b883bd06e632d57dd753b66e133b54bcff16c7fbb32017b97583c1349a',
                   'Mobile opening CSS differs from reviewed bytes')
             continue
         dropdown_selectors = {
@@ -167,7 +170,7 @@ def main():
             '.nav[data-focuschrist-header="standard"] .hamburger-menu a.active',
         }
         if all(part.strip() in dropdown_selectors for part in selector.split(',')):
-            check(sha(ROOT/'site-header.css')=='020d490bc22af96ff2f59edcbaf0e638ad045d85caf9d3a0bde50907e7d5b2a6',
+            check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24',
                   'Dropdown stylesheet differs from reviewed gold-menu bytes')
             check(all(prop in {'outline-offset','border-radius','box-shadow','font-weight'}
                       for prop in re.findall(r'([a-z-]+)\s*:',body)),

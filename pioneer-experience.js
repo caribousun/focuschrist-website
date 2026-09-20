@@ -143,7 +143,42 @@
         });
     }
 
+    function reviewedPioneerFamilyQuestion(question) {
+        const text = String(question || '').toLowerCase().replace(/[’‘]/g, "'");
+        // Exact family identities only: do not revive the legacy loose book matcher.
+        const elizabeth = /\belizabeth (?:crook(?: panting)?|panting(?: crook)?)\b|\bcrook panting\b/.test(text);
+        const jane = /\bjane panting(?: bell)?\b|\bjane(?:'s)? (?:later |second )?witness\b/.test(text);
+        const cave = /\bcave\b|\bdried (?:buffalo )?meat\b/.test(text);
+        if (!elizabeth && !jane) return null;
+        const familyOverview = /\b(?:who|story|biography|life|journey|children|company|handcart|tell me about)\b/.test(text);
+        const janeBareName = /^jane panting(?: bell)?[?.!]*$/.test(text.trim());
+        if (jane && !janeBareName && !familyOverview && !cave && !/\bwitness\b|\bmeeting\b/.test(text)) return null;
+        const sources = [
+            { text: 'Elizabeth and her children — source-grounded family study', url: 'pioneers.html#elizabeth-crook-panting' },
+            { text: 'Elizabeth in the Church History database', url: 'https://history.churchofjesuschrist.org/chd/individual/elizabeth-crook-1827?lang=eng' }
+        ];
+        let answer;
+        if (jane || /\bjane\b|\bsecond witness\b/.test(text)) {
+            answer = 'Jane Panting Bell was Elizabeth Crook Panting’s daughter. She was one during the Willie company’s overland journey in 1856. Jane’s second witness belongs to her later life; she was not an eyewitness to entering the cave.\n\nThe family account collected in Tell My Story, Too relates that Jane attended a Mother’s Day church meeting while visiting a daughter in Pocatello. An elderly man recalled being a hungry boy in the Willie company and receiving dried meat from a woman who said it had been provided miraculously. Jane wept and identified that woman as her mother.\n\nJane later related the encounter to her niece, June Cranney Monson. The surviving account does not name the man or give the meeting’s year. This is a later family recollection, not a contemporary transcript of the meeting.';
+            sources.unshift({ text: 'Jane’s later second witness and its source history', url: 'pioneers.html#pioneer-story-12-jane-witness' });
+        } else if (cave || /\bstranger\b|\bmiracle\b/.test(text)) {
+            answer = 'In the account preserved by Elizabeth Crook Panting’s family, she went to gather buffalo chips for fuel during the hungry Willie company journey. An unfamiliar man asked about her situation and led her over a small hill to a cave where dried buffalo meat was hanging. He filled her apron with meat and instructed her to share it with others in need.\n\nAfter he showed her the direction back to camp, Elizabeth turned to thank him and could no longer find either the man or the cave. The meat remained. The family remembered her returning and sharing it with hungry people. Jennie Edith Bell Mason’s later family biography also records the cave, dried meat and return to the company.\n\nThe principal family account supplies neither an exact date nor a securely identified location. It does not establish the stranger’s identity as Christ, an angel or any named person. Elizabeth’s cave account is separate from Martin’s Cove and from Ephraim Hanks’s later provision of buffalo meat.';
+            sources.unshift({ text: 'The gift in the cave — account and source distinctions', url: 'pioneers.html#pioneer-story-10-cave-gift' });
+            sources.push({ text: 'Mason family biography — Church History Library', url: 'https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-mason-jennie-edith-bell-elizabeth-panting-and-jane-panting-bell' });
+        } else {
+            // This is an overview, not a claim to answer every conceivable family detail.
+            // Specific questions beyond this reviewed account continue through research.
+            const bareName = /^(?:elizabeth (?:crook(?: panting)?|panting(?: crook)?)|crook panting)[?.!]*$/.test(text.trim());
+            if (!bareName && !familyOverview) return null;
+            answer = 'Elizabeth Crook Panting traveled in the Willie handcart company in 1856 with Christopher, five at the start of the overland journey, and Jane, one. Christopher turned six on the way west, and Elizabeth turned twenty-nine in October. The Church History database records all three in the company, which reached Salt Lake City on November 9.\n\nTheir journey began with an Atlantic crossing aboard the Thornton. Family recollections describe Elizabeth’s difficult departure from England, caring for her children during the trek, and receiving dried buffalo meat from an unidentified man in a cave and sharing it in camp. Those recollections are identified as family accounts; the cave’s exact location, date and the stranger’s identity are not established.\n\nYears later, Jane heard an elderly man in a Pocatello meeting recall receiving the shared meat as a boy. She identified the woman as her mother and later related the encounter to June Cranney Monson. Jane’s second witness is this later encounter, not a claim that she witnessed the cave herself. The full page study preserves the family narrative and distinguishes it from contemporary company records.';
+        }
+        return { id: 'pioneer-reviewed-elizabeth-family', answer, sources,
+            mode: 'reviewed-local-pioneer-family', sourceIntegrityPassed: true, verifiedGrounding: true };
+    }
+
     function directPioneerQuestion(question) {
+        const family = reviewedPioneerFamilyQuestion(question);
+        if (family) return family;
         const text = String(question || '').toLowerCase();
         const topic = /\bjoseph smith\b(?!\s+barlow\b)/i.test(text) ? 'Joseph Smith'
             : /winter quarters/i.test(text) ? 'Winter Quarters'

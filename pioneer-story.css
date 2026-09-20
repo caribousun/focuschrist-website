@@ -41,7 +41,24 @@ body.fc-site table.pioneer-date-table { width: 100%; border-collapse: collapse; 
 body.fc-site .pioneer-date-table :is(th,td) { padding: 12px; vertical-align: top; text-align: left; border-bottom: 1px solid var(--fc-line, #526068); overflow-wrap: anywhere; }
 body.fc-site .pioneer-date-table th { color: var(--fc-gold-light, #f3cc83); }
 body.fc-site .pioneer-date-table :is(th,td):first-child { width: 25%; }
+body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
 @media (max-width: 700px) {
+    body.fc-site .fc-visual-hero--history > img { object-position: 88% 35% !important; }
+    /* Reading copy shares one alignment; titles and navigation keep their role. */
+    body.fc-site .pioneer-visual-intro > p:not(.fc-eyebrow),
+    body.fc-site .pioneer-story-intro > p:not(.fc-eyebrow),
+    body.fc-site .pioneer-story-copy p,
+    body.fc-site .pioneer-story-note,
+    body.fc-site .pioneer-source-notes p,
+    body.fc-site .pioneer-journal-intro,
+    body.fc-site .fc-deep-study > p,
+    body.fc-site .fc-study-grid p,
+    body.fc-site #guided-reflections p:not(.fc-eyebrow),
+    body.fc-site .fc-resource-intro {
+        text-align: start;
+        text-wrap: pretty;
+        line-height: 1.75;
+    }
     body.fc-site .pioneer-story-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
     body.fc-site .pioneer-timeline-group .map-container { padding: 10px; }
     body.fc-site .pioneer-timeline-group :is(.timeline-item,.map-point)[data-focus-expand] { padding: 14px 38px 14px 12px; gap: 8px; }

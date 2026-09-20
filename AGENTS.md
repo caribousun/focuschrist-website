@@ -79,6 +79,10 @@ Wyatt clarified on 2026-09-19: each original picture has exactly one owning page
 
 Measure the existing desktop and phone hero frames before generation. Preserve their width, height and opening layout. Compose new artwork for the measured aspect ratios, keeping faces, hands and essential scenes visible without stretching or empty borders. Use a responsive variant of the same artwork when mobile requires another ratio; extend only necessary surroundings when authorized, preserving approved identity and central composition. Inspect the actual desktop, phone and breakpoint framing. Responsive variants are one artwork, not new unique art. Never enlarge the banner to accommodate an unsuitable image.
 
+## Pill and menu label containment
+
+Wyatt requires every new or changed pill and hamburger-menu item to be checked for clipping. Inspect desktop and phone widths, long and wrapped labels, keyboard focus and increased text size. The full label and focus outline must remain visible inside the control; a scrollable flex menu must not shrink its rows. Preserve a usable touch target and allow content-driven height. Source checks alone do not replace rendered inspection.
+
 ## Resource thumbnail proportions and page rhythm
 
 New study pages must use the shared `--fc-standard` content boundary and `--fc-body-gutter` outer gutters. A padded main may add twice the gutter to its maximum width so the visible content still aligns with the standard. Use shared section-spacing tokens and `.fc-actions` for centered pill groups; keep chapter directories centered at mobile breakpoints. Avoid independent 780/850/900px nested width islands inside one illustrated study. Purposeful reading columns and wide galleries may retain their established widths. Check all later stylesheet overrides, not only the first matching rule, and run `tools/study_layout_uniformity_qa.py` plus rendered phone/desktop checks before release.
@@ -314,3 +318,7 @@ Wyatt requires a reusable anatomy-reference workflow after repeated rejected Pet
 Every person in every new or edited image must have a detailed natural expression fitting the scene; identity consistency never means repeating a blank expression or identical gaze. Inspect likeness, facial detail and scene-expression separately. For Elizabeth Crook Panting use the exact owner-approved reference in `assets/identities/elizabeth-crook-panting-owner-approved-20260920.png` and the approval registry. Preserve photographic clarity, natural skin and eyes; reject waxy or doll-like faces even if source photographs are flat.
 
 Use the available `imagegen` skill whenever creating, editing or reconstructing raster artwork. Historical portraits supply identity evidence, not flat textures to paste into scenes. Establish the person's age at the depicted event, reconstruct lifelike skin and lighting, and require a detailed scene-appropriate expression. Inspect the actual output independently of tool success. Preserve the historical original and label the reconstruction honestly.
+
+## Mobile page hero continuity
+
+Wyatt requires ALL mobile page heroes to use one shared vertical height at each viewport size, including topic studies, art studies, Come Follow Me and General Conference. Preserve approved section layouts and desktop artwork. Verify every canonical route, subject visibility and overflow at narrow and wide phone sizes; do not certify sitewide continuity from a sample.
