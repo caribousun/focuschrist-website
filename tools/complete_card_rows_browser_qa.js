@@ -15,7 +15,8 @@ function measure(selector) {
     const cards = [...grid.children].map(n => n.getBoundingClientRect()).filter(r => r.width && r.height);
     if (cards.length < 2 || !['grid','flex'].includes(getComputedStyle(grid).display)) return [];
     const lastTop = Math.max(...cards.map(r => r.top));
-    const last = cards.filter(r => Math.abs(r.top - lastTop) < 3);
+    // Mixed figure/article cards may have different top margins within one row.
+    const last = cards.filter(r => r.top <= lastTop + 3 && r.bottom > lastTop + 3);
     const rect = grid.getBoundingClientRect(), style = getComputedStyle(grid);
     const left = rect.left + parseFloat(style.borderLeftWidth) + parseFloat(style.paddingLeft);
     const right = rect.right - parseFloat(style.borderRightWidth) - parseFloat(style.paddingRight);
