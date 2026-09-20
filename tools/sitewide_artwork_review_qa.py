@@ -50,7 +50,7 @@ def main():
     if args.baseline_report:Path(args.baseline_report).write_text(json.dumps({'baseline':baseline,'images':preserved},indent=2),encoding='utf8')
     ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
     pages=[urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
-    check(len(pages)==41 and len(set(pages))==41,'Sitemap must expose all 41 unique canonical destinations')
+    check(len(pages)==42 and len(set(pages))==42,'Sitemap must expose all 42 unique canonical destinations')
     parsed={}
     for page in pages:
         check((ROOT/page).is_file(),'Missing canonical page '+page)
@@ -121,6 +121,10 @@ def main():
     bom_style = 'bom-story-journey.css'
     pioneer_style = 'pioneer-story.css'
     pioneer_ask_style = 'pioneer-experience.css'
+    # Independently reviewed study-body and Answers-directory styles, no hero rules.
+    settle_style = 'settle-heart-study.css'
+    check(sha(ROOT/settle_style)=='858d5b00ac69181913ea10440ef357679adbf995a960e497b395dadf10879d31',
+          'Settle study stylesheet differs from reviewed bytes')
     # Owner-requested two-column topics and Ask presentation were reviewed
     # separately from hero artwork. Permit these exact bytes, not later CSS edits.
     check(sha(ROOT/pioneer_ask_style)=='7f67cd77c23157019cd4cb609f2ff0b7151b9a503e143dd692337f41aed919d8',
@@ -141,13 +145,16 @@ def main():
         if relative != 'answers/what-is-the-book-of-mormon.html':
             check(bom_style not in path.read_text(encoding='utf8'),
                   'Book of Mormon stylesheet referenced outside its owning page: '+relative)
+        if relative not in {'answers.html', 'answers/settle-this-in-your-hearts.html', settle_style}:
+            check(settle_style not in path.read_text(encoding='utf8'),
+                  'Settle stylesheet referenced outside reviewed destinations: '+relative)
         if relative != 'pioneers.html':
             check(pioneer_style not in path.read_text(encoding='utf8'),
                   'Pioneer stylesheet referenced outside its owning page: '+relative)
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(sha(ROOT/'site-system.css')=='b1dcd1c1bc1ab585f0803af31ad8d56789a4f2e07202c4bfb59ab0849656a0e1', 'Reviewed mobile polish stylesheet changed: site-system.css')
     check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)'+settle_style,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():

@@ -203,16 +203,19 @@ def main() -> int:
         fail(errors, "original approved hero must remain unchanged for recovery")
 
     approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
-    if len(approved_answer_pages) != 20:
-        fail(errors, f"expected 20 Answer detail pages, found {len(approved_answer_pages)}")
+    if len(approved_answer_pages) != 21:
+        fail(errors, f"expected 21 Answer detail pages, found {len(approved_answer_pages)}")
     topic_plans = {p["page"]: p["key"] for p in json.loads((ROOT / "docs/sitewide-hero-production-plan.json").read_text(encoding="utf-8"))["plans"]}
     topic_plans.update({e["page"]: e["id"].removesuffix("-hero") for e in json.loads((ROOT / "docs/focused-answers-art-review.json").read_text(encoding="utf-8"))["images"] if e["role"] == "hero"})
+    topic_plans["answers/settle-this-in-your-hearts.html"] = "settle-heart"
     approved_hero_pages = ["index.html", *approved_answer_pages]
     approved_cache_versions: set[str] = set()
     for relative in approved_hero_pages:
         page_text = (ROOT / relative).read_text(encoding="utf-8")
         expected_class = "fc-home-hero" if relative == "index.html" else "fc-answer-detail-hero"
         expected_href = "assets/heroes/home-christ-signature-approved-20260907.png" if relative == "index.html" else f"../assets/heroes/topics/{topic_plans[relative]}-full.webp"
+        if relative == "answers/settle-this-in-your-hearts.html":
+            expected_href = "../assets/page-art/settle-heart/01-settled-path-full.webp"
         hero_pattern = re.compile(
             r'<a\b(?=[^>]*\bclass="[^"]*\b' + re.escape(expected_class) +
             r'\b[^"]*")(?=[^>]*\bhref="' + re.escape(expected_href) + r'")[^>]*>',

@@ -73,6 +73,27 @@ def check():
             if not record:
                 errors.append(f'{path.name}: resource missing identity review: {key}')
                 continue
+            if record['kind'] == 'study-reference':
+                # A thumbnail can lead to the existing owning study, never duplicate its video.
+                destination=record.get('url','');target=urlsplit(destination)
+                owner=registry.get(record.get('owning_resource_key'),{})
+                target_path=(path.parent/target.path).resolve()
+                if target.scheme or target.netloc or not target.fragment or target_path.parent != (ROOT/'answers').resolve() or not target_path.is_file() or target_path==path.resolve():
+                    errors.append(f'{path.name}: invalid owning study reference: {key}')
+                    continue
+                owner_nodes=page(target_path)
+                owner_cards=[n for n in owner_nodes if n.attrs.get('data-resource-key')==record.get('owning_resource_key')]
+                bound=False
+                if len(owner_cards)==1:
+                    ancestor=owner_cards[0]
+                    while ancestor:
+                        if ancestor.attrs.get('id')==target.fragment:bound=True
+                        ancestor=ancestor.parent
+                if not bound or owner.get('kind')!='video' or owner.get('video_identity')!=record.get('referenced_video_identity'):
+                    errors.append(f'{path.name}: study reference not bound to existing owning video: {key}')
+                if any(n.has('fc-resource-card__play') for n in node.walk()) or any(n.attrs.get('href')!=destination for n in node.walk() if n.tag=='a'):
+                    errors.append(f'{path.name}: study reference must link only to owning study without video play presentation: {key}')
+                continue
             visual_video = any(n.has('fc-resource-card__play') for n in node.walk())
             kind_text = ' '.join(n.text() for n in node.walk() if n.has('fc-resource-card__kind'))
             if (visual_video or 'video' in kind_text.lower()) and record['kind'] != 'video':

@@ -135,6 +135,39 @@ def book_of_mormon_review_errors(reviewed_pages, root=ROOT):
     return errors
 
 
+SETTLE_PAGE = "answers/settle-this-in-your-hearts.html"
+
+def settle_review_errors(reviewed_pages, root=ROOT):
+    from answer_study_qa import Document
+    errors=[]
+    review=json.loads((root/'docs/settle-heart-art-review.json').read_text(encoding='utf-8'))
+    entries=review.get('artworks',[])
+    assets=[e.get('asset') for e in entries]
+    if review.get('page')!=SETTLE_PAGE or len(entries)!=15 or len(set(assets))!=15 or sum(e.get('christ') is True for e in entries)!=8:
+        return ['Settled faith requires exactly fifteen distinct reviewed originals, eight depicting Christ']
+    if review.get('allocation')!={'new-testament':4,'old-testament':2,'book-of-mormon':3,'pearl-of-great-price':2,'church-history':2,'faith-today':2} or dict(Counter(e.get('category') for e in entries))!=review['allocation']:
+        errors.append('Settled faith six-category artwork allocation differs from review')
+    global_entries=reviewed_pages.get(SETTLE_PAGE,[])
+    if [e.get('asset') for e in global_entries]!=assets:
+        errors.append('Settled faith global and dedicated review inventories differ')
+    for e in entries:
+        a=root/e['asset']
+        if not a.is_file() or hashlib.sha256(a.read_bytes()).hexdigest()!=e.get('sha256') or not e.get('reviewed') or not e.get('technical_review_passed') or not e.get('tone'):
+            errors.append('Settled faith technical artwork review mismatch: '+e['asset'])
+        elif Image.open(a).size!=(1536,1024):errors.append('Settled faith image dimensions changed: '+e['asset'])
+        g=next((x for x in global_entries if x.get('asset')==e['asset']),{})
+        if g.get('sha256')!=e.get('sha256') or g.get('christ')!=e.get('christ') or not g.get('technical_review_passed'):
+            errors.append('Settled faith global review evidence mismatch: '+e['asset'])
+    d=Document();d.feed((root/SETTLE_PAGE).read_text(encoding='utf-8'));ns=list(d.root.walk())
+    shown=[n.attrs.get('href','').removeprefix('../') for n in ns if n.tag=='a' and ('data-hero-viewer' in n.attrs or n.parent.tag=='figure')]
+    if shown!=assets:errors.append('Settled faith displayed original inventory differs from exact review order')
+    ids={n.attrs['id'] for n in ns if 'id' in n.attrs}
+    nav=[a.attrs.get('href','') for n in ns if n.has('fc-study-nav') for a in n.walk() if a.tag=='a']
+    if len(nav)<6 or any(not h.startswith('#') or h[1:] not in ids for h in nav):errors.append('Settled faith needs six working study stops')
+    if sum(n.tag=='details' for n in ns)<3:errors.append('Settled faith needs three guided reflections')
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     gallery = AuditParser()
@@ -256,10 +289,11 @@ def main() -> int:
         # srcset. Exclusivity concerns owning pages, not references on that page.
         if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
-    if set(reviewed_pages) != set(PAGES) | {'answers/aaronic-priesthood-restoration.html', 'answers/melchizedek-priesthood-restoration.html'} | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions} | {BOM_PAGE}:
+    if set(reviewed_pages) != set(PAGES) | {'answers/aaronic-priesthood-restoration.html', 'answers/melchizedek-priesthood-restoration.html'} | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions} | {BOM_PAGE, SETTLE_PAGE}:
         errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement, Mission, Life After Death, Birth of Christ, Book of Mormon stories and the four reviewed study-gap pages")
 
     errors.extend(book_of_mormon_review_errors(reviewed_pages))
+    errors.extend(settle_review_errors(reviewed_pages))
 
     life_entries = reviewed_pages.get("answers/what-happens-after-death.html", [])
     if len(life_entries) != 18:

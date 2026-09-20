@@ -21,6 +21,11 @@ assert bom_manifest.get('page') == 'answers/what-is-the-book-of-mormon.html', 'B
 bom_entries = bom_manifest.get('artworks', [])
 bom_review = {entry['asset']: entry for entry in bom_entries}
 assert bom_entries and len(bom_review) == len(bom_entries), 'Book of Mormon review requires unique original assets'
+settle_manifest=json.loads((ROOT/'docs/settle-heart-art-review.json').read_text(encoding='utf-8'))
+assert settle_manifest['page']=='answers/settle-this-in-your-hearts.html'
+settle_review={e['asset']:e for e in settle_manifest['artworks'][1:]}
+assert len(settle_review)==14, 'Settled faith requires fourteen supporting originals plus its distinct hero'
+settle_assets=[]
 bom_assets=[]
 opening_assets=[]
 focused_assets=[]; relocated_assets=[]
@@ -60,6 +65,14 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    if 'data-full-image-viewer' in a.attrs or a.attrs.get('aria-haspopup')!='dialog': errors.append(page.name+': opening picture must show study details first')
    assert a.attrs.get('data-topic-study')=='general-conference.html#conference-messages', 'Conference opening study target changed'
    opening_assets.append(relative_asset)
+  elif relative_asset in settle_review:
+   record=settle_review[relative_asset]
+   assert page.relative_to(ROOT).as_posix()==settle_manifest['page'], 'Settled faith artwork ownership mismatch'
+   assert record['reviewed'] and record['technical_review_passed'] and hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['sha256'], 'Settled faith artwork changed since review'
+   assert container.attrs.get('data-topic-art')=='settle-'+record['key'], 'Settled faith adapter key mismatch'
+   assert a.attrs.get('aria-haspopup')=='dialog' and 'data-full-image-viewer' not in a.attrs, 'Settled faith picture must open study first'
+   assert any(n.attrs.get('href')==record['source_url'] for n in sources), 'Settled faith exact scripture missing'
+   settle_assets.append(relative_asset)
   elif relative_asset in bom_review:
    record=bom_review[relative_asset]
    assert page.relative_to(ROOT).as_posix()==bom_manifest['page'], 'Book of Mormon artwork is on the wrong page'
@@ -93,7 +106,8 @@ assert len(opening_assets)==1 and set(opening_assets)==set(opening_review), 'Con
 # The opening replaces an existing picture and remains within the 99-picture baseline.
 assert len(focused_assets)==4 and set(focused_assets)==set(focused_review), 'Focused body artwork inventory mismatch'
 assert len(relocated_assets)==6 and {Path(a).stem for a in relocated_assets}==relocated_names, 'Preserved historical artwork inventory mismatch'
-assert (count-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert len(settle_assets)==14 and set(settle_assets)==set(settle_review), 'Settled faith exact body inventory mismatch'
+assert (count-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert panels==12,panels

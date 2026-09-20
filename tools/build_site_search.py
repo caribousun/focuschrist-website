@@ -43,7 +43,8 @@ def build():
         meta = next((n.attrs.get('content','') for n in nodes if n.tag == 'meta' and n.attrs.get('name') == 'description'), '')
         body = next((n for n in nodes if n.tag == 'body'), doc.root)
         main = next((n for n in nodes if n.tag == 'main'), body)
-        base = {'url':path, 'title':title, 'pageTitle':title, 'category':category(path), 'keywords':Path(path).stem.replace('-',' ')}
+        search_keywords = next((n.attrs.get('content', '') for n in nodes if n.tag == 'meta' and n.attrs.get('name') == 'keywords'), '')
+        base = {'url':path, 'title':title, 'pageTitle':title, 'category':category(path), 'keywords':clean(Path(path).stem.replace('-',' ') + ' ' + search_keywords)}
         records.append(dict(base, text=clean(visible(main)), excerpt=clean(meta)))
         used = set()
         for heading in nodes:

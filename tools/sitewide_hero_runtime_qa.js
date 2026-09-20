@@ -19,7 +19,7 @@ const focusedHeroes = JSON.parse(read('docs/focused-answers-art-review.json')).i
 assert.deepEqual(new Set(focusedHeroes.map(record => record.key)), new Set(['aaronic', 'melchizedek']), 'Both new focused heroes require runtime verification');
 const runtimeHeroes = [...manifest.heroes, ...focusedHeroes];
 const canonical = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => new URL(m[1]).pathname);
-assert.equal(canonical.length, 41, 'Discover the complete canonical inventory');
+assert.equal(canonical.length, 42, 'Discover the complete canonical inventory');
 const click = (window, node) => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
 let checks = 0;
 for (const record of runtimeHeroes) {

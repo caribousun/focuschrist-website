@@ -414,6 +414,7 @@
             'divorce-and-faith.html': 'Divorce',
             'grief-and-faith.html': 'Grief',
             'stand-forever.html': 'Stand Forever',
+            'settle-this-in-your-hearts.html': 'Settle Your Heart',
             'god-our-heavenly-father.html': 'God',
             'restored-church-of-jesus-christ.html': 'The restored Church',
             'look-unto-me-doctrine-and-covenants-6-36.html': hash === '#stand-forever' ? 'Stand Forever' : 'Look Unto Me'
@@ -835,6 +836,7 @@
             'jesus-christ-latter-day-saint-beliefs.html': 'Study the Savior’s divine identity, mortal ministry, Atonement, and Resurrection. Follow the scriptures behind Latter-day Saint beliefs about Him.',
             'look-unto-me-doctrine-and-covenants-6-36.html': 'Study Christ’s invitation to look to Him in every thought. Read the surrounding revelation and consider how to respond in daily life.',
             'prayer-and-personal-revelation.html': 'Explore how scripture describes prayer and guidance from God. Consider ways to ask, listen, study, and act with patience.',
+            'settle-this-in-your-hearts.html': 'Choose to follow Jesus Christ through daily faith, honest study, and service.',
             'stand-forever.html': 'Begin with foundational questions about God, Jesus Christ, and the Restoration. Follow each study into its scriptures and supporting sources.',
             'what-happens-after-death.html': 'Explore Latter-day Saint teachings about the spirit world, Resurrection, judgment, and eternal life. Read the scriptures behind each part of the study.',
             'what-is-eternal-marriage.html': 'Explore temple sealing, covenant promises, and the daily care that strengthens marriage. Follow the scriptures and questions into the study.',
