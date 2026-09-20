@@ -1784,6 +1784,20 @@
         "width": 1536,
         "height": 1024
       }
+    ],
+    "answers/bible-and-book-of-mormon-together.html": [
+      {
+        "asset": "assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-full.webp",
+        "sha256": "4689447ec8cda332762eea5f62d89666a730174642f7cc290e9ed6e74603cce8",
+        "tone": "He opens the scriptures along the way",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": true,
+        "approval_basis": "Owner requested this gap artwork and instructed displayed pictures are approved absent a correction; final displayed candidate has no outstanding correction.",
+        "review_record": "docs/sitewide-narrative-supporting-review.json",
+        "width": 1536,
+        "height": 1024
+      }
     ]
   }
 }

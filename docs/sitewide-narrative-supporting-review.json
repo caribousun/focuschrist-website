@@ -115,6 +115,38 @@
         "result": "technical pass",
         "observations": "John distinct through shorter hair, narrower face and shorter beard; Christ gaze meets John; four people and natural hands; adult ministry age, camel hair and first-century Jordan context coherent."
       }
+    },
+    {
+      "key": "two-witnesses-emmaus-20260919",
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "anchor": "emmaus-scripture-study",
+      "asset": "assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-full.webp",
+      "thumbnail": "assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-960.webp",
+      "sha256": "4689447ec8cda332762eea5f62d89666a730174642f7cc290e9ed6e74603cce8",
+      "thumbnail_sha256": "44f7e50fb51b8260255a649512ee08079f2d45d4d26b4ae32281f2654f27b54d",
+      "source_sha256": "268bfe599e36449879e9837b357231f6591a53398fc46e7f6a760cafe9aac75a",
+      "selected_source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bc13-551c-7ee1-b7bd-507f3beb3173\\exec-9425da3d-2248-4253-bfb7-ebe23cdc11ae.png",
+      "width": 1536,
+      "height": 1024,
+      "owner_approval": true,
+      "technical_review_passed": true,
+      "status": "reviewed_under_owner_standing_approval",
+      "title": "He opens the scriptures along the way",
+      "alt": "Jesus in a sage-green mantle speaks with two attentive disciples on the road to Emmaus.",
+      "caption": "Jesus walks with two disciples and explains the scriptures concerning Himself. Return to their conversation slowly, and notice how understanding grows before recognition.",
+      "study": "bible-and-book-of-mormon-together.html#emmaus-scripture-study",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?id=p13-p32&lang=eng#p13",
+          "label": "Luke 24:13–32"
+        }
+      ],
+      "owner_approval_evidence": "Owner requested this gap artwork and instructed displayed pictures are approved absent a correction; final displayed candidate has no outstanding correction.",
+      "independent_visual_review": {
+        "reviewer": "art_review",
+        "result": "pass",
+        "observations": "Canonical Christ face compared directly; coherent mutual gaze; all adjacent arms traced; subtle healed wrist mark; three travelers and period garments."
+      }
     }
   ],
   "edit_prompts": {
