@@ -969,6 +969,14 @@
                 moveBelow('.fc-page-intro-scripture');
             }
             if (path === '/art.html') moveBelow('.fc-art-study-hint');
+            if (path === '/come-follow-me.html') {
+                shortText('.cfm-hero__copy > p:not(.fc-eyebrow)', 'Study the Old Testament with Jesus Christ at the center.', true);
+                shortText('.cfm-actions > a:first-child', 'This Week ↓');
+            }
+            if (path === '/general-conference.html') {
+                moveBelow('.fc-conference-lead');
+                moveBelow('.gc-stats');
+            }
             if (changes.length) {
                 if (hasSupportingCopy) intro.after(notes);
                 const arrangeCopy = () => {
