@@ -1557,9 +1557,9 @@
     {
       "path": "pioneers.html",
       "status": "verified",
-      "published_text_sha256": "dfbda08255c56e4d9754a71ae6b35ede456554253c9d0990c1e50b603eead74e",
-      "reviewed_on": "2026-09-19",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated. Search navigation label added; prior substantive source review preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained. Topic-pill ordering review: exact labels, destinations, handlers and all content outside topic groups preserved; only alphabetical display order changed. Focused Answers phase: independent editorial and official-source review of topic-specific reflection, navigation, media and opening captions; source text distinguished from personal invitations. Approved artwork preserved.",
+      "published_text_sha256": "bfe91adf47c46c6d2a009a705f8d10dd4d4564ae175eee3568859393a76194d9",
+      "reviewed_on": "2026-09-20",
+      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated. Search navigation label added; prior substantive source review preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained. Topic-pill ordering review: exact labels, destinations, handlers and all content outside topic groups preserved; only alphabetical display order changed. Focused Answers phase: independent editorial and official-source review of topic-specific reflection, navigation, media and opening captions; source text distinguished from personal invitations. Approved artwork preserved. Pioneer historical enrichment: independent source review of Elizabeth Crook Panting and Jane, Brigham rescue and Hanks; contemporary journal and later family testimony distinguished; ages and1856 dates checked; no invented stranger identity or exact cave date; supplied embedded Tell My Story Too family text used with attribution; previous content preserved except verified corrections to obsolete timeline answers and journal attributions. Historical illustrations disclosed separately from facts.",
       "authoritative_sources": [
         "https://archives.utah.gov/2021/01/04/utahs-road-to-statehood-125-years/",
         "https://history.churchofjesuschrist.org/chd/individual/elizabeth-crook-1827?lang=eng",
@@ -1586,7 +1586,20 @@
         "https://www.nps.gov/articles/000/mormon-pioneer-trail-junior-ranger.htm",
         "https://www.nps.gov/articles/000/the-1846-trek-mormon-pioneer-trail.htm",
         "https://www.nps.gov/mopi/learn/historyculture/the-1847-trek.htm",
-        "https://wyoparks.wyo.gov/index.php/places-to-go/fort-bridger"
+        "https://wyoparks.wyo.gov/index.php/places-to-go/fort-bridger",
+        "https://www.nps.gov/mopi/learn/historyculture/index.htm",
+        "https://www.nps.gov/mopi/learn/historyculture/the-1846-trek.htm",
+        "https://www.tellmystorytoo.com/member_pdfs/elizabeth-crook-panting_1900_486.pdf",
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-james-g-willie-emigrating-company-journal-1856-may-november-16-53",
+        "https://www.churchofjesuschrist.org/study/history/topics/handcart-companies?lang=eng",
+        "https://www.churchofjesuschrist.org/learn/history/sites/wyoming/discover/how-the-rescue-of-handcart-pioneers-helped-revive-the-relief-society?lang=eng",
+        "https://history.churchofjesuschrist.org/chd/transcript?name=transcript-for-daniel-w-jones-forty-years-among-the-indians-salt-lake-city",
+        "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng",
+        "https://rsc.byu.edu/rescued/appendix-5",
+        "https://www.nps.gov/gosp/learn/historyculture/index.htm",
+        "https://history.churchofjesuschrist.org/chd/transcript?lang=eng&name=transcript-for-mason-jennie-edith-bell-elizabeth-panting-and-jane-panting-bell",
+        "https://wilfordwoodruffpapers.org/documents/d2f9c932-bc4b-43b9-9a1f-6b16566f3b6b/transcript",
+        "https://www.tellmystorytoo.com/member_pdfs/ephraim-knowlton-hanks_321_227.pdf"
       ]
     },
     {

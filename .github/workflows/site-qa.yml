@@ -267,6 +267,14 @@ jobs:
       - name: Validate Pioneer experience JavaScript
         run: node --check pioneer-experience.js
 
+      - name: Validate Pioneer historical enrichment and preservation
+        run: python tools/pioneer_story_qa.py
+
+      - name: Validate Pioneer story navigation and picture sources
+        run: |
+          node --check pioneer-story.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/pioneer_story_runtime_qa.js
+
       - name: Validate live production Ask gate
         run: node --check tools/live_production_ask_qa.js
 

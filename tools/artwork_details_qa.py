@@ -16,7 +16,7 @@ PAGES = {
     "answers/divorce-and-faith.html": 1,
     "church-history.html": 7,
     "art.html": 4,
-    "pioneers.html": 10,
+    "pioneers.html": 28,
 }
 ROOT_VIEWER_PAGES = (*PAGES, "missionary.html", "general-conference.html")
 ART_STUDY_PAGES = (
@@ -86,9 +86,9 @@ def main() -> int:
         if len(sources) != expected_count or any(not source.startswith("https://") for source in sources):
             errors.append(f"{relative}: every record must have one HTTPS official source")
 
-    if len(all_trigger_keys) != 41 or len(all_record_keys) != 41:
-        errors.append("site-wide non-Mission artwork detail total must be exactly 41")
-    if len(set(all_trigger_keys)) != 41 or len(set(all_record_keys)) != 41:
+    if len(all_trigger_keys) != 59 or len(all_record_keys) != 59:
+        errors.append("site-wide non-Mission artwork detail total must be exactly 59")
+    if len(set(all_trigger_keys)) != 59 or len(set(all_record_keys)) != 59:
         errors.append("site-wide artwork detail keys must be unique")
 
     missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
@@ -111,14 +111,17 @@ def main() -> int:
         relative: len(re.findall(r'data-detail-study="[^"]+"', (ROOT / relative).read_text(encoding="utf-8")))
         for relative in PAGES
     }
-    expected_studies = {"art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 9, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1}
+    expected_studies = {"art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 9, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1, "pioneers.html": 18}
     for relative, count in study_links.items():
         if count != expected_studies.get(relative, 0):
             errors.append(f"{relative}: unexpected related study count {count}")
         for study_path in re.findall(r'data-detail-study="([^"]+)"', (ROOT / relative).read_text(encoding="utf-8")):
-            target = (ROOT / relative).parent / study_path
+            destination = urlsplit(study_path)
+            target = (ROOT / relative).parent / destination.path
             if not target.resolve().is_relative_to(ROOT.resolve()) or not target.is_file():
                 errors.append(f"{relative}: related study missing: {study_path}")
+            elif destination.fragment and f'id="{destination.fragment}"' not in target.read_text(encoding="utf-8"):
+                errors.append(f"{relative}: related study anchor missing: {study_path}")
     home = (ROOT / "index.html").read_text(encoding="utf-8")
     if len(re.findall(r'data-detail-topic="[^"]+"', home)) != 3:
         errors.append("all three Home artworks need contextual Ask topics")
@@ -268,8 +271,8 @@ def main() -> int:
             target = ((ROOT / relative).parent / urlsplit(asset).path).resolve()
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
-    if len(full_assets) != 50:
-        errors.append(f"expected 50 artwork detail full-image sources, found {len(full_assets)}")
+    if len(full_assets) != 68:
+        errors.append(f"expected 68 artwork detail full-image sources, found {len(full_assets)}")
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -359,7 +362,7 @@ def main() -> int:
         return 1
 
     print("Artwork detail QA: PASS")
-    print("41 non-Mission artwork triggers and 7 Mission artwork triggers verified")
+    print("59 non-Mission artwork triggers and 7 Mission artwork triggers verified")
     print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 

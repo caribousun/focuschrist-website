@@ -1,0 +1,50 @@
+/* Pioneer-only story and timeline layout; the approved hero and shared controls stay intact. */
+body.fc-site .pioneer-story-chapter {
+    box-sizing: border-box;
+    width: min(1160px, calc(100% - 2 * var(--fc-body-gutter, 24px)));
+    margin: 0 auto;
+    padding-block: clamp(30px, 5vw, 58px);
+    scroll-margin-top: 100px;
+}
+body.fc-site .pioneer-story-intro { max-width: 75ch; margin: 0 auto 28px; }
+body.fc-site .pioneer-story-intro > :is(h2,h3) { text-align: center; }
+body.fc-site .pioneer-story-intro p,
+body.fc-site .pioneer-story-copy { color: var(--fc-cream, #f3ead8); font-size: 1.02rem; line-height: 1.8; }
+body.fc-site .pioneer-story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 28px; align-items: start; }
+body.fc-site .pioneer-story-card { min-width: 0; margin: 0; scroll-margin-top: 100px; }
+body.fc-site .pioneer-story-card figure { margin: 0; }
+body.fc-site .pioneer-story-art { display: block; aspect-ratio: 3 / 2; overflow: hidden; border: 1px solid var(--fc-line, #526068); border-radius: 14px; background: #142f3a; }
+body.fc-site .pioneer-story-art picture { display: block; width: 100%; height: 100%; }
+body.fc-site .pioneer-story-art img,
+body.fc-site img.pioneer-story-art { display: block; width: 100%; height: 100%; object-fit: contain; }
+body.fc-site .pioneer-story-card :is(h3,h4) { color: var(--fc-gold-light, #f3cc83); font-family: Georgia, 'Times New Roman', serif; line-height: 1.4; margin: 18px 0 12px; }
+body.fc-site .pioneer-story-copy p { margin: 0 0 1em; }
+body.fc-site .pioneer-story-card figcaption { padding-top: 12px; color: var(--fc-muted, #d3d9d9); line-height: 1.65; }
+body.fc-site .pioneer-source-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+body.fc-site .pioneer-source-links a { max-width: 100%; overflow-wrap: anywhere; }
+body.fc-site .pioneer-story-note { max-width: 75ch; margin: 24px auto; padding: 14px 18px; border-left: 2px solid var(--fc-gold, #c9a961); color: var(--fc-muted, #d3d9d9); line-height: 1.75; }
+body.fc-site :is(.pioneer-source-notes,.pioneer-timeline-group) { box-sizing: border-box; width: min(1160px, calc(100% - 2 * var(--fc-body-gutter, 24px))); margin: 18px auto; border-block: 1px solid rgba(226,181,93,.38); scroll-margin-top: 100px; }
+body.fc-site .pioneer-story-chapter .pioneer-source-notes { width: 100%; }
+body.fc-site :is(.pioneer-source-notes,.pioneer-timeline-group) > summary { min-height: 48px; padding: 17px 8px; color: var(--fc-gold-light, #f3cc83); font-size: 1.08rem; line-height: 1.6; cursor: pointer; }
+body.fc-site :is(.pioneer-source-notes,.pioneer-timeline-group) > summary:focus-visible,
+body.fc-site .pioneer-story-art:focus-visible { outline: 2px solid var(--fc-gold-light, #f3cc83); outline-offset: 4px; }
+body.fc-site .pioneer-timeline-group > .section { width: 100%; max-width: none; margin: 0; padding: 18px 0 28px; }
+body.fc-site .pioneer-timeline-group .timeline { padding-left: 0; }
+body.fc-site .pioneer-timeline-group .map-container { padding: 16px; }
+body.fc-site .pioneer-timeline-group :is(.timeline-item,.map-point)[data-focus-expand] { margin-bottom: 10px; padding: 16px 44px 16px 16px; border-radius: 10px; gap: 16px; }
+body.fc-site .pioneer-timeline-group :is(.timeline-item,.map-point)[data-focus-expand]::after { top: 16px; right: 14px; }
+body.fc-site .pioneer-timeline-group [data-focus-expand] > .map-date { padding: 6px 9px; }
+body.fc-site .pioneer-timeline-group [data-focus-expand] .map-content > :is(h3,h4) { margin-bottom: 8px; }
+body.fc-site .pioneer-timeline-group :is(.timeline-desc,.map-content p) { font-size: 1rem; line-height: 1.7; }
+body.fc-site .pioneer-timeline-group .ai-response { height: auto; max-height: none; overflow: visible; }
+body.fc-site table.pioneer-date-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin-block: 22px; font-size: 1rem; line-height: 1.65; }
+body.fc-site .pioneer-date-table :is(th,td) { padding: 12px; vertical-align: top; text-align: left; border-bottom: 1px solid var(--fc-line, #526068); overflow-wrap: anywhere; }
+body.fc-site .pioneer-date-table th { color: var(--fc-gold-light, #f3cc83); }
+body.fc-site .pioneer-date-table :is(th,td):first-child { width: 25%; }
+@media (max-width: 700px) {
+    body.fc-site .pioneer-story-grid { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+    body.fc-site .pioneer-timeline-group .map-container { padding: 10px; }
+    body.fc-site .pioneer-timeline-group :is(.timeline-item,.map-point)[data-focus-expand] { padding: 14px 38px 14px 12px; gap: 8px; }
+    body.fc-site .pioneer-date-table :is(th,td) { padding: 10px 7px; }
+    body.fc-site .pioneer-date-table :is(th,td):first-child { width: 29%; }
+}
