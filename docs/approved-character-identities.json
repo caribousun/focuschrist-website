@@ -98,6 +98,20 @@
       ],
       "reuse_allowed_with_required_research": true,
       "constraints": "Actual reference pixels required. Preserve recognizable face with event-appropriate age and distinct detailed expressions fitting each scene. Photograph-quality detail, natural skin, eyes and anatomy. The identity is an approved artistic interpretation, not an authenticated photograph."
+    },
+    {
+      "character": "Jane Panting Bell",
+      "owner_identity_locked": true,
+      "reference_mapping": "Owner-approved elderly Jane in second-witness chapel scene; foreground woman with handkerchief.",
+      "reference": {
+        "asset": "assets/pioneers/story/12-jane-witness-facing-speaker-20260920-full.webp",
+        "sha256": "6d93833993e0e9742fa25c860079784e9b0c772642a4146dedd2b16556391c2e"
+      },
+      "approval_evidence": [
+        "Wyatt, 2026-09-20: \"that works\" immediately after the second composition edit showing a centered front pulpit and Jane in side profile."
+      ],
+      "reuse_allowed_with_required_research": true,
+      "constraints": "Use actual approved scene pixels. Preserve elderly Jane’s recognizable face and emotional expression. Meeting year and speaker identity remain unknown; scene staging is artistic interpretation."
     }
   ],
   "unresolved_other_characters": "Reconcile every additional approved character against exact saved asset and owner approval provenance before new use; do not infer approval from current publication."

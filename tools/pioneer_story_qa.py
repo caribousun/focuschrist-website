@@ -22,10 +22,13 @@ for r in manifest['images']:
  hashes.append(r['sha256'])
  assert r['technical_visual_review']
  # Owner approved the exact family candidate, not every generated derivative.
- assert r['owner_approved'] == (r['id']=='07-elizabeth-family'),r['id']
+ assert r['owner_approved'] == (r['id'] in {'07-elizabeth-family','12-jane-witness'}),r['id']
  if r['owner_approved']:
   assert r.get('approval_evidence'), 'Exact owner approval must remain recorded'
-  assert r.get('owner_reference_sha256')=='b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e'
+  if r['id']=='07-elizabeth-family':
+   assert r.get('owner_reference_sha256')=='b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e'
+  else:
+   assert r.get('owner_reference_sha256')==r['sha256']
 assert len(set(hashes))==18,'A duplicated original cannot count as another picture'
 # Preserve every preexisting Pioneer image and the owner-approved hero byte for byte.
 assets=sorted(set(re.findall(r'assets/(?:pioneers/[^"\s<>]+\.webp|heroes/pioneers\.webp)',baseline)))
