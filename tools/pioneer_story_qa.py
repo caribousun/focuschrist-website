@@ -41,5 +41,6 @@ for key in triggers:
  record=re.search(r'<article data-artwork-detail-content="'+key+r'".*?</article>',page,re.S)[0]
  paragraphs=re.findall(r'<p data-detail-paragraph>(.*?)</p>',record,re.S)
  assert len(paragraphs)>=2 and all(p.strip() for p in paragraphs),key
- assert 'data-detail-source="https://' in record
+ assert 'data-detail-source="https://' in record,key
+assert 'elizabeth-crook-panting_1900_486.pdf' not in page, 'Owner removed Elizabeth PDF actions'
 print('Pioneer story QA: PASS (28unique studies,18new originals,29preserved topics,31preserved image variants/hero)')

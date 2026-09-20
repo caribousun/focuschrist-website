@@ -312,3 +312,5 @@ Wyatt requires a reusable anatomy-reference workflow after repeated rejected Pet
 ## Enriched human expression and Elizabeth identity
 
 Every person in every new or edited image must have a detailed natural expression fitting the scene; identity consistency never means repeating a blank expression or identical gaze. Inspect likeness, facial detail and scene-expression separately. For Elizabeth Crook Panting use the exact owner-approved reference in `assets/identities/elizabeth-crook-panting-owner-approved-20260920.png` and the approval registry. Preserve photographic clarity, natural skin and eyes; reject waxy or doll-like faces even if source photographs are flat.
+
+Use the available `imagegen` skill whenever creating, editing or reconstructing raster artwork. Historical portraits supply identity evidence, not flat textures to paste into scenes. Establish the person's age at the depicted event, reconstruct lifelike skin and lighting, and require a detailed scene-appropriate expression. Inspect the actual output independently of tool success. Preserve the historical original and label the reconstruction honestly.
