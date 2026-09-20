@@ -183,7 +183,8 @@ body.fc-site main :where(p, li):not(.fc-page-intro *) { text-wrap: pretty; }
     background: var(--fc-bg-warm);
 }
 
-.fc-visual-hero > img {
+.fc-visual-hero > img,
+.fc-visual-hero > picture.fc-mobile-scene-picture > img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -311,7 +312,8 @@ body.fc-site main :where(p, li):not(.fc-page-intro *) { text-wrap: pretty; }
     }
 
     .fc-visual-hero::before,
-    .fc-visual-hero > img {
+    .fc-visual-hero > img,
+    .fc-visual-hero > picture.fc-mobile-scene-picture > img {
         left: 50%;
         right: auto;
         width: var(--fc-ultrawide-hero-width);
@@ -324,7 +326,8 @@ body.fc-site main :where(p, li):not(.fc-page-intro *) { text-wrap: pretty; }
         transform: translateX(-50%) scale(1.004);
     }
 
-    .fc-visual-hero > img {
+    .fc-visual-hero > img,
+    .fc-visual-hero > picture.fc-mobile-scene-picture > img {
         transform: translateX(-50%);
     }
 }
@@ -936,7 +939,8 @@ body.fc-site :where(a, button, input, textarea, select, summary, [tabindex]):not
     body.fc-site .fc-visual-hero:not(.fc-visual-hero--portrait)::before {
         background-position: center 25% !important;
     }
-    body.fc-site .fc-visual-hero > img { object-position: center 35% !important; }
+    body.fc-site .fc-visual-hero > img,
+    body.fc-site .fc-visual-hero > picture.fc-mobile-scene-picture > img { object-position: center 35% !important; }
     body.fc-site .fc-visual-hero::after {
         background: linear-gradient(180deg, rgba(10,24,31,.08), transparent 25%, transparent 94%, var(--fc-bg-warm));
     }
@@ -1025,12 +1029,9 @@ body.fc-site .fc-visual-hero {
     }
 }
 @media (max-width:700px) {
-    body.fc-site { --fc-mobile-hero-height: clamp(320px, min(58svh, 115vw), 600px); --fc-opening-hero-height: var(--fc-mobile-hero-height); }
+    body.fc-site { --fc-mobile-hero-height: clamp(320px, 115vw, 800px); --fc-opening-hero-height: var(--fc-mobile-hero-height); }
 
     /* Mobile focal points retain the main subject as the opening grows taller. */
-    body.fc-site .fc-visual-hero.fc-visual-hero--ask::before { background-position: 45% top !important; }
-    body.fc-site .fc-visual-hero.fc-visual-hero--watch::before { background-position: 47% center !important; }
-    body.fc-site.fc-bom-evidences .fc-visual-hero.fc-visual-hero--bom > img { object-position: 20% 35% !important; }
     body.fc-site .fc-visual-hero.likeness-hero > img { object-fit: cover !important; }
 
     /* Mobile retains the established approved close framing. */
@@ -1421,4 +1422,41 @@ body.fc-site .fc-opening-invitation-label { display: block; margin-bottom: 8px; 
     }
     body.fc-site.gc-page .gc-page-opening .gc-intro-visual > a { border: 0; border-radius: 0; }
     body.fc-site.gc-page .gc-page-opening .gc-intro-visual img { border-radius: 0; }
+}
+
+/* Portrait renditions preserve each wide scene's people and study theme on phones. */
+.fc-visual-hero > picture.fc-mobile-scene-picture {
+    position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2;
+}
+.fc-visual-hero > picture.fc-mobile-scene-picture > img {
+    display: block;
+}
+.fc-visual-hero--missionary > picture.fc-mobile-scene-picture > img { object-position: center top; }
+@media (max-width: 700px) {
+    body.fc-site .fc-visual-hero.fc-visual-hero--ask::before {
+        background-image: url('assets/heroes/mobile-scene/ask-20260920.webp') !important;
+        background-position: center !important; background-size: cover !important;
+    }
+    body.fc-site .fc-visual-hero.fc-visual-hero--watch::before {
+        background-image: url('assets/heroes/mobile-scene/watch-20260920.webp') !important;
+        background-position: center !important; background-size: cover !important;
+    }
+    body.fc-site .fc-visual-hero.fc-visual-hero--answers::before {
+        background-image: url('assets/heroes/mobile-scene/answers-20260920.webp') !important;
+        background-position: center !important; background-size: cover !important;
+    }
+    body.fc-site .fc-visual-hero.fc-visual-hero--about::before {
+        background-image: url('assets/heroes/mobile-scene/about-20260920.webp') !important;
+        background-position: center !important; background-size: cover !important;
+    }
+    body.fc-site .fc-visual-hero.fc-visual-hero--art::before {
+        background-image: url('assets/heroes/mobile-scene/art-20260920.webp') !important;
+        background-position: center !important; background-size: cover !important;
+    }
+    body.fc-site .fc-visual-hero > picture.fc-mobile-scene-picture > img { object-position: center; }
+}
+
+/* Search stays within its row between the small-phone and mobile breakpoints. */
+@media (min-width: 541px) and (max-width: 700px) {
+    body.fc-site .fc-search-row > .fc-button { width: auto; }
 }

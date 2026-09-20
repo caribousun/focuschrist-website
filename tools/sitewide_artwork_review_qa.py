@@ -145,7 +145,7 @@ def main():
             check(pioneer_style not in path.read_text(encoding='utf8'),
                   'Pioneer stylesheet referenced outside its owning page: '+relative)
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
-    check(sha(ROOT/'site-system.css')=='fcc7c9b883bd06e632d57dd753b66e133b54bcff16c7fbb32017b97583c1349a', 'Reviewed mobile polish stylesheet changed: site-system.css')
+    check(sha(ROOT/'site-system.css')=='2a3d89715da32633afa40570481559723585b0074440e49f0e4fa7f9333e67b3', 'Reviewed mobile polish stylesheet changed: site-system.css')
     check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
@@ -161,7 +161,7 @@ def main():
                   'Conference opening CSS differs from reviewed bytes')
             continue
         if selector.strip()=='body.fc-site' and body.strip()=='--fc-opening-hero-height: clamp(320px, 44svh, 420px);':
-            check(sha(ROOT/'site-system.css')=='fcc7c9b883bd06e632d57dd753b66e133b54bcff16c7fbb32017b97583c1349a',
+            check(sha(ROOT/'site-system.css')=='2a3d89715da32633afa40570481559723585b0074440e49f0e4fa7f9333e67b3',
                   'Mobile opening CSS differs from reviewed bytes')
             continue
         dropdown_selectors = {

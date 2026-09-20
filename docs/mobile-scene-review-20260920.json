@@ -1,0 +1,112 @@
+{
+  "owner_request": "Look at them all and ensure the theme and character is all seen",
+  "baseline": "370da08fe4a3d8ea0b11b43bf20130a9d21aaaf9",
+  "variants": [
+    {
+      "page": "ask",
+      "mobile": "assets/heroes/mobile-scene/ask-20260920.webp",
+      "original": "assets/heroes/ask.webp",
+      "original_sha256": "9d9c7aaaebc44953671665ea288a02f1569f03eb314784a2462a17f1490ed763",
+      "mobile_sha256": "b39dedfb02192c24cba00e14fd6c5c12785d5e4c5002055f9a3334543073b14a",
+      "method": "Imagegen portrait recomposition from approved original; theme, people and key objects retained; not pixel-identical. Original desktop/full-size retained."
+    },
+    {
+      "page": "watch",
+      "mobile": "assets/heroes/mobile-scene/watch-20260920.webp",
+      "original": "assets/heroes/watch.webp",
+      "original_sha256": "0a30f9cfb3bb16d1b9a8c34ef78b3f4f6f67b371ce473c40a219d2f9250cdcd8",
+      "mobile_sha256": "4c46da151608aaa6a69009dd8a753a0b2350e127f055cc76eb30c47bf22af25a",
+      "method": "Imagegen portrait recomposition from approved original; theme, people and key objects retained; not pixel-identical. Original desktop/full-size retained."
+    },
+    {
+      "page": "answers",
+      "mobile": "assets/heroes/mobile-scene/answers-20260920.webp",
+      "original": "assets/heroes/answers.webp",
+      "original_sha256": "de8da59c35116cd1e43200e76ab5f2877e02b8f054ea5be4cf641d2df1710417",
+      "mobile_sha256": "d3a45601e837d2c2a2cf287fa380481ba09021c75706eed2d99d47b1ec60b8d0",
+      "method": "Imagegen portrait recomposition from approved original; theme, people and key objects retained; not pixel-identical. Original desktop/full-size retained."
+    },
+    {
+      "page": "missionary",
+      "mobile": "assets/heroes/mobile-scene/missionary-20260920.webp",
+      "original": "assets/heroes/missionary.webp",
+      "original_sha256": "b4ee66aa22b6568b297dc603fb7688075bbcef8cce75750bd1d7f7c78124fa45",
+      "mobile_sha256": "dd4addfff73579318bdadf372e3031d5ab1fb2bd0abfe53020a571965a746921",
+      "method": "Imagegen portrait recomposition from approved original; theme, people and key objects retained; not pixel-identical. Original desktop/full-size retained."
+    },
+    {
+      "page": "bom",
+      "mobile": "assets/heroes/mobile-scene/bom-20260920.webp",
+      "original": "assets/page-art/bom-evidences/hero.webp",
+      "original_sha256": "0a9e43792b013ac21236d84f37431f41f3b53c73c4c1608b8e8d6958efc42b94",
+      "mobile_sha256": "9ea9e865a2d8a6652065e55dbfb06bb93d1693c34874ebf81c4140f5a0697004",
+      "method": "Imagegen portrait recomposition from approved original; theme, people and key objects retained; not pixel-identical. Original desktop/full-size retained."
+    },
+    {
+      "page": "about",
+      "mobile": "assets/heroes/mobile-scene/about-20260920.webp",
+      "original": "assets/heroes/about.webp",
+      "original_sha256": "4087adc112a0ca1befedd1519ea215a88ec2786b4384d12073eeea72d1272585",
+      "mobile_sha256": "007c66465f3b565038e4aea983246c01a35e9d8f2f18abf04fc2a5bb23ea5094",
+      "method": "Imagegen portrait recomposition from approved original; theme, people and key objects retained; not pixel-identical. Original desktop/full-size retained."
+    },
+    {
+      "page": "art",
+      "mobile": "assets/heroes/mobile-scene/art-20260920.webp",
+      "original": "assets/heroes/art.webp",
+      "original_sha256": "b13efa87679d7a86eda76c39d3bef36b9ad93e019be578c088acfdf8c220f1f1",
+      "mobile_sha256": "4d0d29a7928f372e9af5a1da67d8a296453d46c6cf572a7e2464a1e55fc75b14",
+      "method": "Imagegen portrait recomposition from approved original; theme, people and key objects retained; not pixel-identical. Original desktop/full-size retained."
+    }
+  ],
+  "review": "Seven adaptations passed independent visual comparison with their original images. All seven were inspected in rendered 320px and 390px phone frames; wide 700px framing was also checked. Recognizable people, complete scene themes and key objects remain visible. No obvious anatomy defect was found. The other 32 hero scenes retain their previously reviewed composition. This does not claim owner visual acceptance.",
+  "viewport_checks": [
+    {
+      "width": 320,
+      "height": 844,
+      "hero_px": 368,
+      "canonical_routes": 41,
+      "hero_pages": 39,
+      "overflow": 0
+    },
+    {
+      "width": 360,
+      "height": 640,
+      "hero_px": 414,
+      "canonical_routes": 41,
+      "hero_pages": 39,
+      "overflow": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "hero_px": 448.95,
+      "canonical_routes": 41,
+      "hero_pages": 39,
+      "overflow": 0
+    },
+    {
+      "width": 432,
+      "height": 900,
+      "hero_px": 496.8,
+      "canonical_routes": 41,
+      "hero_pages": 39,
+      "overflow": 0
+    },
+    {
+      "width": 700,
+      "height": 900,
+      "hero_px": 800,
+      "canonical_routes": 41,
+      "hero_pages": 39,
+      "overflow": 0
+    }
+  ],
+  "desktop_preservation": "Mission and Book of Mormon original image source, position, dimensions, mask and transform match production at 820px, 1280px and 3440px. The other new renditions are selected only by mobile CSS.",
+  "validation": {
+    "automated_checks": 130,
+    "passed": 130,
+    "artwork_journeys": "All seven: hero to study panel to original full-size image to close, with focus restored and zero remaining open dialogs.",
+    "source_guard": "Original SHA-256 values, portrait dimensions, mobile connections and original full-size paths are enforced by tools/mobile_scene_qa.py in CI."
+  }
+}
