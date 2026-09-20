@@ -139,6 +139,8 @@
     }
 
     function relativeRootHref(name) {
+        // A custom 404 is served at the missing URL, which may have any depth.
+        if (document.body.classList.contains('fc-not-found')) return '/' + name;
         const path = window.location.pathname;
         if (path.includes('/answers/') || path.includes('/art-study/')) return '../' + name;
         return name;
