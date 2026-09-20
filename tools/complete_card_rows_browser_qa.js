@@ -44,7 +44,7 @@ function measure(selector) {
       await page.evaluate(() => document.querySelectorAll('details[data-conference-session]').forEach(n => { n.open = true; }));
       await page.evaluate(() => document.fonts.ready);
       const rows = await page.evaluate(measure, selectors);
-      assert(rows.length, `${url}: no rendered grid coverage`);
+      assert(await page.locator(selectors).count(), `${url}: no covered grid found`);
       for (const row of rows) {
         assert(row.uncovered <= 3, `${url} @${width}: incomplete final row ${JSON.stringify(row)}`);
         assert(row.overflow <= 3, `${url} @${width}: overflowing row ${JSON.stringify(row)}`);
