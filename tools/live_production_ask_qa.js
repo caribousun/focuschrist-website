@@ -195,7 +195,9 @@ function requireSubstantive(match, label, expected) {
     assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260910-holy-ghost-subject-2')
         && live['ask.html'].includes('ask-experience.js?v=20260910-followup-visibility-5'),
         'production Ask HTML does not load the .15 controllers');
-    assert(live['pioneers.html'].includes('pioneer-experience.js?v=20260920-ask-study-sources'),
+    assert(localScriptReferences(live['pioneers.html']).some(reference =>
+        reference.path === 'pioneer-experience.js' && CANONICAL_TARGETS.some(target =>
+            target.path === reference.path && target.url === reference.url)),
         'production Pioneer HTML does not load the current controller');
     assert(live['church-history.html'].includes('church-history-experience.js?v=20260903-16'),
         'production Church History HTML does not load the .15 controller');
