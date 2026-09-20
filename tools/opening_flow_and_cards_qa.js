@@ -16,23 +16,43 @@ for (const page of pages) {
   });
   const dom = new JSDOM(fs.readFileSync(page, 'utf8'), {url:'https://focuschrist.com/' + page, runScripts:'outside-only', virtualConsole});
   const w = dom.window;
-  w.matchMedia = () => ({matches:true, addEventListener() {}});
-  // Pseudo-element painting is a browser check, not a JSDOM feature.
-  const computedStyle = w.getComputedStyle.bind(w);
-  w.getComputedStyle = (element, pseudo) => pseudo ? {backgroundImage:'none'} : computedStyle(element);
+  const listeners = [];
+  const media = {matches:true, addEventListener(type, listener) { listeners.push(listener); }};
+  w.matchMedia = () => media;
+  const initialOpening = w.document.querySelector('.fc-topic-opening, .fc-page-intro, .fc-gallery-intro, .cfm-hero, .gc-page-opening');
+  const originalText = initialOpening?.textContent.replace(/\s+/g, ' ').trim();
+  const originalLinks = initialOpening ? [...initialOpening.querySelectorAll('a[href]')].map(a => a.href) : [];
   w.eval('function initOpeningInvitation() {}\n' + fn + '\ninitMobileOpening();');
   const opening = w.document.querySelector('.fc-mobile-cued-opening');
   if (opening) {
-    for (const surround of w.document.querySelectorAll('.fc-mobile-hero-surround')) {
-      assert.equal(surround.getAttribute('aria-hidden'), 'true', page + ': decorative surround must be silent');
-      assert.equal(surround.parentElement.querySelectorAll(':scope > .fc-mobile-hero-surround').length, 1);
-    }
+    assert.equal(w.document.querySelectorAll('.fc-mobile-hero-surround').length, 0, page + ': owner rejected side treatment');
     const cue = opening.querySelector('.fc-mobile-scroll-cue');
     assert(cue, page + ': missing mobile invitation');
     assert.equal(cue.parentElement, opening.querySelector('.fc-page-intro') || opening, page + ': cue must follow introduction content');
-    assert(w.document.getElementById(cue.hash.slice(1)), page + ': missing next-section destination');
+    const target = w.document.getElementById(cue.hash.slice(1));
+    assert(target, page + ': missing next-section destination');
+    assert(!target.hidden, page + ': mobile cue targets hidden supporting content');
     assert.equal(opening.querySelectorAll('.fc-mobile-scroll-cue').length, 1, page + ': duplicate invitation');
+    for (const action of opening.querySelectorAll('[data-fc-mobile-label]')) {
+      assert(action.getAttribute('aria-label').includes(action.textContent.trim()), page + ': accessible name must include visible action wording');
+    }
+    if (!w.document.body.classList.contains('fc-main-opening')) {
+      const restoredCopy = opening.cloneNode(true);
+      restoredCopy.querySelector('.fc-mobile-scroll-cue').remove();
+      assert.equal(restoredCopy.textContent.replace(/\s+/g, ' ').trim(), originalText, page + ': individual study opening must remain untouched');
+      assert.equal(w.document.querySelectorAll('.fc-mobile-opening-notes, [data-fc-mobile-label]').length, 0, page + ': main-page redesign escaped its scope');
+    }
     openings++;
+    media.matches = false;
+    listeners.forEach(listener => listener());
+    const desktopCopy = opening.cloneNode(true);
+    desktopCopy.querySelector('.fc-mobile-scroll-cue').remove();
+    assert.equal(desktopCopy.textContent.replace(/\s+/g, ' ').trim(), originalText, page + ': desktop copy must restore exactly');
+    assert.deepEqual([...desktopCopy.querySelectorAll('a[href]')].map(a => a.href), originalLinks, page + ': desktop destinations changed');
+    assert([...w.document.querySelectorAll('.fc-mobile-opening-notes')].every(n => n.hidden), page + ': mobile notes visible on desktop');
+    media.matches = true;
+    listeners.forEach(listener => listener());
+    assert(!target.hidden, page + ': cue target must return with mobile layout');
   }
   if (page === 'answers.html') {
     for (const grid of w.document.querySelectorAll('.fc-grid--2')) {
