@@ -903,6 +903,44 @@
       "reviewed_on": "2026-09-19",
       "source_review": "docs/book-of-mormon-resource-review.json",
       "notes": "The card opens the official illustrated story article, which also offers an embedded story video. It is presented as an illustrated scripture story."
+    },
+    "settle-devotional": {
+      "kind": "video",
+      "url": "https://speeches.byu.edu/talks/neil-l-andersen/settle-this-in-your-hearts/",
+      "title": "Settle This in Your Hearts",
+      "video_identity": "speeches.byu.edu/talks/neil-l-andersen/settle-this-in-your-hearts",
+      "aliases": [
+        "https://youtu.be/W23OZiA221Y",
+        "https://www.youtube.com/watch?v=W23OZiA221Y"
+      ]
+    },
+    "settle-choice": {
+      "kind": "study-reference",
+      "url": "stand-forever.html#stand-forever",
+      "title": "Faith Is Not by Chance, but by Choice",
+      "owning_resource_key": "stand-faith-choice",
+      "referenced_video_identity": "churchofjesuschrist.org/study/general-conference/2015/10/faith-is-not-by-chance-but-by-choice"
+    },
+    "settle-joseph": {
+      "kind": "study-reference",
+      "url": "who-was-joseph-smith.html#harmony-study",
+      "title": "Joseph Smith",
+      "owning_resource_key": "unique-joseph-andersen",
+      "referenced_video_identity": "churchofjesuschrist.org/media/video/2014-10-2030-elder-neil-l-andersen"
+    },
+    "settle-trial": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2012/10/trial-of-your-faith?lang=eng",
+      "title": "Trial of Your Faith",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2012/10/trial-of-your-faith",
+      "aliases": []
+    },
+    "settle-memories": {
+      "kind": "video",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2020/04/15andersen?lang=eng",
+      "title": "Spiritually Defining Memories",
+      "video_identity": "churchofjesuschrist.org/study/general-conference/2020/04/15andersen",
+      "aliases": []
     }
   }
 }

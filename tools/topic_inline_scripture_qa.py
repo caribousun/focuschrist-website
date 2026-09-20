@@ -19,7 +19,7 @@ catalog['D&C']='dc-testament/dc';catalog['Psalms']='ot/ps'
 books='|'.join(re.escape(k) for k in sorted(catalog,key=len,reverse=True))
 reference=re.compile(r'(?<![\w])('+books+r')\s+(\d+)(?::(\d+)(?:[–-](\d+))?)?')
 paths=['index.html']+[p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'answers').glob('*.html'))]+['general-conference.html']
-assert len(paths)==22, 'Home and all permanent topic studies must be checked'
+assert len(paths)==23, 'Home and all permanent topic studies must be checked'
 # Discover the Featured Art destinations from their public gallery links. Body prose
 # was previously outside this gate, so missing citations passed picture-panel QA.
 featured=sorted({n.attrs['href'] for n in nodes(ROOT/'art.html') if n.tag=='a' and 'data-artwork-detail' in n.attrs and n.attrs.get('href','').startswith('art-study/')})

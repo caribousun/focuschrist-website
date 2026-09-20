@@ -80,5 +80,5 @@ for (const page of pages) {
   }
   dom.window.close();
 }
-assert.equal(openings, 40, 'Every canonical page except Search has an opening invitation');
+assert.equal(openings, 41, 'Every canonical page except Search has an opening invitation');
 console.log('Opening flow and cards QA PASS: 40 contained cue destinations; complete Answers rows.');

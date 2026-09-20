@@ -91,9 +91,11 @@ const foundational = new Set(['god-our-heavenly-father.html','restored-church-of
 const expectedPills = new Set(fs.readdirSync(path.join(root,'answers'))
   .filter(file => file.endsWith('.html'))
   .map(file => 'answers/' + file));
-const studyDestinations = ['birth-of-christ.html','atonement.html','general-conference.html','book-of-mormon-evidences.html',
+const studyDestinations = ['birth-of-christ.html','general-conference.html','book-of-mormon-evidences.html',
   'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html'];
 for (const href of studyDestinations) expectedPills.add(href);
+assert.equal(pills.length,28,'owner requested seven by four grid');
+assert.match(html, /class="fc-button fc-settle-featured" href="atonement.html"/,'Atonement remains featured above grid');
 assert.deepEqual(new Set(pills.map(([href]) => href)),expectedPills,'all discovered Answers and enriched study destinations are covered');
 function check(h,label) {
   const active = h.header.querySelectorAll('a[aria-current]');

@@ -216,6 +216,17 @@
         "study": "answers/restored-church-of-jesus-christ.html#covenant-life",
         "studyLabel": "Study covenant life together"
     },
+    "topic-settle-heart": {
+        "title": "Walk with Him",
+        "paragraphs": [
+                "Jesus and a disciple walk beside one another, their eyes meeting as they talk. The quiet exchange invites us to consider what it means to follow Him.",
+                "This is a devotional interpretation of discipleship, not a reconstruction of a named encounter. Read the invitation to follow Jesus in Luke 9:23, then explore the message and scripture studies."
+        ],
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/9?lang=eng&id=p23#p23",
+        "sourceLabel": "Read Luke 9:23",
+        "study": "answers/settle-this-in-your-hearts.html#the-invitation",
+        "studyLabel": "Begin the Settle Your Heart study"
+},
     "topic-stand-forever": {
         "title": "Build on the rock",
         "paragraphs": [

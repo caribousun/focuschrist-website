@@ -12,6 +12,7 @@ assert.equal(top('Restoration')[0],'/answers/restored-church-of-jesus-christ.htm
 assert.equal(top('Joseph Smith death mask')[0],'/joseph-smith-likeness.html#death-masks');
 assert.equal(top('D&C 6:36')[0],'/answers/look-unto-me-doctrine-and-covenants-6-36.html');
 assert.equal(top('grief')[0],'/answers/grief-and-faith.html');
+for (const query of ['Settle Your Heart','Settle This in Your Hearts','Neil Andersen']) assert.equal(search.groupMatches(data.records,query).best[0].url,'/answers/settle-this-in-your-hearts.html');
 assert.equal(search.rank(data.records,'zzzxxyy').length,0);
 for(const q of ['','   ','???','how do I'])assert.equal(search.rank(data.records,q).length,0);
 for(const url of ['javascript:alert(1)','//evil.test','/../private','https://evil.test'])assert.equal(search.localURL(url),false);

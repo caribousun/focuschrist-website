@@ -1999,6 +1999,63 @@
       "verified_date": "2026-09-19",
       "resource_type": "Official illustrated scripture story with embedded video",
       "provenance": "docs/book-of-mormon-resource-review.json"
+    },
+    {
+      "key": "settle-devotional",
+      "url": "https://speeches.byu.edu/talks/neil-l-andersen/settle-this-in-your-hearts/",
+      "title": "Settle This in Your Hearts",
+      "thumbnail": "https://speeches.byu.edu/wp-json/speeches/v1/yt-thumb/W23OZiA221Y/maxresdefault",
+      "local_thumbnail": "assets/resources/settle-heart/devotional.webp",
+      "width": 960,
+      "height": 540,
+      "sha256": "434a768e8974f5421b2958c652eee35ac8361730d3855b9abf718d669e64c721",
+      "verified_date": "2026-09-20"
+    },
+    {
+      "key": "settle-choice",
+      "url": "stand-forever.html#stand-forever",
+      "title": "Faith Is Not by Chance, but by Choice",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/ca06eda0049356c44b5ce00e99182f9bf71ef79d/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/settle-heart/choice.webp",
+      "width": 768,
+      "height": 432,
+      "sha256": "cf7a32be115ff46b3c950aba1e386957d0ebb2d9e018e0973b7cb3bd1370bfad",
+      "verified_date": "2026-09-20",
+      "study_reference_action_url": "stand-forever.html#stand-forever"
+    },
+    {
+      "key": "settle-joseph",
+      "url": "who-was-joseph-smith.html#harmony-study",
+      "title": "Joseph Smith",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/510c617b1ac67c9718b4c379e3b2a7c592258d0b/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/settle-heart/joseph.webp",
+      "width": 768,
+      "height": 432,
+      "sha256": "5871780c8c71e35973ed21f8245321bad0084c85f8d59be86e49da0e4a30d27f",
+      "verified_date": "2026-09-20",
+      "study_reference_action_url": "who-was-joseph-smith.html#harmony-study"
+    },
+    {
+      "key": "settle-trial",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2012/10/trial-of-your-faith?lang=eng",
+      "title": "Trial of Your Faith",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/0637d5e49c66073aa423fe78a5299ca3524f4aba/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/settle-heart/trial.webp",
+      "width": 768,
+      "height": 432,
+      "sha256": "d58d3d75b0386b846c2f81fad9e346609e528828c710f4996e4a2e33f48cf186",
+      "verified_date": "2026-09-20"
+    },
+    {
+      "key": "settle-memories",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2020/04/15andersen?lang=eng",
+      "title": "Spiritually Defining Memories",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/b69b82503fb269b98cebbf016f31a4abc9e36a5cb43/full/%21768%2C/0/default",
+      "local_thumbnail": "assets/resources/settle-heart/memories.webp",
+      "width": 768,
+      "height": 432,
+      "sha256": "df8bbf10a603b4f2ead2b2afe5b1bb3f5511432139eec79926e11a6cce6ebea2",
+      "verified_date": "2026-09-20"
     }
   ],
   "reviewed_on": "2026-09-07",

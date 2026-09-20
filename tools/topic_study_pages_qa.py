@@ -20,12 +20,15 @@ for answer_path in answer_paths:
  answer_nodes=read(answer_path)
  assert any(n.tag=='body' and n.has('fc-topic-page') for n in answer_nodes),answer_path.name+': shared responsive topic-page contract'
 study_destinations={
- 'atonement.html', 'birth-of-christ.html',
+ 'birth-of-christ.html',
  'general-conference.html', 'book-of-mormon-evidences.html',
  'joseph-smith-likeness.html', 'church-history.html', 'pioneers.html',
  'come-follow-me.html',
 }
 expected={p.relative_to(ROOT).as_posix() for p in answer_paths}|study_destinations
+assert len(links)==28, 'Keep the owner-requested seven by four topic grid'
+featured=[n for n in nodes if n.has('fc-settle-featured')]
+assert len(featured)==1 and featured[0].attrs.get('href')=='atonement.html' and 'Featured Section:' in featured[0].text(), 'Atonement remains a visible featured destination'
 assert len(links)==len(expected), 'topic directory must not duplicate destinations'
 assert {n.attrs['href'] for n in links}==expected, 'topic grid must cover every Answer and enriched study destination'
 for link in links:
@@ -39,7 +42,8 @@ for link in links:
   assert target is not None and any(n.tag in ('h2','h3') for n in target.walk()),href+': named study section exists'
  if p.parent!=ROOT/'answers':continue
  heading_label={'answers/god-our-heavenly-father.html':'God',
-                'answers/restored-church-of-jesus-christ.html':'The restored Church'}.get(href,link.text().strip())
+                'answers/restored-church-of-jesus-christ.html':'The restored Church',
+                'answers/settle-this-in-your-hearts.html':'Settle This in Your Hearts'}.get(href,link.text().strip())
  assert headings[0].text().strip()==heading_label,href+': heading matches topic destination'
  opening=next(n for n in ns if n.has('fc-topic-opening'))
  assert any(n.has('fc-visual-hero') for n in opening.walk()),href+': image in first screen'
