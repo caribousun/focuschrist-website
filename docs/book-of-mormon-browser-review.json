@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-19",
+  "environment": "Local browser against final integrated study; production verification recorded separately after release",
+  "page": "answers/what-is-the-book-of-mormon.html",
+  "inventory": {"new_originals": 39, "preserved_originals": 6, "total_originals": 45, "depicting_christ": 24, "story_stops": 22},
+  "desktop": {
+    "viewport_width": 2048,
+    "document_scroll_width": 2027,
+    "joseph_moroni": "Native artwork study opens first; exact Joseph Smith-History1:59 reader displays completed passage; full-size image opens; nested close returns to study; Continue Lesson places owning heading at100.35px from viewport top.",
+    "directory": "All22 distinct story anchors found in the rendered directory; early Explore the people and stories link reaches it."
+  },
+  "phone": {
+    "measured_viewport_width": 391,
+    "document_scroll_width": 391,
+    "angels": "Study panel width367.47px; loaded image345.07x230.03px with object-fit contain; exact3Nephi17:21-25 reader completed all5 verses.",
+    "captain_moroni": "Native study panel, correct caption and source link; full image loaded, contained within phone width.",
+    "helaman": "Native study and full-size viewer opened; full image loaded371.45x247.63px with contain; nested close works and final close restores focus to exact artwork trigger.",
+    "all_figure_geometry": "All39 new figure and image widths fit the391px viewport without horizontal overflow. This is geometry evidence, not39 individual visual reviews in a browser."
+  },
+  "limitations": [
+    "Browser screenshot capture timed out; no screenshot-based visual acceptance claimed. Original full-resolution image pixels were independently inspected separately.",
+    "Attempt to click all39 phone panels was interrupted by a browser command timeout after the first panel. Representative real journeys above and the full automated suite are the completed evidence, not an all39 interactive pass.",
+    "Owner approval follows his explicit standing instruction for displayed pictures without correction, separately from this technical browser record."
+  ],
+  "automated": {"workflow_commands":122,"passed":122,"failed":0,"local_evidence":"work/final-qa/results.json"}
+}

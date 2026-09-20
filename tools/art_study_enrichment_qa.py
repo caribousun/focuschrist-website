@@ -106,6 +106,35 @@ def local_target(page: Path, href: str) -> Path | None:
     return (page.parent / parsed.path).resolve()
 
 
+BOM_PAGE = "answers/what-is-the-book-of-mormon.html"
+
+
+def book_of_mormon_review_errors(reviewed_pages, root=ROOT):
+    """Bind the newly allowed page to its exact, hash-reviewed art inventory."""
+    errors = []
+    review = json.loads((root / "docs/book-of-mormon-art-review.json").read_text(encoding="utf-8"))
+    entries = review.get("artworks", [])
+    if review.get("page") != BOM_PAGE or not entries:
+        return ["Book of Mormon review must bind the exact owning page and a nonempty artwork inventory"]
+    assets = [entry.get("asset") for entry in entries]
+    if not all(assets) or len(assets) != len(set(assets)):
+        errors.append("Book of Mormon review contains missing or duplicate original assets")
+    global_entries = reviewed_pages.get(BOM_PAGE, [])
+    if len(global_entries) != len(entries) or {entry.get("asset") for entry in global_entries} != set(assets):
+        errors.append("Book of Mormon global review inventory differs from its complete dedicated review")
+    expected = {entry.get("asset"): entry for entry in entries}
+    for entry in global_entries:
+        original = expected.get(entry.get("asset"), {})
+        asset = (root / entry.get("asset", "")).resolve()
+        if (not asset.is_relative_to(root.resolve()) or not asset.is_file()
+                or entry.get("reviewed") is not True or entry.get("technical_review_passed") is not True
+                or original.get("reviewed") is not True or not entry.get("tone")
+                or entry.get("sha256") != original.get("sha256")
+                or (asset.is_file() and hashlib.sha256(asset.read_bytes()).hexdigest() != entry.get("sha256"))):
+            errors.append("Book of Mormon artwork differs from reviewed technical evidence: " + str(entry.get("asset")))
+    return errors
+
+
 def main() -> int:
     errors: list[str] = []
     gallery = AuditParser()
@@ -227,8 +256,10 @@ def main() -> int:
         # srcset. Exclusivity concerns owning pages, not references on that page.
         if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
-    if set(reviewed_pages) != set(PAGES) | {'answers/aaronic-priesthood-restoration.html', 'answers/melchizedek-priesthood-restoration.html'} | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions}:
-        errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement, Mission, Life After Death, Birth of Christ and the four reviewed study-gap pages")
+    if set(reviewed_pages) != set(PAGES) | {'answers/aaronic-priesthood-restoration.html', 'answers/melchizedek-priesthood-restoration.html'} | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions} | {BOM_PAGE}:
+        errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement, Mission, Life After Death, Birth of Christ, Book of Mormon stories and the four reviewed study-gap pages")
+
+    errors.extend(book_of_mormon_review_errors(reviewed_pages))
 
     life_entries = reviewed_pages.get("answers/what-happens-after-death.html", [])
     if len(life_entries) != 18:
