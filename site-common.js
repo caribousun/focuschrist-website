@@ -820,75 +820,58 @@
     }
 
     function initOpeningInvitation(intro, mobile) {
-        const questions = {
-            'index.html': 'What would you like to bring closer to Jesus Christ today?',
-            'ask.html': 'What question has been on your heart lately?',
-            'answers.html': 'Which part of your faith would you like to understand more deeply?',
-            'art.html': 'What might you notice if you linger with one picture?',
-            'art-gallery.html': 'Which picture invites you to pause and look more closely?',
-            'atonement.html': 'Where would you welcome the Savior’s help today?',
-            'church-history.html': 'Whose experience could help you understand the past more fully?',
-            'joseph-smith-likeness.html': 'What can a portrait help you notice about a person?',
-            'book-of-mormon-evidences.html': 'Which question would you like to follow back to its sources?',
-            'pioneers.html': 'What can you learn from someone who kept going through uncertainty?',
-            'missionary.html': 'Who could feel Christ’s care through one kind act from you?',
-            'watch.html': 'What message would be helpful to carry into your day?',
-            'about.html': 'What helps you keep Jesus Christ at the center of your study?',
-            'come-follow-me.html': 'When could you make a little time for scripture this week?',
-            'general-conference.html': 'Which invitation could become one small step this week?',
-            'god-our-heavenly-father.html': 'What would you like to understand about your relationship with God?',
-            'restored-church-of-jesus-christ.html': 'What does restoration mean for your own search for Christ?',
-            'are-latter-day-saints-christian.html': 'What does following Jesus Christ mean to you?',
-            'bible-and-book-of-mormon-together.html': 'What might you discover by reading these witnesses together?',
-            'death-of-a-child.html': 'What kind of support would feel gentle and helpful today?',
-            'divorce-and-faith.html': 'What would help you take your next step with care?',
-            'faith-in-jesus-christ-during-trials.html': 'Where have you found a little strength during a hard day?',
-            'grief-and-faith.html': 'Who could sit beside you and listen today?',
-            'jesus-christ-latter-day-saint-beliefs.html': 'Which part of the Savior’s life would you like to know better?',
-            'look-unto-me-doctrine-and-covenants-6-36.html': 'What could help you turn toward Christ in this moment?',
-            'prayer-and-personal-revelation.html': 'What would you like to say to God in your own words?',
-            'stand-forever.html': 'What truth helps you feel steady when questions remain?',
-            'what-happens-after-death.html': 'What would you like to understand about the hope of Resurrection?',
-            'what-is-eternal-marriage.html': 'How can you nurture love and faith in your relationships today?',
-            'what-is-the-book-of-mormon.html': 'What would you like to discover as you begin reading?',
-            'who-was-joseph-smith.html': 'Which part of Joseph Smith’s life would you like to study?',
-            'why-families-are-important.html': 'How could you offer care to someone in your family today?',
-            'why-latter-day-saints-build-temples.html': 'What would you like to understand about temple worship?',
-            'be-still.html': 'Where could you find a quiet moment today?',
-            'suffer-the-little-children.html': 'How could you help a child feel seen and loved?',
-            'the-good-shepherd.html': 'Who might need to know they have not been forgotten?',
-            'the-living-christ.html': 'How does knowing that Christ lives shape your day?'
+        // These brief section guides use spare space; the approved frame never grows for them.
+        const descriptions = {
+            'birth-of-christ.html': 'Follow the promises, Mary and Joseph’s journey, and the witnesses who welcomed the Savior. Read each moment with its scriptures.',
+            'joseph-smith-likeness.html': 'Compare portraits, photographs of historical objects, and the sources behind them. Consider what each can tell us about Joseph Smith’s appearance.',
+            'god-our-heavenly-father.html': 'Explore scripture about our Heavenly Father, His love, and our relationship with Him. Follow the passages and questions throughout the study.',
+            'restored-church-of-jesus-christ.html': 'Explore restoration, priesthood, covenants, and service. Follow the linked scriptures to understand how these teachings point toward Jesus Christ.',
+            'are-latter-day-saints-christian.html': 'Explore why Latter-day Saints identify as Christians, what they share with other Christians, and where their teachings differ.',
+            'bible-and-book-of-mormon-together.html': 'Read passages from both books side by side. Explore their witnesses of Jesus Christ and follow each passage into its setting.',
+            'death-of-a-child.html': 'Find scripture, thoughtful questions, and ways to offer care after the loss of a child. Move through the study at your own pace.',
+            'divorce-and-faith.html': 'Explore faith, belonging, and practical care during divorce. Read the scriptures and consider the questions that matter in your circumstances.',
+            'faith-in-jesus-christ-during-trials.html': 'Read about people who turned toward Christ amid difficulty. Explore scripture, prayer, and ways to find support as you keep going.',
+            'grief-and-faith.html': 'Explore scripture about sorrow, comfort, and hope in Jesus Christ. Take time with the passages and the questions you carry.',
+            'jesus-christ-latter-day-saint-beliefs.html': 'Study the Savior’s divine identity, mortal ministry, Atonement, and Resurrection. Follow the scriptures behind Latter-day Saint beliefs about Him.',
+            'look-unto-me-doctrine-and-covenants-6-36.html': 'Study Christ’s invitation to look to Him in every thought. Read the surrounding revelation and consider how to respond in daily life.',
+            'prayer-and-personal-revelation.html': 'Explore how scripture describes prayer and guidance from God. Consider ways to ask, listen, study, and act with patience.',
+            'stand-forever.html': 'Begin with foundational questions about God, Jesus Christ, and the Restoration. Follow each study into its scriptures and supporting sources.',
+            'what-happens-after-death.html': 'Explore Latter-day Saint teachings about the spirit world, Resurrection, judgment, and eternal life. Read the scriptures behind each part of the study.',
+            'what-is-eternal-marriage.html': 'Explore temple sealing, covenant promises, and the daily care that strengthens marriage. Follow the scriptures and questions into the study.',
+            'what-is-the-book-of-mormon.html': 'Learn about the book’s message, its witnesses of Jesus Christ, and its relationship to the Bible. Choose a passage and begin reading.',
+            'who-was-joseph-smith.html': 'Explore Joseph Smith’s life, the Book of Mormon, and the Restoration. Read historical sources alongside the questions they help us examine.',
+            'why-families-are-important.html': 'Explore teachings about family relationships, belonging, and caring for one another. Read the scriptures with your own family circumstances in mind.',
+            'why-latter-day-saints-build-temples.html': 'Explore temple worship, covenants, and service for ancestors. Follow the scriptures and sources that explain why temples matter to Latter-day Saints.',
+            'aaronic-priesthood-restoration.html': 'Follow Joseph Smith and Oliver Cowdery’s account of the restoration of the Aaronic Priesthood. Explore baptism, preparation, and service.',
+            'melchizedek-priesthood-restoration.html': 'Explore the restoration of priesthood authority and its place in ordinances, blessings, and service. Read the historical accounts and linked scriptures.',
+            'be-still.html': 'Use the artwork and linked scriptures to reflect on Christ’s care during anxious moments. Continue into the study and its questions.',
+            'suffer-the-little-children.html': 'Study the Savior’s welcome to children through scripture and artwork. Consider how His example can shape the care we offer them.',
+            'the-good-shepherd.html': 'Explore the Savior’s invitation through artwork, scripture, and reflection. Consider what it means to know His voice and follow Him.',
+            'the-living-christ.html': 'Reflect on the living Savior through artwork and scripture. Follow the study into His ministry, Resurrection, and invitation to come to Him.'
         };
         const file = window.location.pathname.split('/').pop() || 'index.html';
-        const question = questions[file];
+        const text = descriptions[file];
         const cue = intro.querySelector('.fc-mobile-scroll-cue');
-        if (!question || !cue || intro.querySelector('.fc-opening-invitation')) return;
-        const host = intro.querySelector('.fc-page-intro > .fc-container--standard') ||
-            intro.querySelector(':scope > .fc-container--standard, :scope > .cfm-hero__copy, :scope > div') || intro;
-        const invitation = document.createElement('p');
-        invitation.className = 'fc-opening-invitation';
-        const label = document.createElement('span');
-        label.className = 'fc-opening-invitation-label';
-        label.textContent = 'Pause and reflect';
-        const prompt = document.createElement('span');
-        prompt.textContent = question;
-        invitation.appendChild(label);
-        invitation.appendChild(prompt);
-        invitation.hidden = true;
-        host.appendChild(invitation);
+        if (!text || !cue || intro.querySelector('.fc-opening-explanation')) return;
+        const paragraph = document.createElement('p');
+        paragraph.className = 'fc-opening-explanation';
+        paragraph.textContent = text;
+        paragraph.hidden = true;
+        cue.before(paragraph);
+        const fixed = [intro, ...intro.querySelectorAll('h1, .fc-visual-hero, .fc-actions, .cfm-actions, .fc-conference-actions'), cue];
         let frame;
         function fit() {
-            invitation.hidden = true;
-            if (!mobile.matches || window.innerHeight < 720) return;
-            const before = intro.getBoundingClientRect();
-            const anchor = intro.querySelector('h1');
-            const headingTop = anchor ? anchor.getBoundingClientRect().top : 0;
-            const cueTop = cue.getBoundingClientRect().top;
-            invitation.hidden = false;
-            const after = intro.getBoundingClientRect();
-            const box = invitation.getBoundingClientRect();
-            const headingMoved = anchor && Math.abs(anchor.getBoundingClientRect().top - headingTop) > 1;
-            if (!box.height || box.bottom > cueTop - 24 || Math.abs(after.height - before.height) > 1 || headingMoved) invitation.hidden = true;
+            paragraph.hidden = true;
+            if (!mobile.matches) return;
+            const before = fixed.map(element => element.getBoundingClientRect());
+            paragraph.hidden = false;
+            const box = paragraph.getBoundingClientRect();
+            const moved = fixed.some((element, index) => {
+                const after = element.getBoundingClientRect();
+                return ['top', 'bottom', 'width', 'height'].some(key => Math.abs(after[key] - before[index][key]) > 1);
+            });
+            if (!box.height || moved || box.bottom > cue.getBoundingClientRect().top - 16 ||
+                paragraph.scrollWidth > paragraph.clientWidth + 1 || before[0].bottom > window.innerHeight + 1) paragraph.hidden = true;
         }
         function schedule() {
             if (frame) window.cancelAnimationFrame(frame);
@@ -897,8 +880,13 @@
         schedule();
         window.addEventListener('resize', schedule);
         window.addEventListener('pageshow', schedule);
+        mobile.addEventListener('change', schedule);
         if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
-        if (typeof ResizeObserver === 'function') new ResizeObserver(schedule).observe(host);
+        if (window.ResizeObserver) {
+            const observer = new window.ResizeObserver(schedule);
+            observer.observe(cue.parentElement);
+            observer.observe(paragraph);
+        }
     }
 
     function initMobileOpening() {
