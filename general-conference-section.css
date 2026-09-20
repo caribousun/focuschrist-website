@@ -28,3 +28,32 @@
 @media(max-width:700px){.fc-conference-section{padding:28px 16px}.gc-intro,.gc-practice{grid-template-columns:1fr}.gc-intro-visual img{aspect-ratio:16/9}.gc-block{padding:28px 0}.gc-topic-grid,.fc-talk-list,.gc-pathways,.fc-voice-grid{grid-template-columns:1fr}.fc-next-conference{padding:22px}.gc-jumps{gap:4px 18px}.gc-search{grid-template-columns:1fr;padding:18px}.gc-reset{width:100%}.fc-conference-sessions summary{padding:18px;flex-wrap:wrap;font-size:1.2rem;gap:8px 14px}.fc-talk-list{padding:16px}.fc-conference-actions .fc-button{width:100%}.gc-topic-body,.gc-pathway-body{padding:20px}}
 .gc-page .gc-heading h2{font-size:clamp(1.7rem,2.6vw,2.4rem);margin:8px 0 14px}.gc-page :is(.gc-topic,.gc-practice,.gc-pathway,.fc-voice-grid) h3{font-size:1.4rem;margin:8px 0 12px}.gc-page .gc-talk h3{font-size:1.25rem;margin:8px 0 12px}
 @media(max-width:700px){.gc-page-opening .gc-intro-visual img{max-height:160px}.gc-page-opening .gc-intro-visual figcaption{font-size:.78rem;padding:10px 14px}.gc-page-opening .fc-conference-actions{gap:10px;margin-top:18px}.gc-page-opening .fc-conference-actions .fc-button{width:auto;flex:1;padding:10px 12px;font-size:.85rem}}
+
+/* Enriched section opening: the artwork leads into the title, not a long caption.
+   The original caption and source remain available in the picture study panel. */
+.gc-page .gc-page-opening {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+    gap: 28px;
+    padding: 0 0 36px;
+}
+.gc-page .gc-page-opening > div { text-align: center; padding-inline: 20px; }
+.gc-page .gc-page-opening .fc-conference-lead { margin-inline: auto; }
+.gc-page .gc-page-opening :is(.gc-stats, .fc-conference-actions) { justify-content: center; }
+.gc-page .gc-page-opening .gc-intro-visual {
+    order: 1; width: 100%; margin: 0; border: 0; border-radius: 0;
+}
+.gc-page .gc-page-opening .gc-intro-visual img {
+    width: 100%; height: auto; max-height: none;
+    object-fit: contain; object-position: center; aspect-ratio: 3 / 2;
+}
+.gc-page .gc-page-opening .gc-intro-visual figcaption { display: none; }
+@media (max-width:700px) {
+    .gc-page .gc-page-opening { display: flex; flex-direction: column; align-items: stretch; gap: 22px; }
+    .gc-page .gc-page-opening .gc-intro-visual { order: -1; }
+    .gc-page .gc-page-opening .gc-intro-visual img {
+        height: clamp(320px, 44svh, 420px); object-fit: cover; object-position: 49% center; aspect-ratio: auto;
+    }
+    .gc-page .gc-page-opening > div { padding-inline: 0; }
+}

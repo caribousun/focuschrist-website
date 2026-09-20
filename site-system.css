@@ -1025,7 +1025,7 @@ body.fc-site .fc-visual-hero {
     }
 }
 @media (max-width:700px) {
-    body.fc-site { --fc-opening-hero-height: 300px; }
+    body.fc-site { --fc-opening-hero-height: clamp(320px, 44svh, 420px); }
 
     /* Mobile retains the established approved close framing. */
     body.fc-site .fc-home-hero::before,

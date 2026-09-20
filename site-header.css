@@ -121,15 +121,15 @@
     position: absolute !important;
     top: calc(100% + 14px) !important;
     right: 0 !important;
-    width: 230px !important;
+    width: 280px !important;
     min-width: 230px !important;
     max-height: min(76vh, 620px);
     overflow-y: auto;
     margin: 0 !important;
     padding: 12px !important;
-    background: rgba(13,35,45,0.985) !important;
-    border: 1px solid rgba(134,175,200,0.28) !important;
-    border-radius: 10px !important;
+    background: #091f29 !important;
+    border: 1px solid rgba(240,195,106,0.55) !important;
+    border-radius: 14px !important;
     box-shadow: 0 16px 38px rgba(4,16,22,0.46);
     backdrop-filter: blur(12px);
     z-index: 1100 !important;
@@ -138,19 +138,23 @@
 .nav[data-focuschrist-header="standard"] .hamburger-menu.show {
     display: flex !important;
     flex-direction: column !important;
-    gap: 0 !important;
+    gap: 4px !important;
 }
 
 .nav[data-focuschrist-header="standard"] .hamburger-menu a {
     display: block !important;
     margin: 0;
-    padding: 8px 12px !important;
-    color: #dcebf2 !important;
+    padding: 12px 14px !important;
+    color: #f0c36a !important;
     text-decoration: none !important;
     font-size: 0.88em !important;
     line-height: 1.35;
     letter-spacing: 0.4px;
-    border-bottom: 1px solid rgba(134,175,200,0.14) !important;
+    border: 1px solid transparent !important;
+    border-radius: 7px;
+    min-height: 44px;
+    box-sizing: border-box;
+    background: #102e3a !important;
 }
 
 .nav[data-focuschrist-header="standard"] .hamburger-menu a:hover,
@@ -158,7 +162,8 @@
 .nav[data-focuschrist-header="standard"] .hamburger-menu a.active,
 .nav[data-focuschrist-header="standard"] .hamburger-menu a[aria-current="page"] {
     color: #fff2dc !important;
-    background: linear-gradient(90deg, rgba(134,175,200,.12), rgba(240,195,106,.06)) !important;
+    background: #294651 !important;
+    border-color: rgba(240,195,106,.55) !important;
     outline: none;
 }
 
@@ -376,4 +381,15 @@ body.fc-site .fc-history-message--assistant {
  body.fc-site .nav[data-focuschrist-header="standard"].fc-nav-compact .nav-links a {display:none!important;}
  body.fc-site .nav[data-focuschrist-header="standard"].fc-nav-compact .nav-links a[data-focuschrist-current-study],
  body.fc-site .nav[data-focuschrist-header="standard"].fc-nav-compact:not(.fc-has-current-study) .nav-links .fc-nav-atonement {display:block!important;white-space:normal;text-align:center;}
+}
+
+/* Keep keyboard focus within the scrollable enriched menu panel. */
+.nav[data-focuschrist-header="standard"] .hamburger-menu a:focus-visible {
+    outline-offset: -3px;
+    border-radius: 7px;
+}
+.nav[data-focuschrist-header="standard"] .hamburger-menu a[aria-current="page"],
+.nav[data-focuschrist-header="standard"] .hamburger-menu a.active {
+    box-shadow: inset 3px 0 0 #f0c36a;
+    font-weight: 700;
 }
