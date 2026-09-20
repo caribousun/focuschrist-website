@@ -979,6 +979,7 @@
                 moveBelow('.fc-page-intro-scripture');
             }
             if (path === '/art.html') moveBelow('.fc-art-study-hint');
+            if (path === '/ask.html') moveBelow('.fc-page-intro-scripture');
             if (path === '/come-follow-me.html') {
                 shortText('.cfm-hero__copy > p:not(.fc-eyebrow)', 'Study the Old Testament with Jesus Christ at the center.', true);
                 shortText('.cfm-actions > a:first-child', 'This Week ↓');
