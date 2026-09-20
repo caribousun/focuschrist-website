@@ -132,6 +132,28 @@
       ]
     },
     {
+      "title": "A desire to keep serving",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/29-three-disciples-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/29-three-disciples-full.webp",
+      "alt": "Christ speaks with three disciples beside a quiet woodland river.",
+      "id": "art-b66e6a26a4de",
+      "occurrences": [
+        {
+          "id": "source-753c8ec7cf74",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/29-three-disciples-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/29-three-disciples-960.webp\"])",
+          "title": "A desire to keep serving"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A devotional portrait of Jesus Christ on a rocky hillside path with one hand over His heart.",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/topics/look-unto-full.webp",
@@ -169,6 +191,28 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/trials-full.webp\"]",
           "title": "A devotional scene of Jesus Christ supporting a weary man’s arm on a wet rocky path."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A family receives its sons again",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/02-lehi-sariah-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/02-lehi-sariah-full.webp",
+      "alt": "Lehi and Sariah welcome their returning sons beside a desert tent, with the plates held close.",
+      "id": "art-5a973606e2da",
+      "occurrences": [
+        {
+          "id": "source-b5301dca3a21",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/02-lehi-sariah-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/02-lehi-sariah-960.webp\"])",
+          "title": "A family receives its sons again"
         }
       ],
       "categories": [
@@ -308,6 +352,28 @@
       ]
     },
     {
+      "title": "A king teaches the worth of service",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/06-benjamin-service-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/06-benjamin-service-full.webp",
+      "alt": "The older, clean-shaven King Benjamin speaks from a wooden platform above listening families.",
+      "id": "art-72fc5a8cc183",
+      "occurrences": [
+        {
+          "id": "source-2de921dd79a5",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/06-benjamin-service-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/06-benjamin-service-960.webp\"])",
+          "title": "A king teaches the worth of service"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A man holds a closed scripture book on a broad rock outcrop and looks toward a clearing horizon.",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/topics/stand-forever-full.webp",
@@ -437,6 +503,28 @@
       ],
       "categories": [
         "About"
+      ]
+    },
+    {
+      "title": "A prayer for those who believe",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/20-prays-apart-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/20-prays-apart-full.webp",
+      "alt": "The resurrected Christ bows low to the earth a little distance from His kneeling disciples.",
+      "id": "art-a3eaa19f6ed6",
+      "occurrences": [
+        {
+          "id": "source-1ed365a8506c",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/20-prays-apart-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/20-prays-apart-960.webp\"])",
+          "title": "A prayer for those who believe"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -572,6 +660,28 @@
       ]
     },
     {
+      "title": "A record entrusted to Joseph",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/40-moroni-joseph-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/40-moroni-joseph-full.webp",
+      "alt": "A youthful Joseph Smith receives a cloth-wrapped stack of plates from Moroni on a wooded hillside at night.",
+      "id": "art-61a73b7c8aa7",
+      "occurrences": [
+        {
+          "id": "source-5bee57434dbb",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/40-moroni-joseph-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/40-moroni-joseph-960.webp\"])",
+          "title": "A record entrusted to Joseph"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A society ready to serve",
       "category": "Church History",
       "thumbnail": "/assets/page-art/church-history/relief-society-960.webp",
@@ -591,6 +701,28 @@
       ],
       "categories": [
         "Church History"
+      ]
+    },
+    {
+      "title": "A vision of the Savior’s compassion",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-full.webp",
+      "alt": "The mortal Jesus in an olive mantle bends toward an older man during His ministry.",
+      "id": "art-55e549d77435",
+      "occurrences": [
+        {
+          "id": "source-19fdb54d0aa5",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-960.webp\"])",
+          "title": "A vision of the Savior’s compassion"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -669,6 +801,28 @@
       ]
     },
     {
+      "title": "A witness, one person at a time",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/32-one-by-one-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/32-one-by-one-full.webp",
+      "alt": "An older woman gently touches the healed mark in Christ’s open palm as He looks into her eyes.",
+      "id": "art-0dc0fbd2ab04",
+      "occurrences": [
+        {
+          "id": "source-751230d8a659",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/32-one-by-one-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/32-one-by-one-960.webp\"])",
+          "title": "A witness, one person at a time"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A woman and an older man meet each other’s eyes while sharing a covered meal in a community kitchen.",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/topics/christian-full.webp",
@@ -728,6 +882,28 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/book-of-mormon-full.webp\"]",
           "title": "A young adult man reads the Book of Mormon on a commuter train."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Abish reaches for the queen",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/09-abish-queen-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/09-abish-queen-full.webp",
+      "alt": "Abish kneels beside the reclining queen and reaches toward her hand while witnesses watch.",
+      "id": "art-b35c160fde0b",
+      "occurrences": [
+        {
+          "id": "source-f0d62dc7d869",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/09-abish-queen-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/09-abish-queen-960.webp\"])",
+          "title": "Abish reaches for the queen"
         }
       ],
       "categories": [
@@ -970,6 +1146,28 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/temples-full.webp\"]",
           "title": "An older woman and a younger man examine an ancestor photograph beside family-history notes."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Angels minister to the children",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/35-angels-children-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/35-angels-children-full.webp",
+      "alt": "Angels in white minister around children encircled by heavenly fire while Christ and their families attend to them.",
+      "id": "art-08081bbce233",
+      "occurrences": [
+        {
+          "id": "source-fa56dca130de",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/35-angels-children-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/35-angels-children-960.webp\"])",
+          "title": "Angels minister to the children"
         }
       ],
       "categories": [
@@ -1284,6 +1482,28 @@
     {
       "title": "Blessed are the merciful",
       "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/14-christ-beatitudes-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/14-christ-beatitudes-full.webp",
+      "alt": "Christ in a blue mantle turns toward an older listener among families in a woodland gathering.",
+      "id": "art-2ef3e4fd32a8",
+      "occurrences": [
+        {
+          "id": "source-297b887c5f0b",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/14-christ-beatitudes-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/14-christ-beatitudes-960.webp\"])",
+          "title": "Blessed are the merciful"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Blessed are the merciful",
+      "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/life-after-death/nephi-teaching-800.webp",
       "fullImage": "/assets/page-art/life-after-death/nephi-teaching-1536.webp",
       "alt": "Jesus teaches a gathering of adults and children, looking toward a listener.",
@@ -1546,6 +1766,28 @@
       ]
     },
     {
+      "title": "Bring those who need His care",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/18-healing-bountiful-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/18-healing-bountiful-full.webp",
+      "alt": "Christ in a clay-rose mantle lowers Himself beside a seated woman as companions gather nearby.",
+      "id": "art-6d22a23169fe",
+      "occurrences": [
+        {
+          "id": "source-5ab130a6f732",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/18-healing-bountiful-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/18-healing-bountiful-960.webp\"])",
+          "title": "Bring those who need His care"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Bring your question into the light",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/christian-question-800.webp",
@@ -1631,6 +1873,28 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "Called by His name",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/22-church-name-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/22-church-name-full.webp",
+      "alt": "Christ speaks among disciples gathered in a woodland setting.",
+      "id": "art-33e32e9dd783",
+      "occurrences": [
+        {
+          "id": "source-3d7e0d90c517",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/22-church-name-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/22-church-name-960.webp\"])",
+          "title": "Called by His name"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -1876,6 +2140,28 @@
       ]
     },
     {
+      "title": "Christ calls Nephi forward",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/11-nephi-called-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/11-nephi-called-full.webp",
+      "alt": "The resurrected Christ speaks face to face with an older Nephi before gathered listeners.",
+      "id": "art-d63e1076373c",
+      "occurrences": [
+        {
+          "id": "source-af0538310da1",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/11-nephi-called-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/11-nephi-called-960.webp\"])",
+          "title": "Christ calls Nephi forward"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Christ is present in the storm",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/christ-storm-800.webp",
@@ -2089,6 +2375,28 @@
           "kind": "artwork",
           "selector": "a[data-artwork-detail=\"answers-comfort-in-grief\"]",
           "title": "Comfort in Grief"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Coming down to His people",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/33-descent-near-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/33-descent-near-full.webp",
+      "alt": "Christ descends close to the gathering in white, His attention turned toward an older man looking up at Him.",
+      "id": "art-36a780a79789",
+      "occurrences": [
+        {
+          "id": "source-fd4711972b26",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/33-descent-near-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/33-descent-near-960.webp\"])",
+          "title": "Coming down to His people"
         }
       ],
       "categories": [
@@ -2529,6 +2837,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/05-marriage-belonging-desktop-v2.webp\"]:has(img[src=\"../assets/page-art/eternal-marriage/timeline/05-marriage-belonging-desktop-v2.webp\"])",
           "title": "Divine worth is never a marital ranking"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Each child receives His attention",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/28-child-blessing-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/28-child-blessing-full.webp",
+      "alt": "Christ in a purple-gray mantle blesses a child while a parent waits nearby.",
+      "id": "art-a3f7655b2210",
+      "occurrences": [
+        {
+          "id": "source-9bb61afb909e",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/28-child-blessing-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/28-child-blessing-960.webp\"])",
+          "title": "Each child receives His attention"
         }
       ],
       "categories": [
@@ -3189,6 +3519,50 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/life-after-death/nephi-prayer-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-prayer-800.webp\"])",
           "title": "He prayed for them"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He prays with the children around Him",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/19-children-prayer-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/19-children-prayer-full.webp",
+      "alt": "Christ kneels in prayer amid children while their families remain close.",
+      "id": "art-c7cc8b34d461",
+      "occurrences": [
+        {
+          "id": "source-4894d033ae40",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/19-children-prayer-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/19-children-prayer-960.webp\"])",
+          "title": "He prays with the children around Him"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He stands among them",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/31-arrival-bountiful-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/31-arrival-bountiful-full.webp",
+      "alt": "Christ stands before the people in white and extends His hand as listeners begin to kneel and bow.",
+      "id": "art-52500a7547c6",
+      "occurrences": [
+        {
+          "id": "source-efdad727e9d9",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/31-arrival-bountiful-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/31-arrival-bountiful-960.webp\"])",
+          "title": "He stands among them"
         }
       ],
       "categories": [
@@ -4569,6 +4943,28 @@
       ]
     },
     {
+      "title": "Known by the Redeemer",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/01-jared-redeemer-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/01-jared-redeemer-full.webp",
+      "alt": "Christ meets the brother of Jared in a close, attentive conversation.",
+      "id": "art-3f9241b8ebd9",
+      "occurrences": [
+        {
+          "id": "source-44ed0f82d116",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/01-jared-redeemer-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/01-jared-redeemer-960.webp\"])",
+          "title": "Known by the Redeemer"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Known in a Crowd",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/shepherd-calls-zacchaeus.webp",
@@ -4613,6 +5009,28 @@
       ]
     },
     {
+      "title": "Laying the weapons down",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/10-burying-weapons-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/10-burying-weapons-full.webp",
+      "alt": "Members of a woodland community carefully lower weapons into a pit.",
+      "id": "art-d7da874b2a9c",
+      "occurrences": [
+        {
+          "id": "source-5755ce6c530e",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/10-burying-weapons-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/10-burying-weapons-960.webp\"])",
+          "title": "Laying the weapons down"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Learn from Christ, then practice His teaching",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/christ-disciples-gaze-v2-800.webp",
@@ -4628,6 +5046,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/topics/christ-disciples-gaze-v2-1536.webp\"]:has(img[src=\"../assets/page-art/topics/christ-disciples-gaze-v2-800.webp\"])",
           "title": "Learn from Christ, then practice His teaching"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Learning to build, learning to trust",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/03-nephi-ship-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/03-nephi-ship-full.webp",
+      "alt": "Nephi works with other men on a wooden ship beside an Old World coast.",
+      "id": "art-b7dff86ffad3",
+      "occurrences": [
+        {
+          "id": "source-c7d6f7a2f968",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/03-nephi-ship-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/03-nephi-ship-960.webp\"])",
+          "title": "Learning to build, learning to trust"
         }
       ],
       "categories": [
@@ -5449,6 +5889,28 @@
       ]
     },
     {
+      "title": "Mormon’s last invitation",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/39-mormon-final-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/39-mormon-final-full.webp",
+      "alt": "An elderly Mormon writes on metal record leaves beneath a tree overlooking a misty river landscape.",
+      "id": "art-134d6d3eb49d",
+      "occurrences": [
+        {
+          "id": "source-cc649d138bf7",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/39-mormon-final-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/39-mormon-final-960.webp\"])",
+          "title": "Mormon’s last invitation"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Morning at the empty tomb",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/garden-tomb-800.webp",
@@ -5691,6 +6153,28 @@
       ]
     },
     {
+      "title": "One baptism and an end to contention",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/12-baptism-teaching-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/12-baptism-teaching-full.webp",
+      "alt": "Christ in a soft lavender mantle addresses an attentive disciple beneath a timber shelter.",
+      "id": "art-2ac472ba2863",
+      "occurrences": [
+        {
+          "id": "source-437bcd7b3471",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/12-baptism-teaching-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/12-baptism-teaching-960.webp\"])",
+          "title": "One baptism and an end to contention"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "One by one",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/life-after-death/nephi-witness-800.webp",
@@ -5706,6 +6190,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/life-after-death/nephi-witness-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-witness-800.webp\"])",
           "title": "One by one"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "One listener chooses to believe",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/07-abinadi-alma-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/07-abinadi-alma-full.webp",
+      "alt": "Abinadi speaks in a timber court while Alma the Elder, then a young man, listens among the witnesses.",
+      "id": "art-875797dfc12f",
+      "occurrences": [
+        {
+          "id": "source-54637d2bff6e",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/07-abinadi-alma-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/07-abinadi-alma-960.webp\"])",
+          "title": "One listener chooses to believe"
         }
       ],
       "categories": [
@@ -5732,6 +6238,28 @@
       ],
       "categories": [
         "Missionary Work"
+      ]
+    },
+    {
+      "title": "Other sheep hear His voice",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/17-other-sheep-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/17-other-sheep-full.webp",
+      "alt": "Christ in a plum-colored mantle speaks with disciples seated close to Him.",
+      "id": "art-3dd501f97ae0",
+      "occurrences": [
+        {
+          "id": "source-e24931df27e4",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/17-other-sheep-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/17-other-sheep-960.webp\"])",
+          "title": "Other sheep hear His voice"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -5958,6 +6486,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/prayer-private-room-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/prayer-private-room-800.webp\"])",
           "title": "Prayer before the Father"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Prayer grows beyond one person",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/05-enos-prayer-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/05-enos-prayer-full.webp",
+      "alt": "Enos kneels alone in an evening woodland, with hunting equipment set aside.",
+      "id": "art-b5717edfe59f",
+      "occurrences": [
+        {
+          "id": "source-33e16a875d45",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/05-enos-prayer-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/05-enos-prayer-960.webp\"])",
+          "title": "Prayer grows beyond one person"
         }
       ],
       "categories": [
@@ -6273,6 +6823,28 @@
       ]
     },
     {
+      "title": "Remember Him in the bread",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/27-christ-bread-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/27-christ-bread-full.webp",
+      "alt": "Christ in a golden-beige mantle breaks bread before an attentive disciple.",
+      "id": "art-3a786b879ac9",
+      "occurrences": [
+        {
+          "id": "source-1a94ccc7b7be",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/27-christ-bread-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/27-christ-bread-960.webp\"])",
+          "title": "Remember Him in the bread"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Remember Him Through Art",
       "category": "Art & Study",
       "thumbnail": "/assets/heroes/art.webp",
@@ -6292,6 +6864,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Remember what you are defending",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/37-captain-moroni-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/37-captain-moroni-full.webp",
+      "alt": "Captain Moroni raises a torn, inscribed cloth on a pole among listening families and defenders.",
+      "id": "art-920f4b6636d5",
+      "occurrences": [
+        {
+          "id": "source-725a4793e5c3",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/37-captain-moroni-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/37-captain-moroni-960.webp\"])",
+          "title": "Remember what you are defending"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -6449,6 +7043,28 @@
       ]
     },
     {
+      "title": "Room for those who were turned away",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/08-alma-amulek-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/08-alma-amulek-full.webp",
+      "alt": "Alma the Younger and Amulek listen and teach among poor people in a woodland settlement.",
+      "id": "art-fb05f9422457",
+      "occurrences": [
+        {
+          "id": "source-4430da02ed6d",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/08-alma-amulek-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/08-alma-amulek-960.webp\"])",
+          "title": "Room for those who were turned away"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Samuel promises the signs",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/birth-of-christ/06-samuel-wall-800.webp",
@@ -6499,6 +7115,28 @@
       ],
       "categories": [
         "Missionary Work"
+      ]
+    },
+    {
+      "title": "Samuel will not abandon his message",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/25-samuel-warning-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/25-samuel-warning-full.webp",
+      "alt": "Samuel addresses listeners from an earthen wall reinforced with timber.",
+      "id": "art-7c2cef3a576f",
+      "occurrences": [
+        {
+          "id": "source-673577136f09",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/25-samuel-warning-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/25-samuel-warning-960.webp\"])",
+          "title": "Samuel will not abandon his message"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -7092,6 +7730,28 @@
       ]
     },
     {
+      "title": "The Father hears the quiet prayer",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/15-secret-prayer-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/15-secret-prayer-full.webp",
+      "alt": "Christ in a russet mantle speaks attentively with a woman among gathered listeners.",
+      "id": "art-d4102ae57976",
+      "occurrences": [
+        {
+          "id": "source-c1fc39d3fc11",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/15-secret-prayer-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/15-secret-prayer-960.webp\"])",
+          "title": "The Father hears the quiet prayer"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The First Vision",
       "category": "Church History",
       "thumbnail": "/assets/history/first-vision-1400.webp",
@@ -7273,6 +7933,28 @@
       ]
     },
     {
+      "title": "The memory that opened a way to joy",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/23-alma36-mercy-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/23-alma36-mercy-full.webp",
+      "alt": "A younger Alma sits upright on a woven mat, his expression changed to quiet relief.",
+      "id": "art-c4156222bb37",
+      "occurrences": [
+        {
+          "id": "source-90cc7242cda5",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/23-alma36-mercy-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/23-alma36-mercy-960.webp\"])",
+          "title": "The memory that opened a way to joy"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The mother and child Nephi saw",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/birth-of-christ/03-nephi-vision-800.webp",
@@ -7288,6 +7970,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/birth-of-christ/03-nephi-vision-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/03-nephi-vision-800.webp\"])",
           "title": "The mother and child Nephi saw"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The multitude answers with worship",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/34-multitude-witness-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/34-multitude-witness-full.webp",
+      "alt": "Christ stands among people who kneel and bow in gratitude after receiving their individual witness.",
+      "id": "art-30070121eb78",
+      "occurrences": [
+        {
+          "id": "source-38c71299efa1",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/34-multitude-witness-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/34-multitude-witness-960.webp\"])",
+          "title": "The multitude answers with worship"
         }
       ],
       "categories": [
@@ -7332,6 +8036,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/bom-evidences/josephemma.webp\"]:has(img[src=\"assets/page-art/bom-evidences/josephemma-960.webp\"])",
           "title": "The people beside the work"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The promised Savior descends",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/30-descent-bountiful-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/30-descent-bountiful-full.webp",
+      "alt": "Christ in a white robe descends within heavenly light toward the people gathered around the temple at Bountiful.",
+      "id": "art-27cfe6c266e8",
+      "occurrences": [
+        {
+          "id": "source-c8a75fd726a5",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/30-descent-bountiful-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/30-descent-bountiful-960.webp\"])",
+          "title": "The promised Savior descends"
         }
       ],
       "categories": [
@@ -7603,6 +8329,28 @@
       ]
     },
     {
+      "title": "The testimony is written down",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/21-remember-samuel-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/21-remember-samuel-full.webp",
+      "alt": "Christ and an older Nephi attend to a record on a low wooden surface.",
+      "id": "art-c3c31d7db3f8",
+      "occurrences": [
+        {
+          "id": "source-8dcae617d0eb",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/21-remember-samuel-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/21-remember-samuel-960.webp\"])",
+          "title": "The testimony is written down"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Three Witnesses",
       "category": "Church History",
       "thumbnail": "/assets/history/three-witnesses-1400.webp",
@@ -7735,6 +8483,28 @@
       ]
     },
     {
+      "title": "They bring those who need healing",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/36-bring-afflicted-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/36-bring-afflicted-full.webp",
+      "alt": "A companion helps an older man approach Christ, who turns toward him with gentle attention.",
+      "id": "art-c741d3a1f262",
+      "occurrences": [
+        {
+          "id": "source-56ee23f387ee",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/36-bring-afflicted-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/36-bring-afflicted-960.webp\"])",
+          "title": "They bring those who need healing"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Those who stayed nearby",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/sensitive-scene-preview.png",
@@ -7843,6 +8613,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Trust beyond tomorrow",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/16-lilies-teaching-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/16-lilies-teaching-full.webp",
+      "alt": "Christ in a green mantle teaches His disciples in a wooded clearing with small wildflowers nearby.",
+      "id": "art-6affc2a059fa",
+      "occurrences": [
+        {
+          "id": "source-a416861a67ee",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/16-lilies-teaching-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/16-lilies-teaching-960.webp\"])",
+          "title": "Trust beyond tomorrow"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -8044,6 +8836,28 @@
       ]
     },
     {
+      "title": "We do not doubt our mothers knew it",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/38-helaman-warriors-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/38-helaman-warriors-full.webp",
+      "alt": "Helaman listens to a young warrior while other teenage soldiers gather around them in a woodland camp.",
+      "id": "art-b82724d76be1",
+      "occurrences": [
+        {
+          "id": "source-a1e8cedeedda",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/38-helaman-warriors-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/38-helaman-warriors-960.webp\"])",
+          "title": "We do not doubt our mothers knew it"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Welcome the children",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/christ-children-800.webp",
@@ -8085,6 +8899,28 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "What their mothers had taught them",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/24-mothers-remembered-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/24-mothers-remembered-full.webp",
+      "alt": "A mother and her adolescent son speak attentively near a woodland home.",
+      "id": "art-11de69e0db13",
+      "occurrences": [
+        {
+          "id": "source-561e0fb009fc",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/24-mothers-remembered-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/24-mothers-remembered-960.webp\"])",
+          "title": "What their mothers had taught them"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -8154,6 +8990,28 @@
       ]
     },
     {
+      "title": "Words kept for a future reader",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/book-of-mormon-stories/26-moroni-record-960.webp",
+      "fullImage": "/assets/page-art/book-of-mormon-stories/26-moroni-record-full.webp",
+      "alt": "An older Moroni writes on small metal plates beneath a woodland rock shelter.",
+      "id": "art-c269cf1dfefe",
+      "occurrences": [
+        {
+          "id": "source-de9c7a463398",
+          "page": "/answers/what-is-the-book-of-mormon.html",
+          "pageTitle": "Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/26-moroni-record-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/26-moroni-record-960.webp\"])",
+          "title": "Words kept for a future reader"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Words worth preserving",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/ancientmetalrecords-960.webp",
@@ -8177,15 +9035,15 @@
     }
   ],
   "stats": {
-    "artworks": 365,
-    "occurrences": 376,
+    "artworks": 404,
+    "occurrences": 415,
     "byKind": {
       "artwork": 41,
       "full": 1,
       "hero": 37,
       "legacy": 39,
       "missionary": 9,
-      "topic": 252
+      "topic": 291
     }
   }
 }

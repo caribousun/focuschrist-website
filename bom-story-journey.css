@@ -1,0 +1,14 @@
+/* Book of Mormon story navigation; keep shared blue canvas and reading rails. */
+.bom-story-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem .8rem;margin:1.4rem 0 0}
+.bom-story-directory details{margin:0;align-self:start;padding:.8rem 1rem}
+.bom-story-directory summary{min-height:28px;line-height:1.5}
+.bom-directory-links{display:grid;gap:.45rem;margin-top:.8rem}
+.bom-story-directory a{display:flex;align-items:center;gap:.7rem;min-height:48px;padding:.65rem .9rem;border:1px solid var(--fc-line,#49616b);border-radius:12px;background:var(--fc-card-fill);text-decoration:none;font-size:.94rem;line-height:1.45}
+.bom-story-directory a span{color:var(--fc-gold-light,#f1d39a);font-size:.8rem;letter-spacing:.06em;flex:none}
+.bom-story-directory a:hover{border-color:var(--fc-gold-light,#f1d39a)}
+.bom-story,.bom-journey{scroll-margin-top:100px}
+.bom-story{border-top:1px solid var(--fc-line,#49616b)}
+body.fc-site.fc-topic-page main>.bom-story.fc-deep-study{padding-top:var(--fc-section-gap,32px)}
+.bom-story>.fc-eyebrow,.bom-journey>.fc-eyebrow{color:var(--fc-gold-light,#f1d39a);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem}
+.bom-story>.fc-eyebrow+h2{margin-top:0}
+@media(max-width:600px){.bom-story-directory{grid-template-columns:1fr}.bom-story-directory a{justify-content:center;text-align:center}.bom-story-directory a span{min-width:1.4em}.bom-story,.bom-journey{scroll-margin-top:82px}}
