@@ -1,0 +1,19 @@
+/* Wyatt's complete-row mandate: balance actual card rows without filler or new art. */
+@media(min-width:701px){
+  .fc-resource-grid:not(.fc-stand-resources)>.fc-resource-card:last-child:nth-child(odd):not(:only-child){grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center}
+  .fc-resource-grid:not(.fc-stand-resources)>.fc-resource-card:last-child:nth-child(odd):not(:only-child)>.fc-resource-card__image{border-bottom:0}
+  .fc-study-grid>:last-child:nth-child(odd):not(:only-child){grid-column:1/-1}
+}
+@media(min-width:521px) and (max-width:1050px){
+  .ask-continue-grid>:last-child:nth-child(odd):not(:only-child){grid-column:1/-1}
+}
+@media(min-width:701px) and (max-width:1000px){
+  .fc-voice-grid>:last-child:nth-child(odd):not(:only-child),.gc-pathways>:last-child:nth-child(odd):not(:only-child),.fc-talk-list>:last-child:nth-child(odd):not(:only-child){grid-column:1/-1}
+}
+@media(min-width:1001px){
+  .fc-voice-grid,.fc-talk-list{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .fc-voice-grid>*,.fc-talk-list>*{grid-column:span 2}
+  .fc-voice-grid>:last-child:nth-child(3n+1),.fc-talk-list>:last-child:nth-child(3n+1){grid-column:1/-1}
+  .fc-voice-grid>:nth-last-child(2):nth-child(3n+1),.fc-voice-grid>:nth-last-child(2):nth-child(3n+1)~:last-child,.fc-talk-list>:nth-last-child(2):nth-child(3n+1),.fc-talk-list>:nth-last-child(2):nth-child(3n+1)~:last-child{grid-column:span 3}
+  .fc-talk-list>:last-child:nth-child(3n+1):not(:only-child)>a{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center}
+}
