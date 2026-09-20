@@ -20,7 +20,12 @@ for r in manifest['images']:
  for field,digest in [('asset','sha256'),('preview','preview_sha256')]:
   assert hashlib.sha256((ROOT/r[field]).read_bytes()).hexdigest()==r[digest],r[field]
  hashes.append(r['sha256'])
- assert r['technical_visual_review'] and not r['owner_approved']
+ assert r['technical_visual_review']
+ # Owner approved the exact family candidate, not every generated derivative.
+ assert r['owner_approved'] == (r['id']=='07-elizabeth-family'),r['id']
+ if r['owner_approved']:
+  assert r.get('approval_evidence'), 'Exact owner approval must remain recorded'
+  assert r.get('owner_reference_sha256')=='b791eff6c39b3a8007eb04a4498f9021878f251514ee93f1d142aaaac65c5c7e'
 assert len(set(hashes))==18,'A duplicated original cannot count as another picture'
 # Preserve every preexisting Pioneer image and the owner-approved hero byte for byte.
 assets=sorted(set(re.findall(r'assets/(?:pioneers/[^"\s<>]+\.webp|heroes/pioneers\.webp)',baseline)))
@@ -36,5 +41,6 @@ for key in triggers:
  record=re.search(r'<article data-artwork-detail-content="'+key+r'".*?</article>',page,re.S)[0]
  paragraphs=re.findall(r'<p data-detail-paragraph>(.*?)</p>',record,re.S)
  assert len(paragraphs)>=2 and all(p.strip() for p in paragraphs),key
- assert 'data-detail-source="https://' in record
+ assert 'data-detail-source="https://' in record,key
+assert 'elizabeth-crook-panting_1900_486.pdf' not in page, 'Owner removed Elizabeth PDF actions'
 print('Pioneer story QA: PASS (28unique studies,18new originals,29preserved topics,31preserved image variants/hero)')
