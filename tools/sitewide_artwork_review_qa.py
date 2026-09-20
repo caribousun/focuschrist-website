@@ -123,7 +123,7 @@ def main():
     pioneer_ask_style = 'pioneer-experience.css'
     # Independently reviewed study-body and Answers-directory styles, no hero rules.
     settle_style = 'settle-heart-study.css'
-    check(sha(ROOT/settle_style)=='858d5b00ac69181913ea10440ef357679adbf995a960e497b395dadf10879d31',
+    check(sha(ROOT/settle_style)=='5adafa3789b39e7aa1a65e8e33bcc47085d65c73da018be83ffcec39841bd8ee',
           'Settle study stylesheet differs from reviewed bytes')
     # Owner-requested two-column topics and Ask presentation were reviewed
     # separately from hero artwork. Permit these exact bytes, not later CSS edits.

@@ -1805,11 +1805,11 @@
         "key": "01-settled-path",
         "prompt": "Create a landscape1536x1024 photo-real website hero, extraordinary clear lifelike photographic realism. Referenceimage1 locks exact JesusChrist likeness: preserve eye shape/color nose brow mouth beard hair proportions. Theme: choosing to follow Christ and settle one's heart, an artistic interpretation of discipleship, not a claimed specific recorded encounter. Jesus walks along a simple olive orchard path with ONE adult disciple close beside Him, both near the center of image so they remain visible in a narrow center crop. Christ's face centered at x56percent y39percent; disciple face x39percent y40percent. Jesus turns slightly left and looks DIRECTLY into disciple's eyes; disciple looks into His eyes, natural earnest conversation and warm attentive expressions. Jesus ivory tunic with muted warm brown mantle, disciple weathered distinctive clean-shaven older face, short silver-black hair, muted olive simple tunic; absolutely no Christ-face clone. Mid-thigh-up composition with heads fully visible and ample natural olive orchard space above and around, both people's hands near waists naturally visible. Sunlit leaves and soft distant hills, NO lake, sea or boat. Detailed natural pores and eye catchlights, real woven fabric, physically believable anatomy, live-action photography not painting/CGI/plastic. No halos, text, side panels, blurred borders or fictitious image padding. Frame existing scene naturally for mobile center crop and wide desktop hero. These are mortal-ministry devotional figures, no nail wounds.",
         "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bff5-5571-7b62-ac16-69854cea3c9d\\exec-ed40ce14-cf1f-4cdd-adb6-f255c77f1d56.png",
-        "asset": "assets/page-art/settle-heart/01-settled-path-full.webp",
-        "sha256": "640266f74886f7f3a90532dd6ba8e9983ecc6518245be85b56cd1f86a1fc5c6e",
+        "asset": "assets/page-art/settle-heart/01-settled-path-wide-20260920-full.webp",
+        "sha256": "0c2f508e320fdcf845ff5f35e8fb90ca92d82eed917e5df9d006347a04e7f9c7",
         "source_sha256": "d3a1c22c86211543153e1c51d9193ca9fbdc8b420065eaf5e57365b49dab17ca",
-        "width": 1536,
-        "height": 1024,
+        "width": 2172,
+        "height": 724,
         "christ": true,
         "category": "new-testament",
         "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/9?lang=eng&id=p23#p23",
@@ -1818,7 +1818,7 @@
         "technical_review_passed": true,
         "owner_approved": false,
         "review_record": "docs/settle-heart-art-review.json",
-        "review_notes": "Direct source pixels and approved references reviewed by primary and independent layout_review agent. Corrected gaze, repeated background faces, headroom, Joseph age, and visible Resurrection scars. Technical review does not claim new owner approval."
+        "review_notes": "Owner requested less clipped hero. Same walking conversation recomposed as a continuous wide scene using prior hero plus approved Christ identity pixels. Primary and independent source-image review passed identity, gaze, anatomy and continuous environment. Preserve original source and retired exports. Centered figures framed for locked desktop/mobile geometry. No side panels or fabricated filler; total remains fifteen originals. Technical review separate from owner acceptance."
       },
       {
         "order": 2,
