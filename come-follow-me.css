@@ -79,3 +79,8 @@
 [data-cfm-current-reading]>a,.cfm-month .cfm-schedule-reading>a{display:block;border:1px solid currentColor;border-radius:8px;padding:6px 10px;line-height:inherit}
 .cfm-reading-range[open]{flex-basis:100%}
 .cfm-reading-chapters{padding-bottom:0}
+
+/* Keep Christ's full head inside the shared mobile frame. */
+@media (max-width:700px){
+    body.fc-site.cfm-page .cfm-hero::before{background-position:center 25%}
+}
