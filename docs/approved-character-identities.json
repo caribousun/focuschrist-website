@@ -112,6 +112,20 @@
       ],
       "reuse_allowed_with_required_research": true,
       "constraints": "Use actual approved scene pixels. Preserve elderly Jane’s recognizable face and emotional expression. Meeting year and speaker identity remain unknown; scene staging is artistic interpretation."
+    },
+    {
+      "character": "Brigham Young",
+      "owner_identity_locked": true,
+      "reference_mapping": "Exact owner-approved warmer color portrait",
+      "reference": {
+        "asset": "assets/identities/brigham-young-owner-approved-20260920.png",
+        "sha256": "5093d7604971bf2477438d04c6786aeb99f93f6b4f554e9e76e0945d7207789e"
+      },
+      "approval_evidence": [
+        "Wyatt: the new brigham is approved. Just make sure you use facial expressions that fit the scene"
+      ],
+      "reuse_allowed_with_required_research": true,
+      "constraints": "Preserve this face and lifelike skin color with event-appropriate age, expression and gaze. Owner rejected the prior washed-out appearance; do not import monochrome texture. Historical pigmentation is interpretation, not authenticated color."
     }
   ],
   "unresolved_other_characters": "Reconcile every additional approved character against exact saved asset and owner approval provenance before new use; do not infer approval from current publication."
