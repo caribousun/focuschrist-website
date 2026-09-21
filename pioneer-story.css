@@ -35,6 +35,9 @@ body.fc-site .pioneer-timeline-group :is(.timeline-item,.map-point)[data-focus-e
 body.fc-site .pioneer-timeline-group :is(.timeline-item,.map-point)[data-focus-expand]::after { top: 16px; right: 14px; }
 body.fc-site .pioneer-timeline-group [data-focus-expand] > .map-date { padding: 6px 9px; }
 body.fc-site .pioneer-timeline-group [data-focus-expand] .map-content > :is(h3,h4) { margin-bottom: 8px; }
+body.fc-site .pioneer-timeline-group .map-content { min-width: 0; overflow-wrap: anywhere; }
+/* Long chapter and Ask headings still wrap when readers enlarge their text. */
+body.fc-site main :is(h2,h3,h4) { overflow-wrap: anywhere; }
 body.fc-site .pioneer-timeline-group :is(.timeline-desc,.map-content p) { font-size: 1rem; line-height: 1.7; }
 body.fc-site .pioneer-timeline-group .ai-response { height: auto; max-height: none; overflow: visible; }
 body.fc-site table.pioneer-date-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin-block: 22px; font-size: 1rem; line-height: 1.65; }
