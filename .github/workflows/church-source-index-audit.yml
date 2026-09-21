@@ -22,6 +22,31 @@ jobs:
       - name: Compare robots and sitemap revision
         run: python tools/audit_church_source_freshness.py
 
+      - name: Diagnose upstream sitemap variants
+        if: always()
+        run: |
+          python - <<'PY'
+          import sys, hashlib, json, time
+          sys.path.insert(0, 'tools')
+          import build_church_source_index as b
+          original = b.fetch_bytes
+          def fetch(url, host, types, limit):
+              payload = original(url, host, types, limit)
+              record = {'url': url, 'sha': hashlib.sha256(payload).hexdigest(), 'bytes': len(payload)}
+              if url != b.ROBOTS_URL:
+                  root = b.parse_bounded_xml(payload)
+                  records = sorted(sorted((child.tag, child.text or '') for child in node) for node in root)
+                  locations = sorted(node.text or '' for node in root.iter() if node.tag.endswith('}loc'))
+                  record.update(records_sha=hashlib.sha256(json.dumps(records).encode()).hexdigest(), locations_sha=hashlib.sha256(json.dumps(locations).encode()).hexdigest(), count=len(locations))
+              print('UPSTREAM', json.dumps(record), flush=True)
+              return payload
+          b.fetch_bytes = fetch
+          for sample in range(2):
+              result = b.build_entries()
+              print('SAMPLE', sample, result[:3], flush=True)
+              if sample == 0: time.sleep(10)
+          PY
+
   weekly-full-refresh-check:
     if: github.event_name == 'workflow_dispatch' || github.event.schedule == '53 7 * * 0'
     runs-on: ubuntu-latest
