@@ -50,6 +50,24 @@ function measure(selector) {
         assert(row.overflow <= 3, `${url} @${width}: overflowing row ${JSON.stringify(row)}`);
         checked++;
       }
+      if (url === 'pioneers.html' && width > 700) {
+        const rhythm = await page.evaluate(() => {
+          const cards = [...document.querySelectorAll('.pioneer-story-card')].map(n => ({
+            top:n.getBoundingClientRect().top,
+            bottom:n.querySelector('.pioneer-source-links').getBoundingClientRect().bottom
+          }));
+          return {
+            pairs:cards.slice(1).flatMap((n,i) => Math.abs(n.top-cards[i].top)<3 ? [Math.abs(n.bottom-cards[i].bottom)] : []),
+            intros:[...document.querySelectorAll('.pioneer-story-intro,.pioneer-visual-intro')].every(n =>
+              [n,...n.children].every(c => ['start','left'].includes(getComputedStyle(c).textAlign))),
+            gap:document.querySelector('#guided-reflections .fc-actions').getBoundingClientRect().top -
+              document.querySelector('#guided-reflections .fc-study-grid').getBoundingClientRect().bottom
+          };
+        });
+        assert(rhythm.pairs.length === 7 && rhythm.pairs.every(gap => gap < 3), 'Pioneer paired source footers must align');
+        assert(rhythm.intros, 'Pioneer desktop introductions must share one alignment');
+        assert(rhythm.gap >= 27 && rhythm.gap <= 29, 'Pioneer closing action buffer must remain 28px');
+      }
     }
     for (const width of [1366,900,600,390]) for (const url of pages) await check(url, width);
     for (const width of [520,521,700,701,1000,1001,1050,1051]) {
