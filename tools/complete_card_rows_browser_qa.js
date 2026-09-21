@@ -57,6 +57,12 @@ function measure(selector) {
             bottom:n.querySelector('.pioneer-source-links').getBoundingClientRect().bottom
           }));
           return {
+            rails:[...document.querySelectorAll('main > nav[aria-label="Pioneer study sections"] > div,main > .qa-section > .qa-container,main > .pioneer-visual-chapter > div,main > .pioneer-story-chapter,main > .pioneer-timeline-group,main > .section,main > .fc-resource-section,main > .fc-study-hub,#guided-reflections > div')].map(n => ({left:n.getBoundingClientRect().left,width:n.getBoundingClientRect().width})),
+            features:[...document.querySelectorAll('.pioneer-story-card > .pioneer-source-links')].map(n => ({
+              width:n.getBoundingClientRect().width,
+              inner:n.parentElement.clientWidth - 48,
+              below:n.getBoundingClientRect().top >= Math.max(n.previousElementSibling.getBoundingClientRect().bottom,n.parentElement.querySelector('figure').getBoundingClientRect().bottom)
+            })),
             pairs:cards.slice(1).flatMap((n,i) => Math.abs(n.top-cards[i].top)<3 ? [Math.abs(n.bottom-cards[i].bottom)] : []),
             intros:[...document.querySelectorAll('.pioneer-story-intro,.pioneer-visual-intro')].every(n =>
               [n,...n.children].every(c => ['start','left'].includes(getComputedStyle(c).textAlign))),
@@ -67,11 +73,13 @@ function measure(selector) {
         assert(rhythm.pairs.length === 7 && rhythm.pairs.every(gap => gap < 3), 'Pioneer paired source footers must align');
         assert(rhythm.intros, 'Pioneer desktop introductions must share one alignment');
         assert(rhythm.gap >= 27 && rhythm.gap <= 29, 'Pioneer closing action buffer must remain 28px');
+        assert(rhythm.rails.length >= 17 && rhythm.rails.every(r => Math.abs(r.left-rhythm.rails[0].left)<2 && Math.abs(r.width-rhythm.rails[0].width)<2), 'Pioneer body sections must share the Home/Answers standard outer rail');
+        assert(rhythm.features.length === 4 && rhythm.features.every(f=>Math.abs(f.width-f.inner)<3 && f.below), 'Pioneer feature sources must span below the whole image-and-account row');
       }
     }
     for (const width of [1366,900,600,390]) for (const url of pages) await check(url, width);
     for (const width of [520,521,700,701,1000,1001,1050,1051]) {
-      for (const url of ['ask.html','general-conference.html','answers/stand-forever.html','answers/settle-this-in-your-hearts.html']) await check(url, width);
+      for (const url of ['pioneers.html','ask.html','general-conference.html','answers/stand-forever.html','answers/settle-this-in-your-hearts.html']) await check(url, width);
     }
     // Prove that deleting the repair produces the owner's exact regression.
     await page.setViewportSize({width:1366,height:1000});
