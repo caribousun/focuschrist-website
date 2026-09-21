@@ -44,6 +44,37 @@ body.fc-site .pioneer-date-table :is(th,td):first-child { width: 25%; }
 body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
 /* Finish these odd-length chapters with an image-and-account feature row. */
 @media (min-width: 701px) {
+    /* One desktop reading rail and a consistent source footer for paired stories. */
+    body.fc-site :is(.pioneer-story-chapter,.pioneer-timeline-group) {
+        width: min(var(--fc-standard, 1040px), calc(100% - 2 * var(--fc-body-gutter, 24px)));
+    }
+    body.fc-site :is(.pioneer-story-intro,.pioneer-visual-intro) {
+        max-width: none;
+        width: 100%;
+        margin-inline: 0;
+        text-align: start;
+    }
+    body.fc-site :is(.pioneer-story-intro,.pioneer-visual-intro) > :is(h2,h3,p) {
+        text-align: start;
+        max-width: none;
+        margin-inline: 0;
+    }
+    body.fc-site .pioneer-story-note {
+        box-sizing: border-box;
+        max-width: none;
+        width: 100%;
+        margin-inline: 0;
+    }
+    body.fc-site .pioneer-story-grid { align-items: stretch; }
+    body.fc-site .pioneer-story-card { display: flex; flex-direction: column; }
+    body.fc-site .pioneer-story-copy { display: flex; flex: 1; flex-direction: column; }
+    body.fc-site .pioneer-story-copy > .pioneer-source-links {
+        margin: auto 0 0;
+        padding-top: 18px;
+        align-items: center;
+    }
+    body.fc-site .pioneer-source-links .pioneer-source-attribution { flex-basis: 100%; text-align: center; }
+    body.fc-site #guided-reflections .fc-study-grid + .fc-actions { margin-top: 28px; gap: 12px; }
     body.fc-site .pioneer-story-grid > :is(
         #pioneer-story-03-planting,
         #pioneer-story-06-florence,
