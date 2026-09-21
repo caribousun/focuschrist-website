@@ -749,6 +749,28 @@
       ]
     },
     {
+      "title": "A song shared at the end of the day",
+      "category": "Pioneers",
+      "thumbnail": "/assets/pioneers/music/camp-song-800.webp",
+      "fullImage": "/assets/pioneers/music/camp-song-full.webp",
+      "alt": "Pioneer adults and children sing together beside a small fire and covered wagons at dusk.",
+      "id": "art-cbbc69d6b00a",
+      "occurrences": [
+        {
+          "id": "source-59907f4c226d",
+          "page": "/pioneers.html",
+          "pageTitle": "Pioneer Faith & History",
+          "category": "Pioneers",
+          "kind": "artwork",
+          "selector": "a[data-artwork-detail=\"pioneer-music-camp-song\"]",
+          "title": "A song shared at the end of the day"
+        }
+      ],
+      "categories": [
+        "Pioneers"
+      ]
+    },
+    {
       "title": "A vision of the Savior’s compassion",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/04-nephi-sees-healing-960.webp",
@@ -4162,6 +4184,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Hope for the road ahead",
+      "category": "Pioneers",
+      "thumbnail": "/assets/pioneers/music/hope-on-trail-800.webp",
+      "fullImage": "/assets/pioneers/music/hope-on-trail-full.webp",
+      "alt": "An anonymous pioneer family walks beside oxen and a covered wagon on a sunlit western trail.",
+      "id": "art-59b6702b27bb",
+      "occurrences": [
+        {
+          "id": "source-bde23308d984",
+          "page": "/pioneers.html",
+          "pageTitle": "Pioneer Faith & History",
+          "category": "Pioneers",
+          "kind": "artwork",
+          "selector": "a[data-artwork-detail=\"pioneer-music-hope-on-trail\"]",
+          "title": "Hope for the road ahead"
+        }
+      ],
+      "categories": [
+        "Pioneers"
       ]
     },
     {
@@ -7625,6 +7669,28 @@
       ]
     },
     {
+      "title": "Savior, Redeemer of My Soul",
+      "category": "Pioneers",
+      "thumbnail": "/assets/pioneers/music/redeemer-river-800.webp",
+      "fullImage": "/assets/pioneers/music/redeemer-river-full.webp",
+      "alt": "Christ and heavenly helpers assist struggling pioneers and a handcart out of a freezing river, with an ox-drawn wagon behind them.",
+      "id": "art-69589bb38bf7",
+      "occurrences": [
+        {
+          "id": "source-0696cab66058",
+          "page": "/pioneers.html",
+          "pageTitle": "Pioneer Faith & History",
+          "category": "Pioneers",
+          "kind": "artwork",
+          "selector": "a[data-artwork-detail=\"pioneer-music-redeemer-river\"]",
+          "title": "Savior, Redeemer of My Soul"
+        }
+      ],
+      "categories": [
+        "Pioneers"
+      ]
+    },
+    {
       "title": "Sealing hope returns",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/eternal-marriage/timeline/04-restoration-desktop-v2.webp",
@@ -9784,10 +9850,10 @@
     }
   ],
   "stats": {
-    "artworks": 438,
-    "occurrences": 449,
+    "artworks": 441,
+    "occurrences": 452,
     "byKind": {
-      "artwork": 59,
+      "artwork": 62,
       "full": 1,
       "hero": 38,
       "legacy": 39,

@@ -16,7 +16,7 @@ PAGES = {
     "answers/divorce-and-faith.html": 1,
     "church-history.html": 7,
     "art.html": 4,
-    "pioneers.html": 28,
+    "pioneers.html": 31,
 }
 ROOT_VIEWER_PAGES = (*PAGES, "missionary.html", "general-conference.html")
 ART_STUDY_PAGES = (
@@ -95,9 +95,9 @@ def main() -> int:
         if len(sources) != expected_count or any(not source.startswith("https://") for source in sources):
             errors.append(f"{relative}: every record must have one HTTPS official source")
 
-    if len(all_trigger_keys) != 59 or len(all_record_keys) != 59:
-        errors.append("site-wide non-Mission artwork detail total must be exactly 59")
-    if len(set(all_trigger_keys)) != 59 or len(set(all_record_keys)) != 59:
+    if len(all_trigger_keys) != 62 or len(all_record_keys) != 62:
+        errors.append("site-wide non-Mission artwork detail total must be exactly 62")
+    if len(set(all_trigger_keys)) != 62 or len(set(all_record_keys)) != 62:
         errors.append("site-wide artwork detail keys must be unique")
 
     missionary = (ROOT / "missionary.html").read_text(encoding="utf-8")
@@ -120,7 +120,7 @@ def main() -> int:
         relative: len(re.findall(r'data-detail-study="[^"]+"', (ROOT / relative).read_text(encoding="utf-8")))
         for relative in PAGES
     }
-    expected_studies = {"art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 9, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1, "pioneers.html": 18}
+    expected_studies = {"art.html": 4, "index.html": 3, "ask.html": 5, "answers.html": 9, "answers/death-of-a-child.html": 2, "answers/divorce-and-faith.html": 1, "pioneers.html": 21}
     for relative, count in study_links.items():
         if count != expected_studies.get(relative, 0):
             errors.append(f"{relative}: unexpected related study count {count}")
@@ -282,8 +282,8 @@ def main() -> int:
             target = local_target(ROOT / relative, asset)
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
-    if len(full_assets) != 68:
-        errors.append(f"expected 68 artwork detail full-image sources, found {len(full_assets)}")
+    if len(full_assets) != 71:
+        errors.append(f"expected 71 artwork detail full-image sources, found {len(full_assets)}")
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -373,7 +373,7 @@ def main() -> int:
         return 1
 
     print("Artwork detail QA: PASS")
-    print("59 non-Mission artwork triggers and 7 Mission artwork triggers verified")
+    print("62 non-Mission artwork triggers and 7 Mission artwork triggers verified")
     print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 
