@@ -99,7 +99,7 @@ body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
     }
     body.fc-site .pioneer-story-grid { align-items: stretch; }
     body.fc-site .pioneer-story-card { display: flex; flex-direction: column; }
-    body.fc-site .pioneer-story-card:not(:has(> .pioneer-source-links)) figcaption { min-height: 3.3em; }
+    body.fc-site .pioneer-story-card:not(:has(> .pioneer-source-links)) figcaption { min-height: calc(3.3em + 12px); }
     body.fc-site .pioneer-story-copy { display: flex; flex: 1; flex-direction: column; }
     body.fc-site .pioneer-story-copy > .pioneer-source-links {
         margin: auto 0 0;
