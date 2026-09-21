@@ -35,6 +35,9 @@ body.fc-site .pioneer-timeline-group :is(.timeline-item,.map-point)[data-focus-e
 body.fc-site .pioneer-timeline-group :is(.timeline-item,.map-point)[data-focus-expand]::after { top: 16px; right: 14px; }
 body.fc-site .pioneer-timeline-group [data-focus-expand] > .map-date { padding: 6px 9px; }
 body.fc-site .pioneer-timeline-group [data-focus-expand] .map-content > :is(h3,h4) { margin-bottom: 8px; }
+body.fc-site .pioneer-timeline-group .map-content { min-width: 0; overflow-wrap: anywhere; }
+/* Long chapter and Ask headings still wrap when readers enlarge their text. */
+body.fc-site main :is(h2,h3,h4) { overflow-wrap: anywhere; }
 body.fc-site .pioneer-timeline-group :is(.timeline-desc,.map-content p) { font-size: 1rem; line-height: 1.7; }
 body.fc-site .pioneer-timeline-group .ai-response { height: auto; max-height: none; overflow: visible; }
 body.fc-site table.pioneer-date-table { width: 100%; border-collapse: collapse; table-layout: fixed; margin-block: 22px; font-size: 1rem; line-height: 1.65; }
@@ -42,20 +45,30 @@ body.fc-site .pioneer-date-table :is(th,td) { padding: 12px; vertical-align: top
 body.fc-site .pioneer-date-table th { color: var(--fc-gold-light, #f3cc83); }
 body.fc-site .pioneer-date-table :is(th,td):first-child { width: 25%; }
 body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
-/* Match the Ask page question controls while preserving chapter anchors. */
-body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+/* A numbered trail directory distinguishes chapters from the study pills below. */
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 28px; }
 body.fc-site nav[aria-label="Pioneer study sections"] .fc-button {
-    width: 100%; min-height: 58px; padding: 10px 12px;
-    border: 1px solid rgba(201,169,97,.62); border-radius: 15px;
-    background: rgba(10,36,46,.78); color: #f4c66f !important; box-shadow: none;
-    font-family: inherit; font-size: .88rem; font-weight: 400; line-height: 1.2; text-align: center;
+    display: grid; grid-template-columns: 36px minmax(0,1fr) 16px; align-items: center; gap: 12px;
+    width: 100%; min-height: 76px; padding: 14px 8px;
+    border: 0; border-bottom: 1px solid rgba(201,169,97,.4); border-radius: 0;
+    background: transparent; color: #f4c66f !important; box-shadow: none;
+    font-family: Georgia,'Times New Roman',serif; font-size: 1.04rem; font-weight: 400; line-height: 1.4; text-align: start;
     white-space: normal; overflow-wrap: anywhere;
 }
-body.fc-site nav[aria-label="Pioneer study sections"] .fc-button:is(:hover,:focus-visible) {
-    border-color: #ffe0a0; background: rgba(240,195,106,.14); color: #ffe0a0 !important; transform: translateY(-2px);
+body.fc-site .pioneer-trail-number {
+    display: grid; place-items: center; width: 36px; height: 36px;
+    border: 1px solid rgba(201,169,97,.65); border-radius: 50%;
+    color: #f4c66f; font-family: Georgia,'Times New Roman',serif; font-size: .82rem;
+    background: rgba(201,169,97,.08);
 }
+body.fc-site .pioneer-trail-arrow { font-family: inherit; font-size: 1rem; color: #f4c66f; }
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-button:is(:hover,:focus-visible) {
+    border-color: #ffe0a0; background: rgba(240,195,106,.08); color: #ffe0a0 !important; transform: none;
+}
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-button:focus-visible { outline: 2px solid #ffe0a0; outline-offset: 3px; }
 @media (max-width: 700px) {
-    body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions { grid-template-columns: 1fr; }
+    body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions { grid-template-columns: 1fr; gap: 0; }
+    body.fc-site nav[aria-label="Pioneer study sections"] .fc-button { min-height: 68px; }
 }
 /* Finish these odd-length chapters with an image-and-account feature row. */
 @media (min-width: 701px) {
