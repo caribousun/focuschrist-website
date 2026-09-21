@@ -12,7 +12,7 @@ assert page.count('class="pioneer-timeline-group"')==3
 assert page.count('class="pioneer-story-card"')==18
 triggers=re.findall(r'data-artwork-detail="([^"]+)"',page)
 records=re.findall(r'data-artwork-detail-content="([^"]+)"',page)
-assert len(triggers)==28 and len(set(triggers))==28 and sorted(triggers)==sorted(records)
+assert len(triggers)==31 and len(set(triggers))==31 and sorted(triggers)==sorted(records)
 manifest=json.loads((ROOT/'docs/pioneer-story-review.json').read_text())
 assert len(manifest['images'])==18
 hashes=[]
@@ -46,4 +46,4 @@ for key in triggers:
  assert len(paragraphs)>=2 and all(p.strip() for p in paragraphs),key
  assert 'data-detail-source="https://' in record,key
 assert 'elizabeth-crook-panting_1900_486.pdf' not in page, 'Owner removed Elizabeth PDF actions'
-print('Pioneer story QA: PASS (28unique studies,18new originals,29preserved topics,31preserved image variants/hero)')
+print('Pioneer story QA: PASS (31unique studies,18new originals,29preserved topics,31preserved image variants/hero)')

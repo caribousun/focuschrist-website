@@ -57,6 +57,7 @@ function measure(selector) {
             bottom:n.querySelector('.pioneer-source-links').getBoundingClientRect().bottom
           }));
           return {
+            navigation:[...document.querySelectorAll('nav[aria-label="Pioneer study sections"] .fc-button')].map(n=>({color:getComputedStyle(n).color,radius:getComputedStyle(n).borderRadius})),
             rails:[...document.querySelectorAll('main > nav[aria-label="Pioneer study sections"] > div,main > .qa-section > .qa-container,main > .pioneer-visual-chapter > div,main > .pioneer-story-chapter,main > .pioneer-timeline-group,main > .section,main > .fc-resource-section,main > .fc-study-hub,#guided-reflections > div')].map(n => ({left:n.getBoundingClientRect().left,width:n.getBoundingClientRect().width})),
             features:[...document.querySelectorAll('.pioneer-story-card > .pioneer-source-links')].map(n => ({
               width:n.getBoundingClientRect().width,
@@ -71,6 +72,7 @@ function measure(selector) {
           };
         });
         assert(rhythm.pairs.length === 7 && rhythm.pairs.every(gap => gap < 3), 'Pioneer paired source footers must align');
+        assert(rhythm.navigation.length===9 && rhythm.navigation.every(n=>['rgb(244, 198, 111)','rgb(255, 224, 160)'].includes(n.color) && n.radius==='15px'), 'Pioneer navigation must preserve the outlined question-control appearance and gold text');
         assert(rhythm.intros, 'Pioneer desktop introductions must share one alignment');
         assert(rhythm.gap >= 27 && rhythm.gap <= 29, 'Pioneer closing action buffer must remain 28px');
         assert(rhythm.rails.length >= 17 && rhythm.rails.every(r => Math.abs(r.left-rhythm.rails[0].left)<2 && Math.abs(r.width-rhythm.rails[0].width)<2), 'Pioneer body sections must share the Home/Answers standard outer rail');

@@ -1,0 +1,43 @@
+{
+  "images": [
+    {
+      "id": "camp-song",
+      "source_original": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bff5-5571-7b62-ac16-69854cea3c9d\\exec-1c8eb6c4-af84-48d0-9341-ba0dc8524ade.png",
+      "asset": "assets/pioneers/music/camp-song-full.webp",
+      "sha256": "4fde044863d1a6f64254e54025505df7bb0b9f26f5151e6cbd8aefa91dde7109",
+      "owner_approved": false,
+      "technical_visual_review": "Inspected the generated scene: detailed photographic treatment, natural human expressions and period setting; anonymous pioneer figures. Interpretive scene, not a documented photograph."
+    },
+    {
+      "id": "hope-on-trail",
+      "source_original": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bff5-5571-7b62-ac16-69854cea3c9d\\exec-01fe8ec6-47e6-4223-aff4-a72551bb7319.png",
+      "asset": "assets/pioneers/music/hope-on-trail-full.webp",
+      "sha256": "d42a41c02c1b0f48277d332dadf5948bd2577d200903d23449778b8f61be8425",
+      "owner_approved": false,
+      "technical_visual_review": "Inspected the generated scene: detailed photographic treatment, natural human expressions and period setting; anonymous pioneer figures. Interpretive scene, not a documented photograph."
+    },
+    {
+      "id": "redeemer-river",
+      "source_original": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0bff5-5571-7b62-ac16-69854cea3c9d\\exec-112d34b3-13d2-4fb6-b222-943e04980d2e.png",
+      "asset": "assets/pioneers/music/redeemer-river-full.webp",
+      "sha256": "38bcc914b36f1faf16741cf19eea796d0a7749df04ceb9c931917ae2e3932a3b",
+      "owner_approved": true,
+      "approval_evidence": "Wyatt: I like that one. Follow-up requires approved Christ likeness and expression matching the moment.",
+      "technical_visual_review": "Compared with actual canonical Christ reference: recognizable facial structure, brown wavy hair and beard retained; solemn, attentive expression toward struggling pioneer, no smile. Natural pushing pose, visible healed wrist marks, covered palms. Helpers in plain pale clothing without wings or halos. Owner-selected river composition preserved. Historical October 19 crossing distinguished from devotional heavenly presence."
+    }
+  ],
+  "source_urls": [
+    "https://www.youtube.com/watch?v=4ia3gYSvG8M",
+    "https://www.youtube.com/watch?v=7bff55utu-U",
+    "https://www.thetabernaclechoir.org/articles/william-clayton-journal.html?lang=eng",
+    "https://www.churchofjesuschrist.org/study/manual/hymns/savior-redeemer-of-my-soul?lang=eng",
+    "https://history.churchofjesuschrist.org/timeline/historic-sites/wyoming/sixth-crossing?lang=eng"
+  ],
+  "christ_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+  "rejected_versions": [
+    "exec-c2125d6b-6cf5-4695-af59-11fe80033cc8.png: owner rejected floating heavenly group",
+    "exec-bdf43d95-9714-4d54-a84b-c0d78ab33c2c.png: superseded by cliff instruction",
+    "exec-1d4ce5f8-0d59-4b78-a33f-d8fddc1ecb39.png: superseded by pioneer-clothing instruction",
+    "exec-33a7d503-d608-4de5-9dd5-47c25a83a785.png: explicitly rejected; removed unpublished derivatives"
+  ]
+}

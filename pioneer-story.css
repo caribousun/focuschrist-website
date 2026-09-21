@@ -42,6 +42,21 @@ body.fc-site .pioneer-date-table :is(th,td) { padding: 12px; vertical-align: top
 body.fc-site .pioneer-date-table th { color: var(--fc-gold-light, #f3cc83); }
 body.fc-site .pioneer-date-table :is(th,td):first-child { width: 25%; }
 body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
+/* Match the Ask page question controls while preserving chapter anchors. */
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-button {
+    width: 100%; min-height: 58px; padding: 10px 12px;
+    border: 1px solid rgba(201,169,97,.62); border-radius: 15px;
+    background: rgba(10,36,46,.78); color: #f4c66f !important; box-shadow: none;
+    font-family: inherit; font-size: .88rem; font-weight: 400; line-height: 1.2; text-align: center;
+    white-space: normal; overflow-wrap: anywhere;
+}
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-button:is(:hover,:focus-visible) {
+    border-color: #ffe0a0; background: rgba(240,195,106,.14); color: #ffe0a0 !important; transform: translateY(-2px);
+}
+@media (max-width: 700px) {
+    body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions { grid-template-columns: 1fr; }
+}
 /* Finish these odd-length chapters with an image-and-account feature row. */
 @media (min-width: 701px) {
     /* Match the Home/Answers outer rail, including legacy nested wrappers. */
@@ -56,8 +71,6 @@ body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
         margin-inline: auto;
     }
     body.fc-site main > .qa-section > .qa-container { margin-top: 0; }
-    body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-    body.fc-site nav[aria-label="Pioneer study sections"] .fc-button { width: auto; flex: 0 1 auto; }
     body.fc-site .pioneer-story-chapter { padding-block: var(--fc-body-section-space, 24px); }
     body.fc-site .pioneer-story-intro > h2 {
         color: var(--fc-gold-light, #f3cc83);
@@ -169,3 +182,22 @@ body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
     body.fc-site .pioneer-date-table :is(th,td) { padding: 10px 7px; }
     body.fc-site .pioneer-date-table :is(th,td):first-child { width: 29%; }
 }
+
+/* Music studies share the established Pioneer content rail and card treatment. */
+body.fc-site .pioneer-music-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; }
+body.fc-site .pioneer-music-card { min-width: 0; padding: 24px; border: 1px solid rgba(210,185,121,.36); border-radius: 16px; background: var(--fc-card-fill); }
+body.fc-site .pioneer-music-card figure { margin: 0; }
+body.fc-site .pioneer-music-art { display: block; border-radius: 12px; overflow: hidden; }
+body.fc-site .pioneer-music-art img { display: block; width: 100%; height: auto; }
+body.fc-site .pioneer-music-card figcaption { padding-top: 12px; color: var(--fc-muted); font-size: .9rem; }
+body.fc-site .pioneer-music-card h3, body.fc-site .pioneer-music-song-title { font-family: Georgia,'Times New Roman',serif; color: var(--fc-gold-light); line-height: 1.35; margin: 18px 0 14px; }
+body.fc-site .pioneer-music-card p, body.fc-site .pioneer-music-intro { line-height: 1.8; margin: 0 0 18px; }
+body.fc-site .pioneer-music-intro { margin-bottom: 24px; }
+body.fc-site .pioneer-music-actions { margin-top: 24px; gap: 12px; }
+body.fc-site .pioneer-music-feature { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 34px; }
+body.fc-site .pioneer-music-feature .pioneer-music-actions { grid-column: 1/-1; margin: 0; padding-top: 20px; border-top: 1px solid var(--fc-line); }
+body.fc-site .pioneer-music-feature h3 { margin-top: 0; }
+body.fc-site .pioneer-music-note { color: var(--fc-muted); line-height: 1.6; margin-top: 20px; font-size: .9rem; }
+body.fc-site .pioneer-music-jump { text-align: center; margin-top: 18px; }
+@media(max-width:1000px) { body.fc-site .pioneer-music-feature { grid-template-columns: 1fr; } }
+@media(max-width:700px) { body.fc-site .pioneer-music-grid { grid-template-columns: 1fr; } body.fc-site .pioneer-music-card { padding: 18px; } }
