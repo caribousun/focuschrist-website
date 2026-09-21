@@ -44,6 +44,38 @@ body.fc-site .pioneer-date-table :is(th,td):first-child { width: 25%; }
 body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
 /* Finish these odd-length chapters with an image-and-account feature row. */
 @media (min-width: 701px) {
+    /* Match the Home/Answers outer rail, including legacy nested wrappers. */
+    body.fc-site main > .qa-section { padding-inline: 0; }
+    body.fc-site main > .qa-section > .qa-container,
+    body.fc-site main > .pioneer-visual-chapter > :is(.fc-container--standard,.fc-container--wide),
+    body.fc-site main > .section,
+    body.fc-site main > .pioneer-source-notes {
+        box-sizing: border-box;
+        width: min(var(--fc-standard, 1040px), calc(100% - 2 * var(--fc-body-gutter, 24px)));
+        max-width: var(--fc-standard, 1040px);
+        margin-inline: auto;
+    }
+    body.fc-site main > .qa-section > .qa-container { margin-top: 0; }
+    body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+    body.fc-site nav[aria-label="Pioneer study sections"] .fc-button { width: auto; flex: 0 1 auto; }
+    body.fc-site .pioneer-story-chapter { padding-block: var(--fc-body-section-space, 24px); }
+    body.fc-site .pioneer-story-intro > h2 {
+        color: var(--fc-gold-light, #f3cc83);
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        font-weight: 400;
+        line-height: 1.2;
+        margin-block: 12px 16px;
+    }
+    body.fc-site .pioneer-story-card {
+        box-sizing: border-box;
+        padding: 24px;
+        border: 1px solid rgba(210,185,121,.36);
+        border-radius: 16px;
+        background: var(--fc-card-fill);
+    }
+    body.fc-site .pioneer-journal-intro { max-width: none; width: 100%; margin-inline: 0; }
+    body.fc-site #guided-reflections .fc-study-grid { margin-top: 24px; }
     /* One desktop reading rail and a consistent source footer for paired stories. */
     body.fc-site :is(.pioneer-story-chapter,.pioneer-timeline-group) {
         width: min(var(--fc-standard, 1040px), calc(100% - 2 * var(--fc-body-gutter, 24px)));
@@ -67,6 +99,7 @@ body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
     }
     body.fc-site .pioneer-story-grid { align-items: stretch; }
     body.fc-site .pioneer-story-card { display: flex; flex-direction: column; }
+    body.fc-site .pioneer-story-card:not(:has(> .pioneer-source-links)) figcaption { min-height: calc(3.3em + 12px); }
     body.fc-site .pioneer-story-copy { display: flex; flex: 1; flex-direction: column; }
     body.fc-site .pioneer-story-copy > .pioneer-source-links {
         margin: auto 0 0;
@@ -95,8 +128,22 @@ body.fc-site .pioneer-journal-intro { text-align: center; line-height: 1.8; }
     ):last-child > .pioneer-story-copy > h3 {
         margin-top: 0;
     }
+    body.fc-site .pioneer-story-card > .pioneer-source-links {
+        grid-column: 1 / -1;
+        margin: 0;
+        padding-top: 20px;
+        border-top: 1px solid rgba(210,185,121,.25);
+        gap: 12px;
+        align-items: center;
+        line-height: 1.8;
+    }
+    body.fc-site .pioneer-story-card:has(> .pioneer-source-links) > .pioneer-story-copy > p:last-child { margin-bottom: 0; }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+    body.fc-site .pioneer-story-grid > .pioneer-story-card:has(> .pioneer-source-links):last-child { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 700px) {
+    body.fc-site .pioneer-story-card > .pioneer-source-links { margin: 0 0 1em; font-size: 1.02rem; line-height: 1.8; }
     body.fc-site .fc-visual-hero--history > img { object-position: 88% 35% !important; }
     /* Reading copy shares one alignment; titles and navigation keep their role. */
     body.fc-site .pioneer-visual-intro > p:not(.fc-eyebrow),
