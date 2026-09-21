@@ -132,7 +132,7 @@ def main():
     # separately from hero artwork. Permit these exact bytes, not later CSS edits.
     check(sha(ROOT/pioneer_ask_style)=='7f67cd77c23157019cd4cb609f2ff0b7151b9a503e143dd692337f41aed919d8',
           'Pioneer Ask stylesheet differs from reviewed bytes')
-    check(sha(ROOT/pioneer_style)=='a67dd615bfaeb1af235c936b222adebbe113825a8704c5fd845ba770dc4ba099',
+    check(sha(ROOT/pioneer_style)=='f8ccfd13f92bc4d4a6182a55d83b6467c12e00078a27f569c319b2de73e09e2c',
           'Pioneer stylesheet differs from reviewed bytes')
     check(sha(ROOT/bom_style)=='9c1963e6981ec14114ee08da6230c26048ea491177936599d1e8050da4f6be9f',
           'Book of Mormon stylesheet differs from reviewed bytes')

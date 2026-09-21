@@ -57,7 +57,7 @@ function measure(selector) {
             bottom:n.querySelector('.pioneer-source-links').getBoundingClientRect().bottom
           }));
           return {
-            navigation:[...document.querySelectorAll('nav[aria-label="Pioneer study sections"] .fc-button')].map(n=>({color:getComputedStyle(n).color,radius:getComputedStyle(n).borderRadius})),
+            navigation:[...document.querySelectorAll('nav[aria-label="Pioneer study sections"] .fc-button')].map(n=>({color:getComputedStyle(n).color,radius:getComputedStyle(n).borderRadius,marker:n.querySelector('.pioneer-trail-number')?.textContent,decorative:n.querySelector('.pioneer-trail-number')?.getAttribute('aria-hidden')==='true',height:n.getBoundingClientRect().height,clipped:n.scrollWidth>n.clientWidth})),
             rails:[...document.querySelectorAll('main > nav[aria-label="Pioneer study sections"] > div,main > .qa-section > .qa-container,main > .pioneer-visual-chapter > div,main > .pioneer-story-chapter,main > .pioneer-timeline-group,main > .section,main > .fc-resource-section,main > .fc-study-hub,#guided-reflections > div')].map(n => ({left:n.getBoundingClientRect().left,width:n.getBoundingClientRect().width})),
             features:[...document.querySelectorAll('.pioneer-story-card > .pioneer-source-links')].map(n => ({
               width:n.getBoundingClientRect().width,
@@ -72,7 +72,7 @@ function measure(selector) {
           };
         });
         assert(rhythm.pairs.length === 7 && rhythm.pairs.every(gap => gap < 3), 'Pioneer paired source footers must align');
-        assert(rhythm.navigation.length===9 && rhythm.navigation.every(n=>['rgb(244, 198, 111)','rgb(255, 224, 160)'].includes(n.color) && n.radius==='15px'), 'Pioneer navigation must preserve the outlined question-control appearance and gold text');
+        assert(rhythm.navigation.length===9 && rhythm.navigation.every((n,i)=>['rgb(244, 198, 111)','rgb(255, 224, 160)'].includes(n.color) && n.radius==='0px' && n.marker===String(i+1).padStart(2,'0') && n.decorative && n.height>=68 && !n.clipped), 'Pioneer chapter directory must preserve distinct numbered stops, accessible labels, gold text and unclipped touch targets');
         assert(rhythm.intros, 'Pioneer desktop introductions must share one alignment');
         assert(rhythm.gap >= 27 && rhythm.gap <= 29, 'Pioneer closing action buffer must remain 28px');
         assert(rhythm.rails.length >= 17 && rhythm.rails.every(r => Math.abs(r.left-rhythm.rails[0].left)<2 && Math.abs(r.width-rhythm.rails[0].width)<2), 'Pioneer body sections must share the Home/Answers standard outer rail');
@@ -82,6 +82,21 @@ function measure(selector) {
     for (const width of [1366,900,600,390]) for (const url of pages) await check(url, width);
     for (const width of [520,521,700,701,1000,1001,1050,1051]) {
       for (const url of ['pioneers.html','ask.html','general-conference.html','answers/stand-forever.html','answers/settle-this-in-your-hearts.html']) await check(url, width);
+    }
+    // Chapter labels must remain usable on narrow phones and with enlarged text.
+    for (const width of [320,390,701,1024]) for (const scale of [1,2]) {
+      await page.setViewportSize({width,height:900});
+      await page.goto(origin + '/pioneers.html', {waitUntil:'load'});
+      await page.evaluate(scale => { document.documentElement.style.fontSize = `${100*scale}%`; },scale);
+      const stops = await page.evaluate(() => ({
+        overflow:document.documentElement.scrollWidth>innerWidth,
+        links:[...document.querySelectorAll('nav[aria-label="Pioneer study sections"] .fc-button')].map(n=>({
+          clipped:n.scrollWidth>n.clientWidth+1 || n.scrollHeight>n.clientHeight+1,
+          height:n.getBoundingClientRect().height,
+          target:!!document.querySelector(n.getAttribute('href'))
+        }))
+      }));
+      assert(!stops.overflow && stops.links.length===9 && stops.links.every(n=>!n.clipped && n.height>=68 && n.target), `Pioneer chapter navigation overflow at ${width}px / ${scale}x text`);
     }
     // Prove that deleting the repair produces the owner's exact regression.
     await page.setViewportSize({width:1366,height:1000});
