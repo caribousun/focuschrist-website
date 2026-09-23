@@ -6,6 +6,16 @@ from urllib.parse import urlsplit, unquote, parse_qs
 import argparse, hashlib, json, re, subprocess, sys, xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
+BIBLE_STYLE = 'bible-together.css'
+BIBLE_STYLE_SHA256 = '128b2a54bf1a285497ea11d6c8e9040c55baa996ec75aa376b29463f854a9121'
+BIBLE_STYLE_OWNER = 'answers/bible-and-book-of-mormon-together.html'
+
+def reviewed_bible_style(data):
+    return hashlib.sha256(data).hexdigest() == BIBLE_STYLE_SHA256
+
+def bible_style_reference_allowed(relative, text):
+    return relative == BIBLE_STYLE_OWNER or BIBLE_STYLE not in text
+
 class Tags(HTMLParser):
     def __init__(self, text):
         super().__init__(); self.tags=[]; self.feed(text)
@@ -31,7 +41,13 @@ def main():
         duplicate=[good[0],dict(good[1],source_sha256='1'*64)]
         assert any('duplicate source_sha256' in e for e in unique_reviewed(duplicate,set()))
         assert any('rejected sha256' in e for e in unique_reviewed(good,{'2'*64}))
-        print('PASS regression fixtures: duplicate original and rejected image hashes are rejected'); return 0
+        reviewed_css = (ROOT/BIBLE_STYLE).read_bytes()
+        assert reviewed_bible_style(reviewed_css)
+        assert not reviewed_bible_style(reviewed_css + b'\n.fc-topic-unique-hero{height:999px}\n')
+        assert bible_style_reference_allowed(BIBLE_STYLE_OWNER, BIBLE_STYLE)
+        assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
+        assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
+        print('PASS regression fixtures: duplicate/rejected images, modified Bible study CSS and out-of-scope stylesheet references are rejected'); return 0
     errors=[]
     def check(ok,msg):
         if not ok: errors.append(msg)
@@ -124,6 +140,10 @@ def main():
     # Independently reviewed study-body and Answers-directory styles, no hero rules.
     settle_style = 'settle-heart-study.css'
     row_style = 'complete-card-rows.css'
+    # Independently reviewed Bible study-body layout only; no hero-rule exemption
+    # survives a byte change or consumption outside its single owning page.
+    check(reviewed_bible_style((ROOT/BIBLE_STYLE).read_bytes()),
+          'Bible study stylesheet differs from reviewed bytes')
     check(sha(ROOT/row_style)=='7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941',
           'Reviewed complete card row stylesheet changed')
     check(sha(ROOT/settle_style)=='ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2',
@@ -145,6 +165,8 @@ def main():
             continue
         check('anatomy-review' not in path.read_text(encoding='utf8'),
               'Visitor asset references standalone anatomy review tool: '+relative)
+        check(bible_style_reference_allowed(relative, path.read_text(encoding='utf8')),
+              'Bible study stylesheet referenced outside its owning page: '+relative)
         if relative != 'answers/what-is-the-book-of-mormon.html':
             check(bom_style not in path.read_text(encoding='utf8'),
                   'Book of Mormon stylesheet referenced outside its owning page: '+relative)
@@ -157,7 +179,7 @@ def main():
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(sha(ROOT/'site-system.css')=='b1dcd1c1bc1ab585f0803af31ad8d56789a4f2e07202c4bfb59ab0849656a0e1', 'Reviewed mobile polish stylesheet changed: site-system.css')
     check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)'+settle_style,':(exclude)'+row_style,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)'+settle_style,':(exclude)'+row_style,':(exclude)'+BIBLE_STYLE,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
     if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():
