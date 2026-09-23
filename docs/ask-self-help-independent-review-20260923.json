@@ -26,14 +26,37 @@
     "Root owns deployment and public/live verification"
   ],
   "files": {
-    "site-common.js": "1eeda5db152788d5634f594ad2e40307e4f01ad0be9fa2c25b353626839db1aa",
+    "site-common.js": "b25c4e943eb713b2a640696f7f8f98985d32c054f0be685e274e239e4b595f52",
     "study-intelligence-v3.js": "4390476a3915b789645b4e46ecedf47c41789326fab538fd39da6224a80553b6",
     "groq-proxy/src/index.js": "4b9a328caa1543699a80bdc50f6986fed432eceff50658398c5a12516395f889",
     "groq-proxy/src/self-help-support.js": "0b5aee1f901c2fdbc63eaf5e356d062b5dbf526c4fe5ff601c1d42cadfc46019",
     "groq-proxy/self-help-support.test.js": "f44d2565e7b1b30738be0a88e4f0876fe1c4d3bee0260612fa210bda102973e0",
     "tools/question_safety_runtime_qa.js": "e651a43676d0412ede6e73c2718dfb22e803e5b2063d5fe36923a192375b568f",
     "tools/fixtures/question-support-safety.json": "fe67eb25ec816a532ff9f9f46cf4859b3be1a758cd2d3d45a94b263c684d00b2",
-    "tools/study_intelligence_v3_runtime_qa.js": "9141ed2e917c93ec8675a9511594e0325da3d324b99dd524a0365f77840a6491"
+    "tools/study_intelligence_v3_runtime_qa.js": "9141ed2e917c93ec8675a9511594e0325da3d324b99dd524a0365f77840a6491",
+    "ask.html": "427a48eafe61807725eede3bfa4e2b9250e4ec08ec0be0908ada72d6b7fe560f",
+    "church-history.html": "24d49aeff83f76e55f6f0e824a32d50098be0f71708bd3f8a57b520ab4e1a7ff",
+    "pioneers.html": "64b9053ba10758d335077b896c637216a3f4b328f62ac4888b21756360631d3e",
+    "study-journey.js": "84bc846ac5bbf5dd032bbc12ba4c47f852615aae8a6f80fa50838e4d728757b8",
+    "study-source-router.js": "2cfa8fd73dc8923de051998c41500f066e5d931293cc130d70acae77473f6d1a",
+    "tools/hardened_experience_qa.py": "e1f03c0e68614b1e369032143324d71364e654e19ce5dff02cba3a8465cca254",
+    "tools/scripture_grounding_qa.py": "6cd17bb79c964e8f5791c7b1142aadf57e661e135bec196622eceb3b1607ea1b",
+    "tools/source_integrity_inventory.py": "a6c1e17ce973a0db3d21fef7f37f10af901a0d280263f71122f171e8a2b7d026",
+    "tools/study_intelligence_qa.py": "093b3ff352c53c7eff983199794ad2f903b45137597075f37f11fe2bde7bf9b1"
   },
-  "finalPolicyReview": "Final policy and scope reviewed after root harm-prevention addition. Source safeguards, low-risk exclusion, and narrowly retained genuine user followups remain intact."
+  "finalPolicyReview": "Final policy and scope reviewed after root harm-prevention addition. Source safeguards, low-risk exclusion, and narrowly retained genuine user followups remain intact.",
+  "cacheFollowupReview": {
+    "reviewer": "Fermi independent scoped cache-loader review",
+    "result": "pass",
+    "scope": "10-file uncommitted followup compared against HEAD; six production files identical after normalizing cache tokens only. No behavior changes. Four gates retain exact expected cache token and all prior non-cache markers.",
+    "token": "20260923-self-help-1",
+    "regex": "Alphanumeric/hyphen extraction supports new token; exact versions set equality remains required.",
+    "tests": [
+      "hardened_experience_qa.py PASS",
+      "scripture_grounding_qa.py PASS",
+      "source_integrity_inventory.py PASS:494 entries,3 verified,491 quarantined",
+      "study_intelligence_qa.py PASS"
+    ],
+    "limit": "No deployment or live provider verification claimed."
+  }
 }

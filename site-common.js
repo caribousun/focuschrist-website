@@ -845,7 +845,7 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260924-home-page-entry-1'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260923-self-help-1'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
