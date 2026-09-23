@@ -78,6 +78,99 @@ def journey_fixture_tests():
     assert journey_errors(css.replace('.content-wrap.article>h2{overflow-wrap:anywhere}', ''), consumers, {'example.html'})
 
 
+def media_body(css, query):
+    """Collect exact breakpoint blocks while retaining their nested rules."""
+    results = []
+    for match in re.finditer(r'@media\s*([^{}]+)\{', css):
+        if compact(match.group(1)) != compact(query):
+            continue
+        start, depth, end = match.end(), 1, match.end()
+        while end < len(css) and depth:
+            depth += (css[end] == '{') - (css[end] == '}')
+            end += 1
+        results.append(css[start:end - 1])
+    return '\n'.join(results)
+
+
+def boundary_errors(mission, history, pioneer, css):
+    errors = []
+    def nodes(text):
+        doc = Document()
+        doc.feed(text)
+        return list(doc.root.walk())
+    mission_nodes = nodes(mission)
+    for section_class in ('fc-missionary-purpose', 'fc-missionary-world'):
+        sections = [n for n in mission_nodes if n.has(section_class)]
+        if len(sections) != 1 or not any(n.has('fc-container--standard') for n in sections[0].children):
+            errors.append('Mission body section must retain standard rail: ' + section_class)
+        if any(n.has('fc-container--wide') for section in sections for n in section.walk()):
+            errors.append('Mission body must not return to 1240px wide rail: ' + section_class)
+    figures = [n for n in nodes(history) if n.tag == 'figure' and n.has('fc-history-art-panel')]
+    if len(figures) != 7 or any(n.has('fc-history-art-panel--offset-left') or n.has('fc-history-art-panel--offset-right') for n in figures):
+        errors.append('History must retain seven artwork panels, including the four corrected figures, without offset modifiers')
+    links = [n.attrs.get('href', '') for n in nodes(pioneer) if n.tag == 'link'
+             and urlsplit(n.attrs.get('href', '')).path == 'pioneer-story.css']
+    if len(links) != 1 or parse_qs(urlsplit(links[0]).query).get('v') != ['20260923-page-borders-1']:
+        errors.append('Pioneer boundary stylesheet version must be current and unique')
+    clean = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    def rule(query, selector, expected):
+        rules = re.findall(r'([^{}]+)\{([^{}]*)\}', media_body(clean, query))
+        actual = {}
+        for selectors, body in rules:
+            if compact(selector) in [compact(s) for s in selectors.split(',')]:
+                actual.update((k, compact(v)) for k, v in re.findall(r'([\w-]+)\s*:\s*([^;]+)', body))
+        for prop, value in expected.items():
+            if actual.get(prop) != compact(value):
+                errors.append('Pioneer ' + query + ' ' + selector + ' must retain ' + prop + ': ' + value)
+    phone = '(max-width:700px)'
+    rule(phone, 'body.fc-site main>.qa-section', {'padding-inline': '0'})
+    rail = {'width': 'min(var(--fc-standard,1040px),calc(100% - 2 * var(--fc-body-gutter,24px)))',
+            'max-width': 'var(--fc-standard,1040px)', 'margin-inline': 'auto'}
+    for selector in ('body.fc-site main>.qa-section>.qa-container', 'body.fc-site main>.section'):
+        rule(phone, selector, rail)
+    tablet = '(min-width:701px) and (max-width:1040px)'
+    card = 'body.fc-site .pioneer-art-grid--three>.pioneer-art-card:last-child'
+    rule(tablet, card, {'width': '100%', 'display': 'grid', 'grid-template-columns': 'repeat(2,minmax(0,1fr))', 'align-items': 'center'})
+    rule(tablet, card + '>a', {'min-width': '0'})
+    return errors
+
+
+def boundary_fixture_tests(mission, history, pioneer, css):
+    assert not boundary_errors(mission, history, pioneer, css)
+    assert boundary_errors(mission.replace('fc-container--standard fc-missionary-split', 'fc-container--wide fc-missionary-split'), history, pioneer, css)
+    assert boundary_errors(mission, history.replace('<figure class="fc-history-art-panel', '<figure class="fc-history-art-panel fc-history-art-panel--offset-left', 1), pioneer, css)
+    assert boundary_errors(mission, history, pioneer, css.replace('var(--fc-body-gutter, 24px)', 'var(--fc-body-gutter, 14px)'))
+    assert boundary_errors(mission, history, pioneer, css.replace('width: 100%;\n        display: grid;', 'width: 560px;\n        display: grid;'))
+    assert boundary_errors(mission, history, pioneer.replace('20260923-page-borders-1', 'stale'), css)
+
+
+def page_wrap_errors(html, css, stylesheet, selector):
+    errors = []
+    doc = Document()
+    doc.feed(html)
+    links = [n.attrs.get('href', '') for n in doc.root.walk() if n.tag == 'link'
+             and urlsplit(n.attrs.get('href', '')).path == stylesheet]
+    if len(links) != 1 or parse_qs(urlsplit(links[0]).query).get('v') != ['20260923-page-borders-1']:
+        errors.append(stylesheet + ': page boundary version must be current and unique')
+    clean = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    wraps = [compact(value) for selectors, body in re.findall(r'([^{}]+)\{([^{}]*)\}', clean)
+             if compact(selector) in [compact(s) for s in selectors.split(',')]
+             for value in re.findall(r'overflow-wrap\s*:\s*([^;]+)', body)]
+    if not wraps or any(value != 'anywhere' for value in wraps):
+        errors.append(stylesheet + ': ' + selector + ' must retain overflow-wrap: anywhere')
+    return errors
+
+
+def page_wrap_fixture_tests():
+    for stylesheet, selector in (('church-history.css', '.fc-history-page main'),
+                                 ('missionary.css', '.fc-missionary-page main')):
+        html = '<link rel="stylesheet" href="' + stylesheet + '?v=20260923-page-borders-1">'
+        css = selector + '{overflow-wrap:anywhere}'
+        assert not page_wrap_errors(html, css, stylesheet, selector)
+        assert page_wrap_errors(html, '', stylesheet, selector)
+        assert page_wrap_errors(html.replace('20260923-page-borders-1', 'stale'), css, stylesheet, selector)
+
+
 def contract(filename, selector, expected):
     rules = declarations(filename, selector)
     require(bool(rules), filename + ": missing " + selector)
@@ -148,9 +241,21 @@ for path in ROOT.rglob('*.html'):
         rail = 'jj-wrap' if page.startswith('jesus-christ/') else 'content-wrap'
         require(any(n.tag == 'main' and n.has(rail) for n in doc.root.walk()), page + ': standard journey content rail missing')
 ERRORS.extend(journey_errors((ROOT / 'jesus-journey.css').read_text(encoding='utf-8'), journey_consumers, journey_expected))
+boundary_inputs = [(ROOT / name).read_text(encoding='utf-8') for name in
+                   ('missionary.html', 'church-history.html', 'pioneers.html', 'pioneer-story.css')]
+ERRORS.extend(boundary_errors(*boundary_inputs))
+for page, stylesheet, selector in (
+        ('church-history.html', 'church-history.css', '.fc-history-page main'),
+        ('missionary.html', 'missionary.css', '.fc-missionary-page main')):
+    ERRORS.extend(page_wrap_errors((ROOT / page).read_text(encoding='utf-8'),
+                                  (ROOT / stylesheet).read_text(encoding='utf-8'), stylesheet, selector))
 if '--self-test' in sys.argv:
     journey_fixture_tests()
     print('Journey formatting fixtures passed: full-width valid, caps/override/stale/missing/extra/duplicate/missing-h1-wrap/missing-h2-wrap rejected')
+    boundary_fixture_tests(*boundary_inputs)
+    print('Boundary fixtures passed: valid, Mission wide rail, History offsets, Pioneer narrow gutter, 560px last card and stale CSS')
+    page_wrap_fixture_tests()
+    print('Page wrap fixtures passed: History and Mission valid, missing wrap and stale version rejected')
 
 if ERRORS:
     raise SystemExit("\n".join(ERRORS))

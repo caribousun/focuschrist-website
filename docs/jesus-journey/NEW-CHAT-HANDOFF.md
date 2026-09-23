@@ -1,5 +1,13 @@
 # Jesus Christ journey — new-chat handoff
 
+## Current checkpoint: journey formatting live; page borders next; Home authorized
+
+PR366 is merged and live at b745498047906924f9819b2c9d66f659f15ca7d4. PR QA35912149543, Pages35912555815 and main QA35912555403 passed; all79 changed public files match. PR365 art/chapters remain preserved. See parent work standard-formatting-release-20260923.json.
+
+Current branch fix/pioneer-history-mission-borders aligns Mission body widths, History artwork panels, Pioneer phone gutters and two tablet feature rows. Scoped text wrapping fixes enlarged-text overflow on Mission and History. All24 normal page/width checks and enlarged-text rechecks pass. All artwork/prose/identity/hero markup is preserved. Independent and browser receipts live in docs/page-borders-*-20260923.json. Publication is pending; parent work page-borders-release-20260923.json will hold subsequent release evidence.
+
+NEXT AUTHORIZED WORK: Wyatt requested a richer Home page with pictures and presentation-quality composition reflecting the site's growth and centered on Jesus Christ. Finish the border release, then continue Home enrichment. Preserve approved Christ likeness and hero framing, warm reverent language, original artwork ownership and connected study routes. This is a specific owner resumption; other pauses remain. Current State and START HERE were updated and read back with prior contents preserved. Master/foundation unchanged; old-thread automation remains PAUSED.
+
 ## Current owner request: standard formatting, then Pioneer, History and Mission
 
 PR365 is merged and live at6760161524fead32776ef01cc618e2fbf32681ae. FinalPRQA35908943328, Pages35909395142 andmainQA35909395130 passed;740/740normalpublicfilesmatch. Read parentwork pictured-chapters-release-20260923.json andpublic-pictured-chapters-verification-20260923.json.

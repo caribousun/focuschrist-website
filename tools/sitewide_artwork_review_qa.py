@@ -24,6 +24,12 @@ def reviewed_journey_style(data):
 def journey_style_reference_allowed(relative, text, owners):
     return relative in owners or JOURNEY_STYLE not in text
 
+BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '26991016b8be1b6a3dc8854d41e07a1b6d12cdbefaf7ac260ba4b1736ec74b1a'), '.fc-missionary-page main': ('missionary.css', 'f39e67bca6fba10bf03074e6939a6f714d90ec28b02d572adb45f59c87befc7d')}
+
+def reviewed_boundary_wrap(selector, body, data):
+    entry = BOUNDARY_WRAP_STYLES.get(selector.strip())
+    return bool(entry and re.sub(r"\s+", "", body) == "overflow-wrap:anywhere;" and hashlib.sha256(data).hexdigest() == entry[1])
+
 class Tags(HTMLParser):
     def __init__(self, text):
         super().__init__(); self.tags=[]; self.feed(text)
@@ -65,6 +71,12 @@ def main():
         assert not journey_style_reference_allowed('index.html', JOURNEY_STYLE, owners)
         assert not journey_style_reference_allowed('answers/another-page.html', JOURNEY_STYLE, owners)
         assert not journey_style_reference_allowed('shared.css', '@import "'+JOURNEY_STYLE+'";', owners)
+        for selector, (filename, _) in BOUNDARY_WRAP_STYLES.items():
+            data = (ROOT/filename).read_bytes()
+            assert reviewed_boundary_wrap(selector, 'overflow-wrap: anywhere;', data)
+            assert not reviewed_boundary_wrap(selector, 'overflow-wrap: anywhere; height: 9px;', data)
+            assert not reviewed_boundary_wrap('.wrong-page main', 'overflow-wrap: anywhere;', data)
+            assert not reviewed_boundary_wrap(selector, 'overflow-wrap: anywhere;', data + b'\nmain{height:9px}')
         print('PASS regression fixtures: duplicate/rejected images, modified Bible/journey CSS and out-of-scope stylesheet references are rejected'); return 0
     errors=[]
     def check(ok,msg):
@@ -181,7 +193,7 @@ def main():
     # separately from hero artwork. Permit these exact bytes, not later CSS edits.
     check(sha(ROOT/pioneer_ask_style)=='7f67cd77c23157019cd4cb609f2ff0b7151b9a503e143dd692337f41aed919d8',
           'Pioneer Ask stylesheet differs from reviewed bytes')
-    check(sha(ROOT/pioneer_style)=='e9f2a1b11634087fb939ab352c60d4412c9fce46c8d7eeec52a7d31ded1d9aaa',
+    check(sha(ROOT/pioneer_style)=='1255d1628391a932385df5d5667242abf48cff108ebd62938670606829168ad3',
           'Pioneer stylesheet differs from reviewed bytes')
     check(sha(ROOT/bom_style)=='9c1963e6981ec14114ee08da6230c26048ea491177936599d1e8050da4f6be9f',
           'Book of Mormon stylesheet differs from reviewed bytes')
@@ -219,6 +231,11 @@ def main():
             additions += '\n' + (ROOT/name).read_text(encoding='utf-8')
     for selector,body in re.findall(r'([^{}]+)\{([^{}]*)\}',re.sub(r'/\*.*?\*/','',additions,flags=re.S)):
         if selector.strip().startswith('@'):continue
+        if selector.strip() in BOUNDARY_WRAP_STYLES:
+            filename, _ = BOUNDARY_WRAP_STYLES[selector.strip()]
+            check(reviewed_boundary_wrap(selector, body, (ROOT/filename).read_bytes()),
+                  'Boundary text wrapping differs from exact reviewed selector/property/stylesheet bytes')
+            continue
         # Separate owner-authorized mobile opening and Conference banner review.
         # Exact file hashes prevent this scoped acceptance from admitting later edits.
         if selector.strip()=='body.fc-site.cfm-page .cfm-hero::before' and body.strip()=='background-position:center 25%':

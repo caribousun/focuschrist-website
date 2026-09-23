@@ -553,3 +553,6 @@ html[data-focuschrist-history-conversation-active] .fc-history-chat-shell {
     .fc-history-art-panel figcaption > a { transition: none; }
     .fc-history-chat { scroll-behavior: auto; }
 }
+
+/* Long words may wrap naturally when readers enlarge their text. */
+.fc-history-page main { overflow-wrap: anywhere; }

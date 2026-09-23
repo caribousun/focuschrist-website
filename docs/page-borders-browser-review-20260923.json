@@ -1,0 +1,57 @@
+{
+  "status": "local review complete; release pending",
+  "checked_at_utc": "2026-09-23T20:08:09.329793+00:00",
+  "base": "b745498047906924f9819b2c9d66f659f15ca7d4",
+  "branch": "fix/pioneer-history-mission-borders",
+  "pages": [
+    "pioneers.html",
+    "church-history.html",
+    "missionary.html"
+  ],
+  "verified_defects": [
+    "Mission two body containers were1240px vs1040px standard",
+    "History three artwork panels had54px offsets; removed four obsolete modifier classes including already-full print-shop panel",
+    "Pioneer phone Ask/journal gutters14px vs16px standard",
+    "Pioneer two tablet final cards capped560px inside772px row at820px",
+    "Long words overflowed History65px and Mission92px at320px and200percent text"
+  ],
+  "browser": {
+    "normal_widths": [
+      320,
+      390,
+      700,
+      701,
+      820,
+      1040,
+      1041,
+      1366
+    ],
+    "page_width_checks": 24,
+    "rail_mismatches": 0,
+    "horizontal_overflow": 0,
+    "history_panel_mismatches": 0,
+    "tablet_full_row_checks": "both complete at701/820/1040; three-column row retained1041/1366; phone stacking retained",
+    "enlarged_widths": [
+      320,
+      820,
+      1366
+    ],
+    "enlarged_checks": 9,
+    "post_wrap_targeted_rechecks": 4,
+    "final_overflow": 0,
+    "final_clipped_headings_controls": 0,
+    "visual_review": "Pioneer tablet feature and phone flow; History Joseph/Emma panel beside following panel; Mission worldwide panel and twelve-heading body walk. All19History and9Mission body images loaded in desktop review. Full-page DOM geometry checked across each page; screenshots are representative, not proof of each paragraph."
+  },
+  "preserved": "All artwork, identity pixels, captions, prose, references, hero markup and framing; card interiors and approved wide Mission introduction. Independent exact-comparison receipt saved.",
+  "regression": "22 layout fixtures plus exact stylesheet guard including six new wrapping negative cases; existing checks retained",
+  "local_checks": [
+    "artwork_details_qa",
+    "church_history_qa",
+    "unified_experience_qa38pages",
+    "pioneer_story_qa31studies29topics",
+    "static_content_audit122documents",
+    "sitewide_artwork_review_qa118pages842protectedimages",
+    "study_layout_uniformity_qa --self-test"
+  ],
+  "next_owner_work": "After verified border publication: enrich Home with meaningful pictures and presentation-quality Christ-centered composition reflecting the grown site. Preserve approved likeness and hero framing, warm reverent voice and connected studies."
+}

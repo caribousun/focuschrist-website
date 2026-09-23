@@ -701,3 +701,6 @@
 @media (max-width: 700px) {
   .fc-missionary-commission-artwork figcaption { position: static; padding: 16px; background: transparent; }
 }
+
+/* Long words may wrap naturally when readers enlarge their text. */
+.fc-missionary-page main { overflow-wrap: anywhere; }
