@@ -9,12 +9,20 @@ IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
 BIBLE_STYLE = 'bible-together.css'
 BIBLE_STYLE_SHA256 = '128b2a54bf1a285497ea11d6c8e9040c55baa996ec75aa376b29463f854a9121'
 BIBLE_STYLE_OWNER = 'answers/bible-and-book-of-mormon-together.html'
+JOURNEY_STYLE = 'jesus-journey.css'
+JOURNEY_STYLE_SHA256 = 'a800f26b24fa1c8e070b9c817cf21696b917b1147850673545523e17bce20148'
 
 def reviewed_bible_style(data):
     return hashlib.sha256(data).hexdigest() == BIBLE_STYLE_SHA256
 
 def bible_style_reference_allowed(relative, text):
     return relative == BIBLE_STYLE_OWNER or BIBLE_STYLE not in text
+
+def reviewed_journey_style(data):
+    return hashlib.sha256(data).hexdigest() == JOURNEY_STYLE_SHA256
+
+def journey_style_reference_allowed(relative, text, owners):
+    return relative in owners or JOURNEY_STYLE not in text
 
 class Tags(HTMLParser):
     def __init__(self, text):
@@ -47,7 +55,16 @@ def main():
         assert bible_style_reference_allowed(BIBLE_STYLE_OWNER, BIBLE_STYLE)
         assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
         assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
-        print('PASS regression fixtures: duplicate/rejected images, modified Bible study CSS and out-of-scope stylesheet references are rejected'); return 0
+        journey_css = (ROOT/JOURNEY_STYLE).read_bytes()
+        owners = {'answers/jesus-christ-latter-day-saint-beliefs.html','jesus-christ/before-bethlehem.html'}
+        assert reviewed_journey_style(journey_css)
+        assert not reviewed_journey_style(journey_css + b'\n.fc-topic-unique-hero{height:999px}\n')
+        assert journey_style_reference_allowed('jesus-christ/before-bethlehem.html', JOURNEY_STYLE, owners)
+        assert journey_style_reference_allowed('answers/jesus-christ-latter-day-saint-beliefs.html', JOURNEY_STYLE, owners)
+        assert not journey_style_reference_allowed('index.html', JOURNEY_STYLE, owners)
+        assert not journey_style_reference_allowed('answers/another-page.html', JOURNEY_STYLE, owners)
+        assert not journey_style_reference_allowed('shared.css', '@import "'+JOURNEY_STYLE+'";', owners)
+        print('PASS regression fixtures: duplicate/rejected images, modified Bible/journey CSS and out-of-scope stylesheet references are rejected'); return 0
     errors=[]
     def check(ok,msg):
         if not ok: errors.append(msg)
@@ -66,7 +83,8 @@ def main():
     if args.baseline_report:Path(args.baseline_report).write_text(json.dumps({'baseline':baseline,'images':preserved},indent=2),encoding='utf8')
     ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
     pages=[urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
-    check(len(pages)==42 and len(set(pages))==42,'Sitemap must expose all 42 unique canonical destinations')
+    expected_pages={p.relative_to(ROOT).as_posix() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('jesus-christ/**/*.html')] if p.name not in {'404.html','google3fa84a4b37862f36.html'}}
+    check(len(pages)==len(set(pages)) and set(pages)==expected_pages,'Sitemap must expose every canonical destination exactly once')
     parsed={}
     for page in pages:
         check((ROOT/page).is_file(),'Missing canonical page '+page)
@@ -144,6 +162,15 @@ def main():
     # survives a byte change or consumption outside its single owning page.
     check(reviewed_bible_style((ROOT/BIBLE_STYLE).read_bytes()),
           'Bible study stylesheet differs from reviewed bytes')
+    # The complete journey has its own independently reviewed reading layout.
+    # Bind this exception to exact bytes and the parent plus76 planned descendants.
+    check(reviewed_journey_style((ROOT/JOURNEY_STYLE).read_bytes()),
+          'Jesus journey stylesheet differs from reviewed bytes')
+    journey_pages=json.loads((ROOT/'docs/jesus-journey/pages.json').read_text(encoding='utf8'))
+    journey_owners={p['url'].lstrip('/') for p in journey_pages}
+    check(len(journey_owners)==76 and all(p.startswith('jesus-christ/') and p.endswith('.html') for p in journey_owners),
+          'Journey stylesheet ownership differs from76 nested study pages')
+    journey_owners.add('answers/jesus-christ-latter-day-saint-beliefs.html')
     check(sha(ROOT/row_style)=='7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941',
           'Reviewed complete card row stylesheet changed')
     check(sha(ROOT/settle_style)=='ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2',
@@ -167,6 +194,8 @@ def main():
               'Visitor asset references standalone anatomy review tool: '+relative)
         check(bible_style_reference_allowed(relative, path.read_text(encoding='utf8')),
               'Bible study stylesheet referenced outside its owning page: '+relative)
+        check(journey_style_reference_allowed(relative, path.read_text(encoding='utf8'), journey_owners),
+              'Journey stylesheet referenced outside its owning pages: '+relative)
         if relative != 'answers/what-is-the-book-of-mormon.html':
             check(bom_style not in path.read_text(encoding='utf8'),
                   'Book of Mormon stylesheet referenced outside its owning page: '+relative)
@@ -179,11 +208,13 @@ def main():
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(sha(ROOT/'site-system.css')=='b1dcd1c1bc1ab585f0803af31ad8d56789a4f2e07202c4bfb59ab0849656a0e1', 'Reviewed mobile polish stylesheet changed: site-system.css')
     check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
-    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',':(exclude)focused-answers.css',':(exclude)'+tool_style,':(exclude)'+bom_style,':(exclude)'+pioneer_style,':(exclude)'+pioneer_ask_style,':(exclude)'+settle_style,':(exclude)'+row_style,':(exclude)'+BIBLE_STYLE,':(exclude)site-system.css',':(exclude)site-header.css'],cwd=ROOT,text=True)
+    excluded_styles={'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
+    diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
-    if not subprocess.check_output(['git','ls-files','--','topic-heroes.css'],cwd=ROOT,text=True).strip():
-        additions += '\n' + (ROOT/'topic-heroes.css').read_text(encoding='utf-8')
+    for name in subprocess.check_output(['git','ls-files','--others','--exclude-standard','--','*.css'],cwd=ROOT,text=True).splitlines():
+        if name not in excluded_styles:
+            additions += '\n' + (ROOT/name).read_text(encoding='utf-8')
     for selector,body in re.findall(r'([^{}]+)\{([^{}]*)\}',re.sub(r'/\*.*?\*/','',additions,flags=re.S)):
         if selector.strip().startswith('@'):continue
         # Separate owner-authorized mobile opening and Conference banner review.

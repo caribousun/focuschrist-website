@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent original-detail eye-contact, identity and source-action review",
+  "entries": [
+    {
+      "key": "mc-withered-hand",
+      "version_key": "mc-withered-hand-v3",
+      "status": "pass",
+      "sha256": "ab04a8ad757bd605503fff7ce4ad4357f9e5f6d1c11e62583c851551c37702b1",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-64aeee6e-563d-46d8-aecd-a596374a5647.png",
+      "alt": "Jesus and a man look toward one another while the man holds up his restored hand in a synagogue.",
+      "caption": "Jesus restores a man's hand on the Sabbath. This imagined moment of personal gratitude follows the healing described in Luke; the exact expressions and eye contact are artistic interpretation.",
+      "refs": [
+        [
+          "nt/luke/6",
+          "Luke 6:6–10",
+          "6-10"
+        ]
+      ],
+      "findings": [
+        "Both heads and visible eyes now face one another at a compatible eye level; Christ's attention clearly meets the man's raised face.",
+        "The man's lifted restored hand remains visible and anatomically coherent. His attention has changed from the hand to Christ, so the caption must not say he is examining it.",
+        "Approved Christ identity remains recognizable, with natural photographic expression, hair and beard. The secondary man remains distinct."
+      ]
+    },
+    {
+      "key": "mm-temple-compassion",
+      "version_key": "mm-temple-compassion-v2",
+      "status": "pass",
+      "sha256": "97f00c0332b1bebdb36e22fe83fb10a39a8d075a1ef0cc409db7e77c5f2821ce",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6fa328a1-2d15-4331-a4ae-57eeaecd8040.png",
+      "alt": "Jesus faces a man in the temple court, with scattered coins, animals and other people behind them.",
+      "caption": "This imagined companion scene reflects on Christ's attention to people amid His cleansing of the temple. John records the temple action; this particular face-to-face exchange is an artistic reflection, not a separately recorded conversation.",
+      "refs": [
+        [
+          "nt/john/2",
+          "John 2:13–17",
+          "13-17"
+        ]
+      ],
+      "findings": [
+        "Christ's head is now inclined toward the opposite man and His eyes settle toward the man's eye/upper-face area; the former elevated gaze beyond him is corrected sufficiently to read as direct personal attention.",
+        "The recipient's visible eye faces Christ. This is a credible reciprocal encounter rather than a distant upward look.",
+        "Approved identity and sober compassionate expression remain recognizable. Hands, robe, temple setting and distinct secondary face remain coherent; no material new anatomy issue."
+      ]
+    }
+  ]
+}

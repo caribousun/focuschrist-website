@@ -33,7 +33,7 @@ for e,u in zip(entries,urls):
  if parts.scheme!='https' or parts.netloc!='focuschrist.com' or parts.query or parts.fragment:errors.append(f'Noncanonical sitemap URL: {u}')
  p=ROOT/(parts.path.lstrip('/') or 'index.html')
  if not p.is_file():errors.append(f'Missing sitemap destination: {u}');continue
- page=Page(p.read_text());seen.add(p.resolve())
+ page=Page(p.read_text(encoding='utf-8'));seen.add(p.resolve())
  if page.canonical!=[u]:errors.append(f'{p.name}: canonical and sitemap disagree')
  if not page.title.strip() or not page.meta.get('description','').strip():errors.append(f'{p.name}: missing search title/description')
  if 'noindex' in page.meta.get('robots','').lower():errors.append(f'{p.name}: sitemap page marked noindex')
@@ -47,7 +47,7 @@ for e,u in zip(entries,urls):
   except ValueError:errors.append(f'{p.name}: invalid structured data JSON')
  modified=e.findtext('s:lastmod',namespaces=ns)
  if modified and date.fromisoformat(modified)>datetime.now(timezone.utc).date():errors.append(f'{p.name}: future modification date')
-expected={p.resolve() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html')] if p.name not in ['404.html','google3fa84a4b37862f36.html']}
+expected={p.resolve() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('jesus-christ/**/*.html')] if p.name not in ['404.html','google3fa84a4b37862f36.html']}
 if expected!=seen:errors.append('Published content and sitemap coverage differ')
 robots=(ROOT/'robots.txt').read_text()
 if 'Sitemap: '+ORIGIN+'/sitemap.xml' not in robots:errors.append('Robots lacks canonical sitemap')

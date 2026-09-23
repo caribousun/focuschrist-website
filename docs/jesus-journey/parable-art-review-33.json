@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent exact original-resolution pixel/source review of wicked-tenants01-04; no import.",
+  "entries": [
+    {
+      "key": "wicked-tenants-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3e28d14-a0ce-49b2-ad1c-1732208e75e5.png",
+      "sha256": "2820ce29edacd4bbc71672c2ddc50683383664ee22b9e0ccc4f7852aecf950a9",
+      "status": "pass_with_caption_conditions",
+      "alt": "An older vineyard owner gestures toward vines, a stone tower and a winepress while two tenants listen at the gate.",
+      "caption": "The owner has prepared the vineyard before entrusting it to tenants. Its hedge, winepress and tower frame Jesus' story about the responsibility that follows receiving another's trust.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:33",
+          "33"
+        ]
+      ],
+      "findings": [
+        "Prepared enclosure, winepress channel/vat, tower and vineyard are visibly coherent; no modern trellis wires or contractual writing.",
+        "Owner and two tenants have distinct faces and body builds. Small-scale hands and sandals remain plausible; attentive exchange, photographic terrain and cloth.",
+        "Matthew21:33 supports prepared vineyard and leasing; exact architecture and people remain artistic reconstruction."
+      ]
+    },
+    {
+      "key": "wicked-tenants-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b7af382d-1dcb-4d66-a8c9-63378257d969.png",
+      "sha256": "dbb9e5e645136072ad38e9fce58d6a8831c7cd547215fa258b4f970f0a07011e",
+      "status": "pass_with_caption_conditions",
+      "alt": "A servant in blue walks away holding his upper arm while two tenants remain at the vineyard gate, one raising a refusing hand.",
+      "caption": "The first servant leaves empty-handed after the tenants mistreat him. Their refusal to return the vineyard's fruit turns entrusted responsibility into rejection.",
+      "refs": [
+        [
+          "nt/mark/12",
+          "Mark 12:2-3",
+          "2-3"
+        ]
+      ],
+      "findings": [
+        "Servant has empty hands, one supporting upper arm; no blood, execution, additional victims or weapon scene. Tenant refusing palm and servant hand/arm contacts anatomically coherent.",
+        "Tenant identities and gate/tower setting continue01; servant visibly distinct from owner. Gaze toward sore arm fits restrained aftermath.",
+        "Narrowed figure refs toMark12:2-3: first servant beaten and sent empty. Later servants in4-5 are not combined into this image."
+      ]
+    },
+    {
+      "key": "wicked-tenants-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3269d4d4-5036-4c40-a79c-d1658465603c.png",
+      "sha256": "ef256104bd31b9e22f137fc3e07dbee28e171d90ddf1d6463695ea2dc1835598",
+      "status": "pass_with_caption_conditions",
+      "alt": "A young man in a cream tunic and rust-colored mantle approaches a vineyard gate where two tenants look back toward him.",
+      "caption": "The owner's son approaches the vineyard after the servants have been rejected. His arrival brings the tenants' response to the owner's trust to its gravest test.",
+      "refs": [
+        [
+          "nt/mark/12",
+          "Mark 12:6-8",
+          "6-8"
+        ]
+      ],
+      "findings": [
+        "Short-haired clean-shaven son differs from Christ canonical likeness and earlier servant. Cream/rust clothing and walking limbs coherent; distant tenants retain identity.",
+        "Vineyard continuity preserved. Approach is inferred staging of the son being sent; no killing, weapon or invented execution detail appears.",
+        "Mark12:6-8 supplies sending and rejection; caption speaks of approach without claiming this frame shows the eventual killing."
+      ]
+    },
+    {
+      "key": "wicked-tenants-04",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bcb13e01-3527-423f-aeb7-bbb23ea76d53.png",
+      "sha256": "2264be36d0ee960c14070cc54bfecfa63d02788d29f8fef067c724eef42fe4a5",
+      "status": "revise",
+      "alt": "Three foreground listeners sit beneath a pale stone colonnade, an older man gesturing as the others attend toward an unseen speaker.",
+      "caption": "Jesus' listeners answer His question about what the vineyard owner will do. Their response recognizes that those entrusted with the vineyard must answer for how they have treated its owner and his messengers.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:40-41",
+          "40-41"
+        ]
+      ],
+      "findings": [
+        "Temple colonnade/listeners are outside the fictional vineyard, as required byMatthew21:40-41; unseen Jesus is not replaced by a generic visible figure.",
+        "Foreground middle and right men share conspicuously similar brow/eye spacing, nose, cheek and beard geometry. Different headwraps and chin-hand pose do not sufficiently separate their identities; recast one face for clear individuality.",
+        "Older left man distinct; gestures/hand-to-chin contact and cloth/light generally coherent. No sinister stereotypes or invented priestly insignia."
+      ],
+      "revision": "Recast right foreground listener with substantially different face shape, nose, eye spacing, beard pattern and hairline; keep attention, hand-to-chin anatomy, period clothing and all other scene content."
+    }
+  ]
+}

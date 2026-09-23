@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rt-patmos-vision-v3",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rt-patmos-vision",
+      "generationKey": "rt-patmos-vision-v3",
+      "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-patmos-vision-v3-20260923.png",
+      "sha256": "77a6bbb8bb248840e60a6ffa0b828ba2cf9e63fbb365c2b07254e553a577e63f",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Fear not; I am the first and the last",
+      "alt": "The risen Savior touches John's shoulder among seven golden lampstands.",
+      "caption": "John looks up as the risen Savior lays His hand upon him. In the vision's brightness, Christ speaks reassurance: He lives for evermore.",
+      "refs": [
+        [
+          "nt/rev/1",
+          "Revelation 1:9–18",
+          "9-18"
+        ]
+      ],
+      "findings": "V3 compared with v2 and actual canonical Christ/apostle references. John repaired toward mapped third-from-left identity: narrower nose/face, dark shorter beard, no Peter-like gray full beard; mature expression preserves recognizable John. Christ white head hair and beard, chest-level gold sash, seven lampstands, calm reciprocal gaze and shoulder touch retained. Exposed palm and wrist show healed marks; contact hand/palm naturally obscured. Photographic natural faces and cloth, no grotesque vision effects.",
+      "conditions": [
+        "This selected reassurance scene does not claim to reproduce every symbolic detail in Revelation1. John's precise age, coastline, lampstand design and postures are interpretation; maturity does not establish a numeric age.",
+        "Accept v3 only; retain earlier rejected versions. Technical review is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/church-history/melchizedek-priesthood.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/1?lang=eng"
+      ]
+    }
+  ]
+}

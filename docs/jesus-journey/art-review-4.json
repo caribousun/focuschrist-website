@@ -1,0 +1,39 @@
+{
+  "review_type": "independent_visual_candidate_review",
+  "scope": "Three original Christ candidates inspected directly at original detail and compared against the previously inspected approved Christ reference. No edits or generation performed.",
+  "owner_approval": false,
+  "candidates": [
+    {
+      "file": "exec-21a0881f-7d2a-434e-9368-30c0f5d8fba8.png",
+      "subject": "John 1 Nathanael and Philip encounter",
+      "technical_verdict": "pass_with_caption_conditions",
+      "likeness": "Christ is strongly recognizable against the approved reference. Nathanael has shorter curls, a narrower and more projecting facial profile and a shorter trimmed beard; Philip has graying beard and different face proportions. They are sufficiently distinguishable, although the overall dark-haired bearded casting is similar.",
+      "gaze_expression": "Christ and foreground listener have coherent directed conversational gaze. Foreground listener's surprise and hand-to-chest gesture suit recognition; Christ's warm smile is plausible. Background listener's gaze attends to Christ.",
+      "anatomy": "Christ's visible open hand and partial lower hand, and listener's hand at chest, are plausible. No evident extra digits or malformed limbs.",
+      "scene": "Three-person encounter supports the intended story. Do not claim Philip's exact position or the precise landscape is specified by John 1. Image should not suggest this is the earlier moment when Nathanael was alone under the fig tree.",
+      "caption_boundary": "Label as artistic depiction of Nathanael meeting Jesus after Philip's invitation."
+    },
+    {
+      "file": "exec-19f83cb7-29cb-4c57-b682-6470c9b5996a.png",
+      "subject": "Mark 12 widow's offering",
+      "technical_verdict": "pass_with_caption_conditions",
+      "likeness": "Christ remains recognizable against the approved reference. Other men's faces are mostly obscured or differently angled, with no visible competing Christ duplicate.",
+      "gaze_expression": "Christ directs His eyes toward a nearby disciple while explaining the offering, which is scene-coherent. Widow looks toward her hand and offering receptacle. No evident malformed pupil or conflicting eye direction.",
+      "anatomy": "Christ's open hand is plausible. Widow's hand and two small coins read as release into the receptacle; coins are momentarily airborne rather than inexplicably floating. Feet and overall posture are coherent.",
+      "scene": "Two coins and seated instruction distinguish the intended account. Elderly age, garment details, architectural setting, receptacle shape and decorative relief are artistic reconstruction rather than established details of Mark 12.",
+      "caption_boundary": "Describe the recorded small offering and Jesus's teaching; do not claim exact archaeological reconstruction of the treasury or widow's age."
+    },
+    {
+      "file": "exec-36f87401-1387-49fd-b925-c157e4ce6f79.png",
+      "subject": "Mark 10 rich man kneels before Jesus",
+      "technical_verdict": "revise_secondary_character_identity_before_use",
+      "likeness": "Christ's own likeness is strong. The rich man, however, reads as a younger or shorter-haired version of the same Christ casting: closely similar wavy brown hair, brow, long nose profile, cheek proportions and beard line. Shorter hair and blue costume do not sufficiently separate identities for a protected-likeness scene. Background disciples also use very similar casting, though too small for a definite duplicate judgment.",
+      "gaze_expression": "Both main figures have coherent reciprocal gaze. Christ's mild compassion and kneeling man's earnest attention suit the initial encounter before departure.",
+      "anatomy": "Visible hands and kneeling posture appear plausible. No blocking extra-digit or limb defect observed.",
+      "scene": "Kneeling man and Christ's invitation fit the earlier part of the encounter. Do not caption this frame as the man walking away sorrowful. Blue embroidered clothing is an artistic indication of means, not a recorded garment.",
+      "recommended_correction": "Keep Christ's identity and the encounter composition. Recast the rich man with clearly different facial structure, hair texture or length, beard style and age cues; avoid reproducing the Christ brow-nose-cheek combination. Give background disciples distinct identities where visible.",
+      "caption_boundary": "Identify an artistic depiction of the kneeling inquiry and invitation, before the subsequent sorrowful departure."
+    }
+  ],
+  "overall": "Nathanael and widow are technically usable candidates with honest captions. Rich-man candidate needs distinct secondary-character casting before use. No owner approval inferred."
+}

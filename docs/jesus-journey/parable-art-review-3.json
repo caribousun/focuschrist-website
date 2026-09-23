@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent parable source and image reviewer",
+  "scope": "Eight revised full-frame images independently viewed from the exact v2 generated paths. No automatic carry-pass from root review or earlier versions.",
+  "method": "Viewed every full image and assessed corrected defect, narrative stage, recurring character continuity, anatomy, object function and passage fit. SHA256 calculated from exact files.",
+  "summary": {
+    "passWithCaptionConditions": 8,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Only these v2 hashes pass; previous rejected hashes remain rejected.",
+    "Pass is source/visual review, not owner approval or final browser/crop acceptance.",
+    "Parable people and settings are illustrative; no exact historical reconstruction or literal Christ identity is claimed.",
+    "Grasslike replacements repair the conspicuous thistle problem, without claiming botanically exact darnel."
+  ],
+  "entries": [
+    {
+      "key": "wise-foolish-builders-02",
+      "generationKey": "wise-foolish-builders-02-v2",
+      "sha256": "6a5bd09ffeab109b2d33853d2ff394112cf49ab8b257ced0afe1893c91a56979",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the cited narrative stage with the stated interpretive and visual conditions.",
+      "visibleReview": "Calm weather and intact house now provide the intended distinct pre-storm stage. Sand directly contacts the walls; the low masonry course is part of the wall, not an exposed rock platform. No people or physical defect apparent.",
+      "conditions": [
+        "Do not claim excavated proof of hidden foundations; this is an illustrative sand setting.",
+        "The later comparison picture uses different house designs; do not call it an exact photographic before-and-after of this building."
+      ],
+      "recommendedTitle": "A house before the storm",
+      "alt": "An intact stone-and-plaster house stands on pale sand beside a river in clear weather.",
+      "caption": "The house looks sound while the weather is calm. Jesus places the foolish builder's house on sand, then describes the storm that reveals its weakness. The warning concerns hearing His words without doing them; a reassuring appearance cannot replace a faithful foundation.",
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:26–27",
+          "26-27"
+        ]
+      ]
+    },
+    {
+      "key": "wise-foolish-builders-03",
+      "generationKey": "wise-foolish-builders-03-v2",
+      "sha256": "64466cfe9f482c564b799fbe2be5e297e9f2b514f113dc71aef956584cfc728a",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the cited narrative stage with the stated interpretive and visual conditions.",
+      "visibleReview": "The right ruined house now sits on eroding sand rather than bedrock. Left dark rock remains elevated, but both are exposed to the same flood and terrain height no longer obscures the explicit material contrast. Coherent water, rubble and wall collapse.",
+      "conditions": [
+        "This is a single illustrative comparison, not a measured reconstruction.",
+        "Do not promise protection from all suffering or literal disaster to obedient people."
+      ],
+      "recommendedTitle": "Two foundations in the storm",
+      "alt": "Floodwater rushes between an intact house on dark rock and a collapsed house above eroding pale sand.",
+      "caption": "The same storm surrounds both houses, but their foundations differ. One remains on rock while the other has fallen beside washed-out sand. Jesus uses this contrast to distinguish hearing and doing His sayings from hearing without acting, inviting a response that endures beyond the easier days.",
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:24–27",
+          "24-27"
+        ]
+      ]
+    },
+    {
+      "key": "new-wineskins-02",
+      "generationKey": "new-wineskins-02-v2",
+      "sha256": "9e0ed2cb4c7d2d0f9f62aa30e1f9c84df2d7225cebf1c0ff0835eac1760c52ee",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the cited narrative stage with the stated interpretive and visual conditions.",
+      "visibleReview": "Folded leather and cord now close the lower port. One open filling mouth receives a continuous stream. Both hands support the heavy jug plausibly, without extra digits apparent. Ordinary fictional man.",
+      "conditions": [
+        "Do not claim fermentation is visible.",
+        "Do not identify this man as Jesus or use old/new to disparage Jewish people or scripture."
+      ],
+      "recommendedTitle": "New wine in a suitable skin",
+      "alt": "A man pours red wine from a clay jug into a leather wineskin whose lower neck is folded and tied shut.",
+      "caption": "The wine enters through the skin's open upper mouth while its lower opening is securely closed. Jesus says new wine belongs in new bottles, or skins. In the conversation about fasting, the image asks listeners to recognize what His presence requires rather than assume every familiar arrangement can remain unchanged.",
+      "refs": [
+        [
+          "nt/luke/5",
+          "Luke 5:33–39",
+          "33-39"
+        ]
+      ]
+    },
+    {
+      "key": "strong-man-02",
+      "generationKey": "strong-man-02-v2",
+      "sha256": "cef9f044ad3effc9eae3e05879ca4ecd81b9dbce6ecc5b655e36a842a1764b5c",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the cited narrative stage with the stated interpretive and visual conditions.",
+      "visibleReview": "Seated guard retains the earlier headcloth, striped mantle, beard and recognizable face. Standing clean-shaven blue-clad victor is unambiguously distinct. Limbs, hands and feet credible; no injury or active violence. Shield and short weapon lie beside the guard.",
+      "conditions": [
+        "Do not claim weapons are beyond reach; they are visibly near the seated guard.",
+        "Neither character is a literal physical portrait of Christ or Satan."
+      ],
+      "recommendedTitle": "The stronger one has overcome",
+      "alt": "A bearded guard sits with lowered eyes beside his shield and weapon while a different man in blue stands nearby.",
+      "caption": "The guard who once stood watch now sits without his weapons in hand. Jesus describes a stronger one overcoming the armed man and taking the armor in which he trusted. In context, the comparison answers opposition to Jesus' work of deliverance and directs attention to His authority over evil.",
+      "refs": [
+        [
+          "nt/luke/11",
+          "Luke 11:20–22",
+          "20-22"
+        ]
+      ]
+    },
+    {
+      "key": "growing-seed-03",
+      "generationKey": "growing-seed-03-v2",
+      "sha256": "124ffc7fdbefe5fe8e575e6664956939b8a524c70de9995ddc8789d1de3f9087",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the cited narrative stage with the stated interpretive and visual conditions.",
+      "visibleReview": "The visibly older gray-haired, gray-bearded farmer restores the sowing-to-harvest continuity. Natural purposeful expression, plausible fingers, sickle grip and stalk gathering. No extra foreground helper or younger substitute.",
+      "conditions": [
+        "Age, face and landscape remain illustrative choices.",
+        "Do not turn seasonal growth into a promised schedule for individual spiritual or material outcomes."
+      ],
+      "recommendedTitle": "The harvest has come",
+      "alt": "A gray-haired farmer gathers ripe grain in one hand and holds a curved sickle in the other.",
+      "caption": "The farmer returns to the field with a sickle when the grain is ready. Jesus' story moves from sowing through growth the farmer cannot explain to timely action at harvest. Trust in God's hidden work is joined here with readiness to do the work that the season requires.",
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:26–29",
+          "26-29"
+        ]
+      ]
+    },
+    {
+      "key": "wheat-tares-03",
+      "generationKey": "wheat-tares-03-v2",
+      "sha256": "bf751c417545004f519119802433a63054550d51f0d198564080cec659263962",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the cited narrative stage with the stated interpretive and visual conditions.",
+      "visibleReview": "Tall branching thornlike plants are replaced by slender stems and elongated grasslike seed heads. Owner's face, restraining hand and workers remain coherent. General botanical continuity restored, without an exact species certification.",
+      "conditions": [
+        "Do not claim this instruction excuses present harm or eliminates responsible protection of people.",
+        "Caption the source's judgment teaching without inviting readers to label neighbors as weeds."
+      ],
+      "recommendedTitle": "Let both grow until harvest",
+      "alt": "An older man raises an open hand toward two workers beside a field of grain and slender grasslike plants.",
+      "caption": "The owner stops the workers from pulling up the unwanted plants at once. Jesus explains the owner's concern: uprooting the tares could also uproot the wheat. The delayed separation expresses care for the crop; in His interpretation, the final harvest belongs to the end of the world and to God's appointed judgment.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:28–30, 39–43",
+          "28-30,39-43"
+        ]
+      ]
+    },
+    {
+      "key": "wheat-tares-04",
+      "generationKey": "wheat-tares-04-v2",
+      "sha256": "9a2f155c6a66b3a1f060c1582ff358d9a02bdfb5ecaadfe7dbe42b10506bdfcf",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the cited narrative stage with the stated interpretive and visual conditions.",
+      "visibleReview": "Thorny round seed heads are gone. Right-hand bundles now show thin stems and drooping grasslike heads, visually compatible with the earlier general unwanted-grass treatment. No people or fire are visible. Exact darnel morphology remains unverified.",
+      "conditions": [
+        "Do not say the picture shows burning or people sorting; neither is visible.",
+        "Use generic grasslike weed language for the pixels; source discussion may separately explain the Bible Dictionary's darnel identification."
+      ],
+      "recommendedTitle": "The harvest is separated",
+      "alt": "Full golden grain sheaves stand under a shelter beside separate bundles of thinner dried grasses.",
+      "caption": "The harvested plants now stand in separate bundles. Jesus' story ends with the tares gathered apart and the wheat brought into the barn. His explanation places the final separation under God's authority, encouraging trust in His judgment rather than a rush to decide another person's final worth.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:30, 39–43",
+          "30,39-43"
+        ]
+      ]
+    },
+    {
+      "key": "children-marketplace-02",
+      "generationKey": "children-marketplace-02-v2",
+      "sha256": "44fb2343cbafcc4f996208282724ab27f69b4003766050a8ca680a26bdebaab8",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the cited narrative stage with the stated interpretive and visual conditions.",
+      "visibleReview": "Five fully clothed foreground children, coherent hands and expressions. Three seated children repeat the earlier uninterested grouping and ordinary identities; changing which child leads is a permitted second game. Mouth and clasped hands support singing but cannot prove an audible lament. No distress, funeral or injury.",
+      "conditions": [
+        "Present this as an illustration of the lament comparison, not evidence of a recorded marketplace event.",
+        "Do not identify the clasped hands as prayer or invent a death/funeral."
+      ],
+      "recommendedTitle": "A second invitation refused",
+      "alt": "A girl sings with her hands clasped while another child listens and three children sit apart looking uninterested.",
+      "caption": "A solemn song receives little response from the seated children. Jesus pairs the unanswered lament with the earlier invitation to dance, exposing a refusal that finds fault with either approach. The comparison leads into the rejection of both John the Baptist and the Son of man, calling listeners to examine their willingness to receive God's messengers.",
+      "refs": [
+        [
+          "nt/luke/7",
+          "Luke 7:31–35",
+          "31-35"
+        ]
+      ]
+    }
+  ]
+}

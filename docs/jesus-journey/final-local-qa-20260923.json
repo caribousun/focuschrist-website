@@ -1,0 +1,87 @@
+[
+  {
+    "command": "python -m unittest discover -s tools -p test_jesus*.py",
+    "code": 0,
+    "output": ".................\n----------------------------------------------------------------------\nRan 17 tests in 0.122s\n\nOK\n"
+  },
+  {
+    "command": "python tools/build_jesus_parent.py --strict --check",
+    "code": 0,
+    "output": "Parent journey updated; original hero and study retained. strict=True. Publication and complete destination verification are separate.\n"
+  },
+  {
+    "command": "python tools/build_jesus_journey.py --strict --check",
+    "code": 0,
+    "output": "Built 76 nested studies; strict=True. Publication and semantic/visual verification are separate.\n"
+  },
+  {
+    "command": "python tools/jesus_journey_qa.py",
+    "code": 0,
+    "output": "Jesus journey release gate passed: all planned scenes, reviewed derivatives, one owner per original, complete descendant navigation and sitemap.\n"
+  },
+  {
+    "command": "python tools/jesus_discovery_qa.py",
+    "code": 0,
+    "output": "JOURNEY DISCOVERY PASS: 76 nested pages and 303 reviewed original pictures; stable sitemap, owning studies, chapter search and gallery routes. Drafts are not release-ready.\n"
+  },
+  {
+    "command": "python tools/discovery_qa.py",
+    "code": 0,
+    "output": "Discovery QA PASSED: 118 canonical pages, complete sitemap coverage, search/share metadata and valid structured data. Indexing and traffic require external evidence.\n"
+  },
+  {
+    "command": "python tools/static_content_audit.py",
+    "code": 0,
+    "output": "STATIC CONTENT AUDIT PASS: 122 documents (116 verified, 6 non-source-dependent)\n"
+  },
+  {
+    "command": "python tools/media_voice_qa.py",
+    "code": 0,
+    "output": "Media voice QA passed: 120 pages; 672 captions, 139 expanded details, 107 resource descriptions, 15 media introductions and 920 alt texts audited.\n"
+  },
+  {
+    "command": "python tools/sitewide_artwork_review_qa.py",
+    "code": 0,
+    "output": "{\n  \"canonical_pages\": 118,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": []\n}\n"
+  },
+  {
+    "command": "python tools/topic_artwork_uniqueness_qa.py",
+    "code": 0,
+    "output": "answers/aaronic-priesthood-restoration.html: 5 globally exclusive / 5 body artwork families\nanswers/are-latter-day-saints-christian.html: 5 globally exclusive / 5 body artwork families\nanswers/bible-and-book-of-mormon-together.html: 19 globally exclusive / 19 body artwork families\nanswers/death-of-a-child.html: 6 globally exclusive / 6 body artwork families\nanswers/divorce-and-faith.html: 6 globally exclusive / 6 body artwork families\nanswers/faith-in-jesus-christ-during-trials.html: 6 globally exclusive / 6 body artwork families\nanswers/god-our-heavenly-father.html: 6 globally exclusive / 6 body artwork families\nanswers/grief-and-faith.html: 6 globally exclusive / 6 body artwork families\nanswers/jesus-christ-latter-day-saint-beliefs.html: 21 globally exclusive / 21 body artwork families\nanswers/look-unto-me-doctrine-and-covenants-6-36.html: 6 globally exclusive / 6 body artwork families\nanswers/melchizedek-priesthood-restoration.html: 5 globally exclusive / 5 body artwork families\nanswers/prayer-and-personal-revelation.html: 5 globally exclusive / 5 body artwork families\nanswers/restored-church-of-jesus-christ.html: 5 globally exclusive / 5 body artwork families\nanswers/settle-this-in-your-hearts.html: 14 globally exclusive / 14 body artwork families\nanswers/stand-forever.html: 5 globally exclusive / 5 body artwork families\nanswers/what-happens-after-death.html: 23 globally exclusive / 23 body artwork families\nanswers/what-is-eternal-marriage.html: 7 globally exclusive / 7 body artwork families\nanswers/what-is-the-book-of-mormon.html: 44 globally exclusive / 44 body artwork families\nanswers/who-was-joseph-smith.html: 5 globally exclusive / 5 body artwork families\nanswers/why-families-are-important.html: 5 globally exclusive / 5 body artwork families\nanswers/why-latter-day-saints-build-temples.html: 5 globally exclusive / 5 body artwork families\ngeneral-conference.html: 5 globally exclusive / 5 body artwork families\n"
+  },
+  {
+    "command": "python tools/complete_card_rows_qa.py",
+    "code": 0,
+    "output": "PASS: discovered 38 complete-row consumers; rendered QA must also pass\n"
+  },
+  {
+    "command": "python tools/study_layout_uniformity_qa.py",
+    "code": 0,
+    "output": "STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; rendered geometry requires browser review\n"
+  },
+  {
+    "command": "python tools/topic_inline_scripture_qa.py",
+    "code": 0,
+    "output": "TOPIC INLINE SCRIPTURE QA PASS: Home, all19 topic destinations and all4 Featured Art bodies, 594 scripture links, canonical chapters, exact verse selections, no nested anchors\n"
+  },
+  {
+    "command": "python tools/topic_artwork_details_qa.py",
+    "code": 0,
+    "output": "TOPIC ARTWORK DETAILS QA PASS: 216 adapter pictures, 3 existing detail pictures, 12 expanded illustration panels, 22 page dependencies\n"
+  },
+  {
+    "command": "python tools/build_art_gallery.py --check",
+    "code": 0,
+    "output": "Art gallery inventory is current.\n"
+  },
+  {
+    "command": "python tools/build_site_search.py --check",
+    "code": 0,
+    "output": "SEARCH INDEX PASS: public pages, sections and artwork are current\n"
+  },
+  {
+    "command": "node tools/topic_artwork_onward_label_runtime_qa.js",
+    "code": 0,
+    "output": "Onward artwork label QA PASS: real nested card, source labels, plain/empty fallback and focus return\n"
+  }
+]

@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Talents scenes 01–04 reviewed at original detail for identity continuity, monetary depiction and source-specific action.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Unnamed parable characters and exact trade/container details are artistic visualization.",
+    "Technical source/visual review is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "talents-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "8af46854fafaadde02966e944fa72fa00566cea070979af31e05f0089277c7fe",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6e07ee7a-5884-48cd-a87d-78b91308b90c.png",
+      "recommendedTitle": "Resources entrusted to three servants",
+      "alt": "A seated master addresses three distinct servants beside three differently sized chests containing many coins.",
+      "caption": "Before leaving, the master entrusts his property to three servants, giving different amounts according to their ability. The chests picture substantial monetary resources, not five, two, and one individual coins.",
+      "findings": "Four distinct fictional faces; three servants differentiated by hair, age and clothing. Master and first servant show natural attention. Open palm, resting hands, chest lids and coins are coherent. Many coins in each chest avoid treating a talent as one coin.",
+      "conditions": [
+        "Do not claim visible coin counts, exact chest proportions or metal weights reproduce five, two and one talents.",
+        "Talents here are monetary resources; later applications to abilities should remain distinguished from that narrative meaning."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:14-15",
+          "14-15"
+        ]
+      ]
+    },
+    {
+      "key": "talents-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "6d86132ddacf8d203b50f72312cfc658036cd0f88fe99f65982692b19aee8e3f",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6d4fbdf5-c43c-4091-b7f2-0a4f75a572e9.png",
+      "recommendedTitle": "Putting the entrusted money to work",
+      "alt": "Two servants examine cloth at a market stall, one speaking with a seller while the other handles fabric beside a balance and weights.",
+      "caption": "The servants put what they have received to work. The cloth market pictures their trading; Jesus does not specify the merchandise or the particular transactions.",
+      "findings": "Curly-haired blue-clothed and bald moustached ochre-clothed servants preserve scene-01 identities. Seller is distinct. Cloth grips, conversational open palm and contact near balance weight are plausible. Balance pans suspend coherently; no claim of a completed precise weighing is supported.",
+      "conditions": [
+        "Merchandise, joint market setting and balance are illustrative details, not facts specified in Matthew.",
+        "Do not describe the image as proving a particular profit or exact weight."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:16-17",
+          "16-17"
+        ]
+      ]
+    },
+    {
+      "key": "talents-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "8c159b4eede3b34ede28e3d45337a5faacf237dd1c02d8e2a57f706cbdf2e112",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5f7fd78e-c6a2-423f-9a5c-0133eeeab044.png",
+      "recommendedTitle": "The money hidden in the ground",
+      "alt": "The young servant kneels beside a dug hole and holds an open chest of coins inside it, with a digging tool nearby.",
+      "caption": "The servant who received one talent hides his master's money in the ground. The open chest pictures the act of concealment, before the earth covers it.",
+      "findings": "Young clean-shaven green-clothed servant matches scene 01. Hands contact chest edges and lid coherently; chest rests in hole instead of floating. Kneeling posture, soil mound and nearby hoe are plausible. Many coins remain visible, avoiding a single-coin representation.",
+      "conditions": [
+        "Do not caption this as a fully covered chest or claim a specific emotional diagnosis.",
+        "Exact container, digging tool and location are imagined."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:18",
+          "18"
+        ]
+      ]
+    },
+    {
+      "key": "talents-04",
+      "status": "pass_with_caption_conditions",
+      "sha256": "20e4f9040ccb24e85d018a31a95b97f473785144a23c4f31021c267e47e07afe",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0f1a0b07-224d-4f41-8016-ff12b339dcf5.png",
+      "recommendedTitle": "The first servant gives his account",
+      "alt": "The master rests a hand on the blue-clothed servant's shoulder as the servant speaks beside open coin chests; another servant waits behind.",
+      "caption": "The servant who received five talents reports what he has gained. His master commends his faithfulness. This scene focuses on their exchange rather than combining all three servants' accounts.",
+      "findings": "Master's white hair and burgundy wrap, first servant's curls and blue tunic, and waiting servant's bald head and ochre tunic preserve continuity. Reciprocal gaze, shoulder contact, speaking hands and waiting hands are natural. Chests contain multiple coins but do not establish an exact doubled value.",
+      "conditions": [
+        "Do not assign every visible chest to a separate account or claim visible coin counts prove the reported increase.",
+        "Shoulder gesture is artistic interpretation of commendation."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:19-21",
+          "19-21"
+        ]
+      ]
+    }
+  ]
+}

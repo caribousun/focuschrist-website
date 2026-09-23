@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "file": "answers/bible-and-book-of-mormon-together.html",
+      "before_sha256": "904094d2857cc17df2bbc73badc4c8877028bf59bb4dd96224e842706c24d06c",
+      "after_sha256": "d33903428450cf4826b6aaea8b42a39155db3b48d99fbef0d61c9973e6c87f88",
+      "normalized_content_unchanged": true
+    },
+    {
+      "file": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "before_sha256": "03ec9d1ec6ca4f3879114922913d5653655bbf459d083f51abda104043453a97",
+      "after_sha256": "7c0909e51fa5549913405a993b3cf14e2d5a637f6048ed26847c28dae030a33f",
+      "normalized_content_unchanged": true
+    },
+    {
+      "file": "art-gallery.json",
+      "before_sha256": "a59cf29ee678fe68da311e8211df7cbbc820f43398c2bed70c4b3df2c65eb490",
+      "after_sha256": "7b53e424925e95de585b189ff32fca3f5fd8df80b520eeea85db5b64bf4ad14d",
+      "normalized_content_unchanged": true
+    },
+    {
+      "file": "site-search-index.json",
+      "before_sha256": "46157d2aadeb86fc504068ce3f1ad2e7c88a87a72a5fb3095b6b8a5d324e37b4",
+      "after_sha256": "eba511e60a267614336920ccfb31430e0386f63d0b973e1d904576ddfa8e702e",
+      "normalized_content_unchanged": true
+    },
+    {
+      "file": "sitemap.xml",
+      "before_sha256": "ebbacfe3090e78b524320d72f6e88fcb92cdf3deb9efcc133d135b231bc6fdb9",
+      "after_sha256": "027d48bfa54fb0139f1dcfb18fbc4fcede93359017b53dea1890045969b0c183",
+      "normalized_content_unchanged": true
+    },
+    {
+      "file": "tools/build_art_gallery.py",
+      "before_sha256": "1011533851df63e79289d9d9f83c750a5fff416138e8f260f3c974a23ac8630b",
+      "after_sha256": "aafe103b2e7a276df0851a1bad9949fc73c9824f12d7eae07f52e0fca0d81bf5",
+      "normalized_content_unchanged": true
+    },
+    {
+      "file": "tools/discovery_qa.py",
+      "before_sha256": "e45eee1ada8a175e7cddcc68eda74529aac23235b8a911bcea1d8550dd5a51e5",
+      "after_sha256": "54794770c205a0426fa05e246831894138f886b42cb23ab14744864b16d9d81a",
+      "normalized_content_unchanged": true
+    }
+  ],
+  "immutable_records_changed": false,
+  "writers_hardened": [
+    "build_jesus_discovery.py",
+    "build_site_search.py",
+    "build_jesus_parent.py",
+    "build_jesus_journey.py"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "scope": "Editorial source-label repair only; exact accepted original hashes, review bindings and verse destinations preserved. Historical batches/reviews unchanged. Batch 63 prevents prepare replay from restoring corrupted labels.",
+  "cause": "Prior source labels were decoded through Windows cp1252 once or twice; existing regression checked template characters, not input labels.",
+  "changes": [
+    {
+      "key": "come-and-see",
+      "before": "John 1:35Ã¢â‚¬â€œ42",
+      "after": "John 1:35–42",
+      "path": "nt/john/1",
+      "verses": "35-42"
+    },
+    {
+      "key": "modern-neighbor",
+      "before": "Matthew 25:35Ã¢â‚¬â€œ40",
+      "after": "Matthew 25:35–40",
+      "path": "nt/matt/25",
+      "verses": "35-40"
+    },
+    {
+      "key": "bb-abram-stars",
+      "before": "Genesis 15:1â€“6",
+      "after": "Genesis 15:1–6",
+      "path": "ot/gen/15",
+      "verses": "1-6"
+    },
+    {
+      "key": "bb-burning-bush",
+      "before": "Exodus 3:1â€“6",
+      "after": "Exodus 3:1–6",
+      "path": "ot/ex/3",
+      "verses": "1-6"
+    },
+    {
+      "key": "bb-tent-cloud",
+      "before": "Exodus 33:7â€“11",
+      "after": "Exodus 33:7–11",
+      "path": "ot/ex/33",
+      "verses": "7-11"
+    },
+    {
+      "key": "bb-stones-prepared",
+      "before": "Ether 3:1â€“5",
+      "after": "Ether 3:1–5",
+      "path": "bofm/ether/3",
+      "verses": "1-5"
+    },
+    {
+      "key": "bb-philip-isaiah",
+      "before": "Acts 8:27â€“35",
+      "after": "Acts 8:27–35",
+      "path": "nt/acts/8",
+      "verses": "27-35"
+    },
+    {
+      "key": "mc-siloam-washing",
+      "before": "John 9:6â€“7",
+      "after": "John 9:6–7",
+      "path": "nt/john/9",
+      "verses": "6-7"
+    },
+    {
+      "key": "mc-official-servants",
+      "before": "John 4:50â€“53",
+      "after": "John 4:50–53",
+      "path": "nt/john/4",
+      "verses": "50-53"
+    },
+    {
+      "key": "rt-persuasion",
+      "before": "Doctrine and Covenants 121:41â€“44",
+      "after": "Doctrine and Covenants 121:41–44",
+      "path": "dc-testament/dc/121",
+      "verses": "41-44"
+    },
+    {
+      "key": "rt-spirit-messengers",
+      "before": "Doctrine and Covenants 138:18â€“20",
+      "after": "Doctrine and Covenants 138:18–20",
+      "path": "dc-testament/dc/138",
+      "verses": "18-20"
+    },
+    {
+      "key": "rt-spirit-messengers",
+      "before": "Doctrine and Covenants 138:29â€“37",
+      "after": "Doctrine and Covenants 138:29–37",
+      "path": "dc-testament/dc/138",
+      "verses": "29-37"
+    },
+    {
+      "key": "rt-sacrament-preparation",
+      "before": "Doctrine and Covenants 20:75â€“79",
+      "after": "Doctrine and Covenants 20:75–79",
+      "path": "dc-testament/dc/20",
+      "verses": "75-79"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Ten-virgins scene 01 v2 compared at original detail with rejected original.",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Only this v2 hash passes as a working continuity reference; review 40's original remains rejected.",
+    "Technical review does not establish owner approval."
+  ],
+  "entries": [
+    {
+      "key": "ten-virgins-01",
+      "generationKey": "ten-virgins-01-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "db041f727c2b899900f8cbc2fefcf068547ff1049f979cd041d1c3d9f14eb226",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-226c28d1-98ff-4036-ac54-63f59713bfe5.png",
+      "recommendedTitle": "Ten women with their lamps",
+      "alt": "Ten distinct women, five seated and five standing, hold lit oil lamps outside a stone building at dusk.",
+      "caption": "Ten women gather with their lamps to meet the bridegroom. The opening of Jesus' parable brings them together before the delay reveals the difference in their preparation.",
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:1",
+          "1"
+        ]
+      ],
+      "findings": "Exactly ten women and ten handheld lit lamps remain. Faces now vary clearly in apparent adult age, jawline, nose, cheeks, complexion, hair and expression. Former repeated-model effect is corrected. Hands, lamps, seated/standing anatomy and photographic setting remain coherent. Some look toward the road while seated neighbors converse, fitting an opening gathering rather than a staged uniform gaze.",
+      "conditions": [
+        "Use this actual v2 image, not the rejected original, for subsequent character continuity.",
+        "Do not infer which five are wise/foolish merely from seated/standing placement; explicitly fix their identities and oil-vessel preparation in later scenes.",
+        "Age and facial diversity are artistic choices, not precise ages or biographies supplied by the text."
+      ],
+      "continuityMapLeftToRight": [
+        "Seated blue robe: fuller face, dark hair, warm broad smile.",
+        "Seated burgundy robe: slender younger adult face, long nose, dark hair.",
+        "Seated olive robe: older gray-haired woman, lined face, gesturing free hand.",
+        "Seated cream robe and mauve wrap: darker complexion, short dark curls.",
+        "Seated blue robe and beige scarf: mature angular face and dark hair.",
+        "Standing cream robe and blue wrap: taller slender woman, long face and dark hair.",
+        "Standing ochre robe: short curly brown hair, lined fairer face.",
+        "Standing mauve robe: angular middle-aged face, dark hair.",
+        "Standing olive robe: fuller dark-complexioned face and smile.",
+        "Standing cream robe and brown wrap: older narrow face with gray hair."
+      ]
+    }
+  ]
+}

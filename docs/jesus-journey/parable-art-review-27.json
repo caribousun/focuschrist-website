@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Unmerciful servant scene 05 viewed at original detail beside scene 01 continuity reference.",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Parable characters are unnamed imagined figures; the king is not a literal portrait of God.",
+    "Technical source/visual pass is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "unmerciful-servant-05",
+      "sha256": "4eccc6af7c5a20ed243f7822743b211702b99ca5de054cb495c76b10ed1b5711",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e6f10d42-013c-416d-986b-e375dd84f8f5.png",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The king confronts the servant",
+      "alt": "A king in a purple robe stands before a servant with clasped hands and addresses him with an open palm.",
+      "caption": "The servant stands before the king again. His master recalls the mercy he received and asks why he did not show compassion to his fellow servant. The confrontation brings the story's central failure into view: mercy received had not become mercy given.",
+      "refs": [
+        [
+          "nt/matt/18",
+          "Matthew 18:32-33",
+          "32-33"
+        ]
+      ],
+      "findings": "King's dark swept-back hair, beard, circlet and purple/gold robe match scene 01. Debtor's tight curls, profile, beard and rough taupe clothes preserve his identity distinctly from the king. King's lowered gaze meets debtor's upward eyes. Grave expression and uneasy listening suit the confrontation; no generic smiles or violence. Open palm, relaxed hand, clasped debtor hands and standing anatomy are coherent. Detailed skin, cloth and light remain photographic. Background guards keep weapons idle. Standing confrontation is distinct from the earlier kneeling plea.",
+      "conditions": [
+        "Matthew 18:32–33 supplies the recall and rebuke; exact posture, expressions, clothing and palace arrangement are artistic interpretation.",
+        "Do not identify the king as a portrait of God or claim punishment is shown here."
+      ]
+    }
+  ]
+}

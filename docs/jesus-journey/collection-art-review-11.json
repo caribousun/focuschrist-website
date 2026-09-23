@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Four exact stewardship originals viewed at original detail.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Fictional modern applications; no Christ or documentary backstory.",
+    "Observed actions are separated from proposed spiritual reflection and unknown outcomes.",
+    "Technical pass is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "collection-stewardship-05",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d6c90f9c-c1ef-44ff-9b25-8a92ee5d6a63.png",
+      "sha256": "b2d4b2bfc96104c697bff9557839d74bcc42ec3eb5b15198f9f3d35a6be3955f",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Planning together",
+      "alt": "Three adults discuss a board of colored notes; one points from her wheelchair while another moves a note and a third holds a tablet.",
+      "caption": "Each participant brings attention to the shared plan. This imagined application connects responsible stewardship with listening to the people who will carry out the work. The faithful steward's care invites us to consider both a task and those who depend on it.",
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:42-44",
+          "42-44"
+        ]
+      ],
+      "findings": "All three have active roles. Pointing, note grip and tablet support coherent; wheelchair user participates directly without being handled. No clear text on notes. Photographic faces and natural eye lines.",
+      "conditions": [
+        "Do not claim fair workload allocation or agreement has already been achieved.",
+        "No hidden disability needs or coordinator status inferred from appearance."
+      ]
+    },
+    {
+      "key": "collection-stewardship-06",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7d0b6819-7771-43e2-b6de-36084aa43ab3.png",
+      "sha256": "2fa807d40efdc40c83121f7bfb3d63531768da650f4a9ce75c0acfbe66aa1cc0",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Care when the room is quiet",
+      "alt": "A man kneels to roll a dark floor mat in a hall with stacked chairs and stored equipment.",
+      "caption": "The room is quiet while the work of putting things away continues. This imagined scene can prompt reflection on service that receives little attention. Alongside Jesus' teaching about duty, it invites willingness to finish a responsibility without making recognition its condition.",
+      "refs": [
+        [
+          "nt/luke/17",
+          "Luke 17:7-10",
+          "7-10"
+        ]
+      ],
+      "findings": "Hands press on roll coherently; cylindrical layers connect with loose mat below. Separate interlocking panels stacked nearby. Knee and foot positioning plausible. Flexible mat can curl; no impossible solid slab claimed. No other person visible.",
+      "conditions": [
+        "Do not assert nobody is anywhere nearby or that all remaining work is finished.",
+        "Do not claim a specified dismantling method for a particular mat product."
+      ]
+    },
+    {
+      "key": "collection-stewardship-07",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c71d4000-048a-46c2-b6ba-ffe4c490fd58.png",
+      "sha256": "65ef4f1f5042158fa7e69b4793bcbe03cc36439b57fbc87d0d2cf63ec7244b6d",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Appreciating another contribution",
+      "alt": "Four adults sit around a planning drawing as an older man gestures warmly toward a woman holding a pen.",
+      "caption": "Warm attention is given to another participant at the table. In this imagined application, appreciation makes room for a contribution without turning service into a contest. The laborers-in-the-vineyard story invites examination of resentment when someone else receives generosity.",
+      "refs": [
+        [
+          "nt/matt/20",
+          "Matthew 20:1-16",
+          "1-16"
+        ]
+      ],
+      "findings": "Distinct faces and reciprocal eye contact; open hand, pen grip and resting hands credible. Drawing visible but precise project and authorship unproved. Photographic skin and posture natural.",
+      "conditions": [
+        "Newcomer, experience level, praise and authorship belong only to an explicitly imagined example.",
+        "Do not claim a payment decision or completed fair distribution."
+      ]
+    },
+    {
+      "key": "collection-stewardship-08",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-09e20d5b-0705-4564-9964-c79a4672d929.png",
+      "sha256": "b388d10f8bd6965f613760a8aa68668677ebd11d515835fecde1115363c51b14",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Considering what can be shared",
+      "alt": "A man holds a hammer and a blue clamp over a wooden box containing hand tools in a workshop.",
+      "caption": "Tools are being gathered and considered. This imagined scene offers a question beside the rich fool's story: what might our possessions be for beyond keeping them to ourselves? The visible sorting begins that reflection without claiming a donation has already taken place.",
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:16-21",
+          "16-21"
+        ]
+      ],
+      "findings": "Hammer head joins wood handle plausibly; claw shown in side profile, not an obvious missing or fused extra head. Blue clamp has coherent jaw housing, pad and bar, partly occluded by box tools. Both hand grips natural; box supports contents. No active hammer strike near fingers.",
+      "conditions": [
+        "Do not claim donation, recipient, transfer or ownership change is completed.",
+        "Avoid claiming tool condition has been professionally inspected or every tool is spare."
+      ]
+    }
+  ]
+}

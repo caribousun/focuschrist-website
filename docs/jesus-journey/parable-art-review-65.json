@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Doorkeeper01–03 exact-original review for continuity, distinct assigned-work/watch/household actions, anatomy, contact and Mark13:34–37 source boundaries.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Unnamed figures illustrate Jesus' comparison; pictured specific tasks are artistic choices."
+  ],
+  "entries": [
+    {
+      "key": "doorkeeper-01",
+      "generationKey": "doorkeeper-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "63d3c52a79e3c0b01bdeaafc39fdf690d8102578e167a15f2b553ab3e1b130a9",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-062dff49-acb2-4145-8ed2-89b1d2ea5f06.png",
+      "recommendedTitle": "Each receives work to do",
+      "alt": "A bald, gray-bearded householder speaks with open hands to a young man and two other household workers standing at the doorway with linen and a basket.",
+      "caption": "Jesus compares watchfulness to a man leaving his house and giving each servant work to do. He also commands the doorkeeper to keep watch.",
+      "refs": [
+        [
+          "nt/mark/13",
+          "Mark 13:34",
+          "34"
+        ]
+      ],
+      "findings": "Distinct bald gray-bearded master/olive wrap, young dark-curled clean-shaven doorkeeper/light tunic/black sash, gray-curled bearded worker/brown and woman/rust headcloth. Listener attention and master palms credible; folded hands, linen hold and basket support coherent. Natural skin, textiles and doorway materials.",
+      "conditions": [
+        "Objects illustrate household work; Mark does not specify linen handling or carrying baskets.",
+        "No precise household size, biography or narrated departure ceremony is established."
+      ]
+    },
+    {
+      "key": "doorkeeper-02",
+      "generationKey": "doorkeeper-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "b929672cda3c65b2cfc3d35e6374b1c2c76f2fe50434058866ddcd3b1d36e6a2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cff4b0e5-9240-4099-96ff-6ac975968e34.png",
+      "recommendedTitle": "Keeping watch at the door",
+      "alt": "The young doorkeeper rests a hand on the open wooden door and looks out into a darkening lane, with an oil lamp burning on a shelf beside him.",
+      "caption": "The doorkeeper watches because the time of the master's return is unknown. The open doorway pictures readiness, without showing that the master has arrived.",
+      "refs": [
+        [
+          "nt/mark/13",
+          "Mark 13:34-35",
+          "34-35"
+        ]
+      ],
+      "findings": "Young face, curls, tunic and black sash match01. Hand contacts door coherently, hanging hand natural; outward gaze appropriate to watch rather than absent interpersonal contact. Shelf lamp rests physically on stone with flame away from nearby cloth; night lighting photographic.",
+      "conditions": [
+        "No visitor or returning master is visible; do not infer arrival from his outward gaze.",
+        "Exact time of night, lamp and open-door arrangement are illustrative."
+      ]
+    },
+    {
+      "key": "doorkeeper-03",
+      "generationKey": "doorkeeper-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "54773604585542f1784818745701bce7b490825dcb7d5ccd4f89f980c1b7cd4d",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-459d6112-3dfb-4eaf-981b-229f011275de.png",
+      "recommendedTitle": "Faithful work while watching",
+      "alt": "A woman folds linen at a table, a gray-haired man handles a large jar on a shelf, and the young doorkeeper looks out through the open doorway.",
+      "caption": "The household's work continues while the doorkeeper remains attentive. Folding linen and tending stored vessels illustrate the work entrusted to each servant as Jesus calls all His listeners to watch.",
+      "refs": [
+        [
+          "nt/mark/13",
+          "Mark 13:34–37",
+          "34-37"
+        ]
+      ],
+      "findings": "Allthree workers retain01 faces, clothing and roles; doorkeeper also matches02. Cloth grips, jar contact with both hands, shelf support, door palm and standing anatomy plausible. Task-directed gazes fit respective work. Lamps on table and hanging support physically credible; natural photographic texture. Distinct broader household action rather than repeating solitary watch only.",
+      "conditions": [
+        "Linen folding and vessel handling are imagined examples, not tasks specifically named by Mark.",
+        "No promise of reward, completed arrival or exact length of waiting is shown.",
+        "Lamp placement is an illustrative scene, not a claim of a certified safe household arrangement."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "status": "pass_with_known_placeholder_condition",
+  "checks": {
+    "eighteenExactCanonicalPlacementsVerified": true,
+    "allPriorProseReferencesQuestionsLinksPreserved": true,
+    "allOtherPagesAndPlanEntriesUnchanged": true,
+    "allArtworkKeysAndCountsPreserved": true,
+    "placementEditsOnlySectionIdAfterParagraph": true,
+    "moteBeamCorrectionOnlySourceSceneDescriptionAndGenerationPrompt": true
+  },
+  "moteBeamFraming": "Unlabelled symbolic still life; no embedded text or literal eye injury. Matthew7:3-5 reference unchanged.",
+  "knownPlaceholderCondition": "Plan title/alt/caption still say labeled, as explicitly recorded in framing receipt. Accepted reviewed metadata must replace these before rendering/import; this check does not certify those placeholders for visitor use.",
+  "scope": "Read-only canonical model verification against both placement and framing snapshots; no builds/imports/edits.",
+  "findings": []
+}

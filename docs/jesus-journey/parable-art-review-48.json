@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Good-Samaritan 07v2 and 08 viewed at original detail for corrected gaze, two-coin count, continuity and Luke 10:34–35.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical source/visual review is not owner approval or final browser acceptance.",
+    "Rejected original scene 07 is not an accepted duplicate canonical-key entry."
+  ],
+  "entries": [
+    {
+      "key": "good-samaritan-07",
+      "generationKey": "good-samaritan-07-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "d8d9156ac97c159c34504267a649335f0ef5db535ced762baf6ba197162dcd07",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-434d5461-93b0-4375-9c3f-543e157fffc2.png",
+      "recommendedTitle": "Care continues at the inn",
+      "alt": "The Samaritan holds a cup beside the injured traveler on a bed, meeting his gaze while an older innkeeper stands nearby.",
+      "caption": "At the inn, the Samaritan remains beside the injured man and cares for him. The cup and reassuring touch picture that continuing attention, carrying mercy beyond the roadside.",
+      "findings": "Helper now looks directly down toward the traveler's upturned eyes; reciprocal attention is credible. Cup grip, shoulder contact and resting patient hands are coherent. Injuries remain restrained and non-graphic. Photographic skin, fabric and room materials; older gray-haired blue-clothed innkeeper is clearly established in background.",
+      "conditions": [
+        "Only this v2 hash passes; original scene 07's rejected upward/away gaze remains rejected.",
+        "Cup and shoulder touch are artistic details of care, not separately specified acts in Luke 10:34."
+      ],
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:34",
+          "34"
+        ]
+      ]
+    },
+    {
+      "key": "good-samaritan-08",
+      "generationKey": "good-samaritan-08",
+      "status": "pass_with_caption_conditions",
+      "sha256": "cdc8ab27009c816c0300a993b163ef373df4453502a5de3b492d95a206e62280",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-30e778e8-3a1d-46c2-ac10-9a7fcc3705ec.png",
+      "recommendedTitle": "Provision for continued care",
+      "alt": "The Samaritan holds two coins side by side in his open palm as he speaks with the older innkeeper outside the traveler's room.",
+      "caption": "The Samaritan gives the innkeeper two pence and asks him to care for the traveler. He promises to repay any further expense when he returns, providing for care that will continue after he leaves.",
+      "findings": "Exactly two separate coins are visible side by side in the Samaritan's palm. Samaritan's head wrap, gray beard, rust robe and green wrap continue from scene 07v2; elderly innkeeper's bald crown, gray side curls/beard and navy robe match its background figure. Reciprocal face-directed gaze, open receiving palm, coin-bearing hand and staff grip are coherent. Resting traveler visible behind them supports scene continuity without claiming recovery.",
+      "conditions": [
+        "The visible instant shows coins offered, not a completed hand-to-hand transfer.",
+        "Coin denominations and faces are illustrative; do not claim exact numismatic authentication or a modern monetary equivalent.",
+        "The promise is recorded by Luke; the picture does not establish a later return or completed recovery."
+      ],
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:35",
+          "35"
+        ]
+      ]
+    }
+  ]
+}

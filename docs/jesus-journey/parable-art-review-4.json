@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent parable source and image reviewer",
+  "scope": "Six exact original full-frame images independently viewed. No generation or repository edits.",
+  "method": "Read supplied scene plans, viewed each complete image, assessed hands, contacts, facial realism, source moment, and intended use as recurring-character references. Official Matthew 13 and 18 text refreshed during review. Hashes calculated from exact image files.",
+  "summary": {
+    "passWithCaptionConditions": 6,
+    "revise": 0
+  },
+  "sources": [
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng",
+      "Matthew 13"
+    ],
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng",
+      "Matthew 18"
+    ]
+  ],
+  "globalConditions": [
+    "Pass is technical source/visual review, not owner approval or final responsive-layout acceptance.",
+    "People are unnamed parable characters, not literal Christ or documented historical identities.",
+    "No exact archaeology or whole-site artwork exclusivity certification is implied.",
+    "Subsequent scenes should preserve recurring protagonists without forcing unrelated helpers to share identity."
+  ],
+  "entries": [
+    {
+      "key": "hidden-treasure-01",
+      "sha256": "df2dd36fdab2bc79e9a82a80fbdd33a15cae3aa430548b0569bebafba5c97a1c",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The visible moment fits the cited passage under the stated caption conditions.",
+      "visibleReview": "The man has natural concentrated surprise rather than exaggerated delight. Visible hand grips jar with coherent fingers, other hand braces soil. Kneeling posture and tool are plausible. Realistic soil, skin, cloth and light. No contents or gold visible.",
+      "conditions": [
+        "The jar is an illustrative choice, not a container specified by the verse.",
+        "Do not state that the image shows coins, jewels or gold.",
+        "Preserve this man's face and clothing for subsequent purchase/sale scenes."
+      ],
+      "recommendedTitle": "Discovery in the field",
+      "alt": "A man kneels in a field and uncovers a small earthen jar with his hand beside a digging tool.",
+      "caption": "A buried jar has come to light beneath the soil. Jesus tells of a man finding treasure in a field and responding with joy, willing to sell all he has to obtain it. The picture introduces that discovery; the contents of the jar remain out of view.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:44",
+          "44"
+        ]
+      ]
+    },
+    {
+      "key": "pearl-01",
+      "sha256": "b28beae20462b740d2ccb814dd3dcf9651e7e61db092d2e1cfe73f9214631ab1",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The visible moment fits the cited passage under the stated caption conditions.",
+      "visibleReview": "A round pale pearl is held coherently between thumb and index finger. Other fingers, wrist and resting hand plausible. Natural focused expression and photographic detail. Large assortment is illustrative abundance, not proof of economic or archaeological specifics.",
+      "conditions": [
+        "Do not claim this image shows the completed purchase or that the merchant has already sold everything.",
+        "A marketplace and merchant's costume are plausible illustrative details, not facts supplied in the parable.",
+        "Keep the same man's identity in later scenes."
+      ],
+      "recommendedTitle": "Seeking a pearl of great value",
+      "alt": "A merchant studies a pearl held between his fingers beside trays and bowls of pearls.",
+      "caption": "The merchant examines a pearl carefully among many others. Jesus describes someone already seeking fine pearls who recognizes one of exceptional worth. The next movement of the story will be a wholehearted response to that discovery; this image stays with the moment of attentive appraisal.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:45–46",
+          "45-46"
+        ]
+      ]
+    },
+    {
+      "key": "net-01",
+      "sha256": "76ec901303959d3ccc8bcb37363048e766a4d6f29bd312c8cedd0f86b017e44f",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The visible moment fits the cited passage under the stated caption conditions.",
+      "visibleReview": "Three natural figures, plausible visible arm and hand positions, weighted mesh extends from boat into air. Sail and boat appear coherent. The dramatic airborne curve depicts casting; it does not show a full net or sorting. No gross anatomy defect apparent.",
+      "conditions": [
+        "Do not identify the fishermen as Peter, other apostles, or men present at a Gospel miracle.",
+        "Do not call this an archaeologically exact reconstruction of a specific seine or dragnet technique.",
+        "Later scenes should show shore sorting rather than a miraculous catch absent from this parable."
+      ],
+      "recommendedTitle": "A net cast into the sea",
+      "alt": "Three fishermen work from a wooden boat as one casts a wide net over the water.",
+      "caption": "A net opens above the water before any catch is seen. Jesus compares the kingdom to a net gathering fish of every kind, then continues to the drawing ashore and sorting. This beginning prepares for His teaching about final judgment, which the passage places in the hands of angels.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:47–50",
+          "47-50"
+        ]
+      ]
+    },
+    {
+      "key": "householder-01",
+      "sha256": "f2c87bf4cdcfdf3db3a90dff32dab902a1a72e6b93011da839ca28a39d555eb2",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The visible moment fits the cited passage under the stated caption conditions.",
+      "visibleReview": "Two hands support opposite sides of box with coherent fingers and load contact. Chest lid, fabric and metallic household valuables plausible as general illustration, though ornamental designs are not independently dated. Natural face and full skin texture.",
+      "conditions": [
+        "Do not assign a particular object to the Old Testament or New Testament as if Jesus specified that symbolism.",
+        "No object can be certified visibly new or old simply from this scene.",
+        "Use general treasure imagery without exact historical craftsmanship claims."
+      ],
+      "recommendedTitle": "Treasures brought out",
+      "alt": "A man lifts an ornate small box from an open chest containing cloth, vessels and jewelry.",
+      "caption": "The householder brings an item out of his store of valuables. After asking whether His listeners understand, Jesus compares a scribe instructed in the kingdom to a householder bringing forth things new and old. The image can invite reflection on receiving His teaching deeply enough to share its riches with others.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:51–52",
+          "51-52"
+        ]
+      ]
+    },
+    {
+      "key": "lost-sheep-01",
+      "sha256": "1a1616579fa025e7b14ae4a97c22c243ec43fdac5d95f96a13a25489143a391a",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The visible moment fits the cited passage under the stated caption conditions.",
+      "visibleReview": "Flock is behind and downhill, mostly grazing with lowered heads; not clearly advancing after the man. Shepherd faces away from them and peers among rocks. Hands, staff grip, bent body and partially occluded legs credible. Strong searching expression. A lone lost sheep is not yet visible.",
+      "conditions": [
+        "Pass as departure or beginning of search, not a claim that the shepherd is already far from every other sheep.",
+        "Do not claim exactly ninety-nine sheep are pictured or invent a second shepherd.",
+        "The shepherd is a fictional story character, not the approved Christ likeness. Preserve identity for finding/carrying scenes."
+      ],
+      "recommendedTitle": "Turning toward the one who is missing",
+      "alt": "A shepherd looks into rocky brush while holding a staff, with a grazing flock behind him on the hillside.",
+      "caption": "The flock remains behind as the shepherd turns his attention toward the rocky hillside. Jesus asks whether a man with one wandering sheep would leave the others and seek it. This image shows the beginning of that search, pointing toward the Father's care that none of His little ones should perish.",
+      "refs": [
+        [
+          "nt/matt/18",
+          "Matthew 18:12–14",
+          "12-14"
+        ]
+      ]
+    },
+    {
+      "key": "unmerciful-servant-01",
+      "sha256": "7622f27ddf9442bfd6e3531262ff274bee107e16065d13519184e2ea9159aa55",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The visible moment fits the cited passage under the stated caption conditions.",
+      "visibleReview": "Servant's kneeling posture, clasped raised hands, face and visible sandal are credible. King rests one hand near chin and watches; visible fingers and feet coherent. Two guards are ordinary atmospheric additions, not threatened violence. Photographic detail; ornate court remains illustrative.",
+      "conditions": [
+        "This depicts the plea before the response, not visible cancellation of the debt.",
+        "King is an unnamed fictional ruler, not a literal portrait of Heavenly Father, Jesus, or a named historical king.",
+        "Maintain this kneeling debtor as the later refusing servant; give the fellow debtor a clearly different identity.",
+        "Do not claim exact court furnishings, crown or uniform authenticity."
+      ],
+      "recommendedTitle": "A plea for patience",
+      "alt": "A kneeling servant raises his hands toward a seated king while two guards stand behind him.",
+      "caption": "The servant kneels before the king with a debt he cannot pay. In Jesus' story he asks for patience and promises repayment, setting the scene for an extraordinary act of mercy. The question will soon become whether the mercy he receives changes the way he treats someone who owes him far less.",
+      "refs": [
+        [
+          "nt/matt/18",
+          "Matthew 18:23–28",
+          "23-28"
+        ]
+      ]
+    }
+  ]
+}

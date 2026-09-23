@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original review of four branch scenes.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 1
+  },
+  "entries": [
+    {
+      "key": "bb-tent-cloud",
+      "generationKey": "bb-tent-cloud",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8346487b-dd5b-47de-ab73-d94c49ddfb2e.png",
+      "sha256": "ce4db9c05ff5a456b4fb4e0c5c2dcf6c99bc48a52052a310f421db979b3727f1",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The people watch from their tent doors",
+      "alt": "People stand near their tents and watch Moses at a separate tent beneath a tall cloud.",
+      "caption": "The people watch from their tent doors as Moses goes to the tent of meeting. The cloud at its entrance accompanies the account of the Lord speaking with him.",
+      "refs": [
+        [
+          "ot/ex/33",
+          "Exodus 33:7\u00e2\u20ac\u201c11",
+          "7-11"
+        ]
+      ],
+      "findings": "Photographic cloth, stone, sky and people; cloud column localized at separate tent. Small gray-haired burgundy-clad Moses maintains visible continuity, face mostly unseen; no visible divine person. Observers attentive, plausible limbs.",
+      "conditions": [
+        "Illustrative compressed scene of Exodus33:7-11; do not claim exact camp layout or that the cloud descended before Moses entered.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "bb-philip-isaiah",
+      "generationKey": "bb-philip-isaiah",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-926c1a69-2dc1-424d-be9e-f3449eee3e11.png",
+      "sha256": "43cf826d029b6dabe262d5d8d6e87663d5247525047dc794330d6361e28e100c",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A traveler asks about Isaiah",
+      "alt": "An Ethiopian official holds an open scroll in a chariot and looks toward Philip standing beside him.",
+      "caption": "A traveler turns from his reading to seek understanding. Philip joins him in the account where Isaiah becomes a starting point for teaching about Jesus.",
+      "refs": [
+        [
+          "nt/acts/8",
+          "Acts 8:27\u00e2\u20ac\u201c35",
+          "27-35"
+        ]
+      ],
+      "findings": "Distinct official and Philip with direct reciprocal gaze, natural faces and hands. Scroll blank back faces viewer; chariot/driver/horse partial but coherent. No Apostle Philip identity borrowed.",
+      "conditions": [
+        "This composition pictures their encounter; do not say Philip is already seated beside him or specify exact words at this pictured moment. Exact attire and chariot are interpretations.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "mc-siloam-washing",
+      "generationKey": "mc-siloam-washing",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-99f65e20-fc3f-4e34-a831-828c3466127c.png",
+      "sha256": "70ee9890980c36d4e2076b1fedcf224e44f264ef708643e0730ab25fde4d3cbb",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Water at Siloam",
+      "alt": "A man kneels by a stone-edged pool and cups water over his eyes.",
+      "caption": "The man washes after following Jesus' instruction to go to Siloam. Water runs through his hands in this quiet moment of response.",
+      "refs": [
+        [
+          "nt/john/9",
+          "John 9:6\u00e2\u20ac\u201c7",
+          "6-7"
+        ]
+      ],
+      "findings": "Two plausible cupped hands cover eyes; water droplets fall to pool with splashes. Natural kneeling posture and modest cloth; no literal Christ or invented healer. Distinct interpreted adult, no claimed old Now-I-see lock.",
+      "conditions": [
+        "Illustrative setting, not exact archaeological reconstruction or a claim that water itself has magical power.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "mc-official-servants",
+      "generationKey": "mc-official-servants",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3e82387d-a9f3-4f83-bbb1-f22b404737be.png",
+      "sha256": "37f681bb1465ef7a95961857476565a8a6c2eec97e27ae2d081889bb37e761c0",
+      "status": "revise",
+      "recommendedTitle": "Good news on the road home",
+      "alt": "An official listens as two servants approach him along a rural road.",
+      "caption": "Servants meet the official on his way home with news that his son is alive. He listens and asks when the recovery began.",
+      "refs": [
+        [
+          "nt/john/4",
+          "John 4:50\u00e2\u20ac\u201c53",
+          "50-53"
+        ]
+      ],
+      "findings": "Main conversation and eye contact clear; official differs from servants. However middle and rear servants share highly similar facial proportions, heavy dark brows, dark beards, medium wavy hair and expression, repeating the cloning concern. Rear man should be visibly distinct.",
+      "conditions": [
+        "Narrow edit only rear-right servant: make him distinctly older, broad round face, balding gray hair at temples, short gray beard or clean-shaven, different nose/brow/eye spacing. Preserve main official, central speaker, expressions, hands, road and composition. No new person or changed event.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

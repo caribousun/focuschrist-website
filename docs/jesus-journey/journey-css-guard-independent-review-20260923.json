@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "scope": "Independent exact-byte journey stylesheet exception and all-untracked-CSS guard review",
+  "gate_sha256": "ded743daa7ad447486c918fa98a9418b5e18e98d30d65de4559f89553e481855",
+  "journey_css_sha256": "a800f26b24fa1c8e070b9c817cf21696b917b1147850673545523e17bce20148",
+  "runs": [
+    {
+      "label": "self-test",
+      "returncode": 0,
+      "output": "PASS regression fixtures: duplicate/rejected images, modified Bible/journey CSS and out-of-scope stylesheet references are rejected\n"
+    },
+    {
+      "label": "clean full gate",
+      "returncode": 0,
+      "output": "{\n  \"canonical_pages\": 118,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": []\n}\n"
+    },
+    {
+      "label": "actual untracked malicious CSS",
+      "returncode": 1,
+      "output": "{\n  \"canonical_pages\": 118,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": [\n    \"Added hero CSS changes frame geometry\"\n  ]\n}\n"
+    },
+    {
+      "label": "clean gate after fixture removal",
+      "returncode": 0,
+      "output": "{\n  \"canonical_pages\": 118,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": []\n}\n"
+    }
+  ],
+  "fixture_removed": true,
+  "assessment": "Exact stylesheet hash constrains allowed bytes; owners limited to parent and76 planned nested pages; out-of-scope Home/Answer/shared-import negatives pass. All untracked CSS is now examined by generic guard. This preserves existing baseline protections and adds precommit detection. No styling, artwork or visitor content altered.",
+  "limitations": "Uses actual generated76-page plan as owner inventory; dynamic changes to that plan remain subject to separate journey review and completeness gates."
+}

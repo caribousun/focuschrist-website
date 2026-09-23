@@ -1,0 +1,224 @@
+{
+  "mm-cana-jars": {
+    "title": "Fill the jars",
+    "alt": "Jesus watches a servant pour water from a clay pitcher into one of six large stone jars.",
+    "caption": "Jesus instructs the servants at Cana to fill the six stone waterpots. Their appearances and the courtyard arrangement are artistic interpretations of John 2.",
+    "refs": [
+      [
+        "nt/john/2",
+        "John 2:6–9",
+        "6-9"
+      ]
+    ],
+    "owner": "jesus-christ/mortal-ministry.html",
+    "section": "cana",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mm-cana-jars-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mm-cana-jars-960.webp",
+    "original": "mm-cana-jars.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-32de4d50-fbea-4610-9b1a-2b6be1583062.png",
+    "original_sha256": "202c9dd9609197c134d4c0ab6751233b026358262ef01b7df34eb8bc38afa7c6",
+    "prompt": "Precise correction to first scene image: remove the stone jar at the far RIGHT foreground, restoring natural courtyard ground in its place. There are currently seven stone jar mouths; final must show exactly SIX large stone jars, plus separate small handled pitcher in servant hands. Preserve other six jars and water pouring. Keep Jesus face, gaze and quiet expression photographic and identity-consistent with second approved reference. No face drift, skin smoothing, illustration, new people, or other changes. John2:6-9 preResurrection no scars.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d303b9bf-959f-4ae0-a68f-7fc781992f17.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "branch-art-review-2.json"
+  },
+  "mm-twelve-depart": {
+    "title": "Sent to preach and heal",
+    "alt": "Jesus addresses departing disciples on a rural road as an older man looks back toward Him.",
+    "caption": "Jesus sends the Twelve to proclaim the kingdom and heal. This illustration shows part of the departing group; their appearances, gestures and the road are artistic interpretations.",
+    "refs": [
+      [
+        "nt/luke/9",
+        "Luke 9:1–6",
+        "1-6"
+      ]
+    ],
+    "owner": "jesus-christ/mortal-ministry.html",
+    "section": "sent-to-serve",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mm-twelve-depart-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mm-twelve-depart-960.webp",
+    "original": "mm-twelve-depart.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-75e9fb6e-6d65-4d75-ad0d-025f1cc6d497.png",
+    "original_sha256": "831d66e693bd74e0448fd099c3ddec69c979c5800d7148689f4fe231d5e73e59",
+    "prompt": "Edit first scene only to make the nearest central disciple turning back toward Jesus unmistakably a DIFFERENT man. Recast that disciple as a weathered older adult with balding crown, short gray-black hair, long narrow face, pronounced cheekbones, broad flat nose, short gray beard, same clothing and posture, no resemblance to Christ. Preserve Jesus Himself exactly, the ochre-clothed man giving the commission; second reference is His approved identity only. His face retains thoughtful affectionate resolve, realistic skin/eyes, no broad staged grin. Keep all other composition, source-specific no travel bags or staffs, Luke9:1-6. Live-action photograph realism, no painterly/plastic faces; preResurrection no scars.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4459a424-b946-41bc-8559-6b0ce4664c47.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "branch-art-review-2.json"
+  },
+  "hidden-treasure-01": {
+    "title": "Discovery in the field",
+    "alt": "A man kneels in a field and uncovers a small earthen jar with his hand beside a digging tool.",
+    "caption": "A buried jar has come to light beneath the soil. Jesus tells of a man finding treasure in a field and responding with joy, willing to sell all he has to obtain it. The picture introduces that discovery; the contents of the jar remain out of view.",
+    "refs": [
+      [
+        "nt/matt/13",
+        "Matthew 13:44",
+        "44"
+      ]
+    ],
+    "owner": "jesus-christ/parables/hidden-treasure.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/hidden-treasure-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/hidden-treasure-01-960.webp",
+    "original": "hidden-treasure-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f7618f9f-936e-4f97-a414-7224b626cfe0.png",
+    "original_sha256": "df2dd36fdab2bc79e9a82a80fbdd33a15cae3aa430548b0569bebafba5c97a1c",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Discovery in the field. Scripture source: Matthew 13:44. Depict only the specified first moment; do not include later outcomes. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 1 of 3 for The Hidden Treasure. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Horizontal 1536x1024.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-4.json"
+  },
+  "pearl-01": {
+    "title": "Seeking a pearl of great value",
+    "alt": "A merchant studies a pearl held between his fingers beside trays and bowls of pearls.",
+    "caption": "The merchant examines a pearl carefully among many others. Jesus describes someone already seeking fine pearls who recognizes one of exceptional worth. The next movement of the story will be a wholehearted response to that discovery; this image stays with the moment of attentive appraisal.",
+    "refs": [
+      [
+        "nt/matt/13",
+        "Matthew 13:45–46",
+        "45-46"
+      ]
+    ],
+    "owner": "jesus-christ/parables/pearl.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/pearl-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/pearl-01-960.webp",
+    "original": "pearl-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-aa5d45d6-f315-4146-9ca7-5e4213dc2e09.png",
+    "original_sha256": "b28beae20462b740d2ccb814dd3dcf9651e7e61db092d2e1cfe73f9214631ab1",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Merchant examining pearls. Scripture source: Matthew 13:45. Depict only the specified first moment; do not include later outcomes. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 1 of 3 for The Pearl of Great Price. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Horizontal 1536x1024.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-4.json"
+  },
+  "net-01": {
+    "title": "A net cast into the sea",
+    "alt": "Three fishermen work from a wooden boat as one casts a wide net over the water.",
+    "caption": "A net opens above the water before any catch is seen. Jesus compares the kingdom to a net gathering fish of every kind, then continues to the drawing ashore and sorting. This beginning prepares for His teaching about final judgment, which the passage places in the hands of angels.",
+    "refs": [
+      [
+        "nt/matt/13",
+        "Matthew 13:47–50",
+        "47-50"
+      ]
+    ],
+    "owner": "jesus-christ/parables/net.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/net-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/net-01-960.webp",
+    "original": "net-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-76625ecd-b20b-4db8-a63f-97b883173170.png",
+    "original_sha256": "76ec901303959d3ccc8bcb37363048e766a4d6f29bd312c8cedd0f86b017e44f",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Net cast into the sea. Scripture source: Matthew 13:47. Depict only the specified first moment; do not include later outcomes. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 1 of 3 for The Fishing Net. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Horizontal 1536x1024.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-4.json"
+  },
+  "householder-01": {
+    "title": "Treasures brought out",
+    "alt": "A man lifts an ornate small box from an open chest containing cloth, vessels and jewelry.",
+    "caption": "The householder brings an item out of his store of valuables. After asking whether His listeners understand, Jesus compares a scribe instructed in the kingdom to a householder bringing forth things new and old. The image can invite reflection on receiving His teaching deeply enough to share its riches with others.",
+    "refs": [
+      [
+        "nt/matt/13",
+        "Matthew 13:51–52",
+        "51-52"
+      ]
+    ],
+    "owner": "jesus-christ/parables/householder.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/householder-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/householder-01-960.webp",
+    "original": "householder-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d70530b5-03b1-4148-9c11-754563d92408.png",
+    "original_sha256": "f2c87bf4cdcfdf3db3a90dff32dab902a1a72e6b93011da839ca28a39d555eb2",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Householder bringing out stored treasures. Scripture source: Matthew 13:52. Depict only the specified first moment; do not include later outcomes. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 1 of 1 for The Householder's Treasure. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Horizontal 1536x1024.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-4.json"
+  },
+  "lost-sheep-01": {
+    "title": "Turning toward the one who is missing",
+    "alt": "A shepherd looks into rocky brush while holding a staff, with a grazing flock behind him on the hillside.",
+    "caption": "The flock remains behind as the shepherd turns his attention toward the rocky hillside. Jesus asks whether a man with one wandering sheep would leave the others and seek it. This image shows the beginning of that search, pointing toward the Father's care that none of His little ones should perish.",
+    "refs": [
+      [
+        "nt/matt/18",
+        "Matthew 18:12–14",
+        "12-14"
+      ]
+    ],
+    "owner": "jesus-christ/parables/lost-sheep.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/lost-sheep-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/lost-sheep-01-960.webp",
+    "original": "lost-sheep-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e3a05d93-944e-4435-8688-0edbb13379aa.png",
+    "original_sha256": "1a1616579fa025e7b14ae4a97c22c243ec43fdac5d95f96a13a25489143a391a",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Shepherd searching the hills. Scripture source: Matthew 18:12. Depict only the specified first moment; do not include later outcomes. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 1 of 3 for The Lost Sheep. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Horizontal 1536x1024.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-4.json"
+  },
+  "unmerciful-servant-01": {
+    "title": "A plea for patience",
+    "alt": "A kneeling servant raises his hands toward a seated king while two guards stand behind him.",
+    "caption": "The servant kneels before the king with a debt he cannot pay. In Jesus' story he asks for patience and promises repayment, setting the scene for an extraordinary act of mercy. The question will soon become whether the mercy he receives changes the way he treats someone who owes him far less.",
+    "refs": [
+      [
+        "nt/matt/18",
+        "Matthew 18:23–28",
+        "23-28"
+      ]
+    ],
+    "owner": "jesus-christ/parables/unmerciful-servant.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/unmerciful-servant-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/unmerciful-servant-01-960.webp",
+    "original": "unmerciful-servant-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8c4777c5-75f2-4db6-87d5-04d684f8d57b.png",
+    "original_sha256": "7622f27ddf9442bfd6e3531262ff274bee107e16065d13519184e2ea9159aa55",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Servant pleading before the king. Scripture source: Matthew 18:24-26. Depict only the specified first moment; do not include later outcomes. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Keep violence restrained. No choking close-up or sensational punishment. Distinguish the debtor before the king from the fellow servant who begs for patience. The king is an unnamed story character, not a literal portrait of God. Image uniqueness: this is scene 1 of 5 for The Unmerciful Servant. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Horizontal 1536x1024.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-4.json"
+  }
+}

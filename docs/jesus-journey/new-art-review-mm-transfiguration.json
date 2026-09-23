@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of mm-transfiguration",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "mm-transfiguration",
+      "generationKey": "mm-transfiguration",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-83b8d151-f214-4888-a9ea-9ecd72dd8a10.png",
+      "sha256": "947c7d790fed6ee046aa42a0785726ee344f94dd69f00be0ae10f387231c066e",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Arise, and be not afraid",
+      "alt": "Jesus touches Peter's shoulder as Peter, James and John look up from the rocky mountainside.",
+      "caption": "Jesus comes to the frightened disciples and touches them. As Peter looks up, the Savior's quiet attention accompanies His invitation to rise without fear.",
+      "refs": [
+        [
+          "nt/matt/17",
+          "Matthew 17:6–8",
+          "6-8"
+        ]
+      ],
+      "findings": "Actual full original compared directly to canonical Christ hero and mapped priesthood scene. Christ retains recognizable eyes, brow, nose, beard and hair in bent three-quarter profile, with restrained reassurance and unmistakable reciprocal eye contact with Peter. Peter foreground left, James middle and John behind right preserve mapped facial distinctions. Photographic skin, cloth and mountain depth; four people only, no duplicate modern Restoration figures. Christ's shoulder touch, extended arm and relaxed other hand are coherent; no nail marks. Apostles remain low, visually fitting the reassurance after fear rather than a generic sermon.",
+      "conditions": [
+        "Use Matthew 17:6–8 reassurance phase; do not claim this frame shows Moses, Elias, the heavenly speaker or the precise instant of transfiguration. The exact mountain, ages and bodily arrangement are interpreted.",
+        "Caption describes touch and invitation, not a physically completed lift to standing. No resurrected scars in this mortal scene.",
+        "Technical pixel/source review does not establish owner approval or rendered-browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/church-history/melchizedek-priesthood.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/17?lang=eng"
+      ]
+    }
+  ]
+}

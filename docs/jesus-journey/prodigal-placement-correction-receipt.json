@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "filesChanged": [
+    "docs/jesus-journey/pages.json",
+    "docs/jesus-journey/parable-art-plan.json"
+  ],
+  "snapshots": [
+    "prodigal-placement-before-pages.json",
+    "prodigal-placement-before-plan.json"
+  ],
+  "checks": {
+    "allNonArtPageDataUnchanged": true,
+    "allOtherPagesUnchanged": true,
+    "allOtherArtPlanEntriesUnchanged": true,
+    "eightScenePositionsVerified": true,
+    "eightUniqueArtKeysPreserved": true
+  },
+  "overrides": [
+    {
+      "key": "prodigal-son-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-04",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-05",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2
+    },
+    {
+      "key": "prodigal-son-06",
+      "sectionId": "receiving-the-word",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-07",
+      "sectionId": "receiving-the-word",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-08",
+      "sectionId": "receiving-the-word",
+      "afterParagraph": 2
+    }
+  ],
+  "registrySectionChangesRequired": [
+    {
+      "key": "prodigal-son-06",
+      "fromSection": "story-and-teaching",
+      "sectionId": "receiving-the-word"
+    },
+    {
+      "key": "prodigal-son-07",
+      "fromSection": "story-and-teaching",
+      "sectionId": "receiving-the-word"
+    }
+  ],
+  "titleChange": "prodigal-son06 -> The father welcomes his son; sourceSceneDescription now describes embrace, Luke15:20.",
+  "unchanged": "All prose, sources, related links, registry, image bytes, review records and generated HTML; no import or build run."
+}

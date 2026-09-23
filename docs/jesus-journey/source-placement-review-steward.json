@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "scope": "Source/placement review against canonical prose/plan and accepted actual-pixel review59; not a repeated pixel review.",
+  "sourceConclusion": "All three moments and reviewed ranges fit Luke16:1-2,5-6,7. Oil debt goes from100 measures to50; wheat from100 to80. Captions correctly derive numbers from scripture, not visible tablet inscriptions. No invented commission/interest mechanics or moral approval of fraud is introduced.",
+  "placementFinding": "The wheat scene was below generic interpretive cautions in receiving-the-word, while the oil/wheat narration is in the first story-and-teaching paragraph. Move03 beside02 after that paragraph, before the following explanation of commendation and honesty.",
+  "appliedOverrides": [
+    {
+      "key": "unjust-steward-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "unjust-steward-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    }
+  ],
+  "registrySectionChangesRequired": [
+    {
+      "key": "unjust-steward-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    }
+  ],
+  "sourceCorrectionsNeeded": [],
+  "connections": "Rich Fool and Talents are distinct resource/responsibility comparisons; Stewardship remains collection parent. No character or story blending.",
+  "prosePreserved": "All prose, source ranges, questions and related links exactly unchanged. The next story paragraph and receiving section explicitly distinguish foresight from approval of dishonesty."
+}

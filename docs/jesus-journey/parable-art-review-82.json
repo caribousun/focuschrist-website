@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Four revised branch concepts: actual originals inspected with corresponding canonical reading/source context.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "tp-lamp-salt",
+      "generationKey": "tp-lamp-salt",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d8918fa9-f374-4fa7-b64f-f5aad02acc2e.png",
+      "sha256": "dfeb9a308fba96214b29707b758131ab2bb3b0ebf4df123d898783978b99b3a3",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A city that cannot be hidden",
+      "alt": "Stone houses rise on a hillside at dusk, with people gathered at a table in the foreground.",
+      "caption": "A hillside town remains visible above the valley. The imagined setting illustrates Jesus' comparison of His disciples to a city on a hill, within His teaching about good works that glorify the Father.",
+      "refs": [
+        [
+          "nt/matt/5",
+          "Matthew 5:13–16",
+          "13-16"
+        ]
+      ],
+      "findings": "Town and hillside remain the primary visual subject; sunset, stonework and small human figures have photographic texture. Foreground people and table are coherent ancillary atmosphere, not an added Gospel event. No visible Christ or named person.",
+      "conditions": [
+        "Do not identify this as a particular ancient town, identify the foreground group as a biblical family, or claim exact archaeological architecture or lighting fixtures.",
+        "Placement follows relevant prose in canonical pages; generated HTML/browser placement not verified by this review.",
+        "Technical acceptance is not owner aesthetic approval."
+      ]
+    },
+    {
+      "key": "tp-lilies-birds",
+      "generationKey": "tp-lilies-birds",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0d668321-157c-4e5a-8198-608ba270f32f.png",
+      "sha256": "93de1f5084a7611f662f62003e3cf77c5869e3fc423923762f1f0166e6a76b8d",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "They neither toil nor spin",
+      "alt": "A woman draws wool into a thread connected to a suspended hand spindle.",
+      "caption": "A woman spins wool into thread. This ordinary work of making clothing gives context to Jesus' contrast with the lilies, which neither toil nor spin, as He teaches about the Father's care.",
+      "refs": [
+        [
+          "nt/matt/6",
+          "Matthew 6:25–30",
+          "25-30"
+        ]
+      ],
+      "findings": "Thread remains continuous from wool through the drafting hand to a suspended spindle; hands, grip, posture and concentrated gaze are plausible. Natural skin, fabric and fibers. No modern spinning wheel, Christ or invented encounter.",
+      "conditions": [
+        "Treat the task as an illustration of the comparison, not a recorded meeting, criticism of work or promise of material ease.",
+        "Placement follows relevant prose in canonical pages; generated HTML/browser placement not verified by this review.",
+        "Technical acceptance is not owner aesthetic approval."
+      ]
+    },
+    {
+      "key": "tp-vine-pruning",
+      "generationKey": "tp-vine-pruning",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7fceeb77-f135-4093-a461-042375d00219.png",
+      "sha256": "f01cac906d0ac8f2e5649a78daa9ff316a03abb5ea30967882599ca92bdbd2b0",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Branches apart from the vine",
+      "alt": "Dry detached branches lie gathered beside a green grapevine bearing fruit.",
+      "caption": "Detached branches lie withered beside a living vine. John 15:6 gives this sober counterpart to the fruitful branches as Jesus teaches His disciples to remain in Him.",
+      "refs": [
+        [
+          "nt/john/15",
+          "John 15:1–6",
+          "1-6"
+        ]
+      ],
+      "findings": "Foreground dry gathered branches clearly separate from living trunk and fruit at right. Photographic bark, leaves, soil and grapes; no fire, human suffering, gardener or divine portrait. Distinct from pruning action and fruit-only close-up.",
+      "conditions": [
+        "This illustrates the withering and gathering part of verse 6; do not claim the image shows burning or that hardship proves divine rejection.",
+        "Placement follows relevant prose in canonical pages; generated HTML/browser placement not verified by this review.",
+        "Technical acceptance is not owner aesthetic approval."
+      ]
+    },
+    {
+      "key": "rt-accessible-home",
+      "generationKey": "rt-accessible-home",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-78256d6a-aebe-49b0-b03b-a39bfebb47ed.png",
+      "sha256": "caefd17d1111ac9460dceeb49fb826d7ce384319b0117720e5e52837c4b4a540",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Listening before offering help",
+      "alt": "A woman using a wheelchair points to a doorway sketch while two people listen at a home table.",
+      "caption": "The resident explains a desired change at the home entrance, and the listeners attend before offering help. This imagined modern scene connects charity with respecting another person's needs and choices.",
+      "refs": [
+        [
+          "bofm/moro/7",
+          "Moroni 7:45–48",
+          "45-48"
+        ]
+      ],
+      "findings": "Resident has agency and clear reciprocal eye contact with the central listener. Distinct faces, natural expressions and separate coherent hands. Wheelchair visible supports credible seated posture. Notebook and doorway sketch contain no relied-upon legible claim. No tools, installation or cure.",
+      "conditions": [
+        "The sketch includes steps and rails and is discussion material only; do not call it a completed accessible design, certified construction plan or guarantee of outcome. Relationships are unspecified.",
+        "Placement follows relevant prose in canonical pages; generated HTML/browser placement not verified by this review.",
+        "Technical acceptance is not owner aesthetic approval."
+      ]
+    }
+  ]
+}

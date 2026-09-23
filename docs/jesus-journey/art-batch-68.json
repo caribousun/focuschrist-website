@@ -1,0 +1,60 @@
+{
+  "modern-scripture": {
+    "title": "Read His words together",
+    "alt": "An adult listens as a teenage girl speaks beside an open Bible at the kitchen table.",
+    "caption": "An adult listens as a teenage girl speaks beside the open scriptures. Reading together can include an honest question and the patience to hear one another.",
+    "refs": [
+      [
+        "nt/john/5",
+        "John 5:39",
+        "39"
+      ]
+    ],
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f2b140a0-a55c-4906-9f18-6228e5bf47c2.png",
+    "original": "modern-scripture.png",
+    "owner": "answers/jesus-christ-latter-day-saint-beliefs.html",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "review_record": "art-review-1.json",
+    "owner_approved": false,
+    "asset": "assets/page-art/jesus-journey/modern-scripture-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+    "width": 1536,
+    "height": 1024,
+    "original_sha256": "38ff7028db601122794fd8ebe66b3a9b949c2aba1b18c1997199de26b0b031e8",
+    "asset_sha256": "9cbbb5661100eb9de2084b4f0324bdd0c2c6e731d9be9a875ab224262729f035",
+    "thumbnail_sha256": "5dd3f7394963cd620f6d9fff06c8f65ad4ba631b29e6bc4307b976909476a364"
+  },
+  "bb-manna-gathering": {
+    "title": "Enough for the household",
+    "alt": "A woman and a boy gather small pale grains from the ground beside a wilderness camp.",
+    "caption": "People bend to gather the food the Lord has provided. Day by day, the wilderness teaches them to trust Him for their bread.",
+    "refs": [
+      [
+        "ot/ex/16",
+        "Exodus 16:13–18",
+        "13-18"
+      ]
+    ],
+    "owner": "jesus-christ/before-bethlehem.html",
+    "section": "daily-bread",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bb-manna-gathering-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bb-manna-gathering-960.webp",
+    "original": "bb-manna-gathering.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ad66a2e2-acf9-45b8-a5e1-eb8642be105e.png",
+    "original_sha256": "9e3132cf6f343f1b056893bd3afa5119af1f26b9918cb6ceca452bf6efd87826",
+    "prompt": "Create ONE original horizontal 1536x1024 photograph-quality scripture illustration, full natural scene. Exact moment and composition: Morning ground-level diagonal composition with small pale round grains on the dew-cleared desert surface in the right foreground. An unnamed adult woman crouches with one plain shallow basket while an older boy gathers small grains with one natural hand; their eyes follow the task, not camera. Two simple woven shelters sit far behind. No bread loaves falling from sky, no large mushrooms, no snowstorm and no Christ. Fabric colors restrained clay and indigo. Warm mutual focus between two people, exact family relation left unnamed in caption unless supplied by image only. Source: Exodus 16:13–18. No visible Christ or divine figure. Natural human skin texture, physically coherent hands/fingers/limbs, accurate mutual eye lines. Historically plausible setting, clothing, objects. No painting, CGI, glamour retouch, artificial halo, lettering, border, montage or watermark. No claimed exact historical photograph.",
+    "referenced_image_paths": [],
+    "review_record": "branch-art-review-1.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "00bf4225c70b2f23ed7572164016745dcd75564e5324ca4e6fe20381979f1533",
+    "thumbnail_sha256": "d56f5f873e40eb7a69e5621612debe43f4517c5da9c1bd0341554b56b825ce56"
+  }
+}

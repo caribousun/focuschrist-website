@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent original-detail review of rr-broiled-fish-v4, including focused reciprocal gaze check",
+  "entries": [
+    {
+      "key": "rr-broiled-fish",
+      "version_key": "rr-broiled-fish-v4",
+      "status": "pass",
+      "sha256": "199ddf7a530db01622286ea10c5edde48c7a2e5a2581adf0ccce932ab32321e5",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8cab1a78-7813-4eee-9aee-6bd4640d9bc9.png",
+      "alt": "The risen Jesus turns toward a disciple while holding a piece of fish, with another disciple watching beside him.",
+      "caption": "The risen Jesus eats before His disciples in Luke's account. This imagined indoor scene gives their astonished joy a personal focus, distinct from the shore breakfast in John 21.",
+      "refs": [
+        [
+          "nt/luke/24",
+          "Luke 24:36–43",
+          "36-43"
+        ]
+      ],
+      "findings": [
+        "Christ's head now turns to the central disciple; His visible near eye narrows naturally with the smile and points right/down toward that disciple's upturned eyes. The former elevated look past the disciples is corrected.",
+        "Canonical facial identity remains recognizable in the stronger profile: characteristic brow, nose, beard and wavy hair are retained. Photographic expression and warm attention suit the reunion.",
+        "The exposed left palm's healed oval mark and visible wrist marks remain. Fish grip, open palm, disciple hands, food and table contacts remain coherent.",
+        "Secondary disciples remain visually distinct. This technical pass does not imply owner approval."
+      ],
+      "gazeRecipient": "The central disciple",
+      "gazeDirection": "Right/down toward the central disciple's upturned eyes"
+    }
+  ]
+}

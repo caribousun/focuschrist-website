@@ -169,7 +169,11 @@
                 const url = new URL(link.href);
                 return url.origin === location.origin && url.pathname !== location.pathname && !link.querySelector('img');
             });
-            if (related) pill(related.textContent.trim() || 'Continue related study', related.href);
+            if (related) {
+                const heading = related.querySelector('h1,h2,h3,h4,h5,h6,[role="heading"]');
+                const label = heading && heading.textContent.trim();
+                pill(label || related.textContent.trim() || 'Continue related study', related.href);
+            }
 
             const resume = pill('Continue Lesson', '#' + record.target.id);
             resume.dataset.topicArtContinue = '';

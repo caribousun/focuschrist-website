@@ -1,0 +1,23 @@
+{
+  "reviewedOriginals": 8,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pages": {
+    "servant-duty": 2,
+    "persistent-widow": 3,
+    "pharisee-publican": 3
+  },
+  "checks": {
+    "imagesLoaded": true,
+    "artworkStudy": true,
+    "fullSizeOpenClose": true,
+    "scriptureOpenClose": true,
+    "studyCloseFocusReturn": true,
+    "noClippedControls": true,
+    "noHorizontalOverflow": true
+  },
+  "limits": "Interaction check only; no claim of every verse text or full responsive composition.",
+  "status": "pass"
+}

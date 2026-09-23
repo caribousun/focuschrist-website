@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Rich Fool scenes 01–03 inspected at original detail for identity, photographic realism, anatomy, distinct story progression and Luke 12:16–19.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Unnamed fictional parable characters; no portrait of Christ or named historical individual is implied."
+  ],
+  "entries": [
+    {
+      "key": "rich-fool-01",
+      "generationKey": "rich-fool-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "2ad2b5d4aaba455d8721d08f297440b648b385b5b0473e174d232d1c9be6963a",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e8ad3bcc-b5cf-4d14-b328-fc9039d1a9a9.png",
+      "recommendedTitle": "An abundant harvest",
+      "alt": "A gray-haired man in a burgundy mantle stands beside baskets heaped with grain while two workers gather sheaves behind him.",
+      "caption": "The ground of a rich man brings forth an abundant crop. Full baskets and gathered sheaves picture the plenty with which Jesus begins the parable.",
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:16",
+          "16"
+        ]
+      ],
+      "findings": "Same distinctive wavy salt-and-pepper hair, clean-shaven square face, cream tunic and burgundy trimmed mantle established for owner. Visible hip hand and workers' sheaf grips are coherent. Grain, woven baskets, skin and cloth have photographic detail; two workers are distinct, subordinate figures. Solitary outward gaze fits surveying abundance, without requiring interpersonal eye contact.",
+      "conditions": [
+        "Workers, clothing and particular harvest arrangements are illustrative; do not invent names, biographies, or a named historical portrait."
+      ]
+    },
+    {
+      "key": "rich-fool-02",
+      "generationKey": "rich-fool-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "f9be75aa9ecce3f452042b149fdca239385207b58b7f304d4b0a5ead4777dfcb",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cfb52b69-1780-44e4-9258-8f5ef9e4634f.png",
+      "recommendedTitle": "Considering greater storage",
+      "alt": "The same man rests one hand against a stone storehouse wall beside an open doorway crowded with baskets and sacks of grain.",
+      "caption": "With more produce than he knows where to store, the owner considers what to do. He resolves to pull down his barns and build greater ones for his crops and goods.",
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:17-18",
+          "17-18"
+        ]
+      ],
+      "findings": "Owner face, hair, body and wardrobe continue scene01. Hand against wall and other hand on hip are physically coherent; face is directed toward building. Existing crowded storage and deliberative action differ meaningfully from field harvest. No demolition or new construction is shown; packed baskets illustrate the storage concern rather than completed greater barns.",
+      "conditions": [
+        "Do not call the pictured building a completed new barn or claim that the planned rebuilding occurred.",
+        "Storage layout and gestures are illustrative details of his deliberation."
+      ]
+    },
+    {
+      "key": "rich-fool-03",
+      "generationKey": "rich-fool-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "b5b0f64d388814de9bff6df4dd87bc7c9a0cc73014b175093cb7a44ee1c3aa1d",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4f5f581f-97c9-4f75-bddb-2f2ce1f30fe7.png",
+      "recommendedTitle": "Imagining years of ease",
+      "alt": "The same man sits at a wooden table holding a clay cup, with bread and grapes before him and baskets of grain in the open storehouse behind.",
+      "caption": "The owner imagines years of ease, telling himself to rest, eat, drink, and be merry. This scene pictures the comfort he plans for himself, not a future the parable says he lived.",
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:19",
+          "19"
+        ]
+      ],
+      "findings": "Same clean-shaven face, gray curls, cream tunic and burgundy mantle; natural skin and fabric. Cup-bearing fingers, resting arm and separate resting hand are coherent. Seated table and food establish imagined ease distinct from harvest and storage deliberation. No banquet guests or completed building works; solitary outward gaze and satisfied expression fit his self-directed plans.",
+      "conditions": [
+        "Explicitly retain the imagined/planned framing: Luke12:19 records self-address about the future, not a documented banquet or years actually lived.",
+        "Bread, grapes, cup and furniture illustrate eat/drink/ease; do not identify cup contents or assert a recorded menu."
+      ]
+    }
+  ]
+}

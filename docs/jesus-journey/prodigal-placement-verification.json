@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "scope": "Independent verification after batch42 preparation and build, against saved pre-change pages and plan. No edits/import/build performed by reviewer.",
+  "checks": {
+    "allNonArtPageDataExactlyUnchanged": true,
+    "allProseSourcesRelatedLinksExactlyUnchanged": true,
+    "allOtherPagesExactlyUnchanged": true,
+    "allOtherPlanEntriesExactlyUnchanged": true,
+    "eightUniqueKeysAndEightUniqueOriginalHashes": true,
+    "allEightReviewBindingsValid": true,
+    "canonicalPageAndRegistryPositions": [
+      {
+        "key": "prodigal-son-01",
+        "sectionId": "setting",
+        "afterParagraph": 1
+      },
+      {
+        "key": "prodigal-son-02",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "prodigal-son-03",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "prodigal-son-04",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "prodigal-son-05",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 2
+      },
+      {
+        "key": "prodigal-son-06",
+        "sectionId": "receiving-the-word",
+        "afterParagraph": 1
+      },
+      {
+        "key": "prodigal-son-07",
+        "sectionId": "receiving-the-word",
+        "afterParagraph": 1
+      },
+      {
+        "key": "prodigal-son-08",
+        "sectionId": "receiving-the-word",
+        "afterParagraph": 2
+      }
+    ],
+    "rebuiltHTMLProseAndArtOrder": {
+      "pass": true,
+      "tokensChecked": 16
+    },
+    "scene06Title": "The father welcomes his son"
+  },
+  "semanticConclusion": "Departure, spent resources, and swine-feeding follow the loss paragraph; decision follows the next paragraph; embrace and celebration follow the welcome paragraph; elder-brother appeal follows its own paragraph. The open ending and reflection remain unchanged.",
+  "hashes": {
+    "pages.json": "eb831d7e3e50c1d485452b1d7077a7e6a782bb8d833f3cf631512fac00d7ac8a",
+    "parable-art-plan.json": "69a50764a70d777458706c35caecf123ac383d0adea1d342c066c12cbbfe9e02",
+    "artworks.json": "4331c8ef644327046a89d9a9d438c398770fb9c863faf7098aa4deeb130f3c6f",
+    "prodigal-placement-before-pages.json": "2c8b11330b7202416bce853b0bc959aaf81f3c2afe51ed240a8b7cad53dd938f",
+    "prodigal-placement-before-plan.json": "3bcd3132c59c2cf32d9906b5b0f13bdee46bfa8dcf0e7bcf0c863df36a66e4dd"
+  },
+  "findings": [],
+  "evidenceBoundary": "Source/model/HTML order and exact-original review binding verification; not new pixel review, browser interaction or owner approval."
+}

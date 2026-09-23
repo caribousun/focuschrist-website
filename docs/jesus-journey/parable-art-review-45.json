@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Two-debtors 01v2 and 02 viewed at original detail for male creditor, distinct identities, continuity and Luke 7:41–42.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Only scene 01 v2 is accepted; the earlier female-creditor scene 01 remains rejected and is not an accepted duplicate canonical-key entry.",
+    "Technical review is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "two-debtors-01",
+      "generationKey": "two-debtors-01-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "b63fad11e5688ef3b8028afd1b75f941a215fc5fbf519ef41847d7556ec080e1",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b1764a98-90d5-4e7f-8d99-5775b8dfef0e.png",
+      "recommendedTitle": "Neither could repay",
+      "alt": "Two men stand with open hands before a seated older creditor, with closed tablets on the table.",
+      "caption": "Two debtors stand before the creditor with nothing to pay. Jesus describes debts of different sizes, bringing both men to the same need for mercy.",
+      "findings": "Three clearly distinct men: bald rust-robed debtor, short-curly-haired olive-robed debtor and older gray-haired blue-robed creditor. Creditor listens toward the central speaker; both debtors attend to him. Open palms, chin hand and resting arm are anatomically coherent. Photographic skin and woven cloth; no payment coins or destruction action shown.",
+      "conditions": [
+        "The closed tablets, room and gestures are imagined; their markings and the exact debt values are not visible.",
+        "Do not imply that the open hands themselves establish an exact historical ritual or payment."
+      ],
+      "refs": [
+        [
+          "nt/luke/7",
+          "Luke 7:41-42",
+          "41-42"
+        ]
+      ]
+    },
+    {
+      "key": "two-debtors-02",
+      "generationKey": "two-debtors-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "fab5b2c20cf559bd1b63150153f89e8869466a5eb9aad5ecdbc821193bf8d829",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-efd33b84-2c3f-41d7-a342-19d04e8770e0.png",
+      "recommendedTitle": "Both debts forgiven",
+      "alt": "The older creditor rests a hand on one debtor's shoulder and opens his other palm while both debtors face him.",
+      "caption": "The creditor freely forgives both debts when neither man can repay. The welcoming gesture pictures that mercy, inviting us to consider the grateful love at the heart of Jesus' teaching.",
+      "findings": "All three identities and garments continue clearly from 01v2. Creditor's shoulder contact, open hand and debtors' clasped hands are coherent. Reciprocal attention between creditor and bald debtor, with second debtor attentive to creditor. Natural expressions and photographic skin; no visible payment, token exchange or destruction ritual.",
+      "conditions": [
+        "The shoulder gesture is artistic interpretation, not a recorded action in Luke 7:42.",
+        "Do not infer a particular debt amount for either depicted face or claim physical gestures measure how much each loves."
+      ],
+      "refs": [
+        [
+          "nt/luke/7",
+          "Luke 7:42",
+          "42"
+        ]
+      ]
+    }
+  ]
+}

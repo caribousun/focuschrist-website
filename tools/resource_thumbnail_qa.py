@@ -42,13 +42,15 @@ for file,keys in coverage.items():
   if r.get('remote_thumbnail'):
    if i['src']!=r['remote_thumbnail']:errors.append(f'{file}: remote native thumbnail mismatch')
   else:
-   img=(p.parent/i['src']).resolve()
+   img=(ROOT/i['src'].lstrip('/') if i['src'].startswith('/') else p.parent/i['src']).resolve()
    if img!=ROOT/r['local_thumbnail'] or hashlib.sha256(img.read_bytes()).hexdigest()!=r['sha256']:errors.append(f'{file}: image mismatch')
   if any(str(r[k])!=i.get(k) for k in ['width','height']) or i.get('loading')!='lazy':errors.append(f'{file}: missing intrinsic sizing/lazy load')
  for link in parser.links:
   u=urlsplit(link)
   if u.scheme or u.netloc:continue
-  target=(p.parent/unquote(u.path)).resolve() if u.path else p
+  decoded=unquote(u.path)
+  target=(ROOT/decoded.lstrip('/') if decoded.startswith('/') else p.parent/decoded).resolve() if decoded else p
+  if not target.is_relative_to(ROOT):errors.append(f'{file}: link escapes site root {link}');continue
   if target.is_dir():target=target/'index.html'
   if not target.exists():errors.append(f'{file}: missing {link}');continue
   if u.fragment and target.suffix=='.html':

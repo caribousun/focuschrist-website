@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Prodigal Son07–08 inspected at original detail, compared with01–03 identity references, for welcome details, anatomical contact, elder-son continuity and Luke15:22–24/28–32.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Father and sons are unnamed parable figures, not historical or divine portraits."
+  ],
+  "entries": [
+    {
+      "key": "prodigal-son-07",
+      "generationKey": "prodigal-son-07",
+      "status": "pass_with_caption_conditions",
+      "sha256": "a95c891283a63e04de13300b864053a4886eeaf2734a5ebc93cfd3e788800e0c",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a8a02ee8-d511-4e7a-a087-34c68bf86911.png",
+      "recommendedTitle": "Welcomed as a son",
+      "alt": "The father holds his younger son's ringed hand as a servant arranges a fine light robe around his shoulders; sandals rest on a stool and food is being prepared behind them.",
+      "caption": "The father calls for the best robe, a ring, and shoes for his son, and orders a feast. His welcome celebrates the son who was lost and is found.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:22-24",
+          "22-24"
+        ]
+      ],
+      "findings": "Father preserves01 white wavy hair, full gray beard, cream tunic/navy layer; son preserves distinctive dark curls, clean-shaven youthful face and long profile. Clear mutual eye contact and restrained relief. Ring is visible on son's hand, held naturally by father; robe grip and layered shoulder contact are coherent. Sandals are a separate plausible pair on stool; feet are not visible. Servant is clearly distinct from elder brother. Natural photographic textures.",
+      "conditions": [
+        "Sandals are shown ready on the stool, not already on the son's unseen feet.",
+        "The father's orders and celebration come from Luke; specific robe decoration, ring design, helpers and menu are artistic details.",
+        "Do not claim the calf is visible or that every commanded act is already completed in this still."
+      ]
+    },
+    {
+      "key": "prodigal-son-08",
+      "generationKey": "prodigal-son-08",
+      "status": "pass_with_caption_conditions",
+      "sha256": "32ab41b0c8e3b5beef7a5bcddc6d51a9f48f3dc068d49afee2dc4167666a7413",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e6c1c5cc-e905-4bbd-bf00-aa948ccdc8ae.png",
+      "recommendedTitle": "The father comes out to the elder son",
+      "alt": "Outside the lit gathering, the father rests a hand on his elder son's shoulder and holds his other palm open while the son stands with folded arms and meets his gaze.",
+      "caption": "When the elder son refuses to enter, his father comes out and pleads with him. He affirms their enduring bond and explains why the return of this brother calls for rejoicing.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:28-32",
+          "28-32"
+        ]
+      ],
+      "findings": "Elder son's short dark hair, trimmed beard, angular face, brown tunic and olive wrap match right-hand son in01, distinct from younger son. Father identity and clothes continue. Direct reciprocal eye contact; father's patient inviting expression and elder's guarded folded arms suit unresolved conversation. Open palm, shoulder touch and folded hands/arms are coherent. Photographic skin and evening lighting; celebration behind provides context.",
+      "conditions": [
+        "Do not claim the elder son relents, forgives or enters; the parable leaves his response unstated.",
+        "Shoulder touch, folded arms, lighting and exact location are artistic choices, not separately narrated actions.",
+        "Do not treat the elder brother's allegation about his sibling as an independently established event."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "scope": "Canonical source/placement review of18 short-comparison scenes across11 pages; no pixel review or generation.",
+  "framing": {
+    "blind-guides": "Luke6:39 supports two unable-to-see guides and ditch comparison. Show approach without graphic fall; no moral claim about real blind people.",
+    "mote-beam": "Matthew7:3-5 is intentional exaggeration. Use unlabelled beam/splinter still life, not wood penetrating eyes. Plan title says labeled, conflicting with no embedded text: recommend remove labeled before generation; no canonical framing text edited here.",
+    "tree-fruit": "Luke6:43-44 supports good fruit and fruit not found on thorn growth. Use species-consistent fruit and genuine thorns, not biologically implausible grapes growing on thistles.",
+    "salt": "Matthew5:13 and Mark9:50 support salt metaphor. Hand/meal are illustrative object studies, not narrated historical events or a chemical claim about visible loss of savor.",
+    "bridegroom": "Matthew9:15 supports guests with bridegroom as comparison. No literal Christ identity, named wedding or Ten Virgins blend.",
+    "divided-house": "Mark3:25 describes internal division, not a specified domestic fight or building collapsing. Restrained disagreement may illustrate concept; no invented abuse or successful reconciliation.",
+    "returning-spirit": "Matthew12:44-45 supports swept empty house and worsening return. Dark threshold is symbolic atmosphere, not a literal spirit portrait or recorded time of day; no demon horror, psychiatric diagnosis, bodily possession effects or invented successful rescue. Caption must explicitly identify symbolism.",
+    "closed-door": "Luke13:25-27 supports closure and appeal. Do not show reopening, admission or successful plea. Outside visitors are comparison characters, not named condemned people.",
+    "parent-gifts": "Matthew7:9 and Luke11:11-13 support good-food comparison. Specific parent/child and offered-food action illustrate argument, not named historical family or promise all prayers receive requested item.",
+    "settle-adversary": "Matthew5:25/Luke12:58 give opportunity before judgment and consequences if unresolved. Approach may show continued discussion; no handshake settlement, forgiven debt or completed reconciliation absent source.",
+    "sheep-sabbath": "Matthew12:11 supports sheep in pit and expected lifting rescue as hypothetical comparison. No literal witnessed rescue by Jesus; no blending with Luke14 ass/ox account or Lost Sheep."
+  },
+  "appliedPlacements": [
+    {
+      "key": "blind-guides-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "mote-beam-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "tree-fruit-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "tree-fruit-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "salt-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "salt-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "bridegroom-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "divided-house-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "returning-spirit-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "returning-spirit-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "closed-door-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "closed-door-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "parent-gifts-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "parent-gifts-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "settle-adversary-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "settle-adversary-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "sheep-sabbath-01",
+      "fromSection": "setting",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "sheep-sabbath-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    }
+  ],
+  "proseIssues": [],
+  "sourceRangeChangesNeeded": [],
+  "preGenerationMetadataIssue": "mote-beam01 title/sourceSceneDescription calls still life labeled: recommend unlabelled symbolic still life; no visual text or literal eye injury. Do not treat symbolic house/objects as narrative eyewitness scenes.",
+  "checks": "All prior prose/source references/questions/related links preserved exactly; other pages unchanged.",
+  "registrySectionChangesRequired": [
+    {
+      "key": "tree-fruit-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "salt-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "returning-spirit-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "closed-door-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "parent-gifts-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "settle-adversary-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "sheep-sabbath-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    }
+  ]
+}

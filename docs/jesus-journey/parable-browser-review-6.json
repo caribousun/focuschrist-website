@@ -1,0 +1,31 @@
+{
+  "reviewedOriginals": 18,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pages": {
+    "blind-guides": 1,
+    "mote-beam": 1,
+    "tree-fruit": 2,
+    "salt": 2,
+    "bridegroom": 1,
+    "divided-house": 1,
+    "returning-spirit": 2,
+    "closed-door": 2,
+    "parent-gifts": 2,
+    "settle-adversary": 2,
+    "sheep-sabbath": 2
+  },
+  "checks": {
+    "imagesLoaded": true,
+    "artworkStudy": true,
+    "fullSizeOpenClose": true,
+    "scriptureOpenClose": true,
+    "studyCloseFocusReturn": true,
+    "noClippedControls": true,
+    "noHorizontalOverflow": true
+  },
+  "limits": "Interaction check only; no claim of every reader verse or full responsive composition.",
+  "status": "pass"
+}

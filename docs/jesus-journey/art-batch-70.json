@@ -1,0 +1,31 @@
+{
+  "rt-kirtland-appearance": {
+    "title": "The Lord in His house",
+    "alt": "Joseph Smith and Oliver Cowdery look upward toward the white-haired Savior in the Kirtland Temple.",
+    "caption": "Joseph and Oliver lift their eyes toward the Savior in the temple. His words assure them that He has accepted the house built to His name.",
+    "refs": [
+      [
+        "dc-testament/dc/110",
+        "Doctrine and Covenants 110:1–10",
+        "1-10"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "kirtland",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-kirtland-appearance-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-kirtland-appearance-960.webp",
+    "original": "rt-kirtland-appearance.png",
+    "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-kirtland-appearance-v5-20260923.png",
+    "original_sha256": "cd4929be9356ff353d12772a3c947882a71933dad2b48a0e2db54d1391f71c5f",
+    "prompt": "Repair the arm and sleeve at far RIGHT of photograph. Replace the current tight pale under-sleeve cuff with a naturally draping clean WHITE LINEN wide sleeve edge that ends just ABOVE the wrist. The cloth must be completely blank unmarked white linen, with NO PINK OVAL and no pink stitches. Show small area of actual TAN SKIN wrist between sleeve edge and hand; one tiny pale healed oval scar only on that skin wrist, and keep one tiny healed mark in the palm. Anatomically correct natural hand and wrist, same open hand pose. This local sleeve/skin correction is required because present image has a scar printed on cloth. Preserve every other aspect of the scene and all exact identities, faces, gaze, snow white hair and beard, other hand, Joseph/Oliver, architecture and lighting. 1536x1024 convincing live-action photograph. No decorative cuff seam or embroidery.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-kirtland-appearance-v4-20260923.png"
+    ],
+    "review_record": "new-art-review-rt-kirtland-appearance-v5.json"
+  }
+}

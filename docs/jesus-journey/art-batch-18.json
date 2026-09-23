@@ -1,0 +1,60 @@
+{
+  "collection-neighbor-02": {
+    "title": "Safe help beside a stalled car",
+    "alt": "A man makes a phone call beside a woman and a parked SUV in a broad gravel pullout, with a road visible far downhill.",
+    "caption": "The two people wait together in a broad pullout while a call is made. In this imagined application, arranging assistance is one way to respond to another person's difficulty. The Samaritan's care invites practical attention to what is needed, without requiring us to provide every kind of help ourselves.",
+    "refs": [
+      [
+        "nt/luke/10",
+        "Luke 10:34-35",
+        "34-35"
+      ]
+    ],
+    "owner": "jesus-christ/parables/neighbor.html",
+    "section": "seeing-the-need",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/collection-neighbor-02-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/collection-neighbor-02-960.webp",
+    "original": "collection-neighbor-02.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7fce8d56-b90c-411c-ad46-d403fd6a1bec.png",
+    "original_sha256": "9052deac18ac0f0bd3930ab36e84714d91a62b822db5a2ae741159f85e666ec3",
+    "prompt": "Edit the supplied photographic roadside assistance scene. Preserve the two exact fictional people, their clothing and the quiet helpful action: man phoning assistance, woman actively listening nearby. Correct only the staging/location: place them in a broad scenic gravel pullout well removed from the road, on the wooded passenger side of their parked SUV, with the SUV between them and the distant road. Several metres of gravel separate their feet from any traffic lane; show that separation clearly in the wide landscape composition. Keep lake and trees, realistic anatomy, natural candid expressions and photographic available light. No new text, no logos, no religious figures. The car is fully parked within the pullout, hazard lamps on. Remove the warning triangle near their feet rather than suggesting roadside placement instructions. It must read clearly as waiting together in a safe refuge, not standing on a traffic-facing shoulder. Landscape 1536x1024.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d66b10cb-6d61-4410-868f-cc1711cadd09.png"
+    ],
+    "review_record": "collection-art-review-5.json"
+  },
+  "collection-neighbor-08": {
+    "title": "Reopening the shared path",
+    "alt": "Three neighbors hold and work on a fallen leafy branch, with one positioning a curved pruning saw against a woody limb while a woman with a walker waits behind them.",
+    "caption": "Neighbors work together to clear a branch from a shared path while another person waits. This imagined scene connects practical help with Jesus' teaching that doing good matters. Attention to the task and to the people nearby makes that concern concrete.",
+    "refs": [
+      [
+        "nt/matt/12",
+        "Matthew 12:11-12",
+        "11-12"
+      ]
+    ],
+    "owner": "jesus-christ/parables/neighbor.html",
+    "section": "mercy-and-boundaries",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/collection-neighbor-08-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/collection-neighbor-08-960.webp",
+    "original": "collection-neighbor-08.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-05354b53-951a-4067-80a9-bb84c1993b95.png",
+    "original_sha256": "4d9841181befbd344d87d283585992d209d82435df1e06668a17d5c4f041d663",
+    "prompt": "Edit this live-action photograph of neighbors clearing fallen branches from a shared path. Preserve exact fictional people, faces, clothing, setting, natural photo realism and four-person composition. Correct the physically unsuitable tool: replace the elderly man's long straight hedge shears with a proper curved manual pruning saw, short black handle held naturally in his right gloved hand, serrated curved steel blade cutting across the woody limb near the right of the frame. His left gloved hand steadies the limb at a safe distance from the teeth. Keep all other people's hands well clear of blade. The branch is settled on ground or supported firmly, no suspended unstable cutting. Preserve the waiting woman's walker and generous safe separation behind the working neighbors. Hands and contacts anatomically correct, tool must clearly be one realistic pruning saw, no hybrid shears. Thoughtful focused effort rather than posed broad laughter; natural available light and skin detail. No text, logos, religious figures or montage. Landscape 1536x1024.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-270a0581-5e3e-4801-8785-a7c33a7dc58a.png"
+    ],
+    "review_record": "collection-art-review-5.json"
+  }
+}

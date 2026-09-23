@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent original-resolution pixel, source and broad botanical plausibility review; no import or page changes.",
+  "source_checks": [
+    "https://plants.ces.ncsu.edu/plants/ficus-carica/",
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/24?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/21?lang=eng"
+  ],
+  "entries": [
+    {
+      "key": "budding-fig-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a359d654-cddb-46b7-8a36-023a344a1156.png",
+      "sha256": "d899002814dbb462ef52501da373d2cd42091c317c985f98e1ada28d17ed3900",
+      "status": "pass_with_caption_conditions",
+      "refs": [
+        [
+          "nt/matt/24",
+          "Matthew 24:32",
+          "32"
+        ]
+      ],
+      "alt": "Fresh green lobed leaves unfold around a fig branch tip, with fine hairs and veins catching the sunlight.",
+      "caption": "Tender leaves unfold at the tip of the fig branch. Jesus draws on this familiar sign of approaching summer to teach His hearers to pay attention.",
+      "findings": [
+        "Exact original inspected at full resolution. Recognizably lobed fig leaves, palmate veins, fine hairs, green new growth and gray-brown older wood plausibly depict spring leaf emergence.",
+        "No external fig blossoms, ripe fruit, clock, date or invented diagram. Central folded new leaf reads as growth rather than a flower.",
+        "Macro light, focus falloff, bark texture and leaf translucence are photographic. Detailed plant structure is visually plausible, not a scientific cultivar certification.",
+        "Matthew24:32 directly supports tender branch and leaves as summer-near comparison; caption does not extrapolate a prophetic date."
+      ]
+    },
+    {
+      "key": "budding-fig-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c35f2e0c-50e2-42c5-af63-b5564e64966f.png",
+      "sha256": "2d4b592fdb19e0e471088b8b328e6b3ba8687d7aa227f4b3283d6aaabd052740",
+      "status": "pass_with_caption_conditions",
+      "refs": [
+        [
+          "nt/luke/21",
+          "Luke 21:29-30",
+          "29-30"
+        ]
+      ],
+      "alt": "Two travelers pause on a rocky hillside path beside a spreading leafy fig tree, with other green trees across the slope.",
+      "caption": "In this imagined scene, travelers pause beside a leafy fig tree and notice the green hillside. Jesus asks His hearers to observe the fig tree and other trees, recognizing summer's approach from their growth.",
+      "findings": [
+        "Exact original inspected at full resolution. Broad lobed foliage, irregular spreading crown and pale branching trunk are plausible fig characteristics; surrounding green deciduous growth supports seasonal observation.",
+        "Two unnamed observers are minor figures with natural standing posture, coherent sandals, hands and walking stick; faces are not presented as identifiable biblical people or Christ.",
+        "Scene expands from leaf detail01 to landscape observation; it does not purport to be the same photographed branch/tree or an exact elapsed time.",
+        "Travelers are interpretive staging, not a recorded Luke21 encounter. Caption explicitly preserves that distinction and includes all-trees context.",
+        "No prophecy chart, calendar, invented fruitfulness outcome or claim that a precise date can be read from leaves. Full canopy is illustrative seasonal greenery rather than a scientific calendar marker."
+      ]
+    }
+  ]
+}

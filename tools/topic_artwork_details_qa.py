@@ -6,11 +6,21 @@ import hashlib
 from urllib.parse import urlsplit
 from answer_study_qa import Document
 from study_gap_art_qa import sitewide_entries
+from build_jesus_journey import validate_artwork_review
 ROOT=Path(__file__).resolve().parents[1]
+
+def local_asset(page,href):
+ u=urlsplit(href)
+ assert not u.scheme and not u.netloc, 'Body artwork must be local'
+ target=(ROOT/u.path.lstrip('/') if u.path.startswith('/') else page.parent/u.path).resolve()
+ assert target.is_relative_to(ROOT), 'Artwork escapes site root'
+ return target
 def parents(n):
  while n.parent:
   n=n.parent;yield n
 errors=[];count=0;preserved=0;panels=0;life_assets=[];gap_assets=[];sitewide_assets=[]
+journey_review=json.loads((ROOT/'docs/jesus-journey/artworks.json').read_text(encoding='utf-8'))
+journey_assets=[]
 new_review = {e['asset']: e for e in sitewide_entries() if not e['talk'] and (e['page'].startswith('answers/') or e['page']=='general-conference.html')}
 focused_review = {e['asset']: e for e in json.loads((ROOT/'docs/focused-answers-art-review.json').read_text(encoding='utf-8'))['images'] if e['role'] == 'body'}
 assert len(focused_review) == 4, 'Exact four new supporting photographs required'
@@ -55,8 +65,16 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   if cap is None or not cap.text().strip():errors.append(page.name+': missing approved body caption')
   sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname=='www.churchofjesuschrist.org'] if cap else []
   if not sources and 'data-topic-study' not in a.attrs and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
-  relative_asset=(page.parent/urlsplit(a.attrs['href']).path).resolve().relative_to(ROOT).as_posix()
-  if relative_asset in focused_review or (relative_asset.startswith('assets/page-art/church-history/') and Path(relative_asset).stem in relocated_names):
+  relative_asset=local_asset(page,a.attrs['href']).relative_to(ROOT).as_posix()
+  if 'data-journey-art' in container.attrs:
+   key=container.attrs['data-journey-art'];record=journey_review[key]
+   assert record['owner']==page.relative_to(ROOT).as_posix(), 'Journey artwork ownership mismatch'
+   assert record['reviewed'] and record['asset']==relative_asset, 'Journey artwork registry mismatch'
+   validate_artwork_review(key,record,ROOT/'docs/jesus-journey')
+   assert hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['asset_sha256'], 'Journey artwork changed since review'
+   assert a.attrs.get('aria-haspopup')=='dialog', 'Journey picture must bind the shared study adapter'
+   journey_assets.append(key)
+  elif relative_asset in focused_review or (relative_asset.startswith('assets/page-art/church-history/') and Path(relative_asset).stem in relocated_names):
    if relative_asset in focused_review:
     record=focused_review[relative_asset]
     assert record['page']==page.relative_to(ROOT).as_posix(), 'Focused artwork ownership mismatch'
@@ -108,9 +126,9 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    # study adapter install the first action rather than the bare-image viewer.
    if 'data-full-image-viewer' in a.attrs:errors.append(page.name+': new picture must open study options first')
    if a.attrs.get('aria-haspopup')!='dialog':errors.append(page.name+': new picture dialog semantics missing')
-   (life_assets if 'data-life-after-death-art' in container.attrs else gap_assets).append((page.parent/urlsplit(a.attrs['href']).path).resolve().relative_to(ROOT).as_posix())
+   (life_assets if 'data-life-after-death-art' in container.attrs else gap_assets).append(relative_asset)
   elif 'data-full-image-viewer' not in a.attrs:errors.append(page.name+': native image fallback missing')
-  if not (page.parent/urlsplit(a.attrs['href']).path).resolve().is_file():errors.append(page.name+': full image missing')
+  if not local_asset(page,a.attrs['href']).is_file():errors.append(page.name+': full image missing')
 life_review=json.loads((ROOT/'docs/life-after-death-art-review.json').read_text(encoding='utf-8'))['artworks']
 reviewed_life_assets={entry['asset'] for entry in life_review}
 assert len(life_assets)==18 and len(set(life_assets))==18 and set(life_assets)==reviewed_life_assets,'Life After Death adapter inventory differs from reviewed art'
@@ -124,7 +142,9 @@ assert len(focused_assets)==4 and set(focused_assets)==set(focused_review), 'Foc
 assert len(relocated_assets)==6 and {Path(a).stem for a in relocated_assets}==relocated_names, 'Preserved historical artwork inventory mismatch'
 assert len(settle_assets)==14 and set(settle_assets)==set(settle_review), 'Settled faith exact body inventory mismatch'
 assert len(bible_assets)==13 and len(set(bible_assets))==13 and set(bible_assets)==set(bible_review), 'Bible together exact body inventory mismatch'
-assert (count-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+expected_journey={k for k,v in journey_review.items() if v['owner'].startswith('answers/')}
+assert len(journey_assets)==len(set(journey_assets)) and set(journey_assets)==expected_journey, 'Journey parent exact artwork inventory mismatch'
+assert (count-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert panels==12,panels

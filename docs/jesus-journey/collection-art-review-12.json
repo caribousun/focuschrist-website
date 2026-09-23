@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent original-detail review of collection-watchfulness-01 through -04",
+  "ownerApproval": false,
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Imagined contemporary reflective applications, not documentary events or literal parable scenes.",
+    "Technical visual review does not certify safety, compliance, professional expertise or owner approval."
+  ],
+  "entries": [
+    {
+      "key": "collection-watchfulness-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "5d0a14081e14bd4811ec3af406725fe7fcdaa211860c55d99dc3f6ad6013b791",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fa1a6323-e119-4189-b534-b8e0a17cec42.png",
+      "alt": "A woman writes in an open notebook at a table beside a window.",
+      "caption": "A quiet moment of writing offers an imagined setting for honest reflection. Alongside Jesus' teaching about humble prayer, the scene invites us to bring our need to God without performing for others.",
+      "findings": "Pen grip, nib contact, supporting hand and downward gaze are coherent. Natural photographic expression. Notebook content is not legible enough to identify a prayer or particular concern.",
+      "conditions": [
+        "Do not claim the visible page contains a confession or verified prayer; that connection is reflective.",
+        "Do not infer emotional recovery or an answered prayer."
+      ],
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:9-14",
+          "9-14"
+        ]
+      ]
+    },
+    {
+      "key": "collection-watchfulness-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "4350995b70b5a502d71f1f165fb99ef37899583ccc2cc1d59c0064dcef9f930b",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3824e47-eb06-4a34-b8e0-539a96c293e4.png",
+      "alt": "A wheelchair user points with a pen to a document while a woman listens across a service desk.",
+      "caption": "A person brings a request to a service desk and takes an active part in discussing it. This imagined application invites reflection on persistence alongside the widow's appeal, without promising a particular response.",
+      "findings": "Wheelchair user leads the discussion and points to the page; listener faces him attentively. Hands, pen and paper contact are credible. Desk and chair geometry are plausible for this paused conversation.",
+      "conditions": [
+        "Do not claim this is a return visit, an unanswered previous request, a particular diagnosis, or a resolved accessibility complaint.",
+        "Do not certify the desk or premises as accessible from this single view."
+      ],
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:1-8",
+          "1-8"
+        ]
+      ]
+    },
+    {
+      "key": "collection-watchfulness-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "b908a70a052919976c67f42964a6c9c1f32b3e6436d0143165fc41e7f782ee44",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3cfbcd4a-3b65-48b0-a8be-d313d4f83422.png",
+      "alt": "Two adults check a lit flashlight and a pack of batteries beside a bag of supplies on a kitchen table.",
+      "caption": "Two people give practical supplies their attention. This imagined reflection on readiness recalls the invitation to prepare in the ten-virgins parable, without making an emergency kit a guarantee of safety or a measure of spiritual worth.",
+      "findings": "Flashlight grip and light spot align plausibly; batteries have coherent cylindrical form and packaging. Hands and focused faces are natural. The kit is only partially visible.",
+      "conditions": [
+        "Do not call the kit complete, certify battery compatibility, or promise preparedness for every emergency.",
+        "No relationship or previous preparation history inferred."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:1-13",
+          "1-13"
+        ]
+      ]
+    },
+    {
+      "key": "collection-watchfulness-04",
+      "status": "pass_with_caption_conditions",
+      "sha256": "c17cd6f0cad68cb7c97ddb7e2387ce4021ba5d83feb962b093ef90d4806623c8",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7f1deaf3-f573-4f98-8282-da3cb5239e5c.png",
+      "alt": "A woman with a rollator pauses by an open doorway while a man holds the push bar and another woman takes notes.",
+      "caption": "The group pauses to discuss a route through an open doorway. This imagined application connects watchfulness with attentive preparation that includes the people who will use the space.",
+      "findings": "Rollator frame, grips and four visible wheels are coherent; user retains control. Open door, push bar and threshold are visually plausible in this paused discussion. Exterior landing is visible without a depicted drop at the threshold; no loose obstruction spans the visible passage. Man stands beside the route, so image does not show a completed traversal.",
+      "conditions": [
+        "Do not call this a certified safe or code-compliant exit, a completed drill, or proof of sufficient clearance and acceptable threshold height.",
+        "The note-taker and man are not verified professionals. Do not imply the user requires others to direct all movement.",
+        "Keep the caption at a paused discussion rather than claiming an obstacle-free evacuation underway."
+      ],
+      "refs": [
+        [
+          "nt/mark/13",
+          "Mark 13:33-37",
+          "33-37"
+        ]
+      ]
+    }
+  ]
+}

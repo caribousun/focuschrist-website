@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent exact original-resolution pixel/source review of great-supper01-04; no imports or page changes.",
+  "entries": [
+    {
+      "key": "great-supper-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-17afa1e8-f291-433e-90c3-a1f907c1ec4a.png",
+      "sha256": "70ebea4f0bf7183865d8fb732137dfad97a1b19d9ef7d66f7e0324e86fbd54d1",
+      "status": "pass_with_caption_conditions",
+      "alt": "A bald bearded servant gestures to a mustached man at a doorway, with a prepared meal visible in the courtyard behind him.",
+      "caption": "The servant announces that the supper is ready. Jesus begins the story with a prepared meal and an invitation to come.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:16-17",
+          "16-17"
+        ]
+      ],
+      "findings": [
+        "Full-resolution original inspected: bald reddish-bearded servant in green/beige distinct from dark-haired mustached invitee in blue/striped mantle. Faces/garments continue02.",
+        "Open-hand gesture and invitee doorframe grip coherent, reciprocal conversational gaze, natural restrained expressions. Prepared table visible but menu/architecture are artistic staging.",
+        "Luke14:16-17 supports readiness announcement. No named historical identity or invented reason for response assigned."
+      ]
+    },
+    {
+      "key": "great-supper-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-afa8d461-f8df-4d86-aaa9-81fb33f7f2ad.png",
+      "sha256": "d2d98fca98ca0382ed44acc8409c76f5476482cf14901dab000b52bba6ab1c18",
+      "status": "pass_with_caption_conditions",
+      "alt": "The same servant listens as the invited man raises one palm and gestures toward a cultivated field with his other hand.",
+      "caption": "An invited man gestures toward his field as he asks to be excused. This scene pictures the first refusal Jesus describes, before the invitation reaches others.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:18",
+          "18"
+        ]
+      ],
+      "findings": [
+        "Servant and same mustached invitee preserve01 identity. Raised refusing palm and extended field gesture have coherent fingers/wrists and no extra limbs.",
+        "Eyes meet with conversational seriousness; no villain caricature. Field and plants provide context, no oxen/wedding party or combined incidents.",
+        "Narrowed refs toLuke14:18 and recommended title toThe field excuse; only first excuse shown. No claim of exact crop/species, purchase document or private motive."
+      ],
+      "recommendedTitle": "The field excuse"
+    },
+    {
+      "key": "great-supper-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-badaff61-7dfc-4cdb-9d90-ed727d51193a.png",
+      "sha256": "704a564436e0e324817ce7f1934b21ee9e0878b0f86d5d02d4e310759064bc5f",
+      "status": "pass_with_caption_conditions",
+      "alt": "A servant welcomes three people at an open doorway; two older men hold wooden walking staffs, and a woman supports one man by the arm.",
+      "caption": "At the doorway, the servant welcomes a group into the waiting supper. Jesus describes the invitation reaching people in the streets and lanes who had not been at the center of the first guest list.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:21",
+          "21"
+        ]
+      ],
+      "findings": [
+        "Same servant recognizable at door, extending open welcoming arm. Three visitors distinct by face/hair/clothing; no duplicated faces.",
+        "Visible straight wooden supports are walking staffs, not underarm crutches. Woman hand/forearm assistance and older man staff grip plausible. Closed eyes do not establish clinical diagnosis.",
+        "Warm attention among servant and approaching people; modest period clothing, natural daylight/interior lamplight and coherent threshold. No cure, disability diagnosis, kinship or miraculous change asserted.",
+        "Luke14:21 gives widened streets/lanes invitation. Caption remains broad rather than pretending image demonstrates every category named in verse."
+      ]
+    },
+    {
+      "key": "great-supper-04",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-77661d5e-5dae-4534-9ff3-a404cbc393c0.png",
+      "sha256": "b3a6193856b1d2ac5fe5751a111ad9151089f2128d6b5414cbb3c23450f3d78d",
+      "status": "pass_with_caption_conditions",
+      "alt": "On a path beyond the town, the servant extends an open hand while a woman holding a basket and a seated older man with a staff look toward him.",
+      "caption": "The servant carries the invitation out beyond the town, meeting people along the way. The master's wish is that his house be filled, widening the welcome beyond those first invited.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:23",
+          "23"
+        ]
+      ],
+      "findings": [
+        "Servant retains bald face/reddish beard and green/beige clothes. Woman with basket and seated older man distinguishable from servant; open gesture is invitational, no grabbing or coercive contact.",
+        "Mutually directed gazes and expressions fit attentive invitation; basket handle grip, staff hand and open palm coherent. Photographic skin/fabric and warm outdoor light.",
+        "Luke14:23 roads/hedges setting illustrated without claim of precise geography. No added family relationship, forced attendance, conversion or final response."
+      ]
+    }
+  ]
+}

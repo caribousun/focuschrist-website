@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of tp-passover-water-carrier",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "tp-passover-water-carrier",
+      "generationKey": "tp-passover-water-carrier",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-c5a8349a-64bc-431e-ab1e-06e8f00a8edd.png",
+      "sha256": "743c2e8841335327e214ced5426ada7a477565ec935a2d7dae97bd77e6ae1c33",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Following the sign Jesus gave",
+      "alt": "Peter and John follow a man carrying a clay water jar toward a doorway.",
+      "caption": "The water jar rests securely in the man's arms as Peter and John follow him through the lane. Jesus's simple instruction leads them toward the place where they will prepare the Passover.",
+      "refs": [
+        [
+          "nt/luke/22",
+          "Luke 22:7–13",
+          "7-13"
+        ]
+      ],
+      "findings": "Direct apostle reference comparison: Peter at left retains curl pattern, beard and nose; John following to his right retains shorter beard, dark hair and taupe wrap. Carrier is distinct gray-haired clean-shaven adult. Full load support by forearm and opposite hand, coherent walking limbs, realistic pottery and stone street. Route-directed gaze fits following action; no conversation or Christ requiring mutual gaze.",
+      "conditions": [
+        "Carrier remains unnamed; exact age, lane, doorway, garments and vessel are interpretation. Do not claim a specific reconstructed Jerusalem address or completed Passover meal.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/page-art/church-history/melchizedek-priesthood.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng"
+      ]
+    }
+  ]
+}

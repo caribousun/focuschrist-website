@@ -224,6 +224,12 @@ jobs:
       - name: Rebuild public search index for publication
         run: python tools/build_site_search.py
 
+      - name: Verify complete Jesus Christ journey before publication
+        run: |
+          python tools/jesus_journey_qa.py
+          python tools/build_jesus_journey.py --strict --check
+          python tools/build_jesus_parent.py --strict --check
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Rich Man and Lazarus01–03 actual-original review for humane treatment, anatomy, Lazarus continuity and Luke16:19–25 source/afterlife depiction boundaries.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "No approved Abraham reference was supplied; accepted technical candidate must not be promoted to owner-approved identity."
+  ],
+  "identityCandidates": [
+    {
+      "person": "Abraham",
+      "status": "working_candidate_not_owner_approved",
+      "generationKey": "rich-man-lazarus-03",
+      "sha256": "8c78bb6408c1a6a53a7c5bf943f996dafbec6d7d925d338497822a1efd4297b0",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-812959f2-b535-42c7-a074-90c57c496d85.png",
+      "appearance": "Elderly man with long white beard, prominent nose, lined forehead, tan headcloth held by brown cord, cream garment and dark striped outer layer.",
+      "preservation": "Retain this exact candidate as the continuity reference when future Abraham depiction is authorized; do not claim historical authentication."
+    }
+  ],
+  "entries": [
+    {
+      "key": "rich-man-lazarus-01",
+      "generationKey": "rich-man-lazarus-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "943e9f6910a412008bfb3a7278e1818a3c3b9ad4872a35c8f023d06882db534a",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f3ef62a9-91fa-4baf-9315-baad9a6e101f.png",
+      "recommendedTitle": "The rich man's abundance",
+      "alt": "A man in purple and light linen reclines on cushions holding a metal cup beside a table laden with bread, fruit and olives.",
+      "caption": "Jesus describes a rich man clothed in purple and fine linen who feasts splendidly every day. The abundant table pictures his comfort before the account turns to the suffering at his gate.",
+      "refs": [
+        [
+          "nt/luke/16",
+          "Luke 16:19",
+          "19"
+        ]
+      ],
+      "findings": "Distinct balding clean-shaven man with full face, purple robe and decorated light linen; no Christ likeness. Cup grip, resting hand and reclining posture plausible. Natural photographic textures and restrained satisfaction rather than caricature. Food clearly abundant; cup contents not identifiable.",
+      "conditions": [
+        "Daily frequency is from Luke16:19, not a still-image observation.",
+        "Exact menu, furnishing and cup are illustrative; no named historical rich man is identified."
+      ]
+    },
+    {
+      "key": "rich-man-lazarus-02",
+      "generationKey": "rich-man-lazarus-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "f557837034475376d0951bbc5b061f60f24e0fb568eaa22c5bf107492510bb88",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-23e7b41b-1c56-418d-9d47-6cfd7e6c7f22.png",
+      "recommendedTitle": "Lazarus at the gate",
+      "alt": "A thin gray-haired man in torn clothing sits barefoot against a closed gate, with sores on his limbs; one dog licks his lower leg while another lies beside him.",
+      "caption": "Lazarus lies at the rich man's gate, covered with sores and longing for what falls from the table. Even the dogs come and lick his sores, underscoring the need beside the rich man's abundance.",
+      "refs": [
+        [
+          "nt/luke/16",
+          "Luke 16:20-21",
+          "20-21"
+        ]
+      ],
+      "findings": "Lazarus distinct narrow lined face, gray curls, short gray beard and ragged pale/brown clothing. Two dogs with credible body/paw/muzzle structure; left tongue visibly near sore shin, right dog rests. Sores noticeable but non-graphic without blood spectacle. Human hands, bare feet and seated limbs credible. Dignified, restrained suffering; no invented rescuer or completed relief.",
+      "conditions": [
+        "Do not claim dogs heal or rescue him, or infer a named medical diagnosis.",
+        "Seated/reclining posture illustrates his placement at the gate; no food transfer from the rich man is visible.",
+        "Lazarus in this account is not identified as Lazarus of Bethany."
+      ]
+    },
+    {
+      "key": "rich-man-lazarus-03",
+      "generationKey": "rich-man-lazarus-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "8c78bb6408c1a6a53a7c5bf943f996dafbec6d7d925d338497822a1efd4297b0",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-812959f2-b535-42c7-a074-90c57c496d85.png",
+      "recommendedTitle": "Lazarus comforted with Abraham",
+      "alt": "An elderly man with a long white beard and light head covering holds the gray-haired man's hand and rests an arm around his shoulders as they look at one another.",
+      "caption": "After Lazarus dies, Jesus describes him being carried by angels to Abraham's bosom, where he is comforted. This embrace pictures that comfort symbolically; its surroundings and bodily appearance are artistic choices, not a literal map of the afterlife.",
+      "refs": [
+        [
+          "nt/luke/16",
+          "Luke 16:22-25",
+          "22-25"
+        ]
+      ],
+      "findings": "Lazarus face, gray curls and short beard maintain02 identity, with relieved expression. Abraham distinct long white beard, prominent nose, lined forehead, tan headcloth with brown cord, cream garment and dark striped outer layer. Mutual eye contact and warm but restrained expressions appropriate. Hand clasp and shoulder-embracing hand anatomically coherent. Natural photographic rendering of symbolic scene; no angels shown and no claim of their visible transport.",
+      "conditions": [
+        "Environment, physical embrace and apparent bodily condition are symbolic artistic choices, not scriptural specifications of spirit-world geography, bodily resurrection or a reanimated earthly body.",
+        "Abraham is a new working visual-identity candidate, not an owner-approved or authenticated likeness; preserve this exact hash and appearance for continuity if reused.",
+        "No subsequent earthly rescue, healing episode or reunion before death is implied."
+      ]
+    }
+  ]
+}

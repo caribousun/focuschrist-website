@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Ten-virgins scene 01 reviewed at original detail before character reuse.",
+  "summary": {
+    "passWithCaptionConditions": 0,
+    "revise": 1
+  },
+  "entries": [
+    {
+      "key": "ten-virgins-01",
+      "status": "revise",
+      "sha256": "ce61f6eca77f9de42b774b1b98257b026419b3eca36602261279db08176cad19",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bf10cd22-6954-448f-b7ce-6dc57d102fcb.png",
+      "recommendedTitle": "Ten women with their lamps",
+      "alt": "Ten women, five seated and five standing, hold ten lit oil lamps outside a stone building at dusk.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:1",
+          "1"
+        ]
+      ],
+      "findings": "Count is correct: ten visible women and ten handheld lit lamps, excluding the wall light. However, the women share strikingly similar youthful faces, noses, jawlines, eyes, dark hair and smiles. Different veils and garment colors do not establish ten distinct identities. Several adjacent faces read as the same model repeated, making this unsuitable as the continuity basis. Visible hand/lamp contacts are broadly coherent and photographic; identity duplication is the blocking issue.",
+      "conditions": [
+        "Revise the ten women with clearly distinct adult facial structures, varied plausible adult ages, heights and natural expressions; preserve exactly ten women and ten handheld lamps.",
+        "Do not rely only on garment or veil color to distinguish them. Keep a clear identity map for later scenes.",
+        "Do not encode wise/foolish status through age, attractiveness, ethnicity or facial dignity; those distinctions concern preparation in the story.",
+        "Do not import this hash or reuse it as accepted character continuity. Exact ages and faces remain artistic choices, not claims supplied by Matthew."
+      ]
+    }
+  ],
+  "ownerApproval": false
+}

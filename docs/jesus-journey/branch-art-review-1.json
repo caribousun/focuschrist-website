@@ -1,0 +1,83 @@
+{
+  "review_type": "independent_hash_bound_art_review",
+  "owner_approval": false,
+  "reference": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png",
+  "scope": "Eight original branch images inspected directly at original detail. Compared Christ depictions to canonical reference previously inspected in this review session. No generation or editing performed.",
+  "candidates": [
+    {
+      "key": "bb-birds-over-waters",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-00496ad3-e65f-4851-9afa-4c2067d71e67.png",
+      "sha256": "6db72c6584ac145ba817c2e673de3397956c1ff55f24f7eed16a9942294779f5",
+      "verdict": "pass",
+      "alt": "Fish swim beneath clear coastal water while seabirds fly above the rocky shore.",
+      "caption": "Genesis describes living creatures in the waters and birds above the earth. This illustrative scene invites attention to the life named in the creation account; it does not reconstruct a known primordial location or scientific chronology.",
+      "findings": "Photographic water, fish, feathers and rock detail. Visible bird and fish anatomy is coherent; no human likeness concern."
+    },
+    {
+      "key": "bb-sea-crossing",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-48a31214-11bb-4b42-937a-5dd24562c899.png",
+      "sha256": "fcd081376216070615529a1a24e1770e577103ab140ea538138ede711a5aa499",
+      "verdict": "pass",
+      "alt": "A woman holding a child's hand walks with other travelers on exposed ground between walls of water.",
+      "caption": "Exodus records the Israelites crossing on dry ground with water on either side. The unnamed travelers, their appearances and the scale of the scene are artistic interpretations.",
+      "findings": "Photo-like skin, cloth, ground and moving water; solemn vigilant expressions fit danger and resolve. Joined adult/child hands and visible legs/feet are coherent. No Christ figure or obvious reused Christ identity. The extraordinary water arrangement is part of illustrating the miracle, not evidence of photographic documentation."
+    },
+    {
+      "key": "bb-manna-gathering",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ad66a2e2-acf9-45b8-a5e1-eb8642be105e.png",
+      "sha256": "9e3132cf6f343f1b056893bd3afa5119af1f26b9918cb6ceca452bf6efd87826",
+      "verdict": "pass",
+      "alt": "A woman and a boy gather small pale grains from the ground beside a wilderness camp.",
+      "caption": "The Israelites gather the food provided in the wilderness. These unnamed gatherers and the camp illustrate Exodus 16; their relationship and the exact appearance of the scene are not recorded.",
+      "findings": "Natural skin and detailed materials, focused downward gaze, plausible gathering and basket-support hands. No giant bread or impossible food action. Avoid asserting a particular family relationship or exact scientific identification of manna."
+    },
+    {
+      "key": "mm-cana-jars",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d303b9bf-959f-4ae0-a68f-7fc781992f17.png",
+      "sha256": "16d39b5f931b018278dba178f6d4f137652d05884167134ece00d1419669100b",
+      "verdict": "revise",
+      "alt": "Jesus watches a servant pour clear water from a clay pitcher into a group of large stone jars.",
+      "caption": "Jesus instructs the servants to fill the stone waterpots at Cana. John specifies six waterpots; the current candidate needs its extra jar removed before this depiction is used.",
+      "findings": "Seven separate large stone jar openings visible: back-left, cropped left-middle, back-center, front-left, receiving jar at right, front-center and cropped front-right. The clay pouring pitcher is an additional vessel and is not included in this count. Christ likeness is strong, task-directed gaze and hands look plausible, and rendering is photographic.",
+      "required_revision": "Remove exactly one large stone waterpot and preserve six clearly distinguishable stone jar openings. Retain the separate clay pitcher, coherent pouring action, Christ identity and natural gaze."
+    },
+    {
+      "key": "mm-women-support",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8ffd097d-22f8-4fb7-bac2-de73ad71cace.png",
+      "sha256": "70989235c211e713e4a4dc1f6961f3f94aad739f5d2842ac7487367d25e40edb",
+      "verdict": "pass",
+      "alt": "Two women pack a cloth-wrapped provision into a woven basket while Jesus speaks with a disciple nearby.",
+      "caption": "Luke names women who supported Jesus's ministry from their resources, along with many others. This scene illustrates that practical support through unnamed women; the packing action is an artistic reconstruction.",
+      "findings": "Photographic foreground faces, fabric and woven basket. Women are sufficiently distinct and their task-directed gaze and grips are coherent. Christ in middle distance retains recognizable canonical facial structure and natural conversational gaze; other visible men are sufficiently distinct. Do not name the foreground women Mary Magdalene, Joanna or Susanna."
+    },
+    {
+      "key": "mm-twelve-depart",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4459a424-b946-41bc-8559-6b0ce4664c47.png",
+      "sha256": "e30a6f1b3ebb97311af632e71c649f14f1870c9779d7991665224fdf3d2f9fcd",
+      "verdict": "revise",
+      "alt": "Jesus addresses departing disciples on a rural road as the nearest man looks back toward Him.",
+      "caption": "Jesus sends the Twelve to proclaim the kingdom and heal. This illustration shows part of the departing group; the exact landscape and gestures are imagined.",
+      "findings": "Photographic rendering, coherent direction of travel, appropriate reciprocal eye line and plausible visible hands. The nearest turning disciple nevertheless strongly repeats Christ's brow, nose profile, cheek contours, beard outline and wavy hair identity, reading as a shorter-haired Christ duplicate. Left foreground disciple also has similar general casting, though not as clearly duplicative.",
+      "required_revision": "Recast the nearest turning disciple with unmistakably different face geometry, hair texture/cut and beard style; retain Christ exactly. Ideally also differentiate the leftmost foreground man's facial silhouette. Preserve eye contact, anatomy and no-travel-bag/no-staff Luke 9 staging."
+    },
+    {
+      "key": "mm-jerusalem-tears",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3136ffed-1eb4-4e1e-b1ca-045e1280e00a.png",
+      "sha256": "3da158fdfdbcfa426cb19c8155b1eca9e83ea811361baaaf402ec5157b284519",
+      "verdict": "pass",
+      "alt": "Jesus looks toward Jerusalem with tearful eyes while a disciple stands quietly behind Him.",
+      "caption": "As Jesus draws near Jerusalem, Luke records that He sees the city and weeps over it. His appearance, the follower and the distant city panorama are artistic interpretations.",
+      "findings": "Strong recognizable canonical Christ likeness with restrained grief, wet eyes and face directed toward city. No smile or theatrical outburst. Skin, hair and cloth retain photographic detail; resting hand is plausible. Background follower distinct enough. Panorama suggests ancient city and temple, but must not be called an exact archaeological reconstruction."
+    },
+    {
+      "key": "mm-temple-tables",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d1e51915-90f6-49c4-876e-be50290edc31.png",
+      "sha256": "c9de46129bf45af4445efe978a0b58d4126f4385ec96ccf7944396b5dd858057",
+      "verdict": "pass",
+      "alt": "Jesus stands beside an overturned table and scattered coins while sellers gather their belongings in the temple court.",
+      "caption": "John records Jesus driving out the sellers, pouring out the changers' money and overturning tables. This artistic depiction emphasizes His resolute action; it does not show Him striking a person.",
+      "findings": "Strong Christ facial identity retained beneath stern expression. Eyes directed toward sellers, not camera; controlled resolve fits scene. Natural skin, cloth and wood support photographic treatment. Visible fingers, lowered cords, coin/table relationship and foreground seller's grip are plausible; people are distinct. No visible pre-Resurrection nail wounds. Exact court, table, cords and containers are artistic reconstruction."
+    }
+  ],
+  "overall": "Six pass technical review; Cana requires exactly six waterpots and Twelve Depart requires distinct nearest-disciple identity. Pass does not confer owner approval."
+}

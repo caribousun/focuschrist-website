@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent parable source and pixel review",
+  "scope": "Two exact generated thief-at-night originals reviewed at full original image detail; source fit, anatomy, architecture, lighting, and hand-to-bolt contact.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical and source review does not constitute owner approval.",
+    "Use these as illustrations of Jesus's hypothetical comparison, not as a recorded burglary or a portrayal of Christ.",
+    "No import performed."
+  ],
+  "entries": [
+    {
+      "key": "thief-night-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0efc48e3-450d-45fd-ab5b-04457ddd1d85.png",
+      "refs": [
+        [
+          "nt/matt/24",
+          "Matthew 24:43",
+          "43"
+        ]
+      ],
+      "sha256": "69c108aaeea5a3ca1c38849a87a9d133d7927c0d6a8433e605a821e6c50577bb",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A house in the night",
+      "alt": "Moonlight falls on a stone house, with warm light shining around its wooden door and shuttered window.",
+      "caption": "Warm light shines around the door of a quiet house beneath the night sky. Jesus asks His listeners to consider how a homeowner would keep watch if he knew when a thief would come.",
+      "findings": [
+        "The exterior supplies a distinct nighttime establishing moment; no person, sleeping household, thief, or attempted entry is visible.",
+        "Stone and plaster walls, wooden door and shutters, terrace steps, earthenware, and contrasting moonlight and indoor light are visually coherent. These are permissible illustrative details, not an exact architectural reconstruction.",
+        "The interior light source is not visible; caption describes light rather than claiming a visible lamp. Matthew 24:43 presents a hypothetical comparison, not a recorded burglary."
+      ],
+      "conditions": [
+        "Use the supplied actual alt and source-grounded caption; retain the hypothetical narrative framing."
+      ]
+    },
+    {
+      "key": "thief-night-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-10317b65-73db-430a-a4d8-b12f55a93d48.png",
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:39",
+          "39"
+        ]
+      ],
+      "sha256": "29e9d43b007b0e435d3dfe20b239b1efb18fa59722a8f0d9ae1b7eb50ff6c0f1",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Keeping watch at the door",
+      "alt": "A man rests a hand on a wooden door bolt beside a burning oil lamp and a shuttered window.",
+      "caption": "The householder rests a hand on the wooden bolt while an oil lamp burns beside him. Jesus uses the watchful homeowner to teach the value of being ready before an unexpected arrival.",
+      "findings": [
+        "The visible hand rests naturally on the top and front of the horizontal bolt, with plausible finger contact and no apparent extra digits. Bolt, brackets, door, and adjoining frame form a coherent arrangement.",
+        "The bolt appears seated; a checking or watchful gesture is supported, but active sliding or successful exclusion of an intruder is not established.",
+        "Face, eye direction toward the window, draped clothing, lamp flame, ledge, and nighttime illumination appear photographically coherent. The man is an ordinary fictional householder, not Christ.",
+        "Luke 12:39 is a hypothetical homeowner comparison; readiness is the teaching, not fear or a claim that a burglary was recorded. No intruder is visible."
+      ],
+      "conditions": [
+        "Use the supplied actual alt and source-grounded caption; retain the hypothetical narrative framing."
+      ]
+    }
+  ]
+}

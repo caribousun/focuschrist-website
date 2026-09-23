@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "filesChanged": [
+    "docs/jesus-journey/pages.json",
+    "docs/jesus-journey/parable-art-plan.json"
+  ],
+  "beforeSha256": {
+    "pages.json": "e52dea9e523e65ed1866cc176a057b00a4198845a0e98ddb681744b9fa79aa6d",
+    "parable-art-plan.json": "3d3e8633d434347aabdb3e4e52e18147c27f0b7ff78fc630bc95d7073f12bf1d"
+  },
+  "afterSha256": {
+    "pages.json": "7c06a9f043726153afbf6d5354ebccca2e8a616c5c47bb55620571057b273aed",
+    "parable-art-plan.json": "7250c84e9153718bdd01db8dbbe2642880efcfcbb845294771af6dd860b62fd6"
+  },
+  "snapshots": [
+    "duty-widow-publican-before-pages.json",
+    "duty-widow-publican-before-parable-art-plan.json"
+  ],
+  "overrides": [
+    {
+      "key": "servant-duty-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "servant-duty-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "persistent-widow-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "persistent-widow-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "persistent-widow-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "pharisee-publican-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "pharisee-publican-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "pharisee-publican-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    }
+  ],
+  "registrySectionChangesRequired": [
+    {
+      "key": "servant-duty-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "persistent-widow-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "pharisee-publican-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    }
+  ],
+  "metadataChange": "persistent-widow03 title/sourceSceneDescription/generationPrompt now specify judge deciding to act; all references preserved.",
+  "checks": {
+    "allNonArtPageDataUnchanged": true,
+    "allOtherPagesUnchanged": true,
+    "allOtherPlanEntriesUnchanged": true,
+    "allPlanReferencesUnchanged": true,
+    "allEightPositionsVerified": true
+  },
+  "noRegistryBuildImport": true
+}

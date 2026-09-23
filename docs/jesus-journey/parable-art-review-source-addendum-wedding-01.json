@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "scope": "Source-reference addendum only; no new pixel review. Extend source through verse8, which introduces the hypothetical wedding. Existing title, alt, caption, original hash and prior pixel review remain unchanged.",
+  "entries": [
+    {
+      "key": "wedding-places-01",
+      "generationKey": "wedding-places-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "cbf6831bf3ff9710de166bcd4efb52da47f329a66aabb8ecab835128c73e6b46",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-577b1d8b-2d24-4aa7-b480-e10b20647338.png",
+      "recommendedTitle": "Choosing a place of honor",
+      "alt": "A dark-bearded guest in blue rests his hand on a prominent patterned cushion while a younger guest in brown attends to a lower place beside the table and an older host stands behind.",
+      "caption": "Jesus notices how guests choose places of honor and teaches them about humility. This imagined wedding gathering introduces the contrast between seeking prominence and taking a lower place.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:7-8",
+          "7-8"
+        ]
+      ],
+      "findings": "Luke14:7 supplies the observed choice of honored places; verse8 introduces the wedding example explicitly pictured in the unchanged caption. This addendum corrects source specificity only and does not replace review52 or imply owner approval."
+    }
+  ]
+}

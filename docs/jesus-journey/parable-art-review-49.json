@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Friend at Midnight scenes 01–03 viewed at original detail for identity continuity, gaze, physical action, three-loaf count and Luke 11:5–8.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical visual/source review is not owner approval or final browser acceptance.",
+    "These are unnamed characters within Jesus' parable, not portraits of Jesus or documentary photographs."
+  ],
+  "entries": [
+    {
+      "key": "friend-midnight-01",
+      "generationKey": "friend-midnight-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "a147339a54a567a7e78b8f34b1662c27bd07bc1f718d79527733d7d5671bf40f",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6e896a02-d2ad-4c15-9f43-fe17e4fb93c3.png",
+      "recommendedTitle": "A traveler arrives at night",
+      "alt": "A traveler with a shoulder bundle meets a bald host holding an oil lamp at an open doorway, with an empty basket on the table inside.",
+      "caption": "A friend arrives after a journey, and his host has nothing to set before him. The nighttime welcome introduces a need that will send the host to another friend's door.",
+      "refs": [
+        [
+          "nt/luke/11",
+          "Luke 11:5–6",
+          "5-6"
+        ]
+      ],
+      "findings": "Reciprocal gaze is credible: traveler looks toward the host's eyes and host meets him. Distinct younger curly-haired traveler and bald, black-bearded host; coherent bundle grip, hanging hand, doorway contact and lamp support with fingers clear of flame. Empty basket visible. Natural photographic skin and low-light texture.",
+      "conditions": [
+        "Empty basket, lamp, wardrobe and household layout are illustrative details; the lack of food is established by the parable, not exhaustive inspection of the room."
+      ]
+    },
+    {
+      "key": "friend-midnight-02",
+      "generationKey": "friend-midnight-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "1491229f0f5d5e857ce22218d7188902dabfd1ad5e265dc0338b25d74c593261",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-65fda88f-e45c-4574-9443-e06fa4a8b25e.png",
+      "recommendedTitle": "A request at the closed door",
+      "alt": "The same bald host holds an empty woven basket and raises his knuckles to a closed wooden door, with an oil lamp on a stone ledge.",
+      "caption": "At midnight, the host asks a friend to lend him three loaves for his guest. An answer comes from within: the door is shut, and the household has gone to bed.",
+      "refs": [
+        [
+          "nt/luke/11",
+          "Luke 11:5–7",
+          "5-7"
+        ]
+      ],
+      "findings": "Bald head, short black beard, stocky body and cream tunic preserve host identity. Raised fist and basket grip are anatomically coherent; lamp rests on a ledge. Door-directed attention is appropriate without an invented visible person inside. Closed door and new action establish a meaningful middle beat.",
+      "conditions": [
+        "Sleeping children and the spoken response are in the source but not visible through the closed door; do not describe them as visible.",
+        "The raised knuckles illustrate the request; do not infer a specific number or duration of knocks."
+      ]
+    },
+    {
+      "key": "friend-midnight-03",
+      "generationKey": "friend-midnight-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "b97e7965c8df56715470596b9ea001635c880fd710f3fccd72e01092acb239b0",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a9b88bde-3c8b-4dfd-8f5a-655f29c863ae.png",
+      "recommendedTitle": "Bread for the waiting guest",
+      "alt": "The bald host holds a basket containing two round loaves while an older gray-haired neighbor offers a third loaf through the open doorway, their eyes meeting.",
+      "caption": "The friend rises and provides the bread the host needs for his guest. Jesus connects this response with the requester's persistence, inviting His listeners to keep turning to God.",
+      "refs": [
+        [
+          "nt/luke/11",
+          "Luke 11:5–8",
+          "5-8"
+        ]
+      ],
+      "findings": "Exactly three loaves: two separately visible in basket and one in neighbor's hand. Host identity and alley, doorway and ledge lamp continue from scene02. Older short-gray-haired clean-shaven neighbor clearly differs from young curly-haired traveler in scene01. Mutual eye contact, loaf grip, doorframe fingers and basket-supporting hands are credible. Photographic skin and restrained expressions fit provision rather than staged triumph.",
+      "conditions": [
+        "The visible moment shows a third loaf being offered, not already resting in the basket.",
+        "Bread shape, household layout and expressions are artistic choices. The teaching does not guarantee every requested material outcome or equate God's character with an unwilling neighbor."
+      ]
+    }
+  ]
+}

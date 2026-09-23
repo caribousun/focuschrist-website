@@ -1,0 +1,2375 @@
+{
+  "checked_at_utc": "2026-09-23T15:33:11.727191+00:00",
+  "historical_manifest_preserved": true,
+  "historical_candidates_verified": 311,
+  "count": 338,
+  "errors": [],
+  "items": [
+    {
+      "key": "barren-fig-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\barren-fig-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7597b90e-e31b-4daa-bb68-c3653f51731c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\barren-fig-01.png",
+      "sha256": "2b097f4e7dd14073671ff9ba52f227fb6fb3909dd41f9905edcf4c749f24d14e"
+    },
+    {
+      "key": "barren-fig-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\barren-fig-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1c9c3b04-0c5c-4678-a728-4ff3c1f0a938.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\barren-fig-02.png",
+      "sha256": "063cc6407758a399ae0d34776d22b1d0e444c38e4ab672ab562333ff94e20f36"
+    },
+    {
+      "key": "barren-fig-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\barren-fig-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1c40e654-bed8-4533-809a-dd28f4eb3e14.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\barren-fig-03.png",
+      "sha256": "1178f55dc361fc47830cfde75b0319643615af5c56603f6747638e1a8ab57aee"
+    },
+    {
+      "key": "bb-abram-stars",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-abram-stars.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b6cd9af1-acce-45e4-9a40-20027d201c48.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-abram-stars.png",
+      "sha256": "990fdd7218dbfc76eee982703226200619f073056127272521cc6c1df6f94f44"
+    },
+    {
+      "key": "bb-birds-over-waters",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-birds-over-waters.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-00496ad3-e65f-4851-9afa-4c2067d71e67.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-birds-over-waters.png",
+      "sha256": "6db72c6584ac145ba817c2e673de3397956c1ff55f24f7eed16a9942294779f5"
+    },
+    {
+      "key": "bb-burning-bush",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-burning-bush.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-89669fe7-34fd-4c0b-93a0-97e0c7703cbf.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-burning-bush.png",
+      "sha256": "ff9a61d7c7759b9f12a726ef9e31a378d248b6ad82afa684ed08eda33a1d1fe2"
+    },
+    {
+      "key": "bb-jared-finger",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-jared-finger.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3d9bc247-aa2d-4b28-90fb-664b6546514a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-jared-finger.png",
+      "sha256": "9ed516be1b77a99adefdee79bf6b8dd812e29b12048ac808d817e1ceabf11ea6"
+    },
+    {
+      "key": "bb-manna-gathering",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-manna-gathering.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ad66a2e2-acf9-45b8-a5e1-eb8642be105e.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-manna-gathering.png",
+      "sha256": "9e3132cf6f343f1b056893bd3afa5119af1f26b9918cb6ceca452bf6efd87826"
+    },
+    {
+      "key": "bb-philip-isaiah",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-philip-isaiah.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-926c1a69-2dc1-424d-be9e-f3449eee3e11.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-philip-isaiah.png",
+      "sha256": "43cf826d029b6dabe262d5d8d6e87663d5247525047dc794330d6361e28e100c"
+    },
+    {
+      "key": "bb-sea-crossing",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-sea-crossing.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-48a31214-11bb-4b42-937a-5dd24562c899.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-sea-crossing.png",
+      "sha256": "fcd081376216070615529a1a24e1770e577103ab140ea538138ede711a5aa499"
+    },
+    {
+      "key": "bb-stones-prepared",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-stones-prepared-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-175c8d47-3174-4fbc-ab9c-cf1885b978fe.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-stones-prepared-v2.png",
+      "sha256": "adca5503feb28430f477808bb353d7fe5bc6b1653cbb4d38be78c1ffb29a9f72"
+    },
+    {
+      "key": "bb-stones-prepared",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-stones-prepared.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7cd1b5cf-8463-4b4b-9992-5cefe121752c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-stones-prepared.png",
+      "sha256": "4a285907defab08b01ef92fc39d7c8c01704c28683a558a3472baa3f878db516"
+    },
+    {
+      "key": "bb-tent-cloud",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bb-tent-cloud.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8346487b-dd5b-47de-ab73-d94c49ddfb2e.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bb-tent-cloud.png",
+      "sha256": "ce4db9c05ff5a456b4fb4e0c5c2dcf6c99bc48a52052a310f421db979b3727f1"
+    },
+    {
+      "key": "birds-lilies-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\birds-lilies-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c0975deb-71eb-45a5-9ae3-6dc4f6885549.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\birds-lilies-01.png",
+      "sha256": "40f4060767ed36f180bbcba1805fa22ab81117d3125688a42a589cd65538b241"
+    },
+    {
+      "key": "birds-lilies-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\birds-lilies-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-38ae7b71-cfd0-44d2-919c-69d9f5e5d59c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\birds-lilies-02.png",
+      "sha256": "e85d2de5ecd6e110c57930cec633b01495b0c8ccc777d02b90615259a07a39cd"
+    },
+    {
+      "key": "birds-lilies-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\birds-lilies-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-73a2b77d-c9b6-459d-90de-f8bd0b70b481.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\birds-lilies-03.png",
+      "sha256": "a01a5a4f5eb74c4e7d6e1233941abe12b6068e6401af8af689b188b5d35ac8e9"
+    },
+    {
+      "key": "blind-guides-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\blind-guides-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7be22698-9718-42d9-b397-a9b13b4a1225.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\blind-guides-01.png",
+      "sha256": "63e3bdcff284462566c0163d6b8ec047c5d3e9e77e077ed76ca349055298202e"
+    },
+    {
+      "key": "bn-cloud-departure",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-cloud-departure.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c3fe2b7d-f4b3-4930-81b6-aba515ac7968.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-cloud-departure.png",
+      "sha256": "d4bfec5728bf1e451a84440a00d54f36c9bd1d2286d5e9a39dcddb2c2016078f"
+    },
+    {
+      "key": "bn-fire-disciples",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-fire-disciples-v2.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\bn-fire-disciples-v2-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\bn-fire-disciples-v2-20260923.png",
+      "sha256": "bc6b26880b649e423479da70941803e5cab3c159f4a94996ece6a97956829994"
+    },
+    {
+      "key": "bn-fire-disciples",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-fire-disciples-v3.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\bn-fire-disciples-v3-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\bn-fire-disciples-v3-20260923.png",
+      "sha256": "27de54935bd02e122681c1ed72efb8e448d4dc1df9fe052aa1bfb14383349648"
+    },
+    {
+      "key": "bn-fire-disciples",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-fire-disciples.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\bn-fire-disciples-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\bn-fire-disciples-20260923.png",
+      "sha256": "14376f5be49b8efb575ceb66e4dd488ee8a2a90e3d5365de5b81a56af3fae3f7"
+    },
+    {
+      "key": "bn-households-return",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-households-return.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1bf541d7-068a-4625-8357-b1d585993fee.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-households-return.png",
+      "sha256": "0dfd12400f802cf6a9029f24f145a315f0c642aea2cd44eb1e7dc460c6b7a481"
+    },
+    {
+      "key": "bn-man-raised",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-man-raised-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c88c81d5-9748-47a7-87ee-fde740ec0950.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-man-raised-v2.png",
+      "sha256": "345f891c02f04312d4c869b9a8f73e28398d36861cbd0aad13ad40a610b325c3"
+    },
+    {
+      "key": "bn-man-raised",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-man-raised.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-58feaee1-c46c-41b3-a025-79764da2b090.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-man-raised.png",
+      "sha256": "700a078523c71ca47c8496c0f26439b544e39436c553fc39e053155149484d94"
+    },
+    {
+      "key": "bn-nephi-baptizes",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-nephi-baptizes-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb7-90b1-7151-8e23-00a02bf70f7b\\exec-0fa43fd2-4a11-4834-8503-be48765cbda5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-nephi-baptizes-v2.png",
+      "sha256": "8194c19b2ab56bf78bf2235efcc9171a70b67b77dfd813ad30d872eb3a394f0b"
+    },
+    {
+      "key": "bn-nephi-baptizes",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-nephi-baptizes.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ae286859-b224-4b3f-bb9a-12d4edefd073.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-nephi-baptizes.png",
+      "sha256": "3483f9341c4cbeb86a04bab10e1a3127fcef5afa14dfdc9e40b302c1c1472673"
+    },
+    {
+      "key": "bn-night-messengers",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-night-messengers-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6d7cf1fc-8660-4a4f-8aed-035eef5b4eaf.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-night-messengers-v2.png",
+      "sha256": "b1b2e7b532e22d2e69cbe56e6337ca8c3ac0d5aeb42f8bc57d1eeb4501cd459f"
+    },
+    {
+      "key": "bn-night-messengers",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-night-messengers.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-57fb6e28-58ed-41da-b59a-9b56e23c6ad4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-night-messengers.png",
+      "sha256": "f41b4a20635898f5118f4cba69f944d49ea6a73121b1ea8295b3dc1dbbac8bb5"
+    },
+    {
+      "key": "bn-shared-community",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-shared-community.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-92670add-f8a2-4a80-ad05-9435a2bb6faf.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-shared-community.png",
+      "sha256": "21e089f038a6fefddb7b21ac95e405b965084a6f619fb657d766528e573e150c"
+    },
+    {
+      "key": "bn-twelve-groups",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bn-twelve-groups.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-28d3012c-709c-406c-9906-8fdab2c3eb96.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bn-twelve-groups.png",
+      "sha256": "cd72f215d6cf749675f1275000e285b86d2ae39c1133a935911a7025446d8564"
+    },
+    {
+      "key": "bridegroom-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\bridegroom-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8431930a-521c-4a6f-9b8d-198fa420f235.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\bridegroom-01.png",
+      "sha256": "e12087e00d01736b59f8e5c1be5ed35d5dc3869a7a6660fa4257b19c6ec2534c"
+    },
+    {
+      "key": "budding-fig-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\budding-fig-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a359d654-cddb-46b7-8a36-023a344a1156.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\budding-fig-01.png",
+      "sha256": "d899002814dbb462ef52501da373d2cd42091c317c985f98e1ada28d17ed3900"
+    },
+    {
+      "key": "budding-fig-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\budding-fig-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c35f2e0c-50e2-42c5-af63-b5564e64966f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\budding-fig-02.png",
+      "sha256": "2d4b592fdb19e0e471088b8b328e6b3ba8687d7aa227f4b3283d6aaabd052740"
+    },
+    {
+      "key": "children-marketplace-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\children-marketplace-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0532c595-6ba0-490a-9476-d6072abb1674.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\children-marketplace-01.png",
+      "sha256": "c8f021fcafd8cf2b89bf94e3ec95366b6671d6b2995d3336fa030708dd40ccf5"
+    },
+    {
+      "key": "children-marketplace-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\children-marketplace-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0262ecb0-46ec-4136-8f7e-0b3bf3b32647.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\children-marketplace-02-v2.png",
+      "sha256": "44fb2343cbafcc4f996208282724ab27f69b4003766050a8ca680a26bdebaab8"
+    },
+    {
+      "key": "closed-door-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\closed-door-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-10dba9da-5526-4c49-b476-91ea04cd72af.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\closed-door-01.png",
+      "sha256": "93d643dea5abca96047b0337ef913114cb793c9d7de72c206c26eb763909986d"
+    },
+    {
+      "key": "closed-door-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\closed-door-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-62c636bd-a30a-4d59-b0e0-248016560ba3.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\closed-door-02.png",
+      "sha256": "0bce3573b45d829f2ff509b986f404c88aab05b72133e1a5ca087b9063115445"
+    },
+    {
+      "key": "collection-hearing-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1610fb3d-6b52-4e7f-a956-d34a1b7e214c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-01.png",
+      "sha256": "0914c4a8defbdfe2e770dee91e36c2f8cc031199b440cee8616535eeeaa7bd15"
+    },
+    {
+      "key": "collection-hearing-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c981bd18-a236-4353-a328-464a23c9642d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-02.png",
+      "sha256": "e2702c68d367a84416a354bd2d6d277e713053deb4e3c5a9ee3bd484e1d38582"
+    },
+    {
+      "key": "collection-hearing-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ae897211-11af-4362-a3c8-d018e91968e1.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-03.png",
+      "sha256": "6a13b8827b104d6b84f73053ad8716181a0723e663c750d0cfae6b1734a5331e"
+    },
+    {
+      "key": "collection-hearing-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-04-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-41ba81a2-2bb7-457e-8327-1b7234c7d5c9.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-04-v2.png",
+      "sha256": "a17a6dd77dec0d8ea4b95be698bf6462c72a5f11006629ea18fae16a85615fcb"
+    },
+    {
+      "key": "collection-hearing-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8cd698f5-27e4-4345-9714-e8df3f106e2b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-04.png",
+      "sha256": "ab7422c047d98f0b0506bfb4e7733ea5d1a295a98550fb90b5f56169c9bf7355"
+    },
+    {
+      "key": "collection-hearing-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1b8c01d1-9a8c-48e4-aadb-2f5fcb1982f0.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-05.png",
+      "sha256": "baa4fb748c3d6c4de98fd711ce54dc044a85e2ba7369ecbc7665c1e475db92aa"
+    },
+    {
+      "key": "collection-hearing-06",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-06.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b294e1f5-fa0c-47f7-92f0-5b84d3b72883.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-06.png",
+      "sha256": "641ad66e09c520f52df59442bfa0b4d70e0f9941771ab952725fea70f853f514"
+    },
+    {
+      "key": "collection-hearing-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-07.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1aaa7154-682b-4f80-b9c7-75b72005e5f2.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-07.png",
+      "sha256": "fe734c7abb2597f9469e523d56e5b955fed061e59939dd70ebb24a07741c461f"
+    },
+    {
+      "key": "collection-hearing-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-hearing-08.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a0b7efc9-dbaf-4c1d-aaf9-0ee0a694ef02.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-hearing-08.png",
+      "sha256": "bec102c5b23c10df21a6a3908a85fe611df45f74e5f10980b3525d8e32206a9e"
+    },
+    {
+      "key": "collection-kingdom-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-kingdom-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-88ddffdf-8105-47d8-9dce-0edbc6d8d8bf.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-kingdom-01.png",
+      "sha256": "4200ee5ad6958a058dab7262608414bcd090de5c5e447387d9240a998cf6ef72"
+    },
+    {
+      "key": "collection-kingdom-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-kingdom-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3cd3bf37-be4f-4226-9b09-531aec328931.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-kingdom-02.png",
+      "sha256": "5da61d60db40c009ed998cc0ba3aa78d522532f7ab70b78aa7aca8fd8353598e"
+    },
+    {
+      "key": "collection-kingdom-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-kingdom-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9970f7f5-f763-40b6-b6cc-2bc89e9d42c1.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-kingdom-03.png",
+      "sha256": "2b2ce87e88670bae5b4c6c579aa7bc8eeef8d6b0e7c3b8462b39bb70fb3f3054"
+    },
+    {
+      "key": "collection-kingdom-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-kingdom-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c03aeb59-6b84-4512-afb2-1eb6bff299a1.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-kingdom-04.png",
+      "sha256": "93506301b581e0f4b82580df5a13473f76cd9926fccdaaf7a19d5ad1bb2ea449"
+    },
+    {
+      "key": "collection-kingdom-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-kingdom-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c1990755-25e1-498e-b2db-395286cc1eda.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-kingdom-05.png",
+      "sha256": "c54c854c2c2580e473d1a9a68e19ed7fdcf870db1ce8445f23ff7d35cb431dc4"
+    },
+    {
+      "key": "collection-kingdom-06",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-kingdom-06.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5ed801e3-b7bc-455f-a2d0-329ccd54e257.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-kingdom-06.png",
+      "sha256": "e8e5b2278c534d49292d7f8ff8fb8255ff71a19d26be766daf3710b61b659da6"
+    },
+    {
+      "key": "collection-kingdom-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-kingdom-07.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-861582cd-e460-4d0a-a632-a710cc9b0600.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-kingdom-07.png",
+      "sha256": "450451ff5cbde4eeafeadd2c38981c86c9d101a5a8577dbc90b775f949f4b266"
+    },
+    {
+      "key": "collection-kingdom-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-kingdom-08.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2696c9a0-3d05-4b32-a785-76b9ba6dc4b2.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-kingdom-08.png",
+      "sha256": "42558ccffa8ea143ca76f6b667f0402488400083f3417fdbfcca49bb71ea8965"
+    },
+    {
+      "key": "collection-mercy-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-mercy-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ea24d83b-25d6-4205-b5a6-22e3a50a9c8a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-mercy-01.png",
+      "sha256": "c915426c038f9384edb4463cb2418d6030fccbebde08b6de04710ae715e2e4e1"
+    },
+    {
+      "key": "collection-mercy-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-mercy-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bfd5e02d-ae67-4f3a-9b2b-fa5f90ce9bc4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-mercy-02.png",
+      "sha256": "44d4383a1c93c6f869ff2ba120b407f0da265911225a2306398aeccf4dc8e254"
+    },
+    {
+      "key": "collection-mercy-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-mercy-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cd571cdc-9b5c-4497-a271-e583ac7c1f08.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-mercy-03.png",
+      "sha256": "f4266601cd4c10b05402e779155b272ad57858645bf59af70c9d32f7d9e7384a"
+    },
+    {
+      "key": "collection-mercy-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-mercy-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cbc12d27-880b-4835-91f2-b9641265ab37.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-mercy-04.png",
+      "sha256": "fd51b9145f6454f8760681da9e9b8834d048b4b9580fa15dc8e92025fe94cba7"
+    },
+    {
+      "key": "collection-mercy-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-mercy-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0ad05a2a-d188-4801-b21f-25521df30089.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-mercy-05.png",
+      "sha256": "a044912be08f9d460aef30efc6e842798aa783dc513755c6ade117e9e73b752f"
+    },
+    {
+      "key": "collection-mercy-06",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-mercy-06.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-71d13ea0-f76b-4ff6-a565-ec9263c53a44.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-mercy-06.png",
+      "sha256": "de19d9d11300d4d176f14e26119c0f029c481163112c5b45bfebf663ed875301"
+    },
+    {
+      "key": "collection-mercy-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-mercy-07.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5a95b7ce-6b73-4d5a-bbb6-52022fe290f4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-mercy-07.png",
+      "sha256": "e997c83f2fde949b07a5f5c80aafe2740d575d516e5ea4543b6f9006f0456f06"
+    },
+    {
+      "key": "collection-mercy-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-mercy-08.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-22b0265d-dcd1-4cbe-9039-5962c73d2721.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-mercy-08.png",
+      "sha256": "7a2c6a352695625d68761b153928dd4436daef7d3a4aab57d62dfac0c73388ce"
+    },
+    {
+      "key": "collection-neighbor-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2ba20551-3fec-4608-86bf-d1e891acef1c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-01.png",
+      "sha256": "7148405dda16b0e87b59a227f1f264a709b0874dfcb73e00acfb8952acd99aba"
+    },
+    {
+      "key": "collection-neighbor-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7fce8d56-b90c-411c-ad46-d403fd6a1bec.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-02-v2.png",
+      "sha256": "9052deac18ac0f0bd3930ab36e84714d91a62b822db5a2ae741159f85e666ec3"
+    },
+    {
+      "key": "collection-neighbor-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d66b10cb-6d61-4410-868f-cc1711cadd09.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-02.png",
+      "sha256": "ab00375710ac09df2e11cc9b84468288d36602f1bae385d4f734f656c7c18412"
+    },
+    {
+      "key": "collection-neighbor-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a12340ba-0e70-4d24-8745-cea7be06ca6c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-03.png",
+      "sha256": "03e5b88f17225495cc244849e72a06799f47a116343e6693ff158fdffc725648"
+    },
+    {
+      "key": "collection-neighbor-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4ed0bfdb-d138-42ea-9ba2-2dc949e3d53d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-04.png",
+      "sha256": "f8a19785db5f976c835c9c1393fa76f764c526a0432df05c5f446661034281eb"
+    },
+    {
+      "key": "collection-neighbor-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-65147436-cf31-4aec-ace7-0a96067f5b14.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-05.png",
+      "sha256": "1efe8bec60864160fb62ae6df18bbf8798d09efba54a145678ba090d630a98c3"
+    },
+    {
+      "key": "collection-neighbor-06",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-06.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bab529c1-fb9e-42ef-b58b-2487d2864fd4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-06.png",
+      "sha256": "38dd4792caaccb36631b34c77609fc0bfc0504c6392a93e80d50f642fd1137fd"
+    },
+    {
+      "key": "collection-neighbor-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-07.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9d281805-f969-4747-b8b6-447b9656c8f8.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-07.png",
+      "sha256": "97aa1e6965b27a6748ce73fd0dd28834a8708a7c076528bf590063f35276160d"
+    },
+    {
+      "key": "collection-neighbor-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-08-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-05354b53-951a-4067-80a9-bb84c1993b95.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-08-v2.png",
+      "sha256": "4d9841181befbd344d87d283585992d209d82435df1e06668a17d5c4f041d663"
+    },
+    {
+      "key": "collection-neighbor-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-neighbor-08.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-270a0581-5e3e-4801-8785-a7c33a7dc58a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-neighbor-08.png",
+      "sha256": "dc7b7a9090cada7f5f1c85975ce07b2128f2ef65523588188c40b9852014dde2"
+    },
+    {
+      "key": "collection-stewardship-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-stewardship-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-66f51589-cb76-4b72-aa7b-0b72191e24e5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-stewardship-01.png",
+      "sha256": "9766f72a619187bfae60306b2b0b6c0804edab5ded397b2e77af5ab29bdbd507"
+    },
+    {
+      "key": "collection-stewardship-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-stewardship-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-242c3f11-e474-402c-96a0-c699f56be14a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-stewardship-02.png",
+      "sha256": "c61a0ebe79e2a0427899573e3f7d5f1ab03f947d0fdf4b9dfcde7b00cc6ef42a"
+    },
+    {
+      "key": "collection-stewardship-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-stewardship-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a6ef5a32-5056-4e47-9054-b991c53bedb4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-stewardship-03.png",
+      "sha256": "8d0214e0a0a8e594d0556983ef6952f1ec758674d1db9b5e32268caf030e9bff"
+    },
+    {
+      "key": "collection-stewardship-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-stewardship-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-63b92efc-d6cb-4126-aae6-f1ad7f96dde6.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-stewardship-04.png",
+      "sha256": "91f6f729eb413e5258ab5f09d86eac688d5faffadac2fdbb5b2f90c829df587d"
+    },
+    {
+      "key": "collection-stewardship-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-stewardship-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d6c90f9c-c1ef-44ff-9b25-8a92ee5d6a63.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-stewardship-05.png",
+      "sha256": "b2d4b2bfc96104c697bff9557839d74bcc42ec3eb5b15198f9f3d35a6be3955f"
+    },
+    {
+      "key": "collection-stewardship-06",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-stewardship-06.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7d0b6819-7771-43e2-b6de-36084aa43ab3.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-stewardship-06.png",
+      "sha256": "2fa807d40efdc40c83121f7bfb3d63531768da650f4a9ce75c0acfbe66aa1cc0"
+    },
+    {
+      "key": "collection-stewardship-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-stewardship-07.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c71d4000-048a-46c2-b6ba-ffe4c490fd58.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-stewardship-07.png",
+      "sha256": "65ef4f1f5042158fa7e69b4793bcbe03cc36439b57fbc87d0d2cf63ec7244b6d"
+    },
+    {
+      "key": "collection-stewardship-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-stewardship-08.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-09e20d5b-0705-4564-9964-c79a4672d929.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-stewardship-08.png",
+      "sha256": "b388d10f8bd6965f613760a8aa68668677ebd11d515835fecde1115363c51b14"
+    },
+    {
+      "key": "collection-watchfulness-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-watchfulness-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fa1a6323-e119-4189-b534-b8e0a17cec42.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-watchfulness-01.png",
+      "sha256": "5d0a14081e14bd4811ec3af406725fe7fcdaa211860c55d99dc3f6ad6013b791"
+    },
+    {
+      "key": "collection-watchfulness-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-watchfulness-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3824e47-eb06-4a34-b8e0-539a96c293e4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-watchfulness-02.png",
+      "sha256": "4350995b70b5a502d71f1f165fb99ef37899583ccc2cc1d59c0064dcef9f930b"
+    },
+    {
+      "key": "collection-watchfulness-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-watchfulness-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3cfbcd4a-3b65-48b0-a8be-d313d4f83422.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-watchfulness-03.png",
+      "sha256": "b908a70a052919976c67f42964a6c9c1f32b3e6436d0143165fc41e7f782ee44"
+    },
+    {
+      "key": "collection-watchfulness-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-watchfulness-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7f1deaf3-f573-4f98-8282-da3cb5239e5c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-watchfulness-04.png",
+      "sha256": "c17cd6f0cad68cb7c97ddb7e2387ce4021ba5d83feb962b093ef90d4806623c8"
+    },
+    {
+      "key": "collection-watchfulness-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-watchfulness-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9eec258d-f359-4e54-be3c-eac450071ed1.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-watchfulness-05.png",
+      "sha256": "67e2e4e5a720db7d18ef5192851e44e315b9193bc00adc2de3d937f697902162"
+    },
+    {
+      "key": "collection-watchfulness-06",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-watchfulness-06.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a86d8b87-9e41-4d54-896d-9a419135642b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-watchfulness-06.png",
+      "sha256": "3dcac43b0e72a0b9883fc1a9f57f38788afb5da2e76553d60bf97aa51b54deeb"
+    },
+    {
+      "key": "collection-watchfulness-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-watchfulness-07.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-efef8516-483f-43e7-9146-97c2ab834cea.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-watchfulness-07.png",
+      "sha256": "7c25872317496dec69c5c5e534458b7505379c0da8869bafa7214b82da04927b"
+    },
+    {
+      "key": "collection-watchfulness-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\collection-watchfulness-08.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3e7a2d7b-4ecf-4f79-b097-9efdebd6e646.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\collection-watchfulness-08.png",
+      "sha256": "2de685374ccd60ff9a47ffdf081dc6d658c149437b8a4987dbb8ceec23bf3a4a"
+    },
+    {
+      "key": "divided-house-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\divided-house-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f0265d46-119e-42b0-acd5-cd855cc23107.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\divided-house-01.png",
+      "sha256": "6eec460c55801b116af88c043c39da39859c3b1d4822d5dc0248c832313cf12a"
+    },
+    {
+      "key": "doorkeeper-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\doorkeeper-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-062dff49-acb2-4145-8ed2-89b1d2ea5f06.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\doorkeeper-01.png",
+      "sha256": "63d3c52a79e3c0b01bdeaafc39fdf690d8102578e167a15f2b553ab3e1b130a9"
+    },
+    {
+      "key": "doorkeeper-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\doorkeeper-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cff4b0e5-9240-4099-96ff-6ac975968e34.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\doorkeeper-02.png",
+      "sha256": "b929672cda3c65b2cfc3d35e6374b1c2c76f2fe50434058866ddcd3b1d36e6a2"
+    },
+    {
+      "key": "doorkeeper-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\doorkeeper-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-459d6112-3dfb-4eaf-981b-229f011275de.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\doorkeeper-03.png",
+      "sha256": "54773604585542f1784818745701bce7b490825dcb7d5ccd4f89f980c1b7cd4d"
+    },
+    {
+      "key": "faithful-servant-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\faithful-servant-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bd194100-dae8-4c3e-97ab-c6ec2c70f4e7.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\faithful-servant-01.png",
+      "sha256": "62afc844606ffc0c4eea6b647da36693b2b00d8305cfd3f738d9d0873d122120"
+    },
+    {
+      "key": "faithful-servant-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\faithful-servant-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c69e5d25-2af3-448d-8902-51e1a6498833.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\faithful-servant-02.png",
+      "sha256": "f49f7dc995972bcba665cbec2fb4504745bd0870c39fe686a0909c537ce63631"
+    },
+    {
+      "key": "faithful-servant-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\faithful-servant-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ffd0d5d6-e3eb-4cf4-90f0-c25837a84b07.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\faithful-servant-03.png",
+      "sha256": "2d5833e2da9671b6f351ae95a522088ebe6a6337cee16d0d7969e0906fada0df"
+    },
+    {
+      "key": "friend-midnight-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\friend-midnight-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6e896a02-d2ad-4c15-9f43-fe17e4fb93c3.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\friend-midnight-01.png",
+      "sha256": "a147339a54a567a7e78b8f34b1662c27bd07bc1f718d79527733d7d5671bf40f"
+    },
+    {
+      "key": "friend-midnight-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\friend-midnight-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-65fda88f-e45c-4574-9443-e06fa4a8b25e.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\friend-midnight-02.png",
+      "sha256": "1491229f0f5d5e857ce22218d7188902dabfd1ad5e265dc0338b25d74c593261"
+    },
+    {
+      "key": "friend-midnight-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\friend-midnight-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a9b88bde-3c8b-4dfd-8f5a-655f29c863ae.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\friend-midnight-03.png",
+      "sha256": "b97e7965c8df56715470596b9ea001635c880fd710f3fccd72e01092acb239b0"
+    },
+    {
+      "key": "good-samaritan-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ac7d03cd-0ffe-4697-abac-d4686da443cd.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-01.png",
+      "sha256": "792df63f426e993b90ae1a82e181766a4d139e9b703cfe20a5ac02622e06fd8f"
+    },
+    {
+      "key": "good-samaritan-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b4ab3a11-36a7-41f4-8ced-4e00c2da1228.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-02.png",
+      "sha256": "79fc2df2f9a267c657af26d341aa9e66bcd4d0359b824a569b1f0258a08c9bf7"
+    },
+    {
+      "key": "good-samaritan-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5f4bef6f-c8e2-431c-a575-8ab773c2e7ed.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-03.png",
+      "sha256": "dd799689f80d09bb69baceef24d23656c39b3ed34c6a2c272b44eb5360765124"
+    },
+    {
+      "key": "good-samaritan-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-773b33b3-8a46-4da2-90b8-0164409e5ca5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-04.png",
+      "sha256": "5efb0e7e61fae40ad2125c3fffe5aba46555d6fd1193acdc06db3c85a0226aa7"
+    },
+    {
+      "key": "good-samaritan-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-959a01e9-c339-4cb6-94b9-2430d5eacb35.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-05.png",
+      "sha256": "a6052d03947b330fb0ce51abdd76d5a62dcb5c8467acf90e366ac28539b352cb"
+    },
+    {
+      "key": "good-samaritan-06",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-06.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-469eb2d6-18d0-4f3e-81ac-22fed9acb3bc.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-06.png",
+      "sha256": "f040d4a1add9dad5bdec6b7cb5e0090482ce4df90325b99ec402b28fd476f1a9"
+    },
+    {
+      "key": "good-samaritan-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-07-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-434d5461-93b0-4375-9c3f-543e157fffc2.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-07-v2.png",
+      "sha256": "d8d9156ac97c159c34504267a649335f0ef5db535ced762baf6ba197162dcd07"
+    },
+    {
+      "key": "good-samaritan-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-07.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3831d003-a009-4d8e-ba0c-fe301d4a9a1f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-07.png",
+      "sha256": "183999dc82850789672647754230e434d41626bec47afb18a6f764a2fb8d1795"
+    },
+    {
+      "key": "good-samaritan-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-samaritan-08.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-30e778e8-3a1d-46c2-ac10-9a7fcc3705ec.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-samaritan-08.png",
+      "sha256": "cdc8ab27009c816c0300a993b163ef373df4453502a5de3b492d95a206e62280"
+    },
+    {
+      "key": "good-shepherd-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-shepherd-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ba16a5dd-35c7-4b2c-8e6d-979b8355b383.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-shepherd-01.png",
+      "sha256": "62a15eefbca0de551df443632a5a76d0662c5b97d49f3c904fe1adf646f7eec4"
+    },
+    {
+      "key": "good-shepherd-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-shepherd-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bdb39e18-5efa-4fe6-b11a-27b006637a45.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-shepherd-02.png",
+      "sha256": "55f4af4f2f63374b61abffdca9bf08b22e7196aa86f3e167ab31ac7025180883"
+    },
+    {
+      "key": "good-shepherd-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-shepherd-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1034f801-a86d-48a4-94fa-75634733bb48.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-shepherd-03.png",
+      "sha256": "5ef5ce642fc09520a74c45c7a8d6fd59bfd6896998bfaf4f172714cf292d26f4"
+    },
+    {
+      "key": "good-shepherd-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\good-shepherd-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6127b3a0-bcbc-4673-8fd3-b4c544f651c6.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\good-shepherd-04.png",
+      "sha256": "7e8c054c66648e47098bac889497b2d693d8a4e9050018972bae32d003ac4900"
+    },
+    {
+      "key": "grain-wheat-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\grain-wheat-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3628d567-24ef-4ca1-9eeb-4273c30a9098.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\grain-wheat-01.png",
+      "sha256": "563f87976c84bb90aed195ec0cb14122cd64e2692427b3965cad47013e9653b4"
+    },
+    {
+      "key": "grain-wheat-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\grain-wheat-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-32b81d9a-a89b-450b-9eef-a43d00c250ae.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\grain-wheat-02.png",
+      "sha256": "f6989f0163a587298e8862d739a8bf89ee0518d04cb31d0b24884d381f3036ea"
+    },
+    {
+      "key": "grain-wheat-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\grain-wheat-03-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-702a503d-0c65-4b1e-8d47-f3b0f605fd84.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\grain-wheat-03-v2.png",
+      "sha256": "2fd967cf12befa24857fa35117998b212ff2697b9efa26c4c0908e899d5e0b6d"
+    },
+    {
+      "key": "grain-wheat-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\grain-wheat-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c34ca705-d10f-4dc8-81d3-f7869401b167.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\grain-wheat-03.png",
+      "sha256": "e178784cf2b64f14cefbacd3a41abf6ced8d41850324f00ebdf6214ac946392e"
+    },
+    {
+      "key": "great-supper-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\great-supper-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-17afa1e8-f291-433e-90c3-a1f907c1ec4a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\great-supper-01.png",
+      "sha256": "70ebea4f0bf7183865d8fb732137dfad97a1b19d9ef7d66f7e0324e86fbd54d1"
+    },
+    {
+      "key": "great-supper-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\great-supper-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-afa8d461-f8df-4d86-aaa9-81fb33f7f2ad.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\great-supper-02.png",
+      "sha256": "d2d98fca98ca0382ed44acc8409c76f5476482cf14901dab000b52bba6ab1c18"
+    },
+    {
+      "key": "great-supper-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\great-supper-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-badaff61-7dfc-4cdb-9d90-ed727d51193a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\great-supper-03.png",
+      "sha256": "704a564436e0e324817ce7f1934b21ee9e0878b0f86d5d02d4e310759064bc5f"
+    },
+    {
+      "key": "great-supper-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\great-supper-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-77661d5e-5dae-4534-9ff3-a404cbc393c0.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\great-supper-04.png",
+      "sha256": "b3a6193856b1d2ac5fe5751a111ad9151089f2128d6b5414cbb3c23450f3d78d"
+    },
+    {
+      "key": "growing-seed-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\growing-seed-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cdb1a0db-196e-4284-8ae9-85d4007f8fba.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\growing-seed-01.png",
+      "sha256": "7b1f1453b9647cb57c1099e8fee76d4eb9256fb4452ff3b487219c3cb1c37d0b"
+    },
+    {
+      "key": "growing-seed-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\growing-seed-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-dbcc900c-4cc7-4fe7-b011-cc465715f408.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\growing-seed-02.png",
+      "sha256": "459e67579005cfcbc42d5032c261b8f534986348bd993b7a9460afefc7978885"
+    },
+    {
+      "key": "growing-seed-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\growing-seed-03-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4366154a-d832-4a62-af26-ad251bebbb69.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\growing-seed-03-v2.png",
+      "sha256": "124ffc7fdbefe5fe8e575e6664956939b8a524c70de9995ddc8789d1de3f9087"
+    },
+    {
+      "key": "growing-seed-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\growing-seed-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8526054c-80b9-423d-a48a-b6f624d72822.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\growing-seed-03.png",
+      "sha256": "6e7fb8c730c3bc8a959d51cf7d321effc1531efec7ea4d6121789d96943aacf1"
+    },
+    {
+      "key": "hen-chicks-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\hen-chicks-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4976c0be-3daa-4715-9f20-5e9293cd2b16.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\hen-chicks-01.png",
+      "sha256": "89ce8c91d14557d37cc502fa334d020ec20c1d4ff73ea8ddd096f10c776094a7"
+    },
+    {
+      "key": "hidden-treasure-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\hidden-treasure-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f7618f9f-936e-4f97-a414-7224b626cfe0.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\hidden-treasure-01.png",
+      "sha256": "df2dd36fdab2bc79e9a82a80fbdd33a15cae3aa430548b0569bebafba5c97a1c"
+    },
+    {
+      "key": "hidden-treasure-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\hidden-treasure-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b7e1ecfd-bbab-4be9-a272-69290c08b451.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\hidden-treasure-02.png",
+      "sha256": "fd6d91c12e909c7fbd150ccf3ff1bc4537714ddba0f2e8f8b4733faa99affb30"
+    },
+    {
+      "key": "hidden-treasure-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\hidden-treasure-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-768a8113-f2b3-454c-a6e4-8df8baa7719b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\hidden-treasure-03.png",
+      "sha256": "0fa5d193181ac015f65e0154ad69f2219173f097f2041b0594da94147942b899"
+    },
+    {
+      "key": "householder-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\householder-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d70530b5-03b1-4148-9c11-754563d92408.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\householder-01.png",
+      "sha256": "f2c87bf4cdcfdf3db3a90dff32dab902a1a72e6b93011da839ca28a39d555eb2"
+    },
+    {
+      "key": "king-war-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\king-war-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9d7fd405-018b-4265-aa46-2c6432277770.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\king-war-01.png",
+      "sha256": "cbb9006a56585c9e924f67d0572357b6ac56582a45597d9e95259ca16e7be485"
+    },
+    {
+      "key": "king-war-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\king-war-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1df946ae-d4a6-46dc-b516-0b3b9ba7e272.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\king-war-02.png",
+      "sha256": "725a869f0e31d86a74bc25d0793f2289d7f4dc6e933a7f04d3125e77d5d3a3ad"
+    },
+    {
+      "key": "laborers-vineyard-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\laborers-vineyard-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-35a564ce-a6a3-4e9a-bd5d-920e55d060a4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\laborers-vineyard-01.png",
+      "sha256": "a37a80bb80f8c1205b597e5c2292e51ef9528e51be77a172a87ee8354f5b255b"
+    },
+    {
+      "key": "laborers-vineyard-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\laborers-vineyard-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-237333df-efda-4efc-a7b3-387397358ad6.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\laborers-vineyard-02.png",
+      "sha256": "5edad179c7d78332ddebfa89ead334f384191d88676194fcd198aa361447947c"
+    },
+    {
+      "key": "laborers-vineyard-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\laborers-vineyard-03-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-34fc6a89-2b29-4386-8888-853c0c50627e.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\laborers-vineyard-03-v2.png",
+      "sha256": "af7ba0c3ffa3d44b3aa087916166bcb03e6037541a6bf2911abb6089e77ab760"
+    },
+    {
+      "key": "laborers-vineyard-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\laborers-vineyard-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9267d3de-679a-4218-b4b8-9f6d26a7ae63.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\laborers-vineyard-03.png",
+      "sha256": "554f3e401fbda2e61ba450c47ee8589d92310974f2137d0dfa87792d2f19747b"
+    },
+    {
+      "key": "laborers-vineyard-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\laborers-vineyard-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a78f9dc7-97b5-4d77-afb0-1cb1cc03ab71.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\laborers-vineyard-04.png",
+      "sha256": "52f567346a37f36afa3e8da16e67eadb94f298240f61c067d736ec019660b95f"
+    },
+    {
+      "key": "lamp-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\lamp-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9bdd5e55-3839-4357-b99f-b9efe0e64fa2.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\lamp-01.png",
+      "sha256": "a9fd7399f8249e63eae737eab08f427b315cac3236a6ef137004b6c85a288544"
+    },
+    {
+      "key": "lamp-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\lamp-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bab4d369-2018-4adf-9898-24ffa74ade76.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\lamp-02.png",
+      "sha256": "c7a3bdaf6df4f435804f854d792e7d6abc67b745759f773e6fa66bfa4a1d6fa4"
+    },
+    {
+      "key": "leaven-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\leaven-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0c964f86-760e-4542-bf27-e41f148ace8c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\leaven-01.png",
+      "sha256": "37f110c6cde3ffc5a5b6815e0be882430c2d13335d05539c5e8c291b5176cb75"
+    },
+    {
+      "key": "leaven-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\leaven-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-27340fa7-d454-4358-a5e8-02a4ddc856bc.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\leaven-02.png",
+      "sha256": "c67caa4981b4d0e1b6cbc8f5324cae1e75d7b249b6a59e67b3468fb9efc864e7"
+    },
+    {
+      "key": "lost-sheep-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\lost-sheep-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e3a05d93-944e-4435-8688-0edbb13379aa.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\lost-sheep-01.png",
+      "sha256": "1a1616579fa025e7b14ae4a97c22c243ec43fdac5d95f96a13a25489143a391a"
+    },
+    {
+      "key": "lost-sheep-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\lost-sheep-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e68350d9-2212-42b4-a35d-0e79c0afb0aa.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\lost-sheep-02.png",
+      "sha256": "3560922348d1ed072dc1f950b8d0cf92c11833e6bde2e6a95a8423177882e44c"
+    },
+    {
+      "key": "lost-sheep-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\lost-sheep-03-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-04fd18c8-4466-4ea6-9551-576d30e511d0.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\lost-sheep-03-v2.png",
+      "sha256": "05ff38a02bce43323401bcda17700951fee0375004ff3251978817b48523d150"
+    },
+    {
+      "key": "lost-sheep-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\lost-sheep-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cccac5a1-a949-4189-b123-234ba1ec69b1.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\lost-sheep-03.png",
+      "sha256": "de0ca7a48b0946c273ad9ce716a666bb14360a2908929837203b1e80bf133ad4"
+    },
+    {
+      "key": "mc-bethsaida-led",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-bethsaida-led.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-93d50a3f-6255-4464-9f75-175b870ae4a2.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-bethsaida-led.png",
+      "sha256": "591eb4f73484fbd80ce241295bf6a8cf03f147a2c8d3d3d8195c2d9e4f71be10"
+    },
+    {
+      "key": "mc-centurion-friends",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-centurion-friends-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-12cd40be-5d02-40ed-a676-04a5dfa89b26.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-centurion-friends-v2.png",
+      "sha256": "753ff85a36c03c199d2100b9e6c11e90e6fa6dde0da29e859e4be08707a1a5be"
+    },
+    {
+      "key": "mc-centurion-friends",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-centurion-friends.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bd213b8d-4e9d-44bc-96cf-469480bf7cb7.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-centurion-friends.png",
+      "sha256": "fe89dc98db7c31824d0f1051ee5d971f6c85027e7f06438cc540adfc8a2a34a7"
+    },
+    {
+      "key": "mc-daughter-go-in-peace",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-daughter-go-in-peace.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9c182e90-5441-40d2-b573-b5a81e8b8d51.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-daughter-go-in-peace.png",
+      "sha256": "ccb4a66d9c8cf44dc8e36a999a3309971a81cbedaa78ac3980163d4b30818d63"
+    },
+    {
+      "key": "mc-garment-touch",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-garment-touch.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8374ceb9-c472-4786-86ba-9c191294bbad.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-garment-touch.png",
+      "sha256": "badadb91deed5373f4d8e4d44722d4e3c287c3304e8ff3fbab8c8b85e41f66bf"
+    },
+    {
+      "key": "mc-jairus-daughter",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-jairus-daughter.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-bbfc2896-86b0-455b-854c-cfe0eb16164b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-jairus-daughter.png",
+      "sha256": "c3c4f756fb9f003cfff75999ae0e3df8f6d9dc83af14d90625360681bd70ad25"
+    },
+    {
+      "key": "mc-official-servants",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-official-servants-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-22ad36b2-351e-4b77-a48e-decb10520146.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-official-servants-v2.png",
+      "sha256": "116d6d939a3dea311d69fb05a3510ec510bae9dd54870a4fa95aba975e55ecdf"
+    },
+    {
+      "key": "mc-official-servants",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-official-servants.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3e82387d-a9f3-4f83-bbb1-f22b404737be.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-official-servants.png",
+      "sha256": "37f681bb1465ef7a95961857476565a8a6c2eec97e27ae2d081889bb37e761c0"
+    },
+    {
+      "key": "mc-peters-mother-in-law",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-peters-mother-in-law.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7e6981de-3914-4108-96fb-5f88fbf13dd0.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-peters-mother-in-law.png",
+      "sha256": "f7cad4a552d463443bf64c9b11d5cffc63f5ddd05caa947e35e47914d2c7ac2e"
+    },
+    {
+      "key": "mc-siloam-washing",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-siloam-washing.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-99f65e20-fc3f-4e34-a831-828c3466127c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-siloam-washing.png",
+      "sha256": "70ee9890980c36d4e2076b1fedcf224e44f264ef708643e0730ab25fde4d3cbb"
+    },
+    {
+      "key": "mc-withered-hand",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-withered-hand-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d6d285f1-fcad-49c5-8f84-a9b525c1d634.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-withered-hand-v2.png",
+      "sha256": "51796db0cdd926eb37b11646191143ec33ca3a44a331ff27cdffb13ca5a59b5e"
+    },
+    {
+      "key": "mc-withered-hand",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-withered-hand-v3.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-64aeee6e-563d-46d8-aecd-a596374a5647.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-withered-hand-v3.png",
+      "sha256": "ab04a8ad757bd605503fff7ce4ad4357f9e5f6d1c11e62583c851551c37702b1"
+    },
+    {
+      "key": "mc-withered-hand",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mc-withered-hand.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-70e44f76-cb65-4012-91a5-329d46fca5d4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mc-withered-hand.png",
+      "sha256": "d27618e4019f45d44801c2c06b5d552ba3467edcd39222f4cbd7bb69f52ce92d"
+    },
+    {
+      "key": "minas-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\minas-01-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3c7d6cd-e5e6-4708-b37e-d9d75fc40fbb.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\minas-01-v2.png",
+      "sha256": "a6a647528f35a74e6006dbdb2705f9c4ce26a8fcc9b52303c841f6f5f2bbeb95"
+    },
+    {
+      "key": "minas-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\minas-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fda4d21a-2e40-48d3-ad05-a5caa2805a1d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\minas-01.png",
+      "sha256": "b5ef2f9be9880c4b9f8897d3772367de3604b04d4a8d3fd4fbbe19fe621a4603"
+    },
+    {
+      "key": "minas-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\minas-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5e39f93f-0e50-4c43-9633-c098656160bd.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\minas-02.png",
+      "sha256": "f759a306948d365a28cb2f50994176d840372d9c8db592f289723355c2da07c9"
+    },
+    {
+      "key": "minas-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\minas-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-994b9027-49ec-4a6c-9ca9-1449e5f0ad21.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\minas-03.png",
+      "sha256": "c6a6e500655095ea67a8d5f3b0766c56180dacc5dfb41b662b0f965b12e19631"
+    },
+    {
+      "key": "minas-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\minas-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-37bcdefa-2eef-40e7-97e0-29a2f543be65.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\minas-04.png",
+      "sha256": "d21c7c8575c42e81e11daf2e5a21c8a3dfdaa9a1cc42f21fd4b68a599809c520"
+    },
+    {
+      "key": "mm-cana-jars",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-cana-jars-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-32de4d50-fbea-4610-9b1a-2b6be1583062.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-cana-jars-v2.png",
+      "sha256": "202c9dd9609197c134d4c0ab6751233b026358262ef01b7df34eb8bc38afa7c6"
+    },
+    {
+      "key": "mm-cana-jars",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-cana-jars.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d303b9bf-959f-4ae0-a68f-7fc781992f17.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-cana-jars.png",
+      "sha256": "16d39b5f931b018278dba178f6d4f137652d05884167134ece00d1419669100b"
+    },
+    {
+      "key": "mm-jerusalem-tears",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-jerusalem-tears.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3136ffed-1eb4-4e1e-b1ca-045e1280e00a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-jerusalem-tears.png",
+      "sha256": "3da158fdfdbcfa426cb19c8155b1eca9e83ea811361baaaf402ec5157b284519"
+    },
+    {
+      "key": "mm-john-questions",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-john-questions-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb7-90b1-7151-8e23-00a02bf70f7b\\exec-53f606d4-e20c-40d9-bf3b-d4573923c4f9.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-john-questions-v2.png",
+      "sha256": "0ffffbc8a844ff3e79818927a5ef85eb2c99d52d375ebfbfba40706653b50894"
+    },
+    {
+      "key": "mm-john-questions",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-john-questions.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-be1f23a9-2b9f-436d-a3a6-61c77cecefbf.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-john-questions.png",
+      "sha256": "dbd77f33c007f7474755d8fc1633cafb75991b0cd58ff50bf3f43911d572a1b4"
+    },
+    {
+      "key": "mm-levi-tax-booth",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-levi-tax-booth.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d694853d-79ae-479a-9847-71979d87c43f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-levi-tax-booth.png",
+      "sha256": "e84615a0e94ceb376a6b1b60742f8792d02008f01feb91a32881ab3c0bc46546"
+    },
+    {
+      "key": "mm-temple-compassion",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-temple-compassion-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6fa328a1-2d15-4331-a4ae-57eeaecd8040.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-temple-compassion-v2.png",
+      "sha256": "97f00c0332b1bebdb36e22fe83fb10a39a8d075a1ef0cc409db7e77c5f2821ce"
+    },
+    {
+      "key": "mm-temple-compassion",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-temple-compassion.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b49cfd81-09b7-47e3-8270-3d07672e341b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-temple-compassion.png",
+      "sha256": "2a8489621f9c029c7f23f6d2f403c7b6f71f16e5f7e3051b00d0a028984df77d"
+    },
+    {
+      "key": "mm-temple-tables",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-temple-tables.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d1e51915-90f6-49c4-876e-be50290edc31.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-temple-tables.png",
+      "sha256": "c9de46129bf45af4445efe978a0b58d4126f4385ec96ccf7944396b5dd858057"
+    },
+    {
+      "key": "mm-transfiguration",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-transfiguration.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-83b8d151-f214-4888-a9ea-9ecd72dd8a10.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-transfiguration.png",
+      "sha256": "947c7d790fed6ee046aa42a0785726ee344f94dd69f00be0ae10f387231c066e"
+    },
+    {
+      "key": "mm-twelve-depart",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-twelve-depart-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-75e9fb6e-6d65-4d75-ad0d-025f1cc6d497.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-twelve-depart-v2.png",
+      "sha256": "831d66e693bd74e0448fd099c3ddec69c979c5800d7148689f4fe231d5e73e59"
+    },
+    {
+      "key": "mm-twelve-depart",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-twelve-depart.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4459a424-b946-41bc-8559-6b0ce4664c47.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-twelve-depart.png",
+      "sha256": "e30a6f1b3ebb97311af632e71c649f14f1870c9779d7991665224fdf3d2f9fcd"
+    },
+    {
+      "key": "mm-women-support",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mm-women-support.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8ffd097d-22f8-4fb7-bac2-de73ad71cace.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mm-women-support.png",
+      "sha256": "70989235c211e713e4a4dc1f6961f3f94aad739f5d2842ac7487367d25e40edb"
+    },
+    {
+      "key": "mote-beam-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mote-beam-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-626c6111-12d2-4687-b73e-40dafdcabd17.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mote-beam-01.png",
+      "sha256": "a9cc5c7b9ba06b00d29bfeb06a1eeca6fe82d3f1fee68b469bec1d928a5df84e"
+    },
+    {
+      "key": "mustard-seed-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mustard-seed-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e6d1ef0f-0e8a-4ed5-8c74-4834b9b500f8.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mustard-seed-01.png",
+      "sha256": "43a9c358d6258ec6d486735f6322055737d00d32aee2aadbe016664c817babe8"
+    },
+    {
+      "key": "mustard-seed-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\mustard-seed-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6cc7b82f-a5d1-4964-a1e8-9e48512eda79.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\mustard-seed-02.png",
+      "sha256": "48068ea6860d3a4115af6d40864680a1d231d3f09a401b1f314f034a3aa6ebf3"
+    },
+    {
+      "key": "net-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\net-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-76625ecd-b20b-4db8-a63f-97b883173170.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\net-01.png",
+      "sha256": "76ec901303959d3ccc8bcb37363048e766a4d6f29bd312c8cedd0f86b017e44f"
+    },
+    {
+      "key": "net-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\net-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c2305b83-e923-4f74-ad65-d394be09989d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\net-02-v2.png",
+      "sha256": "e922ae5ad4798f8b07030c7aa414774c9fac59d8f0f74a30b5da780bb5efd95a"
+    },
+    {
+      "key": "net-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\net-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-362c3383-35ac-4760-92c8-80f40fd36712.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\net-02.png",
+      "sha256": "ce53a934b182ec156a73531c07391e5d4546f2df02e236f80e0e871ee05a9c9c"
+    },
+    {
+      "key": "net-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\net-03-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c296144e-b1df-4e05-8111-26946d76d646.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\net-03-v2.png",
+      "sha256": "7ba9c75c96c78a23f1ec77363a6b8aba831e2b5ed94c618a2fe1b2575d3198b8"
+    },
+    {
+      "key": "net-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\net-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3562123f-868a-4c54-9f01-fdd0edc1a486.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\net-03.png",
+      "sha256": "8d3341271c155f94f6ddd95224eb744d0f359c38880bd73ce9ffaa075a9aefb9"
+    },
+    {
+      "key": "new-patch-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\new-patch-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-26cd686c-9d69-4b7b-a8aa-a9d876c65c68.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\new-patch-01.png",
+      "sha256": "e8184d2b5e80a3596d54868bed345d34104d3b9866146910af45275d4f553cee"
+    },
+    {
+      "key": "new-patch-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\new-patch-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c594cc70-de7b-4686-a1c5-89d155a8c0a1.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\new-patch-02.png",
+      "sha256": "358f9f920058d769408aba3dcd6cb7b5f8db67ad217622498d65cf1b1cfca80e"
+    },
+    {
+      "key": "new-wineskins-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\new-wineskins-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-572a3c80-691c-42cc-afd2-b4ab276a7c9b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\new-wineskins-01.png",
+      "sha256": "e448d08c67a6a2eccd446d35ef78e67ed769083b41b7937a2db2ee86cfc7be9d"
+    },
+    {
+      "key": "new-wineskins-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\new-wineskins-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-669cf4a4-8078-4368-aba7-e0a709786b6a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\new-wineskins-02-v2.png",
+      "sha256": "9e0ed2cb4c7d2d0f9f62aa30e1f9c84df2d7225cebf1c0ff0835eac1760c52ee"
+    },
+    {
+      "key": "new-wineskins-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\new-wineskins-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f726e803-b4c1-4b9e-a53e-f01544551936.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\new-wineskins-02.png",
+      "sha256": "6fddb620c69f5bbdb6b0905947561f85a1eb629853679e2187636462daa4ccdd"
+    },
+    {
+      "key": "parent-gifts-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\parent-gifts-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ccfd2e4e-7b68-404d-ad1d-9812a5231058.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\parent-gifts-01.png",
+      "sha256": "04c8efd6789dc183a261180d7db5e3bdf4468dfc15185ec425b03d1e05d8c4e4"
+    },
+    {
+      "key": "parent-gifts-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\parent-gifts-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3127f6fd-c749-48a6-9a83-973004de14cf.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\parent-gifts-02.png",
+      "sha256": "918375d0f79be333543fece90da01be40c08034f0e9184f48e4ff2af317466c6"
+    },
+    {
+      "key": "pearl-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\pearl-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-aa5d45d6-f315-4146-9ca7-5e4213dc2e09.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\pearl-01.png",
+      "sha256": "b28beae20462b740d2ccb814dd3dcf9651e7e61db092d2e1cfe73f9214631ab1"
+    },
+    {
+      "key": "pearl-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\pearl-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-48728b0a-9536-4485-96b5-a28e9bad7f9c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\pearl-02-v2.png",
+      "sha256": "3628b1815301eacf5659e052f642174262578568ec7b047a8a194ddc4d215767"
+    },
+    {
+      "key": "pearl-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\pearl-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d9232ca0-432a-49b2-b69a-2d7f3fcc386c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\pearl-02.png",
+      "sha256": "ac5440c66f81cb12f80dfcc185e7a18202d6fab8134df7ed8eedaee3bbc7afe9"
+    },
+    {
+      "key": "pearl-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\pearl-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9252fc0c-5162-4f32-8dff-e2ab41017485.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\pearl-03.png",
+      "sha256": "b7635acaf91e7c32bb2dfca3fbedf44df5753a2033a235d557357d7283b3a861"
+    },
+    {
+      "key": "persistent-widow-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\persistent-widow-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-017d6f98-ec5a-4893-b653-b59b01fcdeb7.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\persistent-widow-01.png",
+      "sha256": "48a0d30638099edc9ea0a660f392eb59a3e2e90671560b520aa0e594f5304efb"
+    },
+    {
+      "key": "persistent-widow-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\persistent-widow-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e3151721-5f60-47a8-a2dc-06aec7a8a26a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\persistent-widow-02.png",
+      "sha256": "cfef0b85b59e0ae1402503eaad99fbc1bbba06e13716b88477c3c6b6e576e3cf"
+    },
+    {
+      "key": "persistent-widow-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\persistent-widow-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7f4722e4-44e7-49e5-b81d-1db33c7db61d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\persistent-widow-03.png",
+      "sha256": "75b6ef6356505a17daf3aaaf12e90c7937d5d838be39fbb8e7a94fc7ced012f3"
+    },
+    {
+      "key": "pharisee-publican-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\pharisee-publican-01-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4d38400a-d81d-4281-b57c-1cd336f44269.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\pharisee-publican-01-v2.png",
+      "sha256": "78b80cb5550b65e168d02c46809477d060c4e1f5b90a8af8876cb2b6cc838c49"
+    },
+    {
+      "key": "pharisee-publican-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\pharisee-publican-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cd2f19b0-e550-4c24-a9db-5a9364fd08db.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\pharisee-publican-01.png",
+      "sha256": "26a82c53b080488e599a241aca9e0de32e84b3adf820ab50e6cf8c3a2b5b5a86"
+    },
+    {
+      "key": "pharisee-publican-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\pharisee-publican-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c85535cd-85c9-46b0-84e3-7a8bccb12daf.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\pharisee-publican-02.png",
+      "sha256": "d0be326bd741aeadd5ad1bce3d04909f5e4e1a5706b6885dabb4f9f494d597ff"
+    },
+    {
+      "key": "pharisee-publican-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\pharisee-publican-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-81ce46bd-6e0b-44d9-8d04-c875f194fe15.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\pharisee-publican-03.png",
+      "sha256": "4b4728e9f0f8ed964b72e75d05ba22688933687b175d134b71c22c68a5401b1a"
+    },
+    {
+      "key": "prodigal-son-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\prodigal-son-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-79371005-5c0e-4b5b-a7b0-930a6e4a82ff.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\prodigal-son-01.png",
+      "sha256": "d6a3d3a8d976b5a5e3cf11f32e9deead1588841127a10927ddfd15e9b55f3580"
+    },
+    {
+      "key": "prodigal-son-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\prodigal-son-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f3e4e15f-d357-48b6-8c25-c4f4b3af6be6.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\prodigal-son-02.png",
+      "sha256": "d4d77eb354341d1f346f7e0c1416aeafe87a56bc2da70c64ab2c97929a41ac80"
+    },
+    {
+      "key": "prodigal-son-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\prodigal-son-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d956a4c3-5ec2-4ea4-a16e-7d56f2b882a8.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\prodigal-son-03.png",
+      "sha256": "a9ffd8479474fa2ab00eb007ec70636e874aaa0a829ff85c0cce7de882e7e405"
+    },
+    {
+      "key": "prodigal-son-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\prodigal-son-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-514afa6f-0f04-47b5-b40e-fc6d37598326.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\prodigal-son-04.png",
+      "sha256": "297a6bdc98f27df01632e1389b2743700527175098301edeb354a08d9e021d69"
+    },
+    {
+      "key": "prodigal-son-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\prodigal-son-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a1a1dc49-8fcf-430b-9601-50d869f08d27.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\prodigal-son-05.png",
+      "sha256": "76eb6c6ca9a49b4844904ece1fda041c780e5397228b88b4d3f8e7d9acf2206f"
+    },
+    {
+      "key": "prodigal-son-06",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\prodigal-son-06.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3b936596-152d-48f3-a015-cb837ac7c589.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\prodigal-son-06.png",
+      "sha256": "8704c045e88dfad3e7b19a7d0661efc07f878d00eeb0c2aa8e56e4ba0235d0f5"
+    },
+    {
+      "key": "prodigal-son-07",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\prodigal-son-07.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a8a02ee8-d511-4e7a-a087-34c68bf86911.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\prodigal-son-07.png",
+      "sha256": "a95c891283a63e04de13300b864053a4886eeaf2734a5ebc93cfd3e788800e0c"
+    },
+    {
+      "key": "prodigal-son-08",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\prodigal-son-08.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e6c1c5cc-e905-4bbd-bf00-aa948ccdc8ae.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\prodigal-son-08.png",
+      "sha256": "32ab41b0c8e3b5beef7a5bcddc6d51a9f48f3dc068d49afee2dc4167666a7413"
+    },
+    {
+      "key": "returning-spirit-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\returning-spirit-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-df138d21-eae1-402b-b771-f834a35cc5b2.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\returning-spirit-01.png",
+      "sha256": "bff1d301877b9fc934bf3fa5f9b770a4a11710a71358f3c705cbce7ba634dff8"
+    },
+    {
+      "key": "returning-spirit-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\returning-spirit-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-17249dbd-fce5-423b-bc3d-4e722540b546.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\returning-spirit-02.png",
+      "sha256": "f028ef59252a074b56b8f2dc4636f8e331ae2f8affe5161200a72d3d29c8c088"
+    },
+    {
+      "key": "rich-fool-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rich-fool-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e8ad3bcc-b5cf-4d14-b328-fc9039d1a9a9.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rich-fool-01.png",
+      "sha256": "2ad2b5d4aaba455d8721d08f297440b648b385b5b0473e174d232d1c9be6963a"
+    },
+    {
+      "key": "rich-fool-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rich-fool-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cfb52b69-1780-44e4-9258-8f5ef9e4634f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rich-fool-02.png",
+      "sha256": "f9be75aa9ecce3f452042b149fdca239385207b58b7f304d4b0a5ead4777dfcb"
+    },
+    {
+      "key": "rich-fool-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rich-fool-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4f5f581f-97c9-4f75-bddb-2f2ce1f30fe7.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rich-fool-03.png",
+      "sha256": "b5b0f64d388814de9bff6df4dd87bc7c9a0cc73014b175093cb7a44ee1c3aa1d"
+    },
+    {
+      "key": "rich-man-lazarus-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rich-man-lazarus-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f3ef62a9-91fa-4baf-9315-baad9a6e101f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rich-man-lazarus-01.png",
+      "sha256": "943e9f6910a412008bfb3a7278e1818a3c3b9ad4872a35c8f023d06882db534a"
+    },
+    {
+      "key": "rich-man-lazarus-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rich-man-lazarus-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-23e7b41b-1c56-418d-9d47-6cfd7e6c7f22.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rich-man-lazarus-02.png",
+      "sha256": "f557837034475376d0951bbc5b061f60f24e0fb568eaa22c5bf107492510bb88"
+    },
+    {
+      "key": "rich-man-lazarus-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rich-man-lazarus-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-812959f2-b535-42c7-a074-90c57c496d85.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rich-man-lazarus-03.png",
+      "sha256": "8c78bb6408c1a6a53a7c5bf943f996dafbec6d7d925d338497822a1efd4297b0"
+    },
+    {
+      "key": "royal-wedding-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\royal-wedding-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-50bc0c0e-a305-495d-9f52-6cedf9821f9d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\royal-wedding-01.png",
+      "sha256": "42182c776940a91ed5676dcfd34df6e209e52ee832b1ca9b28b62732ce27fd24"
+    },
+    {
+      "key": "royal-wedding-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\royal-wedding-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f7006862-85ea-451f-a752-e2ba4055ba7a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\royal-wedding-02-v2.png",
+      "sha256": "93ad47e6f65ba132f1e25c50604c59572fecbdcb94dd843b61af04a3eddefd02"
+    },
+    {
+      "key": "royal-wedding-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\royal-wedding-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f0280bf5-1e36-46d0-84e1-22b20cc0a7dd.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\royal-wedding-02.png",
+      "sha256": "4c85974c3997b7ca4dfc04fca3fe85915968acdf46b237b76c0ecef0d9b12937"
+    },
+    {
+      "key": "royal-wedding-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\royal-wedding-03-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ec830c15-eee4-44a6-917e-a3e8ead4c201.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\royal-wedding-03-v2.png",
+      "sha256": "b9ea5ef0c5f0c8fae800de74e1893eab891ea115dc6bec49ec9691d395360325"
+    },
+    {
+      "key": "royal-wedding-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\royal-wedding-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e00a5d00-acee-4ddc-be5e-f575d36eaf6d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\royal-wedding-03.png",
+      "sha256": "3eb20f2492dd772834a7c62e7b3808138604a6a85010e04c2be1f1ca567026ca"
+    },
+    {
+      "key": "royal-wedding-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\royal-wedding-04-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e92d5b9c-2e2d-46d9-a868-788c93ccf6d7.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\royal-wedding-04-v2.png",
+      "sha256": "89d478b2ae212cd82f11181695cb4112b98faca7b5f8d6c2343a53b89e1c54c6"
+    },
+    {
+      "key": "royal-wedding-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\royal-wedding-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bfe6ffee-ad50-4c1a-8f6d-1ec31eb4ee07.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\royal-wedding-04.png",
+      "sha256": "cc5e13b5596ee028a974f75cca75c97d0a85a0dc6f44e17906ed12060dbc1b6b"
+    },
+    {
+      "key": "rr-before-pilate",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-before-pilate-v2.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-before-pilate-v2-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-before-pilate-v2-20260923.png",
+      "sha256": "2ba087ab27e10aa539815dd4c7d32c726c3ed92ca73bd2bab603de01df04c475"
+    },
+    {
+      "key": "rr-before-pilate",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-before-pilate.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-before-pilate-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-before-pilate-20260923.png",
+      "sha256": "f71be71735e3ae6317a365158ffb43a7579dd893db497bcae1d9578c0a451685"
+    },
+    {
+      "key": "rr-bethany-anointing",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-bethany-anointing.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-38499fc5-63e3-496b-a111-64a7d8657149.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rr-bethany-anointing.png",
+      "sha256": "ced24d1b0b0fc2a201bce37c8297acf19d7dcca2bb539c608d6ff406bff3233a"
+    },
+    {
+      "key": "rr-broiled-fish",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-broiled-fish-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-19992b87-e60c-49a3-a7bc-ecdf05920cad.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rr-broiled-fish-v2.png",
+      "sha256": "05bc0dd6d7cc52421ee63747a6de6c85a926f6169500e60fedda65c64feb1abe"
+    },
+    {
+      "key": "rr-broiled-fish",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-broiled-fish-v3.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b8a81b89-c960-4f5c-93e1-eb57e3fbe860.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rr-broiled-fish-v3.png",
+      "sha256": "d8ce575e89d0f0494d099d56f388b2c00edb069e1b1d24877a30b3fd6b9d618e"
+    },
+    {
+      "key": "rr-broiled-fish",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-broiled-fish-v4.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8cab1a78-7813-4eee-9aee-6bd4640d9bc9.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rr-broiled-fish-v4.png",
+      "sha256": "199ddf7a530db01622286ea10c5edde48c7a2e5a2581adf0ccce932ab32321e5"
+    },
+    {
+      "key": "rr-broiled-fish",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-broiled-fish.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2273e1d0-07bd-4442-beb9-7ada9625a64d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rr-broiled-fish.png",
+      "sha256": "cabbc1e6c2aaeaf077f99497c9b0f7b3c3848d138742d4850f0fab2aaa62bec3"
+    },
+    {
+      "key": "rr-cloud-receives",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-cloud-receives-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f187d541-f4d0-47c3-bae6-293aa67fa747.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rr-cloud-receives-v2.png",
+      "sha256": "f715bd41415941338451b8ca14187cf82d5efcd30dddfb2c9d054801effc2690"
+    },
+    {
+      "key": "rr-cloud-receives",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-cloud-receives.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-89598e11-e86e-4a8f-8481-1c30324febc6.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rr-cloud-receives.png",
+      "sha256": "141462bdd8028ba24b98de13671a1484e52925f121de8a511bed22010e894f64"
+    },
+    {
+      "key": "rr-judas-morsel",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-judas-morsel.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-2c8de0cd-8b54-48e3-a004-100236ed4b06.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rr-judas-morsel.png",
+      "sha256": "bdcf7316812ba5af189d990446c439a1447b09ccefdb8674272f6d5cef970cbe"
+    },
+    {
+      "key": "rr-linen-burial",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-linen-burial.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-linen-burial-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-linen-burial-20260923.png",
+      "sha256": "3a633728320a7decc41ca558d69f327bfb0d48e7d62b3be4a1166121c017c344"
+    },
+    {
+      "key": "rr-simon-cross",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-simon-cross.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-simon-cross-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-simon-cross-20260923.png",
+      "sha256": "008ac70a34d2999b8e97d8ebba4db540162e09f245e96fb666d2025fe08c3330"
+    },
+    {
+      "key": "rr-sleeping-disciples",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rr-sleeping-disciples.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-sleeping-disciples-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rr-sleeping-disciples-20260923.png",
+      "sha256": "b37e9001f0cc6e3790510ca1dc2d89dc0598e446a65885dc90a05a1663f10885"
+    },
+    {
+      "key": "rt-accessible-home",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-accessible-home.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-78256d6a-aebe-49b0-b03b-a39bfebb47ed.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rt-accessible-home.png",
+      "sha256": "caefd17d1111ac9460dceeb49fb826d7ce384319b0117720e5e52837c4b4a540"
+    },
+    {
+      "key": "rt-kirtland-appearance",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-kirtland-appearance-v2.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-v2-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-v2-20260923.png",
+      "sha256": "8c2e17f115707e56ff8abd985111a20fdb79f5a1400502e87aacaf011117ec2d"
+    },
+    {
+      "key": "rt-kirtland-appearance",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-kirtland-appearance-v3.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-v3-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-v3-20260923.png",
+      "sha256": "1f9717974b6230a95739a9d106e2cdc6339bdf1dc92806a929b41daff2a24126"
+    },
+    {
+      "key": "rt-kirtland-appearance",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-kirtland-appearance-v4.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-v4-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-v4-20260923.png",
+      "sha256": "99b356de85956c1b6fe3f04e1e051d07a91ddfeb724b0ab94032bd640a86db16"
+    },
+    {
+      "key": "rt-kirtland-appearance",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-kirtland-appearance-v5.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-v5-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-v5-20260923.png",
+      "sha256": "cd4929be9356ff353d12772a3c947882a71933dad2b48a0e2db54d1391f71c5f"
+    },
+    {
+      "key": "rt-kirtland-appearance",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-kirtland-appearance.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-kirtland-appearance-20260923.png",
+      "sha256": "bc9916f1657e036c2494b9e2240154a940d270716b316605ebb4bd2368151f81"
+    },
+    {
+      "key": "rt-patmos-vision",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-patmos-vision-v2.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-patmos-vision-v2-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-patmos-vision-v2-20260923.png",
+      "sha256": "67e7ac35ab20fb426fc9b9ebbbcfa1aaf81826503436e7370a4111b15cc51fcd"
+    },
+    {
+      "key": "rt-patmos-vision",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-patmos-vision-v3.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-patmos-vision-v3-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-patmos-vision-v3-20260923.png",
+      "sha256": "77a6bbb8bb248840e60a6ffa0b828ba2cf9e63fbb365c2b07254e553a577e63f"
+    },
+    {
+      "key": "rt-patmos-vision",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-patmos-vision.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-patmos-vision-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-patmos-vision-20260923.png",
+      "sha256": "889a1d52d6681a18c49c1240b62e7dbd249f384ad4766b1b9988cf34be146bcd"
+    },
+    {
+      "key": "rt-persuasion",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-persuasion-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8fb8b3fb-504e-4ebe-a30d-2b771dc11d9f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rt-persuasion-v2.png",
+      "sha256": "48e894647854bcd28e76701d80c38a01a450b8b7461fab722ee36e2225ebb346"
+    },
+    {
+      "key": "rt-persuasion",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-persuasion.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-04e5bf17-7985-4ed5-b5d5-59d114505c93.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rt-persuasion.png",
+      "sha256": "dcb93134a0d93bf33554e04b388af2f39bcbaa45e3389d64076f234b6a5a5445"
+    },
+    {
+      "key": "rt-sacrament-preparation",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-sacrament-preparation-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-113bc4fb-d543-4698-8754-b79d81b13192.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rt-sacrament-preparation-v2.png",
+      "sha256": "df6c77d1f507eca636fa2eb3d5ada637a137f503e063f98960923b05e0994589"
+    },
+    {
+      "key": "rt-sacrament-preparation",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-sacrament-preparation.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2fa8cdee-b319-4e2c-8883-5149386c4d59.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rt-sacrament-preparation.png",
+      "sha256": "818c19f8b7939203f5d743e11acc2dcd12f6fe1f679c6e5f1b452ad43c316aaa"
+    },
+    {
+      "key": "rt-spirit-messengers",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-spirit-messengers-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4b424195-0cb9-49b8-a98d-28563dc4f2c3.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rt-spirit-messengers-v2.png",
+      "sha256": "f6b209750ba1d3b9684a4460cf59da481205d02d7e8d6ecc3f9e3f49e8b75b48"
+    },
+    {
+      "key": "rt-spirit-messengers",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-spirit-messengers.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-76ae646e-54ff-4dfc-b26e-7a28979d3468.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rt-spirit-messengers.png",
+      "sha256": "9998364134e08051dca072c220fbf78521f85a92837af3694451fb1ada8885ad"
+    },
+    {
+      "key": "rt-sung-testimony",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-sung-testimony.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1aefdc4a-d4b2-4e67-a5e8-53d141a79b22.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\rt-sung-testimony.png",
+      "sha256": "983d3f2a9b9107759f83466d694330ae67d8d2ce5edb1fb7ee12b4f6c246c6d7"
+    },
+    {
+      "key": "rt-vision-1832",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-vision-1832-v2.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-vision-1832-v2-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-vision-1832-v2-20260923.png",
+      "sha256": "d051b06ddf292fa2f47874de9e264011b9d11cd0cfbc3c48fa9ef18ca7ee3d82"
+    },
+    {
+      "key": "rt-vision-1832",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\rt-vision-1832.json",
+      "source": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-vision-1832-20260923.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\..\\recovery-originals\\rt-vision-1832-20260923.png",
+      "sha256": "58bc0b69e9874545c72fe9d27d7df107f1f2d37140c4acd4468366c1aa0b3ed6"
+    },
+    {
+      "key": "salt-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\salt-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-16119786-0701-4f12-85ef-f9373c8f6dfb.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\salt-01.png",
+      "sha256": "af67681e252c34582a8aa3153836693eeb77df50abe5c6037414134d2f5b4ffd"
+    },
+    {
+      "key": "salt-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\salt-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-98a4c09a-8477-46ab-b872-175ee71c5120.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\salt-02.png",
+      "sha256": "4d4e2ba08b5b6d26a521ed9899b8276830d87fe4745eb28cbd097f793d98fb42"
+    },
+    {
+      "key": "servant-duty-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\servant-duty-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-170590a8-a0fb-4275-bc3c-47a7dfeccb6a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\servant-duty-01.png",
+      "sha256": "b001dfdaca7ff3dbd6a41bd9a9f12198817891eb62f8ddcf5370ff34850a1468"
+    },
+    {
+      "key": "servant-duty-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\servant-duty-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-19358827-87eb-438f-8092-d2d992c551e1.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\servant-duty-02.png",
+      "sha256": "950c748cb1ff8ad309c76010083a303acdcfc383108f67c81b31a23f56b3ac4b"
+    },
+    {
+      "key": "settle-adversary-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\settle-adversary-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8fcac070-e531-4395-86a5-0436073c37f3.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\settle-adversary-01.png",
+      "sha256": "6f3a16b9c0fcab82525e254c50aa6920bb08c6fcf769775a3c856c5038676c58"
+    },
+    {
+      "key": "settle-adversary-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\settle-adversary-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bbbd6f00-1fdd-4929-8a91-33dd4a484534.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\settle-adversary-02.png",
+      "sha256": "ac165cd45e1af63db892f2b6f494fbb3aefd5e5ee06d02dbc3d1a2690763b61e"
+    },
+    {
+      "key": "sheep-goats-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\sheep-goats-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-788fda87-a570-4bfb-b0bc-bd35f4e994e4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\sheep-goats-01.png",
+      "sha256": "9a9cbe9b8251646b5c5ddce0fbb3135354abc4111b0dd9c536dcf35b6d7e5f8e"
+    },
+    {
+      "key": "sheep-goats-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\sheep-goats-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3668b973-a529-4edb-be7f-0976a35e146c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\sheep-goats-02.png",
+      "sha256": "9ffaf1aa44c80a4496e45c077c88831836b4e4ee4f6896e60ec1cb9679f1b4e8"
+    },
+    {
+      "key": "sheep-goats-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\sheep-goats-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2eeaba95-f0d4-4aaa-999d-26a1516e1120.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\sheep-goats-03.png",
+      "sha256": "f7a9bfa9ea4a323c26b2307d73d037eadce832ee18ea6818bb9833585109c1b0"
+    },
+    {
+      "key": "sheep-goats-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\sheep-goats-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-186e4783-cc81-4d08-b884-574de833febb.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\sheep-goats-04.png",
+      "sha256": "1271f197ddebb3d0c0df010e43d341deb3d3b856531a851c6c323f557057f384"
+    },
+    {
+      "key": "sheep-sabbath-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\sheep-sabbath-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6c2a23b3-495a-44d2-b70c-ffe07b9228e8.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\sheep-sabbath-01.png",
+      "sha256": "8e094ee6cc6358efeeadeaed2955f4c696befef10aaf7f16799af4431fca3d5f"
+    },
+    {
+      "key": "sheep-sabbath-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\sheep-sabbath-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2fac5941-1d7f-454e-be0d-8c1a43b764bd.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\sheep-sabbath-02.png",
+      "sha256": "fe73aa8a5d55be9b909254bd12476c8dc91f38974b35f6290be6953ee5ce7bff"
+    },
+    {
+      "key": "strong-man-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\strong-man-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b781719e-873f-4353-b6c2-5e676c76a40c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\strong-man-01.png",
+      "sha256": "3657a9222206bf58356f614bd361c29bd2e54b3fb1e87f54b52b52ddf8e8f762"
+    },
+    {
+      "key": "strong-man-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\strong-man-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-dc1f29a7-daee-48d4-991e-bc7d6a166cdf.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\strong-man-02-v2.png",
+      "sha256": "cef9f044ad3effc9eae3e05879ca4ecd81b9dbce6ecc5b655e36a842a1764b5c"
+    },
+    {
+      "key": "strong-man-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\strong-man-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-37103975-ebcf-4ba1-a5ff-bf012410ba0f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\strong-man-02.png",
+      "sha256": "8f7b5c419e89f43b1855db2390f560ce6595dd65a48d3d4281898721b71df443"
+    },
+    {
+      "key": "strong-man-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\strong-man-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a27a89b1-e3a4-4f43-902a-a582561169eb.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\strong-man-03.png",
+      "sha256": "56d1f3385aadf15f7b5e4324256902a5fd0e09c7cc5abe8d990b1dcdf948f20c"
+    },
+    {
+      "key": "talents-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\talents-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6e07ee7a-5884-48cd-a87d-78b91308b90c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\talents-01.png",
+      "sha256": "8af46854fafaadde02966e944fa72fa00566cea070979af31e05f0089277c7fe"
+    },
+    {
+      "key": "talents-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\talents-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6d4fbdf5-c43c-4091-b7f2-0a4f75a572e9.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\talents-02.png",
+      "sha256": "6d86132ddacf8d203b50f72312cfc658036cd0f88fe99f65982692b19aee8e3f"
+    },
+    {
+      "key": "talents-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\talents-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5f7fd78e-c6a2-423f-9a5c-0133eeeab044.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\talents-03.png",
+      "sha256": "8c159b4eede3b34ede28e3d45337a5faacf237dd1c02d8e2a57f706cbdf2e112"
+    },
+    {
+      "key": "talents-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\talents-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0f1a0b07-224d-4f41-8016-ff12b339dcf5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\talents-04.png",
+      "sha256": "20e4f9040ccb24e85d018a31a95b97f473785144a23c4f31021c267e47e07afe"
+    },
+    {
+      "key": "ten-virgins-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\ten-virgins-01-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-226c28d1-98ff-4036-ac54-63f59713bfe5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\ten-virgins-01-v2.png",
+      "sha256": "db041f727c2b899900f8cbc2fefcf068547ff1049f979cd041d1c3d9f14eb226"
+    },
+    {
+      "key": "ten-virgins-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\ten-virgins-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bf10cd22-6954-448f-b7ce-6dc57d102fcb.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\ten-virgins-01.png",
+      "sha256": "ce61f6eca77f9de42b774b1b98257b026419b3eca36602261279db08176cad19"
+    },
+    {
+      "key": "ten-virgins-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\ten-virgins-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ea1d9d76-c6cd-46df-ae39-fa4266f336ae.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\ten-virgins-02.png",
+      "sha256": "cc95510e7b6223dcb9de32d1815e9e64a26e429822b11b7051b0e2d1b62dcf71"
+    },
+    {
+      "key": "ten-virgins-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\ten-virgins-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3e4abe88-5ea9-4c94-8fb8-5a2ec8e9850b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\ten-virgins-03.png",
+      "sha256": "01de02f70ea2272aa1a565c726ad3f365e70cc4229fa661c9bdf72c2d221ddbe"
+    },
+    {
+      "key": "ten-virgins-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\ten-virgins-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-722d67c3-21f2-4221-a336-668b6313a038.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\ten-virgins-04.png",
+      "sha256": "38be9bc4f2da004c023d5a9df51200170b77ec243045ce1ff9a275924ddc4a28"
+    },
+    {
+      "key": "ten-virgins-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\ten-virgins-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-80005076-d8ef-478a-bd2c-e49cd6801aa4.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\ten-virgins-05.png",
+      "sha256": "dd00398eb2246aa6a89cd493114d16ccddd8c2aad3243e112ef1669890d816eb"
+    },
+    {
+      "key": "thief-night-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\thief-night-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0efc48e3-450d-45fd-ab5b-04457ddd1d85.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\thief-night-01.png",
+      "sha256": "69c108aaeea5a3ca1c38849a87a9d133d7927c0d6a8433e605a821e6c50577bb"
+    },
+    {
+      "key": "thief-night-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\thief-night-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-10317b65-73db-430a-a4d8-b12f55a93d48.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\thief-night-02.png",
+      "sha256": "29e9d43b007b0e435d3dfe20b239b1efb18fa59722a8f0d9ae1b7eb50ff6c0f1"
+    },
+    {
+      "key": "tower-builder-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tower-builder-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bddbfca6-594b-4a0a-acba-1518345dc985.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tower-builder-01.png",
+      "sha256": "001578f8c1e2855bb51454a180b1dda360a48d55d70ae223cbb9e3af7fe39130"
+    },
+    {
+      "key": "tower-builder-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tower-builder-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b7a78e61-cc7d-4e26-ac63-ffd8c37db644.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tower-builder-02-v2.png",
+      "sha256": "9a62552e37ed8d486217663522dd4dd8241bc1cd3a4534b2e5ab60ea83ac5b72"
+    },
+    {
+      "key": "tower-builder-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tower-builder-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9d1b5750-cb9c-489f-b214-570e5874d957.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tower-builder-02.png",
+      "sha256": "424bfed4ebce0fbf10475298f18733464622a76d3dfc7ce950c8cbe5f1360670"
+    },
+    {
+      "key": "tower-builder-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tower-builder-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5c67d0dc-b864-42ea-98cd-0795e0679f9f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tower-builder-03.png",
+      "sha256": "aefbd8025bc6e821eea7742b66a7f0a3aa22b1b0bb619bc4b8c93fbd4dd64a06"
+    },
+    {
+      "key": "tp-lamp-salt",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-lamp-salt.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d8918fa9-f374-4fa7-b64f-f5aad02acc2e.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-lamp-salt.png",
+      "sha256": "dfeb9a308fba96214b29707b758131ab2bb3b0ebf4df123d898783978b99b3a3"
+    },
+    {
+      "key": "tp-lilies-birds",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-lilies-birds.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0d668321-157c-4e5a-8198-608ba270f32f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-lilies-birds.png",
+      "sha256": "93de1f5084a7611f662f62003e3cf77c5869e3fc423923762f1f0166e6a76b8d"
+    },
+    {
+      "key": "tp-passover-water-carrier",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-passover-water-carrier.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-c5a8349a-64bc-431e-ab1e-06e8f00a8edd.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-passover-water-carrier.png",
+      "sha256": "743c2e8841335327e214ced5426ada7a477565ec935a2d7dae97bd77e6ae1c33"
+    },
+    {
+      "key": "tp-scribe-dialogue",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-scribe-dialogue-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0cb1ac34-1c5a-4fe8-bc35-caf7b0bbbbb3.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-scribe-dialogue-v2.png",
+      "sha256": "244bb2b13293b6949b6319f4a408f0b95934855c353e4b242d6be924d7bf782c"
+    },
+    {
+      "key": "tp-scribe-dialogue",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-scribe-dialogue.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a1dfc1cd-fa87-436e-b00c-379982829d53.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-scribe-dialogue.png",
+      "sha256": "89f83d2ff34c6ef0749c0e9af617162fc497df1359f833eb12f56d2e0ff1aca5"
+    },
+    {
+      "key": "tp-vine-pruning",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-vine-pruning.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7fceeb77-f135-4093-a461-042375d00219.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-vine-pruning.png",
+      "sha256": "f01cac906d0ac8f2e5649a78daa9ff316a03abb5ea30967882599ca92bdbd2b0"
+    },
+    {
+      "key": "tp-withered-fig-tree",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-withered-fig-tree.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-6686bb14-885a-4b89-b7ea-f773118a2b39.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-withered-fig-tree.png",
+      "sha256": "400b295bd0733802942ac9511b3c150d9b8ffb89ff50a5534cdf22ea1c777cde"
+    },
+    {
+      "key": "tp-writing-ground",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-writing-ground.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fd326acb-d9d5-4c16-808e-26f99073770f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-writing-ground.png",
+      "sha256": "581a4e9f39e5a6139544d2ac1fa96548634fd98edad71e1852fec6966b65638e"
+    },
+    {
+      "key": "tp-zacchaeus-response",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tp-zacchaeus-response.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-f8d07ed5-af2c-4b65-a8fe-3a2bfbc53b45.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tp-zacchaeus-response.png",
+      "sha256": "b2ac11fa11a265c0992d9f91f71352ad0e3a53d16d7d7a7ac13e5a1293c1b493"
+    },
+    {
+      "key": "tree-fruit-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tree-fruit-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-47c7d6fa-58d1-43d2-a7b9-baf651c0491f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tree-fruit-01.png",
+      "sha256": "17091554a09c3c4653d9a91ad9088d0cbd6c44205356d31123086939c25a678d"
+    },
+    {
+      "key": "tree-fruit-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\tree-fruit-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-07c715ab-ae9c-4294-b729-5da4f1cc2b79.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\tree-fruit-02.png",
+      "sha256": "562d0ec5f0c3c313643430e108eb54cac6a0f656b837fcacab43fd217b7bbb5e"
+    },
+    {
+      "key": "two-debtors-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\two-debtors-01-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b1764a98-90d5-4e7f-8d99-5775b8dfef0e.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\two-debtors-01-v2.png",
+      "sha256": "b63fad11e5688ef3b8028afd1b75f941a215fc5fbf519ef41847d7556ec080e1"
+    },
+    {
+      "key": "two-debtors-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\two-debtors-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3904f88d-9555-42e6-ac45-45ddff21d7e0.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\two-debtors-01.png",
+      "sha256": "36475d5f6a04ae831e148be09b572afd6674164e5eb1364a988480035bf028e7"
+    },
+    {
+      "key": "two-debtors-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\two-debtors-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-efd33b84-2c3f-41d7-a342-19d04e8770e0.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\two-debtors-02.png",
+      "sha256": "fab5b2c20cf559bd1b63150153f89e8869466a5eb9aad5ecdbc821193bf8d829"
+    },
+    {
+      "key": "two-sons-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\two-sons-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4f8a7d84-83cd-4bb8-b7ec-893f0bf13c4f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\two-sons-01.png",
+      "sha256": "a0b38cc34eb57c21ea77723be53bdf2a9568e14343c54d01b563a7cb3ad948fe"
+    },
+    {
+      "key": "two-sons-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\two-sons-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b1be9452-0f35-48c2-a192-e302bc3ee316.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\two-sons-02.png",
+      "sha256": "a1d3441b74c7ce11701a466cd2d8da7c8d8001b6460655f94c3c9f24365d07fd"
+    },
+    {
+      "key": "two-sons-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\two-sons-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-098655cb-2373-43e3-989d-1778d3aeec85.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\two-sons-03.png",
+      "sha256": "cbbae8f409b31bf2823409e0d39fa703684dd2129199d85ba639d3166d226af8"
+    },
+    {
+      "key": "unjust-steward-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\unjust-steward-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-85387bf1-3da5-43a8-9f08-ad769483cd3f.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\unjust-steward-01.png",
+      "sha256": "ef312e150f26dfd76b0dac1fa27c4053e2b8fb1d1f1463af7bdbde0804fd3b56"
+    },
+    {
+      "key": "unjust-steward-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\unjust-steward-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-64eebe1a-150f-496e-bb97-43e0c251c6ad.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\unjust-steward-02.png",
+      "sha256": "2ea1f52aa695b5b662f6cedbeffca7c9be481831d6dfb33b28d5536cd0b676eb"
+    },
+    {
+      "key": "unjust-steward-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\unjust-steward-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cbd7a77a-5af2-41e4-ac73-0d8d6c18cd65.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\unjust-steward-03.png",
+      "sha256": "a87bac6afb8c253cf80f9b533053631e7c062cf24f104781d21936af7d4ec1a6"
+    },
+    {
+      "key": "unmerciful-servant-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\unmerciful-servant-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8c4777c5-75f2-4db6-87d5-04d684f8d57b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\unmerciful-servant-01.png",
+      "sha256": "7622f27ddf9442bfd6e3531262ff274bee107e16065d13519184e2ea9159aa55"
+    },
+    {
+      "key": "unmerciful-servant-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\unmerciful-servant-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b277a3cf-2695-4ffc-bbe8-10a8907a011a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\unmerciful-servant-02.png",
+      "sha256": "5c732c671ce234a9bc411c9f2a4e6b89e160cf75211db8d75aea30163988c9e0"
+    },
+    {
+      "key": "unmerciful-servant-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\unmerciful-servant-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b1001ea3-5e9a-45ca-8b6d-2c5c0aced77d.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\unmerciful-servant-03.png",
+      "sha256": "b36fbcaa816a4d7cdf8221a4c7c05db01040cbfd25d97bdf304fb18087567f32"
+    },
+    {
+      "key": "unmerciful-servant-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\unmerciful-servant-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bd6f0348-eba2-4456-a549-21bcde3c68fe.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\unmerciful-servant-04.png",
+      "sha256": "ff6acc0397cc8de973bf41d10eec6872bfbf2d9368a7174857a56e571d371a48"
+    },
+    {
+      "key": "unmerciful-servant-05",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\unmerciful-servant-05.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e6f10d42-013c-416d-986b-e375dd84f8f5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\unmerciful-servant-05.png",
+      "sha256": "4eccc6af7c5a20ed243f7822743b211702b99ca5de054cb495c76b10ed1b5711"
+    },
+    {
+      "key": "vine-branches-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\vine-branches-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d41ef3cf-6efa-4f6b-8c93-5788756da9bb.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\vine-branches-01.png",
+      "sha256": "856b5b63d78070e77a6137c65b179931456f9ade7018bbe75b7a6a5a51559a3d"
+    },
+    {
+      "key": "vine-branches-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\vine-branches-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-be94f3c8-0af1-4787-8bdf-581a348cd007.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\vine-branches-02.png",
+      "sha256": "d1cb3797b8aac81fc9945806c6dcb0ca6e4a21440bb162a2b462ad4a6ed631ef"
+    },
+    {
+      "key": "vine-branches-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\vine-branches-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ca63c7e1-8add-4958-9fb4-66367f56e2bc.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\vine-branches-03.png",
+      "sha256": "73a4586baac0069e46ce6b8f739a246852ff72d131f66cc4192c174ff16e00e9"
+    },
+    {
+      "key": "watchful-servants-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\watchful-servants-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4e632127-193e-4c6a-a4c3-81f9b937d033.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\watchful-servants-01.png",
+      "sha256": "71128c7e00e8653f2374378a60c94103f09c5e080c07aa6122c960d91f0c817b"
+    },
+    {
+      "key": "watchful-servants-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\watchful-servants-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-92982f41-285a-483c-b0f9-44326e3f2f56.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\watchful-servants-02.png",
+      "sha256": "da48f0bd6d47faeb4eeb145c4ca75a58ceccb232ff5d72870ef4b79a91375f06"
+    },
+    {
+      "key": "watchful-servants-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\watchful-servants-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-be4822f1-2269-47c0-b69a-87094fe5c4a0.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\watchful-servants-03.png",
+      "sha256": "e8394118e0a0280af7ffd1e21a5a4cc5e1d9d583ec6f55dd8616b2098a953f75"
+    },
+    {
+      "key": "wedding-places-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wedding-places-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-577b1d8b-2d24-4aa7-b480-e10b20647338.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wedding-places-01.png",
+      "sha256": "cbf6831bf3ff9710de166bcd4efb52da47f329a66aabb8ecab835128c73e6b46"
+    },
+    {
+      "key": "wedding-places-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wedding-places-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e88a36a6-bef9-4455-a8cb-1444033b651c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wedding-places-02.png",
+      "sha256": "715bb8bdaa369583937f0c9b4217c1a3bbe015efe613a775762327bc1eb4178c"
+    },
+    {
+      "key": "wedding-places-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wedding-places-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-dfd89173-211e-47c4-8ced-433c0933ab7a.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wedding-places-03.png",
+      "sha256": "7dde6edf04c6543dddfb870276348b1f7d4944111df15279958bd79f5bc77f20"
+    },
+    {
+      "key": "wheat-tares-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wheat-tares-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3f168016-01d1-4847-a70d-af5104780946.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wheat-tares-01.png",
+      "sha256": "30133b34cb1613cdf20fababfbccc1d1e489072ff591ece41ffdbce5faa31be5"
+    },
+    {
+      "key": "wheat-tares-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wheat-tares-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fdf0cfe4-87d7-46c4-bed8-3fc78ffc9f47.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wheat-tares-02.png",
+      "sha256": "2662ecdd5a23f7d870ff7018927a3db937775f99d5f520297149105a3d15c0a1"
+    },
+    {
+      "key": "wheat-tares-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wheat-tares-03-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e2445645-335c-4133-8939-7f668d685e76.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wheat-tares-03-v2.png",
+      "sha256": "bf751c417545004f519119802433a63054550d51f0d198564080cec659263962"
+    },
+    {
+      "key": "wheat-tares-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wheat-tares-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d072fee6-8442-4fe4-b4de-11cfe1190bb5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wheat-tares-03.png",
+      "sha256": "1e2ffad7d4ff6b5ce8b12579f9f4eae66dba474e6f57a3c307fd4df1ef4fa162"
+    },
+    {
+      "key": "wheat-tares-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wheat-tares-04-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f19b6d77-677a-49da-bd01-b0bf30a1fc43.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wheat-tares-04-v2.png",
+      "sha256": "9a2f155c6a66b3a1f060c1582ff358d9a02bdfb5ecaadfe7dbe42b10506bdfcf"
+    },
+    {
+      "key": "wheat-tares-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wheat-tares-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9a2de0b5-fd33-46dd-a4f3-50b22d3dc42b.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wheat-tares-04.png",
+      "sha256": "c4f99d8af93daaa9ad0f69e0df607941b7bc89877f7b5d4e0b3bb9699c7fe842"
+    },
+    {
+      "key": "wicked-tenants-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wicked-tenants-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3e28d14-a0ce-49b2-ad1c-1732208e75e5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wicked-tenants-01.png",
+      "sha256": "2820ce29edacd4bbc71672c2ddc50683383664ee22b9e0ccc4f7852aecf950a9"
+    },
+    {
+      "key": "wicked-tenants-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wicked-tenants-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b7af382d-1dcb-4d66-a8c9-63378257d969.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wicked-tenants-02.png",
+      "sha256": "dbb9e5e645136072ad38e9fce58d6a8831c7cd547215fa258b4f970f0a07011e"
+    },
+    {
+      "key": "wicked-tenants-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wicked-tenants-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3269d4d4-5036-4c40-a79c-d1658465603c.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wicked-tenants-03.png",
+      "sha256": "ef256104bd31b9e22f137fc3e07dbee28e171d90ddf1d6463695ea2dc1835598"
+    },
+    {
+      "key": "wicked-tenants-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wicked-tenants-04-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6dff0b8d-ef98-4cae-8910-e3daa82ed1d9.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wicked-tenants-04-v2.png",
+      "sha256": "32156970e6adf63eac16b0a7e54278ca35344488ea3c4ad91d10052f4d25139e"
+    },
+    {
+      "key": "wicked-tenants-04",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wicked-tenants-04.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bcb13e01-3527-423f-aeb7-bbb23ea76d53.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wicked-tenants-04.png",
+      "sha256": "2264be36d0ee960c14070cc54bfecfa63d02788d29f8fef067c724eef42fe4a5"
+    },
+    {
+      "key": "wise-foolish-builders-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wise-foolish-builders-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-effe91bf-db02-4b5b-b7b1-6d2dd41ab838.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wise-foolish-builders-01.png",
+      "sha256": "a64a5010043e0f1e5867c7f4f4dd491002af361828190ede4be6c5166305d7ab"
+    },
+    {
+      "key": "wise-foolish-builders-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wise-foolish-builders-02-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bfc838d3-00ce-4eb1-ad77-76d58c977ae5.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wise-foolish-builders-02-v2.png",
+      "sha256": "6a5bd09ffeab109b2d33853d2ff394112cf49ab8b257ced0afe1893c91a56979"
+    },
+    {
+      "key": "wise-foolish-builders-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wise-foolish-builders-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1004c239-79bf-4464-b26b-05d7fa69cb3e.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wise-foolish-builders-02.png",
+      "sha256": "78c5aadaf0bb5ffdac58a64c234831babc1eabb3d33d945863491d93caa1c1d1"
+    },
+    {
+      "key": "wise-foolish-builders-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wise-foolish-builders-03-v2.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a28c446f-f794-4d90-878a-8ffeb88c7a38.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wise-foolish-builders-03-v2.png",
+      "sha256": "64466cfe9f482c564b799fbe2be5e297e9f2b514f113dc71aef956584cfc728a"
+    },
+    {
+      "key": "wise-foolish-builders-03",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\wise-foolish-builders-03.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d259e373-73c3-40bb-aff4-8c4c97cd5f80.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\wise-foolish-builders-03.png",
+      "sha256": "65e8bb86f97e2de8e3d01d2007925f0e7a523297f502c7d667e672b514b3cfa9"
+    },
+    {
+      "key": "woman-childbirth-01",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\woman-childbirth-01.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-612cdb36-7cdd-4796-a7ad-c0a055450ede.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\woman-childbirth-01.png",
+      "sha256": "54ae5456e006927367713fdf0ab1c06cd5103a052279d9cfb6f8e762f87d5c5b"
+    },
+    {
+      "key": "woman-childbirth-02",
+      "metadata": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\generated-records\\woman-childbirth-02.json",
+      "source": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-87337f8f-217c-4415-9001-91257e178f88.png",
+      "saved_copy": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\recovery-originals\\woman-childbirth-02.png",
+      "sha256": "c9e8c09148068d1b105dd8b866913f1071cb619cf5cc02269d68cf7a7010dd90"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+ "review_type":"independent_visual_revision_review",
+ "owner_approval":false,
+ "scope":"Four revised candidates directly inspected at original detail and compared with preceding rejected versions.",
+ "candidates":[
+ {"file":"exec-2b27ee42-e540-457a-b834-b9d7ea0874e2.png","subject":"Rich man distinct casting","technical_verdict":"pass_with_caption_conditions","finding":"Rich man now has a rounder, fuller face, shorter tighter hair, different brow/nose proportions and shorter beard. He is sufficiently distinct from Christ. Christ's protected reference likeness remains strong. Reciprocal gaze, hands and kneeling posture remain plausible. Caption must identify initial kneeling encounter before sorrowful departure."},
+ {"file":"exec-a321d595-fc1d-4a62-b6c1-8c7f08c9c350.png","subject":"Syrophoenician gaze v3","technical_verdict":"pass_with_caption_conditions","finding":"Head and eyes now visibly angle down toward woman's face, resolving the previous above-and-past gaze impression. Both characters read as engaged with one another. Strong recognizable Christ likeness and plausible hands/body retained. Exact doorway and landscape remain artistic staging."},
+ {"file":"exec-6fec3f6b-d03a-4cae-a661-dd7a7fed69a6.png","subject":"Rocky ground v2","technical_verdict":"pass","finding":"Extensive dangling root networks removed. Withered cereal shoots now read as growing in thin rocky soil; small root tips near soil surface are an ordinary minor detail and do not materially imply uprooting. Clear contrast to good-ground harvest."},
+ {"file":"exec-71ba1c72-5df1-4bda-a8a0-2c964f7f248e.png","subject":"Thorns v2","technical_verdict":"pass","finding":"Plump grain heads removed. Sparse weakened or barren cereal shoots are visibly surrounded by dense thorns, communicating choked growth rather than fruitful grain among weeds. Prior source-fit defect resolved."}
+ ],
+ "overall":"All four revisions resolve the material previous findings and are technically usable candidates. No owner approval inferred."
+}

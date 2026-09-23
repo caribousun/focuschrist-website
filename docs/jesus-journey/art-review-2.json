@@ -1,0 +1,56 @@
+{
+  "review_type": "independent_visual_candidate_review",
+  "owner_approval": false,
+  "scope": "Three modern images inspected directly at native displayed resolution. No generation or edits performed. Static inspection of current jesus-journey.css and tools/build_jesus_journey.py also performed; no browser-layout verification claimed.",
+  "candidates": [
+    {
+      "file": "exec-fd7a8a65-1354-49d8-9dde-f4c4e9ee7615.png",
+      "subject": "Two men beginning a reconciliation conversation",
+      "technical_verdict": "pass",
+      "gaze_expression": "Younger speaker's slightly lowered gaze and earnest expression, and older listener's directed gaze, fit a difficult, attentive conversation. No evident malformed pupils.",
+      "hands_objects": "Two open gesturing hands have plausible overlapping fingers; listener's hands rest coherently on tabletop. Phone and bottle sit on the table rather than floating or intersecting hands. No evident blocking anatomical defect.",
+      "caption_boundary": "Present-day artistic illustration of beginning an honest conversation. Do not infer family relationship, cause of conflict, forgiveness already achieved, or a real event."
+    },
+    {
+      "file": "exec-0f0379cd-0e90-4606-8586-63483a867cd2.png",
+      "subject": "Welcoming a guest to a community meal",
+      "technical_verdict": "pass",
+      "gaze_expression": "Welcoming woman and arriving guest have coherent reciprocal gaze and warm smiles; seated diners look toward the arrival naturally.",
+      "hands_objects": "Host's visible hand grips the chair back plausibly. Guest supports plate with one hand; the other hangs or rests near the table edge without clear fusion. Chair, plate and foreground serving dishes have coherent relationships. Host's other arm is partially occluded, which is not by itself an anatomical defect.",
+      "caption_boundary": "Present-day artistic illustration of making room at a shared meal. Do not assign poverty, exclusion history, affiliation, or documented identities to participants."
+    },
+    {
+      "file": "exec-a9d4ce87-8d8e-4fd3-a2e8-15df76a2ddc4.png",
+      "subject": "Man in work clothes praying before dawn",
+      "technical_verdict": "pass",
+      "gaze_expression": "Closed eyes and bowed head read naturally as prayer. Adult age and serious, quiet expression are appropriate.",
+      "hands_objects": "Interlaced hands form a plausible clasp with believable wrists and forearms; elbows rest coherently on table. Work gloves, lunch bag and insulated drink container are separate and plausibly supported by table. No evident extra limbs or malformed joints.",
+      "caption_boundary": "Present-day artistic illustration of prayer before a workday. Time and job setting are artistic context; no specific hardship or personal testimony should be invented."
+    }
+  ],
+  "code_review": {
+    "blocking_current_defects": [],
+    "findings": [
+      {
+        "priority": "P2",
+        "file": "tools/build_jesus_journey.py",
+        "function": "artwork",
+        "finding": "Strict mode verifies the full asset exists and the reviewed flag, but never verifies thumbnail existence. The generated img uses thumbnail, so a missing or mistyped thumbnail can pass --strict and produce a broken visible image even though the full-size viewer link works.",
+        "recommendation": "Verify both asset and thumbnail files in strict mode; preferably validate positive width and height too."
+      }
+    ],
+    "positive_checks": [
+      "New stylesheet, script, image and generated page links use root-relative URLs; current copied header/footer href attributes are normalized from ../ to /.",
+      "Two-column directories use minmax(0,1fr), min-width:0 cards, odd-final-card full width and a single-column phone breakpoint.",
+      "Main and local navigation have landmarks, descriptive link labels, focus-visible styles and 44px minimum local action heights.",
+      "Existing site-common.js enhances the copied hamburger with keyboard and aria-expanded handling and main skip-link focus support.",
+      "Existing topic-artwork-details.js recognizes figure links and caption sources from this builder, so the intended picture-to-study-to-full-size wiring is statically compatible."
+    ],
+    "verification_remaining": [
+      "Inspect actual desktop and phone ancestor composition after pages are generated, including header height, anchor offsets and widest card text.",
+      "Exercise picture to study dialog to full-size to close and return path in browser; static compatibility is not runtime evidence.",
+      "Current images have only a 960px thumbnail src and no srcset; this is usable, but consider the full image as a higher-resolution source for large or high-density screens if visual inspection shows softness."
+    ]
+  },
+  "overall": "All three images are technically usable candidates. No owner approval inferred. One strict-builder missing-thumbnail validation gap identified."
+}

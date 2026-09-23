@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original inspection vine-branches02 and woman-childbirth02; directly compared mother/attendant continuity with01.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical acceptance is not owner approval or browser verification."
+  ],
+  "entries": [
+    {
+      "key": "vine-branches-02",
+      "generationKey": "vine-branches-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-be94f3c8-0af1-4787-8bdf-581a348cd007.png",
+      "sha256": "d1cb3797b8aac81fc9945806c6dcb0ca6e4a21440bb162a2b462ad4a6ed631ef",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Tending the vine",
+      "alt": "A vineyard keeper holds a slender green shoot while positioning a curved pruning knife beside it.",
+      "caption": "A keeper works carefully among the vine's leaves and branches. Jesus uses the tending of a fruitful vine in His teaching about abiding in Him.",
+      "refs": [
+        [
+          "nt/john/15",
+          "John 15:2",
+          "2"
+        ]
+      ],
+      "findings": "Plausible two-hand support and knife grip; blade contacts slender shoot near wood. Natural skin, hair and clothing, task-directed gaze. Grapes remain attached nearby; exact botanical cut endpoint not fully visible, so caption does not assert completed cut or specific shoot classification.",
+      "conditions": [
+        "Ordinary agricultural illustration of John15:2, not literal Father or Christ.",
+        "Do not identify the visible shoot as definitively unproductive or claim its completed removal.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "woman-childbirth-02",
+      "generationKey": "woman-childbirth-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-87337f8f-217c-4415-9001-91257e178f88.png",
+      "sha256": "c9e8c09148068d1b105dd8b866913f1071cb619cf5cc02269d68cf7a7010dd90",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Joy after the birth",
+      "alt": "The woman in a teal robe cradles a swaddled newborn and looks down at the baby while the older woman watches beside her.",
+      "caption": "The mother holds her child close, her tired face softened with joy. Jesus uses the change from anguish to joy to speak to His disciples about seeing Him again.",
+      "refs": [
+        [
+          "nt/john/16",
+          "John 16:21",
+          "21"
+        ]
+      ],
+      "findings": "Same mother brow/nose/hair and older attendant face/headwrap/room as01; believable softened joyful expression and eyes directed to infant. Baby head rests in supported forearm crook and swaddling; natural proportions and coherent hands.",
+      "conditions": [
+        "Unnamed illustrative mother, not Mary or Nativity.",
+        "John16:21 comparison does not promise safe outcome for every birth or rapid resolution of every grief.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

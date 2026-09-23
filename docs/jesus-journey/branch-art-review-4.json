@@ -1,0 +1,58 @@
+{
+  "entries": [
+    {
+      "key": "mc-daughter-go-in-peace",
+      "sha256": "ccb4a66d9c8cf44dc8e36a999a3309971a81cbedaa78ac3980163d4b30818d63",
+      "status": "pass_with_caption_conditions",
+      "alt": "Jesus lowers Himself beside the seated woman and meets her eyes with tender attention while people stand nearby.",
+      "caption": "After the woman comes forward and tells what has happened, Jesus addresses her as daughter, recognizes her faith and sends her in peace. The healing leads to a personal exchange in which she is heard and reassured. Scripture describes her falling before Him; this companion picture imagines Him lowering Himself beside her so that their tender exchange can be seen at eye level. His kneeling posture and their exact expressions are artistic choices, while His words of reassurance belong to the account.",
+      "refs": [
+        [
+          "nt/luke/8",
+          "Luke 8:47–48",
+          "47-48"
+        ],
+        [
+          "nt/mark/5",
+          "Mark 5:33–34",
+          "33-34"
+        ]
+      ],
+      "findings": [
+        "Direct mutual gaze, lowered Christ posture and quiet closed-mouth expression create the requested tender exchange without a generic portrait smile.",
+        "Canonical Christ nose, brow, hair/beard and facial identity remain recognizable. Woman retains the burgundy covering and recognizable face from the earlier garment-touch picture; this reads as the same woman at the next recorded exchange.",
+        "Christ’s two resting hands, wrists, crouched legs and partially visible foot trace coherently; the woman’s folded hands and seated posture are natural. No detached limbs, merged hands or definite extra fingers found.",
+        "Photographic skin, individual hair, cloth texture and natural depth remain convincing. Background figures are separate unnamed onlookers, not identified disciples. Mortal scene correctly has no healed Crucifixion marks.",
+        "Caption must explicitly keep Christ’s kneeling posture as an artistic choice; do not report a recorded kneeling act, additional dialogue or physical embrace.",
+        "This is an explicitly requested extra companion image and does not replace the earlier garment-touch original. Its authorization removes the generic same-event/pose duplication objection for this addition; it does not establish owner approval of these pixels."
+      ],
+      "owner_approved": false,
+      "reviewed_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9c182e90-5441-40d2-b573-b5a81e8b8d51.png"
+    },
+    {
+      "key": "mm-temple-compassion",
+      "sha256": "2a8489621f9c029c7f23f6d2f403c7b6f71f16e5f7e3051b00d0a028984df77d",
+      "status": "pass_with_caption_conditions",
+      "alt": "Jesus looks steadily toward a man in the temple court, with scattered coins, a tipped table and animals behind them.",
+      "caption": "John describes Jesus clearing the temple court and insisting that His Father’s house not be made a place of trade. This companion picture offers an imagined, compassionate view of that encounter: His steady attention invites reflection on the people involved as well as the purpose of the sacred place. The face-to-face pause is an artistic reflection, not an additional recorded conversation or a claim that this man repented or reconciled with Him. Read it beside the account of His decisive action, which it accompanies rather than replaces.",
+      "refs": [
+        [
+          "nt/john/2",
+          "John 2:13–17",
+          "13-17"
+        ]
+      ],
+      "findings": [
+        "Christ’s attentive, sober face and the other man’s reciprocal orientation meet the request for a compassionate companion interpretation. No broad smile or invented embrace undermines the episode’s seriousness.",
+        "Canonical Christ facial geometry remains recognizable; the foreground man has a distinct profile, head wrap and beard. Background people remain unnamed.",
+        "Both visible Christ hands and wrists are anatomically coherent, with natural arm attachment and no inappropriate post-Resurrection marks. The foreground man’s concealed hands are not forced into view.",
+        "Skin, garments, stone surfaces and daylight remain photographically detailed. Tipped furniture, coins, sheep and doves connect the composition to the temple account; exact market arrangement and architecture remain interpretation.",
+        "Do not present the paused conversation as a second Gospel event, quote invented words, declare the other man a named merchant, or claim repentance/reconciliation. The caption explicitly separates that imagined encounter from John’s recorded actions.",
+        "Owner requested an extra companion view of this same event. Preserve the original temple-action picture as well; no new pixel approval is inferred."
+      ],
+      "owner_approved": false,
+      "reviewed_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b49cfd81-09b7-47e3-8270-3d07672e341b.png"
+    }
+  ],
+  "review_scope": "Independent direct pixel review of two expressly requested extra companion pictures; source-grounded caption conditions apply. Existing originals retained. No owner approval or browser/phone review inferred."
+}

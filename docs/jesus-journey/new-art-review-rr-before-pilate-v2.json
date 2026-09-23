@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rr-before-pilate-v2",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rr-before-pilate",
+      "generationKey": "rr-before-pilate-v2",
+      "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rr-before-pilate-v2-20260923.png",
+      "sha256": "2ba087ab27e10aa539815dd4c7d32c726c3ed92ca73bd2bab603de01df04c475",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "My kingdom is not of this world",
+      "alt": "Jesus inclines His head toward Pilate, who questions Him from his seat.",
+      "caption": "Pilate leans forward with a question, and Jesus meets him with quiet resolve. Their exchange turns to His kingdom and the truth He came to bear witness of.",
+      "refs": [
+        [
+          "nt/john/18",
+          "John 18:33–38",
+          "33-38"
+        ]
+      ],
+      "findings": "V2 compared directly with rejected original and canonical Christ. Head now inclines downward toward seated Pilate, eyes directed to his upturned face rather than over him. Christ's identity and serious restraint remain. SPQR/eagle banner removed to plain stone. Pilate, hands, clothing, guard and composition visually preserved. No crown, scourging or Resurrection marks.",
+      "conditions": [
+        "Accept v2 hash only; preserve rejected original. Pilate appearance, exact hall and garment details are interpretation. Do not claim Pilate stands; he remains seated leaning forward.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "generated-records/rr-before-pilate.json"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng"
+      ]
+    }
+  ]
+}

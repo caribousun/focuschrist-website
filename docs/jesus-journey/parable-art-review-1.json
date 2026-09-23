@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent parable source and image reviewer",
+  "scope": "Eight supplied full-frame 1536x1024 generated images reviewed directly against the referenced passages and intended scene slots. This is source/visual review, not owner identity approval or browser publication acceptance.",
+  "method": "Viewed every supplied full image. Reviewed visible people, grips, limbs, props, narrative stage and material source fit. Hashes identify the exact reviewed pixels. Earlier official Gospel text research supplies the passage context.",
+  "summary": {
+    "passWithCaptionConditions": 5,
+    "revise": 3
+  },
+  "globalConditions": [
+    "Parable characters are unnamed fictional narrative people, not literal depictions of Jesus or named historical people.",
+    "No exact archaeological reconstruction claim is warranted for garments, architecture, tools, room, or scenery.",
+    "Whole-site artwork lineage/exclusivity was not independently scanned in this bounded review; only within-batch scene duplication was assessed.",
+    "Mobile crop, study/detail/full-size interactions, and visible caption/source alignment remain release checks.",
+    "A pass does not imply owner approval; rejected hashes should not be reused or counted through cropping or new filenames."
+  ],
+  "entries": [
+    {
+      "key": "wise-foolish-builders-01",
+      "sha256": "a64a5010043e0f1e5867c7f4f4dd491002af361828190ede4be6c5166305d7ab",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "A worker digs among exposed rock beside foundation trenches; this fits the preparatory digging in Luke 6:48. The image shows work in progress rather than a completed deep foundation.",
+      "visibleReview": "Foreground adult grips a long wooden-handled digging tool with both hands. Tool contact, arms, fingers, bent posture and visible sandal are coherent. A second worker and partial building are ordinary illustrative additions. Natural effort and focused expression; no obvious facial or limb defect at full-frame inspection.",
+      "conditions": [
+        "Do not describe the trench depth as fully shown or identify the workers by name.",
+        "Do not assert the lake, town, building style, helpers, or tools as exact historical facts.",
+        "Use the ordinary worker framing; this is not an image of Jesus."
+      ],
+      "recommendedTitle": "Digging toward a firm foundation",
+      "alt": "A worker digs through rocky soil with a long-handled tool while another works beside a foundation trench.",
+      "caption": "A worker bends over the rocky ground, giving the foundation his attention before the house is finished. Luke describes a builder who digs deeply and lays his foundation on rock. Jesus connects that care with hearing His words and doing them.",
+      "refs": [
+        [
+          "nt/luke/6",
+          "Luke 6:47–49",
+          "47-49"
+        ]
+      ]
+    },
+    {
+      "key": "wise-foolish-builders-02",
+      "sha256": "78c5aadaf0bb5ffdac58a64c234831babc1eabb3d33d945863491d93caa1c1d1",
+      "status": "revise",
+      "sourceFit": "The picture shows a collapsing house during flood and rain, not the planned pre-storm construction on sand from Matthew 7:26. It repeats the storm/result moment allocated to builders-03.",
+      "visibleReview": "A distressed man appears to brace a cracking wall as muddy waves wash through a ruined corner. The central action and mood are unmistakably the destructive storm. Sand beneath the foundation is not clearly exposed.",
+      "materialReasons": [
+        "Wrong stage of the narrative for this owning artwork slot.",
+        "Counting it beside builders-03 as a separate stage would fail the event/action uniqueness requirement."
+      ],
+      "revisionDirection": "Regenerate the quiet pre-storm moment. Show an intact or nearly completed house directly on visibly loose sandy ground, with no rain, flood, structural collapse, distress, or damaged wall. Retain ordinary plausible construction, not an obviously foolish caricature. Make the missing firm foundation visually legible.",
+      "alt": "A man braces a cracking house wall while floodwater rushes through a collapsed corner.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:26",
+          "26"
+        ]
+      ]
+    },
+    {
+      "key": "wise-foolish-builders-03",
+      "sha256": "65e8bb86f97e2de8e3d01d2007925f0e7a523297f502c7d667e672b514b3cfa9",
+      "status": "revise",
+      "sourceFit": "The intended contrasting outcome is visible, but the failed house also appears to sit on exposed rock. The strong differences in elevation and wall materials become the apparent explanation, obscuring the passage's critical sand-versus-rock foundation distinction.",
+      "visibleReview": "Left: ruined earthen house on a rock-strewn rise, with a distressed man among debris. Right: standing stone house high on an exposed rocky ledge. Both are in rain, but the right house is substantially above the main flood channel. Foreground hand and posture appear coherent; distant man is small and not suitable for identity certification.",
+      "materialReasons": [
+        "The foundation distinction central to Matthew 7:24–27 is not adequately represented.",
+        "The composition risks teaching that height or masonry type, rather than foundation, determines the outcome."
+      ],
+      "revisionDirection": "Regenerate or substantially rebuild the full foundation scene. Show two comparably exposed houses of comparable construction under the same rain/flood conditions; one firmly anchored to bedrock, the other losing visibly sandy supporting ground. Keep the failed side recognizably sand, not a second rock ledge. A single continuous scene is appropriate; no infographic split panel.",
+      "alt": "A ruined house stands beside a distressed man on the left, while a stone house remains above the flood on a high rocky ledge.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:24–27",
+          "24-27"
+        ]
+      ]
+    },
+    {
+      "key": "new-patch-01",
+      "sha256": "e8184d2b5e80a3596d54868bed345d34104d3b9866146910af45275d4f553cee",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fresh woven cloth held beside a worn garment with a hole makes the proposed repair legible. It is distinct from the damaged-repair outcome in patch-02.",
+      "visibleReview": "Adult holds both edges of a pale cloth above a torn brown-gray garment. Fingers, grips, forearms, cloth texture and thoughtful downward gaze are plausible. Domestic props and exact costume are permissible invented surroundings.",
+      "conditions": [
+        "The fabric's unshrunk condition cannot be established from pixels alone; attribute that detail to Jesus' comparison, not visual inspection.",
+        "Do not name the man, claim a recorded tailoring event, or identify this as Jesus.",
+        "Do not assert that the garments in patch-01 and patch-02 are an exact continuous physical object; tones and drape differ."
+      ],
+      "recommendedTitle": "A new patch beside a worn garment",
+      "alt": "A man holds a pale piece of woven cloth above a hole in a worn garment on a table.",
+      "caption": "A fresh piece of cloth is held above a worn garment. Jesus uses the familiar problem of an unsuitable repair while answering a question about fasting: the new patch can pull at the old cloth and make the tear worse. The comparison invites His hearers to consider what His ministry means before forcing it into their expectations.",
+      "refs": [
+        [
+          "nt/matt/9",
+          "Matthew 9:14–17",
+          "14-17"
+        ]
+      ]
+    },
+    {
+      "key": "new-patch-02",
+      "sha256": "358f9f920058d769408aba3dcd6cb7b5f8db67ad217622498d65cf1b1cfca80e",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The light patch remains attached along portions of the seam while the darker garment has torn away around it. This visibly illustrates a repair that worsens the damage.",
+      "visibleReview": "Man lifts the cloth with two coherent grips. Fingers, wrists and sleeves are plausible; his focused concerned expression matches inspection of damaged work. Textile tears and stretched threads make the narrative action clear.",
+      "conditions": [
+        "Do not state that the image documents a particular wash or measured shrinkage; those causes are not observed in the frame.",
+        "Describe the visible damage and connect it to Jesus' stated comparison.",
+        "Treat the patch pair as companion illustrations unless exact actor/garment continuity is separately established."
+      ],
+      "recommendedTitle": "When the repair deepens the tear",
+      "alt": "A man lifts a dark garment whose cloth has torn away around a small pale stitched patch.",
+      "caption": "Stitches still hold part of the pale patch, but the older cloth has opened around it. Jesus' comparison turns on that worsening tear: placing new cloth on an old garment does not make a sound repair simply because it covers the first hole. Read the image within His answer about fasting and the significance of His presence.",
+      "refs": [
+        [
+          "nt/matt/9",
+          "Matthew 9:14–17",
+          "14-17"
+        ]
+      ]
+    },
+    {
+      "key": "new-wineskins-02",
+      "sha256": "6fddb620c69f5bbdb6b0905947561f85a1eb629853679e2187636462daa4ccdd",
+      "status": "revise",
+      "sourceFit": "Pouring wine into a skin is the right broad action, but the receiving skin has a second apparently open neck near table level. An intact container preserving wine should not have an uncapped lower outlet while being filled.",
+      "visibleReview": "Man pours red liquid from a ceramic jug into the upright opening of a bulbous leather container. A second rounded open mouth is clearly presented at the lower right of that same container; no stopper or tight closure is visible. Hands supporting jug and handle are otherwise plausible; expression and materials read photographically.",
+      "materialReasons": [
+        "Physical container behavior is inconsistent with the scene's purpose of preserving the wine.",
+        "The lower opening is prominent enough that a caption cannot repair the visual problem."
+      ],
+      "revisionDirection": "Use one clearly open upper filling neck with every other hide opening tightly sewn or visibly closed, or visibly secure a fitted stopper in the lower opening. Keep natural leather construction and the coherent pouring action. Review resulting geometry and liquid containment at full size; do not fix by cropping the flaw out.",
+      "alt": "A man pours red wine into a leather container with an upright filling neck and an apparently open second mouth near its base.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/matt/9",
+          "Matthew 9:17",
+          "17"
+        ]
+      ]
+    },
+    {
+      "key": "lamp-01",
+      "sha256": "a9fd7399f8249e63eae737eab08f427b315cac3236a6ef137004b6c85a288544",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The woman holds an overturned basket around or just above a lit oil lamp. It can illustrate the hypothetical hiding action in Mark 4:21, but the lamp is not fully concealed in this visible moment.",
+      "visibleReview": "Both hands grasp basket edges with plausible fingers and wrists; flame, woven material, facial attention and household lighting are coherent. The woman has an ordinary fictional identity. No apparent anatomy defects at full-frame inspection.",
+      "conditions": [
+        "Retitle and caption as a basket poised around/over a lamp; do not claim the picture already shows the light fully hidden.",
+        "Explain that Jesus asks a rhetorical question, not that He instructs someone to cover a flame.",
+        "Do not invent a named woman, family relationship, or recorded household incident."
+      ],
+      "recommendedTitle": "Would a lamp be hidden?",
+      "alt": "A woman holds an overturned woven basket around a small burning oil lamp on a wooden table.",
+      "caption": "An overturned basket is held around a lamp whose flame is still visible. Jesus asks whether a lamp is brought in to be hidden beneath a basket or bed. The familiar household question draws attention to light received so that it can be seen, and to the care with which we hear His teaching.",
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:21–25",
+          "21-25"
+        ]
+      ]
+    },
+    {
+      "key": "lamp-02",
+      "sha256": "c7a3bdaf6df4f435804f854d792e7d6abc67b745759f773e6fa66bfa4a1d6fa4",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "A lamp elevated on a stand illuminates nearby people and the room, fitting Luke 8:16. This is a distinct state from the basket picture.",
+      "visibleReview": "An oil lamp rests stably on a narrow three-legged stand. Several adults sit nearby; two faces are clear, with foreground figures appropriately occluded. The visible woman's hands and body posture are plausible. Faces looking toward the light are interpretively acceptable, but should not be called worship.",
+      "conditions": [
+        "Do not label the group a family, disciples, or worshippers; relationships and identities are unstated.",
+        "Do not identify the specific stand or room as an archaeologically verified reconstruction.",
+        "Keep crop wide enough to retain the stand and lamp, not only the faces."
+      ],
+      "recommendedTitle": "Light where it can be seen",
+      "alt": "An oil lamp burns on a tall stand, lighting the faces of people seated in a dim room.",
+      "caption": "The lamp stands above the floor, casting light across the people nearby. Luke records Jesus' saying that a lit lamp belongs where those entering can see its light. The passage goes on to ask how we hear, joining the image of visible light with an attentive response to His word.",
+      "refs": [
+        [
+          "nt/luke/8",
+          "Luke 8:16–18",
+          "16-18"
+        ]
+      ]
+    }
+  ]
+}

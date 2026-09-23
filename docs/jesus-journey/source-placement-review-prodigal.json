@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "scope": "Read-only source and canonical placement review of all eight Prodigal Son scenes; reviews56,57,58 now exist and pass with caption conditions. This review does not repeat pixel inspection for01-03 or07-08.",
+  "sourceConclusion": "All eight moments are source-supported and the prose completes the movement from inheritance and departure through loss, decision, return, celebration and the elder brother. No added scene or invented reconciliation is needed.",
+  "placementFinding": "Current default interleaving places resources spent and swine-feeding after the decision paragraph, return/celebration before their explanatory paragraph, and elder-brother scene beside the younger-son welcome. This separates pictures from their immediate source narration.",
+  "exactOverrides": [
+    {
+      "key": "prodigal-son-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-04",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-05",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2
+    },
+    {
+      "key": "prodigal-son-06",
+      "sectionId": "receiving-the-word",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-07",
+      "sectionId": "receiving-the-word",
+      "afterParagraph": 1
+    },
+    {
+      "key": "prodigal-son-08",
+      "sectionId": "receiving-the-word",
+      "afterParagraph": 2
+    }
+  ],
+  "registrySectionChangesRequired": [
+    {
+      "key": "prodigal-son-06",
+      "fromSection": "story-and-teaching",
+      "sectionId": "receiving-the-word"
+    },
+    {
+      "key": "prodigal-son-07",
+      "fromSection": "story-and-teaching",
+      "sectionId": "receiving-the-word"
+    }
+  ],
+  "recommendedBlockOrder": {
+    "setting": [
+      "paragraph1",
+      "01"
+    ],
+    "story-and-teaching": [
+      "paragraph1",
+      "02",
+      "03",
+      "04",
+      "paragraph2",
+      "05"
+    ],
+    "receiving-the-word": [
+      "paragraph1",
+      "06",
+      "07",
+      "paragraph2",
+      "08"
+    ],
+    "living-the-invitation": "unchanged: father affirms elder son, ending remains open, reflection and questions"
+  },
+  "sourceChecks": [
+    {
+      "scenes": "01-03",
+      "refs": "Luke15:12;13;13-14",
+      "finding": "Division, departure and loss/famine correspond to review56; father at departure is correctly identified as artistic setting."
+    },
+    {
+      "scenes": "04-05",
+      "refs": "Luke15:15-16;17-19",
+      "finding": "Feeding swine is not eating their feed. Seated decision is distinct from actual departure home. Review57 preserves both distinctions."
+    },
+    {
+      "scenes": "06-07",
+      "refs": "Luke15:20;22-24",
+      "finding": "Welcome and celebration are distinct moments. Review57 accurately names the visible embrace, and review58 uses the father's commands as source rather than asserting every commanded object is visible."
+    },
+    {
+      "scenes": "08",
+      "refs": "Luke15:28-32",
+      "finding": "Father's appeal outside fits the elder-brother paragraph and bridges to the next section's open-ending reflection. No final agreement/reconciliation is claimed."
+    }
+  ],
+  "sourceMetadataCorrection": {
+    "key": "prodigal-son-06",
+    "finding": "Plan still titles the moment Father running to embrace him, while actual image depicts stationary embrace. Review57 already recommends The father welcomes his son.",
+    "recommendation": "Align canonical plan title and sourceSceneDescription to the reviewed embrace; preserve Luke15:20 and exact image/review hashes. This is depiction specificity, not a scripture error."
+  },
+  "connections": "Lost Sheep correctly supplies same Luke15 welcome context; Laborers in Vineyard compares resentment without blending plot or identifying characters; Mercy collection remains the parent branch.",
+  "proseDecision": "No prose, source range or related-link rewrite needed. Broad Luke15:1-32 section references preserve the chapter context while each artwork supplies its narrow range.",
+  "inputSha256": {
+    "pages.json": "2c8b11330b7202416bce853b0bc959aaf81f3c2afe51ed240a8b7cad53dd938f",
+    "parable-art-plan.json": "3bcd3132c59c2cf32d9906b5b0f13bdee46bfa8dcf0e7bcf0c863df36a66e4dd",
+    "artworks.json": "03c86d66756decdb8d87f7d2bbaf48a81c4a2e3249a773d4990413bb3a249ce8"
+  },
+  "changesMade": "None; no imports, rebuilds or canonical edits."
+}

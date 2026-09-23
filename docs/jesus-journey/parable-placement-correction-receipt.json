@@ -1,0 +1,61 @@
+{
+  "scope": "Narrow durable paragraph placement correction; no build/import/registry writes.",
+  "files": [
+    "docs/jesus-journey/parable-art-plan.json",
+    "docs/jesus-journey/pages.json",
+    "tools/assemble_jesus_journey.py",
+    "tools/jesus_art_placement.py"
+  ],
+  "required_registry_section_reconcile": {
+    "talents-04": "story-and-teaching",
+    "two-debtors-02": "story-and-teaching"
+  },
+  "explicit_paragraph_positions": {
+    "talents-02": 1,
+    "talents-03": 1,
+    "talents-04": 2,
+    "two-debtors-02": 1,
+    "good-samaritan-02": 1,
+    "good-samaritan-03": 1,
+    "good-samaritan-04": 2,
+    "good-samaritan-05": 2,
+    "good-samaritan-06": 2,
+    "good-samaritan-07": 2
+  },
+  "structural_checks": {
+    "all_page_prose_unchanged": true,
+    "all_page_section_sources_unchanged": true,
+    "all_artwork_keys_and_counts_unchanged": true,
+    "corrected_story_sequences": {
+      "talents": [
+        "paragraph",
+        "talents-02",
+        "talents-03",
+        "paragraph",
+        "talents-04"
+      ],
+      "two-debtors": [
+        "paragraph",
+        "two-debtors-02",
+        "paragraph"
+      ],
+      "good-samaritan": [
+        "paragraph",
+        "good-samaritan-02",
+        "good-samaritan-03",
+        "paragraph",
+        "good-samaritan-04",
+        "good-samaritan-05",
+        "good-samaritan-06",
+        "good-samaritan-07"
+      ]
+    }
+  },
+  "plan_counts": {
+    "branch-art-plan.json": 58,
+    "parable-art-plan.json": 181,
+    "collection-art-plan.json": 48
+  },
+  "assembler_assessment": "No full assembler executed. Existing code writes pages, entire registry and main-content, and normalizes reference selections in addition to copying plan sections. It preserves existing record fields except section/ref normalization in code, but avoid claiming byte preservation. Parent should use only targeted two-key registry section reconciliation during current import activity. New helper supports future full assembly when deliberately invoked.",
+  "old_update_preview": "Not used."
+}

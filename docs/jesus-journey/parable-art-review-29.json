@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent full-resolution pixel/source review with01/02 continuity references. No import or page changes.",
+  "sourceVerification": [
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/20?lang=eng",
+    "https://www.churchofjesuschrist.org/study/manual/jesus-the-christ/chapter-27?lang=eng"
+  ],
+  "entries": [
+    {
+      "key": "laborers-vineyard-03",
+      "sha256": "554f3e401fbda2e61ba450c47ee8589d92310974f2137d0dfa87792d2f19747b",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9267d3de-679a-4218-b4b8-9f6d26a7ae63.png",
+      "refs": [
+        [
+          "nt/matt/20",
+          "Matthew 20:8-10",
+          "8-10"
+        ]
+      ],
+      "status": "revise",
+      "alt": "A gray-bearded steward lowers a small coin toward the open palm of a worker in russet while a bald worker in blue holds a coin nearby.",
+      "caption": "The steward pays the workers at evening, beginning with those hired last. When the early workers receive the same wage, their expectation of more brings the owner's generosity into question.",
+      "findings": [
+        "Inspected original-resolution pixels with01/02. Workers retain distinctive identity and costume continuity; green-clad gray-bearded steward differs from clean-shaven ochre-clad owner.",
+        "Photographic skin, cloth and light; coherent hands and purposeful payment gaze, with restrained disappointed attention rather than camera-facing smiles.",
+        "Coin-count ambiguity: a thin pale oval appears at receiving palm/finger base beneath the coin pinched by the steward, suggesting a second coin already received. The receiving palm should visibly remain empty until the sole incoming coin lands.",
+        "Late bald worker clearly holds one small coin. Unallocated coins in payment box are appropriate; exact denomination/inscription is not visually verified."
+      ],
+      "revision": "Remove coin-like pale oval at receiving palm/finger base; retain exactly one incoming coin and the late worker single coin. Preserve identities and hands."
+    },
+    {
+      "key": "laborers-vineyard-04",
+      "sha256": "52f567346a37f36afa3e8da16e67eadb94f298240f61c067d736ec019660b95f",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a78f9dc7-97b5-4d77-afb0-1cb1cc03ab71.png",
+      "refs": [
+        [
+          "nt/matt/20",
+          "Matthew 20:11-15",
+          "11-15"
+        ]
+      ],
+      "status": "pass_with_caption_conditions",
+      "alt": "The clean-shaven owner in an ochre mantle faces the bearded worker in russet, who holds one small coin and raises his other hand in complaint.",
+      "caption": "Holding his wage, an early worker brings his complaint to the owner. The owner answers that he has kept their agreement and asks why his generosity to another should provoke resentment.",
+      "findings": [
+        "Inspected original-resolution pixels with01/03. Owner preserves salt-and-pepper hair, clean-shaven face and ochre mantle; early worker preserves dark curly hair, beard and russet tunic.",
+        "Owner and worker visibly meet eyes with firm calm attention and tired questioning. Neither threatens the other or smiles toward the camera.",
+        "One small coin in lower worker palm; other open hand and owner hand have coherent fingers, wrists and attachments. No duplicated hands or coin multiplication identified.",
+        "Distinct green-clad steward only in soft-focus background. Photographic skin, cloth and masonry under plausible evening light.",
+        "Complaint and answer follow Matthew20:11-15. Faces, costumes and setting remain artistic interpretation; no exact coin inscription, biography, Christ likeness or invented dialogue claimed."
+      ]
+    }
+  ]
+}

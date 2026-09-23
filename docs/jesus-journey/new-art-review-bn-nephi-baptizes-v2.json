@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of bn-nephi-baptizes-v2",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "bn-nephi-baptizes",
+      "generationKey": "bn-nephi-baptizes-v2",
+      "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-0fa43fd2-4a11-4834-8503-be48765cbda5.png",
+      "sha256": "8194c19b2ab56bf78bf2235efcc9171a70b67b77dfd813ad30d872eb3a394f0b",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Into the water",
+      "alt": "Nephi meets a younger disciple's eyes while supporting him in the water after baptism.",
+      "caption": "Water runs from the young disciple's robe as Nephi steadies him. After receiving baptism himself, Nephi baptizes those Jesus has chosen.",
+      "refs": [
+        [
+          "bofm/3-ne/19",
+          "3 Nephi 19:10–12",
+          "10-12"
+        ]
+      ],
+      "findings": "Compared v2 against original and mapped Nephi reference already directly inspected. Nephi now lowers head and eyes toward the recipient's upturned face, giving meaningful reciprocal attention. Clean-shaven face, nose, lined skin, gray temples and tied hair preserve exact mapped identity. Recipient and support grip, back contact, water and modest clothing remain visually preserved. Natural photographic faces and anatomy; no Christ added.",
+      "conditions": [
+        "Use v2 only; retain rejected original and review86. The disciple's exact identity, ancient age, clothing and location remain interpretation; no specific name assigned.",
+        "Technical pixel/source review does not establish owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/page-art/book-of-mormon-stories/11-nephi-called-full.webp",
+        "generated-records/bn-nephi-baptizes.json"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng"
+      ]
+    }
+  ]
+}

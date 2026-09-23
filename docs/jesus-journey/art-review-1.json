@@ -1,0 +1,58 @@
+{
+  "review_type": "independent_visual_candidate_review",
+  "scope": "Four generated candidates inspected at displayed native image resolution; approved Christ reference inspected alongside candidate. No image editing or generation performed.",
+  "owner_approval": false,
+  "owner_approval_note": "Technical visual review is not owner approval of a new derivative or likeness.",
+  "reference": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png",
+  "candidates": [
+    {
+      "file": "exec-3c2e6d7a-b37c-40ae-8885-a9d31e0680c8.png",
+      "subject": "John 1:38-39 invitation to Andrew and the unnamed disciple",
+      "technical_verdict": "pass_with_caption_conditions",
+      "likeness": "Strong recognizable consistency with approved reference: dark wavy shoulder-length hair, brow and nose structure, warm brown eyes, full dark beard and similar facial proportions. More restrained expression and three-quarter angle fit an invitation. Not a pixel-identical or owner-approved derivative.",
+      "pupils_gaze": "Visible pupils look coherent and naturally directed toward the listeners; no evident crossed or malformed eyes.",
+      "age_expression": "Adult Christ and adult male listeners are plausible. Warm, attentive expression fits the invitation; no incongruous broad grin.",
+      "anatomy": "Open inviting hand has plausible thumb and finger arrangement; listener's visible hand and all visible limbs show no evident extra digits or broken anatomy. Some finger overlap is normal perspective.",
+      "event_specificity": "Three men and an inviting gesture fit the passage, but do not uniquely establish this event without caption. Keep second disciple unnamed; do not relabel this as calling Peter and Andrew from fishing.",
+      "setting": "Stone buildings, earth path, olive foliage and woven clothing form a plausible artistic ancient setting. Particular village, dwelling, clothing colors and exact position are artistic choices, not documented details of John 1:38-39.",
+      "required_caption_boundary": "Identify as an artistic depiction of Jesus inviting Andrew and another disciple to come and see; distinguish imagined setting from the recorded invitation."
+    },
+    {
+      "file": "exec-1d03119a-ff2f-420c-90e9-53a9cc42da8d.png",
+      "subject": "Modern grief and compassionate listening",
+      "technical_verdict": "pass",
+      "likeness": "No visible Christ figure; no protected likeness implicated.",
+      "pupils_gaze": "Grieving woman's eyes are appropriately lowered or closed; companion's gaze is directed compassionately toward her.",
+      "age_expression": "Both women read as older adults. Sadness and quiet empathy are scene-appropriate and restrained.",
+      "anatomy": "Tissue-holding hand, resting hand and companion's clasped hands are plausible; no evident duplicate fingers or detached limbs.",
+      "event_specificity": "Clearly conveys presence with someone grieving. Do not invent a death, family relationship or biographical testimony from the photograph in the background.",
+      "setting": "Believable contemporary home with ordinary clothing and furnishings.",
+      "required_caption_boundary": "Label as an illustrative present-day scene, not a photograph of a documented event or testimony."
+    },
+    {
+      "file": "exec-f2b140a0-a55c-4906-9f18-6228e5bf47c2.png",
+      "subject": "Modern adult and teenage girl studying scripture",
+      "technical_verdict": "pass",
+      "likeness": "No visible Christ figure; no protected likeness implicated.",
+      "pupils_gaze": "Mutual conversational eye contact is coherent; visible pupils and eyelids appear natural.",
+      "age_expression": "Adult man and teenage girl read appropriately; attentive listening and thoughtful discussion suit the scene.",
+      "anatomy": "The girl's two gesturing hands and adult's visible arm and supporting hand are plausible. No evident extra digits or malformed joints.",
+      "event_specificity": "Open double-column book suggests Bible study; page text is not reliably legible and should not be cited as a particular verse. Parent-child relationship is a proposed illustrative premise rather than visually established fact.",
+      "setting": "Believable contemporary kitchen; no distracting religious or commercial branding.",
+      "required_caption_boundary": "Describe as a present-day illustration of family scripture discussion without claiming a real family or readable passage."
+    },
+    {
+      "file": "exec-d486a59c-c777-4eda-9862-33de2c855a41.png",
+      "subject": "Modern neighbor bringing groceries",
+      "technical_verdict": "pass",
+      "likeness": "No visible Christ figure; no protected likeness implicated.",
+      "pupils_gaze": "Side-facing eyes have natural reciprocal gaze; no evident pupil defects.",
+      "age_expression": "Young adult woman and older man are plausible; warm expressions fit welcome and practical service.",
+      "anatomy": "Bag-holding hand and supporting hand look plausible; partly occluded hands do not introduce obvious extra limbs or digits. Grocery bag and transfer posture are physically coherent.",
+      "event_specificity": "Clearly depicts bringing food to someone at a doorway. Do not infer poverty, disability, loneliness or a specific relationship as documented fact.",
+      "setting": "Credible contemporary residential doorstep with ordinary food and clothing.",
+      "required_caption_boundary": "Identify as a present-day illustration of neighborly care, not a real service-event photograph."
+    }
+  ],
+  "overall": "All four are technically usable candidates. No blocking visual defect observed. Christ candidate has strong reference consistency, subject to owner approval rules and truthful artistic-depiction captions."
+}

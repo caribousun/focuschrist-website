@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rr-judas-morsel",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rr-judas-morsel",
+      "generationKey": "rr-judas-morsel",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-2c8de0cd-8b54-48e3-a004-100236ed4b06.png",
+      "sha256": "bdcf7316812ba5af189d990446c439a1447b09ccefdb8674272f6d5cef970cbe",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The morsel at the table",
+      "alt": "Jesus extends a dipped morsel toward Judas while two disciples watch from behind.",
+      "caption": "Jesus holds out the morsel, His troubled gaze meeting Judas across the table. The disciples nearby do not yet understand the departure that will follow.",
+      "refs": [
+        [
+          "nt/john/13",
+          "John 13:21–30",
+          "21-30"
+        ]
+      ],
+      "findings": "Canonical Christ face directly compared: recognizable features, solemn troubled eyes and restrained expression preserved. Christ and Judas have reciprocal focused gaze; Judas distinct short-haired man, tense without caricature. Coherent separate hands and small dipped morsel, short table distance, distinct blurred observers, photographic lamplight and natural materials. No coins, devil figure or symmetrical Last Supper tableau.",
+      "conditions": [
+        "This frame shows offered morsel, not a completed departure; nearby observers remain unnamed. Judas appearance, ages, food and room are interpretation. His demonic caricature must remain absent.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Prodigal Son01–03 original-detail review for family distinctions, younger-son continuity, anatomy and Luke15:12–14 narrative boundaries.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Unnamed parable figures and illustrative settings are not identified historical portraits."
+  ],
+  "entries": [
+    {
+      "key": "prodigal-son-01",
+      "generationKey": "prodigal-son-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "d6a3d3a8d976b5a5e3cf11f32e9deead1588841127a10927ddfd15e9b55f3580",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-79371005-5c0e-4b5b-a7b0-930a6e4a82ff.png",
+      "recommendedTitle": "The inheritance divided",
+      "alt": "A gray-haired father sits between his two sons at a wooden table, resting a hand on one of two tied bags as the younger son extends his hand toward it.",
+      "caption": "The younger son asks his father for the portion of goods that belongs to him. The father divides his living between his sons, pictured here through the bags placed before them.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:12",
+          "12"
+        ]
+      ],
+      "findings": "Three distinct faces: elderly white-haired full-bearded father in cream/navy; younger clean-shaven long dark curls tan/rust; older short dark hair and beard brown/olive. Father's attention is toward younger son, whose downward gaze toward transaction is appropriate. Extended palm, father's bag-contact and table hand, elder's resting hand are coherent. Natural skin and cloth, plausible table contact.",
+      "conditions": [
+        "The bags symbolize division; their size or number does not establish exact shares, currency amounts or the entirety of the estate.",
+        "Father and sons are unnamed parable characters, not portraits of divine persons or known historical individuals."
+      ]
+    },
+    {
+      "key": "prodigal-son-02",
+      "generationKey": "prodigal-son-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "d4d77eb354341d1f346f7e0c1416aeafe87a56bc2da70c64ab2c97929a41ac80",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f3e4e15f-d357-48b6-8c25-c4f4b3af6be6.png",
+      "recommendedTitle": "Leaving for the far country",
+      "alt": "The younger son walks along a dirt road carrying a shoulder bag and rolled blanket while his father stands at the open gate behind him.",
+      "caption": "Not many days later, the younger son gathers his belongings and journeys to a far country. The father watching at the gate is an artistic detail that gives the departure a personal setting.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:13",
+          "13"
+        ]
+      ],
+      "findings": "Younger son's facial profile, long curls, clean-shaven face, tan tunic and rust wrap match01; father retains white hair/beard and navy outer layer in background. Bag strap grip, blanket-holding hand, walking legs and sandaled feet are plausible. Forward gaze fits departure rather than an interpersonal exchange. Photographic landscape and materials.",
+      "conditions": [
+        "Luke records departure but not the father watching at the gate; retain that artistic boundary.",
+        "Do not infer a specific destination, mileage, travel duration or recorded farewell conversation."
+      ]
+    },
+    {
+      "key": "prodigal-son-03",
+      "generationKey": "prodigal-son-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "a9ffd8479474fa2ab00eb007ec70636e874aaa0a829ff85c0cce7de882e7e405",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d956a4c3-5ec2-4ea4-a16e-7d56f2b882a8.png",
+      "recommendedTitle": "Resources gone, need begins",
+      "alt": "The younger son sits on stone steps in worn clothing, looking into an open empty pouch beside sparse market stalls.",
+      "caption": "In the far country, the younger son wastes his substance in reckless living. After he has spent everything, a severe famine arises and he begins to be in want.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:13-14",
+          "13-14"
+        ]
+      ],
+      "findings": "Same younger son's distinctive curls, face and tan/rust clothing, now dusty and frayed. Both hands hold pouch rims naturally; elbows, seated legs and feet coherent. Empty pouch and sparse stalls communicate privation without depicting invented misconduct. Serious downcast gaze and restrained distress fit account; photographic skin, worn fabric and stone.",
+      "conditions": [
+        "No particular riotous act is pictured or established; do not render the elder brother's later accusation as independently narrated fact.",
+        "Market, pouch and clothing wear illustrate need; visible stalls alone do not prove regional famine, which is supplied by Luke.",
+        "Do not infer homelessness, a named city, exact elapsed time or another person's refusal of help from this image."
+      ]
+    }
+  ]
+}

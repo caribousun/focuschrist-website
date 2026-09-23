@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "scope": "Read-only pre-generation source and placement check of eight planned scenes; current canonical pages and plans checked against live official Luke17 and18. No generated pixels reviewed in this task.",
+  "sourcesChecked": [
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/17?lang=eng",
+      "Luke17:1-10"
+    ],
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/18?lang=eng",
+      "Luke18:1-14"
+    ]
+  ],
+  "exactRecommendedOverrides": [
+    {
+      "key": "servant-duty-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "servant-duty-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "persistent-widow-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "persistent-widow-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "persistent-widow-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "pharisee-publican-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "pharisee-publican-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "pharisee-publican-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    }
+  ],
+  "registrySectionChangesIfApplied": [
+    {
+      "key": "servant-duty-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "persistent-widow-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "pharisee-publican-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    }
+  ],
+  "placementReason": "Each last scene currently accompanies application prose despite illustrating the first story-and-teaching paragraph. Keep introductory01 pictures in setting; group remaining narrative pictures in order after story paragraph1, before interpretation in paragraph2.",
+  "sourceFindings": [
+    {
+      "key": "servant-duty-01",
+      "refs": [
+        [
+          "nt/luke/17",
+          "Luke 17:7",
+          "7"
+        ]
+      ],
+      "status": "fits",
+      "note": "Field return from plowing is one explicit alternative. Do not blend in Luke12 master-serving-servants reversal."
+    },
+    {
+      "key": "servant-duty-02",
+      "refs": [
+        [
+          "nt/luke/17",
+          "Luke 17:8",
+          "8"
+        ]
+      ],
+      "status": "fits",
+      "note": "Servant prepares/serves master before eating himself. No abuse or starvation event is supplied. Evening setting is plausible supper staging, not a specified clock time."
+    },
+    {
+      "key": "persistent-widow-01",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:3",
+          "3"
+        ]
+      ],
+      "status": "fits",
+      "note": "Petition seeks justice; no debt amount, property dispute or adversary identity is given."
+    },
+    {
+      "key": "persistent-widow-02",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:4",
+          "4"
+        ]
+      ],
+      "status": "fits",
+      "note": "Refusal is explicit; exact gesture/room is illustrative."
+    },
+    {
+      "key": "persistent-widow-03",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:5",
+          "5"
+        ]
+      ],
+      "status": "narrow framing correction before generation",
+      "recommendedTitle": "The judge decides to act",
+      "recommendedSourceSceneDescription": "The judge resolves to act because of the widow's continued coming, Luke18:5.",
+      "note": "Verse5 records his inward decision, not a detailed completed hearing or implemented sentence. Avoid invented award, payment, imprisoned adversary, reconciliation or punitive outcome. A changed attentive posture is illustrative; caption must distinguish the stated decision from unrecorded procedure."
+    },
+    {
+      "key": "pharisee-publican-01",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:10",
+          "10"
+        ]
+      ],
+      "status": "fits",
+      "note": "Two men go to temple; do not assert friendship or synchronized arrival."
+    },
+    {
+      "key": "pharisee-publican-02",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:11-12",
+          "11-12"
+        ]
+      ],
+      "status": "fits",
+      "note": "Prayer and comparison are narrated; avoid caricature, invented public confrontation or pointing as a recorded gesture."
+    },
+    {
+      "key": "pharisee-publican-03",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:13",
+          "13"
+        ]
+      ],
+      "status": "fits",
+      "note": "Standing apart, lowered eyes and hand at breast fit source. No kneeling requirement, named sins, temple expulsion or visible divine apparition."
+    }
+  ],
+  "proseAssessment": "No factual prose rewrite required. Servant account preserves dignity and distinguishes duty from entitlement. Widow interpretation preserves the contrast with God. Publican interpretation directs self-examination rather than contempt toward a group. All relevant conclusions remain in prose, so no added picture is required.",
+  "connections": "Existing related links compare service, prayer and humility without blending narrative characters. Current collection ancestry remains appropriate.",
+  "inputSha256": {
+    "pages.json": "e52dea9e523e65ed1866cc176a057b00a4198845a0e98ddb681744b9fa79aa6d",
+    "parable-art-plan.json": "3d3e8633d434347aabdb3e4e52e18147c27f0b7ff78fc630bc95d7073f12bf1d"
+  },
+  "changesMade": "Only this review report; no canonical page/plan/registry edits, import or build."
+}

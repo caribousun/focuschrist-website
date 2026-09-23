@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent original-resolution pixel/source review of four illustrative acts of care in Matthew25:35-36. No import, diagnosis, biography or miracle claim.",
+  "entries": [
+    {
+      "key": "sheep-goats-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-788fda87-a570-4bfb-b0bc-bd35f4e994e4.png",
+      "sha256": "9a9cbe9b8251646b5c5ddce0fbb3135354abc4111b0dd9c536dcf35b6d7e5f8e",
+      "status": "pass_with_caption_conditions",
+      "alt": "A woman offers a clay cup to a seated man, with a loaf of bread beside him and a water jug near her other hand.",
+      "caption": "A cup passes between two people while bread rests within reach. This illustration recalls the food and drink Jesus names among acts of care for another person's need.",
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:35",
+          "35"
+        ]
+      ],
+      "findings": [
+        "Cup exchange is anatomically plausible: woman wraps fingers around side while seated man supports base/side, both wrists attach naturally. Other hands rest plausibly at jug and knee.",
+        "Faces clearly distinct, mutually attentive eyes and restrained smiles fit kindness. Natural skin, hair, cloth and courtyard light; no Christ likeness or halo.",
+        "Bread is visible without inventing consumption; cup contents and water purity not visually established. Caption describes offered drink and illustrative care, not named historical event."
+      ],
+      "conditions": [
+        "Keep scene framed as illustration of the care Jesus names, not a named recorded historical event or literal depiction of Christ."
+      ]
+    },
+    {
+      "key": "sheep-goats-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3668b973-a529-4edb-be7f-0976a35e146c.png",
+      "sha256": "9ffaf1aa44c80a4496e45c077c88831836b4e4ee4f6896e60ec1cb9679f1b4e8",
+      "status": "pass_with_caption_conditions",
+      "alt": "An older man and a woman hold a folded woolen covering between them at an open doorway.",
+      "caption": "At an open doorway, a folded covering is offered with a warm welcome. The scene illustrates the hospitality and clothing Jesus remembers in His teaching about caring for others.",
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:35-36",
+          "35-36"
+        ]
+      ],
+      "findings": [
+        "Folded textile is supported coherently by both people; hands remain distinct with natural grip and occlusion, no fused fabric/fingers.",
+        "Older man and younger adult woman clearly distinct, mutual eye contact and warmth without camera posing. Doorway and interior light are photographic.",
+        "Covering and welcome plausibly illustrate Matthew25:35-36. Caption does not identify homelessness, kinship, exact fabric provenance or outcome."
+      ],
+      "conditions": [
+        "Keep scene framed as illustration of the care Jesus names, not a named recorded historical event or literal depiction of Christ."
+      ]
+    },
+    {
+      "key": "sheep-goats-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2eeaba95-f0d4-4aaa-999d-26a1516e1120.png",
+      "sha256": "f7a9bfa9ea4a323c26b2307d73d037eadce832ee18ea6818bb9833585109c1b0",
+      "status": "pass_with_caption_conditions",
+      "alt": "A seated visitor holds the hand of a reclining woman as they look toward one another beside a small table with a cup and bowl.",
+      "caption": "A visitor sits close and holds the hand of a woman resting in bed. This imagined moment of companionship reflects Jesus' invitation to visit those who are sick.",
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:36",
+          "36"
+        ]
+      ],
+      "findings": [
+        "Visitor two hands surround one resting hand coherently; the reclining arm follows a plausible wrist/hand path and folds do not create extra limbs.",
+        "Women have different face shapes/hair/age cues and attentive reciprocal gaze. Natural quiet concern, no theatrical distress or healing gesture.",
+        "Bed, cup and bowl are ordinary setting objects; no diagnosis, relationship or recovery inferred. Caption explicitly imagined visit, not a miracle or named encounter."
+      ],
+      "conditions": [
+        "Keep scene framed as illustration of the care Jesus names, not a named recorded historical event or literal depiction of Christ."
+      ]
+    },
+    {
+      "key": "sheep-goats-04",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-186e4783-cc81-4d08-b884-574de833febb.png",
+      "sha256": "1271f197ddebb3d0c0df010e43d341deb3d3b856531a851c6c323f557057f384",
+      "status": "pass_with_caption_conditions",
+      "alt": "Two men sit facing one another in a stone room beside a barred wooden doorway, leaning into an attentive conversation.",
+      "caption": "A visitor gives his attention to a man seated in confinement. This illustration recalls Jesus' words about visiting a prisoner and seeing a person others may overlook.",
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:36",
+          "36"
+        ]
+      ],
+      "findings": [
+        "Both men have distinct hair/face shapes and mutually directed attention; natural soft expressions suit a meaningful visit.",
+        "Clasped left hands and visitor resting hand anatomically coherent; legs, clothing and seats physically plausible.",
+        "Bars and masonry support confinement setting without claims about exact prison architecture, reason for detention, guilt, innocence or impending release. No Christ likeness or miraculous escape."
+      ],
+      "conditions": [
+        "Keep scene framed as illustration of the care Jesus names, not a named recorded historical event or literal depiction of Christ."
+      ]
+    }
+  ]
+}

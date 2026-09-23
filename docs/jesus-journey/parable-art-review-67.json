@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Salt01–02, Bridegroom01 and Divided House01 actual-original review for symbolic/source boundaries, distinct faces, anatomy, object contact and photographic realism.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "All scenes are illustrations of teaching comparisons, not authenticated historical meals or household incidents."
+  ],
+  "entries": [
+    {
+      "key": "salt-01",
+      "generationKey": "salt-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "af67681e252c34582a8aa3153836693eeb77df50abe5c6037414134d2f5b4ffd",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-16119786-0701-4f12-85ef-f9373c8f6dfb.png",
+      "recommendedTitle": "Salt in the hand",
+      "alt": "A cupped hand holds coarse white salt crystals above a shallow bowl on a wooden table.",
+      "caption": "Jesus calls His disciples the salt of the earth and asks what use salt has if it loses its savor. The crystals in the hand illustrate the familiar substance at the heart of His comparison.",
+      "refs": [
+        [
+          "nt/matt/5",
+          "Matthew 5:13",
+          "13"
+        ]
+      ],
+      "findings": "Coherent single hand with thumb and four fingers, natural cupping, grains supported in palm and bowl. Photographic skin lines, crystals, earthenware and cloth. No named hand or historical demonstration claimed.",
+      "conditions": [
+        "Visible crystals cannot establish taste, purity or loss of savor; do not claim this salt is tasteless.",
+        "This is an illustrative detail, not a documented object Jesus held."
+      ]
+    },
+    {
+      "key": "salt-02",
+      "generationKey": "salt-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "4d4e2ba08b5b6d26a521ed9899b8276830d87fe4745eb28cbd097f793d98fb42",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-98a4c09a-8477-46ab-b872-175ee71c5120.png",
+      "recommendedTitle": "Salt and peace",
+      "alt": "A small bowl of coarse salt sits beside flatbread, a bowl of legumes, clay cups and greens on a rustic table.",
+      "caption": "Jesus speaks of salt retaining its savor and calls His listeners to have salt in themselves and peace with one another. This ordinary table setting offers a visual reflection on His words, not a recorded meal.",
+      "refs": [
+        [
+          "nt/mark/9",
+          "Mark 9:50",
+          "50"
+        ]
+      ],
+      "findings": "Plausible table-supported bowls, cups, bread and food with natural texture. Separate salt bowl visible. No participants or event-identifying objects, no modern utensils. No anatomy issue.",
+      "conditions": [
+        "Menu and table are illustrative; not Last Supper, a named meal, or evidence of a chemical property.",
+        "No depicted reconciliation or communal outcome inferred from the still life."
+      ]
+    },
+    {
+      "key": "bridegroom-01",
+      "generationKey": "bridegroom-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "e12087e00d01736b59f8e5c1be5ed35d5dc3869a7a6660fa4257b19c6ec2534c",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8431930a-521c-4a6f-9b8d-198fa420f235.png",
+      "recommendedTitle": "Joy while the bridegroom is present",
+      "alt": "A smiling clean-shaven young man in light clothing sits with three bearded companions around a table of food and cups.",
+      "caption": "Jesus compares His presence with the joy of wedding companions while the bridegroom is with them. This imagined gathering illustrates that comparison, rather than the wedding at Cana or a portrait of Jesus.",
+      "refs": [
+        [
+          "nt/matt/9",
+          "Matthew 9:15",
+          "15"
+        ]
+      ],
+      "findings": "Central curly-haired clean-shaven man clearly differs from approved Christ design. Three companions differ in profile, beard shape, head coverings and apparent age; no material identical-face duplication. Cup grips, central open palm and foreground resting hands coherent. Face-directed social attention and joyful expressions fit wedding comparison; photographic skin and table surfaces.",
+      "conditions": [
+        "Fictional bridegroom illustrates metaphor; do not label central man Jesus or imply Cana.",
+        "No historical wedding, exact participants, menu or cup contents identified."
+      ]
+    },
+    {
+      "key": "divided-house-01",
+      "generationKey": "divided-house-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "6eec460c55801b116af88c043c39da39859c3b1d4822d5dc0248c832313cf12a",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f0265d46-119e-42b0-acd5-cd855cc23107.png",
+      "recommendedTitle": "A household divided",
+      "alt": "An older gray-haired man and a younger bearded man sit at opposite sides of a table, turned away from one another, with folded linen and a basket between them.",
+      "caption": "Jesus teaches that a house divided against itself cannot stand. The two people turned apart picture that division symbolically, without claiming a particular family dispute or its outcome.",
+      "refs": [
+        [
+          "nt/mark/3",
+          "Mark 3:25",
+          "25"
+        ]
+      ],
+      "findings": "Two distinct adult faces, natural serious expressions. Older crossed forearms and younger cheek-supporting hand/elbow coherent; bodies and seats plausible. Cloth and basket rest naturally on table. No labels, embedded text or physical demolition; photographic domestic illustration.",
+      "conditions": [
+        "Do not infer father/son relationship, exact conflict, guilt, abuse or a narrated historical incident.",
+        "Turned postures symbolize division; still image alone cannot establish a relationship's state or outcome."
+      ]
+    }
+  ]
+}
