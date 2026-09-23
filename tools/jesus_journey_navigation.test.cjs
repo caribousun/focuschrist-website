@@ -81,4 +81,3 @@ test('Back closes nested owned dialogs and restores focus after shared close cle
  assert.equal(s.d.activeElement,s.d.querySelector('#baptism h2'));assert.deepEqual(s.errors,[]);
  }finally{s.close()}
 });
-
