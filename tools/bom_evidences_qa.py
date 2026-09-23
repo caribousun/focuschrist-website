@@ -6,6 +6,7 @@ from urllib.parse import urlsplit
 from PIL import Image
 from answer_study_qa import Document
 from study_gap_art_qa import sitewide_entries
+from evidences_visual_guides_qa import records as diagram_records, check as diagram_check
 
 ROOT = Path(__file__).resolve().parents[1]
 PAGE = 'book-of-mormon-evidences.html'
@@ -40,7 +41,9 @@ def check():
     require(text.count('topic-artwork-details.css?v=20260908-exclusive-final') == 1, 'approved native topic-panel styles missing or duplicated')
     figures = [n for n in content if n.tag == 'figure' and n.has('fc-study-visual')]
     additions = {e['asset']: e for e in sitewide_entries() if e['page'] == PAGE and not e['talk']}
-    require(len(figures) == 23 + len(additions), f'requires 23 preserved supporting pictures plus {len(additions)} reviewed additions, found {len(figures)}')
+    require(len(figures) == 23 + len(additions) + len(diagram_records()), f'requires 23 preserved supporting pictures plus {len(additions)} reviewed additions plus {len(diagram_records())} separately typed diagrams, found {len(figures)}')
+    diagrams = {e["asset"]: e for e in diagram_records()}
+    errors.extend(diagram_check())
     assets = []
     for figure in figures:
         triggers = [n for n in figure.children if n.tag == 'a' and any(c.tag == 'img' for c in n.walk())]
@@ -55,7 +58,14 @@ def check():
         require(bool(trigger.attrs.get('data-topic-study')), asset + ': onward study action missing')
         caption = next((n for n in figure.children if n.tag == 'figcaption'), None)
         require(caption is not None and len(caption.text().split()) >= 35, asset + ': meaningful reflection missing')
-        if asset in additions:
+        if asset in diagrams:
+            entry = diagrams[asset]
+            actual_sources = [n.attrs.get('href') for n in caption.walk() if n.tag == 'a' and urlsplit(n.attrs.get('href', '')).scheme == 'https'] if caption else []
+            require(list(dict.fromkeys(actual_sources)) == [x[1] for x in entry['sources']], asset + ': diagram primary sources differ')
+            imgs = [n for n in trigger.walk() if n.tag == 'img']
+            require(len(imgs) == 1 and imgs[0].attrs.get('alt') == entry['alt'], asset + ': diagram alternative text differs')
+            require(caption is not None and entry['caption'] in caption.text(), asset + ': diagram interpretation caption differs')
+        elif asset in additions:
             actual_sources = [n.attrs.get('href') for n in caption.walk() if n.tag == 'a' and urlsplit(n.attrs.get('href', '')).scheme == 'https'] if caption else []
             require(actual_sources == additions[asset]['markup_sources'], asset + ': exact reviewed primary source pills differ')
         else:
@@ -68,7 +78,7 @@ def check():
     require(len(assets) == len(set(assets)), 'artwork assets repeated within the study')
     entries = json.loads((ROOT / 'docs/art-study-image-review.json').read_text(encoding='utf-8'))['pages'].get(PAGE, [])
     require(len(entries) == 24 + len(additions), f'review ledger requires 24 preserved images plus {len(additions)} reviewed additions, found {len(entries)}')
-    require({x.get('asset') for x in entries} == set(assets), 'page assets and reviewed ledger disagree')
+    require({x.get('asset') for x in entries} | set(diagrams) == set(assets), 'page assets and reviewed ledger disagree')
     for entry in entries:
         asset = entry.get('asset', ''); path = (ROOT / asset).resolve()
         require(path.is_relative_to(ROOT) and path.is_file(), 'missing reviewed asset ' + asset)

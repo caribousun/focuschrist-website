@@ -29,9 +29,16 @@ for (const page of pages) {
   const media = {matches:true, addEventListener(type, listener) { listeners.push(listener); }};
   w.matchMedia = () => media;
   const initialOpening = w.document.querySelector('.fc-topic-opening, .fc-page-intro, .fc-gallery-intro, .cfm-hero, .gc-page-opening');
+  const artCopy = page.startsWith('art-study/') ? initialOpening?.querySelector('.fc-page-intro-copy') : null;
+  const artCopyMarkup = artCopy?.innerHTML;
   const originalText = initialOpening?.textContent.replace(/\s+/g, ' ').trim();
   const originalLinks = initialOpening ? [...initialOpening.querySelectorAll('a[href]')].map(a => a.href) : [];
   w.eval('function initOpeningInvitation() {}\n' + fn + '\ninitMobileOpening();');
+  if (artCopy) {
+    assert(initialOpening.contains(artCopy), page + ': Art introduction must remain in the mobile opening');
+    assert.equal(artCopy.innerHTML, artCopyMarkup, page + ': Preserve complete Art introduction wording');
+    assert(!artCopy.closest('.fc-mobile-opening-notes'), page + ': Art introduction must not move below Continue');
+  }
   const opening = w.document.querySelector('.fc-mobile-cued-opening');
   if (opening) {
     assert.equal(w.document.querySelectorAll('.fc-mobile-hero-surround').length, 0, page + ': owner rejected side treatment');

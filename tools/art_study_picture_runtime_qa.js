@@ -62,7 +62,13 @@ for (const card of cards) {
         titles.add(title);
         assert.equal(panel.querySelector('img').src, trigger.href, 'Panel uses original full artwork');
         const copy = panel.querySelector('.fc-artwork-detail-copy');
+        if (relative === 'art-study/the-good-shepherd.html') {
+            const concise = JSON.parse(read('docs/good-shepherd-concise-copy-review-20260923.json'));
+            const expected = concise.records.find(e => e.title === title);
+            assert(expected);assert.equal(copy.textContent.replace(/\s+/g,' ').trim(), expected.copy, 'Owner-requested concise caption matches exact independent review');
+        } else {
         assert(copy.textContent.trim().split(/\s+/).length >= 18, 'Substantive image-specific prose retained');
+        }
         const expectedCopy = caption.cloneNode(true);
         expectedCopy.querySelector('h2,h3,strong').remove();
         const normalized = value => value.replace(/\s+/g, ' ').trim();

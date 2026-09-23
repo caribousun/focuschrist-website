@@ -12,7 +12,7 @@ from pathlib import Path
 import re
 import sys
 import tempfile
-from urllib.parse import parse_qs, urlsplit
+from urllib.parse import parse_qs, urlsplit, unquote
 
 from PIL import Image, ImageOps
 from life_after_death_qa import Parser
@@ -170,6 +170,45 @@ def local_asset(root, value):
     path = (root / url.path.lstrip("/") if url.path.startswith("/")
             else root / Path(PAGE).parent / url.path).resolve()
     return path if path.is_relative_to(root.resolve()) else None
+
+
+def verified_cross_study_reference(root, image, nodes):
+    """An explicit non-owning article must link its exact thumbnail to its owning figure."""
+    containers = [n for n in nodes if n.tag == 'article' and n.attrs.get('data-linked-picture-reference')
+                  and any(child is image for child in n.walk())]
+    if len(containers) != 1:
+        return False
+    card = containers[0]
+    if any(n.tag == 'figure' for n in card.walk()):
+        return False
+    if sum(n.tag == 'img' for n in card.walk()) != 1:
+        return False
+    trigger = next((n for n in card.walk() if n.tag == 'a' and any(c is image for c in n.walk())), None)
+    if trigger is None:
+        return False
+    url = urlsplit(trigger.attrs.get('href', ''))
+    owner = local_asset(root, unquote(url.path))
+    if url.scheme or url.netloc or not url.fragment or not owner or owner == (root/PAGE).resolve() or owner.suffix != '.html' or not owner.is_file():
+        return False
+    owner_nodes = list(Parser(owner.read_text(encoding='utf8')).root.walk())
+    targets = [n for n in owner_nodes if n.attrs.get('id') == unquote(url.fragment)]
+    if len(targets) != 1:
+        return False
+    figures = [n for n in targets[0].walk() if n.tag == 'figure']
+    source = local_asset(root, image.attrs.get('src'))
+    if not source or not source.is_file():
+        return False
+    for figure in figures:
+        for candidate in figure.walk():
+            if candidate.tag != 'img':
+                continue
+            src = urlsplit(candidate.attrs.get('src', ''))
+            if src.scheme or src.netloc:
+                continue
+            path = (root/unquote(src.path).lstrip('/') if src.path.startswith('/') else owner.parent/unquote(src.path)).resolve()
+            if path.is_relative_to(root) and path == source:
+                return True
+    return False
 
 
 def scripture_error(root, url):
@@ -361,9 +400,11 @@ def audit(root, text, manifest, preserved_baselines=None):
             need(bool(entry.get("caption")) and entry.get("caption") in words(captions[0]), str(label) + ": picture caption missing/different")
         sources = [n for n in children if n.tag == "a" and n.attrs.get("href") == entry.get("source_url")]
         need(any(entry.get("label") and entry["label"] in words(n) for n in sources), str(label) + ": picture source label/verses differ from review")
+    owned_paths = {local_asset(root, '../'+e[field]) for e in manifest.get('artworks', []) + manifest.get('preserved', []) for field in ('asset', 'thumbnail') if e.get(field)}
+    owned_paths.update((root/value).resolve() for baseline in preserved_baselines.values() for value in baseline.get('assets', {}))
     for image in (n for n in main_nodes if n.tag == "img" and id(n) not in figure_images):
         path = local_asset(root, image.attrs.get("src"))
-        need(not (path and "/assets/page-art/" in path.as_posix()), "artwork repeated/outside its owning study figure")
+        need(not (path and "/assets/page-art/" in path.as_posix()) or (path not in owned_paths and verified_cross_study_reference(root, image, nodes)), "artwork repeated/outside its owning study figure")
     heroes = [n for n in nodes if n.tag == "a" and n.attrs.get("data-hero-record") == "topic-book-of-mormon"]
     need(len(heroes) == 1, "exactly one preserved Book of Mormon hero required")
     if len(heroes) == 1:
@@ -439,6 +480,20 @@ def self_test():
         def rejected(label, html, review, fragment):
             failures, _ = audit(root, html, review, fixture_baselines)
             assert any(fragment in failure for failure in failures), (label, failures)
+        reference_asset = root/'assets/page-art/reference.webp'
+        Image.new('RGB', (30,20), (11,22,33)).save(reference_asset, lossless=True)
+        owner = root/'other.html'
+        owner.write_text('<figure id="scene"><img src="assets/page-art/reference.webp"></figure>', encoding='utf8')
+        reference = '<article data-linked-picture-reference="test"><a href="/other.html#scene"><img src="/assets/page-art/reference.webp"></a></article>'
+        good_reference = text.replace('</main>', reference+'</main>')
+        assert not audit(root, good_reference, manifest, fixture_baselines)[0]
+        for label, replacement in [('missing anchor', '/other.html#missing'), ('missing owner', '/missing.html#scene'), ('same owner', '/'+PAGE+'#scene')]:
+            rejected(label, good_reference.replace('/other.html#scene', replacement), manifest, 'artwork repeated/outside')
+        rejected('unlinked fake reference', good_reference.replace('<a href="/other.html#scene">', '<a>'), manifest, 'artwork repeated/outside')
+        owner.write_text('<figure id="scene"><img src="assets/page-art/wrong.webp"></figure>', encoding='utf8')
+        rejected('misowned thumbnail', good_reference, manifest, 'artwork repeated/outside')
+        owner.write_text('<figure id="scene"><img src="assets/page-art/reference.webp"></figure>', encoding='utf8')
+        rejected('own original disguised as reference', good_reference.replace('/assets/page-art/reference.webp', '../'+manifest['artworks'][0]['thumbnail']), manifest, 'artwork repeated/outside')
         rejected("missing placed original", text.replace(figures[-1], ""), manifest, "DOM original inventory")
         rejected("same-page repetition", text.replace('</main>', figures[-1] + '</main>'), manifest, "same-page artwork")
         preserved_body = next(value for value in fixture_baselines.values() if value["role"] == "body")
@@ -471,7 +526,7 @@ def self_test():
         changed["artworks"][0]["source_url"] = source.replace("p21-p28", "p21-p99")
         rejected("verse range", text, changed, "out of range")
         rejected("integration placeholder", text + '<!-- BOM ART: pending -->', manifest, "placeholder")
-    print("Book of Mormon story QA self-test passed: positive inventory and ten relevant rejection fixtures.")
+    print("Book of Mormon story QA self-test passed: positive original/reference inventories and sixteen relevant rejection fixtures.")
 
 
 def main():

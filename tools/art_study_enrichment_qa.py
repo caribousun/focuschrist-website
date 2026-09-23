@@ -209,7 +209,7 @@ def main() -> int:
 
         for marker in (
             'data-art-study-enriched="true"',
-            'href="../art-study-enrichment.css?v=20260909-warm"',
+            'href="../art-study-enrichment.css?v=20260923-reading-rhythm-1"',
             'class="fc-study-opening"',
             'class="fc-art-meditation"',
             'class="fc-reflection-prompts"',
@@ -235,7 +235,11 @@ def main() -> int:
         church_links = [href for href in parser.links if href.startswith("https://www.churchofjesuschrist.org/")]
         if len(church_links) < 8:
             errors.append(f"{relative}: expected at least 8 official scripture or Church links, found {len(church_links)}")
-        if len(parser.captions) != expected_supporting or any(len(" ".join(parts).split()) < 18 for parts in parser.captions):
+        concise = json.loads((ROOT/'docs/good-shepherd-concise-copy-review-20260923.json').read_text(encoding='utf8'))
+        concise_ok = relative == concise['page'] and [' '.join(parts) for parts in parser.captions] == [e['parser_text'] for e in concise['records']]
+        if relative == concise['page'] and not concise_ok:
+            errors.append(f'{relative}: concise captions differ from owner-requested independent review')
+        if len(parser.captions) != expected_supporting or (not concise_ok and any(len(" ".join(parts).split()) < 18 for parts in parser.captions)):
             errors.append(f"{relative}: every supporting artwork needs a substantive image-specific caption")
         if len(parser.caption_links) != expected_supporting or any(
             not any(href.startswith("https://www.churchofjesuschrist.org/") for href in links)

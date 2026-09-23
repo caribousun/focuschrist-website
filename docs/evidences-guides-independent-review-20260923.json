@@ -1,0 +1,28 @@
+{
+  "scope": "12 separately typed analytical guides; 24 SVG variants; original 27 raster figures and hero preserved",
+  "reviewer": "remaining_passion_art independent agent",
+  "sources": "Exact URLs and source-specific captions recorded in docs/evidences-visual-guides-review-20260923.json. Independently read JSP manuscript account, Skousen text study, witness statements, Alma41, Mosiah5, Hoskisson Alma-name abstract, Aston Nahom study, Taylor2023 original horse paper, Mayapan original study, Schaalje original authorship paper, Church DNA essay. Publisher endpoint for authorship failed; actual coauthor-hosted paper was read.",
+  "finding": "No unsupported archaeological identification, fake artifact reproduction or fabricated statistical result. Horse dates explicitly do not establish Book of Mormon-era horses. NHM linkage remains a proposal. DNA guide distinguishes population ancestry from identifying a named family.",
+  "tests": [
+    "24 exact source hashes and safe XML structure",
+    "27 raster figures+hero original checks retained",
+    "12 native study/full-size/close/focus/lesson runtime cycles",
+    "Academic and official caption links retained in modal",
+    "Gallery only accepts exact manifest SVG; marks analytical-svg, not photographic artwork"
+  ],
+  "visualEvidence": "Independently viewed rendered horse portrait and Alma landscape; no clipping. Fermi reports all24 font bounds pass. Root owns complete browser visual review; not inferred here.",
+  "files": {
+    "book-of-mormon-evidences.html": "87d6b1440a40c5f69ab4e195aa17742fb8d138bd8c90c4b9262837e9fb0ff17d",
+    "bom-evidences.css": "19b54d55057adeaa0373631a572482e3fdbe0acbcb053755c3b87d6bbda5046b",
+    "docs/evidences-visual-guides-review-20260923.json": "a0498387288c73972ffb67cbc7ddcb7112193e460c1a7ebf26d4b9f34ca1ec63",
+    "tools/evidences_visual_guides_qa.py": "09dce5c76c9b51ae90cd4bc52b5db8c047ed328d3a7a3899325ef087dcf5ddd8",
+    "tools/evidences_visual_guides_runtime_qa.js": "c14434c3f34ce0b8b70ba8ca8c2f10d6af2d62d532a846b153a15898d5c176be",
+    "tools/bom_evidences_qa.py": "aa154ae311bd443d802a89218e59d5695d7a72100b56120a62cd098055d413c6",
+    "tools/build_art_gallery.py": "4d0edc697bf1129bfae6d1fa10dc516d00816edec34fba25cec454a62ec1f725"
+  },
+  "preservationEvidence": {
+    "baseline": "94c15c788f19a60ba0c341184f9f53be19750a8d",
+    "exactFigureMarkupMultiset": 27,
+    "passed": true
+  }
+}

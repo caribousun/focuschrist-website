@@ -84,3 +84,8 @@
 @media (max-width:700px){
     body.fc-site.cfm-page .cfm-hero::before{background-position:center 25%}
 }
+
+/* Keep resource titles readable when phone text is enlarged. */
+@media (max-width: 700px) {
+    body.cfm-page .cfm-toolkit__grid { grid-template-columns: 1fr; }
+}

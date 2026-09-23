@@ -14,6 +14,10 @@
 .fc-bom-evidences .bom-table-wrap table { border-collapse: collapse; width: 100%; }
 .fc-bom-evidences .bom-table-wrap :where(th, td) { text-align: left; vertical-align: top; padding: .8rem; border-bottom: 1px solid var(--fc-line); }
 .fc-bom-evidences .bom-table-wrap:focus-visible { outline: 3px solid var(--fc-gold); outline-offset: 4px; }
+/* Diagrams are original reading guides; preserve their labels and full native composition. */
+.fc-bom-evidences .bom-visual-guide > a,
+.fc-bom-evidences .bom-visual-guide picture { display: block; }
+.fc-bom-evidences .bom-visual-guide img { display: block; width: 100%; height: auto; object-fit: contain; }
 /* New hero crop only; root adds reviewed asset separately. */
 @media (max-width: 700px) {
     body.fc-site.fc-bom-evidences .fc-visual-hero--bom::before { background-position: 10% 35% !important; }

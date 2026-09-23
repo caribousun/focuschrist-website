@@ -57,15 +57,15 @@
     ],
     "art-study/the-good-shepherd.html": [
       {
-        "asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
-        "sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
-        "tone": "protective attention",
-        "reviewed": true
-      },
-      {
         "asset": "assets/page-art/art-study/full/shepherd-sees-one.webp",
         "sha256": "fc1523a72660dd51c6ba2d9018b04ebcd932adf43835897b3c93af98d89af4a6",
         "tone": "dignifying compassion",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+        "sha256": "7747830e7335539a881b235dedf001f704c73d237f290c98fd61a9448a7f78ba",
+        "tone": "protective attention",
         "reviewed": true
       },
       {
@@ -131,15 +131,15 @@
     ],
     "art-study/be-still.html": [
       {
-        "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
-        "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
-        "tone": "steadiness amid danger",
-        "reviewed": true
-      },
-      {
         "asset": "assets/page-art/art-study/full/still-city-companion.webp",
         "sha256": "cff36c78346ed712f39a5b81207cd5784d233dac1e800dedbc8a63a425d814e0",
         "tone": "concerned companionship in strain",
+        "reviewed": true
+      },
+      {
+        "asset": "assets/page-art/art-study/full/still-storm-boat.webp",
+        "sha256": "fdb60ec2ecdee51a24264fc53f0c1aed7cbde5d10dcaec32a6e3d8840b42911c",
+        "tone": "steadiness amid danger",
         "reviewed": true
       },
       {

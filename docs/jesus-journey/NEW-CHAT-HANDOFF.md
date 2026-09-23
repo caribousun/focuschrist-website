@@ -1,5 +1,27 @@
 # Jesus Christ journey — new-chat handoff
 
+## Latest checkpoint: Watch playback merged; sitewide review finalizing
+
+PR371 is live at94c15c788f19a60ba0c341184f9f53be19750a8d: prominent Close, full player positioning, all3publicfiles verified. Latest owner requests offscreen pause and captions off are in PR372, merged cd4a1849f70d06dc32a8dcb3ebc0ea61790e78d1 after PR QA35928931359 passed. Pages35929413113 and main QA35929413349 passed; both public files match. Actual public phone video started CC off and paused offscreen, returning paused at10seconds. See parent work/watch-playback-release-20260923.json. Real local YouTube showed captions off and stayed paused after scrolling away and returning. Caption preference cannot be universally overridden by documented YouTube parameters; do not claim a guarantee.
+
+Sitewide work is uncommitted on fix/sitewide-reading-rhythm-final:119 stylesheet consumers;4Art introductions retained and12figure relocations;12analytical Evidences guides (24SVG variants, explicitly not historical photos);90other-study picture references across23pages. Independent source/ownership/content reviews pass. All original raster artwork and approved identities preserved. Final browser/build/release checks remain. Latest owner correction: Good Shepherd descriptions consume too much space; root shortened opening, teachings, five captions and reflections, independent review passes. Do not undo this authorized prose change under old exact-prose receipts.
+
+When the covenant study is ready, move Jesus Christ beside the featured Atonement link in Answers and replace its topic-grid slot with Abrahamic Covenant, keeping the uniform pill count. After these fixes, finish Ask self-help routing, then the illustrated Abrahamic covenant study. Include a sacred, public-source treatment of temple covenants and Abrahamic promises. Covenant source preparation is underway only; implementation has not started. Master/foundation and paused automation unchanged.
+
+## Latest owner queue: Ask self-help, then Abrahamic covenant
+
+After the current page fixes, Wyatt explicitly requests Ask support for non-explicit self-help about pornography addiction and sexual desires. Reproduce the filtering; allow compassionate practical recovery/educational help while preserving safeguards against explicit sexual content. Use generic tests, never the family anecdote in public records.
+
+The final project for today is a new rich illustrated Abrahamic covenant study, introduced through other covenants and developed through all four books of the Latter-day Saint canon. Connect it from Ask and the existing study paths. These requests are authorized and unfinished; preserve order after current Watch/Art/Evidences/sitewide work. Parent work/sitewide-enrichment-20260923/owner-followups-20260923.json records the queue.
+
+## Mission live; Watch correction and sitewide review active
+
+Mission PR370 is complete and live: merge aadf65af6a32d4437b5b1fe34629f942f4a55f20, reviewed head d321100d7d08ed4424d0028d5dadd1b186f37e21. PR QA35925711773, Pages35926268729 and main QA35926268797 pass; all14 public files match. Four new public picture panels verified on phone. See parent work/mission-enrichment-release-20260923.json.
+
+Wyatt then reported Shorts scrolling past the video and a hard-to-see Close button. Narrow PR371 puts a gold Close button above the portrait player, aligns the card under the header without focus scrolling, bounds active video to the viewport, and preserves one-player/fallback behavior. CI and publication pending at this checkpoint; reviewed head53dff5febf390537658559c5ce78df0b1efa0ba8.
+
+Further active owner corrections: keep introductions in every Art study opening; keep meaningful pictures within two or three paragraphs sitewide, including Book of Mormon Evidences and expanded sections. All four Art studies now retain mobile opening copy, redistribute twelve existing figures, and correct the 3Nephi17 sequence (children brought before prayer). Shared phone text wrapping fixes enlarged-text overflow;42 main routes passed normal320/768/1366 and corrected320px200percent checks. Evidences has twelve existing picture relocations; eleven source-specific analytical SVG studies are in preparation. Do not call this whole-site completion. Preserve all approved original art, identities, hero geometry, source/interpretation distinctions and recorded exceptions. No automation changes or bulk deferred risen-Christ revisions.
+
 ## Mission release ready; all-page review authorized next
 
 Mission now has eleven owned originals, six depicting Christ, four new illustrated studies, four reflections, six clearly labeled section links, exact scripture readers and contextual Ask. All seven existing originals and the approved hero are preserved. Independent artwork, source, content and CSS reviews pass; 26 current verification commands pass. Browser review covers six normal widths, three enlarged-text widths, all four new picture/full-size/return paths, all four scripture readers and all six navigation controls. The existing worldwide panorama now retains its full 3:1 frame on phones. Publication is the remaining Mission step.

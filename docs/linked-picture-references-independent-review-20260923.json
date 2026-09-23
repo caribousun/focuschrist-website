@@ -1,0 +1,875 @@
+{
+  "status": "pass-scoped",
+  "reviewer": "remaining_passion_art independent agent",
+  "pageCount": 23,
+  "referenceCount": 90,
+  "preservation": "Independent DOM comparison to HEAD confirms every original figure and nonreference paragraph in exact original order on all23pages. Owning anchor contains exact referenced thumbnail; no samepage/repeated thumbnail.",
+  "corrections": [
+    "Removed repeated makes-room-for caption construction",
+    "D&C138messenger source corrected29-34",
+    "Household invitation source corrected3Nephi17:2-3",
+    "Sharedcommunity source corrected4Nephi1:2-3",
+    "All90source links select exact stated verses",
+    "Stand Forever caption shortened; exact Luke 10:38-42 source remains linked directly below.",
+    "Removed redundant unlinked scripture mentions from three linked-reference captions; exact linked verse selections immediately below remain unchanged. Root Mary repairs read back, edited HTML/receipt normalized LF."
+  ],
+  "records": [
+    {
+      "page": "answers/are-latter-day-saints-christian.html",
+      "key": "rr-broiled-fish",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-broiled-fish",
+      "caption": "The risen Savior eats before His disciples. Continue with their witness of His bodily Resurrection.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=p36-p43#p36",
+      "thumbnail": "assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/are-latter-day-saints-christian.html",
+      "key": "tp-scribe-dialogue",
+      "owner": "/jesus-christ/teachings-and-parables.html#picture-tp-scribe-dialogue",
+      "caption": "Jesus answers a scribe’s thoughtful question. Read their conversation about loving God and our neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p28-p34#p28",
+      "thumbnail": "assets/page-art/jesus-journey/tp-scribe-dialogue--244bb2b13293-thumb.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/why-latter-day-saints-build-temples.html",
+      "key": "rt-kirtland-appearance",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-kirtland-appearance",
+      "caption": "Joseph and Oliver testify of seeing the Savior in the Kirtland Temple. Read their witness of Him.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p1-p10#p1",
+      "thumbnail": "assets/page-art/jesus-journey/rt-kirtland-appearance-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/why-latter-day-saints-build-temples.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/why-latter-day-saints-build-temples.html",
+      "key": "rt-spirit-messengers",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-spirit-messengers",
+      "caption": "The Savior sends messengers to teach in the spirit world. Continue with Joseph F. Smith’s vision.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng&id=p29-p34#p29",
+      "thumbnail": "assets/page-art/jesus-journey/rt-spirit-messengers-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/why-latter-day-saints-build-temples.html",
+      "key": "modern-neighbor",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-neighbor",
+      "caption": "Practical help gives care a place in ordinary life. Continue with the invitation to serve a neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p35-p40#p35",
+      "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "key": "modern-grief",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-grief",
+      "caption": "A quiet companion stays beside someone who is grieving. Consider the care we can offer without rushing sorrow.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng&id=p15#p15",
+      "thumbnail": "assets/page-art/jesus-journey/modern-grief-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "key": "rr-broiled-fish",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-broiled-fish",
+      "caption": "The risen Savior eats before His disciples. Continue with their witness of His bodily Resurrection.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=p36-p43#p36",
+      "thumbnail": "assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "key": "come-and-see",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-come-and-see",
+      "caption": "Jesus welcomes two disciples who want to know Him. Follow their invitation to come and see.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p35-p42#p35",
+      "thumbnail": "assets/page-art/jesus-journey/come-and-see-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "key": "rt-vision-1832",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-vision-1832",
+      "caption": "Joseph Smith and Sidney Rigdon testify of the living Son of God. Read their witness from the 1832 vision.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p19-p24#p19",
+      "thumbnail": "assets/page-art/jesus-journey/rt-vision-1832-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "key": "modern-neighbor",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-neighbor",
+      "caption": "Practical help gives care a place in ordinary life. Continue with the invitation to serve a neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p35-p40#p35",
+      "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-happens-after-death.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "key": "rt-vision-1832",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-vision-1832",
+      "caption": "Joseph Smith and Sidney Rigdon testify of the living Son of God. Read their witness from the 1832 vision.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p19-p24#p19",
+      "thumbnail": "assets/page-art/jesus-journey/rt-vision-1832-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "key": "bb-philip-isaiah",
+      "owner": "/jesus-christ/before-bethlehem.html#picture-bb-philip-isaiah",
+      "caption": "A traveler asks Philip about Isaiah. Their conversation offers a scriptural example of reading with a question and seeking understanding.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/8?lang=eng&id=p27-p35#p27",
+      "thumbnail": "assets/page-art/jesus-journey/bb-philip-isaiah-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "key": "rt-persuasion",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-persuasion",
+      "caption": "One person listens while another shares a concern. Explore persuasion, gentleness and respect for another person’s agency.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p44#p41",
+      "thumbnail": "assets/page-art/jesus-journey/rt-persuasion-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/who-was-joseph-smith.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "key": "rt-persuasion",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-persuasion",
+      "caption": "One person listens while another shares a concern. Explore persuasion, gentleness and respect for another person’s agency.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p44#p41",
+      "thumbnail": "assets/page-art/jesus-journey/rt-persuasion-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/prayer-and-personal-revelation.html",
+      "key": "martha-and-mary",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-martha-and-mary",
+      "caption": "Mary listens while Martha brings her concern to Jesus. Pause with them and hear His words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p38-p42#p38",
+      "thumbnail": "assets/page-art/jesus-journey/martha-and-mary-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "key": "modern-neighbor",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-neighbor",
+      "caption": "Practical help gives care a place in ordinary life. Continue with the invitation to serve a neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p35-p40#p35",
+      "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "key": "come-and-see",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-come-and-see",
+      "caption": "Jesus welcomes two disciples who want to know Him. Follow their invitation to come and see.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p35-p42#p35",
+      "thumbnail": "assets/page-art/jesus-journey/come-and-see-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "key": "rr-simon-cross",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-simon-cross",
+      "caption": "Simon carries the cross behind Jesus. Continue with the scriptural account of the Savior’s suffering.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=p26-p27#p26",
+      "thumbnail": "assets/page-art/jesus-journey/rr-simon-cross-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "key": "rt-sung-testimony",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-sung-testimony",
+      "caption": "Voices join in an offering of faith and praise. Continue with the invitation to remember the Savior together.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/6?lang=eng&id=p9#p9",
+      "thumbnail": "assets/page-art/jesus-journey/rt-sung-testimony-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "key": "modern-welcome",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-welcome",
+      "caption": "A place at the table offers a moment of welcome. Explore belonging through ordinary acts of care.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p12-p14#p12",
+      "thumbnail": "assets/page-art/jesus-journey/modern-welcome-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "key": "rt-accessible-home",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-accessible-home",
+      "caption": "A resident explains what would help while others listen. Let the person receiving care help shape the response.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p45-p48#p45",
+      "thumbnail": "assets/page-art/jesus-journey/rt-accessible-home-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "key": "modern-neighbor",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-neighbor",
+      "caption": "Practical help gives care a place in ordinary life. Continue with the invitation to serve a neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p35-p40#p35",
+      "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/why-families-are-important.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-eternal-marriage.html",
+      "key": "modern-reconciliation",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-reconciliation",
+      "caption": "An honest conversation can begin with patient listening. Explore this present-day reflection on making peace.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p23-p24#p23",
+      "thumbnail": "assets/page-art/jesus-journey/modern-reconciliation-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-eternal-marriage.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-eternal-marriage.html",
+      "key": "rt-persuasion",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-persuasion",
+      "caption": "One person listens while another shares a concern. Explore persuasion, gentleness and respect for another person’s agency.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p44#p41",
+      "thumbnail": "assets/page-art/jesus-journey/rt-persuasion-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "key": "rr-simon-cross",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-simon-cross",
+      "caption": "Simon carries the cross behind Jesus. Continue with the scriptural account of the Savior’s suffering.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=p26-p27#p26",
+      "thumbnail": "assets/page-art/jesus-journey/rr-simon-cross-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "key": "modern-grief",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-grief",
+      "caption": "A quiet companion stays beside someone who is grieving. Consider the care we can offer without rushing sorrow.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng&id=p15#p15",
+      "thumbnail": "assets/page-art/jesus-journey/modern-grief-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "key": "rt-accessible-home",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-accessible-home",
+      "caption": "A resident explains what would help while others listen. Let the person receiving care help shape the response.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p45-p48#p45",
+      "thumbnail": "assets/page-art/jesus-journey/rt-accessible-home-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "key": "modern-neighbor",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-neighbor",
+      "caption": "Practical help gives care a place in ordinary life. Continue with the invitation to serve a neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p35-p40#p35",
+      "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/faith-in-jesus-christ-during-trials.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/death-of-a-child.html",
+      "key": "modern-grief",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-grief",
+      "caption": "A quiet companion stays beside someone who is grieving. Consider the care we can offer without rushing sorrow.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng&id=p15#p15",
+      "thumbnail": "assets/page-art/jesus-journey/modern-grief-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/death-of-a-child.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/divorce-and-faith.html",
+      "key": "rr-simon-cross",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-simon-cross",
+      "caption": "Simon carries the cross behind Jesus. Continue with the scriptural account of the Savior’s suffering.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=p26-p27#p26",
+      "thumbnail": "assets/page-art/jesus-journey/rr-simon-cross-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/divorce-and-faith.html",
+      "key": "rt-accessible-home",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-accessible-home",
+      "caption": "A resident explains what would help while others listen. Let the person receiving care help shape the response.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p45-p48#p45",
+      "thumbnail": "assets/page-art/jesus-journey/rt-accessible-home-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/divorce-and-faith.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/divorce-and-faith.html",
+      "key": "modern-neighbor",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-neighbor",
+      "caption": "Practical help gives care a place in ordinary life. Continue with the invitation to serve a neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p35-p40#p35",
+      "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/divorce-and-faith.html",
+      "key": "modern-grief",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-grief",
+      "caption": "A quiet companion stays beside someone who is grieving. Consider the care we can offer without rushing sorrow.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng&id=p15#p15",
+      "thumbnail": "assets/page-art/jesus-journey/modern-grief-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/grief-and-faith.html",
+      "key": "rr-simon-cross",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-simon-cross",
+      "caption": "Simon carries the cross behind Jesus. Continue with the scriptural account of the Savior’s suffering.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=p26-p27#p26",
+      "thumbnail": "assets/page-art/jesus-journey/rr-simon-cross-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/grief-and-faith.html",
+      "key": "modern-grief",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-grief",
+      "caption": "A quiet companion stays beside someone who is grieving. Consider the care we can offer without rushing sorrow.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng&id=p15#p15",
+      "thumbnail": "assets/page-art/jesus-journey/modern-grief-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/god-our-heavenly-father.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/restored-church-of-jesus-christ.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/restored-church-of-jesus-christ.html",
+      "key": "modern-neighbor",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-neighbor",
+      "caption": "Practical help gives care a place in ordinary life. Continue with the invitation to serve a neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p35-p40#p35",
+      "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/restored-church-of-jesus-christ.html",
+      "key": "rt-sacrament-preparation",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-sacrament-preparation",
+      "caption": "Careful hands prepare the sacrament table. Consider how ordinances turn our attention toward Jesus Christ.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p75-p79#p75",
+      "thumbnail": "assets/page-art/jesus-journey/rt-sacrament-preparation-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/aaronic-priesthood-restoration.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/aaronic-priesthood-restoration.html",
+      "key": "bn-nephi-baptizes",
+      "owner": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#picture-bn-nephi-baptizes",
+      "caption": "In a different scriptural setting, Nephi baptizes the disciples chosen by Jesus. Compare this account with the teaching about authority to baptize.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng&id=p10-p12#p10",
+      "thumbnail": "assets/page-art/jesus-journey/bn-nephi-baptizes-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/aaronic-priesthood-restoration.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/melchizedek-priesthood-restoration.html",
+      "key": "rt-kirtland-appearance",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-kirtland-appearance",
+      "caption": "Joseph and Oliver testify of seeing the Savior in the Kirtland Temple. Read their witness of Him.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p1-p10#p1",
+      "thumbnail": "assets/page-art/jesus-journey/rt-kirtland-appearance-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/melchizedek-priesthood-restoration.html",
+      "key": "rt-sacrament-preparation",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-sacrament-preparation",
+      "caption": "Careful hands prepare the sacrament table. Consider how ordinances turn our attention toward Jesus Christ.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p75-p79#p75",
+      "thumbnail": "assets/page-art/jesus-journey/rt-sacrament-preparation-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/melchizedek-priesthood-restoration.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "key": "bb-philip-isaiah",
+      "owner": "/jesus-christ/before-bethlehem.html#picture-bb-philip-isaiah",
+      "caption": "A traveler asks Philip about Isaiah. Their conversation offers a scriptural example of reading with a question and seeking understanding.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/8?lang=eng&id=p27-p35#p27",
+      "thumbnail": "assets/page-art/jesus-journey/bb-philip-isaiah-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/bible-and-book-of-mormon-together.html",
+      "key": "come-and-see",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-come-and-see",
+      "caption": "Jesus welcomes two disciples who want to know Him. Follow their invitation to come and see.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p35-p42#p35",
+      "thumbnail": "assets/page-art/jesus-journey/come-and-see-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/settle-this-in-your-hearts.html",
+      "key": "come-and-see",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-come-and-see",
+      "caption": "Jesus welcomes two disciples who want to know Him. Follow their invitation to come and see.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p35-p42#p35",
+      "thumbnail": "assets/page-art/jesus-journey/come-and-see-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/settle-this-in-your-hearts.html",
+      "key": "mc-leper-touch",
+      "owner": "/jesus-christ/miracles-and-compassion.html#picture-mc-leper-touch",
+      "caption": "Jesus reaches toward a man who has asked for healing. Read His compassionate response.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p40-p45#p40",
+      "thumbnail": "assets/page-art/jesus-journey/mc-leper-touch-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/settle-this-in-your-hearts.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/settle-this-in-your-hearts.html",
+      "key": "rr-broiled-fish",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-broiled-fish",
+      "caption": "The risen Savior eats before His disciples. Continue with their witness of His bodily Resurrection.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=p36-p43#p36",
+      "thumbnail": "assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "bn-hear-the-voice",
+      "owner": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#picture-bn-hear-the-voice",
+      "caption": "The people turn to listen at Bountiful. Follow their encounter with the risen Savior.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p1-p7#p1",
+      "thumbnail": "assets/page-art/jesus-journey/bn-hear-the-voice-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "bb-jared-finger",
+      "owner": "/jesus-christ/before-bethlehem.html#picture-bb-jared-finger",
+      "caption": "The brother of Jared sees the Lord’s finger. Continue with this earlier witness of Jesus Christ.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng&id=p6-p10#p6",
+      "thumbnail": "assets/page-art/jesus-journey/bb-jared-finger-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "lehi-counsel-reference",
+      "owner": "/answers/bible-and-book-of-mormon-together.html#study-lehi-joseph-counsel",
+      "caption": "Later in the family’s journey, Lehi speaks to his son Joseph about the Lord’s covenants. Read his counsel near the end of his life.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/3?lang=eng&id=p1-p15#p1",
+      "thumbnail": "assets/page-art/bible-together/lehi-joseph-counsel-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "rr-broiled-fish",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-broiled-fish",
+      "caption": "The risen Savior eats before His disciples. Continue with their witness of His bodily Resurrection.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=p36-p43#p36",
+      "thumbnail": "assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "modern-neighbor",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-neighbor",
+      "caption": "Practical help gives care a place in ordinary life. Continue with the invitation to serve a neighbor.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p35-p40#p35",
+      "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "rt-accessible-home",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-accessible-home",
+      "caption": "A resident explains what would help while others listen. Let the person receiving care help shape the response.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p45-p48#p45",
+      "thumbnail": "assets/page-art/jesus-journey/rt-accessible-home-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "bb-created-earth",
+      "owner": "/jesus-christ/before-bethlehem.html#picture-bb-created-earth",
+      "caption": "Ammon teaches Lamoni about the Creation. Explore the scriptural witness of Jesus Christ as Creator.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p31-p39#p31",
+      "thumbnail": "assets/page-art/jesus-journey/bb-created-earth-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "modern-welcome",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-welcome",
+      "caption": "A place at the table offers a moment of welcome. Explore belonging through ordinary acts of care.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p12-p14#p12",
+      "thumbnail": "assets/page-art/jesus-journey/modern-welcome-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "rt-persuasion",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-persuasion",
+      "caption": "One person listens while another shares a concern. Explore persuasion, gentleness and respect for another person’s agency.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p44#p41",
+      "thumbnail": "assets/page-art/jesus-journey/rt-persuasion-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "wise-foolish-builders-01",
+      "owner": "/jesus-christ/parables/wise-foolish-builders.html#picture-wise-foolish-builders-01",
+      "caption": "Jesus teaches about building on a firm foundation. Compare His parable with Helaman’s counsel to build upon Christ.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p47-p49#p47",
+      "thumbnail": "assets/page-art/jesus-journey/wise-foolish-builders-01-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "bn-households-return",
+      "owner": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#picture-bn-households-return",
+      "caption": "After teaching the people at Bountiful, Jesus invites them to ponder and pray at home. Continue into the visit that follows the days of destruction.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p2-p3#p2",
+      "thumbnail": "assets/page-art/jesus-journey/bn-households-return-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "bn-shared-community",
+      "owner": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#picture-bn-shared-community",
+      "caption": "Shared necessities picture the mutual care described in 4 Nephi. Consider the habits that help a community remain united.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/4-ne/1?lang=eng&id=p2-p3#p2",
+      "thumbnail": "assets/page-art/jesus-journey/bn-shared-community-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "bb-stones-prepared",
+      "owner": "/jesus-christ/before-bethlehem.html#picture-bb-stones-prepared",
+      "caption": "The brother of Jared carries prepared stones to the mountain. Return to the earlier history that Moroni preserves in Ether.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng&id=p1-p5#p1",
+      "thumbnail": "assets/page-art/jesus-journey/bb-stones-prepared-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/what-is-the-book-of-mormon.html",
+      "key": "bn-scriptures-explained",
+      "owner": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#picture-bn-scriptures-explained",
+      "caption": "Jesus explains the scriptures to attentive listeners. Continue with His teaching at Bountiful.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng&id=p1-p6#p1",
+      "thumbnail": "assets/page-art/jesus-journey/bn-scriptures-explained-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "church-history.html",
+      "key": "modern-scripture",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture",
+      "caption": "An adult listens beside open scriptures. Bring your own questions to the Savior’s words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p39#p39",
+      "thumbnail": "assets/page-art/jesus-journey/modern-scripture-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "come-follow-me.html",
+      "key": "modern-prayer",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer",
+      "caption": "A man pauses to pray before the day begins. Continue with an invitation to bring our concerns to the Father.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6",
+      "thumbnail": "assets/page-art/jesus-journey/modern-prayer-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "answers/stand-forever.html",
+      "key": "martha-and-mary",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-martha-and-mary",
+      "caption": "Mary listens while Martha brings her concern to Jesus. Pause with them and hear His words.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p38-p42#p38",
+      "thumbnail": "assets/page-art/jesus-journey/martha-and-mary-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "atonement.html",
+      "key": "come-and-see",
+      "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-come-and-see",
+      "caption": "Jesus welcomes two disciples who want to know Him. Follow their invitation to come and see.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p35-p42#p35",
+      "thumbnail": "assets/page-art/jesus-journey/come-and-see-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "atonement.html",
+      "key": "bb-created-earth",
+      "owner": "/jesus-christ/before-bethlehem.html#picture-bb-created-earth",
+      "caption": "A world filled with life invites us to consider the Creator. Explore the scriptural witness of Jesus Christ before Bethlehem.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p31-p39#p31",
+      "thumbnail": "assets/page-art/jesus-journey/bb-created-earth-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "atonement.html",
+      "key": "rr-simon-cross",
+      "owner": "/jesus-christ/redeemer-and-risen-lord.html#picture-rr-simon-cross",
+      "caption": "Simon carries the cross behind Jesus. Continue with the scriptural account of the Savior’s suffering.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=p26-p27#p26",
+      "thumbnail": "assets/page-art/jesus-journey/rr-simon-cross-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "atonement.html",
+      "key": "bb-philip-isaiah",
+      "owner": "/jesus-christ/before-bethlehem.html#picture-bb-philip-isaiah",
+      "caption": "A traveler asks Philip about Isaiah. Their conversation offers a scriptural example of reading with a question and seeking understanding.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/8?lang=eng&id=p27-p35#p27",
+      "thumbnail": "assets/page-art/jesus-journey/bb-philip-isaiah-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "atonement.html",
+      "key": "bn-scriptures-explained",
+      "owner": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#picture-bn-scriptures-explained",
+      "caption": "Jesus explains the scriptures to attentive listeners. Continue with His teaching at Bountiful.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng&id=p1-p6#p1",
+      "thumbnail": "assets/page-art/jesus-journey/bn-scriptures-explained-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "atonement.html",
+      "key": "rt-vision-1832",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-vision-1832",
+      "caption": "Joseph Smith and Sidney Rigdon testify of the living Son of God. Read their witness from the 1832 vision.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p19-p24#p19",
+      "thumbnail": "assets/page-art/jesus-journey/rt-vision-1832-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    },
+    {
+      "page": "atonement.html",
+      "key": "rt-persuasion",
+      "owner": "/jesus-christ/restoration-and-today.html#picture-rt-persuasion",
+      "caption": "One person listens while another shares a concern. Explore persuasion, gentleness and respect for another person’s agency.",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/121?lang=eng&id=p41-p44#p41",
+      "thumbnail": "assets/page-art/jesus-journey/rt-persuasion-960.webp",
+      "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
+    }
+  ],
+  "pageHashes": {
+    "answers/aaronic-priesthood-restoration.html": "615c5fa1890230e9e1697a6af4f923324462940177882c604e3400e167facc39",
+    "answers/are-latter-day-saints-christian.html": "615a76643ed3486ce1734e7bd324e3df9cba80c024974cae895c8baaa9cba4ce",
+    "answers/bible-and-book-of-mormon-together.html": "74bb7d69a30ce908da34e2666843b4e0a3aba158da9c277ae676bdf019ce9311",
+    "answers/death-of-a-child.html": "4fe54ef2fe1a7e7ad977b14c00a009663236138b233789f71c93936a580b3886",
+    "answers/divorce-and-faith.html": "5ba484249a5c7ebb4e768e477dbe4b81141e28913485132af42ca8a69a18c649",
+    "answers/faith-in-jesus-christ-during-trials.html": "e08e91ec8b110fe637896341fef6a6b7652f311fdeb2540ce04e2e8328f5d117",
+    "answers/god-our-heavenly-father.html": "3df62a74c97768f72add4e1a01d4a828beda9e45f0628459d5acae66e8cb70d8",
+    "answers/grief-and-faith.html": "d83627af340c0c75e47dc66a8e24f13252c8f74982acb17174e587d904c909df",
+    "answers/look-unto-me-doctrine-and-covenants-6-36.html": "c29a6d233118b4d34dc3a5d677b420e41eb0602927b2e5f850ead75e5f4fdd3c",
+    "answers/melchizedek-priesthood-restoration.html": "7f97d9afb91404a100710624a3803f629853c365c4e704c3fd4530eda783da45",
+    "answers/prayer-and-personal-revelation.html": "7fbd4f6f4e9106389be05c88a7edeffc4c720d9f65d1842efaab5d4fe3d48e5a",
+    "answers/restored-church-of-jesus-christ.html": "9a3b0c334ce05f58aabbbfd18432744f28b39fc3019904e8949d9df2f986096c",
+    "answers/settle-this-in-your-hearts.html": "c66a4abeebfc0f38d3a02a85ed1bb939e16f116b3e5e34d20af0efefb32209c5",
+    "answers/stand-forever.html": "2c23b00deb10f43aec3ce9f294c003f0424f7219583dc1bd2e14b4ca46a17a61",
+    "answers/what-happens-after-death.html": "ea06a7b8eafde1de8837d78f270f0a9928ab096ca939af2e2d96c68978db24ca",
+    "answers/what-is-eternal-marriage.html": "25dd2f0bf4145fed4bfbcc65cb820b6529a772bb9d5a47f2ad25d0790174738c",
+    "answers/what-is-the-book-of-mormon.html": "c2b55e53624084d72c24e5f91358d126dcc543500be71c28b0645ac17207f1a1",
+    "answers/who-was-joseph-smith.html": "a55fed8e8b049ac907c60a5436d68747fc2565314ca9a7e8a9d7a4e7e56657f6",
+    "answers/why-families-are-important.html": "bfa085381ba0a1fbe5651dc76d5e9553d15a670285b2581771a783f5dff08bf6",
+    "answers/why-latter-day-saints-build-temples.html": "d9b5307870fc77d6b2df6c2534ff2f5e8a1bbc07eb9e74d127472b997daa208c",
+    "atonement.html": "8393c3d3a44b0bffcee07fe9dd67bb5f5806121a8c566f35fca87ba19350187e",
+    "church-history.html": "82ce1e7fcaf16dcd7c76c578232453dcffe74ec4164f9fb8576c77f3e011f72e",
+    "come-follow-me.html": "616bb6eef5f8ae8379eb6404feb3c6f4cde4fe2954c5d4ab9f971cd92db00710"
+  },
+  "limitations": [
+    "Existing approved artwork pixels reused unchanged; no new originals or original-count claim",
+    "Browser composition and owner aesthetic approval remain separate",
+    "Thematic modern service/prayer references are devotional connections, not depictions of historical chapters"
+  ],
+  "gates": {
+    "static_content_audit": "PASS122documents",
+    "topic_artwork_uniqueness": "PASS; references retain original owner exclusivity",
+    "topic_artwork_uniqueness_runtime": "PASS21negative/regressiontests",
+    "media_voice": "PASS120pages692captions147details107resources15introductions1143alts",
+    "sitewide_artwork_review": "PASS118pages19heroes842protectedimages0errors",
+    "art_gallery_inventory": "current",
+    "site_search": "rebuilt,current",
+    "source_integrity_inventory": "PASS494entries; preexisting3verified491quarantined unchanged",
+    "evidences_runtime": "PASS12guides with source/fullsize/return paths",
+    "git_diff_check": "PASS"
+  },
+  "additionalSourceReview": {
+    "beforeBethlehem": "Ether3:1-16 includes preparation and encounter; art6-10unchanged",
+    "youthTheme": "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+    "verified": "Fresh official announcement explicitly identifies2027youththeme"
+  }
+}
