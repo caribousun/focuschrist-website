@@ -4,6 +4,25 @@
   if (!section) return;
   let active = null;
   let apiPromise;
+  const more = section.querySelector('[data-shorts-more]');
+  const summary = more && more.querySelector('summary');
+  function syncDisclosure() {
+    if (!more) return;
+    more.querySelector('[data-shorts-toggle-label]').textContent = more.open ? 'Hide 3 Shorts' : 'Show 3 more Shorts';
+    if (!more.open) {
+      const focusInside = more.contains(document.activeElement) && document.activeElement !== summary;
+      if (active && more.contains(active.card)) stop(false);
+      if (focusInside) summary.focus();
+    }
+  }
+  if (more) {
+    more.addEventListener('toggle', syncDisclosure);
+    more.querySelector('[data-shorts-collapse]').addEventListener('click', () => {
+      more.open = false;
+      syncDisclosure();
+      summary.focus();
+    });
+  }
   function loadAPI() {
     if (window.YT && window.YT.Player) return Promise.resolve(window.YT);
     if (apiPromise) return apiPromise;

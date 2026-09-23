@@ -78,6 +78,16 @@ class WatchShorts(unittest.TestCase):
         result = subprocess.run([sys.executable, str(ROOT / 'tools/build_watch_shorts.py'), '--check'], capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
+    def test_disclosure_rows_are_centered_without_full_width_portraits(self):
+        css = (ROOT / 'watch-shorts.css').read_text(encoding='utf-8')
+        row = re.search(r'\.watch-shorts \.watch-shorts-grid\s*\{([^}]+)', css).group(1)
+        for rule in ('display: flex', 'flex-wrap: wrap', 'justify-content: center'):
+            self.assertIn(rule, row)
+        card = re.search(r'\.watch-shorts \.watch-shorts-grid > \.watch-short\s*\{([^}]+)', css).group(1)
+        self.assertIn('flex: 0 1 310px', card, 'Cards must not grow to fill an incomplete row')
+        self.assertIn('max-width: 100%', card, 'Cards must shrink inside narrow containers')
+        self.assertNotIn('grid-template-columns', css, 'Do not restore empty fixed column slots')
+
     def test_generator_rejects_stale_saved_card_without_writing(self):
         with tempfile.TemporaryDirectory(prefix='watch-shorts-qa-') as folder:
             temporary = Path(folder)

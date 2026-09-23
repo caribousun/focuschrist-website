@@ -1,0 +1,38 @@
+{
+  "status": "reviewed-local",
+  "reviewers": [
+    "Fermi implementation and label/source preservation",
+    "Root independent code and browser review"
+  ],
+  "behavior": [
+    "Newest visible; three additional Shorts closed initially",
+    "Native disclosure with top toggle and bottom collapse",
+    "Hidden active player destroyed, pending startup canceled, focus returns to summary",
+    "Expand never autoplays; earlier captions and offscreen pause behavior retained"
+  ],
+  "browser": [
+    "390px: expanded Holland played; CC off and Pause video visible; bottom collapse removed iframe and returned focus to summary",
+    "1366px: newest centered310px; three centered310pxcards; summary centered; no overflow",
+    "390,768,1000 normal and320px200percenttext: no horizontal overflow or clipped controls",
+    "320px200percent: native summary keyboard Enter expands"
+  ],
+  "validation": [
+    "Five static tests",
+    "Watch runtime suite including collapse/pending callbacks",
+    "Generator exact markup",
+    "Static content review",
+    "Existing20card Watch library"
+  ],
+  "limitations": [
+    "Provider captions remain best effort following prior release; no universal preference override guarantee",
+    "Public behavior still requires post-deployment verification"
+  ],
+  "files": {
+    "watch.html": "310025366c931db7bdc9fac15706e35cdcd993c51a4f2f0de91417ab0b042773",
+    "watch-shorts.js": "866495d5131d6452bbd73b67eb69e6e6f3fc9dbe5768b3e4a206559a7c193c58",
+    "watch-shorts.css": "d0ea07818cb6be516a926356a5079543a9b4d5c9496510a3ef74e89e02f242a0",
+    "tools/build_watch_shorts.py": "c587ab09499369acfc6a5c414a16b829511aebb4ffc090bec331a998777d85b2",
+    "tools/watch_shorts_qa.py": "c502a6e3cf32d627007d4aa9c273b3470d391b7514d7b1516fa6129df8e98d30",
+    "tools/watch_shorts_runtime_qa.js": "411953a30f51580678d4209f62c7293fd9cc7e8e9f4ef6c46d84f3a226dc7a01"
+  }
+}

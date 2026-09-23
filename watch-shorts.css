@@ -1,7 +1,8 @@
 /* Four published channel Shorts, scoped to their Watch section. */
 body.fc-watch-shorts { overflow-wrap: anywhere; }
 .watch-shorts { padding-block: 36px; overflow-wrap: anywhere; }
-.watch-shorts .watch-shorts-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.watch-shorts .watch-shorts-grid { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 20px; }
+.watch-shorts .watch-shorts-grid > .watch-short { flex: 0 1 310px; width: 310px; max-width: 100%; box-sizing: border-box; }
 .watch-shorts .watch-short { min-width: 0; overflow: hidden; border: 1px solid var(--fc-line); border-radius: 18px; background: var(--fc-surface, #193b42); scroll-margin-top: 84px; }
 .watch-shorts .watch-short-media { position: relative; aspect-ratio: 9 / 16; background: #091b23; }
 .watch-shorts .watch-short-preview { display: block; width: 100%; height: 100%; position: relative; }
@@ -21,5 +22,10 @@ body.fc-watch-shorts { overflow-wrap: anywhere; }
 .watch-shorts .watch-short-stop:focus-visible { outline: 3px solid #102a35; outline-offset: -6px; }
 .watch-shorts a:focus-visible, .watch-shorts button:focus-visible { outline: 3px solid var(--fc-gold-light, #f2d188); outline-offset: -4px; }
 .watch-shorts .watch-shorts-updated { margin-block: 20px 0; font-size: .9rem; }
-@media (max-width: 1000px) { .watch-shorts .watch-shorts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 600px) { .watch-shorts .watch-shorts-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 600px) { .watch-shorts .watch-shorts-grid > .watch-short { flex-basis: 320px; width: 320px; } }
+
+.watch-shorts-more { margin-block: 20px; }
+.watch-shorts-more > summary { display: flex; cursor: pointer; width: fit-content; max-width: 100%; white-space: normal; margin-inline: auto; }
+.watch-shorts-more[open] > summary { margin-bottom: 20px; }
+.watch-shorts-more > summary:focus-visible { outline: 3px solid var(--fc-gold-light, #f2d188); outline-offset: 4px; }
+.watch-shorts-collapse { display: block; margin: 20px auto 0; cursor: pointer; }

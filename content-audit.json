@@ -3688,9 +3688,9 @@
     {
       "path": "watch.html",
       "status": "verified",
-      "published_text_sha256": "569130a1df79b94bbd5db0db8145827cf2c61e24f811ac07cb330d5b144d56c9",
+      "published_text_sha256": "1e5ca6e111667838e3083bbd07f4408d5e0ee91e3a82a5bf96d3e995798a9cd6",
       "reviewed_on": "2026-09-23",
-      "review_standard": "Prior complete source and Shorts semantic review preserved in prior_review. Four additional Watch Short controls and ready/failure recovery messages reviewed; no new source claim. See docs/watch-shorts-independent-review-20260923.json.",
+      "review_standard": "Prior complete source and Shorts semantic review preserved in prior_review. Four additional Watch Short controls and ready/failure recovery messages reviewed; no new source claim. See docs/watch-shorts-independent-review-20260923.json. Scoped disclosure review: new Show 3 more Shorts and Hide 3 Shorts labels accurately describe the three older cards; native disclosure retains newest card visibly outside. Compared current Watch HTML to HEAD and verified all four card titles, speakers, descriptions, sources and channel link are unchanged from the reviewed publication records. No new factual or doctrinal claims. Prior substantive source review retained.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng",
         "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng",
