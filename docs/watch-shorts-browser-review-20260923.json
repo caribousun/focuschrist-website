@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-23",
+  "reviewer": "root actual Codex browser",
+  "watch": {
+    "normal_widths": [
+      320,
+      390,
+      600,
+      602,
+      820,
+      1000,
+      1002,
+      1366
+    ],
+    "text_200_widths": [
+      320,
+      820,
+      1366
+    ],
+    "horizontal_overflow": 0,
+    "clipped_section_labels": 0,
+    "incomplete_card_rows": 0,
+    "portrait_ratio": "9:16, native 405x720; all four visually verified after refresh",
+    "desktop_play_control": "Below picture, no cover text obscured",
+    "no_script": "Four portraits, play links, external links and full collection present",
+    "local_inline_playback": "Not established: provider player did not become ready in the in-app browser",
+    "timeout_recovery": "Verified: preview retained/restored, helpful direct YouTube alternative, focus restored",
+    "runtime_tests": "Official IFrame API stub covers readiness, errors, one player, stale callbacks and close/focus; does not prove provider playback"
+  },
+  "home": {
+    "actual_picture_clicks": 9,
+    "targets": [
+      "atonement.html",
+      "book-of-mormon-evidences.html",
+      "come-follow-me.html",
+      "answers/bible-and-book-of-mormon-together.html",
+      "general-conference.html",
+      "missionary.html",
+      "church-history.html",
+      "pioneers.html",
+      "watch.html"
+    ],
+    "all_no_hash": true,
+    "all_scroll_y": 0,
+    "ask_card_actual_click": {
+      "target": "ask.html",
+      "hash": "",
+      "scroll_y": 0
+    },
+    "intro_ask": "Explicit form shortcut preserved"
+  },
+  "publication": "Pending; see parent work release receipt"
+}

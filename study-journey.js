@@ -47,6 +47,8 @@
     function rewriteContentAskLinks() {
         document.querySelectorAll('a[href]').forEach(function (link) {
             if (link.closest('.nav, .hamburger-menu')) return;
+            // Home pathway cards enter the page; its explicit Ask button still opens the question form.
+            if (link.matches('body.fc-home-presentation .fc-home-purpose-paths a.fc-card--interactive')) return;
             const raw = link.getAttribute('href') || '';
             if (raw === 'ask.html' || raw === '../ask.html') link.setAttribute('href', askHref());
         });

@@ -1,5 +1,6 @@
 from pathlib import Path
 import sys
+from answer_study_qa import Document
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -51,7 +52,7 @@ def main() -> int:
         "Gospel Topics Essays",
         "Book of Mormon Videos",
         "loadStudyJourney",
-        "study-journey.js?v=20260909-openai-only-2",
+        "study-journey.js?v=20260924-home-page-entry-1",
         "study-intelligence-v3.js?v=20260909-22",
         "window.focusChristSourceIntegrity",
         "unreviewed-source-dependent-generation",
@@ -252,8 +253,17 @@ def main() -> int:
             if marker in texts[name]:
                 errors.append(f"{name} contains forbidden hardened marker: {marker}")
 
-    if index.count('href="ask.html#ask-question"') < 2:
-        errors.append("index.html must deep-link both Home Ask pathways to #ask-question")
+    home = Document()
+    home.feed(index)
+    intro = [n for n in home.root.walk() if n.has('fc-page-intro')]
+    pathways = [n for n in home.root.walk() if n.has('fc-home-purpose-paths')]
+    if len(intro) != 1 or not any(n.tag == 'a' and n.attrs.get('href') == 'ask.html#ask-question' for n in intro[0].walk()):
+        errors.append('Home introductory Ask button must retain the explicit question-form shortcut')
+    if len(pathways) != 1 or not any(n.tag == 'a' and n.has('fc-card--interactive') and n.attrs.get('href') == 'ask.html' for n in pathways[0].walk()):
+        errors.append('Home Ask pathway card must enter the Ask page from its beginning')
+    require(journey, 'study-journey.js', (
+        "if (link.matches('body.fc-home-presentation .fc-home-purpose-paths a.fc-card--interactive')) return;",
+    ), errors)
 
     if errors:
         print("focusChrist HARDENED EXPERIENCE QA FAILED", file=sys.stderr)

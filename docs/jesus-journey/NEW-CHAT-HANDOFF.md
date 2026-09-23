@@ -1,5 +1,19 @@
 # Jesus Christ journey — new-chat handoff
 
+## ACTIVE: Watch Shorts and Home navigation, then Mission enrichment
+
+Watch now has a reviewed selection of the latest four public @theRisen636 Shorts, native portrait previews, click-to-play controls and a full-collection link. All nine Home preview images and primary card destinations open their owning pages at the top; the Ask card also bypasses the shared contextual form rewrite. Local responsive, enlarged-text, source and runtime checks pass. Actual local embedded playback is unconfirmed; timeout recovery and direct YouTube alternatives work. Publication remains; consult parent work watch-shorts-release-20260923.json. The YouTube publishing workflow must include maintaining this reviewed selection; no recurring sync is claimed.
+
+NEXT: Wyatt explicitly requested further Mission enrichment after this portion. This is authorized and unfinished. Preserve all existing artwork, identity references, approved heroes, source grounding, warm reverent voice and ten-original/half-Christ enrichment requirements. PR365-368 remain live; all previous completion records below are historical scope only. Current State and START HERE carry this active checkpoint with guarded readback.
+
+## COMPLETE AND LIVE: all current owner requests — 23 September 2026
+
+Home enrichment and the latest Mission composition correction are published in PR368: https://github.com/caribousun/focuschrist-website/pull/368. Merge `0c1a128074455293c59d2ee10591e53e842be87f`; reviewed head `9d010357f41d5d211abf6fea0460eaa87d8fdb3a`. PR QA35916816402, Pages35917193293 and main QA35917193399 passed. All six changed public files match. Live Home shows nine linked previews and the current stylesheet; the journey and artwork detail/full-size/close paths work. Live Mission shows the full-width panorama above its teaching with zero horizontal overflow. Temporary browser viewport reset.
+
+All earlier requested journey and Pioneer/History/Mission border work is also complete through PR365–367. Home preserves its approved hero and three original artworks, adds nine references to their owning studies, and uses warm reviewed invitations. No image files changed in PR368. Mission preserves every word, link and image while correcting the stranded panorama and phone crop. See independent reviews and browser receipts in docs, plus parent work `home-presentation-release-20260923.json` and `public-home-presentation-verification-20260923.json`.
+
+Current State and START HERE contain the final completion record, written with revision guards and read back with every prior text character preserved. No owner action is required. Await Wyatt's next chosen work. Master and protected foundation unchanged; old journey automation remains PAUSED; unrelated pauses remain. This top record supersedes the historical in-progress checkpoints below.
+
 ## Current checkpoint: Home and Mission composition ready for release
 
 Home enrichment and Wyatt's latest Mission purpose composition correction are implemented on `enrich/home-christ-centered-presentation`, based on `0cf872b8194e22f6aeb2659be34d63ccd7e2b908`. All prior journey and border releases below remain live. Home now begins its body with the Savior's invitation, preserves all three original figures and the approved hero, and adds nine linked picture previews of existing studies. No new artwork files were generated or altered. Mission now places its panorama above the teaching, with the caption below the picture and no phone crop.

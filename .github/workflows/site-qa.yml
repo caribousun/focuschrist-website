@@ -52,6 +52,8 @@ jobs:
         run: python tools/topic_artwork_uniqueness_runtime_qa.py
       - name: Verify Home artwork preservation and reference previews
         run: python tools/home_presentation_qa.py
+      - name: Verify Watch Shorts cards and preserved Church collection
+        run: python tools/watch_shorts_qa.py
 
       - name: Verify published-content search index and behavior
         run: |
@@ -107,6 +109,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/settle_recording_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/watch_shorts_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node --test tools/jesus_journey_navigation.test.cjs
 
       - name: Check connected study destinations and learning paths

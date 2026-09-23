@@ -81,6 +81,8 @@ def check(home, baseline, manifest, root=ROOT):
         errors.append('Existing anchors must survive exactly once')
     old_links = {n.attrs['href'] for n in old if n.tag == 'a' and local(n.attrs.get('href', '')) is not None
                  and urlsplit(n.attrs.get('href', '')).path.endswith('.html')}
+    # Owner-requested Home entries now begin at the owning page's opening.
+    old_links = {'come-follow-me.html' if href == 'come-follow-me.html#this-week' else href for href in old_links}
     links = {n.attrs.get('href', '') for n in nodes if n.tag == 'a'}
     if not old_links <= links:
         errors.append('Existing static study/core links missing: ' + str(sorted(old_links - links)))
@@ -90,6 +92,17 @@ def check(home, baseline, manifest, root=ROOT):
         errors.append('Visible static Jesus journey entry missing')
     if any(n.tag == 'link' and local(n.attrs.get('href', '')) == 'jesus-journey.css' for n in nodes):
         errors.append('Home must not import journey-only stylesheet')
+    for card in [n for n in nodes if n.tag == 'a' and n.has('fc-card--interactive')]:
+        if urlsplit(card.attrs.get('href', '')).fragment:
+            errors.append('Home interactive cards must open at the page beginning')
+    for section in [n for n in nodes if n.has('fc-study-promotion') or n.has('fc-home-weekly')]:
+        picture_links = [n for n in section.walk() if 'data-home-reference' in n.attrs]
+        primary_links = [n for n in section.walk() if n.tag == 'a' and n.has('fc-button--primary')]
+        if len(picture_links) != 1 or len(primary_links) != 1 or picture_links[0].attrs.get('href') != primary_links[0].attrs.get('href'):
+            errors.append('Home preview and primary direction must open the same page beginning')
+    journey = [n for n in nodes if n.has('fc-home-journey-invitation')]
+    if len(journey) != 1 or not any(n.has('fc-button--primary') and n.attrs.get('href') == 'answers/jesus-christ-latter-day-saint-beliefs.html' for n in journey[0].walk()):
+        errors.append('Home Jesus journey primary direction must start at the page beginning')
     refs = manifest['references']
     expected = {r['key']: r for r in refs}
     previews = [n for n in nodes if 'data-home-reference' in n.attrs]
@@ -105,6 +118,8 @@ def check(home, baseline, manifest, root=ROOT):
         if preview.tag != 'a' or preview.attrs.get('href') != ref['href'] or len(images) != 1:
             errors.append(key + ': exact owner link and one preview image required')
             continue
+        if urlsplit(ref['href']).fragment or urlsplit(ref['href']).query:
+            errors.append(key + ': Home navigation must open the owning page from the beginning')
         if any(a.tag == 'figure' or 'data-journey-art' in a.attrs for a in ancestors(preview)) or any('data-artwork-detail' in n.attrs for n in preview.walk()):
             errors.append(key + ': preview must remain a navigational reference')
         image = images[0]
@@ -115,9 +130,9 @@ def check(home, baseline, manifest, root=ROOT):
             errors.append(key + ': missing or invalid different owner')
             continue
         owner_nodes = list(parse((root / owner).read_text(encoding='utf-8')).walk())
-        fragment = urlsplit(ref['href']).fragment
+        fragment = ref.get('owner_anchor', '')
         if not fragment or not any(n.attrs.get('id') == fragment for n in owner_nodes):
-            errors.append(key + ': owner anchor missing')
+            errors.append(key + ': recorded owner anchor missing')
         family = family_name(asset or '')
         used.append(family)
         # Watch's source is an existing video-resource thumbnail, not an owned figure.
@@ -149,15 +164,35 @@ class HomePresentation(unittest.TestCase):
     def test_bad_owner_rejected_even_if_manifest_agrees(self):
         manifest = copy.deepcopy(self.manifest)
         old = manifest['references'][0]['href']
-        manifest['references'][0]['href'] = 'about.html#main-content'
-        self.assertTrue(check(self.home.replace(old, 'about.html#main-content'), self.baseline, manifest))
+        manifest['references'][0]['href'] = 'about.html'
+        manifest['references'][0]['owner_anchor'] = 'main-content'
+        errors = check(self.home.replace('href="' + old + '"', 'href="about.html"'), self.baseline, manifest)
+        self.assertTrue(any('destination does not contain this image family' in error for error in errors))
+
+    def test_page_entry_fragment_rejected_even_if_manifest_agrees(self):
+        manifest = copy.deepcopy(self.manifest)
+        old = manifest['references'][0]['href']
+        linked = old + '#' + manifest['references'][0]['owner_anchor']
+        manifest['references'][0]['href'] = linked
+        errors = check(self.home.replace('data-home-reference="atonement" href="' + old + '"',
+                                       'data-home-reference="atonement" href="' + linked + '"'), self.baseline, manifest)
+        self.assertTrue(any('open the owning page from the beginning' in error for error in errors))
+
+    def test_primary_direction_mismatch_rejected(self):
+        home = self.home.replace('href="come-follow-me.html">Explore Come, Follow Me',
+                                 'href="come-follow-me.html#this-week">Explore Come, Follow Me')
+        self.assertTrue(any('preview and primary direction' in error for error in check(home, self.baseline, self.manifest)))
+
+    def test_unpictured_card_fragment_rejected(self):
+        home = self.home.replace('class="fc-card fc-card--interactive" href="ask.html"',
+                                 'class="fc-card fc-card--interactive" href="ask.html#ask-question"')
+        self.assertTrue(any('interactive cards must open' in error for error in check(home, self.baseline, self.manifest)))
 
     def test_missing_anchor_rejected(self):
         manifest = copy.deepcopy(self.manifest)
-        old = manifest['references'][0]['href']
-        new = old.split('#')[0] + '#missing-home-fixture'
-        manifest['references'][0]['href'] = new
-        self.assertTrue(check(self.home.replace(old, new), self.baseline, manifest))
+        manifest['references'][0]['owner_anchor'] = 'missing-home-fixture'
+        errors = check(self.home, self.baseline, manifest)
+        self.assertTrue(any('recorded owner anchor missing' in error for error in errors))
 
     def test_duplicate_preview_rejected(self):
         self.assertTrue(check(self.home.replace('data-home-reference="weekly"', 'data-home-reference="atonement"'), self.baseline, self.manifest))

@@ -9,11 +9,19 @@ IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
 BIBLE_STYLE = 'bible-together.css'
 BIBLE_STYLE_SHA256 = '128b2a54bf1a285497ea11d6c8e9040c55baa996ec75aa376b29463f854a9121'
 BIBLE_STYLE_OWNER = 'answers/bible-and-book-of-mormon-together.html'
+WATCH_SHORTS_STYLE = 'watch-shorts.css'
+WATCH_SHORTS_STYLE_SHA256 = 'b1e9532be08a53af11b82cd49bad11b732c4b91ac678c151a02f437a0bfb43d4'
 HOME_STYLE = 'home-presentation.css'
 HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = '68f2abf3d0fa65b2e87c6a8bd3798dd8dfb1a1e522e7f3d5b14dc810d1f90978'
+
+def reviewed_watch_shorts_style(data):
+    return hashlib.sha256(data).hexdigest() == WATCH_SHORTS_STYLE_SHA256
+
+def watch_shorts_style_reference_allowed(relative, text):
+    return relative == "watch.html" or WATCH_SHORTS_STYLE not in text
 
 def reviewed_home_style(data):
     return hashlib.sha256(data).hexdigest() == HOME_STYLE_SHA256
@@ -74,6 +82,13 @@ def main():
         duplicate=[good[0],dict(good[1],source_sha256='1'*64)]
         assert any('duplicate source_sha256' in e for e in unique_reviewed(duplicate,set()))
         assert any('rejected sha256' in e for e in unique_reviewed(good,{'2'*64}))
+        shorts_css = (ROOT/WATCH_SHORTS_STYLE).read_bytes()
+        assert reviewed_watch_shorts_style(shorts_css)
+        assert not reviewed_watch_shorts_style(shorts_css + b'\n.fc-visual-hero{height:9px}')
+        assert watch_shorts_style_reference_allowed('watch.html', WATCH_SHORTS_STYLE)
+        assert not watch_shorts_style_reference_allowed('index.html', WATCH_SHORTS_STYLE)
+        assert not watch_shorts_style_reference_allowed('shared.css', '@import "' + WATCH_SHORTS_STYLE + '";')
+        assert not watch_shorts_style_reference_allowed('shared.js', WATCH_SHORTS_STYLE)
         home_css = (ROOT/HOME_STYLE).read_bytes()
         assert reviewed_home_style(home_css)
         assert not reviewed_home_style(home_css + b'\nbody.fc-home-presentation{height:999px}')
@@ -241,6 +256,8 @@ def main():
         if relative != 'missionary.html':
             check('missionary.css' not in path.read_text(encoding='utf8'),
                   'Mission stylesheet referenced outside its owning page: '+relative)
+        check(watch_shorts_style_reference_allowed(relative, path.read_text(encoding='utf8')),
+              'Watch Shorts stylesheet referenced outside its single owning page: '+relative)
         check(home_style_reference_allowed(relative, path.read_text(encoding='utf8')),
               'Home presentation stylesheet referenced outside its single owning page: '+relative)
         check(bible_style_reference_allowed(relative, path.read_text(encoding='utf8')),
@@ -262,7 +279,8 @@ def main():
     check(reviewed_home_style((ROOT/HOME_STYLE).read_bytes()), 'Home presentation stylesheet differs from exact reviewed bytes')
     check(sha(ROOT/'missionary.css') == BOUNDARY_WRAP_STYLES['.fc-missionary-page main'][1],
           'Mission purpose stylesheet differs from exact reviewed bytes')
-    excluded_styles={'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
+    check(reviewed_watch_shorts_style((ROOT/WATCH_SHORTS_STYLE).read_bytes()), 'Watch Shorts stylesheet differs from exact reviewed bytes')
+    excluded_styles={WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
