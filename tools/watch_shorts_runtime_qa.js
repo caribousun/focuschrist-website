@@ -11,6 +11,10 @@ const flush = async () => { await Promise.resolve(); await Promise.resolve(); aw
 function setup() {
   const dom = new JSDOM(html, {url:'https://focuschrist.com/watch.html', runScripts:'outside-only', virtualConsole:new VirtualConsole()});
   const w = dom.window, d = w.document, players = [], timers = new Map();
+  const scrolls = [], focusCalls = [];
+  w.HTMLElement.prototype.scrollIntoView = function(options) { scrolls.push({node:this, options}); };
+  const nativeFocus = w.HTMLElement.prototype.focus;
+  w.HTMLElement.prototype.focus = function(options) { focusCalls.push({node:this, options}); nativeFocus.call(this, options); };
   let timerId = 0;
   w.setTimeout = (callback, delay) => { timers.set(++timerId, {callback, delay}); return timerId; };
   w.clearTimeout = id => timers.delete(id);
@@ -35,7 +39,7 @@ function setup() {
   const api = async () => { w.YT = {Player}; w.onYouTubeIframeAPIReady(); await flush(); };
   const timeout = () => { const pending = [...timers.values()]; timers.clear(); pending.forEach(t => { assert.equal(t.delay,15000); t.callback(); }); };
   w.eval(script);
-  return {dom,w,d,players,timers,section,links,click,api,timeout,close:()=>dom.window.close()};
+  return {dom,w,d,players,timers,section,links,click,api,timeout,scrolls,focusCalls,close:()=>dom.window.close()};
 }
 (async () => {
   let h = setup();
@@ -46,6 +50,13 @@ function setup() {
   assert.equal(h.links[0].hidden,false,'Poster stays visible while API is pending');
   assert.equal(h.d.activeElement,h.section.querySelector('.watch-short-stop'));
   assert.equal(h.d.querySelectorAll('script[src="https://www.youtube.com/iframe_api"]').length,1);
+  const close = h.section.querySelector('.watch-short-stop'), media = h.links[0].parentElement;
+  assert.equal(close.nextElementSibling,media,'Close precedes the media, not the copy below');
+  assert.equal(h.focusCalls.at(-1).node,close);
+  assert.equal(h.focusCalls.at(-1).options.preventScroll,true,'Focusing Close cannot scroll below the player');
+  assert.equal(h.scrolls[0].node,media.parentElement,'Opening deliberately scrolls the owning card');
+  assert.equal(h.scrolls[0].options.block,'start');
+  assert.equal(media.parentElement.dataset.playing,'true');
   await h.api();
   const first = h.players[0];
   assert.equal(first.options.videoId,records[0].id);
@@ -60,6 +71,8 @@ function setup() {
   assert.equal(first.frame.title,'YouTube video: '+records[0].title);
   h.click(1); await flush();
   assert.equal(first.destroyed,true);
+  assert.equal(h.links[0].closest('.watch-short').hasAttribute('data-playing'),false,'Switch restores previous card layout');
+  assert.equal(h.section.querySelectorAll('[data-playing]').length,1);
   assert.equal(h.section.querySelectorAll('iframe').length,1,'Switch retains only one player');
   assert.equal(h.links[0].hidden,false);
   h.players[1].ready();
@@ -68,6 +81,7 @@ function setup() {
   h.section.querySelector('.watch-short-stop').click();
   assert.equal(h.section.querySelectorAll('iframe').length,0);
   assert.equal(h.d.activeElement,h.links[1]);
+  assert.equal(h.section.querySelectorAll('[data-playing]').length,0,'Close restores resting layout');
   h.click(2); await flush(); h.players[2].ready();
   h.section.querySelector('.watch-short-stop').dispatchEvent(new h.w.KeyboardEvent('keydown',{key:'Escape',bubbles:true,cancelable:true}));
   assert.equal(h.section.querySelectorAll('iframe').length,0);
@@ -120,6 +134,7 @@ function setup() {
     else h.timeout();
     assert.equal(h.section.querySelectorAll('iframe,.watch-short-player,.watch-short-stop').length,0,mode+' cleans player and controls');
     assert.equal(h.links[0].hidden,false);
+    assert.equal(h.section.querySelectorAll('[data-playing]').length,0,mode+' restores resting layout');
     assert.equal(h.d.activeElement,h.links[0]);
     assert.match(h.section.querySelector('.watch-short-status').textContent,/watch this Short on YouTube/);
     assert.equal(h.timers.size,0);

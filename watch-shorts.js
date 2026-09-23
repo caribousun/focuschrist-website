@@ -29,6 +29,7 @@
     previous.mount.remove();
     previous.button.remove();
     previous.status.remove();
+    delete previous.card.dataset.playing;
     previous.preview.hidden = false;
     if (returnFocus) previous.link.focus();
   }
@@ -65,11 +66,15 @@
     status.setAttribute('role', 'status');
     status.textContent = 'Opening the video…';
     preview.parentElement.append(mount);
-    card.querySelector('.watch-short-copy').append(status, button);
+    card.insertBefore(button, preview.parentElement);
+    card.querySelector('.watch-short-copy').append(status);
+    card.dataset.playing = 'true';
     const state = { link, preview, card, mount, button, status, player: null, timer: null };
     active = state;
     state.timer = setTimeout(() => unavailable(state), 15000);
-    button.focus();
+    // Keep keyboard focus with the player without scrolling to the copy below it.
+    button.focus({ preventScroll: true });
+    card.scrollIntoView({ block: 'start', behavior: 'instant' });
     loadAPI().then(YT => {
       if (active !== state) return;
       state.player = new YT.Player(placeholder, {

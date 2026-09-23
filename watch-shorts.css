@@ -2,7 +2,7 @@
 body.fc-watch-shorts { overflow-wrap: anywhere; }
 .watch-shorts { padding-block: 36px; overflow-wrap: anywhere; }
 .watch-shorts .watch-shorts-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
-.watch-shorts .watch-short { min-width: 0; overflow: hidden; border: 1px solid var(--fc-line); border-radius: 18px; background: var(--fc-surface, #193b42); }
+.watch-shorts .watch-short { min-width: 0; overflow: hidden; border: 1px solid var(--fc-line); border-radius: 18px; background: var(--fc-surface, #193b42); scroll-margin-top: 84px; }
 .watch-shorts .watch-short-media { position: relative; aspect-ratio: 9 / 16; background: #091b23; }
 .watch-shorts .watch-short-preview { display: block; width: 100%; height: 100%; position: relative; }
 .watch-shorts .watch-short-preview[hidden] { display: none; }
@@ -15,7 +15,10 @@ body.fc-watch-shorts { overflow-wrap: anywhere; }
 .watch-shorts .watch-short-media iframe { display: block; width: 100%; height: 100%; border: 0; }
 .watch-shorts .watch-short-player { position: absolute; inset: 0; visibility: hidden; }
 .watch-shorts .watch-short-player[data-ready="true"] { visibility: visible; }
-.watch-shorts .watch-short-stop { margin-top: 12px; width: 100%; min-height: 44px; padding: 10px; border: 1px solid var(--fc-line); border-radius: 12px; background: #102a35; color: var(--fc-gold-light, #f2d188); font: inherit; cursor: pointer; }
+.watch-shorts .watch-short-stop { display: block; margin: 0; width: 100%; min-height: 48px; padding: 12px; border: 0; border-bottom: 2px solid #102a35; background: #f2d188; color: #102a35; font: inherit; font-weight: 700; cursor: pointer; }
+.watch-shorts .watch-short[data-playing] .watch-short-media { width: min(100%, calc((100svh - 190px) * 9 / 16)); margin-inline: auto; }
+.watch-shorts .watch-short[data-playing] .watch-short-open { display: none; }
+.watch-shorts .watch-short-stop:focus-visible { outline: 3px solid #102a35; outline-offset: -6px; }
 .watch-shorts a:focus-visible, .watch-shorts button:focus-visible { outline: 3px solid var(--fc-gold-light, #f2d188); outline-offset: -4px; }
 .watch-shorts .watch-shorts-updated { margin-block: 20px 0; font-size: .9rem; }
 @media (max-width: 1000px) { .watch-shorts .watch-shorts-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
