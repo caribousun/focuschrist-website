@@ -22,7 +22,7 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 .jj-card .jj-card-action{display:block;margin-top:16px;color:var(--fc-gold-light,#f0c36a);text-decoration:underline;text-underline-offset:4px}
 .jj-local-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px 0 26px}
 .jj-local-nav a,.jj-actions a{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:10px 16px;border:1px solid rgba(240,195,106,.45);border-radius:8px;color:var(--fc-gold-light,#f0c36a);text-decoration:none;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
-.jj-local-nav a[aria-current=page]{background:rgba(240,195,106,.13);border-color:var(--fc-gold-light,#f0c36a)}
+.jj-local-nav a[aria-current=step]{background:rgba(240,195,106,.13);border-color:var(--fc-gold-light,#f0c36a)}
 .jj-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:22px 0}
 .jj-art{margin:24px 0 28px;border:1px solid rgba(240,195,106,.28);border-radius:12px;overflow:hidden;background:#12383d}
 .jj-art>a{display:block}
@@ -43,3 +43,27 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 .jj-main a:focus-visible,.jj-opening a:focus-visible{outline:3px solid #f0c36a;outline-offset:5px}
 @media(max-width:700px){.jj-directory{grid-template-columns:1fr}.jj-card{padding:20px}.jj-art figcaption,.jj-reflection{padding:18px}body.fc-jesus-journey .jj-opening{padding-top:calc(var(--fc-header-height,80px) + 22px)}.jj-local-nav a{flex:1 1 145px}.jj-actions a{flex:1 1 180px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Compact chapter selection keeps the scene close to the opening. */
+.jj-chapter-reader>[hidden]{display:none!important}
+.jj-chapter-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 16px;scroll-margin-top:100px}
+.jj-chapter-position{flex:1 1 100%;font-size:.9rem;margin:0!important;color:#e5cfaa}
+.jj-chapter-picker{flex:1 1 200px;border:1px solid rgba(240,195,106,.45)!important;border-radius:8px;padding:0!important;min-width:0}
+.jj-chapter-picker>summary{padding:10px 16px;font-size:1rem!important;margin:0!important}
+.jj-chapter-picker .jj-local-nav{margin:0;padding:12px;justify-content:flex-start}
+.jj-chapter-picker .jj-local-nav a{flex:1 1 220px}
+.jj-chapter-picker[open]{flex-basis:100%}
+.jj-chapter-controls button,.jj-chapter-steps button{font:inherit;line-height:1.5;color:var(--fc-gold-light,#f0c36a);background:#173c41;border:1px solid rgba(240,195,106,.45);border-radius:8px;min-height:44px;padding:10px 16px;white-space:normal;overflow-wrap:anywhere;cursor:pointer}
+.jj-chapter-controls button:focus-visible,.jj-chapter-steps button:focus-visible,.jj-chapter-picker summary:focus-visible{outline:3px solid #f0c36a;outline-offset:4px}
+.jj-chapter-steps{display:flex;justify-content:space-between;gap:16px;margin:20px 0 28px}
+.jj-chapter-steps button{flex:0 1 48%}
+.jj-chapter-steps button:disabled{opacity:.45;cursor:default}
+.jj-chapter-reader>.jj-chapter{padding-top:20px;padding-bottom:24px}
+.jj-chapter-reader>.jj-chapter>.jj-kicker{display:none}
+.jj-card-preview{display:block;width:100%;height:auto;object-fit:contain;border-radius:6px;margin-bottom:16px}
+body.fc-jesus-journey .jj-opening{padding:24px 0 16px}
+body.fc-jesus-journey .jj-opening h1{font-size:clamp(2rem,4.5vw,3.5rem);margin:12px 0}
+body.fc-jesus-journey.jj-enhanced .jj-opening .fc-button{display:none}
+.jj-chapter-reader .jj-art{margin-top:16px}
+@media(max-width:700px){.jj-chapter-controls{gap:10px}.jj-chapter-controls>*{max-width:100%}.jj-chapter-controls .jj-mode{flex:1 1 160px}.jj-chapter-controls .jj-chapter-picker{flex-basis:150px}.jj-chapter-controls .jj-chapter-picker[open]{flex-basis:100%}body.fc-jesus-journey .jj-opening{padding-top:14px}.jj-chapter-reader>.jj-chapter>h2{font-size:1.7rem}}
+@media print{.jj-chapter-reader>.jj-chapter[hidden]{display:block!important}.jj-chapter-controls,.jj-chapter-steps{display:none!important}}

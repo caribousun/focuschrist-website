@@ -34,7 +34,7 @@ for page in pages:
     expected=sum(isinstance(b,dict) and 'cards' in b for s in page['sections'] for b in s.get('blocks',[]))+bool(page.get('related'))
     if len(grids)!=expected:errors.append('Journey directory inventory differs: '+page['url'])
     styles=[n.attrs.get('href','') for n in nodes if n.tag=='link' and 'jesus-journey.css' in n.attrs.get('href','')]
-    if grids and styles!=['/jesus-journey.css?v=20260923-1']:errors.append('Missing or stale journey directory stylesheet: '+page['url'])
+    if grids and styles!=['/jesus-journey.css?v=20260923-chapters-2']:errors.append('Missing or stale journey directory stylesheet: '+page['url'])
     if any(not grid.children for grid in grids):errors.append('Empty journey directory: '+page['url'])
     directory_count+=len(grids)
 xml=(ROOT/'sitemap.xml').read_text(encoding='utf-8')

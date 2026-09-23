@@ -1,0 +1,11 @@
+{
+  "status": "pass",
+  "scope": "Chapter navigation and earlier artwork refinement, local rendered review",
+  "phone": {"width":390,"unique_pages":77,"every_chapter_selected":true,"single_chapter_visibility":true,"heading_focus":true,"whole_study_visible":true,"horizontal_overflow_failures":0},
+  "desktop": {"width":1366,"verified_templates":["before-bethlehem","mercy collection","prodigal-son","Jesus Christ parent"],"all_chapter_controls_on_these_templates":"pass","additional_long_batch":"interrupted at60second tool limit; not counted as completed evidence"},
+  "picture_spacing":{"prodigal_son_first_image_document_y_before":1198.86,"after":683.48,"viewport_width":390,"approved_hero_pixels":"unchanged"},
+  "accessibility":{"width320_base_text200percent":"chapter links, summary and mode button fully contained with no horizontal overflow; keyboard Enter opens chooser","browser_back_with_full_viewer_over_art_dialog":"both close and focus returns to first chapter heading","no_javascript":"all chapters visible; Begin study remains; original1536px image opens directly"},
+  "preview_directory":{"width768":"complete two-column parent rows; all7 preview pictures loaded at960px intrinsic width; no horizontal overflow; screenshot inspected","source_ownership":"13 cross-page references independently verified"},
+  "preservation":"Original release separately tested all303 picture/study/viewer/close/focus paths on desktop and phone. This refinement preserves exact figure markup and pixels; no new exhaustive303x2 interaction claim is made.",
+  "release":"Public deployment and live smoke check remain separate. See parent work chapter-refinement-release-20260923.json."
+}
