@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent actual-pixel and official-scripture reviewer",
+  "scope": "Creation landscape original review",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "bb-created-earth",
+      "generationKey": "bb-created-earth",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb7-90b1-7151-8e23-00a02bf70f7b\\exec-cc5b98fd-861c-4a4a-a022-476d123e16db.png",
+      "sha256": "6d7e00c9bcfd974bbcaf3691a2af163219d9e5a94181edc530a4733923dae7fc",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A world filled with life",
+      "alt": "Sunlight reaches a green mountain valley where a river flows past wildflowers and pines beneath snowy peaks.",
+      "caption": "Light reaches the valley as water runs between the stones and flowers grow along the bank. The life and beauty of the earth invite us to remember the Son through whom it was created.",
+      "refs": [
+        [
+          "pgp/moses/1",
+          "Moses 1:31–39",
+          "31-39"
+        ]
+      ],
+      "findings": "Direct actual-pixel inspection: photographic mountain rock, snow, river flow, mist, conifers and varied foreground plants; coherent depth, scale and sunlight. No human likeness, invented text, celestial figure or literal vision scene. Appropriate contemplative created-earth landscape for Moses1:31-39, with visible life limited to plants; do not claim visible animals.",
+      "conditions": [
+        "Use as a created-earth illustration beside the Moses passage. Do not identify this as the exact mountain or view Moses saw, or a photograph of the Creation event.",
+        "Keep generated provenance in review records; technical pass is not owner aesthetic approval."
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p31-p39#p31"
+      ]
+    }
+  ]
+}

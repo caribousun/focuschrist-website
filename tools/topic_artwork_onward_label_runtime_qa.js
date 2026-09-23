@@ -48,4 +48,16 @@ openAndCheck('Fallback lesson');
 related.textContent = '';
 openAndCheck('Continue related study');
 dom.window.close();
+const branch = new JSDOM(read('jesus-christ/before-bethlehem.html'), {
+    url: 'https://focuschrist.com/jesus-christ/before-bethlehem.html', runScripts: 'outside-only'
+});
+branch.window.HTMLDialogElement.prototype.showModal = function () { this.setAttribute('open', ''); };
+branch.window.HTMLDialogElement.prototype.close = function () { this.removeAttribute('open'); };
+branch.window.eval(read('topic-artwork-details.js'));
+branch.window.document.dispatchEvent(new branch.window.Event('DOMContentLoaded'));
+branch.window.document.querySelector('[data-topic-artwork-detail]').click();
+const branchActions = branch.window.document.querySelector('#topicArtworkDetailDialog .fc-artwork-detail-actions');
+assert([...branchActions.querySelectorAll('a')].some(a => a.pathname === '/jesus-christ/mortal-ministry.html'), 'Picture study follows the next main journey study');
+assert(![...branchActions.querySelectorAll('a')].some(a => a.pathname === '/birth-of-christ.html'), 'A related companion must not displace the next main study');
+branch.window.close();
 console.log('Onward artwork label QA PASS: real nested card, source labels, plain/empty fallback and focus return');

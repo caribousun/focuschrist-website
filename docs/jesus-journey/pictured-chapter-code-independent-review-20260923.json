@@ -1,0 +1,57 @@
+{
+  "status": "pass",
+  "scope": "Independent grouping/navigation, reference-card ownership, canonical artwork placement and preservation review",
+  "baseline_commit": "a343efb9857fa94f98c0c105b2ea87252b716016",
+  "tests": {
+    "navigation_node_tests": {
+      "passed": 17,
+      "failed": 0,
+      "runtime": "node with WORK/qa-jsdom/node_modules"
+    },
+    "visual_coverage_unittests": {
+      "passed": 11,
+      "failed": 0
+    },
+    "independent_render_scan": {
+      "pages": 77,
+      "selectable_groups_with_images": 250,
+      "parent_first_directory_previews": 8
+    }
+  },
+  "code_findings": [
+    "Groups collect only contiguous sections referencing the immediately preceding leader; invalid metadata returns before UI mutation and leaves full no-JS study visible.",
+    "All sections remain in DOM with original IDs; subordinate/nested hashes reveal complete group and preserve scroll target. Back/Forward, same-page anchors, focus recovery, print and whole-study behaviors pass independent tests.",
+    "Within-study buttons name destination chapter; separate next-study route follows exact main eight-study order. Related-study links remain separate.",
+    "Reference blocks link exact original owners and keep image/title/caption context; no body-original duplication. Parent Nativity preview is800x360 and exact destination alt.",
+    "Birth final section adds four existing owner-matched previews; actual dimensions960x640 and three800x533; their bytes remain identical to HEAD."
+  ],
+  "canonical_review": {
+    "placement_changes": 21,
+    "group_fields": 56,
+    "assessment": "Every moved caption and target context read independently.15 parable moves join same-story explanation;6 modern collection moves serve wider reading guides. Good Shepherd, talents and minas moves accompany thematic explanation/return accounts, not a claim to preserve literal event order through every illustration. Source prose, refs and IDs exactly equal HEAD after removing group metadata.",
+    "source_manifest": "work/parable-chapter-picture-data-change-receipt.json"
+  },
+  "art_preservation": {
+    "prior_original_registry_hashes": 303,
+    "actual_derivative_hashes_verified": 606,
+    "new_original_keys": [
+      "bb-created-earth",
+      "bn-hear-the-voice",
+      "bn-scriptures-explained"
+    ],
+    "old_complete_figures_preserved": 303,
+    "markup_exception": "Sower links gain exact verse targets matching unchanged labels and registry refs; image/caption text preserved."
+  },
+  "approved_early_scene_allowlist": [
+    "tp-lamp-salt",
+    "tp-lilies-birds",
+    "tp-vine-pruning",
+    "rt-accessible-home"
+  ],
+  "early_scene_reason": "Exact captions distinguish city comparison, spinning/lilies contrast, John15 withered branches and present-day care. These four may move before introductory prose with all paragraph order and source links retained. Do not generalize to unreviewed scenes.",
+  "limitations": [
+    "Root owns browser/layout verification.",
+    "Canonical review agent must bind final rendered hashes after all four early-scene moves and rebuild.",
+    "No owner aesthetic approval or publication inferred."
+  ]
+}

@@ -165,7 +165,7 @@
             full.setAttribute('aria-haspopup', 'dialog');
             full.dataset.fullImageAlt = image.alt;
 
-            const related = !record.study && Array.from(main.querySelectorAll('#continue-study a[href], #conference-pathways a[href]')).find(function (link) {
+            const related = !record.study && Array.from(main.querySelectorAll('#next-study a[href], #continue-study a[href], #conference-pathways a[href]')).find(function (link) {
                 const url = new URL(link.href);
                 return url.origin === location.origin && url.pathname !== location.pathname && !link.querySelector('img');
             });

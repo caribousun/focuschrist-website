@@ -1,0 +1,434 @@
+{
+  "status": "pass",
+  "scope": "Final78 page source/context and paragraph-rhythm hash binding",
+  "reviewed_on": "2026-09-23",
+  "reviewer": "remaining_gospel_art; authored canonical relocations and references independently approved by saved_art_review",
+  "canonical_independent_review": {
+    "path": "focus-jesus/docs/jesus-journey/final-density-semantic-review-20260923.json",
+    "sha256": "8ccdc3f24b112ac98865a44697ba0da7851949564c73853a50207937f320c48d",
+    "reviewer": "saved_art_review",
+    "pre_lf_sha256": "1d32a5725ee26e5b8551e294d1509504e9e7e6a54b4c50acd196b8a86dc0fcf2",
+    "pre_resource_flow_sha256": "78bbc26030729251d8b2add8744611b8ad6ad2eebf7cd3bbab51611489bf8bd7"
+  },
+  "preserved_prior_review": "docs/jesus-journey/chapter-picture-source-review-20260923.json",
+  "findings": [
+    "All78 pages,262 selectable groups,307 originals and exact owner references pass40 Python journey tests.",
+    "Independent approval covers13 art relocations,43 intro flags, five exact scene references and Birth Benjamin placement.",
+    "Leper caption kneeling, appeal, compassion and touch directly verified in official Mark1:40\u201345; appearance and setting remain artistic interpretation.",
+    "Final leper order places compassionate touch with Mark1 discussion and withered-hand companion after Mark3 paragraph.",
+    "All earlier approvals and source evidence retained; browser composition and publication verified separately by root."
+  ],
+  "fresh_official_sources": [
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p40-p45#p40"
+  ],
+  "limitations": [
+    "Unchanged scripture teaching relies on preserved earlier source reviews, not fresh retrieval of every passage.",
+    "Structural and semantic acceptance does not imply owner aesthetic approval or public deployment."
+  ],
+  "validation": {
+    "python_journey_tests": 40,
+    "pages": 78,
+    "selectable_groups": 262,
+    "paragraph_runs_over_two": 0,
+    "originals": 307,
+    "media_voice_qa": "pass",
+    "journey_release_gate": "pass"
+  },
+  "documents": [
+    {
+      "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "published_text_sha256": "7432c457be602a020926ca7570f18b80307421bc1e64b25a422da2cf2aaf4683",
+      "html_sha256": "8e52a87ea0e2c3500e61d170bd76b1961fddf6aea0711074877dcfda60e171c1"
+    },
+    {
+      "path": "birth-of-christ.html",
+      "published_text_sha256": "dbbe4e9e10824448e3f2e93a6d9d1abe1d0f61201e1e2e7b870f29d49dd21a25",
+      "html_sha256": "a41cdac7470b14f39872488804675e4a10df72e9598269d354360449cd474ec8",
+      "pre_resource_flow_html_sha256": "4fc2ba488adb4d5777eb4dab42ba39de06333cbe082e2511e9c021c6922bfaeb"
+    },
+    {
+      "path": "jesus-christ/before-bethlehem.html",
+      "published_text_sha256": "81e3cbfa706424752aa07d17711393b146fedd0aba0e4dde73af211e64309b21",
+      "html_sha256": "d61fce35037adb9e321fce89cd99deaa9d343625af4fc5d5a848c4b8854a85a0"
+    },
+    {
+      "path": "jesus-christ/miracles-and-compassion.html",
+      "published_text_sha256": "3534a139c5fb5ab6142f17b4b61e9c857aeae5d573c938e45c5f8e94ec20cb71",
+      "html_sha256": "dd5b91056cf22231e12179d50f443b3e90441b82458b0093b5dccca1e1eed273"
+    },
+    {
+      "path": "jesus-christ/mortal-ministry.html",
+      "published_text_sha256": "89344a4c36b0e8bec8e6530dffa73b0d2c88919e962fd7db3d9f8b95b5089840",
+      "html_sha256": "651a85e377b514ef1c591fb629c94710036cb3377d40ca8ed778bb4d94904bec"
+    },
+    {
+      "path": "jesus-christ/parables/barren-fig.html",
+      "published_text_sha256": "89c65ae5a9615b41fe804890b18eebfa9116a560a8d44606fe8b208f59a3a163",
+      "html_sha256": "b0ed76ce05166937c2dca212f156d30881a3f913a108fb66251db29757c57127"
+    },
+    {
+      "path": "jesus-christ/parables/birds-lilies.html",
+      "published_text_sha256": "8960b83a62ee15a247be5fbc934300773585e69ef804b1e53e16813497ee60e2",
+      "html_sha256": "8f83b1e354505bb2f248b22e0746fc44c6b3f8a988907daf07b1eb83a0fabae7"
+    },
+    {
+      "path": "jesus-christ/parables/blind-guides.html",
+      "published_text_sha256": "edc8a06b3f9362786be740deff5c452aab8b2d7415f6e763448dd322c7d1b432",
+      "html_sha256": "bdbed274e1769b39ae3de72d9689bdfcf0b9edc11c5d16f60413243093393a22"
+    },
+    {
+      "path": "jesus-christ/parables/bridegroom.html",
+      "published_text_sha256": "27f928f21befe43369a84d1ddf8cfa48e525799738e499c3a5209d7244cf7914",
+      "html_sha256": "708ab733a13fbb584d2f5543b8171b67a96c6a229db3d6b12db82156082792e0"
+    },
+    {
+      "path": "jesus-christ/parables/budding-fig.html",
+      "published_text_sha256": "b6a9ae207f0af0bb510ba33b461c531fb2b706b53f8595a65a6d70be3af8a04c",
+      "html_sha256": "6a71b3500b1a5e03a565472b8970a4954c0cd27aee5486dfc40187686dbe461e"
+    },
+    {
+      "path": "jesus-christ/parables/children-marketplace.html",
+      "published_text_sha256": "3104417dd76638dfc258b033da68303e9e6b0812a7db5c5882c7e9085b0c8565",
+      "html_sha256": "6b9dd89e6cae5f313d7763d9346ee7d35a5121294799f254999f43c550ecd282"
+    },
+    {
+      "path": "jesus-christ/parables/closed-door.html",
+      "published_text_sha256": "ab8cb7442344ca09a29dda6bb5d0eb13940642bf5cc45fcf74dd012253dfa39f",
+      "html_sha256": "5928fc2330e65fdcf5ab6f81e34931a4c7b2d5e82a25bbbff73952cec4265ec5"
+    },
+    {
+      "path": "jesus-christ/parables/divided-house.html",
+      "published_text_sha256": "883997eef09affe7e9202e4ce8e1cd6791f0389e2fbd0770c6675ec8fb6c5e46",
+      "html_sha256": "d5a89a31d8c0e070bd7dc38863e5e64782a9c8777b0d89d7a6d5d8c3ffebcbb7"
+    },
+    {
+      "path": "jesus-christ/parables/doorkeeper.html",
+      "published_text_sha256": "63287c0b716c255572d71f3d46a485da67ca6c09553e0f6ab0908dded67bd37f",
+      "html_sha256": "8d881451375a6067e82275ee2a302725a0eeb7d5301446f651488769f5728592"
+    },
+    {
+      "path": "jesus-christ/parables/faithful-servant.html",
+      "published_text_sha256": "a4037699c8fe7666aef78c77b7f4bc5f91587c8ca078519447f1ce5ffa0be30e",
+      "html_sha256": "cc01f43e6b369a8af8cce1aa6fe2a8e252581ad19bb13e47fab8d1e4bdc45b77"
+    },
+    {
+      "path": "jesus-christ/parables/friend-midnight.html",
+      "published_text_sha256": "d6184d83a70a58f97cce46efba91ad389ddd76ca31557a1cb9923f9a8fa3b75a",
+      "html_sha256": "a3d16a68a128b21c3639691ffec3e35af20033d61160a7627ba7c8c18301aa91"
+    },
+    {
+      "path": "jesus-christ/parables/good-samaritan.html",
+      "published_text_sha256": "ff205f1fb118fa1d27503c255472730b0283a90ed9672c3e1b7958133708cdb9",
+      "html_sha256": "6334d04b766b12d27e31b0b985f09e0ff18585f28828166c3e3b0c1983138493"
+    },
+    {
+      "path": "jesus-christ/parables/good-shepherd.html",
+      "published_text_sha256": "75788a5a72d6b4f15049a287aad9a9d40f33aabfcc3c7df2d6f5331b46ce7503",
+      "html_sha256": "2ff84d899b82fab191026c4baef30d1bc4e9943d9cfa08e79d52927ef2bc290f"
+    },
+    {
+      "path": "jesus-christ/parables/grain-wheat.html",
+      "published_text_sha256": "f85f0f6bf691b1f0ce0ece02587c8e89e6580f1a2ca6d231ab8c7083c158fa1c",
+      "html_sha256": "3a8f51fc62b07acdc81607bf927b6bf995835aebf8f0c3908b07985af2efd1c5"
+    },
+    {
+      "path": "jesus-christ/parables/great-supper.html",
+      "published_text_sha256": "0305924c2019d404fb8f93bb022480a333e02e4f67a2272b5e53695b585d9c79",
+      "html_sha256": "fd1b86ff21eca4b5562d61fe62c2dfff94a7d61610ab9327976dbfc43b47e0eb"
+    },
+    {
+      "path": "jesus-christ/parables/growing-seed.html",
+      "published_text_sha256": "1535bcf8e7d33d1f26c53aaa91432bf6dbce6d4b2370770d6d9b693c3f0d5207",
+      "html_sha256": "f228ac4005c154968e0d7782132081d1a5ec29445b46f0f6ba5db016afaed97e"
+    },
+    {
+      "path": "jesus-christ/parables/hearing.html",
+      "published_text_sha256": "e1de73d4faece041558bb81f120c02aff5585c3f4ddb9813c5606ca3a8ee29be",
+      "html_sha256": "ab0432da40a3b38af368d116ce90928ac42d12f2cb762bafcfaba875d39b5348"
+    },
+    {
+      "path": "jesus-christ/parables/hen-chicks.html",
+      "published_text_sha256": "85dcc9a42c7e11190b057c8f12ae8e0361f118769b5e4e6cd76acef5e5773779",
+      "html_sha256": "c6789837a202107188a6ef3d20ebd0a0758b489fb744fedb9605f6dd4ea640f6"
+    },
+    {
+      "path": "jesus-christ/parables/hidden-treasure.html",
+      "published_text_sha256": "16d52b6bb54a3f4c86d7f779369552662e5b59fe9f37d5ed38144c316e272a83",
+      "html_sha256": "2dbce53d7ba00968f7decd20f75152004f89b2a1d1d8c4c5125713e1a62df9c3"
+    },
+    {
+      "path": "jesus-christ/parables/householder.html",
+      "published_text_sha256": "e0524faaa8a5366222489a2bfa05ccf2563f6a0065d18077a72fb614b1354121",
+      "html_sha256": "978ec14be54d21086ef308128bc4383526f43134846c2cf53098e4a0dee4fe15"
+    },
+    {
+      "path": "jesus-christ/parables/king-war.html",
+      "published_text_sha256": "eba48ac1d20c64c9714fddf4b4d112af87e0dcd0286280cb3420fc2db5568dfe",
+      "html_sha256": "d271d7b02b26645cc2c739689f0da44a7ff115f3a824fa24c070206a003dc198"
+    },
+    {
+      "path": "jesus-christ/parables/kingdom.html",
+      "published_text_sha256": "5f82f06d5d5bb34a64e5c1c3eb1afef6f1112239d5a90229b60197a1296d4d51",
+      "html_sha256": "f526df72c3a35583458f38bf649cb7cee7f789e5405bd7c6207fe279a8c005ab"
+    },
+    {
+      "path": "jesus-christ/parables/laborers-vineyard.html",
+      "published_text_sha256": "685911e6e85566176ade8f480b5831ceb5e864b6c1e72630be9805e0c1e75c9d",
+      "html_sha256": "e450542a2dbb7f26097f53a4bd98150071943b27674adf7f03ac15c00a992eb7"
+    },
+    {
+      "path": "jesus-christ/parables/lamp.html",
+      "published_text_sha256": "b74b81ea4dccc7349d545724a0f8197bb5c1315c3f266a04b1871e1de90ec684",
+      "html_sha256": "a22f4f249ae287f795df8e779d16ef85ff9ec88586b152fdb198d8bc0ce9ba89"
+    },
+    {
+      "path": "jesus-christ/parables/leaven.html",
+      "published_text_sha256": "3c50d9da4cc49cbf014b214940f2c27f3be60e8e1bfd212d4391c4e61f3f0f91",
+      "html_sha256": "fb0a73ad778030cbb3568260b92f86e0f22ee317e5fbd3cdc199655ba38a26e4"
+    },
+    {
+      "path": "jesus-christ/parables/lost-coin.html",
+      "published_text_sha256": "887a3bb3ce8ee8db0b635622bc1e00f3f1ff27b93bdd3b0cad6b1846d3ebf87d",
+      "html_sha256": "bff245c41746a518411c9e45c48614b800e80ad98f40efe0c5ce15fa23717f2c"
+    },
+    {
+      "path": "jesus-christ/parables/lost-sheep.html",
+      "published_text_sha256": "834d5a5739bb50c6085941e12e6bf83f21e5010a591716ee45e215aa24e9a0bf",
+      "html_sha256": "f1f08a48ca1f06d129847c4ff41bd53c3f9ad0bc6f6a44c474d64557521b20e5"
+    },
+    {
+      "path": "jesus-christ/parables/mercy.html",
+      "published_text_sha256": "178938e76baa72d26deaaf4dfa6ac9ba29d76e371ec9ccd3fbaaf35a8608fc4a",
+      "html_sha256": "cc5027acb304a88a607fe74cfe5c493d90cbf689999bf76ce90ba4b576a7a0d8"
+    },
+    {
+      "path": "jesus-christ/parables/minas.html",
+      "published_text_sha256": "dd477bf63ab1776017149b6562e9adba8a20e792b19a8f0baf3de49ce5680ea9",
+      "html_sha256": "2d9a47d204a1a4bcab4d973a5975326d4af0c0028a0fe87b8b67604da2b405e7"
+    },
+    {
+      "path": "jesus-christ/parables/mote-beam.html",
+      "published_text_sha256": "e2ce598aa89c79b27c78f968632e6c023207f2ae0adc18c867f9f4697b00ab22",
+      "html_sha256": "a3220f6eab3f7bfff7b136c0aeb2d135a8f2e1247505c49bcb8454d560895b8c"
+    },
+    {
+      "path": "jesus-christ/parables/mustard-seed.html",
+      "published_text_sha256": "ad9e3922528695e7f48c59c3630e9a2bbd3ff44cc1238154e85d822398d26cbe",
+      "html_sha256": "13bdcfa2b8f8c0ecb0f11cc72a31b7b782229ee7a2c547859b1a0a67c79c06c7"
+    },
+    {
+      "path": "jesus-christ/parables/neighbor.html",
+      "published_text_sha256": "6ea2bf058a5bae320f4af3c8d9d4695fd2d276fc696383a8c8626484ede69949",
+      "html_sha256": "aac634732fdcbbb7506ebac4a758cd89525af7cfad6707894ad0a856cffcc773"
+    },
+    {
+      "path": "jesus-christ/parables/net.html",
+      "published_text_sha256": "8b3b97a80bcf699a4bbb056c7e76093ffe4b43422707c6581c9e1ccd9b986ce1",
+      "html_sha256": "a279adbf92df635e0799de135e28b6dcdf878089bf5d94018553f94d47fc5418"
+    },
+    {
+      "path": "jesus-christ/parables/new-patch.html",
+      "published_text_sha256": "d5f984f96ff5d644f4a70a2f8d1d6fde194dd42d16efe7a5829964891122e389",
+      "html_sha256": "daa625bd5cf939627abc23b2d012285b208b9cf5295360a3f0eb52f8af52fe0f"
+    },
+    {
+      "path": "jesus-christ/parables/new-wineskins.html",
+      "published_text_sha256": "30c6389eb8059ad81d95c0f361bb82b133767dccb2c1a8a0a9e648e0e28f54f7",
+      "html_sha256": "19c7c02cb94d338ca0fbd6de3ca96a1b7b0cc34f68279f67d28259f99013e281"
+    },
+    {
+      "path": "jesus-christ/parables/parent-gifts.html",
+      "published_text_sha256": "148c7dd95607cf9df5d96b5a8d9ced469b57c578ca16ba98aee4e980d802bddd",
+      "html_sha256": "a95b0ef7f64e0e25cd5c8fb8baf4d35823c5649cf71e22c1c407b106a73b8ff2"
+    },
+    {
+      "path": "jesus-christ/parables/pearl.html",
+      "published_text_sha256": "bbea334df66d871b7818317f0ef7f8ea6ba320db4697ff71f1912df5d145b5d7",
+      "html_sha256": "64972420085acdf40bda7b95838add991a662233fe1e3bd3331f70db6d9a2a6f"
+    },
+    {
+      "path": "jesus-christ/parables/persistent-widow.html",
+      "published_text_sha256": "c0f7051c18e9b97b5864b73870cef2b6721692ae050d0b41bd918c0d2b036601",
+      "html_sha256": "a678b0cbe4470adb39c9fd4b939a882cab74cb062cc9c3a16abbb3a4e26c2844"
+    },
+    {
+      "path": "jesus-christ/parables/pharisee-publican.html",
+      "published_text_sha256": "7df33754acd77fc74a3f75ba3f71a60fbd9b2b67c0a5393c7f7786e9158a638e",
+      "html_sha256": "df74e257545fd434f20846bf7f3b41ce04b90f055efdba34a8e4889e907bb60f"
+    },
+    {
+      "path": "jesus-christ/parables/prodigal-son.html",
+      "published_text_sha256": "0dcbed2a8cb959cc9cdf87e19f63e2b2802f16a402965b7c893b685f4ceb3b41",
+      "html_sha256": "10e81334c36b96d85dd8413e14e6073bd0477d5082f2d2b95cc626533c5fa8df"
+    },
+    {
+      "path": "jesus-christ/parables/returning-spirit.html",
+      "published_text_sha256": "d439d5203104c8b6dfb227d77951a2630cb335fada541f59a10e75fb433ef7a7",
+      "html_sha256": "453578ab7f1d95705237e6498eb71c4105f2b7d622bc32c0a36b63b8974605aa"
+    },
+    {
+      "path": "jesus-christ/parables/rich-fool.html",
+      "published_text_sha256": "c4eae1e8dd878ff640297be1cfd5a5720ad4bd9322772f8005ee2e71a903dec4",
+      "html_sha256": "97a32920d0da7663f85fd8c3f36f4aa222d29d295a7fec328e3757244688fee4"
+    },
+    {
+      "path": "jesus-christ/parables/rich-man-lazarus.html",
+      "published_text_sha256": "d0c80a5a7b28fc433efcdcc8e047dc4cf7f1a08d5f81480ef8608fa346556803",
+      "html_sha256": "508ba2c923e028f5b57a06fedc710bc255af4d2adf784308c5e3f71743c22e73"
+    },
+    {
+      "path": "jesus-christ/parables/royal-wedding.html",
+      "published_text_sha256": "e37f570aeaa28e8cc32bcd9c61413b63cd106c9a93831b3d1dcad6a8cc747f76",
+      "html_sha256": "f682bf548c148a0bbdbbb1bb4f22fd6f249eb6f95b8aa9e67d2b5164bd6e4ab7"
+    },
+    {
+      "path": "jesus-christ/parables/salt.html",
+      "published_text_sha256": "a71f6a11a16800a5a785dff2128030dc634ea46f3dc78f0185b047d2070b3081",
+      "html_sha256": "aa68c0ced59e0ad18d89f0b545d04f355892247d31c0af743a54d967c8f4be75"
+    },
+    {
+      "path": "jesus-christ/parables/servant-duty.html",
+      "published_text_sha256": "3e953765651728146f013f3e6ea97e3eced3e94a9f45a85be9319a74fa819d25",
+      "html_sha256": "77e15c0c1fbfee58633841778fef015a08e76393c9d971c44e3cfc06551021f8"
+    },
+    {
+      "path": "jesus-christ/parables/settle-adversary.html",
+      "published_text_sha256": "4830a78d3d02f4f3054337fdbe4a78a4fb080f3a8727d4a5851e467c102020f4",
+      "html_sha256": "b75205cc73047b3f9108a17aaf3df3e6beb0a36167b9297699cc42fd96107b2e"
+    },
+    {
+      "path": "jesus-christ/parables/sheep-goats.html",
+      "published_text_sha256": "da7b218af7d47375fda9453da062d613a1200c3e33c99d0de37231f467007fad",
+      "html_sha256": "d2fdec024310e461c0084407d53c7b3cd674a58cd318462ff50464d08baca021"
+    },
+    {
+      "path": "jesus-christ/parables/sheep-sabbath.html",
+      "published_text_sha256": "098896b30d6d8418adf11b9971ec474e16c24a24d111ad89ac7ea6466f7774b2",
+      "html_sha256": "c88bd313db98458dbc2126404323e762323079af756cbc7f3615518cd9bf2ced"
+    },
+    {
+      "path": "jesus-christ/parables/sower.html",
+      "published_text_sha256": "25778e5738836651039e7ef632b35871e7cf121529733c154319140fae2c46b6",
+      "html_sha256": "8509fed845bdaa45d0dfd1b465e62982dffe4cd9e029180080e23755bc140087"
+    },
+    {
+      "path": "jesus-christ/parables/stewardship.html",
+      "published_text_sha256": "a36ef7905e49e4721489fd2041c9dee177b3e14d8442a7f60d7314a0f0bcecf7",
+      "html_sha256": "7f686ab65361af54d3c853ebd95deec674e5d0568e80559b19c15bd816e94df8"
+    },
+    {
+      "path": "jesus-christ/parables/strong-man.html",
+      "published_text_sha256": "16e749712cbdea8cbfc7ffa2002fb36f8747bc1febc8dce313d182d4ea24b724",
+      "html_sha256": "0b21754e005c108251b5511e7fb30a45f608a3e67d6823c672a04053da512f8e"
+    },
+    {
+      "path": "jesus-christ/parables/talents.html",
+      "published_text_sha256": "07f1a55df3fdb5ceb56b8e693cb8605b94550884182db2154d7b53c20e81dc4c",
+      "html_sha256": "30be5f40c357c2e8b7e04b9d38747e7754dc4a77fa3f93f2a2a4b80b0c565f42"
+    },
+    {
+      "path": "jesus-christ/parables/ten-virgins.html",
+      "published_text_sha256": "0a3a494bf9fe5a3c3803aae6c0205ddacb296c3ab7146077f658de929cbeec92",
+      "html_sha256": "536495e33c1d6f0fb6aa4922d74023668571cfcf2aeb8c5f3beda99b5e26f7ce"
+    },
+    {
+      "path": "jesus-christ/parables/thief-night.html",
+      "published_text_sha256": "966915150049374427e29211136ce9033ea9617bb17425c1c6fde3d418951763",
+      "html_sha256": "d0d54f8c789b79161b90be011b7d6f83f4b9ed8bcb0bc67ee35360a90a807138"
+    },
+    {
+      "path": "jesus-christ/parables/tower-builder.html",
+      "published_text_sha256": "b1ed65af4177f03860d1fa173f794355064898f25eab3e555a36e66141118ec5",
+      "html_sha256": "fbea9ee126e61534536ef65fead2ee23755fc502f7d73cf74da700b60b9b4682"
+    },
+    {
+      "path": "jesus-christ/parables/tree-fruit.html",
+      "published_text_sha256": "eeede9b37e7197f46d9dbb9b92a3672e08c1c2c496eb7ba169c63d2a0b32fb3b",
+      "html_sha256": "d6a2f278a75a10e617fb1e408d41df4793de261e8c88af9d65398112671e023a"
+    },
+    {
+      "path": "jesus-christ/parables/two-debtors.html",
+      "published_text_sha256": "80cad8e4e838c9eddb3dfec78a94430ab7323c3da22ab3e7ce2ffe342894ec5f",
+      "html_sha256": "c25807a255a1bfbaf3a0fe97b341548e896fd920a73726ec0db84232a650c008"
+    },
+    {
+      "path": "jesus-christ/parables/two-sons.html",
+      "published_text_sha256": "e98699c69ab063364a0e91b44294c798016d6f928e89c01cf913e9eae032355a",
+      "html_sha256": "3bd60da8698ff457b6ea3116b3117e2e2b127a42027e5cc63c13ba2935121cf6"
+    },
+    {
+      "path": "jesus-christ/parables/unjust-steward.html",
+      "published_text_sha256": "7f7050677e9e26322fd480c80bc1c506aa8af41e8bff9e479fdd26fdc255353b",
+      "html_sha256": "926570c7d25b845fe0cdf9e5ea03381076bf17979389096e4783845b562a5a20"
+    },
+    {
+      "path": "jesus-christ/parables/unmerciful-servant.html",
+      "published_text_sha256": "99a3debf9b25869cd195ca7d50856b137bb425ef876dc9fc9b18bf52ee495d75",
+      "html_sha256": "87f2b7c88425be6b1ac46572fed53f9cd76dbd17f386b2b8bb585c7d30709a02"
+    },
+    {
+      "path": "jesus-christ/parables/vine-branches.html",
+      "published_text_sha256": "be98b9eeaa356471341924250c070d82af66a5b6e260e8daa1932fd7d509a3f3",
+      "html_sha256": "4c7a863b5f81809586a967f617d0daa97bee2328c4883fd97c7d547ff2f0c2b5"
+    },
+    {
+      "path": "jesus-christ/parables/watchful-servants.html",
+      "published_text_sha256": "712ebbeb60c74ede7ec84d68a65ee8b0884abe64946d9408acdd10ce50fddad1",
+      "html_sha256": "f202f1e964ba908be2b3469f4d0bcf774689662007feac577141d486a95f922c"
+    },
+    {
+      "path": "jesus-christ/parables/watchfulness.html",
+      "published_text_sha256": "964fa2e3f186929bbbf5e685d97e36216ef5d536d3573fa42376ff43199fc243",
+      "html_sha256": "a3b555dae59c3323480ca50eaa6756148fecf6c9dde6e00683cd798124ccc252"
+    },
+    {
+      "path": "jesus-christ/parables/wedding-places.html",
+      "published_text_sha256": "b4ac0de4b7f444569cac57accbcc22c1e24f6aaafcdd5fab282e5c86808e8b20",
+      "html_sha256": "09477c62b7404301c9e7e4e61b4a6bc0b32b452d62af163f959b2d9d6921b4e6"
+    },
+    {
+      "path": "jesus-christ/parables/wheat-tares.html",
+      "published_text_sha256": "1a431c85cf618c7ddf34a13da0c616dd220b9e4999ac4755436914f19dbe9a4e",
+      "html_sha256": "7a4bc0cf6f1b992e2591b640456ca51ed613fd146c03daccd3da00fd89675031"
+    },
+    {
+      "path": "jesus-christ/parables/wicked-tenants.html",
+      "published_text_sha256": "ec5ed189e70c5189632640aa170851416d1a2394533e87505e14825ab0f88632",
+      "html_sha256": "4ff292ab7c3e8d091131f90ea500ec3d401b94c73298ed79eeee82ed52217d73"
+    },
+    {
+      "path": "jesus-christ/parables/wise-foolish-builders.html",
+      "published_text_sha256": "c3eaaab3f2cf8dfbeb23e6a49a386c8fdbf3913994143bf10cc3555a371fb97e",
+      "html_sha256": "728870909f1996faf077bf42fcfff46f30d86a4a36d9a79bc7d435fca94fbb53"
+    },
+    {
+      "path": "jesus-christ/parables/woman-childbirth.html",
+      "published_text_sha256": "12c82db59aa6baf7b86c532f627e2e7309f7642673fd2fe9ef6c8ae5f5fb2826",
+      "html_sha256": "97059ad17f5585c822fc7b25c95ee1598066fdf9946b84834da6766ef7ee6384"
+    },
+    {
+      "path": "jesus-christ/redeemer-and-risen-lord.html",
+      "published_text_sha256": "c37251e75940ca73ea8f7845fbcec3ba4c2d9d676c764fd5a35cde15ef8cabd4",
+      "html_sha256": "c2f8e10f83d1dd04cf64b866bda097131a04bc36438834b6df34617043161d3a"
+    },
+    {
+      "path": "jesus-christ/restoration-and-today.html",
+      "published_text_sha256": "6aacfccbae0941dec42a597aae9696c5087a76bdccc140fd070f95f7c407ea45",
+      "html_sha256": "ac6900ec18f6c9b77e3476bb65839c4d02d809158a6491613819548fc2203166"
+    },
+    {
+      "path": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "published_text_sha256": "77f184aae4c56552203acb872ef36ead32da65a7c777cedd1bef277db080a758",
+      "html_sha256": "a03d3dfa54fb61e77930f93f1b0911af49d7473d3e17a26840a95ec012577dc9"
+    },
+    {
+      "path": "jesus-christ/teachings-and-parables.html",
+      "published_text_sha256": "6bd2b00e0ff20cb588f1b0035620a293e999de2e231bfd1c4c03ebc4d6d8cd51",
+      "html_sha256": "3fb7918b16c027d98f4705cfba9d1e01b937d17a840d525f6f5bc9dc7d8f0434"
+    }
+  ],
+  "resource_flow_independent_review": {
+    "path": "focus-jesus/docs/jesus-journey/birth-resource-flow-independent-review-20260923.json",
+    "sha256": "391965c332c5947b4fd66aa61b67edd6072708e6964f6e6b47a6c1868a698544"
+  }
+}

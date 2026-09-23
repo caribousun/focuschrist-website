@@ -1978,6 +1978,28 @@
       ]
     },
     {
+      "title": "A world filled with life",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/jesus-journey/bb-created-earth-960.webp",
+      "fullImage": "/assets/page-art/jesus-journey/bb-created-earth-full.webp",
+      "alt": "Sunlight reaches a green mountain valley where a river flows past wildflowers and pines beneath snowy peaks.",
+      "id": "art-0313728c3752",
+      "occurrences": [
+        {
+          "id": "source-1aef77ca30ea",
+          "page": "/jesus-christ/before-bethlehem.html",
+          "pageTitle": "Jesus Christ Before Bethlehem",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/jesus-journey/bb-created-earth-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bb-created-earth-960.webp\"])",
+          "title": "A world filled with life"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A young adult man reads the Book of Mormon on a commuter train.",
       "category": "Gospel Studies",
       "thumbnail": "/assets/heroes/topics/book-of-mormon-full.webp",
@@ -6485,6 +6507,28 @@
       ]
     },
     {
+      "title": "He helps them understand",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/jesus-journey/bn-scriptures-explained-960.webp",
+      "fullImage": "/assets/page-art/jesus-journey/bn-scriptures-explained-full.webp",
+      "alt": "Jesus speaks with seated listeners while an older man holds a bound set of metal plates.",
+      "id": "art-b4be173506aa",
+      "occurrences": [
+        {
+          "id": "source-dd7a2df86ef1",
+          "page": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+          "pageTitle": "The Risen Savior in the Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/jesus-journey/bn-scriptures-explained-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bn-scriptures-explained-960.webp\"])",
+          "title": "He helps them understand"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He leads the man outside",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/mc-bethsaida-led-960.webp",
@@ -10359,6 +10403,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/bible-together/mosiah-engraved-stone-full.webp\"]:has(img[src=\"../assets/page-art/bible-together/mosiah-engraved-stone-960.webp\"])",
           "title": "Mosiah interprets the engraved stone"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Moved with compassion",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/jesus-journey/mc-leper-touch-960.webp",
+      "fullImage": "/assets/page-art/jesus-journey/mc-leper-touch-full.webp",
+      "alt": "Jesus rests His hand on the shoulder of a kneeling man, and they look into each other’s eyes.",
+      "id": "art-98daad843b00",
+      "occurrences": [
+        {
+          "id": "source-50f2c4c5fd38",
+          "page": "/jesus-christ/miracles-and-compassion.html",
+          "pageTitle": "The Miracles and Compassion of Jesus Christ",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/jesus-journey/mc-leper-touch-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/mc-leper-touch-960.webp\"])",
+          "title": "Moved with compassion"
         }
       ],
       "categories": [
@@ -15864,6 +15930,28 @@
       ]
     },
     {
+      "title": "They turn to listen",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/jesus-journey/bn-hear-the-voice-960.webp",
+      "fullImage": "/assets/page-art/jesus-journey/bn-hear-the-voice-full.webp",
+      "alt": "People gathered near the temple lift their faces toward the sky.",
+      "id": "art-d3c5c1a41aba",
+      "occurrences": [
+        {
+          "id": "source-46515e0f8234",
+          "page": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+          "pageTitle": "The Risen Savior in the Book of Mormon",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/jesus-journey/bn-hear-the-voice-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bn-hear-the-voice-960.webp\"])",
+          "title": "They turn to listen"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Those who stayed nearby",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/sensitive-scene-preview.png",
@@ -16878,15 +16966,15 @@
     }
   ],
   "stats": {
-    "artworks": 757,
-    "occurrences": 768,
+    "artworks": 761,
+    "occurrences": 772,
     "byKind": {
       "artwork": 62,
       "full": 1,
       "hero": 38,
       "legacy": 39,
       "missionary": 9,
-      "topic": 622
+      "topic": 626
     }
   }
 }

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent actual-pixel and official-scripture reviewer",
+  "scope": "Direct original-pixel review of bn-hear-the-voice",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "bn-hear-the-voice",
+      "generationKey": "bn-hear-the-voice",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb7-90b1-7151-8e23-00a02bf70f7b\\exec-eacdeb87-99e1-40e7-a29a-081e972abc71.png",
+      "sha256": "81ed2772a234435c87a6678b731e58bb0face46e7a33cd53c5685d2d96e35112",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "They turn to listen",
+      "alt": "People gathered near the temple lift their faces toward the sky.",
+      "caption": "Faces turn upward as the people listen again. This time they understand the voice directing them to the Beloved Son.",
+      "refs": [
+        [
+          "bofm/3-ne/11",
+          "3 Nephi 11:1–7",
+          "1-7"
+        ]
+      ],
+      "findings": "Photographic varied faces, eyes, skin and woven cloth; coherent crowd anatomy and upward attention. No visible Jesus or descending figure, preserving the moment before verse8. Upward gaze is source-required here, not failed reciprocal eye contact. Architecture and unnamed people are interpretation.",
+      "conditions": [
+        "Do not identify unnamed participants, infer family relationships or claim the temple architecture is archaeologically authenticated.",
+        "Retain sequence before the descent; no Christ figure yet.",
+        "Technical pass is not owner aesthetic approval or browser verification."
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng"
+      ]
+    }
+  ]
+}

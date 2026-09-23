@@ -83,6 +83,17 @@ def card(item, preview=None):
         image=f'<img class="jj-card-preview" src="/{E(preview["thumbnail"])}" width="{preview["width"]}" height="{preview["height"]}" loading="lazy" decoding="async" alt="{E(preview["alt"])}">'
     return f'<a class="jj-card" href="{E(item[0])}">{image}<h3>{E(item[1])}</h3><p>{E(item[2])}</p><span class="jj-card-action">Open study →</span></a>'
 
+def reference_art(block,registry,page):
+    """A linked preview retains its original owning page and never counts as new art."""
+    if 'reference_art' in block:
+        a=registry[block['reference_art']]
+        if a['owner']==page['url'].lstrip('/'):raise ValueError('Same-page original cannot be repeated as a reference')
+        href='/'+a['owner']+'#picture-'+block['reference_art']
+    else:
+        a=block['reference_picture'];href=a['href']
+        if href.split('#')[0]==page['url']:raise ValueError('Same-page reference picture')
+    return '<div class="jj-directory jj-art-reference">'+card([href,a['title'],a['caption']],a)+'</div>'
+
 def render(page,registry,strict):
     source=(ROOT/'answers/jesus-christ-latter-day-saint-beliefs.html').read_text(encoding='utf-8')
     nav=re.search(r'<nav class="nav".*?</nav>',source,re.S).group(0).replace('href="../','href="/')
@@ -100,34 +111,66 @@ def render(page,registry,strict):
     head+=f'<link rel="canonical" href="{url}"><meta name="description" content="{E(page["description"])}"><meta name="robots" content="{robots}"><meta property="og:type" content="article"><meta property="og:site_name" content="focusChrist"><meta property="og:title" content="{E(page["title"])}"><meta property="og:description" content="{E(page["description"])}"><meta property="og:url" content="{url}">'
     head+='<script type="application/ld+json">'+json.dumps({'@context':'https://schema.org','@type':'Article','headline':page['title'],'mainEntityOfPage':url,'isPartOf':{'@type':'WebPage','url':ORIGIN+PARENT},'publisher':{'@type':'Organization','name':'focusChrist','url':ORIGIN}})+'</script>'
     sections=[]
+    used_previews=set()
     for section in page['sections']:
         refs=section.get('refs',[])
-        blocks=[f'<section class="jj-chapter" id="{E(section["id"])}"><p class="jj-kicker">{E(section.get("eyebrow","Read and discover"))}</p><h2>{E(section["title"])}</h2>']
+        group=f' data-chapter-group="{E(section["chapter_group"])}"' if section.get('chapter_group') else ''
+        blocks=[f'<section class="jj-chapter" id="{E(section["id"])}"{group}><p class="jj-kicker">{E(section.get("eyebrow","Read and discover"))}</p><h2>{E(section["title"])}</h2>']
         content=list(section.get('blocks',[]))
+        opening_after=section.get('opening_visual_after_paragraphs',1 if section.get('keep_intro_before_art') else None)
+        if opening_after is not None:
+            visual=next((i for i,b in enumerate(content) if isinstance(b,dict) and any(k in b for k in ('art','cards','reference_art','reference_picture'))),None)
+            if visual is not None:
+                first_visual=content.pop(visual)
+                prose_positions=[i for i,b in enumerate(content) if isinstance(b,str)]
+                if type(opening_after) is not int or not 1<=opening_after<=len(prose_positions):raise ValueError('Invalid opening visual paragraph placement '+section['id'])
+                content.insert(prose_positions[opening_after-1]+1,first_visual)
         # An immediate scene can welcome the reader before its opening paragraph.
         # Keep later scenes and the explicitly sequenced Bountiful departure in context.
         context_first={'bn-households-return','bb-abram-stars','mc-withered-hand','mc-official-servants','tp-withered-fig-tree','tp-writing-ground','bn-man-raised'}
-        if len(content)>1 and isinstance(content[0],str) and isinstance(content[1],dict) and 'art' in content[1] and content[1]['art'] not in context_first:
+        early_scene={'tp-lamp-salt','tp-lilies-birds','tp-vine-pruning','rt-accessible-home'}
+        early=next((i for i,b in enumerate(content) if isinstance(b,dict) and b.get('art') in early_scene),None)
+        if early is not None and opening_after is None:content.insert(0,content.pop(early))
+        if opening_after is None and len(content)>1 and isinstance(content[0],str) and isinstance(content[1],dict) and 'art' in content[1] and content[1]['art'] not in context_first:
             content.insert(0,content.pop(1))
-        opening_directory=section is page['sections'][0] and not any(isinstance(b,dict) and 'art' in b for b in content)
-        if opening_directory:
+        opening_directory=not any(isinstance(b,dict) and 'art' in b for b in content)
+        if opening_directory and opening_after is None:
             directory=next((i for i,b in enumerate(content) if isinstance(b,dict) and 'cards' in b),None)
             if directory is not None:content.insert(0,content.pop(directory))
         for block in content:
             if isinstance(block,str):blocks.append('<div class="jj-reading"><p>'+prose(block,refs)+'</p></div>')
             elif 'art' in block:blocks.append(artwork(block['art'],registry,strict))
+            elif 'reference_art' in block or 'reference_picture' in block:blocks.append(reference_art(block,registry,page))
             elif 'heading' in block:blocks.append('<h3>'+E(block['heading'])+'</h3>')
             elif 'cards' in block:
                 previews={a['owner']:a for a in reversed(list(registry.values())) if a.get('reviewed') and a.get('thumbnail')}
-                blocks.append('<div class="jj-directory">'+''.join(card(c,previews.get(c[0].lstrip('/')) if opening_directory else None) for c in block['cards'])+'</div>')
+                # The existing Nativity companion has its own artwork registry.
+                previews['birth-of-christ.html']={'thumbnail':'assets/page-art/birth-of-christ/12-nativity-hero-800.webp','width':800,'height':360,'alt':'Mary lays her swaddled newborn in a manger while Joseph watches nearby.'}
+                previews['atonement.html']={'thumbnail':'assets/page-art/atonement/servant-960.webp','width':1536,'height':1024,'alt':'Jesus kneels with a basin and towel. He asks His disciples to follow His example of service.'}
+                rendered_cards=[]
+                for c in block['cards']:
+                    preview=previews.get(c[0].lstrip('/'))
+                    if preview and preview['thumbnail'] in used_previews:
+                        preview=next((a for a in registry.values() if a.get('owner')==c[0].lstrip('/') and a.get('reviewed') and a.get('thumbnail') not in used_previews),None)
+                        if preview is None and c[0]=='/birth-of-christ.html':
+                            preview={'thumbnail':'assets/page-art/birth-of-christ/03-nephi-vision-800.webp','width':800,'height':533,'alt':'Mary cradles the infant Jesus and looks into His eyes.'}
+                    if preview:used_previews.add(preview['thumbnail'])
+                    rendered_cards.append(card(c,preview))
+                blocks.append('<div class="jj-directory">'+''.join(rendered_cards)+'</div>')
             elif 'questions' in block:blocks.append('<aside class="jj-reflection"><h3>Pause and consider</h3><ul>'+''.join('<li>'+prose(q,refs)+'</li>' for q in block['questions'])+'</ul></aside>')
         if refs:blocks.append('<div class="jj-actions fc-actions">'+''.join(scripture(r) for r in refs)+'</div>')
         blocks.append('</section>');sections.append(''.join(blocks))
-    if page.get('related'):sections.append('<section class="jj-chapter" id="continue-study"><h2>Continue with Jesus Christ</h2><div class="jj-directory">'+''.join(card(c) for c in page['related'])+'</div></section>')
+    journey=json.loads((DATA/'main-content.json').read_text(encoding='utf-8'))
+    route=next(b['cards'] for b in journey['sections'][0]['blocks'] if isinstance(b,dict) and 'cards' in b)
+    current=next((i for i,c in enumerate(route) if c[0]==page['url']),None)
+    if current is not None and current+1<len(route):
+        next_study=route[current+1]
+        sections.append('<section class="jj-chapter" id="next-study"><h2>Continue with Jesus Christ</h2><p>Next study in the journey</p><div class="jj-directory">'+card(next_study)+'</div></section>')
+    if page.get('related'):sections.append('<section class="jj-chapter" id="continue-study"><h2>Related studies</h2><div class="jj-directory">'+''.join(card(c) for c in page['related'])+'</div></section>')
     sources=page.get('sources',[])
     if sources:sections.append('<section class="jj-chapter" id="sources"><h2>Sources for further study</h2><ul class="jj-source-list">'+''.join(f'<li><a href="{E(s[0])}" target="_blank" rel="noopener noreferrer">{E(s[1])}</a></li>' for s in sources)+'</ul></section>')
-    local='<nav class="jj-local-nav fc-actions" aria-label="In this study">'+''.join(f'<a href="#{E(s["id"])}">{E(s.get("nav",s["title"]))}</a>' for s in page['sections'])+'</nav>'
-    scripts=['jesus-journey.js?v=20260923-chapters-1','site-common.js?v=20260923-jesus-nested-1','site-search.js?v=20260919-focused-answers-1','full-image-viewer.js?v=20260914-reopen-1','topic-artwork-details.js?v=20260923-onward-label-1']
+    local=f'<nav class="jj-local-nav fc-actions" aria-label="In this study" data-journey-subject="{E(page["title"])}">'+''.join(f'<a href="#{E(s["id"])}">{E(s.get("nav",s["title"]))}</a>' for s in page['sections'])+'</nav>'
+    scripts=['jesus-journey.js?v=20260923-pictured-chapters-1','site-common.js?v=20260923-jesus-nested-1','site-search.js?v=20260919-focused-answers-1','full-image-viewer.js?v=20260914-reopen-1','topic-artwork-details.js?v=20260923-next-study-1']
     return f'''<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{E(page['title'])} | focusChrist</title>{head}</head><body class="fc-site fc-jesus-journey"><a class="fc-skip-link" data-focuschrist-skip-link="true" href="#main-content">Skip to study</a>{nav}<header class="jj-opening"><div class="jj-wrap">{breadcrumb}<p class="fc-eyebrow">{E(page.get('eyebrow','Come to know Jesus Christ'))}</p><h1>{E(page['title'])}</h1><p class="lede">{E(page['intro'])}</p><a class="fc-button" href="#main-content">Begin the study ↓</a></div></header><main class="jj-wrap jj-main" id="main-content">{local}{''.join(sections)}<nav class="jj-actions jj-return fc-actions" aria-label="Return to the journey"><a href="{E(crumbs[-1][0])}">Return to {E(crumbs[-1][1])}</a><a href="{PARENT}#jesus-journey">Explore the whole Jesus Christ journey</a></nav></main>{footer}<script>function toggleMenu(){{var m=document.getElementById('hamburgerMenu');if(m)m.classList.toggle('show');}}</script>{''.join(f'<script src="/{s}" defer></script>' for s in scripts)}</body></html>'''
 
 def main():

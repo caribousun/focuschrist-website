@@ -1,0 +1,51 @@
+{
+  "status": "pass",
+  "scope": "Five branch reference blocks and contiguous cross grouping in canonical input",
+  "input_sha256": "589c56c2d897934953f061455c796879074beb42f9ad269c8632b5c0ac125b7b",
+  "baseline_commit": "a343efb9857fa94f98c0c105b2ea87252b716016",
+  "reference_art": [
+    {
+      "page": "/jesus-christ/mortal-ministry.html",
+      "section": "come-and-see",
+      "key": "come-and-see",
+      "owner": "answers/jesus-christ-latter-day-saint-beliefs.html"
+    },
+    {
+      "page": "/jesus-christ/mortal-ministry.html",
+      "section": "nathanael",
+      "key": "nathanael",
+      "owner": "answers/jesus-christ-latter-day-saint-beliefs.html"
+    },
+    {
+      "page": "/jesus-christ/miracles-and-compassion.html",
+      "section": "deaf-man",
+      "key": "deaf-man",
+      "owner": "answers/jesus-christ-latter-day-saint-beliefs.html"
+    },
+    {
+      "page": "/jesus-christ/teachings-and-parables.html",
+      "section": "widow",
+      "key": "widows-offering",
+      "owner": "answers/jesus-christ-latter-day-saint-beliefs.html"
+    }
+  ],
+  "first_vision": {
+    "owner": "church-history.html",
+    "anchor": "history-first-vision-title",
+    "thumbnail": "assets/history/first-vision-800.webp",
+    "actual_dimensions": [
+      800,
+      267
+    ],
+    "assessment": "Actual pixels depict Joseph kneeling before two Personages in grove; alt and warm caption match portrayal. Destination heading anchor exists. Existing original ownership retained."
+  },
+  "cross_group": {
+    "chapter_group": "simon",
+    "assessment": "Cross section follows Simon immediately and retains distinct Care for His mother heading and original John19 prose before burial. One contiguous selectable group can show the Simon image without relabeling it as care for Mary."
+  },
+  "preservation": "Every prior block in all seven branches compares exactly equal after removing only five new reference blocks; no scripture/prose changed.",
+  "limitations": [
+    "This approves canonical reference/context data; final rendering, grouping behavior and exact published-text hashes require post-build checks.",
+    "Reference art retains original owner and is not new body-original artwork."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "status": "pass_for_reviewed_changes",
+  "scope": "Latest13 artwork relocations,43 introductory-placement flags, renderer metadata, linked-preview ownership gates and next-study preference",
+  "reviewed_on": "2026-09-23",
+  "evidence_manifests": [
+    "work/parable-rhythm-art-relocations.json",
+    "work/parable-rhythm-opening-flags.json",
+    "work/branch-density-placement-targets.json"
+  ],
+  "semantic_review": [
+    "Each of13 moved captions read alongside its current destination narrative. Six short comparison pictures follow explanation inside contiguous groups; all remain source-specific.",
+    "Samaritan inn care precedes payment; judge decision follows repeated refusal; steward debt examples stay within explicit rejection of dishonesty; vine fruit remains joined with abiding; elder-son image retains unresolved ending.",
+    "Minas reckoning illustration sits with explanation of the return and its severe story features, not as an instruction to imitate them.",
+    "All43 intro flags concern existing captions and source-context already reviewed. Keeping first explanatory paragraph before a scene does not merge distinct events; later scene-specific explanation remains intact."
+  ],
+  "renderer": [
+    "Metadata selects first art/card/reference visual and inserts after requested narrative paragraph count. Integer/range validation rejects invalid placement.",
+    "Text order is not changed. Explicit metadata takes priority over early-scene and opening-directory heuristics."
+  ],
+  "ownership_gate_review": [
+    "Topic reference exclusion requires non-figure image under link to different local HTML owner, matching artwork family actually present in a genuine target figure, and valid target fragment when supplied. Wrong owner/family, missing anchor, unlinked and in-figure duplicates remain rejected.",
+    "Birth exception checks each individual img/source under its actual ancestor link resolving to canonical Birth owner. An adjacent link or separate valid preview cannot hide an invalid duplicate.",
+    "Sitewide exact CSS bytes unchanged; consumer allowlist adds only Birth and remains exact78."
+  ],
+  "next_study_review": "Artwork dialog onward selection now includes next-study, preceding related-study section in generated DOM. Explicit record.study still overrides fallback; external/current-page/image-card links remain excluded.",
+  "tests": {
+    "navigation": 18,
+    "reference_ownership": 9,
+    "visual_coverage": 12,
+    "failures": 0
+  },
+  "code_sha256": {
+    "tools/build_jesus_journey.py": "8c67a19ccf643da006e6abc4c5b84f06d29b58e4ebb29adaf447060f1c9db6f6",
+    "tools/topic_artwork_uniqueness_qa.py": "31f553981a0dccd12cac67e9edb7a0b5b3e8fb3daef30a20117617d7068f7f38",
+    "tools/birth_of_christ_qa.py": "064013f08791356d66cc53939aeeaa33c1cdf2e131e94680e1c2f941f89ef832",
+    "topic-artwork-details.js": "57bf06c9464ce40ec14970e9b3d290bac398c6f2163ad9f9a0c8d8b76098b2bc"
+  },
+  "remaining_separate_review": [
+    "Final Birth density/preservation review awaits final candidate signal.",
+    "Core-story coverage: parent-owned exact references recommended for Martha/Mary, rich young man, tribute coin, returning leper; Atonement-owned footwashing reference; Mark1 leper scene is genuine source-specific generation gap. These are distinct from approval of rhythm changes."
+  ],
+  "limitations": [
+    "No publication or owner aesthetic approval inferred.",
+    "Final content hashes must bind final rebuilt output after any remaining coverage additions."
+  ]
+}

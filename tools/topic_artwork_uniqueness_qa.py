@@ -34,6 +34,32 @@ def local_asset(page,value,root=ROOT):
     try:return candidate.relative_to(root.resolve()).as_posix()
     except ValueError:return None
 
+def linked_reference(node,page,root=ROOT):
+    """Only non-owning thumbnails directly linked to a different local HTML page."""
+    if node.tag!='img':return None
+    chain=list(ancestors(node))
+    if any(a.tag=='figure' or a.attrs.get('data-journey-art') for a in chain):return None
+    link=next((a for a in chain if a.tag=='a'),None)
+    if not link:return None
+    u=urlsplit(link.attrs.get('href',''))
+    if u.scheme or u.netloc or not u.path.endswith('.html'):return None
+    target=(root/u.path.lstrip('/') if u.path.startswith('/') else page.parent/u.path).resolve()
+    if target==page.resolve() or not target.is_relative_to(root.resolve()):return None
+    return {'owner':target.relative_to(root.resolve()).as_posix(),'fragment':unquote(u.fragment)}
+
+def is_owning_page_reference(ref,owner,parsed,identities,root=ROOT):
+    destination=ref.get('linked_reference')
+    if not destination or destination['owner']!=owner:return False
+    nodes=parsed.get(owner,[])
+    if destination['fragment'] and not any(n.attrs.get('id')==destination['fragment'] for n in nodes):return False
+    for node in nodes:
+        if node.tag!='img':continue
+        chain=list(ancestors(node))
+        if not any(a.tag=='figure' for a in chain):continue
+        asset=local_asset(root/owner,node.attrs.get('src',''),root)
+        if identities.get(asset)==ref['family']:return True
+    return False
+
 def scan(root=ROOT):
     pages=public_pages(root);parsed={};references=[];asset_paths=set();asset_issues={}
     def add_reference(page, value, key, tag, attr):
@@ -85,7 +111,7 @@ def scan(root=ROOT):
                 for value in values:
                     asset=local_asset(page,value,root)
                     if asset:
-                        asset_paths.add(asset);references.append({'page':key,'asset':asset,'tag':n.tag,'attribute':attr})
+                        asset_paths.add(asset);references.append({'page':key,'asset':asset,'tag':n.tag,'attribute':attr,'linked_reference':linked_reference(n,page,root)})
     parent={a:a for a in asset_paths}
     def find(a):
         while parent[a]!=a:parent[a]=parent[parent[a]];a=parent[a]
@@ -186,12 +212,12 @@ def scan(root=ROOT):
                 if c.tag not in {'h2','h3','p'}:continue
                 if any(a is figure or a.has('fc-resource-card') for a in ancestors(c)):continue
                 if c.text().strip():context_text.append(c.text().strip())
-            owners=sorted({ref['page'] for ref in usages[family]})
+            owners=sorted({ref['page'] for ref in usages[family] if not is_owning_page_reference(ref,key,parsed,identities,root)})
             records.append({'title':heading.text().strip() if heading else cap.text().strip()[:100],'description':' '.join(ps),'alt':n.attrs.get('alt',''),'sources':sources,'src':src,'asset':asset,'fullsrc':image_link.attrs.get('href') if image_link else None,'family':family,'figureAttributes':figure.attrs,'imageAttributes':n.attrs,'nearestContext':{'section':context.attrs.get('id') if context else None,'text':context_text[:5]},'usedOnPages':owners,'exclusive':owners==[key] and asset not in asset_issues})
         exclusive={x['family'] for x in records if x['exclusive']};issues=[message+': '+asset for asset,message in asset_issues.items() if any(r['page']==key and r['asset']==asset for r in references)]
         if len(exclusive)<5:issues.append(f'Needs five globally exclusive body pictures; found {len(exclusive)}')
         for family in sorted({x['family'] for x in records if x['usedOnPages']!=[key]}):
-            other=sorted({ref['page'] for ref in usages[family]}-{key})
+            other=sorted({ref['page'] for ref in usages[family] if not is_owning_page_reference(ref,key,parsed,identities,root)}-{key})
             issues.append('Body artwork is reused on another page: '+family+' -> '+', '.join(other))
         results.append({'page':key,'bodyPictureCount':len({x['family'] for x in records}),'exclusiveCount':len(exclusive),'minimumNewIfOtherUsagesRemain':max(0,5-len(exclusive)),'figures':records,'issues':issues})
     return {'assetIssues':asset_issues,'decodedPixelHashCount':len(pixel_hashes),'publicHtmlCount':len(pages),'pages':results,'familyUsages':{family:{'assets':sorted({x['asset'] for x in refs}),'pages':sorted({x['page'] for x in refs}),'references':refs} for family,refs in usages.items()}}

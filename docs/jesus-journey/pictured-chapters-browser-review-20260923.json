@@ -1,0 +1,59 @@
+{
+  "status": "pass",
+  "checked_at": "2026-09-23T19:13:37.740080+00:00",
+  "method": "Actual in-app browser navigation through Next chapter controls; read-only DOM image/containment observations and rendered visual inspection. No shell browser automation.",
+  "final_phone": {
+    "width": 390,
+    "pages": 78,
+    "selectable_chapters": 262,
+    "blank_chapters": 0,
+    "horizontal_overflow": 0
+  },
+  "final_desktop": {
+    "width": 1366,
+    "pages": 78,
+    "selectable_chapters": 262,
+    "blank_chapters": 0,
+    "horizontal_overflow": 0
+  },
+  "new_picture_paths": {
+    "keys": [
+      "bb-created-earth",
+      "bn-hear-the-voice",
+      "bn-scriptures-explained",
+      "mc-leper-touch"
+    ],
+    "picture_study_full_size_close_focus_return": "pass on desktop and phone; leper narrow phone320 also checked"
+  },
+  "targeted_checks": [
+    "Birth12chapters final redistribution",
+    "Ten Pounds receiving-the-word: picture, two paragraphs, accounting picture, comparison and application",
+    "Parent complete desktop card rows including Birth preview",
+    "320px Birth at200percent text: wrapped readable controls, no overflow",
+    "Script-free Ten Pounds: all chapters and four original pictures present",
+    "Creation artwork onward opens Mortal Ministry",
+    "Mary and Martha reference reaches exact parent picture; Back restores chapter"
+  ],
+  "limitations": "Lazy offscreen images were not treated as failed loads. Exact image-file hashes and ownership gates separately verify all saved files. Earlier complete303original interaction review remains evidence for unchanged artwork; four additions were exercised separately. Technical and semantic review do not imply new owner aesthetic approval.",
+  "birth_resource_flow_followup": {
+    "reason": "Hosted check found old paired-layout wrappers containing one resource after picture redistribution.",
+    "sections": [
+      "prophets-witness",
+      "mary-and-elisabeth",
+      "savior-born",
+      "temple-witnesses"
+    ],
+    "desktop1366": {
+      "chapter_width": 920,
+      "all_four_resource_widths": 920,
+      "overflow": false
+    },
+    "phone390": {
+      "chapter_width": 343.2,
+      "all_four_resource_widths": 343.2,
+      "overflow": false
+    },
+    "result": "All four now flow as direct full-width chapter resources. Temple chapter resource and surrounding navigation visually inspected. No empty paired-grid slots.",
+    "html_sha256": "a41cdac7470b14f39872488804675e4a10df72e9598269d354360449cd474ec8"
+  }
+}
