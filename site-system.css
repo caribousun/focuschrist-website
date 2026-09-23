@@ -1595,3 +1595,12 @@ body.fc-site .fc-opening-invitation-label { display: block; margin-bottom: 8px; 
         font-weight: 400; text-align: center;
     }
 }
+
+/* Let enlarged phone text wrap naturally within its existing reading rail. */
+@media (max-width: 700px) {
+    body.fc-site main,
+    body.fc-site .fc-page-intro,
+    body.fc-site .fc-topic-opening,
+    body.fc-site .cfm-hero__copy,
+    body.fc-site .gc-page-opening { overflow-wrap: anywhere; }
+}

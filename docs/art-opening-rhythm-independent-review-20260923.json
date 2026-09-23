@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "status": "pass-scoped",
+  "reviewer": "independent remaining_passion_art agent",
+  "reviewedAtUtc": "2026-09-23T22:05:54.261994+00:00",
+  "scope": "Four Art openings and existing picture distribution; one Children chronology correction",
+  "baselineCommit": "aadf65af6a32d4437b5b1fe34629f942f4a55f20",
+  "preservation": [
+    {
+      "route": "art-study/the-living-christ.html",
+      "exactFiguresPreserved": true,
+      "proseOrderPreservedExceptSourceCorrection": true,
+      "heroPreserved": true,
+      "sha256": "b8e75b4d0fee1d513bdf705a4c7c404908add97e2669109459a68ad1dd47750a"
+    },
+    {
+      "route": "art-study/the-good-shepherd.html",
+      "exactFiguresPreserved": true,
+      "proseOrderPreservedExceptSourceCorrection": true,
+      "heroPreserved": true,
+      "sha256": "d46f6ff3ded18bb58ae14e132376dda625b8610073bea6e87f33f005ec7b6ac6"
+    },
+    {
+      "route": "art-study/suffer-the-little-children.html",
+      "exactFiguresPreserved": true,
+      "proseOrderPreservedExceptSourceCorrection": true,
+      "heroPreserved": true,
+      "sha256": "f1d8a919906f753b4f5ee4809fa65c1e29df0a9b89b6fd7ce94cb2f8daee6404"
+    },
+    {
+      "route": "art-study/be-still.html",
+      "exactFiguresPreserved": true,
+      "proseOrderPreservedExceptSourceCorrection": true,
+      "heroPreserved": true,
+      "sha256": "44e5b1468042074fed02e6ab30155591164b9c494f504499b29fb1154bae3edd"
+    }
+  ],
+  "changesReviewed": [
+    "site-common removes only Art moveBelow intro relocation; other page relocation logic and mobile labels remain.",
+    "Four Art files use current shared script cache token. Each retains exact hero and five figure markup instances; no new artwork, duplicate images or source changes.",
+    "Three existing figures perpage moved into opening, scripture context and between second/third reflections. Pictures now support existing prose; source captions stay with exact figures.",
+    "Children summary corrected to healing, bringing children and prayer in3Nephi17:9,11-15. No other nonfigure paragraph wording/order changed.",
+    "Manifest arrays reordered only to actualDOMorder; every entry/hash/approval field and count standard unchanged. Existingfivebodyart baseline is preserved, not certified as currentten-original completeness.",
+    "Exact .fc-art-study-page .fc-reflection-prompts > .fc-art-story max-width:none!important aligns relocated pictures with reading flow; four exact cache consumers. No hero rule changed."
+  ],
+  "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p9-p15#p9",
+  "ledger": "Four Art records updated for changed caption order; complete previous record retained under prior_review. Watch publishedwording unchanged. Search rebuilt.",
+  "tests": [
+    "Art study enrichment QA passes.",
+    "Opening flow and cards runtime passes40openings; new regression asserts full Art intro node andmarkup remain inside mobileopening ratherthan notes below.",
+    "All4Art andWatch publishedtext hashes match ledger.",
+    "git diff --check passes."
+  ],
+  "globalGateLimitation": "Separate23linked-reference page review completed; final static content audit passes122documents.",
+  "reviewedFiles": {
+    "art-study/the-living-christ.html": "b8e75b4d0fee1d513bdf705a4c7c404908add97e2669109459a68ad1dd47750a",
+    "art-study/the-good-shepherd.html": "d46f6ff3ded18bb58ae14e132376dda625b8610073bea6e87f33f005ec7b6ac6",
+    "art-study/suffer-the-little-children.html": "f1d8a919906f753b4f5ee4809fa65c1e29df0a9b89b6fd7ce94cb2f8daee6404",
+    "art-study/be-still.html": "44e5b1468042074fed02e6ab30155591164b9c494f504499b29fb1154bae3edd",
+    "site-common.js": "373deee380ae513b52123e37027436db778b0ccdb93505d365ae69b7a422e3eb",
+    "tools/opening_flow_and_cards_qa.js": "0842b9b300cc7763e4cebd6f24d554a0a727af8b9439eee65b4cefd559b7c082",
+    "docs/art-study-image-review.json": "df0c175fe3ea5c6c81656bc57890f352c7f08131dc64f256fba6aeb441ec9e1c",
+    "content-audit.json": "88d1aba0e77d10731e01fb551318525c9ce0310c6465b06dcbf14258c78fe224",
+    "site-search-index.json": "903ef8115db17e35d0841981684e7e37817095ff4f75f1b45be7634e87c3cba6",
+    "art-study-enrichment.css": "557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3"
+  },
+  "limitations": [
+    "Root owns actual desktop/phonecomposition and deployment.",
+    "No fresh pixel-levelidentity/artowner aesthetic certification.",
+    "Source audit still recommends substantive Art enrichment beyond these formatting fixes."
+  ],
+  "subsequentOwnerRequestedCopyReview": "docs/good-shepherd-concise-copy-review-20260923.json",
+  "subsequentReviewNote": "Earlier exact prose/figure-caption preservation findings describe the placement-only phase. Owner subsequently authorized shorter Good Shepherd prose/captions; image markup and links remain unchanged. Original evidence retained above."
+}

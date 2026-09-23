@@ -40,6 +40,12 @@ def asset(page, value):
     if url.netloc not in {'focuschrist.com', 'www.focuschrist.com'}:
         raise ValueError('Unexpected external artwork: ' + value)
     path = unquote(url.path)
+    if Path(path).suffix.lower() == '.svg':
+        from evidences_visual_guides_qa import records, svg_errors
+        entry = next((e for e in records() if '/' + e['asset'] == path), None)
+        if page != '/book-of-mormon-evidences.html' or not entry or svg_errors((ROOT / path.lstrip('/')).read_bytes(), entry):
+            raise ValueError('Unreviewed analytical SVG: ' + value)
+        return path
     if Path(path).suffix.lower() not in {'.jpg', '.jpeg', '.png', '.webp', '.avif'}:
         raise ValueError('Artwork does not identify an image: ' + value)
     if not (ROOT / path.lstrip('/')).is_file():
@@ -181,6 +187,9 @@ def build():
         group.sort(key=lambda e: ({'artwork': 0, 'topic': 1, 'missionary': 2, 'hero': 3, 'legacy': 4, 'full': 5}[e['occurrence']['kind']], e['occurrence']['page']))
         chosen = group[0]
         item = {key: chosen[key] for key in ['title', 'category', 'thumbnail', 'fullImage', 'alt']}
+        if Path(chosen['fullImage']).suffix.lower() == '.svg':
+            item['mediaType'] = 'analytical-svg'
+            item['countsAsPhotographicArtwork'] = False
         item['id'] = stable('art-', identity)
         item['occurrences'] = list({e['occurrence']['id']: e['occurrence'] for e in group}.values())
         item['categories'] = sorted({e['category'] for e in group})

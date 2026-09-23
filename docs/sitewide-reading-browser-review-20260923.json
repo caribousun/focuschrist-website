@@ -1,0 +1,35 @@
+{
+  "scope": "Final local browser geometry and interactions, 23 September 2026",
+  "main_routes": 42,
+  "final_main_cases": {
+    "390px_normal": 42,
+    "320px_200percent_text": 42,
+    "1366px_desktop": 42
+  },
+  "main_findings": {
+    "horizontal_overflow": 0,
+    "clipped_checked_text_controls": 0,
+    "zero_sized_main_images": 0
+  },
+  "journey_routes": 76,
+  "journey_cases": 228,
+  "journey_findings": "No overflow, clipped checked text, or zero-sized main images at390/1366 normal and320px200percent. Checked before final source-range-only correction.",
+  "art_opening_cases": 16,
+  "art_openings": "All4 at390/700/701/1366 retained introduction with no relocated duplicate.",
+  "art_picture_interactions": {
+    "count": 20,
+    "results": "Every picture opened matching study, full-size image, closed full-size and returned through Continue Lesson. Final caption shortening separately checked via DOM; imagery/links unchanged."
+  },
+  "evidences": {
+    "phone_native_guide_cycles": 12,
+    "desktop_all_12_wide_sources_loaded": true,
+    "desktop_manuscript_guide_fullsize_return": true,
+    "320px_200percent_page_text": "No clipped text; no horizontal overflow.",
+    "classification": "Analytical diagrams, not historic photographs or new Christ artwork."
+  },
+  "limits": [
+    "Geometry checks do not prove every claim or every image has visual owner approval.",
+    "Existing owner art exceptions and unfinished ten-original rollout remain distinct.",
+    "Sitewide edits are not yet published."
+  ]
+}

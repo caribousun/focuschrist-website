@@ -19,6 +19,13 @@ HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = '68f2abf3d0fa65b2e87c6a8bd3798dd8dfb1a1e522e7f3d5b14dc810d1f90978'
 
+def reviewed_art_reflection(selector, body, data):
+    return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
+
+def reviewed_wrap_consumers(consumers, expected, version):
+    return (set(consumers) == set(expected) and len(consumers) == 119
+            and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
+
 def reviewed_mission_enrichment_style(data):
     return hashlib.sha256(data).hexdigest() == MISSION_ENRICHMENT_STYLE_SHA256
 
@@ -90,6 +97,19 @@ def main():
         duplicate=[good[0],dict(good[1],source_sha256='1'*64)]
         assert any('duplicate source_sha256' in e for e in unique_reviewed(duplicate,set()))
         assert any('rejected sha256' in e for e in unique_reviewed(good,{'2'*64}))
+        wrap_expected = [f'page-{i}.html' for i in range(119)]
+        wrap_good = {name: ['site-system.css?v=current'] for name in wrap_expected}
+        assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
+        assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
+        assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
+        assert not reviewed_wrap_consumers(dict(wrap_good, **{'page-0.html': ['site-system.css?v=stale']}), wrap_expected, 'current')
+        assert not reviewed_wrap_consumers(dict(wrap_good, **{'page-0.html': ['site-system.css?v=current-extra']}), wrap_expected, 'current')
+        art_css = (ROOT/'art-study-enrichment.css').read_bytes()
+        art_selector = '.fc-art-study-page .fc-reflection-prompts > .fc-art-story'
+        assert reviewed_art_reflection(art_selector, 'max-width:none !important;', art_css)
+        assert not reviewed_art_reflection(art_selector, 'max-width:none !important; height:9px;', art_css)
+        assert not reviewed_art_reflection('.fc-visual-hero', 'max-width:none !important;', art_css)
+        assert not reviewed_art_reflection(art_selector, 'max-width:none !important;', art_css + b' ')
         mission_css = (ROOT/MISSION_ENRICHMENT_STYLE).read_bytes()
         assert reviewed_mission_enrichment_style(mission_css)
         assert not reviewed_mission_enrichment_style(mission_css + b'\n.fc-visual-hero{height:9px}')
@@ -290,8 +310,19 @@ def main():
         if relative != 'pioneers.html':
             check(pioneer_style not in path.read_text(encoding='utf8'),
                   'Pioneer stylesheet referenced outside its owning page: '+relative)
+    wrap_review = json.loads((ROOT/'docs/large-text-wrap-independent-review-20260923.json').read_text(encoding='utf-8'))
+    wrap_consumers = {}
+    for path in ROOT.rglob('*.html'):
+        relative = path.relative_to(ROOT).as_posix()
+        if relative.startswith(('tools/', '.git/', 'node_modules/', 'focuschrist-repo/')): continue
+        refs = re.findall(r'<link\b[^>]*href=[\"\']([^\"\']*site-system\.css[^\"\']*)', path.read_text(encoding='utf-8'))
+        if refs: wrap_consumers[relative] = refs
+    check(reviewed_wrap_consumers(wrap_consumers, wrap_review['siteSystemConsumers'], wrap_review['siteSystemConsumerVersion']), 'Shared text-wrap stylesheet consumer list or cache versions changed')
+    art_owners = {'art-study/the-good-shepherd.html', 'art-study/the-living-christ.html', 'art-study/suffer-the-little-children.html', 'art-study/be-still.html'}
+    art_consumers = {str(p.relative_to(ROOT)).replace('\\','/'): re.findall(r'art-study-enrichment\.css\?v=([^\"\\s>]+)', p.read_text(encoding='utf8')) for p in ROOT.rglob('*.html') if 'art-study-enrichment.css' in p.read_text(encoding='utf8')}
+    check(set(art_consumers) == art_owners and all(v == ['20260923-reading-rhythm-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
-    check(sha(ROOT/'site-system.css')=='b1dcd1c1bc1ab585f0803af31ad8d56789a4f2e07202c4bfb59ab0849656a0e1', 'Reviewed mobile polish stylesheet changed: site-system.css')
+    check(sha(ROOT/'site-system.css')=='7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984', 'Reviewed mobile polish stylesheet changed: site-system.css')
     check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
     check(reviewed_home_style((ROOT/HOME_STYLE).read_bytes()), 'Home presentation stylesheet differs from exact reviewed bytes')
     check(sha(ROOT/'missionary.css') == BOUNDARY_WRAP_STYLES['.fc-missionary-page main'][1],
@@ -316,10 +347,20 @@ def main():
             check(reviewed_boundary_wrap(selector, body, (ROOT/filename).read_bytes()),
                   'Boundary text wrapping differs from exact reviewed selector/property/stylesheet bytes')
             continue
+        if selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story':
+            check(reviewed_art_reflection(selector, body, (ROOT/'art-study-enrichment.css').read_bytes()), 'Art reflection width differs from exact reviewed rule/bytes')
+            continue
+        diagram_rules = {'.fc-bom-evidences .bom-visual-guide > a,\n.fc-bom-evidences .bom-visual-guide picture': 'display:block;', '.fc-bom-evidences .bom-visual-guide img': 'display:block;width:100%;height:auto;object-fit:contain;'}
+        if selector.strip() in diagram_rules:
+            check(re.sub(r'\s+', '', body) == diagram_rules[selector.strip()] and sha(ROOT/'bom-evidences.css') == '19b54d55057adeaa0373631a572482e3fdbe0acbcb053755c3b87d6bbda5046b', 'Evidences diagram CSS differs from exact reviewed rule/bytes')
+            continue
+        if selector.strip() == 'body.cfm-page .cfm-toolkit__grid':
+            check(re.sub(r'\s+', '', body) == 'grid-template-columns:1fr;' and sha(ROOT/'come-follow-me.css') == 'b613cf5b02c3347d816bfbfd2c547165c2d613501c49c45e60577bbb2c01075c', 'CFM phone toolkit differs from exact reviewed rule/bytes')
+            continue
         # Separate owner-authorized mobile opening and Conference banner review.
         # Exact file hashes prevent this scoped acceptance from admitting later edits.
         if selector.strip()=='body.fc-site.cfm-page .cfm-hero::before' and body.strip()=='background-position:center 25%':
-            check(sha(ROOT/'come-follow-me.css')=='d550f16a7f3708e638522d46acd65dfbce8ae74fcb516b28ac0bf2c639822984',
+            check(sha(ROOT/'come-follow-me.css')=='b613cf5b02c3347d816bfbfd2c547165c2d613501c49c45e60577bbb2c01075c',
                   'Come Follow Me mobile focal point differs from reviewed bytes')
             continue
         if selector.strip().startswith('.gc-page .gc-page-opening'):
@@ -327,7 +368,7 @@ def main():
                   'Conference opening CSS differs from reviewed bytes')
             continue
         if selector.strip()=='body.fc-site' and body.strip()=='--fc-opening-hero-height: clamp(320px, 44svh, 420px);':
-            check(sha(ROOT/'site-system.css')=='b1dcd1c1bc1ab585f0803af31ad8d56789a4f2e07202c4bfb59ab0849656a0e1',
+            check(sha(ROOT/'site-system.css')=='7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984',
                   'Mobile opening CSS differs from reviewed bytes')
             continue
         dropdown_selectors = {

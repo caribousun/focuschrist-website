@@ -75,11 +75,25 @@ links = [attrs.get('href', '') for tag, attrs in page.elements if tag == 'a']
 for href in links:
     if href.startswith('#'):
         require(unquote(href[1:]) in ids, f"study jump target is missing: {href}")
+def local_thumbnail(value):
+    url = urlparse(value)
+    if url.scheme or url.netloc:
+        return None
+    target = (ROOT / unquote(url.path).lstrip('/')).resolve()
+    return target if target.is_relative_to(ROOT.resolve()) and url.path else None
+
+assert local_thumbnail('/assets/example.webp') == local_thumbnail('assets/example.webp')
+assert local_thumbnail('../outside.webp') is None
+assert local_thumbnail('/%2e%2e/outside.webp') is None
+assert local_thumbnail('https://example.com/assets/example.webp') is None
+assert local_thumbnail('') is None
+
 images = [attrs for tag, attrs in page.elements if tag == 'img']
 require(len(images) >= 16, "study toolkit and library must retain thumbnail coverage")
 for attrs in images:
     image_path = urlparse(attrs.get('src', '')).path
-    require(bool(image_path) and (ROOT / unquote(image_path)).is_file(), f"thumbnail file missing: {image_path}")
+    thumbnail = local_thumbnail(attrs.get('src', ''))
+    require(thumbnail is not None and thumbnail.is_file(), f"thumbnail file missing: {image_path}")
     require('alt' in attrs, f"thumbnail needs decorative or descriptive alternative text: {image_path}")
     require(attrs.get('width') and attrs.get('height'), f"thumbnail must reserve layout space: {image_path}")
 library = html.split('class="cfm-library"', 1)[-1].split('</section>', 1)[0]

@@ -1009,7 +1009,6 @@
                 shortText('.fc-page-intro-copy', 'Death masks and living portraits.', true);
             }
             if (sectionCopyPages.has(path) && path.startsWith('/art-study/')) {
-                moveBelow('.fc-page-intro-copy');
                 shortText('.fc-actions > a:first-child', 'Scripture Study');
                 shortText('.fc-actions > a:nth-child(2)', 'Resources');
             }

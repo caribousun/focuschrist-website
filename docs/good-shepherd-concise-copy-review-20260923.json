@@ -1,0 +1,88 @@
+{
+  "page": "art-study/the-good-shepherd.html",
+  "ownerRequest": "Shorter wording explicitly requested; image/link preservation required",
+  "review": "Independent source/meaning review passed. John10knowing,voice,sacrifice; Psalm23presence through valley;3Nephi15other sheep; Matthew11labor clearly imagined; Luke15parable remains identified.",
+  "heroExact": true,
+  "allImageMarkupExact": true,
+  "allHrefMultisetExact": true,
+  "records": [
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-sees-one.webp",
+      "title": "The One Is Not Overlooked",
+      "copy": "Jesus pauses beside one man. Remember the Shepherd seeking His lost sheep in Luke 15:3-7.",
+      "copy_sha256": "9f3b164fdf5f9319fa40711cc8f3962d18611f27fee9803a01513507d75d12e5",
+      "words": 15,
+      "caption_html_sha256": "b725084216a112b58aff366bfaa397956701c821d875e0b5c027eabf7dd0c358",
+      "parser_text": "The One Is Not Overlooked Jesus pauses beside one man. Remember the Shepherd seeking His lost sheep in Luke 15:3-7 ."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-carries-lamb.webp",
+      "title": "Gathered into His Arms",
+      "copy": "The lamb rests in His arms, recalling the Shepherd’s tender care in Isaiah 40:11.",
+      "copy_sha256": "16473666f0c8e410506a618f66c412b8002fd3dc84bdb8452f215be437725e89",
+      "words": 14,
+      "caption_html_sha256": "d483e54faf95a779a4cffadeb5cdc006306391eef8f5e33cbfe4c792e204446e",
+      "parser_text": "Gathered into His Arms The lamb rests in His arms, recalling the Shepherd’s tender care in Isaiah 40:11 ."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-shares-burden.webp",
+      "title": "Strength Shared Under Strain",
+      "copy": "This imagined scene of shared labor recalls Christ’s invitation to the weary in Matthew 11:28-30.",
+      "copy_sha256": "5e477f60c2a76233263f141632b876a5aa9a7ffc9915a3918ac25a8b7e440b66",
+      "words": 15,
+      "caption_html_sha256": "f06bf772c6cbd754000054262d12bb020a7f40f56bb44220588c3fc9aa52be77",
+      "parser_text": "Strength Shared Under Strain This imagined scene of shared labor recalls Christ’s invitation to the weary in Matthew 11:28-30 ."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp",
+      "title": "Known in a Crowd",
+      "copy": "Amid the crowd, Jesus calls Zacchaeus by name. Read their encounter in Luke 19:1-10.",
+      "copy_sha256": "ad67396e1bdb301a7ef8b191060200c30c6bcca46a57ba161d3b6dc174d6a5a2",
+      "words": 14,
+      "caption_html_sha256": "9cdf598015468f817950df11cffd9142b66a47447b7c9a5e42ea34c1c138a764",
+      "parser_text": "Known in a Crowd Amid the crowd, Jesus calls Zacchaeus by name. Read their encounter in Luke 19:1-10 ."
+    },
+    {
+      "asset": "../assets/page-art/art-study/full/shepherd-seeks-one-20260919.webp",
+      "title": "Until He Finds It",
+      "copy": "The Shepherd seeks one sheep among the rocks. Read His parable in Luke 15:4–7.",
+      "copy_sha256": "44896d3370b64daa71d1ca5fe9dc9f2b1ea8e2fcabdd80d9a191ba276780331d",
+      "words": 14,
+      "caption_html_sha256": "68b5ab3a42eab916b693dfc785833609cafaea048947c1b6b7b3506a5db2685c",
+      "parser_text": "Until He Finds It The Shepherd seeks one sheep among the rocks. Read His parable in Luke 15:4–7 ."
+    }
+  ],
+  "page_sha256": "81e369c4366de78701ad95651e44ae09bacdba0c6464488a5544b07d1f792188",
+  "lengths": {
+    "opening": 19,
+    "lede": 17,
+    "mainTeachingParagraphs": [
+      23,
+      25,
+      18,
+      23
+    ],
+    "reflectionParagraphs": [
+      20,
+      15,
+      18
+    ],
+    "captionBodies": [
+      15,
+      14,
+      15,
+      14,
+      14
+    ]
+  },
+  "tests": [
+    "Art static QA passes with exact concise-copy exception only for this page",
+    "All20native Art picture study/fullsize/source/focus/lesson cycles pass",
+    "Media voice120pages passes",
+    "Static content audit122documents passes",
+    "Gallery and search rebuilt",
+    "git diff --check passes"
+  ],
+  "priorEvidence": "docs/art-opening-rhythm-independent-review-20260923.json documents prior placement review; author-approved shorter copy supersedes only this page prose/captions. All image identity/hash reviews unchanged.",
+  "guardNormalization": "Static HTMLParser records text tokens separately, including punctuation after links. Exact parser_text binds those tokens; runtime copy remains exact DOM textContent. No character/word equivalence relaxed."
+}
