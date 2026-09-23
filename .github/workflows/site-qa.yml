@@ -50,6 +50,8 @@ jobs:
 
       - name: Verify global artwork scanner regression fixtures
         run: python tools/topic_artwork_uniqueness_runtime_qa.py
+      - name: Verify Home artwork preservation and reference previews
+        run: python tools/home_presentation_qa.py
 
       - name: Verify published-content search index and behavior
         run: |

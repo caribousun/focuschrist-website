@@ -9,8 +9,17 @@ IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
 BIBLE_STYLE = 'bible-together.css'
 BIBLE_STYLE_SHA256 = '128b2a54bf1a285497ea11d6c8e9040c55baa996ec75aa376b29463f854a9121'
 BIBLE_STYLE_OWNER = 'answers/bible-and-book-of-mormon-together.html'
+HOME_STYLE = 'home-presentation.css'
+HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
+HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = '68f2abf3d0fa65b2e87c6a8bd3798dd8dfb1a1e522e7f3d5b14dc810d1f90978'
+
+def reviewed_home_style(data):
+    return hashlib.sha256(data).hexdigest() == HOME_STYLE_SHA256
+
+def home_style_reference_allowed(relative, text):
+    return relative == HOME_STYLE_OWNER or HOME_STYLE not in text
 
 def reviewed_bible_style(data):
     return hashlib.sha256(data).hexdigest() == BIBLE_STYLE_SHA256
@@ -24,11 +33,21 @@ def reviewed_journey_style(data):
 def journey_style_reference_allowed(relative, text, owners):
     return relative in owners or JOURNEY_STYLE not in text
 
-BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '26991016b8be1b6a3dc8854d41e07a1b6d12cdbefaf7ac260ba4b1736ec74b1a'), '.fc-missionary-page main': ('missionary.css', 'f39e67bca6fba10bf03074e6939a6f714d90ec28b02d572adb45f59c87befc7d')}
+BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '26991016b8be1b6a3dc8854d41e07a1b6d12cdbefaf7ac260ba4b1736ec74b1a'), '.fc-missionary-page main': ('missionary.css', '3cf14d5cdf5a124430d13707e18377195c84be91707ab01b484228c5a04a1691')}
 
 def reviewed_boundary_wrap(selector, body, data):
     entry = BOUNDARY_WRAP_STYLES.get(selector.strip())
     return bool(entry and re.sub(r"\s+", "", body) == "overflow-wrap:anywhere;" and hashlib.sha256(data).hexdigest() == entry[1])
+
+MISSION_PURPOSE_RULES = {
+    '.fc-missionary-purpose .fc-missionary-visual figcaption': 'position:static;padding:16px24px;background:transparent;',
+    '.fc-missionary-purpose .fc-missionary-copy > .fc-section-heading': 'max-width:none;',
+}
+
+def reviewed_mission_purpose(selector, body, data):
+    return (selector.strip() in MISSION_PURPOSE_RULES
+            and re.sub(r'\s+', '', body) == MISSION_PURPOSE_RULES[selector.strip()]
+            and hashlib.sha256(data).hexdigest() == BOUNDARY_WRAP_STYLES['.fc-missionary-page main'][1])
 
 class Tags(HTMLParser):
     def __init__(self, text):
@@ -55,6 +74,13 @@ def main():
         duplicate=[good[0],dict(good[1],source_sha256='1'*64)]
         assert any('duplicate source_sha256' in e for e in unique_reviewed(duplicate,set()))
         assert any('rejected sha256' in e for e in unique_reviewed(good,{'2'*64}))
+        home_css = (ROOT/HOME_STYLE).read_bytes()
+        assert reviewed_home_style(home_css)
+        assert not reviewed_home_style(home_css + b'\nbody.fc-home-presentation{height:999px}')
+        assert home_style_reference_allowed('index.html', HOME_STYLE)
+        assert not home_style_reference_allowed('about.html', HOME_STYLE)
+        assert not home_style_reference_allowed('shared.css', '@import "' + HOME_STYLE + '";')
+        assert not home_style_reference_allowed('shared.js', HOME_STYLE)
         reviewed_css = (ROOT/BIBLE_STYLE).read_bytes()
         assert reviewed_bible_style(reviewed_css)
         assert not reviewed_bible_style(reviewed_css + b'\n.fc-topic-unique-hero{height:999px}\n')
@@ -77,6 +103,12 @@ def main():
             assert not reviewed_boundary_wrap(selector, 'overflow-wrap: anywhere; height: 9px;', data)
             assert not reviewed_boundary_wrap('.wrong-page main', 'overflow-wrap: anywhere;', data)
             assert not reviewed_boundary_wrap(selector, 'overflow-wrap: anywhere;', data + b'\nmain{height:9px}')
+        mission_css = (ROOT/'missionary.css').read_bytes()
+        for selector, body in MISSION_PURPOSE_RULES.items():
+            assert reviewed_mission_purpose(selector, body, mission_css)
+            assert not reviewed_mission_purpose(selector, body + 'height:9px;', mission_css)
+            assert not reviewed_mission_purpose('.wrong-page main', body, mission_css)
+            assert not reviewed_mission_purpose(selector, body, mission_css + b'\nmain{height:9px}')
         print('PASS regression fixtures: duplicate/rejected images, modified Bible/journey CSS and out-of-scope stylesheet references are rejected'); return 0
     errors=[]
     def check(ok,msg):
@@ -206,6 +238,11 @@ def main():
             continue
         check('anatomy-review' not in path.read_text(encoding='utf8'),
               'Visitor asset references standalone anatomy review tool: '+relative)
+        if relative != 'missionary.html':
+            check('missionary.css' not in path.read_text(encoding='utf8'),
+                  'Mission stylesheet referenced outside its owning page: '+relative)
+        check(home_style_reference_allowed(relative, path.read_text(encoding='utf8')),
+              'Home presentation stylesheet referenced outside its single owning page: '+relative)
         check(bible_style_reference_allowed(relative, path.read_text(encoding='utf8')),
               'Bible study stylesheet referenced outside its owning page: '+relative)
         check(journey_style_reference_allowed(relative, path.read_text(encoding='utf8'), journey_owners),
@@ -222,7 +259,10 @@ def main():
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(sha(ROOT/'site-system.css')=='b1dcd1c1bc1ab585f0803af31ad8d56789a4f2e07202c4bfb59ab0849656a0e1', 'Reviewed mobile polish stylesheet changed: site-system.css')
     check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
-    excluded_styles={'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
+    check(reviewed_home_style((ROOT/HOME_STYLE).read_bytes()), 'Home presentation stylesheet differs from exact reviewed bytes')
+    check(sha(ROOT/'missionary.css') == BOUNDARY_WRAP_STYLES['.fc-missionary-page main'][1],
+          'Mission purpose stylesheet differs from exact reviewed bytes')
+    excluded_styles={'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.
@@ -231,6 +271,10 @@ def main():
             additions += '\n' + (ROOT/name).read_text(encoding='utf-8')
     for selector,body in re.findall(r'([^{}]+)\{([^{}]*)\}',re.sub(r'/\*.*?\*/','',additions,flags=re.S)):
         if selector.strip().startswith('@'):continue
+        if selector.strip() in MISSION_PURPOSE_RULES:
+            check(reviewed_mission_purpose(selector, body, (ROOT/'missionary.css').read_bytes()),
+                  'Mission purpose rule differs from exact reviewed properties/stylesheet bytes')
+            continue
         if selector.strip() in BOUNDARY_WRAP_STYLES:
             filename, _ = BOUNDARY_WRAP_STYLES[selector.strip()]
             check(reviewed_boundary_wrap(selector, body, (ROOT/filename).read_bytes()),

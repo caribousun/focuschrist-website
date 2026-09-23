@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-23",
+  "status": "local browser review passed; publication pending",
+  "browser": "Codex in-app browser through CUA",
+  "home": {
+    "normal_widths": [320, 390, 700, 701, 800, 801, 980, 982, 1040, 1366, 1918],
+    "enlarged_text_200_percent_widths": [320, 820, 1366],
+    "horizontal_overflow": 0,
+    "clipped_text_or_controls": 0,
+    "stretched_reference_images": 0,
+    "resolved_finding": "The original three purpose cards left a half-empty final row between 701 and 980 pixels. The final card now spans that row. Rendered checks at 800, 980 and 982 confirm the transition.",
+    "visual_review": "Phone invitation, scripture reading and illustrated paths; desktop paired studies and weekly study. Images retain natural proportions, aligned boundaries and readable copy.",
+    "reference_clickthroughs": "All nine new previews were clicked from Home, reached their exact owner anchors with visible target sections, and returned to Home.",
+    "owned_artwork": "All three original picture study dialogs and full-size viewers opened and closed; focus returned to their original image links.",
+    "script_free": "Home showed all nine previews and its Jesus journey link with scripts blocked. The journey link reached the parent study.",
+    "keyboard": "Tab from the journey entry reached Listen to His teachings with a visible solid focus outline."
+  },
+  "mission_purpose": {
+    "visual_widths": [390, 1366],
+    "enlarged_text_200_percent_widths": [320, 820, 1366],
+    "horizontal_overflow": 0,
+    "clipped_purpose_text_or_controls": 0,
+    "phone_image": {"rendered_width": 341.6, "rendered_height": 113.8125, "natural_width": 2173, "natural_height": 724},
+    "result": "Full panorama followed by its caption and full-width teaching; no stranded picture, narrow heading column or phone crop. Detail dialog still opens and closes."
+  }
+}

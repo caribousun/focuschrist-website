@@ -1,0 +1,111 @@
+/* Home study presentation. The approved hero and opening keep their shared rules. */
+body.fc-home-presentation main { overflow-wrap: anywhere; }
+body.fc-home-presentation main > .fc-section:not(.fc-page-intro) {
+    padding-block: clamp(28px, 4vw, 48px);
+}
+body.fc-home-presentation .fc-home-journey { padding-top: 20px; }
+body.fc-home-presentation .fc-home-journey .fc-home-featured-art--invitation {
+    margin-bottom: 20px !important;
+}
+body.fc-home-presentation .fc-home-journey-invitation {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
+}
+body.fc-home-presentation .fc-home-journey-invitation > p { margin: 0; }
+body.fc-home-presentation .fc-home-journey-invitation .fc-actions { margin: 0; }
+body.fc-home-presentation .fc-home-feature-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin-block: 16px 28px;
+}
+body.fc-home-presentation .fc-home-feature-pair > .fc-section { padding: 0; min-width: 0; }
+body.fc-home-presentation .fc-home-feature-pair > .fc-section > .fc-container--standard {
+    width: 100%; height: 100%;
+}
+body.fc-home-presentation .fc-home-feature-pair .fc-study-promotion {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 0 0 24px;
+    overflow: hidden;
+    text-align: start;
+}
+body.fc-home-presentation .fc-home-feature-pair .fc-study-promotion > :not(.fc-home-preview) {
+    margin-inline: 24px;
+}
+body.fc-home-presentation .fc-home-feature-pair .fc-study-promotion > .fc-eyebrow { margin-top: 24px; }
+body.fc-home-presentation .fc-home-feature-pair .fc-study-promotion > .fc-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: stretch;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 20px;
+}
+body.fc-home-presentation .fc-home-feature-pair .fc-section-heading { font-size: clamp(1.65rem, 2.6vw, 2.15rem); }
+body.fc-home-presentation .fc-home-preview { display: block; min-width: 0; }
+body.fc-home-presentation .fc-home-preview img,
+body.fc-home-presentation .fc-home-illustrated-card > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+body.fc-home-presentation .fc-home-preview:focus-visible,
+body.fc-home-presentation .fc-home-illustrated-card:focus-visible {
+    outline: 3px solid var(--fc-gold-light);
+    outline-offset: 4px;
+}
+body.fc-home-presentation .fc-home-weekly {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(24px, 4vw, 40px);
+    align-items: center;
+}
+body.fc-home-presentation .fc-home-weekly .fc-home-preview {
+    overflow: hidden;
+    border: 1px solid var(--fc-line);
+    border-radius: 18px;
+}
+body.fc-home-presentation .fc-home-weekly-copy { min-width: 0; }
+body.fc-home-presentation .fc-home-weekly-copy .fc-section-heading { font-size: clamp(1.65rem, 2.6vw, 2.15rem); }
+body.fc-home-presentation .fc-home-section-copy { margin-bottom: 24px; }
+body.fc-home-presentation .fc-home-reading .fc-home-featured-art--study { margin-block: 24px !important; }
+body.fc-home-presentation .fc-home-illustrated-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body.fc-home-presentation .fc-home-card-copy {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 24px;
+    min-width: 0;
+}
+body.fc-home-presentation .fc-home-card-copy .fc-card-title { margin-top: 0; }
+body.fc-home-presentation .fc-home-card-action {
+    display: block;
+    margin-top: auto;
+    padding-top: 18px;
+    color: var(--fc-gold-light);
+    font-weight: 600;
+}
+body.fc-home-presentation .fc-home-destinations-next { margin-top: 24px; }
+body.fc-home-presentation .fc-home-purpose-paths { margin-top: 24px; }
+@media (min-width: 701px) and (max-width: 980px) {
+    body.fc-home-presentation .fc-home-purpose-paths > :last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 800px) {
+    body.fc-home-presentation .fc-home-journey-invitation,
+    body.fc-home-presentation .fc-home-weekly { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 700px) {
+    body.fc-home-presentation .fc-home-feature-pair { grid-template-columns: minmax(0, 1fr); }
+    body.fc-home-presentation .fc-home-feature-pair .fc-study-promotion > :not(.fc-home-preview) { margin-inline: 18px; }
+    body.fc-home-presentation .fc-home-card-copy { padding: 18px; }
+}
