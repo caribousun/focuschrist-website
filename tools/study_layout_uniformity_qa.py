@@ -1,7 +1,9 @@
 """Guard shared study rails and Joseph navigation; browser geometry is separate."""
 import re
+import json
+import sys
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, urljoin, parse_qs
 from answer_study_qa import Document
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -23,6 +25,57 @@ def declarations(filename, selector):
     blocks = re.findall(r"([^{}]+)\{([^{}]*)\}", css)
     return [dict((k.strip(), compact(v)) for k, v in re.findall(r"([\w-]+)\s*:\s*([^;]+)", body))
             for selectors, body in blocks if selector in [s.strip() for s in selectors.split(",")]]
+
+
+JOURNEY_VERSION = '20260923-standard-formatting-1'
+
+
+def journey_errors(css, consumers, expected):
+    """Inspect actual stylesheet rules and saved consumers, independently of builders."""
+    errors = []
+    clean = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    blocks = re.findall(r'([^{}]+)\{([^{}]*)\}', clean)
+    for selector in ('.jj-reading', '.jj-opening .lede'):
+        rules = []
+        for selectors, body in blocks:
+            if any(selector in s.strip() for s in selectors.split(',')):
+                rules.append(dict((k.strip(), compact(v)) for k, v in
+                                  re.findall(r'([\w-]+)\s*:\s*([^;]+)', body)))
+        for prop, value in {'width': '100%', 'max-width': 'none', 'min-width': '0'}.items():
+            values = [rule[prop] for rule in rules if prop in rule]
+            if not values or any(v != value for v in values):
+                errors.append(selector + ' must retain ' + prop + ': ' + value)
+    heading_wraps = [compact(value) for selectors, body in blocks
+                     if '.jj-opening h1' in [s.strip() for s in selectors.split(',')]
+                     for value in re.findall(r'overflow-wrap\s*:\s*([^;]+)', body)]
+    if not heading_wraps or any(value != 'anywhere' for value in heading_wraps):
+        errors.append('.jj-opening h1 must retain overflow-wrap: anywhere for enlarged text')
+    legacy_wraps = [compact(value) for selectors, body in blocks
+                    if '.content-wrap.article>h2' in [compact(s) for s in selectors.split(',')]
+                    for value in re.findall(r'overflow-wrap\s*:\s*([^;]+)', body)]
+    if not legacy_wraps or any(value != 'anywhere' for value in legacy_wraps):
+        errors.append('.content-wrap.article>h2 must retain overflow-wrap: anywhere for enlarged text')
+    if set(consumers) != set(expected):
+        errors.append('Journey CSS consumers must exactly match the canonical journey and Birth inventory')
+    for page, hrefs in consumers.items():
+        if len(hrefs) != 1 or any(parse_qs(urlsplit(href).query).get('v') != [JOURNEY_VERSION] for href in hrefs):
+            errors.append(page + ': journey stylesheet must load once with current version ' + JOURNEY_VERSION)
+    return errors
+
+
+def journey_fixture_tests():
+    css = '.jj-reading,.jj-opening .lede{width:100%;max-width:none;min-width:0}.jj-opening h1{overflow-wrap:anywhere}.content-wrap.article>h2{overflow-wrap:anywhere}'
+    consumers = {'example.html': ['jesus-journey.css?v=' + JOURNEY_VERSION]}
+    assert not journey_errors(css, consumers, {'example.html'})
+    for bad in ('780px', '760px'):
+        assert journey_errors(css.replace('max-width:none', 'max-width:' + bad), consumers, {'example.html'})
+    assert journey_errors(css + '@media(min-width:900px){body .jj-reading{max-width:780px}}', consumers, {'example.html'})
+    assert journey_errors(css, {'example.html': ['jesus-journey.css?v=old']}, {'example.html'})
+    assert journey_errors(css, {}, {'example.html'})
+    assert journey_errors(css, dict(consumers, **{'unexpected.html': consumers['example.html']}), {'example.html'})
+    assert journey_errors(css, {'example.html': consumers['example.html'] * 2}, {'example.html'})
+    assert journey_errors(css.replace('.jj-opening h1{overflow-wrap:anywhere}', ''), consumers, {'example.html'})
+    assert journey_errors(css.replace('.content-wrap.article>h2{overflow-wrap:anywhere}', ''), consumers, {'example.html'})
 
 
 def contract(filename, selector, expected):
@@ -72,6 +125,33 @@ for page, (stylesheet, rail) in PAGES.items():
                 "Joseph: directory pills must use shared buttons and existing section targets")
         require(len({n.attrs.get("href") for n in links}) == 6, "Joseph: directory destinations must be unique")
 
+contract('jesus-journey.css', 'body.fc-jesus-journey .jj-wrap', {
+    'width': 'min(var(--fc-standard,1040px),calc(100% - 2 * var(--fc-body-gutter,18px)))',
+    'margin-inline': 'auto',
+})
+journey_expected = {'birth-of-christ.html', 'answers/jesus-christ-latter-day-saint-beliefs.html'}
+for filename in ('branch-content-reviewed.json', 'parable-content-reviewed.json', 'parable-collections-reviewed.json'):
+    journey_expected.update(page['url'].lstrip('/') for page in json.loads(
+        (ROOT / 'docs/jesus-journey' / filename).read_text(encoding='utf-8')))
+require(len(journey_expected) == 78, 'Expected all 78 journey stylesheet consumers')
+journey_consumers = {}
+for path in ROOT.rglob('*.html'):
+    if any(part in {'.git', 'node_modules'} for part in path.relative_to(ROOT).parts):
+        continue
+    page = path.relative_to(ROOT).as_posix()
+    doc = Document()
+    doc.feed(path.read_text(encoding='utf-8'))
+    hrefs = [n.attrs.get('href', '') for n in doc.root.walk() if n.tag == 'link'
+             and urlsplit(urljoin('/' + page, n.attrs.get('href', ''))).path == '/jesus-journey.css']
+    if hrefs:
+        journey_consumers[page] = hrefs
+        rail = 'jj-wrap' if page.startswith('jesus-christ/') else 'content-wrap'
+        require(any(n.tag == 'main' and n.has(rail) for n in doc.root.walk()), page + ': standard journey content rail missing')
+ERRORS.extend(journey_errors((ROOT / 'jesus-journey.css').read_text(encoding='utf-8'), journey_consumers, journey_expected))
+if '--self-test' in sys.argv:
+    journey_fixture_tests()
+    print('Journey formatting fixtures passed: full-width valid, caps/override/stale/missing/extra/duplicate/missing-h1-wrap/missing-h2-wrap rejected')
+
 if ERRORS:
     raise SystemExit("\n".join(ERRORS))
-print("STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; rendered geometry requires browser review")
+print("STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; all 78 journey consumers use full-width reading and current CSS; rendered geometry requires browser review")
