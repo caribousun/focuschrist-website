@@ -1,0 +1,616 @@
+{
+  "date": "2026-09-22",
+  "page": "answers/bible-and-book-of-mormon-together.html",
+  "artworks": [
+    {
+      "key": "moses-brass-serpent",
+      "asset": "assets/page-art/bible-together/moses-brass-serpent-full.webp",
+      "sha256": "a20a620d183c720e83be4a1bf4381f5983a232d92d7b9901cc5fffc08124e438",
+      "thumbnail": "assets/page-art/bible-together/moses-brass-serpent-960.webp",
+      "thumbnail_sha256": "5236095f66cba1643f30b94a6dca28141db31bb24b4fa16185ce39e469fd40a4",
+      "original_generation": "exec-b1f38bad-d35f-46c7-bd38-5fa8bcabd216.png",
+      "original_sha256": "fa42463f9732f0ac54c5bafcdc191db6dbbf91721639689e255fc31237defd5d",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/num/21?lang=eng&id=p6-p9#p6",
+      "source_references": [
+        [
+          "ot/num/21",
+          "Numbers 21:6–9",
+          "6-9"
+        ],
+        [
+          "bofm/alma/33",
+          "Alma 33:19–22",
+          "19-22"
+        ],
+        [
+          "nt/john/3",
+          "John 3:14–15",
+          "14-15"
+        ]
+      ],
+      "scene": "Moses raises the brass serpent",
+      "relationship": "An event recalled and interpreted",
+      "interpretation": "Moses’ appearance, the arrangement of tents and the staging of the onlookers are artistic interpretation.",
+      "prompt": "Specific scene: Numbers 21:6-9, Moses has placed a bronze serpent on a tall plain pole in the wilderness. Elevated snake is clearly a crafted bronze object, one snake, no wings, no medical caduceus. Wide horizontal composition showing elderly Moses with long gray beard standing beside the pole in middle distance, two exhausted fully clothed adults in foreground turning their eyes UP to the sign, several rough tents and dry red stone hills far behind. Urgent concern turning into hope, no smiling sermon. Non-graphic illness; no visible bites or blood. Moses in dark earth-red outer wrap and undyed wool; no tablets, magical staff, pyramids, European castles or readable text. Ancient appearances are artistic interpretations; Moses must be a distinct older face not copied from Christ. Real-world arid terrain, midday light, eye lines actually reach the serpent.",
+      "identity_references": [],
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "In the wilderness, the people are invited to look toward the serpent Moses has raised. Alma later recalls this act as a witness pointing to the Son of God.",
+      "independent_review": "Source/event, semantic uniqueness, visible anatomy and established identity checked by independent verifier; Joseph age revision reviewed separately. This is technical evidence, not owner approval."
+    },
+    {
+      "key": "ezekiel-two-sticks",
+      "asset": "assets/page-art/bible-together/ezekiel-two-sticks-full.webp",
+      "sha256": "d246b4d7ab49fdbb50bed3c7b9f786c3e1e8d2310c23c6d6a78b93b3b4dd9aee",
+      "thumbnail": "assets/page-art/bible-together/ezekiel-two-sticks-960.webp",
+      "thumbnail_sha256": "d814b66d22d0de2abced7cfe895e2da5a9c2a121d258e16c986e1bf264d958d6",
+      "original_generation": "exec-4dde78d6-921d-449f-95f3-30a2e45b495d.png",
+      "original_sha256": "9d1fe2c48c5a28cb73076115af8e6be9c6dd1913c0c8aafea9d412154c1ad1bc",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezek/37?lang=eng&id=p15-p23#p15",
+      "source_references": [
+        [
+          "ot/ezek/37",
+          "Ezekiel 37:15–23",
+          "15-23"
+        ],
+        [
+          "bofm/2-ne/3",
+          "2 Nephi 3:12",
+          "12"
+        ]
+      ],
+      "scene": "Ezekiel brings two sticks together",
+      "relationship": "A sign and a Latter-day Saint interpretation",
+      "interpretation": "Ezekiel’s face, the form of the wood and the courtyard are interpreted, not authenticated likeness or geography.",
+      "prompt": "Specific scene Ezekiel37:15-23, prophet Ezekiel before a few exiled Judean witnesses brings TWO short flat pieces of wood together in ONE hand at chest level as an enacted sign. Close-to-medium documentary composition: wood and anatomically correct grasp prominent, Ezekiel's face visible thoughtful and resolute, three curious adult witnesses in background. Flat unvarnished wood with very faint small ink strokes facing away, NO legible invented script or English labels. Sixth-century BC Mesopotamian exile setting interpreted modestly: low mudbrick courtyard, reed shade and a distant canal, no Jerusalem temple or modern bound books. Ezekiel a distinctive lean middle-aged ancient Judean man with black beard streaked gray, brown eyes, short wavy hair, charcoal wool mantle and dull russet tunic. No Christ face, halo, fantasy, throne or raised preaching hand.",
+      "identity_references": [],
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "Ezekiel holds the two pieces together before his people. The sign belongs to a promise that divided Israel will be gathered and become one under the Lord.",
+      "independent_review": "Source/event, semantic uniqueness, visible anatomy and established identity checked by independent verifier; Joseph age revision reviewed separately. This is technical evidence, not owner approval."
+    },
+    {
+      "key": "lehi-joseph-counsel",
+      "asset": "assets/page-art/bible-together/lehi-joseph-counsel-full.webp",
+      "sha256": "cde8c433c4ad12ee72c3bf1653b0ba24413dff03e07f9ff910e8a8d6864d1f2f",
+      "thumbnail": "assets/page-art/bible-together/lehi-joseph-counsel-960.webp",
+      "thumbnail_sha256": "b7f4c87a695aac9cbe42486a8ba4f92d29c3ef1ff907b54384f55f8fa003926d",
+      "original_generation": "exec-3db7c174-a3ca-4474-b8b5-8a0b38b1229b.png",
+      "original_sha256": "b3c7219a982e0ed38674debfbb3960f8ad9f232b6ba91e2a9f04bfb1e964ad68",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/3?lang=eng&id=p1-p15#p1",
+      "source_references": [
+        [
+          "bofm/2-ne/3",
+          "2 Nephi 3:1–15",
+          "1-15"
+        ],
+        [
+          "bofm/2-ne/3",
+          "2 Nephi 3:22–25",
+          "22-25"
+        ],
+        [
+          "ot/gen/50",
+          "Genesis 50:24–25",
+          "24-25"
+        ]
+      ],
+      "scene": "Lehi counsels his son Joseph",
+      "relationship": "An ancestor’s covenant and additional recorded prophecy",
+      "interpretation": "The text identifies Joseph as Lehi’s youngest son but does not give his exact age here. The furnishings are artistic interpretation.",
+      "prompt": "Input is IDENTITY ONLY. Preserve LEHI, gray-bearded older man at far LEFT, unmistakable facial structure and hair, age him naturally to end of life; don't copy family reunion or tent. Scene2Nephi3:1-15,22-25: elderly Lehi sits propped on a simple woven resting mat inside a modest dwelling, counseling his youngest son Joseph who sits beside him listening with serious affection. Joseph is Lehi's young son born in wilderness, approximate boy/early adolescent not exact known age, NOT Joseph Smith/Egypt. Two figures only. Lehi looks directly into son's eyes, one hand open near his own lap; son's hands on his own knees. Warm overcast window light, low intimate eye-level framing, muted slate-purple cover and pale ochre woven robe. No crowd, plates, books, blessing-hand-on-head invention, throne, desert reunion or fabricated inscriptions. Exact furnishings and ages are interpretation.",
+      "identity_references": [
+        "assets/page-art/book-of-mormon-stories/02-lehi-sariah-full.webp"
+      ],
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "Near the end of his life, Lehi speaks to his youngest son about Joseph in Egypt and the Lord’s covenants. The family’s future is placed within a much older story.",
+      "independent_review": "Source/event, semantic uniqueness, visible anatomy and established identity checked by independent verifier; Joseph age revision reviewed separately. This is technical evidence, not owner approval."
+    },
+    {
+      "key": "alma-preserves-abinadi",
+      "asset": "assets/page-art/bible-together/alma-preserves-abinadi-full.webp",
+      "sha256": "ebe77944dcebec03d24a7552bf2e04e50399160cdc081b9ee9f107aae0bfbb71",
+      "thumbnail": "assets/page-art/bible-together/alma-preserves-abinadi-960.webp",
+      "thumbnail_sha256": "e9f2183fbf32fbcac801d98b2d1aea76958c7eb23e6bba67b0cecd157b778254",
+      "original_generation": "exec-2f3d3c1a-59bd-4531-acb9-b3bd9e67537d.png",
+      "original_sha256": "3595bd6afafb8695c52ce06854167e7284e7762bda867cbb6b6eeec88cda4d31",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/17?lang=eng&id=p2-p4#p2",
+      "source_references": [
+        [
+          "bofm/mosiah/17",
+          "Mosiah 17:2–4",
+          "2-4"
+        ],
+        [
+          "bofm/mosiah/14",
+          "Mosiah 14",
+          ""
+        ],
+        [
+          "ot/isa/53",
+          "Isaiah 53",
+          ""
+        ]
+      ],
+      "scene": "Alma keeps Abinadi’s words",
+      "relationship": "Direct quotation within a preserved testimony",
+      "interpretation": "The scripture identifies concealment and writing, but does not specify Alma’s hiding place or writing material. Those details are artistic interpretation.",
+      "prompt": "Input reference IDENTITY ONLY: ALMA THE ELDER is young CLEAN-SHAVEN man seated CENTER-LEFT in burgundy mantle, dark straight shoulder-length hair, watching old Abinadi. Preserve that young face, NOT older standing Abinadi or ruler. Mosiah17:2-4: after escaping, young Alma concealed for days WRITES Abinadi's testimony. New composition: close overhead-oblique view into a shadowed secluded space screened by hanging woven fabric; young Alma on ground concentrates on writing with a fine reed on a small plain sheet supported on knees, one hand writes, other supports. No stone cave, metal plates, woodland rocky shelter, guards visibly finding him, library, modern desk or throne. Exact hiding place and writing material unspecified and treated as artistic interpretation. Alert focused expression, worn simple muted burgundy garment, restrained daylight through fabric, close face detail with task-directed eyes. Scripture preservation under danger, not relaxed scholarship.",
+      "identity_references": [
+        "assets/page-art/book-of-mormon-stories/07-abinadi-alma-full.webp"
+      ],
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "After escaping the king’s servants, young Alma writes the testimony he has heard. Abinadi’s teaching includes Isaiah’s prophecy of the suffering servant.",
+      "independent_review": "Source/event, semantic uniqueness, visible anatomy and established identity checked by independent verifier; Joseph age revision reviewed separately. This is technical evidence, not owner approval."
+    },
+    {
+      "key": "nephi-reads-isaiah",
+      "asset": "assets/page-art/bible-together/nephi-reads-isaiah-full.webp",
+      "sha256": "a01420112c5d28fe9f1373dcaede90ba898f835e502845539d919785f479ed0b",
+      "thumbnail": "assets/page-art/bible-together/nephi-reads-isaiah-960.webp",
+      "thumbnail_sha256": "fee43ef38c248fccabf54dc4ee05782e4f12b8bc56def7eb58664cf97ba61bba",
+      "original_generation": "exec-049dd1f6-a527-42a0-ab7e-2263e77cd855.png",
+      "original_sha256": "98890f6ce6e08cc7b263d0113d48ccf54273d17cd62738494abb8a4b62ea637f",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/19?lang=eng&id=p22-p24#p22",
+      "source_references": [
+        [
+          "bofm/1-ne/19",
+          "1 Nephi 19:22–24",
+          "22-24"
+        ],
+        [
+          "bofm/1-ne/20",
+          "1 Nephi 20",
+          ""
+        ],
+        [
+          "ot/isa/48",
+          "Isaiah 48",
+          ""
+        ]
+      ],
+      "scene": "Nephi reads Isaiah to his brothers",
+      "relationship": "An explicit reading and a quoted chapter",
+      "interpretation": "The brass plates are not a complete modern Bible. Their appearance and the gathering’s setting are artistic interpretation.",
+      "prompt": "Reference IDENTITY ONLY: NEPHI is strong clean-shaven curly-haired man in CENTER; preserve him with slightly older adult appearance. His two bearded brothers at left and right preserve recognizable faces. New scene1Nephi19:22-24: Nephi READS Isaiah from BRASS PLATES to his brothers. Three adult men sit close in a simple early settlement shelter with woven wall screens and daylight, no boat, tools, coast or shipyard. Open small brass record lies on Nephi's lap, subtle shallow marks no readable invented text; one hand steadies pages other traces a line. His lips lightly parted reading, eyes directed at record; both brothers lean attentively toward actual plates. Camera from just above one brother's shoulder gives diagonal view of record and all three faces. Calm patient intent, no broad smiles, no standing sermon, no modern book. Clothing simple unadorned flax and deep muted blue, no invented archaeological motifs. Location and furnishings interpreted, no claim exact settlement identified.",
+      "identity_references": [
+        "assets/page-art/book-of-mormon-stories/03-nephi-ship-full.webp"
+      ],
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "Nephi turns to the writings on the brass plates and reads Isaiah to his brothers, seeking to help them believe in the Lord their Redeemer.",
+      "independent_review": "Source/event, semantic uniqueness, visible anatomy and established identity checked by independent verifier; Joseph age revision reviewed separately. This is technical evidence, not owner approval."
+    },
+    {
+      "key": "isaiah-call",
+      "asset": "assets/page-art/bible-together/isaiah-call-full.webp",
+      "sha256": "07cdc6af731462f9a1aa8a621c2eab2ec6444c8453c0db7d02d5a685b01ec60e",
+      "thumbnail": "assets/page-art/bible-together/isaiah-call-960.webp",
+      "thumbnail_sha256": "ccb43f288489c96e70aee0b2cf2cb28ae033c5bc9ea330ccc1b8f03ff617da48",
+      "original_generation": "exec-323e2924-a19f-44eb-9dfb-8d74c6907389.png",
+      "original_sha256": "7aafe44799ce0b0200ed4bb1d4f25797d96e06ef2af10fbe8bd81256b16ef888",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/6?lang=eng&id=p5-p8#p5",
+      "source_references": [
+        [
+          "ot/isa/6",
+          "Isaiah 6:5–8",
+          "5-8"
+        ],
+        [
+          "bofm/2-ne/16",
+          "2 Nephi 16:5–8",
+          "5-8"
+        ]
+      ],
+      "scene": "Isaiah answers the call",
+      "relationship": "A directly preserved prophetic vision",
+      "interpretation": "Isaiah describes a vision. The picture focuses on the coal and his response, with the seraph only partly within the frame.",
+      "prompt": "Reference IDENTITY ONLY: Isaiah is gray-brown-haired bearded man in CENTER wearing ochre; preserve recognizable face, mildly younger because Isaiah6 vision precedes Isaiah7 encounter. Specific vision Isaiah6:5-8, repeated2Nephi16:5-8. Intimate close profile/three-quarter photograph of Isaiah kneeling in temple vision, humbled awed face with lips slightly parted; live coal is held in a seraph's hand near his lips, tongs lying on stone altar beyond as text says taken with tongs. Seraph body outside crop, show only one natural hand holding small glowing coal without injury, no standard two-winged angel invented. Frame Isaiah face, hand/coal and softly smoky altar; no divine face, throne needed, NO physical injury, no blood or burns, reverent visionary representation. Subtle coal warmth on face and restrained temple smoke, eyes focused on approaching coal, rough ecru linen and copper-brown mantle. No dramatic fire explosion, magic sparks or painted rendering. Distinct close commissioning action not sermon or conduit scene.",
+      "identity_references": [
+        "assets/page-art/birth-of-christ/01-isaiah-ahaz-full.webp"
+      ],
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "In Isaiah’s vision, a seraph brings a live coal to his lips. After the assurance that his sin is purged, Isaiah offers himself for the Lord’s work.",
+      "independent_review": "Source/event, semantic uniqueness, visible anatomy and established identity checked by independent verifier; Joseph age revision reviewed separately. This is technical evidence, not owner approval."
+    },
+    {
+      "key": "moroni-quotes-malachi",
+      "asset": "assets/page-art/bible-together/moroni-quotes-malachi-full.webp",
+      "sha256": "3137688878e07b020bf4fec1f1de17cd5436e5184bdd8ca230137d1d697c4677",
+      "thumbnail": "assets/page-art/bible-together/moroni-quotes-malachi-960.webp",
+      "thumbnail_sha256": "ed6423fb7905143e1dd4d9adc28c99fa21775215713bfc0003a4dae71df6d014",
+      "original_generation": "exec-85cc0924-c01e-4884-b6ae-b021ae02a066.png",
+      "original_sha256": "7f3bf6ade5d7bf31fcacfa8e1af2f07ee42ae1d36f286e3a9f92e58fe2619453",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p30-p39#p30",
+      "source_references": [
+        [
+          "pgp/js-h/1",
+          "Joseph Smith—History 1:30–39",
+          "30-39"
+        ],
+        [
+          "ot/mal/3",
+          "Malachi 3",
+          ""
+        ],
+        [
+          "ot/mal/4",
+          "Malachi 4:5–6",
+          "5-6"
+        ]
+      ],
+      "scene": "Moroni brings Malachi’s words to Joseph",
+      "relationship": "A reported biblical quotation in Restoration history",
+      "interpretation": "Joseph was seventeen at this visit. The room’s furnishings and the appearance of the light are artistic interpretation.",
+      "prompt": "Image1 exact Joseph Smith identity master, preserve nose eyes mouth brow face proportions but age naturally back to SEVENTEEN in1823. Image2 IDENTITY ONLY for MORONI: clean-shaven dark curly-haired man on RIGHT in white, preserve recognizable face, NOT its Joseph face or plate-hand-over composition. Specific scene JosephSmithHistory1:30-39: Moroni standing beside Joseph's bed speaking Bible prophecies including Malachi, Joseph awake upright in simple white long linen sleeping shirt, modestly clothed, astonishment becoming attentive concentration, genuine mutual eye contact. Rustic1823 NewYork family log-home upper sleeping room, rough rafters, low ceiling with enough space for standing angel, plain quilt, no electric items. Moroni brilliant white loose robe; bare hands and bare feet slightly above floor visible as source describes, no wings, halo or nail scars. Face and skin keep photographic natural detail despite luminous surroundings. NO plates or books handed over, no other identifiable people, no invented text, no hillside. Window night, gentle luminous source around messenger without washing out facial clarity. Wide composition establishes bedroom and two complete figures.",
+      "identity_references": [
+        "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "assets/page-art/book-of-mormon-stories/40-moroni-joseph-full.webp"
+      ],
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "In his account of the 1823 visit, Joseph remembers Moroni speaking of an ancient record and quoting biblical prophecies, including Malachi. The coming forth of the Book of Mormon is introduced within that scriptural setting.",
+      "independent_review": "Source/event, semantic uniqueness, visible anatomy and established identity checked by independent verifier; Joseph age revision reviewed separately. This is technical evidence, not owner approval.",
+      "corrections": [
+        {
+          "prompt": "Correct one factual visual detail in this existing image of Moroni visiting seventeen-year-old Joseph Smith (Joseph Smith—History 1:30). Preserve the exact two faces, Joseph's age and likeness, clothing, room, bed, composition, lighting and photographic detail. Moroni must visibly hover about 8 centimeters above the rug: lift his entire figure naturally just enough to leave unmistakable air between his exposed bare foot and the floor, with a soft separate shadow below. Both feet wherever visible must be clear of the floor, not touching or planted on the rug. Keep head inside frame, do not crop. Preserve natural anatomy and hands, no scars or wings. Do not change anything else.",
+          "source": "exec-dd01fd46-3764-4aa6-9e89-0d2177ee8f2c.png",
+          "selected": "exec-6a1985fc-5944-4916-8a37-588ec85329cf.png"
+        },
+        {
+          "prompt": "Revise this scene at the owner's explicit direction: JOSEPH SMITH ON THE LEFT MUST CLEARLY LOOK SEVENTEEN YEARS OLD, not a mature man in his twenties or thirties. Reference 1 is the scene to edit. Reference 2 is the mandatory adult identity master: depict this SAME recognizable person at age17, retaining eye spacing, blue eyes, distinctive nose, mouth and hair color, but with youthful adolescent cheeks, smoother unlined skin, less mature jaw/neck and a boyish seventeen-year-old appearance. Do not merely relabel the existing mature face; visibly age him backward. NOT a young child. Natural farm youth, clean-shaven, medium light-brown hair, no adult stubble. Keep white linen sleeping shirt and quilt; Joseph sits up in bed watching Moroni with wide attentive eyes, initial wonder becoming focused listening. Event: night of September21,1823 in the humble upper sleeping room of the Smith log home. Historically plausible early19thcentury rough wood, modest bedding; dark night beyond window, room filled by soft clear radiance from Moroni, no modern fittings. Preserve Moroni's established face and his loose white robe, show hands and a little forearm above wrists bare; bare feet and a little above ankles; both feet MUST remain visibly suspended above rug with clear air gap as already corrected. No wings, no scars, no plates in bedroom. Keep same wide1536x1024 overall composition and photographic realism, preserve coherent mutual gaze and natural hands, preserve all approved identity structure through age. The changes requested are accurate youthful Joseph, period nighttime atmosphere, visible wrists/ankles; retain corrected hover.",
+          "source": "exec-6a1985fc-5944-4916-8a37-588ec85329cf.png",
+          "selected": "exec-85cc0924-c01e-4884-b6ae-b021ae02a066.png",
+          "reason": "Owner rejected mature apparent age; Joseph was17 at September21,1823 event."
+        }
+      ],
+      "event_age": {
+        "Joseph Smith": 17,
+        "basis": "Born23December1805; event21September1823; Joseph Smith—History1:3,27."
+      }
+    },
+    {
+      "key": "mosiah-engraved-stone",
+      "asset": "assets/page-art/bible-together/mosiah-engraved-stone-full.webp",
+      "sha256": "6ef7c7792fe9ae44652617d17371053cd54fe1d1fdbe5e3524bae8a04dcbf6f1",
+      "thumbnail": "assets/page-art/bible-together/mosiah-engraved-stone-960.webp",
+      "thumbnail_sha256": "c36a2f6a43d3b8bb285a9b3a4cc9fe2193d87fbf89a9a62501dacfd484f8445b",
+      "original_generation": "exec-d32ed8f0-2a1f-477c-bd15-64dea675d5c9.png",
+      "original_sha256": "855f32c37c18a5e44b2a64f43562f08c3ea9b078c2a6ba957383f0274b546ad6",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/omni/1?lang=eng&id=p20-p22#p20",
+      "source_references": [
+        [
+          "bofm/omni/1",
+          "Omni 1:20–22",
+          "20-22"
+        ],
+        [
+          "ot/gen/11",
+          "Genesis 11:1–9",
+          "1-9"
+        ]
+      ],
+      "scene": "Mosiah interprets the engraved stone",
+      "relationship": "A shared narrative reference",
+      "interpretation": "Omni calls it a large stone brought to Mosiah. Its precise dimensions, marks and means of transport are not specified; the portable slab and carrying litter are artistic interpretation.",
+      "prompt": "Specific event Omni1:20-22: MOSIAH THE FIRST, father of Benjamin, interprets a LARGE ENGRAVED STONE brought to him. Newly interpreted ancient prophet face, distinctly mature broad angular face, olive-brown skin, black hair with graying temples, short square beard; not Christ/Joseph/Benjamin. Four adult people in open work area of modest ancient settlement, one large heavy irregular waist-high stone resting securely on ground, shallow non-legible weathered incisions (no authentic script claim). Mosiah bends slightly to inspect stone with thoughtful concentrated expression, fingertips resting on its edge while two people who brought it watch; fourth farther back. Wider slightly elevated frame shows substantial stone as central subject, simple cloth garments and earth/stone/timber surroundings; filtered morning light. No gold plates, king's crown, throne, Maya/Aztec symbols, excavator, modern tools, tablets or readable writing. This is interpreted Book of Mormon account not archaeological find. Physically plausible anatomy, purposeful gaze on stone, no generic sermon gesture.",
+      "identity_references": [],
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "A large stone bearing engravings is brought to Mosiah. Omni says its account concerns Coriantumr and a people whose ancestors came from the tower when languages were confounded.",
+      "independent_review": "Final candidate directly inspected against exact source, visible action, age/atmosphere, eyes and hands; canonical Christ likeness compared where applicable. Technical pass is separate from owner approval.",
+      "superseded_generations": [
+        "exec-f6a9443c-0a69-4579-b867-3de204e12bbe.png"
+      ],
+      "corrections": [
+        {
+          "slug": "mosiah-stone-portable",
+          "target": "exec-f6a9443c-0a69-4579-b867-3de204e12bbe.png",
+          "prompt": "Edit this existing picture at the owner's direction. Preserve Mosiah's exact face, gray hair, beard, clothing and the other three recognizable people and the ancient settlement atmosphere. Correct the stone: Omni1:20 says a LARGE STONE WAS BROUGHT TO HIM. Replace the enormous immovable foreground boulder with a substantial but transportable flat engraved stone slab, approximately 65cm long by45cm wide by8cm thick, clearly about the width of a man's torso, rough natural edges, many subtle interpreted incised marks, no readable modern language. Show it resting on a simple stout wooden carrying litter with two projecting carrying poles, just set down at about waist height on low supports; two people are beside the poles as if they have just brought it to Mosiah. Mosiah leans to examine it, one hand naturally near edge. Keep all four people and natural hands, ensure stone looks heavy but plausibly carried by two adults, not a small tablet and NOT gigantic boulder. Dimensions/litter are artistic staging only, do not print text. Show more surrounding ground where old boulder was. Preserve near-photographic clarity and natural daylight, no modern wheels or crane, horizontal1536x1024."
+        }
+      ]
+    },
+    {
+      "key": "christ-isaiah-nazareth",
+      "asset": "assets/page-art/bible-together/christ-isaiah-nazareth-full.webp",
+      "sha256": "ccb8c152ded8f3b5f8de5d434db9584a94b762e030a0aa728002c81f7694984d",
+      "thumbnail": "assets/page-art/bible-together/christ-isaiah-nazareth-960.webp",
+      "thumbnail_sha256": "94fd80087f6068520ae4e6ae13c8695e3a1a1cb53c87f04d15eff9258f298f7e",
+      "original_generation": "exec-a020090b-6d72-4649-b53b-7cb6b6c7da66.png",
+      "original_sha256": "77e63b0c66554f79cce3a61cea75383d79f88c3bf89fc86ea5300f347fa04e7a",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/4?lang=eng&id=p16-p21#p16",
+      "source_references": [
+        [
+          "nt/luke/4",
+          "Luke 4:16–21",
+          "16-21"
+        ],
+        [
+          "bofm/3-ne/23",
+          "3 Nephi 23:1–5",
+          "1-5"
+        ],
+        [
+          "ot/isa/61",
+          "Isaiah 61:1–2",
+          "1-2"
+        ]
+      ],
+      "scene": "Christ opens Isaiah in Nazareth",
+      "relationship": "Christ’s shared invitation to hear Isaiah",
+      "interpretation": "The picture shows the reading before Jesus returns the scroll and sits. His adult appearance fits the beginning of His ministry; the synagogue’s exact interior and the scroll’s appearance are artistic interpretation.",
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "Standing in the synagogue, Jesus reads Isaiah’s words about good news, healing and deliverance. He then declares the scripture fulfilled in His listeners’ hearing.",
+      "independent_review": "Final candidate directly inspected against exact source, visible action, age/atmosphere, eyes and hands; canonical Christ likeness compared where applicable. Technical pass is separate from owner approval.",
+      "christ": true,
+      "event_age": {
+        "Jesus Christ": "About thirty, near the beginning of His mortal ministry; Luke 3:23 and Luke 4. Exact event age is not stated."
+      },
+      "prompt": "Create ONE completely new original horizontal1536x1024,3:2 near-photographic biblical scene, lifelike live-action realism with convincing skin texture, eyes, hands, period fabrics and natural light. Reference image is IDENTITY ONLY: preserve exact approved Jesus Christ facial identity (eyes/brow/nose/mouth/hair/beard), adapt expression to specific event, approximately30-33 years old during His MORTAL ministry. No crucifixion scars on hands or wrists because all scenes predate crucifixion. No generic stock pose, no talking to children, no mountain sermon, no halo, text overlays, modern bound scriptures or modern clothes. Period details are interpretations, not archaeological proof. Keep every visible hand anatomically correct and everyone looking where the action requires. Do not copy reference composition or smiling portrait expression. Full source scene and essential action visible in frame. Luke4:16-21, Jesus STANDS reading the open scroll of Isaiah in a modest first-century Nazareth synagogue. Unrolled parchment held carefully at chest level, eyes lowered to the words, mouth naturally midreading, dignified concentration. Horizontal side-angle composition from among seated adult listeners; a single adult synagogue attendant stands beside the reading place, some listeners in foreground with backs or profiles, period stone benches and plastered walls, narrow daylight opening. Restrained muted blue-gray mantle over undyed linen. Clearly public worship indoors, no outdoor sermon stage. Scroll marks subtle non-legible handwriting, not invented English or decorative symbols. This is the reading moment BEFORE returning scroll and sitting. Christ occupies right middle third, scroll and hands foreground clear, believable shared attention.",
+      "identity_references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "resurrection_state": "mortal before Crucifixion; no nail scars",
+      "semantic_inventory_review": "No matching event found among449gallery titles/alts and artworkJSONledgers before generation; original composition checked separately.",
+      "corrections": [
+        {
+          "slug": "christ-nazareth-scroll-revision",
+          "target": "exec-5f925bf5-579f-4a8b-9dc7-d4503f5153ee.png",
+          "prompt": "Correct ONLY the parchment reading direction in this existing picture of Jesus reading Isaiah in the Nazareth synagogue. Keep Christ's exact approved face and identity, attentive downward gaze, standing posture, hands, attendant and listeners, room, lighting, clothes, composition. The scroll currently displays written surface outward toward camera while Jesus is behind it, so He cannot read it. Reorient the unrolled parchment slightly tilted UP toward Christ so its written inner face faces HIS EYES. The audience/viewer should see mainly the BLANK outside reverse of parchment, perhaps a narrow oblique hint of handwritten lines on the upward inner surface. Natural curl and two wooden rollers, coherent two-hand grip, no see-through parchment, no reversed mirrored writing. It must be visually obvious Christ is READING the words on his side of the scroll. No other changes; preserve near-photographic3:2 original, no wounds on hands."
+        }
+      ]
+    },
+    {
+      "key": "christ-wilderness-temptation",
+      "asset": "assets/page-art/bible-together/christ-wilderness-temptation-full.webp",
+      "sha256": "05d76392cdb4cc0de926013d7f678f003c1647a58e0496ad9078fb5ad918f0bb",
+      "thumbnail": "assets/page-art/bible-together/christ-wilderness-temptation-960.webp",
+      "thumbnail_sha256": "e5bedfc502f27fb15b81e29285876ddc6ae355e0b060b5ec7c92622f8efc4f92",
+      "original_generation": "exec-dfe704c5-d222-458c-9d13-f51d97cfc90a.png",
+      "original_sha256": "7f04bb48513bae3c7ad88b6ed8d919000a17d93961db884e2588a627d9434f98",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/4?lang=eng&id=p1-p4#p1",
+      "source_references": [
+        [
+          "nt/matt/4",
+          "Matthew 4:1–4",
+          "1-4"
+        ],
+        [
+          "bofm/mosiah/15",
+          "Mosiah 15:5",
+          "5"
+        ],
+        [
+          "ot/deut/8",
+          "Deuteronomy 8:3",
+          "3"
+        ]
+      ],
+      "scene": "Christ answers temptation with scripture",
+      "relationship": "A Gospel event and Abinadi’s teaching",
+      "interpretation": "This scene belongs to the beginning of Christ’s mortal ministry, around age thirty. The landscape and pose are interpreted; the tempter remains outside the picture. The stones have not become bread.",
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "Hungry after His fast, Jesus refuses the temptation to turn stones into bread. He answers with the words of Moses, trusting the Father rather than yielding.",
+      "independent_review": "Final candidate directly inspected against exact source, visible action, age/atmosphere, eyes and hands; canonical Christ likeness compared where applicable. Technical pass is separate from owner approval.",
+      "christ": true,
+      "event_age": {
+        "Jesus Christ": "About thirty at the beginning of mortal ministry; Luke 3:23. Exact chronology is not asserted."
+      },
+      "prompt": "Create ONE completely new original horizontal1536x1024,3:2 near-photographic biblical scene, lifelike live-action realism with convincing skin texture, eyes, hands, period fabrics and natural light. Reference image is IDENTITY ONLY: preserve exact approved Jesus Christ facial identity (eyes/brow/nose/mouth/hair/beard), adapt expression to specific event, approximately30-33 years old during His MORTAL ministry. No crucifixion scars on hands or wrists because all scenes predate crucifixion. No generic stock pose, no talking to children, no mountain sermon, no halo, text overlays, modern bound scriptures or modern clothes. Period details are interpretations, not archaeological proof. Keep every visible hand anatomically correct and everyone looking where the action requires. Do not copy reference composition or smiling portrait expression. Full source scene and essential action visible in frame. Matthew4:1-4. Specific moment Jesus refuses the temptation to turn stones into bread after fasting. Christ alone in frame in a stark dry rocky Judean wilderness ravine, threequarter close-medium view seated low on a stone, coarse brown mantle and undyed linen, dust at hem, slightly fatigued and gaunt from fasting yet firmly resolute. He turns face toward tempter outside frame to right, naturally parted lips answering with scripture, one relaxed OPEN EMPTY hand near several ordinary pale stones in foreground, hand not magical. Stones remain STONES, no bread, no bowl, no satan figure, no invented demonic anatomy. No onlookers or disciples. Hard morning light and coolrockshadows, wide negative landscape balanced by strongly recognizable face, serious human expression, not smiling or prayerpose.",
+      "identity_references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "resurrection_state": "mortal before Crucifixion; no nail scars",
+      "semantic_inventory_review": "No matching event found among449gallery titles/alts and artworkJSONledgers before generation; original composition checked separately."
+    },
+    {
+      "key": "christ-roof-paralytic",
+      "asset": "assets/page-art/bible-together/christ-roof-paralytic-full.webp",
+      "sha256": "e6d4f309f8d8c0ec256075f7631978539b58466f95272839d5540737737c051e",
+      "thumbnail": "assets/page-art/bible-together/christ-roof-paralytic-960.webp",
+      "thumbnail_sha256": "d8047b1c0c37df28903171fb88e0ce3253a8522fc9879da7d34bdbf5a32c5609",
+      "original_generation": "exec-623cad6f-46d3-4f24-970d-dc2bc5f1aae8.png",
+      "original_sha256": "a6a11084c9746f1f6878fcfc487924bd46a2726a7862a9daf0730ebd0db95d0c",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p1-p12#p1",
+      "source_references": [
+        [
+          "nt/mark/2",
+          "Mark 2:1–12",
+          "1-12"
+        ],
+        [
+          "bofm/mosiah/3",
+          "Mosiah 3:5",
+          "5"
+        ]
+      ],
+      "scene": "A man is lowered through the roof",
+      "relationship": "A prophetic description and a Gospel encounter",
+      "interpretation": "The picture shows the man arriving before he rises. Mark specifies four bearers and a roof opening. The ropes, bed construction and arrangement of the house are artistic interpretation; the man’s exact age is not given.",
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "Unable to reach Jesus through the crowd, four people open the roof and lower the bed carrying a man who cannot walk. Jesus receives him, speaks forgiveness and commands him to rise.",
+      "independent_review": "Final candidate directly inspected against exact source, visible action, age/atmosphere, eyes and hands; canonical Christ likeness compared where applicable. Technical pass is separate from owner approval.",
+      "christ": true,
+      "event_age": {
+        "Jesus Christ": "Adult mortal ministry, approximately early thirties; exact age at this event not given.",
+        "Man and four bearers": "Exact ages unknown; depicted as adults."
+      },
+      "prompt": "Create ONE completely new original horizontal1536x1024,3:2 near-photographic biblical scene, lifelike live-action realism with convincing skin texture, eyes, hands, period fabrics and natural light. Reference image is IDENTITY ONLY: preserve exact approved Jesus Christ facial identity (eyes/brow/nose/mouth/hair/beard), adapt expression to specific event, approximately30-33 years old during His MORTAL ministry. No crucifixion scars on hands or wrists because all scenes predate crucifixion. No generic stock pose, no talking to children, no mountain sermon, no halo, text overlays, modern bound scriptures or modern clothes. Period details are interpretations, not archaeological proof. Keep every visible hand anatomically correct and everyone looking where the action requires. Do not copy reference composition or smiling portrait expression. Full source scene and essential action visible in frame. Mark2:1-12. Jesus receives the adult paralyzed man being LOWERED THROUGH OPEN ROOF into a crowded modest house in Capernaum. Dynamic but reverent interior: open rectangular roof gap upperleft with broken mud/reeds and timber supports; FOUR adult helpers visible at roof edges controlling FOUR sturdy ropes attached to corners of a simple light litter/bed. Fully clothed man reclines safely upon mat still suspended a short distance above floor at foregroundleft. Jesus stands at right beside descending bed, cream linen and mutedgreen mantle, bends slightly to establish clear mutual eye contact with sickman, gentle engaged concern. Several adult house occupants moveaside, not a parade, no children. Sunlight from roof illuminates ropes and small dust motes. Bed horizontal and anatomicallysupported, ropes continuous to corners, no impossiblefloatingor intersectinglimbs. Capture arrival before man stands; no rolledmat in his arms, no pool. Named helpers unspecified, interpreted unnamed ancient people.",
+      "identity_references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "resurrection_state": "mortal before Crucifixion; no nail scars",
+      "semantic_inventory_review": "No matching event found among449gallery titles/alts and artworkJSONledgers before generation; original composition checked separately.",
+      "corrections": [
+        {
+          "slug": "christ-roof-warmth",
+          "target": "exec-7a9e856f-b77d-4054-80c8-7c103930a7e1.png",
+          "prompt": "Edit only expressions and fine gaze in this existing image the owner LOVES. Preserve this exact wonderful composition: lowered bed, man, roof opening, helpers, ropes, lighting, Christ's approved facial identity, clothing and hands. Make Christ look warmly compassionate and happy to receive this man, expressed mainly by tender engaged eyes, relaxed brow, slightly lifted cheeks and a modest natural smile. NO huge grin, no broad teeth-baring smile, no theatrical laughter. He should seem personally glad to see the man and attentive to his need. Strengthen accurate mutual eye contact between Jesus and the man on the bed. Make the man's face quietly hopeful and relieved, eyes alive and directed to Christ. Give surrounding listeners and visible helpers varied natural expressions of hope, anticipation, wonder and care instead of blank or lifeless faces, all gazes directed to the central encounter or rope task; do not make everyone smile identically. Do NOT change facial identities, scene geometry, roof, bed, rope physics, number of visible people or body positions. Pre-Crucifixion so no nail scars. Preserve high photographic fidelity, natural anatomy, original3:2 image."
+        }
+      ]
+    },
+    {
+      "key": "christ-sabbath-grainfield",
+      "asset": "assets/page-art/bible-together/christ-sabbath-grainfield-full.webp",
+      "sha256": "d04937a111b886cc705baf1a8757396b398e2fab2786af6ea92cf9eb01f57af7",
+      "thumbnail": "assets/page-art/bible-together/christ-sabbath-grainfield-960.webp",
+      "thumbnail_sha256": "bef53c763169950dce657e909a705ca34be18c19dd7d53a405eb16423ceba6de",
+      "original_generation": "exec-e3bf7273-f317-47e3-8414-61b40c524fa6.png",
+      "original_sha256": "46e010352d43e50960bda3be8980110c2fd814fdbb9e7bda694f4dc9d7cf594d",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p23-p28#p23",
+      "source_references": [
+        [
+          "nt/mark/2",
+          "Mark 2:23–28",
+          "23-28"
+        ],
+        [
+          "bofm/3-ne/15",
+          "3 Nephi 15:2–10",
+          "2-10"
+        ]
+      ],
+      "scene": "Christ answers in the grainfield",
+      "relationship": "Related teaching in distinct settings",
+      "interpretation": "This picture belongs to Christ’s mortal ministry. The disciples, rather than Jesus, pluck the grain. Their precise ages, clothing and the field’s location are not specified.",
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "As His disciples pluck ears of grain, Jesus answers a question about the Sabbath. He recalls David’s experience and teaches His authority as Lord of the Sabbath.",
+      "independent_review": "Final candidate directly inspected against exact source, visible action, age/atmosphere, eyes and hands; canonical Christ likeness compared where applicable. Technical pass is separate from owner approval.",
+      "christ": true,
+      "event_age": {
+        "Jesus Christ": "Adult mortal ministry, approximately early thirties; exact event age not given.",
+        "Disciples and questioners": "Exact ages unknown; depicted as adults."
+      },
+      "prompt": "Create ONE completely new original horizontal1536x1024,3:2 near-photographic biblical scene, lifelike live-action realism with convincing skin texture, eyes, hands, period fabrics and natural light. Reference image is IDENTITY ONLY: preserve exact approved Jesus Christ facial identity (eyes/brow/nose/mouth/hair/beard), adapt expression to specific event, approximately30-33 years old during His MORTAL ministry. No crucifixion scars on hands or wrists because all scenes predate crucifixion. No generic stock pose, no talking to children, no mountain sermon, no halo, text overlays, modern bound scriptures or modern clothes. Period details are interpretations, not archaeological proof. Keep every visible hand anatomically correct and everyone looking where the action requires. Do not copy reference composition or smiling portrait expression. Full source scene and essential action visible in frame. Mark2:23-28. Jesus walking on narrow path through ripe WHEAT field turns to answer two adult religious questioners standing at the fieldedge; composed thoughtful expression and real mutual eyecontact, a small measured openhandgesture. Two adult disciples in background visibly PLUCK wheat ears by HAND as theywalk, different earthtonedclothes. Christ does NOT pluck grain. Dense wheatheads golden at waistheight, never maize/corn cobs. Low cameraatfieldedge, afternoon daylight, a lowstone boundarywall and ruralGalilean hills distant, no mound/no sermon crowd. Christ in softdeepochre mantle overundyedrobe, faceexactreference. Mature companions agesunspecified, varieddistinctfaces, normalrespectful questioning, no caricature or villainstaging. Farmsetting and handharvest action must be unmistakable, essentialhands visible, not justwalkingportrait.",
+      "identity_references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "resurrection_state": "mortal before Crucifixion; no nail scars",
+      "semantic_inventory_review": "No matching event found among449gallery titles/alts and artworkJSONledgers before generation; original composition checked separately."
+    },
+    {
+      "key": "christ-heals-servant-ear",
+      "asset": "assets/page-art/bible-together/christ-heals-servant-ear-full.webp",
+      "sha256": "41cb7819abfd86902668b9dbc263da7345d9b71d43cda23eb8b20d183d952914",
+      "thumbnail": "assets/page-art/bible-together/christ-heals-servant-ear-960.webp",
+      "thumbnail_sha256": "f242b434a413de259d1cab19f99d88454bddc55d7899c18c15dd38931cf71378",
+      "original_generation": "exec-61c08361-3f01-4045-a7de-838ad9c7faa1.png",
+      "original_sha256": "a789ad1892111bafd7cae60697ba47cb36d5df6f9507459fed800fe011b136e2",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p47-p51#p47",
+      "source_references": [
+        [
+          "nt/luke/22",
+          "Luke 22:47–51",
+          "47-51"
+        ],
+        [
+          "nt/john/18",
+          "John 18:10",
+          "10"
+        ],
+        [
+          "bofm/3-ne/12",
+          "3 Nephi 12:43–45",
+          "43-45"
+        ]
+      ],
+      "scene": "Mercy in the moment of arrest",
+      "relationship": "Christ’s action beside His teaching",
+      "interpretation": "This is the night of Christ’s arrest, before His Crucifixion, so no nail scars are present. Malchus’ exact age and appearance are unknown. The lighting, clothing and arrangement of the group are artistic interpretation.",
+      "reviewed": true,
+      "technical_review_passed": true,
+      "owner_approved": false,
+      "tone": "During His arrest, Jesus touches and heals the servant’s right ear. Amid fear and confrontation, His response is an act of mercy.",
+      "independent_review": "Final candidate directly inspected against exact source, visible action, age/atmosphere, eyes and hands; canonical Christ likeness compared where applicable. Technical pass is separate from owner approval.",
+      "christ": true,
+      "event_age": {
+        "Jesus Christ": "Final night before Crucifixion, adult mortal ministry conventionally early thirties; exact age not asserted.",
+        "Malchus": "Exact age and historical likeness unknown; adult appearance is interpreted."
+      },
+      "prompt": "Create ONE completely new original horizontal1536x1024,3:2 near-photographic biblical scene, lifelike live-action realism with convincing skin texture, eyes, hands, period fabrics and natural light. Reference image is IDENTITY ONLY: preserve exact approved Jesus Christ facial identity (eyes/brow/nose/mouth/hair/beard), adapt expression to specific event, approximately30-33 years old during His MORTAL ministry. No crucifixion scars on hands or wrists because all scenes predate crucifixion. No generic stock pose, no talking to children, no mountain sermon, no halo, text overlays, modern bound scriptures or modern clothes. Period details are interpretations, not archaeological proof. Keep every visible hand anatomically correct and everyone looking where the action requires. Do not copy reference composition or smiling portrait expression. Full source scene and essential action visible in frame. Luke22:47-51 withJohn18:10. The nighttime arrest: Jesus gently HEALS MALCHUS' RIGHT EAR. Tight threequarter action composition of TWO centraladults among olive tree shadows: servant Malchus at LEFT, his RIGHTside of face and right ear toward camera, tense and startled, Christ at RIGHT leaningin, one natural hand touching the servant's RIGHT EAR (anatomical right, not left). Christ's face distinctlyapproved, serious compassion, eyecontact withservant. Malchus hasuninjurednormalear ashealingtouchoccurs, NO blood, NO detachedpart, NO wound/gore. In deeperbackground show three shadowed adult members of arresting party carrying an oil-lantern or torch, simpleperiodweaponskeptlow, enough ambientblue moonlight to readfaces. No generic kneelingprayer, no smiling. Christlooseundyedlinentunic earthgrayoutermantle, NO nailscars, noropesrestraintyet. Peter and Judas OUT OF FRAME; no needinventthoseidentities. Earlyfirstcenturysimpleclothing; no medievalarmororRomanfantasyhelmet. Actualright-earcontact centralclear withcoherentfingers.",
+      "identity_references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "resurrection_state": "mortal before Crucifixion; no nail scars",
+      "semantic_inventory_review": "No matching event found among449gallery titles/alts and artworkJSONledgers before generation; original composition checked separately.",
+      "corrections": [
+        {
+          "slug": "christ-ear-healing-revision",
+          "target": "exec-b482594a-26b5-4220-96e0-96bda53c95e7.png",
+          "prompt": "Revise this healing scene carefully at the owner's direction. Preserve exact approved Christ identity and recognizable Malchus identity, realistic night olive-grove arrest atmosphere, torch-bearing group and garments. Correct laterality by RECOMPOSING: Jesus at IMAGE LEFT, Malchus at IMAGE RIGHT facing toward LEFT, so MALCHUS'S ANATOMICAL RIGHT EAR is the ear nearest the camera and clearly visible. This is Luke22:51, the healing immediately after his right ear was cut off; John18 names him Malchus, Peter is NOT the injured man. Christ gently cradles and touches the restored RIGHT ear with the fingertips and soft palm of one naturally shaped hand, a purposeful delicate healing touch, NOT merely gripping cheek/jaw or posing. Keep restored ear whole, no gore, no detached ear or flowing blood. Other hand can lightly steady Malchus's shoulder. Jesus must make precise compassionate eye contact with Malchus: both pupils directed into the other's eyes, coherent head angles, no unfocused stare. Christ expression tender concern and reassuring resolve, quietly emotionally present, small compassionate mouth movement, NO huge smile. Malchus visibly reacts with startled relief: softened fearful brow, slightly parted lips, moist bright eyes, breathing eased, attention locked on Christ. Background arresting adults react with subtle surprised attention, not lifeless identical faces. Show the instant of restoration through purposeful touch and expression, no fantasy light rays from fingers. Natural mortal Christ about early thirties, no Crucifixion scars. Preserve cinematic near-photographic sharpness,3:2 horizontal1536x1024. Canonical Christ reference second image is identity only."
+        }
+      ]
+    }
+  ],
+  "preserved_body_artworks": [
+    {
+      "asset": "assets/page-art/exclusive/bible-bountiful-witness-1536.webp",
+      "sha256": "1d70739ea2056688d9f924adc028ef7ff9d648837ddbf7bb90e92954ac7a8126"
+    },
+    {
+      "asset": "assets/page-art/topics/paired-scripture-study-1536.webp",
+      "sha256": "b591ce2407b479d825b5721ad35e36d80d4567ad42f58473cfe1f5dc599fbd57"
+    },
+    {
+      "asset": "assets/page-art/exclusive/two-witnesses-observation-1536.webp",
+      "sha256": "76cd0387261a7ed5254c000dfda64956e958b3f9089075f262719fd85357bf1c"
+    },
+    {
+      "asset": "assets/page-art/exclusive/two-witnesses-readers-1536.webp",
+      "sha256": "b667c0fb89dbf9d4ad850f4d56a88cd7cfa1e2190ad766dd67f0222f14810ba6"
+    },
+    {
+      "asset": "assets/page-art/exclusive/two-witnesses-charity-1536.webp",
+      "sha256": "e58ea4a69155688a2529c3574a6fcc8b2169ff9c2434d9d044b067ba9afec7d2"
+    },
+    {
+      "asset": "assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-full.webp",
+      "sha256": "4689447ec8cda332762eea5f62d89666a730174642f7cc290e9ed6e74603cce8"
+    }
+  ],
+  "preserved_hero_images": [
+    {
+      "asset": "assets/heroes/topics/bible-bom-desktop.webp",
+      "sha256": "7d09e685da7441da02daa1c1c622ef38de04bcdf22b0976509dff276290379e7"
+    },
+    {
+      "asset": "assets/heroes/topics/bible-bom-full.webp",
+      "sha256": "f0631b714acabdd729e90ee95858c1d107ff90efe509fe7c89adc4788f4e144a"
+    },
+    {
+      "asset": "assets/heroes/topics/bible-bom-mobile.webp",
+      "sha256": "200bcf82ca5f3f2ff01b88a3ffc3294cb08560a1c6b42655287fc5fed549e479"
+    }
+  ],
+  "owner_approved_new_images": false,
+  "scoped_direction": "Wyatt explicitly authorized exactlyfive additionalChrist scenes and waivedthe halfChrist ratio for thispage, preserving the originalseven plus eightnewprophet/history scenes. Total20,Christ7. No globalrulechange.",
+  "rejected_candidates": {
+    "generic_first_batch": "Excluded entire first8generation batch after owner clarified semantic scene diversity; none enters site assets.",
+    "moroni_original": "exec-dd01fd46-3764-4aa6-9e89-0d2177ee8f2c.png failed explicit hovering source detail.",
+    "moroni_hover_only": "exec-6a1985fc-5944-4916-8a37-588ec85329cf.png superseded because owner found Joseph too mature.",
+    "mosiah_oversized": "exec-f6a9443c-0a69-4579-b867-3de204e12bbe.png superseded atownerrequest toshowtransportable largestone.",
+    "roof_expression": "exec-7a9e856f-b77d-4054-80c8-7c103930a7e1.png compositionloved; expressionrefinementrequested.",
+    "malchus_left_ear": "exec-b482594a-26b5-4220-96e0-96bda53c95e7.png wronganatomicalside plusownerrequestedtouch/gaze refinement.",
+    "nazareth_scroll": "exec-5f925bf5-579f-4a8b-9dc7-d4503f5153ee.png writingfacedviewer insteadofChrist."
+  },
+  "owner_scope_quote": "we can do 5 pictures of christ and disregard the need for it to be half so you do not need to add those additional just 5 christ"
+}

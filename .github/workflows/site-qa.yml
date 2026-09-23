@@ -130,6 +130,7 @@ jobs:
           python tools/topic_body_picture_qa.py
           python tools/five_picture_manifest_qa.py
           python tools/topic_artwork_details_qa.py
+          python tools/bible_together_qa.py --self-test
           python tools/focused_answers_qa.py
           node tools/focused_answers_runtime_qa.js
           node --check topic-artwork-details.js

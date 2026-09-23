@@ -25,6 +25,12 @@ settle_manifest=json.loads((ROOT/'docs/settle-heart-art-review.json').read_text(
 assert settle_manifest['page']=='answers/settle-this-in-your-hearts.html'
 settle_review={e['asset']:e for e in settle_manifest['artworks'][1:]}
 assert len(settle_review)==14, 'Settled faith requires fourteen supporting originals plus its distinct hero'
+bible_manifest=json.loads((ROOT/'docs/bible-together-art-review.json').read_text(encoding='utf-8'))
+assert bible_manifest.get('page')=='answers/bible-and-book-of-mormon-together.html', 'Bible together review ownership mismatch'
+bible_entries=bible_manifest.get('artworks',[])
+bible_review={e['asset']:e for e in bible_entries}
+assert len(bible_entries)==len(bible_review)==13 and len({e['key'] for e in bible_entries})==13, 'Bible together requires thirteen distinct reviewed supporting originals'
+bible_assets=[]
 settle_assets=[]
 bom_assets=[]
 opening_assets=[]
@@ -73,6 +79,16 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    assert a.attrs.get('aria-haspopup')=='dialog' and 'data-full-image-viewer' not in a.attrs, 'Settled faith picture must open study first'
    assert any(n.attrs.get('href')==record['source_url'] for n in sources), 'Settled faith exact scripture missing'
    settle_assets.append(relative_asset)
+  elif relative_asset in bible_review or 'data-bible-original' in container.attrs:
+   assert relative_asset in bible_review, 'Bible together picture is missing from its review manifest'
+   record=bible_review[relative_asset]
+   assert page.relative_to(ROOT).as_posix()==bible_manifest['page'], 'Bible together artwork ownership mismatch'
+   assert record.get('reviewed') is True and record.get('technical_review_passed') is True, 'Bible together artwork lacks technical review'
+   assert hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['sha256'], 'Bible together artwork changed since review'
+   assert container.attrs.get('data-bible-original')==record['key'], 'Bible together figure key differs from review'
+   assert a.attrs.get('aria-haspopup')=='dialog' and 'data-full-image-viewer' not in a.attrs, 'Bible together picture must open study first'
+   assert any(n.attrs.get('href')==record['source_url'] for n in sources), 'Bible together exact scripture missing'
+   bible_assets.append(relative_asset)
   elif relative_asset in bom_review:
    record=bom_review[relative_asset]
    assert page.relative_to(ROOT).as_posix()==bom_manifest['page'], 'Book of Mormon artwork is on the wrong page'
@@ -107,7 +123,8 @@ assert len(opening_assets)==1 and set(opening_assets)==set(opening_review), 'Con
 assert len(focused_assets)==4 and set(focused_assets)==set(focused_review), 'Focused body artwork inventory mismatch'
 assert len(relocated_assets)==6 and {Path(a).stem for a in relocated_assets}==relocated_names, 'Preserved historical artwork inventory mismatch'
 assert len(settle_assets)==14 and set(settle_assets)==set(settle_review), 'Settled faith exact body inventory mismatch'
-assert (count-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert len(bible_assets)==13 and len(set(bible_assets))==13 and set(bible_assets)==set(bible_review), 'Bible together exact body inventory mismatch'
+assert (count-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert panels==12,panels

@@ -1,0 +1,26 @@
+/* Illustrated reading scoped to this page; approved opening geometry is unchanged. */
+.fc-bible-together main.content-wrap.article{width:min(100%,calc(var(--fc-standard,1040px) + 2 * var(--fc-body-gutter,24px)));max-width:calc(var(--fc-standard,1040px) + 2 * var(--fc-body-gutter,24px));padding-inline:var(--fc-body-gutter,24px);box-sizing:border-box}
+.fc-bible-together .fc-study-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.fc-bible-together .fc-study-nav a{white-space:normal;text-align:center;min-height:44px;height:auto;display:flex;align-items:center;justify-content:center;overflow-wrap:anywhere}
+.fc-bible-scene{margin-block:28px;border:1px solid rgba(216,185,117,.3);border-radius:16px;background:#183d3b;overflow-wrap:anywhere;color:#f3eee0}
+.fc-bible-scene-grid{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:26px;align-items:start}
+.fc-bible-together .fc-bible-picture{margin:0;width:100%;max-width:none;min-width:0;border:0;background:transparent;box-shadow:none}
+.fc-bible-picture>a{display:block}
+.fc-bible-together .fc-bible-picture img{width:100%;height:auto;display:block;border-radius:14px 0 0 0}
+.fc-bible-together .fc-bible-picture figcaption{padding:20px}
+.fc-bible-picture h4{font-size:1.22rem;line-height:1.35;margin:8px 0 12px;color:#eed28e}
+.fc-bible-scene-reading{min-width:0;padding:22px 24px 22px 0}
+.fc-bible-scene-reading h3{margin-top:8px;font-size:1.45rem}
+.fc-bible-scene-reading h4{font-size:1.1rem;line-height:1.4;color:#eed28e;margin:20px 0 8px}
+.fc-bible-together .fc-bible-scene p{font-size:1rem;line-height:1.65}
+.fc-bible-reference-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px;align-items:start;margin-block:24px}
+.fc-bible-together details.fc-bible-reference{margin:0;min-width:0;padding:14px 18px;background:#183d3b;border:1px solid rgba(216,185,117,.3);border-radius:12px}
+.fc-bible-together main :is(h2,h3,h4,a,summary){overflow-wrap:anywhere}
+.fc-bible-together .fc-bible-picture p:last-child{margin-bottom:0}
+.fc-bible-together main section[id],.fc-bible-scene h3[id]{scroll-margin-top:90px}
+.fc-bible-together .fc-bible-picture .fc-study-visual-sources{display:flex;flex-wrap:wrap;gap:4px 16px}
+.fc-bible-picture .fc-study-visual-sources a{display:inline-flex;align-items:center;min-height:44px}
+.fc-bible-together .fc-bible-reference summary,.fc-bible-together .fc-bible-scene summary{min-height:44px;align-content:center;line-height:1.5}
+.fc-bible-reference a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:800px){.fc-bible-scene-grid{grid-template-columns:minmax(0,1fr);gap:0}.fc-bible-scene-reading{padding:0 20px 20px}.fc-bible-together .fc-bible-picture img{border-radius:14px 14px 0 0}}
+@media(max-width:600px){.fc-bible-reference-grid{grid-template-columns:minmax(0,1fr)}}

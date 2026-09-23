@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-22",
+  "page": "answers/bible-and-book-of-mormon-together.html",
+  "added_originals": 13,
+  "existing_originals": 7,
+  "total_originals": 20,
+  "christ_originals": 7,
+  "scoped_owner_direction": "Owner explicitly directed diverse prophet and scripture-specific original pictures, accurate event age and atmosphere, and images interspersed through the reading. Owner then authorized exactly five additional Christ scenes and waived the half-Christ ratio for this page. No sitewide ratio rule is changed.",
+  "layout": "Removed seven consecutive text-only headings; placed eight new scenes through Bible history, Book of Mormon history and connections, plus five Christ scenes with paired passages. Longer manuscript/publication notes and twelve reference pairs are expandable.",
+  "pairs": [
+    {
+      "topic": "The suffering servant",
+      "kind": "Direct quotation",
+      "bible": "Isaiah 53",
+      "book_of_mormon": "Mosiah 14"
+    },
+    {
+      "topic": "Malachi’s message",
+      "kind": "Direct quotation",
+      "bible": "Malachi 3",
+      "book_of_mormon": "3 Nephi 24"
+    },
+    {
+      "topic": "Other sheep",
+      "kind": "Explicit connection",
+      "bible": "John 10:14–16",
+      "book_of_mormon": "3 Nephi 15:16–24"
+    },
+    {
+      "topic": "Records and gathering",
+      "kind": "Latter-day Saint reading",
+      "bible": "Ezekiel 37:15–23",
+      "book_of_mormon": "2 Nephi 3:12"
+    },
+    {
+      "topic": "The Beatitudes",
+      "kind": "Parallel teaching",
+      "bible": "Matthew 5:1–12",
+      "book_of_mormon": "3 Nephi 12:1–12"
+    },
+    {
+      "topic": "Following Christ in baptism",
+      "kind": "Account and explanation",
+      "bible": "Matthew 3:13–17",
+      "book_of_mormon": "2 Nephi 31:4–12"
+    },
+    {
+      "topic": "The pattern of prayer",
+      "kind": "Parallel teaching",
+      "bible": "Matthew 6:9–13",
+      "book_of_mormon": "3 Nephi 13:9–13"
+    },
+    {
+      "topic": "Bread and remembrance",
+      "kind": "Distinct covenant settings",
+      "bible": "Luke 22:19–20",
+      "book_of_mormon": "3 Nephi 18:1–11"
+    },
+    {
+      "topic": "Welcoming children",
+      "kind": "Distinct encounters",
+      "bible": "Mark 10:13–16",
+      "book_of_mormon": "3 Nephi 17:21–24"
+    },
+    {
+      "topic": "The Resurrection",
+      "kind": "Shared doctrine",
+      "bible": "1 Corinthians 15:20–22",
+      "book_of_mormon": "Alma 11:42–45"
+    },
+    {
+      "topic": "Charity",
+      "kind": "Closely related teaching",
+      "bible": "1 Corinthians 13:4–8",
+      "book_of_mormon": "Moroni 7:45–48"
+    },
+    {
+      "topic": "Blessing all families",
+      "kind": "Covenant connection",
+      "bible": "Genesis 12:1–3",
+      "book_of_mormon": "3 Nephi 20:25–27"
+    }
+  ],
+  "owner_approved_new_images": false
+}
