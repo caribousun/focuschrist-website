@@ -496,5 +496,18 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
         'food shortage followup must use contextual research instead of handcart overview');
     assert(requestBodies.at(-1).messages.some(m => m.role === 'user' && /pioneer food/.test(m.content)),
         'actual user food context must reach the research request');
+    conversationHistory.length = 0;
+    qaDatabase['support keyword trap'] = {verified:true,intent:[['pornography','sexual'],['help','manage']],answer:'WRONG GENERIC LOCAL ANSWER',sources:[{text:'Test',url:'https://www.churchofjesuschrist.org/study/scriptures'}]};
+    const createScriptureLibrary = require('../scripture-library.js');
+    const localLibrary = createScriptureLibrary(JSON.parse(fs.readFileSync('scripture-data/catalog.json','utf8')), async url => ({json:async()=>JSON.parse(fs.readFileSync(new URL(url,'https://focuschrist.com').pathname.slice(1),'utf8'))}));
+    window.focusChristScriptureReady = Promise.resolve(localLibrary);
+    for (const question of ['How can I get help for pornography addiction?', 'How can I manage unwanted sexual desires?', 'How can Matthew 11:28 help me stop watching pornography?']) {
+        const beforeSupport = fetchCalls;
+        result = await window.focusChristStudyAskV3(question, '');
+        assert(result.answer === 'RESEARCHED VERIFIED ANSWER' && fetchCalls === beforeSupport + 1 && !result.reviewedLocal, 'Personal support must bypass generic local answer trap: ' + question);
+        assert(result.profile === 'high-stakes' && requestBodies.at(-1).focuschrist_profile === 'high-stakes', 'Support uses sensitive research profile');
+    }
+    delete qaDatabase['support keyword trap'];
+    window.focusChristScriptureReady = null;
     console.log('Study Intelligence v3 runtime QA PASS');
 })().catch((error) => { console.error(error); process.exit(1); });

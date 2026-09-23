@@ -128,6 +128,8 @@
 
     function classifyQuestion(query) {
         const tokens = words(query);
+        if (window.focusChristQuestionSafety
+            && window.focusChristQuestionSafety.evaluate(query).kind === 'non-explicit-support') return 'high-stakes';
         if (tokens.some(function (word) { return HIGH_STAKES_TERMS.has(word); })) return 'high-stakes';
         if (currentMode() === 'pioneers') return 'pioneer-study';
         if (currentMode() === 'church-history') return 'faith-study';
@@ -512,7 +514,11 @@
         // resolveFollowup, so generic contextual research must bypass both local banks.
         const deathAsBackground = /\bjoseph\b/i.test(query)
             && /\b(?:after|before|following|since)\s+(?:the\s+)?(?:death|martyrdom|murder|joseph)\b/i.test(query);
-        const allowContextualLocalMatch = contextResolution.genericContext !== true && !deathAsBackground;
+        const supportRequest = window.focusChristQuestionSafety
+            && window.focusChristQuestionSafety.evaluate(effectiveQuery).kind === 'non-explicit-support';
+        // Recovery support needs an answer to this person's concern, not a loose
+        // keyword match to a general doctrinal or chastity entry.
+        const allowContextualLocalMatch = contextResolution.genericContext !== true && !deathAsBackground && !supportRequest;
         const reviewedReference = allowContextualLocalMatch
             ? reviewedKnowledgeReference(effectiveQuery, contextResolution)
             : null;

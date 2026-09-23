@@ -47,9 +47,43 @@
         return patterns.some(function (pattern) { return pattern.test(value); });
     }
 
+    // This pure classifier is mirrored at the client and gateway; parity fixtures cover both.
+    function nonExplicitSupportIntent(normalized) {
+      const sexualTopic = /\b(?:porn|pornography|sexual|sex|nude|nudes|masturbation|masturbating|compulsive habits?|explicit content)\b/.test(normalized);
+      const harmContext = /\b(?:groom|grooming)(?:\s+(?:a|the))?\s+(?:child|children|minor|minors)\b/.test(normalized)
+        || /\bmanipulat(?:e|ing)(?:\s+\w+){0,4}\s+(?:child|children|minor|minors)\b/.test(normalized)
+        || /\bsexually\s+(?:coerce|coercing|force|forcing|exploit|exploiting|manipulate|manipulating)\b/.test(normalized);
+      const preventHarm = harmContext && /\b(?:stop|avoid|prevent|quit)(?:\s+\w+){0,5}\s+(?:groom|grooming|sexually coercing|sexually coerce|sexually forcing|sexually exploiting|manipulating)\b/.test(normalized);
+      const preventionText = normalized.replace(/\b(?:stop|avoid|prevent|quit)(?:\s+(?!but\b|and\b)\w+){0,5}\s+(?:groom(?:ing)?(?:\s+(?:a|the))?\s+(?:child|children|minor|minors)|sexually (?:coerce|coercing|force|forcing|exploit|exploiting)|manipulating(?:\s+\w+){0,3}\s+(?:child|children|minor|minors))\b/g, '');
+      const harmfulRemainder = /\b(?:groom|grooming)(?:\s+(?:a|the))?\s+(?:child|children|minor|minors)\b/.test(preventionText)
+        || /\bmanipulat(?:e|ing)(?:\s+\w+){0,4}\s+(?:child|children|minor|minors)\b/.test(preventionText)
+        || /\bsexually\s+(?:coerce|coercing|force|forcing|exploit|exploiting|manipulate|manipulating)\b/.test(preventionText);
+      const negatedPrevention = harmContext && /\b(?:do not|don t|dont|not)\s+want\s+to\s+(?:stop|quit|avoid|prevent)\b/.test(normalized);
+      const topic = sexualTopic || harmContext;
+      const requestText = normalized.replace(/\b(?:do not|don t|dont|never)\s+(?:show|send|provide|write|generate|create|give)(?:\s+me)?\s+(?:pornography|porn|explicit sexual content|nudes|erotic stories)\b/g, '').replace(/\b(?:avoid|avoiding|stop watching|quit watching|stop reading|quit reading)\s+(?:explicit content|explicit videos|erotic stories|pornographic content|nude images|nude pictures)\b/g, '').replace(/\b(?:prevent|protect|keep)(?:\s+(?!but\b|and\b)\w+){0,5}\s+(?:seeing|viewing|accessing)(?:\s+(?:any|the))?\s+(?:nude images|nude pictures|pornography|explicit content)\b/g, '');
+      const explicitRequest = (harmfulRemainder || negatedPrevention) || /\b(?:show|send|provide|generate|write|writing|create|describe|find|recommend|give|link)(?:\s+(?:me|us|a|an|the|some|more|to|example|examples|of|detailed|graphic|explicit|sexual|erotic|nude|naked)){0,5}\s+(?:porn|pornography|erotica|sex|sexual acts?|sexual fantasies|sexual fantasy|nudes|genitals?|intercourse|orgasms?)\b/.test(requestText)
+        || /\b(?:write|writing|generate|create|describe|show|send|provide|give)(?:\s+\w+){0,5}\s+(?:erotic|pornographic|explicit sexual|graphic sex|explicit|sexual)\s+(?:story|stories|scene|scenes|content|instructions?|images?|pictures?|videos?|fantas(?:y|ies)|details?)\b/.test(requestText)
+        || /\b(?:erotic|pornographic|explicit sexual|explicit|nude)\s+(?:stories|story|content|images?|pictures?|videos?|examples?)\b/.test(requestText)
+        || /\b(?:pressure|coerce|force|manipulate)(?:\s+\w+){0,6}\s+(?:sex|sexual|intercourse)\b/.test(requestText)
+        || /\b(?:hide|conceal|enable|facilitate)(?:\s+\w+){0,4}\s+(?:exploitation|grooming)\b/.test(requestText)
+        || (!preventHarm && /\bsexually\s+(?:coerce|force|exploit|manipulate)\b/.test(requestText))
+        || /\b(?:describe|write|show|explain)\b.{0,120}\b(?:graphic|explicit) details?\b/.test(requestText.replace(/\b(?:without|no) (?:graphic|explicit) details?\b/g, ''))
+        || (sexualTopic && /\b(?:recommend|find|send|give|link)\b.{0,60}\b(?:site|website|link|videos?)\b.{0,40}\b(?:watch|view|it)\b/.test(requestText));
+      if (explicitRequest && (topic || /\b(?:erotic|erotica|pornographic|nude|sexually|exploitation|grooming|explicit (?:videos?|images?|pictures?|stories))\b/.test(requestText))) return { support: false, prohibited: true };
+      const recoveryAction = /\b(?:stop|quit|avoid|reduce|overcome|recover|recovering|cope|coping|manage|managing|resist|prevent)(?:\s+\w+){0,8}\s+(?:porn|pornography|sexual|sex|nude|nudes|masturbation|masturbating|compulsive|explicit content)\b/.test(normalized);
+      const seekingSupport = /\b(?:get|find|need|want|seek|seeking|offer|offering|provide|providing)(?:\s+(?:some|professional|practical|safe))?\s+(?:help|support|guidance|counseling|counselling|treatment)\b/.test(normalized)
+        || /\b(?:help|support)\s+(?:me|someone|a friend|my friend|my child|my teenager|a teenager)\b/.test(normalized);
+      const distressed = /\b(?:unwanted|intrusive|ashamed|ashame|distressed|struggling|struggle|addiction|addicted|compulsive|relapse|relapsed|slipped back)\b/.test(normalized);
+      const boundaries = /\b(?:discuss|set|setting|respect|maintain)(?:\s+\w+){0,4}\s+(?:sexual boundaries|consent)\b/.test(normalized);
+      // A negated request for recovery is not a positive support signal.
+      const rejectsSupport = /\b(?:do not|don t|dont|not)\s+(?:want|need|seeking|seek)\s+(?:help|support|recovery)\b/.test(normalized) || /\b(?:do not|don t|dont|never)\s+want\s+to\s+(?:stop|quit|avoid|recover)\b/.test(normalized);
+      return { support: topic && !rejectsSupport && (preventHarm || recoveryAction || seekingSupport || distressed || boundaries), prohibited: false };
+    }
+
     function evaluateQuestionSafety(value) {
         const normalized = normalizeQuestionSafetyText(value);
         const compact = normalized.replace(/\s+/g, '');
+        const supportIntent = nonExplicitSupportIntent(normalized);
         const urgentSafety = matchesAny(normalized, [
             /\b(?:sexual abuse|sexually abused|rape|raped|molest|molested|assaulted)\b/,
             /\b(?:immediate danger|being threatened|threatening me|hurt me|hurting me|kill me|being abused)\b/
@@ -79,10 +113,10 @@
                 || /\b(?:should die|should be killed|deserve to die|subhuman|vermin)\b/.test(normalized));
         const structuredGroupAttack = /\b(?:why are|all|those|these)\s+[a-z-]{3,30}(?:\s+people)?\s+(?:are\s+|is\s+)?(?:stupid|idiots?|evil|inferior|worthless|disgusting|trash|vermin|subhuman|scum|morons?|hateful)\b/.test(normalized);
 
-        if (profanity || explicitSexual || groupAttack || structuredGroupAttack) {
+        if (profanity || supportIntent.prohibited || (explicitSexual && !supportIntent.support) || groupAttack || structuredGroupAttack) {
             return { allowed: false, kind: 'respect-boundary', response: RESPECTFUL_QUESTION_RESPONSE };
         }
-        return { allowed: true, kind: 'allowed', response: '' };
+        return { allowed: true, kind: supportIntent.support ? 'non-explicit-support' : 'allowed', response: '' };
     }
 
     window.focusChristQuestionSafety = Object.freeze({
@@ -818,7 +852,7 @@
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260909-22', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260923-self-help-1', 'data-focuschrist-study-intelligence-v3');
     }
 
     function initOpeningInvitation(intro, mobile) {
