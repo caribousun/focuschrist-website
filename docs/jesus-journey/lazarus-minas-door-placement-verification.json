@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "scope": "Independent canonical placement and source-addition verification against exact pre-change snapshots; no build/import or canonical edits.",
+  "checks": {
+    "tenPlacementsMatchReceipt": true,
+    "allPriorProseSourcesQuestionsLinksUnchanged": true,
+    "allArtKeysCountsPreserved": true,
+    "onlySpecifiedPlanFieldsChanged": {
+      "rich-man-lazarus-01": [
+        "afterParagraph"
+      ],
+      "rich-man-lazarus-02": [
+        "afterParagraph",
+        "sectionId"
+      ],
+      "rich-man-lazarus-03": [
+        "afterParagraph",
+        "sectionId"
+      ],
+      "minas-01": [
+        "afterParagraph"
+      ],
+      "minas-02": [
+        "afterParagraph"
+      ],
+      "minas-03": [
+        "afterParagraph"
+      ],
+      "minas-04": [
+        "afterParagraph",
+        "sectionId"
+      ],
+      "doorkeeper-01": [
+        "afterParagraph"
+      ],
+      "doorkeeper-02": [
+        "afterParagraph"
+      ],
+      "doorkeeper-03": [
+        "refs",
+        "sourceSceneDescription",
+        "generationPrompt",
+        "afterParagraph",
+        "sectionId"
+      ]
+    },
+    "doorkeeper03Ref": "Mark 13:34-37",
+    "minasAdditionExactReceiptText": true,
+    "minasAdditionSource": "Luke19:24 orders transfer of pound;25-26 explain the redistribution;27 records command against opponents, without narrating execution. Existing section11-27 includes all these verses.",
+    "interpretiveBoundary": "Final sentence distinguishes narrative command from permission to harm others; it is contextual interpretation, not a quotation."
+  },
+  "durability": {
+    "assemblerConsumedInput": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\docs\\jesus-journey\\parable-content-reviewed.json",
+    "externalOriginalDelivery": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\parable-content-reviewed.json",
+    "bothCurrentlyMissingAddition": true,
+    "minimalSync": "Insert exactly the receipt paragraph once at index0 of receiving-the-word.blocks for /jesus-christ/parables/minas.html in the assembler-consumed reviewed input; mirror that identical one-paragraph insertion in the external original delivery to prevent a future recopy from reverting it. Preserve every other byte-equivalent data value. Do not run the broad assembler."
+  },
+  "findings": [],
+  "evidenceBoundary": "Current registry/import and rendered HTML are outside this requested model-only verification."
+}

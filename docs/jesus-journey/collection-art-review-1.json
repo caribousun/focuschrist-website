@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Four modern mercy collection illustrations, full-frame inspection and comparison with repository collection art plan.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "All four are fictional present-day applications, not recorded parable events or documentary claims.",
+    "No visible Christ is present. No healing, ease or money-provision promise is made.",
+    "Actual alt replaces planned invisible backstory. Caption explicitly identifies interpretive imagined application.",
+    "Technical pass does not establish owner approval or final browser/crop acceptance."
+  ],
+  "entries": [
+    {
+      "key": "collection-mercy-01",
+      "sha256": "c915426c038f9384edb4463cb2418d6030fccbebde08b6de04710ae715e2e4e1",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A search worth the effort",
+      "alt": "Two adults kneel beside a park path and examine the ground, with one pointing near the pavement.",
+      "caption": "Two people give their attention to a search beside the path. This imagined present-day scene applies the care and persistence in the lost-coin parable: what matters to another person deserves our attention. It does not equate a person's worth with a possession.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:8-10",
+          "8-10"
+        ]
+      ],
+      "findings": "Only two searching adults are visible, plus an unrelated distant passerby. Pointing finger, bracing palms, bent knees and expressions coherent; skin and fabric photographic. No hearing aid can be confidently identified.",
+      "conditions": [
+        "Replace planned three-person/hearing-aid alt with actual two-person search description.",
+        "Do not claim a hearing aid has been found or is visible."
+      ]
+    },
+    {
+      "key": "collection-mercy-02",
+      "sha256": "44d4383a1c93c6f869ff2ba120b407f0da265911225a2306398aeccf4dc8e254",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A route back into participation",
+      "alt": "A woman points into an open binder held by a man wearing an instrument case at a music-room doorway.",
+      "caption": "At the music-room doorway, help with a rehearsal folder becomes a practical welcome. In this imagined example, a returning participant is given a way to rejoin. The joy of recovering the lost can inspire patient help with someone's next step, without assuming that absence itself means wrongdoing.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:4-7",
+          "4-7"
+        ]
+      ],
+      "findings": "Two distinct adults with natural expressions. Binder support, pointing hand and visible fingers plausible. Instrument case, chairs and music stands establish setting. A prior absence cannot be inferred from pixels alone.",
+      "conditions": [
+        "Identify return as the fictional scenario's premise, not a documented biography.",
+        "Do not imply that missing orchestra rehearsal equals sin."
+      ]
+    },
+    {
+      "key": "collection-mercy-03",
+      "sha256": "f4266601cd4c10b05402e779155b272ad57858645bf59af70c9d32f7d9e7384a",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Truth about a damaged bicycle",
+      "alt": "A teenager gestures beside a bicycle with a bent front basket while an adult in an apron listens.",
+      "caption": "The damaged basket remains plainly in view as the teenager speaks. This imagined return of a borrowed bicycle connects repentance with honest acknowledgment and willingness to begin making things right. Like the returning son's confession, a truthful beginning matters before every consequence is resolved.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:17-21",
+          "17-21"
+        ]
+      ],
+      "findings": "Basket visibly bent rather than neatly formed; bike supported by repair stand. Teen's hand on grip and open palm, adult's hand on hip and attentive posture credible. No obvious anatomy or material scene defect.",
+      "conditions": [
+        "Borrowing, ownership and responsibility are fictional scenario context, not visible proof.",
+        "Do not state that a repair, forgiveness or reconciliation is already complete."
+      ]
+    },
+    {
+      "key": "collection-mercy-04",
+      "sha256": "fd51b9145f6454f8760681da9e9b8834d048b4b9580fa15dc8e92025fe94cba7",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Correcting a mistake openly",
+      "alt": "One woman points to a form on a clipboard while another writes beside the indicated row.",
+      "caption": "A record is being reviewed together. In this imagined example, a mistake is acknowledged and corrected instead of concealed. The two-sons parable directs attention toward changed action rather than reassuring words alone, inviting us to let an honest change of mind lead to practical follow-through.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:28-32",
+          "28-32"
+        ]
+      ],
+      "findings": "Pointing fingertip, pen grip and paper contact coherent. Two faces natural, posture focused. Background volunteers ordinary atmospheric detail. Form text not readable enough to establish error or completion.",
+      "conditions": [
+        "Caption error correction as the imagined application; alt describes only visible review and writing.",
+        "Do not quote or invent text on the form, personal data, or a completed correction."
+      ]
+    }
+  ]
+}

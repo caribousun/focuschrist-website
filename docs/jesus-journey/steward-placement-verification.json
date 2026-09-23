@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "scope": "Independent Unjust Steward model/source/HTML verification after batch43 preparation/build; no canonical edits or imports.",
+  "checks": {
+    "allNonArtPageDataUnchanged": true,
+    "allProseSourcesLinksUnchanged": true,
+    "allOtherPagesAndPlanEntriesUnchanged": true,
+    "threeUniqueKeysAndExactlyThreeRenderedFigures": true,
+    "allReviewBindingsValid": true,
+    "storyParagraphOneSequence": [
+      "paragraph1",
+      "unjust-steward-02",
+      "unjust-steward-03",
+      "interpretive paragraph2"
+    ],
+    "registry03Section": "story-and-teaching",
+    "renderedProseArtTokensInOrder": 8,
+    "sourceAmounts": {
+      "oil": "100 to 50, Luke 16:5-6",
+      "wheat": "100 to 80, Luke 16:7"
+    },
+    "amountEvidence": "Caption quantities are attributed to the scriptural story, not a claim of legible numbers in the image."
+  },
+  "hashes": {
+    "pages.json": "e52dea9e523e65ed1866cc176a057b00a4198845a0e98ddb681744b9fa79aa6d",
+    "parable-art-plan.json": "3d3e8633d434347aabdb3e4e52e18147c27f0b7ff78fc630bc95d7073f12bf1d",
+    "artworks.json": "267276ca2423eb77dec3d42b9a9a90dfeda7909870a8baf9f18527a035508288",
+    "steward-placement-before-pages.json": "eb831d7e3e50c1d485452b1d7077a7e6a782bb8d833f3cf631512fac00d7ac8a",
+    "steward-placement-before-plan.json": "69a50764a70d777458706c35caecf123ac383d0adea1d342c066c12cbbfe9e02"
+  },
+  "findings": [],
+  "evidenceBoundary": "Semantic HTML/source verification, not a new browser-flow or pixel review."
+}

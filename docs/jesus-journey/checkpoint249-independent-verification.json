@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "checkpoint": "249 accepted originals; incomplete local draft, not release completion or publication approval.",
+  "checks": {
+    "shortComparisonRenderedPlacements": [
+      "blind-guides-01",
+      "mote-beam-01",
+      "tree-fruit-01",
+      "tree-fruit-02",
+      "salt-01",
+      "salt-02",
+      "bridegroom-01",
+      "divided-house-01",
+      "returning-spirit-01",
+      "returning-spirit-02",
+      "closed-door-01",
+      "closed-door-02",
+      "parent-gifts-01",
+      "parent-gifts-02",
+      "settle-adversary-01",
+      "settle-adversary-02",
+      "sheep-sabbath-01",
+      "sheep-sabbath-02"
+    ],
+    "moteAndDividedAcceptedTextPresentNoLabeledPlaceholders": true,
+    "minasExactParagraphInBothReviewedInputsCanonicalPagesAndRenderedHTML": true,
+    "reviewBindingsPassed": 249,
+    "independentlyHashedRecoveryFiles": 747,
+    "recoveryErrors": [],
+    "gitDiffCheck": {
+      "exitCode": 0,
+      "stdoutCharacters": 0,
+      "stderrCharacters": 0,
+      "diagnosticCount": 0,
+      "diagnostics": []
+    },
+    "trackedWorkingTreeStatusCounts": {
+      " M": 43
+    }
+  },
+  "scope": "Read-only independent current-file checks; no build/import/preparation/full test rerun.",
+  "limitations": [
+    "No new browser interaction or pixel review performed.",
+    "The project remains a draft with unfinished planned artwork."
+  ]
+}

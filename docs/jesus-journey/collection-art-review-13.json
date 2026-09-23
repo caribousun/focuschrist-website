@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent original-detail review of collection-watchfulness-05 through -08",
+  "ownerApproval": false,
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Fictional present-day reflective applications; no visible Christ or documentary claim.",
+    "Technical review does not establish owner approval, import, professional credentials or safety certification."
+  ],
+  "entries": [
+    {
+      "key": "collection-watchfulness-05",
+      "status": "pass_with_caption_conditions",
+      "sha256": "67e2e4e5a720db7d18ef5192851e44e315b9193bc00adc2de3d937f697902162",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9eec258d-f359-4e54-be3c-eac450071ed1.png",
+      "alt": "Two women in scrubs speak at a desk; one holds a closed folder while the other writes in a notebook.",
+      "caption": "Two staff members give a conversation their attention in this imagined workplace scene. Alongside the faithful-servant teaching, it invites reflection on careful responsibility in ordinary work.",
+      "findings": "Mutual gaze, folder grip, gesturing fingers and writing contact are coherent. Closed folder reveals no contents; notebook and background screens contain no legible private information. Natural photographic expressions.",
+      "conditions": [
+        "Do not certify professional credentials, quality of medical care, an actual shift change, or that unseen people are asleep.",
+        "Night-shift handoff may be a fictional premise but is not established chronology."
+      ],
+      "refs": [
+        [
+          "nt/matt/24",
+          "Matthew 24:45-47",
+          "45-47"
+        ]
+      ]
+    },
+    {
+      "key": "collection-watchfulness-06",
+      "status": "pass_with_caption_conditions",
+      "sha256": "3dcac43b0e72a0b9883fc1a9f57f38788afb5da2e76553d60bf97aa51b54deeb",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a86d8b87-9e41-4d54-896d-9a419135642b.png",
+      "alt": "An older man stands at a check-in table near open entrance doors while people move through the lobby toward the outdoors.",
+      "caption": "An attendant gives the entrance his attention. This imagined application of watchful service invites reflection on being available to others while waiting.",
+      "findings": "Natural attentive gaze toward doorway, coherent resting hands and table. Entrance passage and background people are visually plausible, with dignified wheelchair-user inclusion. No readable personal badge information.",
+      "conditions": [
+        "Do not infer a prior promise, how long he has waited, paid or volunteer status, or a guarantee that everyone is safe.",
+        "Do not certify building access or security procedures from the scene."
+      ],
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:35-38",
+          "35-38"
+        ]
+      ]
+    },
+    {
+      "key": "collection-watchfulness-07",
+      "status": "pass_with_caption_conditions",
+      "sha256": "7c25872317496dec69c5c5e534458b7505379c0da8869bafa7214b82da04927b",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-efef8516-483f-43e7-9146-97c2ab834cea.png",
+      "alt": "A man reviews papers at a table while a woman holding a mug listens beside him.",
+      "caption": "A practical task receives attention in the company of someone willing to listen. This imagined reflection alongside Jesus' teaching about worry leaves the outcome open and does not make trust a promise that every difficulty will disappear.",
+      "findings": "Paper grip, mug hands and natural listening attention are coherent. Documents do not expose legible private details. The expressions suggest concentration and companionship without proving a diagnosis or crisis.",
+      "conditions": [
+        "Do not identify the papers as verified financial, legal or medical documents, or infer a resolved outcome.",
+        "No spouse, counselor or other relationship assigned from appearance."
+      ],
+      "refs": [
+        [
+          "nt/matt/6",
+          "Matthew 6:25-34",
+          "25-34"
+        ]
+      ]
+    },
+    {
+      "key": "collection-watchfulness-08",
+      "status": "pass_with_caption_conditions",
+      "sha256": "2de685374ccd60ff9a47ffdf081dc6d658c149437b8a4987dbb8ceec23bf3a4a",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3e7a2d7b-4ecf-4f79-b097-9efdebd6e646.png",
+      "alt": "A man crouches beside a flower-lined path and watches four small brown birds pecking on the ground.",
+      "caption": "A person pauses to notice birds and flowers beside a path. This imagined present-day scene recalls Jesus' invitation to consider ordinary living things as He teaches about the Father's care.",
+      "findings": "Four birds are visible: one left, two close to the flower bed, one foreground. Beaks, wings, tails, body proportions and ground contact are plausible, with depth-of-field softness on the nearest bird. Crouching posture, hands and downward attention are natural.",
+      "conditions": [
+        "Do not repeat the prompt's count of three birds; actual count is four.",
+        "Do not infer that the man scattered the visible grain, identify an exact bird species, or claim relief from a diagnosed condition."
+      ],
+      "refs": [
+        [
+          "nt/matt/6",
+          "Matthew 6:26-30",
+          "26-30"
+        ]
+      ]
+    }
+  ]
+}

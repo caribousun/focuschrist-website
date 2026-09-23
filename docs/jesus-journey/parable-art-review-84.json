@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Four Book of Mormon branch scenes; exact full originals and canonical source associations inspected.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 1
+  },
+  "entries": [
+    {
+      "key": "bn-households-return",
+      "generationKey": "bn-households-return",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1bf541d7-068a-4625-8357-b1d585993fee.png",
+      "sha256": "0dfd12400f802cf6a9029f24f145a315f0c642aea2cd44eb1e7dc460c6b7a481",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Words carried home",
+      "alt": "Two adults and two children walk beside a modest dwelling, with the younger child carried in an adult's arms.",
+      "caption": "After Jesus departs, the people return to their homes. This imagined household gives a personal scale to that movement while leaving its members unnamed.",
+      "refs": [
+        [
+          "bofm/3-ne/19",
+          "3 Nephi 19:1",
+          "1"
+        ]
+      ],
+      "findings": "Distinct faces, natural conversation and safe supported child carry. Hands and limbs coherent. Plain woven bags and clothing do not introduce modern hardware. House lies beside and behind walkers, so avoid claiming precise pictured direction or completed arrival.",
+      "conditions": [
+        "Household, dwelling, dress and landscape are interpretations; no named family, exact location or exact time of sunset asserted.",
+        "Technical pixel/source review does not substitute for browser verification or infer specific owner approval."
+      ]
+    },
+    {
+      "key": "bn-night-messengers",
+      "generationKey": "bn-night-messengers",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-57fb6e28-58ed-41da-b59a-9b56e23c6ad4.png",
+      "sha256": "f41b4a20635898f5118f4cba69f944d49ea6a73121b1ea8295b3dc1dbbac8bb5",
+      "status": "revise",
+      "recommendedTitle": "The news travels through the night",
+      "alt": "A messenger speaks to two people at a doorway at night while another traveler tends a bundle behind him.",
+      "caption": "The news of Jesus' visit moves among the people during the night. This imagined doorway encounter gives visible form to the report spreading beyond those who first heard Him.",
+      "refs": [
+        [
+          "bofm/3-ne/19",
+          "3 Nephi 19:2–3",
+          "2-3"
+        ]
+      ],
+      "findings": "Photographic faces and strong reciprocal gaze, but messenger wears a structured multi-compartment backpack with fitted straps and hardware that reads modern. Messenger and doorway man share closely similar dark curled hair, beard and facial proportions, risking duplicated identity.",
+      "conditions": [
+        "Remove backpack entirely. Make doorway man clearly distinct: older adult, short gray hair, clean-shaven broad face, different nose and brow. Keep woman, messenger facial identity, reciprocal gaze, background cloth bundle and nighttime setting. Do not promote this original.",
+        "Technical pixel/source review does not substitute for browser verification or infer specific owner approval."
+      ]
+    },
+    {
+      "key": "bn-twelve-groups",
+      "generationKey": "bn-twelve-groups",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-28d3012c-709c-406c-9906-8fdab2c3eb96.png",
+      "sha256": "cd72f215d6cf749675f1275000e285b86d2ae39c1133a935911a7025446d8564",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Room for the gathered people",
+      "alt": "A man gestures toward seated listeners as arriving adults and children join groups on a grassy hillside.",
+      "caption": "The gathered people are organized into twelve groups before the disciples teach them. This illustration shows part of that gathering, with room made for people who are arriving.",
+      "refs": [
+        [
+          "bofm/3-ne/19",
+          "3 Nephi 19:4–8",
+          "4-8"
+        ]
+      ],
+      "findings": "Distinct foreground faces and ages, coherent directing hand, listeners oriented toward speaker. Multiple groups visible without falsely forcing exactly twelve into the crop. Background lake and hillside are staging. No visible literal Christ; seated long-haired man remains an unnamed listener.",
+      "conditions": [
+        "Do not count the image as showing all twelve groups, name the gesturing disciple, identify the water or assert an exact ancient American location. The scene precedes Christ's later appearance in chapter 19.",
+        "Technical pixel/source review does not substitute for browser verification or infer specific owner approval."
+      ]
+    },
+    {
+      "key": "bn-shared-community",
+      "generationKey": "bn-shared-community",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-92670add-f8a2-4a80-ad05-9435a2bb6faf.png",
+      "sha256": "21e089f038a6fefddb7b21ac95e405b965084a6f619fb657d766528e573e150c",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Care becomes a way of life",
+      "alt": "Two people exchange a folded blanket while another pours beans into a household vessel.",
+      "caption": "The people minister to one another and hold things in common. Shared necessities give an imagined everyday form to the mutual care recorded after the Savior's ministry.",
+      "refs": [
+        [
+          "bofm/3-ne/26",
+          "3 Nephi 26:19–20",
+          "19-20"
+        ]
+      ],
+      "findings": "Photographic distinct adult faces and reciprocal gaze at blanket exchange; third person watches pouring task. Separate plausible grips, beans entering vessel and believable woven/earthen materials. No Christ, branded relief or modern fixture.",
+      "conditions": [
+        "Specific goods, exchange, architecture and geographic setting are artistic interpretation; no exact economic system, named participants or hierarchy of worth is asserted.",
+        "Technical pixel/source review does not substitute for browser verification or infer specific owner approval."
+      ]
+    }
+  ]
+}

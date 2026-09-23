@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Three exact two-sons originals inspected at original detail; continuity and Matthew21:28–31 source fit reviewed.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "No imports; source captions distinguish spoken response from later reported outcome."
+  ],
+  "entries": [
+    {
+      "key": "two-sons-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4f8a7d84-83cd-4bb8-b7ec-893f0bf13c4f.png",
+      "sha256": "a0b38cc34eb57c21ea77723be53bdf2a9568e14343c54d01b563a7cb3ad948fe",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "The father's request",
+      "alt": "A gray-bearded father speaks with an open hand toward a young man in a rust-colored tunic who stands with folded arms beside a vineyard gate.",
+      "caption": "The father addresses his son beside the open vineyard gate. Jesus begins with a request to work, then shows how the son's first refusal will give way to a different response.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:28–29",
+          "28-29"
+        ]
+      ],
+      "findings": "Father's open hand and son's folded arms anatomically coherent; crossed-arm occlusion plausible. Natural mutual eye contact and restrained resistance. Vineyard establishes work context without added event.",
+      "conditions": [
+        "Fictional parable characters; no literal portrait of God or Christ.",
+        "Clothes, gate, posture and harvesting method illustrate the story rather than establish exact historical details."
+      ]
+    },
+    {
+      "key": "two-sons-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b1be9452-0f35-48c2-a192-e302bc3ee316.png",
+      "sha256": "a1d3441b74c7ce11701a466cd2d8da7c8d8001b6460655f94c3c9f24365d07fd",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "A changed mind becomes action",
+      "alt": "The same young man in a rust-colored tunic bends beside a vine and lowers a bunch of grapes toward a woven basket.",
+      "caption": "The son is now at work among the vines, gathering grapes into a basket. Jesus says he changed his mind and went, giving substance to repentance through what he did.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:29",
+          "29"
+        ]
+      ],
+      "findings": "Hair, youthful clean-shaven face and rust tunic consistent with01. One hand holds grapes, other steadies basket rim with credible finger contact. Bent knee and torso plausible. Harvest is permissible example of unspecified vineyard work.",
+      "conditions": [
+        "Fictional parable characters; no literal portrait of God or Christ.",
+        "Clothes, gate, posture and harvesting method illustrate the story rather than establish exact historical details."
+      ]
+    },
+    {
+      "key": "two-sons-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-098655cb-2373-43e3-989d-1778d3aeec85.png",
+      "sha256": "cbbae8f409b31bf2823409e0d39fa703684dd2129199d85ba639d3166d226af8",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Words that still need action",
+      "alt": "The father speaks to a seated, short-bearded young man in an olive tunic who places a hand against his chest.",
+      "caption": "The second son looks toward his father with a hand against his chest as he answers. Jesus says that this son agreed to go but did not, asking us to weigh obedience by action as well as words.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:30–31",
+          "30-31"
+        ]
+      ],
+      "findings": "Father's face, gray beard, blue mantle and clothing preserve01 identity. Second son differs through short beard, shorter hair, face and olive clothing. Natural fingers, hand-on-chest and seated legs. Good reciprocal eye contact. Seated response does not itself establish later refusal to work.",
+      "conditions": [
+        "Fictional parable characters; no literal portrait of God or Christ.",
+        "Clothes, gate, posture and harvesting method illustrate the story rather than establish exact historical details.",
+        "Caption attributes later failure to scripture; do not claim the bench or posture proves laziness."
+      ]
+    }
+  ]
+}

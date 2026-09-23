@@ -13,6 +13,7 @@ from urllib.parse import urljoin, urlsplit, unquote
 from xml.etree import ElementTree as ET
 sys.dont_write_bytecode = True
 from answer_study_qa import Document
+from build_jesus_journey import validate_artwork_review
 
 ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = 'https://focuschrist.com'
@@ -74,6 +75,8 @@ def build():
     hero_titles = {}
     for match in re.finditer(r"(?:^|\n)\s*(?:'([^']+)'|([\w-]+)):\s*\{\s*title:\s*'([^']+)'", hero_text):
         hero_titles[match[1] or match[2]] = match[3]
+    journey_file=ROOT / 'docs/jesus-journey/artworks.json'
+    journey=json.loads(journey_file.read_text(encoding='utf-8')) if journey_file.is_file() else {}
     entries = []
     for page in pages:
         doc = Document()
@@ -135,6 +138,19 @@ def build():
                 title = text(heading) or alt or page_title
             if not kind:
                 continue
+            journey_figure=next((p for p in parents if 'data-journey-art' in p.attrs),None)
+            if journey_figure is not None:
+                key=journey_figure.attrs['data-journey-art']; approved=journey.get(key,{})
+                if not approved.get('reviewed'):continue
+                validate_artwork_review(key,approved,ROOT/'docs/jesus-journey')
+                if approved.get('owner')!=page.lstrip('/'):
+                    raise ValueError('Journey artwork has wrong discovery owner '+key)
+                for field in ('asset','thumbnail'):
+                    path=ROOT/approved[field]
+                    if hashlib.sha256(path.read_bytes()).hexdigest()!=approved.get(field+'_sha256'):
+                        raise ValueError('Changed journey discovery derivative '+key)
+                if asset(page,full)!='/'+approved['asset'] or asset(page,thumb)!='/'+approved['thumbnail']:
+                    raise ValueError('Journey figure and artwork registry disagree '+key)
             full = asset(page, full)
             sensitive_gate = attrs.get('data-sensitive-scene')
             if sensitive_gate:

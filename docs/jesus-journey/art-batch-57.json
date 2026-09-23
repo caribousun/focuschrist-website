@@ -1,0 +1,83 @@
+{
+  "grain-wheat-01": {
+    "title": "A grain alone",
+    "alt": "A single intact golden wheat kernel rests on a pale stone in sunlight.",
+    "caption": "One grain rests alone. Jesus begins His comparison with the solitary grain before speaking of the fruitfulness connected with His approaching death.",
+    "refs": [
+      [
+        "nt/john/12",
+        "John 12:24",
+        "24"
+      ]
+    ],
+    "owner": "jesus-christ/parables/grain-wheat.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/grain-wheat-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/grain-wheat-01-960.webp",
+    "original": "grain-wheat-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3628d567-24ef-4ca1-9eeb-4273c30a9098.png",
+    "original_sha256": "563f87976c84bb90aed195ec0cb14122cd64e2692427b3965cad47013e9653b4",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Grain above soil. Scripture source: John 12:24. Narrative context: A grain falls and dies Then Much fruit results Then Jesus calls people to follow. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 1 of 3 for The Grain of Wheat. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Wide3:2 macro photographic study of ONE intact dry wheat kernel alone on rough flat limestone, clean simple composition, seed clearly intact, natural side light, no other grain, no sprout, no plants, no labels. John12:24 grain remains alone.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-75.json"
+  },
+  "grain-wheat-02": {
+    "title": "A grain falls toward the soil",
+    "alt": "A hand releases one wheat kernel above a shallow furrow in dark soil.",
+    "caption": "A grain falls from an open pinch toward the earth. This simple planting moment accompanies Jesus' words about the grain that falls into the ground.",
+    "refs": [
+      [
+        "nt/john/12",
+        "John 12:24",
+        "24"
+      ]
+    ],
+    "owner": "jesus-christ/parables/grain-wheat.html",
+    "section": "story-and-teaching",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/grain-wheat-02-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/grain-wheat-02-960.webp",
+    "original": "grain-wheat-02.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-32b81d9a-a89b-450b-9eef-a43d00c250ae.png",
+    "original_sha256": "f6989f0163a587298e8862d739a8bf89ee0518d04cb31d0b24884d381f3036ea",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Seed falling into earth. Scripture source: John 12:24. Narrative context: A grain falls and dies Then Much fruit results Then Jesus calls people to follow. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 2 of 3 for The Grain of Wheat. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Wide3:2 natural close-up photographic view of one weathered human hand releasing a single wheat kernel just above a small depression in prepared moist earth. Plausible fingers, actual gravity, kernel visible above soil, no multiple seeds, no seedling, no modern implement. Low camera, shallow focus, tactile soil. No whole sowingfield or montage.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-75.json"
+  },
+  "woman-childbirth-01": {
+    "title": "Supported through the pain",
+    "alt": "A pregnant woman reclines in a teal dress with her eyes nearly closed, holding the hand of an older woman beside her.",
+    "caption": "A woman in labor receives steady support through her pain. Jesus acknowledges the anguish of childbirth in the comparison He gives His disciples before speaking of joy.",
+    "refs": [
+      [
+        "nt/john/16",
+        "John 16:21",
+        "21"
+      ]
+    ],
+    "owner": "jesus-christ/parables/woman-childbirth.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/woman-childbirth-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/woman-childbirth-01-960.webp",
+    "original": "woman-childbirth-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-612cdb36-7cdd-4796-a7ad-c0a055450ede.png",
+    "original_sha256": "54ae5456e006927367713fdf0ab1c06cd5103a052279d9cfb6f8e762f87d5c5b",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Discreetly supported labor. Scripture source: John 16:21. Narrative context: Labor brings anguish Then Birth brings joy Then Jesus promises to see disciples again. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Use modest, non-graphic framing. The mother's exact age and family relationships other than newborn are unspecified. Do not present the illustrative birth as a known historical event. Image uniqueness: this is scene 1 of 2 for Sorrow Turning to Joy. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Wide3:2 realistic respectful live-action photograph of unnamed adult woman in labor, fully clothed loose muted teal linen tunic, seated supported on plain bedding in first-century modest stone room. Older woman beside her holds her hand compassionately, clear mutual eye contact, laboring mother's concentrated strained face with perspiration, not terror. No exposed body, no birth anatomy, no blood, no baby yet, no Mary identity, no stable/Nativity signs. Warm subdued window light. John16:21 illustrative comparison, no invented biography.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-75.json"
+  }
+}

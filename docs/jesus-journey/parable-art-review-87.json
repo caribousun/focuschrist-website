@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, mapped-reference and official-source reviewer",
+  "scope": "Narrow rear-right questioner repair in mm-john-questions-v2.",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "mm-john-questions",
+      "generationKey": "mm-john-questions-v2",
+      "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-53f606d4-e20c-40d9-bf3b-d4573923c4f9.png",
+      "sha256": "0ffffbc8a844ff3e79818927a5ef85eb2c99d52d375ebfbfba40706653b50894",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "What should we do?",
+      "alt": "John the Baptist listens to a man speaking with open hands beside a river, while an older man waits behind him.",
+      "caption": "People bring John a practical question about how to live. His answers turn repentance toward sharing, honesty and the fair treatment of others.",
+      "refs": [
+        [
+          "nt/luke/3",
+          "Luke 3:10–14",
+          "10-14"
+        ]
+      ],
+      "findings": "Direct comparison with rejected original and mapped birth-john-witness actual pixels. John retains distinctive narrower face, prominent nose, short beard, camel-hair clothing, staff and attentive gaze. Primary questioner retains face, open hands and eye contact. Rear-right man now has short gray hair, broad lined clean-shaven face, different nose and brow; duplicate identity is resolved. Natural photographic skin and age detail; composition, river, clothing, gestures and participants visually preserved outside intended face/hair repair. No literal Christ.",
+      "conditions": [
+        "Keep listeners unnamed; do not assign either pictured man a publican or soldier identity that is not visually established. Exact staging, garment detail and location are interpretation.",
+        "Preserve original rejected candidate and prior review85; this acceptance applies only to the v2 SHA-256.",
+        "Technical pixel and source review is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/page-art/sitewide-narratives/birth-john-witness-full.webp",
+        "C:/Users/wyatt/.codex/generated_images/01a0cbb6-1ea1-7021-9571-e99065c12b4f/exec-be1f23a9-2b9f-436d-a3a6-61c77cecefbf.png"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/3?lang=eng"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Tower Builder 01, 02-v2 and03 inspected at original detail for identity continuity, corrected skin, anatomy, unfinished foundation and Luke14:28–30 comparison.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Original02 rejection for unnatural green forearm remains preserved; only revised hash is accepted here.",
+    "These unnamed figures illustrate Jesus' comparison, not a documented biography proving a completed cost calculation followed by failure."
+  ],
+  "entries": [
+    {
+      "key": "tower-builder-01",
+      "generationKey": "tower-builder-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "001578f8c1e2855bb51454a180b1dda360a48d55d70ae223cbb9e3af7fe39130",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bddbfca6-594b-4a0a-acba-1518345dc985.png",
+      "recommendedTitle": "Counting the cost",
+      "alt": "A seated man in a cream tunic and blue wrap considers small stones and coins on a wooden board, with building stones and timbers nearby.",
+      "caption": "Jesus asks who would begin a tower without first sitting down to count its cost. The careful consideration pictured here illustrates the question of having enough to finish.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:28",
+          "28"
+        ]
+      ],
+      "findings": "Receding dark hair, clean-shaven long face, cream tunic and dark blue wrap establish a consistent builder identity. Chin-supporting hand and fingertips near a counting stone are coherent; directed downward gaze fits deliberation. Separate coins and stones are visually legible; natural skin, fabric, stone and timber textures.",
+      "conditions": [
+        "Counting stones and coins are illustrative means of considering resources, not a specified method or exact budget.",
+        "Do not describe this man as having completed a successful calculation before failing; the three pictures illustrate Jesus' comparison and warning."
+      ]
+    },
+    {
+      "key": "tower-builder-02",
+      "generationKey": "tower-builder-02-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "9a62552e37ed8d486217663522dd4dd8241bc1cd3a4534b2e5ab60ea83ac5b72",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b7a78e61-cc7d-4e26-ac63-ffd8c37db644.png",
+      "recommendedTitle": "A foundation without completion",
+      "alt": "The same man stands with his hands on his hips beside low courses of stone while a gray-bearded worker bends near tools and stacked timber.",
+      "caption": "Jesus describes a builder who lays a foundation but is unable to finish. The low stonework pictures the unfinished beginning at the heart of His warning.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:29",
+          "29"
+        ]
+      ],
+      "findings": "Builder identity and clothing preserve scene01. Revised02 arms have natural skin tones with ordinary shadows, without the rejected unnatural green forearm. Hip hands, stance, worker's resting hand and tool-side hand are coherent. Low courses remain a foundation/early structure, not a completed tower. Photographic masonry and setting continue the sequence.",
+      "conditions": [
+        "Only 02-v2 passes; the original02 rejected for an unnatural green forearm remains rejected.",
+        "The image does not establish why construction stopped or a specific elapsed time; additional worker and tools are illustrative."
+      ]
+    },
+    {
+      "key": "tower-builder-03",
+      "generationKey": "tower-builder-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "aefbd8025bc6e821eea7742b66a7f0a3aa22b1b0bb619bc4b8c93fbd4dd64a06",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5c67d0dc-b864-42ea-98cd-0795e0679f9f.png",
+      "recommendedTitle": "The unfinished work draws comment",
+      "alt": "The builder stands beside the unfinished stonework while a younger man gestures toward it and speaks with a gray-bearded man in a head wrap.",
+      "caption": "In Jesus' comparison, those who see the unfinished work begin to mock the builder. They point out that he began to build but could not finish, making the cost of an unconsidered beginning plain.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:29-30",
+          "29-30"
+        ]
+      ],
+      "findings": "Builder's receding hair, long clean-shaven face and cream/blue clothes match preceding scenes. Older head-wrapped gray-bearded figure continues scene02; new younger rust-clothed observer is distinct. Observers direct attention toward one another and structure; builder's subdued downward gaze fits the warning. Open gesturing palm, chin hand, folded arm, hanging hands and sandaled feet are credible. Stonework remains low with loose construction materials, not a finished tower.",
+      "conditions": [
+        "The visible moment establishes observers' discussion; their quoted criticism comes from the source, not readable speech in the picture.",
+        "Restrained expressions avoid caricature; do not embellish with violence, a specific bankruptcy story or a named historical builder."
+      ]
+    }
+  ]
+}

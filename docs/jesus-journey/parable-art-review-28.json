@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Two exact vineyard images reviewed at original detail against plans and Matthew20:1–2,6–7.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical pass does not imply owner approval or whole-site uniqueness scan.",
+    "No imports; exact hashes identify reviewed originals."
+  ],
+  "entries": [
+    {
+      "key": "laborers-vineyard-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-35a564ce-a6a3-4e9a-bd5d-920e55d060a4.png",
+      "refs": [
+        [
+          "nt/matt/20",
+          "Matthew 20:1-2",
+          "1-2"
+        ]
+      ],
+      "sha256": "a37a80bb80f8c1205b597e5c2292e51ef9528e51be77a172a87ee8354f5b255b",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "The first agreement",
+      "alt": "A clean-shaven landowner in an ochre mantle speaks with two workers holding staffs, with more people and vineyards behind them.",
+      "caption": "The landowner speaks with the first workers as the day's hiring begins. In Jesus' story they agree on a day's wage before entering the vineyard, establishing the promise the owner will later keep.",
+      "findings": {
+        "sourceFit": "Matthew20:1–2 hiring conversation fits early agreement; no actual payment or oversized coin.",
+        "identity": "Three foreground men distinct: older headwrapped gray-bearded worker, dark-bearded russet worker, clean-shaven owner. No Christ identity.",
+        "anatomy": "Visible hands, staff grips, relaxed body posture and eye contact coherent. Natural skin and cloth, no apparent material limb defect.",
+        "chronology": "Low sun supports dawn but is not proof of a clock time. Background crowd and waiting workers provide busy first-hiring context."
+      },
+      "conditions": [
+        "Treat people, garments and marketplace details as parable illustration, not documented historical reconstruction.",
+        "No exact wage amount is visible; caption attributes the agreement and later invitation to the passage.",
+        "Preserve these workers' distinct identities for later resentment and payment scenes."
+      ]
+    },
+    {
+      "key": "laborers-vineyard-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-237333df-efda-4efc-a7b3-387397358ad6.png",
+      "refs": [
+        [
+          "nt/matt/20",
+          "Matthew 20:6-7",
+          "6-7"
+        ]
+      ],
+      "sha256": "5edad179c7d78332ddebfa89ead334f384191d88676194fcd198aa361447947c",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Workers still waiting",
+      "alt": "A landowner in an ochre mantle speaks with a bald worker in blue and a younger worker beside harvest baskets in a quiet village square.",
+      "caption": "Two waiting workers meet the landowner's gaze as he addresses them beside their baskets. Jesus says they had remained because no one had hired them, and the owner's invitation gives them a place in the vineyard even at the late hour.",
+      "findings": {
+        "sourceFit": "Matthew20:6–7 waiting/late hiring, not payment. Workers alert and engaged; no leisure or laziness caricature.",
+        "continuity": "Owner face, hair, ochre mantle and purse match01. Bald blue-clad worker and younger gray-clad worker clearly differ from both early workers.",
+        "anatomy": "Staff grip, open owner hand, younger worker's shoulder-cloth grip and faces coherent. Reciprocal eye contact believable.",
+        "repetition": "Owner repeats nearly identical pose and camera orientation. However different workers, empty square and baskets create a distinct narrative encounter; not a duplicate event. Subsequent payment and complaint should materially change blocking.",
+        "chronology": "Low warm sun appears in both scenes at similar frame position. Pixels alone cannot distinguish dawn from late afternoon; sequence title and scripture supply the time distinction."
+      },
+      "conditions": [
+        "Treat people, garments and marketplace details as parable illustration, not documented historical reconstruction.",
+        "No exact wage amount is visible; caption attributes the agreement and later invitation to the passage.",
+        "Retain this pair as late workers and the first pair as early workers in later payment/complaint scenes.",
+        "Do not claim the light alone proves a later hour."
+      ]
+    }
+  ]
+}

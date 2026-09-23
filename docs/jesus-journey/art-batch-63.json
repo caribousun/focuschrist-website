@@ -1,0 +1,393 @@
+{
+  "come-and-see": {
+    "title": "Come and see",
+    "alt": "Jesus turns toward two disciples on a sunlit path and welcomes them with an open hand.",
+    "caption": "Andrew and another disciple follow Jesus. His invitation gives them an opportunity to spend time with Him and begin to know Him.",
+    "refs": [
+      [
+        "nt/john/1",
+        "John 1:35–42",
+        "35-42"
+      ]
+    ],
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3c2e6d7a-b37c-40ae-8885-a9d31e0680c8.png",
+    "original": "come-and-see.png",
+    "owner": "answers/jesus-christ-latter-day-saint-beliefs.html",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "review_record": "art-review-1.json",
+    "owner_approved": false,
+    "asset": "assets/page-art/jesus-journey/come-and-see-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/come-and-see-960.webp",
+    "width": 1536,
+    "height": 1024,
+    "original_sha256": "b304c50d83cb10f2e168286d813a069d4d7f92e3e5f6f69970460ee18d5a8194",
+    "asset_sha256": "d6d6df4901e22546de893cbdb1428644d68e1bdc1843675eb7b3dde47f0bb785",
+    "thumbnail_sha256": "f88886ba9b3f16763765dbb0a52fd91c398a1d65371fc86edda61460ce9c8ebf"
+  },
+  "modern-neighbor": {
+    "title": "Give practical help",
+    "alt": "A woman offers a grocery bag to an older man at his doorway.",
+    "caption": "A bag of groceries becomes a simple act of care between neighbors. This present-day illustration invites us to notice a need and offer useful help respectfully.",
+    "refs": [
+      [
+        "nt/matt/25",
+        "Matthew 25:35–40",
+        "35-40"
+      ]
+    ],
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d486a59c-c777-4eda-9862-33de2c855a41.png",
+    "original": "modern-neighbor.png",
+    "owner": "answers/jesus-christ-latter-day-saint-beliefs.html",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "review_record": "art-review-1.json",
+    "owner_approved": false,
+    "asset": "assets/page-art/jesus-journey/modern-neighbor-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/modern-neighbor-960.webp",
+    "width": 1536,
+    "height": 1024,
+    "original_sha256": "d9800357a379573be8c8fd8dc904f4979612450dff8f35f0f45f3cdda235bb12",
+    "asset_sha256": "76b6c7da87a7e26d568fc65a1d8e0ea271cb7505185a24e995df18ed62474c3e",
+    "thumbnail_sha256": "544053b0cbee55a724953c65a530dd704c261730816621bbaf7db4df6711529d"
+  },
+  "bb-abram-stars": {
+    "title": "Abram looks toward the stars",
+    "alt": "An older bearded Abram stands outside a lamplit tent, gazing up at the stars.",
+    "caption": "Abram looks into the night sky. The Lord directs his attention to the stars as He promises descendants beyond his counting.",
+    "refs": [
+      [
+        "ot/gen/15",
+        "Genesis 15:1–6",
+        "1-6"
+      ]
+    ],
+    "owner": "jesus-christ/before-bethlehem.html",
+    "section": "chosen-son",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bb-abram-stars-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bb-abram-stars-960.webp",
+    "original": "bb-abram-stars.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b6cd9af1-acce-45e4-9a40-20027d201c48.png",
+    "original_sha256": "990fdd7218dbfc76eee982703226200619f073056127272521cc6c1df6f94f44",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. Abram stands on the lower left beyond the dark edge of a simple tent, face in attentive upward three-quarter profile, hands relaxed rather than preaching. A great night sky fills the upper right with natural stars, no galaxies painted across the sky. The tent interior holds a restrained lamplight, giving his elderly-but-not-frail face clear photographic detail. No divine figure or angel appears: this passage describes the Lord speaking and bringing him outside, and exact visible manifestation is not supplied. No modern constellation lines. Abram’s exact age at this event is not stated in the chapter; do not label an invented age. Use the elderly LEFT man only as working Abraham facial continuity, no rightman. Preserve prominent nose eyes facebone structure white beard; adjust plausibly earlier age75-85 without exactageclaim. Genuine reflective wonder, upward gaze appropriate to stars.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/.codex/generated_images/01a0cbb6-1ea1-7021-9571-e99065c12b4f/exec-812959f2-b535-42c7-a074-90c57c496d85.png"
+    ],
+    "review_record": "parable-art-review-80.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "dc11e98e56c849c358cbb6bca839f38195f6666ef81f4dc12e4e30fb09dc0e24",
+    "thumbnail_sha256": "9185dd6b0b40ee7fabc462fa84afd77f42156ce94dd7ca68fcab44b3e3f92af7"
+  },
+  "bb-burning-bush": {
+    "title": "Moses turns aside",
+    "alt": "Gray-haired Moses removes a sandal beside a burning shrub, with sheep on the rocky slope behind him.",
+    "caption": "Moses pauses beside the burning bush and removes his sandal. An ordinary place of shepherding becomes holy ground as the Lord calls him.",
+    "refs": [
+      [
+        "ot/ex/3",
+        "Exodus 3:1–6",
+        "1-6"
+      ]
+    ],
+    "owner": "jesus-christ/before-bethlehem.html",
+    "section": "holy-ground",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bb-burning-bush-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bb-burning-bush-960.webp",
+    "original": "bb-burning-bush.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-89669fe7-34fd-4c0b-93a0-97e0c7703cbf.png",
+    "original_sha256": "ff9a61d7c7759b9f12a726ef9e31a378d248b6ad82afa684ed08eda33a1d1fe2",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. Oblique view across rocky ground: Moses at right has set one plain sandal down and bends slightly to loosen the other while turning his covered, reverent face toward a burning shrub on the left. Flame exists among living intact branches, not a giant firestorm. A few sheep remain distant beyond the rock, secondary. Hands and sandal straps anatomically clear. No human figure inside the fire, no Christ in the background, no holographic words. Natural firelight and morning ambient light give the elderly shepherd a focused startled expression. Establish Moses continuity from the approved-history registry and serpent scene before generating. Moses is the STANDING MIDDLE DISTANCE elderly whitebearded man with red mantle in reference, not eitherforegroundperson. Preserve facialstructure as roughly80years. No serpent/pole in this scene. One sandaloff, otherbeingloosened. Reverent attentive gaze towardbush, no generic smile.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\page-art\\bible-together\\moses-brass-serpent-full.webp"
+    ],
+    "review_record": "parable-art-review-80.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "ad529082b4ed4e4ad9b7bbd20a549ed812fa7753ac0bca0abba97808163abdb7",
+    "thumbnail_sha256": "22199551e9ad067f419df32baf55fe8c9f733ad2e7efd5b16135dbb6e72de1ea"
+  },
+  "bb-tent-cloud": {
+    "title": "The people watch from their tent doors",
+    "alt": "People stand near their tents and watch Moses at a separate tent beneath a tall cloud.",
+    "caption": "The people watch from their tent doors as Moses goes to the tent of meeting. The cloud at its entrance accompanies the account of the Lord speaking with him.",
+    "refs": [
+      [
+        "ot/ex/33",
+        "Exodus 33:7–11",
+        "7-11"
+      ]
+    ],
+    "owner": "jesus-christ/before-bethlehem.html",
+    "section": "presence",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bb-tent-cloud-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bb-tent-cloud-960.webp",
+    "original": "bb-tent-cloud.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8346487b-dd5b-47de-ab73-d94c49ddfb2e.png",
+    "original_sha256": "ce4db9c05ff5a456b4fb4e0c5c2dcf6c99bc48a52052a310f421db979b3727f1",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. View outward from the shadow of an unnamed Israelite household tent. At the left edge an adult observer stands respectfully with hands lowered; across open distance the separate meeting tent is visible, a vertical cloud gathered at its entrance. Moses is a small recognizable elderly figure entering the tent, not a huge portrait. Other people stand at their own tent doors farther right. No Temple of Solomon, no gold building, no Christ emerging from cloud. The scene communicates distance between camp and meeting tent and shared attentive witness. Moses is middle-distance standing elderlyman in reference. Preserve his facial structure and redmantle but no serpent/staffpole. Meetingtent outside camp is plain cloth, cloudcolumn at entrance, no gold shrine. Photographic natural faces.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\page-art\\bible-together\\moses-brass-serpent-full.webp"
+    ],
+    "review_record": "parable-art-review-81.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "cae296d9dcc4b0b2197259efe0d28ac002e006943f347042e6e96e9125ccb859",
+    "thumbnail_sha256": "bdcf90b2dc2135bef95cbcd7ddf078e9bfacc6bbd50ee0e55f7efca690a5c8d3"
+  },
+  "bb-stones-prepared": {
+    "title": "Stones carried to the mountain",
+    "alt": "The brother of Jared kneels on a mountain and arranges sixteen pale translucent stones in two groups on a flat rock.",
+    "caption": "The brother of Jared prepares sixteen stones on the mountain before asking the Lord to give them light. His careful preparation leads into an earnest prayer.",
+    "refs": [
+      [
+        "bofm/ether/3",
+        "Ether 3:1–5",
+        "1-5"
+      ]
+    ],
+    "owner": "jesus-christ/before-bethlehem.html",
+    "section": "brother-of-jared",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bb-stones-prepared-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bb-stones-prepared-960.webp",
+    "original": "bb-stones-prepared.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-175c8d47-3174-4fbc-ab9c-cf1885b978fe.png",
+    "original_sha256": "adca5503feb28430f477808bb353d7fe5bc6b1653cbb4d38be78c1ffb29a9f72",
+    "prompt": "Narrow edit exact source photograph. There are currently FOURTEEN transparent stones, seven in leftgroup includingstonebeneathfingers and seveninrightgroup. ADD exactly TWO small translucent UNLIT glasslike stones: one in emptyrockspace immediately below theleftgroup andone in emptyrockspace belowtherightgroup. Result EXACTLY SIXTEEN individuallycountable stones, eightin each group. Preserve all14existingstones; no overlap no glow. Preserve man identity face hands clothing mountains andallotherpixels/composition. No text.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7cd1b5cf-8463-4b4b-9992-5cefe121752c.png"
+    ],
+    "review_record": "parable-art-review-83.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "35d83110c8c15cbe6accbf65ee7111e139f4dc526ed3321fe3ebe8b4ab811d76",
+    "thumbnail_sha256": "66c91e48f9228bc112c5117fc589c50746cd161f3e1e63fc8a80be07cb09e16e"
+  },
+  "bb-philip-isaiah": {
+    "title": "A traveler asks about Isaiah",
+    "alt": "An Ethiopian official holds an open scroll in a chariot and looks toward Philip standing beside him.",
+    "caption": "A traveler turns from his reading to seek understanding. Philip joins him in the account where Isaiah becomes a starting point for teaching about Jesus.",
+    "refs": [
+      [
+        "nt/acts/8",
+        "Acts 8:27–35",
+        "27-35"
+      ]
+    ],
+    "owner": "jesus-christ/before-bethlehem.html",
+    "section": "promised-redeemer",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bb-philip-isaiah-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bb-philip-isaiah-960.webp",
+    "original": "bb-philip-isaiah.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-926c1a69-2dc1-424d-be9e-f3449eee3e11.png",
+    "original_sha256": "43cf826d029b6dabe262d5d8d6e87663d5247525047dc794330d6361e28e100c",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. An Ethiopian court official sits at the front-right side of a stopped simple travel chariot, holding an unrolled scroll angled toward himself. Philip stands beside its left edge and leans attentively toward the questioner. Strong interpersonal gaze; official thoughtful and engaged, Philip listening before replying. A discreet driver and horse only if coherent, no need crowded entourage. First-century southern road near Gaza interpreted from dry rocky terrain, not pyramids or Victorian carriage. Scroll has fine nonlegible ink on inward-facing surface. Both adults distinct from Christ; no Jesus apparition. Philiptheevangelist is not Philiptheapostle. Distinctoriginal interpretation adult short blackbeard recedingdarkhair weatheredovalface in graybrowncloak. Ethiopian official dignified darkskin adult shorthair clean-shavenface in refinedcreamrobe; they meet each other'seyes with engagedthoughtful attention. NoJesus. Avoidallreadableletters.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-81.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "5792ffe338401ae9128617009eca82e78f65d330f6bce11434874cc473a3c4f7",
+    "thumbnail_sha256": "5f68b7bfa0d38b326524714b3efb23846bf26c710a8feef733931785f42faead"
+  },
+  "mc-siloam-washing": {
+    "title": "Water at Siloam",
+    "alt": "A man kneels by a stone-edged pool and cups water over his eyes.",
+    "caption": "The man washes after following Jesus' instruction to go to Siloam. Water runs through his hands in this quiet moment of response.",
+    "refs": [
+      [
+        "nt/john/9",
+        "John 9:6–7",
+        "6-7"
+      ]
+    ],
+    "owner": "jesus-christ/miracles-and-compassion.html",
+    "section": "siloam",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mc-siloam-washing-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mc-siloam-washing-960.webp",
+    "original": "mc-siloam-washing.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-99f65e20-fc3f-4e34-a831-828c3466127c.png",
+    "original_sha256": "70ee9890980c36d4e2076b1fedcf224e44f264ef708643e0730ab25fde4d3cbb",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. An adult man kneels at the left beside the stepped edge of an ancient pool and cups water toward his eyes. Droplets fall back to the surface. Jesus is absent: the recorded washing follows His instruction. No apostle touches the man, and no crowd makes him a spectacle. Show complete natural hands, opaque plain clothing, stone and water in side sunlight. Avoid claiming an exact archaeological reconstruction of Siloam. If the old Now-I-see man has an approved mapping to John 9, preserve that face; otherwise record the identity uncertainty. No magical glowing water. Every person distinct natural facialfeatures, noJesus. Anatomically sound completehands. No readable text. Historical staginginterpreted, no exactlocationclaim.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-81.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "2110a283fa1a516279af539ad1687c6d0a9025140b2170c32e95d10f06d3fc7f",
+    "thumbnail_sha256": "2bbda022973540e45d0dde6e1adddb009483adaf7af64d96744f5c510399588a"
+  },
+  "mc-official-servants": {
+    "title": "Good news on the road home",
+    "alt": "An official listens to a servant speaking on a rural road while an older gray-bearded servant approaches behind him.",
+    "caption": "Servants meet the official on his way home with news that his son is alive. He listens and asks when the recovery began.",
+    "refs": [
+      [
+        "nt/john/4",
+        "John 4:50–53",
+        "50-53"
+      ]
+    ],
+    "owner": "jesus-christ/miracles-and-compassion.html",
+    "section": "gratitude",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mc-official-servants-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mc-official-servants-960.webp",
+    "original": "mc-official-servants.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-22ad36b2-351e-4b77-a48e-decb10520146.png",
+    "original_sha256": "116d6d939a3dea311d69fb05a3510ec510bae9dd54870a4fa95aba975e55ecdf",
+    "prompt": "Edit ONLY the rear-right servant's face, hair and beard so he is a distinctly different older man: narrow long face, high cheekbones, longer hooked nose, receding gray hair under samecloth, short wiry gray beard, deep natural smilelines and earnest relief, eyes toward official. Preserve his body/clothes/hands/pose. Preserve the foreground messenger and official's exact faces, eyecontact, wholecomposition andphotographic realism. No text. This fixes duplicatedpeople; nootherchanges.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3e82387d-a9f3-4f83-bbb1-f22b404737be.png"
+    ],
+    "review_record": "parable-art-review-83.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "89746ef7fceb6f6a0545166af02f718c4ca40f1267958e1ac06b78c8fdc1a389",
+    "thumbnail_sha256": "b65d3b4391d609800b5319c1601eedce686eca046697eaa027a1a86c19011f8e"
+  },
+  "rt-persuasion": {
+    "title": "Listening with patience",
+    "alt": "Two women speak across a workshop table while a third adult listens behind them.",
+    "caption": "At a shared worktable, one person listens while another explains a concern. Patient attention can give practical shape to persuasion, gentleness and love.",
+    "refs": [
+      [
+        "dc-testament/dc/121",
+        "Doctrine and Covenants 121:41–44",
+        "41-44"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "liberty",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-persuasion-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-persuasion-960.webp",
+    "original": "rt-persuasion.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8fb8b3fb-504e-4ebe-a30d-2b771dc11d9f.png",
+    "original_sha256": "48e894647854bcd28e76701d80c38a01a450b8b7461fab722ee36e2225ebb346",
+    "prompt": "Edit only environment text: remove ALL readable wall slogans and their lettered posters/blackboard completely, replacing with plain workshop wall and unobtrusive wooden shelving. Remove readable lettering on paper, retain simple nonverbal floorplan lines. Keep exact people, respectful mutual eyecontact, faces, hand anatomy, natural realistic lighting and composition unchanged. No added text anywhere.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-04e5bf17-7985-4ed5-b5d5-59d114505c93.png"
+    ],
+    "review_record": "parable-art-review-79.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "83ba061370e10c3048dda2aff554fa2650c2da53e6146fbba7bcb022e1b2c167",
+    "thumbnail_sha256": "7eff425b6d4aa662f50c4928b46b59ab321bd424a1a0a7b7dd7c28eb7691a5d4"
+  },
+  "rt-spirit-messengers": {
+    "title": "Messengers prepared to serve",
+    "alt": "Jesus addresses attentive men and women, including an older gray-haired man, in a softly lit setting.",
+    "caption": "Doctrine and Covenants 138 describes Christ's ministry among the righteous spirits and the commissioning of messengers between His death and Resurrection. The unnamed listeners and setting are artistic interpretations of the vision.",
+    "refs": [
+      [
+        "dc-testament/dc/138",
+        "Doctrine and Covenants 138:18–20",
+        "18-20"
+      ],
+      [
+        "dc-testament/dc/138",
+        "Doctrine and Covenants 138:29–37",
+        "29-37"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "spirit-world",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-spirit-messengers-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-spirit-messengers-960.webp",
+    "original": "rt-spirit-messengers.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4b424195-0cb9-49b8-a98d-28563dc4f2c3.png",
+    "original_sha256": "f6b209750ba1d3b9684a4460cf59da481205d02d7e8d6ecc3f9e3f49e8b75b48",
+    "prompt": "Precise photograph edit of image1. Change ONLY the middle BACKGROUND man's head (behind seated foreground man, directly left of Jesus) so he does not look like Jesus: much older man with short straight silver gray hair, long narrow face, small close-trimmed gray beard, deep natural age lines. Preserve attentive peaceful expression directed to Jesus. Do NOT alter foreground man or other people. Do NOT add crucifixion scars: this scene occurs before Resurrection. Keep exact Jesus identity and photographic face unchanged; image2 is canonical likeness reference only. Preserve all remaining people, anatomy, composition, clothing, lighting, setting and photorealism. No illustration, text, collage or new narrative event.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-76ae646e-54ff-4dfc-b26e-7a28979d3468.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "branch-art-review-5.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "5da5b8f23ee1a033d9d5e5b40f70ba3a82be64a3a53065551c30663eaade023c",
+    "thumbnail_sha256": "4ca7aa8e9a284f22716ca468d3cafaef452886bb79a50d2ecbfd31889235d7c6"
+  },
+  "rt-sacrament-preparation": {
+    "title": "Preparing the table",
+    "alt": "Two men prepare a table in an empty chapel, one pouring water into small cups and the other arranging a white cloth.",
+    "caption": "Quiet preparation makes the table ready for worship. Ordinary hands attend to the bread, water and cloth before the congregation gathers.",
+    "refs": [
+      [
+        "dc-testament/dc/20",
+        "Doctrine and Covenants 20:75–79",
+        "75-79"
+      ],
+      [
+        "dc-testament/dc/27",
+        "Doctrine and Covenants 27:2",
+        "2"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "sacrament-today",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-sacrament-preparation-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-sacrament-preparation-960.webp",
+    "original": "rt-sacrament-preparation.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-113bc4fb-d543-4698-8754-b79d81b13192.png",
+    "original_sha256": "df6c77d1f507eca636fa2eb3d5ada637a137f503e063f98960923b05e0994589",
+    "prompt": "Edit only bread in foreground bread tray: replace ALL broken bread cubes with TWO intact unbroken ordinary sandwich bread slices lying flat side by side. Their complete crust outlines clear, no cubes, no torn morsels. This moment is before worship and bread has not been broken. Preserve both men, hands, waterpouringinto small cups, clean cloth, table and lighting exactly. No other changes.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2fa8cdee-b319-4e2c-8883-5149386c4d59.png"
+    ],
+    "review_record": "parable-art-review-79.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "447649a5bfba735d9268f0f1a44f3a507be8ca9db69577cebc20685633725f6d",
+    "thumbnail_sha256": "9d000a55dd9aab9caba083da748a4a93a805cd3237221868ccd9dae4da97d137"
+  }
+}

@@ -1,0 +1,1577 @@
+{
+  "review_type": "bounded independent source/story planning review",
+  "date": "2026-09-22",
+  "scope": "Seven descendants beneath existing Jesus Christ section; no additional top-level Answers cards",
+  "branch_count": 7,
+  "stop_count": 63,
+  "branches": {
+    "before-bethlehem": [
+      {
+        "title": "The Word before His mortal life",
+        "passage": "John 1:1-5,14",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p1-p5#p1",
+        "chapter_path": "nt/john/1",
+        "verse_selection": "1-5",
+        "scene_and_caution": "Creation light and earthly landscape; theological illustration, not an observed portrait of creation",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 In the beginning was the Word, and the Word was with God, and the Word was God .",
+          "p2": "2 The same was in the beginning with God.",
+          "p3": "3 All things were made by him; and without him was not any thing made that was made.",
+          "p4": "4 In him was life ; and the life was the light of men.",
+          "p5": "5 And the light shineth in darkness ; and the darkness comprehended it not."
+        }
+      },
+      {
+        "title": "Chosen before the world",
+        "passage": "Abraham 3:24-28",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p24-p28#p24",
+        "chapter_path": "pgp/abr/3",
+        "verse_selection": "24-28",
+        "scene_and_caution": "Premortal council: clearly identified as scriptural artistic interpretation; avoid inventing dialogue",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p24": "24 And there stood one among them that was like unto God, and he said unto those who were with him: We will go down, for there is space there, and we will take of these materials, and we will make an earth whereon these may dwell ;",
+          "p25": "25 And we will prove them herewith, to see if they will do all things whatsoever the Lord their God shall command them;",
+          "p26": "26 And they who keep their first estate shall be added upon; and they who keep not their first estate shall not have glory in the same kingdom with those who keep their first estate; and they who keep their second estate shall have glory added upon their heads for ever and ever.",
+          "p27": "27 And the Lord said: Whom shall I send ? And one answered like unto the Son of Man: Here am I, send me. And another answered and said: Here am I, send me. And the Lord said: I will send the first.",
+          "p28": "28 And the second was angry, and kept not his first estate ; and, at that day, many followed after him."
+        }
+      },
+      {
+        "title": "The Son carries out the Father's creative work",
+        "passage": "Moses 1:31-39",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p31-p39#p31",
+        "chapter_path": "pgp/moses/1",
+        "verse_selection": "31-39",
+        "scene_and_caution": "Moses learning of worlds; identify distinct roles of Father and Only Begotten",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p31": "31 And behold, the glory of the Lord was upon Moses, so that Moses stood in the presence of God, and talked with him face to face . And the Lord God said unto Moses: For mine own purpose have I made these things. Here is wisdom and it remaineth in me.",
+          "p32": "32 And by the word of my power, have I created them, which is mine Only Begotten Son, who is full of grace and truth.",
+          "p33": "33 And worlds without number have I created ; and I also created them for mine own purpose; and by the Son I created them, which is mine Only Begotten .",
+          "p34": "34 And the first man of all men have I called Adam , which is many .",
+          "p35": "35 But only an account of this earth, and the inhabitants thereof, give I unto you. For behold, there are many worlds that have passed away by the word of my power. And there are many that now stand, and innumerable are they unto man; but all things are numbered unto me, for they are mine and I know them.",
+          "p36": "36 And it came to pass that Moses spake unto the Lord, saying: Be merciful unto thy servant, O God, and tell me concerning this earth, and the inhabitants thereof, and also the heavens, and then thy servant will be content.",
+          "p37": "37 And the Lord God spake unto Moses, saying: The heavens , they are many, and they cannot be numbered unto man; but they are numbered unto me, for they are mine.",
+          "p38": "38 And as one earth shall pass away, and the heavens thereof even so shall another come; and there is no end to my works, neither to my words.",
+          "p39": "39 For behold, this is my work and my glory —to bring to pass the immortality and eternal life of man."
+        }
+      },
+      {
+        "title": "Moses at the burning bush",
+        "passage": "Exodus 3:1-15",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/3?lang=eng&id=p1-p15#p1",
+        "chapter_path": "ot/ex/3",
+        "verse_selection": "1-15",
+        "scene_and_caution": "Barefoot Moses before bush that burns without consumption; voice rather than invented bodily appearance",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 Now Moses kept the flock of Jethro his father in law, the priest of Midian: and he led the flock to the backside of the desert, and came to the mountain of God , even to Horeb .",
+          "p2": "2 And the angel of the Lord appeared unto him in a flame of fire out of the midst of a bush : and he looked, and, behold, the bush burned with fire, and the bush was not consumed.",
+          "p3": "3 And Moses said, I will now turn aside, and see this great sight, why the bush is not burnt.",
+          "p4": "4 And when the Lord saw that he turned aside to see, God called unto him out of the midst of the bush, and said, Moses, Moses. And he said, Here am I.",
+          "p5": "5 And he said, Draw not nigh hither: put off thy shoes from off thy feet, for the place whereon thou standest is holy ground.",
+          "p6": "6 Moreover he said, I am the God of thy father, the God of Abraham, the God of Isaac, and the God of Jacob. And Moses hid his face; for he was afraid to look upon God.",
+          "p7": "7 ¶ And the Lord said, I have surely seen the affliction of my people which are in Egypt , and have heard their cry by reason of their taskmasters; for I know their sorrows;",
+          "p8": "8 And I am come down to deliver them out of the hand of the Egyptians, and to bring them up out of that land unto a good land and a large, unto a land flowing with milk and honey; unto the place of the Canaanites , and the Hittites, and the Amorites, and the Perizzites, and the Hivites, and the Jebusites.",
+          "p9": "9 Now therefore, behold, the cry of the children of Israel is come unto me: and I have also seen the oppression wherewith the Egyptians oppress them.",
+          "p10": "10 Come now therefore, and I will send thee unto Pharaoh, that thou mayest bring forth my people the children of Israel out of Egypt.",
+          "p11": "11 ¶ And Moses said unto God, Who am I, that I should go unto Pharaoh , and that I should bring forth the children of Israel out of Egypt?",
+          "p12": "12 And he said, Certainly I will be with thee ; and this shall be a token unto thee, that I have sent thee: When thou hast brought forth the people out of Egypt, ye shall serve God upon this mountain .",
+          "p13": "13 And Moses said unto God, Behold, when I come unto the children of Israel, and shall say unto them, The God of your fathers hath sent me unto you; and they shall say to me, What is his name? what shall I say unto them?",
+          "p14": "14 And God said unto Moses, I Am That I Am : and he said, Thus shalt thou say unto the children of Israel, I Am hath sent me unto you.",
+          "p15": "15 And God said moreover unto Moses, Thus shalt thou say unto the children of Israel, The Lord God of your fathers, the God of Abraham, the God of Isaac, and the God of Jacob, hath sent me unto you: this is my name for ever, and this is my memorial unto all generations."
+        }
+      },
+      {
+        "title": "Deliverance at the sea",
+        "passage": "Exodus 14:13-31",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/14?lang=eng&id=p13-p31#p13",
+        "chapter_path": "ot/ex/14",
+        "verse_selection": "13-31",
+        "scene_and_caution": "Israel crossing between waters; Christ's covenant role explained with Jehovah guide, not an added human figure",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p13": "13 ¶ And Moses said unto the people, Fear ye not, stand still, and see the salvation of the Lord , which he will shew to you to day: for the Egyptians whom ye have seen to day, ye shall see them again no more for ever.",
+          "p14": "14 The Lord shall fight for you, and ye shall hold your peace .",
+          "p15": "15 ¶ And the Lord said unto Moses, Wherefore criest thou unto me? speak unto the children of Israel, that they go forward:",
+          "p16": "16 But lift thou up thy rod , and stretch out thine hand over the sea, and divide it: and the children of Israel shall go on dry ground through the midst of the sea.",
+          "p17": "17 And I, behold, I will harden the hearts of the Egyptians, and they shall follow them: and I will get me honour upon Pharaoh, and upon all his host, upon his chariots, and upon his horsemen.",
+          "p18": "18 And the Egyptians shall know that I am the Lord , when I have gotten me honour upon Pharaoh, upon his chariots, and upon his horsemen.",
+          "p19": "19 ¶ And the angel of God, which went before the camp of Israel, removed and went behind them; and the pillar of the cloud went from before their face, and stood behind them:",
+          "p20": "20 And it came between the camp of the Egyptians and the camp of Israel; and it was a cloud and darkness to them, but it gave light by night to these: so that the one came not near the other all the night.",
+          "p21": "21 And Moses stretched out his hand over the sea ; and the Lord caused the sea to go back by a strong east wind all that night, and made the sea dry land, and the waters were divided .",
+          "p22": "22 And the children of Israel went into the midst of the sea upon the dry ground: and the waters were a wall unto them on their right hand, and on their left.",
+          "p23": "23 ¶ And the Egyptians pursued, and went in after them to the midst of the sea, even all Pharaoh’s horses, his chariots, and his horsemen.",
+          "p24": "24 And it came to pass, that in the morning watch the Lord looked unto the host of the Egyptians through the pillar of fire and of the cloud, and troubled the host of the Egyptians,",
+          "p25": "25 And took off their chariot wheels, that they drave them heavily: so that the Egyptians said, Let us flee from the face of Israel; for the Lord fighteth for them against the Egyptians.",
+          "p26": "26 ¶ And the Lord said unto Moses, Stretch out thine hand over the sea, that the waters may come again upon the Egyptians, upon their chariots, and upon their horsemen.",
+          "p27": "27 And Moses stretched forth his hand over the sea, and the sea returned to his strength when the morning appeared; and the Egyptians fled against it ; and the Lord overthrew the Egyptians in the midst of the sea.",
+          "p28": "28 And the waters returned, and covered the chariots, and the horsemen, and all the host of Pharaoh that came into the sea after them; there remained not so much as one of them.",
+          "p29": "29 But the children of Israel walked upon dry land in the midst of the sea; and the waters were a wall unto them on their right hand, and on their left.",
+          "p30": "30 Thus the Lord saved Israel that day out of the hand of the Egyptians; and Israel saw the Egyptians dead upon the sea shore.",
+          "p31": "31 And Israel saw that great work which the Lord did upon the Egyptians: and the people feared the Lord , and believed the Lord , and his servant Moses."
+        }
+      },
+      {
+        "title": "Manna in the wilderness",
+        "passage": "Exodus 16:11-18",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/16?lang=eng&id=p11-p18#p11",
+        "chapter_path": "ot/ex/16",
+        "verse_selection": "11-18",
+        "scene_and_caution": "Families gathering small manna from ground; connect John 6:31-35 without making manna Eucharistic bread",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p11": "11 ¶ And the Lord spake unto Moses, saying,",
+          "p12": "12 I have heard the murmurings of the children of Israel: speak unto them, saying, At even ye shall eat flesh, and in the morning ye shall be filled with bread; and ye shall know that I am the Lord your God.",
+          "p13": "13 And it came to pass, that at even the quails came up, and covered the camp: and in the morning the dew lay round about the host .",
+          "p14": "14 And when the dew that lay was gone up, behold, upon the face of the wilderness there lay a small round thing , as small as the hoar frost on the ground.",
+          "p15": "15 And when the children of Israel saw it, they said one to another, It is manna : for they wist not what it was. And Moses said unto them, This is the bread which the Lord hath given you to eat.",
+          "p16": "16 ¶ This is the thing which the Lord hath commanded, Gather of it every man according to his eating , an omer for every man, according to the number of your persons; take ye every man for them which are in his tents.",
+          "p17": "17 And the children of Israel did so, and gathered, some more, some less.",
+          "p18": "18 And when they did mete it with an omer, he that gathered much had nothing over, and he that gathered little had no lack; they gathered every man according to his eating."
+        }
+      },
+      {
+        "title": "The Lord speaks with Moses",
+        "passage": "Exodus 33:7-11",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/33?lang=eng&id=p7-p11#p7",
+        "chapter_path": "ot/ex/33",
+        "verse_selection": "7-11",
+        "scene_and_caution": "Moses at tent entrance with pillar of cloud; do not conflate with later request to see glory",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p7": "7 And Moses took the tabernacle, and pitched it without the camp, afar off from the camp, and called it the Tabernacle of the congregation. And it came to pass, that every one which sought the Lord went out unto the tabernacle of the congregation , which was without the camp.",
+          "p8": "8 And it came to pass, when Moses went out unto the tabernacle, that all the people rose up, and stood every man at his tent door, and looked after Moses, until he was gone into the tabernacle.",
+          "p9": "9 And it came to pass, as Moses entered into the tabernacle, the cloudy pillar descended, and stood at the door of the tabernacle, and the Lord talked with Moses.",
+          "p10": "10 And all the people saw the cloudy pillar stand at the tabernacle door: and all the people rose up and worshipped, every man in his tent door.",
+          "p11": "11 And the Lord spake unto Moses face to face , as a man speaketh unto his friend . And he turned again into the camp: but his servant Joshua , the son of Nun , a young man, departed not out of the tabernacle."
+        }
+      },
+      {
+        "title": "The brother of Jared sees the Redeemer",
+        "passage": "Ether 3:6-16",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng&id=p6-p16#p6",
+        "chapter_path": "bofm/ether/3",
+        "verse_selection": "6-16",
+        "scene_and_caution": "Finger touching prepared stones followed by revelation of spirit body; existing scene requires ownership reconciliation",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p6": "6 And it came to pass that when the brother of Jared had said these words, behold, the Lord stretched forth his hand and touched the stones one by one with his finger . And the veil was taken from off the eyes of the brother of Jared, and he saw the finger of the Lord; and it was as the finger of a man, like unto flesh and blood; and the brother of Jared fell down before the Lord, for he was struck with fear .",
+          "p7": "7 And the Lord saw that the brother of Jared had fallen to the earth; and the Lord said unto him: Arise, why hast thou fallen?",
+          "p8": "8 And he saith unto the Lord: I saw the finger of the Lord, and I feared lest he should smite me; for I knew not that the Lord had flesh and blood.",
+          "p9": "9 And the Lord said unto him: Because of thy faith thou hast seen that I shall take upon me flesh and blood ; and never has man come before me with such exceeding faith as thou hast; for were it not so ye could not have seen my finger. Sawest thou more than this?",
+          "p10": "10 And he answered: Nay; Lord, show thyself unto me.",
+          "p11": "11 And the Lord said unto him: Believest thou the words which I shall speak?",
+          "p12": "12 And he answered: Yea, Lord, I know that thou speakest the truth, for thou art a God of truth, and canst not lie.",
+          "p13": "13 And when he had said these words, behold, the Lord showed himself unto him, and said: Because thou knowest these things ye are redeemed from the fall; therefore ye are brought back into my presence ; therefore I show myself unto you.",
+          "p14": "14 Behold, I am he who was prepared from the foundation of the world to redeem my people. Behold, I am Jesus Christ. I am the Father and the Son. In me shall all mankind have life , and that eternally, even they who shall believe on my name; and they shall become my sons and my daughters.",
+          "p15": "15 And never have I showed myself unto man whom I have created, for never has man believed in me as thou hast. Seest thou that ye are created after mine own image ? Yea, even all men were created in the beginning after mine own image.",
+          "p16": "16 Behold, this body , which ye now behold , is the body of my spirit ; and man have I created after the body of my spirit; and even as I appear unto thee to be in the spirit will I appear unto my people in the flesh."
+        }
+      },
+      {
+        "title": "Isaiah's suffering servant",
+        "passage": "Isaiah 53:1-12",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng&id=p1-p12#p1",
+        "chapter_path": "ot/isa/53",
+        "verse_selection": "1-12",
+        "scene_and_caution": "Prophetic witness, not a photograph of an event Isaiah personally observed; connect atonement existing page",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 Who hath believed our report? and to whom is the arm of the Lord revealed?",
+          "p2": "2 For he shall grow up before him as a tender plant , and as a root out of a dry ground: he hath no form nor comeliness; and when we shall see him, there is no beauty that we should desire him.",
+          "p3": "3 He is despised and rejected of men; a man of sorrows , and acquainted with grief: and we hid as it were our faces from him; he was despised, and we esteemed him not.",
+          "p4": "4 ¶ Surely he hath borne our griefs , and carried our sorrows: yet we did esteem him stricken, smitten of God, and afflicted.",
+          "p5": "5 But he was wounded for our transgressions , he was bruised for our iniquities: the chastisement of our peace was upon him; and with his stripes we are healed .",
+          "p6": "6 All we like sheep have gone astray ; we have turned every one to his own way; and the Lord hath laid on him the iniquity of us all.",
+          "p7": "7 He was oppressed , and he was afflicted , yet he opened not his mouth: he is brought as a lamb to the slaughter , and as a sheep before her shearers is dumb, so he openeth not his mouth.",
+          "p8": "8 He was taken from prison and from judgment: and who shall declare his generation ? for he was cut off out of the land of the living: for the transgression of my people was he stricken.",
+          "p9": "9 And he made his grave with the wicked , and with the rich in his death ; because he had done no violence , neither was any deceit in his mouth.",
+          "p10": "10 ¶ Yet it pleased the Lord to bruise him; he hath put him to grief: when thou shalt make his soul an offering for sin, he shall see his seed , he shall prolong his days, and the pleasure of the Lord shall prosper in his hand.",
+          "p11": "11 He shall see of the travail of his soul, and shall be satisfied: by his knowledge shall my righteous servant justify many; for he shall bear their iniquities.",
+          "p12": "12 Therefore will I divide him a portion with the great, and he shall divide the spoil with the strong; because he hath poured out his soul unto death : and he was numbered with the transgressors ; and he bare the sin of many, and made intercession for the transgressors."
+        }
+      }
+    ],
+    "ministry": [
+      {
+        "title": "Jesus receives baptism",
+        "passage": "Matthew 3:13-17",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/3?lang=eng&id=p13-p17#p13",
+        "chapter_path": "nt/matt/3",
+        "verse_selection": "13-17",
+        "scene_and_caution": "Jesus rising from Jordan, John present; Father voice and Spirit sign remain distinct",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p13": "13 ¶ Then cometh Jesus from Galilee to Jordan unto John, to be baptized of him.",
+          "p14": "14 But John forbad him, saying, I have need to be baptized of thee, and comest thou to me?",
+          "p15": "15 And Jesus answering said unto him, Suffer it to be so now: for thus it becometh us to fulfil all righteousness . Then he suffered him.",
+          "p16": "16 And Jesus, when he was baptized , went up straightway out of the water: and, lo, the heavens were opened unto him, and he saw the Spirit of God descending like a dove , and lighting upon him:",
+          "p17": "17 And lo a voice from heaven, saying, This is my beloved Son , in whom I am well pleased."
+        }
+      },
+      {
+        "title": "Come and see",
+        "passage": "John 1:35-42",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p35-p42#p35",
+        "chapter_path": "nt/john/1",
+        "verse_selection": "35-42",
+        "scene_and_caution": "Andrew brings Simon to Jesus; do not conflate with later fishing call",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p35": "35 ¶ Again the next day after John stood, and two of his disciples;",
+          "p36": "36 And looking upon Jesus as he walked, he saith, Behold the Lamb of God!",
+          "p37": "37 And the two disciples heard him speak, and they followed Jesus.",
+          "p38": "38 Then Jesus turned, and saw them following, and saith unto them, What seek ye? They said unto him, Rabbi, (which is to say, being interpreted, Master,) where dwellest thou?",
+          "p39": "39 He saith unto them, Come and see. They came and saw where he dwelt, and abode with him that day: for it was about the tenth hour.",
+          "p40": "40 One of the two which heard John speak, and followed him, was Andrew, Simon Peter’s brother.",
+          "p41": "41 He first findeth his own brother Simon, and saith unto him, We have found the Messias , which is, being interpreted, the Christ.",
+          "p42": "42 And he brought him to Jesus. And when Jesus beheld him, he said, Thou art Simon the son of Jona: thou shalt be called Cephas , which is by interpretation, A stone."
+        }
+      },
+      {
+        "title": "Philip brings Nathanael",
+        "passage": "John 1:43-51",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p43-p51#p43",
+        "chapter_path": "nt/john/1",
+        "verse_selection": "43-51",
+        "scene_and_caution": "Jesus and Nathanael meet, Philip nearby; fig tree belongs to prior reference, not required setting of meeting",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p43": "43 ¶ The day following Jesus would go forth into Galilee, and findeth Philip, and saith unto him, Follow me.",
+          "p44": "44 Now Philip was of Bethsaida, the city of Andrew and Peter.",
+          "p45": "45 Philip findeth Nathanael, and saith unto him, We have found him, of whom Moses in the law, and the prophets, did write , Jesus of Nazareth, the son of Joseph.",
+          "p46": "46 And Nathanael said unto him, Can there any good thing come out of Nazareth? Philip saith unto him, Come and see.",
+          "p47": "47 Jesus saw Nathanael coming to him, and saith of him, Behold an Israelite indeed, in whom is no guile !",
+          "p48": "48 Nathanael saith unto him, Whence knowest thou me? Jesus answered and said unto him, Before that Philip called thee, when thou wast under the fig tree, I saw thee.",
+          "p49": "49 Nathanael answered and saith unto him, Rabbi, thou art the Son of God ; thou art the King of Israel.",
+          "p50": "50 Jesus answered and said unto him, Because I said unto thee, I saw thee under the fig tree, believest thou? thou shalt see greater things than these.",
+          "p51": "51 And he saith unto him, Verily, verily, I say unto you, Hereafter ye shall see heaven open, and the angels of God ascending and descending upon the Son of man."
+        }
+      },
+      {
+        "title": "Water becomes wine at Cana",
+        "passage": "John 2:1-11",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/2?lang=eng&id=p1-p11#p1",
+        "chapter_path": "nt/john/2",
+        "verse_selection": "1-11",
+        "scene_and_caution": "Servants filling six stone jars; Mary mother identity reference required; avoid inventing identity of bridegroom",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 And the third day there was a marriage in Cana of Galilee; and the mother of Jesus was there:",
+          "p2": "2 And both Jesus was called, and his disciples, to the marriage.",
+          "p3": "3 And when they wanted wine, the mother of Jesus saith unto him, They have no wine.",
+          "p4": "4 Jesus saith unto her, Woman , what have I to do with thee? mine hour is not yet come.",
+          "p5": "5 His mother saith unto the servants, Whatsoever he saith unto you, do it.",
+          "p6": "6 And there were set there six waterpots of stone, after the manner of the purifying of the Jews, containing two or three firkins apiece.",
+          "p7": "7 Jesus saith unto them, Fill the waterpots with water. And they filled them up to the brim.",
+          "p8": "8 And he saith unto them, Draw out now, and bear unto the governor of the feast. And they bare it.",
+          "p9": "9 When the ruler of the feast had tasted the water that was made wine, and knew not whence it was: (but the servants which drew the water knew;) the governor of the feast called the bridegroom,",
+          "p10": "10 And saith unto him, Every man at the beginning doth set forth good wine; and when men have well drunk, then that which is worse: but thou hast kept the good wine until now.",
+          "p11": "11 This beginning of miracles did Jesus in Cana of Galilee, and manifested forth his glory; and his disciples believed on him."
+        }
+      },
+      {
+        "title": "Levi leaves the receipt of custom",
+        "passage": "Mark 2:13-17",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p13-p17#p13",
+        "chapter_path": "nt/mark/2",
+        "verse_selection": "13-17",
+        "scene_and_caution": "Jesus calls Levi at tax booth; distinguish tax collectors from moral caricatures",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p13": "13 And he went forth again by the sea side; and all the multitude resorted unto him, and he taught them.",
+          "p14": "14 And as he passed by, he saw Levi the son of Alphæus sitting at the receipt of custom , and said unto him, Follow me. And he arose and followed him.",
+          "p15": "15 And it came to pass, that, as Jesus sat at meat in his house, many publicans and sinners sat also together with Jesus and his disciples: for there were many, and they followed him.",
+          "p16": "16 And when the scribes and Pharisees saw him eat with publicans and sinners, they said unto his disciples, How is it that he eateth and drinketh with publicans and sinners?",
+          "p17": "17 When Jesus heard it, he saith unto them, They that are whole have no need of the physician, but they that are sick: I came not to call the righteous, but sinners to repentance."
+        }
+      },
+      {
+        "title": "Women who supported the ministry",
+        "passage": "Luke 8:1-3",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/8?lang=eng&id=p1-p3#p1",
+        "chapter_path": "nt/luke/8",
+        "verse_selection": "1-3",
+        "scene_and_caution": "Jesus traveling with Twelve and women; Mary Magdalene, Joanna, Susanna distinct; no unsupported wife claims",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 And it came to pass afterward, that he went throughout every city and village, preaching and shewing the glad tidings of the kingdom of God: and the twelve were with him,",
+          "p2": "2 And certain women, which had been healed of evil spirits and infirmities, Mary called Magdalene, out of whom went seven devils,",
+          "p3": "3 And Joanna the wife of Chuza Herod’s steward, and Susanna, and many others, which ministered unto him of their substance."
+        }
+      },
+      {
+        "title": "The Twelve sent to serve",
+        "passage": "Luke 9:1-6",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/9?lang=eng&id=p1-p6#p1",
+        "chapter_path": "nt/luke/9",
+        "verse_selection": "1-6",
+        "scene_and_caution": "Luke9:3 directs no staff, bag, bread, money or second coat. Do not add those travel props if depicting this account; Gospel parallels have different detail. Sending disciples is distinct from calling them.",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 Then he called his twelve disciples together, and gave them power and authority over all devils, and to cure diseases.",
+          "p2": "2 And he sent them to preach the kingdom of God, and to heal the sick.",
+          "p3": "3 And he said unto them, Take nothing for your journey, neither staves, nor scrip, neither bread, neither money; neither have two coats apiece.",
+          "p4": "4 And whatsoever house ye enter into, there abide, and thence depart.",
+          "p5": "5 And whosoever will not receive you, when ye go out of that city, shake off the very dust from your feet for a testimony against them.",
+          "p6": "6 And they departed, and went through the towns, preaching the gospel , and healing every where."
+        }
+      },
+      {
+        "title": "The Transfiguration",
+        "passage": "Matthew 17:1-9",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/17?lang=eng&id=p1-p9#p1",
+        "chapter_path": "nt/matt/17",
+        "verse_selection": "1-9",
+        "scene_and_caution": "Peter James John with transfigured Christ Moses Elias; not Resurrection, no healed nail scars yet",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 And after six days Jesus taketh Peter , James, and John his brother, and bringeth them up into an high mountain apart,",
+          "p2": "2 And was transfigured before them: and his face did shine as the sun, and his raiment was white as the light.",
+          "p3": "3 And, behold, there appeared unto them Moses and Elias talking with him.",
+          "p4": "4 Then answered Peter, and said unto Jesus, Lord, it is good for us to be here: if thou wilt, let us make here three tabernacles; one for thee, and one for Moses, and one for Elias.",
+          "p5": "5 While he yet spake, behold, a bright cloud overshadowed them: and behold a voice out of the cloud, which said, This is my beloved Son , in whom I am well pleased; hear ye him.",
+          "p6": "6 And when the disciples heard it, they fell on their face, and were sore afraid .",
+          "p7": "7 And Jesus came and touched them, and said, Arise, and be not afraid.",
+          "p8": "8 And when they had lifted up their eyes, they saw no man, save Jesus only.",
+          "p9": "9 And as they came down from the mountain, Jesus charged them, saying, Tell the vision to no man , until the Son of man be risen again from the dead ."
+        }
+      },
+      {
+        "title": "Jesus weeps over Jerusalem",
+        "passage": "Luke 19:41-44",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng&id=p41-p44#p41",
+        "chapter_path": "nt/luke/19",
+        "verse_selection": "41-44",
+        "scene_and_caution": "View toward Jerusalem with sorrow; keep distinct from Lazarus scene",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p41": "41 ¶ And when he was come near, he beheld the city, and wept over it,",
+          "p42": "42 Saying, If thou hadst known, even thou, at least in this thy day, the things which belong unto thy peace! but now they are hid from thine eyes.",
+          "p43": "43 For the days shall come upon thee, that thine enemies shall cast a trench about thee, and compass thee round, and keep thee in on every side,",
+          "p44": "44 And shall lay thee even with the ground, and thy children within thee; and they shall not leave in thee one stone upon another; because thou knewest not the time of thy visitation ."
+        }
+      }
+    ],
+    "miracles": [
+      {
+        "title": "A leper receives a compassionate touch",
+        "passage": "Mark 1:40-45",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p40-p45#p40",
+        "chapter_path": "nt/mark/1",
+        "verse_selection": "40-45",
+        "scene_and_caution": "Jesus stretches hand toward man; dignified depiction, no unsupported diagnosis detail",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p40": "40 And there came a leper to him, beseeching him, and kneeling down to him, and saying unto him, If thou wilt, thou canst make me clean .",
+          "p41": "41 And Jesus, moved with compassion , put forth his hand, and touched him, and saith unto him, I will; be thou clean.",
+          "p42": "42 And as soon as he had spoken, immediately the leprosy departed from him, and he was cleansed.",
+          "p43": "43 And he straitly charged him , and forthwith sent him away;",
+          "p44": "44 And saith unto him, See thou say nothing to any man: but go thy way, shew thyself to the priest, and offer for thy cleansing those things which Moses commanded, for a testimony unto them.",
+          "p45": "45 But he went out, and began to publish it much, and to blaze abroad the matter, insomuch that Jesus could no more openly enter into the city, but was without in desert places: and they came to him from every quarter."
+        }
+      },
+      {
+        "title": "Peter's mother-in-law rises",
+        "passage": "Mark 1:29-31",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p29-p31#p29",
+        "chapter_path": "nt/mark/1",
+        "verse_selection": "29-31",
+        "scene_and_caution": "Jesus takes her hand in house; she is Peter's mother-in-law, not his mother",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p29": "29 And forthwith, when they were come out of the synagogue, they entered into the house of Simon and Andrew, with James and John.",
+          "p30": "30 But Simon’s wife’s mother lay sick of a fever, and anon they tell him of her.",
+          "p31": "31 And he came and took her by the hand, and lifted her up; and immediately the fever left her, and she ministered unto them."
+        }
+      },
+      {
+        "title": "A centurion trusts His word",
+        "passage": "Luke 7:1-10",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=p1-p10#p1",
+        "chapter_path": "nt/luke/7",
+        "verse_selection": "1-10",
+        "scene_and_caution": "Jewish elders then friends carry messages; Luke says centurion did not personally come",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 Now when he had ended all his sayings in the audience of the people, he entered into Capernaum.",
+          "p2": "2 And a certain centurion’s servant, who was dear unto him, was sick, and ready to die.",
+          "p3": "3 And when he heard of Jesus, he sent unto him the elders of the Jews, beseeching him that he would come and heal his servant.",
+          "p4": "4 And when they came to Jesus, they besought him instantly , saying, That he was worthy for whom he should do this:",
+          "p5": "5 For he loveth our nation, and he hath built us a synagogue.",
+          "p6": "6 Then Jesus went with them. And when he was now not far from the house, the centurion sent friends to him, saying unto him, Lord, trouble not thyself: for I am not worthy that thou shouldest enter under my roof:",
+          "p7": "7 Wherefore neither thought I myself worthy to come unto thee: but say in a word, and my servant shall be healed.",
+          "p8": "8 For I also am a man set under authority, having under me soldiers, and I say unto one, Go, and he goeth; and to another, Come, and he cometh; and to my servant, Do this, and he doeth it.",
+          "p9": "9 When Jesus heard these things, he marvelled at him, and turned him about, and said unto the people that followed him, I say unto you, I have not found so great faith, no, not in Israel .",
+          "p10": "10 And they that were sent, returning to the house, found the servant whole that had been sick."
+        }
+      },
+      {
+        "title": "Jesus takes Jairus's daughter by the hand",
+        "passage": "Mark 5:35-43",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/5?lang=eng&id=p35-p43#p35",
+        "chapter_path": "nt/mark/5",
+        "verse_selection": "35-43",
+        "scene_and_caution": "Twelve-year-old girl, parents, Peter James John; five witnesses plus Jesus and girl",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p35": "35 While he yet spake, there came from the ruler of the synagogue’s house certain which said, Thy daughter is dead: why troublest thou the Master any further?",
+          "p36": "36 As soon as Jesus heard the word that was spoken, he saith unto the ruler of the synagogue, Be not afraid, only believe .",
+          "p37": "37 And he suffered no man to follow him, save Peter, and James, and John the brother of James.",
+          "p38": "38 And he cometh to the house of the ruler of the synagogue, and seeth the tumult, and them that wept and wailed greatly.",
+          "p39": "39 And when he was come in, he saith unto them, Why make ye this ado , and weep? the damsel is not dead, but sleepeth.",
+          "p40": "40 And they laughed him to scorn . But when he had put them all out, he taketh the father and the mother of the damsel, and them that were with him, and entereth in where the damsel was lying.",
+          "p41": "41 And he took the damsel by the hand, and said unto her, Talitha cumi; which is, being interpreted, Damsel, I say unto thee, arise .",
+          "p42": "42 And straightway the damsel arose , and walked; for she was of the age of twelve years. And they were astonished with a great astonishment.",
+          "p43": "43 And he charged them straitly that no man should know it; and commanded that something should be given her to eat."
+        }
+      },
+      {
+        "title": "The woman touches His garment",
+        "passage": "Mark 5:25-34",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/5?lang=eng&id=p25-p34#p25",
+        "chapter_path": "nt/mark/5",
+        "verse_selection": "25-34",
+        "scene_and_caution": "Separate from Jairus bedroom; crowd and garment touch then face-to-face response",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p25": "25 And a certain woman, which had an issue of blood twelve years,",
+          "p26": "26 And had suffered many things of many physicians, and had spent all that she had, and was nothing bettered, but rather grew worse,",
+          "p27": "27 When she had heard of Jesus, came in the press behind, and touched his garment .",
+          "p28": "28 For she said, If I may touch but his clothes, I shall be whole.",
+          "p29": "29 And straightway the fountain of her blood was dried up; and she felt in her body that she was healed of that plague.",
+          "p30": "30 And Jesus, immediately knowing in himself that virtue had gone out of him, turned him about in the press, and said, Who touched my clothes?",
+          "p31": "31 And his disciples said unto him, Thou seest the multitude thronging thee, and sayest thou, Who touched me?",
+          "p32": "32 And he looked round about to see her that had done this thing.",
+          "p33": "33 But the woman fearing and trembling, knowing what was done in her, came and fell down before him, and told him all the truth.",
+          "p34": "34 And he said unto her, Daughter, thy faith hath made thee whole; go in peace , and be whole of thy plague."
+        }
+      },
+      {
+        "title": "The deaf man hears",
+        "passage": "Mark 7:31-37",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/7?lang=eng&id=p31-p37#p31",
+        "chapter_path": "nt/mark/7",
+        "verse_selection": "31-37",
+        "scene_and_caution": "Jesus takes him aside; depict documented healing respectfully, no disability caricature",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p31": "31 ¶ And again, departing from the coasts of Tyre and Sidon, he came unto the sea of Galilee, through the midst of the coasts of Decapolis.",
+          "p32": "32 And they bring unto him one that was deaf, and had an impediment in his speech; and they beseech him to put his hand upon him.",
+          "p33": "33 And he took him aside from the multitude, and put his fingers into his ears, and he spit, and touched his tongue;",
+          "p34": "34 And looking up to heaven, he sighed, and saith unto him, Ephphatha, that is, Be opened.",
+          "p35": "35 And straightway his ears were opened , and the string of his tongue was loosed, and he spake plain.",
+          "p36": "36 And he charged them that they should tell no man: but the more he charged them, so much the more a great deal they published it;",
+          "p37": "37 And were beyond measure astonished, saying, He hath done all things well: he maketh both the deaf to hear, and the dumb to speak."
+        }
+      },
+      {
+        "title": "Sight comes at Bethsaida",
+        "passage": "Mark 8:22-26",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/8?lang=eng&id=p22-p26#p22",
+        "chapter_path": "nt/mark/8",
+        "verse_selection": "22-26",
+        "scene_and_caution": "Jesus leads man out of town; distinct two-stage healing from John 9",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p22": "22 ¶ And he cometh to Bethsaida; and they bring a blind man unto him, and besought him to touch him.",
+          "p23": "23 And he took the blind man by the hand, and led him out of the town; and when he had spit on his eyes, and put his hands upon him, he asked him if he saw ought .",
+          "p24": "24 And he looked up, and said, I see men as trees, walking.",
+          "p25": "25 After that he put his hands again upon his eyes, and made him look up: and he was restored, and saw every man clearly.",
+          "p26": "26 And he sent him away to his house, saying, Neither go into the town, nor tell it to any in the town."
+        }
+      },
+      {
+        "title": "The man born blind washes at Siloam",
+        "passage": "John 9:1-7",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng&id=p1-p7#p1",
+        "chapter_path": "nt/john/9",
+        "verse_selection": "1-7",
+        "scene_and_caution": "Man washing eyes at pool; Jesus need not be physically present in washing picture",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 And as Jesus passed by, he saw a man which was blind from his birth.",
+          "p2": "2 And his disciples asked him, saying, Master, who did sin, this man , or his parents, that he was born blind?",
+          "p3": "3 Jesus answered, Neither hath this man sinned, nor his parents: but that the works of God should be made manifest in him.",
+          "p4": "4 I must work the works of him that sent me, while it is day : the night cometh, when no man can work.",
+          "p5": "5 As long as I am in the world, I am the light of the world.",
+          "p6": "6 When he had thus spoken, he spat on the ground, and made clay of the spittle, and he anointed the eyes of the blind man with the clay,",
+          "p7": "7 And said unto him, Go, wash in the pool of Siloam , (which is by interpretation, Sent.) He went his way therefore, and washed, and came seeing."
+        }
+      },
+      {
+        "title": "One of ten returns to give thanks",
+        "passage": "Luke 17:11-19",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/17?lang=eng&id=p11-p19#p11",
+        "chapter_path": "nt/luke/17",
+        "verse_selection": "11-19",
+        "scene_and_caution": "Samaritan returning at Jesus feet; ten healed while going, not ten generic kneeling patients",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p11": "11 ¶ And it came to pass, as he went to Jerusalem, that he passed through the midst of Samaria and Galilee.",
+          "p12": "12 And as he entered into a certain village, there met him ten men that were lepers , which stood afar off:",
+          "p13": "13 And they lifted up their voices, and said, Jesus, Master, have mercy on us.",
+          "p14": "14 And when he saw them, he said unto them, Go shew yourselves unto the priests . And it came to pass, that, as they went, they were cleansed.",
+          "p15": "15 And one of them, when he saw that he was healed, turned back, and with a loud voice glorified God,",
+          "p16": "16 And fell down on his face at his feet, giving him thanks : and he was a Samaritan.",
+          "p17": "17 And Jesus answering said, Were there not ten cleansed ? but where are the nine ?",
+          "p18": "18 There are not found that returned to give glory to God, save this stranger.",
+          "p19": "19 And he said unto him, Arise, go thy way: thy faith hath made thee whole."
+        }
+      }
+    ],
+    "teachings": [
+      {
+        "title": "The Beatitudes",
+        "passage": "Matthew 5:1-12",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p1-p12#p1",
+        "chapter_path": "nt/matt/5",
+        "verse_selection": "1-12",
+        "scene_and_caution": "One grounded hillside teaching; avoid generating eight repeated sermon images",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 And seeing the multitudes, he went up into a mountain: and when he was set, his disciples came unto him:",
+          "p2": "2 And he opened his mouth, and taught them, saying,",
+          "p3": "3 Blessed are the poor in spirit : for theirs is the kingdom of heaven.",
+          "p4": "4 Blessed are they that mourn : for they shall be comforted .",
+          "p5": "5 Blessed are the meek : for they shall inherit the earth .",
+          "p6": "6 Blessed are they which do hunger and thirst after righteousness : for they shall be filled.",
+          "p7": "7 Blessed are the merciful : for they shall obtain mercy.",
+          "p8": "8 Blessed are the pure in heart : for they shall see God.",
+          "p9": "9 Blessed are the peacemakers : for they shall be called the children of God.",
+          "p10": "10 Blessed are they which are persecuted for righteousness’ sake: for theirs is the kingdom of heaven.",
+          "p11": "11 Blessed are ye, when men shall revile you, and persecute you, and shall say all manner of evil against you falsely, for my sake .",
+          "p12": "12 Rejoice , and be exceeding glad: for great is your reward in heaven: for so persecuted they the prophets which were before you."
+        }
+      },
+      {
+        "title": "Prayer to the Father",
+        "passage": "Matthew 6:5-15",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p5-p15#p5",
+        "chapter_path": "nt/matt/6",
+        "verse_selection": "5-15",
+        "scene_and_caution": "Modern private prayer application is illustrative, not an ancient narrated event",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p5": "5 ¶ And when thou prayest, thou shalt not be as the hypocrites are: for they love to pray standing in the synagogues and in the corners of the streets, that they may be seen of men. Verily I say unto you, They have their reward.",
+          "p6": "6 But thou, when thou prayest, enter into thy closet , and when thou hast shut thy door, pray to thy Father which is in secret ; and thy Father which seeth in secret shall reward thee openly.",
+          "p7": "7 But when ye pray, use not vain repetitions , as the heathen do: for they think that they shall be heard for their much speaking.",
+          "p8": "8 Be not ye therefore like unto them: for your Father knoweth what things ye have need of, before ye ask him.",
+          "p9": "9 After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name .",
+          "p10": "10 Thy kingdom come. Thy will be done in earth , as it is in heaven.",
+          "p11": "11 Give us this day our daily bread .",
+          "p12": "12 And forgive us our debts , as we forgive our debtors.",
+          "p13": "13 And lead us not into temptation , but deliver us from evil: For thine is the kingdom, and the power, and the glory , for ever. Amen.",
+          "p14": "14 For if ye forgive men their trespasses, your heavenly Father will also forgive you:",
+          "p15": "15 But if ye forgive not men their trespasses, neither will your Father forgive your trespasses."
+        }
+      },
+      {
+        "title": "Love God and your neighbor",
+        "passage": "Mark 12:28-34",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p28-p34#p28",
+        "chapter_path": "nt/mark/12",
+        "verse_selection": "28-34",
+        "scene_and_caution": "Scribe converses thoughtfully with Jesus; respectful representation of Jewish teacher",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p28": "28 ¶ And one of the scribes came, and having heard them reasoning together, and perceiving that he had answered them well, asked him, Which is the first commandment of all?",
+          "p29": "29 And Jesus answered him, The first of all the commandments is, Hear , O Israel; The Lord our God is one Lord:",
+          "p30": "30 And thou shalt love the Lord thy God with all thy heart , and with all thy soul, and with all thy mind, and with all thy strength : this is the first commandment.",
+          "p31": "31 And the second is like, namely this, Thou shalt love thy neighbour as thyself. There is none other commandment greater than these.",
+          "p32": "32 And the scribe said unto him, Well, Master, thou hast said the truth: for there is one God; and there is none other but he:",
+          "p33": "33 And to love him with all the heart, and with all the understanding, and with all the soul, and with all the strength, and to love his neighbour as himself, is more than all whole burnt offerings and sacrifices.",
+          "p34": "34 And when Jesus saw that he answered discreetly, he said unto him, Thou art not far from the kingdom of God. And no man after that durst ask him any question."
+        }
+      },
+      {
+        "title": "The widow's offering",
+        "passage": "Mark 12:41-44",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p41-p44#p41",
+        "chapter_path": "nt/mark/12",
+        "verse_selection": "41-44",
+        "scene_and_caution": "Jesus seated opposite treasury sees two small coins; avoid glorifying deprivation or pressuring donations",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p41": "41 ¶ And Jesus sat over against the treasury, and beheld how the people cast money into the treasury: and many that were rich cast in much.",
+          "p42": "42 And there came a certain poor widow, and she threw in two mites , which make a farthing.",
+          "p43": "43 And he called unto him his disciples, and saith unto them, Verily I say unto you, That this poor widow hath cast more in, than all they which have cast into the treasury:",
+          "p44": "44 For all they did cast in of their abundance ; but she of her want did cast in all that she had, even all her living."
+        }
+      },
+      {
+        "title": "Martha and Mary listen",
+        "passage": "Luke 10:38-42",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p38-p42#p38",
+        "chapter_path": "nt/luke/10",
+        "verse_selection": "38-42",
+        "scene_and_caution": "Mary of Bethany sits listening, Martha speaks; neither Mary Magdalene nor Jesus mother",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p38": "38 ¶ Now it came to pass, as they went, that he entered into a certain village: and a certain woman named Martha received him into her house.",
+          "p39": "39 And she had a sister called Mary, which also sat at Jesus’ feet, and heard his word.",
+          "p40": "40 But Martha was cumbered about much serving, and came to him, and said, Lord, dost thou not care that my sister hath left me to serve alone? bid her therefore that she help me.",
+          "p41": "41 And Jesus answered and said unto her, Martha, Martha, thou art careful and troubled about many things:",
+          "p42": "42 But one thing is needful: and Mary hath chosen that good part, which shall not be taken away from her."
+        }
+      },
+      {
+        "title": "The rich man and the invitation",
+        "passage": "Mark 10:17-27",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&id=p17-p27#p17",
+        "chapter_path": "nt/mark/10",
+        "verse_selection": "17-27",
+        "scene_and_caution": "Jesus looks on him with love; no parable label, not proof wealth itself determines righteousness",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p17": "17 ¶ And when he was gone forth into the way, there came one running, and kneeled to him, and asked him, Good Master, what shall I do that I may inherit eternal life?",
+          "p18": "18 And Jesus said unto him, Why callest thou me good? there is none good but one, that is, God.",
+          "p19": "19 Thou knowest the commandments, Do not commit adultery , Do not kill , Do not steal , Do not bear false witness, Defraud not, Honour thy father and mother.",
+          "p20": "20 And he answered and said unto him, Master, all these have I observed from my youth.",
+          "p21": "21 Then Jesus beholding him loved him, and said unto him, One thing thou lackest: go thy way, sell whatsoever thou hast, and give to the poor, and thou shalt have treasure in heaven: and come, take up the cross, and follow me.",
+          "p22": "22 And he was sad at that saying, and went away grieved: for he had great possessions.",
+          "p23": "23 ¶ And Jesus looked round about, and saith unto his disciples, How hardly shall they that have riches enter into the kingdom of God!",
+          "p24": "24 And the disciples were astonished at his words. But Jesus answereth again, and saith unto them, Children, how hard is it for them that trust in riches to enter into the kingdom of God!",
+          "p25": "25 It is easier for a camel to go through the eye of a needle, than for a rich man to enter into the kingdom of God.",
+          "p26": "26 And they were astonished out of measure, saying among themselves, Who then can be saved?",
+          "p27": "27 And Jesus looking upon them saith, With men it is impossible, but not with God: for with God all things are possible ."
+        }
+      },
+      {
+        "title": "Give to Caesar and to God",
+        "passage": "Mark 12:13-17",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p13-p17#p13",
+        "chapter_path": "nt/mark/12",
+        "verse_selection": "13-17",
+        "scene_and_caution": "Coin shown to Jesus in genuine documented encounter; no invented legible coin portrait needed",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p13": "13 ¶ And they send unto him certain of the Pharisees and of the Herodians, to catch him in his words.",
+          "p14": "14 And when they were come, they say unto him, Master, we know that thou art true, and carest for no man: for thou regardest not the person of men, but teachest the way of God in truth: Is it lawful to give tribute to Cæsar, or not?",
+          "p15": "15 Shall we give, or shall we not give? But he, knowing their hypocrisy, said unto them, Why tempt ye me? bring me a penny, that I may see it.",
+          "p16": "16 And they brought it. And he saith unto them, Whose is this image and superscription? And they said unto him, Cæsar’s.",
+          "p17": "17 And Jesus answering said unto them, Render to Cæsar the things that are Cæsar’s, and to God the things that are God’s. And they marvelled at him."
+        }
+      },
+      {
+        "title": "Jesus washes His disciples' feet",
+        "passage": "John 13:3-17",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/13?lang=eng&id=p3-p17#p3",
+        "chapter_path": "nt/john/13",
+        "verse_selection": "3-17",
+        "scene_and_caution": "Basin towel and Peter; complex anatomy requires reference discipline; existing atonement servant scene",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p3": "3 Jesus knowing that the Father had given all things into his hands, and that he was come from God, and went to God;",
+          "p4": "4 He riseth from supper, and laid aside his garments; and took a towel, and girded himself.",
+          "p5": "5 After that he poureth water into a basin, and began to wash the disciples’ feet, and to wipe them with the towel wherewith he was girded.",
+          "p6": "6 Then cometh he to Simon Peter: and Peter saith unto him, Lord, dost thou wash my feet?",
+          "p7": "7 Jesus answered and said unto him, What I do thou knowest not now; but thou shalt know hereafter.",
+          "p8": "8 Peter saith unto him, Thou shalt never wash my feet. Jesus answered him, If I wash thee not, thou hast no part with me.",
+          "p9": "9 Simon Peter saith unto him, Lord, not my feet only, but also my hands and my head.",
+          "p10": "10 Jesus saith to him, He that is washed needeth not save to wash his feet, but is clean every whit: and ye are clean , but not all.",
+          "p11": "11 For he knew who should betray him; therefore said he, Ye are not all clean.",
+          "p12": "12 So after he had washed their feet, and had taken his garments, and was set down again, he said unto them, Know ye what I have done to you?",
+          "p13": "13 Ye call me Master and Lord: and ye say well; for so I am.",
+          "p14": "14 If I then, your Lord and Master , have washed your feet; ye also ought to wash one another’s feet .",
+          "p15": "15 For I have given you an example , that ye should do as I have done to you.",
+          "p16": "16 Verily, verily, I say unto you, The servant is not greater than his lord; neither he that is sent greater than he that sent him.",
+          "p17": "17 If ye know these things, happy are ye if ye do them."
+        }
+      },
+      {
+        "title": "Remain in His love",
+        "passage": "John 15:1-17",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p1-p17#p1",
+        "chapter_path": "nt/john/15",
+        "verse_selection": "1-17",
+        "scene_and_caution": "John15 is an extended metaphor, not a narrated vineyard visit. Vineyard artwork must be labeled illustration; this should crosslink the parable/figurative-teaching index without falsely calling it a Synoptic narrative parable.",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 I am the true vine , and my Father is the husbandman.",
+          "p2": "2 Every branch in me that beareth not fruit he taketh away: and every branch that beareth fruit, he purgeth it, that it may bring forth more fruit.",
+          "p3": "3 Now ye are clean through the word which I have spoken unto you.",
+          "p4": "4 Abide in me, and I in you. As the branch cannot bear fruit of itself, except it abide in the vine; no more can ye, except ye abide in me.",
+          "p5": "5 I am the vine , ye are the branches: He that abideth in me, and I in him, the same bringeth forth much fruit: for without me ye can do nothing.",
+          "p6": "6 If a man abide not in me, he is cast forth as a branch, and is withered; and men gather them, and cast them into the fire, and they are burned.",
+          "p7": "7 If ye abide in me, and my words abide in you, ye shall ask what ye will, and it shall be done unto you.",
+          "p8": "8 Herein is my Father glorified , that ye bear much fruit; so shall ye be my disciples.",
+          "p9": "9 As the Father hath loved me, so have I loved you: continue ye in my love.",
+          "p10": "10 If ye keep my commandments, ye shall abide in my love ; even as I have kept my Father’s commandments, and abide in his love.",
+          "p11": "11 These things have I spoken unto you, that my joy might remain in you, and that your joy might be full.",
+          "p12": "12 This is my commandment, That ye love one another, as I have loved you.",
+          "p13": "13 Greater love hath no man than this, that a man lay down his life for his friends .",
+          "p14": "14 Ye are my friends , if ye do whatsoever I command you.",
+          "p15": "15 Henceforth I call you not servants; for the servant knoweth not what his lord doeth: but I have called you friends ; for all things that I have heard of my Father I have made known unto you.",
+          "p16": "16 Ye have not chosen me, but I have chosen you, and ordained you, that ye should go and bring forth fruit , and that your fruit should remain: that whatsoever ye shall ask of the Father in my name , he may give it you.",
+          "p17": "17 These things I command you, that ye love one another."
+        }
+      }
+    ],
+    "redeemer-risen": [
+      {
+        "title": "Mary anoints Jesus at Bethany",
+        "passage": "John 12:1-8",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=p1-p8#p1",
+        "chapter_path": "nt/john/12",
+        "verse_selection": "1-8",
+        "scene_and_caution": "Mary of Bethany anoints feet, Martha serves, Lazarus present; separate Luke 7 unnamed woman",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 Then Jesus six days before the passover came to Bethany, where Lazarus was which had been dead, whom he raised from the dead.",
+          "p2": "2 There they made him a supper; and Martha served: but Lazarus was one of them that sat at the table with him.",
+          "p3": "3 Then took Mary a pound of ointment of spikenard, very costly, and anointed the feet of Jesus, and wiped his feet with her hair: and the house was filled with the odour of the ointment.",
+          "p4": "4 Then saith one of his disciples, Judas Iscariot, Simon’s son, which should betray him,",
+          "p5": "5 Why was not this ointment sold for three hundred pence, and given to the poor?",
+          "p6": "6 This he said, not that he cared for the poor; but because he was a thief , and had the bag , and bare what was put therein.",
+          "p7": "7 Then said Jesus, Let her alone: against the day of my burying hath she kept this.",
+          "p8": "8 For the poor always ye have with you; but me ye have not always."
+        }
+      },
+      {
+        "title": "Jesus institutes the sacrament",
+        "passage": "Luke 22:14-20",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p14-p20#p14",
+        "chapter_path": "nt/luke/22",
+        "verse_selection": "14-20",
+        "scene_and_caution": "Passover meal bread and cup; existing atonement art owns this scene",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p14": "14 And when the hour was come, he sat down, and the twelve apostles with him.",
+          "p15": "15 And he said unto them, With desire I have desired to eat this passover with you before I suffer:",
+          "p16": "16 For I say unto you, I will not any more eat thereof, until it be fulfilled in the kingdom of God.",
+          "p17": "17 And he took the cup, and gave thanks, and said, Take this, and divide it among yourselves:",
+          "p18": "18 For I say unto you, I will not drink of the fruit of the vine, until the kingdom of God shall come.",
+          "p19": "19 ¶ And he took bread , and gave thanks, and brake it, and gave unto them, saying, This is my body which is given for you: this do in remembrance of me.",
+          "p20": "20 Likewise also the cup after supper, saying, This cup is the new testament in my blood, which is shed for you."
+        }
+      },
+      {
+        "title": "Gethsemane",
+        "passage": "Luke 22:39-46",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p39-p46#p39",
+        "chapter_path": "nt/luke/22",
+        "verse_selection": "39-46",
+        "scene_and_caution": "Reverent suffering and prayer, existing atonement hero/body owner; do not duplicate",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p39": "39 ¶ And he came out, and went, as he was wont , to the mount of Olives; and his disciples also followed him.",
+          "p40": "40 And when he was at the place, he said unto them, Pray that ye enter not into temptation .",
+          "p41": "41 And he was withdrawn from them about a stone’s cast, and kneeled down, and prayed,",
+          "p42": "42 Saying, Father, if thou be willing, remove this cup from me: nevertheless not my will , but thine, be done.",
+          "p43": "43 And there appeared an angel unto him from heaven, strengthening him.",
+          "p44": "44 And being in an agony he prayed more earnestly: and his sweat was as it were great drops of blood falling down to the ground.",
+          "p45": "45 And when he rose up from prayer, and was come to his disciples, he found them sleeping for sorrow,",
+          "p46": "46 And said unto them, Why sleep ye? rise and pray, lest ye enter into temptation."
+        }
+      },
+      {
+        "title": "Before Pilate",
+        "passage": "John 18:33-38",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/18?lang=eng&id=p33-p38#p33",
+        "chapter_path": "nt/john/18",
+        "verse_selection": "33-38",
+        "scene_and_caution": "Jesus answers Pilate about His kingdom; no collective blame of Jewish people",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p33": "33 Then Pilate entered into the judgment hall again, and called Jesus, and said unto him, Art thou the King of the Jews?",
+          "p34": "34 Jesus answered him, Sayest thou this thing of thyself, or did others tell it thee of me?",
+          "p35": "35 Pilate answered, Am I a Jew? Thine own nation and the chief priests have delivered thee unto me: what hast thou done?",
+          "p36": "36 Jesus answered, My kingdom is not of this world : if my kingdom were of this world, then would my servants fight, that I should not be delivered to the Jews: but now is my kingdom not from hence.",
+          "p37": "37 Pilate therefore said unto him, Art thou a king then? Jesus answered, Thou sayest that I am a king . To this end was I born, and for this cause came I into the world, that I should bear witness unto the truth . Every one that is of the truth heareth my voice.",
+          "p38": "38 Pilate saith unto him, What is truth? And when he had said this , he went out again unto the Jews, and saith unto them, I find in him no fault at all."
+        }
+      },
+      {
+        "title": "Simon carries the cross",
+        "passage": "Luke 23:26-31",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng&id=p26-p31#p26",
+        "chapter_path": "nt/luke/23",
+        "verse_selection": "26-31",
+        "scene_and_caution": "Simon of Cyrene bears cross after Jesus; distinguish from Jesus alone carrying it",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p26": "26 And as they led him away, they laid hold upon one Simon, a Cyrenian, coming out of the country, and on him they laid the cross, that he might bear it after Jesus.",
+          "p27": "27 ¶ And there followed him a great company of people, and of women, which also bewailed and lamented him.",
+          "p28": "28 But Jesus turning unto them said, Daughters of Jerusalem , weep not for me, but weep for yourselves, and for your children.",
+          "p29": "29 For, behold, the days are coming, in the which they shall say, Blessed are the barren , and the wombs that never bare, and the paps which never gave suck.",
+          "p30": "30 Then shall they begin to say to the mountains , Fall on us; and to the hills, Cover us.",
+          "p31": "31 For if they do these things in a green tree , what shall be done in the dry ?"
+        }
+      },
+      {
+        "title": "Christ entrusts His mother to a disciple",
+        "passage": "John 19:25-30",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=p25-p30#p25",
+        "chapter_path": "nt/john/19",
+        "verse_selection": "25-30",
+        "scene_and_caution": "Approved Mary identity; restrained portrayal; existing atonement cross mother disciple",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p25": "25 ¶ Now there stood by the cross of Jesus his mother , and his mother’s sister, Mary the wife of Cleophas , and Mary Magdalene.",
+          "p26": "26 When Jesus therefore saw his mother, and the disciple standing by, whom he loved, he saith unto his mother, Woman , behold thy son!",
+          "p27": "27 Then saith he to the disciple, Behold thy mother ! And from that hour that disciple took her unto his own home.",
+          "p28": "28 ¶ After this, Jesus knowing that all things were now accomplished, that the scripture might be fulfilled, saith, I thirst.",
+          "p29": "29 Now there was set a vessel full of vinegar: and they filled a sponge with vinegar , and put it upon hyssop, and put it to his mouth.",
+          "p30": "30 When Jesus therefore had received the vinegar, he said, It is finished : and he bowed his head, and gave up the ghost."
+        }
+      },
+      {
+        "title": "Joseph and Nicodemus prepare the burial",
+        "passage": "John 19:38-42",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng&id=p38-p42#p38",
+        "chapter_path": "nt/john/19",
+        "verse_selection": "38-42",
+        "scene_and_caution": "Linen and spices, unused tomb in garden; Joseph of Arimathea not Joseph Nativity",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p38": "38 ¶ And after this Joseph of Arimathæa , being a disciple of Jesus, but secretly for fear of the Jews, besought Pilate that he might take away the body of Jesus: and Pilate gave him leave. He came therefore, and took the body of Jesus.",
+          "p39": "39 And there came also Nicodemus , which at the first came to Jesus by night, and brought a mixture of myrrh and aloes, about an hundred pound weight.",
+          "p40": "40 Then took they the body of Jesus, and wound it in linen clothes with the spices, as the manner of the Jews is to bury.",
+          "p41": "41 Now in the place where he was crucified there was a garden; and in the garden a new sepulchre , wherein was never man yet laid.",
+          "p42": "42 There laid they Jesus therefore because of the Jews’ preparation day ; for the sepulchre was nigh at hand."
+        }
+      },
+      {
+        "title": "The risen Lord opens understanding",
+        "passage": "Luke 24:36-49",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/24?lang=eng&id=p36-p49#p36",
+        "chapter_path": "nt/luke/24",
+        "verse_selection": "36-49",
+        "scene_and_caution": "Show broiled fish offered/eaten rather than repeat generic peace apparition; text also mentions honeycomb",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p36": "36 ¶ And as they thus spake, Jesus himself stood in the midst of them, and saith unto them, Peace be unto you.",
+          "p37": "37 But they were terrified and affrighted, and supposed that they had seen a spirit.",
+          "p38": "38 And he said unto them, Why are ye troubled? and why do thoughts arise in your hearts?",
+          "p39": "39 Behold my hands and my feet, that it is I myself: handle me, and see; for a spirit hath not flesh and bones, as ye see me have.",
+          "p40": "40 And when he had thus spoken, he shewed them his hands and his feet.",
+          "p41": "41 And while they yet believed not for joy, and wondered , he said unto them, Have ye here any meat?",
+          "p42": "42 And they gave him a piece of a broiled fish, and of an honeycomb.",
+          "p43": "43 And he took it, and did eat before them.",
+          "p44": "44 And he said unto them, These are the words which I spake unto you, while I was yet with you, that all things must be fulfilled , which were written in the law of Moses, and in the prophets, and in the psalms, concerning me.",
+          "p45": "45 Then opened he their understanding , that they might understand the scriptures,",
+          "p46": "46 And said unto them, Thus it is written, and thus it behoved Christ to suffer, and to rise from the dead the third day:",
+          "p47": "47 And that repentance and remission of sins should be preached in his name among all nations, beginning at Jerusalem.",
+          "p48": "48 And ye are witnesses of these things.",
+          "p49": "49 ¶ And, behold, I send the promise of my Father upon you: but tarry ye in the city of Jerusalem, until ye be endued with power from on high."
+        }
+      },
+      {
+        "title": "His commission and Ascension",
+        "passage": "Acts 1:4-11",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/1?lang=eng&id=p4-p11#p4",
+        "chapter_path": "nt/acts/1",
+        "verse_selection": "4-11",
+        "scene_and_caution": "Disciples looking upward after cloud receives Him; no speculative return date",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p4": "4 And, being assembled together with them, commanded them that they should not depart from Jerusalem, but wait for the promise of the Father, which, saith he, ye have heard of me.",
+          "p5": "5 For John truly baptized with water; but ye shall be baptized with the Holy Ghost not many days hence.",
+          "p6": "6 When they therefore were come together, they asked of him, saying, Lord, wilt thou at this time restore again the kingdom to Israel?",
+          "p7": "7 And he said unto them, It is not for you to know the times or the seasons , which the Father hath put in his own power.",
+          "p8": "8 But ye shall receive power , after that the Holy Ghost is come upon you: and ye shall be witnesses unto me both in Jerusalem, and in all Judæa, and in Samaria , and unto the uttermost part of the earth.",
+          "p9": "9 And when he had spoken these things, while they beheld, he was taken up ; and a cloud received him out of their sight.",
+          "p10": "10 And while they looked steadfastly toward heaven as he went up, behold, two men stood by them in white apparel;",
+          "p11": "11 Which also said, Ye men of Galilee, why stand ye gazing up into heaven ? this same Jesus, which is taken up from you into heaven, shall so come in like manner as ye have seen him go into heaven."
+        }
+      }
+    ],
+    "nephites": [
+      {
+        "title": "They hear the Father's voice",
+        "passage": "3 Nephi 11:1-7",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p1-p7#p1",
+        "chapter_path": "bofm/3-ne/11",
+        "verse_selection": "1-7",
+        "scene_and_caution": "Multitude listening on third hearing before descent; existing descent/standing/witness scenes separate",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 And now it came to pass that there were a great multitude gathered together, of the people of Nephi, round about the temple which was in the land Bountiful ; and they were marveling and wondering one with another, and were showing one to another the great and marvelous change which had taken place.",
+          "p2": "2 And they were also conversing about this Jesus Christ, of whom the sign had been given concerning his death.",
+          "p3": "3 And it came to pass that while they were thus conversing one with another, they heard a voice as if it came out of heaven; and they cast their eyes round about, for they understood not the voice which they heard; and it was not a harsh voice, neither was it a loud voice; nevertheless, and notwithstanding it being a small voice it did pierce them that did hear to the center, insomuch that there was no part of their frame that it did not cause to quake; yea, it did pierce them to the very soul, and did cause their hearts to burn.",
+          "p4": "4 And it came to pass that again they heard the voice, and they understood it not.",
+          "p5": "5 And again the third time they did hear the voice, and did open their ears to hear it; and their eyes were towards the sound thereof; and they did look steadfastly towards heaven, from whence the sound came.",
+          "p6": "6 And behold, the third time they did understand the voice which they heard; and it said unto them:",
+          "p7": "7 Behold my Beloved Son , in whom I am well pleased, in whom I have glorified my name—hear ye him."
+        }
+      },
+      {
+        "title": "He asks them to return and ponder",
+        "passage": "3 Nephi 17:1-4",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/17?lang=eng&id=p1-p4#p1",
+        "chapter_path": "bofm/3-ne/17",
+        "verse_selection": "1-4",
+        "scene_and_caution": "Christ invites them to go home and ponder, but stays to heal and bless them when He sees their tears (17:5-6). Do not depict an actual departure at verse 3. A modern home-pondering application can be distinct, clearly illustrative.",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 Behold, now it came to pass that when Jesus had spoken these words he looked round about again on the multitude, and he said unto them: Behold, my time is at hand .",
+          "p2": "2 I perceive that ye are weak, that ye cannot understand all my words which I am commanded of the Father to speak unto you at this time.",
+          "p3": "3 Therefore, go ye unto your homes, and ponder upon the things which I have said, and ask of the Father, in my name, that ye may understand, and prepare your minds for the morrow , and I come unto you again.",
+          "p4": "4 But now I go unto the Father, and also to show myself unto the lost tribes of Israel, for they are not lost unto the Father, for he knoweth whither he hath taken them."
+        }
+      },
+      {
+        "title": "He teaches them to welcome all",
+        "passage": "3 Nephi 18:22-25",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng&id=p22-p25#p22",
+        "chapter_path": "bofm/3-ne/18",
+        "verse_selection": "22-25",
+        "scene_and_caution": "Christ's inclusive invitation; modern application welcoming visitor if ancient scene would be generic",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p22": "22 And behold, ye shall meet together oft; and ye shall not forbid any man from coming unto you when ye shall meet together, but suffer them that they may come unto you and forbid them not;",
+          "p23": "23 But ye shall pray for them, and shall not cast them out; and if it so be that they come unto you oft ye shall pray for them unto the Father, in my name.",
+          "p24": "24 Therefore, hold up your light that it may shine unto the world. Behold I am the light which ye shall hold up—that which ye have seen me do. Behold ye see that I have prayed unto the Father, and ye all have witnessed.",
+          "p25": "25 And ye see that I have commanded that none of you should go away, but rather have commanded that ye should come unto me, that ye might feel and see; even so shall ye do unto the world; and whosoever breaketh this commandment suffereth himself to be led into temptation."
+        }
+      },
+      {
+        "title": "He touches the disciples and ascends",
+        "passage": "3 Nephi 18:36-39",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng&id=p36-p39#p36",
+        "chapter_path": "bofm/3-ne/18",
+        "verse_selection": "36-39",
+        "scene_and_caution": "Hands on chosen disciples, then cloud; text says multitude did not see or hear all things",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p36": "36 And it came to pass that when Jesus had made an end of these sayings, he touched with his hand the disciples whom he had chosen, one by one, even until he had touched them all, and spake unto them as he touched them.",
+          "p37": "37 And the multitude heard not the words which he spake, therefore they did not bear record; but the disciples bare record that he gave them power to give the Holy Ghost . And I will show unto you hereafter that this record is true.",
+          "p38": "38 And it came to pass that when Jesus had touched them all, there came a cloud and overshadowed the multitude that they could not see Jesus.",
+          "p39": "39 And while they were overshadowed he departed from them, and ascended into heaven. And the disciples saw and did bear record that he ascended again into heaven."
+        }
+      },
+      {
+        "title": "The disciples teach and baptize",
+        "passage": "3 Nephi 19:1-14",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng&id=p1-p14#p1",
+        "chapter_path": "bofm/3-ne/19",
+        "verse_selection": "1-14",
+        "scene_and_caution": "Twelve groups; Nephi goes into water then baptizes others; Christ reappears in verse 15",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 And now it came to pass that when Jesus had ascended into heaven, the multitude did disperse, and every man did take his wife and his children and did return to his own home.",
+          "p2": "2 And it was noised abroad among the people immediately, before it was yet dark, that the multitude had seen Jesus, and that he had ministered unto them, and that he would also show himself on the morrow unto the multitude.",
+          "p3": "3 Yea, and even all the night it was noised abroad concerning Jesus; and insomuch did they send forth unto the people that there were many, yea, an exceedingly great number, did labor exceedingly all that night, that they might be on the morrow in the place where Jesus should show himself unto the multitude.",
+          "p4": "4 And it came to pass that on the morrow, when the multitude was gathered together, behold, Nephi and his brother whom he had raised from the dead , whose name was Timothy, and also his son, whose name was Jonas, and also Mathoni, and Mathonihah, his brother, and Kumen, and Kumenonhi, and Jeremiah, and Shemnon, and Jonas, and Zedekiah, and Isaiah—now these were the names of the disciples whom Jesus had chosen—and it came to pass that they went forth and stood in the midst of the multitude.",
+          "p5": "5 And behold, the multitude was so great that they did cause that they should be separated into twelve bodies.",
+          "p6": "6 And the twelve did teach the multitude; and behold, they did cause that the multitude should kneel down upon the face of the earth, and should pray unto the Father in the name of Jesus.",
+          "p7": "7 And the disciples did pray unto the Father also in the name of Jesus. And it came to pass that they arose and ministered unto the people.",
+          "p8": "8 And when they had ministered those same words which Jesus had spoken—nothing varying from the words which Jesus had spoken—behold, they knelt again and prayed to the Father in the name of Jesus.",
+          "p9": "9 And they did pray for that which they most desired; and they desired that the Holy Ghost should be given unto them.",
+          "p10": "10 And when they had thus prayed they went down unto the water’s edge, and the multitude followed them.",
+          "p11": "11 And it came to pass that Nephi went down into the water and was baptized .",
+          "p12": "12 And he came up out of the water and began to baptize. And he baptized all those whom Jesus had chosen.",
+          "p13": "13 And it came to pass when they were all baptized and had come up out of the water, the Holy Ghost did fall upon them, and they were filled with the Holy Ghost and with fire.",
+          "p14": "14 And behold, they were encircled about as if it were by fire; and it came down from heaven, and the multitude did witness it, and did bear record; and angels did come down out of heaven and did minister unto them."
+        }
+      },
+      {
+        "title": "The covenant of Abraham reaches His people",
+        "passage": "3 Nephi 20:25-31",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/20?lang=eng&id=p25-p31#p25",
+        "chapter_path": "bofm/3-ne/20",
+        "verse_selection": "25-31",
+        "scene_and_caution": "Teaching belongs to second day; use distinct contemporary covenant application rather than generic sermon",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p25": "25 And behold, ye are the children of the prophets; and ye are of the house of Israel; and ye are of the covenant which the Father made with your fathers, saying unto Abraham: And in thy seed shall all the kindreds of the earth be blessed.",
+          "p26": "26 The Father having raised me up unto you first, and sent me to bless you in turning away every one of you from his iniquities; and this because ye are the children of the covenant—",
+          "p27": "27 And after that ye were blessed then fulfilleth the Father the covenant which he made with Abraham, saying: In thy seed shall all the kindreds of the earth be blessed—unto the pouring out of the Holy Ghost through me upon the Gentiles, which blessing upon the Gentiles shall make them mighty above all, unto the scattering of my people, O house of Israel.",
+          "p28": "28 And they shall be a scourge unto the people of this land. Nevertheless, when they shall have received the fulness of my gospel, then if they shall harden their hearts against me I will return their iniquities upon their own heads, saith the Father.",
+          "p29": "29 And I will remember the covenant which I have made with my people; and I have covenanted with them that I would gather them together in mine own due time, that I would give unto them again the land of their fathers for their inheritance, which is the land of Jerusalem, which is the promised land unto them forever, saith the Father.",
+          "p30": "30 And it shall come to pass that the time cometh, when the fulness of my gospel shall be preached unto them;",
+          "p31": "31 And they shall believe in me, that I am Jesus Christ, the Son of God, and shall pray unto the Father in my name."
+        }
+      },
+      {
+        "title": "Christ explains Malachi",
+        "passage": "3 Nephi 24:1-6; 25:1-6; 26:1-5",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng&id=p1-p5#p1",
+        "chapter_path": "bofm/3-ne/26",
+        "verse_selection": "1-5",
+        "scene_and_caution": "Christ expounds given words; no modern bound Bible or fabricated written script",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 And now it came to pass that when Jesus had told these things he expounded them unto the multitude; and he did expound all things unto them, both great and small.",
+          "p2": "2 And he saith: These scriptures , which ye had not with you, the Father commanded that I should give unto you; for it was wisdom in him that they should be given unto future generations.",
+          "p3": "3 And he did expound all things, even from the beginning until the time that he should come in his glory —yea, even all things which should come upon the face of the earth, even until the elements should melt with fervent heat, and the earth should be wrapt together as a scroll, and the heavens and the earth should pass away;",
+          "p4": "4 And even unto the great and last day, when all people, and all kindreds, and all nations and tongues shall stand before God, to be judged of their works, whether they be good or whether they be evil—",
+          "p5": "5 If they be good, to the resurrection of everlasting life; and if they be evil, to the resurrection of damnation; being on a parallel, the one on the one hand and the other on the other hand, according to the mercy, and the justice , and the holiness which is in Christ, who was before the world began."
+        }
+      },
+      {
+        "title": "Children speak marvelous things",
+        "passage": "3 Nephi 26:14-16",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng&id=p14-p16#p14",
+        "chapter_path": "bofm/3-ne/26",
+        "verse_selection": "14-16",
+        "scene_and_caution": "Separate moments: verse 14 Christ ministers to children; verse 16 on the morrow children and infants speak after His departure. Do not insert Christ into verse 16, invent the marvelous words, or claim they were recorded.",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p14": "14 And it came to pass that he did teach and minister unto the children of the multitude of whom hath been spoken, and he did loose their tongues , and they did speak unto their fathers great and marvelous things, even greater than he had revealed unto the people; and he loosed their tongues that they could utter.",
+          "p15": "15 And it came to pass that after he had ascended into heaven—the second time that he showed himself unto them, and had gone unto the Father, after having healed all their sick, and their lame, and opened the eyes of their blind and unstopped the ears of the deaf, and even had done all manner of cures among them, and raised a man from the dead , and had shown forth his power unto them, and had ascended unto the Father—",
+          "p16": "16 Behold, it came to pass on the morrow that the multitude gathered themselves together, and they both saw and heard these children; yea, even babes did open their mouths and utter marvelous things; and the things which they did utter were forbidden that there should not any man write them."
+        }
+      },
+      {
+        "title": "His gospel and His example",
+        "passage": "3 Nephi 27:13-21,27",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?lang=eng&id=p13-p21#p13",
+        "chapter_path": "bofm/3-ne/27",
+        "verse_selection": "13-21",
+        "scene_and_caution": "Teach content not another church-name tableau; existing name/three disciples studies link here",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p13": "13 Behold I have given unto you my gospel , and this is the gospel which I have given unto you—that I came into the world to do the will of my Father, because my Father sent me.",
+          "p14": "14 And my Father sent me that I might be lifted up upon the cross ; and after that I had been lifted up upon the cross , that I might draw all men unto me, that as I have been lifted up by men even so should men be lifted up by the Father, to stand before me, to be judged of their works, whether they be good or whether they be evil—",
+          "p15": "15 And for this cause have I been lifted up ; therefore, according to the power of the Father I will draw all men unto me, that they may be judged according to their works .",
+          "p16": "16 And it shall come to pass, that whoso repenteth and is baptized in my name shall be filled; and if he endureth to the end, behold, him will I hold guiltless before my Father at that day when I shall stand to judge the world.",
+          "p17": "17 And he that endureth not unto the end, the same is he that is also hewn down and cast into the fire, from whence they can no more return, because of the justice of the Father.",
+          "p18": "18 And this is the word which he hath given unto the children of men. And for this cause he fulfilleth the words which he hath given, and he lieth not, but fulfilleth all his words.",
+          "p19": "19 And no unclean thing can enter into his kingdom; therefore nothing entereth into his rest save it be those who have washed their garments in my blood, because of their faith, and the repentance of all their sins, and their faithfulness unto the end.",
+          "p20": "20 Now this is the commandment: Repent , all ye ends of the earth, and come unto me and be baptized in my name, that ye may be sanctified by the reception of the Holy Ghost, that ye may stand spotless before me at the last day.",
+          "p21": "21 Verily, verily, I say unto you, this is my gospel ; and ye know the things that ye must do in my church; for the works which ye have seen me do that shall ye also do; for that which ye have seen me do even that shall ye do;"
+        }
+      }
+    ],
+    "restoration-today": [
+      {
+        "title": "The Father introduces His Son",
+        "passage": "Joseph Smith-History 1:14-20",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p14-p20#p14",
+        "chapter_path": "pgp/js-h/1",
+        "verse_selection": "14-20",
+        "scene_and_caution": "Spring 1820 Joseph age fourteen; Father and Son distinct; existing First Vision ownership check",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p14": "14 So, in accordance with this, my determination to ask of God, I retired to the woods to make the attempt. It was on the morning of a beautiful , clear day, early in the spring of eighteen hundred and twenty. It was the first time in my life that I had made such an attempt, for amidst all my anxieties I had never as yet made the attempt to pray vocally .",
+          "p15": "15 After I had retired to the place where I had previously designed to go, having looked around me, and finding myself alone, I kneeled down and began to offer up the desires of my heart to God. I had scarcely done so, when immediately I was seized upon by some power which entirely overcame me, and had such an astonishing influence over me as to bind my tongue so that I could not speak. Thick darkness gathered around me, and it seemed to me for a time as if I were doomed to sudden destruction.",
+          "p16": "16 But, exerting all my powers to call upon God to deliver me out of the power of this enemy which had seized upon me, and at the very moment when I was ready to sink into despair and abandon myself to destruction—not to an imaginary ruin, but to the power of some actual being from the unseen world, who had such marvelous power as I had never before felt in any being—just at this moment of great alarm, I saw a pillar of light exactly over my head, above the brightness of the sun , which descended gradually until it fell upon me.",
+          "p17": "17 It no sooner appeared than I found myself delivered from the enemy which held me bound. When the light rested upon me I saw two Personages , whose brightness and glory defy all description, standing above me in the air. One of them spake unto me, calling me by name and said, pointing to the other— This is My Beloved Son . Hear Him!",
+          "p18": "18 My object in going to inquire of the Lord was to know which of all the sects was right, that I might know which to join. No sooner, therefore, did I get possession of myself, so as to be able to speak, than I asked the Personages who stood above me in the light, which of all the sects was right (for at this time it had never entered into my heart that all were wrong)—and which I should join.",
+          "p19": "19 I was answered that I must join none of them, for they were all wrong ; and the Personage who addressed me said that all their creeds were an abomination in his sight; that those professors were all corrupt ; that: “they draw near to me with their lips, but their hearts are far from me, they teach for doctrines the commandments of men, having a form of godliness, but they deny the power thereof.”",
+          "p20": "20 He again forbade me to join with any of them; and many other things did he say unto me, which I cannot write at this time. When I came to myself again, I found myself lying on my back, looking up into heaven. When the light had departed, I had no strength; but soon recovering in some degree, I went home. And as I leaned up to the fireplace, mother inquired what the matter was. I replied, “Never mind, all is well—I am well enough off.” I then said to my mother, “I have learned for myself that Presbyterianism is not true.” It seems as though the adversary was aware, at a very early period of my life, that I was destined to prove a disturber and an annoyer of his kingdom; else why should the powers of darkness combine against me? Why the opposition and persecution that arose against me, almost in my infancy?"
+        }
+      },
+      {
+        "title": "Christ witnesses His living reality",
+        "passage": "Doctrine and Covenants 76:19-24",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p19-p24#p19",
+        "chapter_path": "dc-testament/dc/76",
+        "verse_selection": "19-24",
+        "scene_and_caution": "Joseph age 26 and Sidney Rigdon age 38 in February 1832; Sidney reliable likeness required",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p19": "19 And while we meditated upon these things, the Lord touched the eyes of our understandings and they were opened, and the glory of the Lord shone round about.",
+          "p20": "20 And we beheld the glory of the Son, on the right hand of the Father , and received of his fulness;",
+          "p21": "21 And saw the holy angels , and them who are sanctified before his throne, worshiping God, and the Lamb, who worship him forever and ever.",
+          "p22": "22 And now, after the many testimonies which have been given of him, this is the testimony , last of all, which we give of him: That he lives !",
+          "p23": "23 For we saw him, even on the right hand of God ; and we heard the voice bearing record that he is the Only Begotten of the Father—",
+          "p24": "24 That by him , and through him, and of him, the worlds are and were created, and the inhabitants thereof are begotten sons and daughters unto God."
+        }
+      },
+      {
+        "title": "The Lord accepts the Kirtland Temple",
+        "passage": "Doctrine and Covenants 110:1-10",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p1-p10#p1",
+        "chapter_path": "dc-testament/dc/110",
+        "verse_selection": "1-10",
+        "scene_and_caution": "April 3 1836 Joseph age 30 Oliver age 29; white hair, feet on pulpit breastwork; Oliver reference mandatory",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p1": "1 The veil was taken from our minds, and the eyes of our understanding were opened.",
+          "p2": "2 We saw the Lord standing upon the breastwork of the pulpit, before us; and under his feet was a paved work of pure gold , in color like amber.",
+          "p3": "3 His eyes were as a flame of fire; the hair of his head was white like the pure snow; his countenance shone above the brightness of the sun; and his voice was as the sound of the rushing of great waters, even the voice of Jehovah , saying:",
+          "p4": "4 I am the first and the last; I am he who liveth , I am he who was slain; I am your advocate with the Father.",
+          "p5": "5 Behold, your sins are forgiven you; you are clean before me; therefore, lift up your heads and rejoice .",
+          "p6": "6 Let the hearts of your brethren rejoice, and let the hearts of all my people rejoice, who have, with their might, built this house to my name.",
+          "p7": "7 For behold, I have accepted this house , and my name shall be here; and I will manifest myself to my people in mercy in this house.",
+          "p8": "8 Yea, I will appear unto my servants, and speak unto them with mine own voice, if my people will keep my commandments, and do not pollute this holy house .",
+          "p9": "9 Yea the hearts of thousands and tens of thousands shall greatly rejoice in consequence of the blessings which shall be poured out, and the endowment with which my servants have been endowed in this house.",
+          "p10": "10 And the fame of this house shall spread to foreign lands; and this is the beginning of the blessing which shall be poured out upon the heads of my people. Even so. Amen."
+        }
+      },
+      {
+        "title": "His voice in Liberty Jail",
+        "passage": "Doctrine and Covenants 121:1-9; 122:7-9",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/122?lang=eng&id=p7-p9#p7",
+        "chapter_path": "dc-testament/dc/122",
+        "verse_selection": "7-9",
+        "scene_and_caution": "Joseph age 33 in March 1839; revelation of comfort does not establish visible Christ apparition",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p7": "7 And if thou shouldst be cast into the pit , or into the hands of murderers, and the sentence of death passed upon thee; if thou be cast into the deep ; if the billowing surge conspire against thee; if fierce winds become thine enemy; if the heavens gather blackness, and all the elements combine to hedge up the way; and above all, if the very jaws of hell shall gape open the mouth wide after thee, know thou, my son, that all these things shall give thee experience , and shall be for thy good.",
+          "p8": "8 The Son of Man hath descended below them all. Art thou greater than he?",
+          "p9": "9 Therefore, hold on thy way, and the priesthood shall remain with thee; for their bounds are set, they cannot pass. Thy days are known, and thy years shall not be numbered less; therefore, fear not what man can do, for God shall be with you forever and ever."
+        }
+      },
+      {
+        "title": "The Lord organizes ministry in the spirit world",
+        "passage": "Doctrine and Covenants 138:11-37",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng&id=p11-p37#p11",
+        "chapter_path": "dc-testament/dc/138",
+        "verse_selection": "11-37",
+        "scene_and_caution": "Joseph F. Smith vision 1918, not Joseph Smith. The revealed ministry itself is BETWEEN death and Resurrection (v27), not a 1918 post-Resurrection visit. Christ commissions righteous messengers, not personally visiting wicked. The post-Resurrection scar rule must not be applied by mistaking the date of the vision for the event date.",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p11": "11 As I pondered over these things which are written , the eyes of my understanding were opened, and the Spirit of the Lord rested upon me, and I saw the hosts of the dead , both small and great.",
+          "p12": "12 And there were gathered together in one place an innumerable company of the spirits of the just , who had been faithful in the testimony of Jesus while they lived in mortality;",
+          "p13": "13 And who had offered sacrifice in the similitude of the great sacrifice of the Son of God, and had suffered tribulation in their Redeemer’s name .",
+          "p14": "14 All these had departed the mortal life, firm in the hope of a glorious resurrection , through the grace of God the Father and his Only Begotten Son , Jesus Christ.",
+          "p15": "15 I beheld that they were filled with joy and gladness, and were rejoicing together because the day of their deliverance was at hand.",
+          "p16": "16 They were assembled awaiting the advent of the Son of God into the spirit world , to declare their redemption from the bands of death.",
+          "p17": "17 Their sleeping dust was to be restored unto its perfect frame, bone to his bone, and the sinews and the flesh upon them, the spirit and the body to be united never again to be divided, that they might receive a fulness of joy .",
+          "p18": "18 While this vast multitude waited and conversed, rejoicing in the hour of their deliverance from the chains of death, the Son of God appeared, declaring liberty to the captives who had been faithful;",
+          "p19": "19 And there he preached to them the everlasting gospel , the doctrine of the resurrection and the redemption of mankind from the fall , and from individual sins on conditions of repentance .",
+          "p20": "20 But unto the wicked he did not go, and among the ungodly and the unrepentant who had defiled themselves while in the flesh, his voice was not raised;",
+          "p21": "21 Neither did the rebellious who rejected the testimonies and the warnings of the ancient prophets behold his presence , nor look upon his face.",
+          "p22": "22 Where these were, darkness reigned, but among the righteous there was peace ;",
+          "p23": "23 And the saints rejoiced in their redemption , and bowed the knee and acknowledged the Son of God as their Redeemer and Deliverer from death and the chains of hell .",
+          "p24": "24 Their countenances shone , and the radiance from the presence of the Lord rested upon them, and they sang praises unto his holy name.",
+          "p25": "25 I marveled, for I understood that the Savior spent about three years in his ministry among the Jews and those of the house of Israel, endeavoring to teach them the everlasting gospel and call them unto repentance;",
+          "p26": "26 And yet, notwithstanding his mighty works, and miracles, and proclamation of the truth, in great power and authority, there were but few who hearkened to his voice, and rejoiced in his presence, and received salvation at his hands.",
+          "p27": "27 But his ministry among those who were dead was limited to the brief time intervening between the crucifixion and his resurrection;",
+          "p28": "28 And I wondered at the words of Peter—wherein he said that the Son of God preached unto the spirits in prison, who sometime were disobedient, when once the long-suffering of God waited in the days of Noah—and how it was possible for him to preach to those spirits and perform the necessary labor among them in so short a time.",
+          "p29": "29 And as I wondered, my eyes were opened, and my understanding quickened , and I perceived that the Lord went not in person among the wicked and the disobedient who had rejected the truth, to teach them;",
+          "p30": "30 But behold, from among the righteous, he organized his forces and appointed messengers , clothed with power and authority, and commissioned them to go forth and carry the light of the gospel to them that were in darkness , even to all the spirits of men; and thus was the gospel preached to the dead.",
+          "p31": "31 And the chosen messengers went forth to declare the acceptable day of the Lord and proclaim liberty to the captives who were bound, even unto all who would repent of their sins and receive the gospel.",
+          "p32": "32 Thus was the gospel preached to those who had died in their sins, without a knowledge of the truth, or in transgression , having rejected the prophets.",
+          "p33": "33 These were taught faith in God, repentance from sin, vicarious baptism for the remission of sins, the gift of the Holy Ghost by the laying on of hands,",
+          "p34": "34 And all other principles of the gospel that were necessary for them to know in order to qualify themselves that they might be judged according to men in the flesh, but live according to God in the spirit.",
+          "p35": "35 And so it was made known among the dead, both small and great, the unrighteous as well as the faithful, that redemption had been wrought through the sacrifice of the Son of God upon the cross .",
+          "p36": "36 Thus was it made known that our Redeemer spent his time during his sojourn in the world of spirits , instructing and preparing the faithful spirits of the prophets who had testified of him in the flesh;",
+          "p37": "37 That they might carry the message of redemption unto all the dead, unto whom he could not go personally, because of their rebellion and transgression, that they through the ministration of his servants might also hear his words."
+        }
+      },
+      {
+        "title": "Modern witnesses of the living Christ",
+        "passage": "The Living Christ",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+        "chapter_path": "the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles",
+        "verse_selection": "",
+        "scene_and_caution": "Contemporary people reading testimony; no fabricated conference scene or attribution to current officeholders",
+        "source_status": "official full document fetched and read, dated January 1 2000; not a newly issued current presidency statement",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {},
+        "document_text_for_review": "Jesus Christ The Living Christ The Living Christ The Living Christ The Living Christ The Testimony of the Apostles The Church of Jesus Christ of Latter-day Saints As we commemorate the birth of Jesus Christ two millennia ago, we offer our testimony of the reality of His matchless life and the infinite virtue of His great atoning sacrifice. None other has had so profound an influence upon all who have lived and will yet live upon the earth. He was the Great Jehovah of the Old Testament, the Messiah of the New. Under the direction of His Father, He was the creator of the earth. “All things were made by him; and without him was not any thing made that was made” ( John 1:3 ). Though sinless, He was baptized to fulfill all righteousness. He “went about doing good” ( Acts 10:38 ), yet was despised for it. His gospel was a message of peace and goodwill. He entreated all to follow His example. He walked the roads of Palestine, healing the sick, causing the blind to see, and raising the dead. He taught the truths of eternity, the reality of our premortal existence, the purpose of our life on earth, and the potential for the sons and daughters of God in the life to come. He instituted the sacrament as a reminder of His great atoning sacrifice. He was arrested and condemned on spurious charges, convicted to satisfy a mob, and sentenced to die on Calvary’s cross. He gave His life to atone for the sins of all mankind. His was a great vicarious gift in behalf of all who would ever live upon the earth. We solemnly testify that His life, which is central to all human history, neither began in Bethlehem nor concluded on Calvary. He was the Firstborn of the Father, the Only Begotten Son in the flesh, the Redeemer of the world. He rose from the grave to “become the firstfruits of them that slept” ( 1 Corinthians 15:20 ). As Risen Lord, He visited among those He had loved in life. He also ministered among His “other sheep” ( John 10:16 ) in ancient America. In the modern world, He and His Father appeared to the boy Joseph Smith, ushering in the long-promised “dispensation of the fulness of times” ( Ephesians 1:10 ). Of the Living Christ, the Prophet Joseph wrote: “His eyes were as a flame of fire; the hair of his head was white like the pure snow; his countenance shone above the brightness of the sun; and his voice was as the sound of the rushing of great waters, even the voice of Jehovah, saying: “I am the first and the last; I am he who liveth, I am he who was slain; I am your advocate with the Father” ( D&C 110:3–4 ). Of Him the Prophet also declared: “And now, after the many testimonies which have been given of him, this is the testimony, last of all, which we give of him: That he lives! “For we saw him, even on the right hand of God; and we heard the voice bearing record that he is the Only Begotten of the Father— “That by him, and through him, and of him, the worlds are and were created, and the inhabitants thereof are begotten sons and daughters unto God” ( D&C 76:22–24 ). We declare in words of solemnity that His priesthood and His Church have been restored upon the earth—“built upon the foundation of … apostles and prophets, Jesus Christ himself being the chief corner stone” ( Ephesians 2:20 ). We testify that He will someday return to earth. “And the glory of the Lord shall be revealed, and all flesh shall see it together” ( Isaiah 40:5 ). He will rule as King of Kings and reign as Lord of Lords, and every knee shall bend and every tongue shall speak in worship before Him. Each of us will stand to be judged of Him according to our works and the desires of our hearts. We bear testimony, as His duly ordained Apostles—that Jesus is the Living Christ, the immortal Son of God. He is the great King Immanuel, who stands today on the right hand of His Father. He is the light, the life, and the hope of the world. His way is the path that leads to happiness in this life and eternal life in the world to come. God be thanked for the matchless gift of His divine Son. The First Presidency January 1, 2000 The Quorum of the Twelve"
+      },
+      {
+        "title": "Following Him in daily life",
+        "passage": "Moroni 7:45-48",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/7?lang=eng&id=p45-p48#p45",
+        "chapter_path": "bofm/moro/7",
+        "verse_selection": "45-48",
+        "scene_and_caution": "Modern practical compassion; clearly application, no implied guaranteed healing",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p45": "45 And charity suffereth long, and is kind , and envieth not, and is not puffed up, seeketh not her own, is not easily provoked , thinketh no evil, and rejoiceth not in iniquity but rejoiceth in the truth, beareth all things, believeth all things, hopeth all things, endureth all things.",
+          "p46": "46 Wherefore, my beloved brethren, if ye have not charity, ye are nothing, for charity never faileth. Wherefore, cleave unto charity, which is the greatest of all, for all things must fail—",
+          "p47": "47 But charity is the pure love of Christ, and it endureth forever ; and whoso is found possessed of it at the last day, it shall be well with him.",
+          "p48": "48 Wherefore, my beloved brethren, pray unto the Father with all the energy of heart, that ye may be filled with this love, which he hath bestowed upon all who are true followers of his Son, Jesus Christ; that ye may become the sons of God; that when he shall appear we shall be like him, for we shall see him as he is; that we may have this hope; that we may be purified even as he is pure. Amen."
+        }
+      },
+      {
+        "title": "Gathering in His name",
+        "passage": "Doctrine and Covenants 20:75-79",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng&id=p75-p79#p75",
+        "chapter_path": "dc-testament/dc/20",
+        "verse_selection": "75-79",
+        "scene_and_caution": "Modern sacrament worship, connect covenant to discipleship. D&C20 describes bread and wine; if modern water is depicted explain with D&C27:2 and current official sacrament guidance. Do not pretend D&C20 says water.",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p75": "75 It is expedient that the church meet together often to partake of bread and wine in the remembrance of the Lord Jesus;",
+          "p76": "76 And the elder or priest shall administer it; and after this manner shall he administer it—he shall kneel with the church and call upon the Father in solemn prayer, saying:",
+          "p77": "77 O God, the Eternal Father, we ask thee in the name of thy Son, Jesus Christ, to bless and sanctify this bread to the souls of all those who partake of it, that they may eat in remembrance of the body of thy Son, and witness unto thee, O God, the Eternal Father, that they are willing to take upon them the name of thy Son, and always remember him and keep his commandments which he has given them; that they may always have his Spirit to be with them. Amen.",
+          "p78": "78 The manner of administering the wine—he shall take the cup also, and say:",
+          "p79": "79 O God, the Eternal Father, we ask thee in the name of thy Son, Jesus Christ, to bless and sanctify this wine to the souls of all those who drink of it, that they may do it in remembrance of the blood of thy Son, which was shed for them; that they may witness unto thee, O God, the Eternal Father, that they do always remember him, that they may have his Spirit to be with them. Amen."
+        }
+      },
+      {
+        "title": "Hope in His return",
+        "passage": "Acts 1:9-11; Doctrine and Covenants 45:44-52",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/45?lang=eng&id=p44-p52#p44",
+        "chapter_path": "dc-testament/dc/45",
+        "verse_selection": "44-52",
+        "scene_and_caution": "Hopeful modern waiting and service; future visionary imagery clearly identified, no return date or invented news fulfillment",
+        "source_status": "official chapter and verse anchors fetched",
+        "artwork_status": "proposed story stop, not cleared for generation",
+        "http_status": 200,
+        "missing_verse_anchors": [],
+        "source_text_for_review": {
+          "p44": "44 And then they shall look for me, and, behold, I will come; and they shall see me in the clouds of heaven, clothed with power and great glory ; with all the holy angels; and he that watches not for me shall be cut off.",
+          "p45": "45 But before the arm of the Lord shall fall, an angel shall sound his trump , and the saints that have slept shall come forth to meet me in the cloud .",
+          "p46": "46 Wherefore, if ye have slept in peace blessed are you; for as you now behold me and know that I am, even so shall ye come unto me and your souls shall live , and your redemption shall be perfected; and the saints shall come forth from the four quarters of the earth.",
+          "p47": "47 Then shall the arm of the Lord fall upon the nations.",
+          "p48": "48 And then shall the Lord set his foot upon this mount , and it shall cleave in twain, and the earth shall tremble , and reel to and fro, and the heavens also shall shake .",
+          "p49": "49 And the Lord shall utter his voice, and all the ends of the earth shall hear it; and the nations of the earth shall mourn , and they that have laughed shall see their folly .",
+          "p50": "50 And calamity shall cover the mocker , and the scorner shall be consumed; and they that have watched for iniquity shall be hewn down and cast into the fire .",
+          "p51": "51 And then shall the Jews look upon me and say: What are these wounds in thine hands and in thy feet?",
+          "p52": "52 Then shall they know that I am the Lord; for I will say unto them: These wounds are the wounds with which I was wounded in the house of my friends. I am he who was lifted up. I am Jesus that was crucified . I am the Son of God ."
+        }
+      }
+    ]
+  },
+  "media_candidates": [
+    {
+      "title": "Jesus Heals a Man Born Blind",
+      "url": "https://www.churchofjesuschrist.org/media/video/2011-10-0066-jesus-heals-a-man-born-blind?lang=eng",
+      "scope": "John 9:1-41",
+      "branch": "miracles",
+      "verified": "official title and description read through web; playback and transcript not yet reviewed",
+      "existing_html_matches": [],
+      "duplicate_check": "slug scan of all repository HTML; equivalent alternate URLs or YouTube IDs still require canonical media audit"
+    },
+    {
+      "title": "Jesus Teaches of Being Born Again",
+      "url": "https://www.churchofjesuschrist.org/study/video/teachings/2011-10-028-jesus-teaches-of-being-born-again?lang=eng",
+      "scope": "John 3:1-36; official page says night setting",
+      "branch": "teachings",
+      "verified": "official title and description read through web; playback and transcript not yet reviewed",
+      "existing_html_matches": [],
+      "duplicate_check": "slug scan of all repository HTML; equivalent alternate URLs or YouTube IDs still require canonical media audit"
+    },
+    {
+      "title": "Jesus Christ Teaches How to Pray",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-07-0330-jesus-christ-teaches-how-to-pray-3-nephi-131-24?lang=eng",
+      "scope": "3 Nephi 13:1-24",
+      "branch": "nephites",
+      "verified": "official title and description read through web; playback and transcript not yet reviewed",
+      "existing_html_matches": [],
+      "duplicate_check": "slug scan of all repository HTML; equivalent alternate URLs or YouTube IDs still require canonical media audit"
+    },
+    {
+      "title": "Jesus Christ Explains How He Will Gather Israel",
+      "url": "https://www.churchofjesuschrist.org/media/video/2022-07-0800-jesus-christ-explains-how-he-will-gather-israel-3-nephi-20-23?lang=eng",
+      "scope": "3 Nephi 20-23",
+      "branch": "nephites",
+      "verified": "official title and description read through web; playback and transcript not yet reviewed",
+      "existing_html_matches": [],
+      "duplicate_check": "slug scan of all repository HTML; equivalent alternate URLs or YouTube IDs still require canonical media audit"
+    },
+    {
+      "title": "Virtual Video Tour of Historic Kirtland",
+      "url": "https://www.churchofjesuschrist.org/media/video/2023-11-0030-virtual-video-tour-of-historic-kirtland?lang=eng",
+      "scope": "Historians tour historic site with single adults; not claimed apparition reenactment",
+      "branch": "restoration-today",
+      "verified": "official title and description read through web; playback and transcript not yet reviewed",
+      "existing_html_matches": [],
+      "duplicate_check": "slug scan of all repository HTML; equivalent alternate URLs or YouTube IDs still require canonical media audit"
+    },
+    {
+      "title": "Widow of Nain",
+      "url": "https://www.churchofjesuschrist.org/media/video/2014-10-0021-widow-of-nain?lang=eng",
+      "scope": "Luke 7:11-16",
+      "branch": "miracles",
+      "verified": "official title and description read through web; playback and transcript not yet reviewed",
+      "existing_html_matches": [],
+      "duplicate_check": "slug scan of all repository HTML; equivalent alternate URLs or YouTube IDs still require canonical media audit"
+    }
+  ],
+  "existing_scene_collisions": [
+    {
+      "scene": "Brother of Jared sees Redeemer",
+      "evidence": "docs/book-of-mormon-art-review.json: Ether 3:13-18 Known by the Redeemer",
+      "action": "Link owning Book of Mormon picture/study; first review whether a genuinely different earlier stones-touching action is allowable"
+    },
+    {
+      "scene": "Premortal choice",
+      "evidence": "assets/page-art/settle-heart/10-thy-will-premortal-full.webp",
+      "action": "Existing generic council scene must not be repainted to count as unique"
+    },
+    {
+      "scene": "Mortal Nazareth sermon, wilderness temptation, roof paralytic, Malchus, Sabbath grainfields",
+      "evidence": "assets/page-art/bible-together/",
+      "action": "Use source-context links back to owning Bible and Book of Mormon study"
+    },
+    {
+      "scene": "Peter rescue",
+      "evidence": "assets/page-art/sitewide-narratives/look-peter-rescue-approved-20260919-full.webp",
+      "action": "Preserve owner approved art; link owning study, no new rescue iteration"
+    },
+    {
+      "scene": "Bethesda",
+      "evidence": "docs/art-study-image-review.json: John5:5-9 prompt",
+      "action": "Link existing owner; use a different healing event for new branch original"
+    },
+    {
+      "scene": "Widow Nain, woman at well, shore breakfast",
+      "evidence": "docs/sitewide-artwork-review.json; docs/sitewide-supporting-review.json",
+      "action": "Link existing owners instead of duplicate scene"
+    },
+    {
+      "scene": "Nicodemus",
+      "evidence": "assets/page-art/ask-nicodemus-1122.webp",
+      "action": "Existing Ask art; new study may source-link rather than reuse as own artwork"
+    },
+    {
+      "scene": "Bountiful descent, wounds, healing, children, prayer, bread, records, three disciples",
+      "evidence": "docs/book-of-mormon-art-review.json; docs/life-after-death-art-review.json",
+      "action": "Existing owning pages need links; do not count references toward eight new originals"
+    },
+    {
+      "scene": "Bountiful Nephi called, baptism instruction, Beatitudes, prayer teaching, tomorrow, other sheep, Church name",
+      "evidence": "docs/book-of-mormon-art-review.json",
+      "action": "Additional existing content collision; use unused exact actions or application images, not same generic teaching in new clothes"
+    },
+    {
+      "scene": "Gethsemane, Crucifixion, Mary risen, Emmaus, empty tomb, footwashing, Passover",
+      "evidence": "assets/page-art/atonement/",
+      "action": "Atonement remains deeper owning destination; branch can connect to existing scene sections without duplicating originals"
+    },
+    {
+      "scene": "Thomas, peace appearance, Emmaus, Mary risen",
+      "evidence": "assets/page-art/art-study/full/living-*; assets/page-art/life-after-death/",
+      "action": "Distinct new resurrection action needed, such as eating broiled fish, commission, Ascension"
+    }
+  ],
+  "identity_requirements": [
+    "Use actual assets/heroes/home-christ-signature-approved-20260907.png; preserve exact Christ identity with scene-appropriate expression.",
+    "Every post-Resurrection Christ picture needs subtle healed marks in both palms and wrists wherever visible; no forced exposure, fresh wounds or blood. Owner depiction rule is not archaeological assertion.",
+    "Mary mother identity: assets/page-art/birth-of-christ/03-nephi-vision-full.webp; never transfer to Mary Magdalene or Mary of Bethany.",
+    "Joseph Smith actual approved assets/identities/joseph-smith-owner-approved-20260914.png; age 14 First Vision, 26 D&C76, 30 Kirtland, 33 Liberty. Check exact depicted dates.",
+    "Oliver Cowdery, Sidney Rigdon, Joseph F. Smith and every other named modern historical person require reliable likeness and documented age research before generation; this review does not grant missing reference approval.",
+    "Ancient persons generally lack authenticated portraits; exact ages beyond scriptural values are unknown. Jairus daughter is twelve; Jesus begins ministry about thirty (Luke3:23). Do not invent precise ages of apostles or Mary.",
+    "Prophetic visions and modern applications must remain explicitly distinguishable from eyewitness historical reconstruction."
+  ],
+  "doctrinal_cautions": [
+    "Explain Jehovah identification as Latter-day Saint teaching using official Guide to Scriptures Jehovah; distinguish Father and Son and do not suggest universal agreement of all traditions.",
+    "Use Old Testament voices and manifestations as recorded. A burning bush or voice does not authorize adding a visibly incarnate human Christ.",
+    "Keep Hebrew Bible setting and Christological interpretation distinguishable; avoid flattening all Old Testament speakers into an asserted portrait of Jesus.",
+    "Prayer is ordinarily to Heavenly Father in name of Jesus Christ; 3 Nephi19:18 special presence context must not erase 3 Nephi18:19.",
+    "Do not blame illness on sin or claim unhealed people lack faith; John9 explicitly rejects the simple blame premise.",
+    "Do not impose modern exact archaeological geography, ethnic portrait claims, clothing color certainty, or invented dialogue on Book of Mormon.",
+    "D&C138 says Christ commissions messengers to those in darkness, not that He personally visits the wicked; distinguish Joseph F Smith from Joseph Smith.",
+    "Future Second Coming promises do not establish date, political identity, current-event prediction, or news fulfillment.",
+    "No collective blame of Jews for Crucifixion; Jesus, disciples and earliest followers are Jewish. Represent religious interlocutors with individual dignity.",
+    "Eight-picture count is not yet satisfied by these story stops. Duplicate flags and repeated teaching settings require final unique-scene allocation before generation."
+  ],
+  "verification_limits": [
+    "Official scripture pages fetched to check chapter and selected verse anchors; full selected text retained for semantic review. Secondary passage references in combined labels need separate final fetch.",
+    "Key source passages and fetched narrative text reviewed for story mapping; full future prose, quotations, secondary links and generated scene details still require final semantic editorial review.",
+    "Artwork inventory reviewed through manifests and paths, not full-pixel owner likeness assessment; no generation or approval is implied.",
+    "Official media titles/descriptions verified; no claim of video playback/transcript or rights-to-download clearance.",
+    "This review supplies source/story plan only; it does not certify final content, responsive layout, internal anchors, deployed pages, or public completion."
+  ],
+  "source_basis": [
+    {
+      "title": "Jehovah, Guide to the Scriptures",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/gs/jehovah?lang=eng",
+      "review": "Opened official guide; doctrinal attribution remains LDS-specific"
+    },
+    {
+      "title": "The Living Christ",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
+      "review": "Full text read; creation under Father, Jehovah, premortal identity, mortal ministry, risen ministry, Restoration, future return"
+    },
+    {
+      "title": "Sidney Rigdon biography, Joseph Smith Papers",
+      "url": "https://www.josephsmithpapers.org/person/sidney-rigdon",
+      "review": "Birth date 19 February1793; at D&C76 February16 1832 he was38, not39. Source page does not itself complete likeness reference acquisition"
+    },
+    {
+      "title": "Oliver Cowdery biography, Joseph Smith Papers",
+      "url": "https://www.josephsmithpapers.org/person/oliver-cowdery",
+      "review": "Opened but web extractor did not expose biography date text; age29 Kirtland remains derived from known October3 1806 date and must be rechecked against readable biographical record before generation"
+    },
+    {
+      "title": "D&C27:2",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/27?lang=eng&id=p2#p2",
+      "review": "Official chapter opened for modern sacrament material distinction"
+    }
+  ],
+  "semantic_review_findings": [
+    "Reviewed source text for narrative setting, named participants and central actions across the63 planned stops; corrected Luke9 travel props, 3Nephi17 non-departure, 3Nephi26 two distinct child-teaching moments, and D&C138 event chronology.",
+    "Secondary references in compound passage labels are intentionally not yet all independently fetched. Primary URL links the main passage, so do not render a multi-passage label as though all passages lie in one chapter.",
+    "Contemporary application illustrations provide distinct subject matter without inventing additional scriptural events; do not count them as Christ depictions or eyewitness scenes.",
+    "This remains a source-grounded plan, not a completed content audit of future pages. Exact final artwork allocations and eight-original minimums remain to be resolved."
+  ]
+}

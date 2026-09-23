@@ -1,0 +1,55 @@
+{
+  "page_count": 7,
+  "sections": 63,
+  "unique_external_destinations": 75,
+  "ref_count": 80,
+  "bad_refs": [],
+  "bad_sources": [],
+  "render": [
+    {
+      "url": "/jesus-christ/before-bethlehem.html",
+      "sections": 11,
+      "unresolved_tokens": false,
+      "missing_internal": []
+    },
+    {
+      "url": "/jesus-christ/mortal-ministry.html",
+      "sections": 11,
+      "unresolved_tokens": false,
+      "missing_internal": []
+    },
+    {
+      "url": "/jesus-christ/miracles-and-compassion.html",
+      "sections": 11,
+      "unresolved_tokens": false,
+      "missing_internal": []
+    },
+    {
+      "url": "/jesus-christ/teachings-and-parables.html",
+      "sections": 11,
+      "unresolved_tokens": false,
+      "missing_internal": []
+    },
+    {
+      "url": "/jesus-christ/redeemer-and-risen-lord.html",
+      "sections": 11,
+      "unresolved_tokens": false,
+      "missing_internal": []
+    },
+    {
+      "url": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "sections": 11,
+      "unresolved_tokens": false,
+      "missing_internal": []
+    },
+    {
+      "url": "/jesus-christ/restoration-and-today.html",
+      "sections": 11,
+      "unresolved_tokens": false,
+      "missing_internal": []
+    }
+  ],
+  "semantic_scope": "Original explanatory prose reviewed against named source passages. Render test only; no artwork/visual/public release claim.",
+  "final_content_sha256": "f4b533ca48bbc0b3f266c39a77910c3cd70adce4218873374d245404976118f2",
+  "editorial_review": "Final visitor prose polished to remove production/illustration cautions from public teaching; specific scriptural distinctions retained. 7766 original prose words plus reflections."
+}

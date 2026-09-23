@@ -1,0 +1,32 @@
+{
+  "rr-broiled-fish": {
+    "title": "He eats before them",
+    "alt": "The risen Jesus holds a piece of fish while two disciples watch Him indoors.",
+    "caption": "Luke records the risen Jesus eating before His disciples. This scene illustrates that indoor witness, distinct from the shore breakfast in John 21.",
+    "refs": [
+      [
+        "nt/luke/24",
+        "Luke 24:36â€“43",
+        "36-43"
+      ]
+    ],
+    "owner": "jesus-christ/redeemer-and-risen-lord.html",
+    "section": "risen-witness",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rr-broiled-fish-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rr-broiled-fish-960.webp",
+    "original": "rr-broiled-fish.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b8a81b89-c960-4f5c-93e1-eb57e3fbe860.png",
+    "original_sha256": "d8ce575e89d0f0494d099d56f388b2c00edb069e1b1d24877a30b3fd6b9d618e",
+    "prompt": "Precise single-detail edit of image1. On Jesus' OPEN LEFT PALM (the upturned hand in lower center, directly above fish plate), add ONE unmistakable but small fully healed oval nail scar in the CENTER of the palm, approximately 8mm, pale pink raised perimeter and slightly darker depressed center. It must read as an old healed puncture scar rather than a normal palm crease. No fresh wound, blood or injury. Preserve all existing wrist marks and EXACTLY preserve every face, smile, gaze, hand anatomy, fingers, fish, clothing, lighting and composition. Image2 is approved Jesus identity reference only; do not change his face. Photographic detail.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-19992b87-e60c-49a3-a7bc-ecdf05920cad.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "branch-art-review-6.json"
+  }
+}

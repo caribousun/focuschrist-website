@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "environment": "Local final strict build, tested through Codex browser controls",
+  "picture_paths": {
+    "desktop_width": 1366,
+    "phone_width": 390,
+    "unique_originals_tested_at_each_width": 303,
+    "checks": ["Own study opens", "Image loads", "Source label present", "Full-size viewer opens", "Viewer closes to full-size link", "Study closes to original picture link"],
+    "final_failures": [],
+    "loading_observations": "Two initial immediate phone reads returned naturalWidth0 before loading; both passed on readback and subsequent complete path checks. No unresolved loading defect."
+  },
+  "responsive_layout": {
+    "final_descendant_pages": 76,
+    "widths": [320, 390, 768, 1366],
+    "final_checks": 304,
+    "overflow": 0,
+    "stranded_final_card_rows": 0,
+    "corrupt_visible_encoding": 0,
+    "enlarged_text": "All76 descendants plus parent checked at390px with test-only200percent root font size; no overflow or stranded final rows. This is enlarged base text, not a claim of browser-level zoom."
+  },
+  "reader": {
+    "all_seven_branches": "First-picture reader opened with correct source selection and actual passage text; close returned focus to source link.",
+    "observed_passages": ["Genesis1:20-23", "Luke3:10-14", "Luke6:6-10", "Matthew5:13-16", "John12:1-3", "3Nephi19:1", "Doctrine and Covenants76:19-24"],
+    "additional": "Parent John1:35-42 and phone Matthew6:26 read directly. Static source/link gates cover every rendered selection; not every verse was manually read in every dialog."
+  },
+  "keyboard_and_fallback": {
+    "keyboard": "Enter opens picture and scripture; Escape closes nested reader with source-link focus restored; Continue Lesson closes study. Reopening verified.",
+    "no_script": "Test-only server sent script-src none. Birds and Lilies picture link opened its1536px full original directly. Production markup retains full-image hrefs for all303 originals."
+  },
+  "visual_scope": "Actual desktop/phone screenshots inspected for opening, journey directory, artwork/study cards, scripture dialog and enlarged text. Stitched full-page artifacts were not treated as actual duplicated content; unique DOM picture inventories and viewport views were checked.",
+  "limits": "Local browser evidence does not establish deployment, external indexing, or owner aesthetic approval."
+}

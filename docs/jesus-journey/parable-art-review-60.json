@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Servant Duty01–02 actual-original review for continuity, distinct roles, credible fieldwork/meal action, anatomy, realism and Luke17:7–8 comparison.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Unnamed figures illustrate a hypothetical comparison; no historical portraits or endorsement of coercion is implied."
+  ],
+  "entries": [
+    {
+      "key": "servant-duty-01",
+      "generationKey": "servant-duty-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "b001dfdaca7ff3dbd6a41bd9a9f12198817891eb62f8ddcf5370ff34850a1468",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-170590a8-a0fb-4275-bc3c-47a7dfeccb6a.png",
+      "recommendedTitle": "Returning from work in the field",
+      "alt": "A curly-haired man in a worn light tunic walks along a path beside a worked field, carrying a wooden agricultural implement against his shoulder.",
+      "caption": "Jesus asks His listeners to imagine a servant coming in from plowing or tending sheep. The return from fieldwork begins His comparison about a servant's duty.",
+      "refs": [
+        [
+          "nt/luke/17",
+          "Luke 17:7",
+          "7"
+        ]
+      ],
+      "findings": "Young adult with short dark curls, light stubble, worn tan tunic and tied belt establishes servant identity. Implement is a plausible rustic agricultural prop, not a complete detailed plow claimed in alt. Shoulder/hand support, hanging hand, walking legs and sandals are coherent. Task-directed forward gaze and serious expression, photographic skin and cloth; no modern or fantasy intrusion.",
+      "conditions": [
+        "The rustic implement and exact field layout are illustrative, not an authenticated reconstruction of a particular plow.",
+        "Hypothetical comparison, not a named historical laborer or claim that coercive labor conditions are prescribed."
+      ]
+    },
+    {
+      "key": "servant-duty-02",
+      "generationKey": "servant-duty-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "950c748cb1ff8ad309c76010083a303acdcfc383108f67c81b31a23f56b3ac4b",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-19358827-87eb-438f-8092-d2d992c551e1.png",
+      "recommendedTitle": "Serving the meal",
+      "alt": "The same man holds a large bowl of food with both hands above a table before an older seated man, with bread, a cup and a jug nearby.",
+      "caption": "In Jesus' comparison, the servant is told to prepare supper and serve before eating and drinking himself. The pictured meal illustrates the sequence in His example, which leads into teaching about humble service.",
+      "refs": [
+        [
+          "nt/luke/17",
+          "Luke 17:8–10",
+          "8-10"
+        ]
+      ],
+      "findings": "Servant's curls, stubble, long face, rolled worn tan sleeves and belt match01. Older seated gray-haired bearded man is distinct and establishes receiving role. Bowl visibly contains food and is supported coherently by both hands; seated hands and table objects are anatomically/physically plausible. Servant attends bowl placement while recipient looks up toward him, appropriate action-directed gaze rather than forced reciprocal eye contact. Photographic textures and warm lighting.",
+      "conditions": [
+        "The still shows the bowl being served above the table; do not claim eating has already begun or the servant's later meal is visible.",
+        "Specific menu, bowl and room are artistic details.",
+        "Read as Jesus' hypothetical comparison, not moral approval of coercion or mistreatment. Humble-service context is developed in Luke17:9–10."
+      ]
+    }
+  ]
+}

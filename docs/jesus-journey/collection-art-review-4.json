@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent actual-pixel reviewer",
+  "scope": "collection-neighbor-05 through collection-neighbor-08, viewed at original detail",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 1,
+    "revisionKeys": [
+      "collection-neighbor-08"
+    ]
+  },
+  "globalConditions": [
+    "Fictional present-day applications, not documentary events or literal parable reconstructions.",
+    "Technical visual/source-fit review is not owner approval or browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "collection-neighbor-05",
+      "sha256": "1efe8bec60864160fb62ae6df18bbf8798d09efba54a145678ba090d630a98c3",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-65147436-cf31-4aec-ace7-0a96067f5b14.png",
+      "status": "pass_with_caption_conditions",
+      "alt": "A woman folds a gray blanket at a table surrounded by shelves and stacks of bedding.",
+      "caption": "A volunteer prepares bedding in this imagined shelter scene. Jesus' teaching about clothing and welcoming others invites attention to practical needs, including work done before another person arrives.",
+      "findings": "Photographic face, focused gaze, hands gripping fabric and folding action are coherent. An empty bed and linen shelves support the imagined setting without displaying vulnerable guests.",
+      "conditions": [
+        "Keep shelter volunteer as the fictional scenario premise, not a factual claim about an identifiable person."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:35-36",
+          "35-36"
+        ]
+      ]
+    },
+    {
+      "key": "collection-neighbor-06",
+      "sha256": "38dd4792caaccb36631b34c77609fc0bfc0504c6392a93e80d50f642fd1137fd",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bab529c1-fb9e-42ef-b58b-2487d2864fd4.png",
+      "status": "pass_with_caption_conditions",
+      "alt": "A woman raises her hand near her eyes while a coworker adjusts a bright desk lamp and a small fan beside her laptop.",
+      "caption": "The coworkers attend to discomfort in their shared workspace. This imagined scene applies attentive care through listening and practical adjustment; the change is still in progress.",
+      "findings": "Both people retain agency: woman signals discomfort, man actively holds lamp and fan. Visible hands and object contacts are coherent. Light currently faces toward her; this is a transitional adjustment, not evidence that glare has already been reduced. Photographic skin, eyes and clothing are natural.",
+      "conditions": [
+        "Do not claim the room is already comfortable, lamp is already directed away, or noise reduction has been verified from a still image.",
+        "Do not assert a medical diagnosis or label ordinary equipment as a prescribed accommodation."
+      ],
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:34-35",
+          "34-35"
+        ]
+      ]
+    },
+    {
+      "key": "collection-neighbor-07",
+      "sha256": "97aa1e6965b27a6748ce73fd0dd28834a8708a7c076528bf590063f35276160d",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9d281805-f969-4747-b8b6-447b9656c8f8.png",
+      "status": "pass_with_caption_conditions",
+      "alt": "A woman listens across a metal table as a man in orange clothing speaks and gestures in an institutional visiting room.",
+      "caption": "Two people give their attention to a conversation during an imagined prison visit. Jesus includes visiting a prisoner among acts of care remembered by the King, keeping attention on people others may overlook.",
+      "findings": "Mutual attention and natural expressions preserve dignity. Clasped hands and gesturing hands are coherent. Institutional room and background staff support the fictional prison-visit premise; no legible identifying insignia or private information.",
+      "conditions": [
+        "Do not infer their relationship, anyone's offense, guilt, rehabilitation, or outcome from the image."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:36",
+          "36"
+        ]
+      ]
+    },
+    {
+      "key": "collection-neighbor-08",
+      "sha256": "dc7b7a9090cada7f5f1c85975ce07b2128f2ef65523588188c40b9852014dde2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-270a0581-5e3e-4801-8785-a7c33a7dc58a.png",
+      "status": "revise",
+      "alt": "Three adults handle fallen branches across a paved path while an older woman with a walker waits behind them.",
+      "caption": null,
+      "findings": "Faces, gloved hands, attentive postures and waiting person's distance are generally coherent and photographic. However, the right worker holds long straight-bladed hedge shears with blades positioned on a substantial woody limb. This does not depict a credible suitable cutting tool for that limb. The image should not be approved as the careful hazard-clearing example in its current form.",
+      "conditions": [
+        "Replace the hedge shears with a plausible manual pruning saw on the substantial limb, with coherent grip and blade contact, or place appropriate curved-jaw loppers around a suitably small side branch.",
+        "Preserve gloves, people keeping their hands away from the cut, and the waiting person's distance.",
+        "Do not import the current hash. After revision, caption the actual action without certifying safety."
+      ],
+      "refs": [
+        [
+          "nt/matt/12",
+          "Matthew 12:11-12",
+          "11-12"
+        ]
+      ]
+    }
+  ]
+}

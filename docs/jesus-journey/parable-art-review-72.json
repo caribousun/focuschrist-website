@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original pixel inspection of birds-lilies-01/02/03 against canonical plan and Matthew 6:26, 28-30.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "These are illustrations of teaching comparisons, not authenticated historical locations or species.",
+    "Technical acceptance is not owner approval or browser verification."
+  ],
+  "sourceVerification": {
+    "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?id=p22b&lang=eng",
+    "method": "Official Church scripture search result verified birds verse26, lilies verses28-29 and grass verse30; direct passage URL unavailable through web open."
+  },
+  "entries": [
+    {
+      "key": "birds-lilies-01",
+      "generationKey": "birds-lilies-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c0975deb-71eb-45a5-9ae3-6dc4f6885549.png",
+      "sha256": "40f4060767ed36f180bbcba1805fa22ab81117d3125688a42a589cd65538b241",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Birds finding food",
+      "alt": "Four small brown birds stand or peck at scattered seeds on stony ground beside the roots of an olive tree.",
+      "caption": "Small birds find food among stones and tree roots. Jesus directs His listeners to the birds as He teaches them about their Heavenly Father's care.",
+      "refs": [
+        [
+          "nt/matt/6",
+          "Matthew 6:26",
+          "26"
+        ]
+      ],
+      "findings": "Four distinct birds have coherent beaks, eyes, folded wings, tails and grounded feet. Two visibly feed while others stand alert. Natural feathers, bark and daylight retain photographic realism. Scattered seed is visible; its origin is not established.",
+      "conditions": [
+        "Do not claim an exact scriptural species or that the visible seed was miraculously deposited. No exemption from practical care or hunger is promised.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "birds-lilies-02",
+      "generationKey": "birds-lilies-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-38ae7b71-cfd0-44d2-919c-69d9f5e5d59c.png",
+      "sha256": "e85d2de5ecd6e110c57930cec633b01495b0c8ccc777d02b90615259a07a39cd",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Flowers of the field",
+      "alt": "White lily-like flowers and unopened buds rise among grasses and stones on a sunlit hillside.",
+      "caption": "White flowers open among the rough grasses of a hillside. Their quiet beauty accompanies Jesus' invitation to consider the lilies as He teaches about clothing and trust.",
+      "refs": [
+        [
+          "nt/matt/6",
+          "Matthew 6:28-29",
+          "28-29"
+        ]
+      ],
+      "findings": "Plausible six-part white blooms, stamens, buds and connected stems. Natural field arrangement rather than cultivated flowerbed; petal translucency, shadows and varied depth are photographic. No anatomical or obvious structural defect found.",
+      "conditions": [
+        "Illustrative flowers, not a botanical identification of the exact species Jesus named; no historical location claim.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "birds-lilies-03",
+      "generationKey": "birds-lilies-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-73a2b77d-c9b6-459d-90de-f8bd0b70b481.png",
+      "sha256": "a01a5a4f5eb74c4e7d6e1233941abe12b6068e6401af8af689b188b5d35ac8e9",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Grass in the evening light",
+      "alt": "Green grass blades and dry golden stalks grow among stones, with sunlit hills in the distance.",
+      "caption": "Evening light catches the green blades and dry stalks of ordinary grass. Jesus draws attention to the Father's care for such brief beauty as He invites His hearers to trust Him.",
+      "refs": [
+        [
+          "nt/matt/6",
+          "Matthew 6:30",
+          "30"
+        ]
+      ],
+      "findings": "Coherent rooted grasses, separate blades and seed heads, stones and natural backlight. Distinct scene from the feeding birds and white flowers; no added fire or invented destruction. Photographic landscape texture and depth remain consistent.",
+      "conditions": [
+        "Do not infer an exact lifespan from the pictured grass, or promise wealth or freedom from deprivation. Image shows grass rather than an oven scene.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

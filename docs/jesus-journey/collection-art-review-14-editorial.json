@@ -1,0 +1,330 @@
+{
+  "schemaVersion": 1,
+  "scope": "Bounded editorial repair of sixteen hearing and kingdom collection captions. Existing accepted pixel reviews supply the visual evidence.",
+  "summary": {
+    "editoriallyReviewed": 16,
+    "newPixelReviews": 0
+  },
+  "entries": [
+    {
+      "key": "collection-hearing-01",
+      "sha256": "0914c4a8defbdfe2e770dee91e36c2f8cc031199b440cee8616535eeeaa7bd15",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Making room for a question",
+      "alt": "An adult learner raises a hand beside an open notebook while the standing teacher looks toward him.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:18-23",
+          "18-23"
+        ]
+      ],
+      "caption": "A learner raises his hand, and the teacher turns toward him. The sower's teaching about hearing and understanding encourages us to ask honestly when we need help to understand.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-6.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-hearing-02",
+      "sha256": "e2702c68d367a84416a354bd2d6d277e713053deb4e3c5a9ee3bd484e1d38582",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Giving attention",
+      "alt": "A woman looks toward a young person explaining a small bridge model, with her hand resting on a phone on the counter.",
+      "refs": [
+        [
+          "nt/luke/8",
+          "Luke 8:18",
+          "18"
+        ]
+      ],
+      "caption": "The young person explains a bridge model while the woman looks toward her and the phone rests on the counter. Jesus' counsel to take care how we hear gives purpose to the attention we offer another person.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-6.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-hearing-03",
+      "sha256": "6a13b8827b104d6b84f73053ad8716181a0723e663c750d0cfae6b1734a5331e",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Returning to practice",
+      "alt": "A seated musician holds a cello between her knees, with her left fingers on the fingerboard and her right hand guiding a bow across the strings.",
+      "refs": [
+        [
+          "nt/luke/8",
+          "Luke 8:15",
+          "15"
+        ]
+      ],
+      "caption": "The musician watches the score as her fingers and bow work together. The good ground in Jesus' parable bears fruit with patience, reminding us of the value of steady, continuing effort.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-6.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-hearing-04",
+      "sha256": "a17a6dd77dec0d8ea4b95be698bf6462c72a5f11006629ea18fae16a85615fcb",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Making space to act",
+      "alt": "A woman puts papers on a shelf beside an inverted four-legged wooden stool and repair tools on a workbench.",
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:18–20",
+          "18-20"
+        ]
+      ],
+      "caption": "Papers move to a shelf while a stool and tools wait on the bench. The sower's warning about competing concerns asks us to notice what crowds out the response we intend to give.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-7.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-hearing-05",
+      "sha256": "baa4fb748c3d6c4de98fd711ce54dc044a85e2ba7369ecbc7665c1e475db92aa",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Putting a changed mind into action",
+      "alt": "A young person wearing gloves gathers plastic bottles into a recycling bin in a hall with tables and stacked chairs.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:28-32",
+          "28-32"
+        ]
+      ],
+      "caption": "The young person gathers bottles as the hall is cleared. The two-sons parable encourages us to let a changed mind become willing action.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-7.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-hearing-06",
+      "sha256": "641ad66e09c520f52df59442bfa0b4d70e0f9941771ab952725fea70f853f514",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Practicing what is learned",
+      "alt": "A learner holds a metal square against a wooden assembly while another adult points toward the work.",
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:24-27",
+          "24-27"
+        ]
+      ],
+      "caption": "The learner holds a square against the wood while another person points toward the work. Jesus' comparison of the builders joins hearing with doing, giving instruction a place in daily practice.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-7.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-hearing-07",
+      "sha256": "fe734c7abb2597f9469e523d56e5b955fed061e59939dd70ebb24a07741c461f",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Pausing before sharing",
+      "alt": "Two young people talk beside a laptop and a phone in a room marked Media Club.",
+      "refs": [
+        [
+          "nt/luke/6",
+          "Luke 6:43-45",
+          "43-45"
+        ]
+      ],
+      "caption": "The two young people turn toward each other beside their devices. Jesus' teaching about speech and its fruit encourages us to consider the words we share and their effect on others.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-7.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-hearing-08",
+      "sha256": "bec102c5b23c10df21a6a3908a85fe611df45f74e5f10980b3525d8e32206a9e",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Beginning with self-examination",
+      "alt": "A man studies printed pages with a pencil in hand while a woman sits nearby with a notebook and laptop.",
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:3-5",
+          "3-5"
+        ]
+      ],
+      "caption": "The man studies a page with a pencil in hand while a woman sits nearby. Jesus' teaching about the beam and mote asks us to examine ourselves before correcting someone else.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-7.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-kingdom-01",
+      "sha256": "4200ee5ad6958a058dab7262608414bcd090de5c5e447387d9240a998cf6ef72",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A small beginning in shared ground",
+      "alt": "A gardener lowers a seed into a soil-filled planting tray while other gardeners work behind her.",
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:30-32",
+          "30-32"
+        ]
+      ],
+      "caption": "The gardener lowers a seed into a tray of soil. Jesus' mustard-seed comparison teaches us to value a small beginning in light of the kingdom's growth.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-8.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-kingdom-02",
+      "sha256": "5da61d60db40c009ed998cc0ba3aa78d522532f7ab70b78aa7aca8fd8353598e",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Leaven worked through the dough",
+      "alt": "A man presses and folds dough with both hands on a floured kitchen worktop.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:33",
+          "33"
+        ]
+      ],
+      "caption": "The baker presses and folds dough on the worktop. This familiar work recalls Jesus' comparison of leaven spreading its effect through the whole batch.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-8.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-kingdom-03",
+      "sha256": "2b2ce87e88670bae5b4c6c579aa7bc8eeef8d6b0e7c3b8462b39bb70fb3f3054",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A commitment kept amid distractions",
+      "alt": "A woman sets a phone on a shelf while exchanging an attentive look with a man seated beside an open book.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:45-46",
+          "45-46"
+        ]
+      ],
+      "caption": "A phone is set on the shelf as the two adults give each other their attention. The pearl of great price asks us to consider how the use of our time expresses what we treasure.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-8.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-kingdom-04",
+      "sha256": "93506301b581e0f4b82580df5a13473f76cd9926fccdaaf7a19d5ad1bb2ea449",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Choosing substance over display",
+      "alt": "One young person places a cardboard display on a shelf while two others arrange patterned fabric at a worktable.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:44",
+          "44"
+        ]
+      ],
+      "caption": "One young person sets a handmade display on a shelf while the others arrange fabric at the table. The hidden-treasure parable asks what we are willing to set aside when we recognize something of greater worth.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-8.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-kingdom-05",
+      "sha256": "c54c854c2c2580e473d1a9a68e19ed7fdcf870db1ce8445f23ff7d35cb431dc4",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Protecting the roots while tending",
+      "alt": "A gardener wearing gloves lifts dry stems and plant debris from around young leafy plants in a raised bed.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:28-30",
+          "28-30"
+        ]
+      ],
+      "caption": "The gardener lifts dry stems from beside the young plants. The owner's concern for the wheat reminds us to consider what our actions might harm, even when we intend to put something right.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-9.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-kingdom-06",
+      "sha256": "e8e5b2278c534d49292d7f8ff8fb8255ff71a19d26be766daf3710b61b659da6",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Listening before passing judgment",
+      "alt": "A woman speaks with open-hand gestures while two men listen around a table, one holding a pen above a notebook.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:47-50",
+          "47-50"
+        ]
+      ],
+      "caption": "One person speaks while the others listen across the table. Jesus places the final separation in the net parable under God's authority, encouraging humility in our own judgments.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-9.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-kingdom-07",
+      "sha256": "450451ff5cbde4eeafeadd2c38981c86c9d101a5a8577dbc90b775f949f4b266",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A place in the shared work",
+      "alt": "A man holds a tray of cutlery while a woman gestures toward places at a dining table and others prepare the room.",
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:9-10",
+          "9-10"
+        ]
+      ],
+      "caption": "People prepare the table together, carrying cutlery and pointing out places. The wide invitation in Jesus' banquet teaching encourages a welcome in which others can participate.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-9.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    },
+    {
+      "key": "collection-kingdom-08",
+      "sha256": "42558ccffa8ea143ca76f6b667f0402488400083f3417fdbfcca49bb71ea8965",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Giving time without taking the spotlight",
+      "alt": "A woman shapes the rim of a clay pot while three adults watch around a pottery worktable.",
+      "refs": [
+        [
+          "nt/john/12",
+          "John 12:24-26",
+          "24-26"
+        ]
+      ],
+      "caption": "The potter shapes the clay while those around the table watch. Jesus' call to serve Him asks us to consider how the time and attention we give can benefit another person.",
+      "findings": {
+        "reviewType": "Editorial only; no new pixel inspection.",
+        "pixelReview": "collection-art-review-9.json",
+        "editorialFinding": "Two-sentence visitor caption: observed moment followed by source-connected reflection. Technical verification caveats remain in prior review records rather than visitor prose."
+      }
+    }
+  ]
+}

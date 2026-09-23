@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "scope": "Independent read-only canonical page/plan verification against saved before snapshots and source review. No build, preparation, import, or registry mutation.",
+  "checks": {
+    "allNonArtPageDataExactlyUnchanged": true,
+    "allProseSourcesQuestionsLinksUnchanged": true,
+    "allOtherPagesUnchanged": true,
+    "allOtherPlanEntriesUnchanged": true,
+    "allArtworkKeysAndCountsPreserved": true,
+    "eightExactPositions": [
+      {
+        "key": "servant-duty-01",
+        "sectionId": "setting",
+        "afterParagraph": 1
+      },
+      {
+        "key": "servant-duty-02",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "persistent-widow-01",
+        "sectionId": "setting",
+        "afterParagraph": 1
+      },
+      {
+        "key": "persistent-widow-02",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "persistent-widow-03",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "pharisee-publican-01",
+        "sectionId": "setting",
+        "afterParagraph": 1
+      },
+      {
+        "key": "pharisee-publican-02",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "pharisee-publican-03",
+        "sectionId": "story-and-teaching",
+        "afterParagraph": 1
+      }
+    ],
+    "onlyAllowedPlanFieldsChanged": {
+      "servant-duty-01": [
+        "afterParagraph"
+      ],
+      "servant-duty-02": [
+        "afterParagraph",
+        "sectionId"
+      ],
+      "persistent-widow-01": [
+        "afterParagraph"
+      ],
+      "persistent-widow-02": [
+        "afterParagraph"
+      ],
+      "persistent-widow-03": [
+        "title",
+        "afterParagraph",
+        "generationPrompt",
+        "sourceSceneDescription",
+        "sectionId"
+      ],
+      "pharisee-publican-01": [
+        "afterParagraph"
+      ],
+      "pharisee-publican-02": [
+        "afterParagraph"
+      ],
+      "pharisee-publican-03": [
+        "afterParagraph",
+        "sectionId"
+      ]
+    }
+  },
+  "evidenceBoundary": "Publican review/import and final rendered HTML placement are not certified by this canonical-only check; parent is importing concurrently.",
+  "findings": [],
+  "hashes": {
+    "pages.json": "7c06a9f043726153afbf6d5354ebccca2e8a616c5c47bb55620571057b273aed",
+    "parable-art-plan.json": "7250c84e9153718bdd01db8dbbe2642880efcfcbb845294771af6dd860b62fd6",
+    "duty-widow-publican-before-pages.json": "e52dea9e523e65ed1866cc176a057b00a4198845a0e98ddb681744b9fa79aa6d",
+    "duty-widow-publican-before-parable-art-plan.json": "3d3e8633d434347aabdb3e4e52e18147c27f0b7ff78fc630bc95d7073f12bf1d"
+  }
+}

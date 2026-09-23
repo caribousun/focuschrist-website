@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Actual original detail inspection of sheep-sabbath01-02, including direct canonical Christ pixel comparison for02.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical acceptance is not owner approval or browser verification."
+  ],
+  "entries": [
+    {
+      "key": "sheep-sabbath-01",
+      "generationKey": "sheep-sabbath-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6c2a23b3-495a-44d2-b70c-ffe07b9228e8.png",
+      "sha256": "8e094ee6cc6358efeeadeaed2955f4c696befef10aaf7f16799af4431fca3d5f",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A sheep in a pit",
+      "alt": "A cream-fleeced sheep with a dark face and drooping ears stands at the bottom of a rocky earthen pit and looks upward.",
+      "caption": "Jesus asks His hearers to consider a sheep that has fallen into a pit on the Sabbath. The vulnerable animal makes His question about practical care immediate and recognizable.",
+      "refs": [
+        [
+          "nt/matt/12",
+          "Matthew 12:11",
+          "11"
+        ]
+      ],
+      "findings": "Animal anatomy is coherent with visible legs planted on ground, natural muzzle/ears/eyes and wool texture. No wounds or implausible body joins. High viewpoint clearly establishes pit depth without claiming an actual recorded rescue location.",
+      "conditions": [
+        "Hypothetical comparison taught by Jesus, not a recorded rescue performed by Him.",
+        "Unnamed rescuer and sheep, no authenticated breed/biography/location or healing claim."
+      ]
+    },
+    {
+      "key": "sheep-sabbath-02",
+      "generationKey": "sheep-sabbath-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2fac5941-1d7f-454e-be0d-8c1a43b764bd.png",
+      "sha256": "fe73aa8a5d55be9b909254bd12476c8dc91f38974b35f6290be6953ee5ce7bff",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Lifting the sheep from the pit",
+      "alt": "A dark-haired bearded man braces inside the pit and supports the sheep beneath its chest as its front hooves reach the grassy edge.",
+      "caption": "In Jesus' comparison, a person takes hold of the sheep and lifts it out. This imagined rescue pictures the ordinary care He uses to challenge resistance to doing good on the Sabbath.",
+      "refs": [
+        [
+          "nt/matt/12",
+          "Matthew 12:11",
+          "11"
+        ]
+      ],
+      "findings": "Same cream fleece, dark gray-brown face, long dark ears and light eyes preserve sheep01 continuity. Visible arm and supporting palm cradle chest behind forelegs; second arm is largely occluded around upper body, with no visible contradictory limb. Front legs extend toward rim and rear body remains supported from below; rescuer braced leg/posture plausible. Gaze attends sheep/edge rather than viewer. Compared actual canonical Christ reference: rescuer has denser black beard, stronger angular brow/long prominent nose and fuller tightly curled dark hair; distinct interpretation, not canonical Christ. Natural skin, wool, terrain and cloth retain photographic realism.",
+      "conditions": [
+        "Hypothetical comparison taught by Jesus, not a recorded rescue performed by Him.",
+        "Unnamed rescuer and sheep, no authenticated breed/biography/location or healing claim."
+      ]
+    }
+  ]
+}

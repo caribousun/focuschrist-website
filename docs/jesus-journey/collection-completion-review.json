@@ -1,0 +1,515 @@
+{
+  "scope": "Independent static completion audit of six modern application collections; not a new pixel review, release certification or owner approval.",
+  "owner_approval": false,
+  "published": false,
+  "collections": [
+    {
+      "url": "/jesus-christ/parables/mercy.html",
+      "count": 8,
+      "entries": [
+        {
+          "key": "collection-mercy-01",
+          "section": "notice-the-one",
+          "review_record": "collection-art-review-1.json",
+          "original_sha256": "c915426c038f9384edb4463cb2418d6030fccbebde08b6de04710ae715e2e4e1",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-mercy-02",
+          "section": "notice-the-one",
+          "review_record": "collection-art-review-1.json",
+          "original_sha256": "44d4383a1c93c6f869ff2ba120b407f0da265911225a2306398aeccf4dc8e254",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-mercy-03",
+          "section": "mercy-and-response",
+          "review_record": "collection-art-review-1.json",
+          "original_sha256": "f4266601cd4c10b05402e779155b272ad57858645bf59af70c9d32f7d9e7384a",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-mercy-04",
+          "section": "mercy-and-response",
+          "review_record": "collection-art-review-1.json",
+          "original_sha256": "fd51b9145f6454f8760681da9e9b8834d048b4b9580fa15dc8e92025fe94cba7",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-mercy-05",
+          "section": "patient-cultivation",
+          "review_record": "collection-art-review-2.json",
+          "original_sha256": "a044912be08f9d460aef30efc6e842798aa783dc513755c6ade117e9e73b752f",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-mercy-06",
+          "section": "patient-cultivation",
+          "review_record": "collection-art-review-2.json",
+          "original_sha256": "de19d9d11300d4d176f14e26119c0f029c481163112c5b45bfebf663ed875301",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-mercy-07",
+          "section": "shared-joy",
+          "review_record": "collection-art-review-2.json",
+          "original_sha256": "e997c83f2fde949b07a5f5c80aafe2740d575d516e5ea4543b6f9006f0456f06",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-mercy-08",
+          "section": "shared-joy",
+          "review_record": "collection-art-review-2.json",
+          "original_sha256": "7a2c6a352695625d68761b153928dd4436daef7d3a4aab57d62dfac0c73388ce",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "url": "/jesus-christ/parables/neighbor.html",
+      "count": 8,
+      "entries": [
+        {
+          "key": "collection-neighbor-01",
+          "section": "seeing-the-need",
+          "review_record": "collection-art-review-3.json",
+          "original_sha256": "7148405dda16b0e87b59a227f1f264a709b0874dfcb73e00acfb8952acd99aba",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-neighbor-02",
+          "section": "seeing-the-need",
+          "review_record": "collection-art-review-5.json",
+          "original_sha256": "9052deac18ac0f0bd3930ab36e84714d91a62b822db5a2ae741159f85e666ec3",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-neighbor-03",
+          "section": "welcome-with-dignity",
+          "review_record": "collection-art-review-3.json",
+          "original_sha256": "03e5b88f17225495cc244849e72a06799f47a116343e6693ff158fdffc725648",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-neighbor-04",
+          "section": "welcome-with-dignity",
+          "review_record": "collection-art-review-3.json",
+          "original_sha256": "f8a19785db5f976c835c9c1393fa76f764c526a0432df05c5f446661034281eb",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-neighbor-05",
+          "section": "care-that-continues",
+          "review_record": "collection-art-review-4.json",
+          "original_sha256": "1efe8bec60864160fb62ae6df18bbf8798d09efba54a145678ba090d630a98c3",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-neighbor-06",
+          "section": "care-that-continues",
+          "review_record": "collection-art-review-4.json",
+          "original_sha256": "38dd4792caaccb36631b34c77609fc0bfc0504c6392a93e80d50f642fd1137fd",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-neighbor-07",
+          "section": "mercy-and-boundaries",
+          "review_record": "collection-art-review-4.json",
+          "original_sha256": "97aa1e6965b27a6748ce73fd0dd28834a8708a7c076528bf590063f35276160d",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-neighbor-08",
+          "section": "mercy-and-boundaries",
+          "review_record": "collection-art-review-5.json",
+          "original_sha256": "4d9841181befbd344d87d283585992d209d82435df1e06668a17d5c4f041d663",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "url": "/jesus-christ/parables/hearing.html",
+      "count": 8,
+      "entries": [
+        {
+          "key": "collection-hearing-01",
+          "section": "receiving-carefully",
+          "review_record": "collection-art-review-6.json",
+          "original_sha256": "0914c4a8defbdfe2e770dee91e36c2f8cc031199b440cee8616535eeeaa7bd15",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-hearing-02",
+          "section": "receiving-carefully",
+          "review_record": "collection-art-review-6.json",
+          "original_sha256": "e2702c68d367a84416a354bd2d6d277e713053deb4e3c5a9ee3bd484e1d38582",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-hearing-03",
+          "section": "roots-and-practice",
+          "review_record": "collection-art-review-6.json",
+          "original_sha256": "6a13b8827b104d6b84f73053ad8716181a0723e663c750d0cfae6b1734a5331e",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-hearing-04",
+          "section": "roots-and-practice",
+          "review_record": "collection-art-review-7.json",
+          "original_sha256": "a17a6dd77dec0d8ea4b95be698bf6462c72a5f11006629ea18fae16a85615fcb",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-hearing-05",
+          "section": "words-become-actions",
+          "review_record": "collection-art-review-7.json",
+          "original_sha256": "baa4fb748c3d6c4de98fd711ce54dc044a85e2ba7369ecbc7665c1e475db92aa",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-hearing-06",
+          "section": "words-become-actions",
+          "review_record": "collection-art-review-7.json",
+          "original_sha256": "641ad66e09c520f52df59442bfa0b4d70e0f9941771ab952725fea70f853f514",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-hearing-07",
+          "section": "discernment-and-humility",
+          "review_record": "collection-art-review-7.json",
+          "original_sha256": "fe734c7abb2597f9469e523d56e5b955fed061e59939dd70ebb24a07741c461f",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-hearing-08",
+          "section": "discernment-and-humility",
+          "review_record": "collection-art-review-7.json",
+          "original_sha256": "bec102c5b23c10df21a6a3908a85fe611df45f74e5f10980b3525d8e32206a9e",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "url": "/jesus-christ/parables/kingdom.html",
+      "count": 8,
+      "entries": [
+        {
+          "key": "collection-kingdom-01",
+          "section": "small-beginnings",
+          "review_record": "collection-art-review-8.json",
+          "original_sha256": "4200ee5ad6958a058dab7262608414bcd090de5c5e447387d9240a998cf6ef72",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-kingdom-02",
+          "section": "small-beginnings",
+          "review_record": "collection-art-review-8.json",
+          "original_sha256": "5da61d60db40c009ed998cc0ba3aa78d522532f7ab70b78aa7aca8fd8353598e",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-kingdom-03",
+          "section": "recognizing-worth",
+          "review_record": "collection-art-review-8.json",
+          "original_sha256": "2b2ce87e88670bae5b4c6c579aa7bc8eeef8d6b0e7c3b8462b39bb70fb3f3054",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-kingdom-04",
+          "section": "recognizing-worth",
+          "review_record": "collection-art-review-8.json",
+          "original_sha256": "93506301b581e0f4b82580df5a13473f76cd9926fccdaaf7a19d5ad1bb2ea449",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-kingdom-05",
+          "section": "patience-and-discernment",
+          "review_record": "collection-art-review-9.json",
+          "original_sha256": "c54c854c2c2580e473d1a9a68e19ed7fdcf870db1ce8445f23ff7d35cb431dc4",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-kingdom-06",
+          "section": "patience-and-discernment",
+          "review_record": "collection-art-review-9.json",
+          "original_sha256": "e8e5b2278c534d49292d7f8ff8fb8255ff71a19d26be766daf3710b61b659da6",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-kingdom-07",
+          "section": "invitation-and-response",
+          "review_record": "collection-art-review-9.json",
+          "original_sha256": "450451ff5cbde4eeafeadd2c38981c86c9d101a5a8577dbc90b775f949f4b266",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-kingdom-08",
+          "section": "invitation-and-response",
+          "review_record": "collection-art-review-9.json",
+          "original_sha256": "42558ccffa8ea143ca76f6b667f0402488400083f3417fdbfcca49bb71ea8965",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "url": "/jesus-christ/parables/stewardship.html",
+      "count": 8,
+      "entries": [
+        {
+          "key": "collection-stewardship-01",
+          "section": "entrusted-resources",
+          "review_record": "collection-art-review-10.json",
+          "original_sha256": "9766f72a619187bfae60306b2b0b6c0804edab5ded397b2e77af5ab29bdbd507",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-stewardship-02",
+          "section": "entrusted-resources",
+          "review_record": "collection-art-review-10.json",
+          "original_sha256": "c61a0ebe79e2a0427899573e3f7d5f1ab03f947d0fdf4b9dfcde7b00cc6ef42a",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-stewardship-03",
+          "section": "using-what-is-given",
+          "review_record": "collection-art-review-10.json",
+          "original_sha256": "8d0214e0a0a8e594d0556983ef6952f1ec758674d1db9b5e32268caf030e9bff",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-stewardship-04",
+          "section": "using-what-is-given",
+          "review_record": "collection-art-review-10.json",
+          "original_sha256": "91f6f729eb413e5258ab5f09d86eac688d5faffadac2fdbb5b2f90c829df587d",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-stewardship-05",
+          "section": "responsibility-over-status",
+          "review_record": "collection-art-review-11.json",
+          "original_sha256": "b2d4b2bfc96104c697bff9557839d74bcc42ec3eb5b15198f9f3d35a6be3955f",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-stewardship-06",
+          "section": "responsibility-over-status",
+          "review_record": "collection-art-review-11.json",
+          "original_sha256": "2fa807d40efdc40c83121f7bfb3d63531768da650f4a9ce75c0acfbe66aa1cc0",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-stewardship-07",
+          "section": "freedom-from-comparison",
+          "review_record": "collection-art-review-11.json",
+          "original_sha256": "65ef4f1f5042158fa7e69b4793bcbe03cc36439b57fbc87d0d2cf63ec7244b6d",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-stewardship-08",
+          "section": "freedom-from-comparison",
+          "review_record": "collection-art-review-11.json",
+          "original_sha256": "b388d10f8bd6965f613760a8aa68668677ebd11d515835fecde1115363c51b14",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "url": "/jesus-christ/parables/watchfulness.html",
+      "count": 8,
+      "entries": [
+        {
+          "key": "collection-watchfulness-01",
+          "section": "prayer-with-honesty",
+          "review_record": "collection-art-review-12.json",
+          "original_sha256": "5d0a14081e14bd4811ec3af406725fe7fcdaa211860c55d99dc3f6ad6013b791",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-watchfulness-02",
+          "section": "prayer-with-honesty",
+          "review_record": "collection-art-review-12.json",
+          "original_sha256": "4350995b70b5a502d71f1f165fb99ef37899583ccc2cc1d59c0064dcef9f930b",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-watchfulness-03",
+          "section": "readiness-without-alarm",
+          "review_record": "collection-art-review-12.json",
+          "original_sha256": "b908a70a052919976c67f42964a6c9c1f32b3e6436d0143165fc41e7f782ee44",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-watchfulness-04",
+          "section": "readiness-without-alarm",
+          "review_record": "collection-art-review-12.json",
+          "original_sha256": "c17cd6f0cad68cb7c97ddb7e2387ce4021ba5d83feb962b093ef90d4806623c8",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-watchfulness-05",
+          "section": "faithfulness-in-the-interval",
+          "review_record": "collection-art-review-13.json",
+          "original_sha256": "67e2e4e5a720db7d18ef5192851e44e315b9193bc00adc2de3d937f697902162",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-watchfulness-06",
+          "section": "faithfulness-in-the-interval",
+          "review_record": "collection-art-review-13.json",
+          "original_sha256": "3dcac43b0e72a0b9883fc1a9f57f38788afb5da2e76553d60bf97aa51b54deeb",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-watchfulness-07",
+          "section": "trust-amid-uncertainty",
+          "review_record": "collection-art-review-13.json",
+          "original_sha256": "7c25872317496dec69c5c5e534458b7505379c0da8869bafa7214b82da04927b",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        },
+        {
+          "key": "collection-watchfulness-08",
+          "section": "trust-amid-uncertainty",
+          "review_record": "collection-art-review-13.json",
+          "original_sha256": "2de685374ccd60ff9a47ffdf081dc6d658c149437b8a4987dbb8ceec23bf3a4a",
+          "caption_matches_review": true,
+          "figure_immediately_after_context": true,
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "findings": [
+    {
+      "severity": "minor",
+      "type": "source_range",
+      "page": "/jesus-christ/parables/stewardship.html",
+      "section": "using-what-is-given",
+      "finding": "The opening paragraph includes the third servant's fear and buried trust, but its sole section reference stops at Matthew25:23; the explicit fear/confession appears in24-25. The two modern images rightly retain14-23 for their distinct applications.",
+      "suggested_fix": "Extend this section reference to Matthew25:14-30, or add24-25 alongside the third-servant sentence; leave the artwork references alone.",
+      "status": "resolved_in_source_and_page_model",
+      "resolution": {
+        "reference": [
+          "nt/matt/25",
+          "Matthew 25:14–30",
+          "14-30"
+        ],
+        "files": [
+          "docs/jesus-journey/parable-collections-reviewed.json",
+          "docs/jesus-journey/pages.json"
+        ],
+        "artwork_references": "unchanged",
+        "generated_html": "Awaiting parent rebuild."
+      }
+    },
+    {
+      "severity": "informational",
+      "type": "metadata",
+      "finding": "All accepted collection registry entries retain the earlier status string planned; generation and visual review required, alongside reviewed=true and valid exact-hash review evidence. Functional gates use reviewed and hashes correctly.",
+      "suggested_fix": "At a later metadata cleanup, derive or update status consistently so human readers do not mistake completed review evidence for a pending generation plan."
+    }
+  ],
+  "summary": {
+    "collections": 6,
+    "modern_application_artworks": 48,
+    "distinct_original_hashes": 48,
+    "registry_reviewed_total": 132,
+    "planned_unprepared": 170,
+    "technical_errors": 0
+  },
+  "editorial_assessment": "All 48 captions preserve their accepted review text and distinguish imagined modern application or reflective analogy from the scripture narrative. The images are each immediately after a substantive context paragraph in the correct four-part collection sequence (two images per part). Applications such as communication access, gardening, ordinary work and preparation are not presented as new historical scripture events. A few captions explicitly retain limits on invisible outcomes, biographies and completion; no hidden historical or divine-outcome claim identified. Mercy04 draws on the two-sons teaching while neighboring prose addresses honest response; its own figure source clearly supplies that connection. Watchfulness08 returns to the birds/lilies teaching within a section that also discusses John16; its own source remains Matthew6, avoiding a false picture-to-John16 attribution."
+}

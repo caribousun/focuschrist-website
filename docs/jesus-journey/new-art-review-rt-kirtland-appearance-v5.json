@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rt-kirtland-appearance-v5",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rt-kirtland-appearance",
+      "generationKey": "rt-kirtland-appearance-v5",
+      "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-kirtland-appearance-v5-20260923.png",
+      "sha256": "cd4929be9356ff353d12772a3c947882a71933dad2b48a0e2db54d1391f71c5f",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The Lord in His house",
+      "alt": "Joseph Smith and Oliver Cowdery look upward toward the white-haired Savior in the Kirtland Temple.",
+      "caption": "Joseph and Oliver lift their eyes toward the Savior in the temple. His words assure them that He has accepted the house built to His name.",
+      "refs": [
+        [
+          "dc-testament/dc/110",
+          "Doctrine and Covenants 110:1–10",
+          "1-10"
+        ]
+      ],
+      "findings": "Direct final v5 pixel inspection: the earlier pink mark on the sleeve is removed. Clean draped white linen now ends above visible wrist skin. Subtle healed marks remain in the open palms and near the exposed wrist creases; there are no fresh wounds or marks printed on cloth. White hair and beard, recognizable approved Christ identity, downward reciprocal attention to Joseph, distinct Joseph and Oliver reference identities, and amber-gold pulpit breastwork remain coherent. The repaired cuff is anatomically clearer than v3/v4.",
+      "conditions": [
+        "Use the warm caption and exact D&C 110 source. Treat staging and architecture as artistic interpretation of the recorded vision, not a historical photograph.",
+        "Subtle wrist scars should not be strengthened into fresh wounds or decorative cloth marks.",
+        "Technical review is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "assets/identities/oliver-research-master-20260914.png"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng"
+      ]
+    }
+  ]
+}

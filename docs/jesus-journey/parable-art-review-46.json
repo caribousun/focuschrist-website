@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent original-resolution pixel/source review of Good Samaritan01-03; no imports or page changes.",
+  "entries": [
+    {
+      "key": "good-samaritan-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ac7d03cd-0ffe-4697-abac-d4686da443cd.png",
+      "sha256": "792df63f426e993b90ae1a82e181766a4d139e9b703cfe20a5ac02622e06fd8f",
+      "status": "pass_with_caption_conditions",
+      "alt": "A wounded barefoot traveler lies beside rocks on a dry road, wearing a torn light tunic with bruises and abrasions visible on his face and arm.",
+      "caption": "The wounded traveler lies alone beside the road after the attack in Jesus' parable. This imagined setting makes his need visible without adding a name or biography to the man Luke describes.",
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:30",
+          "30"
+        ]
+      ],
+      "findings": [
+        "Original-resolution image inspected. Curly dark hair, short beard, torn light tunic, forehead injury and abraded upper arm establish traveler continuity for02/03.",
+        "Non-graphic bruises/abrasions convey injury without exposed tissue or fresh gore. Torn garment retains modest coverage; no invented visible attack or assailants.",
+        "Side-lying body, resting hand, bent legs and overlapping bare feet plausible. Face appears pained and weak, not cheerful or posing; photorealistic skin, cloth, stones and daylight.",
+        "Luke10:30 describes stripping, wounding and abandonment half dead; modest garment is an artistic presentation choice. Caption does not convert appearance into medical diagnosis or exact historical portrait."
+      ],
+      "conditions": [
+        "No invented private motives, historical portrait identity, diagnosis, recovery or exact geographical reconstruction claims."
+      ]
+    },
+    {
+      "key": "good-samaritan-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b4ab3a11-36a7-41f4-8ced-4e00c2da1228.png",
+      "sha256": "79fc2df2f9a267c657af26d341aa9e66bcd4d0359b824a569b1f0258a08c9bf7",
+      "status": "pass_with_caption_conditions",
+      "alt": "The wounded traveler remains beside the rocks while an older gray-bearded man in light robes walks along the far side of the road.",
+      "caption": "The priest continues along the other side while the traveler remains on the ground. Jesus tells us that he saw the man and passed by, without explaining his private reasons.",
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:31",
+          "31"
+        ]
+      ],
+      "findings": [
+        "Traveler preserves01 facial/clothing/injury identity and prone position; dry rocky road continuity remains clear.",
+        "Older passerby has gray/white beard, light robe and brown mantle, distinct from younger Levite03. Feet and walking posture coherent; broad separation places him opposite traveler.",
+        "He is shown continuing away after seeing; this is not a claim his present gaze must remain fixed on the wounded man. No invented fear, ritual excuse, contempt or malice attributed.",
+        "Traveler visible hand/limbs remain coherent; injury restrained and non-graphic; daylight/materials photographic."
+      ],
+      "conditions": [
+        "No invented private motives, historical portrait identity, diagnosis, recovery or exact geographical reconstruction claims."
+      ]
+    },
+    {
+      "key": "good-samaritan-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5f4bef6f-c8e2-431c-a575-8ab773c2e7ed.png",
+      "sha256": "dd799689f80d09bb69baceef24d23656c39b3ed34c6a2c272b44eb5360765124",
+      "status": "pass_with_caption_conditions",
+      "alt": "A young clean-shaven passerby turns his head toward the wounded traveler while continuing along the opposite side of the road.",
+      "caption": "The Levite looks toward the injured traveler but continues past him. In Jesus' account, coming near and seeing the need do not yet become an act of care.",
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:32",
+          "32"
+        ]
+      ],
+      "findings": [
+        "Young Levite clean-shaven face and ochre clothing differ clearly from gray-bearded priest02. Head turns toward traveler while body/feet continue along opposite side; visual action fits seeing and passing.",
+        "Traveler retains dark curls, beard, torn sleeve and arm abrasion. Camera is now behind him; he partly props head/upper body to look toward passerby, remaining on the ground.",
+        "Raised head makes03 somewhat more alert than01/02, but does not show recovery, standing or capacity to resume travel. Half dead does not require continuous unconsciousness; no source contradiction sufficient to require revision. Keep later sequence consistent with severe need for assistance.",
+        "Supporting elbow/forearm and hand contact on ground plausible. Levite hands, sandals and legs coherent; no duplicated faces or limbs.",
+        "Luke10:32 records coming, looking and passing; exact pose and moment are artistic staging, and caption does not invent motive or relationship."
+      ],
+      "conditions": [
+        "No invented private motives, historical portrait identity, diagnosis, recovery or exact geographical reconstruction claims."
+      ]
+    }
+  ]
+}

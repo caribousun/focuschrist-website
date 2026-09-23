@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Four modern neighbor illustrations viewed full-frame and compared with their intended application.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 1,
+    "revisionKeys": [
+      "collection-neighbor-02"
+    ]
+  },
+  "globalConditions": [
+    "Fictional present-day applications, not documentary events or literal parable scenes.",
+    "No visible Christ. Respect agency, avoid invisible-biography claims and precise linguistic/medical assertions not established by pixels.",
+    "Technical source/visual pass is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "collection-neighbor-01",
+      "sha256": "7148405dda16b0e87b59a227f1f264a709b0874dfcb73e00acfb8952acd99aba",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Listening before helping",
+      "alt": "A wheelchair user gestures toward a lowered bus ramp while another rider stands beside the open entrance.",
+      "caption": "The wheelchair user directs attention toward the entrance while another rider listens. This imagined scene applies the Samaritan's attentive care by asking what help is wanted and respecting the person's answer. Good intentions become more useful when the person receiving assistance keeps a voice in how it is offered.",
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:33-35",
+          "33-35"
+        ]
+      ],
+      "findings": "Wheelchair user's posture and extended hand coherent; other hand stays near chair. Other rider's hand rests at door edge without pushing or grabbing him. Ramp is deployed onto pavement and boarding has not begun; no forced handling. Photographic faces and clothing credible.",
+      "conditions": [
+        "Do not claim a gate is visible, that the rider operates bus equipment, or that boarding is complete.",
+        "This is a pause for communication, not a technical demonstration or certification of ramp operation."
+      ]
+    },
+    {
+      "key": "collection-neighbor-02",
+      "sha256": "ab00375710ac09df2e11cc9b84468288d36602f1bae385d4f734f656c7c18412",
+      "status": "revise",
+      "recommendedTitle": null,
+      "alt": "A man makes a phone call beside a woman and a parked vehicle on a narrow roadside shoulder.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:34-35",
+          "34-35"
+        ]
+      ],
+      "findings": "Both people stand on the traffic-facing side of the vehicle very near the lane. A warning triangle sits close behind the vehicle. This does not support the promised well-away-from-traffic arrangement. Faces, phone grip and anatomy otherwise plausible.",
+      "conditions": [
+        "Revise to a broad off-road pullout or clearly separated pedestrian refuge, with both people well clear of vehicle lanes.",
+        "Keep arranging assistance as the action, but do not describe this existing composition as a safe place or use it as the approved positive example.",
+        "Do not import current hash."
+      ]
+    },
+    {
+      "key": "collection-neighbor-03",
+      "sha256": "03e5b88f17225495cc244849e72a06799f47a116343e6693ff158fdffc725648",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Making room for communication",
+      "alt": "Three adults face one another and use hand gestures at an indoor arts gathering.",
+      "caption": "The group gives shared communication its attention. This imagined example invites willingness to learn and to make participation possible for one another. Alongside Jesus' teaching about an inclusive invitation, it asks whether our welcome includes the effort needed for others to take part.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:12-14",
+          "12-14"
+        ]
+      ],
+      "findings": "Visible hand shapes, fingers, wrists and attentive faces anatomically plausible; no obvious duplicated fingers. Artwork establishes community arts setting. A still frame cannot verify fluency, a precise sign, or anyone's hearing status.",
+      "conditions": [
+        "Do not name a specific ASL word or certify linguistic correctness.",
+        "Keep Deaf/hearing identities or instructional roles as fictional scenario premises only if used; they are not inferred from appearance.",
+        "Caption can say shared communication without overclaiming a verified language."
+      ]
+    },
+    {
+      "key": "collection-neighbor-04",
+      "sha256": "f8a19785db5f976c835c9c1393fa76f764c526a0432df05c5f446661034281eb",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Access that supports participation",
+      "alt": "A man wearing headphones explores a raised architectural model with both hands while a woman watches attentively beside him.",
+      "caption": "The visitor explores the model through touch, setting the pace of his own encounter with it. This imagined museum scene applies the spirit of an inclusive invitation by treating access as part of participation. The nearby helper pays attention without taking over the visitor's hands or experience.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:12-14",
+          "12-14"
+        ]
+      ],
+      "findings": "Both visitor hands rest naturally on model edges, fingertips credible. Cane visible at side; headphones and audio device coherent. Helper remains beside him without hand-over-hand control. Natural dignified expressions and photographic materials.",
+      "conditions": [
+        "Do not infer a medical diagnosis from sunglasses or equipment; blindness belongs to the explicitly fictional scenario if mentioned.",
+        "Do not identify the model as a verified site reconstruction or endorse particular architectural history.",
+        "No claim that the helper caused independence or that the visitor needs constant supervision."
+      ]
+    }
+  ]
+}

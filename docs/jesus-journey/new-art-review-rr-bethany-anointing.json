@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rr-bethany-anointing",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rr-bethany-anointing",
+      "generationKey": "rr-bethany-anointing",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-38499fc5-63e3-496b-a111-64a7d8657149.png",
+      "sha256": "ced24d1b0b0fc2a201bce37c8297acf19d7dcca2bb539c608d6ff406bff3233a",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Mary's gift at Bethany",
+      "alt": "Mary pours ointment onto Jesus's feet while He looks toward her and Martha serves behind them.",
+      "caption": "Ointment falls from Mary's small vessel onto the Savior's feet. He meets her gaze with quiet attention while Martha serves nearby, and Mary's gift fills the house with fragrance.",
+      "refs": [
+        [
+          "nt/john/12",
+          "John 12:1–3",
+          "1-3"
+        ]
+      ],
+      "findings": "Actual canonical Christ and Mary/Martha scene compared. Christ's facial proportions and natural quiet expression remain recognizable; eyes meet Mary's attentive upward gaze. Mary retains face shape, nose, lips and dark hair of seated left reference; Martha retains covered hair, face profile and serving role. Visible ointment stream reaches foot, coherent vessel grip and foot anatomy, modest full garments, photographic textures. No footwashing basin, erotic framing, tears or Resurrection scars.",
+      "conditions": [
+        "John 12 identifies Mary of Bethany, not Mary Magdalene or an unnamed sinful woman. The frame shows pouring, not yet hair wiping; do not claim visible wiping. Exact vessel, room, reclining posture and garments remain interpretation.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/jesus-journey/martha-and-mary-full.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng"
+      ]
+    }
+  ]
+}

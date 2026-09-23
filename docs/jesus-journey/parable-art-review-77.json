@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original inspection of grain-wheat-03-v2 after botanical correction.",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical acceptance is not owner approval or browser verification."
+  ],
+  "entries": [
+    {
+      "key": "grain-wheat-03",
+      "generationKey": "grain-wheat-03-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-702a503d-0c65-4b1e-8d47-f3b0f605fd84.png",
+      "sha256": "2fd967cf12befa24857fa35117998b212ff2697b9efa26c4c0908e899d5e0b6d",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A grain beginning to grow",
+      "alt": "Pale roots and a short green shoot emerge together from one end of a wheat kernel resting in moist soil.",
+      "caption": "Small roots and a shoot emerge from a grain in the soil. This beginning of growth accompanies Jesus' comparison of a solitary grain with the fruitfulness He connects to His approaching death.",
+      "refs": [
+        [
+          "nt/john/12",
+          "John 12:24",
+          "24"
+        ]
+      ],
+      "findings": "Direct full-original inspection: largely intact elongated grain, distal brush at left; roots and short coleoptile visibly emerge together from basal region at right. Corrects opposite-end root/shoot defect of rejected original. Natural moist soil, macro surface and root texture; no cutaway, bean-like cotyledon halves, diagram or mature ear.",
+      "conditions": [
+        "Early botanical growth is illustrative, not yet the much fruit of the verse and not a claim that literal biological death causes germination.",
+        "Preserve rejected original and review75 unchanged.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

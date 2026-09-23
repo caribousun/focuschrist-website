@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "filesChanged": [
+    "docs/jesus-journey/pages.json",
+    "docs/jesus-journey/parable-art-plan.json"
+  ],
+  "snapshots": [
+    "steward-placement-before-pages.json",
+    "steward-placement-before-plan.json"
+  ],
+  "checks": {
+    "allNonArtPageDataExactlyUnchanged": true,
+    "allOtherPagesUnchanged": true,
+    "allOtherArtPlanEntriesUnchanged": true,
+    "oilThenWheatImmediatelyAfterNarrativeParagraph": true
+  },
+  "overrides": [
+    {
+      "key": "unjust-steward-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "unjust-steward-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    }
+  ],
+  "registrySectionChangesRequired": [
+    {
+      "key": "unjust-steward-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    }
+  ],
+  "noImportBuildRegistryMutation": true
+}

@@ -30,7 +30,8 @@ def audit():
    location=figure.attrs.get('id','reading-'+str(figure.order))
    src=n.attrs.get('src','');u=urlsplit(src)
    if u.scheme:issues.append('Body artwork requires an inventoried local original: '+src);continue
-   file=(page.parent/u.path).resolve();assert file.is_file(),file
+   file=(ROOT/u.path.lstrip('/') if u.path.startswith('/') else page.parent/u.path).resolve()
+   assert file.is_relative_to(ROOT) and file.is_file(),file
    key=identity(file);digest=hashlib.sha256(file.read_bytes()).hexdigest()
    dims=image_dimensions(file);htmlratio=int(n.attrs['width'])/int(n.attrs['height']) if n.attrs.get('width') and n.attrs.get('height') else None
    if htmlratio and abs(htmlratio/(dims[0]/dims[1])-1)>.01:issues.append('HTML intrinsic ratio differs from source: '+src)

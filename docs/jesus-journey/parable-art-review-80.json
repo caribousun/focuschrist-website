@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and reference reviewer",
+  "scope": "Three branch originals directly compared with actual continuity references.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 1
+  },
+  "entries": [
+    {
+      "key": "bb-abram-stars",
+      "generationKey": "bb-abram-stars",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b6cd9af1-acce-45e4-9a40-20027d201c48.png",
+      "sha256": "990fdd7218dbfc76eee982703226200619f073056127272521cc6c1df6f94f44",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Abram looks toward the stars",
+      "alt": "An older bearded Abram stands outside a lamplit tent, gazing up at the stars.",
+      "caption": "Abram looks into the night sky. The Lord directs his attention to the stars as He promises descendants beyond his counting.",
+      "refs": [
+        [
+          "ot/gen/15",
+          "Genesis 15:1\u00e2\u20ac\u201c6",
+          "1-6"
+        ]
+      ],
+      "findings": "Recognizable broad brow, prominent nose, long white beard and taupe headcloth match left Abraham in actual rich-man-lazarus03 reference. Natural upward attention, plausible hands and robe, photographic stars and lamplight.",
+      "conditions": [
+        "No exact event age, named star pattern, astronomical reconstruction or visible divine form claimed.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "bb-burning-bush",
+      "generationKey": "bb-burning-bush",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-89669fe7-34fd-4c0b-93a0-97e0c7703cbf.png",
+      "sha256": "ff9a61d7c7759b9f12a726ef9e31a378d248b6ad82afa684ed08eda33a1d1fe2",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Moses turns aside",
+      "alt": "Gray-haired Moses removes a sandal beside a burning shrub, with sheep on the rocky slope behind him.",
+      "caption": "Moses pauses beside the burning bush and removes his sandal. An ordinary place of shepherding becomes holy ground as the Lord calls him.",
+      "refs": [
+        [
+          "ot/ex/3",
+          "Exodus 3:1\u00e2\u20ac\u201c6",
+          "1-6"
+        ]
+      ],
+      "findings": "Gray wavy hair, long beard, brow and burgundy mantle match actual central Moses serpent reference. Age appears suitably elderly. One bare foot and removed sandal on ground, second sandal being removed coherently; bush branches remain visible amid flames. Attentive startled gaze toward bush fits this action before hiding face.",
+      "conditions": [
+        "Interpretation of Exodus3:1-6; caption must not say his face is already covered, or that this is exact recorded landscape.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "bb-stones-prepared",
+      "generationKey": "bb-stones-prepared",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7cd1b5cf-8463-4b4b-9992-5cefe121752c.png",
+      "sha256": "4a285907defab08b01ef92fc39d7c8c01704c28683a558a3472baa3f878db516",
+      "status": "revise",
+      "recommendedTitle": "Stones carried to the mountain",
+      "alt": "The brother of Jared kneels on a mountain and places pale translucent stones on a flat rock.",
+      "caption": "The brother of Jared prepares stones on the mountain before asking the Lord to give them light.",
+      "refs": [
+        [
+          "bofm/ether/3",
+          "Ether 3:1\u00e2\u20ac\u201c5",
+          "1-5"
+        ]
+      ],
+      "findings": "Actual reference continuity passes: forehead band, curled hair, beard, face and woven brown clothing match right man in owner reference. Natural hands and action. However only fourteen separately countable stones are visible: seven left including the stone beneath his fingertips, seven right. Ether3:1 requires sixteen.",
+      "conditions": [
+        "Narrow edit: preserve man, face, hands, surroundings and fourteen stones; add exactly two separately visible unlit translucent stones, one to each loose group, yielding eight plus eight. Do not add glow, markings or extra pebbles resembling stones.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

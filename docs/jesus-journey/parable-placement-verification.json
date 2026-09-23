@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent placement verification",
+  "status": "pass",
+  "scope": "Read-only verification of placement helper, assembler integration, current plan/pages/registry, correction receipt, and three rebuilt HTML files.",
+  "checks": {
+    "sourceProse": "All 63 parable pages match authoritative reviewed content after ignoring art blocks; only Sower reference-selection normalization differs. No prose difference found.",
+    "semanticOrder": {
+      "talents": "First-paragraph work and burial scenes precede return paragraph and accounts scene.",
+      "twoDebtors": "Forgiveness scene follows debt/forgiveness paragraph before return to Simon and woman.",
+      "goodSamaritan": "Priest/Levite images follow passersby paragraph; Samaritan arrival, binding, transport, and inn images follow care paragraph; later provision follows receiving-the-word paragraph."
+    },
+    "rebuiltHTML": "All prose and art token positions for the three requested pages are present and ordered exactly as current page model.",
+    "explicitPlanPositions": "All ten afterParagraph values match correction receipt.",
+    "helperDefault": "No override preserves previous alternating prose/art behavior and appends other blocks; tested with surplus images and questions.",
+    "helperOverride": "Multiple pictures grouped after selected paragraph in key order; tested.",
+    "invalidPositions": "0, -1, beyond paragraph count, boolean, float, string, and null positions raise ValueError.",
+    "assembler": "Imports helper and passes optional plan afterParagraph mapping; no full assembler executed to avoid unrelated registry normalization."
+  },
+  "findings": [],
+  "limitations": [
+    "Without an independently available pre-change snapshot, exact temporal no-change proof rests on authoritative source comparison rather than relying on receipt assertions.",
+    "No visual browser layout review performed; HTML semantic token order was verified.",
+    "No imports, generation, or repository edits performed."
+  ],
+  "durableFix": {
+    "cause": "Immutable older batch records replayed receiving-the-word onto two corrected registry section fields during merge_batches.",
+    "fix": "prepare_jesus_art.main reapplies sectionId from canonical parable plan entries with explicit afterParagraph immediately after merge_batches.",
+    "verifiedSections": {
+      "talents-04": "story-and-teaching",
+      "two-debtors-02": "story-and-teaching"
+    },
+    "secondPrepare": "Passed: registry byte-identical across full rerun; 184 originals and 302 planned artworks.",
+    "immutableFilesUnchanged": 104,
+    "revisionTests": "4 passed",
+    "reviewBindingAndEncodingTests": "12 passed",
+    "metadataScope": "Override assigns only section; existing review bindings, image hashes, and other fields are unchanged by the override."
+  }
+}

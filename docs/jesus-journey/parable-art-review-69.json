@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Parent Gifts01–02 and Settle Adversary01–02 original-detail review for continuity, gaze, anatomy, plate contact and comparison/outcome source boundaries.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Imagined teaching illustrations, not divine portraits or identified historical family/legal incidents."
+  ],
+  "entries": [
+    {
+      "key": "parent-gifts-01",
+      "generationKey": "parent-gifts-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "04c8efd6789dc183a261180d7db5e3bdf4468dfc15185ec425b03d1e05d8c4e4",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ccfd2e4e-7b68-404d-ad1d-9812a5231058.png",
+      "recommendedTitle": "A child asks for bread",
+      "alt": "A child extends an open hand beside a loaf of bread on a table while a bearded father in blue meets the child's gaze.",
+      "caption": "Jesus asks which parent would give a child a stone when asked for bread. This imagined exchange pictures the ordinary care behind His comparison.",
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:9",
+          "9"
+        ]
+      ],
+      "findings": "Clear mutual eye contact, natural child proportions and restrained attentive expressions. Child open palm and father's resting hands plausible. Bread on plate/table, not falsely described transferred. Photographic skin/cloth, distinct father and child.",
+      "conditions": [
+        "Father is an ordinary fictional parent, not a portrait of Heavenly Father or Jesus.",
+        "No stone is visible and no completed bread handoff claimed."
+      ]
+    },
+    {
+      "key": "parent-gifts-02",
+      "generationKey": "parent-gifts-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "918375d0f79be333543fece90da01be40c08034f0e9184f48e4ff2af317466c6",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3127f6fd-c749-48a6-9a83-973004de14cf.png",
+      "recommendedTitle": "A good gift for the child",
+      "alt": "The same father and child hold a plate bearing a cooked fish between them while looking into each other's eyes.",
+      "caption": "Jesus contrasts giving a child fish with offering a serpent, and speaks of parents giving good gifts. He then directs His listeners to the Heavenly Father's willingness to give the Holy Spirit to those who ask.",
+      "refs": [
+        [
+          "nt/luke/11",
+          "Luke 11:11-13",
+          "11-13"
+        ]
+      ],
+      "findings": "Father's thinning curls/full beard/blue tunic/cream scarf and child's short brown waves/striped garment continue01. Reciprocal gaze credible. Both sets of hands contact and support dish without fused fingers; cooked fish lies on plate. Photographic textures and natural warmth.",
+      "conditions": [
+        "Human parent remains a comparison, not a divine likeness.",
+        "The image shows shared plate support, not proof of completed transfer or eating; exact food preparation is artistic."
+      ]
+    },
+    {
+      "key": "settle-adversary-01",
+      "generationKey": "settle-adversary-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "6f3a16b9c0fcab82525e254c50aa6920bb08c6fcf769775a3c856c5038676c58",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8fcac070-e531-4395-86a5-0436073c37f3.png",
+      "recommendedTitle": "Seek agreement along the way",
+      "alt": "An older balding man in ochre and a younger dark-haired man in cream and charcoal walk together on a stone path, facing one another as the older man gestures.",
+      "caption": "Jesus urges His listener to come to agreement with an adversary quickly while still on the way. The conversation pictures that opportunity, without showing whether the two reach a settlement.",
+      "refs": [
+        [
+          "nt/matt/5",
+          "Matthew 5:25",
+          "25"
+        ]
+      ],
+      "findings": "Distinct clean-shaven balding older man/ochre/striped mantle and younger short dark hair/beard/cream/charcoal. Mutual gaze, open palm, robe grip, hanging hands and walking feet plausible. Serious conversation without threat or staged reconciliation; natural photographic skin/cloth.",
+      "conditions": [
+        "Do not claim agreement, forgiveness, a handshake, guilt or legal resolution.",
+        "Unnamed illustrative adversaries, not recorded historical individuals or a specific case."
+      ]
+    },
+    {
+      "key": "settle-adversary-02",
+      "generationKey": "settle-adversary-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "ac165cd45e1af63db892f2b6f494fbb3aefd5e5ee06d02dbc3d1a2690763b61e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bbbd6f00-1fdd-4929-8a91-33dd4a484534.png",
+      "recommendedTitle": "Before reaching the magistrate",
+      "alt": "The same two men approach stone steps leading to a seated official and two guards under a columned portico.",
+      "caption": "Jesus counsels making an effort to settle with an adversary before reaching the magistrate. Their approach illustrates the urgency of that warning, not a completed hearing or conviction.",
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:58",
+          "58"
+        ]
+      ],
+      "findings": "Both figures preserve01 faces in profile, hair and clothing. Walking soles and feet, visible hand and gestures credible; their attention shifts toward destination. Distant official/guards provide plausible illustrative context without legible documents or verdict. Photographic masonry and garments.",
+      "conditions": [
+        "No arrest, conviction, penalty, paid debt or settlement established.",
+        "Portico, guards and seated official are artistic staging; not authenticated court architecture or a named magistrate."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent parable source and pixel review",
+  "scope": "Full original pixels of Good Samaritan scenes 04–06, including comparison with the preceding traveler reference.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Independent technical and source review is not owner approval.",
+    "Fictional characters illustrate Jesus's parable; no historical photographic claim.",
+    "Use supplied natural captions; retain source-versus-artistic-detail distinctions in study context.",
+    "No imports performed."
+  ],
+  "entries": [
+    {
+      "key": "good-samaritan-04",
+      "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0cbb6-1ea1-7021-9571-e99065c12b4f/exec-773b33b3-8a46-4da2-90b8-0164409e5ca5.png",
+      "sha256": "5efb0e7e61fae40ad2125c3fffe5aba46555d6fd1193acdc06db3c85a0226aa7",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The Samaritan stops beside him",
+      "alt": "A man in a tan headwrap kneels beside an injured traveler, resting a hand on his shoulder as they look at one another.",
+      "caption": "The Samaritan kneels beside the injured traveler and meets his eyes with a hand resting gently on his shoulder. Jesus describes compassion that brings the stranger close enough to help.",
+      "findings": [
+        "Traveler's curls, beard, torn cream tunic, injuries, and roadside setting are consistent with the supplied earlier traveler reference.",
+        "Helper and traveler establish reciprocal eye contact; shoulder contact and visible hands, legs, and feet are anatomically coherent. Skin, cloth, and light have photographic detail.",
+        "This is the arrival and compassionate encounter, distinct from the following binding scene. No bandage, healing, or diagnosis is asserted."
+      ],
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:33",
+          "33"
+        ]
+      ],
+      "conditions": [
+        "Preserve the actual visible description and scripture-grounded narrative caption."
+      ]
+    },
+    {
+      "key": "good-samaritan-05",
+      "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0cbb6-1ea1-7021-9571-e99065c12b4f/exec-959a01e9-c339-4cb6-94b9-2430d5eacb35.png",
+      "sha256": "a6052d03947b330fb0ce51abdd76d5a62dcb5c8467acf90e366ac28539b352cb",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Binding the traveler's wounds",
+      "alt": "The Samaritan wraps cloth around the traveler's forearm beside two clay vessels and an open leather bag.",
+      "caption": "The Samaritan bends over the traveler's arm, supporting it while he wraps a strip of cloth around the wound. In Jesus's story, compassion becomes practical care as he binds the wounds and tends them with oil and wine.",
+      "findings": [
+        "Both men retain the preceding faces and clothing; the helper looks down at the bandage contact while the traveler looks toward him.",
+        "Two helper hands are separated and plausibly support and wrap the forearm. Traveler's raised wrist and hand are coherent; cloth overlaps and trailing strip correspond to wrapping.",
+        "The open leather bag has straps and buckles but no visible zipper, medical emblem, synthetic insert, or unmistakably modern medical hardware. Its structured satchel shape alone is not sufficient to reject it; no precise historical dating is claimed.",
+        "Two clay vessels are visible, but contents are not identifiable by pixels. Caption attributes oil and wine to Luke 10:34 rather than claiming visible pouring or contents verification."
+      ],
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:34",
+          "34"
+        ]
+      ],
+      "conditions": [
+        "Preserve the actual visible description and scripture-grounded narrative caption."
+      ]
+    },
+    {
+      "key": "good-samaritan-06",
+      "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0cbb6-1ea1-7021-9571-e99065c12b4f/exec-469eb2d6-18d0-4f3e-81ac-22fed9acb3bc.png",
+      "sha256": "f040d4a1add9dad5bdec6b7cb5e0090482ce4df90325b99ec402b28fd476f1a9",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Carrying him toward care",
+      "alt": "The bandaged traveler sits on a gray donkey while the Samaritan holds its lead and steadies his upper arm beside a stone building.",
+      "caption": "The traveler sits on the animal's woven covering while the Samaritan steadies his arm and holds the lead. Jesus tells how the Samaritan brought him to an inn, continuing the care he had begun beside the road.",
+      "findings": [
+        "The same helper and traveler remain recognizable through face, hair, headwrap, clothing, forehead scrape, and retained forearm binding. Their gaze is directed toward each other.",
+        "Rider straddles the padded animal with a foot on either side; seated weight and folded covering appear plausible. Helper's supporting hand contacts the upper arm and the other holds a lead visibly connected to the halter.",
+        "Donkey head, ears, muzzle, trunk, and visible overlapping legs present no clear anatomical duplication or impossible joint. The near front lower leg is cropped by the frame; not every hoof is visible.",
+        "The donkey species and stone inn setting are artistic choices: Luke specifies his own beast and an inn without giving the animal species or exact architecture. The scene is near a building, so caption does not claim an observable distant inn or movement already completed.",
+        "Traveler still has visible injuries and a tired posture; no miraculous healing, clinical diagnosis, or recovery claim is made."
+      ],
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:34",
+          "34"
+        ]
+      ],
+      "conditions": [
+        "Preserve the actual visible description and scripture-grounded narrative caption."
+      ]
+    }
+  ]
+}

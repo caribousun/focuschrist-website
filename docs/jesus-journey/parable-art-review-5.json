@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent parable source and image reviewer",
+  "scope": "Twelve supplied exact images viewed at full frame, including only net-02-v2 for canonical net-02.",
+  "method": "Compared actual pixels with source scene, accepted recurring-character references and parent-reported owner rejection. Hashes calculated from exact files.",
+  "summary": {
+    "passWithCaptionConditions": 9,
+    "revise": 3
+  },
+  "globalConditions": [
+    "Owner-rejected net-02 original is excluded and must not be imported.",
+    "Parable figures are fictional illustrative identities. Technical review does not confer owner approval.",
+    "Preserve recurring people and sheep markings between sequential scenes; exact scenery and props are not historical claims."
+  ],
+  "entries": [
+    {
+      "key": "leaven-02",
+      "generationKey": "leaven-02",
+      "sha256": "c67caa4981b4d0e1b6cbc8f5324cae1e75d7b249b6a59e67b3468fb9efc864e7",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "Coherent airy dough texture, bowl and domestic materials. No hands or people. Distinct result from kneading scene.",
+      "conditions": [
+        "Do not claim a measured volume or an exact elapsed time."
+      ],
+      "recommendedTitle": "Dough transformed",
+      "alt": "A mound of risen dough fills a wooden bowl in a sunlit kitchen.",
+      "caption": "The dough has risen since the woman's earlier work. Jesus' leaven comparison follows a hidden beginning through its effect on the whole batch, inviting attention to the kingdom's transforming work.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:33",
+          "33"
+        ]
+      ]
+    },
+    {
+      "key": "hidden-treasure-02",
+      "generationKey": "hidden-treasure-02",
+      "sha256": "fd6d91c12e909c7fbd150ccf3ff1bc4537714ddba0f2e8f8b4733faa99affb30",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "Finder's face and headcloth preserved. Hands support cloth plausibly; buyer counts coins into own palm. Natural expressions.",
+      "conditions": [
+        "Do not say money has already entered the seller's hand.",
+        "Specific goods and buyer are illustrative."
+      ],
+      "recommendedTitle": "Letting possessions go",
+      "alt": "A man holds folded cloth toward a buyer who counts coins at a market table.",
+      "caption": "The finder now offers possessions for sale. Jesus describes his willingness to sell all he has because of the joy of the discovery. The visible exchange illustrates that response without claiming to display everything he owned.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:44",
+          "44"
+        ]
+      ]
+    },
+    {
+      "key": "hidden-treasure-03",
+      "generationKey": "hidden-treasure-03",
+      "sha256": "0fa5d193181ac015f65e0154ad69f2219173f097f2041b0594da94147942b899",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "Finder remains consistent; buyer/seller hands and coins plausible. Field context distinct from marketplace.",
+      "conditions": [
+        "Do not claim a documented price, deed or exact property boundary."
+      ],
+      "recommendedTitle": "The field is purchased",
+      "alt": "A man places coins into an older man's open palm beside a cultivated field.",
+      "caption": "The finder pays for the field. Jesus brings the story from unexpected discovery to a deliberate commitment, showing the kingdom's surpassing worth through the man's joyful willingness to act.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:44",
+          "44"
+        ]
+      ]
+    },
+    {
+      "key": "pearl-02",
+      "generationKey": "pearl-02",
+      "sha256": "ac5440c66f81cb12f80dfcc185e7a18202d6fab8134df7ed8eedaee3bbc7afe9",
+      "status": "revise",
+      "sourceFit": "Underlying action is plausible, but the intended sequence needs the specified correction.",
+      "visibleReview": "Two conspicuous pearls divide attention in the intended recognition-of-one scene. The main merchant's identity and hands are credible.",
+      "conditions": [
+        "Revise by removing the pearl on the standing man's cloth, preserving the one held for examination.",
+        "Other pearls are not forbidden by the parable, but this composition fails the planned distinct focus and repeats comparison rather than recognition."
+      ],
+      "recommendedTitle": null,
+      "alt": "A seated merchant holds one pearl while another pearl rests on a cloth held by a standing man.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:46",
+          "46"
+        ]
+      ]
+    },
+    {
+      "key": "pearl-03",
+      "generationKey": "pearl-03",
+      "sha256": "b7635acaf91e7c32bb2dfca3fbedf44df5753a2033a235d557357d7283b3a861",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "One pearl clear; merchant identity preserved; pouch grip and seller's supporting hands natural.",
+      "conditions": [
+        "Do not state that the image visibly proves all possessions were sold.",
+        "Contents of closed pouch are not visible."
+      ],
+      "recommendedTitle": "Obtaining the pearl",
+      "alt": "A merchant offers a small leather pouch toward a seller holding one pearl on folded cloth.",
+      "caption": "The pearl is now the object of a purchase. Jesus says the merchant sold all he had to obtain the pearl of great price. The exchange illustrates his wholehearted response; the pouch cannot by itself reveal the full sacrifice described in the story.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:46",
+          "46"
+        ]
+      ]
+    },
+    {
+      "key": "net-02",
+      "generationKey": "net-02-v2",
+      "sha256": "e922ae5ad4798f8b07030c7aa414774c9fac59d8f0f74a30b5da780bb5efd95a",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "Only v2 reviewed. Clean-shaven younger man left, dark-bearded central man and balding gray elder right are visually distinct. Grips, strain and shallow-water stances credible.",
+      "conditions": [
+        "Use this exact v2 hash; the owner-rejected original is excluded.",
+        "Do not name apostles or call the catch miraculous."
+      ],
+      "recommendedTitle": "Drawing the catch ashore",
+      "alt": "Three distinct fishermen pull a net full of fish through shallow water toward the shore.",
+      "caption": "The full net is being drawn ashore. Jesus' comparison moves from gathering to examination of the catch, preparing His listeners for the teaching about final judgment that follows.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:48",
+          "48"
+        ]
+      ]
+    },
+    {
+      "key": "net-03",
+      "generationKey": "net-03",
+      "sha256": "8d3341271c155f94f6ddd95224eb744d0f359c38880bd73ce9ffaa075a9aefb9",
+      "status": "revise",
+      "sourceFit": "Underlying action is plausible, but the intended sequence needs the specified correction.",
+      "visibleReview": "Sorting action, fish grips and baskets are credible, but left and right men revert to similar dark-haired bearded faces instead of the differentiated v2 cast.",
+      "conditions": [
+        "Revise left to the clean-shaven man and right to the balding gray elder from net-02-v2; preserve central man and action.",
+        "This is sequence continuity and owner-directed cast correction, not a scriptural requirement about fishermen's ages."
+      ],
+      "recommendedTitle": null,
+      "alt": "Three dark-haired bearded men sort fish beside baskets and a boat on the shore.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:48",
+          "48"
+        ]
+      ]
+    },
+    {
+      "key": "lost-sheep-02",
+      "generationKey": "lost-sheep-02",
+      "sha256": "3560922348d1ed072dc1f950b8d0cf92c11833e6bde2e6a95a8423177882e44c",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "Shepherd identity preserved, hands support paired legs; four hooves distinguishable and body rests across shoulders. White face, light ears and wool clear. Natural smile.",
+      "conditions": [
+        "Keep this sheep's face and markings in the return scene.",
+        "This fictional shepherd is not a literal portrait of Jesus."
+      ],
+      "recommendedTitle": "The sheep is found",
+      "alt": "A smiling shepherd carries a white-faced sheep across his shoulders, holding its legs securely.",
+      "caption": "The search has given way to relief. Luke describes the shepherd laying the found sheep on his shoulders with joy. Jesus uses the recovery to speak of heaven's joy over a sinner who repents.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:5–7",
+          "5-7"
+        ]
+      ]
+    },
+    {
+      "key": "lost-sheep-03",
+      "generationKey": "lost-sheep-03",
+      "sha256": "de0ca7a48b0946c273ad9ce716a666bb14360a2908929837203b1e80bf133ad4",
+      "status": "revise",
+      "sourceFit": "Underlying action is plausible, but the intended sequence needs the specified correction.",
+      "visibleReview": "People, expressive hands and welcoming scene are credible, but sheep now has a dark face and leg markings unlike the white-faced recovered sheep.",
+      "conditions": [
+        "Revise sheep only to match lost-sheep-02 face, ears, wool and markings.",
+        "Preserve natural shared joy; no need to change unspecified neighbors."
+      ],
+      "recommendedTitle": null,
+      "alt": "A shepherd welcomes three neighbors at a doorway while a dark-faced sheep stands beside him.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:6",
+          "6"
+        ]
+      ]
+    },
+    {
+      "key": "unmerciful-servant-02",
+      "generationKey": "unmerciful-servant-02",
+      "sha256": "5c732c671ce234a9bc411c9f2a4e6b89e160cf75211db8d75aea30163988c9e0",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "Same king and servant as01. Raised open hand, rising posture, face and feet coherent. Same court appropriately retained for consecutive event.",
+      "conditions": [
+        "Caption forgiveness from the text, not a visible written cancellation.",
+        "Do not identify king as a literal portrait of God."
+      ],
+      "recommendedTitle": "Mercy beyond the plea",
+      "alt": "A king extends an open hand toward a servant who rises with one hand against his chest.",
+      "caption": "The king's response exceeds the servant's request for more time. Moved with compassion, he releases him and forgives the debt. Jesus gives this mercy a central place before testing whether the servant will extend mercy to another.",
+      "refs": [
+        [
+          "nt/matt/18",
+          "Matthew 18:27",
+          "27"
+        ]
+      ]
+    },
+    {
+      "key": "unmerciful-servant-03",
+      "generationKey": "unmerciful-servant-03",
+      "sha256": "b36fbcaa816a4d7cdf8221a4c7c05db01040cbfd25d97bdf304fb18087567f32",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "Standing curly-haired servant matches prior debtor; kneeling older balding man is clearly distinct. Hands, knees and feet credible; refusal shown without graphic choking.",
+      "conditions": [
+        "Do not claim the image shows choking or imprisonment.",
+        "Text may explain omitted violence without adding it to alt text."
+      ],
+      "recommendedTitle": "A plea the servant refuses",
+      "alt": "An older man kneels with raised hands before a stern standing servant who lifts a refusing palm.",
+      "caption": "The plea for patience now comes from someone else. The servant who received mercy confronts a fellow servant owing far less and refuses the appeal. Jesus makes the echo of the earlier plea difficult to miss, exposing the gap between receiving forgiveness and extending it.",
+      "refs": [
+        [
+          "nt/matt/18",
+          "Matthew 18:28–30",
+          "28-30"
+        ]
+      ]
+    },
+    {
+      "key": "unmerciful-servant-04",
+      "generationKey": "unmerciful-servant-04",
+      "sha256": "ff6acc0397cc8de973bf41d10eec6872bfbf2d9368a7174857a56e571d371a48",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Fits the source moment with caption limits.",
+      "visibleReview": "Same king retained. Two reporting men have headcloths and differing facial features; no clear role reversal with original bareheaded curly-haired debtor. Open hands and concerned expressions credible.",
+      "conditions": [
+        "Do not call the two reporters eyewitnesses to a particular unseen act beyond the passage's account.",
+        "Number, clothing and hall furnishings remain illustrative."
+      ],
+      "recommendedTitle": "The wrong is reported",
+      "alt": "Two concerned servants gesture toward a seated king in the royal hall.",
+      "caption": "Other servants are deeply troubled by what has happened and tell their lord. Their response brings the unmerciful treatment before the one who had granted forgiveness. The story does not treat cruelty toward another person as a private matter without consequence.",
+      "refs": [
+        [
+          "nt/matt/18",
+          "Matthew 18:31",
+          "31"
+        ]
+      ]
+    }
+  ]
+}

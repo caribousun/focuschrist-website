@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Two corrected v2 modern neighbor images; full-frame inspection of exact paths, references loaded from original records.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Only exact v2 hashes pass; earlier rejected versions remain excluded.",
+    "Fictional modern applications with no visible Christ.",
+    "Technical/source review does not confer owner approval or browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "collection-neighbor-02",
+      "version_key": "collection-neighbor-02-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7fce8d56-b90c-411c-ad46-d403fd6a1bec.png",
+      "refs": [
+        [
+          "nt/luke/10",
+          "Luke 10:34-35",
+          "34-35"
+        ]
+      ],
+      "sha256": "9052deac18ac0f0bd3930ab36e84714d91a62b822db5a2ae741159f85e666ec3",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "alt": "A man makes a phone call beside a woman and a parked SUV in a broad gravel pullout, with a road visible far downhill.",
+      "caption": "The two people wait together in a broad pullout while a call is made. In this imagined application, arranging assistance is one way to respond to another person's difficulty. The Samaritan's care invites practical attention to what is needed, without requiring us to provide every kind of help ourselves.",
+      "findings": {
+        "sourceFit": "Modern application of Luke 10:34–35, not a recorded Gospel incident.",
+        "correction": "People and vehicle are now clearly separated from the distant road by a broad gravel area and terrain; neither person stands beside an active lane. Warning triangle removed.",
+        "anatomy": "Natural phone grip and open hand, coherent legs and feet, believable faces and clothing.",
+        "limits": "Road access to pullout is outside frame. Exact distance and roadside safety compliance cannot be certified; no such claim needed."
+      },
+      "conditions": [
+        "Use the visible separated pullout description rather than exact metres or passenger-side claim.",
+        "Assistance call and relationship are fictional application context; recipient of call is not visible."
+      ]
+    },
+    {
+      "key": "collection-neighbor-08",
+      "version_key": "collection-neighbor-08-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-05354b53-951a-4067-80a9-bb84c1993b95.png",
+      "refs": [
+        [
+          "nt/matt/12",
+          "Matthew 12:11-12",
+          "11-12"
+        ]
+      ],
+      "sha256": "4d9841181befbd344d87d283585992d209d82435df1e06668a17d5c4f041d663",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "alt": "Three neighbors hold and work on a fallen leafy branch, with one positioning a curved pruning saw against a woody limb while a woman with a walker waits behind them.",
+      "caption": "Neighbors work together to clear a branch from a shared path while another person waits. This imagined scene connects practical help with Jesus' teaching that doing good matters. Attention to the task and to the people nearby makes that concern concrete.",
+      "findings": {
+        "sourceFit": "Present-day application of doing good in Matthew 12:11–12, not a claim that branch clearing appears in the passage.",
+        "tool": "One coherent short-handled curved pruning saw replaces the shears. Handle joins blade plausibly; serrated concave edge is visible against the woody limb. No hybrid shear hinge or second blade. Contact is consistent with positioning or beginning a stroke; a completed cut or visible kerf is not established.",
+        "supportAndSpacing": "Limb sits among a larger branch pile and is held at multiple points; helpers' hands are well away from saw. Saw user's other gloved hand steadies limb to the right of contact. Waiting walker user stands behind the working area with visible separation.",
+        "anatomy": "Glove grips, wrists, knees and face positions coherent. Saw-user's posture focused; others' modest smiles remain plausible. Photographic textures maintained.",
+        "limits": "Still frame cannot verify stability throughout cutting or certify tool-use procedure; caption avoids presenting instructional technique."
+      },
+      "conditions": [
+        "Describe positioning/working with saw, not an already completed cut.",
+        "Do not claim exact professional pruning technique or imply the waiting woman lacks agency.",
+        "Scene is an imagined act of help, not a documentary event."
+      ]
+    }
+  ]
+}

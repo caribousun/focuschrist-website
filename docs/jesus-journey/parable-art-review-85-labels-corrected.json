@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and actual-reference reviewer",
+  "scope": "Additive source-label encoding correction of review85. Its original pixel verdicts, hashes, copy and conditions are preserved; no new pixel acceptance inferred.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 1
+  },
+  "entries": [
+    {
+      "key": "mm-john-questions",
+      "generationKey": "mm-john-questions",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-be1f23a9-2b9f-436d-a3a6-61c77cecefbf.png",
+      "sha256": "dbd77f33c007f7474755d8fc1633cafb75991b0cd58ff50bf3f43911d572a1b4",
+      "status": "revise",
+      "recommendedTitle": "What should we do?",
+      "alt": "John the Baptist listens to two men beside a river, one speaking with open hands.",
+      "caption": "People bring John a practical question about how to live. His answers turn repentance toward sharing, honesty and the fair treatment of others.",
+      "refs": [
+        [
+          "nt/luke/3",
+          "Luke 3:10–14",
+          "10-14"
+        ]
+      ],
+      "findings": "John matches actual supplied reference in facial profile, younger adult age, short beard and camel-hair clothing; reciprocal gaze and anatomy pass. Two foreground questioners at right share very similar curly hair, dark beard, facial shape, age and clothing. This repeats the user-rejected clone pattern.",
+      "conditions": [
+        "Change only rear-right questioner to a distinctly older adult with broad face, receding gray hair, shorter gray beard and different nose/brow. Preserve John, foreground questioner, hands, river and composition. No literal Christ.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "mm-levi-tax-booth",
+      "generationKey": "mm-levi-tax-booth",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d694853d-79ae-479a-9847-71979d87c43f.png",
+      "sha256": "e84615a0e94ceb376a6b1b60742f8792d02008f01feb91a32881ab3c0bc46546",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Jesus calls Levi",
+      "alt": "Levi looks up from a customs counter toward Jesus, who faces him with an open hand.",
+      "caption": "Jesus meets Levi at his work and calls him to follow. Levi looks toward Him, his attention turning from the counter to the invitation.",
+      "refs": [
+        [
+          "nt/mark/2",
+          "Mark 2:13–15",
+          "13-15"
+        ]
+      ],
+      "findings": "Direct actual Christ-reference comparison: recognizable brow, eyes, nose, beard and wavy hair maintained in three-quarter profile. Warm restrained expression and direct mutual eye contact fit invitation. Hands, coin stacks and counter coherent. Levi remains largely seated; rising cannot be established from cropped lower body. Caption/title now describe the supported call rather than claiming a visible completed rise.",
+      "conditions": [
+        "Use recommended title Jesus calls Levi, not Levi rises. Do not claim this frame depicts standing or leaving. Any counter implement is illustrative; no authenticated precise device claim. No Resurrection scars.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "bn-night-messengers",
+      "generationKey": "bn-night-messengers-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6d7cf1fc-8660-4a4f-8aed-035eef5b4eaf.png",
+      "sha256": "b1b2e7b532e22d2e69cbe56e6337ca8c3ac0d5aeb42f8bc57d1eeb4501cd459f",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The news travels through the night",
+      "alt": "A messenger speaks to a woman and an older man in a doorway while another traveler handles a cloth bundle behind him.",
+      "caption": "News of the Savior's visit reaches a household in the night. Attentive faces receive the message as others prepare to gather the next day.",
+      "refs": [
+        [
+          "bofm/3-ne/19",
+          "3 Nephi 19:2–3",
+          "2-3"
+        ]
+      ],
+      "findings": "Repaired doorway man has gray short curls, lined broader face and no beard, distinctly different from messenger. Modern backpack removed, replaced by plain tied cloth bundle. Photographic firelight/moonlight, direct eye contact and coherent hands. Messenger lively urgent joy fits source.",
+      "conditions": [
+        "Unnamed illustrative messenger/household, no exact words or named kinship assigned. Preserve original rejected image and its prior review. No claim of exact ancient American architecture or garment tradition.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ],
+  "supersedes_receipt_for_import": "parable-art-review-85.json",
+  "original_receipt_sha256": "8ae4016c6e5a64e0953b4ee2ca2557170d89dad6516032fed17b075d33309c3c",
+  "correction": "Only three source display labels corrected from UTF-8 mojibake to en dash; scripture route and verse selections unchanged."
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent original-detail review of four modern kingdom application illustrations",
+  "ownerApproval": false,
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Fictional present-day reflective applications; no visible Christ and no claim of documentary or literal scriptural depiction.",
+    "Technical review is not owner approval, browser verification or import evidence."
+  ],
+  "entries": [
+    {
+      "key": "collection-kingdom-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "4200ee5ad6958a058dab7262608414bcd090de5c5e447387d9240a998cf6ef72",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-88ddffdf-8105-47d8-9dce-0edbc6d8d8bf.png",
+      "alt": "A gardener lowers a seed into a soil-filled planting tray while other gardeners work behind her.",
+      "caption": "A gardener gives a seed a place to grow. This imagined present-day scene invites reflection on Jesus' mustard-seed comparison and the significance of small beginnings.",
+      "findings": "Seed pinched at fingertips above tray; hand anatomy, contact and attentive downward gaze are plausible. Natural face and materials. Seed is relatively large and not identifiable as mustard.",
+      "conditions": [
+        "Do not call the visible seed a mustard seed or present this modern scene as a literal reconstruction of the parable.",
+        "No guaranteed harvest or promised outcome."
+      ],
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:30-32",
+          "30-32"
+        ]
+      ]
+    },
+    {
+      "key": "collection-kingdom-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "5da61d60db40c009ed998cc0ba3aa78d522532f7ab70b78aa7aca8fd8353598e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3cd3bf37-be4f-4226-9b09-531aec328931.png",
+      "alt": "A man presses and folds dough with both hands on a floured kitchen worktop.",
+      "caption": "A baker works dough in a modern kitchen. This imagined scene recalls the familiar process Jesus draws on in His comparison of the kingdom to leaven.",
+      "findings": "Both hands contact and compress the dough credibly; visible fingers and wrists are coherent. Natural face, focused gaze and photographic kitchen detail. A proofing pan supports bread-making context, but yeast itself and rising over time are not visible.",
+      "conditions": [
+        "Describe kneading, not a visible insertion of leaven or a verified time-lapse transformation.",
+        "Keep the connection reflective; this modern male baker is not the woman specified in the parable."
+      ],
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:33",
+          "33"
+        ]
+      ]
+    },
+    {
+      "key": "collection-kingdom-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "2b2ce87e88670bae5b4c6c579aa7bc8eeef8d6b0e7c3b8462b39bb70fb3f3054",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9970f7f5-f763-40b6-b6cc-2bc89e9d42c1.png",
+      "alt": "A woman sets a phone on a shelf while exchanging an attentive look with a man seated beside an open book.",
+      "caption": "Two adults give a learning conversation their attention as a phone is set aside. This imagined application of the pearl comparison invites reflection on how our choices of time express what we consider precious.",
+      "findings": "Reciprocal gaze, phone placement and pointing hand on book are coherent. Both adults participate with natural dignity; no infantilizing treatment. No legible private phone content.",
+      "conditions": [
+        "Do not claim a promised hour elapsed, verified literacy level, nationality or learning outcome.",
+        "Tutoring is a fictional scenario premise rather than a biography established by appearance."
+      ],
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:45-46",
+          "45-46"
+        ]
+      ]
+    },
+    {
+      "key": "collection-kingdom-04",
+      "status": "pass_with_caption_conditions",
+      "sha256": "93506301b581e0f4b82580df5a13473f76cd9926fccdaaf7a19d5ad1bb2ea449",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c03aeb59-6b84-4512-afb2-1eb6bff299a1.png",
+      "alt": "One young person places a cardboard display on a shelf while two others arrange patterned fabric at a worktable.",
+      "caption": "The group makes room for a fabric project while keeping a handmade display nearby. This imagined application invites reflection on what we choose to make room for when we recognize something valuable.",
+      "findings": "Display supported by visible hand and shelf; other arm partly occluded plausibly. Fabric handling and hands are coherent; cutting tool rests unused on a mat. Task-directed eyes and natural agency, photographic detail.",
+      "conditions": [
+        "Do not claim a completed donation project or identify recipients not shown.",
+        "Avoid treating artwork or display-making as inherently worthless; the visible action supports rearranging priorities, not contempt for creativity."
+      ],
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:44",
+          "44"
+        ]
+      ]
+    }
+  ]
+}

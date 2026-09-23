@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "King at War01–02 original-detail review for identity continuity, anatomy/gaze, period plausibility and Luke14:31–32 comparison/source boundaries.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Unnamed figures illustrate Jesus' comparison rather than a known historical war or peace settlement."
+  ],
+  "entries": [
+    {
+      "key": "king-war-01",
+      "generationKey": "king-war-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "cbb9006a56585c9e924f67d0572357b6ac56582a45597d9e95259ca16e7be485",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9d7fd405-018b-4265-aa46-2c6432277770.png",
+      "recommendedTitle": "Considering the opposing forces",
+      "alt": "A king in a burgundy cloak listens to a gray-bearded adviser across a table holding two unequal groups of stones, with a bald adviser seated nearby and tents behind.",
+      "caption": "Jesus asks whether a king with ten thousand soldiers would first consider his ability to meet an army of twenty thousand. The unequal groups of stones picture that comparison as the king weighs what lies ahead.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:31",
+          "31"
+        ]
+      ],
+      "findings": "Unnamed short-curly-haired, full-bearded king differs from advisers and is not a Christ portrait. Natural mutual attention between king and gray-bearded adviser, with bald adviser turned toward discussion. Chin hand, resting forearm, open explaining palm and table contact are coherent. Cloth, weathered table, skin and generic camp props retain photographic texture; no modern devices or overt fantasy elements.",
+      "conditions": [
+        "Stones are a generic visual comparison, not a literal troop tally, authenticated military planning method or exact 1:2 count.",
+        "King, adviser identities, circlet, camp and military equipment are illustrative; do not identify a historical ruler, war or particular army."
+      ]
+    },
+    {
+      "key": "king-war-02",
+      "generationKey": "king-war-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "725a869f0e31d86a74bc25d0793f2289d7f4dc6e933a7f04d3125e77d5d3a3ad",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1df946ae-d4a6-46dc-b516-0b3b9ba7e272.png",
+      "recommendedTitle": "Envoys seek terms of peace",
+      "alt": "The gray-bearded man and his bald companion stand before an armed camp guard; the older man extends an open hand while the guard holds a spear.",
+      "caption": "If the king cannot meet the greater force, Jesus says he sends an embassy while the other king is still far away. The envoys seek conditions of peace, illustrating a request rather than an agreement already reached.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:32",
+          "32"
+        ]
+      ],
+      "findings": "Gray wavy hair, beard, brown robe and rough light wrap preserve older adviser; bald younger companion retains blue tunic and striped wrap. They are clearly distinct individuals. Older envoy and guard direct gaze toward one another; companion watches guard. Open palm, hanging hands and spear grip are credible, and guard posture is attentive rather than attacking. Generic tents, shields and simple armor illustrate a camp without an identified historical war.",
+      "conditions": [
+        "Camp guard and dialogue at its entrance are an artistic way of picturing the embassy; Luke does not specify these details.",
+        "No signed terms, successful agreement, surrender, named commander or actual historical campaign is established.",
+        "The visible camp figures are illustrative and must not be treated as the literal twenty-thousand-person force."
+      ]
+    }
+  ]
+}

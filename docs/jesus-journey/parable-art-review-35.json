@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Four royal-wedding originals viewed at original detail.",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 3,
+    "revisionKeys": [
+      "royal-wedding-02",
+      "royal-wedding-03",
+      "royal-wedding-04"
+    ]
+  },
+  "globalConditions": [
+    "Unnamed parable characters; no Jesus likeness or literal portrait of God within the fictional narrative.",
+    "Technical source/visual review is not owner approval. Rejected hashes must not be imported."
+  ],
+  "entries": [
+    {
+      "key": "royal-wedding-01",
+      "sha256": "42182c776940a91ed5676dcfd34df6e209e52ee832b1ca9b28b62732ce27fd24",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-50bc0c0e-a305-495d-9f52-6cedf9821f9d.png",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The invitation is spoken",
+      "alt": "Two servants stand at a doorway as the older man extends an open hand toward a man standing inside.",
+      "caption": "The servants bring the king's invitation, but those first invited will not come. The doorway scene pictures an oral summons rather than a written invitation.",
+      "findings": "Three faces are distinct, with coherent open palm, resting hands and folded arms. Servant's attention reaches the doorway recipient. Photographic stone, fabric and facial detail; no obvious modern or medieval-specific prop.",
+      "conditions": [
+        "Do not claim a named householder, written invitation, exact spoken dialogue or physical violence in this scene."
+      ],
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:3",
+          "3"
+        ]
+      ]
+    },
+    {
+      "key": "royal-wedding-02",
+      "sha256": "4c85974c3997b7ca4dfc04fca3fe85915968acdf46b237b76c0ecef0d9b12937",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f0280bf5-1e36-46d0-84e1-22b20cc0a7dd.png",
+      "status": "revise",
+      "recommendedTitle": "The invitation reaches the roads",
+      "alt": "Two servants in cream tunics and burgundy sashes speak with people beside a road leading toward a palace.",
+      "caption": null,
+      "findings": "The two principal servants have very similar dark curly hair, beards, face proportions and matching garments; they read as duplicated men rather than clearly distinct messengers. The distant crenellated palace and prominent fleur-de-lis-like royal banners introduce a medieval visual register. Hands and engaged face directions otherwise look coherent.",
+      "conditions": [
+        "Make the servants unmistakably distinct; ideally preserve the older bald gray-bearded servant and younger dark-skinned servant from scene 01.",
+        "Replace heraldic banners with plain drapery and simplify the distant building to a plausible ancient palace/courtyard entrance.",
+        "The gathered guests should remain mixed; do not label visible people as morally good or bad from appearance."
+      ],
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:9-10",
+          "9-10"
+        ]
+      ]
+    },
+    {
+      "key": "royal-wedding-03",
+      "sha256": "3eb20f2492dd772834a7c62e7b3808138604a6a85010e04c2be1f1ca567026ca",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e00a5d00-acee-4ddc-be5e-f575d36eaf6d.png",
+      "status": "revise",
+      "recommendedTitle": "The wedding hall is filled",
+      "alt": "Guests share food and conversation at crowded banquet tables beneath royal banners.",
+      "caption": null,
+      "findings": "The central foreground curly-haired bearded man strongly resembles the approved Christ face in brow, nose, smile and beard, despite shorter hair; this invites an unintended Christ identification inside the parable. Repeated gold rampant-lion heraldic banners give the hall a pronounced medieval court appearance. Foreground hands, cups, food contact and social attention are otherwise credible.",
+      "conditions": [
+        "Replace central guest with an unmistakably different fictional face, such as an older balding clean-shaven guest, preserving the gathering action.",
+        "Remove heraldic lion banners; use plain textiles and restrained ancient Mediterranean banquet details.",
+        "A full hall illustrates Matthew 22:10; do not portray Jesus as a guest or assign unseen biographies."
+      ],
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:10",
+          "10"
+        ]
+      ]
+    },
+    {
+      "key": "royal-wedding-04",
+      "sha256": "cc5e13b5596ee028a974f75cca75c97d0a85a0dc6f44e17906ed12060dbc1b6b",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bfe6ffee-ad50-4c1a-8f6d-1ec31eb4ee07.png",
+      "status": "revise",
+      "recommendedTitle": "The king questions a guest",
+      "alt": "A king gestures toward a plainly dressed man standing among seated banquet guests.",
+      "caption": null,
+      "findings": "King and guest have distinct faces and credible reciprocal attention. Open palm, lowered hands and body proportions look coherent. Repeated heraldic lion banners plus heavily ornamented velvet-like green royal clothing give a strong medieval court impression inconsistent with the intended ancient setting.",
+      "conditions": [
+        "Remove heraldic banners and revise royal clothing to simpler layered ancient textiles with restrained trim and a simple diadem; preserve distinct face and questioning action.",
+        "Do not explain the missing wedding garment as poverty, inability to afford clothing, or a documented garment-distribution custom; Matthew does not supply those explanations.",
+        "The guest's lack of an answer is the source point, not a claim that plain dress determines a person's worth."
+      ],
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:11-12",
+          "11-12"
+        ]
+      ]
+    }
+  ]
+}

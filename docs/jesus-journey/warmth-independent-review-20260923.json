@@ -1,0 +1,12 @@
+{
+ "scope":"Independent semantic and voice review of all 56 before/after changes in warmth-editorial-changes.json: 40 captions and 16 prose changes. Not a fresh pixel inspection of all pre-existing originals or full external source retrieval for every page.",
+ "verdict":"pass_after_two_corrections",
+ "acceptable_as_proposed":54,
+ "corrections":[
+  {"key":"modern-scripture","field":"caption","required":"An adult listens as a teenage girl speaks beside the open scriptures. Reading together can include an honest question and the patience to hear one another.","reason":"Do not assert undocumented father/daughter relationship; historical independent receipt identifies adult and teenage girl only."},
+  {"key":"bb-manna-gathering","field":"caption","required":"People bend to gather the food the Lord has provided. Day by day, the wilderness teaches them to trust Him for their bread.","reason":"Each morning overstates gathering pattern because Sabbath is an exception; revised devotional sentence preserves the lesson without that claim."}
+ ],
+ "associated_alt_correction":{"key":"modern-scripture","field":"alt","required":"An adult listens as a teenage girl speaks beside an open Bible at the kitchen table.","reason":"Existing alt repeats same unsupported relationship."},
+ "findings":["Revisions generally begin observed human action, replace repeated production language and maintain reverent warmth.","Modern illustrations remain identified as imagined in section introductions; companion temple/kneeling scenes retain explicit source-versus-interpretation distinctions.","Scripture placeholders and core source actions remain intact; revised stewardship distinction preserves monetary talents versus later skills application.","No additional invented biographical relationship, guaranteed outcome, named recipient or exact age introduced beyond the flagged family relationship.","Final rendered HTML readback and file-hash receipt remain pending root rebuild; this receipt is source-copy review only."],
+ "artwork_review_scope":"New-art receipts separately document actual pixels, mapped identities, source associations, gaze/anatomy and caption limits. Technical acceptance never means owner approval."
+}

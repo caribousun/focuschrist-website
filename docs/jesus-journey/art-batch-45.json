@@ -1,0 +1,89 @@
+{
+  "pharisee-publican-01": {
+    "title": "Two men go up to pray",
+    "alt": "Two men climb stone steps toward a temple entrance: one in a light hooded robe ahead, and a balding man in muted olive and brown behind him.",
+    "caption": "In Jesus' parable, two men go up to the temple to pray: a Pharisee and a publican. The shared destination introduces two very different prayers.",
+    "refs": [
+      [
+        "nt/luke/18",
+        "Luke 18:10",
+        "10"
+      ]
+    ],
+    "owner": "jesus-christ/parables/pharisee-publican.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/pharisee-publican-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/pharisee-publican-01-960.webp",
+    "original": "pharisee-publican-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4d38400a-d81d-4281-b57c-1cd336f44269.png",
+    "original_sha256": "78b80cb5550b65e168d02c46809477d060c4e1f5b90a8af8876cb2b6cc838c49",
+    "prompt": "Use reference only to preserve these TWO distinct men's exact faces/clothes. Correct the action: two men GOING UP to temple to pray, Luke18:10, NOT leaving or descending. Show side-three-quarter view from the side of the staircase. Both visibly ASCENDING, one foot of each planted on the NEXT HIGHER step, torso directed toward temple entrance ahead and above them on image right. Cream hooded neatly bearded Pharisee several steps ahead of balding olive/brown publican. Show enough side profile to preserve identities, no looking at camera, no foreground descent. Temple entrance belongs in direction they are moving toward. Wide 3:2 photorealistic photograph, believable stone steps and weightbearing legs, quiet expressions, no halo, no text, no Jesus. No kneeling, gestures or praying yet.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cd2f19b0-e550-4c24-a9db-5a9364fd08db.png"
+    ],
+    "review_record": "parable-art-review-62.json"
+  },
+  "pharisee-publican-02": {
+    "title": "A prayer centered on comparison",
+    "alt": "The man in the light hooded robe stands with both palms raised and looks upward in the temple court.",
+    "caption": "The Pharisee thanks God that he is unlike other people, including the publican. He speaks of his fasting and tithing, placing his own record at the center of his prayer.",
+    "refs": [
+      [
+        "nt/luke/18",
+        "Luke 18:11-12",
+        "11-12"
+      ]
+    ],
+    "owner": "jesus-christ/parables/pharisee-publican.html",
+    "section": "story-and-teaching",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/pharisee-publican-02-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/pharisee-publican-02-960.webp",
+    "original": "pharisee-publican-02.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c85535cd-85c9-46b0-84e3-7a8bccb12daf.png",
+    "original_sha256": "d0be326bd741aeadd5ad1bce3d04909f5e4e1a5706b6885dabb4f9f494d597ff",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Pharisee praying about his merits. Scripture source: Luke 18:11-12. Narrative context: Two men go to pray Then One compares himself favorably with others Then The tax collector asks mercy and is justified. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Show sincere visual detail without grotesque contrast. The Pharisee's fault is not established by ugly facial features or ethnic stereotypes. The tax collector stands apart and lowers his eyes as stated; he is not necessarily ragged. Image uniqueness: this is scene 2 of 3 for The Pharisee and the Publican. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Reference preserves cream-hooded Pharisee face, beard and clothes. Show him standing by himself in temple court, medium-wide 3:2 live-action photo, upright self-assured posture, hands naturally held in prayer near waist with palms gently open, serious composed face not a sneering villain. Eyes slightly lifted in prayer, not staring at viewer. Other people distant and unobtrusive. No literal Jesus, no moneybag or written boast, no exaggerated ethnic features. His moral contrast comes from scripture not caricature. Natural pale stone courtyard daylight, visible natural skin/beard/cloth, grounded hands and anatomy. Publican not featured in this shot.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4d38400a-d81d-4281-b57c-1cd336f44269.png"
+    ],
+    "review_record": "parable-art-review-62.json"
+  },
+  "pharisee-publican-03": {
+    "title": "A plea for mercy",
+    "alt": "The balding man stands apart beside a column with his head bowed and one hand against his chest, while the light-robed man prays farther away.",
+    "caption": "Standing afar off, the publican will not lift his eyes to heaven and beats upon his breast. His prayer is a plea for God to be merciful to him, a sinner.",
+    "refs": [
+      [
+        "nt/luke/18",
+        "Luke 18:13",
+        "13"
+      ]
+    ],
+    "owner": "jesus-christ/parables/pharisee-publican.html",
+    "section": "story-and-teaching",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/pharisee-publican-03-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/pharisee-publican-03-960.webp",
+    "original": "pharisee-publican-03.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-81ce46bd-6e0b-44d9-8d04-c875f194fe15.png",
+    "original_sha256": "4b4728e9f0f8ed964b72e75d05ba22688933687b175d134b71c22c68a5401b1a",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Tax collector standing afar. Scripture source: Luke 18:13. Narrative context: Two men go to pray Then One compares himself favorably with others Then The tax collector asks mercy and is justified. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Show sincere visual detail without grotesque contrast. The Pharisee's fault is not established by ugly facial features or ethnic stereotypes. The tax collector stands apart and lowers his eyes as stated; he is not necessarily ragged. Image uniqueness: this is scene 3 of 3 for The Pharisee and the Publican. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Preserve same balding dark-haired publican with short beard, round face, olive tunic and brown mantle from reference. New shot at far edge of temple courtyard: publican STANDS apart under outer portico, head bowed with eyes down not looking heavenward, one hand drawn against his own breast in a quiet breast-smiting gesture, other hand relaxed. His face expresses humble remorse and petition for mercy, not despairing theatrics. Cream-robed Pharisee only small distant figure in open court establishing distance, not beside him. Wide 3:2 photographic realism, eye level, natural light with soft shadow, no halo or magical beam, no Jesus, no text, no kneeling, anatomically clear fingers and contact with chest.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4d38400a-d81d-4281-b57c-1cd336f44269.png"
+    ],
+    "review_record": "parable-art-review-62.json"
+  }
+}

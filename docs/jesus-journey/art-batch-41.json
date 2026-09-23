@@ -1,0 +1,33 @@
+{
+  "wedding-places-01": {
+    "title": "Choosing a place of honor",
+    "alt": "A dark-bearded guest in blue rests his hand on a prominent patterned cushion while a younger guest in brown attends to a lower place beside the table and an older host stands behind.",
+    "caption": "Jesus notices how guests choose places of honor and teaches them about humility. This imagined wedding gathering introduces the contrast between seeking prominence and taking a lower place.",
+    "refs": [
+      [
+        "nt/luke/14",
+        "Luke 14:7-8",
+        "7-8"
+      ]
+    ],
+    "owner": "jesus-christ/parables/wedding-places.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/wedding-places-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/wedding-places-01-960.webp",
+    "original": "wedding-places-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-577b1d8b-2d24-4aa7-b480-e10b20647338.png",
+    "original_sha256": "cbf6831bf3ff9710de166bcd4efb52da47f329a66aabb8ecab835128c73e6b46",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Guests selecting places. Scripture source: Luke 14:7. Narrative context: A guest chooses the highest place Then A host may ask him to move Then Jesus commends the lower place and generous hospitality. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 1 of 3 for Choosing the Lower Place. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Wide1536x1024 live-action firstcentury weddingmeal room, focus guests choosingplaces, NO Jesus depicted (this illustrates his teaching). Low diningtables withcushioned recliningplaces notmodernchairbanquet. Foreground an unnamed middleaged maleguest with shortblackhair andfullneattrimblackbeard, broadface, richmutedblue tunic, steps towardprominentcushion atupperend near servingtable, handonbackcushion intendingtosettle, ambitiousbutrestrainedexpression. Another younger slenderclean-shaven maleguest shortdarkcurls wearingplainbrowntunic chooseslowermat atfarend. Hostoldermale longthinface baldwithwhitebeard inwarmgrayrobe standsbackground greeting otherdistinctguests. No halos, no actualapostles. Naturalfaces/handcontact, simpleclayvessels breadlinen, plausible modestweddinghospitalityno medievalheraldry noWesterncastledecor. Soft windowdaylight. Cannotassertsourceexactseatingplan; imageillustrativehigh/lowplacechoice.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-source-addendum-wedding-01.json",
+    "width": 1536,
+    "height": 1024,
+    "asset_sha256": "5d7b1e1e1b00a0fc6c6c42017e43e5f87361ed77d5a61b8673bfe6fccc353958",
+    "thumbnail_sha256": "38d3fab563308adecc62e196b560985434ae8088dfaf0e3b55ba361e0c5737a0"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rr-sleeping-disciples",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rr-sleeping-disciples",
+      "generationKey": "rr-sleeping-disciples",
+      "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rr-sleeping-disciples-20260923.png",
+      "sha256": "b37e9001f0cc6e3790510ca1dc2d89dc0598e446a65885dc90a05a1663f10885",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Could ye not watch with me?",
+      "alt": "Jesus speaks earnestly to Peter beneath olive trees while James and John sleep behind them.",
+      "caption": "Jesus returns from prayer and finds the disciples asleep. Peter looks up as the Savior calls him to watch and pray.",
+      "refs": [
+        [
+          "nt/matt/26",
+          "Matthew 26:36–41",
+          "36-41"
+        ]
+      ],
+      "findings": "Actual canonical Christ and mapped apostle pixels compared. Christ's recognizable face carries exhaustion and earnest concern rather than a generic smile; direct downward eye contact meets Peter's lifted gaze. Peter preserves curl pattern, broad nose and beard; background James longer beard and John shorter beard remain distinct with eyes appropriately closed. Photographic night lighting, open hand and supporting posture coherent. No angel, soldiers, arrest, scars or duplicate prayer composition.",
+      "conditions": [
+        "Peter beginning to wake is staging of Jesus addressing him. Sleeping James and John appropriately have closed eyes; no reciprocal gaze required for sleepers. Exact postures, moonlight, ages and location details are interpretation.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/church-history/melchizedek-priesthood.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/26?lang=eng"
+      ]
+    }
+  ]
+}

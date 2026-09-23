@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original inspection of three modern branch scenes.",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 2
+  },
+  "globalConditions": [
+    "Technical acceptance is not owner approval or browser verification."
+  ],
+  "entries": [
+    {
+      "key": "rt-persuasion",
+      "generationKey": "rt-persuasion",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-04e5bf17-7985-4ed5-b5d5-59d114505c93.png",
+      "sha256": "dcb93134a0d93bf33554e04b388af2f39bcbaa45e3389d64076f234b6a5a5445",
+      "status": "revise",
+      "recommendedTitle": "Listening with patience",
+      "alt": "Two women speak across a workshop table while a third adult listens behind them.",
+      "caption": "At a shared worktable, one person listens while another explains a concern. Patient attention can give practical shape to persuasion, gentleness and love.",
+      "refs": [
+        [
+          "dc-testament/dc/121",
+          "Doctrine and Covenants 121:41\u00e2\u20ac\u201c44",
+          "41-44"
+        ]
+      ],
+      "findings": "Direct eye contact, natural expressions and hands pass. Readable invented slogans on three wall posters and a house symbol dominate background; also small apparent clothing mark. These violate unbranded/no invented text requirements.",
+      "conditions": [
+        "Preserve all people, faces, eye contact, hands and workshop composition. Replace three text-bearing wall signs with plain unmarked wall or blank noticeboards; remove house icon and any readable clothing/clipboard marks. Preserve unreadable neutral diagram lines, no new words/logos.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "rt-sung-testimony",
+      "generationKey": "rt-sung-testimony",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1aefdc4a-d4b2-4e67-a5e8-53d141a79b22.png",
+      "sha256": "983d3f2a9b9107759f83466d694330ae67d8d2ce5edb1fb7ee12b4f6c246c6d7",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A testimony sung together",
+      "alt": "A small choir follows a woman leading with her hands while an older woman holds an open hymnbook in the foreground.",
+      "caption": "Voices join in a quiet room as singers follow their leader. Shared song can become an offering of faith and praise.",
+      "refs": [
+        [
+          "bofm/moro/6",
+          "Moroni 6:9",
+          "9"
+        ],
+        [
+          "dc-testament/dc/25",
+          "Doctrine and Covenants 25:12",
+          "12"
+        ]
+      ],
+      "findings": "Distinct faces, natural singing mouths, coherent book grips and conductor hands; gazes attend leader. Older woman foreground and inward books establish participant perspective. No legible invented lyric or named choir claimed. Natural window light and cloth/skin retain photographic realism.",
+      "conditions": [
+        "Illustrative contemporary worship; do not name hymn, congregation, singers or claim a particular recorded gathering.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "rt-sacrament-preparation",
+      "generationKey": "rt-sacrament-preparation",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2fa8cdee-b319-4e2c-8883-5149386c4d59.png",
+      "sha256": "818c19f8b7939203f5d743e11acc2dcd12f6fe1f679c6e5f1b452ad43c316aaa",
+      "status": "revise",
+      "recommendedTitle": "Preparing the table",
+      "alt": "Two men prepare a table in an empty chapel, one pouring water into small cups and the other arranging a white cloth.",
+      "caption": "Quiet preparation makes the table ready for worship. Ordinary hands attend to the bread, water and cloth before the congregation gathers.",
+      "refs": [
+        [
+          "dc-testament/dc/20",
+          "Doctrine and Covenants 20:75\u00e2\u20ac\u201c79",
+          "75-79"
+        ],
+        [
+          "dc-testament/dc/27",
+          "Doctrine and Covenants 27:2",
+          "2"
+        ]
+      ],
+      "findings": "Natural faces and task attention, plausible pitcher stream/cup placement and cloth grip. Bread is already broken into many small pieces, contrary to the explicit plan for unbroken bread before worship.",
+      "conditions": [
+        "Preserve men, faces, hands, water, tray, tablecloth and room. Replace ONLY the broken bread pieces with several intact slices of plain bread lying flat in same tray, not torn or diced; retain tray geometry and natural shadows.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

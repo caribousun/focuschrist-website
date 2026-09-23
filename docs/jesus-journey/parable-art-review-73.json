@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original inspection of good-shepherd-01/03 and vine-branches-01 against canonical source plan.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical acceptance is not owner approval or browser verification."
+  ],
+  "entries": [
+    {
+      "key": "good-shepherd-01",
+      "generationKey": "good-shepherd-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ba16a5dd-35c7-4b2c-8e6d-979b8355b383.png",
+      "sha256": "62a15eefbca0de551df443632a5a76d0662c5b97d49f3c904fe1adf646f7eec4",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Calling the flock",
+      "alt": "An older gray-bearded shepherd holds a staff and reaches an open hand toward sheep gathered inside a stone sheepfold.",
+      "caption": "A shepherd turns toward the sheep at the open fold. His attentive call pictures the familiar voice and personal care Jesus describes in His teaching.",
+      "refs": [
+        [
+          "nt/john/10",
+          "John 10:3",
+          "3"
+        ]
+      ],
+      "findings": "Hands, staff grip, head direction and sheep are coherent; sheep attend the shepherd. Natural age, skin, wool and cloth. Distinct unnamed older man, not approved Christ likeness.",
+      "conditions": [
+        "Illustrates the shepherd calling in John 10:3, not a literal portrait of Christ or an authenticated location.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "good-shepherd-03",
+      "generationKey": "good-shepherd-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1034f801-a86d-48a4-94fa-75634733bb48.png",
+      "sha256": "5ef5ce642fc09520a74c45c7a8d6fd59bfd6896998bfaf4f172714cf292d26f4",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The hired worker flees",
+      "alt": "A young man runs from a scattered flock while looking back toward a gray wolf approaching across rocky grassland.",
+      "caption": "The hired worker runs as danger approaches, leaving the sheep behind. Jesus contrasts this flight with the care of the good shepherd.",
+      "refs": [
+        [
+          "nt/john/10",
+          "John 10:12",
+          "12"
+        ]
+      ],
+      "findings": "Plausible running limbs and anxious backward gaze toward threat; wolf separated from flock, no contact or injury. Distinct sheep, coherent wool and legs; natural daylight and skin texture.",
+      "conditions": [
+        "Illustrative hired worker and wolf in John 10:12, not a named person or documented historical attack.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "vine-branches-01",
+      "generationKey": "vine-branches-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d41ef3cf-6efa-4f6b-8c93-5788756da9bb.png",
+      "sha256": "856b5b63d78070e77a6137c65b179931456f9ade7018bbe75b7a6a5a51559a3d",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Joined to the vine",
+      "alt": "A thick leafy branch grows from the weathered trunk of a grapevine in a stony vineyard.",
+      "caption": "A living branch remains joined to the vine. Jesus uses this simple relationship to teach His disciples about abiding in Him.",
+      "refs": [
+        [
+          "nt/john/15",
+          "John 15:1-5",
+          "1-5"
+        ]
+      ],
+      "findings": "Organic connected trunk and lateral branch with plausible bark, leaf veins and smaller shoots. Photographic light and depth. No harvest action, supernatural symbols or literal divine figure.",
+      "conditions": [
+        "Botanical illustration of John 15:1-5, not literal depiction of Christ or the Father.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

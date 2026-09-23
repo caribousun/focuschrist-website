@@ -91,4 +91,4 @@ if __name__ == '__main__':
             raise SystemExit('Search index is stale. Run python tools/build_site_search.py and review the changes.')
         print('SEARCH INDEX PASS: public pages, sections and artwork are current')
     else:
-        target.write_text(result,encoding='utf-8'); print('Built site-search-index.json')
+        target.write_text(result,encoding='utf-8',newline='\n'); print('Built site-search-index.json')

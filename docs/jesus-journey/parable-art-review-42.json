@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Ten-virgins scenes 02–05 viewed at original detail against accepted 01v2 identity map.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Accepted scene-01-v2 identities retained; exact ages, architecture and gestures are artistic interpretation.",
+    "Technical source/visual review is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "ten-virgins-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "cc95510e7b6223dcb9de32d1815e9e64a26e429822b11b7051b0e2d1b62dcf71",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ea1d9d76-c6cd-46df-ae39-fa4266f336ae.png",
+      "recommendedTitle": "Oil kept ready",
+      "alt": "Two women handle small stoppered oil vessels beside their lit lamps, one holding a vessel at the opening of a woven bag.",
+      "caption": "The women have brought oil in separate vessels with their lamps. Their quiet preparation pictures the provision that distinguishes the wise attendants in Jesus' story.",
+      "findings": "Blue-robed fuller-faced woman and older gray-haired olive-robed woman match positions 1 and 3 of accepted 01v2. Distinct vessels are clearly separate from lamps; bag and vessel grips, cork contact and downward task attention are coherent.",
+      "conditions": [
+        "A close view shows two of the five prepared attendants, not the complete group."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:4",
+          "4"
+        ]
+      ]
+    },
+    {
+      "key": "ten-virgins-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "01de02f70ea2272aa1a565c726ad3f365e70cc4229fa661c9bdf72c2d221ddbe",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3e4abe88-5ea9-4c94-8fb8-5a2ec8e9850b.png",
+      "recommendedTitle": "The midnight cry",
+      "alt": "Four women turn toward a call in the night, rising or leaning forward beside their lamps and vessels.",
+      "caption": "At midnight, the call announces the bridegroom. Jesus says all ten had grown drowsy and slept; this close view pictures several attendants waking and getting ready to meet him.",
+      "findings": "Four figures match accepted identities: blue-robed woman, older olive-robed woman, darker curly-haired woman in mauve wrap, and short-curly-haired ochre-robed woman. Alert attention points in one direction. Hand support, lamp grip, rising postures and nighttime setting are plausible.",
+      "conditions": [
+        "Only four attendants are pictured; do not call this the entire ten.",
+        "Sleep is shared by all ten in the parable and must not be treated as the mark of the foolish alone."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:5-7",
+          "5-7"
+        ]
+      ]
+    },
+    {
+      "key": "ten-virgins-04",
+      "status": "pass_with_caption_conditions",
+      "sha256": "38be9bc4f2da004c023d5a9df51200170b77ec243045ce1ff9a275924ddc4a28",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-722d67c3-21f2-4221-a336-668b6313a038.png",
+      "recommendedTitle": "Preparing the lamps",
+      "alt": "An older woman pours oil into an unlit lamp while an ochre-robed woman holds a burning lamp and extends an open hand.",
+      "caption": "One woman tends her lamp with the oil she brought, while another asks for help. The scene brings preparation and need together at the moment the attendants are called to meet the bridegroom.",
+      "findings": "Older gray-haired olive-robed woman and ochre-robed short-curly-haired woman preserve accepted identities. Oil stream enters the reservoir of an unlit lamp, with coherent jug grip and supporting hand. Requesting woman's open palm and lamp grip are plausible; preparer's downward task gaze is appropriate. Requester's flame is visibly strong, not shown nearly extinguished.",
+      "conditions": [
+        "Do not claim the ochre woman's flame is tiny, extinguished or visibly fading; do not infer an empty reservoir from pixels.",
+        "If quoting the scriptural statement about lamps going out, distinguish that narrative wording from the instant pictured."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:7-8",
+          "7-8"
+        ]
+      ]
+    },
+    {
+      "key": "ten-virgins-05",
+      "status": "pass_with_caption_conditions",
+      "sha256": "dd00398eb2246aa6a89cd493114d16ccddd8c2aad3243e112ef1669890d816eb",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-80005076-d8ef-478a-bd2c-e49cd6801aa4.png",
+      "recommendedTitle": "Entering with the bridegroom",
+      "alt": "Five women carrying lit lamps approach an open doorway where a clean-shaven bridegroom welcomes them.",
+      "caption": "The five who are ready enter with the bridegroom to the wedding feast. The open doorway pictures their welcome before the door is shut, keeping the story's call to readiness in view.",
+      "findings": "Exactly five foreground lamp-bearing women match the first five seated identities of 01v2 in reverse order toward doorway: angular blue-robed woman, dark curly-haired mauve-wrap woman, older olive-robed woman, slender burgundy-robed woman, fuller-faced blue-robed woman. Bridegroom is a distinct short-haired clean-shaven fictional man, not the approved Christ likeness. Reciprocal attention at doorway, lamp grips, feet and open-arm anatomy are coherent. Background interior people read as banquet guests.",
+      "conditions": [
+        "Do not count background banquet guests as additional attendants in the ten.",
+        "Door is open here; do not caption this image as the closed-door scene.",
+        "Bridegroom is an imagined parable character, not a historical portrait of Jesus."
+      ],
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:10",
+          "10"
+        ]
+      ]
+    }
+  ]
+}

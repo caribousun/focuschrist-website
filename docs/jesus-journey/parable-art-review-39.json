@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Three faithful-servant originals reviewed at original detail for hand contact, contrast and continuity.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Unnamed parable figures and precise household details are artistic interpretation.",
+    "Technical review is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "faithful-servant-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "62afc844606ffc0c4eea6b647da36693b2b00d8305cfd3f738d9d0873d122120",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bd194100-dae8-4c3e-97ab-c6ec2c70f4e7.png",
+      "recommendedTitle": "Food for the household",
+      "alt": "A steward in a blue tunic hands a filled bowl to an older woman while two other household members hold their meals.",
+      "caption": "The steward places food into another person's hands. Jesus describes a faithful servant entrusted with feeding the household at the proper time; responsibility becomes care for the people before him.",
+      "findings": "Bowl transfer is supported naturally from both sides; overlapping hands remain distinguishable with plausible fingers and wrists. Steward's face-directed attention reaches the woman. Other bowl grips and figures are coherent. Natural skin, woven tunics, pottery and courtyard fit the intended ancient setting.",
+      "conditions": [
+        "Exact meal, household composition and gestures are illustrative; do not invent relationships among the figures."
+      ],
+      "refs": [
+        [
+          "nt/matt/24",
+          "Matthew 24:45",
+          "45"
+        ]
+      ]
+    },
+    {
+      "key": "faithful-servant-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "f49f7dc995972bcba665cbec2fb4504745bd0870c39fe686a0909c537ce63631",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c69e5d25-2af3-448d-8902-51e1a6498833.png",
+      "recommendedTitle": "Responsibility turned toward self",
+      "alt": "A seated man raises a hand toward three people holding bowls while keeping a cup beside his own food.",
+      "caption": "A contrasting steward keeps his attention on his own table while others wait. This restrained scene pictures neglected care alongside Jesus' warning about a servant who uses his master's delay as permission to mistreat the household.",
+      "findings": "Different bald moustached steward clearly distinguishes this contrast from the faithful blue-clothed man. Raised dismissal hand, cup grip, bowls and waiting postures are coherent. Expressions convey disregard and concern without sensational violence. Source includes mistreatment and self-indulgence; image illustrates part of that warning, not every narrated act.",
+      "conditions": [
+        "Do not narrate this as the faithful steward's later downfall or a single man's biography.",
+        "Do not claim visible intoxication or assault; neither is shown.",
+        "Body size or baldness must not be used in the caption as evidence of moral character."
+      ],
+      "refs": [
+        [
+          "nt/luke/12",
+          "Luke 12:45",
+          "45"
+        ]
+      ]
+    },
+    {
+      "key": "faithful-servant-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "2d5833e2da9671b6f351ae95a522088ebe6a6337cee16d0d7969e0906fada0df",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ffd0d5d6-e3eb-4cf4-90f0-c25837a84b07.png",
+      "recommendedTitle": "Found serving when the master returns",
+      "alt": "The blue-clothed steward holds bread beside a meal table and turns toward an older man standing in the open courtyard entrance.",
+      "caption": "The returning master finds the steward still serving the household. Jesus calls that servant blessed: the master's arrival reveals the faithful work already underway.",
+      "findings": "Steward's salt-and-pepper curls, moustache, blue tunic and shoulder cloth match scene 01. Courtyard and eating household figures sustain continuity. Older clean-shaven master is distinct, and reciprocal eye direction is credible. Bread grip, satchel strap hand, lower hand and meal contacts remain natural. Photographic detail and plausible period materials.",
+      "conditions": [
+        "The arrival setting and expressions are artistic visualization; do not claim a visible formal reward or promotion in this moment."
+      ],
+      "refs": [
+        [
+          "nt/matt/24",
+          "Matthew 24:46",
+          "46"
+        ]
+      ]
+    }
+  ]
+}

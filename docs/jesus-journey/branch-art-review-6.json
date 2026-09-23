@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "review_type": "independent technical artwork review",
+  "owner_approval": false,
+  "entries": [
+    {
+      "key": "rr-broiled-fish",
+      "version_key": "rr-broiled-fish-v3",
+      "status": "pass",
+      "sha256": "d8ce575e89d0f0494d099d56f388b2c00edb069e1b1d24877a30b3fd6b9d618e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b8a81b89-c960-4f5c-93e1-eb57e3fbe860.png",
+      "alt": "The risen Jesus holds a piece of fish while two disciples watch Him indoors.",
+      "caption": "Luke records the risen Jesus eating before His disciples. This scene illustrates that indoor witness, distinct from the shore breakfast in John 21.",
+      "refs": [
+        {
+          "source": "Luke 24:36–43",
+          "note": "Indoor risen-body witness and eating before the disciples; room arrangement and precise expressions are artistic interpretation."
+        }
+      ],
+      "findings": [
+        "The exposed left palm now has a clear small healed oval mark, distinguishable from an ordinary palm crease. The faint left wrist mark and clearer right wrist mark remain visible.",
+        "Christ retains the recognizable approved facial identity, with natural photographic skin and hair detail. His warm expression and gaze toward the disciples suit this joyful reunion.",
+        "Visible fingers, hands, fish and table relationships are coherent. The two disciples have distinct faces rather than duplicating Christ.",
+        "No material unwanted composition or identity change observed from the previously reviewed version. This technical pass is not owner approval."
+      ]
+    }
+  ]
+}

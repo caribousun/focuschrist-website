@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of tp-zacchaeus-response",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "tp-zacchaeus-response",
+      "generationKey": "tp-zacchaeus-response",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-f8d07ed5-af2c-4b65-a8fe-3a2bfbc53b45.png",
+      "sha256": "b2ac11fa11a265c0992d9f91f71352ad0e3a53d16d7d7a7ac13e5a1293c1b493",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A promise to make things right",
+      "alt": "Zacchaeus speaks with open hands as Jesus listens across a simple meal.",
+      "caption": "Zacchaeus stands before Jesus with open hands and a promise: to share with the poor and repay those he has wronged. The Savior listens as welcome becomes a changed way of living.",
+      "refs": [
+        [
+          "nt/luke/19",
+          "Luke 19:5–10",
+          "5-10"
+        ]
+      ],
+      "findings": "Canonical Christ face directly compared; recognizable facial proportions, lifelike eyes and serious gentle attention toward Zacchaeus. Both faces and pupils form reciprocal gaze. Zacchaeus preserves tan head wrap, russet striped garment and visible build continuity with rear-facing tree reference; new front face is explicitly original interpretation as permitted by resolved identity map, not claimed previously approved. Coherent open hands, photographic interior. No money distribution falsely shown as completed restitution.",
+      "conditions": [
+        "Zacchaeus declares his commitment; do not claim completed repayment or exact named victims. Front-face interpretation follows mapped reference limit; no owner approval inferred. House, meal, ages and furnishings are staging.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng"
+      ]
+    }
+  ]
+}

@@ -66,7 +66,8 @@ def main():
     if args.baseline_report:Path(args.baseline_report).write_text(json.dumps({'baseline':baseline,'images':preserved},indent=2),encoding='utf8')
     ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
     pages=[urlsplit(n.text).path.lstrip('/') or 'index.html' for n in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
-    check(len(pages)==42 and len(set(pages))==42,'Sitemap must expose all 42 unique canonical destinations')
+    expected_pages={p.relative_to(ROOT).as_posix() for p in [*ROOT.glob('*.html'),*ROOT.glob('answers/*.html'),*ROOT.glob('art-study/*.html'),*ROOT.glob('jesus-christ/**/*.html')] if p.name not in {'404.html','google3fa84a4b37862f36.html'}}
+    check(len(pages)==len(set(pages)) and set(pages)==expected_pages,'Sitemap must expose every canonical destination exactly once')
     parsed={}
     for page in pages:
         check((ROOT/page).is_file(),'Missing canonical page '+page)

@@ -1,0 +1,37 @@
+{
+  "scope": "local preview phone picture interaction checks",
+  "viewport": [
+    390,
+    844
+  ],
+  "page_counts": {
+    "laborers-vineyard": 4,
+    "unmerciful-servant": 5,
+    "barren-fig": 3,
+    "two-sons": 3,
+    "wicked-tenants": 4,
+    "royal-wedding": 4,
+    "budding-fig": 2,
+    "thief-night": 2,
+    "faithful-servant": 3,
+    "ten-virgins": 5
+  },
+  "total_picture_paths": 35,
+  "all_pass": true,
+  "checks": [
+    "image loaded",
+    "study opened",
+    "full-size opened and closed",
+    "scripture reader opened and closed",
+    "study closed with focus returned",
+    "control labels unclipped",
+    "page width contained"
+  ],
+  "limits": [
+    "Not each passage text",
+    "Not whole-page composition",
+    "Not 200-percent text or no-JavaScript",
+    "Not publication"
+  ],
+  "viewport_reset": true
+}

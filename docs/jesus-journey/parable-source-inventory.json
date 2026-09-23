@@ -1,0 +1,2944 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-09-23",
+  "purpose": "Comprehensive Gospel parable study inventory for the nested Jesus Christ journey; editorial classification, not an official fixed number.",
+  "scope": "Broad Gospel inventory: 47 narrative or compact parables and judgment pictures, plus 16 selected related comparisons and allegories. The related list is not a claim to enumerate every metaphor in Jesus' teaching.",
+  "sourcePolicy": "Official scripture is primary. Bible Dictionary and Harmony guide taxonomy and parallels. Notes are original editorial study summaries, not quotations or authoritative new interpretations.",
+  "sources": [
+    {
+      "title": "Bible Dictionary: Parables",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bd/parables?lang=eng"
+    },
+    {
+      "title": "Harmony of the Gospels",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/harmony?lang=eng"
+    },
+    {
+      "title": "Harmony: Second Galilean Ministry",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/harmony/harmony-5?lang=eng"
+    },
+    {
+      "title": "Harmony: Perean and Later Judean Ministry",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/harmony/harmony-7?lang=eng"
+    },
+    {
+      "title": "Harmony: Last Week",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/harmony/harmony-8?lang=eng"
+    }
+  ],
+  "taxonomyNotes": [
+    "Counts vary when compact comparisons are counted separately. Do not advertise 'the official 47 parables'.",
+    "John's shepherd and vine teachings belong in the complete experience but are classified as allegories following the Bible Dictionary; Harmony uses 'parable' for the shepherd.",
+    "The Sheep and Goats is a judgment picture included by Harmony among parables.",
+    "Each theme is an editorial learning route; preserve Gospel grouping and immediate context."
+  ],
+  "collections": [
+    {
+      "id": "mercy",
+      "title": "Mercy, Repentance, and the Joy of Returning",
+      "introduction": "Follow the searches, welcomes, and invitations through which Jesus teaches repentance and mercy."
+    },
+    {
+      "id": "neighbor",
+      "title": "Loving Our Neighbor",
+      "introduction": "Explore mercy, humility, hospitality, and attention to people in need."
+    },
+    {
+      "id": "hearing",
+      "title": "Hearing and Living His Word",
+      "introduction": "Consider the difference between hearing, understanding, speaking, and doing."
+    },
+    {
+      "id": "kingdom",
+      "title": "The Kingdom of God",
+      "introduction": "Study growth, worth, invitation, and judgment through Jesus' varied comparisons."
+    },
+    {
+      "id": "stewardship",
+      "title": "Faithful Stewardship and the Cost of Discipleship",
+      "introduction": "Reflect on possessions, responsibility, generosity, and wholehearted commitment."
+    },
+    {
+      "id": "watchfulness",
+      "title": "Prayer, Readiness, and His Return",
+      "introduction": "Keep praying, serve faithfully, and prepare without claiming to know the time."
+    }
+  ],
+  "parables": [
+    {
+      "id": "wise-foolish-builders",
+      "title": "The Wise and Foolish Builders",
+      "theme": "hearing",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 7:24-27",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7?lang=eng&id=p24-p27#p24"
+        },
+        {
+          "reference": "Luke 6:46-49",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p46-p49#p46"
+        }
+      ],
+      "studyNote": "Hearing reaches its purpose in doing Jesus' words. Compare the foundations, not the weather: both houses meet the storm.",
+      "setting": "Conclusion of Jesus' sermon; Luke first asks why hearers call Him Lord but do not act.",
+      "narrativeProgression": [
+        "Two builders choose foundations",
+        "Rain and flood test both houses",
+        "Only the well-founded house stands"
+      ],
+      "centralTeaching": "Act on His teaching.",
+      "interpretiveCaution": "Do not imply suffering proves someone's faith was weak.",
+      "reflectionPrompts": [
+        "Which teaching needs action rather than agreement?",
+        "What quiet practice could deepen your foundation?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Digging to bedrock, Luke 6:48",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "A house built on sand, Matthew 7:26",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Storm revealing the contrasting foundations, Matthew 7:25-27",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "new-patch",
+      "title": "The New Patch",
+      "theme": "hearing",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 9:16",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng&id=p16#p16"
+        },
+        {
+          "reference": "Mark 2:21",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p21#p21"
+        },
+        {
+          "reference": "Luke 5:36",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/5?lang=eng&id=p36#p36"
+        }
+      ],
+      "studyNote": "Read within the question about fasting. Jesus describes the damage caused by joining an unshrunk patch to an old garment.",
+      "setting": "A question about why Jesus' disciples do not fast like others.",
+      "narrativeProgression": [
+        "New cloth is used as a patch",
+        "The patch pulls at the old garment",
+        "The tear becomes worse"
+      ],
+      "centralTeaching": "Attend to the newness of His work.",
+      "interpretiveCaution": "Do not declare every old practice worthless.",
+      "reflectionPrompts": [
+        "What question prompted this picture?",
+        "Where might habit keep you from listening carefully?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Unshrunk cloth beside an old garment, Matthew 9:16",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "The damaged patched cloth, Matthew 9:16",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "new-wineskins",
+      "title": "New Wine and Wineskins",
+      "theme": "hearing",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 9:17",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng&id=p17#p17"
+        },
+        {
+          "reference": "Mark 2:22",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p22#p22"
+        },
+        {
+          "reference": "Luke 5:37-39",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/5?lang=eng&id=p37-p39#p37"
+        }
+      ],
+      "studyNote": "Read with the preceding garment comparison and the fasting dispute. Preserve Luke's additional observation about preference for old wine.",
+      "setting": "The same fasting conversation as the patch illustration.",
+      "narrativeProgression": [
+        "New wine enters old skins",
+        "The skins burst",
+        "New skins preserve the wine"
+      ],
+      "centralTeaching": "Receive His teaching with a fitting response.",
+      "interpretiveCaution": "Do not turn Luke's old-wine preference into a blanket rejection of the new.",
+      "reflectionPrompts": [
+        "How does this companion image strengthen the garment comparison?",
+        "What might readiness to learn require?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Old skins bursting, Matthew 9:17",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "New wine placed in new skins, Matthew 9:17",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "lamp",
+      "title": "The Lamp on a Stand",
+      "theme": "hearing",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 5:14-16",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p14-p16#p14"
+        },
+        {
+          "reference": "Mark 4:21-25",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p21-p25#p21"
+        },
+        {
+          "reference": "Luke 8:16-18",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/8?lang=eng&id=p16-p18#p16"
+        },
+        {
+          "reference": "Luke 11:33-36",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/11?lang=eng&id=p33-p36#p33"
+        }
+      ],
+      "studyNote": "The lamp is meant to give light. Compare the different surrounding teachings about witness, hearing, and inward light rather than merging every setting.",
+      "setting": "Sayings appear in the sermon and in teaching about listening.",
+      "narrativeProgression": [
+        "A lamp is brought in",
+        "It is placed where it can illuminate",
+        "Hearers consider how they receive and show light"
+      ],
+      "centralTeaching": "Receive and share light faithfully.",
+      "interpretiveCaution": "Do not claim all accounts record one identical occasion.",
+      "reflectionPrompts": [
+        "What changes when the lamp is covered?",
+        "How could your conduct help someone see goodness?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "A lamp beneath a basket, Mark 4:21",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "A lamp on its stand lighting a room, Luke 8:16",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "children-marketplace",
+      "title": "Children in the Marketplace",
+      "theme": "hearing",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 11:16-19",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng&id=p16-p19#p16"
+        },
+        {
+          "reference": "Luke 7:31-35",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=p31-p35#p31"
+        }
+      ],
+      "studyNote": "Jesus compares inconsistent reactions to John and Himself with children who reject both kinds of music. Read the accusations in the following verses.",
+      "setting": "Jesus speaks about the different receptions given to John and Himself.",
+      "narrativeProgression": [
+        "Children call to others",
+        "Both joyful and mournful invitations are refused",
+        "Jesus names contradictory accusations"
+      ],
+      "centralTeaching": "Examine resistance disguised as criticism.",
+      "interpretiveCaution": "Do not identify imagined children or invent a real event.",
+      "reflectionPrompts": [
+        "What remains constant in the two criticisms?",
+        "How can you recognize a message without demanding your preferred messenger?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Children piping in a marketplace, Matthew 11:16-17",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Children expressing the unheeded lament, Matthew 11:17",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "strong-man",
+      "title": "The Strong Man",
+      "theme": "kingdom",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 12:25-29",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=p25-p29#p25"
+        },
+        {
+          "reference": "Mark 3:23-27",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/3?lang=eng&id=p23-p27#p23"
+        },
+        {
+          "reference": "Luke 11:17-22",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/11?lang=eng&id=p17-p22#p17"
+        }
+      ],
+      "studyNote": "Jesus answers the charge that His deliverance comes from Satan. Luke develops the image of a stronger conqueror; this is not a lesson endorsing robbery.",
+      "setting": "Opponents attribute Jesus' casting out devils to the devil.",
+      "narrativeProgression": [
+        "A strong man guards possessions",
+        "A stronger power overcomes him",
+        "The goods are taken"
+      ],
+      "centralTeaching": "Jesus' deliverance challenges Satan's power.",
+      "interpretiveCaution": "Avoid gratuitous violence or identifying every prop symbolically.",
+      "reflectionPrompts": [
+        "How does the image answer the accusation?",
+        "What does deliverance reveal about His authority?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "A guarded household, Luke 11:21",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "The stronger challenger disarming the guard, Luke 11:22",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Goods divided after defeat, Luke 11:22",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "sower",
+      "title": "The Sower",
+      "theme": "hearing",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 13:3-9,18-23",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p3-p9,p18-p23#p3"
+        },
+        {
+          "reference": "Mark 4:3-9,14-20",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p3-p9,p14-p20#p3"
+        },
+        {
+          "reference": "Luke 8:4-8,11-15",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/8?lang=eng&id=p4-p8,p11-p15#p4"
+        }
+      ],
+      "studyNote": "Jesus supplies an explanation of the seed and soils. Begin there; ask how hearing can become enduring fruit.",
+      "setting": "Jesus teaches a crowd from a boat; disciples later seek explanation.",
+      "narrativeProgression": [
+        "Seed falls along four kinds of ground",
+        "Obstacles prevent lasting growth",
+        "Good soil yields a harvest"
+      ],
+      "centralTeaching": "Receive the word with understanding and endurance.",
+      "interpretiveCaution": "Do not fix people permanently into soil categories.",
+      "reflectionPrompts": [
+        "What currently competes for your attention?",
+        "What would help the word take deeper root?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Seed falling along the path, Matthew 13:3-4",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Shallow plants under heat, Matthew 13:5-6",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Thorns crowding growth, Matthew 13:7",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "A plentiful field, Matthew 13:8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "growing-seed",
+      "title": "The Seed Growing Secretly",
+      "theme": "kingdom",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Mark 4:26-29",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p26-p29#p26"
+        }
+      ],
+      "studyNote": "The farmer sows, waits through growth he cannot fully explain, and harvests. Keep this distinct from the wheat and tares.",
+      "setting": "Mark's kingdom teaching after the lamp sayings.",
+      "narrativeProgression": [
+        "A farmer scatters seed",
+        "Growth unfolds through successive stages",
+        "Harvest arrives"
+      ],
+      "centralTeaching": "The kingdom's growth exceeds human control.",
+      "interpretiveCaution": "Do not turn the farmer's waiting into a command for passivity.",
+      "reflectionPrompts": [
+        "What can you faithfully tend without controlling the result?",
+        "What small growth might you overlook?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Sowing, Mark 4:26",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Green blade and forming ear, Mark 4:27-28",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Harvest with sickle, Mark 4:29",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "wheat-tares",
+      "title": "The Wheat and the Tares",
+      "theme": "kingdom",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 13:24-30,36-43",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p24-p30,p36-p43#p24"
+        }
+      ],
+      "studyNote": "Read Jesus' explanation after the story. The servants are restrained from uprooting wheat; judgment belongs to the appointed harvest.",
+      "setting": "Matthew's kingdom discourse; Jesus later explains privately.",
+      "narrativeProgression": [
+        "An enemy sows among good seed",
+        "Servants ask to uproot the tares",
+        "The owner preserves wheat until harvest"
+      ],
+      "centralTeaching": "Trust His discernment and appointed judgment.",
+      "interpretiveCaution": "Do not label living neighbors tares or stage persecution.",
+      "reflectionPrompts": [
+        "Why does the owner delay separation?",
+        "How can patience protect someone vulnerable?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Enemy sowing at night, Matthew 13:25",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Servants examining mixed growth, Matthew 13:26-28",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Owner restraining premature uprooting, Matthew 13:29",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Separated harvest, Matthew 13:30",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "mustard-seed",
+      "title": "The Mustard Seed",
+      "theme": "kingdom",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 13:31-32",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p31-p32#p31"
+        },
+        {
+          "reference": "Mark 4:30-32",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng&id=p30-p32#p30"
+        },
+        {
+          "reference": "Luke 13:18-19",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=p18-p19#p18"
+        }
+      ],
+      "studyNote": "The kingdom is compared with a small seed and substantial growth. Keep the kingdom comparison distinct from separate sayings about mustard-seed faith.",
+      "setting": "Kingdom comparisons in the Synoptic Gospels.",
+      "narrativeProgression": [
+        "A tiny seed is planted",
+        "The plant becomes large",
+        "Birds find shelter in its branches"
+      ],
+      "centralTeaching": "Small beginnings need not disclose the final reach.",
+      "interpretiveCaution": "Avoid a modern botanical claim that no seed is smaller.",
+      "reflectionPrompts": [
+        "What makes the beginning seem unimpressive?",
+        "Where might patient participation matter more than scale?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Seed in a sower's hand, Matthew 13:31",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Birds lodging in grown branches, Matthew 13:32",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "leaven",
+      "title": "The Leaven",
+      "theme": "kingdom",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 13:33",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p33#p33"
+        },
+        {
+          "reference": "Luke 13:20-21",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=p20-p21#p20"
+        }
+      ],
+      "studyNote": "A woman works leaven into meal until it permeates the whole. Do not import the negative meaning of leaven from warnings in other settings.",
+      "setting": "A brief kingdom comparison paired with the mustard seed.",
+      "narrativeProgression": [
+        "A woman places leaven in meal",
+        "Its effect reaches the whole batch"
+      ],
+      "centralTeaching": "The kingdom works beyond its small visible beginning.",
+      "interpretiveCaution": "No invented family or fixed symbolic meaning for the three measures.",
+      "reflectionPrompts": [
+        "What is unseen while the dough changes?",
+        "What quiet influence can you offer?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Woman working leaven into meal, Matthew 13:33",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Leavened dough in the same domestic setting, Matthew 13:33",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "hidden-treasure",
+      "title": "The Hidden Treasure",
+      "theme": "kingdom",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 13:44",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p44#p44"
+        }
+      ],
+      "studyNote": "Joy over discovered treasure leads to wholehearted action. Keep the narrative brief instead of supplying an invented biography.",
+      "setting": "One of Matthew's compact kingdom comparisons.",
+      "narrativeProgression": [
+        "A man finds treasure in a field",
+        "He sells his possessions with joy",
+        "He buys the field"
+      ],
+      "centralTeaching": "Recognize the kingdom's surpassing worth.",
+      "interpretiveCaution": "Do not create an ethical ruling about land ownership from incidental details.",
+      "reflectionPrompts": [
+        "Why does joy matter in this story?",
+        "What do your choices say you treasure?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Discovery in the field, Matthew 13:44",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Sale of possessions, Matthew 13:44",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Purchase of the field, Matthew 13:44",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "pearl",
+      "title": "The Pearl of Great Price",
+      "theme": "kingdom",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 13:45-46",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p45-p46#p45"
+        }
+      ],
+      "studyNote": "A merchant recognizes one pearl's value and sells all to obtain it. Study beside the treasure while preserving the difference between seeking and finding.",
+      "setting": "The merchant comparison follows the hidden treasure.",
+      "narrativeProgression": [
+        "A merchant seeks pearls",
+        "One pearl is recognized as exceptional",
+        "He sells all and buys it"
+      ],
+      "centralTeaching": "Respond wholeheartedly to recognized worth.",
+      "interpretiveCaution": "Do not pad two verses with an invented travel adventure.",
+      "reflectionPrompts": [
+        "What distinguishes seeking from recognizing?",
+        "What commitment follows recognition for you?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Merchant examining pearls, Matthew 13:45",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Recognition of the precious pearl, Matthew 13:46",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Purchase after selling all, Matthew 13:46",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "net",
+      "title": "The Fishing Net",
+      "theme": "kingdom",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 13:47-50",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p47-p50#p47"
+        }
+      ],
+      "studyNote": "The catch is gathered and sorted. Jesus explicitly connects the separation with judgment; the text does not authorize us to decide another person's final standing.",
+      "setting": "Matthew's kingdom teaching, with an explicit concluding explanation.",
+      "narrativeProgression": [
+        "A net gathers many kinds",
+        "The catch reaches shore",
+        "The fish are separated"
+      ],
+      "centralTeaching": "Final judgment belongs to God's appointed agents.",
+      "interpretiveCaution": "Do not visually identify current groups as rejected fish.",
+      "reflectionPrompts": [
+        "How does the shore differ from the gathering stage?",
+        "What responsibility remains yours without judging another's final outcome?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Net cast into the sea, Matthew 13:47",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Fishermen drawing the catch ashore, Matthew 13:48",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Sorting into vessels, Matthew 13:48",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "householder",
+      "title": "The Householder's Treasure",
+      "theme": "hearing",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 13:51-52",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng&id=p51-p52#p51"
+        }
+      ],
+      "studyNote": "After asking whether the disciples understand, Jesus speaks of a trained scribe bringing out treasures new and old. Treat this as a compact concluding comparison.",
+      "setting": "Jesus asks the disciples whether they have understood the preceding parables.",
+      "narrativeProgression": [
+        "A trained scribe is compared to a householder",
+        "He brings out old and new treasures"
+      ],
+      "centralTeaching": "Learning should become a resource for faithful teaching.",
+      "interpretiveCaution": "Do not invent an item-by-item doctrinal code for the treasure.",
+      "reflectionPrompts": [
+        "How can older understanding help you receive something new?",
+        "What can you share faithfully from what you have learned?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Householder bringing out stored treasures, Matthew 13:52",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "lost-sheep",
+      "title": "The Lost Sheep",
+      "theme": "mercy",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 18:12-14",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p12-p14#p12"
+        },
+        {
+          "reference": "Luke 15:1-7",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p1-p7#p1"
+        }
+      ],
+      "studyNote": "Luke places the search amid criticism of Jesus receiving sinners; Matthew emphasizes care for the little ones. Let visitors read both contexts.",
+      "setting": "Luke: complaints about receiving sinners. Matthew: care for the little ones.",
+      "narrativeProgression": [
+        "One sheep is missing",
+        "The shepherd searches",
+        "He finds it and rejoices"
+      ],
+      "centralTeaching": "The one who is lost matters.",
+      "interpretiveCaution": "Do not depict neglect of the ninety-nine as the lesson.",
+      "reflectionPrompts": [
+        "Who might be overlooked in a crowd?",
+        "How can welcome preserve someone's dignity?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Shepherd searching the hills, Matthew 18:12",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Found sheep carried on shoulders, Luke 15:5",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Neighbors called to rejoice, Luke 15:6",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "unmerciful-servant",
+      "title": "The Unmerciful Servant",
+      "theme": "mercy",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 18:21-35",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/18?lang=eng&id=p21-p35#p21"
+        }
+      ],
+      "studyNote": "Peter asks about forgiveness. The enormous forgiven debt throws the servant's refusal of mercy into sharp relief; forgiveness does not require returning to danger.",
+      "setting": "Peter asks how many times he should forgive.",
+      "narrativeProgression": [
+        "A vast debt is forgiven",
+        "The servant refuses a smaller plea",
+        "His master confronts the refusal"
+      ],
+      "centralTeaching": "Received mercy should shape mercy given.",
+      "interpretiveCaution": "Do not equate forgiveness with unsafe access or erase accountability.",
+      "reflectionPrompts": [
+        "Where are you keeping a harsh ledger?",
+        "How might compassion change one response while preserving needed boundaries?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Servant pleading before the king, Matthew 18:24-26",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Release of the debt, Matthew 18:27",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Fellow servant asking patience, Matthew 18:28-29",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Witnesses reporting the cruelty, Matthew 18:31",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 5,
+          "description": "The king's confrontation, Matthew 18:32-33",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "laborers-vineyard",
+      "title": "The Laborers in the Vineyard",
+      "theme": "stewardship",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 20:1-16",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/20?lang=eng&id=p1-p16#p1"
+        }
+      ],
+      "studyNote": "Different starting times expose resentment at generosity. Read with Matthew 19:27-30; avoid making the story a formula for modern wages.",
+      "setting": "Peter's question about leaving everything precedes the story.",
+      "narrativeProgression": [
+        "Laborers are hired at several hours",
+        "All receive the agreed day's wage",
+        "The owner answers resentment"
+      ],
+      "centralTeaching": "Receive generosity without envy.",
+      "interpretiveCaution": "Do not use the story to justify exploitative employment.",
+      "reflectionPrompts": [
+        "When does another person's blessing feel like your loss?",
+        "What would gratitude notice about the owner's first agreement?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Early hiring, Matthew 20:1-2",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Late laborers still waiting, Matthew 20:6-7",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Equal payment, Matthew 20:8-10",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Owner answering complaint, Matthew 20:11-15",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "two-sons",
+      "title": "The Two Sons",
+      "theme": "hearing",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 21:28-32",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p28-p32#p28"
+        }
+      ],
+      "studyNote": "Contrasting words and actions answer a dispute about authority. Jesus names the connection to people's response to John.",
+      "setting": "Temple leaders challenge Jesus' authority.",
+      "narrativeProgression": [
+        "One son refuses but later works",
+        "Another agrees but does not go",
+        "Hearers identify obedience in action"
+      ],
+      "centralTeaching": "Repentant action matters more than appearance.",
+      "interpretiveCaution": "Keep Jesus' application to John and His hearers explicit.",
+      "reflectionPrompts": [
+        "Where might a changed mind become a faithful action?",
+        "What promise still needs to become practice?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Father asking the first son, Matthew 21:28",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "First son working after reconsidering, Matthew 21:29",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Second son agreeing but not working, Matthew 21:30",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "wicked-tenants",
+      "title": "The Wicked Tenants",
+      "theme": "stewardship",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 21:33-46",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p33-p46#p33"
+        },
+        {
+          "reference": "Mark 12:1-12",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p1-p12#p1"
+        },
+        {
+          "reference": "Luke 20:9-19",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/20?lang=eng&id=p9-p19#p9"
+        }
+      ],
+      "studyNote": "Tenants reject servants and the owner's son. Keep the confrontation with particular leaders in context; do not turn the account into hostility toward Jewish people.",
+      "setting": "Jesus speaks amid disputes with leaders in Jerusalem.",
+      "narrativeProgression": [
+        "A vineyard is leased",
+        "Servants seeking fruit are rejected",
+        "The son is killed and accountability follows"
+      ],
+      "centralTeaching": "Rejecting the owner's messengers and son is serious.",
+      "interpretiveCaution": "Avoid collective blame against Jews; violence need not be graphically shown.",
+      "reflectionPrompts": [
+        "What has been entrusted to your care?",
+        "How do you receive correction from a rightful source?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Prepared vineyard leased out, Matthew 21:33",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Servants turned away, Mark 12:2-5",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "The son approaching the vineyard, Mark 12:6-8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Hearers confronting the question of judgment, Matthew 21:40-41",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "royal-wedding",
+      "title": "The Wedding of the King's Son",
+      "theme": "kingdom",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 22:1-14",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/22?lang=eng&id=p1-p14#p1"
+        }
+      ],
+      "studyNote": "Rejected invitations lead to a widened invitation, followed by the wedding-garment episode. Preserve both movements and distinguish this account from Luke's great supper.",
+      "setting": "A further kingdom parable in Jerusalem.",
+      "narrativeProgression": [
+        "Invited guests reject the summons",
+        "Others are gathered from the roads",
+        "The king addresses the guest without wedding clothing"
+      ],
+      "centralTeaching": "Respond to invitation with a fitting response.",
+      "interpretiveCaution": "Do not omit the garment episode or merge with Luke 14.",
+      "reflectionPrompts": [
+        "What competes with a meaningful invitation?",
+        "How might receiving a gift also call for preparation?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Servants carrying invitations, Matthew 22:3",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Guests gathered from roads, Matthew 22:9-10",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "A filled wedding hall, Matthew 22:10",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "King speaking to the unprepared guest, Matthew 22:11-12",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "budding-fig",
+      "title": "The Budding Fig Tree",
+      "theme": "watchfulness",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 24:32-35",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/24?lang=eng&id=p32-p35#p32"
+        },
+        {
+          "reference": "Mark 13:28-31",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/13?lang=eng&id=p28-p31#p28"
+        },
+        {
+          "reference": "Luke 21:29-33",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/21?lang=eng&id=p29-p33#p29"
+        }
+      ],
+      "studyNote": "Seasonal growth illustrates recognizing signs. Read with the warnings about the unknown time; it is not permission to calculate a date.",
+      "setting": "The discourse about coming events and watchfulness.",
+      "narrativeProgression": [
+        "Tender branches put forth leaves",
+        "Observers recognize summer's approach",
+        "Jesus applies the comparison to discernment"
+      ],
+      "centralTeaching": "Attend to His words and remain ready.",
+      "interpretiveCaution": "No timetable calculation or conflation with the cursed fig tree.",
+      "reflectionPrompts": [
+        "What does recognition require beyond curiosity?",
+        "How can readiness become daily faithfulness?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Tender fig branch leafing, Matthew 24:32",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "A leafy fig tree, Luke 21:29-30",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "thief-night",
+      "title": "The Householder and the Thief",
+      "theme": "watchfulness",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Matthew 24:43-44",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/24?lang=eng&id=p43-p44#p43"
+        },
+        {
+          "reference": "Luke 12:39-40",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/12?lang=eng&id=p39-p40#p39"
+        }
+      ],
+      "studyNote": "The unexpected arrival calls for readiness. The comparison concerns timing, not a claim that the Lord shares a thief's character.",
+      "setting": "Teaching about readiness for the Son of Man.",
+      "narrativeProgression": [
+        "A householder would watch if he knew the hour",
+        "The arrival is unexpected",
+        "Hearers are called to readiness"
+      ],
+      "centralTeaching": "Prepare without knowing the time.",
+      "interpretiveCaution": "The likeness is surprise, not shared moral character.",
+      "reflectionPrompts": [
+        "What would faithful readiness look like today?",
+        "What changes when preparation is steady rather than alarmed?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "A household at night, Matthew 24:43",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "The householder keeping watch, Luke 12:39",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "faithful-servant",
+      "title": "The Faithful and Unfaithful Servant",
+      "theme": "watchfulness",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 24:45-51",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/24?lang=eng&id=p45-p51#p45"
+        },
+        {
+          "reference": "Luke 12:41-48",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/12?lang=eng&id=p41-p48#p41"
+        }
+      ],
+      "studyNote": "Entrusted care is tested while the master is away. Luke connects responsibility with what a servant knows and has received.",
+      "setting": "Jesus addresses responsibility while the master is away.",
+      "narrativeProgression": [
+        "A servant is entrusted with feeding others",
+        "One serves while another abuses the trust",
+        "The master returns and assesses conduct"
+      ],
+      "centralTeaching": "Use entrusted responsibility to care for others.",
+      "interpretiveCaution": "Do not depict punitive details gratuitously.",
+      "reflectionPrompts": [
+        "Who depends on your faithful attention?",
+        "How does responsibility change when you remember it is entrusted?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Distributing food at the proper time, Matthew 24:45",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "The contrast of neglected household care, Luke 12:45",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Master returning to the working servant, Matthew 24:46",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "ten-virgins",
+      "title": "The Ten Virgins",
+      "theme": "watchfulness",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 25:1-13",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p1-p13#p1"
+        }
+      ],
+      "studyNote": "All ten wait and sleep, but only five have the needed oil when the bridegroom arrives. Focus on readiness rather than blaming sleep itself.",
+      "setting": "Matthew's watchfulness discourse.",
+      "narrativeProgression": [
+        "Ten take lamps and await the bridegroom",
+        "The midnight cry reveals differing preparation",
+        "Ready attendants enter the feast"
+      ],
+      "centralTeaching": "Readiness cannot simply be borrowed at the final moment.",
+      "interpretiveCaution": "All sleep; sleep itself is not the failure.",
+      "reflectionPrompts": [
+        "What preparation grows through repeated choices?",
+        "What can you begin without fear or comparison?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Ten attendants with lamps, Matthew 25:1",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Wise attendants carrying extra oil, Matthew 25:4",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Waking at the midnight cry, Matthew 25:6-7",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Lamps being prepared, Matthew 25:7-8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 5,
+          "description": "The prepared entering with the bridegroom, Matthew 25:10",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "talents",
+      "title": "The Talents",
+      "theme": "stewardship",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Matthew 25:14-30",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p14-p30#p14"
+        }
+      ],
+      "studyNote": "Servants receive differing sums and later account for their stewardship. Explain the original monetary meaning of talent before offering applications to abilities.",
+      "setting": "Matthew's teaching about readiness and accountability.",
+      "narrativeProgression": [
+        "A master distributes differing sums",
+        "Two servants work and one buries his portion",
+        "The master returns for an account"
+      ],
+      "centralTeaching": "Faithfulness acts with what is entrusted.",
+      "interpretiveCaution": "Money is the primary image; avoid guaranteed-investment promises.",
+      "reflectionPrompts": [
+        "What has actually been entrusted to you?",
+        "How might fear be keeping one responsibility buried?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Master distributing money, Matthew 25:14-15",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Servants trading, Matthew 25:16-17",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Money buried in the ground, Matthew 25:18",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "The return and accounts, Matthew 25:19-25",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "sheep-goats",
+      "title": "The Sheep and the Goats",
+      "theme": "neighbor",
+      "classification": "judgment_picture",
+      "references": [
+        {
+          "reference": "Matthew 25:31-46",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/25?lang=eng&id=p31-p46#p31"
+        }
+      ],
+      "studyNote": "The Son of Man identifies care for people in need with service to Him. This is an extended judgment scene with a shepherd comparison, commonly included among parables.",
+      "setting": "The Son of Man's judgment scene closes Matthew 25.",
+      "narrativeProgression": [
+        "People are gathered and separated",
+        "The King recalls concrete acts of care",
+        "Hearers learn their relation to Him"
+      ],
+      "centralTeaching": "Service to people in need matters to Christ.",
+      "interpretiveCaution": "Do not make a visual checklist a guarantee of judgment.",
+      "reflectionPrompts": [
+        "Whose ordinary need can you notice?",
+        "How does seeing service as offered to Christ alter your attention?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Providing food and drink, Matthew 25:35",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Welcoming and clothing someone, Matthew 25:35-36",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Visiting the sick, Matthew 25:36",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Visiting a prisoner, Matthew 25:36",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "two-debtors",
+      "title": "The Two Debtors",
+      "theme": "mercy",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 7:36-50",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng&id=p36-p50#p36"
+        }
+      ],
+      "studyNote": "Jesus tells the brief debt story during a meal with Simon, then relates it to the woman's love and forgiveness. Do not identify the unnamed woman as Mary Magdalene.",
+      "setting": "Jesus dines with Simon while an unnamed woman anoints Him.",
+      "narrativeProgression": [
+        "A creditor has two debtors",
+        "Neither can pay and both are forgiven",
+        "Jesus asks who will love more"
+      ],
+      "centralTeaching": "Gratitude and love reveal the significance of forgiveness.",
+      "interpretiveCaution": "Do not name the woman or diagnose her past.",
+      "reflectionPrompts": [
+        "What makes mercy easy to underestimate?",
+        "How might gratitude become an act of love?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Two debtors before the creditor, Luke 7:41-42",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Creditor releasing both debts, Luke 7:42",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Jesus speaking with Simon at the meal, Luke 7:43-47",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "good-samaritan",
+      "title": "The Good Samaritan",
+      "theme": "neighbor",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 10:25-37",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p25-p37#p25"
+        }
+      ],
+      "studyNote": "A question about the neighbor leads to concrete mercy across hostility. The conclusion asks who acted as a neighbor; avoid assigning unsupplied motives to passersby.",
+      "setting": "A lawyer asks about eternal life and then the identity of his neighbor.",
+      "narrativeProgression": [
+        "A traveler is attacked",
+        "Two pass by but a Samaritan stops",
+        "Care continues at an inn and through payment"
+      ],
+      "centralTeaching": "Become a neighbor through mercy.",
+      "interpretiveCaution": "The text does not state why the priest and Levite pass by.",
+      "reflectionPrompts": [
+        "What makes stopping costly for you?",
+        "What practical follow-through could turn concern into care?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Wounded traveler on the road, Luke 10:30",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Priest passing at a distance, Luke 10:31",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Levite passing, Luke 10:32",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Samaritan approaching with compassion, Luke 10:33",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 5,
+          "description": "Binding wounds, Luke 10:34",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 6,
+          "description": "Transport toward the inn, Luke 10:34",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 7,
+          "description": "Care inside the inn, Luke 10:34",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 8,
+          "description": "Payment and promise to the host, Luke 10:35",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "friend-midnight",
+      "title": "The Friend at Midnight",
+      "theme": "watchfulness",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 11:5-13",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/11?lang=eng&id=p5-p13#p5"
+        }
+      ],
+      "studyNote": "A late visitor creates a need for bread. Read the story with Jesus' invitation to ask and His teaching about the Father's gifts.",
+      "secondaryTheme": "prayer",
+      "setting": "After teaching prayer, Jesus gives a household comparison.",
+      "narrativeProgression": [
+        "A guest arrives and the host lacks bread",
+        "The host asks a friend at midnight",
+        "The need is supplied despite initial refusal"
+      ],
+      "centralTeaching": "Persist in turning to God.",
+      "interpretiveCaution": "Do not portray God as unwilling until annoyed into generosity.",
+      "reflectionPrompts": [
+        "What need can you bring honestly to God?",
+        "How does the Father's generosity change the way you ask?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Traveler arriving at night, Luke 11:5-6",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Neighbor requesting bread at the door, Luke 11:5-7",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Bread provided, Luke 11:8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "rich-fool",
+      "title": "The Rich Fool",
+      "theme": "stewardship",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 12:13-21",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/12?lang=eng&id=p13-p21#p13"
+        }
+      ],
+      "studyNote": "An inheritance dispute prompts a warning about covetousness. More storage does not secure life; the account contrasts possessions with being rich toward God.",
+      "setting": "Someone asks Jesus to settle an inheritance division.",
+      "narrativeProgression": [
+        "A rich harvest arrives",
+        "The owner plans larger barns and private ease",
+        "His life ends before the planned enjoyment"
+      ],
+      "centralTeaching": "Possessions cannot secure life.",
+      "interpretiveCaution": "No invented family, name, or precise cause of death.",
+      "reflectionPrompts": [
+        "What does enough mean to you?",
+        "What would being rich toward God change about a current choice?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Abundant crop, Luke 12:16",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Owner considering new barns, Luke 12:17-18",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Stored goods and plans of ease, Luke 12:19",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "watchful-servants",
+      "title": "Servants Waiting for Their Lord",
+      "theme": "watchfulness",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 12:35-38",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/12?lang=eng&id=p35-p38#p35"
+        }
+      ],
+      "studyNote": "Servants remain ready to welcome a master returning from a wedding. The master's surprising service is part of the story; keep it beside, but distinct from, the thief comparison.",
+      "setting": "Jesus teaches freedom from anxious hoarding and readiness.",
+      "narrativeProgression": [
+        "Servants keep lamps ready",
+        "The master returns from the wedding",
+        "He serves the watchful servants"
+      ],
+      "centralTeaching": "Ready service can be steady and expectant.",
+      "interpretiveCaution": "Do not merge the serving master with the abusive servant story.",
+      "reflectionPrompts": [
+        "What does a ready lamp suggest about your attention?",
+        "How does the master's service surprise you?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Servants with lit lamps, Luke 12:35",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Opening at the master's knock, Luke 12:36",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Master serving the attendants, Luke 12:37",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "barren-fig",
+      "title": "The Barren Fig Tree",
+      "theme": "mercy",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 13:1-9",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=p1-p9#p1"
+        }
+      ],
+      "studyNote": "Read the gardener's request for time and care after Jesus rejects assumptions that victims were worse sinners. Repentance and patient cultivation belong together.",
+      "setting": "Reports of violent deaths and a fallen tower prompt Jesus' repentance teaching.",
+      "narrativeProgression": [
+        "The owner finds no fruit",
+        "The gardener asks for another year",
+        "Cultivation and another opportunity are proposed"
+      ],
+      "centralTeaching": "Repentance is urgent and patient care matters.",
+      "interpretiveCaution": "The text never reports the tree's later outcome.",
+      "reflectionPrompts": [
+        "Where is patient cultivation needed?",
+        "How can you respond to repentance without judging victims of tragedy?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Owner looking for fruit, Luke 13:6-7",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Gardener asking for more time, Luke 13:8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Digging and nourishing the soil as proposed, Luke 13:8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "wedding-places",
+      "title": "Choosing the Lower Place",
+      "theme": "neighbor",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 14:7-14",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p7-p14#p7"
+        }
+      ],
+      "studyNote": "Jesus observes guests choosing places of honor. His instruction moves from humility to hospitality that does not seek repayment.",
+      "setting": "Jesus observes seats of honor at a meal.",
+      "narrativeProgression": [
+        "A guest chooses the highest place",
+        "A host may ask him to move",
+        "Jesus commends the lower place and generous hospitality"
+      ],
+      "centralTeaching": "Choose humility rather than status.",
+      "interpretiveCaution": "Do not offer humility as a trick for winning promotion.",
+      "reflectionPrompts": [
+        "When are you tempted to secure visible honor?",
+        "Who could receive hospitality without being able to repay?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Guests selecting places, Luke 14:7",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "A guest asked to move, Luke 14:8-9",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Host inviting a lower guest forward, Luke 14:10",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "great-supper",
+      "title": "The Great Supper",
+      "theme": "neighbor",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 14:15-24",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p15-p24#p15"
+        }
+      ],
+      "studyNote": "Invited guests excuse themselves while the host welcomes people often excluded. Keep the specific invitations and excuses intact; do not merge with Matthew's royal wedding.",
+      "setting": "A dinner guest speaks of eating in God's kingdom.",
+      "narrativeProgression": [
+        "The supper is ready",
+        "Invitees give excuses",
+        "The host fills the house through wider invitation"
+      ],
+      "centralTeaching": "Take the invitation seriously and welcome the overlooked.",
+      "interpretiveCaution": "Keep guests' disabilities dignified; do not merge with royal wedding violence.",
+      "reflectionPrompts": [
+        "Which excuse feels familiar?",
+        "Whom might your table or community overlook?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Servant announcing supper, Luke 14:16-17",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Invitees occupied with field or oxen, Luke 14:18-20",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Guests welcomed from streets, Luke 14:21",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "The invitation extending beyond the town, Luke 14:23",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "tower-builder",
+      "title": "The Tower Builder",
+      "theme": "stewardship",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Luke 14:25-30,33",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p25-p30,p33#p25"
+        }
+      ],
+      "studyNote": "Counting construction costs illustrates the serious commitment of discipleship. Read the short picture within Jesus' surrounding teaching.",
+      "setting": "Large crowds accompany Jesus as He speaks of discipleship's cost.",
+      "narrativeProgression": [
+        "A builder counts the cost",
+        "A foundation is laid",
+        "Inability to finish exposes inadequate preparation"
+      ],
+      "centralTeaching": "Consider the commitment of following Him.",
+      "interpretiveCaution": "No claim about an actual named unfinished tower.",
+      "reflectionPrompts": [
+        "What commitment are you considering lightly?",
+        "What support would help you follow through?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Builder counting resources, Luke 14:28",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Foundation laid, Luke 14:29",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "The unfinished tower, Luke 14:29-30",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "king-war",
+      "title": "The King Considering War",
+      "theme": "stewardship",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Luke 14:31-33",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p31-p33#p31"
+        }
+      ],
+      "studyNote": "A king considers whether his forces are sufficient and seeks peace. This companion comparison concerns counting the cost of discipleship, not an endorsement of aggression.",
+      "setting": "The companion to the tower in a discipleship discourse.",
+      "narrativeProgression": [
+        "A king weighs unequal forces",
+        "He considers whether he can meet the opposing army",
+        "He sends a peace delegation while it is distant"
+      ],
+      "centralTeaching": "Recognize the seriousness of commitment.",
+      "interpretiveCaution": "Avoid presenting battle as the desired outcome.",
+      "reflectionPrompts": [
+        "What honest assessment are you avoiding?",
+        "Where would humility change your decision?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "King considering the forces, Luke 14:31",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Delegates approaching to seek peace, Luke 14:32",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "lost-coin",
+      "title": "The Lost Coin",
+      "theme": "mercy",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 15:8-10",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p8-p10#p8"
+        }
+      ],
+      "studyNote": "A woman searches carefully and calls others to share her joy. Jesus connects the recovery with joy over repentance.",
+      "setting": "Second search story in Luke's answer to complaints about sinners.",
+      "narrativeProgression": [
+        "A woman loses one of ten coins",
+        "She lights, sweeps, and searches",
+        "She calls others to rejoice"
+      ],
+      "centralTeaching": "Recovery brings joy.",
+      "interpretiveCaution": "Do not invent a dowry or necklace explanation as a scriptural fact.",
+      "reflectionPrompts": [
+        "What does careful searching show about value?",
+        "How can you share joy over another person's return?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Lighting the lamp, Luke 15:8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Sweeping and searching, Luke 15:8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Rejoicing with friends, Luke 15:9",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "prodigal-son",
+      "title": "The Prodigal Son and His Brother",
+      "theme": "mercy",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 15:11-32",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/15?lang=eng&id=p11-p32#p11"
+        }
+      ],
+      "studyNote": "Follow both sons and the father's invitations. The elder brother's response remains open; do not invent a final reconciliation absent from the account.",
+      "setting": "Third story following criticism of Jesus welcoming sinners.",
+      "narrativeProgression": [
+        "Younger son leaves and loses his resources",
+        "He returns and receives welcome",
+        "The father also invites the resentful elder son"
+      ],
+      "centralTeaching": "Repentance, welcome, and shared joy confront both estrangement and resentment.",
+      "interpretiveCaution": "No invented ending for the elder brother; no modern inheritance promise.",
+      "reflectionPrompts": [
+        "Which son's struggle is harder for you to understand?",
+        "How might you receive mercy and also rejoice when another receives it?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Inheritance divided, Luke 15:12",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Departure to the far country, Luke 15:13",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Resources spent and famine arriving, Luke 15:13-14",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Feeding swine in hunger, Luke 15:15-16",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 5,
+          "description": "Decision to return, Luke 15:17-19",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 6,
+          "description": "Father running to embrace him, Luke 15:20",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 7,
+          "description": "Robe and ring given and celebration prepared, Luke 15:22-24",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 8,
+          "description": "Father speaking outside with the elder son, Luke 15:28-32",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "unjust-steward",
+      "title": "The Unjust Steward",
+      "theme": "stewardship",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 16:1-13",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/16?lang=eng&id=p1-p13#p1"
+        }
+      ],
+      "studyNote": "The steward prepares for losing his position. Distinguish commendation of shrewd preparation from approval of dishonesty, then read Jesus' teaching on faithfulness and serving God.",
+      "setting": "Jesus speaks to disciples; the following verses address faithfulness and money.",
+      "narrativeProgression": [
+        "A manager faces dismissal",
+        "He reduces debtors' bills",
+        "His shrewd preparation is noted and Jesus teaches faithfulness"
+      ],
+      "centralTeaching": "Prepare wisely and use resources faithfully.",
+      "interpretiveCaution": "Do not celebrate fraud or identify the master's praise with blanket divine approval.",
+      "reflectionPrompts": [
+        "How are present choices preparing you for future responsibility?",
+        "Where does honesty need to govern your use of resources?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Manager called to account, Luke 16:1-2",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Oil debtor revising the bill, Luke 16:5-6",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Wheat debtor revising his bill, Luke 16:7",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "rich-man-lazarus",
+      "title": "The Rich Man and Lazarus",
+      "theme": "neighbor",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 16:19-31",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/16?lang=eng&id=p19-p31#p19"
+        }
+      ],
+      "studyNote": "The reversal of the rich man's comfort and Lazarus's suffering culminates in the call to hear Moses and the prophets. This Lazarus is not identified as Lazarus of Bethany.",
+      "setting": "Luke places the account amid teaching about money and hearers who deride Jesus.",
+      "narrativeProgression": [
+        "A rich man ignores a suffering man at his gate",
+        "Death reverses their conditions",
+        "The plea turns toward brothers who must hear scripture"
+      ],
+      "centralTeaching": "Hear God's word and heed the person in need.",
+      "interpretiveCaution": "Not a comprehensive map of the afterlife; not Lazarus of Bethany.",
+      "reflectionPrompts": [
+        "Who is close enough to see yet easy to ignore?",
+        "What existing teaching already calls for your response?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Rich man's daily feast, Luke 16:19",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Lazarus at the gate, Luke 16:20-21",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Lazarus comforted with Abraham, Luke 16:22-25",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "servant-duty",
+      "title": "The Servant's Duty",
+      "theme": "stewardship",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Luke 17:7-10",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/17?lang=eng&id=p7-p10#p7"
+        }
+      ],
+      "studyNote": "Ordinary service challenges a sense of entitlement. Do not use the language of an unprofitable servant to deny a person's worth or justify exploitation.",
+      "setting": "Disciples ask for increased faith; Jesus then speaks of service.",
+      "narrativeProgression": [
+        "A servant returns from fieldwork",
+        "He prepares the master's meal",
+        "The lesson challenges entitlement"
+      ],
+      "centralTeaching": "Faithful service does not put God in our debt.",
+      "interpretiveCaution": "Human dignity is not denied by the servant image.",
+      "reflectionPrompts": [
+        "When does service become a demand for recognition?",
+        "What would grateful faithfulness look like?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Servant returning from plowing, Luke 17:7",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Preparing the evening meal, Luke 17:8",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "persistent-widow",
+      "title": "The Persistent Widow and the Judge",
+      "theme": "watchfulness",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 18:1-8",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/18?lang=eng&id=p1-p8#p1"
+        }
+      ],
+      "studyNote": "Luke states the invitation to keep praying. God's justice is contrasted with the unjust judge; do not promise a particular answer on a chosen timetable.",
+      "secondaryTheme": "prayer",
+      "setting": "Luke explicitly says the story teaches continued prayer.",
+      "narrativeProgression": [
+        "A widow seeks justice",
+        "An unjust judge repeatedly refuses",
+        "He relents and Jesus contrasts God's response"
+      ],
+      "centralTeaching": "Persist in faith and prayer.",
+      "interpretiveCaution": "Do not equate divine compassion with the judge's indifference.",
+      "reflectionPrompts": [
+        "What can you continue bringing to God honestly?",
+        "How can you support someone waiting for justice?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Widow bringing her petition, Luke 18:3",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Judge refusing to attend, Luke 18:4",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Widow's cause finally heard, Luke 18:5",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "pharisee-publican",
+      "title": "The Pharisee and the Publican",
+      "theme": "watchfulness",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 18:9-14",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/18?lang=eng&id=p9-p14#p9"
+        }
+      ],
+      "studyNote": "The introduction identifies trust in one's own righteousness and contempt for others. The tax collector's plea invites humility, not contempt toward Pharisees as a people.",
+      "secondaryTheme": "prayer",
+      "setting": "Addressed to people confident in themselves who despise others.",
+      "narrativeProgression": [
+        "Two men go to pray",
+        "One compares himself favorably with others",
+        "The tax collector asks mercy and is justified"
+      ],
+      "centralTeaching": "Humble repentance rather than self-exaltation.",
+      "interpretiveCaution": "Do not reproduce the contempt the story rebukes.",
+      "reflectionPrompts": [
+        "When does comparison enter your prayer?",
+        "What would an honest request for mercy sound like?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Two men entering the temple precinct, Luke 18:10",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Pharisee praying about his merits, Luke 18:11-12",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Tax collector standing afar, Luke 18:13",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "minas",
+      "title": "The Ten Pounds or Minas",
+      "theme": "stewardship",
+      "classification": "parable",
+      "references": [
+        {
+          "reference": "Luke 19:11-27",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng&id=p11-p27#p11"
+        }
+      ],
+      "studyNote": "Jesus answers expectations that the kingdom will appear immediately. Preserve the nobleman's journey and ten servants; do not silently substitute the different talents account.",
+      "setting": "Near Jerusalem, hearers expect the kingdom to appear immediately.",
+      "narrativeProgression": [
+        "A nobleman leaves and entrusts money",
+        "Servants work or hide it while citizens resist him",
+        "He returns and requires an account"
+      ],
+      "centralTeaching": "Serve faithfully during the interval.",
+      "interpretiveCaution": "Retain ten servants and pounds; do not substitute Matthew's differing sums.",
+      "reflectionPrompts": [
+        "What would faithful work during waiting look like?",
+        "What fear might lead you to hide a responsibility?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Nobleman entrusting money, Luke 19:12-13",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Servants putting funds to work, Luke 19:15-19",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "The unused pound wrapped in cloth, Luke 19:20",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Accounts on the nobleman's return, Luke 19:15",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "doorkeeper",
+      "title": "The Doorkeeper",
+      "theme": "watchfulness",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Mark 13:32-37",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/13?lang=eng&id=p32-p37#p32"
+        }
+      ],
+      "studyNote": "A departing master assigns work and commands watchfulness. The repeated call to watch rests on not knowing the time.",
+      "setting": "Mark's discourse stresses that no one knows the day or hour.",
+      "narrativeProgression": [
+        "A man leaves his house",
+        "Servants receive work and a porter keeps watch",
+        "The time of return remains unknown"
+      ],
+      "centralTeaching": "Watchfulness includes assigned work.",
+      "interpretiveCaution": "No invented date or timetable.",
+      "reflectionPrompts": [
+        "What work has been entrusted while you wait?",
+        "How can readiness stay peaceful rather than fearful?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Master assigning each servant work, Mark 13:34",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Porter watching the doorway at evening, Mark 13:34-35",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "The household awaiting the unknown hour, Mark 13:35-37",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "blind-guides",
+      "title": "The Blind Leading the Blind",
+      "theme": "hearing",
+      "classification": "short_parable",
+      "references": [
+        {
+          "reference": "Luke 6:39-40",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p39-p40#p39"
+        },
+        {
+          "reference": "Matthew 15:13-14",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/15?lang=eng&id=p13-p14#p13"
+        }
+      ],
+      "studyNote": "Luke explicitly introduces a parable. Spiritual guidance is the subject; do not turn blindness into a moral judgment about people with disabilities.",
+      "setting": "Luke's teaching on judgment and discipleship; Matthew's criticism of misleading leaders.",
+      "narrativeProgression": [
+        "One blind person leads another",
+        "Both risk falling into a ditch",
+        "Jesus connects pupil and teacher"
+      ],
+      "centralTeaching": "Seek sound guidance and examine whom you follow.",
+      "interpretiveCaution": "Disability is an image here, not evidence of moral deficiency.",
+      "reflectionPrompts": [
+        "What makes a guide trustworthy?",
+        "How does learning from a teacher shape your conduct?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Two travelers approaching a ditch, Luke 6:39",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "A disciple listening to a teacher, Luke 6:40",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    }
+  ],
+  "relatedComparisonsAndAllegories": [
+    {
+      "id": "mote-beam",
+      "title": "The Mote and the Beam",
+      "theme": "hearing",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 7:1-5",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7?lang=eng&id=p1-p5#p1"
+        },
+        {
+          "reference": "Luke 6:41-42",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p41-p42#p41"
+        }
+      ],
+      "studyNote": "Exaggerated imagery exposes hypocrisy before correction of another. An application should invite self-examination.",
+      "setting": "Teaching about judgment and hypocrisy.",
+      "narrativeProgression": [
+        "A speck is noticed",
+        "One's own beam is ignored",
+        "Self-correction enables help"
+      ],
+      "centralTeaching": "Begin with self-examination.",
+      "interpretiveCaution": "Symbolic exaggeration, not a literal eye injury.",
+      "reflectionPrompts": [
+        "What fault do you readily notice in others?",
+        "What self-examination could make your help gentler?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Beam and splinter in a labeled symbolic still life, Matthew 7:3-5",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "tree-fruit",
+      "title": "A Tree and Its Fruit",
+      "theme": "hearing",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 7:15-20",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7?lang=eng&id=p15-p20#p15"
+        },
+        {
+          "reference": "Matthew 12:33-37",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=p33-p37#p33"
+        },
+        {
+          "reference": "Luke 6:43-45",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p43-p45#p43"
+        }
+      ],
+      "studyNote": "Fruit reveals character in sayings about teachers, speech, and conduct. Keep each setting visible.",
+      "setting": "Warnings about teachers and speech.",
+      "narrativeProgression": [
+        "Trees produce fruit",
+        "Fruit reveals the tree",
+        "Conduct reveals the heart"
+      ],
+      "centralTeaching": "Discern the fruit of a life.",
+      "interpretiveCaution": "Do not judge a whole life by one hard day.",
+      "reflectionPrompts": [
+        "What fruit follows the guidance you trust?",
+        "What does your speech reveal?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Healthy fruit, Luke 6:43",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Thorny growth without grapes, Luke 6:44",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "salt",
+      "title": "Salt of the Earth",
+      "theme": "hearing",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 5:13",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p13#p13"
+        },
+        {
+          "reference": "Mark 9:49-50",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/9?lang=eng&id=p49-p50#p49"
+        },
+        {
+          "reference": "Luke 14:34-35",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p34-p35#p34"
+        }
+      ],
+      "studyNote": "The shared salt image occurs in different teaching contexts. It is a related comparison rather than a narrated story.",
+      "setting": "Sayings about witness, peace, and discipleship.",
+      "narrativeProgression": [
+        "Salt has savor",
+        "Lost savor reduces usefulness",
+        "Hearers consider their conduct"
+      ],
+      "centralTeaching": "Preserve meaningful discipleship.",
+      "interpretiveCaution": "Not a modern chemistry lesson.",
+      "reflectionPrompts": [
+        "What gives your service its value?",
+        "Why does Mark connect salt with peace?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Salt in a hand, Matthew 5:13",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Salt beside a meal, Mark 9:50",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "bridegroom",
+      "title": "The Bridegroom and His Guests",
+      "theme": "kingdom",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 9:14-15",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng&id=p14-p15#p14"
+        },
+        {
+          "reference": "Mark 2:18-20",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/2?lang=eng&id=p18-p20#p18"
+        },
+        {
+          "reference": "Luke 5:33-35",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/5?lang=eng&id=p33-p35#p33"
+        }
+      ],
+      "studyNote": "Jesus answers a fasting question through wedding joy and the bridegroom's coming absence.",
+      "setting": "The dispute about fasting.",
+      "narrativeProgression": [
+        "Guests rejoice with the bridegroom",
+        "His absence changes the occasion"
+      ],
+      "centralTeaching": "Recognize His presence and mission.",
+      "interpretiveCaution": "Do not invent a wedding Jesus attended.",
+      "reflectionPrompts": [
+        "Why does the occasion matter?",
+        "What does Jesus disclose about Himself?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Guests with a bridegroom, Matthew 9:15",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "divided-house",
+      "title": "A Divided Kingdom and House",
+      "theme": "kingdom",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 12:25-26",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=p25-p26#p25"
+        },
+        {
+          "reference": "Mark 3:23-26",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/3?lang=eng&id=p23-p26#p23"
+        },
+        {
+          "reference": "Luke 11:17-18",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/11?lang=eng&id=p17-p18#p17"
+        }
+      ],
+      "studyNote": "An answer to the accusation about Satan prepares for the strong-man comparison.",
+      "setting": "The accusation about casting out devils.",
+      "narrativeProgression": [
+        "Division undermines a kingdom",
+        "Division undermines a house",
+        "Jesus exposes the accusation's contradiction"
+      ],
+      "centralTeaching": "His deliverance is not Satan defeating himself.",
+      "interpretiveCaution": "No advice to remain in an unsafe household.",
+      "reflectionPrompts": [
+        "What contradiction does He expose?",
+        "How does His actual work answer the accusation?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "A divided household, Mark 3:25, labeled comparison",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "returning-spirit",
+      "title": "The Returning Unclean Spirit",
+      "theme": "hearing",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 12:43-45",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=p43-p45#p43"
+        },
+        {
+          "reference": "Luke 11:24-26",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/11?lang=eng&id=p24-p26#p24"
+        }
+      ],
+      "studyNote": "A brief warning uses the return to an empty house. Do not present it as a diagnosis of mental illness or a medical explanation.",
+      "setting": "Warning amid disputes about deliverance.",
+      "narrativeProgression": [
+        "A spirit departs",
+        "An empty house awaits its return",
+        "The later condition worsens"
+      ],
+      "centralTeaching": "Removal alone is not a full faithful response.",
+      "interpretiveCaution": "Not an explanation of mental illness.",
+      "reflectionPrompts": [
+        "What good needs to replace a harmful habit?",
+        "What would fill cleared space constructively?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Empty swept house, Matthew 12:44",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "A darkened threshold, Matthew 12:45, symbolic",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "closed-door",
+      "title": "The Closed Door",
+      "theme": "watchfulness",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Luke 13:23-30",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=p23-p30#p23"
+        }
+      ],
+      "studyNote": "A shut door answers a question about salvation. Familiarity is not the same as responding to the Lord.",
+      "setting": "A question about how many will be saved.",
+      "narrativeProgression": [
+        "The door closes",
+        "Visitors plead familiarity",
+        "The master rejects that claim"
+      ],
+      "centralTeaching": "Respond rather than rely on association.",
+      "interpretiveCaution": "Do not judge named people's salvation.",
+      "reflectionPrompts": [
+        "Where might familiarity substitute for response?",
+        "What invitation can you answer now?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Householder closing the door, Luke 13:25",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Visitors appealing outside, Luke 13:25-27",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "parent-gifts",
+      "title": "A Parent's Good Gifts",
+      "theme": "watchfulness",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 7:9-11",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7?lang=eng&id=p9-p11#p9"
+        },
+        {
+          "reference": "Luke 11:11-13",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/11?lang=eng&id=p11-p13#p11"
+        }
+      ],
+      "studyNote": "The comparison argues from human care to the Father's goodness. Luke specifically names the Holy Ghost.",
+      "secondaryTheme": "prayer",
+      "setting": "Teaching about asking in prayer.",
+      "narrativeProgression": [
+        "A child asks for food",
+        "A parent does not substitute harm",
+        "The Father is more generous"
+      ],
+      "centralTeaching": "Trust the Father's goodness.",
+      "interpretiveCaution": "Do not shame people whose parents were unsafe.",
+      "reflectionPrompts": [
+        "What does the contrast reveal about God?",
+        "What gift can you seek without dictating its timing?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Child requesting bread, Matthew 7:9",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Parent offering food, Luke 11:11-13",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "settle-adversary",
+      "title": "Settling with an Adversary",
+      "theme": "neighbor",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 5:25-26",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/5?lang=eng&id=p25-p26#p25"
+        },
+        {
+          "reference": "Luke 12:58-59",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/12?lang=eng&id=p58-p59#p58"
+        }
+      ],
+      "studyNote": "The legal journey illustrates urgency. Offer spiritual reflection without turning it into individualized legal advice.",
+      "setting": "Teaching about anger or discerning the time.",
+      "narrativeProgression": [
+        "Adversaries travel to judgment",
+        "An opportunity for settlement remains",
+        "Delay has consequences"
+      ],
+      "centralTeaching": "Take reconciliation seriously.",
+      "interpretiveCaution": "Not personalized legal advice.",
+      "reflectionPrompts": [
+        "What conflict needs honest attention?",
+        "What safe step toward peace is available?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Adversaries on the way, Matthew 5:25",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Approaching judgment, Luke 12:58",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "sheep-sabbath",
+      "title": "The Sheep in the Pit",
+      "theme": "neighbor",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 12:9-13",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/12?lang=eng&id=p9-p13#p9"
+        },
+        {
+          "reference": "Luke 14:1-6",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/14?lang=eng&id=p1-p6#p1"
+        }
+      ],
+      "studyNote": "A rescue question supports doing good on the Sabbath. Luke uses an ass or ox in a related scene; do not label the two identical stories.",
+      "setting": "A dispute about Sabbath healing.",
+      "narrativeProgression": [
+        "An animal falls into danger",
+        "An owner would rescue it",
+        "Jesus argues for helping people"
+      ],
+      "centralTeaching": "Mercy belongs on the Sabbath.",
+      "interpretiveCaution": "Matthew's sheep differs from Luke's ass or ox.",
+      "reflectionPrompts": [
+        "What need might compassion help you see?",
+        "When can rules distract from doing good?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Sheep in a pit, Matthew 12:11",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Rescuing the sheep, Matthew 12:11",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Jesus discussing the healing question, Matthew 12:12-13",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "good-shepherd",
+      "title": "The Good Shepherd and the Door",
+      "theme": "mercy",
+      "classification": "allegory",
+      "references": [
+        {
+          "reference": "John 10:1-18",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p1-p18#p1"
+        }
+      ],
+      "studyNote": "Jesus identifies Himself as the door and good shepherd who lays down His life. The Bible Dictionary calls this an allegory; Harmony uses the broader parable label.",
+      "setting": "After the controversy over the man born blind.",
+      "narrativeProgression": [
+        "Sheep recognize the voice",
+        "The hireling flees",
+        "The shepherd gives his life"
+      ],
+      "centralTeaching": "Follow the Savior who knows and gives Himself.",
+      "interpretiveCaution": "Allegorical Christ artwork must be labeled teaching imagery.",
+      "reflectionPrompts": [
+        "What marks a trustworthy voice?",
+        "How does willing sacrifice reveal His care?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Shepherd calling the flock, John 10:3",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Sheep following, John 10:4",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Hireling fleeing, John 10:12",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 4,
+          "description": "Shepherd staying with sheep, John 10:11-15",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "vine-branches",
+      "title": "The True Vine and the Branches",
+      "theme": "hearing",
+      "classification": "allegory",
+      "references": [
+        {
+          "reference": "John 15:1-17",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p1-p17#p1"
+        }
+      ],
+      "studyNote": "Jesus speaks of abiding in Him, fruit, love, and obedience. The Father is the husbandman; keep these stated identities clear.",
+      "setting": "The farewell discourse.",
+      "narrativeProgression": [
+        "Vine nourishes branches",
+        "Husbandman tends growth",
+        "Jesus calls disciples to abide"
+      ],
+      "centralTeaching": "Abide in Christ through love and obedience.",
+      "interpretiveCaution": "Do not identify a tragedy as divinely imposed pruning.",
+      "reflectionPrompts": [
+        "What helps you remain close to Him?",
+        "How do love and obedience belong together?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Living vine and branches, John 15:1-5",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Husbandman tending vine, John 15:2",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Fruit on branches, John 15:5",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "grain-wheat",
+      "title": "The Grain of Wheat",
+      "theme": "kingdom",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "John 12:23-26",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/12?lang=eng&id=p23-p26#p23"
+        }
+      ],
+      "studyNote": "Jesus uses a dying seed when speaking of His approaching glorification and following Him.",
+      "setting": "Greeks request to see Jesus as His hour approaches.",
+      "narrativeProgression": [
+        "A grain falls and dies",
+        "Much fruit results",
+        "Jesus calls people to follow"
+      ],
+      "centralTeaching": "His approaching death is connected to fruitful life.",
+      "interpretiveCaution": "No self-harm application or promise about personal losses.",
+      "reflectionPrompts": [
+        "How does this prepare readers for the Passion?",
+        "What might following Him require you to release?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Grain above soil, John 12:24",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Seed falling into earth, John 12:24",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "An ear bearing grain, John 12:24",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "woman-childbirth",
+      "title": "Sorrow Turning to Joy",
+      "theme": "watchfulness",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "John 16:20-22",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/16?lang=eng&id=p20-p22#p20"
+        }
+      ],
+      "studyNote": "Childbirth illustrates sorrow giving way to joy in the farewell discourse. It is an analogy, not a prediction about an individual pregnancy.",
+      "secondaryTheme": "prayer",
+      "setting": "Farewell words about sorrow and reunion.",
+      "narrativeProgression": [
+        "Labor brings anguish",
+        "Birth brings joy",
+        "Jesus promises to see disciples again"
+      ],
+      "centralTeaching": "Hope does not deny the present sorrow.",
+      "interpretiveCaution": "No guarantee about every birth or grief timetable.",
+      "reflectionPrompts": [
+        "How does the image acknowledge real sorrow?",
+        "How can hope accompany pain?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Discreetly supported labor, John 16:21",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Mother holding newborn, John 16:21, illustrative comparison",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "hen-chicks",
+      "title": "The Hen Gathering Her Chicks",
+      "theme": "mercy",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 23:37-39",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/23?lang=eng&id=p37-p39#p37"
+        },
+        {
+          "reference": "Luke 13:34-35",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/13?lang=eng&id=p34-p35#p34"
+        }
+      ],
+      "studyNote": "Jesus laments over Jerusalem with a picture of protective gathering. Preserve both His invitation and the sorrow of refusal.",
+      "setting": "Jesus' lament over Jerusalem.",
+      "narrativeProgression": [
+        "A hen shelters chicks",
+        "Jesus speaks of gathering",
+        "He grieves refusal"
+      ],
+      "centralTeaching": "His invitation carries protective love.",
+      "interpretiveCaution": "No hostility toward contemporary Jewish people.",
+      "reflectionPrompts": [
+        "What does gathering show about care?",
+        "How can you invite while respecting agency?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Hen sheltering chicks, Matthew 23:37",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Jesus lamenting Jerusalem, Luke 13:34",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    },
+    {
+      "id": "birds-lilies",
+      "title": "Birds and Lilies",
+      "theme": "watchfulness",
+      "classification": "related_comparison",
+      "references": [
+        {
+          "reference": "Matthew 6:25-34",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p25-p34#p25"
+        },
+        {
+          "reference": "Luke 12:22-31",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/12?lang=eng&id=p22-p31#p22"
+        }
+      ],
+      "studyNote": "Creation illustrates the Father's care amid teaching about anxious concern. Do not suggest faithful people never experience deprivation or anxiety.",
+      "secondaryTheme": "prayer",
+      "setting": "Teaching on treasure and anxious concern.",
+      "narrativeProgression": [
+        "Birds receive provision",
+        "Lilies grow in beauty",
+        "Jesus invites seeking the kingdom"
+      ],
+      "centralTeaching": "Trust the Father's care and order priorities.",
+      "interpretiveCaution": "Not a promise that deprivation or anxiety disappears.",
+      "reflectionPrompts": [
+        "What need can you bring to God?",
+        "How might seeking His kingdom shape a priority?"
+      ],
+      "sceneMoments": [
+        {
+          "sequence": 1,
+          "description": "Birds feeding, Matthew 6:26",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 2,
+          "description": "Lilies in the field, Matthew 6:28-29",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        },
+        {
+          "sequence": 3,
+          "description": "Grass of the field, Matthew 6:30",
+          "status": "proposed; requires existing-art uniqueness and source/visual review before generation"
+        }
+      ],
+      "reflectionLabel": "Original reflection invitation, not scripture or a promised outcome"
+    }
+  ],
+  "editorialSafeguards": [
+    "Distinguish Jesus' supplied interpretation from later application; do not assign a symbolic meaning to every incidental detail.",
+    "Do not merge talents with minas, royal wedding with great supper, budding fig with barren fig, or growing seed with wheat and tares.",
+    "Narrative characters are story characters. Do not depict Jesus as literally present inside a parable unless the artwork is explicitly symbolic and approved.",
+    "No invented names, biographies, dialogue, exact ages, or unrecorded endings. Illustrations can show plausible surroundings but captions cannot turn those choices into scripture.",
+    "Do not use warnings toward particular leaders as condemnation of all Jewish people.",
+    "Do not make unjust judges, stewards, or royal violence a complete portrayal of God's character.",
+    "Keep reflection optional and compassionate. Do not promise a feeling, recovery timetable, financial result, or guaranteed answer to prayer.",
+    "Theme collections may interconnect entries without duplicating ownership of original artwork."
+  ],
+  "verification": {
+    "read": "Repository AGENTS.md, connected-study experience prompt, SOUL.md, USER.md, BRAIN-LOCATION.md; live Master confirmation supplied by root agent.",
+    "web": "Bible Dictionary and relevant Harmony tables loaded; principal scripture chapter sources loaded. Some parallel references are verified through Harmony rather than independently read in every Gospel.",
+    "remaining": "Final page copy needs semantic review; URL anchors need runtime link checking. Verse links constructed from verified official scripture URL patterns."
+  },
+  "counts": {
+    "parables": 47,
+    "related": 16
+  },
+  "scenePlanningPolicy": "Scene counts follow actual narrative length. Compact comparisons deliberately have 1-2 moments when a third would be invented; long narratives have 4-8. Scene proposals are not approved artwork. Context pictures may depict Jesus teaching only when the exact setting is source-grounded and distinct from existing art."
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original inspection grain-wheat01/02/03 and woman-childbirth01.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 1
+  },
+  "globalConditions": [
+    "Technical acceptance is not owner approval or browser verification.",
+    "Botanical growth is illustrative and must not be presented as literal biological death causing germination."
+  ],
+  "botanicalSources": [
+    "https://extension.umn.edu/agriculture/crop-production/small-grains/spring-wheat-growth-and-development-guide",
+    "https://www.fao.org/4/y4011e/y4011e05.htm"
+  ],
+  "entries": [
+    {
+      "key": "grain-wheat-01",
+      "generationKey": "grain-wheat-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3628d567-24ef-4ca1-9eeb-4273c30a9098.png",
+      "sha256": "563f87976c84bb90aed195ec0cb14122cd64e2692427b3965cad47013e9653b4",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A grain alone",
+      "alt": "A single intact golden wheat kernel rests on a pale stone in sunlight.",
+      "caption": "One grain rests alone. Jesus begins His comparison with the solitary grain before speaking of the fruitfulness connected with His approaching death.",
+      "refs": [
+        [
+          "nt/john/12",
+          "John 12:24",
+          "24"
+        ]
+      ],
+      "findings": "Natural kernel crease, brush hairs and continuous surface; stone texture, scale of macro view and shadow are coherent. Distinct intact grain stage, no germination or harvest.",
+      "conditions": [
+        "The resting place is illustrative; John12:24 does not specify a stone.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "grain-wheat-02",
+      "generationKey": "grain-wheat-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-32b81d9a-a89b-450b-9eef-a43d00c250ae.png",
+      "sha256": "f6989f0163a587298e8862d739a8bf89ee0518d04cb31d0b24884d381f3036ea",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A grain falls toward the soil",
+      "alt": "A hand releases one wheat kernel above a shallow furrow in dark soil.",
+      "caption": "A grain falls from an open pinch toward the earth. This simple planting moment accompanies Jesus' words about the grain that falls into the ground.",
+      "refs": [
+        [
+          "nt/john/12",
+          "John 12:24",
+          "24"
+        ]
+      ],
+      "findings": "Thumb/index release, curled background fingers and sleeve coherent; single kernel is separate and airborne directly above furrow, plausible scale and gravity. Does not visually show death or completed germination.",
+      "conditions": [
+        "The hand and furrow are illustrative, not a recorded agricultural action performed by Jesus.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "grain-wheat-03",
+      "generationKey": "grain-wheat-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c34ca705-d10f-4dc8-81d3-f7869401b167.png",
+      "sha256": "e178784cf2b64f14cefbacd3a41abf6ced8d41850324f00ebdf6214ac946392e",
+      "status": "revise",
+      "recommendedTitle": "A grain beginning to grow",
+      "alt": "A split grain rests in soil with a white root extending left and a green shoot rising at the opposite end.",
+      "caption": "A small root and shoot emerge from a grain in the soil. This early growth accompanies Jesus' comparison of a solitary grain with the fruitfulness He connects to His approaching death.",
+      "refs": [
+        [
+          "nt/john/12",
+          "John 12:24",
+          "24"
+        ]
+      ],
+      "findings": "Revision required: root and shoot appear at opposite kernel ends and the kernel opens longitudinally into a bean-like pair. Wheat radicle and coleoptile arise from the embryo region; this image does not convincingly show coherent wheat germination. Texture and lighting pass, botanical structure does not.",
+      "conditions": [
+        "Regenerate with largely intact elongated wheat grain; one basal embryo region visibly gives rise to a pale root curving downward and short coleoptile rising. No two cotyledon halves or root at distal brush end.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "woman-childbirth-01",
+      "generationKey": "woman-childbirth-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-612cdb36-7cdd-4796-a7ad-c0a055450ede.png",
+      "sha256": "54ae5456e006927367713fdf0ab1c06cd5103a052279d9cfb6f8e762f87d5c5b",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Supported through the pain",
+      "alt": "A pregnant woman reclines in a teal dress with her eyes nearly closed, holding the hand of an older woman beside her.",
+      "caption": "A woman in labor receives steady support through her pain. Jesus acknowledges the anguish of childbirth in the comparison He gives His disciples before speaking of joy.",
+      "refs": [
+        [
+          "nt/john/16",
+          "John 16:21",
+          "21"
+        ]
+      ],
+      "findings": "Dignified fully clothed adult; believable strained facial expression, natural perspiration, grasped hands and resting hand on abdomen. Older attendant directs attentive gaze to mother. Closed eyes fit pain and concentration; no literal Christ appears. No exposed birth anatomy or invented emergency.",
+      "conditions": [
+        "Unnamed illustrative mother and helper, not Mary or the Nativity; do not promise that every pregnancy ends safely or every sorrow quickly resolves.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

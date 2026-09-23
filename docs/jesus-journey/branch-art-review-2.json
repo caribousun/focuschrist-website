@@ -1,0 +1,28 @@
+{
+  "review_type": "independent_hash_bound_revision_review",
+  "owner_approval": false,
+  "scope": "Both revised originals inspected directly at original detail against the preceding rejected originals and canonical Christ identity previously inspected.",
+  "candidates": [
+    {
+      "key": "mm-cana-jars",
+      "version_key": "mm-cana-jars-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-32de4d50-fbea-4610-9b1a-2b6be1583062.png",
+      "sha256": "202c9dd9609197c134d4c0ab6751233b026358262ef01b7df34eb8bc38afa7c6",
+      "verdict": "pass",
+      "alt": "Jesus watches a servant pour water from a clay pitcher into one of six large stone jars.",
+      "caption": "Jesus instructs the servants at Cana to fill the six stone waterpots. Their appearances and the courtyard arrangement are artistic interpretations of John 2.",
+      "findings": "Exactly six large stone openings now visible: back-left, left-middle, front-left, back-center, receiving jar right and front-center. The separate pouring clay pitcher is correctly not counted. Christ identity and expression preserved; servant is sufficiently distinct. Hands, stream and receiving jar are physically coherent, with photographic skin, water and materials. Previous extra-jar defect resolved."
+    },
+    {
+      "key": "mm-twelve-depart",
+      "version_key": "mm-twelve-depart-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-75e9fb6e-6d65-4d75-ad0d-025f1cc6d497.png",
+      "sha256": "831d66e693bd74e0448fd099c3ddec69c979c5800d7148689f4fe231d5e73e59",
+      "verdict": "pass",
+      "alt": "Jesus addresses departing disciples on a rural road as an older man looks back toward Him.",
+      "caption": "Jesus sends the Twelve to proclaim the kingdom and heal. This illustration shows part of the departing group; their appearances, gestures and the road are artistic interpretations.",
+      "findings": "Nearest disciple now reads as a distinctly older balding man with gray beard, different cheek/brow and nose structure; previous Christ-duplicate defect resolved. Left foreground disciple has broadly similar regional hair/beard styling but sufficiently different profile and shorter beard; no remaining material identity duplication observed. Christ's recognizable face remains unchanged. Reciprocal gaze, departing bodies and visible hands remain coherent with photographic texture."
+    }
+  ],
+  "overall": "Both corrected originals pass technical review. No owner approval inferred."
+}

@@ -1,0 +1,113 @@
+{
+  "entries": [
+    {
+      "key": "tp-scribe-dialogue",
+      "sha256": "89f83d2ff34c6ef0749c0e9af617162fc497df1359f833eb12f56d2e0ff1aca5",
+      "status": "pass_with_caption_conditions",
+      "alt": "Jesus listens closely to a scribe holding a scroll as they speak face to face.",
+      "caption": "A scribe asks which commandment comes first, and Jesus joins love of God with love of neighbor. Their exchange ends with Jesus recognizing the understanding in the man’s answer. The attentive conversation shown here invites us to listen for what is good in another person’s sincere question; the faces, seating and surroundings are artistic interpretation.",
+      "refs": [
+        [
+          "nt/mark/12",
+          "Mark 12:28–34",
+          "28-34"
+        ]
+      ],
+      "findings": [
+        "Canonical Christ facial proportions, hair and beard remain recognizable; natural quiet expression and direct reciprocal gaze fit a serious, respectful conversation.",
+        "The scribe is a distinct older individual, not an enemy caricature. Visible hands, scroll grip, crossed forearms and seated positions are coherent; fine skin and cloth detail remain photographic.",
+        "No pre-Resurrection nail marks or invented writing are visible. Keep the caption specific to the scribe’s thoughtful response in Mark rather than suggesting that every religious questioner was hostile."
+      ],
+      "owner_approved": false,
+      "reviewed_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a1dfc1cd-fa87-436e-b00c-379982829d53.png"
+    },
+    {
+      "key": "tp-writing-ground",
+      "sha256": "581a4e9f39e5a6139544d2ac1fa96548634fd98edad71e1852fec6966b65638e",
+      "status": "pass_with_caption_conditions",
+      "alt": "Jesus bends down to write on the ground while the woman stands nearby and men begin to leave.",
+      "caption": "Jesus pauses and writes on the ground as the woman stands before Him. The account does not tell us what He writes. As her accusers depart, His words join mercy with the invitation to leave sin behind. This picture interprets the setting and moment without supplying hidden words or naming the woman.",
+      "refs": [
+        [
+          "nt/john/8",
+          "John 8:3–11",
+          "3-11"
+        ]
+      ],
+      "findings": [
+        "Christ’s recognizable face is lowered toward the action, appropriately serious. The woman is modestly clothed and treated with dignity; no sexualized staging or invented identity.",
+        "The writing fingertip reaches the ground through a plausible wrist/arm, and the crouch, resting hand and visible foot are coherent. No readable invented message appears in the sand.",
+        "Departing men support the later part of the sequence after the renewed writing. Do not caption this as a transcript of His writing or claim a known woman’s name. Detailed light, skin, cloth and architecture remain photographic."
+      ],
+      "owner_approved": false,
+      "reviewed_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fd326acb-d9d5-4c16-808e-26f99073770f.png"
+    },
+    {
+      "key": "rr-broiled-fish",
+      "sha256": "cabbc1e6c2aaeaf077f99497c9b0f7b3c3848d138742d4850f0fab2aaa62bec3",
+      "status": "revise",
+      "alt": "The risen Jesus holds a piece of fish while nearby disciples look at Him with astonished joy.",
+      "caption": "The risen Savior invites His followers to recognize that He is truly present, then receives food and eats before them. Their wondering joy belongs to Luke’s witness of His Resurrection. This indoor scene interprets that encounter; it is distinct from the later meal beside the sea, and the disciples shown are not individually identified.",
+      "refs": [
+        [
+          "nt/luke/24",
+          "Luke 24:36–43",
+          "36-43"
+        ]
+      ],
+      "findings": [
+        "REVISE: The clearly exposed open palm at lower center has no visible healed nail mark. Its exposed inner wrist also lacks a clearly readable mark. The opposite forearm/wrist carries a conspicuous mark, so this is inconsistent with the owner’s required subtle marks in BOTH palms AND wrists wherever visible.",
+        "Add slight healed palm and wrist marks only to exposed surfaces, preserving the food-holding hand’s naturally hidden palm. No fresh wound, blood or forced pose. Existing darker wrist mark should remain a healed scar rather than an open lesion.",
+        "Otherwise Christ likeness is recognizable and the warmth fits the disciples’ joy and wonder. Food, plate and interior make this different from the shoreline meal. Hand anatomy and body relationships are coherent.",
+        "Keep the surrounding men unnamed; do not arbitrarily assign Peter, James or John without their approved references. Preserve the established scene, expression and composition while repairing marks."
+      ],
+      "owner_approved": false,
+      "reviewed_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2273e1d0-07bd-4442-beb9-7ada9625a64d.png"
+    },
+    {
+      "key": "bn-man-raised",
+      "sha256": "700a078523c71ca47c8496c0f26439b544e39436c553fc39e053155149484d94",
+      "status": "revise",
+      "alt": "The risen Jesus attends to a man sitting upright on a woven mat as the man looks toward Him.",
+      "caption": "Third Nephi briefly records that Jesus raised a man from the dead during His ministry among the people. The few words invite us to consider His life-giving power, but they do not name the man or describe the place, method or surrounding witnesses. The mat, posture and joyful exchange in this picture are an artistic interpretation of that sparse account.",
+      "refs": [
+        [
+          "bofm/3-ne/26",
+          "3 Nephi 26:15",
+          "15"
+        ]
+      ],
+      "findings": [
+        "REVISE: The open hand bears a small palm mark, but the exposed wrist leading to that palm has no distinct healed wrist mark. The other exposed wrist above the hand resting on His knee likewise needs the subtle healed mark required wherever visible. Do not force the hidden opposite palm into view.",
+        "Retain a subtle healed appearance, not fresh puncture wounds or blood. Preserve the recognizable Christ face, joyful mutual gaze, natural hand anatomy and the composition.",
+        "The source supports a man being raised but supplies no named identity, exact culture-specific costume, mat, method, outdoor setting or family reaction. Caption must retain these sparse-source limits; the picture cannot supply additional facts.",
+        "Photographic faces, cloth and natural light are convincing. The sitting man is distinct from Christ, with coherent supporting hand, knees and feet. The warm response is permissible interpretation, not a recorded emotional description."
+      ],
+      "owner_approved": false,
+      "reviewed_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-58feaee1-c46c-41b3-a025-79764da2b090.png"
+    },
+    {
+      "key": "rt-spirit-messengers",
+      "sha256": "9998364134e08051dca072c220fbf78521f85a92837af3694451fb1ada8885ad",
+      "status": "revise",
+      "alt": "Jesus speaks to an attentive gathering of men and women in an imagined representation of His ministry among spirits.",
+      "caption": "In the vision recorded in Doctrine and Covenants 138, the Savior organizes and commissions messengers to carry His gospel to those who have not received it. This ministry occurs between His death and Resurrection. The gathered people, light and surroundings here are an imagined representation of the revealed ministry, not a geographic record of the spirit world or portraits of named messengers.",
+      "refs": [
+        [
+          "dc-testament/dc/138",
+          "Doctrine and Covenants 138:18–20,29–37",
+          "18-20,29-37"
+        ]
+      ],
+      "findings": [
+        "REVISE: The middle-background man directly behind the foreground listener strongly repeats Christ’s medium-length curled hair, brow/eye area, straight prominent nose and beard silhouette. Give this unnamed messenger a clearly different face, hairline/hair length and beard pattern while preserving attentive gaze. Also keep the rear-left bearded man clearly distinct; avoid propagating the same face across male participants.",
+        "Christ at right retains recognizable canonical identity, natural speaking expression and coherent hands. Other listeners show attentive interpersonal gaze. Skin, hair and fabric are photographically detailed.",
+        "Correct phase: this is ministry as a spirit BETWEEN death and Resurrection, revealed to Joseph F. Smith in 1918; it is not a 1918 bodily visit or an already-resurrected encounter. Do not add the post-Resurrection healed-scar requirement to this scene. Absence of those marks is not a defect here.",
+        "No cloud-city, earthly location or exact appearance is established by the vision. Keep caption explicit that the staging and unnamed figures are imagined; do not identify them as Adam, Eve, prophets or Joseph F. Smith."
+      ],
+      "owner_approved": false,
+      "reviewed_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-76ae646e-54ff-4dfc-b26e-7a28979d3468.png"
+    }
+  ],
+  "review_scope": "Independent actual full-image visual inspection against canonical Christ reference viewed in preceding bounded review. Source passages previously independently fetched and checked. No new owner approval; no mobile/browser proof."
+}

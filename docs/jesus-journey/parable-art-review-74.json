@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original inspection of good-shepherd02/04 and vine-branches03, with directly viewed shepherd01 continuity.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical acceptance is not owner approval or browser verification."
+  ],
+  "entries": [
+    {
+      "key": "good-shepherd-02",
+      "generationKey": "good-shepherd-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bdb39e18-5efa-4fe6-b11a-27b006637a45.png",
+      "sha256": "55f4af4f2f63374b61abffdca9bf08b22e7196aa86f3e167ab31ac7025180883",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The flock follows",
+      "alt": "An older shepherd walks ahead along a stony hillside path and looks back toward sheep following behind him.",
+      "caption": "The shepherd goes ahead, and the flock follows his familiar presence. Jesus describes sheep who recognize the voice of the one who leads them.",
+      "refs": [
+        [
+          "nt/john/10",
+          "John 10:4",
+          "4"
+        ]
+      ],
+      "findings": "Same gray-haired, white-bearded older man, broad profile, brown tunic and dark wrap as01; natural hand on staff, walking legs and sandals. Attentive backward gaze. Sheep follow with coherent separated bodies and legs.",
+      "conditions": [
+        "Ordinary unnamed illustrative shepherd, not literal Christ portrait. John10:4 supports leading and following.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "good-shepherd-04",
+      "generationKey": "good-shepherd-04",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6127b3a0-bcbc-4673-8fd3-b4c544f651c6.png",
+      "sha256": "7e8c054c66648e47098bac889497b2d693d8a4e9050018972bae32d003ac4900",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Remaining with the sheep",
+      "alt": "An older shepherd grips his staff and stands between a gathered flock and a gray wolf on the rocky ground ahead.",
+      "caption": "The shepherd stays beside the flock as danger approaches. His protective presence accompanies Jesus' contrast between the hired worker and the good shepherd who gives his life for the sheep.",
+      "refs": [
+        [
+          "nt/john/10",
+          "John 10:11-15",
+          "11-15"
+        ]
+      ],
+      "findings": "01/02 identity and clothing continuity preserved. Clear protective spatial arrangement, two plausible staff grips and braced stance, coherent animals. Eyes attend wolf, appropriate to threat. No attack contact, wounds or triumph invented.",
+      "conditions": [
+        "An illustration of protective care in John10:11-15, not a claim this particular confrontation is a recorded event or that image shows his death.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "vine-branches-03",
+      "generationKey": "vine-branches-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ca63c7e1-8add-4958-9fb4-66367f56e2bc.png",
+      "sha256": "73a4586baac0069e46ce6b8f739a246852ff72d131f66cc4192c174ff16e00e9",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Fruit on the living branch",
+      "alt": "A cluster of dark grapes hangs from a stem attached to a leafy branch beside a weathered vine trunk.",
+      "caption": "Fruit hangs from the living branch. Jesus joins this image of fruitfulness with His invitation to abide in Him.",
+      "refs": [
+        [
+          "nt/john/15",
+          "John 15:5",
+          "5"
+        ]
+      ],
+      "findings": "Visible grape stem connects coherently to branch, natural uneven fruit surfaces, leaves and bark; actual fruit-bearing stage differs from01 woody connection. No harvesting/picking action or literal divine figure.",
+      "conditions": [
+        "Botanical illustration of John15:5; no specific grape cultivar, archaeological location or guaranteed material reward claimed.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}
