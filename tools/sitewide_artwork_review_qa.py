@@ -12,7 +12,9 @@ BIBLE_STYLE_OWNER = 'answers/bible-and-book-of-mormon-together.html'
 MISSION_ENRICHMENT_STYLE = 'missionary-enrichment.css'
 MISSION_ENRICHMENT_STYLE_SHA256 = 'e40315cfc4994ba862cd7bf3c1d4f0fa77db5bd1ba59d8ca0eedfd8cdd8b875c'
 WATCH_SHORTS_STYLE = 'watch-shorts.css'
-WATCH_SHORTS_STYLE_SHA256 = '3d5c271067dc106524f103fb3af67d6423a77f1a338fc5691c2af02d7723bd85'
+# Owner-requested three-Short disclosure; centered 310px cards and controls,
+# independently checked on desktop and enlarged phone text. Exact Watch-only bytes.
+WATCH_SHORTS_STYLE_SHA256 = 'd0ea07818cb6be516a926356a5079543a9b4d5c9496510a3ef74e89e02f242a0'
 HOME_STYLE = 'home-presentation.css'
 HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
 HOME_STYLE_OWNER = 'index.html'
@@ -120,6 +122,10 @@ def main():
         shorts_css = (ROOT/WATCH_SHORTS_STYLE).read_bytes()
         assert reviewed_watch_shorts_style(shorts_css)
         assert not reviewed_watch_shorts_style(shorts_css + b'\n.fc-visual-hero{height:9px}')
+        assert b'flex: 0 1 310px' in shorts_css
+        assert not reviewed_watch_shorts_style(shorts_css.replace(b'flex: 0 1 310px', b'flex: 1 1 100%'))
+        assert b'justify-content: center' in shorts_css
+        assert not reviewed_watch_shorts_style(shorts_css.replace(b'justify-content: center', b'justify-content: flex-start'))
         assert watch_shorts_style_reference_allowed('watch.html', WATCH_SHORTS_STYLE)
         assert not watch_shorts_style_reference_allowed('index.html', WATCH_SHORTS_STYLE)
         assert not watch_shorts_style_reference_allowed('shared.css', '@import "' + WATCH_SHORTS_STYLE + '";')
