@@ -1,0 +1,33 @@
+{
+  "scope": "Watch startup caption preference and pause when fully outside viewport",
+  "status": "runtime-pass; external caption behavior requires live verification",
+  "reviewer": "remaining_passion_art independent agent",
+  "files": {
+    "watch-shorts.js": "e4e975e7d7fde96feb2d567d8c40cd408d87d95617d9a57c81c9830098e67176",
+    "tools/watch_shorts_runtime_qa.js": "5e647deb93be7943a2f25b5e9b13fede064b64b61c472d3a4e76f4e2aeffbb76"
+  },
+  "tests": [
+    "Visible explicit request plays on Ready",
+    "Fully out of view pauses; partly visible stays playing",
+    "Return to viewport and foreground never auto-resume",
+    "Manual resume in view works",
+    "Out of view before Ready prevents startup playback",
+    "Stale observers/API callbacks cannot mutate current player; stop disconnects observer",
+    "Initial exposed track option requested once; later viewer CC choice retained",
+    "Unavailable/throwing caption options do not prevent playback",
+    "Existing four-card one-player, errors, timeouts, Close/Escape/focus tests pass"
+  ],
+  "sources": [
+    "https://developers.google.com/youtube/player_parameters",
+    "https://developers.google.com/youtube/iframe_api_reference"
+  ],
+  "captionLimitation": "Official cc_load_policy documentation defines1 to force captions on; default follows viewer preference, so0 alone does not guarantee off. Official module table lists fontSize and reload, not track. Code requests track={} only if runtime explicitly exposes track; this guarded behavior is best effort and cannot be advertised as universally guaranteed caption-off. JSDOM verifies calls and lifecycle, not YouTube live rendering.",
+  "browserLimitation": "Root owns actual YouTube/browser acceptance; this review used primary docs and deterministic runtime fixtures.",
+  "localBrowser": {
+    "video": "OSgN-cSJOPs",
+    "viewport": "1366x900",
+    "startup": "Pause video control and Subtitles/CC turned off observed",
+    "scrollAway": "player bottom -834px; returned and Show player controls revealed Play video, confirming paused",
+    "limit": "One actual browser session; caption preference override not universally guaranteed"
+  }
+}

@@ -9,9 +9,10 @@ const script = fs.readFileSync(path.join(root, 'watch-shorts.js'), 'utf8');
 const records = JSON.parse(fs.readFileSync(path.join(root, 'docs/watch-shorts.json'), 'utf8')).shorts;
 const flush = async () => { await Promise.resolve(); await Promise.resolve(); await Promise.resolve(); };
 function setup() {
-  const dom = new JSDOM(html, {url:'https://focuschrist.com/watch.html', runScripts:'outside-only', virtualConsole:new VirtualConsole()});
+  const dom = new JSDOM(html, {url:'https://focuschrist.com/watch.html', runScripts:'outside-only', pretendToBeVisual:true, virtualConsole:new VirtualConsole()});
   const w = dom.window, d = w.document, players = [], timers = new Map();
-  const scrolls = [], focusCalls = [];
+  const scrolls = [], focusCalls = [], observers = [];
+  w.IntersectionObserver = class { constructor(callback){this.callback=callback;this.disconnected=false;observers.push(this);} observe(node){this.node=node;} disconnect(){this.disconnected=true;} emit(visible){this.callback([{target:this.node,isIntersecting:visible}]);} };
   w.HTMLElement.prototype.scrollIntoView = function(options) { scrolls.push({node:this, options}); };
   const nativeFocus = w.HTMLElement.prototype.focus;
   w.HTMLElement.prototype.focus = function(options) { focusCalls.push({node:this, options}); nativeFocus.call(this, options); };
@@ -19,7 +20,9 @@ function setup() {
   w.setTimeout = (callback, delay) => { timers.set(++timerId, {callback, delay}); return timerId; };
   w.clearTimeout = id => timers.delete(id);
   function Player(element, options) {
-    this.options = options; this.destroyed = false; this.plays = 0;
+    this.options = options; this.destroyed = false; this.plays = 0; this.pauses=0;this.captionCalls=[];this.captionOptions=['track'];
+    this.pauseVideo=()=>{this.pauses++;};this.getOptions=()=>this.captionOptions;this.setOption=(...args)=>this.captionCalls.push(args);
+    this.apiChange=()=>options.events.onApiChange({target:this});this.stateChange=data=>options.events.onStateChange({target:this,data});
     this.frame = d.createElement('iframe');
     this.frame.src = 'https://www.youtube.com/embed/' + options.videoId;
     element.replaceWith(this.frame);
@@ -39,7 +42,7 @@ function setup() {
   const api = async () => { w.YT = {Player}; w.onYouTubeIframeAPIReady(); await flush(); };
   const timeout = () => { const pending = [...timers.values()]; timers.clear(); pending.forEach(t => { assert.equal(t.delay,15000); t.callback(); }); };
   w.eval(script);
-  return {dom,w,d,players,timers,section,links,click,api,timeout,scrolls,focusCalls,close:()=>dom.window.close()};
+  return {dom,w,d,players,timers,section,links,click,api,timeout,scrolls,focusCalls,observers,close:()=>dom.window.close()};
 }
 (async () => {
   let h = setup();
@@ -142,5 +145,23 @@ function setup() {
     if(mode==='player-timeout') { h.players[0].ready(); assert.equal(h.players[0].plays,0); }
     h.close();
   }
+  h=setup();h.click(0);await h.api();let player=h.players[0];player.ready();
+  assert.equal(player.options.playerVars.cc_load_policy,0);assert.equal(player.captionCalls.length,1);
+  assert.equal(player.captionCalls[0][0],'captions');assert.equal(player.captionCalls[0][1],'track');assert.equal(Object.keys(player.captionCalls[0][2]).length,0);
+  player.apiChange();player.stateChange(1);assert.equal(player.captionCalls.length,1,'Initial CC request is never reapplied after viewer choice');
+  h.observers[0].emit(true);assert.equal(player.pauses,0,'Partly visible media keeps playing');
+  h.observers[0].emit(false);assert.equal(player.pauses,1,'Fully out of view pauses');
+  h.observers[0].emit(true);assert.equal(player.plays,1,'Return never automatically resumes');
+  player.playVideo();player.stateChange(1);assert.equal(player.plays,2,'Viewer can manually resume after returning');assert.equal(player.pauses,1);
+  Object.defineProperty(h.d,'hidden',{configurable:true,value:true});h.d.dispatchEvent(new h.w.Event('visibilitychange'));assert.equal(player.pauses,2);
+  Object.defineProperty(h.d,'hidden',{configurable:true,value:false});h.d.dispatchEvent(new h.w.Event('visibilitychange'));assert.equal(player.plays,2,'Foregrounding never resumes');
+  h.click(1);await flush();assert(h.observers[0].disconnected);const next=h.players[1];next.ready();const pauses=next.pauses;
+  h.observers[0].emit(false);player.apiChange();player.stateChange(1);assert.equal(next.pauses,pauses,'Stale observer and API events cannot pause current player');
+  h.section.querySelector('.watch-short-stop').click();assert(h.observers[1].disconnected);h.close();
+  h=setup();h.click(0);h.observers[0].emit(false);await h.api();player=h.players[0];player.ready();assert.equal(player.plays,0,'Out of view before Ready never autoplays');
+  h.observers[0].emit(true);assert.equal(player.plays,0);player.playVideo();player.stateChange(1);assert.equal(player.plays,1);h.close();
+  h=setup();h.click(0);await h.api();player=h.players[0];player.captionOptions=[];player.ready();assert.equal(player.captionCalls.length,0);
+  player.stateChange(1);player.captionOptions=['track'];player.apiChange();assert.equal(player.captionCalls.length,0,'Late module cannot override viewer caption choice after playback begins');h.close();
+  h=setup();h.click(0);await h.api();player=h.players[0];player.getOptions=()=>{throw Error('No captions')};player.ready();assert.equal(player.plays,1,'Caption API failure cannot block requested playback');h.close();
   console.log('Watch Shorts official API runtime PASS: no-load player, pending/readiness, one-player switching, stale callbacks, close/Escape/focus, modifier fallback, invalid ID, API/player failure/timeout and pagehide');
 })().catch(error=>{console.error(error);process.exitCode=1;});
