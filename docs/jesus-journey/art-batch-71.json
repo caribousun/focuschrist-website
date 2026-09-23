@@ -1,0 +1,29 @@
+{
+  "bb-created-earth": {
+    "title": "A world filled with life",
+    "alt": "Sunlight reaches a green mountain valley where a river flows past wildflowers and pines beneath snowy peaks.",
+    "caption": "Light reaches the valley as water runs between the stones and flowers grow along the bank. The life and beauty of the earth invite us to remember the Son through whom it was created.",
+    "refs": [
+      [
+        "pgp/moses/1",
+        "Moses 1:31–39",
+        "31-39"
+      ]
+    ],
+    "owner": "jesus-christ/before-bethlehem.html",
+    "section": "creator",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bb-created-earth-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bb-created-earth-960.webp",
+    "original": "bb-created-earth.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb7-90b1-7151-8e23-00a02bf70f7b\\exec-cc5b98fd-861c-4a4a-a022-476d123e16db.png",
+    "original_sha256": "6d7e00c9bcfd974bbcaf3691a2af163219d9e5a94181edc530a4733923dae7fc",
+    "prompt": "Create one original landscape photograph for a reverent illustrated scripture study, chapter 'Created through the Only Begotten', alongside Moses 1:31–39. A sweeping uninhabited mountain valley at early morning: richly detailed dark stone peaks and distant snow, fresh spring greenery and a clear winding river in the foreground, dew on grasses and small wildflowers, varied living trees, soft sunlight warming the slopes through thin natural mist. A tranquil sense of gratitude, life, and wonder. Exceptional photographic realism, believable geology and plant detail, natural restrained colors and light, clear deep composition, horizontal 3:2 landscape suitable for a full-width study illustration. This is an artistic view of the natural world, NOT a literal reconstruction of Moses's vision or a specific day of Creation. No people or divine figures, no buildings, no roads, no text, no symbols, no borders, no fantasy planets or excessive beams. Distinct from a seashore, fish, or seabird scene. Make the living earth feel tangible and welcoming, not like a painting or synthetic game landscape.",
+    "referenced_image_paths": [],
+    "review_record": "new-art-review-bb-created-earth.json"
+  }
+}

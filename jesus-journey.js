@@ -4,9 +4,33 @@
     const nav = document.querySelector('.jj-local-nav');
     if (!nav) return;
     const root = nav.parentElement;
-    const links = Array.from(nav.querySelectorAll('a[href^="#"]'));
-    const chapters = links.map(link => document.getElementById(link.hash.slice(1)));
-    if (!chapters.length || chapters.some(chapter => !chapter || chapter.parentElement !== root)) return;
+    const allLinks = Array.from(nav.querySelectorAll('a[href^="#"]'));
+    const sections = allLinks.map(link => document.getElementById(link.hash.slice(1)));
+    if (!sections.length || sections.some(section => !section || section.parentElement !== root)) return;
+    // Reviewed adjacent sections remain intact, including their original bookmark IDs.
+    const groups = [];
+    for (let index = 0; index < sections.length; index++) {
+        const section = sections[index];
+        const leader = section.dataset.chapterGroup;
+        if (leader && leader !== section.id) {
+            const group = groups.at(-1);
+            // Invalid metadata leaves the complete unenhanced study available.
+            if (!group || group.leader.id !== leader) return;
+            group.sections.push(section);
+        } else {
+            groups.push({ leader: section, sections: [section], link: allLinks[index] });
+        }
+    }
+    const chapters = groups.map(group => group.leader);
+    const links = groups.map(group => group.link);
+    allLinks.forEach(link => {
+        if (!links.includes(link)) { link.hidden = true; link.style.display = 'none'; }
+    });
+    const subject = nav.dataset.journeySubject || root.dataset.journeySubject || document.querySelector('h1')?.textContent.trim() || 'This study';
+    const chapterTitle = index => chapters[index]?.querySelector('h2')?.textContent.trim() || '';
+    function groupForTarget(target) {
+        return groups.findIndex(group => group.sections.some(section => section === target || section.contains(target)));
+    }
     let current = 0;
     let whole = false;
     const toolbar = document.createElement('div');
@@ -28,7 +52,7 @@
     toolbar.append(position, picker, mode);
     const steps = document.createElement('nav');
     steps.className = 'jj-chapter-steps';
-    steps.setAttribute('aria-label', 'Continue through the chapters');
+    steps.setAttribute('aria-label', 'Chapters within this study');
     function button(text) {
         const item = document.createElement('button');
         item.type = 'button';
@@ -38,27 +62,29 @@
     }
     const previous = button('← Previous chapter');
     const next = button('Next chapter →');
-    chapters.at(-1).after(steps);
+    sections.at(-1).after(steps);
     function chapterForHash() {
         let id;
         try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return -1; }
         const target = document.getElementById(id);
-        return chapters.findIndex(chapter => chapter === target || chapter.contains(target));
+        return groupForTarget(target);
     }
     function paint() {
-        chapters.forEach((chapter, index) => {
-            chapter.hidden = !whole && index !== current;
+        groups.forEach((group, index) => {
+            group.sections.forEach(section => { section.hidden = !whole && index !== current; });
             if (index === current) links[index].setAttribute('aria-current', 'step');
             else links[index].removeAttribute('aria-current');
         });
-        position.textContent = whole ? 'The complete study' : 'Chapter ' + (current + 1) + ' of ' + chapters.length;
+        position.textContent = (whole ? 'The complete study' : 'Chapter ' + (current + 1) + ' of ' + chapters.length) + ' · ' + subject;
         mode.textContent = whole ? 'Read one chapter at a time' : 'Read the whole study';
         mode.setAttribute('aria-pressed', String(whole));
         previous.disabled = current === 0;
         next.disabled = current === chapters.length - 1;
+        previous.textContent = current === 0 ? 'First chapter in this study' : '← Previous chapter in this study: ' + chapterTitle(current - 1);
+        next.textContent = current === chapters.length - 1 ? 'Last chapter in this study' : 'Next chapter in this study: ' + chapterTitle(current + 1) + ' →';
         steps.hidden = whole;
         root.classList.toggle('jj-whole-study', whole);
-        if (chapters.some(chapter => chapter.hidden && chapter.contains(document.activeElement))) {
+        if (sections.some(section => section.hidden && section.contains(document.activeElement))) {
             const heading = chapters[current].querySelector('h2');
             heading.tabIndex = -1;
             heading.focus({ preventScroll: true });
@@ -126,7 +152,7 @@
         if (url.pathname !== location.pathname || url.origin !== location.origin || !url.hash) return;
         let target;
         try { target = document.getElementById(decodeURIComponent(url.hash.slice(1))); } catch (_) { return; }
-        const index = chapters.findIndex(chapter => chapter === target || chapter.contains(target));
+        const index = groupForTarget(target);
         if (index >= 0 && chapters[index].hidden) { current = index; paint(); }
     }, true);
     root.classList.add('jj-chapter-reader');
@@ -136,6 +162,6 @@
     paint();
     if (initial >= 0) restoreBookmark();
     // Printing always includes the full journey, regardless of the reading mode.
-    window.addEventListener('beforeprint', () => chapters.forEach(chapter => { chapter.hidden = false; }));
+    window.addEventListener('beforeprint', () => sections.forEach(section => { section.hidden = false; }));
     window.addEventListener('afterprint', paint);
 }());

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent actual-pixel and official-scripture reviewer",
+  "scope": "Direct original-pixel review of bn-scriptures-explained",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "bn-scriptures-explained",
+      "generationKey": "bn-scriptures-explained",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb7-90b1-7151-8e23-00a02bf70f7b\\exec-57248f4f-e643-4489-a02d-956ed553e82c.png",
+      "sha256": "fa18370d2459acb22bff05ae324d04ac2f0135f9e4004b8bbc4cb2ac5de5d21c",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "He helps them understand",
+      "alt": "Jesus speaks with seated listeners while an older man holds a bound set of metal plates.",
+      "caption": "Jesus gives the listeners His attention as He explains the scriptures. His teaching opens their understanding and prepares words of hope for generations still to come.",
+      "refs": [
+        [
+          "bofm/3-ne/26",
+          "3 Nephi 26:1–6",
+          "1-6"
+        ]
+      ],
+      "findings": "Actual canonical Christ reference compared: recognizable face, curly dark hair and beard, gentle engaged expression; His eyes meet the woman nearest Him, whose gaze returns to Him. Hands and clothing coherent. Raised hand viewed chiefly from back/edge; healed wrist mark visible, palm surface naturally turned away. Lower hand palm turned inward/down and wrist partly under sleeve, no forced display. No fresh blood. Record prop closed and unlettered; not an authenticated artifact.",
+      "conditions": [
+        "Treat plates, exact setting, seating and unnamed listeners as artistic interpretation; do not assert this man is Nephi or a named record keeper.",
+        "Retain Malachi/3Nephi26 explanatory context, distinct from initial appearance and from Emmaus.",
+        "Technical pass is not owner aesthetic approval or browser verification."
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng"
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ]
+    }
+  ]
+}

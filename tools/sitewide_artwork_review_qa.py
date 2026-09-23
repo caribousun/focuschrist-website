@@ -56,11 +56,12 @@ def main():
         assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
         assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
         journey_css = (ROOT/JOURNEY_STYLE).read_bytes()
-        owners = {'answers/jesus-christ-latter-day-saint-beliefs.html','jesus-christ/before-bethlehem.html'}
+        owners = {'answers/jesus-christ-latter-day-saint-beliefs.html','jesus-christ/before-bethlehem.html','birth-of-christ.html'}
         assert reviewed_journey_style(journey_css)
         assert not reviewed_journey_style(journey_css + b'\n.fc-topic-unique-hero{height:999px}\n')
         assert journey_style_reference_allowed('jesus-christ/before-bethlehem.html', JOURNEY_STYLE, owners)
         assert journey_style_reference_allowed('answers/jesus-christ-latter-day-saint-beliefs.html', JOURNEY_STYLE, owners)
+        assert journey_style_reference_allowed('birth-of-christ.html', JOURNEY_STYLE, owners)
         assert not journey_style_reference_allowed('index.html', JOURNEY_STYLE, owners)
         assert not journey_style_reference_allowed('answers/another-page.html', JOURNEY_STYLE, owners)
         assert not journey_style_reference_allowed('shared.css', '@import "'+JOURNEY_STYLE+'";', owners)
@@ -163,14 +164,15 @@ def main():
     check(reviewed_bible_style((ROOT/BIBLE_STYLE).read_bytes()),
           'Bible study stylesheet differs from reviewed bytes')
     # The complete journey has its own independently reviewed reading layout.
-    # Bind this exception to exact bytes and the parent plus76 planned descendants.
+    # Bind this exception to exact bytes and the parent, Birth, and76 planned descendants.
     check(reviewed_journey_style((ROOT/JOURNEY_STYLE).read_bytes()),
           'Jesus journey stylesheet differs from reviewed bytes')
     journey_pages=json.loads((ROOT/'docs/jesus-journey/pages.json').read_text(encoding='utf8'))
     journey_owners={p['url'].lstrip('/') for p in journey_pages}
     check(len(journey_owners)==76 and all(p.startswith('jesus-christ/') and p.endswith('.html') for p in journey_owners),
           'Journey stylesheet ownership differs from76 nested study pages')
-    journey_owners.add('answers/jesus-christ-latter-day-saint-beliefs.html')
+    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html'})
+    check(len(journey_owners)==78, 'Journey stylesheet must have exactly78 reviewed consumers')
     check(sha(ROOT/row_style)=='7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941',
           'Reviewed complete card row stylesheet changed')
     check(sha(ROOT/settle_style)=='ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2',

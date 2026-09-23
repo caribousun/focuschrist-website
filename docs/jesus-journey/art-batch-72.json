@@ -1,0 +1,58 @@
+{
+  "bn-hear-the-voice": {
+    "title": "They turn to listen",
+    "alt": "People gathered near the temple lift their faces toward the sky.",
+    "caption": "Faces turn upward as the people listen again. This time they understand the voice directing them to the Beloved Son.",
+    "refs": [
+      [
+        "bofm/3-ne/11",
+        "3 Nephi 11:1–7",
+        "1-7"
+      ]
+    ],
+    "owner": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "section": "voice",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bn-hear-the-voice-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bn-hear-the-voice-960.webp",
+    "original": "bn-hear-the-voice.png",
+    "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-eacdeb87-99e1-40e7-a29a-081e972abc71.png",
+    "original_sha256": "81ed2772a234435c87a6678b731e58bb0face46e7a33cd53c5685d2d96e35112",
+    "prompt": "Create one original horizontal 3:2 image with exceptional photographic realism for 3 Nephi 11:1–7, the precise moment BEFORE Jesus descends. Near a modest ancient American temple courtyard, a gathering has stopped speaking and looks steadfastly upward, listening to the third quiet voice from heaven. Show varied, distinct unnamed ancient American adults and a few children, clothed modestly in simple woven tunics and shawls. Close foreground woman with detailed natural skin and attentive eyes, older man beside her and younger adults behind; all eyes coherently looking toward a source above the frame, alive with quiet wonder rather than fear or cheering. More gathering visible in depth, temple architecture restrained and only partial, no claimed archaeological exactness. Bright natural daylight, honest skin texture, weathered stone, believable fabric, documentary live-action photo aesthetic. No Christ or divine figure yet; no visible speaker in the sky, no text, symbols, beams, halos, fantasy, caricature or painting. Do not depict the later descent or touch of wounds. No named historical participant or borrowed approved identity. Source supplies no exact participant ages or architectural design; staging is artistic interpretation. This must be a distinct listening moment, not a generic sermon or departure scene.",
+    "referenced_image_paths": [],
+    "review_record": "new-art-review-bn-hear-the-voice.json"
+  },
+  "bn-scriptures-explained": {
+    "title": "He helps them understand",
+    "alt": "Jesus speaks with seated listeners while an older man holds a bound set of metal plates.",
+    "caption": "Jesus gives the listeners His attention as He explains the scriptures. His teaching opens their understanding and prepares words of hope for generations still to come.",
+    "refs": [
+      [
+        "bofm/3-ne/26",
+        "3 Nephi 26:1–6",
+        "1-6"
+      ]
+    ],
+    "owner": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "section": "scriptures",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bn-scriptures-explained-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bn-scriptures-explained-960.webp",
+    "original": "bn-scriptures-explained.png",
+    "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-57248f4f-e643-4489-a02d-956ed553e82c.png",
+    "original_sha256": "fa18370d2459acb22bff05ae324d04ac2f0135f9e4004b8bbc4cb2ac5de5d21c",
+    "prompt": "Create ONE new horizontal 1536x1024 photograph-quality scripture scene of the risen Jesus Christ explaining the scriptures He has given to the gathered people, as recorded in 3 Nephi 26:1–6 after quoting Malachi (3 Nephi24–25). Use attached approved portrait ONLY for Jesus's exact recognizable face, hair and beard proportions, adapted to earnest patient teaching with warmth and concentration, no broad posed smile. Jesus seated at left at eye level with a small foreground group from the larger Nephite multitude, a middle-aged unnamed woman and an older unnamed man listening at right, meaningful mutual eye contact between Jesus and woman. His gentle open hand marks a point in His explanation. Modest white robe, subtle healed marks in visible palm AND visible wrist, no fresh wounds or blood; hidden hands need not be shown. Natural anatomy. The attentive man holds a small set of ancient metal record leaves resting on his knees, not modern Bible or paper scroll; tiny marks indistinct, no readable invented scripture. The record is an illustrative contextual detail of scripture preservation, not claim of an exact surviving artifact. Modest woven tunics and shawls, simple stone courtyard with more attentive people behind, restrained setting with no asserted exact architecture. Warm natural afternoon light, extraordinary live-action photographic realism, detailed pores, eyes and fabrics, distinct faces. Full essential faces, hands and teaching action inside frame, no halo, text, border, montage or painterly style. This is specifically the giving and explaining of previously unavailable scripture for future generations, not another generic hillside sermon; keep visible records and intimate attentive explanation central. Source gives no exact ages for unnamed people; appearances are artistic interpretation. Do not depict Mormon centuries later or invent named disciple likenesses.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "new-art-review-bn-scriptures-explained.json"
+  }
+}

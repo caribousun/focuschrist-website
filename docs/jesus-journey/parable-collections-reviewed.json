@@ -31,7 +31,8 @@
           "Begin Luke 15 with the complaint that Jesus receives sinners. The searches and celebration answer that complaint. They are not isolated stories about sentimental kindness; they invite the hearers to reconsider what it means for a person to be found and welcomed. {0}",
           "Read the whole movement of each account before deciding which character seems most like you. The returning son and the brother outside both matter. The forgiven servant's later conduct matters. A selected happy moment can be true to the story while still leaving out the question Jesus intends to ask. {1}",
           "Begin with the passage, then listen for the explanation Jesus gives before considering your own response. The modern pictures in this collection imagine mercy in ordinary life: searching carefully, listening honestly and giving someone time to take a next step."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "notice-the-one",
@@ -120,7 +121,8 @@
               "What might help you rejoice in another person's good?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "shared-joy"
       },
       {
         "id": "all-studies",
@@ -276,7 +278,8 @@
           "The lawyer asks who his neighbor is. At the end of the Good Samaritan, Jesus asks which traveler acted as a neighbor. Attend to that change in the question. It directs the study away from finding the narrowest boundary of responsibility and toward the shape of merciful action. {0}",
           "Read the particular needs in each passage. The injured traveler needs immediate care and an inn; the guest needs welcome; the person at the gate needs attention that never comes. Combining them into a general instruction to be kind can hide what each story asks us to see. {1}",
           "The imagined modern encounters below bring the question of neighborly care close to home. Consider what useful help might look like for the person before you: ask, listen and think about what continuing care may require."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "seeing-the-need",
@@ -360,7 +363,8 @@
               "Which act of care needs follow-through rather than another promise?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "mercy-and-boundaries"
       },
       {
         "id": "all-studies",
@@ -514,7 +518,8 @@
           "The sower includes Jesus' own explanation, so begin with the meanings He supplies. The builders explicitly join hearing with doing. The two sons distinguish agreeable words from obedience. Read those direct connections before assigning additional symbolism to soil, tools, or household objects. {0}",
           "Compare parallel accounts without flattening them. The lamp appears in teaching about visible good works and in teaching about how people hear. The new patch and wineskins answer a question about fasting. The setting helps determine what a familiar image is doing in a particular passage. {1}",
           "The modern pictures imagine people learning, listening and returning to practical work. They offer ways to consider your own response to Christ's words, while the meaning of each teaching remains grounded in its scripture passage. A faithful beginning may still call for patience through difficulty."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-carefully",
@@ -608,7 +613,8 @@
               "What teaching of Christ could become one concrete action today?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "discernment-and-humility"
       },
       {
         "id": "all-studies",
@@ -808,7 +814,8 @@
           "Matthew gathers several kingdom parables in one chapter, while Mark preserves the seed that grows through nights and days. Read each image on its own terms. The growing seed concerns growth and harvest; the wheat and tares adds an enemy, mixed growth, and restraint before separation. {0}",
           "Jesus supplies explanations for some comparisons and leaves others brief. The treasure and pearl invite attention to surpassing worth. The net receives an explicit connection with judgment. Begin with these stated movements instead of inventing a separate doctrine for every object in the scene. {1}",
           "In the modern pictures, people plant, make bread, welcome others and choose how to spend their time. These imagined applications help us ask about patience, priorities and humble judgment. The kingdom parables remain our starting point; their promises belong to God's work, beyond what any one project may achieve."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "small-beginnings",
@@ -897,7 +904,8 @@
               "Where would patience protect something valuable that haste might harm?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "invitation-and-response"
       },
       {
         "id": "all-studies",
@@ -1077,7 +1085,8 @@
           "The talents and the ten pounds are related accounts, not interchangeable versions to blend. Matthew describes differing sums given to three featured servants. Luke describes ten servants, equal starting pounds, and a nobleman's journey while people expect the kingdom to appear immediately. {0}",
           "Read difficult stories through their conclusions. The unjust steward's shrewd preparation is not approval of dishonesty; Jesus continues by teaching faithfulness and the impossibility of serving God and mammon. The character in a comparison is not a complete portrait of God or a model to imitate in every detail. {1}",
           "The imagined present-day scenes bring stewardship into plans, shared resources and ordinary responsibilities. In the talents parable, the entrusted gift is money; applying it to our skills is a further reflection. Faithfulness asks how we use what we receive, without promising wealth, ease or status."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "entrusted-resources",
@@ -1166,7 +1175,8 @@
               "When does another person's blessing become difficult for you to welcome?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "freedom-from-comparison"
       },
       {
         "id": "all-studies",
@@ -1329,7 +1339,8 @@
           "Luke states that the persistent widow teaches continued prayer. The judge's indifference is part of a contrast, not a description of the Father's character. Read the friend at midnight with Jesus' following words about the Father's gifts, so persistence does not become a method for wearing God down. {0}",
           "Keep readiness beside ordinary responsibility. The servant feeds the household, the porter watches, and the attendants prepare their lamps. Jesus repeatedly leaves the hour unknown. His teaching gives work for the present, not a code for calculating a date. {1}",
           "The imagined modern scenes picture honest prayer, quiet preparation and attention to work that still needs doing. They invite us to remain faithful while we wait, even when a decision, recovery or other hoped-for outcome remains beyond our control."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "prayer-with-honesty",
@@ -1423,7 +1434,8 @@
               "What faithful task is yours during this season of waiting?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "trust-amid-uncertainty"
       },
       {
         "id": "all-studies",

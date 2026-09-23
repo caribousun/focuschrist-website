@@ -34,6 +34,26 @@ def references(page, nodes):
     return result
 
 
+def unlinked_exclusive_references(page, root, exclusive):
+    """A preview may point visitors to its canonical owner; ownership never moves."""
+    invalid = set()
+    def visit(node, anchor=None):
+        if node.tag == 'a':
+            anchor = node
+        for target in references(page, [node]) & exclusive:
+            destination = local_asset(page, anchor.attrs.get('href')) if anchor else None
+            linked_preview = (
+                node.tag in {'img', 'source'} and page.resolve() != PAGE.resolve()
+                and destination == PAGE.resolve()
+            )
+            if not linked_preview:
+                invalid.add(target)
+        for child in node.children:
+            visit(child, anchor)
+    visit(root)
+    return invalid
+
+
 def check():
     from study_gap_art_qa import check_sitewide, sitewide_entries
     errors = []
@@ -171,7 +191,7 @@ def check():
     for other in ROOT.rglob("*.html"):
         if other == PAGE or ".git" in other.parts:
             continue
-        reused = references(other, Parser(other.read_text(encoding="utf-8", errors="replace")).root.walk()) & exclusive
+        reused = unlinked_exclusive_references(other, Parser(other.read_text(encoding="utf-8", errors="replace")).root, exclusive)
         require(not reused, "exclusive artwork reused by " + other.relative_to(ROOT).as_posix() + ": " + str(sorted(reused)))
     return errors
 

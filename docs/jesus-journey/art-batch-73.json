@@ -1,0 +1,31 @@
+{
+  "mc-leper-touch": {
+    "title": "Moved with compassion",
+    "alt": "Jesus rests His hand on the shoulder of a kneeling man, and they look into each other’s eyes.",
+    "caption": "The man kneels before Jesus and asks to be made clean. Moved with compassion, the Savior reaches out and touches him.",
+    "refs": [
+      [
+        "nt/mark/1",
+        "Mark 1:40–45",
+        "40-45"
+      ]
+    ],
+    "owner": "jesus-christ/miracles-and-compassion.html",
+    "section": "leper",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mc-leper-touch-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mc-leper-touch-960.webp",
+    "original": "mc-leper-touch.png",
+    "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-a6f4e457-a0e3-4068-b5f3-24f1963e22a0.png",
+    "original_sha256": "3cb42002582edb4927107c8095a2aa9a6d6916cbebb786320f4dbb57683e6e8f",
+    "prompt": "Create one new horizontal 1536x1024 live-action photographic scripture scene: Mark 1:40–42, Jesus moved with compassion touches a kneeling man who asks to be made clean. Reference image is ONLY the exact approved Jesus identity; preserve recognizable facial proportions, brown eyes, wavy brown hair and beard. Adapt expression to tender focused compassion, no broad smile. Jesus during mortal ministry, about early thirties, no nail scars. Jesus stands at left leaning slightly toward the kneeling unnamed adult man at right, His right hand resting gently and clearly on the man's bare shoulder beside a rough woven tunic neckline. Both look directly into each other's eyes, coherent reciprocal gaze. The man kneels in humble appeal, hopeful and weary, middle-aged interpreted appearance not claimed historical age. Subtle rough pale patches on his exposed forearm suggest affliction, no gruesome lesions, no modern diagnostic claim. Natural hands and touch, no fused fingers, no duplicate limbs. Quiet outdoor Galilean setting, sunlit stony earth and modest rough stone wall, no crowd of newly invented named apostles. Jesus off-white linen tunic and muted earth-tone mantle; man worn brown tunic. Real skin pores, individual hair, cloth fibers, believable soft daylight and lens depth, convincing natural photograph not painting/CGI/plastic. Frame both faces and essential hands fully, breathing room for responsive 3:2 body illustration. No halo, fantasy rays, text, montage, symbols, border. Scene action established by Mark; exact location, costume, appearance of unnamed man and touch location are artistic interpretation. Distinct from the later ten men and Samaritan thanksgiving scene, and from Sabbath healing of a withered hand. This picture focuses on compassionate touch in response to the kneeling request.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "new-art-review-mc-leper-touch.json"
+  }
+}

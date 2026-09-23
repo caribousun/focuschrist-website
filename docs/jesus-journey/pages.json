@@ -37,7 +37,8 @@
               "How does John’s opening change the way you read a simple encounter between Jesus and one person?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "chosen-son",
@@ -85,6 +86,9 @@
         ],
         "blocks": [
           "Moses asks about the earth and its inhabitants. In {0}, God answers by connecting creation to the Only Begotten Son and then placing human immortality and eternal life at the heart of His work. The passage lets Moses see his own world within a much larger creation, while keeping God’s concern for His children in view.",
+          {
+            "art": "bb-created-earth"
+          },
           "This gives the natural world a place in a study of Christ. Mountains, water and living things invite gratitude for the Creator, and human life deserves reverence because people belong within the Father’s purpose. The vastness of the vision does not make Moses’s life insignificant. God speaks to him personally about a work that reaches far beyond him. We can receive that same invitation to wonder while caring faithfully for the lives and places close to us.",
           {
             "questions": [
@@ -197,57 +201,26 @@
       },
       {
         "id": "brother-of-jared",
-        "title": "From prepared stones to knowing the Redeemer",
+        "title": "Known before Bethlehem",
         "refs": [
           [
             "bofm/ether/3",
-            "Ether 3:1-5",
-            "1-5"
-          ],
-          [
-            "bofm/ether/3",
-            "Ether 3:6-10",
-            "6-10"
-          ],
-          [
-            "bofm/ether/3",
-            "Ether 3:11-16",
-            "11-16"
-          ],
-          [
-            "bofm/ether/2",
-            "Ether 2:4",
-            "4"
-          ],
-          [
-            "bofm/ether/2",
-            "Ether 2:14",
-            "14"
+            "Ether 3:6–16",
+            "6-16"
           ]
         ],
         "blocks": [
-          "First, the brother of Jared prepares and carries sixteen small stones to the top of Mount Shelem. In {0}, he asks the Lord to touch them so they can give light in the vessels. This preparation and prayer come before the touching and before he sees the Lord. The man in this account is the brother of Jared, not Jared himself.",
+          "The brother of Jared has prepared stones and asked the Lord to provide light for his people’s journey. In {0}, he sees the Lord’s finger touch the stones and falls in fear. The conversation moves beyond his immediate need as the Lord reveals His identity and explains that He will take upon Himself flesh and blood.",
           {
             "art": "bb-stones-prepared"
           },
-          "Next, {1} describes the Lord touching the stones one by one. The veil is taken from the brother of Jared's eyes, and he sees the Lord's finger, which appears like a human finger. He falls in fear. The Lord explains that He will take upon Himself flesh and blood and asks whether the man has seen more. The brother of Jared says he has not, then asks the Lord to show Himself. The full revelation has not yet happened at this point.",
+          "This Book of Mormon account gives a direct witness of Christ before His mortal birth. The Lord identifies Himself as Jesus Christ and describes the body the brother of Jared sees as the body of His spirit. The encounter is therefore not a visit from the already resurrected Savior. It joins a practical request for help with a much greater revelation of the One who answers, while preserving the particularity of this man’s experience rather than making it a required pattern for everyone’s faith.",
           {
             "art": "bb-jared-finger"
           },
-          "Then, after the brother of Jared affirms his trust in the Lord's words, {2} records the Lord showing Himself and identifying Himself as Jesus Christ, prepared to redeem His people. He explains that the body now seen is the body of His spirit and that He will appear in the flesh. This is the premortal Savior, before His birth, death and Resurrection. The existing picture in the connected Book of Mormon study illustrates this later encounter, after the finger has first been seen.",
-          "Earlier, {3} and {4} describe the Lord speaking with the brother of Jared in a cloud. Ether 3:6 instead describes the veil being taken from his eyes. A cloudlike atmosphere around the finger can connect these readings artistically, but the text does not explicitly describe a cloud at that moment. Keeping the stages distinct lets the practical request for light unfold into a much greater witness of who the Lord is.",
-          {
-            "cards": [
-              [
-                "/answers/what-is-the-book-of-mormon.html#jaredite-faith",
-                "Continue to the revealed Redeemer",
-                "See the existing picture of the later encounter and read the Lord's identification of Himself."
-              ]
-            ]
-          },
           {
             "questions": [
-              "How does the sequence from prayer, to seeing the finger, to knowing the Redeemer deepen your reading of this encounter?"
+              "How does the question of who the Lord is become larger than the original question about light?"
             ]
           }
         ]
@@ -279,7 +252,8 @@
               "Which part of Isaiah’s description would you like to understand more deeply through the life of Jesus?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       }
     ],
     "related": [
@@ -353,7 +327,8 @@
               "What does Jesus’s willingness to receive baptism reveal about the way He leads?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "come-and-see",
@@ -366,6 +341,9 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_art": "come-and-see"
+          },
           "Two of John the Baptist’s disciples follow Jesus after hearing John identify Him as the Lamb of God. In {0}, Jesus asks what they seek and invites them to come and see where He stays. Andrew then finds his brother Simon and brings him to Jesus. The account begins with testimony but moves into personal encounter.",
           "Andrew’s part is modest and meaningful. He shares what he has found and helps another person come to the Savior. This meeting should be kept distinct from the later fishing scenes in the Gospels; John gives this encounter its own sequence and purpose. It invites us to consider how a sincere introduction, a shared passage or time spent listening may help someone explore faith without pressure.",
           {
@@ -386,6 +364,9 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_art": "nathanael"
+          },
           "Philip tells Nathanael that they have found the One anticipated in the law and prophets. Nathanael questions whether anything good can come from Nazareth. In {0}, Philip answers by inviting him to come and see. Jesus then addresses Nathanael personally, and the conversation opens into a testimony of His identity.",
           "The passage does not explain what happened beneath the fig tree or why Jesus’s knowledge of it mattered so much to Nathanael. We can let that detail remain open while attending to what is recorded: a question did not end the encounter. Nathanael came, listened and responded. The invitation to know Christ can include honest questions, even when the answers unfold differently from what a person first expected.",
           {
@@ -603,16 +584,20 @@
         "blocks": [
           "A man with leprosy kneels before Jesus and asks to be made clean. In {0}, Jesus responds with compassion, reaches out and touches him. He then tells the healed man to show himself to the priest and fulfill the requirements connected with cleansing. The encounter concerns both a bodily affliction and a person’s place within his community.",
           {
-            "art": "mc-withered-hand"
+            "art": "mc-leper-touch"
           },
           "The touch makes the scene deeply personal. Jesus does not treat the man as a problem to be kept at a distance. The story invites us to examine how we respond to someone whose illness or circumstances make others withdraw. Following Christ may involve listening, practical help and appropriate care; it does not require pretending we can promise another person the same immediate healing.",
           "Another encounter, {1}, brings compassion into a synagogue dispute. Jesus asks the man to stand and stretch out his hand. The restored hand gives concrete weight to His question about doing good on the Sabbath.",
+          {
+            "art": "mc-withered-hand"
+          },
           {
             "questions": [
               "What might a respectful act of nearness look like for someone who is often avoided?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "home",
@@ -720,6 +705,9 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_art": "deaf-man"
+          },
           "People bring Jesus a man who is deaf and has difficulty speaking. In {0}, Jesus takes him aside from the multitude before acting. Mark records a physical, personal encounter, Jesus looking toward heaven and sighing, and the man’s hearing and speech being restored. The people’s amazement follows what the man himself has received.",
           "The movement away from the crowd is worth noticing. Another person’s need is not treated simply as a public spectacle. People who live with deafness or a speech disability have dignity and full human worth before any change in their condition. As an invitation to discipleship, this account can lead us to make communication more accessible and to ask how a person wishes to receive support.",
           {
@@ -802,6 +790,9 @@
           },
           "All ten receive cleansing; the account does not say that only the thankful man was healed. The returning man lets the story move from receiving a gift to recognizing its giver. Gratitude here is personal and expressed. We can practice it without comparing whose blessings are greater: remembering a kindness, speaking thanks and allowing received mercy to change the care we give others.",
           "{1} tells of another household receiving help: an official believes Jesus’s word about his son and starts home. Servants meet him with news of recovery. The story is distinct from the centurion’s servant and gives trust a place on the road before the father sees the child.",
+          {
+            "reference_art": "ten-lepers-thanksgiving"
+          },
           {
             "questions": [
               "What kindness could you acknowledge directly rather than leaving your gratitude unspoken?"
@@ -914,7 +905,7 @@
         "blocks": [
           "Matthew introduces the Sermon on the Mount with Jesus seated and His disciples coming to Him. In {0}, He speaks of people who are poor in spirit, who mourn, who are meek, merciful or pure in heart, and who hunger for righteousness. His words place blessing beside circumstances and qualities that are not always honored by the world.",
           "These sayings deserve more than a quick list of desirable traits. Each joins a human condition or response to a promise within God’s kingdom. Mourning is not called pleasant, and persecution is not something to seek for its own sake. Jesus addresses lives that may be difficult while teaching what His kingdom values. Choose one saying to read slowly, noticing both the person described and the promise attached to it.",
-          "Immediately after the Beatitudes, {1} turns to salt and light. These ordinary images ask what a disciple’s life contributes to the people around it. The city on a hill in verse 14 makes that visibility communal as well as personal.",
+          "Immediately after the Beatitudes, {1} turns to salt and light. These ordinary images ask what a disciple’s life contributes to the people around it.",
           {
             "art": "tp-lamp-salt"
           },
@@ -923,7 +914,8 @@
               "Which Beatitude brings a person you know to mind, and how could you respond with greater care?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "prayer",
@@ -943,7 +935,7 @@
         "blocks": [
           "In {0}, Jesus speaks about the purpose of prayer before giving a model for it. He contrasts prayer aimed at public recognition with prayer addressed sincerely to the Father. The pattern He gives includes reverence, the Father’s will, daily need, forgiveness and help in the face of temptation.",
           "The order widens prayer beyond a list of requests. We bring real needs, but also learn to desire God’s purposes and to consider our relationships with others. The warning against empty repetition is not a ban on returning to the same honest concern. It calls us to speak as people seeking God, rather than treating words as a performance or a mechanism that obliges Him to respond on our timetable.",
-          "Jesus continues in {1} by pointing to birds and flowers. Attention to the ordinary living world becomes part of His teaching about trust and the Father’s care. His reference to spinning brings the familiar work of making clothing into the comparison, without dismissing the need for practical work.",
+          "Jesus continues in {1} by pointing to birds and flowers. Attention to the ordinary living world becomes part of His teaching about trust and the Father’s care.",
           {
             "art": "tp-lilies-birds"
           },
@@ -952,7 +944,8 @@
               "Which part of the prayer Jesus teaches could help you express something you have struggled to say?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "great-commandments",
@@ -988,6 +981,9 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_art": "widows-offering"
+          },
           "Jesus sits opposite the treasury and watches people give. In {0}, a poor widow places two small coins among the offerings. He calls His disciples’ attention to her because the size of her gift cannot be understood apart from what she has to live on. An amount that looks small to an observer carries great cost for her.",
           "The scene asks us to look beyond visible totals when considering devotion. It should not become a way to pressure a person in need to give money they cannot safely spare. Jesus sees the widow’s circumstances, and readers should not overlook them. Her story can deepen gratitude for quiet sacrifice and make us more attentive to the people whose contributions are easily dismissed.",
           {
@@ -1020,6 +1016,9 @@
           "Martha’s service is real, and Jesus addresses her with personal concern. The question is what is drawing her attention at that moment. Even worthwhile responsibilities can become entangled with resentment or worry; time with the Savior’s words may help us return to those responsibilities with a different heart. Mary’s place at His feet also makes her a receiving disciple, someone whose attention and learning are welcomed within this home.",
           "Listening continues outside a home as well. In {1}, Peter notices the withered fig tree and Jesus teaches about faith, prayer and forgiveness. A moment on the road becomes an invitation to bring both trust and relationships before the Father.",
           {
+            "reference_art": "martha-and-mary"
+          },
+          {
             "questions": [
               "Where might you need to pause and receive before continuing to give?"
             ]
@@ -1049,11 +1048,15 @@
           "This is a recorded encounter, not a parable. Its challenge should not be softened into the idea that possessions never shape discipleship, nor flattened into the claim that wealth automatically measures a person’s spiritual worth. The disciples are astonished by what follows, and Jesus directs them to what is possible with God. The story asks what we find hardest to release when His invitation reaches beyond our familiar obedience.",
           "Another wealthy man responds differently in {1}. Zacchaeus speaks of giving and restitution, and Jesus speaks of salvation coming to his house. Set beside the grieving rich man, his response invites reflection on the practical changes that welcome can make possible.",
           {
+            "reference_art": "rich-man-invitation"
+          },
+          {
             "questions": [
               "What does Mark’s note that Jesus loved the man change about how you hear the invitation?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "caesar",
@@ -1077,6 +1080,9 @@
           },
           "The exchange does not provide a complete rulebook for every later political dispute. It exposes an attempt to force Jesus into a narrow choice and turns the discussion toward obligation and allegiance. A reader can begin by asking what belongs to God in a life that also includes civic duties. That question reaches into honesty, conduct and the way we treat people, rather than remaining only a debate about what others should do.",
           "{1} records another question intended to test Him, this time at the expense of a woman brought before Him. Jesus’s response interrupts the accusation and joins mercy with an invitation to leave sin. The text records His writing on the ground without revealing the words.",
+          {
+            "reference_art": "tribute-coin"
+          },
           {
             "questions": [
               "Which ordinary responsibility could you approach more faithfully because your life belongs to God?"
@@ -1107,11 +1113,23 @@
           "His authority is expressed through willing service. Yet the passage begins with disciples needing to receive His care, not simply deciding to become useful themselves. Both movements belong in discipleship: allowing Christ to cleanse and teach us, and extending humble service to others. The basin and towel give that teaching a concrete form that cannot be reduced to kind feelings alone.",
           "Before the meal, {1} describes Peter and John preparing a place according to Jesus’s instructions. Their ordinary work gives another form to service before the Teacher takes the towel.",
           {
+            "reference_picture": {
+              "href": "/atonement.html#remember",
+              "thumbnail": "assets/page-art/atonement/servant-960.webp",
+              "width": 960,
+              "height": 640,
+              "alt": "Jesus kneels with a basin and towel. He asks His disciples to follow His example of service.",
+              "title": "As I have done to you",
+              "caption": "Jesus kneels with a basin and towel. He asks His disciples to follow His example of service."
+            }
+          },
+          {
             "questions": [
               "Is it harder for you to offer help humbly or to receive it humbly, and why?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "abide",
@@ -1125,7 +1143,7 @@
         ],
         "blocks": [
           "In {0}, Jesus describes Himself as a vine, His Father as the gardener and His disciples as branches. The image develops into teaching about remaining in Him, bearing fruit, keeping His commandments and loving one another. The passage is an extended comparison, and its value grows as its connected parts are read together.",
-          "The image points toward dependence and a continuing relationship. A branch does not create its own source of life, yet it truly bears fruit. Jesus’s teaching likewise joins what His disciples receive from Him with what they become and do. His parables often invite this kind of attentive reading: notice the picture, listen for His explanation and allow the teaching to challenge your life without inventing a fixed meaning for every small detail. Verse 6 also gives the sober image of detached branches that wither and are gathered for burning. Read that warning within the invitation to remain in Christ; it is not a warrant to diagnose another person’s suffering as divine rejection.",
+          "The image points toward dependence and a continuing relationship. A branch does not create its own source of life, yet it truly bears fruit. Jesus’s teaching likewise joins what His disciples receive from Him with what they become and do. His parables often invite this kind of attentive reading: notice the picture, listen for His explanation and allow the teaching to challenge your life without inventing a fixed meaning for every small detail.",
           {
             "art": "tp-vine-pruning"
           },
@@ -1230,7 +1248,8 @@
               "What part of His life or character would you like to remember more deliberately during the sacrament?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "gethsemane",
@@ -1264,7 +1283,8 @@
               "What can His prayer teach you about bringing a difficult desire honestly before the Father?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "pilate",
@@ -1310,7 +1330,8 @@
               "When another person’s burden enters your day unexpectedly, what helps you respond with care?"
             ]
           }
-        ]
+        ],
+        "opening_visual_after_paragraphs": 2
       },
       {
         "id": "cross",
@@ -1330,7 +1351,8 @@
               "How does this act of care deepen your understanding of the One who gives His life?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "simon"
       },
       {
         "id": "burial",
@@ -1458,6 +1480,9 @@
         ],
         "blocks": [
           "A multitude has gathered around the temple in Bountiful, speaking about the changes in the land and about Jesus Christ. In {0}, they hear a voice but do not understand it at first. On the third hearing they open their ears and look toward heaven. The Father introduces His beloved Son and directs them to hear Him.",
+          {
+            "art": "bn-hear-the-voice"
+          },
           "The introduction leads into the personal witness recorded in {1}, when the risen Savior descends and invites the people to come to Him. Reading the two passages together preserves the movement from hearing to recognition. The Book of Mormon presents this as another witness of the same Jesus whose Resurrection the New Testament records, while giving these people their own encounter, place and testimony.",
           {
             "questions": [
@@ -1522,7 +1547,8 @@
               "What might someone new to your community learn about Christ from the way you receive them?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "disciples",
@@ -1600,7 +1626,8 @@
               "How does the connection between blessing and turning from iniquity shape your understanding of covenant?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "scriptures",
@@ -1624,6 +1651,9 @@
         ],
         "blocks": [
           "Jesus gives the people words associated with Malachi and then explains them. Read {0} and {1} alongside the explanation in {2}. He says these scriptures had not been in their possession and were given for the benefit of future generations. The act of teaching includes preserving words that later readers will need.",
+          {
+            "art": "bn-scriptures-explained"
+          },
           "The sequence helps explain why this record is concerned with both immediate listeners and people who come after them. The Savior’s teaching reaches from creation toward judgment, placing particular prophetic words within a larger purpose. We can follow that example by reading the supplied passages in context instead of reducing them to isolated phrases about the future.",
           {
             "questions": [
@@ -1688,7 +1718,8 @@
               "Which feature of His example would you like to practice in one specific relationship?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       }
     ],
     "related": [
@@ -1745,6 +1776,17 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_picture": {
+              "href": "/church-history.html#history-first-vision-title",
+              "thumbnail": "assets/history/first-vision-800.webp",
+              "width": 800,
+              "height": 267,
+              "alt": "Joseph Smith kneeling in a wooded grove as God the Father and Jesus Christ appear in heavenly light",
+              "title": "The First Vision",
+              "caption": "Joseph kneels among the trees. Explore his account of the Father and the Son appearing in answer to his prayer."
+            }
+          },
           "Joseph Smith’s published history describes his attempt to pray in the woods on a clear spring morning in 1820. In {0}, a struggle precedes the appearance of two Personages, and one introduces the other as His beloved Son. Joseph’s question about religious belonging becomes part of a much larger encounter with God.",
           "Latter-day Saints receive this account as foundational testimony of the Father and the Son and of the opening of the Restoration. Joseph’s written witness allows us to follow the question he brought and the answer he understood himself to receive. Our own seeking may unfold very differently. Reading his account directly can encourage patient prayer and careful attention to the sources, while leaving each reader room to consider the testimony honestly.",
           {
@@ -1832,7 +1874,8 @@
               "What does it mean to you that the pleading questions were preserved together with the response?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "spirit-world",
@@ -1899,7 +1942,8 @@
               "Which part of the testimony would you like to explore through its original scripture source?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "charity",
@@ -1984,7 +2028,8 @@
               "What could you do now that would be consistent with the welcome you hope to offer Him?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       }
     ],
     "related": [
@@ -2220,8 +2265,12 @@
         ],
         "blocks": [
           "A piece of new cloth does not make a sound repair simply because it covers the hole. When it pulls against an old garment, the damage becomes worse. Luke sharpens the picture by describing a piece taken from a new garment: the attempted repair harms what is new and does not match what is old. {2}",
+          {
+            "art": "new-patch-02"
+          },
           "The comparison belongs to Jesus' answer about His ministry. He is asking His hearers to understand what is happening in His presence, rather than force His disciples into an expectation without considering its setting. The picture's practical logic matters more than an invented symbolic meaning for every thread."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -2246,15 +2295,13 @@
         "blocks": [
           "There can be a place for examining how we receive unfamiliar teaching. Do we listen long enough to understand it, or immediately trim it to fit an existing habit? That reflection should remain humble: Jesus' image does not mean that everything old is worthless or every novelty is true.",
           {
-            "art": "new-patch-02"
-          },
-          {
             "questions": [
               "What question prompted this picture?",
               "Where might habit keep you from listening carefully?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -2366,8 +2413,12 @@
         ],
         "blocks": [
           "New wine placed in old skins bursts them, losing both wine and container. New skins provide the fitting vessel. Jesus describes preservation, not merely destruction: the point of receiving the wine properly is that what is given can be kept. Mark and Luke retain the same central contrast. {1}",
+          {
+            "art": "new-wineskins-02"
+          },
           "Luke adds that someone accustomed to old wine does not immediately desire new. That observation makes the passage more searching. Familiarity can shape what a person is willing to receive. It should not be used to overturn the comparison or announce that Jesus simply preferred the old order. {2}"
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -2392,15 +2443,13 @@
         "blocks": [
           "The picture invites careful receptiveness. You might ask whether an established expectation helps you recognize Christ's teaching or prevents you from hearing it. Receiving Him need not mean treating your past with contempt; it can mean allowing understanding and practice to change as you learn.",
           {
-            "art": "new-wineskins-02"
-          },
-          {
             "questions": [
               "How does this companion image strengthen the garment comparison?",
               "What might readiness to learn require?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -2522,8 +2571,12 @@
         ],
         "blocks": [
           "Mark asks whether a lamp is brought in to be hidden beneath a basket or bed. Luke describes placing it where those entering can see. The absurdity of concealing a useful light makes the teaching memorable: what has been received is not meant to remain ineffective. {1}",
+          {
+            "art": "lamp-02"
+          },
           "The accounts should be read together without erasing their different emphases. Matthew directs attention from good works to the Father. Luke's later saying moves toward the condition of the eye and the light within a person. The same familiar object can illuminate more than one aspect of discipleship. {3}"
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -2553,15 +2606,13 @@
         "blocks": [
           "Sharing light need not mean drawing attention to yourself. A patient explanation, an honest act, or a needed kindness may help another person see goodness more clearly. You can also ask how attentively you are receiving the light you hope to share.",
           {
-            "art": "lamp-02"
-          },
-          {
             "questions": [
               "What changes when the lamp is covered?",
               "How could your conduct help someone see goodness?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -2667,8 +2718,12 @@
         ],
         "blocks": [
           "Children in a marketplace give Him a picture for that response. They call to one another about music and mourning, but their companions will join neither. The image exposes a demand that others participate only on the critic's terms, followed by dissatisfaction whichever invitation is offered. {1}",
+          {
+            "art": "children-marketplace-02"
+          },
           "Jesus does not ask His hearers to judge truth by a teacher's personality or by whether a messenger matches their preferred style. John and Jesus have different roles. Their difference does not excuse refusing both. The concluding reference to wisdom invites attention to what their ministries actually bring forth."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -2688,15 +2743,13 @@
         "blocks": [
           "This passage can turn us from quick dismissal toward honest listening. You might notice the standards you apply to a message you do not want to hear. Are those standards consistent, or do they shift so that no messenger could satisfy them?",
           {
-            "art": "children-marketplace-02"
-          },
-          {
             "questions": [
               "What remains constant in the two criticisms?",
               "How can you recognize a message without demanding your preferred messenger?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -3330,8 +3383,12 @@
         ],
         "blocks": [
           "The grown plant has branches in which birds can lodge. The picture therefore ends with more than an increase in size; the grown plant has become a place that can receive other living things. Mark describes branches large enough to provide shade. {1}",
+          {
+            "art": "mustard-seed-02"
+          },
           "This kingdom comparison should be distinguished from Jesus' separate sayings about faith like a mustard seed. Here the emphasis is the kingdom's beginning and growth. The language speaks within an everyday agricultural picture rather than offering a modern ranking of all botanical seeds."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -3356,15 +3413,13 @@
         "blocks": [
           "Something small need not be insignificant. A quiet beginning in study, service, or repentance may deserve care even when it attracts little notice. That is an invitation to patient participation, not a promise that every personal project will become large or publicly successful.",
           {
-            "art": "mustard-seed-02"
-          },
-          {
             "questions": [
               "What makes the beginning seem unimpressive?",
               "Where might patient participation matter more than scale?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -3466,8 +3521,12 @@
         ],
         "blocks": [
           "The woman hides the leaven in three measures of meal, and the whole is leavened. The story does not describe separate stages or give her a name. Its attention rests on the relation between the introduced leaven and the resulting change throughout the batch. {1}",
+          {
+            "art": "leaven-02"
+          },
           "Leaven does not carry one fixed moral meaning wherever it appears in scripture. Jesus also uses it in warnings elsewhere. In this passage He explicitly compares it with the kingdom, so the surrounding teaching determines how the image should be read."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -3487,15 +3546,13 @@
         "blocks": [
           "You might consider the quiet influence of a sincere word, repeated kindness, or faithful example. That is a present-day application, not an additional explanation supplied in the verse. The picture invites attention to effects that may be real before they become easy to measure.",
           {
-            "art": "leaven-02"
-          },
-          {
             "questions": [
               "What is unseen while the dough changes?",
               "What quiet influence can you offer?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -3898,10 +3955,7 @@
           ]
         ],
         "blocks": [
-          "At the close of the kingdom parables, Jesus asks His disciples whether they have understood. Their reply leads to one final household comparison: a scribe instructed in the kingdom brings out treasure that is both new and old. The image is connected to learning and understanding. {0}",
-          {
-            "art": "householder-01"
-          }
+          "At the close of the kingdom parables, Jesus asks His disciples whether they have understood. Their reply leads to one final household comparison: a scribe instructed in the kingdom brings out treasure that is both new and old. The image is connected to learning and understanding. {0}"
         ]
       },
       {
@@ -3916,8 +3970,13 @@
         ],
         "blocks": [
           "The householder has resources to bring out, rather than merely objects to admire in storage. Jesus does not list the individual treasures or assign a separate meaning to each. The teaching can remain rich without turning the contents of the house into an invented symbolic inventory.",
+          {
+            "art": "householder-01"
+          },
           "The pairing of new and old resists a careless assumption that understanding requires either discarding everything previously learned or refusing everything unfamiliar. The emphasis rests on a person instructed in the kingdom who can draw upon what has been received."
-        ]
+        ],
+        "chapter_group": "setting",
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -3937,7 +3996,8 @@
               "What can you share faithfully from what you have learned?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "setting"
       }
     ],
     "related": [
@@ -4783,8 +4843,12 @@
         ],
         "blocks": [
           "The hearers are invited to recognize rather than ignore what is before them. Yet the surrounding discourse also warns that the precise day and hour are unknown. Attentiveness to His words and refusal to calculate an unauthorized timetable belong together. {1}",
+          {
+            "art": "budding-fig-02"
+          },
           "This is neither the story of a fruitless tree given more time nor the account of Jesus cursing a fig tree. Shared imagery does not make those passages one event. Here the ordinary appearance of leaves illustrates discernment and the reliability of His words. {2}"
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -4809,15 +4873,13 @@
         "blocks": [
           "Readiness can become part of ordinary discipleship rather than a cycle of alarm. You might ask what Christ's teaching calls you to do today even without knowing what tomorrow will bring. Caring for others, repenting, and keeping commitments do not depend on discovering a date.",
           {
-            "art": "budding-fig-02"
-          },
-          {
             "questions": [
               "What does recognition require beyond curiosity?",
               "How can readiness become daily faithfulness?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -4919,8 +4981,12 @@
         ],
         "blocks": [
           "The comparison moves from that uncertainty to the coming of the Son of Man. Its point concerns surprise and preparedness. It does not compare the Lord's character with a thief's dishonesty, and it does not invite readers to imagine that fear is the highest form of faith.",
+          {
+            "art": "thief-night-02"
+          },
           "Luke places the saying beside servants awaiting their master's return and follows it with a discussion of entrusted responsibility. That setting helps keep readiness connected with how a person lives and serves, rather than with fascination about the time of arrival. {1}"
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -4940,15 +5006,13 @@
         "blocks": [
           "A useful reflection is to ask what would remain worth doing if the timetable stayed unknown. Faithful attention, reconciliation where possible, and care for an entrusted task can be practiced now. The passage calls for preparation without giving a warrant for speculation.",
           {
-            "art": "thief-night-02"
-          },
-          {
             "questions": [
               "What would faithful readiness look like today?",
               "What changes when preparation is steady rather than alarmed?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -5287,9 +5351,6 @@
           {
             "art": "talents-02"
           },
-          {
-            "art": "talents-03"
-          },
           "After a long time, the master returns and settles accounts. The first and second servants each report what they have done and receive the same welcoming commendation. The story does not make equal starting resources the condition for faithful service.",
           {
             "art": "talents-04"
@@ -5308,8 +5369,12 @@
         ],
         "blocks": [
           "The third servant explains his inaction through fear and his view of the master. He returns what he hid but has done nothing productive with the trust. The exchange exposes the consequence of allowing fear to govern the whole stewardship.",
+          {
+            "art": "talents-03"
+          },
           "This account should remain distinct from Luke's ten pounds. The number of servants, initial distributions, surrounding events, and details of the accounting differ. Keeping those differences allows readers to hear Matthew's story rather than a blended version."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "living-the-invitation",
@@ -5329,7 +5394,8 @@
               "How might fear be keeping one responsibility buried?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "receiving-the-word"
       }
     ],
     "related": [
@@ -5532,7 +5598,8 @@
             "art": "two-debtors-02"
           },
           "Jesus then contrasts the woman's acts of care with the welcome He received from Simon. The debt comparison helps Simon look again at the woman he had judged. Forgiveness and love are at the center; she is not reduced to the reputation through which he first viewed her."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -5552,7 +5619,8 @@
               "How might gratitude become an act of love?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -5651,9 +5719,6 @@
           },
           {
             "art": "good-samaritan-06"
-          },
-          {
-            "art": "good-samaritan-07"
           }
         ]
       },
@@ -5670,9 +5735,12 @@
         "blocks": [
           "The care continues after the first emergency. The Samaritan tends the traveler, gives money to the host, and undertakes further expense if needed. Mercy in the story includes interruption, transport, provision, and follow-through.",
           {
-            "art": "good-samaritan-08"
+            "art": "good-samaritan-07"
           },
-          "Jesus' final question changes the direction of the lawyer's original question. Rather than drawing a boundary around who qualifies for help, He asks which person became a neighbor to the wounded man. The lawyer identifies the one who showed mercy, and Jesus calls him to act likewise."
+          "Jesus' final question changes the direction of the lawyer's original question. Rather than drawing a boundary around who qualifies for help, He asks which person became a neighbor to the wounded man. The lawyer identifies the one who showed mercy, and Jesus calls him to act likewise.",
+          {
+            "art": "good-samaritan-08"
+          }
         ]
       },
       {
@@ -5694,7 +5762,8 @@
               "What practical follow-through could turn concern into care?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "receiving-the-word"
       }
     ],
     "related": [
@@ -5916,7 +5985,8 @@
               "What would being rich toward God change about a current choice?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -6027,7 +6097,8 @@
               "How does the master's service surprise you?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -6229,7 +6300,8 @@
             "art": "wedding-places-03"
           },
           "Jesus then turns to the person who invited Him. He speaks of welcoming those who cannot repay the invitation, including people often excluded from honored tables. The movement from seating oneself to choosing one's guests joins humility with generosity."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -6249,7 +6321,8 @@
               "Who could receive hospitality without being able to repay?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -6364,7 +6437,8 @@
               "Whom might your table or community overlook?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -6475,7 +6549,8 @@
               "What support would help you follow through?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -6563,7 +6638,8 @@
             "art": "king-war-02"
           },
           "The comparison does not report a particular historical campaign or praise aggression. Nor should each army be assigned an unsupplied symbolic identity. Its immediate connection is the seriousness of counting the cost, followed by Jesus' words about forsaking what competes with discipleship."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -6583,7 +6659,8 @@
               "Where would humility change your decision?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -6667,7 +6744,10 @@
         ],
         "blocks": [
           "She lights a lamp, sweeps the house, and searches diligently until she finds the coin. These actions give attention a visible form. What is missing is not dismissed because nine remain; the search continues because the lost piece still matters.",
-          "On finding it, she calls friends and neighbors to rejoice. Jesus connects that celebration with joy in the presence of God's angels over one sinner who repents. The explanation supplied in the passage should remain central rather than an invented account of the woman's marriage or possessions."
+          "On finding it, she calls friends and neighbors to rejoice. Jesus connects that celebration with joy in the presence of God's angels over one sinner who repents. The explanation supplied in the passage should remain central rather than an invented account of the woman's marriage or possessions.",
+          {
+            "art": "lost-coin-found"
+          }
         ]
       },
       {
@@ -6683,15 +6763,13 @@
         "blocks": [
           "The coin's recovery invites us to consider whether our response to another person's return includes genuine gladness. We may also notice the care of the search itself. Attention, effort, and welcome can communicate value more clearly than a statement that someone ought to come back.",
           {
-            "art": "lost-coin-found"
-          },
-          {
             "questions": [
               "What does careful searching show about value?",
               "How can you share joy over another person's return?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -6808,10 +6886,7 @@
           {
             "art": "prodigal-son-07"
           },
-          "The elder son hears music and learns why there is a celebration. Angry, he refuses to enter. The father goes out to him as well. Their conversation reveals the elder son's sense that long service has gone unrecognized and that his brother's welcome diminishes his own place.",
-          {
-            "art": "prodigal-son-08"
-          }
+          "The elder son hears music and learns why there is a celebration. Angry, he refuses to enter. The father goes out to him as well. Their conversation reveals the elder son's sense that long service has gone unrecognized and that his brother's welcome diminishes his own place."
         ]
       },
       {
@@ -6826,6 +6901,9 @@
         ],
         "blocks": [
           "The father affirms the elder son's place with him while insisting that the brother's return is reason for joy. The story ends without telling us whether the elder son enters. We should not invent a final embrace or use the open ending to announce that he is permanently beyond mercy.",
+          {
+            "art": "prodigal-son-08"
+          },
           "Both conversations can invite honest reflection. Some readers may recognize the difficulty of coming home with failure to acknowledge; others may recognize resentment when mercy seems more generous than their accounting allows. Neither recognition requires pretending that real family wounds resolve as quickly as a story is read.",
           "You might pause with the father's movement toward each son: running to the returning one and going out to the one who will not enter. The invitation to reconciliation does not erase agency. The account leaves room to ask what receiving mercy and rejoicing in another person's return might require of you.",
           {
@@ -6834,7 +6912,9 @@
               "How might you receive mercy and also rejoice when another receives it?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "receiving-the-word",
+        "keep_intro_before_art": true
       }
     ],
     "related": [
@@ -6921,10 +7001,10 @@
           {
             "art": "unjust-steward-02"
           },
+          "The commendation concerns his shrewd action in view of what is coming. It does not turn the story into approval of dishonesty. Jesus' following words stress faithfulness in little and much, responsibility with what belongs to another, and the impossibility of serving both God and mammon.",
           {
             "art": "unjust-steward-03"
-          },
-          "The commendation concerns his shrewd action in view of what is coming. It does not turn the story into approval of dishonesty. Jesus' following words stress faithfulness in little and much, responsibility with what belongs to another, and the impossibility of serving both God and mammon."
+          }
         ]
       },
       {
@@ -6946,7 +7026,8 @@
               "Where does honesty need to govern your use of resources?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -7037,7 +7118,8 @@
             "art": "rich-man-lazarus-03"
           },
           "The rich man then asks that Lazarus be sent to warn his brothers. Abraham directs attention to Moses and the prophets. The final exchange challenges the assumption that an extraordinary sign would produce the response that the hearers have refused to give to scripture."
-        ]
+        ],
+        "opening_visual_after_paragraphs": 2
       },
       {
         "id": "receiving-the-word",
@@ -7058,7 +7140,8 @@
               "What existing teaching already calls for your response?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -7146,7 +7229,8 @@
             "art": "servant-duty-02"
           },
           "The conclusion concerns the disciples' posture after doing what they have been commanded. Their obedience is not leverage by which they force God to repay them. The language should not be detached from that point and used to deny their worth as people."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -7166,7 +7250,8 @@
               "What would grateful faithfulness look like?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -7253,10 +7338,10 @@
           {
             "art": "persistent-widow-02"
           },
+          "Jesus draws attention to what even this unjust judge says, then turns toward God's response to His chosen people who cry to Him. The movement is a contrast, not an assertion that God must be irritated into concern. The closing question turns toward the presence of faith when the Son of Man comes.",
           {
             "art": "persistent-widow-03"
-          },
-          "Jesus draws attention to what even this unjust judge says, then turns toward God's response to His chosen people who cry to Him. The movement is a contrast, not an assertion that God must be irritated into concern. The closing question turns toward the presence of faith when the Son of Man comes."
+          }
         ]
       },
       {
@@ -7278,7 +7363,8 @@
               "How can you support someone waiting for justice?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -7389,7 +7475,8 @@
               "What would an honest request for mercy sound like?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -7476,13 +7563,7 @@
           {
             "art": "minas-02"
           },
-          {
-            "art": "minas-04"
-          },
-          "One reports ten pounds gained and another five. A further servant has kept the pound wrapped in a cloth, explaining his inaction through fear. The account examines what the servants do with the trust, not merely whether they retain possession of the original coin.",
-          {
-            "art": "minas-03"
-          }
+          "One reports ten pounds gained and another five. A further servant has kept the pound wrapped in a cloth, explaining his inaction through fear. The account examines what the servants do with the trust, not merely whether they retain possession of the original coin."
         ]
       },
       {
@@ -7497,7 +7578,13 @@
         ],
         "blocks": [
           "The nobleman orders the unused pound taken from the servant and given to the one who has ten. The closing words also command that the opponents who rejected his rule be brought before him and slain. Luke records that command without narrating its execution; these severe features belong to the story Jesus tells, not to instructions for His hearers to harm others.",
+          {
+            "art": "minas-03"
+          },
           "The nobleman's harsh features should not be treated as a complete portrait of God. A parable compares particular aspects of a story with a teaching; it does not require every action of every character to be imitated or assigned directly to the Savior.",
+          {
+            "art": "minas-04"
+          },
           "Keep this account distinct from Matthew's talents. Luke includes ten servants, equal initial pounds, opposition to the nobleman, and authority over cities. Its opening specifically challenges the expectation of an immediate manifestation of the kingdom."
         ]
       },
@@ -7519,7 +7606,8 @@
               "What fear might lead you to hide a responsibility?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "receiving-the-word"
       }
     ],
     "related": [
@@ -7630,7 +7718,8 @@
               "How can readiness stay peaceful rather than fearful?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -7701,10 +7790,7 @@
           ]
         ],
         "blocks": [
-          "Luke explicitly calls this brief comparison a parable. Jesus asks whether one blind person can lead another and whether both will fall into a ditch. The question appears among teachings about judgment, mercy, and the relationship between a disciple and a teacher. {0}",
-          {
-            "art": "blind-guides-01"
-          }
+          "Luke explicitly calls this brief comparison a parable. Jesus asks whether one blind person can lead another and whether both will fall into a ditch. The question appears among teachings about judgment, mercy, and the relationship between a disciple and a teacher. {0}"
         ]
       },
       {
@@ -7724,8 +7810,13 @@
         ],
         "blocks": [
           "The picture concerns the ability to guide. A confident leader cannot supply sight that the leader does not possess. The following saying about a disciple becoming like a teacher makes the choice of guidance a matter with lasting consequences.",
+          {
+            "art": "blind-guides-01"
+          },
           "Matthew records a related warning about blind leaders after controversy over human traditions and what defiles a person. Those surrounding passages help explain the spiritual use of the image. Physical blindness itself is not evidence that a person is morally deficient or unable to teach. {1}"
-        ]
+        ],
+        "chapter_group": "setting",
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -7750,7 +7841,8 @@
               "How does learning from a teacher shape your conduct?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "setting"
       }
     ],
     "related": [
@@ -7825,10 +7917,7 @@
           ]
         ],
         "blocks": [
-          "Jesus places a tiny speck beside a wooden beam to expose the absurdity of hypocritical judgment. A person notices a small obstruction in someone else's eye while failing to consider a much larger one in his own. The exaggerated picture makes self-deception difficult to miss. {0}",
-          {
-            "art": "mote-beam-01"
-          }
+          "Jesus places a tiny speck beside a wooden beam to expose the absurdity of hypocritical judgment. A person notices a small obstruction in someone else's eye while failing to consider a much larger one in his own. The exaggerated picture makes self-deception difficult to miss. {0}"
         ]
       },
       {
@@ -7848,8 +7937,13 @@
         ],
         "blocks": [
           "The instruction does not end by saying that no one should ever help another person. Jesus tells the hearer to remove the beam first, so that he can see clearly to help with the speck. Honest self-examination changes the manner and credibility of that help.",
+          {
+            "art": "mote-beam-01"
+          },
           "Luke preserves the same contrast amid teaching about mercy, judgment, and the influence of teachers. Read in that setting, the image asks for more than a temporary pause before criticism. It calls for a truthful view of oneself and a less condemning posture toward others. {1}"
-        ]
+        ],
+        "chapter_group": "setting",
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -7874,7 +7968,8 @@
               "What self-examination could make your help gentler?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "setting"
       }
     ],
     "related": [
@@ -7957,9 +8052,6 @@
           "Jesus uses a tree's fruit to teach discernment. In Matthew's sermon, the warning concerns false prophets who appear harmless. Fruit provides a way to look beyond the outward covering. The familiar difference between productive trees and thorny growth brings conduct into the question of trust. {0}",
           {
             "art": "tree-fruit-01"
-          },
-          {
-            "art": "tree-fruit-02"
           }
         ]
       },
@@ -7985,8 +8077,12 @@
         ],
         "blocks": [
           "Luke connects fruit with what comes out of the heart. Good and evil treasures issue in corresponding speech and action. Matthew also records the tree comparison in a discussion that includes words and accountability. These related settings should be kept visible rather than collapsed into a single occasion. {2}",
+          {
+            "art": "tree-fruit-02"
+          },
           "The picture asks us to pay attention to what a teaching or way of life produces. It does not make one difficult moment a complete account of a person, nor does it authorize instant certainty about another's heart. Careful discernment can remain patient and open to repentance."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -8016,7 +8112,8 @@
               "What does your speech reveal?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -8132,7 +8229,8 @@
             "art": "salt-02"
           },
           "The saying should not become a debate that forgets why Jesus uses the comparison. Nor should it become a declaration that some people have no worth. It challenges disciples to consider whether their life carries the qualities to which He calls them. {2}"
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -8162,7 +8260,8 @@
               "Why does Mark connect salt with peace?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -8246,10 +8345,7 @@
           ]
         ],
         "blocks": [
-          "A question about fasting leads Jesus to speak of wedding guests and a bridegroom. While the bridegroom is with them, the guests have a reason for joy. His presence changes what is fitting for that moment. Jesus also says a time will come when the bridegroom is taken away. {0}",
-          {
-            "art": "bridegroom-01"
-          }
+          "A question about fasting leads Jesus to speak of wedding guests and a bridegroom. While the bridegroom is with them, the guests have a reason for joy. His presence changes what is fitting for that moment. Jesus also says a time will come when the bridegroom is taken away. {0}"
         ]
       },
       {
@@ -8274,8 +8370,13 @@
         ],
         "blocks": [
           "The comparison answers the question through the significance of Jesus Himself, rather than through a simple rejection of fasting. The future absence belongs in the answer as much as the present joy. A practice is being understood in relation to His presence and mission. {1}",
+          {
+            "art": "bridegroom-01"
+          },
           "Luke preserves this exchange before the new garment and wineskin comparisons. Read together, the images resist forcing Jesus' disciples into an expectation that ignores what His coming means. This is not the same story as the ten virgins waiting for a bridegroom. {2}"
-        ]
+        ],
+        "chapter_group": "setting",
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -8305,7 +8406,8 @@
               "What does Jesus disclose about Himself?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "setting"
       }
     ],
     "related": [
@@ -8389,10 +8491,7 @@
           ]
         ],
         "blocks": [
-          "Opponents claim that Jesus casts out devils through the ruler of devils. He replies by considering what happens when a kingdom or household is divided against itself. Internal opposition undermines the very power the accusation claims He is serving. {0}",
-          {
-            "art": "divided-house-01"
-          }
+          "Opponents claim that Jesus casts out devils through the ruler of devils. He replies by considering what happens when a kingdom or household is divided against itself. Internal opposition undermines the very power the accusation claims He is serving. {0}"
         ]
       },
       {
@@ -8417,8 +8516,13 @@
         ],
         "blocks": [
           "Mark records Jesus asking how Satan can cast out Satan, then applies the divided-kingdom and divided-house comparisons. His reasoning calls attention to the work actually being done. A person is being delivered from evil, and the proposed explanation does not fit that deliverance. {1}",
+          {
+            "art": "divided-house-01"
+          },
           "Luke preserves the same answer before developing the strong-man comparison. The two images belong to the argument but contribute different parts: division exposes the contradiction, and the stronger challenger explains the breaking of an existing hold. {2}"
-        ]
+        ],
+        "chapter_group": "setting",
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -8448,7 +8552,8 @@
               "How does His actual work answer the accusation?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "setting"
       }
     ],
     "related": [
@@ -8530,9 +8635,6 @@
           "Jesus describes an unclean spirit leaving a person, passing through dry places, and returning to the former house. It finds the house empty, swept, and arranged, then returns with seven others more wicked than itself. The final condition is worse than the first. {0}",
           {
             "art": "returning-spirit-01"
-          },
-          {
-            "art": "returning-spirit-02"
           }
         ]
       },
@@ -8553,8 +8655,12 @@
         ],
         "blocks": [
           "The unsettling picture makes an empty interval different from lasting renewal. Matthew connects the warning to the generation He is addressing. Luke places it after the dispute about Jesus' deliverance and before a saying about hearing and keeping God's word. {1}",
+          {
+            "art": "returning-spirit-02"
+          },
           "The passage should not be turned into a diagnosis of mental illness or a set of medical instructions. Nor does it provide a method for identifying unseen spirits in another person's life. Its spiritual warning deserves to be read in the context of response to Jesus."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -8579,7 +8685,8 @@
               "What would fill cleared space constructively?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -8671,7 +8778,8 @@
             "art": "closed-door-02"
           },
           "The surrounding verses picture people coming from different directions to sit in God's kingdom and speak of the last and the first. This widening horizon resists a comfortable assumption that one's current place or association settles the question."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -8691,7 +8799,8 @@
               "What invitation can you answer now?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -8789,7 +8898,8 @@
             "art": "parent-gifts-02"
           },
           "Some readers have experienced parents who did not protect or nourish them. This comparison need not require denying that experience. Jesus points toward the goodness of the Father by naming what a caring response should be, rather than declaring that every earthly parent has acted that way."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -8814,7 +8924,8 @@
               "What gift can you seek without dictating its timing?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -8916,7 +9027,8 @@
             "art": "settle-adversary-02"
           },
           "The spiritual invitation concerns taking unresolved wrong seriously while there is an opportunity to respond. It should not be expanded into individualized legal advice or a demand that an injured person negotiate alone with someone unsafe."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -8941,7 +9053,8 @@
               "What safe step toward peace is available?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -9019,9 +9132,6 @@
           "During a dispute about healing on the Sabbath, Jesus asks what a person would do if a sheep fell into a pit. The expected rescue exposes a practical care His hearers already recognize. He then turns attention to the greater value of a person. {0}",
           {
             "art": "sheep-sabbath-01"
-          },
-          {
-            "art": "sheep-sabbath-02"
           }
         ]
       },
@@ -9042,8 +9152,12 @@
         ],
         "blocks": [
           "The argument reaches a clear conclusion: it is lawful to do good on the Sabbath. Jesus' comparison is not separated from the person before Him whose hand needs healing. Mercy is not an abstract exception considered at a safe distance from need.",
+          {
+            "art": "sheep-sabbath-02"
+          },
           "Luke records a related question about an ass or ox fallen into a pit while Jesus heals a man. These are related comparisons in distinct accounts; a retelling should not blend the animals and encounters into one event. Each connects recognized care with a challenge to resistance toward healing. {1}"
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -9068,7 +9182,8 @@
               "When can rules distract from doing good?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -9156,9 +9271,6 @@
         ],
         "blocks": [
           "The shepherd calls his own sheep by name and leads them out. They follow because they know his voice. The picture includes recognition and relationship, not merely movement within a crowd. The shepherd's knowledge of the flock gives direction a personal character.",
-          {
-            "art": "good-shepherd-02"
-          },
           "The hired worker abandons the sheep when danger comes because they are not his own. Jesus contrasts that flight with the good shepherd's willingness to lay down his life. He then speaks of laying down His life and taking it again, giving the image a direct connection with His saving mission.",
           {
             "art": "good-shepherd-03"
@@ -9180,8 +9292,12 @@
         ],
         "blocks": [
           "He also speaks of other sheep who will hear His voice and of one flock under one shepherd. A full study should retain this outward movement rather than use the image only for private reassurance. His care is personal and His gathering reaches beyond the immediate fold.",
+          {
+            "art": "good-shepherd-02"
+          },
           "The Bible Dictionary classifies this teaching as an allegory, while the Harmony uses the broader label of parable. That difference in study terminology does not diminish the passage. Unlike a character in an ordinary parable, Jesus explicitly identifies Himself within this extended teaching image."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "living-the-invitation",
@@ -9201,7 +9317,8 @@
               "How does willing sacrifice reveal His care?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "receiving-the-word"
       }
     ],
     "related": [
@@ -9288,10 +9405,10 @@
           {
             "art": "vine-branches-02"
           },
+          "As the passage develops, abiding is joined with Jesus' words, His love, and keeping His commandments. He speaks of His joy and commands love for one another. Those surrounding teachings keep the vine from becoming a vague picture of feeling close without response.",
           {
             "art": "vine-branches-03"
-          },
-          "As the passage develops, abiding is joined with Jesus' words, His love, and keeping His commandments. He speaks of His joy and commands love for one another. Those surrounding teachings keep the vine from becoming a vague picture of feeling close without response."
+          }
         ]
       },
       {
@@ -9313,7 +9430,8 @@
               "How do love and obedience belong together?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -9424,7 +9542,8 @@
               "What might following Him require you to release?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -9512,7 +9631,8 @@
             "art": "woman-childbirth-02"
           },
           "This is a comparison within a particular promise to His followers as His death and their reunion approach. It is not a general prediction that every pregnancy ends safely or that every grief will soon feel resolved. Those conclusions would exceed what the passage says."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -9532,7 +9652,8 @@
               "How can hope accompany pain?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -9603,10 +9724,7 @@
           ]
         ],
         "blocks": [
-          "Jesus laments over Jerusalem, speaking of prophets killed and messengers rejected. He describes His desire to gather its children as a hen gathers her chicks beneath her wings. The small, protective image appears within a grief-filled address. {0}",
-          {
-            "art": "hen-chicks-01"
-          }
+          "Jesus laments over Jerusalem, speaking of prophets killed and messengers rejected. He describes His desire to gather its children as a hen gathers her chicks beneath her wings. The small, protective image appears within a grief-filled address. {0}"
         ]
       },
       {
@@ -9626,8 +9744,13 @@
         ],
         "blocks": [
           "The gathering is desired but refused. That tension belongs to the passage: His care does not remove the hearers' agency. The image expresses both the shelter He would offer and the sorrow of an invitation that is not received.",
+          {
+            "art": "hen-chicks-01"
+          },
           "Luke preserves the lament in another surrounding sequence of His journey. Reading both accounts can deepen attention to His words without requiring us to resolve every chronological question. Neither account authorizes contempt toward Jewish people today. {1}"
-        ]
+        ],
+        "chapter_group": "setting",
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-the-word",
@@ -9652,7 +9775,8 @@
               "How can you invite while respecting agency?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "setting"
       }
     ],
     "related": [
@@ -9782,7 +9906,8 @@
               "How might seeking His kingdom shape a priority?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "story-and-teaching"
       }
     ],
     "related": [
@@ -9854,9 +9979,13 @@
         ],
         "blocks": [
           "Begin Luke 15 with the complaint that Jesus receives sinners. The searches and celebration answer that complaint. They are not isolated stories about sentimental kindness; they invite the hearers to reconsider what it means for a person to be found and welcomed. {0}",
+          {
+            "art": "collection-mercy-07"
+          },
           "Read the whole movement of each account before deciding which character seems most like you. The returning son and the brother outside both matter. The forgiven servant's later conduct matters. A selected happy moment can be true to the story while still leaving out the question Jesus intends to ask. {1}",
           "Begin with the passage, then listen for the explanation Jesus gives before considering your own response. The modern pictures in this collection imagine mercy in ordinary life: searching carefully, listening honestly and giving someone time to take a next step."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "notice-the-one",
@@ -9949,12 +10078,9 @@
         "blocks": [
           "The elder son remains outside the celebration, and the father goes out to him. His brother's welcome feels like a judgment on his own service. The father answers that resentment without denying the elder son's place with him. The story leaves the son's final response open. {0}",
           {
-            "art": "collection-mercy-07"
-          },
-          "Another person's welcome, recognition, or progress can stir feelings we would rather conceal. We can acknowledge those feelings without making them the final word. The debtors' story also asks how awareness of mercy can deepen love. A small act of shared gladness may be a meaningful place to begin. {1}",
-          {
             "art": "collection-mercy-08"
-          }
+          },
+          "Another person's welcome, recognition, or progress can stir feelings we would rather conceal. We can acknowledge those feelings without making them the final word. The debtors' story also asks how awareness of mercy can deepen love. A small act of shared gladness may be a meaningful place to begin. {1}"
         ]
       },
       {
@@ -9969,7 +10095,8 @@
               "What might help you rejoice in another person's good?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "shared-joy"
       },
       {
         "id": "all-studies",
@@ -10123,9 +10250,13 @@
         ],
         "blocks": [
           "The lawyer asks who his neighbor is. At the end of the Good Samaritan, Jesus asks which traveler acted as a neighbor. Attend to that change in the question. It directs the study away from finding the narrowest boundary of responsibility and toward the shape of merciful action. {0}",
+          {
+            "art": "collection-neighbor-03"
+          },
           "Read the particular needs in each passage. The injured traveler needs immediate care and an inn; the guest needs welcome; the person at the gate needs attention that never comes. Combining them into a general instruction to be kind can hide what each story asks us to see. {1}",
           "The imagined modern encounters below bring the question of neighborly care close to home. Consider what useful help might look like for the person before you: ask, listen and think about what continuing care may require."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "seeing-the-need",
@@ -10161,12 +10292,9 @@
         "blocks": [
           "At a meal, Jesus moves from the places guests seek for themselves to the people a host chooses to invite. He names those who cannot repay the invitation, then tells of a supper whose welcome reaches people first left outside it. Hospitality is connected with humility and generosity. {0}",
           {
-            "art": "collection-neighbor-03"
-          },
-          "A welcome becomes tangible when people can communicate, move through a space and take part. The pictured encounters ask us to listen to the person being welcomed and make useful changes together, respecting their choices and experience.",
-          {
             "art": "collection-neighbor-04"
-          }
+          },
+          "A welcome becomes tangible when people can communicate, move through a space and take part. The pictured encounters ask us to listen to the person being welcomed and make useful changes together, respecting their choices and experience."
         ]
       },
       {
@@ -10233,7 +10361,8 @@
               "Which act of care needs follow-through rather than another promise?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "mercy-and-boundaries"
       },
       {
         "id": "all-studies",
@@ -10385,9 +10514,13 @@
         ],
         "blocks": [
           "The sower includes Jesus' own explanation, so begin with the meanings He supplies. The builders explicitly join hearing with doing. The two sons distinguish agreeable words from obedience. Read those direct connections before assigning additional symbolism to soil, tools, or household objects. {0}",
+          {
+            "art": "collection-hearing-03"
+          },
           "Compare parallel accounts without flattening them. The lamp appears in teaching about visible good works and in teaching about how people hear. The new patch and wineskins answer a question about fasting. The setting helps determine what a familiar image is doing in a particular passage. {1}",
           "The modern pictures imagine people learning, listening and returning to practical work. They offer ways to consider your own response to Christ's words, while the meaning of each teaching remains grounded in its scripture passage. A faithful beginning may still call for patience through difficulty."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "receiving-carefully",
@@ -10433,12 +10566,9 @@
         "blocks": [
           "Jesus distinguishes quick reception from lasting root and describes cares and riches crowding growth. Luke names patience in the fruitful response. Enthusiasm may be a beginning, but the passage asks what remains when difficulty or competing concerns arrive. {0}",
           {
-            "art": "collection-hearing-03"
-          },
-          "Practice and protected attention provide present-day ways to consider endurance. A musician returns to a hard passage; an unfinished task receives a cleared space. Spiritual growth is not identical to acquiring a skill, yet these scenes can help us ask whether a good beginning has been given time and room to deepen. {1}",
-          {
             "art": "collection-hearing-04"
-          }
+          },
+          "Practice and protected attention provide present-day ways to consider endurance. A musician returns to a hard passage; an unfinished task receives a cleared space. Spiritual growth is not identical to acquiring a skill, yet these scenes can help us ask whether a good beginning has been given time and room to deepen. {1}"
         ]
       },
       {
@@ -10505,7 +10635,8 @@
               "What teaching of Christ could become one concrete action today?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "discernment-and-humility"
       },
       {
         "id": "all-studies",
@@ -10703,9 +10834,13 @@
         ],
         "blocks": [
           "Matthew gathers several kingdom parables in one chapter, while Mark preserves the seed that grows through nights and days. Read each image on its own terms. The growing seed concerns growth and harvest; the wheat and tares adds an enemy, mixed growth, and restraint before separation. {0}",
+          {
+            "art": "collection-kingdom-01"
+          },
           "Jesus supplies explanations for some comparisons and leaves others brief. The treasure and pearl invite attention to surpassing worth. The net receives an explicit connection with judgment. Begin with these stated movements instead of inventing a separate doctrine for every object in the scene. {1}",
           "In the modern pictures, people plant, make bread, welcome others and choose how to spend their time. These imagined applications help us ask about patience, priorities and humble judgment. The kingdom parables remain our starting point; their promises belong to God's work, beyond what any one project may achieve."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "small-beginnings",
@@ -10725,12 +10860,9 @@
         "blocks": [
           "The mustard seed directs attention from an unimpressive beginning to substantial growth. The leaven directs attention to a change that reaches throughout the meal. These are related pictures, but their different actions matter: a seed grows, while leaven works through what surrounds it. {0}",
           {
-            "art": "collection-kingdom-01"
-          },
-          "A small planting and a baker's patient work let the original images remain visible in a present-day setting. Neither illustration claims that growth can be demanded on our timetable. The invitation is to consider the worth of faithful participation when the result is not yet fully seen. {1}",
-          {
             "art": "collection-kingdom-02"
-          }
+          },
+          "A small planting and a baker's patient work let the original images remain visible in a present-day setting. Neither illustration claims that growth can be demanded on our timetable. The invitation is to consider the worth of faithful participation when the result is not yet fully seen. {1}"
         ]
       },
       {
@@ -10818,7 +10950,8 @@
               "Where would patience protect something valuable that haste might harm?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "invitation-and-response"
       },
       {
         "id": "all-studies",
@@ -10996,9 +11129,13 @@
         ],
         "blocks": [
           "The talents and the ten pounds are related accounts, not interchangeable versions to blend. Matthew describes differing sums given to three featured servants. Luke describes ten servants, equal starting pounds, and a nobleman's journey while people expect the kingdom to appear immediately. {0}",
+          {
+            "art": "collection-stewardship-02"
+          },
           "Read difficult stories through their conclusions. The unjust steward's shrewd preparation is not approval of dishonesty; Jesus continues by teaching faithfulness and the impossibility of serving God and mammon. The character in a comparison is not a complete portrait of God or a model to imitate in every detail. {1}",
           "The imagined present-day scenes bring stewardship into plans, shared resources and ordinary responsibilities. In the talents parable, the entrusted gift is money; applying it to our skills is a further reflection. Faithfulness asks how we use what we receive, without promising wealth, ease or status."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "entrusted-resources",
@@ -11020,10 +11157,7 @@
           {
             "art": "collection-stewardship-01"
           },
-          "Preparation and accurate records are ordinary ways to honor trust. Measuring materials before building or correcting an account openly can protect the people who depend on the work. These applications do not reduce discipleship to efficient administration; they ask whether faithfulness reaches the details of what is entrusted. {1}",
-          {
-            "art": "collection-stewardship-02"
-          }
+          "Preparation and accurate records are ordinary ways to honor trust. Measuring materials before building or correcting an account openly can protect the people who depend on the work. These applications do not reduce discipleship to efficient administration; they ask whether faithfulness reaches the details of what is entrusted. {1}"
         ]
       },
       {
@@ -11111,7 +11245,8 @@
               "When does another person's blessing become difficult for you to welcome?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "freedom-from-comparison"
       },
       {
         "id": "all-studies",
@@ -11272,9 +11407,13 @@
         ],
         "blocks": [
           "Luke states that the persistent widow teaches continued prayer. The judge's indifference is part of a contrast, not a description of the Father's character. Read the friend at midnight with Jesus' following words about the Father's gifts, so persistence does not become a method for wearing God down. {0}",
+          {
+            "art": "collection-watchfulness-06"
+          },
           "Keep readiness beside ordinary responsibility. The servant feeds the household, the porter watches, and the attendants prepare their lamps. Jesus repeatedly leaves the hour unknown. His teaching gives work for the present, not a code for calculating a date. {1}",
           "The imagined modern scenes picture honest prayer, quiet preparation and attention to work that still needs doing. They invite us to remain faithful while we wait, even when a decision, recovery or other hoped-for outcome remains beyond our control."
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "prayer-with-honesty",
@@ -11348,10 +11487,7 @@
           {
             "art": "collection-watchfulness-05"
           },
-          "At the end of a shift or through a quiet hour, someone may still depend on a careful handoff or a promise kept. These imagined scenes ask us to notice the work entrusted to us now, even as we wait for something larger. {1}",
-          {
-            "art": "collection-watchfulness-06"
-          }
+          "At the end of a shift or through a quiet hour, someone may still depend on a careful handoff or a promise kept. These imagined scenes ask us to notice the work entrusted to us now, even as we wait for something larger. {1}"
         ]
       },
       {
@@ -11392,7 +11528,8 @@
               "What faithful task is yours during this season of waiting?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "trust-amid-uncertainty"
       },
       {
         "id": "all-studies",

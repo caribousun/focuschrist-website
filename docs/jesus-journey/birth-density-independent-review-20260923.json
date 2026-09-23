@@ -1,0 +1,30 @@
+{
+  "status": "pass",
+  "scope": "Final Birth reader opt-in and paragraph rhythm semantic/preservation review",
+  "reviewed_on": "2026-09-23",
+  "reviewed_html_sha256": "4fc2ba488adb4d5777eb4dab42ba39de06333cbe082e2511e9c021c6922bfaeb",
+  "baseline": "work/birth-density-before.html",
+  "checks": {
+    "exact_figures_preserved_once": 23,
+    "narrative_paragraph_order_exact": true,
+    "all_paragraph_strings_and_ids_preserved": true,
+    "header_hero_exact": true,
+    "navigation_tests": 18,
+    "rhythm_tests": 8
+  },
+  "semantic_findings": [
+    "Benjamin angel scene is now beside return to Mosiah3 and Alma7 testimony of birth and saving mission. Its caption still identifies Benjamin, not Alma or John.",
+    "Zacharias angel and naming scenes retain sequence; naming picture has exact caption and precedes the paragraph explicitly returning to after Johns birth.",
+    "Mary annunciation, meeting and praise retain scene progression with matching explanatory text.",
+    "Simeon and Anna remain distinct temple witnesses; Nephi prayer and night-light retain prayer/fulfillment sequence.",
+    "Existing Birth onward previews retain original study ownership."
+  ],
+  "implementation_findings": [
+    "Twelve original section IDs remain, navigation follows introductory paragraphs and precedes first chapter.",
+    "Unmodified exact approved journey CSS is shared with exact78consumer gate; full study remains accessible without JavaScript."
+  ],
+  "limitations": [
+    "Root separately checks actual browser composition.",
+    "Final content ledger hashes owned by canonical review agent; do not use this HTML hash as normalized published-text hash."
+  ]
+}

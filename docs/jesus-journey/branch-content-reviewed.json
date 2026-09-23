@@ -34,7 +34,8 @@
               "How does John’s opening change the way you read a simple encounter between Jesus and one person?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "chosen-son",
@@ -221,7 +222,8 @@
               "Which part of Isaiah’s description would you like to understand more deeply through the life of Jesus?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       }
     ],
     "related": [
@@ -292,7 +294,8 @@
               "What does Jesus’s willingness to receive baptism reveal about the way He leads?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "come-and-see",
@@ -305,6 +308,9 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_art": "come-and-see"
+          },
           "Two of John the Baptist’s disciples follow Jesus after hearing John identify Him as the Lamb of God. In {0}, Jesus asks what they seek and invites them to come and see where He stays. Andrew then finds his brother Simon and brings him to Jesus. The account begins with testimony but moves into personal encounter.",
           "Andrew’s part is modest and meaningful. He shares what he has found and helps another person come to the Savior. This meeting should be kept distinct from the later fishing scenes in the Gospels; John gives this encounter its own sequence and purpose. It invites us to consider how a sincere introduction, a shared passage or time spent listening may help someone explore faith without pressure.",
           {
@@ -325,6 +331,9 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_art": "nathanael"
+          },
           "Philip tells Nathanael that they have found the One anticipated in the law and prophets. Nathanael questions whether anything good can come from Nazareth. In {0}, Philip answers by inviting him to come and see. Jesus then addresses Nathanael personally, and the conversation opens into a testimony of His identity.",
           "The passage does not explain what happened beneath the fig tree or why Jesus’s knowledge of it mattered so much to Nathanael. We can let that detail remain open while attending to what is recorded: a question did not end the encounter. Nathanael came, listened and responded. The invitation to know Christ can include honest questions, even when the answers unfold differently from what a person first expected.",
           {
@@ -524,7 +533,8 @@
               "What might a respectful act of nearness look like for someone who is often avoided?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "home",
@@ -617,6 +627,9 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_art": "deaf-man"
+          },
           "People bring Jesus a man who is deaf and has difficulty speaking. In {0}, Jesus takes him aside from the multitude before acting. Mark records a physical, personal encounter, Jesus looking toward heaven and sighing, and the man’s hearing and speech being restored. The people’s amazement follows what the man himself has received.",
           "The movement away from the crowd is worth noticing. Another person’s need is not treated simply as a public spectacle. People who live with deafness or a speech disability have dignity and full human worth before any change in their condition. As an invitation to discipleship, this account can lead us to make communication more accessible and to ask how a person wishes to receive support.",
           {
@@ -688,6 +701,9 @@
         ],
         "blocks": [
           "Ten men with leprosy call to Jesus from a distance. In {0}, He tells them to show themselves to the priests, and they are cleansed as they go. One turns back, praises God and falls at Jesus’s feet in thanks. Luke identifies him as a Samaritan, and Jesus draws attention to his return.",
+          {
+            "reference_art": "ten-lepers-thanksgiving"
+          },
           "All ten receive cleansing; the account does not say that only the thankful man was healed. The returning man lets the story move from receiving a gift to recognizing its giver. Gratitude here is personal and expressed. We can practice it without comparing whose blessings are greater: remembering a kindness, speaking thanks and allowing received mercy to change the care we give others.",
           "{1} tells of another household receiving help: an official believes Jesus’s word about his son and starts home. Servants meet him with news of recovery. The story is distinct from the centurion’s servant and gives trust a place on the road before the father sees the child.",
           {
@@ -765,7 +781,8 @@
               "Which Beatitude brings a person you know to mind, and how could you respond with greater care?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "prayer",
@@ -791,7 +808,8 @@
               "Which part of the prayer Jesus teaches could help you express something you have struggled to say?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "great-commandments",
@@ -824,6 +842,9 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_art": "widows-offering"
+          },
           "Jesus sits opposite the treasury and watches people give. In {0}, a poor widow places two small coins among the offerings. He calls His disciples’ attention to her because the size of her gift cannot be understood apart from what she has to live on. An amount that looks small to an observer carries great cost for her.",
           "The scene asks us to look beyond visible totals when considering devotion. It should not become a way to pressure a person in need to give money they cannot safely spare. Jesus sees the widow’s circumstances, and readers should not overlook them. Her story can deepen gratitude for quiet sacrifice and make us more attentive to the people whose contributions are easily dismissed.",
           {
@@ -850,6 +871,9 @@
         ],
         "blocks": [
           "Martha welcomes Jesus into her home, while her sister Mary sits at His feet and listens. In {0}, Martha asks Him to tell Mary to help with the work. Jesus responds to Martha’s troubled attention and affirms Mary’s choice to receive His words. Both the hospitality and the conversation belong to this particular household moment.",
+          {
+            "reference_art": "martha-and-mary"
+          },
           "Martha’s service is real, and Jesus addresses her with personal concern. The question is what is drawing her attention at that moment. Even worthwhile responsibilities can become entangled with resentment or worry; time with the Savior’s words may help us return to those responsibilities with a different heart. Mary’s place at His feet also makes her a receiving disciple, someone whose attention and learning are welcomed within this home.",
           "Listening continues outside a home as well. In {1}, Peter notices the withered fig tree and Jesus teaches about faith, prayer and forgiveness. A moment on the road becomes an invitation to bring both trust and relationships before the Father.",
           {
@@ -876,6 +900,9 @@
         ],
         "blocks": [
           "A man runs to Jesus, kneels and asks about eternal life. In {0}, Jesus speaks of commandments and then looks on him with love before inviting him to sell his possessions, help the poor and follow Him. The man goes away grieving. Mark allows both Jesus’s love and the difficulty of the invitation to remain visible.",
+          {
+            "reference_art": "rich-man-invitation"
+          },
           "This is a recorded encounter, not a parable. Its challenge should not be softened into the idea that possessions never shape discipleship, nor flattened into the claim that wealth automatically measures a person’s spiritual worth. The disciples are astonished by what follows, and Jesus directs them to what is possible with God. The story asks what we find hardest to release when His invitation reaches beyond our familiar obedience.",
           "Another wealthy man responds differently in {1}. Zacchaeus speaks of giving and restitution, and Jesus speaks of salvation coming to his house. Set beside the grieving rich man, his response invites reflection on the practical changes that welcome can make possible.",
           {
@@ -883,7 +910,8 @@
               "What does Mark’s note that Jesus loved the man change about how you hear the invitation?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "caesar",
@@ -902,6 +930,9 @@
         ],
         "blocks": [
           "Some Pharisees and Herodians approach Jesus with a question intended to trap Him over tribute to Caesar. In {0}, He asks for a coin and draws attention to its image and inscription. His answer distinguishes what is owed to Caesar from what belongs to God, and the questioners marvel.",
+          {
+            "reference_art": "tribute-coin"
+          },
           "The exchange does not provide a complete rulebook for every later political dispute. It exposes an attempt to force Jesus into a narrow choice and turns the discussion toward obligation and allegiance. A reader can begin by asking what belongs to God in a life that also includes civic duties. That question reaches into honesty, conduct and the way we treat people, rather than remaining only a debate about what others should do.",
           "{1} records another question intended to test Him, this time at the expense of a woman brought before Him. Jesus’s response interrupts the accusation and joins mercy with an invitation to leave sin. The text records His writing on the ground without revealing the words.",
           {
@@ -928,6 +959,17 @@
         ],
         "blocks": [
           "John frames the washing of the disciples’ feet with Jesus’s knowledge of His relationship to the Father. In {0}, He rises from supper, takes a towel and basin, and begins to wash their feet. Peter’s resistance brings a conversation about receiving what Jesus offers. The Teacher then explains the example He has given them.",
+          {
+            "reference_picture": {
+              "href": "/atonement.html#remember",
+              "thumbnail": "assets/page-art/atonement/servant-960.webp",
+              "width": 960,
+              "height": 640,
+              "alt": "Jesus kneels with a basin and towel. He asks His disciples to follow His example of service.",
+              "title": "As I have done to you",
+              "caption": "Jesus kneels with a basin and towel. He asks His disciples to follow His example of service."
+            }
+          },
           "His authority is expressed through willing service. Yet the passage begins with disciples needing to receive His care, not simply deciding to become useful themselves. Both movements belong in discipleship: allowing Christ to cleanse and teach us, and extending humble service to others. The basin and towel give that teaching a concrete form that cannot be reduced to kind feelings alone.",
           "Before the meal, {1} describes Peter and John preparing a place according to Jesus’s instructions. Their ordinary work gives another form to service before the Teacher takes the towel.",
           {
@@ -935,7 +977,8 @@
               "Is it harder for you to offer help humbly or to receive it humbly, and why?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "abide",
@@ -1045,7 +1088,8 @@
               "What part of His life or character would you like to remember more deliberately during the sacrament?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "gethsemane",
@@ -1076,7 +1120,8 @@
               "What can His prayer teach you about bringing a difficult desire honestly before the Father?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "pilate",
@@ -1116,7 +1161,8 @@
               "When another person’s burden enters your day unexpectedly, what helps you respond with care?"
             ]
           }
-        ]
+        ],
+        "opening_visual_after_paragraphs": 2
       },
       {
         "id": "cross",
@@ -1136,7 +1182,8 @@
               "How does this act of care deepen your understanding of the One who gives His life?"
             ]
           }
-        ]
+        ],
+        "chapter_group": "simon"
       },
       {
         "id": "burial",
@@ -1313,7 +1360,8 @@
               "What might someone new to your community learn about Christ from the way you receive them?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "disciples",
@@ -1379,7 +1427,8 @@
               "How does the connection between blessing and turning from iniquity shape your understanding of covenant?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "scriptures",
@@ -1461,7 +1510,8 @@
               "Which feature of His example would you like to practice in one specific relationship?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       }
     ],
     "related": [
@@ -1518,6 +1568,17 @@
           ]
         ],
         "blocks": [
+          {
+            "reference_picture": {
+              "href": "/church-history.html#history-first-vision-title",
+              "thumbnail": "assets/history/first-vision-800.webp",
+              "width": 800,
+              "height": 267,
+              "alt": "Joseph Smith kneeling in a wooded grove as God the Father and Jesus Christ appear in heavenly light",
+              "title": "The First Vision",
+              "caption": "Joseph kneels among the trees. Explore his account of the Father and the Son appearing in answer to his prayer."
+            }
+          },
           "Joseph Smith’s published history describes his attempt to pray in the woods on a clear spring morning in 1820. In {0}, a struggle precedes the appearance of two Personages, and one introduces the other as His beloved Son. Joseph’s question about religious belonging becomes part of a much larger encounter with God.",
           "Latter-day Saints receive this account as foundational testimony of the Father and the Son and of the opening of the Restoration. Joseph’s written witness allows us to follow the question he brought and the answer he understood himself to receive. Our own seeking may unfold very differently. Reading his account directly can encourage patient prayer and careful attention to the sources, while leaving each reader room to consider the testimony honestly.",
           {
@@ -1596,7 +1657,8 @@
               "What does it mean to you that the pleading questions were preserved together with the response?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "spirit-world",
@@ -1657,7 +1719,8 @@
               "Which part of the testimony would you like to explore through its original scripture source?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       },
       {
         "id": "charity",
@@ -1733,7 +1796,8 @@
               "What could you do now that would be consistent with the welcome you hope to offer Him?"
             ]
           }
-        ]
+        ],
+        "keep_intro_before_art": true
       }
     ],
     "related": [

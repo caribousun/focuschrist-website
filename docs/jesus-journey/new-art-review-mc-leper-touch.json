@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, reference and source reviewer",
+  "scope": "Exact leper touch scene",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "mc-leper-touch",
+      "generationKey": "mc-leper-touch",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb7-90b1-7151-8e23-00a02bf70f7b\\exec-a6f4e457-a0e3-4068-b5f3-24f1963e22a0.png",
+      "sha256": "3cb42002582edb4927107c8095a2aa9a6d6916cbebb786320f4dbb57683e6e8f",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Moved with compassion",
+      "alt": "Jesus rests His hand on the shoulder of a kneeling man, and they look into each other’s eyes.",
+      "caption": "The man kneels before Jesus and asks to be made clean. Moved with compassion, the Savior reaches out and touches him.",
+      "refs": [
+        [
+          "nt/mark/1",
+          "Mark 1:40–45",
+          "40-45"
+        ]
+      ],
+      "findings": "Actual pixels independently inspected and compared with approved canonical Christ pixels already viewed in this review. Recognizable curly hair, facial proportions and beard; compassionate concentrated expression and directly reciprocal downward/upward gaze. Touch rests naturally at shoulder, distinct man kneels with plausible raised hand and weathered clothing. Mortal Christ has no resurrection wound marks. Skin changes on unnamed recipient convey condition without graphic injury. Photographic light, fabric and face detail.",
+      "conditions": [
+        "Do not identify unnamed recipient, claim precise age, or equate artistic visible skin markings with a medical diagnosis of the scriptural term. Setting, clothing and shoulder placement are interpretation; Mark records kneeling and touch.",
+        "Technical pass is not owner aesthetic approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p40-p45#p40"
+      ]
+    }
+  ]
+}

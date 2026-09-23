@@ -1,6 +1,7 @@
 """Focused draft-capable checks; these do not certify a complete release."""
 import json
 import re
+from collections import Counter
 from pathlib import Path
 from xml.etree import ElementTree as ET
 from build_jesus_discovery import sitemap
@@ -26,13 +27,38 @@ if not directory_css_valid(css):errors.append('Journey directory lost two-column
 # Negative fixtures keep removal of any part from becoming a silent pass.
 for old,new in [('grid-column:1/-1','grid-column:auto'),('repeat(2,minmax(0,1fr))','repeat(3,minmax(0,1fr))'),('grid-template-columns:1fr','grid-template-columns:repeat(2,1fr)')]:
     assert not directory_css_valid(css.replace(old,new)), 'Directory negative fixture failed: '+old
+journey=read('docs/jesus-journey/main-content.json')
+route=next(b['cards'] for b in journey['sections'][0]['blocks'] if isinstance(b,dict) and 'cards' in b)
+
+def expected_directories(page):
+    """Inventory exact destination rows, including explicitly linked owner previews."""
+    rows=[]
+    for section in page['sections']:
+        for block in section.get('blocks',[]):
+            if not isinstance(block,dict):continue
+            if 'cards' in block:rows.append(tuple(card[0] for card in block['cards']))
+            elif 'reference_art' in block:
+                key=block['reference_art'];art=registry[key]
+                rows.append(('/'+art['owner']+'#picture-'+key,))
+            elif 'reference_picture' in block:rows.append((block['reference_picture']['href'],))
+    index=next((i for i,card in enumerate(route) if card[0]==page['url']),None)
+    if index is not None and index+1<len(route):rows.append((route[index+1][0],))
+    if page.get('related'):rows.append(tuple(card[0] for card in page['related']))
+    return Counter(rows)
+
 directory_count=0
 for page in pages:
     doc=Document();doc.feed((ROOT/page['url'].lstrip('/')).read_text(encoding='utf-8'))
     nodes=list(doc.root.walk())
     grids=[n for n in nodes if n.has('jj-directory')]
-    expected=sum(isinstance(b,dict) and 'cards' in b for s in page['sections'] for b in s.get('blocks',[]))+bool(page.get('related'))
-    if len(grids)!=expected:errors.append('Journey directory inventory differs: '+page['url'])
+    expected=expected_directories(page)
+    actual=Counter(tuple(n.attrs.get('href','') for n in grid.children if n.tag=='a') for grid in grids)
+    if actual!=expected:errors.append('Journey directory destinations or row inventory differ: '+page['url'])
+    # Equal row counts must not hide a missing, duplicated, or misdirected reference.
+    if expected:
+        key=next(iter(expected));missing=expected.copy();missing.subtract([key]);missing=+missing
+        wrong=expected.copy();wrong.subtract([key]);wrong[('/incorrect-owner.html',)]+=1;wrong=+wrong
+        assert missing!=expected and wrong!=expected, 'Directory inventory negative fixture failed'
     styles=[n.attrs.get('href','') for n in nodes if n.tag=='link' and 'jesus-journey.css' in n.attrs.get('href','')]
     if grids and styles!=['/jesus-journey.css?v=20260923-chapters-2']:errors.append('Missing or stale journey directory stylesheet: '+page['url'])
     if any(not grid.children for grid in grids):errors.append('Empty journey directory: '+page['url'])

@@ -1,16 +1,16 @@
 {
-  "scope": "59 branch originals: eight per branch, two explicitly requested companion scenes, and the owner-requested intermediate Ether 3 finger revelation; technical review separate from owner approval.",
+  "scope": "62 branch originals, including three source-specific additions for image-free Creator and Bountiful chapters; technical review separate from owner approval.",
   "counts": {
-    "jesus-christ/before-bethlehem.html": 9,
+    "jesus-christ/before-bethlehem.html": 10,
     "jesus-christ/mortal-ministry.html": 9,
     "jesus-christ/miracles-and-compassion.html": 9,
     "jesus-christ/teachings-and-parables.html": 8,
     "jesus-christ/redeemer-and-risen-lord.html": 8,
-    "jesus-christ/risen-savior-in-the-book-of-mormon.html": 8,
+    "jesus-christ/risen-savior-in-the-book-of-mormon.html": 10,
     "jesus-christ/restoration-and-today.html": 8
   },
   "summary": {
-    "christ_visible": 31,
+    "christ_visible": 32,
     "unresolved_named_likeness": 22,
     "source_fetch_followups": []
   },
@@ -1293,7 +1293,8 @@
         ],
         "add_prose": "Another encounter, Mark 3:1–5, brings compassion into a synagogue dispute. Jesus asks the man to stand and stretch out his hand. The restored hand gives concrete weight to His question about doing good on the Sabbath."
       },
-      "owner_eye_contact_requirement": "Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt."
+      "owner_eye_contact_requirement": "Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt.",
+      "afterParagraph": 3
     },
     {
       "key": "mc-peters-mother-in-law",
@@ -4065,6 +4066,146 @@
         "add_prose": "Revelation1:9–18 offers another witness of the living Lord. John’s fear is met by the Savior’s reassuring touch and testimony of victory over death. That witness gives personal depth to the hope of meeting Him again."
       },
       "owner_eye_contact_requirement": "Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt."
+    },
+    {
+      "key": "bb-created-earth",
+      "owner": "jesus-christ/before-bethlehem.html",
+      "ownerURL": "/jesus-christ/before-bethlehem.html",
+      "owner_url": "/jesus-christ/before-bethlehem.html",
+      "sectionId": "creator",
+      "section_id": "creator",
+      "afterParagraph": 1,
+      "role": "body",
+      "title": "The earth is full of life",
+      "alt": "Morning sunlight reaches a green mountain valley where a river flows between trees and wildflowers.",
+      "caption": "Morning light reaches the mountains, and a river runs through the living green of the valley. The beauty of the earth invites gratitude for the Son through whom it was created.",
+      "refs": [
+        [
+          "pgp/moses/1",
+          "Moses 1:31–39",
+          "31-39"
+        ]
+      ],
+      "depicts_christ": false,
+      "christ_visible": false,
+      "named_persons": [],
+      "likeness_unresolved": false,
+      "description": "A photographic mountain river landscape accompanying the creation witness in Moses 1:31–39. Artistic illustration of the natural world, not a literal recreation of Moses’s vision or a particular day of Creation.",
+      "uniqueness_rationale": "Mountain river, trees and wildflowers distinguish this from the existing coastal fish and seabirds scene.",
+      "source_status": "Official Moses 1:31–39 fetched and read 2026-09-23.",
+      "source_verification": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p31-p39#p31",
+          "label": "Moses 1:31–39",
+          "interpretation_limits": "Illustrative natural landscape; no named mountain range or historical location asserted."
+        }
+      ],
+      "reviewed": false,
+      "owner_approved": false
+    },
+    {
+      "key": "bn-hear-the-voice",
+      "prompt": "Create one original horizontal 3:2 image with exceptional photographic realism for 3 Nephi 11:1–7, the precise moment BEFORE Jesus descends. Near a modest ancient American temple courtyard, a gathering has stopped speaking and looks steadfastly upward, listening to the third quiet voice from heaven. Show varied, distinct unnamed ancient American adults and a few children, clothed modestly in simple woven tunics and shawls. Close foreground woman with detailed natural skin and attentive eyes, older man beside her and younger adults behind; all eyes coherently looking toward a source above the frame, alive with quiet wonder rather than fear or cheering. More gathering visible in depth, temple architecture restrained and only partial, no claimed archaeological exactness. Bright natural daylight, honest skin texture, weathered stone, believable fabric, documentary live-action photo aesthetic. No Christ or divine figure yet; no visible speaker in the sky, no text, symbols, beams, halos, fantasy, caricature or painting. Do not depict the later descent or touch of wounds. No named historical participant or borrowed approved identity. Source supplies no exact participant ages or architectural design; staging is artistic interpretation. This must be a distinct listening moment, not a generic sermon or departure scene.",
+      "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-eacdeb87-99e1-40e7-a29a-081e972abc71.png",
+      "sectionId": "voice",
+      "refs": [
+        [
+          "bofm/3-ne/11",
+          "3 Nephi 11:1–7",
+          "1-7"
+        ]
+      ],
+      "title": "They opened their ears to hear",
+      "alt": "People gathered near a temple look upward and listen.",
+      "caption": "The gathered people lift their eyes toward heaven and listen. This time they understand the voice inviting them to hear the Beloved Son.",
+      "depicts_christ": false,
+      "sha256": "81ed2772a234435c87a6678b731e58bb0face46e7a33cd53c5685d2d96e35112",
+      "owner": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "ownerURL": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "owner_url": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "section_id": "voice",
+      "afterParagraph": 1,
+      "role": "body",
+      "reviewed": false,
+      "owner_approved": false,
+      "named_persons": [],
+      "likeness_unresolved": false,
+      "source_status": "Official scripture fetched and read 2026-09-23; exact scene and interpretive details specified in prompt",
+      "description": "Create one original horizontal 3:2 image with exceptional photographic realism for 3 Nephi 11:1–7, the precise moment BEFORE Jesus descends. Near a modest ancient American temple courtyard, a gathering has stopped speaking and looks steadfastly upward, listening to the third quiet voice from heaven. Show varied, distinct unnamed ancient American adults and a few children, clothed modestly in simple woven tunics and shawls. Close foreground woman with detailed natural skin and attentive eyes, older man beside her and younger adults behind; all eyes coherently looking toward a source above the frame, alive with quiet wonder rather than fear or cheering. More gathering visible in depth, temple architecture restrained and only partial, no claimed archaeological exactness. Bright natural daylight, honest skin texture, weathered stone, believable fabric, documentary live-action photo aesthetic. No Christ or divine figure yet; no visible speaker in the sky, no text, symbols, beams, halos, fantasy, caricature or painting. Do not depict the later descent or touch of wounds. No named historical participant or borrowed approved identity. Source supplies no exact participant ages or architectural design; staging is artistic interpretation. This must be a distinct listening moment, not a generic sermon or departure scene.",
+      "uniqueness_rationale": "Distinct source moment for an image-free chapter: listening before descent or explanation of previously unavailable scriptures, not duplicate of another study event."
+    },
+    {
+      "key": "bn-scriptures-explained",
+      "prompt": "Create ONE new horizontal 1536x1024 photograph-quality scripture scene of the risen Jesus Christ explaining the scriptures He has given to the gathered people, as recorded in 3 Nephi 26:1–6 after quoting Malachi (3 Nephi24–25). Use attached approved portrait ONLY for Jesus's exact recognizable face, hair and beard proportions, adapted to earnest patient teaching with warmth and concentration, no broad posed smile. Jesus seated at left at eye level with a small foreground group from the larger Nephite multitude, a middle-aged unnamed woman and an older unnamed man listening at right, meaningful mutual eye contact between Jesus and woman. His gentle open hand marks a point in His explanation. Modest white robe, subtle healed marks in visible palm AND visible wrist, no fresh wounds or blood; hidden hands need not be shown. Natural anatomy. The attentive man holds a small set of ancient metal record leaves resting on his knees, not modern Bible or paper scroll; tiny marks indistinct, no readable invented scripture. The record is an illustrative contextual detail of scripture preservation, not claim of an exact surviving artifact. Modest woven tunics and shawls, simple stone courtyard with more attentive people behind, restrained setting with no asserted exact architecture. Warm natural afternoon light, extraordinary live-action photographic realism, detailed pores, eyes and fabrics, distinct faces. Full essential faces, hands and teaching action inside frame, no halo, text, border, montage or painterly style. This is specifically the giving and explaining of previously unavailable scripture for future generations, not another generic hillside sermon; keep visible records and intimate attentive explanation central. Source gives no exact ages for unnamed people; appearances are artistic interpretation. Do not depict Mormon centuries later or invent named disciple likenesses.",
+      "referenced_image_paths": [
+        "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-57248f4f-e643-4489-a02d-956ed553e82c.png",
+      "sectionId": "scriptures",
+      "refs": [
+        [
+          "bofm/3-ne/26",
+          "3 Nephi 26:1–6",
+          "1-6"
+        ]
+      ],
+      "title": "Scriptures for generations to come",
+      "alt": "Jesus speaks with an attentive woman and a man holding metal records.",
+      "caption": "The Savior explains the scriptures to those gathered around Him. His words give them a witness to share with generations still to come.",
+      "depicts_christ": true,
+      "sha256": "fa18370d2459acb22bff05ae324d04ac2f0135f9e4004b8bbc4cb2ac5de5d21c",
+      "owner": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "ownerURL": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "owner_url": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "section_id": "scriptures",
+      "afterParagraph": 1,
+      "role": "body",
+      "reviewed": false,
+      "owner_approved": false,
+      "named_persons": [
+        "Jesus Christ"
+      ],
+      "likeness_unresolved": false,
+      "source_status": "Official scripture fetched and read 2026-09-23; exact scene and interpretive details specified in prompt",
+      "description": "Create ONE new horizontal 1536x1024 photograph-quality scripture scene of the risen Jesus Christ explaining the scriptures He has given to the gathered people, as recorded in 3 Nephi 26:1–6 after quoting Malachi (3 Nephi24–25). Use attached approved portrait ONLY for Jesus's exact recognizable face, hair and beard proportions, adapted to earnest patient teaching with warmth and concentration, no broad posed smile. Jesus seated at left at eye level with a small foreground group from the larger Nephite multitude, a middle-aged unnamed woman and an older unnamed man listening at right, meaningful mutual eye contact between Jesus and woman. His gentle open hand marks a point in His explanation. Modest white robe, subtle healed marks in visible palm AND visible wrist, no fresh wounds or blood; hidden hands need not be shown. Natural anatomy. The attentive man holds a small set of ancient metal record leaves resting on his knees, not modern Bible or paper scroll; tiny marks indistinct, no readable invented scripture. The record is an illustrative contextual detail of scripture preservation, not claim of an exact surviving artifact. Modest woven tunics and shawls, simple stone courtyard with more attentive people behind, restrained setting with no asserted exact architecture. Warm natural afternoon light, extraordinary live-action photographic realism, detailed pores, eyes and fabrics, distinct faces. Full essential faces, hands and teaching action inside frame, no halo, text, border, montage or painterly style. This is specifically the giving and explaining of previously unavailable scripture for future generations, not another generic hillside sermon; keep visible records and intimate attentive explanation central. Source gives no exact ages for unnamed people; appearances are artistic interpretation. Do not depict Mormon centuries later or invent named disciple likenesses.",
+      "uniqueness_rationale": "Distinct source moment for an image-free chapter: listening before descent or explanation of previously unavailable scriptures, not duplicate of another study event."
+    },
+    {
+      "key": "mc-leper-touch",
+      "prompt": "Create one new horizontal 1536x1024 live-action photographic scripture scene: Mark 1:40–42, Jesus moved with compassion touches a kneeling man who asks to be made clean. Reference image is ONLY the exact approved Jesus identity; preserve recognizable facial proportions, brown eyes, wavy brown hair and beard. Adapt expression to tender focused compassion, no broad smile. Jesus during mortal ministry, about early thirties, no nail scars. Jesus stands at left leaning slightly toward the kneeling unnamed adult man at right, His right hand resting gently and clearly on the man's bare shoulder beside a rough woven tunic neckline. Both look directly into each other's eyes, coherent reciprocal gaze. The man kneels in humble appeal, hopeful and weary, middle-aged interpreted appearance not claimed historical age. Subtle rough pale patches on his exposed forearm suggest affliction, no gruesome lesions, no modern diagnostic claim. Natural hands and touch, no fused fingers, no duplicate limbs. Quiet outdoor Galilean setting, sunlit stony earth and modest rough stone wall, no crowd of newly invented named apostles. Jesus off-white linen tunic and muted earth-tone mantle; man worn brown tunic. Real skin pores, individual hair, cloth fibers, believable soft daylight and lens depth, convincing natural photograph not painting/CGI/plastic. Frame both faces and essential hands fully, breathing room for responsive 3:2 body illustration. No halo, fantasy rays, text, montage, symbols, border. Scene action established by Mark; exact location, costume, appearance of unnamed man and touch location are artistic interpretation. Distinct from the later ten men and Samaritan thanksgiving scene, and from Sabbath healing of a withered hand. This picture focuses on compassionate touch in response to the kneeling request.",
+      "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-a6f4e457-a0e3-4068-b5f3-24f1963e22a0.png",
+      "sha256": "3cb42002582edb4927107c8095a2aa9a6d6916cbebb786320f4dbb57683e6e8f",
+      "referenced_image_paths": [
+        "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "owner": "jesus-christ/miracles-and-compassion.html",
+      "ownerURL": "/jesus-christ/miracles-and-compassion.html",
+      "owner_url": "/jesus-christ/miracles-and-compassion.html",
+      "sectionId": "leper",
+      "section_id": "leper",
+      "afterParagraph": 1,
+      "role": "body",
+      "title": "Moved with compassion",
+      "alt": "Jesus rests His hand on the shoulder of a kneeling man, and they look into each other’s eyes.",
+      "caption": "The man kneels before Jesus and asks to be made clean. Moved with compassion, the Savior reaches out and touches him.",
+      "refs": [
+        [
+          "nt/mark/1",
+          "Mark 1:40–45",
+          "40-45"
+        ]
+      ],
+      "depicts_christ": true,
+      "christ_visible": true,
+      "named_persons": [
+        "Jesus Christ"
+      ],
+      "likeness_unresolved": false,
+      "reviewed": false,
+      "owner_approved": false,
+      "description": "Create one new horizontal 1536x1024 live-action photographic scripture scene: Mark 1:40–42, Jesus moved with compassion touches a kneeling man who asks to be made clean. Reference image is ONLY the exact approved Jesus identity; preserve recognizable facial proportions, brown eyes, wavy brown hair and beard. Adapt expression to tender focused compassion, no broad smile. Jesus during mortal ministry, about early thirties, no nail scars. Jesus stands at left leaning slightly toward the kneeling unnamed adult man at right, His right hand resting gently and clearly on the man's bare shoulder beside a rough woven tunic neckline. Both look directly into each other's eyes, coherent reciprocal gaze. The man kneels in humble appeal, hopeful and weary, middle-aged interpreted appearance not claimed historical age. Subtle rough pale patches on his exposed forearm suggest affliction, no gruesome lesions, no modern diagnostic claim. Natural hands and touch, no fused fingers, no duplicate limbs. Quiet outdoor Galilean setting, sunlit stony earth and modest rough stone wall, no crowd of newly invented named apostles. Jesus off-white linen tunic and muted earth-tone mantle; man worn brown tunic. Real skin pores, individual hair, cloth fibers, believable soft daylight and lens depth, convincing natural photograph not painting/CGI/plastic. Frame both faces and essential hands fully, breathing room for responsive 3:2 body illustration. No halo, fantasy rays, text, montage, symbols, border. Scene action established by Mark; exact location, costume, appearance of unnamed man and touch location are artistic interpretation. Distinct from the later ten men and Samaritan thanksgiving scene, and from Sabbath healing of a withered hand. This picture focuses on compassionate touch in response to the kneeling request.",
+      "source_status": "Official Mark 1:40–45 fetched and read 2026-09-23. Jesus in mortal ministry; exact ages not specified here, adult early-thirties interpretation for Jesus and unnamed middle-aged man. Location, costume and touch location are artistic staging.",
+      "uniqueness_rationale": "Kneeling appeal and compassionate touch in Mark 1, distinct from the ten men and thanksgiving scene and Sabbath withered-hand healing."
     }
   ]
 }

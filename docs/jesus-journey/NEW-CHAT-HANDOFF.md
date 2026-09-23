@@ -1,5 +1,17 @@
 # Jesus Christ journey — new-chat handoff
 
+## Latest checkpoint: pictured chapters and clear onward study — 23 September 2026
+
+This checkpoint supersedes older303-art and incomplete chapter notes below. PR364 is already merged at a343efb9857fa94f98c0c105b2ea87252b716016. Wyatt subsequently requested pictures in every chapter, no blank preview cards, meaningful pictures about every two paragraphs, and clear chapter versus next-study navigation.
+
+The local refinement is complete and independently reviewed, on fix/birth-journey-preview. All78pages/262selectablechapters are pictured and pass the narrative-spacing gate. Actual final phone390px and desktop1366px walks traversed every chapter with no blank chapter or horizontal overflow; targeted320px/enlarged-text, tablet, no-script, picture/full-size/focus and reference-return checks pass. Four new scene originals bring the registry to307; all303 prior originals and606 derivatives retain their hashes. Accepted original/full/thumbnail verification covers921files. Preserve all originals, approved identity and archived candidates.
+
+Birth now shares the in-place chapter reader and its existing pictures are spread through the reading. Five additional exact-scene references link to their owning studies; no image is counted twice. Each Next chapter label names its destination within the current study. Continue with Jesus Christ follows the parent study order; Before Bethlehem continues to Mortal Ministry. Complete-study mode and existing bookmarks remain available.
+
+Forty Python journey tests,18navigation tests, ownership regressions,17local release gates, static content/search checks and independent semantic/pixel reviews pass. Final content approvals are bound in paragraph-rhythm-source-review-20260923.json; final-density-semantic-review-20260923.json and pictured-chapters-browser-review-20260923.json preserve evidence. Technical review is separate from owner aesthetic approval.
+
+Publication is the remaining step at this commit. Read the parent work pictured-chapters-release-20260923.json and public-pictured-chapters-verification-20260923.json for subsequent commit/PR/CI/deployment and exact public bytes. Do not infer live publication from this local checkpoint. Master and protected foundation remain unchanged. Existing old-thread automation remains PAUSED.
+
 ## Latest owner refinement: chapters and earlier pictures
 
 PR363 is merged and live at de399eebc217f9cd3917fefc7e69c565417b27a1. Its Pages deployment and main QA passed; all731 checked public files matched the reviewed release. The parent work folder's post-release receipt records this evidence.
