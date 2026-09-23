@@ -36,6 +36,8 @@ function setup() {
   const section = d.querySelector('[data-watch-shorts]');
   const links = [...section.querySelectorAll('.watch-short-preview[data-short-play]')];
   const click = (i, extras={}) => {
+    const disclosure = links[i].closest('[data-shorts-more]');
+    if (disclosure) disclosure.open = true;
     const event = new w.MouseEvent('click', {bubbles:true, cancelable:true, button:0, ...extras});
     links[i].dispatchEvent(event); return event;
   };
@@ -46,6 +48,31 @@ function setup() {
 }
 (async () => {
   let h = setup();
+  const disclosure = h.section.querySelector('[data-shorts-more]');
+  assert.equal(disclosure.open,false,'Three older Shorts start collapsed');
+  assert.equal(disclosure.querySelectorAll('.watch-short').length,3);
+  assert.equal(h.links[0].closest('[data-shorts-more]'),null,'Newest remains outside disclosure');
+  disclosure.open=true;
+  disclosure.dispatchEvent(new h.w.Event('toggle'));
+  assert.equal(disclosure.querySelector('summary').textContent,'Hide 3 Shorts');
+  assert.equal(h.players.length,0,'Expanding never loads or autoplays video');
+  h.click(1); await h.api(); h.players[0].ready();
+  disclosure.querySelector('[data-shorts-collapse]').click();
+  assert.equal(disclosure.open,false);
+  assert.equal(h.players[0].destroyed,true,'Collapsing stops hidden playback');
+  assert.equal(h.d.activeElement,disclosure.querySelector('summary'));
+  assert.equal(disclosure.querySelector('summary').textContent,'Show 3 more Shorts');
+  disclosure.open=true; disclosure.dispatchEvent(new h.w.Event('toggle'));
+  assert.equal(h.players.length,1,'Reopening does not recreate or resume a player');
+  h.close(); h=setup();
+  h.click(1);
+  const pendingDisclosure=h.section.querySelector('[data-shorts-more]');
+  pendingDisclosure.open=false;
+  pendingDisclosure.dispatchEvent(new h.w.Event('toggle'));
+  await h.api();
+  assert.equal(h.players.length,0,'Collapse cancels an older Short while API is pending');
+  assert.equal(h.timers.size,0,'Collapse clears pending timeout');
+  h.close(); h=setup();
   assert.equal(h.section.querySelectorAll('[data-short-play]').length,8);
   assert.equal(h.section.querySelectorAll('iframe').length,0);
   assert.equal(h.d.querySelectorAll('script[src="https://www.youtube.com/iframe_api"]').length,0,'No API or player on initial load');
