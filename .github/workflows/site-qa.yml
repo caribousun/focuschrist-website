@@ -34,6 +34,14 @@ jobs:
           node tools/external_links_runtime_qa.js
           node tools/mobile_opening_invitation_runtime_qa.js
 
+      - name: Verify complete Jesus Christ journey
+        run: |
+          python -m unittest discover -s tools -p 'test_jesus*.py'
+          python tools/jesus_journey_qa.py
+          python tools/build_jesus_journey.py --strict --check
+          python tools/build_jesus_parent.py --strict --check
+          python tools/jesus_discovery_qa.py
+
       - name: Verify the Atonement centerpiece contract
         run: python tools/atonement_qa.py
 
