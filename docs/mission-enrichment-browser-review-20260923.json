@@ -1,0 +1,91 @@
+{
+  "date": "2026-09-23",
+  "scope": "Mission enrichment local browser review",
+  "status": "passed",
+  "viewports": {
+    "normal": [
+      320,
+      390,
+      600,
+      768,
+      1024,
+      1366
+    ],
+    "text200": [
+      320,
+      768,
+      1366
+    ]
+  },
+  "layout": {
+    "horizontalOverflow": false,
+    "clippedHeadingsParagraphsActions": false,
+    "newStudyImages": 4,
+    "newReflections": 4,
+    "newImageRatio": 1.5,
+    "navigationColumns": "1 at narrow phones, 2 at wider phones, 3 at tablet and desktop",
+    "panoramaCorrection": {
+      "purposeRatio": "2173:724",
+      "worldRatio": "3:1",
+      "worldPhoneWidth": 341.6000061035156,
+      "worldPhoneHeight": 113.8625030517578,
+      "objectFit": "contain",
+      "notes": "Both existing pictures retain full frames; exact image pixels and figure markup preserved."
+    }
+  },
+  "pictureInteractions": [
+    {
+      "key": "seventy-return",
+      "phoneStudyLoaded": true,
+      "fullSizeOpened": true,
+      "continueReturnedFocusToTrigger": true
+    },
+    {
+      "key": "samaritans-stay",
+      "phoneStudyLoaded": true,
+      "fullSizeOpened": true,
+      "continueReturnedFocusToTrigger": true
+    },
+    {
+      "key": "beside-his-missionaries",
+      "phoneStudyLoaded": true,
+      "fullSizeOpened": true,
+      "continueReturnedFocusToTrigger": true
+    },
+    {
+      "key": "peace-to-this-house",
+      "phoneStudyLoaded": true,
+      "fullSizeOpened": true,
+      "continueReturnedFocusToTrigger": true
+    }
+  ],
+  "scriptureReader": {
+    "passages": [
+      "Luke 10:17–20",
+      "John 4:39–42",
+      "Doctrine and Covenants 84:88",
+      "Luke 10:5–7"
+    ],
+    "exactSelectedVersesLoaded": true,
+    "officialFallbackPresent": true,
+    "nestedCloseReturnsToStudy": true
+  },
+  "navigation": {
+    "allSixControlsClicked": true,
+    "allExpectedFragmentsExist": true,
+    "contextualAskOpenedWithTopicAndReturn": true,
+    "noQuestionSubmitted": true
+  },
+  "desktopModernStudy": true,
+  "text200ModernStudy": {
+    "viewport": 320,
+    "rootFont": 32,
+    "dialogWidth": 300,
+    "dialogScrollWidth": 283,
+    "actionLabelsFit": true
+  },
+  "limitations": [
+    "Local review does not establish deployment; public verification follows release.",
+    "Technical visual review is not owner approval of newly generated artwork."
+  ]
+}

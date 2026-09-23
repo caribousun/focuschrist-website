@@ -107,13 +107,13 @@ def main() -> int:
         missionary,
         re.S,
     )
-    if len(mission_image_triggers) != 7:
-        errors.append(f"missionary.html: expected 7 image detail triggers, found {len(mission_image_triggers)}")
-    if "missionary.css?v=20260923-purpose-flow-1" not in missionary:
+    if len(mission_image_triggers) != 11:
+        errors.append(f"missionary.html: expected 11 image detail triggers, found {len(mission_image_triggers)}")
+    if "missionary.css?v=20260923-enrichment-finish-1" not in missionary:
         errors.append("missionary.html: centered close-control stylesheet version missing")
     mission_records = re.findall(r'data-missionary-detail-content="([^"]+)"', missionary)
-    if len(mission_records) != 9 or len(set(mission_records)) != 9:
-        errors.append(f"missionary.html: expected 9 unique detail records, found {len(mission_records)}")
+    if len(mission_records) != 13 or len(set(mission_records)) != 13:
+        errors.append(f"missionary.html: expected 13 unique detail records, found {len(mission_records)}")
 
     art = (ROOT / "art.html").read_text(encoding="utf-8")
     study_links = {
@@ -282,8 +282,8 @@ def main() -> int:
             target = local_target(ROOT / relative, asset)
             if not target.is_relative_to(ROOT.resolve()) or not target.exists() or target.stat().st_size == 0:
                 errors.append(f"{relative}: missing full-image source: {asset}")
-    if len(full_assets) != 71:
-        errors.append(f"expected 71 artwork detail full-image sources, found {len(full_assets)}")
+    if len(full_assets) != 75:
+        errors.append(f"expected 75 artwork detail full-image sources, found {len(full_assets)}")
 
     detail_paragraphs: list[str] = []
     for relative in (*PAGES, "missionary.html"):
@@ -373,7 +373,7 @@ def main() -> int:
         return 1
 
     print("Artwork detail QA: PASS")
-    print("62 non-Mission artwork triggers and 7 Mission artwork triggers verified")
+    print("62 non-Mission artwork triggers and 11 Mission artwork triggers verified")
     print("Same-page full-image viewing, sacred detail copy, and intentional interaction scope verified")
     return 0
 

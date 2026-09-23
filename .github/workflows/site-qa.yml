@@ -54,6 +54,8 @@ jobs:
         run: python tools/home_presentation_qa.py
       - name: Verify Watch Shorts cards and preserved Church collection
         run: python tools/watch_shorts_qa.py
+      - name: Verify Mission enrichment artwork preservation and source paths
+        run: python tools/mission_enrichment_qa.py
 
       - name: Verify published-content search index and behavior
         run: |

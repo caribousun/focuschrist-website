@@ -49,5 +49,14 @@
     },
     "intro_ask": "Explicit form shortcut preserved"
   },
-  "publication": "Pending; see parent work release receipt"
+  "publication": {
+    "status": "Verified live PR369",
+    "merge": "4b4b15069feb83c6ae9ea659bde2e3b94278f26a",
+    "public_files_exact": 8,
+    "all_four_public_players_played": true,
+    "one_player_switching": true,
+    "close_restores_four_portraits_and_trigger_focus": true,
+    "all_nine_home_picture_destinations_hash_empty_scroll_y_zero": true,
+    "local_embed_note": "Earlier local issue is superseded by actual public playback"
+  }
 }

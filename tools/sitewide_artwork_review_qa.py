@@ -9,6 +9,8 @@ IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
 BIBLE_STYLE = 'bible-together.css'
 BIBLE_STYLE_SHA256 = '128b2a54bf1a285497ea11d6c8e9040c55baa996ec75aa376b29463f854a9121'
 BIBLE_STYLE_OWNER = 'answers/bible-and-book-of-mormon-together.html'
+MISSION_ENRICHMENT_STYLE = 'missionary-enrichment.css'
+MISSION_ENRICHMENT_STYLE_SHA256 = 'e40315cfc4994ba862cd7bf3c1d4f0fa77db5bd1ba59d8ca0eedfd8cdd8b875c'
 WATCH_SHORTS_STYLE = 'watch-shorts.css'
 WATCH_SHORTS_STYLE_SHA256 = 'b1e9532be08a53af11b82cd49bad11b732c4b91ac678c151a02f437a0bfb43d4'
 HOME_STYLE = 'home-presentation.css'
@@ -16,6 +18,12 @@ HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d6
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = '68f2abf3d0fa65b2e87c6a8bd3798dd8dfb1a1e522e7f3d5b14dc810d1f90978'
+
+def reviewed_mission_enrichment_style(data):
+    return hashlib.sha256(data).hexdigest() == MISSION_ENRICHMENT_STYLE_SHA256
+
+def mission_enrichment_style_reference_allowed(relative, text):
+    return relative == "missionary.html" or MISSION_ENRICHMENT_STYLE not in text
 
 def reviewed_watch_shorts_style(data):
     return hashlib.sha256(data).hexdigest() == WATCH_SHORTS_STYLE_SHA256
@@ -41,7 +49,7 @@ def reviewed_journey_style(data):
 def journey_style_reference_allowed(relative, text, owners):
     return relative in owners or JOURNEY_STYLE not in text
 
-BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '26991016b8be1b6a3dc8854d41e07a1b6d12cdbefaf7ac260ba4b1736ec74b1a'), '.fc-missionary-page main': ('missionary.css', '3cf14d5cdf5a124430d13707e18377195c84be91707ab01b484228c5a04a1691')}
+BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '26991016b8be1b6a3dc8854d41e07a1b6d12cdbefaf7ac260ba4b1736ec74b1a'), '.fc-missionary-page main': ('missionary.css', '1fc685047557e7d077b8c25c833731dca799335add20d3b139cf626f72357e21')}
 
 def reviewed_boundary_wrap(selector, body, data):
     entry = BOUNDARY_WRAP_STYLES.get(selector.strip())
@@ -82,6 +90,13 @@ def main():
         duplicate=[good[0],dict(good[1],source_sha256='1'*64)]
         assert any('duplicate source_sha256' in e for e in unique_reviewed(duplicate,set()))
         assert any('rejected sha256' in e for e in unique_reviewed(good,{'2'*64}))
+        mission_css = (ROOT/MISSION_ENRICHMENT_STYLE).read_bytes()
+        assert reviewed_mission_enrichment_style(mission_css)
+        assert not reviewed_mission_enrichment_style(mission_css + b'\n.fc-visual-hero{height:9px}')
+        assert mission_enrichment_style_reference_allowed('missionary.html', MISSION_ENRICHMENT_STYLE)
+        assert not mission_enrichment_style_reference_allowed('index.html', MISSION_ENRICHMENT_STYLE)
+        assert not mission_enrichment_style_reference_allowed('shared.css', '@import "' + MISSION_ENRICHMENT_STYLE + '";')
+        assert not mission_enrichment_style_reference_allowed('shared.js', MISSION_ENRICHMENT_STYLE)
         shorts_css = (ROOT/WATCH_SHORTS_STYLE).read_bytes()
         assert reviewed_watch_shorts_style(shorts_css)
         assert not reviewed_watch_shorts_style(shorts_css + b'\n.fc-visual-hero{height:9px}')
@@ -256,6 +271,8 @@ def main():
         if relative != 'missionary.html':
             check('missionary.css' not in path.read_text(encoding='utf8'),
                   'Mission stylesheet referenced outside its owning page: '+relative)
+        check(mission_enrichment_style_reference_allowed(relative, path.read_text(encoding='utf8')),
+              'Mission enrichment stylesheet referenced outside its single owning page: '+relative)
         check(watch_shorts_style_reference_allowed(relative, path.read_text(encoding='utf8')),
               'Watch Shorts stylesheet referenced outside its single owning page: '+relative)
         check(home_style_reference_allowed(relative, path.read_text(encoding='utf8')),
@@ -280,7 +297,8 @@ def main():
     check(sha(ROOT/'missionary.css') == BOUNDARY_WRAP_STYLES['.fc-missionary-page main'][1],
           'Mission purpose stylesheet differs from exact reviewed bytes')
     check(reviewed_watch_shorts_style((ROOT/WATCH_SHORTS_STYLE).read_bytes()), 'Watch Shorts stylesheet differs from exact reviewed bytes')
-    excluded_styles={WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
+    check(reviewed_mission_enrichment_style((ROOT/MISSION_ENRICHMENT_STYLE).read_bytes()), 'Mission enrichment stylesheet differs from exact reviewed bytes')
+    excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
     additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
     # Include newly created CSS before staging, too.

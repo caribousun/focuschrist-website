@@ -2179,9 +2179,9 @@
     {
       "path": "missionary.html",
       "status": "verified",
-      "published_text_sha256": "5f073316a8d23bb972866b1a829b3266647d8ff14c876d91b83118cc58b849a0",
-      "reviewed_on": "2026-09-14",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated. Search navigation label added; prior substantive source review preserved.; Mission replacement: caption describes visible teaching, Matthew10 mortal calling distinguished from Matthew28 risen commission, no invented exact historical appearance. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained.",
+      "published_text_sha256": "c8809701c760d2f73df20a410b2ed72c1018b3e3ac83c823f7e3fe59ee3a9776",
+      "reviewed_on": "2026-09-23",
+      "review_standard": "Independent semantic review of four Mission studies, visible captions, alt text, hidden picture studies, source links, four reflections and two history paragraphs. Official Luke 10:5-7,17-20; John 4:39-42; Doctrine and Covenants 84:88; Matthew 28:20; Early Missionaries and England Overview checked. Modern scene expressly imagined devotional interpretation, not a recorded appearance. Previous complete substantive review retained in prior_review; existing prose, hero, seven artwork figures and nine detail records preserved. See docs/mission-enrichment-independent-review-20260923.json.",
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/callings/missionary?lang=eng",
         "https://www.churchofjesuschrist.org/comeuntochrist/belong/share-goodness/what-to-expect-from-a-lesson-with-missionaries",
@@ -2205,8 +2205,44 @@
         "https://www.churchofjesuschrist.org/callings/missionary/young-teaching-missionaries?lang=eng",
         "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023?lang=eng",
         "https://www.churchofjesuschrist.org/media/video/2019-04-1040-dieter-f-uchtdorf?lang=eng",
-        "https://www.churchofjesuschrist.org/media/video/2019-07-0010-missionaries-of-jesus-christ?lang=eng"
-      ]
+        "https://www.churchofjesuschrist.org/media/video/2019-07-0010-missionaries-of-jesus-christ?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng",
+        "https://www.churchofjesuschrist.org/study/history/global-histories/england/xe-overview?lang=eng"
+      ],
+      "prior_review": {
+        "path": "missionary.html",
+        "status": "verified",
+        "published_text_sha256": "5f073316a8d23bb972866b1a829b3266647d8ff14c876d91b83118cc58b849a0",
+        "reviewed_on": "2026-09-14",
+        "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. Sitewide warm-media-language review: visible captions, expanded artwork details, resource descriptions, media introductions and alternative text checked for concrete, image-grounded language without invented facts or placeholder disclaimers. Links and responsive media interactions reverified; independent review corrections incorporated. Search navigation label added; prior substantive source review preserved.; Mission replacement: caption describes visible teaching, Matthew10 mortal calling distinguished from Matthew28 risen commission, no invented exact historical appearance. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained.",
+        "authoritative_sources": [
+          "https://www.churchofjesuschrist.org/callings/missionary?lang=eng",
+          "https://www.churchofjesuschrist.org/comeuntochrist/belong/share-goodness/what-to-expect-from-a-lesson-with-missionaries",
+          "https://www.churchofjesuschrist.org/comeuntochrist/love-share-invite",
+          "https://www.churchofjesuschrist.org/study/history/topics/early-missionaries?lang=eng",
+          "https://www.churchofjesuschrist.org/study/history/topics/globalization?lang=eng",
+          "https://www.churchofjesuschrist.org/study/history/topics/growth-of-missionary-work?lang=eng",
+          "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/03-chapter-1?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/18?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/4?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/16?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng",
+          "https://www.churchofjesuschrist.org/?lang=eng",
+          "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+          "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+          "https://www.churchofjesuschrist.org/temples?lang=eng",
+          "https://www.churchofjesuschrist.org/welcome/our-history?lang=eng",
+          "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all",
+          "https://www.churchofjesuschrist.org/comeuntochrist",
+          "https://www.churchofjesuschrist.org/callings/missionary/young-teaching-missionaries?lang=eng",
+          "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2019-04-1040-dieter-f-uchtdorf?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2019-07-0010-missionaries-of-jesus-christ?lang=eng"
+        ]
+      }
     },
     {
       "path": "pioneers.html",

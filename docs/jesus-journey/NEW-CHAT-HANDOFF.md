@@ -1,5 +1,17 @@
 # Jesus Christ journey — new-chat handoff
 
+## Mission release ready; all-page review authorized next
+
+Mission now has eleven owned originals, six depicting Christ, four new illustrated studies, four reflections, six clearly labeled section links, exact scripture readers and contextual Ask. All seven existing originals and the approved hero are preserved. Independent artwork, source, content and CSS reviews pass; 26 current verification commands pass. Browser review covers six normal widths, three enlarged-text widths, all four new picture/full-size/return paths, all four scripture readers and all six navigation controls. The existing worldwide panorama now retains its full 3:1 frame on phones. Publication is the remaining Mission step.
+
+Wyatt explicitly requested a subsequent review of every published page: correct formatting, enrich where needed, verify connections and accuracy. This is active authorized scope after Mission. Parent work/sitewide-enrichment-20260923 contains the 118-route inventory and plan. Do not claim that the existing five-picture gates establish compliance with the ten-original mandate. Preserve approved identities, original artwork ownership, exact sources and page-specific exceptions. No new automation or bulk revision of previously deferred risen-Christ artwork is authorized.
+
+## Watch and Home are live; Mission enrichment is active
+
+PR369 merged at `4b4b15069feb83c6ae9ea659bde2e3b94278f26a`; reviewed head `3eb7806169639fafcd9d42fcb24557aff0e29c6a`. PR QA35921546601, Pages35921952680 and main QA35921952671 passed. Eight public files match. All four Shorts play on the public site; switching maintains one player, closing restores the cover and focus. All nine Home picture links open their intended pages at the top. The local player limitation below is superseded by actual public playback. The YouTube publishing protocol includes maintaining the latest four after each approved public upload. Current State and START HERE are updated with guarded readback.
+
+NOW ACTIVE: further Mission enrichment, including Wyatt's newly authorized modern Christ/missionary or angel imagery. Four new scenes are independently reviewed and saved under parent work/mission-enrichment: returning Seventy (revised), Samaritans asking Him to stay, Peace to this house, and Christ beside modern sister missionaries (sleeve-revised). Preserve all original/rejected candidates. Target eleven owned originals, six depicting Christ, six study stops and four reflections. Additions still require integration, browser review and publication. Existing seven images and approved hero remain protected.
+
 ## ACTIVE: Watch Shorts and Home navigation, then Mission enrichment
 
 Watch now has a reviewed selection of the latest four public @theRisen636 Shorts, native portrait previews, click-to-play controls and a full-collection link. All nine Home preview images and primary card destinations open their owning pages at the top; the Ask card also bypasses the shared contextual form rewrite. Local responsive, enlarged-text, source and runtime checks pass. Actual local embedded playback is unconfirmed; timeout recovery and direct YouTube alternatives work. Publication remains; consult parent work watch-shorts-release-20260923.json. The YouTube publishing workflow must include maintaining this reviewed selection; no recurring sync is claimed.
