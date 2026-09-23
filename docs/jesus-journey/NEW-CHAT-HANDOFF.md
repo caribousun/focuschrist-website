@@ -1,5 +1,13 @@
 # Jesus Christ journey — new-chat handoff
 
+## Latest owner refinement: chapters and earlier pictures
+
+PR363 is merged and live at de399eebc217f9cd3917fefc7e69c565417b27a1. Its Pages deployment and main QA passed; all731 checked public files matched the reviewed release. The parent work folder's post-release receipt records this evidence.
+
+Wyatt then requested consistent top controls and less delay before pictures. The chapter refinement uses a compact Choose a chapter control, one chapter at a time, Previous/Next and Read the whole study. Cross-page cards say Open study. Thirteen opening-directory previews reference their exact owning pages. Scene-specific introductions remain before seven companion pictures where needed for meaning. All303 originals, figure order, complete prose and source links remain intact.
+
+Independent source/semantic reviews and the new13-case navigation regression pass. Actual browser chapter selection, heading focus, whole-study visibility and horizontal containment passed every77page on390px phones. Desktop template representatives,320px/200percent controls,768px preview rows, nested viewer Back/focus and actual script-free image fallback also passed. See chapter-navigation-browser-review-20260923.json and the independent review receipts. The current branch is refine/jesus-journey-chapter-flow. Publication of this refinement must be read from the parent work chapter-refinement-release-20260923.json receipt; do not infer its status from this commit.
+
 ## Current checkpoint: complete reviewed release candidate
 
 This checkpoint supersedes the incomplete recovery below. The current owner task explicitly resumed and completed the existing journey. First load the live Master, then read this checkpoint and `../post-release-receipt-20260923.json` in the repository's parent work folder if present; that receipt and current shared Focus records hold subsequent PR/deployment evidence.

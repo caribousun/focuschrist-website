@@ -19,6 +19,8 @@ marker='<section class="fc-deep-study fc-foundation-route"'
 pos=text.index(marker)
 text=text[:pos]+'<!-- JESUS JOURNEY BEGIN --><div class="jj-main">'+body+'</div><!-- JESUS JOURNEY END -->'+text[pos:]
 if 'jesus-journey.css' not in text:text=text.replace('</head>','<link rel="stylesheet" href="../jesus-journey.css?v=20260923-1">\n</head>')
+text=re.sub(r'jesus-journey.css\?v=[^"\s]+','jesus-journey.css?v=20260923-chapters-2',text)
+if 'src="../jesus-journey.js' not in text:text=text.replace('</body>','<script src="../jesus-journey.js?v=20260923-chapters-1" defer></script></body>')
 text=re.sub(r'<title>.*?</title>','<title>Jesus Christ: Come to Know the Living Savior | focusChrist</title>',text,count=1)
 for attribute,name,value in [('name','robots','index,follow,max-image-preview:large' if args.strict else 'noindex,nofollow'),('name','description',page['description']),('property','og:title',page['title']),('property','og:description',page['description']),('name','twitter:title',page['title']),('name','twitter:description',page['description'])]:
     tag=f'<meta {attribute}="{name}" content="{E(value)}">'

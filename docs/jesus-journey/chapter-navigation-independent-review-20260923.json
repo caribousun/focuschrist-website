@@ -1,0 +1,147 @@
+{
+  "status": "pass: independent source, DOM, preservation and scoped stylesheet guard review",
+  "scope": "Owner-directed chapter-in-place navigation and earlier artwork; no image replacement or prose rewriting",
+  "files": {
+    "jesus-journey.js": "06117dfa150f5e593470fcf4db947001f1a28cb9c63fddcfe2d82caa9a263bca",
+    "jesus-journey.css": "ae9286cdecb53b2a55da00316eb3e0ddabbfea506c446995541d0aecd3418405",
+    "tools/build_jesus_journey.py": "ceda34b49fb6def96bc50f3741b16934be4d74b119cac4b58c20fa7bfefd38e4",
+    "tools/build_jesus_parent.py": "90e46e8a75cef2efebe621e913d2167df986f60df603985c30d6b4be5eb0780b",
+    "tools/sitewide_artwork_review_qa.py": "52be8059109bfe748084691be13661e1925a9bcfafbd2ca5ed2df7d4f42c48bf"
+  },
+  "content": {
+    "pages": 77,
+    "failures": [],
+    "previews": [
+      {
+        "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "destination": "/jesus-christ/before-bethlehem.html",
+        "art": "bb-birds-over-waters"
+      },
+      {
+        "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "destination": "/jesus-christ/mortal-ministry.html",
+        "art": "mm-john-questions"
+      },
+      {
+        "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "destination": "/jesus-christ/miracles-and-compassion.html",
+        "art": "mc-withered-hand"
+      },
+      {
+        "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "destination": "/jesus-christ/teachings-and-parables.html",
+        "art": "tp-lamp-salt"
+      },
+      {
+        "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "destination": "/jesus-christ/redeemer-and-risen-lord.html",
+        "art": "rr-bethany-anointing"
+      },
+      {
+        "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "destination": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "art": "bn-households-return"
+      },
+      {
+        "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "destination": "/jesus-christ/restoration-and-today.html",
+        "art": "rt-vision-1832"
+      },
+      {
+        "page": "jesus-christ/teachings-and-parables.html",
+        "destination": "/jesus-christ/parables/mercy.html",
+        "art": "collection-mercy-01"
+      },
+      {
+        "page": "jesus-christ/teachings-and-parables.html",
+        "destination": "/jesus-christ/parables/neighbor.html",
+        "art": "collection-neighbor-01"
+      },
+      {
+        "page": "jesus-christ/teachings-and-parables.html",
+        "destination": "/jesus-christ/parables/hearing.html",
+        "art": "collection-hearing-01"
+      },
+      {
+        "page": "jesus-christ/teachings-and-parables.html",
+        "destination": "/jesus-christ/parables/kingdom.html",
+        "art": "collection-kingdom-01"
+      },
+      {
+        "page": "jesus-christ/teachings-and-parables.html",
+        "destination": "/jesus-christ/parables/stewardship.html",
+        "art": "collection-stewardship-01"
+      },
+      {
+        "page": "jesus-christ/teachings-and-parables.html",
+        "destination": "/jesus-christ/parables/watchfulness.html",
+        "art": "collection-watchfulness-01"
+      }
+    ],
+    "owned_art_count": 303,
+    "changed_image_files": [],
+    "status": "pass"
+  },
+  "runtime": {
+    "status": "pass",
+    "pages": 77,
+    "checks": 2111,
+    "failures": [],
+    "limitations": "DOM source execution; not a rendered browser or assistive technology test."
+  },
+  "reviewed_corrections": [
+    "Empty-hash Back restores first chapter",
+    "Focus recovery when a chapter becomes hidden",
+    "CSS current-step indicator matches ARIA",
+    "Begin study remains available without JavaScript",
+    "Modified clicks do not change originating chapter",
+    "Deferred hash scroll uses previously resolved target",
+    "History traversal closes all three owned dialogs; final close focuses current chapter heading after shared cleanup"
+  ],
+  "source_assessment": [
+    "All303 owning artwork figure trees unchanged and image files unmodified",
+    "All13 reference thumbnails live on other pages and link directly to their exact owning page",
+    "Every prior visible word and source link retained; only action label changes to Open study",
+    "First immediate artwork moves before one opening paragraph; bn-households-return source-specific chronology exception retained",
+    "Native buttons/details and working fragment anchors provide progressive enhancement without incomplete tab semantics",
+    "Sources, onward navigation, parent legacy studies remain accessible outside controlled chapter list",
+    "Body opening offsets scoped only to journey descendants; chapter and preview rules scoped to journey selectors"
+  ],
+  "remaining": [
+    "Rendered CUA checks, increased text, full dialog journey, deployment and owner acceptance remain separate evidence; not certified by this source/DOM review."
+  ],
+  "dialog": {
+    "status": "pass",
+    "checks": 4,
+    "scenario": "History change closes all3 owned dialogs and heading focus follows shared cleanup",
+    "limitation": "Queued close behavior modeled; live CUA still required"
+  },
+  "stylesheet_guard": {
+    "status": "pass",
+    "reviewed_css_sha256": "ae9286cdecb53b2a55da00316eb3e0ddabbfea506c446995541d0aecd3418405",
+    "method": "Actual repository guard constant matches independently reviewed CSS bytes. No module override used.",
+    "runs": [
+      {
+        "label": "selftest",
+        "status": 0,
+        "output": "PASS regression fixtures: duplicate/rejected images, modified Bible/journey CSS and out-of-scope stylesheet references are rejected\n"
+      },
+      {
+        "label": "fullgate actual repository constant",
+        "status": 0,
+        "output": "{\n  \"canonical_pages\": 118,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": []\n}\n"
+      },
+      {
+        "label": "actual untracked malicious CSS",
+        "status": 1,
+        "output": "{\n  \"canonical_pages\": 118,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": [\n    \"Added hero CSS changes frame geometry\"\n  ]\n}\n"
+      },
+      {
+        "label": "clean after fixture removal",
+        "status": 0,
+        "output": "{\n  \"canonical_pages\": 118,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": []\n}\n"
+      }
+    ],
+    "fixture_removed": true
+  }
+}

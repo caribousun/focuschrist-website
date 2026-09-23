@@ -1,0 +1,34 @@
+{
+  "status": "revise",
+  "scope": "Independent semantic/context comparison of 77 chapter-navigation rendered pages against HEAD",
+  "baseline_commit": "de399eebc217f9cd3917fefc7e69c565417b27a1",
+  "reviewed_on": "2026-09-23",
+  "verified": [
+    "All77 normalized visible text multisets unchanged except intended Continue this study to Open study labels and13 existing-image preview alt texts.",
+    "All77 complete data-journey-art figure markup and figure order exactly preserved.",
+    "All13 card-preview sources belong to linked destination owners; references do not add original ownership.",
+    "No artwork source/registry edits in this diff.",
+    "Original block data unchanged; moved blocks are render-only."
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "keys": [
+        "bb-abram-stars",
+        "mc-withered-hand",
+        "mc-official-servants",
+        "tp-withered-fig-tree",
+        "tp-writing-ground",
+        "bn-man-raised"
+      ],
+      "issue": "Generic first-image swap moves a different companion event directly beneath a chapter heading before the paragraph that establishes that chapter context. Strongest examples are withered fig tree under Listening within a busy home, and writing on ground under A coin and a deeper allegiance.",
+      "required": "Exclude these six from automatic opening swap (preserve existing intro before companion scene), or deliberately select same-event opening artwork. Keep bn-households-return existing exception."
+    }
+  ],
+  "published_hash_approval": false,
+  "limitations": [
+    "Browser interaction is reviewed by the main agent.",
+    "No new external source retrieval needed for unchanged reviewed prose.",
+    "This review does not alter content-audit or source/build files."
+  ]
+}

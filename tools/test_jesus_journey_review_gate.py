@@ -72,7 +72,7 @@ class EncodingTests(unittest.TestCase):
             page={'url':'/jesus-christ/test.html','title':'Test','intro':'Test','description':'Test','sections':[{'id':'study','title':'Study','refs':[ref],'blocks':[{'art':'scene'},{'cards':[['/answers.html','Answers','Continue']]}]}]}
             with patch.object(builder,'ROOT',root):output=builder.render(page,{'scene':art},False)
         self.assertIn('Begin the study \u2193',output)
-        self.assertIn('Continue this study \u2192',output)
+        self.assertIn('Open study \u2192',output)
         self.assertIn('</a> \u00b7 <a',output)
         for corrupt in ('\u00c2\u00b7','\u00e2\u2020','\ufffd'):self.assertNotIn(corrupt,output)
 

@@ -10,7 +10,7 @@ BIBLE_STYLE = 'bible-together.css'
 BIBLE_STYLE_SHA256 = '128b2a54bf1a285497ea11d6c8e9040c55baa996ec75aa376b29463f854a9121'
 BIBLE_STYLE_OWNER = 'answers/bible-and-book-of-mormon-together.html'
 JOURNEY_STYLE = 'jesus-journey.css'
-JOURNEY_STYLE_SHA256 = 'a800f26b24fa1c8e070b9c817cf21696b917b1147850673545523e17bce20148'
+JOURNEY_STYLE_SHA256 = 'ae9286cdecb53b2a55da00316eb3e0ddabbfea506c446995541d0aecd3418405'
 
 def reviewed_bible_style(data):
     return hashlib.sha256(data).hexdigest() == BIBLE_STYLE_SHA256
