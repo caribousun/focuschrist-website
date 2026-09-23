@@ -44,6 +44,7 @@ jobs:
         run: |
           node tools/live_ai_capacity_contract.test.js
           node groq-proxy/source-policy.test.js
+          node groq-proxy/self-help-support.test.js
           node groq-proxy/conversation-context.test.js
           node groq-proxy/research-escalation.test.js
           node groq-proxy/scripture-evidence.test.js

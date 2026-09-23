@@ -1,4 +1,5 @@
 import { fingerprintReviewedParagraphs, verifyReviewedReading, REVIEWED_SOURCE_EXTRACTION_VERSION } from './reviewed-readings.js';
+import { SELF_HELP_SUPPORT_POLICY } from './self-help-support.js';
 import { needsMissingSubjectClarification } from './missing-subject.js';
 import { qualifyingBodyPositions } from './source-caveat.js';
 import { paragraphRetrievalTerms } from './paragraph-intent.js';
@@ -123,9 +124,43 @@ function normalizeQuestionSafetyText(value) {
     .trim();
 }
 
+// This pure classifier is mirrored at the client and gateway; parity fixtures cover both.
+function nonExplicitSupportIntent(normalized) {
+  const sexualTopic = /\b(?:porn|pornography|sexual|sex|nude|nudes|masturbation|masturbating|compulsive habits?|explicit content)\b/.test(normalized);
+  const harmContext = /\b(?:groom|grooming)(?:\s+(?:a|the))?\s+(?:child|children|minor|minors)\b/.test(normalized)
+    || /\bmanipulat(?:e|ing)(?:\s+\w+){0,4}\s+(?:child|children|minor|minors)\b/.test(normalized)
+    || /\bsexually\s+(?:coerce|coercing|force|forcing|exploit|exploiting|manipulate|manipulating)\b/.test(normalized);
+  const preventHarm = harmContext && /\b(?:stop|avoid|prevent|quit)(?:\s+\w+){0,5}\s+(?:groom|grooming|sexually coercing|sexually coerce|sexually forcing|sexually exploiting|manipulating)\b/.test(normalized);
+  const preventionText = normalized.replace(/\b(?:stop|avoid|prevent|quit)(?:\s+(?!but\b|and\b)\w+){0,5}\s+(?:groom(?:ing)?(?:\s+(?:a|the))?\s+(?:child|children|minor|minors)|sexually (?:coerce|coercing|force|forcing|exploit|exploiting)|manipulating(?:\s+\w+){0,3}\s+(?:child|children|minor|minors))\b/g, '');
+  const harmfulRemainder = /\b(?:groom|grooming)(?:\s+(?:a|the))?\s+(?:child|children|minor|minors)\b/.test(preventionText)
+    || /\bmanipulat(?:e|ing)(?:\s+\w+){0,4}\s+(?:child|children|minor|minors)\b/.test(preventionText)
+    || /\bsexually\s+(?:coerce|coercing|force|forcing|exploit|exploiting|manipulate|manipulating)\b/.test(preventionText);
+  const negatedPrevention = harmContext && /\b(?:do not|don t|dont|not)\s+want\s+to\s+(?:stop|quit|avoid|prevent)\b/.test(normalized);
+  const topic = sexualTopic || harmContext;
+  const requestText = normalized.replace(/\b(?:do not|don t|dont|never)\s+(?:show|send|provide|write|generate|create|give)(?:\s+me)?\s+(?:pornography|porn|explicit sexual content|nudes|erotic stories)\b/g, '').replace(/\b(?:avoid|avoiding|stop watching|quit watching|stop reading|quit reading)\s+(?:explicit content|explicit videos|erotic stories|pornographic content|nude images|nude pictures)\b/g, '').replace(/\b(?:prevent|protect|keep)(?:\s+(?!but\b|and\b)\w+){0,5}\s+(?:seeing|viewing|accessing)(?:\s+(?:any|the))?\s+(?:nude images|nude pictures|pornography|explicit content)\b/g, '');
+  const explicitRequest = (harmfulRemainder || negatedPrevention) || /\b(?:show|send|provide|generate|write|writing|create|describe|find|recommend|give|link)(?:\s+(?:me|us|a|an|the|some|more|to|example|examples|of|detailed|graphic|explicit|sexual|erotic|nude|naked)){0,5}\s+(?:porn|pornography|erotica|sex|sexual acts?|sexual fantasies|sexual fantasy|nudes|genitals?|intercourse|orgasms?)\b/.test(requestText)
+    || /\b(?:write|writing|generate|create|describe|show|send|provide|give)(?:\s+\w+){0,5}\s+(?:erotic|pornographic|explicit sexual|graphic sex|explicit|sexual)\s+(?:story|stories|scene|scenes|content|instructions?|images?|pictures?|videos?|fantas(?:y|ies)|details?)\b/.test(requestText)
+    || /\b(?:erotic|pornographic|explicit sexual|explicit|nude)\s+(?:stories|story|content|images?|pictures?|videos?|examples?)\b/.test(requestText)
+    || /\b(?:pressure|coerce|force|manipulate)(?:\s+\w+){0,6}\s+(?:sex|sexual|intercourse)\b/.test(requestText)
+    || /\b(?:hide|conceal|enable|facilitate)(?:\s+\w+){0,4}\s+(?:exploitation|grooming)\b/.test(requestText)
+    || (!preventHarm && /\bsexually\s+(?:coerce|force|exploit|manipulate)\b/.test(requestText))
+    || /\b(?:describe|write|show|explain)\b.{0,120}\b(?:graphic|explicit) details?\b/.test(requestText.replace(/\b(?:without|no) (?:graphic|explicit) details?\b/g, ''))
+    || (sexualTopic && /\b(?:recommend|find|send|give|link)\b.{0,60}\b(?:site|website|link|videos?)\b.{0,40}\b(?:watch|view|it)\b/.test(requestText));
+  if (explicitRequest && (topic || /\b(?:erotic|erotica|pornographic|nude|sexually|exploitation|grooming|explicit (?:videos?|images?|pictures?|stories))\b/.test(requestText))) return { support: false, prohibited: true };
+  const recoveryAction = /\b(?:stop|quit|avoid|reduce|overcome|recover|recovering|cope|coping|manage|managing|resist|prevent)(?:\s+\w+){0,8}\s+(?:porn|pornography|sexual|sex|nude|nudes|masturbation|masturbating|compulsive|explicit content)\b/.test(normalized);
+  const seekingSupport = /\b(?:get|find|need|want|seek|seeking|offer|offering|provide|providing)(?:\s+(?:some|professional|practical|safe))?\s+(?:help|support|guidance|counseling|counselling|treatment)\b/.test(normalized)
+    || /\b(?:help|support)\s+(?:me|someone|a friend|my friend|my child|my teenager|a teenager)\b/.test(normalized);
+  const distressed = /\b(?:unwanted|intrusive|ashamed|ashame|distressed|struggling|struggle|addiction|addicted|compulsive|relapse|relapsed|slipped back)\b/.test(normalized);
+  const boundaries = /\b(?:discuss|set|setting|respect|maintain)(?:\s+\w+){0,4}\s+(?:sexual boundaries|consent)\b/.test(normalized);
+  // A negated request for recovery is not a positive support signal.
+  const rejectsSupport = /\b(?:do not|don t|dont|not)\s+(?:want|need|seeking|seek)\s+(?:help|support|recovery)\b/.test(normalized) || /\b(?:do not|don t|dont|never)\s+want\s+to\s+(?:stop|quit|avoid|recover)\b/.test(normalized);
+  return { support: topic && !rejectsSupport && (preventHarm || recoveryAction || seekingSupport || distressed || boundaries), prohibited: false };
+}
+
 function evaluateQuestionSafety(value) {
   const normalized = normalizeQuestionSafetyText(value);
   const compact = normalized.replace(/\s+/g, '');
+    const supportIntent = nonExplicitSupportIntent(normalized);
   if (/\b(?:sexual abuse|sexually abused|rape|raped|molest|molested|assaulted|immediate danger|being threatened|threatening me|hurt me|hurting me|kill me|being abused)\b/.test(normalized)) {
     return { allowed: false, kind: 'urgent-safety', response: URGENT_SAFETY_RESPONSE };
   }
@@ -138,10 +173,10 @@ function evaluateQuestionSafety(value) {
     && (/\b(?:why|are|is|all|those|these|people|followers|members|believers)\b/.test(normalized)
       || /\b(?:should die|should be killed|deserve to die|subhuman|vermin)\b/.test(normalized));
   const structuredGroupAttack = /\b(?:why are|all|those|these)\s+[a-z-]{3,30}(?:\s+people)?\s+(?:are\s+|is\s+)?(?:stupid|idiots?|evil|inferior|worthless|disgusting|trash|vermin|subhuman|scum|morons?|hateful)\b/.test(normalized);
-  if (profanity || explicitSexual || groupAttack || structuredGroupAttack) {
+  if (profanity || supportIntent.prohibited || (explicitSexual && !supportIntent.support) || groupAttack || structuredGroupAttack) {
     return { allowed: false, kind: 'respect-boundary', response: RESPECTFUL_QUESTION_RESPONSE };
   }
-  return { allowed: true, kind: 'allowed', response: '' };
+  return { allowed: true, kind: supportIntent.support ? 'non-explicit-support' : 'allowed', response: '' };
 }
 
 function corsHeaders(origin) {
@@ -268,6 +303,22 @@ function classifyResearchScope(messages, requestedPage, requestedProfile) {
   const support = scriptureSupportContext(messages);
   const question = rawConversationQuestion(lastUserQuestion(messages));
   const conversationContext = userConversationContext(messages);
+  // Retain an actual visitor's support topic for a small set of elliptical next-step
+  // questions. Stop at a new substantive topic; never infer it from assistant copy.
+  const supportFollowup = value => /^(?:what (?:can|should) i do next|what is (?:my|the) next step|how (?:do|can) i (?:begin|start)|where (?:do|can) i start)[?.!]*$/i.test(String(value || '').trim());
+  if (!conversationContext.length && supportFollowup(question)) {
+    const users = (Array.isArray(messages) ? messages : []).filter(message => message?.role === 'user');
+    const pending = [];
+    for (let index = users.length - 2; index >= 0 && pending.length < 3; index -= 1) {
+      const previous = rawConversationQuestion(users[index].content).slice(0, 1200);
+      if (evaluateQuestionSafety(previous).kind === 'non-explicit-support') {
+        conversationContext.push(previous, ...pending);
+        break;
+      }
+      if (!supportFollowup(previous)) break;
+      pending.unshift(previous);
+    }
+  }
   if (support.antecedent && !conversationContext.length) conversationContext.push(support.antecedent);
   const normalizedQuestion = question.toLowerCase().replace(/[^a-z0-9\s'-]/g, ' ').replace(/\s+/g, ' ').trim();
   const scriptureTopicQuestion = question
@@ -278,6 +329,8 @@ function classifyResearchScope(messages, requestedPage, requestedProfile) {
   const profile = PROFILE_CONTEXTS.has(requestedProfile) ? requestedProfile : '';
   const contextualSubject = KNOWN_CHURCH_PERSON_PHRASES.find(name => conversationContext.join(' ').toLowerCase().includes(name)) || '';
   const usesConversationContext = conversationContext.length > 0;
+  const nonExplicitSupport = evaluateQuestionSafety(question).kind === 'non-explicit-support'
+    || (usesConversationContext && conversationContext.some(previous => evaluateQuestionSafety(previous).kind === 'non-explicit-support'));
   const retrievalQuestion = support.antecedent ? `${support.antecedent}: cite a supporting scripture`
     : usesConversationContext ? `${question}\nEarlier user topic: ${conversationContext.join(' -> ')}` : question;
   const faith = page === 'pioneers'
@@ -289,9 +342,9 @@ function classifyResearchScope(messages, requestedPage, requestedProfile) {
     || SCRIPTURE_REFERENCE_PATTERN.test(question)
     || SCRIPTURE_BOOK_TOPIC_PATTERN.test(scriptureTopicQuestion)
     || (usesConversationContext && (Boolean(contextualSubject) || FAITH_PATTERN.test(conversationContext.join(' ')) || SCRIPTURE_BOOK_TOPIC_PATTERN.test(conversationContext.join(' '))));
-  const selectedPioneerName = extractSelectedPioneerName(messages);
+  const selectedPioneerName = nonExplicitSupport ? '' : extractSelectedPioneerName(messages);
   return {
-    faith, question, retrievalQuestion, page, profile, conversationContext, approvedSourcesOnly: true,
+    faith, question, retrievalQuestion, page, profile, conversationContext, nonExplicitSupport, approvedSourcesOnly: true,
     classificationMode: support.antecedent || usesConversationContext ? 'conversation-context' : 'request-scope',
     scriptureSupportRequested: support.requested, scriptureSupportAntecedent: support.antecedent,
     selectedPioneer: Boolean(selectedPioneerName), selectedPioneerName,
@@ -306,7 +359,7 @@ function sanitizePayload(payload) {
         .map((message) => ({ role: message.role, content: message.content.slice(0, 12000) }))
     : [];
   const scope = classifyResearchScope(clientMessages, payload.focuschrist_page, payload.focuschrist_profile);
-  const disclosureTopic = pioneerTopic(payload.focuschrist_pioneer_topic, scope.page);
+  const disclosureTopic = scope.nonExplicitSupport ? null : pioneerTopic(payload.focuschrist_pioneer_topic, scope.page);
   if (disclosureTopic) {
     scope.pioneerTopicKey = payload.focuschrist_pioneer_topic;
     scope.selectedPioneer = false;
@@ -320,7 +373,9 @@ function sanitizePayload(payload) {
     .map((message) => ({ role: message.role, content: message.content.slice(0, 3000) }));
   if (disclosureTopic) conversationMessages.splice(0, conversationMessages.length, { role: 'user', content: scope.question });
   let scopeInstruction;
-  if (scope.selectedPioneer) {
+  if (scope.nonExplicitSupport) {
+    scopeInstruction = 'The visitor is asking for personal support, regardless of the page they came from. Address that concern directly; do not substitute a historical biography or a generic chastity definition.';
+  } else if (scope.selectedPioneer) {
     scopeInstruction = `The visitor selected the pioneer ${scope.selectedPioneerName}. Search only site:churchofjesuschrist.org to corroborate that exact person's identity, company, dates, and journey. The gateway will separately supply the selected Tell My Story, Too biography.`;
   } else if (scope.page === 'pioneers' && EXPLICIT_NON_PIONEER_PATTERN.test(scope.question)) {
     scopeInstruction = 'This request comes from the Pioneers page, but the visitor explicitly requested a biblical or non-pioneer subject. Answer that explicit subject directly.';
@@ -334,6 +389,7 @@ function sanitizePayload(payload) {
     scopeInstruction = 'Use web search to gather reliable evidence before answering.';
   }
   if (!scope.selectedPioneer) scopeInstruction += '\n' + APPROVED_LDS_RESEARCH_POLICY;
+  if (scope.nonExplicitSupport) scopeInstruction += '\n' + SELF_HELP_SUPPORT_POLICY;
   const research = {
     model: RESEARCH_MODEL,
     // Browser prompts are presentation hints, not server-owned source policy.
@@ -1566,7 +1622,8 @@ function reviewedStableGeneralAnswer(question) {
 }
 
 function requiresExternalGeneralResearch(question) {
-  return GENERAL_RESEARCH_REQUIRED_PATTERN.test(String(question || ''))
+  return evaluateQuestionSafety(question).kind === 'non-explicit-support'
+    || GENERAL_RESEARCH_REQUIRED_PATTERN.test(String(question || ''))
     || /\b(?:who\s+(?:is|was)|tell\s+me\s+about)\s+[\p{L}'’.-]+(?:\s+[\p{L}'’.-]+){0,3}\b/iu.test(String(question || ''));
 }
 
@@ -1810,7 +1867,7 @@ function fallbackPayload(mode, extra, scope) {
 async function produceLowRiskGeneralAnswer(env, scope, draft, deadline) {
   const diagnostic = { focuschrist_low_risk_stage: 'started' };
   scope.lowRiskDiagnostic = diagnostic;
-  if (requiresExternalGeneralResearch(scope.question)) {
+  if (scope.nonExplicitSupport || requiresExternalGeneralResearch(scope.question)) {
     diagnostic.focuschrist_low_risk_stage = 'ineligible';
     return null;
   }
@@ -2367,6 +2424,7 @@ export default {
         '',
         `QUESTION:\n${sanitized.scope.question}`,
         conversationInstruction(sanitized.scope),
+        sanitized.scope.nonExplicitSupport ? SELF_HELP_SUPPORT_POLICY : '',
         '',
         `DRAFT:\n${draft}`,
         '',
@@ -2420,6 +2478,7 @@ export default {
             `Keep useful supported context: at least ${answerSubstanceRequirements(sanitized.scope).minimumWords} words and ${answerSubstanceRequirements(sanitized.scope).minimumSentences} complete sentences when the evidence supports that depth. Never pad with unsupported claims.`,
             `QUESTION: ${sanitized.scope.question}`,
             conversationInstruction(sanitized.scope),
+            sanitized.scope.nonExplicitSupport ? SELF_HELP_SUPPORT_POLICY : '',
             isNarrowFactualFollowup(sanitized.scope) ? 'This is a narrow factual follow-up. Preserve the requested fact and brief context in two sentences, aiming for 20 to 40 words unless a source-supported distinction needs more. Do not add quotations, scripture quotations, or an unrelated retelling.' : '',
             hasExcessiveSourceOverlap(verdict.answer, indexes.map(index => evidence[index - 1]))
               ? 'The deterministic wording check found excessive source overlap in this proposed answer. Correct the wording as well as auditing its facts. Organize the response around the requested detail in a fresh sentence structure; do not reconstruct the source from short fragments. Do not add facts or filler to dilute copying.'

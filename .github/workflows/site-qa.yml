@@ -227,6 +227,7 @@ jobs:
           python tools/build_scripture_catalog.py --check
           node tools/scripture_library_qa.js
           node groq-proxy/source-policy.test.js
+          node groq-proxy/self-help-support.test.js
           node groq-proxy/conversation-context.test.js
           node groq-proxy/research-escalation.test.js
           node groq-proxy/scripture-evidence.test.js

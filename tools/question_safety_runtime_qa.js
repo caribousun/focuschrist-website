@@ -66,3 +66,15 @@ assert(!/console\.log\(['"]Calling askAI with:/.test(askHtml)
     'Main Ask legacy fallback must not log raw questions or answers');
 
 console.log('Question safety runtime QA PASS');
+
+(async function verifySupportParity() {
+    const { evaluateQuestionSafety } = await import('../groq-proxy/src/index.js');
+    const cases = JSON.parse(fs.readFileSync('tools/fixtures/question-support-safety.json', 'utf8'));
+    for (const item of cases) {
+        const client = safety.evaluate(item.question);
+        const worker = evaluateQuestionSafety(item.question);
+        assert(client.allowed === item.allowed && client.kind === item.kind, 'Support boundary: ' + JSON.stringify({ item, client }));
+        assert(JSON.stringify(client) === JSON.stringify(worker), 'Client/Worker safety drift: ' + item.question);
+    }
+    console.log('Contextual support parity PASS: ' + cases.length + ' generic fixtures');
+})().catch(error => { console.error(error); process.exitCode = 1; });
