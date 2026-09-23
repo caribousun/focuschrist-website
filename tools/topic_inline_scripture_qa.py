@@ -17,7 +17,7 @@ for file in (ROOT/'scripture-data').rglob('*.json'):
  catalog[book]=key.rsplit('/',1)[0]
 catalog['D&C']='dc-testament/dc';catalog['Psalms']='ot/ps'
 books='|'.join(re.escape(k) for k in sorted(catalog,key=len,reverse=True))
-reference=re.compile(r'(?<![\w])('+books+r')\s+(\d+)(?::(\d+)(?:[–-](\d+))?)?')
+reference=re.compile(r'(?<![\w])('+books+r')\s+(\d+)(?::(\d+(?:[–-]\d+)?(?:\s*,\s*\d+(?:[–-]\d+)?)*))?')
 paths=['index.html']+[p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'answers').glob('*.html'))]+['general-conference.html']
 assert len(paths)==23, 'Home and all permanent topic studies must be checked'
 # Discover the Featured Art destinations from their public gallery links. Body prose
@@ -42,11 +42,15 @@ for path in paths:
   data=json.loads(file.read_text(encoding='utf-8'));params=parse_qs(u.query)
   assert params.get('lang')==['eng']
   if params.get('id'):
-   selection=params['id'][0];assert re.fullmatch(r'p\d+(?:-p\d+)?',selection)
-   numbers=list(map(int,re.findall(r'\d+',selection)));assert 1<=numbers[0]<=numbers[-1]<=len(data['verses'])
+   selection=params['id'][0];assert re.fullmatch(r'p\d+(?:-p\d+)?(?:,p\d+(?:-p\d+)?)*',selection)
+   numbers=list(map(int,re.findall(r'\d+',selection)))
+   for part in selection.split(','):
+    bounds=list(map(int,re.findall(r'\d+',part)));assert 1<=bounds[0]<=bounds[-1]<=len(data['verses'])
    assert u.fragment=='p'+str(numbers[0])
   match=reference.search(clean(node.text()))
   if match:
    assert key==catalog[match[1]]+'/'+match[2],path+': scripture label links to wrong chapter'
-   if match[3] and (node.has('fc-inline-scripture') or params.get('id')):assert params.get('id')==['p'+match[3]+('-p'+match[4] if match[4] else '')],path+': verse selection differs from label'
+   if match[3] and (node.has('fc-inline-scripture') or params.get('id')):
+    expected=','.join('p'+part.strip().replace('–','-').replace('-','-p') for part in match[3].split(','))
+    assert params.get('id')==[expected],path+': verse selection differs from label'
 print(f'TOPIC INLINE SCRIPTURE QA PASS: Home, all19 topic destinations and all{len(featured)} Featured Art bodies, {count} scripture links, canonical chapters, exact verse selections, no nested anchors')

@@ -19,7 +19,18 @@ const focusedHeroes = JSON.parse(read('docs/focused-answers-art-review.json')).i
 assert.deepEqual(new Set(focusedHeroes.map(record => record.key)), new Set(['aaronic', 'melchizedek']), 'Both new focused heroes require runtime verification');
 const runtimeHeroes = [...manifest.heroes, ...focusedHeroes];
 const canonical = [...read('sitemap.xml').matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => new URL(m[1]).pathname);
-assert.equal(canonical.length, 42, 'Discover the complete canonical inventory');
+const canonicalFiles = [];
+function collectPages(folder, recursive = false) {
+    for (const entry of fs.readdirSync(path.join(root, folder), {withFileTypes: true})) {
+        const relative = path.posix.join(folder, entry.name);
+        if (entry.isDirectory() && recursive) collectPages(relative, true);
+        if (entry.isFile() && entry.name.endsWith('.html') && !['404.html', 'google3fa84a4b37862f36.html'].includes(entry.name)) canonicalFiles.push(relative === 'index.html' ? '/' : '/' + relative);
+    }
+}
+for (const folder of ['', 'answers', 'art-study']) collectPages(folder);
+collectPages('jesus-christ', true);
+assert.equal(canonical.length, new Set(canonical).size, 'Canonical inventory has no duplicate URLs');
+assert.deepEqual(new Set(canonical), new Set(canonicalFiles), 'Discover the complete canonical inventory');
 const click = (window, node) => node.dispatchEvent(new window.MouseEvent('click', { bubbles: true, cancelable: true, button: 0 }));
 let checks = 0;
 for (const record of runtimeHeroes) {

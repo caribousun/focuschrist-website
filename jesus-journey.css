@@ -1,0 +1,45 @@
+/* The Jesus Christ descendants share the existing site palette and reading tools. */
+body.fc-jesus-journey .jj-wrap{width:min(var(--fc-standard,1040px),calc(100% - 2 * var(--fc-body-gutter,18px)));margin-inline:auto}
+body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36px) 0 24px;border-bottom:1px solid rgba(240,195,106,.25)}
+.jj-opening h1{font-family:var(--fc-font-display,Georgia,serif);font-weight:400;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12;color:var(--fc-gold-light,#f0c36a);margin:18px 0}
+.jj-opening .lede{max-width:760px;margin-bottom:20px}
+.jj-breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.9rem;margin:0 0 12px;padding:0;list-style:none}
+.jj-breadcrumbs a{text-underline-offset:4px}
+.jj-main{padding-block:24px 56px}
+.jj-main h2,.jj-main h3{font-family:var(--fc-font-display,Georgia,serif);font-weight:400;color:var(--fc-gold-light,#f0c36a);line-height:1.25;overflow-wrap:anywhere}
+.jj-main h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:0 0 18px}
+.jj-main h3{font-size:1.45rem;margin:0 0 12px}
+.jj-main p{margin:0 0 18px}
+.jj-main section[id],.jj-main article[id]{scroll-margin-top:110px}
+.jj-chapter{padding:var(--fc-section-y,48px) 0;border-bottom:1px solid rgba(240,195,106,.2)}
+.jj-reading{max-width:780px}
+.jj-kicker{color:var(--fc-gold-light,#f0c36a);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px!important}
+.jj-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
+.jj-directory> :last-child:nth-child(odd){grid-column:1/-1}
+.jj-card{display:block;min-width:0;padding:24px;border:1px solid rgba(240,195,106,.28);border-radius:12px;background:rgba(24,61,65,.68);color:inherit;text-decoration:none}
+.jj-card:hover,.jj-card:focus-visible{border-color:var(--fc-gold-light,#f0c36a);background:rgba(36,77,79,.8)}
+.jj-card p:last-child{margin-bottom:0}
+.jj-card .jj-card-action{display:block;margin-top:16px;color:var(--fc-gold-light,#f0c36a);text-decoration:underline;text-underline-offset:4px}
+.jj-local-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px 0 26px}
+.jj-local-nav a,.jj-actions a{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:10px 16px;border:1px solid rgba(240,195,106,.45);border-radius:8px;color:var(--fc-gold-light,#f0c36a);text-decoration:none;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+.jj-local-nav a[aria-current=page]{background:rgba(240,195,106,.13);border-color:var(--fc-gold-light,#f0c36a)}
+.jj-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:22px 0}
+.jj-art{margin:24px 0 28px;border:1px solid rgba(240,195,106,.28);border-radius:12px;overflow:hidden;background:#12383d}
+.jj-art>a{display:block}
+.jj-art img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;aspect-ratio:var(--study-image-ratio,3/2)}
+.jj-art figcaption{padding:22px 26px}
+.jj-art figcaption p:last-child{margin-bottom:0}
+.jj-art .fc-study-visual-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--fc-gold-light,#f0c36a)}
+.jj-reflection{padding:22px 26px;border-left:3px solid #d4aa61;background:rgba(82,112,105,.16);margin:24px 0}
+.jj-reflection ul{padding-left:24px;margin-bottom:0}
+.jj-reflection li+li{margin-top:12px}
+.jj-source-list{padding-left:24px;overflow-wrap:anywhere}
+.jj-source-list li{margin-bottom:12px}
+.jj-main details{padding:18px 0;border-top:1px solid rgba(240,195,106,.2)}
+.jj-main summary{cursor:pointer;color:var(--fc-gold-light,#f0c36a);font-size:1.12rem;min-height:44px;line-height:1.5}
+.jj-main details[open] summary{margin-bottom:14px}
+.jj-footnote{font-size:.92rem;color:#d2ded6}
+.jj-return{padding:28px 0 0}
+.jj-main a:focus-visible,.jj-opening a:focus-visible{outline:3px solid #f0c36a;outline-offset:5px}
+@media(max-width:700px){.jj-directory{grid-template-columns:1fr}.jj-card{padding:20px}.jj-art figcaption,.jj-reflection{padding:18px}body.fc-jesus-journey .jj-opening{padding-top:calc(var(--fc-header-height,80px) + 22px)}.jj-local-nav a{flex:1 1 145px}.jj-actions a{flex:1 1 180px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
