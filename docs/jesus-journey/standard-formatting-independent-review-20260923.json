@@ -1,0 +1,56 @@
+{
+  "status": "pass",
+  "scope": "Narrow full-width journey reading and introduction styles across78 consumers, exact-byte guard and regression extension",
+  "reviewed_on": "2026-09-23",
+  "baseline_commit": "6760161524fead32776ef01cc618e2fbf32681ae",
+  "reviewed_css_sha256": "68f2abf3d0fa65b2e87c6a8bd3798dd8dfb1a1e522e7f3d5b14dc810d1f90978",
+  "css_changes": [
+    ".jj-reading: replace max-width780px with width100%;max-width:none;min-width0.",
+    ".jj-opening .lede: replace max-width760px with width100%;max-width:none;min-width0; existing bottommargin20px preserved.",
+    ".jj-opening h1: add overflow-wrap:anywhere; preserve existing font and all geometry declarations.",
+    ".content-wrap.article>h2: add overflow-wrap:anywhere for existing direct article headings."
+  ],
+  "independent_exact_comparisons": [
+    "New CSS equals HEAD after exactly2width substitutions plus2headingwrap rules; no other style changes.",
+    "All78 changed HTML files equal HEAD after only the journey CSS cacheversion substitution.",
+    "Therefore all prose, alt/captions, source URLs, artwork markup, intrinsicdimensions, bodysections, hero/header markup and existing paragraph/order remain exact.",
+    "No hero/image geometry, outerrail, typography, control or spacing declarations changed. Opening introductory text width changes intentionally."
+  ],
+  "guard_review": [
+    "Exact CSS SHA updated to inspected bytes only; existing negative mutatedCSS/out-of-scope consumer checks retained.",
+    "Uniformity extension discovers78 canonical consumers from reviewed source inventories; requires one freshversion reference perpage and existing correctmainrail.",
+    "Existing five standard-page contracts remain intact; new tests reject780/760caps, laterqualifiedmedia cap, staleversion, missing/extra/duplicate consumer."
+  ],
+  "validation": [
+    "study_layout_uniformity_qa.py --self-test PASS; actual78-consumer gatePASS.",
+    "sitewide_artwork_review_qa.py --self-test PASS."
+  ],
+  "spacing_advisory_resolution": "Main agent reports actual computed Birthmargin32px/padding0; descendantmargin0/padding20/24. No spacing change made. This receipt does not claim independent browsermeasurement.",
+  "reviewed_gate_sha256": "2f5b75feda7965242b700e577108b5751bfe372359e3a36772a07231436fa636",
+  "limitations": [
+    "Main agent owns all78 desktop/phone browser-composition audit.",
+    "No semantic ledger update needed for unchanged published wording; cacheversion/style changes are outside normalized text.",
+    "Technical review does not assert owner aesthetic approval or live publication."
+  ],
+  "discovery_gate_followup": {
+    "status": "pass",
+    "change": "Only existing expected stylesheet version literal changed from20260923-chapters-2 to20260923-standard-formatting-1. Exact comparison proves no other code changes.",
+    "sha256": "5d1f008946b1be17ff1571974f8437127473ea7a56d13d8ce79902440a5ac5c4",
+    "reason": "Preserves existing stale-cache rejection while matching independently reviewed78consumer revision."
+  },
+  "prior_two_rule_css_sha256": "a67f825e8ad5b64e4854daeef39081df975d99e0f692bcb5d7ce4fcedac0fd53",
+  "heading_wrap_followup": {
+    "status": "pass",
+    "change": "Only overflow-wrap:anywhere added to .jj-opening h1 after browser-found enlargedtext overflow.",
+    "independent_proof": "Current stylesheet equals HEAD after originaltwoapproved width substitutions plus thisoneproperty only. Fontsize, family, margins, lineheight, colors, hero/image selectors and all other declarations unchanged.",
+    "reason": "Permits exceptionally long words to wrap within existing title width at320px/200percent text; does not reduce text size or clip content.",
+    "validation": "Independently inspected required h1 overflow-wrap:anywhere and added missing-wrap negative fixture; actual78consumer/selftest and exactCSS guard selftest pass."
+  },
+  "prior_three_rule_css_sha256": "d586a4e956db4a19ec068e3697e730c6be7c3523153abb5abaf83200a17a63e7",
+  "legacy_heading_wrap_followup": {
+    "status": "pass",
+    "change": ".content-wrap.article>h2{overflow-wrap:anywhere}",
+    "independent_proof": "Exact currentCSS equals HEAD after onlytwo width substitutions and thetwo headingwrap changes. Newselector matches directbodyarticle h2, not hero selectors; stylesheet consumer scope remains exact78.",
+    "validation": "Inspected separate missinglegacyh2wrap negativefixture; independently ran10formattingfixtures/actual78gate and exactCSSprotectionselftest:PASS."
+  }
+}

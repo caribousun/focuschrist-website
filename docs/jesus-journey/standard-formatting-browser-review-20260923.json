@@ -1,0 +1,39 @@
+{
+  "status": "local review complete; release pending",
+  "checked_at_utc": "2026-09-23T19:47:59.744007+00:00",
+  "base_commit": "6760161524fead32776ef01cc618e2fbf32681ae",
+  "branch": "fix/jesus-journey-formatting",
+  "owner_request": "Every Jesus journey page must follow the established page boundaries and formatting; screenshot identified narrow780px text beside1040px picture/reflection.",
+  "changes": [
+    "Full-width narrative and introduction within existing page container",
+    "Natural wrapping of large journey titles and parent legacy section headings at enlargedtext"
+  ],
+  "preserved": "All307originals and their derivatives, prose, figures, sources, hero markup, image dimensions and chapterbehavior unchanged. HTMLchanges onlystylesheetversion.",
+  "browser": {
+    "method": "Actual browser whole-study mode on every78page; read-only DOM rendered-width, overflow andcardrow audits; representative visualscreenshots.",
+    "widths": [
+      320,
+      390,
+      768,
+      1366
+    ],
+    "page_width_checks": 312,
+    "reading_width_mismatches": 0,
+    "intro_width_mismatches": 0,
+    "orphan_card_rows": 0,
+    "horizontal_overflow": 0,
+    "enlarged_text": {
+      "pages": 78,
+      "width": 320,
+      "root_font_px": 32,
+      "result": "pass afterfixing titlewrap andtargetedparentlegacyh2 recheck",
+      "controls_clipped": 0
+    }
+  },
+  "queued_owner_work": [
+    "After publishing Jesus formatting: inspect entire Pioneer page boundaries, pictures, cards andspacing",
+    "Correct two markedHistoryalignmentexamples",
+    "Inspect andfixMissionpage inconsistentboundaries"
+  ],
+  "stylesheet_sha256": "68f2abf3d0fa65b2e87c6a8bd3798dd8dfb1a1e522e7f3d5b14dc810d1f90978"
+}

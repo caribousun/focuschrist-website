@@ -60,7 +60,7 @@ for page in pages:
         wrong=expected.copy();wrong.subtract([key]);wrong[('/incorrect-owner.html',)]+=1;wrong=+wrong
         assert missing!=expected and wrong!=expected, 'Directory inventory negative fixture failed'
     styles=[n.attrs.get('href','') for n in nodes if n.tag=='link' and 'jesus-journey.css' in n.attrs.get('href','')]
-    if grids and styles!=['/jesus-journey.css?v=20260923-chapters-2']:errors.append('Missing or stale journey directory stylesheet: '+page['url'])
+    if grids and styles!=['/jesus-journey.css?v=20260923-standard-formatting-1']:errors.append('Missing or stale journey directory stylesheet: '+page['url'])
     if any(not grid.children for grid in grids):errors.append('Empty journey directory: '+page['url'])
     directory_count+=len(grids)
 xml=(ROOT/'sitemap.xml').read_text(encoding='utf-8')

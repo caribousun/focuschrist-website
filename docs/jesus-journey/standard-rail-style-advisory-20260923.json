@@ -1,0 +1,48 @@
+{
+  "scope": "Independent stylesheet comparison of journey with Atonement, Joseph Smith and Birth study standards",
+  "status": "recommendations_pending_implementation_and_browser_verification",
+  "source_sha256": {
+    "jesus-journey.css": "ae9286cdecb53b2a55da00316eb3e0ddabbfea506c446995541d0aecd3418405",
+    "atonement.css": "4cd674195013521cbac7141802d24dd8f019b5513bd41721637d1d151d11e821",
+    "connected-study.css": "d19f17b76d03041471afe5bd771e722353310cafac21aed66486b16c6f896eb3",
+    "topic-study-pages.css": "10eadb941bebc8f4862e29f3c3006e7b956a2431dfed9d6159cc6c5730e11dd1",
+    "answer-styles.css": "683b39b93c35d887ca93395a6431858213cb94a67fc1332185454ba7f698fd1e",
+    "site-system.css": "b1dcd1c1bc1ab585f0803af31ad8d56789a4f2e07202c4bfb59ab0849656a0e1"
+  },
+  "primary_findings": [
+    {
+      "selector": ".jj-reading",
+      "current": "max-width:780px; no centering; left aligned inside full-width study rail",
+      "standard": "Atonement .atonement-reading explicitly width100%;max-width:none; ordinary Birth/Joseph narrative paragraphs fill their parent.",
+      "recommendation": "width:100%;max-width:none;min-width:0; keep existing outer rail, gutters and all image dimensions."
+    },
+    {
+      "selector": ".jj-opening .lede",
+      "current": "max-width:760px while heading and breadcrumbs fill .jj-wrap",
+      "standard": "Atonement welcome paragraphs max-width:none; common reading intro fills existing container.",
+      "recommendation": "max-width:none within journey opening only if intended to match aligned main rail; preserve font, text and hero geometry."
+    }
+  ],
+  "secondary_computed_checks": [
+    {
+      "selector": ".jj-chapter-reader>.jj-chapter",
+      "issue": "Birth chapters retain .fc-deep-study margin-block2.5rem while ordinary descendant chapters have no section margin. Reader padding20px/24px may therefore combine with extra40px gaps.",
+      "recommendation": "Verify computed visible grouped/whole-study spacing. If doubled, scope margin-block:0 to reader chapter children; preserve existing DOM, paragraph margins and heading order."
+    },
+    {
+      "selector": ".jj-chapter without enhanced reader",
+      "issue": "Base padding uses --fc-section-y48to82px on each edge, while standard body rhythm uses16to24px space or32to48px gap. JS reader already overrides20/24.",
+      "recommendation": "Treat as no-JS/print/full-flow check; do not broaden changes based only on differing numeric values."
+    }
+  ],
+  "intentional_variations_to_preserve": [
+    "Existing outer rail: Atonement and journey descendants use1040px; Joseph/Birth content-wrap uses its existing rail. Do not globally replace all widths.",
+    "Figure and card inset padding is intentional, unlike a narrow uncentered narrative column.",
+    "Intrinsic body-image proportions, all heroes, image crops, controls and min44px targets unchanged.",
+    "Journey compact chapter toolbar and its functional spacing need not imitate Atonement page-specific path layout."
+  ],
+  "limitations": [
+    "This is source stylesheet analysis; main agent owns actual desktop/phone/all78computed-layout audit.",
+    "No visitor content or CSS edited by this reviewer."
+  ]
+}

@@ -1,8 +1,8 @@
 /* The Jesus Christ descendants share the existing site palette and reading tools. */
 body.fc-jesus-journey .jj-wrap{width:min(var(--fc-standard,1040px),calc(100% - 2 * var(--fc-body-gutter,18px)));margin-inline:auto}
 body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36px) 0 24px;border-bottom:1px solid rgba(240,195,106,.25)}
-.jj-opening h1{font-family:var(--fc-font-display,Georgia,serif);font-weight:400;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12;color:var(--fc-gold-light,#f0c36a);margin:18px 0}
-.jj-opening .lede{max-width:760px;margin-bottom:20px}
+.jj-opening h1{font-family:var(--fc-font-display,Georgia,serif);font-weight:400;font-size:clamp(2.3rem,5vw,4rem);line-height:1.12;color:var(--fc-gold-light,#f0c36a);margin:18px 0;overflow-wrap:anywhere}
+.jj-opening .lede{width:100%;max-width:none;min-width:0;margin-bottom:20px}
 .jj-breadcrumbs{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:.9rem;margin:0 0 12px;padding:0;list-style:none}
 .jj-breadcrumbs a{text-underline-offset:4px}
 .jj-main{padding-block:24px 56px}
@@ -12,7 +12,8 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 .jj-main p{margin:0 0 18px}
 .jj-main section[id],.jj-main article[id]{scroll-margin-top:110px}
 .jj-chapter{padding:var(--fc-section-y,48px) 0;border-bottom:1px solid rgba(240,195,106,.2)}
-.jj-reading{max-width:780px}
+.jj-reading{width:100%;max-width:none;min-width:0}
+.content-wrap.article>h2{overflow-wrap:anywhere}
 .jj-kicker{color:var(--fc-gold-light,#f0c36a);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px!important}
 .jj-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
 .jj-directory> :last-child:nth-child(odd){grid-column:1/-1}

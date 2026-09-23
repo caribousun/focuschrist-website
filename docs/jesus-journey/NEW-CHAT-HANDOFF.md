@@ -1,5 +1,13 @@
 # Jesus Christ journey — new-chat handoff
 
+## Current owner request: standard formatting, then Pioneer, History and Mission
+
+PR365 is merged and live at6760161524fead32776ef01cc618e2fbf32681ae. FinalPRQA35908943328, Pages35909395142 andmainQA35909395130 passed;740/740normalpublicfilesmatch. Read parentwork pictured-chapters-release-20260923.json andpublic-pictured-chapters-verification-20260923.json.
+
+Wyatt then marked the empty strip beside780pxnarrative within1040pxpicture/reflection boundaries andrequested alljourneypages matchestablishedformatting. Currentbranch fix/jesus-journey-formatting removesonlyinnerreading/introwidthcaps andallowsenlargedheadings towrap. All78pageHTML changesareCSSversiononly; allart/prose/herogeometrypreserved. Actual312page-widthchecks across320/390/768/1366pass; all78at320px/200percenttextpassaftertwoheadingwrapfixes. Independentreview andregressionreceiptsare saved. Publicationremains; readstandard-formatting-release-20260923.json forlaterstatus.
+
+NEXT AUTHORIZED WORK, afterJesusformattingpublishes: inspectthewholePioneerpage andcorrectinconsistentboundaries; includetheuser'stwoHistoryalignmentexamples (Joseph/EmmaandThreeWitnessespanels), thenMissionpagewhichWyattsayshasinconsistentborders. Thesearespecificowner-resumedlayoutscopes. Preserveallapprovedartwork, identities, sourcesandtext. Do not stopafterJesusformattingandforgetthesequeuedrequests. No new faith-contentgenerationwasrequestedfortheseformattingpasses.
+
 ## Latest checkpoint: pictured chapters and clear onward study — 23 September 2026
 
 This checkpoint supersedes older303-art and incomplete chapter notes below. PR364 is already merged at a343efb9857fa94f98c0c105b2ea87252b716016. Wyatt subsequently requested pictures in every chapter, no blank preview cards, meaningful pictures about every two paragraphs, and clear chapter versus next-study navigation.
