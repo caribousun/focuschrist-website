@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "reviewer": "independent remaining_passion_art agent",
+  "reviewedAtUtc": "2026-09-23T22:03:51.779606+00:00",
+  "scope": "Watch Short opening position and visible Close control",
+  "priorReview": "docs/watch-shorts-independent-review-20260923.json",
+  "priorReviewSha256": "28fed51d1213002c54d398f294bc7fe824662c17ca8321547d9efb0f6286a5d0",
+  "preservation": [
+    "Same four cards and sources; no new published text, media replacement or hero edits.",
+    "API explicit-click initialization, poster until ready, one-player behavior, late callback protection, failure fallback, timeout and focus-return retained."
+  ],
+  "changesReviewed": [
+    "Close now before media; gold background, dark text and visible focus outline.",
+    "Close focus uses preventScroll; owning card explicitly scrolls to start with84px CSS header offset.",
+    "Active media remains9:16 and width bounded by available100svh minus190px; cleanup clears playing state and restores initial layout.",
+    "Exact Watch-only stylesheet guard refreshed; negative modifiedbytes/otherpage/import/JavaScript tests retained."
+  ],
+  "tests": [
+    "Watch Python4tests passed.",
+    "Watch runtime suite passed, including new close-before-media, preventScroll, owning-card scroll, singleplaying and allerror cleanup assertions.",
+    "Sitewide guard selftest and118page19hero842protectedimage audit passed with zeroerrors.",
+    "git diff --check passed."
+  ],
+  "reportedBrowserEvidence": {
+    "reporter": "root",
+    "viewports": [
+      "1366x900",
+      "390x844",
+      "320x640",
+      "768x900",
+      "844x390"
+    ],
+    "enlarged200Percent": [
+      "320x640",
+      "768x900",
+      "1366x900",
+      "844x390"
+    ],
+    "result": "Close visible before full9:16media; no label clipping/overflow; close removes player and restores correct text trigger.",
+    "evidenceClass": "Root actual-browser report, not independent operation."
+  },
+  "reviewedFiles": {
+    "watch.html": "41bb50c3a8846876f1a670fd3f8973abab45376f72801c13b6eb1af319c6ee6e",
+    "watch-shorts.js": "ef74136a0a679513dd2d3017409b2b9fe74a0acc818fd7b904929ce429575cb8",
+    "watch-shorts.css": "3d5c271067dc106524f103fb3af67d6423a77f1a338fc5691c2af02d7723bd85",
+    "tools/watch_shorts_runtime_qa.js": "2b45c6743007a140710702f39b89e387eaaad84891e486aa0060d50b294eeab4",
+    "tools/sitewide_artwork_review_qa.py": "4264a1d829e2363ecccc4efbd01abc8951770fff0b14796650204f91203c4572"
+  },
+  "limitations": [
+    "Mock API tests do not prove actual provider playback.",
+    "Root owns deployment and public-byte verification.",
+    "Art opening/figure redistribution reviewed separately after final changes; not certified by this receipt."
+  ]
+}
