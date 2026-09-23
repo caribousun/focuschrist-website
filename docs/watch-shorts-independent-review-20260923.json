@@ -51,7 +51,8 @@
     "docs/watch-shorts-publishing.md": "45109f16e2855f5c3e1197c224b9465c24ceba8f3f810b0509c8748d398909eb",
     "site-common.js": "871372f294e8cb69cae38ffbd904f8d41c094b602f272b17175e94671e7176ca",
     "study-journey.js": "b512bf075f6ae7584253c65fe91ff98e5b3ecf2312d2ef56280756c6e077a8ff",
-    "tools/hardened_experience_qa.py": "9e36cad4b2f422a60b3e9da6a7800f78b49270a9a657778dbdd1988a73f1014d"
+    "tools/hardened_experience_qa.py": "9e36cad4b2f422a60b3e9da6a7800f78b49270a9a657778dbdd1988a73f1014d",
+    "tools/source_integrity_inventory.py": "d160cf6f5d56711a1c976c1d667fce24026a8c9631e294a71f87138bfb1c7346"
   },
   "cssAndCodeReview": [
     "Styles scoped to .watch-shorts plus final body.fc-watch-shorts long-word wrapping. Portrait9:16 media contains native thumbnails without crop; responsive4/2/1columns. No hero geometry or other page selectors.",
@@ -61,14 +62,16 @@
     "Publishing guide requires actual public Latest verification after approved publication; explicitly no unattended sync or new publishing authorization.",
     "Four Python fixtures and offline official API runtime tests are meaningful regression evidence, not authentication of provider playback. Workflow adds their two invocations only.",
     "Reviewed final page-scoped body wrapping rule; no font, hero or image geometry property introduced. Exact CSS guard refreshed after this narrow addition.",
-    "Final Home runtime fix independently reviewed: shared Ask rewriting exempts only Home purpose pathway cards; explicit intro Ask-form link and contextual Ask behavior elsewhere remain intact. site-common dynamic loader and Home script version use matching opaque revision20260924-home-page-entry-1. Hardened gate checks both intended routes."
+    "Final Home runtime fix independently reviewed: shared Ask rewriting exempts only Home purpose pathway cards; explicit intro Ask-form link and contextual Ask behavior elsewhere remain intact. site-common dynamic loader and Home script version use matching opaque revision20260924-home-page-entry-1. Hardened gate checks both intended routes.",
+    "PR369 follow-up: source_integrity_inventory.py changes only its expected study-journey cache token to the already reviewed loader revision20260924-home-page-entry-1. No runtime, source classification or quarantine behavior changed."
   ],
   "tests": [
     "Watch Shorts Python4testsPASS",
     "Watch Shorts runtime official API mocked callback/timer scenarios PASS",
     "Sitewide artwork self-test PASS",
     "Full artwork audit118pages19heroes842protectedimages0errors",
-    "Independent JSDOM Home/non-Home fixtures pass: Home card plain ask.html, intro explicit form preserved, other content and non-Home card still contextual. Hardened experience gate PASS."
+    "Independent JSDOM Home/non-Home fixtures pass: Home card plain ask.html, intro explicit form preserved, other content and non-Home card still contextual. Hardened experience gate PASS.",
+    "Independent source_integrity_inventory.py run PASS after expected-token correction:494entries,3verified,491quarantined."
   ],
   "ledgerNote": "Final runtime/cache-only change does not change published text hash; Home ledger current hash verified without unnecessary new prior_review nesting. Existing chain preserved."
 }

@@ -101,7 +101,7 @@ if versions != {"20260909-22"}:
     errors.append(f"mixed Study Intelligence v3 cache versions: {sorted(versions)}")
 
 cache_markers = {
-    "site-common.js": (common, "study-journey.js?v=20260909-openai-only-2"),
+    "site-common.js": (common, "study-journey.js?v=20260924-home-page-entry-1"),
     "study-journey.js": (journey, "study-source-router.js?v=20260920-pioneer-study-1"),
     "ask.html experience": (ask, "ask-experience.js?v=20260910-followup-visibility-5"),
     "ask.html reviewed knowledge": (ask, "reviewed-ask-knowledge.js?v=20260910-holy-ghost-subject-2"),
