@@ -214,3 +214,25 @@ body.fc-site .pioneer-music-note { color: var(--fc-muted); line-height: 1.6; mar
 body.fc-site .pioneer-music-jump { text-align: center; margin-top: 18px; }
 @media(max-width:1000px) { body.fc-site .pioneer-music-feature { grid-template-columns: 1fr; } }
 @media(max-width:700px) { body.fc-site .pioneer-music-grid { grid-template-columns: 1fr; } body.fc-site .pioneer-music-card { padding: 18px; } }
+
+/* Keep phone section edges on the same gutter as the picture chapters. */
+@media (max-width: 700px) {
+    body.fc-site main > .qa-section { padding-inline: 0; }
+    body.fc-site main > .qa-section > .qa-container,
+    body.fc-site main > .section {
+        box-sizing: border-box;
+        width: min(var(--fc-standard, 1040px), calc(100% - 2 * var(--fc-body-gutter, 24px)));
+        max-width: var(--fc-standard, 1040px);
+        margin-inline: auto;
+    }
+}
+/* At two-column widths, finish each three-picture chapter with a full feature row. */
+@media (min-width: 701px) and (max-width: 1040px) {
+    body.fc-site .pioneer-art-grid--three > .pioneer-art-card:last-child {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+    }
+    body.fc-site .pioneer-art-grid--three > .pioneer-art-card:last-child > a { min-width: 0; }
+}

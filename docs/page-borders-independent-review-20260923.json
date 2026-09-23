@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent saved_art_review agent",
+  "reviewedAtUtc": "2026-09-23T20:04:58.884432+00:00",
+  "baseCommit": "b745498047906924f9819b2c9d66f659f15ca7d4",
+  "status": "pass",
+  "reviewedFiles": {
+    "missionary.html": "de8d0de7c936f84220d5d0af2c86ffe5d07ad84796132a04fa78af492764448f",
+    "church-history.html": "03f62db617111de68dc2bfc17446ef40c8050adc9cfcc9fd65a3e8b435216a51",
+    "pioneers.html": "be098d2f2d9e4ec3015d44cba549a0392f8424c279d0c8b089bbccecd0f8bc26",
+    "missionary.css": "f39e67bca6fba10bf03074e6939a6f714d90ec28b02d572adb45f59c87befc7d",
+    "church-history.css": "26991016b8be1b6a3dc8854d41e07a1b6d12cdbefaf7ac260ba4b1736ec74b1a",
+    "pioneer-story.css": "1255d1628391a932385df5d5667242abf48cff108ebd62938670606829168ad3",
+    "tools/sitewide_artwork_review_qa.py": "8000b30cdd9eade0ef002ea8f41dd609c460c98dd266c28ac892a36d3e8674cf",
+    "tools/study_layout_uniformity_qa.py": "7d422383b289077704c6cc6140765e9857c0a6320c8e0a388aadb8f4187f9fd6",
+    "tools/church_history_qa.py": "8c28d47370c0e72139242edc76a3ac9cbfa3aab5f77919742bdea2dc4f2ff97b",
+    "tools/unified_experience_qa.py": "8092ffad5fd5dc01cd111f54b43d5a2d1e8c2f78c48f6004078a68c1b686b67b"
+  },
+  "preservationEvidence": [
+    "Exact HTML reconstruction passes: Mission changes only two body rails and cache version; History only four offset tokens and cache version; Pioneer only cache version. All prose, source, artwork, hero and identity markup preserved. Approved wide Mission introduction untouched.",
+    "Pioneer CSS baseline preserved with exactly two appended media blocks: phone standard gutters and tablet full-width two-column final feature card. Intentional card padding preserved.",
+    "History and Mission CSS preserve baseline and append only their page-scoped main overflow-wrap:anywhere rule. No hero selectors, font or artwork geometry declarations changed."
+  ],
+  "guardReview": [
+    "Pioneer exact SHA updated after review.",
+    "History/Mission exception allows only exact page main selector, sole overflow-wrap:anywhere property and exact full-file hash. Wrong selector, extra property and changed stylesheet bytes are rejected in new tests; old guard tests retained.",
+    "Layout gate preserves existing five standard rails and ten journey fixtures; adds valid and five negative boundary fixtures. History checks all seven panels.",
+    "Church History expected cache literal update matches current HTML.",
+    "Unified experience QA changes only History cache version and two obsolete offset-marker assertions to aligned inline and inline museum markers. Asset presence, size, responsive/full-resolution source checks unchanged; new layout gate separately rejects any offset modifier on all seven figures.",
+    "Final page_wrap_errors extension independently reviewed: exact History/Mission main selectors require anywhere wrapping and exactly one current stylesheet version per page. Six additional cases test valid, absent rule and stale version for both pages; prior sixteen cases retained. Full self-test and current file contracts pass. Exact stylesheet hash gate separately prevents unreviewed overrides."
+  ],
+  "tests": [
+    {
+      "command": "tools/study_layout_uniformity_qa.py --self-test",
+      "result": "PASS"
+    },
+    {
+      "command": "tools/sitewide_artwork_review_qa.py --self-test",
+      "result": "PASS including new wrapping negative fixtures"
+    },
+    {
+      "command": "independent baseline reconstruction",
+      "result": "PASS"
+    }
+  ],
+  "limitations": [
+    "This static review does not establish rendered browser geometry, deployment or owner aesthetic approval. Root owns browser and release verification."
+  ],
+  "findings": []
+}
