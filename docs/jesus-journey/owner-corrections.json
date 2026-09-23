@@ -1,0 +1,56 @@
+{
+  "purpose": "Exact original image hashes rejected by Wyatt. Technical review passes cannot override owner corrections. Corrected images require a different hash and their own review.",
+  "rejections": [
+    {
+      "key": "rr-broiled-fish",
+      "sha256": "d8ce575e89d0f0494d099d56f388b2c00edb069e1b1d24877a30b3fd6b9d618e",
+      "status": "rejected_by_owner",
+      "reason": "Wyatt rejected gaze in v3; scene requires attention and eye contact fitting the disciples. A prior technical pass does not override this correction.",
+      "evidence": "Owner correction relayed by parent task for exact v3 SHA."
+    },
+    {
+      "key": "rr-cloud-receives",
+      "sha256": "141462bdd8028ba24b98de13671a1484e52925f121de8a511bed22010e894f64",
+      "status": "rejected_by_owner",
+      "reason": "Original smiling Ascension expression rejected; tender downward attention to disciples requested.",
+      "evidence": "Parent relayed explicit owner rejection during visual review 3a; corrected v2 reviewed separately.",
+      "generated_file": "exec-89598e11-e86e-4a8f-8481-1c30324febc6.png"
+    },
+    {
+      "key": "net-02",
+      "sha256": "ce53a934b182ec156a73531c07391e5d4546f2df02e236f80e0e871ee05a9c9c",
+      "status": "rejected_by_owner",
+      "reason": "Original repeats central and back fisherman likeness; owner requested distinct people.",
+      "evidence": "generated-records/net-02-v2.json revision_reason records Wyatt identifying repeated fishermen.",
+      "generated_file": "exec-362c3383-35ac-4760-92c8-80f40fd36712.png"
+    },
+    {
+      "key": "mc-withered-hand",
+      "sha256": "d27618e4019f45d44801c2c06b5d552ba3467edcd39222f4cbd7bb69f52ce92d",
+      "status": "revision_required_by_reviewer_under_owner_instruction",
+      "reason": "The man's gaze at his restored hand is story-appropriate. Christ's gaze should settle on that man's face or restored hand; current upward direction feels detached.",
+      "evidence": "eye-contact-audit.json; independent reviewer applied Wyatt reciprocal-attention instruction. Not a separately stated owner rejection of this individual image."
+    },
+    {
+      "key": "mc-centurion-friends",
+      "sha256": "fe89dc98db7c31824d0f1051ee5d971f6c85027e7f06438cc540adfc8a2a34a7",
+      "status": "revision_required_by_reviewer_under_owner_instruction",
+      "reason": "The messenger looks toward Christ, but Christ appears to look over him rather than return his gaze.",
+      "evidence": "eye-contact-audit.json; independent reviewer applied Wyatt reciprocal-attention instruction. Not a separately stated owner rejection of this individual image."
+    },
+    {
+      "key": "tp-scribe-dialogue",
+      "sha256": "89f83d2ff34c6ef0749c0e9af617162fc497df1359f833eb12f56d2e0ff1aca5",
+      "status": "revision_required_by_reviewer_under_owner_instruction",
+      "reason": "Christ's head inclines toward the scribe, but the pupil direction remains upward; this weakens the intimate listening exchange.",
+      "evidence": "eye-contact-audit.json; independent reviewer applied Wyatt reciprocal-attention instruction. Not a separately stated owner rejection of this individual image."
+    },
+    {
+      "key": "mm-temple-compassion",
+      "sha256": "2a8489621f9c029c7f23f6d2f403c7b6f71f16e5f7e3051b00d0a028984df77d",
+      "status": "reviewer_revision_required_under_owner_instruction",
+      "reason": "This is a personal face-to-face companion scene, but Christ's pupils look over the other man's eyes.",
+      "evidence": "eye-contact-audit.json; focused review under Wyatt requirement, not an individual owner rejection."
+    }
+  ]
+}

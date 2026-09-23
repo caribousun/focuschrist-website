@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Minas01-v2/02/03/04 original-detail review with original01 rejection preserved, emphasizing equal starting allocations, illustrated trade and money retained in cloth.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0,
+    "rejectedOriginalsPreserved": 1
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "This is Luke's Minas/Pounds account, not Matthew's Talents; preserve distinct allocations and cloth rather than burial."
+  ],
+  "rejectedGenerations": [
+    {
+      "key": "minas-01",
+      "generationKey": "minas-01",
+      "status": "revise",
+      "sha256": "b5ef2f9be9880c4b9f8897d3772367de3604b04d4a8d3fd4fbbe19fe621a4603",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fda4d21a-2e40-48d3-ad05-a5caa2805a1d.png",
+      "alt": "A nobleman wearing a modern-looking leather satchel gives a money bag to servants with repeated headband faces.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/luke/19",
+          "Luke 19:12-13",
+          "12-13"
+        ]
+      ],
+      "findings": "Original01 rejected for visibly modern structured satchel and near-duplicate bearded headband servants. Superseded by01-v2; original hash not accepted."
+    }
+  ],
+  "entries": [
+    {
+      "key": "minas-01",
+      "generationKey": "minas-01-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "a6a647528f35a74e6006dbdb2705f9c4ce26a8fcc9b52303c841f6f5f2bbeb95",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3c7d6cd-e5e6-4708-b37e-d9d75fc40fbb.png",
+      "recommendedTitle": "Entrusted with money",
+      "alt": "A gray-haired nobleman in blue gives a tied money bag to a curly-haired servant in rust while four other servants stand nearby with bags.",
+      "caption": "Before leaving to receive a kingdom, a nobleman entrusts money to ten servants and tells them to trade until he returns. Each begins with one mina, and this partial group pictures their shared responsibility.",
+      "refs": [
+        [
+          "nt/luke/19",
+          "Luke 19:12–13",
+          "12-13"
+        ]
+      ],
+      "findings": "Five visible servants are a partial group, not claimed as allten. Revised left headband servant now clean-shaven and distinct from right bearded headband figure; modern satchel removed. Nobleman silver waves/short gray beard/blue robe and young curly rust servant established. Bag handoff and gazes credible, photographic detail.",
+      "conditions": [
+        "Only01-v2 accepted; original modern bag and duplicated-face rejection preserved.",
+        "Bags illustrate equal initial entrusted amounts, not the unequal five/two/one talents allocation; no literal bag size or coin count is equated with a mina."
+      ]
+    },
+    {
+      "key": "minas-02",
+      "generationKey": "minas-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "f759a306948d365a28cb2f50994176d840372d9c8db592f289723355c2da07c9",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5e39f93f-0e50-4c43-9633-c098656160bd.png",
+      "recommendedTitle": "Putting the money to work",
+      "alt": "The curly-haired servant in rust offers a coin into an older merchant's open palm across a market counter stacked with folded cloth.",
+      "caption": "The servants are charged to trade with what they have received, and later report what their money has gained. This cloth-market exchange is an illustration of that activity, not merchandise specified in the parable.",
+      "refs": [
+        [
+          "nt/luke/19",
+          "Luke 19:13, 15–19",
+          "13,15-19"
+        ]
+      ],
+      "findings": "Same curly-haired rust servant as01-v2. Bald gray-sided clean-shaven merchant distinct. Credible mutual eye contact and coin pinch over receiving palm; other hands and cloth contact coherent. Natural photographic surfaces, no modern bag.",
+      "conditions": [
+        "Generic imagined trade; do not claim exact purchase, selling price, profit or authenticated coin denomination.",
+        "Amounts in reports come from source, not visible one-coin exchange."
+      ]
+    },
+    {
+      "key": "minas-03",
+      "generationKey": "minas-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "c6a6e500655095ea67a8d5f3b0766c56180dacc5dfb41b662b0f965b12e19631",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-994b9027-49ec-4a6c-9ca9-1449e5f0ad21.png",
+      "recommendedTitle": "Money kept unused in cloth",
+      "alt": "The dark-haired servant in a striped outer garment holds an open cloth containing coins before the blue-robed nobleman.",
+      "caption": "Another servant returns the mina he has kept laid away in a cloth. His explanation reveals that the entrusted money was preserved unused rather than put to work.",
+      "refs": [
+        [
+          "nt/luke/19",
+          "Luke 19:20",
+          "20"
+        ]
+      ],
+      "findings": "Central dark swept-hair full-bearded servant from01-v2 retains cream tunic/striped dark garment; nobleman profile and blue trim continuous. Cloth corners supported plausibly by hands and coins rest within fabric. Gaze toward nobleman fits reporting. No buried chest or digging; distinct from Talents.",
+      "conditions": [
+        "Several illustrative coins represent money; their count does not define the monetary unit or change the one-mina account.",
+        "No burial, theft, loss or invented use of funds implied."
+      ]
+    },
+    {
+      "key": "minas-04",
+      "generationKey": "minas-04",
+      "status": "pass_with_caption_conditions",
+      "sha256": "d21c7c8575c42e81e11daf2e5a21c8a3dfdaa9a1cc42f21fd4b68a599809c520",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-37bcdefa-2eef-40e7-97e0-29a2f543be65.png",
+      "recommendedTitle": "An account on the nobleman's return",
+      "alt": "The rust-clothed servant speaks with open hands before the seated blue-robed nobleman, with several tied bags on the table and another servant standing behind.",
+      "caption": "After receiving the kingdom and returning, the nobleman calls the servants to learn what each has gained by trading. The meeting pictures that reckoning, with the results to be heard from those he entrusted.",
+      "refs": [
+        [
+          "nt/luke/19",
+          "Luke 19:15",
+          "15"
+        ]
+      ],
+      "findings": "Nobleman, rust servant and striped-clothed servant match earlier scenes. Mutual attention between seated nobleman and speaker; open palms, chin support and background hands coherent. Four visible bags generic resources, not claim of four minas or a specific profit. Photographic skin/cloth and quiet accounting scene.",
+      "conditions": [
+        "Do not read bag count as a numerical report or conflate first and second servants' separate returns.",
+        "Exact room, bags and attendance illustrate the reckoning; no allten-servants claim."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Three barren-fig originals viewed at original detail for sequence continuity and Luke 13:6–8 fit.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Unnamed characters and precise scenery are artistic visualization of Jesus' parable.",
+    "Technical review is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "barren-fig-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "2b097f4e7dd14073671ff9ba52f227fb6fb3909dd41f9905edcf4c749f24d14e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7597b90e-e31b-4daa-bb68-c3653f51731c.png",
+      "recommendedTitle": "Looking for fruit",
+      "alt": "An owner lifts the leaves of a fig tree while a gardener holding a long-handled tool watches nearby.",
+      "caption": "The owner looks among the leaves and finds no fruit. In Jesus' parable, his repeated search brings a serious question about the tree's place in the vineyard.",
+      "findings": "Broad lobed leaves support fig-tree depiction, with no identifiable fruit visible. Raised fingers meet foliage naturally; arm, head and upward searching gaze are coherent. Gardener, tool and rocky vineyard setting are plausible. Photographic skin, hair and cloth.",
+      "conditions": [
+        "Exact tree shape, palace-free vineyard scenery and gestures are imagined; do not claim a botanical cultivar or verified historical location."
+      ],
+      "refs": [
+        [
+          "nt/luke/13",
+          "Luke 13:6-7",
+          "6-7"
+        ]
+      ]
+    },
+    {
+      "key": "barren-fig-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "063cc6407758a399ae0d34776d22b1d0e444c38e4ab672ab562333ff94e20f36",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1c9c3b04-0c5c-4678-a728-4ff3c1f0a938.png",
+      "recommendedTitle": "The gardener asks for time",
+      "alt": "A gardener holding a wooden tool handle gestures toward the fig tree while its owner listens with a hand at his beard.",
+      "caption": "The gardener asks the owner to leave the tree for another year. His appeal includes a promise of work: digging around it and nourishing the soil.",
+      "findings": "Owner's receding gray hair, beard and burgundy wrap match scene 01. Gardener's gray beard, tan head wrap and olive tunic remain consistent. Reciprocal face-directed attention is credible; open palm, tool grip and beard hand are coherent. Same broad lobed fruitless tree and vineyard context.",
+      "conditions": [
+        "Do not describe the owner's listening pose as a recorded acceptance or announce a later outcome."
+      ],
+      "refs": [
+        [
+          "nt/luke/13",
+          "Luke 13:8",
+          "8"
+        ]
+      ]
+    },
+    {
+      "key": "barren-fig-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "1178f55dc361fc47830cfde75b0319643615af5c56603f6747638e1a8ab57aee",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1c40e654-bed8-4533-809a-dd28f4eb3e14.png",
+      "recommendedTitle": "The care the gardener proposes",
+      "alt": "A gardener works the soil around a fig tree with a hoe beside a basket of dark material.",
+      "caption": "The gardener's proposed care is pictured here: digging around the tree and adding nourishment. Jesus leaves its later fruitfulness unstated; the image visualizes the work promised in the appeal, not a reported outcome.",
+      "findings": "Gardener's face, head wrap, beard and olive robe preserve continuity. Both hands wrap coherently around a straight hoe handle; metal blade meets loosened soil plausibly. Bending posture, visible sandal and task-directed gaze are natural. Basket and dark material illustrate proposed nourishment without visible fruit or a transformed tree.",
+      "conditions": [
+        "Must retain the distinction between proposed care and a documented later event.",
+        "Do not identify the basket contents as a scientifically verified fertilizer or claim the tree subsequently bore fruit."
+      ],
+      "refs": [
+        [
+          "nt/luke/13",
+          "Luke 13:8",
+          "8"
+        ]
+      ]
+    }
+  ]
+}

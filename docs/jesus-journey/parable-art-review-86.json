@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent saved-art original-pixel, mapped-reference and current official-source reviewer",
+  "scope": "Fresh review86 of three saved originals; no lost review assumed. No artwork generated, imported or altered.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 1
+  },
+  "entries": [
+    {
+      "key": "bb-jared-finger",
+      "generationKey": "bb-jared-finger",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3d9bc247-aa2d-4b28-90fb-664b6546514a.png",
+      "sha256": "9ed516be1b77a99adefdee79bf6b8dd812e29b12048ac808d817e1ceabf11ea6",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "He sees the finger of the Lord",
+      "alt": "The brother of Jared recoils beside clear stones as a finger touches one shining stone.",
+      "caption": "The brother of Jared draws back as he sees the Lord's finger touch a stone. Ether records his fear before the Lord reveals Himself more fully.",
+      "refs": [
+        [
+          "bofm/ether/3",
+          "Ether 3:6–10",
+          "6-10"
+        ]
+      ],
+      "findings": "Original pixels directly compared with accepted preparation original and mapped Book of Mormon revelation reference. Curled hair, rope headband, brow, nose, beard, face and rough garments preserve the brother of Jared. His two hands are separate from the touching hand. Natural human skin and coherent index finger/hand emerge from the veil; no face, torso, scars or blood. Four foreground stones are visible; composition is a partial crop, not a claim that only four were prepared. One touched stone glows. Strong foreground perspective enlarges the hand relative to the distant man, but the hand is proportionate to the nearby stone and has normal human anatomy.",
+      "conditions": [
+        "Use caption describing recoil, not a visually completed fall. Keep this finger encounter before the full revelation; do not claim Christ is fully visible.",
+        "Sixteen stones are supplied by Ether 3:1; do not claim the cropped picture displays all sixteen. Cloudlike atmosphere and exact mountain appearance are artistic staging, not an assertion that Ether 3:6 specifies a cloud. Premortal encounter: no Resurrection scars.",
+        "Technical pixel and source review is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "generated-records/bb-stones-prepared.json",
+        "assets/page-art/book-of-mormon-stories/01-jared-redeemer-full.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/3?lang=eng"
+      ]
+    },
+    {
+      "key": "bn-nephi-baptizes",
+      "generationKey": "bn-nephi-baptizes",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ae286859-b224-4b3f-bb9a-12d4edefd073.png",
+      "sha256": "3483f9341c4cbeb86a04bab10e1a3127fcef5afa14dfdc9e40b302c1c1472673",
+      "status": "revise",
+      "recommendedTitle": "Into the water",
+      "alt": "Nephi supports a younger disciple in the water after baptism.",
+      "caption": "After his own baptism, Nephi baptizes the disciples Jesus has chosen.",
+      "refs": [
+        [
+          "bofm/3-ne/19",
+          "3 Nephi 19:10–12",
+          "10-12"
+        ]
+      ],
+      "findings": "Actual mapped Nephi reference on the right of 11-nephi-called-full.webp compared directly: clean-shaven lined face, nose, jaw, gray at temples and tied hair are recognizable. Photographic water, wet opaque garments, supportive forearm grip and back-support arm are coherent. Younger recipient is distinct and looks up at Nephi. However Nephi retains an upward/horizontal gaze above the recipient rather than looking down to meet him; this does not meet the required attentive interpersonal gaze for this close interaction.",
+      "conditions": [
+        "Narrow repair only: lower Nephi's eyes and, if necessary, tilt his head slightly toward the younger recipient so their gazes meet. Preserve Nephi identity, recipient, hands, support anatomy, water, clothing and complete scene. Do not add Jesus or change baptism sequence.",
+        "Nephi's exact age, recipient identity, location and garments remain interpretation; do not assign a named disciple or exact age.",
+        "Technical pixel and source review is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/page-art/book-of-mormon-stories/11-nephi-called-full.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng"
+      ]
+    },
+    {
+      "key": "bn-cloud-departure",
+      "generationKey": "bn-cloud-departure",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c3fe2b7d-f4b3-4930-81b6-aba515ac7968.png",
+      "sha256": "d4bfec5728bf1e451a84440a00d54f36c9bd1d2286d5e9a39dcddb2c2016078f",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Overshadowed as He departs",
+      "alt": "People look upward as a dense cloud obscures the gathering ahead of them.",
+      "caption": "A cloud hides Jesus from the multitude as He departs. The disciples bear witness that He ascends into heaven.",
+      "refs": [
+        [
+          "bofm/3-ne/18",
+          "3 Nephi 18:38–39",
+          "38-39"
+        ]
+      ],
+      "findings": "Original pixels show photographic foreground faces and woven clothing, natural upward wonder, coherent visible hands and a cloud obscuring the right side. No Christ, body, face or hand is visible in the cloud. Foreground people look into the obscured distance; the picture does not falsely show a visible Acts-style ascending figure. No specific named character identity is asserted.",
+      "conditions": [
+        "Do not claim the foreground multitude sees Jesus ascend; that witness belongs to the disciples in the scripture. Exact people, dress, landscape and arrangement are interpretation.",
+        "Technical pixel and source review is not owner approval or browser verification."
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng"
+      ]
+    }
+  ]
+}

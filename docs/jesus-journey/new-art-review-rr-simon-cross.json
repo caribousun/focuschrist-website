@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rr-simon-cross",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rr-simon-cross",
+      "generationKey": "rr-simon-cross",
+      "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rr-simon-cross-20260923.png",
+      "sha256": "008ac70a34d2999b8e97d8ebba4db540162e09f245e96fb666d2025fe08c3330",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Bearing the cross behind Jesus",
+      "alt": "Simon carries a heavy wooden beam behind Jesus while women and a guard follow along the road.",
+      "caption": "Simon bends beneath the beam and follows Jesus along the road. Behind them, women mourn as the Savior continues toward Calvary.",
+      "refs": [
+        [
+          "nt/luke/23",
+          "Luke 23:26–27",
+          "26-27"
+        ]
+      ],
+      "findings": "Christ directly compared to canonical face: recognizable brows, nose, beard and hair remain through weary earnest expression. He looks ahead along the route, appropriate for walking rather than conversation; Simon looks toward footing under load. Simon's separate hands grip the beam and shoulders visibly bear weight, bent knee consistent with effort. Photographic sweat, cloth and timber, restrained non-graphic scene; following women and guard secondary.",
+      "conditions": [
+        "Crossbeam construction, Simon's appearance, ages, street and guard are interpreted; Luke establishes bearing the cross behind Jesus, not a precise construction or Simon's conversion. No invented conversation or reciprocal gaze necessary for this walking task.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/23?lang=eng"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Blind Guides01, Mote/Beam01 and Tree/Fruit01–02 original-detail review for dignity, anatomy, symbolic object comparison, fig plausibility and source boundaries.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Illustrative comparisons must not become unsupported historical, medical or botanical claims."
+  ],
+  "entries": [
+    {
+      "key": "blind-guides-01",
+      "generationKey": "blind-guides-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "63e3bdcff284462566c0163d6b8ec047c5d3e9e77e077ed76ca349055298202e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7be22698-9718-42d9-b397-a9b13b4a1225.png",
+      "recommendedTitle": "The need for a trustworthy guide",
+      "alt": "Two travelers move beside a rough ditch; the older man holds a wooden staff while the younger man behind him rests a hand on his upper arm.",
+      "caption": "Jesus asks whether a blind person can lead another blind person without both falling into a ditch. The travelers illustrate His comparison about guidance, without equating physical disability with moral failure.",
+      "refs": [
+        [
+          "nt/luke/6",
+          "Luke 6:39",
+          "39"
+        ]
+      ],
+      "findings": "Distinct younger dark-haired and older gray-haired travelers rendered with dignity; no fall or injury. Staff grip, upper-arm contact, walking legs and sandals credible. Eyes appear downcast but cannot establish visual diagnosis; alt properly describes observable action. Photographic skin, garments and terrain.",
+      "conditions": [
+        "Do not diagnose blindness from pixels or characterize blindness as personal moral inferiority.",
+        "No completed fall, rescue or injury is shown; literal travelers are an illustration of Jesus' question."
+      ]
+    },
+    {
+      "key": "mote-beam-01",
+      "generationKey": "mote-beam-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "a9cc5c7b9ba06b00d29bfeb06a1eeca6fe82d3f1fee68b469bec1d928a5df84e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-626c6111-12d2-4687-b73e-40dafdcabd17.png",
+      "recommendedTitle": "The mote and the beam",
+      "alt": "A large rough wooden beam rests on a workshop bench beside a tiny wood splinter displayed on dark cloth.",
+      "caption": "Jesus contrasts noticing a mote in another person's eye with overlooking a beam in one's own. The large timber and tiny splinter picture His call to examine ourselves before correcting someone else.",
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:3-5",
+          "3-5"
+        ]
+      ],
+      "findings": "Clear proportional comparison of huge timber and small splinter. Natural wood grain, cracks, shavings and bench support. No human eye, injury, embedded labels or literal impossible beam penetration; symbolic still life successfully avoids bodily harm depiction.",
+      "conditions": [
+        "Workshop arrangement illustrates the verbal comparison; not an event Jesus is recorded arranging.",
+        "Objects' sizes are illustrative, not exact source measurements."
+      ]
+    },
+    {
+      "key": "tree-fruit-01",
+      "generationKey": "tree-fruit-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "17091554a09c3c4653d9a91ad9088d0cbd6c44205356d31123086939c25a678d",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-47c7d6fa-58d1-43d2-a7b9-baf651c0491f.png",
+      "recommendedTitle": "A tree and its fruit",
+      "alt": "Green and purple figs hang from a branch among broad lobed leaves, with a sunlit hillside beyond.",
+      "caption": "Jesus teaches that a good tree does not bring forth corrupt fruit, nor a corrupt tree good fruit. The fig-bearing branch pictures the connection between a tree and what it produces.",
+      "refs": [
+        [
+          "nt/luke/6",
+          "Luke 6:43",
+          "43"
+        ]
+      ],
+      "findings": "Recognizable fig form with broad lobed palmate-veined foliage and green/purple pear-shaped fruit attached to woody branch. No visible rot or impossible mixed species. Photographic fruit skin, leaf veins and bark, plausible overall botanical illustration.",
+      "conditions": [
+        "Image does not establish taste, ripeness of every fig, exact cultivar or authenticated historical tree.",
+        "The fruit comparison is teaching imagery, not a diagnosis of people's worth from appearance."
+      ]
+    },
+    {
+      "key": "tree-fruit-02",
+      "generationKey": "tree-fruit-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "562d0ec5f0c3c313643430e108eb54cac6a0f656b837fcacab43fd217b7bbb5e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-07c715ab-ae9c-4294-b729-5da4f1cc2b79.png",
+      "recommendedTitle": "Figs are not gathered from thorns",
+      "alt": "A thorn-covered shrub with sparse small leaves grows among rocks on a dry hillside; no figs or grapes are visible.",
+      "caption": "Jesus says that each tree is known by its fruit: figs are not gathered from thorns, nor grapes from a bramble. The thorny branches illustrate the contrast with the fruit-bearing tree.",
+      "refs": [
+        [
+          "nt/luke/6",
+          "Luke 6:44",
+          "44"
+        ]
+      ],
+      "findings": "Coherent branching thorn shrub, sparse leaves and natural dry landscape. No visible figs or grapes; no mislabeled fruit object. Photographic bark and thorns; species kept generic rather than unsupported identification.",
+      "conditions": [
+        "Absence of figs or grapes is the relevant visible distinction; do not claim every thorny species is incapable of producing any fruit.",
+        "Specific shrub species and location are not authenticated or required by the source."
+      ]
+    }
+  ]
+}

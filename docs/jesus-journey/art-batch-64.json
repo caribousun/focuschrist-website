@@ -1,0 +1,238 @@
+{
+  "mm-john-questions": {
+    "title": "What should we do?",
+    "alt": "John the Baptist listens to a man speaking with open hands beside a river, while an older man waits behind him.",
+    "caption": "People bring John a practical question about how to live. His answers turn repentance toward sharing, honesty and the fair treatment of others.",
+    "refs": [
+      [
+        "nt/luke/3",
+        "Luke 3:10–14",
+        "10-14"
+      ]
+    ],
+    "owner": "jesus-christ/mortal-ministry.html",
+    "section": "baptism",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mm-john-questions-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mm-john-questions-960.webp",
+    "original": "mm-john-questions.png",
+    "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-53f606d4-e20c-40d9-bf3b-d4573923c4f9.png",
+    "original_sha256": "0ffffbc8a844ff3e79818927a5ef85eb2c99d52d375ebfbfba40706653b50894",
+    "prompt": "Precise edit: only rear-right questioner becomes distinctly older broad-faced clean-shaven gray-haired man, natural wrinkles, attentive gaze toward John; preserve John and primary questioner exact faces, mutual gaze, hands, pose, all scene composition and photographic realism. 1536x1024.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/.codex/generated_images/01a0cbb6-1ea1-7021-9571-e99065c12b4f/exec-be1f23a9-2b9f-436d-a3a6-61c77cecefbf.png"
+    ],
+    "review_record": "parable-art-review-87.json"
+  },
+  "mm-transfiguration": {
+    "title": "Arise, and be not afraid",
+    "alt": "Jesus touches Peter's shoulder as Peter, James and John look up from the rocky mountainside.",
+    "caption": "Jesus comes to the frightened disciples and touches them. As Peter looks up, the Savior's quiet attention accompanies His invitation to rise without fear.",
+    "refs": [
+      [
+        "nt/matt/17",
+        "Matthew 17:6–8",
+        "6-8"
+      ]
+    ],
+    "owner": "jesus-christ/mortal-ministry.html",
+    "section": "transfiguration",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mm-transfiguration-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mm-transfiguration-960.webp",
+    "original": "mm-transfiguration.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-83b8d151-f214-4888-a9ea-9ecd72dd8a10.png",
+    "original_sha256": "947c7d790fed6ee046aa42a0785726ee344f94dd69f00be0ae10f387231c066e",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. On a rocky high slope, Peter, James and John are low in the left foreground after the bright cloud. Jesus approaches from the right in luminous yet textured white clothing and gently touches the nearest disciple as He tells them to rise. Choose Matthew 17:7–8, after Moses and Elias are no longer visible. His face remains the approved identity with compassionate attention. No heavenly second face, floating prophets, crown or nail marks. Show clear complete limbs and a modest cloud, not an explosion. Reconcile apostle references before generation. The action is reassurance after fear, not another hillside sermon. Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt. This is BEFORE Resurrection, no nail marks. Identity references: image1 sole canonical Jesus facial identity, change broad smile to quiet compassionate reassurance with slightly parted lips; image2 ONLY the first THREE men from left: Peter far left curly brown hair full brown beard, James second left longer dark beard, John third left short dark beard and taupe wrap. Ignore the two modern men completely. Exactly four people, Jesus and these three mortal adult apostles, exact ages unrecorded. Preserve each distinct face. Jesus lightly touches Peter's shoulder; Peter raises his face and looks directly into Jesus eyes, Jesus looks into Peter eyes. James and John remain low nearby in frightened attentive postures. Convincing candid live action photograph, not devotional painting.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png",
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/page-art/church-history/melchizedek-priesthood.webp"
+    ],
+    "review_record": "new-art-review-mm-transfiguration.json"
+  },
+  "mc-jairus-daughter": {
+    "title": "A child rises at His word",
+    "alt": "Jesus holds the hand of Jairus's daughter as she sits upright, with her parents and three disciples nearby.",
+    "caption": "The twelve-year-old girl sits upright and meets Jesus's eyes as He holds her hand. Her parents and the three disciples witness the life He restores.",
+    "refs": [
+      [
+        "nt/mark/5",
+        "Mark 5:37–43",
+        "37-43"
+      ]
+    ],
+    "owner": "jesus-christ/miracles-and-compassion.html",
+    "section": "jairus",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mc-jairus-daughter-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mc-jairus-daughter-960.webp",
+    "original": "mc-jairus-daughter.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-bbfc2896-86b0-455b-854c-cfe0eb16164b.png",
+    "original_sha256": "c3c4f756fb9f003cfff75999ae0e3df8f6d9dc83af14d90625360681bd70ad25",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. A twelve-year-old girl, unmistakably a child rather than a toddler or adult, sits at the edge of low bedding on the right, feet moving toward the floor. Jesus at left holds her hand with an anatomically simple grip and looks warmly at her. Her mother stands close behind; her father and three distinct disciples remain by the doorway if all are visible. The complete witness group is Peter, James, John and the parents, with Jesus and the girl. No additional mourners inside, corpse shroud, glowing body or graphic details. Use modest clothing and a muted teal mantle. Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt. BEFORE Resurrection, no nail marks. Image1 sole Christ identity, soften smile to compassionate warmth and visibly meet twelve-year-old girl's eyes; her eyes meet His. Image2 ONLY named apostles among first THREE men from left: Peter far left curly brown hair brown full beard, James second left longer dark beard, John third left short dark beard taupe wrap; exclude the two modern men. Exactly seven people: Jesus, twelve-year-old child, mother immediately behind her, father and those three distinct apostles near doorway. Father is a distinct middle-aged man with close cropped greying hair and narrow pointed beard; not resembling apostles or Christ. Preserve each reference face; everyone anatomically distinct. Girl has childlike face and age-appropriate body, not toddler or adult, simple pale linen dress, modest clothing. Jesus muted teal mantle, kneeling to child eye level at left while she moves from bed to floor, single simple hand grip; human relief and wonder, photographic daylight.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png",
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/page-art/church-history/melchizedek-priesthood.webp"
+    ],
+    "review_record": "new-art-review-mc-jairus-daughter.json"
+  },
+  "rr-sleeping-disciples": {
+    "title": "Could ye not watch with me?",
+    "alt": "Jesus speaks earnestly to Peter beneath olive trees while James and John sleep behind them.",
+    "caption": "Jesus returns from prayer and finds the disciples asleep. Peter looks up as the Savior calls him to watch and pray.",
+    "refs": [
+      [
+        "nt/matt/26",
+        "Matthew 26:36–41",
+        "36-41"
+      ]
+    ],
+    "owner": "jesus-christ/redeemer-and-risen-lord.html",
+    "section": "gethsemane",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rr-sleeping-disciples-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rr-sleeping-disciples-960.webp",
+    "original": "rr-sleeping-disciples.png",
+    "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rr-sleeping-disciples-20260923.png",
+    "original_sha256": "b37e9001f0cc6e3790510ca1dc2d89dc0598e446a65885dc90a05a1663f10885",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation.\nAt night beneath olive trees, Jesus stands at the left and leans slightly toward Peter, who has fallen asleep seated against a rock at lower right. James and John sleep farther behind in distinct positions. Christ opens one hand as He speaks, with a weary, earnest face and His eyes on Peter. Peter begins to look up sleepily. No angel, isolated kneeling-prayer pose, healing touch, soldiers, Judas or arrest torches. Soft moonlight must still show real faces and limbs. All three apostles need consistent identities. This is the return from prayer, not another version of the existing Gethsemane hero.\nThis moment is not post-Resurrection. Do not add healed Resurrection nail marks. For between-death-and-Resurrection spirit ministry, do not mistake date of vision for date of represented event; keep hands naturally unobtrusive if phase depiction needs owner clarification.\nWyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt.\nReference1 locks Christ face only, change smile to exhausted sorrow and earnest concern. Reference2 ONLY first three men from left: Peter far left brown curly hair and beard; James second left dark beard; John third left dark short beard and taupe wrap. Do not include modern-clothed men. Preserve recognizable distinct faces. All apostles adults, exact ages unknown. Peter awake just enough to look directly into Jesus's eyes; James and John asleep eyes closed, no mutual gaze requirement for sleepers. Live action photograph, no text.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\page-art\\church-history\\melchizedek-priesthood.webp"
+    ],
+    "review_record": "new-art-review-rr-sleeping-disciples.json"
+  },
+  "bn-nephi-baptizes": {
+    "title": "Into the water",
+    "alt": "Nephi meets a younger disciple's eyes while supporting him in the water after baptism.",
+    "caption": "Water runs from the young disciple's robe as Nephi steadies him. After receiving baptism himself, Nephi baptizes those Jesus has chosen.",
+    "refs": [
+      [
+        "bofm/3-ne/19",
+        "3 Nephi 19:10–12",
+        "10-12"
+      ]
+    ],
+    "owner": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "section": "next-morning",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bn-nephi-baptizes-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bn-nephi-baptizes-960.webp",
+    "original": "bn-nephi-baptizes.png",
+    "generated_path": "C:/Users/wyatt/.codex/generated_images/01a0ceb7-90b1-7151-8e23-00a02bf70f7b/exec-0fa43fd2-4a11-4834-8503-be48765cbda5.png",
+    "original_sha256": "8194c19b2ab56bf78bf2235efcc9171a70b67b77dfd813ad30d872eb3a394f0b",
+    "prompt": "Precise eye-contact correction only: lower older Nephi eyes and gently incline head toward younger disciple eyes. Preserve exact Nephi identity, younger man, supportive hands and contact, all clothing, water, observers, daylight, composition, photographic realism. 1536x1024.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/.codex/generated_images/01a0cbb6-1ea1-7021-9571-e99065c12b4f/exec-ae286859-b224-4b3f-bb9a-12d4edefd073.png"
+    ],
+    "review_record": "new-art-review-bn-nephi-baptizes-v2.json"
+  },
+  "tp-zacchaeus-response": {
+    "title": "A promise to make things right",
+    "alt": "Zacchaeus speaks with open hands as Jesus listens across a simple meal.",
+    "caption": "Zacchaeus stands before Jesus with open hands and a promise: to share with the poor and repay those he has wronged. The Savior listens as welcome becomes a changed way of living.",
+    "refs": [
+      [
+        "nt/luke/19",
+        "Luke 19:5–10",
+        "5-10"
+      ]
+    ],
+    "owner": "jesus-christ/teachings-and-parables.html",
+    "section": "rich-man",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/tp-zacchaeus-response-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/tp-zacchaeus-response-960.webp",
+    "original": "tp-zacchaeus-response.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-f8d07ed5-af2c-4b65-a8fe-3a2bfbc53b45.png",
+    "original_sha256": "b2ac11fa11a265c0992d9f91f71352ad0e3a53d16d7d7a7ac13e5a1293c1b493",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. In a modest house, Zacchaeus stands at the left speaking earnestly to Jesus seated at the right. A simple low meal remains secondary. Zacchaeus has open hands but is not already distributing counted money: Luke records his declared commitment, not the completed repayments. Christ listens with serious hope, wearing dark sage. Reconcile Zacchaeus’s identity from the existing tree-call artwork before generation; do not invent a second approved actor. Avoid a central tree, public sermon or conversion spectacle. This is the later conversation about generosity and restitution in a different setting. Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt. BEFORE Resurrection, no nail marks. Identity image1 is sole Jesus face; adapt expression to serious compassionate attentive hope, NOT broad smiling. Image2 provides Zacchaeus only in foreground upper-right BACK with tan headwrap and russet robe, short stocky build. The source offers no front face; interpret him as a distinct short mature adult with rounder broad face, small neatly trimmed salt-and-pepper beard, deep brown eyes, keep tan wrap russet robe. Do NOT use any background crowd face as Zacchaeus or duplicate Jesus. Luke19 adult chief tax collector short in stature; precise age unknown. Exactly two people. Zacchaeus standing at left open hands speaks earnestly into Jesus eyes at right; Jesus seated looks up into his eyes. Low simple meal secondary, no coins transferred. Convincing live-action photograph with textured daylight and real skin, ordinary first-century domestic room.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png",
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/page-art/art-study/full/shepherd-calls-zacchaeus.webp"
+    ],
+    "review_record": "new-art-review-tp-zacchaeus-response.json"
+  },
+  "tp-passover-water-carrier": {
+    "title": "Following the sign Jesus gave",
+    "alt": "Peter and John follow a man carrying a clay water jar toward a doorway.",
+    "caption": "The water jar rests securely in the man's arms as Peter and John follow him through the lane. Jesus's simple instruction leads them toward the place where they will prepare the Passover.",
+    "refs": [
+      [
+        "nt/luke/22",
+        "Luke 22:7–13",
+        "7-13"
+      ]
+    ],
+    "owner": "jesus-christ/teachings-and-parables.html",
+    "section": "washing-feet",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/tp-passover-water-carrier-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/tp-passover-water-carrier-960.webp",
+    "original": "tp-passover-water-carrier.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-c5a8349a-64bc-431e-ab1e-06e8f00a8edd.png",
+    "original_sha256": "743c2e8841335327e214ced5426ada7a477565ec935a2d7dae97bd77e6ae1c33",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. A man carrying a large clay water jar walks at the right through a Jerusalem lane. Peter and John follow several paces behind on the left, watching the route rather than confronting him. The jar rests securely against a complete forearm with the opposite hand steadying it. Modest stone houses and an open doorway lie ahead. Jesus is absent. Use plain first-century tunics and daylight. The carrier is unnamed. Reconcile existing apostle identities, with no invented exact ages. This is the preparation journey, not the meal or footwashing. Reference ONLY apostles Peter far left and John THIRD from left; Peter curly brown hair full brown beard and ivory flax robe, John dark shorter beard dark wavy hair taupe wrap. Preserve their distinct recognizable faces. Ignore James second man and the two modern men. Exactly THREE people: Peter, John, unnamed water carrier. Christ absent. Peter and John mature adults precise ages unknown. Carrier completely different face: older clean-shaven olive-skinned man with short graying hair and simple pale headcloth, natural dark rust tunic. Large believable earthenware jar held securely by forearm underneath and other hand steadying neck. Walk toward foreground right doorway, apostles several paces behind left, three-quarter candid view enough faces clear. Their gazes follow carrier and doorway, appropriate task-oriented attention not portraits. Jerusalem modest first century stone lane, warm daylight, tangible dust and fabric, live action photograph.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/page-art/church-history/melchizedek-priesthood.webp"
+    ],
+    "review_record": "new-art-review-tp-passover-water-carrier.json"
+  },
+  "rr-simon-cross": {
+    "title": "Bearing the cross behind Jesus",
+    "alt": "Simon carries a heavy wooden beam behind Jesus while women and a guard follow along the road.",
+    "caption": "Simon bends beneath the beam and follows Jesus along the road. Behind them, women mourn as the Savior continues toward Calvary.",
+    "refs": [
+      [
+        "nt/luke/23",
+        "Luke 23:26–27",
+        "26-27"
+      ]
+    ],
+    "owner": "jesus-christ/redeemer-and-risen-lord.html",
+    "section": "simon",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rr-simon-cross-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rr-simon-cross-960.webp",
+    "original": "rr-simon-cross.png",
+    "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rr-simon-cross-20260923.png",
+    "original_sha256": "008ac70a34d2999b8e97d8ebba4db540162e09f245e96fb666d2025fe08c3330",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation.\nSimon of Cyrene at center left carries a rough wooden crossbeam across his shoulders, hands and weight bearing clearly readable. Jesus walks ahead at the right, weary but upright, with His approved face visible in three-quarter view. A guard and following women remain secondary at a distance. Keep the depiction restrained, fully clothed and without graphic wounds. Cross construction is an artistic choice, not settled by Luke’s wording alone. No claim of Simon’s unrecorded conversion. Use a physically credible load, not an enormous full cross unsupported by the body.\nThis moment is not post-Resurrection. Do not add healed Resurrection nail marks. For between-death-and-Resurrection spirit ministry, do not mistake date of vision for date of represented event; keep hands naturally unobtrusive if phase depiction needs owner clarification.\nReference1 Christ identity precisely preserved, exhaustion and solemn determination rather than smile. Christ looks along the way ahead, task-directed gaze appropriate to procession, no forced look at viewer. Simon a distinct adult North African man, exact ethnicity/age unrecorded, interpreted appearance not borrowed from Christ. Crossbeam rests across upper back both shoulder muscles; arms bent, hands gripping top beam either side, weight visibly carried, bent knees and torso. Entire beam and essential hands visible. Simple Roman guard in distant background, daylight, photographic pores/cloth and wood. All fully clothed. 1536x1024.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "new-art-review-rr-simon-cross.json"
+  }
+}

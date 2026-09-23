@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "entries": [
+    {
+      "key": "mc-withered-hand",
+      "version_key": "mc-withered-hand-v2",
+      "status": "revise",
+      "sha256": "51796db0cdd926eb37b11646191143ec33ca3a44a331ff27cdffb13ca5a59b5e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d6d285f1-fcad-49c5-8f84-a9b525c1d634.png",
+      "alt": "Jesus watches beside a man who holds up and examines his restored hand in a synagogue.",
+      "caption": null,
+      "findings": [
+        "Head inclination changed, but Christ's pupils still appear up/right beyond the bowed man's eye line. They do not clearly settle on his face or restored hand.",
+        "Approved identity, quiet expression, man's hand and synagogue composition remain credible."
+      ],
+      "action": "Aim Christ's eyes visibly down-right at the raised restored hand; preserve the man's gaze at that hand. Do not import this revision.",
+      "refs": [
+        [
+          "nt/mark/3",
+          "Mark 3:1–5",
+          "1-5"
+        ]
+      ]
+    },
+    {
+      "key": "mc-centurion-friends",
+      "version_key": "mc-centurion-friends-v2",
+      "status": "pass",
+      "sha256": "753ff85a36c03c199d2100b9e6c11e90e6fa6dde0da29e859e4be08707a1a5be",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-12cd40be-5d02-40ed-a676-04a5dfa89b26.png",
+      "alt": "Jesus listens to two men on a village street, meeting the central messenger's gaze as the man gestures.",
+      "caption": "Friends bring the centurion's message to Jesus. Luke places the conversation with these messengers, while the centurion expresses trust in the authority of Jesus' word.",
+      "findings": [
+        "Christ's head and visible pupils now turn right/down toward the central messenger's eyes. The messenger looks up to Him; attention is reciprocal.",
+        "Canonical identity, natural listening expression, hands and secondary faces remain coherent."
+      ],
+      "refs": [
+        [
+          "nt/luke/7",
+          "Luke 7:6–10",
+          "6-10"
+        ]
+      ]
+    },
+    {
+      "key": "tp-scribe-dialogue",
+      "version_key": "tp-scribe-dialogue-v2",
+      "status": "pass",
+      "sha256": "244bb2b13293b6949b6319f4a408f0b95934855c353e4b242d6be924d7bf782c",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0cb1ac34-1c5a-4fe8-bc35-caf7b0bbbbb3.png",
+      "alt": "Jesus and a seated scribe face one another in conversation as the scribe gestures with an open hand.",
+      "caption": "Jesus and a scribe discuss love for God and neighbor. Their attentive exchange illustrates the conversation recorded in Mark, with the setting and poses imagined.",
+      "findings": [
+        "Lowered head and eyes now align with the scribe's eyes. The former upward look over him is corrected.",
+        "Canonical likeness, attentive expression, hands, scroll and distinct secondary figures are preserved."
+      ],
+      "refs": [
+        [
+          "nt/mark/12",
+          "Mark 12:28–34",
+          "28-34"
+        ]
+      ]
+    }
+  ]
+}

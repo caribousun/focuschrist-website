@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "filesChanged": [
+    "docs/jesus-journey/pages.json",
+    "docs/jesus-journey/parable-art-plan.json"
+  ],
+  "beforeSha256": {
+    "pages.json": "7c06a9f043726153afbf6d5354ebccca2e8a616c5c47bb55620571057b273aed",
+    "parable-art-plan.json": "7250c84e9153718bdd01db8dbbe2642880efcfcbb845294771af6dd860b62fd6"
+  },
+  "afterSha256": {
+    "pages.json": "66b593b8dd842a8da6998e6a5f415d61c08c57bef69a447b7e48a68f10d1d31d",
+    "parable-art-plan.json": "3d3343b16210d2853ddf240e9f3f7297645933f446bc7bdf9c4b4bf52691e1ac"
+  },
+  "snapshots": [
+    "lazarus-minas-door-before-pages.json",
+    "lazarus-minas-door-before-parable-art-plan.json"
+  ],
+  "overrides": [
+    {
+      "key": "rich-man-lazarus-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "rich-man-lazarus-02",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "rich-man-lazarus-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "minas-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "minas-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "minas-04",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "minas-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2
+    },
+    {
+      "key": "doorkeeper-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "doorkeeper-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "doorkeeper-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2
+    }
+  ],
+  "registrySectionChangesRequired": [
+    {
+      "key": "rich-man-lazarus-02",
+      "sectionId": "setting"
+    },
+    {
+      "key": "rich-man-lazarus-03",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "minas-04",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "doorkeeper-03",
+      "sectionId": "story-and-teaching"
+    }
+  ],
+  "sourceChange": {
+    "key": "doorkeeper-03",
+    "refs": [
+      [
+        "nt/mark/13",
+        "Mark 13:34-37",
+        "34-37"
+      ]
+    ],
+    "fields": "refs, sourceSceneDescription and corresponding generationPrompt range"
+  },
+  "proseAddition": {
+    "url": "/jesus-christ/parables/minas.html",
+    "sectionId": "receiving-the-word",
+    "position": "First paragraph before existing interpretation",
+    "text": "The nobleman orders the unused pound taken from the servant and given to the one who has ten. The closing words also command that the opponents who rejected his rule be brought before him and slain. Luke records that command without narrating its execution; these severe features belong to the story Jesus tells, not to instructions for His hearers to harm others.",
+    "source": "Luke19:24-27, within unchanged sectionref11-27",
+    "scope": "Commands distinguished from narrated execution; no endorsement of violence."
+  },
+  "checks": {
+    "allPreviousNonArtPageDataUnchanged": true,
+    "allOtherPagesUnchanged": true,
+    "allOtherPlanEntriesUnchanged": true,
+    "tenExactPositionsVerified": true
+  },
+  "noRegistryBuildImport": true,
+  "durabilityNote": "Prose addition is in canonical pages model as requested; an explicit full assembly from external reviewed prose inputs may require copying this same addition to that authoritative input. No external prose input modified in this scope."
+}

@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Wedding Places 01–03 inspected at original detail for three core identities, distinct honored elder, interaction, anatomy and Luke14:7–10 teaching boundaries.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Fictional people and settings illustrate Jesus' wedding comparison; no actual wedding attended by Jesus or identified historical faces are claimed."
+  ],
+  "entries": [
+    {
+      "key": "wedding-places-01",
+      "generationKey": "wedding-places-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "cbf6831bf3ff9710de166bcd4efb52da47f329a66aabb8ecab835128c73e6b46",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-577b1d8b-2d24-4aa7-b480-e10b20647338.png",
+      "recommendedTitle": "Choosing a place of honor",
+      "alt": "A dark-bearded guest in blue rests his hand on a prominent patterned cushion while a younger guest in brown attends to a lower place beside the table and an older host stands behind.",
+      "caption": "Jesus notices how guests choose places of honor and teaches them about humility. This imagined wedding gathering introduces the contrast between seeking prominence and taking a lower place.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:7",
+          "7"
+        ]
+      ],
+      "findings": "Distinct core identities established: bald gray-bearded host in striped mantle, dark curly-haired blue-clothed guest, young clean-shaven curly-haired brown-clothed guest. Cushion contact and relaxed hands are coherent. Gaze toward seating is appropriate for choosing places; no forced reciprocal eye contact is needed. Photographic skin, textiles and food; layout readable as a banquet illustration.",
+      "conditions": [
+        "Luke14:7 records the occasion for the teaching; pictured people are invented for the wedding comparison, not portraits of guests at the actual meal Jesus attended.",
+        "Specific cushion arrangement, clothing and menu are illustrative, not authenticated seating customs or moral judgments about wealth."
+      ]
+    },
+    {
+      "key": "wedding-places-02",
+      "generationKey": "wedding-places-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "715bb8bdaa369583937f0c9b4217c1a3bbe015efe613a775762327bc1eb4178c",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e88a36a6-bef9-4455-a8cb-1444033b651c.png",
+      "recommendedTitle": "Asked to give up the higher place",
+      "alt": "The older host gestures beside the table as the blue-clothed guest turns toward him with a hand on the cushion; a gray-haired guest in green waits behind the host.",
+      "caption": "In Jesus' example, someone who takes the highest place may be asked to yield it to a more honored guest. The host's request exposes the shame of claiming an honor that was never offered.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:8-9",
+          "8-9"
+        ]
+      ],
+      "findings": "Host's bald crown, gray beard and striped mantle and blue guest's face, beard and embroidered garment match scene01. New honored elder has distinct darker complexion, short gray hair and clean-shaven face. Host and blue guest direct attention toward one another. Host open palm, belt-side hand, elder clasp and cushion-bracing hand are credible; bent posture can read as preparing to move without claiming completed movement. Restrained awkwardness, no jeering or caricature.",
+      "conditions": [
+        "Describe a request to yield, not an already completed walk to the lowest place.",
+        "The scene illustrates Jesus' conditional example, not an observed historical incident or named people."
+      ]
+    },
+    {
+      "key": "wedding-places-03",
+      "generationKey": "wedding-places-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "7dde6edf04c6543dddfb870276348b1f7d4944111df15279958bd79f5bc77f20",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-dfd89173-211e-47c4-8ced-433c0933ab7a.png",
+      "recommendedTitle": "Invited to a higher place",
+      "alt": "The older host bends toward the seated young man in brown and extends an open hand toward another place at the table while they meet each other's gaze.",
+      "caption": "Jesus counsels His listeners to take the lowest place when invited. In His example, the host then invites the humble guest to move higher, allowing honor to come as a gift rather than a claim.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:10",
+          "10"
+        ]
+      ],
+      "findings": "Young guest matches scene01 curly hair, clean-shaven youthful face, brown tunic and striped shoulder cloth; same bald gray-bearded host and mantle. Clear reciprocal gaze, gentle expression, coherent host's extended palm and resting hand and seated guest's limbs. Cushions support seated posture; no fused hand/table geometry. Meaningful contrast to blue guest's self-selected honor, with warm attention rather than exaggerated applause.",
+      "conditions": [
+        "This is a contrasting example of humility; do not imply the blue-clothed guest transformed into the young man or invent a continuous personal biography.",
+        "Keep invitation as source illustration rather than a guarantee that every humble action earns public status."
+      ]
+    }
+  ]
+}

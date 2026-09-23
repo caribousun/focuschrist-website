@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Actual original full-pixel inspection of hen-chicks-01.",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical acceptance is not owner approval or browser verification."
+  ],
+  "entries": [
+    {
+      "key": "hen-chicks-01",
+      "generationKey": "hen-chicks-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4976c0be-3daa-4715-9f20-5e9293cd2b16.png",
+      "sha256": "89ce8c91d14557d37cc502fa334d020ec20c1d4ff73ea8ddd096f10c776094a7",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Sheltered beneath her wings",
+      "alt": "A speckled brown hen spreads her wings over chicks nestled beside her on dry earth near a stone wall.",
+      "caption": "Chicks nestle beneath a hen's outstretched wings. Jesus uses this tender picture of shelter as He expresses His desire to gather Jerusalem's children.",
+      "refs": [
+        [
+          "nt/matt/23",
+          "Matthew 23:37",
+          "37"
+        ]
+      ],
+      "findings": "Full original inspected directly. Natural feather layering, alert eye, beak, grounded feet and chicks with distinct coherent heads and bodies. Partly concealed chick at right is plausibly occluded by wing. Real daylight, feather detail and earthen setting preserve photographic realism. No literal Christ depiction, invented danger, symbolic overlays or embedded text.",
+      "conditions": [
+        "Illustrates the comparison in Matthew 23:37, not an authenticated historical hen or species identification.",
+        "The sheltered chicks illustrate His desired gathering; do not claim Jerusalem accepted His invitation.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

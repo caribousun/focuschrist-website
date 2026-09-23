@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of tp-withered-fig-tree",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "tp-withered-fig-tree",
+      "generationKey": "tp-withered-fig-tree",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-6686bb14-885a-4b89-b7ea-f773118a2b39.png",
+      "sha256": "400b295bd0733802942ac9511b3c150d9b8ffb89ff50a5534cdf22ea1c777cde",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Peter notices the withered tree",
+      "alt": "Peter gestures toward a withered fig tree as Jesus listens beside the morning road.",
+      "caption": "Peter stops beside the dry branches and turns to Jesus. What he has noticed on the road opens a teaching about faith, prayer and forgiveness.",
+      "refs": [
+        [
+          "nt/mark/11",
+          "Mark 11:20–25",
+          "20-25"
+        ]
+      ],
+      "findings": "Canonical Christ and apostle reference compared directly. Christ and Peter preserve facial identity, with clear mutual eye contact; Peter's open hand indicates visibly dry lobed fig leaves and branches. James and John behind retain distinct mapped beard/face structures. Photographic skin, blue mantle and morning light. No chopping, fire or magically disappearing fruit; next-morning observation distinct from barren-fig parable.",
+      "conditions": [
+        "Withered branches are visible; roots are not exposed, so do not claim the picture shows root condition. Exact road, skyline, tree shape and ages are interpreted.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/church-history/melchizedek-priesthood.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/11?lang=eng"
+      ]
+    }
+  ]
+}

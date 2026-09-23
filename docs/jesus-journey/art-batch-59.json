@@ -1,0 +1,97 @@
+{
+  "rt-sung-testimony": {
+    "title": "A testimony sung together",
+    "alt": "A small choir follows a woman leading with her hands while an older woman holds an open hymnbook in the foreground.",
+    "caption": "Voices join in a quiet room as singers follow their leader. Shared song can become an offering of faith and praise.",
+    "refs": [
+      [
+        "bofm/moro/6",
+        "Moroni 6:9",
+        "9"
+      ],
+      [
+        "dc-testament/dc/25",
+        "Doctrine and Covenants 25:12",
+        "12"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "living-christ",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-sung-testimony-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-sung-testimony-960.webp",
+    "original": "rt-sung-testimony.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1aefdc4a-d4b2-4e67-a5e8-53d141a79b22.png",
+    "original_sha256": "983d3f2a9b9107759f83466d694330ae67d8d2ce5edb1fb7ee12b4f6c246c6d7",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. A small contemporary choir rehearses in a plain chapel room. Several adults and teenagers follow a leader shown in profile at the left, with the camera placed among the back row rather than before a performance stage. Faces are detailed and earnestly singing, with natural mouths and teeth. Hymnbooks angle inward; avoid legible invented lyrics or notation. An older woman in the lower foreground holds her book while listening to the group. No visible Jesus, official leader portraits, logos or named-congregation claim. The specific action is shared musical worship, distinct from the legacy image of Christ outdoors with children.  Natural documentary photographic realism; no literal Jesus in this contemporary application. Each face distinct and lifelike.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-78.json"
+  },
+  "rt-persuasion": {
+    "title": "Listening with patience",
+    "alt": "Two women speak across a workshop table while a third adult listens behind them.",
+    "caption": "At a shared worktable, one person listens while another explains a concern. Patient attention can give practical shape to persuasion, gentleness and love.",
+    "refs": [
+      [
+        "dc-testament/dc/121",
+        "Doctrine and Covenants 121:41â€“44",
+        "41-44"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "liberty",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-persuasion-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-persuasion-960.webp",
+    "original": "rt-persuasion.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8fb8b3fb-504e-4ebe-a30d-2b771dc11d9f.png",
+    "original_sha256": "48e894647854bcd28e76701d80c38a01a450b8b7461fab722ee36e2225ebb346",
+    "prompt": "Edit only environment text: remove ALL readable wall slogans and their lettered posters/blackboard completely, replacing with plain workshop wall and unobtrusive wooden shelving. Remove readable lettering on paper, retain simple nonverbal floorplan lines. Keep exact people, respectful mutual eyecontact, faces, hand anatomy, natural realistic lighting and composition unchanged. No added text anywhere.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-04e5bf17-7985-4ed5-b5d5-59d114505c93.png"
+    ],
+    "review_record": "parable-art-review-79.json"
+  },
+  "rt-sacrament-preparation": {
+    "title": "Preparing the table",
+    "alt": "Two men prepare a table in an empty chapel, one pouring water into small cups and the other arranging a white cloth.",
+    "caption": "Quiet preparation makes the table ready for worship. Ordinary hands attend to the bread, water and cloth before the congregation gathers.",
+    "refs": [
+      [
+        "dc-testament/dc/20",
+        "Doctrine and Covenants 20:75â€“79",
+        "75-79"
+      ],
+      [
+        "dc-testament/dc/27",
+        "Doctrine and Covenants 27:2",
+        "2"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "sacrament-today",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-sacrament-preparation-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-sacrament-preparation-960.webp",
+    "original": "rt-sacrament-preparation.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-113bc4fb-d543-4698-8754-b79d81b13192.png",
+    "original_sha256": "df6c77d1f507eca636fa2eb3d5ada637a137f503e063f98960923b05e0994589",
+    "prompt": "Edit only bread in foreground bread tray: replace ALL broken bread cubes with TWO intact unbroken ordinary sandwich bread slices lying flat side by side. Their complete crust outlines clear, no cubes, no torn morsels. This moment is before worship and bread has not been broken. Preserve both men, hands, waterpouringinto small cups, clean cloth, table and lighting exactly. No other changes.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2fa8cdee-b319-4e2c-8883-5149386c4d59.png"
+    ],
+    "review_record": "parable-art-review-79.json"
+  }
+}

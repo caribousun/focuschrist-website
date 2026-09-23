@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Returning Spirit01–02 and Closed Door01–02 actual-original review for symbolic boundaries, physical realism, door contact and source outcome.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Ordinary shadow, darkness, empty rooms and mental illness are not signs of evil; symbolic house images make no such diagnosis."
+  ],
+  "entries": [
+    {
+      "key": "returning-spirit-01",
+      "generationKey": "returning-spirit-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "bff1d301877b9fc934bf3fa5f9b770a4a11710a71358f3c705cbce7ba634dff8",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-df138d21-eae1-402b-b771-f834a35cc5b2.png",
+      "recommendedTitle": "The house swept and ordered",
+      "alt": "An unoccupied earthen-walled room has a clear floor, a broom beside the open doorway, and jars and a rolled mat arranged on shelves.",
+      "caption": "Jesus describes the returning spirit finding its former house empty, swept, and put in order. The quiet room illustrates that image without claiming an ordinary empty home is spiritually dangerous.",
+      "refs": [
+        [
+          "nt/matt/12",
+          "Matthew 12:44",
+          "44"
+        ]
+      ],
+      "findings": "Photographic room with coherent door, broom-floor contact, shelf-supported jars/mat, bench and woven rugs. No human figures or visible spirits; orderly unoccupied setting clearly symbolic.",
+      "conditions": [
+        "Visible emptiness and cleanliness do not prove a spiritual condition.",
+        "Do not connect the comparison to mental illness, diagnosis, a named person or an actual haunted house."
+      ]
+    },
+    {
+      "key": "returning-spirit-02",
+      "generationKey": "returning-spirit-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "f028ef59252a074b56b8f2dc4636f8e331ae2f8affe5161200a72d3d29c8c088",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-17249dbd-fce5-423b-bc3d-4e722540b546.png",
+      "recommendedTitle": "The warning of a return",
+      "alt": "Sunlight falls across an open wooden doorway and stone threshold, with a dim unoccupied room beyond.",
+      "caption": "Jesus warns that the returning spirit brings seven others and the person's last state becomes worse than the first. The open threshold is a symbolic illustration of that warning, not evidence of evil in ordinary shadow or darkness.",
+      "refs": [
+        [
+          "nt/matt/12",
+          "Matthew 12:45",
+          "45"
+        ]
+      ],
+      "findings": "Natural doorway perspective, hinges, threshold and light/shadow; room props maintain visual continuity with01. No seven visible entities claimed. No literal horror, injury or psychological-stigma imagery.",
+      "conditions": [
+        "Darkness and an open door are ordinary physical features, not visible proof of spirits.",
+        "Do not interpret this as mental illness, medical causation or a diagnosis of any living person.",
+        "No literal count of spirits can be read from the picture."
+      ]
+    },
+    {
+      "key": "closed-door-01",
+      "generationKey": "closed-door-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "93d643dea5abca96047b0337ef913114cb793c9d7de72c206c26eb763909986d",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-10dba9da-5526-4c49-b476-91ea04cd72af.png",
+      "recommendedTitle": "The householder shuts the door",
+      "alt": "A gray-haired man inside a stone house holds a wooden door by its handle and edge, leaving only a narrow gap of daylight.",
+      "caption": "Jesus describes the master of the house rising and shutting the door. This picture illustrates that closing moment before the appeals from those left outside.",
+      "refs": [
+        [
+          "nt/luke/13",
+          "Luke 13:25",
+          "25"
+        ]
+      ],
+      "findings": "Coherent handle grip and palm/edge contact, plausible arms and torso. Door is nearly closed but visible daylight gap remains; do not call it already fully shut. Source-grounded closing moment interpretation, natural photographic skin/wood/stone.",
+      "conditions": [
+        "Still alone cannot establish direction of movement; closing is the source-guided interpretation, not claimed observable motion.",
+        "Do not describe the gap as reopening to admit petitioners or portray this unnamed householder as an authenticated portrait of God."
+      ]
+    },
+    {
+      "key": "closed-door-02",
+      "generationKey": "closed-door-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "0bce3573b45d829f2ff509b986f404c88aab05b72133e1a5ca087b9063115445",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-62c636bd-a30a-4d59-b0e0-248016560ba3.png",
+      "recommendedTitle": "Appealing from outside",
+      "alt": "A bearded man holds his knuckles against a closed wooden door while a younger man and an older woman behind him raise open hands toward it.",
+      "caption": "Those outside knock and ask the master to open, appealing to their former familiarity with him. In Jesus' warning, that claim does not bring admission, and the pictured door remains closed.",
+      "refs": [
+        [
+          "nt/luke/13",
+          "Luke 13:25-27",
+          "25-27"
+        ]
+      ],
+      "findings": "Three distinct petitioners, credible knocking fist, open palms and attentive door-directed gazes. Serious pleading expressions dignified, no grotesque despair. Door fully closed, no visible host or admission. Wooden hardware and masonry align with01 setting; householder need not appear outside.",
+      "conditions": [
+        "No reopening, rescue or eventual admission inferred.",
+        "The claimed prior meals and teaching are source dialogue, not independent events visible here.",
+        "Do not assign identities, specific condemned groups or biographies to these illustrative figures."
+      ]
+    }
+  ]
+}

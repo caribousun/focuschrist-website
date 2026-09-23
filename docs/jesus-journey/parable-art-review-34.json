@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "ownerApproval": false,
+  "scope": "Independent revised-pixel review; preserves original review33 and authoritative classification. No import or registry edits.",
+  "entries": [
+    {
+      "key": "wicked-tenants-04",
+      "version_key": "wicked-tenants-04-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6dff0b8d-ef98-4cae-8910-e3daa82ed1d9.png",
+      "sha256": "32156970e6adf63eac16b0a7e54278ca35344488ea3c4ad91d10052f4d25139e",
+      "status": "pass_with_caption_conditions",
+      "alt": "Three distinct listeners sit beneath a stone colonnade: an older white-bearded man gestures, a dark-bearded man attends beside him, and a lean older man rests a hand at his chin.",
+      "caption": "Jesus' listeners answer His question about what the vineyard owner will do. Their response recognizes that those entrusted with the vineyard must answer for how they have treated its owner and his messengers.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:40-41",
+          "40-41"
+        ]
+      ],
+      "findings": [
+        "Exact revised original inspected at full resolution. Right listener now has a receding/bald forehead, longer narrower nose and face, grayer shorter beard and distinct eye/cheek geometry; no longer duplicates central listener.",
+        "Central dark-bearded listener and broad white-bearded left listener remain distinct, as do visible secondary figures. Natural age texture and photographic skin/cloth are retained.",
+        "Right chin-hand contact and forearm coherent; left open gesture and resting hands remain anatomically plausible. No extra fingers, fused limbs or new artifacts identified.",
+        "Serious attentive gaze is oriented toward the unseen speaker/response, appropriate to deliberation; no camera grin or sinister stereotype.",
+        "Scene is artistic reconstruction of hearers in the teaching setting, outside the fictional vineyard. Jesus remains unseen, and no vineyard characters are recast as historical listeners.",
+        "Matthew21:40-41 supports the question and listeners answer; unnamed faces and exact colonnade arrangement remain artistic staging."
+      ],
+      "conditions": [
+        "Retain authoritative corrected depictionType: listeners responding to Jesus outside the fictional parable; Jesus unseen. Do not copy stale fictional-character depictionType from generation record."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "file": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\docs\\jesus-journey\\parable-art-plan.json",
+  "beforeSha256": "6af733c925b98c4e72433e05c5f69b89f98b4804ff575e7b44b287703cc47261",
+  "afterSha256": "a73fa52b07e2384e0cf431277213e58cc7165876b6f1612392f86dd9a482e9d6",
+  "fieldsChanged": [
+    "sourceSceneDescription",
+    "generationPrompt"
+  ],
+  "checks": "Only sourceSceneDescription and generationPrompt changed; refs and every other field/entry preserved.",
+  "note": "Plan placeholder title/alt/caption still use labeled; accepted review metadata should replace these during preparation."
+}

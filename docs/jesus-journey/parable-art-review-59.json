@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Unjust Steward01–03 actual-original review for manager continuity, distinct master/debtors, stylus contact, gaze/anatomy and Luke16:1–2/5–7 source accuracy.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Fictional parable characters and reconstructed settings; no historical identities or endorsement of fraud."
+  ],
+  "entries": [
+    {
+      "key": "unjust-steward-01",
+      "generationKey": "unjust-steward-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "ef312e150f26dfd76b0dac1fa27c4053e2b8fb1d1f1463af7bdbde0804fd3b56",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-85387bf1-3da5-43a8-9f08-ad769483cd3f.png",
+      "recommendedTitle": "Called to give an account",
+      "alt": "An older master seated behind a table gestures toward bound writing tablets while a younger dark-haired steward stands opposite with his hands on the table.",
+      "caption": "A rich man hears that his steward has been wasting his goods and calls him to account. He tells the steward that he can no longer remain in charge of the household's management.",
+      "refs": [
+        [
+          "nt/luke/16",
+          "Luke 16:1-2",
+          "1-2"
+        ]
+      ],
+      "findings": "Master distinctly older, balding with white mustache and navy/cream garments; steward younger clean-shaven, swept dark hair, long angular face, gray tunic and narrow brown wrap. Reciprocal face-directed attention and serious expressions fit accountability. Open palm, resting master hand and steward's table-bracing fingers are coherent. Natural photographic surfaces and plausible storage props.",
+      "conditions": [
+        "The report of waste and demand for an account are source facts; do not invent a visible specific theft, ledger entry or amount.",
+        "Unnamed parable figures, not portraits of named historical people."
+      ]
+    },
+    {
+      "key": "unjust-steward-02",
+      "generationKey": "unjust-steward-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "2ea1f52aa695b5b662f6cedbeffca7c9be481831d6dfb33b28d5536cd0b676eb",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-64eebe1a-150f-496e-bb97-43e0c251c6ad.png",
+      "recommendedTitle": "The oil debt reduced",
+      "alt": "A gray-bearded man in ochre writes on an open tablet while the steward leans beside him with an open hand; large storage jars stand behind them.",
+      "caption": "The steward asks a debtor who owes a hundred measures of oil to take his bill and write fifty. The debtor's writing pictures the alteration the steward directs, without suggesting that the account has been honestly settled.",
+      "refs": [
+        [
+          "nt/luke/16",
+          "Luke 16:5-6",
+          "5-6"
+        ]
+      ],
+      "findings": "Steward's face, dark swept hair, gray clothing and brown wrap match01. Oil debtor gray curly hair/full beard and ochre tunic distinct from master and03 debtor. Debtor's stylus tip visibly meets writing surface; grip and steadying hand coherent. Steward attends debtor/writing with credible open palm. Jar context differentiates commodity without pretending contents visible. Photographic texture and anatomy pass.",
+      "conditions": [
+        "Hundred and fifty come from Luke16:5–6, not legible numbers in image; do not claim to transcribe the tablet.",
+        "No approval of fraud or a specified interest/commission explanation is established.",
+        "Writing tablet material, jar forms and action staging are illustrative."
+      ]
+    },
+    {
+      "key": "unjust-steward-03",
+      "generationKey": "unjust-steward-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "a87bac6afb8c253cf80f9b533053631e7c062cf24f104781d21936af7d4ec1a6",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cbd7a77a-5af2-41e4-ac73-0d8d6c18cd65.png",
+      "recommendedTitle": "The wheat debt reduced",
+      "alt": "A bald man in a rust tunic writes on a tablet beside sacks and baskets of grain while the steward stands next to him and gestures toward the account.",
+      "caption": "Another debtor owes a hundred measures of wheat, and the steward tells him to write eighty. The second altered account continues the steward's scheme; its depiction does not make dishonesty an example to follow.",
+      "refs": [
+        [
+          "nt/luke/16",
+          "Luke 16:7",
+          "7"
+        ]
+      ],
+      "findings": "Steward retains identity and gray/brown clothing. Bald clean-shaven rust-clothed wheat debtor is clearly distinct from older white-mustached master and gray-bearded oil debtor. Stylus tip contacts tablet, writing grip and resting fingers credible; both figures direct attention to writing, appropriate rather than forced eye contact. Grain and sheaves visibly distinguish transaction. Natural skin/cloth, coherent hands and table props.",
+      "conditions": [
+        "Hundred and eighty derive from Luke16:7; tablet markings are not treated as readable authenticated numerals.",
+        "Do not identify debtors or invent financial mechanics, repayment, settlement or the master's authorization.",
+        "Preserve distinction between narrated strategy and moral endorsement of dishonest conduct."
+      ]
+    }
+  ]
+}

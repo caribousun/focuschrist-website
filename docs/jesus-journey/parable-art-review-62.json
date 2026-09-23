@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Pharisee/Publican01-v2,02,03 actual-original review with original01 rejection preserved separately to prevent duplicate canonical import keys.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0,
+    "rejectedOriginalsPreserved": 1
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Prayer gaze is assessed against source action, not an interpersonal eye-contact requirement.",
+    "Fictional parable figures; avoid ethnic/religious caricature or claims of authenticated temple layout."
+  ],
+  "rejectedGenerations": [
+    {
+      "key": "pharisee-publican-01",
+      "generationKey": "pharisee-publican-01",
+      "status": "revise",
+      "sha256": "26a82c53b080488e599a241aca9e0de32e84b3adf820ab50e6cf8c3a2b5b5a86",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-cd2f19b0-e550-4c24-a9db-5a9364fd08db.png",
+      "alt": "Two men face away from a temple entrance while stepping down its stairs.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:10",
+          "10"
+        ]
+      ],
+      "findings": "Original scene01 visibly descends from temple rather than going up to pray as the intended Luke18:10 scene requires. Superseded only by reviewed01-v2; original rejected hash must not be imported."
+    }
+  ],
+  "entries": [
+    {
+      "key": "pharisee-publican-01",
+      "generationKey": "pharisee-publican-01-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "78b80cb5550b65e168d02c46809477d060c4e1f5b90a8af8876cb2b6cc838c49",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4d38400a-d81d-4281-b57c-1cd336f44269.png",
+      "recommendedTitle": "Two men go up to pray",
+      "alt": "Two men climb stone steps toward a temple entrance: one in a light hooded robe ahead, and a balding man in muted olive and brown behind him.",
+      "caption": "In Jesus' parable, two men go up to the temple to pray: a Pharisee and a publican. The shared destination introduces two very different prayers.",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:10",
+          "10"
+        ]
+      ],
+      "findings": "Corrected01-v2 clearly ascends: lead feet placed on higher treads and bodies oriented toward entrance. Both men's hands, sandals and stair contact are plausible. Distinct identities: hooded full-bearded dark-haired Pharisee; balding, curly-sided short-bearded publican in olive/brown. Natural expressions and photographic stone/cloth/skin. Original descending version rejected.",
+      "conditions": [
+        "Only revised01-v2 hash passes; original descending image remains rejected.",
+        "Stairs, garments and temple surroundings are illustrative, not an exact architectural reconstruction or a rule identifying religious character from clothing."
+      ]
+    },
+    {
+      "key": "pharisee-publican-02",
+      "generationKey": "pharisee-publican-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "d0be326bd741aeadd5ad1bce3d04909f5e4e1a5706b6885dabb4f9f494d597ff",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c85535cd-85c9-46b0-84e3-7a8bccb12daf.png",
+      "recommendedTitle": "A prayer centered on comparison",
+      "alt": "The man in the light hooded robe stands with both palms raised and looks upward in the temple court.",
+      "caption": "The Pharisee thanks God that he is unlike other people, including the publican. He speaks of his fasting and tithing, placing his own record at the center of his prayer.",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:11-12",
+          "11-12"
+        ]
+      ],
+      "findings": "Same hooded face, dark full beard, light fringed striped robe as01-v2. Both palms and fingers coherent; upward prayer gaze appropriate, not a failure of interpersonal eye contact. Restrained expression avoids cartoon villainy. Photographic textures, no exaggerated anatomy.",
+      "conditions": [
+        "Prayer's self-comparison is established by Luke18:11–12, not inferred merely from upward gaze or raised palms.",
+        "Do not generalize this fictional man's fault to all Pharisees or Jewish worshippers; no named historical portrait."
+      ]
+    },
+    {
+      "key": "pharisee-publican-03",
+      "generationKey": "pharisee-publican-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "4b4728e9f0f8ed964b72e75d05ba22688933687b175d134b71c22c68a5401b1a",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-81ce46bd-6e0b-44d9-8d04-c875f194fe15.png",
+      "recommendedTitle": "A plea for mercy",
+      "alt": "The balding man stands apart beside a column with his head bowed and one hand against his chest, while the light-robed man prays farther away.",
+      "caption": "Standing afar off, the publican will not lift his eyes to heaven and beats upon his breast. His prayer is a plea for God to be merciful to him, a sinner.",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:13",
+          "13"
+        ]
+      ],
+      "findings": "Publican's bald crown, dark side curls, short beard, olive tunic, rope belt and brown wrap match01-v2. Bowed head and hand-to-chest contact align with source; hanging hand coherent. Distant Pharisee continues02 posture and garment. Distance is clear; dignified remorse rather than humiliating caricature. Prayer-directed lowered gaze is explicitly appropriate.",
+      "conditions": [
+        "Still shows chest contact, not measurable repeated striking; caption's action is sourced from Luke18:13.",
+        "No inferred crime, profession-specific misconduct or outcome outside the cited verse is asserted."
+      ]
+    }
+  ]
+}

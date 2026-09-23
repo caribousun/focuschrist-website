@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of mc-jairus-daughter",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "mc-jairus-daughter",
+      "generationKey": "mc-jairus-daughter",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-bbfc2896-86b0-455b-854c-cfe0eb16164b.png",
+      "sha256": "c3c4f756fb9f003cfff75999ae0e3df8f6d9dc83af14d90625360681bd70ad25",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "A child rises at His word",
+      "alt": "Jesus holds the hand of Jairus's daughter as she sits upright, with her parents and three disciples nearby.",
+      "caption": "The twelve-year-old girl sits upright and meets Jesus's eyes as He holds her hand. Her parents and the three disciples witness the life He restores.",
+      "refs": [
+        [
+          "nt/mark/5",
+          "Mark 5:37–43",
+          "37-43"
+        ]
+      ],
+      "findings": "Direct full-pixel comparison with canonical Christ and three-apostle reference: Christ recognizable in profile, clear reciprocal eye contact with girl, natural joyful relief. Girl visibly a child near the stated age rather than a toddler or adult. Exactly seven participants: Christ, girl, parents, Peter at far left, James next, John behind Christ. Apostle face differences preserve mapped references; father older short-gray-haired distinct from apostles. Coherent hand grip and mother's shoulder contact. Natural cloth, skin and daylight; no scars or theatrical glow.",
+      "conditions": [
+        "Depiction shows sitting upright, not completed walking. Exact parents' and child's appearance, room, clothes and arrangement are interpretation. Mark supplies her age as twelve; do not invent other ages.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/church-history/melchizedek-priesthood.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/5?lang=eng"
+      ]
+    }
+  ]
+}

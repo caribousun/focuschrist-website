@@ -1,0 +1,23 @@
+{
+  "reviewedOriginals": 10,
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pages": {
+    "rich-man-lazarus": 3,
+    "minas": 4,
+    "doorkeeper": 3
+  },
+  "checks": {
+    "imagesLoaded": true,
+    "artworkStudy": true,
+    "fullSizeOpenClose": true,
+    "scriptureOpenClose": true,
+    "studyCloseFocusReturn": true,
+    "noClippedControls": true,
+    "noHorizontalOverflow": true
+  },
+  "limits": "Interaction check only; no claim of every reader verse or full responsive composition.",
+  "status": "pass"
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel reviewer",
+  "scope": "Full original inspection of two modern v2 repairs.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rt-persuasion",
+      "generationKey": "rt-persuasion-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8fb8b3fb-504e-4ebe-a30d-2b771dc11d9f.png",
+      "sha256": "48e894647854bcd28e76701d80c38a01a450b8b7461fab722ee36e2225ebb346",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Listening with patience",
+      "alt": "Two women speak across a workshop table while a third adult listens behind them.",
+      "caption": "At a shared worktable, one person listens while another explains a concern. Patient attention can give practical shape to persuasion, gentleness and love.",
+      "refs": [
+        [
+          "dc-testament/dc/121",
+          "Doctrine and Covenants 121:41\u00e2\u20ac\u201c44",
+          "41-44"
+        ]
+      ],
+      "findings": "Direct original comparison: slogans and house icon removed; people, eye contact, hands and workshop preserved.",
+      "conditions": [
+        "Illustrative contemporary application, no named people or congregation claim.",
+        "Preserve rejected original and review78.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "rt-sacrament-preparation",
+      "generationKey": "rt-sacrament-preparation-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-113bc4fb-d543-4698-8754-b79d81b13192.png",
+      "sha256": "df6c77d1f507eca636fa2eb3d5ada637a137f503e063f98960923b05e0994589",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Preparing the table",
+      "alt": "Two men prepare a table in an empty chapel, one pouring water into small cups and the other arranging a white cloth.",
+      "caption": "Quiet preparation makes the table ready for worship. Ordinary hands attend to the bread, water and cloth before the congregation gathers.",
+      "refs": [
+        [
+          "dc-testament/dc/20",
+          "Doctrine and Covenants 20:75\u00e2\u20ac\u201c79",
+          "75-79"
+        ],
+        [
+          "dc-testament/dc/27",
+          "Doctrine and Covenants 27:2",
+          "2"
+        ]
+      ],
+      "findings": "Direct original comparison: two intact bread slices replace broken pieces; men, hands, pitcher stream, cloth and chapel preserved.",
+      "conditions": [
+        "Illustrative contemporary application, no named people or congregation claim.",
+        "Preserve rejected original and review78.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

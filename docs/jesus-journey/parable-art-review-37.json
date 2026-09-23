@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Three royal-wedding v2 corrections viewed at original detail against rejected originals.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Only these new hashes pass; review 35 and its rejected original hashes remain unchanged.",
+    "Technical source/visual review is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "royal-wedding-02",
+      "generationKey": "royal-wedding-02-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "93ad47e6f65ba132f1e25c50604c59572fecbdcb94dd843b61af04a3eddefd02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f7006862-85ea-451f-a752-e2ba4055ba7a.png",
+      "recommendedTitle": "The invitation reaches the roads",
+      "alt": "Two distinct servants in cream tunics speak with people beside a road, one gesturing toward a distant columned entrance.",
+      "caption": "The servants go out to the roads and gather everyone they find. The king's invitation reaches beyond the original guests, and the wedding hall begins to fill.",
+      "findings": "Older balding left servant now clearly differs from younger curly-haired right servant. Natural reciprocal attention and coherent open hands, bundle grip and staff grip. Distant entrance is now a plain columned ancient-style portico, with former heraldry removed. Photographic faces and materials preserved.",
+      "conditions": [
+        "Do not identify the crowd's moral standing from appearance or claim these are the identical two servants in scene 01."
+      ],
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:9-10",
+          "9-10"
+        ]
+      ]
+    },
+    {
+      "key": "royal-wedding-03",
+      "generationKey": "royal-wedding-03-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "b9ea5ef0c5f0c8fae800de74e1893eab891ea115dc6bec49ec9691d395360325",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-ec830c15-eee4-44a6-917e-a3e8ead4c201.png",
+      "recommendedTitle": "The wedding hall is filled",
+      "alt": "A varied group of guests shares food and conversation at crowded banquet tables beneath plain hanging cloths.",
+      "caption": "The wedding hall is filled with guests gathered by the servants. Faces turn toward one another around the tables, picturing the breadth of the invitation in Jesus' story.",
+      "findings": "Central guest is now an older balding clean-shaven man, clearly distinct from the approved Christ likeness. Heraldic lion banners replaced by plain textiles; simpler garments retain banquet atmosphere without the earlier strong medieval cues. Cups, food contact, hands and reciprocal social attention remain coherent and photographic.",
+      "conditions": [
+        "No Jesus figure is identified within the parable; exact banquet furnishings and costumes are illustrative."
+      ],
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:10",
+          "10"
+        ]
+      ]
+    },
+    {
+      "key": "royal-wedding-04",
+      "generationKey": "royal-wedding-04-v2",
+      "status": "pass_with_caption_conditions",
+      "sha256": "89d478b2ae212cd82f11181695cb4112b98faca7b5f8d6c2343a53b89e1c54c6",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e92d5b9c-2e2d-46d9-a868-788c93ccf6d7.png",
+      "recommendedTitle": "The king questions a guest",
+      "alt": "A king wearing a simple circlet and dark green cloak addresses a plainly dressed man among the banquet guests.",
+      "caption": "The king notices a guest without a wedding garment and asks how he entered. The man has no answer. Jesus' story holds the wide invitation together with the seriousness of responding to it.",
+      "findings": "Plain circlet, layered woven cloak and restrained trim replace the conspicuously medieval royal costume. Heraldic banners removed. King and guest retain distinct faces, appropriate seriousness, reciprocal gaze and coherent open-palm and lowered-hand anatomy. No new material visual issue.",
+      "conditions": [
+        "Do not explain the missing garment as poverty or assert an unrecorded custom of the king supplying garments.",
+        "The king is an unnamed parable character, not a literal portrait of God."
+      ],
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:11-12",
+          "11-12"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "scope": "Read-only pre-generation source/placement review of10 planned moments against current canonical pages/plans and live official scripture. No new art or identity approval.",
+  "sourcesChecked": [
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/16?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/19?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/13?lang=eng"
+  ],
+  "exactRecommendedOverrides": [
+    {
+      "key": "rich-man-lazarus-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "rich-man-lazarus-02",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "rich-man-lazarus-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "minas-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "minas-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "minas-04",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "minas-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2
+    },
+    {
+      "key": "doorkeeper-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "doorkeeper-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "doorkeeper-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2
+    }
+  ],
+  "registrySectionChanges": [
+    {
+      "key": "rich-man-lazarus-02",
+      "sectionId": "setting"
+    },
+    {
+      "key": "rich-man-lazarus-03",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "minas-04",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "doorkeeper-03",
+      "sectionId": "story-and-teaching"
+    }
+  ],
+  "sourceFraming": {
+    "rich-man-lazarus": {
+      "01": "Luke16:19 supports rich clothing and daily feast; avoid naming him or showing deliberate personal abuse absent from text.",
+      "02": "Luke16:20-21 supports Lazarus at gate, sores and dogs; humane nongraphic illness, no invented feeding or rescue. Place beside gate paragraph before death/reversal.",
+      "03": "Luke16:22-25 supports comfort with Abraham. Use restrained intimate comfort with indistinct surroundings; no invented map, heavenly palace, resurrected-body claim, specific torment machinery, or successful crossing of gulf. Caption identifies imagery within Jesus' account, not an exact view of the afterlife. Keep separate from Lazarus of Bethany."
+    },
+    "minas": {
+      "01": "Luke19:12-13 supports entrusting ten pounds to ten servants; frame may show a subset but must not imply only three total or unequal initial allotments from Matthew25. A pound/mina is an amount, not necessarily a single denomination coin.",
+      "02": "Luke19:15-19 supports gains through trading but does not identify a trade or transaction. Generic exchange can illustrate narrated trading; no invented named trade/business history. Retain source ranges with an explicit artistic-staging caption.",
+      "03": "Luke19:20 supports unused money in cloth, no buried chest from Talents.",
+      "04": "Luke19:15 supports return and summons for account. Do not preempt the third servant's reckoning with a universal success celebration. Place after narrative paragraph1 following trading02; cloth03 follows paragraph2.",
+      "proseGap": "Current prose references harshness without stating the removal of the unused pound or the final command concerning opponents in24-27. It does not falsely report a happy ending, but the advertised whole-account treatment is incomplete. Recommend a concise factual sentence covering these difficult closing actions before existing interpretation; no image of violence needed. This would be a separately authorized prose addition, not included in placement-only changes."
+    },
+    "doorkeeper": {
+      "01": "Mark13:34 supports work assigned before departure; no literal Christ likeness required for comparison character.",
+      "02": "Mark13:34-35 supports porter waiting; evening is one possible watch, not announced return time.",
+      "03": "Mark13:35-37 commands watchfulness but does not narrate actual arrival or successful reception. Show continued readiness, no arriving master, embrace or feast. To distinguish03 from02, depict another servant continuing assigned household work while porter remains attentive, using34-37 as source. This is illustrative staging of the comparison, not a separate recorded incident."
+    }
+  },
+  "recommendedReferenceAdjustment": {
+    "key": "doorkeeper-03",
+    "refs": [
+      [
+        "nt/mark/13",
+        "Mark 13:34-37",
+        "34-37"
+      ]
+    ],
+    "reason": "Including34 grounds other servants' assigned work if03 uses household work to make its action distinct from porter02."
+  },
+  "abrahamIdentity": {
+    "ownerApprovedReferenceFound": false,
+    "checked": [
+      "docs/approved-character-identities.json",
+      "docs/historical-character-references.json",
+      "docs/jesus-journey/artworks.json bb-abram-stars",
+      "../branch-identity-map.json"
+    ],
+    "currentRegistry": "bb-abram-stars remains ungenerated/unreviewed with no original hash/path; its planned asset is not a usable identity reference.",
+    "guidance": "Existing identity review permits a distinct original interpretation when no locked identity exists. Establish and retain one Abraham face for03, coordinated for eventual Abram-stars; do not borrow Moses or Christ. No new owner approval gate inferred.",
+    "sourceFaithfulAlternative": "If avoiding Abraham depiction is preferred, an image of angels carrying Lazarus under22 would fit but still requires careful nonliteral staging and changes the planned subject; retaining restrained comfort with Abraham is more direct."
+  },
+  "changesMade": "Report only; no edits, imports, builds or generation."
+}

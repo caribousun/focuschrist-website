@@ -1,0 +1,87 @@
+{
+  "tower-builder-01": {
+    "title": "Counting the cost",
+    "alt": "A seated man in a cream tunic and blue wrap considers small stones and coins on a wooden board, with building stones and timbers nearby.",
+    "caption": "Jesus asks who would begin a tower without first sitting down to count its cost. The careful consideration pictured here illustrates the question of having enough to finish.",
+    "refs": [
+      [
+        "nt/luke/14",
+        "Luke 14:28",
+        "28"
+      ]
+    ],
+    "owner": "jesus-christ/parables/tower-builder.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/tower-builder-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/tower-builder-01-960.webp",
+    "original": "tower-builder-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bddbfca6-594b-4a0a-acba-1518345dc985.png",
+    "original_sha256": "001578f8c1e2855bb51454a180b1dda360a48d55d70ae223cbb9e3af7fe39130",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Builder counting resources. Scripture source: Luke 14:28. Narrative context: A builder counts the cost Then A foundation is laid Then Inability to finish exposes inadequate preparation. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 1 of 3 for The Tower Builder. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Wide1536x1024 live-action firstcenturyvineyardtower planning. Unnamed male builder broadbrownface clean-shaven recedingblackhair, simple sandcoloredtunic mutedindigoshouldercloth, sits onlowstone besideopenbuildingplot considering cost. Roughlowwoodboard infront holds small plainstonetallycounters andmodestclothpursefewcoins; he countswithonehand, otherat chin withfocusedthoughtfulexpression lookingDOWN atresources. Roughlimestoneblocks andwoodbeams stackednearby, no constructionbegun inthisscene. Vineyardrowsbeyond suggestplausibletowersetting artisticnottextcertainty. No modernblueprints decimalnumbers papermoney calculator measuringtape. Naturallylitrealphotography, coherenthands/coin scale, notJesus. Singlecharacter; compareavailablemeansratherthanhypingwealth.",
+    "referenced_image_paths": [],
+    "review_record": "parable-art-review-54.json"
+  },
+  "tower-builder-02": {
+    "title": "A foundation without completion",
+    "alt": "The same man stands with his hands on his hips beside low courses of stone while a gray-bearded worker bends near tools and stacked timber.",
+    "caption": "Jesus describes a builder who lays a foundation but is unable to finish. The low stonework pictures the unfinished beginning at the heart of His warning.",
+    "refs": [
+      [
+        "nt/luke/14",
+        "Luke 14:29",
+        "29"
+      ]
+    ],
+    "owner": "jesus-christ/parables/tower-builder.html",
+    "section": "story-and-teaching",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/tower-builder-02-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/tower-builder-02-960.webp",
+    "original": "tower-builder-02.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b7a78e61-cc7d-4e26-ac63-ffd8c37db644.png",
+    "original_sha256": "9a62552e37ed8d486217663522dd4dd8241bc1cd3a4534b2e5ab60ea83ac5b72",
+    "prompt": "Correct the supplied photographic image: builderleft has unnatural GREEN discoloration on forearm/hand resting at his waist on viewer RIGHT. Restore that entire affected forearm, wrist, hand andfingers to normal warm brown human skin matching his other arm and face, withnaturalsunlightandsubtleshadow. No green skin, glove, plantoverlap, paint or colorcast. Bothhands restnormallyonhisownhips, crediblefivefingers. Preserve exactly faceidentity, beige/indigoclothing, otherworker, foundationstones, lighting andfullscene. No otherchanges.1536x1024 live-actionphotographic.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9d1b5750-cb9c-489f-b214-570e5874d957.png"
+    ],
+    "review_record": "parable-art-review-54.json"
+  },
+  "tower-builder-03": {
+    "title": "The unfinished work draws comment",
+    "alt": "The builder stands beside the unfinished stonework while a younger man gestures toward it and speaks with a gray-bearded man in a head wrap.",
+    "caption": "In Jesus' comparison, those who see the unfinished work begin to mock the builder. They point out that he began to build but could not finish, making the cost of an unconsidered beginning plain.",
+    "refs": [
+      [
+        "nt/luke/14",
+        "Luke 14:29-30",
+        "29-30"
+      ]
+    ],
+    "owner": "jesus-christ/parables/tower-builder.html",
+    "section": "receiving-the-word",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/tower-builder-03-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/tower-builder-03-960.webp",
+    "original": "tower-builder-03.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5c67d0dc-b864-42ea-98cd-0795e0679f9f.png",
+    "original_sha256": "aefbd8025bc6e821eea7742b66a7f0a3aa22b1b0bb619bc4b8c93fbd4dd64a06",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: The unfinished tower. Scripture source: Luke 14:29-30. Narrative context: A builder counts the cost Then A foundation is laid Then Inability to finish exposes inadequate preparation. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Do not add another event, named character, miracle, symbolic costume, or action absent from this source moment. Image uniqueness: this is scene 3 of 3 for The Tower Builder. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. New1536x1024 wide live-action scene same lowunfinishedtowerfooting vineyardsetting and builderfromreference. Constructionceased, no completedtower above waist. SAME builder beigeindigo recedinghair cleanshavenstands asideatleft, discouraged expression lookingat two passersby nearby. Twoordinarydistinctadultmen: one wirycleanshaven shortblackhair mutedrusttunic pointsopenhandtowardbarefoundation while speakingto otherstockygraybeardedbrownrobe, mildskepticalhalfsmile frombothnot cartooncackling. They illustrateLuke14:29-30 observers notinghebeganbutcouldnotfinish; no cruel mob/noauthorendorsedmockery. Builderhands relaxedandnaturalskin NOgreenartifact. Idlewoodbeamsandstone no workersactivelybuilding; daylightdistinctwiderangle fromprevious, sourceunspecifiedelapsedtime no seasons/yearsclaim. Natural realphotograph details.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b7a78e61-cc7d-4e26-ac63-ffd8c37db644.png"
+    ],
+    "review_record": "parable-art-review-54.json"
+  }
+}

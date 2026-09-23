@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "scope": "Independent source and semantic placement verification against saved pre-change snapshots; no repository edits or imports.",
+  "checks": {
+    "allNonArtPageDataExactlyUnchanged": true,
+    "allProseSourcesLinksUnchanged": true,
+    "allArtKeysAndCountsUnchanged": true,
+    "canonicalRegistryAndParagraphPositions": [
+      {
+        "key": "rich-fool-03",
+        "section": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "watchful-servants-03",
+        "section": "story-and-teaching",
+        "afterParagraph": 2
+      },
+      {
+        "key": "wedding-places-02",
+        "section": "setting",
+        "afterParagraph": 1
+      },
+      {
+        "key": "wedding-places-03",
+        "section": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "great-supper-04",
+        "section": "story-and-teaching",
+        "afterParagraph": 2
+      },
+      {
+        "key": "tower-builder-03",
+        "section": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "king-war-02",
+        "section": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "rich-fool-02",
+        "section": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "wedding-places-01",
+        "section": "setting",
+        "afterParagraph": 1
+      },
+      {
+        "key": "great-supper-02",
+        "section": "story-and-teaching",
+        "afterParagraph": 1
+      },
+      {
+        "key": "great-supper-03",
+        "section": "story-and-teaching",
+        "afterParagraph": 2
+      },
+      {
+        "key": "tower-builder-02",
+        "section": "story-and-teaching",
+        "afterParagraph": 1
+      }
+    ],
+    "rebuiltHTML": {
+      "rich-fool": {
+        "pass": true,
+        "orderedProseAndArtTokens": 7
+      },
+      "watchful-servants": {
+        "pass": true,
+        "orderedProseAndArtTokens": 7
+      },
+      "wedding-places": {
+        "pass": true,
+        "orderedProseAndArtTokens": 7
+      },
+      "great-supper": {
+        "pass": true,
+        "orderedProseAndArtTokens": 9
+      },
+      "tower-builder": {
+        "pass": true,
+        "orderedProseAndArtTokens": 7
+      },
+      "king-war": {
+        "pass": true,
+        "orderedProseAndArtTokens": 6
+      }
+    },
+    "wedding01Refs": "Luke 14:7-8 in canonical plan and registry; new exact-original review addendum validates.",
+    "greatSupper02Refs": "Luke 14:18 only in canonical plan and registry."
+  },
+  "planChangedFields": {
+    "rich-fool-02": [
+      "afterParagraph"
+    ],
+    "rich-fool-03": [
+      "sectionId",
+      "afterParagraph"
+    ],
+    "watchful-servants-03": [
+      "sectionId",
+      "afterParagraph"
+    ],
+    "wedding-places-01": [
+      "sourceSceneDescription",
+      "afterParagraph",
+      "refs"
+    ],
+    "wedding-places-02": [
+      "sectionId",
+      "afterParagraph"
+    ],
+    "wedding-places-03": [
+      "sectionId",
+      "afterParagraph"
+    ],
+    "great-supper-02": [
+      "generationPrompt",
+      "sourceSceneDescription",
+      "title",
+      "caption",
+      "afterParagraph",
+      "alt",
+      "refs"
+    ],
+    "great-supper-03": [
+      "afterParagraph"
+    ],
+    "great-supper-04": [
+      "sectionId",
+      "afterParagraph"
+    ],
+    "tower-builder-02": [
+      "afterParagraph"
+    ],
+    "tower-builder-03": [
+      "sectionId",
+      "afterParagraph"
+    ],
+    "king-war-02": [
+      "sectionId",
+      "afterParagraph"
+    ]
+  },
+  "evidenceBoundary": "Earlier 18 browser flows are separately reported by parent; this review independently verifies semantic order and exact model preservation, not a new browser interaction or pixel review.",
+  "hashes": {
+    "docs\\jesus-journey\\pages.json": "2c8b11330b7202416bce853b0bc959aaf81f3c2afe51ed240a8b7cad53dd938f",
+    "docs\\jesus-journey\\parable-art-plan.json": "3bcd3132c59c2cf32d9906b5b0f13bdee46bfa8dcf0e7bcf0c863df36a66e4dd",
+    "docs\\jesus-journey\\artworks.json": "03c86d66756decdb8d87f7d2bbaf48a81c4a2e3249a773d4990413bb3a249ce8",
+    "placement3-before-pages.json": "c79d4c0ad61bbd3c7c1037b89d157f749bdb4f00ade1875e4f073322644eb003",
+    "placement3-before-plan.json": "b5231c0c1382111b12cb97bb74cc9de0c58cae5808d864a288ea972cfd041c52"
+  },
+  "findings": []
+}

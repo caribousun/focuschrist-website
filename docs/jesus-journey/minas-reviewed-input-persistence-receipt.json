@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\docs\\jesus-journey\\parable-content-reviewed.json",
+      "snapshot": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\minas-reviewed-input-before-repo.json",
+      "beforeSha256": "bdb3bd4d688e96156b4fd4b0a510bf5def616ec71cf4a39a820e9843f35f3789",
+      "afterSha256": "e3fee7150c9f65893b36b8151e3596dbecceddc7761cad764d95a5e7ed9105af",
+      "onlySemanticChange": "Insert exact verified paragraph at Minas receiving-the-word blocks[0]"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\parable-content-reviewed.json",
+      "snapshot": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\minas-reviewed-input-before-work.json",
+      "beforeSha256": "bdb3bd4d688e96156b4fd4b0a510bf5def616ec71cf4a39a820e9843f35f3789",
+      "afterSha256": "e3fee7150c9f65893b36b8151e3596dbecceddc7761cad764d95a5e7ed9105af",
+      "onlySemanticChange": "Insert exact verified paragraph at Minas receiving-the-word blocks[0]"
+    }
+  ],
+  "paragraph": "The nobleman orders the unused pound taken from the servant and given to the one who has ten. The closing words also command that the opponents who rejected his rule be brought before him and slain. Luke records that command without narrating its execution; these severe features belong to the story Jesus tells, not to instructions for His hearers to harm others.",
+  "verification": "Removing the inserted paragraph yields exact prior parsed content for each file. No assembly, registry or image changes."
+}

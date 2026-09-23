@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "scope": "Rendered HTML source structural check only; not browser or visual review.",
+  "entries": [
+    {
+      "key": "servant-duty-01",
+      "expectedSection": "setting",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "setting",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "e55b8e997d8e39077586a86ebcec7664e1ed15d28af783f2890a38a14f35b3a8"
+    },
+    {
+      "key": "servant-duty-02",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "e55b8e997d8e39077586a86ebcec7664e1ed15d28af783f2890a38a14f35b3a8"
+    },
+    {
+      "key": "persistent-widow-01",
+      "expectedSection": "setting",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "setting",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "08f880de18c0c1cfde4a01b4f6510b951c8fc2e4741bd5f8aa2e90d8193928e3"
+    },
+    {
+      "key": "persistent-widow-02",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "08f880de18c0c1cfde4a01b4f6510b951c8fc2e4741bd5f8aa2e90d8193928e3"
+    },
+    {
+      "key": "persistent-widow-03",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "08f880de18c0c1cfde4a01b4f6510b951c8fc2e4741bd5f8aa2e90d8193928e3"
+    },
+    {
+      "key": "pharisee-publican-01",
+      "expectedSection": "setting",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "setting",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "c6a1d6b803b0232a0d7054aa4193a88e9c36ab8d01e29f453a635ec75e8ac6d2"
+    },
+    {
+      "key": "pharisee-publican-02",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "c6a1d6b803b0232a0d7054aa4193a88e9c36ab8d01e29f453a635ec75e8ac6d2"
+    },
+    {
+      "key": "pharisee-publican-03",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "c6a1d6b803b0232a0d7054aa4193a88e9c36ab8d01e29f453a635ec75e8ac6d2"
+    },
+    {
+      "key": "rich-man-lazarus-01",
+      "expectedSection": "setting",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "setting",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "388efa5af0bacd03e7ffdb7c37080ea57e9944b516393fb7540ab7b60882af2d"
+    },
+    {
+      "key": "rich-man-lazarus-02",
+      "expectedSection": "setting",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "setting",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "388efa5af0bacd03e7ffdb7c37080ea57e9944b516393fb7540ab7b60882af2d"
+    },
+    {
+      "key": "rich-man-lazarus-03",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "388efa5af0bacd03e7ffdb7c37080ea57e9944b516393fb7540ab7b60882af2d"
+    },
+    {
+      "key": "minas-01",
+      "expectedSection": "setting",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "setting",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "78ec468aafc0cf93bbb4651e5ddcf77c100a15614e9bbf3b4a91f412fa3eef02"
+    },
+    {
+      "key": "minas-02",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "78ec468aafc0cf93bbb4651e5ddcf77c100a15614e9bbf3b4a91f412fa3eef02"
+    },
+    {
+      "key": "minas-04",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "78ec468aafc0cf93bbb4651e5ddcf77c100a15614e9bbf3b4a91f412fa3eef02"
+    },
+    {
+      "key": "minas-03",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 2,
+      "actual": [
+        [
+          "story-and-teaching",
+          2
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "78ec468aafc0cf93bbb4651e5ddcf77c100a15614e9bbf3b4a91f412fa3eef02"
+    },
+    {
+      "key": "doorkeeper-01",
+      "expectedSection": "setting",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "setting",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "ce41a8f14d32886d50259a1fafd11085b0e9f1a476ca1852a174763c6c700544"
+    },
+    {
+      "key": "doorkeeper-02",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 1,
+      "actual": [
+        [
+          "story-and-teaching",
+          1
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "ce41a8f14d32886d50259a1fafd11085b0e9f1a476ca1852a174763c6c700544"
+    },
+    {
+      "key": "doorkeeper-03",
+      "expectedSection": "story-and-teaching",
+      "expectedAfterParagraph": 2,
+      "actual": [
+        [
+          "story-and-teaching",
+          2
+        ]
+      ],
+      "pass": true,
+      "htmlSha256": "ce41a8f14d32886d50259a1fafd11085b0e9f1a476ca1852a174763c6c700544"
+    }
+  ],
+  "passed": 18,
+  "total": 18,
+  "minasClosingParagraphRendered": true,
+  "changesMade": "No build/import/HTML edit."
+}

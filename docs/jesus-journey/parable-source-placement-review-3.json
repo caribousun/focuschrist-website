@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent source and canonical model placement review: 18 scenes across rich-fool, watchful-servants, wedding-places, great-supper, tower-builder, king-war. Read-only; no import, rebuild, registry or content edit.",
+  "evidenceBoundary": "Source/placement review uses canonical prose, plans, accepted captions/refs and existing exact-pixel review records. This is not a new full pixel review, owner approval, or release decision. King review55 now exists and passes both originals with caption conditions; import state may subsequently change.",
+  "inputSha256": {
+    "docs/jesus-journey/pages.json": "c79d4c0ad61bbd3c7c1037b89d157f749bdb4f00ade1875e4f073322644eb003",
+    "docs/jesus-journey/parable-art-plan.json": "b5231c0c1382111b12cb97bb74cc9de0c58cae5808d864a288ea972cfd041c52",
+    "docs/jesus-journey/artworks.json": "0d0f76f26334281f3cc0b79f7a1d035e3ffdbc0649f9c5da97e53eff16892e16"
+  },
+  "sourceConclusion": "All 18 planned moments fit the respective teachings. No missing event requires invented narrative or another picture to complete these six sequences. The connections preserve distinct stories, including explicit separation of Luke great supper from Matthew royal wedding. Seven illustrations should move nearer their corresponding narrative paragraphs; no prose rewrite is needed.",
+  "placementOverrides": [
+    {
+      "key": "rich-fool-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1,
+      "reason": "The imagined ease belongs beside the first story paragraph about larger barns and future comfort, before the next paragraph interrupts that expectation with the demand for his life."
+    },
+    {
+      "key": "watchful-servants-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2,
+      "reason": "The master serving belongs directly after the paragraph explaining this reversal, under A master who serves."
+    },
+    {
+      "key": "wedding-places-02",
+      "fromSection": "story-and-teaching",
+      "sectionId": "setting",
+      "afterParagraph": 1,
+      "reason": "The request to yield the higher place belongs beside the opening explanation of that embarrassment, before the positive lower-place alternative."
+    },
+    {
+      "key": "wedding-places-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1,
+      "reason": "The invitation upward belongs beside the paragraph about taking the low place, before the text turns to hospitality toward those unable to repay."
+    },
+    {
+      "key": "great-supper-04",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2,
+      "reason": "The invitation beyond town belongs beside the paragraph about the invitation extending farther, following scene03; its current neighboring paragraph distinguishes Luke from Matthew rather than describing this moment."
+    },
+    {
+      "key": "tower-builder-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1,
+      "reason": "Observers commenting on unfinished work belong after the first story paragraph, following scene02, before the companion king comparison."
+    },
+    {
+      "key": "king-war-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1,
+      "reason": "The embassy belongs immediately after the narrative paragraph describing the request for peace, before interpretive cautions/application."
+    }
+  ],
+  "companionExplicitPositions": [
+    {
+      "key": "rich-fool-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "wedding-places-01",
+      "sectionId": "setting",
+      "afterParagraph": 1
+    },
+    {
+      "key": "great-supper-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    },
+    {
+      "key": "great-supper-03",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 2
+    },
+    {
+      "key": "tower-builder-02",
+      "sectionId": "story-and-teaching",
+      "afterParagraph": 1
+    }
+  ],
+  "sourceFindings": [
+    {
+      "key": "wedding-places-01",
+      "severity": "narrow reference clarification",
+      "finding": "The image and caption expressly illustrate an imagined wedding, while verse7 describes Jesus observing guests at the meal that occasioned His teaching. Verse8 introduces the hypothetical wedding. Current verse7 alone incompletely supports the precise stated setting.",
+      "suggestion": "Extend image reference to Luke14:7-8 in plan and new reviewed metadata, preserving caption and image. Do not rewrite an already hash-bound review record."
+    },
+    {
+      "key": "great-supper-02",
+      "severity": "plan drift",
+      "finding": "The accepted registry and review53 correctly narrow the scene to the field excuse, Luke14:18, while canonical plan still lists Luke14:18-20 and the earlier field-or-oxen concept.",
+      "suggestion": "Reconcile plan title/description/refs to The field excuse / Luke14:18. Preserve the accepted image and its current reviewed caption. Other excuses remain correctly covered in prose; they are not pictured in this scene."
+    }
+  ],
+  "sourceChecks": {
+    "rich-fool": "Luke12:16 harvest;17-18 larger storage;19 imagined ease. Caption distinguishes imagined comfort from a future actually lived. Chapter prose supplies the reversal in20-21.",
+    "watchful-servants": "Luke12:35 readiness;36 return and immediate opening;37 master serving seated servants. Not depicted as a literal Christ portrait or asserted historical event.",
+    "wedding-places": "Luke14:7-8 observed ambition and hypothetical wedding;8-9 yielding a high place;10 lower guest invited upward. Hospitality teaching in12-14 remains prose and appropriately links to great supper.",
+    "great-supper": "Luke14:16-17 readiness;18 field refusal;21 street invitation;23 wider invitation. No oxen or marriage invented into the field image, no clinical diagnosis inferred from staffs, no coercive action depicted.",
+    "tower-builder": "Luke14:28 counting cost;29 foundation;29-30 unfinished work and observers. Comparison is tied to discipleship rather than presented as an actual construction history.",
+    "king-war": "Luke14:31 assessment of unequal forces;32 embassy seeking terms while the other king remains far away. Review55 accurately treats stones/camp/guard as illustrative and does not assert an agreement was reached."
+  },
+  "implementationBoundary": "If approved, update canonical plan sectionId/afterParagraph plus pages block order, and coordinate only seven registry section changes. The existing placement helper supports these overrides. Preserve all prose, artwork bytes and review hashes. Parent should rebuild after import; do not use the obsolete update_preview helper."
+}

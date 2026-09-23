@@ -1,0 +1,36 @@
+{
+  "status": "pass_with_scope_limits",
+  "date": "2026-09-23",
+  "environment": "local draft localhost:4173",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pages": {
+    "talents": 4,
+    "sheep-goats": 4,
+    "two-debtors": 2,
+    "good-samaritan": 8,
+    "friend-midnight": 3
+  },
+  "picturePathsChecked": 21,
+  "checks": [
+    "image loaded",
+    "artwork study opened",
+    "full-size viewer opened and closed",
+    "scripture reader opened and closed",
+    "artwork study closed",
+    "focus returned to initiating image link",
+    "no clipped dialog links or buttons",
+    "no horizontal page overflow"
+  ],
+  "allPassed": true,
+  "limits": [
+    "Opening scripture reader does not establish individual verse text correctness.",
+    "Full responsive composition, 200-percent text and no-JavaScript release checks remain outstanding.",
+    "Good Samaritan full-page capture showed repeated bands; DOM has exactly 8 unique figures with one image each and unique study headings. Single-viewport image inspection did not show duplicate elements; do not treat stitched screenshot as full composition approval.",
+    "Talents flow was checked before editorial placement fix; interactions unchanged but semantic order independently verified after rebuild."
+  ],
+  "viewportReset": true,
+  "publication": false
+}

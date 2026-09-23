@@ -1,0 +1,67 @@
+{
+  "bn-man-raised": {
+    "title": "A man restored to life",
+    "alt": "Jesus bends toward a man sitting upright on a woven mat and extends a hand bearing healed marks.",
+    "caption": "Third Nephi records that Jesus raised a man from the dead. The unnamed man's appearance, mat, posture and surroundings are artistic interpretations beyond the brief report.",
+    "refs": [
+      [
+        "bofm/3-ne/26",
+        "3 Nephi 26:15",
+        "15"
+      ]
+    ],
+    "owner": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "section": "children-speak",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bn-man-raised-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bn-man-raised-960.webp",
+    "original": "bn-man-raised.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c88c81d5-9748-47a7-87ee-fde740ec0950.png",
+    "original_sha256": "345f891c02f04312d4c869b9a8f73e28398d36861cbd0aad13ad40a610b325c3",
+    "prompt": "Precise photograph edit of image1. Add subtle fully healed crucifixion marks to Jesus' exposed wrists only. Preserve existing small palm mark. No blood, open wounds or graphic injury. Preserve tender joyful eye contact, kneeling posture and all limbs. Keep exact Jesus identity and photographic face unchanged; image2 is canonical likeness reference only. Preserve all remaining people, anatomy, composition, clothing, lighting, setting and photorealism. No illustration, text, collage or new narrative event.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-58feaee1-c46c-41b3-a025-79764da2b090.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "branch-art-review-5.json"
+  },
+  "rt-spirit-messengers": {
+    "title": "Messengers prepared to serve",
+    "alt": "Jesus addresses attentive men and women, including an older gray-haired man, in a softly lit setting.",
+    "caption": "Doctrine and Covenants 138 describes Christ's ministry among the righteous spirits and the commissioning of messengers between His death and Resurrection. The unnamed listeners and setting are artistic interpretations of the vision.",
+    "refs": [
+      [
+        "dc-testament/dc/138",
+        "Doctrine and Covenants 138:18â€“20",
+        "18-20"
+      ],
+      [
+        "dc-testament/dc/138",
+        "Doctrine and Covenants 138:29â€“37",
+        "29-37"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "spirit-world",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-spirit-messengers-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-spirit-messengers-960.webp",
+    "original": "rt-spirit-messengers.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4b424195-0cb9-49b8-a98d-28563dc4f2c3.png",
+    "original_sha256": "f6b209750ba1d3b9684a4460cf59da481205d02d7e8d6ecc3f9e3f49e8b75b48",
+    "prompt": "Precise photograph edit of image1. Change ONLY the middle BACKGROUND man's head (behind seated foreground man, directly left of Jesus) so he does not look like Jesus: much older man with short straight silver gray hair, long narrow face, small close-trimmed gray beard, deep natural age lines. Preserve attentive peaceful expression directed to Jesus. Do NOT alter foreground man or other people. Do NOT add crucifixion scars: this scene occurs before Resurrection. Keep exact Jesus identity and photographic face unchanged; image2 is canonical likeness reference only. Preserve all remaining people, anatomy, composition, clothing, lighting, setting and photorealism. No illustration, text, collage or new narrative event.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-76ae646e-54ff-4dfc-b26e-7a28979d3468.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "branch-art-review-5.json"
+  }
+}

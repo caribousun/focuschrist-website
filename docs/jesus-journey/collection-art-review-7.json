@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Four new hearing illustrations plus the corrected hearing-04-v2; every exact file viewed at original detail.",
+  "summary": {
+    "passWithCaptionConditions": 5,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Fictional modern applications with no visible Christ.",
+    "Hidden history, authorship, exact craftsmanship and message content are not asserted as visible facts.",
+    "Technical pass is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "collection-hearing-05",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1b8c01d1-9a8c-48e4-aadb-2f5fcb1982f0.png",
+      "sha256": "baa4fb748c3d6c4de98fd711ce54dc044a85e2ba7369ecbc7665c1e475db92aa",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Putting a changed mind into action",
+      "alt": "A young person wearing gloves gathers plastic bottles into a recycling bin in a hall with tables and stacked chairs.",
+      "caption": "The young person takes part in clearing the room. As an imagined application of the two-sons parable, the scene can prompt reflection on doing a responsibility we once resisted. The photograph-like illustration shows the work itself; an earlier refusal or return is not visible.",
+      "refs": [
+        [
+          "nt/matt/21",
+          "Matthew 21:28-32",
+          "28-32"
+        ]
+      ],
+      "findings": "Two gloved hands grip bottles plausibly, knee and foot positioning coherent. Hall cleanup credible. No obvious anatomical or material defect; no precise school identification established.",
+      "conditions": [
+        "Do not state an earlier refusal or absence as an observed fact.",
+        "Do not claim every visible item is recyclable under a specific local program."
+      ]
+    },
+    {
+      "key": "collection-hearing-06",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b294e1f5-fa0c-47f7-92f0-5b84d3b72883.png",
+      "sha256": "641ad66e09c520f52df59442bfa0b4d70e0f9941771ab952725fea70f853f514",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Practicing what is learned",
+      "alt": "A learner holds a metal square against a wooden assembly while another adult points toward the work.",
+      "caption": "The learner works with the tool while another person offers guidance. This imagined workshop scene invites a connection with hearing Jesus' words and doing them: instruction can shape what we actually practice. It does not claim that the visible joint proves perfect workmanship.",
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:24-27",
+          "24-27"
+        ]
+      ],
+      "findings": "Both wear eye protection. Square edges rest plausibly along the top region of wooden blocks; hands hold square and stock coherently. Clamp screw pad visibly contacts the left block; other jaw partly occluded. Assembly rests on bench. Pointing hand clear of sharp tool. No impossible crossing or floating tool apparent.",
+      "conditions": [
+        "Do not claim exact squareness, measurement, completed correction or professional certification.",
+        "Mentor/apprentice relation is imagined context, not verified biography."
+      ]
+    },
+    {
+      "key": "collection-hearing-07",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-1aaa7154-682b-4f80-b9c7-75b72005e5f2.png",
+      "sha256": "fe734c7abb2597f9469e523d56e5b955fed061e59939dd70ebb24a07741c461f",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Pausing before sharing",
+      "alt": "Two young people talk beside a laptop and a phone in a room marked Media Club.",
+      "caption": "The devices remain on the table while the conversation receives attention. This imagined application asks what it might mean to pause before sharing words that could harm someone. Jesus' teaching about fruit and speech invites care for what our words reveal and what they carry to others.",
+      "refs": [
+        [
+          "nt/luke/6",
+          "Luke 6:43-45",
+          "43-45"
+        ]
+      ],
+      "findings": "Faces show engaged dialogue; young woman's hand hovers naturally near phone, young man's pointing hand plausible. Device screens do not reveal message. Generic room signs coherent, no private content.",
+      "conditions": [
+        "Do not state a harmful message was received, deleted or forwarded; screens do not establish it.",
+        "Frame withheld sharing as reflection, not observed backstory."
+      ]
+    },
+    {
+      "key": "collection-hearing-08",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a0b7efc9-dbaf-4c1d-aaf9-0ee0a694ef02.png",
+      "sha256": "bec102c5b23c10df21a6a3908a85fe611df45f74e5f10980b3525d8e32206a9e",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Beginning with self-examination",
+      "alt": "A man studies printed pages with a pencil in hand while a woman sits nearby with a notebook and laptop.",
+      "caption": "The pages receive careful attention before the conversation continues. Alongside Jesus' teaching about the beam and mote, this imagined editorial scene invites a question: what in my own work needs correction before I criticize another's? The picture does not establish who wrote the manuscript.",
+      "refs": [
+        [
+          "nt/matt/7",
+          "Matthew 7:3-5",
+          "3-5"
+        ]
+      ],
+      "findings": "Paper and pencil grip plausible; other hand naturally supports chin. Nearby woman's pen grip and posture coherent. Printed content unreadable, no exact authorship or corrections proved. Photographic faces, glasses and desk materials.",
+      "conditions": [
+        "Do not claim manuscript ownership or that another writer has already been corrected.",
+        "Do not invent readable document text or professional identity."
+      ]
+    },
+    {
+      "key": "collection-hearing-04",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-41ba81a2-2bb7-457e-8327-1b7234c7d5c9.png",
+      "sha256": "a17a6dd77dec0d8ea4b95be698bf6462c72a5f11006629ea18fae16a85615fcb",
+      "version_key": "collection-hearing-04-v2",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Making space to act",
+      "alt": "A woman puts papers on a shelf beside an inverted four-legged wooden stool and repair tools on a workbench.",
+      "caption": "Papers are moved aside while a stool and tools wait on the bench. This imagined scene offers a practical reflection on making room for a good intention to become action. The sower's warning about competing concerns invites us to notice what repeatedly crowds out our response.",
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:18–20",
+          "18-20"
+        ]
+      ],
+      "findings": "Exactly four clear square-section legs now join the seat corners. Two side stretchers connect consistently; a loose crosspiece with tenons rests separately on bench. The extra fifth post and chair-back ambiguity are resolved. Hand holding papers and relaxed other hand remain plausible; stool is supported by its seat on tabletop.",
+      "conditions": [
+        "Only this v2 hash passes; original malformed chair remains rejected.",
+        "Do not claim an agreed task, specific broken joint or completed repair from this still image."
+      ]
+    }
+  ]
+}

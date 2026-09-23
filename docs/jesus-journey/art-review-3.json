@@ -1,0 +1,42 @@
+{
+  "review_type": "independent_visual_candidate_review",
+  "scope": "Three Christ candidates inspected directly with original detail; compared with approved Christ reference inspected earlier in this review session. No generation or editing performed.",
+  "owner_approval": false,
+  "reference": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png",
+  "candidates": [
+    {
+      "file": "exec-92154fb6-8dc8-4eae-a4c2-f23d81b0bc22.png",
+      "subject": "Matthew 22 tribute coin",
+      "technical_verdict": "pass_with_caption_conditions",
+      "likeness": "Strong reference consistency in nose, brow, wavy hair, beard, face proportions and adult age. Restrained expression is appropriate to teaching.",
+      "pupils_gaze": "Jesus and both questioners look downward toward the coin/gesture area; no evident misaligned or malformed pupils. Gaze is coherent with examining the tribute money.",
+      "hands_body": "Christ's pointing hand is plausible with folded remaining fingers. Coin rests in a physically plausible open palm. Left questioner's chin-resting hand is plausible. No blocking body or hand defect observed.",
+      "event_specificity": "Coin, questioning men and Christ's pointing gesture clearly support this scene. Coin portrait and markings should be treated as artistic approximations, not numismatic evidence.",
+      "setting": "Stone courtyard and woven garments are plausible artistic setting. Exact location geometry, participants' appearances, garment patterns and coin details are not established by the passage.",
+      "caption_boundary": "Use artistic depiction language; do not claim the image precisely reconstructs the historic coin or clothing."
+    },
+    {
+      "file": "exec-4ac48e2a-5611-45df-a3e5-a674677e7e57.png",
+      "subject": "Luke 17 returning Samaritan",
+      "technical_verdict": "pass_with_caption_conditions",
+      "likeness": "Recognizably consistent Christ likeness despite smaller face, downward angle and mild smile. Age and expression fit compassionate reception.",
+      "pupils_gaze": "Jesus looks downward toward the kneeling man. Lids partly obscure the eyes naturally; no evident gaze defect at native resolution. Samaritan's face is directed toward ground as intended.",
+      "hands_body": "Christ's hanging hands and sandal-clad feet are plausible. Samaritan's planted hands, folded legs and visible sandal are coherent. Some digits/limbs are occluded by perspective and robes, with no evident extras.",
+      "event_specificity": "Deeply bowed returning man near Christ's feet communicates the thanksgiving scene. He is face-down in posture though forehead is not pressed to the soil. Do not imply all ten lepers appear in this frame.",
+      "setting": "Village hillside, path and olive foliage are artistic context, not an identified historical location.",
+      "caption_boundary": "Identify the returning Samaritan and gratitude using the passage; keep specific landscape and clothing as artistic choices."
+    },
+    {
+      "file": "exec-3f6dd3e6-3fed-4d08-b65b-59ec8610e625.png",
+      "subject": "Mark 7 Syrophoenician woman's appeal",
+      "technical_verdict": "revise_gaze_before_use",
+      "likeness": "Strong recognizable reference consistency in facial structure, hair and beard. Adult age and quiet expression are otherwise appropriate.",
+      "pupils_gaze": "Confirmed gaze mismatch: woman's visible eye points upward toward Jesus, but Jesus's pupils are oriented approximately horizontally left, above her eye position. He appears to look beyond or past her rather than meet her appeal. The pupils themselves are plausible; their direction undermines the intended attentive encounter.",
+      "hands_body": "Woman's open pleading hands, Christ's clasped hands and visible feet show no clear blocking anatomical defect. Seated and kneeling poses are coherent.",
+      "event_specificity": "The woman's appeal is readable, but a doorway overlooking water is an imagined staging. Mark places Jesus in a house; avoid asserting this particular outdoor threshold is recorded.",
+      "recommended_correction": "Preserve identity, scene, anatomy and expressions while turning both of Christ's eyes downward toward the woman's actual eye position; a slightly greater downward head angle may help. Reinspect both pupils at native detail after correction.",
+      "caption_boundary": "Do not interpret the accidental gaze mismatch as intentional scriptural rejection. Present setting and gestures as artistic depiction."
+    }
+  ],
+  "overall": "Tribute coin and returning Samaritan are technically usable candidates with truthful depiction captions. Syrophoenician woman candidate should be revised for Christ's gaze before use. No owner approval inferred."
+}

@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "filesChanged": [
+    "docs/jesus-journey/pages.json",
+    "docs/jesus-journey/parable-art-plan.json"
+  ],
+  "snapshots": [
+    "placement3-before-pages.json",
+    "placement3-before-plan.json"
+  ],
+  "checks": {
+    "allNonArtPageDataExactlyUnchanged": true,
+    "allArtKeysAndCountsPreserved": true,
+    "sevenExactParagraphPositionsVerified": true
+  },
+  "registrySectionChangesRequired": [
+    {
+      "key": "rich-fool-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "watchful-servants-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "wedding-places-02",
+      "fromSection": "story-and-teaching",
+      "sectionId": "setting"
+    },
+    {
+      "key": "wedding-places-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "great-supper-04",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "tower-builder-03",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    },
+    {
+      "key": "king-war-02",
+      "fromSection": "receiving-the-word",
+      "sectionId": "story-and-teaching"
+    }
+  ],
+  "reviewAddendum": "parable-art-review-source-addendum-wedding-01.json",
+  "registrySourceChangeRequired": "wedding-places-01 refs -> Luke14:7-8 via new reviewed addendum batch; great-supper02 registry already correctly Luke14:18.",
+  "preserved": "No registry, immutable batch, old review, image bytes, builders, generated HTML, import or build modified."
+}

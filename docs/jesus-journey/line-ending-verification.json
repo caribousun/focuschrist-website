@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "status": "pass_for_line_ending_fix",
+  "normalizationProof": [
+    {
+      "file": "answers/bible-and-book-of-mormon-together.html",
+      "LF": true,
+      "currentMatchesAfterHash": true,
+      "reconstructedCRLFMatchesBeforeHash": true
+    },
+    {
+      "file": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "LF": true,
+      "currentMatchesAfterHash": true,
+      "reconstructedCRLFMatchesBeforeHash": true
+    },
+    {
+      "file": "art-gallery.json",
+      "LF": true,
+      "currentMatchesAfterHash": true,
+      "reconstructedCRLFMatchesBeforeHash": true
+    },
+    {
+      "file": "site-search-index.json",
+      "LF": true,
+      "currentMatchesAfterHash": true,
+      "reconstructedCRLFMatchesBeforeHash": true
+    },
+    {
+      "file": "sitemap.xml",
+      "LF": true,
+      "currentMatchesAfterHash": true,
+      "reconstructedCRLFMatchesBeforeHash": true
+    },
+    {
+      "file": "tools/build_art_gallery.py",
+      "LF": true,
+      "currentMatchesAfterHash": true,
+      "reconstructedCRLFMatchesBeforeHash": true
+    },
+    {
+      "file": "tools/discovery_qa.py",
+      "LF": true,
+      "currentMatchesAfterHash": true,
+      "reconstructedCRLFMatchesBeforeHash": true
+    }
+  ],
+  "checks": [
+    {
+      "command": "git diff --check",
+      "exitCode": 0,
+      "outputSummary": "",
+      "expectedDraftGateFailure": false
+    },
+    {
+      "command": "tools/build_jesus_parent.py --check",
+      "exitCode": 0,
+      "outputSummary": "Parent journey updated; original hero and study retained. strict=False. Publication and complete destination verification are separate.",
+      "expectedDraftGateFailure": false
+    },
+    {
+      "command": "tools/build_jesus_journey.py --check",
+      "exitCode": 0,
+      "outputSummary": "Built 76 nested studies; strict=False. Publication and semantic/visual verification are separate.",
+      "expectedDraftGateFailure": false
+    },
+    {
+      "command": "tools/build_jesus_discovery.py --check",
+      "exitCode": 0,
+      "outputSummary": "Journey discovery current: 76 nested destinations; accepted rendered artwork only. Draft release checks remain required.",
+      "expectedDraftGateFailure": false
+    },
+    {
+      "command": "tools/jesus_discovery_qa.py",
+      "exitCode": 0,
+      "outputSummary": "JOURNEY DISCOVERY PASS: 76 nested pages and 213 reviewed original pictures; stable sitemap, owning studies, chapter search and gallery routes. Drafts are not release-ready.",
+      "expectedDraftGateFailure": false
+    },
+    {
+      "command": "tools/discovery_qa.py",
+      "exitCode": 1,
+      "outputSummary": "77 expected draft noindex failures",
+      "expectedDraftGateFailure": true
+    }
+  ],
+  "allNestedOutputsLF": 76,
+  "exactOriginalHashesAndReviewBindingsPassed": 213,
+  "scope": "Read-only independent verification; only this report written outside repository.",
+  "immutableEvidenceBoundary": "Current original bytes match recorded original hashes and imported review bindings validate. No before-review-file hash inventory was supplied, so temporal byte preservation of every review file remains parent receipt evidence; original-byte preservation is independently verified.",
+  "strictGate": "Draft checks pass. General discovery QA still rejects noindex draft pages as expected; not bypassed or changed.",
+  "findings": []
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "files": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\docs\\jesus-journey\\parable-content-reviewed.json",
+      "snapshotMatchesBeforeHash": true,
+      "currentMatchesAfterHash": true,
+      "exactlyOneParagraphInsertedAtIndex0": true,
+      "allOtherParsedContentExactlyUnchanged": true,
+      "sha256": "e3fee7150c9f65893b36b8151e3596dbecceddc7761cad764d95a5e7ed9105af"
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\parable-content-reviewed.json",
+      "snapshotMatchesBeforeHash": true,
+      "currentMatchesAfterHash": true,
+      "exactlyOneParagraphInsertedAtIndex0": true,
+      "allOtherParsedContentExactlyUnchanged": true,
+      "sha256": "e3fee7150c9f65893b36b8151e3596dbecceddc7761cad764d95a5e7ed9105af"
+    }
+  ],
+  "twoReviewedInputsByteIdentical": true,
+  "preserved": "All other prose, references, links, metadata and entries exactly unchanged.",
+  "renderedPlacementStatus": "Pending updated build; deliberately not inspected stale generated pages or executed a build.",
+  "scope": "Read-only independent verification; only this report written."
+}

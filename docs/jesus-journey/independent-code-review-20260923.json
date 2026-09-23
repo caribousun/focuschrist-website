@@ -1,0 +1,73 @@
+{
+  "reviewer": "remaining_gospel_art independent code/release review; excludes review of own generated art and own warmth proposals",
+  "scope": "Current saved code/site diff, builders/importer/review guard, workflow additions, shared JS changes, 17 negative tests, canonical coverage, original preservation.",
+  "findings_fixed": [
+    {
+      "file": "tools/topic_body_picture_qa.py",
+      "problem": "Root-relative URL resolved against filesystem drive root on Windows.",
+      "fix": "Resolve URL paths from site root; reject paths outside site root.",
+      "verification": "22 topic destinations audited; zero issue-bearing rows in work/topic-body-independent.json."
+    },
+    {
+      "file": "tools/topic_artwork_details_qa.py",
+      "problem": "Same path bug plus new parent originals unaccounted in preserved baseline count.",
+      "fix": "Root-relative safe resolver; exact journey registry ownership, accepted pixel review and derivative hash verification; subtract only explicitly inventoried journey originals while preserving baseline99/3.",
+      "verification": "PASS216 adapter pictures,3 existing detail pictures,12 panels,22 dependencies."
+    },
+    {
+      "file": "tools/topic_inline_scripture_qa.py",
+      "problem": "Valid disjoint verse lists rejected; label verification handled only one range.",
+      "fix": "Accept comma-separated verses/ranges, verify every range bounds, first-fragment and exact normalized label selection.",
+      "verification": "PASS594 source links."
+    },
+    {
+      "file": "tools/sitewide_hero_runtime_qa.js",
+      "problem": "Fixed canonical42 rejected76 new routes.",
+      "fix": "Exact sitemap set versus discovered root/answers/art-study/nested journey HTML; duplicate URLs still reject, original21 hero inventory unchanged.",
+      "verification": "PASS42 interaction contexts across21 destinations in JSDOM."
+    },
+    {
+      "file": "docs/resource-page-coverage.json",
+      "problem": "76 new pages lacked explicit source-card coverage.",
+      "fix": "Inspected each current HTML for data-resource-key, confirmed all76 empty; added explicit empty arrays without modifying42 prior entries.",
+      "verification": "Resource gate exact118 canonical coverage."
+    },
+    {
+      "file": "tools/resource_thumbnail_qa.py",
+      "problem": "Root-relative links in new pages falsely reported missing on Windows.",
+      "fix": "Resolve links/images from site root; reject decoded path traversal.",
+      "verification": "PASS118 pages124 source-matched cards."
+    },
+    {
+      "file": "tools/jesus_discovery_qa.py",
+      "problem": "Journey-specific directory row rules lacked scoped static contract.",
+      "fix": "Check two-column/minmax layout,odd-last span,phone stacking with three negative removal mutations; discover per-page directory counts and stylesheet versions.",
+      "verification": "Added rules passed; full discovery run blocked only by13 stale gallery originals during concurrent import before root rebuild."
+    }
+  ],
+  "no_actionable_defect_found": [
+    "site-common.js root-relative shared asset resolution for /jesus-christ/",
+    "topic-artwork-details.js chooses heading text for concise onward-study pill",
+    "Exact accepted-candidate hash binding and owner rejection override",
+    "Numeric import revision order and retained archive filenames",
+    "Encoding E guard and draft noindex/strict release paths"
+  ],
+  "verification": {
+    "journey_unittests": "17/17 passed with Python runtime; includes exact candidate, owner rejection, changed originals, legacy review binding, draft robots, encoding corruption and revision archives.",
+    "saved_originals": "All311 pre-handoff recovery originals rehashed against saved manifest: zero missing or changed.",
+    "existing_art": "git diff --name-only -- assets art returned empty; tracked hero, identity and prior artwork files unchanged.",
+    "diff_check": "git diff --check passed after normalizing coverage JSON LF.",
+    "browser": "Not performed by this reviewer. Root owns CUA; no direct browser automation used.",
+    "code_changes_review": "Parent independent review still required for fixes authored here."
+  },
+  "remaining_release_work": [
+    "Root rebuild strict HTML/discovery after all artwork imports and final wording approval; rerun discovery and strict gates.",
+    "Add17 unittest fixtures to site-qa workflow; current workflow additions run only journey gate and strict builder checks.",
+    "Root remove unnecessary complete-card-rows.css link from nested builder; jj-directory own rules now covered separately.",
+    "Refresh static content audit ledger only after reviewed final prose and exact bytes.",
+    "sitewide_artwork_review_qa missing historical git baseline81cb709e8ccf43096ae8e3109a213aae68ae6fb5: obtain actual object, do not weaken baseline guard.",
+    "Exclude generated tools/__pycache__ files from commit; currently untracked.",
+    "Publication authority, actual deployment and public-byte verification remain separate."
+  ],
+  "approval": "No owner aesthetic approval inferred, no publication performed, no shared content or artwork modified by this review."
+}

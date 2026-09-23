@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent original-detail visual and source review of prodigal-son04-06, with actual01 pixels inspected for son/father continuity.",
+  "globalConditions": [
+    "Unnamed figures illustrate Jesus' parable; no actual historical portrait or exact reconstructed location is asserted.",
+    "Technical acceptance does not establish owner approval."
+  ],
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "prodigal-son-04",
+      "generationKey": "prodigal-son-04",
+      "sha256": "297a6bdc98f27df01632e1389b2743700527175098301edeb354a08d9e021d69",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-514afa6f-0f04-47b5-b40e-fc6d37598326.png",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Feeding swine in the far country",
+      "alt": "The young man in a torn tan tunic and rust-colored wrap tips a wooden bucket into a trough as several pigs eat beside him.",
+      "caption": "The younger son feeds swine while hunger deepens his need. Jesus says he longs for the food the animals eat, bringing the story to the painful distance between his earlier abundance and his present want.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:15-16",
+          "15-16"
+        ]
+      ],
+      "findings": "The son retains the dark curls, youthful long-nosed face and rust/tan clothing of01, with credible dirt, fraying and wear. Bucket hand grips its handle coherently; poured feed meets trough naturally. Pig heads, ears, snouts and visible legs are distinct and coherent. Downward attention fits the task; he is not shown eating animal feed. Feed ingredients and bucket construction are illustrative, not an authenticated identification of the scriptural husks."
+    },
+    {
+      "key": "prodigal-son-05",
+      "generationKey": "prodigal-son-05",
+      "sha256": "76eb6c6ca9a49b4844904ece1fda041c780e5397228b88b4d3f8e7d9acf2206f",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a1a1dc49-8fcf-430b-9601-50d869f08d27.png",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Remembering his father's house",
+      "alt": "The young man sits beside the pig enclosure with his hands resting near his knees, looking beyond the fence; an empty wooden bucket lies beside him.",
+      "caption": "The son remembers that his father's hired servants have bread enough while he is hungry. He resolves to return and acknowledge his sin, a decision pictured here before the journey home begins.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:17-19",
+          "17-19"
+        ]
+      ],
+      "findings": "Face, hair, worn clothing and enclosure preserve04 continuity. Seated anatomy, relaxed overlapping hands, feet and sandals are coherent. Thoughtful upward/outward gaze and restrained parted mouth suit reflection without asserting exact inner words visible in a photograph. Road is background setting, not proof that departure has already occurred; bucket beside him is illustrative."
+    },
+    {
+      "key": "prodigal-son-06",
+      "generationKey": "prodigal-son-06",
+      "sha256": "8704c045e88dfad3e7b19a7d0661efc07f878d00eeb0c2aa8e56e4ba0235d0f5",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-3b936596-152d-48f3-a015-cb837ac7c589.png",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The father welcomes his son",
+      "alt": "The gray-haired father holds his returning son by the shoulders while the young man reaches around his side, and they look into one another's faces.",
+      "caption": "The father meets his returning son with compassion and draws him close. Their embrace pictures the welcome Jesus describes as the son comes home in need.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:20",
+          "20"
+        ]
+      ],
+      "findings": "Father matches01 silver swept hair, white beard, brow, long nose and cream/navy garments; son preserves youthful curls, profile and now ragged rust/tan clothes. Reciprocal gaze is direct and tender, expressions restrained. Shoulder hands, visible fingers and son's arm around father are anatomically credible with natural cloth contact. The frame shows an embrace, not running feet or a kiss; those source actions should not be asserted as visible. No robe/ring/restoration gifts from later verses appear."
+    }
+  ]
+}

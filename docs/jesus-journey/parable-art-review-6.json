@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Three v2 corrections reviewed at full frame against previously accepted sequence images.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Exact new hashes only; previous rejected versions remain rejected.",
+    "Source/visual pass is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "net-03",
+      "generationKey": "net-03-v2",
+      "sha256": "7ba9c75c96c78a23f1ec77363a6b8aba831e2b5ed94c618a2fe1b2575d3198b8",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "The catch is sorted",
+      "alt": "Three fishermen sort fish beside baskets on the shore, with a wooden boat behind them.",
+      "caption": "The gathered catch is examined on the shore, with some fish placed in baskets and others set apart. Jesus uses this separation to teach about judgment at the end of the world. He identifies angels as the agents of that final division; the comparison does not appoint readers to determine their neighbors' ultimate worth.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:48–50",
+          "48-50"
+        ]
+      ],
+      "findings": "The left man is now clean-shaven, central bearded man remains preserved, and right man is a balding gray elder, matching net-02-v2. Three distinct faces; fish grips, hands, seated/crouched legs, baskets and scene contacts credible. No new material anatomy defect.",
+      "conditions": [
+        "Only this v2 hash passes; earlier net-03 and owner-rejected net-02 remain excluded.",
+        "Do not claim fish species or exact fishing practice is archaeologically verified."
+      ]
+    },
+    {
+      "key": "pearl-02",
+      "generationKey": "pearl-02-v2",
+      "sha256": "3628b1815301eacf5659e052f642174262578568ec7b047a8a194ddc4d215767",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "One pearl of great worth",
+      "alt": "A seated merchant examines a single pearl between his fingers while a seller holds an empty folded cloth.",
+      "caption": "One pearl holds the merchant's attention. Jesus describes the recognition of something so valuable that the merchant is willing to sell all he has to obtain it. The image illustrates that moment of recognition before the purchase, inviting reflection on how we respond to the kingdom's surpassing worth.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:45–46",
+          "45-46"
+        ]
+      ],
+      "findings": "Exactly one visible pearl, held between the seated merchant's fingers. Removed duplicate no longer competes for attention. Merchant identity, seller's hands, folded cloth and photographic realism remain coherent.",
+      "conditions": [
+        "Do not claim the sale or payment has already occurred.",
+        "This is an illustrative merchant, not a named historical person."
+      ]
+    },
+    {
+      "key": "lost-sheep-03",
+      "generationKey": "lost-sheep-03-v2",
+      "sha256": "05ff38a02bce43323401bcda17700951fee0375004ff3251978817b48523d150",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Rejoicing with neighbors",
+      "alt": "A shepherd welcomes three neighbors at his doorway while a white-faced cream-colored sheep stands beside him.",
+      "caption": "The shepherd calls others to share his joy over the sheep he has found. Luke's account carries the recovery beyond a private moment into rejoicing with friends and neighbors, then connects that joy with repentance. The welcome invites us to receive another person's return with gladness.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:6–7",
+          "6-7"
+        ]
+      ],
+      "findings": "White face, pale ears, pinkish muzzle and cream wool now match the lamb in lost-sheep-02. Standing legs are coherent; minor natural shading is not the prior dark facial patch. Shepherd identity, neighbor expressions and open hands preserved. Shared joy fits source.",
+      "conditions": [
+        "Neighbors' exact number and doorway are illustrative details.",
+        "The shepherd remains a fictional character; no literal portrait of Jesus is implied."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,365 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent parable source and image reviewer",
+  "scope": "Fifteen supplied full-frame 1536x1024 generated images, viewed directly. Source/visual review only; not owner approval, browser release acceptance, or whole-site exclusivity certification.",
+  "method": "Compared full pixels with intended scene prompts, official Gospel passages, adjacent sequence images, and the official Church Bible Dictionary entry Tares. Hashes identify reviewed pixels. No generation or repository edits.",
+  "summary": {
+    "passWithCaptionConditions": 11,
+    "revise": 4,
+    "revisionKeys": [
+      "strong-man-02",
+      "growing-seed-03",
+      "wheat-tares-03",
+      "wheat-tares-04"
+    ]
+  },
+  "sources": [
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/bd/tares?lang=eng",
+      "Bible Dictionary: Tares"
+    ],
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng",
+      "nt/matt/11"
+    ],
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/11?lang=eng",
+      "nt/luke/11"
+    ],
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/4?lang=eng",
+      "nt/mark/4"
+    ],
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/13?lang=eng",
+      "nt/matt/13"
+    ],
+    [
+      "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/9?lang=eng",
+      "nt/matt/9"
+    ]
+  ],
+  "globalConditions": [
+    "Parable characters are unnamed fictional people. No literal Christ or other named historical identity is claimed.",
+    "Scenery, garments, helpers and tools are illustrative choices, not exact archaeological reconstruction.",
+    "Continuity is required for an explicitly recurring protagonist; unrelated unnamed workers need not look identical.",
+    "Exact weed species is not prescribed by the KJV word alone. The Church Bible Dictionary identifies darnel grass; botanical captions must distinguish that source explanation from what pixels can prove.",
+    "Passes still require appropriate crop, visible source/caption alignment, responsive study/gallery testing, and normal owner review. Rejected hashes should not be counted as accepted illustrations through new filenames."
+  ],
+  "entries": [
+    {
+      "key": "children-marketplace-01",
+      "sha256": "c8f021fcafd8cf2b89bf94e3ec95366b6671d6b2995d3336fa030708dd40ccf5",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The seated, unresponsive children fit the refusal in Jesus' comparison; the nearby dancers clarify the invitation but are illustrative additions.",
+      "visibleReview": "Seven children have coherent postures, faces and visible limbs. One plays a reed instrument, others clap or move, while three remain seated.",
+      "conditions": [
+        "Emphasize the refusing group rather than claiming all the children dance.",
+        "Do not identify these as actual children who met Jesus."
+      ],
+      "recommendedTitle": "Children who will not join",
+      "alt": "Children play a flute and clap in a marketplace while three other children remain seated nearby.",
+      "caption": "Some children respond to the music while others remain apart. Jesus compares His generation to children dissatisfied with either a joyful tune or a lament. In context, the criticism exposes a refusal to receive either John's austere ministry or the Son of man's fellowship with others.",
+      "refs": [
+        [
+          "nt/matt/11",
+          "Matthew 11:16–19",
+          "16-19"
+        ]
+      ]
+    },
+    {
+      "key": "strong-man-01",
+      "sha256": "3657a9222206bf58356f614bd361c29bd2e54b3fb1e87f54b52b52ddf8e8f762",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "The armed guard and goods behind him fit the guarded household of Luke 11:21.",
+      "visibleReview": "A dark-bearded man in a headcloth and striped brown mantle stands with a shield in a stone doorway. Arms and shield grip are coherent; no injury or combat.",
+      "conditions": [
+        "This is a fictional guard in Jesus' comparison; do not label his face as Satan, Jesus, or a historical person."
+      ],
+      "recommendedTitle": "A strong man guards his house",
+      "alt": "An armed man stands with a shield at a stone doorway, with jars and sacks stored behind him.",
+      "caption": "The guard stands alert beside the goods he protects. Jesus introduces this strong man's security before describing the arrival of someone stronger. Spoken amid accusations about His deliverance of a suffering person, the comparison points toward His power to overcome evil.",
+      "refs": [
+        [
+          "nt/luke/11",
+          "Luke 11:17–22",
+          "17-22"
+        ]
+      ]
+    },
+    {
+      "key": "strong-man-02",
+      "sha256": "8f7b5c419e89f43b1855db2390f560ce6595dd65a48d3d4281898721b71df443",
+      "status": "revise",
+      "sourceFit": "The defeat and taking of armor fit Luke 11:22 in isolation, but the sequence reverses the first guard's apparent role.",
+      "visibleReview": "The standing victor closely resembles the first image's guard in beard, cream tunic and striped mantle. The seated defeated guard is a different-looking man in reddish clothing and leather armor. Anatomy and restrained action are otherwise credible.",
+      "conditions": [
+        "Revise the defeated guard to preserve the first guard's identity and costume; make the victor visibly distinct.",
+        "This is a visual continuity failure, not a claim that scripture prescribes the men's faces or clothing."
+      ],
+      "recommendedTitle": null,
+      "alt": "A standing man holds a shield and sheathed sword beside a seated man wearing leather armor.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/luke/11",
+          "Luke 11:21–22",
+          "21-22"
+        ]
+      ]
+    },
+    {
+      "key": "strong-man-03",
+      "sha256": "56d1f3385aadf15f7b5e4324256902a5fd0e09c7cc5abe8d990b1dcdf948f20c",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Handling the household goods can illustrate the division of spoils in Luke 11:22; the recipients and courtyard are unspecified details.",
+      "visibleReview": "Five adults handle baskets, textiles, sacks, a small chest and vessels. Visible faces and limbs are plausible. No recurring defeated guard is clearly asserted.",
+      "conditions": [
+        "Treat these as unspecified illustrative people, not named victors or disciples.",
+        "Different unnamed recipients are not a character continuity defect."
+      ],
+      "recommendedTitle": "The goods are divided",
+      "alt": "Several adults handle baskets, folded textiles, sacks and vessels in a stone courtyard.",
+      "caption": "Goods once under the guard's protection are now being distributed. The final movement of Jesus' comparison shows how completely the stronger one has overcome the guard's power. Its setting concerns Jesus' authority over evil; the image does not offer an example of theft for His disciples to imitate.",
+      "refs": [
+        [
+          "nt/luke/11",
+          "Luke 11:20–23",
+          "20-23"
+        ]
+      ]
+    },
+    {
+      "key": "growing-seed-01",
+      "sha256": "7b1f1453b9647cb57c1099e8fee76d4eb9256fb4452ff3b487219c3cb1c37d0b",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Broadcast sowing matches Mark 4:26.",
+      "visibleReview": "An older gray-bearded farmer scatters visible grain into tilled soil. Hand position, scattered seeds and bag are coherent.",
+      "conditions": [
+        "The farmer's age and appearance are illustrative; retain them if later images show the same man."
+      ],
+      "recommendedTitle": "Seed entrusted to the ground",
+      "alt": "A gray-bearded farmer scatters seed by hand across a tilled field.",
+      "caption": "The farmer releases the seed into the soil. Jesus begins this kingdom comparison with an ordinary act of sowing, then turns to growth the farmer cannot fully explain. Faithful action matters, even when the life that follows exceeds the worker's understanding.",
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:26–29",
+          "26-29"
+        ]
+      ]
+    },
+    {
+      "key": "growing-seed-02",
+      "sha256": "459e67579005cfcbc42d5032c261b8f534986348bd993b7a9460afefc7978885",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Developing grain fits the progression of blade, ear and full grain in Mark 4:28, without showing every stage simultaneously.",
+      "visibleReview": "Close green blades and developing grain ears look coherent. No people or anatomy concerns.",
+      "conditions": [
+        "Do not certify an exact botanical species or claim all three named stages are visible."
+      ],
+      "recommendedTitle": "Growth beyond the farmer's sight",
+      "alt": "Green grain stalks rise from the soil, with developing ears among the blades.",
+      "caption": "The field has changed since the seed was scattered. Jesus describes growth unfolding while the farmer sleeps and rises, though he does not know how it happens. The comparison invites patience with God's work without making the farmer's sowing or eventual harvest unnecessary.",
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:27–29",
+          "27-29"
+        ]
+      ]
+    },
+    {
+      "key": "growing-seed-03",
+      "sha256": "6e7fb8c730c3bc8a959d51cf7d321effc1531efec7ea4d6121789d96943aacf1",
+      "status": "revise",
+      "sourceFit": "Harvest with a sickle fits Mark 4:29. Revision is recommended only because the planned sequence follows the farmer from sowing to harvest.",
+      "visibleReview": "A noticeably younger, dark-haired farmer uses a sickle among ripe grain; another worker appears behind him. Hands, tool grip and stalks are credible. The main man's apparent age and beard differ materially from the gray-bearded sower.",
+      "conditions": [
+        "For a continuous narrative, revise the foreground man to match growing-seed-01.",
+        "It could pass as a separate unnamed harvest-worker illustration if caption and layout explicitly avoid suggesting the same farmer; scripture does not prescribe age.",
+        "The background helper does not require identity matching."
+      ],
+      "recommendedTitle": null,
+      "alt": "A dark-haired farmer cuts ripe golden grain with a hand sickle while another worker stands behind him.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:26–29",
+          "26-29"
+        ]
+      ]
+    },
+    {
+      "key": "wheat-tares-01",
+      "sha256": "30133b34cb1613cdf20fababfbccc1d1e489072ff591ece41ffdbce5faa31be5",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Secret night sowing in an already planted field fits Matthew 13:25.",
+      "visibleReview": "An adult scatters seed by moonlight among planted furrows. The hand and seed action are coherent. The seed species cannot be determined visually.",
+      "conditions": [
+        "Do not identify the fictional man's face as the literal devil.",
+        "Attribute the seed's identity to the passage, not a visible botanical finding."
+      ],
+      "recommendedTitle": "An enemy sows in the field",
+      "alt": "A man scatters seed through planted furrows beneath a moonlit sky.",
+      "caption": "Someone moves through the planted field under cover of night. Jesus says an enemy sowed tares among the wheat while others slept. In His later explanation, the enemy is the devil; this scene illustrates the story's action without claiming to show the devil's physical appearance.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:24–25, 37–39",
+          "24-25,37-39"
+        ]
+      ]
+    },
+    {
+      "key": "wheat-tares-02",
+      "sha256": "2662ecdd5a23f7d870ff7018927a3db937775f99d5f520297149105a3d15c0a1",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Mixed grain and grasslike unwanted plants preserve the central field situation. Exact darnel morphology is not certified.",
+      "visibleReview": "Two adults inspect stems, one gesturing and the other lightly holding plants without uprooting. The unwanted grass has loose, drooping spikelets rather than obvious thorny heads. Hands and postures are plausible.",
+      "conditions": [
+        "Use general mixed-field language; do not claim the pictured grass is botanically exact darnel.",
+        "The Church Bible Dictionary identifies the tares as darnel grass, but this image's loose seed heads are not independently species-verified."
+      ],
+      "recommendedTitle": "The mixed field is discovered",
+      "alt": "Two men examine grain and taller grasslike plants growing together in a field.",
+      "caption": "The mixed growth has become noticeable, and the workers stop to examine it. In Jesus' story, the servants ask how tares appeared in a field planted with good seed. Their question begins a conversation about the enemy's work and the owner's care for the wheat.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:26–29",
+          "26-29"
+        ]
+      ]
+    },
+    {
+      "key": "wheat-tares-03",
+      "sha256": "1e2ffad7d4ff6b5ce8b12579f9f4eae66dba474e6f57a3c307fd4df1ef4fa162",
+      "status": "revise",
+      "sourceFit": "The owner's restraining gesture fits Matthew 13:28–30, but the conspicuous broadleaf/thistly plants break the grasslike weed continuity.",
+      "visibleReview": "An older owner raises an open hand toward two workers. People, tools and gestures are plausible. Dark upright branching weeds behind them look materially different from the finer grasses in image02.",
+      "conditions": [
+        "Preserve the credible people and gesture; replace the conspicuous weeds with consistent grainlike unwanted grasses.",
+        "Do not require identical faces for additional unnamed laborers; their difference is not the defect.",
+        "The species guidance comes from the Church Bible Dictionary study help, not a species name explicitly supplied by the KJV verse."
+      ],
+      "recommendedTitle": null,
+      "alt": "An older man raises a hand toward two field workers beside golden grain and tall branching weeds.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:28–30",
+          "28-30"
+        ]
+      ]
+    },
+    {
+      "key": "wheat-tares-04",
+      "sha256": "c4f99d8af93daaa9ad0f69e0df607941b7bc89877f7b5d4e0b3bb9699c7fe842",
+      "status": "revise",
+      "sourceFit": "Separated bundles fit the harvest action, but the unwanted bundle is conspicuously thorny rather than consistent grainlike tares.",
+      "visibleReview": "Golden wheat lies under shelter; a large brown bundle outside contains round, spiky flower heads and thorny stems. This is a material visual switch from image02, not merely drying or ripening.",
+      "conditions": [
+        "Replace the thorny bundle with dried grainlike unwanted grasses; maintain distinct storage/separation.",
+        "Do not portray human victims or interpret the bundle as permission for readers to classify or harm people."
+      ],
+      "recommendedTitle": null,
+      "alt": "Golden grain bundles rest under a shelter beside a large bundle of dried thorny plants.",
+      "caption": null,
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:30, 39–43",
+          "30,39-43"
+        ]
+      ]
+    },
+    {
+      "key": "mustard-seed-01",
+      "sha256": "43a9c358d6258ec6d486735f6322055737d00d32aee2aadbe016664c817babe8",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "Several tiny seeds can introduce the scale of Jesus' mustard-seed comparison without pretending the picture shows exactly one seed.",
+      "visibleReview": "A realistically rendered palm holds roughly fifteen small dark seeds. Visible finger structure is coherent.",
+      "conditions": [
+        "Say several seeds are visible, not one solitary grain.",
+        "Do not turn the comparative teaching into a modern claim about the smallest seed of every botanical species."
+      ],
+      "recommendedTitle": "A small beginning",
+      "alt": "A person's open palm holds several tiny dark seeds.",
+      "caption": "Small seeds rest in an open hand. Jesus draws attention to the mustard seed's small beginning before describing the remarkable growth that follows. The comparison turns our attention toward the kingdom of heaven rather than toward judging God's work by its initial appearance.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:31–32",
+          "31-32"
+        ]
+      ]
+    },
+    {
+      "key": "mustard-seed-02",
+      "sha256": "48068ea6860d3a4115af6d40864680a1d231d3f09a401b1f314f034a3aa6ebf3",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "A large branching plant with birds fits the sheltering growth in the comparison.",
+      "visibleReview": "A tall yellow-flowering plant with slender branches and pods supports several small birds. The plant remains herb/shrub-like rather than a fantasy forest tree; no material anatomy defect is apparent.",
+      "conditions": [
+        "Do not certify plant or bird species from this illustration.",
+        "Keep the visible branches and birds together in crops."
+      ],
+      "recommendedTitle": "Branches that offer shelter",
+      "alt": "Several small birds perch among the branches of a tall yellow-flowering plant.",
+      "caption": "The grown plant offers branches where birds can rest. Jesus carries the mustard-seed comparison from a small beginning to a plant large enough to provide shelter. Its surprising growth directs hope toward God's kingdom, without promising that every personal plan will become large or successful.",
+      "refs": [
+        [
+          "nt/mark/4",
+          "Mark 4:30–32",
+          "30-32"
+        ]
+      ]
+    },
+    {
+      "key": "leaven-01",
+      "sha256": "37f110c6cde3ffc5a5b6815e0be882430c2d13335d05539c5e8c291b5176cb75",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "A woman working dough fits the household setting of the leaven comparison, though the exact flour quantity and hidden leaven are not visible.",
+      "visibleReview": "Both hands work dough in a large wooden bowl, with flour, a jug, window and hearth nearby. Hands and focused expression are coherent.",
+      "conditions": [
+        "Do not claim the image measures or visibly proves three measures of meal.",
+        "This is a fictional woman, not a named Gospel figure."
+      ],
+      "recommendedTitle": "Leaven worked into the dough",
+      "alt": "A woman kneads dough with both hands in a wooden bowl beside flour and an earthen jug.",
+      "caption": "The woman's hands work the dough, while the leaven's effect is not yet something the eye can measure. Jesus likens the kingdom to leaven placed in flour until the whole is leavened. The quiet household image encourages attention to transforming work that can begin without public display.",
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:33",
+          "33"
+        ]
+      ]
+    },
+    {
+      "key": "new-wineskins-01",
+      "sha256": "e448d08c67a6a2eccd446d35ef78e67ed769083b41b7937a2db2ee86cfc7be9d",
+      "status": "pass_with_caption_conditions",
+      "sourceFit": "An old skin leaking through a split can illustrate the consequence in Matthew 9:17.",
+      "visibleReview": "The bag's neck at left is visibly stoppered; red liquid escapes a split seam toward the lower right. A clay jug and grapes are nearby. Unlike the rejected pouring scene, the leak has a coherent physical origin.",
+      "conditions": [
+        "Do not call this an explosion or claim fermentation itself is visible.",
+        "Do not extend old/new into a claim that Jewish people or their scriptures are worthless."
+      ],
+      "recommendedTitle": "When an old skin gives way",
+      "alt": "Red wine leaks through a split seam in an old leather wineskin beside a clay jug.",
+      "caption": "Wine escapes through the old skin's split seam. Jesus uses the loss of both wine and container to explain why new wine needs suitable skins. In the surrounding discussion about fasting, His images call listeners to recognize the significance of His presence and teaching, rather than simply fit Him into familiar expectations.",
+      "refs": [
+        [
+          "nt/matt/9",
+          "Matthew 9:14–17",
+          "14-17"
+        ]
+      ]
+    }
+  ]
+}

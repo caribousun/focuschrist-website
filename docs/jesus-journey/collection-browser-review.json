@@ -1,0 +1,71 @@
+{
+  "scope": "local preview collection picture flows",
+  "status": "pass within stated scope",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "collections": [
+    {
+      "slug": "kingdom",
+      "pictures": 8,
+      "image_loaded": true,
+      "full_size_open_close": true,
+      "scripture_reader_open_close": true,
+      "study_close_focus_return": true,
+      "controls_unclipped": true
+    },
+    {
+      "slug": "mercy",
+      "pictures": 8,
+      "image_loaded": true,
+      "full_size_open_close": true,
+      "scripture_reader_open_close": true,
+      "study_close_focus_return": true,
+      "controls_unclipped": true
+    },
+    {
+      "slug": "neighbor",
+      "pictures": 8,
+      "image_loaded": true,
+      "full_size_open_close": true,
+      "scripture_reader_open_close": true,
+      "study_close_focus_return": true,
+      "controls_unclipped": true
+    },
+    {
+      "slug": "hearing",
+      "pictures": 8,
+      "image_loaded": true,
+      "full_size_open_close": true,
+      "scripture_reader_open_close": true,
+      "study_close_focus_return": true,
+      "controls_unclipped": true
+    },
+    {
+      "slug": "stewardship",
+      "pictures": 8,
+      "image_loaded": true,
+      "full_size_open_close": true,
+      "scripture_reader_open_close": true,
+      "study_close_focus_return": true,
+      "controls_unclipped": true
+    },
+    {
+      "slug": "watchfulness",
+      "pictures": 8,
+      "image_loaded": true,
+      "full_size_open_close": true,
+      "scripture_reader_open_close": true,
+      "study_close_focus_return": true,
+      "controls_unclipped": true
+    }
+  ],
+  "total": 48,
+  "limitations": [
+    "All scripture panels opened; only first Hearing passage text inspected",
+    "Not full-site composition or 200-percent text or no-JavaScript verification",
+    "Local draft only; not publication"
+  ],
+  "viewport_reset": true
+}

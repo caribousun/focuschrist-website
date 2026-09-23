@@ -1,0 +1,61 @@
+{
+  "rr-before-pilate": {
+    "title": "My kingdom is not of this world",
+    "alt": "Jesus inclines His head toward Pilate, who questions Him from his seat.",
+    "caption": "Pilate leans forward with a question, and Jesus meets him with quiet resolve. Their exchange turns to His kingdom and the truth He came to bear witness of.",
+    "refs": [
+      [
+        "nt/john/18",
+        "John 18:33–38",
+        "33-38"
+      ]
+    ],
+    "owner": "jesus-christ/redeemer-and-risen-lord.html",
+    "section": "pilate",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rr-before-pilate-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rr-before-pilate-960.webp",
+    "original": "rr-before-pilate.png",
+    "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rr-before-pilate-v2-20260923.png",
+    "original_sha256": "2ba087ab27e10aa539815dd4c7d32c726c3ed92ca73bd2bab603de01df04c475",
+    "prompt": "Narrow repair of reference1 existing trial scene, preserve composition, exact people identities, photorealistic skin and clothing, hands, architecture and all other pixels. Change ONLY (1) Jesus at right tilts his head subtly downward and his pupils clearly look down-left directly into seated Pilate's eyes; reciprocal gaze between them, no gaze above Pilate. Preserve exact Christ likeness from reference2 and serious calm expression. (2) Remove the entire red SPQR/eagle banner and replace seamlessly with plain matching stone wall, no text or emblem. No other changes. 1536x1024 horizontal live-action photograph.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rr-before-pilate-20260923.png",
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "new-art-review-rr-before-pilate-v2.json"
+  },
+  "rr-judas-morsel": {
+    "title": "The morsel at the table",
+    "alt": "Jesus extends a dipped morsel toward Judas while two disciples watch from behind.",
+    "caption": "Jesus holds out the morsel, His troubled gaze meeting Judas across the table. The disciples nearby do not yet understand the departure that will follow.",
+    "refs": [
+      [
+        "nt/john/13",
+        "John 13:21–30",
+        "21-30"
+      ]
+    ],
+    "owner": "jesus-christ/redeemer-and-risen-lord.html",
+    "section": "sacrament",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rr-judas-morsel-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rr-judas-morsel-960.webp",
+    "original": "rr-judas-morsel.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0ceb9-b6a3-7e03-8a53-1200660c7369\\exec-2c8de0cd-8b54-48e3-a004-100236ed4b06.png",
+    "original_sha256": "bdcf7316812ba5af189d990446c439a1447b09ccefdb8674272f6d5cef970cbe",
+    "prompt": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation. From the side of the supper table, Jesus at the left extends a small dipped morsel toward Judas on the right. Show both complete hands and a short, plausible table gap. Christ looks solemn and troubled; Judas appears tense and guarded without demonic caricature. Two other disciples remain in soft background, not understanding the reason for the departure. The composition must not resemble a symmetrical line of twelve in a traditional Last Supper painting. Use lamplight, plain furnishings and earth-colored clothing. No horns, Satan figure or invented exchange of coins at the table. Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt. BEFORE Resurrection, no nail marks. Reference solely Christ facial identity, preserve exact facial structure but solemn troubled expression, closed lips and gentle sorrow no smile. Jesus looks DIRECTLY into Judas's eyes as He offers small dipped bread; Judas looks back tensely into His eyes. Judas adult exact age unrecorded, no locked identity found in researched inventory: distinctly different original face, angular broad brow, short straight black hair receding slightly, close coarse beard, NOT copying Jesus or generic villain. Two other adult disciples soft background clearly separate different people one balding round face one long slender face, no facial clones, quietly uncertain. Candid intimate side view of first-century low supper table, natural small earthen oil lamp light sufficient for photographic skin texture. Bread morsel held cleanly between Jesus thumb and fingers above small dipping bowl, Judas reaches to receive with anatomically complete separate hand, hands not fused. No modern utensils, no coins, no dramatic devil symbols, no text.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "new-art-review-rr-judas-morsel.json"
+  }
+}

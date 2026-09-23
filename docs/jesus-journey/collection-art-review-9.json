@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent original-detail review of collection-kingdom-05 through -08",
+  "ownerApproval": false,
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Imagined present-day applications with fictional people, not documentary evidence or literal scriptural reconstructions.",
+    "Technical review is separate from owner approval, import and browser verification."
+  ],
+  "entries": [
+    {
+      "key": "collection-kingdom-05",
+      "status": "pass_with_caption_conditions",
+      "sha256": "c54c854c2c2580e473d1a9a68e19ed7fdcf870db1ce8445f23ff7d35cb431dc4",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c1990755-25e1-498e-b2db-395286cc1eda.png",
+      "alt": "A gardener wearing gloves lifts dry stems and plant debris from around young leafy plants in a raised bed.",
+      "caption": "A gardener tends the space around young plants. This imagined application invites reflection on the warning against harming wheat while removing tares; the modern garden is not the field described in the parable.",
+      "findings": "Both gloved hands are coherent and engage dry stems near upright plants. The scene supports careful tending, but underground root condition, plant species and motion speed cannot be verified. Photographic face and task-directed gaze are natural.",
+      "conditions": [
+        "Do not claim all roots remain undamaged or that she has slowed from a previous pace.",
+        "Do not label the visible debris as scriptural tares or the vegetables as wheat."
+      ],
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:28-30",
+          "28-30"
+        ]
+      ]
+    },
+    {
+      "key": "collection-kingdom-06",
+      "status": "pass_with_caption_conditions",
+      "sha256": "e8e5b2278c534d49292d7f8ff8fb8255ff71a19d26be766daf3710b61b659da6",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5ed801e3-b7bc-455f-a2d0-329ccd54e257.png",
+      "alt": "A woman speaks with open-hand gestures while two men listen around a table, one holding a pen above a notebook.",
+      "caption": "Three adults give a conversation their attention. As a reflective application alongside the net comparison, the scene invites humility about our own judgments; it does not depict the final judgment in Jesus' teaching.",
+      "findings": "Central listener looks toward the current speaker; other listener remains engaged. Gesturing fingers, pen grip, notebook contact and clasped hands are coherent. Equal table placement preserves dignity, but equal time across a whole meeting is not observable.",
+      "conditions": [
+        "Do not claim verified professional mediation, a completed resolution, or equal time already given to every party.",
+        "Do not assign guilt, moral categories or the parable's final sorting to these fictional people."
+      ],
+      "refs": [
+        [
+          "nt/matt/13",
+          "Matthew 13:47-50",
+          "47-50"
+        ]
+      ]
+    },
+    {
+      "key": "collection-kingdom-07",
+      "status": "pass_with_caption_conditions",
+      "sha256": "450451ff5cbde4eeafeadd2c38981c86c9d101a5a8577dbc90b775f949f4b266",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-861582cd-e460-4d0a-a632-a710cc9b0600.png",
+      "alt": "A man holds a tray of cutlery while a woman gestures toward places at a dining table and others prepare the room.",
+      "caption": "People share the work of preparing a meal. This imagined application of the wide invitation in Jesus' banquet teaching invites welcome that includes participation.",
+      "findings": "Tray supported at both sides with credible hands; woman's pointing hand and relaxed lower hand are coherent. Reciprocal gaze and natural smiles support cooperation. Background participants and tableware read plausibly.",
+      "conditions": [
+        "Do not identify the man as a newcomer from appearance or claim that this is his first task.",
+        "Do not infer family ties, immigration history, need or a completed welcome outcome."
+      ],
+      "refs": [
+        [
+          "nt/matt/22",
+          "Matthew 22:9-10",
+          "9-10"
+        ]
+      ]
+    },
+    {
+      "key": "collection-kingdom-08",
+      "status": "pass_with_caption_conditions",
+      "sha256": "42558ccffa8ea143ca76f6b667f0402488400083f3417fdbfcca49bb71ea8965",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-2696c9a0-3d05-4b32-a785-76b9ba6dc4b2.png",
+      "alt": "A woman shapes the rim of a clay pot while three adults watch around a pottery worktable.",
+      "caption": "One participant works the clay while others give the demonstration their attention. This imagined reflection on service asks how sharing time and space can support another person's participation; it is not a depiction of the grain-of-wheat saying.",
+      "findings": "One hand works inside the pot while the other supports the outer wall; contact and visible fingers are coherent. Observers' eyes follow the clay or demonstrator naturally. Photographic faces, clay and table detail are credible.",
+      "conditions": [
+        "Do not assign teacher, novice, expert or family relationships as observable facts.",
+        "Do not claim a handover occurred earlier, mastery was attained, or the scene shows the full meaning of John 12:24–26."
+      ],
+      "refs": [
+        [
+          "nt/john/12",
+          "John 12:24-26",
+          "24-26"
+        ]
+      ]
+    }
+  ]
+}

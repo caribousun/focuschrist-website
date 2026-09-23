@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "filesChanged": [
+    "docs/jesus-journey/pages.json",
+    "docs/jesus-journey/parable-art-plan.json"
+  ],
+  "beforeSha256": {
+    "pages.json": "66b593b8dd842a8da6998e6a5f415d61c08c57bef69a447b7e48a68f10d1d31d",
+    "parable-art-plan.json": "3d3343b16210d2853ddf240e9f3f7297645933f446bc7bdf9c4b4bf52691e1ac"
+  },
+  "afterSha256": {
+    "pages.json": "da3ceae51eb8a6bd895769f688785d2022801cd85361bfd6e0a9a4442a8bd578",
+    "parable-art-plan.json": "6af733c925b98c4e72433e05c5f69b89f98b4804ff575e7b44b287703cc47261"
+  },
+  "snapshots": [
+    "short-comparisons-before-pages.json",
+    "short-comparisons-before-parable-art-plan.json"
+  ],
+  "changes": "Only art-block ordering and plan sectionId/afterParagraph for18 scenes. No title/prose/ref/prompt changes.",
+  "checks": {
+    "allNonArtPageDataUnchanged": true,
+    "allOtherPagesUnchanged": true
+  },
+  "noRegistryBuildImport": true
+}

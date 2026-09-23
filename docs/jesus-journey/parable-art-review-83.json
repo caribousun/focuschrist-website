@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel and source reviewer",
+  "scope": "Full original inspection of corrected stones and official-servants branch images.",
+  "summary": {
+    "passWithCaptionConditions": 2,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "bb-stones-prepared",
+      "generationKey": "bb-stones-prepared-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-175c8d47-3174-4fbc-ab9c-cf1885b978fe.png",
+      "sha256": "adca5503feb28430f477808bb353d7fe5bc6b1653cbb4d38be78c1ffb29a9f72",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Stones carried to the mountain",
+      "alt": "The brother of Jared kneels on a mountain and arranges sixteen pale translucent stones in two groups on a flat rock.",
+      "caption": "The brother of Jared prepares sixteen stones on the mountain before asking the Lord to give them light. His careful preparation leads into an earnest prayer.",
+      "refs": [
+        [
+          "bofm/ether/3",
+          "Ether 3:1\u00e2\u20ac\u201c5",
+          "1-5"
+        ]
+      ],
+      "findings": "Full original inspected: left group has eight stones including fingertip-held stone, right group has eight. All separately countable, pale translucent and unlit; no divine hand or Christ visible. Corrected one added stone per group from rejected14stone original. Face, hair, forehead band, hands and woven clothing preserve directly inspected approved reference continuity.",
+      "conditions": [
+        "Sixteen-stone source count verified; do not describe stones as already shining.",
+        "Exact mountain geography is interpretive.",
+        "Preserve rejected original and review80 unchanged.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    },
+    {
+      "key": "mc-official-servants",
+      "generationKey": "mc-official-servants-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-22ad36b2-351e-4b77-a48e-decb10520146.png",
+      "sha256": "116d6d939a3dea311d69fb05a3510ec510bae9dd54870a4fa95aba975e55ecdf",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Good news on the road home",
+      "alt": "An official listens to a servant speaking on a rural road while an older gray-bearded servant approaches behind him.",
+      "caption": "Servants meet the official on his way home with news that his son is alive. He listens and asks when the recovery began.",
+      "refs": [
+        [
+          "nt/john/4",
+          "John 4:50\u00e2\u20ac\u201c53",
+          "50-53"
+        ]
+      ],
+      "findings": "Full original inspected and compared: rear servant now visibly older with gray beard, receding hair, deeper facial lines and different nose/brow proportions. Distinct from central dark-haired speaker; cloning concern resolved. Official and speaker, reciprocal eye contact, hands, clothing, road and composition preserved. Photographic skin and cloth remain coherent.",
+      "conditions": [
+        "Official in John4, not centurion of Luke7; recovered child is his son, not servant.",
+        "Appearance, exact ages and location are interpreted.",
+        "Preserve rejected original and review81 unchanged.",
+        "Technical acceptance is not owner approval or browser verification."
+      ]
+    }
+  ]
+}

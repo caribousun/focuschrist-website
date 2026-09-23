@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Persistent Widow01–03 actual-original review for identity, anatomy, restrained expressions and Luke18:3–5 boundaries including inward decision in03.",
+  "summary": {
+    "passWithCaptionConditions": 3,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Technical review is not owner approval or final browser acceptance.",
+    "Unnamed parable figures and artistic gestures do not identify historical persons or certify a real proceeding."
+  ],
+  "entries": [
+    {
+      "key": "persistent-widow-01",
+      "generationKey": "persistent-widow-01",
+      "status": "pass_with_caption_conditions",
+      "sha256": "48a0d30638099edc9ea0a660f392eb59a3e2e90671560b520aa0e594f5304efb",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-017d6f98-ec5a-4893-b653-b59b01fcdeb7.png",
+      "recommendedTitle": "The widow asks for justice",
+      "alt": "A woman in a worn blue head covering extends an open hand toward a seated gray-haired judge in a burgundy robe.",
+      "caption": "A widow comes to the judge asking for justice against her adversary. Her appeal is direct and persistent, though the parable leaves the details of her dispute unnamed.",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:3",
+          "3"
+        ]
+      ],
+      "findings": "Widow's graying dark hair, lined face, blue covering and cream dress distinct from broad-faced gray-curled/bearded judge in burgundy. Reciprocal attention credible; open requesting palm, hanging hand, judge chin-support and resting hand coherent. Concern and reserved resistance are natural rather than caricature. Photographic skin, frayed cloth and stone.",
+      "conditions": [
+        "Do not invent the adversary's identity, offense, inheritance dispute, monetary award or legal documents.",
+        "Persistence belongs to the parable; a still does not establish a counted number of visits."
+      ]
+    },
+    {
+      "key": "persistent-widow-02",
+      "generationKey": "persistent-widow-02",
+      "status": "pass_with_caption_conditions",
+      "sha256": "cfef0b85b59e0ae1402503eaad99fbc1bbba06e13716b88477c3c6b6e576e3cf",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-e3151721-5f60-47a8-a2dc-06aec7a8a26a.png",
+      "recommendedTitle": "The judge refuses for a time",
+      "alt": "The same widow stands with clasped hands outside a doorway while the judge turns away with one palm raised toward her.",
+      "caption": "For a time, the judge refuses to act. The widow's continued appeal meets a closed response, illustrated here by his turned face and raised hand.",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:4",
+          "4"
+        ]
+      ],
+      "findings": "Both faces and blue/cream versus burgundy garments preserve01 identities. Judge's averted gaze is deliberate refusal appropriate to source; widow attends him. Clasped hands, raised palm, hanging hand, feet and doorway stance coherent. No exaggerated villainous face or demeaning widow portrayal; realistic posture and textures.",
+      "conditions": [
+        "Raised hand and doorway staging illustrate refusal; they are not separately narrated gestures.",
+        "No precise delay, frequency of visits or physical expulsion is established."
+      ]
+    },
+    {
+      "key": "persistent-widow-03",
+      "generationKey": "persistent-widow-03",
+      "status": "pass_with_caption_conditions",
+      "sha256": "75b6ef6356505a17daf3aaaf12e90c7937d5d838be39fbb8e7a94fc7ced012f3",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7f4722e4-44e7-49e5-b81d-1db33c7db61d.png",
+      "recommendedTitle": "The judge decides to act",
+      "alt": "The judge sits alone leaning forward, looking down with both hands resting near his knees.",
+      "caption": "The judge decides to grant the widow justice because her continued appeals trouble him. His inward resolve is pictured here; the scene does not show a completed hearing or an award being paid.",
+      "refs": [
+        [
+          "nt/luke/18",
+          "Luke 18:5",
+          "5"
+        ]
+      ],
+      "findings": "Same short gray curls, full gray beard, broad face and embroidered burgundy robe as01–02. Quiet downward gaze and leaning posture suitably visualize inward thought without pretending it is observable proof of a changed heart. Both hands and seated body coherent; natural skin/cloth. No other litigant, payment or completed proceeding shown.",
+      "conditions": [
+        "Decision is known from Luke18:5, not deducible from posture alone; retain explicit inward-resolve framing.",
+        "Do not turn his self-interested motive into repentance, compassion or a claim that he now fears God.",
+        "Do not equate God's character with the unjust judge or promise a particular legal result to readers."
+      ]
+    }
+  ]
+}

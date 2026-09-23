@@ -1,0 +1,173 @@
+{
+  "purpose": "Bind existing filename-only accepted visual reviews to independently verified original bytes; not new visual or owner approval.",
+  "bindings": {
+    "come-and-see": {
+      "original_sha256": "b304c50d83cb10f2e168286d813a069d4d7f92e3e5f6f69970460ee18d5a8194",
+      "review_record": "art-review-1.json",
+      "review_sha256": "d6361eabf75dabef7fee8e49b1215c831d2ce45109f12fa706cb11b7464aca20",
+      "generated_file": "exec-3c2e6d7a-b37c-40ae-8885-a9d31e0680c8.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "modern-grief": {
+      "original_sha256": "67861b87950be2eb9e3957a1360dcb8acae4e2bf7d4d4721514881c8e98aea8d",
+      "review_record": "art-review-1.json",
+      "review_sha256": "d6361eabf75dabef7fee8e49b1215c831d2ce45109f12fa706cb11b7464aca20",
+      "generated_file": "exec-1d03119a-ff2f-420c-90e9-53a9cc42da8d.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "modern-scripture": {
+      "original_sha256": "38ff7028db601122794fd8ebe66b3a9b949c2aba1b18c1997199de26b0b031e8",
+      "review_record": "art-review-1.json",
+      "review_sha256": "d6361eabf75dabef7fee8e49b1215c831d2ce45109f12fa706cb11b7464aca20",
+      "generated_file": "exec-f2b140a0-a55c-4906-9f18-6228e5bf47c2.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "modern-neighbor": {
+      "original_sha256": "d9800357a379573be8c8fd8dc904f4979612450dff8f35f0f45f3cdda235bb12",
+      "review_record": "art-review-1.json",
+      "review_sha256": "d6361eabf75dabef7fee8e49b1215c831d2ce45109f12fa706cb11b7464aca20",
+      "generated_file": "exec-d486a59c-c777-4eda-9862-33de2c855a41.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "modern-reconciliation": {
+      "original_sha256": "cde501705d3875d9b0e6872bf4e665d159e2e7d800c1136993c19b6171c85fb7",
+      "review_record": "art-review-2.json",
+      "review_sha256": "33bae9b3ccd3ff6c711536a95dd12209cee5e0e7ffe6b595699baf1e95f29114",
+      "generated_file": "exec-fd7a8a65-1354-49d8-9dde-f4c4e9ee7615.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "modern-welcome": {
+      "original_sha256": "fb36eb6740da49c0833f772cbbc90a32e01ddfdd68e675348be23bd0d76c5cf5",
+      "review_record": "art-review-2.json",
+      "review_sha256": "33bae9b3ccd3ff6c711536a95dd12209cee5e0e7ffe6b595699baf1e95f29114",
+      "generated_file": "exec-0f0379cd-0e90-4606-8586-63483a867cd2.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "modern-prayer": {
+      "original_sha256": "76d71aa93d8dd913b3cb21ac3b3c067af5db4c45f34348f4e607f0bd672b6fd2",
+      "review_record": "art-review-2.json",
+      "review_sha256": "33bae9b3ccd3ff6c711536a95dd12209cee5e0e7ffe6b595699baf1e95f29114",
+      "generated_file": "exec-a9d4ce87-8d8e-4fd3-a2e8-15df76a2ddc4.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "tribute-coin": {
+      "original_sha256": "e1e7f6e0ab47c54194f629a1aa3ff2d5b48fba9b82814eb495ccebdf8ce4534a",
+      "review_record": "art-review-3.json",
+      "review_sha256": "73f1b2bcf11bbed577d720b199c3a0db8fab19ccb1d572a417eb362d93a076f5",
+      "generated_file": "exec-92154fb6-8dc8-4eae-a4c2-f23d81b0bc22.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "ten-lepers-thanksgiving": {
+      "original_sha256": "0ceccda2c1408055e54bbf8f55cee0772ec4d624af8b184bf0097d2a36f6e959",
+      "review_record": "art-review-3.json",
+      "review_sha256": "73f1b2bcf11bbed577d720b199c3a0db8fab19ccb1d572a417eb362d93a076f5",
+      "generated_file": "exec-4ac48e2a-5611-45df-a3e5-a674677e7e57.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "nathanael": {
+      "original_sha256": "0da5f41b3d97f49b6ec38fed48c75ffe5e7b1c314b4661398d0304a30f9b1480",
+      "review_record": "art-review-4.json",
+      "review_sha256": "0ac302001c8fa496c933452a84ecd99e8222515661304c01bfb525d78aa90412",
+      "generated_file": "exec-21a0881f-7d2a-434e-9368-30c0f5d8fba8.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "widows-offering": {
+      "original_sha256": "32ae3e5e6622a9a2f98579ccf98df410a7ba57a4ad40d9401cb782cca3a0a6c7",
+      "review_record": "art-review-4.json",
+      "review_sha256": "0ac302001c8fa496c933452a84ecd99e8222515661304c01bfb525d78aa90412",
+      "generated_file": "exec-19f83cb7-29cb-4c57-b682-6470c9b5996a.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "rich-man-invitation": {
+      "original_sha256": "91a0217abafc91bdb202d0d33b6377ea54c31dbb3b787406c9066b3ac4023540",
+      "review_record": "art-review-6.json",
+      "review_sha256": "303e839d7fe1a95a355cd2d42d5f62010dd6a2929f1269e642e38a5fc36fe3ab",
+      "generated_file": "exec-2b27ee42-e540-457a-b834-b9d7ea0874e2.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "syrophoenician-woman": {
+      "original_sha256": "b42b881a39f5a517d0bbcd1e0cbb56d29e6e14638bb693b9312672d35bed5753",
+      "review_record": "art-review-6.json",
+      "review_sha256": "303e839d7fe1a95a355cd2d42d5f62010dd6a2929f1269e642e38a5fc36fe3ab",
+      "generated_file": "exec-a321d595-fc1d-4a62-b6c1-8c7f08c9c350.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "deaf-man": {
+      "original_sha256": "3cfff26363df4fe6e8b8d092f54e2bc763d3755fb36f3a9e5c264ceb36d83d67",
+      "review_record": "art-review-5.json",
+      "review_sha256": "8cf9f8f7ec22370ca0585e7304ac790b21bc2541118c5ac1b6b6dbb81e271284",
+      "generated_file": "exec-cb4e769c-2781-420e-af79-ec85cc64f0c6.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "martha-and-mary": {
+      "original_sha256": "54ce99297f3519f9f2d7ca37b35d3b3ab4650af01043a819f9f7770b0ca0af27",
+      "review_record": "art-review-5.json",
+      "review_sha256": "8cf9f8f7ec22370ca0585e7304ac790b21bc2541118c5ac1b6b6dbb81e271284",
+      "generated_file": "exec-6969ac2a-8bfd-4c85-b466-712f2341c309.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "sower-path": {
+      "original_sha256": "553c79ca09e459f397694f091742004ab3481c27bb7e2f5e382dcaae717e8591",
+      "review_record": "art-review-5.json",
+      "review_sha256": "8cf9f8f7ec22370ca0585e7304ac790b21bc2541118c5ac1b6b6dbb81e271284",
+      "generated_file": "exec-26c41d0f-2eba-4757-97f2-b2a86b78c687.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "sower-rock": {
+      "original_sha256": "c31861de4f5a92670c543e48d7787f87c7334de6deb9d9818e491c37d52f28d2",
+      "review_record": "art-review-6.json",
+      "review_sha256": "303e839d7fe1a95a355cd2d42d5f62010dd6a2929f1269e642e38a5fc36fe3ab",
+      "generated_file": "exec-6fec3f6b-d03a-4cae-a661-dd7a7fed69a6.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "sower-thorns": {
+      "original_sha256": "ccab12d83999380f9d0a4dd592eb7d6533530a02eadafb5d55b4bae4f7898ee9",
+      "review_record": "art-review-6.json",
+      "review_sha256": "303e839d7fe1a95a355cd2d42d5f62010dd6a2929f1269e642e38a5fc36fe3ab",
+      "generated_file": "exec-71ba1c72-5df1-4bda-a8a0-2c964f7f248e.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "sower-good-ground": {
+      "original_sha256": "3a579e3cf6a07ee8492cafaf39e32301441d4c1beddcc4b1e8860e0bd9ffe751",
+      "review_record": "art-review-5.json",
+      "review_sha256": "8cf9f8f7ec22370ca0585e7304ac790b21bc2541118c5ac1b6b6dbb81e271284",
+      "generated_file": "exec-c015d79c-4839-47ec-848d-edc330b102fa.png",
+      "status": "pass",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "lost-coin-search": {
+      "original_sha256": "0262706f8907d93b52d19e927c4d98e5825557e9cd4f0a48f24338aa9dacac4f",
+      "review_record": "art-review-5.json",
+      "review_sha256": "8cf9f8f7ec22370ca0585e7304ac790b21bc2541118c5ac1b6b6dbb81e271284",
+      "generated_file": "exec-bdf01b42-d80c-4e97-9120-f6c7aecac251.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    },
+    "lost-coin-found": {
+      "original_sha256": "669bfce14eabdfadd20d5eaaad79f4ab1aee47e538536a65503cc839e0e3f863",
+      "review_record": "art-review-5.json",
+      "review_sha256": "8cf9f8f7ec22370ca0585e7304ac790b21bc2541118c5ac1b6b6dbb81e271284",
+      "generated_file": "exec-57f067ae-c4d7-412d-8a4a-3d2bb744968b.png",
+      "status": "pass_with_caption_conditions",
+      "basis": "Independent recovery check: preserved original and generated file have equal SHA-256; this exact candidate filename has an accepted verdict in the hash-pinned review record. This binds existing review evidence and does not create new visual or owner approval."
+    }
+  }
+}

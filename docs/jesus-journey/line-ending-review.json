@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "status": "diagnosed_no_repository_mutation",
+  "summary": {
+    "diagnostics": 15423,
+    "affectedFiles": 7,
+    "capturedOutputCharacters": 3836989,
+    "allDiagnosticsExplainedByCRLF": true,
+    "realTrailingSpaceOrTabLines": 0,
+    "coreAutocrlf": "false",
+    "HEADLineEndings": "LF for all seven files",
+    "workingLineEndings": "CRLF for all seven files",
+    "controlCheck": "git -c core.whitespace=cr-at-eol diff --check exited 0 with zero output; command-local setting only, no config mutation."
+  },
+  "files": [
+    {
+      "file": "answers/bible-and-book-of-mormon-together.html",
+      "diagnostics": 53,
+      "working": {
+        "bytes": 73182,
+        "CRLF": 53,
+        "LFwithoutCR": 0,
+        "bareCR": 0
+      },
+      "HEAD": {
+        "bytes": 76073,
+        "CRLF": 0,
+        "LFwithoutCR": 53,
+        "bareCR": 0
+      },
+      "realTrailingSpaceLines": [],
+      "realTrailingSpaceCount": 0,
+      "afterLineEndingNormalizationMatchesHEAD": false
+    },
+    {
+      "file": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "diagnostics": 75,
+      "working": {
+        "bytes": 76891,
+        "CRLF": 75,
+        "LFwithoutCR": 0,
+        "bareCR": 0
+      },
+      "HEAD": {
+        "bytes": 35695,
+        "CRLF": 0,
+        "LFwithoutCR": 72,
+        "bareCR": 0
+      },
+      "realTrailingSpaceLines": [],
+      "realTrailingSpaceCount": 0,
+      "afterLineEndingNormalizationMatchesHEAD": false
+    },
+    {
+      "file": "art-gallery.json",
+      "diagnostics": 14912,
+      "working": {
+        "bytes": 627627,
+        "CRLF": 14912,
+        "LFwithoutCR": 0,
+        "bareCR": 0
+      },
+      "HEAD": {
+        "bytes": 405676,
+        "CRLF": 0,
+        "LFwithoutCR": 10150,
+        "bareCR": 0
+      },
+      "realTrailingSpaceLines": [],
+      "realTrailingSpaceCount": 0,
+      "afterLineEndingNormalizationMatchesHEAD": false
+    },
+    {
+      "file": "site-search-index.json",
+      "diagnostics": 1,
+      "working": {
+        "bytes": 2358074,
+        "CRLF": 1,
+        "LFwithoutCR": 0,
+        "bareCR": 0
+      },
+      "HEAD": {
+        "bytes": 1521870,
+        "CRLF": 0,
+        "LFwithoutCR": 1,
+        "bareCR": 0
+      },
+      "realTrailingSpaceLines": [],
+      "realTrailingSpaceCount": 0,
+      "afterLineEndingNormalizationMatchesHEAD": false
+    },
+    {
+      "file": "sitemap.xml",
+      "diagnostics": 121,
+      "working": {
+        "bytes": 11249,
+        "CRLF": 121,
+        "LFwithoutCR": 0,
+        "bareCR": 0
+      },
+      "HEAD": {
+        "bytes": 4471,
+        "CRLF": 0,
+        "LFwithoutCR": 44,
+        "bareCR": 0
+      },
+      "realTrailingSpaceLines": [],
+      "realTrailingSpaceCount": 0,
+      "afterLineEndingNormalizationMatchesHEAD": false
+    },
+    {
+      "file": "tools/build_art_gallery.py",
+      "diagnostics": 206,
+      "working": {
+        "bytes": 11709,
+        "CRLF": 206,
+        "LFwithoutCR": 0,
+        "bareCR": 0
+      },
+      "HEAD": {
+        "bytes": 10296,
+        "CRLF": 0,
+        "LFwithoutCR": 190,
+        "bareCR": 0
+      },
+      "realTrailingSpaceLines": [],
+      "realTrailingSpaceCount": 0,
+      "afterLineEndingNormalizationMatchesHEAD": false
+    },
+    {
+      "file": "tools/discovery_qa.py",
+      "diagnostics": 55,
+      "working": {
+        "bytes": 3541,
+        "CRLF": 55,
+        "LFwithoutCR": 0,
+        "bareCR": 0
+      },
+      "HEAD": {
+        "bytes": 3433,
+        "CRLF": 0,
+        "LFwithoutCR": 55,
+        "bareCR": 0
+      },
+      "realTrailingSpaceLines": [],
+      "realTrailingSpaceCount": 0,
+      "afterLineEndingNormalizationMatchesHEAD": false
+    }
+  ],
+  "causeAssessment": "The errors are exclusively carriage returns at line endings, not content trailing spaces. Windows Path.write_text without newline emits CRLF and explains active build output behavior. Exact historic writer of the two Python source files and Bible/Book of Mormon page cannot be attributed from bytes alone. All seven also contain substantive approved-work differences from HEAD; do not restore them from HEAD.",
+  "currentWriters": [
+    {
+      "file": "tools/build_jesus_discovery.py",
+      "lines": [
+        37,
+        44
+      ],
+      "finding": "Both writes omit newline; this wrapper overwrites art-gallery, search index, and sitemap with Windows CRLF even though standalone gallery builder is already fixed."
+    },
+    {
+      "file": "tools/build_art_gallery.py",
+      "lines": [
+        205
+      ],
+      "finding": "Already supplies newline=LF for its own output; its source file itself currently has CRLF."
+    },
+    {
+      "file": "tools/build_site_search.py",
+      "lines": [
+        94
+      ],
+      "finding": "Standalone search output write omits newline."
+    },
+    {
+      "file": "tools/build_jesus_parent.py",
+      "lines": [
+        35
+      ],
+      "finding": "Parent HTML write omits newline."
+    },
+    {
+      "file": "tools/build_jesus_journey.py",
+      "lines": [
+        126
+      ],
+      "finding": "Nested HTML write omits newline; untracked files are outside ordinary git diff --check."
+    },
+    {
+      "file": "tools/prepare_jesus_art.py",
+      "lines": [
+        73
+      ],
+      "finding": "Registry JSON write omits newline."
+    },
+    {
+      "file": "tools/assemble_jesus_journey.py",
+      "lines": [
+        11
+      ],
+      "finding": "Canonical JSON writer omits newline."
+    },
+    {
+      "file": "tools/import_jesus_art_reviews.py",
+      "lines": [
+        71
+      ],
+      "finding": "Batch JSON writer omits newline; avoid normalizing existing immutable review or batch files."
+    }
+  ],
+  "safeNarrowFixProposal": [
+    "Add explicit newline=\"\\n\" only to active mutable-output writers build_jesus_discovery.py, build_site_search.py, build_jesus_parent.py, and build_jesus_journey.py. Keep existing gallery newline setting. Consider mutable registry/assembler writer hardening separately; do not bulk-rewrite immutable batches/reviews or originals.",
+    "Normalize the seven diagnosed working files by byte replacement CRLF to LF, preserving every other byte and all substantive changes. Record pre/post normalized-content hashes to prove content equivalence. Do not use blanket strip/rstrip, git checkout/reset, or repository-wide normalization.",
+    "Rebuild only affected outputs using hardened writers, then run their existing --check/QA checks and quiet captured git diff --check. Separately scan newly added text files before staging because ordinary diff does not inspect untracked files.",
+    "Keep core.autocrlf=false; do not suppress whitespace checks globally or modify immutable review hashes to hide the issue."
+  ],
+  "limitations": [
+    "No repository files mutated. Only work-directory diagnostic receipts were written.",
+    "No full minified lines were printed; captured diagnostic source lines were discarded.",
+    "No claim that substantive source changes are absent: normalized files differ from HEAD as expected."
+  ]
+}

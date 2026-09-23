@@ -1,0 +1,91 @@
+{
+  "bn-fire-disciples": {
+    "title": "Encircled as if by fire",
+    "alt": "Four disciples near the water look toward two white-robed angels while light surrounds the group.",
+    "caption": "Still in their wet clothing, the disciples look up to receive the angels' ministry. The light around them recalls the heavenly fire witnessed by the multitude after their baptism.",
+    "refs": [
+      [
+        "bofm/3-ne/19",
+        "3 Nephi 19:13–14",
+        "13-14"
+      ]
+    ],
+    "owner": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "section": "covenant",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/bn-fire-disciples-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/bn-fire-disciples-960.webp",
+    "original": "bn-fire-disciples.png",
+    "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/bn-fire-disciples-v3-20260923.png",
+    "original_sha256": "27de54935bd02e122681c1ed72efb8e448d4dc1df9fe052aa1bfb14383349648",
+    "prompt": "Precise local identity repair of reference1. Change ONLY the SECOND angel at extreme right edge, partly cropped: give him an unmistakably different mature adult face, wider square jaw, broader nose, short straight dark hair with a few gray strands, close-cropped dark beard, thoughtful gentle expression, naturally looking toward the disciples. He must look entirely distinct from the young clean-shaven wavy-haired angel beside him. Keep the main angel, every disciple, their eye contact/poses/hands, modest white robes, continuous ring of ground light, crowd, landscape and photographic skin/cloth/light exactly unchanged. No Christ, no head flames, no added figures. No other edits. 1536x1024.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/bn-fire-disciples-v2-20260923.png"
+    ],
+    "review_record": "new-art-review-bn-fire-disciples-v3.json"
+  },
+  "rt-vision-1832": {
+    "title": "We saw Him",
+    "alt": "Joseph Smith and Sidney Rigdon look toward the risen Savior in a vision above their scriptural work.",
+    "caption": "Joseph and Sidney look up from their work as the vision opens before them. Their testimony reaches beyond the room: they have seen the living Son of God.",
+    "refs": [
+      [
+        "dc-testament/dc/76",
+        "Doctrine and Covenants 76:19–24",
+        "19-24"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "living-witness",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-vision-1832-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-vision-1832-960.webp",
+    "original": "rt-vision-1832.png",
+    "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-vision-1832-v2-20260923.png",
+    "original_sha256": "d051b06ddf292fa2f47874de9e264011b9d11cd0cfbc3c48fa9ef18ca7ee3d82",
+    "prompt": "Narrow edit reference1 vision scene: change ONLY Christ's head and eye direction to meaningful direct reciprocal gaze with Joseph Smith, the blond man at lower left holding manuscript. Tilt Christ's chin DOWN toward lower left and turn pupils visibly DOWN and LEFT to meet Joseph's eyes, not over him or at Sidney. Joseph already looking upward toward Christ, preserve Joseph's entire face, gaze and exact approved identity. Preserve Sidney's face and all scene pixels. Preserve exact Christ face structure from reference2, current gentle welcome expression but directed at Joseph. Do not alter age, skin, hair, clothing, hand/wrist healed scars, light, room, papers or camera composition. Physically believable eye alignment, live-action photographic. 1536x1024.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-vision-1832-20260923.png",
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/heroes/home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "new-art-review-rt-vision-1832-v2.json"
+  },
+  "rt-patmos-vision": {
+    "title": "Fear not; I am the first and the last",
+    "alt": "The risen Savior touches John's shoulder among seven golden lampstands.",
+    "caption": "John looks up as the risen Savior lays His hand upon him. In the vision's brightness, Christ speaks reassurance: He lives for evermore.",
+    "refs": [
+      [
+        "nt/rev/1",
+        "Revelation 1:9–18",
+        "9-18"
+      ]
+    ],
+    "owner": "jesus-christ/restoration-and-today.html",
+    "section": "return",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rt-patmos-vision-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rt-patmos-vision-960.webp",
+    "original": "rt-patmos-vision.png",
+    "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-patmos-vision-v3-20260923.png",
+    "original_sha256": "77a6bbb8bb248840e60a6ffa0b828ba2cf9e63fbb365c2b07254e553a577e63f",
+    "prompt": "Repair named John's identity in reference1 only, plus Christ beard color. Reference2 is exact identity source: JOHN is THIRD MAN FROM LEFT, dark short beard, narrow angular face, straight narrow nose, softly wavy dark hair, taupe wrap. NOT far-left curly full-bearded broad-face Peter, NOT second-from-left James, NOT modern men. Replace ONLY kneeling John's face/hair/beard at lower left of reference1 to match this THIRD-FROM-LEFT John faithfully, subtly mature with just a few gray strands and natural wrinkles for later-life interpretation, not elderly Peter's full gray beard or tight curls. Preserve John's body pose, gaze directly into Christ eyes, hand/chest, clothing, shoulder touch and all anatomy. Preserve exact Christ face/expression/hair/eyes/body/hand marks and scene; change Christ BEARD color to WHITE matching white head hair while keeping same cut/structure, no facial age change. Seven lamps and gold CHEST girdle unchanged. Photographic skin pores and cloth, not painting. No other edits. 1536x1024.",
+    "referenced_image_paths": [
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-patmos-vision-v2-20260923.png",
+      "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/assets/page-art/church-history/melchizedek-priesthood.webp"
+    ],
+    "review_record": "new-art-review-rt-patmos-vision-v3.json"
+  }
+}

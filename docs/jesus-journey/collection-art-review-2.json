@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Four full-frame modern mercy illustrations, exact generated hashes.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Imagined modern applications only; no documentary, named-identity or recorded-parable-event claim.",
+    "No visible Christ or material provision/healing guarantee.",
+    "Pass is independent technical/source review, not owner approval or browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "collection-mercy-05",
+      "sha256": "a044912be08f9d460aef30efc6e842798aa783dc513755c6ade117e9e73b752f",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Patient cultivation",
+      "alt": "Two adults wearing gardening gloves tend the soil around a small fruit-bearing tree.",
+      "caption": "Two gardeners give the soil patient attention. This imagined modern application draws on the gardener's request for time to cultivate in Jesus' fig-tree parable. The pictured tree already bears fruit; the connection is the care being offered, not a claim to show the barren tree in the story.",
+      "refs": [
+        [
+          "nt/luke/13",
+          "Luke 13:6-9",
+          "6-9"
+        ]
+      ],
+      "findings": "Four gloved hands coherent; cultivator grip and soil contact plausible, natural focused faces and photographic cloth/skin. Visible round fruit means it is neither barren nor confidently a fig tree.",
+      "conditions": [
+        "Do not label tree barren, fruitless or a literal parable reconstruction.",
+        "No promise that patient effort guarantees a particular outcome."
+      ]
+    },
+    {
+      "key": "collection-mercy-06",
+      "sha256": "de19d9d11300d4d176f14e26119c0f029c481163112c5b45bfebf663ed875301",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Learning a merciful response",
+      "alt": "Two adults talk across an open notebook at a community mediation workshop while other participants converse behind them.",
+      "caption": "A conversation offers space to listen before responding. In this imagined application, someone practices greater honesty and restraint with help from another person. Jesus' teaching about forgiveness can invite such preparation, while mercy still allows truthful boundaries and accountability.",
+      "refs": [
+        [
+          "nt/matt/18",
+          "Matthew 18:21-35",
+          "21-35"
+        ]
+      ],
+      "findings": "Foreground hands coherent, man gestures openly and woman rests hands near notebook. Natural attentive expressions. Whiteboard reads ordinary workshop heading and listening/respect guidance; no personal case details apparent. Text is acceptable contextual signage.",
+      "conditions": [
+        "Mentor role and rehearsing a difficult response are fictional context, not facts proved by image.",
+        "Do not call mediation a direct instruction in the parable or imply forgiveness requires unsafe contact."
+      ]
+    },
+    {
+      "key": "collection-mercy-07",
+      "sha256": "e997c83f2fde949b07a5f5c80aafe2740d575d516e5ea4543b6f9006f0456f06",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Sharing another person's joy",
+      "alt": "A woman applauds a smiling graduate who holds flowers and a folder, with others celebrating behind them.",
+      "caption": "One woman's accomplishment is welcomed with another's applause. This imagined scene of a sister celebrating a graduation offers a question alongside the elder son's story: can we make room for someone else's joy? The connection concerns our response to celebration, not an equation between graduation and repentance.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:25-32",
+          "25-32"
+        ]
+      ],
+      "findings": "Foreground clapping hands coherent despite overlap; graduate's hands naturally support bouquet/folder. Detailed faces, varied authentic smiles, no duplicated foreground identity. Background soft focus plausible.",
+      "conditions": [
+        "Sisters is the invented scenario relationship, not inferred from appearance.",
+        "Do not invent institution, degree, names, readable certificate or prior estrangement."
+      ]
+    },
+    {
+      "key": "collection-mercy-08",
+      "sha256": "7a2c6a352695625d68761b153928dd4436daef7d3a4aab57d62dfac0c73388ce",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Making room for shared joy",
+      "alt": "A group applauds a smiling woman as another woman presents a small card beside her.",
+      "caption": "The group pauses to share a welcome. In this imagined example, a returning volunteer receives a simple acknowledgment while others join the celebration. The father's welcome in Jesus' story invites reflection on shared joy without turning recognition into a contest over who deserves attention.",
+      "refs": [
+        [
+          "nt/luke/15",
+          "Luke 15:22-24",
+          "22-24"
+        ]
+      ],
+      "findings": "Seven distinct visible adults; clapping hands, card handoff and hand-on-chest coherent. Adult beside recipient has arm around shoulder in natural occlusion. Photographic lighting, age variety and expressive faces. No visible card text or money.",
+      "conditions": [
+        "Return, volunteer roles and acknowledgment are fictional context, not documentary claims.",
+        "Do not imply returning from volunteer absence establishes sin or that card contains money.",
+        "This remains distinct from chair-welcome and individual music-folder assistance scenes."
+      ]
+    }
+  ]
+}

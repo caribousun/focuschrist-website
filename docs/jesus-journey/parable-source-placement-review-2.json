@@ -1,0 +1,366 @@
+{
+  "scope": "Independent source and placement review of four local parable drafts plus current models/plan. No edits/imports or release claim.",
+  "checks": [
+    {
+      "url": "/jesus-christ/parables/talents.html",
+      "expected_scene_count": 4,
+      "model_scene_count": 4,
+      "unique_keys": 4,
+      "rendered_scene_keys": [
+        "talents-01",
+        "talents-02",
+        "talents-03",
+        "talents-04"
+      ],
+      "awaiting_render": [],
+      "related_destinations_exist": true,
+      "scenes": [
+        {
+          "key": "talents-01",
+          "planned_owner": "/jesus-christ/parables/talents.html",
+          "registry_owner": "jesus-christ/parables/talents.html",
+          "registry_section": "setting",
+          "refs": [
+            [
+              "nt/matt/25",
+              "Matthew 25:14-15",
+              "14-15"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "talents-02",
+          "planned_owner": "/jesus-christ/parables/talents.html",
+          "registry_owner": "jesus-christ/parables/talents.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/matt/25",
+              "Matthew 25:16-17",
+              "16-17"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "talents-03",
+          "planned_owner": "/jesus-christ/parables/talents.html",
+          "registry_owner": "jesus-christ/parables/talents.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/matt/25",
+              "Matthew 25:18",
+              "18"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "talents-04",
+          "planned_owner": "/jesus-christ/parables/talents.html",
+          "registry_owner": "jesus-christ/parables/talents.html",
+          "registry_section": "receiving-the-word",
+          "refs": [
+            [
+              "nt/matt/25",
+              "Matthew 25:19-21",
+              "19-21"
+            ]
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "url": "/jesus-christ/parables/sheep-goats.html",
+      "expected_scene_count": 4,
+      "model_scene_count": 4,
+      "unique_keys": 4,
+      "rendered_scene_keys": [
+        "sheep-goats-01",
+        "sheep-goats-02",
+        "sheep-goats-03",
+        "sheep-goats-04"
+      ],
+      "awaiting_render": [],
+      "related_destinations_exist": true,
+      "scenes": [
+        {
+          "key": "sheep-goats-01",
+          "planned_owner": "/jesus-christ/parables/sheep-goats.html",
+          "registry_owner": "jesus-christ/parables/sheep-goats.html",
+          "registry_section": "setting",
+          "refs": [
+            [
+              "nt/matt/25",
+              "Matthew 25:35",
+              "35"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "sheep-goats-02",
+          "planned_owner": "/jesus-christ/parables/sheep-goats.html",
+          "registry_owner": "jesus-christ/parables/sheep-goats.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/matt/25",
+              "Matthew 25:35-36",
+              "35-36"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "sheep-goats-03",
+          "planned_owner": "/jesus-christ/parables/sheep-goats.html",
+          "registry_owner": "jesus-christ/parables/sheep-goats.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/matt/25",
+              "Matthew 25:36",
+              "36"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "sheep-goats-04",
+          "planned_owner": "/jesus-christ/parables/sheep-goats.html",
+          "registry_owner": "jesus-christ/parables/sheep-goats.html",
+          "registry_section": "receiving-the-word",
+          "refs": [
+            [
+              "nt/matt/25",
+              "Matthew 25:36",
+              "36"
+            ]
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "url": "/jesus-christ/parables/two-debtors.html",
+      "expected_scene_count": 2,
+      "model_scene_count": 2,
+      "unique_keys": 2,
+      "rendered_scene_keys": [],
+      "awaiting_render": [
+        "two-debtors-01",
+        "two-debtors-02"
+      ],
+      "related_destinations_exist": true,
+      "scenes": [
+        {
+          "key": "two-debtors-01",
+          "planned_owner": "/jesus-christ/parables/two-debtors.html",
+          "registry_owner": "jesus-christ/parables/two-debtors.html",
+          "registry_section": "setting",
+          "refs": [
+            [
+              "nt/luke/7",
+              "Luke 7:41-42",
+              "41-42"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "two-debtors-02",
+          "planned_owner": "/jesus-christ/parables/two-debtors.html",
+          "registry_owner": "jesus-christ/parables/two-debtors.html",
+          "registry_section": "receiving-the-word",
+          "refs": [
+            [
+              "nt/luke/7",
+              "Luke 7:42",
+              "42"
+            ]
+          ],
+          "reviewed": true
+        }
+      ]
+    },
+    {
+      "url": "/jesus-christ/parables/good-samaritan.html",
+      "expected_scene_count": 8,
+      "model_scene_count": 8,
+      "unique_keys": 8,
+      "rendered_scene_keys": [],
+      "awaiting_render": [
+        "good-samaritan-01",
+        "good-samaritan-02",
+        "good-samaritan-03",
+        "good-samaritan-04",
+        "good-samaritan-05",
+        "good-samaritan-06",
+        "good-samaritan-07",
+        "good-samaritan-08"
+      ],
+      "related_destinations_exist": true,
+      "scenes": [
+        {
+          "key": "good-samaritan-01",
+          "planned_owner": "/jesus-christ/parables/good-samaritan.html",
+          "registry_owner": "jesus-christ/parables/good-samaritan.html",
+          "registry_section": "setting",
+          "refs": [
+            [
+              "nt/luke/10",
+              "Luke 10:30",
+              "30"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "good-samaritan-02",
+          "planned_owner": "/jesus-christ/parables/good-samaritan.html",
+          "registry_owner": "jesus-christ/parables/good-samaritan.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/luke/10",
+              "Luke 10:31",
+              "31"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "good-samaritan-03",
+          "planned_owner": "/jesus-christ/parables/good-samaritan.html",
+          "registry_owner": "jesus-christ/parables/good-samaritan.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/luke/10",
+              "Luke 10:32",
+              "32"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "good-samaritan-04",
+          "planned_owner": "/jesus-christ/parables/good-samaritan.html",
+          "registry_owner": "jesus-christ/parables/good-samaritan.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/luke/10",
+              "Luke 10:33",
+              "33"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "good-samaritan-05",
+          "planned_owner": "/jesus-christ/parables/good-samaritan.html",
+          "registry_owner": "jesus-christ/parables/good-samaritan.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/luke/10",
+              "Luke 10:34",
+              "34"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "good-samaritan-06",
+          "planned_owner": "/jesus-christ/parables/good-samaritan.html",
+          "registry_owner": "jesus-christ/parables/good-samaritan.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/luke/10",
+              "Luke 10:34",
+              "34"
+            ]
+          ],
+          "reviewed": true
+        },
+        {
+          "key": "good-samaritan-07",
+          "planned_owner": "/jesus-christ/parables/good-samaritan.html",
+          "registry_owner": "jesus-christ/parables/good-samaritan.html",
+          "registry_section": "story-and-teaching",
+          "refs": [
+            [
+              "nt/luke/10",
+              "Luke 10:34",
+              "34"
+            ]
+          ],
+          "reviewed": false
+        },
+        {
+          "key": "good-samaritan-08",
+          "planned_owner": "/jesus-christ/parables/good-samaritan.html",
+          "registry_owner": "jesus-christ/parables/good-samaritan.html",
+          "registry_section": "receiving-the-word",
+          "refs": [
+            [
+              "nt/luke/10",
+              "Luke 10:35",
+              "35"
+            ]
+          ],
+          "reviewed": false
+        }
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "page": "/jesus-christ/parables/talents.html",
+      "keys": [
+        "talents-03",
+        "talents-04"
+      ],
+      "issue": "Narrative placement reverses the action and attaches the wrong servant to the interpretation. Burial03 currently follows the paragraph about the master returning and commending first two servants. First-servant account04 appears under Fear and the buried trust, immediately after prose about third servant fear/inaction.",
+      "fix": "Put burial03 immediately after the first story-and-teaching paragraph that describes digging/hiding; put first-servant account04 after the second paragraph about return/report/commendation in that same section. Update plan/registry owning sections for04 to story-and-teaching. Keep receiving-the-word third-servant prose without unrelated first-servant art.",
+      "source": "Matthew25:18 precedes19-21;24-30 concerns the third servant."
+    },
+    {
+      "severity": "medium",
+      "page": "/jesus-christ/parables/good-samaritan.html",
+      "keys": [
+        "good-samaritan-03"
+      ],
+      "issue": "Levite03 is immediately after the paragraph that has already introduced the Samaritan, binding, transport and arrival at inn. It causes a backwards step from mercy/transport to the earlier passing-by scene.",
+      "fix": "Place Levite03 immediately after priest02 and before the Samaritan paragraph;04-07 then remain after that paragraph in source sequence.",
+      "source": "Luke10:31-32 precedes33-34."
+    },
+    {
+      "severity": "minor",
+      "page": "/jesus-christ/parables/two-debtors.html",
+      "keys": [
+        "two-debtors-02"
+      ],
+      "issue": "Forgiven-debts02 is separated from the paragraph narrating forgiveness and placed after the receiving-the-word warning not to identify the woman as Mary Magdalene. The caption itself is accurate, but immediate text-picture connection is weak.",
+      "fix": "Place02 immediately after the first story-and-teaching paragraph describing the two debts and forgiveness. Update02 owning section accordingly.",
+      "source": "Luke7:41-43 supplies fictional debt comparison; woman/Simon interpretation follows44-50."
+    }
+  ],
+  "source_assessment": [
+    "All four planned inventories match4/4/2/8 unique scenes and source passages. Broad prose ranges cover claims and scene-specific refs match the described action.",
+    "Talents correctly treats talents as substantial monetary amounts and keeps Luke minas distinct. Illustrated cloth trade/chests do not claim specified merchandise in Matthew.",
+    "Sheep-goats care pictures are explicitly illustrations; no literal Christ or judgment-event portrait claim. Their adjacent context remains thematically related, although01 follows the judgment introduction rather than the acts list. No additional corrective finding needed.",
+    "Two-debtors source distinguishes unnamed woman from Mary Magdalene and the fictional creditor/debtors from historical dinner setting. Captions remain consistent with the short parable, but original table heading should not be taken as literal image location.",
+    "Good Samaritan07/08 are expected pending artwork integration; current plan/registry refs correctly map inn care to10:34 and next-day payment/promise to10:35. No missing-art defect is reported for this known pending state.",
+    "Onward routes connect talents to minas/faithful-servant/stewardship; sheep-goats toSamaritan/Lazarus/neighbor; two-debtors tounmerciful-servant/Pharisee-publican/mercy; Samaritan tosheep-goats/great-supper/neighbor. All related local files exist."
+  ],
+  "owner_approval": false,
+  "release_ready": false
+}

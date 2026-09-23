@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "scope": "Focused eye-contact re-audit of 14 accepted Christ originals, with hash-bound resolution history for all five initial revision findings.",
+  "basis": "Wyatt specifically requested reciprocal attention in interpersonal scenes; preserve story-directed gaze exceptions.",
+  "ownerApproval": false,
+  "summary": {
+    "totalReviewed": 14,
+    "initialPass": 9,
+    "initialRevise": 5,
+    "resolvedByAcceptedRevision": 5,
+    "outstandingRevise": 0,
+    "technicalReviewClosed": true
+  },
+  "entries": [
+    {
+      "key": "mc-withered-hand",
+      "original_sha256": "d27618e4019f45d44801c2c06b5d552ba3467edcd39222f4cbd7bb69f52ce92d",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-70e44f76-cb65-4012-91a5-329d46fca5d4.png",
+      "status": "revise",
+      "recipient": "The man examining his restored hand",
+      "gazeDirection": "Up-right, above the bowed man's visible eye line",
+      "reason": "The man's gaze at his restored hand is story-appropriate. Christ's gaze should settle on that man's face or restored hand; current upward direction feels detached.",
+      "action": "Lower Christ's pupils toward the man's face or restored hand; preserve the man's downward attention."
+    },
+    {
+      "key": "mc-peters-mother-in-law",
+      "original_sha256": "f7cad4a552d463443bf64c9b11d5cffc63f5ddd05caa947e35e47914d2c7ac2e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-7e6981de-3914-4108-96fb-5f88fbf13dd0.png",
+      "status": "pass",
+      "recipient": "Peter's mother-in-law",
+      "gazeDirection": "Right and slightly down toward the seated woman's upturned face",
+      "reason": "The leaning posture and pupil direction support a mutual personal exchange while lifting her.",
+      "action": ""
+    },
+    {
+      "key": "mc-centurion-friends",
+      "original_sha256": "fe89dc98db7c31824d0f1051ee5d971f6c85027e7f06438cc540adfc8a2a34a7",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bd213b8d-4e9d-44bc-96cf-469480bf7cb7.png",
+      "status": "revise",
+      "recipient": "The central speaking messenger",
+      "gazeDirection": "Right/up beyond the messenger's lower eye line",
+      "reason": "The messenger looks toward Christ, but Christ appears to look over him rather than return his gaze.",
+      "action": "Aim Christ's pupils at the central speaker's eyes; preserve listening expression and identity."
+    },
+    {
+      "key": "mc-garment-touch",
+      "original_sha256": "badadb91deed5373f4d8e4d44722d4e3c287c3304e8ff3fbab8c8b85e41f66bf",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8374ceb9-c472-4786-86ba-9c191294bbad.png",
+      "status": "pass",
+      "recipient": "Searching the surrounding crowd",
+      "gazeDirection": "Over His shoulder toward the crowd, above the woman touching His garment",
+      "reason": "A searching glance before identifying the woman fits this moment. Wyatt specifically prefers this original; do not impose eye contact.",
+      "action": "Preserve the accepted original."
+    },
+    {
+      "key": "mc-bethsaida-led",
+      "original_sha256": "591eb4f73484fbd80ce241295bf6a8cf03f147a2c8d3d3d8195c2d9e4f71be10",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-93d50a3f-6255-4464-9f75-175b870ae4a2.png",
+      "status": "pass",
+      "recipient": "The man being led by the hand",
+      "gazeDirection": "Left/down toward the man's face",
+      "reason": "Christ's attention is visibly on the man He leads. The man's closed eyes fit the depicted pre-healing moment; reciprocal sight is not required.",
+      "action": ""
+    },
+    {
+      "key": "tp-scribe-dialogue",
+      "original_sha256": "89f83d2ff34c6ef0749c0e9af617162fc497df1359f833eb12f56d2e0ff1aca5",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a1dfc1cd-fa87-436e-b00c-379982829d53.png",
+      "status": "revise",
+      "recipient": "The seated scribe at left",
+      "gazeDirection": "Up-left, above the scribe's lower eye position",
+      "reason": "Christ's head inclines toward the scribe, but the pupil direction remains upward; this weakens the intimate listening exchange.",
+      "action": "Lower and aim Christ's pupils directly toward the scribe's eyes while preserving His head and identity."
+    },
+    {
+      "key": "tp-writing-ground",
+      "original_sha256": "581a4e9f39e5a6139544d2ac1fa96548634fd98edad71e1852fec6966b65638e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fd326acb-d9d5-4c16-808e-26f99073770f.png",
+      "status": "pass",
+      "recipient": "The ground where He writes",
+      "gazeDirection": "Down toward His writing hand and the ground",
+      "reason": "Deliberate downward attention is intrinsic to the recorded action, not a failed interpersonal gaze.",
+      "action": ""
+    },
+    {
+      "key": "rr-broiled-fish",
+      "original_sha256": "d8ce575e89d0f0494d099d56f388b2c00edb069e1b1d24877a30b3fd6b9d618e",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b8a81b89-c960-4f5c-93e1-eb57e3fbe860.png",
+      "status": "revise",
+      "recipient": "The two visible disciples at the table",
+      "gazeDirection": "Right/up past the visible disciples",
+      "reason": "Both disciples attend to Christ, while His pupils look above or beyond them. This focused audit supersedes the earlier general technical pass on gaze for this hash.",
+      "action": "Aim Christ's pupils toward one visible disciple's eyes; preserve healed marks, fish, identity and appropriate joy."
+    },
+    {
+      "key": "rr-cloud-receives",
+      "original_sha256": "f715bd41415941338451b8ca14187cf82d5efcd30dddfb2c9d054801effc2690",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-f187d541-f4d0-47c3-bae6-293aa67fa747.png",
+      "status": "pass",
+      "recipient": "The disciples below and left",
+      "gazeDirection": "Down-left toward the gathered people",
+      "reason": "The revised face inclines toward the people below, with quiet tender expression; the disciples look up. It honors Wyatt's specific parting-mood direction.",
+      "action": ""
+    },
+    {
+      "key": "bn-man-raised",
+      "original_sha256": "345f891c02f04312d4c869b9a8f73e28398d36861cbd0aad13ad40a610b325c3",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c88c81d5-9748-47a7-87ee-fde740ec0950.png",
+      "status": "pass",
+      "recipient": "The restored man at right",
+      "gazeDirection": "Right/down toward the seated man's upturned face",
+      "reason": "Mutual gaze is credible with a joyful personal response. The broad smile is connected to the man rather than a distant viewer.",
+      "action": ""
+    },
+    {
+      "key": "rt-spirit-messengers",
+      "original_sha256": "f6b209750ba1d3b9684a4460cf59da481205d02d7e8d6ecc3f9e3f49e8b75b48",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4b424195-0cb9-49b8-a98d-28563dc4f2c3.png",
+      "status": "pass",
+      "recipient": "The gathered listeners, especially rear-left standing man",
+      "gazeDirection": "Left toward the standing listener near Christ's eye height",
+      "reason": "The foreground listener is lower, but this is group teaching: a visible rear-left listener provides a credible target for Christ's gaze. Do not claim direct eye contact with the foreground man.",
+      "action": ""
+    },
+    {
+      "key": "mc-daughter-go-in-peace",
+      "original_sha256": "ccb4a66d9c8cf44dc8e36a999a3309971a81cbedaa78ac3980163d4b30818d63",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-9c182e90-5441-40d2-b573-b5a81e8b8d51.png",
+      "status": "pass",
+      "recipient": "The kneeling woman at left",
+      "gazeDirection": "Left/down toward her upturned eyes",
+      "reason": "Christ's lowered head and eyes meet the woman's upward attention, giving the reassurance a personal focus.",
+      "action": ""
+    },
+    {
+      "key": "mm-temple-compassion",
+      "original_sha256": "2a8489621f9c029c7f23f6d2f403c7b6f71f16e5f7e3051b00d0a028984df77d",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b49cfd81-09b7-47e3-8270-3d07672e341b.png",
+      "status": "revise",
+      "recipient": "The man directly opposite Christ",
+      "gazeDirection": "Up-right, above the other man's visible eye line",
+      "reason": "This is a personal face-to-face companion scene, but Christ's pupils look over the other man's eyes.",
+      "action": "Lower Christ's pupils toward the opposite man's eyes while preserving compassion and approved likeness."
+    },
+    {
+      "key": "mm-temple-tables",
+      "original_sha256": "c9de46129bf45af4445efe978a0b58d4126f4385ec96ccf7944396b5dd858057",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d1e51915-90f6-49c4-876e-be50290edc31.png",
+      "status": "pass",
+      "recipient": "The people and activity in the temple court",
+      "gazeDirection": "Right across the active court",
+      "reason": "Broad directed attention fits forceful temple action. A reciprocal conversational exchange is not required; preserve the original Wyatt prefers.",
+      "action": "Preserve original temple action."
+    }
+  ],
+  "resolutions": [
+    {
+      "key": "rr-broiled-fish",
+      "status": "pass",
+      "acceptedVersion": "rr-broiled-fish-v4",
+      "accepted_sha256": "199ddf7a530db01622286ea10c5edde48c7a2e5a2581adf0ccce932ab32321e5",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8cab1a78-7813-4eee-9aee-6bd4640d9bc9.png",
+      "reviewRecord": "eye-contact-revision-review-1.json",
+      "note": "Accepted independent technical revision; original finding retained in entries. Import/build/deployment and owner approval are separate evidence."
+    },
+    {
+      "key": "mc-centurion-friends",
+      "status": "pass",
+      "acceptedVersion": "mc-centurion-friends-v2",
+      "accepted_sha256": "753ff85a36c03c199d2100b9e6c11e90e6fa6dde0da29e859e4be08707a1a5be",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-12cd40be-5d02-40ed-a676-04a5dfa89b26.png",
+      "reviewRecord": "eye-contact-revision-review-2.json",
+      "note": "Accepted independent technical revision; original finding retained in entries. Import/build/deployment and owner approval are separate evidence."
+    },
+    {
+      "key": "tp-scribe-dialogue",
+      "status": "pass",
+      "acceptedVersion": "tp-scribe-dialogue-v2",
+      "accepted_sha256": "244bb2b13293b6949b6319f4a408f0b95934855c353e4b242d6be924d7bf782c",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0cb1ac34-1c5a-4fe8-bc35-caf7b0bbbbb3.png",
+      "reviewRecord": "eye-contact-revision-review-2.json",
+      "note": "Accepted independent technical revision; original finding retained in entries. Import/build/deployment and owner approval are separate evidence."
+    },
+    {
+      "key": "mc-withered-hand",
+      "status": "pass",
+      "acceptedVersion": "mc-withered-hand-v3",
+      "accepted_sha256": "ab04a8ad757bd605503fff7ce4ad4357f9e5f6d1c11e62583c851551c37702b1",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-64aeee6e-563d-46d8-aecd-a596374a5647.png",
+      "reviewRecord": "eye-contact-revision-review-3.json",
+      "note": "Accepted independent technical revision; original finding retained in entries. Import/build/deployment and owner approval are separate evidence."
+    },
+    {
+      "key": "mm-temple-compassion",
+      "status": "pass",
+      "acceptedVersion": "mm-temple-compassion-v2",
+      "accepted_sha256": "97f00c0332b1bebdb36e22fe83fb10a39a8d075a1ef0cc409db7e77c5f2821ce",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6fa328a1-2d15-4331-a4ae-57eeaecd8040.png",
+      "reviewRecord": "eye-contact-revision-review-3.json",
+      "note": "Accepted independent technical revision; original finding retained in entries. Import/build/deployment and owner approval are separate evidence."
+    }
+  ],
+  "resolutionNotes": [
+    "Withered-hand v2 did not resolve the gaze finding; the accepted resolution is v3, documented in review 3.",
+    "The initial findings remain historical records for their original hashes; they do not describe the accepted revised hashes.",
+    "Garment-touch, writing-ground and original temple-tables retain source-appropriate action-directed attention."
+  ]
+}

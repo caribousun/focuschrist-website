@@ -1,0 +1,68 @@
+{
+  "mc-withered-hand": {
+    "title": "Stretch out your hand",
+    "alt": "Jesus and a man look toward one another while the man holds up his restored hand in a synagogue.",
+    "caption": "Jesus restores a man's hand on the Sabbath. This imagined moment of personal gratitude follows the healing described in Luke; the exact expressions and eye contact are artistic interpretation.",
+    "refs": [
+      [
+        "nt/luke/6",
+        "Luke 6:6–10",
+        "6-10"
+      ]
+    ],
+    "owner": "jesus-christ/miracles-and-compassion.html",
+    "section": "leper",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mc-withered-hand--ab04a8ad757b-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mc-withered-hand--ab04a8ad757b-thumb.webp",
+    "original": "mc-withered-hand--ab04a8ad757b.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-64aeee6e-563d-46d8-aecd-a596374a5647.png",
+    "original_sha256": "ab04a8ad757bd605503fff7ce4ad4357f9e5f6d1c11e62583c851551c37702b1",
+    "prompt": "Precise photographic edit of image1. Create unmistakable mutual EYE CONTACT. Lift the healed man's head at RIGHT so he looks directly into Jesus' eyes at LEFT, gratitude and wonder. Turn Jesus head farther to RIGHT and lower his pupils to look directly at this man's eyes. Adjust BOTH heads naturally until their lines of sight meet. Preserve the healed man's raised open hand and body pose exactly; he is now sharing his wonder with Jesus while still holding his restored hand up. No looking above, beyond, or off-screen. Preserve exact Jesus identity from image2, all other people, hands, clothes, setting, lighting and framing. Natural eyes and skin texture, no painting, no identity drift. This is preResurrection, no scars. Preserve all existing emotion except necessary gaze connection.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-d6d285f1-fcad-49c5-8f84-a9b525c1d634.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "eye-contact-revision-review-3.json",
+    "width": 1536,
+    "height": 1024,
+    "supersedes_sha256": "d27618e4019f45d44801c2c06b5d552ba3467edcd39222f4cbd7bb69f52ce92d"
+  },
+  "mm-temple-compassion": {
+    "title": "Compassion in His Father’s house",
+    "alt": "Jesus faces a man in the temple court, with scattered coins, animals and other people behind them.",
+    "caption": "This imagined companion scene reflects on Christ's attention to people amid His cleansing of the temple. John records the temple action; this particular face-to-face exchange is an artistic reflection, not a separately recorded conversation.",
+    "refs": [
+      [
+        "nt/john/2",
+        "John 2:13–17",
+        "13-17"
+      ]
+    ],
+    "owner": "jesus-christ/mortal-ministry.html",
+    "section": "cana",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mm-temple-compassion--97f00c0332b1-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mm-temple-compassion--97f00c0332b1-thumb.webp",
+    "original": "mm-temple-compassion--97f00c0332b1.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-6fa328a1-2d15-4331-a4ae-57eeaecd8040.png",
+    "original_sha256": "97f00c0332b1bebdb36e22fe83fb10a39a8d075a1ef0cc409db7e77c5f2821ce",
+    "prompt": "Precise photographic edit of image1. Jesus at LEFT must lower his pupils and gently lower his chin to look directly into the RIGHT merchant's visible eye. Merchant looks back at Jesus. True reciprocal eye-to-eye contact, attentive compassion and thoughtful serious tenderness. Jesus must NOT look up-right over the man's head. Only changeJesus' gaze and headorientation needed for eye contact. Preserve exact Jesus identity from image2, all other people, hands, clothes, setting, lighting and framing. Natural eyes and skin texture, no painting, no identity drift. This is preResurrection, no scars. Preserve all existing emotion except necessary gaze connection.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b49cfd81-09b7-47e3-8270-3d07672e341b.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "eye-contact-revision-review-3.json",
+    "width": 1536,
+    "height": 1024,
+    "supersedes_sha256": "2a8489621f9c029c7f23f6d2f403c7b6f71f16e5f7e3051b00d0a028984df77d"
+  }
+}

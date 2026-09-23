@@ -1,0 +1,38 @@
+{
+  "status": "pass_with_scope_limits",
+  "date": "2026-09-23",
+  "environment": "local draft localhost:4173",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "pages": {
+    "rich-fool": 3,
+    "watchful-servants": 3,
+    "wedding-places": 3,
+    "great-supper": 4,
+    "tower-builder": 3,
+    "king-war": 2,
+    "prodigal-son": 8,
+    "unjust-steward": 3
+  },
+  "picturePathsChecked": 29,
+  "checks": [
+    "image loaded",
+    "artwork study opened",
+    "full-size viewer opened and closed",
+    "scripture reader opened and closed",
+    "artwork study closed",
+    "focus returned to initiating image link",
+    "no clipped dialog links or buttons",
+    "no horizontal page overflow"
+  ],
+  "allPassed": true,
+  "limits": [
+    "Reader opening checked; individual passage text not independently checked in this pass.",
+    "First six page interaction checks occurred before source-placement correction3; no interaction code changed, semantic corrections independently verified afterward.",
+    "Full responsive composition, enlarged text, no-JavaScript and release verification remain unfinished."
+  ],
+  "viewportReset": true,
+  "publication": false
+}

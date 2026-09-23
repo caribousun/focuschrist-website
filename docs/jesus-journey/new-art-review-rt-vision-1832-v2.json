@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rt-vision-1832-v2",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rt-vision-1832",
+      "generationKey": "rt-vision-1832-v2",
+      "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rt-vision-1832-v2-20260923.png",
+      "sha256": "d051b06ddf292fa2f47874de9e264011b9d11cd0cfbc3c48fa9ef18ca7ee3d82",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "We saw Him",
+      "alt": "Joseph Smith and Sidney Rigdon look toward the risen Savior in a vision above their scriptural work.",
+      "caption": "Joseph and Sidney look up from their work as the vision opens before them. Their testimony reaches beyond the room: they have seen the living Son of God.",
+      "refs": [
+        [
+          "dc-testament/dc/76",
+          "Doctrine and Covenants 76:19–24",
+          "19-24"
+        ]
+      ],
+      "findings": "Actual canonical Christ, owner-approved Joseph portrait and Sidney historical photograph inspected. Joseph retains nose, chin, brow and light-haired clean-shaven identity at plausible young-adult 26. Sidney is distinct with historical long face, nose and sideburn structure interpreted backward from elderly reference to 38. Christ retains canonical features; v2 lowers gaze toward Joseph instead of above witnesses. Exposed palm has small healed mark and exposed wrist has subtle mark; other hand naturally hidden. Cloud/light boundary clearly portrays vision, not visitor standing on room floor; Father outside frame. Real skin, clothing, manuscript and wood textures.",
+      "conditions": [
+        "Exact heavenly staging, room arrangement and Sidney's reconstructed youthful pigmentation are artistic interpretation. No Father portrait is supplied; do not claim this crop displays every element of D&C76. Manuscript is a prop, not authenticated legible transcript.",
+        "Accept v2 only; preserve prior candidate. Technical review is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/identities/joseph-smith-owner-approved-20260914.png",
+        "../identity-research/sidney-rigdon-1873-jsp.jpg"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng"
+      ]
+    }
+  ]
+}

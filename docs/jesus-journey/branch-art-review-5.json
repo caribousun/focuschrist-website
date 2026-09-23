@@ -1,0 +1,41 @@
+{
+  "review_type": "independent_hash_bound_revision_review",
+  "owner_approval": false,
+  "complete": true,
+  "candidates": [
+    {
+      "key": "rr-broiled-fish",
+      "version_key": "rr-broiled-fish-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-19992b87-e60c-49a3-a7bc-ecdf05920cad.png",
+      "status": "revise",
+      "sha256": "05bc0dd6d7cc52421ee63747a6de6c85a926f6169500e60fedda65c64feb1abe",
+      "alt": "The risen Jesus holds a piece of fish while two disciples watch Him indoors.",
+      "caption": "Luke records the risen Jesus eating before His disciples. This scene illustrates that indoor witness, distinct from the shore breakfast in John 21.",
+      "refs": null,
+      "findings": "Canonical face, photographic texture, plausible fingers and directed joyful interaction retained. Right wrist healed mark remains clear. Left wrist has a faint mark, but the open left palm still does not show a clearly identifiable healed wound at native view; central shading reads like a normal palm crease. The revision is insufficiently clear to certify the requested visible palm mark. Make a small but unmistakable healed mark in the exposed left palm, without fresh blood or exaggerated injury."
+    },
+    {
+      "key": "bn-man-raised",
+      "version_key": "bn-man-raised-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-c88c81d5-9748-47a7-87ee-fde740ec0950.png",
+      "status": "pass",
+      "sha256": "345f891c02f04312d4c869b9a8f73e28398d36861cbd0aad13ad40a610b325c3",
+      "alt": "Jesus bends toward a man sitting upright on a woven mat and extends a hand bearing healed marks.",
+      "caption": "Third Nephi records that Jesus raised a man from the dead. The unnamed man's appearance, mat, posture and surroundings are artistic interpretations beyond the brief report.",
+      "refs": null,
+      "findings": "Open palm and exposed inner wrist now have identifiable healed marks without fresh bleeding. The opposite hand is seen mainly from its back and side; lack of a visible palm mark there is not a defect. Canonical Christ likeness, photographic skin and fabric, coherent hands and reciprocal joyful attention remain. Joy is directed to the restored man, not toward the viewer."
+    },
+    {
+      "key": "rt-spirit-messengers",
+      "version_key": "rt-spirit-messengers-v2",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-4b424195-0cb9-49b8-a98d-28563dc4f2c3.png",
+      "status": "pass",
+      "sha256": "f6b209750ba1d3b9684a4460cf59da481205d02d7e8d6ecc3f9e3f49e8b75b48",
+      "alt": "Jesus addresses attentive men and women, including an older gray-haired man, in a softly lit setting.",
+      "caption": "Doctrine and Covenants 138 describes Christ's ministry among the righteous spirits and the commissioning of messengers between His death and Resurrection. The unnamed listeners and setting are artistic interpretations of the vision.",
+      "refs": null,
+      "findings": "Center-background man now has short gray hair, age lines and a distinct face, resolving the prior Christ duplicate. Remaining faces are sufficiently distinguishable. Canonical Christ likeness, earnest teaching expression, photographic facial detail and plausible open hands retained. Soft surrounding light is artistic vision staging, not claimed physical geography. This is ministry between death and Resurrection, so post-Resurrection bodily-mark requirements are not simply transferred to it."
+    }
+  ],
+  "overall": "Man raised and spirit messengers revisions pass; broiled fish still requires a clearly visible healed left-palm mark. No owner approval inferred."
+}

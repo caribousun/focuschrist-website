@@ -1,0 +1,118 @@
+{
+  "minas-01": {
+    "title": "Entrusted with money",
+    "alt": "A gray-haired nobleman in blue gives a tied money bag to a curly-haired servant in rust while four other servants stand nearby with bags.",
+    "caption": "Before leaving to receive a kingdom, a nobleman entrusts money to ten servants and tells them to trade until he returns. Each begins with one mina, and this partial group pictures their shared responsibility.",
+    "refs": [
+      [
+        "nt/luke/19",
+        "Luke 19:12–13",
+        "12-13"
+      ]
+    ],
+    "owner": "jesus-christ/parables/minas.html",
+    "section": "setting",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/minas-01-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/minas-01-960.webp",
+    "original": "minas-01.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3c7d6cd-e5e6-4708-b37e-d9d75fc40fbb.png",
+    "original_sha256": "a6a647528f35a74e6006dbdb2705f9c4ce26a8fcc9b52303c841f6f5f2bbeb95",
+    "prompt": "Edit this photograph only to REMOVE the nobleman's entire leather shoulder bag and its diagonal strap; replace those pixels with natural continuation of the plain blue mantle and cream sleeve. The rectangular stitched leather bag looks modern. Preserve all five people's exact faces, clothes, handoff, pouch, gaze, framing, lighting and stone setting. Also make the far-left headband servant clearly distinct from the far-right headband servant: far-left should have a clean-shaven lean face, same headcloth and posture. Do not change the main nobleman or receiving servant. Photographic natural texture, no added objects or text.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-fda4d21a-2e40-48d3-ad05-a5caa2805a1d.png"
+    ],
+    "review_record": "parable-art-review-64.json"
+  },
+  "minas-02": {
+    "title": "Putting the money to work",
+    "alt": "The curly-haired servant in rust offers a coin into an older merchant's open palm across a market counter stacked with folded cloth.",
+    "caption": "The servants are charged to trade with what they have received, and later report what their money has gained. This cloth-market exchange is an illustration of that activity, not merchandise specified in the parable.",
+    "refs": [
+      [
+        "nt/luke/19",
+        "Luke 19:13, 15–19",
+        "13,15-19"
+      ]
+    ],
+    "owner": "jesus-christ/parables/minas.html",
+    "section": "story-and-teaching",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/minas-02-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/minas-02-960.webp",
+    "original": "minas-02.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-5e39f93f-0e50-4c43-9633-c098656160bd.png",
+    "original_sha256": "f759a306948d365a28cb2f50994176d840372d9c8db592f289723355c2da07c9",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Servants putting funds to work. Scripture source: Luke 19:15-19. Narrative context: A nobleman leaves and entrusts money Then Servants work or hide it while citizens resist him Then He returns and requires an account. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Use ancient monetary resources with equal starting portions for ten servants. Do not copy the five/two/one arrangement of Matthew's talents. Avoid representing the nobleman as Jesus. Image uniqueness: this is scene 2 of 4 for The Ten Pounds or Minas. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Reference locks clay-red tunic young curly-haired bearded servant only. Show him at an ordinary shaded market stall putting entrusted funds to work: he gives a few coins to a distinct older clean-shaven merchant with balding head and gray tunic, while plain folded cloth is on counter. This generic modest transaction illustrates trading, source does not identify merchandise or business. Focus on clear handoff where one coin rests on open merchant palm and servant withdraws his hand; no overlapping extra fingers, no unreadable inscription presented as fact. Wide 3:2 documentary photograph, real woven fabric, skin pores, natural eyecontact across counter, no nobleman present, no modern shop/furniture/ledger/text. No claim visible coins equal exact pound/tenfold gain.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3c7d6cd-e5e6-4708-b37e-d9d75fc40fbb.png"
+    ],
+    "review_record": "parable-art-review-64.json"
+  },
+  "minas-03": {
+    "title": "Money kept unused in cloth",
+    "alt": "The dark-haired servant in a striped outer garment holds an open cloth containing coins before the blue-robed nobleman.",
+    "caption": "Another servant returns the mina he has kept laid away in a cloth. His explanation reveals that the entrusted money was preserved unused rather than put to work.",
+    "refs": [
+      [
+        "nt/luke/19",
+        "Luke 19:20",
+        "20"
+      ]
+    ],
+    "owner": "jesus-christ/parables/minas.html",
+    "section": "story-and-teaching",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/minas-03-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/minas-03-960.webp",
+    "original": "minas-03.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-994b9027-49ec-4a6c-9ca9-1449e5f0ad21.png",
+    "original_sha256": "c6a6e500655095ea67a8d5f3b0766c56180dacc5dfb41b662b0f965b12e19631",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: The unused pound wrapped in cloth. Scripture source: Luke 19:20. Narrative context: A nobleman leaves and entrusts money Then Servants work or hide it while citizens resist him Then He returns and requires an account. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Use ancient monetary resources with equal starting portions for ten servants. Do not copy the five/two/one arrangement of Matthew's talents. Avoid representing the nobleman as Jesus. Image uniqueness: this is scene 3 of 4 for The Ten Pounds or Minas. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Reference contains identities; focus on the distinct servant in CENTER BACK of reference, dark striped sleeveless vest over cream tunic and neatly trimmed dark beard, not the clay-red servant. New medium close wide3:2 scene in stone interior: servant anxiously opens a small plain linen cloth on his two hands revealing a modest grouping of old worn coins kept unused, presenting it toward nobleman whose blue-clothed shoulder appears at frame edge. No buried chest, no soil, no shovel, no enormous treasure, no literal coin denomination claim. Face looking toward nobleman with guarded apprehension, mouth neutral. Natural hands hold corners and cloth rests across palms, coins physical and contained. Photorealistic skin and linen, natural window light.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3c7d6cd-e5e6-4708-b37e-d9d75fc40fbb.png"
+    ],
+    "review_record": "parable-art-review-64.json"
+  },
+  "minas-04": {
+    "title": "An account on the nobleman's return",
+    "alt": "The rust-clothed servant speaks with open hands before the seated blue-robed nobleman, with several tied bags on the table and another servant standing behind.",
+    "caption": "After receiving the kingdom and returning, the nobleman calls the servants to learn what each has gained by trading. The meeting pictures that reckoning, with the results to be heard from those he entrusted.",
+    "refs": [
+      [
+        "nt/luke/19",
+        "Luke 19:15",
+        "15"
+      ]
+    ],
+    "owner": "jesus-christ/parables/minas.html",
+    "section": "story-and-teaching",
+    "role": "body",
+    "depicts_christ": false,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/minas-04-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/minas-04-960.webp",
+    "original": "minas-04.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-37bcdefa-2eef-40e7-97e0-29a2f543be65.png",
+    "original_sha256": "d21c7c8575c42e81e11daf2e5a21c8a3dfdaa9a1cc42f21fd4b68a599809c520",
+    "prompt": "Create one distinct, convincing live-action photographic scene for a reverent scripture study. Depict ONLY this moment: Accounts on the nobleman's return. Scripture source: Luke 19:15. Narrative context: A nobleman leaves and entrusts money Then Servants work or hide it while citizens resist him Then He returns and requires an account. Do not illustrate the entire sequence in one frame. No montage, split panels, embedded text, captions, watermark, frame, or modern objects. The scene is a parable or teaching comparison, not a claim of a photographed historical event. People are unnamed story characters with no invented biographies or exact ages. Do not include Jesus, Heavenly Father, or the approved Christ likeness inside the fictional narrative. Where relevant use plausible first-century eastern Mediterranean clothing, household materials, agricultural tools and architecture, without claiming archaeological certainty for invented surroundings. Preserve dignity and detailed natural expressions fitting the actual scene; no default smiles, blank faces, ethnic caricatures, waxy skin, painterly texture or CGI. Natural skin, cloth and hair; anatomically correct hands, limbs and contact; physically believable light. Compose the full event with comfortable space around essential faces and hands, suitable for a wide responsive study picture. Use ancient monetary resources with equal starting portions for ten servants. Do not copy the five/two/one arrangement of Matthew's talents. Avoid representing the nobleman as Jesus. Image uniqueness: this is scene 4 of 4 for The Ten Pounds or Minas. It must differ in event, action and setting from the other planned moments, not merely change a pose or crop. Before generation compare the site's original-artwork inventory; reject scene duplication. Same silver-haired blue-mantled nobleman and clay-red curly-haired servant from reference. Wide3:2 photographic estate interior upon nobleman's return: nobleman seated listening intently to the standing clay-red servant reporting, servant modestly gestures toward a small group of money pouches on plain table. The striped-vest servant waits apart behind, hands down, no cloth presentation yet. Faces distinct and coherent eyecontact nobleman-to-reportingservant. Serious accounting not universal celebration; no crown, no punishment, no city miniatures or exact visible money counts. Avoid modern satchels, documents with fabricated readable totals. Natural windowlight, credible bodies/fingers and realistic rough fabric, not illustration. Caption will explain source records account and gains, objects simply stage reporting.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a3c7d6cd-e5e6-4708-b37e-d9d75fc40fbb.png"
+    ],
+    "review_record": "parable-art-review-64.json"
+  }
+}

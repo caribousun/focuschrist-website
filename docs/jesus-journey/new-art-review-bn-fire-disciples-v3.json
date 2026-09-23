@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of bn-fire-disciples-v3",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "bn-fire-disciples",
+      "generationKey": "bn-fire-disciples-v3",
+      "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/bn-fire-disciples-v3-20260923.png",
+      "sha256": "27de54935bd02e122681c1ed72efb8e448d4dc1df9fe052aa1bfb14383349648",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Encircled as if by fire",
+      "alt": "Four disciples near the water look toward two white-robed angels while light surrounds the group.",
+      "caption": "Still in their wet clothing, the disciples look up to receive the angels' ministry. The light around them recalls the heavenly fire witnessed by the multitude after their baptism.",
+      "refs": [
+        [
+          "bofm/3-ne/19",
+          "3 Nephi 19:13–14",
+          "13-14"
+        ]
+      ],
+      "findings": "V3 compared to rejected original and v2. Four foreground recipients are adult male chosen disciples; mixed observers remain distant and outside the encircling glow. No head flames, burning hair or Christ figure. Far-right angel now has short graying hair, beard and visibly mature distinct face, resolving near-duplicate angel pattern. The main angel engages kneeling recipient in reciprocal gaze; wet woven cloth, hands and faces photographic. Circle of light is an explicit artistic rendering of as-if-fire language.",
+      "conditions": [
+        "Only part of the twelve is pictured; do not claim four total disciples or identify an unnamed figure as mapped Nephi. Angels' appearance and geometric light boundary are interpretation; the source does not specify a literal luminous ring. Christ's return follows in verse15.",
+        "Accept v3 only and preserve rejected predecessors. Technical review is not owner approval or browser verification."
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,491 @@
+{
+  "owner_request": "Warm, reverent, natural scene-specific writing; no robotic picture descriptions.",
+  "review": "Independent semantic review by saved_art_review:54 of56 accepted unchanged;2 corrected below; modern-scripture alt also corrected to avoid invented relationship.",
+  "preservation": "Original pixels, review bindings, scripture destinations and historical receipts unchanged. Modern illustrations remain identified in section introductions.",
+  "changes": [
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "modern-grief",
+      "field": "caption",
+      "before": "A quiet visit can offer companionship when words are difficult. This present-day illustration invites us to listen and stay attentive to someone who is grieving.",
+      "after": "One woman listens while another wipes away tears. There need not be an answer for every sorrow; sometimes care begins with being willing to stay.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "modern-scripture",
+      "field": "caption",
+      "before": "Reading together can include time for questions and patient listening. This present-day family study invites us to give both scripture and one another our attention.",
+      "after": "A father listens as his daughter speaks beside the open scriptures. Reading together can include an honest question and the patience to hear one another.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "modern-neighbor",
+      "field": "caption",
+      "before": "A bag of groceries becomes a simple act of care between neighbors. This present-day illustration invites us to notice a need and offer useful help respectfully.",
+      "after": "A woman offers a bag of groceries at her neighbor's door. Food, a visit and a willing hand are simple ways to care for one another.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "modern-reconciliation",
+      "field": "caption",
+      "before": "A phone is set aside as two people give a difficult conversation their attention. This present-day illustration invites us to speak honestly and listen with care.",
+      "after": "The phone is set aside, and two people give a difficult conversation their attention. An honest word and a patient listener can be a beginning.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "modern-welcome",
+      "field": "caption",
+      "before": "A chair is drawn out and a guest is welcomed. This present-day illustration invites us to notice who might appreciate a place beside us.",
+      "after": "A chair is drawn out for a guest carrying a plate. A place at the table can be a quiet way of saying, You are welcome here.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "modern-prayer",
+      "field": "caption",
+      "before": "Work gloves and a lunch bag wait while a man pauses to pray. This present-day illustration invites us to bring ordinary responsibilities and concerns to God.",
+      "after": "Work gloves and a lunch bag wait while a man pauses to pray. Before the day begins, there is time to turn to the Father.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "widows-offering",
+      "field": "caption",
+      "before": "Jesus calls His disciples’ attention to the widow’s gift. Her age and the arrangement of the treasury are artistic choices.",
+      "after": "Jesus draws His disciples' attention to the widow's small gift and the sacrifice behind it. He sees what the size of an offering alone cannot tell them.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "rich-man-invitation",
+      "field": "caption",
+      "before": "Before the man departs sorrowful, Jesus looks on him with love and invites him to follow. The man’s appearance is an artistic interpretation.",
+      "after": "Jesus looks on the man with love and invites him to follow. Before the sorrowful departure, Mark gives us this moment of personal love and a searching invitation.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "deaf-man",
+      "field": "caption",
+      "before": "Jesus takes a man aside from the crowd and restores his hearing and speech. The image reflects His personal attention and upward look during the account.",
+      "after": "Away from the crowd, Jesus gives the man His attention and looks toward heaven. Mark records the opening of his ears and the release of his speech.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "martha-and-mary",
+      "field": "caption",
+      "before": "Jesus responds tenderly to Martha’s concern while Mary listens at His feet. The sisters’ appearance and the room are artistic interpretations.",
+      "after": "Martha brings her concern to Jesus while Mary listens at His feet. His answer calls Martha by name and draws her attention to the good part Mary has chosen.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "bb-birds-over-waters",
+      "field": "caption",
+      "before": "Genesis describes living creatures in the waters and birds above the earth. This illustrative scene invites attention to the life named in the creation account; it does not reconstruct a known primordial location or scientific chronology.",
+      "after": "Fish move through clear water as birds fly above the shore. Genesis names the life of sea and sky among the wonders of creation.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "bb-sea-crossing",
+      "field": "caption",
+      "before": "Exodus records the Israelites crossing on dry ground with water on either side. The unnamed travelers, their appearances and the scale of the scene are artistic interpretations.",
+      "after": "The travelers move forward on dry ground with water on either side. Exodus tells of the way the Lord opened for His people when the sea lay before them.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "bb-manna-gathering",
+      "field": "caption",
+      "before": "The Israelites gather the food provided in the wilderness. These unnamed gatherers and the camp illustrate Exodus 16; their relationship and the exact appearance of the scene are not recorded.",
+      "after": "People bend to gather the food the Lord has provided. In the wilderness, each morning brings another invitation to trust Him for their daily bread.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mm-cana-jars",
+      "field": "caption",
+      "before": "Jesus instructs the servants at Cana to fill the six stone waterpots. Their appearances and the courtyard arrangement are artistic interpretations of John 2.",
+      "after": "The servants attend to the stone waterpots at Jesus's direction. At Cana, their ordinary work becomes part of the first sign John records.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mm-women-support",
+      "field": "caption",
+      "before": "Luke names women who supported Jesus's ministry from their resources, along with many others. This scene illustrates that practical support through unnamed women; the packing action is an artistic reconstruction.",
+      "after": "Hands prepare provisions for the road ahead. These unnamed women picture the practical support Luke remembers from women who gave of their resources to sustain Jesus's ministry.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mm-twelve-depart",
+      "field": "caption",
+      "before": "Jesus sends the Twelve to proclaim the kingdom and heal. This illustration shows part of the departing group; their appearances, gestures and the road are artistic interpretations.",
+      "after": "The disciples begin the journey Jesus has entrusted to them. This partial gathering recalls His charge to the Twelve to proclaim the kingdom and heal.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mm-jerusalem-tears",
+      "field": "caption",
+      "before": "As Jesus draws near Jerusalem, Luke records that He sees the city and weeps over it. His appearance, the follower and the distant city panorama are artistic interpretations.",
+      "after": "Jesus looks toward Jerusalem and weeps. Luke records His sorrow for a city that has not recognized the things that belong to its peace.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mm-temple-tables",
+      "field": "caption",
+      "before": "John records Jesus driving out the sellers, pouring out the changers' money and overturning tables. This artistic depiction emphasizes His resolute action; it does not show Him striking a person.",
+      "after": "Jesus acts with resolve among the temple tables. John records His challenge to those who had made His Father's house a place of merchandise.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mc-withered-hand",
+      "field": "caption",
+      "before": "Jesus restores a man's hand on the Sabbath. This imagined moment of personal gratitude follows the healing described in Luke; the exact expressions and eye contact are artistic interpretation.",
+      "after": "The man meets Jesus after the restoration of his hand. This imagined moment of gratitude stays close to the personal care at the heart of Luke's Sabbath healing account.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mc-peters-mother-in-law",
+      "field": "caption",
+      "before": "In Simon’s home, Jesus takes Simon’s mother-in-law by the hand and lifts her up. Mark records that the fever leaves her and she begins to serve. Her age, appearance and the room’s details are artistic interpretation.",
+      "after": "Jesus takes Simon's mother-in-law by the hand and lifts her up. Mark records that her fever leaves and she begins to serve those in the home.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mc-garment-touch",
+      "field": "caption",
+      "before": "The woman reaches through the crowd and touches Jesus’s clothing. Mark describes Him turning to ask who touched Him. Her position, expression and the precise fold of cloth are interpreted; the picture does not yet show their later face-to-face conversation.",
+      "after": "The woman reaches through the crowd and touches Jesus's clothing. Mark then records Him turning to ask who touched Him, drawing a hidden act of faith toward a personal encounter.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mc-bethsaida-led",
+      "field": "caption",
+      "before": "At Bethsaida, Jesus takes the blind man by the hand and leads him out of the town before healing him. The guiding walk is the moment shown; the man’s appearance and the town’s exact setting are interpreted.",
+      "after": "Jesus takes the blind man's hand and leads him out of Bethsaida. Before the healing, Mark lets us see the Savior walking beside him.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "tp-scribe-dialogue",
+      "field": "caption",
+      "before": "Jesus and a scribe discuss love for God and neighbor. Their attentive exchange illustrates the conversation recorded in Mark, with the setting and poses imagined.",
+      "after": "Jesus gives the scribe His attention as they speak about loving God and neighbor. Mark records a sincere question, a thoughtful answer and the Savior's recognition of the man's understanding.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "tp-writing-ground",
+      "field": "caption",
+      "before": "Jesus pauses and writes on the ground as the woman stands before Him. The account does not tell us what He writes. As her accusers depart, His words join mercy with the invitation to leave sin behind. This picture interprets the setting and moment without supplying hidden words or naming the woman.",
+      "after": "Jesus bends to write on the ground while the woman stands before Him. We are not told what He writes. As the accusers leave, His words join mercy with a call to leave sin behind.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "rr-cloud-receives",
+      "field": "caption",
+      "before": "As the disciples watch, Jesus is taken up and a cloud receives Him. This picture interprets the moment of parting; His tender downward gaze, the arrangement of the gathering and the surrounding landscape are artistic choices.",
+      "after": "The disciples watch as Jesus is taken up and a cloud receives Him. Their upturned faces bring us into the parting Acts describes.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "bn-households-return",
+      "field": "caption",
+      "before": "After Jesus departs, the people return to their homes. This imagined household gives a personal scale to that movement while leaving its members unnamed.",
+      "after": "The people make their way home after Jesus departs. His invitation goes with them: ponder what they have heard, pray to the Father and prepare for His return.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "bn-twelve-groups",
+      "field": "caption",
+      "before": "The gathered people are organized into twelve groups before the disciples teach them. This illustration shows part of that gathering, with room made for people who are arriving.",
+      "after": "People find their places as the gathering forms twelve groups. The disciples prepare to teach those who have come to hear.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "bn-man-raised",
+      "field": "caption",
+      "before": "Third Nephi records that Jesus raised a man from the dead. The unnamed man's appearance, mat, posture and surroundings are artistic interpretations beyond the brief report.",
+      "after": "A man who had died stands alive before the Savior. Third Nephi records this miracle briefly, leaving us to consider the life restored to him.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "rt-spirit-messengers",
+      "field": "caption",
+      "before": "Doctrine and Covenants 138 describes Christ's ministry among the righteous spirits and the commissioning of messengers between His death and Resurrection. The unnamed listeners and setting are artistic interpretations of the vision.",
+      "after": "The Savior addresses the righteous spirits and sends messengers to carry the gospel onward. Doctrine and Covenants 138 places this ministry between His death and Resurrection.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "rt-accessible-home",
+      "field": "caption",
+      "before": "The resident explains a desired change at the home entrance, and the listeners attend before offering help. This imagined modern scene connects charity with respecting another person's needs and choices.",
+      "after": "At the entrance to the home, a resident explains what would help while the others listen. Useful care begins with attention to the person who will receive it.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mm-temple-compassion",
+      "field": "caption",
+      "before": "This imagined companion scene reflects on Christ's attention to people amid His cleansing of the temple. John records the temple action; this particular face-to-face exchange is an artistic reflection, not a separately recorded conversation.",
+      "after": "Amid the temple's upheaval, Jesus turns His attention to a person before Him. This imagined companion moment reflects on His compassion beside John's account of the cleansing; John does not record this particular conversation.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "mc-daughter-go-in-peace",
+      "field": "caption",
+      "before": "After the woman comes forward and tells what has happened, Jesus addresses her as daughter, recognizes her faith and sends her in peace. The healing leads to a personal exchange in which she is heard and reassured. Scripture describes her falling before Him; this companion picture imagines Him lowering Himself beside her so that their tender exchange can be seen at eye level. His kneeling posture and their exact expressions are artistic choices, while His words of reassurance belong to the account.",
+      "after": "Jesus gives the woman His attention after she tells what has happened. He calls her daughter, recognizes her faith and sends her in peace. Scripture describes her falling before Him; this companion picture imagines Him kneeling beside her, bringing His recorded reassurance to eye level.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "good-samaritan-01",
+      "field": "caption",
+      "before": "The wounded traveler lies alone beside the road after the attack in Jesus' parable. This imagined setting makes his need visible without adding a name or biography to the man Luke describes.",
+      "after": "The wounded traveler lies alone beside the road. Jesus begins His parable with a person's urgent need, before asking who will draw near to help.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "pearl-03",
+      "field": "caption",
+      "before": "The pearl is now the object of a purchase. Jesus says the merchant sold all he had to obtain the pearl of great price. The exchange illustrates his wholehearted response; the pouch cannot by itself reveal the full sacrifice described in the story.",
+      "after": "The merchant gives what he has to obtain the pearl. Jesus describes a discovery whose worth calls forth his wholehearted response.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "talents-01",
+      "field": "caption",
+      "before": "Before leaving, the master entrusts his property to three servants, giving different amounts according to their ability. The chests picture substantial monetary resources, not five, two, and one individual coins.",
+      "after": "Before leaving, the master entrusts his property to three servants, giving different amounts according to their ability. Each receives a substantial sum and a responsibility to care for it.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "talents-04",
+      "field": "caption",
+      "before": "The servant who received five talents reports what he has gained. His master commends his faithfulness. This scene focuses on their exchange rather than combining all three servants' accounts.",
+      "after": "The servant reports what he has gained with the five talents entrusted to him. His master welcomes the faithful response and invites him to enter into his joy.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "persistent-widow-03",
+      "field": "caption",
+      "before": "The judge decides to grant the widow justice because her continued appeals trouble him. His inward resolve is pictured here; the scene does not show a completed hearing or an award being paid.",
+      "after": "The judge at last resolves to grant the widow justice because she keeps coming. Jesus lets her persistence stand against his long refusal to act.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "doorkeeper-02",
+      "field": "caption",
+      "before": "The doorkeeper watches because the time of the master's return is unknown. The open doorway pictures readiness, without showing that the master has arrived.",
+      "after": "The doorkeeper remains attentive at the open entrance. He does not know when his master will return, but he is ready to receive him.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "unjust-steward-03",
+      "field": "caption",
+      "before": "Another debtor owes a hundred measures of wheat, and the steward tells him to write eighty. The second altered account continues the steward's scheme; its depiction does not make dishonesty an example to follow.",
+      "after": "The steward tells another debtor to reduce a hundred measures of wheat to eighty. The altered account continues his dishonest scheme as he prepares for the loss of his position.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/artworks.json",
+      "key": "unjust-steward-02",
+      "field": "caption",
+      "before": "The steward asks a debtor who owes a hundred measures of oil to take his bill and write fifty. The debtor's writing pictures the alteration the steward directs, without suggesting that the account has been honestly settled.",
+      "after": "The steward directs a debtor to change a hundred measures of oil to fifty. The writing follows the steward's scheme to secure welcome after he loses his position.",
+      "basis": "Lead with the visible human moment or source action; remove repeated production phrasing while retaining material source distinctions."
+    },
+    {
+      "source": "docs/jesus-journey/main-content.json",
+      "key": "/answers/jesus-christ-latter-day-saint-beliefs.html",
+      "section_id": "follow-him-today",
+      "field": "blocks[0]",
+      "before": "The following present-day illustrations offer small, practical ways to reflect on discipleship. They are invitations, not a measure of anyone's worth or a promise that a difficult situation will resolve quickly.",
+      "after": "A visit, a shared meal, an honest conversation, a moment of prayer: the imagined present-day scenes below bring discipleship into ordinary life. Let them help you consider one small way to follow Christ, with patience for the needs and pace of the people around you.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/before-bethlehem.html",
+      "section_id": "daily-bread",
+      "field": "blocks[2]",
+      "before": "In {1}, Jesus takes up the memory of manna while teaching about the bread from heaven. He directs the listeners to the Father’s gift and identifies Himself as the bread of life. The connection moves from food that sustains mortal life to the Savior who offers lasting spiritual life. Reading the two accounts together lets the Old Testament supply the question and setting for His teaching, rather than treating His words as an isolated slogan.",
+      "after": "In {1}, Jesus recalls the manna while teaching about bread from heaven. He points His listeners toward the Father's gift and names Himself the bread of life. The daily gathering in the wilderness helps us hear that invitation: mortal hunger brings people to seek food, and the Savior calls them to receive the lasting life He offers.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/before-bethlehem.html",
+      "section_id": "promised-redeemer",
+      "field": "blocks[3]",
+      "before": "The illustration follows Acts 8:27–35, where the prophetic passage becomes the starting point of an actual conversation about Jesus. The traveler is an Ethiopian official, and Philip responds to his question from the scripture he is reading.",
+      "after": "In Acts 8:27–35, the Ethiopian official asks for help with the passage he is reading. Philip meets him at that question and begins to teach him about Jesus. A shared reading becomes a personal invitation to know the Savior.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/mortal-ministry.html",
+      "section_id": "levi",
+      "field": "blocks[2]",
+      "before": "His welcome and His call to repentance belong together. Sharing a meal is not a declaration that nothing in a person’s life needs to change; it gives visible form to His willingness to draw near and invite change. The account also challenges readers to notice how easily social labels can obscure a person. Jesus addresses Levi with a future-facing invitation rather than reducing him to his occupation.",
+      "after": "Jesus's welcome and His call to repentance belong together. He draws near enough to share a meal and invites Levi into a changed life. The account asks us to look beyond the labels that can make a person easy to dismiss. Jesus sees Levi at his work and calls him toward what he can become as a disciple.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/mortal-ministry.html",
+      "section_id": "sent-to-serve",
+      "field": "blocks[0]",
+      "before": "In {0}, Jesus gives the Twelve authority and sends them to proclaim God’s kingdom and heal. Their instructions concern both the message and the manner of travel: they are to go with striking simplicity and receive hospitality. Their task begins with what Christ entrusts to them, rather than authority they create for themselves.",
+      "after": "In {0}, Jesus gives the Twelve authority and sends them to proclaim God's kingdom and heal. He asks them to travel simply and receive the hospitality offered along the way. Their service begins with His trust and with the message and authority He gives them.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/redeemer-and-risen-lord.html",
+      "section_id": "sacrament",
+      "field": "blocks[3]",
+      "before": "{1} preserves another difficult moment at the meal: Jesus speaks of betrayal and gives Judas a morsel. The disciples do not understand everything unfolding before them. The scene lets us see His deliberate love within an evening of both communion and impending loss.",
+      "after": "At the same meal, {1} records Jesus speaking of betrayal and giving Judas a morsel. The disciples do not understand why Judas leaves. The small gesture belongs to an evening in which the Savior shares the table with His friends while facing the suffering ahead.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/restoration-and-today.html",
+      "section_id": "charity",
+      "field": "blocks[1]",
+      "before": "A modern scene of discipleship can show people making time, keeping a promise, bringing practical help or listening without rushing another person’s grief. These ordinary actions give us ways to practice what we have learned from the Savior. We can offer them freely, without requiring recognition or a particular emotional response. Prayer for charity becomes connected to the person who will actually receive our attention today.",
+      "after": "Making time, keeping a promise, bringing useful help or listening patiently to someone who is grieving can give charity a place in an ordinary day. We offer that care freely, allowing others their own feelings and response. As we pray for the pure love of Christ, we can also notice the person who needs our attention now.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/mercy.html",
+      "section_id": "reading-guide",
+      "field": "blocks[2]",
+      "before": "Keep three things distinct: what the passage says, the explanation Jesus gives, and a personal application you draw from it. The modern pictures in this collection are imagined applications, not events recorded in scripture. They offer concrete ways to consider mercy without prescribing another person's timetable.",
+      "after": "Begin with the passage, then listen for the explanation Jesus gives before considering your own response. The modern pictures in this collection imagine mercy in ordinary life: searching carefully, listening honestly and giving someone time to take a next step.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/neighbor.html",
+      "section_id": "reading-guide",
+      "field": "blocks[2]",
+      "before": "The modern scenes below are illustrative applications. They do not identify actual people in need or claim that one small act solves every problem. Let them prompt practical questions about dignity, consent, continued care, and the help you can responsibly provide.",
+      "after": "The imagined modern encounters below bring the question of neighborly care close to home. Consider what useful help might look like for the person before you: ask, listen and think about what continuing care may require.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/hearing.html",
+      "section_id": "reading-guide",
+      "field": "blocks[2]",
+      "before": "A personal application is an invitation to consider your response, not an addition to scripture. The modern pictures use learning, conversation, and practical work to make that distinction visible. None promises that a faithful response will remove every difficulty or produce an immediate result.",
+      "after": "The modern pictures imagine people learning, listening and returning to practical work. They offer ways to consider your own response to Christ's words, while the meaning of each teaching remains grounded in its scripture passage. A faithful beginning may still call for patience through difficulty.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/kingdom.html",
+      "section_id": "reading-guide",
+      "field": "blocks[2]",
+      "before": "The modern pictures below are reflective applications or visual analogies. They do not identify a community project with God's kingdom or promise that a small effort will become large. They help make questions about patience, priority, invitation, and humble discernment concrete.",
+      "after": "In the modern pictures, people plant, make bread, welcome others and choose how to spend their time. These imagined applications help us ask about patience, priorities and humble judgment. The kingdom parables remain our starting point; their promises belong to God's work, beyond what any one project may achieve.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/stewardship.html",
+      "section_id": "reading-guide",
+      "field": "blocks[2]",
+      "before": "The present-day pictures below are imagined applications. They connect responsibility with concrete actions but offer no promise of financial return, ease, or status. When personal gifts are discussed beside the talents, remember that money is the story's original image and abilities are a later application.",
+      "after": "The imagined present-day scenes bring stewardship into plans, shared resources and ordinary responsibilities. In the talents parable, the entrusted gift is money; applying it to our skills is a further reflection. Faithfulness asks how we use what we receive, without promising wealth, ease or status.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/watchfulness.html",
+      "section_id": "reading-guide",
+      "field": "blocks[2]",
+      "before": "The modern scenes below are imagined applications. They do not promise a favorable ruling, a diagnosis, a recovery, or relief from every concern. They help us consider honest prayer, practical preparation, and faithful attention while the larger outcome remains uncertain.",
+      "after": "The imagined modern scenes picture honest prayer, quiet preparation and attention to work that still needs doing. They invite us to remain faithful while we wait, even when a decision, recovery or other hoped-for outcome remains beyond our control.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/neighbor.html",
+      "section_id": "welcome-with-dignity",
+      "field": "blocks[2]",
+      "before": "A welcome may need more than friendly words. Accessible communication, a usable route, or a way to participate can make an invitation real. The pictured scenes ask how attention to another person's experience can shape a space. They do not cast someone as a passive object of another person's goodness.",
+      "after": "A welcome becomes tangible when people can communicate, move through a space and take part. The pictured encounters ask us to listen to the person being welcomed and make useful changes together, respecting their choices and experience.",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/hearing.html",
+      "section_id": "receiving-carefully",
+      "field": "blocks[2]",
+      "before": "Attention can be practiced in ordinary encounters. Asking a sincere question or setting aside a distraction can help us hear what is actually being said. Those habits are applications, not a claim that a community lesson or family conversation carries the same authority as Christ's words. {1}",
+      "after": "We can practice attention in an ordinary conversation: ask sincerely, set aside a distraction and hear the answer. Such habits may help us become more willing listeners. As we return to scripture, Christ's words remain the teaching we are seeking to receive. {1}",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    },
+    {
+      "source": "docs/jesus-journey/pages.json",
+      "key": "/jesus-christ/parables/watchfulness.html",
+      "section_id": "faithfulness-in-the-interval",
+      "field": "blocks[2]",
+      "before": "A careful shift handoff or a promise kept through a quiet final hour can illustrate that faithfulness. These scenes are not claims about the spiritual state of particular professions. They invite each reader to ask what present responsibility remains worth doing even while a larger event is awaited. {1}",
+      "after": "At the end of a shift or through a quiet hour, someone may still depend on a careful handoff or a promise kept. These imagined scenes ask us to notice the work entrusted to us now, even as we wait for something larger. {1}",
+      "basis": "Replace editorial framing and repetitive caution wording with grounded human language; retain the important distinction between source and application."
+    }
+  ],
+  "independent_corrections": [
+    {
+      "key": "modern-scripture",
+      "field": "caption",
+      "before": "A father listens as his daughter speaks beside the open scriptures. Reading together can include an honest question and the patience to hear one another.",
+      "after": "An adult listens as a teenage girl speaks beside the open scriptures. Reading together can include an honest question and the patience to hear one another."
+    },
+    {
+      "key": "modern-scripture",
+      "field": "alt",
+      "before": "A father listens as his teenage daughter speaks beside an open Bible at their kitchen table.",
+      "after": "An adult listens as a teenage girl speaks beside an open Bible at the kitchen table."
+    },
+    {
+      "key": "bb-manna-gathering",
+      "field": "caption",
+      "before": "People bend to gather the food the Lord has provided. In the wilderness, each morning brings another invitation to trust Him for their daily bread.",
+      "after": "People bend to gather the food the Lord has provided. Day by day, the wilderness teaches them to trust Him for their bread."
+    }
+  ]
+}

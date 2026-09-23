@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "scope": "Independent recovery verification after interrupted reviewer stream. All4 actual originals viewed at original detail; acceptance is based on this inspection and exacthash checks, not the existence of the saved file.",
+  "review69Sha256": "dac9d634db3bfb822d312479674c9fbed0572b16230ce0904d324a9ee23fa86a",
+  "entries": [
+    {
+      "key": "parent-gifts-01",
+      "sha256": "04c8efd6789dc183a261180d7db5e3bdf4468dfc15185ec425b03d1e05d8c4e4",
+      "status": "pass_with_caption_conditions",
+      "generatedRecordPathMatches": true,
+      "originalShaMatchesReview69": true,
+      "actualPixelsIndependentlyInspected": true,
+      "metadataDecision": "Existing review69 title/alt/caption/refs are accurate; retain unchanged.",
+      "findings": "Actual original shows credible child palm, father's hands, distinct faces and mutual gaze. Bread remains on table. Caption and alt accurately avoid completed transfer."
+    },
+    {
+      "key": "parent-gifts-02",
+      "sha256": "918375d0f79be333543fece90da01be40c08034f0e9184f48e4ff2af317466c6",
+      "status": "pass_with_caption_conditions",
+      "generatedRecordPathMatches": true,
+      "originalShaMatchesReview69": true,
+      "actualPixelsIndependentlyInspected": true,
+      "metadataDecision": "Existing review69 title/alt/caption/refs are accurate; retain unchanged.",
+      "findings": "Actual original preserves father/child faces and clothing; hands support opposite plate edges, fish lies naturally on plate, mutual gaze warm. No divine identity implied."
+    },
+    {
+      "key": "settle-adversary-01",
+      "sha256": "6f3a16b9c0fcab82525e254c50aa6920bb08c6fcf769775a3c856c5038676c58",
+      "status": "pass_with_caption_conditions",
+      "generatedRecordPathMatches": true,
+      "originalShaMatchesReview69": true,
+      "actualPixelsIndependentlyInspected": true,
+      "metadataDecision": "Existing review69 title/alt/caption/refs are accurate; retain unchanged.",
+      "findings": "Actual original shows distinct older balding/younger bearded men, credible hands and walking anatomy, reciprocal serious attention. No settlement/handshake or coercion shown."
+    },
+    {
+      "key": "settle-adversary-02",
+      "sha256": "ac165cd45e1af63db892f2b6f494fbb3aefd5e5ee06d02dbc3d1a2690763b61e",
+      "status": "pass_with_caption_conditions",
+      "generatedRecordPathMatches": true,
+      "originalShaMatchesReview69": true,
+      "actualPixelsIndependentlyInspected": true,
+      "metadataDecision": "Existing review69 title/alt/caption/refs are accurate; retain unchanged.",
+      "findings": "Actual original preserves same two men approaching official/guards. Hands and walking soles credible. No hearing outcome or legal resolution shown; background staging correctly qualified."
+    }
+  ],
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "review69PreservedUnchanged": true,
+  "noImport": true,
+  "ownerApprovalClaimed": false
+}

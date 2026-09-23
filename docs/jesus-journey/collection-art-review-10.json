@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent source and actual-pixel reviewer",
+  "scope": "Four stewardship originals viewed at original full detail.",
+  "summary": {
+    "passWithCaptionConditions": 4,
+    "revise": 0
+  },
+  "globalConditions": [
+    "Fictional modern applications; no visible Christ.",
+    "Captions do not certify professional skill, repair completion, dimensions, compliance or outcomes.",
+    "Technical pass is not owner approval or final browser acceptance."
+  ],
+  "entries": [
+    {
+      "key": "collection-stewardship-01",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-66f51589-cb76-4b72-aa7b-0b72191e24e5.png",
+      "sha256": "9766f72a619187bfae60306b2b0b6c0804edab5ded397b2e77af5ab29bdbd507",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Planning the work",
+      "alt": "Three adults review a drawing beside lumber while one holds an extended tape measure along a board.",
+      "caption": "The group brings a plan and the available materials into the same conversation. This imagined application connects with Jesus' example of considering what a building project will require before beginning. Responsible commitment includes preparation for the people who will depend on the work.",
+      "refs": [
+        [
+          "nt/luke/14",
+          "Luke 14:28-30",
+          "28-30"
+        ]
+      ],
+      "findings": "Tape is visibly continuous from case along board, with plausible hand contact; far end lies on board rather than clearly hooked at its end. Pointing finger and other hands coherent. Drawing resembles access construction but dimensions cannot be checked.",
+      "conditions": [
+        "Do not claim a verified board length, ramp slope, accessibility compliance or approved construction design."
+      ]
+    },
+    {
+      "key": "collection-stewardship-02",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-242c3f11-e474-402c-96a0-c699f56be14a.png",
+      "sha256": "c61a0ebe79e2a0427899573e3f7d5f1ab03f947d0fdf4b9dfcde7b00cc6ef42a",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Checking entrusted records",
+      "alt": "Two adults compare paper receipts with an open ledger at a desk.",
+      "caption": "Receipts and a record are being reviewed together. As an imagined application of faithfulness in small things, the scene invites accuracy and openness with what has been entrusted to us. The picture does not establish a particular error, amount or financial outcome.",
+      "refs": [
+        [
+          "nt/luke/16",
+          "Luke 16:10-12",
+          "10-12"
+        ]
+      ],
+      "findings": "Receipt holding, pencil contact and resting hands credible; paper is not legibly identifiable private data. Natural faces and desk materials.",
+      "conditions": [
+        "Do not invent amounts, an audit result, wrongdoing, or professional accounting credentials."
+      ]
+    },
+    {
+      "key": "collection-stewardship-03",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a6ef5a32-5056-4e47-9054-b991c53bedb4.png",
+      "sha256": "8d0214e0a0a8e594d0556983ef6952f1ec758674d1db9b5e32268caf030e9bff",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Sharing a useful skill",
+      "alt": "A woman points toward a bicycle's front brake while a man holds a hex key nearby and steadies the wheel.",
+      "caption": "The two people give a bicycle mechanism their attention. This imagined workshop exchange asks how a useful skill might be shared with someone learning. Alongside the talents parable, the connection concerns making responsible use of what we receive, not a claim that the pictured repair is complete.",
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:14-23",
+          "14-23"
+        ]
+      ],
+      "findings": "Fork, wheel, brake arms and support stand form a generally coherent bicycle assembly. Hand and finger anatomy plausible. Hex key is near the brake/tire but its tip is not clearly seated in a fastener; it reads as positioning or discussion, not visible tightening. No claim of an impossible tool-through-metal connection is needed because contact is not shown.",
+      "conditions": [
+        "Caption must say holding/positioning key near brake, not adjusting or tightening a specific bolt.",
+        "Do not use as a technical repair instruction or claim brake safety, professional competence or finished service.",
+        "If the intended slot requires an active adjustment, revise with a clearly visible seated key rather than describing this as completed contact."
+      ]
+    },
+    {
+      "key": "collection-stewardship-04",
+      "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-63b92efc-d6cb-4126-aae6-f1ad7f96dde6.png",
+      "sha256": "91f6f729eb413e5258ab5f09d86eac688d5faffadac2fdbb5b2f90c829df587d",
+      "status": "pass_with_caption_conditions",
+      "pass": true,
+      "recommendedTitle": "Caring for a shared resource",
+      "alt": "A woman uses a smooth hand tool on repair cloth at a book's spine while holding its cover steady.",
+      "caption": "A worn book receives careful attention with simple materials. This imagined scene offers a reflection on caring for what is placed in our hands. The talents parable can invite faithful use of an ordinary responsibility without requiring it to look impressive to others.",
+      "refs": [
+        [
+          "nt/matt/25",
+          "Matthew 25:14-23",
+          "14-23"
+        ]
+      ],
+      "findings": "Tool edge contacts cloth at spine, supported book lies on padded surface; both hands coherent. Repair cloth, paste-like material and tools physically plausible. No unsupported exact adhesive or archival technique claim.",
+      "conditions": [
+        "Do not identify a title, ownership, historical value or prescribed conservation method.",
+        "Avoid claiming restoration is complete or archival quality certified."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "rr-broiled-fish": {
+    "title": "He eats before them",
+    "alt": "The risen Jesus turns toward a disciple while holding a piece of fish, with another disciple watching beside him.",
+    "caption": "The risen Jesus eats before His disciples in Luke's account. This imagined indoor scene gives their astonished joy a personal focus, distinct from the shore breakfast in John 21.",
+    "refs": [
+      [
+        "nt/luke/24",
+        "Luke 24:36–43",
+        "36-43"
+      ]
+    ],
+    "owner": "jesus-christ/redeemer-and-risen-lord.html",
+    "section": "risen-witness",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp",
+    "original": "rr-broiled-fish--199ddf7a530d.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-8cab1a78-7813-4eee-9aee-6bd4640d9bc9.png",
+    "original_sha256": "199ddf7a530db01622286ea10c5edde48c7a2e5a2581adf0ccce932ab32321e5",
+    "prompt": "Precisely edit image1 to correct Jesus' eye contact. Jesus on LEFT must turn his head toward the CENTRAL curly-haired bearded disciple and lower his gaze directly into that central disciple's eyes. The central disciple already looks up into Jesus' face; create unmistakable reciprocal eye-to-eye connection between these two. Jesus must NOT look above, past, toward camera, or toward off-screen people. Turn his face farther to image-right, toward the central man, and angle his chin and pupils down naturally enough that sight lines meet. Preserve Jesus' exact recognizable facial identity from image2, natural warm joyful smile and lifelike eyes. Preserve ALL hands, healed palm and wrist marks, food, clothing, other disciples, body poses, table, framing and photographic lighting exactly. Only change Jesus' head orientation and eyes as needed for true personal eye contact. This is a photograph-quality living interaction, not a painting. No cross-eyed or misaligned pupils.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-b8a81b89-c960-4f5c-93e1-eb57e3fbe860.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "eye-contact-revision-review-1.json",
+    "width": 1536,
+    "height": 1024,
+    "supersedes_sha256": "d8ce575e89d0f0494d099d56f388b2c00edb069e1b1d24877a30b3fd6b9d618e"
+  },
+  "mc-centurion-friends": {
+    "title": "A message of trust",
+    "alt": "Jesus listens to two men on a village street, meeting the central messenger's gaze as the man gestures.",
+    "caption": "Friends bring the centurion's message to Jesus. Luke places the conversation with these messengers, while the centurion expresses trust in the authority of Jesus' word.",
+    "refs": [
+      [
+        "nt/luke/7",
+        "Luke 7:6–10",
+        "6-10"
+      ]
+    ],
+    "owner": "jesus-christ/miracles-and-compassion.html",
+    "section": "centurion",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/mc-centurion-friends--753ff85a36c0-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/mc-centurion-friends--753ff85a36c0-thumb.webp",
+    "original": "mc-centurion-friends--753ff85a36c0.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-12cd40be-5d02-40ed-a676-04a5dfa89b26.png",
+    "original_sha256": "753ff85a36c03c199d2100b9e6c11e90e6fa6dde0da29e859e4be08707a1a5be",
+    "prompt": "Precisely edit image1 only for gaze correction. Jesus at LEFT must look directly into the CENTRAL speaking messenger's eyes. Lower Jesus' chin and pupils enough to meet the lower eye line of that shorter central man. Unmistakable reciprocal eye contact. Do not look at rightmost man or above central man. Preserve exact recognizable Christ face from image2, natural facial texture, eye alignment, photographic lighting and appropriate gentle expression. Preserve all other identities, hands, arms, body poses, garments, setting and composition exactly. Pre-Resurrection no wound marks. Only head orientation and eyes should change as necessary. No painting or plastic skin.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-bd213b8d-4e9d-44bc-96cf-469480bf7cb7.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "eye-contact-revision-review-2.json",
+    "width": 1536,
+    "height": 1024,
+    "supersedes_sha256": "fe89dc98db7c31824d0f1051ee5d971f6c85027e7f06438cc540adfc8a2a34a7"
+  },
+  "tp-scribe-dialogue": {
+    "title": "A thoughtful answer",
+    "alt": "Jesus and a seated scribe face one another in conversation as the scribe gestures with an open hand.",
+    "caption": "Jesus and a scribe discuss love for God and neighbor. Their attentive exchange illustrates the conversation recorded in Mark, with the setting and poses imagined.",
+    "refs": [
+      [
+        "nt/mark/12",
+        "Mark 12:28–34",
+        "28-34"
+      ]
+    ],
+    "owner": "jesus-christ/teachings-and-parables.html",
+    "section": "great-commandments",
+    "role": "body",
+    "depicts_christ": true,
+    "reviewed": true,
+    "owner_approved": false,
+    "status": "planned; generation and visual review required",
+    "asset": "assets/page-art/jesus-journey/tp-scribe-dialogue--244bb2b13293-full.webp",
+    "thumbnail": "assets/page-art/jesus-journey/tp-scribe-dialogue--244bb2b13293-thumb.webp",
+    "original": "tp-scribe-dialogue--244bb2b13293.png",
+    "generated_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-0cb1ac34-1c5a-4fe8-bc35-caf7b0bbbbb3.png",
+    "original_sha256": "244bb2b13293b6949b6319f4a408f0b95934855c353e4b242d6be924d7bf782c",
+    "prompt": "Precisely edit image1 only for gaze correction. Jesus at RIGHT must look directly into the seated scribe's eyes at LEFT. Lower Jesus' gaze and adjust head angle so their sightlines meet. Do not gaze up-left above the scribe. Unmistakable reciprocal eye contact with compassionate thoughtful attentive expression. Preserve exact recognizable Christ face from image2, natural facial texture, eye alignment, photographic lighting and appropriate gentle expression. Preserve all other identities, hands, arms, body poses, garments, setting and composition exactly. Pre-Resurrection no wound marks. Only head orientation and eyes should change as necessary. No painting or plastic skin.",
+    "referenced_image_paths": [
+      "C:\\Users\\wyatt\\.codex\\generated_images\\01a0cbb6-1ea1-7021-9571-e99065c12b4f\\exec-a1dfc1cd-fa87-436e-b00c-379982829d53.png",
+      "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+    ],
+    "review_record": "eye-contact-revision-review-2.json",
+    "width": 1536,
+    "height": 1024,
+    "supersedes_sha256": "89f83d2ff34c6ef0749c0e9af617162fc497df1359f833eb12f56d2e0ff1aca5"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "Independent original-pixel, actual-reference and source reviewer",
+  "scope": "Direct independent review of rr-linen-burial",
+  "summary": {
+    "passWithCaptionConditions": 1,
+    "revise": 0
+  },
+  "entries": [
+    {
+      "key": "rr-linen-burial",
+      "generationKey": "rr-linen-burial",
+      "generated_path": "C:/Users/wyatt/Documents/Codex/2026-09-22/jesus-journey/work/focus-jesus/../recovery-originals/rr-linen-burial-20260923.png",
+      "sha256": "3a633728320a7decc41ca558d69f327bfb0d48e7d62b3be4a1166121c017c344",
+      "status": "pass_with_caption_conditions",
+      "recommendedTitle": "Laid in a garden tomb",
+      "alt": "Joseph of Arimathea and Nicodemus draw linen over Jesus's body inside a stone tomb.",
+      "caption": "Joseph and Nicodemus draw the linen gently over Jesus's body. Their careful hands offer a final service of love as they prepare Him for burial in the nearby garden tomb.",
+      "refs": [
+        [
+          "nt/john/19",
+          "John 19:38–42",
+          "38-42"
+        ]
+      ],
+      "findings": "Canonical Christ face compared: recognizable nose, brow, beard and hair with closed eyes and solemn stillness, no living smile. Left Nicodemus retains mapped rear-three-quarter gray beard, ear/nose profile and wrapped head covering from actual reference. Joseph is distinct mature adult interpretation, neither Joseph Smith nor Nativity Joseph. Both men's hands grip cloth naturally, body modestly covered, spice container nearby. Photographic stone, linen and side light; no resurrection glow or modern coffin. Closed eyes appropriately preclude mutual gaze.",
+      "conditions": [
+        "The deceased Christ is before Resurrection; do not add healed post-Resurrection marks. Hands/body are covered naturally. Exact tomb bench, Joseph's face, ages and staging are interpretation; careful service and burial are source grounded.",
+        "Technical pixel/source acceptance is not owner approval or browser verification."
+      ],
+      "actual_reference_pixels_inspected": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/ask-nicodemus-1122.webp"
+      ],
+      "source_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/19?lang=eng"
+      ]
+    }
+  ]
+}
