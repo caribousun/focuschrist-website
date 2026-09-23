@@ -1,5 +1,5 @@
 import { fingerprintReviewedParagraphs, verifyReviewedReading, REVIEWED_SOURCE_EXTRACTION_VERSION } from './reviewed-readings.js';
-import { SELF_HELP_SUPPORT_POLICY } from './self-help-support.js';
+import { SELF_HELP_SUPPORT_POLICY, reviewedSupportKey, REVIEWED_SUPPORT_SOURCES } from './self-help-support.js';
 import { needsMissingSubjectClarification } from './missing-subject.js';
 import { qualifyingBodyPositions } from './source-caveat.js';
 import { paragraphRetrievalTerms } from './paragraph-intent.js';
@@ -656,7 +656,8 @@ function isAllowedResearchFetchUrl(rawUrl) {
     if (![...url.searchParams.keys()].every(key => ['lang','id','name'].includes(key))) return false;
     if (url.searchParams.has('lang') && url.searchParams.get('lang') !== 'eng') return false;
     if (/\/(?:search|internal-use-only|login|account|api)(?:\/|$)/i.test(url.pathname)) return false;
-    if (['www.churchofjesuschrist.org','churchofjesuschrist.org'].includes(url.hostname)) return /^\/study\//.test(url.pathname);
+    if (['www.churchofjesuschrist.org','churchofjesuschrist.org'].includes(url.hostname)) return /^\/study\//.test(url.pathname)
+      || url.href === 'https://www.churchofjesuschrist.org/life/family-services/finding-the-right-mental-health-resource?lang=eng';
     if (url.hostname === 'history.churchofjesuschrist.org') return /^\/(?:content|exhibit|landing|chd)\//.test(url.pathname);
     if (url.hostname === 'churchhistorylibrary.churchofjesuschrist.org') return /^\/db\//.test(url.pathname);
     if (APPROVED_LDS_STUDY_HOSTS.has(url.hostname)) return url.pathname !== '/' && !/\/(?:login|search|account|user|api|wp-admin)(?:\/|$)/i.test(url.pathname);
@@ -2188,12 +2189,14 @@ export default {
       }
 
       const reviewedGodKey = reviewedGodComparisonKey(sanitized.scope);
-      const relatedSources = !evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly)
+      const supportReadingKey = reviewedSupportKey(sanitized.scope);
+      const supportSources = supportReadingKey === 'support-unwanted-thoughts-start' ? REVIEWED_SUPPORT_SOURCES.slice(1) : REVIEWED_SUPPORT_SOURCES;
+      const relatedSources = supportReadingKey ? supportSources : !evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly)
         && !sanitized.scope.selectedPioneer && !sanitized.scope.pioneerTopicKey
         ? relatedConversationSources(sanitized.scope) : [];
       if (relatedSources.length) {
         const counters = { attempts: 0, cacheHits: 0, cacheMisses: 0 };
-        evidence = (await Promise.all(relatedSources.map(source => fetchOfficialSource(reviewedGodKey ? {...source,reviewedSourceRequired:true} : source,
+        evidence = (await Promise.all(relatedSources.map(source => fetchOfficialSource(supportReadingKey ? {...source,researched:true,reviewedSourceRequired:true} : reviewedGodKey ? {...source,reviewedSourceRequired:true} : source,
           `${sanitized.scope.retrievalQuestion} ${source.title}`, deadline, counters)))).filter(Boolean);
         if (evidence.length !== relatedSources.length) evidence = [];
         allEvidence = evidence;
@@ -2207,7 +2210,7 @@ export default {
         retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + Number(counters.transportFailures || 0);
       }
 
-      if (!evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer && !reviewedGodKey) {
+      if (!evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer && !reviewedGodKey && !supportReadingKey) {
         const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline, sanitized.scope.pioneerTopicKey);
         retrievalDiagnostic.focuschrist_index_candidates = indexed.candidates.length;
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
@@ -2227,10 +2230,10 @@ export default {
         }
       }
 
-      const reviewedReadingKey = sanitized.scope.pioneerTopicKey || reviewedGodKey;
+      const reviewedReadingKey = sanitized.scope.pioneerTopicKey || reviewedGodKey || supportReadingKey;
       let reviewedReading = null;
       if (reviewedReadingKey) {
-        const expectedUrls = sanitized.scope.pioneerTopicKey
+        const expectedUrls = supportReadingKey ? supportSources.map(source => source.url) : sanitized.scope.pioneerTopicKey
           ? [PIONEER_TOPIC_SOURCES[sanitized.scope.pioneerTopicKey].url]
           : ['https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ?lang=eng',
             'https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng'];
@@ -2239,10 +2242,12 @@ export default {
           const limited = fallbackPayload('reviewed-source-review-required', {
             ...retrievalDiagnostic, focuschrist_reviewed_reading_status:'source-or-review-unavailable',
           }, sanitized.scope);
-          limited.choices[0].message.content = 'I can’t verify this study reading right now. You can still open the approved study sources below.';
+          limited.choices[0].message.content = supportReadingKey
+            ? 'I can’t verify the support guidance right now. You can still open the official help resources below.'
+            : 'I can’t verify this study reading right now. You can still open the approved study sources below.';
           limited.focuschrist_sources = expectedUrls.map(url => ({
             text: evidence.find(source => source.url === url)?.title
-              || (sanitized.scope.pioneerTopicKey ? PIONEER_TOPIC_SOURCES[sanitized.scope.pioneerTopicKey].subject
+              || (supportReadingKey ? supportSources.find(source => source.url === url)?.title : sanitized.scope.pioneerTopicKey ? PIONEER_TOPIC_SOURCES[sanitized.scope.pioneerTopicKey].subject
                 : url.includes('/jesus-christ?') ? 'Jesus Christ' : 'Godhead'),
             url,
           }));
@@ -2363,6 +2368,7 @@ export default {
             focuschrist_verifier_conservative_unmetered_neurons: 0,
             focuschrist_reviewed_deterministic_recovery: reviewedDeterministic.recoveryId,
             ...(reviewedReading ? {focuschrist_review_revision:reviewedReading.reviewRevision,focuschrist_reviewed_reading_status:'verified-current-source'} : {}),
+            ...(supportReadingKey ? {focuschrist_non_explicit_support:true,focuschrist_support_reading:supportReadingKey} : {}),
             ...retrievalDiagnostic,
           }, 200, origin, deadline, localScriptures);
         }

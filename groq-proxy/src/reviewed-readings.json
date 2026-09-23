@@ -413,6 +413,35 @@
           "extractionVersion": "visible-paragraph-scope-v1"
         }
       ]
+    },
+    "support-pornography-start": {
+      "answer": "You can begin with one manageable step, and you do not have to work through this alone. I cannot diagnose addiction from a question. The Church's practical guidance suggests noticing what happens before pornography use and choosing a different response. Write down one situation or feeling that tends to precede it. Then plan an alternative, such as contacting someone you trust, taking a walk, or writing in a journal.\n\nConsider talking with a trusted friend, family member, or counselor about the help you want. If the difficulty is causing ongoing distress or interfering with relationships or daily responsibilities, a qualified counselor can help you explore care options. The Church's Family Services guide explains how a bishop or branch president can provide a referral and also describes community resources. You can seek spiritual support alongside that care; neither a study site nor a short answer can replace individual assessment. For today, choose one person to contact and one small change to your routine.",
+      "answerSha256": "c262e128d28bef4f256d9e35653880d61f8d48a72a33507dd038c79b22fbe2d4",
+      "reviewRevision": "2026-09-23-support-practical-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/help-for-me/why-does-this-happen?lang=eng",
+          "sourceSha256": "7fe47baf83a3ebd0a40b4d4abe07b4c8cff5b22fbe34ee001cc9e5fefd89e6af",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/life/family-services/finding-the-right-mental-health-resource?lang=eng",
+          "sourceSha256": "33ba504260b34c9b868b4e088c34f398d110302dd201557b60bcf1443ad06f6a",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
+    },
+    "support-unwanted-thoughts-start": {
+      "answer": "You deserve a thoughtful response to this concern. A short question does not tell me what these feelings mean for you, and I will not assume a diagnosis or that you have acted on them. One useful place to begin is deciding what help you want: understanding the distress, making daily life more manageable, or finding someone qualified to talk with.\n\nThe Church's Family Services guidance recommends considering professional counseling when difficulties cause continuing distress or interfere with relationships or daily tasks. A counselor can discuss your concerns and care options with you. If you want Church-connected help, a bishop or branch president can refer you to Family Services, which can discuss counseling, self-help materials, or community resources. Prayer and spiritual companionship can be part of your support without replacing professional care. A manageable next step is to contact a qualified counselor or ask for that referral; you do not need to share intimate details here.",
+      "answerSha256": "4961fe66ac889abcbe762fc4e5da61267ee718f15c021e1992adc4a55a909387",
+      "reviewRevision": "2026-09-23-support-practical-source-review-v1",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/life/family-services/finding-the-right-mental-health-resource?lang=eng",
+          "sourceSha256": "33ba504260b34c9b868b4e088c34f398d110302dd201557b60bcf1443ad06f6a",
+          "extractionVersion": "visible-paragraph-scope-v1"
+        }
+      ]
     }
   }
 }
