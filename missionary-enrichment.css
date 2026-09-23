@@ -1,0 +1,24 @@
+/* Mission studies share the established page rails and preserve complete pictures. */
+.fc-mission-directory { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; margin-block: 0 24px; }
+.fc-mission-directory .fc-button { min-width: 0; white-space: normal; text-align: center; }
+.fc-mission-directory-label { margin: 0 0 12px; color: var(--fc-gold); }
+.fc-mission-study > .fc-container--standard > p { max-width: none; }
+.fc-mission-study-art { margin: 24px 0; overflow: hidden; border: 1px solid var(--fc-line-warm); border-radius: 20px; background: #10232d; }
+.fc-mission-study-art > a { display: block; }
+.fc-mission-study-art img { display: block; width: 100%; height: auto; }
+.fc-mission-study-art figcaption { padding: 18px 24px; color: var(--fc-cream); }
+.fc-mission-reflection { margin-block: 24px 0; padding: 22px 24px; border-left: 3px solid var(--fc-gold); background: rgba(255,242,220,.04); }
+.fc-mission-reflection h3 { margin: 0 0 10px; color: var(--fc-cream); font-family: Georgia,serif; font-weight: 400; }
+.fc-mission-reflection p { margin: 0; }
+.fc-mission-history-reading { margin-block: 28px; }
+.fc-mission-history-reading p { max-width: none; }
+.fc-mission-contextual-ask { margin-block: 24px 0; }
+@media(max-width:700px) {
+  .fc-mission-directory { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .fc-mission-study-art figcaption, .fc-mission-reflection { padding: 16px; }
+}
+@media(max-width:420px) { .fc-mission-directory { grid-template-columns: minmax(0,1fr); } }
+
+/* Reserve both existing panoramas and keep the whole worldwide scene visible. */
+.fc-missionary-page .fc-missionary-visual--purpose img { aspect-ratio: 2173 / 724; }
+.fc-missionary-page .fc-missionary-visual--world img { min-height: 0; aspect-ratio: 3 / 1; object-fit: contain; }

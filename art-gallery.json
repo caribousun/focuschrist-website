@@ -2811,6 +2811,28 @@
       ]
     },
     {
+      "title": "Begin with peace",
+      "category": "Missionary Work",
+      "thumbnail": "/assets/missionary/enrichment-20260923/peace-to-this-house-960.webp",
+      "fullImage": "/assets/missionary/enrichment-20260923/peace-to-this-house-full.webp",
+      "alt": "A host welcomes two traveling disciples to a simple meal in a modest home.",
+      "id": "art-43ae03d58672",
+      "occurrences": [
+        {
+          "id": "source-b05f4575e30a",
+          "page": "/missionary.html",
+          "pageTitle": "Invite Others to Come Unto Christ",
+          "category": "Missionary Work",
+          "kind": "missionary",
+          "selector": "a[data-missionary-detail=\"peace-to-this-house\"]",
+          "title": "Begin with peace"
+        }
+      ],
+      "categories": [
+        "Missionary Work"
+      ]
+    },
+    {
       "title": "Begin With the Person",
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/sister-missionaries-teaching-1400.webp",
@@ -3424,6 +3446,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Bring your joy back to Him",
+      "category": "Missionary Work",
+      "thumbnail": "/assets/missionary/enrichment-20260923/seventy-return-960.webp",
+      "fullImage": "/assets/missionary/enrichment-20260923/seventy-return-full.webp",
+      "alt": "Returning disciples speak with Jesus as He listens to their joyful report.",
+      "id": "art-32eb5023e146",
+      "occurrences": [
+        {
+          "id": "source-fad25db55098",
+          "page": "/missionary.html",
+          "pageTitle": "Invite Others to Come Unto Christ",
+          "category": "Missionary Work",
+          "kind": "missionary",
+          "selector": "a[data-missionary-detail=\"seventy-return\"]",
+          "title": "Bring your joy back to Him"
+        }
+      ],
+      "categories": [
+        "Missionary Work"
       ]
     },
     {
@@ -6460,6 +6504,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He goes with them",
+      "category": "Missionary Work",
+      "thumbnail": "/assets/missionary/enrichment-20260923/beside-his-missionaries-960.webp",
+      "fullImage": "/assets/missionary/enrichment-20260923/beside-his-missionaries-full.webp",
+      "alt": "An imagined scene of Jesus standing with two sister missionaries on a neighborhood sidewalk, looking toward one as they talk.",
+      "id": "art-091ccf2f3285",
+      "occurrences": [
+        {
+          "id": "source-be19d9a1deb1",
+          "page": "/missionary.html",
+          "pageTitle": "Invite Others to Come Unto Christ",
+          "category": "Missionary Work",
+          "kind": "missionary",
+          "selector": "a[data-missionary-detail=\"beside-his-missionaries\"]",
+          "title": "He goes with them"
+        }
+      ],
+      "categories": [
+        "Missionary Work"
       ]
     },
     {
@@ -15886,6 +15952,28 @@
       ]
     },
     {
+      "title": "They asked Him to stay",
+      "category": "Missionary Work",
+      "thumbnail": "/assets/missionary/enrichment-20260923/samaritans-stay-960.webp",
+      "fullImage": "/assets/missionary/enrichment-20260923/samaritans-stay-full.webp",
+      "alt": "Samaritan townspeople meet Jesus and ask Him to stay with them.",
+      "id": "art-fd81ffc04e39",
+      "occurrences": [
+        {
+          "id": "source-164831d17b48",
+          "page": "/missionary.html",
+          "pageTitle": "Invite Others to Come Unto Christ",
+          "category": "Missionary Work",
+          "kind": "missionary",
+          "selector": "a[data-missionary-detail=\"samaritans-stay\"]",
+          "title": "They asked Him to stay"
+        }
+      ],
+      "categories": [
+        "Missionary Work"
+      ]
+    },
+    {
       "title": "They bring those who need healing",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/36-bring-afflicted-960.webp",
@@ -16966,14 +17054,14 @@
     }
   ],
   "stats": {
-    "artworks": 761,
-    "occurrences": 772,
+    "artworks": 765,
+    "occurrences": 776,
     "byKind": {
       "artwork": 62,
       "full": 1,
       "hero": 38,
       "legacy": 39,
-      "missionary": 9,
+      "missionary": 13,
       "topic": 626
     }
   }

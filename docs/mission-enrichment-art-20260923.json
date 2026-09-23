@@ -1,0 +1,155 @@
+{
+  "date": "2026-09-23",
+  "baseline": "4b4b15069feb83c6ae9ea659bde2e3b94278f26a",
+  "original_count_before": 7,
+  "christ_count_before": 3,
+  "original_count_after": 11,
+  "christ_count_after": 6,
+  "existing_artwork": "All seven originals and approved hero preserved",
+  "entries": [
+    {
+      "key": "seventy-return",
+      "owning_page": "missionary.html",
+      "christ_depicted": true,
+      "source_original": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\seventy-return\\revised.png",
+      "source_sha256": "02d25f06373dd23311e9b1a8968d55e3431f25713e70f2a0010b9876e898a759",
+      "passage": "Luke 10:17\u201320",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p17-p20#p17",
+      "images": [
+        {
+          "path": "assets/missionary/enrichment-20260923/seventy-return-full.webp",
+          "sha256": "61ba66adcca97be4b0f83617635f855b7890bef0a3d1a652eb60d51a17829d6f",
+          "size": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "assets/missionary/enrichment-20260923/seventy-return-960.webp",
+          "sha256": "27d23198ff22181044a302e0d46c4fc8fa410619337ba99326a49bbe23c371f6",
+          "size": [
+            960,
+            640
+          ]
+        }
+      ],
+      "generation_tool": "built-in image_gen",
+      "prompt_files": [
+        "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\seventy-return\\prompt.txt",
+        "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\seventy-return\\revision-prompt.txt"
+      ],
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "interpretation": "Scripture illustration; staging, clothing and unnamed faces are artistic interpretation",
+      "owner_approval": "Not claimed; independent technical review only"
+    },
+    {
+      "key": "samaritans-stay",
+      "owning_page": "missionary.html",
+      "christ_depicted": true,
+      "source_original": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\samaritans-stay\\original.png",
+      "source_sha256": "4325db831049f70a5562de2c9581675c1b7f1fb075689ae7182e6622266a3f81",
+      "passage": "John 4:39\u201342",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng&id=p39-p42#p39",
+      "images": [
+        {
+          "path": "assets/missionary/enrichment-20260923/samaritans-stay-full.webp",
+          "sha256": "334b3c585bafcf305036c9c778923c73ed8a12c3e286237f4cf3144fbc3d8dad",
+          "size": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "assets/missionary/enrichment-20260923/samaritans-stay-960.webp",
+          "sha256": "f82d8da31da40f14b678e353af8d5c9110d91409b79e7bebb7845255f28283ed",
+          "size": [
+            960,
+            640
+          ]
+        }
+      ],
+      "generation_tool": "built-in image_gen",
+      "prompt_files": [
+        "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\samaritans-stay\\prompt.txt"
+      ],
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "interpretation": "Scripture illustration; staging, clothing and unnamed faces are artistic interpretation",
+      "owner_approval": "Not claimed; independent technical review only"
+    },
+    {
+      "key": "peace-to-this-house",
+      "owning_page": "missionary.html",
+      "christ_depicted": false,
+      "source_original": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\peace-to-this-house\\peace-to-this-house-original.png",
+      "source_sha256": "60f7a51c6725f0ac07420966975ac897384469cd5f726a34e7e08391895cfedf",
+      "passage": "Luke 10:5\u20137",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p5-p7#p5",
+      "images": [
+        {
+          "path": "assets/missionary/enrichment-20260923/peace-to-this-house-full.webp",
+          "sha256": "92569ff3f3ad39dfaa238885ff9d44fe31d0e38011c20b707f715628420c1b4c",
+          "size": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "assets/missionary/enrichment-20260923/peace-to-this-house-960.webp",
+          "sha256": "02b020428cfd69c95d24fbc6f23a4bb6b7b27962b5c6480e94583ab1fc6c7c46",
+          "size": [
+            960,
+            640
+          ]
+        }
+      ],
+      "generation_tool": "built-in image_gen",
+      "prompt_files": [
+        "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\peace-to-this-house\\prompt.txt"
+      ],
+      "identity_reference": null,
+      "interpretation": "Scripture illustration; staging, clothing and unnamed faces are artistic interpretation",
+      "owner_approval": "Not claimed; independent technical review only"
+    },
+    {
+      "key": "beside-his-missionaries",
+      "owning_page": "missionary.html",
+      "christ_depicted": true,
+      "source_original": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries\\sleeve-revised.png",
+      "source_sha256": "afb9b24cb1d6fd9b6badbd15ae02d2df86726af0cf7c00603548b3a4ef5559de",
+      "passage": "Doctrine and Covenants 84:88",
+      "source_url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng&id=p88#p88",
+      "images": [
+        {
+          "path": "assets/missionary/enrichment-20260923/beside-his-missionaries-full.webp",
+          "sha256": "3666bafaad6579eb0e5b7f8ccf5de2e7b727c77caec379d79a8455db8b470956",
+          "size": [
+            1536,
+            1024
+          ]
+        },
+        {
+          "path": "assets/missionary/enrichment-20260923/beside-his-missionaries-960.webp",
+          "sha256": "e8134b8b0b8460616eb24285fd686a071defe8f8ce69d87a20cdb0dced9cc227",
+          "size": [
+            960,
+            640
+          ]
+        }
+      ],
+      "generation_tool": "built-in image_gen",
+      "prompt_files": [
+        "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries\\prompt.txt",
+        "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries\\revision-prompt.txt",
+        "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries\\sleeve-prompt.txt"
+      ],
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "interpretation": "Modern devotional expression of promised care; not a documented appearance",
+      "owner_approval": "Not claimed; independent technical review only"
+    }
+  ],
+  "rejected_candidates_preserved": [
+    "seventy-return/original.png",
+    "beside-his-missionaries/original.png",
+    "beside-his-missionaries/revised.png"
+  ]
+}

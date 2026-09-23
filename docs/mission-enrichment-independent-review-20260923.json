@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "reviewer": "independent remaining_passion_art agent",
+  "baselineCommit": "4b4b15069feb83c6ae9ea659bde2e3b94278f26a",
+  "reviewedAtUtc": "2026-09-23T21:41:19.009446+00:00",
+  "scope": "Mission four-study enrichment: semantics, preservation, artwork ownership and exact stylesheet guard",
+  "publishedTextSha256": "c8809701c760d2f73df20a410b2ed72c1018b3e3ac83c823f7e3fe59ee3a9776",
+  "preservation": [
+    "Baseline seven figures, nine detail records, hero and opening retained once with exact DOM markup; all old anchors preserved.",
+    "Only Mission ledger record changed. Entire previous record retained unchanged under prior_review.",
+    "Eleven original figures, six Christ depictions, six distinct valid section choices, four reflections, thirteen detail records.",
+    "All eight WebP hashes match metadata. Four source-original hashes match accepted independent reviews. All seven prior candidate review files and originals remain present."
+  ],
+  "editorialReview": [
+    "Read visible studies, captions, alternative text, hidden picture-study text and linked destinations together. Warm applications remain distinct from scripture narrative.",
+    "Official Luke10:5-7,17-20 and John4:39-42 support hospitality, joyful return, invitation to remain two days and hearing Him personally.",
+    "Official D&C84:88 and Matthew28:20 support promised companionship. Modern scene expressly imagined devotional interpretation in prose, caption, alt and details; no recorded appearance or actual missionary identity claimed.",
+    "Official Early Missionaries supports Samuel carrying books, home gatherings and letters. England Overview supports July1837 Liverpool arrival and Preston preaching.",
+    "Hospitality household explicitly imagined; no unsupported named participant or personal relationship.",
+    "Final narrow wording corrections reviewed: modern scene describes standing beside two sister missionaries; directory label uses natural colon; bottom dialog button Continue Lesson accurately names return action with unchanged handler."
+  ],
+  "sourceUrls": [
+    "https://www.churchofjesuschrist.org/study/history/topics/early-missionaries?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/84?lang=eng",
+    "https://www.churchofjesuschrist.org/study/history/global-histories/england/xe-overview?lang=eng"
+  ],
+  "cssReview": [
+    "Dedicated Mission content classes only; full native3:2 pictures use width100% and height:auto. No hero selector or crop.",
+    "Exact stylesheet SHA and Mission-only consumer guard. Negative fixtures reject modified bytes and other HTML, CSS imports or JavaScript references. Existing guards preserved.",
+    "Independently reviewed final missionary.css diff: only decorative arrow content changes from mojibake to CSS escape \\203A. Exact existing Mission stylesheet hash refreshed; selector, spacing and geometry unchanged. HTML changes its stylesheet cache token only; published text hash remains unchanged.",
+    "Legacy QA count diffs independently reviewed: eleven Mission image triggers, thirteen unique records and total triggers (eleven images plus two history links), seventy-five full-image sources. Exact equality, unique keys, source file validation and other-page counts retained. Cache expectation matches reviewed Mission stylesheet token.",
+    "Final panorama repair independently reviewed: two body-prefixed selectors outrank later Mission phone rules. Purpose reserves exact2173/724 intrinsic ratio; worldwide retains2172/724(3:1), removes270px minimum and uses contain. No unused caption rule. Original figure markup and image files remain unchanged; hero unaffected. Exact new stylesheet guard refreshed after this correction."
+  ],
+  "tests": [
+    "Mission enrichment unittest4passed, including3negative fixtures.",
+    "Sitewide artwork self-test passed.",
+    "Full artwork gate:118pages,19heroes,842protected images,zeroerrors.",
+    "Static content audit:122documents,116verified,6non-source-dependent passed.",
+    "Media voice:120pages,680captions,147expanded details,107resource descriptions,15media intros,1041alt texts passed.",
+    "Independent artwork_details_qa.py rerun passed after count updates.",
+    "Independent unified_experience_qa.py rerun passed across38public pages.",
+    "Final artwork gate success message corrected to eleven Mission artwork triggers, matching exact enforced count.",
+    "After final panorama CSS: exact stylesheet guard self-test, full118page/842protected-image gate, all4Mission tests and git diff --check passed."
+  ],
+  "artReviews": [
+    {
+      "receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries-independent-review.json",
+      "receipt_sha256": "c348eacbae8a06a3fdf966c3b3894b169d5d7c7658530ad768d4f281d8e8f8fd",
+      "review": {
+        "schemaVersion": 1,
+        "reviewer": "independent saved_art_review agent",
+        "key": "beside-his-missionaries",
+        "generated_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries\\original.png",
+        "sha256": "c86987cef2cb1ef31aea82c3763a614c6623cf4baf4226a1ec5b190a0d79038a",
+        "status": "revise",
+        "findings": [
+          "Christ likeness recognizable against previously inspected approved Home portrait; meaningful reciprocal gaze with screen-left adult missionary. Both missionaries are distinct adults; photographic skin, hair and clothing, natural poised hands.",
+          "Screen-left open palm has visible subtle healed mark, but exposed wrist between palm heel/thumb base and sleeve lacks identifiable scar. Mandatory visible palm-and-wrist rule not fully met.",
+          "Screen-right hanging wrist has visible pale healed mark. Its palm turns naturally away, so no forced exposure required."
+        ],
+        "requiredCorrection": "Only add subtle healed mark to screen-left exposed wrist, or cover that wrist naturally with sleeve. Preserve palm mark, all faces, gesture, hands and composition.",
+        "cropsInspected": [
+          "independent-left-hand-crop.png",
+          "independent-right-hand-crop.png"
+        ],
+        "sourceScope": "Devotional interpretation of Doctrine and Covenants84:88 promised care, not a documented modern appearance.",
+        "conditions": [
+          "Describe the modern scene explicitly as devotional interpretation in nearby study copy.",
+          "Technical review is not owner aesthetic approval."
+        ],
+        "import_authorized_by_this_receipt": false
+      }
+    },
+    {
+      "receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries-revised-independent-review.json",
+      "receipt_sha256": "0ca28a9620a7f152c1433709fe8d343e0da2c2d1457b94cc562551a834f1f2cc",
+      "review": {
+        "schemaVersion": 1,
+        "reviewer": "independent saved_art_review agent",
+        "key": "beside-his-missionaries-revised",
+        "generated_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries\\revised.png",
+        "sha256": "7b58ec29cccd58484ec2e7cc87b0b800f2e6398f1ff0f9703023ece421a878e3",
+        "status": "revise",
+        "findings": [
+          "Christ likeness recognizable against previously inspected approved Home portrait; meaningful reciprocal gaze with screen-left adult missionary. Both missionaries are distinct adults; photographic skin, hair and clothing, natural poised hands.",
+          "Screen-left open palm has visible subtle healed mark, but exposed wrist between palm heel/thumb base and sleeve lacks identifiable scar. Mandatory visible palm-and-wrist rule not fully met.",
+          "Screen-right hanging wrist has visible pale healed mark. Its palm turns naturally away, so no forced exposure required.",
+          "First repair independently re-inspected at full composition and enlarged actual wrist crop. Wrist remains exposed and no new identifiable healed wrist mark; requirement unresolved."
+        ],
+        "requiredCorrection": "Extend sleeve locally about2cm to cover exposed wrist behind palm heel without changing open palm/thumb gesture or existing palm scar. Preserve rest of scene.",
+        "cropsInspected": [
+          "independent-revised-left-hand-crop.png"
+        ],
+        "sourceScope": "Devotional interpretation of Doctrine and Covenants84:88 promised care, not a documented modern appearance.",
+        "conditions": [
+          "Describe the modern scene explicitly as devotional interpretation in nearby study copy.",
+          "Technical review is not owner aesthetic approval."
+        ],
+        "import_authorized_by_this_receipt": false
+      }
+    },
+    {
+      "receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries-sleeve-revised-independent-review.json",
+      "receipt_sha256": "11590501b68b2345b57f14463ee211ca97e73e253de261e0143d4c531e8472d2",
+      "review": {
+        "schemaVersion": 1,
+        "reviewer": "independent saved_art_review agent",
+        "key": "beside-his-missionaries-sleeve-revised",
+        "generated_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\beside-his-missionaries\\sleeve-revised.png",
+        "sha256": "afb9b24cb1d6fd9b6badbd15ae02d2df86726af0cf7c00603548b3a4ef5559de",
+        "status": "pass_with_caption_conditions",
+        "recommendedTitle": "Beside His missionaries",
+        "alt": "Jesus stands beside two adult sister missionaries on a neighborhood sidewalk, meeting one woman’s eyes as she holds a scripture book.",
+        "caption": "Two missionaries pause before a visit, with Christ beside them. This devotional scene invites us to remember His promise to go before His servants and remain near them.",
+        "refs": [
+          [
+            "dc-testament/dc/84",
+            "Doctrine and Covenants 84:88",
+            "88"
+          ]
+        ],
+        "findings": [
+          "Actual full revision and enlarged left-hand crop inspected. Sleeve now naturally drapes over exposed wrist to base of hand; remaining dark recess is cuff opening rather than clearly presented wrist surface. Open palm and subtle healed mark remain visible.",
+          "Screen-right hanging wrist retains pale healed mark; palm naturally turned away. No forced scar added to cloth or unseen skin.",
+          "Approved Christ likeness, gaze toward adult missionary, two distinct women, natural hands and photographic setting remain visually preserved."
+        ],
+        "sourceScope": "Symbolic modern devotional interpretation of Doctrine and Covenants84:88; not a documented appearance.",
+        "conditions": [
+          "Keep explicit devotional framing in caption or directly adjacent study copy.",
+          "No identification of actual missionaries or personal relationships.",
+          "Technical acceptance does not grant owner aesthetic approval."
+        ],
+        "cropsInspected": [
+          "beside-his-missionaries/independent-sleeve-hand-crop.png"
+        ],
+        "priorRejectedCandidatesPreserved": [
+          "beside-his-missionaries/original.png",
+          "beside-his-missionaries/revised.png"
+        ],
+        "import_authorized_by_this_receipt": false
+      }
+    },
+    {
+      "receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\peace-to-this-house-independent-review.json",
+      "receipt_sha256": "cb4d16bfc0693bf3657fd4808aafa7960e05741d6aa24b2a199f6ecc624a859b",
+      "review": {
+        "schemaVersion": 1,
+        "reviewer": "independent saved_art_review agent",
+        "key": "peace-to-this-house",
+        "generated_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\peace-to-this-house\\peace-to-this-house-original.png",
+        "sha256": "60f7a51c6725f0ac07420966975ac897384469cd5f726a34e7e08391895cfedf",
+        "status": "pass_with_caption_conditions",
+        "recommendedTitle": "Peace to this house",
+        "alt": "An older host welcomes two adult travelers into a simple home, with bread and a jug on the table.",
+        "caption": "Two travelers are welcomed to a table. Jesus taught His disciples to enter a home with peace and receive the hospitality offered there.",
+        "refs": [
+          [
+            "nt/luke/10",
+            "Luke 10:1,5–7",
+            "1,5-7"
+          ]
+        ],
+        "findings": [
+          "Actual full image and saved face/hand crops inspected. Three distinct adult faces with plausible different ages; foreground traveler and older host meet eyes.",
+          "Natural open invitation hand and relaxed hands; no definite fused/extra digits. Photographic skin, cloth, bread and vessels. No Christ or named person depicted."
+        ],
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng"
+        ],
+        "sourceReview": "Official Luke10 fetched and read this review: verses1,5–7 describe paired sending, peace greeting and receiving hospitality;17–20 joyful return and correction toward names written in heaven.",
+        "conditions": [
+          "Unnamed participants, precise ages, clothes and setting remain artistic interpretation. Hospitality depicts instructions rather than a specific recorded household visit.",
+          "Technical review is not owner aesthetic approval."
+        ],
+        "actual_reference_pixels_inspected": [],
+        "import_authorized_by_this_receipt": false
+      }
+    },
+    {
+      "receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\samaritans-stay-independent-review.json",
+      "receipt_sha256": "1f5d3501860e56fe7d8416016f79fdd78ce36fba8ac9811ac08ad5c6f480e238",
+      "review": {
+        "schemaVersion": 1,
+        "reviewer": "independent saved_art_review agent",
+        "key": "samaritans-stay",
+        "generated_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\samaritans-stay\\original.png",
+        "sha256": "4325db831049f70a5562de2c9581675c1b7f1fb075689ae7182e6622266a3f81",
+        "status": "pass_with_caption_conditions",
+        "recommendedTitle": "They asked Him to stay",
+        "alt": "An older Samaritan man gestures toward the village while Jesus meets his eyes, with two other adults listening.",
+        "caption": "An older man opens his hands in welcome as Jesus listens. The Samaritans asked Him to stay, and many more believed as they heard Him for themselves.",
+        "refs": [
+          [
+            "nt/john/4",
+            "John 4:39–42",
+            "39-42"
+          ]
+        ],
+        "findings": [
+          "Actual full image inspected against approved Home Christ reference. Christ facial proportions, wavy hair, beard, nose and warm eyes are recognizable; natural side angle and earnest mutual gaze with older speaker.",
+          "Older man, younger adult and woman have distinct faces; no secondary Christ copy. Arms and visible open/relaxed hands coherent, photographic skin and woven clothing; no definite extra or fused digits or mortal-ministry wound error.",
+          "No well or water jar; scene supports invitation to remain after earlier testimony, not the preceding well conversation. Woman is unnamed and must not be identified as the well woman."
+        ],
+        "conditions": [
+          "Exact ages, village staging, garments and unnamed participants are artistic interpretation; do not invent personal relationships or named identities.",
+          "Technical acceptance is not owner aesthetic approval."
+        ],
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng"
+        ],
+        "sourceReview": "Official chapter independently fetched and read in this review session.",
+        "actual_reference_pixels_inspected": [
+          "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+        ],
+        "import_authorized_by_this_receipt": false
+      }
+    },
+    {
+      "receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\seventy-return-independent-review.json",
+      "receipt_sha256": "bd4add85ee6948f8955e78467924a0735ea72910357e5aab47a605d54ec2410e",
+      "review": {
+        "schemaVersion": 1,
+        "reviewer": "independent saved_art_review agent",
+        "key": "seventy-return",
+        "generated_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\seventy-return\\original.png",
+        "sha256": "38c326b7c6a863ea6a128e19eaea2ba95444d0f81747030451e4ee6006e92e19",
+        "status": "revise",
+        "recommendedTitle": "They returned with joy",
+        "alt": "Jesus sits beneath a tree, meeting the eyes of a smiling disciple while two other men listen.",
+        "caption": "A returning disciple speaks with joy as Jesus listens. The Savior directs His disciples toward the deeper joy of belonging to God.",
+        "refs": [
+          [
+            "nt/luke/10",
+            "Luke 10:17–20",
+            "17-20"
+          ]
+        ],
+        "findings": [
+          "Actual full original inspected beside approved Home Christ portrait. Seated Christ likeness, expression and eye contact with foreground returning speaker are strong. Visible hands appear coherent and mortal without Resurrection scars.",
+          "Rear-left standing disciple resembles the approved Christ face too closely in smiling mouth, nose, eyes and curled brown hair/beard; viewer can read two Christs. Change only that secondary adult face/hair to a clearly distinct older man, preserving seated Christ and foreground speaker."
+        ],
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng"
+        ],
+        "sourceReview": "Official Luke10 fetched and read this review: verses1,5–7 describe paired sending, peace greeting and receiving hospitality;17–20 joyful return and correction toward names written in heaven.",
+        "conditions": [
+          "Unnamed participants, precise ages, clothes and setting remain artistic interpretation. Hospitality depicts instructions rather than a specific recorded household visit.",
+          "Technical review is not owner aesthetic approval."
+        ],
+        "actual_reference_pixels_inspected": [
+          "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+        ],
+        "import_authorized_by_this_receipt": false
+      }
+    },
+    {
+      "receipt": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\seventy-return-revised-independent-review.json",
+      "receipt_sha256": "82f1331ebcc9c5109566a84d3d48d9ecd0e53a48c10807adbfaf70deeb8f2430",
+      "review": {
+        "schemaVersion": 1,
+        "reviewer": "independent saved_art_review agent",
+        "key": "seventy-return-revised",
+        "generated_path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\mission-enrichment\\seventy-return\\revised.png",
+        "sha256": "02d25f06373dd23311e9b1a8968d55e3431f25713e70f2a0010b9876e898a759",
+        "status": "pass_with_caption_conditions",
+        "recommendedTitle": "They returned with joy",
+        "alt": "Jesus sits beneath a tree, meeting the eyes of a smiling disciple while two other men listen.",
+        "caption": "A returning disciple speaks with joy as Jesus listens. The Savior directs His disciples toward the deeper joy of having their names written in heaven.",
+        "refs": [
+          [
+            "nt/luke/10",
+            "Luke 10:17–20",
+            "17-20"
+          ]
+        ],
+        "findings": [
+          "Rear-left secondary head is now a clearly different older man with short gray hair, broader face and salt-and-pepper beard. Prior likeness duplication resolved.",
+          "Seated Christ remains recognizable against approved Home pixels; mutual gaze, foreground speaker, right listener, natural hands and photographic setting remain visually preserved.",
+          "No definite anatomy flaw or Resurrection wounds; joyful listening fits source."
+        ],
+        "conditions": [
+          "Exact ages, village staging, garments and unnamed participants are artistic interpretation; do not invent personal relationships or named identities.",
+          "Technical acceptance is not owner aesthetic approval."
+        ],
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng"
+        ],
+        "sourceReview": "Official chapter independently fetched and read in this review session.",
+        "actual_reference_pixels_inspected": [
+          "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-22\\jesus-journey\\work\\focus-jesus\\assets\\heroes\\home-christ-signature-approved-20260907.png"
+        ],
+        "import_authorized_by_this_receipt": false,
+        "priorRejectedCandidate": "seventy-return/original.png",
+        "priorReviewPreserved": "seventy-return-independent-review.json"
+      }
+    }
+  ],
+  "reviewedFiles": {
+    "missionary.html": "7cb95f83b38fe42c1b3765d8d8072d45b390c9b6044c7240fdc519cbdb3c310d",
+    "missionary-enrichment.css": "e40315cfc4994ba862cd7bf3c1d4f0fa77db5bd1ba59d8ca0eedfd8cdd8b875c",
+    "docs/mission-enrichment-art-20260923.json": "9c8ebb5fb511954b7cc8f14271f1dc0d0c9c6e0e1a40e249d650da018d4a04ec",
+    "tools/sitewide_artwork_review_qa.py": "2e914e40c7804514bc6c5c5de83b5bdd94b2521fce514f76d4c8b0922d56faa2",
+    "tools/mission_enrichment_qa.py": "0fe877e572ee1f0961d579246fa3be9a45ef73a96b4393760e5c4d739cc48d62",
+    "content-audit.json": "4d4505e45464682f686f5ac467c098d22c3d366c83580cfde8d7a9dad4d4dbc5",
+    "missionary.css": "1fc685047557e7d077b8c25c833731dca799335add20d3b139cf626f72357e21",
+    "tools/artwork_details_qa.py": "76e29141a3efd45efaddb077e68144aa19a77477b98125b9190f297d77cbfa19",
+    "tools/unified_experience_qa.py": "a13a83c4108e9d503bea54680c6a75e94c7c513f8d262b0a6a45dba9360efb93"
+  },
+  "limitations": [
+    "Root owns browser geometry, actual picture-study/full-size/return flows, deployment and public-byte verification.",
+    "No owner aesthetic approval claimed.",
+    "Anatomy/identity findings incorporated from saved independent actual-pixel reviews; this review verifies exact source hashes and public image metadata."
+  ],
+  "reportedBrowserEvidence": {
+    "reportedBy": "root",
+    "checks": "All four picture/full-size/Continue Lesson focus returns and four exact verse readers passed; nine normal/enlarged widths had zero overflow.",
+    "evidenceClass": "Root report; independent reviewer did not operate browser."
+  }
+}
