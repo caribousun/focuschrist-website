@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "scope": "Birth four full-width chapter-resource wrapper correction",
+  "reviewed_on": "2026-09-23",
+  "reviewed_html_sha256": "a41cdac7470b14f39872488804675e4a10df72e9598269d354360449cd474ec8",
+  "published_text_sha256": "dbbe4e9e10824448e3f2e93a6d9d1abe1d0f61201e1e2e7b870f29d49dd21a25",
+  "prior_snapshot": "work/birth-single-resource-before.html",
+  "preservation": "Exact current HTML reconstructs baseline byte-for-byte by reverting only four article attributes and pair-wrapper removals. All prose, figures, resources, links, order and existing IDs unchanged. Normalized published-text hash identical.",
+  "gate_review": "Birth expectedpaircount changes4to0 with replacement exactfour-key chapter/resource/figure contract. Direct chapter parent and explicit block/fullwidth/unlimited maxwidth required. Other two owningpage paircounts3and6 and generic pair validation unchanged.",
+  "validation": {
+    "balance_self_test": "pass16negativefixtures pluspositives",
+    "full_balance_gate": "pass118canonicalpages",
+    "new_negative_cases": [
+      "missing card",
+      "duplicate card",
+      "wrong chapter",
+      "missing corresponding picture",
+      "narrow width",
+      "remaining singlecard grid",
+      "empty leftover pair",
+      "chapter grid"
+    ]
+  },
+  "limitations": [
+    "This is a structural/preservation review; actual desktop/phone rendering remains main-agent evidence.",
+    "Historical Birth density receipt remains unchanged; this additive receipt binds wrapper-only final HTML."
+  ]
+}

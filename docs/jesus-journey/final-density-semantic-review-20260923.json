@@ -42,9 +42,10 @@
         "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-ten-lepers-thanksgiving"
       ]
     },
-    "birth_final_sha256": "4fc2ba488adb4d5777eb4dab42ba39de06333cbe082e2511e9c021c6922bfaeb",
+    "birth_final_sha256": "a41cdac7470b14f39872488804675e4a10df72e9598269d354360449cd474ec8",
     "originals": 307,
-    "unresolved_material_core_story_visual_gaps": []
+    "unresolved_material_core_story_visual_gaps": [],
+    "birth_pre_resource_flow_sha256": "4fc2ba488adb4d5777eb4dab42ba39de06333cbe082e2511e9c021c6922bfaeb"
   },
   "assessment": "Reported material core-story visual gaps are resolved by the new leper scene and five existing exact-scene references. Reflection grouping and clearly captioned companion scenes provide meaningful coverage without requiring separate art for every verse. No additional original is required merely for a rigid count.",
   "limitations": [
@@ -2022,5 +2023,9 @@
       "review_standard": "Independent final combined semantic approval: latest13 art relocations and43 intro-placement flags reviewed against actual captions/source context;307 originals with4 new original-pixel receipts; five exact-scene owning-study references checked; leper primary scene before Mark3 companion; Birth density with Benjamin/Mosiah context and all prior prose preserved; chapter grouping, ownership gates and onward preference independently reviewed/tested. Existing source-review lineage retained; no claim of fresh external source retrieval for every unchanged page. Final rendered text hash binds this review; browser/publication evidence separate.",
       "reviewed_on": "2026-09-23"
     }
-  ]
+  ],
+  "resource_flow_independent_review": {
+    "path": "focus-jesus/docs/jesus-journey/birth-resource-flow-independent-review-20260923.json",
+    "sha256": "391965c332c5947b4fd66aa61b67edd6072708e6964f6e6b47a6c1868a698544"
+  }
 }

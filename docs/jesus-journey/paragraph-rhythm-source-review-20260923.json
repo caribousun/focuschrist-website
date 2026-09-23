@@ -5,9 +5,10 @@
   "reviewer": "remaining_gospel_art; authored canonical relocations and references independently approved by saved_art_review",
   "canonical_independent_review": {
     "path": "focus-jesus/docs/jesus-journey/final-density-semantic-review-20260923.json",
-    "sha256": "78bbc26030729251d8b2add8744611b8ad6ad2eebf7cd3bbab51611489bf8bd7",
+    "sha256": "8ccdc3f24b112ac98865a44697ba0da7851949564c73853a50207937f320c48d",
     "reviewer": "saved_art_review",
-    "pre_lf_sha256": "1d32a5725ee26e5b8551e294d1509504e9e7e6a54b4c50acd196b8a86dc0fcf2"
+    "pre_lf_sha256": "1d32a5725ee26e5b8551e294d1509504e9e7e6a54b4c50acd196b8a86dc0fcf2",
+    "pre_resource_flow_sha256": "78bbc26030729251d8b2add8744611b8ad6ad2eebf7cd3bbab51611489bf8bd7"
   },
   "preserved_prior_review": "docs/jesus-journey/chapter-picture-source-review-20260923.json",
   "findings": [
@@ -42,7 +43,8 @@
     {
       "path": "birth-of-christ.html",
       "published_text_sha256": "dbbe4e9e10824448e3f2e93a6d9d1abe1d0f61201e1e2e7b870f29d49dd21a25",
-      "html_sha256": "4fc2ba488adb4d5777eb4dab42ba39de06333cbe082e2511e9c021c6922bfaeb"
+      "html_sha256": "a41cdac7470b14f39872488804675e4a10df72e9598269d354360449cd474ec8",
+      "pre_resource_flow_html_sha256": "4fc2ba488adb4d5777eb4dab42ba39de06333cbe082e2511e9c021c6922bfaeb"
     },
     {
       "path": "jesus-christ/before-bethlehem.html",
@@ -424,5 +426,9 @@
       "published_text_sha256": "6bd2b00e0ff20cb588f1b0035620a293e999de2e231bfd1c4c03ebc4d6d8cd51",
       "html_sha256": "3fb7918b16c027d98f4705cfba9d1e01b937d17a840d525f6f5bc9dc7d8f0434"
     }
-  ]
+  ],
+  "resource_flow_independent_review": {
+    "path": "focus-jesus/docs/jesus-journey/birth-resource-flow-independent-review-20260923.json",
+    "sha256": "391965c332c5947b4fd66aa61b67edd6072708e6964f6e6b47a6c1868a698544"
+  }
 }
