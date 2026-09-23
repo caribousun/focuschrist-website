@@ -1,0 +1,78 @@
+{
+  "scope": "Reference previews linked to their existing owning studies; not new Home-owned originals",
+  "baseline": "0cf872b8194e22f6aeb2659be34d63ccd7e2b908",
+  "references": [
+    {
+      "key": "atonement",
+      "src": "assets/page-art/atonement/mary-risen-960.webp",
+      "width": 960,
+      "height": 640,
+      "href": "atonement.html#resurrection",
+      "alt": "A woman turns toward the risen Jesus in a garden. John records that He called Mary by name."
+    },
+    {
+      "key": "evidences",
+      "src": "assets/page-art/bom-evidences/christwelcome-960.webp",
+      "width": 960,
+      "height": 640,
+      "href": "book-of-mormon-evidences.html#come-to-christ",
+      "alt": "A welcome for the one. Jesus Christ meets an older man with attentive warmth."
+    },
+    {
+      "key": "weekly",
+      "src": "assets/page-art/come-follow-me/family-study-2026.webp",
+      "width": 1672,
+      "height": 941,
+      "href": "come-follow-me.html#study-your-way",
+      "alt": "A multigenerational family discussing scripture together around a table"
+    },
+    {
+      "key": "scriptures",
+      "src": "assets/page-art/bible-together/christ-roof-paralytic-960.webp",
+      "width": 960,
+      "height": 640,
+      "href": "answers/bible-and-book-of-mormon-together.html#study-christ-roof-paralytic",
+      "alt": "Helpers lower a man on a bed through a roof opening while Jesus welcomes him and people inside the house look toward them."
+    },
+    {
+      "key": "conference",
+      "src": "assets/heroes/topics/conference-listening-960.webp",
+      "width": 960,
+      "height": 640,
+      "href": "general-conference.html#general-conference",
+      "alt": "A woman wearing headphones writes in a notebook beside a tablet and open scriptures."
+    },
+    {
+      "key": "mission",
+      "src": "assets/missionary/christ-teaches-apostles-home-likeness-20260914-1100.webp",
+      "width": 1100,
+      "height": 619,
+      "href": "missionary.html#commission-heading",
+      "alt": "Jesus Christ walking through the Galilean countryside with His twelve Apostles as He teaches them"
+    },
+    {
+      "key": "history",
+      "src": "assets/page-art/church-history/relief-society-960.webp",
+      "width": 960,
+      "height": 540,
+      "href": "church-history.html#relief-society-organization",
+      "alt": "Emma speaks with women gathered in a simple meeting room, meeting the gaze of a seated listener."
+    },
+    {
+      "key": "pioneer",
+      "src": "assets/pioneers/story/14-relief-supplies-800.webp",
+      "width": 800,
+      "height": 533,
+      "href": "pioneers.html#pioneer-story-14-relief-supplies",
+      "alt": "Women and men load flour, blankets and boots into a relief wagon in Salt Lake City."
+    },
+    {
+      "key": "watch",
+      "src": "assets/watch/americas.jpg",
+      "width": 768,
+      "height": 432,
+      "href": "watch.html#video-americas",
+      "alt": "Jesus Christ Appears in the Ancient Americas, 3 Nephi 8–11: official Church video thumbnail"
+    }
+  ]
+}

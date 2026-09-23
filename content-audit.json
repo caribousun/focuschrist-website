@@ -2081,9 +2081,9 @@
     {
       "path": "index.html",
       "status": "verified",
-      "published_text_sha256": "5911fbe076484f49516817a96131a5f906772661b109b8963bdbaee55fe8a382",
-      "reviewed_on": "2026-09-14",
-      "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Owner-approved Home wording was shortened without adding a factual or doctrinal claim. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. New Evidences/history/art navigation independently reviewed for accurate destination and scope; unchanged underlying source approvals retained. Approved hero and introduction content preserved. Search navigation label added; prior substantive source review preserved. Atonement study promotion and topic link reviewed; previous content preserved. Atonement study promotion and topic link reviewed; previous content preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained.",
+      "published_text_sha256": "8b09c0125f99b63f6bb5fdc30199430ee881852bbc68963f84db9d8c0a1245e0",
+      "reviewed_on": "2026-09-23",
+      "review_standard": "Prior source approval preserved in prior_review. Independent Home presentation semantic review of changed invitations, nine existing study references, official film labeling and exact original artwork/hero/opening preservation passed; see docs/home-presentation-independent-review-20260923.json.",
       "authoritative_sources": [
         "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
         "https://scriptures.byu.edu/",
@@ -2103,7 +2103,35 @@
         "https://www.churchofjesuschrist.org/temples?lang=eng",
         "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
         "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all"
-      ]
+      ],
+      "prior_review": {
+        "path": "index.html",
+        "status": "verified",
+        "published_text_sha256": "5911fbe076484f49516817a96131a5f906772661b109b8963bdbaee55fe8a382",
+        "reviewed_on": "2026-09-14",
+        "review_standard": "Existing source review preserved; independent agent semantic review of visual-resource additions passed. Actual source titles, native previews, contextual descriptions and exact linked destinations checked; resources are navigational, not new doctrine. Complete Answer enrichment and sitewide media relevance independently reviewed against actual official sources; page-specific interpretation distinguished from source claims. Shared scripture reader/header asset versions do not change approved substantive content. Owner-approved Home wording was shortened without adding a factual or doctrinal claim. Full-site media harmony review: exact video identities checked across all public pages; replacement source titles, official destinations, native thumbnails and page-specific descriptions independently reviewed. No concrete video may appear in more than one themed placement. New Evidences/history/art navigation independently reviewed for accurate destination and scope; unchanged underlying source approvals retained. Approved hero and introduction content preserved. Search navigation label added; prior substantive source review preserved. Atonement study promotion and topic link reviewed; previous content preserved. Atonement study promotion and topic link reviewed; previous content preserved. Navigation-only review: centered Christ’s Atonement destination; existing body and source review retained.",
+        "authoritative_sources": [
+          "https://newsroom.churchofjesuschrist.org/article/rejoice-in-christ-salt-lake-temple-celebration",
+          "https://scriptures.byu.edu/",
+          "https://www.churchofjesuschrist.org/",
+          "https://www.churchofjesuschrist.org/?lang=eng",
+          "https://www.churchofjesuschrist.org/learn/come-follow-me?lang=eng",
+          "https://www.churchofjesuschrist.org/media/video/2018-01-0010-peace-in-christ?lang=eng",
+          "https://www.churchofjesuschrist.org/study/church-history?lang=eng",
+          "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&amp;lang=eng#p32",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p32-p37&lang=eng#p32",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p36&lang=eng#p36",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng",
+          "https://www.churchofjesuschrist.org/study?lang=eng&amp;platform=web",
+          "https://www.churchofjesuschrist.org/study?lang=eng&platform=web",
+          "https://www.churchofjesuschrist.org/temples?lang=eng",
+          "https://www.churchofjesuschrist.org/tools?lang=eng&activeTab=all",
+          "https://www.churchofjesuschrist.org/tools?lang=eng&amp;activeTab=all"
+        ]
+      },
+      "independent_review": "docs/home-presentation-independent-review-20260923.json"
     },
     {
       "path": "joseph-smith-likeness.html",

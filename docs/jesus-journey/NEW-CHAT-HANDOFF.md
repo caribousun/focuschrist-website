@@ -1,5 +1,17 @@
 # Jesus Christ journey — new-chat handoff
 
+## Current checkpoint: Home and Mission composition ready for release
+
+Home enrichment and Wyatt's latest Mission purpose composition correction are implemented on `enrich/home-christ-centered-presentation`, based on `0cf872b8194e22f6aeb2659be34d63ccd7e2b908`. All prior journey and border releases below remain live. Home now begins its body with the Savior's invitation, preserves all three original figures and the approved hero, and adds nine linked picture previews of existing studies. No new artwork files were generated or altered. Mission now places its panorama above the teaching, with the caption below the picture and no phone crop.
+
+Independent Home and Mission reviews, browser evidence and seven Home regression tests pass. See `docs/home-presentation-browser-review-20260923.json`, `docs/home-presentation-independent-review-20260923.json` and `docs/mission-purpose-independent-review-20260923.json`. The content audit passed for all 122 documents; the search index was rebuilt. Exact stylesheet bytes and single-page ownership are guarded. Publication and public verification remain; consult parent work `home-presentation-release-20260923.json` for the subsequent release status. Preserve Master/foundation and paused automation. Do not claim local review is publication.
+
+## Current active scope: Home enrichment
+
+PR367 is merged and live at0cf872b8194e22f6aeb2659be34d63ccd7e2b908. PRQA35913966436, Pages35914387731 andmainQA35914387759 passed; all6changedpublicfilesmatch. PublicbrowserconfirmedHistoryall7artpanelsaligned, Pioneer2tabletfullrows, Missionphonebodyrails, zerooverflow/currentCSSversions. See parentwork page-borders-release-20260923.json andpublic-page-borders-verification-20260923.json.
+
+All earlier requested Jesus journey and Pioneer/History/Mission border work is complete. Wyatt's NEXT request is now ACTIVE: enrich Home with pictures and presentation-quality Christ-centered composition reflectingthegrownsite. Branch enrich/home-christ-centered-presentation startsat0cf872b8. Read parentwork home-enrichment-plan-20260923.json. Preserve Homehero andthreeownedartfigure/detailtrees, allapprovedidentities, noartduplication, exactownerlinksforreferencepreviews. No newartgenerationisrequiredifexistingsavedworkfits. Rootownsdesign/browser; independentread-onlyreferenceandQAauditsdone. Homeimplementation/review/release remain.
+
 ## Current checkpoint: journey formatting live; page borders next; Home authorized
 
 PR366 is merged and live at b745498047906924f9819b2c9d66f659f15ca7d4. PR QA35912149543, Pages35912555815 and main QA35912555403 passed; all79 changed public files match. PR365 art/chapters remain preserved. See parent work standard-formatting-release-20260923.json.

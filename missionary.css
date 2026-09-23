@@ -12,9 +12,9 @@
 
 .fc-missionary-split {
     display: grid;
-    grid-template-columns: minmax(0, 1.45fr) minmax(310px, .75fr);
-    gap: clamp(30px, 5vw, 64px);
-    align-items: center;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+    align-items: start;
 }
 
 .fc-missionary-visual {
@@ -62,6 +62,17 @@
 
 .fc-missionary-copy .fc-actions {
     margin-top: 26px;
+}
+
+/* Let the panorama lead into its teaching without a narrow text column. */
+.fc-missionary-purpose .fc-missionary-visual figcaption {
+    position: static;
+    padding: 16px 24px;
+    background: transparent;
+}
+
+.fc-missionary-purpose .fc-missionary-copy > .fc-section-heading {
+    max-width: none;
 }
 
 .fc-missionary-commission-grid {
@@ -586,7 +597,6 @@
         border-radius: 16px;
     }
 
-    .fc-missionary-visual--purpose img,
     .fc-missionary-visual--world img {
         min-height: 270px;
         object-fit: cover;

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "reviewer": "independent saved_art_review agent",
+  "reviewedAtUtc": "2026-09-23T20:22:37.695019+00:00",
+  "baseline": "0cf872b8194e22f6aeb2659be34d63ccd7e2b908",
+  "semanticStatus": "pass",
+  "cssStatus": "pass",
+  "index_sha256": "7966d729d192d76783fa42aba700b76e7ded98ba1970253adc9e01c179772fbc",
+  "published_text_sha256": "8b09c0125f99b63f6bb5fdc30199430ee881852bbc68963f84db9d8c0a1245e0",
+  "scope": "Home changed visitor wording, context of nine existing study previews, and preservation of approved Home markup",
+  "findingsResolved": [
+    {
+      "finding": "Watch preview labels and route introduced an official Church film while retained paragraph described entry from a separate YouTube channel.",
+      "resolution": "New paragraph explicitly invites the reader to watch a Church film of the Savior visiting people in the Americas and return to His scriptural invitation."
+    }
+  ],
+  "semanticEvidence": [
+    "All new and changed paragraphs independently read against actual target-page context. Invitations are warm and reverent without inventing feelings, relationships or new historical detail.",
+    "Evidences, purpose, topic, History and Pioneer paragraphs describe real destination scope in plain language.",
+    "Nine reference previews match existing destination image paths and exact fragment IDs; source context read around each destination. They are references, not new Home-owned originals.",
+    "Bible and Book of Mormon preview targets the roof healing study, which explicitly distinguishes Mark 2 event from Benjamin prophetic description in Mosiah 3.",
+    "Resurrection preview retains Mary and John context; Evidences imagined welcome is not named as a specific historical event.",
+    "Conference and family-study illustrations serve their present-day study contexts. Mission, Relief Society and rescue-wagon previews link to their existing historical study contexts.",
+    "Watch thumbnail visibly labelled Official Church film preview, distinct from approved generated-art Christ identity."
+  ],
+  "preservationEvidence": [
+    "All three original Home figures retain exact markup once each, including original images, sources, detail links, captions and alt.",
+    "Approved hero anchor, original page-intro section and artwork dialogs remain exact.",
+    "No new artwork generated or prior source claims independently re-certified by this review. Existing source approvals retained."
+  ],
+  "sourceEvidenceClass": "Current repository destination and approved-source lineage review; no claim of fresh external source retrieval",
+  "limitations": [
+    "Browser, production deployment and owner aesthetic approval remain separate root evidence."
+  ],
+  "reviewedFiles": {
+    "home-presentation.css": "435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8",
+    "tools/sitewide_artwork_review_qa.py": "f8f84a71837931c43b7e1bf98250f464f9834a430ac4f5de2ac52314396df056",
+    "tools/home_presentation_qa.py": "c9a2bb9cab601d42b44654dd18b6cd60b0991a6631963d2d57761c85acf0d50e",
+    ".github/workflows/site-qa.yml": "e31b6fa3d35dec9489fa14feef0554e701c75a1d2ade514d6b702638cc014ac2"
+  },
+  "cssEvidence": [
+    "All selectors scoped to body.fc-home-presentation; no hero selectors or crop rules. Reference images retain intrinsic aspect ratio with height:auto.",
+    "Final three-purpose-card row spans full available columns only at701-980px; seven Home tests including removal fixture pass.",
+    "Exact whole-file Home CSS hash and single owner index.html enforced. Negative tests reject changed CSS bytes and references from another HTML, CSS import or JavaScript.",
+    "Original opening markup unchanged; page main wrapping can wrap long words when needed without changing normal font sizing."
+  ],
+  "tests": [
+    "Home presentation QA:7 passed",
+    "Sitewide artwork self-test:passed",
+    "Sitewide artwork full audit:118pages,19heroes,842protectedimages,zeroerrors",
+    "Artwork detail QA:62non-Mission and7Mission triggers pass",
+    "Static content audit122 passed after index-only ledger update"
+  ]
+}

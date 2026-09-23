@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "reviewer": "independent saved_art_review agent",
+  "scope": "Mission purpose composition followup",
+  "preservation": "HTML equals HEAD except stylesheet cache version; all artwork, prose, sources, hero and identity markup exact.",
+  "cssChanges": [
+    "Purpose split changes from narrow prose beside panorama to one-column figure followed by prose.",
+    "Caption static below image with existing colors and16x24padding; purpose heading max-width:none.",
+    "Purpose image removed from phone minimum-height/object-fit crop selector; world image unaffected."
+  ],
+  "guardRationale": "Diff-only hero parser concatenates changed pre-existing declarations with new selectors. Exact full stylesheet hash and single owning Mission page replace parsing of this reviewed file; negative byte/selector/property fixtures remain. No other stylesheet exemption added beyond exact reviewed Home.",
+  "reviewedFiles": {
+    "missionary.css": "3cf14d5cdf5a124430d13707e18377195c84be91707ab01b484228c5a04a1691",
+    "missionary.html": "210a27785541d21efc9bebe6faf281c39b22d38909326f9f536b97775cee36b7",
+    "tools/artwork_details_qa.py": "cee3f187db8598978b9011edb91c228c4a0d36d9c70b9920b915aa9c3b5f5a53",
+    "tools/sitewide_artwork_review_qa.py": "f8f84a71837931c43b7e1bf98250f464f9834a430ac4f5de2ac52314396df056"
+  },
+  "tests": [
+    "Sitewide full audit zeroerrors",
+    "Artwork details69triggers pass",
+    "Sitewide self-test pass"
+  ],
+  "limitations": [
+    "Rendered composition verified separately by root."
+  ]
+}

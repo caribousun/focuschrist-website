@@ -28,6 +28,8 @@ def declarations(filename, selector):
 
 
 JOURNEY_VERSION = '20260923-standard-formatting-1'
+PAGE_BOUNDARY_VERSIONS = {'church-history.css': '20260923-page-borders-1',
+                          'missionary.css': '20260923-purpose-flow-1'}
 
 
 def journey_errors(css, consumers, expected):
@@ -150,7 +152,7 @@ def page_wrap_errors(html, css, stylesheet, selector):
     doc.feed(html)
     links = [n.attrs.get('href', '') for n in doc.root.walk() if n.tag == 'link'
              and urlsplit(n.attrs.get('href', '')).path == stylesheet]
-    if len(links) != 1 or parse_qs(urlsplit(links[0]).query).get('v') != ['20260923-page-borders-1']:
+    if len(links) != 1 or parse_qs(urlsplit(links[0]).query).get('v') != [PAGE_BOUNDARY_VERSIONS[stylesheet]]:
         errors.append(stylesheet + ': page boundary version must be current and unique')
     clean = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
     wraps = [compact(value) for selectors, body in re.findall(r'([^{}]+)\{([^{}]*)\}', clean)
@@ -164,11 +166,48 @@ def page_wrap_errors(html, css, stylesheet, selector):
 def page_wrap_fixture_tests():
     for stylesheet, selector in (('church-history.css', '.fc-history-page main'),
                                  ('missionary.css', '.fc-missionary-page main')):
-        html = '<link rel="stylesheet" href="' + stylesheet + '?v=20260923-page-borders-1">'
+        version = PAGE_BOUNDARY_VERSIONS[stylesheet]
+        html = '<link rel="stylesheet" href="' + stylesheet + '?v=' + version + '">'
         css = selector + '{overflow-wrap:anywhere}'
         assert not page_wrap_errors(html, css, stylesheet, selector)
         assert page_wrap_errors(html, '', stylesheet, selector)
-        assert page_wrap_errors(html.replace('20260923-page-borders-1', 'stale'), css, stylesheet, selector)
+        assert page_wrap_errors(html.replace(version, 'stale'), css, stylesheet, selector)
+
+
+def mission_purpose_errors(html, css):
+    """Keep the panorama above its teaching and retain the full mobile scene."""
+    errors = []
+    doc = Document()
+    doc.feed(html)
+    splits = [n for n in doc.root.walk() if n.has('fc-missionary-split')]
+    if len(splits) != 1 or [n.tag for n in splits[0].children] != ['figure', 'div']:
+        errors.append('Mission purpose must retain picture followed by teaching')
+    elif not splits[0].children[0].has('fc-missionary-visual--purpose') or not splits[0].children[1].has('fc-missionary-copy'):
+        errors.append('Mission purpose picture and teaching order changed')
+    clean = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    rules = [(selectors, dict((k, compact(v)) for k, v in re.findall(r'([\w-]+)\s*:\s*([^;]+)', body)))
+             for selectors, body in re.findall(r'([^{}]+)\{([^{}]*)\}', clean)]
+    split_rules = [r for s, r in rules if '.fc-missionary-split' in [x.strip() for x in s.split(',')]]
+    columns = [r['grid-template-columns'] for r in split_rules if 'grid-template-columns' in r]
+    if not columns or any(v not in ('minmax(0,1fr)', '1fr') for v in columns):
+        errors.append('Mission purpose must remain a single full-width column at every breakpoint')
+    captions = [r for s, r in rules if compact('.fc-missionary-purpose .fc-missionary-visual figcaption') in [compact(x) for x in s.split(',')]]
+    if not captions or any(r.get('position') != 'static' for r in captions):
+        errors.append('Mission purpose caption must remain outside the artwork')
+    for selectors, rule in rules:
+        if '.fc-missionary-visual--purpose img' in selectors and (
+                rule.get('object-fit') == 'cover' or rule.get('min-height', '0') != '0' or rule.get('height', 'auto') != 'auto'):
+            errors.append('Mission purpose panorama must not be cropped or stretched on phones')
+    return errors
+
+
+def mission_purpose_fixture_tests(html, css):
+    assert not mission_purpose_errors(html, css)
+    assert mission_purpose_errors(html, css.replace('grid-template-columns: minmax(0, 1fr);', 'grid-template-columns: 2fr 1fr;', 1))
+    assert mission_purpose_errors(html, css + '@media(min-width:900px){.fc-missionary-split{grid-template-columns:2fr 1fr}}')
+    assert mission_purpose_errors(html, css.replace('.fc-missionary-purpose .fc-missionary-visual figcaption', '.removed-caption'))
+    assert mission_purpose_errors(html, css + '@media(max-width:700px){.fc-missionary-visual--purpose img{min-height:270px;object-fit:cover}}')
+    assert mission_purpose_errors(html.replace('fc-missionary-visual--purpose', 'missing-purpose-figure'), css)
 
 
 def contract(filename, selector, expected):
@@ -244,6 +283,8 @@ ERRORS.extend(journey_errors((ROOT / 'jesus-journey.css').read_text(encoding='ut
 boundary_inputs = [(ROOT / name).read_text(encoding='utf-8') for name in
                    ('missionary.html', 'church-history.html', 'pioneers.html', 'pioneer-story.css')]
 ERRORS.extend(boundary_errors(*boundary_inputs))
+mission_purpose_inputs = (boundary_inputs[0], (ROOT / 'missionary.css').read_text(encoding='utf-8'))
+ERRORS.extend(mission_purpose_errors(*mission_purpose_inputs))
 for page, stylesheet, selector in (
         ('church-history.html', 'church-history.css', '.fc-history-page main'),
         ('missionary.html', 'missionary.css', '.fc-missionary-page main')):
@@ -256,6 +297,8 @@ if '--self-test' in sys.argv:
     print('Boundary fixtures passed: valid, Mission wide rail, History offsets, Pioneer narrow gutter, 560px last card and stale CSS')
     page_wrap_fixture_tests()
     print('Page wrap fixtures passed: History and Mission valid, missing wrap and stale version rejected')
+    mission_purpose_fixture_tests(*mission_purpose_inputs)
+    print('Mission purpose fixtures passed: full-width picture then teaching; narrow columns, later overrides, missing caption flow, phone crop and missing picture rejected')
 
 if ERRORS:
     raise SystemExit("\n".join(ERRORS))
