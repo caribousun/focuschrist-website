@@ -1797,6 +1797,149 @@
         "review_record": "docs/sitewide-narrative-supporting-review.json",
         "width": 1536,
         "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/moses-brass-serpent-full.webp",
+        "sha256": "a20a620d183c720e83be4a1bf4381f5983a232d92d7b9901cc5fffc08124e438",
+        "tone": "In the wilderness, the people are invited to look toward the serpent Moses has raised. Alma later recalls this act as a witness pointing to the Son of God.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/ezekiel-two-sticks-full.webp",
+        "sha256": "d246b4d7ab49fdbb50bed3c7b9f786c3e1e8d2310c23c6d6a78b93b3b4dd9aee",
+        "tone": "Ezekiel holds the two pieces together before his people. The sign belongs to a promise that divided Israel will be gathered and become one under the Lord.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/lehi-joseph-counsel-full.webp",
+        "sha256": "cde8c433c4ad12ee72c3bf1653b0ba24413dff03e07f9ff910e8a8d6864d1f2f",
+        "tone": "Near the end of his life, Lehi speaks to his youngest son about Joseph in Egypt and the Lord’s covenants. The family’s future is placed within a much older story.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/alma-preserves-abinadi-full.webp",
+        "sha256": "ebe77944dcebec03d24a7552bf2e04e50399160cdc081b9ee9f107aae0bfbb71",
+        "tone": "After escaping the king’s servants, young Alma writes the testimony he has heard. Abinadi’s teaching includes Isaiah’s prophecy of the suffering servant.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/nephi-reads-isaiah-full.webp",
+        "sha256": "a01420112c5d28fe9f1373dcaede90ba898f835e502845539d919785f479ed0b",
+        "tone": "Nephi turns to the writings on the brass plates and reads Isaiah to his brothers, seeking to help them believe in the Lord their Redeemer.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/isaiah-call-full.webp",
+        "sha256": "07cdc6af731462f9a1aa8a621c2eab2ec6444c8453c0db7d02d5a685b01ec60e",
+        "tone": "In Isaiah’s vision, a seraph brings a live coal to his lips. After the assurance that his sin is purged, Isaiah offers himself for the Lord’s work.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/moroni-quotes-malachi-full.webp",
+        "sha256": "3137688878e07b020bf4fec1f1de17cd5436e5184bdd8ca230137d1d697c4677",
+        "tone": "In his account of the 1823 visit, Joseph remembers Moroni speaking of an ancient record and quoting biblical prophecies, including Malachi. The coming forth of the Book of Mormon is introduced within that scriptural setting.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/mosiah-engraved-stone-full.webp",
+        "sha256": "6ef7c7792fe9ae44652617d17371053cd54fe1d1fdbe5e3524bae8a04dcbf6f1",
+        "tone": "A large stone bearing engravings is brought to Mosiah. Omni says its account concerns Coriantumr and a people whose ancestors came from the tower when languages were confounded.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/christ-isaiah-nazareth-full.webp",
+        "sha256": "ccb8c152ded8f3b5f8de5d434db9584a94b762e030a0aa728002c81f7694984d",
+        "tone": "Standing in the synagogue, Jesus reads Isaiah’s words about good news, healing and deliverance. He then declares the scripture fulfilled in His listeners’ hearing.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/christ-wilderness-temptation-full.webp",
+        "sha256": "05d76392cdb4cc0de926013d7f678f003c1647a58e0496ad9078fb5ad918f0bb",
+        "tone": "Hungry after His fast, Jesus refuses the temptation to turn stones into bread. He answers with the words of Moses, trusting the Father rather than yielding.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/christ-roof-paralytic-full.webp",
+        "sha256": "e6d4f309f8d8c0ec256075f7631978539b58466f95272839d5540737737c051e",
+        "tone": "Unable to reach Jesus through the crowd, four people open the roof and lower the bed carrying a man who cannot walk. Jesus receives him, speaks forgiveness and commands him to rise.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/christ-sabbath-grainfield-full.webp",
+        "sha256": "d04937a111b886cc705baf1a8757396b398e2fab2786af6ea92cf9eb01f57af7",
+        "tone": "As His disciples pluck ears of grain, Jesus answers a question about the Sabbath. He recalls David’s experience and teaches His authority as Lord of the Sabbath.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
+      },
+      {
+        "asset": "assets/page-art/bible-together/christ-heals-servant-ear-full.webp",
+        "sha256": "41cb7819abfd86902668b9dbc263da7345d9b71d43cda23eb8b20d183d952914",
+        "tone": "During His arrest, Jesus touches and heals the servant’s right ear. Amid fear and confrontation, His response is an act of mercy.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/bible-together-art-review.json",
+        "width": 1536,
+        "height": 1024
       }
     ],
     "answers/settle-this-in-your-hearts.html": [
