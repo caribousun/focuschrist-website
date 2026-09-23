@@ -11,6 +11,6 @@
   "purpose_image_sha256": "c26cb18cf29e0794a587021764fb6149c692f5e272aedb353bb60f922fcd2017",
   "css_sha256": "3cf14d5cdf5a124430d13707e18377195c84be91707ab01b484228c5a04a1691",
   "layout": "Full-width panorama then teaching, 28px gap, caption outside artwork, no phone crop",
-  "browser_verification": "Pending root verification",
+  "browser_verification": "Root browser verification passed; see home-presentation-browser-review-20260923.json",
   "publication": "Not published"
 }
