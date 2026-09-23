@@ -9,7 +9,9 @@
     "D&C138messenger source corrected29-34",
     "Household invitation source corrected3Nephi17:2-3",
     "Sharedcommunity source corrected4Nephi1:2-3",
-    "All90source links select exact stated verses"
+    "All90source links select exact stated verses",
+    "Stand Forever caption shortened; exact Luke 10:38-42 source remains linked directly below.",
+    "Removed redundant unlinked scripture mentions from three linked-reference captions; exact linked verse selections immediately below remain unchanged. Root Mary repairs read back, edited HTML/receipt normalized LF."
   ],
   "records": [
     {
@@ -52,7 +54,7 @@
       "page": "answers/why-latter-day-saints-build-temples.html",
       "key": "rt-spirit-messengers",
       "owner": "/jesus-christ/restoration-and-today.html#picture-rt-spirit-messengers",
-      "caption": "The Savior sends messengers to teach in the spirit world. Continue with Joseph F. Smith’s vision in Doctrine and Covenants 138.",
+      "caption": "The Savior sends messengers to teach in the spirit world. Continue with Joseph F. Smith’s vision.",
       "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng&id=p29-p34#p29",
       "thumbnail": "assets/page-art/jesus-journey/rt-spirit-messengers-960.webp",
       "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
@@ -196,7 +198,7 @@
       "page": "answers/prayer-and-personal-revelation.html",
       "key": "martha-and-mary",
       "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-martha-and-mary",
-      "caption": "Mary listens while Martha brings her concern to Jesus. Return to His words in Luke 10.",
+      "caption": "Mary listens while Martha brings her concern to Jesus. Pause with them and hear His words.",
       "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p38-p42#p38",
       "thumbnail": "assets/page-art/jesus-journey/martha-and-mary-960.webp",
       "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
@@ -565,7 +567,7 @@
       "page": "answers/settle-this-in-your-hearts.html",
       "key": "mc-leper-touch",
       "owner": "/jesus-christ/miracles-and-compassion.html#picture-mc-leper-touch",
-      "caption": "Jesus reaches toward a man who has asked for healing. Read His compassionate response in Mark 1.",
+      "caption": "Jesus reaches toward a man who has asked for healing. Read His compassionate response.",
       "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/1?lang=eng&id=p40-p45#p40",
       "thumbnail": "assets/page-art/jesus-journey/mc-leper-touch-960.webp",
       "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
@@ -592,7 +594,7 @@
       "page": "answers/what-is-the-book-of-mormon.html",
       "key": "bn-hear-the-voice",
       "owner": "/jesus-christ/risen-savior-in-the-book-of-mormon.html#picture-bn-hear-the-voice",
-      "caption": "The people turn to listen at Bountiful. Follow their encounter with the risen Savior in 3 Nephi 11.",
+      "caption": "The people turn to listen at Bountiful. Follow their encounter with the risen Savior.",
       "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p1-p7#p1",
       "thumbnail": "assets/page-art/jesus-journey/bn-hear-the-voice-960.webp",
       "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
@@ -754,7 +756,7 @@
       "page": "answers/stand-forever.html",
       "key": "martha-and-mary",
       "owner": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-martha-and-mary",
-      "caption": "Mary listens while Martha brings her concern to Jesus. Return to His words in Luke 10.",
+      "caption": "Mary listens while Martha brings her concern to Jesus. Pause with them and hear His words.",
       "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/10?lang=eng&id=p38-p42#p38",
       "thumbnail": "assets/page-art/jesus-journey/martha-and-mary-960.webp",
       "review": "Approved as linked related study; scene/context and chronology boundaries preserved"
@@ -834,16 +836,16 @@
     "answers/grief-and-faith.html": "d83627af340c0c75e47dc66a8e24f13252c8f74982acb17174e587d904c909df",
     "answers/look-unto-me-doctrine-and-covenants-6-36.html": "c29a6d233118b4d34dc3a5d677b420e41eb0602927b2e5f850ead75e5f4fdd3c",
     "answers/melchizedek-priesthood-restoration.html": "7f97d9afb91404a100710624a3803f629853c365c4e704c3fd4530eda783da45",
-    "answers/prayer-and-personal-revelation.html": "cc088e42b226c70e6c86fda77ee4b92991080ddc768d5dda0ce74ce21de4834a",
+    "answers/prayer-and-personal-revelation.html": "7fbd4f6f4e9106389be05c88a7edeffc4c720d9f65d1842efaab5d4fe3d48e5a",
     "answers/restored-church-of-jesus-christ.html": "9a3b0c334ce05f58aabbbfd18432744f28b39fc3019904e8949d9df2f986096c",
-    "answers/settle-this-in-your-hearts.html": "915cc8761a018a0f928b03b5dcb1a50277b44cc911af2b3b9901b4ab410f28b8",
-    "answers/stand-forever.html": "fec25b16e2facdda91efa3693fc54f0f5d250c1ba919da81f973a03c4d180087",
+    "answers/settle-this-in-your-hearts.html": "c66a4abeebfc0f38d3a02a85ed1bb939e16f116b3e5e34d20af0efefb32209c5",
+    "answers/stand-forever.html": "2c23b00deb10f43aec3ce9f294c003f0424f7219583dc1bd2e14b4ca46a17a61",
     "answers/what-happens-after-death.html": "ea06a7b8eafde1de8837d78f270f0a9928ab096ca939af2e2d96c68978db24ca",
     "answers/what-is-eternal-marriage.html": "25dd2f0bf4145fed4bfbcc65cb820b6529a772bb9d5a47f2ad25d0790174738c",
-    "answers/what-is-the-book-of-mormon.html": "e8b94bd366aa5a0755ce68933422dd5bcf4b93bf2d8a14ea2864f77f43180b4d",
+    "answers/what-is-the-book-of-mormon.html": "c2b55e53624084d72c24e5f91358d126dcc543500be71c28b0645ac17207f1a1",
     "answers/who-was-joseph-smith.html": "a55fed8e8b049ac907c60a5436d68747fc2565314ca9a7e8a9d7a4e7e56657f6",
     "answers/why-families-are-important.html": "bfa085381ba0a1fbe5651dc76d5e9553d15a670285b2581771a783f5dff08bf6",
-    "answers/why-latter-day-saints-build-temples.html": "bbf03b04d8126dd4ca8922a5549fa4678d64aa4d0c762b4955ce1c8050de9976",
+    "answers/why-latter-day-saints-build-temples.html": "d9b5307870fc77d6b2df6c2534ff2f5e8a1bbc07eb9e74d127472b997daa208c",
     "atonement.html": "8393c3d3a44b0bffcee07fe9dd67bb5f5806121a8c566f35fca87ba19350187e",
     "church-history.html": "82ce1e7fcaf16dcd7c76c578232453dcffe74ec4164f9fb8576c77f3e011f72e",
     "come-follow-me.html": "616bb6eef5f8ae8379eb6404feb3c6f4cde4fe2954c5d4ab9f971cd92db00710"
