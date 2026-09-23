@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "status": "pass",
+  "reviewer": "independent saved_art_review agent",
+  "baselineCommit": "0c1a128074455293c59d2ee10591e53e842be87f",
+  "reviewedAtUtc": "2026-09-23T20:53:27.827072+00:00",
+  "publishedTextHashes": {
+    "watch.html": "569130a1df79b94bbd5db0db8145827cf2c61e24f811ac07cb330d5b144d56c9",
+    "index.html": "f0dd70b1df4688b02cec1998a60d5a848f71856020bb280b4fe4a8a6b8940257"
+  },
+  "preservationEvidence": [
+    "Watch baseline reconstruction passed before final body-class addition: removing new Shorts block/assets and restoring source-note paragraph recovered all original bytes. Final body class fc-watch-shorts is the sole additional markup change; all20 prior Church entries, hero/opening and source markup retained.",
+    "Home original three figures, hero, opening and dialogs retain exact markup. Nine preview hrefs now open owning page top; owner_anchor retains exact reference provenance.",
+    "Home CFM primary label Explore Come Follow Me and Atonement aria label now accurately describe page-top navigation.",
+    "Final narrow enlargement fix adds only fc-watch-shorts body class and body.fc-watch-shorts overflow-wrap:anywhere. Existing hero/opening element markup unchanged; text wrapping may break long words at narrow enlarged widths."
+  ],
+  "editorialReview": [
+    "All four descriptions are plain, warm invitations based on verified titles and speaker labels; they contain no purported quotation, expanded history or unsupported detailed talk summary.",
+    "Shorts section is expressly an independent channel selection; Church collection source note distinguishes the official media below.",
+    "Latest selection has a visible checked date and channel link; no automatic synchronization claim.",
+    "Root supplied actual channel Latest-tab identity/order evidence; reviewer did not independently replay or authenticate complete talks.",
+    "Four added Watch Short text triggers accurately describe the same video actions; cover thumbnails no longer carry text-obscuring overlays. No other substantive source copy changed."
+  ],
+  "videoIdentitySources": [
+    "https://www.youtube.com/shorts/OSgN-cSJOPs",
+    "https://www.youtube.com/shorts/5g-I2nbz2d4",
+    "https://www.youtube.com/shorts/wRLfRFzUCEA",
+    "https://www.youtube.com/shorts/V_-RkAMO1uU"
+  ],
+  "sourceEvidenceClass": "Root actual-browser channel metadata plus independent editorial and preservation review; existing Church-source approvals retained",
+  "limitations": [
+    "Root reports actual local provider embed did not initialize; visible poster and direct-link fallback were verified. Mock runtime tests do not prove live playback.",
+    "Root owns browser geometry, deployment and final public verification.",
+    "Channel metadata/order evidence supplied by root actual browser; no independent complete-talk-content certification."
+  ],
+  "priorSemanticTextHashes": {
+    "watch.html": "00882550a151ecee2b26059423181d1e5a0d1f29ea1985650e0e30c574f57679",
+    "index.html": "f0dd70b1df4688b02cec1998a60d5a848f71856020bb280b4fe4a8a6b8940257"
+  },
+  "reviewedFiles": {
+    "watch.html": "95d48d8b5df03d7f7b90c711038350ceb81b5ff0f6e5fab6c149117151e6c8eb",
+    "index.html": "67e2286efba3ff0cc0d5c8b095523ada042cdd41291c869204cd6518d83c6396",
+    "watch-shorts.css": "b1e9532be08a53af11b82cd49bad11b732c4b91ac678c151a02f437a0bfb43d4",
+    "watch-shorts.js": "ece44b2455161f51aa9500b1baaad0709ad97e13737553a288db84f9b2abe775",
+    "docs/watch-shorts.json": "cd45e2d707a20d59bf175fc915cbd589f1a11e7f778cf35e6f747d2ce002a335",
+    "tools/build_watch_shorts.py": "1f73a30f9d91d06b8ad7e13a5f3faae389f9a266c1692d6a8226fd73930f228c",
+    "tools/watch_shorts_qa.py": "de352b8bc639d41e988eb5b6e75bd2f125b365ebf05c5529c2a5685ff94d5f9d",
+    "tools/watch_shorts_runtime_qa.js": "928b32418cf0858faa34e50a65e35704f43e051358ffff2a63c919a382d0b57e",
+    "tools/sitewide_artwork_review_qa.py": "0411eb5ae4b72aa922bf2d5a3854f6432013b609e618316d77fb413238e0aaf4",
+    ".github/workflows/site-qa.yml": "586a505de941e08a92f53ab6ff72496065bfdfefb365a2086cf7eb4a70ecfc92",
+    "docs/watch-shorts-publishing.md": "45109f16e2855f5c3e1197c224b9465c24ceba8f3f810b0509c8748d398909eb",
+    "site-common.js": "871372f294e8cb69cae38ffbd904f8d41c094b602f272b17175e94671e7176ca",
+    "study-journey.js": "b512bf075f6ae7584253c65fe91ff98e5b3ecf2312d2ef56280756c6e077a8ff",
+    "tools/hardened_experience_qa.py": "9e36cad4b2f422a60b3e9da6a7800f78b49270a9a657778dbdd1988a73f1014d"
+  },
+  "cssAndCodeReview": [
+    "Styles scoped to .watch-shorts plus final body.fc-watch-shorts long-word wrapping. Portrait9:16 media contains native thumbnails without crop; responsive4/2/1columns. No hero geometry or other page selectors.",
+    "Exact stylesheet SHA and single Watch owner guard with modified-byte, other-HTML, CSS-import and JavaScript-reference negative fixtures; existing guards retained.",
+    "Player API initializes only after explicit click; poster remains until ready. One active player, Close/focus return, stale callback protection,15second timeout and direct YouTube alternatives inspected.",
+    "Builder validates four distinct IDs, matching YouTube thumbnail origins and escapes copy; --check refuses stale output without writing.",
+    "Publishing guide requires actual public Latest verification after approved publication; explicitly no unattended sync or new publishing authorization.",
+    "Four Python fixtures and offline official API runtime tests are meaningful regression evidence, not authentication of provider playback. Workflow adds their two invocations only.",
+    "Reviewed final page-scoped body wrapping rule; no font, hero or image geometry property introduced. Exact CSS guard refreshed after this narrow addition.",
+    "Final Home runtime fix independently reviewed: shared Ask rewriting exempts only Home purpose pathway cards; explicit intro Ask-form link and contextual Ask behavior elsewhere remain intact. site-common dynamic loader and Home script version use matching opaque revision20260924-home-page-entry-1. Hardened gate checks both intended routes."
+  ],
+  "tests": [
+    "Watch Shorts Python4testsPASS",
+    "Watch Shorts runtime official API mocked callback/timer scenarios PASS",
+    "Sitewide artwork self-test PASS",
+    "Full artwork audit118pages19heroes842protectedimages0errors",
+    "Independent JSDOM Home/non-Home fixtures pass: Home card plain ask.html, intro explicit form preserved, other content and non-Home card still contextual. Hardened experience gate PASS."
+  ],
+  "ledgerNote": "Final runtime/cache-only change does not change published text hash; Home ledger current hash verified without unnecessary new prior_review nesting. Existing chain preserved."
+}

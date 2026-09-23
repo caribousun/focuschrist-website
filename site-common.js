@@ -811,7 +811,7 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260909-openai-only-2'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260924-home-page-entry-1'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
