@@ -517,3 +517,22 @@
     .watch-mini-play { left: 50%; top: 75px; transform: translate(-50%, -50%); }
     .watch-mini-copy { min-height: 0; justify-content: flex-start; }
 }
+
+/* Featured captions remain in flow when enlarged text needs more height. */
+@media (max-width:600px) {
+    .watch-featured-media {
+        min-height: 0;
+        padding: 220px 18px 20px;
+        background-color: #102f3b;
+        background-size: 100% 220px, 100% auto;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+    .watch-featured-media .watch-play { top: 110px; }
+    .watch-featured-media .watch-media-copy {
+        position: relative; left: auto; right: auto; bottom: auto;
+    }
+    .watch-featured-media .watch-media-label {
+        max-width: 100%; box-sizing: border-box; white-space: normal; overflow-wrap: anywhere;
+    }
+}

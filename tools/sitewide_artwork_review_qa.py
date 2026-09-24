@@ -103,7 +103,7 @@ class Tags(HTMLParser):
     def handle_starttag(self, tag, attrs): self.tags.append((tag,dict(attrs)))
 
 # Exact owner-requested narrow title/mini-card appendices; original CSS preserved.
-NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4785, 'base_sha256': '1d0a269872a48abb56893da0fe38c855295f47a5ace6989d56e2751b5267ebaf', 'sha256': '2ee2f7509919e1d9f82eef0f95ffb2dd38abda837cea0713d8d6151b7ea61c0a'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'f65206ece31fc52ec4eeff680cc22f788ddce59bb0499f3e0de204a2256719e7'}}
+NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4785, 'base_sha256': '1d0a269872a48abb56893da0fe38c855295f47a5ace6989d56e2751b5267ebaf', 'sha256': '2ee2f7509919e1d9f82eef0f95ffb2dd38abda837cea0713d8d6151b7ea61c0a'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
 def reviewed_narrow_reading_style(name, data):
     entry=NARROW_READING_STYLES.get(name)
     return bool(entry and hashlib.sha256(data).hexdigest()==entry["sha256"]

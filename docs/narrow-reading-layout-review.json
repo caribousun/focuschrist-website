@@ -7,11 +7,16 @@
   "watch-experience.css": {
     "base_bytes": 12132,
     "base_sha256": "3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53",
-    "sha256": "f65206ece31fc52ec4eeff680cc22f788ddce59bb0499f3e0de204a2256719e7"
+    "sha256": "ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e"
   },
   "version": "20260924-narrow-reading-1",
   "consumer_counts": {
     "site-search.css": 120,
     "watch-experience.css": 1
+  },
+  "watch_featured_caption": "At<=600px caption enters normal flow below reserved picture/play space; original image URL and desktop rules unchanged.",
+  "consumer_versions": {
+    "site-search.css": "20260924-narrow-reading-1",
+    "watch-experience.css": "20260924-narrow-reading-2"
   }
 }

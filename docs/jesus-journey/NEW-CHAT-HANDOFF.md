@@ -1,5 +1,13 @@
 # Jesus Christ journey — new-chat handoff
 
+## Current checkpoint: site-wide presentation release PR379
+
+Wyatt explicitly requested production presentation uniformity across the whole site, using the Home three-panel section and History as references. PR379 covers all119 canonical pages through shared panel/control inventories, clearer chapter guidance, neutral brief-sensitive-topic Ask choices, and narrow-screen readability. All approved artwork and saved originals remain unchanged. Site-wide means the complete119-page rendered check at desktop, phone, and320px enlarged text, combined with actual browser review of shared page families; do not describe representative screenshots as manual inspection of every page.
+
+The release is being finalized on fix/ask-welcome-chapter-controls. The latest full scan passed356 of357 checks; its remaining Watch featured-card caption clipping is under correction. Do not infer production completion from this checkpoint. The current verified release status, exact commit, deployment runs, regular public-byte checks and public interaction checks are recorded in parent work/panel-ask-20260923/release-receipt.json. Finish any outstanding entries there before claiming completion. The approved panel mandate is docs/section-panel-design-mandate.md, with structural inventories and independent reviews alongside it. Master foundation and paused automation remain unchanged.
+
+This checkpoint supersedes historical completion/pending notes below for the current owner request.
+
 ## Owner artwork correction: Abraham hand laterality
 
 Wyatt identified an incorrectly right-handed hand on the Savior left arm in ac-abraham-eyes. Corrected v3 original and versioned full/thumbnail derivatives preserve the scene and approved likeness; prior originals and derivatives are retained. Root and Newton independently reviewed actual pixels against the approved reference. Thumb now emerges below four fingers, with continuous left wrist and eyes covered while nose and mouth remain free. Root desktop/390px picture-study/full-size/close/Continue checks pass; source/caption/layout unchanged. Branch fix/abraham-left-hand; release verification receipt will be in parent work/abrahamic-covenant-20260923/hand-correction/release-receipt.json when complete.
