@@ -41,6 +41,12 @@ bible_entries=bible_manifest.get('artworks',[])
 bible_review={e['asset']:e for e in bible_entries}
 assert len(bible_entries)==len(bible_review)==13 and len({e['key'] for e in bible_entries})==13, 'Bible together requires thirteen distinct reviewed supporting originals'
 bible_assets=[]
+covenant_manifest=json.loads((ROOT/'docs/abrahamic-covenant/art-review.json').read_text(encoding='utf-8'))
+covenant_entries=covenant_manifest['artworks']
+covenant_review={record['asset']:(key,record) for key,record in covenant_entries.items()}
+assert len(covenant_entries)==len(covenant_review)==12, 'Covenant requires exactly twelve distinct reviewed originals'
+assert all(key.startswith('ac-') and record['owner']=='/answers/abrahamic-covenant.html' for key,record in covenant_entries.items()), 'Covenant review ownership mismatch'
+covenant_assets=[]
 settle_assets=[]
 bom_assets=[]
 opening_assets=[]
@@ -66,7 +72,21 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname=='www.churchofjesuschrist.org'] if cap else []
   if not sources and 'data-topic-study' not in a.attrs and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
   relative_asset=local_asset(page,a.attrs['href']).relative_to(ROOT).as_posix()
-  if 'data-journey-art' in container.attrs:
+  if relative_asset in covenant_review or (page.name=='abrahamic-covenant.html' and 'data-exclusive-artwork' in container.attrs):
+   assert relative_asset in covenant_review, 'Covenant picture missing from its exact review manifest'
+   key,record=covenant_review[relative_asset]
+   assert '/'+page.relative_to(ROOT).as_posix()==record['owner']=='/answers/abrahamic-covenant.html', 'Covenant artwork on wrong page'
+   assert record['review_status']=='pass' and record['owner_approved'] is False, 'Covenant technical review must remain separate from owner approval'
+   assert record['independent_review']['review_status']=='pass' and record['independent_review']['sha256']==record['original_sha256'], 'Covenant independent original review mismatch'
+   assert container.attrs.get('data-exclusive-artwork')==key, 'Covenant figure key differs from review'
+   assert hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['asset_sha256'], 'Covenant artwork changed since review'
+   images=[n for n in a.walk() if n.tag=='img']
+   assert len(images)==1 and local_asset(page,images[0].attrs['src']).relative_to(ROOT).as_posix()==record['thumbnail'], 'Covenant thumbnail differs from review'
+   assert hashlib.sha256((ROOT/record['thumbnail']).read_bytes()).hexdigest()==record['thumbnail_sha256'], 'Covenant thumbnail changed since review'
+   assert a.attrs.get('aria-haspopup')=='dialog', 'Covenant picture must bind the shared study adapter'
+   assert {s['url'] for s in record['sources']} <= {n.attrs.get('href') for n in sources}, 'Covenant exact picture sources missing'
+   covenant_assets.append(relative_asset)
+  elif 'data-journey-art' in container.attrs:
    key=container.attrs['data-journey-art'];record=journey_review[key]
    assert record['owner']==page.relative_to(ROOT).as_posix(), 'Journey artwork ownership mismatch'
    assert record['reviewed'] and record['asset']==relative_asset, 'Journey artwork registry mismatch'
@@ -142,9 +162,10 @@ assert len(focused_assets)==4 and set(focused_assets)==set(focused_review), 'Foc
 assert len(relocated_assets)==6 and {Path(a).stem for a in relocated_assets}==relocated_names, 'Preserved historical artwork inventory mismatch'
 assert len(settle_assets)==14 and set(settle_assets)==set(settle_review), 'Settled faith exact body inventory mismatch'
 assert len(bible_assets)==13 and len(set(bible_assets))==13 and set(bible_assets)==set(bible_review), 'Bible together exact body inventory mismatch'
+assert len(covenant_assets)==len(set(covenant_assets))==12 and set(covenant_assets)==set(covenant_review), 'Covenant exact body inventory mismatch'
 expected_journey={k for k,v in journey_review.items() if v['owner'].startswith('answers/')}
 assert len(journey_assets)==len(set(journey_assets)) and set(journey_assets)==expected_journey, 'Journey parent exact artwork inventory mismatch'
-assert (count-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert (count-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert panels==12,panels

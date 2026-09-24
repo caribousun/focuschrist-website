@@ -20,12 +20,28 @@ HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d6
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = '68f2abf3d0fa65b2e87c6a8bd3798dd8dfb1a1e522e7f3d5b14dc810d1f90978'
+ANSWERS_FEATURED_STYLE_SHA256 = 'de2377eee172c2d194982cca5d2c29cba0b10c7f1f2785dffac12913ba4d8f59'
+# Owner-requested adjacent Atonement and Jesus links. Only these three rules in
+# the exact reviewed stylesheet qualify; the 700px stack is pinned by its hash.
+ANSWERS_FEATURED_RULES = {
+    '.fc-answers-jumps .fc-answers-featured-pair': {
+        'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;flex:1136rem;min-width:0;',
+        'grid-template-columns:minmax(0,1fr);',
+    },
+    '.fc-answers-jumps .fc-answers-featured-pair > a': {
+        'width:100%;max-width:none;min-width:0;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere;height:auto;line-height:1.5;',
+    },
+}
+
+def reviewed_answers_featured(selector, body, data):
+    return (re.sub(r'\s+', '', body) in ANSWERS_FEATURED_RULES.get(selector.strip(), set())
+            and hashlib.sha256(data).hexdigest() == ANSWERS_FEATURED_STYLE_SHA256)
 
 def reviewed_art_reflection(selector, body, data):
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) and len(consumers) == 119
+    return (set(consumers) == set(expected) and len(consumers) == 120
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 def reviewed_mission_enrichment_style(data):
@@ -94,12 +110,20 @@ def unique_reviewed(heroes, rejected):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     if args.self_test:
+        answers_css = (ROOT/'answers-hero.css').read_bytes()
+        for selector, bodies in ANSWERS_FEATURED_RULES.items():
+            for body in bodies:
+                assert reviewed_answers_featured(selector, body, answers_css)
+                assert not reviewed_answers_featured('.unknown-selector', body, answers_css)
+                assert not reviewed_answers_featured(selector, body + 'height:9px;', answers_css)
+                assert not reviewed_answers_featured(selector, body, answers_css.replace(b'max-width: 700px', b'max-width: 900px'))
+                assert not reviewed_answers_featured(selector, body, answers_css + b'\n.fc-visual-hero{height:9px}')
         good=[{'key':'a','source_sha256':'1'*64,'sha256':'2'*64},{'key':'b','source_sha256':'3'*64,'sha256':'4'*64}]
         assert not unique_reviewed(good,set())
         duplicate=[good[0],dict(good[1],source_sha256='1'*64)]
         assert any('duplicate source_sha256' in e for e in unique_reviewed(duplicate,set()))
         assert any('rejected sha256' in e for e in unique_reviewed(good,{'2'*64}))
-        wrap_expected = [f'page-{i}.html' for i in range(119)]
+        wrap_expected = [f'page-{i}.html' for i in range(120)]
         wrap_good = {name: ['site-system.css?v=current'] for name in wrap_expected}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
@@ -144,12 +168,13 @@ def main():
         assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
         assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
         journey_css = (ROOT/JOURNEY_STYLE).read_bytes()
-        owners = {'answers/jesus-christ-latter-day-saint-beliefs.html','jesus-christ/before-bethlehem.html','birth-of-christ.html'}
+        owners = {'answers/jesus-christ-latter-day-saint-beliefs.html','jesus-christ/before-bethlehem.html','birth-of-christ.html','answers/abrahamic-covenant.html'}
         assert reviewed_journey_style(journey_css)
         assert not reviewed_journey_style(journey_css + b'\n.fc-topic-unique-hero{height:999px}\n')
         assert journey_style_reference_allowed('jesus-christ/before-bethlehem.html', JOURNEY_STYLE, owners)
         assert journey_style_reference_allowed('answers/jesus-christ-latter-day-saint-beliefs.html', JOURNEY_STYLE, owners)
         assert journey_style_reference_allowed('birth-of-christ.html', JOURNEY_STYLE, owners)
+        assert journey_style_reference_allowed('answers/abrahamic-covenant.html', JOURNEY_STYLE, owners)
         assert not journey_style_reference_allowed('index.html', JOURNEY_STYLE, owners)
         assert not journey_style_reference_allowed('answers/another-page.html', JOURNEY_STYLE, owners)
         assert not journey_style_reference_allowed('shared.css', '@import "'+JOURNEY_STYLE+'";', owners)
@@ -271,8 +296,8 @@ def main():
     journey_owners={p['url'].lstrip('/') for p in journey_pages}
     check(len(journey_owners)==76 and all(p.startswith('jesus-christ/') and p.endswith('.html') for p in journey_owners),
           'Journey stylesheet ownership differs from76 nested study pages')
-    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html'})
-    check(len(journey_owners)==78, 'Journey stylesheet must have exactly78 reviewed consumers')
+    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html','answers/abrahamic-covenant.html'})
+    check(len(journey_owners)==79, 'Journey stylesheet must have exactly79 reviewed consumers')
     check(sha(ROOT/row_style)=='7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941',
           'Reviewed complete card row stylesheet changed')
     check(sha(ROOT/settle_style)=='ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2',
@@ -337,7 +362,19 @@ def main():
     check(reviewed_mission_enrichment_style((ROOT/MISSION_ENRICHMENT_STYLE).read_bytes()), 'Mission enrichment stylesheet differs from exact reviewed bytes')
     excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
-    additions='\n'.join(line[1:] for line in diff.splitlines() if line.startswith('+') and not line.startswith('+++'))
+    added_lines=[]; added_file=None
+    for line in diff.splitlines():
+        if line.startswith('+++ b/'):
+            added_file=line[len('+++ b/'):]; continue
+        if not line.startswith('+') or line.startswith('+++'): continue
+        rule=line[1:]
+        matches=re.findall(r'([^{}]+)\{([^{}]*)\}',rule)
+        if added_file=='answers-hero.css' and len(matches)==1 and matches[0][0].strip() in ANSWERS_FEATURED_RULES:
+            check(reviewed_answers_featured(*matches[0], (ROOT/'answers-hero.css').read_bytes()),
+                  'Answers featured pair differs from exact reviewed selectors/properties/stylesheet bytes')
+            continue
+        added_lines.append(rule)
+    additions='\n'.join(added_lines)
     # Include newly created CSS before staging, too.
     for name in subprocess.check_output(['git','ls-files','--others','--exclude-standard','--','*.css'],cwd=ROOT,text=True).splitlines():
         if name not in excluded_styles:

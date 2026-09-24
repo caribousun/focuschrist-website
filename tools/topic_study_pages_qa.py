@@ -4,7 +4,11 @@ from pathlib import Path
 import re
 from urllib.parse import urlsplit, unquote, parse_qs
 from answer_study_qa import Document
+from focused_answers_qa import opening as validated_opening
+from abrahamic_covenant_qa import check as check_covenant, CHAPTERS as COVENANT_CHAPTERS
 ROOT=Path(__file__).resolve().parents[1]
+COVENANT='answers/abrahamic-covenant.html'
+FEATURED_JESUS='answers/jesus-christ-latter-day-saint-beliefs.html'
 def read(p):
  d=Document();d.feed(p.read_text(encoding="utf-8"));return list(d.root.walk())
 errors=[]
@@ -18,17 +22,19 @@ foundational={
 answer_paths=sorted((ROOT/'answers').glob('*.html'))
 for answer_path in answer_paths:
  answer_nodes=read(answer_path)
- assert any(n.tag=='body' and n.has('fc-topic-page') for n in answer_nodes),answer_path.name+': shared responsive topic-page contract'
+ body_class='fc-jesus-journey' if answer_path.relative_to(ROOT).as_posix()==COVENANT else 'fc-topic-page'
+ assert any(n.tag=='body' and n.has(body_class) for n in answer_nodes),answer_path.name+': shared responsive topic-page contract'
 study_destinations={
  'birth-of-christ.html',
  'general-conference.html', 'book-of-mormon-evidences.html',
  'joseph-smith-likeness.html', 'church-history.html', 'pioneers.html',
  'come-follow-me.html',
 }
-expected={p.relative_to(ROOT).as_posix() for p in answer_paths}|study_destinations
+expected=({p.relative_to(ROOT).as_posix() for p in answer_paths}-{FEATURED_JESUS})|study_destinations
 assert len(links)==28, 'Keep the owner-requested seven by four topic grid'
 featured=[n for n in nodes if n.has('fc-settle-featured')]
-assert len(featured)==1 and featured[0].attrs.get('href')=='atonement.html' and 'Featured Section:' in featured[0].text(), 'Atonement remains a visible featured destination'
+assert [(n.attrs.get('href'),n.text().strip()) for n in featured]==[('atonement.html','The Atonement of Jesus Christ'),(FEATURED_JESUS,'Jesus Christ')], 'Exact Atonement and Jesus featured destinations required'
+assert featured[0].parent is featured[1].parent and featured[0].parent.has('fc-answers-featured-pair'), 'Featured destinations must remain paired'
 assert len(links)==len(expected), 'topic directory must not duplicate destinations'
 assert {n.attrs['href'] for n in links}==expected, 'topic grid must cover every Answer and enriched study destination'
 for link in links:
@@ -42,9 +48,17 @@ for link in links:
   assert target is not None and any(n.tag in ('h2','h3') for n in target.walk()),href+': named study section exists'
  if p.parent!=ROOT/'answers':continue
  heading_label={'answers/god-our-heavenly-father.html':'God',
+                COVENANT:'The Abrahamic Covenant',
                 'answers/restored-church-of-jesus-christ.html':'The restored Church',
                 'answers/settle-this-in-your-hearts.html':'Settle This in Your Hearts'}.get(href,link.text().strip())
  assert headings[0].text().strip()==heading_label,href+': heading matches topic destination'
+ if href==COVENANT:
+  opening_nodes=[n for n in ns if n.has('jj-opening')]
+  assert len(opening_nodes)==1 and headings[0] in list(opening_nodes[0].walk()), 'Covenant requires its single journey title opening'
+  assert [n.attrs.get('id') for n in ns if n.has('jj-chapter')]==COVENANT_CHAPTERS, 'Covenant requires its exact ten reading chapters'
+  validated_opening(p,ns)
+  check_covenant()  # Exact twelve reviewed originals, hashes, owners, sources and study paths.
+  continue
  opening=next(n for n in ns if n.has('fc-topic-opening'))
  assert any(n.has('fc-visual-hero') for n in opening.walk()),href+': image in first screen'
  assert any(n.has('fc-page-intro') for n in opening.walk()),href+': title in first screen'

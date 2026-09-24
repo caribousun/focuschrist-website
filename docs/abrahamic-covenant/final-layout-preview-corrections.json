@@ -1,0 +1,26 @@
+{
+  "status": "pass-HTTP-decode-and-structure-pixel-view-pending-root",
+  "date": "2026-09-23",
+  "preview": {
+    "url": "https://www.churchofjesuschrist.org/imgs/0a4fa083f44711eea15beeeeac1e53a8a230b62e/full/!800,/0/default",
+    "http": 200,
+    "content_type": "image/jpeg",
+    "decoded_size": [
+      800,
+      450
+    ],
+    "identity": "Exact image srcset and alt on official Eyring media page",
+    "visual_limit": "Web open could not render image URL; root actual browser pixel inspection pending."
+  },
+  "checks": [
+    "No unused complete-card stylesheet",
+    "No duplicate explicit skip link",
+    "Reference jj-card with native aspect ratio and responsive width/height",
+    "Work renderer succeeds"
+  ],
+  "hashes": {
+    "teaching.json": "d54095679bfcf5a44bd4b54529a20388c191b1ac7e81d170ee0c3f79c7aebd2e",
+    "render-covenant.py": "3ae093644de737c5d2e8a75f288fceac3e226a4ab1aa5c860c193da5c80f7c59",
+    "abrahamic-covenant.draft.html": "11e010d6290c4fcb190a5998347906160aaf360bbcd59f2c2e3bc6bdee826376"
+  }
+}

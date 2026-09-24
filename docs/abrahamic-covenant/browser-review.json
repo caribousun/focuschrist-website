@@ -1,0 +1,62 @@
+{
+  "date": "2026-09-23",
+  "status": "local-browser-reviewed",
+  "page": "answers/abrahamic-covenant.html",
+  "page_sha256": "8700e17592688152393fd207fde8ce687ba47e146b069eeab1919e300159f962",
+  "originals": 12,
+  "christ_originals": 6,
+  "chapters": 10,
+  "phone": {
+    "viewport": [
+      390,
+      844
+    ],
+    "all_twelve": "Actual picture -> study -> full-size -> close -> Continue Lesson cycles passed; first picture recorded separately, remaining eleven in browser trace. Full native 3:2 composition retained.",
+    "jacob": "Older sleeping Jacob with coarse blanket and stone; dream figures distinct. Wrestling scene uses elderly Jacob and distinct unnamed opponent, reciprocal attention and grounded contact. Technical review only.",
+    "reference": "Corrected stretched reference image; final native800x533 rendered301.6x200.94. Open study reaches Life After Death #christ-in-third-nephi.",
+    "video": "Nelson preview loaded; initial Eyring og:image failed. Correct official responsive image URL now loaded800x450 and visually shows President Eyring seated speaking.",
+    "navigation": "Walked all ten chapters with Next chapter in this study; complete-study control reveals all ten; deep links select chapters."
+  },
+  "large_text": {
+    "viewport": [
+      320,
+      900
+    ],
+    "root_font_px": 32,
+    "chapters_tested": 10,
+    "horizontal_overflow": false,
+    "original_image_ratio": 1.5,
+    "reference_fix_rechecked_at_phone": true
+  },
+  "answers_directory": {
+    "widths": [
+      390,
+      700,
+      702,
+      768,
+      1366
+    ],
+    "requested_breakpoint_701_rendered_as": 702,
+    "topic_count": 28,
+    "featured_count": 2,
+    "overflow": false,
+    "large_text_320": "Both featured labels wrap without clipping; natural height retained."
+  },
+  "ask": "Contextual question uses warm prefill, preserves manual question, exact allowlisted chapter return, no automatic submission. Live public generic unwanted-desire and pornography-help questions both produced practical source-linked responses after PR376. No personal anecdote used.",
+  "limitations": [
+    "Browser checks supplement source and pixel reviews; they are not owner aesthetic approval.",
+    "Publication and exact public-byte checks remain separate release steps."
+  ],
+  "desktop": {
+    "viewport": [
+      1366,
+      900
+    ],
+    "chapters": 10,
+    "rail_px": 1040,
+    "overflow": false,
+    "originals_full_width_native_ratio": true
+  },
+  "scripture_reader": "Keyboard activation of Moses7:63-64 opened same-page reader with exactly two selected verses and correct source URL; close control present.",
+  "ask_return": "Actual contextual Return to Covenant study reached the exact chapter. Related study appeared for generic covenant question. Public production-Origin API answer independently source-verified; local answer service unavailable in browser."
+}

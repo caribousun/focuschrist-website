@@ -86,4 +86,35 @@ assert(jesusStudy && jesusStudy.url === 'answers/jesus-christ-latter-day-saint-b
 const griefStudy = window.focusChristSourceRouter.answerStudySourceForQuestion('How can I support someone grieving after the death of a child?');
 assert(griefStudy && griefStudy.url === 'answers/death-of-a-child.html', 'specific child-loss question did not win its internal Answers study match');
 assert(!window.focusChristSourceRouter.answerStudySourceForQuestion('Why is the sky blue?'), 'unrelated question received an internal Answers study link');
+for (const query of ['What is the Abrahamic covenant?', 'How does the covenant of Abraham bless families?', "What is Abraham's covenant?", 'What is Abraham’s covenant?', "What does Jacob's ladder teach?", 'Explain Jacob’s ladder', 'Why did Jacob wrestle with God?', 'What does Jacob wrestling at Peniel mean?']) {
+    const related = window.focusChristSourceRouter.answerStudySourceForQuestion(query);
+    assert(related && related.url === 'answers/abrahamic-covenant.html', 'covenant query omitted its permanent study: ' + query);
+    assert(fs.existsSync(related.url), 'covenant related study must resolve to a published local page');
+}
+for (const query of ['How was the Book of Abraham translated?', 'What happened to the Book of Abraham papyri?', 'What did Joseph Smith say about the Book of Abraham?', 'Tell me about Abraham Lincoln', 'What does the Book of Mormon prophet Jacob teach?']) {
+    const related = window.focusChristSourceRouter.answerStudySourceForQuestion(query);
+    assert(!related || related.url !== 'answers/abrahamic-covenant.html', 'unrelated Abraham or Jacob query acquired a covenant study: ' + query);
+}
+assert(window.focusChristSourceRouter.isChurchHistoryQuestion('How was the Book of Abraham translated?'), 'Book of Abraham history must preserve its historical routing');
+const routerVersion = 'study-source-router.js?v=20260923-covenant-study-1';
+for (const page of ['ask.html', 'pioneers.html', 'church-history.html']) {
+    const tags = fs.readFileSync(page, 'utf8').match(/<script\b[^>]*study-source-router\.js[^>]*>/g) || [];
+    assert(tags.length === 1 && tags[0].includes(routerVersion), 'router consumer version or count differs: ' + page);
+    if (page !== 'church-history.html') assert(tags[0].includes('data-focuschrist-source-router'), 'dynamic router page lacks duplicate guard marker: ' + page);
+}
+const journeySource = fs.readFileSync('study-journey.js', 'utf8');
+assert(journeySource.includes("appendDynamicScript('" + routerVersion + "', 'data-focuschrist-source-router')"), 'router fallback version differs from explicit consumers');
+const appendRouter = journeySource.match(/function appendDynamicScript\(src, marker\) \{[\s\S]*?\n    \}/)[0];
+for (const existing of [true, false]) {
+    let tagged = existing;
+    const inserted = [];
+    const context = { console, document: {
+        querySelector(selector) { assert(selector === 'script[data-focuschrist-source-router]', 'unexpected duplicate check'); return tagged ? {} : null; },
+        createElement(tag) { assert(tag === 'script', 'unexpected loader element'); return { setAttribute(name) { assert(name === 'data-focuschrist-source-router', 'unexpected marker'); }, addEventListener() {} }; },
+        body: { appendChild(script) { inserted.push(script.src); tagged = true; } }
+    } };
+    vm.runInNewContext(appendRouter + '\nappendDynamicScript(' + JSON.stringify(routerVersion) + ', "data-focuschrist-source-router");\nappendDynamicScript("study-source-router.js?v=20260923-self-help-1", "data-focuschrist-source-router");', context);
+    assert(inserted.length === (existing ? 0 : 1), 'current or cached wrapper duplicated the explicit router');
+    if (!existing) assert(inserted[0] === routerVersion, 'fallback did not install current router');
+}
 console.log('Source integrity runtime QA PASS');

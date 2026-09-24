@@ -10,6 +10,7 @@
     "about.html",
     "answers.html",
     "answers/aaronic-priesthood-restoration.html",
+    "answers/abrahamic-covenant.html",
     "answers/are-latter-day-saints-christian.html",
     "answers/bible-and-book-of-mormon-together.html",
     "answers/death-of-a-child.html",
@@ -150,5 +151,6 @@
     "Exact119consumer list and exact cachequeryversion verified.",
     "Negative fixtures reject missingconsumer, extraconsumer, staleversion and versionprefixsuffix.",
     "Sitewide guard selftest passes; full118canonicalpages19heroes842protectedimages audit zeroerrors."
-  ]
+  ],
+  "covenant_addendum": "The new covenant page consumes the same reviewed stylesheet and cache version; no shared CSS change. Responsive browser review recorded separately with the covenant release."
 }

@@ -145,7 +145,7 @@
 
     function loadVerifiedSourceRouter() {
         const path = window.location.pathname.toLowerCase();
-        if (path.endsWith('/ask.html') || path.endsWith('/pioneers.html')) appendDynamicScript('study-source-router.js?v=20260923-self-help-1', 'data-focuschrist-source-router');
+        if (path.endsWith('/ask.html') || path.endsWith('/pioneers.html')) appendDynamicScript('study-source-router.js?v=20260923-covenant-study-1', 'data-focuschrist-source-router');
     }
 
     function loadArtStudyRouter() {

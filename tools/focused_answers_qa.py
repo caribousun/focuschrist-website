@@ -28,6 +28,25 @@ def local(page, url):
 
 def opening(page, nodes):
     heroes = [n for n in nodes if n.tag == 'a' and 'data-hero-viewer' in n.attrs]
+    if page.relative_to(ROOT).as_posix() == 'answers/abrahamic-covenant.html':
+        assert not heroes and not any(n.has('jj-hero') for n in nodes), 'Covenant must retain its chapter-first opening'
+        chapter = next(n for n in nodes if n.attrs.get('id') == 'a-promise-to-live-by')
+        figures = [n for n in nodes if n.tag == 'figure' and 'data-exclusive-artwork' in n.attrs]
+        assert figures and figures[0].attrs['data-exclusive-artwork'] == 'ac-baptism-belonging', 'Covenant first illustration changed'
+        figure = figures[0]
+        assert figure.parent is chapter, 'Covenant opening picture must belong directly to its first chapter'
+        preceding = chapter.children[:chapter.children.index(figure)]
+        reading = [n for n in preceding if n.has('jj-reading')]
+        assert len(reading) == 1 and len(reading[0].text().split()) <= 100, 'Covenant opening requires one short introductory paragraph'
+        record = json.loads((ROOT/'docs/abrahamic-covenant/art-review.json').read_text(encoding='utf-8'))['artworks']['ac-baptism-belonging']
+        assert record['owner'] == '/answers/abrahamic-covenant.html' and record['review_status'] == 'pass', 'Covenant opening review ownership mismatch'
+        assert record['independent_review']['review_status'] == 'pass' and record['independent_review']['sha256'] == record['original_sha256'], 'Covenant opening independent review missing'
+        anchor = next(n for n in figure.children if n.tag == 'a')
+        asset = local(page, anchor.attrs['href'])
+        assert asset.relative_to(ROOT).as_posix() == record['asset'], 'Covenant opening asset differs from review'
+        assert hashlib.sha256(asset.read_bytes()).hexdigest() == record['asset_sha256'], 'Covenant opening changed since review'
+        assert anchor.attrs.get('aria-haspopup') == 'dialog', 'Covenant opening study adapter missing'
+        return asset
     if heroes:
         assert len(heroes) == 1, f'{page.name}: duplicate hero'
         return local(page, heroes[0].attrs['href'])
