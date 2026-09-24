@@ -22,7 +22,7 @@ body.fc-watch-shorts { overflow-wrap: anywhere; }
 .watch-shorts .watch-short-stop:focus-visible { outline: 3px solid #102a35; outline-offset: -6px; }
 .watch-shorts a:focus-visible, .watch-shorts button:focus-visible { outline: 3px solid var(--fc-gold-light, #f2d188); outline-offset: -4px; }
 .watch-shorts .watch-shorts-updated { margin-block: 20px 0; font-size: .9rem; }
-@media (max-width: 600px) { .watch-shorts .watch-shorts-grid > .watch-short { flex-basis: 320px; width: 320px; } }
+@media (max-width: 600px) { .watch-shorts .watch-shorts-grid > .watch-short { flex-basis: 100%; width: 100%; } }
 
 .watch-shorts-more { margin-block: 20px; }
 .watch-shorts-more > summary { display: flex; cursor: pointer; width: fit-content; max-width: 100%; white-space: normal; margin-inline: auto; }
