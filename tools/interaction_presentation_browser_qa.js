@@ -54,6 +54,7 @@ module.exports = async function checkInteractionPresentation(page, origin, route
     for (const [route, selector] of cases) {
       await page.emulateMedia({reducedMotion:'no-preference'});
       await page.goto(origin+'/'+route,{waitUntil:'load'});
+      if (selector === '.jj-local-nav a') await page.locator('.jj-chapter-picker > summary').click();
       const target=page.locator(selector).first();
       await target.hover();
       await page.waitForTimeout(240);
