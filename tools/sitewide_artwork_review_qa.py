@@ -14,7 +14,7 @@ MISSION_ENRICHMENT_STYLE_SHA256 = 'e40315cfc4994ba862cd7bf3c1d4f0fa77db5bd1ba59d
 WATCH_SHORTS_STYLE = 'watch-shorts.css'
 # Owner-requested three-Short disclosure; centered 310px cards and controls,
 # independently checked on desktop and enlarged phone text. Exact Watch-only bytes.
-WATCH_SHORTS_STYLE_SHA256 = 'c0d41548d4fe042836216c49f99e804a95ecbbd72973ee354557f6b5e859b26e'
+WATCH_SHORTS_STYLE_SHA256 = '1feb6892f74ca30d8ec52af3f76e8da197d2bac2cc61716838cf87fe6efd24b6'
 HOME_STYLE = 'home-presentation.css'
 HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
 HOME_STYLE_OWNER = 'index.html'
