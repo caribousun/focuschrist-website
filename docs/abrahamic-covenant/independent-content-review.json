@@ -4,11 +4,11 @@
   "status": "pass",
   "scope": "Independent public integration source/copy/structure review, no browser or new pixel approval",
   "hashes": {
-    "answers/abrahamic-covenant.html": "b1d4d65d03ef01ee496863e4d917d3c245c6310ce5be48ec5511f16bd01d542d",
+    "answers/abrahamic-covenant.html": "b1166b7c02f1460e3192e6c63ae3d78a91b5c9c23e81544c7ae713ba8035d144",
     "art-ask-context.js": "a652a5c3d8368108c1a8724324269eadb476d4c79d789dfc6eeed488af2ecfb2",
     "tools/abrahamic_covenant_qa.py": "78e5cfba773cced409ac20ee9e1f5268b44242a79285cd66675b5610cd4f3b80",
     "tools/watch_context_runtime_qa.js": "3ee5eda471f17c9d190ebde0c16cf1621d1e7be6fe707e01eea4f6d8b32802fa",
-    "docs/abrahamic-covenant/art-review.json": "878604011562835dac89c95086521eb95a7b7bd4f9103c5001f356f3c464b49a"
+    "docs/abrahamic-covenant/art-review.json": "387df79d464546eb2dc69cdf1588b4006e54d54044e54781e3bdc9bee614b49b"
   },
   "reviewed_evidence": [
     "WORK/abrahamic-covenant-20260923/final-canon-enrichment-review.json",
@@ -90,5 +90,12 @@
     "details": "Only final HTML difference is site-common.js cache revision from 20260923-jesus-nested-1 to 20260923-covenant-nav-1. DOM structure, all visible wording, assets and destinations unchanged. Shared controller adds only the exact Abrahamic Covenant current-topic label; existing page behavior untouched. Exact featured pair/grid and covenant journey validation, two reviewed resource records and source-router cache inventory independently inspected.",
     "published_text_sha256": "9459b1af689b6916e0d744c63f3e543079b824c3601057e44e02301e75eb1764",
     "browser_limit": "Prior visual evidence carried forward for unchanged composition; current-topic label tested by navigation runtime, not fresh pixel review."
+  },
+  "hand_correction": {
+    "prior_page_sha256": "b1d4d65d03ef01ee496863e4d917d3c245c6310ce5be48ec5511f16bd01d542d",
+    "current_page_sha256": "b1166b7c02f1460e3192e6c63ae3d78a91b5c9c23e81544c7ae713ba8035d144",
+    "change": "Only this artwork full/thumbnail paths changed; no wording, sources, controls, geometry or other artwork changed.",
+    "independent_pixel_review": "Newton; ac-abraham-eyes-v3-independent-review.json; approved Christ reference viewed.",
+    "browser_status": "Root verified corrected thumbnail and full-size pixels, detail/full-size/close/Continue at desktop and390px phone; no horizontal overflow; same caption and source."
   }
 }

@@ -1,5 +1,9 @@
 # Jesus Christ journey — new-chat handoff
 
+## Owner artwork correction: Abraham hand laterality
+
+Wyatt identified an incorrectly right-handed hand on the Savior left arm in ac-abraham-eyes. Corrected v3 original and versioned full/thumbnail derivatives preserve the scene and approved likeness; prior originals and derivatives are retained. Root and Newton independently reviewed actual pixels against the approved reference. Thumb now emerges below four fingers, with continuous left wrist and eyes covered while nose and mouth remain free. Root desktop/390px picture-study/full-size/close/Continue checks pass; source/caption/layout unchanged. Branch fix/abraham-left-hand; release verification receipt will be in parent work/abrahamic-covenant-20260923/hand-correction/release-receipt.json when complete.
+
 ## Completed checkpoint: covenant study and requested follow-ups live
 
 PR377 is merged at 0637c9797d459a7174b3c820612d443f2f51d998; reviewed head 2b447ec20112ff4fb24ee53e3ae3bf26dc8dccc9. PR QA35941019167, Pages35941359424 and main QA35941359404 all passed. All38 regular public files match reviewed bytes. Actual public Answers entry, Jacob chapter selection, picture study/full-size/close/Continue, next chapter and final temple/Eyring imagery verified. See parent work/abrahamic-covenant-20260923/release-receipt.json and public-verification.json.
