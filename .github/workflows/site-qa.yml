@@ -135,13 +135,17 @@ jobs:
       - name: Verify complete card row consumers
         run: python tools/complete_card_rows_qa.py
 
-      - name: Verify rendered card rows at responsive widths
+      - name: Install browser presentation dependencies
+        id: presentation_dependencies
         run: |
           npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
           /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/complete_card_rows_browser_qa.js
+
+      - name: Verify rendered card rows at responsive widths
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/complete_card_rows_browser_qa.js
 
       - name: Inspect every canonical page at desktop, phone, and enlarged text
+        if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/canonical_presentation_browser_qa.js
 
       - name: Save canonical presentation diagnostics
