@@ -1,0 +1,3379 @@
+{
+  "canonical_pages": [
+    "about.html",
+    "answers.html",
+    "answers/aaronic-priesthood-restoration.html",
+    "answers/abrahamic-covenant.html",
+    "answers/are-latter-day-saints-christian.html",
+    "answers/bible-and-book-of-mormon-together.html",
+    "answers/death-of-a-child.html",
+    "answers/divorce-and-faith.html",
+    "answers/faith-in-jesus-christ-during-trials.html",
+    "answers/god-our-heavenly-father.html",
+    "answers/grief-and-faith.html",
+    "answers/jesus-christ-latter-day-saint-beliefs.html",
+    "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+    "answers/melchizedek-priesthood-restoration.html",
+    "answers/prayer-and-personal-revelation.html",
+    "answers/restored-church-of-jesus-christ.html",
+    "answers/settle-this-in-your-hearts.html",
+    "answers/stand-forever.html",
+    "answers/what-happens-after-death.html",
+    "answers/what-is-eternal-marriage.html",
+    "answers/what-is-the-book-of-mormon.html",
+    "answers/who-was-joseph-smith.html",
+    "answers/why-families-are-important.html",
+    "answers/why-latter-day-saints-build-temples.html",
+    "art-gallery.html",
+    "art-study/be-still.html",
+    "art-study/suffer-the-little-children.html",
+    "art-study/the-good-shepherd.html",
+    "art-study/the-living-christ.html",
+    "art.html",
+    "ask.html",
+    "atonement.html",
+    "birth-of-christ.html",
+    "book-of-mormon-evidences.html",
+    "church-history.html",
+    "come-follow-me.html",
+    "general-conference.html",
+    "index.html",
+    "jesus-christ/before-bethlehem.html",
+    "jesus-christ/miracles-and-compassion.html",
+    "jesus-christ/mortal-ministry.html",
+    "jesus-christ/parables/barren-fig.html",
+    "jesus-christ/parables/birds-lilies.html",
+    "jesus-christ/parables/blind-guides.html",
+    "jesus-christ/parables/bridegroom.html",
+    "jesus-christ/parables/budding-fig.html",
+    "jesus-christ/parables/children-marketplace.html",
+    "jesus-christ/parables/closed-door.html",
+    "jesus-christ/parables/divided-house.html",
+    "jesus-christ/parables/doorkeeper.html",
+    "jesus-christ/parables/faithful-servant.html",
+    "jesus-christ/parables/friend-midnight.html",
+    "jesus-christ/parables/good-samaritan.html",
+    "jesus-christ/parables/good-shepherd.html",
+    "jesus-christ/parables/grain-wheat.html",
+    "jesus-christ/parables/great-supper.html",
+    "jesus-christ/parables/growing-seed.html",
+    "jesus-christ/parables/hearing.html",
+    "jesus-christ/parables/hen-chicks.html",
+    "jesus-christ/parables/hidden-treasure.html",
+    "jesus-christ/parables/householder.html",
+    "jesus-christ/parables/king-war.html",
+    "jesus-christ/parables/kingdom.html",
+    "jesus-christ/parables/laborers-vineyard.html",
+    "jesus-christ/parables/lamp.html",
+    "jesus-christ/parables/leaven.html",
+    "jesus-christ/parables/lost-coin.html",
+    "jesus-christ/parables/lost-sheep.html",
+    "jesus-christ/parables/mercy.html",
+    "jesus-christ/parables/minas.html",
+    "jesus-christ/parables/mote-beam.html",
+    "jesus-christ/parables/mustard-seed.html",
+    "jesus-christ/parables/neighbor.html",
+    "jesus-christ/parables/net.html",
+    "jesus-christ/parables/new-patch.html",
+    "jesus-christ/parables/new-wineskins.html",
+    "jesus-christ/parables/parent-gifts.html",
+    "jesus-christ/parables/pearl.html",
+    "jesus-christ/parables/persistent-widow.html",
+    "jesus-christ/parables/pharisee-publican.html",
+    "jesus-christ/parables/prodigal-son.html",
+    "jesus-christ/parables/returning-spirit.html",
+    "jesus-christ/parables/rich-fool.html",
+    "jesus-christ/parables/rich-man-lazarus.html",
+    "jesus-christ/parables/royal-wedding.html",
+    "jesus-christ/parables/salt.html",
+    "jesus-christ/parables/servant-duty.html",
+    "jesus-christ/parables/settle-adversary.html",
+    "jesus-christ/parables/sheep-goats.html",
+    "jesus-christ/parables/sheep-sabbath.html",
+    "jesus-christ/parables/sower.html",
+    "jesus-christ/parables/stewardship.html",
+    "jesus-christ/parables/strong-man.html",
+    "jesus-christ/parables/talents.html",
+    "jesus-christ/parables/ten-virgins.html",
+    "jesus-christ/parables/thief-night.html",
+    "jesus-christ/parables/tower-builder.html",
+    "jesus-christ/parables/tree-fruit.html",
+    "jesus-christ/parables/two-debtors.html",
+    "jesus-christ/parables/two-sons.html",
+    "jesus-christ/parables/unjust-steward.html",
+    "jesus-christ/parables/unmerciful-servant.html",
+    "jesus-christ/parables/vine-branches.html",
+    "jesus-christ/parables/watchful-servants.html",
+    "jesus-christ/parables/watchfulness.html",
+    "jesus-christ/parables/wedding-places.html",
+    "jesus-christ/parables/wheat-tares.html",
+    "jesus-christ/parables/wicked-tenants.html",
+    "jesus-christ/parables/wise-foolish-builders.html",
+    "jesus-christ/parables/woman-childbirth.html",
+    "jesus-christ/redeemer-and-risen-lord.html",
+    "jesus-christ/restoration-and-today.html",
+    "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "jesus-christ/teachings-and-parables.html",
+    "joseph-smith-likeness.html",
+    "missionary.html",
+    "pioneers.html",
+    "search.html",
+    "watch.html"
+  ],
+  "candidate_classes": {
+    "ask-continue-card": {
+      "count": 5,
+      "pages": [
+        "ask.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Ask owner applies shared panel tokens."
+    },
+    "ask-scene-card": {
+      "count": 2,
+      "pages": [
+        "ask.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork figure; preserve artwork framing."
+    },
+    "ask-study-card": {
+      "count": 1,
+      "pages": [
+        "ask.html"
+      ],
+      "tags": [
+        "section"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Ask owner applies shared panel tokens."
+    },
+    "ask-topic-card": {
+      "count": 6,
+      "pages": [
+        "ask.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Ask owner applies shared panel tokens."
+    },
+    "cfm-library-card": {
+      "count": 9,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "cfm-library-card__body": {
+      "count": 9,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Child copy container; parent library card owns surface."
+    },
+    "cfm-source-note": {
+      "count": 3,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline source paragraph, not a section panel."
+    },
+    "cfm-week__card": {
+      "count": 1,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-answers-jump-panel": {
+      "count": 1,
+      "pages": [
+        "answers.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-answers-reflection": {
+      "count": 3,
+      "pages": [
+        "answers.html"
+      ],
+      "tags": [
+        "section"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Image/text grid wrapper; only nested details are panels."
+    },
+    "fc-answers-reflection-copy": {
+      "count": 3,
+      "pages": [
+        "answers.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Reading/grid child wrapper; nested details are panels."
+    },
+    "fc-bible-history-note": {
+      "count": 2,
+      "pages": [
+        "answers/bible-and-book-of-mormon-together.html"
+      ],
+      "tags": [
+        "details"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-card": {
+      "count": 92,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "church-history.html",
+        "index.html",
+        "missionary.html",
+        "watch.html"
+      ],
+      "tags": [
+        "a",
+        "article",
+        "div"
+      ],
+      "disposition": "approved_reference_unchanged",
+      "reason": "Existing approved Home surface remains unchanged."
+    },
+    "fc-card--interactive": {
+      "count": 52,
+      "pages": [
+        "answers.html",
+        "church-history.html",
+        "index.html",
+        "missionary.html",
+        "watch.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Modifier on existing approved fc-card."
+    },
+    "fc-card-title": {
+      "count": 75,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "church-history.html",
+        "index.html",
+        "missionary.html",
+        "watch.html"
+      ],
+      "tags": [
+        "h2",
+        "h3"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Heading, not a panel."
+    },
+    "fc-conference-note": {
+      "count": 1,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-foundation-card": {
+      "count": 4,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-foundation-card-action": {
+      "count": 4,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Link within card; preserve control treatment."
+    },
+    "fc-foundation-card-copy": {
+      "count": 4,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Card child copy wrapper; parent owns surface."
+    },
+    "fc-foundation-card__image": {
+      "count": 4,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Image container; preserve geometry and pixels."
+    },
+    "fc-history-art-panel": {
+      "count": 7,
+      "pages": [
+        "church-history.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork figure; preserve framing."
+    },
+    "fc-history-art-panel--inline": {
+      "count": 3,
+      "pages": [
+        "church-history.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork modifier."
+    },
+    "fc-history-art-panel--museum": {
+      "count": 1,
+      "pages": [
+        "church-history.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork modifier."
+    },
+    "fc-history-art-panel--wide": {
+      "count": 3,
+      "pages": [
+        "church-history.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork modifier."
+    },
+    "fc-home-card-action": {
+      "count": 6,
+      "pages": [
+        "index.html"
+      ],
+      "tags": [
+        "span"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Card child label."
+    },
+    "fc-home-card-copy": {
+      "count": 6,
+      "pages": [
+        "index.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Home illustrated-card copy wrapper; preserve approved Home."
+    },
+    "fc-home-illustrated-card": {
+      "count": 6,
+      "pages": [
+        "index.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Approved Home image card; preserve pixels and image treatment."
+    },
+    "fc-mission-reflection": {
+      "count": 4,
+      "pages": [
+        "missionary.html"
+      ],
+      "tags": [
+        "aside"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-missionary-photo-card": {
+      "count": 4,
+      "pages": [
+        "missionary.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork figure; preserve framing."
+    },
+    "fc-missionary-visit-panel": {
+      "count": 1,
+      "pages": [
+        "missionary.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-missionary-work-card": {
+      "count": 4,
+      "pages": [
+        "missionary.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-priesthood-note": {
+      "count": 2,
+      "pages": [
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/melchizedek-priesthood-restoration.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline source note, not panel."
+    },
+    "fc-reflection-prompts": {
+      "count": 4,
+      "pages": [
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Disclosure group; individual details receive surface."
+    },
+    "fc-resource-card": {
+      "count": 126,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-resource-card__body": {
+      "count": 126,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Resource copy wrapper; parent card owns surface."
+    },
+    "fc-resource-card__image": {
+      "count": 126,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Image container; preserve letterboxing and fit."
+    },
+    "fc-resource-card__kind": {
+      "count": 126,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Text label within resource."
+    },
+    "fc-resource-card__play": {
+      "count": 92,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "span"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Play control, not panel."
+    },
+    "fc-resource-card__source": {
+      "count": 125,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Text source within resource."
+    },
+    "fc-source-panel": {
+      "count": 4,
+      "pages": [
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ],
+      "tags": [
+        "aside"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-stand-callout": {
+      "count": 2,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "fc-study-panel": {
+      "count": 22,
+      "pages": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "gc-pathway": {
+      "count": 9,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "gc-pathway-body": {
+      "count": 9,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Child copy wrapper; parent pathway owns surface."
+    },
+    "gc-pathways": {
+      "count": 1,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Card grid wrapper; not a surface."
+    },
+    "jj-card": {
+      "count": 339,
+      "pages": [
+        "answers/abrahamic-covenant.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html"
+      ],
+      "tags": [
+        "a",
+        "article"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "jesus-journey.css owner applies shared panel tokens."
+    },
+    "jj-card-action": {
+      "count": 338,
+      "pages": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html"
+      ],
+      "tags": [
+        "span"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Child action label; parent journey card owns surface."
+    },
+    "jj-card-preview": {
+      "count": 96,
+      "pages": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/teachings-and-parables.html"
+      ],
+      "tags": [
+        "img"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork image; preserve framing."
+    },
+    "jj-reflection": {
+      "count": 145,
+      "pages": [
+        "answers/abrahamic-covenant.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html"
+      ],
+      "tags": [
+        "aside",
+        "details"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "jesus-journey.css owner applies shared panel tokens."
+    },
+    "journal-card": {
+      "count": 3,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "likeness-note": {
+      "count": 1,
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline source note."
+    },
+    "likeness-reflection": {
+      "count": 3,
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "tags": [
+        "details"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "pioneer-art-card": {
+      "count": 10,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork figure; preserve framing."
+    },
+    "pioneer-music-card": {
+      "count": 3,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "pioneer-music-note": {
+      "count": 1,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline source note."
+    },
+    "pioneer-source-notes": {
+      "count": 3,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "details"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "pioneer-story-card": {
+      "count": 18,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Unboxed image/read-flow article; preserve plain canvas and artwork."
+    },
+    "pioneer-story-note": {
+      "count": 3,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline source note."
+    },
+    "reflection": {
+      "count": 10,
+      "pages": [
+        "atonement.html"
+      ],
+      "tags": [
+        "details"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "watch-index-note": {
+      "count": 1,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline note, not panel."
+    },
+    "watch-media-note": {
+      "count": 1,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline note, not panel."
+    },
+    "watch-official-card": {
+      "count": 4,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "watch-path-card": {
+      "count": 3,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "a"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "watch-reflection": {
+      "count": 7,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "p"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Inline reflection paragraph within existing study composition."
+    },
+    "watch-source-note": {
+      "count": 1,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "div"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    },
+    "watch-video-card": {
+      "count": 19,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "article"
+      ],
+      "disposition": "shared_surface",
+      "reason": "Named existing section panel; shared Home-derived surface only."
+    }
+  },
+  "styled_surface_candidates": {
+    "ai-response": {
+      "stylesheets": [
+        "pioneer-experience.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Conversation response surface."
+    },
+    "ask-chat-box": {
+      "stylesheets": [
+        "ask-experience.css"
+      ],
+      "pages": [
+        "ask.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Chat application surface, not section panel."
+    },
+    "ask-continue-card": {
+      "stylesheets": [
+        "ask-experience.css"
+      ],
+      "pages": [
+        "ask.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
+    "ask-continue-section": {
+      "stylesheets": [
+        "ask-experience.css"
+      ],
+      "pages": [
+        "ask.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Ask section wrapper; child cards own surfaces."
+    },
+    "ask-starters": {
+      "stylesheets": [
+        "ask-experience.css"
+      ],
+      "pages": [
+        "ask.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Conversation controls owned by Ask; not generic study panel."
+    },
+    "ask-study-card": {
+      "stylesheets": [
+        "ask-experience.css"
+      ],
+      "pages": [
+        "ask.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
+    "ask-topic-card": {
+      "stylesheets": [
+        "ask-experience.css"
+      ],
+      "pages": [
+        "ask.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
+    "atonement-help": {
+      "stylesheets": [
+        "atonement.css"
+      ],
+      "pages": [
+        "atonement.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "cfm-btn": {
+      "stylesheets": [
+        "come-follow-me.css"
+      ],
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Button/control."
+    },
+    "cfm-day": {
+      "stylesheets": [
+        "come-follow-me.css"
+      ],
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "cfm-focus": {
+      "stylesheets": [
+        "come-follow-me.css"
+      ],
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "cfm-library-card": {
+      "stylesheets": [
+        "come-follow-me.css"
+      ],
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "cfm-next-year": {
+      "stylesheets": [
+        "come-follow-me.css"
+      ],
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "cfm-tool": {
+      "stylesheets": [
+        "come-follow-me.css"
+      ],
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "cfm-week__card": {
+      "stylesheets": [
+        "come-follow-me.css"
+      ],
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "chat-box": {
+      "stylesheets": [
+        "pioneer-experience.css",
+        "styles.css"
+      ],
+      "pages": [
+        "ask.html",
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Chat application surface."
+    },
+    "cta": {
+      "stylesheets": [
+        "answer-styles.css"
+      ],
+      "pages": [
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "birth-of-christ.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Button/control; preserve action styling."
+    },
+    "fc-answers-art": {
+      "stylesheets": [
+        "answers-hero.css"
+      ],
+      "pages": [
+        "answers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork image container; preserve visual framing."
+    },
+    "fc-answers-jump-panel": {
+      "stylesheets": [
+        "answers-hero.css"
+      ],
+      "pages": [
+        "answers.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-art-meditation": {
+      "stylesheets": [
+        "art-study-enrichment.css"
+      ],
+      "pages": [
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-bible-reference": {
+      "stylesheets": [
+        "bible-together.css"
+      ],
+      "pages": [
+        "answers/bible-and-book-of-mormon-together.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-bible-scene": {
+      "stylesheets": [
+        "bible-together.css"
+      ],
+      "pages": [
+        "answers/bible-and-book-of-mormon-together.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Integrated image/read composition; preserve frame and reading flow."
+    },
+    "fc-button": {
+      "stylesheets": [
+        "atonement.css",
+        "pioneer-story.css",
+        "site-system.css"
+      ],
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-gallery.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "general-conference.html",
+        "index.html",
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "search.html",
+        "watch.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Button/control; preserve action styling."
+    },
+    "fc-card": {
+      "stylesheets": [
+        "site-system.css"
+      ],
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "church-history.html",
+        "index.html",
+        "missionary.html",
+        "watch.html"
+      ],
+      "disposition": "approved_reference_unchanged"
+    },
+    "fc-foundation-connections": {
+      "stylesheets": [
+        "foundation-study.css"
+      ],
+      "pages": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/who-was-joseph-smith.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-foundation-route": {
+      "stylesheets": [
+        "foundation-study.css"
+      ],
+      "pages": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/who-was-joseph-smith.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-history-chat-shell": {
+      "stylesheets": [
+        "church-history.css"
+      ],
+      "pages": [
+        "church-history.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Chat application shell."
+    },
+    "fc-history-era": {
+      "stylesheets": [
+        "church-history.css"
+      ],
+      "pages": [
+        "church-history.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-history-source-lock": {
+      "stylesheets": [
+        "church-history.css"
+      ],
+      "pages": [
+        "church-history.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-history-welcome": {
+      "stylesheets": [
+        "church-history.css"
+      ],
+      "pages": [
+        "church-history.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Conversation welcome inside chat; belongs to Ask behavior owner."
+    },
+    "fc-inquiry-practice": {
+      "stylesheets": [
+        "stand-forever-study.css"
+      ],
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-marriage-covenant": {
+      "stylesheets": [
+        "eternal-marriage-study.css"
+      ],
+      "pages": [
+        "answers/what-is-eternal-marriage.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Established illustrated teaching composition; child learning panels and reading colors have separate contrast contract."
+    },
+    "fc-marriage-era": {
+      "stylesheets": [
+        "eternal-marriage-study.css"
+      ],
+      "pages": [
+        "answers/what-is-eternal-marriage.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Light-paper illustrated timeline with dark text; surface-only dark repaint would destroy contrast."
+    },
+    "fc-marriage-journey": {
+      "stylesheets": [
+        "eternal-marriage-study.css"
+      ],
+      "pages": [
+        "answers/what-is-eternal-marriage.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Illustrated timeline frame; preserve hierarchy and linked light-paper child surfaces."
+    },
+    "fc-marriage-worth": {
+      "stylesheets": [
+        "eternal-marriage-study.css"
+      ],
+      "pages": [
+        "answers/what-is-eternal-marriage.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-missionary-visit-panel": {
+      "stylesheets": [
+        "missionary.css"
+      ],
+      "pages": [
+        "missionary.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-missionary-work-grid": {
+      "stylesheets": [
+        "missionary.css"
+      ],
+      "pages": [
+        "missionary.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Grid wrapper; separate exact Mission row correction removes its old strip."
+    },
+    "fc-nav-atonement": {
+      "stylesheets": [
+        "site-header.css"
+      ],
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-gallery.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "general-conference.html",
+        "index.html",
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "search.html",
+        "watch.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Navigation control."
+    },
+    "fc-next-conference": {
+      "stylesheets": [
+        "general-conference-section.css"
+      ],
+      "pages": [
+        "general-conference.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-priesthood-evidence": {
+      "stylesheets": [
+        "priesthood-scenes.css"
+      ],
+      "pages": [
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/melchizedek-priesthood-restoration.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-resource-card": {
+      "stylesheets": [
+        "resource-cards.css"
+      ],
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-resource-section": {
+      "stylesheets": [
+        "resource-cards.css"
+      ],
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-skip-link": {
+      "stylesheets": [
+        "site-header.css"
+      ],
+      "pages": [
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Accessibility navigation control."
+    },
+    "fc-stand-series": {
+      "stylesheets": [
+        "stand-forever-study.css"
+      ],
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-stand-series-preview": {
+      "stylesheets": [
+        "stand-forever-study.css"
+      ],
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork preview link/frame."
+    },
+    "fc-stand-study": {
+      "stylesheets": [
+        "stand-forever-study.css"
+      ],
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-study-hub": {
+      "stylesheets": [
+        "connected-study.css"
+      ],
+      "pages": [
+        "about.html",
+        "answers.html",
+        "art.html",
+        "ask.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "index.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "fc-study-panel": {
+      "stylesheets": [
+        "resource-cards.css"
+      ],
+      "pages": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "gallery-item": {
+      "stylesheets": [
+        "art-experience.css"
+      ],
+      "pages": [
+        "art.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Gallery image frame; not text panel."
+    },
+    "gc-pathway": {
+      "stylesheets": [
+        "general-conference-section.css"
+      ],
+      "pages": [
+        "general-conference.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "gc-search": {
+      "stylesheets": [
+        "general-conference-section.css"
+      ],
+      "pages": [
+        "general-conference.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Search/filter controls, not content section panel."
+    },
+    "gc-topic": {
+      "stylesheets": [
+        "general-conference-section.css"
+      ],
+      "pages": [
+        "general-conference.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "hamburger-menu": {
+      "stylesheets": [
+        "site-header.css"
+      ],
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-gallery.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "general-conference.html",
+        "index.html",
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "search.html",
+        "watch.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Navigation control."
+    },
+    "jj-card": {
+      "stylesheets": [
+        "jesus-journey.css"
+      ],
+      "pages": [
+        "answers/abrahamic-covenant.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
+    "journal-card": {
+      "stylesheets": [
+        "pioneer-experience.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "likeness-evidence": {
+      "stylesheets": [
+        "joseph-smith-likeness.css"
+      ],
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "likeness-museum": {
+      "stylesheets": [
+        "joseph-smith-likeness.css"
+      ],
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Integrated museum image-and-reading frame."
+    },
+    "likeness-reflection": {
+      "stylesheets": [
+        "joseph-smith-likeness.css"
+      ],
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "map-container": {
+      "stylesheets": [
+        "pioneer-experience.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Map frame."
+    },
+    "map-date": {
+      "stylesheets": [
+        "pioneer-experience.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Timeline/map label."
+    },
+    "map-point": {
+      "stylesheets": [
+        "pioneer-experience.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Map coordinate marker/control."
+    },
+    "pioneer-music-card": {
+      "stylesheets": [
+        "pioneer-story.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "pioneer-story-art": {
+      "stylesheets": [
+        "pioneer-story.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Artwork image link/frame."
+    },
+    "pioneer-story-card": {
+      "stylesheets": [
+        "pioneer-story.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason"
+    },
+    "qa-container": {
+      "stylesheets": [
+        "pioneer-experience.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Pioneer chat application wrapper."
+    },
+    "reflection": {
+      "stylesheets": [
+        "atonement.css"
+      ],
+      "pages": [
+        "atonement.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "sources": {
+      "stylesheets": [
+        "ask-experience.css",
+        "pioneer-experience.css"
+      ],
+      "pages": [
+        "answers/grief-and-faith.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Source lists inside chat or page appendix; context-specific text container."
+    },
+    "timeline-item": {
+      "stylesheets": [
+        "pioneer-experience.css"
+      ],
+      "pages": [
+        "pioneers.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Legacy historical timeline row, separate story format."
+    },
+    "watch-feature-study": {
+      "stylesheets": [
+        "watch-library.css"
+      ],
+      "pages": [
+        "watch.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "watch-media-shell": {
+      "stylesheets": [
+        "watch-experience.css"
+      ],
+      "pages": [
+        "watch.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Integrated media player/sidebar frame."
+    },
+    "watch-official-card": {
+      "stylesheets": [
+        "watch-experience.css"
+      ],
+      "pages": [
+        "watch.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "watch-path-card": {
+      "stylesheets": [
+        "watch-experience.css"
+      ],
+      "pages": [
+        "watch.html"
+      ],
+      "disposition": "shared_surface"
+    },
+    "watch-short": {
+      "stylesheets": [
+        "watch-shorts.css"
+      ],
+      "pages": [
+        "watch.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Video portrait frame; preserve media treatment."
+    },
+    "watch-video-card": {
+      "stylesheets": [
+        "watch-library.css"
+      ],
+      "pages": [
+        "watch.html"
+      ],
+      "disposition": "shared_surface"
+    }
+  },
+  "surface_selectors": {
+    ".atonement-help": {
+      "count": 1,
+      "pages": [
+        "atonement.html"
+      ],
+      "tags": [
+        "aside"
+      ]
+    },
+    ".atonement-reading .reflection": {
+      "count": 10,
+      "pages": [
+        "atonement.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".bom-art-context": {
+      "count": 1,
+      "pages": [
+        "answers/what-is-the-book-of-mormon.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".cfm-day": {
+      "count": 7,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".cfm-focus": {
+      "count": 1,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "aside"
+      ]
+    },
+    ".cfm-library-card": {
+      "count": 9,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".cfm-month": {
+      "count": 0,
+      "pages": [],
+      "tags": []
+    },
+    ".cfm-next-year": {
+      "count": 1,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".cfm-path": {
+      "count": 3,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "figure"
+      ]
+    },
+    ".cfm-reading--assignment": {
+      "count": 1,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".cfm-tool": {
+      "count": 4,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "a"
+      ]
+    },
+    ".cfm-week__card": {
+      "count": 1,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".fc-answers-jump-panel": {
+      "count": 1,
+      "pages": [
+        "answers.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".fc-answers-reflection-copy details": {
+      "count": 2,
+      "pages": [
+        "answers.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".fc-art-meditation": {
+      "count": 4,
+      "pages": [
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ],
+      "tags": [
+        "section"
+      ]
+    },
+    ".fc-bible-history-note": {
+      "count": 2,
+      "pages": [
+        "answers/bible-and-book-of-mormon-together.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".fc-bible-reference": {
+      "count": 12,
+      "pages": [
+        "answers/bible-and-book-of-mormon-together.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".fc-conference-note": {
+      "count": 1,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "p"
+      ]
+    },
+    ".fc-conference-sessions details": {
+      "count": 4,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".fc-continuation-grid article": {
+      "count": 12,
+      "pages": [
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".fc-dc-grid article": {
+      "count": 3,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".fc-deep-study details": {
+      "count": 132,
+      "pages": [
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "birth-of-christ.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".fc-foundation-card": {
+      "count": 4,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".fc-foundation-connections": {
+      "count": 2,
+      "pages": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/who-was-joseph-smith.html"
+      ],
+      "tags": [
+        "section"
+      ]
+    },
+    ".fc-foundation-route": {
+      "count": 2,
+      "pages": [
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/who-was-joseph-smith.html"
+      ],
+      "tags": [
+        "section"
+      ]
+    },
+    ".fc-history-era": {
+      "count": 4,
+      "pages": [
+        "church-history.html"
+      ],
+      "tags": [
+        "a"
+      ]
+    },
+    ".fc-history-source-lock": {
+      "count": 1,
+      "pages": [
+        "church-history.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".fc-inquiry-practice": {
+      "count": 1,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".fc-learning-grid article": {
+      "count": 4,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".fc-marriage-worth": {
+      "count": 1,
+      "pages": [
+        "answers/what-is-eternal-marriage.html"
+      ],
+      "tags": [
+        "aside"
+      ]
+    },
+    ".fc-mission-reflection": {
+      "count": 4,
+      "pages": [
+        "missionary.html"
+      ],
+      "tags": [
+        "aside"
+      ]
+    },
+    ".fc-missionary-visit-panel": {
+      "count": 1,
+      "pages": [
+        "missionary.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".fc-missionary-work-card": {
+      "count": 4,
+      "pages": [
+        "missionary.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".fc-next-conference": {
+      "count": 1,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".fc-notice": {
+      "count": 5,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "book-of-mormon-evidences.html",
+        "missionary.html",
+        "watch.html"
+      ],
+      "tags": [
+        "div",
+        "p"
+      ]
+    },
+    ".fc-priesthood-evidence": {
+      "count": 2,
+      "pages": [
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/melchizedek-priesthood-restoration.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".fc-primary-grid article": {
+      "count": 4,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".fc-reflection-prompts details": {
+      "count": 12,
+      "pages": [
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".fc-resource-card": {
+      "count": 126,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "joseph-smith-likeness.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".fc-resource-section": {
+      "count": 17,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "index.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "section"
+      ]
+    },
+    ".fc-source-panel": {
+      "count": 4,
+      "pages": [
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ],
+      "tags": [
+        "aside"
+      ]
+    },
+    ".fc-stand-callout": {
+      "count": 2,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".fc-stand-series": {
+      "count": 1,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "section"
+      ]
+    },
+    ".fc-stand-study": {
+      "count": 1,
+      "pages": [
+        "answers/stand-forever.html"
+      ],
+      "tags": [
+        "section"
+      ]
+    },
+    ".fc-study-hub": {
+      "count": 22,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "art.html",
+        "ask.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "index.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ],
+      "tags": [
+        "nav",
+        "section"
+      ]
+    },
+    ".fc-study-opening article": {
+      "count": 12,
+      "pages": [
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".fc-study-panel": {
+      "count": 22,
+      "pages": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".fc-voice-grid article": {
+      "count": 5,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".gc-pathway": {
+      "count": 9,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "a"
+      ]
+    },
+    ".gc-talk": {
+      "count": 37,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "li"
+      ]
+    },
+    ".gc-topic": {
+      "count": 6,
+      "pages": [
+        "general-conference.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".journal-card": {
+      "count": 3,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".likeness-evidence": {
+      "count": 4,
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".likeness-reflection": {
+      "count": 3,
+      "pages": [
+        "joseph-smith-likeness.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".notice": {
+      "count": 13,
+      "pages": [
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html"
+      ],
+      "tags": [
+        "aside",
+        "div"
+      ]
+    },
+    ".pioneer-music-card": {
+      "count": 3,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    },
+    ".pioneer-source-notes": {
+      "count": 3,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".pioneer-timeline-group": {
+      "count": 3,
+      "pages": [
+        "pioneers.html"
+      ],
+      "tags": [
+        "details"
+      ]
+    },
+    ".watch-feature-study": {
+      "count": 1,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".watch-official-card": {
+      "count": 4,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "a"
+      ]
+    },
+    ".watch-path-card": {
+      "count": 3,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "a"
+      ]
+    },
+    ".watch-source-note": {
+      "count": 1,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "div"
+      ]
+    },
+    ".watch-video-card": {
+      "count": 19,
+      "pages": [
+        "watch.html"
+      ],
+      "tags": [
+        "article"
+      ]
+    }
+  },
+  "limitations": "Static inventory and CSS scope checks are not rendered visual approval. Exclusions preserve bare reading wrappers, artwork and controls; delegated classes need their own runtime/visual checks."
+}

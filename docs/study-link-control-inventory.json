@@ -1,0 +1,377 @@
+{
+  "canonical_pages": 119,
+  "selectors": {
+    ".fc-study-visual-sources a:not(.fc-button--primary)": {
+      "count": 586,
+      "pages": [
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/abrahamic-covenant.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "book-of-mormon-evidences.html",
+        "church-history.html",
+        "come-follow-me.html",
+        "general-conference.html",
+        "jesus-christ/before-bethlehem.html",
+        "jesus-christ/miracles-and-compassion.html",
+        "jesus-christ/mortal-ministry.html",
+        "jesus-christ/parables/barren-fig.html",
+        "jesus-christ/parables/birds-lilies.html",
+        "jesus-christ/parables/blind-guides.html",
+        "jesus-christ/parables/bridegroom.html",
+        "jesus-christ/parables/budding-fig.html",
+        "jesus-christ/parables/children-marketplace.html",
+        "jesus-christ/parables/closed-door.html",
+        "jesus-christ/parables/divided-house.html",
+        "jesus-christ/parables/doorkeeper.html",
+        "jesus-christ/parables/faithful-servant.html",
+        "jesus-christ/parables/friend-midnight.html",
+        "jesus-christ/parables/good-samaritan.html",
+        "jesus-christ/parables/good-shepherd.html",
+        "jesus-christ/parables/grain-wheat.html",
+        "jesus-christ/parables/great-supper.html",
+        "jesus-christ/parables/growing-seed.html",
+        "jesus-christ/parables/hearing.html",
+        "jesus-christ/parables/hen-chicks.html",
+        "jesus-christ/parables/hidden-treasure.html",
+        "jesus-christ/parables/householder.html",
+        "jesus-christ/parables/king-war.html",
+        "jesus-christ/parables/kingdom.html",
+        "jesus-christ/parables/laborers-vineyard.html",
+        "jesus-christ/parables/lamp.html",
+        "jesus-christ/parables/leaven.html",
+        "jesus-christ/parables/lost-coin.html",
+        "jesus-christ/parables/lost-sheep.html",
+        "jesus-christ/parables/mercy.html",
+        "jesus-christ/parables/minas.html",
+        "jesus-christ/parables/mote-beam.html",
+        "jesus-christ/parables/mustard-seed.html",
+        "jesus-christ/parables/neighbor.html",
+        "jesus-christ/parables/net.html",
+        "jesus-christ/parables/new-patch.html",
+        "jesus-christ/parables/new-wineskins.html",
+        "jesus-christ/parables/parent-gifts.html",
+        "jesus-christ/parables/pearl.html",
+        "jesus-christ/parables/persistent-widow.html",
+        "jesus-christ/parables/pharisee-publican.html",
+        "jesus-christ/parables/prodigal-son.html",
+        "jesus-christ/parables/returning-spirit.html",
+        "jesus-christ/parables/rich-fool.html",
+        "jesus-christ/parables/rich-man-lazarus.html",
+        "jesus-christ/parables/royal-wedding.html",
+        "jesus-christ/parables/salt.html",
+        "jesus-christ/parables/servant-duty.html",
+        "jesus-christ/parables/settle-adversary.html",
+        "jesus-christ/parables/sheep-goats.html",
+        "jesus-christ/parables/sheep-sabbath.html",
+        "jesus-christ/parables/sower.html",
+        "jesus-christ/parables/stewardship.html",
+        "jesus-christ/parables/strong-man.html",
+        "jesus-christ/parables/talents.html",
+        "jesus-christ/parables/ten-virgins.html",
+        "jesus-christ/parables/thief-night.html",
+        "jesus-christ/parables/tower-builder.html",
+        "jesus-christ/parables/tree-fruit.html",
+        "jesus-christ/parables/two-debtors.html",
+        "jesus-christ/parables/two-sons.html",
+        "jesus-christ/parables/unjust-steward.html",
+        "jesus-christ/parables/unmerciful-servant.html",
+        "jesus-christ/parables/vine-branches.html",
+        "jesus-christ/parables/watchful-servants.html",
+        "jesus-christ/parables/watchfulness.html",
+        "jesus-christ/parables/wedding-places.html",
+        "jesus-christ/parables/wheat-tares.html",
+        "jesus-christ/parables/wicked-tenants.html",
+        "jesus-christ/parables/wise-foolish-builders.html",
+        "jesus-christ/parables/woman-childbirth.html",
+        "jesus-christ/redeemer-and-risen-lord.html",
+        "jesus-christ/restoration-and-today.html",
+        "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+        "jesus-christ/teachings-and-parables.html",
+        "joseph-smith-likeness.html"
+      ]
+    },
+    ".pioneer-source-links a:not(.fc-button--primary)": {
+      "count": 22,
+      "pages": [
+        "pioneers.html"
+      ]
+    },
+    ".fc-resource-next a:not(.fc-button--primary)": {
+      "count": 17,
+      "pages": [
+        "about.html",
+        "answers.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/what-is-eternal-marriage.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html",
+        "art.html",
+        "ask.html",
+        "church-history.html",
+        "index.html",
+        "missionary.html",
+        "pioneers.html",
+        "watch.html"
+      ]
+    },
+    ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)": {
+      "count": 177,
+      "pages": [
+        "answers/aaronic-priesthood-restoration.html",
+        "answers/are-latter-day-saints-christian.html",
+        "answers/bible-and-book-of-mormon-together.html",
+        "answers/death-of-a-child.html",
+        "answers/divorce-and-faith.html",
+        "answers/faith-in-jesus-christ-during-trials.html",
+        "answers/god-our-heavenly-father.html",
+        "answers/grief-and-faith.html",
+        "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers/melchizedek-priesthood-restoration.html",
+        "answers/prayer-and-personal-revelation.html",
+        "answers/restored-church-of-jesus-christ.html",
+        "answers/settle-this-in-your-hearts.html",
+        "answers/stand-forever.html",
+        "answers/what-happens-after-death.html",
+        "answers/what-is-eternal-marriage.html",
+        "answers/what-is-the-book-of-mormon.html",
+        "answers/who-was-joseph-smith.html",
+        "answers/why-families-are-important.html",
+        "answers/why-latter-day-saints-build-temples.html",
+        "art-study/be-still.html",
+        "art-study/suffer-the-little-children.html",
+        "art-study/the-good-shepherd.html",
+        "art-study/the-living-christ.html"
+      ]
+    },
+    ".cfm-jump a:not(.fc-button--primary)": {
+      "count": 8,
+      "pages": [
+        "come-follow-me.html"
+      ]
+    },
+    ".gc-jumps a:not(.fc-button--primary)": {
+      "count": 5,
+      "pages": [
+        "general-conference.html"
+      ]
+    },
+    "a.source-link:not(.source-link--internal):not(.fc-button--primary)": {
+      "count": 0,
+      "pages": []
+    },
+    ".fc-topic-artwork-detail a[data-topic-art-source]:not(.fc-button--primary)": {
+      "count": 0,
+      "pages": []
+    },
+    "nav[aria-label=\"Pioneer study sections\"] .fc-button:not(.fc-button--primary)": {
+      "count": 9,
+      "pages": [
+        "pioneers.html"
+      ]
+    },
+    ".bom-story-directory a:not(.fc-button--primary)": {
+      "count": 22,
+      "pages": [
+        "answers/what-is-the-book-of-mormon.html"
+      ]
+    },
+    ".atonement-path .fc-button:not(.fc-button--primary)": {
+      "count": 11,
+      "pages": [
+        "atonement.html"
+      ]
+    },
+    ".watch-topic-index a:not(.fc-button--primary)": {
+      "count": 7,
+      "pages": [
+        "watch.html"
+      ]
+    }
+  },
+  "numbered_navigation": {
+    "answers/what-is-the-book-of-mormon.html .bom-story-directory a": [
+      {
+        "href": "#jaredite-faith",
+        "label": "01 The brother of Jared"
+      },
+      {
+        "href": "#lehis-family",
+        "label": "02 Lehi and Sariah’s family"
+      },
+      {
+        "href": "#nephis-witness",
+        "label": "03 Nephi’s witness of Christ"
+      },
+      {
+        "href": "#keepers-of-the-record",
+        "label": "04 Jacob to Amaleki"
+      },
+      {
+        "href": "#kings-and-covenants",
+        "label": "05 Mosiah and Benjamin"
+      },
+      {
+        "href": "#deliverance-and-covenant",
+        "label": "06 Abinadi, Alma, and Limhi"
+      },
+      {
+        "href": "#a-changed-heart",
+        "label": "07 Alma and Mosiah’s sons"
+      },
+      {
+        "href": "#lamanite-conversions",
+        "label": "08 Ammon, Aaron, and Abish"
+      },
+      {
+        "href": "#faith-among-the-poor",
+        "label": "09 Alma, Amulek, and a seed"
+      },
+      {
+        "href": "#captain-moroni",
+        "label": "10 Captain Moroni’s title of liberty"
+      },
+      {
+        "href": "#covenants-and-courage",
+        "label": "11 A covenant and faithful mothers"
+      },
+      {
+        "href": "#moroni-and-pahoran",
+        "label": "12 Moroni and Pahoran"
+      },
+      {
+        "href": "#voices-before-the-dawn",
+        "label": "13 Nephi, Lehi, and Samuel"
+      },
+      {
+        "href": "#the-promised-sign",
+        "label": "14 A night without darkness"
+      },
+      {
+        "href": "#the-saviors-ministry",
+        "label": "15 Come forward and know Him"
+      },
+      {
+        "href": "#the-saviors-sermon",
+        "label": "16 The Savior’s sermon"
+      },
+      {
+        "href": "#the-saviors-compassion",
+        "label": "17 The Shepherd’s compassion"
+      },
+      {
+        "href": "#the-saviors-lasting-witness",
+        "label": "18 Carry His gospel forward"
+      },
+      {
+        "href": "#a-people-made-one",
+        "label": "19 A people made one in Christ"
+      },
+      {
+        "href": "#mormons-final-hope",
+        "label": "20 Mormon’s final hope"
+      },
+      {
+        "href": "#the-final-witnesses",
+        "label": "21 Moroni’s invitation"
+      },
+      {
+        "href": "#moroni-and-joseph",
+        "label": "22 Moroni and Joseph Smith"
+      }
+    ],
+    "pioneers.html nav[aria-label=\"Pioneer study sections\"] a": [
+      {
+        "href": "#pioneer-departure-heading",
+        "label": "01Departure↓"
+      },
+      {
+        "href": "#pioneer-trail-life-heading",
+        "label": "02Life on the trail↓"
+      },
+      {
+        "href": "#pioneer-ocean-to-plains",
+        "label": "03Ocean to plains↓"
+      },
+      {
+        "href": "#elizabeth-crook-panting",
+        "label": "04Elizabeth’s story↓"
+      },
+      {
+        "href": "#pioneer-rescue-story",
+        "label": "05The rescue↓"
+      },
+      {
+        "href": "#pioneer-story-12-jane-witness",
+        "label": "06Jane’s witness↓"
+      },
+      {
+        "href": "#journey-timeline",
+        "label": "07Timelines↓"
+      },
+      {
+        "href": "#connected-study",
+        "label": "08Read the records↓"
+      },
+      {
+        "href": "#guided-reflections",
+        "label": "09Reflect and respond↓"
+      },
+      {
+        "href": "#pioneer-music",
+        "label": "Music for the journey: listen and study →"
+      }
+    ],
+    "watch.html .watch-topic-index a": [
+      {
+        "href": "#life-of-christ",
+        "label": "01Begin with the Savior"
+      },
+      {
+        "href": "#book-of-mormon",
+        "label": "02Christ in the Book of Mormon"
+      },
+      {
+        "href": "#prayer-and-revelation",
+        "label": "03Prayer and revelation"
+      },
+      {
+        "href": "#hope-in-trials",
+        "label": "04Faith, grief and healing"
+      },
+      {
+        "href": "#restoration-and-history",
+        "label": "05Restoration and pioneer history"
+      },
+      {
+        "href": "#temples-and-family",
+        "label": "06Temples, family and children"
+      },
+      {
+        "href": "#love-and-service",
+        "label": "07Service and sharing the gospel"
+      }
+    ]
+  }
+}

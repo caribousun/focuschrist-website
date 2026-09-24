@@ -48,6 +48,19 @@
         const style = document.createElement('style');
         style.id = 'ask-followup-styles';
         style.textContent = `
+            body.fc-site .ask-continue-card,
+            body.fc-site .ask-study-card,
+            body.fc-site .ask-topic-card {
+                background: var(--fc-panel-fill, var(--fc-card-fill));
+                border-color: var(--fc-panel-border, var(--fc-line));
+                border-radius: var(--fc-radius, 12px);
+                box-shadow: var(--fc-panel-shadow);
+            }
+            body.fc-site .ask-continue-card:is(:hover, :focus-visible) {
+                background: var(--fc-panel-hover-fill, var(--fc-card-fill));
+                border-color: var(--fc-line-strong);
+            }
+
             .ask-followup-dock {
                 position: relative;
                 width: 100%;
@@ -103,6 +116,18 @@
                 outline: none;
                 border-color: #e0c982;
                 box-shadow: 0 0 0 3px rgba(201,169,97,.10);
+            }
+            .ask-clarification-options {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin: 12px 0 20px;
+            }
+            .ask-clarification-options .ask-followup-button {
+                min-height: 44px;
+                max-width: 100%;
+                white-space: normal;
+                padding: 10px 16px;
             }
             .ask-followup-button {
                 min-height: 44px;

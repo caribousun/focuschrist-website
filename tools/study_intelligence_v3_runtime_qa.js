@@ -24,7 +24,7 @@ global.document = {
     querySelector() { return null; },
     getElementById(id) { return dom[id] || null; },
     createElement() {
-        return { className: '', textContent: '', isConnected: false, setAttribute() {}, remove() { this.isConnected = false; } };
+        return { className: '', textContent: '', isConnected: false, children: [], listeners: {}, setAttribute() {}, appendChild(node) { this.children.push(node); }, addEventListener(event, callback) { this.listeners[event] = callback; }, remove() { this.isConnected = false; } };
     },
     documentElement: { setAttribute() {} },
 };
@@ -509,5 +509,25 @@ function assert(condition, message) { if (!condition) throw new Error(message); 
     }
     delete qaDatabase['support keyword trap'];
     window.focusChristScriptureReady = null;
+    conversationHistory.length = 0;
+    const beforeBrief = fetchCalls;
+    dom.userInput.value = 'pornography';
+    await window.sendMessage();
+    assert(fetchCalls === beforeBrief, 'Brief sensitive topic is clarified locally without provider calls');
+    const choices = dom.chatBox.lastChild;
+    assert(choices.className === 'ask-clarification-options' && choices.children.length === 3, 'Brief entry renders three accessible choice buttons');
+    const beforeChoiceMessages = renderedMessages.length;
+    choices.children[1].listeners.click();
+    assert(dom.userInput.value === window.focusChristQuestionSafety.evaluate('pornography').options[1].question, 'Choice fills the intended safe question');
+    assert(fetchCalls === beforeBrief && renderedMessages.length === beforeChoiceMessages, 'Choice never auto-submits');
+    assert(dom.userInput.disabled === false && dom.sendBtn.disabled === false, 'Visitor retains control of editing and sending');
+    dom.followupInput = { value: '', focus() { this.focused = true; } };
+    dom.askFollowupDock = { getAttribute() { return 'false'; } };
+    choices.children[2].listeners.click();
+    assert(dom.followupInput.value === dom.userInput.value && dom.followupInput.focused, 'Visible follow-up composer receives the choice and focus');
+    assert(fetchCalls === beforeBrief && renderedMessages.length === beforeChoiceMessages, 'Follow-up choice also never auto-submits');
+    delete dom.followupInput;
+    delete dom.askFollowupDock;
+
     console.log('Study Intelligence v3 runtime QA PASS');
 })().catch((error) => { console.error(error); process.exit(1); });

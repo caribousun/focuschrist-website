@@ -29,6 +29,18 @@ test('initial chapter, controls, aria-current and next/previous focus',()=>{
  assert.equal(s.errors.length,0);
  }finally{s.close()}
 });
+test('chapter cards retain accessible names and explain each reading mode',()=>{
+ const s=setup();try{
+ const links=[...s.d.querySelectorAll('.jj-local-nav a')].filter(a=>!a.hidden);
+ links.forEach((a,i)=>{assert.equal(a.querySelector('.jj-chapter-number').textContent,String(i+1).padStart(2,'0'));assert.equal(a.querySelector('.jj-chapter-number').getAttribute('aria-hidden'),'true');assert.equal(a.getAttribute('aria-label'),a.querySelector('.jj-chapter-label').textContent)});
+ const guide=s.d.querySelector('#jj-reading-guide'),mode=s.d.querySelector('.jj-mode');
+ assert.match(guide.textContent,/show every chapter on one page/);
+ assert.equal(mode.getAttribute('aria-describedby'),guide.id);
+ assert.equal(s.d.querySelector('.jj-chapter-picker summary').getAttribute('aria-describedby'),guide.id);
+ mode.click();assert.match(guide.textContent,/All chapters are shown below/);
+ links[1].click();assert.match(guide.textContent,/show every chapter on one page/);assert.equal(links[1].getAttribute('aria-current'),'step');
+ }finally{s.close()}
+});
 test('every real journey page retains all chapters without JS and selects one with JS',()=>{
  const routes=['answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html'];
  function walk(dir){for(const e of fs.readdirSync(path.join(repo,dir),{withFileTypes:true})){const r=dir+'/'+e.name;if(e.isDirectory())walk(r);else if(r.endsWith('.html'))routes.push(r)}}walk('jesus-christ');

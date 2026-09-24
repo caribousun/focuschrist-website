@@ -19,7 +19,7 @@ HOME_STYLE = 'home-presentation.css'
 HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
-JOURNEY_STYLE_SHA256 = '68f2abf3d0fa65b2e87c6a8bd3798dd8dfb1a1e522e7f3d5b14dc810d1f90978'
+JOURNEY_STYLE_SHA256 = 'fbc4937ead4678d2919a5b22f65224c1401b2cc4a1ec3b874c427578a8febb8c'
 ANSWERS_FEATURED_STYLE_SHA256 = 'de2377eee172c2d194982cca5d2c29cba0b10c7f1f2785dffac12913ba4d8f59'
 # Owner-requested adjacent Atonement and Jesus links. Only these three rules in
 # the exact reviewed stylesheet qualify; the 700px stack is pinned by its hash.
@@ -43,6 +43,13 @@ def reviewed_art_reflection(selector, body, data):
 def reviewed_wrap_consumers(consumers, expected, version):
     return (set(consumers) == set(expected) and len(consumers) == 120
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
+
+
+def reviewed_system_panel_style(data):
+    # Owner-directed surface appendix only. Existing hero/mobile rules retain
+    # their exact reviewed prefix; both the prefix and full file are pinned.
+    return (hashlib.sha256(data).hexdigest() == '3f0bdd4bf3f122adc6b5cba2a5f650cda58434e444dcb2621f25a2c3e3f6f53d'
+            and hashlib.sha256(data[:58704]).hexdigest() == '7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984')
 
 def reviewed_mission_enrichment_style(data):
     return hashlib.sha256(data).hexdigest() == MISSION_ENRICHMENT_STYLE_SHA256
@@ -124,6 +131,11 @@ def main():
         assert any('duplicate source_sha256' in e for e in unique_reviewed(duplicate,set()))
         assert any('rejected sha256' in e for e in unique_reviewed(good,{'2'*64}))
         wrap_expected = [f'page-{i}.html' for i in range(120)]
+        panel_style = (ROOT/'site-system.css').read_bytes()
+        assert reviewed_system_panel_style(panel_style)
+        assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
+        assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
+        assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
         wrap_good = {name: ['site-system.css?v=current'] for name in wrap_expected}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
@@ -348,12 +360,14 @@ def main():
         if relative.startswith(('tools/', '.git/', 'node_modules/', 'focuschrist-repo/')): continue
         refs = re.findall(r'<link\b[^>]*href=[\"\']([^\"\']*site-system\.css[^\"\']*)', path.read_text(encoding='utf-8'))
         if refs: wrap_consumers[relative] = refs
-    check(reviewed_wrap_consumers(wrap_consumers, wrap_review['siteSystemConsumers'], wrap_review['siteSystemConsumerVersion']), 'Shared text-wrap stylesheet consumer list or cache versions changed')
+    panel_contract = json.loads((ROOT/'docs/section-panel-surfaces.json').read_text(encoding='utf-8'))
+    check(set(panel_contract['site_system_consumers']) == set(wrap_review['siteSystemConsumers']), 'Panel update changed protected shared stylesheet coverage')
+    check(reviewed_wrap_consumers(wrap_consumers, panel_contract['site_system_consumers'], panel_contract['version']), 'Shared panel stylesheet consumer list or cache versions changed')
     art_owners = {'art-study/the-good-shepherd.html', 'art-study/the-living-christ.html', 'art-study/suffer-the-little-children.html', 'art-study/be-still.html'}
     art_consumers = {str(p.relative_to(ROOT)).replace('\\','/'): re.findall(r'art-study-enrichment\.css\?v=([^\"\\s>]+)', p.read_text(encoding='utf8')) for p in ROOT.rglob('*.html') if 'art-study-enrichment.css' in p.read_text(encoding='utf8')}
     check(set(art_consumers) == art_owners and all(v == ['20260923-reading-rhythm-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
-    check(sha(ROOT/'site-system.css')=='7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984', 'Reviewed mobile polish stylesheet changed: site-system.css')
+    check(reviewed_system_panel_style((ROOT/'site-system.css').read_bytes()), 'Reviewed base or exact owner-directed panel appendix changed: site-system.css')
     check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
     check(reviewed_home_style((ROOT/HOME_STYLE).read_bytes()), 'Home presentation stylesheet differs from exact reviewed bytes')
     check(sha(ROOT/'missionary.css') == BOUNDARY_WRAP_STYLES['.fc-missionary-page main'][1],
@@ -411,7 +425,7 @@ def main():
                   'Conference opening CSS differs from reviewed bytes')
             continue
         if selector.strip()=='body.fc-site' and body.strip()=='--fc-opening-hero-height: clamp(320px, 44svh, 420px);':
-            check(sha(ROOT/'site-system.css')=='7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984',
+            check(reviewed_system_panel_style((ROOT/'site-system.css').read_bytes()),
                   'Mobile opening CSS differs from reviewed bytes')
             continue
         dropdown_selectors = {

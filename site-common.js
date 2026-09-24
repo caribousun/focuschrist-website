@@ -30,6 +30,8 @@
     const RESPECTFUL_QUESTION_RESPONSE = 'focusChrist is an independent site centered on Jesus Christ and respectful study of Latter-day Saint beliefs. Please rephrase your question without profanity, sexual content, or disrespect toward any religion, culture, or political affiliation.';
     const URGENT_SAFETY_RESPONSE = 'If you or someone else may be in immediate danger or experiencing abuse, contact local emergency services or a trusted qualified person who can help now. focusChrist cannot provide emergency or professional intervention.';
 
+    const SELF_HARM_SAFETY_RESPONSE = 'You deserve support and care. If you might act on thoughts of harming yourself or cannot stay safe, contact local emergency services now. In the United States and its territories, call or text 988 to reach the Suicide & Crisis Lifeline. Elsewhere, contact a local crisis line. If you can, ask someone you trust to stay with you and help you move away from anything you could use to hurt yourself. focusChrist cannot provide emergency intervention.';
+
     function normalizeQuestionSafetyText(value) {
         return String(value || '')
             .normalize('NFKD')
@@ -80,10 +82,26 @@
       return { support: topic && !rejectsSupport && (preventHarm || recoveryAction || seekingSupport || distressed || boundaries), prohibited: false };
     }
 
+    // Exact whole-input topics invite clarification; no free-form prompt is exempted.
+    function briefSensitiveTopic(value) {
+      const topic = String(value || '').trim().toLowerCase().replace(/[?.!]+$/, '').trim().replace(/\s+/g, ' ');
+      const pornography = /^(?:porn|pornography)$/.test(topic);
+      const sexual = /^(?:sex|sexual|sexual health|sexual orientation|sexual feelings|masturbation)$/.test(topic);
+      if (!pornography && !sexual) return null;
+      const subject = pornography ? 'pornography' : topic === 'sexual' ? 'sexual concerns' : topic;
+      const options = [
+        { label: 'Understand Church teachings', question: 'I want guidance about Church teachings on ' + subject + ', without explicit details.' },
+        { label: 'Find support', question: 'How can someone find support for concerns about ' + subject + ', without explicit details?' },
+        { label: 'Support someone else', question: 'How can I support a friend with concerns about ' + subject + ', without explicit details?' }
+      ];
+      return { allowed: true, kind: 'brief-sensitive-topic', response: 'You are welcome to ask about ' + subject + '. What would be most helpful: understanding Church teachings, finding support, or supporting someone else? You can choose a starting question or write your own. You do not need to share private details.', options: options };
+    }
+
     function evaluateQuestionSafety(value) {
         const normalized = normalizeQuestionSafetyText(value);
         const compact = normalized.replace(/\s+/g, '');
         const supportIntent = nonExplicitSupportIntent(normalized);
+        const briefTopic = briefSensitiveTopic(value);
         const urgentSafety = matchesAny(normalized, [
             /\b(?:sexual abuse|sexually abused|rape|raped|molest|molested|assaulted)\b/,
             /\b(?:immediate danger|being threatened|threatening me|hurt me|hurting me|kill me|being abused)\b/
@@ -92,6 +110,9 @@
             return { allowed: false, kind: 'urgent-safety', response: URGENT_SAFETY_RESPONSE };
         }
 
+        if (/\b(?:i (?:want|plan|intend) to (?:kill myself|end my life|hurt myself|harm myself|die)|i (?:am|m) (?:going to (?:kill myself|end my life|hurt myself|harm myself)|suicidal)|i (?:will|might|may) (?:kill myself|hurt myself|harm myself)|i (?:cannot|can t|cant) stay safe)\b/.test(normalized)) {
+            return { allowed: false, kind: 'urgent-safety', response: SELF_HARM_SAFETY_RESPONSE };
+        }
         const profanity = matchesAny(normalized, [
             /\b(?:fuck|fucking|fucked|motherfucker|shit|bullshit|bitch|bastard|ass|asshole|whore|slut|piss|dick|cock|pussy|faggot|nigger|retard|wtf|stfu)\b/,
             /\b(?:damn|crap)\b/
@@ -113,9 +134,10 @@
                 || /\b(?:should die|should be killed|deserve to die|subhuman|vermin)\b/.test(normalized));
         const structuredGroupAttack = /\b(?:why are|all|those|these)\s+[a-z-]{3,30}(?:\s+people)?\s+(?:are\s+|is\s+)?(?:stupid|idiots?|evil|inferior|worthless|disgusting|trash|vermin|subhuman|scum|morons?|hateful)\b/.test(normalized);
 
-        if (profanity || supportIntent.prohibited || (explicitSexual && !supportIntent.support) || groupAttack || structuredGroupAttack) {
+        if (profanity || supportIntent.prohibited || (explicitSexual && !supportIntent.support && !briefTopic) || groupAttack || structuredGroupAttack) {
             return { allowed: false, kind: 'respect-boundary', response: RESPECTFUL_QUESTION_RESPONSE };
         }
+        if (briefTopic) return briefTopic;
         return { allowed: true, kind: supportIntent.support ? 'non-explicit-support' : 'allowed', response: '' };
     }
 
@@ -846,14 +868,14 @@
 
     function loadStudyJourney() {
         if (document.querySelector('script[data-focuschrist-study-journey]')) return;
-        appendScript(relativeAssetHref('study-journey.js?v=20260923-self-help-1'), 'data-focuschrist-study-journey');
+        appendScript(relativeAssetHref('study-journey.js?v=20260923-sensitive-welcome-1'), 'data-focuschrist-study-journey');
     }
 
     function loadStudyIntelligence() {
         const path = window.location.pathname.toLowerCase();
         const eligible = path.endsWith('/ask.html') || path.endsWith('/pioneers.html');
         if (!eligible || document.querySelector('script[data-focuschrist-study-intelligence-v3]')) return;
-        appendScript('study-intelligence-v3.js?v=20260923-self-help-1', 'data-focuschrist-study-intelligence-v3');
+        appendScript('study-intelligence-v3.js?v=20260923-sensitive-welcome-1', 'data-focuschrist-study-intelligence-v3');
     }
 
     function initOpeningInvitation(intro, mobile) {

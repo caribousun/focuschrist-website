@@ -1,0 +1,45 @@
+{
+  "date": "2026-09-23",
+  "reviewer": "root actual CUA browser",
+  "status": "local review in progress; production not yet verified",
+  "chapter_cases": {
+    "routes": [
+      "jesus-christ/before-bethlehem.html",
+      "answers/abrahamic-covenant.html",
+      "birth-of-christ.html",
+      "answers/jesus-christ-latter-day-saint-beliefs.html"
+    ],
+    "widths": [
+      1366,
+      768,
+      320
+    ],
+    "additional_320_text200": true,
+    "results": "No horizontal overflow; chapter row heights aligned; whole-study guidance and toggle checked."
+  },
+  "rendered_panels": [
+    "Miracles related-study four-card group desktop",
+    "Mission four-card row desktop and 320px text200; 18px separated cards",
+    "Watch life-of-Christ two-card row desktop",
+    "Pioneer music two-card row desktop",
+    "Church History connected-study desktop",
+    "Conference topic-card row desktop",
+    "Ask topic panels 390px",
+    "Pioneer nine navigation choices desktop: distinct green cards, all numbered badges intact",
+    "Watch seven navigation choices desktop: four plus three balanced rows, all two-digit badges nowrap",
+    "Watch seven choices 320px text200: all controls in bounds; no horizontal overflow",
+    "Home approved reference three cards: computed original palette intact"
+  ],
+  "additional_text200_320_no_horizontal_overflow": [
+    "watch.html",
+    "pioneers.html",
+    "church-history.html",
+    "general-conference.html",
+    "come-follow-me.html",
+    "answers.html",
+    "ask.html"
+  ],
+  "ask_interaction": "390px: pornography shows neutral welcome with three choices; Find support fills and focuses followup question without submitting; no personal disclosure used.",
+  "scope_limits": "Representative rendered composition plus listed geometry checks; not owner aesthetic approval or exhaustive every-page screenshot review. Broader production audit requested and pending.",
+  "asset_bytes_changed": false
+}

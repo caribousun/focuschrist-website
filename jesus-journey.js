@@ -23,6 +23,18 @@
     }
     const chapters = groups.map(group => group.leader);
     const links = groups.map(group => group.link);
+    links.forEach((link, index) => {
+        const title = link.textContent.trim();
+        const number = document.createElement('span');
+        number.className = 'jj-chapter-number';
+        number.setAttribute('aria-hidden', 'true');
+        number.textContent = String(index + 1).padStart(2, '0');
+        const label = document.createElement('span');
+        label.className = 'jj-chapter-label';
+        label.textContent = title;
+        link.setAttribute('aria-label', title);
+        link.replaceChildren(number, label);
+    });
     allLinks.forEach(link => {
         if (!links.includes(link)) { link.hidden = true; link.style.display = 'none'; }
     });
@@ -42,14 +54,19 @@
     const position = document.createElement('p');
     position.className = 'jj-chapter-position';
     position.setAttribute('aria-live', 'polite');
+    const guide = document.createElement('p');
+    guide.className = 'jj-reading-guide';
+    guide.id = 'jj-reading-guide';
+    summary.setAttribute('aria-describedby', guide.id);
     const mode = document.createElement('button');
     mode.type = 'button';
     mode.className = 'jj-mode';
     mode.textContent = 'Read the whole study';
     mode.setAttribute('aria-pressed', 'false');
+    mode.setAttribute('aria-describedby', guide.id);
     nav.before(toolbar);
     picker.append(summary, nav);
-    toolbar.append(position, picker, mode);
+    toolbar.append(position, guide, picker, mode);
     const steps = document.createElement('nav');
     steps.className = 'jj-chapter-steps';
     steps.setAttribute('aria-label', 'Chapters within this study');
@@ -78,6 +95,9 @@
         position.textContent = (whole ? 'The complete study' : 'Chapter ' + (current + 1) + ' of ' + chapters.length) + ' · ' + subject;
         mode.textContent = whole ? 'Read one chapter at a time' : 'Read the whole study';
         mode.setAttribute('aria-pressed', String(whole));
+        guide.textContent = whole
+            ? 'All chapters are shown below. Choose a chapter to return to reading one at a time.'
+            : 'Choose a chapter to read it here, or select “Read the whole study” to show every chapter on one page.';
         previous.disabled = current === 0;
         next.disabled = current === chapters.length - 1;
         previous.textContent = current === 0 ? 'First chapter in this study' : '← Previous chapter in this study: ' + chapterTitle(current - 1);

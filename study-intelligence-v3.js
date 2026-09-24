@@ -471,6 +471,12 @@
     }
 
     async function askV3(query, additionalReference) {
+        const topicSafety = window.focusChristQuestionSafety && window.focusChristQuestionSafety.evaluate(query);
+        if (topicSafety && topicSafety.kind === 'brief-sensitive-topic') {
+            return { answer: topicSafety.response, sources: [], clarification: true,
+                clarificationOptions: topicSafety.options, profile: currentMode() };
+        }
+
         // Resolve an incomplete identity from the visitor's words only. A local
         // answer bank or an assistant's previous guess cannot establish identity.
         const userTurns = recentHistory().filter(function (item) { return item.role === 'user'; });
@@ -642,6 +648,30 @@
         };
     }
 
+    function appendClarificationOptions(result, box, input) {
+        if (!result.clarification || !Array.isArray(result.clarificationOptions)) return;
+        const choices = document.createElement('div');
+        choices.className = 'ask-clarification-options';
+        choices.setAttribute('role', 'group');
+        choices.setAttribute('aria-label', 'Choose a starting question');
+        result.clarificationOptions.forEach(function (option) {
+            const choice = document.createElement('button');
+            choice.type = 'button';
+            choice.className = 'ask-followup-button';
+            choice.textContent = option.label;
+            choice.addEventListener('click', function () {
+                input.value = option.question;
+                const followup = document.getElementById('followupInput');
+                const dock = document.getElementById('askFollowupDock');
+                const target = followup && dock && dock.getAttribute('aria-hidden') === 'false' ? followup : input;
+                target.value = option.question;
+                target.focus();
+            });
+            choices.appendChild(choice);
+        });
+        box.appendChild(choices);
+    }
+
     function loadingNode() {
         const node = document.createElement('div');
         node.className = 'loading';
@@ -685,6 +715,7 @@
                 if (loading.isConnected) loading.remove();
                 remember(question, result.answer, result);
                 window.addMessage(result.answer, false, result.sources);
+                appendClarificationOptions(result, box, input);
             } catch (error) {
                 if (requestId !== askRequestSerial) return;
                 console.error('focusChrist Ask v3 error:', error);
