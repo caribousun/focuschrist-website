@@ -49,3 +49,25 @@
 .fc-search-supporting > p {max-width:68ch;line-height:1.6;}
 .fc-search-supporting summary:focus-visible {outline:2px solid #f0c36a;outline-offset:4px;}
 .fc-search-supporting > button {margin-top:24px;}
+
+/* Narrow current-study titles occupy their own natural-height row. */
+@media (max-width:600px) {
+    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 44px 20px;
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study > .nav-logo { grid-column: 1; grid-row: 1; }
+    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study > .fc-search-trigger {
+        grid-column: 2; grid-row: 1; position: static; transform: none;
+    }
+    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study > .hamburger-wrap { grid-column: 3; grid-row: 1; }
+    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study > .nav-links {
+        grid-column: 1 / -1; grid-row: 2; width: 100%; margin: 0 !important;
+    }
+    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study .nav-links a[data-focuschrist-current-study] {
+        display: block !important; -webkit-line-clamp: unset; max-height: none;
+        max-width: none; overflow: visible; white-space: normal; overflow-wrap: anywhere;
+    }
+}

@@ -10,6 +10,12 @@ const profiles = [{name:'desktop',width:1366,scale:1},{name:'phone',width:390,sc
 function inspectPresentation() {
     function rendered(node) {
         if (!node.getClientRects().length || node.closest('[hidden],template')) return false;
+        for(let parent=node.parentElement;parent;parent=parent.parentElement){
+            if(parent.tagName==='DETAILS' && !parent.open){
+                const summary=[...parent.children].find(child=>child.tagName==='SUMMARY');
+                if(!summary || (node!==summary && !summary.contains(node)))return false;
+            }
+        }
         for (let parent = node; parent; parent = parent.parentElement) {
             const style = getComputedStyle(parent);
             if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) === 0) return false;
@@ -28,8 +34,19 @@ function inspectPresentation() {
     const controls = [...document.querySelectorAll('a[href],button,input:not([type="hidden"]),select,textarea,summary')].filter(rendered);
     const clippedControls = controls.flatMap(node => {
         const rect = node.getBoundingClientRect(), style = getComputedStyle(node);
-        const cropX = ['hidden','clip'].includes(style.overflowX) && node.clientWidth > 0 && node.scrollWidth > node.clientWidth + 3;
-        const cropY = ['hidden','clip'].includes(style.overflowY) && node.clientHeight > 0 && node.scrollHeight > node.clientHeight + 3;
+        // Scroll dimensions also count intentionally zoomed artwork/pseudo-layers.
+        // Measure painted text fragments, so an image-only link cannot be called
+        // a clipped label while a truncated real label remains a failure.
+        const textRects=[];
+        const walker=document.createTreeWalker(node,NodeFilter.SHOW_TEXT);
+        while(walker.nextNode()){
+            const text=walker.currentNode;
+            if(!text.textContent.trim() || !rendered(text.parentElement))continue;
+            const range=document.createRange();range.selectNodeContents(text);
+            textRects.push(...range.getClientRects());
+        }
+        const cropX=['hidden','clip'].includes(style.overflowX) && textRects.some(box=>box.left<rect.left-3 || box.right>rect.right+3);
+        const cropY=['hidden','clip'].includes(style.overflowY) && textRects.some(box=>box.top<rect.top-3 || box.bottom>rect.bottom+3);
         // Inputs scroll their editable text by design; inspect their outer box only.
         const croppedText = !['INPUT','TEXTAREA','SELECT'].includes(node.tagName) && (cropX || cropY);
         const outside = rect.left < -3 || rect.right > innerWidth + 3;
@@ -40,7 +57,7 @@ function inspectPresentation() {
             const clipY=['hidden','clip'].includes(parentStyle.overflowY) && (rect.top<box.top-3 || rect.bottom>box.bottom+3);
             if(clipX || clipY)clippedBy.push({...identity(parent),clipX,clipY});
         }
-        return croppedText || outside || clippedBy.length ? [{...identity(node),rect:{left:rect.left,right:rect.right,width:rect.width,height:rect.height},croppedText,outside,clippedBy}] : [];
+        return croppedText || outside || clippedBy.length ? [{...identity(node),rect:{left:rect.left,right:rect.right,width:rect.width,height:rect.height},croppedText,outside,clippedBy,textBounds:textRects.map(box=>({left:box.left,right:box.right,top:box.top,bottom:box.bottom}))}] : [];
     });
     const images = [...document.images].filter(rendered);
     return {

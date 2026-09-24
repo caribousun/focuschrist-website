@@ -101,6 +101,14 @@ class Tags(HTMLParser):
     def __init__(self, text):
         super().__init__(); self.tags=[]; self.feed(text)
     def handle_starttag(self, tag, attrs): self.tags.append((tag,dict(attrs)))
+
+# Exact owner-requested narrow title/mini-card appendices; original CSS preserved.
+NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4785, 'base_sha256': '1d0a269872a48abb56893da0fe38c855295f47a5ace6989d56e2751b5267ebaf', 'sha256': '2ee2f7509919e1d9f82eef0f95ffb2dd38abda837cea0713d8d6151b7ea61c0a'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'f65206ece31fc52ec4eeff680cc22f788ddce59bb0499f3e0de204a2256719e7'}}
+def reviewed_narrow_reading_style(name, data):
+    entry=NARROW_READING_STYLES.get(name)
+    return bool(entry and hashlib.sha256(data).hexdigest()==entry["sha256"]
+                and hashlib.sha256(data[:entry["base_bytes"]]).hexdigest()==entry["base_sha256"])
+
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def unique_reviewed(heroes, rejected):
     errors=[]; seen={}
@@ -179,6 +187,11 @@ def main():
         assert bible_style_reference_allowed(BIBLE_STYLE_OWNER, BIBLE_STYLE)
         assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
         assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
+        for name in NARROW_READING_STYLES:
+            data=(ROOT/name).read_bytes()
+            assert reviewed_narrow_reading_style(name,data)
+            assert not reviewed_narrow_reading_style(name,data+b"body{display:none}")
+            assert not reviewed_narrow_reading_style(name,b"X"+data[1:])
         journey_css = (ROOT/JOURNEY_STYLE).read_bytes()
         owners = {'answers/jesus-christ-latter-day-saint-beliefs.html','jesus-christ/before-bethlehem.html','birth-of-christ.html','answers/abrahamic-covenant.html'}
         assert reviewed_journey_style(journey_css)
@@ -386,6 +399,9 @@ def main():
         if added_file=='answers-hero.css' and len(matches)==1 and matches[0][0].strip() in ANSWERS_FEATURED_RULES:
             check(reviewed_answers_featured(*matches[0], (ROOT/'answers-hero.css').read_bytes()),
                   'Answers featured pair differs from exact reviewed selectors/properties/stylesheet bytes')
+            continue
+        if added_file in NARROW_READING_STYLES:
+            check(reviewed_narrow_reading_style(added_file,(ROOT/added_file).read_bytes()), "Narrow reading CSS differs from exact reviewed appendix/prefix: "+added_file)
             continue
         added_lines.append(rule)
     additions='\n'.join(added_lines)

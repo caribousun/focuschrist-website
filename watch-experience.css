@@ -508,3 +508,12 @@
     pointer-events: none;
 }
 .watch-path-card > * { position: relative; z-index: 1; }
+
+/* Narrow mini cards keep a full-width picture above naturally wrapping copy. */
+@media (max-width:600px) {
+    .watch-mini-media { min-height: 0; padding: 170px 18px 20px; }
+    .watch-mini-media::before { inset: 0 0 auto; width: 100%; height: 150px; transform: none; }
+    .watch-mini-media::after { background: linear-gradient(180deg, transparent 100px, #102f3b 150px); }
+    .watch-mini-play { left: 50%; top: 75px; transform: translate(-50%, -50%); }
+    .watch-mini-copy { min-height: 0; justify-content: flex-start; }
+}
