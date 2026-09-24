@@ -84,7 +84,9 @@ jobs:
           node tools/study_navigation_runtime_qa.js
 
       - name: Run focusChrist unified experience QA
-        run: python tools/unified_experience_qa.py
+        run: |
+          python tools/unified_experience_qa.py
+          python tools/section_panel_surface_qa.py --self-test
 
       - name: Run site-wide artwork detail QA
         run: |
@@ -106,6 +108,7 @@ jobs:
         run: |
           npm install --prefix "$RUNNER_TEMP/focuschrist-dom-qa" --no-save --package-lock=false --ignore-scripts jsdom@26.1.0
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/opening_flow_and_cards_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/study_link_controls_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/art_study_picture_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/evidences_visual_guides_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/not_found_recovery_runtime_qa.js
@@ -113,6 +116,7 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/topic_artwork_sources_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/canonical_presentation_measurement.test.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/settle_recording_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/watch_shorts_runtime_qa.js
@@ -132,11 +136,27 @@ jobs:
       - name: Verify complete card row consumers
         run: python tools/complete_card_rows_qa.py
 
-      - name: Verify rendered card rows at responsive widths
+      - name: Install browser presentation dependencies
+        id: presentation_dependencies
         run: |
           npm install --prefix /tmp/focus-row-qa --no-save --package-lock=false --ignore-scripts playwright@1.55.1
           /tmp/focus-row-qa/node_modules/.bin/playwright install --with-deps chromium
-          NODE_PATH=/tmp/focus-row-qa/node_modules node tools/complete_card_rows_browser_qa.js
+
+      - name: Verify rendered card rows at responsive widths
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/complete_card_rows_browser_qa.js
+
+      - name: Inspect every canonical page at desktop, phone, and enlarged text
+        if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/canonical_presentation_browser_qa.js
+
+      - name: Save canonical presentation diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-presentation
+          path: .qa-artifacts/canonical-presentation.json
+          include-hidden-files: true
+          if-no-files-found: ignore
 
       - name: Verify visual resource coverage and source thumbnails
         run: python tools/resource_thumbnail_qa.py

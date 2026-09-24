@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-23",
+  "reviewer": "remaining_passion_art",
+  "status": "pass-source-and-targeted-runtime-review",
+  "hashes": {
+    "site-common.js": "91ddd7626aaf4369ce694ce996000d9afd66dc3a883b057509940716b4b5b71c",
+    "groq-proxy/src/index.js": "c2f0d391850f08424d51d5ea81e543021ab5dcb56d0113497e5949081e0bc959",
+    "study-intelligence-v3.js": "abe5ffcce53550e60112c2f789a29ab15768e7c0e346adf34c40cafd478d9aff",
+    "tools/question_safety_runtime_qa.js": "00483344f97bed574aa916ad8f34aba16d906ee9ec9964a1f49a2c3cce53235f",
+    "tools/canonical_presentation_browser_qa.js": "7bee8240c375f5011aa8f08c409dbf7a73f88fdd0ea356f85bdb4056bcd65a16",
+    ".github/workflows/site-qa.yml": "15d53ac4d27e7a46d0b6d6e6c0cc7faeff893884a8f1a6e5087202fba3f945c4"
+  },
+  "ask": [
+    "Exact brief topics only; added text cannot use clarification exemption to bypass explicit-request checks.",
+    "Abuse and direct self-harm disclosures precede topic choices and respect-boundary. Non-exhaustive crisis classifier remains a limit.",
+    "Choices populate editable inputs and focus; no submit event/provider call occurs on choice click.",
+    "Clarification explicitly not source-verified; no clinical claims or request for private details.",
+    "Minor bare-sexual display grammar corrected to sexual concerns without widening matching.",
+    "93 full client/Worker parity fixtures pass; v3runtime, self-help Worker and reviewed starter suites independently passed."
+  ],
+  "browser_gate": [
+    "CI-only headless gate over canonical sitemap routes and three viewport/text profiles.",
+    "Reports documentstatus, overflow, own/ancestor control clipping, missing visibleh1, brokenloadedimages, pendinglocalimages andlocal404; preserves route/profile diagnostics artifact on completion/failure.",
+    "Painted aria-hidden nodes included; truly invisible and wholly clipped nodes excluded. Scrollable ancestors not treated as static clipping.",
+    "Twelve-minute outer budget plus bounded navigation/decode/fonts; exactexpected check count required.",
+    "Syntax checked; no localbrowser launched. First CI execution and actual owner/root visual review remain necessary."
+  ],
+  "limits": [
+    "Not a full accessibilityaudit or all hidden disclosure/chapter interaction sweep.",
+    "External images still pending do not fail; loadedbroken external images do.",
+    "Does not prove typography/composition preference, exhaustive crisis detection or publicdeployment."
+  ]
+}

@@ -4,7 +4,7 @@
   "status": "pass",
   "scope": "Independent public integration source/copy/structure review, no browser or new pixel approval",
   "hashes": {
-    "answers/abrahamic-covenant.html": "b1166b7c02f1460e3192e6c63ae3d78a91b5c9c23e81544c7ae713ba8035d144",
+    "answers/abrahamic-covenant.html": "aee8959ea08f0345456878a8799b2f9331713980f0fbcfdde3225a4ece1696c8",
     "art-ask-context.js": "a652a5c3d8368108c1a8724324269eadb476d4c79d789dfc6eeed488af2ecfb2",
     "tools/abrahamic_covenant_qa.py": "78e5cfba773cced409ac20ee9e1f5268b44242a79285cd66675b5610cd4f3b80",
     "tools/watch_context_runtime_qa.js": "3ee5eda471f17c9d190ebde0c16cf1621d1e7be6fe707e01eea4f6d8b32802fa",
@@ -40,12 +40,12 @@
     {
       "severity": "minor",
       "key": "ac-jacob-ladder",
-      "detail": "Dream/stairway caption currently linked Genesis28:13–17; include verse12 with exact12–17 link."
+      "detail": "Dream/stairway caption currently linked Genesis28:13\u201317; include verse12 with exact12\u201317 link."
     },
     {
       "severity": "minor",
       "key": "ac-hearts-generations",
-      "detail": "Visible source label Doctrine and Covenants110:13–16 needs space before110."
+      "detail": "Visible source label Doctrine and Covenants110:13\u201316 needs space before110."
     }
   ],
   "findings": [],
@@ -97,5 +97,47 @@
     "change": "Only this artwork full/thumbnail paths changed; no wording, sources, controls, geometry or other artwork changed.",
     "independent_pixel_review": "Newton; ac-abraham-eyes-v3-independent-review.json; approved Christ reference viewed.",
     "browser_status": "Root verified corrected thumbnail and full-size pixels, detail/full-size/close/Continue at desktop and390px phone; no horizontal overflow; same caption and source."
-  }
+  },
+  "cache_only_provenance": [
+    {
+      "date": "2026-09-23",
+      "reviewer": "newton",
+      "prior_page_sha256": "b1166b7c02f1460e3192e6c63ae3d78a91b5c9c23e81544c7ae713ba8035d144",
+      "current_page_sha256": "4ba143159d751bd5b9d98b2152cca8cef9a37ab09f8e395ea8e3089cf991960b",
+      "proof": "Current HTML equals prior committed HTML byte-for-byte after replacing only version query values. Published text, artwork assets, captions and source URLs unchanged.",
+      "changes": [
+        {
+          "before": "../site-system.css?v=20260923-large-text-wrap-1",
+          "after": "../site-system.css?v=20260924-home-panel-surfaces-1"
+        },
+        {
+          "before": "../jesus-journey.css?v=20260923-standard-formatting-1",
+          "after": "../jesus-journey.css?v=20260923-chapter-cards-1"
+        },
+        {
+          "before": "/jesus-journey.js?v=20260923-pictured-chapters-1",
+          "after": "/jesus-journey.js?v=20260923-chapter-cards-1"
+        },
+        {
+          "before": "../site-common.js?v=20260923-covenant-nav-1",
+          "after": "../site-common.js?v=20260923-sensitive-welcome-1"
+        }
+      ],
+      "browser_limit": "This verifies cache-only HTML identity; new shared runtime and panel behavior has separate release browser review."
+    },
+    {
+      "date": "2026-09-24",
+      "reviewer": "jacob_art",
+      "prior_page_sha256": "4ba143159d751bd5b9d98b2152cca8cef9a37ab09f8e395ea8e3089cf991960b",
+      "current_page_sha256": "aee8959ea08f0345456878a8799b2f9331713980f0fbcfdde3225a4ece1696c8",
+      "proof": "Replacing only the site-search stylesheet version in current HTML reconstructs the exact prior reviewed SHA-256. Content, artwork and source URLs unchanged.",
+      "changes": [
+        {
+          "before": "site-search.css?v=20260914-standard-rails-1",
+          "after": "site-search.css?v=20260924-narrow-reading-1"
+        }
+      ],
+      "browser_limit": "Cache-only identity proof; root separately verified full narrow header label and intact controls at320px/200percenttext."
+    }
+  ]
 }

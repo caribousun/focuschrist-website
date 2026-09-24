@@ -4,6 +4,7 @@ import hashlib
 import json
 import re
 from PIL import Image
+from sitewide_artwork_review_qa import reviewed_system_panel_style
 
 ROOT = Path(__file__).resolve().parents[1]
 record = json.loads((ROOT / 'docs/mobile-scene-review-20260920.json').read_text(encoding='utf-8'))
@@ -40,7 +41,28 @@ assert cue_override.strip() == 'margin: auto auto 0 !important;', 'Continue must
 assert 'background-size: contain' not in mobile_opening_css
 assert 'object-fit: contain' not in mobile_opening_css
 # Copy polish must preserve PR348's owner-approved sizes and focal points.
-locked_css, copy_css = css.split('/* Consistent mobile copy rhythm', 1)
+def reviewed_copy_polish(data):
+    # Later owner-reviewed panel/control appendices contain control min-heights.
+    # Exempt only the exact independently pinned full stylesheet, whose original
+    # 58,704-byte hero/copy prefix is also pinned by this shared review function.
+    assert reviewed_system_panel_style(data), 'Shared stylesheet differs from exact reviewed base and appendices'
+    text = data.decode('utf-8').replace('\r\n', '\n')
+    assert text.count('/* BEGIN OWNER SECTION PANEL SURFACES') == 1
+    protected = text.split('/* BEGIN OWNER SECTION PANEL SURFACES', 1)[0]
+    return protected.split('/* Consistent mobile copy rhythm', 1)
+
+stylesheet_bytes = (ROOT / 'site-system.css').read_bytes()
+locked_css, copy_css = reviewed_copy_polish(stylesheet_bytes)
+# Unknown appended rules or a changed original frame can never acquire this scope.
+for mutation in (stylesheet_bytes + b'\n.fc-visual-hero{height:9px}',
+                 stylesheet_bytes.replace(b'--fc-mobile-hero-height:', b'--fc-broken-height:', 1),
+                 stylesheet_bytes.replace(b'--fc-panel-fill:', b'--fc-changed-panel-fill:', 1)):
+    try:
+        reviewed_copy_polish(mutation)
+    except AssertionError:
+        pass
+    else:
+        raise AssertionError('Unreviewed stylesheet mutation passed mobile copy scope')
 assert hashlib.sha256(locked_css.rstrip().encode()).hexdigest() == 'aeaba99eaf45c0bda4afb9b03f9c7ae421947da1cfca3898fef06d1f3e12dab3', 'Owner-approved hero frame or focal point changed'
 assert '--fc-mobile-hero-height:' not in copy_css, 'Copy spacing must not redefine hero height'
 assert '.fc-visual-hero' not in copy_css and not re.search(r'(?<![\w-])(?:height|min-height|max-height)\s*:', copy_css), 'Copy polish must not override locked frame dimensions'

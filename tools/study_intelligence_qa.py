@@ -56,7 +56,7 @@ def main() -> int:
 
     required_common_markers = (
         "loadStudyIntelligence",
-        "study-intelligence-v3.js?v=20260923-self-help-1",
+        "study-intelligence-v3.js?v=20260923-sensitive-welcome-1",
         "data-focuschrist-study-intelligence-v3",
         "path.endsWith('/ask.html')",
         "path.endsWith('/pioneers.html')",

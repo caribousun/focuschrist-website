@@ -96,7 +96,7 @@ for (const query of ['How was the Book of Abraham translated?', 'What happened t
     assert(!related || related.url !== 'answers/abrahamic-covenant.html', 'unrelated Abraham or Jacob query acquired a covenant study: ' + query);
 }
 assert(window.focusChristSourceRouter.isChurchHistoryQuestion('How was the Book of Abraham translated?'), 'Book of Abraham history must preserve its historical routing');
-const routerVersion = 'study-source-router.js?v=20260923-covenant-study-1';
+const routerVersion = 'study-source-router.js?v=20260923-sensitive-welcome-1';
 for (const page of ['ask.html', 'pioneers.html', 'church-history.html']) {
     const tags = fs.readFileSync(page, 'utf8').match(/<script\b[^>]*study-source-router\.js[^>]*>/g) || [];
     assert(tags.length === 1 && tags[0].includes(routerVersion), 'router consumer version or count differs: ' + page);

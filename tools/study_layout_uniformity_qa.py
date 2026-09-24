@@ -27,7 +27,7 @@ def declarations(filename, selector):
             for selectors, body in blocks if selector in [s.strip() for s in selectors.split(",")]]
 
 
-JOURNEY_VERSION = '20260923-standard-formatting-1'
+JOURNEY_VERSION = '20260923-chapter-cards-1'
 PAGE_BOUNDARY_VERSIONS = {'church-history.css': '20260923-page-borders-1',
                           'missionary.css': '20260923-enrichment-finish-1'}
 

@@ -1,0 +1,54 @@
+{
+  "version": "20260924-home-panel-surfaces-1",
+  "chip_selectors": [
+    ".fc-study-visual-sources a:not(.fc-button--primary)",
+    ".pioneer-source-links a:not(.fc-button--primary)",
+    ".fc-resource-next a:not(.fc-button--primary)",
+    ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)",
+    ".cfm-jump a:not(.fc-button--primary)",
+    ".gc-jumps a:not(.fc-button--primary)",
+    "a.source-link:not(.source-link--internal):not(.fc-button--primary)",
+    ".fc-topic-artwork-detail a[data-topic-art-source]:not(.fc-button--primary)"
+  ],
+  "navigation_surface_selectors": [
+    "nav[aria-label=\"Pioneer study sections\"] .fc-button:not(.fc-button--primary)",
+    ".bom-story-directory a:not(.fc-button--primary)",
+    ".atonement-path .fc-button:not(.fc-button--primary)",
+    ".watch-topic-index a:not(.fc-button--primary)"
+  ],
+  "row_selectors": [
+    ".fc-study-visual-sources",
+    ".pioneer-source-links",
+    ".fc-study-nav:not(.jj-local-nav)",
+    ".cfm-jump",
+    ".gc-jumps"
+  ],
+  "delegated": {
+    ".jj-actions a": "journey stylesheet owner applies same tokens; includes returnlinks",
+    ".jj-local-nav a": "journey chapter cards retain their separate numbered Home-derived treatment"
+  },
+  "exclusions": [
+    "Inline scripture links within prose or headings",
+    "Home and Church History approved navigation pills",
+    "Explicit .fc-button--primary controls",
+    "Ask/Pioneer .source-link--internal primary internal action",
+    "Bare anchors and generic .fc-button selectors",
+    "Image links and artwork framing"
+  ],
+  "runtime_selectors": {
+    "a.source-link:not(.source-link--internal):not(.fc-button--primary)": {
+      "source": "pioneer-experience.js",
+      "marker": "source-link"
+    },
+    ".fc-topic-artwork-detail a[data-topic-art-source]:not(.fc-button--primary)": {
+      "source": "topic-artwork-details.js",
+      "marker": "link.dataset.topicArtSource"
+    }
+  },
+  "number_badges": [
+    ".watch-topic-index a > span",
+    ".pioneer-trail-number",
+    ".bom-story-directory a span",
+    ".cfm-tool__number"
+  ]
+}

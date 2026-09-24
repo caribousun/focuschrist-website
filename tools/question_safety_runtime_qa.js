@@ -75,6 +75,15 @@ console.log('Question safety runtime QA PASS');
         const worker = evaluateQuestionSafety(item.question);
         assert(client.allowed === item.allowed && client.kind === item.kind, 'Support boundary: ' + JSON.stringify({ item, client }));
         assert(JSON.stringify(client) === JSON.stringify(worker), 'Client/Worker safety drift: ' + item.question);
+        if (client.kind === 'brief-sensitive-topic') {
+            assert(client.options.length === 3, 'Each brief entry offers three neutral choices');
+            if (item.question === 'sexual') assert(client.response.includes('sexual concerns') && client.options.every(option => option.question.includes('sexual concerns')), 'Bare sexual receives grammatical neutral display wording');
+            for (const option of client.options) {
+                assert(safety.evaluate(option.question).allowed, 'Suggested question remains answerable: ' + option.question);
+            }
+            assert(!/you (?:are struggling|have an addiction|need treatment)/i.test(client.response), 'No assumed personal struggle or diagnosis');
+        }
+
     }
     console.log('Contextual support parity PASS: ' + cases.length + ' generic fixtures');
 })().catch(error => { console.error(error); process.exitCode = 1; });

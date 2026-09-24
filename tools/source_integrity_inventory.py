@@ -97,19 +97,19 @@ runtime_files = [ROOT / "site-common.js", ROOT / "study-source-router.js", ROOT 
 versions = set()
 for path in runtime_files:
     versions.update(re.findall(r"study-intelligence-v3\.js\?v=([a-zA-Z0-9-]+)", path.read_text(encoding="utf-8")))
-if versions != {"20260923-self-help-1"}:
+if versions != {"20260923-sensitive-welcome-1"}:
     errors.append(f"mixed Study Intelligence v3 cache versions: {sorted(versions)}")
 
 cache_markers = {
-    "site-common.js": (common, "study-journey.js?v=20260923-self-help-1"),
-    "study-journey.js": (journey, "study-source-router.js?v=20260923-covenant-study-1"),
-    "ask.html experience": (ask, "ask-experience.js?v=20260910-followup-visibility-5"),
+    "site-common.js": (common, "study-journey.js?v=20260923-sensitive-welcome-1"),
+    "study-journey.js": (journey, "study-source-router.js?v=20260923-sensitive-welcome-1"),
+    "ask.html experience": (ask, "ask-experience.js?v=20260923-sensitive-welcome-1"),
     "ask.html reviewed knowledge": (ask, "reviewed-ask-knowledge.js?v=20260910-holy-ghost-subject-2"),
     "pioneers.html reviewed knowledge": (pioneers_html, "reviewed-ask-knowledge.js?v=20260909-openai-only-2"),
     "pioneers.html": (pioneers_html, "pioneer-experience.js?v=20260920-family-answers-2"),
-    "church-history.html common": (history_html, "site-common.js?v=20260923-self-help-1"),
+    "church-history.html common": (history_html, "site-common.js?v=20260923-sensitive-welcome-1"),
     "church-history.html reviewed knowledge": (history_html, "reviewed-ask-knowledge.js?v=20260909-openai-only-2"),
-    "church-history.html router": (history_html, "study-source-router.js?v=20260923-covenant-study-1"),
+    "church-history.html router": (history_html, "study-source-router.js?v=20260923-sensitive-welcome-1"),
     "church-history.html experience": (history_html, "church-history-experience.js?v=20260903-16"),
 }
 for label, (text, marker) in cache_markers.items():

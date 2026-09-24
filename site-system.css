@@ -1604,3 +1604,225 @@ body.fc-site .fc-opening-invitation-label { display: block; margin-bottom: 8px; 
     body.fc-site .cfm-hero__copy,
     body.fc-site .gc-page-opening { overflow-wrap: anywhere; }
 }
+
+/* BEGIN OWNER SECTION PANEL SURFACES
+   Approved Home cards establish the surface. Named panels only: never bare
+   sections, reading wrappers, heroes, figures, controls or image containers.
+   Surface-only overrides intentionally survive page styles without altering
+   padding, dimensions, layout, overflow, image fitting or focus outlines. */
+:root {
+    --fc-panel-fill: linear-gradient(180deg, rgba(134,175,200,.72), rgba(232,181,77,.72)) left / 3px 100% no-repeat, var(--fc-card-fill);
+    --fc-panel-border: var(--fc-line);
+    --fc-panel-shadow: inset 0 0 0 1px var(--fc-line), inset 0 1px 0 #f4dba31a, 0 14px 32px #05111740;
+    --fc-panel-hover-fill: linear-gradient(180deg, rgba(134,175,200,.72), rgba(232,181,77,.72)) left / 3px 100% no-repeat, radial-gradient(ellipse at 8% 0%, #d4b3651a, transparent 70%), linear-gradient(145deg, #365c4d, #24483f);
+}
+body.fc-site .fc-study-hub,
+body.fc-site .fc-study-panel,
+body.fc-site .fc-deep-study details,
+body.fc-site .fc-resource-section,
+body.fc-site .fc-resource-card,
+body.fc-site .fc-source-panel,
+body.fc-site .fc-reflection-prompts details,
+body.fc-site .fc-study-opening article,
+body.fc-site .fc-continuation-grid article,
+body.fc-site .fc-answers-jump-panel,
+body.fc-site .fc-answers-reflection-copy details,
+body.fc-site .fc-foundation-route,
+body.fc-site .fc-foundation-connections,
+body.fc-site .fc-foundation-card,
+body.fc-site .fc-stand-callout,
+body.fc-site .fc-missionary-work-card,
+body.fc-site .fc-missionary-visit-panel,
+body.fc-site .fc-mission-reflection,
+body.fc-site .fc-marriage-worth,
+body.fc-site .fc-bible-reference,
+body.fc-site .fc-bible-history-note,
+body.fc-site .fc-priesthood-evidence,
+body.fc-site .fc-notice,
+body.fc-site .notice,
+body.fc-site .cfm-week__card,
+body.fc-site .cfm-focus,
+body.fc-site .cfm-reading--assignment,
+body.fc-site .cfm-day,
+body.fc-site .cfm-library-card,
+body.fc-site .cfm-tool,
+body.fc-site .cfm-path,
+body.fc-site .cfm-month,
+body.fc-site .gc-topic,
+body.fc-site .gc-talk,
+body.fc-site .gc-pathway,
+body.fc-site .fc-voice-grid article,
+body.fc-site .fc-conference-sessions details,
+body.fc-site .fc-conference-note,
+body.fc-site .watch-video-card,
+body.fc-site .watch-official-card,
+body.fc-site .watch-path-card,
+body.fc-site .watch-feature-study,
+body.fc-site .watch-source-note,
+body.fc-site .journal-card,
+body.fc-site .pioneer-music-card,
+body.fc-site .pioneer-source-notes,
+body.fc-site .pioneer-timeline-group,
+body.fc-site .likeness-evidence,
+body.fc-site .likeness-reflection,
+body.fc-site .atonement-reading .reflection,
+body.fc-site .atonement-help,
+body.fc-site .bom-art-context,
+body.fc-site .fc-history-source-lock,
+body.fc-site .fc-next-conference,
+body.fc-site .cfm-next-year,
+body.fc-site .fc-history-era,
+body.fc-site .fc-art-meditation,
+body.fc-site .fc-stand-study,
+body.fc-site .fc-stand-series,
+body.fc-site .fc-inquiry-practice,
+body.fc-site .fc-primary-grid article,
+body.fc-site .fc-learning-grid article,
+body.fc-site .fc-dc-grid article {
+    --fc-muted: var(--fc-text);
+    background: var(--fc-panel-fill) !important;
+    border-color: var(--fc-panel-border) !important;
+    border-radius: var(--fc-radius) !important;
+    box-shadow: var(--fc-panel-shadow) !important;
+}
+body.fc-site :is(a.gc-pathway, a.watch-official-card, a.watch-path-card, a.cfm-tool):is(:hover, :focus-visible) {
+    background: var(--fc-panel-hover-fill) !important;
+    border-color: var(--fc-line-strong) !important;
+}
+/* END OWNER SECTION PANEL SURFACES */
+
+/* BEGIN OWNER MISSION PANEL ROW
+   Separate the four existing work panels. Preserve the page's 4/2/1 columns
+   and each card's padding/height; remove only the obsolete enclosing strip. */
+body.fc-site .fc-missionary-work-grid {
+    gap: 18px;
+    border: 0;
+    background: none;
+}
+/* END OWNER MISSION PANEL ROW */
+
+/* BEGIN OWNER STUDY LINK CONTROLS
+   Scripture/source chips and named small navigation controls. Prose links,
+   approved Home/History pills and yellow primary actions stay untouched. */
+:root {
+    --fc-study-control-fill: linear-gradient(145deg, #315547, #1d3b38);
+    --fc-study-control-hover-fill: linear-gradient(145deg, #3b6657, #28504b);
+    --fc-study-control-border: #9cafaa;
+    --fc-study-control-text: var(--fc-cream);
+    --fc-study-control-radius: 10px;
+    --fc-study-control-min-height: 44px;
+    --fc-study-control-gap: 10px;
+}
+body.fc-site .fc-study-visual-sources a:not(.fc-button--primary),
+body.fc-site .pioneer-source-links a:not(.fc-button--primary),
+body.fc-site .fc-resource-next a:not(.fc-button--primary),
+body.fc-site .fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary),
+body.fc-site .cfm-jump a:not(.fc-button--primary),
+body.fc-site .gc-jumps a:not(.fc-button--primary),
+body.fc-site a.source-link:not(.source-link--internal):not(.fc-button--primary),
+body.fc-site .fc-topic-artwork-detail a[data-topic-art-source]:not(.fc-button--primary),
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-button:not(.fc-button--primary),
+body.fc-site .bom-story-directory a:not(.fc-button--primary),
+body.fc-site .atonement-path .fc-button:not(.fc-button--primary),
+body.fc-site .watch-topic-index a:not(.fc-button--primary) {
+    background: var(--fc-study-control-fill) !important;
+    border: 1px solid var(--fc-study-control-border) !important;
+    border-radius: var(--fc-study-control-radius) !important;
+    color: var(--fc-study-control-text) !important;
+    box-shadow: inset 0 1px 0 #fff2dc14;
+    text-decoration: none !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    height: auto;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+body.fc-site .fc-study-visual-sources a:not(.fc-button--primary),
+body.fc-site .pioneer-source-links a:not(.fc-button--primary),
+body.fc-site .fc-resource-next a:not(.fc-button--primary),
+body.fc-site .fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary),
+body.fc-site .cfm-jump a:not(.fc-button--primary),
+body.fc-site .gc-jumps a:not(.fc-button--primary),
+body.fc-site a.source-link:not(.source-link--internal):not(.fc-button--primary),
+body.fc-site .fc-topic-artwork-detail a[data-topic-art-source]:not(.fc-button--primary) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--fc-study-control-min-height) !important;
+    padding: 10px 14px !important;
+    line-height: 1.4;
+    text-align: center;
+}
+body.fc-site .fc-study-visual-sources a:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .pioneer-source-links a:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .fc-resource-next a:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .cfm-jump a:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .gc-jumps a:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site a.source-link:not(.source-link--internal):not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .fc-topic-artwork-detail a[data-topic-art-source]:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-button:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .bom-story-directory a:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .atonement-path .fc-button:not(.fc-button--primary):is(:hover, :focus-visible),
+body.fc-site .watch-topic-index a:not(.fc-button--primary):is(:hover, :focus-visible) {
+    background: var(--fc-study-control-hover-fill) !important;
+    border-color: #d8e5df !important;
+    color: var(--fc-study-control-text) !important;
+}
+body.fc-site .fc-study-visual-sources a:not(.fc-button--primary):focus-visible,
+body.fc-site .pioneer-source-links a:not(.fc-button--primary):focus-visible,
+body.fc-site .fc-resource-next a:not(.fc-button--primary):focus-visible,
+body.fc-site .fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary):focus-visible,
+body.fc-site .cfm-jump a:not(.fc-button--primary):focus-visible,
+body.fc-site .gc-jumps a:not(.fc-button--primary):focus-visible,
+body.fc-site a.source-link:not(.source-link--internal):not(.fc-button--primary):focus-visible,
+body.fc-site .fc-topic-artwork-detail a[data-topic-art-source]:not(.fc-button--primary):focus-visible,
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-button:not(.fc-button--primary):focus-visible,
+body.fc-site .bom-story-directory a:not(.fc-button--primary):focus-visible,
+body.fc-site .atonement-path .fc-button:not(.fc-button--primary):focus-visible,
+body.fc-site .watch-topic-index a:not(.fc-button--primary):focus-visible {
+    outline: 3px solid var(--fc-gold-light) !important;
+    outline-offset: 3px;
+}
+body.fc-site .fc-study-visual-sources,
+body.fc-site .pioneer-source-links,
+body.fc-site .fc-study-nav:not(.jj-local-nav),
+body.fc-site .cfm-jump,
+body.fc-site .gc-jumps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--fc-study-control-gap) !important;
+}
+body.fc-site nav[aria-label="Pioneer study sections"] .fc-actions {
+    row-gap: var(--fc-study-control-gap) !important;
+}
+body.fc-site .watch-topic-index > div {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: var(--fc-study-control-gap);
+}
+body.fc-site .watch-topic-index a {
+    flex: 1 1 210px;
+    min-width: min(100%, 210px);
+}
+body.fc-site .watch-topic-index a > span {
+    flex: 0 0 2.2em;
+    min-width: 2.2em;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+body.fc-site .pioneer-trail-number,
+body.fc-site .bom-story-directory a span,
+body.fc-site .cfm-tool__number {
+    flex-shrink: 0;
+    min-width: 2ch;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
+    font-variant-numeric: tabular-nums;
+}
+/* END OWNER STUDY LINK CONTROLS */

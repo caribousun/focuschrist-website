@@ -447,7 +447,7 @@
     function loadGroundedIntelligence() {
         if (document.querySelector('script[data-focuschrist-study-intelligence-v3]') || document.querySelector('script[src*="study-intelligence-v3.js"]')) return;
         const script = document.createElement('script');
-        script.src = 'study-intelligence-v3.js?v=20260923-self-help-1';
+        script.src = 'study-intelligence-v3.js?v=20260923-sensitive-welcome-1';
         script.defer = true;
         script.setAttribute('data-focuschrist-study-intelligence-v3', 'true');
         script.addEventListener('error', function () { console.error('focusChrist Study Intelligence v3 failed to load.'); }, { once: true });

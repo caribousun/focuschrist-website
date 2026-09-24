@@ -17,21 +17,28 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 .jj-kicker{color:var(--fc-gold-light,#f0c36a);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px!important}
 .jj-directory{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}
 .jj-directory> :last-child:nth-child(odd){grid-column:1/-1}
-.jj-card{display:block;min-width:0;padding:24px;border:1px solid rgba(240,195,106,.28);border-radius:12px;background:rgba(24,61,65,.68);color:inherit;text-decoration:none}
-.jj-card:hover,.jj-card:focus-visible{border-color:var(--fc-gold-light,#f0c36a);background:rgba(36,77,79,.8)}
+.jj-card{display:block;min-width:0;padding:24px;border:1px solid var(--fc-panel-border,var(--fc-line));border-radius:var(--fc-radius,12px);background:var(--fc-panel-fill,var(--fc-card-fill));box-shadow:var(--fc-panel-shadow);color:var(--fc-text);text-decoration:none}
+.jj-card:hover,.jj-card:focus-visible{border-color:var(--fc-gold-light,#f0c36a);background:var(--fc-panel-hover-fill,var(--fc-card-fill))}
+.jj-card h3{color:var(--fc-cream)}
+.jj-card p{color:var(--fc-text)}
 .jj-card p:last-child{margin-bottom:0}
 .jj-card .jj-card-action{display:block;margin-top:16px;color:var(--fc-gold-light,#f0c36a);text-decoration:underline;text-underline-offset:4px}
 .jj-local-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:18px 0 26px}
 .jj-local-nav a,.jj-actions a{display:inline-flex;align-items:center;min-height:44px;max-width:100%;padding:10px 16px;border:1px solid rgba(240,195,106,.45);border-radius:8px;color:var(--fc-gold-light,#f0c36a);text-decoration:none;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
 .jj-local-nav a[aria-current=step]{background:rgba(240,195,106,.13);border-color:var(--fc-gold-light,#f0c36a)}
 .jj-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:22px 0}
+/* Scripture and return controls share the site study-control treatment. */
+.jj-actions a{background:var(--fc-study-control-fill,linear-gradient(145deg,#315547,#1d3b38));color:var(--fc-study-control-text,#f6eee0);border-color:var(--fc-study-control-border,#9cafaa);border-radius:var(--fc-study-control-radius,10px);min-height:var(--fc-study-control-min-height,44px);height:auto;min-width:0;box-sizing:border-box;justify-content:center;text-align:center}
+.jj-actions a:hover{background:var(--fc-study-control-hover-fill,linear-gradient(145deg,#3b6657,#28504b));border-color:var(--fc-gold-light,#f0c36a)}
+.jj-actions a:focus-visible{outline:3px solid var(--fc-gold-light,#f0c36a);outline-offset:4px}
+
 .jj-art{margin:24px 0 28px;border:1px solid rgba(240,195,106,.28);border-radius:12px;overflow:hidden;background:#12383d}
 .jj-art>a{display:block}
 .jj-art img{display:block;width:100%;height:auto;max-height:none;object-fit:contain;aspect-ratio:var(--study-image-ratio,3/2)}
 .jj-art figcaption{padding:22px 26px}
 .jj-art figcaption p:last-child{margin-bottom:0}
 .jj-art .fc-study-visual-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--fc-gold-light,#f0c36a)}
-.jj-reflection{padding:22px 26px;border-left:3px solid #d4aa61;background:rgba(82,112,105,.16);margin:24px 0}
+.jj-reflection{padding:22px 26px;border-left:3px solid #d4aa61;border-radius:var(--fc-radius,12px);background:var(--fc-panel-fill,var(--fc-card-fill));box-shadow:var(--fc-panel-shadow);margin:24px 0}
 .jj-reflection ul{padding-left:24px;margin-bottom:0}
 .jj-reflection li+li{margin-top:12px}
 .jj-source-list{padding-left:24px;overflow-wrap:anywhere}
@@ -49,12 +56,21 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 .jj-chapter-reader>[hidden]{display:none!important}
 .jj-chapter-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 16px;scroll-margin-top:100px}
 .jj-chapter-position{flex:1 1 100%;font-size:.9rem;margin:0!important;color:#e5cfaa}
-.jj-chapter-picker{flex:1 1 200px;border:1px solid rgba(240,195,106,.45)!important;border-radius:8px;padding:0!important;min-width:0}
+.jj-reading-guide{flex:1 1 100%;font-size:.95rem;line-height:1.55;color:#dbe8e4;margin:0 0 2px!important}
+.jj-chapter-picker{flex:1 1 200px;border:1px solid #829a91!important;border-radius:12px;padding:0!important;min-width:0;background:#102c36}
 .jj-chapter-picker>summary{padding:10px 16px;font-size:1rem!important;margin:0!important}
-.jj-chapter-picker .jj-local-nav{margin:0;padding:12px;justify-content:flex-start}
-.jj-chapter-picker .jj-local-nav a{flex:1 1 220px}
+.jj-chapter-picker .jj-local-nav{margin:0;padding:12px;justify-content:flex-start;align-items:stretch;gap:12px}
+.jj-chapter-picker .jj-local-nav a{flex:1 1 240px;align-self:stretch;display:flex;align-items:center;justify-content:flex-start;gap:12px;height:auto;min-width:0;margin:0;padding:14px 16px;border:2px solid #829a91;border-radius:10px;position:relative;overflow:hidden;background:var(--fc-card-fill);color:#f6eee0;box-sizing:border-box;text-align:left}
+.jj-chapter-picker .jj-local-nav a::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(180deg,var(--fc-sky),var(--fc-gold));opacity:.72}
+.jj-chapter-number{display:inline-flex;align-items:center;justify-content:center;flex:0 0 2.1em;min-height:2.1em;border:1px solid #9bb2aa;border-radius:50%;font-size:.82em;font-variant-numeric:tabular-nums;color:#f5d596}
+.jj-chapter-label{min-width:0;overflow-wrap:anywhere}
+.jj-chapter-picker .jj-local-nav a:hover{background:#305b63;border-color:#d9e5df}
+.jj-chapter-picker .jj-local-nav a[aria-current=step]{background:var(--fc-reading-fill);border-color:#f0c36a;box-shadow:inset 4px 0 #f0c36a}
+.jj-chapter-picker a[aria-current=step] .jj-chapter-number{background:#f0c36a;border-color:#f0c36a;color:#102c36;font-weight:700}
 .jj-chapter-picker[open]{flex-basis:100%}
-.jj-chapter-controls button,.jj-chapter-steps button{font:inherit;line-height:1.5;color:var(--fc-gold-light,#f0c36a);background:#173c41;border:1px solid rgba(240,195,106,.45);border-radius:8px;min-height:44px;padding:10px 16px;white-space:normal;overflow-wrap:anywhere;cursor:pointer}
+.jj-chapter-controls button,.jj-chapter-steps button{font:inherit;line-height:1.5;color:#f6eee0;background:#244a53;border:1px solid #829a91;border-radius:10px;min-height:44px;padding:10px 16px;white-space:normal;overflow-wrap:anywhere;cursor:pointer}
+.jj-chapter-controls button:hover,.jj-chapter-steps button:not(:disabled):hover{background:#305b63;border-color:#d9e5df}
+.jj-chapter-controls button[aria-pressed=true]{background:#365b59;border-color:#f0c36a}
 .jj-chapter-controls button:focus-visible,.jj-chapter-steps button:focus-visible,.jj-chapter-picker summary:focus-visible{outline:3px solid #f0c36a;outline-offset:4px}
 .jj-chapter-steps{display:flex;justify-content:space-between;gap:16px;margin:20px 0 28px}
 .jj-chapter-steps button{flex:0 1 48%}

@@ -113,6 +113,8 @@ const SCRIPTURE_ROUTE_PATTERN = new RegExp(
   'i',
 );
 
+const SELF_HARM_SAFETY_RESPONSE = 'You deserve support and care. If you might act on thoughts of harming yourself or cannot stay safe, contact local emergency services now. In the United States and its territories, call or text 988 to reach the Suicide & Crisis Lifeline. Elsewhere, contact a local crisis line. If you can, ask someone you trust to stay with you and help you move away from anything you could use to hurt yourself. focusChrist cannot provide emergency intervention.';
+
 function normalizeQuestionSafetyText(value) {
   return String(value || '')
     .normalize('NFKD')
@@ -157,12 +159,31 @@ function nonExplicitSupportIntent(normalized) {
   return { support: topic && !rejectsSupport && (preventHarm || recoveryAction || seekingSupport || distressed || boundaries), prohibited: false };
 }
 
+// Exact whole-input topics invite clarification; no free-form prompt is exempted.
+function briefSensitiveTopic(value) {
+  const topic = String(value || '').trim().toLowerCase().replace(/[?.!]+$/, '').trim().replace(/\s+/g, ' ');
+  const pornography = /^(?:porn|pornography)$/.test(topic);
+  const sexual = /^(?:sex|sexual|sexual health|sexual orientation|sexual feelings|masturbation)$/.test(topic);
+  if (!pornography && !sexual) return null;
+  const subject = pornography ? 'pornography' : topic === 'sexual' ? 'sexual concerns' : topic;
+  const options = [
+    { label: 'Understand Church teachings', question: 'I want guidance about Church teachings on ' + subject + ', without explicit details.' },
+    { label: 'Find support', question: 'How can someone find support for concerns about ' + subject + ', without explicit details?' },
+    { label: 'Support someone else', question: 'How can I support a friend with concerns about ' + subject + ', without explicit details?' }
+  ];
+  return { allowed: true, kind: 'brief-sensitive-topic', response: 'You are welcome to ask about ' + subject + '. What would be most helpful: understanding Church teachings, finding support, or supporting someone else? You can choose a starting question or write your own. You do not need to share private details.', options: options };
+}
+
 function evaluateQuestionSafety(value) {
   const normalized = normalizeQuestionSafetyText(value);
   const compact = normalized.replace(/\s+/g, '');
     const supportIntent = nonExplicitSupportIntent(normalized);
+  const briefTopic = briefSensitiveTopic(value);
   if (/\b(?:sexual abuse|sexually abused|rape|raped|molest|molested|assaulted|immediate danger|being threatened|threatening me|hurt me|hurting me|kill me|being abused)\b/.test(normalized)) {
     return { allowed: false, kind: 'urgent-safety', response: URGENT_SAFETY_RESPONSE };
+  }
+  if (/\b(?:i (?:want|plan|intend) to (?:kill myself|end my life|hurt myself|harm myself|die)|i (?:am|m) (?:going to (?:kill myself|end my life|hurt myself|harm myself)|suicidal)|i (?:will|might|may) (?:kill myself|hurt myself|harm myself)|i (?:cannot|can t|cant) stay safe)\b/.test(normalized)) {
+    return { allowed: false, kind: 'urgent-safety', response: SELF_HARM_SAFETY_RESPONSE };
   }
   const profanity = /\b(?:fuck|fucking|fucked|motherfucker|shit|bullshit|bitch|bastard|ass|asshole|whore|slut|piss|dick|cock|pussy|faggot|nigger|retard|damn|crap|wtf|stfu)\b/.test(normalized)
     || /f+u+c+k+|s+h+i+t+|b+i+t+c+h+/.test(compact);
@@ -173,9 +194,10 @@ function evaluateQuestionSafety(value) {
     && (/\b(?:why|are|is|all|those|these|people|followers|members|believers)\b/.test(normalized)
       || /\b(?:should die|should be killed|deserve to die|subhuman|vermin)\b/.test(normalized));
   const structuredGroupAttack = /\b(?:why are|all|those|these)\s+[a-z-]{3,30}(?:\s+people)?\s+(?:are\s+|is\s+)?(?:stupid|idiots?|evil|inferior|worthless|disgusting|trash|vermin|subhuman|scum|morons?|hateful)\b/.test(normalized);
-  if (profanity || supportIntent.prohibited || (explicitSexual && !supportIntent.support) || groupAttack || structuredGroupAttack) {
+  if (profanity || supportIntent.prohibited || (explicitSexual && !supportIntent.support && !briefTopic) || groupAttack || structuredGroupAttack) {
     return { allowed: false, kind: 'respect-boundary', response: RESPECTFUL_QUESTION_RESPONSE };
   }
+  if (briefTopic) return briefTopic;
   return { allowed: true, kind: supportIntent.support ? 'non-explicit-support' : 'allowed', response: '' };
 }
 
@@ -2076,6 +2098,20 @@ export default {
       } catch (_error) {
         // Availability takes precedence if the optional abuse-control binding has a transient fault.
       }
+    }
+    if (safety.kind === 'brief-sensitive-topic') {
+      return jsonResponse({
+        id: 'focuschrist-topic-clarification',
+        choices: [{ index: 0, message: { role: 'assistant', content: safety.response }, finish_reason: 'stop' }],
+        focuschrist_sources: [],
+        focuschrist_source_integrity_verified: false,
+        focuschrist_source_policy: SOURCE_POLICY_VERSION,
+        focuschrist_gateway_mode: safety.kind,
+        focuschrist_clarification_options: safety.options,
+        focuschrist_resolved_profile: 'local-clarification',
+        focuschrist_classification_mode: 'server-question-safety',
+        focuschrist_openai_verifier_calls: 0,
+      }, 200, origin, deadline, localScriptures);
     }
     if (sanitized.scope.scriptureSupportRequested && !sanitized.scope.scriptureSupportAntecedent) {
       return jsonResponse(generalAnswerPayload('Which question or teaching would you like a scripture for? Please name the subject so I can find a passage that actually supports it.', 'scripture-context-clarification', {}, sanitized.scope), 200, origin, deadline, localScriptures);
