@@ -2076,6 +2076,18 @@
       "width": 800,
       "height": 450,
       "verified_date": "2026-09-23"
+    },
+    {
+      "key": "corbridge-stand-forever-byu",
+      "url": "https://speeches.byu.edu/talks/lawrence-e-corbridge/stand-for-ever/",
+      "title": "Stand Forever",
+      "thumbnail": "https://speeches.byu.edu/wp-json/speeches/v1/yt-thumb/NSEsLtwKzvw/maxresdefault",
+      "local_thumbnail": "assets/resources/corbridge-stand-forever-byu.jpg",
+      "width": 1280,
+      "height": 720,
+      "sha256": "ed8efe5f6a460897ec5efc46fc1bebb2cec3bb0a748561c482067939822662aa",
+      "status": 200,
+      "verified_date": "2026-09-24"
     }
   ],
   "reviewed_on": "2026-09-07",

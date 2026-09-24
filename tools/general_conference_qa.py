@@ -54,6 +54,17 @@ def require(condition, message):
 source = (ROOT / 'general-conference.html').read_text(encoding='utf-8')
 doc = Document(source)
 all_nodes = list(doc.root.walk())
+corbridge_visuals = [n for n in all_nodes if n.tag == 'a'
+                    and 'gc-voice-visual' in n.attrs.get('class', '').split()
+                    and n.attrs.get('href') == 'answers/stand-forever.html']
+require(len(corbridge_visuals) == 1, 'Corbridge enduring-voice card needs its linked visual')
+corbridge_images = [n for n in corbridge_visuals[0].walk() if n.tag == 'img']
+require(len(corbridge_images) == 1
+        and corbridge_images[0].attrs.get('src') == 'assets/resources/corbridge-stand-forever-byu.jpg'
+        and corbridge_images[0].attrs.get('width') == '1280'
+        and corbridge_images[0].attrs.get('height') == '720'
+        and (ROOT / corbridge_images[0].attrs['src']).is_file(),
+        'Corbridge card must retain its official BYU thumbnail with reserved 16:9 dimensions')
 hub = next((n for n in all_nodes if n.attrs.get('id') == 'general-conference'), None)
 require(hub is not None, 'conference study root must remain on the standalone page')
 require(any(n.tag == 'link' and n.attrs.get('rel') == 'canonical' and n.attrs.get('href') == 'https://focuschrist.com/general-conference.html' for n in all_nodes), 'standalone page needs its canonical URL')
