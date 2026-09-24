@@ -2,7 +2,7 @@
   "date": "2026-09-23",
   "status": "local-browser-reviewed",
   "page": "answers/abrahamic-covenant.html",
-  "page_sha256": "8700e17592688152393fd207fde8ce687ba47e146b069eeab1919e300159f962",
+  "page_sha256": "92de2e103d7eae7e350dd37bf17b0b98c04888863cba6e8239d56edc607f5f9f",
   "originals": 12,
   "christ_originals": 6,
   "chapters": 10,
@@ -58,5 +58,15 @@
     "originals_full_width_native_ratio": true
   },
   "scripture_reader": "Keyboard activation of Moses7:63-64 opened same-page reader with exactly two selected verses and correct source URL; close control present.",
-  "ask_return": "Actual contextual Return to Covenant study reached the exact chapter. Related study appeared for generic covenant question. Public production-Origin API answer independently source-verified; local answer service unavailable in browser."
+  "ask_return": "Actual contextual Return to Covenant study reached the exact chapter. Related study appeared for generic covenant question. Public production-Origin API answer independently source-verified; local answer service unavailable in browser.",
+  "ci_compatibility_hash_update": {
+    "reviewer": "newton",
+    "date": "2026-09-24T00:41:56.921145+00:00",
+    "prior_page_sha256": "8700e17592688152393fd207fde8ce687ba47e146b069eeab1919e300159f962",
+    "current_page_sha256": "92de2e103d7eae7e350dd37bf17b0b98c04888863cba6e8239d56edc607f5f9f",
+    "result": "pass",
+    "details": "DOM tags, element text, attribute sets and published ledger text unchanged. Thirty href/src changes resolve to identical production destinations; defer empty-value to boolean serialization retains the same semantics. CI artwork inventory adds exactly the covenant route and requires 23 pages. No artwork or layout change; existing browser evidence carried forward, not rerun.",
+    "published_text_sha256": "9459b1af689b6916e0d744c63f3e543079b824c3601057e44e02301e75eb1764",
+    "attribute_changes": 31
+  }
 }
