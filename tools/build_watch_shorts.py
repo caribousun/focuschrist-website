@@ -35,9 +35,9 @@ def render(data):
 <p class="fc-eyebrow">A moment to turn toward Him</p>
 <h2 class="fc-section-heading" id="latest-shorts-title">Latest from Focus Shorts</h2>
 <p class="fc-section-intro">Four recent messages from our YouTube channel. Take a moment to listen, and carry a thought about the Savior into your day.</p>
-<div class="watch-shorts-grid">{cards[0]}</div>
+<div class="watch-shorts-layout"><div class="watch-shorts-grid">{cards[0]}</div>
 <details class="watch-shorts-more" data-shorts-more><summary class="fc-button"><span data-shorts-toggle-label>Show 3 more Shorts</span></summary><div class="watch-shorts-grid">
-{''.join(cards[1:])}</div><button class="fc-button watch-shorts-collapse" type="button" data-shorts-collapse>Hide 3 Shorts</button></details>
+{''.join(cards[1:])}</div><button class="fc-button watch-shorts-collapse" type="button" data-shorts-collapse>Hide 3 Shorts</button></details></div>
 <div class="fc-actions fc-actions--center"><a class="fc-button fc-button--primary" href="{data['channel']}" target="_blank" rel="noopener noreferrer">Watch all our Shorts on YouTube →</a></div>
 <p class="watch-shorts-updated">Latest four checked <time datetime="{data['verified_at']}">{date_text}</time> · @theRisen636</p>
 </section>

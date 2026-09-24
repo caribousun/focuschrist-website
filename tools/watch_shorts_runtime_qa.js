@@ -8,10 +8,13 @@ const html = fs.readFileSync(path.join(root, 'watch.html'), 'utf8');
 const script = fs.readFileSync(path.join(root, 'watch-shorts.js'), 'utf8');
 const records = JSON.parse(fs.readFileSync(path.join(root, 'docs/watch-shorts.json'), 'utf8')).shorts;
 const flush = async () => { await Promise.resolve(); await Promise.resolve(); await Promise.resolve(); };
-function setup() {
+function setup(isDesktop=false) {
   const dom = new JSDOM(html, {url:'https://focuschrist.com/watch.html', runScripts:'outside-only', pretendToBeVisual:true, virtualConsole:new VirtualConsole()});
   const w = dom.window, d = w.document, players = [], timers = new Map();
   const scrolls = [], focusCalls = [], observers = [];
+  const media = {matches:isDesktop, addEventListener:(_type,fn)=>{media.onchange=fn;}};
+  w.matchMedia = query => { assert.equal(query,'(min-width: 1024px)'); return media; };
+  const resize = desktop => { media.matches=desktop; media.onchange(); };
   w.IntersectionObserver = class { constructor(callback){this.callback=callback;this.disconnected=false;observers.push(this);} observe(node){this.node=node;} disconnect(){this.disconnected=true;} emit(visible){this.callback([{target:this.node,isIntersecting:visible}]);} };
   w.HTMLElement.prototype.scrollIntoView = function(options) { scrolls.push({node:this, options}); };
   const nativeFocus = w.HTMLElement.prototype.focus;
@@ -44,10 +47,28 @@ function setup() {
   const api = async () => { w.YT = {Player}; w.onYouTubeIframeAPIReady(); await flush(); };
   const timeout = () => { const pending = [...timers.values()]; timers.clear(); pending.forEach(t => { assert.equal(t.delay,15000); t.callback(); }); };
   w.eval(script);
-  return {dom,w,d,players,timers,section,links,click,api,timeout,scrolls,focusCalls,observers,close:()=>dom.window.close()};
+  return {resize,dom,w,d,players,timers,section,links,click,api,timeout,scrolls,focusCalls,observers,close:()=>dom.window.close()};
 }
 (async () => {
-  let h = setup();
+  let h = setup(true);
+  assert.equal(h.section.hasAttribute('data-shorts-desktop'),true);
+  assert.equal(h.section.querySelector('[data-shorts-more]').open,true,'Desktop reveals four without a click');
+  assert.equal(h.players.length,0,'Desktop reveal never starts video');
+  h.click(3); await h.api(); h.players[0].ready();
+  h.resize(false);
+  assert.equal(h.section.querySelector('[data-shorts-more]').open,false,'Returning to mobile restores closed disclosure');
+  assert.equal(h.players[0].destroyed,true,'Resize stops hidden older video');
+  assert.equal(h.d.activeElement,h.section.querySelector('summary'),'Resize restores visible focus');
+  h.resize(true);
+  assert.equal(h.d.activeElement,h.links[1],'Desktop transfers focus out of hidden summary');
+  assert.equal(h.section.querySelector('[data-shorts-more]').open,true);
+  assert.equal(h.players.length,1,'Resize never resumes playback');
+  h.resize(false);
+  h.section.querySelector('[data-shorts-more]').open=true;
+  h.section.querySelector('[data-shorts-more]').dispatchEvent(new h.w.Event('toggle'));
+  h.resize(true);h.resize(false);
+  assert.equal(h.section.querySelector('[data-shorts-more]').open,true,'Preserve visitors expanded mobile choice');
+  h.close(); h = setup();
   const disclosure = h.section.querySelector('[data-shorts-more]');
   assert.equal(disclosure.open,false,'Three older Shorts start collapsed');
   assert.equal(disclosure.querySelectorAll('.watch-short').length,3);

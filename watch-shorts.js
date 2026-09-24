@@ -6,6 +6,16 @@
   let apiPromise;
   const more = section.querySelector('[data-shorts-more]');
   const summary = more && more.querySelector('summary');
+  const desktop = window.matchMedia('(min-width: 1024px)');
+  let mobileOpen = more ? more.open : false;
+  function syncViewport() {
+    if (!more) return;
+    const hiddenControlFocused = document.activeElement === summary || document.activeElement === more.querySelector('[data-shorts-collapse]');
+    section.toggleAttribute('data-shorts-desktop', desktop.matches);
+    more.open = desktop.matches || mobileOpen;
+    syncDisclosure();
+    if (desktop.matches && hiddenControlFocused) more.querySelector('[data-short-play]').focus({ preventScroll: true });
+  }
   function syncDisclosure() {
     if (!more) return;
     more.querySelector('[data-shorts-toggle-label]').textContent = more.open ? 'Hide 3 Shorts' : 'Show 3 more Shorts';
@@ -16,7 +26,12 @@
     }
   }
   if (more) {
-    more.addEventListener('toggle', syncDisclosure);
+    more.addEventListener('toggle', () => {
+      if (!desktop.matches) mobileOpen = more.open;
+      syncDisclosure();
+    });
+    desktop.addEventListener('change', syncViewport);
+    syncViewport();
     more.querySelector('[data-shorts-collapse]').addEventListener('click', () => {
       more.open = false;
       syncDisclosure();

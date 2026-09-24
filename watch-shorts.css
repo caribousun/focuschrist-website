@@ -29,3 +29,13 @@ body.fc-watch-shorts { overflow-wrap: anywhere; }
 .watch-shorts-more[open] > summary { margin-bottom: 20px; }
 .watch-shorts-more > summary:focus-visible { outline: 3px solid var(--fc-gold-light, #f2d188); outline-offset: 4px; }
 .watch-shorts-collapse { display: block; margin: 20px auto 0; cursor: pointer; }
+
+/* Desktop opens all four in one row. Without script, disclosure stays usable. */
+@media (min-width: 1024px) {
+    .watch-shorts[data-shorts-desktop] .watch-shorts-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, calc(75% - 5px)); gap: 20px; }
+    .watch-shorts[data-shorts-desktop] .watch-shorts-more { margin: 0; min-width: 0; }
+    .watch-shorts[data-shorts-desktop] .watch-shorts-more > summary,
+    .watch-shorts[data-shorts-desktop] .watch-shorts-collapse { display: none; }
+    .watch-shorts[data-shorts-desktop] .watch-shorts-more > .watch-shorts-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .watch-shorts[data-shorts-desktop] .watch-shorts-grid > .watch-short { width: 100%; max-width: none; flex: 1 1 0; }
+}

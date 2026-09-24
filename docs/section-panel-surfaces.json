@@ -1,5 +1,5 @@
 {
-  "version": "20260924-home-panel-surfaces-1",
+  "version": "20260924-motion-rails-1",
   "reference": "index.html .fc-home-purpose-paths .fc-card",
   "surface_selectors": [
     ".fc-study-hub",
@@ -245,7 +245,7 @@
     "search.html",
     "watch.html"
   ],
-  "site_system_sha256": "3f0bdd4bf3f122adc6b5cba2a5f650cda58434e444dcb2621f25a2c3e3f6f53d",
+  "site_system_sha256": "79a2cb4487f310c888211f20643e428d51d0bb68fe64323e37bccc29fe851a15",
   "unchanged_base_bytes": 58704,
   "unchanged_base_sha256": "7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984",
   "scoped_row_exception": {
