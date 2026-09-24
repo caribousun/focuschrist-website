@@ -203,12 +203,26 @@ def main() -> int:
         fail(errors, "original approved hero must remain unchanged for recovery")
 
     approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
-    if len(approved_answer_pages) != 21:
-        fail(errors, f"expected 21 Answer detail pages, found {len(approved_answer_pages)}")
+    covenant_page = "answers/abrahamic-covenant.html"
+    if len(approved_answer_pages) != 22 or covenant_page not in approved_answer_pages:
+        fail(errors, f"expected 22 Answer detail pages including the covenant study, found {len(approved_answer_pages)}")
+    # This one page owns a reviewed chapter-first journey instead of a hero.
+    # Preserve the hero contract for every pre-existing Answer destination.
+    from focused_answers_qa import document as opening_document, opening as reviewed_opening
+    from abrahamic_covenant_qa import check as check_covenant, CHAPTERS as covenant_chapters
+    try:
+        covenant_nodes = opening_document(ROOT / covenant_page)
+        assert any(n.tag == 'body' and n.has('fc-jesus-journey') for n in covenant_nodes)
+        assert sum(n.has('jj-opening') for n in covenant_nodes) == 1
+        assert [n.attrs.get('id') for n in covenant_nodes if n.has('jj-chapter')] == covenant_chapters
+        reviewed_opening(ROOT / covenant_page, covenant_nodes)
+        check_covenant()  # Twelve exact reviewed originals, hashes, sources and owners.
+    except (AssertionError, StopIteration, KeyError, FileNotFoundError) as error:
+        fail(errors, f"{covenant_page}: reviewed chapter-first journey contract failed: {error}")
     topic_plans = {p["page"]: p["key"] for p in json.loads((ROOT / "docs/sitewide-hero-production-plan.json").read_text(encoding="utf-8"))["plans"]}
     topic_plans.update({e["page"]: e["id"].removesuffix("-hero") for e in json.loads((ROOT / "docs/focused-answers-art-review.json").read_text(encoding="utf-8"))["images"] if e["role"] == "hero"})
     topic_plans["answers/settle-this-in-your-hearts.html"] = "settle-heart"
-    approved_hero_pages = ["index.html", *approved_answer_pages]
+    approved_hero_pages = ["index.html", *(p for p in approved_answer_pages if p != covenant_page)]
     approved_cache_versions: set[str] = set()
     for relative in approved_hero_pages:
         page_text = (ROOT / relative).read_text(encoding="utf-8")
@@ -260,6 +274,8 @@ def main() -> int:
             fail(errors, f"{relative}: public brand casing drift detected; use focusChrist")
 
     for relative in IMAGE_FIRST_PAGES:
+        if relative == covenant_page:
+            continue  # Its exact reviewed chapter-first contract is enforced above.
         text = (ROOT / relative).read_text(encoding="utf-8")
         if 'class="fc-visual-hero' not in text:
             fail(errors, f"{relative}: image-first hero marker missing")
