@@ -850,6 +850,17 @@
       "disposition": "shared_surface",
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
+    "fc-study-visual--panel": {
+      "count": 1,
+      "pages": [
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "Owner-requested Peter rescue figure uses shared panel tokens in the reviewed appendix; preserves the artwork viewer and intrinsic image."
+    },
     "gc-pathway": {
       "count": 9,
       "pages": [
@@ -3012,13 +3023,12 @@
       ]
     },
     ".fc-notice": {
-      "count": 5,
+      "count": 4,
       "pages": [
         "about.html",
         "answers.html",
         "book-of-mormon-evidences.html",
-        "missionary.html",
-        "watch.html"
+        "missionary.html"
       ],
       "tags": [
         "div",

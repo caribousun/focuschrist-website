@@ -2414,3 +2414,18 @@ body.fc-site :is(:is(.fc-study-hub,
     }
 }
 /* END OWNER HOVER AND ANSWER RAILS */
+
+/* Owner review: paired study card, even scripture numerals and one Watch note. */
+body.fc-site .fc-study-visual.fc-study-visual--panel { display: block; margin: 0; overflow: hidden; border: 1px solid var(--fc-panel-border); border-radius: var(--fc-radius); background: var(--fc-panel-fill); box-shadow: var(--fc-panel-shadow); }
+body.fc-site .fc-study-visual.fc-study-visual--panel > a { border: 0; border-radius: 0; box-shadow: none; }
+body.fc-site .fc-study-visual.fc-study-visual--panel > a:focus-visible { outline-offset: -4px; }
+body.fc-site .fc-study-visual.fc-study-visual--panel > figcaption { padding: 20px 22px 22px; }
+body.fc-site .fc-signature-scripture-heading a {
+    text-decoration-thickness: 1px;
+    text-decoration-skip-ink: none;
+    text-underline-offset: .2em;
+}
+body.fc-site .fc-scripture-reference-numbers { font-family: "Times New Roman", serif; font-variant-numeric: lining-nums; }
+body.fc-site .watch-source-note { box-sizing: border-box; padding: clamp(20px, 3vw, 30px); }
+body.fc-site .watch-source-note > p { margin: 0; }
+body.fc-site .watch-source-note > p + p { margin-top: 14px; }

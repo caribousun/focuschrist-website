@@ -1,5 +1,5 @@
 {
-  "version": "20260924-motion-rails-1",
+  "version": "20260924-reviewed-details-1",
   "reference": "index.html .fc-home-purpose-paths .fc-card",
   "surface_selectors": [
     ".fc-study-hub",
@@ -75,7 +75,8 @@
     "jj-art-reference": "jesus-journey.css owner applies shared panel tokens.",
     "ask-continue-card": "Ask owner applies shared panel tokens.",
     "ask-study-card": "Ask owner applies shared panel tokens.",
-    "ask-topic-card": "Ask owner applies shared panel tokens."
+    "ask-topic-card": "Ask owner applies shared panel tokens.",
+    "fc-study-visual--panel": "Owner-requested Peter rescue figure uses shared panel tokens in the reviewed appendix; preserves the artwork viewer and intrinsic image."
   },
   "excluded_classes": {
     "ask-scene-card": "Artwork figure; preserve artwork framing.",
@@ -245,7 +246,7 @@
     "search.html",
     "watch.html"
   ],
-  "site_system_sha256": "79a2cb4487f310c888211f20643e428d51d0bb68fe64323e37bccc29fe851a15",
+  "site_system_sha256": "6bcb9b6bd26ee85d8afa47ff1f1631430f191fdd3c3e6414937909858fec480b",
   "unchanged_base_bytes": 58704,
   "unchanged_base_sha256": "7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984",
   "scoped_row_exception": {
