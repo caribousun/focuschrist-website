@@ -2,7 +2,7 @@
   "date": "2026-09-23",
   "status": "local-browser-reviewed",
   "page": "answers/abrahamic-covenant.html",
-  "page_sha256": "b1d4d65d03ef01ee496863e4d917d3c245c6310ce5be48ec5511f16bd01d542d",
+  "page_sha256": "b1166b7c02f1460e3192e6c63ae3d78a91b5c9c23e81544c7ae713ba8035d144",
   "originals": 12,
   "christ_originals": 6,
   "chapters": 10,
@@ -78,5 +78,12 @@
     "details": "Only final HTML difference is site-common.js cache revision from 20260923-jesus-nested-1 to 20260923-covenant-nav-1. DOM structure, all visible wording, assets and destinations unchanged. Shared controller adds only the exact Abrahamic Covenant current-topic label; existing page behavior untouched. Exact featured pair/grid and covenant journey validation, two reviewed resource records and source-router cache inventory independently inspected.",
     "published_text_sha256": "9459b1af689b6916e0d744c63f3e543079b824c3601057e44e02301e75eb1764",
     "browser_limit": "Prior visual evidence carried forward for unchanged composition; current-topic label tested by navigation runtime, not fresh pixel review."
+  },
+  "hand_correction": {
+    "prior_page_sha256": "b1d4d65d03ef01ee496863e4d917d3c245c6310ce5be48ec5511f16bd01d542d",
+    "current_page_sha256": "b1166b7c02f1460e3192e6c63ae3d78a91b5c9c23e81544c7ae713ba8035d144",
+    "change": "Only this artwork full/thumbnail paths changed; no wording, sources, controls, geometry or other artwork changed.",
+    "independent_pixel_review": "Newton; ac-abraham-eyes-v3-independent-review.json; approved Christ reference viewed.",
+    "browser_status": "Root verified corrected thumbnail and full-size pixels, detail/full-size/close/Continue at desktop and390px phone; no horizontal overflow; same caption and source."
   }
 }

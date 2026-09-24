@@ -21,8 +21,8 @@
       "sha256": "4c20683813ce6ed9adad4fb848c8ac88996b8e5b60cda9cf3cf1b31a246b5cf3"
     },
     "ac-abraham-eyes": {
-      "file": "ac-abraham-eyes-v2.png",
-      "sha256": "a1f2efccf0eab5bee1a395cb9e166d303a9bc8385411418d04aa044237879ada"
+      "file": "ac-abraham-eyes-v3.png",
+      "sha256": "09f886bbf4465f0d900783a869dc87e9fe2fd9824d19d74fb2d75a8ec47384fb"
     },
     "ac-abraham-rejoiced": {
       "file": "ac-abraham-rejoiced-v1.png",
@@ -280,5 +280,18 @@
       ]
     },
     "note": "Generator receipt records initial inspection, not independent acceptance. Final independent outcome is embedded in art-review.json."
-  }
+  },
+  "owner_corrections": [
+    {
+      "key": "ac-abraham-eyes",
+      "request": "Correct handedness of the hand over Abraham eyes while preserving arm position and scene.",
+      "prior_original": "ac-abraham-eyes-v2.png",
+      "selected_original": "ac-abraham-eyes-v3.png",
+      "selected_sha256": "09f886bbf4465f0d900783a869dc87e9fe2fd9824d19d74fb2d75a8ec47384fb",
+      "first_edit_rejected": "Still retained upper thumb; saved in local archive.",
+      "method": "Built-in image_gen precise-object-edit",
+      "prompt": "Precise localized image edit. Fix ONLY the hand over the seated elderly man’s eyes. Remove the upper thumb and put a single thumb at the lower palm edge beside the nose/cheek, with four fingers across the closed eyes. Correct left wrist/hand continuous with existing left arm. Preserve likenesses, arm position, robes, stars, lighting, framing and photographic realism. Exact tool prompts saved in local hand-correction archive.",
+      "independent_review": "Newton viewed original, candidate and approved Christ reference; pass, not owner approval."
+    }
+  ]
 }

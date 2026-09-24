@@ -6850,18 +6850,18 @@
     {
       "title": "He opens Abraham’s eyes",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-abraham-eyes-960.webp",
-      "fullImage": "/assets/page-art/abrahamic-covenant/ac-abraham-eyes-full.webp",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-abraham-eyes-v3-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-abraham-eyes-v3-full.webp",
       "alt": "The Lord places His hand over Abraham’s eyes beneath a night sky.",
-      "id": "art-27102babec2a",
+      "id": "art-24324f35f72b",
       "occurrences": [
         {
-          "id": "source-d6855f10244d",
+          "id": "source-9d559cd80fdc",
           "page": "/answers/abrahamic-covenant.html",
           "pageTitle": "The Abrahamic Covenant",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-abraham-eyes-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-abraham-eyes-960.webp\"])",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-abraham-eyes-v3-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-abraham-eyes-v3-960.webp\"])",
           "title": "He opens Abraham’s eyes"
         }
       ],
