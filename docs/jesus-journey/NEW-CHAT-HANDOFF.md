@@ -1,5 +1,14 @@
 # Jesus Christ journey — new-chat handoff
 
+## Current owner correction: hover, desktop Shorts and Answer borders
+
+Wyatt reissued this request after disconnection: all section panels and pills should lift slightly on hover; desktop Watch should show the four recent Shorts side by side within the standard borders; all Answers topic pages must share Home/History boundaries. Work is on `fix/hover-shorts-answer-widths`, based on PR379 merge `0c20c4bc414fcb4820c7698242f527d7274c832d`.
+
+Shared motion and the 1040px Answer rail are appended after the unchanged shared CSS prefix. Desktop Shorts at >=1024px open all four; smaller screens keep the native disclosure and saved mobile choice. Collapse/resize stops hidden playback and restores visible focus. Reduced motion removes the lifts. All artwork, content, sources and hero frames remain preserved. Root browser measured all22 Answers at1366/390px and Watch1024px equality. Independent code/runtime/static review passed. Full CI, publication and public verification remain; consult the current task work/release-receipt.json for newer evidence before asserting completion.
+
+PR379 prior release recovered: main QA35949896016, Pages35949895984 and Worker35949895955 succeeded. Its saved manifest verifies130files/178ordinary URLs with zero mismatches. Protected foundation and paused automation unchanged.
+
+
 ## Current checkpoint: site-wide presentation release PR379
 
 Wyatt explicitly requested production presentation uniformity across the whole site, using the Home three-panel section and History as references. PR379 covers all119 canonical pages through shared panel/control inventories, clearer chapter guidance, neutral brief-sensitive-topic Ask choices, and narrow-screen readability. All approved artwork and saved originals remain unchanged. Site-wide means the complete119-page rendered check at desktop, phone, and320px enlarged text, combined with actual browser review of shared page families; do not describe representative screenshots as manual inspection of every page.

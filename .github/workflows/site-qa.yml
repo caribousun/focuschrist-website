@@ -154,7 +154,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: canonical-presentation
-          path: .qa-artifacts/canonical-presentation.json
+          path: |
+            .qa-artifacts/canonical-presentation.json
+            .qa-artifacts/interaction-presentation.json
           include-hidden-files: true
           if-no-files-found: ignore
 

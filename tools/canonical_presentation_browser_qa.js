@@ -126,6 +126,7 @@ async function main() {
                 finally {page.off('response',onResponse);}
             }
         }
+        await require('./interaction_presentation_browser_qa.js')(page, origin, pages);
     } finally {
         await browser.close();
         if(server)await new Promise(resolve=>server.close(resolve));

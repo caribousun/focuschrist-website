@@ -86,7 +86,10 @@ class WatchShorts(unittest.TestCase):
         card = re.search(r'\.watch-shorts \.watch-shorts-grid > \.watch-short\s*\{([^}]+)', css).group(1)
         self.assertIn('flex: 0 1 310px', card, 'Cards must not grow to fill an incomplete row')
         self.assertIn('max-width: 100%', card, 'Cards must shrink inside narrow containers')
-        self.assertNotIn('grid-template-columns', css, 'Do not restore empty fixed column slots')
+        self.assertIn('@media (min-width: 1024px)', css)
+        self.assertIn('.watch-shorts[data-shorts-desktop] .watch-shorts-layout', css)
+        self.assertIn('grid-template-columns: repeat(3, minmax(0, 1fr))', css)
+        self.assertEqual(self.page.count('class="watch-shorts-layout"'), 1)
 
     def test_generator_rejects_stale_saved_card_without_writing(self):
         with tempfile.TemporaryDirectory(prefix='watch-shorts-qa-') as folder:
