@@ -57,6 +57,8 @@ for(const key of ['__proto__','constructor','unknown'])assert.equal(sanitizePayl
 assert.equal(sanitizePayload({focuschrist_page:'ask',focuschrist_pioneer_topic:'winterquarters',messages:[{role:'user',content:'Who was Hyrum Smith?'}]}).scope.pioneerTopicKey,undefined);
 assert.equal(guardVerifiedAnswer('Too brief.',evidence,{faith:true},true),SOURCE_INTEGRITY_FALLBACK,'review approval never exempts publication depth');
 assert.equal(guardVerifiedAnswer(snapshot.paragraphs.join(' '),evidence,{faith:true},true),SOURCE_INTEGRITY_FALLBACK,'review approval never exempts overlap/depth');
-assert.equal(Object.keys(registry.readings).length,34);
+assert.equal(Object.keys(registry.readings).length,36);
+assert(registry.readings['support-pornography-start']);
+assert(registry.readings['support-unwanted-thoughts-start']);
 for(const [key,reading] of Object.entries(registry.readings)){assert.equal(await sha256Text(reading.answer),reading.answerSha256,key);assert(reading.reviewRevision);for(const source of reading.sources)assert.equal(source.extractionVersion,REVIEWED_SOURCE_EXTRACTION_VERSION);}
 console.log('PASS: reviewed reading identity/content/checksum invalidation, full-scope cache integrity, zero-AI changed-source hold, God user-context boundaries, and publication guards.');

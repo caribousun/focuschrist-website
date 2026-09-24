@@ -228,6 +228,7 @@ jobs:
           node tools/scripture_library_qa.js
           node groq-proxy/source-policy.test.js
           node groq-proxy/self-help-support.test.js
+          node groq-proxy/self-help-reviewed.test.js
           node groq-proxy/conversation-context.test.js
           node groq-proxy/research-escalation.test.js
           node groq-proxy/scripture-evidence.test.js
