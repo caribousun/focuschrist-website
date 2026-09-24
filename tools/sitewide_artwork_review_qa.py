@@ -14,7 +14,7 @@ MISSION_ENRICHMENT_STYLE_SHA256 = 'e40315cfc4994ba862cd7bf3c1d4f0fa77db5bd1ba59d
 WATCH_SHORTS_STYLE = 'watch-shorts.css'
 # Owner-requested three-Short disclosure; centered 310px cards and controls,
 # independently checked on desktop and enlarged phone text. Exact Watch-only bytes.
-WATCH_SHORTS_STYLE_SHA256 = '555d4c71de1a7de20c1be5953c7456b2d0f35ffd388adf27e2376e1e46168b3a'
+WATCH_SHORTS_STYLE_SHA256 = 'a38a2206cebfa70ec07d06d859e7890bbcd877c021e391cb1527431668a4420b'
 HOME_STYLE = 'home-presentation.css'
 HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
 HOME_STYLE_OWNER = 'index.html'
@@ -48,7 +48,7 @@ def reviewed_wrap_consumers(consumers, expected, version):
 def reviewed_system_panel_style(data):
     # Owner-directed surface appendix only. Existing hero/mobile rules retain
     # their exact reviewed prefix; both the prefix and full file are pinned.
-    return (hashlib.sha256(data).hexdigest() == '79a2cb4487f310c888211f20643e428d51d0bb68fe64323e37bccc29fe851a15'
+    return (hashlib.sha256(data).hexdigest() == '6bcb9b6bd26ee85d8afa47ff1f1631430f191fdd3c3e6414937909858fec480b'
             and hashlib.sha256(data[:58704]).hexdigest() == '7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984')
 
 def reviewed_mission_enrichment_style(data):

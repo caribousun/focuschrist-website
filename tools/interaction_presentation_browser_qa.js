@@ -25,7 +25,7 @@ module.exports = async function checkInteractionPresentation(page, origin, route
       const row = await page.evaluate(() => {
         const section=document.querySelector('[data-watch-shorts]'), bounds=section.getBoundingClientRect();
         return {open:section.querySelector('details').open, desktop:section.hasAttribute('data-shorts-desktop'), left:bounds.left, right:bounds.right,
-          cards:[...section.querySelectorAll('.watch-short')].map(n=>{const r=n.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,right:r.right};})};
+          cards:[...section.querySelectorAll('.watch-short')].map(n=>{const r=n.getBoundingClientRect(), link=n.querySelector('.watch-short-copy > a:last-child').getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,right:r.right,bottom:r.bottom,linkBottom:link.bottom};})};
       });
       assert.equal(row.desktop, width >= 1024);
       assert.equal(row.open, width >= 1024);
@@ -33,6 +33,8 @@ module.exports = async function checkInteractionPresentation(page, origin, route
       if (width >= 1024) for (const card of row.cards) {
         assert(Math.abs(card.y - row.cards[0].y) < 1, 'Shorts must share one desktop row');
         assert(Math.abs(card.width - row.cards[0].width) < 1, 'Shorts widths differ');
+        assert(Math.abs(card.bottom - row.cards[0].bottom) < 1, 'Shorts bottom edges differ');
+        assert(Math.abs(card.linkBottom - row.cards[0].linkBottom) < 1, 'Shorts bottom links differ');
         assert(card.x >= row.left - 1 && card.right <= row.right + 1, 'Shorts escape rails');
       }
       record('rails-and-shorts', {width, answerPages:routes.filter(r=>r.startsWith('answers/')).length, row});
