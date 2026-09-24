@@ -261,11 +261,11 @@ contract('jesus-journey.css', 'body.fc-jesus-journey .jj-wrap', {
     'width': 'min(var(--fc-standard,1040px),calc(100% - 2 * var(--fc-body-gutter,18px)))',
     'margin-inline': 'auto',
 })
-journey_expected = {'birth-of-christ.html', 'answers/jesus-christ-latter-day-saint-beliefs.html'}
+journey_expected = {'birth-of-christ.html', 'answers/jesus-christ-latter-day-saint-beliefs.html', 'answers/abrahamic-covenant.html'}
 for filename in ('branch-content-reviewed.json', 'parable-content-reviewed.json', 'parable-collections-reviewed.json'):
     journey_expected.update(page['url'].lstrip('/') for page in json.loads(
         (ROOT / 'docs/jesus-journey' / filename).read_text(encoding='utf-8')))
-require(len(journey_expected) == 78, 'Expected all 78 journey stylesheet consumers')
+require(len(journey_expected) == 79, 'Expected all 79 journey stylesheet consumers')
 journey_consumers = {}
 for path in ROOT.rglob('*.html'):
     if any(part in {'.git', 'node_modules'} for part in path.relative_to(ROOT).parts):
@@ -277,7 +277,7 @@ for path in ROOT.rglob('*.html'):
              and urlsplit(urljoin('/' + page, n.attrs.get('href', ''))).path == '/jesus-journey.css']
     if hrefs:
         journey_consumers[page] = hrefs
-        rail = 'jj-wrap' if page.startswith('jesus-christ/') else 'content-wrap'
+        rail = 'jj-wrap' if page.startswith('jesus-christ/') or page == 'answers/abrahamic-covenant.html' else 'content-wrap'
         require(any(n.tag == 'main' and n.has(rail) for n in doc.root.walk()), page + ': standard journey content rail missing')
 ERRORS.extend(journey_errors((ROOT / 'jesus-journey.css').read_text(encoding='utf-8'), journey_consumers, journey_expected))
 boundary_inputs = [(ROOT / name).read_text(encoding='utf-8') for name in
@@ -302,4 +302,4 @@ if '--self-test' in sys.argv:
 
 if ERRORS:
     raise SystemExit("\n".join(ERRORS))
-print("STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; all 78 journey consumers use full-width reading and current CSS; rendered geometry requires browser review")
+print("STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; all 79 journey consumers use full-width reading and current CSS; rendered geometry requires browser review")

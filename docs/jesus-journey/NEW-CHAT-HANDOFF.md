@@ -1,5 +1,15 @@
 # Jesus Christ journey — new-chat handoff
 
+## Current checkpoint: Abrahamic covenant reviewed; release verification next
+
+All earlier owner follow-ups are live through PR373 (sitewide reading rhythm), PR375 (one visible Short with three collapsible), and PR374/376 (source-grounded non-explicit self-help). PR376 merge a6b81308d8edcb42e1ccc7b500fe3ca0f492aa34 passed Pages, main QA and Worker; root verified both generic self-help questions in the public Ask UI. The canonical covenant question also passed a production-Origin API check. Do not claim localhost Ask research succeeded.
+
+The new answers/abrahamic-covenant.html is complete locally on feat/abrahamic-covenant-study: ten pictured chapters, twelve new originals (six Christ), one clearly linked picture owned by Life After Death, two unique official video resources, five scriptural divisions, Jacob's dream and wrestle, public temple teachings and eternal promises. Technical and independent source/pixel reviews do not mean owner aesthetic approval. Original PNGs, exact prompts, revisions and working identities remain in parent work/abrahamic-covenant-20260923; public self-contained review records are in docs/abrahamic-covenant. Preserve all assets and approved Christ likeness. Jacob and Sarah remain artistic working identities.
+
+Answers retains28 uniform topic pills; Jesus Christ is paired with the featured Atonement link and Abrahamic Covenant takes its old slot. Ask offers the new study for specific covenant/Jacob questions, preserves unrelated Book of Abraham history routing, and provides a safe contextual return. All12 artwork interactions passed phone detail/full-size/close/Continue; ten chapters passed desktop1040rail and320px enlarged-text checks; source reader selected Moses7:63-64. Repaired Eyring official preview and a stretched reference image were rechecked. Local gates pass; the PR, CI, Pages deployment and exact public-byte/browser verification remain next. See parent work release receipt when present for newer evidence. Master and protected foundation remain unchanged; old automation remains PAUSED.
+
+This checkpoint supersedes the historical in-progress notes below.
+
 ## Latest checkpoint: Watch playback merged; sitewide review finalizing
 
 PR371 is live at94c15c788f19a60ba0c341184f9f53be19750a8d: prominent Close, full player positioning, all3publicfiles verified. Latest owner requests offscreen pause and captions off are in PR372, merged cd4a1849f70d06dc32a8dcb3ebc0ea61790e78d1 after PR QA35928931359 passed. Pages35929413113 and main QA35929413349 passed; both public files match. Actual public phone video started CC off and paused offscreen, returning paused at10seconds. See parent work/watch-playback-release-20260923.json. Real local YouTube showed captions off and stayed paused after scrolling away and returning. Caption preference cannot be universally overridden by documented YouTube parameters; do not claim a guarantee.

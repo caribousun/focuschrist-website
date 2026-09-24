@@ -17,7 +17,7 @@
             }
             // Supporting artwork returns to its lesson, not the gallery. Keep
             // only a known local page and a plain fragment; discard query data.
-            const studyPaths = heroPaths.concat(['/come-follow-me.html', '/general-conference.html']);
+            const studyPaths = heroPaths.concat(['/come-follow-me.html', '/general-conference.html', '/answers/abrahamic-covenant.html']);
             if (!['/art.html', '/index.html', '/ask.html'].includes(url.pathname) && studyPaths.includes(url.pathname) && /^#[A-Za-z][A-Za-z0-9_.:-]*$/.test(url.hash)) {
                 return url.pathname + url.hash;
             }
@@ -44,11 +44,12 @@
         } catch (_error) { return fallback; }
     }
 
-    function safeStudyReturn(raw) {
-        const fallback = '/book-of-mormon-evidences.html';
+    function safeStudyReturn(raw, study) {
+        const covenant = study === 'Abrahamic Covenant';
+        const fallback = covenant ? '/answers/abrahamic-covenant.html' : '/book-of-mormon-evidences.html';
         try {
             const url = new URL(raw || fallback, window.location.href);
-            const sections = ['explore-evidences', 'reading-paths', 'translation', 'manuscripts', 'english-language', 'witnesses', 'literary-patterns', 'alma-36', 'voices', 'ancient-context', 'open-questions', 'come-to-christ', 'study-method', 'source-library'];
+            const sections = covenant ? ['a-promise-to-live-by', 'abraham-and-sarah', 'every-family', 'god-remembers', 'jacob-at-bethel', 'jacob-becomes-israel', 'christ-at-the-heart', 'risen-lord', 'our-day', 'nearer-to-him'] : ['explore-evidences', 'reading-paths', 'translation', 'manuscripts', 'english-language', 'witnesses', 'literary-patterns', 'alma-36', 'voices', 'ancient-context', 'open-questions', 'come-to-christ', 'study-method', 'source-library'];
             if (url.origin !== window.location.origin || url.pathname !== fallback) return fallback;
             return fallback + (sections.includes(url.hash.slice(1)) ? url.hash : '');
         } catch (_error) { return fallback; }
@@ -78,7 +79,7 @@
         const context = document.createElement('aside');
         context.className = 'ask-art-context';
         context.setAttribute('data-focuschrist-art-context', 'true');
-        context.setAttribute('aria-label', study ? 'Book of Mormon evidence study context' : watch ? 'Watch study context' : 'Artwork study context');
+        context.setAttribute('aria-label', study ? study + ' study context' : watch ? 'Watch study context' : 'Artwork study context');
 
         const copy = document.createElement('div');
         const kicker = document.createElement('span');
@@ -102,7 +103,7 @@
         const back = document.createElement('a');
         back.className = 'ask-art-context-return';
         back.href = returnUrl;
-        back.textContent = study ? 'Return to Evidences study' : watch ? 'Return to Watch study' : 'Return to this artwork';
+        back.textContent = study === 'Abrahamic Covenant' ? 'Return to Covenant study' : study ? 'Return to Evidences study' : watch ? 'Return to Watch study' : 'Return to this artwork';
         back.setAttribute('data-focuschrist-art-return', 'true');
         context.appendChild(back);
         card.insertBefore(context, card.firstChild);
@@ -122,7 +123,7 @@
         const input = document.getElementById('userInput');
         if (!input || input.value.trim()) return;
         const subject = topic || art;
-        input.value = study ? 'Help me study ' + subject + '. Please distinguish the original sources, scholarly interpretations, and questions that remain open.' : watch ? 'What do the scriptures and official Church resources teach about ' + subject + '?' : 'Help me study the artwork "' + art + '". What do the scriptures and official Church resources teach about ' + subject + '?';
+        input.value = study === 'Abrahamic Covenant' ? 'Help me understand ' + subject + '. What can I learn from scripture?' : study ? 'Help me study ' + subject + '. Please distinguish the original sources, scholarly interpretations, and questions that remain open.' : watch ? 'What do the scriptures and official Church resources teach about ' + subject + '?' : 'Help me study the artwork "' + art + '". What do the scriptures and official Church resources teach about ' + subject + '?';
         input.setAttribute('data-focuschrist-art-prefill', 'true');
         window.setTimeout(function () {
             try { input.focus({ preventScroll: true }); } catch (_error) { input.focus(); }
@@ -132,11 +133,11 @@
     function init() {
         const params = new URLSearchParams(window.location.search);
         const watch = (params.get('watch') || '').trim().slice(0, 180);
-        const study = !watch && !params.get('art') && params.get('study') === 'Book of Mormon Evidences';
-        const art = (params.get('art') || watch || (study ? 'Book of Mormon Evidences' : '')).trim().slice(0, 180);
+        const study = !watch && !params.get('art') && ['Book of Mormon Evidences', 'Abrahamic Covenant'].includes(params.get('study')) ? params.get('study') : '';
+        const art = (params.get('art') || watch || study).trim().slice(0, 180);
         if (!art) return;
         const topic = (params.get('topic') || art).trim().slice(0, 180);
-        const returnUrl = study ? safeStudyReturn(params.get('return')) : watch ? safeWatchReturn(params.get('return')) : safeReturnUrl(params.get('return'), art);
+        const returnUrl = study ? safeStudyReturn(params.get('return'), study) : watch ? safeWatchReturn(params.get('return')) : safeReturnUrl(params.get('return'), art);
         ensureStyles();
         createContext(art, topic, returnUrl, watch, study);
         if (!watch && !study) createPersistentReturn(art, returnUrl);

@@ -1,0 +1,855 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-23",
+  "owner_page": "/answers/abrahamic-covenant.html",
+  "status": "Technical image review; no new owner approval or publication approval implied.",
+  "evidence_scope": "Independent reviewers inspected actual original pixels. This record embeds those observations and binds final derivatives to SHA-256 hashes. Browser, phone framing, deployment and owner acceptance are separate evidence.",
+  "hash_definitions": {
+    "original_sha256": "Exact selected original PNG bytes retained in local archive.",
+    "review_sha256": "Exact private independent-review JSON bytes before path sanitization. It is not a hash of the embedded sanitized review.",
+    "asset_sha256": "Exact full-frame public WebP bytes.",
+    "thumbnail_sha256": "Exact 960px public WebP bytes.",
+    "independent_review_sha256": "The independent_review.sha256 field identifies reviewed original image bytes, not review-document bytes."
+  },
+  "archive_policy": "local-archive identifiers are archival filenames, not public URLs. Original images, private physical pose references and unmodified receipts remain outside the public repository.",
+  "counts": {
+    "originals": 12,
+    "christ": 6
+  },
+  "artworks": {
+    "ac-baptism-belonging": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-baptism-belonging-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-baptism-belonging-960.webp",
+      "title": "Preparing to follow Him",
+      "alt": "A woman preparing for baptism speaks with a supportive friend beside a font.",
+      "caption": "Preparing for baptism, a disciple shares a quiet moment with a friend. Covenant life includes learning to serve and support one another.",
+      "sources": [
+        {
+          "label": "Mosiah 18:8-10",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p10#p8"
+        }
+      ],
+      "includes_christ": false,
+      "chapter_id": "a-promise-to-live-by",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "9c619201f9a9902280260c935f886ef4e539af68c0d6cf6dd50e35f489dbe0f6",
+      "original": "local-archive/ac-baptism-belonging-v1.png",
+      "original_sha256": "4d970362ac88e20442ca6ac21dcc36af89489bd8e02ba9069111f9d1b8dd6b60",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Do not claim these invented contemporary adults are people recorded by Mosiah18; no claim friend performs ordinance."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "78f62d8b6ee14d56712ce0a2635eb5c7fe1cb565a6ab3f76e33275c2e4c4d77c",
+      "thumbnail_sha256": "0cc894973c9bcf4be55712abd74d69f973a33e83c7c9bec11d5f8478219b8488",
+      "independent_review": {
+        "key": "ac-baptism-belonging",
+        "file": "ac-baptism-belonging-v1.png",
+        "sha256": "4d970362ac88e20442ca6ac21dcc36af89489bd8e02ba9069111f9d1b8dd6b60",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "owner_approved": false,
+        "scope": "Actual original-resolution pixels viewed; full composition, eyes, hands, plausible age and activity checked. Technical review only.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "findings": [
+          "Two distinct adult women; meaningful reciprocal conversational gaze, natural expression and visible skin detail.",
+          "Candidate remains dry outside font in plain opaque white long-sleeve clothing; friend in ordinary clothing. No immersion, minister gesture, temple ceremonial dress or Christ apparition.",
+          "Conversational hands and friend’s clasped hands connect plausibly; font rail/water/context clear. No concrete pixel correction identified."
+        ],
+        "source_scope": "Mosiah18:8–10 modern application",
+        "caption_conditions": [
+          "Do not claim these invented contemporary adults are people recorded by Mosiah18; no claim friend performs ordinance."
+        ],
+        "required_pixel_fix": null
+      }
+    },
+    "ac-abraham-sarah-journey": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-abraham-sarah-journey-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-abraham-sarah-journey-960.webp",
+      "title": "Together along the way",
+      "alt": "Abraham and Sarah pause beside their travel tents with a staff and folded bedding.",
+      "caption": "Abraham and Sarah pause along their journey toward Canaan. Their tents and belongings recall a household learning to trust the Lord along the way.",
+      "sources": [
+        {
+          "label": "Abraham 2:6–16",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=p6-p16#p6"
+        }
+      ],
+      "includes_christ": false,
+      "chapter_id": "abraham-and-sarah",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "22f1f78d246f6010efbd7c2b1a81f0b4200c59e654d72e201c81000ab1e370ba",
+      "original": "local-archive/ac-abraham-sarah-journey-v1.png",
+      "original_sha256": "cc42461d5b0e5c073dd783d836d400bc02a1c310053283bdb79d373744da465e",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Identify scene as artistic scripture illustration; premortal Jehovah identified within LDS belief where relevant.",
+        "Travel image represents a pause within the journey, not a specifically recorded conversation. Sarah identity is artistic working continuity only."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "0f8df9282bf063b6b4ceed78b321afc9031afb7a255be72d529e8108fdff4b88",
+      "thumbnail_sha256": "4c615f418c2e0c6e970087b14c4d0eb7663ddb4ac18f72ba741909720b6562d7",
+      "independent_review": {
+        "key": "ac-abraham-sarah-journey",
+        "file": "ac-abraham-sarah-journey-v1.png",
+        "sha256": "cc42461d5b0e5c073dd783d836d400bc02a1c310053283bdb79d373744da465e",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "scope": "Actual full-frame and original-resolution pixels viewed; faces/hands/source/identity checked. Technical review, not owner approval or publishing authorization.",
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=p6-p16#p6",
+        "source_review": "Official passage freshly read2026-09-23. Jehovah appears atHaran; departure age62; Sarah accompanies travel and tents. Exact Sarah age, clothing, gesture, tent design and conversation during travel are not recorded. Do not silently substitute Genesis12 age75.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "photographic_quality": "Pass: detailed skin/eyes/hair, coherent natural light, fabric texture and depth; no painterly or waxy rendering observed.",
+        "references_viewed": [
+          {
+            "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+            "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+          },
+          {
+            "path": "assets/page-art/jesus-journey/bb-abram-stars-full.webp",
+            "sha256": "dc11e98e56c849c358cbb6bca839f38195f6666ef81f4dc12e4e30fb09dc0e24"
+          }
+        ],
+        "findings": [
+          "Abraham working facial continuity retained. Sarah is a distinct mature adult with natural facial lines and gray hair, not the age90 later motherhood portrayal.",
+          "Sarah looks toward Abraham; Abraham looks toward her upper face/forward slightly. The exchange is engaged but not perfectly locked pupil-to-pupil. Do not describe exact mutual eye lock in caption.",
+          "Staff-gripping hand, speaking hand and Sarah blanket-holding hands have plausible connected anatomy; no fused extra fingers observed.",
+          "Tents, staff and carried bedding support a pause during travel. The image does not depict an actual walking gait, so caption should say on their journey or pause along the way rather than walking.",
+          "No modern props, readable fabricated text, unrelated Christ apparition or generic portrait stare. New Sarah face is working continuity only, not owner-approved."
+        ],
+        "required_pixel_fix": null,
+        "caption_conditions": [
+          "Identify scene as artistic scripture illustration; premortal Jehovah identified within LDS belief where relevant.",
+          "Travel image represents a pause within the journey, not a specifically recorded conversation. Sarah identity is artistic working continuity only."
+        ],
+        "owner_approved": false
+      }
+    },
+    "ac-sarah-isaac": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-sarah-isaac-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-sarah-isaac-960.webp",
+      "title": "Sarah holds Isaac",
+      "alt": "Elderly Sarah cradles the infant Isaac and looks into his eyes.",
+      "caption": "Sarah holds Isaac, the son whose birth brought her joy. God remembers His promise.",
+      "sources": [
+        {
+          "label": "Genesis 17:15-21",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/17?lang=eng&id=p15-p21#p15"
+        },
+        {
+          "label": "Genesis 21:1-7",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/21?lang=eng&id=p1-p7#p1"
+        }
+      ],
+      "includes_christ": false,
+      "chapter_id": "abraham-and-sarah",
+      "after_paragraph": 2,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "abcaa2f61415c2c67aa75e3e7ca5ee3eb06870950fe04f911538b82599ac527c",
+      "original": "local-archive/ac-sarah-isaac-v2.png",
+      "original_sha256": "600bdca41e62232d30dde68558a83aeaf796c4370ac880ef00de06803ec1bf90",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Retain illustrative mother-and-infant moment; exact infant age, tent furnishings and appearance not recorded."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "f91701ad3f0cc8c4a1bf9247ace40cfa789bbf50983ae7871645faf3f96b087d",
+      "thumbnail_sha256": "d58db31f5de942947bf8af06d17e7326ddd27e6724bb4d8ebc823992e8673030",
+      "independent_review": {
+        "key": "ac-sarah-isaac",
+        "file": "ac-sarah-isaac-v2.png",
+        "sha256": "600bdca41e62232d30dde68558a83aeaf796c4370ac880ef00de06803ec1bf90",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "owner_approved": false,
+        "scope": "Actual original-resolution pixels viewed; full composition, eyes, hands, plausible age and activity checked. Technical review only.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "findings": [
+          "Clearly elderly Sarah with white hair, age lines and age spots; facial nose, mouth and brow remain recognizably continuous with travel working reference under natural aging. Age90 is scriptural framing, not a measurable pixel fact.",
+          "Infant looks toward Sarah and Sarah toward infant. Natural cradling with head supported, coherent fingers and wrapped body; infant is not an older toddler.",
+          "Lifelike skin and fabric, coherent tent daylight, no glamour or painted rendering. No concrete pixel correction identified."
+        ],
+        "source_scope": "Genesis17:17;21:1–7",
+        "caption_conditions": [
+          "Retain illustrative mother-and-infant moment; exact infant age, tent furnishings and appearance not recorded."
+        ],
+        "required_pixel_fix": null,
+        "working_reference": {
+          "file": "ac-abraham-sarah-journey-v1.png",
+          "sha256": "cc42461d5b0e5c073dd783d836d400bc02a1c310053283bdb79d373744da465e",
+          "status": "Working artistic continuity, not owner-approved Sarah identity"
+        }
+      }
+    },
+    "ac-jehovah-haran": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-jehovah-haran-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-jehovah-haran-960.webp",
+      "title": "A promise at Haran",
+      "alt": "Jehovah speaks with Abraham near a tent encampment.",
+      "caption": "At Haran, Jehovah promises Abraham that all families of the earth can receive gospel blessings through his seed. This illustration portrays the premortal Savior according to Latter-day Saint belief.",
+      "sources": [
+        {
+          "label": "Abraham 2:6–12",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=p6-p12#p6"
+        },
+        {
+          "label": "Abraham 2:9–11",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=p9-p11#p9"
+        }
+      ],
+      "includes_christ": true,
+      "chapter_id": "every-family",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "f21b148ca6cd6c9a2b529ddc16e2de4c8b70f0bdcdbb403b4e48a6fc3cbe6847",
+      "original": "local-archive/ac-jehovah-haran-v1.png",
+      "original_sha256": "4c20683813ce6ed9adad4fb848c8ac88996b8e5b60cda9cf3cf1b31a246b5cf3",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Identify premortal Jehovah and Abraham2source; no claim exact pose/environment was recorded."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "3cc83d8b66c3ce2fd69ab3b44996d6372d931ba589d817d14a2bfea617d9b361",
+      "thumbnail_sha256": "f8ad760251cc1cd741da539af172071c246e61d75d2e8472497c7bb1d8e7309c",
+      "independent_review": {
+        "key": "ac-jehovah-haran",
+        "file": "ac-jehovah-haran-v1.png",
+        "sha256": "4c20683813ce6ed9adad4fb848c8ac88996b8e5b60cda9cf3cf1b31a246b5cf3",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "scope": "Actual full-frame and original-resolution pixels viewed; faces/hands/source/identity checked. Technical review, not owner approval or publishing authorization.",
+        "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=p6-p16#p6",
+        "source_review": "Official passage freshly read2026-09-23. Jehovah appears atHaran; departure age62; Sarah accompanies travel and tents. Exact Sarah age, clothing, gesture, tent design and conversation during travel are not recorded. Do not silently substitute Genesis12 age75.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "photographic_quality": "Pass: detailed skin/eyes/hair, coherent natural light, fabric texture and depth; no painterly or waxy rendering observed.",
+        "references_viewed": [
+          {
+            "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+            "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b"
+          },
+          {
+            "path": "assets/page-art/jesus-journey/bb-abram-stars-full.webp",
+            "sha256": "dc11e98e56c849c358cbb6bca839f38195f6666ef81f4dc12e4e30fb09dc0e24"
+          }
+        ],
+        "findings": [
+          "Christ face preserves characteristic brow, nose, eyes, hair and beard of approved reference in a natural three-quarter conversational expression.",
+          "Abraham retains working prominent nose, brow and white beard; vigorous older adult portrayal plausibly represents62, not a frail centenarian. Exact biological age cannot be certified from pixels.",
+          "Direct reciprocal gaze and naturally open conversational hand; fingers overlap plausibly, no extra digit or broken joint observed. Lower hands partly outside frame; no essential depicted action lost.",
+          "Daylight tents/flocks fit interpreted Haran surroundings, not a claim of exact architecture/posture. No visible nail scars; do not call this risen Christ.",
+          "Distinct from lone Abraham under Genesis15stars."
+        ],
+        "required_pixel_fix": null,
+        "caption_conditions": [
+          "Identify premortal Jehovah and Abraham2source; no claim exact pose/environment was recorded."
+        ],
+        "owner_approved": false
+      }
+    },
+    "ac-abraham-eyes": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-abraham-eyes-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-abraham-eyes-960.webp",
+      "title": "He opens Abraham’s eyes",
+      "alt": "The Lord places His hand over Abraham’s eyes beneath a night sky.",
+      "caption": "The Lord places His hand upon Abraham’s eyes and shows him His creations. The promise reaches beyond what Abraham can count.",
+      "sources": [
+        {
+          "label": "Abraham 3:11–15",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p11-p15#p11"
+        }
+      ],
+      "includes_christ": true,
+      "chapter_id": "every-family",
+      "after_paragraph": 2,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "05c0256c6f45cf6c2568986a0f6dd7a5de5ef4be8d25613769d7aadbb669ac7c",
+      "original": "local-archive/ac-abraham-eyes-v2.png",
+      "original_sha256": "a1f2efccf0eab5bee1a395cb9e166d303a9bc8385411418d04aa044237879ada",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Use v2 only; preserve v1 as rejected checkpoint. Source describes hand upon eyes, not an eye-healing event."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "f3e63453c005eae981d3ba08ecac44b959cfa96dfe9099ed23c2372f71da9c6c",
+      "thumbnail_sha256": "e923b33669cebaf55694bc756704d96d7f5cb2d987779e26e221aa3d289a4acb",
+      "independent_review": {
+        "key": "ac-abraham-eyes",
+        "file": "ac-abraham-eyes-v2.png",
+        "sha256": "a1f2efccf0eab5bee1a395cb9e166d303a9bc8385411418d04aa044237879ada",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "owner_approved": false,
+        "scope": "Full original-resolution image actually viewed; faces, hands, action, source context and visual distinction reviewed. Technical review only; no publisher or owner approval.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "source": "Abraham3:11–14",
+        "findings": [
+          "v2 correctly places the hand across Abraham’s eye region, not only forehead. Four fingers and thumb/hand connection read plausibly; no conspicuous extra digit.",
+          "Approved Christ facial continuity and Abraham working continuity retained; no visible scars. Abraham’s eyes are necessarily covered: no reciprocal gaze should be invented in caption.",
+          "Night setting, earthly figures and restrained natural stars; no invented celestial map or beings. Photographic textures."
+        ],
+        "caption_conditions": [
+          "Use v2 only; preserve v1 as rejected checkpoint. Source describes hand upon eyes, not an eye-healing event."
+        ],
+        "required_pixel_fix": null,
+        "christ_reference": {
+          "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "viewed": "Actual approved pixels viewed earlier in this same review session"
+        }
+      }
+    },
+    "ac-abraham-rejoiced": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-abraham-rejoiced-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-abraham-rejoiced-960.webp",
+      "title": "Before Abraham was",
+      "alt": "Jesus speaks with adult questioners in a temple setting.",
+      "caption": "Jesus speaks of Abraham’s joy in seeing His day. His answer invites us to recognize who He is.",
+      "sources": [
+        {
+          "label": "John 8:56-58",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/8?lang=eng&id=p56-p58#p56"
+        },
+        {
+          "label": "Galatians 3:14-16",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/gal/3?lang=eng&id=p14-p16#p14"
+        }
+      ],
+      "includes_christ": true,
+      "chapter_id": "christ-at-the-heart",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "06702ee468657fef94fc551135be650b2f49185f034e282cb51285ec3557776e",
+      "original": "local-archive/ac-abraham-rejoiced-v1.png",
+      "original_sha256": "e5783afef58d1f242ed7e5c779b21df4d9cf51722e0da84a8680465fcc176339",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Caption should not assert five listeners; there are five men total including Christ. Questioning faces do not establish their names or private thoughts."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "b7543428b22ec8768dd5ced2ee4f1976867b3f825e86538015f41f9da0266736",
+      "thumbnail_sha256": "5a1d0407ef39100dba009851d741dbe02138a7234301ff22fadf6505ea366849",
+      "independent_review": {
+        "key": "ac-abraham-rejoiced",
+        "file": "ac-abraham-rejoiced-v1.png",
+        "sha256": "e5783afef58d1f242ed7e5c779b21df4d9cf51722e0da84a8680465fcc176339",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "owner_approved": false,
+        "scope": "Full original-resolution image actually viewed; faces, hands, action, source context and visual distinction reviewed. Technical review only; no publisher or owner approval.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "source": "John8:56–58",
+        "findings": [
+          "Christ plus four adult male listeners; primary reciprocal eye contact with older questioner. Hand gesture and older listener chin-hand plausible.",
+          "No earlier woman, writing on ground, stones or Abraham apparition. Distinct later conversation. Background men have similar beard/hair styles but visibly distinguishable faces/poses, no obvious cloned pixel body.",
+          "Christ likeness retained with serious conversational expression; detailed skin/hair/clothing."
+        ],
+        "caption_conditions": [
+          "Caption should not assert five listeners; there are five men total including Christ. Questioning faces do not establish their names or private thoughts."
+        ],
+        "required_pixel_fix": null,
+        "christ_reference": {
+          "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "viewed": "Actual approved pixels viewed earlier in this same review session"
+        }
+      }
+    },
+    "ac-isaac-covenant": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-isaac-covenant-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-isaac-covenant-960.webp",
+      "title": "The promise continues with Isaac",
+      "alt": "Jehovah speaks with a seated, mature Isaac in an open landscape.",
+      "caption": "The Lord renews with Isaac the promise made to Abraham. His faithfulness continues from one generation to another.",
+      "sources": [
+        {
+          "label": "Genesis 26:2–5",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/26?lang=eng&id=p2-p5#p2"
+        }
+      ],
+      "includes_christ": true,
+      "chapter_id": "god-remembers",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "9abe18e730f29e9a9bb455468ff1e90fa49180620ae1d95ea0ebb833da7c41c6",
+      "original": "local-archive/ac-isaac-covenant-v1.png",
+      "original_sha256": "e66b90ba63995cc2b89dd2848f915b3e6eb2700b4fc5370ffd9a7470d017f1d3",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Do not import later wells/altar or26:24night appearance. Exact Isaac age is not supplied."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "d93ff9c10093349574defb760d1606f79bafaefff6b27b6afccbd82bc60e0e6c",
+      "thumbnail_sha256": "9875a711ff000ced2d664497861a32d3e37c70c7dbe263781be3c13e049ef894",
+      "independent_review": {
+        "key": "ac-isaac-covenant",
+        "file": "ac-isaac-covenant-v1.png",
+        "sha256": "e66b90ba63995cc2b89dd2848f915b3e6eb2700b4fc5370ffd9a7470d017f1d3",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "owner_approved": false,
+        "scope": "Full original-resolution image actually viewed; faces, hands, action, source context and visual distinction reviewed. Technical review only; no publisher or owner approval.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "source": "Genesis26:2–5",
+        "findings": [
+          "Mature dark-curled Isaac clearly differs from white-bearded Abraham and Christ. Engaged upward gaze meets Christ’s gaze.",
+          "Visible hands have coherent fingers and natural joints; clothing/body transitions plausible, no scars.",
+          "Distinct named covenant event; setting and sitting posture interpretive. Broad earthly conversation resembles Haran in genre but different person, standing/seated relation and setting retain separate recorded event."
+        ],
+        "caption_conditions": [
+          "Do not import later wells/altar or26:24night appearance. Exact Isaac age is not supplied."
+        ],
+        "required_pixel_fix": null,
+        "christ_reference": {
+          "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "viewed": "Actual approved pixels viewed earlier in this same review session"
+        }
+      }
+    },
+    "ac-hear-his-voice": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-hear-his-voice-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-hear-his-voice-960.webp",
+      "title": "Hear His voice",
+      "alt": "Jesus walks with three adult questioners through a stone portico in winter clothing.",
+      "caption": "In Solomon’s porch during winter, Jesus answers those who question Him. He speaks of knowing His sheep and giving them eternal life.",
+      "sources": [
+        {
+          "label": "John 10:22–30",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&id=p22-p30#p22"
+        }
+      ],
+      "includes_christ": true,
+      "chapter_id": "god-remembers",
+      "after_paragraph": 3,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "5dfb5a0ee0c8e140e653d1e83b3ec889c3c6cc9eddb141177fe77a0564882c44",
+      "original": "local-archive/ac-hear-his-voice-v2.png",
+      "original_sha256": "43b5b50a192a191c13dd3b6305149b6715f634eae436ea337e540818b0b3f1cd",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Do not claim exact portico reconstruction, rainfall, number/identity of nearby questioners or later stoning as depicted."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "5f8eb72fe0cbed2f737467c10f956ca5b0adbc9d73238c332d8c28630976baf7",
+      "thumbnail_sha256": "a72eaa0b72fd677b20a1cffb01d54624e68b1e0d25a9168d0835296029cd305c",
+      "independent_review": {
+        "key": "ac-hear-his-voice",
+        "file": "ac-hear-his-voice-v2.png",
+        "sha256": "43b5b50a192a191c13dd3b6305149b6715f634eae436ea337e540818b0b3f1cd",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "owner_approved": false,
+        "scope": "Full original-resolution image actually viewed; faces, hands, action, source context and visual distinction reviewed. Technical review only; no publisher or owner approval.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "source": "John10:22–30",
+        "findings": [
+          "Christ with three adult questioners in long stone portico; visible walking feet and hands anatomically plausible. Cool light and substantial mantles support winter; wet floor is an interpretive weather detail.",
+          "Christ turns attentively toward left questioner, reciprocal gaze visible; all adults differentiated, no sheep or earlier John10:16scene composite.",
+          "Approved Christ characteristics retained in smaller full-body depiction; natural detailed cloth/skin, no scars or theatrical glow."
+        ],
+        "caption_conditions": [
+          "Do not claim exact portico reconstruction, rainfall, number/identity of nearby questioners or later stoning as depicted."
+        ],
+        "required_pixel_fix": null,
+        "christ_reference": {
+          "path": "assets/heroes/home-christ-signature-approved-20260907.png",
+          "sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+          "viewed": "Actual approved pixels viewed earlier in this same review session"
+        },
+        "review_followup": "Actual v2 original-resolution pixels viewed: distant pointed tower forms replaced by restrained low flat-roof buildings and clear trees. Four foreground figures, gaze, portico and hands retain reviewed quality. No new concrete defect found."
+      }
+    },
+    "ac-hearts-generations": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-hearts-generations-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-hearts-generations-960.webp",
+      "title": "A story worth keeping",
+      "alt": "A grandmother speaks while resting her hands on bread dough as her adult granddaughter listens and a nearby phone records.",
+      "caption": "A grandmother shares a memory while her granddaughter listens and records. A little time together can help one generation know and love another.",
+      "sources": [
+        {
+          "label": "Preserving family stories",
+          "url": "https://www.churchofjesuschrist.org/study/manual/introduction-to-family-history-student-manual/chapter-11?lang=eng"
+        },
+        {
+          "label": "Doctrine and Covenants 110:13–16",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p13-p16#p13"
+        }
+      ],
+      "includes_christ": false,
+      "chapter_id": "our-day",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "ba5e15f44515f8155f3a0913d2ee123c4129466c67007982bb9fa1e237b65bc7",
+      "original": "local-archive/ac-hearts-generations-original.png",
+      "original_sha256": "860869ffd87e2cfc62b4dd39a40dbd65e3dc217ca72eacda9c57cce23a3c05b0",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Use revised oral-history caption, not obsolete photograph-sharing plan. No invented exact biography, memory or claim D&C110 describes kitchen/technology."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "b9c98acf9b31c012a1545dbe030711c2054834b2d979ffb1307987fea7674fbb",
+      "thumbnail_sha256": "a453497419b076b9691c65f217ee46f75f1c9843b894b2fadcf4237d9fe5e83a",
+      "independent_review": {
+        "key": "ac-hearts-generations",
+        "file": "ac-hearts-generations-original.png",
+        "sha256": "860869ffd87e2cfc62b4dd39a40dbd65e3dc217ca72eacda9c57cce23a3c05b0",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "owner_approved": false,
+        "scope": "Actual original-resolution pixels viewed; full composition, eyes, hands, plausible age and activity checked. Technical review only.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "findings": [
+          "Distinct older and younger adult women engage through gaze while elder pauses at dough and speaks. Phone recording indicator/waveform visibly establishes oral-history activity without readable private details.",
+          "Natural flour-covered fingers connect plausibly to dough; listener’s chin-resting hand and bent arm coherent. No concrete pixel correction identified.",
+          "Photographic skin, hair, natural kitchen light. Central relationship/recording differs from lone ancient leaven or photograph-album examination."
+        ],
+        "source_scope": "Public family-history manual chapters11–12;D&C110:13–16 devotional connection",
+        "caption_conditions": [
+          "Use revised oral-history caption, not obsolete photograph-sharing plan. No invented exact biography, memory or claim D&C110 describes kitchen/technology."
+        ],
+        "required_pixel_fix": null,
+        "source_audit": {
+          "file": "oral-history-scene-audit.json",
+          "sha256": "9da223aef6bddf3d208b0f4bcfffddf170c4f67d6cf47e5336bdb8b80898ed5b"
+        }
+      }
+    },
+    "ac-temple-public-welcome": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-temple-public-welcome-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-temple-public-welcome-960.webp",
+      "title": "Together on temple grounds",
+      "alt": "Two women exchange a welcoming look on the public grounds of the Laie Hawaii Temple while other adults walk toward the building.",
+      "caption": "A warm welcome can begin with a conversation. These visitors share a moment on the public grounds of the Laie Hawaii Temple.",
+      "sources": [
+        {
+          "label": "About the Temple Endowment",
+          "url": "https://www.churchofjesuschrist.org/temples/what-is-temple-endowment?lang=eng"
+        }
+      ],
+      "includes_christ": false,
+      "chapter_id": "nearer-to-him",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "cd2aee71bbab77283d361ea9da65e5b17331cbafbbf36665a9ee5e0ad2636bf7",
+      "original": "local-archive/ac-temple-public-welcome-original.png",
+      "original_sha256": "941811078de3c9a94a644bc3bc21a3db160cac51d2041a5edb6bc7a9d062f358",
+      "owner_approved": false,
+      "identity_status": "Christ uses owner-approved reference where depicted; Abraham and Sarah are artistic working continuity, Isaac a new artistic identity; no new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Caption describe people on public grounds, not all foreground people approaching entrance: foreground pair face toward camera/away from building. No relationship or temple eligibility invented."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "de08f558ad2dc313309dcc24f377e0416ec08ade1cc7b3a83fe1543d565daa81",
+      "thumbnail_sha256": "515e0b371a35781061e40903a557feed0f74767205a5648129668292358a961a",
+      "independent_review": {
+        "key": "ac-temple-public-welcome",
+        "file": "ac-temple-public-welcome-original.png",
+        "sha256": "941811078de3c9a94a644bc3bc21a3db160cac51d2041a5edb6bc7a9d062f358",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "reviewer": "independent remaining_gospel_art",
+        "owner_approved": false,
+        "scope": "Full original-resolution image actually viewed; faces, hands, action, source context and visual distinction reviewed. Technical review only; no publisher or owner approval.",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "source": "Official Laie Hawaii Temple exterior/public grounds",
+        "findings": [
+          "Compared actual official architecture photograph: characteristic white stepped massing, tall central window facade and upper relief remain recognizable. No spire invented.",
+          "Foreground adults exchange clear warm gaze; hands/bags/body proportions coherent. Other adults walk toward temple; no wedding or private ordinance.",
+          "Photographic figures and setting. Landscaping/camera/path are interpretive rather than exact survey; do not claim a documentary photograph or exact current grounds."
+        ],
+        "caption_conditions": [
+          "Caption describe people on public grounds, not all foreground people approaching entrance: foreground pair face toward camera/away from building. No relationship or temple eligibility invented."
+        ],
+        "required_pixel_fix": null,
+        "architecture_reference": {
+          "file": "laie-official-architecture-reference.jpg",
+          "sha256": "3cf7ef537b932a5129f12479aa123208be04f23703c04dec5a136ef8fae73369",
+          "viewed": true
+        }
+      }
+    },
+    "ac-jacob-ladder": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-jacob-ladder-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-jacob-ladder-960.webp",
+      "title": "The Lord is in this place",
+      "alt": "An older Jacob sleeps with his head beside a stone while a dream shows the Lord and angels on a stairway.",
+      "caption": "As Jacob sleeps, he dreams of a stairway reaching to heaven. The Lord renews the covenant promise and assures Jacob of His presence.",
+      "sources": [
+        {
+          "label": "Genesis 28:12–17",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/28?lang=eng&id=p12-p17#p12"
+        }
+      ],
+      "includes_christ": true,
+      "chapter_id": "jacob-at-bethel",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "7da8beaf2fee7675c61a3b273789e3749416a1ccaa5a240e0d1e0e8089686c42",
+      "original": "local-archive/ac-jacob-ladder-v1.png",
+      "original_sha256": "420155f1cfb5471998cd58d99276048d94ecefba52396d0495860a7ce42ee8ff",
+      "owner_approved": false,
+      "identity_status": "Jacob artistic working continuity only; Christ in ladder uses owner-approved pixels. No new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "Approximate77 age is chronological inference from official Ensign study, not explicit Genesis28 age.",
+        "Stairway form, angel number, dress and faces are artistic interpretation; no claim of literal heavenly architectural survey."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "db0da633478adeef7b2a1a2c58cd3cde84a67b033c2034fbbb0e123a21a32d4d",
+      "thumbnail_sha256": "0ebcd38568099513dad07df652eeda2e40c842fd2764774bf86d5efbc8fd26b4",
+      "independent_review": {
+        "key": "ac-jacob-ladder",
+        "file": "ac-jacob-ladder-v1.png",
+        "sha256": "420155f1cfb5471998cd58d99276048d94ecefba52396d0495860a7ce42ee8ff",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "owner_approved": false,
+        "reviewer": "independent remaining_gospel_art",
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "findings": [
+          "Actual original-resolution image viewed: sleeping older gray-haired Jacob is distinguishable from Abraham; source-appropriate task state, no forced eye contact.",
+          "Recognizable approved Christ face in dream, no scars; three ascending/descending human angels, no wings or anomalous limbs observed.",
+          "Stone pillow, night and dream connection retained. Photographic skin, natural cloth and credible terrain; luminous stairway is an explicitly interpretive dream representation."
+        ],
+        "caption_conditions": [
+          "Approximate77 age is chronological inference from official Ensign study, not explicit Genesis28 age.",
+          "Stairway form, angel number, dress and faces are artistic interpretation; no claim of literal heavenly architectural survey."
+        ],
+        "required_pixel_fix": null
+      }
+    },
+    "ac-jacob-wrestle": {
+      "owner": "/answers/abrahamic-covenant.html",
+      "asset": "assets/page-art/abrahamic-covenant/ac-jacob-wrestle-full.webp",
+      "thumbnail": "assets/page-art/abrahamic-covenant/ac-jacob-wrestle-960.webp",
+      "title": "Jacob becomes Israel",
+      "alt": "An elderly Jacob and an unnamed man wrestle beside a stream as dawn approaches.",
+      "caption": "Jacob wrestles through the night, seeks a blessing, and receives the name Israel.",
+      "sources": [
+        {
+          "label": "Genesis 32:24–30",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/32?lang=eng&id=p24-p30#p24"
+        },
+        {
+          "label": "Hosea 12:3–6",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/hosea/12?lang=eng&id=p3-p6#p3"
+        }
+      ],
+      "includes_christ": false,
+      "chapter_id": "jacob-becomes-israel",
+      "after_paragraph": 1,
+      "review_status": "pass",
+      "review_record": "Embedded in independent_review",
+      "review_sha256": "64345c2216b082502d0d4e520837896610862d2298c4222779e4a3a1c9b1173e",
+      "original": "local-archive/ac-jacob-wrestle-v1.png",
+      "original_sha256": "ab07212f65f27ec72f8e6d5065786e3adf9b5a54c6019a4219e585eaa6d84838",
+      "owner_approved": false,
+      "identity_status": "Jacob artistic working continuity only; Christ in ladder uses owner-approved pixels. No new owner identity approval inferred.",
+      "caption_conditions_fulfilled": [
+        "About97 is chronological inference and exact age cannot be visually authenticated.",
+        "Unnamed wrestler follows Genesis32/Hosea12 identity nuance; not counted as Christ.",
+        "Faces, specific clothing, grip and scenery are artistic interpretation."
+      ],
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "thumbnail_dimensions": [
+        960,
+        640
+      ],
+      "conversion": "sharp WebP full-frame quality94; thumbnail width960 quality90; no crop, compositing or creative edits",
+      "asset_sha256": "9162de507063ed9b1a15e231306a5180922f68f4793e154c65572ce423c43d27",
+      "thumbnail_sha256": "81dc089de2e408f283a48e16e07b5be2348c708f087207b1b1c90976946e09bd",
+      "independent_review": {
+        "key": "ac-jacob-wrestle",
+        "file": "ac-jacob-wrestle-v1.png",
+        "sha256": "ab07212f65f27ec72f8e6d5065786e3adf9b5a54c6019a4219e585eaa6d84838",
+        "reviewer": "root independent actual-image review, relayed verbatim findings to generating subagent",
+        "status": "pass_with_caption_conditions",
+        "review_status": "pass",
+        "owner_approved": false,
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "findings": [
+          "Root actual full1536 view: distinct unidentified man, not approved Christ; clear reciprocal gaze and focused strain.",
+          "Jacob old face continuity, more lined face and gray-white hair.",
+          "Coherent near Jacob shoulder-upperarm-elbow-forearm-wrist cloth grip; other man near arm to cloth grip.",
+          "Far arms behind shoulders occluded; no invented hidden-hand verification.",
+          "Four feet grounded, plausible knee-bend stance in different directions; cloth period/weather weight natural."
+        ],
+        "caption_conditions": [
+          "About97 is chronological inference and exact age cannot be visually authenticated.",
+          "Unnamed wrestler follows Genesis32/Hosea12 identity nuance; not counted as Christ.",
+          "Faces, specific clothing, grip and scenery are artistic interpretation."
+        ],
+        "phone_review": "Root will perform rendered phone checks separately before release",
+        "required_pixel_fix": null
+      }
+    }
+  }
+}

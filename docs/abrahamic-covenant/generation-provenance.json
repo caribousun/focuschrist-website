@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-23",
+  "generation_method": "Built-in image_gen; no fallback CLI generation",
+  "scope": "Exact prompt strings preserved from generation receipts or direct tool-call records. Paths are sanitized to repository or local-archive identifiers; no private reference image is copied. Generation prompts express intended requirements and are not themselves evidence that an output passed.",
+  "selected_originals": {
+    "ac-baptism-belonging": {
+      "file": "ac-baptism-belonging-v1.png",
+      "sha256": "4d970362ac88e20442ca6ac21dcc36af89489bd8e02ba9069111f9d1b8dd6b60"
+    },
+    "ac-abraham-sarah-journey": {
+      "file": "ac-abraham-sarah-journey-v1.png",
+      "sha256": "cc42461d5b0e5c073dd783d836d400bc02a1c310053283bdb79d373744da465e"
+    },
+    "ac-sarah-isaac": {
+      "file": "ac-sarah-isaac-v2.png",
+      "sha256": "600bdca41e62232d30dde68558a83aeaf796c4370ac880ef00de06803ec1bf90"
+    },
+    "ac-jehovah-haran": {
+      "file": "ac-jehovah-haran-v1.png",
+      "sha256": "4c20683813ce6ed9adad4fb848c8ac88996b8e5b60cda9cf3cf1b31a246b5cf3"
+    },
+    "ac-abraham-eyes": {
+      "file": "ac-abraham-eyes-v2.png",
+      "sha256": "a1f2efccf0eab5bee1a395cb9e166d303a9bc8385411418d04aa044237879ada"
+    },
+    "ac-abraham-rejoiced": {
+      "file": "ac-abraham-rejoiced-v1.png",
+      "sha256": "e5783afef58d1f242ed7e5c779b21df4d9cf51722e0da84a8680465fcc176339"
+    },
+    "ac-isaac-covenant": {
+      "file": "ac-isaac-covenant-v1.png",
+      "sha256": "e66b90ba63995cc2b89dd2848f915b3e6eb2700b4fc5370ffd9a7470d017f1d3"
+    },
+    "ac-hear-his-voice": {
+      "file": "ac-hear-his-voice-v2.png",
+      "sha256": "43b5b50a192a191c13dd3b6305149b6715f634eae436ea337e540818b0b3f1cd"
+    },
+    "ac-hearts-generations": {
+      "file": "ac-hearts-generations-original.png",
+      "sha256": "860869ffd87e2cfc62b4dd39a40dbd65e3dc217ca72eacda9c57cce23a3c05b0"
+    },
+    "ac-temple-public-welcome": {
+      "file": "ac-temple-public-welcome-original.png",
+      "sha256": "941811078de3c9a94a644bc3bc21a3db160cac51d2041a5edb6bc7a9d062f358"
+    },
+    "ac-jacob-ladder": {
+      "file": "ac-jacob-ladder-v1.png",
+      "sha256": "420155f1cfb5471998cd58d99276048d94ecefba52396d0495860a7ce42ee8ff"
+    },
+    "ac-jacob-wrestle": {
+      "file": "ac-jacob-wrestle-v1.png",
+      "sha256": "ab07212f65f27ec72f8e6d5065786e3adf9b5a54c6019a4219e585eaa6d84838"
+    }
+  },
+  "prompt_records": [
+    {
+      "record": "ac-abraham-rejoiced-v1.json",
+      "record_sha256": "25cfdf297ed9cd950aeaafcd32ad521efe55ec301e358d5c8d312df90e985efc",
+      "key": "ac-abraham-rejoiced",
+      "version": 1,
+      "mode": "built-in imagegen",
+      "prompt": "Use case: historical-scene. One horizontal3:2,1536x1024 photographic study image. INPUT IMAGE is the exact owner-approved facial identity of Jesus Christ: preserve same facial proportions, eyes, nose, cheekbones, dark wavy hair and beard, recognizable same adult man; change only scene-specific expression to calm serious conviction, mouth naturally mid-answer without forced smile. Scene John8:56–58: Jesus stands in a restrained first-century Jerusalem temple courtyard, in a particular close conversation with four Jewish adult men, Jesus Himself Jewish. Eye-level medium composition, Jesus three-quarter face clearly visible on left-of-center answering a gray-bearded elder at right-of-center, DIRECT RECIPROCAL EYE CONTACT at same approximate eye height; elder thoughtfully questioning, neither villainous nor caricature. Three additional distinct adult male listeners stand nearby at varying depth, no copied faces, some puzzled, some quietly considering. Five men total including Jesus. Plain modest historically plausible woven tunics and mantles in earth tones, no invented modern religious badges, ornate crowns or costumes. Natural restrained single open-handed gesture by Christ at waist level, anatomically normal fingers, unmarked hands and wrists: MORTAL CHRIST NO nail scars. Warm daylight across pale limestone court paving and restrained temple colonnade fragments, background uncluttered, no exact archaeology claim. Lifelike skin/hair/textiles, photographic lens detail and natural light, not oil painting or fantasy glow. No large sermon crowd, elevated platform, accused woman, crouching, writing in dust, stones in hands, stoning action, scroll inscription, text, watermark, supernatural apparition or hostile ethnic stereotypes. This is the specific spoken exchange about Abraham and Christ's identity; exact staging is interpretive. Faces and reciprocal gaze are primary, no one looks at camera.",
+      "references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ]
+    },
+    {
+      "record": "ac-abraham-sarah-journey-v1.json",
+      "record_sha256": "2a9d1126d1feb870c6e05587364687c80b3a5b6eb9b85a756ba3032053fedc9e",
+      "key": "ac-abraham-sarah-journey",
+      "version": 1,
+      "mode": "built-in imagegen",
+      "prompt": "Use case: historical-scene. Create one horizontal 3:2 photographic study artwork, 1536x1024. Reference image is Abraham's established WORKING facial continuity, not the scene to duplicate. Preserve his distinctive long slightly convex nose, deep-set dark eyes, strong brows, lean weathered cheeks and full beard; naturally adjust him to a vigorous 62-year-old mature man rather than extreme old age. Scene: an illustrative quiet moment within Abraham 2:14–16, traveling from Haran toward Canaan with Sarai. Abraham and Sarai pause together beside their modest travel provisions and a partly packed woven tent in a dry natural landscape. Medium two-person composition, both faces clearly visible three-quarter angle, genuinely looking into one another's eyes while discussing the next part of the journey. Abraham carries a plain walking staff. Sarai is a distinct mature West Asian woman with a natural roughly-fifties appearance as artistic interpretation, dignified oval face, warm brown eyes, slightly aquiline nose, dark brown hair with some gray concealed mostly under a simple light woven headcloth; realistic mature skin, no glamour makeup. Establish a memorable plausible working likeness, not a claimed authenticated portrait. Modest ancient woven tunics and mantles, muted earth colors, simple sandals. Their restrained expressions convey companionship and steady trust, not posed smiles. Natural soft morning light, credible skin pores, hair and textile detail, DSLR photographic realism, unobtrusive background. No Christ, angels, supernatural glow, text, lettering, watermark, modern objects, or anachronistic grandeur. Exact pose/environment is artistic interpretation, not a documented stop. Make them the only prominent faces, anatomically natural hands, clean continuous bodies. Do not copy the old starry-sky composition.",
+      "references": [
+        "assets/page-art/jesus-journey/bb-abram-stars-full.webp"
+      ]
+    },
+    {
+      "record": "ac-baptism-belonging-v1.json",
+      "record_sha256": "119cd206d5168935d775ad76fe49a5f0cdba8f9100c9e05bafcb427eed6efded",
+      "key": "ac-baptism-belonging",
+      "version": 1,
+      "mode": "built-in imagegen",
+      "prompt": "Use case: photorealistic-natural contemporary devotional illustration. One horizontal3:2,1536x1024 study picture. In a modest Latter-day Saint meetinghouse baptismal font room, an adult woman preparing for baptism stands on the dry floor beside the font entrance speaking quietly with a supportive adult female friend. The baptism candidate wears a simple opaque modest plain white long-sleeve full-length baptismal jumpsuit, no embroidery or sacred symbols, practical white fabric. Her friend wears ordinary modest contemporary clothing, a muted blue long-sleeve blouse and dark skirt. Both are clearly adults with distinct faces, natural different ages around30 and50 and realistic skin; warm unforced attentive mutual eye contact. The friend listens; candidate has a thoughtful quietly hopeful expression. One natural open-handed conversational gesture, anatomically normal fingers. The white-tiled font with still water and simple metal handrail is visible off to one side as setting, not center spectacle. They remain entirely dry and outside the water. No minister, immersion, baptismal hand gesture or raised arm, temple ordinance, ceremonial apron/sash/headwear, Christ figure, angel, text, legible signage, logos, or invented sacred details. Bright restrained meetinghouse interior, gentle window light, uncluttered composition, waist-to-knees medium framing with faces prominent; photographic DSLR realism, lifelike materials, no painted texture or artificial glow. This is a contemporary artistic application of Mosiah18:8–10 willingness to serve and comfort, not a claimed documented event, and specifically preparation with a friend rather than another immersion picture.",
+      "references": []
+    },
+    {
+      "record": "ac-hear-his-voice-receipt.json",
+      "record_sha256": "ca64c808d1f9e8cbc95706fa885ded7b22f24172e71c0eecb26c56ff59f69fde",
+      "key": "ac-hear-his-voice",
+      "mode": "built-in image_gen",
+      "prompt": "Generate ONE new 1536x1024 horizontal 3:2 live-action photograph-quality historical scripture scene: John 10:22–30, Jesus walking in Solomon's porch during the winter Feast of Dedication in Jerusalem, answering those questioning His identity. Attached actual owner-approved image is the REQUIRED Jesus facial identity reference only: preserve recognizable face bones, distinctive eyes/nose/mouth, hair and beard identity faithfully; adapt expression to gentle firmness and thoughtful seriousness, not broad reference smile. Mortal Jesus: NO scars/wounds on hands or wrists. He wears modest cream linen tunic and a substantial plain muted brown wool mantle for winter. Jesus and three distinct adult Jewish questioners walk beside one another in a long stone-column portico; natural mid-stride gait and subtle conversational gestures, not stationary sermon. Camera looks diagonally along colonnade, full bodies visible with feet. Christ turns His face toward the nearest questioner, clear meaningful mutual eye contact; listener's expression searching and skeptical without caricature. Other two men listen seriously nearby, not anonymous packed crowd. Treat everyone as human, no ethnic vilification, no villain costumes. Cool overcast winter daylight from open side, softened natural shadows, richly detailed lifelike skin and eyes, convincingly woven garments and aged limestone. Interpretive plausible Second Temple period portico, not an exact archaeological reconstruction claim. No invented inscriptions. Architectural depth of receding columns should distinguish this from a sunny open temple-courtyard teaching picture. No sheep or animals, no 'other sheep' illustration, no menorah/modern Hanukkah symbols, no snow necessity, no halo, no divine glow, no stones or mob action, no scroll text, no caption, watermark, border, collage or montage. Realistic hands and coherent contact with robe, no extra limbs, no plastic/waxy/painterly skin. Preserve actual approved Christ likeness, not generic new actor.",
+      "references": []
+    },
+    {
+      "record": "ac-hear-his-voice-v2-receipt.json",
+      "record_sha256": "36730a14aeda5d1296db2bfa563edd05a0b825201477bd8a95b991f428cf8f64",
+      "key": "ac-hear-his-voice",
+      "version": 2,
+      "mode": "built-in image_gen edit",
+      "prompt": "Make ONE extremely narrow precise edit to attached image. Change ONLY the distant blurred Jerusalem skyline visible in the open-air gaps BETWEEN and BEYOND the portico columns, especially upper left behind the leftmost questioner: remove ALL pointed/tiered gray tower/spire-like structures and any medieval-looking silhouette. Replace those distant details with restrained low, flat-roofed pale limestone buildings plausible for first-century Jerusalem and unmistakably natural leafy trees with organic branching/canopy shapes. No towers, steeples, minarets, modern landmarks, inscriptions or added people. Preserve EXACTLY the entire four foreground men, all their faces/identities/expressions/gaze, hair, hands, clothes, poses, sandals; preserve ALL portico columns and foreground paving, overall lighting, colors, framing, resolution and photorealism. Do not redraw, beautify or adjust Christ or the questioners. This is a background-only correction, not a new composition. Retain soft distant focus so replacement buildings remain subordinate. Preserve 1536x1024.",
+      "references": "local-archive/ac-hear-his-voice-original.png"
+    },
+    {
+      "record": "ac-hearts-generations-receipt.json",
+      "record_sha256": "64829dbfbc6f8e0961d324a844ef5c7cde920d27be2b35393d29b396b964f55f",
+      "key": "ac-hearts-generations",
+      "mode": "built-in image_gen",
+      "prompt": "Create one original 1536x1024 horizontal 3:2 photograph-quality contemporary scene in an ordinary lived-in kitchen. An elderly grandmother stands at a counter, hands naturally resting in bread dough during a brief pause in kneading, speaking warmly about a remembered experience. Her adult granddaughter sits nearby angled toward her, listening with thoughtful interest and clear mutual eye contact. A modest unbranded smartphone stands securely upright in a small stand on a kitchen shelf close to them, visibly positioned to record their conversation; a small recording indicator/waveform may be visible, but absolutely no readable words, names, transcript, app branding or invented historical record. Phone secondary yet recognizable. This is a consensual family oral-history recording, not a cooking tutorial or posed photograph. Both women, connected gaze, grandmother's natural hands and dough, and phone clearly within frame. Ordinary modern clothing, natural kitchen daylight, realistic detailed skin and age, lifelike eyes, anatomically plausible hands, believable furniture and phone support. Genuine warm individual expressions, no exaggerated smile or mannequin gaze. No albums, photographs, family-tree charts, keepsake box, open study books, wedding imagery, temple, Christ figure, halo, overlay, caption, montage or watermark. Neither woman is a named historical person or reuse of existing site characters. Illustrative modern application of public family-history guidance, not authenticated event/portrait. Storytelling is central; kneading incidental. Convincing candid live-action photography, no illustration/painterly/CGI surfaces.",
+      "references": []
+    },
+    {
+      "record": "ac-sarah-isaac-v1.json",
+      "record_sha256": "dc8021a047bbe5a20d39fb8d251b0accb0a1331e6efb0cfc38a69db61fabfe8f",
+      "key": "ac-sarah-isaac",
+      "version": 1,
+      "mode": "built-in image_gen",
+      "prompt": "Use case: historical-scene, identity-preserve continuity. Produce one horizontal3:2 photographic artwork1536x1024. INPUT IMAGE ROLE: exact Sarah working facial identity reference; Sarah is the woman on the RIGHT, not Abraham on the left. Create a DIFFERENT later scene based on Genesis21:1–7 and Genesis17:17: Sarah at90 holds infant Isaac inside a modest ancient woven tent. Preserve the same Sarah underlying oval facial bone structure, distinctive brown eyes, gently aquiline nose, mouth and brows from the input while aging her convincingly to90: fine deeply lined skin, age spots, thinner cheeks, gray-white hair largely under simple light headcloth, natural elderly hands. She must look visibly elderly, not50s, yet remain recognizably the same woman. Tender restrained smile and attentive eyes looking directly into her awake infant's eyes. Isaac is an anatomically natural young infant, wrapped securely in a plain soft linen cloth; his face tilts up toward hers with open eyes. Sarah sits comfortably, supporting the baby's head/neck with one hand and body with the other, all fingers natural. Medium-close maternal two-person composition, infant face fully visible, believable elderly mother and infant proportions. No Abraham or other prominent person. Modest layered ancient tunic/mantle in subdued warm earth tones, similar simple headcloth but not identical pose or travel bundle. Soft daylight enters tent side, true skin texture, lifelike eyes, credible woven fabrics, shallow photographic depth, warm reverent tenderness without artificial halo or glow. No modern objects, inscriptions, text, jewelry glamour, idealized youthful skin, fantasy, painted strokes, deformed hands, extra fingers, or duplicate limbs. Pose and interior are illustrative, not claimed recorded details. This is a particular scriptural birth, not a general promise of pregnancy.",
+      "references": [
+        "local-archive/ac-abraham-sarah-journey-v1.png"
+      ]
+    },
+    {
+      "record": "ac-sarah-isaac-v2.json",
+      "record_sha256": "7ff1bbcb23885bd3669392cc0031b1a74afa905a6d496196f1550e43ecb69ab8",
+      "key": "ac-sarah-isaac",
+      "version": 2,
+      "mode": "built-in imagegen",
+      "prompt": "Edit only Sarah's AGE in the supplied artwork. Keep the exact same woman identity, distinctive facial bones/nose/eyes/mouth, pose, mutual mother/infant eye contact, smile, baby Isaac, supporting hands placement, clothing, tent, composition and photographic realism. She must unmistakably look NINETY YEARS OLD, not sixty. Add natural extensive fine/deep facial wrinkles, much thinner aged cheeks, softer sagging jaw/neck, age spots and delicate very elderly skin, deeply wrinkled hands, and change all visible hair to silver-white. Preserve recognizable facial structure; age the same woman rather than replace her. Healthy tender elderly mother, not sick or grotesque. Do not change baby's face or anatomy. Horizontal3:2, no text.",
+      "references": [
+        "local-archive/ac-sarah-isaac-v1.png"
+      ]
+    },
+    {
+      "record": "ac-temple-public-welcome-receipt.json",
+      "record_sha256": "f2dc360a57dccee23cc6bf13f047085c7c7b1c684e4d7772ca59369be3525c29",
+      "key": "ac-temple-public-welcome",
+      "mode": "built-in image_gen",
+      "prompt": "Use the attached official Laie Hawaii Temple photograph ONLY as an architectural research reference, not as an image to copy or reproduce. Create an entirely NEW 1536x1024 horizontal 3:2 highly photorealistic contemporary devotional scene of several adults of varied adult ages walking on an ordinary public garden path near the Laie Hawaii Temple. Foreground: an older adult woman and a younger adult woman walk near one another, turn slightly to share warm natural attentive mutual eye contact and conversation; family relationship unspecified. Two other adult visitors farther along the path provide discreet context. Modest everyday Sunday clothing, no wedding attire, no bouquets, no ceremony. Clear naturally detailed faces, authentic skin and hair, relaxed expressions, anatomically correct hands and walking legs. The actual Laie temple is subordinate in the background but recognizable and architecturally faithful to reference: broad white low rectangular side wings, stepped central mass, tall central vertical windows, flat roofline and upper decorative frieze; NO steeple, spire, angel statue or Utah mountain backdrop. Tropical garden greenery appropriate to Laie. An oblique garden-path viewpoint makes a fresh original composition, do not recreate the reference's centered distant empty facade. Daylight with gentle natural warmth, convincing living photographic depth, no painterly or plastic surface, no theatrical golden glow. No Christ figure, sacred ordinance interior, text, captions, fake architectural inscriptions, watermark, collage or border. This is an illustrative imagined visit, not a documentary claim of identifiable people, current operating conditions, construction status or specific date. Essential faces/hands/feet within composition. Architecture must remain recognizable rather than generic temple fantasy.",
+      "references": []
+    },
+    {
+      "record": "root direct tool-call record",
+      "call_id": "call_ARdzlcfFVJRQWIju4gpyxI2J",
+      "timestamp": "2026-09-23T23:23:28.256Z",
+      "prompt": "Create one finished horizontal 3:2 near-photographic live-action biblical study scene, with exceptionally natural skin, detailed fabrics, believable hands and coherent interpersonal eye contact. Reference 1 fixes Jesus Christ's exact facial identity: preserve brow, eyes, nose, cheekbones, curly brown hair and beard, but adapt his broad smile to warm serious attentiveness. Reference 2 fixes Abraham's working facial structure; show the same recognizable Abraham younger, about sixty-two, naturally less deeply aged, with a full salt-and-pepper beard. New scene: Abraham 2:6–12, the Lord appearing to Abraham in Haran, before Abraham's departure. In this LDS devotional depiction the premortal Jehovah has the approved Christ identity. NO nail scars, no blood, no halo, no text. At the edge of a simple ancient northern Mesopotamian pastoral camp, daylight: Jehovah on the left in unadorned light linen, Abraham on the right in practical woven clothing. Medium close waist-up side-angle, BOTH faces clearly visible in three-quarter view, looking directly into each other's eyes. Jehovah speaks with compassionate purpose, one naturally relaxed open hand near his waist; Abraham listens attentively, emotionally alive and reverent. Do not copy the stars or tent composition from reference 2; no starry backdrop, celestial spectacle, crowd or Sarah. Quiet earth-tone setting, low tents softly distant, shallow but realistic depth of field; faces and connection command attention. Cinematic photography rather than painting or illustration. No written captions or ornamental border. Exact poses and surroundings are artistic interpretation, so avoid invented ritual objects.",
+      "references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "assets/page-art/jesus-journey/bb-abram-stars-full.webp"
+      ],
+      "method": "built-in image_gen"
+    },
+    {
+      "record": "root direct tool-call record",
+      "call_id": "call_QQYvVg80ckruycKCJMunoIAq",
+      "timestamp": "2026-09-23T23:26:31.654Z",
+      "prompt": "One horizontal 3:2 intensely photographic devotional scene, not a painting. Biblical event: Abraham 3:11–14, the Lord places His hand upon Abraham's eyes and reveals His creations. Reference1 is the exact locked face of Jesus Christ, here depicted as premortal Jehovah; preserve actual facial proportions and curls, with solemn compassionate attention instead of broad camera smile. Reference2 supplies only Abraham's recognizable face on the RIGHT and natural costume continuity. Abraham is a mature older adult, exact age of this vision unknown. Do NOT reproduce reference2 conversation composition. Show Jehovah standing left beside seated Abraham right, medium three-quarter view; with ONE anatomically correct hand Jehovah gently rests the palm across Abraham's closed eyes and upper cheeks, fingers naturally extended across his brow, touching lightly, not gripping or pushing. His other arm relaxed out of the way. Abraham's visible face/mouth and hands express quiet reverent reception. Jehovah looks tenderly at Abraham's face; Abraham's covered eyes are deliberately closed, no impossible reciprocal gaze. Visible hands no scars (premortal event), no wounds, no excess fingers. Night-dark restrained surrounding depth with subtle far starlight, softly illuminating both living human faces. No invented planets, diagram, labels, solar system, cosmic portal, flashy beams, or giant eye. This is an intimate encounter, God's personal attention within the immensity of His creations. Both bodies fully clothed in believable simple ancient woven robes. Natural cinematic lighting, pores, beard strands, cloth fibers, harmonious skin tones; no plastic skin, blur or painterly effects. No text, watermark or border.",
+      "references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png",
+        "local-archive/ac-jehovah-haran-v1.png"
+      ],
+      "method": "built-in image_gen"
+    },
+    {
+      "record": "root direct tool-call record",
+      "call_id": "call_jTt4Cfhzwvr4yxuPY5jBwTYX",
+      "timestamp": "2026-09-23T23:29:01.206Z",
+      "prompt": "Make one narrow correction to this exact photographic image; preserve all faces, identities, age, clothing, setting, dimensions, lighting and other body positions. The scripture says the Lord put His hand upon Abraham's EYES. Current hand is mainly on his forehead. Lower the Lord's touching hand naturally about two inches so his palm and relaxed fingers lightly cover Abraham's CLOSED EYES, spanning across the eye region, leaving forehead mostly visible and nose/mouth unobstructed. It should be a gentle receptive touch, not a grip or blindfold. Keep the arm anatomically continuous with its current sleeve, exactly one hand with natural five-finger anatomy. Abraham's eyes remain softly shut underneath. No other changes; no scars on this premortal hand.",
+      "references": [
+        "local-archive/exec-341f8ca3-873c-4607-98f2-134e47aef5e6.png"
+      ],
+      "method": "built-in image_gen"
+    },
+    {
+      "record": "root direct tool-call record",
+      "call_id": "call_Zez7CVMhxd6qLwvWut63aaKm",
+      "timestamp": "2026-09-23T23:31:00.236Z",
+      "prompt": "Create a new horizontal 3:2 near-photographic live-action ancient scripture scene for a reverent study. Genesis26:2–5: the Lord appears to ISAAC in the region of Gerar during famine, telling him not to go down into Egypt and renewing the promise to Abraham. In this LDS devotional interpretation depict premortal Jehovah using the EXACT facial identity in the attached approved Christ reference: same brow, brown eyes, nose, cheeks, curlybrown hair, beard, matureadult appearance, now calm purposeful compassion, not a camera grin. No crucifixion scars; premortal event. Isaac must be a DIFFERENT recognizable person: mature adult man around middle age as artistic interpretation (exact age unknown), olive skin, darker short curly hair and shorter dark beard with scatteredgray, broad square face and distinct nose; do NOT use Abraham's old whitebearded face and do NOT duplicate Christ. Wider environmental framing: Isaac seated on a low natural rock at right, Jehovah standing to his left, both faces in three-quarter view with attentive eye contact. Isaac has simple dark woven travel robe, hands resting naturally upon knees; Jehovah wears unadorned lightlinen robe with simple outershawl, one hand gently extended in conversational assurance, other relaxed. Behind them a spare dry famine-region landscape with bare earth, low drygrasses and a distant lowridge, restrained middaylight. Their interaction is the focus, landscape supplies setting. No stars, no night, no altar, no well-digging, no Rebekah, no modernbuildings or writing. These are not the later Beersheba events. Photographic skin pores, coherent natural fivefingerhands, periodwovenfabric, believable posture, fine detail, no paintedblur or plasticfaces. No captions, border or watermark.",
+      "references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ],
+      "method": "built-in image_gen"
+    },
+    {
+      "record": "ac-jacob-ladder-prompt.txt",
+      "record_sha256": "829db2d85cc38836d54ef75489c27125d9c33b3314dbf5775fbf8e65b5152249",
+      "key": "ac-jacob-ladder",
+      "prompt": "Create a new horizontal 3:2 hyper-realistic live-action photographic biblical study scene, not a painting, CGI rendering, illustration, fantasy poster, or collage. Attached image is solely the exact owner-approved identity reference for Jesus Christ. Preserve His recognizable facial structure, eyes, nose, beard, hairline and natural skin; adapt expression to quiet loving assurance, not the broad reference smile. Premortal Jehovah in Jacob's dream, not resurrected: no nail scars.\nGenesis28:10–17: Jacob sleeps outdoors on rocky ground near Bethel after sunset, head resting upon a stone, wrapped in substantial worn undyed wool traveling mantle over muted ochre woven tunic, leather sandals nearby. Jacob visibly late seventies (chronological inference, not an exact age stated in this passage), distinctive new ancient Levantine working face: lean weathered oval face, pronounced cheekbones, slightly aquiline nose, gray hair, medium gray beard, real wrinkles and aged hands. NOT Christ, Abraham, Isaac or a young traveler. His eyes closed because asleep; do not force eye contact. Clearly visible three-quarter face, naturally supported body and limbs.\nDream beyond him: a tangible weathered stone stairway, restrained artistic interpretation of scriptural ladder (exact shape unknown), rises through luminous night mist. Three distinct human angels in simple cream woven robes ascend and descend naturally, no wings/halos/armor. Proper anatomy, task-directed gaze. Jehovah stands on raised upper-right portion of stairway, near enough for approved face to remain clearly recognizable. He looks attentively toward sleeping Jacob. Full-length ivory linen robe, subdued pale blue mantle, believable weave and weight. One hand gently open in speaking gesture, other naturally resting. Depth includes sleeping Jacob lower left, ascending steps and angels through center, Jehovah upper right. No panels, collage, floating faces, throne, crown, temple, inscriptions, extra people, modern objects.\nAuthentic skin pores, fine hair, crisp human faces, coherent hands/feet, dusty stone and heavy wool. Restrained cool night illumination with soft warm dream light, convincing shadows and lens depth. Heavenly luminosity but people/materials look like real people filmed on location, never plastic/waxy/airbrushed/painted. Reverent, personal, quiet. No text/border. Keep essential scene and bodies within frame for full-frame display.",
+      "method": "built-in image_gen",
+      "references": [
+        "assets/heroes/home-christ-signature-approved-20260907.png"
+      ]
+    },
+    {
+      "record": "ac-jacob-wrestle-prompt.txt",
+      "record_sha256": "c8128a1df441983bd7fd8dedd9c35c7f0d37adce85e9feebf41fae292b97b0d2",
+      "key": "ac-jacob-wrestle",
+      "prompt": "Use case: historical-scene. Create one exceptionally photorealistic, convincing live-action photograph, landscape 1536x1024. Scripture scene: Jacob wrestling through the night beside the Jabbok, Genesis 32:24-30, moments before dawn.\nReference image 1: use ONLY the sleeping older man's actual face at lower left as Jacob's working identity. Preserve his long nose, lined brow, cheek structure, beard and distinctive facial proportions while aging him twenty years to visibly about 97: thin gray-white hair and beard, deep wrinkles, elderly hands and tendons. Do not import stairway, Christ, angels, dream light or sleeping pose. Reference image 2: physical complete-body wrestling pose research. Use its grounded staggered feet, coherent leaning weight and connected collar-and-upper-arm clinch; do not copy either athlete's identity, clothes, venue, headgear or exact composition.\nShow exactly TWO men, full bodies including all four grounded feet, in a standing wrestling clinch on rough dry earth and pebbles beside a shallow stream. Jacob at left, clearly elderly and wiry, wearing substantial rough brown wool over a weathered earth-ochre linen tunic, ancient Levantine cloth belt and simple worn leather sandals. His opponent at right is an ordinary human-form male messenger with a DISTINCT black curly-haired shorter beard and broad face unlike Christ, 40s adult, sturdy natural build; thick undyed flax long-sleeved tunic belted at waist, calf-length hem, simple sandals. No naked bodies or sportswear. Cloth is substantial and opaque, naturally bunching under pressure.\nRebuild a simple coherent upright collar-and-upper-arm clinch based on the physical reference. Their torsos lean toward each other, shoulders connected through bent arms, all four elbows, forearms and wrists correctly attached, each person has two arms and two legs. One hand each firmly gathers the other's upper tunic at the shoulder, other hand grips the other's upper arm. Keep nearer limb chains and contacts visually distinct; far hands may be naturally partly occluded, no invented visible disconnected digits. Feet widely staggered, knees gently flexed, stable counterbalanced pushing; no lifted person, throwing, interlocked fingers, impossible bent joints, injury or blood.\nCrucially BOTH faces visible in three-quarter/profile views, heads naturally raised enough for reciprocal direct eye contact at short range. They look into EACH OTHER'S eyes with focused physical effort, quiet intensity and determination, mouths closed or slightly parted from exertion; no smiles, no looking at viewer. Jacob must remain visibly extremely old rather than rejuvenated or bodybuilding.\nSetting pre-dawn near-black blue sky with earliest narrow pale dawn on low eastern hills, faint reflected cool sky on stream, enough believable soft side light to clearly see faces and hands. Sparse scrub and stony Levantine valley, no buildings, tents, spectators, wings, halo, divine glow, stars on clothing, Roman armor or weapons. Lens-level documentary historical reenactment, 50mm natural perspective, realistic pores, sweat, flyaway hair, coarse woven material and dusty sandals. Crisp faces and contact anatomy, natural depth, restrained photographic color; no painterliness, illustration, CGI, airbrush, plastic skin, poster treatment, text, border or watermark. These are artistic identities and staging, not claimed historical portraiture.",
+      "method": "built-in image_gen",
+      "references": [
+        "local-archive/ac-jacob-ladder-v1.png",
+        "local-archive/wrestling-physical-pose-reference.jpg"
+      ]
+    }
+  ],
+  "rejected_or_superseded": [
+    {
+      "file": "ac-abraham-eyes-v1.png",
+      "sha256": "c36201033e3c9389e9f02553f7d50f4aee34ccf015b1bb7dc7154e2234cc4905",
+      "reason": "Hand was mainly on forehead; corrected to cover closed eyes in v2."
+    },
+    {
+      "file": "ac-sarah-isaac-v1.png",
+      "sha256": "fcdac9b6c53e802cb5d3cc415bbae67d4fa904df907cfc05409a7414045bd927",
+      "reason": "Superseded by v2; selected review binds v2 only."
+    },
+    {
+      "file": "ac-hear-his-voice-original.png",
+      "sha256": "f39e21564eed7a6cee93aef77c78cadc1973bf227e9ad5f39b17eb0b860bf26c",
+      "reason": "Distant skyline pointed tower-like forms failed review; v2 corrects background."
+    }
+  ],
+  "jacob_identity": {
+    "person": "Patriarch Jacob, son of Isaac",
+    "status": "Artistic working continuity only; no owner identity approval inferred",
+    "source": "ac-jacob-ladder-v1.png",
+    "sha256": "420155f1cfb5471998cd58d99276048d94ecefba52396d0495860a7ce42ee8ff",
+    "region": "Sleeping older man lower left",
+    "features": "Long prominent nose, lined brow, receding gray wavy hair, thick gray beard; preserve face structure through aging",
+    "age_boundary": "Ladder about77, wrestle about97 by chronological inference; exact age not stated in corresponding Genesis passages",
+    "owner_approved": false
+  },
+  "wrestling_anatomy": {
+    "physical_reference": {
+      "reference": "local-archive/wrestling-physical-pose-reference.jpg",
+      "sha256": "79cc6713b19d6fef6f99c6cc1211cb095f4f234b6b2d6f838171efab5765e36c",
+      "source": "https://goumary.com/news/2014/11/8/WREST_1108141725.aspx",
+      "use": "Private physical anatomy research only; do not publish photo or copy athlete identities, uniforms, venue. Actual image viewed.",
+      "limb_trace": "Two standing athletes lean into connected head-and-arm clinch with spread feet. Foreground blue athlete shoulder→upperarm→bent elbow→forearm supporting opposing arm is visible. Other arm wraps behind opponent head with wrist partly occluded. Opponent upper arm descends to elbow and forearm returns beneath foreground arm; far shoulder/arm partly occluded. Both leg chains hip→bent knee→ankle→grounded shoe remain coherent. Do not infer hidden digits.",
+      "generation_plan": "Use a simpler upright shoulder/upper-arm grapple with separable complete forearms; no throw, entangled floor pose, dislocation composite or weapon. Both faces visible and eyes mutually directed. Long sleeves pushed enough to distinguish wrists; all four feet planted. Ancient clothing and older Jacob replace sports details."
+    },
+    "generator_receipt": {
+      "key": "ac-jacob-wrestle",
+      "file": "ac-jacob-wrestle-v1.png",
+      "sha256": "ab07212f65f27ec72f8e6d5065786e3adf9b5a54c6019a4219e585eaa6d84838",
+      "generation": "built-in image_gen",
+      "source_original": "local-archive/exec-ddb56c51-ace3-426b-b09f-c1410edede89.png",
+      "references": [
+        {
+          "file": "ac-jacob-ladder-v1.png",
+          "sha256": "420155f1cfb5471998cd58d99276048d94ecefba52396d0495860a7ce42ee8ff",
+          "role": "Sleeping Jacob actual identity pixels; age forward twenty years"
+        },
+        {
+          "file": "wrestling-physical-pose-reference.jpg",
+          "sha256": "79cc6713b19d6fef6f99c6cc1211cb095f4f234b6b2d6f838171efab5765e36c",
+          "role": "Physical complete-body clinch pose research only; private reference"
+        }
+      ],
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/32?lang=eng&id=p24-p30#p24",
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/hosea/12?lang=eng&id=p3-p6#p3",
+        "https://www.churchofjesuschrist.org/study/ensign/2002/01/jacob-and-esau?lang=eng"
+      ],
+      "age": "About97 inferred from official Ensign study about77 departure plus20years away; not explicit Genesis32 age. Depiction visibly elderly; numerical age cannot be visually certified.",
+      "identity": "Jacob artistic working continuity from ladder; unnamed human-form wrestler distinct from Christ; no owner-approved new identity.",
+      "owner_approved": false,
+      "status": "Generator actual-image inspection completed; independent root review pending",
+      "anatomy_observations": [
+        "Jacob nearer anatomical right shoulder leads through cloth-covered upper arm/bent elbow to visible sinewy forearm, wrist and hand gripping opponent nearer left shoulder cloth. Hand back/oblique edge visible; thumb wraps cloth, digits overlap naturally.",
+        "Opponent nearer anatomical left shoulder leads through short-visible upper arm and elbow under sleeve into forearm, wrist and closed grip at Jacob nearer right upper sleeve. No disconnected wrist.",
+        "Jacob farther left arm runs toward opponent far right shoulder, distal portion occluded by their bodies. Opponent far right arm is largely occluded behind Jacob and nearer arms. Do not infer unseen finger arrangement.",
+        "Jacob two separated hip/knee/ankle/foot chains maintain staggered footing; opponent two separated leg chains similarly grounded. Long tunics occlude thighs and knee landmarks; no claim hidden joint positions verified.",
+        "Faces reciprocally directed into each other's eyes. Focused strain without smile. No fresh wounds, forced scars, halos or wings."
+      ],
+      "limitations": [
+        "Working full-image inspection, not automatic anatomy detection, safety validation, or owner acceptance.",
+        "Far hands and thigh/knee portions occluded. Root independent full/phone review required before derivative inclusion."
+      ]
+    },
+    "note": "Generator receipt records initial inspection, not independent acceptance. Final independent outcome is embedded in art-review.json."
+  }
+}

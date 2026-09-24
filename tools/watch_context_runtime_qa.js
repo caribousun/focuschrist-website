@@ -31,6 +31,20 @@ assert.equal(birth.back.href, '/birth-of-christ.html?hero=1');
 assert(birth.input.value.includes('The birth of Jesus Christ'));
 assert.equal(run('?' + new URLSearchParams({art:'Birth artwork',return:'https://evil.example/birth-of-christ.html?hero=1'})).back.href, 'art.html?art=Birth%20artwork');
 assert.equal(run('').context,undefined);
+const covenantChapters=['a-promise-to-live-by','abraham-and-sarah','every-family','god-remembers','jacob-at-bethel','jacob-becomes-israel','christ-at-the-heart','risen-lord','our-day','nearer-to-him'];
+for(const chapter of covenantChapters){
+ const destination='/answers/abrahamic-covenant.html#'+chapter;
+ assert(fs.readFileSync('answers/abrahamic-covenant.html','utf8').includes('id="'+chapter+'"'));
+ const result=run('?'+new URLSearchParams({study:'Abrahamic Covenant',topic:'God’s promise',return:destination}));
+ assert.equal(result.back.href,destination);assert.equal(result.back.textContent,'Return to Covenant study');
+ assert(result.input.value.includes('God’s promise'));assert(!result.input.value.includes('scholarly'));
+ assert.equal(result.body.children.length,0,'Study context must not add a floating overlay');
+}
+for(const destination of ['https://evil.example/answers/abrahamic-covenant.html#our-day','javascript:alert(1)','/watch.html#our-day','/answers/abrahamic-covenant.html#unknown']){
+ assert.equal(run('?'+new URLSearchParams({study:'Abrahamic Covenant',return:destination})).back.href,'/answers/abrahamic-covenant.html');
+}
+assert.equal(run('?'+new URLSearchParams({study:'Abrahamic Covenant',return:'/answers/abrahamic-covenant.html?redirect=evil#our-day'})).back.href,'/answers/abrahamic-covenant.html#our-day');
+assert.equal(run('?study=Abrahamic+Covenant','My own question').input.value,'My own question');
 const heroes = JSON.parse(fs.readFileSync('docs/sitewide-artwork-review.json', 'utf8')).heroes;
 assert.equal(heroes.length, 19, 'Exercise every reviewed replacement hero');
 for (const hero of heroes) {

@@ -433,6 +433,7 @@
         const path = pathname.toLowerCase();
         const topics = {
             'aaronic-priesthood-restoration.html': 'Aaronic Priesthood',
+            'abrahamic-covenant.html': 'Abrahamic Covenant',
             'melchizedek-priesthood-restoration.html': 'Melchizedek Priesthood',
             'jesus-christ-latter-day-saint-beliefs.html': 'Jesus Christ',
             'are-latter-day-saints-christian.html': 'Christian Identity',

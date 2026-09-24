@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "date": "2026-09-23",
+  "resources": [
+    {
+      "key": "covenant-gathering-israel",
+      "title": "The Gathering of Scattered Israel",
+      "url": "https://www.churchofjesuschrist.org/media/video/2006-10-4060-elder-russell-m-nelson?lang=eng",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/ae95c1ba0e67a58393208c749fa95390fd2392c3/full/1200,630/0/default",
+      "width": 1200,
+      "height": 630,
+      "prompt": "Elder Russell M. Nelson connects Abraham’s covenant with the restored keys of gathering and temple service. Consider one way you can help someone come closer to Christ.",
+      "verified_source": "https://www.churchofjesuschrist.org/study/general-conference/2006/10/the-gathering-of-scattered-israel?lang=eng"
+    },
+    {
+      "key": "covenant-eternal-blessings",
+      "title": "All Will Be Well Because of Temple Covenants",
+      "url": "https://www.churchofjesuschrist.org/media/video/2024-04-1080-henry-b-eyring?lang=eng",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/0a4fa083f44711eea15beeeeac1e53a8a230b62e/full/1200,630/0/default",
+      "width": 1200,
+      "height": 630,
+      "prompt": "President Henry B. Eyring teaches about the spiritual blessings of temple covenants, now and in eternity. As you listen, consider the hope those promises bring to your own life.",
+      "verified_source": "https://www.churchofjesuschrist.org/media/video/2024-04-1080-henry-b-eyring?lang=eng"
+    }
+  ],
+  "verification": "Fresh official media metadata/title and description read; Nelson full transcript read confirms Abrahamic covenant, Kirtland messengers, gathering and family history. Both concrete video slugs absent from all existing repo HTML. Official og:image previews used directly; no existing unrelated preview substituted.",
+  "scope": "Only WORK manuscript/renderer; removed only requested political-border sentence; all other prose preserved."
+}

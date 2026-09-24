@@ -5,6 +5,7 @@ from pathlib import Path
 from urllib.parse import urlsplit,parse_qs
 from answer_study_qa import Document
 from production_hardening_qa import image_dimensions
+from sitewide_artwork_review_qa import reviewed_journey_style
 ROOT=Path(__file__).resolve().parents[1]
 def nodes(p):
  d=Document();d.feed(p.read_text(encoding='utf-8'));return list(d.root.walk())
@@ -24,7 +25,15 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   assert rejected['source'].replace('\\','/').rsplit('/',1)[-1] not in text,'Rejected generation referenced'
  ns=nodes(page)
  if any(n.has('fc-study-visual') for n in ns):
-  assert len([n for n in ns if n.tag=='link' and 'topic-art.css?' in n.attrs.get('href','')])==1,str(page)+' missing contextual artwork CSS' 
+  if page.relative_to(ROOT).as_posix()=='answers/abrahamic-covenant.html':
+   assert len([n for n in ns if n.tag=='link' and 'jesus-journey.css?' in n.attrs.get('href','')])==1, 'Covenant requires its reviewed journey stylesheet'
+   assert reviewed_journey_style((ROOT/'jesus-journey.css').read_bytes()), 'Covenant journey stylesheet changed since review'
+   figures=[n for n in ns if n.tag=='figure']
+   arts=json.loads((ROOT/'docs/abrahamic-covenant/art-review.json').read_text(encoding='utf-8'))['artworks']
+   assert len(figures)==len(arts)==12 and all(n.has('jj-art') and n.has('fc-study-visual') for n in figures), 'Covenant requires twelve journey-layout figures'
+   assert {n.attrs.get('data-exclusive-artwork') for n in figures}==set(arts), 'Covenant figures must match the exact reviewed keys'
+  else:
+   assert len([n for n in ns if n.tag=='link' and 'topic-art.css?' in n.attrs.get('href','')])==1,str(page)+' missing contextual artwork CSS'
 actual={}
 for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.html']:
  ns=nodes(page)

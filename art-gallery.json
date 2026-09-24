@@ -4,6 +4,7 @@
     "/about.html",
     "/answers.html",
     "/answers/aaronic-priesthood-restoration.html",
+    "/answers/abrahamic-covenant.html",
     "/answers/are-latter-day-saints-christian.html",
     "/answers/bible-and-book-of-mormon-together.html",
     "/answers/death-of-a-child.html",
@@ -1355,6 +1356,28 @@
       ]
     },
     {
+      "title": "A promise at Haran",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-jehovah-haran-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-jehovah-haran-full.webp",
+      "alt": "Jehovah speaks with Abraham near a tent encampment.",
+      "id": "art-5803060e8df3",
+      "occurrences": [
+        {
+          "id": "source-04e28e2790fe",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-jehovah-haran-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-jehovah-haran-960.webp\"])",
+          "title": "A promise at Haran"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A promise to make things right",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/tp-zacchaeus-response-960.webp",
@@ -1704,6 +1727,28 @@
       ],
       "categories": [
         "Pioneers"
+      ]
+    },
+    {
+      "title": "A story worth keeping",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-hearts-generations-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-hearts-generations-full.webp",
+      "alt": "A grandmother speaks while resting her hands on bread dough as her adult granddaughter listens and a nearby phone records.",
+      "id": "art-0b3e05009b79",
+      "occurrences": [
+        {
+          "id": "source-92f7c9eb89ff",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-hearts-generations-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-hearts-generations-960.webp\"])",
+          "title": "A story worth keeping"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -2810,6 +2855,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/rr-simon-cross-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rr-simon-cross-960.webp\"])",
           "title": "Bearing the cross behind Jesus"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Before Abraham was",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-abraham-rejoiced-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-abraham-rejoiced-full.webp",
+      "alt": "Jesus speaks with adult questioners in a temple setting.",
+      "id": "art-22cdc96195d4",
+      "occurrences": [
+        {
+          "id": "source-2259df167b6f",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-abraham-rejoiced-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-abraham-rejoiced-960.webp\"])",
+          "title": "Before Abraham was"
         }
       ],
       "categories": [
@@ -6781,6 +6848,28 @@
       ]
     },
     {
+      "title": "He opens Abraham’s eyes",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-abraham-eyes-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-abraham-eyes-full.webp",
+      "alt": "The Lord places His hand over Abraham’s eyes beneath a night sky.",
+      "id": "art-27102babec2a",
+      "occurrences": [
+        {
+          "id": "source-d6855f10244d",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-abraham-eyes-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-abraham-eyes-960.webp\"])",
+          "title": "He opens Abraham’s eyes"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "He opens the scriptures along the way",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/sitewide-narratives/two-witnesses-emmaus-20260919-960.webp",
@@ -6976,6 +7065,28 @@
       ],
       "categories": [
         "Watch"
+      ]
+    },
+    {
+      "title": "Hear His voice",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-hear-his-voice-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-hear-his-voice-full.webp",
+      "alt": "Jesus walks with three adult questioners through a stone portico in winter clothing.",
+      "id": "art-6d630ff20139",
+      "occurrences": [
+        {
+          "id": "source-2dc497c2cf5d",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-hear-his-voice-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-hear-his-voice-960.webp\"])",
+          "title": "Hear His voice"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -7654,6 +7765,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/birth-of-christ/01-isaiah-ahaz-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/01-isaiah-ahaz-800.webp\"])",
           "title": "Isaiah brings the promise to Ahaz"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Jacob becomes Israel",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-jacob-wrestle-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-jacob-wrestle-full.webp",
+      "alt": "An elderly Jacob and an unnamed man wrestle beside a stream as dawn approaches.",
+      "id": "art-71af911cd39d",
+      "occurrences": [
+        {
+          "id": "source-5401637d67fd",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-jacob-wrestle-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-jacob-wrestle-960.webp\"])",
+          "title": "Jacob becomes Israel"
         }
       ],
       "categories": [
@@ -11754,6 +11887,28 @@
       ]
     },
     {
+      "title": "Preparing to follow Him",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-baptism-belonging-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-baptism-belonging-full.webp",
+      "alt": "A woman preparing for baptism speaks with a supportive friend beside a font.",
+      "id": "art-5911a4001800",
+      "occurrences": [
+        {
+          "id": "source-71ed68d533e7",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-baptism-belonging-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-baptism-belonging-960.webp\"])",
+          "title": "Preparing to follow Him"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Presence during illness",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/life-after-death/modern-illness-800.webp",
@@ -12944,6 +13099,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/25-samuel-warning-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/25-samuel-warning-960.webp\"])",
           "title": "Samuel will not abandon his message"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Sarah holds Isaac",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-sarah-isaac-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-sarah-isaac-full.webp",
+      "alt": "Elderly Sarah cradles the infant Isaac and looks into his eyes.",
+      "id": "art-27c2cf50e7fd",
+      "occurrences": [
+        {
+          "id": "source-3911d8a34b18",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-sarah-isaac-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-sarah-isaac-960.webp\"])",
+          "title": "Sarah holds Isaac"
         }
       ],
       "categories": [
@@ -14976,6 +15153,28 @@
       ]
     },
     {
+      "title": "The Lord is in this place",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-jacob-ladder-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-jacob-ladder-full.webp",
+      "alt": "An older Jacob sleeps with his head beside a stone while a dream shows the Lord and angels on a stairway.",
+      "id": "art-e2b25778e2fe",
+      "occurrences": [
+        {
+          "id": "source-9f0353ae429c",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-jacob-ladder-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-jacob-ladder-960.webp\"])",
+          "title": "The Lord is in this place"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Martin company in the storm",
       "category": "Pioneers",
       "thumbnail": "/assets/pioneers/story/16-martin-river-800.webp",
@@ -15343,6 +15542,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/bb-tent-cloud-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bb-tent-cloud-960.webp\"])",
           "title": "The people watch from their tent doors"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The promise continues with Isaac",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-isaac-covenant-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-isaac-covenant-full.webp",
+      "alt": "Jehovah speaks with a seated, mature Isaac in an open landscape.",
+      "id": "art-c385b8abd816",
+      "occurrences": [
+        {
+          "id": "source-89c692409554",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-isaac-covenant-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-isaac-covenant-960.webp\"])",
+          "title": "The promise continues with Isaac"
         }
       ],
       "categories": [
@@ -16296,6 +16517,50 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Together along the way",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-abraham-sarah-journey-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-abraham-sarah-journey-full.webp",
+      "alt": "Abraham and Sarah pause beside their travel tents with a staff and folded bedding.",
+      "id": "art-6a4bf9db0fc6",
+      "occurrences": [
+        {
+          "id": "source-402b872f328a",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-abraham-sarah-journey-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-abraham-sarah-journey-960.webp\"])",
+          "title": "Together along the way"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Together on temple grounds",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/abrahamic-covenant/ac-temple-public-welcome-960.webp",
+      "fullImage": "/assets/page-art/abrahamic-covenant/ac-temple-public-welcome-full.webp",
+      "alt": "Two women exchange a welcoming look on the public grounds of the Laie Hawaii Temple while other adults walk toward the building.",
+      "id": "art-4a7e9ce9df1f",
+      "occurrences": [
+        {
+          "id": "source-1df2c5b5f58a",
+          "page": "/answers/abrahamic-covenant.html",
+          "pageTitle": "The Abrahamic Covenant",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/abrahamic-covenant/ac-temple-public-welcome-full.webp\"]:has(img[src=\"/assets/page-art/abrahamic-covenant/ac-temple-public-welcome-960.webp\"])",
+          "title": "Together on temple grounds"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -17320,15 +17585,15 @@
     }
   ],
   "stats": {
-    "artworks": 776,
-    "occurrences": 787,
+    "artworks": 788,
+    "occurrences": 799,
     "byKind": {
       "artwork": 62,
       "full": 1,
       "hero": 38,
       "legacy": 39,
       "missionary": 13,
-      "topic": 637
+      "topic": 649
     }
   }
 }

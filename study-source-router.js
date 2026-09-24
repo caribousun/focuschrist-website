@@ -52,6 +52,7 @@
         { terms: ['death of a child', 'child loss', 'lost a child'], label: 'Death of a Child', url: 'answers/death-of-a-child.html', weight: 120 },
         { terms: ['divorce'], label: 'Divorce and Faith', url: 'answers/divorce-and-faith.html', weight: 115 },
         { terms: ['grief', 'grieving', 'mourn', 'mourning'], label: 'Grief and Faith', url: 'answers/grief-and-faith.html', weight: 110 },
+        { terms: ['abrahamic covenant', 'covenant of abraham', "abraham's covenant", 'abraham’s covenant', "jacob's ladder", 'jacob’s ladder', 'jacob ladder', 'jacob wrestle', 'jacob wrestling', "jacob's wrestling", 'jacob’s wrestling'], label: 'The Abrahamic Covenant', url: 'answers/abrahamic-covenant.html', weight: 108 },
         { terms: ['eternal marriage'], label: 'What Is Eternal Marriage?', url: 'answers/what-is-eternal-marriage.html', weight: 105 },
         { terms: ['family', 'families', 'eternal family', 'children'], label: 'Why Are Families Important?', url: 'answers/why-families-are-important.html', weight: 100 },
         { terms: ['atonement', 'redeem', 'redeemer'], label: 'The Atonement of Jesus Christ', url: 'atonement.html', weight: 100 },

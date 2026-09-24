@@ -1,0 +1,57 @@
+{
+  "date": "2026-09-23",
+  "status": "pass-source-read-and-manuscript-check",
+  "manuscript_sha256": "b6bfa67b63a35451b16af57115793ee0bcba03deecba55a6ab8ef45871cf1594",
+  "word_counts": [
+    45,
+    39,
+    47
+  ],
+  "changes": [
+    {
+      "text": "At Haran, Jehovah, understood by Latter-day Saints as the premortal Jesus Christ, promises Abraham that his family will carry the gospel and priesthood to all nations. These blessings reach every family: salvation and eternal life. Those who receive the gospel are counted among Abraham’s seed.",
+      "sources": [
+        {
+          "label": "Abraham 2:6–12",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=p6-p12#p6"
+        },
+        {
+          "label": "Abraham 2:9–11",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/2?lang=eng&id=p9-p11#p9"
+        }
+      ]
+    },
+    {
+      "text": "Later, Jesus tells Nathanael that he will see heaven open and angels ascending and descending upon the Son of Man. Read beside Jacob’s dream, this shared imagery invites us to ponder how Jesus Christ brings us near to God.",
+      "sources": [
+        {
+          "label": "John 1:50–51",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/1?lang=eng&id=p50-p51#p50"
+        }
+      ]
+    },
+    {
+      "text": "Other prophetic visions widen this hope. Enoch hears of Zion’s people meeting in a joyful embrace and dwelling with the Lord. John sees a new heaven and earth, with God among His people and death and sorrow ended. Their distinct visions invite hope in God’s lasting presence.",
+      "sources": [
+        {
+          "label": "Moses 7:63–64",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/7?lang=eng&id=p63-p64#p63"
+        },
+        {
+          "label": "Revelation 21:1–4",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/rev/21?lang=eng&id=p1-p4#p1"
+        }
+      ]
+    }
+  ],
+  "verification": [
+    "Read Abraham 2:9–11 directly: ministry/priesthood to all nations; gospel recipients counted seed; salvation and eternal life.",
+    "Read John 1:50–51 from canonical chapter after selected URL issue: heaven open and angels upon Son of Man. Connection to Jacob explicitly framed as reader reflection, not an asserted verse interpretation.",
+    "Read Moses 7:63–64 directly: mutual embrace, divine abode, Zion and thousand-year rest.",
+    "Read Revelation 21:1–4 directly: new heaven/earth, New Jerusalem, God with His people, end of death/sorrow/pain. Distinct prophetic visions remain separate from words spoken to Abraham."
+  ],
+  "limits": [
+    "No new chapters or image changes. Final chapter now four short paragraphs; original image placement remains and renderer rhythm permits maximum three subsequent paragraphs.",
+    "Full draft regeneration belongs to root after completed artwork manifest."
+  ]
+}
