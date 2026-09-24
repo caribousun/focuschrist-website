@@ -150,6 +150,7 @@ jobs:
         with:
           name: canonical-presentation
           path: .qa-artifacts/canonical-presentation.json
+          include-hidden-files: true
           if-no-files-found: ignore
 
       - name: Verify visual resource coverage and source thumbnails
