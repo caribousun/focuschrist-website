@@ -6,6 +6,7 @@ import re
 from html.parser import HTMLParser
 from urllib.parse import urlparse, unquote
 from collections import Counter
+from answer_study_qa import Document
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -69,6 +70,17 @@ class HubParser(HTMLParser):
 
 page = HubParser()
 page.feed(html)
+structure = Document()
+structure.feed(html)
+reflections = next(n for n in structure.root.walk() if n.attrs.get('id') == 'guided-reflections')
+practice = next(n for n in reflections.walk() if n.has('cfm-practice'))
+invitations = [n for n in practice.children if n.tag == 'article']
+require(len(invitations) == 3 and all('data-guided-reflection' in n.attrs for n in invitations),
+        "guided reflections must retain three direct invitation cards")
+references = [n for n in reflections.walk() if n.attrs.get('data-linked-picture-reference') == 'modern-prayer']
+require(len(references) == 1 and references[0].parent is practice.parent
+        and references[0].order > practice.order,
+        "modern prayer picture must occupy its own row after the invitation grid, never inside a card")
 ids = Counter(attrs['id'] for _, attrs in page.elements if 'id' in attrs)
 require(all(count == 1 for count in ids.values()), "study anchor IDs must be unique")
 links = [attrs.get('href', '') for tag, attrs in page.elements if tag == 'a']
