@@ -55,6 +55,11 @@ from plan_of_salvation_qa import check as check_plan
 check_plan()
 plan_review={v['asset']:(k,v) for k,v in json.loads((ROOT/'docs/plan-of-salvation/art-review.json').read_text(encoding='utf-8'))['artworks'].items()}
 plan_assets=[]
+from heavenly_father_qa import check_structure as check_father_structure, check_art as check_father_art
+check_father_art(check_father_structure((ROOT/'answers/god-our-heavenly-father.html').read_text(encoding='utf-8')))
+father_review={next(x['path'] for x in a['derivatives'] if x['path'].endswith('-full.webp')):a for a in json.loads((ROOT/'docs/heavenly-father/art-review.json').read_text(encoding='utf-8'))['items']}
+assert len(father_review)==5
+father_assets=[]
 settle_assets=[]
 bom_assets=[]
 opening_assets=[]
@@ -107,6 +112,10 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    assert container.attrs.get('data-exclusive-artwork')==key and a.attrs.get('aria-haspopup')=='dialog'
    assert hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['asset_sha256'], 'Plan picture changed after review'
    plan_assets.append(relative_asset)
+  elif relative_asset in father_review or container.attrs.get('data-exclusive-artwork','').startswith('hf-'):
+   assert relative_asset in father_review and page.relative_to(ROOT).as_posix()=='answers/god-our-heavenly-father.html', 'Father picture outside exact owner/review'
+   assert container.attrs.get('data-exclusive-artwork')=='hf-'+father_review[relative_asset]['id'] and a.attrs.get('aria-haspopup')=='dialog', 'Father shared study adapter binding mismatch'
+   father_assets.append(relative_asset)
   elif 'data-journey-art' in container.attrs:
    key=container.attrs['data-journey-art'];record=journey_review[key]
    assert record['owner']==page.relative_to(ROOT).as_posix(), 'Journey artwork ownership mismatch'
@@ -187,10 +196,11 @@ assert len(covenant_assets)==len(set(covenant_assets))==12 and set(covenant_asse
 expected_journey={k for k,v in journey_review.items() if v['owner'].startswith('answers/')}
 assert len(journey_assets)==len(set(journey_assets)) and set(journey_assets)==expected_journey, 'Journey parent exact artwork inventory mismatch'
 assert len(hg_assets)==len(set(hg_assets))==16 and set(hg_assets)==set(hg_review), 'Holy Ghost exact body inventory mismatch'
-assert (count-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert (count-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert set(plan_assets)==set(plan_review) and len(plan_assets)==16, 'All sixteen Plan originals must reach the shared study adapter'
+assert len(father_assets)==len(set(father_assets))==5 and set(father_assets)==set(father_review), 'All five Father originals must reach the shared adapter exactly once'
 assert panels==12,panels
 stand=Document();stand.feed((ROOT/'answers/stand-forever.html').read_text(encoding='utf-8'));stand_nodes=list(stand.root.walk())
 foundation_images=[n for n in stand_nodes if n.tag=='a' and n.has('fc-foundation-card__image')]

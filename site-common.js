@@ -885,7 +885,6 @@
         const descriptions = {
             'birth-of-christ.html': 'Follow the promises, Mary and Joseph’s journey, and the witnesses who welcomed the Savior. Read each moment with its scriptures.',
             'joseph-smith-likeness.html': 'Compare portraits, photographs of historical objects, and the sources behind them. Consider what each can tell us about Joseph Smith’s appearance.',
-            'god-our-heavenly-father.html': 'Explore scripture about our Heavenly Father, His love, and our relationship with Him. Follow the passages and questions throughout the study.',
             'restored-church-of-jesus-christ.html': 'Explore restoration, priesthood, covenants, and service. Follow the linked scriptures to understand how these teachings point toward Jesus Christ.',
             'are-latter-day-saints-christian.html': 'Explore why Latter-day Saints identify as Christians, what they share with other Christians, and where their teachings differ.',
             'bible-and-book-of-mormon-together.html': 'Read passages from both books side by side. Explore their witnesses of Jesus Christ and follow each passage into its setting.',

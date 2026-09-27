@@ -68,6 +68,11 @@ def check():
         for node in nodes:
             if not node.has('fc-resource-card'):
                 continue
+            if node.has('hf-owned-reference'):
+                assert path.relative_to(ROOT).as_posix()=='answers/god-our-heavenly-father.html', 'Father reference outside reviewed page'
+                from heavenly_father_qa import check_reference
+                check_reference(path.read_text(encoding='utf-8'))
+                continue
             if node.has('pos-owned-reference'):
                 assert path.relative_to(ROOT).as_posix()=='answers/plan-of-salvation.html', 'Plan artwork reference used outside its reviewed page'
                 from plan_of_salvation_qa import check_structure

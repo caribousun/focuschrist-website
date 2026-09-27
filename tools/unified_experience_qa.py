@@ -226,6 +226,8 @@ def main() -> int:
     topic_plans["answers/plan-of-salvation.html"] = "plan-of-salvation"
     from plan_of_salvation_qa import check as check_plan
     check_plan()
+    from heavenly_father_qa import check_structure as check_father_structure, check_art as check_father_art
+    check_father_art(check_father_structure((ROOT / "answers/god-our-heavenly-father.html").read_text(encoding="utf-8")))
     from holy_ghost_qa import check as check_holy_ghost
     check_holy_ghost()
     approved_hero_pages = ["index.html", *(p for p in approved_answer_pages if p != covenant_page)]

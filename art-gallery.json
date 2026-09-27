@@ -278,6 +278,28 @@
       ]
     },
     {
+      "title": "A child's question belongs in the conversation",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/heavenly-father/teach-on-the-way-800.webp",
+      "fullImage": "/assets/page-art/heavenly-father/teach-on-the-way-full.webp",
+      "alt": "A woman carrying a basket listens to a boy as they walk along a hillside path.",
+      "id": "art-b42c42270f38",
+      "occurrences": [
+        {
+          "id": "source-f6a1f6ed73dc",
+          "page": "/answers/god-our-heavenly-father.html",
+          "pageTitle": "God",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/heavenly-father/teach-on-the-way-full.webp\"]:has(img[src=\"/assets/page-art/heavenly-father/teach-on-the-way-800.webp\"])",
+          "title": "A child's question belongs in the conversation"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A city that cannot be hidden",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/tp-lamp-salt-960.webp",
@@ -2262,6 +2284,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/09-abish-queen-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/09-abish-queen-960.webp\"])",
           "title": "Abish reaches for the queen"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Abraham seeks what his fathers knew",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/heavenly-father/abraham-records-800.webp",
+      "fullImage": "/assets/page-art/heavenly-father/abraham-records-full.webp",
+      "alt": "Abraham holds an open scroll while Sarah sits beside him and listens.",
+      "id": "art-42f12e821a7a",
+      "occurrences": [
+        {
+          "id": "source-15ddce755592",
+          "page": "/answers/god-our-heavenly-father.html",
+          "pageTitle": "God",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/heavenly-father/abraham-records-full.webp\"]:has(img[src=\"/assets/page-art/heavenly-father/abraham-records-800.webp\"])",
+          "title": "Abraham seeks what his fathers knew"
         }
       ],
       "categories": [
@@ -7921,6 +7965,50 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/life-after-death/modern-uncertainty-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/modern-uncertainty-800.webp\"])",
           "title": "Hope when the way is unclear"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "How early Saints thought about receiving a witness",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/heavenly-father/kirtland-readers-800.webp",
+      "fullImage": "/assets/page-art/heavenly-father/kirtland-readers-full.webp",
+      "alt": "Three early Latter-day Saint readers discuss an open printed book at a wooden table.",
+      "id": "art-2dbcfc4fc4c2",
+      "occurrences": [
+        {
+          "id": "source-4697ce6e9702",
+          "page": "/answers/god-our-heavenly-father.html",
+          "pageTitle": "God",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/heavenly-father/kirtland-readers-full.webp\"]:has(img[src=\"/assets/page-art/heavenly-father/kirtland-readers-800.webp\"])",
+          "title": "How early Saints thought about receiving a witness"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "How knowledge of God began",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/heavenly-father/adam-eve-teach-800.webp",
+      "fullImage": "/assets/page-art/heavenly-father/adam-eve-teach-full.webp",
+      "alt": "Adam and Eve listen and speak with a son and daughter beside a shelter.",
+      "id": "art-aade9e8a6c1a",
+      "occurrences": [
+        {
+          "id": "source-1f8339f2032a",
+          "page": "/answers/god-our-heavenly-father.html",
+          "pageTitle": "God",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/heavenly-father/adam-eve-teach-full.webp\"]:has(img[src=\"/assets/page-art/heavenly-father/adam-eve-teach-800.webp\"])",
+          "title": "How knowledge of God began"
         }
       ],
       "categories": [
@@ -18180,6 +18268,28 @@
       ]
     },
     {
+      "title": "Words carried into another generation",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/heavenly-father/kept-record-v2-800.webp",
+      "fullImage": "/assets/page-art/heavenly-father/kept-record-v2-full.webp",
+      "alt": "A woman points to a written record while a child and a man listen beside her.",
+      "id": "art-a74a0bc0aca7",
+      "occurrences": [
+        {
+          "id": "source-8dc977362428",
+          "page": "/answers/god-our-heavenly-father.html",
+          "pageTitle": "God",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/heavenly-father/kept-record-v2-full.webp\"]:has(img[src=\"/assets/page-art/heavenly-father/kept-record-v2-800.webp\"])",
+          "title": "Words carried into another generation"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Words for a scattered people",
       "category": "Church History",
       "thumbnail": "/assets/page-art/church-history/liberty-letter-960.webp",
@@ -18335,15 +18445,15 @@
     }
   ],
   "stats": {
-    "artworks": 822,
-    "occurrences": 833,
+    "artworks": 827,
+    "occurrences": 838,
     "byKind": {
       "artwork": 62,
       "full": 1,
       "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 681
+      "topic": 686
     }
   }
 }
