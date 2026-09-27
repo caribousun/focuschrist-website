@@ -109,6 +109,12 @@ def reviewed_narrow_reading_style(name, data):
     return bool(entry and hashlib.sha256(data).hexdigest()==entry["sha256"]
                 and hashlib.sha256(data[:entry["base_bytes"]]).hexdigest()==entry["base_sha256"])
 
+# Owner-authorized toolbar readability; exact bytes do not exempt future style edits.
+TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f', 'study-navigation.css': '316f49fbd8a3d7f1cedcdf48389c738749ab5904ffd5723c0a68759adb080972'}
+
+def reviewed_toolbar_style(name, data):
+    return name in TOOLBAR_STYLE_SHA256 and hashlib.sha256(data).hexdigest() == TOOLBAR_STYLE_SHA256[name]
+
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def unique_reviewed(heroes, rejected):
     errors=[]; seen={}
@@ -138,6 +144,11 @@ def main():
         duplicate=[good[0],dict(good[1],source_sha256='1'*64)]
         assert any('duplicate source_sha256' in e for e in unique_reviewed(duplicate,set()))
         assert any('rejected sha256' in e for e in unique_reviewed(good,{'2'*64}))
+        for name in TOOLBAR_STYLE_SHA256:
+            toolbar_css = (ROOT/name).read_bytes()
+            assert reviewed_toolbar_style(name, toolbar_css)
+            assert not reviewed_toolbar_style(name, toolbar_css + b'\n.fc-visual-hero{height:9px}')
+            assert not reviewed_toolbar_style('unreviewed.css', toolbar_css)
         wrap_expected = [f'page-{i}.html' for i in range(120)]
         panel_style = (ROOT/'site-system.css').read_bytes()
         assert reviewed_system_panel_style(panel_style)
@@ -381,13 +392,14 @@ def main():
     check(set(art_consumers) == art_owners and all(v == ['20260923-reading-rhythm-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(reviewed_system_panel_style((ROOT/'site-system.css').read_bytes()), 'Reviewed base or exact owner-directed panel appendix changed: site-system.css')
-    check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24', 'Reviewed mobile polish stylesheet changed: site-header.css')
+    check(reviewed_toolbar_style('site-header.css', (ROOT/'site-header.css').read_bytes()), 'Reviewed mobile polish stylesheet changed: site-header.css')
+    check(reviewed_toolbar_style('study-navigation.css', (ROOT/'study-navigation.css').read_bytes()), 'Study navigation differs from exact reviewed toolbar bytes')
     check(reviewed_home_style((ROOT/HOME_STYLE).read_bytes()), 'Home presentation stylesheet differs from exact reviewed bytes')
     check(sha(ROOT/'missionary.css') == BOUNDARY_WRAP_STYLES['.fc-missionary-page main'][1],
           'Mission purpose stylesheet differs from exact reviewed bytes')
     check(reviewed_watch_shorts_style((ROOT/WATCH_SHORTS_STYLE).read_bytes()), 'Watch Shorts stylesheet differs from exact reviewed bytes')
     check(reviewed_mission_enrichment_style((ROOT/MISSION_ENRICHMENT_STYLE).read_bytes()), 'Mission enrichment stylesheet differs from exact reviewed bytes')
-    excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css'}
+    excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css','study-navigation.css'}
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
     added_lines=[]; added_file=None
     for line in diff.splitlines():
@@ -450,7 +462,7 @@ def main():
             '.nav[data-focuschrist-header="standard"] .hamburger-menu a.active',
         }
         if all(part.strip() in dropdown_selectors for part in selector.split(',')):
-            check(sha(ROOT/'site-header.css')=='4684f655bae604a41d00fdf45f67d1f6d24ae02ac4e5760987f42691b0ee4d24',
+            check(reviewed_toolbar_style('site-header.css', (ROOT/'site-header.css').read_bytes()),
                   'Dropdown stylesheet differs from reviewed gold-menu bytes')
             check(all(prop in {'outline-offset','border-radius','box-shadow','font-weight'}
                       for prop in re.findall(r'([a-z-]+)\s*:',body)),
