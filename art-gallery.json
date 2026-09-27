@@ -431,28 +431,6 @@
       ]
     },
     {
-      "title": "A devotional scene of Jesus Christ supporting a weary man’s arm on a wet rocky path.",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/heroes/topics/trials-full.webp",
-      "fullImage": "/assets/heroes/topics/trials-full.webp",
-      "alt": "A devotional scene of Jesus Christ supporting a weary man’s arm on a wet rocky path.",
-      "id": "art-6508cdc4a30c",
-      "occurrences": [
-        {
-          "id": "source-c71979d08056",
-          "page": "/answers/faith-in-jesus-christ-during-trials.html",
-          "pageTitle": "Faith in Trials",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/trials-full.webp\"]",
-          "title": "A devotional scene of Jesus Christ supporting a weary man’s arm on a wet rocky path."
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
       "title": "A family receives its sons again",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/02-lehi-sariah-960.webp",
@@ -985,7 +963,7 @@
       "category": "Church History",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/warmth-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/warmth.webp",
-      "alt": "An artistic interpretation of Joseph Smith resting a hand on a wooden fence in warm daylight",
+      "alt": "Joseph Smith rests a hand on a wooden fence in warm daylight",
       "id": "art-867edfb106f6",
       "occurrences": [
         {
@@ -1493,7 +1471,7 @@
       "category": "Church History",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/writing-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/writing.webp",
-      "alt": "An artistic interpretation of Joseph Smith writing beside a sunlit window",
+      "alt": "Joseph Smith writes beside a sunlit window",
       "id": "art-536451e8d1e8",
       "occurrences": [
         {
@@ -2250,7 +2228,7 @@
       "category": "Church History",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/conversation-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/conversation.webp",
-      "alt": "An artistic interpretation of Joseph Smith speaking with two unnamed listeners around a table",
+      "alt": "Joseph Smith speaks with two listeners around a table",
       "id": "art-30cf86e83e2c",
       "occurrences": [
         {
@@ -2393,28 +2371,6 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/birth-of-christ/04-benjamin-angel-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/04-benjamin-angel-800.webp\"])",
           "title": "An angel awakens Benjamin"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "An artistic interpretation of Joseph Smith at age twenty-four holding a bound book near an early nineteenth-century printing shop.",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/heroes/topics/joseph-full.webp",
-      "fullImage": "/assets/heroes/topics/joseph-full.webp",
-      "alt": "An artistic interpretation of Joseph Smith at age twenty-four holding a bound book near an early nineteenth-century printing shop.",
-      "id": "art-42c7aa77296b",
-      "occurrences": [
-        {
-          "id": "source-46e45d7e7255",
-          "page": "/answers/who-was-joseph-smith.html",
-          "pageTitle": "Joseph Smith",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/joseph-full.webp\"]",
-          "title": "An artistic interpretation of Joseph Smith at age twenty-four holding a bound book near an early nineteenth-century printing shop."
         }
       ],
       "categories": [
@@ -4497,7 +4453,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/topics/christ-storm-800.webp",
       "fullImage": "/assets/page-art/topics/christ-storm-1536.webp",
-      "alt": "Devotional interpretation of Jesus Christ with disciples in a boat on choppy water",
+      "alt": "Jesus Christ with disciples in a boat on choppy water",
       "id": "art-a341f7261fad",
       "occurrences": [
         {
@@ -5049,7 +5005,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/joseph-printing-work-800.webp",
       "fullImage": "/assets/page-art/exclusive/joseph-printing-work-1536.webp",
-      "alt": "An interpretive scene of early nineteenth-century printers preparing type and paper",
+      "alt": "Early nineteenth-century printers prepare type and paper",
       "id": "art-b92f032b8bf7",
       "occurrences": [
         {
@@ -6875,7 +6831,7 @@
       "category": "Missionary Work",
       "thumbnail": "/assets/missionary/enrichment-20260923/beside-his-missionaries-960.webp",
       "fullImage": "/assets/missionary/enrichment-20260923/beside-his-missionaries-full.webp",
-      "alt": "An imagined scene of Jesus standing with two sister missionaries on a neighborhood sidewalk, looking toward one as they talk.",
+      "alt": "Jesus stands with two sister missionaries on a neighborhood sidewalk, looking toward one as they talk.",
       "id": "art-091ccf2f3285",
       "occurrences": [
         {
@@ -7601,7 +7557,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/atonement/first-hope-960.webp",
       "fullImage": "/assets/page-art/atonement/first-hope.webp",
-      "alt": "Two figures face the morning beside cultivated ground and a simple altar. This imagined scene of Adam and Eve invites us to read the promise of redemption they received.",
+      "alt": "Adam and Eve stand beside cultivated ground and a simple altar.",
       "id": "art-037f96022254",
       "occurrences": [
         {
@@ -8345,6 +8301,28 @@
       ]
     },
     {
+      "title": "Jesus Christ supports a weary man’s arm on a wet rocky path.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/trials-full.webp",
+      "fullImage": "/assets/heroes/topics/trials-full.webp",
+      "alt": "Jesus Christ supports a weary man’s arm on a wet rocky path.",
+      "id": "art-6508cdc4a30c",
+      "occurrences": [
+        {
+          "id": "source-c71979d08056",
+          "page": "/answers/faith-in-jesus-christ-during-trials.html",
+          "pageTitle": "Faith in Trials",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/trials-full.webp\"]",
+          "title": "Jesus Christ supports a weary man’s arm on a wet rocky path."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Jesus Feeding People",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Jesus-feeding-people.webp",
@@ -8712,6 +8690,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/stand-record-context-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/stand-record-context-800.webp\"])",
           "title": "Give a record its context"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Joseph Smith at age twenty-four holds a bound book near an early nineteenth-century printing shop.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/topics/joseph-full.webp",
+      "fullImage": "/assets/heroes/topics/joseph-full.webp",
+      "alt": "Joseph Smith at age twenty-four holds a bound book near an early nineteenth-century printing shop.",
+      "id": "art-42c7aa77296b",
+      "occurrences": [
+        {
+          "id": "source-46e45d7e7255",
+          "page": "/answers/who-was-joseph-smith.html",
+          "pageTitle": "Joseph Smith",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/joseph-full.webp\"]",
+          "title": "Joseph Smith at age twenty-four holds a bound book near an early nineteenth-century printing shop."
         }
       ],
       "categories": [
@@ -10353,28 +10353,6 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/modern-welcome-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/modern-welcome-960.webp\"])",
           "title": "Make a place at the table"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
-      "title": "Make Room for Study",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/heroes/answers.webp",
-      "fullImage": "/assets/heroes/answers.webp",
-      "alt": "Open scriptures and study materials overlooking a peaceful sunset landscape",
-      "id": "art-c7b64b531933",
-      "occurrences": [
-        {
-          "id": "source-d28d6f920bea",
-          "page": "/answers.html",
-          "pageTitle": "Answers About Jesus Christ and Latter-day Saint Beliefs",
-          "category": "Gospel Studies",
-          "kind": "hero",
-          "selector": "a[data-hero-viewer][href=\"assets/heroes/answers.webp\"]",
-          "title": "Make Room for Study"
         }
       ],
       "categories": [
@@ -13925,7 +13903,7 @@
       "category": "Church History",
       "thumbnail": "/assets/page-art/joseph-smith-likeness/portrait-sitting-960.webp",
       "fullImage": "/assets/page-art/joseph-smith-likeness/portrait-sitting.webp",
-      "alt": "An imagined Joseph Smith portrait sitting, with an artist’s blurred hand in the foreground",
+      "alt": "Joseph Smith sits for a portrait, with an artist’s blurred hand in the foreground",
       "id": "art-e844a54c76a5",
       "occurrences": [
         {
@@ -14372,6 +14350,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/woman-childbirth-01-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/woman-childbirth-01-960.webp\"])",
           "title": "Supported through the pain"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Take Time to Study",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/answers.webp",
+      "fullImage": "/assets/heroes/answers.webp",
+      "alt": "Open scriptures and study materials overlooking a peaceful sunset landscape",
+      "id": "art-c7b64b531933",
+      "occurrences": [
+        {
+          "id": "source-d28d6f920bea",
+          "page": "/answers.html",
+          "pageTitle": "Answers About Jesus Christ and Latter-day Saint Beliefs",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"assets/heroes/answers.webp\"]",
+          "title": "Take Time to Study"
         }
       ],
       "categories": [
@@ -16811,7 +16811,7 @@
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/witnesses-960.webp",
       "fullImage": "/assets/page-art/bom-evidences/witnesses.webp",
-      "alt": "Oliver Cowdery, David Whitmer, and Martin Harris pause in an imagined conversation.",
+      "alt": "Oliver Cowdery, David Whitmer, and Martin Harris stand together.",
       "id": "art-f79d1b28e90b",
       "occurrences": [
         {

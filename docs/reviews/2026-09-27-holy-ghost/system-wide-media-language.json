@@ -1,0 +1,1796 @@
+{
+  "owner_directive": "2026-09-27 system-wide human voice; remove art-production disclaimers without inventing recorded facts or erasing real uncertainty.",
+  "scope": "All124 static HTML documents scanned; enhanced media guard independently covers122 public pages,40 hero dialogs and805gallery records. Existing-topic wording maintenance only.",
+  "route_count": 124,
+  "changed_route_count": 38,
+  "routes": [
+    {
+      "path": "404.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "about.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/aaronic-priesthood-restoration.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/abrahamic-covenant.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/are-latter-day-saints-christian.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/bible-and-book-of-mormon-together.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/death-of-a-child.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/divorce-and-faith.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/faith-in-jesus-christ-during-trials.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/god-our-heavenly-father.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/grief-and-faith.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/holy-ghost.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/melchizedek-priesthood-restoration.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/prayer-and-personal-revelation.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/restored-church-of-jesus-christ.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/settle-this-in-your-hearts.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/stand-forever.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/what-happens-after-death.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/what-is-eternal-marriage.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/what-is-the-book-of-mormon.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/who-was-joseph-smith.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/why-families-are-important.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers/why-latter-day-saints-build-temples.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "answers.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "art-gallery.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "art-study/be-still.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "art-study/suffer-the-little-children.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "art-study/the-good-shepherd.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "art-study/the-living-christ.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "art.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "ask.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "atonement.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "birth-of-christ.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "book-of-mormon-evidences.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "church-history.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "come-follow-me.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "general-conference.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "google3fa84a4b37862f36.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "index.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/before-bethlehem.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/miracles-and-compassion.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/mortal-ministry.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/barren-fig.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/birds-lilies.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/blind-guides.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/bridegroom.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/budding-fig.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/children-marketplace.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/closed-door.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/divided-house.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/doorkeeper.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/faithful-servant.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/friend-midnight.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/good-samaritan.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/good-shepherd.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/grain-wheat.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/great-supper.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/growing-seed.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/hearing.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/hen-chicks.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/hidden-treasure.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/householder.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/king-war.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/kingdom.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/laborers-vineyard.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/lamp.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/leaven.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/lost-coin.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/lost-sheep.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/mercy.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/minas.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/mote-beam.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/mustard-seed.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/neighbor.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/net.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/new-patch.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/new-wineskins.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/parent-gifts.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/pearl.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/persistent-widow.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/pharisee-publican.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/prodigal-son.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/returning-spirit.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/rich-fool.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/rich-man-lazarus.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/royal-wedding.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/salt.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/servant-duty.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/settle-adversary.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/sheep-goats.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/sheep-sabbath.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/sower.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/stewardship.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/strong-man.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/talents.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/ten-virgins.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/thief-night.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/tower-builder.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/tree-fruit.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/two-debtors.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/two-sons.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/unjust-steward.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/unmerciful-servant.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/vine-branches.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/watchful-servants.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/watchfulness.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/wedding-places.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/wheat-tares.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/wicked-tenants.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/wise-foolish-builders.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/parables/woman-childbirth.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/redeemer-and-risen-lord.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/restoration-and-today.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "jesus-christ/teachings-and-parables.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "joseph-smith-likeness.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "missionary.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "pioneers.html",
+      "disposition": "changed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "search.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "tools/anatomy-review/index.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "tools/layout-review.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    },
+    {
+      "path": "watch.html",
+      "disposition": "no language change needed",
+      "coverage": "Static source scan of body, captions, embedded detail panels and accessible image text; source/uncertainty review for matched passages. Not a new rendered browser review."
+    }
+  ],
+  "exact_html_changes": [
+    {
+      "path": "answers/aaronic-priesthood-restoration.html",
+      "changes": [
+        {
+          "before": [
+            "An open book and a quiet place give this reader time to consider his question. This imagined contemporary scene invites patient study before deciding what a passage means. Joseph and Oliver’s account also begins with a question awakened while reading."
+          ],
+          "after": [
+            "An open book and a quiet place give this reader time to consider his question. Joseph and Oliver’s account also begins with a question awakened while reading. What question would you like to take into your own study?"
+          ]
+        },
+        {
+          "before": [
+            "The detailed narratives were recorded after the event. Reading their dates and source notes helps us distinguish the remembered experience from the later work of writing Church history. The artwork accompanying this study offers an interpretation of that testimony, not an authenticated view of John's face or the exact clearing where they prayed."
+          ],
+          "after": [
+            "The detailed narratives were recorded after the event. Reading their dates and source notes helps us distinguish the remembered experience from the later work of writing Church history."
+          ]
+        },
+        {
+          "before": [
+            "Two young men bring groceries to a woman at her doorway. This imagined moment of care invites us to consider Alma’s call to bear one another’s burdens and ask what would help someone near us."
+          ],
+          "after": [
+            "Two young men bring groceries to a woman at her doorway. Consider Alma’s call to bear one another’s burdens. What would help someone near you today?"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/abrahamic-covenant.html",
+      "changes": [
+        {
+          "before": [
+            "At Haran, Jehovah promises Abraham that all families of the earth can receive gospel blessings through his seed. This illustration portrays the premortal Savior according to Latter-day Saint belief."
+          ],
+          "after": [
+            "At Haran, Jehovah promises Abraham that all families of the earth can receive gospel blessings through his seed. Latter-day Saints understand Jehovah to be the premortal Jesus Christ."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/faith-in-jesus-christ-during-trials.html",
+      "changes": [
+        {
+          "before": [
+            "data-full-image-alt: A devotional scene of Jesus Christ supporting a weary man’s arm on a wet rocky path."
+          ],
+          "after": [
+            "data-full-image-alt: Jesus Christ supports a weary man’s arm on a wet rocky path."
+          ]
+        },
+        {
+          "before": [
+            "alt: Devotional interpretation of Jesus Christ with disciples in a boat on choppy water"
+          ],
+          "after": [
+            "alt: Jesus Christ with disciples in a boat on choppy water"
+          ]
+        },
+        {
+          "before": [
+            "The Lord strengthens Alma’s people to bear their burdens before He leads them out of bondage. Two neighbors sharing a heavy basket give that strength an everyday form. Their task and surroundings are an artistic interpretation of the passage."
+          ],
+          "after": [
+            "The Lord strengthens Alma’s people to bear their burdens before He leads them out of bondage. As you look at these neighbors sharing a heavy basket, consider how help can make a burden easier to bear."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/holy-ghost.html",
+      "changes": [
+        {
+          "before": [
+            "The book of Moses records Adam’s baptism and spiritual rebirth. The landscape, clothing, and kneeling posture are artistic choices."
+          ],
+          "after": [
+            "Adam kneels beside the water. Read how the book of Moses connects his baptism with the Spirit and new life."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "changes": [
+        {
+          "before": [
+            "A visit, a shared meal, an honest conversation, a moment of prayer: the imagined present-day scenes below bring discipleship into ordinary life. Let them help you consider one small way to follow Christ, with patience for the needs and pace of the people around you."
+          ],
+          "after": [
+            "A visit, a shared meal, an honest conversation, a moment of prayer: discipleship takes shape in ordinary life. Consider one small way to follow Christ, with patience for the needs and pace of the people around you."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "changes": [
+        {
+          "before": [
+            "A quiet lane leads toward a farmhouse in this imagined early nineteenth-century setting. The scene recalls rural Harmony, Pennsylvania, where Oliver Cowdery sought assurance and received the Lord's tender command to look to Christ in every thought."
+          ],
+          "after": [
+            "A quiet lane leads toward a farmhouse. Turn to the account from Harmony, Pennsylvania, where Oliver Cowdery sought assurance and received the Lord’s tender command to look to Christ in every thought."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/melchizedek-priesthood-restoration.html",
+      "changes": [
+        {
+          "before": [
+            "Begin with those witnesses and the questions they actually answer. The opening artwork shows an imagined contemporary priesthood blessing. The historical account below traces a different moment: the restoration of authority through Peter, James, and John. The surviving sources do not establish a precise date for the conferral."
+          ],
+          "after": [
+            "Begin with those witnesses and the questions they actually answer. The opening picture shows a priesthood blessing today. The historical account below traces a different moment: the restoration of authority through Peter, James, and John. The surviving sources do not establish a precise date for the conferral."
+          ]
+        },
+        {
+          "before": [
+            "Books and notes rest together on a quiet desk in this imagined study scene. Take time with the witnesses: notice when each account was written, whose words it preserves, and what it helps you understand."
+          ],
+          "after": [
+            "Books and notes rest together on a quiet desk. Take time with the witnesses: notice when each account was written, whose words it preserves, and what it helps you understand."
+          ]
+        },
+        {
+          "before": [
+            "Two men sit together in a garden, one speaking while the other listens. This imagined moment invites us to consider how patience and gentleness can shape the way we serve someone."
+          ],
+          "after": [
+            "Two men sit together in a garden, one speaking while the other listens. How might patience and gentleness shape the way we serve someone?"
+          ]
+        },
+        {
+          "before": [
+            "Which details do the scriptural and historical sources establish? Which details in the pictures are an artist’s interpretation? Keep both lists so a familiar picture does not become your evidence."
+          ],
+          "after": [
+            "Which questions do the scriptural and historical sources answer? Which remain open? Keep those questions beside you as you compare the witnesses."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/settle-this-in-your-hearts.html",
+      "changes": [
+        {
+          "before": [
+            "The Beloved Son stands with His hand over His heart, attentive to His Father. This devotional interpretation looks to His willing response before mortal life.",
+            "Moses records the Son’s acceptance of the Father’s will and His desire that the glory belong to the Father. Read the contrast in these verses carefully. Our study of settled faith begins with the Redeemer’s love and willingness, not with a claim that human resolve saves us. The unseen setting is an artistic interpretation of the premortal account."
+          ],
+          "after": [
+            "The Beloved Son stands with His hand over His heart, attentive to His Father. Read His willing response before mortal life.",
+            "Moses records the Son’s acceptance of the Father’s will and His desire that the glory belong to the Father. Read the contrast in these verses carefully. Our study of settled faith begins with the Redeemer’s love and willingness, not with a claim that human resolve saves us."
+          ]
+        },
+        {
+          "before": [
+            "The original artwork is a devotional interpretation. Scripture supplies the accounts; faces, clothing, settings, and the precise arrangement of people are artistic choices. Contemporary scenes illustrate daily discipleship."
+          ],
+          "after": [
+            "Read the linked scriptures alongside each account, then consider how settled faith can shape daily discipleship."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/what-happens-after-death.html",
+      "changes": [
+        {
+          "before": [
+            "The pictures give visible settings to these recorded encounters. Clothing, architecture, and the physical form of the record are artistic interpretations; the linked passages provide the account we study."
+          ],
+          "after": [
+            "Open the linked passages and follow each encounter in its own setting. Notice what the witnesses tell us about the Savior and the hope His Resurrection brings."
+          ]
+        },
+        {
+          "before": [
+            "A keepsake rests in her hands as she turns toward Him. This devotional scene invites us to bring sorrow to Christ and to listen with care when another person mourns."
+          ],
+          "after": [
+            "A keepsake rests in her hands as she turns toward Him. Consider how you might bring sorrow to Christ and listen with care when another person mourns."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/what-is-the-book-of-mormon.html",
+      "changes": [
+        {
+          "before": [
+            "Each picture accompanies a passage you can open and read. The woodland landscapes, homes, clothing, and temple architecture are artistic interpretations inspired by Eastern Woodland settings, including Hopewell traditions; they do not establish where Book of Mormon events occurred. The scripture remains the source for what happens in each account."
+          ],
+          "after": [
+            "Each picture accompanies a passage you can open and read. The scriptures do not settle the precise locations of these events in the ancient Americas. Follow the people and their choices in each account without treating a familiar landscape as evidence of where they lived."
+          ]
+        },
+        {
+          "before": [
+            "A mother and son turn toward one another in an imagined quiet conversation. Later, the young warriors remember their mothers’ teaching with confidence. Read the words they carry with them, and consider how faith grows through ordinary conversations at home."
+          ],
+          "after": [
+            "A mother and son turn toward one another in quiet conversation. Read how the young warriors remember their mothers’ teaching, and consider how faith grows through ordinary conversations at home."
+          ]
+        },
+        {
+          "before": [
+            "The account helps us see the connection between a prophet preserving a witness for future readers and a young man entrusted with bringing that witness forth. The precise hand positions and arrangement of an illustrated meeting are an artist’s interpretation; the history centers on the record received and the responsibility attached to it. Continue with the Joseph Smith and Restoration study to follow that history, or return to the Book of Mormon’s invitation to come to Christ."
+          ],
+          "after": [
+            "The account helps us see the connection between a prophet preserving a witness for future readers and a young man entrusted with bringing that witness forth. Follow the history of the record received and the responsibility attached to it. Continue with the Joseph Smith and Restoration study to follow that history, or return to the Book of Mormon’s invitation to come to Christ."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers/who-was-joseph-smith.html",
+      "changes": [
+        {
+          "before": [
+            "data-full-image-alt: An artistic interpretation of Joseph Smith at age twenty-four holding a bound book near an early nineteenth-century printing shop."
+          ],
+          "after": [
+            "data-full-image-alt: Joseph Smith at age twenty-four holds a bound book near an early nineteenth-century printing shop."
+          ]
+        },
+        {
+          "before": [
+            "data-full-image-alt: An interpretive scene of early nineteenth-century printers preparing type and paper"
+          ],
+          "after": [
+            "data-full-image-alt: Early nineteenth-century printers prepare type and paper"
+          ]
+        },
+        {
+          "before": [
+            "alt: An interpretive scene of early nineteenth-century printers preparing type and paper"
+          ],
+          "after": [
+            "alt: Early nineteenth-century printers prepare type and paper"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "answers.html",
+      "changes": [
+        {
+          "before": [
+            "Continue the foundational study: God our Heavenly Father · The restored Church of Jesus Christ"
+          ],
+          "after": [
+            "Continue the foundational study: God our Heavenly Father The restored Church of Jesus Christ"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "atonement.html",
+      "changes": [
+        {
+          "before": [
+            "Stars fill the sky above still water. Let the quiet of this imagined landscape lead you to the scriptures about Jesus Christ, the Creator."
+          ],
+          "after": [
+            "Stars fill the sky above still water. Pause with that quiet, then read what the scriptures teach about Jesus Christ, the Creator."
+          ]
+        },
+        {
+          "before": [
+            "data-full-image-alt: Two figures face the morning beside cultivated ground and a simple altar. This imagined scene of Adam and Eve invites us to read the promise of redemption they received."
+          ],
+          "after": [
+            "data-full-image-alt: Adam and Eve stand beside cultivated ground and a simple altar."
+          ]
+        },
+        {
+          "before": [
+            "alt: Two figures face the morning beside cultivated ground and a simple altar. This imagined scene of Adam and Eve invites us to read the promise of redemption they received."
+          ],
+          "after": [
+            "alt: Adam and Eve stand beside cultivated ground and a simple altar."
+          ]
+        },
+        {
+          "before": [
+            "Two figures face the morning beside cultivated ground and a simple altar. This imagined scene of Adam and Eve invites us to read the promise of redemption they received."
+          ],
+          "after": [
+            "Adam and Eve stand beside cultivated ground and a simple altar. Read the promise of redemption they received, and consider how hope in Christ shapes the work of an ordinary day."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "birth-of-christ.html",
+      "changes": [
+        {
+          "before": [
+            "Ancient faces, clothing, buildings, visions, and dreams are depicted through respectful artistic interpretation. Their exact appearance is not established by these texts. Look for what a passage records, what the picture helps you notice, and what remains a question."
+          ],
+          "after": [
+            "Follow the scriptural promises and witnesses surrounding the birth of Jesus Christ. As you read, notice what each witness tells us and what questions remain."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "book-of-mormon-evidences.html",
+      "changes": [
+        {
+          "before": [
+            "Jesus Christ meets an older man with attentive warmth. Their joined hands and shared gaze invite a moment of reflection on being known and welcomed by the Savior. Let this imagined encounter lead into the scriptural account of His personal invitation to those gathered around Him."
+          ],
+          "after": [
+            "Jesus Christ holds an older man’s hands and meets his gaze. As you read His invitation to the people gathered around Him, notice the care He gives to each person. What does His welcome help you understand about coming to Him?"
+          ]
+        },
+        {
+          "before": [
+            "data-full-image-alt: Joseph attends to the hat while Oliver listens and writes."
+          ],
+          "after": [
+            "data-full-image-alt: Joseph holds the hat close to his face while Oliver writes."
+          ]
+        },
+        {
+          "before": [
+            "alt: Joseph attends to the hat while Oliver listens and writes."
+          ],
+          "after": [
+            "alt: Joseph holds the hat close to his face while Oliver writes."
+          ]
+        },
+        {
+          "before": [
+            "Joseph attends to the hat while Oliver listens and writes. This interpretation of an 1829 dictation setting invites us to consider the concentration, trust, and practical work involved in receiving and recording the text. Historical accounts guide the scene; they do not preserve this exact session."
+          ],
+          "after": [
+            "Joseph holds the hat close to his face while Oliver writes. Read the accounts of translation, and notice how the witnesses describe the work of dictating and recording the text. What did each person see and hear?"
+          ]
+        },
+        {
+          "before": [
+            "These details belong in a complete account, even when they differ from a familiar painting. An artist can help us imagine a room; the painting cannot decide which instrument was used at a particular moment. Likewise, a scribe could observe Joseph's posture, hear his words, and record them without seeing whatever Joseph reported seeing. Distinguishing outward observation from the claimed revelatory experience preserves the witnesses' perspective. It also avoids presenting a modern reconstruction as a photograph of something recorded in 1829."
+          ],
+          "after": [
+            "These details belong in a complete account, even when they differ from a familiar painting. An artist can help us imagine a room; the painting cannot decide which instrument was used at a particular moment. Likewise, a scribe could observe Joseph's posture, hear his words, and record them without seeing whatever Joseph reported seeing. Distinguishing outward observation from the claimed revelatory experience preserves the witnesses' perspective. Each witness could describe only what was within that person’s experience."
+          ]
+        },
+        {
+          "before": [
+            "Joseph and Emma share a warm glance as they walk along a quiet path. This imagined moment invites reflection on companionship beyond the work at a desk. Consider how making time to listen, speak kindly, and share an ordinary walk can strengthen a relationship."
+          ],
+          "after": [
+            "Joseph and Emma share a warm glance as they walk along a quiet path. Consider how making time to listen, speak kindly, and share an ordinary walk can strengthen a relationship."
+          ]
+        },
+        {
+          "before": [
+            "Open manuscripts lie side by side as a reader studies their pages in warm daylight. This imagined research setting invites patient comparison, attentive questions, and respect for the people who preserved the record. What can careful comparison teach us about the way a record reaches its readers?"
+          ],
+          "after": [
+            "Open manuscripts lie side by side as a reader studies their pages in warm daylight. What can careful comparison teach us about the way a record reaches its readers?"
+          ]
+        },
+        {
+          "before": [
+            "An ordinary offer of a ride becomes a remembered moment of sacred purpose in David’s later account. This artistic interpretation invites us to notice the person beside us. The faces, setting, and precise arrangement of the encounter are imagined, not a contemporary visual record."
+          ],
+          "after": [
+            "David’s later account recalls an offer of a ride and an unexpected answer. Read his recollection, then consider how a brief encounter can stay with a person for years."
+          ]
+        },
+        {
+          "before": [
+            "Mary’s later family account remembers encouragement in the midst of demanding household work. This interpretive scene honors that experience without claiming an authenticated likeness or an exact view of the plates. Whose quiet service could you notice, thank, or help carry today?"
+          ],
+          "after": [
+            "Mary watches as a visitor turns a leaf of the plates beside the barn. Her family’s later account remembers encouragement in the midst of demanding household work. Whose quiet service could you notice, thank, or help carry today?"
+          ]
+        },
+        {
+          "before": [
+            "data-full-image-alt: Oliver Cowdery, David Whitmer, and Martin Harris pause in an imagined conversation."
+          ],
+          "after": [
+            "data-full-image-alt: Oliver Cowdery, David Whitmer, and Martin Harris stand together."
+          ]
+        },
+        {
+          "before": [
+            "alt: Oliver Cowdery, David Whitmer, and Martin Harris pause in an imagined conversation."
+          ],
+          "after": [
+            "alt: Oliver Cowdery, David Whitmer, and Martin Harris stand together."
+          ]
+        },
+        {
+          "before": [
+            "Oliver Cowdery, David Whitmer, and Martin Harris pause in an imagined conversation. Their different faces invite us to hear each witness as a person with his own history. Continue into their statements and the separate sequence of Martin’s reported experience, rather than treating this grouping as the angelic encounter."
+          ],
+          "after": [
+            "Oliver Cowdery, David Whitmer, and Martin Harris stand together. Read each witness’s statement, then follow the separate sequence of Martin’s reported experience. What does each man say he saw and heard?"
+          ]
+        },
+        {
+          "before": [
+            "A green coastal inlet opens between rugged hills and quiet water. This imagined landscape invites us to pause with the relief of reaching a place of abundance after a difficult journey. Consider the gratitude that can grow when a long road opens toward a new beginning."
+          ],
+          "after": [
+            "A green coastal inlet opens between rugged hills and quiet water. Read about the travelers reaching a place of abundance after their difficult journey. What part does gratitude play when a long road opens toward a new beginning?"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "church-history.html",
+      "changes": [
+        {
+          "before": [
+            "An aged record is held with care. Its pages preserve something of a person's life and faith. This imagined scene invites us to read those words patiently and learn how earlier disciples sought to follow Christ."
+          ],
+          "after": [
+            "An aged record is held with care. Its pages preserve something of a person’s life and faith. Read those words patiently, and consider how earlier disciples sought to follow Christ."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "general-conference.html",
+      "changes": [
+        {
+          "before": [
+            "A woman listens with an open notebook beside her scriptures. This imagined moment invites us to slow down with a conference message and consider one invitation to follow Jesus Christ."
+          ],
+          "after": [
+            "A woman listens with an open notebook beside her scriptures. As you listen to a conference message, consider one invitation to follow Jesus Christ that you would like to remember."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/miracles-and-compassion.html",
+      "changes": [
+        {
+          "before": [
+            "The man meets Jesus after the restoration of his hand. This imagined moment of gratitude stays close to the personal care at the heart of Luke's Sabbath healing account."
+          ],
+          "after": [
+            "The man faces Jesus with his restored hand. Read Luke’s account of the Sabbath healing, and notice how Jesus responds to the person before Him."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/mortal-ministry.html",
+      "changes": [
+        {
+          "before": [
+            "Amid the temple's upheaval, Jesus turns His attention to a person before Him. This imagined companion moment reflects on His compassion beside John's account of the cleansing; John does not record this particular conversation."
+          ],
+          "after": [
+            "Jesus turns toward a person amid the temple’s upheaval. As you read John’s account of the cleansing, consider His concern for His Father’s house and the people who came there."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/bridegroom.html",
+      "changes": [
+        {
+          "before": [
+            "Jesus compares His presence with the joy of wedding companions while the bridegroom is with them. This imagined gathering illustrates that comparison, rather than the wedding at Cana or a portrait of Jesus."
+          ],
+          "after": [
+            "Companions gather at a wedding. Read how Jesus compares His presence with the joy of wedding companions while the bridegroom is with them."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/budding-fig.html",
+      "changes": [
+        {
+          "before": [
+            "In this imagined scene, travelers pause beside a leafy fig tree and notice the green hillside. Jesus asks His hearers to observe the fig tree and other trees, recognizing summer's approach from their growth."
+          ],
+          "after": [
+            "Travelers pause beside a leafy fig tree and notice the green hillside. Jesus asks His hearers to observe the fig tree and other trees, recognizing summer’s approach from their growth."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/kingdom.html",
+      "changes": [
+        {
+          "before": [
+            "In the modern pictures, people plant, make bread, welcome others and choose how to spend their time. These imagined applications help us ask about patience, priorities and humble judgment. The kingdom parables remain our starting point; their promises belong to God's work, beyond what any one project may achieve."
+          ],
+          "after": [
+            "People plant, make bread, welcome others, and choose how to spend their time. Bring those ordinary experiences to the kingdom parables as you consider patience, priorities, and humble judgment. Their promises belong to God’s work, beyond what any one project may achieve."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/neighbor.html",
+      "changes": [
+        {
+          "before": [
+            "These imagined scenes bring neighborly care into everyday life. Consider what useful help might look like for the person before you: ask, listen and think about what continuing care may require."
+          ],
+          "after": [
+            "Consider what useful help might look like for the person before you: ask, listen, and think about what continuing care may require."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/parent-gifts.html",
+      "changes": [
+        {
+          "before": [
+            "Jesus asks which parent would give a child a stone when asked for bread. This imagined exchange pictures the ordinary care behind His comparison."
+          ],
+          "after": [
+            "A parent offers bread to a child. Read Jesus’ question about a parent’s response to a child asking for food, and consider what it teaches about turning to the Father."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/rich-man-lazarus.html",
+      "changes": [
+        {
+          "before": [
+            "After Lazarus dies, Jesus describes him being carried by angels to Abraham's bosom, where he is comforted. This embrace pictures that comfort symbolically; its surroundings and bodily appearance are artistic choices, not a literal map of the afterlife."
+          ],
+          "after": [
+            "After Lazarus dies, Jesus describes him being carried by angels to Abraham’s bosom, where he is comforted. Notice the embrace, then read how the parable contrasts his comfort with the rich man’s anguish."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/salt.html",
+      "changes": [
+        {
+          "before": [
+            "Jesus speaks of salt retaining its savor and calls His listeners to have salt in themselves and peace with one another. This ordinary table setting offers a visual reflection on His words, not a recorded meal."
+          ],
+          "after": [
+            "Salt rests on an ordinary table. Read Jesus’ words about retaining its savor, having salt in ourselves, and living at peace with one another."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/settle-adversary.html",
+      "changes": [
+        {
+          "before": [
+            "Luke records a related saying in teaching about discerning the present time. The path toward the magistrate becomes a setting in which the need for timely action is visible. The picture does not dwell on the full legal dispute or tell us which modern procedure should be followed. Luke 12:58-59"
+          ],
+          "after": [
+            "Luke records a related saying in teaching about discerning the present time. The path toward the magistrate becomes a setting in which the need for timely action is visible. Consider why resolving a dispute promptly matters, while recognizing that this saying does not supply a modern legal procedure. Luke 12:58-59"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/sheep-goats.html",
+      "changes": [
+        {
+          "before": [
+            "A cup passes between two people while bread rests within reach. This illustration recalls the food and drink Jesus names among acts of care for another person's need."
+          ],
+          "after": [
+            "A cup passes between two people while bread rests within reach. Read Jesus’ words about giving food and drink, and consider whose needs you might notice today."
+          ]
+        },
+        {
+          "before": [
+            "A visitor sits close and holds the hand of a woman resting in bed. This imagined moment of companionship reflects Jesus' invitation to visit those who are sick."
+          ],
+          "after": [
+            "A visitor sits close and holds the hand of a woman resting in bed. Read Jesus’ words about visiting the sick. What might it mean to offer someone your time and attention?"
+          ]
+        },
+        {
+          "before": [
+            "A visitor gives his attention to a man seated in confinement. This illustration recalls Jesus' words about visiting a prisoner and seeing a person others may overlook."
+          ],
+          "after": [
+            "A visitor gives his attention to a man seated in confinement. Read Jesus’ words about visiting a prisoner, and consider how we see people others may overlook."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/sheep-sabbath.html",
+      "changes": [
+        {
+          "before": [
+            "In Jesus' comparison, a person takes hold of the sheep and lifts it out. This imagined rescue pictures the ordinary care He uses to challenge resistance to doing good on the Sabbath."
+          ],
+          "after": [
+            "A person takes hold of a sheep and lifts it out. Read Jesus’ comparison and His challenge to those who resisted doing good on the Sabbath."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/stewardship.html",
+      "changes": [
+        {
+          "before": [
+            "The imagined present-day scenes bring stewardship into plans, shared resources and ordinary responsibilities. In the talents parable, the entrusted gift is money; applying it to our skills is a further reflection. Faithfulness asks how we use what we receive, without promising wealth, ease or status."
+          ],
+          "after": [
+            "Stewardship reaches into plans, shared resources, and ordinary responsibilities. In the talents parable, the entrusted gift is money; applying it to our skills is a further reflection. Faithfulness asks how we use what we receive, without promising wealth, ease, or status."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/watchfulness.html",
+      "changes": [
+        {
+          "before": [
+            "The imagined modern scenes picture honest prayer, quiet preparation and attention to work that still needs doing. They invite us to remain faithful while we wait, even when a decision, recovery or other hoped-for outcome remains beyond our control."
+          ],
+          "after": [
+            "Honest prayer, quiet preparation, and attention to unfinished work are ways to remain faithful while we wait. A decision, recovery, or other hoped-for outcome may still be beyond our control."
+          ]
+        },
+        {
+          "before": [
+            "At the end of a shift or through a quiet hour, someone may still depend on a careful handoff or a promise kept. These imagined scenes ask us to notice the work entrusted to us now, even as we wait for something larger. Luke 12:35–38"
+          ],
+          "after": [
+            "At the end of a shift or through a quiet hour, someone may still depend on a careful handoff or a promise kept. Notice the work entrusted to you now, even as you wait for something larger. Luke 12:35–38"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/parables/wedding-places.html",
+      "changes": [
+        {
+          "before": [
+            "Jesus notices how guests choose places of honor and teaches them about humility. This imagined wedding gathering introduces the contrast between seeking prominence and taking a lower place."
+          ],
+          "after": [
+            "Guests gather at a wedding. Read how Jesus notices their choice of places and teaches the contrast between seeking prominence and taking a lower place."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/redeemer-and-risen-lord.html",
+      "changes": [
+        {
+          "before": [
+            "The risen Jesus eats before His disciples in Luke's account. This imagined indoor scene gives their astonished joy a personal focus, distinct from the shore breakfast in John 21."
+          ],
+          "after": [
+            "The risen Jesus eats before His disciples. Read Luke’s account of their astonishment and joy, then compare it with the shore breakfast recorded in John 21."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "changes": [
+        {
+          "before": [
+            "The people minister to one another and hold things in common. Shared necessities give an imagined everyday form to the mutual care recorded after the Savior's ministry."
+          ],
+          "after": [
+            "The people minister to one another and hold things in common. As you look at the shared necessities, consider how the Savior’s teaching changes the way people care for each other."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "jesus-christ/teachings-and-parables.html",
+      "changes": [
+        {
+          "before": [
+            "A hillside town remains visible above the valley. The imagined setting illustrates Jesus' comparison of His disciples to a city on a hill, within His teaching about good works that glorify the Father."
+          ],
+          "after": [
+            "A hillside town remains visible above the valley. Read Jesus’ comparison of His disciples to a city on a hill. How can good works turn attention toward the Father?"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "joseph-smith-likeness.html",
+      "changes": [
+        {
+          "before": [
+            "data-full-image-alt: An artistic interpretation of Joseph Smith resting a hand on a wooden fence in warm daylight"
+          ],
+          "after": [
+            "data-full-image-alt: Joseph Smith rests a hand on a wooden fence in warm daylight"
+          ]
+        },
+        {
+          "before": [
+            "alt: An artistic interpretation of Joseph Smith resting a hand on a wooden fence in warm daylight",
+            "Creative interpretation · Explore the picture"
+          ],
+          "after": [
+            "alt: Joseph Smith rests a hand on a wooden fence in warm daylight",
+            "Explore and study"
+          ]
+        },
+        {
+          "before": [
+            "A relaxed gaze and a slight smile bring warmth to this imagined moment. The face follows our adopted portrait; the setting and expression are creative choices, not a record of a particular encounter."
+          ],
+          "after": [
+            "Joseph’s relaxed gaze and slight smile invite us to look closely at his face. Compare the portrait with the historical descriptions below. Which features do those witnesses describe?"
+          ]
+        },
+        {
+          "before": [
+            "The scenes and reconstructed portraits on this page are artistic interpretations. The museum photographs show historical artifacts."
+          ],
+          "after": [
+            "Compare the portraits with the museum photographs of historical artifacts. What can each source tell us about Joseph and Hyrum?"
+          ]
+        },
+        {
+          "before": [
+            "Joseph’s open eyes and living expression invite a comparison with his own mask. This is the exact portrait adopted for focusChrist; hair, skin, color and expression remain artistic choices."
+          ],
+          "after": [
+            "Compare Joseph’s face with his death mask. The mask preserves facial contours, but it cannot tell us his hair, eye, or skin color or show the expression of his living face."
+          ]
+        },
+        {
+          "before": [
+            "This reconstruction presents Hyrum at age 44, drawing on his own death-mask references and historical profile. The masks cannot establish hair, eye or skin color; open eyes, expression and living soft tissue require interpretation."
+          ],
+          "after": [
+            "Compare Hyrum’s face at age 44 with his death mask and historical profile. The mask preserves contours but cannot establish hair, eye, or skin color or the expression of his living face."
+          ]
+        },
+        {
+          "before": [
+            "Creative interpretation · Explore the picture"
+          ],
+          "after": [
+            "Explore and study"
+          ]
+        },
+        {
+          "before": [
+            "Joseph rests an arm around Hyrum’s shoulders, and the brothers smile at each other in shirts with rolled sleeves and suspenders. This imagined moment places the brothers together in 1844; the garden, clothing and exchange are artistic choices. Joseph’s recorded affection for Hyrum gives this scene its historical starting point."
+          ],
+          "after": [
+            "Joseph rests an arm around Hyrum’s shoulders, and the brothers smile at each other. Read Joseph’s words about Hyrum, then consider how affection and loyalty can strengthen a family through difficulty."
+          ]
+        },
+        {
+          "before": [
+            "data-full-image-alt: An imagined Joseph Smith portrait sitting, with an artist’s blurred hand in the foreground"
+          ],
+          "after": [
+            "data-full-image-alt: Joseph Smith sits for a portrait, with an artist’s blurred hand in the foreground"
+          ]
+        },
+        {
+          "before": [
+            "alt: An imagined Joseph Smith portrait sitting, with an artist’s blurred hand in the foreground",
+            "Creative interpretation · Explore the picture"
+          ],
+          "after": [
+            "alt: Joseph Smith sits for a portrait, with an artist’s blurred hand in the foreground",
+            "Explore and study"
+          ]
+        },
+        {
+          "before": [
+            "Joseph waits in the window light as an artist works nearby. This imagined sitting introduces a real question: what can a portrait made from life preserve, and what does the artist’s style contribute?"
+          ],
+          "after": [
+            "Joseph waits in the window light as an artist works nearby. What can a portrait made from life preserve, and what does the artist’s style contribute?"
+          ]
+        },
+        {
+          "before": [
+            "The museum traces Maudsley’s Nauvoo portraits and their influence on later images. Compare the historical examples with the creative scene above; that scene does not reconstruct a documented room or identify the unseen artist."
+          ],
+          "after": [
+            "The museum traces Maudsley’s Nauvoo portraits and their influence on later images. Compare the historical examples and notice which features remain consistent across them."
+          ]
+        },
+        {
+          "before": [
+            "data-full-image-alt: An artistic interpretation of Joseph Smith writing beside a sunlit window"
+          ],
+          "after": [
+            "data-full-image-alt: Joseph Smith writes beside a sunlit window"
+          ]
+        },
+        {
+          "before": [
+            "alt: An artistic interpretation of Joseph Smith writing beside a sunlit window",
+            "Creative interpretation · Explore the picture"
+          ],
+          "after": [
+            "alt: Joseph Smith writes beside a sunlit window",
+            "Explore and study"
+          ]
+        },
+        {
+          "before": [
+            "data-full-image-alt: An artistic interpretation of Joseph Smith speaking with two unnamed listeners around a table"
+          ],
+          "after": [
+            "data-full-image-alt: Joseph Smith speaks with two listeners around a table"
+          ]
+        },
+        {
+          "before": [
+            "alt: An artistic interpretation of Joseph Smith speaking with two unnamed listeners around a table",
+            "Creative interpretation · Explore the picture"
+          ],
+          "after": [
+            "alt: Joseph Smith speaks with two listeners around a table",
+            "Explore and study"
+          ]
+        },
+        {
+          "before": [
+            "An open hand and attentive eyes give this imagined conversation its movement. The listeners are unnamed, and the encounter is not tied to a recorded event. We have kept the same recognizable face while imagining Joseph in conversation."
+          ],
+          "after": [
+            "Joseph extends an open hand toward the people listening around him. Read the remembered descriptions of his manner, and consider what an attentive face or a welcoming gesture can communicate."
+          ]
+        },
+        {
+          "before": [
+            "The mask photographs are historical source material. The scenes and reconstructed portraits are creative interpretations; Joseph’s appearance follows the adopted focusChrist portrait. Our project notes record how we developed this portrait."
+          ],
+          "after": [
+            "The mask photographs let you examine historical source material directly. Compare them with the portraits, keeping in mind what a mask can preserve and what it cannot tell us about a living face."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "missionary.html",
+      "changes": [
+        {
+          "before": [
+            "In Doctrine and Covenants 84:88 , the Lord promises to go before those He sends and be beside them. This imagined devotional scene places Jesus alongside two missionaries on an ordinary neighborhood street, inviting us to remember His care in the places where they serve."
+          ],
+          "after": [
+            "In Doctrine and Covenants 84:88 , the Lord promises to go before those He sends and be beside them. As you look at Jesus beside two missionaries on a neighborhood street, consider what His promise means for those who serve."
+          ]
+        },
+        {
+          "before": [
+            "alt: An imagined scene of Jesus standing with two sister missionaries on a neighborhood sidewalk, looking toward one as they talk."
+          ],
+          "after": [
+            "alt: Jesus stands with two sister missionaries on a neighborhood sidewalk, looking toward one as they talk."
+          ]
+        },
+        {
+          "before": [
+            "A simple meal becomes a welcome for two travelers. The scene illustrates Jesus’ instructions to His disciples in Luke 10; the household is imagined rather than a named family in the account."
+          ],
+          "after": [
+            "A simple meal becomes a welcome for two travelers. Read Jesus’ instructions to His disciples in Luke 10, and consider what it means to receive someone with kindness."
+          ]
+        },
+        {
+          "before": [
+            "Jesus stands beside two sister missionaries on a neighborhood sidewalk. Their attentive conversation gives this imagined devotional scene its warmth."
+          ],
+          "after": [
+            "Jesus stands beside two sister missionaries on a neighborhood sidewalk. Their attentive conversation invites reflection on His care for those who serve."
+          ]
+        },
+        {
+          "before": [
+            "Jesus walks among His Apostles as they listen. This imagined scene invites us to read how He prepared the Twelve to preach and minister in Matthew 10. After His Resurrection, He gave the charge to teach all nations recorded in Matthew 28. The picture brings us into the study; the scriptures give us the accounts."
+          ],
+          "after": [
+            "Jesus walks among His Apostles as they listen. Read how He prepared the Twelve to preach and minister in Matthew 10. Then turn to Matthew 28 and His charge, after the Resurrection, to teach all nations."
+          ]
+        }
+      ]
+    },
+    {
+      "path": "pioneers.html",
+      "changes": [
+        {
+          "before": [
+            "The pictures are historical illustrations created for this study, not photographs of the events. Named figures draw on historical portraits; clothing, settings and unrecorded faces are artistic interpretations. Open a picture for its account, source and full-size view."
+          ],
+          "after": [
+            "Open a picture to explore its account, read the sources, or see it at full size. As you follow these journeys, listen to the people who left a record of what they experienced."
+          ]
+        },
+        {
+          "before": [
+            "William Clayton wrote the hymn in April 1846 during the exodus from Nauvoo. Its courage belongs beside the real hardship of the journey. This imagined camp scene honors that shared faith without identifying the singers as a particular family."
+          ],
+          "after": [
+            "William Clayton wrote the hymn in April 1846 during the exodus from Nauvoo. Listen to its words beside the accounts of hardship on the trail. How can a song give people courage to continue together?"
+          ]
+        },
+        {
+          "before": [
+            "Cold water surges around the handcart as weary travelers climb toward the bank. The Savior bends to help push, His attention on the man beside Him; heavenly helpers share the effort. This imagined scene asks us to remember His love in the midst of suffering.",
+            "The Martin and Hodgetts companies crossed the North Platte on October 19, 1856, as the first winter storm struck. Read the official timeline beside this picture. Christ and the angels are a devotional interpretation, rather than a recorded appearance at the crossing."
+          ],
+          "after": [
+            "Cold water surges around the handcart as weary travelers climb toward the bank. The Savior bends to help push, His attention on the man beside Him; heavenly helpers share the effort. Consider the love and strength we seek from Him in suffering.",
+            "The Martin and Hodgetts companies crossed the North Platte on October 19, 1856, as the first winter storm struck. Read the official timeline beside this picture. The accounts do not report an appearance of Christ or angels at this crossing. Their presence in the picture directs our thoughts to His sustaining love."
+          ]
+        },
+        {
+          "before": [
+            "William Clayton wrote the hymn in April 1846 during the exodus from Nauvoo. Its courage belongs beside the real hardship of the journey. This imagined camp scene honors that shared faith without identifying the singers as a particular family."
+          ],
+          "after": [
+            "William Clayton wrote the hymn in April 1846 during the exodus from Nauvoo. Listen to its words beside the accounts of hardship on the trail. How can a song give people courage to continue together?"
+          ]
+        },
+        {
+          "before": [
+            "Cold water surges around the handcart as weary travelers climb toward the bank. The Savior bends to help push, His attention on the man beside Him; heavenly helpers share the effort. This imagined scene asks us to remember His love in the midst of suffering.",
+            "The Martin and Hodgetts companies crossed the North Platte on October 19, 1856, as the first winter storm struck. Read the official timeline beside this picture. Christ and the angels are a devotional interpretation, rather than a recorded appearance at the crossing."
+          ],
+          "after": [
+            "Cold water surges around the handcart as weary travelers climb toward the bank. The Savior bends to help push, His attention on the man beside Him; heavenly helpers share the effort. Consider the love and strength we seek from Him in suffering.",
+            "The Martin and Hodgetts companies crossed the North Platte on October 19, 1856, as the first winter storm struck. Read the official timeline beside this picture. The accounts do not report an appearance of Christ or angels at this crossing. Their presence in the picture directs our thoughts to His sustaining love."
+          ]
+        }
+      ]
+    }
+  ],
+  "hero_phrase_revisions": [
+    {
+      "path": "hero-details.js",
+      "before": "The setting is an artistic interpretation of the account.",
+      "after": "Notice what Luke tells us about where Mary laid Him."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This scene is a devotional artistic interpretation.",
+      "after": "Consider His willingness to carry out the Father’s will."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "The shared gaze places patient attention at the heart of this imagined gathering.",
+      "after": "Notice the patient attention in their shared gaze."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This imagined teaching scene gives visual form to an invitation to bring sincere questions and make room to listen.",
+      "after": "Consider a sincere question you would like to bring to Him."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "Make Room for Study",
+      "after": "Take Time to Study"
+    },
+    {
+      "path": "hero-details.js",
+      "before": "The imagined setting invites you to notice which details turn your thoughts toward the Savior.",
+      "after": "Notice which details turn your thoughts toward the Savior."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "Christ stands at the center of a symbolic gathering of modern missionaries and neighbors.",
+      "after": "Christ stands among modern missionaries and neighbors."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "Teaching, listening, cleanup, and food distribution appear beneath a subtle world map, bringing several forms of service into one composition.",
+      "after": "Around Him, people teach, listen, clean, and share food beneath a subtle world map."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This interpretive scene draws attention to shared effort, family ties, and the uncertainty of a long journey.",
+      "after": "Consider the shared effort, family ties, and uncertainty of a long journey."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "The figures represent a broad pioneer experience rather than an identified family or company.",
+      "after": "Each pioneer family had its own experience."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This symbolic composition brings together His teaching and the hope of His Resurrection rather than portraying one recorded event.",
+      "after": "Consider how His teaching and Resurrection bring hope."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This imagined community reflects focusChrist's invitation to learn about Jesus Christ with care for the people who bring their questions.",
+      "after": "We invite you to learn about Jesus Christ with care for the people who bring their questions."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "The brightness gathering around Him gives visual form to Christian hope in a Savior who rose from the tomb and lives.",
+      "after": "Consider the hope Christians find in a Savior who rose from the tomb and lives."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This imagined contemporary scene connects priesthood study with careful, reverent service.",
+      "after": "Notice the care they give to this reverent service."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This imagined contemporary scene invites reflection on service offered with humility and care.",
+      "after": "Consider how humility and care shape service to another person."
+    },
+    {
+      "path": "hero-details.js",
+      "before": " This is an imagined modern study scene.",
+      "after": ""
+    },
+    {
+      "path": "hero-details.js",
+      "before": "The rough ground gives this devotional scene a sense of effort and companionship.",
+      "after": "Notice the rough ground beneath their feet and the steadying hand."
+    },
+    {
+      "path": "hero-details.js",
+      "before": " The scene is symbolic rather than a recorded event.",
+      "after": ""
+    },
+    {
+      "path": "hero-details.js",
+      "before": " The faces, clothing, and room are an artistic interpretation of the account.",
+      "after": ""
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This interpretation pauses with His attention to her sorrow; the town, clothing, and faces are artistic choices.",
+      "after": "Notice how He responds to her sorrow."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "Follow their words beyond this imagined moment; the setting, faces, and clothing are artistic interpretations.",
+      "after": "Follow their conversation and the questions she asks."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This devotional scene invites a pause with Doctrine and Covenants 6:36.",
+      "after": "Pause with Doctrine and Covenants 6:36."
+    },
+    {
+      "path": "hero-details.js",
+      "before": " It does not portray the historical setting of the revelation.",
+      "after": ""
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This is a devotional interpretation of discipleship, not a reconstruction of a named encounter. ",
+      "after": ""
+    },
+    {
+      "path": "hero-details.js",
+      "before": " The shoreline, boat, and faces are artistic interpretations.",
+      "after": ""
+    },
+    {
+      "path": "hero-details.js",
+      "before": "keeping the scripture’s covenant context distinct from this imagined modern scene.",
+      "after": "considering the promises and responsibilities of that covenant."
+    },
+    {
+      "path": "hero-details.js",
+      "before": " This is an imagined contemporary reading scene.",
+      "after": ""
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This interpretation places him near the publication of the Book of Mormon in 1830, when he was twenty-four. The pose and surroundings are imagined.",
+      "after": "Joseph was twenty-four when the Book of Mormon was published in 1830."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This imagined family moment invites reflection on patient daily teaching.",
+      "after": "What might patient teaching look like in your home today?"
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This modern interpretation leads into study of family history and temple service.",
+      "after": "Explore how remembering our families connects with temple service."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This devotional portrait invites a quiet moment with Jesus Christ.",
+      "after": "Pause for a quiet moment with Jesus Christ."
+    },
+    {
+      "path": "hero-details.js",
+      "before": "; the garden, gesture, and expression are artistic interpretation.",
+      "after": "."
+    },
+    {
+      "path": "hero-details.js",
+      "before": " The landscape and moment shown here are artistic interpretations.",
+      "after": ""
+    },
+    {
+      "path": "hero-details.js",
+      "before": "This devotional scene is an invitation to consider the Holy Ghost’s witness of the Savior; it does not depict a named, recorded conversation.",
+      "after": "As you consider their attentive conversation, turn to the Savior’s promise that the Holy Ghost will testify of Him."
+    }
+  ],
+  "hero_final_polish": [
+    "Removed duplicated Ask question invitation from first paragraph.",
+    "Removed duplicated Holy Ghost witness invitation from first paragraph; exact John15:26 invitation remains in second."
+  ],
+  "preserved_material_uncertainties": [
+    "Melchizedek priesthood conferral date is not precisely established; witnesses and sequence remain distinct.",
+    "Book of Mormon geography is not settled by artwork; official-source discussion of geographical proposals remains.",
+    "Incomplete manuscript evidence and editorial reconstruction retain explicit uncertainty.",
+    "Mary Whitmer report remains a later family recollection, not her contemporary written account.",
+    "North Platte accounts do not report Christ or angels appearing at the crossing; devotional significance remains clearly separate.",
+    "Joseph and Hyrum masks cannot establish hair, eye or skin color or living facial expression; historical artifact evidence remains distinct from portraits.",
+    "Liberty Jail revelation passages do not report a visible appearance of Christ.",
+    "Unrecorded words of the prayer in3Nephi17 remain unprovided.",
+    "Parables remain teaching stories; talents money vs modern skills, unavailable return dates, and compassion without promised outcomes preserved."
+  ],
+  "active_contract_updates": [
+    "Good Shepherd20260927 successor preserves20260923 historical review; two tests retain exactcopy equality.",
+    "Mission approved singleparagraph baseline overlay keeps fulltree equality and adds rejected-wording mutation test.",
+    "Active artwork caption/alt mirrors only; artwork asset bytes and source destinations unchanged.",
+    "Section panel inventory adds previously missing HolyGhost route/fourcards/fourreflectionpanels; no style or classification weakening."
+  ],
+  "verification": [
+    "Enhanced media voice PASS",
+    "Static content124documentsPASS",
+    "Gallery805artworks816occurrences current",
+    "Search current",
+    "Jesus journey strict source/build checks PASS",
+    "Holy Ghost8chapters16originals8ChristPASS",
+    "Fivepicture63placementsPASS",
+    "BookofMormon45originals22storystopsPASS",
+    "Artstudyfourfeaturedpages plusEvidences/ChurchHistoryPASS",
+    "Mission5tests including unreviewedcaptionmutationPASS",
+    "Sitewideartwork842protectedimagesPASS"
+  ],
+  "limits": [
+    "No new artwork, factual narrative claims, source URL changes, or production publication by Fermi.",
+    "This receipt documents source-level language review and automated consistency, not fresh visual approval of every page."
+  ]
+}

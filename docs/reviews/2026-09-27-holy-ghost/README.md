@@ -11,6 +11,8 @@ Owner authorized the new Holy Ghost study, source-grounded photorealistic artwor
 - Long incoming/edited Ask text fits its growing textarea, including the reported Come, Follow Me question. Actual measured clientHeight/scrollHeight both117 and clientWidth/scrollWidth both304 at390px; narrow320px check measured159px height with no hidden rows. The established interaction workflow now exercises desktop, phone and enlarged-text composer cases with provider requests mocked.
 - Bednar recording identity verified against the owner's channel and supplied transcript. Actual native preview loads. In the local in-app browser the YouTube player did not emit ready; the real15-second timeout restored the preview, readable fallback and direct YouTube link. Embedded playback is NOT verified by this result. Supporting official talk thumbnails loaded during phone review.
 - Source/structural, content-ledger, Ask and media regression results are distinct from hosted CI and public deployment. See exact command receipt; hosted final-head result must be recorded separately.
+- M052 phone layout: the two foundational links in Answers use the existing wrapping action group, with an 11px CSS gap and no literal middle-dot separator. Albert inspected the actual 390px rendering: both labels remain visible and separate, including focus lift. Both original destinations remain intact.
+- Actual Holy Ghost phone menu now displays its current-study label; Escape closes the menu. The baptism picture's full-size viewer and nested Matthew 3:13–17 reader return correctly to the artwork, and Continue Lesson closes the dialogs and focuses the original reading section.
 
 ## Art standard
 

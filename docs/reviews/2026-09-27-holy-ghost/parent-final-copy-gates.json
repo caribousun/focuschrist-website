@@ -1,0 +1,72 @@
+[
+  {
+    "command": "python tools/build_jesus_parent.py --strict --check",
+    "exit_code": 0,
+    "output": "Parent journey updated; original hero and study retained. strict=True. Publication and complete destination verification are separate.\n"
+  },
+  {
+    "command": "python tools/mission_enrichment_qa.py",
+    "exit_code": 0,
+    "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.094s\n\nOK\n"
+  },
+  {
+    "command": "python tools/build_site_search.py --check",
+    "exit_code": 0,
+    "output": "SEARCH INDEX PASS: public pages, sections and artwork are current\n"
+  },
+  {
+    "command": "python tools/site_search_qa.py",
+    "exit_code": 0,
+    "output": "SEARCH QA PASS: 119 public pages, 1900 valid destinations; hidden/internal content excluded\n"
+  },
+  {
+    "command": "python tools/section_panel_surface_qa.py --self-test",
+    "exit_code": 0,
+    "output": "Panel surface self-test PASS: descendant scope and unknown-panel discovery.\nSECTION PANEL QA PASS: 120 canonical pages, 67 classified panel-like classes, 63 shared selectors. Rendered QA remains separate.\n"
+  },
+  {
+    "command": "python tools/build_art_gallery.py --check",
+    "exit_code": 0,
+    "output": "Art gallery inventory is current.\n"
+  },
+  {
+    "command": "python tools/art_study_enrichment_qa.py",
+    "exit_code": 0,
+    "output": "Art study enrichment QA passed: 4 featured pages with four preserved plus manifest-bound supporting additions each; exact sources, reviewed hashes, reflection/resource/onward paths, and Evidences/Church History contracts verified.\n"
+  },
+  {
+    "command": "python tools/book_of_mormon_stories_qa.py",
+    "exit_code": 0,
+    "output": "Book of Mormon story QA passed: 45 unique originals, 24 depicting Christ, 39 new reviewed pictures, 22 story stops; preserved hashes, decoded/source uniqueness, exact scripture selections, responsive placements, and original navigation.\n"
+  },
+  {
+    "command": "python tools/static_content_audit.py",
+    "exit_code": 0,
+    "output": "STATIC CONTENT AUDIT PASS: 124 documents (118 verified, 6 non-source-dependent)\n"
+  },
+  {
+    "command": "python tools/media_voice_qa.py",
+    "exit_code": 0,
+    "output": "Media voice QA passed: 122 pages; 769 captions, 147 expanded details, 113 resource descriptions, 15 media introductions, 1944 alt texts, 40 hero dialogs and 805 gallery records audited.\n"
+  },
+  {
+    "command": "python tools/media_voice_qa_test.py",
+    "exit_code": 0,
+    "output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.009s\n\nOK\n"
+  },
+  {
+    "command": "node --test tools/media_voice_records.test.cjs",
+    "exit_code": 0,
+    "output": "✔ audit includes later assigned dialog paragraphs without running page code (1.8107ms)\n✔ changed record boundary fails closed (0.2475ms)\n✔ malformed record fails closed (0.7218ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 69.7655\n"
+  },
+  {
+    "command": "node tools/art_study_picture_runtime_qa.js",
+    "exit_code": 0,
+    "output": "Art study picture DOM QA passed: 4 featured paths, 20 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.\n"
+  },
+  {
+    "command": "node tools/study_navigation_runtime_qa.js",
+    "exit_code": 0,
+    "output": "STUDY NAVIGATION RUNTIME QA PASS: all 28 discovered topic pills, article routes, CFM/Conference labels, hash restoration, preserved parent links, and duplicate prevention.\n"
+  }
+]

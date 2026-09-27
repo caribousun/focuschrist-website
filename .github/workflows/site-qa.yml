@@ -70,6 +70,8 @@ jobs:
           python tools/site_qa.py
           python tools/site_flow_qa.py
           python tools/media_voice_qa.py
+          python tools/media_voice_qa_test.py
+          node --test tools/media_voice_records.test.cjs
 
       - name: Run Come Follow Me hub QA
         run: |

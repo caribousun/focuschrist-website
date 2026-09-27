@@ -4,17 +4,17 @@
     const records = {
         'holy-ghost': {
             title: 'A witness of Jesus Christ',
-            paragraphs: ['Jesus and a disciple sit beneath an olive tree, looking at one another as they talk. This devotional scene is an invitation to consider the Holy Ghost’s witness of the Savior; it does not depict a named, recorded conversation.', 'In John 15:26, Jesus teaches that the Comforter will testify of Him. Read that promise, then explore how the Holy Ghost helps us learn of Christ and follow Him.'],
+            paragraphs: ['Jesus and a disciple sit beneath an olive tree, looking at one another as they talk.', 'In John 15:26, Jesus teaches that the Comforter will testify of Him. Read that promise, then explore how the Holy Ghost helps us learn of Christ and follow Him.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p26#p26', sourceLabel: 'Read John 15:26', study: 'answers/holy-ghost.html#who-is-the-holy-ghost', studyLabel: 'Study the Holy Ghost'
         },
         'birth-of-christ': {
             title: 'Mary lays her newborn Son in a manger',
-            paragraphs: ['Mary lays her swaddled newborn in a manger. This tender moment turns our attention to the birth of Jesus Christ in Bethlehem.', 'Read Luke 2:6–7, then follow the scriptural promises and witnesses surrounding His birth. The setting is an artistic interpretation of the account.'],
+            paragraphs: ['Mary lays her swaddled newborn in a manger. This tender moment turns our attention to the birth of Jesus Christ in Bethlehem.', 'Read Luke 2:6–7, then follow the scriptural promises and witnesses surrounding His birth. Notice what Luke tells us about where Mary laid Him.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?lang=eng&id=p6-p7#p6', sourceLabel: 'Read Luke 2:6–7', study: 'birth-of-christ.html#promised-son', studyLabel: 'Begin the Birth of Christ Study'
         },
         atonement: {
             title: 'In Gethsemane',
-            paragraphs: ['Beneath the olive branches, Jesus kneels beside a rock with His hands clasped in prayer. His bowed head draws us into a quiet moment of reverence.', 'Read His prayer to the Father in Luke 22, then follow the study of His Atonement, Resurrection, and redeeming love. This scene is a devotional artistic interpretation.'],
+            paragraphs: ['Beneath the olive branches, Jesus kneels beside a rock with His hands clasped in prayer. His bowed head draws us into a quiet moment of reverence.', 'Read His prayer to the Father in Luke 22, then follow the study of His Atonement, Resurrection, and redeeming love. Consider His willingness to carry out the Father’s will.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/luke/22?lang=eng&id=p39-p46#p39', sourceLabel: 'Read Luke 22:39–46', study: 'atonement.html#before-the-world', studyLabel: 'Begin the Atonement Study'
         },
         'joseph-likeness': {
@@ -24,7 +24,7 @@
         },
         'bom-evidences': {
             title: 'Listen, Learn, and Come unto Christ',
-            paragraphs: ['Jesus Christ turns toward a woman while others listen nearby. The shared gaze places patient attention at the heart of this imagined gathering.', 'Let the warmth of the encounter invite you into the record itself: read the Savior’s words, bring sincere questions, and consider how your study can lead to a closer relationship with Him.'],
+            paragraphs: ['Jesus Christ turns toward a woman while others listen nearby. Notice the patient attention in their shared gaze.', 'Let the warmth of the encounter invite you into the record itself: read the Savior’s words, bring sincere questions, and consider how your study can lead to a closer relationship with Him.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng', sourceLabel: 'Read 3 Nephi 11', study: 'book-of-mormon-evidences.html#come-to-christ', studyLabel: 'Explore the Witness of Christ'
         },
         home: {
@@ -34,22 +34,22 @@
         },
         ask: {
             title: 'An Invitation to Ask and Listen',
-            paragraphs: ['Christ sits among attentive listeners above a sunlit lake, extending an open hand. This imagined teaching scene gives visual form to an invitation to bring sincere questions and make room to listen.', 'Notice the space between speaking and receiving an answer. As you study Matthew 7:7, consider one question you would like to explore through prayer, scripture, and patient reflection.'],
+            paragraphs: ['Christ sits among attentive listeners above a sunlit lake, extending an open hand.', 'Notice the space between speaking and receiving an answer. As you study Matthew 7:7, consider one question you would like to explore through prayer, scripture, and patient reflection.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/7.7?lang=eng', sourceLabel: 'Read Matthew 7:7', study: 'answers/prayer-and-personal-revelation.html', studyLabel: 'Explore Prayer and Personal Revelation'
         },
         answers: {
-            title: 'Make Room for Study',
+            title: 'Take Time to Study',
             paragraphs: ['Open scriptures, a notebook, and a quiet conversation overlook a lake at sunset. Together, these details suggest that seeking understanding can include careful reading, recording questions, and listening to another person.', 'The scene offers a place to pause without requiring every question to be settled at once. Read James 1 alongside your own questions, then explore how prayer and thoughtful study can work together.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/james/1?lang=eng', sourceLabel: 'Read James 1', study: 'answers/prayer-and-personal-revelation.html', studyLabel: 'Explore Prayer and Personal Revelation'
         },
         art: {
             title: 'Remember Him Through Art',
-            paragraphs: ['Brushes, sketches, and a landscape painting fill a sunlit studio. A framed image of Christ and a temple beyond the window connect artistic attention with worship, beauty, and remembrance.', 'The imagined setting invites you to notice which details turn your thoughts toward the Savior. Continue from that impression into The Living Christ, allowing its testimony to guide your study beyond the image.'],
+            paragraphs: ['Brushes, sketches, and a landscape painting fill a sunlit studio. A framed image of Christ and a temple beyond the window connect artistic attention with worship, beauty, and remembrance.', 'Notice which details turn your thoughts toward the Savior. Continue from that impression into The Living Christ, allowing its testimony to guide your study beyond the image.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng', sourceLabel: 'Read The Living Christ', study: 'art-study/the-living-christ.html', studyLabel: 'Explore the Living Christ Artwork'
         },
         mission: {
             title: 'His Work Throughout the World',
-            paragraphs: ['Christ stands at the center of a symbolic gathering of modern missionaries and neighbors. Teaching, listening, cleanup, and food distribution appear beneath a subtle world map, bringing several forms of service into one composition.', "The scene connects an invitation to know Christ with attentive care for people. Read the Savior's commission in Matthew 28, then consider how to share faith with respect for another person's questions, circumstances, and choices."],
+            paragraphs: ['Christ stands among modern missionaries and neighbors. Around Him, people teach, listen, clean, and share food beneath a subtle world map.', "The scene connects an invitation to know Christ with attentive care for people. Read the Savior's commission in Matthew 28, then consider how to share faith with respect for another person's questions, circumstances, and choices."],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/matt/28?lang=eng', sourceLabel: 'Read Matthew 28', study: 'answers/jesus-christ-latter-day-saint-beliefs.html', studyLabel: 'Explore Faith in Jesus Christ'
         },
         history: {
@@ -59,22 +59,22 @@
         },
         pioneers: {
             title: 'Faith Across the Journey',
-            paragraphs: ['A family moves a handcart across open country while covered wagons continue toward distant mountains. This interpretive scene draws attention to shared effort, family ties, and the uncertainty of a long journey.', 'The figures represent a broad pioneer experience rather than an identified family or company. Continue into historical sources and individual accounts, where names, dates, hardships, and choices give the people of the migration their own voices.'],
+            paragraphs: ['A family moves a handcart across open country while covered wagons continue toward distant mountains. Consider the shared effort, family ties, and uncertainty of a long journey.', 'Each pioneer family had its own experience. Continue into historical sources and individual accounts, where names, dates, hardships, and choices give the people of the migration their own voices.'],
             source: 'https://www.churchofjesuschrist.org/study/church-history?lang=eng', sourceLabel: 'Explore Church History Sources', study: 'church-history.html', studyLabel: 'Continue Studying Church History'
         },
         watch: {
             title: 'Hear Him and Continue Learning',
-            paragraphs: ['Christ welcomes listeners beside the water, while an open tomb appears at the edge of the scene. This symbolic composition brings together His teaching and the hope of His Resurrection rather than portraying one recorded event.', 'A moving image can begin reflection that continues after viewing. Read John 20 and consider what its resurrection witnesses actually report, then explore how faith in the living Christ shapes discipleship.'],
+            paragraphs: ['Christ welcomes listeners beside the water, while an open tomb appears at the edge of the scene. Consider how His teaching and Resurrection bring hope.', 'A moving image can begin reflection that continues after viewing. Read John 20 and consider what its resurrection witnesses actually report, then explore how faith in the living Christ shapes discipleship.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng', sourceLabel: 'Read John 20', study: 'answers/jesus-christ-latter-day-saint-beliefs.html', studyLabel: "Explore the Savior's Life and Mission"
         },
         about: {
             title: 'A Place to Study Together',
-            paragraphs: ['Open scriptures and a notebook overlook a gathering place where people approach one another beneath the trees. The warm light and distant temple suggest a setting for study, conversation, and belonging.', "This imagined community reflects focusChrist's invitation to learn about Jesus Christ with care for the people who bring their questions. Begin with His life and teachings, then choose a study that speaks to your present needs."],
+            paragraphs: ['Open scriptures and a notebook overlook a gathering place where people approach one another beneath the trees. The warm light and distant temple suggest a setting for study, conversation, and belonging.', "We invite you to learn about Jesus Christ with care for the people who bring their questions. Begin with His life and teachings, then choose a study that speaks to your present needs."],
             source: 'https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng', sourceLabel: 'Study Jesus Christ', study: 'answers/jesus-christ-latter-day-saint-beliefs.html', studyLabel: 'Explore Faith in Jesus Christ'
         },
         'living-christ-art': {
             title: 'The Living Christ',
-            paragraphs: ['A radiant portrait centers the smiling face of Jesus Christ against a field of golden light. The brightness gathering around Him gives visual form to Christian hope in a Savior who rose from the tomb and lives.', 'Let the image lead into the witnesses of John 20: Mary hears Jesus call her by name, the disciples see His wounds, and Thomas receives an invitation to believe.'],
+            paragraphs: ['A radiant portrait centers the smiling face of Jesus Christ against a field of golden light. Consider the hope Christians find in a Savior who rose from the tomb and lives.', 'Let the image lead into the witnesses of John 20: Mary hears Jesus call her by name, the disciples see His wounds, and Thomas receives an invitation to believe.'],
             source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng', sourceLabel: 'Read John 20', study: 'art-study/the-living-christ.html#scripture-study', studyLabel: 'Begin the Scripture Study'
         },
         'good-shepherd-art': {
@@ -108,7 +108,7 @@
     },
     "topic-aaronic": {
     "title": "Prepare to serve at the sacrament table",
-    "paragraphs": ["Two young men attend to the bread and white cloth at a chapel’s sacrament table. This imagined contemporary scene connects priesthood study with careful, reverent service. Read John the Baptist’s words, then consider how preparation can help us remember Jesus Christ."],
+    "paragraphs": ["Two young men attend to the bread and white cloth at a chapel’s sacrament table. Notice the care they give to this reverent service. Read John the Baptist’s words, then consider how preparation can help us remember Jesus Christ."],
     "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/13?lang=eng",
     "sourceLabel": "Read Doctrine and Covenants 13",
     "study": "answers/aaronic-priesthood-restoration.html#begin-study",
@@ -116,7 +116,7 @@
 },
     "topic-melchizedek": {
     "title": "A blessing offered with care",
-    "paragraphs": ["Two men bow their heads as they offer a priesthood blessing to a seated man. This imagined contemporary scene invites reflection on service offered with humility and care. Follow the historical witnesses in this study and consider how the Lord’s counsel shapes the exercise of authority."],
+    "paragraphs": ["Two men bow their heads as they offer a priesthood blessing to a seated man. Consider how humility and care shape service to another person. Follow the historical witnesses in this study and consider how the Lord’s counsel shapes the exercise of authority."],
     "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng",
     "sourceLabel": "Read Doctrine and Covenants 128",
     "study": "answers/melchizedek-priesthood-restoration.html#begin-study",
@@ -126,7 +126,7 @@
         "title": "Two witnesses in one study",
         "paragraphs": [
             "A reader follows a passage with her finger while two open scripture volumes rest before her.",
-            "The quiet comparison invites careful reading of the Bible and the Book of Mormon. Read 2 Nephi 29:8, then consider how each record bears witness of Jesus Christ. This is an imagined modern study scene."
+            "The quiet comparison invites careful reading of the Bible and the Book of Mormon. Read 2 Nephi 29:8, then consider how each record bears witness of Jesus Christ."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/29?lang=eng",
         "sourceLabel": "Read 2 Nephi 29:8",
@@ -137,7 +137,7 @@
         "title": "Someone stays beside you",
         "paragraphs": [
             "A woman holds a small knitted cap while a friend stays close beside her.",
-            "The cap and patient company give room to sorrow without asking it to end. Moroni 8 teaches of Christ’s mercy toward little children; this imagined moment of support does not explain the cause of any family’s loss."
+            "The cap and patient company give room to sorrow without asking it to end. Moroni 8 teaches of Christ’s mercy toward little children; we can offer patient company without claiming to know why a family has suffered a loss."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/8?lang=eng",
         "sourceLabel": "Read Moroni 8",
@@ -159,7 +159,7 @@
         "title": "A steady hand on a difficult path",
         "paragraphs": [
             "Jesus steadies a weary man on a rain-soaked path and listens as their eyes meet.",
-            "The rough ground gives this devotional scene a sense of effort and companionship. Read Christ’s invitation in Matthew 11:28–30, then consider the spiritual and practical help available during a trial. The scene is symbolic rather than a recorded event."
+            "Notice the rough ground beneath their feet and the steadying hand. Read Christ’s invitation in Matthew 11:28–30, then consider the spiritual and practical help available during a trial."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/11?lang=eng",
         "sourceLabel": "Read Matthew 11:28–30",
@@ -170,7 +170,7 @@
         "title": "Jesus teaches of His Father",
         "paragraphs": [
             "Jesus turns toward Philip in a lamplit room, speaking with an open hand.",
-            "In John 14:8–10, Philip asks about the Father, and Jesus explains His relationship with Him. Read their exchange in context. The faces, clothing, and room are an artistic interpretation of the account."
+            "In John 14:8–10, Philip asks about the Father, and Jesus explains His relationship with Him. Read their exchange in context."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng",
         "sourceLabel": "Read John 14:8–10",
@@ -181,7 +181,7 @@
         "title": "Compassion at Nain",
         "paragraphs": [
             "Jesus meets a grieving widow outside the town while mourners wait nearby.",
-            "Luke 7:11–15 records His compassion for the widow of Nain before He restores her son to life. This interpretation pauses with His attention to her sorrow; the town, clothing, and faces are artistic choices."
+            "Luke 7:11–15 records His compassion for the widow of Nain before He restores her son to life. Notice how He responds to her sorrow."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/7?lang=eng",
         "sourceLabel": "Read Luke 7:11–15",
@@ -192,7 +192,7 @@
         "title": "Living water at the well",
         "paragraphs": [
             "Jesus and a woman speak beside a stone well, with her water jar close at hand.",
-            "John 4:7–26 records the Savior’s conversation with a Samaritan woman about living water and worship. Follow their words beyond this imagined moment; the setting, faces, and clothing are artistic interpretations."
+            "John 4:7–26 records the Savior’s conversation with a Samaritan woman about living water and worship. Follow their conversation and the questions she asks."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/4?lang=eng",
         "sourceLabel": "Read John 4:7–26",
@@ -203,7 +203,7 @@
         "title": "Look to Him while the way unfolds",
         "paragraphs": [
             "Jesus stands along an olive-lined path with a hand over His heart and a calm, attentive expression.",
-            "This devotional scene invites a pause with Doctrine and Covenants 6:36. Read the verse with its surrounding counsel, then consider what turning toward Christ might mean in an ordinary decision. It does not portray the historical setting of the revelation."
+            "Pause with Doctrine and Covenants 6:36. Read the verse with its surrounding counsel, then consider what turning toward Christ might mean in an ordinary decision."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng&id=p36#p36",
         "sourceLabel": "Read Doctrine and Covenants 6:36",
@@ -225,7 +225,7 @@
         "title": "Walk with Him",
         "paragraphs": [
                 "Jesus and a disciple walk beside one another, their eyes meeting as they talk. The quiet exchange invites us to consider what it means to follow Him.",
-                "This is a devotional interpretation of discipleship, not a reconstruction of a named encounter. Read the invitation to follow Jesus in Luke 9:23, then explore the message and scripture studies."
+                "Read the invitation to follow Jesus in Luke 9:23, then explore the message and scripture studies."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/9?lang=eng&id=p23#p23",
         "sourceLabel": "Read Luke 9:23",
@@ -247,7 +247,7 @@
         "title": "A living Savior on the shore",
         "paragraphs": [
             "The risen Jesus stands on the shore at dawn, looking toward the fishermen on the water.",
-            "John 21:4–14 records His appearance by the Sea of Tiberias and the meal He shares with His disciples. The shoreline, boat, and faces are artistic interpretations. Read the account as one witness of the Savior’s life after death."
+            "John 21:4–14 records His appearance by the Sea of Tiberias and the meal He shares with His disciples. Read the account as one witness of the Savior’s life after death."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/21?lang=eng",
         "sourceLabel": "Read John 21:4–14",
@@ -258,7 +258,7 @@
         "title": "Care through the years",
         "paragraphs": [
             "An older couple share a small moment of care beneath a flowering tree.",
-            "Their attentive faces invite reflection on love practiced through the years. Continue into the teaching about eternal marriage in Doctrine and Covenants 132:19, keeping the scripture’s covenant context distinct from this imagined modern scene."
+            "Their attentive faces invite reflection on love practiced through the years. Continue into the teaching about eternal marriage in Doctrine and Covenants 132:19, considering the promises and responsibilities of that covenant."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/132?lang=eng",
         "sourceLabel": "Read Doctrine and Covenants 132:19",
@@ -269,7 +269,7 @@
         "title": "Begin with the record",
         "paragraphs": [
             "A traveler reads the Book of Mormon while daylight enters the train window.",
-            "An ordinary journey becomes time to consider the record. Read Moroni 10:3–5, then follow its invitation to remember, ponder, and ask God. This is an imagined contemporary reading scene."
+            "An ordinary journey becomes time to consider the record. Read Moroni 10:3–5, then follow its invitation to remember, ponder, and ask God."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng",
         "sourceLabel": "Read Moroni 10:3–5",
@@ -280,7 +280,7 @@
         "title": "Joseph and the published record",
         "paragraphs": [
             "Joseph Smith holds a small bound book outside an early printing shop.",
-            "This interpretation places him near the publication of the Book of Mormon in 1830, when he was twenty-four. The pose and surroundings are imagined. Continue with Joseph Smith—History and the linked historical sources to examine his own account and the record around it."
+            "Joseph was twenty-four when the Book of Mormon was published in 1830. Continue with Joseph Smith—History and the linked historical sources to examine his own account and the record around it."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng",
         "sourceLabel": "Read Joseph Smith—History",
@@ -291,7 +291,7 @@
         "title": "Love in the work of a day",
         "paragraphs": [
             "Three generations gather around the kitchen counter to work the dough together.",
-            "Their shared attention gives a familiar household task a sense of care and belonging. Mosiah 4:14–15 teaches parents to help children love and serve one another. This imagined family moment invites reflection on patient daily teaching."
+            "Their shared attention gives a familiar household task a sense of care and belonging. Mosiah 4:14–15 teaches parents to help children love and serve one another. What might patient teaching look like in your home today?"
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/4?lang=eng",
         "sourceLabel": "Read Mosiah 4:14–15",
@@ -302,7 +302,7 @@
         "title": "Remembering the generations",
         "paragraphs": [
             "An older woman and a younger man study a family photograph together.",
-            "Remembering a person can begin with a name, a picture, and a story. Doctrine and Covenants 128:18 connects generations in the work of salvation. This modern interpretation leads into study of family history and temple service."
+            "Remembering a person can begin with a name, a picture, and a story. Doctrine and Covenants 128:18 connects generations in the work of salvation. Explore how remembering our families connects with temple service."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/128?lang=eng",
         "sourceLabel": "Read Doctrine and Covenants 128:18",
@@ -313,7 +313,7 @@
         "title": "He lives and ministers",
         "paragraphs": [
             "The risen Savior meets your gaze with a warm smile, one hand resting over His heart.",
-            "This devotional portrait invites a quiet moment with Jesus Christ. The Living Christ bears apostolic testimony of His Resurrection, continuing ministry, and promised return; the garden, gesture, and expression are artistic interpretation."
+            "Pause for a quiet moment with Jesus Christ. The Living Christ bears apostolic testimony of His Resurrection, continuing ministry, and promised return."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng",
         "sourceLabel": "Read The Living Christ",
@@ -324,7 +324,7 @@
         "title": "He went out to pray",
         "paragraphs": [
             "Jesus pauses alone in prayer beneath the night sky.",
-            "Luke 6:12 records that He went into a mountain and continued all night in prayer to God. The landscape and moment shown here are artistic interpretations. Read the account, then explore prayer and personal revelation with its context in view."
+            "Luke 6:12 records that He went into a mountain and continued all night in prayer to God. Read the account, then explore prayer and personal revelation with its context in view."
         ],
         "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/6?lang=eng&id=p12#p12",
         "sourceLabel": "Read Luke 6:12",

@@ -1,0 +1,39 @@
+{
+  "scope": "All Node commands extracted from current site-qa workflow; two Playwright commands and live production Ask execution excluded. Default network fetch and HTTP disabled; tests supply local mocks.",
+  "initial_results": "newton-all-offline-node-qa.json",
+  "commands_executed": 86,
+  "initial_pass": 84,
+  "initial_fail": 2,
+  "fixes": [
+    "study_navigation_runtime_qa exact third featured route/label; Holy Ghost excluded from unchanged28 grid",
+    "opening_flow_and_cards_qa42 openings including explicit Holy Ghost presence; rerunPASS"
+  ],
+  "new_behavior_regression": "Holy Ghost actual current-study navigation test fails because site-common topics map has no holy-ghost.html; parent notified for production fix.",
+  "inventory_candidate": "study-link-control-inventory-candidate.json",
+  "inventory_diff": {
+    "canonical_pages": [
+      119,
+      120
+    ],
+    "source_control_count": [
+      586,
+      629
+    ],
+    "only_added_page": "answers/holy-ghost.html",
+    "numbered_navigation_unchanged": true
+  },
+  "remaining_parent_integration": [],
+  "python_followup": "Inline scripture778links, resource coverage120pages130cards and65Answer video identities allPASS with UTF8.",
+  "final_resolution": "All original Node failures resolved; focused final15commands PASS including new HolyGhost current-study behavior and inventory. See newton-final-navigation-qa.json.",
+  "changed_paths": [
+    "tools/study_navigation_runtime_qa.js",
+    "tools/opening_flow_and_cards_qa.js",
+    "site-common.js",
+    "docs/study-link-control-inventory.json",
+    "121publicHTMLscriptcacheconsumers",
+    "tools/build_jesus_journey.py",
+    "tools/scripture_grounding_qa.py",
+    "tools/source_integrity_inventory.py",
+    "work/holy-ghost/build-page.py cacheliteral"
+  ]
+}
