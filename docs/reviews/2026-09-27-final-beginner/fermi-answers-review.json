@@ -1,0 +1,1480 @@
+{
+  "reviewer": "Fermi",
+  "date": "2026-09-27",
+  "candidate": "e0f2e714faa26018125538aca8b56c095b03f354",
+  "scope": "All 24 answers/*.html routes, Home and Answers entry paths; no nested jesus/ route re-review claimed.",
+  "authority": "Exact live Master read through connected Drive; protected foundation preserved. Parent refreshed current 00B/Focus. Owner requests bounded final beginner/cohesion review, no expansion/art.",
+  "summary": {
+    "routes": 24,
+    "all_accounted": true,
+    "internal_destination_failures": 0,
+    "required_product_repairs": 0,
+    "tone_findings": 6,
+    "external_links": "Existing verified source/release evidence reused; not a fresh HTTP validation of every external source.",
+    "rendered_limits": "This is semantic/source-path evidence. Parent independently owns current rendered route traversal. No browser coverage claimed here."
+  },
+  "entry_flow": "Home exposes Answers Library/Explore Answers/Learn by Topic and specific needs; Answers contains an entry for every reviewed route. Every route has meaningful onward study choices.",
+  "checks": [
+    {
+      "command": "custom internal file/fragment resolution across all 24 authored main sections",
+      "result": "PASS: zero missing destinations"
+    },
+    {
+      "command": "node tools/topic_artwork_onward_label_runtime_qa.js",
+      "result": "PASS: nested card/source labels/plain and empty fallback/focus return"
+    },
+    {
+      "command": "node tools/topic_artwork_sources_runtime_qa.js",
+      "result": "PASS: four real historical panels, HTTPS host boundary, query/fragment preservation and scripture routing"
+    }
+  ],
+  "preserved_boundaries": [
+    "Melchizedek exact date and order remain uncertain.",
+    "Modern Christ illustrations are not reported historical appearances; do not erase that substantive distinction merely to remove production tone.",
+    "Lectures on Faith historical role is distinct from current canon and teaching.",
+    "Original quoted/transcribed material is not a target for stylistic rewriting.",
+    "Grief, abuse, divorce and unanswered prayer retain agency, practical help and no promised emotional/spiritual outcome."
+  ],
+  "findings": [
+    {
+      "id": "F-ANS-01",
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "severity": "medium",
+      "kind": "human-voice polish",
+      "exact_current_text": [
+        "These artistic scenes follow the order in Joseph’s account. Clothing, gestures, and the precise riverbank are interpreted."
+      ],
+      "recommendation": "Remove the redundant art-production note; preserve the independently stated baptism/ordination sequence and source/date context.",
+      "product_edit_applied": false
+    },
+    {
+      "id": "F-ANS-02",
+      "route": "answers/melchizedek-priesthood-restoration.html",
+      "severity": "medium",
+      "kind": "human-voice polish",
+      "exact_current_text": [
+        "The three apostles participate in each artistic scene. Their faces, hand placement, and the order pictured are interpretations; the accounts do not describe that arrangement."
+      ],
+      "recommendation": "Humanize or remove the production framing while preserving the substantive uncertainty about date, arrangement and who received the ministry first.",
+      "product_edit_applied": false
+    },
+    {
+      "id": "F-ANS-03",
+      "route": "answers/settle-this-in-your-hearts.html",
+      "severity": "medium",
+      "kind": "human-voice polish",
+      "exact_current_text": [
+        "Before departing, Jesus touches His chosen disciples one by one and gives them power to give the Holy Ghost. This moment follows His teaching about the sacrament, prayer, and welcoming others. The gift leads into service. The picture’s precise placement of His hand is an artistic choice; the passage records His touch and the authority He gives."
+      ],
+      "recommendation": "Keep the scripture teaching about touch/authority; omit commentary about how the artwork was staged.",
+      "product_edit_applied": false
+    },
+    {
+      "id": "F-ANS-04",
+      "route": "answers/settle-this-in-your-hearts.html",
+      "severity": "medium",
+      "kind": "human-voice polish",
+      "exact_current_text": [
+        "A settled pattern can be small enough to repeat: read a passage, ask what it says, write a question, and return the next day. Alma’s teaching about small and simple means offers a useful companion to that practice. This present-day scene illustrates shared study; the women are not people from a recorded historical event."
+      ],
+      "recommendation": "Describe the visible shared study naturally; do not invent a historical event or identities.",
+      "product_edit_applied": false
+    },
+    {
+      "id": "F-ANS-05",
+      "route": "answers/settle-this-in-your-hearts.html",
+      "severity": "low",
+      "kind": "human-voice polish",
+      "exact_current_text": [
+        "The Lord’s instruction to build His house in Kirtland called for a real response from people with limited resources. The temple’s history includes labor, sacrifice, and shared effort. These unnamed workers are an illustration of that effort. Consider how a conviction becomes visible through patient work alongside other people."
+      ],
+      "recommendation": "Omit the redundant production sentence while retaining historical labor context.",
+      "product_edit_applied": false
+    },
+    {
+      "id": "F-ANS-06",
+      "route": "answers/what-is-the-book-of-mormon.html",
+      "severity": "medium",
+      "kind": "human-voice polish",
+      "exact_current_text": [
+        "Joseph receives the plates on September 22, 1827, after years of preparation. Moroni charges him to care for what has been entrusted to him. This scene imagines that moment of trust as the ancient record begins its journey toward new readers."
+      ],
+      "recommendation": "Replace or omit the imagined-scene production phrase; retain the source-grounded plates/preparation teaching.",
+      "product_edit_applied": false
+    }
+  ],
+  "routes": [
+    {
+      "route": "answers/aaronic-priesthood-restoration.html",
+      "sha256": "d1ac16f44f679a0ae1aa1405b9a557c2a623cfd3484a43197bdb934bc20135ef",
+      "disposition": "PASS navigation/coherence; tone finding",
+      "entry_labels": [
+        "Aaronic Priesthood"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Clear account, baptism/ordination order, source notes and complementary Melchizedek route; remaining production-note tone.",
+      "onward_actions": [
+        {
+          "label": "Open this illustrated study →",
+          "href": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-prayer"
+        },
+        {
+          "label": "Read the Church History Topics account and its source notes",
+          "href": "https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-aaronic-priesthood?lang=eng"
+        },
+        {
+          "label": "Study the Melchizedek Priesthood",
+          "href": "melchizedek-priesthood-restoration.html"
+        },
+        {
+          "label": "The restored Church of Jesus Christ",
+          "href": "restored-church-of-jesus-christ.html"
+        },
+        {
+          "label": "Return to Church History",
+          "href": "../church-history.html"
+        },
+        {
+          "label": "Ask about this study",
+          "href": "../ask.html?art=Aaronic+Priesthood&topic=Aaronic+Priesthood+scripture+and+history+study&return=%2Fanswers%2Faaronic-priesthood-restoration.html%23guided-practice#ask-question"
+        },
+        {
+          "label": "Choose another Answers topic",
+          "href": "../answers.html#answers-find"
+        }
+      ],
+      "finding_ids": [
+        "F-ANS-01"
+      ],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/abrahamic-covenant.html",
+      "sha256": "809238ab60f3fa3d9e600cdba4204bbc0c322dd22b02f25ae218e41116c7f273",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Abrahamic Covenant"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 10,
+      "chapters": [
+        {
+          "label": "A promise to live by",
+          "anchor": "#a-promise-to-live-by",
+          "heading": "A promise to live by"
+        },
+        {
+          "label": "Abraham and Sarah learn to trust",
+          "anchor": "#abraham-and-sarah",
+          "heading": "Abraham and Sarah learn to trust"
+        },
+        {
+          "label": "A blessing for every family",
+          "anchor": "#every-family",
+          "heading": "A blessing for every family"
+        },
+        {
+          "label": "Faithful through the generations",
+          "anchor": "#god-remembers",
+          "heading": "Faithful through the generations"
+        },
+        {
+          "label": "Jacob’s dream at Bethel",
+          "anchor": "#jacob-at-bethel",
+          "heading": "Jacob’s dream at Bethel"
+        },
+        {
+          "label": "Jacob receives the name Israel",
+          "anchor": "#jacob-becomes-israel",
+          "heading": "Jacob receives the name Israel"
+        },
+        {
+          "label": "Jesus Christ at the heart of the promise",
+          "anchor": "#christ-at-the-heart",
+          "heading": "Jesus Christ at the heart of the promise"
+        },
+        {
+          "label": "The risen Lord speaks of the covenant",
+          "anchor": "#risen-lord",
+          "heading": "The risen Lord speaks of the covenant"
+        },
+        {
+          "label": "Promises carried into our day",
+          "anchor": "#our-day",
+          "heading": "Promises carried into our day"
+        },
+        {
+          "label": "Nearer to Him, bound to one another",
+          "anchor": "#nearer-to-him",
+          "heading": "Nearer to Him, bound to one another"
+        }
+      ],
+      "sequence_type": "chapter reader",
+      "assessment": "Ten chapters connect Abraham/Sarah, Jacob, Christ and present covenant discipleship; named figures and time periods remain distinct.",
+      "onward_actions": [
+        {
+          "label": "All Will Be Well Because of Temple Covenants",
+          "href": "https://www.churchofjesuschrist.org/media/video/2024-04-1080-henry-b-eyring?lang=eng"
+        },
+        {
+          "label": "Jesus Christ",
+          "href": "/answers/jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Temple study",
+          "href": "/answers/why-latter-day-saints-build-temples.html"
+        },
+        {
+          "label": "Eternal marriage",
+          "href": "/answers/what-is-eternal-marriage.html"
+        },
+        {
+          "label": "Sharing the gospel",
+          "href": "/missionary.html"
+        },
+        {
+          "label": "The Atonement",
+          "href": "/atonement.html"
+        },
+        {
+          "label": "Ask about this study",
+          "href": "/ask.html?study=Abrahamic+Covenant&topic=living+the+Abrahamic+covenant+through+Jesus+Christ&return=%2Fanswers%2Fabrahamic-covenant.html%23a-promise-to-live-by#ask-question"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/are-latter-day-saints-christian.html",
+      "sha256": "c963c1da0a03cd873b41f8935d9c506df3abebd9d23307c4ce335af341dd7baf",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Christian Identity",
+        "Are Latter-day Saints Christian? Why Latter-day Saints identify as Christians, what they share with other Christians, and where important doctrinal differences remain.",
+        "Christian identity, then the Savior’s mission"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Respectful distinction between Christian self-identification and doctrinal differences; clear Jesus and comparative-scripture next steps.",
+      "onward_actions": [
+        {
+          "label": "Jesus Christ: Topics and Questions",
+          "href": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng"
+        },
+        {
+          "label": "Articles of Faith 1:1-4",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?id=p1-p4&lang=eng"
+        },
+        {
+          "label": "Ask a Question",
+          "href": "../ask.html#ask-question"
+        },
+        {
+          "label": "Beliefs About Jesus Christ",
+          "href": "jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Watch on YouTube",
+          "href": "https://www.youtube.com/@theRisen636"
+        },
+        {
+          "label": "Explore what Latter-day Saints believe about Jesus",
+          "href": "jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Compare the Bible and Book of Mormon",
+          "href": "bible-and-book-of-mormon-together.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/bible-and-book-of-mormon-together.html",
+      "sha256": "90eeafda298badb0433de63f8a295dcc52a3b01989c87d0640ed6255cd0e8594",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Bible & Book of Mormon",
+        "How Do the Bible and Book of Mormon Work Together? Read how the Bible and Book of Mormon each bear witness of Jesus Christ."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Substantive paired readings distinguish quotation, separate events and thematic connections; next Book of Mormon study is relevant.",
+      "onward_actions": [
+        {
+          "label": "Read the Scriptures in Gospel Library",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures?lang=eng"
+        },
+        {
+          "label": "Ask a Scripture Question",
+          "href": "../ask.html?topic=Bible%20and%20Book%20of%20Mormon%20together&return=%2Fanswers%2Fbible-and-book-of-mormon-together.html#ask-question"
+        },
+        {
+          "label": "What Is the Book of Mormon?",
+          "href": "what-is-the-book-of-mormon.html"
+        },
+        {
+          "label": "Beliefs About Jesus Christ",
+          "href": "jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Learn the Book of Mormon’s purpose",
+          "href": "what-is-the-book-of-mormon.html"
+        },
+        {
+          "label": "Understand Christian similarities and differences",
+          "href": "are-latter-day-saints-christian.html"
+        },
+        {
+          "label": "Follow the Restoration’s history",
+          "href": "../church-history.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/death-of-a-child.html",
+      "sha256": "75ca1558b9f3fe8428b6f22002bd62c1aa4d917f080771700623dddbb68f25d8",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Death of a Child",
+        "Read About the Death of a Child"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Gentle beginning, no timetable imposed on grief; resurrection and practical support paths fit a vulnerable learner.",
+      "onward_actions": [
+        {
+          "label": "Ask a Question",
+          "href": "../ask.html#ask-question"
+        },
+        {
+          "label": "Life After Death",
+          "href": "what-happens-after-death.html"
+        },
+        {
+          "label": "Faith During Trials",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "",
+          "href": "../assets/page-art/exclusive/child-loss-resurrection-dawn-1536.webp"
+        },
+        {
+          "label": "Read 1 Corinthians 15",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng"
+        },
+        {
+          "label": "Explore resurrection when you feel ready",
+          "href": "what-happens-after-death.html"
+        },
+        {
+          "label": "Receive support while carrying grief",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/divorce-and-faith.html",
+      "sha256": "682438cfb000e319518360e455247f11ea69f1745ed7ee87d864d602e59eb1cc",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Divorce",
+        "Read About Divorce and Faith"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Safety, agency, belonging and practical support remain explicit; onward prayer/family paths do not pressure reconciliation.",
+      "onward_actions": [
+        {
+          "label": "Ask a Question",
+          "href": "../ask.html#ask-question"
+        },
+        {
+          "label": "Prayer and Personal Revelation",
+          "href": "prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "Faith During Trials",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "",
+          "href": "../assets/page-art/exclusive/divorce-practical-help-1536.webp"
+        },
+        {
+          "label": "Read Mosiah 18:8–9",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p8-p9&lang=eng#p8"
+        },
+        {
+          "label": "Revisit belonging and family",
+          "href": "why-families-are-important.html"
+        },
+        {
+          "label": "Seek prayer and wise decisions",
+          "href": "prayer-and-personal-revelation.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/faith-in-jesus-christ-during-trials.html",
+      "sha256": "8ece03939f77b35b3db384bf5da81e0e940d7d4e61adca2fb240cbeb5b336ac5",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Faith in Trials",
+        "How Can Faith in Jesus Christ Help During Trials? Trusting Christ through adversity without denying pain, practical needs, or the complexity of suffering.",
+        "Explore Faith During Trials"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Acknowledges pain and practical needs; scripture and onward prayer/Shepherd studies fit the question.",
+      "onward_actions": [
+        {
+          "label": "Mosiah 24:14-15",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/24?id=p14-p15&lang=eng#p14"
+        },
+        {
+          "label": "Look to Christ amid fear",
+          "href": "look-unto-me-doctrine-and-covenants-6-36.html#every-thought"
+        },
+        {
+          "label": "D&C 6:36",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p36&lang=eng#p36"
+        },
+        {
+          "label": "Pray with unresolved questions",
+          "href": "prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "Read about the Shepherd in the valley",
+          "href": "../art-study/the-good-shepherd.html"
+        },
+        {
+          "label": "John 10",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng"
+        },
+        {
+          "label": "Psalm 23",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/23?lang=eng"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/god-our-heavenly-father.html",
+      "sha256": "2c80599c1999eef9baa3c346be965525a2990d7c1da8c2728751eb061b0ad7fb",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Heavenly Father",
+        "God our Heavenly Father",
+        "Who Is God Our Heavenly Father? Study the Father’s character, His relationship to Jesus Christ, prayer, the Godhead, and our identity as His children."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 10,
+      "chapters": [
+        {
+          "label": "How knowledge of God reaches us",
+          "anchor": "#begin-study",
+          "heading": "How knowledge of God reaches us"
+        },
+        {
+          "label": "Abraham preserves what he received",
+          "anchor": "#abraham-inherited-records",
+          "heading": "Abraham preserves what he received"
+        },
+        {
+          "label": "Teaching in the ordinary hours",
+          "anchor": "#teach-along-the-way",
+          "heading": "Teaching in the ordinary hours"
+        },
+        {
+          "label": "Enos seeks for himself",
+          "anchor": "#inherited-words-personal-prayer",
+          "heading": "Enos seeks for himself"
+        },
+        {
+          "label": "Jesus reveals the Father",
+          "anchor": "#the-son-shows-the-father",
+          "heading": "Jesus reveals the Father"
+        },
+        {
+          "label": "The Restoration and learning to believe",
+          "anchor": "#restoration-witness",
+          "heading": "The Restoration and learning to believe"
+        },
+        {
+          "label": "Seek the God who gives life",
+          "anchor": "#seek-god",
+          "heading": "Seek the God who gives life"
+        },
+        {
+          "label": "Consider identity and divine purpose",
+          "anchor": "#divine-purpose",
+          "heading": "Consider identity and divine purpose"
+        },
+        {
+          "label": "Give growing faith thoughtful care",
+          "anchor": "#nourish-faith",
+          "heading": "Give growing faith thoughtful care"
+        },
+        {
+          "label": "Watch, then return to the text",
+          "anchor": "#watch-and-study",
+          "heading": "Watch, then return to the text"
+        }
+      ],
+      "sequence_type": "chapter reader",
+      "assessment": "Ten grouped chapters carry knowledge through generations, personal seeking, Christ and Restoration; historical Lectures status distinguished.",
+      "onward_actions": [
+        {
+          "label": "Joseph Smith",
+          "href": "who-was-joseph-smith.html"
+        },
+        {
+          "label": "The restored Church",
+          "href": "restored-church-of-jesus-christ.html"
+        },
+        {
+          "label": "Return to Stand Forever",
+          "href": "stand-forever.html#stand-forever"
+        },
+        {
+          "label": "Explore every study topic",
+          "href": "../answers.html"
+        },
+        {
+          "label": "Prayer and personal revelation",
+          "href": "prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "See His plan for His children",
+          "href": "plan-of-salvation.html"
+        },
+        {
+          "label": "Learn about the Holy Ghost",
+          "href": "holy-ghost.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/grief-and-faith.html",
+      "sha256": "98ee1cdc6a6eb589245b7ec7a40db1260591ef4eb088dbe8db6b9f18c6686971",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Grief",
+        "How Can Faith Meet Grief? Read about lament, Christ’s compassion, practical support, and hope that does not require sorrow to disappear on a schedule."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Lament, compassion, care and hope develop coherently without prescribing emotional recovery.",
+      "onward_actions": [
+        {
+          "label": "John 11: Lazarus, Martha, Mary, and Jesus",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/11?lang=eng"
+        },
+        {
+          "label": "Alma 7: Christ’s redeeming work and compassion",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng"
+        },
+        {
+          "label": "Mosiah 18: Bearing burdens and offering comfort",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng"
+        },
+        {
+          "label": "Life after death",
+          "href": "what-happens-after-death.html"
+        },
+        {
+          "label": "Death of a child",
+          "href": "death-of-a-child.html"
+        },
+        {
+          "label": "Faith in trials",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "Bring a study question",
+          "href": "../ask.html?topic=grief+and+the+comfort+of+Jesus+Christ#ask-question"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/holy-ghost.html",
+      "sha256": "6f57bcc191cc57cf21c4184f30e1545a862208a2633d7c567c4261e48699461d",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Holy Ghost"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 8,
+      "chapters": [
+        {
+          "label": "Who is the Holy Ghost?",
+          "anchor": "#who-is-the-holy-ghost",
+          "heading": "Who is the Holy Ghost?"
+        },
+        {
+          "label": "The Spirit in the Old Testament",
+          "anchor": "#old-testament",
+          "heading": "The Spirit in the Old Testament"
+        },
+        {
+          "label": "Jesus teaches about life in the Spirit",
+          "anchor": "#jesus-teaches",
+          "heading": "Jesus teaches about life in the Spirit"
+        },
+        {
+          "label": "A Comforter and a continuing witness",
+          "anchor": "#comforter",
+          "heading": "A Comforter and a continuing witness"
+        },
+        {
+          "label": "The Spirit helps people hear and understand",
+          "anchor": "#hear-and-understand",
+          "heading": "The Spirit helps people hear and understand"
+        },
+        {
+          "label": "The Book of Mormon: hearts, prayer, and discipleship",
+          "anchor": "#book-of-mormon",
+          "heading": "The Book of Mormon: hearts, prayer, and discipleship"
+        },
+        {
+          "label": "Restoration scripture: mind, heart, and covenant",
+          "anchor": "#mind-heart-covenant",
+          "heading": "Restoration scripture: mind, heart, and covenant"
+        },
+        {
+          "label": "Is it the Holy Ghost or me?",
+          "anchor": "#holy-ghost-or-me",
+          "heading": "Is it the Holy Ghost or me?"
+        }
+      ],
+      "sequence_type": "chapter reader",
+      "assessment": "Eight chapters distinguish Holy Ghost, gift and discernment across the canon; final Bednar/resource section leads to prayer and continued study.",
+      "onward_actions": [
+        {
+          "label": "▶",
+          "href": "https://speeches.byu.edu/talks/james-p-porter/receiving-and-recognizing-the-holy-ghost/"
+        },
+        {
+          "label": "Receiving and Recognizing the Holy Ghost",
+          "href": "https://speeches.byu.edu/talks/james-p-porter/receiving-and-recognizing-the-holy-ghost/"
+        },
+        {
+          "label": "Prayer and personal revelation",
+          "href": "/answers/prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "The Jesus Christ journey",
+          "href": "/answers/jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Come, Follow Me",
+          "href": "/come-follow-me.html"
+        },
+        {
+          "label": "Answers Library",
+          "href": "/answers.html"
+        },
+        {
+          "label": "Ask about this study",
+          "href": "/ask.html?study=Holy+Ghost&topic=learning+to+recognize+the+Holy+Ghost&return=%2Fanswers%2Fholy-ghost.html%23holy-ghost-or-me#ask-question"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/jesus-christ-latter-day-saint-beliefs.html",
+      "sha256": "4609883179ce09d7e29810850ca4e15e1637a1b0b52f938fd8128bdf72274679",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Jesus Christ",
+        "What Do Latter-day Saints Believe About Jesus Christ? Jesus Christ as Son of God, Savior and Redeemer, His Atonement, Resurrection, premortal role, and promised return."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 7,
+      "chapters": [
+        {
+          "label": "Choose a study",
+          "anchor": "#jesus-journey",
+          "heading": "Come to know Jesus Christ"
+        },
+        {
+          "label": "Before Bethlehem",
+          "anchor": "#before-his-birth",
+          "heading": "His story begins before Bethlehem"
+        },
+        {
+          "label": "Come and see",
+          "anchor": "#come-and-see",
+          "heading": "He invites people to come and see"
+        },
+        {
+          "label": "His personal care",
+          "anchor": "#individual-care",
+          "heading": "He attends to particular people"
+        },
+        {
+          "label": "His teaching",
+          "anchor": "#his-searching-teaching",
+          "heading": "His teaching reaches the heart"
+        },
+        {
+          "label": "His saving mission",
+          "anchor": "#the-saving-mission",
+          "heading": "The Savior who gives His life and lives again"
+        },
+        {
+          "label": "Follow Him today",
+          "anchor": "#follow-him-today",
+          "heading": "Follow Him in the life you are living"
+        }
+      ],
+      "sequence_type": "chapter reader",
+      "assessment": "Seven chapter groups introduce the nested journey and preserve foundational belief/encounter study; branch and onward labels fit destinations.",
+      "onward_actions": [
+        {
+          "label": "Consider faith during trials",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "Study resurrection and life after death",
+          "href": "what-happens-after-death.html"
+        },
+        {
+          "label": "God",
+          "href": "god-our-heavenly-father.html"
+        },
+        {
+          "label": "Jesus Christ",
+          "href": "jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Joseph Smith",
+          "href": "who-was-joseph-smith.html"
+        },
+        {
+          "label": "The restored Church",
+          "href": "restored-church-of-jesus-christ.html"
+        },
+        {
+          "label": "Return to Stand Forever",
+          "href": "stand-forever.html#stand-forever"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "sha256": "904badd4204e6968a90eb7293d6c2beeb4e1213d70c64905bd2b99d5e15eb34d",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Look Unto Me",
+        "Look Unto Me in Every Thought Read Doctrine and Covenants 6:32–37 in context, then follow a guided study of looking to Christ, remembering, sharing what you learn, rejoicing, and acting.",
+        "Explore Look Unto Me, Stand Forever, and Rejoice in Christ →"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Passage context develops into remembering, practicing and rejoicing; concrete next studies match learner needs.",
+      "onward_actions": [
+        {
+          "label": "Ask a Question",
+          "href": "../ask.html?topic=Doctrine+and+Covenants+6%3A36#ask-question"
+        },
+        {
+          "label": "Prayer and Personal Revelation",
+          "href": "prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "Remember Him in the next ordinary day",
+          "href": "settle-this-in-your-hearts.html#continue-study"
+        },
+        {
+          "label": "When guidance is not immediate",
+          "href": "prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "When fear grows during a trial",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "Be still and remember Him",
+          "href": "../art-study/be-still.html"
+        },
+        {
+          "label": "Psalm 46",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/melchizedek-priesthood-restoration.html",
+      "sha256": "b14f78dae7db10d28c049cd3e2794fe05bbee60e75e4425cd2058fc1ad47f1b0",
+      "disposition": "PASS navigation/coherence; tone finding",
+      "entry_labels": [
+        "Melchizedek Priesthood"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Material uncertainty about exact date/order remains explicit; complementary Aaronic/Church History routes clear; remaining production-note tone.",
+      "onward_actions": [
+        {
+          "label": "Open this illustrated study →",
+          "href": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-modern-scripture"
+        },
+        {
+          "label": "Read the Church History Topics account and its source notes",
+          "href": "https://www.churchofjesuschrist.org/study/history/topics/restoration-of-the-melchizedek-priesthood?lang=eng"
+        },
+        {
+          "label": "Study the Aaronic Priesthood",
+          "href": "aaronic-priesthood-restoration.html"
+        },
+        {
+          "label": "The restored Church of Jesus Christ",
+          "href": "restored-church-of-jesus-christ.html"
+        },
+        {
+          "label": "Return to Church History",
+          "href": "../church-history.html"
+        },
+        {
+          "label": "Ask about this study",
+          "href": "../ask.html?art=Melchizedek+Priesthood&topic=Melchizedek+Priesthood+scripture+and+history+study&return=%2Fanswers%2Fmelchizedek-priesthood-restoration.html%23guided-practice#ask-question"
+        },
+        {
+          "label": "Choose another Answers topic",
+          "href": "../answers.html#answers-find"
+        }
+      ],
+      "finding_ids": [
+        "F-ANS-02"
+      ],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/plan-of-salvation.html",
+      "sha256": "2769e7805549ff01ced9158717d3ae867cfe3a22d23027f36ed1a33aec042759",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Plan of Salvation"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 10,
+      "chapters": [
+        {
+          "label": "You belong to God's family",
+          "anchor": "#before-birth",
+          "heading": "You belong to God's family"
+        },
+        {
+          "label": "An earth prepared for us",
+          "anchor": "#creation",
+          "heading": "An earth prepared for us"
+        },
+        {
+          "label": "Learning to choose",
+          "anchor": "#fall-agency",
+          "heading": "Learning to choose"
+        },
+        {
+          "label": "Living in a mortal body",
+          "anchor": "#mortal-life",
+          "heading": "Living in a mortal body"
+        },
+        {
+          "label": "Jesus Christ makes the way",
+          "anchor": "#redeemer",
+          "heading": "Jesus Christ makes the way"
+        },
+        {
+          "label": "Following Christ together",
+          "anchor": "#covenants",
+          "heading": "Following Christ together"
+        },
+        {
+          "label": "Life continues beyond death",
+          "anchor": "#spirit-world",
+          "heading": "Life continues beyond death"
+        },
+        {
+          "label": "Raised and known by Christ",
+          "anchor": "#resurrection-judgment",
+          "heading": "Raised and known by Christ"
+        },
+        {
+          "label": "Receiving God's glory",
+          "anchor": "#eternal-life",
+          "heading": "Receiving God's glory"
+        },
+        {
+          "label": "Living the plan today",
+          "anchor": "#today",
+          "heading": "Living the plan today"
+        }
+      ],
+      "sequence_type": "chapter reader",
+      "assessment": "Ten chapters follow premortal identity through mortal choices, Christ, covenants, death, resurrection and daily life; chapter Ask links retain context.",
+      "onward_actions": [
+        {
+          "label": "▶",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/joy-and-spiritual-survival?lang=eng"
+        },
+        {
+          "label": "Joy and Spiritual Survival",
+          "href": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/joy-and-spiritual-survival?lang=eng"
+        },
+        {
+          "label": "Ask about this chapter",
+          "href": "/ask.html?topic=Living+the+plan+today&return=%2Fanswers%2Fplan-of-salvation.html%23today#ask-question"
+        },
+        {
+          "label": "Come to know Jesus Christ",
+          "href": "jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Study life after death",
+          "href": "what-happens-after-death.html"
+        },
+        {
+          "label": "Learn about the Holy Ghost",
+          "href": "holy-ghost.html"
+        },
+        {
+          "label": "Answers Library",
+          "href": "/answers.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/prayer-and-personal-revelation.html",
+      "sha256": "6ceac57f40be1a51c3656c7985569cfbddf375819698bfffa44f0cb936fb3fa8",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Prayer & Revelation",
+        "How Do Prayer and Personal Revelation Work? Prayer, the Holy Ghost, personal guidance, discernment, and what it can mean when an answer does not come immediately.",
+        "Explore Prayer and Revelation"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Allows unanswered questions, patient discernment and practical help; connected studies match each invitation.",
+      "onward_actions": [
+        {
+          "label": "Faith During Trials",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "Keep praying while you keep walking",
+          "href": "settle-this-in-your-hearts.html#church-history"
+        },
+        {
+          "label": "Look to Christ while a question remains open",
+          "href": "look-unto-me-doctrine-and-covenants-6-36.html#every-thought"
+        },
+        {
+          "label": "When prayer accompanies difficulty",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "Pause with Be Still",
+          "href": "../art-study/be-still.html"
+        },
+        {
+          "label": "Psalm 46",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng"
+        },
+        {
+          "label": "Watch and reflect on listening",
+          "href": "../watch.html#prayer-and-revelation"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/restored-church-of-jesus-christ.html",
+      "sha256": "d17bc0c305a495ffc59652b674f0125368e3688904f4bed5d28828cf1a3f7566",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Restoration",
+        "The restored Church of Jesus Christ",
+        "What Is the Restored Church of Jesus Christ? Explore restoration, scripture, priesthood, ordinances, prophets, and the purpose of the Church in leading people to Jesus Christ."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Clear purpose, restoration claims, covenant community and primary readings; four-question companion path remains available.",
+      "onward_actions": [
+        {
+          "label": "Mosiah 18: A covenant community",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?id=p8-p16&lang=eng#p8"
+        },
+        {
+          "label": "3 Nephi 27: The name of the Church and Christ’s gospel",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/27?id=p1-p22&lang=eng#p1"
+        },
+        {
+          "label": "God",
+          "href": "god-our-heavenly-father.html"
+        },
+        {
+          "label": "Jesus Christ",
+          "href": "jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Joseph Smith",
+          "href": "who-was-joseph-smith.html"
+        },
+        {
+          "label": "Return to Stand Forever",
+          "href": "stand-forever.html#stand-forever"
+        },
+        {
+          "label": "Explore every study topic",
+          "href": "../answers.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/settle-this-in-your-hearts.html",
+      "sha256": "8c881c9759a0ccce5453b0ef2ec28c89bf80c75f285f8df4a1f8e5ecd5b2b905",
+      "disposition": "PASS navigation/coherence; tone finding",
+      "entry_labels": [
+        "Settle Your Heart"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Talk/transcript and site reflection remain distinct; scripture and historical examples support commitment without invented dialogue; production notes remain in several art units.",
+      "onward_actions": [
+        {
+          "label": "Study the Book of Mormon",
+          "href": "what-is-the-book-of-mormon.html"
+        },
+        {
+          "label": "Look Unto Me",
+          "href": "look-unto-me-doctrine-and-covenants-6-36.html"
+        },
+        {
+          "label": "Stand Forever",
+          "href": "stand-forever.html"
+        },
+        {
+          "label": "Joseph Smith",
+          "href": "who-was-joseph-smith.html"
+        },
+        {
+          "label": "Prayer and revelation",
+          "href": "prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "Faith in trials",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "Bring a study question",
+          "href": "../ask.html?topic=Settled+faith+in+Jesus+Christ#ask-question"
+        }
+      ],
+      "finding_ids": [
+        "F-ANS-03",
+        "F-ANS-04",
+        "F-ANS-05"
+      ],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/stand-forever.html",
+      "sha256": "59010d842ecfbde1ba1524dd1e20170f86bc4175f845e97383439e700aaf05c0",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Stand Forever",
+        "How Can I Stand Forever in Christ? Study faith, courage, covenant discipleship, and the Savior’s invitation to remain steady when life is uncertain."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Foundational questions, uncertainty and daily commitment connect naturally; optional art-framing phrase could be simplified.",
+      "onward_actions": [
+        {
+          "label": "Doctrine and Covenants 6",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?lang=eng"
+        },
+        {
+          "label": "Continue from foundations to daily commitment",
+          "href": "settle-this-in-your-hearts.html#the-invitation"
+        },
+        {
+          "label": "",
+          "href": "../assets/page-art/exclusive/stand-faithful-service-1536.webp"
+        },
+        {
+          "label": "Read Doctrine and Covenants 6:33–34",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/6?id=p33-p34&lang=eng#p33"
+        },
+        {
+          "label": "Look Unto Me",
+          "href": "look-unto-me-doctrine-and-covenants-6-36.html"
+        },
+        {
+          "label": "Prayer and revelation",
+          "href": "prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "Bring a study question",
+          "href": "../ask.html?topic=questions+and+revelation#ask-question"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/what-happens-after-death.html",
+      "sha256": "c6b391fc5410f763d3ce2e23f1ffd0a509db1048b0fa7a014b8240da0024e593",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Life After Death",
+        "What Happens After Death? The spirit world, resurrection through Jesus Christ, judgment, and the hope of eternal life.",
+        "Explore Life After Death",
+        "Resurrection, temples, and family hopes"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Spirit world, bodily resurrection, judgment and eternal hope distinguished; contemporary Christ imagery is expressly not a reported appearance.",
+      "onward_actions": [
+        {
+          "label": "choose a related study",
+          "href": "#continue-study"
+        },
+        {
+          "label": "Families and eternity",
+          "href": "why-families-are-important.html"
+        },
+        {
+          "label": "Faith during trials",
+          "href": "faith-in-jesus-christ-during-trials.html"
+        },
+        {
+          "label": "When a child has died",
+          "href": "death-of-a-child.html"
+        },
+        {
+          "label": "Why temple service includes the dead",
+          "href": "why-latter-day-saints-build-temples.html"
+        },
+        {
+          "label": "Ask about life after death",
+          "href": "../ask.html?art=Life+After+Death&topic=resurrection+and+hope+through+Jesus+Christ&return=%2Fanswers%2Fwhat-happens-after-death.html%3Fhero%3D1#ask-question"
+        },
+        {
+          "label": "Return to the beginning",
+          "href": "#christ-and-grief"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/what-is-eternal-marriage.html",
+      "sha256": "d7915017777b78b72ac96f8a6a757f57e8ab11af4eab7622cb06b9ecafadd62c",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Eternal Marriage",
+        "What Is Eternal Marriage? Study temple sealing and equal partnership in marriage, with care for the questions and hopes families bring."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Covenants and equal partnership presented with care for varied circumstances; abuse support and divorce links are relevant and clear.",
+      "onward_actions": [
+        {
+          "label": "In Crisis? Talk Now: Help for Victims of Abuse",
+          "href": "https://www.churchofjesuschrist.org/study/manual/abuse-help-for-victims/introduction?lang=eng"
+        },
+        {
+          "label": "Ask a Question",
+          "href": "../ask.html?topic=Eternal+marriage#ask-question"
+        },
+        {
+          "label": "Families and Belonging",
+          "href": "why-families-are-important.html"
+        },
+        {
+          "label": "Why Temples?",
+          "href": "why-latter-day-saints-build-temples.html"
+        },
+        {
+          "label": "Build belonging in every family circumstance",
+          "href": "why-families-are-important.html"
+        },
+        {
+          "label": "When marriage includes separation or divorce",
+          "href": "divorce-and-faith.html"
+        },
+        {
+          "label": "Place eternal relationships beside Resurrection",
+          "href": "what-happens-after-death.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/what-is-the-book-of-mormon.html",
+      "sha256": "babcb66fd7a86a2f629046921911d111d5e6d3a0ff13d7d4149c03f14a27d44f",
+      "disposition": "PASS navigation/coherence; tone finding",
+      "entry_labels": [
+        "Book of Mormon",
+        "What Is the Book of Mormon? What the Book of Mormon claims to be, why it is called another testament of Jesus Christ, and why it does not replace the Bible.",
+        "Read, compare, and reflect"
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Complete story sequence and 22 story stops read coherently; Jaredite and Lehi chronology and separate communities remain distinct; one imagined-scene sentence remains.",
+      "onward_actions": [
+        {
+          "label": "Read the Book of Mormon in Gospel Library",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=eng"
+        },
+        {
+          "label": "Ask a Question",
+          "href": "../ask.html#ask-question"
+        },
+        {
+          "label": "How the Two Books Work Together",
+          "href": "bible-and-book-of-mormon-together.html"
+        },
+        {
+          "label": "Let another reading deepen your commitment",
+          "href": "settle-this-in-your-hearts.html#book-of-mormon"
+        },
+        {
+          "label": "Read the two books together",
+          "href": "bible-and-book-of-mormon-together.html"
+        },
+        {
+          "label": "Explore prayer and discernment",
+          "href": "prayer-and-personal-revelation.html"
+        },
+        {
+          "label": "See the Savior's ministry in 3 Nephi",
+          "href": "../watch.html#book-of-mormon"
+        }
+      ],
+      "finding_ids": [
+        "F-ANS-06"
+      ],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/who-was-joseph-smith.html",
+      "sha256": "a134d58c41ed45f3870e5904de58fb2a280525f58bc45622fe75f1ab3eebbac4",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Joseph Smith",
+        "Who Was Joseph Smith? The First Vision, Book of Mormon, Restoration, prophetic role, and a responsible approach to his complex history."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Introduces claims, complex history and responsible source study; history and Book of Mormon next paths relevant.",
+      "onward_actions": [
+        {
+          "label": "Follow the historical record",
+          "href": "../church-history.html"
+        },
+        {
+          "label": "Read the book central to his prophetic claim",
+          "href": "what-is-the-book-of-mormon.html"
+        },
+        {
+          "label": "God",
+          "href": "god-our-heavenly-father.html"
+        },
+        {
+          "label": "Jesus Christ",
+          "href": "jesus-christ-latter-day-saint-beliefs.html"
+        },
+        {
+          "label": "Joseph Smith",
+          "href": "who-was-joseph-smith.html"
+        },
+        {
+          "label": "The restored Church",
+          "href": "restored-church-of-jesus-christ.html"
+        },
+        {
+          "label": "Return to Stand Forever",
+          "href": "stand-forever.html#stand-forever"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/why-families-are-important.html",
+      "sha256": "1722865f955c039ae291d3c2c04ae15a52ca4ba17119251d4b851f49235ae19a",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Families",
+        "Why Are Families Important? Divine identity, marriage and parenting, temple sealing, imperfect family realities, and eternal hope."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Belonging and covenant hope avoid treating one household form as a worthiness test; practical onward paths fit.",
+      "onward_actions": [
+        {
+          "label": "About Temple Sealings",
+          "href": "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+        },
+        {
+          "label": "Ask a Question",
+          "href": "../ask.html#ask-question"
+        },
+        {
+          "label": "Why Temples?",
+          "href": "why-latter-day-saints-build-temples.html"
+        },
+        {
+          "label": "What Happens After Death?",
+          "href": "what-happens-after-death.html"
+        },
+        {
+          "label": "Study eternal marriage in depth",
+          "href": "what-is-eternal-marriage.html"
+        },
+        {
+          "label": "Study Christ’s welcome of children",
+          "href": "../art-study/suffer-the-little-children.html"
+        },
+        {
+          "label": "When family life includes divorce",
+          "href": "divorce-and-faith.html"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    },
+    {
+      "route": "answers/why-latter-day-saints-build-temples.html",
+      "sha256": "498e30411f7c50f2d806347ed830bd16bad28813ae9fb5fb0095005d30e547b9",
+      "disposition": "PASS source review; no required change",
+      "entry_labels": [
+        "Temples",
+        "Why Do Latter-day Saints Build Temples? Sacred worship, covenants, ordinances, eternal families, and service for those who have died."
+      ],
+      "coverage": "Complete authored main prose, headings, captions, source links, internal actions and end links read; hidden outside-main textual art panels inspected where present. Shared chapter grouping/controller source inspected.",
+      "chapter_count": 0,
+      "chapters": [],
+      "sequence_type": "continuous study with section/story anchors",
+      "assessment": "Explains worship, covenants, family and service for the dead with an accessible beginning and specific onward choices.",
+      "onward_actions": [
+        {
+          "label": "Temples: Topics and Questions",
+          "href": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng"
+        },
+        {
+          "label": "About Temple Sealings",
+          "href": "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+        },
+        {
+          "label": "Ask a Question",
+          "href": "../ask.html#ask-question"
+        },
+        {
+          "label": "Why Families Matter",
+          "href": "why-families-are-important.html"
+        },
+        {
+          "label": "Read about life after death",
+          "href": "what-happens-after-death.html"
+        },
+        {
+          "label": "Explore family relationships and belonging",
+          "href": "why-families-are-important.html"
+        },
+        {
+          "label": "Watch an introduction to temple worship",
+          "href": "../watch.html#temples-and-family"
+        }
+      ],
+      "finding_ids": [],
+      "broken_internal_destinations": [],
+      "rendered_by_fermi_this_pass": false
+    }
+  ],
+  "product_files_changed": []
+}

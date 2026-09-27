@@ -132,6 +132,20 @@ def reference_errors(doc, page, owner_by_image, documents):
 
 
 class SavedJourneyVisualCoverage(unittest.TestCase):
+    def test_companion_scene_follows_its_own_account_introduction(self):
+        cases = [
+            ('miracles-and-compassion', 'mc-official-servants', 'another household receiving help'),
+            ('teachings-and-parables', 'tp-withered-fig-tree', 'Listening continues outside a home'),
+            ('teachings-and-parables', 'tp-writing-ground', 'records another question intended to test Him'),
+            ('teachings-and-parables', 'tp-passover-water-carrier', 'Before the meal'),
+        ]
+        for page, key, introduction in cases:
+            doc = parse((ROOT / ('jesus-christ/' + page + '.html')).read_text(encoding='utf-8'))
+            figure = next(n for n in doc.walk() if n.attrs.get('id') == 'picture-' + key)
+            siblings = figure.parent.children
+            preceding = siblings[siblings.index(figure) - 1]
+            self.assertIn(introduction, preceding.text(), key + ': companion appeared before its own account')
+
     @classmethod
     def setUpClass(cls):
         def read(name):

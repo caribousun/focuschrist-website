@@ -222,6 +222,10 @@ def main():
         assert bible_style_reference_allowed(BIBLE_STYLE_OWNER, BIBLE_STYLE)
         assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
         assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
+        cfm_css = (ROOT/'come-follow-me.css').read_bytes()
+        assert hashlib.sha256(cfm_css).hexdigest() == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
+        assert hashlib.sha256(cfm_css.replace(b'flex-wrap:nowrap}', b'flex-wrap:wrap}')).hexdigest() != '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
+        assert hashlib.sha256(cfm_css + b'body{display:none}').hexdigest() != '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
         for name in NARROW_READING_STYLES:
             data=(ROOT/name).read_bytes()
             assert reviewed_narrow_reading_style(name,data)
@@ -483,13 +487,19 @@ def main():
         if selector.strip() in diagram_rules:
             check(re.sub(r'\s+', '', body) == diagram_rules[selector.strip()] and sha(ROOT/'bom-evidences.css') == '19b54d55057adeaa0373631a572482e3fdbe0acbcb053755c3b87d6bbda5046b', 'Evidences diagram CSS differs from exact reviewed rule/bytes')
             continue
+        if selector.strip() == 'body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual':
+            check(re.sub(r'\s+', '', body) == 'display:flex;flex-direction:column;flex-wrap:nowrap' and sha(ROOT/'come-follow-me.css') == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3', 'CFM study card differs from exact reviewed vertical-flow rule/bytes')
+            continue
+        if selector.strip() == 'body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual > :is(a,figcaption)':
+            check(re.sub(r'\s+', '', body) == 'flex:01auto;min-width:0;width:100%' and sha(ROOT/'come-follow-me.css') == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3', 'CFM study card children differ from exact reviewed intrinsic-flow rule/bytes')
+            continue
         if selector.strip() == 'body.cfm-page .cfm-toolkit__grid':
-            check(re.sub(r'\s+', '', body) == 'grid-template-columns:1fr;' and sha(ROOT/'come-follow-me.css') == 'b613cf5b02c3347d816bfbfd2c547165c2d613501c49c45e60577bbb2c01075c', 'CFM phone toolkit differs from exact reviewed rule/bytes')
+            check(re.sub(r'\s+', '', body) == 'grid-template-columns:1fr;' and sha(ROOT/'come-follow-me.css') == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3', 'CFM phone toolkit differs from exact reviewed rule/bytes')
             continue
         # Separate owner-authorized mobile opening and Conference banner review.
         # Exact file hashes prevent this scoped acceptance from admitting later edits.
         if selector.strip()=='body.fc-site.cfm-page .cfm-hero::before' and body.strip()=='background-position:center 25%':
-            check(sha(ROOT/'come-follow-me.css')=='b613cf5b02c3347d816bfbfd2c547165c2d613501c49c45e60577bbb2c01075c',
+            check(sha(ROOT/'come-follow-me.css')=='97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3',
                   'Come Follow Me mobile focal point differs from reviewed bytes')
             continue
         if selector.strip().startswith('.gc-page .gc-page-opening'):

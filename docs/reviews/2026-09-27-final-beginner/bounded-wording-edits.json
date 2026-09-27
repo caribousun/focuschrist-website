@@ -1,0 +1,42 @@
+[
+  {
+    "path": "come-follow-me.html",
+    "before": "answers/what-is-eternal-marriage.html",
+    "after": "answers/why-families-are-important.html"
+  },
+  {
+    "path": "answers\\aaronic-priesthood-restoration.html",
+    "before": "These artistic scenes follow the order in Joseph’s account. Clothing, gestures, and the precise riverbank are interpreted.",
+    "after": "Joseph’s account places the baptisms before the ordinations that followed."
+  },
+  {
+    "path": "answers\\melchizedek-priesthood-restoration.html",
+    "before": "The three apostles participate in each artistic scene. Their faces, hand placement, and the order pictured are interpretations; the accounts do not describe that arrangement.",
+    "after": "The accounts do not describe the apostles’ arrangement or establish which man received this ministry first."
+  },
+  {
+    "path": "answers\\settle-this-in-your-hearts.html",
+    "before": "The picture’s precise placement of His hand is an artistic choice; the passage records His touch and the authority He gives.",
+    "after": "The passage records His touch and the authority He gives."
+  },
+  {
+    "path": "answers\\settle-this-in-your-hearts.html",
+    "before": "This present-day scene illustrates shared study; the women are not people from a recorded historical event.",
+    "after": "The women study together, making room for one another’s questions."
+  },
+  {
+    "path": "answers\\settle-this-in-your-hearts.html",
+    "before": "These unnamed workers are an illustration of that effort.",
+    "after": "[Sentence omitted; existing adjacent service reflection retained.]"
+  },
+  {
+    "path": "answers\\what-is-the-book-of-mormon.html",
+    "before": "This scene imagines that moment of trust as the ancient record begins its journey toward new readers.",
+    "after": "The ancient record will now reach a new generation of readers."
+  },
+  {
+    "path": "docs\\book-of-mormon-art-review.json",
+    "before": "This scene imagines that moment of trust as the ancient record begins its journey toward new readers.",
+    "after": "The ancient record will now reach a new generation of readers."
+  }
+]

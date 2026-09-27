@@ -89,3 +89,7 @@
 @media (max-width: 700px) {
     body.cfm-page .cfm-toolkit__grid { grid-template-columns: 1fr; }
 }
+
+/* Keep artwork, teaching and onward actions in the same visible study card. */
+body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual{display:flex;flex-direction:column;flex-wrap:nowrap}
+body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual > :is(a,figcaption){flex:0 1 auto;min-width:0;width:100%}

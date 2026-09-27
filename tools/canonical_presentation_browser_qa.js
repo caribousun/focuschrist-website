@@ -8,7 +8,7 @@ const pages = [...new Set([...fs.readFileSync(path.join(root, 'sitemap.xml'), 'u
 const profiles = [{name:'desktop',width:1366,scale:1},{name:'phone',width:390,scale:1},{name:'narrow-large-text',width:320,scale:2}];
 
 function inspectPresentation() {
-    function rendered(node) {
+    function layoutVisible(node) {
         if (!node.getClientRects().length || node.closest('[hidden],template')) return false;
         for(let parent=node.parentElement;parent;parent=parent.parentElement){
             if(parent.tagName==='DETAILS' && !parent.open){
@@ -20,6 +20,10 @@ function inspectPresentation() {
             const style = getComputedStyle(parent);
             if (style.display === 'none' || style.visibility === 'hidden' || Number(style.opacity) === 0) return false;
         }
+        return true;
+    }
+    function rendered(node) {
+        if (!layoutVisible(node)) return false;
         // Accessibility hiding is not visual hiding. A painted aria-hidden box
         // still contributes to overflow. Fully clipped/offcanvas controls do not.
         const rect=node.getBoundingClientRect();
@@ -63,10 +67,31 @@ function inspectPresentation() {
         return croppedText || clippedComposer || outside || clippedBy.length ? [{...identity(node),rect:{left:rect.left,right:rect.right,width:rect.width,height:rect.height},croppedText,clippedComposer,outside,clippedBy,textBounds:textRects.map(box=>({left:box.left,right:box.right,top:box.top,bottom:box.bottom}))}] : [];
     });
     const images = [...document.images].filter(rendered);
+    // A caption pushed wholly outside an overflow-hidden figure is a defect,
+    // not intentionally hidden content. Do not use rendered() here: its geometric
+    // exclusion would remove the very text this check needs to diagnose.
+    const clippedCaptions = [...document.querySelectorAll('main figcaption')].filter(layoutVisible).flatMap(caption => {
+        const fragments=[];
+        const walker=document.createTreeWalker(caption,NodeFilter.SHOW_TEXT);
+        while(walker.nextNode()){
+            const text=walker.currentNode;
+            if(!text.textContent.trim() || !layoutVisible(text.parentElement))continue;
+            const range=document.createRange();range.selectNodeContents(text);
+            const rects=[...range.getClientRects()].filter(box=>box.width!==0 && box.height!==0);
+            for(let parent=text.parentElement;parent && parent!==document.body && parent!==document.documentElement;parent=parent.parentElement){
+                const style=getComputedStyle(parent),box=parent.getBoundingClientRect();
+                const clipX=['hidden','clip'].includes(style.overflowX) && rects.some(r=>r.left<box.left-3 || r.right>box.right+3);
+                const clipY=['hidden','clip'].includes(style.overflowY) && rects.some(r=>r.top<box.top-3 || r.bottom>box.bottom+3);
+                if(clipX || clipY)fragments.push({text:text.textContent.trim().slice(0,110),ancestor:identity(parent),clipX,clipY});
+            }
+        }
+        return fragments.length ? [{...identity(caption),fragments}] : [];
+    });
     return {
         horizontalOverflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),
         overflowingElements:[...document.querySelectorAll('main *,header *,footer *')].filter(rendered).filter(n => n.getBoundingClientRect().right > innerWidth+3 || n.getBoundingClientRect().left < -3).slice(0,12).map(identity),
         clippedControls,
+        clippedCaptions,
         visibleH1:[...document.querySelectorAll('h1')].filter(rendered).map(n=>n.textContent.trim()).filter(Boolean),
         visibleControls:controls.length,
         loadedImages:images.filter(n=>n.complete && n.naturalWidth>0).length,
@@ -119,6 +144,7 @@ async function main() {
                     if(!response || response.status()>=400)failures.push('document-status');
                     if(measured.horizontalOverflow>3)failures.push('horizontal-overflow');
                     if(measured.clippedControls.length)failures.push('clipped-visible-control');
+                    if(measured.clippedCaptions.length)failures.push('clipped-study-caption');
                     if(!measured.visibleH1.length)failures.push('missing-visible-h1');
                     if(measured.brokenLoadedImages.length)failures.push('broken-loaded-image');
                     if(measured.pendingLocalImages.length)failures.push('local-image-timeout');

@@ -1,0 +1,54 @@
+{
+  "reviewer": "Newton",
+  "status": "PASS scoped final product/source review; reviewed ledger refresh and hosted release still separate",
+  "findings": [
+    "CFM page-owned nowrap/intrinsic-basis repair appends two narrow selectors; prior CSS rules preserved. Exact full-byte safeguard and mutation assertions retained. Family direct and artwork onward routes both target existing Families page.",
+    "Four companion scenes follow their own third introductory paragraph in both canonical source and generated DOM; washing-feet canonical override prevents later ordering reversal. All image attribute multisets unchanged across modified HTML.",
+    "Six malformed scripture labels gain spaces only; Book of Mormon opening accurately describes selected encounters rather than chronological sequence.",
+    "Six targeted Answers tone edits preserve record/interpretation boundaries. Redundant Kirtland invitation caught in review and removed before acceptance.",
+    "Exactly28 collection studyNote replacements are learner-directed prose; canonical inventory and collection mapping agree. No new story, source destination, artwork or historical claim introduced.",
+    "Source inventory newline handling preserves original CRLF bytes on unchanged lines and narrowly changes28 lines; no wholesale normalization required."
+  ],
+  "independent_checks": [
+    {
+      "command": "python -X utf8 tools/come_follow_me_qa.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python -X utf8 tools/sitewide_artwork_review_qa.py --self-test",
+      "result": "PASS"
+    },
+    {
+      "command": "python -X utf8 tools/test_jesus_chapter_visual_coverage.py",
+      "result": "13 tests PASS"
+    },
+    {
+      "command": "python -X utf8 tools/build_jesus_journey.py --strict --check",
+      "result": "PASS76 nested studies"
+    },
+    {
+      "check": "All changed HTML img attribute multisets compared against HEAD",
+      "result": "No changes"
+    }
+  ],
+  "hashes": {
+    "come-follow-me.css": "97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3",
+    "come-follow-me.html": "eb53fccc280d9998f020f98bd555982a3d7933b27b31af07dd73f91709267e5d",
+    "tools/come_follow_me_qa.py": "63a90271ccaa264f9ed970f263c53edaf5d1c791d7d264600311b7f2d09a48cf",
+    "tools/sitewide_artwork_review_qa.py": "9f13f51620ad9dc88f60d5a9334254fccb4458c129808d1edb9d7bf92a5ac0d9",
+    "docs/jesus-journey/branch-art-plan.json": "4907b4de75bd8bd2d2e8360a7af7cdfa3e1299352f2bd2367152b462e2156b80",
+    "docs/jesus-journey/branch-content-reviewed.json": "e566caf67aad0a2417ddd7bb4c2b133813e504fb3c6cf6ccd4f841afa1a1f613",
+    "docs/jesus-journey/parable-source-inventory.json": "9213d72d98c6b7bc2a20700ed8d90b2bb23477b3695db9b0ead695f5ab191533",
+    "docs/jesus-journey/parable-collections-reviewed.json": "330c8843fc19f8579885aadb9f4144ef94659e04b2d81b349ffe90283e6ca6a4",
+    "tools/test_jesus_chapter_visual_coverage.py": "755e783309e478d1cd182c367324027cb32f47ad6cfc096677f78100a5489cea",
+    "answers/aaronic-priesthood-restoration.html": "784bf19148d0599581b981ced9e67a1baa9a1aff706f30804b91838870df3985",
+    "answers/melchizedek-priesthood-restoration.html": "5fa951197e5505b26104722e79a1d03a20dee6b264edfc2690d41cfca962b4d9",
+    "answers/settle-this-in-your-hearts.html": "b61d25284e22a36e0a1d38db06ee7bd7c16e6d21df8a277cb61a2a17005f3da7",
+    "answers/what-is-the-book-of-mormon.html": "1038e60179a31457d6b95d7e4a3ea32d1ee92db894700936e591ed4e01fd2d5b"
+  },
+  "limits": [
+    "My canonical-presentation guard changes require focus_review independent approval; this receipt does not self-approve them.",
+    "Parent actual five-width CFM containment/family click and four rendered scene-order checks are separate browser evidence. No local browser/provider or artwork generation used by Newton.",
+    "Gallery/Search/content ledger final freshness and hosted complete QA remain required before release."
+  ]
+}
