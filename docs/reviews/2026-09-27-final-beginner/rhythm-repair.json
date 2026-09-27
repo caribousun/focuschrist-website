@@ -1,0 +1,21 @@
+{
+  "failed_hosted_run": 36357368210,
+  "failed_step": 6,
+  "cause": "Full41Jesus tests exposed three narrative paragraphs before picture in four repaired J3 chapters; targeted13did not cover adjacent rhythm guard.",
+  "repair": "Canonical reference_visual_after_paragraphs2 relocates existing main-account reference; existing companion afterParagraph3 retained; opening config aligned. Rhythm guard unchanged.",
+  "independent_review": "newton-rhythm-repair-review.json",
+  "checks": "Full41Jesus tests PASS twice including independent run; exact2ledger rows updated after review.",
+  "ledger": [
+    {
+      "path": "jesus-christ/miracles-and-compassion.html",
+      "before": "9a4fceb95200f08d71b47a4f99120d626ab08947a5c972289cd5ec1719fec713",
+      "after": "b6172e03df5ca09145189c30cfdb772158ac52038d6e81d15fd4253870a09f09"
+    },
+    {
+      "path": "jesus-christ/teachings-and-parables.html",
+      "before": "edf48da0d42103493f9153a310e2e0a37ca190eca7c43bee0742f1167c4de638",
+      "after": "d166b9831e6930e96cc71c7e305d588628aac4329b028aea543f6fbacedf86de"
+    }
+  ],
+  "status": "candidate repair; hosted rerun/publication pending"
+}

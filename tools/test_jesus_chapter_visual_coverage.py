@@ -145,6 +145,10 @@ class SavedJourneyVisualCoverage(unittest.TestCase):
             siblings = figure.parent.children
             preceding = siblings[siblings.index(figure) - 1]
             self.assertIn(introduction, preceding.text(), key + ': companion appeared before its own account')
+            primary = siblings[siblings.index(figure) - 2]
+            self.assertTrue(primary.has('jj-art-reference'), key + ': primary account picture must precede transition')
+            leading = siblings[:siblings.index(primary)]
+            self.assertEqual(sum(n.has('jj-reading') for n in leading), 2, key + ': retain two primary narrative paragraphs before its picture')
 
     @classmethod
     def setUpClass(cls):

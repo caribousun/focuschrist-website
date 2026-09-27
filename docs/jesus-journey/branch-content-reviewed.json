@@ -711,7 +711,8 @@
               "What kindness could you acknowledge directly rather than leaving your gratitude unspoken?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       }
     ],
     "related": [
@@ -881,7 +882,8 @@
               "Where might you need to pause and receive before continuing to give?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "rich-man",
@@ -940,7 +942,8 @@
               "Which ordinary responsibility could you approach more faithfully because your life belongs to God?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "washing-feet",
@@ -979,7 +982,8 @@
           }
         ],
         "keep_intro_before_art": true,
-        "opening_visual_after_paragraphs": 3
+        "opening_visual_after_paragraphs": 2,
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "abide",
