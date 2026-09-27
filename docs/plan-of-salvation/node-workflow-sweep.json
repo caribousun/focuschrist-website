@@ -1,0 +1,451 @@
+{
+  "jsdom": "26.1.0",
+  "historical_hosted_failure": 36348008983,
+  "excluded_browser_or_live_commands": [
+    "node tools/complete_card_rows_browser_qa.js",
+    "node tools/canonical_presentation_browser_qa.js",
+    "node tools/live_production_ask_qa.js"
+  ],
+  "results": [
+    {
+      "command": "node tools/external_links_runtime_qa.js",
+      "returncode": 0,
+      "output": "EXTERNAL LINK QA PASS: static/dynamic links, changed href, native navigation and reader compatibility\n"
+    },
+    {
+      "command": "node tools/mobile_opening_invitation_runtime_qa.js",
+      "returncode": 0,
+      "output": "OPENING EXPLANATION QA PASS: clearance, locked geometry, headings, cue, overflow, desktop, resize and authored copy\n"
+    },
+    {
+      "command": "node tools/anatomy-review/core.test.js",
+      "returncode": 0,
+      "output": "PASS: review completeness, wrong thumb-side annotation, anatomical laterality, separate joints/contact ownership, occlusion, rejection hashes and owner-evidence boundaries. Not a pixel anatomy certification.\nPASS: hash-case rejection, malformed annotation handling and leg-specific joints, occlusion and prompts.\n"
+    },
+    {
+      "command": "node --test tools/media_voice_records.test.cjs",
+      "returncode": 0,
+      "output": "✔ audit includes later assigned dialog paragraphs without running page code (1.5068ms)\n✔ changed record boundary fails closed (0.2692ms)\n✔ malformed record fails closed (0.7409ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 73.3872\n"
+    },
+    {
+      "command": "node tools/come_follow_me_reading_runtime_qa.js",
+      "returncode": 0,
+      "output": "PASS: 52 unchanged assignments, exact chapter choices, abbreviated Psalms ranges, accessible inherited book labels, separate lesson links, no nested anchors.\nPASS: Sunday/Monday weekly rollover updates both official lesson routes and the reading.\n"
+    },
+    {
+      "command": "node tools/general_conference_runtime_qa.js",
+      "returncode": 0,
+      "output": "GENERAL CONFERENCE RUNTIME QA PASS: search, combined filters, empty state, reset, disclosure state, and exact legacy bookmark migration.\n"
+    },
+    {
+      "command": "node --check general-conference.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/study_navigation_runtime_qa.js",
+      "returncode": 0,
+      "output": "STUDY NAVIGATION RUNTIME QA PASS: all 28 discovered topic pills, article routes, CFM/Conference labels, hash restoration, preserved parent links, and duplicate prevention.\n"
+    },
+    {
+      "command": "node --check art-gallery.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check art-gallery-bridge.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/hero_details_runtime_qa.js",
+      "returncode": 0,
+      "output": "Hero details runtime QA passed: Birth and all four art-study heroes open their own reflection, study, Ask, and full-size routes.\n"
+    },
+    {
+      "command": "node tools/opening_flow_and_cards_qa.js",
+      "returncode": 0,
+      "output": "Opening flow and cards QA PASS: 43 opening invitations; complete Answers rows.\n"
+    },
+    {
+      "command": "node tools/study_link_controls_qa.js",
+      "returncode": 0,
+      "output": "sition: relative; z-index: 10; text-align: center; padding: 10px; }\n\n .hero h1 {\n\n font-size: 2em;\n\n letter-spacing: 5px;\n\n font-family: 'Times New Roman', serif;\n\n margin-bottom: 5px;\n\n color: #fff;\n\n text-shadow: 0 0 30px rgba(0,0,0,0.8);\n\n }\n\n .hero-subtitle {\n\n font-size: 1.3em;\n\n letter-spacing: 8px;\n\n color: #c9a961;\n\n font-weight: 300;\n\n }\n\n\n\n /* Section Styles */\n\n .section { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }\n\n .section:first-of-type { padding-top: 20px; }\n\n .section-title {\n\n font-size: 2em;\n\n letter-spacing: 8px;\n\n text-align: center;\n\n margin-bottom: 30px;\n\n color: #c9a961;\n\n font-family: 'Times New Roman', serif;\n\n }\n\n\n\n /* Timeline */\n\n .timeline { position: relative; padding-left: 40px; }\n\n .timeline-item {\n\n display: flex;\n align-items: flex-start;\n gap: 20px;\n padding: 15px;\n margin-bottom: 10px;\n background: #1a1a1a;\n border-radius: 8px;\n cursor: pointer;\n transition: all 0.3s ease;\n }\n\n .timeline-item:hover {\n\n background: #222;\n transform: translateX(5px);\n }\n\n .timeline-item.expanded {\n\n background: #151515;\n border-left: 3px solid #c9a961;\n border-radius: 8px;\n padding: 10px;\n }\n\n /* Paragraph spacing in expanded content - match bot-message */\n .timeline-item.expanded p,\n .trail-point.expanded p,\n .martin-point.expanded p {\n   margin-bottom: 12px;\n   line-height: 1.7;\n   color: #ccc;\n }\n\n .timeline-item:hover .timeline-title {\n\n color: #c9a961;\n\n }\n\n .timeline-title a {\n\n color: inherit;\n\n text-decoration: none;\n\n transition: color 0.3s ease;\n\n }\n\n .timeline-link-icon {\n\n position: absolute;\n\n right: 10px;\n\n top: 50%;\n\n transform: translateY(-50%);\n\n color: #c9a961;\n\n font-size: 0.9em;\n\n opacity: 0;\n\n transition: opacity 0.3s ease;\n\n }\n\n .timeline-item:hover .timeline-link-icon {\n\n opacity: 1;\n\n }\n\n .timeline-item::before {\n\n display: none;\n\n }\n\n border-radius: 50%;\n\n border: 3px solid #0a0a0a;\n\n transition: all 0.3s ease;\n\n }\n\n .timeline-item:hover::before {\n\n transform: scale(1.3);\n\n box-shadow: 0 0 10px rgba(201, 169, 97, 0.6);\n\n }\n\n .timeline-item:hover .timeline-title {\n\n color: #c9a961;\n\n }\n\n .timeline-item.expanded::before {\n\n transform: scale(1.3);\n\n box-shadow: 0 0 10px rgba(201, 169, 97, 0.8);\n\n }\n\n .timeline-date {\n\n font-size: 0.9em;\n\n color: #c9a961;\n\n letter-spacing: 2px;\n\n margin-bottom: 8px;\n\n font-weight: bold;\n\n }\n\n .timeline-title {\n\n font-size: 1em;\n\n margin-bottom: 8px;\n\n color: #fff;\n\n transition: color 0.3s ease;\n\n }\n\n .timeline-desc {\n\n color: #aaa;\n\n line-height: 1.7;\n\n }\n\n .timeline-details {\n    /* max-height: 0; */\n    /* overflow: hidden; */\n    /* transition: max-height 0.5s ease, opacity 0.5s ease; */\n    /* opacity: 0; */\n }\n\n .timeline-item.expanded .timeline-details {\n    /* max-height: 500px; */\n    /* opacity: 1; */\n }\n\n .timeline-story {\n\n background: #151515;\n\n border-left: 3px solid #c9a961;\n\n padding: 10px;\n\n margin-top: 15px;\n\n border-radius: 0 8px 8px 0;\n\n }\n\n .timeline-story-title {\n\n color: #c9a961;\n\n font-size: 1.1em;\n\n margin-bottom: 12px;\n\n font-weight: bold;\n\n }\n\n .timeline-story p {\n\n color: #ccc;\n\n line-height: 1.8;\n\n margin-bottom: 12px;\n\n }\n\n .timeline-story p:last-child {\n\n margin-bottom: 0;\n\n }\n\n .timeline-expand-icon {\n\n float: right;\n\n color: #c9a961;\n\n font-size: 1.2em;\n\n transition: transform 0.3s ease;\n\n margin-top: 10px;\n\n }\n\n .timeline-item.expanded .timeline-expand-icon {\n\n transform: rotate(180deg);\n\n }\n\n\n\n /* Map Points */\n\n .map-container {\n\n background: #111;\n\n border-radius: 10px;\n\n padding: 30px;\n\n padding-left: 40px;\n\n margin: 20px auto;\n\n width: 90%;\n\n max-width: 1000px;\n\n border: 1px solid #333;\n\n }\n\n .map-point {\n\n display: flex;\n\n align-items: flex-start;\n\n gap: 20px;\n\n padding: 15px;\n\n margin-bottom: 10px;\n\n background: #1a1a1a;\n\n border-radius: 8px;\n\n cursor: pointer;\n\n transition: all 0.3s ease;\n\n }\n\n .map-point:hover {\n background: #222;\n transform: translateX(5px);\n }\n\n .map-point.expanded {\n background: #151515;\n border-left: 3px solid #c9a961;\n border-radius: 8px;\n padding: 10px;\n }\n .map-point.expanded p {\n font-size: 0.9em;\n line-height: 1.7;\n color: #ccc;\n margin-bottom: 12px;\n }\n\n .map-point:last-child { margin-bottom: 0; }\n\n .map-date {\n\n width: 90px; flex-shrink: 0; white-space: nowrap;\n\n font-weight: bold;\n\n color: #c9a961;\n\n font-size: 0.9em;\n\n }\n\n .map-content h4 {\n color: #fff;\n font-size: 1em; margin-bottom: 8px; }\n\n .map-content p { color: #aaa; font-size: 0.95em; line-height: 1.7; }\n\n\n\n /* Journal Entries */\n\n .journal-grid {\n\n display: grid;\n\n grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));\n\n gap: 20px;\n\n }\n\n .journal-card {\n\n background: #111;\n\n border-radius: 10px;\n\n padding: 10px;\n\n border: 1px solid #333;\n\n }\n\n .journal-date {\n\n color: #c9a961;\n\n font-size: 0.85em;\n\n letter-spacing: 2px;\n\n margin-bottom: 5px;\n\n font-weight: bold;\n\n }\n\n .journal-text {\n\n color: #ccc;\n\n font-style: italic;\n\n line-height: 1.8;\n\n font-size: 0.95em;\n\n margin-bottom: 5px;\n\n }\n\n .journal-source {\n\n color: #666;\n\n font-size: 0.85em;\n\n }\n\n\n\n /* Q&A Section */\n\n\n\n\n /* Agent-to-Agent Conversation */\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n /* CTA */\n\n .cta { padding: 40px 20px; text-align: center; }\n\n .cta-button {\n\n display: inline-block;\n\n padding: 18px 50px;\n\n background: linear-gradient(135deg, #c9a961 0%, #8b7355 100%);\n\n color: #0a0a0a;\n\n text-decoration: none;\n\n border-radius: 50px;\n\n font-size: 1.1em;\n\n font-weight: bold;\n\n letter-spacing: 2px;\n\n transition: transform 0.3s;\n\n }\n\n .cta-button:hover { transform: scale(1.05); }\n\n\n\n /* Footer */\n\n footer { padding: 40px 20px; text-align: center; color: #555; font-size: 0.85em; background: #050505; }\n\n\n\n @media (max-width: 768px) {\n\n .hero { height: 25vh; min-height: 50px; }\n\n .hero h1 { font-size: 1.8em; letter-spacing: 5px; }\n\n .hero-subtitle { font-size: 0.9em; letter-spacing: 4px; }\n\n .section { padding: 20px 15px; }\n\n .section-title { font-size: 1.4em; margin-bottom: 25px; letter-spacing: 4px; }\n\n .timeline { padding-left: 0; }\n\n .timeline-item {\n margin-bottom: 12px;\n padding: 10px;\n background: #1a1a1a;\n border-radius: 8px;\n display: flex;\n flex-direction: column;\n gap: 5px;\n }\n\n .timeline-item::before { display: none; }\n\n .timeline-date { font-size: 0.8em; color: #c9a961; display: block; margin-bottom: 5px; }\n\n .timeline-title { font-size: 1em; }\n\n .timeline-desc { font-size: 0.85em; line-height: 1.5; color: #aaa; }\n\n .map-container { padding: 15px; margin: 20px auto; width: 90%; }\n\n .map-point {\n padding: 10px;\n margin-bottom: 8px;\n display: flex;\n flex-direction: column;\n gap: 5px;\n }\n\n .map-date {\n font-size: 0.85em;\n color: #c9a961;\n font-weight: bold;\n }\n\n .map-content h4 { font-size: 1em; color: #fff; margin-bottom: 5px; }\n\n .map-content p { color: #aaa; font-size: 0.85em; line-height: 1.5; }\n\n .journal-grid { gap: 12px; }\n\n .journal-card { padding: 12px; }\n\n .qa-section { padding: 15px 10px; }\n .qa-container { margin-top: 5px; }\n .chat-box { padding: 8px; min-height: 80px; }\n .welcome h3 { font-size: 1.4em; margin-bottom: 8px; }\n .welcome p { font-size: 0.9em; }\n .input-area { margin-bottom: 15px; }\n .input-area input { padding: 12px; font-size: 0.9em; }\n .input-area button { padding: 12px; }\n\n .cta { padding: 20px 15px; }\n\n footer { padding: 20px 15px; }\n\n .nav { padding: 15px 20px; justify-content: space-between; position: relative; }\n\n .nav-links { display: none; }\n\n .hamburger { display: block; cursor: pointer; font-size: 1.5em; color: #c9a961; padding: 15px; margin: -10px; }\n\n .hamburger:hover { padding: 25px; margin: -20px; }\n\n .hamburger-wrap { display: block; position: relative; }\n\n .hamburger-menu {\n\n display: none;\n\n position: absolute;\n\n top: 40px;\n\n right: 0;\n\n width: 200px;\n\n background: rgba(0,0,0,0.98);\n\n padding: 10px;\n\n gap: 8px;\n\n z-index: 1000;\n\n }\n\n .hamburger-menu.show { display: flex; flex-direction: column; }\n\n .hamburger-menu a { color: #c9a961; font-size: 0.9em; padding: 6px 15px; border-bottom: 1px solid rgba(201,169,97,0.2); }\n\n\n .map-point { flex-direction: column; }\n\n }\n\n @media (min-width: 769px) {\n\n .nav-links { display: flex; }\n\n .hamburger { display: block; }\n\n .hamburger-menu {\n\n display: none;\n\n position: absolute;\n\n top: 50px;\n\n right: 20px;\n\n background: rgba(0,0,0,0.95);\n\n padding: 15px;\n\n border-radius: 8px;\n\n z-index: 1000;\n\n }\n\n .hamburger-menu.show { display: flex; flex-direction: column; gap: 10px; }\n\n .hamburger-menu a { color: #c9a961; font-size: 0.9em; }\n\n }\n\n\n\n    /* Banner */\n\n    .banner { position: relative; width: 100%; height: 140px; overflow: hidden; }\n\n    .banner-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('pioneer art.png'); background-size: cover; background-position: center 35%; }\n\n    .banner-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(180deg, rgba(26,21,16,0.6) 0%, rgba(26,21,16,0.4) 100%); }\n\n    .banner-content { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); text-align: center; }\n\n    .banner-link { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }\n\n\n    /* Q&A Section Styles */\n    .qa-section { background: #111; padding: 30px 20px; }\n    .qa-container { max-width: 900px; margin: 0 auto; margin-top: 10px; }\n    .chat-box { background: #1a1a1a; border-radius: 15px; padding: 10px; min-height: 100px; max-height: 500px; overflow-y: auto; margin-bottom: 20px; }\n    .welcome h3 { color: #c9a961; font-size: 1.8em; margin-bottom: 10px; }\n    .welcome p { color: #aaa; line-height: 1.6; }\n    .welcome-sub { color: #888; font-size: 0.9em; margin-top: 10px; font-style: italic; }\n    .input-area { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }\n    .input-area input { flex: 1; padding: 15px; background: #1a1a1a; border: 2px solid #333; border-radius: 50px; color: #fff; font-size: 1em; }\n    .input-area input:focus { border-color: #c9a961; outline: none; }\n    .input-area button { padding: 15px 30px; background: #c9a961; border: none; border-radius: 30px; color: #0a0a0a; font-weight: bold; cursor: pointer; width: 100%; }\n    .input-area button:hover { background: #b89951; }\n    .category-row { margin-bottom: 5px; }\n    .category-title { color: #c9a961; font-size: 0.9em; letter-spacing: 2px; margin-bottom: 10px; font-weight: bold; }\n    .category-btn { display: inline-block; padding: 8px 15px; background: #1a1a1a; border: 1px solid #333; border-radius: 25px; color: #999; font-family: inherit; font-size: 0.85em; line-height: 1.2; margin: 3px; text-decoration: none; cursor: pointer; }\n    .category-btn:hover { background: #c9a961; color: #0a0a0a; }\n    .message { margin: 15px 0; padding: 15px; border-radius: 10px; }\n    .user-message { background: rgba(201, 169, 97, 0.1); border-left: 4px solid #c9a961; }\n    .bot-message { background: rgba(100, 150, 200, 0.1); border-left: 4px solid #6496c8; }\n    .bot-message p { line-height: 1.7; color: #ddd; margin-bottom: 12px; }\n    .message p { margin-bottom: 12px; }\n    .message p:last-child { margin-bottom: 0; }\n    .loading { text-align: center; padding: 10px; color: #666; }\n    .sources { margin-top: 15px; padding-top: 10px; border-top: 1px solid #333; }\n    .sources-title { color: #888; font-size: 0.8em; margin-bottom: 8px; }\n    .source-link { display: inline-block; margin: 3px 8px 3px 0; color: #c9a961; font-size: 0.85em; }\n\n    /* Desktop Q&A input area - side by side */\n    @media (min-width: 769px) {\n    .input-area { display: flex; flex-direction: row; gap: 15px; margin-bottom: 30px; }\n    .input-area input { flex: 1; padding: 15px 20px; border: 1px solid #c9a961; border-radius: 30px; background: rgba(255,255,255,0.05); color: #fff; font-size: 1em; }\n    .input-area input::placeholder { color: #666; }\n    .input-area input:focus { border-color: #e0c070; outline: none; background: rgba(255,255,255,0.1); }\n    .input-area button { padding: 15px 30px; background: #c9a961; border: none; border-radius: 30px; color: #0a0a0a; font-weight: bold; cursor: pointer; width: auto; }\n    .input-area button:hover { background: #b89951; }\n    }\n\n"
+    },
+    {
+      "command": "node tools/art_study_picture_runtime_qa.js",
+      "returncode": 0,
+      "output": "Art study picture DOM QA passed: 4 featured paths, 20 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.\n"
+    },
+    {
+      "command": "node tools/evidences_visual_guides_runtime_qa.js",
+      "returncode": 0,
+      "output": "Evidences SVG runtime PASS: 12 responsive sources, caption source links, study/full-size nested dialogs, close focus and lesson return.\n"
+    },
+    {
+      "command": "node tools/not_found_recovery_runtime_qa.js",
+      "returncode": 0,
+      "output": "NOT FOUND RECOVERY QA PASS: four missing URL depths, before/after shared JS, local assets/recovery links, preserved skip links and two normal-page controls\n"
+    },
+    {
+      "command": "node tools/sitewide_hero_runtime_qa.js",
+      "returncode": 0,
+      "output": "PASS 42 hero interaction contexts across 21 destinations. CSS framing, keyboard native activation and actual phone rendering require browser verification.\n"
+    },
+    {
+      "command": "node tools/topic_artwork_sources_runtime_qa.js",
+      "returncode": 0,
+      "output": "Historical artwork source QA PASS: four real scene panels plus exact HTTPS host boundary, query/fragment preservation and scripture routing\n"
+    },
+    {
+      "command": "node tools/scripture_display_runtime_qa.js",
+      "returncode": 0,
+      "output": "PASS: shared verifier, stable Pioneer controls, invalid-text blocking, citation links, catalog outage, distinct reader Retry/Close handlers, 503 recovery and focus return.\n"
+    },
+    {
+      "command": "node tools/ask_composer_scroll_runtime_qa.js",
+      "returncode": 0,
+      "output": "PASS: desktop follow-up composer and latest answer remain visible with fixed header; hidden and short-viewport fallbacks.\n"
+    },
+    {
+      "command": "node --test tools/art_ask_context.test.cjs",
+      "returncode": 0,
+      "output": "✔ CFM topic is visible, editable, returns to CFM, and never submits (77.5531ms)\n✔ explicit q and already typed draft take precedence (47.7994ms)\n✔ returns allow known pages and plain fragments, drop queries and reject unsafe paths (64.8245ms)\n✔ topic without return offers accurate fallback; empty topic does not create context (15.2766ms)\n✔ Holy Ghost study, supporting artwork and hero return to the exact approved route (73.5145ms)\n✔ Plan of Salvation study, supporting artwork and hero return to the exact approved route (90.7873ms)\n✔ existing artwork, Watch, evidences and covenant contracts remain intact (76.6581ms)\nℹ tests 7\nℹ suites 0\nℹ pass 7\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1131.6321\n"
+    },
+    {
+      "command": "node --test tools/ask_growing_composer.test.cjs",
+      "returncode": 0,
+      "output": "✔ typed and programmatically assigned long questions grow and shrink without changing text (65.4661ms)\n✔ native textarea contract and initial prefill survive initialization (9.5223ms)\n✔ Enter sends once; Shift Enter and composing Enter do not submit (6.6157ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 688.3519\n"
+    },
+    {
+      "command": "node --test tools/holy_ghost_video.test.cjs",
+      "returncode": 0,
+      "output": "✔ player is opt-in, exact owner video loads, and close destroys it (102.534ms)\n✔ timeout restores preview with real YouTube fallback and stale readiness cannot reopen it (33.2221ms)\n✔ API load error and provider playback error both preserve usable fallback (57.5282ms)\nℹ tests 3\nℹ suites 0\nℹ pass 3\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 610.1783\n"
+    },
+    {
+      "command": "node tools/canonical_presentation_measurement.test.js",
+      "returncode": 0,
+      "output": "Canonical presentation measurement PASS: painted controls, real text clipping, image-only overflow, closed/open disclosures.\n"
+    },
+    {
+      "command": "node tools/site_search_runtime_qa.js",
+      "returncode": 0,
+      "output": "SEARCH RUNTIME PASS: relevance, safe text, pagination, history, dialog focus, empty/error/retry and Ask prefill\n"
+    },
+    {
+      "command": "node tools/settle_recording_runtime_qa.js",
+      "returncode": 0,
+      "output": "SETTLE RECORDING QA PASS: exact negation, collapsed transcript, metadata race, cloned links, focus, seek and playback fallback\n"
+    },
+    {
+      "command": "node tools/watch_shorts_runtime_qa.js",
+      "returncode": 0,
+      "output": "Watch Shorts official API runtime PASS: no-load player, pending/readiness, one-player switching, stale callbacks, close/Escape/focus, modifier fallback, invalid ID, API/player failure/timeout and pagehide\n"
+    },
+    {
+      "command": "node --test tools/jesus_journey_navigation.test.cjs",
+      "returncode": 0,
+      "output": "✔ initial chapter, controls, aria-current and next/previous focus (100.2288ms)\n✔ chapter cards retain accessible names and explain each reading mode (37.7296ms)\n✔ every real journey page retains all chapters without JS and selects one with JS (2052.1939ms)\n✔ initial chapter and nested picture hashes reveal the containing chapter (163.064ms)\n✔ chapter picker closes and focus moves to selected heading; last next is disabled (59.0576ms)\n✔ whole-study toggle and focus recovery never strand focus in a hidden chapter (44.9642ms)\n✔ Back and Forward restore chapters and nested picture bookmarks (255.7763ms)\n✔ invalid and malformed hashes are safe; empty hash restores first chapter (132.7878ms)\n✔ same-page picture link reveals target before downstream click listeners (32.4066ms)\n✔ print reveals all chapters and restores reading mode (42.0149ms)\n✔ modified chapter-picker click does not navigate current document (65.0955ms)\n✔ modified same-page picture link must not change current chapter (98.8154ms)\n✔ rapid valid-to-malformed bookmark change remains safe before animation frame (85.5417ms)\n✔ Back closes nested owned dialogs and restores focus after shared close cleanup (81.5959ms)\n✔ reviewed group retains all member sections but counts and selects leaders only (54.0523ms)\n✔ retained subordinate bookmarks reveal complete group and keep precise scroll target (195.8734ms)\n✔ whole mode and printing include group members and restore safely focused leader (88.8084ms)\n✔ invalid grouping fails open with every original section and navigation link available (70.5002ms)\n✔ Birth preserves all twelve bookmarks, narrative opening pictures and reader focus (706.1198ms)\nℹ tests 19\nℹ suites 0\nℹ pass 19\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 4839.0248\n"
+    },
+    {
+      "command": "node tools/watch_context_runtime_qa.js",
+      "returncode": 0,
+      "output": "Watch context runtime QA PASSED: section returns, external/invalid URL rejection, safe text, retained question, artwork regression, no automatic submission.\n"
+    },
+    {
+      "command": "node tools/focused_answers_runtime_qa.js",
+      "returncode": 0,
+      "output": "FOCUSED ANSWERS RUNTIME PASS: both legacy history bookmarks, no redirect loops, own hero/lesson Ask returns, external return rejection\n"
+    },
+    {
+      "command": "node --check topic-artwork-details.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/scripture_reader_runtime_qa.js",
+      "returncode": 0,
+      "output": "PASS: scripture reader URL, verse selection, source validation, safe rendering, delegated click, cache, race, fallback, close and focus/scroll-lock runtime contracts. Browser focus trapping, Escape, scrolling and presentation require real browser QA.\n"
+    },
+    {
+      "command": "node --check header-scroll.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/source_integrity_runtime_qa.js",
+      "returncode": 0,
+      "output": "Source integrity runtime QA PASS\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation, ungrounded-scripture-citation\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation, ungrounded-scripture-citation\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation, ungrounded-scripture-citation\nfocusChrist source-integrity guard blocked generated answer: ungrounded-scripture-citation\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation, ungrounded-scripture-attribution\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation\nfocusChrist source-integrity guard blocked generated answer: known-false-source-claim\n"
+    },
+    {
+      "command": "node tools/reviewed_ask_knowledge_qa.js",
+      "returncode": 0,
+      "output": "Reviewed Ask knowledge QA PASS: 25 entries; all positive, negative, profile, and hash checks passed\n"
+    },
+    {
+      "command": "node tools/pioneer_ask_runtime_qa.js",
+      "returncode": 0,
+      "output": "Pioneer Ask final-owner runtime QA PASS: local handcart answer made zero Worker requests; negative and stale-response controls passed\nPioneer disclosure error: Error: simulated disclosure provider failure\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:80:15)\n    at requestPioneerAI (pioneer-experience.js:365:36)\n    at researchDisclosure (pioneer-experience.js:824:34)\n    at Object.runDisclosure [as focusChristRunPioneerDisclosure] (pioneer-experience.js:876:15)\n    at C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:159:22\nPioneer disclosure error: Error: simulated disclosure provider failure\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:80:15)\n    at requestPioneerAI (pioneer-experience.js:365:36)\n    at researchDisclosure (pioneer-experience.js:824:34)\n    at Object.runDisclosure [as focusChristRunPioneerDisclosure] (pioneer-experience.js:876:15)\n    at C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:159:22\nPioneer disclosure error: Error: simulated disclosure provider failure\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:80:15)\n    at requestPioneerAI (pioneer-experience.js:365:36)\n    at researchDisclosure (pioneer-experience.js:824:34)\n    at Object.runDisclosure [as focusChristRunPioneerDisclosure] (pioneer-experience.js:876:15)\n    at C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:219:18\nPioneer disclosure error: Error: The detailed topic answer could not be verified\n    at researchDisclosure (pioneer-experience.js:826:23)\n    at async Object.runDisclosure [as focusChristRunPioneerDisclosure] (pioneer-experience.js:876:9)\n    at async C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:232:5\n"
+    },
+    {
+      "command": "node tools/pioneer_composer_scroll_runtime_qa.js",
+      "returncode": 0,
+      "output": "PASS: Pioneer focused composer geometry at desktop720, phone844, keyboard resize, header occlusion, repeated completion and inactive focus.\nPASS: three successive answer completions preserve BOTH answer and composer after native selection scroll at desktop, phone and short viewport.\n"
+    },
+    {
+      "command": "node tools/church_history_ask_runtime_qa.js",
+      "returncode": 0,
+      "output": "Church History Ask final-owner runtime QA PASS: reviewed facts made zero Worker requests; negative and stale-response controls passed\n"
+    },
+    {
+      "command": "node tools/study_intelligence_v3_runtime_qa.js",
+      "returncode": 0,
+      "output": "focusChrist Study Intelligence policy 2026-09-03.16 active.\nStudy Intelligence v3 runtime QA PASS\nfocusChrist Study Intelligence v3 request failed: Injected failure after complete request budget\nfocusChrist Study Intelligence v3 failed: TypeError: Injected failure after complete request budget\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:446:19)\n    at request (study-intelligence-v3.js:345:36)\n    at requestWithRetry (study-intelligence-v3.js:395:33)\n    at Object.askV3 [as focusChristStudyAskV3] (study-intelligence-v3.js:589:42)\n    at C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:448:22\nfocusChrist Study Intelligence v3 request failed: Injected transient network failure\nfocusChrist Study Intelligence v3 failed: TypeError: Injected transient network failure\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:85:15)\n    at request (study-intelligence-v3.js:345:36)\n    at requestWithRetry (study-intelligence-v3.js:409:34)\n    at async Object.askV3 [as focusChristStudyAskV3] (study-intelligence-v3.js:589:36)\n    at async C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:473:14 {\n  focusChristClientAttempts: 2\n}\nfocusChrist Study Intelligence v3 request failed: Study service returned 400\nfocusChrist Study Intelligence v3 failed: Error: Study service returned 400\n    at requestFailure (study-intelligence-v3.js:331:23)\n    at request (study-intelligence-v3.js:360:23)\n    at async requestWithRetry (study-intelligence-v3.js:395:27)\n    at async Object.askV3 [as focusChristStudyAskV3] (study-intelligence-v3.js:589:36)\n    at async C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:480:14 {\n  focusChristRetryable: false,\n  focusChristStatus: 400\n}\n"
+    },
+    {
+      "command": "node tools/question_safety_runtime_qa.js",
+      "returncode": 0,
+      "output": "Question safety runtime QA PASS\nContextual support parity PASS: 93 generic fixtures\n"
+    },
+    {
+      "command": "node tools/scripture_library_qa.js",
+      "returncode": 0,
+      "output": "PASS: complete library hashes, CFM dynamic assignments, bounds, exact quotes, wrong attribution, edition, link labels, outages, direct lookup and server approval bypass.\n"
+    },
+    {
+      "command": "node groq-proxy/source-policy.test.js",
+      "returncode": 0,
+      "output": "Gateway source policy QA PASS\nPASS: fresh-reset seasons paraphrases use zero external requests; compound, other-planet and faith scopes retain ordinary routing.\n"
+    },
+    {
+      "command": "node groq-proxy/self-help-support.test.js",
+      "returncode": 0,
+      "output": "Self-help Worker integration PASS: server-owned scope/policy, followup/newtopic separation, Pioneer isolation, blocked zero calls, support research and fail-closed evidence.\n"
+    },
+    {
+      "command": "node groq-proxy/self-help-reviewed.test.js",
+      "returncode": 0,
+      "output": "Reviewed self-help PASS: useful source-pinned replies, scripture gate, negatives, source drift/unavailability and narrow scope.\n"
+    },
+    {
+      "command": "node groq-proxy/conversation-context.test.js",
+      "returncode": 0,
+      "output": "Conversation context QA PASS: both surfaces, raw/legacy requests, current intent, user-only bounded context, reset/missing/three-turn cases, paired official retrieval and research fallback.\n"
+    },
+    {
+      "command": "node groq-proxy/research-escalation.test.js",
+      "returncode": 0,
+      "output": "Research escalation QA PASS: three topics, one research escalation, fetched official text, closed second rejection, URL boundaries and no redirects.\n"
+    },
+    {
+      "command": "node groq-proxy/scripture-evidence.test.js",
+      "returncode": 0,
+      "output": "PASS: 20 canonical corpus passages, bounded natural reading, malformed references, hash rejection, multi-reference bounds and verified explanatory follow-ups.\n"
+    },
+    {
+      "command": "node groq-proxy/source-discovery.test.js",
+      "returncode": 0,
+      "output": "PASS: clean article extraction, exact Gospel Topic admission, reviewed Pioneer metadata, scoped landmarks, irrigation preservation and cold/train negatives.\n"
+    },
+    {
+      "command": "node groq-proxy/evidence-budget.test.js",
+      "returncode": 0,
+      "output": "PASS: complete bounded source packs, safe quota diagnostics, single-provider bounded calls without retry loops.\n"
+    },
+    {
+      "command": "node groq-proxy/openai-research.test.js",
+      "returncode": 0,
+      "output": "PASS: OpenAI primary search/verifier with zero Groq, approved URL leads only, hydration/redirect gates, incomplete/no-tool rejection, timeout and one-call bound.\n"
+    },
+    {
+      "command": "node groq-proxy/corpus-coverage.test.js",
+      "returncode": 0,
+      "output": "Requested corpus coverage QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/corpus-evidence.test.js",
+      "returncode": 0,
+      "output": "Requested corpus evidence QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/factual-followup.test.js",
+      "returncode": 0,
+      "output": "Narrow factual followup QA PASS\nNarrow factual Worker pipeline PASS: concise first answer, audited paraphrase repair, unchanged four-call limit, final overlap fails closed.\nPASS: concrete overlap feedback covers consecutive and fragmented copying while preserving independent paraphrase.\n"
+    },
+    {
+      "command": "node groq-proxy/relationship-audit.test.js",
+      "returncode": 0,
+      "output": "Relationship audit QA PASS: separate critic invoked; rejection/provider failure fail closed; correction survives final guards.\n"
+    },
+    {
+      "command": "node groq-proxy/historical-relationship.test.js",
+      "returncode": 0,
+      "output": "PASS: observed Winter Quarters destination/purchase-location swap blocked; correct and negated relationships preserved.\n"
+    },
+    {
+      "command": "node groq-proxy/transaction-outcome.test.js",
+      "returncode": 0,
+      "output": "PASS: joined transaction failures require separate outcome support, preserve attempted lists, specific failures, supported joins and distinct transaction types.\nPASS: joined-outcome repair stays within four provider calls; unchanged unsupported answer fails final publication.\n"
+    },
+    {
+      "command": "node groq-proxy/reviewed-readings.test.js",
+      "returncode": 0,
+      "output": "PASS: reviewed reading identity/content/checksum invalidation, full-scope cache integrity, zero-AI changed-source hold, God user-context boundaries, and publication guards.\n"
+    },
+    {
+      "command": "node groq-proxy/reviewed-source-context.test.js",
+      "returncode": 0,
+      "output": "Reviewed source context QA PASS: exact source boundaries and general transport source diversity.\n"
+    },
+    {
+      "command": "node groq-proxy/direct-scripture-reading.test.js",
+      "returncode": 0,
+      "output": "Direct scripture reading QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/paragraph-intent.test.js",
+      "returncode": 0,
+      "output": "Paragraph retrieval intent QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/source-caveat.test.js",
+      "returncode": 0,
+      "output": "Source caveat context QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/missing-subject.test.js",
+      "returncode": 0,
+      "output": "missing-subject: PASS\n"
+    },
+    {
+      "command": "node tools/scripture_quote_display_qa.js",
+      "returncode": 0,
+      "output": "PASS: actual Mosiah18:8-10 source punctuation survives display; altered wording/punctuation rejected by shared validator.\n"
+    },
+    {
+      "command": "node groq-proxy/church-source-index.test.js",
+      "returncode": 0,
+      "output": "Church source index QA PASS\n"
+    },
+    {
+      "command": "node --check site-common.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check artwork-details.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check full-image-viewer.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check hero-details.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/artwork_details_runtime_qa.js",
+      "returncode": 0,
+      "output": "Legacy artwork runtime QA passed: body lesson return, focus, regular close, existing destinations, non-body scope.\n"
+    },
+    {
+      "command": "node tools/full_image_viewer_runtime_qa.js",
+      "returncode": 0,
+      "output": "Full-image viewer runtime QA: PASS\nSame-page open, exact source, close, Escape cleanup, focus return, and modified-click fallback verified\n"
+    },
+    {
+      "command": "node --check study-intelligence-v3.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check study-journey.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check study-source-router.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check church-history-experience.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check art-study-router.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check watch-study-enrichment.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check watch-experience.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check art-ask-context.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check ask-experience.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check pioneer-experience.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check pioneer-story.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/pioneer_story_runtime_qa.js",
+      "returncode": 0,
+      "output": "PIONEER STORY RUNTIME PASS: fragment ancestors, controller isolation, complete source links, close/return, focus and gallery query.\n"
+    },
+    {
+      "command": "node tools/pioneer_related_study_runtime_qa.js",
+      "returncode": 0,
+      "output": "Pioneer related study PASS: verified anchors, pending guard, repeated/top-promoted exchanges, unrelated names, existing Answers route.\n"
+    },
+    {
+      "command": "node --check tools/live_production_ask_qa.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node --test tools/live_production_ask_contract.test.cjs",
+      "returncode": 0,
+      "output": "✔ actual release roots satisfy production controller contract before deployment (16.4655ms)\n✔ future release version is derived while the previously deployed revision is rejected (0.6756ms)\n✔ missing, additional stale, substituted and unversioned controllers fail closed (0.607ms)\n✔ all required root controller identities remain mandatory (25.9566ms)\nℹ tests 4\nℹ suites 0\nℹ pass 4\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 141.7265\n"
+    },
+    {
+      "command": "node --check tools/live_ai_response_matrix.js",
+      "returncode": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/live_ai_capacity_contract.test.js",
+      "returncode": 0,
+      "output": "Live AI capacity contract PASS: bounded four-call repair accepted; incomplete, zero, excess and missing concurrency receipts rejected.\n"
+    },
+    {
+      "command": "node --check groq-proxy/src/church-source-index.js",
+      "returncode": 0,
+      "output": ""
+    }
+  ]
+}

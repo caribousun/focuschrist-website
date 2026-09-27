@@ -14,7 +14,8 @@
     "tools/answer_video_uniqueness_qa.py": "4ba04a60c46380d58862617d4f57747f13aff26255aba1c0f9c950ebf57edd30",
     "tools/study_gap_art_qa.py": "ac338ceff096076ced7885a0980204758d69cf21c207f28ab65c321e4584ac81",
     "tools/focused_answers_qa.py": "76dcd4c39d22bd0541429c864e3e4e3a045465067fc986848fb3b18738136aec",
-    "docs/section-panel-inventory.json": "1073d3a3b7cb72f781f1b97e2437461c6b7d98f1d20319c6b8ea4ec9b0a2cdf3"
+    "docs/section-panel-inventory.json": "1073d3a3b7cb72f781f1b97e2437461c6b7d98f1d20319c6b8ea4ec9b0a2cdf3",
+    "docs/study-link-control-inventory.json": "0dbb3df9ea2098e213bb184ba20e8d6b6aa3a5e0dadaf2bc91a8c90a2ba17653"
   },
   "findings": [
     {
@@ -93,5 +94,17 @@
     "local_installed_beautifulsoup4": "4.15.0",
     "verdict": "PASS precise missing test dependency correction; hosted rerun still required",
     "runtime_changes": "None in this remediation"
+  },
+  "hosted_control_inventory_remediation": {
+    "reported_failed_run": "36348008983",
+    "reported_failure": "Study-link controls exact coverage inventory stale",
+    "independent_diff_review": "Only canonical_pages120->121, source-pill count629->688 and addition answers/plan-of-salvation.html to owning selector pages. All other selectors and numbered navigation unchanged; no product or guard changes.",
+    "independent_test": {
+      "command": "node tools/study_link_controls_qa.js",
+      "exit_code": 0,
+      "result": "PASS121canonical pages12control families",
+      "caveat": "JSDOM emits pre-existing CSS parser diagnostics; structural assertions pass. This is not browser rendering proof."
+    },
+    "verdict": "PASS narrow generated inventory refresh; Fermi full Node sweep and hosted rerun tracked separately"
   }
 }

@@ -1,0 +1,39 @@
+{
+  "historical_hosted_failure": {
+    "run": 36348008983,
+    "test": "tools/study_link_controls_qa.js",
+    "assertion": "Control coverage changed; review inventory",
+    "state": "FAILURE retained"
+  },
+  "cause": "Exact inventory had not yet registered the new Plan route and its59source controls. Product DOM was valid; assertion correctly failed closed. Earlier71Python sweep did not cover this Node inventory gate.",
+  "repair": "Regenerated exact named-control inventory using existing --write-inventory; no assertion or selector/config changes.",
+  "delta": {
+    "canonical_pages": [
+      120,
+      121
+    ],
+    "source_control_count": [
+      629,
+      688
+    ],
+    "added_page": "answers/plan-of-salvation.html",
+    "direct_new_page_count": 59,
+    "other_changes": []
+  },
+  "product_bytes_changed": false,
+  "independent_review": "Newton independently compared delta and ran Node gate successfully; existing CSS parser warnings remain nonfatal.",
+  "inventory_sha256": "0dbb3df9ea2098e213bb184ba20e8d6b6aa3a5e0dadaf2bc91a8c90a2ba17653",
+  "full_node_sweep": {
+    "evidence": "docs/plan-of-salvation/node-workflow-sweep.json",
+    "commands": 88,
+    "passed": 88,
+    "failed": 0,
+    "jsdom": "26.1.0",
+    "excluded": [
+      "complete_card_rows_browser_qa.js",
+      "canonical_presentation_browser_qa.js",
+      "live_production_ask_qa.js actual live execution"
+    ],
+    "limits": "Browser/published runtime claims remain separate. Syntax check and offline live-Ask contract tests are included."
+  }
+}

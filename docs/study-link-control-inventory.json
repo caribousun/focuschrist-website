@@ -1,8 +1,8 @@
 {
-  "canonical_pages": 120,
+  "canonical_pages": 121,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 629,
+      "count": 688,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -17,6 +17,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/what-happens-after-death.html",
