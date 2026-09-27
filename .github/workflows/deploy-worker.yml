@@ -107,6 +107,10 @@ jobs:
         shell: bash
         run: node tools/live_ai_response_matrix.js 2>&1 | tee "$RUNNER_TEMP/focus-ai-matrix.log"
 
+      - name: Allow live Ask rate limit to reset
+        if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
+        run: sleep 70
+
       - name: Verify conversation follow-ups
         if: ${{ !cancelled() && steps.deploy_worker.outcome == 'success' }}
         shell: bash
