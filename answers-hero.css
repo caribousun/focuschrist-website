@@ -190,3 +190,29 @@
         transition: none;
     }
 }
+
+/* Keep the foundational-study invitation and links together as one group. */
+.fc-answers-jump-panel > .fc-resource-next {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(240, 195, 106, .25);
+    text-align: center;
+}
+.fc-answers-jump-panel [data-foundational-study-actions] {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    width: 100%;
+}
+.fc-answers-jump-panel [data-foundational-study-actions] > a {
+    width: 100%;
+    text-align: center;
+}
+@media (max-width: 700px) {
+    .fc-answers-jump-panel [data-foundational-study-actions] {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
