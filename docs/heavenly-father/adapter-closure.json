@@ -1,0 +1,482 @@
+{
+  "historical_failure": "PR398 hosted36352356745 step30 failed unregistered five Father assets; rendered desktop/phone/enlarged preceding checks passed.",
+  "repair": "Exact five reviewed Father assets independently validated then subtracted as own category; baseline99 and preserved3 unchanged; owner/hash/unique count/shared adapter enforced. Product bytes unchanged.",
+  "checks": [
+    {
+      "command": "python tools/answer_study_parser_qa.py",
+      "exit_code": 0,
+      "output": "ANSWER STUDY PARSER QA PASS: inline scripture and nested emphasis preserve exact prose order\n"
+    },
+    {
+      "command": "python tools/topic_study_pages_qa.py",
+      "exit_code": 0,
+      "output": "HOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nCOVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2\u20133 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\nTOPIC STUDY PAGES QA PASS: 28 distinct pill destinations; complete openings, same-page hero return, and source-preserving migrations\n"
+    },
+    {
+      "command": "python tools/holy_ghost_qa_test.py",
+      "exit_code": 0,
+      "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.042s\n\nOK\n"
+    },
+    {
+      "command": "python tools/plan_of_salvation_qa.py --selftest",
+      "exit_code": 0,
+      "output": "PLAN QA SELFTEST PASS: eight structure/source/reference and five artwork/identity mutations rejected\nPLAN QA PASS: ten chapters, twenty teaching units, sixteen body originals, three owning-study previews, six source-matched talks; exact independently reviewed art hashes\n"
+    },
+    {
+      "command": "python tools/heavenly_father_qa.py --selftest",
+      "exit_code": 0,
+      "output": "PASS 8 Father mutation fixtures\nPASS Father chapters, original bookmarks/art, five reviewed new pictures and owning Enos reference\n"
+    },
+    {
+      "command": "python tools/topic_inline_scripture_qa.py",
+      "exit_code": 0,
+      "output": "TOPIC INLINE SCRIPTURE QA PASS: Home, all19 topic destinations and all4 Featured Art bodies, 853 scripture links, canonical chapters, exact verse selections, no nested anchors\n"
+    },
+    {
+      "command": "python tools/topic_artwork_qa.py",
+      "exit_code": 0,
+      "output": "TOPIC ARTWORK QA PASS: 21 contextual placements, individually approved assets, exact sources, responsive full-image viewing\n"
+    },
+    {
+      "command": "python tools/topic_body_picture_qa.py",
+      "exit_code": 0,
+      "output": "hild-heard-800.webp\",\n        \"section\": \"reading-213\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/topics/family-study-800.webp\",\n        \"section\": \"reading-222\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  },\n  {\n    \"page\": \"answers/why-latter-day-saints-build-temples.html\",\n    \"distinct\": 5,\n    \"sections\": 5,\n    \"images\": [\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-purpose-reading-800.webp\",\n        \"section\": \"reading-104\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-preparation-notes-800.webp\",\n        \"section\": \"reading-170\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-daily-promises-800.webp\",\n        \"section\": \"reading-206\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-generations-craft-800.webp\",\n        \"section\": \"reading-215\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-covenant-help-800.webp\",\n        \"section\": \"reading-245\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  },\n  {\n    \"page\": \"general-conference.html\",\n    \"distinct\": 5,\n    \"sections\": 5,\n    \"images\": [\n      {\n        \"src\": \"assets/page-art/exclusive/conference-message-notes-800.webp\",\n        \"section\": \"reading-120\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-study-prayer-800.webp\",\n        \"section\": \"reading-201\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-response-together-800.webp\",\n        \"section\": \"reading-551\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-return-question-800.webp\",\n        \"section\": \"reading-578\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-care-followthrough-800.webp\",\n        \"section\": \"reading-628\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  }\n]\n"
+    },
+    {
+      "command": "python tools/five_picture_manifest_qa.py",
+      "exit_code": 0,
+      "output": "FIVE PICTURE MANIFEST QA PASS: 63 additional figures, exact assets/captions/sources, portable intrinsic checks and full viewers\n"
+    },
+    {
+      "command": "python tools/topic_artwork_details_qa.py",
+      "exit_code": 0,
+      "output": "HOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nPLAN QA PASS: ten chapters, twenty teaching units, sixteen body originals, three owning-study previews, six source-matched talks; exact independently reviewed art hashes\nTOPIC ARTWORK DETAILS QA PASS: 265 adapter pictures, 3 existing detail pictures, 12 expanded illustration panels, 25 page dependencies\n"
+    },
+    {
+      "command": "python tools/bible_together_qa.py --self-test",
+      "exit_code": 0,
+      "output": "BIBLE TOGETHER QA PASS: 7 preserved originals, 13 reviewed additions, 2/3/3/5 scene distribution, local lesson returns and 12 paired readings\n"
+    },
+    {
+      "command": "python tools/abrahamic_covenant_qa.py",
+      "exit_code": 0,
+      "output": "COVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2\u20133 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\n"
+    },
+    {
+      "command": "python tools/focused_answers_qa.py",
+      "exit_code": 0,
+      "output": "FOCUSED ANSWERS QA PASS: 28 own destinations/openings, two complete priesthood studies, 853 unchanged baseline images; editorial and rendered review remain separate\n"
+    },
+    {
+      "command": "node tools/focused_answers_runtime_qa.js",
+      "exit_code": 0,
+      "output": "FOCUSED ANSWERS RUNTIME PASS: both legacy history bookmarks, no redirect loops, own hero/lesson Ask returns, external return rejection\n"
+    },
+    {
+      "command": "node --check topic-artwork-details.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "python tools/answer_study_qa.py",
+      "exit_code": 0,
+      "output": "ANSWER STUDY QA PASS: all 24 permanent Answers have contextual media, navigation, reflection and continuation\n"
+    },
+    {
+      "command": "python tools/answer_video_uniqueness_qa.py",
+      "exit_code": 0,
+      "output": "ANSWER VIDEO UNIQUENESS PASS: 72 video cards, no Watch or cross-Answer repetition\n"
+    },
+    {
+      "command": "python tools/global_video_uniqueness_qa.py",
+      "exit_code": 0,
+      "output": "GLOBAL VIDEO UNIQUENESS PASS: 92 reviewed videos, one themed placement each\n"
+    }
+  ],
+  "remaining_workflow_checks": [
+    {
+      "command": "python tools/build_scripture_reader_data.py --check",
+      "exit_code": 0,
+      "output": "{\n  \"linked_chapters\": 1584,\n  \"failures\": []\n}\n"
+    },
+    {
+      "command": "node tools/scripture_reader_runtime_qa.js",
+      "exit_code": 0,
+      "output": "PASS: scripture reader URL, verse selection, source validation, safe rendering, delegated click, cache, race, fallback, close and focus/scroll-lock runtime contracts. Browser focus trapping, Escape, scrolling and presentation require real browser QA.\n"
+    },
+    {
+      "command": "node --check header-scroll.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "python tools/resource_qa.py",
+      "exit_code": 0,
+      "output": "focusChrist RESOURCE QA PASSED\nShared hamburger routing, primary Watch path, official Church/BYU resource grouping, redundant-RSC prevention, responsive header, Watch media paths, and non-embed policy verified.\n"
+    },
+    {
+      "command": "python tools/study_intelligence_qa.py",
+      "exit_code": 0,
+      "output": "focusChrist STUDY INTELLIGENCE QA PASSED\nVerified active v3 grounding, display normalization, bounded browser retry, cache-versioned Ask/Pioneer loading, server-owned model selection, and retirement of unused v1/v2 layers.\n"
+    },
+    {
+      "command": "python tools/hardened_experience_qa.py",
+      "exit_code": 0,
+      "output": "focusChrist HARDENED EXPERIENCE QA PASSED\nVerified direct Home-to-Ask arrival, complete Harvest Sky Ask follow-up styling, Pioneer date/title collision protection, hardened Pioneer disclosure ownership and timeout recovery, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-official-study/contextual-Ask routing with exact return continuity, and thumbnail-backed Watch enrichment.\n"
+    },
+    {
+      "command": "python tools/pioneer_local_first_qa.py",
+      "exit_code": 0,
+      "output": "PIONEER LOCAL-FIRST QA PASS\nVerified policy 2026-09-03.16, 29 reviewed expandable cards, local biography precedence, multi-page continuity, verified-only AI enhancement, and true no-match AI routing.\n"
+    },
+    {
+      "command": "python tools/production_hardening_qa.py",
+      "exit_code": 0,
+      "output": "focusChrist PRODUCTION HARDENING QA PASSED\nVerified local high-resolution heroes, page-specific social previews, Pioneer chronology, artwork topic study + contextual Ask + exact return continuity, thumbnail-backed Watch video paths, localized Art assets, discovery controls, workflow gates, and durable local-brain learning.\n"
+    },
+    {
+      "command": "python tools/church_history_qa.py",
+      "exit_code": 0,
+      "output": "Church History QA PASS\n"
+    },
+    {
+      "command": "python tools/study_layout_uniformity_qa.py",
+      "exit_code": 0,
+      "output": "STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; all 82 journey consumers use full-width reading and current CSS; rendered geometry requires browser review\n"
+    },
+    {
+      "command": "python tools/study_section_balance_qa.py --self-test",
+      "exit_code": 0,
+      "output": "Study section balance self-test PASS: positive and 16 negative fixtures\n"
+    },
+    {
+      "command": "python tools/study_section_balance_qa.py",
+      "exit_code": 0,
+      "output": "Study section balance QA PASS: 121 canonical pages; 9 responsive media/art pairs; no orphaned narrow rows or odd article-grid holes\n"
+    },
+    {
+      "command": "python tools/joseph_smith_likeness_qa.py",
+      "exit_code": 0,
+      "output": "Joseph Smith likeness QA PASS: approved hero, five reviewed native artwork panels, six study stops, reflections, primary sources and reciprocal routes\n"
+    },
+    {
+      "command": "python tools/scripture_grounding_qa.py",
+      "exit_code": 0,
+      "output": "Scripture grounding QA PASS\n"
+    },
+    {
+      "command": "python tools/source_integrity_inventory.py",
+      "exit_code": 0,
+      "output": "Source integrity inventory PASS: 494 entries; 3 verified; 491 quarantined\n"
+    },
+    {
+      "command": "python tools/static_content_audit.py",
+      "exit_code": 0,
+      "output": "STATIC CONTENT AUDIT PASS: 125 documents (119 verified, 6 non-source-dependent)\n"
+    },
+    {
+      "command": "node tools/source_integrity_runtime_qa.js",
+      "exit_code": 0,
+      "output": "Source integrity runtime QA PASS\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation, ungrounded-scripture-citation\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation, ungrounded-scripture-citation\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation, ungrounded-scripture-citation\nfocusChrist source-integrity guard blocked generated answer: ungrounded-scripture-citation\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation, ungrounded-scripture-attribution\nfocusChrist source-integrity guard blocked generated answer: unreviewed-source-dependent-generation\nfocusChrist source-integrity guard blocked generated answer: known-false-source-claim\n"
+    },
+    {
+      "command": "node tools/reviewed_ask_knowledge_qa.js",
+      "exit_code": 0,
+      "output": "Reviewed Ask knowledge QA PASS: 25 entries; all positive, negative, profile, and hash checks passed\n"
+    },
+    {
+      "command": "node tools/pioneer_ask_runtime_qa.js",
+      "exit_code": 0,
+      "output": "   at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:80:15)\n    at requestPioneerAI (pioneer-experience.js:365:36)\n    at researchDisclosure (pioneer-experience.js:824:34)\n    at Object.runDisclosure [as focusChristRunPioneerDisclosure] (pioneer-experience.js:876:15)\n    at C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:159:22\nPioneer disclosure error: Error: simulated disclosure provider failure\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:80:15)\n    at requestPioneerAI (pioneer-experience.js:365:36)\n    at researchDisclosure (pioneer-experience.js:824:34)\n    at Object.runDisclosure [as focusChristRunPioneerDisclosure] (pioneer-experience.js:876:15)\n    at C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:159:22\nPioneer disclosure error: Error: simulated disclosure provider failure\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:80:15)\n    at requestPioneerAI (pioneer-experience.js:365:36)\n    at researchDisclosure (pioneer-experience.js:824:34)\n    at Object.runDisclosure [as focusChristRunPioneerDisclosure] (pioneer-experience.js:876:15)\n    at C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:219:18\nPioneer disclosure error: Error: The detailed topic answer could not be verified\n    at researchDisclosure (pioneer-experience.js:826:23)\n    at async Object.runDisclosure [as focusChristRunPioneerDisclosure] (pioneer-experience.js:876:9)\n    at async C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\pioneer_ask_runtime_qa.js:232:5\n"
+    },
+    {
+      "command": "node tools/pioneer_composer_scroll_runtime_qa.js",
+      "exit_code": 0,
+      "output": "PASS: Pioneer focused composer geometry at desktop720, phone844, keyboard resize, header occlusion, repeated completion and inactive focus.\nPASS: three successive answer completions preserve BOTH answer and composer after native selection scroll at desktop, phone and short viewport.\n"
+    },
+    {
+      "command": "node tools/church_history_ask_runtime_qa.js",
+      "exit_code": 0,
+      "output": "Church History Ask final-owner runtime QA PASS: reviewed facts made zero Worker requests; negative and stale-response controls passed\n"
+    },
+    {
+      "command": "node tools/study_intelligence_v3_runtime_qa.js",
+      "exit_code": 0,
+      "output": "request budget\nfocusChrist Study Intelligence v3 failed: TypeError: Injected failure after complete request budget\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:446:19)\n    at request (study-intelligence-v3.js:345:36)\n    at requestWithRetry (study-intelligence-v3.js:395:33)\n    at Object.askV3 [as focusChristStudyAskV3] (study-intelligence-v3.js:589:42)\n    at C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:448:22\nfocusChrist Study Intelligence v3 request failed: Injected transient network failure\nfocusChrist Study Intelligence v3 failed: TypeError: Injected transient network failure\n    at global.fetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:85:15)\n    at request (study-intelligence-v3.js:345:36)\n    at requestWithRetry (study-intelligence-v3.js:409:34)\n    at async Object.askV3 [as focusChristStudyAskV3] (study-intelligence-v3.js:589:36)\n    at async C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:473:14 {\n  focusChristClientAttempts: 2\n}\nfocusChrist Study Intelligence v3 request failed: Study service returned 400\nfocusChrist Study Intelligence v3 failed: Error: Study service returned 400\n    at requestFailure (study-intelligence-v3.js:331:23)\n    at request (study-intelligence-v3.js:360:23)\n    at async requestWithRetry (study-intelligence-v3.js:395:27)\n    at async Object.askV3 [as focusChristStudyAskV3] (study-intelligence-v3.js:589:36)\n    at async C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\study_intelligence_v3_runtime_qa.js:480:14 {\n  focusChristRetryable: false,\n  focusChristStatus: 400\n}\n"
+    },
+    {
+      "command": "node tools/question_safety_runtime_qa.js",
+      "exit_code": 0,
+      "output": "Question safety runtime QA PASS\nContextual support parity PASS: 93 generic fixtures\n"
+    },
+    {
+      "command": "python tools/build_scripture_catalog.py --check",
+      "exit_code": 0,
+      "output": "Complete scripture catalog verified\n"
+    },
+    {
+      "command": "node tools/scripture_library_qa.js",
+      "exit_code": 0,
+      "output": "PASS: complete library hashes, CFM dynamic assignments, bounds, exact quotes, wrong attribution, edition, link labels, outages, direct lookup and server approval bypass.\n"
+    },
+    {
+      "command": "node groq-proxy/source-policy.test.js",
+      "exit_code": 0,
+      "output": "Gateway source policy QA PASS\nPASS: fresh-reset seasons paraphrases use zero external requests; compound, other-planet and faith scopes retain ordinary routing.\n"
+    },
+    {
+      "command": "node groq-proxy/self-help-support.test.js",
+      "exit_code": 0,
+      "output": "Self-help Worker integration PASS: server-owned scope/policy, followup/newtopic separation, Pioneer isolation, blocked zero calls, support research and fail-closed evidence.\n"
+    },
+    {
+      "command": "node groq-proxy/self-help-reviewed.test.js",
+      "exit_code": 0,
+      "output": "Reviewed self-help PASS: useful source-pinned replies, scripture gate, negatives, source drift/unavailability and narrow scope.\n"
+    },
+    {
+      "command": "node groq-proxy/conversation-context.test.js",
+      "exit_code": 0,
+      "output": "Conversation context QA PASS: both surfaces, raw/legacy requests, current intent, user-only bounded context, reset/missing/three-turn cases, paired official retrieval and research fallback.\n"
+    },
+    {
+      "command": "node groq-proxy/research-escalation.test.js",
+      "exit_code": 0,
+      "output": "Research escalation QA PASS: three topics, one research escalation, fetched official text, closed second rejection, URL boundaries and no redirects.\n"
+    },
+    {
+      "command": "node groq-proxy/scripture-evidence.test.js",
+      "exit_code": 0,
+      "output": "PASS: 20 canonical corpus passages, bounded natural reading, malformed references, hash rejection, multi-reference bounds and verified explanatory follow-ups.\n"
+    },
+    {
+      "command": "node groq-proxy/source-discovery.test.js",
+      "exit_code": 0,
+      "output": "PASS: clean article extraction, exact Gospel Topic admission, reviewed Pioneer metadata, scoped landmarks, irrigation preservation and cold/train negatives.\n"
+    },
+    {
+      "command": "node groq-proxy/evidence-budget.test.js",
+      "exit_code": 0,
+      "output": "PASS: complete bounded source packs, safe quota diagnostics, single-provider bounded calls without retry loops.\n"
+    },
+    {
+      "command": "node groq-proxy/openai-research.test.js",
+      "exit_code": 0,
+      "output": "PASS: OpenAI primary search/verifier with zero Groq, approved URL leads only, hydration/redirect gates, incomplete/no-tool rejection, timeout and one-call bound.\n"
+    },
+    {
+      "command": "node groq-proxy/corpus-coverage.test.js",
+      "exit_code": 0,
+      "output": "Requested corpus coverage QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/corpus-evidence.test.js",
+      "exit_code": 0,
+      "output": "Requested corpus evidence QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/factual-followup.test.js",
+      "exit_code": 0,
+      "output": "Narrow factual followup QA PASS\nNarrow factual Worker pipeline PASS: concise first answer, audited paraphrase repair, unchanged four-call limit, final overlap fails closed.\nPASS: concrete overlap feedback covers consecutive and fragmented copying while preserving independent paraphrase.\n"
+    },
+    {
+      "command": "node groq-proxy/relationship-audit.test.js",
+      "exit_code": 0,
+      "output": "Relationship audit QA PASS: separate critic invoked; rejection/provider failure fail closed; correction survives final guards.\n"
+    },
+    {
+      "command": "node groq-proxy/historical-relationship.test.js",
+      "exit_code": 0,
+      "output": "PASS: observed Winter Quarters destination/purchase-location swap blocked; correct and negated relationships preserved.\n"
+    },
+    {
+      "command": "node groq-proxy/transaction-outcome.test.js",
+      "exit_code": 0,
+      "output": "PASS: joined transaction failures require separate outcome support, preserve attempted lists, specific failures, supported joins and distinct transaction types.\nPASS: joined-outcome repair stays within four provider calls; unchanged unsupported answer fails final publication.\n"
+    },
+    {
+      "command": "node groq-proxy/reviewed-readings.test.js",
+      "exit_code": 0,
+      "output": "PASS: reviewed reading identity/content/checksum invalidation, full-scope cache integrity, zero-AI changed-source hold, God user-context boundaries, and publication guards.\n"
+    },
+    {
+      "command": "node groq-proxy/reviewed-source-context.test.js",
+      "exit_code": 0,
+      "output": "Reviewed source context QA PASS: exact source boundaries and general transport source diversity.\n"
+    },
+    {
+      "command": "node groq-proxy/direct-scripture-reading.test.js",
+      "exit_code": 0,
+      "output": "Direct scripture reading QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/paragraph-intent.test.js",
+      "exit_code": 0,
+      "output": "Paragraph retrieval intent QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/source-caveat.test.js",
+      "exit_code": 0,
+      "output": "Source caveat context QA PASS\n"
+    },
+    {
+      "command": "node groq-proxy/missing-subject.test.js",
+      "exit_code": 0,
+      "output": "missing-subject: PASS\n"
+    },
+    {
+      "command": "node tools/scripture_quote_display_qa.js",
+      "exit_code": 0,
+      "output": "PASS: actual Mosiah18:8-10 source punctuation survives display; altered wording/punctuation rejected by shared validator.\n"
+    },
+    {
+      "command": "node groq-proxy/church-source-index.test.js",
+      "exit_code": 0,
+      "output": "Church source index QA PASS\n"
+    },
+    {
+      "command": "python tools/build_church_source_index.py --check",
+      "exit_code": 0,
+      "output": "Church source index CHECK PASS: 900 URLs, 199179 bytes\n"
+    },
+    {
+      "command": "node --check site-common.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check artwork-details.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check full-image-viewer.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check hero-details.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "python tools/topic_artwork_caption_runtime_qa.py",
+      "exit_code": 0,
+      "output": "CAPTION DOM QA PASS: 4 caption fixtures plus a foundation-picture panel; mixed scripture prose, source and study actions, safe fallback and repeated opening\n"
+    },
+    {
+      "command": "node tools/artwork_details_runtime_qa.js",
+      "exit_code": 0,
+      "output": "Legacy artwork runtime QA passed: body lesson return, focus, regular close, existing destinations, non-body scope.\n"
+    },
+    {
+      "command": "node tools/full_image_viewer_runtime_qa.js",
+      "exit_code": 0,
+      "output": "Full-image viewer runtime QA: PASS\nSame-page open, exact source, close, Escape cleanup, focus return, and modified-click fallback verified\n"
+    },
+    {
+      "command": "node --check study-intelligence-v3.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check study-journey.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check study-source-router.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check church-history-experience.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check art-study-router.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check watch-study-enrichment.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check watch-experience.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check art-ask-context.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check ask-experience.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check pioneer-experience.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "python tools/pioneer_story_qa.py",
+      "exit_code": 0,
+      "output": "Pioneer story QA: PASS (31unique studies,18new originals,29preserved topics,31preserved image variants/hero)\n"
+    },
+    {
+      "command": "python tools/elizabeth_identity_qa.py",
+      "exit_code": 0,
+      "output": "Elizabeth QA PASS: four replacements, exact approved reference, current public paths, 67 preserved assets. Visual likeness remains a separate review.\n"
+    },
+    {
+      "command": "node --check pioneer-story.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --check tools/live_production_ask_qa.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node --test tools/live_production_ask_contract.test.cjs",
+      "exit_code": 0,
+      "output": "\u2714 actual release roots satisfy production controller contract before deployment (13.5153ms)\n\u2714 future release version is derived while the previously deployed revision is rejected (0.5385ms)\n\u2714 missing, additional stale, substituted and unversioned controllers fail closed (0.5794ms)\n\u2714 all required root controller identities remain mandatory (20.5255ms)\n\u2139 tests 4\n\u2139 suites 0\n\u2139 pass 4\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 113.4979\n"
+    },
+    {
+      "command": "node --check tools/live_ai_response_matrix.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/live_ai_capacity_contract.test.js",
+      "exit_code": 0,
+      "output": "Live AI capacity contract PASS: bounded four-call repair accepted; incomplete, zero, excess and missing concurrency receipts rejected.\n"
+    },
+    {
+      "command": "node --check groq-proxy/src/church-source-index.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "node tools/pioneer_story_runtime_qa.js",
+      "exit_code": 0
+    },
+    {
+      "command": "node tools/pioneer_related_study_runtime_qa.js",
+      "exit_code": 0
+    }
+  ],
+  "accounting": {
+    "previous_steps": "Hosted36352356745 passed all steps before Answer block, including rendered canonical desktop/phone/enlarged checks.",
+    "answer_block": 18,
+    "remaining_local_commands": 76,
+    "deployment_only": "Final push-only live_production_ask_qa is deferred until deployment. Local sweep accidentally entered this conditional command after completing local checks; cancelled before any completion result. No success claimed."
+  }
+}

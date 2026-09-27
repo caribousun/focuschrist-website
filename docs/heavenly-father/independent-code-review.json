@@ -71,5 +71,15 @@
       "tools/father_opening_runtime_qa.js": "68043734b26e8dbf177331e7589e728aa7a878200eea428423800019332efdbf",
       ".github/workflows/site-qa.yml": "970f0ba10006055105c30c60a475d524a1b461b951d905f911b6a88c34ceb496"
     }
+  },
+  "adapter_registration_review": {
+    "status": "PASS",
+    "historical_failed_run": "36352356745",
+    "review": "Exact five reviewed full-image paths derived from Father manifest; full Father structure/original/reference/derivative hash validation executes first. Shared adapter checks exact owning page, hf-id and dialog. Exactly five unique paths required. Prior baseline99 and preserved3 unchanged.",
+    "independent_command": "python -X utf8 tools/topic_artwork_details_qa.py",
+    "result": "PASS265adapter pictures,3existing detail pictures,12panels,25dependencies",
+    "negative_claim_limit": "No new negative mutation fixture was added by this adapter correction; existing Father eight mutations and full hash/structure gate remain in force. Fermi broader sweep is a separate receipt, not independently rerun here.",
+    "runtime_changes": "None",
+    "guard_sha256": "0217e85b12cda3985181b707e34e5cab2515d2a18700ac5538358f963f414745"
   }
 }

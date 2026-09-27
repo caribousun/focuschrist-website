@@ -63,6 +63,7 @@
   "content-audit.json",
   "docs/answer-video-identities.json",
   "docs/foundation-sources.json",
+  "docs/heavenly-father/adapter-closure.json",
   "docs/heavenly-father/art-review.json",
   "docs/heavenly-father/content-plan.json",
   "docs/heavenly-father/final-content-review.json",
@@ -171,6 +172,7 @@
   "tools/sitewide_artwork_review_qa.py",
   "tools/source_integrity_inventory.py",
   "tools/study_layout_uniformity_qa.py",
+  "tools/topic_artwork_details_qa.py",
   "tools/unified_experience_qa.py",
   "watch.html"
 ]
