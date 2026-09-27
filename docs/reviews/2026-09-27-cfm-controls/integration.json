@@ -24,7 +24,7 @@
   ],
   "files": {
     "cfm-study-controls.css": "0deba2f2978d8348eed680984dabf4d710fc6ab6e5804d4818a1d8a2eb8efcad",
-    "come-follow-me.html": "8b268f4949cf9a6ad328a87d3abfa2fc2c178d004c60e5654a1c64c903249f87",
+    "come-follow-me.html": "68cc1b18537ee451806eb522fbc916671377338ace3a8baefd79c9597a889ed7",
     "tools/come_follow_me_qa.py": "3f58126bab5bd92f92115bb80550c22b133d7f8fbfe2bcc73e90e72f236dae69",
     "tools/sitewide_artwork_review_qa.py": "856ccc627dc4c920e737cbbe51098c72f9845d75fb8fd73e189eb8d29a5de23c"
   },
@@ -33,5 +33,6 @@
     "parent-browser.json",
     "parent-final-gap.json"
   ],
-  "gap_repair": "The shared important margin reset defeated the first margin rule. Source paragraph padding-top:12px now yields an actual 12px gap on all three cards at 390px, verified by parent."
+  "gap_repair": "The shared important margin reset defeated the first margin rule. Source paragraph padding-top:12px now yields an actual 12px gap on all three cards at 390px, verified by parent.",
+  "followup": "Independent member-flow review approved encoded weekly return to #this-week and three activity-aligned day labels. Prior destination and JS invariants describe the initial styling commit; this followup changes only the weekly return fragment and script cache."
 }

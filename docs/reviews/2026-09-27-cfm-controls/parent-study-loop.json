@@ -1,0 +1,52 @@
+{
+  "observedAt": "2026-09-27T23:46:18.408Z",
+  "checks": [
+    {
+      "case": "weekly range open",
+      "chapters": [
+        {
+          "font": "17.6px",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/13?lang=eng",
+          "text": "Isaiah 13",
+          "transform": "none"
+        },
+        {
+          "font": "17.6px",
+          "href": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/14?lang=eng",
+          "text": "Isaiah 14",
+          "transform": "none"
+        }
+      ],
+      "open": true
+    },
+    {
+      "case": "next lesson",
+      "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/40?lang=eng",
+      "verifiedVisible": "September 28–October 4: Comfort Ye My People; Isaiah40–49"
+    },
+    {
+      "case": "previous lesson",
+      "url": "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/38?lang=eng"
+    },
+    {
+      "case": "weekly Ask context",
+      "url": "http://localhost:4197/ask.html?topic=Isaiah%2013%E2%80%9314%3B%2022%3B%2024%E2%80%9330%3B%2035%20in%20this%20week%27s%20Come%2C%20Follow%20Me%20reading&return=%2Fcome-follow-me.html%23this-week#ask-question",
+      "returnHref": "/come-follow-me.html#this-week",
+      "requestSubmitted": false
+    },
+    {
+      "case": "scripture reader",
+      "chapter": "Isaiah22",
+      "completeVerses": 25,
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/22?lang=eng",
+      "url": "http://localhost:4197/come-follow-me.html#this-week"
+    },
+    {
+      "active": "Read Isaiah 22",
+      "case": "close returns to reading",
+      "dialogs": 0,
+      "url": "http://localhost:4197/come-follow-me.html#this-week"
+    }
+  ],
+  "scope": "Actual CUA member-study flow. Ask prefilled and return clicked; no AI question submitted."
+}

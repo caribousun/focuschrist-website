@@ -1,0 +1,83 @@
+{
+  "reviewer": "Newton",
+  "at": "2026-09-27T23:44:43.752538+00:00",
+  "candidate": "571dade47d01629e37ff008ebb6ad67ce77b32ab",
+  "scope": "All authored CFM page sections plus dynamic reading/schedule/Ask wiring; member learning flow and structural consistency",
+  "evidence_class": "SOURCE REVIEW ONLY; no browser/provider/official-page retrieval claimed",
+  "overall": "Core weekly study loop is complete in source. Prioritize preserving context and verifying real interactions over adding more material.",
+  "coverage": [
+    {
+      "section": "Opening and weekly lesson",
+      "assessment": "Identifies 2026 Old Testament, current dates/title/readings generated from52 assignments. Chapter range expands to individual canonical sources; official lesson CTA and toolkit duplicate same exact lesson intentionally."
+    },
+    {
+      "section": "Study practice",
+      "assessment": "Three concrete steps cover context, cross-reference, discussion/application. Direct official improve-learning source supplied. Does not require a new generic worksheet."
+    },
+    {
+      "section": "Seven-day rhythm",
+      "assessment": "Optional explicit rhythm permits selecting one step. Instructions are useful; some short labels differ from their action."
+    },
+    {
+      "section": "Study your way",
+      "assessment": "Personal/family/deeper study onward routes correctly named, with official source beside each. Related topic route extends study rather than impersonating current lesson."
+    },
+    {
+      "section": "Guided reflections",
+      "assessment": "Prayer, rereading, notes and chosen action are humane invitations. Notebook guidance makes external recording expectation clear. Contextual Ask includes return fragment."
+    },
+    {
+      "section": "Watch and ponder",
+      "assessment": "One official introductory video supports learning approach and explicitly returns attention to scripture; not misrepresented as current weekly commentary."
+    },
+    {
+      "section": "Year schedule",
+      "assessment": "Native month and chapter disclosures provide every52 official assignment. Previous/next opens adjacent official lesson, not in-place current selection; source behavior matches labels."
+    },
+    {
+      "section": "Connected library and closing",
+      "assessment": "Nine clearly labeled optional paths; Home/About and next-year announcement complete navigation. No need to add filler or paid/provider dependency."
+    }
+  ],
+  "essential_small_improvement": {
+    "finding": "Weekly Ask return loses reading-panel location",
+    "evidence": "Static weekly Ask anchor and come-follow-me.js askNode.href return only /come-follow-me.html; reflection route already encodes #guided-reflections.",
+    "recommendation": "Encode #this-week inside the weekly return query parameter in fallback and dynamic URL. Keep Ask page #ask-question separate. Preserve generic return allowlist and do not autosubmit.",
+    "status": "Sent to Albert and Fermi; no edits made"
+  },
+  "optional_polish": {
+    "finding": "Seven-day labels Speak/Become/Ponder are less concrete than accompanying question-study/shared-study/act instructions",
+    "recommendation": "Only relabel to match existing action if owner accepts; no extra paragraphs or sections required."
+  },
+  "browser_checks_requested": [
+    "Open current assigned scripture chapter and confirm correct book/chapter, readable text and a clear close/return.",
+    "Open official weekly lesson and verify actual current assignment.",
+    "Open weekly Ask and inspect editable context without submitting; return should resume weekly panel.",
+    "Use year month/chapter disclosures and adjacent lesson controls; compare destination to displayed assignment.",
+    "Complete reflection route and return; ensure small screen controls remain readable."
+  ],
+  "source_limits": [
+    "Current official destination availability and reader interception must be checked in browser.",
+    "No claim of emotional/spiritual outcome, remembered personal notes, or completed study tracking.",
+    "No added source claims or doctrinal changes proposed."
+  ],
+  "resolution": {
+    "at": "2026-09-27T23:46:21.890326+00:00",
+    "verdict": "PASS source and runtime regression review",
+    "changes": [
+      "Weekly dynamic and static Ask URLs encode return fragment #this-week inside query and retain outer Ask composer #ask-question.",
+      "Only day4/5/6 labels changed to Study more deeply, Study together, Act; accompanying directions unchanged.",
+      "CFM JS consumer cache revision updated."
+    ],
+    "independent_checks": [
+      "come_follow_me_reading_runtime_qa.js PASS including52assignments, exact chapters, Sunday/Monday topics/return/outer fragment, static fallback",
+      "come_follow_me_qa.py PASS52weeklyroutes"
+    ],
+    "hashes": {
+      "come-follow-me.js": "1279ebd866b3461c9ef0ca95fb2721f85c52ccaaf9f9e74e24b3e83baf4abf1a",
+      "come-follow-me.html": "68cc1b18537ee451806eb522fbc916671377338ace3a8baefd79c9597a889ed7",
+      "tools/come_follow_me_reading_runtime_qa.js": "71bf0d49d8a925ae6e82aec9a412fb9c005f098046856a3264c097351d27422c"
+    },
+    "limits": "No browser or deployment claim; parent actual Ask return checks remain separate."
+  }
+}
