@@ -332,9 +332,9 @@ def main() -> int:
     ):
         if ask.count(marker) != 1:
             fail(errors, f"Ask redesigned experience marker missing/duplicated: {marker}")
-    if '<link rel="stylesheet" href="ask-experience.css?v=20260916-answer-source-pills-3">' not in ask:
+    if '<link rel="stylesheet" href="ask-experience.css?v=20260927-growing-composer-1">' not in ask:
         fail(errors, "Ask experience stylesheet missing")
-    if '<script src="ask-experience.js?v=20260923-sensitive-welcome-1" defer></script>' not in ask:
+    if '<script src="ask-experience.js?v=20260927-growing-composer-1" defer></script>' not in ask:
         fail(errors, "Ask experience controller missing")
     if ask.count('data-ask-starter') < 6:
         fail(errors, "Ask starter question set unexpectedly incomplete")
@@ -428,8 +428,8 @@ def main() -> int:
     # Coverage must remain global; successful per-page counts cannot hide reuse.
     from topic_artwork_uniqueness_qa import scan as scan_artwork
     artwork = scan_artwork(ROOT)
-    if len(artwork['pages']) != 23 or 'answers/abrahamic-covenant.html' not in {p['page'] for p in artwork['pages']}:
-        fail(errors, f"Artwork coverage expected 23 study pages including the covenant study, found {len(artwork['pages'])}")
+    if len(artwork['pages']) != 24 or not {'answers/abrahamic-covenant.html', 'answers/holy-ghost.html'} <= {p['page'] for p in artwork['pages']}:
+        fail(errors, f"Artwork coverage expected 24 study pages including Covenant and Holy Ghost, found {len(artwork['pages'])}")
     for asset, issue in artwork['assetIssues'].items():
         fail(errors, f"{asset}: {issue}")
     for page in artwork['pages']:

@@ -1,0 +1,67 @@
+{
+  "scope": "Local source and DOM checks; no browser or publication claim. Snapshot before pending video enhancement.",
+  "commands": [
+    {
+      "command": "python tools/holy_ghost_qa_test.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/holy_ghost_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/topic_study_pages_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/answer_study_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/five_picture_manifest_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/study_layout_uniformity_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/focused_answers_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/production_hardening_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/scripture_grounding_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python tools/site_qa.py",
+      "exit_code": 0
+    },
+    {
+      "command": "node tools/canonical_presentation_measurement.test.js",
+      "exit_code": 0,
+      "output": "Canonical presentation measurement PASS: painted controls, real text clipping, image-only overflow, closed/open disclosures.\n"
+    },
+    {
+      "command": "node --test tools/art_ask_context.test.cjs tools/ask_growing_composer.test.cjs",
+      "exit_code": 0,
+      "output": "\u2714 CFM topic is visible, editable, returns to CFM, and never submits (112.3866ms)\n\u2714 explicit q and already typed draft take precedence (43.2121ms)\n\u2714 returns allow known pages and plain fragments, drop queries and reject unsafe paths (59.0985ms)\n\u2714 topic without return offers accurate fallback; empty topic does not create context (14.3233ms)\n\u2714 Holy Ghost study, supporting artwork and hero return to the exact approved route (54.0164ms)\n\u2714 existing artwork, Watch, evidences and covenant contracts remain intact (29.5376ms)\n\u2714 typed and programmatically assigned long questions grow and shrink without changing text (63.3586ms)\n\u2714 native textarea contract and initial prefill survive initialization (8.2923ms)\n\u2714 Enter sends once; Shift Enter and composing Enter do not submit (5.3683ms)\n\u2139 tests 9\n\u2139 suites 0\n\u2139 pass 9\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 851.9681\n"
+    },
+    {
+      "command": "python tools/artwork_details_qa.py",
+      "exit_code": 0,
+      "output": "Artwork detail QA: PASS\n62 non-Mission artwork triggers and 11 Mission artwork triggers verified\nSame-page full-image viewing, sacred detail copy, and intentional interaction scope verified\n"
+    },
+    {
+      "command": "python tools/static_content_audit.py",
+      "exit_code": 0,
+      "output": "STATIC CONTENT AUDIT PASS: 124 documents (118 verified, 6 non-source-dependent)\n"
+    }
+  ],
+  "ledger_normalization": "Current scripture-source-ledger CRLF normalized to LF; parsed JSON equality before/after verified; existing semantic differences retained.",
+  "pending": "Fermi video enhancement will require focused rerun."
+}

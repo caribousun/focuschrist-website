@@ -31,6 +31,18 @@ test('topic without return offers accurate fallback; empty topic does not create
  let d=open('topic=Faith');assert.equal(values(d).label,'Browse study topics');assert.equal(values(d).link,'/answers.html');d.window.close();
  d=open('topic=+++');assert.equal(values(d).context,undefined);d.window.close();
 });
+
+test('Holy Ghost study, supporting artwork and hero return to the exact approved route',()=>{
+ for(const [query,raw,want] of [
+  ['study=Holy+Ghost&topic=learning+to+recognize+the+Holy+Ghost','/answers/holy-ghost.html#holy-ghost-or-me','/answers/holy-ghost.html#holy-ghost-or-me'],
+  ['art=The+Father+the+Son+and+the+Spirit','/answers/holy-ghost.html#picture-hg-baptism','/answers/holy-ghost.html#picture-hg-baptism'],
+  ['art=Holy+Ghost+hero','/answers/holy-ghost.html?hero=1&discard=yes','/answers/holy-ghost.html?hero=1']
+ ]) {const d=open(query+'&return='+encodeURIComponent(raw));assert.equal(values(d).link,want);assert.ok(values(d).value.length);assert.deepEqual(d.actions,{submit:0,fetch:0,send:0});d.window.close();}
+ for(const raw of ['https://evil.example/answers/holy-ghost.html#holy-ghost-or-me','/answers/holy-ghost-other.html#holy-ghost-or-me','/answers/holy-ghost.html/extra']) {
+  const d=open('topic=Holy+Ghost&return='+encodeURIComponent(raw));assert.equal(values(d).link,'/answers.html');d.window.close();
+ }
+ const d=open('topic=Holy+Ghost&q=My+own+question&return=%2Fanswers%2Fholy-ghost.html%23holy-ghost-or-me');assert.equal(values(d).value,'My own question');d.window.close();
+});
 test('existing artwork, Watch, evidences and covenant contracts remain intact',()=>{
  for(const [q,label,pattern,float] of [['art=The+Sower&topic=Faith','Return to this artwork',/artwork "The Sower"/,true],['watch=Prayer&topic=Prayer','Return to Watch study',/What do the scriptures/,false],['study=Book+of+Mormon+Evidences&topic=Witnesses','Return to Evidences study',/scholarly interpretations/,false],['study=Abrahamic+Covenant&topic=Abraham','Return to Covenant study',/Help me understand/,false]]){const d=open(q);const v=values(d);assert.equal(v.label,label);assert.match(v.value,pattern);assert.equal(v.float,float);d.window.close();}
 });

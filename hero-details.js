@@ -2,6 +2,11 @@
     'use strict';
     if (typeof HTMLDialogElement === 'undefined' || document.getElementById('heroDetailDialog')) return;
     const records = {
+        'holy-ghost': {
+            title: 'A witness of Jesus Christ',
+            paragraphs: ['Jesus and a disciple sit beneath an olive tree, looking at one another as they talk. This devotional scene is an invitation to consider the Holy Ghost’s witness of the Savior; it does not depict a named, recorded conversation.', 'In John 15:26, Jesus teaches that the Comforter will testify of Him. Read that promise, then explore how the Holy Ghost helps us learn of Christ and follow Him.'],
+            source: 'https://www.churchofjesuschrist.org/study/scriptures/nt/john/15?lang=eng&id=p26#p26', sourceLabel: 'Read John 15:26', study: 'answers/holy-ghost.html#who-is-the-holy-ghost', studyLabel: 'Study the Holy Ghost'
+        },
         'birth-of-christ': {
             title: 'Mary lays her newborn Son in a manger',
             paragraphs: ['Mary lays her swaddled newborn in a manger. This tender moment turns our attention to the birth of Jesus Christ in Bethlehem.', 'Read Luke 2:6–7, then follow the scriptural promises and witnesses surrounding His birth. The setting is an artistic interpretation of the account.'],

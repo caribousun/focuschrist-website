@@ -6,6 +6,8 @@ module.exports = async function checkInteractionPresentation(page, origin, route
   const results = [];
   const record = (test, data) => results.push({test, ...data});
   try {
+    const composerResults=await require('./ask_growing_composer_browser_qa.js')(page,origin);
+    for(const result of composerResults)record('growing-ask-composer',result);
     for (const width of [320, 390, 768, 1024, 1366, 1920]) {
       await page.setViewportSize({width, height: 1000});
       for (const route of routes.filter(r => r.startsWith('answers/'))) {

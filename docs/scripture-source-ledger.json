@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_on": "2026-09-09",
+  "generated_on": "2026-09-27",
   "extraction": "Official English canonical verse paragraphs only; verse-number spans and superscript footnote markers removed; text-node order and punctuation preserved; whitespace normalized; sequential verse numbers required. No headings, summaries or footnotes.",
   "discovery": "Complete standard-works inventory plus explicit runtime links; all dynamically generated Come, Follow Me chapter choices are checked by scripture_library_qa.js.",
   "chapters": [
@@ -14,6 +14,7 @@
       "verse_count": 20,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -41,7 +42,10 @@
       "verse_count": 36,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -109,6 +113,8 @@
       "verse_count": 39,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -122,6 +128,8 @@
       "verse_count": 55,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -135,6 +143,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -148,6 +157,8 @@
       "verse_count": 24,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -161,6 +172,8 @@
       "verse_count": 24,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -175,6 +188,7 @@
       "verse_count": 22,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -201,6 +215,7 @@
       "verse_count": 31,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -241,6 +256,8 @@
       "verse_count": 22,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -255,6 +272,7 @@
       "verse_count": 6,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -281,6 +299,7 @@
       "verse_count": 38,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -404,6 +423,7 @@
       "verse_count": 13,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -457,6 +477,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -543,6 +564,7 @@
       "linked_from": [
         "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
         "answers\\what-is-the-book-of-mormon.html",
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -557,6 +579,8 @@
       "verified_on": "2026-09-08",
       "linked_from": [
         "art-study\\suffer-the-little-children.html",
+        "atonement.html",
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -600,6 +624,7 @@
       "verified_on": "2026-09-07",
       "linked_from": [
         "answers\\bible-and-book-of-mormon-together.html",
+        "hero-details.js",
         "standard-works-catalog"
       ]
     },
@@ -613,6 +638,8 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -643,6 +670,8 @@
         "answers\\bible-and-book-of-mormon-together.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
         "answers\\what-is-the-book-of-mormon.html",
+        "atonement.html",
+        "jesus-christ\\mortal-ministry.html",
         "standard-works-catalog"
       ]
     },
@@ -656,7 +685,9 @@
       "verse_count": 9,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -670,6 +701,7 @@
       "verse_count": 15,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -748,7 +780,9 @@
       "verse_count": 54,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -762,6 +796,8 @@
       "verse_count": 30,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -791,8 +827,13 @@
         "answers\\bible-and-book-of-mormon-together.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
         "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers\\what-happens-after-death.html",
         "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
+        "book-of-mormon-evidences.html",
+        "hero-details.js",
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "pioneers.html",
         "standard-works-catalog",
         "watch.html"
@@ -809,6 +850,8 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-happens-after-death.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -823,6 +866,8 @@
       "verse_count": 34,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -851,6 +896,8 @@
       "verse_count": 24,
       "verified_on": "2026-09-08",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "art-study\\the-good-shepherd.html",
         "standard-works-catalog"
       ]
@@ -880,9 +927,13 @@
       "linked_from": [
         "answers\\bible-and-book-of-mormon-together.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\what-happens-after-death.html",
         "answers\\what-is-the-book-of-mormon.html",
         "answers\\why-families-are-important.html",
         "art-study\\suffer-the-little-children.html",
+        "atonement.html",
+        "book-of-mormon-evidences.html",
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "standard-works-catalog",
         "watch.html"
       ]
@@ -897,7 +948,13 @@
       "verse_count": 39,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\holy-ghost.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -912,7 +969,12 @@
       "verse_count": 36,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\aaronic-priesthood-restoration.html",
+        "answers\\holy-ghost.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -939,7 +1001,11 @@
       "verse_count": 46,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-happens-after-death.html",
         "ask.html",
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -953,6 +1019,7 @@
       "verse_count": 29,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -979,6 +1046,9 @@
       "verse_count": 14,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-happens-after-death.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -992,6 +1062,8 @@
       "verse_count": 18,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1005,6 +1077,7 @@
       "verse_count": 6,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1018,6 +1091,10 @@
       "verse_count": 21,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-is-the-book-of-mormon.html",
+        "atonement.html",
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1032,7 +1109,10 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\restored-church-of-jesus-christ.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1046,6 +1126,8 @@
       "verse_count": 40,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-happens-after-death.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -1164,6 +1246,7 @@
       "verse_count": 22,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -1178,6 +1261,7 @@
       "verse_count": 49,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1217,7 +1301,9 @@
       "verse_count": 46,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -1272,6 +1358,7 @@
       "verse_count": 19,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1311,6 +1398,7 @@
       "verse_count": 43,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1324,6 +1412,7 @@
       "verse_count": 36,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -1377,6 +1466,7 @@
       "verse_count": 35,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1403,6 +1493,7 @@
       "verse_count": 30,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -1527,6 +1618,7 @@
         "answers\\stand-forever.html",
         "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "book-of-mormon-evidences.html",
         "groq-proxy\\src\\index.js",
         "standard-works-catalog"
       ]
@@ -1541,6 +1633,8 @@
       "verse_count": 23,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1554,7 +1648,9 @@
       "verse_count": 41,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -1581,6 +1677,9 @@
       "verse_count": 30,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "atonement.html",
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -1595,6 +1694,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers\\settle-this-in-your-hearts.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -1666,6 +1766,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -1680,6 +1781,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -1733,6 +1835,7 @@
       "verse_count": 41,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1759,6 +1862,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1838,6 +1942,7 @@
       "verse_count": 23,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1877,6 +1982,7 @@
       "verse_count": 57,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1890,6 +1996,7 @@
       "verse_count": 36,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -1955,6 +2062,7 @@
       "verse_count": 21,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2000,7 +2108,10 @@
         "answers\\faith-in-jesus-christ-during-trials.html",
         "answers\\grief-and-faith.html",
         "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers\\what-happens-after-death.html",
         "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
         "pioneers.html",
         "standard-works-catalog",
         "watch.html"
@@ -2016,6 +2127,7 @@
       "verse_count": 32,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2042,7 +2154,9 @@
       "verse_count": 27,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
         "groq-proxy\\src\\index.js",
         "standard-works-catalog"
       ]
@@ -2057,6 +2171,7 @@
       "verse_count": 43,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2096,7 +2211,9 @@
       "verse_count": 41,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -2164,7 +2281,9 @@
       "verse_count": 28,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -2204,6 +2323,7 @@
       "verse_count": 30,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2308,6 +2428,8 @@
       "verse_count": 39,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -2321,7 +2443,9 @@
       "verse_count": 31,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -2348,6 +2472,8 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -2400,6 +2526,8 @@
       "verse_count": 52,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "hero-details.js",
         "standard-works-catalog"
       ]
     },
@@ -2478,6 +2606,7 @@
       "verse_count": 35,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2557,6 +2686,7 @@
       "verse_count": 15,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2570,6 +2700,7 @@
       "verse_count": 19,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2635,6 +2766,8 @@
       "verse_count": 22,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -2648,6 +2781,7 @@
       "verse_count": 10,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -2662,6 +2796,7 @@
       "verse_count": 41,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -2675,6 +2810,7 @@
       "verse_count": 37,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -2705,6 +2841,9 @@
         "answers\\stand-forever.html",
         "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
+        "book-of-mormon-evidences.html",
+        "hero-details.js",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -2719,6 +2858,7 @@
       "verse_count": 3,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "standard-works-catalog"
       ]
     },
@@ -2746,6 +2886,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -2759,6 +2900,7 @@
       "verse_count": 2,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -2772,6 +2914,8 @@
       "verse_count": 9,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -2786,7 +2930,14 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\divorce-and-faith.html",
+        "answers\\faith-in-jesus-christ-during-trials.html",
+        "answers\\holy-ghost.html",
+        "answers\\what-happens-after-death.html",
         "answers\\what-is-eternal-marriage.html",
+        "answers\\what-is-the-book-of-mormon.html",
+        "answers\\why-families-are-important.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -2803,6 +2954,7 @@
         "answers.html",
         "answers\\death-of-a-child.html",
         "ask.html",
+        "hero-details.js",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -2830,6 +2982,7 @@
       "verse_count": 18,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2895,7 +3048,9 @@
       "verse_count": 12,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -2909,6 +3064,7 @@
       "verse_count": 31,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -2936,6 +3092,8 @@
       "verse_count": 20,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -2949,15 +3107,23 @@
       "verse_count": 35,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\aaronic-priesthood-restoration.html",
+        "answers\\abrahamic-covenant.html",
         "answers\\death-of-a-child.html",
         "answers\\divorce-and-faith.html",
         "answers\\faith-in-jesus-christ-during-trials.html",
         "answers\\grief-and-faith.html",
         "answers\\restored-church-of-jesus-christ.html",
+        "answers\\what-happens-after-death.html",
         "answers\\what-is-the-book-of-mormon.html",
         "answers\\why-families-are-important.html",
         "answers\\why-latter-day-saints-build-temples.html",
+        "atonement.html",
+        "church-history.html",
+        "hero-details.js",
         "missionary.html",
+        "pioneer-story.js",
+        "pioneers.html",
         "standard-works-catalog"
       ]
     },
@@ -2984,6 +3150,8 @@
       "verse_count": 41,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -3023,6 +3191,7 @@
       "verse_count": 16,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -3050,7 +3219,9 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\faith-in-jesus-christ-during-trials.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -3065,6 +3236,7 @@
       "verse_count": 24,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -3091,6 +3263,8 @@
       "verse_count": 37,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -3104,6 +3278,7 @@
       "verse_count": 20,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -3130,8 +3305,12 @@
       "verse_count": 27,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -3145,7 +3324,9 @@
       "verse_count": 30,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "hero-details.js",
         "standard-works-catalog"
       ]
     },
@@ -3159,6 +3340,9 @@
       "verse_count": 15,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
+        "atonement.html",
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -3211,6 +3395,7 @@
       "verse_count": 19,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -3224,6 +3409,8 @@
       "verse_count": 30,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "standard-works-catalog"
       ]
     },
@@ -3237,6 +3424,7 @@
       "verse_count": 18,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -3251,6 +3439,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "general-conference.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -3374,6 +3563,7 @@
       "verse_count": 100,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\melchizedek-priesthood-restoration.html",
         "standard-works-catalog"
       ]
     },
@@ -3402,6 +3592,7 @@
       "linked_from": [
         "answers\\why-latter-day-saints-build-temples.html",
         "ask.html",
+        "church-history.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -3429,9 +3620,13 @@
       "verse_count": 16,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
+        "answers\\melchizedek-priesthood-restoration.html",
         "answers\\what-is-eternal-marriage.html",
         "answers\\why-latter-day-saints-build-temples.html",
         "ask.html",
+        "church-history.html",
+        "jesus-christ\\restoration-and-today.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -3592,9 +3787,17 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\faith-in-jesus-christ-during-trials.html",
+        "answers\\melchizedek-priesthood-restoration.html",
+        "answers\\prayer-and-personal-revelation.html",
+        "answers\\settle-this-in-your-hearts.html",
         "answers\\what-is-eternal-marriage.html",
+        "answers\\what-is-the-book-of-mormon.html",
+        "answers\\who-was-joseph-smith.html",
         "answers\\why-families-are-important.html",
         "ask.html",
+        "atonement.html",
+        "church-history.html",
+        "jesus-christ\\restoration-and-today.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -3610,6 +3813,8 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "church-history.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -3623,6 +3828,7 @@
       "verse_count": 17,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "church-history.html",
         "standard-works-catalog"
       ]
     },
@@ -3636,6 +3842,7 @@
       "verse_count": 145,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "church-history.html",
         "standard-works-catalog"
       ]
     },
@@ -3688,7 +3895,10 @@
       "verse_count": 25,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\melchizedek-priesthood-restoration.html",
         "ask.html",
+        "church-history.html",
+        "hero-details.js",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -3716,7 +3926,9 @@
       "verse_count": 1,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\aaronic-priesthood-restoration.html",
         "ask.html",
+        "hero-details.js",
         "standard-works-catalog"
       ]
     },
@@ -3730,8 +3942,10 @@
       "verse_count": 23,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "ask.html",
         "pioneers.html",
+        "reviewed-ask-knowledge.js",
         "standard-works-catalog"
       ]
     },
@@ -3760,8 +3974,10 @@
       "verse_count": 66,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "answers\\what-is-eternal-marriage.html",
         "ask.html",
+        "hero-details.js",
         "standard-works-catalog"
       ]
     },
@@ -3789,6 +4005,7 @@
       "verse_count": 12,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "church-history.html",
         "standard-works-catalog"
       ]
     },
@@ -3816,6 +4033,7 @@
       "verse_count": 42,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "pioneers.html",
         "standard-works-catalog"
       ]
     },
@@ -3831,6 +4049,7 @@
       "linked_from": [
         "answers.html",
         "answers\\death-of-a-child.html",
+        "answers\\what-happens-after-death.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -3848,6 +4067,8 @@
         "answers\\what-happens-after-death.html",
         "answers\\why-latter-day-saints-build-temples.html",
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -3861,6 +4082,7 @@
       "verse_count": 11,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "book-of-mormon-evidences.html",
         "standard-works-catalog"
       ]
     },
@@ -3913,6 +4135,7 @@
       "verse_count": 47,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "atonement.html",
         "groq-proxy\\src\\index.js",
         "missionary.html",
         "standard-works-catalog"
@@ -3929,6 +4152,8 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\redeemer-and-risen-lord.html",
         "standard-works-catalog"
       ]
     },
@@ -3955,8 +4180,11 @@
       "verse_count": 84,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
+        "answers\\melchizedek-priesthood-restoration.html",
         "answers\\restored-church-of-jesus-christ.html",
         "ask.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -4022,6 +4250,8 @@
       "verse_count": 16,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "church-history.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -4048,7 +4278,9 @@
       "verse_count": 18,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\melchizedek-priesthood-restoration.html",
         "ask.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -4312,7 +4544,10 @@
       "verse_count": 75,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\settle-this-in-your-hearts.html",
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -4395,6 +4630,7 @@
         "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
         "answers\\stand-forever.html",
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -4502,6 +4738,7 @@
       "linked_from": [
         "art-study\\be-still.html",
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -4535,6 +4772,9 @@
         "answers\\stand-forever.html",
         "answers\\who-was-joseph-smith.html",
         "ask.html",
+        "atonement.html",
+        "book-of-mormon-evidences.html",
+        "hero-details.js",
         "index.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -4775,8 +5015,12 @@
       "verse_count": 119,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-happens-after-death.html",
+        "answers\\who-was-joseph-smith.html",
         "ask.html",
+        "atonement.html",
         "groq-proxy\\src\\index.js",
+        "jesus-christ\\restoration-and-today.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -4830,6 +5074,7 @@
       "verse_count": 12,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "answers\\prayer-and-personal-revelation.html",
         "ask.html",
         "pioneers.html",
@@ -4898,7 +5143,11 @@
       "verse_count": 120,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
+        "answers\\holy-ghost.html",
+        "answers\\melchizedek-priesthood-restoration.html",
         "ask.html",
+        "missionary.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -4953,6 +5202,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "book-of-mormon-evidences.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -4982,10 +5232,12 @@
       "verse_count": 14,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
         "answers\\prayer-and-personal-revelation.html",
         "answers\\stand-forever.html",
         "ask.html",
+        "book-of-mormon-evidences.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -5067,6 +5319,7 @@
       "verse_count": 17,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\settle-this-in-your-hearts.html",
         "standard-works-catalog"
       ]
     },
@@ -5248,6 +5501,7 @@
         "answers\\what-happens-after-death.html",
         "art-study\\the-living-christ.html",
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -5316,6 +5570,7 @@
       "verse_count": 13,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -5450,6 +5705,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-happens-after-death.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -5478,6 +5734,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -5492,6 +5749,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -5996,6 +6254,8 @@
       "verse_count": 26,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\redeemer-and-risen-lord.html",
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -6140,6 +6400,7 @@
       "verse_count": 47,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -6337,7 +6598,12 @@
       "verse_count": 40,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\holy-ghost.html",
+        "answers\\who-was-joseph-smith.html",
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -6436,6 +6702,7 @@
         "answers\\bible-and-book-of-mormon-together.html",
         "answers\\restored-church-of-jesus-christ.html",
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -6532,6 +6799,7 @@
       "verse_count": 29,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -6558,6 +6826,7 @@
       "verse_count": 26,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -6572,6 +6841,7 @@
       "verse_count": 18,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "pioneers.html",
         "standard-works-catalog"
       ]
     },
@@ -6767,6 +7037,7 @@
         "answers.html",
         "answers\\prayer-and-personal-revelation.html",
         "ask.html",
+        "book-of-mormon-evidences.html",
         "hero-details.js",
         "standard-works-catalog",
         "watch.html"
@@ -6839,8 +7110,19 @@
       "verse_count": 51,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-happens-after-death.html",
         "ask.html",
+        "atonement.html",
+        "birth-of-christ.html",
         "index.html",
+        "jesus-christ\\before-bethlehem.html",
+        "jesus-christ\\mortal-ministry.html",
+        "jesus-christ\\restoration-and-today.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -6855,11 +7137,17 @@
       "verse_count": 42,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
+        "answers\\bible-and-book-of-mormon-together.html",
         "answers\\faith-in-jesus-christ-during-trials.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "art-study\\the-good-shepherd.html",
         "art.html",
         "ask.html",
+        "atonement.html",
         "hero-details.js",
+        "jesus-christ\\parables\\good-shepherd.html",
         "standard-works-catalog"
       ]
     },
@@ -6891,6 +7179,9 @@
       "verse_count": 50,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\grain-wheat.html",
+        "jesus-christ\\parables\\kingdom.html",
+        "jesus-christ\\redeemer-and-risen-lord.html",
         "standard-works-catalog"
       ]
     },
@@ -6905,6 +7196,10 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\are-latter-day-saints-christian.html",
+        "atonement.html",
+        "hero-details.js",
+        "jesus-christ\\redeemer-and-risen-lord.html",
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog"
       ]
     },
@@ -6918,8 +7213,10 @@
       "verse_count": 31,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "art-study\\be-still.html",
         "ask.html",
+        "hero-details.js",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -6934,6 +7231,10 @@
       "verse_count": 27,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "church-history.html",
+        "hero-details.js",
+        "jesus-christ\\parables\\vine-branches.html",
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog"
       ]
     },
@@ -6948,6 +7249,8 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "jesus-christ\\parables\\watchfulness.html",
+        "jesus-christ\\parables\\woman-childbirth.html",
         "standard-works-catalog"
       ]
     },
@@ -6962,6 +7265,8 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\are-latter-day-saints-christian.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\what-happens-after-death.html",
         "answers\\what-is-eternal-marriage.html",
         "ask.html",
         "pioneers.html",
@@ -6978,6 +7283,8 @@
       "verse_count": 40,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "jesus-christ\\redeemer-and-risen-lord.html",
         "standard-works-catalog"
       ]
     },
@@ -6991,6 +7298,8 @@
       "verse_count": 42,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "atonement.html",
+        "jesus-christ\\redeemer-and-risen-lord.html",
         "standard-works-catalog"
       ]
     },
@@ -7004,6 +7313,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\mortal-ministry.html",
         "standard-works-catalog"
       ]
     },
@@ -7018,10 +7328,13 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\holy-ghost.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
         "answers\\what-happens-after-death.html",
+        "art-study\\be-still.html",
         "art-study\\the-living-christ.html",
         "ask.html",
+        "atonement.html",
         "hero-details.js",
         "standard-works-catalog",
         "watch.html"
@@ -7037,6 +7350,8 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "art-study\\the-living-christ.html",
+        "hero-details.js",
         "standard-works-catalog"
       ]
     },
@@ -7050,7 +7365,10 @@
       "verse_count": 36,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\holy-ghost.html",
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -7066,6 +7384,9 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "hero-details.js",
+        "jesus-christ\\miracles-and-compassion.html",
+        "missionary.html",
         "standard-works-catalog"
       ]
     },
@@ -7079,6 +7400,20 @@
       "verse_count": 47,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\aaronic-priesthood-restoration.html",
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\god-our-heavenly-father.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\melchizedek-priesthood-restoration.html",
+        "answers\\prayer-and-personal-revelation.html",
+        "answers\\restored-church-of-jesus-christ.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-is-eternal-marriage.html",
+        "answers\\what-is-the-book-of-mormon.html",
+        "answers\\who-was-joseph-smith.html",
+        "answers\\why-families-are-important.html",
+        "answers\\why-latter-day-saints-build-temples.html",
+        "church-history.html",
         "index.html",
         "standard-works-catalog"
       ]
@@ -7094,6 +7429,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -7121,7 +7457,10 @@
       "verse_count": 59,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "ask.html",
+        "jesus-christ\\before-bethlehem.html",
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog"
       ]
     },
@@ -7135,6 +7474,7 @@
       "verse_count": 41,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\miracles-and-compassion.html",
         "standard-works-catalog"
       ]
     },
@@ -7161,6 +7501,7 @@
       "verse_count": 80,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -7174,7 +7515,14 @@
       "verse_count": 42,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\prayer-and-personal-revelation.html",
+        "answers\\stand-forever.html",
         "ask.html",
+        "jesus-christ\\parables\\good-samaritan.html",
+        "jesus-christ\\parables\\neighbor.html",
+        "jesus-christ\\teachings-and-parables.html",
+        "missionary.html",
         "standard-works-catalog",
         "watch.html"
       ]
@@ -7189,6 +7537,12 @@
       "verse_count": 54,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\divided-house.html",
+        "jesus-christ\\parables\\friend-midnight.html",
+        "jesus-christ\\parables\\lamp.html",
+        "jesus-christ\\parables\\parent-gifts.html",
+        "jesus-christ\\parables\\returning-spirit.html",
+        "jesus-christ\\parables\\strong-man.html",
         "standard-works-catalog"
       ]
     },
@@ -7202,6 +7556,14 @@
       "verse_count": 59,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\birds-lilies.html",
+        "jesus-christ\\parables\\faithful-servant.html",
+        "jesus-christ\\parables\\rich-fool.html",
+        "jesus-christ\\parables\\settle-adversary.html",
+        "jesus-christ\\parables\\stewardship.html",
+        "jesus-christ\\parables\\thief-night.html",
+        "jesus-christ\\parables\\watchful-servants.html",
+        "jesus-christ\\parables\\watchfulness.html",
         "standard-works-catalog"
       ]
     },
@@ -7215,6 +7577,14 @@
       "verse_count": 35,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "jesus-christ\\parables\\barren-fig.html",
+        "jesus-christ\\parables\\closed-door.html",
+        "jesus-christ\\parables\\hen-chicks.html",
+        "jesus-christ\\parables\\leaven.html",
+        "jesus-christ\\parables\\mercy.html",
+        "jesus-christ\\parables\\mustard-seed.html",
         "standard-works-catalog"
       ]
     },
@@ -7228,6 +7598,18 @@
       "verse_count": 35,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-is-the-book-of-mormon.html",
+        "answers\\why-families-are-important.html",
+        "jesus-christ\\parables\\great-supper.html",
+        "jesus-christ\\parables\\king-war.html",
+        "jesus-christ\\parables\\neighbor.html",
+        "jesus-christ\\parables\\salt.html",
+        "jesus-christ\\parables\\sheep-sabbath.html",
+        "jesus-christ\\parables\\stewardship.html",
+        "jesus-christ\\parables\\tower-builder.html",
+        "jesus-christ\\parables\\wedding-places.html",
         "standard-works-catalog"
       ]
     },
@@ -7242,6 +7624,11 @@
       "verified_on": "2026-09-08",
       "linked_from": [
         "art-study\\the-good-shepherd.html",
+        "atonement.html",
+        "jesus-christ\\parables\\lost-coin.html",
+        "jesus-christ\\parables\\lost-sheep.html",
+        "jesus-christ\\parables\\mercy.html",
+        "jesus-christ\\parables\\prodigal-son.html",
         "standard-works-catalog"
       ]
     },
@@ -7255,6 +7642,10 @@
       "verse_count": 31,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\neighbor.html",
+        "jesus-christ\\parables\\rich-man-lazarus.html",
+        "jesus-christ\\parables\\stewardship.html",
+        "jesus-christ\\parables\\unjust-steward.html",
         "standard-works-catalog"
       ]
     },
@@ -7268,6 +7659,10 @@
       "verse_count": 37,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ\\miracles-and-compassion.html",
+        "jesus-christ\\parables\\servant-duty.html",
+        "jesus-christ\\parables\\stewardship.html",
         "standard-works-catalog"
       ]
     },
@@ -7281,6 +7676,9 @@
       "verse_count": 43,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\persistent-widow.html",
+        "jesus-christ\\parables\\pharisee-publican.html",
+        "jesus-christ\\parables\\watchfulness.html",
         "standard-works-catalog"
       ]
     },
@@ -7295,6 +7693,9 @@
       "verified_on": "2026-09-08",
       "linked_from": [
         "art-study\\the-good-shepherd.html",
+        "jesus-christ\\mortal-ministry.html",
+        "jesus-christ\\parables\\minas.html",
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog"
       ]
     },
@@ -7309,6 +7710,8 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "birth-of-christ.html",
+        "hero-details.js",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -7323,6 +7726,7 @@
       "verse_count": 47,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\wicked-tenants.html",
         "standard-works-catalog"
       ]
     },
@@ -7336,6 +7740,7 @@
       "verse_count": 38,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\budding-fig.html",
         "standard-works-catalog"
       ]
     },
@@ -7349,7 +7754,12 @@
       "verse_count": 71,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
+        "atonement.html",
+        "hero-details.js",
+        "jesus-christ\\redeemer-and-risen-lord.html",
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog"
       ]
     },
@@ -7363,6 +7773,12 @@
       "verse_count": 56,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\divorce-and-faith.html",
+        "answers\\faith-in-jesus-christ-during-trials.html",
+        "answers\\grief-and-faith.html",
+        "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
+        "atonement.html",
+        "jesus-christ\\redeemer-and-risen-lord.html",
         "standard-works-catalog"
       ]
     },
@@ -7376,9 +7792,15 @@
       "verse_count": 53,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\are-latter-day-saints-christian.html",
         "answers\\bible-and-book-of-mormon-together.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-happens-after-death.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\redeemer-and-risen-lord.html",
         "standard-works-catalog"
       ]
     },
@@ -7392,6 +7814,7 @@
       "verse_count": 38,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\mortal-ministry.html",
         "standard-works-catalog"
       ]
     },
@@ -7405,6 +7828,8 @@
       "verse_count": 44,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\holy-ghost.html",
         "ask.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -7422,6 +7847,9 @@
       "linked_from": [
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
         "answers\\prayer-and-personal-revelation.html",
+        "jesus-christ\\parables\\bridegroom.html",
+        "jesus-christ\\parables\\new-patch.html",
+        "jesus-christ\\parables\\new-wineskins.html",
         "standard-works-catalog"
       ]
     },
@@ -7435,7 +7863,15 @@
       "verse_count": 49,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\what-is-the-book-of-mormon.html",
         "ask.html",
+        "hero-details.js",
+        "jesus-christ\\miracles-and-compassion.html",
+        "jesus-christ\\parables\\blind-guides.html",
+        "jesus-christ\\parables\\hearing.html",
+        "jesus-christ\\parables\\mote-beam.html",
+        "jesus-christ\\parables\\tree-fruit.html",
+        "jesus-christ\\parables\\wise-foolish-builders.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -7450,6 +7886,11 @@
       "verse_count": 50,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "hero-details.js",
+        "jesus-christ\\miracles-and-compassion.html",
+        "jesus-christ\\parables\\children-marketplace.html",
+        "jesus-christ\\parables\\mercy.html",
+        "jesus-christ\\parables\\two-debtors.html",
         "standard-works-catalog"
       ]
     },
@@ -7464,6 +7905,11 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "jesus-christ\\miracles-and-compassion.html",
+        "jesus-christ\\mortal-ministry.html",
+        "jesus-christ\\parables\\hearing.html",
+        "jesus-christ\\parables\\lamp.html",
+        "jesus-christ\\parables\\sower.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -7478,6 +7924,8 @@
       "verse_count": 62,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "hero-details.js",
+        "jesus-christ\\mortal-ministry.html",
         "standard-works-catalog"
       ]
     },
@@ -7491,6 +7939,9 @@
       "verse_count": 45,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\aaronic-priesthood-restoration.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "jesus-christ\\miracles-and-compassion.html",
         "standard-works-catalog"
       ]
     },
@@ -7505,11 +7956,14 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers.html",
+        "answers\\bible-and-book-of-mormon-together.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
         "answers\\why-families-are-important.html",
         "art-study\\suffer-the-little-children.html",
         "art.html",
+        "atonement.html",
         "hero-details.js",
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog",
         "watch.html"
       ]
@@ -7524,6 +7978,7 @@
       "verse_count": 33,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog"
       ]
     },
@@ -7537,6 +7992,10 @@
       "verse_count": 44,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\are-latter-day-saints-christian.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ\\parables\\wicked-tenants.html",
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog"
       ]
     },
@@ -7550,6 +8009,9 @@
       "verse_count": 37,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\budding-fig.html",
+        "jesus-christ\\parables\\doorkeeper.html",
+        "jesus-christ\\parables\\watchfulness.html",
         "standard-works-catalog"
       ]
     },
@@ -7602,6 +8064,11 @@
       "verse_count": 28,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "jesus-christ\\mortal-ministry.html",
+        "jesus-christ\\parables\\bridegroom.html",
+        "jesus-christ\\parables\\new-patch.html",
+        "jesus-christ\\parables\\new-wineskins.html",
         "standard-works-catalog"
       ]
     },
@@ -7615,6 +8082,9 @@
       "verse_count": 35,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\miracles-and-compassion.html",
+        "jesus-christ\\parables\\divided-house.html",
+        "jesus-christ\\parables\\strong-man.html",
         "standard-works-catalog"
       ]
     },
@@ -7631,6 +8101,12 @@
         "answers\\faith-in-jesus-christ-during-trials.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
         "art-study\\be-still.html",
+        "jesus-christ\\parables\\growing-seed.html",
+        "jesus-christ\\parables\\hearing.html",
+        "jesus-christ\\parables\\kingdom.html",
+        "jesus-christ\\parables\\lamp.html",
+        "jesus-christ\\parables\\mustard-seed.html",
+        "jesus-christ\\parables\\sower.html",
         "standard-works-catalog"
       ]
     },
@@ -7644,6 +8120,7 @@
       "verse_count": 43,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\miracles-and-compassion.html",
         "standard-works-catalog"
       ]
     },
@@ -7670,6 +8147,8 @@
       "verse_count": 37,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ\\miracles-and-compassion.html",
         "standard-works-catalog"
       ]
     },
@@ -7683,6 +8162,7 @@
       "verse_count": 38,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\miracles-and-compassion.html",
         "standard-works-catalog"
       ]
     },
@@ -7696,6 +8176,10 @@
       "verse_count": 50,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\stand-forever.html",
+        "art-study\\suffer-the-little-children.html",
+        "jesus-christ\\parables\\salt.html",
         "standard-works-catalog"
       ]
     },
@@ -7709,6 +8193,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -7722,6 +8207,7 @@
       "verse_count": 42,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "standard-works-catalog"
       ]
     },
@@ -7737,7 +8223,12 @@
       "linked_from": [
         "answers\\divorce-and-faith.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\what-happens-after-death.html",
         "art-study\\the-good-shepherd.html",
+        "atonement.html",
+        "birth-of-christ.html",
+        "hero-details.js",
+        "jesus-christ\\parables\\children-marketplace.html",
         "standard-works-catalog"
       ]
     },
@@ -7752,6 +8243,12 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "jesus-christ\\parables\\divided-house.html",
+        "jesus-christ\\parables\\neighbor.html",
+        "jesus-christ\\parables\\returning-spirit.html",
+        "jesus-christ\\parables\\sheep-sabbath.html",
+        "jesus-christ\\parables\\strong-man.html",
+        "jesus-christ\\parables\\tree-fruit.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -7767,6 +8264,16 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "jesus-christ\\parables\\hearing.html",
+        "jesus-christ\\parables\\hidden-treasure.html",
+        "jesus-christ\\parables\\householder.html",
+        "jesus-christ\\parables\\kingdom.html",
+        "jesus-christ\\parables\\leaven.html",
+        "jesus-christ\\parables\\mustard-seed.html",
+        "jesus-christ\\parables\\net.html",
+        "jesus-christ\\parables\\pearl.html",
+        "jesus-christ\\parables\\sower.html",
+        "jesus-christ\\parables\\wheat-tares.html",
         "standard-works-catalog"
       ]
     },
@@ -7797,6 +8304,7 @@
       "verse_count": 39,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\blind-guides.html",
         "standard-works-catalog"
       ]
     },
@@ -7829,6 +8337,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "jesus-christ\\mortal-ministry.html",
         "standard-works-catalog"
       ]
     },
@@ -7843,6 +8352,9 @@
       "verified_on": "2026-09-08",
       "linked_from": [
         "art-study\\suffer-the-little-children.html",
+        "jesus-christ\\parables\\lost-sheep.html",
+        "jesus-christ\\parables\\mercy.html",
+        "jesus-christ\\parables\\unmerciful-servant.html",
         "standard-works-catalog"
       ]
     },
@@ -7870,6 +8382,7 @@
       "verse_count": 23,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -7883,6 +8396,8 @@
       "verse_count": 34,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\laborers-vineyard.html",
+        "jesus-christ\\parables\\stewardship.html",
         "standard-works-catalog"
       ]
     },
@@ -7896,6 +8411,10 @@
       "verse_count": 46,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\hearing.html",
+        "jesus-christ\\parables\\mercy.html",
+        "jesus-christ\\parables\\two-sons.html",
+        "jesus-christ\\parables\\wicked-tenants.html",
         "standard-works-catalog"
       ]
     },
@@ -7909,6 +8428,9 @@
       "verse_count": 46,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ\\parables\\kingdom.html",
+        "jesus-christ\\parables\\royal-wedding.html",
         "standard-works-catalog"
       ]
     },
@@ -7922,6 +8444,7 @@
       "verse_count": 39,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\hen-chicks.html",
         "standard-works-catalog"
       ]
     },
@@ -7935,6 +8458,10 @@
       "verse_count": 51,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\parables\\budding-fig.html",
+        "jesus-christ\\parables\\faithful-servant.html",
+        "jesus-christ\\parables\\thief-night.html",
+        "jesus-christ\\parables\\watchfulness.html",
         "standard-works-catalog"
       ]
     },
@@ -7948,6 +8475,24 @@
       "verse_count": 46,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\divorce-and-faith.html",
+        "answers\\faith-in-jesus-christ-during-trials.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
+        "answers\\restored-church-of-jesus-christ.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-happens-after-death.html",
+        "answers\\what-is-the-book-of-mormon.html",
+        "answers\\why-families-are-important.html",
+        "answers\\why-latter-day-saints-build-temples.html",
+        "jesus-christ\\parables\\neighbor.html",
+        "jesus-christ\\parables\\sheep-goats.html",
+        "jesus-christ\\parables\\stewardship.html",
+        "jesus-christ\\parables\\talents.html",
+        "jesus-christ\\parables\\ten-virgins.html",
+        "jesus-christ\\parables\\watchfulness.html",
+        "pioneer-story.js",
+        "pioneers.html",
         "standard-works-catalog"
       ]
     },
@@ -7962,6 +8507,8 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\redeemer-and-risen-lord.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -7977,6 +8524,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -8008,7 +8556,10 @@
       "verse_count": 17,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\holy-ghost.html",
         "ask.html",
+        "jesus-christ\\mortal-ministry.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -8023,6 +8574,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -8039,7 +8591,13 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\what-is-eternal-marriage.html",
         "ask.html",
+        "jesus-christ\\parables\\lamp.html",
+        "jesus-christ\\parables\\salt.html",
+        "jesus-christ\\parables\\settle-adversary.html",
+        "jesus-christ\\teachings-and-parables.html",
         "standard-works-catalog"
       ]
     },
@@ -8053,9 +8611,24 @@
       "verse_count": 34,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\aaronic-priesthood-restoration.html",
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\death-of-a-child.html",
+        "answers\\divorce-and-faith.html",
+        "answers\\faith-in-jesus-christ-during-trials.html",
         "answers\\god-our-heavenly-father.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
         "answers\\prayer-and-personal-revelation.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-happens-after-death.html",
+        "answers\\what-is-the-book-of-mormon.html",
+        "answers\\who-was-joseph-smith.html",
         "ask.html",
+        "come-follow-me.html",
+        "jesus-christ\\parables\\birds-lilies.html",
+        "jesus-christ\\parables\\watchfulness.html",
+        "jesus-christ\\teachings-and-parables.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -8072,6 +8645,11 @@
       "linked_from": [
         "ask.html",
         "hero-details.js",
+        "jesus-christ\\parables\\hearing.html",
+        "jesus-christ\\parables\\mote-beam.html",
+        "jesus-christ\\parables\\parent-gifts.html",
+        "jesus-christ\\parables\\tree-fruit.html",
+        "jesus-christ\\parables\\wise-foolish-builders.html",
         "standard-works-catalog"
       ]
     },
@@ -8099,6 +8677,10 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\parables\\bridegroom.html",
+        "jesus-christ\\parables\\new-patch.html",
+        "jesus-christ\\parables\\new-wineskins.html",
         "standard-works-catalog"
       ]
     },
@@ -8179,6 +8761,7 @@
       "verse_count": 20,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\restoration-and-today.html",
         "standard-works-catalog"
       ]
     },
@@ -8350,6 +8933,7 @@
       "verse_count": 27,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -8495,6 +9079,7 @@
       "verse_count": 36,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -8508,7 +9093,12 @@
       "verse_count": 21,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\death-of-a-child.html",
         "answers\\divorce-and-faith.html",
+        "answers\\faith-in-jesus-christ-during-trials.html",
+        "answers\\grief-and-faith.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\what-happens-after-death.html",
         "answers\\why-families-are-important.html",
         "standard-works-catalog"
       ]
@@ -9230,6 +9820,7 @@
       "verse_count": 21,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "ask.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -11083,6 +11674,7 @@
       "verse_count": 30,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\settle-this-in-your-hearts.html",
         "standard-works-catalog"
       ]
     },
@@ -11591,6 +12183,7 @@
       "verse_count": 20,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -11944,6 +12537,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -11971,6 +12565,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "jesus-christ\\before-bethlehem.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -11998,6 +12593,7 @@
       "verse_count": 36,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -12037,6 +12633,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -12195,6 +12792,8 @@
       "verse_count": 22,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -12222,6 +12821,7 @@
       "verse_count": 18,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\holy-ghost.html",
         "standard-works-catalog"
       ]
     },
@@ -12248,6 +12848,7 @@
       "verse_count": 23,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -12822,6 +13423,7 @@
       "verse_count": 28,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -13188,6 +13790,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "jesus-christ\\before-bethlehem.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -13215,6 +13818,7 @@
       "verse_count": 32,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
         "standard-works-catalog"
       ]
@@ -13229,6 +13833,7 @@
       "verse_count": 20,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -13272,6 +13877,7 @@
       "verse_count": 21,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -13298,6 +13904,7 @@
       "verse_count": 27,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -13364,6 +13971,7 @@
       "verse_count": 34,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "ask.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -13431,6 +14039,7 @@
       "verse_count": 35,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -13457,6 +14066,7 @@
       "verse_count": 22,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -13522,6 +14132,7 @@
       "verse_count": 32,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "ask.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -13563,6 +14174,7 @@
       "verse_count": 29,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -13784,6 +14396,7 @@
       "verse_count": 26,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -13838,6 +14451,7 @@
       "verse_count": 29,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -13955,6 +14569,7 @@
       "verse_count": 14,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -14126,6 +14741,7 @@
       "verse_count": 16,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -14545,6 +15161,7 @@
       "linked_from": [
         "art-study\\the-good-shepherd.html",
         "ask.html",
+        "birth-of-christ.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -14650,6 +15267,7 @@
       "verse_count": 22,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -14728,7 +15346,10 @@
       "verse_count": 12,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
+        "atonement.html",
+        "jesus-christ\\before-bethlehem.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -14822,6 +15443,7 @@
       "verse_count": 13,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -14849,6 +15471,7 @@
       "verse_count": 11,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "standard-works-catalog"
       ]
     },
@@ -14927,6 +15550,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -14954,6 +15578,7 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "ask.html",
+        "birth-of-christ.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -17314,7 +17939,9 @@
       "verse_count": 18,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
+        "birth-of-christ.html",
         "pioneers.html",
         "standard-works-catalog"
       ]
@@ -17329,6 +17956,7 @@
       "verse_count": 6,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "ask.html",
         "pioneers.html",
         "standard-works-catalog"
@@ -17396,6 +18024,7 @@
       "verse_count": 15,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "birth-of-christ.html",
         "standard-works-catalog"
       ]
     },
@@ -17812,6 +18441,7 @@
       "verse_count": 35,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\bible-and-book-of-mormon-together.html",
         "answers\\look-unto-me-doctrine-and-covenants-6-36.html",
         "standard-works-catalog"
       ]
@@ -20485,6 +21115,7 @@
       "verse_count": 22,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\settle-this-in-your-hearts.html",
         "standard-works-catalog"
       ]
     },
@@ -20863,7 +21494,10 @@
       "verified_on": "2026-09-06",
       "linked_from": [
         "answers\\are-latter-day-saints-christian.html",
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\holy-ghost.html",
         "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -20890,6 +21524,7 @@
       "verse_count": 25,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "standard-works-catalog"
       ]
     },
@@ -20903,6 +21538,9 @@
       "verse_count": 28,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
+        "atonement.html",
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -20942,8 +21580,14 @@
       "verse_count": 75,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\aaronic-priesthood-restoration.html",
+        "answers\\bible-and-book-of-mormon-together.html",
+        "answers\\settle-this-in-your-hearts.html",
+        "answers\\what-is-the-book-of-mormon.html",
         "answers\\who-was-joseph-smith.html",
         "ask.html",
+        "hero-details.js",
+        "jesus-christ\\restoration-and-today.html",
         "pioneers.html",
         "standard-works-catalog",
         "watch.html"
@@ -20973,6 +21617,10 @@
       "verified_on": "2026-09-07",
       "linked_from": [
         "answers\\god-our-heavenly-father.html",
+        "answers\\jesus-christ-latter-day-saint-beliefs.html",
+        "answers\\what-is-the-book-of-mormon.html",
+        "atonement.html",
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -20986,6 +21634,7 @@
       "verse_count": 31,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -21013,6 +21662,9 @@
       "verse_count": 32,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\settle-this-in-your-hearts.html",
+        "atonement.html",
+        "jesus-christ\\before-bethlehem.html",
         "standard-works-catalog"
       ]
     },
@@ -21026,6 +21678,7 @@
       "verse_count": 59,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -21039,6 +21692,8 @@
       "verse_count": 68,
       "verified_on": "2026-09-09",
       "linked_from": [
+        "answers\\holy-ghost.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -21052,7 +21707,9 @@
       "verse_count": 69,
       "verified_on": "2026-09-06",
       "linked_from": [
+        "answers\\abrahamic-covenant.html",
         "ask.html",
+        "atonement.html",
         "standard-works-catalog"
       ]
     },
@@ -21071,9 +21728,88 @@
     }
   ],
   "skipped_nonchapter_links": {
+    "bd/bible": [
+      "answers\\bible-and-book-of-mormon-together.html"
+    ],
+    "bd/bible-english": [
+      "answers\\bible-and-book-of-mormon-together.html"
+    ],
+    "bd/parables": [
+      "jesus-christ\\parables\\barren-fig.html",
+      "jesus-christ\\parables\\birds-lilies.html",
+      "jesus-christ\\parables\\blind-guides.html",
+      "jesus-christ\\parables\\bridegroom.html",
+      "jesus-christ\\parables\\budding-fig.html",
+      "jesus-christ\\parables\\children-marketplace.html",
+      "jesus-christ\\parables\\closed-door.html",
+      "jesus-christ\\parables\\divided-house.html",
+      "jesus-christ\\parables\\doorkeeper.html",
+      "jesus-christ\\parables\\faithful-servant.html",
+      "jesus-christ\\parables\\friend-midnight.html",
+      "jesus-christ\\parables\\good-samaritan.html",
+      "jesus-christ\\parables\\good-shepherd.html",
+      "jesus-christ\\parables\\grain-wheat.html",
+      "jesus-christ\\parables\\great-supper.html",
+      "jesus-christ\\parables\\growing-seed.html",
+      "jesus-christ\\parables\\hearing.html",
+      "jesus-christ\\parables\\hen-chicks.html",
+      "jesus-christ\\parables\\hidden-treasure.html",
+      "jesus-christ\\parables\\householder.html",
+      "jesus-christ\\parables\\king-war.html",
+      "jesus-christ\\parables\\kingdom.html",
+      "jesus-christ\\parables\\laborers-vineyard.html",
+      "jesus-christ\\parables\\lamp.html",
+      "jesus-christ\\parables\\leaven.html",
+      "jesus-christ\\parables\\lost-coin.html",
+      "jesus-christ\\parables\\lost-sheep.html",
+      "jesus-christ\\parables\\mercy.html",
+      "jesus-christ\\parables\\minas.html",
+      "jesus-christ\\parables\\mote-beam.html",
+      "jesus-christ\\parables\\mustard-seed.html",
+      "jesus-christ\\parables\\neighbor.html",
+      "jesus-christ\\parables\\net.html",
+      "jesus-christ\\parables\\new-patch.html",
+      "jesus-christ\\parables\\new-wineskins.html",
+      "jesus-christ\\parables\\parent-gifts.html",
+      "jesus-christ\\parables\\pearl.html",
+      "jesus-christ\\parables\\persistent-widow.html",
+      "jesus-christ\\parables\\pharisee-publican.html",
+      "jesus-christ\\parables\\prodigal-son.html",
+      "jesus-christ\\parables\\returning-spirit.html",
+      "jesus-christ\\parables\\rich-fool.html",
+      "jesus-christ\\parables\\rich-man-lazarus.html",
+      "jesus-christ\\parables\\royal-wedding.html",
+      "jesus-christ\\parables\\salt.html",
+      "jesus-christ\\parables\\servant-duty.html",
+      "jesus-christ\\parables\\settle-adversary.html",
+      "jesus-christ\\parables\\sheep-goats.html",
+      "jesus-christ\\parables\\sheep-sabbath.html",
+      "jesus-christ\\parables\\sower.html",
+      "jesus-christ\\parables\\stewardship.html",
+      "jesus-christ\\parables\\strong-man.html",
+      "jesus-christ\\parables\\talents.html",
+      "jesus-christ\\parables\\ten-virgins.html",
+      "jesus-christ\\parables\\thief-night.html",
+      "jesus-christ\\parables\\tower-builder.html",
+      "jesus-christ\\parables\\tree-fruit.html",
+      "jesus-christ\\parables\\two-debtors.html",
+      "jesus-christ\\parables\\two-sons.html",
+      "jesus-christ\\parables\\unjust-steward.html",
+      "jesus-christ\\parables\\unmerciful-servant.html",
+      "jesus-christ\\parables\\vine-branches.html",
+      "jesus-christ\\parables\\watchful-servants.html",
+      "jesus-christ\\parables\\watchfulness.html",
+      "jesus-christ\\parables\\wedding-places.html",
+      "jesus-christ\\parables\\wheat-tares.html",
+      "jesus-christ\\parables\\wicked-tenants.html",
+      "jesus-christ\\parables\\wise-foolish-builders.html",
+      "jesus-christ\\parables\\woman-childbirth.html",
+      "jesus-christ\\teachings-and-parables.html"
+    ],
     "bofm": [
       "answers\\what-is-the-book-of-mormon.html",
       "ask.html",
+      "book-of-mormon-evidences.html",
       "pioneers.html"
     ],
     "bofm/1-ne": [
@@ -21088,6 +21824,9 @@
       "ask.html",
       "pioneers.html"
     ],
+    "bofm/eight": [
+      "book-of-mormon-evidences.html"
+    ],
     "bofm/hel": [
       "ask.html",
       "pioneers.html"
@@ -21101,6 +21840,9 @@
       "ask.html",
       "pioneers.html"
     ],
+    "bofm/three": [
+      "book-of-mormon-evidences.html"
+    ],
     "dc-testament": [
       "ask.html",
       "pioneers.html"
@@ -21111,6 +21853,20 @@
     "gs/j": [
       "ask.html",
       "pioneers.html"
+    ],
+    "gs/jehovah": [
+      "jesus-christ\\before-bethlehem.html"
+    ],
+    "gs/parable": [
+      "jesus-christ\\teachings-and-parables.html"
+    ],
+    "harmony": [
+      "jesus-christ\\parables\\hearing.html",
+      "jesus-christ\\parables\\kingdom.html",
+      "jesus-christ\\parables\\mercy.html",
+      "jesus-christ\\parables\\neighbor.html",
+      "jesus-christ\\parables\\stewardship.html",
+      "jesus-christ\\parables\\watchfulness.html"
     ],
     "nt": [
       "ask.html",
@@ -21382,6 +22138,12 @@
       "art-study\\the-living-christ.html",
       "art.html",
       "hero-details.js",
+      "jesus-christ\\before-bethlehem.html",
+      "jesus-christ\\miracles-and-compassion.html",
+      "jesus-christ\\mortal-ministry.html",
+      "jesus-christ\\redeemer-and-risen-lord.html",
+      "jesus-christ\\restoration-and-today.html",
+      "jesus-christ\\risen-savior-in-the-book-of-mormon.html",
       "reviewed-ask-knowledge.js"
     ]
   }

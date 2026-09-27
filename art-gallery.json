@@ -12,6 +12,7 @@
     "/answers/faith-in-jesus-christ-during-trials.html",
     "/answers/god-our-heavenly-father.html",
     "/answers/grief-and-faith.html",
+    "/answers/holy-ghost.html",
     "/answers/jesus-christ-latter-day-saint-beliefs.html",
     "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
     "/answers/melchizedek-priesthood-restoration.html",
@@ -687,6 +688,28 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/child-loss-full.webp\"]",
           "title": "A grieving woman holds a child’s knitted cap while a friend sits beside her on a lakeside bench."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A heart made willing",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/nephi-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/nephi-full.webp",
+      "alt": "Young Nephi kneels beside a tent with his head bowed in prayer.",
+      "id": "art-c74de8bfe193",
+      "occurrences": [
+        {
+          "id": "source-f286e285e024",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/nephi-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/nephi-800.webp\"])",
+          "title": "A heart made willing"
         }
       ],
       "categories": [
@@ -1906,6 +1929,28 @@
       ]
     },
     {
+      "title": "A voice after the storm",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/elijah-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/elijah-full.webp",
+      "alt": "Elijah holds his mantle over his face at the entrance to a mountain cave.",
+      "id": "art-59a5a21ae23f",
+      "occurrences": [
+        {
+          "id": "source-34391a7c9f84",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/elijah-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/elijah-800.webp\"])",
+          "title": "A voice after the storm"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A welcome for the one",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/christwelcome-960.webp",
@@ -1978,6 +2023,50 @@
       ],
       "categories": [
         "Missionary Work"
+      ]
+    },
+    {
+      "title": "A witness of Jesus Christ",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/holy-ghost-hero-full.webp",
+      "fullImage": "/assets/heroes/holy-ghost-hero-full.webp",
+      "alt": "Jesus sits beneath an olive tree, listening warmly to a man who speaks with Him.",
+      "id": "art-fe2ee22289b8",
+      "occurrences": [
+        {
+          "id": "source-c574d7c75e39",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"/assets/heroes/holy-ghost-hero-full.webp\"]",
+          "title": "A witness of Jesus Christ"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A witness that people can understand",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/pentecost-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/pentecost-full.webp",
+      "alt": "Visitors in Jerusalem listen with surprise as a disciple speaks to them.",
+      "id": "art-430e5dacf511",
+      "occurrences": [
+        {
+          "id": "source-1c277dcbc538",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/pentecost-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/pentecost-800.webp\"])",
+          "title": "A witness that people can understand"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -3233,6 +3322,50 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "Born of the Spirit",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/adam-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/adam-full.webp",
+      "alt": "Adam kneels beside the water with bowed head after his baptism.",
+      "id": "art-f8170c63e5b4",
+      "occurrences": [
+        {
+          "id": "source-0f49c6c2294c",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/adam-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/adam-800.webp\"])",
+          "title": "Born of the Spirit"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Born of water and the Spirit",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/nicodemus-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/nicodemus-full.webp",
+      "alt": "Jesus speaks with Nicodemus by lamplight at night.",
+      "id": "art-b89264db4c9e",
+      "occurrences": [
+        {
+          "id": "source-90388d5d8201",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/nicodemus-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/nicodemus-800.webp\"])",
+          "title": "Born of water and the Spirit"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -6452,6 +6585,28 @@
       ]
     },
     {
+      "title": "Go near and listen",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/philip-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/philip-full.webp",
+      "alt": "Philip runs toward a chariot while the Ethiopian traveler reads a scroll.",
+      "id": "art-a385c247fb9e",
+      "occurrences": [
+        {
+          "id": "source-2f3fc0a3774d",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/philip-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/philip-800.webp\"])",
+          "title": "Go near and listen"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "God",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/stand-prayerful-question-800.webp",
@@ -6665,6 +6820,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rr-broiled-fish--199ddf7a530d-thumb.webp\"])",
           "title": "He eats before them"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "He entrusts His disciples",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/nephite-disciples-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/nephite-disciples-full.webp",
+      "alt": "The risen Jesus rests His hand on a chosen disciple’s shoulder as they look at one another.",
+      "id": "art-0f01b00ca49c",
+      "occurrences": [
+        {
+          "id": "source-2e3cf110213d",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/nephite-disciples-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/nephite-disciples-800.webp\"])",
+          "title": "He entrusts His disciples"
         }
       ],
       "categories": [
@@ -7149,6 +7326,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/atonement/helping-burden.webp\"]:has(img[src=\"assets/page-art/atonement/helping-burden-960.webp\"])",
           "title": "Help on the stairs"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Help to speak when it matters",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/sent-twelve-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/sent-twelve-full.webp",
+      "alt": "Jesus sits outdoors teaching a gathered group of attentive disciples.",
+      "id": "art-f3b495614bd5",
+      "occurrences": [
+        {
+          "id": "source-a031ca1b7b57",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/sent-twelve-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/sent-twelve-800.webp\"])",
+          "title": "Help to speak when it matters"
         }
       ],
       "categories": [
@@ -7681,6 +7880,28 @@
       ],
       "categories": [
         "Art & Study"
+      ]
+    },
+    {
+      "title": "In your mind and in your heart",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/mind-heart-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/mind-heart-full.webp",
+      "alt": "A woman pauses over open scriptures and a notebook during personal study.",
+      "id": "art-357bfb49b1c9",
+      "occurrences": [
+        {
+          "id": "source-585d79191a47",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/mind-heart-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/mind-heart-800.webp\"])",
+          "title": "In your mind and in your heart"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
       ]
     },
     {
@@ -11503,6 +11724,28 @@
       ]
     },
     {
+      "title": "Peace and a commission",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/risen-commission-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/risen-commission-full.webp",
+      "alt": "The risen Jesus stands among His disciples and speaks to them.",
+      "id": "art-bbb5b30f56ec",
+      "occurrences": [
+        {
+          "id": "source-5fdcb2c6a1fb",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/risen-commission-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/risen-commission-800.webp\"])",
+          "title": "Peace and a commission"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Peace Behind Closed Doors",
       "category": "Art & Study",
       "thumbnail": "/assets/page-art/art-study/thumbs/living-peace-to-disciples.webp",
@@ -12320,6 +12563,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/settle-heart/07-entrusted-service-full.webp\"]:has(img[src=\"../assets/page-art/settle-heart/07-entrusted-service-800.webp\"])",
           "title": "Receive a responsibility to serve"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Receive the Holy Ghost",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/confirmation-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/confirmation-full.webp",
+      "alt": "A seated man receives a confirmation as a priesthood holder rests both hands on his head.",
+      "id": "art-5dce5dbf773b",
+      "occurrences": [
+        {
+          "id": "source-51b540225e97",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/confirmation-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/confirmation-800.webp\"])",
+          "title": "Receive the Holy Ghost"
         }
       ],
       "categories": [
@@ -14444,6 +14709,28 @@
       ]
     },
     {
+      "title": "The Father, the Son, and the Spirit",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/baptism-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/baptism-full.webp",
+      "alt": "Jesus looks upward beside John in the Jordan as a dove descends above Him.",
+      "id": "art-9fb6719e7d77",
+      "occurrences": [
+        {
+          "id": "source-fb1e4df8c45d",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/baptism-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/baptism-800.webp\"])",
+          "title": "The Father, the Son, and the Spirit"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The field excuse",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/great-supper-02-960.webp",
@@ -15571,6 +15858,28 @@
       ]
     },
     {
+      "title": "The promise of a Comforter",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/comforter-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/comforter-full.webp",
+      "alt": "Jesus teaches His disciples in a lamplit room during His farewell teaching.",
+      "id": "art-df137964c6ce",
+      "occurrences": [
+        {
+          "id": "source-aa2afad628dc",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/comforter-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/comforter-800.webp\"])",
+          "title": "The promise of a Comforter"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The promised Savior descends",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/30-descent-bountiful-approved-20260919-960.webp",
@@ -16011,6 +16320,28 @@
       ]
     },
     {
+      "title": "The Spirit of the Lord is upon me",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/nazareth-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/nazareth-full.webp",
+      "alt": "Jesus stands reading an open scroll as seated synagogue listeners attend to Him.",
+      "id": "art-bc9cad2ef2df",
+      "occurrences": [
+        {
+          "id": "source-d49f4163d6a3",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/nazareth-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/nazareth-800.webp\"])",
+          "title": "The Spirit of the Lord is upon me"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The stronger one has overcome",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/strong-man-02-960.webp",
@@ -16356,6 +16687,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/book-of-mormon-stories/36-bring-afflicted-full.webp\"]:has(img[src=\"../assets/page-art/book-of-mormon-stories/36-bring-afflicted-960.webp\"])",
           "title": "They bring those who need healing"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "They desire the Holy Ghost",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/nephite-prayer-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/nephite-prayer-full.webp",
+      "alt": "The risen Jesus kneels with His hands on the ground a little apart from a praying gathering.",
+      "id": "art-77fe9fe81497",
+      "occurrences": [
+        {
+          "id": "source-52e0911b3b98",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/nephite-prayer-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/nephite-prayer-800.webp\"])",
+          "title": "They desire the Holy Ghost"
         }
       ],
       "categories": [
@@ -17408,6 +17761,28 @@
       ]
     },
     {
+      "title": "Wisdom for the work",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/holy-ghost/bezalel-800.webp",
+      "fullImage": "/assets/page-art/holy-ghost/bezalel-full.webp",
+      "alt": "Bezalel concentrates on carving timber with a chisel and wooden mallet.",
+      "id": "art-ba9df7732172",
+      "occurrences": [
+        {
+          "id": "source-3b82d7833fba",
+          "page": "/answers/holy-ghost.html",
+          "pageTitle": "The Holy Ghost",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/holy-ghost/bezalel-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/bezalel-800.webp\"])",
+          "title": "Wisdom for the work"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Words carried home",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/bn-households-return-960.webp",
@@ -17585,15 +17960,15 @@
     }
   ],
   "stats": {
-    "artworks": 788,
-    "occurrences": 799,
+    "artworks": 805,
+    "occurrences": 816,
     "byKind": {
       "artwork": 62,
       "full": 1,
-      "hero": 38,
+      "hero": 39,
       "legacy": 39,
       "missionary": 13,
-      "topic": 649
+      "topic": 665
     }
   }
 }

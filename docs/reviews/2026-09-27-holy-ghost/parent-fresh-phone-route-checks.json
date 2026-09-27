@@ -1,0 +1,1549 @@
+{
+  "scope": "DOM render and horizontal-overflow sweep; not a substitute for human narrative review or control clipping tests",
+  "routes": [
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/",
+      "title": "focusChrist | Jesus Christ & Latter-day Saint Faith",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/ask.html",
+      "title": "Ask About Jesus Christ & Latter-day Saint Beliefs | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers.html",
+      "title": "Answers About Jesus Christ & Latter-day Saint Beliefs | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/watch.html",
+      "title": "Watch & Study Jesus Christ: Videos, Scripture & Hope | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/art.html",
+      "title": "Jesus Christ & Scripture Art | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/missionary.html",
+      "title": "Missionary Work | Come Unto Christ | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/church-history.html",
+      "title": "Church History Study | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/come-follow-me.html",
+      "title": "Come, Follow Me 2026: Old Testament Study | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/pioneers.html",
+      "title": "Latter-day Saint Pioneer Stories | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/about.html",
+      "title": "About focusChrist | Christ-Centered Faith Resource",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "jesus-journey",
+        "before-his-birth",
+        "come-and-see",
+        "individual-care",
+        "his-searching-teaching",
+        "the-saving-mission",
+        "follow-him-today"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/jesus-christ-latter-day-saint-beliefs.html",
+      "title": "Jesus Christ: Come to Know the Living Savior | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/are-latter-day-saints-christian.html",
+      "title": "Are Latter-day Saints Christian? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/what-is-the-book-of-mormon.html",
+      "title": "What Is the Book of Mormon and How Does It Relate to the Bible? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/why-latter-day-saints-build-temples.html",
+      "title": "Why Do Latter-day Saints Build Temples? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/what-happens-after-death.html",
+      "title": "What Do Latter-day Saints Believe Happens After Death? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/who-was-joseph-smith.html",
+      "title": "Who Was Joseph Smith? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/prayer-and-personal-revelation.html",
+      "title": "How Do Prayer and Personal Revelation Work? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "title": "Look Unto Me in Every Thought | Rejoice in Christ | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/why-families-are-important.html",
+      "title": "Why Are Families Important in Latter-day Saint Belief? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/what-is-eternal-marriage.html",
+      "title": "What Is Eternal Marriage? | Latter-day Saint Belief | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/bible-and-book-of-mormon-together.html",
+      "title": "How Do the Bible and Book of Mormon Work Together? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/faith-in-jesus-christ-during-trials.html",
+      "title": "How Can Faith in Jesus Christ Help During Trials? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/art-study/the-living-christ.html",
+      "title": "The Living Christ - Art & Study | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/art-study/the-good-shepherd.html",
+      "title": "The Good Shepherd - Art & Study | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/art-study/suffer-the-little-children.html",
+      "title": "Suffer the Little Children - Art & Study | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/art-study/be-still.html",
+      "title": "Be Still - Art & Study | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/death-of-a-child.html",
+      "title": "Finding Hope After the Death of a Child | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/divorce-and-faith.html",
+      "title": "How Can I Find Hope in Christ During Divorce? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/general-conference.html",
+      "title": "General Conference Study: Messages, Topics & Reflections | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/grief-and-faith.html",
+      "title": "Grief and Faith in Jesus Christ | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/stand-forever.html",
+      "title": "Stand Forever | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/god-our-heavenly-father.html",
+      "title": "Is there a God who is our Father? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/restored-church-of-jesus-christ.html",
+      "title": "Is this the restored Church of Jesus Christ? | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/art-gallery.html",
+      "title": "The focusChrist Art Gallery | Jesus Christ & Scripture Art",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/book-of-mormon-evidences.html",
+      "title": "Book of Mormon Evidences | Translation & Study | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/joseph-smith-likeness.html",
+      "title": "Joseph Smith: The Face Behind the History | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/search.html",
+      "title": "Search focusChrist | Find Answers and Studies",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/atonement.html",
+      "title": "The Atonement of Jesus Christ | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "promised-son",
+        "prophets-witness",
+        "prepare-the-way",
+        "mary-and-elisabeth",
+        "joseph-and-journey",
+        "savior-born",
+        "shepherds",
+        "temple-witnesses",
+        "wise-men-and-egypt",
+        "promised-sign",
+        "word-made-flesh",
+        "continue-study"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/birth-of-christ.html",
+      "title": "The Birth of Jesus Christ | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/aaronic-priesthood-restoration.html",
+      "title": "Aaronic Priesthood | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/melchizedek-priesthood-restoration.html",
+      "title": "Melchizedek Priesthood | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/settle-this-in-your-hearts.html",
+      "title": "Settle This in Your Hearts | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "the-word",
+        "chosen-son",
+        "creator",
+        "holy-ground",
+        "deliverance",
+        "daily-bread",
+        "presence",
+        "brother-of-jared",
+        "promised-redeemer",
+        "next-study",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/before-bethlehem.html",
+      "title": "Jesus Christ Before Bethlehem | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "leper",
+        "home",
+        "centurion",
+        "jairus",
+        "garment",
+        "deaf-man",
+        "bethsaida",
+        "siloam",
+        "gratitude",
+        "next-study",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/miracles-and-compassion.html",
+      "title": "The Miracles and Compassion of Jesus Christ | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "baptism",
+        "come-and-see",
+        "nathanael",
+        "cana",
+        "levi",
+        "women",
+        "sent-to-serve",
+        "transfiguration",
+        "jerusalem",
+        "next-study",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/mortal-ministry.html",
+      "title": "The Mortal Ministry of Jesus Christ | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/barren-fig.html",
+      "title": "The Barren Fig Tree | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/birds-lilies.html",
+      "title": "Birds and Lilies | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/blind-guides.html",
+      "title": "The Blind Leading the Blind | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/bridegroom.html",
+      "title": "The Bridegroom and His Guests | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/budding-fig.html",
+      "title": "The Budding Fig Tree | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/children-marketplace.html",
+      "title": "Children in the Marketplace | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/closed-door.html",
+      "title": "The Closed Door | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/divided-house.html",
+      "title": "A Divided Kingdom and House | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/doorkeeper.html",
+      "title": "The Doorkeeper | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/faithful-servant.html",
+      "title": "The Faithful and Unfaithful Servant | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/friend-midnight.html",
+      "title": "The Friend at Midnight | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "living-the-invitation",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/good-samaritan.html",
+      "title": "The Good Samaritan | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "living-the-invitation",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/good-shepherd.html",
+      "title": "The Good Shepherd and the Door | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/grain-wheat.html",
+      "title": "The Grain of Wheat | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/great-supper.html",
+      "title": "The Great Supper | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/growing-seed.html",
+      "title": "The Seed Growing Secretly | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "reading-guide",
+        "receiving-carefully",
+        "roots-and-practice",
+        "words-become-actions",
+        "discernment-and-humility",
+        "reflect-and-respond",
+        "all-studies",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/hearing.html",
+      "title": "Hearing and Living His Word | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/hen-chicks.html",
+      "title": "The Hen Gathering Her Chicks | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/hidden-treasure.html",
+      "title": "The Hidden Treasure | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/householder.html",
+      "title": "The Householder's Treasure | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/king-war.html",
+      "title": "The King Considering War | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "reading-guide",
+        "small-beginnings",
+        "recognizing-worth",
+        "patience-and-discernment",
+        "invitation-and-response",
+        "reflect-and-respond",
+        "all-studies",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/kingdom.html",
+      "title": "The Kingdom of God | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/laborers-vineyard.html",
+      "title": "The Laborers in the Vineyard | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/lamp.html",
+      "title": "The Lamp on a Stand | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/leaven.html",
+      "title": "The Leaven | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/lost-coin.html",
+      "title": "The Lost Coin | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/lost-sheep.html",
+      "title": "The Lost Sheep | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "reading-guide",
+        "notice-the-one",
+        "mercy-and-response",
+        "patient-cultivation",
+        "shared-joy",
+        "reflect-and-respond",
+        "all-studies",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/mercy.html",
+      "title": "Mercy, Repentance, and the Joy of Returning | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "living-the-invitation",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/minas.html",
+      "title": "The Ten Pounds or Minas | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/mote-beam.html",
+      "title": "The Mote and the Beam | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/mustard-seed.html",
+      "title": "The Mustard Seed | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "reading-guide",
+        "seeing-the-need",
+        "welcome-with-dignity",
+        "care-that-continues",
+        "mercy-and-boundaries",
+        "reflect-and-respond",
+        "all-studies",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/neighbor.html",
+      "title": "Loving Our Neighbor | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/net.html",
+      "title": "The Fishing Net | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/new-patch.html",
+      "title": "The New Patch | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/new-wineskins.html",
+      "title": "New Wine and Wineskins | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/parent-gifts.html",
+      "title": "A Parent's Good Gifts | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/pearl.html",
+      "title": "The Pearl of Great Price | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/persistent-widow.html",
+      "title": "The Persistent Widow and the Judge | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/pharisee-publican.html",
+      "title": "The Pharisee and the Publican | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "living-the-invitation",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/prodigal-son.html",
+      "title": "The Prodigal Son and His Brother | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/returning-spirit.html",
+      "title": "The Returning Unclean Spirit | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/rich-fool.html",
+      "title": "The Rich Fool | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/rich-man-lazarus.html",
+      "title": "The Rich Man and Lazarus | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/royal-wedding.html",
+      "title": "The Wedding of the King's Son | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/salt.html",
+      "title": "Salt of the Earth | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/servant-duty.html",
+      "title": "The Servant's Duty | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/settle-adversary.html",
+      "title": "Settling with an Adversary | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/sheep-goats.html",
+      "title": "The Sheep and the Goats | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/sheep-sabbath.html",
+      "title": "The Sheep in the Pit | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/sower.html",
+      "title": "The Sower | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "reading-guide",
+        "entrusted-resources",
+        "using-what-is-given",
+        "responsibility-over-status",
+        "freedom-from-comparison",
+        "reflect-and-respond",
+        "all-studies",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/stewardship.html",
+      "title": "Faithful Stewardship and the Cost of Discipleship | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/strong-man.html",
+      "title": "The Strong Man | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "living-the-invitation",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/talents.html",
+      "title": "The Talents | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/ten-virgins.html",
+      "title": "The Ten Virgins | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/thief-night.html",
+      "title": "The Householder and the Thief | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/tower-builder.html",
+      "title": "The Tower Builder | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/tree-fruit.html",
+      "title": "A Tree and Its Fruit | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/two-debtors.html",
+      "title": "The Two Debtors | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/two-sons.html",
+      "title": "The Two Sons | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/unjust-steward.html",
+      "title": "The Unjust Steward | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/unmerciful-servant.html",
+      "title": "The Unmerciful Servant | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/vine-branches.html",
+      "title": "The True Vine and the Branches | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/watchful-servants.html",
+      "title": "Servants Waiting for Their Lord | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "reading-guide",
+        "prayer-with-honesty",
+        "readiness-without-alarm",
+        "faithfulness-in-the-interval",
+        "trust-amid-uncertainty",
+        "reflect-and-respond",
+        "all-studies",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/watchfulness.html",
+      "title": "Prayer, Readiness, and His Return | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/wedding-places.html",
+      "title": "Choosing the Lower Place | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/wheat-tares.html",
+      "title": "The Wheat and the Tares | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/wicked-tenants.html",
+      "title": "The Wicked Tenants | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/wise-foolish-builders.html",
+      "title": "The Wise and Foolish Builders | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "setting",
+        "story-and-teaching",
+        "receiving-the-word",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/parables/woman-childbirth.html",
+      "title": "Sorrow Turning to Joy | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "bethany-anointing",
+        "sacrament",
+        "gethsemane",
+        "pilate",
+        "simon",
+        "cross",
+        "burial",
+        "risen-witness",
+        "ascension",
+        "next-study",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/redeemer-and-risen-lord.html",
+      "title": "The Redeemer and Risen Lord | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "first-vision",
+        "living-witness",
+        "kirtland",
+        "liberty",
+        "spirit-world",
+        "living-christ",
+        "charity",
+        "sacrament-today",
+        "return",
+        "next-study",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/restoration-and-today.html",
+      "title": "Jesus Christ in the Restoration and Today | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "voice",
+        "ponder",
+        "welcome",
+        "disciples",
+        "next-morning",
+        "covenant",
+        "scriptures",
+        "children-speak",
+        "his-gospel",
+        "next-study",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "title": "The Risen Savior in the Book of Mormon | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "parable-paths",
+        "beatitudes",
+        "prayer",
+        "great-commandments",
+        "widow",
+        "martha-mary",
+        "rich-man",
+        "caesar",
+        "washing-feet",
+        "abide",
+        "next-study",
+        "continue-study",
+        "sources"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/jesus-christ/teachings-and-parables.html",
+      "title": "The Teachings and Parables of Jesus Christ | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "a-promise-to-live-by",
+        "abraham-and-sarah",
+        "every-family",
+        "god-remembers",
+        "jacob-at-bethel",
+        "jacob-becomes-israel",
+        "christ-at-the-heart",
+        "risen-lord",
+        "our-day",
+        "nearer-to-him"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/abrahamic-covenant.html",
+      "title": "The Abrahamic Covenant | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [
+        "who-is-the-holy-ghost",
+        "old-testament",
+        "jesus-teaches",
+        "comforter",
+        "hear-and-understand",
+        "book-of-mormon",
+        "mind-heart-covenant",
+        "holy-ghost-or-me"
+      ],
+      "main": true,
+      "overflow": false,
+      "path": "/answers/holy-ghost.html",
+      "title": "The Holy Ghost | focusChrist",
+      "width": 390
+    },
+    {
+      "chapters": [],
+      "main": true,
+      "overflow": false,
+      "path": "/search.html",
+      "title": "Search focusChrist | Find Answers and Studies",
+      "width": 390
+    }
+  ]
+}

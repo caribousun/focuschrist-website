@@ -146,9 +146,9 @@
     </style>
     <script src="site-common.js?v=20260926-toolbar-readability-1" defer></script>
     <script src="reviewed-ask-knowledge.js?v=20260910-holy-ghost-subject-2" defer></script>
-    <script src="ask-experience.js?v=20260923-sensitive-welcome-1" defer></script>
+    <script src="ask-experience.js?v=20260927-growing-composer-1" defer></script>
     <link rel="stylesheet" href="site-header.css?v=20260926-toolbar-readability-1">
-    <link rel="stylesheet" href="ask-experience.css?v=20260916-answer-source-pills-3">
+    <link rel="stylesheet" href="ask-experience.css?v=20260927-growing-composer-1">
     <link rel="stylesheet" href="site-system.css?v=20260924-reviewed-details-1">
     <link rel="stylesheet" href="artwork-details.css?v=20260909-warm">
     <link rel="stylesheet" href="full-image-viewer.css?v=20260905-viewport">
@@ -206,10 +206,11 @@
             <p class="ask-study-intro">Ask in your own words. Answers draw from scripture, established focusChrist study material, and AI-assisted research where needed.</p>
 
             <div class="ask-input-area">
-                <input type="text" id="userInput" placeholder="Ask a sincere question..." onkeypress="handleKeyPress(event)">
+                <textarea id="userInput" rows="1" placeholder="Ask a sincere question..." aria-label="Ask a question about Jesus Christ, scripture, or Latter-day Saint belief" aria-describedby="ask-composer-help" onkeydown="handleKeyPress(event)"></textarea>
                 <button class="ask-action" onclick="sendMessage()" id="sendBtn">Ask</button>
                 <button class="ask-action secondary" onclick="clearChat()" id="clearBtn" title="Begin a new question">New Question</button>
             </div>
+            <p id="ask-composer-help" class="ask-composer-help">Enter to send · Shift+Enter for a new line</p>
 
             <div class="ask-ai-notice" data-focuschrist-ai-notice="true">
                 AI-assisted answers are study aids and may contain errors. Unreviewed questions and limited recent context may be sent to external AI providers for research and verification. For authoritative Church teaching, verify information through linked official Church sources. Please do not submit sensitive personal information.
@@ -960,7 +961,7 @@
     const MAX_CONVERSATION_LENGTH = 8;
 
     const inappropriate = ['fuck','shit','damn','ass','bitch','bastard','bullshit','whore','slut','crap','piss','dick','cock','pussy','nigger','faggot','retard'];
-    function handleKeyPress(e){if(e.key==='Enter')sendMessage()}
+    function handleKeyPress(e){if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing&&e.keyCode!==229){e.preventDefault();sendMessage()}}
     async function askTopic(t){document.getElementById('userInput').value='Tell me about '+t;const q='Tell me about '+t;document.getElementById('chatBox').innerHTML='';addMessage(q,true);const l=document.createElement('div');l.className='loading';l.innerHTML='<p>Looking for relevant scriptures and study sources…</p>';document.getElementById('chatBox').appendChild(l);
         // First check database for relevant entries
         const dbResult = findAnswer(q);
@@ -1202,6 +1203,6 @@
         try { sessionStorage.removeItem('focuschrist_history'); } catch(e) {}
     }
 </script>
-    <script src="art-ask-context.js?v=20260927-topic-context-1" defer></script>
+    <script src="art-ask-context.js?v=20260927-holy-ghost-context-1" defer></script>
 </body>
 </html>

@@ -117,6 +117,8 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/scripture_display_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/ask_composer_scroll_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node --test tools/art_ask_context.test.cjs
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node --test tools/ask_growing_composer.test.cjs
+          NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node --test tools/holy_ghost_video.test.cjs
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/canonical_presentation_measurement.test.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/site_search_runtime_qa.js
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/settle_recording_runtime_qa.js
@@ -168,6 +170,7 @@ jobs:
         run: |
           python tools/answer_study_parser_qa.py
           python tools/topic_study_pages_qa.py
+          python tools/holy_ghost_qa_test.py
           python tools/topic_inline_scripture_qa.py
           python tools/topic_artwork_qa.py
           python tools/topic_body_picture_qa.py

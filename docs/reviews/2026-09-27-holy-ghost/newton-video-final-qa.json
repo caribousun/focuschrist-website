@@ -1,0 +1,42 @@
+[
+  {
+    "command": "node --test tools/holy_ghost_video.test.cjs",
+    "exit_code": 0,
+    "output": "\u2714 player is opt-in, exact owner video loads, and close destroys it (105.5301ms)\n\u2714 timeout restores preview with real YouTube fallback and stale readiness cannot reopen it (43.4155ms)\n\u2714 API load error and provider playback error both preserve usable fallback (45.8741ms)\n\u2139 tests 3\n\u2139 suites 0\n\u2139 pass 3\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 743.1994\n"
+  },
+  {
+    "command": "python tools/holy_ghost_qa_test.py",
+    "exit_code": 0,
+    "output": ".......\n----------------------------------------------------------------------\nRan 7 tests in 0.024s\n\nOK\n"
+  },
+  {
+    "command": "python tools/holy_ghost_qa.py",
+    "exit_code": 0,
+    "output": "HOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\n"
+  },
+  {
+    "command": "python tools/topic_study_pages_qa.py",
+    "exit_code": 0,
+    "output": "HOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nCOVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2\u20133 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\nTOPIC STUDY PAGES QA PASS: 28 distinct pill destinations; complete openings, same-page hero return, and source-preserving migrations\n"
+  },
+  {
+    "command": "python tools/artwork_details_qa.py",
+    "exit_code": 0,
+    "output": "Artwork detail QA: PASS\n62 non-Mission artwork triggers and 11 Mission artwork triggers verified\nSame-page full-image viewing, sacred detail copy, and intentional interaction scope verified\n"
+  },
+  {
+    "command": "python tools/static_content_audit.py",
+    "exit_code": 0,
+    "output": "STATIC CONTENT AUDIT PASS: 124 documents (118 verified, 6 non-source-dependent)\n"
+  },
+  {
+    "command": "python tools/site_qa.py",
+    "exit_code": 0,
+    "output": "FocusChrist SITE QA PASSED\nCore pages checked: 11\nPermanent answer pages checked: 23\nFeatured Art study pages checked: 4\nArt gallery images checked: 44\nSearch Console verification, sitemap, local references, Answer Library sources, model migration, disclosures, accessibility markers, and Ask rendering verified.\n"
+  },
+  {
+    "command": "git diff --check -- tools/holy_ghost_qa.py tools/holy_ghost_qa_test.py .github/workflows/site-qa.yml",
+    "exit_code": 0,
+    "output": ""
+  }
+]
