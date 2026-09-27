@@ -1,0 +1,32 @@
+{
+  "failed_run": "36350569529",
+  "job": "108708327482",
+  "step": "Verify complete Jesus Christ journey",
+  "root_cause": "Old encoding test positively required a literal middot between source anchors, conflicting with owner-approved pill separator removal.",
+  "repair": "Fixture now requires the exact two builder.scripture(ref) anchors separated by whitespace and rejects middot separators; navigation glyph and corruption assertions retained.",
+  "tests": [
+    {
+      "command": "python -X utf8 -m unittest discover -s tools -p 'test_jesus*.py'",
+      "result": "PASS40"
+    },
+    {
+      "command": "python -X utf8 tools/jesus_journey_qa.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python -X utf8 tools/build_jesus_journey.py --strict --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python -X utf8 tools/build_jesus_parent.py --strict --check",
+      "result": "PASS"
+    },
+    {
+      "command": "python -X utf8 tools/jesus_discovery_qa.py",
+      "result": "PASS"
+    }
+  ],
+  "runtime_and_art_changes": "None; test contract and historical evidence only",
+  "test_sha256": "db9aaf807882c5f90c9fd1f4887cba6bfbb362746626f7b59418485d70ad8197",
+  "reviewer": "Newton"
+}
