@@ -17,6 +17,7 @@ home_css = (ROOT / "home.css").read_text(encoding="utf-8")
 site_css = (ROOT / "site-system.css").read_text(encoding="utf-8")
 about = (ROOT / "about.html").read_text(encoding="utf-8")
 script = (ROOT / "come-follow-me.js").read_text(encoding="utf-8")
+controls_css = (ROOT / "cfm-study-controls.css").read_text(encoding="utf-8")
 
 
 def require(condition: bool, message: str) -> None:
@@ -57,6 +58,19 @@ require(".fc-actions--content { margin-top: 18px; }" in site_css, "shared conten
 require("fc-actions--content" in about, "About closing actions must use the shared responsive clearance")
 require("fc-actions--center fc-actions--content" in home, "Home closing actions must use the shared responsive clearance")
 require('style="margin-top:22px;"' not in about, "inline About spacing blocks the mobile standard")
+
+# CFM owns its control presentation; native disclosure/source behavior stays separate.
+require('cfm-study-controls.css?v=20260927-1' in html, "reviewed CFM controls stylesheet is missing")
+require('body.cfm-page [data-cfm-current-reading]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))' in controls_css,
+        "weekly readings must use balanced columns")
+require('body.cfm-page .cfm-reading-range>summary' in controls_css and 'border-radius:999px' in controls_css and 'text-decoration:none' in controls_css,
+        "native chapter summary must share the reading-pill treatment")
+require('body.cfm-page .cfm-reading-chapters' in controls_css and '@media(max-width:700px)' in controls_css,
+        "expanded chapter choices need an explicit narrow layout")
+require('.cfm-hero' not in controls_css and ' img' not in controls_css,
+        "control styling must not alter the hero or artwork")
+require('Open this week’s lesson' in html and 'Ask about this week' in html,
+        "weekly primary actions must retain clear concise labels")
 
 # Guard the actual visitor destinations rather than just matching card copy.
 class HubParser(HTMLParser):

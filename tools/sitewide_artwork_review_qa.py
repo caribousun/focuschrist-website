@@ -127,6 +127,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
+    'cfm-study-controls.css': ('0deba2f2978d8348eed680984dabf4d710fc6ab6e5804d4818a1d8a2eb8efcad', 'come-follow-me.html'),
     'ask-experience.css': ('62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6', 'ask.html'),
     'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
 }
@@ -232,6 +233,9 @@ def main():
             assert reviewed_narrow_reading_style(name,data)
             assert not reviewed_narrow_reading_style(name,data+b"body{display:none}")
             assert not reviewed_narrow_reading_style(name,b"X"+data[1:])
+        cfm_controls=(ROOT/'cfm-study-controls.css').read_bytes()
+        assert not reviewed_scoped_interface_style('cfm-study-controls.css', cfm_controls.replace(b'text-transform:none', b'text-transform:uppercase'))
+        assert not reviewed_scoped_interface_style('cfm-study-controls.css', cfm_controls.replace(b'--fc-study-control-radius:999px', b'--fc-study-control-radius:8px'))
         ask_css=(ROOT/'ask-experience.css').read_bytes()
         assert not reviewed_scoped_interface_style('ask-experience.css', ask_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
         for name, (_, owner) in SCOPED_INTERFACE_STYLES.items():
