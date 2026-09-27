@@ -414,7 +414,7 @@ def main() -> int:
         elif history_art_path.stat().st_size > 120_000:
             fail(errors, f"church-history.html: supporting artwork exceeds 120 KB performance budget: {history_art}")
     for marker in (
-        'church-history.css?v=20260923-page-borders-1',
+        'church-history.css?v=20260927-history-choices-1',
         'class="fc-history-art-panel fc-history-art-panel--wide"',
         'class="fc-history-art-panel fc-history-art-panel--inline"',
         'class="fc-history-art-panel fc-history-art-panel--inline fc-history-art-panel--museum"',

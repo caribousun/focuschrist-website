@@ -28,7 +28,7 @@ def declarations(filename, selector):
 
 
 JOURNEY_VERSION = '20260927-compact-reflection-1'
-PAGE_BOUNDARY_VERSIONS = {'church-history.css': '20260923-page-borders-1',
+PAGE_BOUNDARY_VERSIONS = {'church-history.css': '20260927-history-choices-1',
                           'missionary.css': '20260923-enrichment-finish-1'}
 
 

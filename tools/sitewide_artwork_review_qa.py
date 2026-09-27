@@ -89,7 +89,7 @@ def reviewed_journey_style(data):
 def journey_style_reference_allowed(relative, text, owners):
     return relative in owners or JOURNEY_STYLE not in text
 
-BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '26991016b8be1b6a3dc8854d41e07a1b6d12cdbefaf7ac260ba4b1736ec74b1a'), '.fc-missionary-page main': ('missionary.css', '1fc685047557e7d077b8c25c833731dca799335add20d3b139cf626f72357e21')}
+BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '5b7e4c13945dcae80da5c278192b2d846e1d03f31aa4eeb4de133fa697613937'), '.fc-missionary-page main': ('missionary.css', '1fc685047557e7d077b8c25c833731dca799335add20d3b139cf626f72357e21')}
 
 def reviewed_boundary_wrap(selector, body, data):
     entry = BOUNDARY_WRAP_STYLES.get(selector.strip())
@@ -112,8 +112,9 @@ class Tags(HTMLParser):
 
 # Exact narrow title/mini-card appendices. Search base additionally includes the
 # independently reviewed intrinsic trigger width, nowrap label and fixed-size icon;
-# appendix bytes remain unchanged. Full-file and updated base-prefix pins both apply.
-NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4841, 'base_sha256': 'e8edf1b8247b3d9c6e0a2ae9209ca35941ed8f7c1afcf7604fb8714a1588008a', 'sha256': '76a3b0c5fc0f80a12d86b2bf7def5c7aa456a8bac8d8dc9ae9191e9e378005c5'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
+# M063 removes only the mobile title/second-row rules, retaining the first-row grid.
+# Full-file and updated base-prefix pins both apply.
+NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4716, 'base_sha256': '13550e00846fb8c2a81204d71fb3e131c71e3e9f74f0fa94791bbc1e8a5e0492', 'sha256': 'ca09d2ce90471be8c404efc4c8a27aeb756fdc1d30276aa3d112705595ffa32e'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
 def reviewed_narrow_reading_style(name, data):
     entry=NARROW_READING_STYLES.get(name)
     return bool(entry and hashlib.sha256(data).hexdigest()==entry["sha256"]
@@ -235,6 +236,7 @@ def main():
         search_css = (ROOT/"site-search.css").read_bytes()
         assert b"width:max-content;white-space:nowrap;" in search_css
         assert not reviewed_narrow_reading_style("site-search.css", search_css.replace(b"white-space:nowrap;", b"", 1))
+        assert not reviewed_narrow_reading_style("site-search.css", search_css.replace(b'> .nav-links {display:none!important;}', b'> .nav-links {display:block!important;}', 1))
         journey_css = (ROOT/JOURNEY_STYLE).read_bytes()
         owners = {'answers/jesus-christ-latter-day-saint-beliefs.html','jesus-christ/before-bethlehem.html','birth-of-christ.html','answers/abrahamic-covenant.html'}
         assert reviewed_journey_style(journey_css)
@@ -465,6 +467,9 @@ def main():
         if selector.strip() in MISSION_PURPOSE_RULES:
             check(reviewed_mission_purpose(selector, body, (ROOT/'missionary.css').read_bytes()),
                   'Mission purpose rule differs from exact reviewed properties/stylesheet bytes')
+            continue
+        if selector.strip() == '.fc-history-predictions button':
+            check(re.sub(r'\s+', '', body) == 'flex:11 180px;min-width:0;white-space:normal;overflow-wrap:anywhere;'.replace(' ', '') and sha(ROOT/'church-history.css') == '5b7e4c13945dcae80da5c278192b2d846e1d03f31aa4eeb4de133fa697613937', 'History choice rows differ from exact reviewed properties/bytes')
             continue
         if selector.strip() in BOUNDARY_WRAP_STYLES:
             filename, _ = BOUNDARY_WRAP_STYLES[selector.strip()]

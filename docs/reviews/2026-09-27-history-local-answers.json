@@ -1,0 +1,126 @@
+{
+  "scope": "Three exact suggested questions and reviewed equivalent phrasing only; no broad new intent matches",
+  "configs": [
+    {
+      "id": "church-emma-harmony-service",
+      "question": "What do the historical sources tell us about Emma Smith’s work during the translation at Harmony?",
+      "all": [
+        [
+          "emma smith",
+          "emma"
+        ],
+        [
+          "harmony"
+        ],
+        [
+          "translation",
+          "scribe",
+          "work"
+        ]
+      ],
+      "negative": [
+        "What was Emma Smith’s position on plural marriage?",
+        "Who did most of the Book of Mormon translation scribal work?"
+      ],
+      "answer": "Emma Smith helped Joseph as a scribe during the early Book of Mormon translation. They had moved to Harmony, Pennsylvania, in December 1827, near her family. Their work there unfolded amid serious personal loss: their first child died soon after birth in June 1828, and Emma herself nearly died. Her contribution belongs to the translation’s early period; she was not its only scribe. Later, Doctrine and Covenants 25 called her to further service, including writing for Joseph and selecting hymns.",
+      "sources": [
+        {
+          "label": "Emma Hale Smith",
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng",
+          "note": "Official biography describing Emma’s early scribal service, family circumstances, and later calling.",
+          "text": "Emma Hale Smith",
+          "tier": "Official Church History"
+        }
+      ],
+      "reviewedOn": "2026-09-27",
+      "exactOnly": true,
+      "positive": [
+        "What work did Emma Smith do during the translation at Harmony?"
+      ]
+    },
+    {
+      "id": "church-liberty-letters-scripture",
+      "question": "How did Joseph Smith’s letters from Liberty Jail become Doctrine and Covenants 121–123?",
+      "all": [
+        [
+          "liberty jail"
+        ],
+        [
+          "letters",
+          "letter"
+        ],
+        [
+          "doctrine and covenants",
+          "121",
+          "123",
+          "scripture"
+        ]
+      ],
+      "negative": [
+        "Where was Liberty Jail?",
+        "Who arrested Joseph Smith before Liberty Jail?"
+      ],
+      "answer": "While imprisoned in Liberty Jail in March 1839, Joseph Smith dictated a lengthy letter to the scattered Saints and Bishop Edward Partridge. Alexander McRae wrote most of it, with Caleb Baldwin also serving as a scribe. The letter combined grief over persecution with reassurance, counsel about righteous influence, practical Church business, and instructions to document the Saints’ losses. Portions were later included in Doctrine and Covenants 121, 122, and 123. These sections are extracts from a larger historical letter, so reading that record helps connect the familiar scriptural passages with the people and circumstances they first addressed.",
+      "sources": [
+        {
+          "label": "Within the Walls of Liberty Jail",
+          "url": "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/within-the-walls-of-liberty-jail?lang=eng",
+          "note": "Official account of the letter, its scribes and contents, and extracts later canonized as sections 121–123.",
+          "text": "Within the Walls of Liberty Jail",
+          "tier": "Official Church History"
+        }
+      ],
+      "reviewedOn": "2026-09-27",
+      "exactOnly": true,
+      "positive": [
+        "How are the Liberty Jail letters connected to Doctrine and Covenants 121–123?"
+      ]
+    },
+    {
+      "id": "church-joseph-likeness-evidence",
+      "question": "What can death masks, portraits, and historical descriptions tell us about Joseph Smith’s appearance, and what remains uncertain?",
+      "all": [
+        [
+          "joseph smith"
+        ],
+        [
+          "appearance",
+          "likeness",
+          "look"
+        ],
+        [
+          "death masks",
+          "portraits",
+          "descriptions"
+        ]
+      ],
+      "negative": [
+        "Is the newly discovered Joseph Smith photograph authentic?",
+        "What did Hyrum Smith look like?"
+      ],
+      "answer": "Death masks, portraits made during Joseph Smith’s lifetime, and descriptions by people who knew him provide different kinds of evidence. The Church History Museum traces the Dibble masks to molds George Cannon made after Joseph and Hyrum’s deaths in June 1844, while acknowledging uncertainty about some later copies. Masks help with facial structure; they do not show living expressions or coloring. The Church’s discussion of Joseph’s appearance compares witness descriptions and Sutcliffe Maudsley’s portraits, while noting that descriptions and artistic likenesses differ. Together these sources guide a careful reconstruction, but they do not establish every feature or expression. A modern illustration should therefore be understood as an interpretation rather than a recovered photograph.",
+      "sources": [
+        {
+          "label": "Joseph and Hyrum Death Masks",
+          "url": "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng",
+          "note": "Museum provenance of the masks and stated uncertainties about later copies.",
+          "text": "Joseph and Hyrum Death Masks",
+          "tier": "Official Church History"
+        },
+        {
+          "label": "What Did Joseph Smith Really Look Like?",
+          "url": "https://www.churchofjesuschrist.org/study/new-era/2005/12/what-did-joseph-smith-really-look-like?lang=eng",
+          "note": "A 2005 Church article comparing witness descriptions, Maudsley portraits, and the limits of reconstructing a likeness.",
+          "text": "What Did Joseph Smith Really Look Like?",
+          "tier": "Official Church History"
+        }
+      ],
+      "reviewedOn": "2026-09-27",
+      "exactOnly": true,
+      "positive": [
+        "What do Joseph Smith’s death masks and portraits reveal about his appearance?"
+      ]
+    }
+  ],
+  "source_review": "focus_review freshly read official sources; answers original paraphrases; all prior entries retain metadata and matching"
+}

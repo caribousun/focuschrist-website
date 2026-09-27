@@ -233,6 +233,31 @@
       "authoritative_sources": [
         "https://www.churchofjesuschrist.org/study/history/topics/winter-quarters?lang=eng"
       ]
+    },
+    {
+      "id": "church-emma-harmony-service",
+      "entry_sha256": "e40149f8d7bc5715ecdf39c345814a16d18b0d3906bdd188f73d86ad4be9a3fb",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/history/topics/emma-hale-smith?lang=eng"
+      ],
+      "reviewed_on": "2026-09-27"
+    },
+    {
+      "id": "church-liberty-letters-scripture",
+      "entry_sha256": "bbe1828168c73cac318a1d0d2e1e479272ab3f6163ece1c54022eb3214da2cfa",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/study/manual/revelations-in-context/within-the-walls-of-liberty-jail?lang=eng"
+      ],
+      "reviewed_on": "2026-09-27"
+    },
+    {
+      "id": "church-joseph-likeness-evidence",
+      "entry_sha256": "2ee7ae272ff4aceba5d0356d87c68c53f75d83960f35442b01053f5898afa798",
+      "authoritative_sources": [
+        "https://www.churchofjesuschrist.org/learn/history/sites/church-history-museum/collections/joseph-and-hyrum-smith-death-masks?lang=eng",
+        "https://www.churchofjesuschrist.org/study/new-era/2005/12/what-did-joseph-smith-really-look-like?lang=eng"
+      ],
+      "reviewed_on": "2026-09-27"
     }
   ],
   "pioneer_verified_answers": []

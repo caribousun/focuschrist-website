@@ -166,7 +166,7 @@ starterQuestions.forEach((question) => {
 
 const historyQuestions = [...fs.readFileSync('church-history.html', 'utf8').matchAll(/data-history-question="([^"]+)"/g)]
     .map((match) => match[1]);
-assert(historyQuestions.length === 10,
+assert(historyQuestions.length === 13,
     'Church History question-card inventory changed without updating the executable contract');
 historyQuestions.forEach((question) => {
     const result = registry.match(question, { profile: 'church-history' });

@@ -154,6 +154,9 @@ jobs:
       - name: Verify rendered card rows at responsive widths
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/complete_card_rows_browser_qa.js
 
+      - name: Verify mobile study headers preserve navigation
+        run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/mobile_study_header_browser_qa.js
+
       - name: Inspect every canonical page at desktop, phone, and enlarged text
         if: ${{ !cancelled() && steps.presentation_dependencies.outcome == 'success' }}
         run: NODE_PATH=/tmp/focus-row-qa/node_modules node tools/canonical_presentation_browser_qa.js
@@ -215,7 +218,9 @@ jobs:
         run: python tools/production_hardening_qa.py
 
       - name: Run Church History source and experience QA
-        run: python tools/church_history_qa.py
+        run: |
+          python tools/church_history_qa.py
+          python tools/history_choices_qa.py
 
       - name: Verify shared study layout rails and navigation
         run: python tools/study_layout_uniformity_qa.py
