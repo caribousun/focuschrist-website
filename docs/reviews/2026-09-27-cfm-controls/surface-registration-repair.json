@@ -1,0 +1,15 @@
+{
+  "historical_failure": {
+    "run": 36359706435,
+    "job": 108734310034,
+    "step": "unified experience",
+    "cause": "New legitimate cfm-text-link pill control was not registered in surface inventory."
+  },
+  "repair": "Register only cfm-text-link in existing button/control category; regenerate exact inventory. No product or guard logic changes.",
+  "validation": [
+    "Full unified_experience_qa.py PASS",
+    "come_follow_me_qa.py PASS:52 weekly routes"
+  ],
+  "publication": "Pending repaired hosted candidate.",
+  "independent_review": "Newton PASS: semantic JSON diff adds only exact cfm-text-link control record and legitimate owner/style classification; no guard weakening."
+}
