@@ -1,0 +1,26 @@
+{
+  "reviewer": "Newton",
+  "verdict": "PASS scoped deployment dependency repair",
+  "reported_failure": "Pages36348695337 missing bs4 after PR workflow alone had been corrected",
+  "independent_test": {
+    "command": "python -S tools/qa_dependency_contract.py --self-test",
+    "result": "PASS12mutation fixtures with site packages disabled"
+  },
+  "findings": [
+    "Both existing dependent jobs execute standard-library contract before exact shared requirements installation.",
+    "Pillow12.2.0 and beautifulsoup4 4.15.0 pinned once in shared file.",
+    "Pages earlier scripture builder is standard-library only; dependency installation precedes unified and artwork consumers.",
+    "Negative fixtures reject missing or commented installs, wrong requirements, absent or late guard/install, missing/unpinned/wrong-version dependencies, added unconfigured consumer workflow and sibling-job-only setup.",
+    "No product files or runtime dependencies changed."
+  ],
+  "limits": [
+    "Contract identifies the three named Python QA consumer entrypoints in current workflow formatting; it is not a general YAML execution engine or automatic transitive import resolver.",
+    "Hosted clean-run confirmation remains required."
+  ],
+  "sha256": {
+    "tools/qa_dependency_contract.py": "aba9bd2b5a05df39f1d3e228371bb4aaa299d63a8ce00910e80ea6e30a872eee",
+    "tools/qa-requirements.txt": "5f6f91cf1e29b3eaf3a733db5851c352d4cc633782afdb720c89affc237746dd",
+    ".github/workflows/site-qa.yml": "ba72f622196d4820b60ee837b92b94a1135fdc4f42b5bc1218d72ccc4856d740",
+    ".github/workflows/deploy-pages.yml": "549de0835a326c916ca00c30f3b82504648fdd35ae8136eb97165efe9e49223b"
+  }
+}

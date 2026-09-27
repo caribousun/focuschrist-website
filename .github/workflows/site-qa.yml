@@ -24,8 +24,11 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install image and HTML QA dependencies
-        run: python -m pip install Pillow==12.2.0 beautifulsoup4==4.15.0
+      - name: Verify QA dependency contract before installation
+        run: python tools/qa_dependency_contract.py --self-test
+
+      - name: Install shared QA dependencies
+        run: python -m pip install -r tools/qa-requirements.txt
 
       - name: Verify centered navigation and external-link behavior
         run: |
