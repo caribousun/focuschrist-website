@@ -20,12 +20,12 @@ HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d6
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = 'fbc4937ead4678d2919a5b22f65224c1401b2cc4a1ec3b874c427578a8febb8c'
-ANSWERS_FEATURED_STYLE_SHA256 = 'de2377eee172c2d194982cca5d2c29cba0b10c7f1f2785dffac12913ba4d8f59'
-# Owner-requested adjacent Atonement and Jesus links. Only these three rules in
+ANSWERS_FEATURED_STYLE_SHA256 = 'bc91ecd6a3342600c4ec5b708aff0c99aadf7736123c01096e9b66aa3aacde08'
+# Owner-requested adjacent Atonement, Jesus and Holy Ghost links. Only these three rules in
 # the exact reviewed stylesheet qualify; the 700px stack is pinned by its hash.
 ANSWERS_FEATURED_RULES = {
     '.fc-answers-jumps .fc-answers-featured-pair': {
-        'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;flex:1136rem;min-width:0;',
+        'display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;flex:1136rem;min-width:0;',
         'grid-template-columns:minmax(0,1fr);',
     },
     '.fc-answers-jumps .fc-answers-featured-pair > a': {
@@ -41,7 +41,7 @@ def reviewed_art_reflection(selector, body, data):
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) and len(consumers) == 120
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html'} and len(consumers) == 121
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -114,6 +114,17 @@ def reviewed_narrow_reading_style(name, data):
 # Owner-authorized toolbar readability; exact bytes do not exempt future style edits.
 TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f', 'study-navigation.css': '316f49fbd8a3d7f1cedcdf48389c738749ab5904ffd5723c0a68759adb080972'}
 
+# Owner-requested growing Ask composer and opt-in Holy Ghost player, independently
+# reviewed in source and rendered by Albert. Exact full bytes and single owners.
+SCOPED_INTERFACE_STYLES = {
+    'ask-experience.css': ('126df0f3a5331f5f2a34df236220e019404cfb1eaf0de54a57c556a5d9c8a0f5', 'ask.html'),
+    'holy-ghost-video.css': ('4c09e05fb56a582eccc628614a50075bbe250cce3b18710681b361c1efba38a2', 'answers/holy-ghost.html'),
+}
+def reviewed_scoped_interface_style(name, data):
+    return name in SCOPED_INTERFACE_STYLES and hashlib.sha256(data).hexdigest()==SCOPED_INTERFACE_STYLES[name][0]
+def scoped_interface_reference_allowed(name, relative, text):
+    return relative==SCOPED_INTERFACE_STYLES[name][1] or name not in text
+
 def reviewed_toolbar_style(name, data):
     return name in TOOLBAR_STYLE_SHA256 and hashlib.sha256(data).hexdigest() == TOOLBAR_STYLE_SHA256[name]
 
@@ -157,7 +168,7 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in wrap_expected}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
@@ -205,6 +216,12 @@ def main():
             assert reviewed_narrow_reading_style(name,data)
             assert not reviewed_narrow_reading_style(name,data+b"body{display:none}")
             assert not reviewed_narrow_reading_style(name,b"X"+data[1:])
+        for name, (_, owner) in SCOPED_INTERFACE_STYLES.items():
+            data=(ROOT/name).read_bytes()
+            assert reviewed_scoped_interface_style(name,data)
+            assert not reviewed_scoped_interface_style(name,data+b'\n.x{height:1px}')
+            assert scoped_interface_reference_allowed(name,owner,name)
+            assert not scoped_interface_reference_allowed(name,'unrelated.html',name)
         search_css = (ROOT/"site-search.css").read_bytes()
         assert b"width:max-content;white-space:nowrap;" in search_css
         assert not reviewed_narrow_reading_style("site-search.css", search_css.replace(b"white-space:nowrap;", b"", 1))
@@ -337,8 +354,8 @@ def main():
     journey_owners={p['url'].lstrip('/') for p in journey_pages}
     check(len(journey_owners)==76 and all(p.startswith('jesus-christ/') and p.endswith('.html') for p in journey_owners),
           'Journey stylesheet ownership differs from76 nested study pages')
-    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html','answers/abrahamic-covenant.html'})
-    check(len(journey_owners)==79, 'Journey stylesheet must have exactly79 reviewed consumers')
+    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html','answers/abrahamic-covenant.html','answers/holy-ghost.html'})
+    check(len(journey_owners)==80, 'Journey stylesheet must have exactly80 reviewed consumers')
     check(sha(ROOT/row_style)=='7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941',
           'Reviewed complete card row stylesheet changed')
     check(sha(ROOT/settle_style)=='ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2',
@@ -404,7 +421,14 @@ def main():
           'Mission purpose stylesheet differs from exact reviewed bytes')
     check(reviewed_watch_shorts_style((ROOT/WATCH_SHORTS_STYLE).read_bytes()), 'Watch Shorts stylesheet differs from exact reviewed bytes')
     check(reviewed_mission_enrichment_style((ROOT/MISSION_ENRICHMENT_STYLE).read_bytes()), 'Mission enrichment stylesheet differs from exact reviewed bytes')
+    for name in SCOPED_INTERFACE_STYLES:
+        check(reviewed_scoped_interface_style(name, (ROOT/name).read_bytes()), 'Scoped interface stylesheet bytes changed: '+name)
+        for page in ROOT.rglob('*.html'):
+            relative=page.relative_to(ROOT).as_posix()
+            if relative.startswith(('tools/', '.git/', 'node_modules/', 'focuschrist-repo/')): continue
+            check(scoped_interface_reference_allowed(name, relative, page.read_text(encoding='utf-8')), 'Scoped interface stylesheet consumed outside owner: '+relative)
     excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css','study-navigation.css'}
+    excluded_styles.update(SCOPED_INTERFACE_STYLES)
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
     added_lines=[]; added_file=None
     for line in diff.splitlines():

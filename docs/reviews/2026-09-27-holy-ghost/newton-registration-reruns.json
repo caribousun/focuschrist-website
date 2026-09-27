@@ -1,0 +1,42 @@
+[
+  {
+    "command": "python tools/unified_experience_qa.py ",
+    "exit_code": 0,
+    "output": "COVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2\u20133 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\nHOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nfocusChrist UNIFIED EXPERIENCE QA PASSED\nPublic pages checked: 40\nBrand casing, shared design system, image-first heroes, unified footers, Art wiring, and hardened Pioneer conversation context/palette verified.\n"
+  },
+  {
+    "command": "python tools/topic_inline_scripture_qa.py ",
+    "exit_code": 1,
+    "output": "Traceback (most recent call last):\n  File \"C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\topic_inline_scripture_qa.py\", line 55, in <module>\n    assert params.get('id')==[expected],path+': verse selection differs from label'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: answers/holy-ghost.html: verse selection differs from label\n"
+  },
+  {
+    "command": "python tools/topic_artwork_details_qa.py ",
+    "exit_code": 0,
+    "output": "HOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nTOPIC ARTWORK DETAILS QA PASS: 244 adapter pictures, 3 existing detail pictures, 12 expanded illustration panels, 24 page dependencies\n"
+  },
+  {
+    "command": "python tools/sitewide_artwork_review_qa.py --self-test",
+    "exit_code": 0,
+    "output": "PASS regression fixtures: duplicate/rejected images, modified Bible/journey CSS and out-of-scope stylesheet references are rejected\n"
+  },
+  {
+    "command": "python tools/sitewide_artwork_review_qa.py ",
+    "exit_code": 0,
+    "output": "{\n  \"canonical_pages\": 120,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": []\n}\n"
+  },
+  {
+    "command": "python tools/source_integrity_inventory.py ",
+    "exit_code": 0,
+    "output": "Source integrity inventory PASS: 494 entries; 3 verified; 491 quarantined\n"
+  },
+  {
+    "command": "python tools/resource_thumbnail_qa.py ",
+    "exit_code": 1,
+    "output": "Traceback (most recent call last):\n  File \"C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\resource_thumbnail_qa.py\", line 25, in <module>\n    assert set(coverage)==canonical,'Every canonical page needs explicit coverage'\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Every canonical page needs explicit coverage\n"
+  },
+  {
+    "command": "python tools/answer_video_uniqueness_qa.py ",
+    "exit_code": 1,
+    "output": "holy-ghost.html: resource missing identity review: holy-ghost-talk-1\nholy-ghost.html: resource missing identity review: holy-ghost-talk-2\nholy-ghost.html: resource missing identity review: holy-ghost-talk-3\nholy-ghost.html: resource missing identity review: holy-ghost-talk-4\n"
+  }
+]
