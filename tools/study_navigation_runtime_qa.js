@@ -94,12 +94,13 @@ const expectedPills = new Set(fs.readdirSync(path.join(root,'answers'))
 const studyDestinations = ['birth-of-christ.html','general-conference.html','book-of-mormon-evidences.html',
   'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html'];
 for (const href of studyDestinations) expectedPills.add(href);
-assert.equal(pills.length,28,'owner requested seven by four grid');
+expectedPills.delete('answers/god-our-heavenly-father.html');
+assert.equal(pills.length,27,'27 topics after Heavenly Father promotion');
 assert.match(html, /class="fc-button fc-settle-featured" href="atonement.html"/,'Atonement remains featured above grid');
 const featuredPair = html.match(/<div class="fc-answers-featured-pair">([\s\S]*?)<\/div>/);
 assert.ok(featuredPair, 'featured study pair required');
 const featuredLinks = [...featuredPair[1].matchAll(/<a[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(m => [decode(m[1]),decode(m[2])]);
-assert.deepEqual(featuredLinks, [['atonement.html','The Atonement of Jesus Christ'],['answers/jesus-christ-latter-day-saint-beliefs.html','Jesus Christ'],['answers/holy-ghost.html','Holy Ghost']], 'exact Atonement, Jesus and Holy Ghost featured destinations and labels');
+assert.deepEqual(featuredLinks, [['answers/god-our-heavenly-father.html','Heavenly Father'],['answers/jesus-christ-latter-day-saint-beliefs.html','Jesus Christ'],['answers/holy-ghost.html','Holy Ghost'],['atonement.html','The Atonement of Jesus Christ']], 'exact Atonement, Jesus and Holy Ghost featured destinations and labels');
 assert.deepEqual(new Set(pills.map(([href]) => href)),expectedPills,'all discovered Answers and enriched study destinations are covered');
 function check(h,label) {
   const active = h.header.querySelectorAll('a[aria-current]');

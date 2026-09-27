@@ -1,0 +1,86 @@
+{
+  "reviewed_utc": "2026-09-27",
+  "scope": "Same official talk image size variants only; no image generation or replacement identity. Spirit of Revelation source caps at 900x506 even when requesting1600.",
+  "thumbnails": [
+    {
+      "key": "holy-ghost-talk-1",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2011/04/the-spirit-of-revelation?lang=eng",
+      "before": "https://www.churchofjesuschrist.org/imgs/0ebb528d15faea9d221d1fba804a40254e195962/full/%21192%2C/0/default",
+      "after": "https://www.churchofjesuschrist.org/imgs/0ebb528d15faea9d221d1fba804a40254e195962/full/%211600%2C/0/default",
+      "decoded_before": [
+        192,
+        108
+      ],
+      "decoded_after": [
+        900,
+        506
+      ],
+      "provenance": "Exact asset identifier present in official article HTML; only server size variant changes. HTTP 200 and PIL-decoded dimensions verified. Same image/frame visually compared."
+    },
+    {
+      "key": "holy-ghost-talk-2",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2010/10/receive-the-holy-ghost?lang=eng",
+      "before": "https://www.churchofjesuschrist.org/imgs/294b502fb8a8442f65405843cdb53f70cbb41221/full/%21192%2C/0/default",
+      "after": "https://www.churchofjesuschrist.org/imgs/294b502fb8a8442f65405843cdb53f70cbb41221/full/%211600%2C/0/default",
+      "decoded_before": [
+        192,
+        108
+      ],
+      "decoded_after": [
+        1280,
+        720
+      ],
+      "provenance": "Exact asset identifier present in official article HTML; only server size variant changes. HTTP 200 and PIL-decoded dimensions verified. Same image/frame visually compared."
+    },
+    {
+      "key": "holy-ghost-talk-3",
+      "source": "https://www.churchofjesuschrist.org/study/general-conference/2017/04/let-the-holy-spirit-guide?lang=eng",
+      "before": "https://www.churchofjesuschrist.org/imgs/76413cf7fcbc42a4b61479ee0400257f91d64cde/full/%21192%2C/0/default",
+      "after": "https://www.churchofjesuschrist.org/imgs/76413cf7fcbc42a4b61479ee0400257f91d64cde/full/%211600%2C/0/default",
+      "decoded_before": [
+        192,
+        108
+      ],
+      "decoded_after": [
+        1600,
+        900
+      ],
+      "provenance": "Exact asset identifier present in official article HTML; only server size variant changes. HTTP 200 and PIL-decoded dimensions verified. Same image/frame visually compared."
+    },
+    {
+      "key": "holy-ghost-talk-4",
+      "source": "https://speeches.byu.edu/talks/james-p-porter/receiving-and-recognizing-the-holy-ghost/",
+      "before": "https://i.ytimg.com/vi/yAo2PrkFcr4/hqdefault.jpg",
+      "after": "https://i.ytimg.com/vi/yAo2PrkFcr4/maxresdefault.jpg",
+      "decoded_before": [
+        480,
+        360
+      ],
+      "decoded_after": [
+        1280,
+        720
+      ],
+      "provenance": "Official BYU article VideoObject identifies yAo2PrkFcr4; visible thumbnail itself uses BYU yt-thumb/yAo2PrkFcr4/maxresdefault proxy. Direct YouTube maxresdefault decoded HTTP200, visually same frame without low-resolution letterbox."
+    }
+  ],
+  "phone_before_render_css": [
+    349.6,
+    195.85
+  ],
+  "render_evidence_correction": "Parent corrected initial viewport attribution:349.6px was phone. Old unwrapped desktop cards were1040px wide. Parent now wraps four cards in existing two-column desktop/one-column phone resource grid.",
+  "featured_video_preview": {
+    "video_id": "AGS45Fd9nmE",
+    "before": "https://i.ytimg.com/vi/AGS45Fd9nmE/hqdefault.jpg",
+    "after": "https://i.ytimg.com/vi/AGS45Fd9nmE/sddefault.jpg",
+    "decoded_before": [
+      480,
+      360
+    ],
+    "decoded_after": [
+      640,
+      480
+    ],
+    "verified": "HTTP200; Pillow decoded; side-by-side visual review confirms same portrait, lettering, composition and letterbox.",
+    "limit": "maxresdefault and hq720 returnedHTTP404 with120x90 placeholder; no1280source verified.640x480 is modest improvement only; do not claim HD."
+  }
+}
