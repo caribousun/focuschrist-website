@@ -1,0 +1,8 @@
+{
+  "observed_at": "2026-09-27T15:04:42.996662+00:00",
+  "url": "http://localhost:4197/art-gallery.html?picture=art-41badbfb84cf",
+  "result": "PASS",
+  "caption": "Two women sit together on a bench aboard a boat, one speaking while the other listens. Sometimes it helps to talk with someone who will listen patiently as we work through a question.",
+  "continue_lesson_present": true,
+  "scope": "Fresh rendered gallery dialog after reload; no production claim"
+}

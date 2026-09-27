@@ -1,0 +1,85 @@
+{
+  "scope": "Read-only local source guards; scripture builder check mode and mocked runtime fetch only; no live AI calls",
+  "checks": [
+    {
+      "command": "python tools/build_scripture_reader_data.py --check",
+      "exit_code": 0,
+      "output": "{\n  \"linked_chapters\": 1584,\n  \"failures\": []\n}\n"
+    },
+    {
+      "command": "node tools/scripture_reader_runtime_qa.js",
+      "exit_code": 0,
+      "output": "PASS: scripture reader URL, verse selection, source validation, safe rendering, delegated click, cache, race, fallback, close and focus/scroll-lock runtime contracts. Browser focus trapping, Escape, scrolling and presentation require real browser QA.\n"
+    },
+    {
+      "command": "node --check header-scroll.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "python tools/resource_qa.py",
+      "exit_code": 0,
+      "output": "focusChrist RESOURCE QA PASSED\nShared hamburger routing, primary Watch path, official Church/BYU resource grouping, redundant-RSC prevention, responsive header, Watch media paths, and non-embed policy verified.\n"
+    },
+    {
+      "command": "python tools/study_intelligence_qa.py",
+      "exit_code": 0,
+      "output": "focusChrist STUDY INTELLIGENCE QA PASSED\nVerified active v3 grounding, display normalization, bounded browser retry, cache-versioned Ask/Pioneer loading, server-owned model selection, and retirement of unused v1/v2 layers.\n"
+    },
+    {
+      "command": "python tools/hardened_experience_qa.py",
+      "exit_code": 0,
+      "output": "focusChrist HARDENED EXPERIENCE QA PASSED\nVerified direct Home-to-Ask arrival, complete Harvest Sky Ask follow-up styling, Pioneer date/title collision protection, hardened Pioneer disclosure ownership and timeout recovery, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-official-study/contextual-Ask routing with exact return continuity, and thumbnail-backed Watch enrichment.\n"
+    },
+    {
+      "command": "python tools/pioneer_local_first_qa.py",
+      "exit_code": 0,
+      "output": "PIONEER LOCAL-FIRST QA PASS\nVerified policy 2026-09-03.16, 29 reviewed expandable cards, local biography precedence, multi-page continuity, verified-only AI enhancement, and true no-match AI routing.\n"
+    },
+    {
+      "command": "python tools/production_hardening_qa.py",
+      "exit_code": 1,
+      "output": "focusChrist PRODUCTION HARDENING QA FAILED\n - ask.html must load contextual artwork Ask bridge\n"
+    },
+    {
+      "command": "python tools/church_history_qa.py",
+      "exit_code": 0,
+      "output": "Church History QA PASS\n"
+    },
+    {
+      "command": "python tools/study_layout_uniformity_qa.py",
+      "exit_code": 0,
+      "output": "STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; all 79 journey consumers use full-width reading and current CSS; rendered geometry requires browser review\n"
+    },
+    {
+      "command": "python tools/study_section_balance_qa.py --self-test",
+      "exit_code": 0,
+      "output": "Study section balance self-test PASS: positive and 16 negative fixtures\n"
+    },
+    {
+      "command": "python tools/study_section_balance_qa.py",
+      "exit_code": 0,
+      "output": "Study section balance QA PASS: 119 canonical pages; 9 responsive media/art pairs; no orphaned narrow rows or odd article-grid holes\n"
+    },
+    {
+      "command": "python tools/joseph_smith_likeness_qa.py",
+      "exit_code": 0,
+      "output": "Joseph Smith likeness QA PASS: approved hero, five reviewed native artwork panels, six study stops, reflections, primary sources and reciprocal routes\n"
+    },
+    {
+      "command": "python tools/scripture_grounding_qa.py",
+      "exit_code": 0,
+      "output": "Scripture grounding QA PASS\n"
+    },
+    {
+      "command": "python tools/source_integrity_inventory.py",
+      "exit_code": 0,
+      "output": "Source integrity inventory PASS: 494 entries; 3 verified; 491 quarantined\n"
+    },
+    {
+      "command": "python tools/static_content_audit.py",
+      "exit_code": 0,
+      "output": "STATIC CONTENT AUDIT PASS: 123 documents (117 verified, 6 non-source-dependent)\n"
+    }
+  ]
+}
