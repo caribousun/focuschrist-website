@@ -45,6 +45,11 @@ def unit(c):
  out+=f'<details class="jj-reflection"><summary>Pause and consider</summary><p>{esc(c["reflection"])}</p></details></div>'
  return BeautifulSoup(out,'html.parser')
 
+# Owner M062: this authored introduction remains present across viewport changes.
+intro_copy=base.new_tag('p', attrs={'class':'fc-topic-subtitle fc-father-opening-guide'})
+intro_copy.string='Explore scripture about our Heavenly Father, His love, and our relationship with Him. Follow the passages and questions throughout the study.'
+base.select_one('.fc-topic-opening .fc-topic-subtitle').insert_after(intro_copy)
+
 main=base.main
 old={s['id']:s.extract() for s in main.find_all('section',recursive=False)}
 creation=main.select_one('figure.fc-foundation-art').extract()

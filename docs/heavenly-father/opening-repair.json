@@ -1,0 +1,15 @@
+{
+  "owner_request": "M062: keep fuller God opening text stable on scroll",
+  "baseline_content_review_html_sha256": "208afa3b9155b630539fa31c7032bfb200f3385a87407d08fe16d72d5ff741ec",
+  "repaired_html_sha256": "607b188ba1033cd7ded87118c8e657e6c5da75f9379a8b5f6ce87d0f24c15dc4",
+  "cause": "Optional mobile invitation fitter uses viewport-relative bounds and reruns on viewport resize, so mobile scrolling/address-bar changes flip visibility. Parent reproduced hidden at390x650 and visible at390x700/800.",
+  "change": "Exact existing paragraph authored permanently; only Father removed from optional map; full opening comparison permits only this exact paragraph addition. Body prose and hero assets/CSS unchanged.",
+  "tests": [
+    "Father eight mutation fixtures",
+    "Father opening DOM lifecycle regression",
+    "Existing optional invitation runtime regression",
+    "Existing all-route opening flow and cards regression"
+  ],
+  "browser": "Parent actual390px viewport heights650/700/800/650 and scroll357: one permanent guide visible58.3px, no horizontal overflow, original image unchanged. outputs/Heavenly-Father-opening-fixed-preview.json",
+  "publication": "pending"
+}

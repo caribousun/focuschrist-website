@@ -29,7 +29,9 @@ def check_structure(text):
   # Nelson is the sole explicitly reviewed native thumbnail upgrade.
   if im.find_parent(attrs={'data-resource-key':'god-overcome-world'}):continue
   assert any(n.get('src')==im.get('src') for n in s.select('img')),'Existing image source changed'
- assert str(s.select_one('.fc-topic-opening'))==str(old.select_one('.fc-topic-opening')),'Protected opening changed'
+ guide=s.select('.fc-topic-opening p.fc-father-opening-guide');assert len(guide)==1 and guide[0].get_text()=='Explore scripture about our Heavenly Father, His love, and our relationship with Him. Follow the passages and questions throughout the study.' and guide[0].get('class')==['fc-topic-subtitle','fc-father-opening-guide'] and not guide[0].has_attr('hidden'),'Exact permanent owner-requested opening guide'
+ opening=copy.deepcopy(s.select_one('.fc-topic-opening'));opening.select_one('.fc-father-opening-guide').decompose()
+ assert str(opening)==str(old.select_one('.fc-topic-opening')),'Only the exact authored guide may change the protected opening'
  d=json.loads((DATA/'content-plan.json').read_text(encoding='utf-8'))
  for unit in d['chapters']:
   node=s.find(id='study-hf-'+unit['id']);assert node,'Missing new teaching unit'
