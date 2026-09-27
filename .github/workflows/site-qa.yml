@@ -173,6 +173,7 @@ jobs:
           python tools/answer_study_parser_qa.py
           python tools/topic_study_pages_qa.py
           python tools/holy_ghost_qa_test.py
+          python tools/plan_of_salvation_qa.py --selftest
           python tools/topic_inline_scripture_qa.py
           python tools/topic_artwork_qa.py
           python tools/topic_body_picture_qa.py

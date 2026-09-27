@@ -204,8 +204,8 @@ def main() -> int:
 
     approved_answer_pages = sorted(p.relative_to(ROOT).as_posix() for p in (ROOT / "answers").glob("*.html"))
     covenant_page = "answers/abrahamic-covenant.html"
-    if len(approved_answer_pages) != 23 or not {covenant_page, "answers/holy-ghost.html"}.issubset(approved_answer_pages):
-        fail(errors, f"expected 23 Answer detail pages including Covenant and Holy Ghost, found {len(approved_answer_pages)}")
+    if len(approved_answer_pages) != 24 or not {covenant_page, "answers/holy-ghost.html", "answers/plan-of-salvation.html"}.issubset(approved_answer_pages):
+        fail(errors, f"expected 24 Answer detail pages including Covenant, Holy Ghost and Plan of Salvation, found {len(approved_answer_pages)}")
     # This one page owns a reviewed chapter-first journey instead of a hero.
     # Preserve the hero contract for every pre-existing Answer destination.
     from focused_answers_qa import document as opening_document, opening as reviewed_opening
@@ -223,6 +223,9 @@ def main() -> int:
     topic_plans.update({e["page"]: e["id"].removesuffix("-hero") for e in json.loads((ROOT / "docs/focused-answers-art-review.json").read_text(encoding="utf-8"))["images"] if e["role"] == "hero"})
     topic_plans["answers/settle-this-in-your-hearts.html"] = "settle-heart"
     topic_plans["answers/holy-ghost.html"] = "holy-ghost"
+    topic_plans["answers/plan-of-salvation.html"] = "plan-of-salvation"
+    from plan_of_salvation_qa import check as check_plan
+    check_plan()
     from holy_ghost_qa import check as check_holy_ghost
     check_holy_ghost()
     approved_hero_pages = ["index.html", *(p for p in approved_answer_pages if p != covenant_page)]
@@ -231,8 +234,8 @@ def main() -> int:
         page_text = (ROOT / relative).read_text(encoding="utf-8")
         expected_class = "fc-home-hero" if relative == "index.html" else "fc-answer-detail-hero"
         expected_href = "assets/heroes/home-christ-signature-approved-20260907.png" if relative == "index.html" else f"../assets/heroes/topics/{topic_plans[relative]}-full.webp"
-        if relative == "answers/holy-ghost.html":
-            expected_href = "/assets/heroes/holy-ghost-hero-full.webp"
+        if relative in {"answers/holy-ghost.html", "answers/plan-of-salvation.html"}:
+            expected_href = "/assets/heroes/" + topic_plans[relative] + "-hero-full.webp"
         if relative == "answers/settle-this-in-your-hearts.html":
             expected_href = "../assets/page-art/settle-heart/01-settled-path-wide-20260920-full.webp"
         hero_pattern = re.compile(
@@ -242,7 +245,7 @@ def main() -> int:
         )
         if not hero_pattern.search(page_text):
             fail(errors, f"{relative}: expected page hero is not fully wired")
-        expected_record = "holy-ghost" if relative == "answers/holy-ghost.html" else "topic-" + topic_plans.get(relative, "")
+        expected_record = topic_plans[relative] if relative in {"answers/holy-ghost.html", "answers/plan-of-salvation.html"} else "topic-" + topic_plans.get(relative, "")
         if relative != "index.html" and f'data-hero-record="{expected_record}"' not in page_text:
             fail(errors, f"{relative}: own topic hero record missing")
         cache_match = re.search(r'(?:\.\./)?site-system\.css\?v=([^"\s]+)', page_text)

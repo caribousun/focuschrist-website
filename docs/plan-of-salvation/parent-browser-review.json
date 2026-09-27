@@ -1,0 +1,182 @@
+{
+  "reviewer": "Albert",
+  "environment": "local IAB localhost:4197",
+  "chapters": [
+    {
+      "active": "Learning to choose",
+      "hash": "#fall-agency",
+      "overflow": false,
+      "visible": [
+        "fall-agency"
+      ]
+    },
+    {
+      "active": "Living in a mortal body",
+      "hash": "#mortal-life",
+      "overflow": false,
+      "visible": [
+        "mortal-life"
+      ]
+    },
+    {
+      "active": "Jesus Christ makes the way",
+      "hash": "#redeemer",
+      "overflow": false,
+      "visible": [
+        "redeemer"
+      ]
+    },
+    {
+      "active": "Following Christ together",
+      "hash": "#covenants",
+      "overflow": false,
+      "visible": [
+        "covenants"
+      ]
+    },
+    {
+      "active": "Life continues beyond death",
+      "hash": "#spirit-world",
+      "overflow": false,
+      "visible": [
+        "spirit-world"
+      ]
+    },
+    {
+      "active": "Raised and known by Christ",
+      "hash": "#resurrection-judgment",
+      "overflow": false,
+      "visible": [
+        "resurrection-judgment"
+      ]
+    },
+    {
+      "active": "Receiving God's glory",
+      "hash": "#eternal-life",
+      "overflow": false,
+      "visible": [
+        "eternal-life"
+      ]
+    },
+    {
+      "active": "Living the plan today",
+      "hash": "#today",
+      "overflow": false,
+      "visible": [
+        "today"
+      ]
+    }
+  ],
+  "artDialogs": [
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/newborn-v2-full.webp",
+      "title": "A life that begins before birth",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/moses-purpose-full.webp",
+      "title": "More than getting through the day",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/earth-full.webp",
+      "title": "An earth prepared for life",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/stewardship-full.webp",
+      "title": "Learning to care for what we receive",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/labor-full.webp",
+      "title": "Adam and Eve begin life outside Eden",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/choose-full.webp",
+      "title": "Lehi teaches Jacob about freedom",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/bedside-care-full.webp",
+      "title": "A body worth caring for",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/return-v2-full.webp",
+      "title": "Corianton receives a way forward",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/bore-full.webp",
+      "title": "The promised Savior bears our griefs",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/burdens-full.webp",
+      "title": "A covenant reaches toward other people",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/small-voices-full.webp",
+      "title": "Children have a place in Christ's ministry",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/between-full.webp",
+      "title": "Death is not the end of a person",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/redemption-dead-full.webp",
+      "title": "The gospel reaches beyond death",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/life-with-god-full.webp",
+      "title": "Eternal life is life with God",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/long-view-full.webp",
+      "title": "Bring eternity into one decision",
+      "width": 1536
+    },
+    {
+      "open": null,
+      "src": "http://localhost:4197/assets/page-art/plan-of-salvation/begin-v2-full.webp",
+      "title": "A king asks what he can do",
+      "width": 1536
+    }
+  ],
+  "additional": {
+    "askReturn": "PASS correct #spirit-world, no autosubmission",
+    "nestedScripture": "PASS Alma40 correct12selectedverses, keyboardclose, ContinueLesson returns chapter",
+    "viewports": [
+      390,
+      768,
+      900,
+      1366
+    ],
+    "overflow": "none observed at checked sizes",
+    "talkThumbnails": "6 actual native1600px loaded; desktop2columns3rows",
+    "fullPageScreenshot": "Excluded stitching artifact; viewport screenshots used"
+  },
+  "ownerAestheticApproval": false
+}

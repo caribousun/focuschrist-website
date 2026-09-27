@@ -1,0 +1,97 @@
+[
+  {
+    "command": "python tools/plan_of_salvation_qa.py --selftest",
+    "returncode": 0,
+    "output": "PLAN QA SELFTEST PASS: seven structure/source/reference and five artwork/identity mutations rejected\nPLAN QA PASS: ten chapters, twenty teaching units, sixteen body originals, three owning-study previews, six source-matched talks; exact independently reviewed art hashes\n"
+  },
+  {
+    "command": "python tools/study_gap_art_qa.py",
+    "returncode": 0,
+    "output": "Study gap artwork QA passed: four original placements plus 14 sitewide body additions and four talk thumbnails; exact inventories, reviewed hashes, decoded uniqueness, sources, styled-dialog dependencies and four negative fixtures.\n"
+  },
+  {
+    "command": "python tools/focused_answers_qa.py",
+    "returncode": 0,
+    "output": "FOCUSED ANSWERS QA PASS: 28 own destinations/openings, two complete priesthood studies, 853 unchanged baseline images; editorial and rendered review remain separate\n"
+  },
+  {
+    "command": "python tools/answer_video_uniqueness_qa.py",
+    "returncode": 0,
+    "output": "ANSWER VIDEO UNIQUENESS PASS: 71 video cards, no Watch or cross-Answer repetition\n"
+  },
+  {
+    "command": "python tools/topic_artwork_details_qa.py",
+    "returncode": 0,
+    "output": "HOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nPLAN QA PASS: ten chapters, twenty teaching units, sixteen body originals, three owning-study previews, six source-matched talks; exact independently reviewed art hashes\nTOPIC ARTWORK DETAILS QA PASS: 260 adapter pictures, 3 existing detail pictures, 12 expanded illustration panels, 25 page dependencies\n"
+  },
+  {
+    "command": "python tools/build_art_gallery.py --check",
+    "returncode": 0,
+    "output": "Art gallery inventory is current.\n"
+  },
+  {
+    "command": "python tools/build_site_search.py --check",
+    "returncode": 0,
+    "output": "SEARCH INDEX PASS: public pages, sections and artwork are current\n"
+  },
+  {
+    "command": "python tools/static_content_audit.py",
+    "returncode": 0,
+    "output": "STATIC CONTENT AUDIT PASS: 125 documents (119 verified, 6 non-source-dependent)\n"
+  },
+  {
+    "command": "python tools/resource_thumbnail_qa.py",
+    "returncode": 0,
+    "output": "RESOURCE THUMBNAIL QA PASS: 121 pages, 136 source-matched cards\n"
+  },
+  {
+    "command": "python tools/topic_inline_scripture_qa.py",
+    "returncode": 0,
+    "output": "TOPIC INLINE SCRIPTURE QA PASS: Home, all19 topic destinations and all4 Featured Art bodies, 830 scripture links, canonical chapters, exact verse selections, no nested anchors\n"
+  },
+  {
+    "command": "python tools/sitewide_artwork_review_qa.py --self-test",
+    "returncode": 0,
+    "output": "PASS regression fixtures: duplicate/rejected images, modified Bible/journey CSS and out-of-scope stylesheet references are rejected\n"
+  },
+  {
+    "command": "python tools/sitewide_artwork_review_qa.py",
+    "returncode": 0,
+    "output": "{\n  \"canonical_pages\": 121,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": []\n}\n"
+  },
+  {
+    "command": "node --test tools/art_ask_context.test.cjs",
+    "returncode": 0,
+    "output": "✔ CFM topic is visible, editable, returns to CFM, and never submits (46.2675ms)\n✔ explicit q and already typed draft take precedence (29.7944ms)\n✔ returns allow known pages and plain fragments, drop queries and reject unsafe paths (42.4ms)\n✔ topic without return offers accurate fallback; empty topic does not create context (9.9095ms)\n✔ Holy Ghost study, supporting artwork and hero return to the exact approved route (43.4704ms)\n✔ Plan of Salvation study, supporting artwork and hero return to the exact approved route (35.9363ms)\n✔ existing artwork, Watch, evidences and covenant contracts remain intact (23.0205ms)\nℹ tests 7\nℹ suites 0\nℹ pass 7\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 578.3001\n"
+  },
+  {
+    "command": "node tools/study_navigation_runtime_qa.js",
+    "returncode": 0,
+    "output": "STUDY NAVIGATION RUNTIME QA PASS: all 28 discovered topic pills, article routes, CFM/Conference labels, hash restoration, preserved parent links, and duplicate prevention.\n"
+  },
+  {
+    "command": "node tools/opening_flow_and_cards_qa.js",
+    "returncode": 0,
+    "output": "Opening flow and cards QA PASS: 43 opening invitations; complete Answers rows.\n"
+  },
+  {
+    "command": "node tools/focused_answers_runtime_qa.js",
+    "returncode": 0,
+    "output": "FOCUSED ANSWERS RUNTIME PASS: both legacy history bookmarks, no redirect loops, own hero/lesson Ask returns, external return rejection\n"
+  },
+  {
+    "command": "node --check hero-details.js",
+    "returncode": 0,
+    "output": ""
+  },
+  {
+    "command": "node --check art-ask-context.js",
+    "returncode": 0,
+    "output": ""
+  },
+  {
+    "command": "node --check site-common.js",
+    "returncode": 0,
+    "output": ""
+  }
+]

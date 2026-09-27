@@ -68,6 +68,11 @@ def check():
         for node in nodes:
             if not node.has('fc-resource-card'):
                 continue
+            if node.has('pos-owned-reference'):
+                assert path.relative_to(ROOT).as_posix()=='answers/plan-of-salvation.html', 'Plan artwork reference used outside its reviewed page'
+                from plan_of_salvation_qa import check_structure
+                check_structure(path.read_text(encoding='utf-8'))  # Exact three image-to-owning-figure links, no player presentation.
+                continue
             key = node.attrs.get('data-resource-key')
             record = registry.get(key)
             if not record:

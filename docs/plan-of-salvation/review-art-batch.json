@@ -1,0 +1,175 @@
+{
+  "method": "Built-in image_gen; one distinct call per scene; no external API",
+  "owner_approval": false,
+  "assets": [
+    {
+      "id": "small-voices",
+      "prompt": "Use case: photorealistic-natural. Create a single 1536x1024 landscape candid editorial photograph: an anonymous present-day school-age girl stands holding a small crayon drawing, explaining it to her mother and gray-haired grandfather seated low on a living-room rug at her eye level. Child looks toward grandfather, he meets her eyes attentively; mother looks interested at drawing. Real natural faces and skin, plausible separate fingers holding paper edges, modest casual contemporary clothes. Drawing simple colored house/tree shapes, no words or sacred figure. Wide low camera, full heads and all limbs comfortably within frame, generous headroom, no cropping crowns/hands/feet. Soft window daylight, distinct ordinary playroom with scattered few crayons, no dining table. People distinct ages, not posed at camera. Illustrative modern listening application for 3 Nephi26:13-20, not a depiction of that historical event or its unrecorded marvelous words. No Christ, deity, ghosts, halo, text, logo, watermark, painting or plastic skin.",
+      "source_path": "C:/Users/wyatt/.codex/generated_images/01a0e047-5fc0-7413-95e2-9c2f48ea34af/exec-95708202-9b2d-47dc-9340-9e62ca351fc4.png",
+      "original": "assets/page-art/plan-of-salvation/small-voices-original.png",
+      "original_sha256": "f9f5792499572584fc16503b7cf46aabc807514a1e599f70a5092507548824c1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng&id=p13-p20#p13"
+      ],
+      "sources_verified_before_generation": true,
+      "source_limits": "The 3 Nephi 26:14 event is already owned by Settle Thy Heart. Do not redraw it. Modern listening application, no invented marvelous words.",
+      "review": "PASS candidate: all three heads/hands and feet fully framed, natural child-to-grandfather eye contact and attentive mother, coherent seated poses and paper grip. Detailed natural faces/fabric/daylight. Modern drawing differs from owned historical children-speaking scene.",
+      "status": "candidate; independent parent review pending",
+      "owner_approval": false,
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/small-voices-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "ccc94646d4d3f543721a7d743ae20aded486c3a50bc9745ce341cff2bf37a982"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/small-voices-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "b8d40737cc75d7179afb18c6916afb747e5a3ccd8e642471720cc0b54176ec1e"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/small-voices-800.webp",
+          "dimensions": [
+            800,
+            533
+          ],
+          "sha256": "3f16a5d68b4ae141674352b781807cb7a6fc41414b6ca6df2ce7efdda6b51dca"
+        }
+      ]
+    },
+    {
+      "id": "between",
+      "prompt": "Use case: photorealistic-natural. Single landscape1536x1024 candid documentary photograph. Two anonymous contemporary relatives, middle-aged East Asian woman and her young adult nephew, carefully preserve a small old family photograph by slipping it into a transparent archival album pocket at a modest desk beside a window. Photograph itself angled away, only indistinct monochrome shapes, no readable names. Woman holds paper by edges, nephew holds pocket open; fingers and contact anatomically clear. They briefly meet each other's eyes with quiet attentiveness, restrained mixed affection and reflection, not theatrical crying or forced happy closure. Three-quarter wide view of both seated adults and task, generous space around full heads and all limbs; realistic pores, wrinkles, hair, clothes, natural daylight. Narrow study room and archival boxes differ from family rug/playroom or sofa conversation. Modern remembrance application grounded in Alma40:6-14 distinction between death and resurrection; no literal afterlife depiction, deceased apparition, ghost, miracle, guarantee of grief relief, Christ, text, watermark or named historical person. Actual high-quality photograph appearance, not painting or waxy render.",
+      "source_path": "C:/Users/wyatt/.codex/generated_images/01a0e047-5fc0-7413-95e2-9c2f48ea34af/exec-1732bd1c-fd91-483a-a6cb-8a25979264f5.png",
+      "original": "assets/page-art/plan-of-salvation/between-original.png",
+      "original_sha256": "31029967f89f27a151b88f2d0766ed7b5c61fe98793382f7445faada95a45ee2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng&id=p6-p14,p21-p23#p6"
+      ],
+      "sources_verified_before_generation": true,
+      "source_limits": "Present application; do not repeat existing lone widower notebook portrait. No grief timetable, afterlife visit or promise of immediate peace.",
+      "review": "PASS candidate: two distinct anonymous people, reciprocal attentive gaze, credible hands at photograph and archival sleeve, full heads. Image is waist-up with lower limbs naturally outside composition, not full-body as prompt requested; no essential action clipped. Photo contains small anonymous figures rather than wholly indistinct shapes, no claim of named/deceased identity. No apparition. Distinct from lone widower notebook scene.",
+      "status": "candidate; independent parent review pending",
+      "owner_approval": false,
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/between-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "06958ccd4b005127c1891408daddd8ac0051f08d569d399199db287a97f2bbe5"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/between-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "83fc6dab775a855c0ecda1d94868d6a80fdb297e2db19a25c3d477caf4a719e8"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/between-800.webp",
+          "dimensions": [
+            800,
+            533
+          ],
+          "sha256": "31d8d06275f0865f990e2944140a93254265276f0ddc67a7002cf0209357fc2c"
+        }
+      ]
+    },
+    {
+      "id": "long-view",
+      "prompt": "Use case: photorealistic-natural. Create one landscape1536x1024 highly photographic candid moment in a modest contemporary home entryway at warm late-afternoon light. Anonymous middle-aged Black father has just set his smartphone face-down on a small console shelf beside the doorway, his hand still withdrawing from it, while turning fully toward his young adult daughter who is speaking beside him. Both standing, genuine mutual eye contact, she gestures gently with one open hand. Natural attentive serious-warm expressions, not camera smiles. Full-body medium-wide composition, generous headroom and all hands and shoes inside frame. Phone visibly rests securely flat on shelf, no legible screen or logo. Ordinary jacket hooks, modest clothes, authentic skin pores and hair, coherent anatomically natural hands/arms/legs, realistic light and fabrics. Scene distinct from a dining/study table, photo album or child drawing. Modern application of choosing attention with an eternal perspective, informed by Russell M. Nelson Think Celestial October2023 verified official talk. NOT biography of Nelson, no named figures, no Christ/deity/apparition, no guarantee of reconciled relationships, no words, watermark, painting, artificial glow or plastic skin.",
+      "source_path": "C:/Users/wyatt/.codex/generated_images/01a0e047-5fc0-7413-95e2-9c2f48ea34af/exec-dbc2734e-d8b9-4538-b409-5954b1257405.png",
+      "original": "assets/page-art/plan-of-salvation/long-view-original.png",
+      "original_sha256": "743c9408ec455f15a0447125471ee1386cb7eab7c97f8267a1d0f5a6b46ab43e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/general-conference/2023/10/51nelson?lang=eng"
+      ],
+      "sources_verified_before_generation": true,
+      "source_limits": "Application not narratedbiography ofPresidentNelson. Avoidgenericstudytable; momentconcreteandactionable.",
+      "review": "PASS candidate: both complete heads and shoes inside frame, natural mutual gaze, coherent hand on phone/shelf and open conversational gesture, real skin/fabric/light. Father crown margin narrow but visible; use full image. Phone set aside in entryway differs from other rug/table scenes.",
+      "status": "candidate; independent parent review pending",
+      "owner_approval": false,
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/long-view-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "1639605a38674ddc0f2b504e8eab1e28d16791a8f8c98318c4014693c2353b23"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/long-view-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "718a199a726c7206a7b4195e119b1891eefbf6ece619bdac641184eb2ac8b9ca"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/long-view-800.webp",
+          "dimensions": [
+            800,
+            533
+          ],
+          "sha256": "0eb49b3efa23760d711caa78957ea44c88bad5fd09db215c4bb63cbfca49f8de"
+        }
+      ]
+    }
+  ],
+  "current_integration_status": {
+    "date": "2026-09-27",
+    "status": "Selected final variants have completed independent candidate review; not owner aesthetic approval; not published.",
+    "generation_note_scope": "Existing status/review/pending phrases in this generation record are historical generation-time notes. They are preserved as evidence, not current release status.",
+    "current_authority": "docs/plan-of-salvation/art-review.json",
+    "independent_evidence": [
+      "docs/plan-of-salvation/independent-art-review.json",
+      "docs/plan-of-salvation/independent-modern-review.json"
+    ],
+    "selected_asset_ids": [
+      "newborn-v2",
+      "moses-purpose",
+      "earth",
+      "stewardship",
+      "labor",
+      "choose",
+      "bedside-care",
+      "return-v2",
+      "bore",
+      "burdens",
+      "small-voices",
+      "between",
+      "redemption-dead",
+      "life-with-god",
+      "long-view",
+      "begin-v2"
+    ],
+    "excluded_attempts": [
+      "newborn",
+      "purpose",
+      "return",
+      "begin"
+    ]
+  }
+}

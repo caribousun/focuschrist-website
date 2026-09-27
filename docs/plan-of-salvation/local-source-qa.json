@@ -1,0 +1,357 @@
+[
+  {
+    "command": "python tools/navigation_links_qa.py",
+    "returncode": 0,
+    "output": "NAVIGATION QA PASS: 122 centered headers, 4659 external links\n"
+  },
+  {
+    "command": "python tools/topic_pill_order_qa.py",
+    "returncode": 0,
+    "output": "TOPIC PILL ORDER PASS: 10 topic groups\n"
+  },
+  {
+    "command": "python tools/jesus_journey_qa.py",
+    "returncode": 0,
+    "output": "Jesus journey release gate passed: all planned scenes, reviewed derivatives, one owner per original, complete descendant navigation and sitemap.\n"
+  },
+  {
+    "command": "python tools/build_jesus_journey.py --strict --check",
+    "returncode": 0,
+    "output": "Built 76 nested studies; strict=True. Publication and semantic/visual verification are separate.\n"
+  },
+  {
+    "command": "python tools/build_jesus_parent.py --strict --check",
+    "returncode": 0,
+    "output": "Parent journey updated; original hero and study retained. strict=True. Publication and complete destination verification are separate.\n"
+  },
+  {
+    "command": "python tools/jesus_discovery_qa.py",
+    "returncode": 0,
+    "output": "JOURNEY DISCOVERY PASS: 76 nested pages and 307 reviewed original pictures; stable sitemap, owning studies, chapter search and gallery routes. Drafts are not release-ready.\n"
+  },
+  {
+    "command": "python tools/atonement_qa.py",
+    "returncode": 0,
+    "output": "ATONEMENT QA PASS: chapters,26distinct reviewed visuals,all standard works,reflection,safety and shared study hooks\nSENSITIVE ART QA PASS: two closed independent gates, safe gallery/search covers and protected study activation\n"
+  },
+  {
+    "command": "python tools/topic_artwork_uniqueness_runtime_qa.py",
+    "returncode": 0,
+    "output": ".....................\n----------------------------------------------------------------------\nRan 21 tests in 1.029s\n\nOK\n"
+  },
+  {
+    "command": "python tools/home_presentation_qa.py",
+    "returncode": 0,
+    "output": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.827s\n\nOK\n"
+  },
+  {
+    "command": "python tools/watch_shorts_qa.py",
+    "returncode": 0,
+    "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.333s\n\nOK\n"
+  },
+  {
+    "command": "python tools/evidences_visual_guides_qa.py",
+    "returncode": 0,
+    "output": "Analytical SVG QA PASS: 12 exact source hashes, dimensions, accessible descriptions and inactive vector markup; negative fixtures passed\n"
+  },
+  {
+    "command": "python tools/mission_enrichment_qa.py",
+    "returncode": 0,
+    "output": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.134s\n\nOK\n"
+  },
+  {
+    "command": "python tools/build_site_search.py --check",
+    "returncode": 0,
+    "output": "SEARCH INDEX PASS: public pages, sections and artwork are current\n"
+  },
+  {
+    "command": "python tools/site_search_qa.py",
+    "returncode": 0,
+    "output": "SEARCH QA PASS: 120 public pages, 1928 valid destinations; hidden/internal content excluded\n"
+  },
+  {
+    "command": "python tools/site_qa.py",
+    "returncode": 0,
+    "output": "FocusChrist SITE QA PASSED\nCore pages checked: 11\nPermanent answer pages checked: 24\nFeatured Art study pages checked: 4\nArt gallery images checked: 44\nSearch Console verification, sitemap, local references, Answer Library sources, model migration, disclosures, accessibility markers, and Ask rendering verified.\n"
+  },
+  {
+    "command": "python tools/site_flow_qa.py",
+    "returncode": 0,
+    "output": "SITE FLOW QA PASS: 121 sitemap routes, complete internal targets and fragments, no inert public links, and multiple continuation paths per page\n"
+  },
+  {
+    "command": "python tools/media_voice_qa.py",
+    "returncode": 0,
+    "output": "Media voice QA passed: 123 pages; 785 captions, 147 expanded details, 122 resource descriptions, 15 media introductions, 1986 alt texts, 41 hero dialogs and 822 gallery records audited.\n"
+  },
+  {
+    "command": "python tools/media_voice_qa_test.py",
+    "returncode": 0,
+    "output": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.015s\n\nOK\n"
+  },
+  {
+    "command": "python tools/come_follow_me_qa.py",
+    "returncode": 0,
+    "output": "focusChrist COME, FOLLOW ME HUB QA PASSED\nVerified 52 weekly routes and titles, official study toolkit, dynamic lesson links, schedule containment, action contrast, and Home spacing controls.\n"
+  },
+  {
+    "command": "python tools/general_conference_qa.py",
+    "returncode": 0,
+    "output": "GENERAL CONFERENCE QA PASS: 37 source-matched messages, four native sessions, progressive filters, accessible controls, thumbnails, and connected routes.\n"
+  },
+  {
+    "command": "python tools/unified_experience_qa.py",
+    "returncode": 0,
+    "output": "COVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2–3 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\nPLAN QA PASS: ten chapters, twenty teaching units, sixteen body originals, three owning-study previews, six source-matched talks; exact independently reviewed art hashes\nHOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nfocusChrist UNIFIED EXPERIENCE QA PASSED\nPublic pages checked: 41\nBrand casing, shared design system, image-first heroes, unified footers, Art wiring, and hardened Pioneer conversation context/palette verified.\n"
+  },
+  {
+    "command": "python tools/section_panel_surface_qa.py --self-test",
+    "returncode": 0,
+    "output": "Panel surface self-test PASS: descendant scope and unknown-panel discovery.\nSECTION PANEL QA PASS: 121 canonical pages, 67 classified panel-like classes, 63 shared selectors. Rendered QA remains separate.\n"
+  },
+  {
+    "command": "python tools/build_art_gallery.py --check",
+    "returncode": 0,
+    "output": "Art gallery inventory is current.\n"
+  },
+  {
+    "command": "python tools/artwork_details_qa.py",
+    "returncode": 0,
+    "output": "Artwork detail QA: PASS\n62 non-Mission artwork triggers and 11 Mission artwork triggers verified\nSame-page full-image viewing, sacred detail copy, and intentional interaction scope verified\n"
+  },
+  {
+    "command": "python tools/sitewide_artwork_review_qa.py --self-test",
+    "returncode": 0,
+    "output": "PASS regression fixtures: duplicate/rejected images, modified Bible/journey CSS and out-of-scope stylesheet references are rejected\n"
+  },
+  {
+    "command": "python tools/sitewide_artwork_review_qa.py",
+    "returncode": 0,
+    "output": "{\n  \"canonical_pages\": 121,\n  \"reviewed_heroes\": 19,\n  \"protected_images_checked\": 842,\n  \"errors\": []\n}\n"
+  },
+  {
+    "command": "python tools/mobile_scene_qa.py",
+    "returncode": 0,
+    "output": "Mobile scene QA PASS: seven reviewed portraits, original bytes/full-size links and desktop fallbacks retained.\n"
+  },
+  {
+    "command": "python tools/art_study_enrichment_qa.py",
+    "returncode": 0,
+    "output": "Art study enrichment QA passed: 4 featured pages with four preserved plus manifest-bound supporting additions each; exact sources, reviewed hashes, reflection/resource/onward paths, and Evidences/Church History contracts verified.\n"
+  },
+  {
+    "command": "python tools/birth_of_christ_qa.py",
+    "returncode": 0,
+    "output": "Birth of Christ QA passed: reviewed exclusive hero/body inventory, at least23 artworks, responsive assets, exact scripture actions,12 reading stops,8 reflections,8 official resources and4 onward paths.\n"
+  },
+  {
+    "command": "python tools/book_of_mormon_stories_qa.py --self-test",
+    "returncode": 0,
+    "output": "Book of Mormon story QA self-test passed: positive original/reference inventories and sixteen relevant rejection fixtures.\n"
+  },
+  {
+    "command": "python tools/book_of_mormon_stories_qa.py",
+    "returncode": 0,
+    "output": "Book of Mormon story QA passed: 45 unique originals, 24 depicting Christ, 39 new reviewed pictures, 22 story stops; preserved hashes, decoded/source uniqueness, exact scripture selections, responsive placements, and original navigation.\n"
+  },
+  {
+    "command": "python tools/study_gap_art_qa.py",
+    "returncode": 1,
+    "output": "Study gap artwork QA failed:\n- Exclusive gap artwork reused on answers/plan-of-salvation.html\n"
+  },
+  {
+    "command": "python tools/connected_study_qa.py",
+    "returncode": 0,
+    "output": "Connected study QA PASSED: 9 section guides, 28 studies, static destinations and learning paths reachable from Home.\n"
+  },
+  {
+    "command": "python tools/watch_library_qa.py",
+    "returncode": 0,
+    "output": "Watch library QA PASSED: 20 verified video pairs, image hashes/dimensions, anchors, sources and study routes.\n"
+  },
+  {
+    "command": "python tools/discovery_qa.py",
+    "returncode": 0,
+    "output": "Discovery QA PASSED: 121 canonical pages, complete sitemap coverage, search/share metadata and valid structured data. Indexing and traffic require external evidence.\n"
+  },
+  {
+    "command": "python tools/complete_card_rows_qa.py",
+    "returncode": 0,
+    "output": "PASS: discovered 40 complete-row consumers; rendered QA must also pass\n"
+  },
+  {
+    "command": "python tools/resource_thumbnail_qa.py",
+    "returncode": 0,
+    "output": "RESOURCE THUMBNAIL QA PASS: 121 pages, 136 source-matched cards\n"
+  },
+  {
+    "command": "python tools/answer_study_parser_qa.py",
+    "returncode": 0,
+    "output": "ANSWER STUDY PARSER QA PASS: inline scripture and nested emphasis preserve exact prose order\n"
+  },
+  {
+    "command": "python tools/topic_study_pages_qa.py",
+    "returncode": 0,
+    "output": "HOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nCOVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2–3 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\nTOPIC STUDY PAGES QA PASS: 28 distinct pill destinations; complete openings, same-page hero return, and source-preserving migrations\n"
+  },
+  {
+    "command": "python tools/holy_ghost_qa_test.py",
+    "returncode": 0,
+    "output": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.052s\n\nOK\n"
+  },
+  {
+    "command": "python tools/plan_of_salvation_qa.py --selftest",
+    "returncode": 0,
+    "output": "PLAN QA SELFTEST PASS: five structure/source and five artwork/identity mutations rejected\nPLAN QA PASS: ten chapters, twenty teaching units, sixteen body originals, three owning-study previews, six source-matched talks; exact independently reviewed art hashes\n"
+  },
+  {
+    "command": "python tools/topic_inline_scripture_qa.py",
+    "returncode": 0,
+    "output": "TOPIC INLINE SCRIPTURE QA PASS: Home, all19 topic destinations and all4 Featured Art bodies, 830 scripture links, canonical chapters, exact verse selections, no nested anchors\n"
+  },
+  {
+    "command": "python tools/topic_artwork_qa.py",
+    "returncode": 0,
+    "output": "TOPIC ARTWORK QA PASS: 21 contextual placements, individually approved assets, exact sources, responsive full-image viewing\n"
+  },
+  {
+    "command": "python tools/topic_body_picture_qa.py",
+    "returncode": 0,
+    "output": "ldren-prayer-960.webp\",\n        \"section\": \"reading-933\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/28-child-blessing-960.webp\",\n        \"section\": \"reading-945\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/35-angels-children-960.webp\",\n        \"section\": \"reading-957\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/27-christ-bread-960.webp\",\n        \"section\": \"reading-975\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/20-prays-apart-960.webp\",\n        \"section\": \"reading-988\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/21-remember-samuel-960.webp\",\n        \"section\": \"reading-1000\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/22-church-name-960.webp\",\n        \"section\": \"reading-1013\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/29-three-disciples-960.webp\",\n        \"section\": \"reading-1026\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/39-mormon-final-960.webp\",\n        \"section\": \"reading-1061\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/26-moroni-record-960.webp\",\n        \"section\": \"reading-1108\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/book-of-mormon-stories/40-moroni-joseph-960.webp\",\n        \"section\": \"reading-1125\",\n        \"native\": [\n          960,\n          640\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/mormon-ponder-800.webp\",\n        \"section\": \"reading-1138\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/mormon-settle-800.webp\",\n        \"section\": \"reading-1148\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/mormon-covenant-care-800.webp\",\n        \"section\": \"reading-1157\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  },\n  {\n    \"page\": \"answers/who-was-joseph-smith.html\",\n    \"distinct\": 5,\n    \"sections\": 5,\n    \"images\": [\n      {\n        \"src\": \"../assets/page-art/exclusive/joseph-printing-work-800.webp\",\n        \"section\": \"reading-95\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/joseph-account-reading-800.webp\",\n        \"section\": \"reading-193\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/topics/historical-study-desk-800.webp\",\n        \"section\": \"reading-215\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/joseph-shared-reading-800.webp\",\n        \"section\": \"reading-224\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/joseph-inquiry-prayer-800.webp\",\n        \"section\": \"reading-258\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  },\n  {\n    \"page\": \"answers/why-families-are-important.html\",\n    \"distinct\": 5,\n    \"sections\": 5,\n    \"images\": [\n      {\n        \"src\": \"../assets/page-art/exclusive/families-patient-small-task-800.webp\",\n        \"section\": \"reading-103\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/families-neighbor-garden-800.webp\",\n        \"section\": \"reading-177\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/families-shared-responsibility-800.webp\",\n        \"section\": \"reading-189\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/families-child-heard-800.webp\",\n        \"section\": \"reading-213\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/topics/family-study-800.webp\",\n        \"section\": \"reading-222\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  },\n  {\n    \"page\": \"answers/why-latter-day-saints-build-temples.html\",\n    \"distinct\": 5,\n    \"sections\": 5,\n    \"images\": [\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-purpose-reading-800.webp\",\n        \"section\": \"reading-104\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-preparation-notes-800.webp\",\n        \"section\": \"reading-170\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-daily-promises-800.webp\",\n        \"section\": \"reading-206\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-generations-craft-800.webp\",\n        \"section\": \"reading-215\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-covenant-help-800.webp\",\n        \"section\": \"reading-245\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  },\n  {\n    \"page\": \"general-conference.html\",\n    \"distinct\": 5,\n    \"sections\": 5,\n    \"images\": [\n      {\n        \"src\": \"assets/page-art/exclusive/conference-message-notes-800.webp\",\n        \"section\": \"reading-120\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-study-prayer-800.webp\",\n        \"section\": \"reading-201\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-response-together-800.webp\",\n        \"section\": \"reading-551\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-return-question-800.webp\",\n        \"section\": \"reading-578\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-care-followthrough-800.webp\",\n        \"section\": \"reading-628\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  }\n]\n"
+  },
+  {
+    "command": "python tools/five_picture_manifest_qa.py",
+    "returncode": 0,
+    "output": "FIVE PICTURE MANIFEST QA PASS: 63 additional figures, exact assets/captions/sources, portable intrinsic checks and full viewers\n"
+  },
+  {
+    "command": "python tools/topic_artwork_details_qa.py",
+    "returncode": 0,
+    "output": "HOLY GHOST QA PASS: 8 chapters, 16 distinct reviewed originals (8 Christ), 4 talk thumbnails, exact scripture and Ask return contracts\nPLAN QA PASS: ten chapters, twenty teaching units, sixteen body originals, three owning-study previews, six source-matched talks; exact independently reviewed art hashes\nTOPIC ARTWORK DETAILS QA PASS: 260 adapter pictures, 3 existing detail pictures, 12 expanded illustration panels, 25 page dependencies\n"
+  },
+  {
+    "command": "python tools/bible_together_qa.py --self-test",
+    "returncode": 0,
+    "output": "BIBLE TOGETHER QA PASS: 7 preserved originals, 13 reviewed additions, 2/3/3/5 scene distribution, local lesson returns and 12 paired readings\n"
+  },
+  {
+    "command": "python tools/abrahamic_covenant_qa.py",
+    "returncode": 0,
+    "output": "COVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2–3 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\n"
+  },
+  {
+    "command": "python tools/focused_answers_qa.py",
+    "returncode": 1,
+    "output": "Traceback (most recent call last):\n  File \"C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\focused_answers_qa.py\", line 131, in <module>\n    if __name__ == '__main__': check()\n                               ~~~~~^^\n  File \"C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\focused_answers_qa.py\", line 79, in check\n    assert len(routes) == len(set(routes)) == 27, 'Exact 27 unique topic destinations required'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Exact 27 unique topic destinations required\n"
+  },
+  {
+    "command": "python tools/answer_study_qa.py",
+    "returncode": 0,
+    "output": "ANSWER STUDY QA PASS: all 24 permanent Answers have contextual media, navigation, reflection and continuation\n"
+  },
+  {
+    "command": "python tools/answer_video_uniqueness_qa.py",
+    "returncode": 1,
+    "output": "plan-of-salvation.html: resource missing identity review: None\nplan-of-salvation.html: resource missing identity review: None\nplan-of-salvation.html: resource missing identity review: None\n"
+  },
+  {
+    "command": "python tools/global_video_uniqueness_qa.py",
+    "returncode": 0,
+    "output": "GLOBAL VIDEO UNIQUENESS PASS: 92 reviewed videos, one themed placement each\n"
+  },
+  {
+    "command": "python tools/build_scripture_reader_data.py --check",
+    "returncode": 0,
+    "output": "{\n  \"linked_chapters\": 1584,\n  \"failures\": []\n}\n"
+  },
+  {
+    "command": "python tools/resource_qa.py",
+    "returncode": 0,
+    "output": "focusChrist RESOURCE QA PASSED\nShared hamburger routing, primary Watch path, official Church/BYU resource grouping, redundant-RSC prevention, responsive header, Watch media paths, and non-embed policy verified.\n"
+  },
+  {
+    "command": "python tools/study_intelligence_qa.py",
+    "returncode": 0,
+    "output": "focusChrist STUDY INTELLIGENCE QA PASSED\nVerified active v3 grounding, display normalization, bounded browser retry, cache-versioned Ask/Pioneer loading, server-owned model selection, and retirement of unused v1/v2 layers.\n"
+  },
+  {
+    "command": "python tools/hardened_experience_qa.py",
+    "returncode": 0,
+    "output": "focusChrist HARDENED EXPERIENCE QA PASSED\nVerified direct Home-to-Ask arrival, complete Harvest Sky Ask follow-up styling, Pioneer date/title collision protection, hardened Pioneer disclosure ownership and timeout recovery, accessibility shell, Church/BYU source routing, grounded response hygiene, Art-to-official-study/contextual-Ask routing with exact return continuity, and thumbnail-backed Watch enrichment.\n"
+  },
+  {
+    "command": "python tools/pioneer_local_first_qa.py",
+    "returncode": 0,
+    "output": "PIONEER LOCAL-FIRST QA PASS\nVerified policy 2026-09-03.16, 29 reviewed expandable cards, local biography precedence, multi-page continuity, verified-only AI enhancement, and true no-match AI routing.\n"
+  },
+  {
+    "command": "python tools/production_hardening_qa.py",
+    "returncode": 0,
+    "output": "focusChrist PRODUCTION HARDENING QA PASSED\nVerified local high-resolution heroes, page-specific social previews, Pioneer chronology, artwork topic study + contextual Ask + exact return continuity, thumbnail-backed Watch video paths, localized Art assets, discovery controls, workflow gates, and durable local-brain learning.\n"
+  },
+  {
+    "command": "python tools/church_history_qa.py",
+    "returncode": 0,
+    "output": "Church History QA PASS\n"
+  },
+  {
+    "command": "python tools/study_layout_uniformity_qa.py",
+    "returncode": 0,
+    "output": "STUDY LAYOUT QA PASS: five shared rails, Joseph spacing and six centered study pills; all 81 journey consumers use full-width reading and current CSS; rendered geometry requires browser review\n"
+  },
+  {
+    "command": "python tools/study_section_balance_qa.py --self-test",
+    "returncode": 0,
+    "output": "Study section balance self-test PASS: positive and 16 negative fixtures\n"
+  },
+  {
+    "command": "python tools/study_section_balance_qa.py",
+    "returncode": 0,
+    "output": "Study section balance QA PASS: 121 canonical pages; 9 responsive media/art pairs; no orphaned narrow rows or odd article-grid holes\n"
+  },
+  {
+    "command": "python tools/joseph_smith_likeness_qa.py",
+    "returncode": 0,
+    "output": "Joseph Smith likeness QA PASS: approved hero, five reviewed native artwork panels, six study stops, reflections, primary sources and reciprocal routes\n"
+  },
+  {
+    "command": "python tools/scripture_grounding_qa.py",
+    "returncode": 0,
+    "output": "Scripture grounding QA PASS\n"
+  },
+  {
+    "command": "python tools/source_integrity_inventory.py",
+    "returncode": 0,
+    "output": "Source integrity inventory PASS: 494 entries; 3 verified; 491 quarantined\n"
+  },
+  {
+    "command": "python tools/static_content_audit.py",
+    "returncode": 0,
+    "output": "STATIC CONTENT AUDIT PASS: 125 documents (119 verified, 6 non-source-dependent)\n"
+  },
+  {
+    "command": "python tools/build_scripture_catalog.py --check",
+    "returncode": 0,
+    "output": "Complete scripture catalog verified\n"
+  },
+  {
+    "command": "python tools/build_church_source_index.py --check",
+    "returncode": 0,
+    "output": "Church source index CHECK PASS: 900 URLs, 199179 bytes\n"
+  },
+  {
+    "command": "python tools/topic_artwork_caption_runtime_qa.py",
+    "returncode": 0,
+    "output": "CAPTION DOM QA PASS: 4 caption fixtures plus a foundation-picture panel; mixed scripture prose, source and study actions, safe fallback and repeated opening\n"
+  },
+  {
+    "command": "python tools/pioneer_story_qa.py",
+    "returncode": 0,
+    "output": "Pioneer story QA: PASS (31unique studies,18new originals,29preserved topics,31preserved image variants/hero)\n"
+  },
+  {
+    "command": "python tools/elizabeth_identity_qa.py",
+    "returncode": 0,
+    "output": "Elizabeth QA PASS: four replacements, exact approved reference, current public paths, 67 preserved assets. Visual likeness remains a separate review.\n"
+  }
+]

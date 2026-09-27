@@ -1,0 +1,357 @@
+{
+  "reviewer": "Newton",
+  "date": "2026-09-27",
+  "content_sha256": "7d31d2caa6dd1a9c0d1c29e9afc705d65c365e8a24c133c139981e8f8023f9b0",
+  "source_plan_sha256": "1c122776cf61a33d728da59b195bc028f1a3cccbc6589b6b3a253c55707710fe",
+  "verdict": "PASS current source/curriculum readback; original historical findings resolved. Aesthetic owner approval and publication are separate.",
+  "coverage": {
+    "chapters": 10,
+    "units": 20,
+    "paragraphs": 42,
+    "official_source_urls": 29,
+    "verification": "Fetched all29officialsource URLs independently: allHTTP200; selected scripture verse IDs parsed and present. All fragments valid except creation #p1,p9. Read complete42paragraph draft and source-plan; close comparisons of agency, premortal Son, covenant entry, spirit world, postmortal redemption, resurrection/judgment and Aaron narrative."
+  },
+  "findings": [
+    {
+      "severity": "required",
+      "location": "sources.creation.url in content.json and source-plan",
+      "issue": "Fragment #p1,p9 does not exist on official Moses2 page. Multi-range id query is valid; fragment is not.",
+      "recommendation": "Keep id=p1,p9-p12; change fragment to #p1."
+    },
+    {
+      "severity": "required",
+      "location": "glory paragraph1",
+      "issue": "Doctrine and Covenants76 lacks a space.",
+      "recommendation": "Doctrine and Covenants 76."
+    },
+    {
+      "severity": "required-art",
+      "location": "rise scene",
+      "issue": "Paul speaking in Athens already published on God study.",
+      "recommendation": "Use reference preview linking owning study or choose a distinct verified event; no new Areopagus scene."
+    },
+    {
+      "severity": "coordination",
+      "location": "purpose scene",
+      "issue": "Final content proposes Moses vision while earlier assigned/generated purpose picture shows modern chair repair.",
+      "recommendation": "Parent select one exact scene; do not caption modern repair as Moses or count both under one ID."
+    },
+    {
+      "severity": "editorial-minor",
+      "location": "source-plan doctrinal boundaries",
+      "issue": "States Paul writing is restrained composition although revised scene is Paul speaking in Athens.",
+      "recommendation": "Remove stale writing line during scene revision."
+    }
+  ],
+  "doctrinal_assessment": {
+    "resurrection_eternal_life": "Correctly distinguishes universal bodily resurrection through Christ from eternal life with God; no automatic-exaltation claim.",
+    "agency_fall": "Moses4, Moses5 and2Nephi2 preserve willing choice, equal Adam/Eve participation and redemption; no victim-blame or premortal-merit inference.",
+    "spirit_world": "Alma40 treated as intermediate condition, not final glory or literal afterlife map.",
+    "redemption_dead": "D&C13830-35 and58-59 support commissioned messengers, vicarious ordinances and repentance; willingness is sound inference and not coerced salvation.",
+    "judgment": "John5 andD&C137 support Christjudgment, works/desires/opportunity and children before accountability; no personal final-kingdom assignments.",
+    "family_language": "Humane: no guarantee about unwilling relatives, no condemnation for present family circumstances. PMG source supplies covenant/exaltation context.",
+    "humane_voice": "42paragraphs form coherent premortal\u2192creation\u2192fall\u2192mortality\u2192Christ\u2192covenants\u2192death\u2192resurrection\u2192glory\u2192today progression. Applications use invitations and preserve unanswered questions. No promises of instant healing, spiritual emotion or relief identified.",
+    "source_vs_interpretation": "Modern applications generally distinguished from recorded events; source-plan carries art limits internally. Exact ages and geographic reconstruction remain held."
+  },
+  "source_checks": [
+    {
+      "id": "overview",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation?lang=eng",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "pmg",
+      "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/09-chapter-3-lesson-2?lang=eng",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "abraham",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22-p26#p22",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "moses-purpose",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "creation",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p1,p9-p12#p1,p9",
+      "http": 200,
+      "anchor_pass": false
+    },
+    {
+      "id": "stewardship",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p26-p31#p26",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "adam-eve",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p1-p12#p1",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "agency",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p1-p3,p22-p29#p1",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "no-blame",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng&id=p1-p7#p1",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "succor",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p13#p11",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "repent",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng&id=p23-p31#p23",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "suffering",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p16-p19#p16",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "isaiah",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng&id=p3-p6#p3",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "covenant",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p10,p27-p29#p8",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "children",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng&id=p13-p20#p13",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "spirit",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng&id=p6-p14,p21-p23#p6",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "dead",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng&id=p1-p11,p29-p35,p58-p59#p1",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "resurrection",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=p20-p26,p35-p44#p20",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "judge",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p22-p30#p22",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "desires",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng&id=p5-p10#p5",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "glory",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p50-p81,p89-p92#p50",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "know-god",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p1-p5,p20-p23#p1",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "oaks",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/17oaks?lang=eng",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "nelson",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/51nelson?lang=eng",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "aaron",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/22?lang=eng&id=p12-p18#p12",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "athens",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?lang=eng&id=p22-p31#p22",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "moses-vision",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p27-p40#p27",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "chosen-son",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/4?lang=eng&id=p1-p4#p1",
+      "http": 200,
+      "anchor_pass": true
+    },
+    {
+      "id": "doctrine-christ",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng&id=p17-p21#p17",
+      "http": 200,
+      "anchor_pass": true
+    }
+  ],
+  "character_reference_mapping": [
+    {
+      "character": "Moses",
+      "candidates": [
+        {
+          "path": "assets/page-art/bible-together/moses-brass-serpent-full.webp",
+          "exists": true,
+          "sha256": "a20a620d183c720e83be4a1bf4381f5983a232d92d7b9901cc5fffc08124e438"
+        }
+      ],
+      "assessment": "Published Moses continuity candidate; not listed as owner-approved in approved-character-identities.json. Different event from proposed unnamed-mountain vision.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    },
+    {
+      "character": "Adam and Eve",
+      "candidates": [
+        {
+          "path": "assets/page-art/atonement/first-hope.webp",
+          "exists": true,
+          "sha256": "fecacbeca9d2c885707a1feadb25d8b4e502fe3c308aefe15b68a61fdd02e495"
+        },
+        {
+          "path": "assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp",
+          "exists": true,
+          "sha256": "85be78191c31c88375d324e68b4f26ca677d6fb501e6df9510ad4911e2369fff"
+        },
+        {
+          "path": "assets/page-art/holy-ghost/adam-full.webp",
+          "exists": true,
+          "sha256": "e5d5eb9776ae29b62f5c495eaec00997b388ca526f319f3fd07d7073e4ed4679"
+        }
+      ],
+      "assessment": "Published continuity candidates require face reconciliation: Holy Ghost Adam is baptism; Atonement is both figures beside cultivated ground and altar, near proposed labor scene. No explicit identity approval found in registry.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    },
+    {
+      "character": "Lehi",
+      "candidates": [
+        {
+          "path": "assets/page-art/bible-together/lehi-joseph-counsel-full.webp",
+          "exists": true,
+          "sha256": "cde8c433c4ad12ee72c3bf1653b0ba24413dff03e07f9ff910e8a8d6864d1f2f"
+        },
+        {
+          "path": "assets/page-art/book-of-mormon-stories/02-lehi-sariah-full.webp",
+          "exists": true,
+          "sha256": "2fdd9ad53f81c6597dd60a6492daa8566366141f6c7dd25009ce096efc9e2421"
+        }
+      ],
+      "assessment": "Published Lehi candidates. Existing father-son counsel with Joseph is composition-near-duplicate; do not call Joseph Jacob. No registered approval found.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    },
+    {
+      "character": "Jacob son of Lehi",
+      "candidates": [],
+      "assessment": "No exact approved reference mapped. Abrahamic covenant ac-jacob assets depict Old Testament Jacob and MUST NOT be substituted.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    },
+    {
+      "character": "Alma the Younger",
+      "candidates": [
+        {
+          "path": "assets/page-art/birth-of-christ/05-alma-teaches-full.webp",
+          "exists": true,
+          "sha256": "7568e3b8a2bf09c6d6f317f3617dd8187cccc25380343b06a0ae69a6fa42c963"
+        },
+        {
+          "path": "assets/page-art/sitewide/bom-alma-helaman-full.webp",
+          "exists": true,
+          "sha256": "372bee3a1b726719dd7074338b68aa49d21c14c0a033aca4cdc4808821a4ef55"
+        }
+      ],
+      "assessment": "Alma7 Birth scene is explicitly owner-approved per registry; later Helaman scene is age-continuity technical review, not new approval. Helaman must not become Corianton. Existing courtyard father-son scene risks repetitive staging.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    },
+    {
+      "character": "Corianton",
+      "candidates": [],
+      "assessment": "No exact approved reference mapped; identity hold.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    },
+    {
+      "character": "Paul",
+      "candidates": [
+        {
+          "path": "assets/page-art/study-additions/paul-athens-full.webp",
+          "exists": true,
+          "sha256": "9a67c0bbe0a59e862a64cadce1b3893ca2f7bc7a1fceee3d21542ab0f80d2cf8"
+        }
+      ],
+      "assessment": "Exact proposed Areopagus event already owned by answers/god-our-heavenly-father.html, Gallery art-b90e159b29f3. Do not regenerate. Published continuity candidate, not explicit registry approval.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    },
+    {
+      "character": "Joseph F. Smith",
+      "candidates": [],
+      "assessment": "No exact approved late-life identity mapped in registry/assets filename inventory. Joseph Smith owner-approved portrait is a different person, forbidden substitute. D&C138 Christ commissioning scene already owned; quiet1918reading itself not proven duplicate.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    },
+    {
+      "character": "Aaron and Lamoni\u2019s father",
+      "candidates": [],
+      "assessment": "No exact approved references mapped. Aaron is not Ammon; Lamoni\u2019s father is not Lamoni. Must recover source-specific references or choose a different cleared scene.",
+      "pixel_identity_clearance": "pending; this mapping does not approve new likeness or staging"
+    }
+  ],
+  "limits": [
+    "No new image generation in this review.",
+    "Reference candidates checked for existence/hash/registered ownership descriptions; not all pixels independently compared in this mapping task.",
+    "No ownerapproval invented for unregistered characters; registry declares its inventory nonexhaustive. No mapped reference means unresolved, not proofnoneexists.",
+    "Final renderedreader and narrative/picture integration not yet available."
+  ],
+  "owner_approval": false,
+  "historical_review": {
+    "content_sha256": "f8e855eeed45cb8c3b6eec2ef96482695bf3f30e062747cabd46d1083e7e9ea3",
+    "source_plan_sha256": "7de2fe226520b4c794faa00d252b151f2661e192ec13d2f5d68a7887ada4267d",
+    "verdict": "Doctrinal prose conditionally passes; repair citation fragment and presentation typo, resolve duplicate/identity art holds before generation/integration.",
+    "findings_preserved": "Original findings above retained as historical audit trail."
+  },
+  "resolution_readback": [
+    "Creation uses valid #p1 fragment with selected verse query retained.",
+    "Doctrine and Covenants 76 spacing restored.",
+    "Paul is existing-owner Athens reference; prose accurately distinguishes public Athens teaching and Corinthian letter, no unsupported image-writing scene claim.",
+    "Purpose now Moses beholding earth and inhabitants under Moses1, matched to Moses-purpose artwork; modern repair-chair candidate not integrated."
+  ]
+}

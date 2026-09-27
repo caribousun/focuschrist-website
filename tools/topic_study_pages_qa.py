@@ -33,7 +33,7 @@ study_destinations={
  'come-follow-me.html',
 }
 expected=({p.relative_to(ROOT).as_posix() for p in answer_paths}-{FEATURED_JESUS,FEATURED_HOLY_GHOST,'answers/god-our-heavenly-father.html'})|study_destinations
-assert len(links)==27, 'Keep 27 topics after Heavenly Father promotion'
+assert len(links)==28, 'Keep 28 topics including Plan of Salvation after Heavenly Father promotion'
 featured=[n for n in nodes if n.has('fc-settle-featured')]
 assert [(n.attrs.get('href'),n.text().strip()) for n in featured]==[('answers/god-our-heavenly-father.html','Heavenly Father'),(FEATURED_JESUS,'Jesus Christ'),(FEATURED_HOLY_GHOST,'Holy Ghost'),('atonement.html','The Atonement of Jesus Christ')], 'Exact Atonement, Jesus and Holy Ghost featured destinations required'
 assert all(n.parent is featured[0].parent for n in featured) and featured[0].parent.has('fc-answers-featured-pair'), 'Featured destinations must share their existing group'
@@ -50,7 +50,8 @@ for link in links:
   target=next((n for n in ns if n.attrs.get('id')==unquote(u.fragment)),None)
   assert target is not None and any(n.tag in ('h2','h3') for n in target.walk()),href+': named study section exists'
  if p.parent!=ROOT/'answers':continue
- heading_label={'answers/god-our-heavenly-father.html':'God',
+ heading_label={'answers/plan-of-salvation.html':'The Plan of Salvation',
+                'answers/god-our-heavenly-father.html':'God',
                 COVENANT:'The Abrahamic Covenant',
                 'answers/restored-church-of-jesus-christ.html':'The restored Church',
                 'answers/settle-this-in-your-hearts.html':'Settle This in Your Hearts'}.get(href,link.text().strip())

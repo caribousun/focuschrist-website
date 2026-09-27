@@ -88,5 +88,6 @@ for (const page of pages) {
   dom.window.close();
 }
 assert(pages.includes('answers/holy-ghost.html'), 'New Holy Ghost opening must be included');
-assert.equal(openings, 42, 'Every canonical opening, including Holy Ghost, must retain its invitation');
-console.log('Opening flow and cards QA PASS: 42 opening invitations; complete Answers rows.');
+assert(pages.includes('answers/plan-of-salvation.html'), 'New Plan of Salvation opening must be included');
+assert.equal(openings, 43, 'Every canonical opening, including Holy Ghost and Plan of Salvation, must retain its invitation');
+console.log('Opening flow and cards QA PASS: 43 opening invitations; complete Answers rows.');

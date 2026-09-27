@@ -1,0 +1,70 @@
+{
+  "date": "2026-09-27",
+  "method": "builtin image_gen, source verified before generation, actual reference pixels inspected",
+  "status": "candidate visual review; independent review pending; not owner approval",
+  "entries": [
+    {
+      "id": "bore",
+      "prompt": "Create one highly photorealistic cinematic documentary-style image for a noncommercial LDS scripture study. Landscape 1536x1024. An anonymous late Second Temple Judean adult reader and younger adult listener study a parchment scroll in a modest limestone room, oil lamp and cool evening window light. Reader gently pauses and makes thoughtful eye contact with listener, natural relaxed healthy posture, both full heads entirely inside frame with generous headroom, coherent hands resting beside partially unrolled parchment. Period simple woven tunics, earthy olive ochre flax colors, human skin pores, realistic eyes and cloth. The teaching pairs Isaiah53 with Christ bearing our griefs; this is an unnamed reading application, NOT Isaiah himself and NOT a claim of a documented specific event. Historical grounding checked: Isaiah53 canonical passage; Israel Museum Great Isaiah Scroll confirms parchment copies in Second Temple period. No legible invented scripture, modern objects, halo, heavenly montage, dramatic theatrical pose, injury, printed captions or watermark. Main figures occupy middle broad frame, full limbs visible as seated bodies, warm compassionate human engagement. Preserve natural proportions and five fingers per hand.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng",
+        "https://dss.collections.imj.org.il/project"
+      ],
+      "reference": null,
+      "source_path": "C:/Users/wyatt/.codex/generated_images/01a0e029-cd14-76a0-9061-a95215c5978b/exec-337003f2-7ede-46a1-a5bd-9b29921a3290.png"
+    },
+    {
+      "id": "moses-purpose",
+      "prompt": "New distinct source-grounded scripture scene, highly photorealistic 1536x1024 landscape. Use attached existing site artwork ONLY for identity of MOSES: the elderly white-bearded long-gray-haired man standing in CENTER in burgundy mantle. Preserve that man's exact recognizable facial shape, nose, eyes, beard and hair, a somewhat earlier age appropriate but same actor. Do not copy foreground couple, serpent, camp, pole or event. New event Moses1:27-40 from Pearl of Great Price, freshly verified: on an unnamed high mountain Moses beholds earth by Spirit and asks God's purpose. Show Moses alone in medium wide side-three-quarter view with clearly visible realistic eyes and thoughtful face, standing firmly on rocky mountain foreground, looking outward/up toward light outside frame with wonder and attentive engagement. Burgundy mantle over pale woven tunic. Vast natural layered land beyond, restrained daylight, no literal globe, cosmic montage, visible God, tablet, serpent, horn, glowing eyes, text or fantasy geology. Both hands anatomically natural lightly open below waist; full head and both feet generously within image. This is about Moses receiving God's teaching, not Sinai tablets. Documentary realism skin fabric rock detail, compassionate reflective atmosphere and believable body proportions.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p27-p40#p27"
+      ],
+      "reference": "assets/page-art/bible-together/moses-brass-serpent-full.webp",
+      "source_path": "C:/Users/wyatt/.codex/generated_images/01a0e029-cd14-76a0-9061-a95215c5978b/exec-d76a4d35-33fc-4eaa-b4c8-9494217b88cb.png"
+    },
+    {
+      "id": "redemption-dead",
+      "prompt": "Generate one deeply photorealistic respectful historical study picture landscape1536x1024. Identity reference attached historic Church History Library photograph: Joseph F. Smith is ELDERLY seated man on RIGHT with long white beard, receding white hair and small wire spectacles. Preserve his exact real face shape, nose, brows, beard, glasses, age79; NOT younger man on left, NOT Joseph Smith founder. Scene verified before generation in D&C138:1-6 and ChurchHistoryLibrary JosephFSmithExhibit: October3 1918, sitting in his BeehiveHouse bedroom pondering scriptures before vision. Show him alone seated comfortably at a small wooden table with open period Bible, one finger beside page, other hand resting naturally, threequarter intimate view, thoughtful eyes looking up gently toward window just besidecamera. Ordinary restrained early20thcentury bedroom background subtly blurred, not a claim of exact furniture; no modern lamps/medicalequipment, no visible spirits/noChrist/no heavenly portal. Warm windowlight, richdarkwood, mutedcream, mutedgreen, blackperiodsuit whitehighcollar, realistically agedskin and cloth, complete head and hands wellinsideframe, physically coherentchair and body. No legible Bible wording/no invented quotations/no text/no watermark. Calm human questioning and hope; not theatrical astonishment or computer painting.",
+      "sources": [
+        "https://churchhistorylibrary.churchofjesuschrist.org/blog/joseph-f-smith-exhibit?lang=eng",
+        "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng"
+      ],
+      "reference": "work/plan-references/joseph-f-smith-and-son.jpg",
+      "source_path": "C:/Users/wyatt/.codex/generated_images/01a0e029-cd14-76a0-9061-a95215c5978b/exec-7d543770-aaa0-4646-9050-3a578713e590.png"
+    }
+  ],
+  "current_integration_status": {
+    "date": "2026-09-27",
+    "status": "Selected final variants have completed independent candidate review; not owner aesthetic approval; not published.",
+    "generation_note_scope": "Existing status/review/pending phrases in this generation record are historical generation-time notes. They are preserved as evidence, not current release status.",
+    "current_authority": "docs/plan-of-salvation/art-review.json",
+    "independent_evidence": [
+      "docs/plan-of-salvation/independent-art-review.json",
+      "docs/plan-of-salvation/independent-modern-review.json"
+    ],
+    "selected_asset_ids": [
+      "newborn-v2",
+      "moses-purpose",
+      "earth",
+      "stewardship",
+      "labor",
+      "choose",
+      "bedside-care",
+      "return-v2",
+      "bore",
+      "burdens",
+      "small-voices",
+      "between",
+      "redemption-dead",
+      "life-with-god",
+      "long-view",
+      "begin-v2"
+    ],
+    "excluded_attempts": [
+      "newborn",
+      "purpose",
+      "return",
+      "begin"
+    ]
+  }
+}

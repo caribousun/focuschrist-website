@@ -76,7 +76,7 @@ def check():
     nodes = document(ROOT/'answers.html')
     directory = next(n for n in nodes if n.has('fc-answers-jump-links'))
     routes = [n.attrs['href'] for n in directory.walk() if n.tag == 'a']
-    assert len(routes) == len(set(routes)) == 27, 'Exact 27 unique topic destinations required'
+    assert len(routes) == len(set(routes)) == 28, 'Exact 28 unique topic destinations required'
     assert NEW <= set(routes), 'Both priesthood topics must own their destination'
     assert all(not urlsplit(r).fragment and not urlsplit(r).scheme and r.endswith('.html') for r in routes), 'Topic pills must open own pages'
     pixels = {}; pages = {}

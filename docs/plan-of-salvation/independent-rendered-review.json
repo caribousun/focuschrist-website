@@ -1,0 +1,154 @@
+{
+  "reviewer": "focus_review",
+  "status": "PASS bounded independent screenshot inspection of study, talks and Answers; no independent browser interactions claimed",
+  "method": "Independently viewed actual saved screenshots with view_image. No browser control available to this agent. No stitched full-page screenshot used.",
+  "page": {
+    "path": "answers/plan-of-salvation.html",
+    "sha256": "d0f727e387766f6427bf591f74151aba307b04a1fd787ef1a0ad163877b7b178"
+  },
+  "stylesheets": [
+    {
+      "path": "answer-styles.css",
+      "sha256": "683b39b93c35d887ca93395a6431858213cb94a67fc1332185454ba7f698fd1e"
+    },
+    {
+      "path": "site-system.css",
+      "sha256": "6bcb9b6bd26ee85d8afa47ff1f1631430f191fdd3c3e6414937909858fec480b"
+    },
+    {
+      "path": "site-header.css",
+      "sha256": "a915de3ba44c8e14f127e25ec51498960fb1f108990a837d1cc366f8841d1b9f"
+    },
+    {
+      "path": "connected-study.css",
+      "sha256": "d19f17b76d03041471afe5bd771e722353310cafac21aed66486b16c6f896eb3"
+    },
+    {
+      "path": "full-image-viewer.css",
+      "sha256": "157e31b4b0c9fcf63e560ff72902652a04cac1a317c9af13c97c177d4778e95e"
+    },
+    {
+      "path": "artwork-details.css",
+      "sha256": "06ff8a74c6d40303fd49dcc04ee739a04ae00675f360afb27469faa80d3fd0fd"
+    },
+    {
+      "path": "artwork-actions.css",
+      "sha256": "094e3c7c814476bc17653435b36de4fff53ed970fd25e3635f887717961b5714"
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "sha256": "5b56134cc182d7638f170e1941e63e802222d467ad8243b35e900f3f7e912b86"
+    },
+    {
+      "path": "resource-cards.css",
+      "sha256": "ec8d90b5817767310d153c8e2a905bd0b52820b8f8805561ae8d7ab6f361cc8e"
+    },
+    {
+      "path": "complete-card-rows.css",
+      "sha256": "7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941"
+    },
+    {
+      "path": "site-search.css",
+      "sha256": "76a3b0c5fc0f80a12d86b2bf7def5c7aa456a8bac8d8dc9ae9191e9e378005c5"
+    },
+    {
+      "path": "jesus-journey.css",
+      "sha256": "fbc4937ead4678d2919a5b22f65224c1401b2cc4a1ec3b874c427578a8febb8c"
+    },
+    {
+      "path": "hero-details.css",
+      "sha256": "c5b7274cf563cc6a49fdc93a8ca557e0636d4c23e165d0d298f8e543f8a098d0"
+    },
+    {
+      "path": "topic-heroes.css",
+      "sha256": "c0cd96bafe94455fd41d8b6c8357baaa12a0556ce204ba058a1264160acae632"
+    },
+    {
+      "path": "answer-navigation.css",
+      "sha256": "1a77ea3bc73c88b48f0194de1e81bc71d10b7ac6ac9d829e7fc2db2c1de4490c"
+    },
+    {
+      "path": "topic-study-pages.css",
+      "sha256": "10eadb941bebc8f4862e29f3c3006e7b956a2431dfed9d6159cc6c5730e11dd1"
+    },
+    {
+      "path": "plan-of-salvation.css",
+      "sha256": "214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc"
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\con\\outputs\\Plan-study-desktop-1366-viewport.png",
+      "sha256": "a0be8427d5967ace9daba0c21eafa889782ace84e6d5868953d5f3b0eb463fbc",
+      "requested_width": 1366
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\con\\outputs\\Plan-study-tablet-900.png",
+      "sha256": "f1069c3fca85cf24b0cb980f0fb56f99ab6df4d801f2b06bad4c875c83fa4524",
+      "requested_width": 900
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\con\\outputs\\Plan-study-tablet-768.png",
+      "sha256": "99dc885cdfdfeb48a961a6690b82acf59a3fb1979331dc1207e0279dc9cdfe6a",
+      "requested_width": 768
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\con\\outputs\\Plan-talks-desktop-1366.png",
+      "sha256": "c92193df7529e2e469d93162ca5658836f5bf28c7aabf74ba7d00490e84d6247",
+      "requested_width": 1366
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\con\\outputs\\Plan-talks-tablet-768.png",
+      "sha256": "ec8737749888e18b98955bc25381c11194d621bacb5de4c3b4bdff8dd14a8d05",
+      "requested_width": 768
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\con\\outputs\\Plan-Answers-desktop.png",
+      "sha256": "8610c5389a385dcc5bc41e4446ffae5bd573a962003c538a38ed5c44f543778a",
+      "requested_width": 1366
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\con\\outputs\\Plan-opening-phone.png",
+      "sha256": "60ff18c9f2cffe984ad8a50c3ac883a63e4291f1a0b1d4f441a02c03517cd653",
+      "requested_width": 390
+    },
+    {
+      "path": "C:\\Users\\wyatt\\Documents\\Codex\\2026-09-26\\con\\outputs\\Plan-opening-320.png",
+      "sha256": "25b080ced054ce3d3f84ef007714d518fa294a32819a43292f666b6365d01eda",
+      "requested_width": 320
+    }
+  ],
+  "own_pixel_findings": [
+    "Visible spirit-world study paragraphs and scripture control fit available width without horizontal clipping.",
+    "768 screenshot shows readable chapter selector and whole-study controls on one row with separation.",
+    "768 screenshot displays complete family-photo artwork at natural 3:2 proportions; faces and essential action intact. 900 and1366 screenshots show upper artwork with lower section below viewport, not evidence of CSS cropping.",
+    "No anomalous blank row or stranded card visible within these bounded viewports. Normal scrolling places upper text beneath fixed desktop header.",
+    "Additional talk screenshots: two equal columns with consistent gaps;768shows final two cards as a complete third row. Native previews visibly loaded; titles/body wrap without ellipsis or horizontal clipping in shown portions. Desktop top2cards complete; remaining rows partly below viewport. No stranded last card or blank column.",
+    "Answers desktop: four aligned equal featured pills in Father/Jesus/HolyGhost/Atonement order, Atonement wraps naturally on two lines;28topiclinks form7complete4-column rows including Plan of Salvation in alphabetical position. Visible labels, search and navigation fit without clipping.",
+    "Phone openings390/320: hero face, complete crown and both hands visible with preserved likeness; title, subtitle, header controls and Continue fit without horizontal clipping. Continue fully visible near bottom of supplied viewport. There is deliberate vertical space between subtitle and Continue; no content collision visible. These are opening-only screenshots, not phone interaction tests."
+  ],
+  "scope_limits": [
+    "Only supplied spirit-world viewports inspected; this is not independent all-chapter browser interaction or full-page coverage.",
+    "Identity actual-pixel checks are recorded separately in independent-art-review.json."
+  ],
+  "parent_reported_interactions": {
+    "evidence_origin": "Parent report, not actions performed by focus_review",
+    "all_chapter_paths": 10,
+    "art_dialogs": 16,
+    "ask_return": "PASS returns #spirit-world",
+    "scripture": "Alma40 correct12selected verses, nested close and ContinueLesson passed",
+    "hero_keyboard": "Parent reports Enter opens John17 reflection/source; Close with Enter restores original art-link focus.",
+    "phone_geometry": "Parent reports no overflow;320 Continue bottom728 within740."
+  },
+  "owner_approval": false,
+  "answers_binding": [
+    {
+      "path": "answers.html",
+      "sha256": "46b7daecb4676989878e134a26c6f494f8553b6dcd4e5163c1f43fd73452e470"
+    },
+    {
+      "path": "answers-hero.css",
+      "sha256": "3f3ab5babea5aadf5ddd79655922bd29b7f4c8b1aa74742b1146eccfca7caa87"
+    }
+  ]
+}

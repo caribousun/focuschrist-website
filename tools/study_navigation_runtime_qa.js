@@ -95,7 +95,7 @@ const studyDestinations = ['birth-of-christ.html','general-conference.html','boo
   'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html'];
 for (const href of studyDestinations) expectedPills.add(href);
 expectedPills.delete('answers/god-our-heavenly-father.html');
-assert.equal(pills.length,27,'27 topics after Heavenly Father promotion');
+assert.equal(pills.length,28,'28 topics including Plan of Salvation after Heavenly Father promotion');
 assert.match(html, /class="fc-button fc-settle-featured" href="atonement.html"/,'Atonement remains featured above grid');
 const featuredPair = html.match(/<div class="fc-answers-featured-pair">([\s\S]*?)<\/div>/);
 assert.ok(featuredPair, 'featured study pair required');
@@ -119,7 +119,7 @@ for (const [href,label] of pills.filter(([href]) =>
   assert.equal(h.desktop.children.length,desktopSize,'desktop generated topic must not duplicate');
   assert.equal(h.menu.children.length,size,'hash changes must not duplicate generated topic links');check(h,label);
 }
-for (const [file,label] of [['holy-ghost.html','Holy Ghost'],['god-our-heavenly-father.html','God'],['restored-church-of-jesus-christ.html','The Restored Church'],['prayer-and-personal-revelation.html','Prayer & Revelation'],['death-of-a-child.html','Death of a Child'],['divorce-and-faith.html','Divorce'],['look-unto-me-doctrine-and-covenants-6-36.html','Look Unto Me']]) {
+for (const [file,label] of [['plan-of-salvation.html','Plan of Salvation'],['holy-ghost.html','Holy Ghost'],['god-our-heavenly-father.html','God'],['restored-church-of-jesus-christ.html','The Restored Church'],['prayer-and-personal-revelation.html','Prayer & Revelation'],['death-of-a-child.html','Death of a Child'],['divorce-and-faith.html','Divorce'],['look-unto-me-doctrine-and-covenants-6-36.html','Look Unto Me']]) {
   const h=createHarness('/answers/'+file);h.context.initCurrentStudyNavigation();check(h,label);
 }
 const h=createHarness('/answers.html','#quiet-prayer-title');h.context.initCurrentStudyNavigation();check(h,'Prayer & Revelation');

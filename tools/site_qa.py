@@ -428,8 +428,8 @@ def main() -> int:
     # Coverage must remain global; successful per-page counts cannot hide reuse.
     from topic_artwork_uniqueness_qa import scan as scan_artwork
     artwork = scan_artwork(ROOT)
-    if len(artwork['pages']) != 24 or not {'answers/abrahamic-covenant.html', 'answers/holy-ghost.html'} <= {p['page'] for p in artwork['pages']}:
-        fail(errors, f"Artwork coverage expected 24 study pages including Covenant and Holy Ghost, found {len(artwork['pages'])}")
+    if len(artwork['pages']) != 25 or not {'answers/abrahamic-covenant.html', 'answers/holy-ghost.html', 'answers/plan-of-salvation.html'} <= {p['page'] for p in artwork['pages']}:
+        fail(errors, f"Artwork coverage expected 25 study pages including Covenant, Holy Ghost and Plan, found {len(artwork['pages'])}")
     for asset, issue in artwork['assetIssues'].items():
         fail(errors, f"{asset}: {issue}")
     for page in artwork['pages']:

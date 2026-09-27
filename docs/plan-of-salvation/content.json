@@ -1,0 +1,787 @@
+{
+  "version": 1,
+  "status": "Source prose and final integration independently reviewed; unpublished candidate",
+  "date": "2026-09-27",
+  "proposed_route": "answers/plan-of-salvation.html",
+  "title": "The Plan of Salvation",
+  "subtitle": "Where we came from, why this life matters, and the hope Jesus Christ makes possible.",
+  "introduction": [
+    "Some questions reach into every part of life: Who am I? Why are we here? What happens when someone dies? Latter-day Saints look to the Father's plan of salvation for answers, with Jesus Christ at its center.",
+    "You can follow the whole journey or begin with the question closest to you. The scriptures do not answer every detail, but they teach why your life matters and why there is reason to turn toward Christ."
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "id": "before-birth",
+      "title": "You belong to God's family",
+      "units": [
+        {
+          "id": "belong",
+          "title": "A life that begins before birth",
+          "paragraphs": [
+            "A new child can make familiar questions feel very close: Who is this person? What will this life hold? The scriptures begin our story before that first breath. Abraham learned that human life had a history before the earth was made. The Church teaches that we lived with our heavenly parents as Their spirit children.",
+            "That teaching gives every person a worth that does not depend on usefulness, achievement or recognition. We arrive here to receive a body and learn to choose, love and grow. We do not remember that earlier life, and we cannot read someone's mortal circumstances as a measure of their premortal worth.",
+            "The book of Moses also places Jesus Christ at the beginning of this story. The Beloved Son accepts the Father’s will, while Satan seeks to take away human agency. Our hope rests in the Savior who honors the Father and makes a willing response possible."
+          ],
+          "source_ids": [
+            "abraham",
+            "overview",
+            "chosen-son"
+          ],
+          "reflection": "What might change in how you treat yourself or another person if you begin with belonging?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "present-day-application",
+            "scene": "Both parents attentively hold a newborn in an ordinary modern home; quiet direct interaction, no heavenly overlay.",
+            "identity_requirements": [],
+            "boundaries": "Modern application, not a picture of a spirit entering a body. Avoid implying every home has this structure or that childlessness diminishes worth.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        },
+        {
+          "id": "purpose",
+          "title": "More than getting through the day",
+          "paragraphs": [
+            "Moses beholds the earth and its inhabitants by the Spirit, then asks why these things exist. The Lord answers with a purpose that reaches to every person: immortality and eternal life. Through Jesus Christ, all will rise from the dead. Eternal life means life with God, made possible through the Savior.",
+            "It can be hard to think beyond the next responsibility. Yet purpose need not make ordinary work feel small. Caring for a person, learning patience and beginning again after a mistake can all belong to a life turned toward God. The destination helps us decide how to live today."
+          ],
+          "source_ids": [
+            "moses-vision",
+            "moses-purpose",
+            "pmg"
+          ],
+          "reflection": "Which ordinary responsibility could you approach with a little more love today?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "scriptural-account",
+            "scene": "Moses on an unnamed mountain, looking outward with wonder as he beholds the earth; restrained earthly foreground, no literal globe or montage of heavenly realms.",
+            "identity_requirements": [
+              "Moses: retrieve established reference before generation"
+            ],
+            "boundaries": "Moses1:42 leaves the mountain unnamed. No visible Father or Holy Ghost. Do not call it Mount Sinai. His spiritual vision is not a claim that an ordinary overlook could show the whole earth.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": "creation"
+    },
+    {
+      "number": 2,
+      "id": "creation",
+      "title": "An earth prepared for us",
+      "units": [
+        {
+          "id": "earth",
+          "title": "An earth prepared for life",
+          "paragraphs": [
+            "Moses describes the earth taking shape through the Only Begotten. Dry land appears, and plants bear seed and fruit. The account directs our attention to a world that can sustain life and to the divine purpose behind it.",
+            "The Creation belongs at the beginning of this study because bodies and earthly experience matter. Food, shelter and the living world are part of our mortal home. Looking closely at a leaf or a piece of fruit can be a simple way to remember how much we receive before we have done anything to earn it."
+          ],
+          "source_ids": [
+            "creation"
+          ],
+          "reflection": "What part of the created world helps you feel gratitude?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "scriptural-theme",
+            "scene": "Close detailed view of seed-bearing plants, fruit and rich earth after rain; no river-valley panorama or sea/bird scene.",
+            "identity_requirements": [],
+            "boundaries": "Do not identify modern location as Eden or claim a scientific timeline. Distinct from existing Creation river and birds scenes.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        },
+        {
+          "id": "tend",
+          "title": "Learning to care for what we receive",
+          "paragraphs": [
+            "Genesis describes women and men in the image of God and gives them responsibility within the living world. Human dignity and responsibility appear together. The earth is a gift, and our use of it affects other people and other forms of life.",
+            "A child learning to tend a young tree can discover something simple: growth needs care. We can receive the world gratefully while also protecting what another generation will need. Our place in the Creation invites attention rather than indifference."
+          ],
+          "source_ids": [
+            "stewardship"
+          ],
+          "reflection": "What is one small part of the world that has been entrusted to your care?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "present-day-application",
+            "scene": "Modern adult gardener and child tend a young fruit tree; child gently supports trunk while adult waters roots.",
+            "identity_requirements": [],
+            "boundaries": "Modern application. No invented Genesis action. Avoid duplicating generic sower artwork.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": "fall-agency"
+    },
+    {
+      "number": 3,
+      "id": "fall-agency",
+      "title": "Learning to choose",
+      "units": [
+        {
+          "id": "labor",
+          "title": "Adam and Eve begin life outside Eden",
+          "paragraphs": [
+            "After leaving Eden, Adam tills the earth, and Eve works with him. Moses places them together in the labor of mortal life. They have children, call upon God and learn that redemption will come through His Son.",
+            "Their story includes loss, learning and hope. Eve speaks of knowing good and evil and of the joy of redemption. The Fall opens the way to mortal experience; Christ opens the way through its sin and death. We do not have to blame Eve or dismiss the cost of mortality to recognize both truths."
+          ],
+          "source_ids": [
+            "adam-eve"
+          ],
+          "reflection": "What do Adam and Eve's shared work and worship help you notice about partnership?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "scriptural-account",
+            "scene": "Adam and Eve cultivate earth together, equally active, practical modest clothing; no altar or baptism.",
+            "identity_requirements": [
+              "Adam: existing approved scene reference required",
+              "Eve: existing approved scene reference required"
+            ],
+            "boundaries": "Exact landscape/tools unspecified. Reuse actual existing Adam/Eve identities before generation; no new younger substitute.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        },
+        {
+          "id": "choose",
+          "title": "Lehi teaches Jacob about freedom",
+          "paragraphs": [
+            "Lehi speaks to Jacob as a father who knows that his son has suffered. He does not pretend that those early hurts were good. He turns Jacob toward the Redeemer and teaches how opposition, choice and redemption belong to mortal life.",
+            "Lehi's invitation is to choose liberty and eternal life through the Messiah. Agency is more than being left alone with consequences. Christ makes repentance and a different future possible. We can take responsibility for our choices without calling another person's harm our fault."
+          ],
+          "source_ids": [
+            "agency"
+          ],
+          "reflection": "Where do you need help to make a freer, more faithful choice?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "scriptural-account",
+            "scene": "Older Lehi speaks with grown Jacob in restrained domestic setting; no plates being invented, no temple or Nephi substitution.",
+            "identity_requirements": [
+              "Lehi: existing approved source reference required",
+              "Jacob son of Lehi: identity mapping required"
+            ],
+            "boundaries": "Jacob is Lehi's son, not brother Nephi. Location and exact ages not specified by this passage; preserve established identities.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": "mortal-life"
+    },
+    {
+      "number": 4,
+      "id": "mortal-life",
+      "title": "Living in a mortal body",
+      "units": [
+        {
+          "id": "care",
+          "title": "A body worth caring for",
+          "paragraphs": [
+            "A body lets us work, learn, rest and reach toward someone we love. It also makes us vulnerable. Illness and disability can change the shape of a day or a life, but they do not lessen the worth of the person living it.",
+            "When the disciples asked whose sin had caused a man's blindness, Jesus rejected their proposed blame. Alma teaches that Christ knows His people's pains and infirmities. Those passages can lead us toward practical compassion: listening, seeking appropriate care and making room for a person's own voice."
+          ],
+          "source_ids": [
+            "no-blame",
+            "succor"
+          ],
+          "reflection": "How could you offer help while respecting the other person's wishes?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "present-day-application",
+            "scene": "Modern patient actively converses with a nurse and family member at bedside; intact agency and dignity, natural eye contact.",
+            "identity_requirements": [],
+            "boundaries": "No guaranteed cure, no claim disability measures spiritual merit; respectful non-graphic medical setting.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        },
+        {
+          "id": "return",
+          "title": "Corianton receives a way forward",
+          "paragraphs": [
+            "Alma's teaching about the plan comes in a conversation with his son Corianton. He addresses wrongdoing seriously, then explains mercy through the Atonement. His purpose is to bring his son to repentance rather than leave him trapped in excuses or despair.",
+            "At the end, Alma sends Corianton to teach truth and help others repent. A changed life still has work to do. For us, returning to Christ may include confessing, repairing what we can and accepting help as we learn to live differently."
+          ],
+          "source_ids": [
+            "repent"
+          ],
+          "reflection": "What would a sincere next step toward repair look like?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "scriptural-account",
+            "scene": "Alma the younger speaking directly with adult Corianton in a quiet setting; son's posture attentive, not theatrically shamed.",
+            "identity_requirements": [
+              "Alma the younger: existing approved reference required",
+              "Corianton: verify existing depiction before creating identity"
+            ],
+            "boundaries": "Do not invent confession dialogue or reconciliation details. Distinct from Lehi/Jacob relationship; identity references required.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": "redeemer"
+    },
+    {
+      "number": 5,
+      "id": "redeemer",
+      "title": "Jesus Christ makes the way",
+      "units": [
+        {
+          "id": "bore",
+          "title": "The promised Savior bears our griefs",
+          "paragraphs": [
+            "Isaiah describes a servant acquainted with grief who bears the burdens of others. Christians read this passage in the light of Jesus Christ. His suffering is not distant from the pain people carry; it belongs at the center of the promise of redemption.",
+            "Alma adds that the Savior will take upon Himself sickness, infirmity, death and sin. These are not all the same experience, and people need more than one kind of help. We can seek forgiveness for wrongdoing and seek comfort or care for suffering we did not cause."
+          ],
+          "source_ids": [
+            "isaiah",
+            "succor"
+          ],
+          "reflection": "Which part of Christ's compassion do you most need to understand today?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "historical-reading-application",
+            "scene": "Ancient Judean reader studies a scroll of Isaiah beside an oil lamp; restrained period setting, text not fabricated legibly.",
+            "identity_requirements": [],
+            "boundaries": "Unnamed reader, not claim exact portrait of Isaiah composing or exact manuscript surviving; verify period props before generation.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        },
+        {
+          "id": "prayer",
+          "title": "Jesus prays for eternal life",
+          "paragraphs": [
+            "Jesus lifts His eyes to heaven and prays to the Father. He speaks of the glory He had before the world and of the work He has done on earth. The same prayer names eternal life as knowing the Father and Jesus Christ.",
+            "Before His suffering, the Savior's prayer reaches beyond those immediately around Him to people who will believe through their witness. The plan is personal: a relationship with the Father and Son, made possible through Christ. His prayer gives us more to seek than simply a life without difficulty."
+          ],
+          "source_ids": [
+            "know-god",
+            "suffering"
+          ],
+          "reflection": "As you read His prayer, what do you learn about the life Jesus wants to share with us?",
+          "art": {
+            "status": "Use new John17 hero once; no additional body original",
+            "type": "hero-reference",
+            "scene": "Reference the accepted John17 hero without rendering a duplicate body picture.",
+            "identity_requirements": [
+              "Jesus Christ: assets/heroes/home-christ-signature-approved-20260907.png"
+            ],
+            "boundaries": "Parent owns accepted hero; no second original or double-counting.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": "covenants"
+    },
+    {
+      "number": 6,
+      "id": "covenants",
+      "title": "Following Christ together",
+      "units": [
+        {
+          "id": "burdens",
+          "title": "A covenant reaches toward other people",
+          "paragraphs": [
+            "At the waters of Mormon, Alma connects baptism with a willingness to bear burdens, mourn with those who mourn and stand as a witness of God. A covenant is a committed relationship with God, and it changes how we approach His children.",
+            "Later in the chapter, people share what they have according to their ability and others' needs. Someone who has little is not required to pretend to have much. The invitation is willing care, shaped by the real needs and capacities of a community.",
+            "Nephi describes the way into this life of discipleship through faith in Christ, repentance, baptism and the gift of the Holy Ghost. Then we continue with hope, love and trust in the Savior. Covenants are not a substitute for His grace; they commit us to follow Him and receive the help He offers."
+          ],
+          "source_ids": [
+            "covenant",
+            "doctrine-christ"
+          ],
+          "reflection": "Whose burden could you help carry in a way that is useful to them?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "scriptural-community",
+            "scene": "Members of Alma's community share food and cloth with another household; recipients participate, no Alma portrait required.",
+            "identity_requirements": [],
+            "boundaries": "Mosiah18:27–29 supplies voluntary sharing; exact goods/architecture illustrative. No claim known archaeological location.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        },
+        {
+          "id": "small-voices",
+          "title": "Children have a place in Christ's ministry",
+          "paragraphs": [
+            "Third Nephi records that Jesus ministered to children and enabled them to speak marvelous things to their fathers. The record does not give us their words. It does show that children were participants in His ministry, not merely background to the adults' experience.",
+            "The chapter goes on to describe people teaching, serving and dealing justly with one another. Learning Christ's gospel can change both whom we listen to and how we live together. A child, a quiet neighbor or a new learner may deserve more patient attention than we first realize."
+          ],
+          "source_ids": [
+            "children"
+          ],
+          "reflection": "Who could you listen to more patiently this week?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "present-day-application",
+            "scene": "A modern child explains a small drawing to an attentive parent and grandparent; adults listen at eye level.",
+            "identity_requirements": [],
+            "boundaries": "The 3 Nephi 26:14 event is already owned by Settle Thy Heart. Do not redraw it. Modern listening application, no invented marvelous words.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": "spirit-world"
+    },
+    {
+      "number": 7,
+      "id": "spirit-world",
+      "title": "Life continues beyond death",
+      "units": [
+        {
+          "id": "between",
+          "title": "Death is not the end of a person",
+          "paragraphs": [
+            "Alma distinguishes death from resurrection. Between them, the spirit continues to live. He describes peace for the righteous and also the painful condition of those who have chosen wickedness. This is an intermediate state, not the final resurrection or a complete map of eternity.",
+            "For someone grieving, those teachings may sit beside longing and unanswered questions. Faith does not require us to stop missing a person. We can speak honestly about loss while holding to Christ's promise that death will not have the last word."
+          ],
+          "source_ids": [
+            "spirit"
+          ],
+          "reflection": "What would help you remember someone with both honesty and hope?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "present-day-application",
+            "scene": "An adult and younger relative carefully preserve a family photograph together at a table; shared remembrance, no ghost or visible deceased person.",
+            "identity_requirements": [],
+            "boundaries": "Present application; do not repeat existing lone widower notebook portrait. No grief timetable, afterlife visit or promise of immediate peace.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        },
+        {
+          "id": "redemption-dead",
+          "title": "The gospel reaches beyond death",
+          "paragraphs": [
+            "Joseph F. Smith's vision begins as he ponders the scriptures and the Savior's redeeming sacrifice. He learns that Christ organized messengers to carry the gospel to the dead. Those who lacked its knowledge are not simply forgotten.",
+            "The revelation names faith, repentance and ordinances performed on behalf of the dead. It preserves a willing response: redemption is not forced on anyone. Family history and temple service can therefore be acts of love for people whose lives continue beyond our sight."
+          ],
+          "source_ids": [
+            "dead"
+          ],
+          "reflection": "How does the possibility of learning beyond death affect your view of God's mercy?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "scriptural-account",
+            "scene": "Joseph F. Smith seated with an open Bible in a restrained early twentieth-century room on October3,1918, pondering before the vision.",
+            "identity_requirements": [
+              "Joseph F. Smith: actual late-life historical photo/reference mapping required"
+            ],
+            "boundaries": "D&C138:1–6 records sitting, pondering and Bible reading. No spirits in the room. Verify an actual late-life JosephF.Smith reference; do not substitute JosephSmith. Exact furnishings are not specified.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": "resurrection-judgment"
+    },
+    {
+      "number": 8,
+      "id": "resurrection-judgment",
+      "title": "Raised and known by Christ",
+      "units": [
+        {
+          "id": "rise",
+          "title": "Christ makes resurrection possible",
+          "paragraphs": [
+            "Paul teaches the Resurrection in letters and in public. In Athens he speaks of the Creator, our relationship to God and the risen One through whom God will judge the world. In his letter to Corinth, he makes the promise clear: as death reaches all through Adam, life through Christ will reach all as well.",
+            "Paul also compares the body laid down in death with a seed that grows into a different form. The comparison helps him teach transformation without making the body worthless. Our final hope rests in what Christ has done, even while many details of that future remain beyond our experience."
+          ],
+          "source_ids": [
+            "resurrection",
+            "spirit",
+            "athens"
+          ],
+          "reflection": "How might belief in resurrection shape the way you care for your own body or someone else's?",
+          "art": {
+            "status": "Existing owner preview, not a new original",
+            "type": "existing-owner-reference",
+            "scene": "Reference existing Paul at Athens picture in the God study.",
+            "identity_requirements": [
+              "Paul: actual existing reference required"
+            ],
+            "boundaries": "Do not regenerate or copy ownership of assets/page-art/study-additions/paul-athens-full.webp.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings.",
+            "reference_owner": "answers/god-our-heavenly-father.html",
+            "reference_title": "Paul invites Athens to seek God",
+            "reference_anchor": "seek-god"
+          }
+        },
+        {
+          "id": "known",
+          "title": "A judgment that knows the whole person",
+          "paragraphs": [
+            "Jesus teaches that the Father has entrusted judgment to the Son. The One who judges is also the One who gives life. His judgment is just; we do not have to turn our incomplete understanding of someone into a final verdict.",
+            "Joseph Smith's vision of Alvin teaches that the Lord considers both works and the desires of the heart, including what people would have received had they known the gospel. Children who die before accountability are also included in the promise of celestial life. These truths leave room for both accountability and profound trust."
+          ],
+          "source_ids": [
+            "judge",
+            "desires"
+          ],
+          "reflection": "What judgment about another person could you leave in Christ's hands?",
+          "art": {
+            "status": "Reference preview only; do not count as new original",
+            "type": "existing-owner-reference",
+            "scene": "Use an existing Christ study reference preview linked to its owning page; no new Joseph/Alvin picture.",
+            "identity_requirements": [],
+            "boundaries": "Parent must select exact registered existing asset and owning anchor. Never move its ownership or count it as a new picture.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings.",
+            "reference_owner": "jesus-christ/redeemer-and-risen-lord.html"
+          }
+        }
+      ],
+      "next_chapter": "eternal-life"
+    },
+    {
+      "number": 9,
+      "id": "eternal-life",
+      "title": "Receiving God's glory",
+      "units": [
+        {
+          "id": "glory",
+          "title": "God offers more than a narrow either-or",
+          "paragraphs": [
+            "Doctrine and Covenants 76 describes celestial, terrestrial and telestial glory. These are not three stages of mortal life, and they are not labels for sorting the people around us. The revelation expands our understanding of God's mercy while taking our response to Christ seriously.",
+            "President Dallin H. Oaks teaches that God's plan offers His children kingdoms of glory and invites them to receive the fulness of life with Him. The highest hope is not an achievement we manufacture alone. The revelation describes people made perfect through Jesus Christ."
+          ],
+          "source_ids": [
+            "glory",
+            "oaks"
+          ],
+          "reflection": "What helps you seek God's highest gifts without judging someone else's final future?",
+          "art": {
+            "status": "Reference preview only; no new star/planet filler",
+            "type": "existing-owner-reference",
+            "scene": "Use the existing Joseph/Sidney witness of the living Christ as a reference preview linked to Restoration and Today.",
+            "identity_requirements": [],
+            "boundaries": "D&C76 vision already owned. No duplicate original, no imagined three-tier heaven or astronomical map.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings.",
+            "reference_owner": "jesus-christ/restoration-and-today.html"
+          }
+        },
+        {
+          "id": "life-with-god",
+          "title": "Eternal life is life with God",
+          "paragraphs": [
+            "Eternal life means more than living for a very long time. Jesus describes it as knowing the Father and the Son. The celestial promise includes dwelling in Their presence, with lives changed through the Savior.",
+            "Covenants teach us to love and remain faithful as we move toward that promise. We should not use another person's present family circumstances to declare what God will withhold from them. We can seek the blessings He offers and trust Him with what we cannot yet see."
+          ],
+          "source_ids": [
+            "know-god",
+            "glory",
+            "pmg"
+          ],
+          "reflection": "What practice helps you know Christ rather than only know facts about Him?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "present-day-application",
+            "scene": "Adults of different ages leave a temple exterior together, one individual walking confidently alone nearby; no compulsorycouplecomposition.",
+            "identity_requirements": [],
+            "boundaries": "Modernapplication, no ordinanceinterior or guaranteedrelationshipoutcome. Verify any identifiabletemplelocationbeforegeneration.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": "today"
+    },
+    {
+      "number": 10,
+      "id": "today",
+      "title": "Living the plan today",
+      "units": [
+        {
+          "id": "long-view",
+          "title": "Bring eternity into one decision",
+          "paragraphs": [
+            "President Russell M. Nelson invites us to take an eternal view of our choices and put Jesus Christ first. That counsel can reach into very ordinary decisions: how we respond to frustration, what we give our attention to and whether we seek help when we need it.",
+            "You do not have to change every part of life at once to take a sincere step. Choose something specific enough to practice. A difficult apology, a needed conversation or time set aside for prayer may matter more today than an elaborate plan that never becomes an action."
+          ],
+          "source_ids": [
+            "nelson"
+          ],
+          "reflection": "What is one decision you want to make with Christ in mind?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "present-day-application",
+            "scene": "A person puts down a phone to attend to an in-person family conversation, warm ordinaryhome, mutual attention.",
+            "identity_requirements": [],
+            "boundaries": "Application not narratedbiography ofPresidentNelson. Avoidgenericstudytable; momentconcreteandactionable.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        },
+        {
+          "id": "begin",
+          "title": "A king asks what he can do",
+          "paragraphs": [
+            "Aaron teaches Lamoni’s father from the scriptures, beginning with Creation and the Fall and continuing to redemption through Christ. The king responds with a personal question: what must he do to receive eternal life? He is willing to give up his possessions, but Aaron directs him toward faith, repentance and prayer.",
+            "The king kneels and asks God to make Himself known, offering to give up his sins. The story brings this whole journey back to a willing heart. You may still have questions about the plan. You can keep learning while choosing one honest step toward Christ today."
+          ],
+          "source_ids": [
+            "aaron"
+          ],
+          "reflection": "What would you like to ask God, and what are you willing to change?",
+          "art": {
+            "status": "proposal-only; source and ownership review required before generation",
+            "type": "scriptural-account",
+            "scene": "Lamoni’s father kneels in prayer in his palace while Aaron remains nearby, before the king falls as if dead.",
+            "identity_requirements": [
+              "Lamoni’s father: check existing identity, do not substitute Lamoni",
+              "Aaron: check existing identity, do not substitute Ammon"
+            ],
+            "boundaries": "Alma22:17–18. This is Lamoni’s father, not Lamoni; Aaron, not Ammon. No invented spoken words or exact geography. Composition holds before collapse.",
+            "caption_draft": "Derive a concise visible-action caption from the accepted pixels and these paragraphs; do not assert unrecorded dialogue or feelings."
+          }
+        }
+      ],
+      "next_chapter": null
+    }
+  ],
+  "sources": [
+    {
+      "id": "overview",
+      "label": "Plan of Salvation",
+      "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation?lang=eng",
+      "summary": "Premortal life, mortality, Christ's Atonement, spirit world, resurrection and judgment form one plan.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "pmg",
+      "label": "Preach My Gospel, lesson 2",
+      "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/09-chapter-3-lesson-2?lang=eng",
+      "summary": "Current official teaching sequence; distinguishes immortality from eternal life.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "abraham",
+      "label": "Abraham 3:22–26",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22-p26#p22",
+      "summary": "Abraham learns of life before birth, the earth's purpose and moral agency.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "moses-purpose",
+      "label": "Moses 1:39",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39",
+      "summary": "God's work concerns human immortality and eternal life.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "creation",
+      "label": "Moses 2:1, 9–12",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p1,p9-p12#p1",
+      "summary": "Creation through the Only Begotten; land, plants and fruit-bearing trees.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "stewardship",
+      "label": "Genesis 1:26–31",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p26-p31#p26",
+      "summary": "Human beings made in God's image; entrusted with living creation.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "adam-eve",
+      "label": "Moses 5:1–12",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p1-p12#p1",
+      "summary": "Adam and Eve labor together, call upon God and learn of redemption.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "agency",
+      "label": "2 Nephi 2:1–3, 22–29",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p1-p3,p22-p29#p1",
+      "summary": "Lehi addresses Jacob; Fall, joy and liberty through the Mediator.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "no-blame",
+      "label": "John 9:1–7",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng&id=p1-p7#p1",
+      "summary": "Jesus rejects the proposed blame of the blind man's or his parents' sin.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "succor",
+      "label": "Alma 7:11–13",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p13#p11",
+      "summary": "Christ takes pains, sickness, death and sins; His mercy includes succoring people.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "repent",
+      "label": "Alma 42:23–31",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng&id=p23-p31#p23",
+      "summary": "Mercy through Atonement; willing response, repentance and Alma's commission to Corianton.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "suffering",
+      "label": "Doctrine and Covenants 19:16–19",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/19?lang=eng&id=p16-p19#p16",
+      "summary": "Christ's own witness of suffering and completing His Father's preparations.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "isaiah",
+      "label": "Isaiah 53:3–6",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng&id=p3-p6#p3",
+      "summary": "The servant bears griefs and sorrows; Christian reading points to Christ.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "covenant",
+      "label": "Mosiah 18:8–10, 27–29",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p10,p27-p29#p8",
+      "summary": "Baptismal covenant and voluntary sharing according to ability and need.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "children",
+      "label": "3 Nephi 26:13–20",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng&id=p13-p20#p13",
+      "summary": "Christ ministers to children; marvelous words are not recorded; community practices justice.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "spirit",
+      "label": "Alma 40:6–14, 21–23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng&id=p6-p14,p21-p23#p6",
+      "summary": "State between death and resurrection differs from bodily resurrection.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "dead",
+      "label": "Doctrine and Covenants 138:1–11, 29–35, 58–59",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng&id=p1-p11,p29-p35,p58-p59#p1",
+      "summary": "Joseph F. Smith ponders; Christ sends messengers; dead taught and redeemed through repentance and ordinances.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "resurrection",
+      "label": "1 Corinthians 15:20–26, 35–44",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/1-cor/15?lang=eng&id=p20-p26,p35-p44#p20",
+      "summary": "Christ's Resurrection assures all will rise; seed analogy concerns resurrection.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "judge",
+      "label": "John 5:22–30",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/5?lang=eng&id=p22-p30#p22",
+      "summary": "The Son has authority to raise and judge; His judgment is just.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "desires",
+      "label": "Doctrine and Covenants 137:5–10",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/137?lang=eng&id=p5-p10#p5",
+      "summary": "Alvin's appearance; mercy for those without knowledge, judgment of works and desires; children saved.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "glory",
+      "label": "Doctrine and Covenants 76:50–70, 71–81, 89–92",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p50-p70,p71-p81,p89-p92#p50",
+      "summary": "Celestial, terrestrial and telestial glory; perfection through Christ, not self-sufficiency.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "know-god",
+      "label": "John 17:1–5, 20–23",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p1-p5,p20-p23#p1",
+      "summary": "Jesus prays; eternal life is knowing Father and Son; prayer includes future believers.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "oaks",
+      "label": "Kingdoms of Glory — Dallin H. Oaks, October 2023",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/17oaks?lang=eng",
+      "summary": "Explains God's generous plan, three kingdoms and exaltation.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "nelson",
+      "label": "Think Celestial! — Russell M. Nelson, October 2023",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/51nelson?lang=eng",
+      "summary": "Urges an eternal view of daily choices and reliance on Jesus Christ.",
+      "verification": "Official Church page read 2026-09-27 before scene proposal"
+    },
+    {
+      "id": "aaron",
+      "label": "Alma 22:12–18",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/22?lang=eng&id=p12-p18#p12",
+      "summary": "Aaron explains Creation, Fall and redemption; the king kneels and prays, offering to give up his sins.",
+      "verification": "Official Church text read 2026-09-27 before revised scene proposal"
+    },
+    {
+      "id": "athens",
+      "label": "Acts 17:22–31",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/17?lang=eng&id=p22-p31#p22",
+      "summary": "Paul teaches divine parentage, Creation, repentance and resurrection in Athens.",
+      "verification": "Official Church text read 2026-09-27 before revised scene proposal"
+    },
+    {
+      "id": "moses-vision",
+      "label": "Moses 1:27–40",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p27-p40#p27",
+      "summary": "Moses beholds the earth and its inhabitants by the Spirit and asks the purpose of Creation.",
+      "verification": "Official Church text read 2026-09-27 before revised scene proposal"
+    },
+    {
+      "id": "chosen-son",
+      "label": "Moses 4:1–4",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/4?lang=eng&id=p1-p4#p1",
+      "summary": "The Beloved Son accepts the Father’s will; Satan seeks to destroy agency.",
+      "verification": "Official text read 2026-09-27"
+    },
+    {
+      "id": "doctrine-christ",
+      "label": "2 Nephi 31:17–21",
+      "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng&id=p17-p21#p17",
+      "summary": "Repentance, baptism, Holy Ghost and steadfast discipleship lead toward eternal life through Christ.",
+      "verification": "Official text read 2026-09-27"
+    }
+  ],
+  "onward_paths": [
+    {
+      "label": "Come to know Jesus Christ",
+      "href": "jesus-christ-latter-day-saint-beliefs.html",
+      "purpose": "Follow His life and teachings."
+    },
+    {
+      "label": "Study life after death",
+      "href": "what-happens-after-death.html",
+      "purpose": "Explore grief, the spirit world and resurrection more deeply."
+    },
+    {
+      "label": "Learn about the Holy Ghost",
+      "href": "holy-ghost.html",
+      "purpose": "Consider how to seek and recognize help as you live the gospel."
+    }
+  ],
+  "implementation_notes": {
+    "no_generation": true,
+    "art_count": 17,
+    "christ_scene_count": 1,
+    "hero_candidate": "prayer",
+    "ratio_resolution": "Seventeen proposed new originals: sixteen body pictures plus John17 hero; three explicit existing-owner reference previews. Owner flexible count; parent may select additional distinct useful subjects. No repeated hero or duplicate PaulAthens original.",
+    "source_scope": "All five LDS scriptural standard-work groupings represented: OldTestament, NewTestament, BookofMormon, DoctrineandCovenants, PearlofGreatPrice. Modernofficialteachinglinked.",
+    "approval_boundary": "Sources verified; 20concepts NOT final uniqueness/identity clearance. Parent toapprovecomposition/references; visiblecaptionsmustmatchactualacceptedpixels.",
+    "doctrinal_boundaries": [
+      "Resurrection for all is distinct from eternal life/exaltation.",
+      "Spirit world is an intermediate state, not one of the final degrees of glory.",
+      "Agency does not mean a victim chose or deserved harm.",
+      "No original guilt assigned tochildren; noblameplacedsolelyonEve.",
+      "No physical likeness ofFather,HeavenlyMotherorHolyGhostinvented.",
+      "Postmortalgospelandproxyordinancespreservechoice.",
+      "No claimedafterlifegeographyorunrecordedspeech.",
+      "No promiseofinstantrelief,cure,spiritualfeelingorfamilyoutcome."
+    ],
+    "rejected_duplicates": [
+      "3 Nephi 26:14 children speaking: Settle Thy Heart",
+      "D&C 76 Joseph and Sidney vision: Restoration and Today",
+      "D&C 138 Christ commissioning spirits: Restoration and Today",
+      "Luke 24 risen Christ eating: Redeemer and Risen Lord",
+      "Premortal Son offering: Settle Thy Heart"
+    ],
+    "new_body_originals": 16,
+    "new_hero_originals": 1,
+    "existing_reference_previews": 3
+  },
+  "planning_metadata_scope": "Nested art proposal status/scene fields preserve the pre-generation curriculum plan. Final selected paths, actual image alts, identity sources, hashes and independent review are authoritative in art-review.json."
+}

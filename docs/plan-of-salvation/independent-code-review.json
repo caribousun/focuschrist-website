@@ -1,0 +1,89 @@
+{
+  "reviewer": "Newton",
+  "status": "PASS final frozen scoped source review; publication and rendered acceptance remain Albert responsibilities",
+  "reviewed_sha256": {
+    "art-ask-context.js": "e48b4047687b555755a1fdb4ca3f7d6bdb62bc48c652af78e2da56532845ebf9",
+    "hero-details.js": "d21d5153527f460aaa4534d18a0f579e7ab43311e4017a428eed910b29414fb3",
+    "site-common.js": "a56d7e7bfd9ab65415187204ca956031bc46dc64b3d73d2ea7ccb1f4f56425fb",
+    "answers-hero.css": "3f3ab5babea5aadf5ddd79655922bd29b7f4c8b1aa74742b1146eccfca7caa87",
+    "tools/plan_of_salvation_qa.py": "6429c4cbfb4e14fdbe45a91f80004a10cfa0570f74add7ef8c7fb06a32e4cf26",
+    "tools/art_ask_context.test.cjs": "d202e492d7d15e9caad32e422fa6ba68ec20f68a7b4575a05e82791b849a93ce",
+    "tools/sitewide_artwork_review_qa.py": "3add61e2760644fca49c4ebc80a817520bf9a5ba6ee555e4d674caf4e991eafc",
+    "tools/topic_study_pages_qa.py": "beba87a7e5ad1cfaf6406428603851e7a4428ea21c046570b2e39c2b25ed011e",
+    ".github/workflows/site-qa.yml": "06ba881f9403afa4896ab0ec76f2769c190b954d315e8aea3cf13ad7ef9dca26",
+    "tools/answer_video_uniqueness_qa.py": "4ba04a60c46380d58862617d4f57747f13aff26255aba1c0f9c950ebf57edd30",
+    "tools/study_gap_art_qa.py": "ac338ceff096076ced7885a0980204758d69cf21c207f28ab65c321e4584ac81",
+    "tools/focused_answers_qa.py": "76dcd4c39d22bd0541429c864e3e4e3a045465067fc986848fb3b18738136aec",
+    "docs/section-panel-inventory.json": "1073d3a3b7cb72f781f1b97e2437461c6b7d98f1d20319c6b8ea4ec9b0a2cdf3"
+  },
+  "findings": [
+    {
+      "finding": "Unintended en-dash regex mojibake in topic_study_pages_qa",
+      "resolution": "Fermi restored exact prior range; inspected correction"
+    },
+    {
+      "finding": "New hero gate initially tested existence without reviewed hash binding",
+      "resolution": "Fermi added original/reference/delivery hashes and five negative artwork/identity fixtures; all pass"
+    },
+    {
+      "finding": "Generated section-panel inventory changed LF to CRLF",
+      "resolution": "Resolved: inspected regenerated inventory contains no CRLF; semantic changes limited to new page registrations."
+    }
+  ],
+  "scope": [
+    "Exact Plan route additions retain same-origin allowlists and existing unsafe-return rejection; no automatic Ask submission.",
+    "Shared navigation label and consumer cache pins reviewed; existing content HTML changes confined to asset versions except Answers new topic link.",
+    "Answers28topic grid now7 complete desktop rows; removed exactly two obsolete last-three-span rules; full CSS byte hash and mutation safeguard retained.",
+    "Plan gate binds10chapters20units16bodyoriginals3existing-owner references6official talks; canonical source URLs and reviewed paragraphs exact.",
+    "All805 prior Gallery records unchanged;17new records added. git diff assets shows no modified pre-existing tracked images.",
+    "Final preview exception restricted to Plan page, exact three existing owning-figure image paths and anchors; no full-image viewer or play-overlay presentation. Study-gap guard preserves ownership and limits every matching image to owning-reference article. Wrong-image and fake-player mutations rejected."
+  ],
+  "tests": [
+    {
+      "command": "node --test tools/art_ask_context.test.cjs",
+      "result": "PASS7",
+      "node_path": "C:/Users/wyatt/Documents/Codex/2026-09-27/focus-human-qa-deps/node_modules"
+    },
+    {
+      "command": "python tools/plan_of_salvation_qa.py --selftest",
+      "result": "PASS12: seven structure/source/reference and five artwork/identity mutations"
+    },
+    {
+      "command": "python tools/topic_study_pages_qa.py",
+      "result": "PASS28topics"
+    },
+    {
+      "command": "python tools/sitewide_artwork_review_qa.py --self-test",
+      "result": "PASS"
+    },
+    {
+      "command": "python tools/production_hardening_qa.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python tools/topic_inline_scripture_qa.py",
+      "result": "PASS830links"
+    },
+    {
+      "command": "python tools/unified_experience_qa.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python -X utf8 tools/answer_video_uniqueness_qa.py",
+      "result": "PASS71 video cards; plain Windows Python first failed existing default CP1252 decoding, UTF8 rerun passed"
+    },
+    {
+      "command": "python tools/study_gap_art_qa.py",
+      "result": "PASS"
+    },
+    {
+      "command": "python tools/site_qa.py",
+      "result": "PASS24 Answer pages"
+    }
+  ],
+  "limits": [
+    "Source and DOM regression review is not independent rendered browser approval.",
+    "New generation self-review is not owner aesthetic approval.",
+    "Fermi reports final source sweep complete; this receipt independently attests only commands listed and reviewed source hashes."
+  ]
+}

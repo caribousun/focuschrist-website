@@ -332,6 +332,14 @@
         "studyLabel": "Study prayer and personal revelation"
     }
 });
+    Object.assign(records, {"plan-of-salvation": {
+        title: "Jesus prays for eternal life",
+        paragraphs: ["Jesus lifts His eyes toward heaven and prays to the Father.", "In John 17, His prayer connects the glory He had before the world with the work He has done on earth. Read how He describes eternal life as knowing the Father and Jesus Christ."],
+        source: "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p1-p5#p1",
+        sourceLabel: "Read John 17:1–5",
+        study: "answers/plan-of-salvation.html#redeemer",
+        studyLabel: "Study Christ's place in the plan"
+    }});
     const script = document.currentScript;
     const siteBase = new URL('.', script ? script.src : window.location.href);
     const dialog = document.createElement('dialog');

@@ -16,6 +16,7 @@
     "/answers/jesus-christ-latter-day-saint-beliefs.html",
     "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
     "/answers/melchizedek-priesthood-restoration.html",
+    "/answers/plan-of-salvation.html",
     "/answers/prayer-and-personal-revelation.html",
     "/answers/restored-church-of-jesus-christ.html",
     "/answers/settle-this-in-your-hearts.html",
@@ -138,6 +139,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/life-after-death/nephi-children-1536.webp\"]:has(img[src=\"../assets/page-art/life-after-death/nephi-children-800.webp\"])",
           "title": "A blessing for each child"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A body worth caring for",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/bedside-care-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/bedside-care-full.webp",
+      "alt": "A nurse listens to an older patient while a family member sits beside the bed holding her hand.",
+      "id": "art-70133069b478",
+      "occurrences": [
+        {
+          "id": "source-e160624d92c3",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/bedside-care-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/bedside-care-800.webp\"])",
+          "title": "A body worth caring for"
         }
       ],
       "categories": [
@@ -380,6 +403,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/eternal-marriage/timeline/06-temple-marriage-desktop-v3.webp\"]:has(img[src=\"../assets/page-art/eternal-marriage/timeline/06-temple-marriage-desktop-v3.webp\"])",
           "title": "A covenant journey, not a perfect photograph"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A covenant reaches toward other people",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/burdens-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/burdens-full.webp",
+      "alt": "Members of a small community share a basket of food and folded cloth as a child makes room nearby.",
+      "id": "art-95fb7918e64a",
+      "occurrences": [
+        {
+          "id": "source-32d68c275224",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/burdens-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/burdens-800.webp\"])",
+          "title": "A covenant reaches toward other people"
         }
       ],
       "categories": [
@@ -805,6 +850,28 @@
       ]
     },
     {
+      "title": "A king asks what he can do",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/begin-v2-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/begin-v2-full.webp",
+      "alt": "Lamoni’s father kneels with his hands raised in prayer while Aaron stands nearby.",
+      "id": "art-2594f001eb74",
+      "occurrences": [
+        {
+          "id": "source-15cbfaa13cda",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/begin-v2-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/begin-v2-800.webp\"])",
+          "title": "A king asks what he can do"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A king teaches the worth of service",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/book-of-mormon-stories/06-benjamin-service-960.webp",
@@ -864,6 +931,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/budding-fig-02-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/budding-fig-02-960.webp\"])",
           "title": "A leafy fig tree"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A life that begins before birth",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/newborn-v2-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/newborn-v2-full.webp",
+      "alt": "Two parents sit together holding their newborn securely and looking at the baby.",
+      "id": "art-b0b71659b5ae",
+      "occurrences": [
+        {
+          "id": "source-98d97cff962f",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/newborn-v2-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/newborn-v2-800.webp\"])",
+          "title": "A life that begins before birth"
         }
       ],
       "categories": [
@@ -2246,6 +2335,28 @@
       ]
     },
     {
+      "title": "Adam and Eve begin life outside Eden",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/labor-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/labor-full.webp",
+      "alt": "Adam loosens the soil with a wooden digging stick while Eve kneels beside him working the earth.",
+      "id": "art-f9c0cef113f0",
+      "occurrences": [
+        {
+          "id": "source-5155a0704c0e",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/labor-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/labor-800.webp\"])",
+          "title": "Adam and Eve begin life outside Eden"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Alma keeps Abinadi’s words",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bible-together/alma-preserves-abinadi-960.webp",
@@ -2371,6 +2482,28 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/birth-of-christ/04-benjamin-angel-full.webp\"]:has(img[src=\"assets/page-art/birth-of-christ/04-benjamin-angel-800.webp\"])",
           "title": "An angel awakens Benjamin"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "An earth prepared for life",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/earth-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/earth-full.webp",
+      "alt": "Seedlings and grasses grow in rain-darkened soil beneath a branch bearing ripe plums.",
+      "id": "art-d24da8795c66",
+      "occurrences": [
+        {
+          "id": "source-b74a3bfe2923",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/earth-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/earth-800.webp\"])",
+          "title": "An earth prepared for life"
         }
       ],
       "categories": [
@@ -3479,6 +3612,28 @@
       ]
     },
     {
+      "title": "Bring eternity into one decision",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/long-view-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/long-view-full.webp",
+      "alt": "A person sets aside a phone to listen to a family member.",
+      "id": "art-4f4ed7a01fa8",
+      "occurrences": [
+        {
+          "id": "source-498d0f6d9362",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/long-view-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/long-view-800.webp\"])",
+          "title": "Bring eternity into one decision"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Bring Every Honest Question",
       "category": "Gospel Studies",
       "thumbnail": "/assets/answers-christ-portrait.png",
@@ -4222,6 +4377,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/collection-stewardship-02-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/collection-stewardship-02-960.webp\"])",
           "title": "Checking entrusted records"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Children have a place in Christ's ministry",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/small-voices-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/small-voices-full.webp",
+      "alt": "A child shows a drawing to an attentive parent and grandparent.",
+      "id": "art-33cb8eb78f05",
+      "occurrences": [
+        {
+          "id": "source-234056a6ed0f",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/small-voices-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/small-voices-800.webp\"])",
+          "title": "Children have a place in Christ's ministry"
         }
       ],
       "categories": [
@@ -5111,6 +5288,28 @@
       ]
     },
     {
+      "title": "Corianton receives a way forward",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/return-v2-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/return-v2-full.webp",
+      "alt": "Alma gestures with an open hand as he speaks to Corianton, seated opposite him.",
+      "id": "art-6a87656bdb6f",
+      "occurrences": [
+        {
+          "id": "source-e3b7406358de",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/return-v2-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/return-v2-800.webp\"])",
+          "title": "Corianton receives a way forward"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Correcting a mistake openly",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-mercy-04-960.webp",
@@ -5302,6 +5501,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/mc-daughter-go-in-peace-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/mc-daughter-go-in-peace-960.webp\"])",
           "title": "Daughter, go in peace"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Death is not the end of a person",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/between-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/between-full.webp",
+      "alt": "Two relatives look through family photographs together.",
+      "id": "art-7d6d190b54d3",
+      "occurrences": [
+        {
+          "id": "source-4e89e657399a",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/between-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/between-800.webp\"])",
+          "title": "Death is not the end of a person"
         }
       ],
       "categories": [
@@ -5742,6 +5963,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/laborers-vineyard-03-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/laborers-vineyard-03-960.webp\"])",
           "title": "Equal payment"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Eternal life is life with God",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/life-with-god-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/life-with-god-full.webp",
+      "alt": "Adults walk and talk outside the Rome Italy Temple.",
+      "id": "art-3928310aa5ac",
+      "occurrences": [
+        {
+          "id": "source-f0a276d39ba3",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/life-with-god-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/life-with-god-800.webp\"])",
+          "title": "Eternal life is life with God"
         }
       ],
       "categories": [
@@ -8433,6 +8676,28 @@
       ]
     },
     {
+      "title": "Jesus lifts His eyes toward heaven as He prays to the Father.",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/heroes/plan-of-salvation-hero-full.webp",
+      "fullImage": "/assets/heroes/plan-of-salvation-hero-full.webp",
+      "alt": "Jesus lifts His eyes toward heaven as He prays to the Father.",
+      "id": "art-20c75107e787",
+      "occurrences": [
+        {
+          "id": "source-2fa8bf9014fb",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "hero",
+          "selector": "a[data-hero-viewer][href=\"/assets/heroes/plan-of-salvation-hero-full.webp\"]",
+          "title": "Jesus lifts His eyes toward heaven as He prays to the Father."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Jesus looked on him with love",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/rich-man-invitation-960.webp",
@@ -9368,6 +9633,28 @@
       ]
     },
     {
+      "title": "Learning to care for what we receive",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/stewardship-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/stewardship-full.webp",
+      "alt": "An adult and child tend a young fruit tree together in a garden.",
+      "id": "art-eb0d22888ef9",
+      "occurrences": [
+        {
+          "id": "source-1752470b5c01",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/stewardship-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/stewardship-800.webp\"])",
+          "title": "Learning to care for what we receive"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Leaven worked into the dough",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/leaven-01-960.webp",
@@ -9471,6 +9758,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/bible-together/lehi-joseph-counsel-full.webp\"]:has(img[src=\"../assets/page-art/bible-together/lehi-joseph-counsel-960.webp\"])",
           "title": "Lehi counsels his son Joseph"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Lehi teaches Jacob about freedom",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/choose-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/choose-full.webp",
+      "alt": "Lehi sits in a doorway speaking with Jacob, who crouches beside him and looks into his face.",
+      "id": "art-3381cdf6ab1b",
+      "occurrences": [
+        {
+          "id": "source-a02d29392942",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/choose-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/choose-800.webp\"])",
+          "title": "Lehi teaches Jacob about freedom"
         }
       ],
       "categories": [
@@ -10837,6 +11146,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/minas-03-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/minas-03-960.webp\"])",
           "title": "Money kept unused in cloth"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "More than getting through the day",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/moses-purpose-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/moses-purpose-full.webp",
+      "alt": "Moses looks outward from a mountain.",
+      "id": "art-97872f7476e6",
+      "occurrences": [
+        {
+          "id": "source-8b3aa34f93ba",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/moses-purpose-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/moses-purpose-800.webp\"])",
+          "title": "More than getting through the day"
         }
       ],
       "categories": [
@@ -14991,6 +15322,28 @@
       ]
     },
     {
+      "title": "The gospel reaches beyond death",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/redemption-dead-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/redemption-dead-full.webp",
+      "alt": "Joseph F. Smith sits with an open Bible.",
+      "id": "art-5e7d2eaa1e3a",
+      "occurrences": [
+        {
+          "id": "source-7bb05df05a5f",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/redemption-dead-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/redemption-dead-800.webp\"])",
+          "title": "The gospel reaches beyond death"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "The Handcart Journey, 1856",
       "category": "Pioneers",
       "thumbnail": "/assets/pioneers/handcart-journey-800.webp",
@@ -15873,6 +16226,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/holy-ghost/comforter-full.webp\"]:has(img[src=\"/assets/page-art/holy-ghost/comforter-800.webp\"])",
           "title": "The promise of a Comforter"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The promised Savior bears our griefs",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/plan-of-salvation/bore-800.webp",
+      "fullImage": "/assets/page-art/plan-of-salvation/bore-full.webp",
+      "alt": "Two readers discuss an open scroll together.",
+      "id": "art-9e9b6f8b4c81",
+      "occurrences": [
+        {
+          "id": "source-99a7e1aaf962",
+          "page": "/answers/plan-of-salvation.html",
+          "pageTitle": "The Plan of Salvation",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"/assets/page-art/plan-of-salvation/bore-full.webp\"]:has(img[src=\"/assets/page-art/plan-of-salvation/bore-800.webp\"])",
+          "title": "The promised Savior bears our griefs"
         }
       ],
       "categories": [
@@ -17960,15 +18335,15 @@
     }
   ],
   "stats": {
-    "artworks": 805,
-    "occurrences": 816,
+    "artworks": 822,
+    "occurrences": 833,
     "byKind": {
       "artwork": 62,
       "full": 1,
-      "hero": 39,
+      "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 665
+      "topic": 681
     }
   }
 }
