@@ -45,7 +45,7 @@ def paragraph(text):
     rendered=rendered.replace('John 20', '<a class="fc-inline-scripture" href="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng" target="_blank" rel="noopener noreferrer">John 20</a>')
     return rendered
 
-def refs(ids):return ' · '.join(link(sources[k]) for k in ids)
+def refs(ids):return ' '.join(link(sources[k]) for k in ids)
 def ask(topic,anchor):
     return '/ask.html?'+urlencode({'topic':topic,'return':route+'#'+anchor})+'#ask-question'
 missing=[]

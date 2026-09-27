@@ -1,0 +1,78 @@
+{
+  "scope": "Only loose middot text in source-pill groups; no narrative or byline punctuation changes",
+  "files": [
+    {
+      "path": "answers/plan-of-salvation.html",
+      "loose_separators_before": 23,
+      "loose_separators_after": 0,
+      "source_hrefs_and_labels_unchanged": true
+    },
+    {
+      "path": "answers/abrahamic-covenant.html",
+      "loose_separators_before": 5,
+      "loose_separators_after": 0,
+      "source_hrefs_and_labels_unchanged": true
+    },
+    {
+      "path": "answers/holy-ghost.html",
+      "loose_separators_before": 10,
+      "loose_separators_after": 0,
+      "source_hrefs_and_labels_unchanged": true
+    },
+    {
+      "path": "answers/what-is-the-book-of-mormon.html",
+      "loose_separators_before": 1,
+      "loose_separators_after": 0,
+      "source_hrefs_and_labels_unchanged": true
+    },
+    {
+      "path": "book-of-mormon-evidences.html",
+      "loose_separators_before": 2,
+      "loose_separators_after": 0,
+      "source_hrefs_and_labels_unchanged": true
+    },
+    {
+      "path": "jesus-christ/miracles-and-compassion.html",
+      "loose_separators_before": 1,
+      "loose_separators_after": 0,
+      "source_hrefs_and_labels_unchanged": true
+    },
+    {
+      "path": "jesus-christ/redeemer-and-risen-lord.html",
+      "loose_separators_before": 1,
+      "loose_separators_after": 0,
+      "source_hrefs_and_labels_unchanged": true
+    },
+    {
+      "path": "jesus-christ/restoration-and-today.html",
+      "loose_separators_before": 3,
+      "loose_separators_after": 0,
+      "source_hrefs_and_labels_unchanged": true
+    }
+  ],
+  "total_removed": 46,
+  "canonical_builders": [
+    "tools/build_plan_salvation.py",
+    "tools/build_jesus_journey.py"
+  ],
+  "local_recovery_builder": "work/holy-ghost/build-page.py join corrected locally; not added to release",
+  "regressions": [
+    "Existing sitewide study_link_controls_qa scans121canonical routes and rejects direct source-group middot nodes; positive fixture retains narrative byline dot.",
+    "PlanQA has new separator mutation among13negative fixtures."
+  ],
+  "checks_passed": [
+    "Plan13fixtures",
+    "global study-link121routes",
+    "Jesus strict build --check",
+    "HolyGhost11tests",
+    "static125documents",
+    "site flow121routes",
+    "five-picture63",
+    "artwork details",
+    "Covenant",
+    "media voice",
+    "Gallery current",
+    "Search rebuilt and checked"
+  ],
+  "limits": "Browser screenshots and compact reflection CSS are separate reviewer/Albert work."
+}

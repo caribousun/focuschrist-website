@@ -46,6 +46,12 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 .jj-main details{padding:18px 0;border-top:1px solid rgba(240,195,106,.2)}
 .jj-main summary{cursor:pointer;color:var(--fc-gold-light,#f0c36a);font-size:1.12rem;min-height:44px;line-height:1.5}
 .jj-main details[open] summary{margin-bottom:14px}
+/* Compact native disclosures; static reflection panels keep their original spacing. */
+.jj-main details.jj-reflection{padding:2px 16px}
+.jj-main details.jj-reflection>summary{box-sizing:border-box;min-height:44px;align-content:center;margin:0}
+.jj-main details.jj-reflection[open]{padding-bottom:14px}
+.jj-main details.jj-reflection[open]>summary{margin-bottom:8px}
+.jj-main details.jj-reflection>p:last-child{margin-bottom:0}
 .jj-footnote{font-size:.92rem;color:#d2ded6}
 .jj-return{padding:28px 0 0}
 .jj-main a:focus-visible,.jj-opening a:focus-visible{outline:3px solid #f0c36a;outline-offset:5px}

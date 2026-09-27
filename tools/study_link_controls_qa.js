@@ -15,12 +15,20 @@ assert(!/body\.fc-site\s+a\s*\{/.test(css),'Bare-anchor treatment prohibited');
 const fixture=new JSDOM(`<body class="fc-site"><p><a id="prose" class="fc-inline-scripture">John 3:16</a></p><a id="home" class="fc-button">Home</a><div class="fc-study-visual-sources"><a id="source">Mark 7:24–30</a><a id="primary" class="fc-button--primary">Study</a></div><a id="internal" class="source-link source-link--internal">Ask</a><a id="external" class="source-link">Source</a><nav class="jj-local-nav fc-study-nav"><a id="chapter">Chapter</a></nav><nav class="watch-topic-index"><a id="watch"><span>02</span>Book of Mormon</a></nav></body>`).window.document;
 for(const id of ['prose','home','primary','internal','chapter'])assert(!selectors.some(s=>fixture.getElementById(id).matches(s)),`Unwanted control ${id}`);
 for(const id of ['source','external','watch'])assert(selectors.some(s=>fixture.getElementById(id).matches(s)),`Uncovered control ${id}`);
+function assertNoLooseSourceSeparators(doc){
+ for(const group of doc.querySelectorAll('.fc-study-visual-sources'))
+  assert(![...group.childNodes].some(n=>n.nodeType===3&&n.textContent.includes('·')),'Loose separator between source pills');
+}
+const sourceSeparatorFixture=new JSDOM('<p class="fc-study-visual-sources"><a>John 17</a> · <a>Moses 1</a></p>').window.document;
+assert.throws(()=>assertNoLooseSourceSeparators(sourceSeparatorFixture),/Loose separator/);
+assertNoLooseSourceSeparators(new JSDOM('<p class="fc-study-visual-sources"><a>John 17</a> <a>Moses 1</a></p><p>Speaker · Date</p>').window.document);
 const urls=[...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname.slice(1)||'index.html');
 const pages=[...new Set(urls)].sort();
 const inventory={canonical_pages:pages.length,selectors:{},numbered_navigation:{}};
 for(const s of selectors)inventory.selectors[s]={count:0,pages:[]};
 for(const page of pages){
  const dom=new JSDOM(read(page)),doc=dom.window.document;
+ assertNoLooseSourceSeparators(doc);
  for(const s of selectors){const nodes=[...doc.querySelectorAll(s)];if(nodes.length){inventory.selectors[s].count+=nodes.length;inventory.selectors[s].pages.push(page);for(const n of nodes)assert.equal(n.tagName,'A');}}
  for(const s of ['.watch-topic-index a','nav[aria-label="Pioneer study sections"] a','.bom-story-directory a']){
   const nodes=[...doc.querySelectorAll(s)];if(nodes.length)inventory.numbered_navigation[page+' '+s]=nodes.map(n=>({href:n.getAttribute('href'),label:n.textContent.trim().replace(/\s+/g,' ')}));

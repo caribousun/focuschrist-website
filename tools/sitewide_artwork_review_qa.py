@@ -19,7 +19,7 @@ HOME_STYLE = 'home-presentation.css'
 HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
-JOURNEY_STYLE_SHA256 = 'fbc4937ead4678d2919a5b22f65224c1401b2cc4a1ec3b874c427578a8febb8c'
+JOURNEY_STYLE_SHA256 = '165bea932d4ca288c9ade8327e5d5999798be4c41f17c4627bf1bdd8c74790c0'
 ANSWERS_FEATURED_STYLE_SHA256 = '3f3ab5babea5aadf5ddd79655922bd29b7f4c8b1aa74742b1146eccfca7caa87'
 # Owner-requested featured and foundational study links. Only the listed rules in
 # the exact reviewed stylesheet qualify; the 700px stack is pinned by its hash.
