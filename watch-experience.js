@@ -17,14 +17,14 @@
       study: {
         kicker: 'Study',
         title: 'Jesus Christ',
-        copy: 'Continue into a permanent focusChrist Answer about His divine Sonship, Atonement, Resurrection, mission, and promised return.',
+        copy: 'Read about Jesus Christ as the Son of God, His Atonement and Resurrection, and His promised return.',
         href: 'answers/jesus-christ-latter-day-saint-beliefs.html',
         thumb: 'assets/watch/resurrected.jpg'
       },
       continue: {
         kicker: 'Art & Study',
         title: 'The Living Christ',
-        copy: 'Continue through visual study centered on the risen and living Savior, then follow the related scripture and study paths.',
+        copy: 'Pause with a picture of the risen Savior, then read the scriptural accounts of those who saw Him.',
         href: 'art-study/the-living-christ.html',
         thumb: 'art/thumbs/The-Living-Christ.webp'
       }
@@ -47,7 +47,7 @@
       continue: {
         kicker: 'Art & Study',
         title: 'Be Still',
-        copy: 'Continue with Psalm 46:10 and a visual study path about trusting God and becoming still amid uncertainty.',
+        copy: 'Read Psalm 46 beside the artwork and consider what it means to trust God when life feels uncertain.',
         href: 'art-study/be-still.html',
         thumb: 'assets/watch/light.jpg'
       }
@@ -63,7 +63,7 @@
       study: {
         kicker: 'Study',
         title: 'What Is the Book of Mormon?',
-        copy: 'Continue into a permanent Answer about the Book of Mormon as another testament of Jesus Christ and its relationship to the Bible.',
+        copy: 'Learn what the Book of Mormon teaches about Jesus Christ and why Latter-day Saints read it alongside the Bible.',
         href: 'answers/what-is-the-book-of-mormon.html',
         thumb: 'assets/watch/americas.jpg'
       },
@@ -86,14 +86,14 @@
       study: {
         kicker: 'Study',
         title: 'Why Latter-day Saints Build Temples',
-        copy: 'Study worship, covenants, ordinances, eternal families, and service for the dead in a permanent focusChrist Answer.',
+        copy: 'Learn why Latter-day Saints worship in temples, make covenants, and serve those who have died.',
         href: 'answers/why-latter-day-saints-build-temples.html',
         thumb: 'assets/watch/family.jpg'
       },
       continue: {
         kicker: 'Ask',
         title: 'Ask Your Temple Question',
-        copy: 'Continue with the specific question you have now and explore the answer with the focusChrist Ask experience.',
+        copy: 'Bring your question about temples and explore the linked scriptures and teachings.',
         href: 'ask.html',
         thumb: 'assets/watch/song.jpg'
       }

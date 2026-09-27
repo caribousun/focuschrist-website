@@ -1,0 +1,87 @@
+[
+  {
+    "check": "static_content_audit",
+    "exit": 0,
+    "tail": "STATIC CONTENT AUDIT PASS: 123 documents (117 verified, 6 non-source-dependent)\n"
+  },
+  {
+    "check": "build_site_search",
+    "exit": 0,
+    "tail": "SEARCH INDEX PASS: public pages, sections and artwork are current\n"
+  },
+  {
+    "check": "media_voice_qa",
+    "exit": 0,
+    "tail": "Media voice QA passed: 121 pages; 704 captions, 147 expanded details, 109 resource descriptions, 15 media introductions and 1159 alt texts audited.\n"
+  },
+  {
+    "check": "site_flow_qa",
+    "exit": 0,
+    "tail": "SITE FLOW QA PASS: 119 sitemap routes, complete internal targets and fragments, no inert public links, and multiple continuation paths per page\n"
+  },
+  {
+    "check": "navigation_links_qa",
+    "exit": 0,
+    "tail": "NAVIGATION QA PASS: 120 centered headers, 4512 external links\n"
+  },
+  {
+    "check": "home_presentation_qa",
+    "exit": 0,
+    "tail": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.574s\n\nOK\n"
+  },
+  {
+    "check": "site_search_qa",
+    "exit": 0,
+    "tail": "SEARCH QA PASS: 118 public pages, 1874 valid destinations; hidden/internal content excluded\n"
+  },
+  {
+    "check": "watch_library_qa",
+    "exit": 0,
+    "tail": "Watch library QA PASSED: 20 verified video pairs, image hashes/dimensions, anchors, sources and study routes.\n"
+  },
+  {
+    "check": "answer_study_qa",
+    "exit": 0,
+    "tail": "ANSWER STUDY QA PASS: all 22 permanent Answers have contextual media, navigation, reflection and continuation\n"
+  },
+  {
+    "check": "scripture_grounding_qa",
+    "exit": 0,
+    "tail": "Scripture grounding QA PASS\n"
+  },
+  {
+    "check": "connected_study_qa",
+    "exit": 0,
+    "tail": "Connected study QA PASSED: 9 section guides, 26 studies, static destinations and learning paths reachable from Home.\n"
+  },
+  {
+    "check": "artwork_details_qa",
+    "exit": 0,
+    "tail": "Artwork detail QA: PASS\n62 non-Mission artwork triggers and 11 Mission artwork triggers verified\nSame-page full-image viewing, sacred detail copy, and intentional interaction scope verified\n"
+  },
+  {
+    "check": "birth_of_christ_qa",
+    "exit": 0,
+    "tail": "Birth of Christ QA passed: reviewed exclusive hero/body inventory, at least23 artworks, responsive assets, exact scripture actions,12 reading stops,8 reflections,8 official resources and4 onward paths.\n"
+  },
+  {
+    "check": "general_conference_qa",
+    "exit": 0,
+    "tail": "GENERAL CONFERENCE QA PASS: 37 source-matched messages, four native sessions, progressive filters, accessible controls, thumbnails, and connected routes.\n"
+  },
+  {
+    "check": "come_follow_me_qa",
+    "exit": 0,
+    "tail": "focusChrist COME, FOLLOW ME HUB QA PASSED\nVerified 52 weekly routes and titles, official study toolkit, dynamic lesson links, schedule containment, action contrast, and Home spacing controls.\n"
+  },
+  {
+    "check": "church_history_qa",
+    "exit": 0,
+    "tail": "Church History QA PASS\n"
+  },
+  {
+    "check": "jesus_journey_qa",
+    "exit": 0,
+    "tail": "Jesus journey release gate passed: all planned scenes, reviewed derivatives, one owner per original, complete descendant navigation and sitemap.\n"
+  }
+]

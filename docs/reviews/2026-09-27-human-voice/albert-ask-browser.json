@@ -1,0 +1,22 @@
+{
+  "observedAt": "2026-09-27T14:40:14.413Z",
+  "initial": {
+    "context": "Continuing your studyIsaiah 13–14; 22; 24–30; 35 in this week's Come, Follow Me readingReturn to your study",
+    "conversation": "\n                \n                    Begin with a sincere question.\n                    You can type your own question above or choose one of the suggested questions. The purpose is to help you study more deeply and keep Jesus Christ at the center.\n                    Scripture and official Church resources are linked whenever available.\n                \n            ",
+    "question": "Help me study Isaiah 13–14; 22; 24–30; 35 in this week's Come, Follow Me reading. What do the scriptures and official Church resources teach?",
+    "returnHref": "/come-follow-me.html",
+    "url": "http://localhost:4197/ask.html?topic=Isaiah%2013%E2%80%9314%3B%2022%3B%2024%E2%80%9330%3B%2035%20in%20this%20week%27s%20Come%2C%20Follow%20Me%20reading&return=%2Fcome-follow-me.html#ask-question"
+  },
+  "edited": {
+    "conversation": "\n                \n                    Begin with a sincere question.\n                    You can type your own question above or choose one of the suggested questions. The purpose is to help you study more deeply and keep Jesus Christ at the center.\n                    Scripture and official Church resources are linked whenever available.\n                \n            ",
+    "question": "What does Isaiah teach about trusting the Lord?"
+  },
+  "returned": "http://localhost:4197/come-follow-me.html",
+  "standForever": {
+    "context": "Continuing your studyquestions and revelationBrowse study topics",
+    "overflow": false,
+    "question": "Help me study questions and revelation. What do the scriptures and official Church resources teach?",
+    "returnHref": "/answers.html",
+    "url": "http://localhost:4197/ask.html?topic=questions+and+revelation#ask-question"
+  }
+}
