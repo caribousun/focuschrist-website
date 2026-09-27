@@ -320,7 +320,7 @@
         if (menu && !menu.querySelector('[data-focuschrist-come-follow-me]')) {
             const comeFollowMe = createComeFollowMeLink('COME, FOLLOW ME');
             const answers = Array.from(menu.querySelectorAll('a')).find(function (link) {
-                return link.textContent.trim().toUpperCase() === 'ANSWERS';
+                return /(?:^|\/)answers\.html$/.test(new URL(link.href, document.baseURI).pathname);
             });
             const divider = menu.querySelector('hr');
             if (answers) answers.insertAdjacentElement('afterend', comeFollowMe);
@@ -330,7 +330,7 @@
         if (menu && !menu.querySelector('[data-focuschrist-conference-shortcut]')) {
             const conference = createConferenceLink('GENERAL CONFERENCE');
             const answers = Array.from(menu.querySelectorAll('a')).find(function (link) {
-                return link.textContent.trim().toUpperCase() === 'ANSWERS';
+                return /(?:^|\/)answers\.html$/.test(new URL(link.href, document.baseURI).pathname);
             });
             const divider = menu.querySelector('hr');
             if (answers) answers.insertAdjacentElement('afterend', conference);
