@@ -760,3 +760,8 @@ body.fc-site .ask-followup-note {
 @media (max-width: 700px) { .ask-scene-pair { grid-template-columns: minmax(0, 1fr); gap: 22px; } }
 
 .ask-composer-help { margin: 8px 0 0; color: var(--ask-muted); font-size: .8rem; line-height: 1.5; }
+
+/* Let the Emmaus caption remain readable with enlarged phone text. */
+@media(max-width:700px){
+ body.fc-site .ask-emmaus-art.fc-content-artwork > figcaption{position:static;padding:16px 17px;background:#102b36;}
+}

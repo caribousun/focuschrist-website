@@ -1,0 +1,60 @@
+{
+  "reviewer": "Newton",
+  "reviewed_at": "2026-09-27T23:18:53.842926+00:00",
+  "verdict": "PASS bounded independent source and regression review; hosted CI and deployment remain pending",
+  "historical_failure": {
+    "run": 36357612348,
+    "profile": "320px narrow-large-text, 200% root font",
+    "defect": "Visible Home invitation and Ask Emmaus captions clipped vertically by artwork figures; parent also checked Home study."
+  },
+  "findings": [
+    "Both CSS files preserve all prior bytes as an exact prefix and append only scoped max-width 700px caption natural-flow rules.",
+    "Both HTML changes are stylesheet cache revisions only; image sources and markup remain unchanged.",
+    "Desktop styles and artwork sizing remain unchanged. Home selector covers both featured figures.",
+    "Existing strict full-byte style pins updated and static-to-absolute negative mutations added. Caption clipping measurement guard is unchanged."
+  ],
+  "independent_checks": [
+    {
+      "check": "sitewide_artwork_review_qa.py --self-test",
+      "result": "PASS"
+    },
+    {
+      "check": "site_qa.py",
+      "result": "PASS"
+    },
+    {
+      "check": "canonical_presentation_measurement.test.js",
+      "result": "PASS including partial/full/vertical clipped-caption negatives and contained/hidden/image-crop positives"
+    },
+    {
+      "check": "unittest discovery test_home*.py",
+      "result": "ZERO TESTS DISCOVERED; not counted as validation"
+    }
+  ],
+  "rendered_evidence": {
+    "performed_by": "Albert, not Newton",
+    "receipt": "docs/reviews/2026-09-27-final-beginner/parent-large-caption-repair.json",
+    "reported_results": "320px enlarged text: all Home featured and Ask Emmaus captions contained in natural flow; 390px normal: static below image; 1366px desktop: original absolute layout retained and contained"
+  },
+  "other_worker_checks": {
+    "performed_by": "Fermi",
+    "results": [
+      "842 protected artwork normal gate PASS after scratch HTML removal",
+      "125-document content audit PASS",
+      "10 Home tests reported PASS"
+    ]
+  },
+  "sha256": {
+    "home-presentation.css": "a3a6331971ae7a289b5cad3c3e5c16e947a0dfada2c0325f1e6b9abc87466282",
+    "ask-experience.css": "62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6",
+    "index.html": "09d564ee2cdb6bc756e1ff7cbcaef7c5ae930898231ce4c2de6db6b51f6cc94d",
+    "ask.html": "034de28b656bf4852815be502c6b9f62130daefd02762840b255d4f3eea05203",
+    "tools/site_qa.py": "c640472ba0387879ea1b72d9e15e49a82ca88f9a498da3d82932db1fd185c094",
+    "tools/sitewide_artwork_review_qa.py": "1b8d34cd46c465ca1b04a1c4550cc518267a0abd19f2b62e923d0ff3856763cb"
+  },
+  "limits": [
+    "No independent Newton browser execution.",
+    "No production or deployment claim.",
+    "No artwork, caption wording, or clipping-guard exemption changed."
+  ]
+}

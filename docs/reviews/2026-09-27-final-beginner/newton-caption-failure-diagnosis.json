@@ -1,0 +1,36 @@
+{
+  "run": 36357612348,
+  "artifact": 10944905052,
+  "candidate": "b2df8ba922be919d863d59d956553d1f47e85492",
+  "reviewer": "Newton",
+  "status": "Real visible-caption clipping suspected from artifact and CSS; parent rendered confirmation pending",
+  "failures": [
+    {
+      "route": "index.html",
+      "profile": "narrow-large-text",
+      "width": 320,
+      "font_scale": 2,
+      "selector": "figure.fc-content-artwork.fc-home-featured-art.fc-home-featured-art--invitation figcaption",
+      "clipX": false,
+      "clipY": true,
+      "text": "Come and see. The invitation to follow Jesus Christ begins with a willing step."
+    },
+    {
+      "route": "ask.html",
+      "profile": "narrow-large-text",
+      "width": 320,
+      "font_scale": 2,
+      "selector": "figure.fc-content-artwork.ask-supporting-art.ask-emmaus-art figcaption",
+      "clipX": false,
+      "clipY": true,
+      "text": "Christ opens the scriptures as two disciples walk with Him toward Emmaus."
+    }
+  ],
+  "facts": [
+    "Both failures have document horizontalOverflow0 and clippedControls empty.",
+    "Shared site-system.css renders actual visible figcaption absolutely at bottom0 inside overflowhidden figure; mobile font .8rem with36px17px13px padding.",
+    "Page images use16:9 aspect ratio. Enlarged caption can exceed that height. No hidden/class semantics justify excluding it."
+  ],
+  "recommendation": "Reproduce exact320/200% in parent CUA; if confirmed allow caption natural-flow height at narrow layout through exact page-owned selectors, preserving image pixels and desktop. Do not change guard tolerance or exclusions.",
+  "product_edits": false
+}

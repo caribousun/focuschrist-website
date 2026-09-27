@@ -16,7 +16,7 @@ WATCH_SHORTS_STYLE = 'watch-shorts.css'
 # independently checked on desktop and enlarged phone text. Exact Watch-only bytes.
 WATCH_SHORTS_STYLE_SHA256 = '1feb6892f74ca30d8ec52af3f76e8da197d2bac2cc61716838cf87fe6efd24b6'
 HOME_STYLE = 'home-presentation.css'
-HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
+HOME_STYLE_SHA256 = 'a3a6331971ae7a289b5cad3c3e5c16e947a0dfada2c0325f1e6b9abc87466282'
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = '165bea932d4ca288c9ade8327e5d5999798be4c41f17c4627bf1bdd8c74790c0'
@@ -127,7 +127,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
-    'ask-experience.css': ('126df0f3a5331f5f2a34df236220e019404cfb1eaf0de54a57c556a5d9c8a0f5', 'ask.html'),
+    'ask-experience.css': ('62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6', 'ask.html'),
     'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
 }
 def reviewed_scoped_interface_style(name, data):
@@ -211,6 +211,7 @@ def main():
         assert not watch_shorts_style_reference_allowed('shared.js', WATCH_SHORTS_STYLE)
         home_css = (ROOT/HOME_STYLE).read_bytes()
         assert reviewed_home_style(home_css)
+        assert not reviewed_home_style(home_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
         assert not reviewed_home_style(home_css + b'\nbody.fc-home-presentation{height:999px}')
         assert home_style_reference_allowed('index.html', HOME_STYLE)
         assert not home_style_reference_allowed('about.html', HOME_STYLE)
@@ -231,6 +232,8 @@ def main():
             assert reviewed_narrow_reading_style(name,data)
             assert not reviewed_narrow_reading_style(name,data+b"body{display:none}")
             assert not reviewed_narrow_reading_style(name,b"X"+data[1:])
+        ask_css=(ROOT/'ask-experience.css').read_bytes()
+        assert not reviewed_scoped_interface_style('ask-experience.css', ask_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
         for name, (_, owner) in SCOPED_INTERFACE_STYLES.items():
             data=(ROOT/name).read_bytes()
             assert reviewed_scoped_interface_style(name,data)
