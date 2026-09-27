@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-27",
+  "owner_page": "/answers/plan-of-salvation.html",
+  "status": "independent technical/source/pixel candidate reviews complete; owner aesthetic approval not claimed; unpublished",
+  "counts": {
+    "body_originals": 16,
+    "body_christ": 0,
+    "hero_originals": 1,
+    "hero_christ": 1,
+    "existing_owner_reference_previews": 3,
+    "total_new_originals": 17
+  },
+  "artworks": {
+    "pos-belong": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/newborn-v2-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/newborn-v2-800.webp",
+      "title": "A life that begins before birth",
+      "alt": "Two parents sit together holding their newborn securely and looking at the baby.",
+      "caption": "Explore and study A life that begins before birth A child is welcomed into mortal life. Abraham’s account invites us to see each person as someone whose story began before birth. Abraham 3:22–26 · Plan of Salvation · Moses 4:1–4",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22-p26#p22"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation?lang=eng"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/4?lang=eng&id=p1-p4#p1"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/newborn-v2-original.png",
+      "original_sha256": "80d03cf5fbe6e2a52120794617c68fcdc0e5f34a496dca7cbae1866b48ca4f66",
+      "asset_sha256": "26c8670719a73400c280cad4d934cdea745e64f28bb512b758240182869d188d",
+      "thumbnail_sha256": "3eb557fa6a7b2857ebab666afdfd4f4ceb480ed3965b6bcd5849c982bc3c4b7c",
+      "historical_limits": "Modern application only, not heavenly or recorded event.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "80d03cf5fbe6e2a52120794617c68fcdc0e5f34a496dca7cbae1866b48ca4f66",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-purpose": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/moses-purpose-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/moses-purpose-800.webp",
+      "title": "More than getting through the day",
+      "alt": "Moses looks outward from a mountain.",
+      "caption": "Explore and study More than getting through the day Moses looks out from the mountain. As he asks why the earth and its people exist, God answers with His purpose: our immortality and eternal life. Moses 1:27–40 · Moses 1:39 · Preach My Gospel, lesson 2",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p27-p40#p27"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/09-chapter-3-lesson-2?lang=eng"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/moses-purpose-original.png",
+      "original_sha256": "584489e330f499020866fb15767448397dd3cbdb9bf1cae36a04826fef1b3424",
+      "asset_sha256": "fb9119d018011ea2c5f1e1b1bddea8b178d5dadffc0b4c2f6f1af08450b121d5",
+      "thumbnail_sha256": "eac395c4c42099c9c323ccbdb1c1475cf29634cd78bea58740c7e693963c4137",
+      "historical_limits": "Moses1 vision and inquiry; exact mountain and visible landscape are interpretive. No invented visible Father or literal heavenly geography.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "584489e330f499020866fb15767448397dd3cbdb9bf1cae36a04826fef1b3424",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-earth": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/earth-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/earth-800.webp",
+      "title": "An earth prepared for life",
+      "alt": "Seedlings and grasses grow in rain-darkened soil beneath a branch bearing ripe plums.",
+      "caption": "Explore and study An earth prepared for life Seedlings take root and a branch bears fruit. The Creation account describes an earth where life can grow and be sustained. Moses 2:1, 9–12",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p1,p9-p12#p1"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/earth-original.png",
+      "original_sha256": "2a3c1bce9b7f63c48a59ae29882d4822fef2639141c3c57ad5845a63edcff5db",
+      "asset_sha256": "e328f8be9d267b542d83ec9631503fb303a7a7532d925972683578e239f6c0e8",
+      "thumbnail_sha256": "3e3c39dfe0c9e43606d4ae81fef7ceb4972a53696ce99d94cf8e40c575803981",
+      "historical_limits": "Illustrates living creation; not Eden, exact creation-day geography or scientific evidence of creation chronology. Species and landscape illustrative.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "2a3c1bce9b7f63c48a59ae29882d4822fef2639141c3c57ad5845a63edcff5db",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-tend": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/stewardship-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/stewardship-800.webp",
+      "title": "Learning to care for what we receive",
+      "alt": "An adult and child tend a young fruit tree together in a garden.",
+      "caption": "Explore and study Learning to care for what we receive An adult and child care for a young tree together. Receiving the earth as a gift also gives us work to do for the life around us. Genesis 1:26–31",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p26-p31#p26"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/stewardship-original.png",
+      "original_sha256": "2581b32e94f9d411c1377e8d61e9a7d2f869aa1726bf85dc9ea1595ad9039d3f",
+      "asset_sha256": "3e42e53e5c963553ac70e3f6c0a01154fdd44ccee8285bf05b52819b9c2d2d82",
+      "thumbnail_sha256": "fcfd7cddc1a89d32e7dc7d2a0ef6bbeb12fee377261f9af4f221630ddf0c254f",
+      "historical_limits": "Modern application of creation stewardship; not Adam and Eve or a recorded biblical family.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "2581b32e94f9d411c1377e8d61e9a7d2f869aa1726bf85dc9ea1595ad9039d3f",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-labor": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/labor-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/labor-800.webp",
+      "title": "Adam and Eve begin life outside Eden",
+      "alt": "Adam loosens the soil with a wooden digging stick while Eve kneels beside him working the earth.",
+      "caption": "Explore and study Adam and Eve begin life outside Eden Adam and Eve work the soil together. Their story continues beyond Eden through shared labor, family life and learning to call upon God. Moses 5:1–12",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p1-p12#p1"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/labor-original.png",
+      "original_sha256": "48c4a990f9f5993b95e9bd3e507a0bc09f4cb31a503b7f9ea875fd9a8c40b85c",
+      "asset_sha256": "7ce93c556a7c6cbec60489debc2987f069cbdc344f8b8d3804e05d0a13455d8c",
+      "thumbnail_sha256": "dcb04c64286e6e2b88561d5e2d52e61ebf236647f26cd768bc0c04ea579c3840",
+      "historical_limits": "After-Eden shared labor recorded. Exact tools, terrain, dress and moment illustrative. Existing Eden planting/first-hope altar imagery related themes but different event/composition.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "48c4a990f9f5993b95e9bd3e507a0bc09f4cb31a503b7f9ea875fd9a8c40b85c",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-choose": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/choose-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/choose-800.webp",
+      "title": "Lehi teaches Jacob about freedom",
+      "alt": "Lehi sits in a doorway speaking with Jacob, who crouches beside him and looks into his face.",
+      "caption": "Explore and study Lehi teaches Jacob about freedom Lehi speaks with Jacob near the end of his life. His counsel connects agency with the Redeemer who makes freedom possible. 2 Nephi 2:1–3, 22–29",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p1-p3,p22-p29#p1"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/choose-original.png",
+      "original_sha256": "27fe3c71ace04944b8c7cb386e346a751436e552d1e29e58bcbcfd1e1a0835b3",
+      "asset_sha256": "eedcad984f13ae1ee24c35b09d195e9d98f4dd17783a4cc09149634aa439a12a",
+      "thumbnail_sha256": "ee1670c89e8d2e3262a67cb7a7ad70901c7f406c99a99fe2ed2bbb5984588798",
+      "historical_limits": "Father addresses Jacob recorded; exact age/room/posture not given. Not OTJacob or Joseph. Close father-son teaching theme overlaps existing Lehi/Joseph, event and adult son's pose distinct.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "27fe3c71ace04944b8c7cb386e346a751436e552d1e29e58bcbcfd1e1a0835b3",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-care": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/bedside-care-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/bedside-care-800.webp",
+      "title": "A body worth caring for",
+      "alt": "A nurse listens to an older patient while a family member sits beside the bed holding her hand.",
+      "caption": "Explore and study A body worth caring for A nurse listens while a relative holds the patient’s hand. Christ’s knowledge of suffering gives us reason to turn toward people in pain with care. John 9:1–7 · Alma 7:11–13",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng&id=p1-p7#p1"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p13#p11"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/bedside-care-original.png",
+      "original_sha256": "478eda6b7c55dc4fc1de9f1177c1fe920a79e8e800c9cd43cb88b78f7541eb1e",
+      "asset_sha256": "42a7acc3c4707bc3535b886c230bba3d73f06b88884712d49ef3d675a25085ed",
+      "thumbnail_sha256": "34227daf5fc6eb1f279a1f2d0ad77880be12bc674341d2c4925325e7ad8df52b",
+      "historical_limits": "Modern compassionate care application; does not depict an ancient event, miraculous healing, diagnosis or promised medical outcome.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "478eda6b7c55dc4fc1de9f1177c1fe920a79e8e800c9cd43cb88b78f7541eb1e",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-return": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/return-v2-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/return-v2-800.webp",
+      "title": "Corianton receives a way forward",
+      "alt": "Alma gestures with an open hand as he speaks to Corianton, seated opposite him.",
+      "caption": "Explore and study Corianton receives a way forward Alma speaks to Corianton with an open hand. He addresses his son’s wrongdoing without leaving him without a way to repent and return. Alma 42:23–31",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng&id=p23-p31#p23"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/return-v2-original.png",
+      "original_sha256": "b56e7df69c57ff79f7d840b4b58c60ad161cb66d97510b485247f8b64add3c14",
+      "asset_sha256": "bb20802b592bef0efec74c6aa00ac938b349e69c05aeff955a7b32677715e48d",
+      "thumbnail_sha256": "bb97b52bc0a3acfa057883e7c00dd2ff332af61a779cd0d5b1081ce9c69833ce",
+      "historical_limits": "Alma counsel recorded; exact setting/pose clothing illustrative. Corianton not Helaman. Approved Alma reference does not approve new staging or son's imagined appearance.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "b56e7df69c57ff79f7d840b4b58c60ad161cb66d97510b485247f8b64add3c14",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-bore": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/bore-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/bore-800.webp",
+      "title": "The promised Savior bears our griefs",
+      "alt": "Two readers discuss an open scroll together.",
+      "caption": "Explore and study The promised Savior bears our griefs Two readers discuss an open scroll together. Isaiah’s words about the suffering servant help us study the Savior’s willingness to bear sorrow and sin. Isaiah 53:3–6 · Alma 7:11–13",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/isa/53?lang=eng&id=p3-p6#p3"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p13#p11"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/bore-original.png",
+      "original_sha256": "3052f451533c203c3294e5a7a71e6e1fa27ae3796fe8c0bf5b751217d5cbff2f",
+      "asset_sha256": "6f8168485578475852045edf0bb936f04f831b99d9e168a3b7f9b4ad7a7c30dd",
+      "thumbnail_sha256": "786a0bcd5c2ea1244f54c191b59fcdc8326403abf9d9e183811aea484202e6a2",
+      "historical_limits": "Isaiah53/Alma7 thematic reading scene; no claim these unnamed readers or exact room are recorded. No visible Savior or asserted historical identity.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "3052f451533c203c3294e5a7a71e6e1fa27ae3796fe8c0bf5b751217d5cbff2f",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-burdens": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/burdens-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/burdens-800.webp",
+      "title": "A covenant reaches toward other people",
+      "alt": "Members of a small community share a basket of food and folded cloth as a child makes room nearby.",
+      "caption": "Explore and study A covenant reaches toward other people Food and cloth pass from one person to another. The people gathered by Alma shared according to need as they learned to live their covenant together. Mosiah 18:8–10, 27–29 · 2 Nephi 31:17–21",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p8-p10,p27-p29#p8"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/31?lang=eng&id=p17-p21#p17"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/burdens-original.png",
+      "original_sha256": "d989a388e0ffecd25cbaf52cb6835be62f7ac3250f110ff46d142a1893de939f",
+      "asset_sha256": "77545d20e6a2f535e8447ca8e77b77dd085164c1f2194fd3ee12eec38c49f5f2",
+      "thumbnail_sha256": "57f377c39f914418d7eaeacfa83d930aa1a2c237df5534c9a65e6b74be58dc85",
+      "historical_limits": "Mosiah18:27-29 records voluntary sharing by need. Exact household, goods, woven clothing, faces and shelter not recorded; no location or archaeological reconstruction claim. Inventory check found no exact Mosiah18 ancient handoff duplicate; generic sharing subjects elsewhere remain similar themes.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "d989a388e0ffecd25cbaf52cb6835be62f7ac3250f110ff46d142a1893de939f",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-small-voices": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/small-voices-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/small-voices-800.webp",
+      "title": "Children have a place in Christ's ministry",
+      "alt": "A child shows a drawing to an attentive parent and grandparent.",
+      "caption": "Explore and study Children have a place in Christ's ministry A child shows her drawing to adults who stop to listen. The account in Third Nephi reminds us that children have a place in a community gathered around Christ. 3 Nephi 26:13–20",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/26?lang=eng&id=p13-p20#p13"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/small-voices-original.png",
+      "original_sha256": "f9f5792499572584fc16503b7cf46aabc807514a1e599f70a5092507548824c1",
+      "asset_sha256": "ccc94646d4d3f543721a7d743ae20aded486c3a50bc9745ce341cff2bf37a982",
+      "thumbnail_sha256": "3f16a5d68b4ae141674352b781807cb7a6fc41414b6ca6df2ce7efdda6b51dca",
+      "historical_limits": "Anonymous contemporary application, not a historical event; generated background photographs are not archival evidence.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "f9f5792499572584fc16503b7cf46aabc807514a1e599f70a5092507548824c1",
+        "reviewer": "Newton",
+        "evidence": "docs/plan-of-salvation/independent-modern-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-between": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/between-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/between-800.webp",
+      "title": "Death is not the end of a person",
+      "alt": "Two relatives look through family photographs together.",
+      "caption": "Explore and study Death is not the end of a person Two relatives preserve a family photograph together. Alma’s teaching offers hope that a person’s life continues beyond death while resurrection is still ahead. Alma 40:6–14, 21–23",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/40?lang=eng&id=p6-p14,p21-p23#p6"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/between-original.png",
+      "original_sha256": "31029967f89f27a151b88f2d0766ed7b5c61fe98793382f7445faada95a45ee2",
+      "asset_sha256": "06958ccd4b005127c1891408daddd8ac0051f08d569d399199db287a97f2bbe5",
+      "thumbnail_sha256": "31d8d06275f0865f990e2944140a93254265276f0ddc67a7002cf0209357fc2c",
+      "historical_limits": "Anonymous contemporary application, not a historical event; generated background photographs are not archival evidence.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "31029967f89f27a151b88f2d0766ed7b5c61fe98793382f7445faada95a45ee2",
+        "reviewer": "Newton",
+        "evidence": "docs/plan-of-salvation/independent-modern-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-redemption-dead": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/redemption-dead-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/redemption-dead-800.webp",
+      "title": "The gospel reaches beyond death",
+      "alt": "Joseph F. Smith sits with an open Bible.",
+      "caption": "Explore and study The gospel reaches beyond death Joseph F. Smith sits with an open Bible. His account begins with pondering the scriptures and leads to a wider understanding of Christ’s work among the dead. Doctrine and Covenants 138:1–11, 29–35, 58–59",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/138?lang=eng&id=p1-p11,p29-p35,p58-p59#p1"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/redemption-dead-original.png",
+      "original_sha256": "85e941d4b39581faaf7d2eb50e7dae45b487d7b01c125a64e866768d59955e33",
+      "asset_sha256": "dc9e7a2f06366d999aa2c9ba3a757c8ade69ef312b56da36003e66f029fec359",
+      "thumbnail_sha256": "a37cb5cf68129bb3b8e8704068a11abde78c35f93c2d07574006bcaaf8ec9d28",
+      "historical_limits": "D&C138 supports pondering scriptures; exact room, furnishings, dress and pose remain interpretive. This is Joseph F. Smith, not his younger son Joseph Fielding Smith.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "85e941d4b39581faaf7d2eb50e7dae45b487d7b01c125a64e866768d59955e33",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-life-with-god": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/life-with-god-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/life-with-god-800.webp",
+      "title": "Eternal life is life with God",
+      "alt": "Adults walk and talk outside the Rome Italy Temple.",
+      "caption": "Explore and study Eternal life is life with God People greet one another on the temple grounds. Covenants invite us to prepare for life with God through the choices and relationships of daily life. John 17:1–5, 20–23 · Doctrine and Covenants 76:50–70, 71–81, 89–92 · Preach My Gospel, lesson 2",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p1-p5,p20-p23#p1"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng&id=p50-p70,p71-p81,p89-p92#p50"
+        },
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/09-chapter-3-lesson-2?lang=eng"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/life-with-god-original.png",
+      "original_sha256": "0800de44604000d9a0697742c0eeb17036eb339814ab52f8f4417d1a08213b09",
+      "asset_sha256": "04e825345d3b05764152f6fd5c54f8d490e61bb6411cae7823d8296b2228b086",
+      "thumbnail_sha256": "2566d924edeaef49621d287e4b55e56421c1cda61f5f3de9a0e3d91679d03aac",
+      "historical_limits": "Undated modern application; no claim attendance occurred today, specific ordinance performed or eternal outcome guaranteed. Anonymous people are not historical or owner-approved identities.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "0800de44604000d9a0697742c0eeb17036eb339814ab52f8f4417d1a08213b09",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-long-view": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/long-view-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/long-view-800.webp",
+      "title": "Bring eternity into one decision",
+      "alt": "A person sets aside a phone to listen to a family member.",
+      "caption": "Explore and study Bring eternity into one decision A father sets aside his phone to listen to his daughter. An eternal perspective can begin with giving someone our attention today. Think Celestial! — Russell M. Nelson, October 2023",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/general-conference/2023/10/51nelson?lang=eng"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/long-view-original.png",
+      "original_sha256": "743c9408ec455f15a0447125471ee1386cb7eab7c97f8267a1d0f5a6b46ab43e",
+      "asset_sha256": "1639605a38674ddc0f2b504e8eab1e28d16791a8f8c98318c4014693c2353b23",
+      "thumbnail_sha256": "0eb49b3efa23760d711caa78957ea44c88bad5fd09db215c4bb63cbfca49f8de",
+      "historical_limits": "Anonymous contemporary application, not a historical event; generated background photographs are not archival evidence.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "743c9408ec455f15a0447125471ee1386cb7eab7c97f8267a1d0f5a6b46ab43e",
+        "reviewer": "Newton",
+        "evidence": "docs/plan-of-salvation/independent-modern-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    },
+    "pos-begin": {
+      "owner": "/answers/plan-of-salvation.html",
+      "asset": "assets/page-art/plan-of-salvation/begin-v2-full.webp",
+      "thumbnail": "assets/page-art/plan-of-salvation/begin-v2-800.webp",
+      "title": "A king asks what he can do",
+      "alt": "Lamoni’s father kneels with his hands raised in prayer while Aaron stands nearby.",
+      "caption": "Explore and study A king asks what he can do Lamoni’s father kneels in prayer while Aaron stands nearby. His willingness to give up his sins turns a question about eternal life into a personal response to God. Alma 22:12–18",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/22?lang=eng&id=p12-p18#p12"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "owner_approved": false,
+      "original": "assets/page-art/plan-of-salvation/begin-v2-original.png",
+      "original_sha256": "c4fde933870d949cb82bda2ae3c103820f9a5a19bfb97195ed4bfa5a8705413a",
+      "asset_sha256": "8d4939b5cffee37b38f0018e01d1204aa30dbe9959e0045949b97db533ed7f33",
+      "thumbnail_sha256": "d989bd141e23b06626ca62d75ac622086b069221a25d7f45f5635b94e7b4c5af",
+      "historical_limits": "King is Lamoni father, not Lamoni; Aaron, not Ammon. Prayer before collapse recorded. Exact dress, room, gesture and attendant placement interpretive.",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "c4fde933870d949cb82bda2ae3c103820f9a5a19bfb97195ed4bfa5a8705413a",
+        "reviewer": "focus_review / Albert as recorded",
+        "evidence": "docs/plan-of-salvation/independent-art-review.json",
+        "scope": "Candidate visual/source-boundary review; no owner aesthetic approval"
+      }
+    }
+  },
+  "hero": {
+    "original": "assets/heroes/plan-of-salvation-hero-original.png",
+    "original_sha256": "d37b0205149b55c54dca8c5908550bbc40cc8c886c9413a003bdb769cae53d52",
+    "owner": "/answers/plan-of-salvation.html",
+    "includes_christ": true,
+    "owner_approved": false,
+    "review_status": "pass",
+    "independent_review": "docs/plan-of-salvation/hero-review.json",
+    "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p1-p5#p1",
+    "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+    "identity_reference_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+    "deliveries": {
+      "full": {
+        "asset": "assets/heroes/plan-of-salvation-hero-full.webp",
+        "sha256": "cf559d1e2941d5345861929419e0e968a53564c1a565bc85617781cab0e1e927"
+      },
+      "1600": {
+        "asset": "assets/heroes/plan-of-salvation-hero-1600.webp",
+        "sha256": "71a5beaa7576689d4415ac9f0b47e9d081c2778741bd64d700f9bf5fa6324234"
+      },
+      "mobile": {
+        "asset": "assets/heroes/plan-of-salvation-hero-mobile.webp",
+        "sha256": "e4b1c3c444c3e23b2a5a5f17659898f3174b75c9299a707c87dc30ea3673fbb2"
+      }
+    }
+  },
+  "global_limits": "Owner explicitly authorized flexible mix and approximate count. Existing reference previews remain exclusively owned by their original studies and are not new originals."
+}

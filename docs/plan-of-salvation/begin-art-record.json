@@ -1,0 +1,45 @@
+{
+  "id": "begin-v2",
+  "prompt": "Highly photorealistic cinematic Book of Mormon scene, landscape1536x1024. Historically/source-grounded staging freshly checked Alma22:12-18: Aaron taught Lamoni's FATHER Creation Fall redemption through Christ; the older king kneels to call on God before falling as if dead. Depict this precise earlier prayer moment: an elderly dignified king kneeling upright on a simple woven mat, both knees grounded, hands naturally open, eyes lifted with sincere pleading. Aaron an adult youngerteacher stands nearby attentively, his gaze on king with compassion, not touching him. Two brethren quietlyfarbackground ifneeded. Restrained ancient plastered stone room at king'shouse, warm side daylight, woven clothover shoulders/sandals/simple modestrobes in mutedteal andochre, noEgyptian pharaohcostume, noGreekcolumns, noEuropeanmedievalcrown, nogeography-specificmonuments, nojaguarheaddress. New distinct faces: this is NOT Ammon or KingLamoni, notAlmaorChrist; no prior approved portrait exists for these two in our checkedinventory. Realhuman skinpores, diverseplausibleancientAmericanappearance without racialmoralcoding. All heads hands feet andknees completelyvisible insideframe, ampleheadroom, naturalanatomy exactfivefingers, contactshadows. Nolegiblescripturetext, nohalo, noglowingeyes, nooccultsymbols, nowatermark. Reverent engagedeye-direction fitting prayer, not looking atcamera.",
+  "edit_prompt": "Edit this same scene preserving exact faces, identities, clothing, poses, prayer event, lighting and overall visual style. Widen the camera view and extend room upward modestly so Aaron standing at right has his ENTIRE head and hair with at least 100 pixels of comfortable space above it. Also bring far-left background man's entire silhouette inside frame. Keep kneeling king and all sandals/knees/hands completely in frame. Do not crop anything else or change body shapes. Landscape1536x1024 photorealistic. No text. This is only a framing correction.",
+  "sources": [
+    "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/22?lang=eng&id=p12-p18#p12"
+  ],
+  "reference": "begin-original.png",
+  "source_path": "C:/Users/wyatt/.codex/generated_images/01a0e029-cd14-76a0-9061-a95215c5978b/exec-c2145049-bf64-45a0-adfa-52682719717e.png",
+  "notes": "Original superseded because Aaron crown clipped; v2 framing corrected; parent candidate pass, independent pending.",
+  "current_integration_status": {
+    "date": "2026-09-27",
+    "status": "Selected final variants have completed independent candidate review; not owner aesthetic approval; not published.",
+    "generation_note_scope": "Existing status/review/pending phrases in this generation record are historical generation-time notes. They are preserved as evidence, not current release status.",
+    "current_authority": "docs/plan-of-salvation/art-review.json",
+    "independent_evidence": [
+      "docs/plan-of-salvation/independent-art-review.json",
+      "docs/plan-of-salvation/independent-modern-review.json"
+    ],
+    "selected_asset_ids": [
+      "newborn-v2",
+      "moses-purpose",
+      "earth",
+      "stewardship",
+      "labor",
+      "choose",
+      "bedside-care",
+      "return-v2",
+      "bore",
+      "burdens",
+      "small-voices",
+      "between",
+      "redemption-dead",
+      "life-with-god",
+      "long-view",
+      "begin-v2"
+    ],
+    "excluded_attempts": [
+      "newborn",
+      "purpose",
+      "return",
+      "begin"
+    ]
+  }
+}

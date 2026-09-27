@@ -232,7 +232,13 @@ def check():
             continue
         nodes = list(Parser(page.read_text(encoding='utf-8', errors='replace')).root.walk())
         for path in references(page, nodes) & owners.keys():
-            need(owners[path] == page.resolve(), 'Exclusive gap artwork reused on '+page.relative_to(ROOT).as_posix())
+            reference_only=False
+            if page.relative_to(ROOT).as_posix()=='answers/plan-of-salvation.html' and owners[path]!=page.resolve():
+                from plan_of_salvation_qa import check_structure
+                soup=check_structure(page.read_text(encoding='utf-8'))
+                matching=[n for n in soup.select('img') if local_asset(page,n.get('src',''))==path]
+                reference_only=bool(matching) and all(n.find_parent('article',class_='pos-owned-reference') is not None and local_asset(page,n.find_parent('a')['href'])==owners[path] for n in matching)
+            need(owners[path] == page.resolve() or reference_only, 'Exclusive gap artwork reused on '+page.relative_to(ROOT).as_posix())
         for node in nodes:
             if 'data-study-gap-art' in node.attrs:
                 need(EXPECTED.get(node.attrs['data-study-gap-art']) == page.relative_to(ROOT).as_posix(), 'Unknown/misplaced gap figure')

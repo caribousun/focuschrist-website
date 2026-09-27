@@ -1,0 +1,270 @@
+{
+  "reviewer": "focus_review independent subagent",
+  "method": "Each original individually viewed using view_image; source/provenance record read from newton-art-review.json and hero-source.json. Source URLs not independently refetched in this pixel review.",
+  "owner_approval": false,
+  "assets": [
+    {
+      "id": "hero-mobile",
+      "original": "assets/heroes/plan-of-salvation-hero-mobile-original.png",
+      "sha256": "8ec48586ad99042d55f71b680279f3c81b82e6f50a66396d8300c50077fc9f47",
+      "dimensions": [
+        1024,
+        1536
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Compared with actual desktop hero and approved Home reference pixels. Consistent face, hair, beard and brow; natural upward prayer gaze, complete five-digit hands and credible wrists. Full head and hands have breathing room. Photographic fabric, skin, room and lamp lighting. Portrait composition variant of the same John 17 event; not a new scene.",
+      "source_boundary": "John 17:1-5 supports upward eyes and prayer; room, garments, gesture and dusk remain interpretive. No Father depiction, nail wounds or Gethsemane staging."
+    },
+    {
+      "id": "newborn",
+      "original": "assets/page-art/plan-of-salvation/newborn-original.png",
+      "sha256": "c73527a74dee41041801754b611c0029712ae6022e85f6e6397db5fcc1836d56",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "revision_required",
+      "visual_findings": "Father crown visibly intersects and is cut by top frame boundary. This fails full-head/no-clipping requirement and needs a slightly wider or taller composition preserving likeness and action. Otherwise both parents attend infant naturally, infant face is clear and head supported by maternal arm; visible hands and anatomy are credible.",
+      "source_boundary": "Anonymous modern application only; no literal premortal depiction or assertion that scripture records this family."
+    },
+    {
+      "id": "stewardship",
+      "original": "assets/page-art/plan-of-salvation/stewardship-original.png",
+      "sha256": "2581b32e94f9d411c1377e8d61e9a7d2f869aa1726bf85dc9ea1595ad9039d3f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Adult and child naturally meet eyes. Credible kneeling poses, distinct visible fingers, watering-can grip and water directed to root basin. Heads and action fully framed; some limbs naturally occluded by kneeling and props. Natural skin, clothing, soil and daylight.",
+      "source_boundary": "Modern application of creation stewardship; not Adam and Eve or a recorded biblical family."
+    },
+    {
+      "id": "bedside-care",
+      "original": "assets/page-art/plan-of-salvation/bedside-care-original.png",
+      "sha256": "478eda6b7c55dc4fc1de9f1177c1fe920a79e8e800c9cd43cb88b78f7541eb1e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Distinct patient, nurse and family faces. Patient speaks with coherent raised hand; nurse meets her gaze, family attentively watches while holding resting hand. Hand overlap, fingers and arms credible. Full heads framed and natural skin texture, bedding and daylight.",
+      "source_boundary": "Modern compassionate care application; does not depict an ancient event, miraculous healing, diagnosis or promised medical outcome."
+    },
+    {
+      "id": "newborn-v2",
+      "original": "assets/page-art/plan-of-salvation/newborn-v2-original.png",
+      "sha256": "80d03cf5fbe6e2a52120794617c68fcdc0e5f34a496dca7cbae1866b48ca4f66",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Father crown now fully framed with ample headroom. Family likeness, infant head support, clear infant face and natural parental gaze retained; visible hands coherent. Supersedes rejected clipped original.",
+      "source_boundary": "Modern application only, not heavenly or recorded event.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22-p26#p22",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation?lang=eng"
+      ],
+      "overlap_review": "Replaces newborn original rather than additional original. Existing John16:21 mother/newborn illustration is an ancient teaching comparison; this two-parent contemporary welcome differs in event framing and period."
+    },
+    {
+      "id": "purpose",
+      "original": "assets/page-art/plan-of-salvation/purpose-original.png",
+      "sha256": "d516a994624364e87e5f404da205effd1fd679dec64cb4389315e6fdf0a268cd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Photographic skin and wood; coherent four-leg chair, screwdriver at joint, natural two-person eye contact and visible fingers. Full crowns and feet present. Older woman crown margin is narrow but visible; preserve contain/full-image framing.",
+      "source_boundary": "Moses1:39 establishes divine purpose, not woodworking. Practical collaboration is a reflective modern application. Compared existing gate repairs and woman setting aside papers beside stool; no same action/composition found.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39"
+      ],
+      "overlap_review": "Repair is a recurring service theme. Records include outdoor gate repair and a woman setting paperwork aside near a stool; this active two-person upright-chair repair has a distinct action/composition. Not a new scriptural event."
+    },
+    {
+      "id": "earth",
+      "original": "assets/page-art/plan-of-salvation/earth-original.png",
+      "sha256": "2a3c1bce9b7f63c48a59ae29882d4822fef2639141c3c57ad5845a63edcff5db",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Photographic wet soil, seedlings, grasses, plum branch and receding orchard; coherent stems and natural color. No people or fantasy imagery.",
+      "source_boundary": "Illustrates living creation; not Eden, exact creation-day geography or scientific evidence of creation chronology. Species and landscape illustrative.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p9-p12#p9"
+      ],
+      "overlap_review": "Creation theme overlaps stewardship, but this close soil/plant scene has no people or tools and a distinct subject/composition. No exact plum scene located in searched inventory."
+    },
+    {
+      "id": "burdens",
+      "original": "assets/page-art/plan-of-salvation/burdens-original.png",
+      "sha256": "d989a388e0ffecd25cbaf52cb6835be62f7ac3250f110ff46d142a1893de939f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Five distinct people, reciprocal gaze in two handoffs and child attending dishes. Visible grips and hands coherent; crowns complete; photographic cloth, skin and rural surroundings. Exact goods, shelter and appearance are interpretive.",
+      "source_boundary": "Mosiah18:27-29 records voluntary sharing by need. Exact household, goods, woven clothing, faces and shelter not recorded; no location or archaeological reconstruction claim. Inventory check found no exact Mosiah18 ancient handoff duplicate; generic sharing subjects elsewhere remain similar themes.",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p27-p29#p27"
+      ],
+      "overlap_review": "Sharing is a recurring service theme. No exact Mosiah18:27-29 ancient food-and-cloth handoff found in reviewed records. This is interpretive anonymous communal sharing, not a claimed archaeological reconstruction."
+    },
+    {
+      "id": "bore",
+      "original": "assets/page-art/plan-of-salvation/bore-original.png",
+      "sha256": "3052f451533c203c3294e5a7a71e6e1fa27ae3796fe8c0bf5b751217d5cbff2f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Two anonymous ancient men converse beside an open scroll; clear reciprocal gaze, distinct faces, coherent hands and seated limbs, complete crowns, natural oil-lamp light and textures. Caption should describe discussion rather than one reader looking down.",
+      "source_boundary": "Isaiah53/Alma7 thematic reading scene; no claim these unnamed readers or exact room are recorded. No visible Savior or asserted historical identity.",
+      "owner_approval": false
+    },
+    {
+      "id": "moses-purpose",
+      "original": "assets/page-art/plan-of-salvation/moses-purpose-original.png",
+      "sha256": "584489e330f499020866fb15767448397dd3cbdb9bf1cae36a04826fef1b3424",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Actual published brass-serpent Moses continuity reference viewed: matching aged long gray hair, beard and facial profile; cream tunic and red outer robe remain consistent. Natural upward gaze, coherent hands and sandals, complete figure with margin, photographic landscape.",
+      "source_boundary": "Moses1 vision and inquiry; exact mountain and visible landscape are interpretive. No invented visible Father or literal heavenly geography.",
+      "owner_approval": false,
+      "identity_reference": "assets/page-art/bible-together/moses-brass-serpent-full.webp",
+      "identity_reference_sha256": "a20a620d183c720e83be4a1bf4381f5983a232d92d7b9901cc5fffc08124e438",
+      "identity_authority": "Published continuity reference; explicit owner registry approval not established."
+    },
+    {
+      "id": "redemption-dead",
+      "original": "assets/page-art/plan-of-salvation/redemption-dead-original.png",
+      "sha256": "85e941d4b39581faaf7d2eb50e7dae45b487d7b01c125a64e866768d59955e33",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Compared actual historic photograph right elderly man: matching high receding hairline, round spectacles, long narrow white beard, nose and face proportions. Natural contemplative gaze, coherent hands resting at open Bible, full head and hands framed. Photographic skin, cloth and daylight; no vision apparition.",
+      "source_boundary": "D&C138 supports pondering scriptures; exact room, furnishings, dress and pose remain interpretive. This is Joseph F. Smith, not his younger son Joseph Fielding Smith.",
+      "owner_approval": false,
+      "identity_reference": "work/plan-references/joseph-f-smith-and-son.jpg",
+      "identity_reference_sha256": "23dc1f635210a12f513c1309c053e60d001166fb73e491dffe4b7390b96353be"
+    },
+    {
+      "id": "labor",
+      "original": "assets/page-art/plan-of-salvation/labor-original.png",
+      "sha256": "48c4a990f9f5993b95e9bd3e507a0bc09f4cb31a503b7f9ea875fd9a8c40b85c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Recognizable faces match published left-pair Eden reference; natural mutual gaze, plausible tool grip and kneeling anatomy, complete crowns and visible feet/hands. Different working action from Eden/altar references.",
+      "identity_authority": "Published Adam/Eve continuity, not asserted owner registry approval.",
+      "alt": "Adam loosens the soil with a wooden digging stick while Eve kneels beside him working the earth.",
+      "owner_approval": false,
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p1-p4#p1",
+      "source_boundary": "After-Eden shared labor recorded. Exact tools, terrain, dress and moment illustrative. Existing Eden planting/first-hope altar imagery related themes but different event/composition.",
+      "references": [
+        {
+          "asset": "assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp",
+          "sha256": "85be78191c31c88375d324e68b4f26ca677d6fb501e6df9510ad4911e2369fff",
+          "actual_pixels_inspected_before_generation": true
+        },
+        {
+          "asset": "assets/page-art/atonement/first-hope.webp",
+          "sha256": "fecacbeca9d2c885707a1feadb25d8b4e502fe3c308aefe15b68a61fdd02e495",
+          "actual_pixels_inspected_before_generation": true
+        }
+      ]
+    },
+    {
+      "id": "choose",
+      "original": "assets/page-art/plan-of-salvation/choose-original.png",
+      "sha256": "27fe3c71ace04944b8c7cb386e346a751436e552d1e29e58bcbcfd1e1a0835b3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Lehi face, nose, gray hair and beard match published reference. Adult Jacob differs from young Joseph in source picture; credible crouch, hands and sandals, mutual gaze and fully framed crowns.",
+      "identity_authority": "Published Lehi continuity; Jacob newly imagined, neither claimed owner approved.",
+      "alt": "Lehi sits in a doorway speaking with Jacob, who crouches beside him and looks into his face.",
+      "owner_approval": false,
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p1-p3,p27-p29#p1",
+      "source_boundary": "Father addresses Jacob recorded; exact age/room/posture not given. Not OTJacob or Joseph. Close father-son teaching theme overlaps existing Lehi/Joseph, event and adult son's pose distinct.",
+      "references": [
+        {
+          "asset": "assets/page-art/bible-together/lehi-joseph-counsel-full.webp",
+          "sha256": "cde8c433c4ad12ee72c3bf1653b0ba24413dff03e07f9ff910e8a8d6864d1f2f",
+          "actual_pixels_inspected_before_generation": true
+        }
+      ]
+    },
+    {
+      "id": "return-v2",
+      "original": "assets/page-art/plan-of-salvation/return-v2-original.png",
+      "sha256": "b56e7df69c57ff79f7d840b4b58c60ad161cb66d97510b485247f8b64add3c14",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Actual approved Alma pixels compared: consistent broad cheekbones, nose, clean-shaven face, straight shoulder-length hair and rust robe. Corianton distinct young adult. Natural mutual gaze, coherent hands/knees and fully framed sandals with margin.",
+      "identity_authority": "Alma approved reference only; new staging and Corianton appearance are not owner approved.",
+      "alt": "Alma gestures with an open hand as he speaks to Corianton, seated opposite him.",
+      "owner_approval": false,
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng&id=p23-p31#p23",
+      "source_boundary": "Alma counsel recorded; exact setting/pose clothing illustrative. Corianton not Helaman. Approved Alma reference does not approve new staging or son's imagined appearance.",
+      "references": [
+        {
+          "asset": "assets/page-art/birth-of-christ/05-alma-teaches-full.webp",
+          "sha256": "7568e3b8a2bf09c6d6f317f3617dd8187cccc25380343b06a0ae69a6fa42c963",
+          "actual_pixels_inspected_before_generation": true
+        }
+      ]
+    },
+    {
+      "id": "begin-v2",
+      "original": "assets/page-art/plan-of-salvation/begin-v2-original.png",
+      "sha256": "c4fde933870d949cb82bda2ae3c103820f9a5a19bfb97195ed4bfa5a8705413a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "visual_findings": "Complete crowns, hands and sandals with breathing room. King gazes upward naturally, Aaron attends him; credible knees and open fingers. Background attendants distinct enough and unobtrusive; period setting photographic.",
+      "identity_authority": "New interpreted Aaron and king appearances; no existing identity reference or owner approval claimed.",
+      "alt": "Lamoni\u2019s father kneels with his hands raised in prayer while Aaron stands nearby.",
+      "owner_approval": false,
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/22?lang=eng&id=p12-p18#p12",
+      "source_boundary": "King is Lamoni father, not Lamoni; Aaron, not Ammon. Prayer before collapse recorded. Exact dress, room, gesture and attendant placement interpretive."
+    },
+    {
+      "id": "life-with-god",
+      "original": "assets/page-art/plan-of-salvation/life-with-god-original.png",
+      "sha256": "0800de44604000d9a0697742c0eeb17036eb339814ab52f8f4417d1a08213b09",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "owner_approval": false,
+      "visual_findings": "Original and official reference pixels individually viewed. Five distinct adults with complete heads and shoes, natural conversational eye contact, coherent visible hands/limbs. Photograph-like skin, cloth and daylight. Main temple curved body, unequal twin towers, gold angel and vertical window forms recognizable against reference; landscaped approach is interpreted, not exact architectural documentation.",
+      "source_boundary": "Undated modern application; no claim attendance occurred today, specific ordinance performed or eternal outcome guaranteed. Anonymous people are not historical or owner-approved identities.",
+      "reference": "work/plan-of-salvation/rome-official-reference.jpg",
+      "reference_sha256": "5872226709fd6921efe0138d99f8effbf6f91498361d87af618ea09524ba758f",
+      "alt": "Adults walk and talk outside the Rome Italy Temple."
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "date": "2026-09-27",
+  "method": "Built-in image_gen;3original calls plus1targeted non-destructive framing correction. No APIspend.",
+  "identity_authority": "Parent explicitly authorized published continuity references; only Alma mapped as ownerapproved in registry. NewJacob/Corianton faces not claimed historically known.",
+  "assets": [
+    {
+      "id": "labor",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p1-p4#p1",
+      "review": "Candidate passes: exact left-pair reference faces recognizable, both actively work with reciprocal gaze, full crowns and visible anatomical hands, no altar. Published reference continuity only; owner approval not independently established.",
+      "limits": "After-Eden shared labor recorded. Exact tools, terrain, dress and moment illustrative. Existing Eden planting/first-hope altar imagery related themes but different event/composition.",
+      "prompt": "Create new photorealistic1536x1024 landscape scene from Moses5:1: Adam tills earth and Eve labors with him AFTER leaving Eden. Reference1 is identity reference ONLY: preserve exact faces/hair of the MAN AND WOMAN AT LEFT (Adam and Eve), NOT the large Christ face. Reference2 supplies body/hair/clothing continuity. No Christ in new image. Both Adam and Eve actively cultivate rough ordinary soil together, Adam uses a simple wooden digging stick while Eve kneels forming an adjacent shallow planting furrow with her hands. They pause and look directly at each other naturally, equal partners in strenuous work. Wider full-body composition, complete heads/feet/hands and generous margins, anatomically correct grips, lifelike skin and hair and woven practical modest clothing. Plain early rural ground, no Eden waterfall, no orchard paradise, NO altar or religious ceremony, no children, no modern tools, no text. Exact landscape/tools unspecified by scripture: restrained staging, not archaeological reconstruction. Preserve established recognizable faces without copying prior Eden composition. Real daylight photography, no painting, no glossy CGI.",
+      "original": "assets/page-art/plan-of-salvation/labor-original.png",
+      "original_sha256": "48c4a990f9f5993b95e9bd3e507a0bc09f4cb31a503b7f9ea875fd9a8c40b85c",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "references": [
+        {
+          "asset": "assets/page-art/eternal-marriage/timeline/01-eden-desktop-v2.webp",
+          "sha256": "85be78191c31c88375d324e68b4f26ca677d6fb501e6df9510ad4911e2369fff",
+          "actual_pixels_inspected_before_generation": true
+        },
+        {
+          "asset": "assets/page-art/atonement/first-hope.webp",
+          "sha256": "fecacbeca9d2c885707a1feadb25d8b4e502fe3c308aefe15b68a61fdd02e495",
+          "actual_pixels_inspected_before_generation": true
+        }
+      ],
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/labor-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "dcb04c64286e6e2b88561d5e2d52e61ebf236647f26cd768bc0c04ea579c3840"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/labor-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "7ce93c556a7c6cbec60489debc2987f069cbdc344f8b8d3804e05d0a13455d8c"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/labor-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "7ce93c556a7c6cbec60489debc2987f069cbdc344f8b8d3804e05d0a13455d8c"
+        }
+      ],
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "source_verified_before_generation": true
+    },
+    {
+      "id": "choose",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng&id=p1-p3,p27-p29#p1",
+      "review": "Candidate passes: Lehi face/brow/nose/grayhair preserved; Jacob is new adult face unlike boyJoseph, reciprocal gaze, full heads/hands/sandals. Parent independently assess likeness and anatomical detail.",
+      "limits": "Father addresses Jacob recorded; exact age/room/posture not given. Not OTJacob or Joseph. Close father-son teaching theme overlaps existing Lehi/Joseph, event and adult son's pose distinct.",
+      "prompt": "Create1536x1024 landscape true-photographic scene grounded in2Nephi2:1-3,27-29: elderly Lehi counsels his grown son Jacob about redemption and freedom. Use supplied image ONLY for Lehi identity: older gray-haired bearded father at LEFT, preserve exact recognizable face/nose/brow/eyes/hair texture and age. DO NOT copy the boy at right; he is Joseph, not Jacob. New Jacob is a distinct grown young adult son with his own face, dark straight hair and short modest beard, not Old Testament Jacob or Nephi. Distinct composition from supplied close seated father-boy scene: Lehi sits at a shaded simple doorway, Jacob crouches at a respectful eye level in front of him, both full heads and bodies with generous borders. Lehi's open hand rests gently on his own knee, Jacob looks directly into father's eyes, personal earnest calm exchange, no theatrical sadness or shaming. Two people only, simple plain woven clothing, restrained ancient American domestic earthen surroundings, exact geographic/cultural reconstruction not asserted. No plates, scroll with invented text, temple, altar, modern props, Christ or halos. Natural daylight, lifelike skin and separate fingers, coherent shoulders/knees/feet, no clipped crown. Record supplies father/son and counsel, exact setting and ages are illustrative. Do not add dialogue text or emotional guarantees.",
+      "original": "assets/page-art/plan-of-salvation/choose-original.png",
+      "original_sha256": "27fe3c71ace04944b8c7cb386e346a751436e552d1e29e58bcbcfd1e1a0835b3",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "references": [
+        {
+          "asset": "assets/page-art/bible-together/lehi-joseph-counsel-full.webp",
+          "sha256": "cde8c433c4ad12ee72c3bf1653b0ba24413dff03e07f9ff910e8a8d6864d1f2f",
+          "actual_pixels_inspected_before_generation": true
+        }
+      ],
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/choose-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "ee1670c89e8d2e3262a67cb7a7ad70901c7f406c99a99fe2ed2bbb5984588798"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/choose-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "eedcad984f13ae1ee24c35b09d195e9d98f4dd17783a4cc09149634aa439a12a"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/choose-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "eedcad984f13ae1ee24c35b09d195e9d98f4dd17783a4cc09149634aa439a12a"
+        }
+      ],
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "source_verified_before_generation": true
+    },
+    {
+      "id": "return",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng&id=p23-p31#p23",
+      "review": "Superseded by return-v2 because Corianton sandal at bottom edge. Do not integrate original.",
+      "limits": "Retained non-destructively; no delivery derivatives for superseded candidate.",
+      "prompt": "Create one1536x1024 landscape photorealistic scene of Alma the Younger counseling his adult son Corianton, Alma42:23-31. Supplied image is EXACT identity reference for Alma ONLY: central-left older speaker with shoulder-length straight black hair, broad cheekbones, clean-shaven face and rust-red woven outercloth. Preserve his recognizable face and age; do not substitute the bearded listener or any other face. Corianton is a previously unmapped distinct adult son, new individual face, NOT Helaman and not any supplied listener. Two people only in a restrained ancient American plain domestic interior, no geographically diagnostic ornament: Alma sits on a low wooden bench, Corianton sits opposite across a small open floor space with elbows loosely resting on knees and hands unclenched, both faces clearly seen in three-quarter view and eyes meeting. Alma gestures gently with one open hand while speaking; Corianton attends without theatrical shame. Natural consequential humane conversation, not a reunion, no embrace or invented forgiveness episode. Complete heads with generous headroom and complete hands/feet, physically coherent seated anatomy, modest plain woven garments, doorway daylight, high-detail skin/hair/fabric. No plates, invented legible writing, modern furnishing, throne, halos, Christ or additional characters. Exact location and pose not recorded; illustrative staging. Distinct from public Alma7 crowdteaching and courtyardAlma/Helaman: private two-person indoor exchange, no outdoorcrowd.",
+      "original": "assets/page-art/plan-of-salvation/return-original.png",
+      "original_sha256": "bb4ff4415c26179dc2892ac0c572b125079b29dd1c3be0faeceedacba02b2a0a",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "references": [
+        {
+          "asset": "assets/page-art/birth-of-christ/05-alma-teaches-full.webp",
+          "sha256": "7568e3b8a2bf09c6d6f317f3617dd8187cccc25380343b06a0ae69a6fa42c963",
+          "actual_pixels_inspected_before_generation": true
+        }
+      ],
+      "deliveries": [],
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "source_verified_before_generation": true
+    },
+    {
+      "id": "return-v2",
+      "source": "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/42?lang=eng&id=p23-p31#p23",
+      "review": "Candidate passes: wider frame includes all sandals/toes with floor margin; Alma's approved face preserved, adultCoriantonnewface, directengagedgaze and coherent hands/shoulders. No dramatic shame or invented embrace.",
+      "limits": "Alma counsel recorded; exact setting/pose clothing illustrative. Corianton not Helaman. Approved Alma reference does not approve new staging or son's imagined appearance.",
+      "prompt": "Edit only framing of this exact photograph. Widen view a little and add visible floor below both men's feet so BOTH sandals and EVERY toe are fully inside frame with at least50pixels breathing room, and ensure crowns have generous headroom. Preserve exact recognizable faces, ages, gaze, poses, hands, clothing, lighting, scene and realism. No additional people, no changes to facial identities. Landscape1536x1024.",
+      "original": "assets/page-art/plan-of-salvation/return-v2-original.png",
+      "original_sha256": "b56e7df69c57ff79f7d840b4b58c60ad161cb66d97510b485247f8b64add3c14",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "references": [
+        {
+          "asset": "assets/page-art/birth-of-christ/05-alma-teaches-full.webp",
+          "sha256": "7568e3b8a2bf09c6d6f317f3617dd8187cccc25380343b06a0ae69a6fa42c963",
+          "actual_pixels_inspected_before_generation": true
+        }
+      ],
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/return-v2-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "bb97b52bc0a3acfa057883e7c00dd2ff332af61a779cd0d5b1081ce9c69833ce"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/return-v2-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "bb20802b592bef0efec74c6aa00ac938b349e69c05aeff955a7b32677715e48d"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/return-v2-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "bb20802b592bef0efec74c6aa00ac938b349e69c05aeff955a7b32677715e48d"
+        }
+      ],
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "source_verified_before_generation": true
+    }
+  ],
+  "current_integration_status": {
+    "date": "2026-09-27",
+    "status": "Selected final variants have completed independent candidate review; not owner aesthetic approval; not published.",
+    "generation_note_scope": "Existing status/review/pending phrases in this generation record are historical generation-time notes. They are preserved as evidence, not current release status.",
+    "current_authority": "docs/plan-of-salvation/art-review.json",
+    "independent_evidence": [
+      "docs/plan-of-salvation/independent-art-review.json",
+      "docs/plan-of-salvation/independent-modern-review.json"
+    ],
+    "selected_asset_ids": [
+      "newborn-v2",
+      "moses-purpose",
+      "earth",
+      "stewardship",
+      "labor",
+      "choose",
+      "bedside-care",
+      "return-v2",
+      "bore",
+      "burdens",
+      "small-voices",
+      "between",
+      "redemption-dead",
+      "life-with-god",
+      "long-view",
+      "begin-v2"
+    ],
+    "excluded_attempts": [
+      "newborn",
+      "purpose",
+      "return",
+      "begin"
+    ]
+  }
+}

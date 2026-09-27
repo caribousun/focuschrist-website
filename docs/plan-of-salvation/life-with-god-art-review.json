@@ -1,0 +1,100 @@
+{
+  "id": "life-with-god",
+  "reviewer": "Newton",
+  "owner_approval": false,
+  "status": "candidate for Albert independent review",
+  "sources": [
+    "https://www.churchofjesuschrist.org/temples/details/rome-italy-temple?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng",
+    "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/76?lang=eng",
+    "https://www.churchofjesuschrist.org/study/manual/preach-my-gospel-2023/04-chapter-3/09-chapter-3-lesson-2?lang=eng"
+  ],
+  "official_reference_url": "https://www.churchofjesuschrist.org/imgs/17e2c70d687fffedfe115197e57fa8f5d1d369bb/full/!1600,/0/default",
+  "reference": {
+    "path": "work/plan-of-salvation/rome-official-reference.jpg",
+    "sha256": "5872226709fd6921efe0138d99f8effbf6f91498361d87af618ea09524ba758f",
+    "dimensions": [
+      1600,
+      1067
+    ]
+  },
+  "reference_inspected_before_generation": true,
+  "review": [
+    "Five anonymous adults with complete heads and shoes; two women exchange direct natural gaze, another individual walks separately.",
+    "Recognizable Rome architecture retains oval stone mass, two unequal towers, front gold angel and vertical windows. New ground-level people-led composition.",
+    "Visible foreground hands and limb attachments appear coherent. No internal ordinances or readable commercial labels."
+  ],
+  "limits": [
+    "Generated undated modern application, not a recorded event or exact architectural survey.",
+    "Official temple schedule listed September21–October5 2026 closure; illustration does not claim worship happened today.",
+    "Temple attendance is not depicted as proof of eternal outcome."
+  ],
+  "files": [
+    {
+      "path": "assets/page-art/plan-of-salvation/life-with-god-1536.webp",
+      "sha256": "04e825345d3b05764152f6fd5c54f8d490e61bb6411cae7823d8296b2228b086",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/page-art/plan-of-salvation/life-with-god-800.webp",
+      "sha256": "2566d924edeaef49621d287e4b55e56421c1cda61f5f3de9a0e3d91679d03aac",
+      "dimensions": [
+        800,
+        533
+      ]
+    },
+    {
+      "path": "assets/page-art/plan-of-salvation/life-with-god-full.webp",
+      "sha256": "04e825345d3b05764152f6fd5c54f8d490e61bb6411cae7823d8296b2228b086",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    },
+    {
+      "path": "assets/page-art/plan-of-salvation/life-with-god-original.png",
+      "sha256": "0800de44604000d9a0697742c0eeb17036eb339814ab52f8f4417d1a08213b09",
+      "dimensions": [
+        1536,
+        1024
+      ]
+    }
+  ],
+  "current_integration_status": {
+    "date": "2026-09-27",
+    "status": "Selected final variants have completed independent candidate review; not owner aesthetic approval; not published.",
+    "generation_note_scope": "Existing status/review/pending phrases in this generation record are historical generation-time notes. They are preserved as evidence, not current release status.",
+    "current_authority": "docs/plan-of-salvation/art-review.json",
+    "independent_evidence": [
+      "docs/plan-of-salvation/independent-art-review.json",
+      "docs/plan-of-salvation/independent-modern-review.json"
+    ],
+    "selected_asset_ids": [
+      "newborn-v2",
+      "moses-purpose",
+      "earth",
+      "stewardship",
+      "labor",
+      "choose",
+      "bedside-care",
+      "return-v2",
+      "bore",
+      "burdens",
+      "small-voices",
+      "between",
+      "redemption-dead",
+      "life-with-god",
+      "long-view",
+      "begin-v2"
+    ],
+    "excluded_attempts": [
+      "newborn",
+      "purpose",
+      "return",
+      "begin"
+    ]
+  }
+}

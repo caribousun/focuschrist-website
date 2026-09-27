@@ -1,0 +1,14 @@
+{
+  "asset": "assets/heroes/plan-of-salvation-hero-original.png",
+  "sha256": "d37b0205149b55c54dca8c5908550bbc40cc8c886c9413a003bdb769cae53d52",
+  "reviewer": "focus_review independent subagent",
+  "status": "candidate passes independent visual review; not owner approval",
+  "reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+  "reference_sha256": "4e9d4469bd9bd40d4e097eea887410a63f3c2f6dcc6ced3a3affd4813991b15b",
+  "inspection": "Both original and approved Home reference actual pixels viewed individually. Face retains matching brow, nose, eye shape, wavy brown hair and beard structure; changed prayer expression and upward gaze remain natural. Both hands visibly have five distinct digits and credible wrists. Head and hands fully framed. Skin, fabric, room and oil-lamp lighting appear photographic. No obvious malformed anatomy or invented heavenly person.",
+  "source_boundary": "John 17:1-5 supports upward eyes and prayer. Exact room, garments, hand gesture and dusk setting are interpretive staging, not claimed recorded detail. No visible Father, nail wounds, or Gethsemane event. Source verification record supplied by parent in hero-source.json; this review assesses pixels and consistency, not a fresh source fetch.",
+  "dimensions": [
+    1536,
+    1024
+  ]
+}

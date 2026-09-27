@@ -1,0 +1,368 @@
+{
+  "generated_utc": "2026-09-27",
+  "method": "Built-in image_gen, one call per asset; no CLI/API spending. Pillow delivery resizing explicitly authorized.",
+  "assets": [
+    {
+      "id": "newborn",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22-p26#p22",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation?lang=eng"
+      ],
+      "review": "PASS candidate: infant head supported by mother's inner elbow/forearm, face unobstructed; both parents attend baby; visible hands coherent; natural shoulders and skin; father hair slightly touches top edge but face complete.",
+      "alt": "Two parents sit together holding their newborn securely and looking at the baby.",
+      "prompt": "Use case: photorealistic-natural. Create one 1536x1024 landscape photographic image for a thoughtful Plan of Salvation study. Present-day application, not an ancient event or depiction of premortal heaven. Two anonymous young adult parents, a mother and father, sit close together in a quiet ordinary home by a softly lit window, attentively welcoming their newborn. Mother securely cradles a fully clothed and loosely swaddled newborn across both forearms with the head and neck visibly supported; father sits beside her, gently touching the outside of the blanket while looking tenderly toward the baby. Both parents are looking at the newborn, not the camera. Baby relaxed, natural proportions, visible face with unobstructed nose and mouth. Warm restrained joy, no theatrical expression. Medium-wide candid editorial photograph, all adult heads and supporting hands inside frame, natural shoulders/spines, realistic skin pores and fine hair, believable eyes and separate fingers, soft contemporary cotton clothing, natural daylight, true-to-life color and depth. No Christ, angels, halos, named historical identities, floating spirits, religious props, text, logos or watermarks. Source context already verified: Abraham3:22-26 and official Plan of Salvation overview teach premortal life and mortal experience; the modern family staging is illustrative only. Do not literalize heavenly scenes.",
+      "generation_source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0e329-1aa6-7122-9b83-d8adb9fb0fb6\\exec-446fd6ab-9ecd-4376-9545-d06905a2cb3d.png",
+      "original": "assets\\page-art\\plan-of-salvation\\newborn-original.png",
+      "original_sha256": "c73527a74dee41041801754b611c0029712ae6022e85f6e6397db5fcc1836d56",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "deliveries": [
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\newborn-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "ebd9c74f5505db096d083a7f95f6717fccc010165727aaa1bbca045820a4001d"
+        },
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\newborn-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "9694471a7d3ad65da296e5094ebbff22cf4001139a257ddd16ecbb609ede22d3"
+        },
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\newborn-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "9694471a7d3ad65da296e5094ebbff22cf4001139a257ddd16ecbb609ede22d3"
+        }
+      ],
+      "sources_verified_before_generation": true,
+      "source_limits": "Anonymous present-day application. Sources support teaching context, not these people, exact setting, clothing or event. No Christ or named person represented.",
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "review_status": "superseded",
+      "superseded_by": "newborn-v2",
+      "superseded_reason": "Independent review found clipped father crown; retained original without overwrite."
+    },
+    {
+      "id": "stewardship",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/1?lang=eng&id=p26-p31#p26"
+      ],
+      "review": "PASS candidate: adult and child meet eyes while child waters root basin and adult rests hands in soil; natural kneeling anatomy, distinct fingers, coherent watering-can handle/spout; young tree and ordinary garden. Child boots visible, adult legs partly naturally occluded by crouch.",
+      "alt": "An adult and child tend a young fruit tree together in a garden.",
+      "prompt": "Use case: photorealistic-natural. One landscape1536x1024 authentic documentary photograph for a Plan of Salvation study. Modern application of Genesis1:26-31, not Adam and Eve or a literal ancient event. A middle-aged anonymous Black father and his school-age daughter together tend a young fruit tree in an ordinary community garden in spring. Both kneel naturally on the ground beside the trunk: the daughter uses a small watering can to water the soil root basin, while father gently presses the loose soil at its edge. Daughter glances up at father to ask a question, father meets her eyes warmly while listening, both faces readable three-quarter angle. Real modest contemporary garden clothing with earth on knees, visible separate anatomically correct hands, watering-can handle naturally gripped, visible knees and feet and credible whole-body proportions. Young living tree with natural leaves and thin trunk, no exaggerated ripefruit crop. Wider composition distinct from a family portrait, tree to one side, natural outdoor daylight, actual photo texture in skin, soil and fabrics, believable candid interaction. No text, branding, watermark, halos, Christ, named persons, fantasy, oil-painting look or plastic skin. Sourcebound meaning: stewardship of living creation is a modern application; no claim that scripture records this family or garden.",
+      "generation_source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0e329-1aa6-7122-9b83-d8adb9fb0fb6\\exec-eb02f2fb-d979-44f3-a8c4-0f3a82afe413.png",
+      "original": "assets\\page-art\\plan-of-salvation\\stewardship-original.png",
+      "original_sha256": "2581b32e94f9d411c1377e8d61e9a7d2f869aa1726bf85dc9ea1595ad9039d3f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "deliveries": [
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\stewardship-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "fcfd7cddc1a89d32e7dc7d2a0ef6bbeb12fee377261f9af4f221630ddf0c254f"
+        },
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\stewardship-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "3e42e53e5c963553ac70e3f6c0a01154fdd44ccee8285bf05b52819b9c2d2d82"
+        },
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\stewardship-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "3e42e53e5c963553ac70e3f6c0a01154fdd44ccee8285bf05b52819b9c2d2d82"
+        }
+      ],
+      "sources_verified_before_generation": true,
+      "source_limits": "Anonymous present-day application. Sources support teaching context, not these people, exact setting, clothing or event. No Christ or named person represented.",
+      "owner_approval": false,
+      "independent_parent_review": "pending"
+    },
+    {
+      "id": "bedside-care",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=eng&id=p11-p13#p11",
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/9?lang=eng&id=p1-p3#p1"
+      ],
+      "review": "PASS candidate: engaged older patient speaks, nurse listens at eye level, family member holds patient's resting hand. Visible fingers and hand overlap appear coherent; natural age/skin and eye lines. No claim of diagnosis, miracle, treatment success or blame for illness.",
+      "alt": "A nurse listens to an older patient while a family member sits beside the bed holding her hand.",
+      "prompt": "Use case: photorealistic-natural. Create one landscape1536x1024 true-to-life editorial photograph for a Plan of Salvation study. Present-day application of compassion informed by Alma7:11-13 and John9:1-3; NOT an ancient scripture event, NOT miraculous healing or a promise of medical outcome. Quiet modern hospital room in daylight. Anonymous older East Asian woman, awake and engaged, sits comfortably propped in an ordinary hospital bed wearing a plain modest hospital gown with blanket over lower body. A female nurse in subdued teal scrubs sits beside the bed at the patient's eye level, respectfully listening as the patient speaks; their eyes naturally meet. The patient's adult daughter sits at the other bedside, attentive, one hand resting naturally over her mother's hand on top of the blanket. Three distinct faces and ages, patient has agency and dignity rather than helplessness. Medium-wide composition all heads and hands inside frame, anatomically correct shoulders/spines/arms/hands, natural separate fingers, plausible bedding and furniture, realistic aged skin and pores, soft window light, unobtrusive medically ordinary background, no visible written chart or invented monitor numbers. Not staged camera smiles, no saintly glow, no Christ, no prayer-healing gesture, no treatment instructions, no gore, no logos, text or watermark. Clothing, room and identities are illustrative contemporary staging, not details claimed in sources.",
+      "generation_source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0e329-1aa6-7122-9b83-d8adb9fb0fb6\\exec-00ac4bc1-5db2-4eec-8060-78f119af49c7.png",
+      "original": "assets\\page-art\\plan-of-salvation\\bedside-care-original.png",
+      "original_sha256": "478eda6b7c55dc4fc1de9f1177c1fe920a79e8e800c9cd43cb88b78f7541eb1e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "deliveries": [
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\bedside-care-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "34227daf5fc6eb1f279a1f2d0ad77880be12bc674341d2c4925325e7ad8df52b"
+        },
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\bedside-care-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "42a7acc3c4707bc3535b886c230bba3d73f06b88884712d49ef3d675a25085ed"
+        },
+        {
+          "path": "assets\\page-art\\plan-of-salvation\\bedside-care-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "42a7acc3c4707bc3535b886c230bba3d73f06b88884712d49ef3d675a25085ed"
+        }
+      ],
+      "sources_verified_before_generation": true,
+      "source_limits": "Anonymous present-day application. Sources support teaching context, not these people, exact setting, clothing or event. No Christ or named person represented.",
+      "owner_approval": false,
+      "independent_parent_review": "pending"
+    },
+    {
+      "id": "newborn-v2",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/3?lang=eng&id=p22-p26#p22",
+        "https://www.churchofjesuschrist.org/study/manual/gospel-topics/plan-of-salvation?lang=eng"
+      ],
+      "review": "Candidate passes revised framing: father full crown with substantial headroom, identities/support/gaze preserved. Original newborn remains stored but superseded because crown clipped.",
+      "alt": "Two parents sit together holding their newborn securely and looking at the baby.",
+      "limits": "Modern application only, not heavenly or recorded event.",
+      "prompt": "Edit this exact photograph non-destructively. Preserve identities, natural faces, the newborn, secure head support, every hand, clothing, eye direction, light and realistic texture. Widen the camera framing slightly and add ample natural headroom above the father's ENTIRE crown: no hair touches or crosses any edge. Keep all three people and baby holding pose intact, add plausible matching room space above and around them. Output landscape3:2 1536x1024. No text or logo, no new people, no pose changes.",
+      "generation_source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0e329-1aa6-7122-9b83-d8adb9fb0fb6\\exec-844a8c15-c2d7-468b-9dba-1bf7e6cca26e.png",
+      "original": "assets/page-art/plan-of-salvation/newborn-v2-original.png",
+      "original_sha256": "80d03cf5fbe6e2a52120794617c68fcdc0e5f34a496dca7cbae1866b48ca4f66",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/newborn-v2-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "3eb557fa6a7b2857ebab666afdfd4f4ceb480ed3965b6bcd5849c982bc3c4b7c"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/newborn-v2-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "26c8670719a73400c280cad4d934cdea745e64f28bb512b758240182869d188d"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/newborn-v2-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "26c8670719a73400c280cad4d934cdea745e64f28bb512b758240182869d188d"
+        }
+      ],
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "sources_verified_before_generation": true
+    },
+    {
+      "id": "purpose",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/1?lang=eng&id=p39#p39"
+      ],
+      "review": "Candidate passes: two active capable adults, mutual gaze, four-leg chair coherent, screwdriver at join, natural knees/hands, complete heads. Older woman's crown has narrow but visible margin; parent should assess crop tolerance.",
+      "alt": "An older woman steadies a wooden chair and points to its joint while another adult repairs it.",
+      "limits": "Moses1:39 establishes divine purpose, not woodworking. Practical collaboration is a reflective modern application. Compared existing gate repairs and woman setting aside papers beside stool; no same action/composition found.",
+      "prompt": "Create a highly photorealistic natural documentary photograph, landscape1536x1024. Present-day application of Moses1:39, not depiction of Moses or God. Two anonymous adults of different ages work actively together repairing a simple wooden dining chair in a modest daylight workshop. Older gray-haired woman in practical clothing steadies upright chair's backrest with one hand while pointing to a loose joint with the other; younger adult man kneels beside the chair using a plain manual screwdriver at that joint. Genuine attentive interaction: younger adult looks toward the older woman's face while she explains, then hands positioned naturally for task. Both contribute as capable partners. Simple mechanically plausible FOUR-leg wooden chair upright on ground, all four leg connections coherent, no fifth post or impossible parts; tools safe and plausible. Medium-wide view showing complete heads with generous headroom, shoulders, all hands and feet with margin; detailed skin wrinkles, real eyes, natural fingers, realistic wood grain and cotton clothes, restrained warm daylight. No branded tools, text, logos, halo, Christ or named historical identity. This specific collaborative repair differs from a woman putting paperwork aside near an inverted stool, and differs from outdoor gate repair. Do not depict those scenes. No painting, cinematic glow, plastic skin or sentimental posing.",
+      "generation_source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0e329-1aa6-7122-9b83-d8adb9fb0fb6\\exec-f7ca6726-48a3-4dd2-8f2b-0ea3f8267deb.png",
+      "original": "assets/page-art/plan-of-salvation/purpose-original.png",
+      "original_sha256": "d516a994624364e87e5f404da205effd1fd679dec64cb4389315e6fdf0a268cd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/purpose-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "88ab3a8a117472aa9162a8baa4ebf01e6fef03e7cd53ac814e4e4ffefc988cb1"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/purpose-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "7d5ecd1cc1fe56325586ebe3aabd25450c722e834134448571601a5b3d6be978"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/purpose-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "7d5ecd1cc1fe56325586ebe3aabd25450c722e834134448571601a5b3d6be978"
+        }
+      ],
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "sources_verified_before_generation": true
+    },
+    {
+      "id": "earth",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/2?lang=eng&id=p9-p12#p9"
+      ],
+      "review": "Candidate passes: detailed wet soil, rooted seedlings, seed-bearing grass and plums on coherent branch; no people or fantasy. Distinct close nature composition from stewardship people scene.",
+      "alt": "Seedlings and grasses grow in rain-darkened soil beneath a branch bearing ripe plums.",
+      "limits": "Illustrates living creation; not Eden, exact creation-day geography or scientific evidence of creation chronology. Species and landscape illustrative.",
+      "prompt": "Create one landscape1536x1024 high-detail real nature photograph for a study of Moses2:9-12, the goodness of seed-bearing plants and fruit trees. No people. Ground-level view in a naturally lush ordinary orchard edge just after gentle rain: rich dark crumbly soil in foreground, tiny green seedlings emerging among damp leaf litter, seed-bearing grasses, and a low branch of a living fruit tree bearing a few modest ripe plums with realistic leaves and raindrops. Botanically believable individual stems, leaf veins, roots meeting soil, no impossible mixed fruits on one branch, natural variation not perfect repetitions. Detailed close foreground with wider softly receding living landscape, gentle overcast daylight breaking through clouds, lifelike true colors and physically plausible water droplets, no magical glow. This is a visual study of present living creation, not a claim to photograph Creation day or the Garden of Eden; no fantastical scenery, mountain paradise, animals, humans, deity, text, labels, logos, watermark or illustration style. Distinct from adult-child garden stewardship: only the living soil and plants, no tools or cultivated rows dominating.",
+      "generation_source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0e329-1aa6-7122-9b83-d8adb9fb0fb6\\exec-209e535e-3de8-496d-8777-becd09c2d8f2.png",
+      "original": "assets/page-art/plan-of-salvation/earth-original.png",
+      "original_sha256": "2a3c1bce9b7f63c48a59ae29882d4822fef2639141c3c57ad5845a63edcff5db",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/earth-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "3e3c39dfe0c9e43606d4ae81fef7ceb4972a53696ce99d94cf8e40c575803981"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/earth-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "e328f8be9d267b542d83ec9631503fb303a7a7532d925972683578e239f6c0e8"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/earth-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "e328f8be9d267b542d83ec9631503fb303a7a7532d925972683578e239f6c0e8"
+        }
+      ],
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "sources_verified_before_generation": true
+    },
+    {
+      "id": "burdens",
+      "sources": [
+        "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/18?lang=eng&id=p27-p29#p27"
+      ],
+      "review": "Candidate passes: five anonymous community members, active basket/cloth handoff, reciprocal eye contact, natural visible hands, all heads inside frame, child arranging dishes. No Alma/Christ/named face.",
+      "alt": "Members of a small community share a basket of food and folded cloth as a child makes room nearby.",
+      "limits": "Mosiah18:27-29 records voluntary sharing by need. Exact household, goods, woven clothing, faces and shelter not recorded; no location or archaeological reconstruction claim. Inventory check found no exact Mosiah18 ancient handoff duplicate; generic sharing subjects elsewhere remain similar themes.",
+      "prompt": "One landscape1536x1024 highly photorealistic live-action-style image for Mosiah18:27-29 in the Book of Mormon. Depict anonymous members of Alma's small community voluntarily sharing practical food and plain woven cloth with a household who participates actively in receiving it. No Alma figure, no Christ, no named identities. A small quiet rural ancient American household setting, five people total: an adult giver holds one side of a modest basket of maize and beans while a receiving adult woman steadies its other side and meets his eyes; beside her another adult accepts a folded plain cloth from an older woman while one school-age child helps clear space on a low wooden surface. Dignity and reciprocity, no kneeling beggars, no spectacle, no ceremonial distribution line. Coherent entire bodies and complete crowns/heads with ample border margin, anatomically correct hands visibly gripping separate edges, natural expressions and meaningful interpersonal eye contact. Simple undecorated woven clothing, unadorned rural shelter edge, trees and earth, no monumental architecture, no pyramids, no geographically diagnostic symbols or asserted site. Warm natural daylight, real skin pores and fibers, modest varied earth-tone clothes, photographic realism rather than painting. Source establishes sharing voluntarily according to need; exact faces, goods and architecture are illustrative unknowns. Must not resemble a Christ-visiting-the-Nephites scene or a3Nephi26communal sermon. No supernatural signs, text, modern packaging, metal cans, logos or watermark.",
+      "generation_source_path": "C:\\Users\\wyatt\\.codex\\generated_images\\01a0e329-1aa6-7122-9b83-d8adb9fb0fb6\\exec-2546e4ce-7da5-4930-a056-4962ad4399f2.png",
+      "original": "assets/page-art/plan-of-salvation/burdens-original.png",
+      "original_sha256": "d989a388e0ffecd25cbaf52cb6835be62f7ac3250f110ff46d142a1893de939f",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "deliveries": [
+        {
+          "path": "assets/page-art/plan-of-salvation/burdens-800.webp",
+          "dimensions": [
+            799,
+            533
+          ],
+          "sha256": "57f377c39f914418d7eaeacfa83d930aa1a2c237df5534c9a65e6b74be58dc85"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/burdens-1536.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "77545d20e6a2f535e8447ca8e77b77dd085164c1f2194fd3ee12eec38c49f5f2"
+        },
+        {
+          "path": "assets/page-art/plan-of-salvation/burdens-full.webp",
+          "dimensions": [
+            1536,
+            1024
+          ],
+          "sha256": "77545d20e6a2f535e8447ca8e77b77dd085164c1f2194fd3ee12eec38c49f5f2"
+        }
+      ],
+      "owner_approval": false,
+      "independent_parent_review": "pending",
+      "sources_verified_before_generation": true
+    }
+  ],
+  "current_integration_status": {
+    "date": "2026-09-27",
+    "status": "Selected final variants have completed independent candidate review; not owner aesthetic approval; not published.",
+    "generation_note_scope": "Existing status/review/pending phrases in this generation record are historical generation-time notes. They are preserved as evidence, not current release status.",
+    "current_authority": "docs/plan-of-salvation/art-review.json",
+    "independent_evidence": [
+      "docs/plan-of-salvation/independent-art-review.json",
+      "docs/plan-of-salvation/independent-modern-review.json"
+    ],
+    "selected_asset_ids": [
+      "newborn-v2",
+      "moses-purpose",
+      "earth",
+      "stewardship",
+      "labor",
+      "choose",
+      "bedside-care",
+      "return-v2",
+      "bore",
+      "burdens",
+      "small-voices",
+      "between",
+      "redemption-dead",
+      "life-with-god",
+      "long-view",
+      "begin-v2"
+    ],
+    "excluded_attempts": [
+      "newborn",
+      "purpose",
+      "return",
+      "begin"
+    ]
+  }
+}

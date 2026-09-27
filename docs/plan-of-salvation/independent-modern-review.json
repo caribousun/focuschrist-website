@@ -1,0 +1,53 @@
+{
+  "reviewer": "Newton",
+  "independent_of_generation": true,
+  "owner_approval": false,
+  "method": "Opened each original separately with view_image; actual pixel review at supplied full image display.",
+  "reviews": [
+    {
+      "path": "assets/page-art/plan-of-salvation/small-voices-original.png",
+      "sha256": "f9f5792499572584fc16503b7cf46aabc807514a1e599f70a5092507548824c1",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "id": "small-voices",
+      "verdict": "PASS for parent final acceptance",
+      "observations": [
+        "Full child head, hands and feet; both seated adults have complete heads and coherent crossed-leg posture.",
+        "Child shows drawing while meeting older adult gaze; other adult attends to child; warm ordinary scene."
+      ],
+      "limits": "Anonymous contemporary application, not a historical event; generated background photographs are not archival evidence."
+    },
+    {
+      "path": "assets/page-art/plan-of-salvation/between-original.png",
+      "sha256": "31029967f89f27a151b88f2d0766ed7b5c61fe98793382f7445faada95a45ee2",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "id": "between",
+      "verdict": "PASS for parent final acceptance",
+      "observations": [
+        "Both crowns complete; natural table-level crop does not imply missing lower bodies.",
+        "Woman and young man engage while sharing album photograph; visible hands plausibly support photograph and sleeve."
+      ],
+      "limits": "Anonymous contemporary application, not a historical event; generated background photographs are not archival evidence."
+    },
+    {
+      "path": "assets/page-art/plan-of-salvation/long-view-original.png",
+      "sha256": "743c9408ec455f15a0447125471ee1386cb7eab7c97f8267a1d0f5a6b46ab43e",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "id": "long-view",
+      "verdict": "PASS for parent final acceptance",
+      "observations": [
+        "Both full figures and shoes visible, man crown complete but close to top edge.",
+        "Mutual eye contact while daughter gestures and father sets phone aside; hands and shoulders coherent."
+      ],
+      "limits": "Anonymous contemporary application, not a historical event; generated background photographs are not archival evidence."
+    }
+  ]
+}

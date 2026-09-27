@@ -36,6 +36,10 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    from holy_ghost_qa import check_structure
    check_structure(ns)
    assert reviewed_journey_style((ROOT/'jesus-journey.css').read_bytes()), 'Holy Ghost journey stylesheet changed since review'
+  elif page.relative_to(ROOT).as_posix()=='answers/plan-of-salvation.html':
+   from plan_of_salvation_qa import check_structure
+   check_structure(text)
+   assert reviewed_journey_style((ROOT/'jesus-journey.css').read_bytes()), 'Plan journey stylesheet changed since review'
   else:
    assert len([n for n in ns if n.tag=='link' and 'topic-art.css?' in n.attrs.get('href','')])==1,str(page)+' missing contextual artwork CSS'
 actual={}

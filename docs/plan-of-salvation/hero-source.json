@@ -1,0 +1,11 @@
+{
+  "id": "hero",
+  "source": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/17?lang=eng&id=p1-p5#p1",
+  "source_verified_before_generation": true,
+  "event": "Jesus lifts His eyes to heaven in the Intercessory Prayer, speaks of knowing the Father and Son and glory before the world. Before crossingKidronJohn18; not Gethsemane.",
+  "limits": "Exact room, garments, hands and stance unspecified. No visibleFather orheavenlyarchitecture; no nailmarksbeforecrucifixion.",
+  "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+  "uniqueness_check": "NoJohn17Intercessoryscene matches found in docs/art-study-image-review.json or docs/jesus-journey; different fromJohn14teaching andGethsemane.",
+  "status_at_source_verification": "researchcomplete; generationpending",
+  "status": "Historical pre-generation source record; generation completed and independent candidate review recorded in hero-review.json and art-review.json. Not owner aesthetic approval."
+}

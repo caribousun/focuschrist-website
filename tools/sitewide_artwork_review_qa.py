@@ -20,14 +20,13 @@ HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d6
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = 'fbc4937ead4678d2919a5b22f65224c1401b2cc4a1ec3b874c427578a8febb8c'
-ANSWERS_FEATURED_STYLE_SHA256 = '54d89fb46570ecb419f7add72bc81e3b37e2814c583290e9d71b1431b3d8dbc6'
+ANSWERS_FEATURED_STYLE_SHA256 = '3f3ab5babea5aadf5ddd79655922bd29b7f4c8b1aa74742b1146eccfca7caa87'
 # Owner-requested featured and foundational study links. Only the listed rules in
 # the exact reviewed stylesheet qualify; the 700px stack is pinned by its hash.
 ANSWERS_FEATURED_RULES = {
     '.fc-answers-jumps .fc-settle-directory-intro': {'display:grid;grid-template-columns:minmax(0,1fr);gap:20px;'},
     '.fc-answers-jumps .fc-answers-jump-links': {'grid-template-columns:minmax(0,1fr);', 'grid-template-columns:repeat(2,minmax(0,1fr));', 'grid-template-columns:repeat(12,minmax(0,1fr));'},
     '.fc-answers-jumps .fc-answers-jump-links > a': {'grid-column:span3;', 'grid-column:auto;'},
-    '.fc-answers-jumps .fc-answers-jump-links > a:nth-last-child(-n+3)': {'grid-column:auto;', 'grid-column:span4;'},
     '.fc-answers-jumps .fc-answers-jump-links > a:last-child:nth-child(odd)': {'grid-column:1/-1;'},
     '.fc-answers-jump-panel > .fc-resource-next': {'display:grid;gap:14px;margin:0;padding-top:20px;border-top:1pxsolidrgba(240,195,106,.25);text-align:center;'},
     '.fc-answers-jump-panel [data-foundational-study-actions]': {'grid-template-columns:minmax(0,1fr);', 'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;width:100%;'},
@@ -50,7 +49,7 @@ def reviewed_art_reflection(selector, body, data):
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
 def reviewed_wrap_consumers(consumers, expected, version):
-    return (set(consumers) == set(expected) | {'answers/holy-ghost.html'} and len(consumers) == 121
+    return (set(consumers) == set(expected) | {'answers/holy-ghost.html', 'answers/plan-of-salvation.html'} and len(consumers) == 122
             and all(parse_qs(urlsplit(ref).query).get('v') == [version] for refs in consumers.values() for ref in refs))
 
 
@@ -126,6 +125,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # Owner-requested growing Ask composer and opt-in Holy Ghost player, independently
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
+    'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
     'ask-experience.css': ('126df0f3a5331f5f2a34df236220e019404cfb1eaf0de54a57c556a5d9c8a0f5', 'ask.html'),
     'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
 }
@@ -158,6 +158,7 @@ def main():
             for body in bodies:
                 assert reviewed_answers_featured(selector, body, answers_css)
                 assert not reviewed_answers_featured('.unknown-selector', body, answers_css)
+                assert not reviewed_answers_featured(selector, body, answers_css + b'\n.fc-answers-jumps .fc-answers-jump-links > a:nth-last-child(-n+3){grid-column:span 4;}')
                 assert not reviewed_answers_featured(selector, body + 'height:9px;', answers_css)
                 assert not reviewed_answers_featured(selector, body, answers_css.replace(b'max-width: 700px', b'max-width: 900px'))
                 assert not reviewed_answers_featured(selector, body, answers_css + b'\n.fc-visual-hero{height:9px}')
@@ -177,7 +178,7 @@ def main():
         assert not reviewed_system_panel_style(panel_style + b'\n.fc-visual-hero{height:9px}')
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-panel-fill:', b'--fc-panel-broken:', 1))
         assert not reviewed_system_panel_style(panel_style.replace(b'--fc-opening-hero-height:', b'--fc-opening-broken-height:', 1))
-        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html']}
+        wrap_good = {name: ['site-system.css?v=current'] for name in [*wrap_expected, 'answers/holy-ghost.html', 'answers/plan-of-salvation.html']}
         assert reviewed_wrap_consumers(wrap_good, wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(list(wrap_good.items())[1:]), wrap_expected, 'current')
         assert not reviewed_wrap_consumers(dict(wrap_good, **{'other.html': ['site-system.css?v=current']}), wrap_expected, 'current')
@@ -363,8 +364,8 @@ def main():
     journey_owners={p['url'].lstrip('/') for p in journey_pages}
     check(len(journey_owners)==76 and all(p.startswith('jesus-christ/') and p.endswith('.html') for p in journey_owners),
           'Journey stylesheet ownership differs from76 nested study pages')
-    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html','answers/abrahamic-covenant.html','answers/holy-ghost.html'})
-    check(len(journey_owners)==80, 'Journey stylesheet must have exactly80 reviewed consumers')
+    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html','answers/abrahamic-covenant.html','answers/holy-ghost.html','answers/plan-of-salvation.html'})
+    check(len(journey_owners)==81, 'Journey stylesheet must have exactly81 reviewed consumers')
     check(sha(ROOT/row_style)=='7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941',
           'Reviewed complete card row stylesheet changed')
     check(sha(ROOT/settle_style)=='ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2',

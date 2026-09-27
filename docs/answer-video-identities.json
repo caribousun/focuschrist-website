@@ -997,6 +997,54 @@
       "aliases": [
         "https://www.youtube.com/watch?v=yAo2PrkFcr4"
       ]
+    },
+    "plan-plan": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2020/04/51oaks?lang=eng",
+      "title": "The Great Plan",
+      "video_identity": "www.churchofjesuschrist.org/study/general-conference/2020/04/51oaks",
+      "aliases": []
+    },
+    "plan-agency": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/10/choose-you-this-day?lang=eng",
+      "title": "Choose You This Day",
+      "video_identity": "www.churchofjesuschrist.org/study/general-conference/2018/10/choose-you-this-day",
+      "aliases": []
+    },
+    "plan-resurrection": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2014/04/the-resurrection-of-jesus-christ?lang=eng",
+      "title": "The Resurrection of Jesus Christ",
+      "video_identity": "www.churchofjesuschrist.org/study/general-conference/2014/04/the-resurrection-of-jesus-christ",
+      "aliases": []
+    },
+    "plan-mercy": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2015/04/where-justice-love-and-mercy-meet?lang=eng",
+      "title": "Where Justice, Love, and Mercy Meet",
+      "video_identity": "www.churchofjesuschrist.org/study/general-conference/2015/04/where-justice-love-and-mercy-meet",
+      "aliases": []
+    },
+    "plan-living-today": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/am-i-good-enough-will-i-make-it?lang=eng",
+      "title": "Am I Good Enough? Will I Make It?",
+      "video_identity": "www.churchofjesuschrist.org/study/general-conference/2016/10/am-i-good-enough-will-i-make-it",
+      "aliases": []
+    },
+    "plan-joy": {
+      "kind": "video",
+      "presentation": "General conference video and text",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/joy-and-spiritual-survival?lang=eng",
+      "title": "Joy and Spiritual Survival",
+      "video_identity": "www.churchofjesuschrist.org/study/general-conference/2016/10/joy-and-spiritual-survival",
+      "aliases": []
     }
   }
 }

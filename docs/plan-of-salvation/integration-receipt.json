@@ -1,0 +1,65 @@
+{
+  "status": "ready for parent candidate integration; unpublished",
+  "scope": "Plan of Salvation new study plus exact shared route/inventory registration",
+  "page": "answers/plan-of-salvation.html",
+  "counts": {
+    "chapters": 10,
+    "units": 20,
+    "paragraphs": 42,
+    "body_originals": 16,
+    "hero_originals": 1,
+    "existing_owner_reference_previews": 3,
+    "official_talk_cards": 6,
+    "directory_topics": 28
+  },
+  "shared_cache_versions": {
+    "site-common.js": "20260927-plan-navigation-1",
+    "hero-details.js": "20260927-plan-study-1",
+    "art-ask-context.js": "20260927-plan-context-1",
+    "answers-hero.css": "20260927-plan-topic-1"
+  },
+  "verification": {
+    "workflow_python_commands": 71,
+    "initial_pass": 68,
+    "initial_fail": 3,
+    "failures_corrected_and_rerun": [
+      "study_gap_art_qa.py",
+      "focused_answers_qa.py",
+      "answer_video_uniqueness_qa.py"
+    ],
+    "final_targeted_commands": 19,
+    "final_targeted_pass": 19,
+    "plan_negative_fixtures": 12,
+    "ask_dom_cases": 7,
+    "protected_original_baseline_images": 842,
+    "git_diff_check": "pass"
+  },
+  "preserved_limits": [
+    "No owner aesthetic approval claimed",
+    "No publication, commit or push performed by Fermi",
+    "Existing owning-study reference previews are not counted as new originals",
+    "Source/DOM gates do not substitute for actual browser verification; parent and focus_review own rendered evidence"
+  ],
+  "evidence": [
+    "local-source-qa.json",
+    "local-final-qa.json",
+    "independent-art-review.json",
+    "independent-modern-review.json",
+    "independent-code-review.json",
+    "independent-rendered-review.json",
+    "art-review.json"
+  ],
+  "sha256": {
+    "answers/plan-of-salvation.html": "d0f727e387766f6427bf591f74151aba307b04a1fd787ef1a0ad163877b7b178",
+    "plan-of-salvation.css": "214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc",
+    "tools/build_plan_salvation.py": "ef6a3e0f9eada75502dbf91c341a3b081e5c3669227f7f45738ad4728cdff3cb",
+    "tools/plan_of_salvation_qa.py": "6429c4cbfb4e14fdbe45a91f80004a10cfa0570f74add7ef8c7fb06a32e4cf26",
+    "answers.html": "46b7daecb4676989878e134a26c6f494f8553b6dcd4e5163c1f43fd73452e470",
+    "answers-hero.css": "3f3ab5babea5aadf5ddd79655922bd29b7f4c8b1aa74742b1146eccfca7caa87",
+    "art-ask-context.js": "e48b4047687b555755a1fdb4ca3f7d6bdb62bc48c652af78e2da56532845ebf9",
+    "hero-details.js": "d21d5153527f460aaa4534d18a0f579e7ab43311e4017a428eed910b29414fb3",
+    "site-common.js": "a56d7e7bfd9ab65415187204ca956031bc46dc64b3d73d2ea7ccb1f4f56425fb",
+    "docs/plan-of-salvation/art-review.json": "00821d9332874cb196e3c0901056df37ae93c2f2ca2267fcf3d11e49a36155ee"
+  },
+  "staged_text_normalization": "New staged text files normalized from CRLF to LF; builder trailing blank line removed. No product page, script, CSS or image bytes changed."
+}

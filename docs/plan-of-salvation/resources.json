@@ -1,0 +1,205 @@
+{
+  "checked_utc": "2026-09-27",
+  "status": "Six verified source/thumbnail records integrated in unpublished Plan candidate; original research verification retained.",
+  "resources": [
+    {
+      "id": "plan-plan",
+      "title": "The Great Plan",
+      "speaker": "Dallin H. Oaks",
+      "date": "April 2020",
+      "kind": "General conference",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2020/04/51oaks?lang=eng",
+      "purpose": "Overview of premortal life, mortality, Christ, and eternal destiny.",
+      "suggested_invitation": "Read the plan as a whole, then return to the chapter that raised your next question.",
+      "thumbnail": {
+        "url": "https://www.churchofjesuschrist.org/imgs/e049d038785e3d4ad697bcecfea38048f9680c4a/full/%211600%2C/0/default",
+        "width": 1600,
+        "height": 900,
+        "official_page_og_image": "https://www.churchofjesuschrist.org/imgs/e049d038785e3d4ad697bcecfea38048f9680c4a/full/%21192%2C/0/default",
+        "same_asset_id": "e049d038785e3d4ad697bcecfea38048f9680c4a",
+        "http_status": 200,
+        "sha256": "06ea7fc3406a96e855e01adbece5a46ecec22511fb3c82923f06aca70bb9d813",
+        "provenance": "Exact official article og:image asset identifier; larger server-size variant retains full image. Bytes decoded using Pillow; no upscaling or new image."
+      },
+      "verification": {
+        "article_status": 200,
+        "article_title": "The Great Plan",
+        "article_byline": [
+          "By President Dallin H. Oaks"
+        ],
+        "date_basis": "Official general-conference month/year route and page collection",
+        "duplicate_hits": [],
+        "duplicate_scope": "24 Answers/Watch HTML files and 419 current docs JSON files; exact article slug and image identifier checked. Does not prove that differently named clips elsewhere use no excerpt from this address."
+      }
+    },
+    {
+      "id": "plan-agency",
+      "title": "Choose You This Day",
+      "speaker": "Dale G. Renlund",
+      "date": "October 2018",
+      "kind": "General conference",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/10/choose-you-this-day?lang=eng",
+      "purpose": "Agency and willingly choosing to participate in God’s work.",
+      "suggested_invitation": "Consider one choice you can make today without trying to control another person’s choice.",
+      "thumbnail": {
+        "url": "https://www.churchofjesuschrist.org/imgs/99deeadb198649841dc5a5a6a797ffa15858e84a/full/%211600%2C/0/default",
+        "width": 1600,
+        "height": 900,
+        "official_page_og_image": "https://www.churchofjesuschrist.org/imgs/99deeadb198649841dc5a5a6a797ffa15858e84a/full/%21192%2C/0/default",
+        "same_asset_id": "99deeadb198649841dc5a5a6a797ffa15858e84a",
+        "http_status": 200,
+        "sha256": "8b2ad042cf36de0c7638d4fe904fb4a7d8889e0057efc3dde2bb753587fb4eba",
+        "provenance": "Exact official article og:image asset identifier; larger server-size variant retains full image. Bytes decoded using Pillow; no upscaling or new image."
+      },
+      "verification": {
+        "article_status": 200,
+        "article_title": "Choose You This Day",
+        "article_byline": [
+          "By Elder Dale G. Renlund"
+        ],
+        "date_basis": "Official general-conference month/year route and page collection",
+        "duplicate_hits": [],
+        "duplicate_scope": "24 Answers/Watch HTML files and 419 current docs JSON files; exact article slug and image identifier checked. Does not prove that differently named clips elsewhere use no excerpt from this address."
+      }
+    },
+    {
+      "id": "plan-resurrection",
+      "title": "The Resurrection of Jesus Christ",
+      "speaker": "D. Todd Christofferson",
+      "date": "April 2014",
+      "kind": "General conference",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2014/04/the-resurrection-of-jesus-christ?lang=eng",
+      "purpose": "Christ’s bodily Resurrection and its meaning for all humanity.",
+      "suggested_invitation": "Read the witnesses in John 20 alongside the talk’s explanation of Resurrection.",
+      "thumbnail": {
+        "url": "https://www.churchofjesuschrist.org/imgs/f506762f3f1ce370c22685188cae7225ad02c3cc/full/%211600%2C/0/default",
+        "width": 1600,
+        "height": 900,
+        "official_page_og_image": "https://www.churchofjesuschrist.org/imgs/f506762f3f1ce370c22685188cae7225ad02c3cc/full/%21192%2C/0/default",
+        "same_asset_id": "f506762f3f1ce370c22685188cae7225ad02c3cc",
+        "http_status": 200,
+        "sha256": "f82950359bb214cab0b5f636300e5b52468fcfb7268334e22ede8d76dfb224f3",
+        "provenance": "Exact official article og:image asset identifier; larger server-size variant retains full image. Bytes decoded using Pillow; no upscaling or new image."
+      },
+      "verification": {
+        "article_status": 200,
+        "article_title": "The Resurrection of Jesus Christ",
+        "article_byline": [
+          "By Elder D. Todd Christofferson"
+        ],
+        "date_basis": "Official general-conference month/year route and page collection",
+        "duplicate_hits": [],
+        "duplicate_scope": "24 Answers/Watch HTML files and 419 current docs JSON files; exact article slug and image identifier checked. Does not prove that differently named clips elsewhere use no excerpt from this address."
+      }
+    },
+    {
+      "id": "plan-mercy",
+      "title": "Where Justice, Love, and Mercy Meet",
+      "speaker": "Jeffrey R. Holland",
+      "date": "April 2015",
+      "kind": "General conference",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2015/04/where-justice-love-and-mercy-meet?lang=eng",
+      "purpose": "Fall, Atonement, justice, mercy, and our need for Jesus Christ.",
+      "suggested_invitation": "Notice how the Fall and the Savior’s redeeming work belong to one story.",
+      "thumbnail": {
+        "url": "https://www.churchofjesuschrist.org/imgs/3b62d2547af00e625d41b7ef96748e4a12fd71d2/full/%211600%2C/0/default",
+        "width": 1600,
+        "height": 900,
+        "official_page_og_image": "https://www.churchofjesuschrist.org/imgs/3b62d2547af00e625d41b7ef96748e4a12fd71d2/full/%21192%2C/0/default",
+        "same_asset_id": "3b62d2547af00e625d41b7ef96748e4a12fd71d2",
+        "http_status": 200,
+        "sha256": "3464358aa8fd3b5d30f4626f2f9d3e54d65dfe1cb846a3f4fc647d17497129d5",
+        "provenance": "Exact official article og:image asset identifier; larger server-size variant retains full image. Bytes decoded using Pillow; no upscaling or new image."
+      },
+      "verification": {
+        "article_status": 200,
+        "article_title": "Where Justice, Love, and Mercy Meet",
+        "article_byline": [
+          "By Elder Jeffrey R. Holland"
+        ],
+        "date_basis": "Official general-conference month/year route and page collection",
+        "duplicate_hits": [],
+        "duplicate_scope": "24 Answers/Watch HTML files and 419 current docs JSON files; exact article slug and image identifier checked. Does not prove that differently named clips elsewhere use no excerpt from this address."
+      }
+    },
+    {
+      "id": "plan-living-today",
+      "title": "Am I Good Enough? Will I Make It?",
+      "speaker": "J. Devn Cornish",
+      "date": "October 2016",
+      "kind": "General conference",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/am-i-good-enough-will-i-make-it?lang=eng",
+      "purpose": "Hope of eternal life through Christ, sincere repentance, and continuing to try.",
+      "suggested_invitation": "Consider how relying on Christ can change the way you approach repentance and tomorrow.",
+      "thumbnail": {
+        "url": "https://www.churchofjesuschrist.org/imgs/f1a0db4e6cb52ea6c102e57350e7a0b4901f16bc/full/%211600%2C/0/default",
+        "width": 1600,
+        "height": 900,
+        "official_page_og_image": "https://www.churchofjesuschrist.org/imgs/f1a0db4e6cb52ea6c102e57350e7a0b4901f16bc/full/%21192%2C/0/default",
+        "same_asset_id": "f1a0db4e6cb52ea6c102e57350e7a0b4901f16bc",
+        "http_status": 200,
+        "sha256": "5a26540bd5583600fb11ec74b64dcdfb608aa4a2c677162662118df14f9cc758",
+        "provenance": "Exact official article og:image asset identifier; larger server-size variant retains full image. Bytes decoded using Pillow; no upscaling or new image."
+      },
+      "verification": {
+        "article_status": 200,
+        "article_title": "Am I Good Enough? Will I Make It?",
+        "article_byline": [
+          "By Elder J. Devn Cornish"
+        ],
+        "date_basis": "Official general-conference month/year route and page collection",
+        "duplicate_hits": [],
+        "duplicate_scope": "24 Answers/Watch HTML files and 419 current docs JSON files; exact article slug and image identifier checked. Does not prove that differently named clips elsewhere use no excerpt from this address."
+      }
+    },
+    {
+      "id": "plan-joy",
+      "title": "Joy and Spiritual Survival",
+      "speaker": "Russell M. Nelson",
+      "date": "October 2016",
+      "kind": "General conference",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/joy-and-spiritual-survival?lang=eng",
+      "purpose": "Connects the plan of salvation to seeking joy in Christ amid present suffering and service. Complements Cornish on repentance rather than repeating that message.",
+      "suggested_invitation": "Notice the practical ways President Nelson connects faith in Christ with daily life. Bring your own questions about joy and suffering to the study.",
+      "editorial_limit": "Do not turn this teaching into a diagnosis of a visitor’s faith or promise an immediate emotional response.",
+      "thumbnail": {
+        "url": "https://www.churchofjesuschrist.org/imgs/d5a0ec4375f63270222ac2b215cc0d8d2be8bb89/full/%211600%2C/0/default",
+        "width": 1600,
+        "height": 900,
+        "official_page_og_image": "https://www.churchofjesuschrist.org/imgs/d5a0ec4375f63270222ac2b215cc0d8d2be8bb89/full/%21192%2C/0/default",
+        "same_asset_id": "d5a0ec4375f63270222ac2b215cc0d8d2be8bb89",
+        "http_status": 200,
+        "sha256": "9dbf8c9107a3b3bd044208586e9a2ac8f161190d8a7d0c5c23ad62256d6fd0f8",
+        "provenance": "Exact official article og:image asset identifier, larger full-image size variant; bytes decoded with Pillow."
+      },
+      "verification": {
+        "article_status": 200,
+        "article_title": "Joy and Spiritual Survival",
+        "article_byline": [
+          "By President Russell M. Nelson"
+        ],
+        "date_basis": "Official October2016 collection and article",
+        "duplicate_hits": [],
+        "duplicate_scope": "Answers/Watch HTML and current docs JSON exact slug/image identity scan; alternate excerpt aliases not proven absent."
+      }
+    }
+  ],
+  "rejected_lower_resolution_candidates": [
+    {
+      "title": "Free Forever, to Act for Themselves",
+      "size": [
+        590,
+        331
+      ],
+      "reason": "Official article image capped below target; chose Renlund’s distinct agency talk instead."
+    },
+    {
+      "title": "The Laborers in the Vineyard",
+      "size": [
+        900,
+        506
+      ],
+      "reason": "Official article image capped below target; chose Holland’s distinct justice/mercy talk instead."
+    }
+  ]
+}

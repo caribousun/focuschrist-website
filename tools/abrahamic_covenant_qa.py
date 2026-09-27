@@ -72,10 +72,10 @@ def check():
     directory=document(ROOT/'answers.html')
     grid=next(n for n in directory if n.has('fc-answers-jump-links'))
     routes=[n.attrs['href'] for n in grid.walk() if n.tag=='a']
-    assert len(routes)==len(set(routes))==27 and PAGE in routes
+    assert len(routes)==len(set(routes))==28 and PAGE in routes
     assert 'answers/jesus-christ-latter-day-saint-beliefs.html' not in routes
     pair=next(n for n in directory if n.has('fc-answers-featured-pair'))
     assert [n.attrs['href'] for n in pair.walk() if n.tag=='a']==['answers/god-our-heavenly-father.html','answers/jesus-christ-latter-day-saint-beliefs.html','answers/holy-ghost.html','atonement.html']
-    print('COVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2–3 paragraph rhythm, five scripture divisions, exact Ask return and 27 topic slots.')
+    print('COVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2–3 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.')
 
 if __name__=='__main__':check()

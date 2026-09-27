@@ -204,14 +204,12 @@
 .fc-answers-jumps .fc-settle-directory-intro { display: grid; grid-template-columns: minmax(0,1fr); gap: 20px; }
 .fc-answers-jumps .fc-answers-jump-links { grid-template-columns: repeat(12,minmax(0,1fr)); }
 .fc-answers-jumps .fc-answers-jump-links > a { grid-column: span 3; }
-.fc-answers-jumps .fc-answers-jump-links > a:nth-last-child(-n+3) { grid-column: span 4; }
 @media (min-width: 701px) and (max-width: 1000px) {
 .fc-answers-jumps .fc-answers-featured-pair { grid-template-columns: repeat(2,minmax(0,1fr)); }
 }
 @media (max-width: 900px) {
 .fc-answers-jumps .fc-answers-jump-links { grid-template-columns: repeat(2,minmax(0,1fr)); }
 .fc-answers-jumps .fc-answers-jump-links > a { grid-column: auto; }
-.fc-answers-jumps .fc-answers-jump-links > a:nth-last-child(-n+3) { grid-column: auto; }
 .fc-answers-jumps .fc-answers-jump-links > a:last-child:nth-child(odd) { grid-column: 1 / -1; }
 }
 @media (max-width: 340px) {

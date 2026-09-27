@@ -1,0 +1,11 @@
+{
+  "scope": "Holy Ghost higher-resolution talk previews and featured Godhead navigation",
+  "pr": "https://github.com/caribousun/focuschrist-website/pull/394",
+  "candidate": "10b4426d5dabfbcf1730952c190c77ae52b72c91",
+  "merge": "fd8d9edb1d9dd49a246913fa083a1449c9155f52",
+  "ci": {"candidate":36345615228,"main":36346121383,"pages":36346121368,"result":"SUCCESS","historical_failed_run":36345072875},
+  "public_http_and_exact_candidate_byte_match": ["answers.html","answers-hero.css","answers/holy-ghost.html","holy-ghost-video.css"],
+  "public_browser": {"width":390,"talk_preview_natural_widths":[900,1280,1600,1280],"display_width":341.6,"loaded":4,"screenshot":"outputs/Holy-Ghost-thumbnails-live.png"},
+  "owner_video_preview_limit":"Owner Bednar video best available preview is640x480; capped to native display size, no invented HD detail. Player unchanged.",
+  "approval_limit":"Verified release and observed browser rendering; not owner aesthetic approval."
+}

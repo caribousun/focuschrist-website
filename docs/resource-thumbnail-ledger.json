@@ -2128,6 +2128,69 @@
       "width": 1280,
       "height": 720,
       "verified_date": "2026-09-27"
+    },
+    {
+      "key": "plan-plan",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2020/04/51oaks?lang=eng",
+      "title": "The Great Plan",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/e049d038785e3d4ad697bcecfea38048f9680c4a/full/%211600%2C/0/default",
+      "remote_thumbnail": "https://www.churchofjesuschrist.org/imgs/e049d038785e3d4ad697bcecfea38048f9680c4a/full/%211600%2C/0/default",
+      "width": 1600,
+      "height": 900,
+      "verified_date": "2026-09-27"
+    },
+    {
+      "key": "plan-agency",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2018/10/choose-you-this-day?lang=eng",
+      "title": "Choose You This Day",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/99deeadb198649841dc5a5a6a797ffa15858e84a/full/%211600%2C/0/default",
+      "remote_thumbnail": "https://www.churchofjesuschrist.org/imgs/99deeadb198649841dc5a5a6a797ffa15858e84a/full/%211600%2C/0/default",
+      "width": 1600,
+      "height": 900,
+      "verified_date": "2026-09-27"
+    },
+    {
+      "key": "plan-resurrection",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2014/04/the-resurrection-of-jesus-christ?lang=eng",
+      "title": "The Resurrection of Jesus Christ",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/f506762f3f1ce370c22685188cae7225ad02c3cc/full/%211600%2C/0/default",
+      "remote_thumbnail": "https://www.churchofjesuschrist.org/imgs/f506762f3f1ce370c22685188cae7225ad02c3cc/full/%211600%2C/0/default",
+      "width": 1600,
+      "height": 900,
+      "verified_date": "2026-09-27",
+      "inline_scripture_urls": [
+        "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng"
+      ]
+    },
+    {
+      "key": "plan-mercy",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2015/04/where-justice-love-and-mercy-meet?lang=eng",
+      "title": "Where Justice, Love, and Mercy Meet",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/3b62d2547af00e625d41b7ef96748e4a12fd71d2/full/%211600%2C/0/default",
+      "remote_thumbnail": "https://www.churchofjesuschrist.org/imgs/3b62d2547af00e625d41b7ef96748e4a12fd71d2/full/%211600%2C/0/default",
+      "width": 1600,
+      "height": 900,
+      "verified_date": "2026-09-27"
+    },
+    {
+      "key": "plan-living-today",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/am-i-good-enough-will-i-make-it?lang=eng",
+      "title": "Am I Good Enough? Will I Make It?",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/f1a0db4e6cb52ea6c102e57350e7a0b4901f16bc/full/%211600%2C/0/default",
+      "remote_thumbnail": "https://www.churchofjesuschrist.org/imgs/f1a0db4e6cb52ea6c102e57350e7a0b4901f16bc/full/%211600%2C/0/default",
+      "width": 1600,
+      "height": 900,
+      "verified_date": "2026-09-27"
+    },
+    {
+      "key": "plan-joy",
+      "url": "https://www.churchofjesuschrist.org/study/general-conference/2016/10/joy-and-spiritual-survival?lang=eng",
+      "title": "Joy and Spiritual Survival",
+      "thumbnail": "https://www.churchofjesuschrist.org/imgs/d5a0ec4375f63270222ac2b215cc0d8d2be8bb89/full/%211600%2C/0/default",
+      "remote_thumbnail": "https://www.churchofjesuschrist.org/imgs/d5a0ec4375f63270222ac2b215cc0d8d2be8bb89/full/%211600%2C/0/default",
+      "width": 1600,
+      "height": 900,
+      "verified_date": "2026-09-27"
     }
   ],
   "reviewed_on": "2026-09-07",

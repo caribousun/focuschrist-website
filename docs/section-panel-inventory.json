@@ -15,6 +15,7 @@
     "answers/jesus-christ-latter-day-saint-beliefs.html",
     "answers/look-unto-me-doctrine-and-covenants-6-36.html",
     "answers/melchizedek-priesthood-restoration.html",
+    "answers/plan-of-salvation.html",
     "answers/prayer-and-personal-revelation.html",
     "answers/restored-church-of-jesus-christ.html",
     "answers/settle-this-in-your-hearts.html",
@@ -510,7 +511,7 @@
       "reason": "Disclosure group; individual details receive surface."
     },
     "fc-resource-card": {
-      "count": 130,
+      "count": 139,
       "pages": [
         "about.html",
         "answers.html",
@@ -527,6 +528,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
@@ -561,7 +563,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-resource-card__body": {
-      "count": 130,
+      "count": 139,
       "pages": [
         "about.html",
         "answers.html",
@@ -578,6 +580,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
@@ -612,7 +615,7 @@
       "reason": "Resource copy wrapper; parent card owns surface."
     },
     "fc-resource-card__image": {
-      "count": 130,
+      "count": 139,
       "pages": [
         "about.html",
         "answers.html",
@@ -629,6 +632,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
@@ -663,7 +667,7 @@
       "reason": "Image container; preserve letterboxing and fit."
     },
     "fc-resource-card__kind": {
-      "count": 130,
+      "count": 139,
       "pages": [
         "about.html",
         "answers.html",
@@ -680,6 +684,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
@@ -714,7 +719,7 @@
       "reason": "Text label within resource."
     },
     "fc-resource-card__play": {
-      "count": 96,
+      "count": 102,
       "pages": [
         "about.html",
         "answers.html",
@@ -730,6 +735,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/settle-this-in-your-hearts.html",
         "answers/stand-forever.html",
@@ -761,7 +767,7 @@
       "reason": "Play control, not panel."
     },
     "fc-resource-card__source": {
-      "count": 129,
+      "count": 135,
       "pages": [
         "about.html",
         "answers.html",
@@ -778,6 +784,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
@@ -1099,11 +1106,12 @@
       "reason": "Artwork image; preserve framing."
     },
     "jj-reflection": {
-      "count": 149,
+      "count": 169,
       "pages": [
         "answers/abrahamic-covenant.html",
         "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
+        "answers/plan-of-salvation.html",
         "jesus-christ/before-bethlehem.html",
         "jesus-christ/miracles-and-compassion.html",
         "jesus-christ/mortal-ministry.html",
@@ -1899,6 +1907,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
@@ -2047,6 +2056,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
@@ -2309,6 +2319,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
@@ -3078,7 +3089,7 @@
       ]
     },
     ".fc-resource-card": {
-      "count": 130,
+      "count": 139,
       "pages": [
         "about.html",
         "answers.html",
@@ -3095,6 +3106,7 @@
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
+        "answers/plan-of-salvation.html",
         "answers/prayer-and-personal-revelation.html",
         "answers/restored-church-of-jesus-christ.html",
         "answers/settle-this-in-your-hearts.html",
