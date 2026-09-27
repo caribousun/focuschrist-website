@@ -34,12 +34,12 @@ def main() -> int:
         "Watch & Study",
         "ensurePrimaryStudyNavigation",
         "data-focuschrist-primary-missionary",
-        "createMissionaryLink('MISSION')",
-        "createMissionaryLink('MISSIONARY WORK')",
+        "createMissionaryLink('Mission')",
+        "createMissionaryLink('Missionary Work')",
         "menu.querySelector('[data-focuschrist-primary-history]')",
         "data-focuschrist-primary-watch",
-        "createWatchLink('WATCH')",
-        "createWatchLink('WATCH & STUDY')",
+        "createWatchLink('Watch')",
+        "createWatchLink('Watch & Study')",
     ):
         if marker not in common:
             errors.append(f"site-common.js missing resource/navigation marker: {marker}")

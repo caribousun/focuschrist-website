@@ -35,12 +35,12 @@ OLD_MODEL = "llama-3.1-8b-instant"
 NEW_MODEL = "openai/gpt-oss-20b"
 VERIFICATION_FILE = "google3fa84a4b37862f36.html"
 HEADER_PAGES = {
-    **{name: "site-header.css?v=20260920-menu-wrap-2" for name in CORE},
-    **{name: "../site-header.css?v=20260920-menu-wrap-2" for name in ANSWER_PAGES},
-    **{name: "../site-header.css?v=20260920-menu-wrap-2" for name in ART_STUDY_PAGES},
-    "404.html": "/site-header.css?v=20260920-menu-wrap-2",
+    **{name: "site-header.css?v=20260926-toolbar-readability-1" for name in CORE},
+    **{name: "../site-header.css?v=20260926-toolbar-readability-1" for name in ANSWER_PAGES},
+    **{name: "../site-header.css?v=20260926-toolbar-readability-1" for name in ART_STUDY_PAGES},
+    "404.html": "/site-header.css?v=20260926-toolbar-readability-1",
 }
-HEADER_LABELS = ("HOME", "Ask (Chat)", "Answers Library", "ART", "PIONEERS", "ABOUT")
+HEADER_LABELS = ("Home", "Ask (Chat)", "Answers Library", "Art", "Pioneers", "About")
 PLACEHOLDER_CAPTION_PATTERNS = (
     r"\bstudy illustration\b",
     r"historical study illustration",

@@ -288,7 +288,7 @@
     function ensurePrimaryStudyNavigation() {
         const desktop = document.querySelector('.nav[data-focuschrist-header="standard"] .nav-links');
         if (desktop && !desktop.querySelector('[data-focuschrist-primary-missionary]')) {
-            const missionary = createMissionaryLink('MISSION');
+            const missionary = createMissionaryLink('Mission');
             const history = Array.from(desktop.querySelectorAll('a')).find(function (link) {
                 return link.textContent.trim().toUpperCase() === 'HISTORY';
             });
@@ -300,7 +300,7 @@
             else desktop.appendChild(missionary);
         }
         if (desktop && !desktop.querySelector('[data-focuschrist-primary-history]')) {
-            const history = createHistoryLink('HISTORY');
+            const history = createHistoryLink('History');
             const pioneers = Array.from(desktop.querySelectorAll('a')).find(function (link) {
                 return link.textContent.trim().toUpperCase() === 'PIONEERS';
             });
@@ -308,7 +308,7 @@
             else desktop.appendChild(history);
         }
         if (desktop && !desktop.querySelector('[data-focuschrist-primary-watch]')) {
-            const watch = createWatchLink('WATCH');
+            const watch = createWatchLink('Watch');
             const about = Array.from(desktop.querySelectorAll('a')).find(function (link) {
                 return link.textContent.trim().toUpperCase() === 'ABOUT';
             });
@@ -318,7 +318,7 @@
 
         const menu = document.getElementById('hamburgerMenu');
         if (menu && !menu.querySelector('[data-focuschrist-come-follow-me]')) {
-            const comeFollowMe = createComeFollowMeLink('COME, FOLLOW ME');
+            const comeFollowMe = createComeFollowMeLink('Come, Follow Me');
             const answers = Array.from(menu.querySelectorAll('a')).find(function (link) {
                 return /(?:^|\/)answers\.html$/.test(new URL(link.href, document.baseURI).pathname);
             });
@@ -328,7 +328,7 @@
             else menu.appendChild(comeFollowMe);
         }
         if (menu && !menu.querySelector('[data-focuschrist-conference-shortcut]')) {
-            const conference = createConferenceLink('GENERAL CONFERENCE');
+            const conference = createConferenceLink('General Conference');
             const answers = Array.from(menu.querySelectorAll('a')).find(function (link) {
                 return /(?:^|\/)answers\.html$/.test(new URL(link.href, document.baseURI).pathname);
             });
@@ -338,7 +338,7 @@
             else menu.appendChild(conference);
         }
         if (menu && !menu.querySelector('[data-focuschrist-primary-missionary]')) {
-            const missionary = createMissionaryLink('MISSIONARY WORK');
+            const missionary = createMissionaryLink('Missionary Work');
             const history = menu.querySelector('[data-focuschrist-primary-history]');
             const pioneers = Array.from(menu.querySelectorAll('a')).find(function (link) {
                 return link.textContent.trim().toUpperCase() === 'PIONEERS';
@@ -350,7 +350,7 @@
             else menu.appendChild(missionary);
         }
         if (menu && !menu.querySelector('[data-focuschrist-primary-history]')) {
-            const history = createHistoryLink('CHURCH HISTORY');
+            const history = createHistoryLink('Church History');
             const pioneers = Array.from(menu.querySelectorAll('a')).find(function (link) {
                 return link.textContent.trim().toUpperCase() === 'PIONEERS';
             });
@@ -360,7 +360,7 @@
             else menu.appendChild(history);
         }
         if (menu && !menu.querySelector('[data-focuschrist-primary-watch]')) {
-            const watch = createWatchLink('WATCH & STUDY');
+            const watch = createWatchLink('Watch & Study');
             const about = Array.from(menu.querySelectorAll('a')).find(function (link) {
                 return link.textContent.trim().toUpperCase() === 'ABOUT';
             });
@@ -474,7 +474,7 @@
             'stand-forever.html': 'Stand Forever',
             'settle-this-in-your-hearts.html': 'Settle Your Heart',
             'god-our-heavenly-father.html': 'God',
-            'restored-church-of-jesus-christ.html': 'The restored Church',
+            'restored-church-of-jesus-christ.html': 'The Restored Church',
             'look-unto-me-doctrine-and-covenants-6-36.html': hash === '#stand-forever' ? 'Stand Forever' : 'Look Unto Me'
         };
         const file = path.split('/').pop();
@@ -493,7 +493,7 @@
     function initCurrentStudyNavigation() {
         const style = document.createElement('link');
         style.rel = 'stylesheet';
-        style.href = relativeAssetHref('study-navigation.css?v=20260907-topics');
+        style.href = relativeAssetHref('study-navigation.css?v=20260926-toolbar-readability-1');
         document.head.appendChild(style);
         const header = document.querySelector('.nav[data-focuschrist-header="standard"]');
         if (!header) return;
@@ -532,14 +532,14 @@
             let current = Array.from(desktop.querySelectorAll('a')).find(link => link.getAttribute('href') === topic.href);
             if (!current) {
                 current = document.createElement('a');
-                current.textContent=topic.label.toUpperCase(); current.setAttribute('href',topic.href);current.setAttribute('data-focuschrist-generated-topic','true');
+                current.textContent=topic.label; current.setAttribute('href',topic.href);current.setAttribute('data-focuschrist-generated-topic','true');
                 const art = Array.from(desktop.querySelectorAll('a')).find(link => /(^|\/)art\.html$/.test(link.getAttribute('href')));
                 if (art) art.insertAdjacentElement('afterend',current); else desktop.appendChild(current);
             }
             header.querySelectorAll('a[aria-current],a.active').forEach(link => {link.removeAttribute('aria-current');link.classList.remove('active');});
             current.classList.add('active'); current.setAttribute('aria-current',topic.location?'location':'page'); current.setAttribute('data-focuschrist-current-study','true');
             let menuCurrent=Array.from(menu.querySelectorAll('a')).find(link => link.getAttribute('href') === topic.href);
-            if (!menuCurrent) { menuCurrent=document.createElement('a');menuCurrent.href=topic.href;menuCurrent.textContent=topic.label.toUpperCase();menuCurrent.setAttribute('data-focuschrist-generated-topic','true');menu.prepend(menuCurrent); }
+            if (!menuCurrent) { menuCurrent=document.createElement('a');menuCurrent.href=topic.href;menuCurrent.textContent=topic.label;menuCurrent.setAttribute('data-focuschrist-generated-topic','true');menu.prepend(menuCurrent); }
             menuCurrent.classList.add('active');menuCurrent.setAttribute('aria-current',topic.location?'location':'page');
         }
         function fitDesktopNavigation() {
