@@ -109,3 +109,8 @@ body.fc-home-presentation .fc-home-purpose-paths { margin-top: 24px; }
     body.fc-home-presentation .fc-home-feature-pair .fc-study-promotion > :not(.fc-home-preview) { margin-inline: 18px; }
     body.fc-home-presentation .fc-home-card-copy { padding: 18px; }
 }
+
+/* Let enlarged phone captions add height below the unchanged artwork. */
+@media(max-width:700px){
+ body.fc-home-presentation .fc-home-featured-art.fc-content-artwork > figcaption{position:static;padding:16px 17px;background:#102b36;}
+}

@@ -16,7 +16,7 @@ WATCH_SHORTS_STYLE = 'watch-shorts.css'
 # independently checked on desktop and enlarged phone text. Exact Watch-only bytes.
 WATCH_SHORTS_STYLE_SHA256 = '1feb6892f74ca30d8ec52af3f76e8da197d2bac2cc61716838cf87fe6efd24b6'
 HOME_STYLE = 'home-presentation.css'
-HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d62a5b8'
+HOME_STYLE_SHA256 = 'a3a6331971ae7a289b5cad3c3e5c16e947a0dfada2c0325f1e6b9abc87466282'
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = '165bea932d4ca288c9ade8327e5d5999798be4c41f17c4627bf1bdd8c74790c0'
@@ -127,7 +127,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
-    'ask-experience.css': ('126df0f3a5331f5f2a34df236220e019404cfb1eaf0de54a57c556a5d9c8a0f5', 'ask.html'),
+    'ask-experience.css': ('62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6', 'ask.html'),
     'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
 }
 def reviewed_scoped_interface_style(name, data):
@@ -211,6 +211,7 @@ def main():
         assert not watch_shorts_style_reference_allowed('shared.js', WATCH_SHORTS_STYLE)
         home_css = (ROOT/HOME_STYLE).read_bytes()
         assert reviewed_home_style(home_css)
+        assert not reviewed_home_style(home_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
         assert not reviewed_home_style(home_css + b'\nbody.fc-home-presentation{height:999px}')
         assert home_style_reference_allowed('index.html', HOME_STYLE)
         assert not home_style_reference_allowed('about.html', HOME_STYLE)
@@ -222,11 +223,17 @@ def main():
         assert bible_style_reference_allowed(BIBLE_STYLE_OWNER, BIBLE_STYLE)
         assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
         assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
+        cfm_css = (ROOT/'come-follow-me.css').read_bytes()
+        assert hashlib.sha256(cfm_css).hexdigest() == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
+        assert hashlib.sha256(cfm_css.replace(b'flex-wrap:nowrap}', b'flex-wrap:wrap}')).hexdigest() != '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
+        assert hashlib.sha256(cfm_css + b'body{display:none}').hexdigest() != '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
         for name in NARROW_READING_STYLES:
             data=(ROOT/name).read_bytes()
             assert reviewed_narrow_reading_style(name,data)
             assert not reviewed_narrow_reading_style(name,data+b"body{display:none}")
             assert not reviewed_narrow_reading_style(name,b"X"+data[1:])
+        ask_css=(ROOT/'ask-experience.css').read_bytes()
+        assert not reviewed_scoped_interface_style('ask-experience.css', ask_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
         for name, (_, owner) in SCOPED_INTERFACE_STYLES.items():
             data=(ROOT/name).read_bytes()
             assert reviewed_scoped_interface_style(name,data)
@@ -483,13 +490,19 @@ def main():
         if selector.strip() in diagram_rules:
             check(re.sub(r'\s+', '', body) == diagram_rules[selector.strip()] and sha(ROOT/'bom-evidences.css') == '19b54d55057adeaa0373631a572482e3fdbe0acbcb053755c3b87d6bbda5046b', 'Evidences diagram CSS differs from exact reviewed rule/bytes')
             continue
+        if selector.strip() == 'body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual':
+            check(re.sub(r'\s+', '', body) == 'display:flex;flex-direction:column;flex-wrap:nowrap' and sha(ROOT/'come-follow-me.css') == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3', 'CFM study card differs from exact reviewed vertical-flow rule/bytes')
+            continue
+        if selector.strip() == 'body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual > :is(a,figcaption)':
+            check(re.sub(r'\s+', '', body) == 'flex:01auto;min-width:0;width:100%' and sha(ROOT/'come-follow-me.css') == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3', 'CFM study card children differ from exact reviewed intrinsic-flow rule/bytes')
+            continue
         if selector.strip() == 'body.cfm-page .cfm-toolkit__grid':
-            check(re.sub(r'\s+', '', body) == 'grid-template-columns:1fr;' and sha(ROOT/'come-follow-me.css') == 'b613cf5b02c3347d816bfbfd2c547165c2d613501c49c45e60577bbb2c01075c', 'CFM phone toolkit differs from exact reviewed rule/bytes')
+            check(re.sub(r'\s+', '', body) == 'grid-template-columns:1fr;' and sha(ROOT/'come-follow-me.css') == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3', 'CFM phone toolkit differs from exact reviewed rule/bytes')
             continue
         # Separate owner-authorized mobile opening and Conference banner review.
         # Exact file hashes prevent this scoped acceptance from admitting later edits.
         if selector.strip()=='body.fc-site.cfm-page .cfm-hero::before' and body.strip()=='background-position:center 25%':
-            check(sha(ROOT/'come-follow-me.css')=='b613cf5b02c3347d816bfbfd2c547165c2d613501c49c45e60577bbb2c01075c',
+            check(sha(ROOT/'come-follow-me.css')=='97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3',
                   'Come Follow Me mobile focal point differs from reviewed bytes')
             continue
         if selector.strip().startswith('.gc-page .gc-page-opening'):

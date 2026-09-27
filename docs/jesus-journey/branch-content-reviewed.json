@@ -711,7 +711,8 @@
               "What kindness could you acknowledge directly rather than leaving your gratitude unspoken?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       }
     ],
     "related": [
@@ -881,7 +882,8 @@
               "Where might you need to pause and receive before continuing to give?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "rich-man",
@@ -940,7 +942,8 @@
               "Which ordinary responsibility could you approach more faithfully because your life belongs to God?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "washing-feet",
@@ -978,7 +981,9 @@
             ]
           }
         ],
-        "keep_intro_before_art": true
+        "keep_intro_before_art": true,
+        "opening_visual_after_paragraphs": 2,
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "abide",
@@ -1283,7 +1288,7 @@
     "url": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
     "title": "The Risen Savior in the Book of Mormon",
     "description": "Study the risen Christ’s ministry in 3 Nephi, from the Father’s introduction to prayer, covenant, discipleship and His gospel.",
-    "intro": "The people at Bountiful meet the risen Jesus Christ in a setting distinct from the Gospel accounts. Read His actions and words in sequence, then follow the connections to the fuller Book of Mormon and Resurrection studies.",
+    "intro": "The people at Bountiful meet the risen Jesus Christ in a setting distinct from the Gospel accounts. Explore His actions and words in these encounters, then follow the connections to the fuller Book of Mormon and Resurrection studies.",
     "sections": [
       {
         "id": "voice",
@@ -1421,7 +1426,7 @@
         "blocks": [
           "Jesus connects the people before Him with the prophets, the house of Israel and the covenant made with Abraham. In {0}, He describes blessing in terms of turning people from iniquity and speaks of the covenant reaching beyond the immediate gathering. Their encounter with Him belongs within a purpose extending across peoples and generations.",
           "This covenant language can be unfamiliar, but its reach is important. It joins the Old Testament promise to Abraham with the risen Savior’s ministry and the invitation to live differently. The passage is not a license for pride over ancestry or contempt for another people. It invites readers to see divine blessing as a responsibility and a gift that is intended to reach outward.",
-          "Earlier in the visit’s second day, 3Nephi19:13–14 records the disciples receiving the Holy Ghost after baptism. The covenant teaching is heard among people who have already begun responding through prayer and ordinances.",
+          "Earlier in the visit’s second day, 3 Nephi 19:13–14 records the disciples receiving the Holy Ghost after baptism. The covenant teaching is heard among people who have already begun responding through prayer and ordinances.",
           {
             "questions": [
               "How does the connection between blessing and turning from iniquity shape your understanding of covenant?"
@@ -1473,7 +1478,7 @@
         "blocks": [
           "In {0}, Jesus ministers to the children and enables them to speak marvelous things to their parents. The record then describes another gathering on the following day, after His departure, when even infants speak. It explicitly says that the marvelous words were not to be written. The account gives us the event while withholding its content.",
           "This scene differs from the blessing of the children in 3 Nephi 17. Keeping the moments distinct helps us appreciate the range of their place in His ministry: children receive His care, and they also have something the adults are asked to hear. Our reflection can begin with attentive listening to children today, without inventing the unrecorded teachings or making claims about what a particular child must know.",
-          "The brief summary in 3Nephi26:15 also records a man being raised from the dead. No extended account is supplied, but the detail adds another witness of the Savior’s power within these days of ministry.",
+          "The brief summary in 3 Nephi 26:15 also records a man being raised from the dead. No extended account is supplied, but the detail adds another witness of the Savior’s power within these days of ministry.",
           {
             "questions": [
               "When could you give a child enough time and attention to hear what they are trying to express?"
@@ -1651,7 +1656,7 @@
         "blocks": [
           "The opening of {0} gives voice to Joseph Smith’s anguish while imprisoned at Liberty. His questions concern absence, suffering and the plight of the Saints. The response speaks of peace, endurance and the limits of his affliction. In {1}, the Savior’s descent beneath suffering becomes part of the reassurance and instruction he receives.",
           "These are words of revelation in a painful historical setting; the passages do not record a visible appearance of Christ in the cell. Nor should they be used to tell someone that every harm was divinely desired or that distress must be hidden. Joseph’s questions remain in scripture beside the answer. Their presence gives readers a way to bring anguish honestly into prayer while continuing to seek help, justice and faithful action.",
-          "Later in the same revelation, D&C121:41–44 speaks of persuasion, gentleness, kindness and love in the use of influence. Words that emerge from imprisonment can shape how a person with responsibility treats others today.",
+          "Later in the same revelation, D&C 121:41–44 speaks of persuasion, gentleness, kindness and love in the use of influence. Words that emerge from imprisonment can shape how a person with responsibility treats others today.",
           {
             "questions": [
               "What does it mean to you that the pleading questions were preserved together with the response?"
@@ -1713,7 +1718,7 @@
         "blocks": [
           "The Living Christ, issued on January 1, 2000, gathers the testimony of the First Presidency and Quorum of the Twelve Apostles around the Savior’s identity and mission. It connects Jehovah, creation, mortal ministry, Atonement, Resurrection, Restoration and His promised return. Its scriptural witnesses include the creative role described in {0} and the testimony recorded in {1}.",
           "Read the full testimony through the source link below, then return to one of the original passages it cites. That movement keeps a broad declaration connected to the scriptural accounts on which it draws. The testimony gathers the whole life and mission of Christ without limiting Him to one season or episode. It can become a useful companion as you move between the branches of this journey, remembering how each encounter belongs to the same living Savior.",
-          "Testimony also finds expression in worship. Moroni6:9 includes prayer and song in the life of the gathered Church, while D&C25:12 gives the song of the heart a place before God. Singing can help a community attend together to the Savior it confesses.",
+          "Testimony also finds expression in worship. Moroni 6:9 includes prayer and song in the life of the gathered Church, while D&C 25:12 gives the song of the heart a place before God. Singing can help a community attend together to the Savior it confesses.",
           {
             "questions": [
               "Which part of the testimony would you like to explore through its original scripture source?"
@@ -1790,7 +1795,7 @@
         "blocks": [
           "The promise following the Ascension in {0} looks toward Jesus Christ’s return. {1} likewise speaks of His coming in glory and connects it with resurrection, recognition and the Lord’s redemptive identity. Latter-day Saint hope reaches forward to that promised future while remaining rooted in the Savior who has already lived, died and risen.",
           "These promises do not give us authority to announce a date or label every troubling event as a settled fulfillment. They invite watchfulness that can be lived through repentance, fidelity, compassion and service. The Jesus Christ journey therefore returns to the present: the One we hope to meet is the One whose words and example can shape how we meet the people before us today.",
-          "Revelation1:9–18 offers another witness of the living Lord. John’s fear is met by the Savior’s reassuring touch and testimony of victory over death. That witness gives personal depth to the hope of meeting Him again.",
+          "Revelation 1:9–18 offers another witness of the living Lord. John’s fear is met by the Savior’s reassuring touch and testimony of victory over death. That witness gives personal depth to the hope of meeting Him again.",
           {
             "questions": [
               "What could you do now that would be consistent with the welcome you hope to offer Him?"

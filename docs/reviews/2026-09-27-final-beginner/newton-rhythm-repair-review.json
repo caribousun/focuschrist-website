@@ -1,0 +1,57 @@
+{
+  "reviewer": "Newton",
+  "status": "PASS",
+  "historical_failed_run": 36357368210,
+  "cause": "Moving companion figures after their introduction left three narrative paragraphs together, violating the unchanged maximum-two rhythm guard.",
+  "repair": "Reposition existing primary reference cards after paragraph two; preserve later companion introduction before its figure. No new assets, copy or source destinations.",
+  "independent_test": "python -X utf8 -m unittest discover -s tools -p test_jesus*.py: all41PASS",
+  "invariants": [
+    "Both modified HTML pages retain identical image markup multisets and narrative paragraph multisets against initial PR400 candidate.",
+    "All four final DOM child orders independently inspected; primary card destinations remain existing owning studies.",
+    "Builder rejects missing/multiple reference blocks and invalid placement indices; paragraph rhythm guard untouched."
+  ],
+  "chapters": [
+    {
+      "page": "jesus-christ/miracles-and-compassion.html",
+      "chapter": "gratitude",
+      "order": "two original primary paragraphs → existing source-owned picture card → companion introduction → companion figure → reflection",
+      "primary_href": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-ten-lepers-thanksgiving",
+      "primary_image": "/assets/page-art/jesus-journey/ten-lepers-thanksgiving-960.webp",
+      "companion_id": "picture-mc-official-servants"
+    },
+    {
+      "page": "jesus-christ/teachings-and-parables.html",
+      "chapter": "martha-mary",
+      "order": "two original primary paragraphs → existing source-owned picture card → companion introduction → companion figure → reflection",
+      "primary_href": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-martha-and-mary",
+      "primary_image": "/assets/page-art/jesus-journey/martha-and-mary-960.webp",
+      "companion_id": "picture-tp-withered-fig-tree"
+    },
+    {
+      "page": "jesus-christ/teachings-and-parables.html",
+      "chapter": "caesar",
+      "order": "two original primary paragraphs → existing source-owned picture card → companion introduction → companion figure → reflection",
+      "primary_href": "/answers/jesus-christ-latter-day-saint-beliefs.html#picture-tribute-coin",
+      "primary_image": "/assets/page-art/jesus-journey/tribute-coin-960.webp",
+      "companion_id": "picture-tp-writing-ground"
+    },
+    {
+      "page": "jesus-christ/teachings-and-parables.html",
+      "chapter": "washing-feet",
+      "order": "two original primary paragraphs → existing source-owned picture card → companion introduction → companion figure → reflection",
+      "primary_href": "/atonement.html#remember",
+      "primary_image": "/assets/page-art/atonement/servant-960.webp",
+      "companion_id": "picture-tp-passover-water-carrier"
+    }
+  ],
+  "hashes": {
+    "tools/build_jesus_journey.py": "6d920c0d8dd991c7553a8d42a3b6f34cac73f51f519f0127c0812532d6773f9a",
+    "docs/jesus-journey/branch-content-reviewed.json": "8033424c3e2e4e3d7048111576de219c90d8d27a0b2d6207972e7b6071ac95fa",
+    "jesus-christ/miracles-and-compassion.html": "30f4476c428ba386dbf75b6974f4900cc569af42ff8a13b11dff74b66d03f030",
+    "jesus-christ/teachings-and-parables.html": "89bff29a41e038593b8f5caa494a55bf8a52649133e247d8aecf1578c1c15049"
+  },
+  "limits": [
+    "Source/DOM order verified; parent rendered review is separate.",
+    "Public manifest remains bound to superseded initial candidate until final commit; no public requests."
+  ]
+}

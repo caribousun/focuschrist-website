@@ -92,6 +92,20 @@ references = [n for n in reflections.walk() if n.attrs.get('data-linked-picture-
 require(len(references) == 1 and references[0].parent is practice.parent
         and references[0].order > practice.order,
         "modern prayer picture must occupy its own row after the invitation grid, never inside a card")
+# The three study paths must retain a vertical figure owner, not a flex row
+# whose hidden overflow silently clips every caption/action on a phone.
+path_figures = [n for n in structure.root.walk() if n.tag == 'figure' and n.has('cfm-path')]
+require(len(path_figures) == 3, "three meaningful study paths must remain")
+require('body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual{display:flex;flex-direction:column;flex-wrap:nowrap}' in css,
+        "CFM figure owner must prevent inherited column wrapping")
+require('body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual > :is(a,figcaption){flex:0 1 auto;min-width:0;width:100%}' in css,
+        "CFM image/caption must use intrinsic basis, not inherited 100 percent column basis")
+family = next(n for n in path_figures if 'Family study' in n.text())
+family_links = [n for n in family.walk() if n.tag == 'a']
+require(any(n.attrs.get('href') == 'answers/why-families-are-important.html' for n in family_links),
+        "Family study direct action must lead to Families")
+require(any(n.attrs.get('data-topic-study') == 'answers/why-families-are-important.html' for n in family_links),
+        "Family artwork onward action must lead to Families")
 ids = Counter(attrs['id'] for _, attrs in page.elements if 'id' in attrs)
 require(all(count == 1 for count in ids.values()), "study anchor IDs must be unique")
 links = [attrs.get('href', '') for tag, attrs in page.elements if tag == 'a']

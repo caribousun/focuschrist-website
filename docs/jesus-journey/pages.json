@@ -785,11 +785,11 @@
         ],
         "blocks": [
           "Ten men with leprosy call to Jesus from a distance. In {0}, He tells them to show themselves to the priests, and they are cleansed as they go. One turns back, praises God and falls at Jesus’s feet in thanks. Luke identifies him as a Samaritan, and Jesus draws attention to his return.",
+          "All ten receive cleansing; the account does not say that only the thankful man was healed. The returning man lets the story move from receiving a gift to recognizing its giver. Gratitude here is personal and expressed. We can practice it without comparing whose blessings are greater: remembering a kindness, speaking thanks and allowing received mercy to change the care we give others.",
+          "{1} tells of another household receiving help: an official believes Jesus’s word about his son and starts home. Servants meet him with news of recovery. The story is distinct from the centurion’s servant and gives trust a place on the road before the father sees the child.",
           {
             "art": "mc-official-servants"
           },
-          "All ten receive cleansing; the account does not say that only the thankful man was healed. The returning man lets the story move from receiving a gift to recognizing its giver. Gratitude here is personal and expressed. We can practice it without comparing whose blessings are greater: remembering a kindness, speaking thanks and allowing received mercy to change the care we give others.",
-          "{1} tells of another household receiving help: an official believes Jesus’s word about his son and starts home. Servants meet him with news of recovery. The story is distinct from the centurion’s servant and gives trust a place on the road before the father sees the child.",
           {
             "reference_art": "ten-lepers-thanksgiving"
           },
@@ -798,7 +798,8 @@
               "What kindness could you acknowledge directly rather than leaving your gratitude unspoken?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       }
     ],
     "related": [
@@ -1010,11 +1011,11 @@
         ],
         "blocks": [
           "Martha welcomes Jesus into her home, while her sister Mary sits at His feet and listens. In {0}, Martha asks Him to tell Mary to help with the work. Jesus responds to Martha’s troubled attention and affirms Mary’s choice to receive His words. Both the hospitality and the conversation belong to this particular household moment.",
+          "Martha’s service is real, and Jesus addresses her with personal concern. The question is what is drawing her attention at that moment. Even worthwhile responsibilities can become entangled with resentment or worry; time with the Savior’s words may help us return to those responsibilities with a different heart. Mary’s place at His feet also makes her a receiving disciple, someone whose attention and learning are welcomed within this home.",
+          "Listening continues outside a home as well. In {1}, Peter notices the withered fig tree and Jesus teaches about faith, prayer and forgiveness. A moment on the road becomes an invitation to bring both trust and relationships before the Father.",
           {
             "art": "tp-withered-fig-tree"
           },
-          "Martha’s service is real, and Jesus addresses her with personal concern. The question is what is drawing her attention at that moment. Even worthwhile responsibilities can become entangled with resentment or worry; time with the Savior’s words may help us return to those responsibilities with a different heart. Mary’s place at His feet also makes her a receiving disciple, someone whose attention and learning are welcomed within this home.",
-          "Listening continues outside a home as well. In {1}, Peter notices the withered fig tree and Jesus teaches about faith, prayer and forgiveness. A moment on the road becomes an invitation to bring both trust and relationships before the Father.",
           {
             "reference_art": "martha-and-mary"
           },
@@ -1023,7 +1024,8 @@
               "Where might you need to pause and receive before continuing to give?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "rich-man",
@@ -1075,11 +1077,11 @@
         ],
         "blocks": [
           "Some Pharisees and Herodians approach Jesus with a question intended to trap Him over tribute to Caesar. In {0}, He asks for a coin and draws attention to its image and inscription. His answer distinguishes what is owed to Caesar from what belongs to God, and the questioners marvel.",
+          "The exchange does not provide a complete rulebook for every later political dispute. It exposes an attempt to force Jesus into a narrow choice and turns the discussion toward obligation and allegiance. A reader can begin by asking what belongs to God in a life that also includes civic duties. That question reaches into honesty, conduct and the way we treat people, rather than remaining only a debate about what others should do.",
+          "{1} records another question intended to test Him, this time at the expense of a woman brought before Him. Jesus’s response interrupts the accusation and joins mercy with an invitation to leave sin. The text records His writing on the ground without revealing the words.",
           {
             "art": "tp-writing-ground"
           },
-          "The exchange does not provide a complete rulebook for every later political dispute. It exposes an attempt to force Jesus into a narrow choice and turns the discussion toward obligation and allegiance. A reader can begin by asking what belongs to God in a life that also includes civic duties. That question reaches into honesty, conduct and the way we treat people, rather than remaining only a debate about what others should do.",
-          "{1} records another question intended to test Him, this time at the expense of a woman brought before Him. Jesus’s response interrupts the accusation and joins mercy with an invitation to leave sin. The text records His writing on the ground without revealing the words.",
           {
             "reference_art": "tribute-coin"
           },
@@ -1088,7 +1090,8 @@
               "Which ordinary responsibility could you approach more faithfully because your life belongs to God?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "washing-feet",
@@ -1107,11 +1110,11 @@
         ],
         "blocks": [
           "John frames the washing of the disciples’ feet with Jesus’s knowledge of His relationship to the Father. In {0}, He rises from supper, takes a towel and basin, and begins to wash their feet. Peter’s resistance brings a conversation about receiving what Jesus offers. The Teacher then explains the example He has given them.",
+          "His authority is expressed through willing service. Yet the passage begins with disciples needing to receive His care, not simply deciding to become useful themselves. Both movements belong in discipleship: allowing Christ to cleanse and teach us, and extending humble service to others. The basin and towel give that teaching a concrete form that cannot be reduced to kind feelings alone.",
+          "Before the meal, {1} describes Peter and John preparing a place according to Jesus’s instructions. Their ordinary work gives another form to service before the Teacher takes the towel.",
           {
             "art": "tp-passover-water-carrier"
           },
-          "His authority is expressed through willing service. Yet the passage begins with disciples needing to receive His care, not simply deciding to become useful themselves. Both movements belong in discipleship: allowing Christ to cleanse and teach us, and extending humble service to others. The basin and towel give that teaching a concrete form that cannot be reduced to kind feelings alone.",
-          "Before the meal, {1} describes Peter and John preparing a place according to Jesus’s instructions. Their ordinary work gives another form to service before the Teacher takes the towel.",
           {
             "reference_picture": {
               "href": "/atonement.html#remember",
@@ -1129,7 +1132,9 @@
             ]
           }
         ],
-        "keep_intro_before_art": true
+        "keep_intro_before_art": true,
+        "opening_visual_after_paragraphs": 2,
+        "reference_visual_after_paragraphs": 2
       },
       {
         "id": "abide",
@@ -1461,7 +1466,7 @@
     "url": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
     "title": "The Risen Savior in the Book of Mormon",
     "description": "Study the risen Christ’s ministry in 3 Nephi, from the Father’s introduction to prayer, covenant, discipleship and His gospel.",
-    "intro": "The people at Bountiful meet the risen Jesus Christ in a setting distinct from the Gospel accounts. Read His actions and words in sequence, then follow the connections to the fuller Book of Mormon and Resurrection studies.",
+    "intro": "The people at Bountiful meet the risen Jesus Christ in a setting distinct from the Gospel accounts. Explore His actions and words in these encounters, then follow the connections to the fuller Book of Mormon and Resurrection studies.",
     "sections": [
       {
         "id": "voice",
@@ -1620,7 +1625,7 @@
             "art": "bn-fire-disciples"
           },
           "This covenant language can be unfamiliar, but its reach is important. It joins the Old Testament promise to Abraham with the risen Savior’s ministry and the invitation to live differently. The passage is not a license for pride over ancestry or contempt for another people. It invites readers to see divine blessing as a responsibility and a gift that is intended to reach outward.",
-          "Earlier in the visit’s second day, 3Nephi19:13–14 records the disciples receiving the Holy Ghost after baptism. The covenant teaching is heard among people who have already begun responding through prayer and ordinances.",
+          "Earlier in the visit’s second day, 3 Nephi 19:13–14 records the disciples receiving the Holy Ghost after baptism. The covenant teaching is heard among people who have already begun responding through prayer and ordinances.",
           {
             "questions": [
               "How does the connection between blessing and turning from iniquity shape your understanding of covenant?"
@@ -1678,7 +1683,7 @@
             "art": "bn-man-raised"
           },
           "This scene differs from the blessing of the children in 3 Nephi 17. Keeping the moments distinct helps us appreciate the range of their place in His ministry: children receive His care, and they also have something the adults are asked to hear. Our reflection can begin with attentive listening to children today, without inventing the unrecorded teachings or making claims about what a particular child must know.",
-          "The brief summary in 3Nephi26:15 also records a man being raised from the dead. No extended account is supplied, but the detail adds another witness of the Savior’s power within these days of ministry.",
+          "The brief summary in 3 Nephi 26:15 also records a man being raised from the dead. No extended account is supplied, but the detail adds another witness of the Savior’s power within these days of ministry.",
           {
             "questions": [
               "When could you give a child enough time and attention to hear what they are trying to express?"
@@ -1868,7 +1873,7 @@
             "art": "rt-persuasion"
           },
           "These are words of revelation in a painful historical setting; the passages do not record a visible appearance of Christ in the cell. Nor should they be used to tell someone that every harm was divinely desired or that distress must be hidden. Joseph’s questions remain in scripture beside the answer. Their presence gives readers a way to bring anguish honestly into prayer while continuing to seek help, justice and faithful action.",
-          "Later in the same revelation, D&C121:41–44 speaks of persuasion, gentleness, kindness and love in the use of influence. Words that emerge from imprisonment can shape how a person with responsibility treats others today.",
+          "Later in the same revelation, D&C 121:41–44 speaks of persuasion, gentleness, kindness and love in the use of influence. Words that emerge from imprisonment can shape how a person with responsibility treats others today.",
           {
             "questions": [
               "What does it mean to you that the pleading questions were preserved together with the response?"
@@ -1936,7 +1941,7 @@
             "art": "rt-sung-testimony"
           },
           "Read the full testimony through the source link below, then return to one of the original passages it cites. That movement keeps a broad declaration connected to the scriptural accounts on which it draws. The testimony gathers the whole life and mission of Christ without limiting Him to one season or episode. It can become a useful companion as you move between the branches of this journey, remembering how each encounter belongs to the same living Savior.",
-          "Testimony also finds expression in worship. Moroni6:9 includes prayer and song in the life of the gathered Church, while D&C25:12 gives the song of the heart a place before God. Singing can help a community attend together to the Savior it confesses.",
+          "Testimony also finds expression in worship. Moroni 6:9 includes prayer and song in the life of the gathered Church, while D&C 25:12 gives the song of the heart a place before God. Singing can help a community attend together to the Savior it confesses.",
           {
             "questions": [
               "Which part of the testimony would you like to explore through its original scripture source?"
@@ -2022,7 +2027,7 @@
             "art": "rt-patmos-vision"
           },
           "These promises do not give us authority to announce a date or label every troubling event as a settled fulfillment. They invite watchfulness that can be lived through repentance, fidelity, compassion and service. The Jesus Christ journey therefore returns to the present: the One we hope to meet is the One whose words and example can shape how we meet the people before us today.",
-          "Revelation1:9–18 offers another witness of the living Lord. John’s fear is met by the Savior’s reassuring touch and testimony of victory over death. That witness gives personal depth to the hope of meeting Him again.",
+          "Revelation 1:9–18 offers another witness of the living Lord. John’s fear is met by the Savior’s reassuring touch and testimony of victory over death. That witness gives personal depth to the hope of meeting Him again.",
           {
             "questions": [
               "What could you do now that would be consistent with the welcome you hope to offer Him?"
@@ -10111,7 +10116,7 @@
               [
                 "/jesus-christ/parables/lost-sheep.html",
                 "The Lost Sheep",
-                "Luke places the search amid criticism of Jesus receiving sinners; Matthew emphasizes care for the little ones. Let visitors read both contexts."
+                "Luke places the search amid criticism of Jesus receiving sinners; Matthew emphasizes care for the little ones. Read both settings to hear the invitation each emphasizes."
               ],
               [
                 "/jesus-christ/parables/unmerciful-servant.html",
@@ -10121,7 +10126,7 @@
               [
                 "/jesus-christ/parables/two-debtors.html",
                 "The Two Debtors",
-                "Jesus tells the brief debt story during a meal with Simon, then relates it to the woman's love and forgiveness. Do not identify the unnamed woman as Mary Magdalene."
+                "Jesus tells the brief debt story during a meal with Simon, then relates it to the woman’s love and forgiveness. Luke does not name her or identify her as Mary Magdalene."
               ],
               [
                 "/jesus-christ/parables/barren-fig.html",
@@ -10136,7 +10141,7 @@
               [
                 "/jesus-christ/parables/prodigal-son.html",
                 "The Prodigal Son and His Brother",
-                "Follow both sons and the father's invitations. The elder brother's response remains open; do not invent a final reconciliation absent from the account."
+                "Follow both sons and the father’s invitations. The story leaves the elder brother’s response open, inviting us to consider how we would receive the father’s appeal."
               ]
             ]
           },
@@ -10153,7 +10158,7 @@
               [
                 "/jesus-christ/parables/hen-chicks.html",
                 "The Hen Gathering Her Chicks",
-                "Jesus laments over Jerusalem with a picture of protective gathering. Preserve both His invitation and the sorrow of refusal."
+                "Jesus laments over Jerusalem with a picture of protective gathering. Hear His invitation alongside His sorrow at its refusal."
               ]
             ]
           }
@@ -10382,7 +10387,7 @@
               [
                 "/jesus-christ/parables/good-samaritan.html",
                 "The Good Samaritan",
-                "A question about the neighbor leads to concrete mercy across hostility. The conclusion asks who acted as a neighbor; avoid assigning unsupplied motives to passersby."
+                "A question about the neighbor leads to concrete mercy across hostility. Notice how Jesus’ concluding question turns attention toward the person who acted as a neighbor."
               ],
               [
                 "/jesus-christ/parables/wedding-places.html",
@@ -10392,7 +10397,7 @@
               [
                 "/jesus-christ/parables/great-supper.html",
                 "The Great Supper",
-                "Invited guests excuse themselves while the host welcomes people often excluded. Keep the specific invitations and excuses intact; do not merge with Matthew's royal wedding."
+                "Invited guests excuse themselves while the host welcomes people often excluded. Listen to the invitations and excuses in Luke’s account, then compare Matthew’s distinct royal-wedding story."
               ],
               [
                 "/jesus-christ/parables/rich-man-lazarus.html",
@@ -10409,12 +10414,12 @@
               [
                 "/jesus-christ/parables/settle-adversary.html",
                 "Settling with an Adversary",
-                "The legal journey illustrates urgency. Offer spiritual reflection without turning it into individualized legal advice."
+                "The legal journey illustrates urgency. Read the surrounding teaching and consider what it means to respond while an opportunity remains."
               ],
               [
                 "/jesus-christ/parables/sheep-sabbath.html",
                 "The Sheep in the Pit",
-                "A rescue question supports doing good on the Sabbath. Luke uses an ass or ox in a related scene; do not label the two identical stories."
+                "A rescue question supports doing good on the Sabbath. Compare Matthew’s sheep with Luke’s related example of an ass or ox in its own setting."
               ]
             ]
           }
@@ -10661,7 +10666,7 @@
               [
                 "/jesus-christ/parables/new-wineskins.html",
                 "New Wine and Wineskins",
-                "Read with the preceding garment comparison and the fasting dispute. Preserve Luke's additional observation about preference for old wine."
+                "Read with the preceding garment comparison and the fasting dispute. Notice Luke’s additional observation about preference for old wine."
               ],
               [
                 "/jesus-christ/parables/lamp.html",
@@ -10681,7 +10686,7 @@
               [
                 "/jesus-christ/parables/householder.html",
                 "The Householder's Treasure",
-                "After asking whether the disciples understand, Jesus speaks of a trained scribe bringing out treasures new and old. Treat this as a compact concluding comparison."
+                "After asking whether the disciples understand, Jesus speaks of a trained scribe bringing out treasures new and old. What does this closing comparison invite a learner to share?"
               ],
               [
                 "/jesus-christ/parables/two-sons.html",
@@ -10691,7 +10696,7 @@
               [
                 "/jesus-christ/parables/blind-guides.html",
                 "The Blind Leading the Blind",
-                "Luke explicitly introduces a parable. Spiritual guidance is the subject; do not turn blindness into a moral judgment about people with disabilities."
+                "Luke explicitly introduces a parable about spiritual guidance. Its image invites examination of a guide’s understanding, rather than a judgment about people with disabilities."
               ]
             ]
           },
@@ -10703,12 +10708,12 @@
               [
                 "/jesus-christ/parables/mote-beam.html",
                 "The Mote and the Beam",
-                "Exaggerated imagery exposes hypocrisy before correction of another. An application should invite self-examination."
+                "Exaggerated imagery exposes hypocrisy before correction of another. What does Jesus invite us to examine in ourselves first?"
               ],
               [
                 "/jesus-christ/parables/tree-fruit.html",
                 "A Tree and Its Fruit",
-                "Fruit reveals character in sayings about teachers, speech, and conduct. Keep each setting visible."
+                "Fruit reveals character in sayings about teachers, speech, and conduct. Read each setting to see how Jesus applies the comparison."
               ],
               [
                 "/jesus-christ/parables/salt.html",
@@ -10718,12 +10723,12 @@
               [
                 "/jesus-christ/parables/returning-spirit.html",
                 "The Returning Unclean Spirit",
-                "A brief warning uses the return to an empty house. Do not present it as a diagnosis of mental illness or a medical explanation."
+                "A brief warning uses the return to an empty house. Read it in Jesus’ teaching context; it does not offer a medical explanation of mental illness."
               ],
               [
                 "/jesus-christ/parables/vine-branches.html",
                 "The True Vine and the Branches",
-                "Jesus speaks of abiding in Him, fruit, love, and obedience. The Father is the husbandman; keep these stated identities clear."
+                "Jesus speaks of abiding in Him, fruit, love, and obedience. He identifies Himself as the vine, His disciples as the branches, and the Father as the husbandman."
               ]
             ]
           }
@@ -10971,7 +10976,7 @@
               [
                 "/jesus-christ/parables/growing-seed.html",
                 "The Seed Growing Secretly",
-                "The farmer sows, waits through growth he cannot fully explain, and harvests. Keep this distinct from the wheat and tares."
+                "The farmer sows, waits through growth he cannot fully explain, and harvests. This story explores a different question from the wheat and tares."
               ],
               [
                 "/jesus-christ/parables/wheat-tares.html",
@@ -10981,17 +10986,17 @@
               [
                 "/jesus-christ/parables/mustard-seed.html",
                 "The Mustard Seed",
-                "The kingdom is compared with a small seed and substantial growth. Keep the kingdom comparison distinct from separate sayings about mustard-seed faith."
+                "The kingdom is compared with a small seed and substantial growth. Read this kingdom comparison alongside, but separately from, Jesus’ sayings about mustard-seed faith."
               ],
               [
                 "/jesus-christ/parables/leaven.html",
                 "The Leaven",
-                "A woman works leaven into meal until it permeates the whole. Do not import the negative meaning of leaven from warnings in other settings."
+                "A woman works leaven into meal until it permeates the whole. Here the image concerns the kingdom’s influence; leaven carries a different meaning in warnings elsewhere."
               ],
               [
                 "/jesus-christ/parables/hidden-treasure.html",
                 "The Hidden Treasure",
-                "Joy over discovered treasure leads to wholehearted action. Keep the narrative brief instead of supplying an invented biography."
+                "Joy over discovered treasure leads to wholehearted action. Notice what the man is willing to give for what he has found."
               ],
               [
                 "/jesus-christ/parables/pearl.html",
@@ -11006,7 +11011,7 @@
               [
                 "/jesus-christ/parables/royal-wedding.html",
                 "The Wedding of the King's Son",
-                "Rejected invitations lead to a widened invitation, followed by the wedding-garment episode. Preserve both movements and distinguish this account from Luke's great supper."
+                "Rejected invitations lead to a widened invitation, followed by the wedding-garment episode. Follow both movements, then compare this account with Luke’s distinct story of the great supper."
               ]
             ]
           },
@@ -11261,17 +11266,17 @@
               [
                 "/jesus-christ/parables/laborers-vineyard.html",
                 "The Laborers in the Vineyard",
-                "Different starting times expose resentment at generosity. Read with Matthew 19:27-30; avoid making the story a formula for modern wages."
+                "Different starting times expose resentment at generosity. Read with Matthew 19:27–30 and notice the question about following Jesus that leads into the story."
               ],
               [
                 "/jesus-christ/parables/wicked-tenants.html",
                 "The Wicked Tenants",
-                "Tenants reject servants and the owner's son. Keep the confrontation with particular leaders in context; do not turn the account into hostility toward Jewish people."
+                "Tenants reject servants and the owner’s son. Jesus directs this confrontation toward particular leaders; it is not a condemnation of Jewish people as a whole."
               ],
               [
                 "/jesus-christ/parables/talents.html",
                 "The Talents",
-                "Servants receive differing sums and later account for their stewardship. Explain the original monetary meaning of talent before offering applications to abilities."
+                "Servants receive differing sums and later account for their stewardship. A talent here is a large sum of money. Consider how each servant responds to what has been entrusted to him."
               ],
               [
                 "/jesus-christ/parables/rich-fool.html",
@@ -11296,12 +11301,12 @@
               [
                 "/jesus-christ/parables/servant-duty.html",
                 "The Servant's Duty",
-                "Ordinary service challenges a sense of entitlement. Do not use the language of an unprofitable servant to deny a person's worth or justify exploitation."
+                "Ordinary service challenges a sense of entitlement. The call to humility does not diminish a person’s worth or excuse exploitation."
               ],
               [
                 "/jesus-christ/parables/minas.html",
                 "The Ten Pounds or Minas",
-                "Jesus answers expectations that the kingdom will appear immediately. Preserve the nobleman's journey and ten servants; do not silently substitute the different talents account."
+                "Jesus answers expectations that the kingdom will appear immediately. Follow the nobleman’s journey and the ten servants, then compare their account with the distinct story of the talents."
               ]
             ]
           }
@@ -11569,12 +11574,12 @@
               [
                 "/jesus-christ/parables/watchful-servants.html",
                 "Servants Waiting for Their Lord",
-                "Servants remain ready to welcome a master returning from a wedding. The master's surprising service is part of the story; keep it beside, but distinct from, the thief comparison."
+                "Servants remain ready to welcome a master returning from a wedding. Notice the master’s surprising service, then read the separate comparison with a thief’s unexpected arrival."
               ],
               [
                 "/jesus-christ/parables/persistent-widow.html",
                 "The Persistent Widow and the Judge",
-                "Luke states the invitation to keep praying. God's justice is contrasted with the unjust judge; do not promise a particular answer on a chosen timetable."
+                "Luke states the invitation to keep praying. God’s justice is contrasted with the unjust judge; the story offers hope without setting a timetable for an individual answer."
               ],
               [
                 "/jesus-christ/parables/pharisee-publican.html",
@@ -11611,7 +11616,7 @@
               [
                 "/jesus-christ/parables/birds-lilies.html",
                 "Birds and Lilies",
-                "Creation illustrates the Father's care amid teaching about anxious concern. Do not suggest faithful people never experience deprivation or anxiety."
+                "Creation illustrates the Father’s care amid teaching about anxious concern. His invitation to trust meets people who can still experience deprivation and anxiety."
               ]
             ]
           }

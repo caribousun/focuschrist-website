@@ -46,6 +46,10 @@ Save the route/chapter matrix, human review, browser artifacts, negative-test re
 
 Inspect runtime-injected current-topic labels on phones as well as authored navigation: no stray underlined title or empty second row. Preserve the established mobile menu/search and scrolling, and the fixed desktop header. Compare older and newer studies across phone widths. Inspect complete row composition of topic links and Ask suggestions at desktop, tablet and phone sizes; equalize items within each row and fill the final row without adding filler content solely to meet a count.
 
+Inspect meaningful figure captions before excluding content clipped by an ancestor: a completely hidden caption or its onward links is still a defect, even when the page itself has no horizontal overflow. Compare actual text fragments and card bounds after styles and interactions settle. Preserve legitimate closed menus, details and chapter panels, and do not mistake decorative image cropping for clipped teaching.
+
+Read collection-card summaries as a learner. Replace writer-facing directions such as “Let visitors” or “Explain” with clear teaching or a natural study invitation. Keep material source qualifications, distinct Gospel settings, open narrative endings and safeguards concerning grief, disability or exploitation.
+
 ## Hosted cadence and receipts
 
 Owner-requested cadence is Sunday04:00 in the fixed IANA timezone `America/Denver`, following Mountain daylight-saving changes rather than the owner device location. Reuse Merlin's existing `focus-weekly-watch` hosted job; do not create an additional local or cloud worker. Apply the change only after this framework and candidate checks are complete. Obtain receiving-worker acknowledgement, scheduler identity, enabled state, exact timezone/cadence, next run and last run, then a real scheduled receipt. Configuration, manual checks and scheduled execution are separate evidence.

@@ -1,0 +1,175 @@
+{
+  "status": "Independently reviewed candidate; scoped local checks and parent rendered verification pass. Commit/hosted QA/public deployment not yet claimed.",
+  "scope": [
+    "CFM three cards vertical visible content/actions",
+    "Family direct and picture-panel routes both Families",
+    "Six bounded production-tone phrases preserving historical uncertainty",
+    "Jesus J1 scripture spacing, J2 encounter wording, J3 four art placements after existing introductions",
+    "28 of63 collection summaries now reader-facing;35 unchanged"
+  ],
+  "source_edits": "docs/reviews/2026-09-27-final-beginner/bounded-wording-edits.json",
+  "new_regression": "CFM source contract plus Newton semantic text-fragment ancestor-clipping fixture/gate; neither relies only on document scrollWidth",
+  "checks_passed": [
+    "come_follow_me_qa.py",
+    "jesus_journey_qa.py",
+    "build_jesus_journey.py --strict --check",
+    "sitewide_artwork_review_qa.py --self-test",
+    "sitewide_artwork_review_qa.py (842 protected images)",
+    "book_of_mormon_stories_qa.py",
+    "focused_answers_qa.py",
+    "media_voice_qa.py",
+    "topic_inline_scripture_qa.py",
+    "section_panel_surface_qa.py",
+    "build_art_gallery.py --check",
+    "build_site_search.py --check",
+    "test_jesus_chapter_visual_coverage.py (13 tests)",
+    "come_follow_me_reading_runtime_qa.js",
+    "canonical_presentation_measurement.test.js",
+    "git diff --check",
+    "static_content_audit.py:14exact independently reviewed rows refreshed,125documentPASS"
+  ],
+  "historical_failures": [
+    "Initial strict artwork gate rejected new CFM stylesheet bytes; exact rule/full-file hash acceptance updated, all geometry/image protections retained.",
+    "Static content audit correctly rejected eight changed wording/order hashes; refresh intentionally awaits independent review.",
+    "Attempted nonexistent settle_heart_study_qa.py; no result claimed. Existing media/source and protected-art checks used instead.",
+    "Initial direction-only CFM candidate passed source tests but still clipped after settling; not accepted. Parent identified actual inherited wrap/basis cause; corrected candidate passed five-width rendered containment."
+  ],
+  "artwork_bytes_changed": false,
+  "files": [
+    {
+      "path": "answers/aaronic-priesthood-restoration.html",
+      "sha256": "784bf19148d0599581b981ced9e67a1baa9a1aff706f30804b91838870df3985"
+    },
+    {
+      "path": "answers/melchizedek-priesthood-restoration.html",
+      "sha256": "5fa951197e5505b26104722e79a1d03a20dee6b264edfc2690d41cfca962b4d9"
+    },
+    {
+      "path": "answers/settle-this-in-your-hearts.html",
+      "sha256": "b61d25284e22a36e0a1d38db06ee7bd7c16e6d21df8a277cb61a2a17005f3da7"
+    },
+    {
+      "path": "answers/what-is-the-book-of-mormon.html",
+      "sha256": "1038e60179a31457d6b95d7e4a3ea32d1ee92db894700936e591ed4e01fd2d5b"
+    },
+    {
+      "path": "come-follow-me.css",
+      "sha256": "97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3"
+    },
+    {
+      "path": "come-follow-me.html",
+      "sha256": "eb53fccc280d9998f020f98bd555982a3d7933b27b31af07dd73f91709267e5d"
+    },
+    {
+      "path": "content-audit.json",
+      "sha256": "7d5554509fd0cb14cbf508b4b9398326c410afb0bcb5d47e2448e351ce115e95"
+    },
+    {
+      "path": "docs/book-of-mormon-art-review.json",
+      "sha256": "d143337a43d1cc0829b90822c92aebc3bad6661aa767dfae0499eb7f635a2f74"
+    },
+    {
+      "path": "docs/jesus-journey/branch-art-plan.json",
+      "sha256": "4907b4de75bd8bd2d2e8360a7af7cdfa3e1299352f2bd2367152b462e2156b80"
+    },
+    {
+      "path": "docs/jesus-journey/branch-content-reviewed.json",
+      "sha256": "e566caf67aad0a2417ddd7bb4c2b133813e504fb3c6cf6ccd4f841afa1a1f613"
+    },
+    {
+      "path": "docs/jesus-journey/pages.json",
+      "sha256": "eaacb3bc30952498a3dbd1a384f6ef77481257c98b1f1ea012ed2b9d1f8cdf15"
+    },
+    {
+      "path": "docs/jesus-journey/parable-collections-reviewed.json",
+      "sha256": "330c8843fc19f8579885aadb9f4144ef94659e04b2d81b349ffe90283e6ca6a4"
+    },
+    {
+      "path": "docs/jesus-journey/parable-source-inventory.json",
+      "sha256": "9213d72d98c6b7bc2a20700ed8d90b2bb23477b3695db9b0ead695f5ab191533"
+    },
+    {
+      "path": "docs/reviews/sunday-whole-site-audit.md",
+      "sha256": "7165b22218270a1af1b3974dc3d3c29c9f5782d81dc10a73eceef16cd243eb4a"
+    },
+    {
+      "path": "jesus-christ/miracles-and-compassion.html",
+      "sha256": "a8fd35338ea0e48671123ec621e473a7afef7f2a35e8e5251877062c6b130cc0"
+    },
+    {
+      "path": "jesus-christ/parables/hearing.html",
+      "sha256": "233533bbbf8a0e8f478c13bce9f5a2f0c663b5a31372f2ba5f84e3378b4f2ecb"
+    },
+    {
+      "path": "jesus-christ/parables/kingdom.html",
+      "sha256": "af72f08ad6b7312772e8465e6d1fa277093c6cb1fcac2141a3b45509c6d6a081"
+    },
+    {
+      "path": "jesus-christ/parables/mercy.html",
+      "sha256": "073f715d8896c29be1da6fc8abd6e4b42be560f8a7ba302109b9f380e361982a"
+    },
+    {
+      "path": "jesus-christ/parables/neighbor.html",
+      "sha256": "6172946bd335412063eda58d1aeacfe5f7c132cdf1fe639f14dc5f7d673a301b"
+    },
+    {
+      "path": "jesus-christ/parables/stewardship.html",
+      "sha256": "ea8ded60e5f00a493298b34f1bb98f8f7aa5998f25d8829267de49af19dcb996"
+    },
+    {
+      "path": "jesus-christ/parables/watchfulness.html",
+      "sha256": "34e11ae78fafde0d9f921c978bb8ec3759d8cce14637fb6c43227316fa56c984"
+    },
+    {
+      "path": "jesus-christ/restoration-and-today.html",
+      "sha256": "35a0e08e642e498c6c8b950d4a29c84cdb1b90a2eca71e3489e1c0e24b1040fd"
+    },
+    {
+      "path": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "sha256": "e7698219745c0c4ab2ecee4fbc1b6c10c4ebc1ff6bc0f513f436917711a5e0a9"
+    },
+    {
+      "path": "jesus-christ/teachings-and-parables.html",
+      "sha256": "5e2ffbf79b9fcfe3d2c7de2ccf43cddb7c70095dbf91b5fb261be54ac12ad3e8"
+    },
+    {
+      "path": "site-search-index.json",
+      "sha256": "314bbb98cedd4460271fde4e4bd674d30c5c5c91f26a7be5d5b1528527b6c816"
+    },
+    {
+      "path": "tools/canonical_presentation_browser_qa.js",
+      "sha256": "8399ee050be6d20db2942245309f158c24d67a3522a081fba5981a4d5a7da029"
+    },
+    {
+      "path": "tools/canonical_presentation_measurement.test.js",
+      "sha256": "e8ae3351b64e2a2e0c46b386213a2178811c58d79f9e272a0ddbcbbf0a9ef45f"
+    },
+    {
+      "path": "tools/come_follow_me_qa.py",
+      "sha256": "63a90271ccaa264f9ed970f263c53edaf5d1c791d7d264600311b7f2d09a48cf"
+    },
+    {
+      "path": "tools/sitewide_artwork_review_qa.py",
+      "sha256": "9f13f51620ad9dc88f60d5a9334254fccb4458c129808d1edb9d7bf92a5ac0d9"
+    },
+    {
+      "path": "tools/test_jesus_chapter_visual_coverage.py",
+      "sha256": "755e783309e478d1cd182c367324027cb32f47ad6cfc096677f78100a5489cea"
+    }
+  ],
+  "cfm_root_cause": "Column direction was already active; inherited flex-wrap:wrap and100% child flex basis pushed captions/actions into a clipped second horizontal column. Final fix owns nowrap and intrinsic child basis on the three CFM figures.",
+  "rendered_evidence": [
+    "parent-cfm-repair.json (320,390,768,1366,1920; real Families click)",
+    "parent-figure-order.json",
+    "parent-linked-journeys.json",
+    "parent-rendered-routes.json",
+    "parent-whole-study-rendered.json"
+  ],
+  "coverage_counts": {
+    "canonical_study_routes": 121,
+    "answers": 24,
+    "jesus": 76,
+    "main": 21,
+    "support_pages_separate": 4
+  }
+}

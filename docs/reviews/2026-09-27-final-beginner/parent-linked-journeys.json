@@ -1,0 +1,968 @@
+{
+  "scope": "121 routes reached through actual UI links or Search. Whole-study collections reopened to follow each remaining parable. Source review covers all chapters; not every possible path permutation.",
+  "seen": [
+    "/",
+    "/ask.html",
+    "/answers.html",
+    "/answers/god-our-heavenly-father.html",
+    "/answers/stand-forever.html",
+    "/answers/jesus-christ-latter-day-saint-beliefs.html",
+    "/jesus-christ/teachings-and-parables.html",
+    "/jesus-christ/parables/mercy.html",
+    "/jesus-christ/parables/neighbor.html",
+    "/jesus-christ/parables/stewardship.html",
+    "/jesus-christ/parables/hearing.html",
+    "/jesus-christ/parables/kingdom.html",
+    "/jesus-christ/parables/watchfulness.html",
+    "/art.html",
+    "/art-gallery.html",
+    "/atonement.html",
+    "/birth-of-christ.html",
+    "/missionary.html",
+    "/church-history.html",
+    "/joseph-smith-likeness.html",
+    "/answers/who-was-joseph-smith.html",
+    "/jesus-christ/restoration-and-today.html",
+    "/jesus-christ/before-bethlehem.html",
+    "/jesus-christ/mortal-ministry.html",
+    "/jesus-christ/miracles-and-compassion.html",
+    "/answers/grief-and-faith.html",
+    "/jesus-christ/redeemer-and-risen-lord.html",
+    "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "/answers/what-is-the-book-of-mormon.html",
+    "/book-of-mormon-evidences.html",
+    "/answers/prayer-and-personal-revelation.html",
+    "/answers/faith-in-jesus-christ-during-trials.html",
+    "/answers/death-of-a-child.html",
+    "/answers/what-happens-after-death.html",
+    "/answers/why-latter-day-saints-build-temples.html",
+    "/answers/why-families-are-important.html",
+    "/answers/divorce-and-faith.html",
+    "/pioneers.html",
+    "/watch.html",
+    "/art-study/the-living-christ.html",
+    "/art-study/be-still.html",
+    "/about.html",
+    "/answers/are-latter-day-saints-christian.html",
+    "/answers/bible-and-book-of-mormon-together.html",
+    "/art-study/the-good-shepherd.html",
+    "/art-study/suffer-the-little-children.html",
+    "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+    "/answers/settle-this-in-your-hearts.html",
+    "/answers/what-is-eternal-marriage.html",
+    "/jesus-christ/parables/wise-foolish-builders.html",
+    "/jesus-christ/parables/two-sons.html",
+    "/jesus-christ/parables/barren-fig.html",
+    "/jesus-christ/parables/budding-fig.html",
+    "/jesus-christ/parables/doorkeeper.html",
+    "/jesus-christ/parables/faithful-servant.html",
+    "/jesus-christ/parables/talents.html",
+    "/jesus-christ/parables/minas.html",
+    "/jesus-christ/parables/ten-virgins.html",
+    "/jesus-christ/parables/watchful-servants.html",
+    "/jesus-christ/parables/sower.html",
+    "/jesus-christ/parables/growing-seed.html",
+    "/jesus-christ/parables/mustard-seed.html",
+    "/jesus-christ/parables/leaven.html",
+    "/answers/restored-church-of-jesus-christ.html",
+    "/general-conference.html",
+    "/come-follow-me.html",
+    "/answers/aaronic-priesthood-restoration.html",
+    "/answers/melchizedek-priesthood-restoration.html",
+    "/answers/holy-ghost.html",
+    "/answers/abrahamic-covenant.html",
+    "/answers/plan-of-salvation.html",
+    "/jesus-christ/parables/lost-sheep.html",
+    "/jesus-christ/parables/lost-coin.html",
+    "/jesus-christ/parables/prodigal-son.html",
+    "/jesus-christ/parables/laborers-vineyard.html",
+    "/jesus-christ/parables/unmerciful-servant.html",
+    "/jesus-christ/parables/two-debtors.html",
+    "/jesus-christ/parables/pharisee-publican.html",
+    "/jesus-christ/parables/wedding-places.html",
+    "/jesus-christ/parables/great-supper.html",
+    "/jesus-christ/parables/royal-wedding.html",
+    "/jesus-christ/parables/good-shepherd.html",
+    "/jesus-christ/parables/vine-branches.html",
+    "/jesus-christ/parables/hen-chicks.html",
+    "/jesus-christ/parables/sheep-goats.html",
+    "/jesus-christ/parables/good-samaritan.html",
+    "/jesus-christ/parables/rich-man-lazarus.html",
+    "/jesus-christ/parables/rich-fool.html",
+    "/jesus-christ/parables/birds-lilies.html",
+    "/jesus-christ/parables/parent-gifts.html",
+    "/jesus-christ/parables/friend-midnight.html",
+    "/jesus-christ/parables/persistent-widow.html",
+    "/jesus-christ/parables/wicked-tenants.html",
+    "/jesus-christ/parables/new-patch.html",
+    "/jesus-christ/parables/new-wineskins.html",
+    "/jesus-christ/parables/bridegroom.html",
+    "/jesus-christ/parables/strong-man.html",
+    "/jesus-christ/parables/divided-house.html",
+    "/jesus-christ/parables/returning-spirit.html",
+    "/jesus-christ/parables/thief-night.html",
+    "/jesus-christ/parables/settle-adversary.html",
+    "/jesus-christ/parables/sheep-sabbath.html",
+    "/jesus-christ/parables/tower-builder.html",
+    "/jesus-christ/parables/king-war.html",
+    "/jesus-christ/parables/unjust-steward.html",
+    "/jesus-christ/parables/servant-duty.html",
+    "/jesus-christ/parables/lamp.html",
+    "/jesus-christ/parables/children-marketplace.html",
+    "/jesus-christ/parables/householder.html",
+    "/jesus-christ/parables/blind-guides.html",
+    "/jesus-christ/parables/mote-beam.html",
+    "/jesus-christ/parables/tree-fruit.html",
+    "/jesus-christ/parables/salt.html",
+    "/jesus-christ/parables/wheat-tares.html",
+    "/jesus-christ/parables/hidden-treasure.html",
+    "/jesus-christ/parables/pearl.html",
+    "/jesus-christ/parables/net.html",
+    "/jesus-christ/parables/grain-wheat.html",
+    "/jesus-christ/parables/closed-door.html",
+    "/jesus-christ/parables/woman-childbirth.html",
+    "/search.html"
+  ],
+  "edges": [
+    {
+      "from": "/",
+      "label": "Ask a Question",
+      "to": "/ask.html",
+      "expected": "/ask.html",
+      "match": true
+    },
+    {
+      "from": "/ask.html",
+      "label": "Answer Library\nPermanent, source-grounded explanations of common questions.",
+      "to": "/answers.html",
+      "expected": "/answers.html",
+      "match": true
+    },
+    {
+      "from": "/answers.html",
+      "label": "Heavenly Father",
+      "to": "/answers/god-our-heavenly-father.html",
+      "expected": "/answers/god-our-heavenly-father.html",
+      "match": true
+    },
+    {
+      "from": "/answers/god-our-heavenly-father.html",
+      "label": "Stand Forever",
+      "to": "/answers/stand-forever.html",
+      "expected": "/answers/stand-forever.html",
+      "match": true
+    },
+    {
+      "from": "/answers/stand-forever.html",
+      "label": "Open study: Room to hear His words",
+      "to": "/answers/jesus-christ-latter-day-saint-beliefs.html",
+      "expected": "/answers/jesus-christ-latter-day-saint-beliefs.html",
+      "match": true
+    },
+    {
+      "from": "/answers/jesus-christ-latter-day-saint-beliefs.html",
+      "label": "Learn through His teachings and parables\n\nExplore love of God and neighbor, prayer, discipleship, and the stories through which Jesus invites deeper understanding.\n\nOpen study →",
+      "to": "/jesus-christ/teachings-and-parables.html",
+      "expected": "/jesus-christ/teachings-and-parables.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/teachings-and-parables.html",
+      "label": "Mercy, Repentance, and the Joy of Returning\n\nJesus teaches mercy through searches, debts, patient care, and the welcome of a father. These studies invite us to receive His compassi",
+      "to": "/jesus-christ/parables/mercy.html",
+      "expected": "/jesus-christ/parables/mercy.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/mercy.html",
+      "label": "Loving Our Neighbor\n\nFollow mercy into practical help, hospitality, and continued attention to a person's needs.\n\nOpen study →",
+      "to": "/jesus-christ/parables/neighbor.html",
+      "expected": "/jesus-christ/parables/neighbor.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/neighbor.html",
+      "label": "Faithful Stewardship and the Cost of Discipleship\n\nConsider how time, resources, and responsibility can be used for another person's good.\n\nOpen study →",
+      "to": "/jesus-christ/parables/stewardship.html",
+      "expected": "/jesus-christ/parables/stewardship.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/stewardship.html",
+      "label": "Hearing and Living His Word\n\nExplore the movement from an agreed intention to a practiced response.\n\nOpen study →",
+      "to": "/jesus-christ/parables/hearing.html",
+      "expected": "/jesus-christ/parables/hearing.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "The Kingdom of God\n\nRead the growth and value comparisons beside the teaching about receiving the word.\n\nOpen study →",
+      "to": "/jesus-christ/parables/kingdom.html",
+      "expected": "/jesus-christ/parables/kingdom.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/kingdom.html",
+      "label": "Prayer, Readiness, and His Return\n\nExplore the readiness and faithful service that accompany hope in His coming.\n\nOpen study →",
+      "to": "/jesus-christ/parables/watchfulness.html",
+      "expected": "/jesus-christ/parables/watchfulness.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/watchfulness.html",
+      "label": "Art",
+      "to": "/art.html",
+      "expected": "/art.html",
+      "match": true
+    },
+    {
+      "from": "/art.html",
+      "label": "Browse All Artwork",
+      "to": "/art-gallery.html",
+      "expected": "/art-gallery.html",
+      "match": true
+    },
+    {
+      "from": "/art-gallery.html",
+      "label": "Sensitive scene: At the cross. Open the study to choose whether to view.",
+      "to": "/atonement.html",
+      "expected": "/atonement.html",
+      "match": true
+    },
+    {
+      "from": "/atonement.html",
+      "label": "the birth of Jesus Christ",
+      "to": "/birth-of-christ.html",
+      "expected": "/birth-of-christ.html",
+      "match": true
+    },
+    {
+      "from": "/birth-of-christ.html",
+      "label": "Mission",
+      "to": "/missionary.html",
+      "expected": "/missionary.html",
+      "match": true
+    },
+    {
+      "from": "/missionary.html",
+      "label": "Explore Church History\n\nMeet the people who helped share the restored gospel around the world, and read the records of their lives.",
+      "to": "/church-history.html",
+      "expected": "/church-history.html",
+      "match": true
+    },
+    {
+      "from": "/church-history.html",
+      "label": "Explore Joseph’s Portrait Story\n→",
+      "to": "/joseph-smith-likeness.html",
+      "expected": "/joseph-smith-likeness.html",
+      "match": true
+    },
+    {
+      "from": "/joseph-smith-likeness.html",
+      "label": "Who was Joseph Smith?\nExplore his life, testimony, and the foundational questions.",
+      "to": "/answers/who-was-joseph-smith.html",
+      "expected": "/answers/who-was-joseph-smith.html",
+      "match": true
+    },
+    {
+      "from": "/answers/who-was-joseph-smith.html",
+      "label": "Open study: We saw Him",
+      "to": "/jesus-christ/restoration-and-today.html",
+      "expected": "/jesus-christ/restoration-and-today.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/restoration-and-today.html",
+      "label": "The Same Christ before Bethlehem\n\nReturn to His premortal identity and the covenant witness of Jehovah.\n\nOpen study →",
+      "to": "/jesus-christ/before-bethlehem.html",
+      "expected": "/jesus-christ/before-bethlehem.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/before-bethlehem.html",
+      "label": "Walk through His mortal ministry\n\nFollow His baptism, invitations, journeys, disciples, and the growing witness of who He is.\n\nOpen study →",
+      "to": "/jesus-christ/mortal-ministry.html",
+      "expected": "/jesus-christ/mortal-ministry.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/mortal-ministry.html",
+      "label": "His miracles and compassion\n\nStay with the people He meets and discover how particular acts of healing reveal His character.\n\nOpen study →",
+      "to": "/jesus-christ/miracles-and-compassion.html",
+      "expected": "/jesus-christ/miracles-and-compassion.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/miracles-and-compassion.html",
+      "label": "Grief and Faith\n\nContinue with a study that gives sorrow space while looking toward Christ.\n\nOpen study →",
+      "to": "/answers/grief-and-faith.html",
+      "expected": "/answers/grief-and-faith.html",
+      "match": true
+    },
+    {
+      "from": "/answers/grief-and-faith.html",
+      "label": "Open study: Bearing the cross behind Jesus",
+      "to": "/jesus-christ/redeemer-and-risen-lord.html",
+      "expected": "/jesus-christ/redeemer-and-risen-lord.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/redeemer-and-risen-lord.html",
+      "label": "The risen Savior in the Book of Mormon\n\nRead His ministry at Bountiful, His covenant teachings, and His care for the gathered people.\n\nOpen study →",
+      "to": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "expected": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/risen-savior-in-the-book-of-mormon.html",
+      "label": "Explore the Book of Mormon\n\nContinue into the existing illustrated stories and their larger record.\n\nOpen study →",
+      "to": "/answers/what-is-the-book-of-mormon.html",
+      "expected": "/answers/what-is-the-book-of-mormon.html",
+      "match": true
+    },
+    {
+      "from": "/answers/what-is-the-book-of-mormon.html",
+      "label": "Explore the Evidences Study",
+      "to": "/book-of-mormon-evidences.html",
+      "expected": "/book-of-mormon-evidences.html",
+      "match": true
+    },
+    {
+      "from": "/answers/what-is-the-book-of-mormon.html",
+      "label": "prayer and revelation study",
+      "to": "/answers/prayer-and-personal-revelation.html",
+      "expected": "/answers/prayer-and-personal-revelation.html",
+      "match": true
+    },
+    {
+      "from": "/answers/prayer-and-personal-revelation.html",
+      "label": "Faith During Trials",
+      "to": "/answers/faith-in-jesus-christ-during-trials.html",
+      "expected": "/answers/faith-in-jesus-christ-during-trials.html",
+      "match": true
+    },
+    {
+      "from": "/answers/faith-in-jesus-christ-during-trials.html",
+      "label": "Finding Hope After the Death of a Child",
+      "to": "/answers/death-of-a-child.html",
+      "expected": "/answers/death-of-a-child.html",
+      "match": true
+    },
+    {
+      "from": "/answers/death-of-a-child.html",
+      "label": "Life After Death",
+      "to": "/answers/what-happens-after-death.html",
+      "expected": "/answers/what-happens-after-death.html",
+      "match": true
+    },
+    {
+      "from": "/answers/what-happens-after-death.html",
+      "label": "temple study",
+      "to": "/answers/why-latter-day-saints-build-temples.html",
+      "expected": "/answers/why-latter-day-saints-build-temples.html",
+      "match": true
+    },
+    {
+      "from": "/answers/why-latter-day-saints-build-temples.html",
+      "label": "families and belonging",
+      "to": "/answers/why-families-are-important.html",
+      "expected": "/answers/why-families-are-important.html",
+      "match": true
+    },
+    {
+      "from": "/answers/why-families-are-important.html",
+      "label": "support through divorce",
+      "to": "/answers/divorce-and-faith.html",
+      "expected": "/answers/divorce-and-faith.html",
+      "match": true
+    },
+    {
+      "from": "/answers/divorce-and-faith.html",
+      "label": "Pioneers",
+      "to": "/pioneers.html",
+      "expected": "/pioneers.html",
+      "match": true
+    },
+    {
+      "from": "/pioneers.html",
+      "label": "Continue with Restoration and covenant study\n→",
+      "to": "/watch.html",
+      "expected": "/watch.html",
+      "match": true
+    },
+    {
+      "from": "/watch.html",
+      "label": "Study the Resurrection through art →",
+      "to": "/art-study/the-living-christ.html",
+      "expected": "/art-study/the-living-christ.html",
+      "match": true
+    },
+    {
+      "from": "/art-study/the-living-christ.html",
+      "label": "Walk with His Peace",
+      "to": "/art-study/be-still.html",
+      "expected": "/art-study/be-still.html",
+      "match": true
+    },
+    {
+      "from": "/art-study/be-still.html",
+      "label": "About",
+      "to": "/about.html",
+      "expected": "/about.html",
+      "match": true
+    },
+    {
+      "from": "/about.html",
+      "label": "See a respectful comparison in practice",
+      "to": "/answers/are-latter-day-saints-christian.html",
+      "expected": "/answers/are-latter-day-saints-christian.html",
+      "match": true
+    },
+    {
+      "from": "/answers/are-latter-day-saints-christian.html",
+      "label": "Compare the Bible and Book of Mormon",
+      "to": "/answers/bible-and-book-of-mormon-together.html",
+      "expected": "/answers/bible-and-book-of-mormon-together.html",
+      "match": true
+    },
+    {
+      "from": "/about.html",
+      "label": "See scripture, image, and reflection work together",
+      "to": "/art-study/the-good-shepherd.html",
+      "expected": "/art-study/the-good-shepherd.html",
+      "match": true
+    },
+    {
+      "from": "/art-study/the-good-shepherd.html",
+      "label": "Welcome the One Before You",
+      "to": "/art-study/suffer-the-little-children.html",
+      "expected": "/art-study/suffer-the-little-children.html",
+      "match": true
+    },
+    {
+      "from": "/watch.html",
+      "label": "Read the signature scripture study\n→",
+      "to": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "expected": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "match": true
+    },
+    {
+      "from": "/answers/look-unto-me-doctrine-and-covenants-6-36.html",
+      "label": "Remember Him in the next ordinary day",
+      "to": "/answers/settle-this-in-your-hearts.html",
+      "expected": "/answers/settle-this-in-your-hearts.html",
+      "match": true
+    },
+    {
+      "from": "/answers/why-families-are-important.html",
+      "label": "Study eternal marriage in depth",
+      "to": "/answers/what-is-eternal-marriage.html",
+      "expected": "/answers/what-is-eternal-marriage.html",
+      "match": true
+    },
+    {
+      "from": "/answers/what-is-the-book-of-mormon.html",
+      "label": "Open study: Digging toward a firm foundation",
+      "to": "/jesus-christ/parables/wise-foolish-builders.html",
+      "expected": "/jesus-christ/parables/wise-foolish-builders.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/wise-foolish-builders.html",
+      "label": "The Two Sons\n\nOne son changes his mind; another never turns agreement into action. Jesus makes the difference between a response and its appearance clear.\n\nOpen study →",
+      "to": "/jesus-christ/parables/two-sons.html",
+      "expected": "/jesus-christ/parables/two-sons.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/two-sons.html",
+      "label": "The Barren Fig Tree\n\nThe gardener asks for time to dig and nourish. Jesus places urgent repentance beside a patient opportunity to bear fruit.\n\nOpen study →",
+      "to": "/jesus-christ/parables/barren-fig.html",
+      "expected": "/jesus-christ/parables/barren-fig.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/barren-fig.html",
+      "label": "The Budding Fig Tree\n\nNew leaves tell an observer something about the season. Jesus invites discernment while leaving the day and hour unknown.\n\nOpen study →",
+      "to": "/jesus-christ/parables/budding-fig.html",
+      "expected": "/jesus-christ/parables/budding-fig.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/budding-fig.html",
+      "label": "The Doorkeeper\n\nThe master leaves work for each servant and watchfulness for the porter. The unknown hour does not erase their present responsibility.\n\nOpen study →",
+      "to": "/jesus-christ/parables/doorkeeper.html",
+      "expected": "/jesus-christ/parables/doorkeeper.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/doorkeeper.html",
+      "label": "The Faithful and Unfaithful Servant\n\nSomeone else's daily bread is placed in a servant's care. The master's absence reveals how that trust will be used.\n\nOpen study →",
+      "to": "/jesus-christ/parables/faithful-servant.html",
+      "expected": "/jesus-christ/parables/faithful-servant.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/faithful-servant.html",
+      "label": "The Talents\n\nDifferent amounts are entrusted to different servants. The returning master asks what each has done with the responsibility received.\n\nOpen study →",
+      "to": "/jesus-christ/parables/talents.html",
+      "expected": "/jesus-christ/parables/talents.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/talents.html",
+      "label": "The Ten Pounds or Minas\n\nPeople expect the kingdom immediately; Jesus tells of work during an absence. Luke's account joins waiting with stewardship.\n\nOpen study →",
+      "to": "/jesus-christ/parables/minas.html",
+      "expected": "/jesus-christ/parables/minas.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/doorkeeper.html",
+      "label": "The Ten Virgins\n\nAll ten wait and all ten sleep, but their preparation differs. The midnight announcement reveals what they have brought to the waiting.\n\nOpen study →",
+      "to": "/jesus-christ/parables/ten-virgins.html",
+      "expected": "/jesus-christ/parables/ten-virgins.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/ten-virgins.html",
+      "label": "Servants Waiting for Their Lord\n\nThe lamps are ready and the door can be opened. Jesus pictures waiting that is attentive, then surprises His hearers with the master's welcome.\n\nOp",
+      "to": "/jesus-christ/parables/watchful-servants.html",
+      "expected": "/jesus-christ/parables/watchful-servants.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/wise-foolish-builders.html",
+      "label": "The Sower\n\nThe same seed meets different ground. Jesus explains what can prevent His word from taking root and what makes room for enduring fruit.\n\nOpen study →",
+      "to": "/jesus-christ/parables/sower.html",
+      "expected": "/jesus-christ/parables/sower.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/sower.html",
+      "label": "The Seed Growing Secretly\n\nBetween sowing and harvest, growth unfolds beyond the farmer's control. Mark's brief parable invites patient attention to God's kingdom.\n\nOpen study →",
+      "to": "/jesus-christ/parables/growing-seed.html",
+      "expected": "/jesus-christ/parables/growing-seed.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/growing-seed.html",
+      "label": "The Mustard Seed\n\nJesus places a small seed beside the branches it becomes. The kingdom's beginning does not reveal the full reach of its growth.\n\nOpen study →",
+      "to": "/jesus-christ/parables/mustard-seed.html",
+      "expected": "/jesus-christ/parables/mustard-seed.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/mustard-seed.html",
+      "label": "The Leaven\n\nA woman's work with meal becomes a picture of the kingdom. The change reaches throughout the batch before the story ends.\n\nOpen study →",
+      "to": "/jesus-christ/parables/leaven.html",
+      "expected": "/jesus-christ/parables/leaven.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/restoration-and-today.html",
+      "label": "The Restored Church of Jesus Christ\n\nContinue with the existing study of Restoration claims, scripture and Church life.\n\nOpen study →",
+      "to": "/answers/restored-church-of-jesus-christ.html",
+      "expected": "/answers/restored-church-of-jesus-christ.html",
+      "match": true
+    },
+    {
+      "from": "/answers/restored-church-of-jesus-christ.html",
+      "label": "General Conference",
+      "to": "/general-conference.html",
+      "expected": "/general-conference.html",
+      "match": true
+    },
+    {
+      "from": "/general-conference.html",
+      "label": "Come, Follow Me\n\nCarry your conference study into this week’s Old Testament lesson.\n\nExplore this study →",
+      "to": "/come-follow-me.html",
+      "expected": "/come-follow-me.html",
+      "match": true
+    },
+    {
+      "from": "/church-history.html",
+      "label": "Open the Aaronic Priesthood study",
+      "to": "/answers/aaronic-priesthood-restoration.html",
+      "expected": "/answers/aaronic-priesthood-restoration.html",
+      "match": true
+    },
+    {
+      "from": "/answers/aaronic-priesthood-restoration.html",
+      "label": "Peter, James, and John",
+      "to": "/answers/melchizedek-priesthood-restoration.html",
+      "expected": "/answers/melchizedek-priesthood-restoration.html",
+      "match": true
+    },
+    {
+      "from": "/answers.html",
+      "label": "Holy Ghost",
+      "to": "/answers/holy-ghost.html",
+      "expected": "/answers/holy-ghost.html",
+      "match": true
+    },
+    {
+      "from": "/answers.html",
+      "label": "Abrahamic Covenant",
+      "to": "/answers/abrahamic-covenant.html",
+      "expected": "/answers/abrahamic-covenant.html",
+      "match": true
+    },
+    {
+      "from": "/answers.html",
+      "label": "Plan of Salvation",
+      "to": "/answers/plan-of-salvation.html",
+      "expected": "/answers/plan-of-salvation.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/mercy.html",
+      "label": "The Lost Sheep\n\nLuke places the search amid criticism of Jesus receiving sinners; Matthew emphasizes care for the little ones. Let visitors read both contexts.\n\nOpen study →",
+      "to": "/jesus-christ/parables/lost-sheep.html",
+      "expected": "/jesus-christ/parables/lost-sheep.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/lost-sheep.html",
+      "label": "The Lost Coin\n\nA lamp, a broom, and a careful search show that one missing coin still matters. Its recovery calls neighbors into the joy.\n\nOpen study →",
+      "to": "/jesus-christ/parables/lost-coin.html",
+      "expected": "/jesus-christ/parables/lost-coin.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/lost-coin.html",
+      "label": "The Prodigal Son and His Brother\n\nOne son comes home from far away; the other stands outside the celebration. The father goes toward both, and the story leaves an invitation before",
+      "to": "/jesus-christ/parables/prodigal-son.html",
+      "expected": "/jesus-christ/parables/prodigal-son.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/prodigal-son.html",
+      "label": "The Laborers in the Vineyard\n\nEqual generosity becomes difficult for workers who expected more. The vineyard story examines gratitude, comparison, and resentment.\n\nOpen study →",
+      "to": "/jesus-christ/parables/laborers-vineyard.html",
+      "expected": "/jesus-christ/parables/laborers-vineyard.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/mercy.html",
+      "label": "The Unmerciful Servant\n\nPeter asks about forgiveness. The enormous forgiven debt throws the servant's refusal of mercy into sharp relief; forgiveness does not require returning to ",
+      "to": "/jesus-christ/parables/unmerciful-servant.html",
+      "expected": "/jesus-christ/parables/unmerciful-servant.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/unmerciful-servant.html",
+      "label": "The Two Debtors\n\nA brief story changes the conversation at Simon's table. Forgiveness invites him to look again at a woman whose love he has overlooked.\n\nOpen study →",
+      "to": "/jesus-christ/parables/two-debtors.html",
+      "expected": "/jesus-christ/parables/two-debtors.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/two-debtors.html",
+      "label": "The Pharisee and the Publican\n\nTwo people pray, but their posture toward God and others differs. Jesus invites a searching look at comparison, confidence, and mercy.\n\nOpen study →",
+      "to": "/jesus-christ/parables/pharisee-publican.html",
+      "expected": "/jesus-christ/parables/pharisee-publican.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/pharisee-publican.html",
+      "label": "Choosing the Lower Place\n\nAt a meal, Jesus notices the places people choose. His teaching moves from seeking honor to offering generous welcome.\n\nOpen study →",
+      "to": "/jesus-christ/parables/wedding-places.html",
+      "expected": "/jesus-christ/parables/wedding-places.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/wedding-places.html",
+      "label": "The Great Supper\n\nThe supper is ready, but the first invitees excuse themselves. The widening invitation brings overlooked people toward a place at the table.\n\nOpen study →",
+      "to": "/jesus-christ/parables/great-supper.html",
+      "expected": "/jesus-christ/parables/great-supper.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/great-supper.html",
+      "label": "The Wedding of the King's Son\n\nThe wedding invitation is refused, widened, and finally answered. Matthew's account asks readers to take both the welcome and their response seriousl",
+      "to": "/jesus-christ/parables/royal-wedding.html",
+      "expected": "/jesus-christ/parables/royal-wedding.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/mercy.html",
+      "label": "The Good Shepherd and the Door\n\nJesus identifies Himself as the door and good shepherd who lays down His life. The Bible Dictionary calls this an allegory; Harmony uses the broader",
+      "to": "/jesus-christ/parables/good-shepherd.html",
+      "expected": "/jesus-christ/parables/good-shepherd.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/good-shepherd.html",
+      "label": "The True Vine and the Branches\n\nA branch lives through its connection to the vine. Jesus joins abiding, love, obedience, and fruitfulness in His farewell teaching.\n\nOpen study →",
+      "to": "/jesus-christ/parables/vine-branches.html",
+      "expected": "/jesus-christ/parables/vine-branches.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/mercy.html",
+      "label": "The Hen Gathering Her Chicks\n\nJesus laments over Jerusalem with a picture of protective gathering. Preserve both His invitation and the sorrow of refusal.\n\nOpen study →",
+      "to": "/jesus-christ/parables/hen-chicks.html",
+      "expected": "/jesus-christ/parables/hen-chicks.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/neighbor.html",
+      "label": "The Sheep and the Goats\n\nThe Son of Man identifies care for people in need with service to Him. This is an extended judgment scene with a shepherd comparison, commonly included amo",
+      "to": "/jesus-christ/parables/sheep-goats.html",
+      "expected": "/jesus-christ/parables/sheep-goats.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/sheep-goats.html",
+      "label": "The Good Samaritan\n\nA question about who counts as a neighbor becomes a story about acting as one. Follow the mercy that begins on the road and continues at the inn.\n\nOpen study →",
+      "to": "/jesus-christ/parables/good-samaritan.html",
+      "expected": "/jesus-christ/parables/good-samaritan.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/sheep-goats.html",
+      "label": "The Rich Man and Lazarus\n\nA suffering man lies at a rich man's gate. The account moves from that ignored need toward a call to hear the word already given.\n\nOpen study →",
+      "to": "/jesus-christ/parables/rich-man-lazarus.html",
+      "expected": "/jesus-christ/parables/rich-man-lazarus.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/rich-man-lazarus.html",
+      "label": "The Rich Fool\n\nA rich harvest promises the owner many comfortable years. The story asks what possessions can and cannot secure.\n\nOpen study →",
+      "to": "/jesus-christ/parables/rich-fool.html",
+      "expected": "/jesus-christ/parables/rich-fool.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/rich-fool.html",
+      "label": "Birds and Lilies\n\nJesus draws attention to creatures and flowers while speaking of daily needs. The invitation is to seek the kingdom with trust in the Father's care.\n\nOpen study →",
+      "to": "/jesus-christ/parables/birds-lilies.html",
+      "expected": "/jesus-christ/parables/birds-lilies.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/birds-lilies.html",
+      "label": "A Parent's Good Gifts\n\nA child's request for food becomes a way to think about prayer. Jesus directs trust toward the Father's goodness.\n\nOpen study →",
+      "to": "/jesus-christ/parables/parent-gifts.html",
+      "expected": "/jesus-christ/parables/parent-gifts.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/parent-gifts.html",
+      "label": "The Friend at Midnight\n\nAn unexpected guest leaves a host asking for bread in the night. Jesus places persistence beside the Father's goodness.\n\nOpen study →",
+      "to": "/jesus-christ/parables/friend-midnight.html",
+      "expected": "/jesus-christ/parables/friend-midnight.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/friend-midnight.html",
+      "label": "The Persistent Widow and the Judge\n\nA widow keeps bringing a claim that a judge dismisses. Jesus directs weary hearers toward continued prayer and the goodness of God.\n\nOpen study ",
+      "to": "/jesus-christ/parables/persistent-widow.html",
+      "expected": "/jesus-christ/parables/persistent-widow.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/stewardship.html",
+      "label": "The Wicked Tenants\n\nTenants reject servants and the owner's son. Keep the confrontation with particular leaders in context; do not turn the account into hostility toward Jewish peo",
+      "to": "/jesus-christ/parables/wicked-tenants.html",
+      "expected": "/jesus-christ/parables/wicked-tenants.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "The New Patch\n\nRead within the question about fasting. Jesus describes the damage caused by joining an unshrunk patch to an old garment.\n\nOpen study →",
+      "to": "/jesus-christ/parables/new-patch.html",
+      "expected": "/jesus-christ/parables/new-patch.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/new-patch.html",
+      "label": "New Wine and Wineskins\n\nWine needs a vessel able to receive it. Jesus uses this ordinary image to help His hearers consider the significance of His presence and teaching.\n\nOpen stu",
+      "to": "/jesus-christ/parables/new-wineskins.html",
+      "expected": "/jesus-christ/parables/new-wineskins.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/new-wineskins.html",
+      "label": "The Bridegroom and His Guests\n\nThe bridegroom's presence makes the occasion one of joy. Jesus answers a question about fasting through the significance of His own mission.\n\nOpen st",
+      "to": "/jesus-christ/parables/bridegroom.html",
+      "expected": "/jesus-christ/parables/bridegroom.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/kingdom.html",
+      "label": "The Strong Man\n\nJesus answers the charge that His deliverance comes from Satan. Luke develops the image of a stronger conqueror; this is not a lesson endorsing robbery.\n\nOpen study",
+      "to": "/jesus-christ/parables/strong-man.html",
+      "expected": "/jesus-christ/parables/strong-man.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/strong-man.html",
+      "label": "A Divided Kingdom and House\n\nAn accusation fails to explain the deliverance before the hearers. Jesus exposes the contradiction through a kingdom and household divided.\n\nOpen study",
+      "to": "/jesus-christ/parables/divided-house.html",
+      "expected": "/jesus-christ/parables/divided-house.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/divided-house.html",
+      "label": "The Returning Unclean Spirit\n\nAn emptied house is not the same as a renewed life. This unsettling comparison asks for a response deeper than a temporary change.\n\nOpen study →",
+      "to": "/jesus-christ/parables/returning-spirit.html",
+      "expected": "/jesus-christ/parables/returning-spirit.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/watchfulness.html",
+      "label": "The Householder and the Thief\n\nThe unexpected arrival calls for readiness. The comparison concerns timing, not a claim that the Lord shares a thief's character.\n\nOpen study →",
+      "to": "/jesus-christ/parables/thief-night.html",
+      "expected": "/jesus-christ/parables/thief-night.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/neighbor.html",
+      "label": "Settling with an Adversary\n\nThe legal journey illustrates urgency. Offer spiritual reflection without turning it into individualized legal advice.\n\nOpen study →",
+      "to": "/jesus-christ/parables/settle-adversary.html",
+      "expected": "/jesus-christ/parables/settle-adversary.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/neighbor.html",
+      "label": "The Sheep in the Pit\n\nA rescue question supports doing good on the Sabbath. Luke uses an ass or ox in a related scene; do not label the two identical stories.\n\nOpen study →",
+      "to": "/jesus-christ/parables/sheep-sabbath.html",
+      "expected": "/jesus-christ/parables/sheep-sabbath.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/stewardship.html",
+      "label": "The Tower Builder\n\nCounting construction costs illustrates the serious commitment of discipleship. Read the short picture within Jesus' surrounding teaching.\n\nOpen study →",
+      "to": "/jesus-christ/parables/tower-builder.html",
+      "expected": "/jesus-christ/parables/tower-builder.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/stewardship.html",
+      "label": "The King Considering War\n\nA king considers whether his forces are sufficient and seeks peace. This companion comparison concerns counting the cost of discipleship, not an endorseme",
+      "to": "/jesus-christ/parables/king-war.html",
+      "expected": "/jesus-christ/parables/king-war.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/stewardship.html",
+      "label": "The Unjust Steward\n\nThe steward prepares for losing his position. Distinguish commendation of shrewd preparation from approval of dishonesty, then read Jesus' teaching on faithfuln",
+      "to": "/jesus-christ/parables/unjust-steward.html",
+      "expected": "/jesus-christ/parables/unjust-steward.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/stewardship.html",
+      "label": "The Servant's Duty\n\nOrdinary service challenges a sense of entitlement. Do not use the language of an unprofitable servant to deny a person's worth or justify exploitation.\n\nOpen s",
+      "to": "/jesus-christ/parables/servant-duty.html",
+      "expected": "/jesus-christ/parables/servant-duty.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "The Lamp on a Stand\n\nThe lamp is meant to give light. Compare the different surrounding teachings about witness, hearing, and inward light rather than merging every setting.\n\nOpen ",
+      "to": "/jesus-christ/parables/lamp.html",
+      "expected": "/jesus-christ/parables/lamp.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "Children in the Marketplace\n\nJesus compares inconsistent reactions to John and Himself with children who reject both kinds of music. Read the accusations in the following verses.\n\n",
+      "to": "/jesus-christ/parables/children-marketplace.html",
+      "expected": "/jesus-christ/parables/children-marketplace.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "The Householder's Treasure\n\nAfter asking whether the disciples understand, Jesus speaks of a trained scribe bringing out treasures new and old. Treat this as a compact concluding c",
+      "to": "/jesus-christ/parables/householder.html",
+      "expected": "/jesus-christ/parables/householder.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "The Blind Leading the Blind\n\nLuke explicitly introduces a parable. Spiritual guidance is the subject; do not turn blindness into a moral judgment about people with disabilities.\n\nO",
+      "to": "/jesus-christ/parables/blind-guides.html",
+      "expected": "/jesus-christ/parables/blind-guides.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "The Mote and the Beam\n\nExaggerated imagery exposes hypocrisy before correction of another. An application should invite self-examination.\n\nOpen study →",
+      "to": "/jesus-christ/parables/mote-beam.html",
+      "expected": "/jesus-christ/parables/mote-beam.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "A Tree and Its Fruit\n\nFruit reveals character in sayings about teachers, speech, and conduct. Keep each setting visible.\n\nOpen study →",
+      "to": "/jesus-christ/parables/tree-fruit.html",
+      "expected": "/jesus-christ/parables/tree-fruit.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/hearing.html",
+      "label": "Salt of the Earth\n\nThe shared salt image occurs in different teaching contexts. It is a related comparison rather than a narrated story.\n\nOpen study →",
+      "to": "/jesus-christ/parables/salt.html",
+      "expected": "/jesus-christ/parables/salt.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/kingdom.html",
+      "label": "The Wheat and the Tares\n\nRead Jesus' explanation after the story. The servants are restrained from uprooting wheat; judgment belongs to the appointed harvest.\n\nOpen study →",
+      "to": "/jesus-christ/parables/wheat-tares.html",
+      "expected": "/jesus-christ/parables/wheat-tares.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/kingdom.html",
+      "label": "The Hidden Treasure\n\nJoy over discovered treasure leads to wholehearted action. Keep the narrative brief instead of supplying an invented biography.\n\nOpen study →",
+      "to": "/jesus-christ/parables/hidden-treasure.html",
+      "expected": "/jesus-christ/parables/hidden-treasure.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/kingdom.html",
+      "label": "The Pearl of Great Price\n\nA merchant recognizes one pearl's value and sells all to obtain it. Study beside the treasure while preserving the difference between seeking and finding.",
+      "to": "/jesus-christ/parables/pearl.html",
+      "expected": "/jesus-christ/parables/pearl.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/kingdom.html",
+      "label": "The Fishing Net\n\nThe catch is gathered and sorted. Jesus explicitly connects the separation with judgment; the text does not authorize us to decide another person's final standing.",
+      "to": "/jesus-christ/parables/net.html",
+      "expected": "/jesus-christ/parables/net.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/kingdom.html",
+      "label": "The Grain of Wheat\n\nJesus uses a dying seed when speaking of His approaching glorification and following Him.\n\nOpen study →",
+      "to": "/jesus-christ/parables/grain-wheat.html",
+      "expected": "/jesus-christ/parables/grain-wheat.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/watchfulness.html",
+      "label": "The Closed Door\n\nA shut door answers a question about salvation. Familiarity is not the same as responding to the Lord.\n\nOpen study →",
+      "to": "/jesus-christ/parables/closed-door.html",
+      "expected": "/jesus-christ/parables/closed-door.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/watchfulness.html",
+      "label": "Sorrow Turning to Joy\n\nChildbirth illustrates sorrow giving way to joy in the farewell discourse. It is an analogy, not a prediction about an individual pregnancy.\n\nOpen study →",
+      "to": "/jesus-christ/parables/woman-childbirth.html",
+      "expected": "/jesus-christ/parables/woman-childbirth.html",
+      "match": true
+    },
+    {
+      "from": "/jesus-christ/parables/watchfulness.html",
+      "label": "Search focusChrist → Holy Ghost → Search",
+      "to": "/search.html",
+      "expected": "/search.html",
+      "match": true
+    }
+  ]
+}

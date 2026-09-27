@@ -1,0 +1,19 @@
+{
+  "status": "Independent review and parent rendered verification PASS; candidate hosted rerun pending",
+  "historical_failed_run": 36357612348,
+  "cause": "New semantic clipping guard found Home featured and AskEmmaus absolute overlay captions taller than16:9art frames at320px/200percentrootfont. Parent independently reproduced genuine clipping.",
+  "repair": "Atmax700px only, affected page-ownedfigcaptions enter naturalflow beneath unchangedartwork; allHomefeatured variantscovered, desktopunchanged.",
+  "preserved": "Artwork bytes, imageaspectratio, heroidentity/geometry, captionwording, destinations, sharedclippingguard unchanged.",
+  "checks": "Strict CSS mutation fixtures PASS;10HomepresentationtestsPASS;842protectedimagegatePASS;125contentauditPASS with no ledgerchanges required (only stylesheetURLs changed).",
+  "hashes": {
+    "home-presentation.css": "a3a6331971ae7a289b5cad3c3e5c16e947a0dfada2c0325f1e6b9abc87466282",
+    "ask-experience.css": "62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6",
+    "index.html": "09d564ee2cdb6bc756e1ff7cbcaef7c5ae930898231ce4c2de6db6b51f6cc94d",
+    "ask.html": "034de28b656bf4852815be502c6b9f62130daefd02762840b255d4f3eea05203",
+    "tools/sitewide_artwork_review_qa.py": "1b8d34cd46c465ca1b04a1c4550cc518267a0abd19f2b62e923d0ff3856763cb",
+    "tools/site_qa.py": "c640472ba0387879ea1b72d9e15e49a82ca88f9a498da3d82932db1fd185c094"
+  },
+  "rendered_evidence": "parent-large-caption-repair.json:320px/rootfont32px,390normal and1366desktop PASS; mobile naturalflow, desktopabsoluteoverlaysunchanged.",
+  "temporary_review_artifacts": "Parent two scratchHTML files temporarily triggered duplicateconsumer/unreviewedpage checks; removed after rendered verification, gates pass without waiver.",
+  "independent_review": "newton-caption-repair-review.json"
+}

@@ -117,6 +117,14 @@ def render(page,registry,strict):
         group=f' data-chapter-group="{E(section["chapter_group"])}"' if section.get('chapter_group') else ''
         blocks=[f'<section class="jj-chapter" id="{E(section["id"])}"{group}><p class="jj-kicker">{E(section.get("eyebrow","Read and discover"))}</p><h2>{E(section["title"])}</h2>']
         content=list(section.get('blocks',[]))
+        reference_after=section.get('reference_visual_after_paragraphs')
+        if reference_after is not None:
+            references=[i for i,b in enumerate(content) if isinstance(b,dict) and any(k in b for k in ('reference_art','reference_picture'))]
+            if len(references)!=1:raise ValueError('Expected one source-owned reference visual '+section['id'])
+            reference=content.pop(references[0])
+            prose_positions=[i for i,b in enumerate(content) if isinstance(b,str)]
+            if type(reference_after) is not int or not 1<=reference_after<=len(prose_positions):raise ValueError('Invalid reference visual placement '+section['id'])
+            content.insert(prose_positions[reference_after-1]+1,reference)
         opening_after=section.get('opening_visual_after_paragraphs',1 if section.get('keep_intro_before_art') else None)
         if opening_after is not None:
             visual=next((i for i,b in enumerate(content) if isinstance(b,dict) and any(k in b for k in ('art','cards','reference_art','reference_picture'))),None)
