@@ -364,8 +364,8 @@ def main():
     journey_owners={p['url'].lstrip('/') for p in journey_pages}
     check(len(journey_owners)==76 and all(p.startswith('jesus-christ/') and p.endswith('.html') for p in journey_owners),
           'Journey stylesheet ownership differs from76 nested study pages')
-    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html','answers/abrahamic-covenant.html','answers/holy-ghost.html','answers/plan-of-salvation.html'})
-    check(len(journey_owners)==81, 'Journey stylesheet must have exactly81 reviewed consumers')
+    journey_owners.update({'answers/jesus-christ-latter-day-saint-beliefs.html','birth-of-christ.html','answers/abrahamic-covenant.html','answers/holy-ghost.html','answers/plan-of-salvation.html','answers/god-our-heavenly-father.html'})
+    check(len(journey_owners)==82, 'Journey stylesheet must have exactly82 reviewed consumers')
     check(sha(ROOT/row_style)=='7f72f430deae755a59e9f0cdf60c3d6b68c214b8421feac28e548c8f07a32941',
           'Reviewed complete card row stylesheet changed')
     check(sha(ROOT/settle_style)=='ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2',

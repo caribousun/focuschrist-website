@@ -1,0 +1,239 @@
+{
+  "status": "Implemented candidate; primary sources and final prose independently reviewed. Five new originals have exact-hash independent pixel review. Publication remains parent-owned.",
+  "route": "answers/god-our-heavenly-father.html",
+  "existing_content_preservation": "Preserve hero Jesus/Philip, all6 existing body artworks, existing modern-scripture preview, two existing media cards, ownership, pixels and current anchors. Add chronological opening then return to existing seek/pray/purpose/faith/living sections.",
+  "chapters": [
+    {
+      "id": "knowledge-from-the-beginning",
+      "title": "How knowledge of God began",
+      "paragraphs": [
+        "Where did people first learn to speak of God? The scriptures begin with God making Himself known. In the book of Moses, Adam and Eve continue to call upon Him after leaving Eden. They learn of the Son’s redeeming sacrifice and share what they have received with their sons and daughters.",
+        "This is the beginning of the story this study follows: people hear, remember, teach and seek for themselves. Adam and Eve’s children still have choices to make. Being taught about God does not remove the need to turn toward Him personally."
+      ],
+      "sources": [
+        {
+          "label": "Moses 5:4–12",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p4-p12#p4"
+        }
+      ],
+      "reflection": "Who first helped you think about God, and what would you like to understand for yourself?",
+      "scene": "adam-eve-teach"
+    },
+    {
+      "id": "remembered-and-written",
+      "title": "Words carried into another generation",
+      "paragraphs": [
+        "Moses describes a book of remembrance and children learning to read and write. Seth teaches his son; Jared teaches Enoch. Later, Enoch tells his listeners both that his father taught him and that the Lord spoke to him. Family teaching, a written record and his own witness belong together in his account.",
+        "Those small acts of keeping and teaching a record matter. A person who was not present for an earlier revelation can still encounter the testimony of someone who was. The record gives the next generation something to read, ask about and carry forward."
+      ],
+      "sources": [
+        {
+          "label": "Moses 6:5–6, 13, 21–23, 41–46",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng&id=p5-p6,p13,p21-p23,p41-p46#p5"
+        }
+      ],
+      "reflection": "What would you want a younger person to understand from your own experience, without pretending you know more than you do?",
+      "scene": "kept-record"
+    },
+    {
+      "id": "abraham-inherited-records",
+      "title": "Abraham seeks what his fathers knew",
+      "paragraphs": [
+        "Abraham’s account begins with a desire for righteousness and greater knowledge. He looks to blessings associated with earlier fathers even while describing serious failures in his own household. His search shows that honoring a spiritual inheritance can include choosing a different course from people close to us.",
+        "Near the end of the chapter, Abraham explains that ancestral records have been preserved in his hands. He intends to pass their knowledge to his posterity. Receiving a record becomes a responsibility toward people he will never meet."
+      ],
+      "sources": [
+        {
+          "label": "Abraham 1:1–4, 28–31",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/abr/1?lang=eng&id=p1-p4,p28-p31#p1"
+        }
+      ],
+      "reflection": "What have you received that is worth passing on, and what patterns might you need to change?",
+      "scene": "abraham-records"
+    },
+    {
+      "id": "teach-along-the-way",
+      "title": "A child's question belongs in the conversation",
+      "paragraphs": [
+        "In Deuteronomy, love for God enters the ordinary hours of a household. Parents are told to speak of His words at home, along the road, at bedtime and when the day begins. Later in the chapter, a child asks what the commandments mean. The answer recalls deliverance from Egypt and the life God has asked His people to live.",
+        "Psalm 78 also looks toward children not yet born. Remembering is more than preserving names or dates; it is helping another generation place its hope in God. A sincere question can open that conversation instead of interrupting it."
+      ],
+      "sources": [
+        {
+          "label": "Deuteronomy 6:4–9, 20–25",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/deut/6?lang=eng&id=p4-p9,p20-p25#p4"
+        },
+        {
+          "label": "Psalm 78:1–8",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ps/78?lang=eng&id=p1-p8#p1"
+        }
+      ],
+      "reflection": "How could you answer someone's question about your faith with a real experience rather than a rehearsed reply?",
+      "scene": "teach-on-the-way"
+    },
+    {
+      "id": "inherited-words-personal-prayer",
+      "title": "The words Enos remembered",
+      "paragraphs": [
+        "Enos remembers his father’s teaching about eternal life and the joy of the Saints. Those words return to him while he is hunting, and he begins to pray. His account moves from a father's instruction to a son's own plea for forgiveness.",
+        "Enos later prays for his people and for others beyond his community. What he received from his father grows into concern for other people. His account can help us ask how learning about God might change both our prayers and the people we remember in them."
+      ],
+      "sources": [
+        {
+          "label": "Enos 1:1–12",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/enos/1?lang=eng&id=p1-p12#p1"
+        }
+      ],
+      "reflection": "Which words have stayed with you, and what do they move you to ask God now?",
+      "scene": "existing-enos-preview",
+      "reference": {
+        "owner": "answers/what-is-the-book-of-mormon.html",
+        "anchor": "keepers-of-the-record",
+        "asset": "../assets/page-art/book-of-mormon-stories/05-enos-prayer-960.webp",
+        "title": "Prayer grows beyond one person"
+      }
+    },
+    {
+      "id": "the-son-shows-the-father",
+      "title": "Jesus helps us know the Father",
+      "paragraphs": [
+        "Philip asks Jesus to show the disciples the Father. Jesus directs him back to the words and works he has already witnessed. The Savior’s care for people, His teaching and His obedience help us understand the Father who sent Him.",
+        "Latter-day Saints believe the Father and the Son are distinct persons, united in purpose. Jesus does not ask us to approach an unknown, indifferent God. He teaches us to pray to the Father and to come to Him through the Son."
+      ],
+      "sources": [
+        {
+          "label": "John 14:6–11",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng&id=p6-p11#p6"
+        },
+        {
+          "label": "Matthew 6:5–15",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p5-p15#p5"
+        },
+        {
+          "label": "Godhead — current Church study guide",
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead-study-guide?lang=eng"
+        },
+        {
+          "label": "The Grandeur of God — Jeffrey R. Holland",
+          "url": "https://www.churchofjesuschrist.org/study/general-conference/2003/10/the-grandeur-of-god?lang=eng"
+        }
+      ],
+      "reflection": "What does one particular act of Jesus help you understand about His Father?",
+      "scene": "existing-hero"
+    },
+    {
+      "id": "restoration-witness",
+      "title": "A young person's prayer and a renewed witness",
+      "paragraphs": [
+        "Joseph Smith’s history describes a young person unsettled by competing religious claims. Reading James led him to ask God. In his account of the vision, one of the two Personages calls Joseph by name and introduces the other as His Beloved Son.",
+        "That witness is part of why Latter-day Saints speak of Heavenly Father as a real, personal being. Doctrine and Covenants 130:22 teaches that the Father and the Son have bodies of flesh and bones, while the Holy Ghost is a personage of spirit. These are distinct members of the Godhead, not different names for one person."
+      ],
+      "sources": [
+        {
+          "label": "Joseph Smith—History 1:11–20",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/js-h/1?lang=eng&id=p11-p20#p11"
+        },
+        {
+          "label": "Doctrine and Covenants 130:22–23",
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=p22-p23#p22"
+        }
+      ],
+      "reflection": "What question would you bring to God if you did not have to hide your uncertainty?",
+      "scene": "existing-restoration-preview"
+    },
+    {
+      "id": "lecture-two",
+      "title": "How early Saints thought about receiving a witness",
+      "paragraphs": [
+        "Early Latter-day Saints explored a related question in the second Lecture on Faith: how could one generation’s knowledge of God reach another? The lecture follows the scriptural family line from Adam through later patriarchs. It argues that testimony heard from others can awaken a person’s own search.",
+        "The lectures were theological lessons used in Kirtland and included in the 1835 Doctrine and Covenants. They are not part of today’s scriptural canon. Read Lecture 2 as an early reflection on testimony and faith, alongside the scriptures it discusses. For the nature of the Father, use current scripture and Church teaching; the Church’s historical account explains why language in Lecture 5 later raised concerns."
+      ],
+      "sources": [
+        {
+          "label": "Lecture Second, paragraphs 54–55",
+          "url": "https://www.josephsmithpapers.org/paper-summary/doctrine-and-covenants-1835/33"
+        },
+        {
+          "label": "Lecture Second, questions on receiving testimony",
+          "url": "https://www.josephsmithpapers.org/paper-summary/doctrine-and-covenants-1835/35"
+        },
+        {
+          "label": "Lectures on Theology — Church History Topics",
+          "url": "https://www.churchofjesuschrist.org/study/history/topics/lectures-on-faith?lang=eng"
+        }
+      ],
+      "reflection": "How can another person's testimony help you begin seeking without replacing your own study and prayer?",
+      "scene": "kirtland-readers"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "adam-eve-teach",
+      "status": "proposal; source verified before generation",
+      "scene": "Adam and Eve speaking with a small group of sons and daughters outside their home; natural responsive eye contact; both parents participate.",
+      "source": "Moses5:12",
+      "reference_paths": [
+        "assets/page-art/plan-of-salvation/labor-full.webp"
+      ],
+      "limits": "Use published Adam/Eve continuity; no divine figure, invented quotation or claim to exact home/child identities. Different event from Plan soil labor and HolyGhost baptism."
+    },
+    {
+      "id": "kept-record",
+      "status": "proposal; source verified before generation",
+      "scene": "Anonymous early adult guiding a child through a kept written record; attention shared between record and learner.",
+      "source": "Moses6:5–6",
+      "reference_paths": [],
+      "limits": "Scripture does not identify writing material, script, binding or exact teacher. No modern codex, readable invented ancient script or named Seth portrait. Parent may choose a present-day teaching application if ancient material cannot be responsibly staged."
+    },
+    {
+      "id": "abraham-records",
+      "status": "proposal; source verified before generation",
+      "scene": "Abraham carefully studying and safeguarding an ancestral record, tangible attentive work rather than a generic sky gaze.",
+      "source": "Abraham1:28,31",
+      "reference_paths": [
+        "assets/page-art/abrahamic-covenant/ac-abraham-sarah-journey-full.webp"
+      ],
+      "limits": "Reference is published continuity candidate; inspect actual accepted ownership and face before use. Material/letterforms unspecified. Do not invent astronomy chart or claim exact recovered artifact."
+    },
+    {
+      "id": "teach-on-the-way",
+      "status": "proposal; source verified before generation",
+      "scene": "Anonymous Israelite adult and child walking a rural path in conversation, pausing to listen to one another.",
+      "source": "Deuteronomy6:6–7,20–25",
+      "reference_paths": [],
+      "limits": "Application of the command, not a named recorded family event. No modern Jewish accessories or invented text inscriptions."
+    },
+    {
+      "id": "kirtland-readers",
+      "status": "proposal; historical context verified before generation",
+      "scene": "Anonymous early Saints in a modest mid1830s Ohio room reading a printed volume together, warm natural conversation and period clothing.",
+      "source": "ChurchHistoryTopics Lectures on Theology; 1835 printed D&C Lecture2",
+      "reference_paths": [],
+      "limits": "Use anonymous readers, not an asserted exact lecture/session or Joseph authorship. Printedvolume after publication1835; avoid mixing winter1834–35 classroom with notyetpublishedbook."
+    }
+  ],
+  "authority_limits": [
+    "This tells the scriptural account of revealed knowledge, not an archaeological proof of the worldwide origin of religion.",
+    "Do not identify every Old Testament Lord/God reference as Heavenly Father; current Church manual notes ambiguity and Father/Son unity. No new Father or HolyGhost portrait.",
+    "Do not attribute sole authorship of Lectures to Joseph Smith. Lecture2 genealogical chronology is its scriptural argument, not independent verified dating.",
+    "Do not carry Lecture5 personage-of-spirit language into current teaching; D&C130:22 and currentChurchGodhead control."
+  ],
+  "onward_paths": [
+    {
+      "label": "Come to know Jesus Christ",
+      "href": "jesus-christ-latter-day-saint-beliefs.html"
+    },
+    {
+      "label": "Prayer and personal revelation",
+      "href": "prayer-and-personal-revelation.html"
+    },
+    {
+      "label": "See His plan for His children",
+      "href": "plan-of-salvation.html"
+    },
+    {
+      "label": "Learn about the Holy Ghost",
+      "href": "holy-ghost.html"
+    }
+  ]
+}

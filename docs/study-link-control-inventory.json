@@ -2,7 +2,7 @@
   "canonical_pages": 121,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 688,
+      "count": 711,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -138,7 +138,7 @@
       ]
     },
     ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)": {
-      "count": 177,
+      "count": 168,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",
@@ -146,7 +146,6 @@
         "answers/death-of-a-child.html",
         "answers/divorce-and-faith.html",
         "answers/faith-in-jesus-christ-during-trials.html",
-        "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",

@@ -1,0 +1,94 @@
+{
+  "reviewer": "focus_review",
+  "method": "All five originals and both continuity reference images individually viewed as actual pixels.",
+  "owner_approval": false,
+  "identity_authority": "Published continuity references only; no new owner identity approval inferred.",
+  "assets": [
+    {
+      "id": "abraham-records",
+      "original": "assets/page-art/heavenly-father/abraham-records-original.png",
+      "sha256": "a87a898b5025c1b088fa7010c01d0d63645338427199831f0fc18ced82b66189",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "findings": "Actual Abraham/Sarah reference viewed: recognizable same facial profiles, aging, white beard and gray hair, coherent hands holding scroll and reciprocal gaze. Full crowns and sandals; photographic detail. Sarah beside him is interpretive staging, not stated by Abraham1.",
+      "reference": "assets/page-art/abrahamic-covenant/ac-abraham-sarah-journey-full.webp",
+      "reference_sha256": "0f8df9282bf063b6b4ceed78b321afc9031afb7a255be72d529e8108fdff4b88"
+    },
+    {
+      "id": "adam-eve-teach",
+      "original": "assets/page-art/heavenly-father/adam-eve-teach-original.png",
+      "sha256": "31837888c5f2fc531d343b01aed42d608040e244e531906bd9338df104334a85",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "findings": "Actual labor reference viewed: Adam/Eve facial and hair continuity retained. Two younger adults listen and respond naturally; credible hands, seated limbs and crowns. No named son/daughter asserted or dialogue invented.",
+      "reference": "assets/page-art/plan-of-salvation/labor-full.webp",
+      "reference_sha256": "7ce93c556a7c6cbec60489debc2987f069cbdc344f8b8d3804e05d0a13455d8c"
+    },
+    {
+      "id": "kept-record",
+      "original": "assets/page-art/heavenly-father/kept-record-original.png",
+      "sha256": "bf9386525481ca16a9169bf09a9a97ac1c9af820c1ee2b812afe26c7b300dce8",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "revision_required",
+      "findings": "Natural mother-child gaze and coherent pointing hand at unidentifiable record. Adult foot at far-left frame boundary is visibly truncated; widen slightly preserving interaction to meet no-clipped-limbs standard. Anonymous family; no named Seth or known artifact asserted.",
+      "superseded_by": "kept-record-v2"
+    },
+    {
+      "id": "kirtland-readers",
+      "original": "assets/page-art/heavenly-father/kirtland-readers-original.png",
+      "sha256": "afda32847561f9a44ccd98c974bb644a16f3c64cd94d3f08d7f9f0de0445f321",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "findings": "Three distinct anonymous readers, natural mutual eye contact and hands around book. Complete crowns/hands; lower bodies outside medium-shot frame. Plausible1830s attire, furniture and photographic light. Not a named lecture session or identified Joseph/Sidney."
+    },
+    {
+      "id": "teach-on-the-way",
+      "original": "assets/page-art/heavenly-father/teach-on-the-way-original.png",
+      "sha256": "9f254496960bd9a6dc9d3feb058c64fd25517a29176c06ae81c9c216310e68ca",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "findings": "Adult and child naturally meet eyes while walking; age-appropriate proportions, coherent fingers, basket support and sandal-clad steps, complete crowns and feet. Period clothing and landscape credible; anonymous application, no invented named family."
+    },
+    {
+      "id": "kept-record-v2",
+      "original": "assets/page-art/heavenly-father/kept-record-v2-original.png",
+      "sha256": "990c07d6405719ef8d1fa53a6b68fd4f78571129600fb12d6f737d1a38f972dd",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "status": "pass_candidate",
+      "owner_approval": false,
+      "findings": "Actual wider pixels inspected: formerly clipped left adult sandal and toes now complete with margin. All crowns and essential hands within frame. Same faces, gaze, record-pointing action and photographic appearance preserved. Seated legs/feet are coherent; naturally occluded limbs not invented visible. Anonymous family and illustrative writing surface, no exact historical artifact claim."
+    }
+  ],
+  "content_review": {
+    "status": "PASS draft doctrinal/provenance review; final page and caption integration still required",
+    "findings": [
+      "Coherent receiving/remembering/teaching/seeking sequence. Distinguishes inherited testimony from personal witness.",
+      "Lecture2 treated as historical theological teaching, not current canon or independent universal religious chronology. Sole Joseph authorship not asserted.",
+      "Current Godhead distinction and D&C130:22 govern Father teaching; no automatic identification of every Old Testament divine reference as Father.",
+      "Do not label pictured Sarah discussion, anonymous manuscript family or Kirtland reading as an exact recorded event."
+    ],
+    "fresh_source_checks": [
+      "https://www.churchofjesuschrist.org/study/history/topics/lectures-on-faith?lang=eng",
+      "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng"
+    ],
+    "scope": "Read full content-plan.json and source-plan.md; fresh spot-checks of official historical context and Moses6. No assertion that every source was freshly refetched."
+  }
+}

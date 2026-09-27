@@ -511,7 +511,7 @@
       "reason": "Disclosure group; individual details receive surface."
     },
     "fc-resource-card": {
-      "count": 139,
+      "count": 141,
       "pages": [
         "about.html",
         "answers.html",
@@ -563,7 +563,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-resource-card__body": {
-      "count": 139,
+      "count": 141,
       "pages": [
         "about.html",
         "answers.html",
@@ -615,7 +615,7 @@
       "reason": "Resource copy wrapper; parent card owns surface."
     },
     "fc-resource-card__image": {
-      "count": 139,
+      "count": 141,
       "pages": [
         "about.html",
         "answers.html",
@@ -667,7 +667,7 @@
       "reason": "Image container; preserve letterboxing and fit."
     },
     "fc-resource-card__kind": {
-      "count": 139,
+      "count": 141,
       "pages": [
         "about.html",
         "answers.html",
@@ -767,7 +767,7 @@
       "reason": "Play control, not panel."
     },
     "fc-resource-card__source": {
-      "count": 135,
+      "count": 136,
       "pages": [
         "about.html",
         "answers.html",
@@ -1106,9 +1106,10 @@
       "reason": "Artwork image; preserve framing."
     },
     "jj-reflection": {
-      "count": 169,
+      "count": 177,
       "pages": [
         "answers/abrahamic-covenant.html",
+        "answers/god-our-heavenly-father.html",
         "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/plan-of-salvation.html",
@@ -2902,7 +2903,7 @@
       ]
     },
     ".fc-deep-study details": {
-      "count": 132,
+      "count": 140,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",
@@ -3089,7 +3090,7 @@
       ]
     },
     ".fc-resource-card": {
-      "count": 139,
+      "count": 141,
       "pages": [
         "about.html",
         "answers.html",
