@@ -47,7 +47,7 @@ require("new Date(w[1]+'T12:00:00')" in script, "cross-month lessons must be gro
 require("align-items:start" in css, "schedule cards may stretch into empty panels")
 require(".cfm-btn--gold" in css and "color:var(--cfm-navy)!important" in css, "primary button contrast is not locked")
 require(".cfm-btn:not(.cfm-btn--gold):hover" in css, "generic hover styling may override the gold action")
-require('href="pioneers.html">PIONEERS</a>' in html, "desktop and mobile study navigation must include Pioneers")
+require('href="pioneers.html">Pioneers</a>' in html, "desktop and mobile study navigation must include Pioneers")
 require("fc-cfm-home__highlights" in home, "Home study preview is not enriched")
 require('href="come-follow-me.html#year-schedule"' in home, "Home schedule route is missing")
 require('margin-top: 22px' in home_css, "Home action row does not match the standard desktop clearance")
