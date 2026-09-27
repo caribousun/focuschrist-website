@@ -20,10 +20,13 @@ HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d6
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = 'fbc4937ead4678d2919a5b22f65224c1401b2cc4a1ec3b874c427578a8febb8c'
-ANSWERS_FEATURED_STYLE_SHA256 = 'bc91ecd6a3342600c4ec5b708aff0c99aadf7736123c01096e9b66aa3aacde08'
-# Owner-requested adjacent Atonement, Jesus and Holy Ghost links. Only these three rules in
+ANSWERS_FEATURED_STYLE_SHA256 = '3dac5e935cebd2e5b319944bad3fdd63daaf9f0aaaa9b1f5c0a9daf32e8421c4'
+# Owner-requested featured and foundational study links. Only the listed rules in
 # the exact reviewed stylesheet qualify; the 700px stack is pinned by its hash.
 ANSWERS_FEATURED_RULES = {
+    '.fc-answers-jump-panel > .fc-resource-next': {'display:grid;gap:14px;margin:0;padding-top:20px;border-top:1pxsolidrgba(240,195,106,.25);text-align:center;'},
+    '.fc-answers-jump-panel [data-foundational-study-actions]': {'grid-template-columns:minmax(0,1fr);', 'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;width:100%;'},
+    '.fc-answers-jump-panel [data-foundational-study-actions] > a': {'width:100%;text-align:center;'},
     '.fc-answers-jumps .fc-answers-featured-pair': {
         'display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;flex:1136rem;min-width:0;',
         'grid-template-columns:minmax(0,1fr);',
