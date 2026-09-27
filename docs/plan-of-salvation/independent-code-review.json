@@ -10,7 +10,7 @@
     "tools/art_ask_context.test.cjs": "d202e492d7d15e9caad32e422fa6ba68ec20f68a7b4575a05e82791b849a93ce",
     "tools/sitewide_artwork_review_qa.py": "3add61e2760644fca49c4ebc80a817520bf9a5ba6ee555e4d674caf4e991eafc",
     "tools/topic_study_pages_qa.py": "beba87a7e5ad1cfaf6406428603851e7a4428ea21c046570b2e39c2b25ed011e",
-    ".github/workflows/site-qa.yml": "06ba881f9403afa4896ab0ec76f2769c190b954d315e8aea3cf13ad7ef9dca26",
+    ".github/workflows/site-qa.yml": "4b412fb0b3f3fc585c15dfd49c34c7d6fea26e444ead4bb82026a0c921e66524",
     "tools/answer_video_uniqueness_qa.py": "4ba04a60c46380d58862617d4f57747f13aff26255aba1c0f9c950ebf57edd30",
     "tools/study_gap_art_qa.py": "ac338ceff096076ced7885a0980204758d69cf21c207f28ab65c321e4584ac81",
     "tools/focused_answers_qa.py": "76dcd4c39d22bd0541429c864e3e4e3a045465067fc986848fb3b18738136aec",
@@ -85,5 +85,13 @@
     "Source and DOM regression review is not independent rendered browser approval.",
     "New generation self-review is not owner aesthetic approval.",
     "Fermi reports final source sweep complete; this receipt independently attests only commands listed and reviewed source hashes."
-  ]
+  ],
+  "hosted_dependency_remediation": {
+    "reported_failed_run": "36347820926",
+    "reported_error": "ModuleNotFoundError: bs4 before unified check",
+    "independent_readback": "Initial dependency installation preserves Pillow==12.2.0 and adds beautifulsoup4==4.15.0 before source QA; only step name and installation line changed.",
+    "local_installed_beautifulsoup4": "4.15.0",
+    "verdict": "PASS precise missing test dependency correction; hosted rerun still required",
+    "runtime_changes": "None in this remediation"
+  }
 }
