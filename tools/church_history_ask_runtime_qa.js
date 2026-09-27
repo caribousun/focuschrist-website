@@ -98,7 +98,7 @@ function assert(condition, message) {
 (async () => {
     const discoveredQuestions = [...fs.readFileSync('church-history.html', 'utf8').matchAll(/data-history-question="([^"]+)"/g)]
         .map((match) => match[1]);
-    assert(discoveredQuestions.length === 10,
+    assert(discoveredQuestions.length === 13,
         'Church History card count changed without a final-owner runtime contract');
     for (const question of discoveredQuestions) {
         const cardResult = await window.focusChristHistoryAsk(question);

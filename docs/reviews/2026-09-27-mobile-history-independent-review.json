@@ -1,0 +1,58 @@
+{
+  "reviewer": "Newton",
+  "status": "PASS scoped source and regression review; hosted rendered gate and parent CUA results remain separate",
+  "scope": [
+    "Mobile title-row removal applies only at <=1020px to current-study nav links; desktop rules and shared navigation JS unchanged. Narrow logo/Search/menu first row retained.",
+    "Rendered regression now snapshots exact menu href+label arrays at1366 perroute then compares every mobilewidth; tests4old/newtopics6widths2scrollpositions, menu/Search, fixeddesktop and nonfixedmobile.",
+    "History adds exactly3links to existing FirstVision/Harmony/portrait anchors and3real question buttons; all original13links/10questions preserved. No new story or artwork.",
+    "History CSS changes only button flex sizing/wrapping, retains58px minimum target.",
+    "Exact full/base stylesheet hashes and mutation safeguards preserved; corrected appendix comment reflects changed mobile title-row rules."
+  ],
+  "tests": [
+    {
+      "command": "python -X utf8 tools/history_choices_qa.py",
+      "result": "PASS16links13questions"
+    },
+    {
+      "command": "node --check tools/mobile_study_header_browser_qa.js",
+      "result": "PASS syntax only; local Playwright intentionally not executed"
+    },
+    {
+      "command": "python -X utf8 tools/sitewide_artwork_review_qa.py --self-test",
+      "result": "PASS"
+    },
+    {
+      "command": "python -X utf8 tools/study_layout_uniformity_qa.py --self-test",
+      "result": "PASS"
+    }
+  ],
+  "hashes": {
+    "site-search.css": "ca09d2ce90471be8c404efc4c8a27aeb756fdc1d30276aa3d112705595ffa32e",
+    "church-history.css": "5b7e4c13945dcae80da5c278192b2d846e1d03f31aa4eeb4de133fa697613937",
+    "church-history.html": "b1d2addcbb4d06565b9fac44f75ee7037c13ba1416adab9e53f94ff0995675f7",
+    "tools/sitewide_artwork_review_qa.py": "deb380743b3d65be71d39b9a31cefb401cd9445be6a20a3ac3aa0360cfec6076",
+    "tools/mobile_study_header_browser_qa.js": "13a0ab8aef12d9c353a4c9a93a6aa78e176dc88074dee06a06df2678e5513e0a",
+    "tools/history_choices_qa.py": "33a0a5916bde49fdca58eccd573bf2bd9f791499942293f34674f4de290646b8",
+    ".github/workflows/site-qa.yml": "5da08ed24d01aa325b470c9ea25e7df3a4d2ac8050b05ae7fce19a0404241316",
+    "reviewed-ask-knowledge.js": "2a999ae46f5e46a2128bf64d15cd2fb459e3c7bc5dc3922c6257acd3f9e46ee5",
+    "answer-audit.json": "84c9728a70640ffc7d14e4668555a993b65533955d984c6c098efa9a4ac3872f",
+    "tools/church_history_ask_runtime_qa.js": "fed460544a79b3d111cadacdea137576081eba80c771d9c655d217981e6ecb65"
+  },
+  "limits": [
+    "Browser test source reviewed but rendering must pass in hostedCI; parentactualCUA proof required.",
+    "No liveAsk/provider invocation was performed; question controls retain existing behavior."
+  ],
+  "final_delta_review": {
+    "status": "PASS",
+    "findings": [
+      "Three new local History answer entries match exactly the three authored questions plus one reviewed equivalent each. exactOnly uses all=[[]], whose inner some() is false, so unmatched questions cannot fall through to keyword matching. Existing entries retain their prior matching and review dates.",
+      "Fresh official-source readback supports Emma early scribal service and family circumstances, Liberty letter scribes and later extracts, and Museum mask provenance and limitations. Final visitor source note uses the reviewed 2005 article description.",
+      "All 28 registry intent/profile/hash checks and all 13 History final-owner zero-Worker checks independently passed on final bytes. Three new audit pins and 13 question contracts remain exact.",
+      "The hosted fixture invokes the actual suggestion handler and clicks the three added buttons with a stubbed answer receiver and throwing network fallback; this proves payload wiring, not live provider execution.",
+      "Final History CSS preserves prior bytes and appends only the reviewed flex/wrap rule. Full stylesheet hash and exact rule properties remain required; protected artwork gate independently passes all 842 images."
+    ],
+    "limits": [
+      "No local Playwright or live Ask provider requests. Parent actual browser results are a separate evidence class; hosted rendered regression remains pending."
+    ]
+  }
+}

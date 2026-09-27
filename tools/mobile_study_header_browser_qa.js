@@ -1,0 +1,31 @@
+// CI rendered regression for M063; local browser review uses the approved UI tool.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
+const root=path.resolve(__dirname,'..');
+async function main(){
+ if(process.env.CI!=='true')throw Error('Run rendered gate in CI; local verification uses CUA.');
+ const {chromium}=require('playwright');
+ const server=http.createServer((req,res)=>{const file=path.resolve(root,'.'+new URL(req.url,'http://localhost').pathname);if(!file.startsWith(root+path.sep))return res.writeHead(403).end();const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp'};fs.readFile(file,(e,b)=>e?res.writeHead(404).end():res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream'}).end(b));});
+ await new Promise(r=>server.listen(0,'127.0.0.1',r));const browser=await chromium.launch({headless:true}),results=[],menus=new Map();
+ try{const page=await browser.newPage();for(const width of [1366,320,390,600,768,1020]){await page.setViewportSize({width,height:800});for(const route of ['answers/god-our-heavenly-father.html','answers/holy-ghost.html','answers/plan-of-salvation.html','answers/prayer-and-personal-revelation.html']){
+ await page.goto('http://127.0.0.1:'+server.address().port+'/'+route);await page.waitForFunction(()=>document.querySelector('.fc-search-trigger')&&document.querySelector('[data-focuschrist-current-study]'));
+ for(const scroll of [0,360]){await page.evaluate(y=>scrollTo(0,y),scroll);const result=await page.evaluate(()=>{const nav=document.querySelector('.nav[data-focuschrist-header]'),links=nav.querySelector(':scope > .nav-links'),logo=nav.querySelector('.nav-logo'),search=nav.querySelector('.fc-search-trigger'),menu=nav.querySelector('.hamburger-wrap');const r=n=>{const b=n.getBoundingClientRect();return {top:b.top,bottom:b.bottom,width:b.width,height:b.height}};return{nav:r(nav),links:r(links),logo:r(logo),search:r(search),menu:r(menu),position:getComputedStyle(nav).position,overflow:document.documentElement.scrollWidth-innerWidth};});
+ assert(result.overflow<=3,route+': overflow');if(width<=1020){assert.equal(result.links.height,0,route+': no mobile topic row');assert.equal(result.links.width,0);assert.notEqual(result.position,'fixed',route+': original mobile scroll preserved');assert(result.nav.height<=Math.max(result.logo.height,result.search.height,result.menu.height)+40,route+': no empty second row');}else{assert.equal(result.position,'fixed');assert(result.links.width>0,route+': desktop navigation retained');}results.push({route,width,scroll,...result});}
+ await page.evaluate(()=>window.toggleMenu());assert(await page.locator('#hamburgerMenu').isVisible(),route+': existing menu opens');const entries=await page.locator('#hamburgerMenu a').evaluateAll(nodes=>nodes.map(n=>({href:n.getAttribute('href'),label:n.textContent.trim()})));if(!menus.has(route))menus.set(route,entries);else assert.deepEqual(entries,menus.get(route),route+': exact menu destinations/labels preserved across widths');assert(entries.length>5);await page.evaluate(()=>window.toggleMenu());assert(!(await page.locator('#hamburgerMenu').isVisible()),route+': menu closes');
+ await page.locator('.fc-search-trigger').click();assert(await page.locator('.fc-search-dialog').isVisible(),route+': Search opens');await page.keyboard.press('Escape');
+ }}
+ for(const width of [320,390,768,1366]){await page.setViewportSize({width,height:900});await page.goto('http://127.0.0.1:'+server.address().port+'/church-history.html');const rows=await page.evaluate(()=>['.fc-history-topic-links','.fc-history-predictions'].map(selector=>{const grid=document.querySelector(selector),g=grid.getBoundingClientRect(),groups=[];for(const child of grid.children){const r=child.getBoundingClientRect();let row=groups.find(x=>Math.abs(x.top-r.top)<3);if(!row){row={top:r.top,left:r.left,right:r.right,widths:[]};groups.push(row);}row.left=Math.min(row.left,r.left);row.right=Math.max(row.right,r.right);row.widths.push(r.width);}return{selector,left:g.left,right:g.right,groups};}));for(const grid of rows)for(const row of grid.groups){assert(Math.abs(row.left-grid.left)<3&&Math.abs(row.right-grid.right)<3,'History row fills reading width');assert(Math.max(...row.widths)-Math.min(...row.widths)<3,'Equal widths within each row');}results.push({route:'church-history.html',width,rows});}
+
+ // Real browser button clicks in an isolated fixture execute the production handler;
+ // answerQuestion is stubbed so these checks cannot send provider requests.
+ const historyHtml=fs.readFileSync(path.join(root,'church-history.html'),'utf8');
+ const buttonHtml=[...historyHtml.matchAll(/<button[^>]+data-history-question="[^"]+"[^>]*>[\s\S]*?<\/button>/g)].map(x=>x[0]).join('');
+ await page.setContent('<textarea id="historyQuestion"></textarea>'+buttonHtml);
+ const historyJs=fs.readFileSync(path.join(root,'church-history-experience.js'),'utf8');
+ const handler=historyJs.slice(historyJs.indexOf('    function initSuggestions('),historyJs.indexOf('    function initForm('));
+ await page.evaluate(code=>{window.sent=[];window.byId=id=>document.getElementById(id);window.setAskEntryActive=value=>{window.active=value;};window.answerQuestion=q=>window.sent.push(q);window.fetch=()=>{throw Error('Unexpected provider request');};eval(code+';initSuggestions();');},handler);
+ for(const index of [10,11,12]){const button=page.locator('[data-history-question]').nth(index),expected=await button.getAttribute('data-history-question');await button.click();assert.equal(await page.locator('#historyQuestion').inputValue(),expected);assert.equal(await page.evaluate(()=>window.sent.at(-1)),expected);}
+ assert.equal(await page.evaluate(()=>window.sent.length),3);results.push({fixture:'three-new-History-question-clicks',providerRequests:0,passed:true});
+ }finally{await browser.close();await new Promise(r=>server.close(r));fs.mkdirSync(path.join(root,'.qa-artifacts'),{recursive:true});fs.writeFileSync(path.join(root,'.qa-artifacts/mobile-study-header.json'),JSON.stringify(results,null,2));}
+ console.log('M063 rendered header PASS: '+results.length+' width/route/scroll cases plus menu/Search interactions');
+}
+main().catch(e=>{console.error(e);process.exitCode=1});

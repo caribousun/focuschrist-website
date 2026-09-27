@@ -38,9 +38,9 @@
 #fc-search-more {margin-top:24px;}
 .fc-search-main [hidden] {display:none!important;}
 @media(max-width:1200px){.fc-search-trigger-label {display:none;}.nav[data-focuschrist-header="standard"] .fc-search-trigger {width:44px;justify-content:center;padding:0;right:30px;}}
+/* Mobile uses its existing menu for study destinations, without a duplicate title row. */
 @media(max-width:1020px){
-    .nav[data-focuschrist-header="standard"].fc-has-current-study .nav-links {margin-right:58px!important;}
-    .nav[data-focuschrist-header="standard"].fc-has-current-study .nav-links a[data-focuschrist-current-study] {display:-webkit-box!important;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;max-height:2.6em;}
+    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study > .nav-links {display:none!important;}
 }
 @media(max-width:540px){.fc-search-row {flex-direction:column;}.fc-search-main{padding:var(--fc-body-section-gap) var(--fc-body-gutter);}.fc-search-result{gap:12px;}.fc-search-result img{width:76px;height:76px;}.fc-search-directory{margin-bottom:26px;padding-bottom:24px;}}
 
@@ -51,7 +51,7 @@
 .fc-search-supporting summary:focus-visible {outline:2px solid #f0c36a;outline-offset:4px;}
 .fc-search-supporting > button {margin-top:24px;}
 
-/* Narrow current-study titles occupy their own natural-height row. */
+/* Preserve the existing narrow logo, search and menu row. */
 @media (max-width:600px) {
     body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study {
         display: grid !important;
@@ -64,11 +64,5 @@
         grid-column: 2; grid-row: 1; position: static; transform: none;
     }
     body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study > .hamburger-wrap { grid-column: 3; grid-row: 1; }
-    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study > .nav-links {
-        grid-column: 1 / -1; grid-row: 2; width: 100%; margin: 0 !important;
-    }
-    body.fc-site .nav[data-focuschrist-header="standard"].fc-has-current-study .nav-links a[data-focuschrist-current-study] {
-        display: block !important; -webkit-line-clamp: unset; max-height: none;
-        max-width: none; overflow: visible; white-space: normal; overflow-wrap: anywhere;
-    }
+
 }

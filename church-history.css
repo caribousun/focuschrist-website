@@ -556,3 +556,6 @@ html[data-focuschrist-history-conversation-active] .fc-history-chat-shell {
 
 /* Long words may wrap naturally when readers enlarge their text. */
 .fc-history-page main { overflow-wrap: anywhere; }
+
+/* Owner-requested complete rows for thirteen meaningful suggested questions. */
+.fc-history-predictions button { flex:1 1 180px; min-width:0; white-space:normal; overflow-wrap:anywhere; }
