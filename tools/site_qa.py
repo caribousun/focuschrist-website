@@ -40,7 +40,7 @@ HEADER_PAGES = {
     **{name: "../site-header.css?v=20260920-menu-wrap-2" for name in ART_STUDY_PAGES},
     "404.html": "/site-header.css?v=20260920-menu-wrap-2",
 }
-HEADER_LABELS = ("HOME", "ASK", "ANSWERS", "ART", "PIONEERS", "ABOUT")
+HEADER_LABELS = ("HOME", "Ask (Chat)", "Answers Library", "ART", "PIONEERS", "ABOUT")
 PLACEHOLDER_CAPTION_PATTERNS = (
     r"\bstudy illustration\b",
     r"historical study illustration",
