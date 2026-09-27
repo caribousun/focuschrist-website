@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import worker, { classifyResearchScope, sanitizePayload, relatedConversationSources } from './src/index.js';
+import worker, { classifyResearchScope, sanitizePayload, relatedConversationSources, reviewedPioneerExodusKey } from './src/index.js';
 
 const legacy = (question, antecedent) => `${question}\n\nThe immediately preceding user question was: "${antecedent}".\n\nResolve pronouns and omitted subjects only from that immediately preceding question.`;
 const examples = [
@@ -63,6 +63,43 @@ for (const page of ['ask', 'pioneers']) {
   const multiline = 'What does Genesis 1:1 say?\nPlease distinguish quotation from explanation.';
   assert.equal(classifyResearchScope([{role:'user',content:multiline}],page,'faith-study').question,multiline,
     'ordinary multiline user wording must not be truncated as if it were a legacy wrapper');
+}
+
+
+for (const page of ['ask','pioneers']) {
+  const direct = classifyResearchScope(
+    [{role:'user',content:'what year did the pioneer exodus begin'}],
+    page,
+    'faith-study'
+  );
+  assert.equal(reviewedPioneerExodusKey(direct), 'exodus',
+    'the standalone exodus-start question must reuse the reviewed exodus reading');
+
+  const named = classifyResearchScope(
+    [{role:'user',content:'When did the Latter-day Saint pioneer exodus begin?!'}],
+    page,
+    'faith-study'
+  );
+  assert.equal(reviewedPioneerExodusKey(named), 'exodus',
+    'the narrow named and punctuated variant must reuse the reviewed exodus reading');
+
+  const followup = classifyResearchScope(
+    [{role:'user',content:'what year did the pioneer exodus begin'}, {role:'user',content:'when did it end'}],
+    page,
+    'faith-study'
+  );
+  assert.equal(followup.classificationMode, 'conversation-context');
+  assert.equal(reviewedPioneerExodusKey(followup), '',
+    'the end-date follow-up must stay on the conversation-context paired-source route');
+
+  for (const guarded of [
+    {...direct, selectedPioneer:'brigham-young'},
+    {...direct, pioneerTopicKey:'exodus'},
+    {...direct, scriptureSupportRequested:true},
+    {...direct, page:'history'},
+    {...direct, question:'When did the biblical Exodus of Moses begin?'}
+  ]) assert.equal(reviewedPioneerExodusKey(guarded), '',
+    'selected, topic-owned, scripture, wrong-page, and biblical requests must not use the standalone reviewed route');
 }
 
 const pairPaths = [

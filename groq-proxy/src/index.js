@@ -277,6 +277,14 @@ function reviewedGodComparisonKey(scope) {
     ? 'god-across-testaments' : '';
 }
 
+function reviewedPioneerExodusKey(scope) {
+  if (!['ask','pioneers'].includes(scope?.page) || scope.classificationMode === 'conversation-context'
+    || scope.selectedPioneer || scope.pioneerTopicKey || scope.scriptureSupportRequested) return '';
+  const current = String(scope.question || '').toLowerCase().replace(/[?.!]+$/g,'').replace(/\s+/g,' ').trim();
+  return /^(?:what year|when) did (?:the )?(?:latter[- ]day saint )?pioneer exodus begin$/.test(current)
+    ? 'exodus' : '';
+}
+
 function rawConversationQuestion(value) {
   // Remove only the legacy browser context wrapper, never use its claimed
   // antecedent as authority. Reconstruct context from actual user turns.
@@ -2225,9 +2233,15 @@ export default {
       }
 
       const reviewedGodKey = reviewedGodComparisonKey(sanitized.scope);
+      const reviewedPioneerKey = reviewedPioneerExodusKey(sanitized.scope);
       const supportReadingKey = reviewedSupportKey(sanitized.scope);
       const supportSources = supportReadingKey === 'support-unwanted-thoughts-start' ? REVIEWED_SUPPORT_SOURCES.slice(1) : REVIEWED_SUPPORT_SOURCES;
-      const relatedSources = supportReadingKey ? supportSources : !evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly)
+      const reviewedPioneerSources = reviewedPioneerKey ? [{
+        url: PIONEER_TOPIC_SOURCES[reviewedPioneerKey].url,
+        title: PIONEER_TOPIC_SOURCES[reviewedPioneerKey].subject,
+        reviewedSourceRequired: true,
+      }] : [];
+      const relatedSources = supportReadingKey ? supportSources : reviewedPioneerKey ? reviewedPioneerSources : !evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly)
         && !sanitized.scope.selectedPioneer && !sanitized.scope.pioneerTopicKey
         ? relatedConversationSources(sanitized.scope) : [];
       if (relatedSources.length) {
@@ -2246,7 +2260,7 @@ export default {
         retrievalDiagnostic.focuschrist_source_transport_failures = Number(retrievalDiagnostic.focuschrist_source_transport_failures || 0) + Number(counters.transportFailures || 0);
       }
 
-      if (!evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer && !reviewedGodKey && !supportReadingKey) {
+      if (!evidence.length && (sanitized.scope.faith || sanitized.scope.approvedSourcesOnly) && !sanitized.scope.selectedPioneer && !reviewedGodKey && !reviewedPioneerKey && !supportReadingKey) {
         const indexed = await retrieveIndexedChurchEvidence(sanitized.scope.retrievalQuestion, sanitized.scope.page, deadline, sanitized.scope.pioneerTopicKey);
         retrievalDiagnostic.focuschrist_index_candidates = indexed.candidates.length;
         retrievalDiagnostic.focuschrist_index_sources = indexed.evidence.length;
@@ -2266,11 +2280,12 @@ export default {
         }
       }
 
-      const reviewedReadingKey = sanitized.scope.pioneerTopicKey || reviewedGodKey || supportReadingKey;
+      const pioneerReviewedKey = sanitized.scope.pioneerTopicKey || reviewedPioneerKey;
+      const reviewedReadingKey = pioneerReviewedKey || reviewedGodKey || supportReadingKey;
       let reviewedReading = null;
       if (reviewedReadingKey) {
-        const expectedUrls = supportReadingKey ? supportSources.map(source => source.url) : sanitized.scope.pioneerTopicKey
-          ? [PIONEER_TOPIC_SOURCES[sanitized.scope.pioneerTopicKey].url]
+        const expectedUrls = supportReadingKey ? supportSources.map(source => source.url) : pioneerReviewedKey
+          ? [PIONEER_TOPIC_SOURCES[pioneerReviewedKey].url]
           : ['https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ?lang=eng',
             'https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng'];
         reviewedReading = await verifyReviewedReading(reviewedReadingKey, evidence, expectedUrls);
@@ -2283,7 +2298,7 @@ export default {
             : 'I can’t verify this study reading right now. You can still open the approved study sources below.';
           limited.focuschrist_sources = expectedUrls.map(url => ({
             text: evidence.find(source => source.url === url)?.title
-              || (supportReadingKey ? supportSources.find(source => source.url === url)?.title : sanitized.scope.pioneerTopicKey ? PIONEER_TOPIC_SOURCES[sanitized.scope.pioneerTopicKey].subject
+              || (supportReadingKey ? supportSources.find(source => source.url === url)?.title : pioneerReviewedKey ? PIONEER_TOPIC_SOURCES[pioneerReviewedKey].subject
                 : url.includes('/jesus-christ?') ? 'Jesus Christ' : 'Godhead'),
             url,
           }));
@@ -2794,6 +2809,7 @@ export default {
 export {
   isGodInOldTestamentQuestion,
   reviewedGodComparisonKey,
+  reviewedPioneerExodusKey,
   jsonResponse,
   GENERAL_ANSWER_FALLBACK,
   OFFICIAL_EXCERPT_CACHE_VERSION,
