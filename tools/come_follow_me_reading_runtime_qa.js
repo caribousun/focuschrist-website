@@ -38,3 +38,18 @@ assert.equal(lessons.length,52);
 for(const a of all.filter(n=>n.tag==='a'))assert.equal([...a.walk()].filter(n=>n.tag==='a').length,1,'No nested scripture/lesson anchors');
 for(const lesson of lessons)assert.ok(![...lesson.walk()].some(n=>n.className==='cfm-schedule-reading'),'Reading controls must be separate from lesson links');
 console.log('PASS: 52 unchanged assignments, exact chapter choices, abbreviated Psalms ranges, accessible inherited book labels, separate lesson links, no nested anchors.');
+// The evergreen initial HTML must still become the right weekly lesson at rollover.
+for(const [day,lesson] of [['2026-09-27','39'],['2026-09-28','40']]){
+ const date=new Node('span'),title=new Node('h2'),assignment=new Node('div');
+ const links=[new Node('a'),new Node('a')];
+ const nodes={'[data-cfm-current-date]':date,'[data-cfm-current-title]':title,'[data-cfm-current-reading]':assignment};
+ const doc={querySelector:s=>nodes[s]||null,querySelectorAll:s=>s==='[data-cfm-current-lesson]'?links:[],createElement:t=>new Node(t),createTextNode:t=>new Node('#text',t)};
+ class RolloverDate extends NativeDate{constructor(...args){super(...(args.length?args:[day+'T12:00:00']));}}
+ vm.runInNewContext(fs.readFileSync(require.resolve('../come-follow-me.js'),'utf8'),{document:doc,Date:RolloverDate,location:{}});
+ const week=weeks.find(w=>w[4]===lesson);
+ assert.equal(date.textContent,week[2]);
+ assert.ok(title.textContent && !title.textContent.includes('Find this week'));
+ assert.equal(assignment.attrs['aria-label'],'Scripture reading: '+week[3]);
+ for(const link of links)assert.equal(link.href,'https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/'+lesson+'?lang=eng');
+}
+console.log('PASS: Sunday/Monday weekly rollover updates both official lesson routes and the reading.');

@@ -70,6 +70,17 @@ class HubParser(HTMLParser):
 
 page = HubParser()
 page.feed(html)
+# A failed or disabled script must not label a pinned historical lesson as current.
+manual_index = "https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026?lang=eng"
+fallback_links = [attrs.get('href') for tag, attrs in page.elements
+                  if tag == 'a' and 'data-cfm-current-lesson' in attrs]
+require(len(fallback_links) >= 2 and all(href == manual_index for href in fallback_links),
+        "static weekly links must fall back to the official schedule, not a pinned lesson")
+fallback_date = re.search(r'data-cfm-current-date>([^<]+)</span>', html)
+require(fallback_date and fallback_date.group(1) == 'Official 2026 schedule',
+        "static weekly fallback must not claim a dated lesson is current")
+require('data-cfm-current-reading>Open the official manual and choose the lesson for your week.</div>' in html,
+        "script-free readers need a clear path to their weekly assignment")
 structure = Document()
 structure.feed(html)
 reflections = next(n for n in structure.root.walk() if n.attrs.get('id') == 'guided-reflections')
