@@ -54,21 +54,30 @@ def check_structure(ns):
     assert any(n.tag=='details' for n in ns), 'Optional reflection control missing'
     cards=[n for n in ns if n.has('fc-resource-card')]
     assert len(cards)==4 and len({n.attrs.get('data-resource-key') for n in cards})==4
+    grid=cards[0].parent
+    assert grid.has('fc-resource-grid') and all(card.parent is grid for card in cards), 'All four talks require one bounded resource grid'
+    assert grid.parent.attrs.get('id')=='holy-ghost-or-me', 'Talk grid must remain in intended chapter'
     for card in cards:
         assert len([n for n in card.walk() if n.tag=='img' and n.attrs.get('alt')])==1, 'Talk requires a labeled thumbnail'
+        review=json.loads((ROOT/'docs/holy-ghost/talk-thumbnail-review.json').read_text(encoding='utf-8'))
+        expected=next(r for r in review['thumbnails'] if r['key']==card.attrs['data-resource-key'])
+        image=next(n for n in card.walk() if n.tag=='img')
+        assert image.attrs['src']==expected['after'], 'Talk thumbnail must preserve reviewed high-resolution source identity'
+        assert [int(image.attrs['width']),int(image.attrs['height'])]==expected['decoded_after'], 'Talk thumbnail intrinsic dimensions must match decoded source'
+        assert expected['decoded_after'][0]>=900, 'Talk thumbnail must not regress to low resolution'
     video=next(n for n in ns if n.attrs.get('id')=='holy-ghost-video')
     vn=list(video.walk())
     assert video.attrs.get('data-video-id')=='AGS45Fd9nmE', 'Exact featured Bednar video missing'
     assert not any(n.tag=='iframe' for n in vn), 'Video must load only on visitor request'
     preview=next(n for n in vn if 'data-video-preview' in n.attrs)
     assert preview.tag=='button' and preview.attrs.get('type')=='button' and preview.attrs.get('aria-label')
-    assert any(n.tag=='img' and n.attrs.get('src')=='https://i.ytimg.com/vi/AGS45Fd9nmE/hqdefault.jpg' and n.attrs.get('alt') for n in preview.walk())
+    assert any(n.tag=='img' and n.attrs.get('src')=='https://i.ytimg.com/vi/AGS45Fd9nmE/sddefault.jpg' and n.attrs.get('alt') for n in preview.walk())
     assert any('data-video-stage' in n.attrs and 'hidden' in n.attrs for n in vn)
     assert any(n.tag=='button' and 'data-video-close' in n.attrs and 'hidden' in n.attrs for n in vn)
     assert any('data-video-status' in n.attrs and n.attrs.get('role')=='status' and n.attrs.get('aria-live')=='polite' for n in vn)
     assert any(n.tag=='a' and n.attrs.get('href')=='https://www.youtube.com/watch?v=AGS45Fd9nmE' for n in vn), 'Permanent owner-channel fallback missing'
     assert any(n.tag=='script' and n.attrs.get('src')=='../holy-ghost-video.js?v=20260927-player-1' for n in ns)
-    assert any(n.tag=='link' and n.attrs.get('href')=='../holy-ghost-video.css?v=20260927-player-1' for n in ns)
+    assert any(n.tag=='link' and n.attrs.get('href')=='../holy-ghost-video.css?v=20260927-thumbnail-2' for n in ns)
     onward=next(n for n in ns if n.attrs.get('id')=='continue-study')
     ask=next(n for n in onward.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).path=='/ask.html')
     q=parse_qs(urlsplit(ask.attrs['href']).query)

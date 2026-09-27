@@ -32,10 +32,10 @@ study_destinations={
  'joseph-smith-likeness.html', 'church-history.html', 'pioneers.html',
  'come-follow-me.html',
 }
-expected=({p.relative_to(ROOT).as_posix() for p in answer_paths}-{FEATURED_JESUS,FEATURED_HOLY_GHOST})|study_destinations
-assert len(links)==28, 'Keep the owner-requested seven by four topic grid'
+expected=({p.relative_to(ROOT).as_posix() for p in answer_paths}-{FEATURED_JESUS,FEATURED_HOLY_GHOST,'answers/god-our-heavenly-father.html'})|study_destinations
+assert len(links)==27, 'Keep 27 topics after Heavenly Father promotion'
 featured=[n for n in nodes if n.has('fc-settle-featured')]
-assert [(n.attrs.get('href'),n.text().strip()) for n in featured]==[('atonement.html','The Atonement of Jesus Christ'),(FEATURED_JESUS,'Jesus Christ'),(FEATURED_HOLY_GHOST,'Holy Ghost')], 'Exact Atonement, Jesus and Holy Ghost featured destinations required'
+assert [(n.attrs.get('href'),n.text().strip()) for n in featured]==[('answers/god-our-heavenly-father.html','Heavenly Father'),(FEATURED_JESUS,'Jesus Christ'),(FEATURED_HOLY_GHOST,'Holy Ghost'),('atonement.html','The Atonement of Jesus Christ')], 'Exact Atonement, Jesus and Holy Ghost featured destinations required'
 assert all(n.parent is featured[0].parent for n in featured) and featured[0].parent.has('fc-answers-featured-pair'), 'Featured destinations must share their existing group'
 check_holy_ghost()  # Exact eight chapters and sixteen reviewed body originals; featured separately.
 assert len(links)==len(expected), 'topic directory must not duplicate destinations'

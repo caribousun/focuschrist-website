@@ -20,16 +20,22 @@ HOME_STYLE_SHA256 = '435c9f72296fd8ded6d19d09a3963b5ef291cae22faa9ce562292f4f2d6
 HOME_STYLE_OWNER = 'index.html'
 JOURNEY_STYLE = 'jesus-journey.css'
 JOURNEY_STYLE_SHA256 = 'fbc4937ead4678d2919a5b22f65224c1401b2cc4a1ec3b874c427578a8febb8c'
-ANSWERS_FEATURED_STYLE_SHA256 = '3dac5e935cebd2e5b319944bad3fdd63daaf9f0aaaa9b1f5c0a9daf32e8421c4'
+ANSWERS_FEATURED_STYLE_SHA256 = '54d89fb46570ecb419f7add72bc81e3b37e2814c583290e9d71b1431b3d8dbc6'
 # Owner-requested featured and foundational study links. Only the listed rules in
 # the exact reviewed stylesheet qualify; the 700px stack is pinned by its hash.
 ANSWERS_FEATURED_RULES = {
+    '.fc-answers-jumps .fc-settle-directory-intro': {'display:grid;grid-template-columns:minmax(0,1fr);gap:20px;'},
+    '.fc-answers-jumps .fc-answers-jump-links': {'grid-template-columns:minmax(0,1fr);', 'grid-template-columns:repeat(2,minmax(0,1fr));', 'grid-template-columns:repeat(12,minmax(0,1fr));'},
+    '.fc-answers-jumps .fc-answers-jump-links > a': {'grid-column:span3;', 'grid-column:auto;'},
+    '.fc-answers-jumps .fc-answers-jump-links > a:nth-last-child(-n+3)': {'grid-column:auto;', 'grid-column:span4;'},
+    '.fc-answers-jumps .fc-answers-jump-links > a:last-child:nth-child(odd)': {'grid-column:1/-1;'},
     '.fc-answers-jump-panel > .fc-resource-next': {'display:grid;gap:14px;margin:0;padding-top:20px;border-top:1pxsolidrgba(240,195,106,.25);text-align:center;'},
     '.fc-answers-jump-panel [data-foundational-study-actions]': {'grid-template-columns:minmax(0,1fr);', 'display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0;width:100%;'},
     '.fc-answers-jump-panel [data-foundational-study-actions] > a': {'width:100%;text-align:center;'},
     '.fc-answers-jumps .fc-answers-featured-pair': {
-        'display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;flex:1136rem;min-width:0;',
+        'display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;flex:1136rem;min-width:0;',
         'grid-template-columns:minmax(0,1fr);',
+        'grid-template-columns:repeat(2,minmax(0,1fr));',
     },
     '.fc-answers-jumps .fc-answers-featured-pair > a': {
         'width:100%;max-width:none;min-width:0;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere;height:auto;line-height:1.5;',
@@ -121,7 +127,7 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
     'ask-experience.css': ('126df0f3a5331f5f2a34df236220e019404cfb1eaf0de54a57c556a5d9c8a0f5', 'ask.html'),
-    'holy-ghost-video.css': ('4c09e05fb56a582eccc628614a50075bbe250cce3b18710681b361c1efba38a2', 'answers/holy-ghost.html'),
+    'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
 }
 def reviewed_scoped_interface_style(name, data):
     return name in SCOPED_INTERFACE_STYLES and hashlib.sha256(data).hexdigest()==SCOPED_INTERFACE_STYLES[name][0]
