@@ -102,8 +102,10 @@ class Tags(HTMLParser):
         super().__init__(); self.tags=[]; self.feed(text)
     def handle_starttag(self, tag, attrs): self.tags.append((tag,dict(attrs)))
 
-# Exact owner-requested narrow title/mini-card appendices; original CSS preserved.
-NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4785, 'base_sha256': '1d0a269872a48abb56893da0fe38c855295f47a5ace6989d56e2751b5267ebaf', 'sha256': '2ee2f7509919e1d9f82eef0f95ffb2dd38abda837cea0713d8d6151b7ea61c0a'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
+# Exact narrow title/mini-card appendices. Search base additionally includes the
+# independently reviewed intrinsic trigger width, nowrap label and fixed-size icon;
+# appendix bytes remain unchanged. Full-file and updated base-prefix pins both apply.
+NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4841, 'base_sha256': 'e8edf1b8247b3d9c6e0a2ae9209ca35941ed8f7c1afcf7604fb8714a1588008a', 'sha256': '76a3b0c5fc0f80a12d86b2bf7def5c7aa456a8bac8d8dc9ae9191e9e378005c5'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
 def reviewed_narrow_reading_style(name, data):
     entry=NARROW_READING_STYLES.get(name)
     return bool(entry and hashlib.sha256(data).hexdigest()==entry["sha256"]
@@ -203,6 +205,9 @@ def main():
             assert reviewed_narrow_reading_style(name,data)
             assert not reviewed_narrow_reading_style(name,data+b"body{display:none}")
             assert not reviewed_narrow_reading_style(name,b"X"+data[1:])
+        search_css = (ROOT/"site-search.css").read_bytes()
+        assert b"width:max-content;white-space:nowrap;" in search_css
+        assert not reviewed_narrow_reading_style("site-search.css", search_css.replace(b"white-space:nowrap;", b"", 1))
         journey_css = (ROOT/JOURNEY_STYLE).read_bytes()
         owners = {'answers/jesus-christ-latter-day-saint-beliefs.html','jesus-christ/before-bethlehem.html','birth-of-christ.html','answers/abrahamic-covenant.html'}
         assert reviewed_journey_style(journey_css)
