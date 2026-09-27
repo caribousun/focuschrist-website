@@ -75,7 +75,7 @@ def artwork(key,registry,strict):
             if actual!=a.get(field+'_sha256'):raise ValueError('Changed reviewed derivative '+key)
     w,h=a['width'],a['height']
     full='/'+a['asset'];thumb='/'+a['thumbnail']
-    return f'''<figure class="jj-art fc-study-visual" data-journey-art="{E(key)}" id="picture-{E(key)}"><a href="{E(full)}" data-full-image-viewer aria-haspopup="dialog" aria-label="Explore artwork: {E(a['title'])}" data-full-image-alt="{E(a['alt'])}"><img src="{E(thumb)}" width="{w}" height="{h}" style="--study-image-ratio:{w}/{h}" loading="lazy" decoding="async" alt="{E(a['alt'])}"></a><figcaption><p class="fc-study-visual-label">Explore and study</p><h3>{E(a['title'])}</h3><p>{E(a['caption'])}</p><p class="fc-study-visual-sources">{' · '.join(scripture(r) for r in a['refs'])}</p></figcaption></figure>'''
+    return f'''<figure class="jj-art fc-study-visual" data-journey-art="{E(key)}" id="picture-{E(key)}"><a href="{E(full)}" data-full-image-viewer aria-haspopup="dialog" aria-label="Explore artwork: {E(a['title'])}" data-full-image-alt="{E(a['alt'])}"><img src="{E(thumb)}" width="{w}" height="{h}" style="--study-image-ratio:{w}/{h}" loading="lazy" decoding="async" alt="{E(a['alt'])}"></a><figcaption><p class="fc-study-visual-label">Explore and study</p><h3>{E(a['title'])}</h3><p>{E(a['caption'])}</p><p class="fc-study-visual-sources">{' '.join(scripture(r) for r in a['refs'])}</p></figcaption></figure>'''
 
 def card(item, preview=None):
     image=''
@@ -100,7 +100,7 @@ def render(page,registry,strict):
     footer=re.search(r'<footer.*?</footer>',source,re.S).group(0).replace('href="../','href="/')
     crumbs=[('/answers.html','Answers'),(PARENT,'Jesus Christ')]+page.get('ancestors',[])
     breadcrumb='<nav aria-label="Breadcrumb"><ol class="jj-breadcrumbs">'+''.join(f'<li><a href="{E(url)}">{E(title)}</a><span aria-hidden="true"> / </span></li>' for url,title in crumbs)+f'<li aria-current="page">{E(page["title"])}</li></ol></nav>'
-    css=['answer-styles.css?v=20260909-warm','site-system.css?v=20260924-reviewed-details-1','site-header.css?v=20260926-toolbar-readability-1','connected-study.css?v=20260919-pill-labels','full-image-viewer.css?v=20260905-viewport','artwork-details.css?v=20260909-warm','artwork-actions.css?v=20260909-warm','topic-artwork-details.css?v=20260908-exclusive-final','resource-cards.css?v=20260909-warm','site-search.css?v=20260927-search-label-1','jesus-journey.css?v=20260923-chapter-cards-1']
+    css=['answer-styles.css?v=20260909-warm','site-system.css?v=20260924-reviewed-details-1','site-header.css?v=20260926-toolbar-readability-1','connected-study.css?v=20260919-pill-labels','full-image-viewer.css?v=20260905-viewport','artwork-details.css?v=20260909-warm','artwork-actions.css?v=20260909-warm','topic-artwork-details.css?v=20260908-exclusive-final','resource-cards.css?v=20260909-warm','site-search.css?v=20260927-search-label-1','jesus-journey.css?v=20260927-compact-reflection-1']
     head=''.join(f'<link rel="stylesheet" href="/{x}">' for x in css)
     url=ORIGIN+page['url']
     page_art=[registry[b['art']] for s in page['sections'] for b in s.get('blocks',[]) if isinstance(b,dict) and 'art' in b and b['art'] in registry and registry[b['art']].get('asset') and registry[b['art']].get('reviewed')]

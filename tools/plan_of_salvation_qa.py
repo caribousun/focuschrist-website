@@ -2,7 +2,7 @@
 import copy, hashlib, json, sys
 from pathlib import Path
 from urllib.parse import urlsplit, parse_qs
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, NavigableString
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
 PAGE='answers/plan-of-salvation.html'
@@ -15,6 +15,8 @@ def check_structure(text):
  assert [a.get('href') for a in s.select('.jj-local-nav a')]==['#'+x for x in CHAPTERS], 'Chapter navigation mismatch'
  assert len(s.select('main .pos-study-unit'))==20, 'Twenty substantive study units required'
  assert len({x.get('id') for x in s.select('[id]')})==len(s.select('[id]')), 'Duplicate IDs'
+ for group in s.select('.fc-study-visual-sources'):
+  assert not any(isinstance(n,NavigableString) and '·' in str(n) for n in group.children), 'Source pills must not contain loose separator text'
  sources={x['id']:x for x in d['sources']}
  for chapter in d['chapters']:
   for unit in chapter['units']:
@@ -81,7 +83,7 @@ def check_art(s, review=None):
 
 
 def selftest(text):
- mutants=[text.replace('id="before-birth"','id="missing"',1),text.replace('data-exclusive-artwork="pos-belong"','data-exclusive-artwork="pos-purpose"',1),text.replace('plan-of-salvation-hero-mobile.webp','missing-mobile.webp',1),text.replace('class="fc-resource-grid"','class="unbounded"',1),text.replace('id=p22-p26','id=p22-p25')]
+ mutants=[text.replace('<p class="fc-study-visual-sources">','<p class="fc-study-visual-sources"> · ',1),text.replace('id="before-birth"','id="missing"',1),text.replace('data-exclusive-artwork="pos-belong"','data-exclusive-artwork="pos-purpose"',1),text.replace('plan-of-salvation-hero-mobile.webp','missing-mobile.webp',1),text.replace('class="fc-resource-grid"','class="unbounded"',1),text.replace('id=p22-p26','id=p22-p25')]
  ref=check_structure(text).select_one('.pos-owned-reference');image=ref.select_one('img')['src']
  mutants.extend([text.replace(image,'/assets/heroes/home.webp',1),text.replace('class="fc-resource-card pos-owned-reference"','class="fc-resource-card pos-owned-reference fc-resource-card__play"',1)])
  for i,mutant in enumerate(mutants):
@@ -99,7 +101,7 @@ def selftest(text):
    try:check_art(soup,changed)
    except AssertionError:continue
    raise AssertionError('Artwork mutation accepted '+str(path))
- print('PLAN QA SELFTEST PASS: seven structure/source/reference and five artwork/identity mutations rejected' if '--structure-only' not in sys.argv else 'PLAN structure mutation tests PASS; artwork mutations not run')
+ print('PLAN QA SELFTEST PASS: eight structure/source/reference and five artwork/identity mutations rejected' if '--structure-only' not in sys.argv else 'PLAN structure mutation tests PASS; artwork mutations not run')
 
 def check():
  text=(ROOT/PAGE).read_text(encoding='utf-8');s=check_structure(text)

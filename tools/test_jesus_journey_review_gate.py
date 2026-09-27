@@ -61,7 +61,7 @@ class EncodingTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'Corrupted visitor-facing text'):
                 builder.scripture(['nt/john/1',corrupt,'35-42'])
         self.assertIn('John 1:35\u201342',builder.scripture(['nt/john/1','John 1:35\u201342','35-42']))
-    def test_rendered_visible_navigation_and_source_separator(self):
+    def test_rendered_visible_navigation_and_source_pills(self):
         with tempfile.TemporaryDirectory() as folder:
             root=Path(folder)
             parent=root/'answers/jesus-christ-latter-day-saint-beliefs.html';parent.parent.mkdir()
@@ -73,7 +73,8 @@ class EncodingTests(unittest.TestCase):
             with patch.object(builder,'ROOT',root):output=builder.render(page,{'scene':art},False)
         self.assertIn('Begin the study \u2193',output)
         self.assertIn('Open study \u2192',output)
-        self.assertIn('</a> \u00b7 <a',output)
+        self.assertIn('<p class="fc-study-visual-sources">'+builder.scripture(ref)+' '+builder.scripture(ref)+'</p>',output)
+        self.assertNotIn('</a> \u00b7 <a',output)
         for corrupt in ('\u00c2\u00b7','\u00e2\u2020','\ufffd'):self.assertNotIn(corrupt,output)
 
 if __name__=='__main__':unittest.main()

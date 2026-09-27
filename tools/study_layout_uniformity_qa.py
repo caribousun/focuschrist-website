@@ -27,7 +27,7 @@ def declarations(filename, selector):
             for selectors, body in blocks if selector in [s.strip() for s in selectors.split(",")]]
 
 
-JOURNEY_VERSION = '20260923-chapter-cards-1'
+JOURNEY_VERSION = '20260927-compact-reflection-1'
 PAGE_BOUNDARY_VERSIONS = {'church-history.css': '20260923-page-borders-1',
                           'missionary.css': '20260923-enrichment-finish-1'}
 
@@ -63,6 +63,40 @@ def journey_errors(css, consumers, expected):
         if len(hrefs) != 1 or any(parse_qs(urlsplit(href).query).get('v') != [JOURNEY_VERSION] for href in hrefs):
             errors.append(page + ': journey stylesheet must load once with current version ' + JOURNEY_VERSION)
     return errors
+
+
+def reflection_errors(css):
+    """Keep collapsed native reflection controls compact without constraining open content."""
+    clean = re.sub(r'/\*.*?\*/', '', css, flags=re.S)
+    blocks = re.findall(r'([^{}]+)\{([^{}]*)\}', clean)
+    required = {
+        '.jj-main details.jj-reflection': {'padding': '2px16px'},
+        '.jj-main details.jj-reflection>summary': {'box-sizing': 'border-box', 'min-height': '44px', 'align-content': 'center', 'margin': '0'},
+        '.jj-main details.jj-reflection[open]': {'padding-bottom': '14px'},
+        '.jj-main details.jj-reflection[open]>summary': {'margin-bottom': '8px'},
+    }
+    errors = []
+    for selector, expected in required.items():
+        rules = [dict((k, compact(v)) for k, v in re.findall(r'([\w-]+)\s*:\s*([^;]+)', body))
+                 for selectors, body in blocks if compact(selector) in [compact(x) for x in selectors.split(',')]]
+        if not rules:
+            errors.append('Missing compact reflection rule: ' + selector)
+        for prop, value in expected.items():
+            values = [r[prop] for r in rules if prop in r]
+            if not values or any(v != value for v in values):
+                errors.append('Reflection must retain ' + selector + ' ' + prop + ':' + value)
+    for selectors, body in blocks:
+        if 'details.jj-reflection' in selectors and re.search(r'(?:^|;)\s*(?:height|max-height|overflow|display)\s*:', body):
+            errors.append('Reflection content must not be fixed-height, hidden or clipped')
+    return errors
+
+
+def reflection_fixture_tests(css):
+    assert not reflection_errors(css)
+    for old, new in [('padding:2px 16px', 'padding:18px 0'), ('min-height:44px;align-content:center', 'min-height:20px;align-content:center')]:
+        assert reflection_errors(css.replace(old, new))
+    assert reflection_errors(css + '@media(max-width:700px){.jj-main details.jj-reflection{padding:18px 0}}')
+    assert reflection_errors(css + '.jj-main details.jj-reflection[open]{max-height:48px;overflow:hidden}')
 
 
 def journey_fixture_tests():
@@ -290,7 +324,10 @@ for page, stylesheet, selector in (
         ('missionary.html', 'missionary.css', '.fc-missionary-page main')):
     ERRORS.extend(page_wrap_errors((ROOT / page).read_text(encoding='utf-8'),
                                   (ROOT / stylesheet).read_text(encoding='utf-8'), stylesheet, selector))
+ERRORS.extend(reflection_errors((ROOT / 'jesus-journey.css').read_text(encoding='utf-8')))
 if '--self-test' in sys.argv:
+    reflection_fixture_tests((ROOT / 'jesus-journey.css').read_text(encoding='utf-8'))
+    print('Reflection fixtures passed: compact valid; excessive padding, undersized target, phone override and clipped expansion rejected')
     journey_fixture_tests()
     print('Journey formatting fixtures passed: full-width valid, caps/override/stale/missing/extra/duplicate/missing-h1-wrap/missing-h2-wrap rejected')
     boundary_fixture_tests(*boundary_inputs)
