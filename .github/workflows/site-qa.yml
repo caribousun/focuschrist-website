@@ -344,7 +344,9 @@ jobs:
           NODE_PATH="$RUNNER_TEMP/focuschrist-dom-qa/node_modules" node tools/pioneer_related_study_runtime_qa.js
 
       - name: Validate live production Ask gate
-        run: node --check tools/live_production_ask_qa.js
+        run: |
+          node --check tools/live_production_ask_qa.js
+          node --test tools/live_production_ask_contract.test.cjs
 
       - name: Validate live AI response matrix
         run: |

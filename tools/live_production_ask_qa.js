@@ -179,6 +179,27 @@ async function waitForExactDeployment() {
     throw new Error('Production did not converge to the tested release: ' + lastMismatches.join(', '));
 }
 
+// Version keys come from the checked-out release, just like exact deployment
+// verification. Keep controller identity mandatory without a second stale pin.
+function assertCurrentRootControllers(liveHtml, rootPath, requiredPaths, expectedHtml = fs.readFileSync(rootPath, 'utf8')) {
+    const expected = localScriptReferences(expectedHtml);
+    const actual = localScriptReferences(liveHtml);
+    for (const controller of requiredPaths) {
+        const expectedUrls = expected.filter(ref => ref.path === controller).map(ref => ref.url).sort();
+        const actualUrls = actual.filter(ref => ref.path === controller).map(ref => ref.url).sort();
+        assert(expectedUrls.length > 0 && expectedUrls.every(url => /[?&]v=[^&]+/.test(url)),
+            rootPath + ': release root missing versioned controller ' + controller);
+        assert(JSON.stringify(actualUrls) === JSON.stringify(expectedUrls),
+            rootPath + ': production does not load the release controller ' + controller);
+    }
+}
+
+function assertRootControllerContracts(live) {
+    assertCurrentRootControllers(live['ask.html'], 'ask.html', ['reviewed-ask-knowledge.js', 'ask-experience.js']);
+    assertCurrentRootControllers(live['pioneers.html'], 'pioneers.html', ['pioneer-experience.js']);
+    assertCurrentRootControllers(live['church-history.html'], 'church-history.html', ['church-history-experience.js']);
+}
+
 function requireSubstantive(match, label, expected) {
     assert(match && typeof match.answer === 'string', label + ' did not match reviewed knowledge');
     assert(match.answer.trim().split(/\s+/).length >= 40, label + ' answer is not substantive');
@@ -188,19 +209,11 @@ function requireSubstantive(match, label, expected) {
     return match;
 }
 
-(async function () {
+async function main() {
     const live = await waitForExactDeployment();
     console.log('Exact production dependency graph verified: ' + ASSETS.length + ' assets / ' + CANONICAL_TARGETS.length + ' canonical cache keys');
 
-    assert(live['ask.html'].includes('reviewed-ask-knowledge.js?v=20260910-holy-ghost-subject-2')
-        && live['ask.html'].includes('ask-experience.js?v=20260923-sensitive-welcome-1'),
-        'production Ask HTML does not load the .15 controllers');
-    assert(localScriptReferences(live['pioneers.html']).some(reference =>
-        reference.path === 'pioneer-experience.js' && CANONICAL_TARGETS.some(target =>
-            target.path === reference.path && target.url === reference.url)),
-        'production Pioneer HTML does not load the current controller');
-    assert(live['church-history.html'].includes('church-history-experience.js?v=20260903-16'),
-        'production Church History HTML does not load the .15 controller');
+    assertRootControllerContracts(live);
 
     global.window = {};
     vm.runInThisContext(live['reviewed-ask-knowledge.js'], {
@@ -339,7 +352,10 @@ function requireSubstantive(match, label, expected) {
     }
 
     console.log('LIVE PRODUCTION ASK QA PASS: exact deployed assets and critical conversations verified');
-})().catch((error) => {
+}
+
+module.exports = { assertCurrentRootControllers, assertRootControllerContracts, discoverCriticalAssets };
+if (require.main === module) main().catch((error) => {
     console.error(error);
     process.exit(1);
 });
