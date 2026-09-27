@@ -235,7 +235,7 @@ def main() -> int:
         church_links = [href for href in parser.links if href.startswith("https://www.churchofjesuschrist.org/")]
         if len(church_links) < 8:
             errors.append(f"{relative}: expected at least 8 official scripture or Church links, found {len(church_links)}")
-        concise = json.loads((ROOT/'docs/good-shepherd-concise-copy-review-20260923.json').read_text(encoding='utf8'))
+        concise = json.loads((ROOT/'docs/good-shepherd-concise-copy-review-20260927.json').read_text(encoding='utf8'))
         concise_ok = relative == concise['page'] and [' '.join(parts) for parts in parser.captions] == [e['parser_text'] for e in concise['records']]
         if relative == concise['page'] and not concise_ok:
             errors.append(f'{relative}: concise captions differ from owner-requested independent review')

@@ -15,6 +15,14 @@ from topic_artwork_uniqueness_qa import family_name
 ROOT = Path(__file__).resolve().parents[1]
 BASELINE = '0cf872b8194e22f6aeb2659be34d63ccd7e2b908'
 MANIFEST = ROOT / 'docs/home-presentation-references-20260923.json'
+# Wyatt's 2026-09-27 human-voice review permits these two prose-only changes.
+# Keep the original artwork, record structure, links and every other byte guarded.
+REVIEWED_DETAIL_COPY = {
+    'This gathering places scripture study, prayer, conversation, and sacred art around Jesus Christ.':
+        'An open book and a quiet conversation invite us to spend time learning of Jesus Christ.',
+    "The Savior's place at the table keeps the purpose clear.":
+        'As you read, consider what the passage helps you understand about Him.',
+}
 
 
 def parse(text):
@@ -62,6 +70,8 @@ def purpose_row_errors(css):
 
 def check(home, baseline, manifest, root=ROOT):
     errors = []
+    for before, after in REVIEWED_DETAIL_COPY.items():
+        baseline = baseline.replace(before, after)
     nodes, old = list(parse(home).walk()), list(parse(baseline).walk())
     protected = {
         'approved hero': lambda n: n.has('fc-home-hero'),

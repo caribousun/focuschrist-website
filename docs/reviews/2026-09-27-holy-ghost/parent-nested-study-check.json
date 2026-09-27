@@ -1,0 +1,16 @@
+{
+  "reviewer": "Albert",
+  "date": "2026-09-27",
+  "surface": "actual local in-app browser, phone 390x844",
+  "page": "answers/holy-ghost.html",
+  "artwork": "The Father, the Son, and the Spirit",
+  "checks": {
+    "full_size_image_opened_and_closed": true,
+    "scripture_reader_opened_with_matthew_3_verses_13_through_17": true,
+    "close_scripture_returns_focus_to_source_link_in_artwork": true,
+    "continue_lesson_closes_all_dialogs": true,
+    "continue_lesson_focus_target": "topic-art-reading-0",
+    "continue_lesson_focus_text": "Who is the Holy Ghost?"
+  },
+  "limits": "Local candidate interaction evidence; not public deployment or owner aesthetic acceptance."
+}

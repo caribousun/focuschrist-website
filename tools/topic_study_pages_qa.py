@@ -9,6 +9,8 @@ from abrahamic_covenant_qa import check as check_covenant, CHAPTERS as COVENANT_
 ROOT=Path(__file__).resolve().parents[1]
 COVENANT='answers/abrahamic-covenant.html'
 FEATURED_JESUS='answers/jesus-christ-latter-day-saint-beliefs.html'
+FEATURED_HOLY_GHOST='answers/holy-ghost.html'
+from holy_ghost_qa import check as check_holy_ghost
 def read(p):
  d=Document();d.feed(p.read_text(encoding="utf-8"));return list(d.root.walk())
 errors=[]
@@ -22,7 +24,7 @@ foundational={
 answer_paths=sorted((ROOT/'answers').glob('*.html'))
 for answer_path in answer_paths:
  answer_nodes=read(answer_path)
- body_class='fc-jesus-journey' if answer_path.relative_to(ROOT).as_posix()==COVENANT else 'fc-topic-page'
+ body_class='fc-jesus-journey' if answer_path.relative_to(ROOT).as_posix() ==COVENANT else 'fc-topic-page'
  assert any(n.tag=='body' and n.has(body_class) for n in answer_nodes),answer_path.name+': shared responsive topic-page contract'
 study_destinations={
  'birth-of-christ.html',
@@ -30,11 +32,12 @@ study_destinations={
  'joseph-smith-likeness.html', 'church-history.html', 'pioneers.html',
  'come-follow-me.html',
 }
-expected=({p.relative_to(ROOT).as_posix() for p in answer_paths}-{FEATURED_JESUS})|study_destinations
+expected=({p.relative_to(ROOT).as_posix() for p in answer_paths}-{FEATURED_JESUS,FEATURED_HOLY_GHOST})|study_destinations
 assert len(links)==28, 'Keep the owner-requested seven by four topic grid'
 featured=[n for n in nodes if n.has('fc-settle-featured')]
-assert [(n.attrs.get('href'),n.text().strip()) for n in featured]==[('atonement.html','The Atonement of Jesus Christ'),(FEATURED_JESUS,'Jesus Christ')], 'Exact Atonement and Jesus featured destinations required'
-assert featured[0].parent is featured[1].parent and featured[0].parent.has('fc-answers-featured-pair'), 'Featured destinations must remain paired'
+assert [(n.attrs.get('href'),n.text().strip()) for n in featured]==[('atonement.html','The Atonement of Jesus Christ'),(FEATURED_JESUS,'Jesus Christ'),(FEATURED_HOLY_GHOST,'Holy Ghost')], 'Exact Atonement, Jesus and Holy Ghost featured destinations required'
+assert all(n.parent is featured[0].parent for n in featured) and featured[0].parent.has('fc-answers-featured-pair'), 'Featured destinations must share their existing group'
+check_holy_ghost()  # Exact eight chapters and sixteen reviewed body originals; featured separately.
 assert len(links)==len(expected), 'topic directory must not duplicate destinations'
 assert {n.attrs['href'] for n in links}==expected, 'topic grid must cover every Answer and enriched study destination'
 for link in links:

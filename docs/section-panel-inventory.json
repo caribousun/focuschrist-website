@@ -11,6 +11,7 @@
     "answers/faith-in-jesus-christ-during-trials.html",
     "answers/god-our-heavenly-father.html",
     "answers/grief-and-faith.html",
+    "answers/holy-ghost.html",
     "answers/jesus-christ-latter-day-saint-beliefs.html",
     "answers/look-unto-me-doctrine-and-covenants-6-36.html",
     "answers/melchizedek-priesthood-restoration.html",
@@ -509,7 +510,7 @@
       "reason": "Disclosure group; individual details receive surface."
     },
     "fc-resource-card": {
-      "count": 126,
+      "count": 130,
       "pages": [
         "about.html",
         "answers.html",
@@ -522,6 +523,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -559,7 +561,7 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-resource-card__body": {
-      "count": 126,
+      "count": 130,
       "pages": [
         "about.html",
         "answers.html",
@@ -572,6 +574,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -609,7 +612,7 @@
       "reason": "Resource copy wrapper; parent card owns surface."
     },
     "fc-resource-card__image": {
-      "count": 126,
+      "count": 130,
       "pages": [
         "about.html",
         "answers.html",
@@ -622,6 +625,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -659,7 +663,7 @@
       "reason": "Image container; preserve letterboxing and fit."
     },
     "fc-resource-card__kind": {
-      "count": 126,
+      "count": 130,
       "pages": [
         "about.html",
         "answers.html",
@@ -672,6 +676,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -709,7 +714,7 @@
       "reason": "Text label within resource."
     },
     "fc-resource-card__play": {
-      "count": 92,
+      "count": 96,
       "pages": [
         "about.html",
         "answers.html",
@@ -721,6 +726,7 @@
         "answers/divorce-and-faith.html",
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -755,7 +761,7 @@
       "reason": "Play control, not panel."
     },
     "fc-resource-card__source": {
-      "count": 125,
+      "count": 129,
       "pages": [
         "about.html",
         "answers.html",
@@ -768,6 +774,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -1092,9 +1099,10 @@
       "reason": "Artwork image; preserve framing."
     },
     "jj-reflection": {
-      "count": 145,
+      "count": 149,
       "pages": [
         "answers/abrahamic-covenant.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "jesus-christ/before-bethlehem.html",
         "jesus-christ/miracles-and-compassion.html",
@@ -1887,6 +1895,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -2034,6 +2043,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -2295,6 +2305,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",
@@ -3067,7 +3078,7 @@
       ]
     },
     ".fc-resource-card": {
-      "count": 126,
+      "count": 130,
       "pages": [
         "about.html",
         "answers.html",
@@ -3080,6 +3091,7 @@
         "answers/faith-in-jesus-christ-during-trials.html",
         "answers/god-our-heavenly-father.html",
         "answers/grief-and-faith.html",
+        "answers/holy-ghost.html",
         "answers/jesus-christ-latter-day-saint-beliefs.html",
         "answers/look-unto-me-doctrine-and-covenants-6-36.html",
         "answers/melchizedek-priesthood-restoration.html",

@@ -7,15 +7,19 @@ const out=process.env.HEADER_QA_OUTPUT||path.resolve(root,'../gallery-qa/header-
 function capture(){
  const rect=el=>{if(!el)return null;const r=el.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,width:r.width,height:r.height}};
  const style=el=>{const s=getComputedStyle(el);return Object.fromEntries(['fontFamily','fontSize','fontWeight','letterSpacing','color','backgroundColor','borderColor','textAlign'].map(k=>[k,s[k]]))};
+ const trigger=document.querySelector('.fc-search-trigger'),label=document.querySelector('.fc-search-trigger-label');
+ const labelVisible=label&&getComputedStyle(label).display!=='none';
+ const labelRange=document.createRange();if(label)labelRange.selectNodeContents(label);
+ const search={rect:rect(trigger),labelVisible,labelLines:labelVisible?labelRange.getClientRects().length:0};
  const nav=document.querySelector('.nav-links'),nr=rect(nav);
- return {width:innerWidth,nav:nr,navDisplay:getComputedStyle(nav).display,offset:nr.left+nr.width/2-innerWidth/2,logo:rect(document.querySelector('.nav-logo')),menu:rect(document.querySelector('.hamburger-wrap')),
+ return {search,width:innerWidth,nav:nr,navDisplay:getComputedStyle(nav).display,offset:nr.left+nr.width/2-innerWidth/2,logo:rect(document.querySelector('.nav-logo')),menu:rect(document.querySelector('.hamburger-wrap')),
  typography:[...document.querySelectorAll('.nav-logo,.nav-links a,.fc-page-intro h1,.fc-page-intro .fc-eyebrow,.fc-page-intro-copy')].map(style),
  hero:[...document.querySelectorAll('[data-hero-viewer],.fc-page-intro,.cfm-hero,.gc-page-opening,.fc-gallery-intro')].map(el=>({rect:rect(el),style:style(el)}))};
 }
 (async()=>{const browser=await chromium.launch({channel:'chrome',headless:true}),results=[],failures=[];try{
-for(const width of [1920,1366,390,1021,1100]){
+for(const width of [1920,1366,1280,1201,1200,390,1021,1100]){
  const page=await browser.newPage({viewport:{width,height:1000}});
- for(const source of (width===1021||width===1100?['/art.html']:pages)){
+ for(const source of ([1021,1100,1200,1201,1280].includes(width)?['/art.html','/watch.html']:pages)){
   await page.goto(base+source,{waitUntil:'domcontentloaded'});await page.evaluate(()=>document.fonts.ready);
   // Shared enhancements append styles after DOMContentLoaded; let them settle.
   await page.waitForTimeout(500);
@@ -25,6 +29,8 @@ for(const width of [1920,1366,390,1021,1100]){
    const override=await page.addStyleTag({content:'@media(min-width:1021px){body.fc-site .nav[data-focuschrist-header="standard"]{display:flex!important;}}'});
    const original=await page.evaluate(capture);await override.evaluate(el=>el.remove());
    const errors=[];
+   if(centered.search.labelVisible&&centered.search.labelLines!==1)errors.push('Search label wraps');
+   if(width>=1021&&centered.nav.right>centered.search.rect.left)errors.push('Navigation overlaps Search');
    if(width>=1021&&Math.abs(centered.offset)>1)errors.push('Navigation not centered');
    if(width>=1021&&(centered.logo.right>centered.nav.left||centered.nav.right>centered.menu.left))errors.push('Header controls overlap');
    if(JSON.stringify(centered.typography)!==JSON.stringify(original.typography))errors.push('Typography/colors changed');

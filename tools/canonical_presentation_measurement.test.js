@@ -11,7 +11,9 @@ function inspect(html){
     for(const node of w.document.querySelectorAll('*')){
         node.getBoundingClientRect=()=>box(node);
         node.getClientRects=()=>[box(node)];
-        Object.defineProperty(node,'scrollWidth',{value:999,configurable:true});
+        Object.defineProperty(node,'scrollWidth',{value:Number(node.dataset.scrollWidth || 999),configurable:true});
+        Object.defineProperty(node,'scrollHeight',{value:Number(node.dataset.scrollHeight || 60),configurable:true});
+        Object.defineProperty(node,'clientHeight',{value:Number(node.dataset.clientHeight || 60),configurable:true});
         Object.defineProperty(node,'clientWidth',{value:300});
     }
     Object.defineProperty(w,'innerWidth',{value:320});
@@ -27,3 +29,7 @@ assert.equal(inspect('<a href="#study" aria-hidden="true" data-right="350">Paint
 assert.equal(inspect('<details><summary>Month</summary><a href="#study" data-right="350">Closed content</a></details>').clippedControls.length,0,'Native closed details content is not visible');
 assert.equal(inspect('<details open><summary>Month</summary><a href="#study" data-right="350">Open content</a></details>').clippedControls.length,1,'Open details content remains measured');
 console.log('Canonical presentation measurement PASS: painted controls, real text clipping, image-only overflow, closed/open disclosures.');
+
+assert.equal(inspect('<input id="userInput" value="Long question" data-scroll-width="999">').clippedControls.length,1,'Single-line question clipping must fail even without page overflow');
+assert.equal(inspect('<textarea id="userInput" data-scroll-width="300" data-scroll-height="180" data-client-height="60">Long question</textarea>').clippedControls.length,1,'Hidden textarea rows must fail even without page overflow');
+assert.equal(inspect('<textarea id="userInput" data-scroll-width="300" data-scroll-height="180" data-client-height="180">Long question</textarea>').clippedControls.length,0,'Fully visible growing question passes');

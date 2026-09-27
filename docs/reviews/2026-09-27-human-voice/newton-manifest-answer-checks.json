@@ -1,0 +1,158 @@
+{
+  "manifest_changes": [
+    [
+      "docs/five-picture-placement-part1.json/placements/11/alt",
+      "Two sisters giving a question time during a quiet journey",
+      "Two women talking on a bench aboard a boat"
+    ],
+    [
+      "docs/exclusive-artwork-ownership.json/replacements/32/alt",
+      "Two sisters giving a question time during a quiet journey",
+      "Two women talking on a bench aboard a boat"
+    ]
+  ],
+  "checks": [
+    {
+      "command": "python tools/answer_study_parser_qa.py",
+      "exit_code": 0,
+      "output": "ANSWER STUDY PARSER QA PASS: inline scripture and nested emphasis preserve exact prose order\n"
+    },
+    {
+      "command": "python tools/topic_study_pages_qa.py",
+      "exit_code": 0,
+      "output": "COVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2\u20133 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\nTOPIC STUDY PAGES QA PASS: 28 distinct pill destinations; complete openings, same-page hero return, and source-preserving migrations\n"
+    },
+    {
+      "command": "python tools/topic_inline_scripture_qa.py",
+      "exit_code": 0,
+      "output": "TOPIC INLINE SCRIPTURE QA PASS: Home, all19 topic destinations and all4 Featured Art bodies, 737 scripture links, canonical chapters, exact verse selections, no nested anchors\n"
+    },
+    {
+      "command": "python tools/topic_artwork_qa.py",
+      "exit_code": 0,
+      "output": "TOPIC ARTWORK QA PASS: 21 contextual placements, individually approved assets, exact sources, responsive full-image viewing\n"
+    },
+    {
+      "command": "python tools/topic_body_picture_qa.py",
+      "exit_code": 0,
+      "output": "\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/families-neighbor-garden-800.webp\",\n        \"section\": \"reading-177\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/families-shared-responsibility-800.webp\",\n        \"section\": \"reading-189\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/families-child-heard-800.webp\",\n        \"section\": \"reading-213\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/topics/family-study-800.webp\",\n        \"section\": \"reading-222\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  },\n  {\n    \"page\": \"answers/why-latter-day-saints-build-temples.html\",\n    \"distinct\": 5,\n    \"sections\": 5,\n    \"images\": [\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-purpose-reading-800.webp\",\n        \"section\": \"reading-104\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-preparation-notes-800.webp\",\n        \"section\": \"reading-170\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-daily-promises-800.webp\",\n        \"section\": \"reading-206\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-generations-craft-800.webp\",\n        \"section\": \"reading-215\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"../assets/page-art/exclusive/temple-covenant-help-800.webp\",\n        \"section\": \"reading-245\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  },\n  {\n    \"page\": \"general-conference.html\",\n    \"distinct\": 5,\n    \"sections\": 5,\n    \"images\": [\n      {\n        \"src\": \"assets/page-art/exclusive/conference-message-notes-800.webp\",\n        \"section\": \"reading-120\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-study-prayer-800.webp\",\n        \"section\": \"reading-201\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-response-together-800.webp\",\n        \"section\": \"reading-551\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-return-question-800.webp\",\n        \"section\": \"reading-578\",\n        \"native\": [\n          800,\n          533\n        ]\n      },\n      {\n        \"src\": \"assets/page-art/exclusive/conference-care-followthrough-800.webp\",\n        \"section\": \"reading-628\",\n        \"native\": [\n          800,\n          533\n        ]\n      }\n    ],\n    \"issues\": []\n  }\n]\n"
+    },
+    {
+      "command": "python tools/five_picture_manifest_qa.py",
+      "exit_code": 1,
+      "output": "Traceback (most recent call last):\n  File \"C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-review\\tools\\five_picture_manifest_qa.py\", line 60, in <module>\n    assert title.text().strip()==i['title'] and i['description'] in cap.text()\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+    },
+    {
+      "command": "python tools/topic_artwork_details_qa.py",
+      "exit_code": 0,
+      "output": "TOPIC ARTWORK DETAILS QA PASS: 228 adapter pictures, 3 existing detail pictures, 12 expanded illustration panels, 23 page dependencies\n"
+    },
+    {
+      "command": "python tools/bible_together_qa.py --self-test",
+      "exit_code": 0,
+      "output": "BIBLE TOGETHER QA PASS: 7 preserved originals, 13 reviewed additions, 2/3/3/5 scene distribution, local lesson returns and 12 paired readings\n"
+    },
+    {
+      "command": "python tools/abrahamic_covenant_qa.py",
+      "exit_code": 0,
+      "output": "COVENANT QA PASS: 12 reviewed originals, 6 Christ, 10 pictured chapters, 2\u20133 paragraph rhythm, five scripture divisions, exact Ask return and 28 topic slots.\n"
+    },
+    {
+      "command": "python tools/focused_answers_qa.py",
+      "exit_code": 0,
+      "output": "FOCUSED ANSWERS QA PASS: 28 own destinations/openings, two complete priesthood studies, 853 unchanged baseline images; editorial and rendered review remain separate\n"
+    },
+    {
+      "command": "node tools/focused_answers_runtime_qa.js",
+      "exit_code": 0,
+      "output": "FOCUSED ANSWERS RUNTIME PASS: both legacy history bookmarks, no redirect loops, own hero/lesson Ask returns, external return rejection\n"
+    },
+    {
+      "command": "node --check topic-artwork-details.js",
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "command": "python tools/answer_study_qa.py",
+      "exit_code": 0,
+      "output": "ANSWER STUDY QA PASS: all 22 permanent Answers have contextual media, navigation, reflection and continuation\n"
+    },
+    {
+      "command": "python tools/answer_video_uniqueness_qa.py",
+      "exit_code": 0,
+      "output": "ANSWER VIDEO UNIQUENESS PASS: 61 video cards, no Watch or cross-Answer repetition\n"
+    },
+    {
+      "command": "python tools/global_video_uniqueness_qa.py",
+      "exit_code": 0,
+      "output": "GLOBAL VIDEO UNIQUENESS PASS: 91 reviewed videos, one themed placement each\n"
+    },
+    {
+      "command": "python tools/five_picture_manifest_qa.py (after synchronized captions)",
+      "exit_code": 0,
+      "output": "FIVE PICTURE MANIFEST QA PASS: 63 additional figures, exact assets/captions/sources, portable intrinsic checks and full viewers\n"
+    }
+  ],
+  "final_manifest_changes": [
+    [
+      "docs/five-picture-placement-part1.json/placements/11/description",
+      "Two sisters walk together while one shares a question she has not resolved. They do not need to force an answer; patient companionship can help faith endure while understanding grows.",
+      "Two women sit together on a bench aboard a boat, one speaking while the other listens. Sometimes it helps to talk with someone who will listen patiently as we work through a question."
+    ],
+    [
+      "docs/five-picture-placement-part1.json/placements/11/alt",
+      "Two sisters giving a question time during a quiet journey",
+      "Two women talking on a bench aboard a boat"
+    ],
+    [
+      "docs/five-picture-placement-part2.json/placements/12/description",
+      "A woman listens closely to a conference message with her notebook ready. She is not merely collecting words; she is listening for a witness of Jesus Christ that she can carry into prayer and daily life.",
+      "A woman listens to a conference message with her notebook ready. As you listen, what would you like to remember about Jesus Christ?"
+    ],
+    [
+      "docs/five-picture-placement-part2.json/placements/13/description",
+      "Four friends gather around an open book in conversation. Their shared study offers a picture of how a conference message can lead to faithful action and encouragement from one another.",
+      "Four friends gather around an open book in conversation. Reading together gives them time to listen, ask questions, and encourage one another."
+    ],
+    [
+      "docs/five-picture-placement-part2.json/placements/28/description",
+      "Three friends gather around a source, listening carefully and giving each person room for a sincere question about belief or discipleship.",
+      "Three friends study together, listening carefully and making room for questions about faith."
+    ],
+    [
+      "docs/five-picture-placement-root.json/placements/4/description",
+      "A quiet lane leads toward an interpretive early nineteenth-century farmhouse. The scene recalls rural Harmony, Pennsylvania, where Oliver Cowdery sought assurance and received the Lord's tender command to look to Christ in every thought.",
+      "A quiet lane leads toward a farmhouse in this imagined early nineteenth-century setting. The scene recalls rural Harmony, Pennsylvania, where Oliver Cowdery sought assurance and received the Lord's tender command to look to Christ in every thought."
+    ],
+    [
+      "docs/exclusive-artwork-ownership.json/replacements/28/description",
+      "A quiet lane leads toward an interpretive early nineteenth-century farmhouse. The scene recalls rural Harmony, Pennsylvania, where Oliver Cowdery sought assurance and received the Lord's tender command to look to Christ in every thought.",
+      "A quiet lane leads toward a farmhouse in this imagined early nineteenth-century setting. The scene recalls rural Harmony, Pennsylvania, where Oliver Cowdery sought assurance and received the Lord's tender command to look to Christ in every thought."
+    ],
+    [
+      "docs/exclusive-artwork-ownership.json/replacements/32/description",
+      "Two sisters walk together while one shares a question she has not resolved. They do not need to force an answer; patient companionship can help faith endure while understanding grows.",
+      "Two women sit together on a bench aboard a boat, one speaking while the other listens. Sometimes it helps to talk with someone who will listen patiently as we work through a question."
+    ],
+    [
+      "docs/exclusive-artwork-ownership.json/replacements/32/alt",
+      "Two sisters giving a question time during a quiet journey",
+      "Two women talking on a bench aboard a boat"
+    ],
+    [
+      "docs/exclusive-artwork-ownership.json/replacements/39/description",
+      "A woman listens closely to a conference message with her notebook ready. She is not merely collecting words; she is listening for a witness of Jesus Christ that she can carry into prayer and daily life.",
+      "A woman listens to a conference message with her notebook ready. As you listen, what would you like to remember about Jesus Christ?"
+    ],
+    [
+      "docs/exclusive-artwork-ownership.json/replacements/40/description",
+      "Four friends gather around an open book in conversation. Their shared study offers a picture of how a conference message can lead to faithful action and encouragement from one another.",
+      "Four friends gather around an open book in conversation. Reading together gives them time to listen, ask questions, and encourage one another."
+    ],
+    [
+      "docs/exclusive-artwork-ownership.json/replacements/71/description",
+      "Three friends gather around a source, listening carefully and giving each person room for a sincere question about belief or discipleship.",
+      "Three friends study together, listening carefully and making room for questions about faith."
+    ]
+  ]
+}

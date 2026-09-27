@@ -1,0 +1,28 @@
+{
+  "scope": "Public HTML and dynamically inserted media records; static/editorial regression, not a guarantee every awkward sentence can be recognized.",
+  "covered": {
+    "public_html": 122,
+    "captions": 769,
+    "expanded_details": 147,
+    "resource_descriptions": 113,
+    "media_introductions": 15,
+    "alt_attributes": 1944,
+    "hero_records": "actual initializer including Object.assign; full data shape checked",
+    "gallery": "published title and alt fields"
+  },
+  "fixtures": {
+    "python": 6,
+    "node": 3,
+    "all_pass": true
+  },
+  "preserved_uncertainty_examples": [
+    "Luke does not tell us how Simon felt.",
+    "The exact date of this visit is not known.",
+    "The death masks do not establish hair, eye, or skin color.",
+    "No recorded account describes an appearance of Christ at North Platte.",
+    "Book of Mormon geography has not been established.",
+    "The prayer was not recorded word for word."
+  ],
+  "workflow": "existing media voice step now runs both regression suites",
+  "current_copy": "Fermi owns repair; full guard failures recorded in newton-media-voice-findings.txt until latestcopy checked"
+}

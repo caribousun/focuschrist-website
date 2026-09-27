@@ -1,0 +1,10 @@
+{
+  "owner_directive": "Wyatt, 2026-09-27: remove system-wide production-note tone while preserving scripture and actual historical uncertainty.",
+  "scope": "Only baseline commission detail paragraph; exact tree equality remains required.",
+  "replacements": [
+    {
+      "before": "Jesus walks among His Apostles as they listen. This imagined scene invites us to read how He prepared the Twelve to preach and minister in Matthew 10. After His Resurrection, He gave the charge to teach all nations recorded in Matthew 28. The picture brings us into the study; the scriptures give us the accounts.",
+      "after": "Jesus walks among His Apostles as they listen. Read how He prepared the Twelve to preach and minister in Matthew 10. Then turn to Matthew 28 and His charge, after the Resurrection, to teach all nations."
+    }
+  ]
+}

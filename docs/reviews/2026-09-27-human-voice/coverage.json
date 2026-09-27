@@ -1,0 +1,607 @@
+[
+  {
+    "page": "404.html",
+    "reviewer": "Albert",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "about.html",
+    "reviewer": "Albert",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers.html",
+    "reviewer": "Albert",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/aaronic-priesthood-restoration.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/abrahamic-covenant.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/are-latter-day-saints-christian.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/bible-and-book-of-mormon-together.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/death-of-a-child.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/divorce-and-faith.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/faith-in-jesus-christ-during-trials.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/god-our-heavenly-father.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/grief-and-faith.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/jesus-christ-latter-day-saint-beliefs.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/melchizedek-priesthood-restoration.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/prayer-and-personal-revelation.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/restored-church-of-jesus-christ.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/settle-this-in-your-hearts.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/stand-forever.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/what-happens-after-death.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/what-is-eternal-marriage.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/what-is-the-book-of-mormon.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/who-was-joseph-smith.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/why-families-are-important.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "answers/why-latter-day-saints-build-temples.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "art-gallery.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "art-study/be-still.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "art-study/suffer-the-little-children.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "art-study/the-good-shepherd.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "art-study/the-living-christ.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "art.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "ask.html",
+    "reviewer": "Albert",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "atonement.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "birth-of-christ.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "book-of-mormon-evidences.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "church-history.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "come-follow-me.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "general-conference.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "google3fa84a4b37862f36.html",
+    "reviewer": "Albert",
+    "review": "verification token only; no prose"
+  },
+  {
+    "page": "index.html",
+    "reviewer": "Albert",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/before-bethlehem.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/miracles-and-compassion.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/mortal-ministry.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/barren-fig.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/birds-lilies.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/blind-guides.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/bridegroom.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/budding-fig.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/children-marketplace.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/closed-door.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/divided-house.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/doorkeeper.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/faithful-servant.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/friend-midnight.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/good-samaritan.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/good-shepherd.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/grain-wheat.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/great-supper.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/growing-seed.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/hearing.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/hen-chicks.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/hidden-treasure.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/householder.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/king-war.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/kingdom.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/laborers-vineyard.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/lamp.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/leaven.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/lost-coin.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/lost-sheep.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/mercy.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/minas.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/mote-beam.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/mustard-seed.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/neighbor.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/net.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/new-patch.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/new-wineskins.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/parent-gifts.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/pearl.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/persistent-widow.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/pharisee-publican.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/prodigal-son.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/returning-spirit.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/rich-fool.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/rich-man-lazarus.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/royal-wedding.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/salt.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/servant-duty.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/settle-adversary.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/sheep-goats.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/sheep-sabbath.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/sower.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/stewardship.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/strong-man.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/talents.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/ten-virgins.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/thief-night.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/tower-builder.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/tree-fruit.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/two-debtors.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/two-sons.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/unjust-steward.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/unmerciful-servant.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/vine-branches.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/watchful-servants.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/watchfulness.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/wedding-places.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/wheat-tares.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/wicked-tenants.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/wise-foolish-builders.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/parables/woman-childbirth.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/redeemer-and-risen-lord.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/restoration-and-today.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/risen-savior-in-the-book-of-mormon.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "jesus-christ/teachings-and-parables.html",
+    "reviewer": "Fermi",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "joseph-smith-likeness.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "missionary.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "pioneers.html",
+    "reviewer": "Newton",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "search.html",
+    "reviewer": "Albert",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  },
+  {
+    "page": "watch.html",
+    "reviewer": "Albert",
+    "review": "source prose reviewed; browser interactions sampled separately"
+  }
+]

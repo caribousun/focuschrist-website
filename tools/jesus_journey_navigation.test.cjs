@@ -125,7 +125,7 @@ test('Birth preserves all twelve bookmarks, narrative opening pictures and reade
  const route='birth-of-christ.html';const s=setup('',false,route);
  try{
   const cs=chapters(s);assert.equal(cs.length,12);assert(cs.every(c=>c.matches('[data-connected-study].jj-chapter')&&!c.hidden));
-  const nav=s.d.querySelector('.jj-local-nav');assert.equal(nav.nextElementSibling,cs[0]);assert(nav.previousElementSibling.textContent.startsWith('Ancient faces, clothing'));
+  const nav=s.d.querySelector('.jj-local-nav');assert.equal(nav.nextElementSibling,cs[0]);assert.equal(nav.previousElementSibling.tagName,'P');assert.equal(nav.previousElementSibling.textContent,'Follow the scriptural promises and witnesses surrounding the birth of Jesus Christ. As you read, notice what each witness tells us and what questions remain.');
   for(const c of cs.slice(0,-1)){let node=c.querySelector('h2').nextElementSibling,paragraphs=0;while(node&&node.tagName!=='FIGURE'){paragraphs+=node.tagName==='P'?1:node.querySelectorAll('p').length;node=node.nextElementSibling;}assert(node&&paragraphs<=2,c.id+' picture within two opening paragraphs');}
   assert.equal(s.d.querySelector('#mary-and-elisabeth figure').dataset.birthArt,'08-annunciation');
   assert.equal(s.d.querySelector('#temple-witnesses figure').dataset.birthArt,'15-simeon');

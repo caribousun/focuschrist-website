@@ -89,7 +89,7 @@ const decode = x => x.replaceAll('&amp;','&').replaceAll('&#39;',"'");
 const pills = [...pillBlock[1].matchAll(/<a[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(m => [decode(m[1]),decode(m[2])]);
 const foundational = new Set(['god-our-heavenly-father.html','restored-church-of-jesus-christ.html']);
 const expectedPills = new Set(fs.readdirSync(path.join(root,'answers'))
-  .filter(file => file.endsWith('.html') && file !== 'jesus-christ-latter-day-saint-beliefs.html')
+  .filter(file => file.endsWith('.html') && !['jesus-christ-latter-day-saint-beliefs.html','holy-ghost.html'].includes(file))
   .map(file => 'answers/' + file));
 const studyDestinations = ['birth-of-christ.html','general-conference.html','book-of-mormon-evidences.html',
   'joseph-smith-likeness.html','church-history.html','pioneers.html','come-follow-me.html'];
@@ -99,7 +99,7 @@ assert.match(html, /class="fc-button fc-settle-featured" href="atonement.html"/,
 const featuredPair = html.match(/<div class="fc-answers-featured-pair">([\s\S]*?)<\/div>/);
 assert.ok(featuredPair, 'featured study pair required');
 const featuredLinks = [...featuredPair[1].matchAll(/<a[^>]*href="([^"]+)"[^>]*>([^<]+)<\/a>/g)].map(m => [decode(m[1]),decode(m[2])]);
-assert.deepEqual(featuredLinks, [['atonement.html','The Atonement of Jesus Christ'],['answers/jesus-christ-latter-day-saint-beliefs.html','Jesus Christ']], 'exact Atonement and Jesus featured destinations and labels');
+assert.deepEqual(featuredLinks, [['atonement.html','The Atonement of Jesus Christ'],['answers/jesus-christ-latter-day-saint-beliefs.html','Jesus Christ'],['answers/holy-ghost.html','Holy Ghost']], 'exact Atonement, Jesus and Holy Ghost featured destinations and labels');
 assert.deepEqual(new Set(pills.map(([href]) => href)),expectedPills,'all discovered Answers and enriched study destinations are covered');
 function check(h,label) {
   const active = h.header.querySelectorAll('a[aria-current]');
@@ -118,7 +118,7 @@ for (const [href,label] of pills.filter(([href]) =>
   assert.equal(h.desktop.children.length,desktopSize,'desktop generated topic must not duplicate');
   assert.equal(h.menu.children.length,size,'hash changes must not duplicate generated topic links');check(h,label);
 }
-for (const [file,label] of [['god-our-heavenly-father.html','God'],['restored-church-of-jesus-christ.html','The Restored Church'],['prayer-and-personal-revelation.html','Prayer & Revelation'],['death-of-a-child.html','Death of a Child'],['divorce-and-faith.html','Divorce'],['look-unto-me-doctrine-and-covenants-6-36.html','Look Unto Me']]) {
+for (const [file,label] of [['holy-ghost.html','Holy Ghost'],['god-our-heavenly-father.html','God'],['restored-church-of-jesus-christ.html','The Restored Church'],['prayer-and-personal-revelation.html','Prayer & Revelation'],['death-of-a-child.html','Death of a Child'],['divorce-and-faith.html','Divorce'],['look-unto-me-doctrine-and-covenants-6-36.html','Look Unto Me']]) {
   const h=createHarness('/answers/'+file);h.context.initCurrentStudyNavigation();check(h,label);
 }
 const h=createHarness('/answers.html','#quiet-prayer-title');h.context.initCurrentStudyNavigation();check(h,'Prayer & Revelation');

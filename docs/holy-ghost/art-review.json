@@ -1,0 +1,599 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-27",
+  "owner_page": "/answers/holy-ghost.html",
+  "status": "Technical source and image review; draft candidate, not owner approval or publication.",
+  "counts": {
+    "body_originals": 16,
+    "body_christ": 8,
+    "separate_hero": 1
+  },
+  "artworks": {
+    "hg-baptism": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/baptism-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/baptism-800.webp",
+      "title": "The Father, the Son, and the Spirit",
+      "alt": "Jesus looks upward beside John in the Jordan as a dove descends above Him.",
+      "caption": "Explore and studyThe Father, the Son, and the SpiritAt the Jordan, Matthew records the Father’s voice, the Son’s baptism, and the Spirit descending like a dove. Read the three witnesses together.Matthew 3:13-17",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/3?lang=eng",
+          "verses": "13-17"
+        }
+      ],
+      "includes_christ": true,
+      "review_status": "pass",
+      "original": "local-archive/baptism-v2-original.png",
+      "original_sha256": "a42b545a36a10b361c0f8c3fb596ff7b0a63841946e38081e8758e8a1274a8e8",
+      "asset_sha256": "16c09554d28a053cb39209c92a9fb330e6b88c714ce5a12f1348c87acf425e40",
+      "thumbnail_sha256": "e42af691455575743470f2065eb70d89572e28fb8fef5a461d827e48b28866a3",
+      "owner_approved": false,
+      "historical_limits": "Matthew records Jesus in the water, the Spirit descending like a dove, and the Father speaking. The event distinguishes their witness. The dove is a sign, not a claim that the Holy Ghost is a bird.",
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "a42b545a36a10b361c0f8c3fb596ff7b0a63841946e38081e8758e8a1274a8e8",
+        "reviewers": [
+          "Albert",
+          "focus_review"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-elijah": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/elijah-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/elijah-800.webp",
+      "title": "A voice after the storm",
+      "alt": "Elijah holds his mantle over his face at the entrance to a mountain cave.",
+      "caption": "Explore and studyA voice after the stormAfter wind, earthquake, and fire, Elijah hears a quiet voice. He covers his face and listens at the cave entrance.1 Kings 19:9-13",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/19?lang=eng",
+          "verses": "9-13"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "original": "local-archive/elijah-full.png",
+      "original_sha256": "a758b0bdafb71911e2e7542470d474e5ded1d0626631b657940ce465ac2edc6c",
+      "asset_sha256": "048233aacd816dd4769d836032b2e544b43efa0af7e7f5913bd865aa671a020c",
+      "thumbnail_sha256": "cc9e3cf6a24c8aed67100a8a0a4b8e29fe5816593a9674dcd823aad01fce7479",
+      "owner_approved": false,
+      "historical_limits": "The text calls this the Lord’s voice. Use as a scriptural pattern of quiet divine communication, not proof that every OT voice is explicitly identified as the Holy Ghost.",
+      "identity_reference": null,
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "a758b0bdafb71911e2e7542470d474e5ded1d0626631b657940ce465ac2edc6c",
+        "reviewers": [
+          "Albert",
+          "Fermi"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-bezalel": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/bezalel-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/bezalel-800.webp",
+      "title": "Wisdom for the work",
+      "alt": "Bezalel concentrates on carving timber with a chisel and wooden mallet.",
+      "caption": "Explore and studyWisdom for the workExodus connects the Spirit of God with the wisdom and skill Bezalel needs for his work. Careful craftsmanship can serve a sacred purpose.Exodus 31:1-5",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/31?lang=eng",
+          "verses": "1-5"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "original": "local-archive/bezalel-full.png",
+      "original_sha256": "ee9ab4ec316d802c03f4ac2e9e62bd44c26bc0d1e8cbf6a17cd6515476cb9720",
+      "asset_sha256": "fb544abc6ec6b9572f1cf6029384512c5ca31256c3abf72ab6dbfa9c563e22e5",
+      "thumbnail_sha256": "9d01286a299f55cec25c723835b3a04c8d2c0fb5e18c3006f7bc501465d322cc",
+      "owner_approved": false,
+      "historical_limits": "The Lord fills Bezalel with the Spirit of God in wisdom and skill for tabernacle work. Exact tools/clothing are period-informed interpretation; no modern implements.",
+      "identity_reference": null,
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "ee9ab4ec316d802c03f4ac2e9e62bd44c26bc0d1e8cbf6a17cd6515476cb9720",
+        "reviewers": [
+          "Albert",
+          "Fermi"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-nicodemus": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/nicodemus-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/nicodemus-800.webp",
+      "title": "Born of water and the Spirit",
+      "alt": "Jesus speaks with Nicodemus by lamplight at night.",
+      "caption": "Explore and studyBorn of water and the SpiritNicodemus comes by night. Jesus invites him to understand a new birth through water and the Spirit.John 3:1-8",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/3?lang=eng",
+          "verses": "1-8"
+        }
+      ],
+      "includes_christ": true,
+      "review_status": "pass",
+      "original": "local-archive/nicodemus-original.png",
+      "original_sha256": "77c966eccd63705e8534bca41254f6ba455ff33c5971f6b2ab146b92e23ba92f",
+      "asset_sha256": "620012d9a14c4b1aa3b3b5d7b4e003e16e90a89c692de4b29d8203a3475a08f2",
+      "thumbnail_sha256": "6f77a684a32d0304d1cf5dbc35dc9da58bb53b66b40db214a52c459a318c79cd",
+      "owner_approved": false,
+      "historical_limits": "Nicodemus comes by night. Jesus teaches birth of water and Spirit; exact room and gestures are artistic staging.",
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "77c966eccd63705e8534bca41254f6ba455ff33c5971f6b2ab146b92e23ba92f",
+        "reviewers": [
+          "Albert",
+          "focus_review"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-nazareth": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/nazareth-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/nazareth-800.webp",
+      "title": "The Spirit of the Lord is upon me",
+      "alt": "Jesus stands reading an open scroll as seated synagogue listeners attend to Him.",
+      "caption": "Explore and studyThe Spirit of the Lord is upon meIn Nazareth, Jesus reads Isaiah and declares the scripture fulfilled. His words connect the Spirit’s anointing with His mission of deliverance.Luke 4:16-21",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/4?lang=eng",
+          "verses": "16-21"
+        }
+      ],
+      "includes_christ": true,
+      "review_status": "pass",
+      "original": "local-archive/nazareth-original.png",
+      "original_sha256": "0ddd7b5b3c9ea14b4b5afeb365e5e20d728a953006525ee18838239e564e2438",
+      "asset_sha256": "3f9265da35417f8ab86d828f03c8f2f63da68963893c791b625419b24d703825",
+      "thumbnail_sha256": "ffa0ff61cc938a3c7cc8972ee12b90b73b07c5d1eb71a703f4ef0e0f8c65fc2d",
+      "owner_approved": false,
+      "historical_limits": "Jesus reads Isaiah and announces fulfillment. Scripture records scroll/book and standing to read; synagogue architecture is contextual interpretation.",
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "0ddd7b5b3c9ea14b4b5afeb365e5e20d728a953006525ee18838239e564e2438",
+        "reviewers": [
+          "Albert",
+          "focus_review"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-sent-twelve": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/sent-twelve-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/sent-twelve-800.webp",
+      "title": "Help to speak when it matters",
+      "alt": "Jesus sits outdoors teaching a gathered group of attentive disciples.",
+      "caption": "Explore and studyHelp to speak when it mattersJesus prepares the Twelve for opposition. He promises help from the Spirit of their Father when their witness brings them before others.Matthew 10:16-20",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/10?lang=eng",
+          "verses": "16-20"
+        }
+      ],
+      "includes_christ": true,
+      "review_status": "pass",
+      "original": "local-archive/sent-twelve-v2-original.png",
+      "original_sha256": "4a276379f8187a70c2ce750065a18c6deea98e08e396fd5507d71a381d5013e8",
+      "asset_sha256": "814d955e1062f0b10303b98d853ec15d6b754a1f30b542ebeb23cc6ee0e39ab8",
+      "thumbnail_sha256": "9609d941299431f72caa783b4c9385d74fa953e1032869afffddf1072a3f5d05",
+      "owner_approved": false,
+      "historical_limits": "Jesus promises the Spirit of the Father will help disciples facing persecution. Do not imply ordinary preparation is unnecessary or depict a modern trial as this event.",
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "4a276379f8187a70c2ce750065a18c6deea98e08e396fd5507d71a381d5013e8",
+        "reviewers": [
+          "Albert",
+          "focus_review"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-comforter": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/comforter-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/comforter-800.webp",
+      "title": "The promise of a Comforter",
+      "alt": "Jesus teaches His disciples in a lamplit room during His farewell teaching.",
+      "caption": "Explore and studyThe promise of a ComforterJesus promises a teacher and Comforter who will help His disciples remember His words. They will not have to face the coming days without divine help.John 14:15-27",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/14?lang=eng",
+          "verses": "15-27"
+        }
+      ],
+      "includes_christ": true,
+      "review_status": "pass",
+      "original": "local-archive/comforter-original.png",
+      "original_sha256": "6e6b503125794ff850e91b716927934b8b4362f1681756d66718f4fd8c5a4b8e",
+      "asset_sha256": "efb08a5bc4817338b13477b0b9e5d9275946e350aaa2ff593655192e8afa4c32",
+      "thumbnail_sha256": "bd002f6ffa846d5f4cf14520929bd58375289a16e01df76be029e525ef59fb58",
+      "owner_approved": false,
+      "historical_limits": "Jesus promises the Holy Ghost will teach and bring His words to remembrance. Do not label this scene Pentecost or add visible Spirit rays as history.",
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "6e6b503125794ff850e91b716927934b8b4362f1681756d66718f4fd8c5a4b8e",
+        "reviewers": [
+          "Albert",
+          "focus_review"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-risen-commission": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/risen-commission-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/risen-commission-800.webp",
+      "title": "Peace and a commission",
+      "alt": "The risen Jesus stands among His disciples and speaks to them.",
+      "caption": "Explore and studyPeace and a commissionOn resurrection evening, Jesus offers peace and commissions His disciples. John records His words about receiving the Holy Ghost.John 20:19-23",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng",
+          "verses": "19-23"
+        }
+      ],
+      "includes_christ": true,
+      "review_status": "pass",
+      "original": "local-archive/risen-commission-original.png",
+      "original_sha256": "e03e67809f3a79a8c98a378de13207240893a6081515ce162a2a1d292dcdf079",
+      "asset_sha256": "0d618e2c0d9c15388c1ff258717c79fcc43615f4b4fe2e76acebd1e4da5988ed",
+      "thumbnail_sha256": "8fd3b70600d51a6d3ceb89d571621abf8aa6e7f19733c5b4b0200ea8f8f38fcb",
+      "owner_approved": false,
+      "historical_limits": "John records Jesus showing hands and side, commissioning disciples, breathing on them and speaking of receiving the Holy Ghost. Exact mechanics should not be embellished; no visible breath cloud or Spirit person.",
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "e03e67809f3a79a8c98a378de13207240893a6081515ce162a2a1d292dcdf079",
+        "reviewers": [
+          "Albert",
+          "focus_review"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance.",
+        "limits": "Image-left hand is foreshortened: wrist mark visible; central palm is not fully visible. Image-right palm and wrist marks visible. Occluded surfaces are not asserted verified."
+      }
+    },
+    "hg-pentecost": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/pentecost-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/pentecost-800.webp",
+      "title": "A witness that people can understand",
+      "alt": "Visitors in Jerusalem listen with surprise as a disciple speaks to them.",
+      "caption": "Explore and studyA witness that people can understandAt Pentecost, people from different places hear in languages they understand. The witness points them toward Jesus Christ.Acts 2:5-11",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/2?lang=eng",
+          "verses": "1-8"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "original": "local-archive/pentecost-full.png",
+      "original_sha256": "9815137d29519d95e70f173815125e27e27a6dd04fb1c18f1e1e30e29b5b99c9",
+      "asset_sha256": "8e522f518326aeaa82d5b57f26a22a5d63b8aefcdb383225992480a15c39bf8e",
+      "thumbnail_sha256": "aa3b0ea345e21b94e5c76bde9184664eee9ab9e87e97e133f77ec6239a789154",
+      "owner_approved": false,
+      "historical_limits": "Acts records filling with the Holy Ghost, languages understood by hearers and signs. Focus on intelligible witness; do not collapse the indoor arrival and later crowd into one literal instant.",
+      "identity_reference": null,
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "9815137d29519d95e70f173815125e27e27a6dd04fb1c18f1e1e30e29b5b99c9",
+        "reviewers": [
+          "Albert",
+          "Fermi"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-philip": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/philip-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/philip-800.webp",
+      "title": "Go near and listen",
+      "alt": "Philip runs toward a chariot while the Ethiopian traveler reads a scroll.",
+      "caption": "Explore and studyGo near and listenThe Spirit directs Philip toward the chariot. He approaches, listens to the traveler reading Isaiah, and asks a question before teaching.Acts 8:29-30",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/8?lang=eng",
+          "verses": "26-35"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "original": "local-archive/philip-full.png",
+      "original_sha256": "2d8ea51241bf2865dc597cc81f7b4dfb5e28a2dae37f9e3035c186451408dbd2",
+      "asset_sha256": "ee800938909c054fb0e261ce0dd2ee767190a79eb7af8ceda7046eb79ec261a5",
+      "thumbnail_sha256": "3269fcb6855a4f2c388ceb4a25e7c508d423a802428bf3a910d742f12f8f4864",
+      "owner_approved": false,
+      "historical_limits": "Angel directs road; Spirit tells Philip to approach; official reads Isaiah and asks help. Do not confuse angel with Holy Ghost or invent Ethiopian court costume certainty.",
+      "identity_reference": null,
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "2d8ea51241bf2865dc597cc81f7b4dfb5e28a2dae37f9e3035c186451408dbd2",
+        "reviewers": [
+          "Albert",
+          "Fermi"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-nephi": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/nephi-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/nephi-800.webp",
+      "title": "A heart made willing",
+      "alt": "Young Nephi kneels beside a tent with his head bowed in prayer.",
+      "caption": "Explore and studyA heart made willingNephi remembers crying to the Lord and having his heart softened. The account gives us his response without describing every feeling that accompanied it.1 Nephi 2:16",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/2?lang=eng",
+          "verses": "16"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "original": "local-archive/nephi-full.png",
+      "original_sha256": "465f9d1ceb71a3ca445746e015c4f9ec65cdec7eb665ed84a1580debd2c6ed9f",
+      "asset_sha256": "e1e40e5bb543a3a4150657a2673920b005d2801e3c3bfe577759d5338fb42763",
+      "thumbnail_sha256": "2ad7f44347bfb53648cc3c418e90af2c8e4c2825d386f6c3c7ebf8734b93248c",
+      "owner_approved": false,
+      "historical_limits": "Nephi says he cried unto the Lord and his heart was softened. His exact age and prayer location are not specified; do not depict a voice/person appearing.",
+      "identity_reference": null,
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "465f9d1ceb71a3ca445746e015c4f9ec65cdec7eb665ed84a1580debd2c6ed9f",
+        "reviewers": [
+          "Albert",
+          "Fermi"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-nephite-prayer": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/nephite-prayer-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/nephite-prayer-800.webp",
+      "title": "They desire the Holy Ghost",
+      "alt": "The risen Jesus kneels with His hands on the ground a little apart from a praying gathering.",
+      "caption": "Explore and studyThey desire the Holy GhostJesus returns as His disciples pray, then prays for them. Their desire to receive the Holy Ghost belongs within their faith in Him.3 Nephi 19:9-24",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/19?lang=eng",
+          "verses": "9-24"
+        }
+      ],
+      "includes_christ": true,
+      "review_status": "pass",
+      "original": "local-archive/nephite-prayer-original.png",
+      "original_sha256": "648703ef8c9a7ad0d4afcd96249fa8e0b231ca61b42992baaedba7b5ef65d5de",
+      "asset_sha256": "0c660e747f7c0767572eff08c7606550646e8cffe1c3c8704f6d9ebcd818b373",
+      "thumbnail_sha256": "5140baa24010dab648ab85a8c46ee23ed13f3a788746a2bc0600d2478f37f750",
+      "owner_approved": false,
+      "historical_limits": "The disciples desire the Holy Ghost; Jesus returns and prays. Keep phases distinct: do not place Jesus at their earlier baptism before His arrival. No unsupported Maya/Aztec temple identification.",
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "648703ef8c9a7ad0d4afcd96249fa8e0b231ca61b42992baaedba7b5ef65d5de",
+        "reviewers": [
+          "Albert",
+          "focus_review"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-nephite-disciples": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/nephite-disciples-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/nephite-disciples-800.webp",
+      "title": "He entrusts His disciples",
+      "alt": "The risen Jesus rests His hand on a chosen disciple’s shoulder as they look at one another.",
+      "caption": "Explore and studyHe entrusts His disciplesJesus touches His chosen disciples. Moroni preserves His instruction giving them authority to confer the Holy Ghost.3 Nephi 18:36-37",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/18?lang=eng",
+          "verses": "36-37"
+        }
+      ],
+      "includes_christ": true,
+      "review_status": "pass",
+      "original": "local-archive/nephite-disciples-original.png",
+      "original_sha256": "8dd69971414336be88c9d19479693ff2509b9d713206e27cc9387ffdfa82d89b",
+      "asset_sha256": "804ddeb466b40b44bfd88e0a1c19cc0f699cac41359265615424f06680325220",
+      "thumbnail_sha256": "9905b6625a2608f0904bba8fc9e57e7fc63c9de8679e86e7dadce5664fac796b",
+      "owner_approved": false,
+      "historical_limits": "Verses36–37 record Jesus touching chosen disciples and giving power to give the Holy Ghost. Corroborate the instruction with Moroni2:1–3; no temple ordinance staging or invented ritual detail.",
+      "identity_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "8dd69971414336be88c9d19479693ff2509b9d713206e27cc9387ffdfa82d89b",
+        "reviewers": [
+          "Albert",
+          "focus_review"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-mind-heart": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/mind-heart-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/mind-heart-800.webp",
+      "title": "In your mind and in your heart",
+      "alt": "A woman pauses over open scriptures and a notebook during personal study.",
+      "caption": "Explore and studyIn your mind and in your heartA present-day study scene illustrates an application of the counsel given to Oliver Cowdery: bring thought, prayer, and a willingness to learn together.Doctrine and Covenants 8:1-5",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/8?lang=eng",
+          "verses": "1-5"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "original": "local-archive/mind-heart-full.png",
+      "original_sha256": "d4489d095ed87f9b7b3203ed91b47bb8af77378600bf95d017a0c34ec54cff6a",
+      "asset_sha256": "40d456c42e27079a4751d2b27b8dac293a2b2cd61ca1336d3c29881de2b81668",
+      "thumbnail_sha256": "301eb711cb3bd58c54cde43a12a56e41c3b88c8662ae52ba6693cb950419d42e",
+      "owner_approved": false,
+      "historical_limits": "Contemporary application of the revelation to Oliver Cowdery, not a supposed portrait of Oliver. This avoids unverified historical likeness; prose must still name the original recipient and1829 setting.",
+      "identity_reference": null,
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "d4489d095ed87f9b7b3203ed91b47bb8af77378600bf95d017a0c34ec54cff6a",
+        "reviewers": [
+          "Albert",
+          "Fermi"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-adam": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/adam-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/adam-800.webp",
+      "title": "Born of the Spirit",
+      "alt": "Adam kneels beside the water with bowed head after his baptism.",
+      "caption": "Explore and studyBorn of the SpiritThe book of Moses records Adam’s baptism and spiritual rebirth. The landscape, clothing, and kneeling posture are artistic choices.Moses 6:64-66",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/6?lang=eng",
+          "verses": "64-66"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "original": "local-archive/adam-full.png",
+      "original_sha256": "7adbee34dd4424ddd7e997da450b305190683adc58440312add4ed943496c8a5",
+      "asset_sha256": "e5d5eb9776ae29b62f5c495eaec00997b388ca526f319f3fd07d7073e4ed4679",
+      "thumbnail_sha256": "7d597b465001150a338225869dd4b480aeb42cff25a7193b417fed60f216f42f",
+      "owner_approved": false,
+      "historical_limits": "Restored scripture narrates Adam’s baptism and the Spirit descending. This is scriptural sacred history; geography, date and costume specifics unknown. Do not confuse with Enoch’s own baptism.",
+      "identity_reference": null,
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "7adbee34dd4424ddd7e997da450b305190683adc58440312add4ed943496c8a5",
+        "reviewers": [
+          "Albert",
+          "Fermi"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    },
+    "hg-confirmation": {
+      "owner": "/answers/holy-ghost.html",
+      "asset": "assets/page-art/holy-ghost/confirmation-full.webp",
+      "thumbnail": "assets/page-art/holy-ghost/confirmation-800.webp",
+      "title": "Receive the Holy Ghost",
+      "alt": "A seated man receives a confirmation as a priesthood holder rests both hands on his head.",
+      "caption": "Explore and studyReceive the Holy GhostAfter baptism, confirmation includes the laying on of hands for the gift of the Holy Ghost. Receiving that gift continues in daily discipleship.Doctrine and Covenants 20:41",
+      "sources": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/20?lang=eng",
+          "verses": "41"
+        }
+      ],
+      "includes_christ": false,
+      "review_status": "pass",
+      "original": "local-archive/confirmation-v2-original.png",
+      "original_sha256": "6fdec1caaf66646ece2a3cffdcfe108e800cc4473726d44a1ee9feaca6f111ab",
+      "asset_sha256": "8d41825fe1f98774635c075cf3c8031f3adfc8284d4fb30ff200c07f9a3d8d3d",
+      "thumbnail_sha256": "377592d11b9345d5ce0bbd14b16b79c64f86967e4839ac1300ade88deb7406d8",
+      "owner_approved": false,
+      "historical_limits": "Modern ordinance illustration, not a named historical event. Cross-reference Article of Faith1:4 and official handbook confirmation instructions before final ceremonial staging.",
+      "identity_reference": null,
+      "independent_review": {
+        "review_status": "pass",
+        "sha256": "6fdec1caaf66646ece2a3cffdcfe108e800cc4473726d44a1ee9feaca6f111ab",
+        "reviewers": [
+          "Albert",
+          "Fermi"
+        ],
+        "scope": "Actual original pixels inspected for natural anatomy, photographic appearance, story-appropriate gaze and atmosphere. Approved references used where mapped; no claim of archaeological likeness or owner aesthetic acceptance."
+      }
+    }
+  },
+  "hero": {
+    "id": "holy-ghost-hero",
+    "selected_source": {
+      "filename": "assets/heroes/holy-ghost-hero-original.png",
+      "sha256": "72bf046f03d9429aeabc1814032b1023e298814092ca54e4d23ce4344112a6e8",
+      "width": 2170,
+      "height": 725,
+      "bytes": 2829225
+    },
+    "deliveries": [
+      {
+        "filename": "assets/heroes/holy-ghost-hero-full.webp",
+        "sha256": "9fbec0999a13c64ff064c446702839d1762ef469d74c9d7870103545054b8a8a",
+        "width": 2170,
+        "height": 725,
+        "bytes": 1947320
+      },
+      {
+        "filename": "assets/heroes/holy-ghost-hero-1600.webp",
+        "sha256": "0f366756beeaf7b15081bee29bcf120ca8b7e8014e08f724ec001eaa5a36f20a",
+        "width": 1600,
+        "height": 535,
+        "bytes": 347504
+      },
+      {
+        "filename": "assets/heroes/holy-ghost-hero-800.webp",
+        "sha256": "09b6df1e82693a2547af5f1b495f7635fca492a7dfaf2614f41c937eeb150fff",
+        "width": 800,
+        "height": 267,
+        "bytes": 115192
+      }
+    ],
+    "lossless_full_verified": true,
+    "mobile_composition_variant": {
+      "role": "Mobile composition variant of existing thematic hero; not an 18th original",
+      "source": {
+        "filename": "assets/heroes/holy-ghost-hero-mobile-original.png",
+        "sha256": "31531af6279df7b6eacc12d8dbd037a2f369335eed25d79812d27df71b606c1b",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "delivery": {
+        "filename": "assets/heroes/holy-ghost-hero-mobile.webp",
+        "sha256": "5346a04a77a1acc3b3bfe2c03e16da9ecbd100e855851d1bf83c5c87ba603a5b",
+        "dimensions": [
+          1254,
+          1254
+        ]
+      },
+      "actual_pixels_reviewed": true,
+      "owner_approval": false,
+      "visual_findings": "Christ face recognizable against actual approved Home reference and landscape hero; mutual gaze, warm expression, coherent visible hands/feet, full crowns and sandal feet with breathing room. Seated thematic conversation remains same study idea. No visible anatomy failure. Not a named recorded event.",
+      "public_manifest_body_hash_check": {
+        "artworks": 16,
+        "mismatches": []
+      },
+      "public_manifest_variant_binding": "No mobile variant field found in current public manifest; parent should add separate hero composition variant without changing 16 body plus 1 hero count.",
+      "reviewers": [
+        "Albert",
+        "focus_review"
+      ],
+      "counted_as_additional_original": false
+    }
+  },
+  "global_limits": [
+    "Scriptural record is distinct from creative staging.",
+    "No visible human Holy Ghost has been invented.",
+    "Natural lowered gaze while praying or reading is intentional.",
+    "Thematic hero is a devotional illustration inspired by John15:26, not a named recorded encounter."
+  ],
+  "original_archive_note": "Selected original PNGs are retained in the private local production archive; deployed full WebP images are lossless equivalents. Original PNGs are not public site dependencies."
+}

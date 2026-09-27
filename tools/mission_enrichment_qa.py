@@ -24,6 +24,10 @@ def tree(n):
     return n.tag,tuple(sorted(n.attrs.items())),tuple(x if isinstance(x,str) else tree(x) for x in n.content)
 
 def errors(text,baseline,root=ROOT):
+    approved=json.loads((ROOT/'docs/mission-copy-overlay-20260927.json').read_text(encoding='utf-8'))
+    for change in approved['replacements']:
+        assert baseline.count(change['before']) == 1, 'Reviewed Mission baseline wording missing or duplicated'
+        baseline=baseline.replace(change['before'],change['after'])
     out=[];nodes=parse(text);old=parse(baseline)
     figures=[n for n in nodes if n.tag=='figure'];records=[n for n in nodes if 'data-missionary-detail-content'in n.attrs]
     for label,predicate,count in [('figures',lambda n:n.tag=='figure',7),('detail records',lambda n:'data-missionary-detail-content'in n.attrs,9),('hero',lambda n:n.has('fc-visual-hero'),1),('opening',lambda n:n.has('fc-page-intro'),1)]:
@@ -72,6 +76,9 @@ class MissionEnrichment(unittest.TestCase):
         cls.page=(ROOT/'missionary.html').read_text(encoding='utf-8')
         cls.baseline=subprocess.check_output(['git','show',BASELINE+':missionary.html'],cwd=ROOT).decode('utf-8')
     def test_actual(self):self.assertEqual(errors(self.page,self.baseline),[])
+    def test_unreviewed_caption_change(self):
+        broken=self.page.replace('Then turn to Matthew 28 and His charge', 'Then ignore Matthew 28 and His charge')
+        self.assertNotEqual(broken,self.page);self.assertIn('Original detail records changed/missing/duplicated',errors(broken,self.baseline))
     def test_missing_image(self):
         broken=self.page.replace('seventy-return-960.webp','missing-fixture.webp')
         self.assertNotEqual(broken,self.page);self.assertTrue(errors(broken,self.baseline))

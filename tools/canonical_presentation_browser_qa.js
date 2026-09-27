@@ -47,7 +47,10 @@ function inspectPresentation() {
         }
         const cropX=['hidden','clip'].includes(style.overflowX) && textRects.some(box=>box.left<rect.left-3 || box.right>rect.right+3);
         const cropY=['hidden','clip'].includes(style.overflowY) && textRects.some(box=>box.top<rect.top-3 || box.bottom>rect.bottom+3);
-        // Inputs scroll their editable text by design; inspect their outer box only.
+        // Study-question composers promise room for the complete editable question.
+        // Native input text is not a DOM text node, so measure its scroll box too.
+        const composer = ['userInput', 'followupInput'].includes(node.id) && Boolean(node.value);
+        const clippedComposer = composer && (node.scrollWidth > node.clientWidth + 3 || node.scrollHeight > node.clientHeight + 3);
         const croppedText = !['INPUT','TEXTAREA','SELECT'].includes(node.tagName) && (cropX || cropY);
         const outside = rect.left < -3 || rect.right > innerWidth + 3;
         const clippedBy=[];
@@ -57,7 +60,7 @@ function inspectPresentation() {
             const clipY=['hidden','clip'].includes(parentStyle.overflowY) && (rect.top<box.top-3 || rect.bottom>box.bottom+3);
             if(clipX || clipY)clippedBy.push({...identity(parent),clipX,clipY});
         }
-        return croppedText || outside || clippedBy.length ? [{...identity(node),rect:{left:rect.left,right:rect.right,width:rect.width,height:rect.height},croppedText,outside,clippedBy,textBounds:textRects.map(box=>({left:box.left,right:box.right,top:box.top,bottom:box.bottom}))}] : [];
+        return croppedText || clippedComposer || outside || clippedBy.length ? [{...identity(node),rect:{left:rect.left,right:rect.right,width:rect.width,height:rect.height},croppedText,clippedComposer,outside,clippedBy,textBounds:textRects.map(box=>({left:box.left,right:box.right,top:box.top,bottom:box.bottom}))}] : [];
     });
     const images = [...document.images].filter(rendered);
     return {

@@ -169,7 +169,7 @@ def main() -> int:
                 errors.append(f"{relative}: generic Home hero fallback returned")
         for marker in (
             'href="../art-study-page.css?v=20260908-image-heroes"',
-            ('src="../hero-details.js?v=20260919-focused-answers-1"' if intrinsic else 'src="../hero-details.js?v=20260919-focused-answers-1"'),
+            ('src="../hero-details.js?v=20260927-human-media-voice-1"' if intrinsic else 'src="../hero-details.js?v=20260927-human-media-voice-1"'),
             'class="fc-page-intro-copy"',
             '>Begin Scripture Study</a>',
             'href="#study-resources">Explore Resources</a>',
@@ -252,9 +252,11 @@ def main() -> int:
         prefix = "../" * (len(path.relative_to(ROOT).parts) - 1)
         if 'fc-hero-fullscreen' in page:
             errors.append(f"{relative}: hero must not display an overlay pill")
-        hero_script = ("hero-details.js?v=20260919-focused-answers-1" if relative in TOPIC_HERO_PAGES else "hero-details.js?v=20260919-focused-answers-1" if relative == "birth-of-christ.html" else "hero-details.js?v=20260919-focused-answers-1" if relative == "atonement.html" else "hero-details.js?v=20260919-focused-answers-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260919-focused-answers-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260919-focused-answers-1" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260919-focused-answers-1")
+        hero_script = ("hero-details.js?v=20260927-human-media-voice-1" if relative in TOPIC_HERO_PAGES else "hero-details.js?v=20260927-human-media-voice-1" if relative == "birth-of-christ.html" else "hero-details.js?v=20260927-human-media-voice-1" if relative == "atonement.html" else "hero-details.js?v=20260927-human-media-voice-1" if relative == "joseph-smith-likeness.html" else "hero-details.js?v=20260927-human-media-voice-1" if relative == "book-of-mormon-evidences.html" else "hero-details.js?v=20260927-human-media-voice-1" if relative in ART_STUDY_PAGES else "hero-details.js?v=20260927-human-media-voice-1")
         if relative == "answers/settle-this-in-your-hearts.html":
-            hero_script = "hero-details.js?v=20260920-settle-1"
+            hero_script = "hero-details.js?v=20260927-human-media-voice-1"
+        if relative == "answers/holy-ghost.html":
+            hero_script = "hero-details.js?v=20260927-human-media-voice-1"
         for asset in ("full-image-viewer.css?v=20260905-viewport", "full-image-viewer.js?v=20260914-reopen-1", hero_script, "hero-details.css?v=20260909-warm", "artwork-details.css?v=20260909-warm"):
             if page.count(prefix + asset) != 1:
                 errors.append(f"{relative}: hero study dependency missing or duplicated: {asset}")
@@ -271,8 +273,8 @@ def main() -> int:
                 errors.append(f"{relative}: missing hero study metadata: {marker}")
         if 'data-full-image-viewer' in hero_link:
             errors.append(f"{relative}: hero must open study before full-size viewer")
-    if hero_pages != 39:
-        errors.append(f"expected39 image-first pages including404, Evidences, Joseph likeness, Atonement and Birth of Christ, found{hero_pages}")
+    if hero_pages != 40:
+        errors.append(f"expected40 image-first pages including404, Evidences, Joseph likeness, Atonement, Birth of Christ and Holy Ghost, found{hero_pages}")
 
     full_assets: list[str] = []
     for relative in (*PAGES, "missionary.html"):

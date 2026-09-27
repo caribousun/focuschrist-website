@@ -32,6 +32,10 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
    arts=json.loads((ROOT/'docs/abrahamic-covenant/art-review.json').read_text(encoding='utf-8'))['artworks']
    assert len(figures)==len(arts)==12 and all(n.has('jj-art') and n.has('fc-study-visual') for n in figures), 'Covenant requires twelve journey-layout figures'
    assert {n.attrs.get('data-exclusive-artwork') for n in figures}==set(arts), 'Covenant figures must match the exact reviewed keys'
+  elif page.relative_to(ROOT).as_posix()=='answers/holy-ghost.html':
+   from holy_ghost_qa import check_structure
+   check_structure(ns)
+   assert reviewed_journey_style((ROOT/'jesus-journey.css').read_bytes()), 'Holy Ghost journey stylesheet changed since review'
   else:
    assert len([n for n in ns if n.tag=='link' and 'topic-art.css?' in n.attrs.get('href','')])==1,str(page)+' missing contextual artwork CSS'
 actual={}

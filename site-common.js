@@ -458,6 +458,7 @@
             'abrahamic-covenant.html': 'Abrahamic Covenant',
             'melchizedek-priesthood-restoration.html': 'Melchizedek Priesthood',
             'jesus-christ-latter-day-saint-beliefs.html': 'Jesus Christ',
+            'holy-ghost.html': 'Holy Ghost',
             'are-latter-day-saints-christian.html': 'Christian Identity',
             'what-is-the-book-of-mormon.html': 'Book of Mormon',
             'bible-and-book-of-mormon-together.html': 'Bible & Book of Mormon',

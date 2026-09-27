@@ -1,0 +1,59 @@
+{
+  "reviewed_ledger_paths_updated": [
+    "answers/restored-church-of-jesus-christ.html"
+  ],
+  "workflow_review": "PASS: one additional test command reuses existing pinned jsdom26.1.0 runtime; no install/permissions/trigger change.",
+  "checks": [
+    {
+      "command": "python tools/build_site_search.py",
+      "exit_code": 0,
+      "output": "Built site-search-index.json\n"
+    },
+    {
+      "command": "python tools/static_content_audit.py",
+      "exit_code": 0,
+      "output": "STATIC CONTENT AUDIT PASS: 123 documents (117 verified, 6 non-source-dependent)\n"
+    },
+    {
+      "command": "python tools/site_flow_qa.py",
+      "exit_code": 0,
+      "output": "SITE FLOW QA PASS: 119 sitemap routes, complete internal targets and fragments, no inert public links, and multiple continuation paths per page\n"
+    },
+    {
+      "command": "python tools/site_search_qa.py",
+      "exit_code": 0,
+      "output": "SEARCH QA PASS: 118 public pages, 1874 valid destinations; hidden/internal content excluded\n"
+    },
+    {
+      "command": "python tools/media_voice_qa.py",
+      "exit_code": 0,
+      "output": "Media voice QA passed: 121 pages; 704 captions, 147 expanded details, 109 resource descriptions, 15 media introductions and 1159 alt texts audited.\n"
+    },
+    {
+      "command": "python tools/build_jesus_journey.py --strict --check",
+      "exit_code": 0,
+      "output": "Built 76 nested studies; strict=True. Publication and semantic/visual verification are separate.\n"
+    },
+    {
+      "command": "python tools/build_jesus_parent.py --strict --check",
+      "exit_code": 0,
+      "output": "Parent journey updated; original hero and study retained. strict=True. Publication and complete destination verification are separate.\n"
+    },
+    {
+      "command": "python tools/site_qa.py",
+      "exit_code": 0,
+      "output": "FocusChrist SITE QA PASSED\nCore pages checked: 11\nPermanent answer pages checked: 22\nFeatured Art study pages checked: 4\nArt gallery images checked: 44\nSearch Console verification, sitemap, local references, Answer Library sources, model migration, disclosures, accessibility markers, and Ask rendering verified.\n"
+    },
+    {
+      "command": "node --test tools/art_ask_context.test.cjs",
+      "exit_code": 0,
+      "output": "\u2714 CFM topic is visible, editable, returns to CFM, and never submits (39.4705ms)\n\u2714 explicit q and already typed draft take precedence (25.3772ms)\n\u2714 returns allow known pages and plain fragments, drop queries and reject unsafe paths (40.501ms)\n\u2714 topic without return offers accurate fallback; empty topic does not create context (8.4338ms)\n\u2714 existing artwork, Watch, evidences and covenant contracts remain intact (18.3719ms)\n\u2139 tests 5\n\u2139 suites 0\n\u2139 pass 5\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 443.5544\n"
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "normalization": "Only content-audit.json and regenerated site-search-index.json normalized to LF; no legacy artwork review JSON touched."
+}

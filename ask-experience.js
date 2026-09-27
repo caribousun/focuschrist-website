@@ -105,7 +105,14 @@
                 min-width: 0;
                 padding: 13px 17px;
                 border: 1px solid rgba(201,169,97,.42);
-                border-radius: 999px;
+                border-radius: 24px;
+                box-sizing: border-box;
+                min-height: calc(1.3em + 28px);
+                line-height: 1.3;
+                resize: vertical;
+                overflow-y: hidden;
+                white-space: pre-wrap;
+                overflow-wrap: anywhere;
                 background: rgba(255,255,255,.05);
                 color: #fff;
                 font: inherit;
@@ -230,12 +237,20 @@
             submitFollowup();
         });
 
-        followupInput = document.createElement('input');
+        followupInput = document.createElement('textarea');
         followupInput.id = 'followupInput';
         followupInput.className = 'ask-followup-input';
-        followupInput.type = 'text';
+        followupInput.rows = 1;
         followupInput.placeholder = 'Ask a follow-up question…';
         followupInput.autocomplete = 'off';
+        followupInput.setAttribute('aria-describedby', 'ask-followup-help');
+        followupInput.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.keyCode !== 229) {
+                event.preventDefault();
+                submitFollowup();
+            }
+        });
+        enableGrowingComposer(followupInput);
         followupInput.setAttribute('aria-label', 'Ask a follow-up question in the current conversation');
         form.appendChild(followupInput);
 
@@ -249,7 +264,8 @@
 
         const note = document.createElement('div');
         note.className = 'ask-followup-note';
-        note.textContent = 'Your previous questions and answers remain part of this conversation. Use Clear Conversation above when you want to start over.';
+        note.id = 'ask-followup-help';
+        note.textContent = 'Enter to send. Shift+Enter for a new line. Your previous questions and answers remain part of this conversation. Use Clear Conversation above when you want to start over.';
         shell.appendChild(note);
 
         dock.appendChild(shell);
@@ -500,7 +516,7 @@
 
         if (input) {
             input.addEventListener('keypress', function (event) {
-                if (event.key === 'Enter') {
+                if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.keyCode !== 229) {
                     focusConversation();
                 }
             });
@@ -617,11 +633,40 @@
         }
     }
 
+    function enableGrowingComposer(input) {
+        if (!input || input.tagName !== 'TEXTAREA' || input.dataset.growingComposer) return;
+        input.dataset.growingComposer = 'true';
+        function resize() {
+            if (!input.isConnected || input.getClientRects().length === 0) return;
+            const style = window.getComputedStyle(input);
+            const border = (parseFloat(style.borderTopWidth) || 0) + (parseFloat(style.borderBottomWidth) || 0);
+            input.style.height = 'auto';
+            input.style.height = Math.max(parseFloat(style.minHeight) || 0, input.scrollHeight + border) + 'px';
+        }
+        function schedule() { window.requestAnimationFrame(resize); }
+        input.addEventListener('input', schedule);
+        // Context bridges and the existing Ask controller assign .value directly.
+        // Preserve the native value contract while resizing those prefills too.
+        const value = Object.getOwnPropertyDescriptor(window.HTMLTextAreaElement.prototype, 'value');
+        Object.defineProperty(input, 'value', {configurable:true, get:function () { return value.get.call(this); }, set:function (next) { value.set.call(this, next); schedule(); }});
+        if (window.ResizeObserver) {
+            let width = -1;
+            new ResizeObserver(function (entries) {
+                const next = entries[0].contentRect.width;
+                if (next !== width) { width = next; schedule(); }
+            }).observe(input);
+        } else { window.addEventListener('resize', schedule); }
+        window.addEventListener('load', schedule, {once:true});
+        if (document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+        schedule();
+    }
+
     function initInputLabeling() {
         const input = document.getElementById('userInput');
         if (!input) return;
         input.setAttribute('aria-label', 'Ask a question about Jesus Christ, scripture, or Latter-day Saint belief');
         input.setAttribute('autocomplete', 'off');
+        enableGrowingComposer(input);
     }
 
     document.addEventListener('DOMContentLoaded', function () {

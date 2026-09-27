@@ -141,12 +141,20 @@ body {
     margin: 0 auto;
 }
 
-.ask-input-area input[type="text"] {
+.ask-input-area textarea {
+    box-sizing: border-box;
+    min-height: calc(1.3rem + 36px);
+    height: auto;
+    resize: vertical;
+    overflow-y: hidden;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    font-family: inherit;
     min-width: 0;
     width: 100%;
     padding: 17px 22px;
     border: 1px solid rgba(134,175,200,0.58);
-    border-radius: 999px;
+    border-radius: 28px;
     background: var(--fc-input, #102832);
     color: var(--ask-cream);
     font-size: 1rem;
@@ -154,8 +162,8 @@ body {
     transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
-.ask-input-area input[type="text"]::placeholder { color: #a1b0b1; }
-.ask-input-area input[type="text"]:focus {
+.ask-input-area textarea::placeholder { color: #a1b0b1; }
+.ask-input-area textarea:focus {
     outline: 2px solid var(--ask-gold-light);
     outline-offset: 2px;
     border-color: var(--ask-gold-light);
@@ -750,3 +758,5 @@ body.fc-site .ask-followup-note {
 .ask-scene-card figcaption strong { display: block; color: var(--ask-gold-light); font-family: Georgia, serif; font-size: 1.2rem; font-weight: 400; }
 .ask-scene-card figcaption span { display: block; margin-top: 5px; font-size: .9rem; }
 @media (max-width: 700px) { .ask-scene-pair { grid-template-columns: minmax(0, 1fr); gap: 22px; } }
+
+.ask-composer-help { margin: 8px 0 0; color: var(--ask-muted); font-size: .8rem; line-height: 1.5; }
