@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import worker, { classifyResearchScope, sanitizePayload, relatedConversationSources } from './src/index.js';
+import worker, { classifyResearchScope, sanitizePayload, relatedConversationSources, reviewedPioneerExodusKey } from './src/index.js';
 
 const legacy = (question, antecedent) => `${question}\n\nThe immediately preceding user question was: "${antecedent}".\n\nResolve pronouns and omitted subjects only from that immediately preceding question.`;
 const examples = [
