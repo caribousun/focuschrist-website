@@ -22,6 +22,24 @@ function assertNoLooseSourceSeparators(doc){
 const sourceSeparatorFixture=new JSDOM('<p class="fc-study-visual-sources"><a>John 17</a> · <a>Moses 1</a></p>').window.document;
 assert.throws(()=>assertNoLooseSourceSeparators(sourceSeparatorFixture),/Loose separator/);
 assertNoLooseSourceSeparators(new JSDOM('<p class="fc-study-visual-sources"><a>John 17</a> <a>Moses 1</a></p><p>Speaker · Date</p>').window.document);
+// The existing CFM prayer reference now exposes its scripture in the named source family.
+function assertCfmPrayerSource(doc){
+ const card=doc.querySelector('figure[data-linked-picture-reference="modern-prayer"]');
+ assert(card,'Missing CFM prayer reference');
+ const source=card.querySelector('.fc-study-visual-sources a');
+ assert(source&&source.textContent.trim()==='Matthew 6:6–8','Missing CFM prayer source pill');
+ assert(source.getAttribute('href')==='https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6','Changed CFM prayer source destination');
+ assert(selectors.some(s=>source.matches(s)),'CFM prayer source outside named control coverage');
+}
+const cfmFixture=new JSDOM(read('come-follow-me.html'));
+assertCfmPrayerSource(cfmFixture.window.document);
+const cfmSource=cfmFixture.window.document.querySelector('[data-linked-picture-reference="modern-prayer"] .fc-study-visual-sources');
+cfmSource.classList.remove('fc-study-visual-sources');
+assert.throws(()=>assertCfmPrayerSource(cfmFixture.window.document),/Missing CFM prayer source pill/);
+cfmSource.classList.add('fc-study-visual-sources');
+cfmSource.querySelector('a').setAttribute('href','https://example.com/wrong');
+assert.throws(()=>assertCfmPrayerSource(cfmFixture.window.document),/Changed CFM prayer source destination/);
+cfmFixture.window.close();
 const urls=[...read('sitemap.xml').matchAll(/<loc>(.*?)<\/loc>/g)].map(m=>new URL(m[1]).pathname.slice(1)||'index.html');
 const pages=[...new Set(urls)].sort();
 const inventory={canonical_pages:pages.length,selectors:{},numbered_navigation:{}};

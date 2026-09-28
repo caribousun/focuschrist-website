@@ -129,7 +129,7 @@ def build():
                 full = image.attrs.get('data-full-src') or thumb
                 title = text(first(node, lambda n: n.has('caption'))) or alt
                 selector = '.gallery-item:has(img' + attr('src', image.attrs['src']) + ')'
-            elif node.tag == 'a' and image and 'href' in attrs and any(p.tag == 'main' for p in parents) and (
+            elif node.tag == 'a' and image and 'href' in attrs and any(p.tag == 'main' for p in parents) and not any('data-linked-picture-reference' in p.attrs for p in parents) and (
                     node.parent.tag == 'figure' or node.has('fc-marriage-era__art') or node.has('fc-foundation-card__image')):
                 kind = 'topic' if any(n.tag == 'script' and 'topic-artwork-details.js' in n.attrs.get('src', '') for n in nodes) else 'full'
                 if kind == 'full' and 'data-full-image-viewer' not in attrs:

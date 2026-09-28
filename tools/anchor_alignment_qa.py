@@ -53,8 +53,8 @@ def reviewed_anchor_style(name, data):
 
 def check():
     errors = []
-    if len(FILES) != 23 or sum(len(r['old_values']) for r in FILES.values()) != 39:
-        errors.append('Expected 23 stylesheets and 39 existing target declarations')
+    if len(FILES) != 22 or sum(len(r['old_values']) for r in FILES.values()) != 37:
+        errors.append('Expected 22 anchor-only stylesheets and 37 existing target declarations; CFM has its separate exact composition contract')
     for name in FILES:
         if not reviewed_anchor_style(name, (ROOT / name).read_bytes()):
             errors.append('Anchor-only stylesheet contract changed: ' + name)
@@ -101,5 +101,5 @@ if __name__ == '__main__':
     if args.self_test:
         self_test()
     errors = check()
-    print(json.dumps({'stylesheets': len(FILES), 'existing_targets': 39, 'errors': errors}, indent=2))
+    print(json.dumps({'stylesheets': len(FILES), 'existing_targets': 37, 'errors': errors}, indent=2))
     raise SystemExit(bool(errors))

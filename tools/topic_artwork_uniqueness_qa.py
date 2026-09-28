@@ -38,7 +38,7 @@ def linked_reference(node,page,root=ROOT):
     """Only non-owning thumbnails directly linked to a different local HTML page."""
     if node.tag!='img':return None
     chain=list(ancestors(node))
-    if any(a.tag=='figure' or a.attrs.get('data-journey-art') for a in chain):return None
+    if any(a.attrs.get('data-journey-art') or (a.tag=='figure' and not a.attrs.get('data-linked-picture-reference')) for a in chain):return None
     link=next((a for a in chain if a.tag=='a'),None)
     if not link:return None
     u=urlsplit(link.attrs.get('href',''))

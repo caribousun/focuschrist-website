@@ -189,6 +189,17 @@
       "disposition": "excluded_with_reason",
       "reason": "Child copy container; parent library card owns surface."
     },
+    "cfm-reflection-picture": {
+      "count": 2,
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "tags": [
+        "figure"
+      ],
+      "disposition": "coordinated_stylesheet_owner",
+      "reason": "CFM illustrated study panel; exact page-owned composition contract preserves natural imagery, source controls and responsive caption containment."
+    },
     "cfm-source-note": {
       "count": 3,
       "pages": [
@@ -865,9 +876,10 @@
       "reason": "Named existing section panel; shared Home-derived surface only."
     },
     "fc-study-visual--panel": {
-      "count": 1,
+      "count": 3,
       "pages": [
-        "answers/look-unto-me-doctrine-and-covenants-6-36.html"
+        "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+        "come-follow-me.html"
       ],
       "tags": [
         "figure"
@@ -1508,15 +1520,14 @@
       ],
       "disposition": "shared_surface"
     },
-    "cfm-text-link": {
+    "cfm-signature": {
       "stylesheets": [
-        "cfm-study-controls.css"
+        "come-follow-me.css"
       ],
       "pages": [
         "come-follow-me.html"
       ],
-      "disposition": "excluded_with_reason",
-      "reason": "Button/control; CFM page-owned study destination action styled by cfm-study-controls.css."
+      "disposition": "coordinated_stylesheet_owner"
     },
     "cfm-tool": {
       "stylesheets": [
@@ -2763,7 +2774,7 @@
         "come-follow-me.html"
       ],
       "tags": [
-        "aside"
+        "div"
       ]
     },
     ".cfm-library-card": {
@@ -2796,15 +2807,6 @@
       ],
       "tags": [
         "figure"
-      ]
-    },
-    ".cfm-reading--assignment": {
-      "count": 1,
-      "pages": [
-        "come-follow-me.html"
-      ],
-      "tags": [
-        "div"
       ]
     },
     ".cfm-tool": {

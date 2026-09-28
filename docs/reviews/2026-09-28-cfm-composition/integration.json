@@ -1,0 +1,34 @@
+{
+  "scope": "Owner-requested whole Come, Follow Me composition redesign; no new artwork, scripture content or schedule change.",
+  "baseline": "066d5a154bc563d458e80662442b5c5a4f2b0e1d",
+  "preservation": {
+    "other_22_anchor_records_exact": true,
+    "unchanged_images": 19,
+    "unchanged_weekly_lessons": 52,
+    "unchanged_controller_sha256": "1279ebd866b3461c9ef0ca95fb2721f85c52ccaaf9f9e74e24b3e83baf4abf1a",
+    "permitted_text_changes": [
+      "Removed old aside eyebrow A Christ-centered lens",
+      "Removed redundant Explore the Look Unto Me study link; identical destination retained in relocated Signature card",
+      "Added Pause and consider label"
+    ]
+  },
+  "validation": [
+    "come_follow_me_qa.py with 13 composition mutation fixtures PASS",
+    "anchor_alignment_qa.py --self-test PASS22 styles/37 targets",
+    "sitewide_artwork_review_qa.py --self-test PASS",
+    "sitewide_artwork_review_qa.py PASS121pages/19heroes/842images",
+    "section_panel_surface_qa.py PASS after exact component registration",
+    "build_art_gallery.py --check PASS existing inventory unchanged",
+    "unified_experience_qa.py PASS",
+    "come_follow_me_reading_runtime_qa.js PASS all52 assignments, weekly rollover and Ask return",
+    "test_jesus_reference_ownership.py PASS4 including explicit figure reference and wrong-family/journey-owner rejections",
+    "static_content_audit.py PASS125documents",
+    "build_site_search.py --check PASS",
+    "site_qa.py original full source gate PASS after explicit-reference ownership adapter"
+  ],
+  "limits": [
+    "Parent rendered review separate; owner aesthetic approval not claimed",
+    "Hosted release checks pending"
+  ],
+  "historical_local_failure": "Site QA initially treated semantic prayer reference figure as an original owner; explicit reference recognition preserves exact owning page, fragment and image-family verification."
+}

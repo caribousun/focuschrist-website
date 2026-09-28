@@ -72,15 +72,6 @@
       ]
     },
     {
-      "path": "come-follow-me.css",
-      "before_sha256": "97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3",
-      "after_sha256": "e32f69977705a7716eaca6a7a179302957cf44529237432de1293ef9dc28b267",
-      "old_values": [
-        "calc(var(--cfm-header) + 20px)",
-        "calc(var(--cfm-header) + 64px)"
-      ]
-    },
-    {
       "path": "connected-study.css",
       "before_sha256": "d19f17b76d03041471afe5bd771e722353310cafac21aed66486b16c6f896eb3",
       "after_sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
@@ -256,5 +247,8 @@
     "before": "html { scroll-behavior: smooth; }",
     "after": "html { scroll-behavior: auto; }",
     "scope": "Exactly one unindented global rule. Existing reduced-motion rules remain unchanged. Owner-authorized native anchor and Back navigation without long scroll animation."
+  },
+  "superseded_by_owner_composition": {
+    "come-follow-me.css": "docs/cfm-composition.json"
   }
 }

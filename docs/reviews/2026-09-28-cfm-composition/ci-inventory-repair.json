@@ -1,0 +1,120 @@
+{
+  "failed_run": 36363684968,
+  "failed_job": 108745743660,
+  "failure": "study_link_controls_qa.js exact control inventory:711 expected,712 actual",
+  "cause": "Existing Matthew6:6\u20138 link on CFM prayer reference now belongs to the source-pill group after the reviewed semantic figure change. Destination and all other controls unchanged.",
+  "inventory_delta": {
+    "source_pills_before": 711,
+    "source_pills_after": 712,
+    "canonical_pages_unchanged": 121,
+    "other_inventory_fields_unchanged": true
+  },
+  "product_bytes_unchanged": [
+    "come-follow-me.html",
+    "come-follow-me.css",
+    "cfm-study-controls.css",
+    "come-follow-me.js"
+  ],
+  "negative_protection": [
+    "Reject missing CFM prayer source grouping",
+    "Reject changed Matthew6:6\u20138 source destination"
+  ],
+  "original_failed_step_commands": [
+    {
+      "command": "node tools/opening_flow_and_cards_qa.js",
+      "exit_code": 0,
+      "seconds": 2.0
+    },
+    {
+      "command": "node tools/father_opening_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.38
+    },
+    {
+      "command": "node tools/study_link_controls_qa.js",
+      "exit_code": 0,
+      "seconds": 2.03
+    },
+    {
+      "command": "node tools/art_study_picture_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.64
+    },
+    {
+      "command": "node tools/evidences_visual_guides_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.53
+    },
+    {
+      "command": "node tools/not_found_recovery_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.52
+    },
+    {
+      "command": "node tools/sitewide_hero_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 1.3
+    },
+    {
+      "command": "node tools/topic_artwork_sources_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.41
+    },
+    {
+      "command": "node tools/scripture_display_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.68
+    },
+    {
+      "command": "node tools/ask_composer_scroll_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.33
+    },
+    {
+      "command": "node --test tools/art_ask_context.test.cjs",
+      "exit_code": 0,
+      "seconds": 0.58
+    },
+    {
+      "command": "node --test tools/ask_growing_composer.test.cjs",
+      "exit_code": 0,
+      "seconds": 0.39
+    },
+    {
+      "command": "node --test tools/holy_ghost_video.test.cjs",
+      "exit_code": 0,
+      "seconds": 0.49
+    },
+    {
+      "command": "node tools/canonical_presentation_measurement.test.js",
+      "exit_code": 0,
+      "seconds": 0.4
+    },
+    {
+      "command": "node --test tools/header_scroll_navigation.test.cjs",
+      "exit_code": 0,
+      "seconds": 0.44
+    },
+    {
+      "command": "node tools/site_search_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.97
+    },
+    {
+      "command": "node tools/settle_recording_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.37
+    },
+    {
+      "command": "node tools/watch_shorts_runtime_qa.js",
+      "exit_code": 0,
+      "seconds": 0.85
+    },
+    {
+      "command": "node --test tools/jesus_journey_navigation.test.cjs",
+      "exit_code": 0,
+      "seconds": 2.81
+    }
+  ],
+  "status": "All19 original failed-step commands PASS; historical hosted failure retained, next hosted run pending."
+}

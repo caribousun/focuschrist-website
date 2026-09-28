@@ -1,0 +1,61 @@
+{
+  "reviewer": "Newton",
+  "at": "2026-09-28T00:46:20.946408+00:00",
+  "verdict": "PASS bounded independent product/source/guard review",
+  "baseline": "066d5a154bc563d458e80662442b5c5a4f2b0e1d",
+  "findings": [
+    "All52weekly rows unchanged; controller exact hash pinned.",
+    "Raw header/hero unchanged; all19image source counts and current image attribute contract preserved.",
+    "Maintext preserved except approved removed oldeyebrow and duplicateCTA; Pauseandconsider added.",
+    "Only redundant LookUntoMe aside destination removed; movedSignature1,remaininglibrary8,toolkit4,reflections3.",
+    "All22nonCFM anchor contractrecords matchbaseline exactly. RetiredCFM entry preserved separately; replacement composition requires exact CSS bytes and hero/source/structure/prose invariants.",
+    "Gallery excludes explicit linked-reference ancestors from original-art discovery; current gallery inventory unchanged.",
+    "Surface inventory retires only obsolete nested assignment box and registers actual signature/reflection components."
+  ],
+  "independent_checks": [
+    "12compositionfixturesPASS",
+    "22anchor/selftestsPASS",
+    "52assignment and rollover/Askreturn runtimePASS",
+    "Gallery builder --checkPASS",
+    "Exact22anchorrecordcomparisonPASS"
+  ],
+  "remaining": null,
+  "parent_visual_evidence": "Parent reports320/390/768/960normal and320200%passed;1366geometry assessed but tool screenshotcropped beyond960. Actualscripturereaderchapter+closefocus verified byparent. NoNewtonbrowserclaim.",
+  "hashes": {
+    "come-follow-me.html": "ca50963a095fa17cde2e37e6c2ac819aefd4f2a708f06b7c409bb5afeee6d391",
+    "come-follow-me.css": "c2cc480528c011b45bb5d110705a3dd9ec5eb2984486dc7e8c6a55ea9c45cf14",
+    "cfm-study-controls.css": "8c88759fb1a1993f1090fad1f5eebe50b0664481b3494af4f5eb9d7065fc8314",
+    "docs/cfm-composition.json": "ecf3db5b1c274a3e3bdb4b9572344f346b2ff15f93111786aa3eb70bf0d4b7da",
+    "tools/cfm_composition_qa.py": "a841a94a208bb42453daef055597a9a22ada60d54530eaa4d9d2d19a6adaeda2",
+    "docs/anchor-alignment.json": "307781070e90f5068473c163ee53c2b0cefd4ae2a628acf6f1570c45895f0a55",
+    "tools/anchor_alignment_qa.py": "cadba586b0c3a2ef933bac2352802281eda6a8e6077ca8ddd82a398cf2af526c",
+    "tools/build_art_gallery.py": "5feb827f197422b6224796ee3cf867f6bc4014df212550033060ad4f0c291909",
+    "tools/sitewide_artwork_review_qa.py": "2a4b0058e7e93875ab69f4dbf3b530db6c89fda3e1988239ec23c1840f3cf289",
+    "docs/section-panel-surfaces.json": "a36134e6d83933eb0b89f4c0f723cc67826bfae85d53c18bb2ed56098823194d"
+  },
+  "closure": {
+    "at": "2026-09-28T00:46:39.823386+00:00",
+    "resolved": "Exact hooks now include previous/next data-week-move; -1 to1 mutation rejected. All13composition fixtures independently PASS. Final toolkit heading alignment source matches other section intros.",
+    "limits": "Parent rendered acceptance separate; no hostedCI/deployment claim."
+  },
+  "ownership_adapter": {
+    "at": "2026-09-28T00:49:43.189554+00:00",
+    "verdict": "PASS source and focused regression review",
+    "scope": "One condition permits figure thumbnail only with nonempty explicit data-linked-picture-reference; data-journey-art remains excluded. Existing other-local-owner, exact owner fragment and decoded image-family validation unchanged.",
+    "independent_test": "test_jesus_reference_ownership.py four fixtures PASS",
+    "original_gate": "Independent full topic_artwork_uniqueness_qa.py completed exit0 PASS; Fermi separately reports site_qa PASS.",
+    "hashes": {
+      "tools/topic_artwork_uniqueness_qa.py": "69f85efee983a4b5158392801b400769be1931b024cea7dfda3d40aa7b91071b",
+      "tools/test_jesus_reference_ownership.py": "c647bebcc87040cd1f3c91df78e7f0c258a225fb0d7f513e9dbc5828e5b00489"
+    }
+  },
+  "source_pill_inventory_closure": {
+    "at": "2026-09-28T00:54:45.649529+00:00",
+    "verdict": "PASS independent exact delta review",
+    "historical_failed_run": 36363684968,
+    "delta": "Only source-pill count711to712; canonical121 and ownerpage list unchanged.",
+    "independent_evidence": "CFM selector count4to5 against066d5a; sole newly grouped href is existing Matthew6:6\u20138 https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6. No destination added/removed by this inventory repair.",
+    "scope": "No product or assertion edits; original failed-step execution owned by Fermi.",
+    "inventory_sha256": "41a395cea899704d116cf573d5490b0785ab3da3897ae0c0763f62b8e0f6b226"
+  }
+}

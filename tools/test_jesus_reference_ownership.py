@@ -24,6 +24,13 @@ class ReferenceOwnershipTests(unittest.TestCase):
                 self.assertFalse(is_owning_page_reference(r,'owner.html',self.parsed,self.identities,self.root))
         r=self.reference('<a href="owner.html"><img src="art/thumb.webp"></a>');r['family']='different'
         self.assertFalse(is_owning_page_reference(r,'owner.html',self.parsed,self.identities,self.root))
+    def test_explicit_semantic_reference_still_requires_exact_owner(self):
+        r=self.reference('<figure data-linked-picture-reference="prayer"><a href="owner.html#scene"><img src="art/thumb.webp"></a></figure>')
+        self.assertTrue(is_owning_page_reference(r,'owner.html',self.parsed,self.identities,self.root))
+        r['family']='different'
+        self.assertFalse(is_owning_page_reference(r,'owner.html',self.parsed,self.identities,self.root))
+        r=self.reference('<figure data-linked-picture-reference="prayer" data-journey-art="owned"><a href="owner.html#scene"><img src="art/thumb.webp"></a></figure>')
+        self.assertIsNone(r['linked_reference'])
     def test_unlinked_and_owned_figure_cannot_claim_reference_exception(self):
         for html in ['<img src="art/thumb.webp">','<figure><a href="owner.html"><img src="art/thumb.webp"></a></figure>']:
             self.assertIsNone(self.reference(html)['linked_reference'])

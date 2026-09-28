@@ -4,6 +4,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote, parse_qs
 import argparse, hashlib, json, re, subprocess, sys, xml.etree.ElementTree as ET
+from cfm_composition_qa import check as composition_check, self_test as composition_self_test
 from anchor_alignment_qa import FILES as ANCHOR_STYLES, historical_style_bytes, reviewed_anchor_style, self_test as anchor_self_test
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
@@ -139,7 +140,8 @@ TOOLBAR_STYLE_SHA256 = {'site-header.css': 'a915de3ba44c8e14f127e25ec51498960fb1
 # reviewed in source and rendered by Albert. Exact full bytes and single owners.
 SCOPED_INTERFACE_STYLES = {
     'plan-of-salvation.css': ('214c7c4c54c67b58c986d311e2bcb69a02bda9ab19427ba26f6bef433c8105bc', 'answers/plan-of-salvation.html'),
-    'cfm-study-controls.css': ('0deba2f2978d8348eed680984dabf4d710fc6ab6e5804d4818a1d8a2eb8efcad', 'come-follow-me.html'),
+    'come-follow-me.css': ('c2cc480528c011b45bb5d110705a3dd9ec5eb2984486dc7e8c6a55ea9c45cf14', 'come-follow-me.html'),
+    'cfm-study-controls.css': ('8c88759fb1a1993f1090fad1f5eebe50b0664481b3494af4f5eb9d7065fc8314', 'come-follow-me.html'),
     'ask-experience.css': ('62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6', 'ask.html'),
     'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
 }
@@ -168,6 +170,7 @@ def unique_reviewed(heroes, rejected):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
+    composition_check()
     if args.self_test:
         anchor_self_test()
         answers_css = (ROOT/'answers-hero.css').read_bytes()
@@ -239,10 +242,7 @@ def main():
         assert bible_style_reference_allowed(BIBLE_STYLE_OWNER, BIBLE_STYLE)
         assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
         assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
-        cfm_css = historical_style_bytes((ROOT/'come-follow-me.css').read_bytes())
-        assert hashlib.sha256(cfm_css).hexdigest() == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
-        assert hashlib.sha256(cfm_css.replace(b'flex-wrap:nowrap}', b'flex-wrap:wrap}')).hexdigest() != '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
-        assert hashlib.sha256(cfm_css + b'body{display:none}').hexdigest() != '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
+        composition_self_test()
         for name in NARROW_READING_STYLES:
             data=(ROOT/name).read_bytes()
             assert reviewed_narrow_reading_style(name,data)
