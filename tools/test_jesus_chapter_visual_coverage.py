@@ -19,6 +19,7 @@ LEGACY_OWNERS = {
     '/assets/page-art/birth-of-christ/03-nephi-vision-800.webp': '/birth-of-christ.html',
     '/assets/page-art/atonement/servant-960.webp': '/atonement.html',
     '/assets/history/first-vision-800.webp': '/church-history.html',
+    '/assets/page-art/church-history/kirtland-temple-960.webp': '/church-history.html',
     '/assets/page-art/atonement/cross-angled-rear-approved-960.webp': '/atonement.html',
     '/assets/page-art/exclusive/mormon-nephi-purpose-800.webp': '/answers/what-is-the-book-of-mormon.html',
     '/assets/page-art/life-after-death/martha-800.webp': '/answers/what-happens-after-death.html',

@@ -7,7 +7,7 @@
     "jesus-christ/teachings-and-parables.html": 8,
     "jesus-christ/redeemer-and-risen-lord.html": 8,
     "jesus-christ/risen-savior-in-the-book-of-mormon.html": 10,
-    "jesus-christ/restoration-and-today.html": 8
+    "jesus-christ/restoration-and-today.html": 7
   },
   "summary": {
     "christ_visible": 32,
@@ -54,7 +54,8 @@
     "BeforeBethlehem has no visibleChrist to avoid inserting Him into voices, nature, or events where no bodilyappearance is recorded. Do not force a ratio by falsifying scenes.",
     "Source-linked nature/objects and modern application images are explicitly labeled illustrations; do not promote them to separately narrated scriptureevents. The women-support packing action is also illustrative rather than an independentlyrecordedbeat.",
     "Scene-uniqueness review compares narrativeevent/action/setting, not filenames or newpixels. Whole-current-art pixel review still required before generation for tentative legacycollision checks.",
-    "Final human-readable descriptions and concrete alt text supersede initial scratch-script wording. Treat this JSON as the handoff; do not rerun build_branch_art_plan.py without also applying this finalizer."
+    "Final human-readable descriptions and concrete alt text supersede initial scratch-script wording. Treat this JSON as the handoff; do not rerun build_branch_art_plan.py without also applying this finalizer.",
+    "2026-09-27 owner correction: rt-kirtland-appearance retired; temporary linked Kirtland Temple exterior reference replaces it. Seven owned originals remain in Restoration and Today by this scoped owner instruction."
   ],
   "discarded_collisions": [
     {
@@ -3538,92 +3539,6 @@
       "minimum_age_research": "Scripture does not supply exact ages for most ancient participants. Record an approximate life stage as interpretation; do not invent a precise number. Use Jairus’s daughter at twelve, Joseph at the dated age supplied, and documented modern birth dates where known.",
       "ownerURL": "/jesus-christ/restoration-and-today.html",
       "sectionId": "living-witness",
-      "applied_section_patch": null,
-      "owner_eye_contact_requirement": "Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt."
-    },
-    {
-      "key": "rt-kirtland-appearance",
-      "owner": "jesus-christ/restoration-and-today.html",
-      "owner_url": "/jesus-christ/restoration-and-today.html",
-      "section_id": "kirtland",
-      "role": "body",
-      "title": "The Lord accepts the house",
-      "refs": [
-        [
-          "dc-testament/dc/110",
-          "Doctrine and Covenants 110:1–10",
-          "1-10"
-        ]
-      ],
-      "depicts_christ": true,
-      "christ_visible": true,
-      "era": "post-resurrection",
-      "description": "Use researched 1836 Kirtland Temple pulpit geometry. The Lord stands at the right upon the pulpit breastwork, an amber-gold surface beneath His feet. His hair is white as snow, while His exact approved facial identity remains recognizable. Joseph Smith, thirty, and Oliver Cowdery, twenty-nine, look upward together at lower left after prayer. No full modern chapel audience, modern chairs or later Victorian clothing. Do not include Moses, Elias or Elijah in this moment; their visions follow separately. Brightness must preserve facial detail. Add subtle healed marks wherever palms and wrists are visible. Oliver’s historical reference and approval mapping are still prerequisites.",
-      "caption": "The Lord appears to Joseph Smith and Oliver Cowdery and accepts the temple built to His name.",
-      "caption_caveat": "D&C 110 supplies the witnesses and visual details; the composition is an artistic interpretation of their recorded vision.",
-      "alt": "Joseph Smith and Oliver Cowdery look toward Christ standing upon the Kirtland pulpit breastwork.",
-      "uniqueness_rationale": "No existing Kirtlandappearanceoriginal;templeconstructionpicturesdepictdifferentearlierevents.",
-      "reference_identity_requirements": [
-        {
-          "character": "Jesus Christ",
-          "status": "confirmed owner reference",
-          "asset": "assets/heroes/home-christ-signature-approved-20260907.png",
-          "rule": "Pass actual pixels; preserve exact recognizable face; adapt expression and gaze to this action."
-        },
-        {
-          "character": "Joseph Smith",
-          "status": "confirmed owner reference",
-          "asset": "assets/identities/joseph-smith-owner-approved-20260914.png",
-          "rule": "Pass actual reference pixels; age to documented event, not identical age in every scene."
-        },
-        {
-          "character": "Oliver Cowdery",
-          "status": "identity continuity reconciliation required",
-          "asset": null,
-          "rule": "No authenticated ancient likeness is assumed. Check all existing owner-approved scene references before establishing a distinct interpreted face; for modern historical people acquire reliable period portrait and age evidence."
-        }
-      ],
-      "named_persons": [
-        "Joseph Smith",
-        "Oliver Cowdery"
-      ],
-      "likeness_unresolved": true,
-      "additional_prerequisites": [
-        "Oliverportrait/referenceapprovalmappingmustbereconciled;usehistorical-references.jsonworkingmasteronlywithcorrectstatus.",
-        "ResearchKirtlandpulpitbreastworklayoutand1836dress;exactguidelinewhitehairrequired."
-      ],
-      "source_status": "official source text fetched, all selected verses present",
-      "asset": null,
-      "thumbnail": null,
-      "width": 1536,
-      "height": 1024,
-      "reviewed": false,
-      "owner_approved": false,
-      "global_generation_requirements": "ONE original 1536x1024 horizontal 3:2 photograph-quality scene, lifelike skin and eyes, detailed natural expression, physically plausible hands/limbs and materials. No painterly or waxy faces, stock portrait gaze, readable invented text, halo, watermark, collage, borders or image reuse. Asymmetrical composition described below. Full essential heads/hands/action within frame. Preserve source-specific setting; any unsourced staging remains artistic interpretation. Images of named people require completed reference/age review before generation.",
-      "christ_phase_requirements": "Risen Christ: subtle healed nail marks in both palms AND wrists wherever visible, no fresh blood/open wounds; never force hidden areas into view.",
-      "source_verification": [
-        {
-          "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng",
-          "label": "Doctrine and Covenants 110:1–10",
-          "http_status": 200,
-          "missing": [],
-          "selected_text": {
-            "1": "1 The veil was taken from our minds, and the eyes of our understanding were opened.",
-            "2": "2 We saw the Lord standing upon the breastwork of the pulpit, before us; and under his feet was a paved work of pure gold , in color like amber.",
-            "3": "3 His eyes were as a flame of fire; the hair of his head was white like the pure snow; his countenance shone above the brightness of the sun; and his voice was as the sound of the rushing of great waters, even the voice of Jehovah , saying:",
-            "4": "4 I am the first and the last; I am he who liveth , I am he who was slain; I am your advocate with the Father.",
-            "5": "5 Behold, your sins are forgiven you; you are clean before me; therefore, lift up your heads and rejoice .",
-            "6": "6 Let the hearts of your brethren rejoice, and let the hearts of all my people rejoice, who have, with their might, built this house to my name.",
-            "7": "7 For behold, I have accepted this house , and my name shall be here; and I will manifest myself to my people in mercy in this house.",
-            "8": "8 Yea, I will appear unto my servants, and speak unto them with mine own voice, if my people will keep my commandments, and do not pollute this holy house .",
-            "9": "9 Yea the hearts of thousands and tens of thousands shall greatly rejoice in consequence of the blessings which shall be poured out, and the endowment with which my servants have been endowed in this house.",
-            "10": "10 And the fame of this house shall spread to foreign lands; and this is the beginning of the blessing which shall be poured out upon the heads of my people. Even so. Amen."
-          }
-        }
-      ],
-      "minimum_age_research": "Scripture does not supply exact ages for most ancient participants. Record an approximate life stage as interpretation; do not invent a precise number. Use Jairus’s daughter at twelve, Joseph at the dated age supplied, and documented modern birth dates where known.",
-      "ownerURL": "/jesus-christ/restoration-and-today.html",
-      "sectionId": "kirtland",
       "applied_section_patch": null,
       "owner_eye_contact_requirement": "Wyatt requires visibly connected gaze. For personal conversation, healing or comforting, identify the recipient and make Christ look directly into that person's eyes with reciprocal eye contact. Set both head orientation and pupil direction; do not look past or above the recipient. Preserve exact approved identity and natural scene emotion. A different gaze is allowed only when the actual narrative action requires it, and must be explained in pixel review. Review the actual eyes, not merely the prompt."
     },

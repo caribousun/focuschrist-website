@@ -8,6 +8,19 @@ from build_jesus_journey import ROOT,DATA,render,scripture,validate_artwork_revi
 
 def read(name):return json.loads((DATA/name).read_text(encoding='utf-8'))
 
+def owner_requested_kirtland_placeholder(page,keys):
+    """Wyatt's 2026-09-27 removal permits only this exact seven-original branch."""
+    expected={'rt-vision-1832','rt-persuasion','rt-spirit-messengers','rt-sung-testimony',
+              'rt-accessible-home','rt-sacrament-preparation','rt-patmos-vision'}
+    if page['url']!='/jesus-christ/restoration-and-today.html' or len(keys)!=7 or set(keys)!=expected:return False
+    sections=[s for s in page['sections'] if s.get('id')=='kirtland']
+    if len(sections)!=1:return False
+    blocks=sections[0].get('blocks',[])
+    pictures=[b['reference_picture'] for b in blocks if isinstance(b,dict) and 'reference_picture' in b]
+    return (len(pictures)==1 and pictures[0].get('href')=='/church-history.html#kirtland-temple'
+            and pictures[0].get('thumbnail')=='assets/page-art/church-history/kirtland-temple-960.webp'
+            and not any(isinstance(b,dict) and ('art' in b or 'reference_art' in b) for b in blocks))
+
 class Page(HTMLParser):
     def __init__(self,text):
         super().__init__();self.ids=[];self.hrefs=[];self.art=[];self.feed(text)
@@ -33,7 +46,7 @@ def verify(pages,registry):
         if len(parsed.ids)!=len(set(parsed.ids)):errors.append('Duplicate section IDs '+p['url'])
         keys=[b['art'] for s in p['sections'] for b in s.get('blocks',[]) if isinstance(b,dict) and 'art' in b]
         if len(keys)!=len(set(keys)):errors.append('Repeated same-page original '+p['url'])
-        if p['url'] in collection_urls|branch_urls and len(keys)<8:errors.append('Fewer than eight original scenes '+p['url'])
+        if p['url'] in collection_urls|branch_urls and len(keys)<8 and not owner_requested_kirtland_placeholder(p,keys):errors.append('Fewer than eight original scenes '+p['url'])
         for key in keys:
             if key in owners:errors.append('Multiple original owners '+key)
             owners[key]=p['url'].lstrip('/')
