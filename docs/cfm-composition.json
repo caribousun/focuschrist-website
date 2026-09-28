@@ -107,8 +107,8 @@
   "removed_duplicate_href": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
   "script_sha256": "1279ebd866b3461c9ef0ca95fb2721f85c52ccaaf9f9e74e24b3e83baf4abf1a",
   "css_sha256": {
-    "come-follow-me.css": "c2cc480528c011b45bb5d110705a3dd9ec5eb2984486dc7e8c6a55ea9c45cf14",
-    "cfm-study-controls.css": "8c88759fb1a1993f1090fad1f5eebe50b0664481b3494af4f5eb9d7065fc8314"
+    "come-follow-me.css": "4ac596b6c1d0c165636f0e965794a9939a34c8333501b5bad64fad103b1bd7be",
+    "cfm-study-controls.css": "35c8939f4fc950d241ecb6a62ac58c1be6e02a59f64bee9b19fd2704011b58fb"
   },
   "artwork_note": "Moved existing Signature preview once; original source and all19 image attributes remain exact. Semantic prayer figure changes wrapper only.",
   "prior_main_text": [
@@ -300,10 +300,19 @@
   ],
   "removed_text": [
     "A Christ-centered lens",
-    "Explore the Look Unto Me study →"
+    "Explore the Look Unto Me study →",
+    "For official guidance on context, questions, recording impressions, and learning together, see",
+    ".",
+    ".",
+    ".",
+    "Study these invitations alongside the official",
+    "Schedule and lessons follow the official"
   ],
   "added_text": [
-    "Pause and consider"
+    "Pause and consider",
+    "For official guidance on context, questions, recording impressions, and learning together:",
+    "Study these invitations alongside the official learning guidance.",
+    "Schedule and lessons follow the official manual."
   ],
   "prior_ids": [
     "cfm-video-title",
@@ -361,5 +370,21 @@
       "data-cfm-current-date",
       ""
     ]
-  ]
+  ],
+  "palette_owner_followup": {
+    "request": "Latest owner explicitly rejected cream and excess pills: compact navy reading rows/light text, one gold official lesson action, secondary text links, Signature returned to general library.",
+    "removed_connective_text": [
+      "For official guidance on context, questions, recording impressions, and learning together, see",
+      ".",
+      ".",
+      ".",
+      "Study these invitations alongside the official",
+      "Schedule and lessons follow the official"
+    ],
+    "added_connective_text": [
+      "For official guidance on context, questions, recording impressions, and learning together:",
+      "Study these invitations alongside the official learning guidance.",
+      "Schedule and lessons follow the official manual."
+    ]
+  }
 }

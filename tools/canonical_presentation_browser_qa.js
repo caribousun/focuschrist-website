@@ -140,11 +140,13 @@ async function main() {
                         await Promise.race([document.fonts.ready,new Promise(resolve=>setTimeout(resolve,5000))]);
                     });
                     const measured=await page.evaluate(inspectPresentation);
+                    if(route==='come-follow-me.html')measured.cfmPalette=await page.evaluate(require('./cfm_palette_contract.js').inspectCfmPalette);
                     const failures=[];
                     if(!response || response.status()>=400)failures.push('document-status');
                     if(measured.horizontalOverflow>3)failures.push('horizontal-overflow');
                     if(measured.clippedControls.length)failures.push('clipped-visible-control');
                     if(measured.clippedCaptions.length)failures.push('clipped-study-caption');
+                    if(measured.cfmPalette && (!measured.cfmPalette.checked || measured.cfmPalette.failures.length))failures.push('cfm-filled-palette');
                     if(!measured.visibleH1.length)failures.push('missing-visible-h1');
                     if(measured.brokenLoadedImages.length)failures.push('broken-loaded-image');
                     if(measured.pendingLocalImages.length)failures.push('local-image-timeout');

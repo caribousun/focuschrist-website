@@ -1,0 +1,40 @@
+{
+  "reviewer": "Newton",
+  "at": "2026-09-28T01:35:05.871592+00:00",
+  "verdict": "PASS bounded source and targeted regression review of navy candidate",
+  "authority": "Latest owner navy/lighttext direction supersedes rejected cream candidate.",
+  "preservation": [
+    "All href and image source counts equal PR403 baseline7294faab. Header/hero identical;52weeks/controller preserved.",
+    "Signature absent weekly and present general library;9librarycards.",
+    "Only reviewed connective footer wording changes; source destinations unchanged."
+  ],
+  "cascade": [
+    "CFM body/main tokens and precise selectors cover navy readinggroups, transparent unrounded summaries/chapter/secondary links,lighttext,nav/prevnextnavy.",
+    "Gold officiallesson primary retained; hero/navigation outside mainscope.",
+    "Computed gate covers expanded/simplechapter/source/pathlinks,weeklyAsk/footersecondary andyearreadinggroup fills."
+  ],
+  "independent_checks": [
+    "16compositionnegativefixturesPASS",
+    "52assignment/rollover/Askreturn runtimePASS",
+    "Correctednavypalettepositives+yellowtext/creamgradientnegativesPASS"
+  ],
+  "resolved_review_findings": [
+    "Stale rejectedcreamtest replaced with navy/lighttext role-specific check.",
+    "Browserselectorcoverage extended to weeklyAsk/footersecondary andschedule navybackgrounds."
+  ],
+  "parent_visual": "Parent reports390expandedreading/scripturereaderclosefocus and960footeractualPASS. No Newton browser/aesthetic approval claim.",
+  "limits": [
+    "Mockedcomputed fixture verifies measurementlogic; actualCSScascade acceptance uses parentbrowser and hostedcanonicalgate.",
+    "No hostedCI/deployment claim."
+  ],
+  "hashes": {
+    "come-follow-me.html": "40583f864b703eeb44c2c61e57670b18b676e8502822612fb2ec7ec8777ef1a9",
+    "come-follow-me.css": "4ac596b6c1d0c165636f0e965794a9939a34c8333501b5bad64fad103b1bd7be",
+    "cfm-study-controls.css": "35c8939f4fc950d241ecb6a62ac58c1be6e02a59f64bee9b19fd2704011b58fb",
+    "tools/cfm_palette_contract.js": "99c2485ecd566265656cdb8cc5a2954c7daad5f6ddd461a8a3c14bcdc3c64bd5",
+    "tools/cfm_palette_contract.test.js": "ae377c9df212afd79aa9913817fd5d19a36fd03cbe06c4336039c2e290562f42",
+    "tools/cfm_composition_qa.py": "5941994c8fd47e8cbd08ecc31e58a533346f8c7e12064dcffbcb3c3b782e4e70",
+    "docs/cfm-composition.json": "c389bf7fb577bd05d62106eaf0010f00eaadf64f23a41c02d6536ada155d0ba8",
+    "tools/canonical_presentation_browser_qa.js": "bb51d108a5269c9d736ea0efde35570f90760a7805350a81f35dcde8f627effd"
+  }
+}

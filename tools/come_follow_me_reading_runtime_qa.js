@@ -61,3 +61,5 @@ console.log('PASS: Sunday/Monday weekly rollover updates both official lesson ro
 const fallback=fs.readFileSync(require.resolve('../come-follow-me.html'),'utf8');
 assert.ok(fallback.includes('&amp;return=%2Fcome-follow-me.html%23this-week#ask-question'));
 console.log('PASS: weekly Ask preserves current reading and returns to this-week; composer anchor retained.');
+
+require('./cfm_palette_contract.test.js');

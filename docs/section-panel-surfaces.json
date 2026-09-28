@@ -291,7 +291,8 @@
     "fc-stand-series-preview": "Artwork preview link/frame.",
     "watch-media-shell": "Integrated media player/sidebar frame.",
     "watch-short": "Video portrait frame; preserve media treatment.",
-    "cfm-text-link": "Button/control; CFM page-owned study destination action styled by cfm-study-controls.css."
+    "cfm-text-link": "Button/control; CFM page-owned study destination action styled by cfm-study-controls.css.",
+    "cfm-source-link": "CFM official-source text control in a section footer; transparent and unrounded, not an enclosing panel."
   },
   "local_copy_contrast": "Covered panels locally resolve --fc-muted to --fc-text; approved Home .fc-card remains unchanged.",
   "retired_surface_selectors": {
