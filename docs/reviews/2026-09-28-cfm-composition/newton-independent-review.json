@@ -43,10 +43,19 @@
     "verdict": "PASS source and focused regression review",
     "scope": "One condition permits figure thumbnail only with nonempty explicit data-linked-picture-reference; data-journey-art remains excluded. Existing other-local-owner, exact owner fragment and decoded image-family validation unchanged.",
     "independent_test": "test_jesus_reference_ownership.py four fixtures PASS",
-    "original_gate": "Fermi reports site_qa PASS; independent full uniqueness scan running separately",
+    "original_gate": "Independent full topic_artwork_uniqueness_qa.py completed exit0 PASS; Fermi separately reports site_qa PASS.",
     "hashes": {
       "tools/topic_artwork_uniqueness_qa.py": "69f85efee983a4b5158392801b400769be1931b024cea7dfda3d40aa7b91071b",
       "tools/test_jesus_reference_ownership.py": "c647bebcc87040cd1f3c91df78e7f0c258a225fb0d7f513e9dbc5828e5b00489"
     }
+  },
+  "source_pill_inventory_closure": {
+    "at": "2026-09-28T00:54:45.649529+00:00",
+    "verdict": "PASS independent exact delta review",
+    "historical_failed_run": 36363684968,
+    "delta": "Only source-pill count711to712; canonical121 and ownerpage list unchanged.",
+    "independent_evidence": "CFM selector count4to5 against066d5a; sole newly grouped href is existing Matthew6:6\u20138 https://www.churchofjesuschrist.org/study/scriptures/nt/matt/6?lang=eng&id=p6-p8#p6. No destination added/removed by this inventory repair.",
+    "scope": "No product or assertion edits; original failed-step execution owned by Fermi.",
+    "inventory_sha256": "41a395cea899704d116cf573d5490b0785ab3da3897ae0c0763f62b8e0f6b226"
   }
 }
