@@ -51,6 +51,15 @@
       "status": "reviewer_revision_required_under_owner_instruction",
       "reason": "This is a personal face-to-face companion scene, but Christ's pupils look over the other man's eyes.",
       "evidence": "eye-contact-audit.json; focused review under Wyatt requirement, not an individual owner rejection."
+    },
+    {
+      "key": "rt-kirtland-appearance",
+      "sha256": "cd4929be9356ff353d12772a3c947882a71933dad2b48a0e2db54d1391f71c5f",
+      "status": "rejected_by_owner",
+      "reason": "Wyatt rejected this picture on 2026-09-27 and requested an existing Kirtland Temple picture as a temporary placeholder. Do not restore this image or its derivatives.",
+      "evidence": "Direct owner request and attached screenshot in current Codex chat.",
+      "asset_sha256": "ac294e32b07b1c7a9f9299eb9c73c5d97007441cf251ea59aa4e5692731adc7a",
+      "thumbnail_sha256": "c04a0d9561a8f20e7516d04022b77d5dae3d9838633a17b62dab347009fbdbee"
     }
   ]
 }

@@ -15859,28 +15859,6 @@
       ]
     },
     {
-      "title": "The Lord in His house",
-      "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/jesus-journey/rt-kirtland-appearance-960.webp",
-      "fullImage": "/assets/page-art/jesus-journey/rt-kirtland-appearance-full.webp",
-      "alt": "Joseph Smith and Oliver Cowdery look upward toward the white-haired Savior in the Kirtland Temple.",
-      "id": "art-bfd47116eff5",
-      "occurrences": [
-        {
-          "id": "source-c4d332589bbf",
-          "page": "/jesus-christ/restoration-and-today.html",
-          "pageTitle": "Jesus Christ in the Restoration and Today",
-          "category": "Gospel Studies",
-          "kind": "topic",
-          "selector": "a[href=\"/assets/page-art/jesus-journey/rt-kirtland-appearance-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rt-kirtland-appearance-960.webp\"])",
-          "title": "The Lord in His house"
-        }
-      ],
-      "categories": [
-        "Gospel Studies"
-      ]
-    },
-    {
       "title": "The Lord is in this place",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/abrahamic-covenant/ac-jacob-ladder-960.webp",
@@ -18445,15 +18423,15 @@
     }
   ],
   "stats": {
-    "artworks": 827,
-    "occurrences": 838,
+    "artworks": 826,
+    "occurrences": 837,
     "byKind": {
       "artwork": 62,
       "full": 1,
       "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 686
+      "topic": 685
     }
   }
 }

@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-27",
+  "reviewer": "Newton independent content reviewer",
+  "status": "PASS_SCOPED_PRECOMMIT",
+  "owner_request": "Remove the rejected Kirtland appearance image and use another existing Kirtland Temple picture as a temporary placeholder.",
+  "independently_verified": [
+    "Viewed existing temple source pixels: exterior temple, worshippers approaching, red roof and pale blue tower agree with replacement copy.",
+    "Replacement links directly to owning Church History Kirtland section; no second owning artwork is introduced.",
+    "Canonical reference uses actual derivative dimensions 960 by 640.",
+    "Published wording diff preserves chapter scripture and historical account; changed descriptions concern only replaced image or discovery preview.",
+    "Rejected artwork key is absent from runtime Answer and Jesus journey HTML, gallery and search index.",
+    "Active registry and plan retire the rejected scene; owner correction records original and derivative hashes.",
+    "Jesus journey gate, four placeholder exception tests, thirteen chapter visual coverage tests, four reference ownership tests, media voice, artwork uniqueness and static content audit passed.",
+    "Final git diff whitespace check passed with cr-at-eol recognizing preserved native CRLF files."
+  ],
+  "implementation_review_split": "Newton authored the narrow scene-minimum exception, regression tests, external-reference owner mapping and four reviewed wording hashes. Parent independently reviewed those changes; Newton independently reviewed parent-authored content changes.",
+  "reported_by_parent_not_independently_operated": [
+    "Desktop and 390-pixel browser screenshots show loaded image, correct owning link and no overflow.",
+    "All 46 Jesus journey tests and sitewide artwork gate passed."
+  ],
+  "limits": "Precommit content and source review only. Deployment and public-byte verification remain parent responsibilities. Technical review does not imply owner aesthetic approval of the placeholder."
+}
