@@ -1,0 +1,129 @@
+{
+  "failedRun": 36366565735,
+  "failedJob": 108754039630,
+  "cause": "New jsdom palette fixture invoked before dependency installation in step16.",
+  "repair": "Move unchanged fixture to existing installed-jsdom DOM block with NODE_PATH; product bytes unchanged.",
+  "originalBlock": "CFM16 source mutations and52week runtime PASS",
+  "dependencyBlock": [
+    {
+      "command": "node tools/opening_flow_and_cards_qa.js",
+      "exit": 0,
+      "output": "Opening flow and cards QA PASS: 43 opening invitations; complete Answers rows.\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/father_opening_runtime_qa.js",
+      "exit": 0,
+      "output": "FATHER OPENING PASS: initial650, resize700/800/650, scroll, enlarged text, desktop/mobile and pageshow preserve exact copy once and hero markup. Geometry requires browser evidence.\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/study_link_controls_qa.js",
+      "exit": 0,
+      "output": "PASS: 121 canonical pages, 12 named control families; protected prose/primary/Home/chapter fixtures; numbered link destinations recorded.\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/art_study_picture_runtime_qa.js",
+      "exit": 0,
+      "output": "Art study picture DOM QA passed: 4 featured paths, 20 study panels, exact titles and scripture, nested full-size viewer, repeated opening, focus and lesson return.\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/evidences_visual_guides_runtime_qa.js",
+      "exit": 0,
+      "output": "Evidences SVG runtime PASS: 12 responsive sources, caption source links, study/full-size nested dialogs, close focus and lesson return.\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/not_found_recovery_runtime_qa.js",
+      "exit": 0,
+      "output": "NOT FOUND RECOVERY QA PASS: four missing URL depths, before/after shared JS, local assets/recovery links, preserved skip links and two normal-page controls\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/sitewide_hero_runtime_qa.js",
+      "exit": 0,
+      "output": "PASS 42 hero interaction contexts across 21 destinations. CSS framing, keyboard native activation and actual phone rendering require browser verification.\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/topic_artwork_sources_runtime_qa.js",
+      "exit": 0,
+      "output": "Historical artwork source QA PASS: four real scene panels plus exact HTTPS host boundary, query/fragment preservation and scripture routing\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/scripture_display_runtime_qa.js",
+      "exit": 0,
+      "output": "PASS: shared verifier, stable Pioneer controls, invalid-text blocking, citation links, catalog outage, distinct reader Retry/Close handlers, 503 recovery and focus return.\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/ask_composer_scroll_runtime_qa.js",
+      "exit": 0,
+      "output": "PASS: desktop follow-up composer and latest answer remain visible with fixed header; hidden and short-viewport fallbacks.\n",
+      "error": ""
+    },
+    {
+      "command": "node --test tools/art_ask_context.test.cjs",
+      "exit": 0,
+      "output": "\u2714 CFM topic is visible, editable, returns to CFM, and never submits (39.2288ms)\n\u2714 explicit q and already typed draft take precedence (24.8345ms)\n\u2714 returns allow known pages and plain fragments, drop queries and reject unsafe paths (39.2385ms)\n\u2714 topic without return offers accurate fallback; empty topic does not create context (8.9422ms)\n\u2714 Holy Ghost study, supporting artwork and hero return to the exact approved route (41.128ms)\n\u2714 Plan of Salvation study, supporting artwork and hero return to the exact approved route (30.1105ms)\n\u2714 existing artwork, Watch, evidences and covenant contracts remain intact (22.0777ms)\n\u2139 tests 7\n\u2139 suites 0\n\u2139 pass 7\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 510.0203\n",
+      "error": ""
+    },
+    {
+      "command": "node --test tools/ask_growing_composer.test.cjs",
+      "exit": 0,
+      "output": "\u2714 typed and programmatically assigned long questions grow and shrink without changing text (35.0622ms)\n\u2714 native textarea contract and initial prefill survive initialization (5.5473ms)\n\u2714 Enter sends once; Shift Enter and composing Enter do not submit (3.5246ms)\n\u2139 tests 3\n\u2139 suites 0\n\u2139 pass 3\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 327.8065\n",
+      "error": ""
+    },
+    {
+      "command": "node --test tools/holy_ghost_video.test.cjs",
+      "exit": 0,
+      "output": "\u2714 player is opt-in, exact owner video loads, and close destroys it (81.3851ms)\n\u2714 timeout restores preview with real YouTube fallback and stale readiness cannot reopen it (27.4079ms)\n\u2714 API load error and provider playback error both preserve usable fallback (39.6813ms)\n\u2139 tests 3\n\u2139 suites 0\n\u2139 pass 3\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 445.8864\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/canonical_presentation_measurement.test.js",
+      "exit": 0,
+      "output": "Canonical presentation measurement PASS: painted controls, real text clipping, image-only overflow, closed/open disclosures.\nCaption ancestor clipping PASS: partial/full/vertical negatives; contained, closed, hidden and image-crop positives.\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/cfm_palette_contract.test.js",
+      "exit": 0,
+      "output": "CFM palette PASS: navy reading surface/light text; yellow text and cream pill fill rejected.\n",
+      "error": ""
+    },
+    {
+      "command": "node --test tools/header_scroll_navigation.test.cjs",
+      "exit": 0,
+      "output": "\\navigation.js:55:3)\n    at Timeout._onTimeout (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-qa-deps\\node_modules\\jsdom\\lib\\jsdom\\living\\nodes\\HTMLHyperlinkElementUtils-impl.js:80:7)\n    at listOnTimeout (node:internal/timers:635:17)\n    at process.processTimers (node:internal/timers:571:7) undefined\nError: Not implemented: navigation (except hash changes)\n    at module.exports (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-qa-deps\\node_modules\\jsdom\\lib\\jsdom\\browser\\not-implemented.js:9:17)\n    at navigateFetch (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-qa-deps\\node_modules\\jsdom\\lib\\jsdom\\living\\window\\navigation.js:77:3)\n    at exports.navigate (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-qa-deps\\node_modules\\jsdom\\lib\\jsdom\\living\\window\\navigation.js:55:3)\n    at Timeout._onTimeout (C:\\Users\\wyatt\\Documents\\Codex\\2026-09-27\\focus-human-qa-deps\\node_modules\\jsdom\\lib\\jsdom\\living\\nodes\\HTMLHyperlinkElementUtils-impl.js:80:7)\n    at listOnTimeout (node:internal/timers:635:17)\n    at process.processTimers (node:internal/timers:571:7) undefined\n\u2139 tests 12\n\u2139 suites 0\n\u2139 pass 12\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 415.433\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/site_search_runtime_qa.js",
+      "exit": 0,
+      "output": "SEARCH RUNTIME PASS: relevance, safe text, pagination, history, dialog focus, empty/error/retry and Ask prefill\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/settle_recording_runtime_qa.js",
+      "exit": 0,
+      "output": "SETTLE RECORDING QA PASS: exact negation, collapsed transcript, metadata race, cloned links, focus, seek and playback fallback\n",
+      "error": ""
+    },
+    {
+      "command": "node tools/watch_shorts_runtime_qa.js",
+      "exit": 0,
+      "output": "Watch Shorts official API runtime PASS: no-load player, pending/readiness, one-player switching, stale callbacks, close/Escape/focus, modifier fallback, invalid ID, API/player failure/timeout and pagehide\n",
+      "error": ""
+    },
+    {
+      "command": "node --test tools/jesus_journey_navigation.test.cjs",
+      "exit": 0,
+      "output": "ested picture bookmarks (211.9641ms)\n\u2714 invalid and malformed hashes are safe; empty hash restores first chapter (114.4391ms)\n\u2714 same-page picture link reveals target before downstream click listeners (12.1868ms)\n\u2714 print reveals all chapters and restores reading mode (11.6561ms)\n\u2714 modified chapter-picker click does not navigate current document (23.6545ms)\n\u2714 modified same-page picture link must not change current chapter (12.6602ms)\n\u2714 rapid valid-to-malformed bookmark change remains safe before animation frame (54.5044ms)\n\u2714 Back closes nested owned dialogs and restores focus after shared close cleanup (64.9632ms)\n\u2714 reviewed group retains all member sections but counts and selects leaders only (14.1847ms)\n\u2714 retained subordinate bookmarks reveal complete group and keep precise scroll target (121.1124ms)\n\u2714 whole mode and printing include group members and restore safely focused leader (15.1565ms)\n\u2714 invalid grouping fails open with every original section and navigation link available (12.7901ms)\n\u2714 Birth preserves all twelve bookmarks, narrative opening pictures and reader focus (625.0732ms)\n\u2139 tests 19\n\u2139 suites 0\n\u2139 pass 19\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 2708.88\n",
+      "error": ""
+    }
+  ]
+}

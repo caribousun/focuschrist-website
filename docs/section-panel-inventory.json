@@ -1520,14 +1520,15 @@
       ],
       "disposition": "shared_surface"
     },
-    "cfm-signature": {
+    "cfm-source-link": {
       "stylesheets": [
-        "come-follow-me.css"
+        "cfm-study-controls.css"
       ],
       "pages": [
         "come-follow-me.html"
       ],
-      "disposition": "coordinated_stylesheet_owner"
+      "disposition": "excluded_with_reason",
+      "reason": "CFM official-source text control in a section footer; transparent and unrounded, not an enclosing panel."
     },
     "cfm-tool": {
       "stylesheets": [

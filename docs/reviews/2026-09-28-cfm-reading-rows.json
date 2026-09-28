@@ -1,0 +1,39 @@
+{
+  "status": "Reviewed navy reading-row candidate; rejected cream proposal was never committed or published.",
+  "owner_request": "No cream, fewer pills, weekly relevance: navy reading list/light text; Signature belongs in general library.",
+  "baseline": "7294faab5ca4ade1e62fd163a89432730f845e92",
+  "palette_tokens": [
+    "--fc-bg-deep",
+    "--fc-bg-warm",
+    "--fc-text",
+    "--fc-gold"
+  ],
+  "coverage": [
+    "reading-range summary",
+    "weekly single chapters",
+    "expanded chapter choices",
+    "schedule readings",
+    "section jumps",
+    "previous/next lesson",
+    "source pills",
+    "study-path actions",
+    "library/Signature Open study pathway"
+  ],
+  "footer_changes": "Three concise source introductions with standalone text links; reflection secondary actions form a separate spaced row.",
+  "preserved": [
+    "Approved hero/navigation markup and hero CSS",
+    "All source href occurrences",
+    "All52 lessons and controller bytes",
+    "All19 image attributes and artwork bytes"
+  ],
+  "tests": [
+    "16composition fixtures PASS",
+    "52-week runtime/rollover/Ask return PASS",
+    "Navy/light measurement plus yellow text/cream gradient negatives PASS",
+    "artwork self-test PASS",
+    "Gallery unchanged PASS",
+    "unified experience PASS",
+    "static content ledger PASS"
+  ],
+  "rendered_contract": "CI checks actual navy backgrounds and light text at all three canonical profiles; parent390/960 visual and reader checks PASS separately."
+}

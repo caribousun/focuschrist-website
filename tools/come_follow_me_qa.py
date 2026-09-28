@@ -63,11 +63,11 @@ require("fc-actions--center fc-actions--content" in home, "Home closing actions 
 require('style="margin-top:22px;"' not in about, "inline About spacing blocks the mobile standard")
 
 # CFM owns its control presentation; native disclosure/source behavior stays separate.
-require('cfm-study-controls.css?v=20260928-study-composition-1' in html, "reviewed CFM controls stylesheet is missing")
-require('body.cfm-page [data-cfm-current-reading]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))' in controls_css,
-        "weekly readings must use balanced columns")
-require('body.cfm-page .cfm-reading-range>summary' in controls_css and 'border-radius:999px' in controls_css and 'text-decoration:none' in controls_css,
-        "native chapter summary must share the reading-pill treatment")
+require('cfm-study-controls.css?v=20260928-reading-rows-1' in html, "reviewed CFM controls stylesheet is missing")
+require('body.cfm-page [data-cfm-current-reading]{display:grid;grid-template-columns:minmax(0,1fr)' in controls_css,
+        "weekly readings must use compact full-width rows")
+require('body.cfm-page .cfm-reading-range>summary' in controls_css and 'border-radius:0' in controls_css and 'text-decoration:none' in controls_css,
+        "native chapter summary must use the unrounded reading-row treatment")
 require('body.cfm-page .cfm-reading-chapters' in controls_css and '@media(max-width:700px)' in controls_css,
         "expanded chapter choices need an explicit narrow layout")
 require('.cfm-hero' not in controls_css and ' img' not in controls_css,
