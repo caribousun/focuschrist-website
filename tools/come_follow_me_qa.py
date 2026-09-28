@@ -7,6 +7,9 @@ from html.parser import HTMLParser
 from urllib.parse import urlparse, unquote
 from collections import Counter
 from answer_study_qa import Document
+from cfm_composition_qa import check as composition_check, self_test as composition_self_test
+composition_check()
+composition_self_test()
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,7 +63,7 @@ require("fc-actions--center fc-actions--content" in home, "Home closing actions 
 require('style="margin-top:22px;"' not in about, "inline About spacing blocks the mobile standard")
 
 # CFM owns its control presentation; native disclosure/source behavior stays separate.
-require('cfm-study-controls.css?v=20260927-1' in html, "reviewed CFM controls stylesheet is missing")
+require('cfm-study-controls.css?v=20260928-study-composition-1' in html, "reviewed CFM controls stylesheet is missing")
 require('body.cfm-page [data-cfm-current-reading]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))' in controls_css,
         "weekly readings must use balanced columns")
 require('body.cfm-page .cfm-reading-range>summary' in controls_css and 'border-radius:999px' in controls_css and 'text-decoration:none' in controls_css,
@@ -151,7 +154,7 @@ library = html.split('class="cfm-library"', 1)[-1].split('</section>', 1)[0]
 for destination in ('ask.html', 'answers.html', 'watch.html', 'art.html', 'missionary.html',
                     'church-history.html', 'pioneers.html', 'index.html', 'about.html',
                     'general-conference.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html'):
-    require(f'href="{destination}"' in library, f"connected library route missing: {destination}")
+    require(f'href="{destination}"' in (html if destination.endswith('look-unto-me-doctrine-and-covenants-6-36.html') else library), f"connected study route missing: {destination}")
     url = urlparse(destination)
     target = ROOT / url.path
     require(target.is_file(), f"connected library page missing: {url.path}")

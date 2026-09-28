@@ -28,7 +28,6 @@
     ".notice",
     ".cfm-week__card",
     ".cfm-focus",
-    ".cfm-reading--assignment",
     ".cfm-day",
     ".cfm-library-card",
     ".cfm-tool",
@@ -76,7 +75,9 @@
     "ask-continue-card": "Ask owner applies shared panel tokens.",
     "ask-study-card": "Ask owner applies shared panel tokens.",
     "ask-topic-card": "Ask owner applies shared panel tokens.",
-    "fc-study-visual--panel": "Owner-requested Peter rescue figure uses shared panel tokens in the reviewed appendix; preserves the artwork viewer and intrinsic image."
+    "fc-study-visual--panel": "Owner-requested Peter rescue figure uses shared panel tokens in the reviewed appendix; preserves the artwork viewer and intrinsic image.",
+    "cfm-reflection-picture": "CFM illustrated study panel; exact page-owned composition contract preserves natural imagery, source controls and responsive caption containment.",
+    "cfm-signature": "Existing Signature study card moved once into the CFM weekly panel; exact CFM composition contract preserves its source, artwork and destination."
   },
   "excluded_classes": {
     "ask-scene-card": "Artwork figure; preserve artwork framing.",
@@ -292,5 +293,8 @@
     "watch-short": "Video portrait frame; preserve media treatment.",
     "cfm-text-link": "Button/control; CFM page-owned study destination action styled by cfm-study-controls.css."
   },
-  "local_copy_contrast": "Covered panels locally resolve --fc-muted to --fc-text; approved Home .fc-card remains unchanged."
+  "local_copy_contrast": "Covered panels locally resolve --fc-muted to --fc-text; approved Home .fc-card remains unchanged.",
+  "retired_surface_selectors": {
+    ".cfm-reading--assignment": "Owner-requested CFM composition removes the nested reading box; current unboxed reading and source controls are required by docs/cfm-composition.json."
+  }
 }
