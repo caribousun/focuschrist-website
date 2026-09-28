@@ -1,0 +1,220 @@
+{
+  "failed_run": 36360856178,
+  "failed_job": 108737632234,
+  "cause": "Two mobile_scene_qa historical CSS prefixes saw the precisely reviewed anchor/root-auto transformations.",
+  "repair": "Feed both prefix extractions through existing exact historical_style_bytes adapter after current stylesheet validation; retain old hashes and all negative/current geometry checks.",
+  "product_changes": false,
+  "failed_step_19": "All13 commands PASS",
+  "source_sweep": [
+    {
+      "command": "python tools/navigation_links_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/topic_pill_order_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/jesus_journey_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/build_jesus_journey.py --strict --check",
+      "exit": 0
+    },
+    {
+      "command": "python tools/build_jesus_parent.py --strict --check",
+      "exit": 0
+    },
+    {
+      "command": "python tools/jesus_discovery_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/build_site_search.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python tools/site_search_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/site_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/site_flow_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/media_voice_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/media_voice_qa_test.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/come_follow_me_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/general_conference_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/unified_experience_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/section_panel_surface_qa.py --self-test",
+      "exit": 0
+    },
+    {
+      "command": "python tools/build_art_gallery.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python tools/artwork_details_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/sitewide_artwork_review_qa.py --self-test",
+      "exit": 0
+    },
+    {
+      "command": "python tools/sitewide_artwork_review_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/mobile_scene_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/art_study_enrichment_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/birth_of_christ_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/book_of_mormon_stories_qa.py --self-test",
+      "exit": 0
+    },
+    {
+      "command": "python tools/book_of_mormon_stories_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/study_gap_art_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/watch_library_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/answer_study_parser_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/topic_study_pages_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/holy_ghost_qa_test.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/plan_of_salvation_qa.py --selftest",
+      "exit": 0
+    },
+    {
+      "command": "python tools/heavenly_father_qa.py --selftest",
+      "exit": 0
+    },
+    {
+      "command": "python tools/topic_inline_scripture_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/topic_artwork_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/topic_body_picture_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/five_picture_manifest_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/topic_artwork_details_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/bible_together_qa.py --self-test",
+      "exit": 0
+    },
+    {
+      "command": "python tools/abrahamic_covenant_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/focused_answers_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/answer_study_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/answer_video_uniqueness_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/global_video_uniqueness_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/build_scripture_reader_data.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python tools/church_history_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/history_choices_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/study_section_balance_qa.py --self-test",
+      "exit": 0
+    },
+    {
+      "command": "python tools/study_section_balance_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/build_scripture_catalog.py --check",
+      "exit": 0
+    },
+    {
+      "command": "python tools/topic_artwork_caption_runtime_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/pioneer_story_qa.py",
+      "exit": 0
+    },
+    {
+      "command": "python tools/elizabeth_identity_qa.py",
+      "exit": 0
+    }
+  ],
+  "independent_review": "Newton PASS; final receipt included.",
+  "limits": "52 explicit non-browser Python workflow commands are accounted here; hosted full browser/Node QA still required."
+}
