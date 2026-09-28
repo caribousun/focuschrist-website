@@ -1,0 +1,49 @@
+{
+  "reviewer": "Newton",
+  "at": "2026-09-27T23:37:57.936692+00:00",
+  "verdict": "PASS bounded independent source/behavior-preservation review",
+  "scope": "Whole CFM page control styling, weekly and year scripture choices, previous/next, Study Your Way, reflection onward actions and library row balance",
+  "findings": [
+    "New stylesheet has exactly one registered owner. Selectors target CFM components; no hero/image sizing rules or shared runtime edits.",
+    "Native details/summary markup and chapter generation remain unchanged. Focus-visible styling remains explicit; 44px minimum targets and wrapping preserved.",
+    "All anchor destinations, image sources and script consumer URLs compared against HEAD and are identical. come-follow-me.js is byte-identical, preserving schedule/rollover, 52 assignment data and previous/next handlers.",
+    "Two weekly CTA text labels shortened without changing destinations or semantics. Weekly readings and CTA columns balance on desktop and stack below 700px.",
+    "Expanded weekly range spans its row, chapter grid wraps and stacks on phone. Year range expansion retains full-row behavior. Inherited chapter uppercase/letter spacing reset is narrowly scoped.",
+    "12px source paragraph margin separates Study Your Way actions. At 701\u20131020px, ninth existing library card fills last row with two-column image/text layout.",
+    "Reflection/talk content, links, approved image identities and year schedule unchanged. Exact stylesheet bytes are pinned with negative mutation checks."
+  ],
+  "checks": [
+    {
+      "command": "python -X utf8 tools/come_follow_me_qa.py",
+      "result": "PASS: 52 weekly routes/titles and existing route/containment contracts"
+    },
+    {
+      "command": "python -X utf8 tools/sitewide_artwork_review_qa.py --self-test",
+      "result": "PASS"
+    },
+    {
+      "command": "Independent BeautifulSoup href/img/script equality and JS byte comparison against HEAD",
+      "result": "PASS"
+    }
+  ],
+  "rendered_evidence": {
+    "owner": "Albert",
+    "status": "Parent reported 960px aligned weekly grid, native chapter expand and previous/next official destination checks, balanced Pioneer library final row; final breakpoint check remains parent responsibility"
+  },
+  "hashes": {
+    "cfm-study-controls.css": "0deba2f2978d8348eed680984dabf4d710fc6ab6e5804d4818a1d8a2eb8efcad",
+    "come-follow-me.html": "8b268f4949cf9a6ad328a87d3abfa2fc2c178d004c60e5654a1c64c903249f87",
+    "tools/come_follow_me_qa.py": "3f58126bab5bd92f92115bb80550c22b133d7f8fbfe2bcc73e90e72f236dae69",
+    "tools/sitewide_artwork_review_qa.py": "856ccc627dc4c920e737cbbe51098c72f9845d75fb8fd73e189eb8d29a5de23c"
+  },
+  "limits": [
+    "No Newton browser run; source/structural review does not substitute for parent rendered acceptance.",
+    "No public deployment claim."
+  ],
+  "followup": {
+    "at": "2026-09-27T23:42:03.708843+00:00",
+    "delta": "Source-group margin replaced by padding-top:12px because existing important margin reset defeated the first spacing rule. Same exact CFM selector, no other scope expansion.",
+    "verdict": "PASS source review; actual computed spacing awaits parent readback.",
+    "supersedes": "Earlier source-only margin claim did not establish rendered spacing."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "status": "Independent source/behavior review PASS; parent rendered verification PASS at five widths and 320px with 200% root font",
+  "owner_scope": "Whole Come, Follow Me page controls/layout coherence; no new art, sections, reading assignments or prose expansion.",
+  "changes": [
+    "Page-owned rounded reading/summary/chapter controls across weekly and year schedule",
+    "Balanced weekly reading/action grids and concise CTA labels",
+    "Pill jump,previous/next,focus andStudyYourWayactions",
+    "Readable expanded chapter choice typography rather than inherited eyebrow casing",
+    "Nine-cardlibrary finalrow filled only at existing2-column701–1020breakpoint"
+  ],
+  "invariants": {
+    "all_authored_action_destination_attributes_identical": true,
+    "all_img_markup_identical": true,
+    "come_follow_me_js_unchanged": true,
+    "hero_css_unchanged": true
+  },
+  "checks": [
+    "come_follow_me_qa.py PASS",
+    "come_follow_me_reading_runtime_qa.js PASS52assignments+weeklyrollover",
+    "sitewide_artwork_review_qa.py --self-test PASSincludingnewradius/casingnegativefixtures",
+    "sitewide_artwork_review_qa.py PASS842protectedimages",
+    "gitdiffcheckPASS",
+    "Gallerycurrent;Searchregenerated;onlyCFMcontentledgerrowrefreshedafterindependentreview"
+  ],
+  "files": {
+    "cfm-study-controls.css": "0deba2f2978d8348eed680984dabf4d710fc6ab6e5804d4818a1d8a2eb8efcad",
+    "come-follow-me.html": "68cc1b18537ee451806eb522fbc916671377338ace3a8baefd79c9597a889ed7",
+    "tools/come_follow_me_qa.py": "3f58126bab5bd92f92115bb80550c22b133d7f8fbfe2bcc73e90e72f236dae69",
+    "tools/sitewide_artwork_review_qa.py": "856ccc627dc4c920e737cbbe51098c72f9845d75fb8fd73e189eb8d29a5de23c"
+  },
+  "independent_review": "docs/reviews/2026-09-27-cfm-controls-independent-review.json",
+  "rendered_evidence": [
+    "parent-browser.json",
+    "parent-final-gap.json"
+  ],
+  "gap_repair": "The shared important margin reset defeated the first margin rule. Source paragraph padding-top:12px now yields an actual 12px gap on all three cards at 390px, verified by parent.",
+  "followup": "Independent member-flow review approved encoded weekly return to #this-week and three activity-aligned day labels. Prior destination and JS invariants describe the initial styling commit; this followup changes only the weekly return fragment and script cache."
+}

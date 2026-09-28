@@ -41,15 +41,23 @@ console.log('PASS: 52 unchanged assignments, exact chapter choices, abbreviated 
 // The evergreen initial HTML must still become the right weekly lesson at rollover.
 for(const [day,lesson] of [['2026-09-27','39'],['2026-09-28','40']]){
  const date=new Node('span'),title=new Node('h2'),assignment=new Node('div');
- const links=[new Node('a'),new Node('a')];
- const nodes={'[data-cfm-current-date]':date,'[data-cfm-current-title]':title,'[data-cfm-current-reading]':assignment};
+ const links=[new Node('a'),new Node('a')], ask=new Node('a');
+ const nodes={'.cfm-week a[href^="ask.html"]':ask,'[data-cfm-current-date]':date,'[data-cfm-current-title]':title,'[data-cfm-current-reading]':assignment};
  const doc={querySelector:s=>nodes[s]||null,querySelectorAll:s=>s==='[data-cfm-current-lesson]'?links:[],createElement:t=>new Node(t),createTextNode:t=>new Node('#text',t)};
  class RolloverDate extends NativeDate{constructor(...args){super(...(args.length?args:[day+'T12:00:00']));}}
  vm.runInNewContext(fs.readFileSync(require.resolve('../come-follow-me.js'),'utf8'),{document:doc,Date:RolloverDate,location:{}});
  const week=weeks.find(w=>w[4]===lesson);
+ const askURL=new URL(ask.href,'https://focuschrist.com/');
+ assert.equal(askURL.searchParams.get('return'),'/come-follow-me.html#this-week');
+ assert.equal(askURL.hash,'#ask-question');
+ assert.ok(askURL.searchParams.get('topic').includes(week[3]));
  assert.equal(date.textContent,week[2]);
  assert.ok(title.textContent && !title.textContent.includes('Find this week'));
  assert.equal(assignment.attrs['aria-label'],'Scripture reading: '+week[3]);
  for(const link of links)assert.equal(link.href,'https://www.churchofjesuschrist.org/study/manual/come-follow-me-for-home-and-church-old-testament-2026/'+lesson+'?lang=eng');
 }
 console.log('PASS: Sunday/Monday weekly rollover updates both official lesson routes and the reading.');
+
+const fallback=fs.readFileSync(require.resolve('../come-follow-me.html'),'utf8');
+assert.ok(fallback.includes('&amp;return=%2Fcome-follow-me.html%23this-week#ask-question'));
+console.log('PASS: weekly Ask preserves current reading and returns to this-week; composer anchor retained.');

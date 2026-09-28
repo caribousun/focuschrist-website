@@ -1,0 +1,39 @@
+/* CFM reading and navigation controls; artwork and hero geometry are unchanged. */
+body.cfm-page{--fc-study-control-radius:999px}
+body.cfm-page [data-cfm-current-reading]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start}
+body.cfm-page .cfm-reading-range,body.cfm-page .cfm-reading-range[open]{border:0;padding:0;margin:0;min-width:0;max-width:100%}
+body.cfm-page [data-cfm-current-reading]>.cfm-reading-range[open]{grid-column:1/-1}
+body.cfm-page :is([data-cfm-current-reading],.cfm-schedule-reading)>a,
+body.cfm-page .cfm-reading-range>summary,
+body.cfm-page .cfm-reading-chapters>a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:44px;max-width:100%;padding:10px 16px;border:1px solid #f0c36a;border-radius:999px;background:rgba(240,195,106,.08);color:#f7d894!important;font:inherit;font-weight:650;line-height:1.4;text-align:center;text-decoration:none;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
+body.cfm-page .cfm-reading-range>summary:after{flex:0 0 auto;float:none;margin-left:2px}
+body.cfm-page .cfm-reading-range>summary::-webkit-details-marker{display:none}
+body.cfm-page .cfm-reading-chapters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:10px 0 0;min-width:0}
+body.cfm-page .cfm-reading--assignment .cfm-reading-chapters{font-size:inherit;font-weight:inherit;letter-spacing:normal;text-transform:none;color:inherit}
+body.cfm-page .cfm-reading-chapters>a:last-child:nth-child(odd){grid-column:1/-1}
+body.cfm-page .cfm-schedule-reading{gap:8px;margin-top:10px;align-items:start}
+body.cfm-page .cfm-schedule-reading>.cfm-reading-range[open]{flex-basis:100%;width:100%}
+body.cfm-page .cfm-week__intro>.cfm-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:12px}
+body.cfm-page .cfm-week__intro>.cfm-actions>.cfm-btn{width:100%;min-width:0;padding:13px 16px;overflow-wrap:anywhere;box-sizing:border-box}
+body.cfm-page .cfm-jump{gap:10px}
+body.cfm-page .cfm-jump>a,body.cfm-page .cfm-week-nav>button{display:flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #f0c36a;border-radius:999px;padding:10px 18px;background:rgba(240,195,106,.08);color:#f7d894;text-align:center;text-decoration:none;line-height:1.4;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
+body.cfm-page .cfm-week-nav>button{flex:1;min-width:0}
+body.cfm-page :is(.cfm-reading-range>summary,.cfm-reading-chapters>a,[data-cfm-current-reading]>a,.cfm-schedule-reading>a,.cfm-jump>a,.cfm-week-nav>button):hover{background:rgba(240,195,106,.16)}
+body.cfm-page :is(.cfm-reading-range>summary,.cfm-reading-chapters>a,[data-cfm-current-reading]>a,.cfm-schedule-reading>a,.cfm-jump>a,.cfm-week-nav>button):focus-visible{outline:3px solid #f0c36a;outline-offset:3px}
+@media(max-width:700px){
+ body.cfm-page [data-cfm-current-reading],body.cfm-page .cfm-reading-chapters,body.cfm-page .cfm-week__intro>.cfm-actions{grid-template-columns:minmax(0,1fr)}
+ body.cfm-page .cfm-jump>a{flex:1 1 140px}
+ body.cfm-page .cfm-week-nav{flex-direction:column}
+}
+
+/* Study-path actions share the same rounded controls without cropping their art. */
+body.fc-site .cfm-paths > figure.cfm-path.fc-study-visual > figcaption{flex:1 1 auto}
+body.cfm-page .cfm-path__body>a,body.cfm-page .cfm-path__body .fc-study-visual-sources a,body.cfm-page .cfm-practice .cfm-text-link,body.cfm-page .cfm-focus .cfm-text-link{display:flex;align-items:center;justify-content:center;min-height:44px;width:100%;padding:10px 16px;border:1px solid #f0c36a;border-radius:999px;background:rgba(240,195,106,.08);color:#f7d894!important;line-height:1.4;text-align:center;text-decoration:none;white-space:normal;overflow-wrap:anywhere;box-sizing:border-box}
+body.cfm-page .cfm-path__body>.fc-study-visual-sources{padding-top:12px}
+body.cfm-page .cfm-path__body>a:focus-visible,body.cfm-page .cfm-path__body .fc-study-visual-sources a:focus-visible,body.cfm-page .cfm-practice .cfm-text-link:focus-visible,body.cfm-page .cfm-focus .cfm-text-link:focus-visible{outline:3px solid #f0c36a;outline-offset:3px}
+
+/* Nine real study destinations fill the final row in the two-column layout. */
+@media(min-width:701px) and (max-width:1020px){
+ body.cfm-page .cfm-library>.cfm-library-card:last-child:nth-child(odd){grid-column:1/-1}
+ body.cfm-page .cfm-library>.cfm-library-card:last-child:nth-child(odd)>a{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+}

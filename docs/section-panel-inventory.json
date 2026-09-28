@@ -1508,6 +1508,16 @@
       ],
       "disposition": "shared_surface"
     },
+    "cfm-text-link": {
+      "stylesheets": [
+        "cfm-study-controls.css"
+      ],
+      "pages": [
+        "come-follow-me.html"
+      ],
+      "disposition": "excluded_with_reason",
+      "reason": "Button/control; CFM page-owned study destination action styled by cfm-study-controls.css."
+    },
     "cfm-tool": {
       "stylesheets": [
         "come-follow-me.css"
