@@ -1,0 +1,154 @@
+{
+  "checks": [
+    {
+      "headingTop": 65.3531265258789,
+      "height": 43297,
+      "id": "open-questions",
+      "margin": "68px",
+      "nav": {
+        "position": "fixed",
+        "rect": {
+          "bottom": 52,
+          "height": 52,
+          "left": 0,
+          "right": 1351.2000732421875,
+          "top": 0,
+          "width": 1351.2000732421875,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "padding": "auto",
+      "scrollY": 34876.80078125,
+      "targetTop": 65.3531265258789,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#open-questions",
+      "width": 1366
+    },
+    {
+      "headingTop": 65.93535614013672,
+      "height": 43297,
+      "id": "translation",
+      "margin": "68px",
+      "nav": {
+        "position": "fixed",
+        "rect": {
+          "bottom": 52,
+          "height": 52,
+          "left": 0,
+          "right": 1351.2000732421875,
+          "top": 0,
+          "width": 1351.2000732421875,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "padding": "auto",
+      "scrollY": 2809.60009765625,
+      "targetTop": 65.93535614013672,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#translation",
+      "width": 1366
+    },
+    {
+      "action": "back",
+      "headingTop": 67.6624984741211,
+      "height": 43297,
+      "id": "open-questions",
+      "margin": "68px",
+      "nav": {
+        "position": "fixed",
+        "rect": {
+          "bottom": 52,
+          "height": 52,
+          "left": 0,
+          "right": 1351.2000732421875,
+          "top": 0,
+          "width": 1351.2000732421875,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "padding": "auto",
+      "scrollY": 34876.80078125,
+      "targetTop": 67.6624984741211,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#open-questions",
+      "width": 1366
+    },
+    {
+      "action": "phone click",
+      "headingTop": 15.561914443969728,
+      "height": 76789,
+      "id": "translation",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -3893.199951171875,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -3955.199951171875,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -3955.199951171875
+        }
+      },
+      "padding": "auto",
+      "scrollY": 3955.199951171875,
+      "targetTop": 15.561914443969728,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#translation",
+      "width": 390
+    },
+    {
+      "action": "phone long click",
+      "headingTop": 14.912500381469728,
+      "height": 76789,
+      "id": "source-library",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -73679.6015625,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -73741.6015625,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -73741.6015625
+        }
+      },
+      "padding": "auto",
+      "scrollY": 73741.6015625,
+      "targetTop": 14.912500381469728,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#source-library",
+      "width": 390
+    },
+    {
+      "action": "phone back",
+      "headingTop": 3065.150146484375,
+      "height": 76789,
+      "id": "translation",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -844.4000244140625,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -906.4000244140624,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -906.4000244140624
+        }
+      },
+      "padding": "auto",
+      "scrollY": 906.4000244140624,
+      "targetTop": 3065.150146484375,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#translation",
+      "width": 390
+    }
+  ],
+  "limits": "Actual native click and Back positions verified; 200ms animation source/fixtures separately verified. CUA does not expose document.getAnimations.",
+  "historyNote": "Phone Back restores the actual pre-click reading position near the topic navigation (y906.4), where the browser scrolled the offscreen link into view before activating it; hash remains prior Translation. Position stable on separate read. Browser-native restoration retained, not forced to hash heading."
+}

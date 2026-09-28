@@ -18,7 +18,7 @@
 .fc-search-form input {box-sizing:border-box;min-width:0;flex:1;width:100%;border:1px solid #819e9f;border-radius:12px;background:#102a35;color:#fff2dc;padding:14px 16px;font:inherit;font-size:16px;min-height:50px;}
 .fc-search-form input::placeholder {color:#b8cbce;opacity:1;}
 .fc-search-row .fc-button {flex-shrink:0;min-height:50px;cursor:pointer;margin:0;}
-.fc-search-directory {margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid #f0c36a26;scroll-margin-top:96px;}
+.fc-search-directory {margin-bottom:32px;padding-bottom:28px;border-bottom:1px solid #f0c36a26;scroll-margin-top:var(--fc-anchor-offset, 16px);}
 .fc-search-main {max-width:calc(var(--fc-standard) + 2 * var(--fc-body-gutter));margin:0 auto;padding:var(--fc-body-section-gap) var(--fc-body-gutter);color:#fff2dc;}
 .fc-search-main h1 {font:normal clamp(34px,5vw,48px)/1.2 Georgia,serif;color:#f0c36a;margin:0 0 16px;}
 .fc-search-main > p {max-width:68ch;line-height:1.6;margin:0 0 28px;}

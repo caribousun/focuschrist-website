@@ -64,7 +64,7 @@
     --fc-ultrawide-hero-width: 1920px;
 }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: auto; }
 
 body.fc-site {
     margin: 0;
@@ -673,7 +673,7 @@ footer[data-focuschrist-footer="standard"] p {
 footer[data-focuschrist-footer="standard"] a { color: var(--fc-gold-light); }
 
 /* Shared study-journey controls. */
-#ask-question { scroll-margin-top: 105px; }
+#ask-question { scroll-margin-top: var(--fc-anchor-offset, 16px); }
 .ask-conversation-reset {
     min-height: 44px;
     padding: 8px 15px;
@@ -1225,7 +1225,7 @@ body.fc-site:not(.fc-not-found) .fc-page-intro .fc-scroll-cue:focus-visible {
 body.fc-site .fc-mobile-scroll-cue { display: none; }
 @media (max-width:700px) {
     body.fc-site .fc-desktop-scroll-cue { display: none !important; }
-    body.fc-site .fc-mobile-scroll-target { scroll-margin-top: 86px; }
+    body.fc-site .fc-mobile-scroll-target { scroll-margin-top: var(--fc-anchor-offset, 16px); }
     body.fc-site .gc-page-opening { padding-block: 16px 20px; }
     body.fc-site .gc-page-opening h1 { font-size: 2rem; }
     body.fc-site .fc-mobile-cued-opening {
@@ -2429,3 +2429,42 @@ body.fc-site .fc-scripture-reference-numbers { font-family: "Times New Roman", s
 body.fc-site .watch-source-note { box-sizing: border-box; padding: clamp(20px, 3vw, 30px); }
 body.fc-site .watch-source-note > p { margin: 0; }
 body.fc-site .watch-source-note > p + p { margin-top: 14px; }
+
+/* In-page destinations follow the standard header: relative on phones,
+   fixed and rem-aware on desktop. Keep breathing room without root padding. */
+:root { --fc-anchor-offset: 16px; }
+@media (min-width: 1021px) {
+    :root { --fc-anchor-offset: calc(max(52px, 3.25rem) + 16px); }
+}
+
+/* Existing native destinations without a page-specific offset. */
+body.fc-site #aaronic-priesthood-restoration,
+body.fc-site #ask-history,
+body.fc-site #ask-pioneers,
+body.fc-site #atonement-title,
+body.fc-site #christ-understands,
+body.fc-site #commission-heading,
+body.fc-site #early-missionaries-heading,
+body.fc-site #guided-reflections,
+body.fc-site #history-bom-evidence-title,
+body.fc-site #history-first-vision-title,
+body.fc-site #history-harmony-title,
+body.fc-site #joseph-likeness-entry,
+body.fc-site #kirtland-safety-society,
+body.fc-site #kirtland-temple,
+body.fc-site #liberty-jail-study,
+body.fc-site #likeness-title,
+body.fc-site #love-share-invite-heading,
+body.fc-site #melchizedek-priesthood-restoration,
+body.fc-site #nauvoo-legion,
+body.fc-site #nauvoo-temple,
+body.fc-site #pioneer-departure-heading,
+body.fc-site #pioneer-trail-life-heading,
+body.fc-site #porter-rockwell,
+body.fc-site #receiving-care,
+body.fc-site #relief-society-organization,
+body.fc-site #richmond-rebuke,
+body.fc-site #scripture-companion,
+body.fc-site #visit-heading,
+body.fc-site #ways-to-serve,
+body.fc-site #worldwide-heading { scroll-margin-top: var(--fc-anchor-offset, 16px); }

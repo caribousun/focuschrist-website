@@ -1,9 +1,9 @@
 .likeness-hero { background:#292c2b; }
 .likeness-hero > img { object-fit:contain!important; object-position:center!important; }
-.likeness-main { --likeness-space:clamp(20px,2.5vw,28px); max-width:calc(var(--fc-standard) + 2 * var(--fc-body-gutter)); margin:auto; padding:0 var(--fc-body-gutter); scroll-margin-top:90px; }
+.likeness-main { --likeness-space:clamp(20px,2.5vw,28px); max-width:calc(var(--fc-standard) + 2 * var(--fc-body-gutter)); margin:auto; padding:0 var(--fc-body-gutter); scroll-margin-top:var(--fc-anchor-offset, 16px); }
 .likeness-path { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-block:var(--fc-body-section-gap); padding:0; }
 .likeness-path a { flex:0 1 calc((100% - 24px) / 3); min-width:0; min-height:48px; justify-content:center; text-align:center; padding:10px 15px; font-size:.9rem; }
-.likeness-chapter { padding:0; margin-block:var(--fc-body-section-gap); border:0; scroll-margin-top:90px; }
+.likeness-chapter { padding:0; margin-block:var(--fc-body-section-gap); border:0; scroll-margin-top:var(--fc-anchor-offset, 16px); }
 .likeness-chapter h2 { font:400 clamp(1.9rem,3.2vw,2.7rem)/1.2 var(--fc-font-display); color:var(--fc-gold-light); margin:8px 0 20px; text-wrap:balance; }
 .likeness-chapter > p { max-width:none; font-size:1.08rem; line-height:1.75; }
 .likeness-chapter .fc-eyebrow { font-size:.75rem; line-height:1.4; }

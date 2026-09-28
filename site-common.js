@@ -1178,7 +1178,7 @@
         scriptureStyle.rel = 'stylesheet';
         scriptureStyle.href = relativeAssetHref('scripture-reader.css?v=20260909-warm');
         document.head.appendChild(scriptureStyle);
-        appendScript(relativeAssetHref('header-scroll.js?v=20260906-1'), 'data-focuschrist-header-scroll');
+        appendScript(relativeAssetHref('header-scroll.js?v=20260927-anchor-fade-1'), 'data-focuschrist-header-scroll');
         ensureMainLandmark();
         normalizeFooterIdentity();
         ensurePrimaryStudyNavigation();

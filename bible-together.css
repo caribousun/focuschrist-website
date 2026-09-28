@@ -17,7 +17,7 @@
 .fc-bible-together details.fc-bible-reference{margin:0;min-width:0;padding:14px 18px;background:#183d3b;border:1px solid rgba(216,185,117,.3);border-radius:12px}
 .fc-bible-together main :is(h2,h3,h4,a,summary){overflow-wrap:anywhere}
 .fc-bible-together .fc-bible-picture p:last-child{margin-bottom:0}
-.fc-bible-together main section[id],.fc-bible-scene h3[id]{scroll-margin-top:90px}
+.fc-bible-together main section[id],.fc-bible-scene h3[id]{scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .fc-bible-together .fc-bible-picture .fc-study-visual-sources{display:flex;flex-wrap:wrap;gap:4px 16px}
 .fc-bible-picture .fc-study-visual-sources a{display:inline-flex;align-items:center;min-height:44px}
 .fc-bible-together .fc-bible-reference summary,.fc-bible-together .fc-bible-scene summary{min-height:44px;align-content:center;line-height:1.5}

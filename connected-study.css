@@ -15,5 +15,5 @@
 .fc-deep-study details { border: 1px solid var(--fc-line); border-radius: 12px; background: var(--fc-card-fill); padding: 1rem 1.2rem; margin: 1rem 0; }
 .fc-deep-study summary { cursor: pointer; color: var(--fc-cream); font-weight: 700; }
 .fc-deep-study details[open] summary { margin-bottom: 1rem; }
-[id="scripture-study"], [id="study-resources"], [id="continue-study"], [id="connected-study"] { scroll-margin-top: 100px; }
+[id="scripture-study"], [id="study-resources"], [id="continue-study"], [id="connected-study"] { scroll-margin-top: var(--fc-anchor-offset, 16px); }
 @media (max-width: 700px) { .fc-study-grid { grid-template-columns: 1fr; gap: .7rem; } .fc-study-hub { margin-inline: 16px; } }

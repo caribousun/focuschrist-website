@@ -201,7 +201,7 @@
 }
 
 .fc-art-study-page section[id] {
-    scroll-margin-top: 150px;
+    scroll-margin-top: var(--fc-anchor-offset, 16px);
 }
 
 @media (max-width: 900px) {

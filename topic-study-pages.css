@@ -8,7 +8,7 @@ body.fc-site.fc-topic-page .fc-topic-opening .fc-display{font:clamp(2rem,3.7vw,3
 body.fc-site.fc-topic-page .fc-topic-opening .fc-eyebrow{font-size:.75rem;line-height:1.35;letter-spacing:.14em;color:#f0c36a;margin:0}
 body.fc-site.fc-topic-page .fc-topic-opening .fc-topic-subtitle{font:1.05rem/1.5 'Segoe UI',sans-serif;color:#d5e0df;max-width:850px;width:100%;margin:0;text-align:center;text-wrap:balance}
 body.fc-site.fc-topic-page .fc-topic-opening .fc-scroll-cue{margin:0;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:12px;flex-direction:row;padding:10px 20px;border:1px solid #f0c36a;border-radius:999px;color:#f0c36a;font-size:.85rem}
-body.fc-site.fc-topic-page #main-content{scroll-margin-top:80px}
+body.fc-site.fc-topic-page #main-content{scroll-margin-top:var(--fc-anchor-offset, 16px)}
 body.fc-site.fc-topic-page .fc-deep-study{padding-block:28px}
 @media(max-width:1020px){body.fc-site.fc-topic-page{--topic-header:62px;padding-top:0!important}}
 @media(max-width:700px){body.fc-site.fc-topic-page .fc-topic-opening{min-height:max(520px,calc(100svh - var(--topic-header)));grid-template-rows:minmax(180px,1fr) auto}body.fc-site.fc-topic-page .fc-topic-opening .fc-page-intro{padding:22px 18px 24px}body.fc-site.fc-topic-page .fc-topic-opening .fc-display{font-size:clamp(2rem,8.5vw,2.75rem)}body.fc-site.fc-topic-page .fc-topic-opening .fc-eyebrow{font-size:.68rem;letter-spacing:.1em}body.fc-site.fc-topic-page .fc-topic-opening .fc-topic-subtitle{font-size:.96rem}body.fc-site.fc-topic-page .fc-topic-opening .fc-eyebrow:before,body.fc-site.fc-topic-page .fc-topic-opening .fc-eyebrow:after{display:none}}

@@ -24,8 +24,8 @@
 .cfm-hero__copy .cfm-actions{gap:12px}.cfm-hero__copy .cfm-btn{font-size:1rem;gap:12px}
 @media(min-width:1021px){.cfm-hero__copy{width:min(650px,46vw)}}
 .cfm-page :is(h2,h3){text-wrap:balance}.cfm-page h3{line-height:1.22}
-.cfm-page :is([id],section){scroll-margin-top:calc(var(--cfm-header) + 20px)}
-.cfm-page :is(h2[id],h3[id]){scroll-margin-top:calc(var(--cfm-header) + 64px)}
+.cfm-page :is([id],section){scroll-margin-top:var(--fc-anchor-offset, 16px)}
+.cfm-page :is(h2[id],h3[id]){scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .cfm-page a:focus-visible,.cfm-page button:focus-visible,.cfm-page summary:focus-visible{outline:3px solid #f0c36a;outline-offset:4px}
 .cfm-section{padding:36px 24px}.cfm-week{margin-top:0;padding-top:8px}
 .cfm-wrap{width:min(var(--fc-standard),100%)}

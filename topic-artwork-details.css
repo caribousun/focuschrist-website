@@ -1,5 +1,5 @@
 [data-topic-artwork-detail]{cursor:pointer}
-[data-topic-reading-target]{scroll-margin-top:100px}
+[data-topic-reading-target]{scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .fc-topic-artwork-detail .fc-artwork-detail-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));gap:10px;align-items:stretch}
 .fc-topic-artwork-detail .fc-artwork-detail-actions .fc-button{height:auto;min-height:48px;white-space:normal;line-height:1.4;text-align:center;max-width:100%}
 .fc-topic-artwork-detail .fc-artwork-detail-copy p:first-child{margin-top:18px}
