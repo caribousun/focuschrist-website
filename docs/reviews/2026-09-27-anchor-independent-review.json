@@ -1,0 +1,62 @@
+{
+  "reviewer": "Newton",
+  "at": "2026-09-27T23:58:49.476240+00:00",
+  "verdict": "PASS bounded source and regression review after capture-phase concern repaired",
+  "CSS": [
+    "23styles/39existing declarations reverse byte-for-byte to actual HEAD using exact audited old-values contract; independently asserted all23.",
+    "Shared16px phone and max(52px,3.25rem)+16 desktop follows existing header breakpoint. Exact30additional native target IDs assigned offset in reviewed appendix.",
+    "Mandatory current-byte check precedes historical normalization; stale/nonmargin mutations rejected. Historical artwork geometry pins preserved."
+  ],
+  "JS": [
+    "Same-origin/path/query fragment links only; no preventDefault/history rewrite. Ask/dialog/navigation/download/modified clicks excluded.",
+    "Initial capture hook could affect canceled specialized handler. Repaired to window bubble, so target/document canceled events return before touching root style. Fixture asserts original scroll behavior inside canceling handler.",
+    "Original inline scroll behavior/priority restored after two animation frames, latest-token handling preserves rapid click state. Reduced motion suppresses fade; no image/source edits.",
+    "Shared loader version and one workflow test entry updated."
+  ],
+  "tests": [
+    "anchor_alignment_qa.py --self-test PASS23styles/39declarations",
+    "Independent exact all23 HEAD reversal PASS",
+    "header_scroll_navigation.test.cjs ten tests PASS"
+  ],
+  "hashes": {
+    "docs/anchor-alignment.json": "37d8cf76bab5945d2e460f0f0f31fa26861aaa3b0803548625f60d540b4eea72",
+    "tools/anchor_alignment_qa.py": "ff186fbb6476d2515630b7e322f7a0a885a666e1ec9e9b88a97e2bbe28f25a6f",
+    "tools/sitewide_artwork_review_qa.py": "bc9290c32fea2dcae05fdc2bffbe84ac3fc87f36d57132301f2f41c0fe417cfb",
+    "header-scroll.js": "9f1866141a1b0753bebc1546fea9353fd84d9e74799f4eec0138fc922efdfa7c",
+    "site-common.js": "988d03a88f3535343ac89af8f4f354e3ca7c099225f76ca5accd9cb65794f8d0",
+    "tools/header_scroll_navigation.test.cjs": "0b3b1d50dabb1d0fd7083b40fbd9ab495a9d2185608b4beea72c3b3109aea490",
+    ".github/workflows/site-qa.yml": "8d0dcbce2d0b3c77b813e237f4371035e4aceea1b2da52c0ff97acf171086880"
+  },
+  "limits": [
+    "Mock DOM tests do not establish actual browser scroll timing/geometry; parent owns rendered validation.",
+    "No deployment/public claim."
+  ],
+  "final_design": {
+    "at": "2026-09-28T00:02:27.378150+00:00",
+    "verdict": "PASS source and12regressions",
+    "supersedes": "Temporary root-style override is removed. Shared root CSS scroll-behavior:auto now governs native click and Back/Forward.",
+    "behavior": "JS adds only200ms fade for same-page destinations farther than max(320px,half viewport height); no root style changes, preventDefault or history writes. Window bubble preserves canceled specialized handlers; reduced motion and near movement skip fade.",
+    "limits": "Actual native Back/Forward timing is parent browser evidence, not simulated by jsdom."
+  },
+  "final_css_closure": {
+    "at": "2026-09-28T00:05:30.045097+00:00",
+    "verdict": "PASS",
+    "checks": [
+      "Final anchor selftest PASS including root-smooth and reduced-motion mutation negatives",
+      "Independent all23historical-style bytes equal actual baseline Git objects exactly"
+    ],
+    "baseline": "73bf3e7530d50adfd2f1177c6920e813235fff77",
+    "candidate": "659aa06264292a758eee0aeb94060fc131a46fda",
+    "scope": "Exactly one top-level root scroll-behavior smooth-to-auto plus39margin substitutions and shared reviewed appendix; indented reduced-motion rule unchanged.",
+    "resolved_intermediate_failure": "Earlier site-system assertion during contract update resolved. A subsequent HEAD comparison used the newly committed candidate, corrected to immutable documented baseline; all23 pass."
+  },
+  "mobile_scene_closure": {
+    "at": "2026-09-28T00:09:06.055021+00:00",
+    "verdict": "PASS",
+    "historical_failed_run": 36360856178,
+    "change": "Exact historical_style_bytes normalization at both old-prefix hash sites. Current full-byte validation retained before reviewed_copy_polish normalization. All original prefix hashes, asset checks, current mobile geometry assertions and negative mutations unchanged.",
+    "independent_test": "python -X utf8 tools/mobile_scene_qa.py PASS after both prefix sites repaired",
+    "initial_review_finding": "First adapter left second locked_css prefix failure; independently reproduced and resolved before signoff.",
+    "sha256": "55fa47dd3132769c2063151db082fa49878f670e7b9b5c0410a8848a85fefe3f"
+  }
+}

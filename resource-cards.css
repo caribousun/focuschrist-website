@@ -1,5 +1,5 @@
 /* Official resource previews: source links, separate from artwork viewers. */
-.fc-resource-section{box-sizing:border-box;width:min(1040px,calc(100% - 40px));margin:clamp(36px,5vw,64px) auto;padding:clamp(22px,3.5vw,38px);border:1px solid var(--fc-line-strong,#716344);border-radius:18px;background:var(--fc-card-fill);text-align:left;color:#e8e3d8;scroll-margin-top:110px}
+.fc-resource-section{box-sizing:border-box;width:min(1040px,calc(100% - 40px));margin:clamp(36px,5vw,64px) auto;padding:clamp(22px,3.5vw,38px);border:1px solid var(--fc-line-strong,#716344);border-radius:18px;background:var(--fc-card-fill);text-align:left;color:#e8e3d8;scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .content-wrap .fc-resource-section{width:100%}
 .fc-resource-section h2{margin:0 0 14px;color:var(--fc-cream);font-family:var(--fc-font-display);font-weight:400;font-size:clamp(1.7rem,3vw,2.2rem);line-height:1.25}
 .fc-resource-intro{max-width:760px;margin:0 0 24px;line-height:1.75}
@@ -23,7 +23,7 @@
 .fc-signature-study .article{max-width:1040px;width:min(1040px,calc(100% - 40px))}
 .fc-signature-study .fc-page-intro .fc-actions{margin-top:22px}
 @media(max-width:700px){.fc-signature-study .fc-page-intro .fc-actions{margin-top:18px}}
-.fc-signature-study section[id]{scroll-margin-top:110px}
+.fc-signature-study section[id]{scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .fc-signature-study #passage>h3{margin-top:24px}
 .fc-signature-study #guided-study .fc-card:last-child{grid-column:1/-1}
 .fc-signature-study .fc-resource-section--inline{width:100%;margin-inline:0}
@@ -33,12 +33,12 @@
 .fc-answer-depth .fc-study-feature{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:32px;margin:28px 0 36px}
 .fc-answer-depth .fc-study-feature>div{min-width:0}
 .fc-answer-depth .fc-study-feature h2,.fc-answer-depth .fc-study-feature h3{margin-top:0}
-.fc-answer-depth section[id]{scroll-margin-top:110px}
+.fc-answer-depth section[id]{scroll-margin-top:var(--fc-anchor-offset, 16px)}
 @media(max-width:800px){.fc-answer-depth .fc-study-feature{grid-template-columns:1fr;gap:20px}}
 
 .fc-resource-grid>.fc-resource-card:only-child{grid-column:1/-1;width:100%;max-width:620px;justify-self:center}
 
-.fc-resource-section [id] { scroll-margin-top: 110px; }
+.fc-resource-section [id] { scroll-margin-top: var(--fc-anchor-offset, 16px); }
 
 /* Contextual companions: the explanation already lives beside the preview.
    A bounded thumbnail and concise source label keep the media subordinate to

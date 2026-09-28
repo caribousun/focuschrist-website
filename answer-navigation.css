@@ -1,6 +1,6 @@
 /* One About-style Continue link beneath each Answer article hero. */
 body.fc-answer-depth #main-content {
-    scroll-margin-top: 100px;
+    scroll-margin-top: var(--fc-anchor-offset, 16px);
 }
 body.fc-answer-depth .fc-page-intro .fc-scroll-cue:focus-visible {
     outline: 2px solid var(--fc-gold-light);

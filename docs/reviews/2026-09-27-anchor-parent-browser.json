@@ -1,0 +1,384 @@
+{
+  "scope": "Actual CUA browser checks prior to final root-auto history repair",
+  "baseline": [
+    {
+      "headingTop": 97.3499984741211,
+      "height": 76789,
+      "id": "translation",
+      "margin": "100px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -3809.199951171875,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -3871.199951171875,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -3871.199951171875
+        }
+      },
+      "padding": "auto",
+      "scrollY": 3871.199951171875,
+      "targetTop": 97.3499984741211,
+      "url": "https://focuschrist.com/book-of-mormon-evidences.html#translation",
+      "width": 390
+    },
+    {
+      "headingTop": 96.9250030517578,
+      "height": 44069,
+      "id": "manuscripts",
+      "margin": "100px",
+      "nav": {
+        "position": "fixed",
+        "rect": {
+          "bottom": 52,
+          "height": 52,
+          "left": 0,
+          "right": 1351.2000732421875,
+          "top": 0,
+          "width": 1351.2000732421875,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "padding": "auto",
+      "scrollY": 5377.60009765625,
+      "targetTop": 96.9250030517578,
+      "url": "https://focuschrist.com/book-of-mormon-evidences.html#manuscripts",
+      "width": 1366
+    },
+    {
+      "headingTop": 96.6500015258789,
+      "height": 76789,
+      "id": "open-questions",
+      "margin": "100px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -60662.80078125,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -60724.80078125,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -60724.80078125
+        }
+      },
+      "padding": "auto",
+      "scrollY": 60724.80078125,
+      "targetTop": 96.6500015258789,
+      "url": "https://focuschrist.com/book-of-mormon-evidences.html#open-questions",
+      "width": 390
+    }
+  ],
+  "corrected": [
+    {
+      "headingTop": 13.350000381469728,
+      "height": 76789,
+      "id": "translation",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -3893.199951171875,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -3955.199951171875,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -3955.199951171875
+        }
+      },
+      "padding": "auto",
+      "scrollY": 3955.199951171875,
+      "targetTop": 13.350000381469728,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#translation",
+      "width": 390
+    },
+    {
+      "headingTop": 68.0625,
+      "height": 21385,
+      "id": "history-harmony-title",
+      "margin": "68px",
+      "nav": {
+        "position": "fixed",
+        "rect": {
+          "bottom": 52,
+          "height": 52,
+          "left": 0,
+          "right": 1351.2000732421875,
+          "top": 0,
+          "width": 1351.2000732421875,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "padding": "auto",
+      "scrollY": 3910.39990234375,
+      "targetTop": 68.0625,
+      "url": "http://localhost:4197/church-history.html#history-harmony-title",
+      "width": 1366
+    }
+  ],
+  "checks": [
+    {
+      "name": "Open Questions",
+      "headingTop": 15.725000381469728,
+      "height": 76789,
+      "id": "open-questions",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -60746.80078125,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -60808.80078125,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -60808.80078125
+        }
+      },
+      "padding": "auto",
+      "scrollY": 60808.80078125,
+      "targetTop": 15.725000381469728,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#open-questions",
+      "width": 390
+    },
+    {
+      "name": "Translation",
+      "headingTop": 14.945116996765137,
+      "height": 76789,
+      "id": "translation",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -3893.199951171875,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -3955.199951171875,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -3955.199951171875
+        }
+      },
+      "padding": "auto",
+      "scrollY": 3955.199951171875,
+      "targetTop": 14.945116996765137,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#translation",
+      "width": 390
+    },
+    {
+      "name": "Royal Skousen & Manuscripts",
+      "headingTop": 14.034375190734863,
+      "height": 76789,
+      "id": "manuscripts",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -8608.400390625,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -8670.400390625,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -8670.400390625
+        }
+      },
+      "padding": "auto",
+      "scrollY": 8670.400390625,
+      "targetTop": 14.034375190734863,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#manuscripts",
+      "width": 390
+    },
+    {
+      "name": "Chiasmus & Patterns",
+      "headingTop": 13.84375,
+      "height": 76789,
+      "id": "literary-patterns",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -32182,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -32244,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -32244
+        }
+      },
+      "padding": "auto",
+      "scrollY": 32244,
+      "targetTop": 13.84375,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#literary-patterns",
+      "width": 390
+    },
+    {
+      "name": "Source Library",
+      "headingTop": 13.78125,
+      "height": 76789,
+      "id": "source-library",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -73679.6015625,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -73741.6015625,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -73741.6015625
+        }
+      },
+      "padding": "auto",
+      "scrollY": 73741.6015625,
+      "targetTop": 13.78125,
+      "url": "http://localhost:4197/book-of-mormon-evidences.html#source-library",
+      "width": 390
+    },
+    {
+      "name": "A first conversation",
+      "headingTop": 14.853192329406738,
+      "height": 20184,
+      "id": "visit-heading",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -14962.7998046875,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -15024.7998046875,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -15024.7998046875
+        }
+      },
+      "padding": "auto",
+      "scrollY": 15024.7998046875,
+      "targetTop": 14.853192329406738,
+      "url": "http://localhost:4197/missionary.html#visit-heading",
+      "width": 390
+    },
+    {
+      "name": "Early missionaries",
+      "headingTop": 15.75,
+      "height": 20184,
+      "id": "early-missionaries-heading",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -2178,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -2240,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -2240
+        }
+      },
+      "padding": "auto",
+      "scrollY": 2240,
+      "targetTop": 15.75,
+      "url": "http://localhost:4197/missionary.html#early-missionaries-heading",
+      "width": 390
+    },
+    {
+      "name": "Ways to serve",
+      "headingTop": 59.712501525878906,
+      "height": 20184,
+      "id": "ways-to-serve",
+      "margin": "16px",
+      "nav": {
+        "position": "relative",
+        "rect": {
+          "bottom": -10975.6005859375,
+          "height": 62,
+          "left": 0,
+          "right": 375.2000122070313,
+          "top": -11037.6005859375,
+          "width": 375.2000122070313,
+          "x": 0,
+          "y": -11037.6005859375
+        }
+      },
+      "padding": "auto",
+      "scrollY": 11037.599609375,
+      "targetTop": 15.912500381469728,
+      "url": "http://localhost:4197/missionary.html#ways-to-serve",
+      "width": 390
+    },
+    {
+      "name": "mission desktop",
+      "headingTop": 67.86250305175781,
+      "height": 15952,
+      "id": "visit-heading",
+      "margin": "68px",
+      "nav": {
+        "position": "fixed",
+        "rect": {
+          "bottom": 53.91250228881836,
+          "height": 53.91250228881836,
+          "left": 0,
+          "right": 1351.2000732421875,
+          "top": 0,
+          "width": 1351.2000732421875,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "padding": "auto",
+      "scrollY": 12751.2001953125,
+      "targetTop": 67.86250305175781,
+      "url": "http://localhost:4197/missionary.html#visit-heading",
+      "width": 1366
+    },
+    {
+      "name": "HolyGhost specialized chapter with chooser above heading",
+      "headingTop": 239.625,
+      "height": 4111,
+      "id": "old-testament",
+      "margin": "68px",
+      "nav": {
+        "position": "fixed",
+        "rect": {
+          "bottom": 52,
+          "height": 52,
+          "left": 0,
+          "right": 1351.2000732421875,
+          "top": 0,
+          "width": 1351.2000732421875,
+          "x": 0,
+          "y": 0
+        }
+      },
+      "padding": "auto",
+      "scrollY": 856,
+      "targetTop": 219.625,
+      "url": "http://localhost:4197/answers/holy-ghost.html#old-testament",
+      "width": 1366
+    }
+  ],
+  "limits": [
+    "Animation sampling API unavailable in CUA read-only DOM; timing tested separately by source regression",
+    "Native Back interim smooth travel found; shared root-auto repair pending retest",
+    "Specialized chapter control intentionally keeps chooser visible above heading"
+  ]
+}

@@ -5,6 +5,7 @@ import json
 import re
 from PIL import Image
 from sitewide_artwork_review_qa import reviewed_system_panel_style
+from anchor_alignment_qa import historical_style_bytes
 
 ROOT = Path(__file__).resolve().parents[1]
 record = json.loads((ROOT / 'docs/mobile-scene-review-20260920.json').read_text(encoding='utf-8'))
@@ -29,7 +30,9 @@ assert 'fc-mobile-hero-surround' not in css
 assert 'fc-mobile-hero-surround' not in (ROOT / 'site-common.js').read_text(encoding='utf-8')
 # The first-screen correction must never reintroduce containment/side treatments.
 mobile_opening_css = css[css.index('/* A single mobile image budget'):]
-original_css = css[:css.index('/* A single mobile image budget')].rstrip()
+# Exact registered anchor/root-scroll transformation only; retain original geometry hash.
+historical_css = historical_style_bytes((ROOT / 'site-system.css').read_bytes()).decode('utf-8')
+original_css = historical_css[:historical_css.index('/* A single mobile image budget')].rstrip()
 assert hashlib.sha256(original_css.encode()).hexdigest() == '84bb60d6413028bb5517b9dcd5c3cb7f897c990043eb91c53ce77003af3e3d17', 'Original study-page CSS must remain unchanged'
 assert 'body.fc-site { --fc-mobile-hero-height: max(180px, min(115vw, 600px, calc(100svh - var(--fc-opening-flow-header-height) - 280px))); }' in mobile_opening_css
 assert 'body.fc-site.fc-main-opening' not in mobile_opening_css, 'The latest owner direction applies the shared height to all mobile openings'
@@ -46,7 +49,7 @@ def reviewed_copy_polish(data):
     # Exempt only the exact independently pinned full stylesheet, whose original
     # 58,704-byte hero/copy prefix is also pinned by this shared review function.
     assert reviewed_system_panel_style(data), 'Shared stylesheet differs from exact reviewed base and appendices'
-    text = data.decode('utf-8').replace('\r\n', '\n')
+    text = historical_style_bytes(data).decode('utf-8').replace('\r\n', '\n')
     assert text.count('/* BEGIN OWNER SECTION PANEL SURFACES') == 1
     protected = text.split('/* BEGIN OWNER SECTION PANEL SURFACES', 1)[0]
     return protected.split('/* Consistent mobile copy rhythm', 1)

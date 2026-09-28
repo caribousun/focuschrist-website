@@ -4,6 +4,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 from urllib.parse import urlsplit, unquote, parse_qs
 import argparse, hashlib, json, re, subprocess, sys, xml.etree.ElementTree as ET
+from anchor_alignment_qa import FILES as ANCHOR_STYLES, historical_style_bytes, reviewed_anchor_style, self_test as anchor_self_test
 ROOT = Path(__file__).resolve().parents[1]
 IMAGE_EXT = {'.png','.webp','.jpg','.jpeg','.avif','.gif','.svg'}
 BIBLE_STYLE = 'bible-together.css'
@@ -42,10 +43,12 @@ ANSWERS_FEATURED_RULES = {
 }
 
 def reviewed_answers_featured(selector, body, data):
+    data = historical_style_bytes(data)
     return (re.sub(r'\s+', '', body) in ANSWERS_FEATURED_RULES.get(selector.strip(), set())
             and hashlib.sha256(data).hexdigest() == ANSWERS_FEATURED_STYLE_SHA256)
 
 def reviewed_art_reflection(selector, body, data):
+    data = historical_style_bytes(data)
     return selector.strip() == '.fc-art-study-page .fc-reflection-prompts > .fc-art-story' and re.sub(r'\s+', '', body) == 'max-width:none!important;' and hashlib.sha256(data).hexdigest() == '557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3'
 
 def reviewed_wrap_consumers(consumers, expected, version):
@@ -54,36 +57,42 @@ def reviewed_wrap_consumers(consumers, expected, version):
 
 
 def reviewed_system_panel_style(data):
+    data = historical_style_bytes(data)
     # Owner-directed surface appendix only. Existing hero/mobile rules retain
     # their exact reviewed prefix; both the prefix and full file are pinned.
     return (hashlib.sha256(data).hexdigest() == '6bcb9b6bd26ee85d8afa47ff1f1631430f191fdd3c3e6414937909858fec480b'
             and hashlib.sha256(data[:58704]).hexdigest() == '7b7ba6dd6b273f0fd4fb0302049ce304bf87dac133a2dd852fe4d548ad293984')
 
 def reviewed_mission_enrichment_style(data):
+    data = historical_style_bytes(data)
     return hashlib.sha256(data).hexdigest() == MISSION_ENRICHMENT_STYLE_SHA256
 
 def mission_enrichment_style_reference_allowed(relative, text):
     return relative == "missionary.html" or MISSION_ENRICHMENT_STYLE not in text
 
 def reviewed_watch_shorts_style(data):
+    data = historical_style_bytes(data)
     return hashlib.sha256(data).hexdigest() == WATCH_SHORTS_STYLE_SHA256
 
 def watch_shorts_style_reference_allowed(relative, text):
     return relative == "watch.html" or WATCH_SHORTS_STYLE not in text
 
 def reviewed_home_style(data):
+    data = historical_style_bytes(data)
     return hashlib.sha256(data).hexdigest() == HOME_STYLE_SHA256
 
 def home_style_reference_allowed(relative, text):
     return relative == HOME_STYLE_OWNER or HOME_STYLE not in text
 
 def reviewed_bible_style(data):
+    data = historical_style_bytes(data)
     return hashlib.sha256(data).hexdigest() == BIBLE_STYLE_SHA256
 
 def bible_style_reference_allowed(relative, text):
     return relative == BIBLE_STYLE_OWNER or BIBLE_STYLE not in text
 
 def reviewed_journey_style(data):
+    data = historical_style_bytes(data)
     return hashlib.sha256(data).hexdigest() == JOURNEY_STYLE_SHA256
 
 def journey_style_reference_allowed(relative, text, owners):
@@ -92,6 +101,7 @@ def journey_style_reference_allowed(relative, text, owners):
 BOUNDARY_WRAP_STYLES = {'.fc-history-page main': ('church-history.css', '5b7e4c13945dcae80da5c278192b2d846e1d03f31aa4eeb4de133fa697613937'), '.fc-missionary-page main': ('missionary.css', '1fc685047557e7d077b8c25c833731dca799335add20d3b139cf626f72357e21')}
 
 def reviewed_boundary_wrap(selector, body, data):
+    data = historical_style_bytes(data)
     entry = BOUNDARY_WRAP_STYLES.get(selector.strip())
     return bool(entry and re.sub(r"\s+", "", body) == "overflow-wrap:anywhere;" and hashlib.sha256(data).hexdigest() == entry[1])
 
@@ -101,6 +111,7 @@ MISSION_PURPOSE_RULES = {
 }
 
 def reviewed_mission_purpose(selector, body, data):
+    data = historical_style_bytes(data)
     return (selector.strip() in MISSION_PURPOSE_RULES
             and re.sub(r'\s+', '', body) == MISSION_PURPOSE_RULES[selector.strip()]
             and hashlib.sha256(data).hexdigest() == BOUNDARY_WRAP_STYLES['.fc-missionary-page main'][1])
@@ -116,6 +127,7 @@ class Tags(HTMLParser):
 # Full-file and updated base-prefix pins both apply.
 NARROW_READING_STYLES = {'site-search.css': {'base_bytes': 4716, 'base_sha256': '13550e00846fb8c2a81204d71fb3e131c71e3e9f74f0fa94791bbc1e8a5e0492', 'sha256': 'ca09d2ce90471be8c404efc4c8a27aeb756fdc1d30276aa3d112705595ffa32e'}, 'watch-experience.css': {'base_bytes': 12132, 'base_sha256': '3dfc3ac65f176f0c3c3f8c21dbb5c504f4d9dee1302074f6c396790982446a53', 'sha256': 'ec9e99bdb5c0e39daa0b59c65866b1cbd09ed6b451ffafc15f76b60778846f3e'}}
 def reviewed_narrow_reading_style(name, data):
+    data = historical_style_bytes(data)
     entry=NARROW_READING_STYLES.get(name)
     return bool(entry and hashlib.sha256(data).hexdigest()==entry["sha256"]
                 and hashlib.sha256(data[:entry["base_bytes"]]).hexdigest()==entry["base_sha256"])
@@ -132,14 +144,16 @@ SCOPED_INTERFACE_STYLES = {
     'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
 }
 def reviewed_scoped_interface_style(name, data):
+    data = historical_style_bytes(data)
     return name in SCOPED_INTERFACE_STYLES and hashlib.sha256(data).hexdigest()==SCOPED_INTERFACE_STYLES[name][0]
 def scoped_interface_reference_allowed(name, relative, text):
     return relative==SCOPED_INTERFACE_STYLES[name][1] or name not in text
 
 def reviewed_toolbar_style(name, data):
+    data = historical_style_bytes(data)
     return name in TOOLBAR_STYLE_SHA256 and hashlib.sha256(data).hexdigest() == TOOLBAR_STYLE_SHA256[name]
 
-def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
+def sha(path): return hashlib.sha256(historical_style_bytes(path.read_bytes())).hexdigest()
 def unique_reviewed(heroes, rejected):
     errors=[]; seen={}
     for h in heroes:
@@ -155,6 +169,7 @@ def unique_reviewed(heroes, rejected):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--self-test',action='store_true');ap.add_argument('--baseline-report');args=ap.parse_args()
     if args.self_test:
+        anchor_self_test()
         answers_css = (ROOT/'answers-hero.css').read_bytes()
         for selector, bodies in ANSWERS_FEATURED_RULES.items():
             for body in bodies:
@@ -224,7 +239,7 @@ def main():
         assert bible_style_reference_allowed(BIBLE_STYLE_OWNER, BIBLE_STYLE)
         assert not bible_style_reference_allowed('answers/another-page.html', BIBLE_STYLE)
         assert not bible_style_reference_allowed('shared.css', '@import "'+BIBLE_STYLE+'";')
-        cfm_css = (ROOT/'come-follow-me.css').read_bytes()
+        cfm_css = historical_style_bytes((ROOT/'come-follow-me.css').read_bytes())
         assert hashlib.sha256(cfm_css).hexdigest() == '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
         assert hashlib.sha256(cfm_css.replace(b'flex-wrap:nowrap}', b'flex-wrap:wrap}')).hexdigest() != '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
         assert hashlib.sha256(cfm_css + b'body{display:none}').hexdigest() != '97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3'
@@ -434,7 +449,7 @@ def main():
     check(reviewed_wrap_consumers(wrap_consumers, panel_contract['site_system_consumers'], panel_contract['version']), 'Shared panel stylesheet consumer list or cache versions changed')
     art_owners = {'art-study/the-good-shepherd.html', 'art-study/the-living-christ.html', 'art-study/suffer-the-little-children.html', 'art-study/be-still.html'}
     art_consumers = {str(p.relative_to(ROOT)).replace('\\','/'): re.findall(r'art-study-enrichment\.css\?v=([^\"\\s>]+)', p.read_text(encoding='utf8')) for p in ROOT.rglob('*.html') if 'art-study-enrichment.css' in p.read_text(encoding='utf8')}
-    check(set(art_consumers) == art_owners and all(v == ['20260923-reading-rhythm-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
+    check(set(art_consumers) == art_owners and all(v == ['20260927-anchor-alignment-1'] for v in art_consumers.values()), 'Art reflection stylesheet consumers/version differ')
     # Owner-directed mobile framing and menu-wrap repair; exact reviewed bytes only.
     check(reviewed_system_panel_style((ROOT/'site-system.css').read_bytes()), 'Reviewed base or exact owner-directed panel appendix changed: site-system.css')
     check(reviewed_toolbar_style('site-header.css', (ROOT/'site-header.css').read_bytes()), 'Reviewed mobile polish stylesheet changed: site-header.css')
@@ -450,8 +465,13 @@ def main():
             relative=page.relative_to(ROOT).as_posix()
             if relative.startswith(('tools/', '.git/', 'node_modules/', 'focuschrist-repo/')): continue
             check(scoped_interface_reference_allowed(name, relative, page.read_text(encoding='utf-8')), 'Scoped interface stylesheet consumed outside owner: '+relative)
+    for name in ANCHOR_STYLES:
+        check(reviewed_anchor_style(name, (ROOT/name).read_bytes()), 'Anchor-only transformation differs from exact reviewed bytes: '+name)
     excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css','study-navigation.css'}
     excluded_styles.update(SCOPED_INTERFACE_STYLES)
+    # These files have just passed the exact full-byte AND reconstructed baseline
+    # checks; no later geometry or non-margin changes can enter this exclusion.
+    excluded_styles.update(ANCHOR_STYLES)
     diff=subprocess.check_output(['git','diff',baseline,'--','*.css',*[':(exclude)'+name for name in sorted(excluded_styles)]],cwd=ROOT,text=True)
     added_lines=[]; added_file=None
     for line in diff.splitlines():

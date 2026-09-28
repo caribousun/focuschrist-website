@@ -1,0 +1,30 @@
+{
+  "scope": "Owner-authorized immediate same-page section navigation with a subtle destination fade; no page/header geometry or content change.",
+  "mechanism": "Shared root CSS uses auto so native jumps and Back/Forward restoration avoid smooth travel. Window bubble listener follows target/document controllers and preserves native history/default navigation. Only clicks farther than max(320px, half viewport) receive a visible destination-section fade from .72 to1 over200ms. No temporary styles or global method interception.",
+  "exclusions": [
+    "canceled specialized handlers",
+    "Ask page",
+    "dialogs",
+    "header navigation",
+    "cross-page/query-changing/external links",
+    "modified clicks",
+    "download/new-window links",
+    "missing targets"
+  ],
+  "accessibility": "Reduced motion retains instant jump with no animation. No focus reassignment or invented history entries.",
+  "tests": "12 DOM fixtures PASS; parent actual desktop/phone long jumps and native Back PASS in parent-final-motion receipt. Short movements have no added fade; specialized chapter chooser preserved. jsdom unsupported external-navigation diagnostics are not live evidence.",
+  "files": {
+    "header-scroll.js": "9f1866141a1b0753bebc1546fea9353fd84d9e74799f4eec0138fc922efdfa7c",
+    "site-common.js": "988d03a88f3535343ac89af8f4f354e3ca7c099225f76ca5accd9cb65794f8d0",
+    "tools/header_scroll_navigation.test.cjs": "0b3b1d50dabb1d0fd7083b40fbd9ab495a9d2185608b4beea72c3b3109aea490"
+  },
+  "review_adjustment": "Newton identified capture-phase effect on specialized handlers; moved listener to window bubble and asserted original scroll style inside canceling target handler. Parent browser found native Back inherited smooth CSS; replaced root default with auto and eliminated temporary JS style timing entirely.",
+  "custom_scroll_audit": {
+    "jesus-journey": "Chapter chooser/next/previous and restored bookmarks explicitly instant; unchanged.",
+    "watch-shorts/art-gallery-bridge": "Explicit instant existing navigation; unchanged.",
+    "artwork-details/topic-artwork-details/pioneer-story/art-study-router/settle-heart-recording/site-common skip": "Existing auto/default behavior now inherits root auto; reveal, focus and history ownership unchanged.",
+    "Ask/church-history/pioneer conversations": "Owned conversation scroll behavior preserved.",
+    "study-journey": "Only explicit smooth page call found in root JS; solely Ask deep-link settling, deliberately unchanged.",
+    "scripture-reader": "Reader-internal source paragraph alignment unchanged."
+  }
+}

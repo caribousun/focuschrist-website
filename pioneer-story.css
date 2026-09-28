@@ -4,14 +4,14 @@ body.fc-site .pioneer-story-chapter {
     width: min(1160px, calc(100% - 2 * var(--fc-body-gutter, 24px)));
     margin: 0 auto;
     padding-block: clamp(30px, 5vw, 58px);
-    scroll-margin-top: 100px;
+    scroll-margin-top: var(--fc-anchor-offset, 16px);
 }
 body.fc-site .pioneer-story-intro { max-width: 75ch; margin: 0 auto 28px; }
 body.fc-site .pioneer-story-intro > :is(h2,h3) { text-align: center; }
 body.fc-site .pioneer-story-intro p,
 body.fc-site .pioneer-story-copy { color: var(--fc-cream, #f3ead8); font-size: 1.02rem; line-height: 1.8; }
 body.fc-site .pioneer-story-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 28px; align-items: start; }
-body.fc-site .pioneer-story-card { min-width: 0; margin: 0; scroll-margin-top: 100px; }
+body.fc-site .pioneer-story-card { min-width: 0; margin: 0; scroll-margin-top: var(--fc-anchor-offset, 16px); }
 body.fc-site .pioneer-story-card figure { margin: 0; }
 body.fc-site .pioneer-story-art { display: block; aspect-ratio: 3 / 2; overflow: hidden; border: 1px solid var(--fc-line, #526068); border-radius: 14px; background: #142f3a; }
 body.fc-site .pioneer-story-art picture { display: block; width: 100%; height: 100%; }
@@ -23,7 +23,7 @@ body.fc-site .pioneer-story-card figcaption { padding-top: 12px; color: var(--fc
 body.fc-site .pioneer-source-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
 body.fc-site .pioneer-source-links a { max-width: 100%; overflow-wrap: anywhere; }
 body.fc-site .pioneer-story-note { max-width: 75ch; margin: 24px auto; padding: 14px 18px; border-left: 2px solid var(--fc-gold, #c9a961); color: var(--fc-muted, #d3d9d9); line-height: 1.75; }
-body.fc-site :is(.pioneer-source-notes,.pioneer-timeline-group) { box-sizing: border-box; width: min(1160px, calc(100% - 2 * var(--fc-body-gutter, 24px))); margin: 18px auto; border-block: 1px solid rgba(226,181,93,.38); scroll-margin-top: 100px; }
+body.fc-site :is(.pioneer-source-notes,.pioneer-timeline-group) { box-sizing: border-box; width: min(1160px, calc(100% - 2 * var(--fc-body-gutter, 24px))); margin: 18px auto; border-block: 1px solid rgba(226,181,93,.38); scroll-margin-top: var(--fc-anchor-offset, 16px); }
 body.fc-site .pioneer-story-chapter .pioneer-source-notes { width: 100%; }
 body.fc-site :is(.pioneer-source-notes,.pioneer-timeline-group) > summary { min-height: 48px; padding: 17px 8px; color: var(--fc-gold-light, #f3cc83); font-size: 1.08rem; line-height: 1.6; cursor: pointer; }
 body.fc-site :is(.pioneer-source-notes,.pioneer-timeline-group) > summary:focus-visible,

@@ -9,7 +9,7 @@
 .fc-bom-evidences .bom-reading h2 { text-align: center; }
 .fc-bom-evidences .bom-reading li + li { margin-top: .7rem; }
 .fc-bom-evidences .bom-reading :where(h2, h3, section),
-.fc-bom-evidences #explore-evidences { scroll-margin-top: 100px; }
+.fc-bom-evidences #explore-evidences { scroll-margin-top: var(--fc-anchor-offset, 16px); }
 .fc-bom-evidences .bom-table-wrap { overflow-x: auto; margin-block: 1.4rem; }
 .fc-bom-evidences .bom-table-wrap table { border-collapse: collapse; width: 100%; }
 .fc-bom-evidences .bom-table-wrap :where(th, td) { text-align: left; vertical-align: top; padding: .8rem; border-bottom: 1px solid var(--fc-line); }

@@ -1,11 +1,11 @@
 /* Watch body enrichment. The approved hero and shared opening geometry are unchanged. */
-.watch-topic-index{padding:36px;margin:44px 0 0;border:1px solid rgba(232,185,79,.26);border-radius:22px;background:linear-gradient(125deg,rgba(128,159,139,.13),rgba(12,35,46,.34));scroll-margin-top:100px}
+.watch-topic-index{padding:36px;margin:44px 0 0;border:1px solid rgba(232,185,79,.26);border-radius:22px;background:linear-gradient(125deg,rgba(128,159,139,.13),rgba(12,35,46,.34));scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .watch-topic-index h2{font-family:var(--fc-font-display);font-weight:400;font-size:clamp(1.65rem,3vw,2.2rem);color:var(--fc-parchment);margin:8px 0 24px}
 .watch-topic-index>div{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 .watch-topic-index a{display:flex;align-items:center;gap:12px;padding:14px 16px;min-height:60px;border:1px solid rgba(185,208,213,.22);border-radius:12px;color:var(--fc-parchment);text-decoration:none;background:rgba(8,29,39,.28);font-size:.91rem;line-height:1.4}
 .watch-topic-index a span{color:var(--fc-gold-light);font-size:.75rem;letter-spacing:.09em}
 .watch-index-note{margin:20px 0 0;color:var(--fc-muted);font-size:.85rem}
-.watch-feature-section,.watch-library-section{scroll-margin-top:80px}
+.watch-feature-section,.watch-library-section{scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .watch-feature-section{padding-bottom:40px}
 .watch-feature-section>.fc-container--standard>.fc-section-intro{max-width:760px}
 .watch-feature-study{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);border:1px solid rgba(232,185,79,.24);border-radius:22px;overflow:hidden;margin-top:30px;background:rgba(9,31,40,.48);box-shadow:0 22px 48px rgba(6,25,33,.18)}

@@ -209,7 +209,7 @@ def main() -> int:
 
         for marker in (
             'data-art-study-enriched="true"',
-            'href="../art-study-enrichment.css?v=20260923-reading-rhythm-1"',
+            'href="../art-study-enrichment.css?v=20260927-anchor-alignment-1"',
             'class="fc-study-opening"',
             'class="fc-art-meditation"',
             'class="fc-reflection-prompts"',

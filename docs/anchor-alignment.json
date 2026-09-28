@@ -1,0 +1,260 @@
+{
+  "version": "20260927-anchor-alignment-1",
+  "baseline_commit": "73bf3e7530d50adfd2f1177c6920e813235fff77",
+  "shared_appendix": "\n/* In-page destinations follow the standard header: relative on phones,\n   fixed and rem-aware on desktop. Keep breathing room without root padding. */\n:root { --fc-anchor-offset: 16px; }\n@media (min-width: 1021px) {\n    :root { --fc-anchor-offset: calc(max(52px, 3.25rem) + 16px); }\n}\n\n/* Existing native destinations without a page-specific offset. */\nbody.fc-site #aaronic-priesthood-restoration,\nbody.fc-site #ask-history,\nbody.fc-site #ask-pioneers,\nbody.fc-site #atonement-title,\nbody.fc-site #christ-understands,\nbody.fc-site #commission-heading,\nbody.fc-site #early-missionaries-heading,\nbody.fc-site #guided-reflections,\nbody.fc-site #history-bom-evidence-title,\nbody.fc-site #history-first-vision-title,\nbody.fc-site #history-harmony-title,\nbody.fc-site #joseph-likeness-entry,\nbody.fc-site #kirtland-safety-society,\nbody.fc-site #kirtland-temple,\nbody.fc-site #liberty-jail-study,\nbody.fc-site #likeness-title,\nbody.fc-site #love-share-invite-heading,\nbody.fc-site #melchizedek-priesthood-restoration,\nbody.fc-site #nauvoo-legion,\nbody.fc-site #nauvoo-temple,\nbody.fc-site #pioneer-departure-heading,\nbody.fc-site #pioneer-trail-life-heading,\nbody.fc-site #porter-rockwell,\nbody.fc-site #receiving-care,\nbody.fc-site #relief-society-organization,\nbody.fc-site #richmond-rebuke,\nbody.fc-site #scripture-companion,\nbody.fc-site #visit-heading,\nbody.fc-site #ways-to-serve,\nbody.fc-site #worldwide-heading { scroll-margin-top: var(--fc-anchor-offset, 16px); }\n",
+  "files": [
+    {
+      "path": "answer-navigation.css",
+      "before_sha256": "1a77ea3bc73c88b48f0194de1e81bc71d10b7ac6ac9d829e7fc2db2c1de4490c",
+      "after_sha256": "8112ad6d52ada3bd0b373633fc2e60f5ada7d47fb2204c28e1a09ae01be66a57",
+      "old_values": [
+        "100px"
+      ]
+    },
+    {
+      "path": "answers-hero.css",
+      "before_sha256": "3f3ab5babea5aadf5ddd79655922bd29b7f4c8b1aa74742b1146eccfca7caa87",
+      "after_sha256": "b0e8a4097a4f3f6f648e6695a68f119cebed61204ba4bc40686168fdf1c95642",
+      "old_values": [
+        "104px",
+        "110px"
+      ]
+    },
+    {
+      "path": "art-study-enrichment.css",
+      "before_sha256": "557ff4b1825bdf655751cbc6491d0133db294f022b90fcda270039ff849053a3",
+      "after_sha256": "125438783e6fb2810458da675cce5216541a579b423bb80f539e2c6d9905349c",
+      "old_values": [
+        "150px"
+      ]
+    },
+    {
+      "path": "ask-experience.css",
+      "before_sha256": "62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6",
+      "after_sha256": "6299778985db8d5846440cb25d1c8fd787a5a4c73e3c230b4b0da7f7a8fa6c8f",
+      "old_values": [
+        "5rem"
+      ]
+    },
+    {
+      "path": "atonement.css",
+      "before_sha256": "4cd674195013521cbac7141802d24dd8f019b5513bd41721637d1d151d11e821",
+      "after_sha256": "5a860921e690220259e9365fe18a71aeceffbe4d2d3859d9fe5bdb5506b19fee",
+      "old_values": [
+        "100px",
+        "90px",
+        "90px"
+      ]
+    },
+    {
+      "path": "bible-together.css",
+      "before_sha256": "128b2a54bf1a285497ea11d6c8e9040c55baa996ec75aa376b29463f854a9121",
+      "after_sha256": "b1eecf551eff8a4b8af70aed656447879cceac496547bddbe0877b8179fc8660",
+      "old_values": [
+        "90px"
+      ]
+    },
+    {
+      "path": "bom-evidences.css",
+      "before_sha256": "19b54d55057adeaa0373631a572482e3fdbe0acbcb053755c3b87d6bbda5046b",
+      "after_sha256": "ca8e19f00c87a0324ce5c22806ed80adb8536d8073910d364f438121bf018bf0",
+      "old_values": [
+        "100px"
+      ]
+    },
+    {
+      "path": "bom-story-journey.css",
+      "before_sha256": "9c1963e6981ec14114ee08da6230c26048ea491177936599d1e8050da4f6be9f",
+      "after_sha256": "f712292324a372f5ab6427fb3e03871355d81d8f7a6dcb52b692ea43b7f2adc8",
+      "old_values": [
+        "100px",
+        "82px"
+      ]
+    },
+    {
+      "path": "come-follow-me.css",
+      "before_sha256": "97a1bb9d5d27a22126ce9f01c8140c53855b4ffae78f6327aa421792643099d3",
+      "after_sha256": "e32f69977705a7716eaca6a7a179302957cf44529237432de1293ef9dc28b267",
+      "old_values": [
+        "calc(var(--cfm-header) + 20px)",
+        "calc(var(--cfm-header) + 64px)"
+      ]
+    },
+    {
+      "path": "connected-study.css",
+      "before_sha256": "d19f17b76d03041471afe5bd771e722353310cafac21aed66486b16c6f896eb3",
+      "after_sha256": "513b11859f17d36a5934d323f865242b8c90beea70e94fd3056e6e2dc0af40c6",
+      "old_values": [
+        "100px"
+      ]
+    },
+    {
+      "path": "dc636-study.css",
+      "before_sha256": "2fdb307b372157ec4acb631a42cf59509cf249c857d37fc351fc28748642f335",
+      "after_sha256": "20326d6955a9532bb6e1c8abb814d4a83510a1f6d551cd8f733cf51bde520e04",
+      "old_values": [
+        "110px"
+      ]
+    },
+    {
+      "path": "general-conference-section.css",
+      "before_sha256": "83b30800abdb31ff894314897030e7d7f8d469136267c00eea275dbed53cabe3",
+      "after_sha256": "8e6367ffaac9c5bd80084d5c478fb9a279d080187d86b0d2e3d53786e805e198",
+      "old_values": [
+        "calc(var(--gc-header) + 16px)",
+        "72px",
+        "116px"
+      ]
+    },
+    {
+      "path": "jesus-journey.css",
+      "before_sha256": "165bea932d4ca288c9ade8327e5d5999798be4c41f17c4627bf1bdd8c74790c0",
+      "after_sha256": "a6eecf3a8d813f381332867eafc3c7143015dc72370dbb32bc425e1b95bca77c",
+      "old_values": [
+        "110px",
+        "100px"
+      ]
+    },
+    {
+      "path": "joseph-smith-likeness.css",
+      "before_sha256": "9e15b9822f05503a0adb4b3137305ab9236d986c2f8940eaf44424aa09218573",
+      "after_sha256": "6b788062c1d212a4aac270b3ad15e2fb83ed82cb70431d942f66457929d34459",
+      "old_values": [
+        "90px",
+        "90px"
+      ]
+    },
+    {
+      "path": "pioneer-story.css",
+      "before_sha256": "1255d1628391a932385df5d5667242abf48cff108ebd62938670606829168ad3",
+      "after_sha256": "4763ed30f2f27070d5d126bf4426533cfecbf78b5f189ab8f49300708578c924",
+      "old_values": [
+        "100px",
+        "100px",
+        "100px"
+      ]
+    },
+    {
+      "path": "resource-cards.css",
+      "before_sha256": "ec8d90b5817767310d153c8e2a905bd0b52820b8f8805561ae8d7ab6f361cc8e",
+      "after_sha256": "4411881d7ce812aa4ec990964bd7f08bcb7994b85ad0df6f8e0116fed3dc82bf",
+      "old_values": [
+        "110px",
+        "110px",
+        "110px",
+        "110px"
+      ]
+    },
+    {
+      "path": "settle-heart-study.css",
+      "before_sha256": "ef58ca8c056db359667b85bf697ece78cc54a496e082b9a44f7a283e0d0fc5a2",
+      "after_sha256": "5e9ffecda2ab85ecd28ed065bde6f8ae68a21d11be045aa287168943dcfd5a87",
+      "old_values": [
+        "100px"
+      ]
+    },
+    {
+      "path": "site-search.css",
+      "before_sha256": "ca09d2ce90471be8c404efc4c8a27aeb756fdc1d30276aa3d112705595ffa32e",
+      "after_sha256": "b88d33081e897c99091dae2947b90604ae62f28b199f2d2e52bc9b2a8bf08740",
+      "old_values": [
+        "96px"
+      ]
+    },
+    {
+      "path": "site-system.css",
+      "before_sha256": "6bcb9b6bd26ee85d8afa47ff1f1631430f191fdd3c3e6414937909858fec480b",
+      "after_sha256": "01cfffba5eaa3f33fc1c8653ba8ad09c1c84e09cbe1063dc5c2927377e31b408",
+      "old_values": [
+        "105px",
+        "86px"
+      ]
+    },
+    {
+      "path": "topic-artwork-details.css",
+      "before_sha256": "5b56134cc182d7638f170e1941e63e802222d467ad8243b35e900f3f7e912b86",
+      "after_sha256": "49d4ebbf2c3b48af7eed3ec6154c96ce32214df6f5704c615907672912947637",
+      "old_values": [
+        "100px"
+      ]
+    },
+    {
+      "path": "topic-study-pages.css",
+      "before_sha256": "10eadb941bebc8f4862e29f3c3006e7b956a2431dfed9d6159cc6c5730e11dd1",
+      "after_sha256": "1c48e3f016f500eb4c6ddeb0a86fea00f75e2fb88a473fdbc76b828c5df0e744",
+      "old_values": [
+        "80px"
+      ]
+    },
+    {
+      "path": "watch-library.css",
+      "before_sha256": "0d796fae9108e33e18f95bc7b47377c08b4ad4b8fa2b36e92a241c2db94f0f77",
+      "after_sha256": "e099a991410a860c8beba5b091e35814d3f51254549b1113767eb57d03fd5c44",
+      "old_values": [
+        "100px",
+        "80px"
+      ]
+    },
+    {
+      "path": "watch-shorts.css",
+      "before_sha256": "1feb6892f74ca30d8ec52af3f76e8da197d2bac2cc61716838cf87fe6efd24b6",
+      "after_sha256": "c4cd8a75214c0feb49ad9d97d50a6eff3407d46efc80540629cc302f1fec3f15",
+      "old_values": [
+        "84px"
+      ]
+    }
+  ],
+  "newly_covered_native_targets": {
+    "missionary.html": [
+      "ways-to-serve",
+      "commission-heading",
+      "early-missionaries-heading",
+      "love-share-invite-heading",
+      "worldwide-heading",
+      "visit-heading"
+    ],
+    "church-history.html": [
+      "ask-history",
+      "aaronic-priesthood-restoration",
+      "history-bom-evidence-title",
+      "history-first-vision-title",
+      "history-harmony-title",
+      "joseph-likeness-entry",
+      "kirtland-safety-society",
+      "kirtland-temple",
+      "liberty-jail-study",
+      "melchizedek-priesthood-restoration",
+      "nauvoo-legion",
+      "nauvoo-temple",
+      "porter-rockwell",
+      "guided-reflections",
+      "relief-society-organization",
+      "richmond-rebuke"
+    ],
+    "pioneers.html": [
+      "ask-pioneers",
+      "pioneer-departure-heading",
+      "pioneer-trail-life-heading",
+      "guided-reflections"
+    ],
+    "answers/faith-in-jesus-christ-during-trials.html": [
+      "christ-understands",
+      "receiving-care"
+    ],
+    "answers/stand-forever.html": [
+      "scripture-companion"
+    ],
+    "joseph-smith-likeness.html": [
+      "likeness-title"
+    ],
+    "atonement.html": [
+      "atonement-title"
+    ]
+  },
+  "root_scroll_behavior_change": {
+    "file": "site-system.css",
+    "before": "html { scroll-behavior: smooth; }",
+    "after": "html { scroll-behavior: auto; }",
+    "scope": "Exactly one unindented global rule. Existing reduced-motion rules remain unchanged. Owner-authorized native anchor and Back navigation without long scroll animation."
+  }
+}

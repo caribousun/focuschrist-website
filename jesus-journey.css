@@ -10,7 +10,7 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 .jj-main h2{font-size:clamp(1.8rem,3vw,2.5rem);margin:0 0 18px}
 .jj-main h3{font-size:1.45rem;margin:0 0 12px}
 .jj-main p{margin:0 0 18px}
-.jj-main section[id],.jj-main article[id]{scroll-margin-top:110px}
+.jj-main section[id],.jj-main article[id]{scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .jj-chapter{padding:var(--fc-section-y,48px) 0;border-bottom:1px solid rgba(240,195,106,.2)}
 .jj-reading{width:100%;max-width:none;min-width:0}
 .content-wrap.article>h2{overflow-wrap:anywhere}
@@ -60,7 +60,7 @@ body.fc-jesus-journey .jj-opening{padding:calc(var(--fc-header-height,80px) + 36
 
 /* Compact chapter selection keeps the scene close to the opening. */
 .jj-chapter-reader>[hidden]{display:none!important}
-.jj-chapter-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 16px;scroll-margin-top:100px}
+.jj-chapter-controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:0 0 16px;scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .jj-chapter-position{flex:1 1 100%;font-size:.9rem;margin:0!important;color:#e5cfaa}
 .jj-reading-guide{flex:1 1 100%;font-size:.95rem;line-height:1.55;color:#dbe8e4;margin:0 0 2px!important}
 .jj-chapter-picker{flex:1 1 200px;border:1px solid #829a91!important;border-radius:12px;padding:0!important;min-width:0;background:#102c36}

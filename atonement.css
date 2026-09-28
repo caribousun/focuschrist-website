@@ -1,5 +1,5 @@
 /* One consistent content rail for the complete Atonement study. */
-.atonement-sensitive { margin-block: var(--atonement-space); scroll-margin-top: 100px; }
+.atonement-sensitive { margin-block: var(--atonement-space); scroll-margin-top: var(--fc-anchor-offset, 16px); }
 .atonement-sensitive > summary { position: relative; display: grid; place-items: center; min-height: 260px; padding: 28px; overflow: hidden; isolation: isolate; cursor: pointer; list-style: none; text-align: center; border: 1px solid var(--fc-line); border-radius: var(--fc-radius-lg); background: var(--fc-bg); }
 .atonement-sensitive > summary::-webkit-details-marker { display: none; }
 .atonement-sensitive > summary:focus-visible { outline: 3px solid var(--fc-gold-light); outline-offset: 5px; }
@@ -20,7 +20,7 @@ body.fc-site.fc-atonement-page .fc-visual-hero::before { display: none; }
 .atonement-main {
   --atonement-space: clamp(20px, 2.5vw, 28px);
   max-width: calc(var(--fc-standard) + 2 * var(--fc-body-gutter));
-  scroll-margin-top: 90px;
+  scroll-margin-top: var(--fc-anchor-offset, 16px);
   margin-inline: auto;
   padding-inline: var(--fc-body-gutter);
 }
@@ -45,7 +45,7 @@ body.fc-site.fc-atonement-page .fc-visual-hero::before { display: none; }
 }
 .atonement-path > .fc-button:hover { background: rgba(240, 195, 106, .13); border-color: #f0c36a; transform: translateY(-1px); }
 .atonement-path > .fc-button:focus-visible { outline: 3px solid #f0c36a; outline-offset: 4px; }
-.atonement-chapter { scroll-margin-top: 90px; }
+.atonement-chapter { scroll-margin-top: var(--fc-anchor-offset, 16px); }
 .atonement-chapter-heading { margin-bottom: var(--atonement-space); }
 .atonement-chapter-heading .fc-eyebrow { margin: 0; }
 .atonement-chapter-heading h2 { margin: 12px 0 0; }

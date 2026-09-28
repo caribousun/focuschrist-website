@@ -6,9 +6,9 @@
 .bom-story-directory a{display:flex;align-items:center;gap:.7rem;min-height:48px;padding:.65rem .9rem;border:1px solid var(--fc-line,#49616b);border-radius:12px;background:var(--fc-card-fill);text-decoration:none;font-size:.94rem;line-height:1.45}
 .bom-story-directory a span{color:var(--fc-gold-light,#f1d39a);font-size:.8rem;letter-spacing:.06em;flex:none}
 .bom-story-directory a:hover{border-color:var(--fc-gold-light,#f1d39a)}
-.bom-story,.bom-journey{scroll-margin-top:100px}
+.bom-story,.bom-journey{scroll-margin-top:var(--fc-anchor-offset, 16px)}
 .bom-story{border-top:1px solid var(--fc-line,#49616b)}
 body.fc-site.fc-topic-page main>.bom-story.fc-deep-study{padding-top:var(--fc-section-gap,32px)}
 .bom-story>.fc-eyebrow,.bom-journey>.fc-eyebrow{color:var(--fc-gold-light,#f1d39a);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem}
 .bom-story>.fc-eyebrow+h2{margin-top:0}
-@media(max-width:600px){.bom-story-directory{grid-template-columns:1fr}.bom-story-directory a{justify-content:center;text-align:center}.bom-story-directory a span{min-width:1.4em}.bom-story,.bom-journey{scroll-margin-top:82px}}
+@media(max-width:600px){.bom-story-directory{grid-template-columns:1fr}.bom-story-directory a{justify-content:center;text-align:center}.bom-story-directory a span{min-width:1.4em}.bom-story,.bom-journey{scroll-margin-top:var(--fc-anchor-offset, 16px)}}
