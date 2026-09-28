@@ -1625,13 +1625,25 @@
         ],
         "blocks": [
           "On April 3, 1836, Joseph Smith and Oliver Cowdery pray in the Kirtland Temple after participating in the day’s worship. {0} records their vision of the Lord standing upon the pulpit breastwork. He identifies Himself as the living One who was slain, speaks of forgiveness and accepts the house built to His name.",
+          {
+            "reference_picture": {
+              "href": "/church-history.html#kirtland-temple",
+              "title": "The Kirtland Temple",
+              "caption": "Walk toward the Kirtland Temple with its early worshippers, then explore the story of its dedication and the witnesses recorded there.",
+              "thumbnail": "assets/page-art/church-history/kirtland-temple-960.webp",
+              "width": 960,
+              "height": 640,
+              "alt": "Worshippers approach the Kirtland Temple along a path beneath its red roof and pale blue tower."
+            }
+          },
           "The account connects divine glory with words of mercy and rejoicing. The Savior who appears with a radiant countenance speaks forgiveness and calls His people to lift their hearts. His acceptance of the temple leads toward the continuing covenant work described in the rest of the section. The building matters because of the One whose name it bears and the blessings He intends to extend through the work entrusted to His people.",
           {
             "questions": [
               "Which words in the Lord's message would you like to remember?"
             ]
           }
-        ]
+        ],
+        "reference_visual_after_paragraphs": 1
       },
       {
         "id": "liberty",
