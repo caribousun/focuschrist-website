@@ -1,0 +1,82 @@
+[
+  {
+    "key": "plan",
+    "source": "assets/heroes/plan-of-salvation-hero-1600.webp",
+    "asset": "assets/heroes/plan-desktop-exact-20260929.webp",
+    "size": [
+      3201,
+      1067
+    ],
+    "center_box": [
+      800,
+      0,
+      2400,
+      1067
+    ],
+    "exact": true,
+    "source_decoded_sha256": "dcd78059a0962038037da996ecf219027ea70193e75ee680487238befaccc42e",
+    "generated_background": "exec-189fb6d5-36a1-4017-b128-408face20d4d.png",
+    "method": "Masked imagegen side extension, generated-side boundary color continuity, original rectangle copied exactly, lossless WebP",
+    "generated_background_sha256": "b292d0727f3684d27d5c5d1bc06af14209ebdb029d2ff846a7fa6821b6484aa6"
+  },
+  {
+    "key": "bom",
+    "source": "assets/page-art/bom-evidences/hero.webp",
+    "asset": "assets/heroes/bom-desktop-exact-20260929.webp",
+    "size": [
+      2823,
+      941
+    ],
+    "center_box": [
+      575,
+      0,
+      2247,
+      941
+    ],
+    "exact": true,
+    "source_decoded_sha256": "80e2eef08e073894c1ce6314f8b70cc8c058b83acc901ca49af91b85e8ff35d4",
+    "generated_background": "exec-cdfe8d20-ddd9-4658-95ba-ab86d5bba347.png",
+    "method": "Masked imagegen side extension, generated-side boundary color continuity, original rectangle copied exactly, lossless WebP",
+    "generated_background_sha256": "19cf34c06eb873a351b8dd2d48e8bdc4501908b3b2be47e571134806d063bb38"
+  },
+  {
+    "key": "conference",
+    "source": "assets/heroes/topics/conference-listening-full.webp",
+    "asset": "assets/heroes/conference-desktop-exact-20260929.webp",
+    "size": [
+      3072,
+      1024
+    ],
+    "center_box": [
+      768,
+      0,
+      2304,
+      1024
+    ],
+    "exact": true,
+    "source_decoded_sha256": "ce9da2673936e63b395bf889dd568606098be5d0da620bf560ecdafe8f147abe",
+    "generated_background": "exec-e4e10260-7bcc-4dc1-94f4-953d4f2c0e07.png",
+    "method": "Masked imagegen side extension, generated-side boundary color continuity, original rectangle copied exactly, lossless WebP",
+    "generated_background_sha256": "562773b1131064aaddc5f6363cee5922ef9cce11417f36c58a18f5b628a33fea"
+  },
+  {
+    "key": "abrahamic",
+    "source": "assets/page-art/abrahamic-covenant/ac-jacob-ladder-full.webp",
+    "asset": "assets/heroes/abrahamic-desktop-exact-20260929.webp",
+    "size": [
+      3072,
+      1024
+    ],
+    "center_box": [
+      768,
+      0,
+      2304,
+      1024
+    ],
+    "exact": true,
+    "source_decoded_sha256": "4a708b4c7ab1fdb1d2a00a031851261e8cc425cbf26dc44124c4eddfff683145",
+    "generated_background": "exec-145fd6be-665b-45ce-82a9-529626b528e9.png",
+    "method": "Masked imagegen side extension, generated-side boundary color continuity, original rectangle copied exactly, lossless WebP",
+    "generated_background_sha256": "e12af0172d2182feea8b4cce7695d82391ecd5a648c8898b2a126d9141a204d9"
+  }
+]

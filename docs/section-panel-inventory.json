@@ -1530,15 +1530,6 @@
       "disposition": "excluded_with_reason",
       "reason": "CFM official-source text control in a section footer; transparent and unrounded, not an enclosing panel."
     },
-    "cfm-tool": {
-      "stylesheets": [
-        "come-follow-me.css"
-      ],
-      "pages": [
-        "come-follow-me.html"
-      ],
-      "disposition": "shared_surface"
-    },
     "cfm-week__card": {
       "stylesheets": [
         "come-follow-me.css"
@@ -2816,7 +2807,7 @@
         "come-follow-me.html"
       ],
       "tags": [
-        "a"
+        "figure"
       ]
     },
     ".cfm-week__card": {
@@ -2916,7 +2907,7 @@
       ]
     },
     ".fc-deep-study details": {
-      "count": 140,
+      "count": 142,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",

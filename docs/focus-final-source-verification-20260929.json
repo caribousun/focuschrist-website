@@ -1,0 +1,82 @@
+{
+  "date": "2026-09-29",
+  "status": "All broad-suite failures resolved; current affected source and DOM checks pass. Ready for root release review and hosted CI, not a production deployment claim.",
+  "broad_run": {
+    "commands": 175,
+    "initial_passed": 173,
+    "initial_failures": [
+      "python tools/media_voice_qa.py",
+      "node tools/art_study_picture_runtime_qa.js"
+    ],
+    "evidence": "work/temples/qa-release-final/results.json"
+  },
+  "final_affected_run": {
+    "commands": 29,
+    "passed": 29,
+    "failed": 0,
+    "evidence": "work/temples/qa-release-affected/results.json"
+  },
+  "unresolved_source_failures": 0,
+  "coverage": "Extracted unique Python and nonbrowser Node checks from both workflows, including shared content/source, DOM, artwork preservation, gallery/search, template, scripture, Ask contract, and new repair/CTA/cache gates. Browser and live production/provider calls intentionally separate.",
+  "artwork": {
+    "temple_new_originals": 20,
+    "duplicate_card_new_originals": 11,
+    "desktop_hero_derivatives_not_new_originals": 4,
+    "gallery_originals": 857,
+    "gallery_occurrences": 863,
+    "duplicate_audit_unresolved_candidates": 0
+  },
+  "review_records": [
+    "docs/temples/source-plan.md",
+    "docs/temples/chapters.json",
+    "docs/temples/art-ready.json",
+    "docs/artwork-uniqueness-audit-20260929/README.md",
+    "docs/artwork-uniqueness-audit-20260929/occurrence-ledger.json",
+    "docs/artwork-uniqueness-audit-20260929/final-occurrences.json",
+    "docs/artwork-uniqueness-audit-20260929/new-art-review.json",
+    "docs/illustrated-study-navigation-review-20260929.json"
+  ],
+  "propagation": {
+    "topic_artwork_details_version": "20260929-picture-flow-1",
+    "html_consumers": 111,
+    "builders": 3,
+    "artwork_actions_version": "20260929-picture-source-pills-1"
+  },
+  "evidence_boundaries": {
+    "source_and_dom": "Fermi broad execution plus Newton independent scoped acceptance; exact hashes are change detectors, not factual or visual proof.",
+    "visual": "Independent root/Newton/Temple Build full-image reviews and root actual browser checks recorded separately. This source record does not claim exhaustive viewport/browser-state traversal.",
+    "owner": "Owner will inspect completed result; technical acceptance is not owner aesthetic approval.",
+    "publication": "No commit, push, deployment or schedule changes performed by Fermi."
+  },
+  "final_affected_commands": [
+    "python tools/media_voice_qa.py",
+    "node tools/art_study_picture_runtime_qa.js",
+    "python tools/static_content_audit.py",
+    "python tools/build_art_gallery.py --check",
+    "python tools/build_site_search.py --check",
+    "python tools/cfm_composition_qa.py --self-test",
+    "python tools/come_follow_me_qa.py",
+    "node tools/come_follow_me_reading_runtime_qa.js",
+    "python tools/build_jesus_journey.py --strict --check",
+    "python tools/build_jesus_parent.py --strict --check",
+    "python tools/desktop_hero_preservation_qa.py",
+    "node tools/desktop_hero_runtime_qa.js",
+    "python tools/temples_history_qa.py",
+    "node tools/temples_history_runtime_qa.js",
+    "python tools/art_study_enrichment_qa.py",
+    "python tools/topic_artwork_details_qa.py",
+    "python tools/sitewide_artwork_review_qa.py --self-test",
+    "python tools/sitewide_artwork_review_qa.py",
+    "python tools/artwork_reference_repairs_qa.py",
+    "node tools/artwork_reference_runtime_qa.js",
+    "python tools/illustrated_study_navigation_qa.py",
+    "node tools/illustrated_study_navigation_runtime_qa.js",
+    "python tools/section_panel_surface_qa.py",
+    "node tools/study_link_controls_qa.js",
+    "python tools/site_qa.py",
+    "python tools/site_flow_qa.py",
+    "python tools/evidences_visual_guides_qa.py",
+    "node tools/topic_artwork_sources_runtime_qa.js",
+    "node --check topic-artwork-details.js"
+  ]
+}

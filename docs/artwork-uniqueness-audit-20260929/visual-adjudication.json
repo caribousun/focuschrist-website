@@ -1,0 +1,13 @@
+{
+  "reviewer": "Newton",
+  "date": "2026-09-29",
+  "method": "Direct visual inspection of decoded local image files after pHash/SIFT candidate discovery; no replacement or deletion performed.",
+  "limitations": "Shared background lineage is not proof that two whole artworks are identical. Narrative variants below require policy adjudication before counting as separate originals.",
+  "findings": [
+    {"assets": ["assets/answers-christ-portrait.png", "art/thumbs/new/jesus-christ-portrait.webp"], "classification": "same_original_resized_encoded", "observation": "Identical Christ portrait, clothing, hair, horizon and sunset. Different size/encoding does not create new original artwork."},
+    {"assets": ["assets/page-art/sitewide-narratives/birth-john-witness-960.webp", "assets/page-art/jesus-journey/mm-john-questions-960.webp"], "classification": "shared_base_distinct_narrative_edit", "observation": "Same riverbank and John identity; witness scene points toward Christ with disciples, question scene replaces foreground visitors and changes John's gesture. Not merely crop or rename."},
+    {"assets": ["assets/page-art/jesus-journey/friend-midnight-02-960.webp", "assets/page-art/jesus-journey/friend-midnight-03-960.webp"], "classification": "shared_base_distinct_narrative_edit", "observation": "Same courtyard and host; closed door with empty basket becomes open door with neighbor supplying bread. Substantive story action changes."},
+    {"assets": ["assets/page-art/jesus-journey/good-samaritan-01-960.webp", "assets/page-art/jesus-journey/good-samaritan-04-960.webp"], "classification": "shared_base_distinct_narrative_edit", "observation": "Same rocky road and wounded traveler; later scene adds kneeling Samaritan and changes traveler's head and posture to respond. Substantive story action changes."},
+    {"assets": ["assets/page-art/jesus-journey/unmerciful-servant-01-960.webp", "assets/page-art/jesus-journey/unmerciful-servant-02-960.webp", "assets/page-art/jesus-journey/unmerciful-servant-04-960.webp"], "classification": "shared_base_distinct_narrative_edit", "observation": "Same palace, guards and king; foreground changes from kneeling plea to rising pardoned servant, then two reporting witnesses. King gesture changes for pardon. Substantial background reuse; whole scenes are not identical."}
+  ]
+}

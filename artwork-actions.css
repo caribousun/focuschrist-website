@@ -1,5 +1,7 @@
 /* Shared responsive controls for artwork details and gallery study drawers. */
 .fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions, .fc-art-study-links) {
+    /* Picture-panel sources share the standard pill radius, including wrapped labels. */
+    --fc-study-control-radius: 999px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
     gap: 10px;

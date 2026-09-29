@@ -1,0 +1,51 @@
+(async()=>{
+const fs=require('fs'),path=require('path'),assert=require('node:assert/strict');
+const {JSDOM,VirtualConsole}=require('jsdom');
+const root=path.resolve(__dirname,'..');
+const dom=new JSDOM(fs.readFileSync(path.join(root,'art.html'),'utf8'),{url:'https://focuschrist.com/art.html',runScripts:'dangerously',pretendToBeVisual:true,virtualConsole:new VirtualConsole()});
+const {window:w}=dom;
+w.eval(fs.readFileSync(path.join(root,'art-study-router.js'),'utf8'));
+w.document.dispatchEvent(new w.Event('DOMContentLoaded'));
+const link=w.document.querySelector('.gallery-original-reference a[href="answers.html#answers-christ-portrait"]');
+assert(link&&!link.closest('.gallery-item'),'Original reference must be outside gallery click control');
+const event=new w.MouseEvent('click',{bubbles:true,cancelable:true});
+link.dispatchEvent(event);
+assert.equal(event.defaultPrevented,false,'Native source navigation remains available');
+assert.equal(w.document.querySelector('#imageModal').classList.contains('active'),false,'Reference must not open legacy artwork viewer');
+assert.equal(w.location.search,'','Reference must not write art query');
+const item=w.document.querySelector('.gallery-original-reference .gallery-item');
+assert.equal(item.querySelector('.caption').textContent.trim(),'Jesus Christ');
+item.click();
+await new Promise(resolve=>setTimeout(resolve,0));
+assert(w.document.querySelector('#imageModal').classList.contains('active'),'Artwork still opens native viewer');
+assert.equal(new URL(w.location.href).searchParams.get('art'),'Jesus Christ','Artwork title/query stays clean');
+w.close();
+const cfm=new JSDOM(fs.readFileSync(path.join(root,'come-follow-me.html'),'utf8'),{url:'https://focuschrist.com/come-follow-me.html',runScripts:'outside-only'});
+const cw=cfm.window,cd=cw.document;
+cw.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};
+cw.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');this.dispatchEvent(new cw.Event('close'));};
+cw.HTMLElement.prototype.scrollIntoView=function(){};
+cw.eval(fs.readFileSync(path.join(root,'topic-artwork-details.js'),'utf8'));
+cd.dispatchEvent(new cw.Event('DOMContentLoaded'));
+const expected=JSON.parse(fs.readFileSync(path.join(root,'docs/artwork-uniqueness-audit-20260929/cfm-picture-panel-copy.json'),'utf8'));
+assert.equal(Object.keys(expected).length,4);
+assert.equal(new Set(Object.values(expected).map(x=>x[0])).size,4,'Four distinct picture titles');
+for(const [id,[title,prose,label]] of Object.entries(expected)){
+ const figure=cd.getElementById(id),trigger=figure.querySelector(':scope > a');
+ assert(trigger.hasAttribute('data-topic-artwork-detail'));
+ trigger.dispatchEvent(new cw.MouseEvent('click',{bubbles:true,cancelable:true,button:0}));
+ const panel=cd.getElementById('topicArtworkDetailDialog');
+ assert(panel.open);
+ assert.equal(panel.querySelector('h2').textContent,title);
+ assert.equal(panel.querySelector('.fc-artwork-detail-copy').textContent.trim(),prose);
+ const sources=[...panel.querySelectorAll('[data-topic-art-source]')];
+ assert.equal(sources.length,1);assert.equal(sources[0].textContent,label);
+ const official=figure.querySelector('.cfm-tool-resource');assert.equal(sources[0].href,official.href,'Picture source retains official resource');
+ assert(!official.hasAttribute('data-topic-artwork-detail'),'Official resource remains separate native link');
+ panel.close();
+}
+cw.close();
+console.log('CFM PICTURE runtime PASS: four distinct contextual headings/captions, clean exact official sources, separate native resource links.');
+console.log('ART REFERENCE runtime PASS: native source navigation, no modal interception, clean title/query, original viewer retained.');
+
+})().catch(error=>{console.error(error);process.exitCode=1;});

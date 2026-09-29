@@ -19,6 +19,9 @@ def parents(n):
  while n.parent:
   n=n.parent;yield n
 errors=[];count=0;preserved=0;panels=0;life_assets=[];gap_assets=[];sitewide_assets=[]
+temple_records=json.loads((ROOT/'docs/temples/art-ready.json').read_text(encoding='utf-8'))
+temple_review={v['full']:(k,v) for k,v in temple_records.items()}
+temple_assets=[]
 journey_review=json.loads((ROOT/'docs/jesus-journey/artworks.json').read_text(encoding='utf-8'))
 journey_assets=[]
 new_review = {e['asset']: e for e in sitewide_entries() if not e['talk'] and (e['page'].startswith('answers/') or e['page']=='general-conference.html')}
@@ -82,10 +85,16 @@ for page in [*sorted((ROOT/'answers').glob('*.html')),ROOT/'general-conference.h
   count+=1;container=a.parent
   cap=next((n for n in container.walk() if n.tag=='figcaption' or n.has('fc-marriage-era__copy') or n.has('fc-foundation-card-copy')),None)
   if cap is None or not cap.text().strip():errors.append(page.name+': missing approved body caption')
-  sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname=='www.churchofjesuschrist.org'] if cap else []
+  sources=[n for n in cap.walk() if n.tag=='a' and urlsplit(n.attrs.get('href','')).hostname in ('www.churchofjesuschrist.org','newsroom.churchofjesuschrist.org')] if cap else []
   if not sources and 'data-topic-study' not in a.attrs and page.name not in ('grief-and-faith.html','general-conference.html'):errors.append(page.name+': body source unavailable without unrelated page fallback')
   relative_asset=local_asset(page,a.attrs['href']).relative_to(ROOT).as_posix()
-  if relative_asset in covenant_review or (page.name=='abrahamic-covenant.html' and 'data-exclusive-artwork' in container.attrs):
+  if relative_asset.startswith('assets/page-art/temples/'):
+   assert relative_asset in temple_review and page.name=='why-latter-day-saints-build-temples.html', 'Temple artwork owner/review mismatch'
+   key,record=temple_review[relative_asset]
+   assert record['reviewed'] and hashlib.sha256((ROOT/relative_asset).read_bytes()).hexdigest()==record['sha256'], 'Temple artwork changed after visual review'
+   assert container.attrs.get('data-exclusive-artwork')==key and a.attrs.get('aria-haspopup')=='dialog', 'Temple picture adapter binding mismatch'
+   temple_assets.append(relative_asset)
+  elif relative_asset in covenant_review or (page.name=='abrahamic-covenant.html' and 'data-exclusive-artwork' in container.attrs):
    assert relative_asset in covenant_review, 'Covenant picture missing from its exact review manifest'
    key,record=covenant_review[relative_asset]
    assert '/'+page.relative_to(ROOT).as_posix()==record['owner']=='/answers/abrahamic-covenant.html', 'Covenant artwork on wrong page'
@@ -196,7 +205,8 @@ assert len(covenant_assets)==len(set(covenant_assets))==12 and set(covenant_asse
 expected_journey={k for k,v in journey_review.items() if v['owner'].startswith('answers/')}
 assert len(journey_assets)==len(set(journey_assets)) and set(journey_assets)==expected_journey, 'Journey parent exact artwork inventory mismatch'
 assert len(hg_assets)==len(set(hg_assets))==16 and set(hg_assets)==set(hg_review), 'Holy Ghost exact body inventory mismatch'
-assert (count-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
+assert len(temple_assets)==len(set(temple_assets))==len(temple_review)==20 and set(temple_assets)==set(temple_review), 'All twenty reviewed temple originals must reach the shared study adapter'
+assert (count-len(temple_assets)-len(father_assets)-len(plan_assets)-len(hg_assets)-len(covenant_assets)-len(journey_assets)-len(bible_assets)-len(settle_assets)-len(life_assets)-len(gap_assets)-len(sitewide_assets)-len(focused_assets)-len(relocated_assets)-len(bom_assets),preserved)==(99,3),(count,preserved)
 # Life After Death lifted its old illustrated feature panel into full reading
 # sections. All twelve remaining panels still undergo the structural checks.
 assert set(plan_assets)==set(plan_review) and len(plan_assets)==16, 'All sixteen Plan originals must reach the shared study adapter'

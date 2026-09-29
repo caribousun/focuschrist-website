@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-29",
+  "reviewer": "Newton",
+  "status": "IMPLEMENTED_INDEPENDENT_ART_REVIEW_PASSED_PENDING_PARENT_RELEASE",
+  "scope": "Five owner-reported desktop heroes",
+  "implemented": {
+    "page": "answers/look-unto-me-doctrine-and-covenants-6-36.html",
+    "cause": "Topic opening flexible grid assigned artwork the space remaining after variable introduction copy, overriding the standard ratio.",
+    "repair": "Page-scoped stylesheet sets desktop grid rows to intrinsic auto and restores 2048:684 hero aspect ratio above 700px. Artwork files and mobile rules unchanged.",
+    "rendered_before_1440": {
+      "width": 1424.8,
+      "height": 448.3875
+    },
+    "rendered_after_1440": {
+      "width": 1424.8,
+      "height": 475.85
+    },
+    "rendered_widths_without_horizontal_overflow": [
+      2560,
+      1440,
+      1024,
+      768,
+      390,
+      320
+    ],
+    "mobile_390": {
+      "width": 375.2,
+      "height": 448.95
+    },
+    "mobile_320": {
+      "width": 304.8,
+      "height": 368
+    },
+    "visual_review": "Normal desktop and narrow phone screenshots inspected. Christ face, hand and full scene remain visible; title/actions fit. Wider/tablet dimensions measured. No claim of independent owner aesthetic approval."
+  },
+  "remaining": [],
+  "rejected_edits": {
+    "method": "Built-in imagegen, identity-preserve edit target, 3:1 horizontal extension only requested; no API spending or CLI fallback.",
+    "reason": "Tool reconstructed/rescaled center scene despite preserve-original prompt. Exact original center pixels cannot be asserted. Rejected for production; no page references candidates.",
+    "directory": "Private generated-image draft archive (rejected; not published)",
+    "plan": "exec-67b2a017-e453-4e29-8506-35c4f78defdf.png",
+    "bom": "exec-ebc33f71-3d0b-4457-9f63-c99db2036c18.png",
+    "conference": "exec-2d1fecbc-64ec-47b4-b61a-5b588d196c13.png",
+    "abrahamic": "exec-df50d261-f9be-4668-b4a4-a4374731dd82.png",
+    "resolution": "Masked 3:1 canvases + explicit owner-authorized exact-original-center composite replaced rejected drafts; approved finals documented separately."
+  },
+  "checks": {
+    "media_voice_qa": "PASS",
+    "abrahamic_covenant_qa": "PASS",
+    "general_conference_qa": "PASS",
+    "sitewide_hero_runtime_qa": "PASS42 contexts across21 destinations",
+    "general_conference_runtime_qa": "PASS",
+    "desktop_hero_preservation_qa": "PASS4 original rectangles pixel-identical"
+  },
+  "release": "No commit, publication, or production change. Independent parent review required.",
+  "implementation_notes": [
+    "All five desktop frames match 2048:684 at widths1440,2560,768, no overflow, images loaded.",
+    "Plan, BoM, Conference use desktop-only wide sources; original mobile sources unchanged.",
+    "Conference header moved outside bounded study wrapper for full width; mobile16px opening gutter retained.",
+    "Abrahamic one existing figure moves into desktop opening after study adapter registration, restores original chapter placement on phone; no duplicated original. Browser confirmed mobile inChapter jacob-at-bethel, opening slot empty, no overflow.",
+    "Four masked background edits composited with entire original center exactly under direct owner authorization, lossless WebP; root independently passed visual seams and subjects.",
+    "Desktop Abrahamic opens full study panel with exact Genesis source, full-size original and Continue Lesson."
+  ]
+}

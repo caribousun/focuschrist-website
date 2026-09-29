@@ -1,0 +1,12 @@
+{
+  "scope": "Owner-requested fully rounded picture-panel scripture/source pills only",
+  "cause": "Global study-source selector used radius10px!important instead of fc-button999px. Picture action group now locally inherits999px token; global10px and CFM main rows unchanged.",
+  "stylesheet": "artwork-actions.css",
+  "sha256": "7b0c502eef4f5e5c2db7b984ce76334a1ce02cda34a861bb6a3a99075b497678",
+  "previous_sha256": "094e3c7c814476bc17653435b36de4fff53ed970fd25e3635f887717961b5714",
+  "code_review": "Newton PASS",
+  "browser_review": "Root PASS1440 Kirtland primary/secondary999px; D&C110 reader16verses closes back to exact source with picture panel open;390 readable;320 long label wraps61.9px nooverflow.",
+  "pending": "Hosted200% text check before final release claim",
+  "cache_version": "20260929-picture-source-pills-1",
+  "guard_review": "Newton independent PASS exact final hash plus removal-to-baseline hash; negative radius and unrelated-append mutations rejected; cache119consumers reviewed."
+}

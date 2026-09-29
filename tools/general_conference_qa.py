@@ -79,8 +79,11 @@ require(any(n.attrs.get('id') == 'general-conference' for n in answers_nodes), '
 require(any(n.tag == 'a' and urlsplit(n.attrs.get('href', '')).path == 'general-conference.html' for n in answers_nodes), 'Answers needs a direct standalone conference route')
 nodes = list(hub.walk())
 require(sum('data-full-image-viewer' in n.attrs for n in nodes) == 5, 'conference must retain all five manifested body artwork viewers')
-opening = [n for n in nodes if n.attrs.get('data-exclusive-artwork') == 'conference-listening']
+opening = [n for n in all_nodes if n.attrs.get('data-exclusive-artwork') == 'conference-listening']
 require(len(opening) == 1, 'conference needs exactly one exclusive opening study picture')
+opening_header = next(n for n in all_nodes if 'gc-page-opening' in n.attrs.get('class', '').split())
+require(opening[0] in list(opening_header.walk()), 'conference picture must remain in its opening header')
+require(any(n.attrs.get('srcset') == 'assets/heroes/conference-desktop-exact-20260929.webp' and n.attrs.get('media') == '(min-width:701px)' for n in opening[0].walk()), 'conference desktop must use its reviewed wide rendition while retaining the original mobile image')
 opening_links = [n for n in opening[0].walk() if n.tag == 'a' and any(c.tag == 'img' for c in n.walk())]
 require(len(opening_links) == 1, 'conference opening needs one picture trigger')
 opening_trigger = opening_links[0]

@@ -145,6 +145,23 @@ SCOPED_INTERFACE_STYLES = {
     'ask-experience.css': ('62b8578e09c01fc8bd6eb4b46de4337a39aaa33280c8ba6b51606f57481d6df6', 'ask.html'),
     'holy-ghost-video.css': ('1fd7cb06db86e03a95cdc1a0420535d73fab5ddda5e2533e06b61613a5efae50', 'answers/holy-ghost.html'),
 }
+# Wyatt requested these exact desktop repairs and the Temple chronology.
+# Albert independently reviewed rendered composition; byte/consumer changes fail closed.
+OWNER_20260929_STYLES = {
+    'desktop-hero-repairs.css': ('26af1b820ab62722ad60ab124f16ccf5784304edafa375a854f0ea7f076e9e96', ['answers/abrahamic-covenant.html', 'answers/look-unto-me-doctrine-and-covenants-6-36.html', 'answers/plan-of-salvation.html', 'book-of-mormon-evidences.html', 'general-conference.html']),
+    'temples-history.css': ('55e75a39ef5e01699307df18932ac7dd83771216cd144fb59c119b4b1e9da030', ['answers/why-latter-day-saints-build-temples.html']),
+}
+def reviewed_owner_20260929_style(name, data):
+    return name in OWNER_20260929_STYLES and hashlib.sha256(data).hexdigest() == OWNER_20260929_STYLES[name][0]
+
+# Exact owner-requested picture-source pill correction; removing only this
+# declaration/comment must recover the prior stylesheet bytes. No global waiver.
+PICTURE_PILL_ADDITION = b"    /* Picture-panel sources share the standard pill radius, including wrapped labels. */\n    --fc-study-control-radius: 999px;\n"
+def reviewed_picture_pill_style(data):
+    return (hashlib.sha256(data).hexdigest() == '7b0c502eef4f5e5c2db7b984ce76334a1ce02cda34a861bb6a3a99075b497678'
+            and data.count(PICTURE_PILL_ADDITION) == 1
+            and hashlib.sha256(data.replace(PICTURE_PILL_ADDITION, b'', 1)).hexdigest() == '094e3c7c814476bc17653435b36de4fff53ed970fd25e3635f887717961b5714')
+
 def reviewed_scoped_interface_style(name, data):
     data = historical_style_bytes(data)
     return name in SCOPED_INTERFACE_STYLES and hashlib.sha256(data).hexdigest()==SCOPED_INTERFACE_STYLES[name][0]
@@ -253,6 +270,12 @@ def main():
         assert not reviewed_scoped_interface_style('cfm-study-controls.css', cfm_controls.replace(b'--fc-study-control-radius:6px', b'--fc-study-control-radius:999px'))
         ask_css=(ROOT/'ask-experience.css').read_bytes()
         assert not reviewed_scoped_interface_style('ask-experience.css', ask_css.replace(b'position:static;padding:16px 17px', b'position:absolute;padding:16px 17px'))
+        for name in OWNER_20260929_STYLES:
+            data = (ROOT/name).read_bytes()
+            assert reviewed_owner_20260929_style(name, data)
+            assert not reviewed_owner_20260929_style(name, data+b'\n.x{height:1px}')
+            assert not reviewed_owner_20260929_style('unrelated.css', data)
+            assert 'unrelated.html' not in OWNER_20260929_STYLES[name][1]
         for name, (_, owner) in SCOPED_INTERFACE_STYLES.items():
             data=(ROOT/name).read_bytes()
             assert reviewed_scoped_interface_style(name,data)
@@ -465,10 +488,24 @@ def main():
             relative=page.relative_to(ROOT).as_posix()
             if relative.startswith(('tools/', '.git/', 'node_modules/', 'focuschrist-repo/')): continue
             check(scoped_interface_reference_allowed(name, relative, page.read_text(encoding='utf-8')), 'Scoped interface stylesheet consumed outside owner: '+relative)
+    for name, (_, owners) in OWNER_20260929_STYLES.items():
+        check(reviewed_owner_20260929_style(name, (ROOT/name).read_bytes()), 'Owner-reviewed stylesheet bytes changed: '+name)
+        consumers = set()
+        for page in ROOT.rglob('*.html'):
+            relative = page.relative_to(ROOT).as_posix()
+            if relative.startswith(('tools/', '.git/', 'node_modules/', 'focuschrist-repo/')): continue
+            if name in page.read_text(encoding='utf-8'): consumers.add(relative)
+        check(consumers == set(owners), 'Owner-reviewed stylesheet consumer set changed: '+name)
     for name in ANCHOR_STYLES:
         check(reviewed_anchor_style(name, (ROOT/name).read_bytes()), 'Anchor-only transformation differs from exact reviewed bytes: '+name)
     excluded_styles={MISSION_ENRICHMENT_STYLE,WATCH_SHORTS_STYLE,'missionary.css',HOME_STYLE,'focused-answers.css',tool_style,bom_style,pioneer_style,pioneer_ask_style,settle_style,row_style,BIBLE_STYLE,JOURNEY_STYLE,'site-system.css','site-header.css','study-navigation.css'}
+    picture_pill_bytes = (ROOT/'artwork-actions.css').read_bytes()
+    check(reviewed_picture_pill_style(picture_pill_bytes), 'Picture source pills differ from exact scoped reviewed change')
+    check(not reviewed_picture_pill_style(picture_pill_bytes.replace(b'999px;', b'10px;', 1)), 'Picture pill radius mutation escaped')
+    check(not reviewed_picture_pill_style(picture_pill_bytes+b'\n.x{height:1px}'), 'Unrelated picture stylesheet mutation escaped')
+    excluded_styles.add('artwork-actions.css')
     excluded_styles.update(SCOPED_INTERFACE_STYLES)
+    excluded_styles.update(OWNER_20260929_STYLES)
     # These files have just passed the exact full-byte AND reconstructed baseline
     # checks; no later geometry or non-margin changes can enter this exclusion.
     excluded_styles.update(ANCHOR_STYLES)

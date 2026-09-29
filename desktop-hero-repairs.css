@@ -1,0 +1,52 @@
+/* Desktop artwork uses the same 2048:684 frame as Home. Keep phone rules intact.
+   A topic's introduction must never determine the artwork's height. */
+@media (min-width: 701px) {
+    body.fc-site .pos-opening-art { min-width: 0; }
+    body.fc-site.fc-topic-page .fc-topic-opening {
+        grid-template-rows: auto auto;
+        align-content: start;
+    }
+    body.fc-site.fc-topic-page .fc-topic-opening .fc-visual-hero {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        aspect-ratio: 2048 / 684;
+    }
+    body.fc-site.gc-page .gc-page-opening {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+    }
+    body.fc-site.gc-page .gc-page-opening .gc-intro-visual {
+        order: -1;
+        width: 100%;
+        max-width: none;
+    }
+    body.fc-site.gc-page .gc-page-opening .gc-intro-visual img,
+    body.fc-site .fc-covenant-hero img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        aspect-ratio: 2048 / 684;
+        object-fit: cover;
+        border-radius: 0;
+    }
+    body.fc-site.gc-page .gc-page-opening .gc-intro-visual > a {
+        border: 0;
+        border-radius: 0;
+    }
+    body.fc-site.gc-page .gc-page-opening {
+        width: 100%;
+        max-width: none;
+        margin-inline: 0;
+    }
+    body.fc-site [data-covenant-hero-slot] .fc-covenant-hero { margin: 0; padding: 0; width: 100%; max-width: none; border: 0; border-radius: 0; }
+    body.fc-site [data-covenant-hero-slot] .fc-covenant-hero > a { display: block; border: 0; border-radius: 0; }
+    body.fc-site [data-covenant-hero-slot] .fc-covenant-hero figcaption { display: none; }
+}
+@media (max-width: 700px) {
+    body.fc-site.gc-page .gc-page-opening { padding-inline: 16px; }
+    .fc-covenant-picture-return { display: none; }
+}

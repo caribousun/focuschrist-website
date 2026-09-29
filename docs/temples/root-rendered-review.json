@@ -1,0 +1,23 @@
+{
+  "reviewer": "Albert/root",
+  "date": "2026-09-29",
+  "surface": "Local browser preview, not production evidence",
+  "temple_checks": [
+    "1440px Kirtland chapter: coherent picture/text composition; picture study, source, full-size and Continue with heading focus verified.",
+    "390px Salt Lake chapter and 320px chapter directory: readable stacking, complete controls and no horizontal overflow.",
+    "768px present-day chapter: image, text and source controls fit.",
+    "All20 chapter geometry inspected: one owning figure per chapter; no unintended blank card slots.",
+    "1440px final Salt Lake revision: central facade is clearer; building, workers and scaffolding remain coherent.",
+    "1440px final widow revision after explicit reload: Christ's head and gaze turn down toward the offering, rather than past the widow."
+  ],
+  "related_checks": [
+    "All five repaired desktop hero appearances inspected; Conference and Book of Mormon initial partial captures resolved on fresh screenshots without a product change.",
+    "1440px Come Follow Me toolkit: four distinct replacement pictures form a complete row with legible text and visible controls.",
+    "390px Come Follow Me toolkit: four cards stack without horizontal overflow.",
+    "Art original-portrait reference: actual mouse click reaches answers.html#answers-christ-portrait, without opening the gallery viewer.",
+    "Book of Mormon illustrated-study link: actual click reaches before-bethlehem.html#picture-bb-jared-finger. The quoted scene/destination label wraps at320px without clipping or horizontal overflow.",
+    "Kirtland picture panel: the automatic Life After Death button is absent; Continue Lesson closes the panel and focuses temple-heading-kirtland-christ.",
+    "Picture source pills: primary and secondary controls compute999px radius at1440,390,320px. The long secondary label wraps naturally; D&C110:1-16 opens all16verses, and closing the reader restores focus to the same pill."
+  ],
+  "limits": "Technical visual and interaction review does not establish owner aesthetic approval or deployment. Hosted enlarged-text and production verification are recorded separately at release."
+}

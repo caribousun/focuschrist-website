@@ -2,7 +2,7 @@
   "canonical_pages": 121,
   "selectors": {
     ".fc-study-visual-sources a:not(.fc-button--primary)": {
-      "count": 711,
+      "count": 753,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/abrahamic-covenant.html",
@@ -138,7 +138,7 @@
       ]
     },
     ".fc-study-nav:not(.jj-local-nav) a:not(.fc-button--primary)": {
-      "count": 168,
+      "count": 169,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",

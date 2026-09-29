@@ -12,6 +12,16 @@ assert(css.includes('--fc-study-control-min-height: 44px'));
 assert(css.includes('white-space: nowrap;')&&css.includes('flex: 0 0 2.2em;'));
 assert(css.includes('flex: 1 1 210px;')&&css.includes('flex-wrap: wrap;'));
 assert(!/body\.fc-site\s+a\s*\{/.test(css),'Bare-anchor treatment prohibited');
+// Source tokens stay rounded only inside picture-panel action groups. The inherited
+// token resolves the existing !important source rule without changing main-page rows.
+const pictureCss=read('artwork-actions.css');
+const pictureSelector='.fc-site :is(.fc-artwork-detail-actions, .fc-missionary-detail-actions, .fc-art-study-links)';
+const pictureRule=pictureCss.slice(pictureCss.indexOf(pictureSelector)+pictureSelector.length).split('}')[0];
+assert(pictureRule.includes('--fc-study-control-radius: 999px;'),'Picture sources must use standard fully rounded pills');
+assert(css.includes('--fc-study-control-radius: 10px;'),'Unrelated owner control radius must remain unchanged');
+const pictureFixture=new JSDOM(`<body class="fc-site cfm-page"><main><div class="cfm-jump"><a id="cfm-row">Week</a></div><p><a id="prose-source">John 20</a></p></main><dialog class="fc-topic-artwork-detail"><div class="fc-artwork-detail-actions"><a id="topic-source" data-topic-art-source class="fc-button">Read Doctrine and Covenants 109:7–9, 22–23</a></div></dialog><dialog class="fc-hero-detail-dialog"><div class="fc-artwork-detail-actions"><a id="hero-source" class="fc-button fc-button--primary">John 20</a></div></dialog><dialog><div class="fc-artwork-detail-actions"><a id="legacy-source" class="fc-button">John 10</a></div></dialog><div class="fc-missionary-detail-actions"><a id="mission-source">Source</a></div><div class="fc-art-study-links"><a id="gallery-source">Source</a></div></body>`).window.document;
+for(const id of ['topic-source','hero-source','legacy-source','mission-source','gallery-source'])assert(pictureFixture.getElementById(id).closest(pictureSelector),`Picture source missing radius scope: ${id}`);
+for(const id of ['cfm-row','prose-source'])assert(!pictureFixture.getElementById(id).closest(pictureSelector),`Unrelated control entered picture radius scope: ${id}`);
 const fixture=new JSDOM(`<body class="fc-site"><p><a id="prose" class="fc-inline-scripture">John 3:16</a></p><a id="home" class="fc-button">Home</a><div class="fc-study-visual-sources"><a id="source">Mark 7:24–30</a><a id="primary" class="fc-button--primary">Study</a></div><a id="internal" class="source-link source-link--internal">Ask</a><a id="external" class="source-link">Source</a><nav class="jj-local-nav fc-study-nav"><a id="chapter">Chapter</a></nav><nav class="watch-topic-index"><a id="watch"><span>02</span>Book of Mormon</a></nav></body>`).window.document;
 for(const id of ['prose','home','primary','internal','chapter'])assert(!selectors.some(s=>fixture.getElementById(id).matches(s)),`Unwanted control ${id}`);
 for(const id of ['source','external','watch'])assert(selectors.some(s=>fixture.getElementById(id).matches(s)),`Uncovered control ${id}`);
