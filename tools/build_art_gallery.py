@@ -139,7 +139,7 @@ def build():
                 if attrs.get('id'):
                     selector = 'a' + attr('id', attrs['id'])
                 container = next((p for p in parents if p.tag == 'figure' or p.has('fc-marriage-era') or p.has('fc-foundation-card')), None)
-                caption = first(container, lambda n: n.tag == 'figcaption' or n.has('fc-marriage-era__copy') or n.has('fc-foundation-card-copy'))
+                caption = first(container, lambda n: 'data-picture-panel-copy' in n.attrs) or first(container, lambda n: n.tag == 'figcaption' or n.has('fc-marriage-era__copy') or n.has('fc-foundation-card-copy'))
                 heading = first(caption, lambda n: n.tag in {'h2', 'h3', 'h4', 'strong'})
                 title = text(heading) or alt or page_title
             if not kind:

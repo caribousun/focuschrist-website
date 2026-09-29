@@ -1,0 +1,77 @@
+[
+  {
+    "pair": {
+      "a": "art/Be-Still.png",
+      "b": "art/thumbs/Be-Still.webp",
+      "method": "phash64",
+      "distance": 2,
+      "confidence": "candidate"
+    },
+    "pages_a": [
+      "art-study/be-still.html"
+    ],
+    "pages_b": [
+      "art.html"
+    ]
+  },
+  {
+    "pair": {
+      "a": "art/Suffer-the-Little-Children.jpg",
+      "b": "art/thumbs/Suffer-the-Little-Children.webp",
+      "method": "phash64",
+      "distance": 0,
+      "confidence": "candidate"
+    },
+    "pages_a": [
+      "art-study/suffer-the-little-children.html"
+    ],
+    "pages_b": [
+      "art.html"
+    ]
+  },
+  {
+    "pair": {
+      "a": "art/The-Good-Shephard.jpg",
+      "b": "art/thumbs/The-Good-Shephard.webp",
+      "method": "phash64",
+      "distance": 0,
+      "confidence": "candidate"
+    },
+    "pages_a": [
+      "art-study/the-good-shepherd.html"
+    ],
+    "pages_b": [
+      "art.html"
+    ]
+  },
+  {
+    "pair": {
+      "a": "art/thumbs/new/jesus-christ-portrait.webp",
+      "b": "assets/answers-christ-portrait.png",
+      "method": "phash64",
+      "distance": 0,
+      "confidence": "candidate"
+    },
+    "pages_a": [
+      "art.html"
+    ],
+    "pages_b": [
+      "answers.html"
+    ]
+  },
+  {
+    "pair": {
+      "a": "assets/missionary/enrichment-20260923/samaritans-stay-960.webp",
+      "b": "assets/page-art/jesus-journey/rt-spirit-messengers-960.webp",
+      "method": "phash64",
+      "distance": 10,
+      "confidence": "candidate"
+    },
+    "pages_a": [
+      "missionary.html"
+    ],
+    "pages_b": [
+      "jesus-christ/restoration-and-today.html"
+    ]
+  }
+]

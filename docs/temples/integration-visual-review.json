@@ -1,0 +1,383 @@
+{
+  "reviewer": "temple_build",
+  "date": "2026-09-29",
+  "scope": "Independent technical/source-fit visual review only; not owner aesthetic approval",
+  "christ_reference": "assets/heroes/home-christ-signature-approved-20260907.png",
+  "records": [
+    {
+      "art_id": "temple-courts-healing",
+      "asset": "assets/page-art/temples/temple-courts-healing-full.webp",
+      "sha256": "e0828ffbd3d3d7fbfb10860a417cb3068eed190dd139aae7937209664cc2db3a",
+      "status": "PASS",
+      "note": "Compared directly with approved Home reference. Recognizable curly hair, beard, nose and face structure; engaged eye contact and restrained compassion suit the Matthew 21 setting. Visible hands and feet appear natural. Mortal ministry scene, so Resurrection scar rule does not apply.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-eden-communion",
+      "asset": "assets/page-art/temples/temple-eden-communion-full.webp",
+      "sha256": "e2d8cb2e5999db5090f7148625b6ca13b83d84d31d1e1ef8d9b5f4d7bead7aff",
+      "status": "PASS",
+      "note": "Convincing unpeopled garden/river landscape; caption must call it an interpretive beginning, not identify a known location or show an invented divine appearance.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-solomon-house",
+      "asset": "assets/page-art/temples/temple-solomon-house-full.webp",
+      "sha256": "9fec37ea147ffb575510181427dd978f5f187ee56b1d0f5b3e8102b1d2b63aaf",
+      "status": "PASS_WITH_SOURCE_BOUNDARY",
+      "note": "Distinct monumental temple exterior with two bronze-toned columns and large basin on ox figures. Suitable as an interpretive reconstruction, not a claim of a surviving exact architectural plan. Named Solomon is not depicted.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-return-rebuild",
+      "asset": "assets/page-art/temples/temple-return-rebuild-full.webp",
+      "sha256": "8fa58c435de18ef8d26662dfff1a7afadc89d447ade902ba99c407f70e25ba7d",
+      "status": "PASS",
+      "note": "Visible workers move a large stone with rope and lever; older and younger onlookers have distinct responses. Contemporary caption/alt must describe these visible people and labor rather than an empty building.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-wilderness-sanctuary",
+      "asset": "assets/page-art/temples/temple-wilderness-sanctuary-full.webp",
+      "sha256": "7babf2d995ff1a5005106cdcb2c355efd9418161e27890f8466ddf6646c030c0",
+      "status": "PASS",
+      "note": "Five front gold entry columns reconciled with Fermi and root against Exodus 26:37; earlier six-column flag was a side-edge misreading and withdrawn. Portable sanctuary, courtyard, altar and basin form a coherent interpretive scene.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-covenant-altars",
+      "asset": "assets/page-art/temples/temple-covenant-altars-full.webp",
+      "sha256": "1fd71d5116edd0e03a0651445a116091fb107abaa5d020faa19fa252ed23cca2",
+      "status": "PASS",
+      "note": "Stone altar beside tented camp fits interpretive Genesis 12 landscape. No named figure or invented ritual action; natural material proportions and lighting.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-young-jesus",
+      "asset": "assets/page-art/temples/temple-young-jesus-full.webp",
+      "sha256": "76fb9473d2b48484f58ab822da8d05505e2d29b37953eb39331033401a9f5a33",
+      "status": "PASS",
+      "note": "Clearly a young adolescent with youthful proportions, clean face and attentive dialogue; fits Luke 2 age twelve rather than adult figure. Hair, eyes and nose carry the approved reference features through aging interpretation. Natural hands and age-appropriate expression.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-house-prayer",
+      "asset": "assets/page-art/temples/temple-house-prayer-full.webp",
+      "sha256": "ded1658220b40cb9a9172b9f3fc28585c41e364388f139219eb90b2b5240ca8f",
+      "status": "HOLD_IDENTITY",
+      "note": "Scene action and serious expression fit cleansing the temple, but face appears more angular/younger with a shorter dense beard, firmer square jaw and thick straight brows compared to actual approved Home image. Recommend identity-preserving edit using reference pixels; not accepted for public integration.",
+      "historical_record": true
+    },
+    {
+      "art_id": "temple-temples-today",
+      "asset": "assets/page-art/temples/temple-temples-today-full.webp",
+      "sha256": "8c700352eb67daefda3f21195e2f2814f1aa4dc4f786b8920033b3bc6fe4b53e",
+      "status": "PASS",
+      "note": "Distinct contemporary family-history scene: older adult, middle-aged adult and young adult attend to old photographs together. Natural expressions and hands, no legible private identifying records.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-widow-offering",
+      "asset": "assets/page-art/temples/temple-widow-offering-full.webp",
+      "sha256": "926bd0d04dae9a26f3a85ef1d5cfee2299920f191cf43fe8c99e4e0b5867bbd9",
+      "status": "PASS",
+      "note": "Visible widow places a coin while Jesus teaches attentive companions. His actual Home likeness remains recognizable; expression is gentle and respectful. No claim of post-Resurrection wounds in this mortal ministry scene.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-nephite-temple",
+      "asset": "assets/page-art/temples/temple-nephite-temple-full.webp",
+      "sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
+      "status": "PASS_WITH_SOURCE_BOUNDARY",
+      "note": "Modest sanctuary and village landscape contrast with Solomon. Must remain explicitly interpretive, without claiming identified geography, archaeological site or exact ancient plan.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-apostles-gate",
+      "asset": "assets/page-art/temples/temple-apostles-gate-full.webp",
+      "sha256": "a48227bb778b10607148e512cdefe087c34b84bf48091455d95e5e84ccac45d9",
+      "status": "PASS",
+      "note": "Peter takes the seated man by the hand at a temple gateway with John nearby; compassionate engaged expressions, plausible hands and limbs. No bodily Christ apparition. Precise gate architecture remains interpretive.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-bountiful-covenant",
+      "asset": "assets/page-art/temples/temple-bountiful-covenant-full.webp",
+      "sha256": "9f22a7b7289f02a1ac53f9372264a996321526977d73d8b2fe93a78ced640bd8",
+      "status": "HOLD_SCARS",
+      "note": "Approved Home likeness and joyful covenant teaching tone fit; right open palm has a small healed mark. Both visible wrist areas appear unmarked; precise healed wrist scars required before acceptance. Left palm naturally hidden and need not be exposed.",
+      "historical_record": true
+    },
+    {
+      "art_id": "temple-kirtland-house",
+      "asset": "assets/page-art/temples/temple-kirtland-house-full.webp",
+      "sha256": "b9ae83e88210501d116d76a0500e964fdd693b45cc49f05d588eb4c0297f7d25",
+      "status": "PASS",
+      "note": "Natural nineteenth-century approaching worshippers with complete figures; exterior reference-fit independently confirmed by Fermi: two doors, Gothic flank windows, central rectangle and oval pediment, tower/vane. Interpretive spring scene, not exact documentary weather claim.",
+      "architecture_review": "Fermi direct original-reference comparison; docs/temples/source-plan.md",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-nauvoo-hope",
+      "asset": "assets/page-art/temples/temple-nauvoo-hope-full.webp",
+      "sha256": "700d998fa09496b40cd6c75d9c02a4b1f953d58508faabdb44f69eb516ada766",
+      "status": "PASS",
+      "note": "Restrained family pause beside belongings in wintry departure setting. Fermi reference-fit confirms original arched/round window bands, pilasters, multi-stage clock tower and horizontal vane. No named family or invented personal testimony.",
+      "architecture_review": "Fermi direct original-reference comparison; docs/temples/source-plan.md",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-pioneer-temples",
+      "asset": "assets/page-art/temples/temple-pioneer-temples-full.webp",
+      "sha256": "916b524d9847259a3886c1849b2f9fad13fcee7ef63c67674a616f249fd2eb9a",
+      "status": "PASS",
+      "note": "Physically believable workers handling timber outside scaffolded St George exterior. Fermi reference-fit confirms circa1876 short original dome, crenellation and window patterns. Caption must match construction, not imply completed modern building.",
+      "architecture_review": "Fermi direct original-reference comparison; docs/temples/source-plan.md",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-salt-lake-building",
+      "asset": "assets/page-art/temples/temple-salt-lake-building-full.webp",
+      "sha256": "ecc2eb37dbae43118852614da5e14ab687358190d97cabd5c951ad462eccbef2",
+      "status": "PASS",
+      "note": "Distinct Salt Lake construction scene with granite block, sled/rollers and timber scaffolding. Fermi reference-fit confirms early1892 towers/buttresses/window patterns. Workers and weather interpretive, no identifiable named portrait.",
+      "architecture_review": "Fermi direct original-reference comparison; docs/temples/source-plan.md",
+      "historical_record": true
+    },
+    {
+      "art_id": "temple-worldwide-gathering",
+      "asset": "assets/page-art/temples/temple-worldwide-gathering-full.webp",
+      "sha256": "a560fc8bc0fa7a3a4332e5d52278b1779030d690d66deadb35ded852c1d96173",
+      "status": "PASS",
+      "note": "Contemporary visitors approach Laie among tropical grounds. Fermi confirms reference-fit of stepped white masses, portico, narrow windows/frieze and no spire. Caption identifies contemporary view, not 1919 visitor/landscaping reconstruction.",
+      "architecture_review": "Fermi direct original-reference comparison; docs/temples/source-plan.md",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-kirtland-pulpits",
+      "asset": "assets/page-art/temples/temple-kirtland-pulpits-full.webp",
+      "sha256": "edc1f6c1dd4f50b1537243085cc993d374be17102b17fc4c4efa257ca69eebca",
+      "status": "PASS",
+      "note": "Directly viewed corrected full original: consistent M.P.C. top, P.M.H. middle, M.H.P. lower, P.E. P.E./M. M. front. Fermi verified the reference abbreviations. Preserved interior shown with contemporary fixtures; caption identifies preserved room and attributes 1836 vision to the witness record, not a fabricated apparition.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-widow-tender",
+      "asset": "assets/page-art/temples/temple-widow-tender-full.webp",
+      "sha256": "d216bd08c377418458d64c9a3ba51521728297a1eedbd7cc650d300c496f2c43",
+      "status": "PASS",
+      "note": "Owner-requested companion to widow offering, explicitly a second view of the same encounter. Full original compared with actual Home reference: recognizable profile, curly hair, nose, beard and attentive tender expression. Natural hands and gaze directed toward widow; no invented spoken exchange or unseen family relationship.",
+      "historical_record": true
+    },
+    {
+      "art_id": "temple-widow-tender",
+      "asset": "assets/page-art/temples/temple-widow-tender-full.webp",
+      "sha256": "d216bd08c377418458d64c9a3ba51521728297a1eedbd7cc650d300c496f2c43",
+      "status": "REJECTED_BY_OWNER",
+      "note": "Wyatt explicitly rejected this companion: not a fan and Christ not looking at widow. This supersedes and withdraws earlier technical gaze pass. Never integrate this variant.",
+      "historical_record": true
+    },
+    {
+      "art_id": "temple-bountiful-covenant",
+      "asset": "assets/page-art/temples/temple-bountiful-covenant-full.webp",
+      "sha256": "249445ec789e5bc1d996db8966166fa7fdef52bb22653e84bf47258042b8a21e",
+      "status": "PASS",
+      "note": "Direct full-original corrected image review: healed pale wrist marks now present (right subtle near sleeve); right open palm retained small healed mark. Left palm naturally hidden. Approved Home facial likeness/joyful teaching expression remains recognizable and scene otherwise preserved. This supersedes original no-wrist-scar hold.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-house-prayer",
+      "asset": "assets/page-art/temples/temple-house-prayer-full.webp",
+      "sha256": "a67614a5c837d4a5a6e2f1c4112d0d6054a5ddd687e302f71be7ec198fc5fbd1",
+      "status": "PASS",
+      "note": "Corrected v3 full original matches actual Home face, hair and beard more convincingly; calm solemn/sorrowful resolve, no angry scowl. Natural outstretched hand. Wyatt directly selected newest version as much better.",
+      "owner_favorable_selection": true,
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-widow-tender",
+      "asset": "assets/page-art/temples/temple-widow-tender-full.webp",
+      "sha256": "6c4d89d557a14fd42212e21759b374147f634af6ac66db92714a6e31844fdf56",
+      "status": "PASS",
+      "note": "Corrected v2 full original clearly turns head and eyes toward widow; gentle attentive expression, actual Home facial profile recognizable. Natural hands. Wyatt directly selected newest version as much better; earlier variant remains rejected.",
+      "owner_favorable_selection": true,
+      "historical_record": true
+    },
+    {
+      "art_id": "temple-house-prayer",
+      "asset": "rejected original/first repair",
+      "status": "REJECTED_BY_OWNER",
+      "note": "Owner explicitly rejected angry expression, superseding original and first-repair technical reviews; only corrected v3 is accepted.",
+      "rejected_source_sha256": "33ff7c0423fcb346161d72daa7b8f10c0a517561fc237a507cd47924cd54b28a",
+      "historical_record": true
+    },
+    {
+      "art_id": "temple-widow-tender",
+      "sha256": "6c4d89d557a14fd42212e21759b374147f634af6ac66db92714a6e31844fdf56",
+      "status": "REJECTED_GAZE_BY_OWNER",
+      "note": "Owner liked composition but identified gaze behind widow; withdraw earlier gaze pass and final owner approval.",
+      "historical_record": true
+    },
+    {
+      "art_id": "temple-widow-tender",
+      "asset": "assets/page-art/temples/temple-widow-tender-full.webp",
+      "sha256": "19f3f874d789816500176af41b2449c0401bd8f01b41c0315581c27de74c5765",
+      "source_sha256": "deccb0d9c671e3500c95a3640e6dbe5eb49e57929c527d2f52ac7b2d4c41d03b",
+      "status": "PASS",
+      "note": "Lowered pupils and head direct attention down-left to the widow's offering and hands, rather than behind her. Tender expression and recognizable approved Christ profile retained; natural hands. Technical review only; earlier favorable composition selection is not approval of this replacement.",
+      "historical_record": false
+    },
+    {
+      "art_id": "temple-salt-lake-building",
+      "asset": "assets/page-art/temples/temple-salt-lake-building-full.webp",
+      "sha256": "4fa4341765c0f70a76edf8638804ac293524df2b61377ea525be50c248394677",
+      "source_sha256": "d8c9afda377e4b278e850b4c5c870949529a5fe1824c0d09d1572315586b2d71",
+      "status": "PASS",
+      "note": "Compared full correction directly with previous full image: central facade clearer, visible round and arched window placement retained along with tower, buttress, scaffold and worker composition. Historical source-fit from prior architecture review retained; interpretive scene, not pixel-exact documentary reconstruction.",
+      "historical_record": false
+    }
+  ],
+  "record_policy": "Append-only review history: historical statuses apply only to their recorded hashes. current_assets below identifies integrated bytes and their current technical review; rejected variants remain historical and are not approved by later records.",
+  "current_assets": [
+    {
+      "art_id": "temple-apostles-gate",
+      "asset": "assets/page-art/temples/temple-apostles-gate-full.webp",
+      "sha256": "a48227bb778b10607148e512cdefe087c34b84bf48091455d95e5e84ccac45d9",
+      "status": "PASS",
+      "review_record_index": 11
+    },
+    {
+      "art_id": "temple-bountiful-covenant",
+      "asset": "assets/page-art/temples/temple-bountiful-covenant-full.webp",
+      "sha256": "249445ec789e5bc1d996db8966166fa7fdef52bb22653e84bf47258042b8a21e",
+      "status": "PASS",
+      "review_record_index": 21
+    },
+    {
+      "art_id": "temple-courts-healing",
+      "asset": "assets/page-art/temples/temple-courts-healing-full.webp",
+      "sha256": "e0828ffbd3d3d7fbfb10860a417cb3068eed190dd139aae7937209664cc2db3a",
+      "status": "PASS",
+      "review_record_index": 0
+    },
+    {
+      "art_id": "temple-covenant-altars",
+      "asset": "assets/page-art/temples/temple-covenant-altars-full.webp",
+      "sha256": "1fd71d5116edd0e03a0651445a116091fb107abaa5d020faa19fa252ed23cca2",
+      "status": "PASS",
+      "review_record_index": 5
+    },
+    {
+      "art_id": "temple-eden-communion",
+      "asset": "assets/page-art/temples/temple-eden-communion-full.webp",
+      "sha256": "e2d8cb2e5999db5090f7148625b6ca13b83d84d31d1e1ef8d9b5f4d7bead7aff",
+      "status": "PASS",
+      "review_record_index": 1
+    },
+    {
+      "art_id": "temple-house-prayer",
+      "asset": "assets/page-art/temples/temple-house-prayer-full.webp",
+      "sha256": "a67614a5c837d4a5a6e2f1c4112d0d6054a5ddd687e302f71be7ec198fc5fbd1",
+      "status": "PASS",
+      "review_record_index": 22
+    },
+    {
+      "art_id": "temple-kirtland-house",
+      "asset": "assets/page-art/temples/temple-kirtland-house-full.webp",
+      "sha256": "b9ae83e88210501d116d76a0500e964fdd693b45cc49f05d588eb4c0297f7d25",
+      "status": "PASS",
+      "review_record_index": 13
+    },
+    {
+      "art_id": "temple-kirtland-pulpits",
+      "asset": "assets/page-art/temples/temple-kirtland-pulpits-full.webp",
+      "sha256": "edc1f6c1dd4f50b1537243085cc993d374be17102b17fc4c4efa257ca69eebca",
+      "status": "PASS",
+      "review_record_index": 18
+    },
+    {
+      "art_id": "temple-nauvoo-hope",
+      "asset": "assets/page-art/temples/temple-nauvoo-hope-full.webp",
+      "sha256": "700d998fa09496b40cd6c75d9c02a4b1f953d58508faabdb44f69eb516ada766",
+      "status": "PASS",
+      "review_record_index": 14
+    },
+    {
+      "art_id": "temple-nephite-temple",
+      "asset": "assets/page-art/temples/temple-nephite-temple-full.webp",
+      "sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
+      "status": "PASS_WITH_SOURCE_BOUNDARY",
+      "review_record_index": 10
+    },
+    {
+      "art_id": "temple-pioneer-temples",
+      "asset": "assets/page-art/temples/temple-pioneer-temples-full.webp",
+      "sha256": "916b524d9847259a3886c1849b2f9fad13fcee7ef63c67674a616f249fd2eb9a",
+      "status": "PASS",
+      "review_record_index": 15
+    },
+    {
+      "art_id": "temple-return-rebuild",
+      "asset": "assets/page-art/temples/temple-return-rebuild-full.webp",
+      "sha256": "8fa58c435de18ef8d26662dfff1a7afadc89d447ade902ba99c407f70e25ba7d",
+      "status": "PASS",
+      "review_record_index": 3
+    },
+    {
+      "art_id": "temple-salt-lake-building",
+      "asset": "assets/page-art/temples/temple-salt-lake-building-full.webp",
+      "sha256": "4fa4341765c0f70a76edf8638804ac293524df2b61377ea525be50c248394677",
+      "status": "PASS",
+      "review_record_index": 27
+    },
+    {
+      "art_id": "temple-solomon-house",
+      "asset": "assets/page-art/temples/temple-solomon-house-full.webp",
+      "sha256": "9fec37ea147ffb575510181427dd978f5f187ee56b1d0f5b3e8102b1d2b63aaf",
+      "status": "PASS_WITH_SOURCE_BOUNDARY",
+      "review_record_index": 2
+    },
+    {
+      "art_id": "temple-temples-today",
+      "asset": "assets/page-art/temples/temple-temples-today-full.webp",
+      "sha256": "8c700352eb67daefda3f21195e2f2814f1aa4dc4f786b8920033b3bc6fe4b53e",
+      "status": "PASS",
+      "review_record_index": 8
+    },
+    {
+      "art_id": "temple-widow-offering",
+      "asset": "assets/page-art/temples/temple-widow-offering-full.webp",
+      "sha256": "926bd0d04dae9a26f3a85ef1d5cfee2299920f191cf43fe8c99e4e0b5867bbd9",
+      "status": "PASS",
+      "review_record_index": 9
+    },
+    {
+      "art_id": "temple-widow-tender",
+      "asset": "assets/page-art/temples/temple-widow-tender-full.webp",
+      "sha256": "19f3f874d789816500176af41b2449c0401bd8f01b41c0315581c27de74c5765",
+      "status": "PASS",
+      "review_record_index": 26
+    },
+    {
+      "art_id": "temple-wilderness-sanctuary",
+      "asset": "assets/page-art/temples/temple-wilderness-sanctuary-full.webp",
+      "sha256": "7babf2d995ff1a5005106cdcb2c355efd9418161e27890f8466ddf6646c030c0",
+      "status": "PASS",
+      "review_record_index": 4
+    },
+    {
+      "art_id": "temple-worldwide-gathering",
+      "asset": "assets/page-art/temples/temple-worldwide-gathering-full.webp",
+      "sha256": "a560fc8bc0fa7a3a4332e5d52278b1779030d690d66deadb35ded852c1d96173",
+      "status": "PASS",
+      "review_record_index": 17
+    },
+    {
+      "art_id": "temple-young-jesus",
+      "asset": "assets/page-art/temples/temple-young-jesus-full.webp",
+      "sha256": "76fb9473d2b48484f58ab822da8d05505e2d29b37953eb39331033401a9f5a33",
+      "status": "PASS",
+      "review_record_index": 6
+    }
+  ]
+}

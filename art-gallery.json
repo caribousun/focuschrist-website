@@ -850,6 +850,28 @@
       ]
     },
     {
+      "title": "A house of prayer in Jerusalem",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-solomon-house-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-solomon-house-full.webp",
+      "alt": "Two bronze pillars frame the entrance of an ancient temple above a stone courtyard.",
+      "id": "art-44e45a19739e",
+      "occurrences": [
+        {
+          "id": "source-f05826a37594",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-solomon-house-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-solomon-house-960.webp\"])",
+          "title": "A house of prayer in Jerusalem"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A household divided",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/divided-house-01-960.webp",
@@ -1688,6 +1710,28 @@
       ]
     },
     {
+      "title": "A sanctuary that traveled with Israel",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-wilderness-sanctuary-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-wilderness-sanctuary-full.webp",
+      "alt": "A tent sanctuary stands inside a linen courtyard in the wilderness beneath a cloud.",
+      "id": "art-9bc170fc0376",
+      "occurrences": [
+        {
+          "id": "source-83d4832be71a",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-wilderness-sanctuary-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-wilderness-sanctuary-960.webp\"])",
+          "title": "A sanctuary that traveled with Israel"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "A search worth the effort",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-mercy-01-960.webp",
@@ -1879,6 +1923,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/strong-man-01-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/strong-man-01-960.webp\"])",
           "title": "A strong man guards his house"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "A temple in the Book of Mormon record",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-nephite-temple-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-nephite-temple-full.webp",
+      "alt": "A modest ancient sanctuary stands among simple buildings and cultivated land.",
+      "id": "art-31061208bee9",
+      "occurrences": [
+        {
+          "id": "source-69c36b57a634",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-nephite-temple-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-nephite-temple-960.webp\"])",
+          "title": "A temple in the Book of Mormon record"
         }
       ],
       "categories": [
@@ -2467,6 +2533,28 @@
       ]
     },
     {
+      "title": "Altars along the covenant journey",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-covenant-altars-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-covenant-altars-full.webp",
+      "alt": "A simple stone altar stands near a traveler's tent in an ancient hill country landscape.",
+      "id": "art-a2cb73685f3e",
+      "occurrences": [
+        {
+          "id": "source-9aec437f46c5",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-covenant-altars-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-covenant-altars-960.webp\"])",
+          "title": "Altars along the covenant journey"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "An abundant harvest",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/rich-fool-01-960.webp",
@@ -2978,6 +3066,28 @@
       ]
     },
     {
+      "title": "At the gate, in the name of Jesus",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-apostles-gate-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-apostles-gate-full.webp",
+      "alt": "At a temple gateway, Peter helps a man rise while John stands close by.",
+      "id": "art-d153ee48dfd1",
+      "occurrences": [
+        {
+          "id": "source-1d5fa4afcd58",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-apostles-gate-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-apostles-gate-960.webp\"])",
+          "title": "At the gate, in the name of Jesus"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Authority to serve in Christ’s name",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/church-history/melchizedek-priesthood-960.webp",
@@ -3024,20 +3134,11 @@
     {
       "title": "Be Still",
       "category": "Art & Study",
-      "thumbnail": "/art/thumbs/Be-Still.webp",
+      "thumbnail": "/art/Be-Still.png",
       "fullImage": "/art/Be-Still.png",
-      "alt": "Be Still devotional artwork",
+      "alt": "Jesus Christ walking beside a burdened man on a crowded modern street",
       "id": "art-b88e450bc82e",
       "occurrences": [
-        {
-          "id": "source-b5ac9dc61319",
-          "page": "/art.html",
-          "pageTitle": "Inspirational Art",
-          "category": "Art & Study",
-          "kind": "artwork",
-          "selector": "a[data-artwork-detail=\"art-be-still\"]",
-          "title": "Be Still"
-        },
         {
           "id": "source-c85add12cb10",
           "page": "/art-study/be-still.html",
@@ -3062,6 +3163,28 @@
       ]
     },
     {
+      "title": "Be Still",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/art-stillness-card-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/art-stillness-card-full.webp",
+      "alt": "A quiet lakeshore with wet stones, reeds and fading ripples beneath clearing clouds",
+      "id": "art-cb1c1c655e43",
+      "occurrences": [
+        {
+          "id": "source-b5ac9dc61319",
+          "page": "/art.html",
+          "pageTitle": "Inspirational Art",
+          "category": "Art & Study",
+          "kind": "artwork",
+          "selector": "a[data-artwork-detail=\"art-be-still\"]",
+          "title": "Be Still"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
       "title": "Bearing the cross behind Jesus",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/rr-simon-cross-960.webp",
@@ -3077,6 +3200,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/rr-simon-cross-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rr-simon-cross-960.webp\"])",
           "title": "Bearing the cross behind Jesus"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Before a temple of stone",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-eden-communion-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-eden-communion-full.webp",
+      "alt": "A quiet garden landscape opens toward sunlit ground beyond its trees.",
+      "id": "art-6d46f829d62f",
+      "occurrences": [
+        {
+          "id": "source-83185735e369",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-eden-communion-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-eden-communion-960.webp\"])",
+          "title": "Before a temple of stone"
         }
       ],
       "categories": [
@@ -4384,6 +4529,28 @@
       ]
     },
     {
+      "title": "Carry the question prayerfully",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/exclusive/stand-prayerful-question-800.webp",
+      "fullImage": "/assets/page-art/exclusive/stand-prayerful-question-1536.webp",
+      "alt": "A woman pausing in prayer beside an open book on a balcony",
+      "id": "art-62f472d78e2c",
+      "occurrences": [
+        {
+          "id": "source-709b978f1d4b",
+          "page": "/answers/stand-forever.html",
+          "pageTitle": "Stand Forever",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/exclusive/stand-prayerful-question-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/stand-prayerful-question-800.webp\"])",
+          "title": "Carry the question prayerfully"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Carrying him toward care",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/good-samaritan-06-960.webp",
@@ -4487,6 +4654,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/sower-thorns-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/sower-thorns-960.webp\"])",
           "title": "Choked by thorns"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Choose a faithful next step",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/exclusive/stand-faithful-service-800.webp",
+      "fullImage": "/assets/page-art/exclusive/stand-faithful-service-1536.webp",
+      "alt": "A man sharing shelter from rain with an older neighbor",
+      "id": "art-00b5789202e8",
+      "occurrences": [
+        {
+          "id": "source-3ba89ad0082f",
+          "page": "/answers/stand-forever.html",
+          "pageTitle": "Stand Forever",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/exclusive/stand-faithful-service-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/stand-faithful-service-800.webp\"])",
+          "title": "Choose a faithful next step"
         }
       ],
       "categories": [
@@ -6696,6 +6885,28 @@
       ]
     },
     {
+      "title": "Give a record its context",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/exclusive/stand-record-context-800.webp",
+      "fullImage": "/assets/page-art/exclusive/stand-record-context-1536.webp",
+      "alt": "A conservator examining an old volume in an archive",
+      "id": "art-a9dc4a724bf1",
+      "occurrences": [
+        {
+          "id": "source-964e8e277a68",
+          "page": "/answers/stand-forever.html",
+          "pageTitle": "Stand Forever",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/exclusive/stand-record-context-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/stand-record-context-800.webp\"])",
+          "title": "Give a record its context"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Give faith the work of your hands",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/settle-heart/12-build-in-faith-800.webp",
@@ -6852,19 +7063,19 @@
     {
       "title": "God",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/exclusive/stand-prayerful-question-800.webp",
-      "fullImage": "/assets/page-art/exclusive/stand-prayerful-question-1536.webp",
-      "alt": "A woman pausing in prayer beside an open book",
-      "id": "art-62f472d78e2c",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/stand-creation-inquiry-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/stand-creation-inquiry-full.webp",
+      "alt": "Two adults thoughtfully looking at the night sky beside a backyard telescope",
+      "id": "art-18d249abef25",
       "occurrences": [
         {
-          "id": "source-709b978f1d4b",
+          "id": "source-198ffc30a1c1",
           "page": "/answers/stand-forever.html",
           "pageTitle": "Stand Forever",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/exclusive/stand-prayerful-question-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/stand-prayerful-question-800.webp\"])",
-          "title": "Carry the question prayerfully"
+          "selector": "a[href=\"../assets/page-art/uniqueness-repairs/stand-creation-inquiry-full.webp\"]:has(img[src=\"../assets/page-art/uniqueness-repairs/stand-creation-inquiry-960.webp\"])",
+          "title": "God"
         }
       ],
       "categories": [
@@ -7459,6 +7670,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/mm-jerusalem-tears-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/mm-jerusalem-tears-960.webp\"])",
           "title": "He weeps over the city"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Healing in the temple courts",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-courts-healing-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-courts-healing-full.webp",
+      "alt": "Jesus gives close attention to a man seeking healing in a temple court.",
+      "id": "art-a4e81a067152",
+      "occurrences": [
+        {
+          "id": "source-89edad8955d0",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-courts-healing-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-courts-healing-960.webp\"])",
+          "title": "Healing in the temple courts"
         }
       ],
       "categories": [
@@ -8368,6 +8601,28 @@
       ]
     },
     {
+      "title": "Jesus at twelve in His Father's house",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-young-jesus-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-young-jesus-full.webp",
+      "alt": "Twelve-year-old Jesus listens and speaks with adult teachers in a temple courtyard.",
+      "id": "art-6fed26ba4ceb",
+      "occurrences": [
+        {
+          "id": "source-ae4ee8380e7e",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-young-jesus-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-young-jesus-960.webp\"])",
+          "title": "Jesus at twelve in His Father's house"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Jesus Baptized",
       "category": "Art & Study",
       "thumbnail": "/art/thumbs/Jesus-baptized.webp",
@@ -9030,19 +9285,19 @@
     {
       "title": "Joseph Smith",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/exclusive/stand-record-context-800.webp",
-      "fullImage": "/assets/page-art/exclusive/stand-record-context-1536.webp",
-      "alt": "A conservator examining a historical volume",
-      "id": "art-a9dc4a724bf1",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/stand-records-inquiry-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/stand-records-inquiry-full.webp",
+      "alt": "Two researchers comparing a digitized manuscript with a printed transcription",
+      "id": "art-837ba512578b",
       "occurrences": [
         {
-          "id": "source-964e8e277a68",
+          "id": "source-ae2aec953c35",
           "page": "/answers/stand-forever.html",
           "pageTitle": "Stand Forever",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/exclusive/stand-record-context-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/stand-record-context-800.webp\"])",
-          "title": "Give a record its context"
+          "selector": "a[href=\"../assets/page-art/uniqueness-repairs/stand-records-inquiry-full.webp\"]:has(img[src=\"../assets/page-art/uniqueness-repairs/stand-records-inquiry-960.webp\"])",
+          "title": "Joseph Smith"
         }
       ],
       "categories": [
@@ -9450,6 +9705,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/thief-night-02-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/thief-night-02-960.webp\"])",
           "title": "Keeping watch at the door"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Kirtland: building a house together",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-kirtland-house-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-kirtland-house-full.webp",
+      "alt": "The completed Kirtland Temple stands above a simple nineteenth-century road as worshippers approach.",
+      "id": "art-351da39d1e29",
+      "occurrences": [
+        {
+          "id": "source-40caefda884e",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-kirtland-house-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-kirtland-house-960.webp\"])",
+          "title": "Kirtland: building a house together"
         }
       ],
       "categories": [
@@ -10557,6 +10834,28 @@
       ]
     },
     {
+      "title": "Listen, then ponder",
+      "category": "Come, Follow Me",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/cfm-learning-listening-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/cfm-learning-listening-full.webp",
+      "alt": "An older woman listening and reflecting with a closed scripture book on her lap",
+      "id": "art-f5a1a122cf9c",
+      "occurrences": [
+        {
+          "id": "source-c6887f739267",
+          "page": "/come-follow-me.html",
+          "pageTitle": "Come, Follow Me",
+          "category": "Come, Follow Me",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/uniqueness-repairs/cfm-learning-listening-full.webp\"]:has(img[src=\"assets/page-art/uniqueness-repairs/cfm-learning-listening-960.webp\"])",
+          "title": "Listen, then ponder"
+        }
+      ],
+      "categories": [
+        "Come, Follow Me"
+      ]
+    },
+    {
       "title": "Listening before helping",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/jesus-journey/collection-neighbor-01-960.webp",
@@ -10667,6 +10966,28 @@
       ]
     },
     {
+      "title": "Living worship, continuing care",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-temples-today-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-temples-today-full.webp",
+      "alt": "A family studies old photographs and family records together at a table.",
+      "id": "art-6e6f88c74857",
+      "occurrences": [
+        {
+          "id": "source-90f2db7a42c0",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-temples-today-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-temples-today-960.webp\"])",
+          "title": "Living worship, continuing care"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Look closely at the witness",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/bom-evidences/visual-guides-20260923/critical-text-comparison.svg",
@@ -10706,6 +11027,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/barren-fig-01-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/barren-fig-01-960.webp\"])",
           "title": "Looking for fruit"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Loss, return, and rebuilding",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-return-rebuild-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-return-rebuild-full.webp",
+      "alt": "Two workers position a foundation stone while younger and older people gather nearby.",
+      "id": "art-c4ece0a8fd1c",
+      "occurrences": [
+        {
+          "id": "source-949720b93679",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-return-rebuild-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-return-rebuild-960.webp\"])",
+          "title": "Loss, return, and rebuilding"
         }
       ],
       "categories": [
@@ -11432,6 +11775,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/rr-before-pilate-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/rr-before-pilate-960.webp\"])",
           "title": "My kingdom is not of this world"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Nauvoo: a hope reaching beyond death",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-nauvoo-hope-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-nauvoo-hope-full.webp",
+      "alt": "An early Nauvoo family pauses with travel belongings as the temple rises behind them.",
+      "id": "art-9bdd8608f45c",
+      "occurrences": [
+        {
+          "id": "source-2cf536a4d27c",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-nauvoo-hope-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-nauvoo-hope-960.webp\"])",
+          "title": "Nauvoo: a hope reaching beyond death"
         }
       ],
       "categories": [
@@ -12202,20 +12567,10 @@
           "kind": "topic",
           "selector": "a[href=\"assets/page-art/come-follow-me/personal-study-2026.webp\"]:has(img[src=\"assets/page-art/come-follow-me/personal-study-2026.webp\"])",
           "title": "Personal study"
-        },
-        {
-          "id": "source-7311627012ee",
-          "page": "/answers.html",
-          "pageTitle": "Answers About Jesus Christ and Latter-day Saint Beliefs",
-          "category": "Gospel Studies",
-          "kind": "full",
-          "selector": "a[href=\"assets/page-art/come-follow-me/personal-study-2026.webp\"]:has(img[src=\"assets/page-art/come-follow-me/personal-study-2026.webp\"])",
-          "title": "Personal scripture study beside a sunlit window"
         }
       ],
       "categories": [
-        "Come, Follow Me",
-        "Gospel Studies"
+        "Come, Follow Me"
       ]
     },
     {
@@ -12417,6 +12772,28 @@
       ]
     },
     {
+      "title": "Prepare a week of study",
+      "category": "Come, Follow Me",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/cfm-weekly-preparation-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/cfm-weekly-preparation-full.webp",
+      "alt": "A closed scripture book and seven blank planning cards ready for a week of study",
+      "id": "art-310af0a21b8e",
+      "occurrences": [
+        {
+          "id": "source-d5e02c6c2171",
+          "page": "/come-follow-me.html",
+          "pageTitle": "Come, Follow Me",
+          "category": "Come, Follow Me",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/uniqueness-repairs/cfm-weekly-preparation-full.webp\"]:has(img[src=\"assets/page-art/uniqueness-repairs/cfm-weekly-preparation-960.webp\"])",
+          "title": "Prepare a week of study"
+        }
+      ],
+      "categories": [
+        "Come, Follow Me"
+      ]
+    },
+    {
       "title": "Prepare through learning",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/exclusive/temple-preparation-notes-800.webp",
@@ -12436,6 +12813,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Prepare to learn together",
+      "category": "Come, Follow Me",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/cfm-family-resources-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/cfm-family-resources-full.webp",
+      "alt": "A woman and a teenager preparing a basket of home study supplies",
+      "id": "art-4001c2d17e20",
+      "occurrences": [
+        {
+          "id": "source-dfc045b49385",
+          "page": "/come-follow-me.html",
+          "pageTitle": "Come, Follow Me",
+          "category": "Come, Follow Me",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/uniqueness-repairs/cfm-family-resources-full.webp\"]:has(img[src=\"assets/page-art/uniqueness-repairs/cfm-family-resources-960.webp\"])",
+          "title": "Prepare to learn together"
+        }
+      ],
+      "categories": [
+        "Come, Follow Me"
       ]
     },
     {
@@ -12898,6 +13297,28 @@
       ],
       "categories": [
         "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Read with the landscape in mind",
+      "category": "Come, Follow Me",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/cfm-old-testament-landscape-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/cfm-old-testament-landscape-full.webp",
+      "alt": "An illustrative landscape of limestone terraces, olive groves and a valley at sunrise",
+      "id": "art-a15561f50c4e",
+      "occurrences": [
+        {
+          "id": "source-a3e44370cd42",
+          "page": "/come-follow-me.html",
+          "pageTitle": "Come, Follow Me",
+          "category": "Come, Follow Me",
+          "kind": "topic",
+          "selector": "a[href=\"assets/page-art/uniqueness-repairs/cfm-old-testament-landscape-full.webp\"]:has(img[src=\"assets/page-art/uniqueness-repairs/cfm-old-testament-landscape-960.webp\"])",
+          "title": "Read with the landscape in mind"
+        }
+      ],
+      "categories": [
+        "Come, Follow Me"
       ]
     },
     {
@@ -13429,6 +13850,28 @@
       ]
     },
     {
+      "title": "Restoring the purpose of the house",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-house-prayer-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-house-prayer-full.webp",
+      "alt": "Jesus stands beside an overturned table in the temple court, extending an open hand as merchants move away.",
+      "id": "art-db73f13f359d",
+      "occurrences": [
+        {
+          "id": "source-cd4929a00fbd",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-house-prayer-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-house-prayer-960.webp\"])",
+          "title": "Restoring the purpose of the house"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
       "title": "Return to the word together",
       "category": "Gospel Studies",
       "thumbnail": "/assets/page-art/settle-heart/14-daily-study-800.webp",
@@ -13686,6 +14129,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/salt-01-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/salt-01-960.webp\"])",
           "title": "Salt in the hand"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Salt Lake: forty years of patient work",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-salt-lake-building-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-salt-lake-building-full.webp",
+      "alt": "Workers guide a granite block beside the scaffolded Salt Lake Temple during its construction.",
+      "id": "art-017d1eb13a4f",
+      "occurrences": [
+        {
+          "id": "source-d5eb3ae926fe",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-salt-lake-building-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-salt-lake-building-960.webp\"])",
+          "title": "Salt Lake: forty years of patient work"
         }
       ],
       "categories": [
@@ -14025,6 +14490,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/pearl-01-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/pearl-01-960.webp\"])",
           "title": "Seeking a pearl of great value"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Seen by the Savior",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-widow-tender-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-widow-tender-full.webp",
+      "alt": "Jesus turns His head and eyes toward the widow as she places her coins in the temple treasury.",
+      "id": "art-d2f33cf0eb67",
+      "occurrences": [
+        {
+          "id": "source-7dbcd8411246",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-widow-tender-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-widow-tender-960.webp\"])",
+          "title": "Seen by the Savior"
         }
       ],
       "categories": [
@@ -14650,20 +15137,11 @@
     {
       "title": "Suffer the Little Children",
       "category": "Art & Study",
-      "thumbnail": "/art/thumbs/Suffer-the-Little-Children.webp",
+      "thumbnail": "/art/Suffer-the-Little-Children.jpg",
       "fullImage": "/art/Suffer-the-Little-Children.jpg",
-      "alt": "Suffer the Little Children devotional artwork",
+      "alt": "Jesus Christ seated in an olive grove and welcoming a circle of children",
       "id": "art-1ae8e785818f",
       "occurrences": [
-        {
-          "id": "source-6ed77ced759c",
-          "page": "/art.html",
-          "pageTitle": "Inspirational Art",
-          "category": "Art & Study",
-          "kind": "artwork",
-          "selector": "a[data-artwork-detail=\"art-little-children\"]",
-          "title": "Suffer the Little Children"
-        },
         {
           "id": "source-7f970916abb8",
           "page": "/art-study/suffer-the-little-children.html",
@@ -14680,6 +15158,28 @@
           "category": "Art & Study",
           "kind": "legacy",
           "selector": ".gallery-item:has(img[src=\"art/thumbs/Suffer-the-Little-Children.webp\"])",
+          "title": "Suffer the Little Children"
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
+      "title": "Suffer the Little Children",
+      "category": "Art & Study",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/art-children-welcome-card-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/art-children-welcome-card-full.webp",
+      "alt": "A woman pulls out a chair for a child joining two children at a drawing table.",
+      "id": "art-399aa0455431",
+      "occurrences": [
+        {
+          "id": "source-6ed77ced759c",
+          "page": "/art.html",
+          "pageTitle": "Inspirational Art",
+          "category": "Art & Study",
+          "kind": "artwork",
+          "selector": "a[data-artwork-detail=\"art-little-children\"]",
           "title": "Suffer the Little Children"
         }
       ],
@@ -14879,6 +15379,28 @@
           "kind": "topic",
           "selector": "a[href=\"../assets/page-art/exclusive/temple-generations-craft-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/temple-generations-craft-800.webp\"])",
           "title": "Temple building across generations"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "Temples in the mountain settlements",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-pioneer-temples-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-pioneer-temples-full.webp",
+      "alt": "Craftsmen work beside timber scaffolding around the St. George Temple during its construction.",
+      "id": "art-18e67438d8c5",
+      "occurrences": [
+        {
+          "id": "source-22ba995a2e1f",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-pioneer-temples-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-pioneer-temples-960.webp\"])",
+          "title": "Temples in the mountain settlements"
         }
       ],
       "categories": [
@@ -15350,10 +15872,10 @@
     {
       "title": "The Good Shepherd",
       "category": "Art & Study",
-      "thumbnail": "/art/thumbs/The-Good-Shephard.webp",
-      "fullImage": "/art/The-Good-Shephard.jpg",
-      "alt": "The Good Shepherd devotional artwork",
-      "id": "art-63e6c98bf2d1",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/art-shepherd-care-card-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/art-shepherd-care-card-full.webp",
+      "alt": "A lamb resting safely beside a ewe inside a stone sheepfold",
+      "id": "art-397136dec20f",
       "occurrences": [
         {
           "id": "source-22329cc564d2",
@@ -15363,7 +15885,20 @@
           "kind": "artwork",
           "selector": "a[data-artwork-detail=\"art-good-shepherd\"]",
           "title": "The Good Shepherd"
-        },
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
+      "title": "The Good Shepherd",
+      "category": "Art & Study",
+      "thumbnail": "/art/The-Good-Shephard.jpg",
+      "fullImage": "/art/The-Good-Shephard.jpg",
+      "alt": "Jesus Christ smiling in the warmth of a busy village street",
+      "id": "art-63e6c98bf2d1",
+      "occurrences": [
         {
           "id": "source-a19f110e195f",
           "page": "/art-study/the-good-shepherd.html",
@@ -15830,10 +16365,10 @@
     {
       "title": "The Living Christ",
       "category": "Art & Study",
-      "thumbnail": "/art/thumbs/The-Living-Christ.webp",
-      "fullImage": "/art/The-Living-Christ.png",
-      "alt": "The Living Christ devotional artwork",
-      "id": "art-d12945c2d847",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/art-living-testimony-card-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/art-living-testimony-card-full.webp",
+      "alt": "Linen cloths lie on a stone burial bench, with a separate head cloth beside them.",
+      "id": "art-3b2834db27ab",
       "occurrences": [
         {
           "id": "source-28d1083f16d5",
@@ -15843,7 +16378,20 @@
           "kind": "artwork",
           "selector": "a[data-artwork-detail=\"art-living-christ\"]",
           "title": "The Living Christ"
-        },
+        }
+      ],
+      "categories": [
+        "Art & Study"
+      ]
+    },
+    {
+      "title": "The Living Christ",
+      "category": "Art & Study",
+      "thumbnail": "/art/thumbs/The-Living-Christ.webp",
+      "fullImage": "/art/The-Living-Christ.png",
+      "alt": "The Living Christ",
+      "id": "art-d12945c2d847",
+      "occurrences": [
         {
           "id": "source-691ed0f9e12a",
           "page": "/art.html",
@@ -16116,6 +16664,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/bn-night-messengers-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/bn-night-messengers-960.webp\"])",
           "title": "The news travels through the night"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The offering Jesus noticed",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-widow-offering-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-widow-offering-full.webp",
+      "alt": "A widow places two small coins into the temple treasury while Jesus watches from nearby.",
+      "id": "art-1432d4a95f31",
+      "occurrences": [
+        {
+          "id": "source-2ad3e8d935ba",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-widow-offering-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-widow-offering-960.webp\"])",
+          "title": "The offering Jesus noticed"
         }
       ],
       "categories": [
@@ -16411,19 +16981,19 @@
     {
       "title": "The restored Church",
       "category": "Gospel Studies",
-      "thumbnail": "/assets/page-art/exclusive/stand-faithful-service-800.webp",
-      "fullImage": "/assets/page-art/exclusive/stand-faithful-service-1536.webp",
-      "alt": "A man offering shelter to a neighbor",
-      "id": "art-00b5789202e8",
+      "thumbnail": "/assets/page-art/uniqueness-repairs/stand-service-fruits-960.webp",
+      "fullImage": "/assets/page-art/uniqueness-repairs/stand-service-fruits-full.webp",
+      "alt": "Neighbors helping clean a room after a flood",
+      "id": "art-6bc117d67148",
       "occurrences": [
         {
-          "id": "source-3ba89ad0082f",
+          "id": "source-c08826a28956",
           "page": "/answers/stand-forever.html",
           "pageTitle": "Stand Forever",
           "category": "Gospel Studies",
           "kind": "topic",
-          "selector": "a[href=\"../assets/page-art/exclusive/stand-faithful-service-1536.webp\"]:has(img[src=\"../assets/page-art/exclusive/stand-faithful-service-800.webp\"])",
-          "title": "Choose a faithful next step"
+          "selector": "a[href=\"../assets/page-art/uniqueness-repairs/stand-service-fruits-full.webp\"]:has(img[src=\"../assets/page-art/uniqueness-repairs/stand-service-fruits-960.webp\"])",
+          "title": "The restored Church"
         }
       ],
       "categories": [
@@ -16490,6 +17060,28 @@
           "kind": "hero",
           "selector": "a[data-hero-viewer][href=\"../assets/heroes/topics/life-after-death-full.webp\"]",
           "title": "The risen Jesus Christ stands on a lakeshore at dawn with a fishing boat on the water."
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The risen Lord and the covenant people",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-bountiful-covenant-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-bountiful-covenant-full.webp",
+      "alt": "The risen Jesus teaches a gathered community about God's covenant, with a temple court behind them.",
+      "id": "art-2b03d9587f70",
+      "occurrences": [
+        {
+          "id": "source-31020595eae8",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-bountiful-covenant-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-bountiful-covenant-960.webp\"])",
+          "title": "The risen Lord and the covenant people"
         }
       ],
       "categories": [
@@ -16600,6 +17192,28 @@
           "kind": "artwork",
           "selector": "a[data-artwork-detail=\"answers-welcomes-children\"]",
           "title": "The Savior Welcomes Each One"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The Savior's acceptance and restored keys",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-kirtland-pulpits-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-kirtland-pulpits-full.webp",
+      "alt": "The woodwork of the Kirtland Temple pulpits stands within a quiet assembly hall.",
+      "id": "art-d7384321f964",
+      "occurrences": [
+        {
+          "id": "source-c5a19d5f5d10",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-kirtland-pulpits-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-kirtland-pulpits-960.webp\"])",
+          "title": "The Savior's acceptance and restored keys"
         }
       ],
       "categories": [
@@ -16798,6 +17412,28 @@
           "kind": "topic",
           "selector": "a[href=\"/assets/page-art/jesus-journey/strong-man-02-full.webp\"]:has(img[src=\"/assets/page-art/jesus-journey/strong-man-02-960.webp\"])",
           "title": "The stronger one has overcome"
+        }
+      ],
+      "categories": [
+        "Gospel Studies"
+      ]
+    },
+    {
+      "title": "The temple journey becomes worldwide",
+      "category": "Gospel Studies",
+      "thumbnail": "/assets/page-art/temples/temple-worldwide-gathering-960.webp",
+      "fullImage": "/assets/page-art/temples/temple-worldwide-gathering-full.webp",
+      "alt": "The Laie Hawaii Temple stands among palms and tropical greenery with visitors on its grounds.",
+      "id": "art-2d33f4194e1f",
+      "occurrences": [
+        {
+          "id": "source-4e74e8cf5541",
+          "page": "/answers/why-latter-day-saints-build-temples.html",
+          "pageTitle": "Temples",
+          "category": "Gospel Studies",
+          "kind": "topic",
+          "selector": "a[href=\"../assets/page-art/temples/temple-worldwide-gathering-full.webp\"]:has(img[src=\"../assets/page-art/temples/temple-worldwide-gathering-960.webp\"])",
+          "title": "The temple journey becomes worldwide"
         }
       ],
       "categories": [
@@ -18423,15 +19059,14 @@
     }
   ],
   "stats": {
-    "artworks": 826,
-    "occurrences": 837,
+    "artworks": 857,
+    "occurrences": 863,
     "byKind": {
       "artwork": 62,
-      "full": 1,
       "hero": 40,
       "legacy": 39,
       "missionary": 13,
-      "topic": 685
+      "topic": 709
     }
   }
 }

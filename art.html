@@ -339,7 +339,7 @@
     <link rel="stylesheet" href="full-image-viewer.css?v=20260905-viewport">
     <script src="artwork-details.js?v=20260905-home-study" defer></script>
     <script src="full-image-viewer.js?v=20260914-reopen-1" defer></script>
-<link rel="stylesheet" href="artwork-actions.css?v=20260909-warm">
+<link rel="stylesheet" href="artwork-actions.css?v=20260929-picture-source-pills-1">
 <link rel="stylesheet" href="connected-study.css?v=20260927-anchor-alignment-1">
 <link rel="stylesheet" href="hero-details.css?v=20260909-warm">
 <script src="hero-details.js?v=20260927-plan-study-1" defer></script>
@@ -464,7 +464,7 @@
             <img src="art/thumbs/Posterity.webp" data-full-src="art/Posterity.png" alt="Posterity" loading="lazy" decoding="async">
             <div class="caption">Posterity</div>
         </div>
-        <div class="gallery-item" onclick="openModal(this)">
+        <div class="gallery-item" id="gallery-original-suffer-the-little-children" onclick="openModal(this)">
             <img src="art/thumbs/Suffer-the-Little-Children.webp" data-full-src="art/Suffer-the-Little-Children.jpg" alt="Suffer the Little Children" loading="lazy" decoding="async">
             <div class="caption">Suffer the Little Children</div>
         </div>
@@ -472,7 +472,7 @@
             <img src="art/thumbs/The-Garden.webp" data-full-src="art/The-Garden.png" alt="The Garden" loading="lazy" decoding="async">
             <div class="caption">The Garden</div>
         </div>
-        <div class="gallery-item" onclick="openModal(this)">
+        <div class="gallery-item" id="gallery-original-the-good-shepherd" onclick="openModal(this)">
             <img src="art/thumbs/The-Good-Shephard.webp" data-full-src="art/The-Good-Shephard.jpg" alt="The Good Shepherd" loading="lazy" decoding="async">
             <div class="caption">The Good Shepherd</div>
         </div>
@@ -492,7 +492,7 @@
             <img src="art/thumbs/Let-It-Go.webp" data-full-src="art/Let-It-Go.png" alt="Let It Go" loading="lazy" decoding="async">
             <div class="caption">Let It Go</div>
         </div>
-        <div class="gallery-item" onclick="openModal(this)">
+        <div class="gallery-item" id="gallery-original-be-still" onclick="openModal(this)">
             <img src="art/thumbs/Be-Still.webp" data-full-src="art/Be-Still.png" alt="Be Still" loading="lazy" decoding="async">
             <div class="caption">Be Still</div>
         </div>
@@ -542,10 +542,11 @@
             <img src="art/thumbs/new/god-will-feel-after-you-joseph-smith.webp" data-full-src="art/new/god-will-feel-after-you-joseph-smith.webp" alt="God Will Feel After You" loading="lazy" referrerpolicy="no-referrer" style="object-fit: contain; background: #0f0c09;" decoding="async">
             <div class="caption">God Will Feel After You</div>
         </div>
-        <div class="gallery-item" onclick="openModal(this)">
+        <div class="gallery-original-reference"><div class="gallery-item" onclick="openModal(this)">
             <img src="art/thumbs/new/jesus-christ-portrait.webp" data-full-src="art/new/jesus-christ-portrait.webp" alt="Portrait of Jesus Christ at sunset" loading="lazy" style="object-fit: contain; background: #0f0c09;" decoding="async">
             <div class="caption">Jesus Christ</div>
         </div>
+            <p><a href="answers.html#answers-christ-portrait" style="display:block;">Original portrait and study in Answers</a></p></div>
     </div>
     
     <section class="fc-gallery-entry" aria-label="Complete artwork gallery" style="max-width:1200px;margin:24px auto 32px;padding:0 30px;text-align:center;">
@@ -561,10 +562,10 @@
         <h2 id="featured-art-study-title" style="text-align:center;color:#c9a961;font-family:'Times New Roman',serif;letter-spacing:5px;margin-bottom:12px;">FEATURED ART &amp; STUDY</h2>
         <p style="max-width:820px;margin:0 auto 28px;text-align:center;color:#d4c4b0;line-height:1.7;">Spend a little more time with one picture. Read the scripture beside it, learn about the Savior, and consider what His words mean in your life.</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;">
-            <a href="art-study/the-living-christ.html" data-artwork-detail="art-living-christ" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/The-Living-Christ.webp" alt="The Living Christ featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">The Living Christ: Study</span></a>
-            <a href="art-study/the-good-shepherd.html" data-artwork-detail="art-good-shepherd" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/The-Good-Shephard.webp" alt="The Good Shepherd featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">The Good Shepherd: Study</span></a>
-            <a href="art-study/suffer-the-little-children.html" data-artwork-detail="art-little-children" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/Suffer-the-Little-Children.webp" alt="Suffer the Little Children featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">Suffer the Little Children: Study</span></a>
-            <a href="art-study/be-still.html" data-artwork-detail="art-be-still" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="art/thumbs/Be-Still.webp" alt="Be Still featured art study" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">Be Still: Study</span></a>
+            <a href="art-study/the-living-christ.html" data-artwork-detail="art-living-christ" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="assets/page-art/uniqueness-repairs/art-living-testimony-card-960.webp" alt="Linen cloths lie on a stone burial bench, with a separate head cloth beside them." loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">The Living Christ: Study</span></a>
+            <a href="art-study/the-good-shepherd.html" data-artwork-detail="art-good-shepherd" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="assets/page-art/uniqueness-repairs/art-shepherd-care-card-960.webp" alt="A lamb resting safely beside a ewe inside a stone sheepfold" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">The Good Shepherd: Study</span></a>
+            <a href="art-study/suffer-the-little-children.html" data-artwork-detail="art-little-children" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="assets/page-art/uniqueness-repairs/art-children-welcome-card-960.webp" alt="A woman pulls out a chair for a child joining two children at a drawing table." loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">Suffer the Little Children: Study</span></a>
+            <a href="art-study/be-still.html" data-artwork-detail="art-be-still" aria-haspopup="dialog" style="display:block;text-decoration:none;color:#f5e6d3;background:rgba(201,169,97,.06);border:1px solid rgba(201,169,97,.24);border-radius:10px;overflow:hidden;"><img src="assets/page-art/uniqueness-repairs/art-stillness-card-960.webp" alt="A quiet lakeshore with wet stones, reeds and fading ripples beneath clearing clouds" loading="lazy" decoding="async" style="width:100%;aspect-ratio:4/3;object-fit:cover;"><span style="display:block;padding:15px;color:#c9a961;">Be Still: Study</span></a>
         </div>
     </section>
 
@@ -589,30 +590,22 @@
     </dialog>
 
     <section hidden aria-hidden="true">
-        <article data-artwork-detail-content="art-living-christ" data-detail-image="art/thumbs/The-Living-Christ.webp" data-detail-full="art/The-Living-Christ.png" data-detail-image-alt="The Living Christ devotional artwork" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/the-living-christ-the-testimony-of-the-apostles/the-living-christ-the-testimony-of-the-apostles?lang=eng" data-detail-source-label="Read The Living Christ" data-detail-study="art-study/the-living-christ.html" data-detail-study-label="Open the Complete Art Study">
+        <article data-artwork-detail-content="art-living-christ" data-detail-image="assets/page-art/uniqueness-repairs/art-living-testimony-card-960.webp" data-detail-full="assets/page-art/uniqueness-repairs/art-living-testimony-card-full.webp" data-detail-image-alt="Linen cloths lie on a stone burial bench, with a separate head cloth beside them." data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/john/20?lang=eng&amp;id=p5-p7#p5" data-detail-source-label="Read John 20:5–7" data-detail-study="art-study/the-living-christ.html" data-detail-study-label="Open the Complete Art Study">
             <span data-detail-eyebrow>Art and study</span>
             <span data-detail-title>The Living Christ</span>
-            <p data-detail-paragraph>Jesus Christ appears in radiant light as the risen and living Son of God. Christian hope rests not only in what He taught, but in the joyful witness that He rose from the tomb and lives.</p>
-            <p data-detail-paragraph>Quiet light surrounds the Savior's steady presence. Because He overcame death, we remember more than a teacher from the past; we trust a living Redeemer who still leads, comforts and saves.</p>
-        </article>
-        <article data-artwork-detail-content="art-good-shepherd" data-detail-image="art/thumbs/The-Good-Shephard.webp" data-detail-full="art/The-Good-Shephard.jpg" data-detail-image-alt="The Good Shepherd devotional artwork" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&amp;id=p11-p16#p11" data-detail-source-label="Read John 10:11 to 16" data-detail-study="art-study/the-good-shepherd.html" data-detail-study-label="Open the Complete Art Study">
+        <p data-detail-paragraph>Light falls across the linen left in the tomb. Read what the disciples found, then continue into the witness of the living Christ.</p></article>
+        <article data-artwork-detail-content="art-good-shepherd" data-detail-image="assets/page-art/uniqueness-repairs/art-shepherd-care-card-960.webp" data-detail-full="assets/page-art/uniqueness-repairs/art-shepherd-care-card-full.webp" data-detail-image-alt="A lamb resting safely beside a ewe inside a stone sheepfold" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/john/10?lang=eng&amp;id=p11-p16#p11" data-detail-source-label="Read John 10:11 to 16" data-detail-study="art-study/the-good-shepherd.html" data-detail-study-label="Open the Complete Art Study">
             <span data-detail-eyebrow>Art and study</span>
             <span data-detail-title>The Good Shepherd</span>
-            <p data-detail-paragraph>Jesus used the image of a shepherd to describe His relationship with those who follow Him. He knows His sheep, calls them, leads them, protects them, and gives His life for them.</p>
-            <p data-detail-paragraph>Jesus walks through a quiet village street with a shepherd's staff in hand. In John 10, He names Himself the Good Shepherd who knows His own and willingly lays down His life for them.</p>
-        </article>
-        <article data-artwork-detail-content="art-little-children" data-detail-image="art/thumbs/Suffer-the-Little-Children.webp" data-detail-full="art/Suffer-the-Little-Children.jpg" data-detail-image-alt="Suffer the Little Children devotional artwork" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&amp;id=p13-p16#p13" data-detail-source-label="Read Mark 10:13 to 16" data-detail-study="art-study/suffer-the-little-children.html" data-detail-study-label="Open the Complete Art Study">
+        <p data-detail-paragraph>A lamb rests beside a ewe inside a sheltered fold. This pastoral illustration invites reflection on care and safety as you read the Savior’s teaching about the Good Shepherd.</p></article>
+        <article data-artwork-detail-content="art-little-children" data-detail-image="assets/page-art/uniqueness-repairs/art-children-welcome-card-960.webp" data-detail-full="assets/page-art/uniqueness-repairs/art-children-welcome-card-full.webp" data-detail-image-alt="A woman pulls out a chair for a child joining two children at a drawing table." data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/nt/mark/10?lang=eng&amp;id=p13-p16#p13" data-detail-source-label="Read Mark 10:13 to 16" data-detail-study="art-study/suffer-the-little-children.html" data-detail-study-label="Open the Complete Art Study">
             <span data-detail-eyebrow>Art and study</span>
             <span data-detail-title>Suffer the Little Children</span>
-            <p data-detail-paragraph>When people brought children to Jesus, He welcomed them, took them in His arms, and blessed them. He also used their example to teach humility, trust, and willingness to receive God's kingdom.</p>
-            <p data-detail-paragraph>The children's closeness to the Savior shows that they were not interruptions to His ministry. His welcome gives them dignity and teaches every disciple to receive God's kingdom with humility, trust, and an open heart.</p>
-        </article>
-        <article data-artwork-detail-content="art-be-still" data-detail-image="art/thumbs/Be-Still.webp" data-detail-full="art/Be-Still.png" data-detail-image-alt="Be Still devotional artwork" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&amp;id=p10#p10" data-detail-source-label="Read Psalm 46:10" data-detail-study="art-study/be-still.html" data-detail-study-label="Open the Complete Art Study">
+        <p data-detail-paragraph>A chair is pulled out and a child is welcomed. Consider how everyday choices can help children feel included as you study the Savior&#x27;s welcome.</p></article>
+        <article data-artwork-detail-content="art-be-still" data-detail-image="assets/page-art/uniqueness-repairs/art-stillness-card-960.webp" data-detail-full="assets/page-art/uniqueness-repairs/art-stillness-card-full.webp" data-detail-image-alt="A quiet lakeshore with wet stones, reeds and fading ripples beneath clearing clouds" data-detail-source="https://www.churchofjesuschrist.org/study/scriptures/ot/ps/46?lang=eng&amp;id=p10#p10" data-detail-source-label="Read Psalm 46:10" data-detail-study="art-study/be-still.html" data-detail-study-label="Open the Complete Art Study">
             <span data-detail-eyebrow>Art and study</span>
             <span data-detail-title>Be Still</span>
-            <p data-detail-paragraph>Psalm 46 places the invitation to be still inside a world of upheaval. Scriptural stillness can mean trusting that God remains God even when circumstances are unsettled.</p>
-            <p data-detail-paragraph>Christ remains calm and near while the world around Him feels unsettled. The image holds the promise at the heart of the psalm: stillness can begin when we remember God's power and place our trust in Him.</p>
-        </article>
+        <p data-detail-paragraph>Quiet water and clearing clouds evoke a pause amid disturbance. This illustrative landscape is not a named scriptural location. Psalm 46 invites trust in God amid upheaval.</p></article>
     </section>
 
     <!-- Fullscreen Modal -->

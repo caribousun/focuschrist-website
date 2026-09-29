@@ -136,6 +136,26 @@ def book_of_mormon_review_errors(reviewed_pages, root=ROOT):
 
 
 SETTLE_PAGE = "answers/settle-this-in-your-hearts.html"
+TEMPLE_PAGE = "answers/why-latter-day-saints-build-temples.html"
+
+def temple_review_errors(reviewed_pages, root=ROOT):
+    """The owner-authorized temple ratio exception stays bound to its reviewed inventory."""
+    errors = []
+    chapters = json.loads((root / 'docs/temples/chapters.json').read_text(encoding='utf-8'))
+    ready = json.loads((root / 'docs/temples/art-ready.json').read_text(encoding='utf-8'))
+    entries = reviewed_pages.get(TEMPLE_PAGE, [])
+    expected = {ready[c['art_id']]['full']: ready[c['art_id']] for c in chapters}
+    if len(expected) < 15 or len(entries) != len(expected) or {e.get('asset') for e in entries} != set(expected):
+        return ['Temple artwork review must match every chronological chapter and at least fifteen additional originals']
+    for entry in entries:
+        record = expected[entry['asset']]
+        asset = root / entry['asset']
+        if (not asset.is_file() or not record.get('reviewed') or not entry.get('reviewed')
+                or not entry.get('technical_review_passed') or not entry.get('tone')
+                or hashlib.sha256(asset.read_bytes()).hexdigest() != entry.get('sha256')
+                or entry.get('sha256') != record.get('sha256')):
+            errors.append('Temple artwork differs from its hash-bound visual review: ' + entry['asset'])
+    return errors
 
 def settle_review_errors(reviewed_pages, root=ROOT):
     from answer_study_qa import Document
@@ -294,11 +314,12 @@ def main() -> int:
         # srcset. Exclusivity concerns owning pages, not references on that page.
         if sum(asset in text for text in html_pages) != 1:
             errors.append(f"exclusive supporting artwork must appear on exactly one page: {asset}")
-    if set(reviewed_pages) != set(PAGES) | {'answers/aaronic-priesthood-restoration.html', 'answers/melchizedek-priesthood-restoration.html'} | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions} | {BOM_PAGE, SETTLE_PAGE}:
+    if set(reviewed_pages) != set(PAGES) | {'answers/aaronic-priesthood-restoration.html', 'answers/melchizedek-priesthood-restoration.html'} | {"book-of-mormon-evidences.html", "church-history.html", "joseph-smith-likeness.html", "atonement.html", "missionary.html", "answers/what-happens-after-death.html", "birth-of-christ.html", "answers/death-of-a-child.html", "answers/divorce-and-faith.html", "answers/god-our-heavenly-father.html", "answers/grief-and-faith.html"} | {e['page'] for e in additions} | {BOM_PAGE, SETTLE_PAGE, TEMPLE_PAGE}:
         errors.append("image review manifest must contain the four featured studies, Evidences, Church History, Joseph Smith likeness, Atonement, Mission, Life After Death, Birth of Christ, Book of Mormon stories and the four reviewed study-gap pages")
 
     errors.extend(book_of_mormon_review_errors(reviewed_pages))
     errors.extend(settle_review_errors(reviewed_pages))
+    errors.extend(temple_review_errors(reviewed_pages))
 
     life_entries = reviewed_pages.get("answers/what-happens-after-death.html", [])
     if len(life_entries) != 18:

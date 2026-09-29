@@ -1,0 +1,20 @@
+/* The temple chronology uses the shared reading boundary and panel palette.
+   Artwork keeps its intrinsic proportions; this file never changes a hero. */
+.fc-temple-history { margin-block: var(--fc-body-section-gap); }
+.fc-temple-history__directory { margin-block: 24px 32px; }
+.fc-temple-history__directory .fc-actions { gap: 10px; }
+.fc-temple-history__directory a { white-space: normal; min-width: 0; height: auto; text-align: center; overflow-wrap: anywhere; }
+.fc-temple-history__chapter { margin-block: var(--fc-body-section-gap); padding-top: 12px; border-top: 1px solid var(--fc-line); scroll-margin-top: 110px; }
+.fc-temple-history__chapter > h3 { font-family: var(--fc-font-display); font-size: clamp(1.45rem, 3vw, 2rem); line-height: 1.25; color: var(--fc-cream); }
+.fc-temple-history__chapter .fc-study-visual { align-items: start; }
+.fc-temple-history__chapter .fc-study-visual > a { flex-basis: 480px; }
+.fc-temple-history__chapter .fc-study-visual figcaption { flex-basis: 300px; }
+.fc-temple-history__chapter .fc-study-visual img { height: auto; object-fit: contain; }
+.fc-temple-history__chapter .fc-actions { margin-top: 20px; }
+.fc-temple-history__chapter .fc-actions a { white-space: normal; height: auto; }
+.fc-temple-history__era { color: var(--fc-muted); font-size: .9rem; letter-spacing: .025em; }
+@media (max-width: 700px) {
+  .fc-temple-history__chapter .fc-study-visual > a,
+  .fc-temple-history__chapter .fc-study-visual figcaption { flex-basis: 100%; }
+  .fc-temple-history__directory .fc-actions { justify-content: center; }
+}

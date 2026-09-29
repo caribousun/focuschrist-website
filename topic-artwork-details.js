@@ -66,7 +66,7 @@
             return Array.from(container.querySelectorAll('a[href]')).filter(function (link) {
                 try {
                     const url = new URL(link.href);
-                    return url.protocol === 'https:' && ['www.churchofjesuschrist.org',
+                    return url.protocol === 'https:' && ['www.churchofjesuschrist.org', 'newsroom.churchofjesuschrist.org',
                         'www.josephsmithpapers.org', 'churchhistorylibrary.churchofjesuschrist.org'].includes(url.hostname)
                         && !link.querySelector('img');
                 } catch (error) { return false; }
@@ -99,7 +99,7 @@
 
         function recordFor(trigger, index) {
             const figure = trigger.closest('figure, .fc-marriage-era, .fc-foundation-card');
-            const caption = figure.querySelector('figcaption, .fc-marriage-era__copy, .fc-foundation-card-copy');
+            const caption = figure.querySelector('[data-picture-panel-copy]') || figure.querySelector('figcaption, .fc-marriage-era__copy, .fc-foundation-card-copy');
             const target = readingTarget(figure, index);
             const heading = caption && caption.querySelector('h2,h3,h4,:scope > strong');
             const record = {
@@ -165,15 +165,8 @@
             full.setAttribute('aria-haspopup', 'dialog');
             full.dataset.fullImageAlt = image.alt;
 
-            const related = !record.study && Array.from(main.querySelectorAll('#next-study a[href], #continue-study a[href], #conference-pathways a[href]')).find(function (link) {
-                const url = new URL(link.href);
-                return url.origin === location.origin && url.pathname !== location.pathname && !link.querySelector('img');
-            });
-            if (related) {
-                const heading = related.querySelector('h1,h2,h3,h4,h5,h6,[role="heading"]');
-                const label = heading && heading.textContent.trim();
-                pill(label || related.textContent.trim() || 'Continue related study', related.href);
-            }
+            // Page-wide onward links remain in their authored page context. Only
+            // an explicit per-picture study may take readers to another subject.
 
             const resume = pill('Continue Lesson', '#' + record.target.id);
             resume.dataset.topicArtContinue = '';

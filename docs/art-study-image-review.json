@@ -2243,6 +2243,476 @@
         "review_record": "docs/settle-heart-art-review.json",
         "review_notes": "Direct source pixels and approved references reviewed by primary and independent layout_review agent. Corrected gaze, repeated background faces, headroom, Joseph age, and visible Resurrection scars. Technical review does not claim new owner approval."
       }
+    ],
+    "answers/why-latter-day-saints-build-temples.html": [
+      {
+        "order": 1,
+        "key": "temple-eden-communion",
+        "asset": "assets/page-art/temples/temple-eden-communion-full.webp",
+        "responsive": "assets/page-art/temples/temple-eden-communion-960.webp",
+        "sha256": "e2d8cb2e5999db5090f7148625b6ca13b83d84d31d1e1ef8d9b5f4d7bead7aff",
+        "source_sha256": "06be148234c8b48f5128d7d9c8dbf0696be64beb622809e7f74a7db6cfa2e1bd",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p4-p12#p4",
+          "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng"
+        ],
+        "tone": "A garden and the earth beyond it begin a study of God's presence, mortal life, and the hope of return through Jesus Christ.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 2,
+        "key": "temple-covenant-altars",
+        "asset": "assets/page-art/temples/temple-covenant-altars-full.webp",
+        "responsive": "assets/page-art/temples/temple-covenant-altars-960.webp",
+        "sha256": "1fd71d5116edd0e03a0651445a116091fb107abaa5d020faa19fa252ed23cca2",
+        "source_sha256": "48f1a336de02113700c608ca9a67efad3fa6b05e0823611a10a5be2f03cfd2ac",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/12?lang=eng&id=p1-p8#p1"
+        ],
+        "tone": "An altar beside a tent recalls Abraham's worship along his journey and a promise reaching to all families of the earth.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 3,
+        "key": "temple-wilderness-sanctuary",
+        "asset": "assets/page-art/temples/temple-wilderness-sanctuary-full.webp",
+        "responsive": "assets/page-art/temples/temple-wilderness-sanctuary-960.webp",
+        "sha256": "7babf2d995ff1a5005106cdcb2c355efd9418161e27890f8466ddf6646c030c0",
+        "source_sha256": "5a9c4440f726dbd63e9e2064fa165ba3ca82bf52b588a7a5ddef3fb533063752",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/25?lang=eng&id=p1-p9#p1",
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/40?lang=eng&id=p34-p38#p34"
+        ],
+        "tone": "The portable sanctuary stands among Israel's tents. Exodus describes the cloud above it as the people continue their journey.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 4,
+        "key": "temple-solomon-house",
+        "asset": "assets/page-art/temples/temple-solomon-house-full.webp",
+        "responsive": "assets/page-art/temples/temple-solomon-house-960.webp",
+        "sha256": "9fec37ea147ffb575510181427dd978f5f187ee56b1d0f5b3e8102b1d2b63aaf",
+        "source_sha256": "de1895721f05d856754f1d30b7faa0819dbd56c14847079d3ad6e5e6927580b4",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/8?lang=eng&id=p10-p13,p27-p30,p41-p43#p10"
+        ],
+        "tone": "The entrance of Solomon's temple invites a reading of his prayer: may God hear His people and the stranger who comes seeking Him.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 5,
+        "key": "temple-return-rebuild",
+        "asset": "assets/page-art/temples/temple-return-rebuild-full.webp",
+        "responsive": "assets/page-art/temples/temple-return-rebuild-960.webp",
+        "sha256": "8fa58c435de18ef8d26662dfff1a7afadc89d447ade902ba99c407f70e25ba7d",
+        "source_sha256": "4ee986ccc8b124b938c5cc272d80bb595a12ebaa5c87f76356cb6573ccc4fbf6",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/3?lang=eng&id=p1-p13#p1",
+          "https://www.churchofjesuschrist.org/temples/history-of-temples?lang=eng"
+        ],
+        "tone": "Workers guide a stone into place as the community gathers. Ezra remembers both rejoicing and tears when the new temple foundation was laid.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 6,
+        "key": "temple-nephite-temple",
+        "asset": "assets/page-art/temples/temple-nephite-temple-full.webp",
+        "responsive": "assets/page-art/temples/temple-nephite-temple-960.webp",
+        "sha256": "04da3843d0818fe3826ae2ebb809600be825d841e76bc77381506aa040e61604",
+        "source_sha256": "025e773fc7a4e95cf63ea340bc77f6c7e56906266e3f7b04773adc818d13f851",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/5?lang=eng&id=p15-p17#p15",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p1-p9#p1"
+        ],
+        "tone": "Nephi records a temple patterned after Solomon's, built with the materials his people could obtain.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 7,
+        "key": "temple-young-jesus",
+        "asset": "assets/page-art/temples/temple-young-jesus-full.webp",
+        "responsive": "assets/page-art/temples/temple-young-jesus-960.webp",
+        "sha256": "76fb9473d2b48484f58ab822da8d05505e2d29b37953eb39331033401a9f5a33",
+        "source_sha256": "568e8b1fce98f303749480e8128e70e6643320375f574ff6eedf328bc8165ccf",
+        "width": 1536,
+        "height": 1024,
+        "christ": true,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?lang=eng&id=p41-p52#p41"
+        ],
+        "tone": "The twelve-year-old Jesus listens and asks questions among the teachers. Luke's account brings us close to His growing understanding of His Father's work.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 8,
+        "key": "temple-house-prayer",
+        "asset": "assets/page-art/temples/temple-house-prayer-full.webp",
+        "responsive": "assets/page-art/temples/temple-house-prayer-960.webp",
+        "sha256": "a67614a5c837d4a5a6e2f1c4112d0d6054a5ddd687e302f71be7ec198fc5fbd1",
+        "source_sha256": "e400b19d133bc936555fba3885845048b06f3ef919825bf5d8ce22947bccc802",
+        "width": 1536,
+        "height": 1024,
+        "christ": true,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p12-p16#p12"
+        ],
+        "tone": "With quiet resolve, Jesus calls the temple a house of prayer. The overturned table and departing merchants place His words in the temple court.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": true,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 9,
+        "key": "temple-courts-healing",
+        "asset": "assets/page-art/temples/temple-courts-healing-full.webp",
+        "responsive": "assets/page-art/temples/temple-courts-healing-960.webp",
+        "sha256": "e0828ffbd3d3d7fbfb10860a417cb3068eed190dd139aae7937209664cc2db3a",
+        "source_sha256": "eb13bbd6523ef3e3455289c5fe4b0261a1a1ecef12573f6bc190dfed9886cf61",
+        "width": 1536,
+        "height": 1024,
+        "christ": true,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p14-p16#p14"
+        ],
+        "tone": "Those who need healing come to Jesus in the temple. His attention rests on the person before Him.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 10,
+        "key": "temple-widow-offering",
+        "asset": "assets/page-art/temples/temple-widow-offering-full.webp",
+        "responsive": "assets/page-art/temples/temple-widow-offering-960.webp",
+        "sha256": "926bd0d04dae9a26f3a85ef1d5cfee2299920f191cf43fe8c99e4e0b5867bbd9",
+        "source_sha256": "5ca75f26283cfc296f53683d1e5a4a3d12fa1fecd45d3b635005ddda64034214",
+        "width": 1536,
+        "height": 1024,
+        "christ": true,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p38-p44#p38"
+        ],
+        "tone": "Jesus notices the widow's small offering and teaches His disciples to understand its cost.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 11,
+        "key": "temple-widow-tender",
+        "asset": "assets/page-art/temples/temple-widow-tender-full.webp",
+        "responsive": "assets/page-art/temples/temple-widow-tender-960.webp",
+        "sha256": "19f3f874d789816500176af41b2449c0401bd8f01b41c0315581c27de74c5765",
+        "source_sha256": "deccb0d9c671e3500c95a3640e6dbe5eb49e57929c527d2f52ac7b2d4c41d03b",
+        "width": 1536,
+        "height": 1024,
+        "christ": true,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p41-p44#p41"
+        ],
+        "tone": "Jesus watches the widow with tender attention. His teaching honors a gift whose value cannot be measured by its size.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Lowered pupils and head direct attention down-left to the widow's offering and hands, rather than behind her. Tender expression and recognizable approved Christ profile retained; natural hands. Technical review only; earlier favorable composition selection is not approval of this replacement."
+      },
+      {
+        "order": 12,
+        "key": "temple-bountiful-covenant",
+        "asset": "assets/page-art/temples/temple-bountiful-covenant-full.webp",
+        "responsive": "assets/page-art/temples/temple-bountiful-covenant-960.webp",
+        "sha256": "249445ec789e5bc1d996db8966166fa7fdef52bb22653e84bf47258042b8a21e",
+        "source_sha256": "df9bdf7fa4bc317fd158a2766652e0eaa9ceca06b405c1d173f6c78591d44d8e",
+        "width": 1536,
+        "height": 1024,
+        "christ": true,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p1-p17#p1",
+          "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/20?lang=eng&id=p24-p27#p24"
+        ],
+        "tone": "The risen Savior teaches the gathered people about Abraham's covenant and the blessing He brings to their families.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 13,
+        "key": "temple-apostles-gate",
+        "asset": "assets/page-art/temples/temple-apostles-gate-full.webp",
+        "responsive": "assets/page-art/temples/temple-apostles-gate-960.webp",
+        "sha256": "a48227bb778b10607148e512cdefe087c34b84bf48091455d95e5e84ccac45d9",
+        "source_sha256": "47d5222228b39a2a32c26f0044619fbe2baf69aec54e888eef5f8cc2729e3754",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/3?lang=eng&id=p1-p10#p1",
+          "https://www.churchofjesuschrist.org/temples/history-of-temples?lang=eng"
+        ],
+        "tone": "Peter takes the man's hand at the temple gate. Acts attributes the healing to Jesus Christ.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 14,
+        "key": "temple-kirtland-house",
+        "asset": "assets/page-art/temples/temple-kirtland-house-full.webp",
+        "responsive": "assets/page-art/temples/temple-kirtland-house-960.webp",
+        "sha256": "b9ae83e88210501d116d76a0500e964fdd693b45cc49f05d588eb4c0297f7d25",
+        "source_sha256": "ac9893032de6af3949e17ff1669eb6c9b27f58ff8519125649fd7d6d851c51f8",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng&id=p7-p9,p22-p23#p7"
+        ],
+        "tone": "The Saints gather at Kirtland after years of shared labor. Their dedicatory prayer asks for learning, faith, and strength to serve.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 15,
+        "key": "temple-kirtland-pulpits",
+        "asset": "assets/page-art/temples/temple-kirtland-pulpits-full.webp",
+        "responsive": "assets/page-art/temples/temple-kirtland-pulpits-960.webp",
+        "sha256": "edc1f6c1dd4f50b1537243085cc993d374be17102b17fc4c4efa257ca69eebca",
+        "source_sha256": "2eaadde122f9d21cbe638f6d30690cd1fb2b1d359e8f45727d07e56e585468fe",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p1-p16#p1"
+        ],
+        "tone": "Daylight rests on the preserved Kirtland pulpits. Joseph Smith and Oliver Cowdery recorded their vision of the Savior in this temple; read their account in Doctrine and Covenants 110.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 16,
+        "key": "temple-nauvoo-hope",
+        "asset": "assets/page-art/temples/temple-nauvoo-hope-full.webp",
+        "responsive": "assets/page-art/temples/temple-nauvoo-hope-960.webp",
+        "sha256": "700d998fa09496b40cd6c75d9c02a4b1f953d58508faabdb44f69eb516ada766",
+        "source_sha256": "da8ba576c0bd723c54322c81e3da6a781babef8276b5ef5b3bf572b6ab30781a",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/history/topics/nauvoo-temple?lang=eng",
+          "https://www.churchofjesuschrist.org/temples/what-is-proxy-baptism?lang=eng",
+          "https://www.churchofjesuschrist.org/temples/ordinances-and-covenants?lang=eng",
+          "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-28?lang=eng"
+        ],
+        "tone": "The Nauvoo Temple stands behind people preparing to leave. The commitments made there traveled west with them.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 17,
+        "key": "temple-pioneer-temples",
+        "asset": "assets/page-art/temples/temple-pioneer-temples-full.webp",
+        "responsive": "assets/page-art/temples/temple-pioneer-temples-960.webp",
+        "sha256": "916b524d9847259a3886c1849b2f9fad13fcee7ef63c67674a616f249fd2eb9a",
+        "source_sha256": "56724f7730ce3345b36608dee231b1500d3352429784dde31dc7e5c10ea1e7e7",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://newsroom.churchofjesuschrist.org/article/the-story-of-the-original-dedication-of-the-st-george-temple-a-beautiful-testimony-of-faith",
+          "https://www.churchofjesuschrist.org/study/history/topics/salt-lake-temple?lang=eng"
+        ],
+        "tone": "Timber scaffolding surrounds the rising St. George Temple. Shared labor prepared a house that opened a new chapter of temple service in 1877.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 18,
+        "key": "temple-salt-lake-building",
+        "asset": "assets/page-art/temples/temple-salt-lake-building-full.webp",
+        "responsive": "assets/page-art/temples/temple-salt-lake-building-960.webp",
+        "sha256": "4fa4341765c0f70a76edf8638804ac293524df2b61377ea525be50c248394677",
+        "source_sha256": "d8c9afda377e4b278e850b4c5c870949529a5fe1824c0d09d1572315586b2d71",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/history/topics/salt-lake-temple?lang=eng",
+          "https://www.churchofjesuschrist.org/temples/details/salt-lake-temple?lang=eng"
+        ],
+        "tone": "A heavy stone and patient labor recall the decades needed to raise the Salt Lake Temple. The work included rebuilding foundations as well as lifting walls.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Compared full correction directly with previous full image: central facade clearer, visible round and arched window placement retained along with tower, buttress, scaffold and worker composition. Historical source-fit from prior architecture review retained; interpretive scene, not pixel-exact documentary reconstruction."
+      },
+      {
+        "order": 19,
+        "key": "temple-worldwide-gathering",
+        "asset": "assets/page-art/temples/temple-worldwide-gathering-full.webp",
+        "responsive": "assets/page-art/temples/temple-worldwide-gathering-960.webp",
+        "sha256": "a560fc8bc0fa7a3a4332e5d52278b1779030d690d66deadb35ded852c1d96173",
+        "source_sha256": "7de31812183b7e948480367e18ace96d5153fd2d317bd25b2187619452126100",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/study/liahona/2019/10/the-laie-hawaii-temple-a-century-of-gathering?lang=eng",
+          "https://www.churchofjesuschrist.org/temples/details/bern-switzerland-temple?lang=eng",
+          "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng",
+          "https://www.churchofjesuschrist.org/study/history/topics/priesthood-and-temple-restriction?lang=eng"
+        ],
+        "tone": "Visitors approach Laie in this contemporary view. Dedicated in 1919, the temple brought worship closer to communities across the Pacific.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      },
+      {
+        "order": 20,
+        "key": "temple-temples-today",
+        "asset": "assets/page-art/temples/temple-temples-today-full.webp",
+        "responsive": "assets/page-art/temples/temple-temples-today-960.webp",
+        "sha256": "8c700352eb67daefda3f21195e2f2814f1aa4dc4f786b8920033b3bc6fe4b53e",
+        "source_sha256": "e1b1bfd13ed35171b45fc5639a020a5d170c79e62c2e5cfeab87f3e3b84e7647",
+        "width": 1536,
+        "height": 1024,
+        "christ": false,
+        "source_urls": [
+          "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng",
+          "https://newsroom.churchofjesuschrist.org/article/salt-lake-temple-open-house-reservations",
+          "https://www.churchofjesuschrist.org/temples/what-is-temple-endowment?lang=eng",
+          "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+        ],
+        "tone": "Names on a page lead back to individual lives. Learning an ancestor's story can give temple service a more personal meaning.",
+        "reviewed": true,
+        "technical_review_passed": true,
+        "owner_approved": false,
+        "review_record": "docs/temples/integration-visual-review.json",
+        "review_notes": "Independent full original and source-fit review; Christ images compared with actual Home reference. Only two newest corrected images have direct owner favorable selection; other images remain technical review only."
+      }
     ]
-  }
+  },
+  "responsive_hero_variants_20260929": [
+    {
+      "page": "answers/plan-of-salvation.html",
+      "asset": "assets/heroes/plan-desktop-exact-20260929.webp",
+      "sha256": "6f0ef56d0e2418a319962bc287187c4795d8249fa193d5b64240d20c6d3e1117",
+      "source": "assets/heroes/plan-of-salvation-hero-1600.webp",
+      "role": "responsive variant of existing original; does not count as unique artwork",
+      "reviewed": true,
+      "independent_review": "Root inspected all four: natural continuity, no visible seam or duplicate figures, original subject readable",
+      "owner_authorization": "Yes—preserve the original center exactly; relayed by root from direct owner response",
+      "owner_aesthetic_approval": false,
+      "pixel_proof": "docs/desktop-hero-pixel-proof-20260929.json"
+    },
+    {
+      "page": "book-of-mormon-evidences.html",
+      "asset": "assets/heroes/bom-desktop-exact-20260929.webp",
+      "sha256": "06ebe190b1712449ec62674c743f5d8d01a393fd75b9cf5fd3a016075ad219f9",
+      "source": "assets/page-art/bom-evidences/hero.webp",
+      "role": "responsive variant of existing original; does not count as unique artwork",
+      "reviewed": true,
+      "independent_review": "Root inspected all four: natural continuity, no visible seam or duplicate figures, original subject readable",
+      "owner_authorization": "Yes—preserve the original center exactly; relayed by root from direct owner response",
+      "owner_aesthetic_approval": false,
+      "pixel_proof": "docs/desktop-hero-pixel-proof-20260929.json"
+    },
+    {
+      "page": "general-conference.html",
+      "asset": "assets/heroes/conference-desktop-exact-20260929.webp",
+      "sha256": "3ae5a0757f42458973ef9e423a234d7b9f8dcd99e1907a9b187b93ebff6d7e1a",
+      "source": "assets/heroes/topics/conference-listening-full.webp",
+      "role": "responsive variant of existing original; does not count as unique artwork",
+      "reviewed": true,
+      "independent_review": "Root inspected all four: natural continuity, no visible seam or duplicate figures, original subject readable",
+      "owner_authorization": "Yes—preserve the original center exactly; relayed by root from direct owner response",
+      "owner_aesthetic_approval": false,
+      "pixel_proof": "docs/desktop-hero-pixel-proof-20260929.json"
+    },
+    {
+      "page": "answers/abrahamic-covenant.html",
+      "asset": "assets/heroes/abrahamic-desktop-exact-20260929.webp",
+      "sha256": "07c66a868d48cc3df308cd472a913cdfa1855f0ab33b43cb3b4b591ffe0e7c5f",
+      "source": "assets/page-art/abrahamic-covenant/ac-jacob-ladder-full.webp",
+      "role": "responsive variant of existing original; does not count as unique artwork",
+      "reviewed": true,
+      "independent_review": "Root inspected all four: natural continuity, no visible seam or duplicate figures, original subject readable",
+      "owner_authorization": "Yes—preserve the original center exactly; relayed by root from direct owner response",
+      "owner_aesthetic_approval": false,
+      "pixel_proof": "docs/desktop-hero-pixel-proof-20260929.json"
+    }
+  ]
 }

@@ -83,7 +83,12 @@ for (const card of cards) {
         const full = panel.querySelector('[data-full-image-viewer]');
         const related = [...document.querySelectorAll('main #continue-study a[href]')].find(link => new URL(link.href).origin === window.location.origin && new URL(link.href).pathname !== window.location.pathname && !link.querySelector('img'));
         assert(related, 'Study page supplies an onward lesson');
-        assert([...panel.querySelectorAll('.fc-artwork-detail-actions a')].some(link => link.href === related.href && link.textContent.trim() === related.textContent.trim()), 'Panel keeps the correct onward study pill');
+        const studyPills = [...panel.querySelectorAll('.fc-artwork-detail-actions a')];
+        if (trigger.dataset.topicStudy) {
+            assert(studyPills.some(link => link.href === new URL(trigger.dataset.topicStudy, window.location.href).href && link.textContent === trigger.dataset.topicStudyLabel), 'Explicit contextual picture study remains available');
+        } else {
+            assert(!studyPills.some(link => link.href === related.href), 'Page-wide onward lesson must not be guessed as this picture destination');
+        }
         assert.equal(full.textContent, 'View Full-Size Image');
         assert.equal(full.href, trigger.href);
         full.focus();

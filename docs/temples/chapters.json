@@ -1,0 +1,460 @@
+[
+  {
+    "id": "beginnings-eden",
+    "title": "Before a temple of stone",
+    "era": "Creation and the first generations",
+    "art_id": "temple-eden-communion",
+    "paragraphs": [
+      "The story begins with God's desire to be near His children. Latter-day Saints read Eden as a sacred place where Adam and Eve lived in God's presence. After leaving the garden, they called upon Him, worked, raised a family, and learned to worship. Their story gives temple study its first great question: how can people return to God?",
+      "In Moses 5, an angel explains that Adam's sacrifice points to the future sacrifice of the Only Begotten. Adam and Eve then teach their children. The connection with temples is a connection of worship, redemption, and return; the account does not describe a stone temple in Eden. Modern temple teaching begins with the Creation and Fall and leads toward the redeeming work of Jesus Christ."
+    ],
+    "sources": [
+      {
+        "label": "Moses 5:4–12",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/pgp/moses/5?lang=eng&id=p4-p12#p4"
+      },
+      {
+        "label": "Why Latter-day Saints Build Temples",
+        "url": "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng"
+      }
+    ],
+    "alt": "A quiet garden landscape opens toward sunlit ground beyond its trees.",
+    "caption": "A garden and the earth beyond it begin a study of God's presence, mortal life, and the hope of return through Jesus Christ.",
+    "scene_constraints": "Interpretive unpeopled garden landscape, no claim of known Eden geography; no temple building or invented Christ appearance. Avoid architecture. Caption must match actual generated landscape."
+  },
+  {
+    "id": "covenant-altars",
+    "title": "Altars along the covenant journey",
+    "era": "The patriarchs",
+    "art_id": "temple-covenant-altars",
+    "paragraphs": [
+      "Long before the temple in Jerusalem, Genesis describes worship at altars. Abram travels into Canaan, receives the promise of a land for his descendants, and builds an altar. Near Bethel he pitches his tent, builds another altar, and calls upon the Lord. Worship accompanies a journey whose outcome he cannot yet see.",
+      "The promise reaches beyond one household: through Abraham all families of the earth are to be blessed. Latter-day Saints connect temple covenants with that larger gathering. An altar in a landscape and a later temple are different structures, but both belong to this scriptural story of responding to God and remembering His promises."
+    ],
+    "sources": [
+      {
+        "label": "Genesis 12:1–8",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/gen/12?lang=eng&id=p1-p8#p1"
+      }
+    ],
+    "alt": "A simple stone altar stands near a traveler's tent in an ancient hill country landscape.",
+    "caption": "An altar beside a tent recalls Abraham's worship along his journey and a promise reaching to all families of the earth.",
+    "scene_constraints": "Unpeopled landscape, rough stone altar and modest ancient tent; no imagined sacrifice victim, knife or divine figure. Genesis supplies no exact altar plan. If Abraham included, 75 on departure from Haran; identity reference must be resolved first."
+  },
+  {
+    "id": "wilderness-sanctuary",
+    "title": "A sanctuary that traveled with Israel",
+    "era": "The Exodus",
+    "art_id": "temple-wilderness-sanctuary",
+    "paragraphs": [
+      "After the Exodus, Israel is commanded to make a sanctuary so that the Lord may dwell among the people. The tabernacle is portable: a tent sanctuary, its furnishings, and its surrounding court can accompany a traveling community. Exodus describes gifts of materials and work offered for this shared purpose.",
+      "The account closes with the cloud covering the tabernacle and the Lord's glory filling it. Israel's worship is not waiting for a settled capital or an impressive stone building. Here, in the wilderness, the people are learning to order their life around God's presence. The biblical descriptions guide the picture, while the exact appearance of the ancient camp remains uncertain."
+    ],
+    "sources": [
+      {
+        "label": "Exodus 25:1–9",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/25?lang=eng&id=p1-p9#p1"
+      },
+      {
+        "label": "Exodus 40:34–38",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ex/40?lang=eng&id=p34-p38#p34"
+      }
+    ],
+    "alt": "A tent sanctuary stands inside a linen courtyard in the wilderness beneath a cloud.",
+    "caption": "The portable sanctuary stands among Israel's tents. Exodus describes the cloud above it as the people continue their journey.",
+    "scene_constraints": "Exodus 26–27 supports linen enclosure, layered tent coverings, bronze altar. No monumental stone temple; no exposed ark outdoors; no human divine apparition. Interpretive exterior."
+  },
+  {
+    "id": "solomon-prayer",
+    "title": "A house of prayer in Jerusalem",
+    "era": "Solomon's reign",
+    "art_id": "temple-solomon-house",
+    "paragraphs": [
+      "The sanctuary becomes a lasting house in Jerusalem during Solomon's reign. First Kings describes the ark being brought into the temple and the cloud filling the house. Yet Solomon's dedicatory prayer refuses to confine God to architecture: even heaven cannot contain Him.",
+      "Solomon asks that prayers offered toward this place be heard, including the prayer of a stranger who comes from a distant country. The dedication joins a particular holy place to a hope extending beyond Israel. The building matters because of the God worshipped there and the repentance, justice, and mercy His people seek."
+    ],
+    "sources": [
+      {
+        "label": "1 Kings 8:10–13, 27–30, 41–43",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/1-kgs/8?lang=eng&id=p10-p13,p27-p30,p41-p43#p10"
+      }
+    ],
+    "alt": "Two bronze pillars frame the entrance of an ancient temple above a stone courtyard.",
+    "caption": "The entrance of Solomon's temple invites a reading of his prayer: may God hear His people and the stranger who comes seeking Him.",
+    "scene_constraints": "Architecture only unless named identity researched. 1 Kings 6–7 for porch/two bronze pillars; no Greek pediment, Christian symbols, or claim exact reconstruction. Avoid unsupported precise completion date; published Talmage chronology is dated."
+  },
+  {
+    "id": "return-rebuild",
+    "title": "Loss, return, and rebuilding",
+    "era": "Exile and the Second Temple",
+    "art_id": "temple-return-rebuild",
+    "paragraphs": [
+      "Jerusalem's first temple was destroyed in the Babylonian conquest. Ezra tells of returned exiles restoring an altar and laying the foundation of a new house. Those gathered respond with both joy and tears: older people remember the former temple while others rejoice at a new beginning.",
+      "The rebuilt temple is associated with Zerubbabel. Centuries later, Herod enlarges and transforms the temple complex. That later setting is the temple world of the Gospels. Keeping these stages distinct helps us follow the story: Solomon's temple, the rebuilt Second Temple, and its great Herodian expansion are not three interchangeable pictures."
+    ],
+    "sources": [
+      {
+        "label": "Ezra 3:1–13",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/ot/ezra/3?lang=eng&id=p1-p13#p1"
+      },
+      {
+        "label": "History of Temples",
+        "url": "https://www.churchofjesuschrist.org/temples/history-of-temples?lang=eng"
+      }
+    ],
+    "alt": "Two workers position a foundation stone while younger and older people gather nearby.",
+    "caption": "Workers guide a stone into place as the community gathers. Ezra remembers both rejoicing and tears when the new temple foundation was laid.",
+    "scene_constraints": "Unnamed returned exiles, ancient Persian-period clothing interpretation, no modern machinery or completed Herodian facade. Diverse older and younger adults; no exact ages assigned."
+  },
+  {
+    "id": "nephite-temple",
+    "title": "A temple in the Book of Mormon record",
+    "era": "Nephi and later Nephite worship",
+    "art_id": "temple-nephite-temple",
+    "paragraphs": [
+      "The Book of Mormon preserves a second scriptural setting for temple worship. Nephi says his people built a temple after the manner of Solomon's, while explaining that they lacked the same precious materials. His account links the work with learning skills and building a community after separation from his brothers.",
+      "Later, King Benjamin gathers his people at a temple to teach them about Christ and their responsibility to one another. The record supplies these acts of worship and teaching, but few architectural details. We can follow its spiritual narrative without assigning a particular surviving ruin or modern map location to the temple."
+    ],
+    "sources": [
+      {
+        "label": "2 Nephi 5:15–17",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/5?lang=eng&id=p15-p17#p15"
+      },
+      {
+        "label": "Mosiah 2:1–9",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/mosiah/2?lang=eng&id=p1-p9#p1"
+      }
+    ],
+    "alt": "A modest ancient sanctuary stands among simple buildings and cultivated land.",
+    "caption": "Nephi records a temple patterned after Solomon's, built with the materials his people could obtain.",
+    "scene_constraints": "Interpretive architecture; NO identified Maya pyramid, archaeological site, anachronistic stepped ziggurat, or asserted geography. Material restraint compared with Solomon. No named person needed."
+  },
+  {
+    "id": "young-jesus",
+    "title": "Jesus at twelve in His Father's house",
+    "era": "The childhood of Jesus",
+    "art_id": "temple-young-jesus",
+    "paragraphs": [
+      "Luke places Jesus in the Jerusalem temple when He is twelve. After the Passover journey, Mary and Joseph search for Him and find Him among the teachers, listening and asking questions. Those who hear Him are astonished at His understanding.",
+      "His answer to His parents reveals His awareness of His Father's work. Luke also says He returns to Nazareth with them and continues to grow. This temple scene holds together an extraordinary calling and a real childhood. The Son of God listens, asks questions, and learns among His people."
+    ],
+    "sources": [
+      {
+        "label": "Luke 2:41–52",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/luke/2?lang=eng&id=p41-p52#p41"
+      }
+    ],
+    "alt": "Twelve-year-old Jesus listens and speaks with adult teachers in a temple courtyard.",
+    "caption": "The twelve-year-old Jesus listens and asks questions among the teachers. Luke's account brings us close to His growing understanding of His Father's work.",
+    "scene_constraints": "Christ unmistakably 12, no beard, approved Christ reference aged appropriately; seated among teachers rather than lecturing from adult pulpit. Mary/Joseph omit unless locked references passed. Exact teachers' ages unknown."
+  },
+  {
+    "id": "house-prayer",
+    "title": "Restoring the purpose of the house",
+    "era": "Jesus' final week in Jerusalem",
+    "art_id": "temple-house-prayer",
+    "paragraphs": [
+      "Matthew describes Jesus entering the temple, driving out buyers and sellers, and overturning the money changers' tables. His words call the house back to prayer. This is a forceful act, rooted in the purpose of the place and the needs of those who come to worship.",
+      "The scene should not be used to condemn Jewish people as a group: Jesus, His disciples, and the worshippers belong within Israel's story. Read what He does next. Matthew moves immediately from the overturned tables to people coming to Him for healing, joining His demand for reverence to His care for human need."
+    ],
+    "sources": [
+      {
+        "label": "Matthew 21:12–16",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p12-p16#p12"
+      }
+    ],
+    "alt": "Jesus stands beside an overturned table in the temple court, extending an open hand as merchants move away.",
+    "caption": "With quiet resolve, Jesus calls the temple a house of prayer. The overturned table and departing merchants place His words in the temple court.",
+    "scene_constraints": "Mortal Christ early thirties, approved pixels; serious controlled expression; no post-resurrection scars, ethnic caricatures or violence against people. Matthew scene, so do not import John's cord scourge."
+  },
+  {
+    "id": "temple-healing",
+    "title": "Healing in the temple courts",
+    "era": "Jesus' final week in Jerusalem",
+    "art_id": "temple-courts-healing",
+    "paragraphs": [
+      "The temple is also a place where Matthew shows Jesus healing. People who are blind or unable to walk come to Him there. Children call out in praise, and Jesus answers those who object. Their voices belong in the account alongside the movement of crowds and the concerns of the leaders.",
+      "This brief passage changes the way we imagine sacred space. Reverence does not make the suffering invisible. In the Gospel story, the Savior receives people with needs and gives attention to them. A temple study centered on Him must leave room for that compassion."
+    ],
+    "sources": [
+      {
+        "label": "Matthew 21:14–16",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/matt/21?lang=eng&id=p14-p16#p14"
+      }
+    ],
+    "alt": "Jesus gives close attention to a man seeking healing in a temple court.",
+    "caption": "Those who need healing come to Jesus in the temple. His attention rests on the person before Him.",
+    "scene_constraints": "Specific Matthew temple event, not Bethesda. Mature anonymous recipient, age unknown, no grotesque disability; Christ compassionate task-directed gaze, approved identity, no scars. Distinct from cleansing tableau."
+  },
+  {
+    "id": "widow-offering",
+    "title": "The offering Jesus noticed",
+    "era": "Jesus teaches near the treasury",
+    "art_id": "temple-widow-offering",
+    "paragraphs": [
+      "Sitting opposite the treasury, Jesus watches people give. A poor widow places two small coins among the offerings. He calls His disciples' attention to her gift and explains its cost: others have given from abundance, while she has given from what she needs to live.",
+      "The smallness of the coins is not the smallness of the gift. Read this passage beside the warning immediately before it about those who exploit widows. Christ's attention makes a vulnerable person visible. Sacred buildings and visible offerings never excuse neglect of the people around them."
+    ],
+    "sources": [
+      {
+        "label": "Mark 12:38–44",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p38-p44#p38"
+      }
+    ],
+    "alt": "A widow places two small coins into the temple treasury while Jesus watches from nearby.",
+    "caption": "Jesus notices the widow's small offering and teaches His disciples to understand its cost.",
+    "scene_constraints": "Christ seated opposite treasury, widow distinct and modestly dressed; exact widow age not stated, do not equate widowhood with extreme age. Coin faces unreadable. No invented conversation or touch between Jesus and widow."
+  },
+  {
+    "id": "widow-tender-attention",
+    "title": "Seen by the Savior",
+    "era": "A closer look at the same temple encounter",
+    "art_id": "temple-widow-tender",
+    "paragraphs": [
+      "Return to the same moment from the Savior's side. Jesus sees a person whose small gift could pass unnoticed in a busy court. He asks His disciples to pay attention to her.",
+      "His expression in this companion picture invites reflection on His care. Mark records His observation and teaching, not a conversation with the widow. As you look, consider whom you might notice more carefully today, especially when a quiet act of faith costs more than others can see."
+    ],
+    "sources": [
+      {
+        "label": "Mark 12:41–44",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/mark/12?lang=eng&id=p41-p44#p41"
+      }
+    ],
+    "alt": "Jesus turns His head and eyes toward the widow as she places her coins in the temple treasury.",
+    "caption": "Jesus watches the widow with tender attention. His teaching honors a gift whose value cannot be measured by its size.",
+    "scene_constraints": "Owner-requested companion of same Mark12 event, explicitly not a different historical event. Preserve approved Christ face. Mortal Christ, no scars. No invented dialogue or physical meeting; expression interpreted compassion.",
+    "reflection": "Whose quiet effort could you notice and honor today?"
+  },
+  {
+    "id": "bountiful-covenant",
+    "title": "The risen Lord and the covenant people",
+    "era": "Christ's ministry at Bountiful",
+    "art_id": "temple-bountiful-covenant",
+    "paragraphs": [
+      "Third Nephi begins the Savior's appearance with people gathered at the temple in Bountiful. He identifies Himself, invites them to witness His wounds, and teaches them. The gathering becomes a place of personal recognition as well as shared instruction.",
+      "During this ministry He speaks of Israel, the prophets, and the covenant made with Abraham. He tells the people they are children of that covenant and turns them toward blessing and repentance. Temple history and the gathering of Israel meet here in the voice of the risen Christ. Read His words slowly and notice how He connects an ancient promise with the lives of those listening."
+    ],
+    "sources": [
+      {
+        "label": "3 Nephi 11:1–17",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/11?lang=eng&id=p1-p17#p1"
+      },
+      {
+        "label": "3 Nephi 20:24–27",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/bofm/3-ne/20?lang=eng&id=p24-p27#p24"
+      }
+    ],
+    "alt": "The risen Jesus teaches a gathered community about God's covenant, with a temple court behind them.",
+    "caption": "The risen Savior teaches the gathered people about Abraham's covenant and the blessing He brings to their families.",
+    "scene_constraints": "Distinct covenant instruction, not descent/healing/children duplicate. Approved Christ, healed scars both palms and wrists wherever visible. Unknown exact peoples' ages/architecture/geography; no modern ritual, invented inscriptions, or ethnic certainty."
+  },
+  {
+    "id": "apostles-gate",
+    "title": "At the gate, in the name of Jesus",
+    "era": "The apostles and Jerusalem",
+    "art_id": "temple-apostles-gate",
+    "paragraphs": [
+      "Acts returns us to Jerusalem after the Resurrection. Peter and John go to the temple at the hour of prayer. At the Beautiful gate, a man who has been unable to walk asks for help. Peter takes his hand, and the man rises in the name of Jesus Christ, entering the temple with them and praising God.",
+      "The Jerusalem temple was destroyed by Roman forces in AD 70. Latter-day Saints understand the later Restoration as a renewal of priesthood authority and temple ordinances. That belief does not erase the long histories of Jewish worship, Christian churches, or other sacred buildings; it explains the Church's own claim about restored authority."
+    ],
+    "sources": [
+      {
+        "label": "Acts 3:1–10",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/nt/acts/3?lang=eng&id=p1-p10#p1"
+      },
+      {
+        "label": "History of Temples",
+        "url": "https://www.churchofjesuschrist.org/temples/history-of-temples?lang=eng"
+      }
+    ],
+    "alt": "At a temple gateway, Peter helps a man rise while John stands close by.",
+    "caption": "Peter takes the man's hand at the temple gate. Acts attributes the healing to Jesus Christ.",
+    "scene_constraints": "No physically present Christ. Peter/John ancient likeness interpretive unless approved mappings exist, adult ages unknown. Gate precise appearance uncertain; compassionate interaction, no disability caricature."
+  },
+  {
+    "id": "kirtland-house",
+    "title": "Kirtland: building a house together",
+    "era": "1833–1836",
+    "art_id": "temple-kirtland-house",
+    "paragraphs": [
+      "The early Latter-day Saints in Ohio undertook temple construction while their community was still young and resources were limited. The Kirtland Temple was dedicated on March 27, 1836. Its assembly halls served a community that gathered to pray, learn, and prepare to carry its message abroad.",
+      "The dedicatory prayer asks for a house of learning, faith, and order, and for those who leave it to go forth with God's power. Kirtland was an important beginning in a developing temple history. Its uses and ordinances should not simply be pictured as identical to those of present-day temples.",
+      "A local quarry supplied stone, and a sawmill operated through donated service supplied wood. Skilled carpenters shaped the unusual tiered pulpits inside. The building required more than financial contributions: people gave time, strength, and practiced skills. Their small community made a house large enough for shared worship and learning, even while its own future remained uncertain."
+    ],
+    "sources": [
+      {
+        "label": "Kirtland Temple: Church History Topics",
+        "url": "https://www.churchofjesuschrist.org/study/history/topics/kirtland-temple?lang=eng"
+      },
+      {
+        "label": "Doctrine and Covenants 109:7–9, 22–23",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/109?lang=eng&id=p7-p9,p22-p23#p7"
+      }
+    ],
+    "alt": "The completed Kirtland Temple stands above a simple nineteenth-century road as worshippers approach.",
+    "caption": "The Saints gather at Kirtland after years of shared labor. Their dedicatory prayer asks for learning, faith, and strength to serve.",
+    "scene_constraints": "Historic exterior requires official architecture reference; 1836 clothing and unpaved street. Anonymous attendees, no modern spire changes or modern landscaping. Distinct from existing church-history stone-lifting artwork."
+  },
+  {
+    "id": "kirtland-christ",
+    "title": "The Savior's acceptance and restored keys",
+    "era": "April 3, 1836",
+    "art_id": "temple-kirtland-pulpits",
+    "paragraphs": [
+      "A week after the dedication, Joseph Smith and Oliver Cowdery recorded a vision of Jesus Christ in the Kirtland Temple. Doctrine and Covenants 110 describes Him standing upon the breastwork of the pulpit and accepting the house. This is the witnesses' recorded sacred experience, central to the Latter-day Saint understanding of the temple.",
+      "The account continues with Moses, Elias, and Elijah entrusting priesthood keys. Latter-day Saints connect these keys with gathering Israel and binding families across generations. Keys here means authority to direct God's work. The passage joins the new house in Ohio to ancient covenant promises and to service reaching beyond a single lifetime."
+    ],
+    "sources": [
+      {
+        "label": "Doctrine and Covenants 110:1–16",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/110?lang=eng&id=p1-p16#p1"
+      }
+    ],
+    "alt": "The woodwork of the Kirtland Temple pulpits stands within a quiet assembly hall.",
+    "caption": "Daylight rests on the preserved Kirtland pulpits. Joseph Smith and Oliver Cowdery recorded their vision of the Savior in this temple; read their account in Doctrine and Covenants 110.",
+    "scene_constraints": "Historic Kirtland pulpits interior, NO apparition, named people or divine figures. Accurate architecture requires official reference pixels. Ordinary daytime light; text describes vision independently of this architectural picture."
+  },
+  {
+    "id": "nauvoo-hope",
+    "title": "Nauvoo: a hope reaching beyond death",
+    "era": "The 1840s",
+    "art_id": "temple-nauvoo-hope",
+    "paragraphs": [
+      "In Nauvoo, temple teaching expanded as Joseph Smith taught baptism for the dead, the endowment, and sealing. The temple rose while the Saints faced increasing danger. Many received ordinances before leaving the city, carrying their commitments into an uncertain journey west.",
+      "The Saints resumed work after Joseph and Hyrum Smith were killed in June 1844. Endowments began in the attic in December 1845, before the whole building was finished; thousands of people received them before the exodus. The first departing company left in February 1846, and the temple was dedicated from April 30 to May 1, with some portions still unfinished. Finishing a house they would soon leave gives this chapter its particular weight: they valued the promises received there even when they could not keep possession of the building.",
+      "The original building was later damaged by fire and a tornado. A temple was rebuilt on the site and dedicated in 2002, recalling that earlier sacrifice. The hope behind proxy service remains personal: people who have died are remembered by name, while Latter-day Saint teaching preserves their freedom to accept or reject what is offered on their behalf."
+    ],
+    "sources": [
+      {
+        "label": "Nauvoo Temple: Church History Topics",
+        "url": "https://www.churchofjesuschrist.org/study/history/topics/nauvoo-temple?lang=eng"
+      },
+      {
+        "label": "About Proxy Baptism and Confirmation",
+        "url": "https://www.churchofjesuschrist.org/temples/what-is-proxy-baptism?lang=eng"
+      },
+      {
+        "url": "https://www.churchofjesuschrist.org/temples/ordinances-and-covenants?lang=eng",
+        "label": "Why Ordinances and Covenants Matter"
+      },
+      {
+        "url": "https://www.churchofjesuschrist.org/study/manual/latter-day-saint-history-1815-1846-teacher-material/lesson-28?lang=eng",
+        "label": "The Saints Complete the Nauvoo Temple"
+      }
+    ],
+    "alt": "An early Nauvoo family pauses with travel belongings as the temple rises behind them.",
+    "caption": "The Nauvoo Temple stands behind people preparing to leave. The commitments made there traveled west with them.",
+    "scene_constraints": "1845–46 unnamed family, historically referenced original facade; modest belongings, winter clothing only if selected winter date. No named family or invented testimony; no restricted ritual."
+  },
+  {
+    "id": "pioneer-temples",
+    "title": "Temples in the mountain settlements",
+    "era": "1877–1893",
+    "art_id": "temple-pioneer-temples",
+    "paragraphs": [
+      "In Utah, temple building continued across generations. St. George was the first temple completed there, in 1877. It became the first house of the Lord where endowment and sealing ordinances were performed by proxy for deceased ancestors. Logan and Manti followed while work continued in Salt Lake City.",
+      "The Salt Lake Temple took forty years to build, from 1853 to its dedication in 1893. The long project joined quarry work, transport, skilled craft, donated means, and sustained community effort. These houses differed in appearance, but each served the growing work of worship, covenant making, and remembrance of the dead."
+    ],
+    "sources": [
+      {
+        "label": "The Original Dedication of the St. George Temple",
+        "url": "https://newsroom.churchofjesuschrist.org/article/the-story-of-the-original-dedication-of-the-st-george-temple-a-beautiful-testimony-of-faith"
+      },
+      {
+        "label": "Salt Lake Temple: Church History Topics",
+        "url": "https://www.churchofjesuschrist.org/study/history/topics/salt-lake-temple?lang=eng"
+      }
+    ],
+    "alt": "Craftsmen work beside timber scaffolding around the St. George Temple during its construction.",
+    "caption": "Timber scaffolding surrounds the rising St. George Temple. Shared labor prepared a house that opened a new chapter of temple service in 1877.",
+    "scene_constraints": "Circa1876 architecture based on BYU Religious Studies Center reproduction of Church Archives photograph; original short domed tower preserved. Anonymous workers only."
+  },
+  {
+    "id": "salt-lake-building",
+    "title": "Salt Lake: forty years of patient work",
+    "era": "1853–1893, with renewal continuing today",
+    "art_id": "temple-salt-lake-building",
+    "paragraphs": [
+      "Salt Lake's temple story stretches across forty years. For its first two decades, wagon teams hauled granite from Little Cottonwood Canyon. Poor harvests and difficult weather slowed progress. Weaknesses in the foundation required parts of the work to be taken apart and rebuilt. Progress sometimes meant correcting what lay beneath the visible walls.",
+      "Rail transport later made stone delivery more dependable. The temple was dedicated on April 6, 1893, after generations of effort. Its continuing renovation belongs to the same responsibility of caring for a sacred house. Today's strengthening work continues that story of care for a place set apart for worship."
+    ],
+    "sources": [
+      {
+        "label": "Salt Lake Temple: Church History Topics",
+        "url": "https://www.churchofjesuschrist.org/study/history/topics/salt-lake-temple?lang=eng"
+      },
+      {
+        "label": "Salt Lake Temple current information",
+        "url": "https://www.churchofjesuschrist.org/temples/details/salt-lake-temple?lang=eng"
+      }
+    ],
+    "alt": "Workers guide a granite block beside the scaffolded Salt Lake Temple during its construction.",
+    "caption": "A heavy stone and patient labor recall the decades needed to raise the Salt Lake Temple. The work included rebuilding foundations as well as lifting walls.",
+    "scene_constraints": "Early1892 exterior based on official historic capstone photograph. Anonymous late19th-century workers and timber sled; no named portraits. No modern cranes or finished present-day landscaping.",
+    "reflection": "What does the willingness to repair a foundation teach you about preparing a life for lasting commitments?"
+  },
+  {
+    "id": "worldwide-gathering",
+    "title": "The temple journey becomes worldwide",
+    "era": "The twentieth century",
+    "art_id": "temple-worldwide-gathering",
+    "paragraphs": [
+      "The Laie Hawaii Temple, dedicated in 1919, brought temple worship closer to Saints across the Pacific. Bern Switzerland, dedicated in 1955, marked another step as temples served communities across national and language boundaries. Temples increasingly came nearer to the places where Church members lived.",
+      "That story also includes a painful restriction: Black men of African descent were restricted from priesthood ordination, and Black men and women of African descent from temple endowment and sealing. Official Declaration 2 records the 1978 revelation extending these blessings to all worthy members without regard to race or color. A truthful account of worldwide gathering includes both that earlier exclusion and its end."
+    ],
+    "sources": [
+      {
+        "label": "The Laie Hawaii Temple: A Century of Gathering",
+        "url": "https://www.churchofjesuschrist.org/study/liahona/2019/10/the-laie-hawaii-temple-a-century-of-gathering?lang=eng"
+      },
+      {
+        "label": "Bern Switzerland Temple",
+        "url": "https://www.churchofjesuschrist.org/temples/details/bern-switzerland-temple?lang=eng"
+      },
+      {
+        "label": "Official Declaration 2",
+        "url": "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/od/2?lang=eng"
+      },
+      {
+        "url": "https://www.churchofjesuschrist.org/study/history/topics/priesthood-and-temple-restriction?lang=eng",
+        "label": "Priesthood and Temple Restriction"
+      }
+    ],
+    "alt": "The Laie Hawaii Temple stands among palms and tropical greenery with visitors on its grounds.",
+    "caption": "Visitors approach Laie in this contemporary view. Dedicated in 1919, the temple brought worship closer to communities across the Pacific.",
+    "scene_constraints": "Architecture reference required; choose present-day Laie visitors to avoid inventing 1919 racial/attendee composition. Explicit caption scene is contemporary view of historical landmark if current grounds. No named visitor testimony."
+  },
+  {
+    "id": "temples-today",
+    "title": "Living worship, continuing care",
+    "era": "Today",
+    "art_id": "temple-temples-today",
+    "paragraphs": [
+      "Today, Latter-day Saints enter temples to make covenants with God, receive instruction centered on Jesus Christ, and serve on behalf of deceased people. Family history gives that service names and lives to remember. Public open houses also allow neighbors and visitors to learn about many new or renovated temples before dedication.",
+      "The work includes caring for older buildings as well as constructing new ones. As checked on September 29, 2026, the Church had announced a Salt Lake Temple public celebration for April 5 through October 1, 2027. Plans and temple operating status can change, so follow the Church's current announcements when planning a visit. The continuing story is about people learning to love God and one another through the covenants they make.",
+      "The Church publicly describes five endowment covenants: obedience to God, sacrifice in His service, living the gospel of Jesus Christ, chastity, and consecrating time and resources to His work. These are solemn commitments, meant to shape daily conduct. Preparation includes understanding what is promised and choosing freely; temple worship is a continuing opportunity to learn, repent, and draw closer to the Savior.",
+      "Temple sealing expresses the hope that marriage and family relationships can continue beyond death through Jesus Christ. The promised blessings are connected with faithfulness to God, not simply attendance at a ceremony. People whose family circumstances are painful or incomplete belong within the Church's invitation to hope; this study cannot determine another person's eternal relationships. Questions about individual circumstances deserve careful counsel and compassion."
+    ],
+    "sources": [
+      {
+        "label": "Why Latter-day Saints Build Temples",
+        "url": "https://www.churchofjesuschrist.org/temples/why-latter-day-saints-build-temples?lang=eng"
+      },
+      {
+        "label": "Salt Lake Temple celebration announcement",
+        "url": "https://newsroom.churchofjesuschrist.org/article/salt-lake-temple-open-house-reservations"
+      },
+      {
+        "label": "About the Temple Endowment",
+        "url": "https://www.churchofjesuschrist.org/temples/what-is-temple-endowment?lang=eng"
+      },
+      {
+        "label": "About Temple Sealings",
+        "url": "https://www.churchofjesuschrist.org/temples/what-happens-in-a-temple-sealing?lang=eng"
+      }
+    ],
+    "alt": "A family studies old photographs and family records together at a table.",
+    "caption": "Names on a page lead back to individual lives. Learning an ancestor's story can give temple service a more personal meaning.",
+    "scene_constraints": "Contemporary multi-generation research scene, not generic dishwashing or neighbor-help duplicate; no real personal data legible, no invented ancestor identity. Anonymous family ages clear adults/older adult, relationships caption only if composition supports."
+  }
+]

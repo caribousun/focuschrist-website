@@ -1,0 +1,18 @@
+{
+  "page": "answers/why-latter-day-saints-build-temples.html",
+  "purpose": "Preserve the temple opening and every earlier image through the 2026-09-29 enrichment and future checks. Captured from the repository version before integration.",
+  "required_image_srcs": [
+    "../assets/page-art/exclusive/temple-covenant-help-800.webp",
+    "../assets/page-art/exclusive/temple-daily-promises-800.webp",
+    "../assets/page-art/exclusive/temple-generations-craft-800.webp",
+    "../assets/page-art/exclusive/temple-preparation-notes-800.webp",
+    "../assets/page-art/exclusive/temple-purpose-reading-800.webp",
+    "../assets/resources/unique-temple-foundation.jpg",
+    "../assets/resources/unique-temples-time.jpg",
+    "/assets/page-art/church-history/kirtland-temple-960.webp",
+    "/assets/page-art/jesus-journey/modern-neighbor-960.webp",
+    "/assets/page-art/jesus-journey/modern-scripture-960.webp",
+    "/assets/page-art/jesus-journey/rt-spirit-messengers-960.webp"
+  ],
+  "header_sha256": "994113a266a52e76b4b32c03d53c0e558e7ade30df649e0860315dd47fb8dc10"
+}
