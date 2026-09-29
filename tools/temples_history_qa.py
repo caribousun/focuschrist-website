@@ -33,6 +33,13 @@ def check():
             raise AssertionError('Corrupted-punctuation negative fixture escaped detection')
     raw = json.loads(source_text)
     chapters = raw if isinstance(raw, list) else raw['chapters']
+    directory = soup.select_one('.fc-temple-history__directory')
+    era_menus = directory.select('details.fc-temple-history__era-menu')
+    assert len(era_menus) == 4 and all(not item.has_attr('open') for item in era_menus), 'Four native era disclosures, initially closed'
+    assert [len(item.select('li a')) for item in era_menus] == [6, 7, 5, 2]
+    assert [a['href'] for item in era_menus for a in item.select('li a')] == ['#temple-' + c['id'] for c in chapters], 'Preserve all chapter IDs and chronological order'
+    assert len(directory.select('.fc-button')) == 1 and directory.select_one('.fc-button')['href'] == '#temple-beginnings-eden', 'Single gold begin action, not twenty chapter pills'
+    assert soup.select_one('link[href="../temples-history.css?v=20260929-era-directory-1"]')
     ready = json.loads((ROOT / 'docs/temples/art-ready.json').read_text(encoding='utf-8-sig'))
     nephi_review = json.loads((ROOT / 'docs/temples/nephi-source-first-review-20260929.json').read_text(encoding='utf-8'))
     rejected_hashes = {item['sha256'] for item in nephi_review['rejected']}

@@ -2275,6 +2275,15 @@
       ],
       "disposition": "shared_surface"
     },
+    "fc-temple-history__era-menu": {
+      "stylesheets": [
+        "temples-history.css"
+      ],
+      "pages": [
+        "answers/why-latter-day-saints-build-temples.html"
+      ],
+      "disposition": "coordinated_stylesheet_owner"
+    },
     "gallery-item": {
       "stylesheets": [
         "art-experience.css"
@@ -2907,7 +2916,7 @@
       ]
     },
     ".fc-deep-study details": {
-      "count": 142,
+      "count": 146,
       "pages": [
         "answers/aaronic-priesthood-restoration.html",
         "answers/are-latter-day-saints-christian.html",

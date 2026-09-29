@@ -54,10 +54,15 @@ def build():
       '<p class="fc-eyebrow">A journey through scripture and history</p>',
       '<h2 id="temple-history-title">The temple story: from the beginning to today</h2>',
       '<p>Follow the story of sacred places, covenant worship, and Jesus Christ across scripture and the history of the Church. The linked passages let you read each account in its own setting.</p>',
-      '<nav class="fc-temple-history__directory" aria-label="Temple history chapters"><div class="fc-actions">']
-    for i, chapter in enumerate(chapters, 1):
-        output.append(f'<a class="fc-button" href="#temple-{esc(chapter["id"])}">{i}. {esc(chapter["title"])}</a>')
-    output.append('</div></nav>')
+      '<nav class="fc-temple-history__directory" aria-label="Temple history chapters">',
+      '<p>Choose an era to explore its chapters, or begin with the first story.</p>']
+    eras = [('Scriptural beginnings', 0, 6), ('Jesus Christ and temple worship', 6, 13), ('Restoration and pioneer temples', 13, 18), ('Temples throughout the world', 18, 20)]
+    for label, start, end in eras:
+        output.append(f'<details class="fc-temple-history__era-menu"><summary><span>{esc(label)}</span><span class="fc-temple-history__range">Chapters {start + 1}–{end}</span></summary><ol start="{start + 1}">')
+        for chapter in chapters[start:end]:
+            output.append(f'<li><a href="#temple-{esc(chapter["id"])}">{esc(chapter["title"])}</a></li>')
+        output.append('</ol></details>')
+    output.append('<div class="fc-actions"><a class="fc-button fc-button--primary" href="#temple-beginnings-eden">Begin temple story</a></div></nav>')
     for i, chapter in enumerate(chapters, 1):
         art = ready[chapter['art_id']]
         title = esc(chapter['title'])
@@ -102,8 +107,10 @@ def build():
         assert anchor in content
         content = content.replace(anchor, block + '\n' + anchor, 1)
         content = content.replace('<a href="#watch-study">Watch and study</a>', '<a href="#temple-history">Temples through time</a><a href="#watch-study">Watch and study</a>', 1)
-    style = '<link rel="stylesheet" href="../temples-history.css?v=20260929-1">'
-    if style not in content:
+    style = '<link rel="stylesheet" href="../temples-history.css?v=20260929-era-directory-1">'
+    if re.search(r'<link rel="stylesheet" href="\.\./temples-history\.css\?v=[^"]+">', content):
+        content = re.sub(r'<link rel="stylesheet" href="\.\./temples-history\.css\?v=[^"]+">', style, content)
+    elif style not in content:
         content = content.replace('</head>', style + '\n</head>', 1)
     content = re.sub(r'topic-artwork-details\.js\?v=[A-Za-z0-9-]+', 'topic-artwork-details.js?v=20260929-picture-flow-1', content)
     PAGE.write_text(content, encoding='utf-8', newline='\n')
